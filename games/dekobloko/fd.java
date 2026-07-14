@@ -331,7 +331,7 @@ final class fd implements Runnable {
               }
               try {
                 var2_int = var8_ref.field_d;
-                if (-2 == var2_int) {
+                if (-2 == (var2_int ^ -1)) {
                   decompiledRegionSelector0 = 0;
                 } else {
                   decompiledRegionSelector0 = 1;
@@ -353,8 +353,8 @@ final class fd implements Runnable {
                     }
                   } else {
                     if (decompiledRegionSelector0 == 1) {
-                      if (-23 != var2_int) {
-                        if (var2_int == -3) {
+                      if (-23 != (var2_int ^ -1)) {
+                        if ((var2_int ^ -1) == -3) {
                           var18 = new Thread((Runnable) var8_ref.field_e);
                           var18.setDaemon(true);
                           var18.start();
@@ -370,7 +370,7 @@ final class fd implements Runnable {
                               break L4;
                             }
                           } else {
-                            if (-9 != var2_int) {
+                            if (-9 != (var2_int ^ -1)) {
                               if (-10 != (var2_int ^ -1)) {
                                 if (-19 != (var2_int ^ -1)) {
                                   if ((var2_int ^ -1) != -20) {
@@ -378,7 +378,7 @@ final class fd implements Runnable {
                                       throw fd.<RuntimeException>$cfr$sneakyThrow(new Exception(""));
                                     } else {
                                       if ((var2_int ^ -1) != -4) {
-                                        if (var2_int == -22) {
+                                        if ((var2_int ^ -1) == -22) {
                                           if (field_t <= ik.a(4)) {
                                             var8_ref.field_b = (Object) (Object) java.net.InetAddress.getByName((String) var8_ref.field_e).getAddress();
                                             break L4;
@@ -386,7 +386,7 @@ final class fd implements Runnable {
                                             throw new IOException();
                                           }
                                         } else {
-                                          if (-6 != var2_int) {
+                                          if (-6 != (var2_int ^ -1)) {
                                             if (6 != var2_int) {
                                               if ((var2_int ^ -1) != -8) {
                                                 if (12 == var2_int) {
@@ -399,7 +399,7 @@ final class fd implements Runnable {
                                                       if (!((fd) this).field_a) {
                                                         break L5;
                                                       } else {
-                                                        if (var2_int == -15) {
+                                                        if ((var2_int ^ -1) == -15) {
                                                           var3_int = var8_ref.field_g;
                                                           var4 = var8_ref.field_a;
                                                           if (((fd) this).field_j) {
@@ -448,7 +448,7 @@ final class fd implements Runnable {
                                                       if (((fd) this).field_j) {
                                                         break L8;
                                                       } else {
-                                                        if (-18 != var2_int) {
+                                                        if (-18 != (var2_int ^ -1)) {
                                                           break L8;
                                                         } else {
                                                           var15 = (Object[]) var8_ref.field_e;
@@ -477,7 +477,7 @@ final class fd implements Runnable {
                                                           var4_ref_String = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789?&=,.%+-_#:/*";
                                                           var5 = 0;
                                                           L10: while (true) {
-                                                            if (var16_ref.length() <= var5) {
+                                                            if ((var16_ref.length() ^ -1) >= (var5 ^ -1)) {
                                                               Process discarded$9 = Runtime.getRuntime().exec("cmd /c start \"j\" \"" + var16_ref + "\"");
                                                               var8_ref.field_b = null;
                                                               break L10;

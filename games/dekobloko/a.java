@@ -318,14 +318,14 @@ class a implements gl, nl {
         }
         L2: {
           var6 = ((a) this).field_o;
-          if (-1 != var6) {
-            if (var6 == -3) {
+          if (-1 != (var6 ^ -1)) {
+            if ((var6 ^ -1) == -3) {
               var5 = -((a) this).field_z.field_K + var4;
               break L2;
             } else {
               L3: {
-                if (-4 != var6) {
-                  if (-2 != var6) {
+                if (-4 != (var6 ^ -1)) {
+                  if (-2 != (var6 ^ -1)) {
                     break L3;
                   } else {
                     break L3;
@@ -631,67 +631,39 @@ class a implements gl, nl {
     }
 
     private static void $cfr$clinit() {
-        int var0_int = 0;
-        long var0 = 0L;
         int var1 = 0;
+        int var0_int = 0;
         int var2 = 0;
+        long var0 = 0L;
         int var3 = 0;
         field_e = "<%0><br>IS OUT!";
         field_r = new int[1024];
         field_g = 128;
         field_j = new int[256];
-        var1 = 0;
-        L0: while (true) {
-          if (var1 <= -257) {
-            field_d = new long[256];
-            field_x = "Theme";
-            field_l = "Invite";
-            var2 = 0;
-            L1: while (true) {
-              if (256 <= var2) {
-              } else {
-                var0 = (long)var2;
-                var3 = 0;
-                L2: while (true) {
-                  if (var3 >= 8) {
-                    field_d[var2] = var0;
-                    var2++;
-                    continue L1;
-                  } else {
-                    if (-2L != (var0 & 1L ^ -1L)) {
-                      var0 = var0 >>> 1;
-                      var3++;
-                      continue L2;
-                    } else {
-                      var0 = var0 >>> 1676111105 ^ -3932672073523589310L;
-                      var3++;
-                      continue L2;
-                    }
-                  }
-                }
-              }
-            }
-          } else {
+        for (var1 = 0; (var1 ^ -1) > -257; var1++) {
             var0_int = var1;
-            var2 = 0;
-            L3: while (true) {
-              if (var2 >= 8) {
-                field_j[var1] = var0_int;
-                var1++;
-                continue L0;
-              } else {
-                if (-2 == (1 & var0_int)) {
-                  var0_int = -306674912 ^ var0_int >>> 73361217;
-                  var2++;
-                  continue L3;
+            for (var2 = 0; var2 < 8; var2++) {
+                if (-2 != (1 & var0_int ^ -1)) {
+                    var0_int = var0_int >>> 1;
                 } else {
-                  var0_int = var0_int >>> 1;
-                  var2++;
-                  continue L3;
+                    var0_int = -306674912 ^ var0_int >>> 73361217;
                 }
-              }
             }
-          }
+            field_j[var1] = var0_int;
+        }
+        field_d = new long[256];
+        field_x = "Theme";
+        field_l = "Invite";
+        for (var2 = 0; 256 > var2; var2++) {
+            var0 = (long)var2;
+            for (var3 = 0; var3 < 8; var3++) {
+                if (-2L == (var0 & 1L ^ -1L)) {
+                    var0 = var0 >>> 1676111105 ^ -3932672073523589310L;
+                } else {
+                    var0 = var0 >>> 1;
+                }
+            }
+            field_d[var2] = var0;
         }
     }
 }
