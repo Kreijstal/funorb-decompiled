@@ -1,0 +1,42 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+import java.util.*;
+
+final class n extends ci {
+    private java.awt.Component field_l;
+
+    final void a(int param0, int param1, java.awt.Graphics param2, int param3) {
+        boolean discarded$0 = param2.drawImage(((n) this).field_g, param3, param0, (java.awt.image.ImageObserver) (Object) ((n) this).field_l);
+        int var5 = 35 / ((62 - param1) / 50);
+    }
+
+    final void a(java.awt.Component param0, int param1, int param2, int param3) {
+        try {
+            java.awt.image.DataBufferInt var5 = null;
+            java.awt.image.DirectColorModel var6 = null;
+            java.awt.image.WritableRaster var7 = null;
+            ((n) this).field_c = param3;
+            ((n) this).field_d = param1;
+            ((n) this).field_f = new int[param1 * param3 + 1];
+            if (param2 != 13961) {
+              return;
+            } else {
+              var5 = new java.awt.image.DataBufferInt(((n) this).field_f, ((n) this).field_f.length);
+              var6 = new java.awt.image.DirectColorModel(32, 16711680, 65280, 255);
+              var7 = java.awt.image.Raster.createWritableRaster(((java.awt.image.ColorModel) (Object) var6).createCompatibleSampleModel(((n) this).field_c, ((n) this).field_d), (java.awt.image.DataBuffer) (Object) var5, (java.awt.Point) null);
+              ((n) this).field_g = (java.awt.Image) (Object) new java.awt.image.BufferedImage((java.awt.image.ColorModel) (Object) var6, var7, false, new Hashtable());
+              ((n) this).field_l = param0;
+              ((n) this).a((byte) -45);
+              return;
+            }
+        } catch (RuntimeException | Error decompiledUncheckedException) {
+            throw decompiledUncheckedException;
+        } catch (Throwable decompiledCheckedException) {
+            throw new RuntimeException(decompiledCheckedException);
+        }
+    }
+
+    public n() {
+    }
+}

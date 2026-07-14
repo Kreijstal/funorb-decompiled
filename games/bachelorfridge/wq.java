@@ -1,0 +1,154 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class wq extends k {
+    static String field_m;
+    static int field_n;
+    private int field_p;
+    private int field_o;
+    static kv field_k;
+    private int field_l;
+
+    final void a(byte param0, lu param1, int param2) {
+        int var4 = 0;
+        int var5 = 0;
+        L0: {
+          var5 = BachelorFridge.field_y;
+          var4 = param2;
+          if (var4 == -1) {
+            ((wq) this).field_o = param1.e((byte) 112);
+            break L0;
+          } else {
+            if (-2 != var4) {
+              if (var4 == 2) {
+                ((wq) this).field_p = param1.e((byte) 120);
+                break L0;
+              } else {
+                break L0;
+              }
+            } else {
+              ((wq) this).field_l = param1.e((byte) 67);
+              break L0;
+            }
+          }
+        }
+        L1: {
+          if (param0 == -71) {
+            break L1;
+          } else {
+            int[][] discarded$1 = ((wq) this).a(true, 44);
+            break L1;
+          }
+        }
+    }
+
+    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, boolean param7, String param8, int param9, int param10) {
+        if (!param7) {
+            wq.d(51);
+        }
+        int discarded$0 = hfa.field_z.a(param8, param10, param4, param5, param2, param6, -1, param0, param9, param1);
+        int discarded$1 = jha.field_g.a(param8, param10, 20 + param4, param5, param2, param3, -1, param0, param9, param1);
+    }
+
+    public static void d(int param0) {
+        field_k = null;
+        field_m = null;
+        int var1 = 79 / ((45 - param0) / 59);
+    }
+
+    public wq() {
+        super(1, false);
+        ((wq) this).field_p = 4096;
+        ((wq) this).field_o = 4096;
+        ((wq) this).field_l = 4096;
+    }
+
+    final int[][] a(boolean param0, int param1) {
+        int[][] var3 = null;
+        int[] var8 = null;
+        int[] var9 = null;
+        int[] var10 = null;
+        int var11 = 0;
+        int var12 = 0;
+        int var13 = 0;
+        int var14 = 0;
+        int var15 = 0;
+        int[][] var16 = null;
+        int[][] var18 = null;
+        int[][] var23 = null;
+        int[][] var28 = null;
+        int[][] var32 = null;
+        int[][] var33 = null;
+        int[] var34 = null;
+        int[] var35 = null;
+        int[] var36 = null;
+        L0: {
+          var15 = BachelorFridge.field_y;
+          var33 = ((wq) this).field_h.a(param1, -858);
+          var28 = var33;
+          var23 = var28;
+          var18 = var23;
+          var16 = var18;
+          var3 = var16;
+          if (((wq) this).field_h.field_b) {
+            var32 = ((wq) this).a((byte) -93, 0, param1);
+            var34 = var32[0];
+            var36 = var32[1];
+            var35 = var32[2];
+            var8 = var33[0];
+            var9 = var33[1];
+            var10 = var33[2];
+            var11 = 0;
+            L1: while (true) {
+              if (var11 >= hh.field_d) {
+                break L0;
+              } else {
+                L2: {
+                  var12 = var34[var11];
+                  var13 = var35[var11];
+                  var14 = var36[var11];
+                  if (var12 != var13) {
+                    break L2;
+                  } else {
+                    if (var14 == var13) {
+                      var8[var11] = var12 * ((wq) this).field_o >> -965657780;
+                      var9[var11] = var13 * ((wq) this).field_l >> -1620535732;
+                      var10[var11] = var14 * ((wq) this).field_p >> 2093606156;
+                      var11++;
+                      continue L1;
+                    } else {
+                      break L2;
+                    }
+                  }
+                }
+                var8[var11] = ((wq) this).field_o;
+                var9[var11] = ((wq) this).field_l;
+                var10[var11] = ((wq) this).field_p;
+                var11++;
+                continue L1;
+              }
+            }
+          } else {
+            break L0;
+          }
+        }
+        L3: {
+          if (!param0) {
+            break L3;
+          } else {
+            field_m = null;
+            break L3;
+          }
+        }
+        return var3;
+    }
+
+    static {
+        $cfr$clinit();
+    }
+
+    private static void $cfr$clinit() {
+        field_n = 0;
+        field_m = "Type your age in years";
+    }
+}

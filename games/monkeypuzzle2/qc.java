@@ -1,0 +1,113 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class qc extends rj implements ag {
+    private int field_Q;
+    static int field_N;
+    static String[] field_R;
+    static le[] field_L;
+    private kf field_M;
+    static int[] field_P;
+    static String field_O;
+
+    final void a(kf param0, boolean param1) {
+        Object var4 = null;
+        if (!param1) {
+          var4 = null;
+          ((qc) this).a((we) null, 53, 72, (byte) 12);
+          ((qc) this).field_M = param0;
+          return;
+        } else {
+          ((qc) this).field_M = param0;
+          return;
+        }
+    }
+
+    final static void a(me param0, byte param1, int param2) {
+        hb var3 = null;
+        Object var4 = null;
+        var3 = gf.field_c;
+        if (param1 <= 100) {
+          var4 = null;
+          qc.a((me) null, (byte) 35, -2);
+          var3.b(true, param2);
+          var3.b(param0.field_k, -49152);
+          var3.c(param0.field_m, 71);
+          return;
+        } else {
+          var3.b(true, param2);
+          var3.b(param0.field_k, -49152);
+          var3.c(param0.field_m, 71);
+          return;
+        }
+    }
+
+    final String a(byte param0) {
+        if (((qc) this).field_g) {
+          if (((qc) this).field_m != null) {
+            if (param0 != 54) {
+              ((qc) this).m(90);
+              oh.a(p.field_a, ei.field_a + ((qc) this).field_l - ((qc) this).field_Q, 94);
+              return ((qc) this).field_m;
+            } else {
+              oh.a(p.field_a, ei.field_a + ((qc) this).field_l - ((qc) this).field_Q, 94);
+              return ((qc) this).field_m;
+            }
+          } else {
+            return null;
+          }
+        } else {
+          return null;
+        }
+    }
+
+    public static void q(int param0) {
+        field_L = null;
+        field_O = null;
+        if (param0 < 92) {
+            return;
+        }
+        field_R = null;
+        field_P = null;
+    }
+
+    final void a(we param0, int param1, int param2, byte param3) {
+        Object var6 = null;
+        super.a(param0, param1, param2, (byte) -24);
+        if (param3 > -13) {
+          var6 = null;
+          ((qc) this).a((kf) null, false);
+          ((qc) this).field_Q = -param2 + (ei.field_a + -((qc) this).field_r);
+          return;
+        } else {
+          ((qc) this).field_Q = -param2 + (ei.field_a + -((qc) this).field_r);
+          return;
+        }
+    }
+
+    public final kf a(int param0) {
+        int var2 = -110 % ((-50 - param0) / 55);
+        return ((qc) this).field_M;
+    }
+
+    final void m(int param0) {
+        super.m(param0 ^ param0);
+        if (null != ((qc) this).field_M) {
+            ((qc) this).field_M.a((byte) -94);
+        }
+    }
+
+    qc(String param0, of param1, int param2) {
+        super(param0, param1, param2);
+    }
+
+    static {
+        $cfr$clinit();
+    }
+
+    private static void $cfr$clinit() {
+        field_R = new String[]{"[BACKSPACE]", "[HOME]", "[F9]", "[F10]", "[F11]", "[ESC]"};
+        field_N = 0;
+        field_O = "No highscores";
+    }
+}

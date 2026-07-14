@@ -1,0 +1,51 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class dc extends ur {
+    static hr[] field_ab;
+    static String field_bb;
+
+    final void b(byte param0, pk param1) {
+        if (param0 >= -87) {
+            field_ab = null;
+            super.b((byte) -96, param1);
+            return;
+        }
+        super.b((byte) -96, param1);
+    }
+
+    dc(dg param0, pk param1) {
+        super(param0, param1, 33, 20, 30);
+    }
+
+    public static void m(int param0) {
+        if (param0 < 89) {
+            field_bb = null;
+            field_ab = null;
+            field_bb = null;
+            return;
+        }
+        field_ab = null;
+        field_bb = null;
+    }
+
+    final static void l(int param0) {
+        int var1 = 0;
+        if (param0 > kr.field_c) {
+          var1 = kr.field_c % 32;
+          lf.a(32 + (kr.field_c + -var1), (byte) -58);
+          return;
+        } else {
+          lf.a(256, (byte) -58);
+          return;
+        }
+    }
+
+    static {
+        $cfr$clinit();
+    }
+
+    private static void $cfr$clinit() {
+        field_bb = "Type your age in years";
+    }
+}

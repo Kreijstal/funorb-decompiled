@@ -1,0 +1,82 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class nm extends vo implements sca {
+    static nh field_l;
+    private int field_k;
+    static jpa field_i;
+    static String field_j;
+
+    final static void a(iu param0, byte param1) {
+        gb.a(-29711);
+        if (param1 < 88) {
+            return;
+        }
+        bea.a(param0.field_r, param0.field_n, param0.field_k);
+    }
+
+    public final long b(int param0) {
+        if (param0 != 19135) {
+            Object var3 = null;
+            nm.a((iu) null, (byte) -94);
+            return 0L;
+        }
+        return 0L;
+    }
+
+    public final int a(int param0) {
+        if (param0 != 9624) {
+            return 39;
+        }
+        return ((nm) this).field_e;
+    }
+
+    public final void a(int param0, int param1, byte[] param2, int param3) {
+        ((nm) this).a(-101, param2, param0);
+        if (param1 != -11783) {
+            return;
+        }
+        ((nm) this).field_k = param3;
+    }
+
+    nm(cka param0, int param1, byte[] param2, int param3, boolean param4) {
+        super(param0, 34963, param2, param3, param4);
+        ((nm) this).field_k = param1;
+    }
+
+    public static void a(byte param0) {
+        field_i = null;
+        if (param0 < 17) {
+            field_l = null;
+            field_l = null;
+            field_j = null;
+            return;
+        }
+        field_l = null;
+        field_j = null;
+    }
+
+    final void d(int param0) {
+        ((nm) this).field_h.a((sca) this, param0 ^ 0);
+        if (param0 != 34963) {
+            Object var3 = null;
+            ((nm) this).a(-86, -126, (byte[]) null, -64);
+        }
+    }
+
+    public final int c(int param0) {
+        if (param0 != -1771) {
+            ((nm) this).d(-113);
+            return ((nm) this).field_k;
+        }
+        return ((nm) this).field_k;
+    }
+
+    static {
+        $cfr$clinit();
+    }
+
+    private static void $cfr$clinit() {
+        field_j = "No highscores";
+    }
+}

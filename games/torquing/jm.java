@@ -1,0 +1,100 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class jm extends dp {
+    private java.nio.ByteBuffer field_c;
+    static hc field_d;
+    static int[] field_e;
+
+    final byte[] a(int param0) {
+        byte[] var2 = null;
+        byte[] var3 = null;
+        var3 = new byte[((jm) this).field_c.capacity()];
+        var2 = var3;
+        java.nio.Buffer discarded$11 = ((jm) this).field_c.position(0);
+        if (param0 != -21056) {
+          field_e = null;
+          java.nio.ByteBuffer discarded$12 = ((jm) this).field_c.get(var3);
+          return var3;
+        } else {
+          java.nio.ByteBuffer discarded$13 = ((jm) this).field_c.get(var3);
+          return var3;
+        }
+    }
+
+    public static void c(int param0) {
+        int var1 = 69 / ((param0 - -2) / 42);
+        field_e = null;
+        field_d = null;
+    }
+
+    final static void a(int param0, int param1) {
+        q var2 = null;
+        int var3 = 0;
+        qp var4 = null;
+        var3 = Torquing.field_u;
+        var4 = (qp) (Object) tl.field_p.b(param1 + 0);
+        L0: while (true) {
+          if (var4 == null) {
+            var2 = to.field_q.b(param1);
+            L1: while (true) {
+              if (var2 != null) {
+                hj.a(false, param0);
+                var2 = to.field_q.f(-24059);
+                continue L1;
+              } else {
+                return;
+              }
+            }
+          } else {
+            l.a(param0, var4, param1 + 1);
+            var4 = (qp) (Object) tl.field_p.f(param1 + -24059);
+            continue L0;
+          }
+        }
+    }
+
+    final void a(byte param0, byte[] param1) {
+        ((jm) this).field_c = java.nio.ByteBuffer.allocateDirect(param1.length);
+        if (param0 > -11) {
+          jm.c(28);
+          java.nio.Buffer discarded$8 = ((jm) this).field_c.position(0);
+          java.nio.ByteBuffer discarded$9 = ((jm) this).field_c.put(param1);
+          return;
+        } else {
+          java.nio.Buffer discarded$10 = ((jm) this).field_c.position(0);
+          java.nio.ByteBuffer discarded$11 = ((jm) this).field_c.put(param1);
+          return;
+        }
+    }
+
+    final static void a(int param0, String param1) {
+        if (param0 != 3) {
+          jm.c(61);
+          System.out.println("Error: " + sp.a(param1, "%0a", "\n", (byte) -82));
+          return;
+        } else {
+          System.out.println("Error: " + sp.a(param1, "%0a", "\n", (byte) -82));
+          return;
+        }
+    }
+
+    jm() {
+    }
+
+    final static void a(boolean param0, int param1) {
+        dc.field_a.a(0, 0, (byte) 113);
+        if (param1 <= -85) {
+            return;
+        }
+        jm.a(63, 58);
+    }
+
+    static {
+        $cfr$clinit();
+    }
+
+    private static void $cfr$clinit() {
+        field_e = new int[3];
+    }
+}

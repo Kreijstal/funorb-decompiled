@@ -1,0 +1,160 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class dg {
+    static byte[][] field_e;
+    static ci field_a;
+    static boolean field_d;
+    static im field_c;
+    static boolean field_b;
+
+    static int a(int param0, int param1) {
+        return param0 & param1;
+    }
+
+    final static java.applet.Applet a(boolean param0) {
+        if (le.field_r != null) {
+            return le.field_r;
+        }
+        if (param0) {
+            dg.b(false);
+            return (java.applet.Applet) (Object) gm.field_f;
+        }
+        return (java.applet.Applet) (Object) gm.field_f;
+    }
+
+    public static void b(boolean param0) {
+        if (!param0) {
+          java.applet.Applet discarded$2 = dg.a(false);
+          field_e = null;
+          field_a = null;
+          field_c = null;
+          return;
+        } else {
+          field_e = null;
+          field_a = null;
+          field_c = null;
+          return;
+        }
+    }
+
+    final static String a(boolean param0, boolean param1, byte param2, boolean param3) {
+        int var4 = 0;
+        if (param2 == -76) {
+          var4 = 0;
+          if (!param0) {
+            L0: {
+              if (param1) {
+                var4 += 2;
+                break L0;
+              } else {
+                break L0;
+              }
+            }
+            if (param3) {
+              var4++;
+              return ug.field_a[var4];
+            } else {
+              return ug.field_a[var4];
+            }
+          } else {
+            L1: {
+              var4 += 4;
+              if (param1) {
+                var4 += 2;
+                break L1;
+              } else {
+                break L1;
+              }
+            }
+            if (param3) {
+              var4++;
+              return ug.field_a[var4];
+            } else {
+              return ug.field_a[var4];
+            }
+          }
+        } else {
+          field_c = null;
+          var4 = 0;
+          if (param0) {
+            L2: {
+              var4 += 4;
+              if (param1) {
+                var4 += 2;
+                break L2;
+              } else {
+                break L2;
+              }
+            }
+            if (!param3) {
+              return ug.field_a[var4];
+            } else {
+              var4++;
+              return ug.field_a[var4];
+            }
+          } else {
+            L3: {
+              if (param1) {
+                var4 += 2;
+                break L3;
+              } else {
+                break L3;
+              }
+            }
+            if (param3) {
+              var4++;
+              return ug.field_a[var4];
+            } else {
+              return ug.field_a[var4];
+            }
+          }
+        }
+    }
+
+    final static void a(int param0) {
+        uc var1 = null;
+        int var2 = 0;
+        int var3 = 0;
+        var3 = Terraphoenix.field_V;
+        var1 = di.field_l;
+        if (param0 < 37) {
+          field_c = null;
+          L0: while (true) {
+            if (b.a((byte) -102)) {
+              var1.k(-17410, 8);
+              var1.field_k = var1.field_k + 1;
+              var2 = var1.field_k + 1;
+              ql.a(-124, var1);
+              di.field_l.j(var1.field_k + -var2, -119);
+              continue L0;
+            } else {
+              return;
+            }
+          }
+        } else {
+          L1: while (true) {
+            if (b.a((byte) -102)) {
+              var1.k(-17410, 8);
+              var1.field_k = var1.field_k + 1;
+              var2 = var1.field_k + 1;
+              ql.a(-124, var1);
+              di.field_l.j(var1.field_k + -var2, -119);
+              continue L1;
+            } else {
+              return;
+            }
+          }
+        }
+    }
+
+    static {
+        $cfr$clinit();
+    }
+
+    private static void $cfr$clinit() {
+        field_d = false;
+        field_e = new byte[50][];
+        field_c = new im();
+    }
+}

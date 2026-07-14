@@ -1,0 +1,43 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class dl extends qb {
+    static int field_g;
+    int[] field_i;
+    static int field_h;
+    static String field_j;
+
+    final static void a(int param0, kc param1) {
+        ji.a(true);
+        vj.a(((kc) param1).field_r, ((kc) param1).field_l, ((kc) param1).field_k);
+        int var2 = -40 % ((param0 - 27) / 52);
+    }
+
+    final static boolean d(int param0) {
+        if (param0 != 0) {
+            return false;
+        }
+        return vg.field_d;
+    }
+
+    private dl() throws Throwable {
+        throw new Error();
+    }
+
+    public static void a(int param0) {
+        field_j = null;
+        if (param0 != 8996) {
+            kc var2 = (kc) null;
+            dl.a(51, (kc) null);
+        }
+    }
+
+    static {
+        $cfr$clinit();
+    }
+
+    private static void $cfr$clinit() {
+        field_h = 0;
+        field_j = "Go Back";
+    }
+}

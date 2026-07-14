@@ -1,0 +1,74 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+import java.util.*;
+
+final class sf implements Iterator {
+    static je field_a;
+    static String field_c;
+    private gb field_f;
+    static int field_d;
+    private rk field_e;
+    static String field_b;
+    private gb field_g;
+
+    public final boolean hasNext() {
+        return ((sf) this).field_g != ((sf) this).field_e.field_e;
+    }
+
+    public final void remove() {
+        if (!(null != ((sf) this).field_f)) {
+            throw new IllegalStateException();
+        }
+        ((sf) this).field_f.e(0);
+        ((sf) this).field_f = null;
+    }
+
+    public static void a(byte param0) {
+        field_b = null;
+        field_c = null;
+        field_a = null;
+        if (param0 > -97) {
+            field_b = null;
+        }
+    }
+
+    public final Object next() {
+        gb var1 = ((sf) this).field_g;
+        if (((sf) this).field_e.field_e != var1) {
+            ((sf) this).field_g = var1.field_o;
+        } else {
+            var1 = null;
+            ((sf) this).field_g = null;
+        }
+        ((sf) this).field_f = var1;
+        return (Object) (Object) var1;
+    }
+
+    sf(rk param0) {
+        ((sf) this).field_f = null;
+        ((sf) this).field_e = param0;
+        ((sf) this).field_f = null;
+        ((sf) this).field_g = ((sf) this).field_e.field_e.field_o;
+    }
+
+    final static gd a(int param0, long param1) {
+        if (param0 != -18701) {
+          sf.a((byte) -94);
+          return (gd) (Object) dg.field_g.a(param1, param0 ^ -18702);
+        } else {
+          return (gd) (Object) dg.field_g.a(param1, param0 ^ -18702);
+        }
+    }
+
+    static {
+        $cfr$clinit();
+    }
+
+    private static void $cfr$clinit() {
+        field_c = "Enter the name you'd prefer. This is the name displayed to other players.";
+        field_b = "<%0> is not on your friend list.";
+        field_d = 0;
+        field_a = new je();
+    }
+}

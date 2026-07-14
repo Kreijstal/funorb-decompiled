@@ -1,0 +1,63 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+abstract class af {
+    static String field_a;
+    static String field_b;
+
+    final static void a(boolean param0) {
+        t var1 = null;
+        t var2 = null;
+        int var3 = 0;
+        int var4 = 0;
+        var4 = Torquing.field_u;
+        var1 = new t(540, 140);
+        tm.a((byte) -121, var1);
+        be.a();
+        ph.b();
+        jh.field_z = 0;
+        so.b(119);
+        var2 = var1.c();
+        var3 = 0;
+        L0: while (true) {
+          if (-16 >= (var3 ^ -1)) {
+            if (!param0) {
+              af.a(-61);
+              ff.field_c.e();
+              var1.c(0, 0);
+              r.a(126);
+              return;
+            } else {
+              ff.field_c.e();
+              var1.c(0, 0);
+              r.a(126);
+              return;
+            }
+          } else {
+            var2.b(-2, -2, 16777215);
+            ph.d(4, 4, 0, 0, 540, 140);
+            var3++;
+            continue L0;
+          }
+        }
+    }
+
+    abstract void b(int param0);
+
+    public static void a(int param0) {
+        field_b = null;
+        field_a = null;
+        if (param0 != 23394) {
+            af.a(-25);
+        }
+    }
+
+    static {
+        $cfr$clinit();
+    }
+
+    private static void $cfr$clinit() {
+        field_a = "Connection lost - attempting to reconnect";
+        field_b = "?";
+    }
+}

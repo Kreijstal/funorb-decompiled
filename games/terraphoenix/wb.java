@@ -1,0 +1,53 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+import java.io.*;
+
+final class wb extends IOException {
+    static int field_g;
+    static volatile boolean field_d;
+    static int field_f;
+    static bg[] field_h;
+    static int field_e;
+    static int field_c;
+    static ak[] field_b;
+    static int[] field_a;
+
+    final static void b(int param0) {
+        uj.field_c = false;
+        ea.field_m = -1;
+        ga.field_j = 0;
+        if (param0 <= 77) {
+          wb.a(27);
+          cc.field_j = null;
+          lb.field_b = -1;
+          return;
+        } else {
+          cc.field_j = null;
+          lb.field_b = -1;
+          return;
+        }
+    }
+
+    public static void a(int param0) {
+        field_a = null;
+        field_h = null;
+        field_b = null;
+        int var1 = -76 / ((param0 - -70) / 49);
+    }
+
+    wb(String param0) {
+        super(param0);
+    }
+
+    static {
+        $cfr$clinit();
+    }
+
+    private static void $cfr$clinit() {
+        field_g = 0;
+        field_d = true;
+        field_f = 56;
+        field_e = 70;
+    }
+}

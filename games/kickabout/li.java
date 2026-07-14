@@ -1,0 +1,185 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class li {
+    static String[] field_c;
+    Object field_d;
+    static String field_f;
+    static String field_e;
+    static hd field_a;
+    boolean field_b;
+    static int field_h;
+    static int[] field_g;
+
+    final static void a(int param0, byte param1) {
+        if (param1 < 8) {
+            li.a((byte) -49);
+            ms.a(0, param0);
+            return;
+        }
+        ms.a(0, param0);
+    }
+
+    public final String toString() {
+        if (((li) this).field_b) {
+            return rm.a(((li) this).field_d, (byte) 117) + "{" + ((li) this).field_d + "}";
+        }
+        if (!(null != ((li) this).field_d)) {
+            return "null";
+        }
+        return ((li) this).field_d.toString();
+    }
+
+    final static void a(int param0, String param1) {
+        np.field_Jb.a((gn) (Object) new nq(param1), 3);
+        if (param0 != 2009) {
+            Object var3 = null;
+            li.a(79, (String) null);
+        }
+    }
+
+    final long a(boolean param0) {
+        if (((li) this).field_d instanceof Long) {
+          return ((Long) ((li) this).field_d).longValue();
+        } else {
+          if (!(((li) this).field_d instanceof Integer)) {
+            if (!(((li) this).field_d instanceof Short)) {
+              if (((li) this).field_d instanceof Byte) {
+                return ((Byte) ((li) this).field_d).longValue();
+              } else {
+                if (((li) this).field_d instanceof Double) {
+                  return ((Double) ((li) this).field_d).longValue();
+                } else {
+                  if (param0) {
+                    if (((li) this).field_d instanceof Float) {
+                      return ((Float) ((li) this).field_d).longValue();
+                    } else {
+                      throw new ClassCastException();
+                    }
+                  } else {
+                    field_a = null;
+                    if (((li) this).field_d instanceof Float) {
+                      return ((Float) ((li) this).field_d).longValue();
+                    } else {
+                      throw new ClassCastException();
+                    }
+                  }
+                }
+              }
+            } else {
+              return ((Short) ((li) this).field_d).longValue();
+            }
+          } else {
+            return ((Integer) ((li) this).field_d).longValue();
+          }
+        }
+    }
+
+    final int b(int param0) {
+        if (param0 == -30368) {
+          if (((li) this).field_d instanceof Integer) {
+            return ((Integer) ((li) this).field_d).intValue();
+          } else {
+            return (int)((li) this).a(true);
+          }
+        } else {
+          field_h = -65;
+          if (((li) this).field_d instanceof Integer) {
+            return ((Integer) ((li) this).field_d).intValue();
+          } else {
+            return (int)((li) this).a(true);
+          }
+        }
+    }
+
+    final boolean c(int param0) {
+        if (param0 != 0) {
+            return true;
+        }
+        return ((Boolean) ((li) this).field_d).booleanValue();
+    }
+
+    final byte a(int param0) {
+        if (param0 != 0) {
+            ((li) this).field_d = null;
+            if (!(!(((li) this).field_d instanceof Byte))) {
+                return ((Byte) ((li) this).field_d).byteValue();
+            }
+            return (byte)(int)((li) this).a(true);
+        }
+        if (!(!(((li) this).field_d instanceof Byte))) {
+            return ((Byte) ((li) this).field_d).byteValue();
+        }
+        return (byte)(int)((li) this).a(true);
+    }
+
+    public static void a(byte param0) {
+        Object var2 = null;
+        field_c = null;
+        field_f = null;
+        if (param0 > -101) {
+          var2 = null;
+          li.a(121, (String) null);
+          field_g = null;
+          field_e = null;
+          field_a = null;
+          return;
+        } else {
+          field_g = null;
+          field_e = null;
+          field_a = null;
+          return;
+        }
+    }
+
+    li(int param0) {
+        ((li) this).field_d = (Object) (Object) new Integer(param0);
+        ((li) this).field_b = true;
+    }
+
+    li(byte param0) {
+        ((li) this).field_d = (Object) (Object) new Byte(param0);
+        ((li) this).field_b = true;
+    }
+
+    li(long param0) {
+        ((li) this).field_d = (Object) (Object) new Long(param0);
+        ((li) this).field_b = true;
+    }
+
+    li(boolean param0) {
+        ((li) this).field_d = (Object) (Object) new Boolean(param0);
+        ((li) this).field_b = true;
+    }
+
+    li(float param0) {
+        ((li) this).field_d = (Object) (Object) new Float(param0);
+        ((li) this).field_b = true;
+    }
+
+    li(double param0) {
+        ((li) this).field_d = (Object) (Object) new Double(param0);
+        ((li) this).field_b = true;
+    }
+
+    li(char param0) {
+        ((li) this).field_d = (Object) (Object) new Character(param0);
+        ((li) this).field_b = true;
+    }
+
+    li(Object param0) {
+        ((li) this).field_b = false;
+        ((li) this).field_d = param0;
+    }
+
+    static {
+        $cfr$clinit();
+    }
+
+    private static void $cfr$clinit() {
+        field_e = "This pitch is locked. To unlock the <%0>, first buy the <%1>.";
+        field_f = "All games";
+        field_g = new int[8192];
+        field_h = 0;
+    }
+}

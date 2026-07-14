@@ -1,0 +1,111 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class qab {
+    private int field_e;
+    static String field_a;
+    private String field_c;
+    static int field_d;
+    int field_b;
+
+    final char a(int param0) {
+        if (param0 > -75) {
+          ((qab) this).field_b = -65;
+          ((qab) this).field_b = ((qab) this).field_b + 1;
+          return ((qab) this).field_c.charAt(((qab) this).field_b);
+        } else {
+          ((qab) this).field_b = ((qab) this).field_b + 1;
+          return ((qab) this).field_c.charAt(((qab) this).field_b);
+        }
+    }
+
+    public final String toString() {
+        return ((qab) this).field_c.substring(0, ((qab) this).field_b) + "|" + ((qab) this).field_c.substring(((qab) this).field_b);
+    }
+
+    final boolean a(byte param0) {
+        int stackIn_4_0 = 0;
+        int stackIn_8_0 = 0;
+        int stackOut_7_0 = 0;
+        int stackOut_6_0 = 0;
+        int stackOut_3_0 = 0;
+        int stackOut_2_0 = 0;
+        if (param0 > -102) {
+          L0: {
+            char discarded$10 = ((qab) this).a(-42);
+            if (((qab) this).field_e > ((qab) this).field_b) {
+              stackOut_7_0 = 0;
+              stackIn_8_0 = stackOut_7_0;
+              break L0;
+            } else {
+              stackOut_6_0 = 1;
+              stackIn_8_0 = stackOut_6_0;
+              break L0;
+            }
+          }
+          return stackIn_8_0 != 0;
+        } else {
+          L1: {
+            if (((qab) this).field_e > ((qab) this).field_b) {
+              stackOut_3_0 = 0;
+              stackIn_4_0 = stackOut_3_0;
+              break L1;
+            } else {
+              stackOut_2_0 = 1;
+              stackIn_4_0 = stackOut_2_0;
+              break L1;
+            }
+          }
+          return stackIn_4_0 != 0;
+        }
+    }
+
+    public static void b(int param0) {
+        if (param0 != 0) {
+            boolean discarded$0 = qab.a(107, -118);
+            field_a = null;
+            return;
+        }
+        field_a = null;
+    }
+
+    final static boolean a(int param0, int param1) {
+        if (param0 > 32) {
+          if ((param1 ^ -1) != -12) {
+            if ((param1 ^ -1) == -14) {
+              return false;
+            } else {
+              return true;
+            }
+          } else {
+            return false;
+          }
+        } else {
+          field_a = null;
+          if ((param1 ^ -1) != -12) {
+            if ((param1 ^ -1) == -14) {
+              return false;
+            } else {
+              return true;
+            }
+          } else {
+            return false;
+          }
+        }
+    }
+
+    qab(String param0) {
+        ((qab) this).field_b = 0;
+        ((qab) this).field_c = param0;
+        ((qab) this).field_e = ((qab) this).field_c.length();
+    }
+
+    static {
+        $cfr$clinit();
+    }
+
+    private static void $cfr$clinit() {
+        field_a = "This password contains repeated characters, and would be easy to guess";
+        field_d = 1024;
+    }
+}

@@ -1,0 +1,121 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class rl {
+    static String field_a;
+    static String[] field_b;
+    static String field_c;
+
+    final static boolean b(int param0) {
+        int stackIn_4_0 = 0;
+        int stackIn_8_0 = 0;
+        int stackOut_7_0 = 0;
+        int stackOut_6_0 = 0;
+        int stackOut_3_0 = 0;
+        int stackOut_2_0 = 0;
+        rf.field_r = true;
+        if (param0 != 0) {
+          L0: {
+            rl.a(-78);
+            ah.field_z = 15000L + ll.a(param0 + 1000);
+            if (-12 != q.field_Jb) {
+              stackOut_7_0 = 0;
+              stackIn_8_0 = stackOut_7_0;
+              break L0;
+            } else {
+              stackOut_6_0 = 1;
+              stackIn_8_0 = stackOut_6_0;
+              break L0;
+            }
+          }
+          return stackIn_8_0 != 0;
+        } else {
+          L1: {
+            ah.field_z = 15000L + ll.a(param0 + 1000);
+            if (-12 != q.field_Jb) {
+              stackOut_3_0 = 0;
+              stackIn_4_0 = stackOut_3_0;
+              break L1;
+            } else {
+              stackOut_2_0 = 1;
+              stackIn_4_0 = stackOut_2_0;
+              break L1;
+            }
+          }
+          return stackIn_4_0 != 0;
+        }
+    }
+
+    public static void a(int param0) {
+        field_b = null;
+        field_a = null;
+        if (param0 != -19959) {
+            return;
+        }
+        field_c = null;
+    }
+
+    final static int a(int param0, int param1, boolean param2) {
+        int var3 = 0;
+        int var4 = 0;
+        var4 = Terraphoenix.field_V;
+        if (!param2) {
+          var3 = 1;
+          L0: while (true) {
+            if (-2 <= (param1 ^ -1)) {
+              if (1 == param1) {
+                return param0 * var3;
+              } else {
+                return var3;
+              }
+            } else {
+              L1: {
+                if (0 == (1 & param1)) {
+                  break L1;
+                } else {
+                  var3 = var3 * param0;
+                  break L1;
+                }
+              }
+              param0 = param0 * param0;
+              param1 = param1 >> 1;
+              continue L0;
+            }
+          }
+        } else {
+          field_b = null;
+          var3 = 1;
+          L2: while (true) {
+            if (-2 <= (param1 ^ -1)) {
+              if (1 == param1) {
+                return param0 * var3;
+              } else {
+                return var3;
+              }
+            } else {
+              L3: {
+                if (0 == (1 & param1)) {
+                  break L3;
+                } else {
+                  var3 = var3 * param0;
+                  break L3;
+                }
+              }
+              param0 = param0 * param0;
+              param1 = param1 >> 1;
+              continue L2;
+            }
+          }
+        }
+    }
+
+    static {
+        $cfr$clinit();
+    }
+
+    private static void $cfr$clinit() {
+        field_a = ", high explosive";
+        field_c = "Left click to center on this location";
+        field_b = new String[]{"Aleisha", "Alison", "Amanda", "Amellia", "Anna", "Anne", "Bianco", "Boudica", "Candice", "Carol", "Catherine", "Chardonnay", "Charity", "Chelsea", "Danella", "Elaine", "Eleanor", "Ella", "Ellen", "Emma", "Francine", "Gemma", "Hazel", "Heidi", "Ivy", "Jackie", "Joan", "Jody", "Jude", "Judy", "Julia", "Julie", "Kate", "Kirstie", "Laura", "Lilly", "Linda", "Louise", "Lucy", "Mandy", "Michelle", "Monica", "Morgan", "Nadia", "Naomi", "Olivia", "Rachel", "Rebecca", "Regatta", "Rhiannon", "Rose", "Rowena", "Sajina", "Sasha", "Sarah", "Sharon", "Siobhan", "Stacy", "Stephanie", "Susan", "Tina", "Tracey", "Vanessa", "Veronica", "Wendy", "Yi", "Yvonne", "Zaza", "Brittany", "Holly", "Helen", "Jenny", "Karen", "Megan"};
+    }
+}

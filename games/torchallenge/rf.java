@@ -1,0 +1,149 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class rf extends dj implements uh {
+    private wd field_fb;
+    private int field_gb;
+    static int field_ib;
+    static sl field_db;
+    static int[] field_hb;
+    static int[][] field_eb;
+    static int[] field_jb;
+
+    public static void i(byte param0) {
+        field_eb = null;
+        field_jb = null;
+        if (param0 < 6) {
+          field_ib = 113;
+          field_hb = null;
+          field_db = null;
+          return;
+        } else {
+          field_hb = null;
+          field_db = null;
+          return;
+        }
+    }
+
+    final void a(ee param0, int param1, byte param2, int param3) {
+        super.a(param0, param1, (byte) -114, param3);
+        if (param2 >= -97) {
+          field_jb = null;
+          ((rf) this).field_gb = kc.field_u - ((rf) this).field_m - param1;
+          return;
+        } else {
+          ((rf) this).field_gb = kc.field_u - ((rf) this).field_m - param1;
+          return;
+        }
+    }
+
+    final static void n(int param0) {
+        ie.field_g = null;
+        ul.field_n = -1;
+        bk.field_p = 0;
+        sj.field_R = false;
+        bi.field_h = -1;
+        if (param0 != 19630) {
+            rf.m(119);
+        }
+    }
+
+    final static void a(lj param0, byte param1, boolean param2, lj param3, lj param4) {
+        Object var6 = null;
+        ji.field_k = og.a("", true);
+        ji.field_k.a((byte) 56, false);
+        vj.a(param4, param3, param1 + 23104, param0);
+        ul.c(-1247);
+        if (param1 != -23) {
+            var6 = null;
+            rf.a((lj) null, (byte) 35, false, (lj) null, (lj) null);
+        } else {
+            gj.field_a = mg.field_c;
+            eh.field_p = mg.field_c;
+            return;
+        }
+        gj.field_a = mg.field_c;
+        eh.field_p = mg.field_c;
+    }
+
+    final String b(boolean param0) {
+        if (((rf) this).field_w) {
+          if (((rf) this).field_r != null) {
+            if (param0) {
+              field_jb = null;
+              sl.a(((rf) this).field_p - (((rf) this).field_gb - kc.field_u), ph.field_d, -6665);
+              return ((rf) this).field_r;
+            } else {
+              sl.a(((rf) this).field_p - (((rf) this).field_gb - kc.field_u), ph.field_d, -6665);
+              return ((rf) this).field_r;
+            }
+          } else {
+            return null;
+          }
+        } else {
+          return null;
+        }
+    }
+
+    final void k(int param0) {
+        L0: {
+          super.k(-95);
+          if (((rf) this).field_fb != null) {
+            ((rf) this).field_fb.a(true);
+            break L0;
+          } else {
+            break L0;
+          }
+        }
+        if (param0 >= -79) {
+          field_db = null;
+          return;
+        } else {
+          return;
+        }
+    }
+
+    final void a(int param0, wd param1) {
+        ((rf) this).field_fb = param1;
+        if (param0 != -27997) {
+            ((rf) this).k(-38);
+        }
+    }
+
+    public final wd a(int param0) {
+        if (param0 > -101) {
+            return null;
+        }
+        return ((rf) this).field_fb;
+    }
+
+    rf(String param0, gg param1, int param2) {
+        super(param0, param1, param2);
+    }
+
+    final static void m(int param0) {
+        int var1 = 0;
+        int var2 = 0;
+        if (param0 != 62) {
+          return;
+        } else {
+          var1 = fl.f(param0 + -62);
+          var2 = o.a(18);
+          gb.field_f.a(var2 - -(mg.field_d << -326978687), jl.field_e + -mg.field_d, -1, -i.field_m + qe.field_R, var1 - -(i.field_m << -1913119871));
+          m.a((byte) 118);
+          return;
+        }
+    }
+
+    static {
+        $cfr$clinit();
+    }
+
+    private static void $cfr$clinit() {
+        field_ib = 0;
+        field_db = new sl();
+        field_hb = new int[]{0, 0, 1, 0, 0, 1, 2, 3, 4};
+        field_eb = new int[][]{new int[4], new int[4], new int[4]};
+        field_jb = new int[]{2048, 8388608, 8};
+    }
+}

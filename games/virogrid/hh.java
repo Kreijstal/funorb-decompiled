@@ -1,0 +1,865 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class hh {
+    static long field_d;
+    static int field_c;
+    static int[] field_b;
+    static mg field_a;
+    static int field_e;
+
+    final static void a(byte param0, int param1) {
+        int var2 = 0;
+        int var3 = 0;
+        int var4 = 0;
+        int var5 = 0;
+        int var6 = 0;
+        var6 = Virogrid.field_F ? 1 : 0;
+        var2 = 0;
+        var3 = kf.field_e;
+        if (var3 > -6) {
+          L0: {
+            var2 = 8192 * var3 * var3 / 1100;
+            var4 = 1;
+            var5 = 0;
+            if (1 == param1) {
+              var5 = 1;
+              break L0;
+            } else {
+              break L0;
+            }
+          }
+          L1: {
+            if (param1 != -4) {
+              break L1;
+            } else {
+              var4 = -1;
+              break L1;
+            }
+          }
+          L2: {
+            if (param1 != 4) {
+              break L2;
+            } else {
+              var5 = 1;
+              var4 = 1;
+              break L2;
+            }
+          }
+          L3: {
+            if (-6 == param1) {
+              var4 = -1;
+              var5 = 1;
+              break L3;
+            } else {
+              break L3;
+            }
+          }
+          L4: {
+            if (-7 != param1) {
+              break L4;
+            } else {
+              var4 = 1;
+              var5 = -1;
+              break L4;
+            }
+          }
+          L5: {
+            if (-8 == param1) {
+              var4 = -1;
+              var5 = -1;
+              break L5;
+            } else {
+              if (8 != param1) {
+                break L5;
+              } else {
+                var4 = -1;
+                var5 = -1;
+                if (param0 < 75) {
+                  L6: {
+                    uh discarded$8 = hh.a(105);
+                    if (-12 == param1) {
+                      var4 = -1;
+                      break L6;
+                    } else {
+                      break L6;
+                    }
+                  }
+                  L7: {
+                    if (-13 != param1) {
+                      break L7;
+                    } else {
+                      var5 = -1;
+                      var4 = -1;
+                      break L7;
+                    }
+                  }
+                  L8: {
+                    if (-14 != (param1 ^ -1)) {
+                      break L8;
+                    } else {
+                      var4 = 1;
+                      var5 = -1;
+                      break L8;
+                    }
+                  }
+                  L9: {
+                    if ((param1 ^ -1) == -15) {
+                      var5 = 1;
+                      var4 = -1;
+                      break L9;
+                    } else {
+                      break L9;
+                    }
+                  }
+                  L10: {
+                    if ((param1 ^ -1) != -16) {
+                      break L10;
+                    } else {
+                      var4 = 1;
+                      var5 = 1;
+                      break L10;
+                    }
+                  }
+                  gl.field_c = pa.a(-126, var2 * var4, var2 * var5);
+                  return;
+                } else {
+                  L11: {
+                    if (-12 == param1) {
+                      var4 = -1;
+                      break L11;
+                    } else {
+                      break L11;
+                    }
+                  }
+                  L12: {
+                    if (-13 != param1) {
+                      break L12;
+                    } else {
+                      var5 = -1;
+                      var4 = -1;
+                      break L12;
+                    }
+                  }
+                  L13: {
+                    if (-14 != (param1 ^ -1)) {
+                      break L13;
+                    } else {
+                      var4 = 1;
+                      var5 = -1;
+                      break L13;
+                    }
+                  }
+                  L14: {
+                    if ((param1 ^ -1) == -15) {
+                      var5 = 1;
+                      var4 = -1;
+                      break L14;
+                    } else {
+                      break L14;
+                    }
+                  }
+                  L15: {
+                    if ((param1 ^ -1) != -16) {
+                      break L15;
+                    } else {
+                      var4 = 1;
+                      var5 = 1;
+                      break L15;
+                    }
+                  }
+                  gl.field_c = pa.a(-126, var2 * var4, var2 * var5);
+                  return;
+                }
+              }
+            }
+          }
+          if (param0 < 75) {
+            L16: {
+              uh discarded$9 = hh.a(105);
+              if (-12 == param1) {
+                var4 = -1;
+                break L16;
+              } else {
+                break L16;
+              }
+            }
+            L17: {
+              if (-13 != param1) {
+                break L17;
+              } else {
+                var5 = -1;
+                var4 = -1;
+                break L17;
+              }
+            }
+            L18: {
+              if (-14 != (param1 ^ -1)) {
+                break L18;
+              } else {
+                var4 = 1;
+                var5 = -1;
+                break L18;
+              }
+            }
+            L19: {
+              if ((param1 ^ -1) == -15) {
+                var5 = 1;
+                var4 = -1;
+                break L19;
+              } else {
+                break L19;
+              }
+            }
+            L20: {
+              if ((param1 ^ -1) != -16) {
+                break L20;
+              } else {
+                var4 = 1;
+                var5 = 1;
+                break L20;
+              }
+            }
+            gl.field_c = pa.a(-126, var2 * var4, var2 * var5);
+            return;
+          } else {
+            L21: {
+              if (-12 == param1) {
+                var4 = -1;
+                break L21;
+              } else {
+                break L21;
+              }
+            }
+            L22: {
+              if (-13 != param1) {
+                break L22;
+              } else {
+                var5 = -1;
+                var4 = -1;
+                break L22;
+              }
+            }
+            L23: {
+              if (-14 != (param1 ^ -1)) {
+                break L23;
+              } else {
+                var4 = 1;
+                var5 = -1;
+                break L23;
+              }
+            }
+            L24: {
+              if ((param1 ^ -1) == -15) {
+                var5 = 1;
+                var4 = -1;
+                break L24;
+              } else {
+                break L24;
+              }
+            }
+            L25: {
+              if ((param1 ^ -1) != -16) {
+                break L25;
+              } else {
+                var4 = 1;
+                var5 = 1;
+                break L25;
+              }
+            }
+            gl.field_c = pa.a(-126, var2 * var4, var2 * var5);
+            return;
+          }
+        } else {
+          if (-106 <= var3) {
+            if (var3 < 120) {
+              L26: {
+                var3 = -var3 + 120;
+                var2 = -(8192 * var3 * var3 / 3300) + 8192;
+                var4 = 1;
+                var5 = 0;
+                if (1 == param1) {
+                  var5 = 1;
+                  break L26;
+                } else {
+                  break L26;
+                }
+              }
+              L27: {
+                if (param1 != -4) {
+                  break L27;
+                } else {
+                  var4 = -1;
+                  break L27;
+                }
+              }
+              L28: {
+                if (param1 != 4) {
+                  break L28;
+                } else {
+                  var5 = 1;
+                  var4 = 1;
+                  break L28;
+                }
+              }
+              L29: {
+                if (-6 == param1) {
+                  var4 = -1;
+                  var5 = 1;
+                  break L29;
+                } else {
+                  break L29;
+                }
+              }
+              L30: {
+                if (-7 != param1) {
+                  break L30;
+                } else {
+                  var4 = 1;
+                  var5 = -1;
+                  break L30;
+                }
+              }
+              if (-8 != param1) {
+                if (8 == param1) {
+                  L31: {
+                    var4 = -1;
+                    var5 = -1;
+                    if (param0 >= 75) {
+                      break L31;
+                    } else {
+                      uh discarded$10 = hh.a(105);
+                      break L31;
+                    }
+                  }
+                  L32: {
+                    if (-12 == param1) {
+                      var4 = -1;
+                      break L32;
+                    } else {
+                      break L32;
+                    }
+                  }
+                  L33: {
+                    if (-13 != param1) {
+                      break L33;
+                    } else {
+                      var5 = -1;
+                      var4 = -1;
+                      break L33;
+                    }
+                  }
+                  L34: {
+                    if (-14 != (param1 ^ -1)) {
+                      break L34;
+                    } else {
+                      var4 = 1;
+                      var5 = -1;
+                      break L34;
+                    }
+                  }
+                  L35: {
+                    if ((param1 ^ -1) == -15) {
+                      var5 = 1;
+                      var4 = -1;
+                      break L35;
+                    } else {
+                      break L35;
+                    }
+                  }
+                  L36: {
+                    if ((param1 ^ -1) != -16) {
+                      break L36;
+                    } else {
+                      var4 = 1;
+                      var5 = 1;
+                      break L36;
+                    }
+                  }
+                  gl.field_c = pa.a(-126, var2 * var4, var2 * var5);
+                  return;
+                } else {
+                  L37: {
+                    if (param0 >= 75) {
+                      break L37;
+                    } else {
+                      uh discarded$11 = hh.a(105);
+                      break L37;
+                    }
+                  }
+                  L38: {
+                    if (-12 == param1) {
+                      var4 = -1;
+                      break L38;
+                    } else {
+                      break L38;
+                    }
+                  }
+                  L39: {
+                    if (-13 != param1) {
+                      break L39;
+                    } else {
+                      var5 = -1;
+                      var4 = -1;
+                      break L39;
+                    }
+                  }
+                  L40: {
+                    if (-14 != (param1 ^ -1)) {
+                      break L40;
+                    } else {
+                      var4 = 1;
+                      var5 = -1;
+                      break L40;
+                    }
+                  }
+                  L41: {
+                    if ((param1 ^ -1) == -15) {
+                      var5 = 1;
+                      var4 = -1;
+                      break L41;
+                    } else {
+                      break L41;
+                    }
+                  }
+                  L42: {
+                    if ((param1 ^ -1) != -16) {
+                      break L42;
+                    } else {
+                      var4 = 1;
+                      var5 = 1;
+                      break L42;
+                    }
+                  }
+                  gl.field_c = pa.a(-126, var2 * var4, var2 * var5);
+                  return;
+                }
+              } else {
+                L43: {
+                  var4 = -1;
+                  var5 = -1;
+                  if (param0 >= 75) {
+                    break L43;
+                  } else {
+                    uh discarded$12 = hh.a(105);
+                    break L43;
+                  }
+                }
+                L44: {
+                  if (-12 == param1) {
+                    var4 = -1;
+                    break L44;
+                  } else {
+                    break L44;
+                  }
+                }
+                L45: {
+                  if (-13 != param1) {
+                    break L45;
+                  } else {
+                    var5 = -1;
+                    var4 = -1;
+                    break L45;
+                  }
+                }
+                L46: {
+                  if (-14 != (param1 ^ -1)) {
+                    break L46;
+                  } else {
+                    var4 = 1;
+                    var5 = -1;
+                    break L46;
+                  }
+                }
+                L47: {
+                  if ((param1 ^ -1) == -15) {
+                    var5 = 1;
+                    var4 = -1;
+                    break L47;
+                  } else {
+                    break L47;
+                  }
+                }
+                L48: {
+                  if ((param1 ^ -1) != -16) {
+                    break L48;
+                  } else {
+                    var4 = 1;
+                    var5 = 1;
+                    break L48;
+                  }
+                }
+                gl.field_c = pa.a(-126, var2 * var4, var2 * var5);
+                return;
+              }
+            } else {
+              L49: {
+                var4 = 1;
+                var5 = 0;
+                if (1 == param1) {
+                  var5 = 1;
+                  break L49;
+                } else {
+                  break L49;
+                }
+              }
+              L50: {
+                if (param1 != -4) {
+                  break L50;
+                } else {
+                  var4 = -1;
+                  break L50;
+                }
+              }
+              L51: {
+                if (param1 != 4) {
+                  break L51;
+                } else {
+                  var5 = 1;
+                  var4 = 1;
+                  break L51;
+                }
+              }
+              L52: {
+                if (-6 == param1) {
+                  var4 = -1;
+                  var5 = 1;
+                  break L52;
+                } else {
+                  break L52;
+                }
+              }
+              L53: {
+                if (-7 != param1) {
+                  break L53;
+                } else {
+                  var4 = 1;
+                  var5 = -1;
+                  break L53;
+                }
+              }
+              if (-8 != param1) {
+                L54: {
+                  if (8 != param1) {
+                    break L54;
+                  } else {
+                    var4 = -1;
+                    var5 = -1;
+                    break L54;
+                  }
+                }
+                if (param0 >= 75) {
+                  L55: {
+                    if (-12 == param1) {
+                      var4 = -1;
+                      break L55;
+                    } else {
+                      break L55;
+                    }
+                  }
+                  L56: {
+                    if (-13 != param1) {
+                      break L56;
+                    } else {
+                      var5 = -1;
+                      var4 = -1;
+                      break L56;
+                    }
+                  }
+                  L57: {
+                    if (-14 != (param1 ^ -1)) {
+                      break L57;
+                    } else {
+                      var4 = 1;
+                      var5 = -1;
+                      break L57;
+                    }
+                  }
+                  L58: {
+                    if ((param1 ^ -1) == -15) {
+                      var5 = 1;
+                      var4 = -1;
+                      break L58;
+                    } else {
+                      break L58;
+                    }
+                  }
+                  L59: {
+                    if ((param1 ^ -1) != -16) {
+                      break L59;
+                    } else {
+                      var4 = 1;
+                      var5 = 1;
+                      break L59;
+                    }
+                  }
+                  gl.field_c = pa.a(-126, var2 * var4, var2 * var5);
+                  return;
+                } else {
+                  L60: {
+                    uh discarded$13 = hh.a(105);
+                    if (-12 == param1) {
+                      var4 = -1;
+                      break L60;
+                    } else {
+                      break L60;
+                    }
+                  }
+                  L61: {
+                    if (-13 != param1) {
+                      break L61;
+                    } else {
+                      var5 = -1;
+                      var4 = -1;
+                      break L61;
+                    }
+                  }
+                  L62: {
+                    if (-14 != (param1 ^ -1)) {
+                      break L62;
+                    } else {
+                      var4 = 1;
+                      var5 = -1;
+                      break L62;
+                    }
+                  }
+                  L63: {
+                    if ((param1 ^ -1) == -15) {
+                      var5 = 1;
+                      var4 = -1;
+                      break L63;
+                    } else {
+                      break L63;
+                    }
+                  }
+                  L64: {
+                    if ((param1 ^ -1) != -16) {
+                      break L64;
+                    } else {
+                      var4 = 1;
+                      var5 = 1;
+                      break L64;
+                    }
+                  }
+                  gl.field_c = pa.a(-126, var2 * var4, var2 * var5);
+                  return;
+                }
+              } else {
+                L65: {
+                  var4 = -1;
+                  var5 = -1;
+                  if (param0 >= 75) {
+                    break L65;
+                  } else {
+                    uh discarded$14 = hh.a(105);
+                    break L65;
+                  }
+                }
+                L66: {
+                  if (-12 == param1) {
+                    var4 = -1;
+                    break L66;
+                  } else {
+                    break L66;
+                  }
+                }
+                L67: {
+                  if (-13 != param1) {
+                    break L67;
+                  } else {
+                    var5 = -1;
+                    var4 = -1;
+                    break L67;
+                  }
+                }
+                L68: {
+                  if (-14 != (param1 ^ -1)) {
+                    break L68;
+                  } else {
+                    var4 = 1;
+                    var5 = -1;
+                    break L68;
+                  }
+                }
+                L69: {
+                  if ((param1 ^ -1) == -15) {
+                    var5 = 1;
+                    var4 = -1;
+                    break L69;
+                  } else {
+                    break L69;
+                  }
+                }
+                L70: {
+                  if ((param1 ^ -1) != -16) {
+                    break L70;
+                  } else {
+                    var4 = 1;
+                    var5 = 1;
+                    break L70;
+                  }
+                }
+                gl.field_c = pa.a(-126, var2 * var4, var2 * var5);
+                return;
+              }
+            }
+          } else {
+            L71: {
+              var2 = (-40960 + 16384 * var3) / 220;
+              var4 = 1;
+              var5 = 0;
+              if (1 == param1) {
+                var5 = 1;
+                break L71;
+              } else {
+                break L71;
+              }
+            }
+            L72: {
+              if (param1 != -4) {
+                break L72;
+              } else {
+                var4 = -1;
+                break L72;
+              }
+            }
+            L73: {
+              if (param1 != 4) {
+                break L73;
+              } else {
+                var5 = 1;
+                var4 = 1;
+                break L73;
+              }
+            }
+            L74: {
+              if (-6 == param1) {
+                var4 = -1;
+                var5 = 1;
+                break L74;
+              } else {
+                break L74;
+              }
+            }
+            L75: {
+              if (-7 != param1) {
+                break L75;
+              } else {
+                var4 = 1;
+                var5 = -1;
+                break L75;
+              }
+            }
+            L76: {
+              L77: {
+                if (-8 == param1) {
+                  break L77;
+                } else {
+                  if (8 != param1) {
+                    break L76;
+                  } else {
+                    break L77;
+                  }
+                }
+              }
+              var4 = -1;
+              var5 = -1;
+              break L76;
+            }
+            L78: {
+              if (param0 >= 75) {
+                break L78;
+              } else {
+                uh discarded$15 = hh.a(105);
+                break L78;
+              }
+            }
+            L79: {
+              if (-12 == param1) {
+                var4 = -1;
+                break L79;
+              } else {
+                break L79;
+              }
+            }
+            L80: {
+              if (-13 != param1) {
+                break L80;
+              } else {
+                var5 = -1;
+                var4 = -1;
+                break L80;
+              }
+            }
+            L81: {
+              if (-14 != (param1 ^ -1)) {
+                break L81;
+              } else {
+                var4 = 1;
+                var5 = -1;
+                break L81;
+              }
+            }
+            L82: {
+              if ((param1 ^ -1) == -15) {
+                var5 = 1;
+                var4 = -1;
+                break L82;
+              } else {
+                break L82;
+              }
+            }
+            L83: {
+              if ((param1 ^ -1) != -16) {
+                break L83;
+              } else {
+                var4 = 1;
+                var5 = 1;
+                break L83;
+              }
+            }
+            gl.field_c = pa.a(-126, var2 * var4, var2 * var5);
+            return;
+          }
+        }
+    }
+
+    final static uh a(int param0) {
+        if (param0 != -30890) {
+          String discarded$2 = hh.b((byte) 14);
+          return new uh(eh.d(-110), ci.i(24410));
+        } else {
+          return new uh(eh.d(-110), ci.i(24410));
+        }
+    }
+
+    public final String toString() {
+        throw new IllegalStateException();
+    }
+
+    public static void a(byte param0) {
+        field_a = null;
+        if (param0 > -122) {
+            return;
+        }
+        field_b = null;
+    }
+
+    final static String b(byte param0) {
+        if (!(null != mi.field_d)) {
+            return "";
+        }
+        int var1 = -40 / ((param0 - -90) / 32);
+        return mi.field_d;
+    }
+
+    static {
+        $cfr$clinit();
+    }
+
+    private static void $cfr$clinit() {
+        field_b = new int[8192];
+        field_c = 20;
+        field_e = 0;
+    }
+}

@@ -1,0 +1,298 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class ph {
+    private he[] field_e;
+    private long field_d;
+    private int field_c;
+    private he field_b;
+    static String field_a;
+
+    public static void b(int param0) {
+        int var1 = 110 % ((-13 - param0) / 60);
+        field_a = null;
+    }
+
+    final he a(int param0, long param1) {
+        he var4 = null;
+        he var5 = null;
+        int var6 = 0;
+        he var7 = null;
+        he var8 = null;
+        var6 = Main.field_T;
+        ((ph) this).field_d = param1;
+        if (param0 <= -26) {
+          var7 = ((ph) this).field_e[(int)(param1 & (long)(-1 + ((ph) this).field_c))];
+          var4 = var7;
+          ((ph) this).field_b = ((he) var7).field_h;
+          L0: while (true) {
+            if (var4 != ((ph) this).field_b) {
+              if ((param1 ^ -1L) == (((ph) this).field_b.field_j ^ -1L)) {
+                var5 = ((ph) this).field_b;
+                ((ph) this).field_b = ((ph) this).field_b.field_h;
+                return var5;
+              } else {
+                ((ph) this).field_b = ((ph) this).field_b.field_h;
+                continue L0;
+              }
+            } else {
+              ((ph) this).field_b = null;
+              return null;
+            }
+          }
+        } else {
+          int discarded$1 = ph.a(22, 12);
+          var8 = ((ph) this).field_e[(int)(param1 & (long)(-1 + ((ph) this).field_c))];
+          var4 = var8;
+          ((ph) this).field_b = ((he) var8).field_h;
+          L1: while (true) {
+            if (var4 != ((ph) this).field_b) {
+              if ((param1 ^ -1L) == (((ph) this).field_b.field_j ^ -1L)) {
+                var5 = ((ph) this).field_b;
+                ((ph) this).field_b = ((ph) this).field_b.field_h;
+                return var5;
+              } else {
+                ((ph) this).field_b = ((ph) this).field_b.field_h;
+                continue L1;
+              }
+            } else {
+              ((ph) this).field_b = null;
+              return null;
+            }
+          }
+        }
+    }
+
+    final static void c(int param0) {
+        ga.a(true);
+        if (tb.field_c == null) {
+          r.b((byte) 123);
+          kf.d(param0 ^ param0);
+          ui.d((byte) -122);
+          if (wk.b((byte) -112)) {
+            na.field_r.h(1, 0);
+            fe.a((byte) -38, 0);
+            mc.a((byte) -126);
+            return;
+          } else {
+            mc.a((byte) -126);
+            return;
+          }
+        } else {
+          bg.a(tb.field_c, (byte) -76);
+          r.b((byte) 123);
+          kf.d(param0 ^ param0);
+          ui.d((byte) -122);
+          if (!wk.b((byte) -112)) {
+            mc.a((byte) -126);
+            return;
+          } else {
+            na.field_r.h(1, 0);
+            fe.a((byte) -38, 0);
+            mc.a((byte) -126);
+            return;
+          }
+        }
+    }
+
+    final he a(int param0) {
+        he var2 = null;
+        he var3 = null;
+        int var4 = 0;
+        var4 = Main.field_T;
+        if (param0 == 26847) {
+          if (((ph) this).field_b != null) {
+            var2 = ((ph) this).field_e[(int)((long)(-1 + ((ph) this).field_c) & ((ph) this).field_d)];
+            L0: while (true) {
+              if (((ph) this).field_b != var2) {
+                if (((ph) this).field_b.field_j != ((ph) this).field_d) {
+                  ((ph) this).field_b = ((ph) this).field_b.field_h;
+                  continue L0;
+                } else {
+                  var3 = ((ph) this).field_b;
+                  ((ph) this).field_b = ((ph) this).field_b.field_h;
+                  return var3;
+                }
+              } else {
+                ((ph) this).field_b = null;
+                return null;
+              }
+            }
+          } else {
+            return null;
+          }
+        } else {
+          return (he) null;
+        }
+    }
+
+    ph(int param0) {
+        int var2 = 0;
+        he var3 = null;
+        ((ph) this).field_c = param0;
+        ((ph) this).field_e = new he[param0];
+        for (var2 = 0; param0 > var2; var2++) {
+            var3 = new he();
+            ((ph) this).field_e[var2] = new he();
+            var3.field_h = (he) var3;
+            var3.field_i = (he) var3;
+        }
+    }
+
+    final static boolean a(char param0, boolean param1) {
+        int stackIn_27_0 = 0;
+        int stackIn_30_0 = 0;
+        int stackOut_28_0 = 0;
+        int stackOut_25_0 = 0;
+        int stackOut_26_0 = 0;
+        if (!param1) {
+          if (param0 < 48) {
+            if (65 > param0) {
+              L0: {
+                if (param0 < 97) {
+                  break L0;
+                } else {
+                  if (param0 > 122) {
+                    break L0;
+                  } else {
+                    return true;
+                  }
+                }
+              }
+              return false;
+            } else {
+              if (param0 <= 90) {
+                stackOut_28_0 = 1;
+                stackIn_30_0 = stackOut_28_0;
+                return stackIn_30_0 != 0;
+              } else {
+                L1: {
+                  L2: {
+                    if (param0 < 97) {
+                      break L2;
+                    } else {
+                      if (param0 > 122) {
+                        break L2;
+                      } else {
+                        stackOut_25_0 = 1;
+                        stackIn_27_0 = stackOut_25_0;
+                        break L1;
+                      }
+                    }
+                  }
+                  stackOut_26_0 = 0;
+                  stackIn_27_0 = stackOut_26_0;
+                  break L1;
+                }
+                return stackIn_27_0 != 0;
+              }
+            }
+          } else {
+            if (param0 > 57) {
+              if (65 <= param0) {
+                if (param0 > 90) {
+                  if (param0 >= 97) {
+                    if (param0 > 122) {
+                      return false;
+                    } else {
+                      return true;
+                    }
+                  } else {
+                    return false;
+                  }
+                } else {
+                  return true;
+                }
+              } else {
+                if (param0 >= 97) {
+                  if (param0 > 122) {
+                    return false;
+                  } else {
+                    return true;
+                  }
+                } else {
+                  return false;
+                }
+              }
+            } else {
+              return true;
+            }
+          }
+        } else {
+          return true;
+        }
+    }
+
+    final void a(he param0, long param1, int param2) {
+        he var5 = null;
+        L0: {
+          if (((he) param0).field_i != null) {
+            param0.d(12);
+            break L0;
+          } else {
+            break L0;
+          }
+        }
+        var5 = ((ph) this).field_e[(int)(param1 & (long)(((ph) this).field_c - 1))];
+        param0.field_h = var5;
+        param0.field_i = ((he) var5).field_i;
+        ((he) param0).field_i.field_h = param0;
+        if (param2 != 6144) {
+          field_a = (String) null;
+          param0.field_j = param1;
+          ((he) param0).field_h.field_i = param0;
+          return;
+        } else {
+          param0.field_j = param1;
+          ((he) param0).field_h.field_i = param0;
+          return;
+        }
+    }
+
+    final static int a(int param0, int param1) {
+        int var2 = 0;
+        int stackIn_4_0 = 0;
+        int stackIn_8_0 = 0;
+        int stackOut_7_0 = 0;
+        int stackOut_6_0 = 0;
+        int stackOut_3_0 = 0;
+        int stackOut_2_0 = 0;
+        var2 = 35 / ((40 - param0) / 45);
+        param1 = param1 & 8191;
+        if (4096 <= param1) {
+          L0: {
+            if (param1 < 6144) {
+              stackOut_7_0 = -ad.field_g[param1 + -4096];
+              stackIn_8_0 = stackOut_7_0;
+              break L0;
+            } else {
+              stackOut_6_0 = -ad.field_g[8192 - param1];
+              stackIn_8_0 = stackOut_6_0;
+              break L0;
+            }
+          }
+          return stackIn_8_0;
+        } else {
+          L1: {
+            if (param1 >= 2048) {
+              stackOut_3_0 = ad.field_g[-param1 + 4096];
+              stackIn_4_0 = stackOut_3_0;
+              break L1;
+            } else {
+              stackOut_2_0 = ad.field_g[param1];
+              stackIn_4_0 = stackOut_2_0;
+              break L1;
+            }
+          }
+          return stackIn_4_0;
+        }
+    }
+
+    static {
+        $cfr$clinit();
+    }
+
+    private static void $cfr$clinit() {
+        field_a = "Please try again in a few minutes.";
+    }
+}

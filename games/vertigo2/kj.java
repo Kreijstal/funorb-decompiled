@@ -1,0 +1,444 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class kj extends ji {
+    private boolean field_z;
+    static boolean field_E;
+    static int field_B;
+    private boolean field_y;
+    static boolean field_C;
+    static String field_A;
+
+    final static void g(int param0) {
+        if (param0 != 1) {
+            field_E = true;
+        }
+    }
+
+    final int[][] b(int param0, int param1) {
+        int[][] var3 = null;
+        int[] var5 = null;
+        int[] var6 = null;
+        int[] var7 = null;
+        int[] var8 = null;
+        int[] var9 = null;
+        int[] var10 = null;
+        int var11 = 0;
+        int var12 = 0;
+        int[][] var13 = null;
+        int var14 = 0;
+        int[][] var16 = null;
+        int[] var17 = null;
+        int[] var18 = null;
+        int[] var19 = null;
+        int[][] var21 = null;
+        int[] var22 = null;
+        int[] var23 = null;
+        int[] var24 = null;
+        int[][] var26 = null;
+        int[] var27 = null;
+        int[] var28 = null;
+        int[] var29 = null;
+        int[][] var30 = null;
+        int[][] var31 = null;
+        int[] var32 = null;
+        int[] var33 = null;
+        int[] var34 = null;
+        Object stackIn_6_0 = null;
+        int stackIn_6_1 = 0;
+        int stackIn_6_2 = 0;
+        Object stackIn_7_0 = null;
+        int stackIn_7_1 = 0;
+        int stackIn_7_2 = 0;
+        Object stackIn_8_0 = null;
+        int stackIn_8_1 = 0;
+        int stackIn_8_2 = 0;
+        int stackIn_8_3 = 0;
+        Object stackOut_5_0 = null;
+        int stackOut_5_1 = 0;
+        int stackOut_5_2 = 0;
+        Object stackOut_7_0 = null;
+        int stackOut_7_1 = 0;
+        int stackOut_7_2 = 0;
+        int stackOut_7_3 = 0;
+        Object stackOut_6_0 = null;
+        int stackOut_6_1 = 0;
+        int stackOut_6_2 = 0;
+        int stackOut_6_3 = 0;
+        var12 = Vertigo2.field_L ? 1 : 0;
+        var31 = ((kj) this).field_v.a(param1, -2);
+        var26 = var31;
+        var21 = var26;
+        var16 = var21;
+        var13 = var16;
+        var3 = var13;
+        if (((kj) this).field_v.field_c) {
+          L0: {
+            stackOut_5_0 = this;
+            stackOut_5_1 = 0;
+            stackOut_5_2 = 3;
+            stackIn_7_0 = stackOut_5_0;
+            stackIn_7_1 = stackOut_5_1;
+            stackIn_7_2 = stackOut_5_2;
+            stackIn_6_0 = stackOut_5_0;
+            stackIn_6_1 = stackOut_5_1;
+            stackIn_6_2 = stackOut_5_2;
+            if (!((kj) this).field_z) {
+              stackOut_7_0 = this;
+              stackOut_7_1 = stackIn_7_1;
+              stackOut_7_2 = stackIn_7_2;
+              stackOut_7_3 = param1;
+              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_1 = stackOut_7_1;
+              stackIn_8_2 = stackOut_7_2;
+              stackIn_8_3 = stackOut_7_3;
+              break L0;
+            } else {
+              stackOut_6_0 = this;
+              stackOut_6_1 = stackIn_6_1;
+              stackOut_6_2 = stackIn_6_2;
+              stackOut_6_3 = fk.field_x - param1;
+              stackIn_8_0 = stackOut_6_0;
+              stackIn_8_1 = stackOut_6_1;
+              stackIn_8_2 = stackOut_6_2;
+              stackIn_8_3 = stackOut_6_3;
+              break L0;
+            }
+          }
+          var30 = ((kj) this).c(stackIn_8_1, stackIn_8_2, stackIn_8_3);
+          var32 = var30[0];
+          var27 = var32;
+          var22 = var27;
+          var17 = var22;
+          var5 = var17;
+          var33 = var30[1];
+          var28 = var33;
+          var23 = var28;
+          var18 = var23;
+          var6 = var18;
+          var34 = var30[2];
+          var29 = var34;
+          var24 = var29;
+          var19 = var24;
+          var7 = var19;
+          var8 = var31[0];
+          var9 = var31[1];
+          var10 = var31[2];
+          if (!((kj) this).field_y) {
+            var14 = 0;
+            var11 = var14;
+            L1: while (true) {
+              if (we.field_M <= var14) {
+                if (param0 == -3780) {
+                  return var3;
+                } else {
+                  int[] discarded$3 = ((kj) this).c(87, -79);
+                  return var3;
+                }
+              } else {
+                var8[var14] = var32[var14];
+                var9[var14] = var33[var14];
+                var10[var14] = var34[var14];
+                var14++;
+                continue L1;
+              }
+            }
+          } else {
+            var11 = 0;
+            L2: while (true) {
+              if (we.field_M > var11) {
+                var8[var11] = var5[rm.field_z - var11];
+                var9[var11] = var6[-var11 + rm.field_z];
+                var10[var11] = var7[rm.field_z + -var11];
+                var11++;
+                continue L2;
+              } else {
+                if (param0 != -3780) {
+                  int[] discarded$4 = ((kj) this).c(87, -79);
+                  return var3;
+                } else {
+                  return var3;
+                }
+              }
+            }
+          }
+        } else {
+          if (param0 == -3780) {
+            return var3;
+          } else {
+            int[] discarded$5 = ((kj) this).c(87, -79);
+            return var3;
+          }
+        }
+    }
+
+    public static void b(byte param0) {
+        int var1 = -103 % ((param0 - 51) / 40);
+        field_A = null;
+    }
+
+    final void a(byte param0, int param1, ed param2) {
+        int var4 = 0;
+        int var5 = 0;
+        Object stackIn_9_0 = null;
+        Object stackIn_10_0 = null;
+        Object stackIn_11_0 = null;
+        int stackIn_11_1 = 0;
+        Object stackIn_16_0 = null;
+        Object stackIn_17_0 = null;
+        Object stackIn_18_0 = null;
+        int stackIn_18_1 = 0;
+        Object stackIn_23_0 = null;
+        Object stackIn_24_0 = null;
+        Object stackIn_25_0 = null;
+        int stackIn_25_1 = 0;
+        Object stackOut_15_0 = null;
+        Object stackOut_17_0 = null;
+        int stackOut_17_1 = 0;
+        Object stackOut_16_0 = null;
+        int stackOut_16_1 = 0;
+        Object stackOut_22_0 = null;
+        Object stackOut_24_0 = null;
+        int stackOut_24_1 = 0;
+        Object stackOut_23_0 = null;
+        int stackOut_23_1 = 0;
+        Object stackOut_8_0 = null;
+        Object stackOut_10_0 = null;
+        int stackOut_10_1 = 0;
+        Object stackOut_9_0 = null;
+        int stackOut_9_1 = 0;
+        var5 = Vertigo2.field_L ? 1 : 0;
+        var4 = param1;
+        if (var4 != -1) {
+          if (-2 == var4) {
+            L0: {
+              stackOut_15_0 = this;
+              stackIn_17_0 = stackOut_15_0;
+              stackIn_16_0 = stackOut_15_0;
+              if ((param2.h(-11) ^ -1) != -2) {
+                stackOut_17_0 = this;
+                stackOut_17_1 = 0;
+                stackIn_18_0 = stackOut_17_0;
+                stackIn_18_1 = stackOut_17_1;
+                break L0;
+              } else {
+                stackOut_16_0 = this;
+                stackOut_16_1 = 1;
+                stackIn_18_0 = stackOut_16_0;
+                stackIn_18_1 = stackOut_16_1;
+                break L0;
+              }
+            }
+            ((kj) this).field_z = stackIn_18_1 != 0;
+            if (param0 != 110) {
+              int[] discarded$4 = ((kj) this).c(-23, 41);
+              return;
+            } else {
+              return;
+            }
+          } else {
+            if (var4 == 2) {
+              L1: {
+                stackOut_22_0 = this;
+                stackIn_24_0 = stackOut_22_0;
+                stackIn_23_0 = stackOut_22_0;
+                if ((param2.h(param0 + -121) ^ -1) != -2) {
+                  stackOut_24_0 = this;
+                  stackOut_24_1 = 0;
+                  stackIn_25_0 = stackOut_24_0;
+                  stackIn_25_1 = stackOut_24_1;
+                  break L1;
+                } else {
+                  stackOut_23_0 = this;
+                  stackOut_23_1 = 1;
+                  stackIn_25_0 = stackOut_23_0;
+                  stackIn_25_1 = stackOut_23_1;
+                  break L1;
+                }
+              }
+              ((kj) this).field_o = stackIn_25_1 != 0;
+              if (param0 != 110) {
+                int[] discarded$5 = ((kj) this).c(-23, 41);
+                return;
+              } else {
+                return;
+              }
+            } else {
+              if (param0 == 110) {
+                return;
+              } else {
+                int[] discarded$6 = ((kj) this).c(-23, 41);
+                return;
+              }
+            }
+          }
+        } else {
+          L2: {
+            stackOut_8_0 = this;
+            stackIn_10_0 = stackOut_8_0;
+            stackIn_9_0 = stackOut_8_0;
+            if ((param2.h(-11) ^ -1) != -2) {
+              stackOut_10_0 = this;
+              stackOut_10_1 = 0;
+              stackIn_11_0 = stackOut_10_0;
+              stackIn_11_1 = stackOut_10_1;
+              break L2;
+            } else {
+              stackOut_9_0 = this;
+              stackOut_9_1 = 1;
+              stackIn_11_0 = stackOut_9_0;
+              stackIn_11_1 = stackOut_9_1;
+              break L2;
+            }
+          }
+          ((kj) this).field_y = stackIn_11_1 != 0;
+          if (param0 != 110) {
+            int[] discarded$7 = ((kj) this).c(-23, 41);
+            return;
+          } else {
+            return;
+          }
+        }
+    }
+
+    public kj() {
+        super(1, false);
+        ((kj) this).field_z = true;
+        ((kj) this).field_y = true;
+    }
+
+    final int[] c(int param0, int param1) {
+        int[] var3 = null;
+        int[] var4 = null;
+        int var5 = 0;
+        int var6 = 0;
+        int[] var7 = null;
+        Object stackIn_5_0 = null;
+        int stackIn_5_1 = 0;
+        int stackIn_5_2 = 0;
+        Object stackIn_6_0 = null;
+        int stackIn_6_1 = 0;
+        int stackIn_6_2 = 0;
+        Object stackIn_7_0 = null;
+        int stackIn_7_1 = 0;
+        int stackIn_7_2 = 0;
+        int stackIn_7_3 = 0;
+        Object stackOut_4_0 = null;
+        int stackOut_4_1 = 0;
+        int stackOut_4_2 = 0;
+        Object stackOut_6_0 = null;
+        int stackOut_6_1 = 0;
+        int stackOut_6_2 = 0;
+        int stackOut_6_3 = 0;
+        Object stackOut_5_0 = null;
+        int stackOut_5_1 = 0;
+        int stackOut_5_2 = 0;
+        int stackOut_5_3 = 0;
+        var6 = Vertigo2.field_L ? 1 : 0;
+        if (param1 > 91) {
+          var7 = ((kj) this).field_x.a(param0, (byte) 97);
+          var3 = var7;
+          if (((kj) this).field_x.field_i) {
+            L0: {
+              stackOut_4_0 = this;
+              stackOut_4_1 = 0;
+              stackOut_4_2 = -1;
+              stackIn_6_0 = stackOut_4_0;
+              stackIn_6_1 = stackOut_4_1;
+              stackIn_6_2 = stackOut_4_2;
+              stackIn_5_0 = stackOut_4_0;
+              stackIn_5_1 = stackOut_4_1;
+              stackIn_5_2 = stackOut_4_2;
+              if (((kj) this).field_z) {
+                stackOut_6_0 = this;
+                stackOut_6_1 = stackIn_6_1;
+                stackOut_6_2 = stackIn_6_2;
+                stackOut_6_3 = -param0 + fk.field_x;
+                stackIn_7_0 = stackOut_6_0;
+                stackIn_7_1 = stackOut_6_1;
+                stackIn_7_2 = stackOut_6_2;
+                stackIn_7_3 = stackOut_6_3;
+                break L0;
+              } else {
+                stackOut_5_0 = this;
+                stackOut_5_1 = stackIn_5_1;
+                stackOut_5_2 = stackIn_5_2;
+                stackOut_5_3 = param0;
+                stackIn_7_0 = stackOut_5_0;
+                stackIn_7_1 = stackOut_5_1;
+                stackIn_7_2 = stackOut_5_2;
+                stackIn_7_3 = stackOut_5_3;
+                break L0;
+              }
+            }
+            var4 = ((kj) this).a(stackIn_7_1, stackIn_7_2, stackIn_7_3);
+            if (((kj) this).field_y) {
+              var5 = 0;
+              L1: while (true) {
+                if (we.field_M > var5) {
+                  var7[var5] = var4[-var5 + rm.field_z];
+                  var5++;
+                  continue L1;
+                } else {
+                  return var3;
+                }
+              }
+            } else {
+              qq.a(var4, 0, var7, 0, we.field_M);
+              return var3;
+            }
+          } else {
+            return var3;
+          }
+        } else {
+          return null;
+        }
+    }
+
+    final static void a(int param0, int param1, int param2, er[] param3, int param4) {
+        int var5 = 0;
+        int var6 = 0;
+        int var7 = 0;
+        int var8 = 0;
+        int var9 = 0;
+        int var10 = 0;
+        var10 = Vertigo2.field_L ? 1 : 0;
+        if (param3 != null) {
+          if ((param1 ^ -1) >= -1) {
+            return;
+          } else {
+            var5 = param3[0].field_x;
+            var6 = param3[2].field_x;
+            var7 = param3[param0].field_x;
+            param3[0].e(param2, param4);
+            param3[2].e(param1 + (param2 + -var6), param4);
+            bi.a(ak.field_d);
+            bi.c(param2 + var5, param4, -var6 + param2 - -param1, param4 + param3[1].field_B);
+            var8 = param2 - -var5;
+            var9 = param2 + param1 - var6;
+            param2 = var8;
+            L0: while (true) {
+              if (param2 >= var9) {
+                bi.b(ak.field_d);
+                return;
+              } else {
+                param3[1].e(param2, param4);
+                param2 = param2 + var7;
+                continue L0;
+              }
+            }
+          }
+        } else {
+          return;
+        }
+    }
+
+    static {
+        $cfr$clinit();
+    }
+
+    private static void $cfr$clinit() {
+        field_E = false;
+        field_A = "Enter name of friend to add to list";
+    }
+}

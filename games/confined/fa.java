@@ -1,0 +1,212 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class fa extends rg {
+    static int field_P;
+    static String field_T;
+    static ok field_Q;
+    static int field_S;
+    static double field_R;
+    static nf field_U;
+
+    private fa(String param0, fe param1, uk param2) {
+        super(param0, param1, param2);
+        ((fa) this).field_n = bg.field_d.field_j;
+    }
+
+    public static void f(int param0) {
+        field_U = null;
+        field_T = null;
+        field_Q = null;
+        if (param0 < 7) {
+            nf[] discarded$0 = fa.a(-85, -40, -71, -35, 20, -50, -67, 114, (byte) -55);
+        }
+    }
+
+    final static void g(int param0) {
+        if (param0 - mg.field_g != tg.field_H) {
+            if (tg.field_H != 250 + -mg.field_g) {
+            }
+        }
+        tg.field_H = tg.field_H + 1;
+    }
+
+    fa(String param0, uk param1, boolean param2) {
+        this(param0, param1);
+        ((fa) this).field_O = param2 ? true : false;
+    }
+
+    final static nf[] a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, byte param8) {
+        int var9 = 0;
+        nf[] var10 = null;
+        nf[] var11_ref_nf__ = null;
+        int var11 = 0;
+        int var12 = 0;
+        nf var13 = null;
+        int var14 = 0;
+        int var15 = 0;
+        var15 = Confined.field_J ? 1 : 0;
+        var9 = param1 + param7 - -param5;
+        var10 = new nf[]{new nf(var9, var9), new nf(param0, var9), new nf(var9, var9), new nf(var9, param0), new nf(64, 64), new nf(var9, param0), new nf(var9, var9), new nf(param0, var9), new nf(var9, var9)};
+        var11_ref_nf__ = var10;
+        var12 = 0;
+        L0: while (true) {
+          if (var12 >= var11_ref_nf__.length) {
+            L1: {
+              if (param8 < -91) {
+                break L1;
+              } else {
+                field_T = null;
+                break L1;
+              }
+            }
+            var11 = 0;
+            L2: while (true) {
+              if (var11 >= param1) {
+                var11 = 0;
+                L3: while (true) {
+                  if (param1 <= var11) {
+                    var11 = 0;
+                    L4: while (true) {
+                      if (param0 <= var11) {
+                        var11 = 0;
+                        L5: while (true) {
+                          if (var11 >= param0 >> 1004130145) {
+                            return var10;
+                          } else {
+                            var12 = 0;
+                            L6: while (true) {
+                              if (var12 < param5) {
+                                var10[1].field_z[param0 * (-1 + var9 + -var12) - -var11] = param4;
+                                var10[3].field_z[-var12 + (-1 + var9) + var11 * var9] = param4;
+                                var10[7].field_z[var11 + var12 * param0] = param4;
+                                var10[5].field_z[var12 + var11 * var9] = param4;
+                                var12++;
+                                continue L6;
+                              } else {
+                                var11++;
+                                continue L5;
+                              }
+                            }
+                          }
+                        }
+                      } else {
+                        var12 = 0;
+                        L7: while (true) {
+                          if (var12 >= param1) {
+                            var11++;
+                            continue L4;
+                          } else {
+                            var10[7].field_z[param0 * (var9 - (var12 + 1)) - -var11] = param2;
+                            var10[5].field_z[var9 + (-1 + -var12 + var11 * var9)] = param2;
+                            var10[1].field_z[var11 + var12 * param0] = param3;
+                            var10[3].field_z[var9 * var11 + var12] = param3;
+                            var12++;
+                            continue L7;
+                          }
+                        }
+                      }
+                    }
+                  } else {
+                    var12 = 0;
+                    L8: while (true) {
+                      if (var9 <= var12) {
+                        var11++;
+                        continue L3;
+                      } else {
+                        var10[0].field_z[var12 + var11 * var9] = param3;
+                        var10[0].field_z[var11 + var9 * var12] = param3;
+                        if (-var11 + var9 > var12) {
+                          var10[2].field_z[var12 + var9 * var11] = param3;
+                          var10[6].field_z[var9 * var12 + var11] = param3;
+                          var12++;
+                          continue L8;
+                        } else {
+                          var12++;
+                          continue L8;
+                        }
+                      }
+                    }
+                  }
+                }
+              } else {
+                var12 = 0;
+                L9: while (true) {
+                  if (var9 > var12) {
+                    var10[6].field_z[var12 + (var9 - var11 + -1) * var9] = param2;
+                    var10[8].field_z[var12 + var9 * (-1 + var9 - var11)] = param2;
+                    var10[2].field_z[var12 * var9 - var11 - (1 + -var9)] = param2;
+                    var10[8].field_z[var9 * var12 - var11 - (-var9 + 1)] = param2;
+                    var12++;
+                    continue L9;
+                  } else {
+                    var11++;
+                    continue L2;
+                  }
+                }
+              }
+            }
+          } else {
+            var13 = var11_ref_nf__[var12];
+            var14 = 0;
+            L10: while (true) {
+              if (var14 >= var13.field_z.length) {
+                var12++;
+                continue L0;
+              } else {
+                var13.field_z[var14] = param6;
+                var14++;
+                continue L10;
+              }
+            }
+          }
+        }
+    }
+
+    private fa(String param0, uk param1) {
+        this(param0, bg.field_d.field_h, param1);
+        ((fa) this).field_n = bg.field_d.field_j;
+    }
+
+    final static void a(java.awt.Canvas param0, int param1) {
+        int var2 = -20 / ((-7 - param1) / 57);
+        dl.a((java.awt.Component) (Object) param0, (byte) -112);
+        ak.a(0, (java.awt.Component) (Object) param0);
+        if (!(null == jc.field_c)) {
+            jc.field_c.a((java.awt.Component) (Object) param0, (byte) -30);
+        }
+    }
+
+    final static boolean a(byte param0) {
+        if (param0 > -29) {
+            field_Q = null;
+        }
+        return !fb.field_a.c(17237) ? true : false;
+    }
+
+    final static void a(boolean param0, java.awt.Component param1) {
+        param1.addMouseListener((java.awt.event.MouseListener) (Object) tf.field_a);
+        param1.addMouseMotionListener((java.awt.event.MouseMotionListener) (Object) tf.field_a);
+        param1.addFocusListener((java.awt.event.FocusListener) (Object) tf.field_a);
+        if (param0) {
+            field_U = null;
+        }
+    }
+
+    final void a(int param0, int param1, int param2, int param3) {
+        ((fa) this).field_O = !((fa) this).field_O ? true : false;
+        if (param0 != 25124) {
+            fa.f(-89);
+        }
+        super.a(param0 ^ 0, param1, param2, param3);
+    }
+
+    static {
+        $cfr$clinit();
+    }
+
+    private static void $cfr$clinit() {
+        field_S = 128;
+        field_T = "Disruption cannon";
+    }
+}

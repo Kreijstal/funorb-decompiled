@@ -1,0 +1,352 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class hg extends um {
+    private ta field_u;
+    private ta field_r;
+    private int field_s;
+    private int field_t;
+
+    private final void a(rl param0) {
+        param0.b(34);
+        param0.a();
+        pi var2 = ((hg) this).field_r.field_c.field_f;
+        if (var2 == ((hg) this).field_r.field_c) {
+            ((hg) this).field_s = -1;
+        } else {
+            ((hg) this).field_s = ((rl) (Object) var2).field_n;
+        }
+    }
+
+    final synchronized void b(um param0) {
+        ((hg) this).field_u.a((pi) (Object) param0, 27862);
+    }
+
+    private final void c(int[] param0, int param1, int param2) {
+        um var4 = (um) (Object) ((hg) this).field_u.b(73);
+        while (var4 != null) {
+            var4.b(param0, param1, param2);
+            var4 = (um) (Object) ((hg) this).field_u.b((byte) 56);
+        }
+    }
+
+    final synchronized void a(int[] param0, int param1, int param2) {
+        int var4 = 0;
+        rl var5 = null;
+        Object var6 = null;
+        int var7 = 0;
+        Throwable var8 = null;
+        int statePc = 0;
+        Throwable caughtException = null;
+        stateLoop: while (true) {
+            switch (statePc) {
+                case 0: {
+                    if (((hg) this).field_s >= 0) {
+                        statePc = 2;
+                    } else {
+                        statePc = 1;
+                    }
+                    continue stateLoop;
+                }
+                case 1: {
+                    this.c(param0, param1, param2);
+                    return;
+                }
+                case 2: {
+                    if (((hg) this).field_t + param2 >= ((hg) this).field_s) {
+                        statePc = 4;
+                    } else {
+                        statePc = 3;
+                    }
+                    continue stateLoop;
+                }
+                case 3: {
+                    ((hg) this).field_t = ((hg) this).field_t + param2;
+                    this.c(param0, param1, param2);
+                    return;
+                }
+                case 4: {
+                    var4 = ((hg) this).field_s - ((hg) this).field_t;
+                    this.c(param0, param1, var4);
+                    param1 = param1 + var4;
+                    param2 = param2 - var4;
+                    ((hg) this).field_t = ((hg) this).field_t + var4;
+                    this.e();
+                    var5 = (rl) (Object) ((hg) this).field_r.b(91);
+                    var6 = (Object) (Object) var5;
+                    // monitorenter var5
+                    statePc = 5;
+                    continue stateLoop;
+                }
+                case 5: {
+                    try {
+                        var7 = var5.a((hg) this);
+                        if (var7 >= 0) {
+                            statePc = 7;
+                        } else {
+                            statePc = 6;
+                        }
+                        continue stateLoop;
+                    } catch (Throwable stateCaught_5) {
+                        caughtException = stateCaught_5;
+                        statePc = 10;
+                        continue stateLoop;
+                    }
+                }
+                case 6: {
+                    try {
+                        var5.field_n = 0;
+                        this.a(var5);
+                        statePc = 8;
+                        continue stateLoop;
+                    } catch (Throwable stateCaught_6) {
+                        caughtException = stateCaught_6;
+                        statePc = 10;
+                        continue stateLoop;
+                    }
+                }
+                case 7: {
+                    try {
+                        var5.field_n = var7;
+                        this.a(var5.field_f, var5);
+                        statePc = 8;
+                        continue stateLoop;
+                    } catch (Throwable stateCaught_7) {
+                        caughtException = stateCaught_7;
+                        statePc = 10;
+                        continue stateLoop;
+                    }
+                }
+                case 8: {
+                    try {
+                        // monitorexit var6
+                        statePc = 12;
+                        continue stateLoop;
+                    } catch (Throwable stateCaught_8) {
+                        caughtException = stateCaught_8;
+                        statePc = 10;
+                        continue stateLoop;
+                    }
+                }
+                case 10: {
+                    try {
+                        var8 = caughtException;
+                        // monitorexit var6
+                        statePc = 11;
+                        continue stateLoop;
+                    } catch (Throwable stateCaught_10) {
+                        caughtException = stateCaught_10;
+                        statePc = 10;
+                        continue stateLoop;
+                    }
+                }
+                case 11: {
+                    throw (RuntimeException) (Object) var8;
+                }
+                case 12: {
+                    if (param2 != 0) {
+                        statePc = 0;
+                    } else {
+                        statePc = 13;
+                    }
+                    continue stateLoop;
+                }
+                case 13: {
+                    return;
+                }
+                default: throw new IllegalStateException("invalid CFG state " + statePc);
+            }
+        }
+    }
+
+    final synchronized void a(um param0) {
+        param0.b(34);
+    }
+
+    final um b() {
+        return (um) (Object) ((hg) this).field_u.b(123);
+    }
+
+    final um c() {
+        return (um) (Object) ((hg) this).field_u.b((byte) 56);
+    }
+
+    private final void e() {
+        rl var1 = null;
+        if (((hg) this).field_t > 0) {
+            var1 = (rl) (Object) ((hg) this).field_r.b(96);
+            while (var1 != null) {
+                var1.field_n = var1.field_n - ((hg) this).field_t;
+                var1 = (rl) (Object) ((hg) this).field_r.b((byte) 56);
+            }
+            ((hg) this).field_s = ((hg) this).field_s - ((hg) this).field_t;
+            ((hg) this).field_t = 0;
+        }
+    }
+
+    private final void a(pi param0, rl param1) {
+        L0: while (true) {
+          if (param0 != ((hg) this).field_r.field_c) {
+            if (((rl) (Object) param0).field_n <= param1.field_n) {
+              param0 = param0.field_f;
+              continue L0;
+            } else {
+              oj.a((pi) (Object) param1, param0, (byte) -117);
+              ((hg) this).field_s = ((rl) (Object) ((hg) this).field_r.field_c.field_f).field_n;
+              return;
+            }
+          } else {
+            oj.a((pi) (Object) param1, param0, (byte) -117);
+            ((hg) this).field_s = ((rl) (Object) ((hg) this).field_r.field_c.field_f).field_n;
+            return;
+          }
+        }
+    }
+
+    final synchronized void a(int param0) {
+        int var2 = 0;
+        rl var3 = null;
+        Object var4 = null;
+        int var5 = 0;
+        Throwable var6 = null;
+        int statePc = 0;
+        Throwable caughtException = null;
+        stateLoop: while (true) {
+            switch (statePc) {
+                case 0: {
+                    if (((hg) this).field_s >= 0) {
+                        statePc = 2;
+                    } else {
+                        statePc = 1;
+                    }
+                    continue stateLoop;
+                }
+                case 1: {
+                    this.e(param0);
+                    return;
+                }
+                case 2: {
+                    if (((hg) this).field_t + param0 >= ((hg) this).field_s) {
+                        statePc = 4;
+                    } else {
+                        statePc = 3;
+                    }
+                    continue stateLoop;
+                }
+                case 3: {
+                    ((hg) this).field_t = ((hg) this).field_t + param0;
+                    this.e(param0);
+                    return;
+                }
+                case 4: {
+                    var2 = ((hg) this).field_s - ((hg) this).field_t;
+                    this.e(var2);
+                    param0 = param0 - var2;
+                    ((hg) this).field_t = ((hg) this).field_t + var2;
+                    this.e();
+                    var3 = (rl) (Object) ((hg) this).field_r.b(125);
+                    var4 = (Object) (Object) var3;
+                    // monitorenter var3
+                    statePc = 5;
+                    continue stateLoop;
+                }
+                case 5: {
+                    try {
+                        var5 = var3.a((hg) this);
+                        if (var5 >= 0) {
+                            statePc = 7;
+                        } else {
+                            statePc = 6;
+                        }
+                        continue stateLoop;
+                    } catch (Throwable stateCaught_5) {
+                        caughtException = stateCaught_5;
+                        statePc = 10;
+                        continue stateLoop;
+                    }
+                }
+                case 6: {
+                    try {
+                        var3.field_n = 0;
+                        this.a(var3);
+                        statePc = 8;
+                        continue stateLoop;
+                    } catch (Throwable stateCaught_6) {
+                        caughtException = stateCaught_6;
+                        statePc = 10;
+                        continue stateLoop;
+                    }
+                }
+                case 7: {
+                    try {
+                        var3.field_n = var5;
+                        this.a(var3.field_f, var3);
+                        statePc = 8;
+                        continue stateLoop;
+                    } catch (Throwable stateCaught_7) {
+                        caughtException = stateCaught_7;
+                        statePc = 10;
+                        continue stateLoop;
+                    }
+                }
+                case 8: {
+                    try {
+                        // monitorexit var4
+                        statePc = 12;
+                        continue stateLoop;
+                    } catch (Throwable stateCaught_8) {
+                        caughtException = stateCaught_8;
+                        statePc = 10;
+                        continue stateLoop;
+                    }
+                }
+                case 10: {
+                    try {
+                        var6 = caughtException;
+                        // monitorexit var4
+                        statePc = 11;
+                        continue stateLoop;
+                    } catch (Throwable stateCaught_10) {
+                        caughtException = stateCaught_10;
+                        statePc = 10;
+                        continue stateLoop;
+                    }
+                }
+                case 11: {
+                    throw (RuntimeException) (Object) var6;
+                }
+                case 12: {
+                    if (param0 != 0) {
+                        statePc = 0;
+                    } else {
+                        statePc = 13;
+                    }
+                    continue stateLoop;
+                }
+                case 13: {
+                    return;
+                }
+                default: throw new IllegalStateException("invalid CFG state " + statePc);
+            }
+        }
+    }
+
+    final int d() {
+        return 0;
+    }
+
+    private final void e(int param0) {
+        um var2 = (um) (Object) ((hg) this).field_u.b(111);
+        while (var2 != null) {
+            var2.a(param0);
+            var2 = (um) (Object) ((hg) this).field_u.b((byte) 56);
+        }
+    }
+
+    public hg() {
+        ((hg) this).field_u = new ta();
+        ((hg) this).field_r = new ta();
+        ((hg) this).field_s = -1;
+        ((hg) this).field_t = 0;
+    }
+}

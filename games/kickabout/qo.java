@@ -1,0 +1,191 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+import java.io.*;
+
+final class qo extends jd {
+    static hu field_k;
+    static eg[] field_l;
+    static String field_j;
+
+    final static tf d(byte param0) {
+        tf var1 = null;
+        L0: {
+          var1 = new tf();
+          var1.a((gn) (Object) new hm("sumIntegers", new Class[1], (String) null), 3);
+          var1.a((gn) (Object) new kb("writeIntegers", new Class[1], (String) null), 3);
+          var1.a((gn) (Object) new jo("demoIntegers", new Class[0], (String) null), 3);
+          var1.a((gn) (Object) new jf("doSomething", new Class[1], "Do something clever to a string to annoy TdR."), param0 + -23);
+          var1.a((gn) (Object) new ir("three", new Class[0], (String) null), param0 ^ 25);
+          var1.a((gn) (Object) new pb("isSix", new Class[1], (String) null), param0 + -23);
+          if (param0 == 26) {
+            break L0;
+          } else {
+            int discarded$1 = qo.a(42, -71L, -88L);
+            break L0;
+          }
+        }
+        var1.a((gn) (Object) new tq("not", new Class[1], (String) null), param0 + -23);
+        var1.a((gn) (Object) new ik("intDouble", new Class[1], (String) null), 3);
+        var1.a((gn) (Object) new uc("intTriple", new Class[1], (String) null), param0 + -23);
+        var1.a((gn) (Object) new ev("LongPlusOne", new Class[1], "Returns a long value. Useful for testing the auto-casts."), 3);
+        var1.a((gn) (Object) new el("BytePlusOne", new Class[1], "Returns a byte. Should lose precision."), 3);
+        var1.a((gn) (Object) new ls("big", new Class[0], (String) null), param0 + -23);
+        var1.a((gn) (Object) new uj("set_lag", new Class[1], (String) null), param0 ^ 25);
+        var1.a((gn) (Object) new lh("broadcast_server", new Class[1], "Send a broadcast to ALL players in games and the lobby. Only for emergencies, it's filtered too incase someone tries to swear."), 3);
+        return var1;
+    }
+
+    final rv a(String param0, int param1) {
+        int var3 = null == gf.a(64, param0) ? 1 : 0;
+        if (param1 != -5) {
+            boolean discarded$0 = qo.c((byte) -62);
+        }
+        if (var3 == 0) {
+            return jt.field_Bb;
+        }
+        return he.field_yb;
+    }
+
+    final static int a(int param0, long param1, long param2) {
+        if (param0 != -8905) {
+            int discarded$0 = qo.e((byte) 58);
+        }
+        return (int)(param1 * param2 >> 488475472);
+    }
+
+    final static ot g(int param0) {
+        int var2_int = 0;
+        int var3 = 0;
+        int var4 = Kickabout.field_G;
+        ut var6 = new ut(108, 108);
+        iw.a(-110, var6);
+        on.d(54, 54, 51, 204);
+        for (var2_int = 43; -1 > (var2_int ^ -1); var2_int--) {
+            var3 = 119 * var2_int / 43 + 34;
+            on.d(54, 54, var2_int, var3);
+        }
+        if (param0 != -22976) {
+            ot discarded$0 = qo.g(126);
+        }
+        ta.e(param0 ^ -22987);
+        ot var2 = new ot(54, 54);
+        iw.a(param0 ^ -23017, (ut) (Object) var2);
+        var6.f(0, 0);
+        ta.e(125);
+        int var5 = 0;
+        var3 = var5;
+        while (var5 < var2.field_y.length) {
+            var2.field_y[var5] = hf.a(var2.field_y[var5] << -674682472, 16777215);
+            var5++;
+        }
+        return var2;
+    }
+
+    final String a(byte param0, String param1) {
+        if (((qo) this).a(param1, param0 ^ -30) == jt.field_Bb) {
+            return tk.field_Cb;
+        }
+        if (param0 != 25) {
+            field_j = null;
+        }
+        return dl.field_g;
+    }
+
+    public static void f(byte param0) {
+        field_k = null;
+        field_l = null;
+        if (param0 != -126) {
+            return;
+        }
+        field_j = null;
+    }
+
+    final static boolean a(boolean param0, byte param1) {
+        try {
+            ml var2_ref = null;
+            if (!(wt.field_A != null)) {
+                wt.field_A = vl.field_c.a(true, uc.field_E, rl.field_o);
+            }
+            if (wt.field_A.field_a == 0) {
+                return false;
+            }
+            mp.field_i = nj.a(-100);
+            ci.field_c = nj.a(-100);
+            if (1 != wt.field_A.field_a) {
+                un.field_c = cp.field_h;
+            } else {
+                try {
+                    op.field_y = new bh((java.net.Socket) wt.field_A.field_b, vl.field_c);
+                    or.field_d.field_n = 0;
+                    var2_ref = un.field_e;
+                    un.field_c = sd.field_d;
+                    var2_ref.field_n = 0;
+                    dj.field_A = param0 ? -2 : -1;
+                    wb.field_n = param0 ? -2 : -1;
+                    kq.field_Ab = param0 ? -2 : -1;
+                    dh.a(fp.field_g, il.field_g, (iw) (Object) or.field_d, -3210, s.field_E);
+                    c.a(-1, false);
+                } catch (IOException iOException) {
+                    un.field_c = cp.field_h;
+                }
+            }
+            wt.field_A = null;
+            int var2 = -53 / ((-57 - param1) / 43);
+            return true;
+        } catch (RuntimeException | Error decompiledUncheckedException) {
+            throw decompiledUncheckedException;
+        } catch (Throwable decompiledCheckedException) {
+            throw new RuntimeException(decompiledCheckedException);
+        }
+    }
+
+    qo(ga param0) {
+        super(param0);
+    }
+
+    final static boolean c(byte param0) {
+        int stackIn_6_0 = 0;
+        int stackOut_4_0 = 0;
+        int stackOut_5_0 = 0;
+        if (param0 == -42) {
+          L0: {
+            L1: {
+              if (null == oo.field_c) {
+                break L1;
+              } else {
+                if (!oo.field_c.field_l) {
+                  break L1;
+                } else {
+                  stackOut_4_0 = 1;
+                  stackIn_6_0 = stackOut_4_0;
+                  break L0;
+                }
+              }
+            }
+            stackOut_5_0 = 0;
+            stackIn_6_0 = stackOut_5_0;
+            break L0;
+          }
+          return stackIn_6_0 != 0;
+        } else {
+          return true;
+        }
+    }
+
+    final static int e(byte param0) {
+        if (param0 != 18) {
+            field_j = null;
+        }
+        return fr.field_G;
+    }
+
+    static {
+        $cfr$clinit();
+    }
+
+    private static void $cfr$clinit() {
+        field_l = new eg[9];
+        field_j = "You have been removed from <%0>'s game.";
+    }
+}

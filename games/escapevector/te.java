@@ -1,0 +1,310 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class te extends fi {
+    int[] field_l;
+    byte[] field_k;
+
+    final void a(int param0, int param1) {
+        int var3 = 0;
+        int var4 = 0;
+        int var5 = 0;
+        int var6 = 0;
+        int var7 = 0;
+        int var8 = 0;
+        int var9 = 0;
+        L0: {
+          param0 = param0 + ((te) this).field_f;
+          param1 = param1 + ((te) this).field_i;
+          var3 = param0 + param1 * em.field_l;
+          var4 = 0;
+          var5 = ((te) this).field_d;
+          var6 = ((te) this).field_g;
+          var7 = em.field_l - var6;
+          var8 = 0;
+          if (param1 >= em.field_k) {
+            break L0;
+          } else {
+            var9 = em.field_k - param1;
+            var5 = var5 - var9;
+            param1 = em.field_k;
+            var4 = var4 + var9 * var6;
+            var3 = var3 + var9 * em.field_l;
+            break L0;
+          }
+        }
+        L1: {
+          if (param1 + var5 <= em.field_j) {
+            break L1;
+          } else {
+            var5 = var5 - (param1 + var5 - em.field_j);
+            break L1;
+          }
+        }
+        L2: {
+          if (param0 >= em.field_a) {
+            break L2;
+          } else {
+            var9 = em.field_a - param0;
+            var6 = var6 - var9;
+            param0 = em.field_a;
+            var4 = var4 + var9;
+            var3 = var3 + var9;
+            var8 = var8 + var9;
+            var7 = var7 + var9;
+            break L2;
+          }
+        }
+        L3: {
+          if (param0 + var6 <= em.field_b) {
+            break L3;
+          } else {
+            var9 = param0 + var6 - em.field_b;
+            var6 = var6 - var9;
+            var8 = var8 + var9;
+            var7 = var7 + var9;
+            break L3;
+          }
+        }
+        L4: {
+          if (var6 <= 0) {
+            break L4;
+          } else {
+            if (var5 > 0) {
+              te.b(em.field_i, ((te) this).field_k, ((te) this).field_l, 0, var4, var3, var6, var5, var7, var8);
+              return;
+            } else {
+              break L4;
+            }
+          }
+        }
+    }
+
+    te(int param0, int param1, int param2, int param3, int param4, int param5, byte[] param6, int[] param7) {
+        ((te) this).field_a = param0;
+        ((te) this).field_h = param1;
+        ((te) this).field_f = param2;
+        ((te) this).field_i = param3;
+        ((te) this).field_g = param4;
+        ((te) this).field_d = param5;
+        ((te) this).field_k = param6;
+        ((te) this).field_l = param7;
+    }
+
+    final void a(int param0, int param1, int param2) {
+        int var4 = 0;
+        int var5 = 0;
+        int var6 = 0;
+        int var7 = 0;
+        int var8 = 0;
+        int var9 = 0;
+        int var10 = 0;
+        L0: {
+          param0 = param0 + ((te) this).field_f;
+          param1 = param1 + ((te) this).field_i;
+          var4 = param0 + param1 * em.field_l;
+          var5 = 0;
+          var6 = ((te) this).field_d;
+          var7 = ((te) this).field_g;
+          var8 = em.field_l - var7;
+          var9 = 0;
+          if (param1 >= em.field_k) {
+            break L0;
+          } else {
+            var10 = em.field_k - param1;
+            var6 = var6 - var10;
+            param1 = em.field_k;
+            var5 = var5 + var10 * var7;
+            var4 = var4 + var10 * em.field_l;
+            break L0;
+          }
+        }
+        L1: {
+          if (param1 + var6 <= em.field_j) {
+            break L1;
+          } else {
+            var6 = var6 - (param1 + var6 - em.field_j);
+            break L1;
+          }
+        }
+        L2: {
+          if (param0 >= em.field_a) {
+            break L2;
+          } else {
+            var10 = em.field_a - param0;
+            var7 = var7 - var10;
+            param0 = em.field_a;
+            var5 = var5 + var10;
+            var4 = var4 + var10;
+            var9 = var9 + var10;
+            var8 = var8 + var10;
+            break L2;
+          }
+        }
+        L3: {
+          if (param0 + var7 <= em.field_b) {
+            break L3;
+          } else {
+            var10 = param0 + var7 - em.field_b;
+            var7 = var7 - var10;
+            var9 = var9 + var10;
+            var8 = var8 + var10;
+            break L3;
+          }
+        }
+        L4: {
+          if (var7 <= 0) {
+            break L4;
+          } else {
+            if (var6 > 0) {
+              te.a(em.field_i, ((te) this).field_k, ((te) this).field_l, var5, var4, var7, var6, var8, var9, param2);
+              return;
+            } else {
+              break L4;
+            }
+          }
+        }
+    }
+
+    te(int param0, int param1, int param2) {
+        ((te) this).field_g = param0;
+        ((te) this).field_a = param0;
+        ((te) this).field_d = param1;
+        ((te) this).field_h = param1;
+        ((te) this).field_i = 0;
+        ((te) this).field_f = 0;
+        ((te) this).field_k = new byte[param0 * param1];
+        ((te) this).field_l = new int[param2];
+    }
+
+    private final static void a(int[] param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+        int var10 = 0;
+        int var11 = 0;
+        int var12 = 0;
+        int var13 = 0;
+        int var14 = 0;
+        var10 = 256 - param9;
+        var11 = -param6;
+        L0: while (true) {
+          if (var11 >= 0) {
+            return;
+          } else {
+            var12 = -param5;
+            L1: while (true) {
+              if (var12 >= 0) {
+                param4 = param4 + param7;
+                param3 = param3 + param8;
+                var11++;
+                continue L0;
+              } else {
+                param3++;
+                var13 = param1[param3];
+                if (var13 == 0) {
+                  param4++;
+                  var12++;
+                  continue L1;
+                } else {
+                  var13 = param2[var13 & 255];
+                  var14 = param0[param4];
+                  param4++;
+                  param0[param4] = ((var13 & 16711935) * param9 + (var14 & 16711935) * var10 & -16711936) + ((var13 & 65280) * param9 + (var14 & 65280) * var10 & 16711680) >> 8;
+                  var12++;
+                  continue L1;
+                }
+              }
+            }
+          }
+        }
+    }
+
+    private final static void b(int[] param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+        int var10 = 0;
+        int var11 = 0;
+        int var12 = 0;
+        var10 = -(param6 >> 2);
+        param6 = -(param6 & 3);
+        var11 = -param7;
+        L0: while (true) {
+          if (var11 >= 0) {
+            return;
+          } else {
+            var12 = var10;
+            L1: while (true) {
+              if (var12 >= 0) {
+                var12 = param6;
+                L2: while (true) {
+                  if (var12 >= 0) {
+                    param5 = param5 + param8;
+                    param4 = param4 + param9;
+                    var11++;
+                    continue L0;
+                  } else {
+                    param4++;
+                    param3 = param1[param4];
+                    if (param3 == 0) {
+                      param5++;
+                      var12++;
+                      continue L2;
+                    } else {
+                      param5++;
+                      param0[param5] = param2[param3 & 255];
+                      var12++;
+                      continue L2;
+                    }
+                  }
+                }
+              } else {
+                L3: {
+                  param4++;
+                  param3 = param1[param4];
+                  if (param3 == 0) {
+                    param5++;
+                    break L3;
+                  } else {
+                    param5++;
+                    param0[param5] = param2[param3 & 255];
+                    break L3;
+                  }
+                }
+                L4: {
+                  param4++;
+                  param3 = param1[param4];
+                  if (param3 == 0) {
+                    param5++;
+                    break L4;
+                  } else {
+                    param5++;
+                    param0[param5] = param2[param3 & 255];
+                    break L4;
+                  }
+                }
+                L5: {
+                  param4++;
+                  param3 = param1[param4];
+                  if (param3 == 0) {
+                    param5++;
+                    break L5;
+                  } else {
+                    param5++;
+                    param0[param5] = param2[param3 & 255];
+                    break L5;
+                  }
+                }
+                param4++;
+                param3 = param1[param4];
+                if (param3 == 0) {
+                  param5++;
+                  var12++;
+                  continue L1;
+                } else {
+                  param5++;
+                  param0[param5] = param2[param3 & 255];
+                  var12++;
+                  continue L1;
+                }
+              }
+            }
+          }
+        }
+    }
+}

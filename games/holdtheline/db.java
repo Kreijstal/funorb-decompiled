@@ -1,0 +1,2201 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class db extends tj {
+    private int field_z;
+    private int field_A;
+    private boolean field_q;
+    private int field_m;
+    private int field_y;
+    private int field_v;
+    private int field_o;
+    private int field_s;
+    private int field_p;
+    private int field_w;
+    private int field_t;
+    private int field_n;
+    private int field_x;
+    private int field_r;
+    private int field_u;
+
+    private final static int b(int param0, int param1, byte[] param2, int[] param3, int param4, int param5, int param6, int param7, int param8, int param9, db param10, int param11, int param12) {
+        if (param11 != 0) {
+            param7 = param5 + (param9 - param4 + param11 - 257) / param11;
+            // if_icmple L38
+        }
+        param7 = param8;
+        while (param5 < param7) {
+            param1 = param4 >> 8;
+            param0 = param2[param1];
+            param5++;
+            param3[param5] = param3[param5] + (((param0 << 8) + (param2[param1 + 1] - param0) * (param4 & 255)) * param6 >> 6);
+            param4 = param4 + param11;
+        }
+        if (param11 != 0) {
+            param7 = param5 + (param9 - param4 + param11 - 1) / param11;
+            // if_icmple L133
+        }
+        param7 = param8;
+        param1 = param12;
+        while (param5 < param7) {
+            param0 = param2[param4 >> 8];
+            param5++;
+            param3[param5] = param3[param5] + (((param0 << 8) + (param1 - param0) * (param4 & 255)) * param6 >> 6);
+            param4 = param4 + param11;
+        }
+        param10.field_m = param4;
+        return param5;
+    }
+
+    private final static int b(int param0, int param1, byte[] param2, int[] param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, db param13, int param14, int param15) {
+        L0: {
+          L1: {
+            param13.field_n = param13.field_n - param13.field_x * param5;
+            if (param14 == 0) {
+              break L1;
+            } else {
+              param10 = param5 + (param12 - param4 + param14 - 257) / param14;
+              if (param5 + (param12 - param4 + param14 - 257) / param14 <= param11) {
+                break L0;
+              } else {
+                break L1;
+              }
+            }
+          }
+          param10 = param11;
+          break L0;
+        }
+        param5 = param5 << 1;
+        param10 = param10 << 1;
+        L2: while (true) {
+          if (param5 >= param10) {
+            L3: {
+              L4: {
+                if (param14 == 0) {
+                  break L4;
+                } else {
+                  param10 = (param5 >> 1) + (param12 - param4 + param14 - 1) / param14;
+                  if ((param5 >> 1) + (param12 - param4 + param14 - 1) / param14 <= param11) {
+                    break L3;
+                  } else {
+                    break L4;
+                  }
+                }
+              }
+              param10 = param11;
+              break L3;
+            }
+            param10 = param10 << 1;
+            param1 = param15;
+            L5: while (true) {
+              if (param5 >= param10) {
+                param5 = param5 >> 1;
+                param13.field_n = param13.field_n + param13.field_x * param5;
+                param13.field_v = param6;
+                param13.field_r = param7;
+                param13.field_m = param4;
+                return param5;
+              } else {
+                param0 = param2[param4 >> 8];
+                param0 = (param0 << 8) + (param1 - param0) * (param4 & 255);
+                param5++;
+                param3[param5] = param3[param5] + (param0 * param6 >> 6);
+                param6 = param6 + param8;
+                param5++;
+                param3[param5] = param3[param5] + (param0 * param7 >> 6);
+                param7 = param7 + param9;
+                param4 = param4 + param14;
+                continue L5;
+              }
+            }
+          } else {
+            param1 = param4 >> 8;
+            param0 = param2[param1];
+            param0 = (param0 << 8) + (param2[param1 + 1] - param0) * (param4 & 255);
+            param5++;
+            param3[param5] = param3[param5] + (param0 * param6 >> 6);
+            param6 = param6 + param8;
+            param5++;
+            param3[param5] = param3[param5] + (param0 * param7 >> 6);
+            param7 = param7 + param9;
+            param4 = param4 + param14;
+            continue L2;
+          }
+        }
+    }
+
+    final synchronized void e(int param0) {
+        this.b(param0, ((db) this).k());
+    }
+
+    final synchronized boolean e() {
+        return ((db) this).field_m < 0 || ((db) this).field_m >= ((el) (Object) ((db) this).field_i).field_n.length << 8;
+    }
+
+    private final static int d(int param0, int param1, byte[] param2, int[] param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, db param11, int param12, int param13) {
+        L0: {
+          L1: {
+            if (param12 == 0) {
+              break L1;
+            } else {
+              param8 = param5 + (param10 - param4 + param12 - 257) / param12;
+              if (param5 + (param10 - param4 + param12 - 257) / param12 <= param9) {
+                break L0;
+              } else {
+                break L1;
+              }
+            }
+          }
+          param8 = param9;
+          break L0;
+        }
+        param5 = param5 << 1;
+        param8 = param8 << 1;
+        L2: while (true) {
+          if (param5 >= param8) {
+            L3: {
+              L4: {
+                if (param12 == 0) {
+                  break L4;
+                } else {
+                  param8 = (param5 >> 1) + (param10 - param4 + param12 - 1) / param12;
+                  if ((param5 >> 1) + (param10 - param4 + param12 - 1) / param12 <= param9) {
+                    break L3;
+                  } else {
+                    break L4;
+                  }
+                }
+              }
+              param8 = param9;
+              break L3;
+            }
+            param8 = param8 << 1;
+            param1 = param13;
+            L5: while (true) {
+              if (param5 >= param8) {
+                param11.field_m = param4;
+                return param5 >> 1;
+              } else {
+                param0 = param2[param4 >> 8];
+                param0 = (param0 << 8) + (param1 - param0) * (param4 & 255);
+                param5++;
+                param3[param5] = param3[param5] + (param0 * param6 >> 6);
+                param5++;
+                param3[param5] = param3[param5] + (param0 * param7 >> 6);
+                param4 = param4 + param12;
+                continue L5;
+              }
+            }
+          } else {
+            param1 = param4 >> 8;
+            param0 = param2[param1];
+            param0 = (param0 << 8) + (param2[param1 + 1] - param0) * (param4 & 255);
+            param5++;
+            param3[param5] = param3[param5] + (param0 * param6 >> 6);
+            param5++;
+            param3[param5] = param3[param5] + (param0 * param7 >> 6);
+            param4 = param4 + param12;
+            continue L2;
+          }
+        }
+    }
+
+    final synchronized void h(int param0) {
+        if (((db) this).field_z < 0) {
+            ((db) this).field_z = -param0;
+        } else {
+            ((db) this).field_z = param0;
+        }
+    }
+
+    private final static int a(int param0, int param1, byte[] param2, int[] param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, db param11, int param12, int param13) {
+        L0: {
+          L1: {
+            param11.field_v = param11.field_v - param11.field_o * param5;
+            param11.field_r = param11.field_r - param11.field_y * param5;
+            if (param12 == 0) {
+              break L1;
+            } else {
+              param8 = param5 + (param10 + 256 - param4 + param12) / param12;
+              if (param5 + (param10 + 256 - param4 + param12) / param12 <= param9) {
+                break L0;
+              } else {
+                break L1;
+              }
+            }
+          }
+          param8 = param9;
+          break L0;
+        }
+        L2: while (true) {
+          if (param5 >= param8) {
+            L3: {
+              L4: {
+                if (param12 == 0) {
+                  break L4;
+                } else {
+                  param8 = param5 + (param10 - param4 + param12) / param12;
+                  if (param5 + (param10 - param4 + param12) / param12 <= param9) {
+                    break L3;
+                  } else {
+                    break L4;
+                  }
+                }
+              }
+              param8 = param9;
+              break L3;
+            }
+            param0 = param13;
+            param1 = param12;
+            L5: while (true) {
+              if (param5 >= param8) {
+                param11.field_v = param11.field_v + param11.field_o * param5;
+                param11.field_r = param11.field_r + param11.field_y * param5;
+                param11.field_n = param6;
+                param11.field_m = param4;
+                return param5;
+              } else {
+                param5++;
+                param3[param5] = param3[param5] + (((param0 << 8) + (param2[param4 >> 8] - param0) * (param4 & 255)) * param6 >> 6);
+                param6 = param6 + param7;
+                param4 = param4 + param1;
+                continue L5;
+              }
+            }
+          } else {
+            param1 = param4 >> 8;
+            param0 = param2[param1 - 1];
+            param5++;
+            param3[param5] = param3[param5] + (((param0 << 8) + (param2[param1] - param0) * (param4 & 255)) * param6 >> 6);
+            param6 = param6 + param7;
+            param4 = param4 + param12;
+            continue L2;
+          }
+        }
+    }
+
+    private final boolean f() {
+        int var1 = 0;
+        int var2 = 0;
+        int var3 = 0;
+        L0: {
+          var1 = ((db) this).field_s;
+          if (var1 != -2147483648) {
+            var2 = db.a(var1, ((db) this).field_u);
+            var3 = db.d(var1, ((db) this).field_u);
+            break L0;
+          } else {
+            var3 = 0;
+            var2 = 0;
+            var1 = 0;
+            break L0;
+          }
+        }
+        L1: {
+          if (((db) this).field_n != var1) {
+            break L1;
+          } else {
+            if (((db) this).field_v != var2) {
+              break L1;
+            } else {
+              if (((db) this).field_r == var3) {
+                if (((db) this).field_s == -2147483648) {
+                  ((db) this).field_s = 0;
+                  ((db) this).field_r = 0;
+                  ((db) this).field_v = 0;
+                  ((db) this).field_n = 0;
+                  ((db) this).d(0);
+                  return true;
+                } else {
+                  this.m();
+                  return false;
+                }
+              } else {
+                break L1;
+              }
+            }
+          }
+        }
+        L2: {
+          if (((db) this).field_n >= var1) {
+            if (((db) this).field_n <= var1) {
+              ((db) this).field_x = 0;
+              break L2;
+            } else {
+              ((db) this).field_x = -1;
+              ((db) this).field_p = ((db) this).field_n - var1;
+              break L2;
+            }
+          } else {
+            ((db) this).field_x = 1;
+            ((db) this).field_p = var1 - ((db) this).field_n;
+            break L2;
+          }
+        }
+        L3: {
+          if (((db) this).field_v >= var2) {
+            if (((db) this).field_v <= var2) {
+              ((db) this).field_o = 0;
+              break L3;
+            } else {
+              L4: {
+                ((db) this).field_o = -1;
+                if (((db) this).field_p == 0) {
+                  break L4;
+                } else {
+                  if (((db) this).field_p <= ((db) this).field_v - var2) {
+                    break L3;
+                  } else {
+                    break L4;
+                  }
+                }
+              }
+              ((db) this).field_p = ((db) this).field_v - var2;
+              break L3;
+            }
+          } else {
+            L5: {
+              ((db) this).field_o = 1;
+              if (((db) this).field_p == 0) {
+                break L5;
+              } else {
+                if (((db) this).field_p <= var2 - ((db) this).field_v) {
+                  break L3;
+                } else {
+                  break L5;
+                }
+              }
+            }
+            ((db) this).field_p = var2 - ((db) this).field_v;
+            break L3;
+          }
+        }
+        if (((db) this).field_r < var3) {
+          ((db) this).field_y = 1;
+          if (((db) this).field_p != 0) {
+            if (((db) this).field_p > var3 - ((db) this).field_r) {
+              ((db) this).field_p = var3 - ((db) this).field_r;
+              return false;
+            } else {
+              return false;
+            }
+          } else {
+            ((db) this).field_p = var3 - ((db) this).field_r;
+            return false;
+          }
+        } else {
+          L6: {
+            if (((db) this).field_r <= var3) {
+              ((db) this).field_y = 0;
+              break L6;
+            } else {
+              L7: {
+                ((db) this).field_y = -1;
+                if (((db) this).field_p == 0) {
+                  break L7;
+                } else {
+                  if (((db) this).field_p <= ((db) this).field_r - var3) {
+                    break L6;
+                  } else {
+                    break L7;
+                  }
+                }
+              }
+              ((db) this).field_p = ((db) this).field_r - var3;
+              break L6;
+            }
+          }
+          return false;
+        }
+    }
+
+    private final void m() {
+        ((db) this).field_n = ((db) this).field_s;
+        ((db) this).field_v = db.a(((db) this).field_s, ((db) this).field_u);
+        ((db) this).field_r = db.d(((db) this).field_s, ((db) this).field_u);
+    }
+
+    private final int b(int[] param0, int param1, int param2, int param3, int param4) {
+        int var6 = 0;
+        L0: while (true) {
+          if (((db) this).field_p <= 0) {
+            L1: {
+              if (((db) this).field_z != 256) {
+                break L1;
+              } else {
+                if ((((db) this).field_m & 255) != 0) {
+                  break L1;
+                } else {
+                  if (lo.field_t) {
+                    return db.b(0, ((el) (Object) ((db) this).field_i).field_n, param0, ((db) this).field_m, param1, ((db) this).field_v, ((db) this).field_r, 0, param3, param2, (db) this);
+                  } else {
+                    return db.b(((el) (Object) ((db) this).field_i).field_n, param0, ((db) this).field_m, param1, ((db) this).field_n, 0, param3, param2, (db) this);
+                  }
+                }
+              }
+            }
+            if (lo.field_t) {
+              return db.d(0, 0, ((el) (Object) ((db) this).field_i).field_n, param0, ((db) this).field_m, param1, ((db) this).field_v, ((db) this).field_r, 0, param3, param2, (db) this, ((db) this).field_z, param4);
+            } else {
+              return db.b(0, 0, ((el) (Object) ((db) this).field_i).field_n, param0, ((db) this).field_m, param1, ((db) this).field_n, 0, param3, param2, (db) this, ((db) this).field_z, param4);
+            }
+          } else {
+            L2: {
+              var6 = param1 + ((db) this).field_p;
+              if (var6 <= param3) {
+                break L2;
+              } else {
+                var6 = param3;
+                break L2;
+              }
+            }
+            L3: {
+              L4: {
+                ((db) this).field_p = ((db) this).field_p + param1;
+                if (((db) this).field_z != 256) {
+                  break L4;
+                } else {
+                  if ((((db) this).field_m & 255) != 0) {
+                    break L4;
+                  } else {
+                    if (!lo.field_t) {
+                      param1 = db.b(((el) (Object) ((db) this).field_i).field_n, param0, ((db) this).field_m, param1, ((db) this).field_n, ((db) this).field_x, 0, var6, param2, (db) this);
+                      break L3;
+                    } else {
+                      param1 = db.b(0, ((el) (Object) ((db) this).field_i).field_n, param0, ((db) this).field_m, param1, ((db) this).field_v, ((db) this).field_r, ((db) this).field_o, ((db) this).field_y, 0, var6, param2, (db) this);
+                      break L3;
+                    }
+                  }
+                }
+              }
+              if (!lo.field_t) {
+                param1 = db.b(0, 0, ((el) (Object) ((db) this).field_i).field_n, param0, ((db) this).field_m, param1, ((db) this).field_n, ((db) this).field_x, 0, var6, param2, (db) this, ((db) this).field_z, param4);
+                break L3;
+              } else {
+                param1 = db.b(0, 0, ((el) (Object) ((db) this).field_i).field_n, param0, ((db) this).field_m, param1, ((db) this).field_v, ((db) this).field_r, ((db) this).field_o, ((db) this).field_y, 0, var6, param2, (db) this, ((db) this).field_z, param4);
+                break L3;
+              }
+            }
+            ((db) this).field_p = ((db) this).field_p - param1;
+            if (((db) this).field_p == 0) {
+              if (!this.f()) {
+                continue L0;
+              } else {
+                return param3;
+              }
+            } else {
+              return param1;
+            }
+          }
+        }
+    }
+
+    final static db b(el param0, int param1, int param2, int param3) {
+        if (param0.field_n != null) {
+          if (param0.field_n.length == 0) {
+            return null;
+          } else {
+            return new db(param0, param1, param2, param3);
+          }
+        } else {
+          return null;
+        }
+    }
+
+    final synchronized void j(int param0) {
+        this.b(((db) this).j(), param0);
+    }
+
+    private final static int a(int param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, db param10) {
+        L0: {
+          param3 = param3 >> 8;
+          param9 = param9 >> 8;
+          param5 = param5 << 2;
+          param6 = param6 << 2;
+          param7 = param4 + param3 - (param9 - 1);
+          if (param4 + param3 - (param9 - 1) <= param8) {
+            break L0;
+          } else {
+            param7 = param8;
+            break L0;
+          }
+        }
+        param4 = param4 << 1;
+        param7 = param7 << 1;
+        param7 -= 6;
+        L1: while (true) {
+          if (param4 >= param7) {
+            param7 += 6;
+            L2: while (true) {
+              if (param4 >= param7) {
+                param10.field_m = param3 << 8;
+                return param4 >> 1;
+              } else {
+                param3--;
+                param0 = param1[param3];
+                param4++;
+                param2[param4] = param2[param4] + param0 * param5;
+                param4++;
+                param2[param4] = param2[param4] + param0 * param6;
+                continue L2;
+              }
+            }
+          } else {
+            param3--;
+            param0 = param1[param3];
+            param4++;
+            param2[param4] = param2[param4] + param0 * param5;
+            param4++;
+            param2[param4] = param2[param4] + param0 * param6;
+            param3--;
+            param0 = param1[param3];
+            param4++;
+            param2[param4] = param2[param4] + param0 * param5;
+            param4++;
+            param2[param4] = param2[param4] + param0 * param6;
+            param3--;
+            param0 = param1[param3];
+            param4++;
+            param2[param4] = param2[param4] + param0 * param5;
+            param4++;
+            param2[param4] = param2[param4] + param0 * param6;
+            param3--;
+            param0 = param1[param3];
+            param4++;
+            param2[param4] = param2[param4] + param0 * param5;
+            param4++;
+            param2[param4] = param2[param4] + param0 * param6;
+            continue L1;
+          }
+        }
+    }
+
+    final static db a(el param0, int param1, int param2, int param3) {
+        if (param0.field_n != null) {
+          if (param0.field_n.length == 0) {
+            return null;
+          } else {
+            return new db(param0, (int)((long)param0.field_j * 256L * (long)param1 / (long)(100 * lo.field_l)), param2 << 6, param3 << 6);
+          }
+        } else {
+          return null;
+        }
+    }
+
+    final synchronized void a(int param0) {
+        el var2 = null;
+        int var3 = 0;
+        int var4 = 0;
+        int var5 = 0;
+        int var6 = 0;
+        int var7 = 0;
+        L0: {
+          if (((db) this).field_p <= 0) {
+            break L0;
+          } else {
+            if (param0 < ((db) this).field_p) {
+              ((db) this).field_n = ((db) this).field_n + ((db) this).field_x * param0;
+              ((db) this).field_v = ((db) this).field_v + ((db) this).field_o * param0;
+              ((db) this).field_r = ((db) this).field_r + ((db) this).field_y * param0;
+              ((db) this).field_p = ((db) this).field_p - param0;
+              break L0;
+            } else {
+              L1: {
+                if (((db) this).field_s != -2147483648) {
+                  break L1;
+                } else {
+                  ((db) this).field_s = 0;
+                  ((db) this).field_r = 0;
+                  ((db) this).field_v = 0;
+                  ((db) this).field_n = 0;
+                  ((db) this).d(0);
+                  param0 = ((db) this).field_p;
+                  break L1;
+                }
+              }
+              ((db) this).field_p = 0;
+              this.m();
+              break L0;
+            }
+          }
+        }
+        L2: {
+          var2 = (el) (Object) ((db) this).field_i;
+          var3 = ((db) this).field_A << 8;
+          var4 = ((db) this).field_w << 8;
+          var5 = var2.field_n.length << 8;
+          var6 = var4 - var3;
+          if (var6 > 0) {
+            break L2;
+          } else {
+            ((db) this).field_t = 0;
+            break L2;
+          }
+        }
+        L3: {
+          if (((db) this).field_m >= 0) {
+            break L3;
+          } else {
+            if (((db) this).field_z <= 0) {
+              this.h();
+              ((db) this).d(0);
+              return;
+            } else {
+              ((db) this).field_m = 0;
+              break L3;
+            }
+          }
+        }
+        L4: {
+          if (((db) this).field_m < var5) {
+            break L4;
+          } else {
+            if (((db) this).field_z >= 0) {
+              this.h();
+              ((db) this).d(0);
+              return;
+            } else {
+              ((db) this).field_m = var5 - 1;
+              break L4;
+            }
+          }
+        }
+        ((db) this).field_m = ((db) this).field_m + ((db) this).field_z * param0;
+        if (((db) this).field_t >= 0) {
+          L5: {
+            if (((db) this).field_t <= 0) {
+              break L5;
+            } else {
+              if (!((db) this).field_q) {
+                L6: {
+                  if (((db) this).field_z >= 0) {
+                    if (((db) this).field_m >= var4) {
+                      var7 = (((db) this).field_m - var3) / var6;
+                      if (var7 < ((db) this).field_t) {
+                        ((db) this).field_m = ((db) this).field_m - var6 * var7;
+                        ((db) this).field_t = ((db) this).field_t - var7;
+                        break L6;
+                      } else {
+                        ((db) this).field_m = ((db) this).field_m - var6 * ((db) this).field_t;
+                        ((db) this).field_t = 0;
+                        break L5;
+                      }
+                    } else {
+                      return;
+                    }
+                  } else {
+                    if (((db) this).field_m < var3) {
+                      var7 = (var4 - 1 - ((db) this).field_m) / var6;
+                      if (var7 < ((db) this).field_t) {
+                        ((db) this).field_m = ((db) this).field_m + var6 * var7;
+                        ((db) this).field_t = ((db) this).field_t - var7;
+                        break L6;
+                      } else {
+                        ((db) this).field_m = ((db) this).field_m + var6 * ((db) this).field_t;
+                        ((db) this).field_t = 0;
+                        break L5;
+                      }
+                    } else {
+                      return;
+                    }
+                  }
+                }
+                return;
+              } else {
+                L7: {
+                  if (((db) this).field_z >= 0) {
+                    break L7;
+                  } else {
+                    if (((db) this).field_m < var3) {
+                      ((db) this).field_m = var3 + var3 - 1 - ((db) this).field_m;
+                      ((db) this).field_z = -((db) this).field_z;
+                      ((db) this).field_t = ((db) this).field_t - 1;
+                      if (((db) this).field_t - 1 != 0) {
+                        break L7;
+                      } else {
+                        break L5;
+                      }
+                    } else {
+                      return;
+                    }
+                  }
+                }
+                L8: while (true) {
+                  if (((db) this).field_m >= var4) {
+                    ((db) this).field_m = var4 + var4 - 1 - ((db) this).field_m;
+                    ((db) this).field_z = -((db) this).field_z;
+                    ((db) this).field_t = ((db) this).field_t - 1;
+                    if (((db) this).field_t - 1 != 0) {
+                      if (((db) this).field_m < var3) {
+                        ((db) this).field_m = var3 + var3 - 1 - ((db) this).field_m;
+                        ((db) this).field_z = -((db) this).field_z;
+                        ((db) this).field_t = ((db) this).field_t - 1;
+                        if (((db) this).field_t - 1 != 0) {
+                          continue L8;
+                        } else {
+                          break L5;
+                        }
+                      } else {
+                        return;
+                      }
+                    } else {
+                      break L5;
+                    }
+                  } else {
+                    return;
+                  }
+                }
+              }
+            }
+          }
+          if (((db) this).field_z < 0) {
+            if (((db) this).field_m < 0) {
+              ((db) this).field_m = -1;
+              this.h();
+              ((db) this).d(0);
+              return;
+            } else {
+              return;
+            }
+          } else {
+            L9: {
+              if (((db) this).field_m < var5) {
+                break L9;
+              } else {
+                ((db) this).field_m = var5;
+                this.h();
+                ((db) this).d(0);
+                break L9;
+              }
+            }
+            return;
+          }
+        } else {
+          if (!((db) this).field_q) {
+            if (((db) this).field_z >= 0) {
+              if (((db) this).field_m < var4) {
+                return;
+              } else {
+                ((db) this).field_m = var3 + (((db) this).field_m - var3) % var6;
+                return;
+              }
+            } else {
+              if (((db) this).field_m < var3) {
+                ((db) this).field_m = var4 - 1 - (var4 - 1 - ((db) this).field_m) % var6;
+                return;
+              } else {
+                return;
+              }
+            }
+          } else {
+            L10: {
+              if (((db) this).field_z >= 0) {
+                break L10;
+              } else {
+                if (((db) this).field_m < var3) {
+                  ((db) this).field_m = var3 + var3 - 1 - ((db) this).field_m;
+                  ((db) this).field_z = -((db) this).field_z;
+                  break L10;
+                } else {
+                  return;
+                }
+              }
+            }
+            L11: while (true) {
+              if (((db) this).field_m >= var4) {
+                ((db) this).field_m = var4 + var4 - 1 - ((db) this).field_m;
+                ((db) this).field_z = -((db) this).field_z;
+                if (((db) this).field_m < var3) {
+                  ((db) this).field_m = var3 + var3 - 1 - ((db) this).field_m;
+                  ((db) this).field_z = -((db) this).field_z;
+                  continue L11;
+                } else {
+                  return;
+                }
+              } else {
+                return;
+              }
+            }
+          }
+        }
+    }
+
+    final synchronized int i() {
+        return ((db) this).field_m >> 8;
+    }
+
+    private final static int a(int param0, int param1) {
+        return param1 < 0 ? param0 : (int)((double)param0 * Math.sqrt((double)(16384 - param1) * 0.0001220703125) + 0.5);
+    }
+
+    private final static int a(byte[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, db param9) {
+        L0: {
+          param2 = param2 >> 8;
+          param8 = param8 >> 8;
+          param4 = param4 << 2;
+          param5 = param5 << 2;
+          param6 = param3 + param2 - (param8 - 1);
+          if (param3 + param2 - (param8 - 1) <= param7) {
+            break L0;
+          } else {
+            param6 = param7;
+            break L0;
+          }
+        }
+        param9.field_v = param9.field_v + param9.field_o * (param6 - param3);
+        param9.field_r = param9.field_r + param9.field_y * (param6 - param3);
+        param6 -= 3;
+        L1: while (true) {
+          if (param3 >= param6) {
+            param6 += 3;
+            L2: while (true) {
+              if (param3 >= param6) {
+                param9.field_n = param4 >> 2;
+                param9.field_m = param2 << 8;
+                return param3;
+              } else {
+                param3++;
+                param2--;
+                param1[param3] = param1[param3] + param0[param2] * param4;
+                param4 = param4 + param5;
+                continue L2;
+              }
+            }
+          } else {
+            param3++;
+            param2--;
+            param1[param3] = param1[param3] + param0[param2] * param4;
+            param4 = param4 + param5;
+            param3++;
+            param2--;
+            param1[param3] = param1[param3] + param0[param2] * param4;
+            param4 = param4 + param5;
+            param3++;
+            param2--;
+            param1[param3] = param1[param3] + param0[param2] * param4;
+            param4 = param4 + param5;
+            param3++;
+            param2--;
+            param1[param3] = param1[param3] + param0[param2] * param4;
+            param4 = param4 + param5;
+            continue L1;
+          }
+        }
+    }
+
+    final synchronized void i(int param0) {
+        param0 = param0 << 8;
+        int var2 = ((el) (Object) ((db) this).field_i).field_n.length << 8;
+        if (param0 < -1) {
+            param0 = -1;
+        }
+        if (param0 > var2) {
+            param0 = var2;
+        }
+        ((db) this).field_m = param0;
+    }
+
+    final synchronized int l() {
+        return ((db) this).field_z < 0 ? -((db) this).field_z : ((db) this).field_z;
+    }
+
+    final synchronized void a(boolean param0) {
+        ((db) this).field_z = (((db) this).field_z ^ ((db) this).field_z >> 31) + (((db) this).field_z >>> 31);
+        if (param0) {
+          ((db) this).field_z = -((db) this).field_z;
+          return;
+        } else {
+          return;
+        }
+    }
+
+    final tj a() {
+        return null;
+    }
+
+    private final static int b(byte[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, db param8) {
+        param2 = param2 >> 8;
+        param7 = param7 >> 8;
+        param4 = param4 << 2;
+        param5 = param3 + param7 - param2;
+        if (param3 + param7 - param2 > param6) {
+            param5 = param6;
+        }
+        param5 -= 3;
+        while (param3 < param5) {
+            param3++;
+            param2++;
+            param1[param3] = param1[param3] + param0[param2] * param4;
+            param3++;
+            param2++;
+            param1[param3] = param1[param3] + param0[param2] * param4;
+            param3++;
+            param2++;
+            param1[param3] = param1[param3] + param0[param2] * param4;
+            param3++;
+            param2++;
+            param1[param3] = param1[param3] + param0[param2] * param4;
+        }
+        param5 += 3;
+        while (param3 < param5) {
+            param3++;
+            param2++;
+            param1[param3] = param1[param3] + param0[param2] * param4;
+        }
+        param8.field_m = param2 << 8;
+        return param3;
+    }
+
+    final static db a(el param0, int param1, int param2) {
+        if (param0.field_n != null) {
+          if (param0.field_n.length == 0) {
+            return null;
+          } else {
+            return new db(param0, (int)((long)param0.field_j * 256L * (long)param1 / (long)(100 * lo.field_l)), param2 << 6);
+          }
+        } else {
+          return null;
+        }
+    }
+
+    private final static int b(int param0, int param1, byte[] param2, int[] param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, db param11, int param12, int param13) {
+        L0: {
+          L1: {
+            param11.field_v = param11.field_v - param11.field_o * param5;
+            param11.field_r = param11.field_r - param11.field_y * param5;
+            if (param12 == 0) {
+              break L1;
+            } else {
+              param8 = param5 + (param10 - param4 + param12 - 257) / param12;
+              if (param5 + (param10 - param4 + param12 - 257) / param12 <= param9) {
+                break L0;
+              } else {
+                break L1;
+              }
+            }
+          }
+          param8 = param9;
+          break L0;
+        }
+        L2: while (true) {
+          if (param5 >= param8) {
+            L3: {
+              L4: {
+                if (param12 == 0) {
+                  break L4;
+                } else {
+                  param8 = param5 + (param10 - param4 + param12 - 1) / param12;
+                  if (param5 + (param10 - param4 + param12 - 1) / param12 <= param9) {
+                    break L3;
+                  } else {
+                    break L4;
+                  }
+                }
+              }
+              param8 = param9;
+              break L3;
+            }
+            param1 = param13;
+            L5: while (true) {
+              if (param5 >= param8) {
+                param11.field_v = param11.field_v + param11.field_o * param5;
+                param11.field_r = param11.field_r + param11.field_y * param5;
+                param11.field_n = param6;
+                param11.field_m = param4;
+                return param5;
+              } else {
+                param0 = param2[param4 >> 8];
+                param5++;
+                param3[param5] = param3[param5] + (((param0 << 8) + (param1 - param0) * (param4 & 255)) * param6 >> 6);
+                param6 = param6 + param7;
+                param4 = param4 + param12;
+                continue L5;
+              }
+            }
+          } else {
+            param1 = param4 >> 8;
+            param0 = param2[param1];
+            param5++;
+            param3[param5] = param3[param5] + (((param0 << 8) + (param2[param1 + 1] - param0) * (param4 & 255)) * param6 >> 6);
+            param6 = param6 + param7;
+            param4 = param4 + param12;
+            continue L2;
+          }
+        }
+    }
+
+    private final static int b(byte[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, db param9) {
+        L0: {
+          param2 = param2 >> 8;
+          param8 = param8 >> 8;
+          param4 = param4 << 2;
+          param5 = param5 << 2;
+          param6 = param3 + param8 - param2;
+          if (param3 + param8 - param2 <= param7) {
+            break L0;
+          } else {
+            param6 = param7;
+            break L0;
+          }
+        }
+        param9.field_v = param9.field_v + param9.field_o * (param6 - param3);
+        param9.field_r = param9.field_r + param9.field_y * (param6 - param3);
+        param6 -= 3;
+        L1: while (true) {
+          if (param3 >= param6) {
+            param6 += 3;
+            L2: while (true) {
+              if (param3 >= param6) {
+                param9.field_n = param4 >> 2;
+                param9.field_m = param2 << 8;
+                return param3;
+              } else {
+                param3++;
+                param2++;
+                param1[param3] = param1[param3] + param0[param2] * param4;
+                param4 = param4 + param5;
+                continue L2;
+              }
+            }
+          } else {
+            param3++;
+            param2++;
+            param1[param3] = param1[param3] + param0[param2] * param4;
+            param4 = param4 + param5;
+            param3++;
+            param2++;
+            param1[param3] = param1[param3] + param0[param2] * param4;
+            param4 = param4 + param5;
+            param3++;
+            param2++;
+            param1[param3] = param1[param3] + param0[param2] * param4;
+            param4 = param4 + param5;
+            param3++;
+            param2++;
+            param1[param3] = param1[param3] + param0[param2] * param4;
+            param4 = param4 + param5;
+            continue L1;
+          }
+        }
+    }
+
+    private final static int a(int param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, db param12) {
+        L0: {
+          param3 = param3 >> 8;
+          param11 = param11 >> 8;
+          param5 = param5 << 2;
+          param6 = param6 << 2;
+          param7 = param7 << 2;
+          param8 = param8 << 2;
+          param9 = param4 + param3 - (param11 - 1);
+          if (param4 + param3 - (param11 - 1) <= param10) {
+            break L0;
+          } else {
+            param9 = param10;
+            break L0;
+          }
+        }
+        param12.field_n = param12.field_n + param12.field_x * (param9 - param4);
+        param4 = param4 << 1;
+        param9 = param9 << 1;
+        param9 -= 6;
+        L1: while (true) {
+          if (param4 >= param9) {
+            param9 += 6;
+            L2: while (true) {
+              if (param4 >= param9) {
+                param12.field_v = param5 >> 2;
+                param12.field_r = param6 >> 2;
+                param12.field_m = param3 << 8;
+                return param4 >> 1;
+              } else {
+                param3--;
+                param0 = param1[param3];
+                param4++;
+                param2[param4] = param2[param4] + param0 * param5;
+                param5 = param5 + param7;
+                param4++;
+                param2[param4] = param2[param4] + param0 * param6;
+                param6 = param6 + param8;
+                continue L2;
+              }
+            }
+          } else {
+            param3--;
+            param0 = param1[param3];
+            param4++;
+            param2[param4] = param2[param4] + param0 * param5;
+            param5 = param5 + param7;
+            param4++;
+            param2[param4] = param2[param4] + param0 * param6;
+            param6 = param6 + param8;
+            param3--;
+            param0 = param1[param3];
+            param4++;
+            param2[param4] = param2[param4] + param0 * param5;
+            param5 = param5 + param7;
+            param4++;
+            param2[param4] = param2[param4] + param0 * param6;
+            param6 = param6 + param8;
+            param3--;
+            param0 = param1[param3];
+            param4++;
+            param2[param4] = param2[param4] + param0 * param5;
+            param5 = param5 + param7;
+            param4++;
+            param2[param4] = param2[param4] + param0 * param6;
+            param6 = param6 + param8;
+            param3--;
+            param0 = param1[param3];
+            param4++;
+            param2[param4] = param2[param4] + param0 * param5;
+            param5 = param5 + param7;
+            param4++;
+            param2[param4] = param2[param4] + param0 * param6;
+            param6 = param6 + param8;
+            continue L1;
+          }
+        }
+    }
+
+    final static db b(el param0, int param1, int param2) {
+        if (param0.field_n != null) {
+          if (param0.field_n.length == 0) {
+            return null;
+          } else {
+            return new db(param0, param1, param2 << 6);
+          }
+        } else {
+          return null;
+        }
+    }
+
+    final synchronized void b(int[] param0, int param1, int param2) {
+        el var4 = null;
+        int var5 = 0;
+        int var6 = 0;
+        int var7 = 0;
+        int var8 = 0;
+        int var9 = 0;
+        int var10 = 0;
+        L0: {
+          if (((db) this).field_s != 0) {
+            break L0;
+          } else {
+            if (((db) this).field_p != 0) {
+              break L0;
+            } else {
+              ((db) this).a(param2);
+              return;
+            }
+          }
+        }
+        L1: {
+          var4 = (el) (Object) ((db) this).field_i;
+          var5 = ((db) this).field_A << 8;
+          var6 = ((db) this).field_w << 8;
+          var7 = var4.field_n.length << 8;
+          var8 = var6 - var5;
+          if (var8 > 0) {
+            break L1;
+          } else {
+            ((db) this).field_t = 0;
+            break L1;
+          }
+        }
+        L2: {
+          var9 = param1;
+          param2 = param2 + param1;
+          if (((db) this).field_m >= 0) {
+            break L2;
+          } else {
+            if (((db) this).field_z <= 0) {
+              this.h();
+              ((db) this).d(0);
+              return;
+            } else {
+              ((db) this).field_m = 0;
+              break L2;
+            }
+          }
+        }
+        L3: {
+          if (((db) this).field_m < var7) {
+            break L3;
+          } else {
+            if (((db) this).field_z >= 0) {
+              this.h();
+              ((db) this).d(0);
+              return;
+            } else {
+              ((db) this).field_m = var7 - 1;
+              break L3;
+            }
+          }
+        }
+        if (((db) this).field_t >= 0) {
+          L4: {
+            if (((db) this).field_t <= 0) {
+              break L4;
+            } else {
+              if (!((db) this).field_q) {
+                if (((db) this).field_z >= 0) {
+                  L5: while (true) {
+                    var9 = this.b(param0, var9, var6, param2, (int) var4.field_n[((db) this).field_A]);
+                    if (((db) this).field_m >= var6) {
+                      var10 = (((db) this).field_m - var5) / var8;
+                      if (var10 < ((db) this).field_t) {
+                        ((db) this).field_m = ((db) this).field_m - var8 * var10;
+                        ((db) this).field_t = ((db) this).field_t - var10;
+                        continue L5;
+                      } else {
+                        ((db) this).field_m = ((db) this).field_m - var8 * ((db) this).field_t;
+                        ((db) this).field_t = 0;
+                        break L4;
+                      }
+                    } else {
+                      return;
+                    }
+                  }
+                } else {
+                  L6: while (true) {
+                    var9 = this.a(param0, var9, var5, param2, (int) var4.field_n[((db) this).field_w - 1]);
+                    if (((db) this).field_m < var5) {
+                      var10 = (var6 - 1 - ((db) this).field_m) / var8;
+                      if (var10 < ((db) this).field_t) {
+                        ((db) this).field_m = ((db) this).field_m + var8 * var10;
+                        ((db) this).field_t = ((db) this).field_t - var10;
+                        continue L6;
+                      } else {
+                        ((db) this).field_m = ((db) this).field_m + var8 * ((db) this).field_t;
+                        ((db) this).field_t = 0;
+                        break L4;
+                      }
+                    } else {
+                      return;
+                    }
+                  }
+                }
+              } else {
+                L7: {
+                  if (((db) this).field_z >= 0) {
+                    break L7;
+                  } else {
+                    var9 = this.a(param0, var9, var5, param2, (int) var4.field_n[((db) this).field_A]);
+                    if (((db) this).field_m < var5) {
+                      ((db) this).field_m = var5 + var5 - 1 - ((db) this).field_m;
+                      ((db) this).field_z = -((db) this).field_z;
+                      ((db) this).field_t = ((db) this).field_t - 1;
+                      if (((db) this).field_t - 1 != 0) {
+                        break L7;
+                      } else {
+                        break L4;
+                      }
+                    } else {
+                      return;
+                    }
+                  }
+                }
+                L8: while (true) {
+                  var9 = this.b(param0, var9, var6, param2, (int) var4.field_n[((db) this).field_w - 1]);
+                  if (((db) this).field_m >= var6) {
+                    ((db) this).field_m = var6 + var6 - 1 - ((db) this).field_m;
+                    ((db) this).field_z = -((db) this).field_z;
+                    ((db) this).field_t = ((db) this).field_t - 1;
+                    if (((db) this).field_t - 1 != 0) {
+                      var9 = this.a(param0, var9, var5, param2, (int) var4.field_n[((db) this).field_A]);
+                      if (((db) this).field_m < var5) {
+                        ((db) this).field_m = var5 + var5 - 1 - ((db) this).field_m;
+                        ((db) this).field_z = -((db) this).field_z;
+                        ((db) this).field_t = ((db) this).field_t - 1;
+                        if (((db) this).field_t - 1 != 0) {
+                          continue L8;
+                        } else {
+                          break L4;
+                        }
+                      } else {
+                        return;
+                      }
+                    } else {
+                      break L4;
+                    }
+                  } else {
+                    return;
+                  }
+                }
+              }
+            }
+          }
+          if (((db) this).field_z < 0) {
+            int discarded$2 = this.a(param0, var9, 0, param2, 0);
+            if (((db) this).field_m < 0) {
+              ((db) this).field_m = -1;
+              this.h();
+              ((db) this).d(0);
+              return;
+            } else {
+              return;
+            }
+          } else {
+            L9: {
+              int discarded$3 = this.b(param0, var9, var7, param2, 0);
+              if (((db) this).field_m < var7) {
+                break L9;
+              } else {
+                ((db) this).field_m = var7;
+                this.h();
+                ((db) this).d(0);
+                break L9;
+              }
+            }
+            return;
+          }
+        } else {
+          if (!((db) this).field_q) {
+            if (((db) this).field_z >= 0) {
+              L10: while (true) {
+                var9 = this.b(param0, var9, var6, param2, (int) var4.field_n[((db) this).field_A]);
+                if (((db) this).field_m >= var6) {
+                  ((db) this).field_m = var5 + (((db) this).field_m - var5) % var8;
+                  continue L10;
+                } else {
+                  return;
+                }
+              }
+            } else {
+              L11: while (true) {
+                var9 = this.a(param0, var9, var5, param2, (int) var4.field_n[((db) this).field_w - 1]);
+                if (((db) this).field_m < var5) {
+                  ((db) this).field_m = var6 - 1 - (var6 - 1 - ((db) this).field_m) % var8;
+                  continue L11;
+                } else {
+                  return;
+                }
+              }
+            }
+          } else {
+            L12: {
+              if (((db) this).field_z >= 0) {
+                break L12;
+              } else {
+                var9 = this.a(param0, var9, var5, param2, (int) var4.field_n[((db) this).field_A]);
+                if (((db) this).field_m < var5) {
+                  ((db) this).field_m = var5 + var5 - 1 - ((db) this).field_m;
+                  ((db) this).field_z = -((db) this).field_z;
+                  break L12;
+                } else {
+                  return;
+                }
+              }
+            }
+            L13: while (true) {
+              var9 = this.b(param0, var9, var6, param2, (int) var4.field_n[((db) this).field_w - 1]);
+              if (((db) this).field_m >= var6) {
+                ((db) this).field_m = var6 + var6 - 1 - ((db) this).field_m;
+                ((db) this).field_z = -((db) this).field_z;
+                var9 = this.a(param0, var9, var5, param2, (int) var4.field_n[((db) this).field_A]);
+                if (((db) this).field_m < var5) {
+                  ((db) this).field_m = var5 + var5 - 1 - ((db) this).field_m;
+                  ((db) this).field_z = -((db) this).field_z;
+                  continue L13;
+                } else {
+                  return;
+                }
+              } else {
+                return;
+              }
+            }
+          }
+        }
+    }
+
+    private final void h() {
+        if (((db) this).field_p != 0) {
+            if (((db) this).field_s == -2147483648) {
+                ((db) this).field_s = 0;
+            }
+            ((db) this).field_p = 0;
+            this.m();
+            return;
+        }
+    }
+
+    final int d() {
+        int var1 = ((db) this).field_n * 3 >> 6;
+        var1 = (var1 ^ var1 >> 31) + (var1 >>> 31);
+        if (((db) this).field_t == 0) {
+            var1 = var1 - var1 * ((db) this).field_m / (((el) (Object) ((db) this).field_i).field_n.length << 8);
+        } else {
+            if (((db) this).field_t >= 0) {
+                var1 = var1 - var1 * ((db) this).field_A / ((el) (Object) ((db) this).field_i).field_n.length;
+            }
+        }
+        return var1 > 255 ? 255 : var1;
+    }
+
+    private final static int d(int param0, int param1) {
+        return param1 < 0 ? -param0 : (int)((double)param0 * Math.sqrt((double)param1 * 0.0001220703125) + 0.5);
+    }
+
+    private final static int b(int param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, db param10) {
+        L0: {
+          param3 = param3 >> 8;
+          param9 = param9 >> 8;
+          param5 = param5 << 2;
+          param6 = param6 << 2;
+          param7 = param4 + param9 - param3;
+          if (param4 + param9 - param3 <= param8) {
+            break L0;
+          } else {
+            param7 = param8;
+            break L0;
+          }
+        }
+        param4 = param4 << 1;
+        param7 = param7 << 1;
+        param7 -= 6;
+        L1: while (true) {
+          if (param4 >= param7) {
+            param7 += 6;
+            L2: while (true) {
+              if (param4 >= param7) {
+                param10.field_m = param3 << 8;
+                return param4 >> 1;
+              } else {
+                param3++;
+                param0 = param1[param3];
+                param4++;
+                param2[param4] = param2[param4] + param0 * param5;
+                param4++;
+                param2[param4] = param2[param4] + param0 * param6;
+                continue L2;
+              }
+            }
+          } else {
+            param3++;
+            param0 = param1[param3];
+            param4++;
+            param2[param4] = param2[param4] + param0 * param5;
+            param4++;
+            param2[param4] = param2[param4] + param0 * param6;
+            param3++;
+            param0 = param1[param3];
+            param4++;
+            param2[param4] = param2[param4] + param0 * param5;
+            param4++;
+            param2[param4] = param2[param4] + param0 * param6;
+            param3++;
+            param0 = param1[param3];
+            param4++;
+            param2[param4] = param2[param4] + param0 * param5;
+            param4++;
+            param2[param4] = param2[param4] + param0 * param6;
+            param3++;
+            param0 = param1[param3];
+            param4++;
+            param2[param4] = param2[param4] + param0 * param5;
+            param4++;
+            param2[param4] = param2[param4] + param0 * param6;
+            continue L1;
+          }
+        }
+    }
+
+    final synchronized void f(int param0) {
+        int var2 = 0;
+        if (param0 != 0) {
+          if (((db) this).field_v == 0) {
+            if (((db) this).field_r == 0) {
+              ((db) this).field_p = 0;
+              ((db) this).field_s = 0;
+              ((db) this).field_n = 0;
+              ((db) this).d(0);
+              return;
+            } else {
+              L0: {
+                var2 = -((db) this).field_n;
+                if (((db) this).field_n <= var2) {
+                  break L0;
+                } else {
+                  var2 = ((db) this).field_n;
+                  break L0;
+                }
+              }
+              L1: {
+                if (-((db) this).field_v <= var2) {
+                  break L1;
+                } else {
+                  var2 = -((db) this).field_v;
+                  break L1;
+                }
+              }
+              L2: {
+                if (((db) this).field_v <= var2) {
+                  break L2;
+                } else {
+                  var2 = ((db) this).field_v;
+                  break L2;
+                }
+              }
+              L3: {
+                if (-((db) this).field_r <= var2) {
+                  break L3;
+                } else {
+                  var2 = -((db) this).field_r;
+                  break L3;
+                }
+              }
+              L4: {
+                if (((db) this).field_r <= var2) {
+                  break L4;
+                } else {
+                  var2 = ((db) this).field_r;
+                  break L4;
+                }
+              }
+              L5: {
+                if (param0 <= var2) {
+                  break L5;
+                } else {
+                  param0 = var2;
+                  break L5;
+                }
+              }
+              ((db) this).field_p = param0;
+              ((db) this).field_s = -2147483648;
+              ((db) this).field_x = -((db) this).field_n / param0;
+              ((db) this).field_o = -((db) this).field_v / param0;
+              ((db) this).field_y = -((db) this).field_r / param0;
+              return;
+            }
+          } else {
+            L6: {
+              var2 = -((db) this).field_n;
+              if (((db) this).field_n <= var2) {
+                break L6;
+              } else {
+                var2 = ((db) this).field_n;
+                break L6;
+              }
+            }
+            L7: {
+              if (-((db) this).field_v <= var2) {
+                break L7;
+              } else {
+                var2 = -((db) this).field_v;
+                break L7;
+              }
+            }
+            L8: {
+              if (((db) this).field_v <= var2) {
+                break L8;
+              } else {
+                var2 = ((db) this).field_v;
+                break L8;
+              }
+            }
+            L9: {
+              if (-((db) this).field_r <= var2) {
+                break L9;
+              } else {
+                var2 = -((db) this).field_r;
+                break L9;
+              }
+            }
+            L10: {
+              if (((db) this).field_r <= var2) {
+                break L10;
+              } else {
+                var2 = ((db) this).field_r;
+                break L10;
+              }
+            }
+            L11: {
+              if (param0 <= var2) {
+                break L11;
+              } else {
+                param0 = var2;
+                break L11;
+              }
+            }
+            ((db) this).field_p = param0;
+            ((db) this).field_s = -2147483648;
+            ((db) this).field_x = -((db) this).field_n / param0;
+            ((db) this).field_o = -((db) this).field_v / param0;
+            ((db) this).field_y = -((db) this).field_r / param0;
+            return;
+          }
+        } else {
+          ((db) this).e(0);
+          ((db) this).d(0);
+          return;
+        }
+    }
+
+    final synchronized int j() {
+        return ((db) this).field_s == -2147483648 ? 0 : ((db) this).field_s;
+    }
+
+    final synchronized boolean g() {
+        return ((db) this).field_p != 0;
+    }
+
+    private final synchronized void b(int param0, int param1) {
+        ((db) this).field_s = param0;
+        ((db) this).field_u = param1;
+        ((db) this).field_p = 0;
+        this.m();
+    }
+
+    final synchronized void k(int param0) {
+        int var2 = ((el) (Object) ((db) this).field_i).field_n.length << 8;
+        if (param0 < -1) {
+            param0 = -1;
+        }
+        if (param0 > var2) {
+            param0 = var2;
+        }
+        ((db) this).field_m = param0;
+    }
+
+    final int c() {
+        if (((db) this).field_s == 0) {
+            if (((db) this).field_p == 0) {
+                return 0;
+            }
+        }
+        return 1;
+    }
+
+    private final static int a(int param0, int param1, byte[] param2, int[] param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, db param13, int param14, int param15) {
+        L0: {
+          L1: {
+            param13.field_n = param13.field_n - param13.field_x * param5;
+            if (param14 == 0) {
+              break L1;
+            } else {
+              param10 = param5 + (param12 + 256 - param4 + param14) / param14;
+              if (param5 + (param12 + 256 - param4 + param14) / param14 <= param11) {
+                break L0;
+              } else {
+                break L1;
+              }
+            }
+          }
+          param10 = param11;
+          break L0;
+        }
+        param5 = param5 << 1;
+        param10 = param10 << 1;
+        L2: while (true) {
+          if (param5 >= param10) {
+            L3: {
+              L4: {
+                if (param14 == 0) {
+                  break L4;
+                } else {
+                  param10 = (param5 >> 1) + (param12 - param4 + param14) / param14;
+                  if ((param5 >> 1) + (param12 - param4 + param14) / param14 <= param11) {
+                    break L3;
+                  } else {
+                    break L4;
+                  }
+                }
+              }
+              param10 = param11;
+              break L3;
+            }
+            param10 = param10 << 1;
+            param1 = param15;
+            L5: while (true) {
+              if (param5 >= param10) {
+                param5 = param5 >> 1;
+                param13.field_n = param13.field_n + param13.field_x * param5;
+                param13.field_v = param6;
+                param13.field_r = param7;
+                param13.field_m = param4;
+                return param5;
+              } else {
+                param0 = (param1 << 8) + (param2[param4 >> 8] - param1) * (param4 & 255);
+                param5++;
+                param3[param5] = param3[param5] + (param0 * param6 >> 6);
+                param6 = param6 + param8;
+                param5++;
+                param3[param5] = param3[param5] + (param0 * param7 >> 6);
+                param7 = param7 + param9;
+                param4 = param4 + param14;
+                continue L5;
+              }
+            }
+          } else {
+            param1 = param4 >> 8;
+            param0 = param2[param1 - 1];
+            param0 = (param0 << 8) + (param2[param1] - param0) * (param4 & 255);
+            param5++;
+            param3[param5] = param3[param5] + (param0 * param6 >> 6);
+            param6 = param6 + param8;
+            param5++;
+            param3[param5] = param3[param5] + (param0 * param7 >> 6);
+            param7 = param7 + param9;
+            param4 = param4 + param14;
+            continue L2;
+          }
+        }
+    }
+
+    private final static int a(int param0, int param1, byte[] param2, int[] param3, int param4, int param5, int param6, int param7, int param8, int param9, db param10, int param11, int param12) {
+        if (param11 != 0) {
+            param7 = param5 + (param9 + 256 - param4 + param11) / param11;
+            // if_icmple L38
+        }
+        param7 = param8;
+        while (param5 < param7) {
+            param1 = param4 >> 8;
+            param0 = param2[param1 - 1];
+            param5++;
+            param3[param5] = param3[param5] + (((param0 << 8) + (param2[param1] - param0) * (param4 & 255)) * param6 >> 6);
+            param4 = param4 + param11;
+        }
+        if (param11 != 0) {
+            param7 = param5 + (param9 - param4 + param11) / param11;
+            // if_icmple L131
+        }
+        param7 = param8;
+        param0 = param12;
+        param1 = param11;
+        while (param5 < param7) {
+            param5++;
+            param3[param5] = param3[param5] + (((param0 << 8) + (param2[param4 >> 8] - param0) * (param4 & 255)) * param6 >> 6);
+            param4 = param4 + param1;
+        }
+        param10.field_m = param4;
+        return param5;
+    }
+
+    final synchronized void g(int param0) {
+        ((db) this).field_t = param0;
+    }
+
+    private final int a(int[] param0, int param1, int param2, int param3, int param4) {
+        int var6 = 0;
+        L0: while (true) {
+          if (((db) this).field_p <= 0) {
+            L1: {
+              if (((db) this).field_z != -256) {
+                break L1;
+              } else {
+                if ((((db) this).field_m & 255) != 0) {
+                  break L1;
+                } else {
+                  if (lo.field_t) {
+                    return db.a(0, ((el) (Object) ((db) this).field_i).field_n, param0, ((db) this).field_m, param1, ((db) this).field_v, ((db) this).field_r, 0, param3, param2, (db) this);
+                  } else {
+                    return db.a(((el) (Object) ((db) this).field_i).field_n, param0, ((db) this).field_m, param1, ((db) this).field_n, 0, param3, param2, (db) this);
+                  }
+                }
+              }
+            }
+            if (lo.field_t) {
+              return db.c(0, 0, ((el) (Object) ((db) this).field_i).field_n, param0, ((db) this).field_m, param1, ((db) this).field_v, ((db) this).field_r, 0, param3, param2, (db) this, ((db) this).field_z, param4);
+            } else {
+              return db.a(0, 0, ((el) (Object) ((db) this).field_i).field_n, param0, ((db) this).field_m, param1, ((db) this).field_n, 0, param3, param2, (db) this, ((db) this).field_z, param4);
+            }
+          } else {
+            L2: {
+              var6 = param1 + ((db) this).field_p;
+              if (var6 <= param3) {
+                break L2;
+              } else {
+                var6 = param3;
+                break L2;
+              }
+            }
+            L3: {
+              L4: {
+                ((db) this).field_p = ((db) this).field_p + param1;
+                if (((db) this).field_z != -256) {
+                  break L4;
+                } else {
+                  if ((((db) this).field_m & 255) != 0) {
+                    break L4;
+                  } else {
+                    if (!lo.field_t) {
+                      param1 = db.a(((el) (Object) ((db) this).field_i).field_n, param0, ((db) this).field_m, param1, ((db) this).field_n, ((db) this).field_x, 0, var6, param2, (db) this);
+                      break L3;
+                    } else {
+                      param1 = db.a(0, ((el) (Object) ((db) this).field_i).field_n, param0, ((db) this).field_m, param1, ((db) this).field_v, ((db) this).field_r, ((db) this).field_o, ((db) this).field_y, 0, var6, param2, (db) this);
+                      break L3;
+                    }
+                  }
+                }
+              }
+              if (!lo.field_t) {
+                param1 = db.a(0, 0, ((el) (Object) ((db) this).field_i).field_n, param0, ((db) this).field_m, param1, ((db) this).field_n, ((db) this).field_x, 0, var6, param2, (db) this, ((db) this).field_z, param4);
+                break L3;
+              } else {
+                param1 = db.a(0, 0, ((el) (Object) ((db) this).field_i).field_n, param0, ((db) this).field_m, param1, ((db) this).field_v, ((db) this).field_r, ((db) this).field_o, ((db) this).field_y, 0, var6, param2, (db) this, ((db) this).field_z, param4);
+                break L3;
+              }
+            }
+            ((db) this).field_p = ((db) this).field_p - param1;
+            if (((db) this).field_p == 0) {
+              if (!this.f()) {
+                continue L0;
+              } else {
+                return param3;
+              }
+            } else {
+              return param1;
+            }
+          }
+        }
+    }
+
+    final synchronized void a(int param0, int param1, int param2) {
+        int var4 = 0;
+        int var5 = 0;
+        int var6 = 0;
+        if (param0 != 0) {
+          var4 = db.a(param1, param2);
+          var5 = db.d(param1, param2);
+          if (((db) this).field_v == var4) {
+            if (((db) this).field_r == var5) {
+              ((db) this).field_p = 0;
+              return;
+            } else {
+              L0: {
+                var6 = param1 - ((db) this).field_n;
+                if (((db) this).field_n - param1 <= var6) {
+                  break L0;
+                } else {
+                  var6 = ((db) this).field_n - param1;
+                  break L0;
+                }
+              }
+              L1: {
+                if (var4 - ((db) this).field_v <= var6) {
+                  break L1;
+                } else {
+                  var6 = var4 - ((db) this).field_v;
+                  break L1;
+                }
+              }
+              L2: {
+                if (((db) this).field_v - var4 <= var6) {
+                  break L2;
+                } else {
+                  var6 = ((db) this).field_v - var4;
+                  break L2;
+                }
+              }
+              L3: {
+                if (var5 - ((db) this).field_r <= var6) {
+                  break L3;
+                } else {
+                  var6 = var5 - ((db) this).field_r;
+                  break L3;
+                }
+              }
+              L4: {
+                if (((db) this).field_r - var5 <= var6) {
+                  break L4;
+                } else {
+                  var6 = ((db) this).field_r - var5;
+                  break L4;
+                }
+              }
+              L5: {
+                if (param0 <= var6) {
+                  break L5;
+                } else {
+                  param0 = var6;
+                  break L5;
+                }
+              }
+              ((db) this).field_p = param0;
+              ((db) this).field_s = param1;
+              ((db) this).field_u = param2;
+              ((db) this).field_x = (param1 - ((db) this).field_n) / param0;
+              ((db) this).field_o = (var4 - ((db) this).field_v) / param0;
+              ((db) this).field_y = (var5 - ((db) this).field_r) / param0;
+              return;
+            }
+          } else {
+            L6: {
+              var6 = param1 - ((db) this).field_n;
+              if (((db) this).field_n - param1 <= var6) {
+                break L6;
+              } else {
+                var6 = ((db) this).field_n - param1;
+                break L6;
+              }
+            }
+            L7: {
+              if (var4 - ((db) this).field_v <= var6) {
+                break L7;
+              } else {
+                var6 = var4 - ((db) this).field_v;
+                break L7;
+              }
+            }
+            L8: {
+              if (((db) this).field_v - var4 <= var6) {
+                break L8;
+              } else {
+                var6 = ((db) this).field_v - var4;
+                break L8;
+              }
+            }
+            L9: {
+              if (var5 - ((db) this).field_r <= var6) {
+                break L9;
+              } else {
+                var6 = var5 - ((db) this).field_r;
+                break L9;
+              }
+            }
+            L10: {
+              if (((db) this).field_r - var5 <= var6) {
+                break L10;
+              } else {
+                var6 = ((db) this).field_r - var5;
+                break L10;
+              }
+            }
+            L11: {
+              if (param0 <= var6) {
+                break L11;
+              } else {
+                param0 = var6;
+                break L11;
+              }
+            }
+            ((db) this).field_p = param0;
+            ((db) this).field_s = param1;
+            ((db) this).field_u = param2;
+            ((db) this).field_x = (param1 - ((db) this).field_n) / param0;
+            ((db) this).field_o = (var4 - ((db) this).field_v) / param0;
+            ((db) this).field_y = (var5 - ((db) this).field_r) / param0;
+            return;
+          }
+        } else {
+          this.b(param1, param2);
+          return;
+        }
+    }
+
+    final synchronized int k() {
+        return ((db) this).field_u < 0 ? -1 : ((db) this).field_u;
+    }
+
+    private final static int a(byte[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, db param8) {
+        param2 = param2 >> 8;
+        param7 = param7 >> 8;
+        param4 = param4 << 2;
+        param5 = param3 + param2 - (param7 - 1);
+        if (param3 + param2 - (param7 - 1) > param6) {
+            param5 = param6;
+        }
+        param5 -= 3;
+        while (param3 < param5) {
+            param3++;
+            param2--;
+            param1[param3] = param1[param3] + param0[param2] * param4;
+            param3++;
+            param2--;
+            param1[param3] = param1[param3] + param0[param2] * param4;
+            param3++;
+            param2--;
+            param1[param3] = param1[param3] + param0[param2] * param4;
+            param3++;
+            param2--;
+            param1[param3] = param1[param3] + param0[param2] * param4;
+        }
+        param5 += 3;
+        while (param3 < param5) {
+            param3++;
+            param2--;
+            param1[param3] = param1[param3] + param0[param2] * param4;
+        }
+        param8.field_m = param2 << 8;
+        return param3;
+    }
+
+    final tj b() {
+        return null;
+    }
+
+    private final static int b(int param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, db param12) {
+        L0: {
+          param3 = param3 >> 8;
+          param11 = param11 >> 8;
+          param5 = param5 << 2;
+          param6 = param6 << 2;
+          param7 = param7 << 2;
+          param8 = param8 << 2;
+          param9 = param4 + param11 - param3;
+          if (param4 + param11 - param3 <= param10) {
+            break L0;
+          } else {
+            param9 = param10;
+            break L0;
+          }
+        }
+        param12.field_n = param12.field_n + param12.field_x * (param9 - param4);
+        param4 = param4 << 1;
+        param9 = param9 << 1;
+        param9 -= 6;
+        L1: while (true) {
+          if (param4 >= param9) {
+            param9 += 6;
+            L2: while (true) {
+              if (param4 >= param9) {
+                param12.field_v = param5 >> 2;
+                param12.field_r = param6 >> 2;
+                param12.field_m = param3 << 8;
+                return param4 >> 1;
+              } else {
+                param3++;
+                param0 = param1[param3];
+                param4++;
+                param2[param4] = param2[param4] + param0 * param5;
+                param5 = param5 + param7;
+                param4++;
+                param2[param4] = param2[param4] + param0 * param6;
+                param6 = param6 + param8;
+                continue L2;
+              }
+            }
+          } else {
+            param3++;
+            param0 = param1[param3];
+            param4++;
+            param2[param4] = param2[param4] + param0 * param5;
+            param5 = param5 + param7;
+            param4++;
+            param2[param4] = param2[param4] + param0 * param6;
+            param6 = param6 + param8;
+            param3++;
+            param0 = param1[param3];
+            param4++;
+            param2[param4] = param2[param4] + param0 * param5;
+            param5 = param5 + param7;
+            param4++;
+            param2[param4] = param2[param4] + param0 * param6;
+            param6 = param6 + param8;
+            param3++;
+            param0 = param1[param3];
+            param4++;
+            param2[param4] = param2[param4] + param0 * param5;
+            param5 = param5 + param7;
+            param4++;
+            param2[param4] = param2[param4] + param0 * param6;
+            param6 = param6 + param8;
+            param3++;
+            param0 = param1[param3];
+            param4++;
+            param2[param4] = param2[param4] + param0 * param5;
+            param5 = param5 + param7;
+            param4++;
+            param2[param4] = param2[param4] + param0 * param6;
+            param6 = param6 + param8;
+            continue L1;
+          }
+        }
+    }
+
+    private final static int c(int param0, int param1, byte[] param2, int[] param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, db param11, int param12, int param13) {
+        L0: {
+          L1: {
+            if (param12 == 0) {
+              break L1;
+            } else {
+              param8 = param5 + (param10 + 256 - param4 + param12) / param12;
+              if (param5 + (param10 + 256 - param4 + param12) / param12 <= param9) {
+                break L0;
+              } else {
+                break L1;
+              }
+            }
+          }
+          param8 = param9;
+          break L0;
+        }
+        param5 = param5 << 1;
+        param8 = param8 << 1;
+        L2: while (true) {
+          if (param5 >= param8) {
+            L3: {
+              L4: {
+                if (param12 == 0) {
+                  break L4;
+                } else {
+                  param8 = (param5 >> 1) + (param10 - param4 + param12) / param12;
+                  if ((param5 >> 1) + (param10 - param4 + param12) / param12 <= param9) {
+                    break L3;
+                  } else {
+                    break L4;
+                  }
+                }
+              }
+              param8 = param9;
+              break L3;
+            }
+            param8 = param8 << 1;
+            param1 = param13;
+            L5: while (true) {
+              if (param5 >= param8) {
+                param11.field_m = param4;
+                return param5 >> 1;
+              } else {
+                param0 = (param1 << 8) + (param2[param4 >> 8] - param1) * (param4 & 255);
+                param5++;
+                param3[param5] = param3[param5] + (param0 * param6 >> 6);
+                param5++;
+                param3[param5] = param3[param5] + (param0 * param7 >> 6);
+                param4 = param4 + param12;
+                continue L5;
+              }
+            }
+          } else {
+            param1 = param4 >> 8;
+            param0 = param2[param1 - 1];
+            param0 = (param0 << 8) + (param2[param1] - param0) * (param4 & 255);
+            param5++;
+            param3[param5] = param3[param5] + (param0 * param6 >> 6);
+            param5++;
+            param3[param5] = param3[param5] + (param0 * param7 >> 6);
+            param4 = param4 + param12;
+            continue L2;
+          }
+        }
+    }
+
+    final synchronized void c(int param0, int param1) {
+        ((db) this).a(param0, param1, ((db) this).k());
+    }
+
+    private db(el param0, int param1, int param2) {
+        ((db) this).field_i = (eh) (Object) param0;
+        ((db) this).field_A = param0.field_m;
+        ((db) this).field_w = param0.field_l;
+        ((db) this).field_q = param0.field_k;
+        ((db) this).field_z = param1;
+        ((db) this).field_s = param2;
+        ((db) this).field_u = 8192;
+        ((db) this).field_m = 0;
+        this.m();
+    }
+
+    private db(el param0, int param1, int param2, int param3) {
+        ((db) this).field_i = (eh) (Object) param0;
+        ((db) this).field_A = param0.field_m;
+        ((db) this).field_w = param0.field_l;
+        ((db) this).field_q = param0.field_k;
+        ((db) this).field_z = param1;
+        ((db) this).field_s = param2;
+        ((db) this).field_u = param3;
+        ((db) this).field_m = 0;
+        this.m();
+    }
+}

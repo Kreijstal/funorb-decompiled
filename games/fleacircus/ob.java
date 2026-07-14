@@ -1,0 +1,175 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class ob {
+    static ok[] field_c;
+    static int[] field_a;
+    static int field_e;
+    static rh field_d;
+    static String field_b;
+
+    final static boolean a(boolean param0, int param1, boolean param2, int param3) {
+        int var4 = 0;
+        int var5 = 0;
+        int stackIn_21_0 = 0;
+        int stackIn_50_0 = 0;
+        int stackIn_60_0 = 0;
+        int stackOut_59_0 = 0;
+        int stackOut_58_0 = 0;
+        int stackOut_49_0 = 0;
+        int stackOut_48_0 = 0;
+        int stackOut_20_0 = 0;
+        int stackOut_19_0 = 0;
+        if (!param0) {
+          if (uj.field_a[param3] <= uj.field_a[param1]) {
+            if (uj.field_a[param3] >= uj.field_a[param1]) {
+              if (jl.field_b[param1] >= jl.field_b[param3]) {
+                if (jl.field_b[param3] >= jl.field_b[param1]) {
+                  var4 = vh.field_i[param1] + kk.field_b[param1] - -hg.field_q[param1];
+                  var5 = vh.field_i[param3] + kk.field_b[param3] + hg.field_q[param3];
+                  if (!param2) {
+                    ob.a(33);
+                    if (var4 < var5) {
+                      return true;
+                    } else {
+                      if (var5 < var4) {
+                        return false;
+                      } else {
+                        L0: {
+                          if (param1 >= param3) {
+                            stackOut_59_0 = 0;
+                            stackIn_60_0 = stackOut_59_0;
+                            break L0;
+                          } else {
+                            stackOut_58_0 = 1;
+                            stackIn_60_0 = stackOut_58_0;
+                            break L0;
+                          }
+                        }
+                        return stackIn_60_0 != 0;
+                      }
+                    }
+                  } else {
+                    if (var4 < var5) {
+                      return true;
+                    } else {
+                      if (var5 < var4) {
+                        return false;
+                      } else {
+                        L1: {
+                          if (param1 >= param3) {
+                            stackOut_49_0 = 0;
+                            stackIn_50_0 = stackOut_49_0;
+                            break L1;
+                          } else {
+                            stackOut_48_0 = 1;
+                            stackIn_50_0 = stackOut_48_0;
+                            break L1;
+                          }
+                        }
+                        return stackIn_50_0 != 0;
+                      }
+                    }
+                  }
+                } else {
+                  return false;
+                }
+              } else {
+                return true;
+              }
+            } else {
+              return false;
+            }
+          } else {
+            return true;
+          }
+        } else {
+          if (jl.field_b[param1] < jl.field_b[param3]) {
+            return true;
+          } else {
+            if (jl.field_b[param3] >= jl.field_b[param1]) {
+              if (uj.field_a[param3] <= uj.field_a[param1]) {
+                if (uj.field_a[param1] <= uj.field_a[param3]) {
+                  var4 = vh.field_i[param1] + kk.field_b[param1] - -hg.field_q[param1];
+                  var5 = vh.field_i[param3] + kk.field_b[param3] + hg.field_q[param3];
+                  if (!param2) {
+                    ob.a(33);
+                    if (var4 < var5) {
+                      return true;
+                    } else {
+                      if (var5 < var4) {
+                        return false;
+                      } else {
+                        if (param1 >= param3) {
+                          return false;
+                        } else {
+                          return true;
+                        }
+                      }
+                    }
+                  } else {
+                    if (var4 < var5) {
+                      return true;
+                    } else {
+                      if (var5 < var4) {
+                        return false;
+                      } else {
+                        L2: {
+                          if (param1 >= param3) {
+                            stackOut_20_0 = 0;
+                            stackIn_21_0 = stackOut_20_0;
+                            break L2;
+                          } else {
+                            stackOut_19_0 = 1;
+                            stackIn_21_0 = stackOut_19_0;
+                            break L2;
+                          }
+                        }
+                        return stackIn_21_0 != 0;
+                      }
+                    }
+                  }
+                } else {
+                  return false;
+                }
+              } else {
+                return true;
+              }
+            } else {
+              return false;
+            }
+          }
+        }
+    }
+
+    final static void a(int param0, int param1, byte param2, int param3, ni param4) {
+        param4.a(-11, 12);
+        param4.b((byte) -103, 17);
+        int var5 = 104 % ((-72 - param2) / 52);
+        param4.b((byte) 119, param1);
+        param4.b((byte) -122, param0);
+        param4.a(-11, param3);
+    }
+
+    public final String toString() {
+        throw new IllegalStateException();
+    }
+
+    public static void a(int param0) {
+        int var1 = 45 % ((20 - param0) / 53);
+        field_a = null;
+        field_b = null;
+        field_c = null;
+        field_d = null;
+    }
+
+    static {
+        $cfr$clinit();
+    }
+
+    private static void $cfr$clinit() {
+        field_e = 0;
+        field_c = new ok[34];
+        field_b = "Loading extra data";
+    }
+}

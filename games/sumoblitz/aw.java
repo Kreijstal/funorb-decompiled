@@ -1,0 +1,2560 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+import java.util.*;
+
+abstract class aw extends ha {
+    sk field_Mb;
+    private Hashtable field_Q;
+    Object field_Ib;
+    int field_Sb;
+    jaclib.memory.heap.NativeHeapBuffer field_z;
+    static tf field_t;
+    ki field_ab;
+    private jagex3.graphics2.hw.NativeInterface field_nc;
+    private jn field_lb;
+    int field_rb;
+    long field_peer;
+    private jaclib.memory.heap.NativeHeap field_gb;
+    int field_pc;
+    ut field_Lb;
+    boolean field_Db;
+    static Boolean field_j;
+    int field_Cb;
+    int field_o;
+    ut field_Gb;
+    private ut field_sb;
+    private ut field_vc;
+    private boolean field_fb;
+    boolean field_Z;
+    private float field_qb;
+    private int field_Pb;
+    int field_mc;
+    int field_bc;
+    private int field_ac;
+    int field_ub;
+    private boolean field_O;
+    private boolean field_bb;
+    float field_E;
+    int field_oc;
+    int field_vb;
+    ut[] field_V;
+    int field_Kb;
+    boolean field_tb;
+    private rq[] field_X;
+    float[] field_G;
+    int field_F;
+    private int field_L;
+    private int field_Vb;
+    private int field_xb;
+    int field_kc;
+    private mr field_lc;
+    tg[] field_K;
+    boolean field_Bb;
+    boolean field_I;
+    private int field_mb;
+    int field_Y;
+    boolean field_Rb;
+    private rq field_m;
+    private jaclib.memory.Stream field_cb;
+    private int field_Hb;
+    tg[] field_B;
+    private int field_k;
+    float field_T;
+    float field_jb;
+    private float[] field_eb;
+    float field_Tb;
+    private int field_P;
+    int field_cc;
+    int field_C;
+    int field_Yb;
+    private int field_Ob;
+    private float[] field_w;
+    private float[] field_fc;
+    int field_r;
+    boolean field_db;
+    private boolean field_zb;
+    int field_yc;
+    private boolean field_R;
+    boolean field_i;
+    boolean field_Eb;
+    private int field_sc;
+    boolean field_p;
+    int field_Ub;
+    int field_y;
+    il field_l;
+    float field_S;
+    private ed[] field_Zb;
+    float field_Xb;
+    boolean field_u;
+    private float[] field_ec;
+    float[] field_U;
+    ko[] field_pb;
+    private float field_q;
+    float field_J;
+    int field_tc;
+    private jl field_yb;
+    private em field_uc;
+    private int field_N;
+    private int field_dc;
+    float[] field_A;
+    boolean field_ob;
+    int field_Nb;
+    private boolean field_Jb;
+    float field_hb;
+    hv field_s;
+    private int field_rc;
+    int field_v;
+    private int field_ic;
+    int field_Ab;
+    boolean field_W;
+    private float field_kb;
+    private boolean field_H;
+    ed field_D;
+    tf[] field_wb;
+    private gu field_ib;
+    private pv field_Wb;
+    private cr field_M;
+    private gu field_Fb;
+    hq field_jc;
+    private gu field_gc;
+    private pv field_x;
+    private hq field_xc;
+    private gu field_qc;
+    private gu field_hc;
+    private hq field_nb;
+    private pv field_Qb;
+    private hq field_n;
+    boolean field_wc;
+
+    abstract ru a(iw param0, int param1, int param2, int param3, byte[] param4, byte param5, int param6, boolean param7);
+
+    private final void c(byte param0) {
+        float[] var2 = null;
+        float[] var3 = null;
+        float[] var4 = null;
+        float[] var5 = null;
+        float[] var6 = null;
+        float[] var7 = null;
+        L0: {
+          if (param0 == -88) {
+            break L0;
+          } else {
+            aw.j((byte) -98);
+            break L0;
+          }
+        }
+        L1: {
+          if (!((aw) this).field_zb) {
+            L2: {
+              L3: {
+                var3 = ((aw) this).field_fc;
+                var7 = var3;
+                var6 = var7;
+                var5 = var6;
+                var4 = var5;
+                var2 = var4;
+                if (0 == ((aw) this).field_rb) {
+                  break L3;
+                } else {
+                  if (((aw) this).field_Sb != 0) {
+                    var7[12] = -1.0f;
+                    var7[10] = 0.5f;
+                    var2[5] = -2.0f / (float)((aw) this).field_Sb;
+                    var2[2] = 0.0f;
+                    var2[4] = 0.0f;
+                    var2[7] = 0.0f;
+                    var2[11] = 0.0f;
+                    var2[15] = 1.0f;
+                    var2[6] = 0.0f;
+                    var2[8] = 0.0f;
+                    var7[14] = 0.5f;
+                    var2[13] = 1.0f;
+                    var2[0] = 2.0f / (float)((aw) this).field_rb;
+                    var2[9] = 0.0f;
+                    var2[3] = 0.0f;
+                    var2[1] = 0.0f;
+                    break L2;
+                  } else {
+                    break L3;
+                  }
+                }
+              }
+              var3[14] = 0.0f;
+              var3[3] = 0.0f;
+              var3[12] = 0.0f;
+              var3[10] = 1.0f;
+              var3[1] = 0.0f;
+              var3[0] = 1.0f;
+              var3[9] = 0.0f;
+              var3[15] = 1.0f;
+              var3[4] = 0.0f;
+              var3[7] = 0.0f;
+              var3[13] = 0.0f;
+              var3[6] = 0.0f;
+              var3[8] = 0.0f;
+              var3[11] = 0.0f;
+              var3[5] = 1.0f;
+              var3[2] = 0.0f;
+              break L2;
+            }
+            ((aw) this).field_zb = true;
+            break L1;
+          } else {
+            break L1;
+          }
+        }
+    }
+
+    final void c(int param0, boolean param1) {
+        if (!((!((aw) this).field_p ? 1 : 0) == (!param1 ? 1 : 0))) {
+            ((aw) this).field_p = param1 ? true : false;
+            ((aw) this).q(79);
+            ((aw) this).field_ic = ((aw) this).field_ic & -32;
+        }
+        if (param0 <= 32) {
+            ((aw) this).field_K = null;
+        }
+    }
+
+    abstract void N(int param0);
+
+    final ru a(byte[] param0, int param1, int param2, iw param3, int param4, boolean param5) {
+        if (param4 != 0) {
+            ((aw) this).field_mc = 3;
+        }
+        return ((aw) this).a(param3, param1, param2, 0, param0, (byte) 97, 0, param5);
+    }
+
+    final ut c(boolean param0) {
+        if (!param0) {
+            return null;
+        }
+        return ((aw) this).field_sb;
+    }
+
+    private final void h(byte param0) {
+        if (param0 > -77) {
+            ((aw) this).field_lc = null;
+        }
+    }
+
+    final void k(int param0) {
+        ((aw) this).field_Lb.a(param0);
+        ((aw) this).field_Db = true;
+        this.z(-29654);
+    }
+
+    abstract void f(boolean param0);
+
+    abstract cr e(int param0, boolean param1);
+
+    abstract Object a(java.awt.Canvas param0, int param1);
+
+    final int M(int param0) {
+        int var2 = -35 / ((param0 - 54) / 59);
+        return ((aw) this).field_Pb;
+    }
+
+    final static String a(String param0, String param1, String param2, boolean param3) {
+        int var5 = Sumoblitz.field_L ? 1 : 0;
+        if (!param3) {
+            field_t = null;
+        }
+        int var4 = param1.indexOf(param0);
+        while (-1 != var4) {
+            param1 = param1.substring(0, var4) + param2 + param1.substring(param0.length() + var4);
+            var4 = param1.indexOf(param0, param2.length() + var4);
+        }
+        return param1;
+    }
+
+    final ut H(int param0) {
+        if (param0 != 26453) {
+            return null;
+        }
+        return ((aw) this).field_V[((aw) this).field_mc];
+    }
+
+    final void d(boolean param0) {
+        hv var2 = null;
+        if (param0) {
+            this.n((byte) 96);
+        }
+        if (mb.field_k != ((aw) this).field_s) {
+            var2 = ((aw) this).field_s;
+            ((aw) this).field_s = mb.field_k;
+            if (!(!var2.a(-20011))) {
+                this.W(16);
+            }
+            ((aw) this).field_ic = ((aw) this).field_ic & -32;
+            ((aw) this).field_A = ((aw) this).field_w;
+        }
+    }
+
+    final void U(int param0) {
+        ((aw) this).field_Db = false;
+        if (param0 != 0) {
+            return;
+        }
+        this.z(-29654);
+    }
+
+    abstract void bb(int param0);
+
+    final void m(int param0) {
+        ((aw) this).field_vb = 0;
+        ((aw) this).field_v = 0;
+        if (param0 != -16088) {
+            ((aw) this).field_Ob = -12;
+        }
+        ((aw) this).field_F = ((aw) this).field_rb;
+        ((aw) this).field_yc = ((aw) this).field_Sb;
+        if (((aw) this).field_wc) {
+            ((aw) this).field_wc = false;
+            ((aw) this).A(-121);
+        }
+        this.h((byte) -128);
+    }
+
+    abstract ef a(int param0, byte param1, int[][] param2, boolean param3);
+
+    abstract float b(byte param0);
+
+    private final void z(int param0) {
+        float var2 = 0.0f;
+        if (vu.field_h == ((aw) this).field_s) {
+            var2 = ((aw) this).b((byte) 127);
+            ((aw) this).field_Lb.a((byte) 96, 0.0f, var2, var2);
+        }
+        if (param0 != -29654) {
+            ((aw) this).field_Y = -4;
+        }
+        ((aw) this).field_R = false;
+        ((aw) this).x(0);
+        if (!(null == ((aw) this).field_m)) {
+            ((aw) this).field_m.c((byte) 37);
+        }
+    }
+
+    final int t(int param0) {
+        int var2 = 39 % ((param0 - -20) / 54);
+        return ((aw) this).field_mc;
+    }
+
+    final void d(int param0, boolean param1) {
+        if (!(((aw) this).field_I == param1)) {
+            ((aw) this).field_I = param1 ? true : false;
+            ((aw) this).f(false);
+            ((aw) this).field_ic = ((aw) this).field_ic & -8;
+        }
+        int var3 = -80 % ((35 - param0) / 54);
+    }
+
+    abstract nh a(boolean param0, iw param1, int param2, int param3, byte[] param4, int param5);
+
+    abstract void l(byte param0);
+
+    final void T(int param0, int param1, int param2, int param3) {
+        int var5 = 0;
+        if (!(param0 <= ((aw) this).field_v)) {
+            var5 = 1;
+            ((aw) this).field_v = param0;
+        }
+        if (!(param2 >= ((aw) this).field_F)) {
+            var5 = 1;
+            ((aw) this).field_F = param2;
+        }
+        if (!(((aw) this).field_vb >= param1)) {
+            ((aw) this).field_vb = param1;
+            var5 = 1;
+        }
+        if (!(param3 >= ((aw) this).field_yc)) {
+            ((aw) this).field_yc = param3;
+            var5 = 1;
+        }
+        if (var5 != 0) {
+            if (!(((aw) this).field_wc)) {
+                ((aw) this).field_wc = true;
+                ((aw) this).A(-57);
+            }
+            ((aw) this).F(4);
+            this.h((byte) -122);
+        }
+    }
+
+    abstract void F(int param0);
+
+    public static void G(int param0) {
+        field_t = null;
+        if (param0 != 8) {
+            field_t = null;
+        }
+        field_j = null;
+    }
+
+    abstract void a(byte param0, int param1, boolean param2, boolean param3, mi param4);
+
+    abstract void E(int param0);
+
+    abstract void ab(int param0);
+
+    final hr a(ri param0, boolean param1) {
+        hr var3 = null;
+        int[] var4 = null;
+        int var5 = 0;
+        int var6 = 0;
+        int var7 = 0;
+        int var8 = 0;
+        int var9 = 0;
+        int var10 = 0;
+        int[] var11 = null;
+        int[] var12 = null;
+        int[] var13 = null;
+        int[] var14 = null;
+        int[] stackIn_16_0 = null;
+        int stackIn_16_1 = 0;
+        int[] stackIn_17_0 = null;
+        int stackIn_17_1 = 0;
+        int[] stackIn_18_0 = null;
+        int stackIn_18_1 = 0;
+        int stackIn_18_2 = 0;
+        int[] stackOut_15_0 = null;
+        int stackOut_15_1 = 0;
+        int[] stackOut_17_0 = null;
+        int stackOut_17_1 = 0;
+        int stackOut_17_2 = 0;
+        int[] stackOut_16_0 = null;
+        int stackOut_16_1 = 0;
+        int stackOut_16_2 = 0;
+        L0: {
+          L1: {
+            var10 = Sumoblitz.field_L ? 1 : 0;
+            if (0 == param0.field_h) {
+              break L1;
+            } else {
+              if (0 != param0.field_i) {
+                L2: {
+                  var14 = new int[param0.field_h * param0.field_i];
+                  var13 = var14;
+                  var12 = var13;
+                  var11 = var12;
+                  var4 = var11;
+                  var5 = 0;
+                  var6 = 0;
+                  if (null == param0.field_a) {
+                    var7 = 0;
+                    L3: while (true) {
+                      if (var7 >= param0.field_i) {
+                        break L2;
+                      } else {
+                        var8 = 0;
+                        L4: while (true) {
+                          if (param0.field_h <= var8) {
+                            var7++;
+                            continue L3;
+                          } else {
+                            L5: {
+                              var5++;
+                              var9 = param0.field_g[param0.field_e[var5] & 255];
+                              var6++;
+                              stackOut_15_0 = (int[]) var4;
+                              stackOut_15_1 = var6;
+                              stackIn_17_0 = stackOut_15_0;
+                              stackIn_17_1 = stackOut_15_1;
+                              stackIn_16_0 = stackOut_15_0;
+                              stackIn_16_1 = stackOut_15_1;
+                              if (var9 == 0) {
+                                stackOut_17_0 = (int[]) (Object) stackIn_17_0;
+                                stackOut_17_1 = stackIn_17_1;
+                                stackOut_17_2 = 0;
+                                stackIn_18_0 = stackOut_17_0;
+                                stackIn_18_1 = stackOut_17_1;
+                                stackIn_18_2 = stackOut_17_2;
+                                break L5;
+                              } else {
+                                stackOut_16_0 = (int[]) (Object) stackIn_16_0;
+                                stackOut_16_1 = stackIn_16_1;
+                                stackOut_16_2 = ic.a(var9, -16777216);
+                                stackIn_18_0 = stackOut_16_0;
+                                stackIn_18_1 = stackOut_16_1;
+                                stackIn_18_2 = stackOut_16_2;
+                                break L5;
+                              }
+                            }
+                            stackIn_18_0[stackIn_18_1] = stackIn_18_2;
+                            var8++;
+                            continue L4;
+                          }
+                        }
+                      }
+                    }
+                  } else {
+                    var7 = 0;
+                    L6: while (true) {
+                      if (var7 >= param0.field_i) {
+                        break L2;
+                      } else {
+                        var8 = 0;
+                        L7: while (true) {
+                          if (var8 >= param0.field_h) {
+                            var7++;
+                            continue L6;
+                          } else {
+                            var6++;
+                            var4[var6] = ic.a(param0.field_a[var5] << 1453984952, param0.field_g[eb.a(255, (int) param0.field_e[var5])]);
+                            var5++;
+                            var8++;
+                            continue L7;
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+                var3 = ((aw) this).a(0, -2, param0.field_i, param0.field_h, param0.field_h, var14);
+                break L0;
+              } else {
+                break L1;
+              }
+            }
+          }
+          var3 = ((aw) this).a(0, -2, 1, 1, 1, new int[1]);
+          break L0;
+        }
+        var3.a(param0.field_c, param0.field_d, param0.field_b, param0.field_f);
+        return var3;
+    }
+
+    private final void g(boolean param0) {
+        if (param0) {
+            ((aw) this).field_Hb = -20;
+        }
+        ((aw) this).a(0, 119, ((aw) this).field_Wb);
+        ((aw) this).a(-77, ((aw) this).field_xc);
+        ((aw) this).a(0, 0, 1, tc.field_g);
+    }
+
+    final ru a(int param0, iw param1, byte param2, boolean param3, int param4, float[] param5) {
+        if (param2 <= 84) {
+            ((aw) this).field_kc = 90;
+        }
+        return ((aw) this).a(0, param4, param3, 0, param5, param0, (byte) -125, param1);
+    }
+
+    final jaclib.memory.Stream a(boolean param0, jaclib.memory.Buffer param1) {
+        if (!param0) {
+            return null;
+        }
+        ((aw) this).field_cb.a(param1);
+        return ((aw) this).field_cb;
+    }
+
+    final void a(mi param0, int param1, boolean param2) {
+        if (!param2) {
+            this.c((byte) -34);
+        }
+        ((aw) this).a(param1, false, (byte) 54, param0);
+    }
+
+    abstract void p(byte param0);
+
+    private final void a(int param0, ck param1, int param2) {
+        ((aw) this).a(0, 86, ((aw) this).field_x);
+        ((aw) this).a(125, ((aw) this).field_nb);
+        ((aw) this).a(param0, param0 ^ 0, param2, param1);
+    }
+
+    final void a(tf param0, int param1) {
+        if (param1 != 28880) {
+            ((aw) this).N(-123);
+        }
+        ((aw) this).field_wb[((aw) this).field_mc] = param0;
+        this.j(param1 ^ 28752);
+    }
+
+    final void e(boolean param0) {
+        int var2 = 0;
+        int var3 = 0;
+        var3 = Sumoblitz.field_L ? 1 : 0;
+        ((aw) this).field_V = new ut[((aw) this).field_cc];
+        ((aw) this).field_Zb = new ed[((aw) this).field_cc];
+        ((aw) this).field_wb = new tf[((aw) this).field_cc];
+        ((aw) this).field_K = new tg[((aw) this).field_cc];
+        ((aw) this).field_B = new tg[((aw) this).field_cc];
+        var2 = 0;
+        L0: while (true) {
+          if (((aw) this).field_cc <= var2) {
+            L1: {
+              ((aw) this).field_pb = new ko[-2 + ((aw) this).field_bc];
+              ((aw) this).field_D = (ed) (Object) ((aw) this).a(io.field_g, nl.field_p, 1, 1, (byte) -110);
+              ((aw) this).a((za) (Object) new he(262144));
+              ((aw) this).field_jc = ((aw) this).a(new hu[1], (byte) 78);
+              hq discarded$8 = ((aw) this).a(new hu[1], (byte) 70);
+              hq discarded$9 = ((aw) this).a(new hu[4], (byte) 14);
+              hq discarded$10 = ((aw) this).a(new hu[3], (byte) 100);
+              gu discarded$11 = new gu((aw) this, 0, 0, false, false);
+              ((aw) this).field_gc = new gu((aw) this, 0, 0, true, true);
+              gu discarded$12 = new gu((aw) this, 0, 0, false, false);
+              ((aw) this).field_qc = new gu((aw) this, 0, 0, true, true);
+              gu discarded$13 = new gu((aw) this, 0, 0, false, false);
+              ((aw) this).field_hc = new gu((aw) this, 0, 0, true, true);
+              gu discarded$14 = new gu((aw) this, 0, 0, false, false);
+              ((aw) this).field_Fb = new gu((aw) this, 0, 0, true, true);
+              gu discarded$15 = new gu((aw) this, 0, 0, false, param0);
+              ((aw) this).field_ib = new gu((aw) this, 0, 0, true, true);
+              ((aw) this).field_yb = new jl((aw) this);
+              ((aw) this).field_M = ((aw) this).e(3, true);
+              ((aw) this).P(-55);
+              ((aw) this).field_Mb = new sk((aw) this);
+              ((aw) this).field_X[1] = ((aw) this).d(0, 1);
+              ((aw) this).field_X[2] = ((aw) this).d(0, 2);
+              ((aw) this).field_X[4] = ((aw) this).d(0, 4);
+              ((aw) this).field_X[5] = ((aw) this).d(0, 5);
+              ((aw) this).field_X[6] = ((aw) this).d(0, 6);
+              ((aw) this).field_X[7] = ((aw) this).d(0, 7);
+              ((aw) this).field_X[3] = ((aw) this).d(0, 3);
+              ((aw) this).field_X[8] = ((aw) this).d(0, 8);
+              ((aw) this).field_X[9] = ((aw) this).d(0, 9);
+              if (!((aw) this).field_X[2].b((byte) -82)) {
+                ((aw) this).field_X[2] = ((aw) this).d(0, 0);
+                break L1;
+              } else {
+                break L1;
+              }
+            }
+            L2: {
+              if (((aw) this).field_X[4].b((byte) -67)) {
+                break L2;
+              } else {
+                ((aw) this).field_X[4] = ((aw) this).field_X[2];
+                break L2;
+              }
+            }
+            L3: {
+              if (!((aw) this).field_X[8].b((byte) -42)) {
+                ((aw) this).field_X[8] = ((aw) this).field_X[4];
+                break L3;
+              } else {
+                break L3;
+              }
+            }
+            L4: {
+              if (((aw) this).field_X[9].b((byte) -43)) {
+                break L4;
+              } else {
+                ((aw) this).field_X[9] = ((aw) this).field_X[8];
+                break L4;
+              }
+            }
+            ((aw) this).D(1);
+            ((aw) this).m(-16088);
+            ((aw) this).e();
+            return;
+          } else {
+            ((aw) this).field_B[var2] = vi.field_v;
+            ((aw) this).field_K[var2] = vi.field_v;
+            ((aw) this).field_wb[var2] = ar.field_L;
+            ((aw) this).field_V[var2] = new ut();
+            var2++;
+            continue L0;
+          }
+        }
+    }
+
+    abstract void a(java.awt.Canvas param0, Object param1, int param2);
+
+    private final void u(int param0) {
+        ((aw) this).field_Jb = false;
+        if (param0 != 2) {
+            return;
+        }
+        this.R(param0 ^ -63);
+        if (!(pd.field_m != ((aw) this).field_s)) {
+            this.g(param0 ^ 3);
+        }
+    }
+
+    final void a(boolean param0, int param1) {
+        if (param0) {
+            return;
+        }
+        if (!(param1 == ((aw) this).field_Ub)) {
+            ((aw) this).field_Ub = param1;
+            ((aw) this).r(1);
+        }
+    }
+
+    final ut B(int param0) {
+        if (param0 != 0) {
+            return null;
+        }
+        return ((aw) this).field_V[((aw) this).field_mc];
+    }
+
+    final static void C(int param0) {
+        int var5 = Sumoblitz.field_L ? 1 : 0;
+        int[] var6 = rg.field_C;
+        int[] var1 = var6;
+        int var3 = -20 / ((-66 - param0) / 42);
+        int var2 = 0;
+        int var4 = var6.length;
+        while (var4 > var2) {
+            var2++;
+            var6[var2] = 0;
+            var2++;
+            var6[var2] = 0;
+            var2++;
+            var6[var2] = 0;
+            var2++;
+            var6[var2] = 0;
+            var2++;
+            var6[var2] = 0;
+            var2++;
+            var6[var2] = 0;
+            var2++;
+            var6[var2] = 0;
+            var2++;
+            var6[var2] = 0;
+        }
+    }
+
+    private final void W(int param0) {
+        ((aw) this).field_R = false;
+        if (param0 != 16) {
+            ((aw) this).field_Kb = 40;
+        }
+        if (!(((aw) this).field_m == null)) {
+            ((aw) this).field_m.b(param0 ^ -90);
+        }
+        ((aw) this).N(-26911);
+    }
+
+    abstract void a(int param0, hq param1);
+
+    abstract boolean a(byte param0, io param1, iw param2);
+
+    void D(int param0) {
+        this.T(-1);
+        if (param0 != 1) {
+            Object var3 = null;
+            nh discarded$0 = ((aw) this).a(true, (iw) null, -62, 114, (byte[]) null, 71);
+        }
+    }
+
+    abstract void i(byte param0);
+
+    abstract boolean a(io param0, iw param1, int param2);
+
+    final void a(za param0) {
+        ((aw) this).field_gb = ((he) (Object) param0).field_p;
+        ((aw) this).field_z = ((aw) this).field_gb.a(32768, false);
+    }
+
+    void d() {
+        ms var1 = null;
+        java.awt.Canvas var2 = null;
+        int var3 = Sumoblitz.field_L ? 1 : 0;
+        if (!(((aw) this).field_H)) {
+            var1 = ((aw) this).field_lb.b(-66);
+            while (var1 != null) {
+                ((he) (Object) var1).c(-14365);
+                var1 = ((aw) this).field_lb.d((byte) 18);
+            }
+            var1 = (ms) (Object) ((aw) this).field_Q.keys();
+            while (((Enumeration) (Object) var1).hasMoreElements()) {
+                var2 = (java.awt.Canvas) ((Enumeration) (Object) var1).nextElement();
+                ((aw) this).a(var2, ((aw) this).field_Q.get((Object) (Object) var2), 0);
+            }
+            pt.a(false, true, -1);
+            ((aw) this).field_nc.release();
+            ((aw) this).field_H = true;
+        }
+    }
+
+    abstract void i(int param0);
+
+    final void K(int[] param0) {
+        param0[0] = ((aw) this).field_v;
+        param0[3] = ((aw) this).field_yc;
+        param0[2] = ((aw) this).field_F;
+        param0[1] = ((aw) this).field_vb;
+    }
+
+    abstract void a(int param0, int param1, int param2, ck param3);
+
+    final void s(int param0, int param1, int param2, int param3, int param4) {
+        this.f((byte) 117);
+        ((aw) this).a(false, param3);
+        ((aw) this).a(mm.field_h, 0, 0);
+        ((aw) this).a(mm.field_h, 0, true);
+        ((aw) this).e(param4, 13);
+        ((aw) this).field_Lb.b((float)param2, (float)param2, 0, 1.0f);
+        ((aw) this).field_Lb.a(param1, param0, (byte) 103, 0);
+        ((aw) this).U(0);
+        ((aw) this).a(1, false);
+        ((aw) this).a(0, 121, ((aw) this).field_Qb);
+        ((aw) this).a(-64, ((aw) this).field_n);
+        ((aw) this).a(1, 0, 256, rv.field_b);
+        ((aw) this).a(1, true);
+        ((aw) this).a(jq.field_a, 0, true);
+        ((aw) this).a(jq.field_a, 0, 0);
+    }
+
+    final static void j(byte param0) {
+        hq.field_b = -1;
+        qf.field_a = 0;
+        za.field_k = -1;
+        up.field_d = false;
+        hp.field_l = null;
+        int var1 = 47 / ((9 - param0) / 43);
+    }
+
+    final int[] Y() {
+        return new int[]{((aw) this).field_P, ((aw) this).field_Hb, ((aw) this).field_sc, ((aw) this).field_rc};
+    }
+
+    abstract void r(int param0);
+
+    abstract void J(int param0);
+
+    final za c(int param0) {
+        he var2 = new he(param0);
+        ((aw) this).field_lb.a((ms) (Object) var2, (byte) 39);
+        return (za) (Object) var2;
+    }
+
+    final float[] a(int param0, float[] param1) {
+        param1[0] = ((aw) this).field_A[0];
+        param1[8] = ((aw) this).field_A[2];
+        param1[12] = ((aw) this).field_A[3];
+        param1[4] = ((aw) this).field_A[1];
+        param1[5] = ((aw) this).field_A[5];
+        param1[1] = ((aw) this).field_A[4];
+        param1[13] = ((aw) this).field_A[7];
+        param1[9] = ((aw) this).field_A[6];
+        param1[2] = ((aw) this).field_A[8];
+        param1[14] = ((aw) this).field_A[11];
+        param1[10] = ((aw) this).field_A[10];
+        param1[6] = ((aw) this).field_A[9];
+        param1[3] = ((aw) this).field_A[12];
+        param1[7] = ((aw) this).field_A[13];
+        param1[15] = ((aw) this).field_A[15];
+        param1[11] = ((aw) this).field_A[14];
+        if (param0 > -44) {
+            ((aw) this).field_peer = -100L;
+        }
+        return param1;
+    }
+
+    abstract void q(byte param0);
+
+    final boolean c() {
+        return true;
+    }
+
+    private final void r(byte param0) {
+        ((aw) this).field_Wb = ((aw) this).a((byte) 51, true);
+        boolean discarded$7 = ((aw) this).field_Wb.a(12, (byte) -35, 24);
+        if (param0 < 102) {
+            ((aw) this).field_db = false;
+        }
+        ((aw) this).field_xc = ((aw) this).a(new hu[1], (byte) 118);
+    }
+
+    private final void f(byte param0) {
+        int var2 = 90 / ((param0 - 40) / 56);
+        if (-2 != (((aw) this).field_ic ^ -1)) {
+            ((aw) this).L(-25);
+            ((aw) this).c(false, -32);
+            ((aw) this).d(123, false);
+            ((aw) this).c(90, false);
+            ((aw) this).b(false, 4);
+            ((aw) this).a(-2, false, 50, false);
+            ((aw) this).h(57, 1);
+            ((aw) this).a(((aw) this).field_D, 117);
+            ((aw) this).field_ic = 1;
+        }
+    }
+
+    abstract void I(int param0);
+
+    final void f(int param0, int param1) {
+        if (param0 == ((aw) this).field_oc) {
+            // if_icmpne L19
+        } else {
+            ((aw) this).field_Yb = param1;
+            ((aw) this).field_oc = param0;
+            this.u(2);
+            this.Q(13);
+            this.n((byte) -78);
+        }
+    }
+
+    abstract ru a(io param0, iw param1, int param2, int param3, byte param4);
+
+    final void b(int param0, boolean param1) {
+        if (!((!param1 ? 1 : 0) == (!((aw) this).field_Rb ? 1 : 0))) {
+            ((aw) this).field_Rb = param1 ? true : false;
+            ((aw) this).i((byte) -119);
+        }
+        if (param0 != 0) {
+            ((aw) this).field_oc = -100;
+        }
+    }
+
+    final void a(int param0, int param1, int param2, int param3, int param4, int param5) {
+        float var7 = 0.0f;
+        float var8 = 0.0f;
+        float var9 = 0.0f;
+        L0: {
+          L1: {
+            var7 = (float)(-param0) + (float)param2;
+            var8 = (float)param3 - (float)param1;
+            if (0.0f != var7) {
+              break L1;
+            } else {
+              if (var8 == 0.0f) {
+                var7 = 1.0f;
+                break L0;
+              } else {
+                break L1;
+              }
+            }
+          }
+          var9 = (float)(1.0 / Math.sqrt((double)(var7 * var7 + var8 * var8)));
+          var7 = var7 * var9;
+          var8 = var8 * var9;
+          break L0;
+        }
+        if (!this.a(0.0f, (float)param3 + var8, true, (float)param2 + var7, (float)param0, (float)param1, 0.0f)) {
+          return;
+        } else {
+          this.f((byte) -57);
+          ((aw) this).a(false, param4);
+          ((aw) this).a(mm.field_h, 0, 0);
+          ((aw) this).a(mm.field_h, 0, true);
+          ((aw) this).e(param5, 13);
+          ((aw) this).k(1);
+          ((aw) this).a(1, false);
+          this.g(false);
+          ((aw) this).a(1, true);
+          ((aw) this).a(jq.field_a, 0, true);
+          ((aw) this).a(jq.field_a, 0, 0);
+          return;
+        }
+    }
+
+    private final void O(int param0) {
+        int var2 = 0;
+        jaclib.memory.Buffer var3 = null;
+        jaclib.memory.Stream var4 = null;
+        int var5 = 0;
+        var5 = Sumoblitz.field_L ? 1 : 0;
+        ((aw) this).field_x = ((aw) this).a((byte) 51, false);
+        boolean discarded$1 = ((aw) this).field_x.a(28, (byte) -35, 140);
+        var2 = 0;
+        L0: while (true) {
+          L1: {
+            if (4 <= var2) {
+              break L1;
+            } else {
+              var3 = ((aw) this).field_x.a(7454, true);
+              if (var3 != null) {
+                L2: {
+                  var4 = ((aw) this).a(true, var3);
+                  if (jaclib.memory.Stream.b()) {
+                    var4.a(0.0f);
+                    var4.a(0.0f);
+                    var4.a(0.0f);
+                    var4.a(0.0f);
+                    var4.a(0.0f);
+                    var4.a(0.0f);
+                    var4.a(0.0f);
+                    var4.a(0.0f);
+                    var4.a(1.0f);
+                    var4.a(0.0f);
+                    var4.a(0.0f);
+                    var4.a(1.0f);
+                    var4.a(0.0f);
+                    var4.a(1.0f);
+                    var4.a(1.0f);
+                    var4.a(1.0f);
+                    var4.a(0.0f);
+                    var4.a(1.0f);
+                    var4.a(1.0f);
+                    var4.a(1.0f);
+                    var4.a(1.0f);
+                    var4.a(1.0f);
+                    var4.a(0.0f);
+                    var4.a(0.0f);
+                    var4.a(1.0f);
+                    var4.a(0.0f);
+                    var4.a(1.0f);
+                    var4.a(0.0f);
+                    var4.a(0.0f);
+                    var4.a(0.0f);
+                    var4.a(0.0f);
+                    var4.a(0.0f);
+                    var4.a(0.0f);
+                    var4.a(0.0f);
+                    var4.a(0.0f);
+                    break L2;
+                  } else {
+                    var4.b(0.0f);
+                    var4.b(0.0f);
+                    var4.b(0.0f);
+                    var4.b(0.0f);
+                    var4.b(0.0f);
+                    var4.b(0.0f);
+                    var4.b(0.0f);
+                    var4.b(0.0f);
+                    var4.b(1.0f);
+                    var4.b(0.0f);
+                    var4.b(0.0f);
+                    var4.b(1.0f);
+                    var4.b(0.0f);
+                    var4.b(1.0f);
+                    var4.b(1.0f);
+                    var4.b(1.0f);
+                    var4.b(0.0f);
+                    var4.b(1.0f);
+                    var4.b(1.0f);
+                    var4.b(1.0f);
+                    var4.b(1.0f);
+                    var4.b(1.0f);
+                    var4.b(0.0f);
+                    var4.b(0.0f);
+                    var4.b(1.0f);
+                    var4.b(0.0f);
+                    var4.b(1.0f);
+                    var4.b(0.0f);
+                    var4.b(0.0f);
+                    var4.b(0.0f);
+                    var4.b(0.0f);
+                    var4.b(0.0f);
+                    var4.b(0.0f);
+                    var4.b(0.0f);
+                    var4.b(0.0f);
+                    break L2;
+                  }
+                }
+                var4.a();
+                if (((aw) this).field_x.a(22957)) {
+                  break L1;
+                } else {
+                  var2++;
+                  continue L0;
+                }
+              } else {
+                var2++;
+                continue L0;
+              }
+            }
+          }
+          L3: {
+            ((aw) this).field_nb = ((aw) this).a(new hu[1], (byte) 99);
+            if (param0 == 5) {
+              break L3;
+            } else {
+              this.j(-25);
+              break L3;
+            }
+          }
+          return;
+        }
+    }
+
+    final void a(ed param0, int param1) {
+        if (param1 <= 89) {
+            boolean discarded$0 = this.a(-0.810268759727478f, 2.1692757606506348f, false, -2.797441005706787f, 1.3712314367294312f, 0.6615611910820007f, 0.5074755549430847f);
+        }
+        if (((aw) this).field_Zb[((aw) this).field_mc] == param0) {
+        } else {
+            ((aw) this).field_Zb[((aw) this).field_mc] = param0;
+            if (param0 == null) {
+                ((aw) this).l((byte) 9);
+            } else {
+                param0.a(8905);
+            }
+            ((aw) this).field_ic = ((aw) this).field_ic & -2;
+        }
+    }
+
+    private final void y(int param0) {
+        int var2 = 0;
+        jaclib.memory.Buffer var3 = null;
+        jaclib.memory.Stream var4 = null;
+        int var5 = 0;
+        double var6 = 0.0;
+        float var8 = 0.0f;
+        float var9 = 0.0f;
+        int var10 = 0;
+        var10 = Sumoblitz.field_L ? 1 : 0;
+        ((aw) this).field_Qb = ((aw) this).a((byte) 51, false);
+        boolean discarded$2 = ((aw) this).field_Qb.a(12, (byte) -35, 3096);
+        var2 = 0;
+        L0: while (true) {
+          L1: {
+            if (4 <= var2) {
+              break L1;
+            } else {
+              var3 = ((aw) this).field_Qb.a(7454, true);
+              if (var3 != null) {
+                var4 = ((aw) this).a(true, var3);
+                var4.a(0.0f);
+                var4.a(0.0f);
+                var4.a(0.0f);
+                var5 = 0;
+                L2: while (true) {
+                  if (-257 > (var5 ^ -1)) {
+                    var4.a();
+                    if (((aw) this).field_Qb.a(22957)) {
+                      break L1;
+                    } else {
+                      var2++;
+                      continue L0;
+                    }
+                  } else {
+                    var6 = (double)(var5 * 2) * 3.141592653589793 / 256.0;
+                    var8 = (float)Math.cos(var6);
+                    var9 = (float)Math.sin(var6);
+                    if (jaclib.memory.Stream.b()) {
+                      var4.a(var9);
+                      var4.a(var8);
+                      var4.a(0.0f);
+                      var5++;
+                      continue L2;
+                    } else {
+                      var4.b(var9);
+                      var4.b(var8);
+                      var4.b(0.0f);
+                      var5++;
+                      continue L2;
+                    }
+                  }
+                }
+              } else {
+                var2++;
+                continue L0;
+              }
+            }
+          }
+          if (param0 < -97) {
+            ((aw) this).field_n = ((aw) this).a(new hu[1], (byte) 50);
+            return;
+          } else {
+            return;
+          }
+        }
+    }
+
+    final static ha a(d param0, java.awt.Canvas param1, int param2, int param3) {
+        if (param3 != 27541) {
+            Object var5 = null;
+            String discarded$0 = aw.a((String) null, (String) null, (String) null, false);
+        }
+        return (ha) (Object) new fr(param1, param0, param2);
+    }
+
+    private final void g(int param0) {
+        ((aw) this).o(-2);
+        if (null != ((aw) this).field_m) {
+            ((aw) this).field_m.b(false);
+        }
+        if (param0 != 1) {
+            ((aw) this).field_ac = 74;
+        }
+    }
+
+    final void e(int param0, int param1) {
+        il var3 = null;
+        int var4 = 0;
+        int var5 = 0;
+        int var6 = 0;
+        int stackIn_14_0 = 0;
+        int stackIn_15_0 = 0;
+        int stackIn_16_0 = 0;
+        int stackIn_17_0 = 0;
+        int stackIn_17_1 = 0;
+        Object stackIn_19_0 = null;
+        Object stackIn_20_0 = null;
+        Object stackIn_21_0 = null;
+        int stackIn_21_1 = 0;
+        int stackIn_25_0 = 0;
+        Object stackIn_27_0 = null;
+        Object stackIn_28_0 = null;
+        Object stackIn_29_0 = null;
+        int stackIn_29_1 = 0;
+        int stackOut_13_0 = 0;
+        int stackOut_12_0 = 0;
+        int stackOut_14_0 = 0;
+        int stackOut_16_0 = 0;
+        int stackOut_16_1 = 0;
+        int stackOut_15_0 = 0;
+        int stackOut_15_1 = 0;
+        Object stackOut_18_0 = null;
+        Object stackOut_20_0 = null;
+        int stackOut_20_1 = 0;
+        Object stackOut_19_0 = null;
+        int stackOut_19_1 = 0;
+        int stackOut_24_0 = 0;
+        int stackOut_23_0 = 0;
+        Object stackOut_26_0 = null;
+        Object stackOut_28_0 = null;
+        int stackOut_28_1 = 0;
+        Object stackOut_27_0 = null;
+        int stackOut_27_1 = 0;
+        L0: {
+          var6 = Sumoblitz.field_L ? 1 : 0;
+          if (param1 == 13) {
+            break L0;
+          } else {
+            ((aw) this).field_cb = null;
+            break L0;
+          }
+        }
+        L1: {
+          if (param0 != ((aw) this).field_N) {
+            L2: {
+              if (param0 != 1) {
+                if (param0 == 2) {
+                  var5 = 0;
+                  var4 = 1;
+                  var3 = lh.field_n;
+                  break L2;
+                } else {
+                  if ((param0 ^ -1) == -129) {
+                    var3 = gb.field_t;
+                    var5 = 1;
+                    var4 = 1;
+                    break L2;
+                  } else {
+                    var5 = 0;
+                    var3 = av.field_B;
+                    var4 = 0;
+                    break L2;
+                  }
+                }
+              } else {
+                var5 = 1;
+                var4 = 1;
+                var3 = sr.field_a;
+                break L2;
+              }
+            }
+            L3: {
+              if (((aw) this).field_u) {
+                stackOut_13_0 = 0;
+                stackIn_14_0 = stackOut_13_0;
+                break L3;
+              } else {
+                stackOut_12_0 = 1;
+                stackIn_14_0 = stackOut_12_0;
+                break L3;
+              }
+            }
+            L4: {
+              stackOut_14_0 = stackIn_14_0;
+              stackIn_16_0 = stackOut_14_0;
+              stackIn_15_0 = stackOut_14_0;
+              if (var5 != 0) {
+                stackOut_16_0 = stackIn_16_0;
+                stackOut_16_1 = 0;
+                stackIn_17_0 = stackOut_16_0;
+                stackIn_17_1 = stackOut_16_1;
+                break L4;
+              } else {
+                stackOut_15_0 = stackIn_15_0;
+                stackOut_15_1 = 1;
+                stackIn_17_0 = stackOut_15_0;
+                stackIn_17_1 = stackOut_15_1;
+                break L4;
+              }
+            }
+            L5: {
+              if (stackIn_17_0 == stackIn_17_1) {
+                break L5;
+              } else {
+                L6: {
+                  stackOut_18_0 = this;
+                  stackIn_20_0 = stackOut_18_0;
+                  stackIn_19_0 = stackOut_18_0;
+                  if (var5 == 0) {
+                    stackOut_20_0 = this;
+                    stackOut_20_1 = 0;
+                    stackIn_21_0 = stackOut_20_0;
+                    stackIn_21_1 = stackOut_20_1;
+                    break L6;
+                  } else {
+                    stackOut_19_0 = this;
+                    stackOut_19_1 = 1;
+                    stackIn_21_0 = stackOut_19_0;
+                    stackIn_21_1 = stackOut_19_1;
+                    break L6;
+                  }
+                }
+                ((aw) this).field_u = stackIn_21_1 != 0;
+                ((aw) this).s(102);
+                break L5;
+              }
+            }
+            L7: {
+              if (var4 != 0) {
+                stackOut_24_0 = 0;
+                stackIn_25_0 = stackOut_24_0;
+                break L7;
+              } else {
+                stackOut_23_0 = 1;
+                stackIn_25_0 = stackOut_23_0;
+                break L7;
+              }
+            }
+            L8: {
+              if (stackIn_25_0 != (((aw) this).field_ob ? 1 : 0)) {
+                break L8;
+              } else {
+                L9: {
+                  stackOut_26_0 = this;
+                  stackIn_28_0 = stackOut_26_0;
+                  stackIn_27_0 = stackOut_26_0;
+                  if (var4 == 0) {
+                    stackOut_28_0 = this;
+                    stackOut_28_1 = 0;
+                    stackIn_29_0 = stackOut_28_0;
+                    stackIn_29_1 = stackOut_28_1;
+                    break L9;
+                  } else {
+                    stackOut_27_0 = this;
+                    stackOut_27_1 = 1;
+                    stackIn_29_0 = stackOut_27_0;
+                    stackIn_29_1 = stackOut_27_1;
+                    break L9;
+                  }
+                }
+                ((aw) this).field_ob = stackIn_29_1 != 0;
+                ((aw) this).p((byte) -4);
+                break L8;
+              }
+            }
+            L10: {
+              if (var3 == ((aw) this).field_l) {
+                break L10;
+              } else {
+                ((aw) this).field_l = var3;
+                ((aw) this).bb(-19519);
+                break L10;
+              }
+            }
+            ((aw) this).field_N = param0;
+            ((aw) this).field_ic = ((aw) this).field_ic & -29;
+            break L1;
+          } else {
+            break L1;
+          }
+        }
+    }
+
+    private final boolean a(float param0, float param1, boolean param2, float param3, float param4, float param5, float param6) {
+        jaclib.memory.Buffer var10 = ((aw) this).field_Wb.a(7454, param2);
+        if (var10 == null) {
+            return false;
+        }
+        jaclib.memory.Stream var9 = ((aw) this).a(param2, var10);
+        if (!jaclib.memory.Stream.b()) {
+            var9.b(param4);
+            var9.b(param5);
+            var9.b(param6);
+            var9.b(param3);
+            var9.b(param1);
+            var9.b(param0);
+        } else {
+            var9.a(param4);
+            var9.a(param5);
+            var9.a(param6);
+            var9.a(param3);
+            var9.a(param1);
+            var9.a(param0);
+        }
+        var9.a();
+        return ((aw) this).field_Wb.a(22957);
+    }
+
+    final void aa(int param0, int param1, int param2, int param3, int param4, int param5) {
+        this.f((byte) -104);
+        ((aw) this).a(false, param4);
+        ((aw) this).a(mm.field_h, 0, 0);
+        ((aw) this).a(mm.field_h, 0, true);
+        ((aw) this).e(param5, 13);
+        ((aw) this).field_Lb.b((float)param3, (float)param2, 0, 1.0f);
+        ((aw) this).field_Lb.a(param1, param0, (byte) 107, 0);
+        ((aw) this).U(0);
+        ((aw) this).a(1, false);
+        ((aw) this).n(2);
+        ((aw) this).a(1, true);
+        ((aw) this).a(jq.field_a, 0, true);
+        ((aw) this).a(jq.field_a, 0, 0);
+    }
+
+    final void b(boolean param0, int param1) {
+        if (param1 != 4) {
+            this.f((byte) -69);
+        }
+        if ((!param0 ? 1 : 0) != (!((aw) this).field_i ? 1 : 0)) {
+            ((aw) this).field_i = param0 ? true : false;
+            ((aw) this).eb(120);
+            ((aw) this).field_ic = ((aw) this).field_ic & -32;
+        }
+    }
+
+    final void U(int param0, int param1, int param2, int param3, int param4) {
+        ((aw) this).a(param0, param1, param2 + param0, param1, param3, param4);
+    }
+
+    final int i() {
+        return ((aw) this).field_oc;
+    }
+
+    final da a(ta param0, ri[] param1, boolean param2) {
+        return (da) (Object) new mv((aw) this, param0, param1, param2);
+    }
+
+    final void KA(int param0, int param1, int param2, int param3) {
+        if (param0 <= 0) {
+            if (((aw) this).field_rb - 1 <= param2) {
+                if (param1 <= 0) {
+                    if (!(((aw) this).field_Sb - 1 > param3)) {
+                        ((aw) this).m(-16088);
+                        return;
+                    }
+                }
+            }
+        }
+        ((aw) this).field_vb = 0 > param1 ? 0 : param1;
+        ((aw) this).field_yc = ((aw) this).field_rb < param3 ? 0 : param3;
+        ((aw) this).field_F = ((aw) this).field_rb >= param2 ? param2 : 0;
+        ((aw) this).field_v = param0 >= 0 ? param0 : 0;
+        if (!(((aw) this).field_wc)) {
+            ((aw) this).field_wc = true;
+            ((aw) this).A(-87);
+        }
+        ((aw) this).F(4);
+        this.h((byte) -82);
+    }
+
+    abstract void s(int param0);
+
+    private final void Q(int param0) {
+        ((aw) this).field_O = false;
+        if (param0 != 13) {
+            this.O(109);
+        }
+        this.Z(0);
+        if (!(mo.field_w != ((aw) this).field_s)) {
+            this.g(1);
+        }
+    }
+
+    private final void T(int param0) {
+        int var2 = 0;
+        int var3 = Sumoblitz.field_L ? 1 : 0;
+        ((aw) this).ab(7);
+        ((aw) this).db(0);
+        ((aw) this).f(false);
+        ((aw) this).Y(-95);
+        ((aw) this).E(param0 + -75);
+        ((aw) this).J(0);
+        ((aw) this).I(0);
+        ((aw) this).q(param0 + 59);
+        ((aw) this).eb(param0 + 120);
+        ((aw) this).i((byte) -119);
+        ((aw) this).b(true);
+        ((aw) this).p((byte) -4);
+        ((aw) this).bb(param0 + -19518);
+        ((aw) this).s(-92);
+        if (param0 != -1) {
+            ((aw) this).field_Lb = null;
+        }
+        for (var2 = ((aw) this).field_cc - 1; -1 >= (var2 ^ -1); var2--) {
+            ((aw) this).g(var2, -114);
+            ((aw) this).q((byte) -128);
+            ((aw) this).X(-86);
+            ((aw) this).l(0);
+        }
+        ((aw) this).r(1);
+        ((aw) this).i(param0 + 1);
+        ((aw) this).o(-2);
+        ((aw) this).x(param0 + 1);
+        ((aw) this).N(-26911);
+    }
+
+    final void a(byte param0, tg param1, tg param2) {
+        int var4 = 0;
+        if (param2 != ((aw) this).field_K[((aw) this).field_mc]) {
+            ((aw) this).field_K[((aw) this).field_mc] = param2;
+            var4 = 1;
+            ((aw) this).q((byte) -93);
+        }
+        if (param1 != ((aw) this).field_B[((aw) this).field_mc]) {
+            ((aw) this).field_B[((aw) this).field_mc] = param1;
+            ((aw) this).X(-126);
+            var4 = 1;
+        }
+        if (var4 != 0) {
+            ((aw) this).field_ic = ((aw) this).field_ic & -30;
+        }
+        if (param0 != -83) {
+            boolean discarded$0 = ((aw) this).c();
+        }
+    }
+
+    abstract void X(int param0);
+
+    aw(java.awt.Canvas param0, Object param1, d param2, ki param3, int param4, int param5) {
+        super(param2);
+        Throwable var7 = null;
+        int var8 = 0;
+        wm var9 = null;
+        java.awt.Dimension var11 = null;
+        int statePc = 0;
+        Throwable caughtException = null;
+        stateLoop: while (true) {
+            switch (statePc) {
+                case 0: {
+                    ((aw) this).field_lb = new jn();
+                    ((aw) this).field_Db = true;
+                    ((aw) this).field_Lb = new ut();
+                    ut discarded$3 = new ut();
+                    ut discarded$4 = new ut();
+                    ((aw) this).field_Gb = new ut();
+                    ((aw) this).field_sb = new ut();
+                    ((aw) this).field_vc = new ut();
+                    ((aw) this).field_mc = 0;
+                    ((aw) this).field_ac = 0;
+                    ((aw) this).field_O = false;
+                    ((aw) this).field_tb = false;
+                    ((aw) this).field_qb = 1.0f;
+                    ((aw) this).field_L = 0;
+                    ((aw) this).field_G = new float[]{0.0f, 0.0f, 1.0f, 0.0f};
+                    ((aw) this).field_oc = 50;
+                    ((aw) this).field_mb = 0;
+                    ((aw) this).field_Hb = 0;
+                    ((aw) this).field_vb = 0;
+                    ((aw) this).field_I = false;
+                    ((aw) this).field_Vb = -1;
+                    ((aw) this).field_Rb = true;
+                    ((aw) this).field_bb = false;
+                    ((aw) this).field_Yb = 3584;
+                    ((aw) this).field_Ob = -1;
+                    ((aw) this).field_jb = 1.0f;
+                    ((aw) this).field_xb = 0;
+                    ((aw) this).field_C = -1;
+                    ((aw) this).field_F = 0;
+                    ((aw) this).field_yc = 0;
+                    ((aw) this).field_w = new float[]{1.0f, 0.0f, 0.0f, 0.0f, 0.0f, 1.0f, 0.0f, 0.0f, 0.0f, 0.0f, 1.0f, 0.0f, 0.0f, 0.0f, 0.0f, 1.0f};
+                    ((aw) this).field_sc = 512;
+                    ((aw) this).field_fc = new float[16];
+                    ((aw) this).field_l = sr.field_a;
+                    ((aw) this).field_zb = false;
+                    ((aw) this).field_Z = true;
+                    ((aw) this).field_y = 0;
+                    ((aw) this).field_A = ((aw) this).field_w;
+                    ((aw) this).field_S = -1.0f;
+                    ((aw) this).field_Kb = -1;
+                    ((aw) this).field_N = 1;
+                    ((aw) this).field_u = true;
+                    ((aw) this).field_X = new rq[10];
+                    ((aw) this).field_p = false;
+                    ((aw) this).field_tc = 128;
+                    ((aw) this).field_i = false;
+                    ((aw) this).field_db = true;
+                    ((aw) this).field_P = 0;
+                    ((aw) this).field_eb = new float[16];
+                    ((aw) this).field_ec = new float[16];
+                    ((aw) this).field_hb = -1.0f;
+                    ((aw) this).field_R = false;
+                    ((aw) this).field_Jb = false;
+                    ((aw) this).field_T = 1.0f;
+                    ((aw) this).field_Xb = 1.0f;
+                    ((aw) this).field_U = new float[]{0.0f, 0.0f, -1.0f, 0.0f};
+                    ((aw) this).field_rc = 512;
+                    ((aw) this).field_v = 0;
+                    ((aw) this).field_ob = true;
+                    ((aw) this).field_r = 0;
+                    ((aw) this).field_s = mb.field_k;
+                    ((aw) this).field_H = false;
+                    ((aw) this).field_k = -1;
+                    ((aw) this).field_Nb = 0;
+                    ((aw) this).field_J = 1.0f;
+                    ((aw) this).field_cb = new jaclib.memory.Stream();
+                    ut discarded$5 = new ut();
+                    statePc = 1;
+                    continue stateLoop;
+                }
+                case 1: {
+                    try {
+                        ((aw) this).field_Ib = param1;
+                        ((aw) this).field_ab = param3;
+                        ((aw) this).field_Y = param4;
+                        var11 = param0.getSize();
+                        ((aw) this).field_dc = param5;
+                        ((aw) this).field_Sb = var11.height;
+                        ((aw) this).field_rb = var11.width;
+                        kr.a(true, -107, false);
+                        if (null != ((aw) this).field_h) {
+                            statePc = 3;
+                        } else {
+                            statePc = 2;
+                        }
+                        continue stateLoop;
+                    } catch (Throwable stateCaught_1) {
+                        caughtException = stateCaught_1;
+                        statePc = 9;
+                        continue stateLoop;
+                    }
+                }
+                case 2: {
+                    try {
+                        ((aw) this).field_nc = new jagex3.graphics2.hw.NativeInterface(0, ((aw) this).field_dc);
+                        ((aw) this).field_lc = null;
+                        statePc = 10;
+                        continue stateLoop;
+                    } catch (Throwable stateCaught_2) {
+                        caughtException = stateCaught_2;
+                        statePc = 9;
+                        continue stateLoop;
+                    }
+                }
+                case 3: {
+                    try {
+                        ((aw) this).field_lc = new mr((aw) this, ((aw) this).field_h);
+                        ((aw) this).field_nc = new jagex3.graphics2.hw.NativeInterface(((aw) this).field_h.a(32075), ((aw) this).field_dc);
+                        var8 = 0;
+                        statePc = 4;
+                        continue stateLoop;
+                    } catch (Throwable stateCaught_3) {
+                        caughtException = stateCaught_3;
+                        statePc = 9;
+                        continue stateLoop;
+                    }
+                }
+                case 4: {
+                    try {
+                        if (var8 >= ((aw) this).field_h.a(32075)) {
+                            statePc = 10;
+                        } else {
+                            statePc = 5;
+                        }
+                        continue stateLoop;
+                    } catch (Throwable stateCaught_4) {
+                        caughtException = stateCaught_4;
+                        statePc = 9;
+                        continue stateLoop;
+                    }
+                }
+                case 5: {
+                    try {
+                        var9 = ((aw) this).field_h.a(-29193, var8);
+                        if (var9 == null) {
+                            statePc = 7;
+                        } else {
+                            statePc = 6;
+                        }
+                        continue stateLoop;
+                    } catch (Throwable stateCaught_5) {
+                        caughtException = stateCaught_5;
+                        statePc = 9;
+                        continue stateLoop;
+                    }
+                }
+                case 6: {
+                    try {
+                        ((aw) this).field_nc.initTextureMetrics(var8, var9.field_t, var9.field_g);
+                        statePc = 7;
+                        continue stateLoop;
+                    } catch (Throwable stateCaught_6) {
+                        caughtException = stateCaught_6;
+                        statePc = 9;
+                        continue stateLoop;
+                    }
+                }
+                case 7: {
+                    try {
+                        var8++;
+                        statePc = 4;
+                        continue stateLoop;
+                    } catch (Throwable stateCaught_7) {
+                        caughtException = stateCaught_7;
+                        statePc = 9;
+                        continue stateLoop;
+                    }
+                }
+                case 9: {
+                    var7 = caughtException;
+                    var7.printStackTrace();
+                    ((aw) this).a((byte) -60);
+                    throw new RuntimeException("");
+                }
+                case 10: {
+                }
+                default: throw new IllegalStateException("invalid CFG state " + statePc);
+            }
+        }
+    }
+
+    final void a(boolean param0, boolean param1) {
+        if (!((!((aw) this).field_tb ? 1 : 0) != (param0 ? 1 : 0))) {
+            ((aw) this).field_tb = param0 ? true : false;
+            ((aw) this).f(!param1 ? true : false);
+        }
+        if (!param1) {
+            ((aw) this).field_kc = -110;
+        }
+    }
+
+    abstract void A(int param0);
+
+    final hr a(int[] param0, int param1, int param2, int param3, int param4, boolean param5) {
+        return (hr) (Object) new pu((aw) this, param3, param4, param0, param1, param2);
+    }
+
+    final void a(mi param0, int param1, int param2) {
+        if (param2 != 0) {
+            return;
+        }
+        ((aw) this).a((byte) 72, param1, false, false, param0);
+    }
+
+    abstract hq a(hu[] param0, byte param1);
+
+    private final void j(int param0) {
+        if (param0 != 128) {
+            ((aw) this).field_vb = -58;
+        }
+        ((aw) this).V(26803);
+        if (!(((aw) this).field_m == null)) {
+            ((aw) this).field_m.a((byte) -92);
+        }
+    }
+
+    final void DA(int param0, int param1, int param2, int param3) {
+        ((aw) this).field_P = param0;
+        ((aw) this).field_Hb = param1;
+        ((aw) this).field_sc = param2;
+        ((aw) this).field_rc = param3;
+        this.Q(13);
+        this.u(2);
+        ((aw) this).d(false);
+        this.h((byte) -128);
+    }
+
+    private final void n(byte param0) {
+        if (((aw) this).field_m != null) {
+            ((aw) this).field_m.a(260);
+        }
+        if (param0 > -25) {
+            return;
+        }
+        ((aw) this).b(true);
+    }
+
+    void Y(int param0) {
+        ((aw) this).field_Ab = ((aw) this).field_ub;
+        if (param0 >= -83) {
+            ((aw) this).field_vb = -113;
+        }
+        ((aw) this).field_ub = 0;
+    }
+
+    final jaclib.memory.heap.NativeHeapBuffer a(boolean param0, boolean param1, int param2) {
+        if (param0) {
+            ((aw) this).field_C = -95;
+        }
+        return ((aw) this).field_gb.a(param2, param1);
+    }
+
+    final ut k(byte param0) {
+        if (!(((aw) this).field_R)) {
+            ((aw) this).field_vc.a((eu) (Object) ((aw) this).field_Gb, (byte) 77, (eu) (Object) ((aw) this).field_Lb);
+            ((aw) this).field_R = true;
+        }
+        if (param0 < 58) {
+            return null;
+        }
+        return ((aw) this).field_vc;
+    }
+
+    abstract void a(int param0, int param1, pv param2);
+
+    final void K(int param0) {
+        if (!(4 == ((aw) this).field_ic)) {
+            ((aw) this).L(-25);
+            ((aw) this).c(false, -32);
+            ((aw) this).d(111, false);
+            ((aw) this).c(80, false);
+            ((aw) this).b(false, 4);
+            ((aw) this).a(-2, false, 50, false);
+            ((aw) this).e(1, 13);
+            ((aw) this).h(96, 0);
+            ((aw) this).field_ic = 4;
+        }
+        if (param0 != 0) {
+            ((aw) this).field_Zb = null;
+        }
+    }
+
+    final int XA() {
+        return ((aw) this).field_Yb;
+    }
+
+    void f(int param0) {
+        if (((aw) this).field_lc != null) {
+            ((aw) this).field_lc.a(125);
+        }
+        ((aw) this).field_kc = 2147483647 & param0;
+    }
+
+    final void L(int param0) {
+        hv var2 = null;
+        if (param0 != -25) {
+            za discarded$0 = ((aw) this).c(-125);
+        }
+        if (!(((aw) this).field_s == vu.field_h)) {
+            var2 = ((aw) this).field_s;
+            ((aw) this).field_s = vu.field_h;
+            if (!(!var2.a(-20011))) {
+                this.W(16);
+            }
+            this.c((byte) -88);
+            ((aw) this).field_A = ((aw) this).field_fc;
+            this.g(param0 ^ -26);
+            ((aw) this).field_ic = ((aw) this).field_ic & -25;
+        }
+    }
+
+    final ut d(int param0) {
+        if (param0 <= 57) {
+            return null;
+        }
+        return ((aw) this).field_Lb;
+    }
+
+    final void l(int param0) {
+        if (param0 != 0) {
+            ((aw) this).a(true, -85);
+        }
+        if (!(ar.field_L == ((aw) this).field_wb[((aw) this).field_mc])) {
+            ((aw) this).field_wb[((aw) this).field_mc] = ar.field_L;
+            ((aw) this).field_V[((aw) this).field_mc].a(1);
+            this.j(128);
+        }
+    }
+
+    final ru a(int[] param0, int param1, boolean param2, int param3, int param4) {
+        if (param3 >= -88) {
+            ((aw) this).field_Wb = null;
+        }
+        return ((aw) this).a(param2, 0, param0, param4, -64, 0, param1);
+    }
+
+    abstract void o(int param0);
+
+    abstract void a(int param0, mp param1);
+
+    abstract pv a(byte param0, boolean param1);
+
+    final void n(int param0) {
+        this.a(0, an.field_d, param0);
+    }
+
+    final void g(int param0, int param1) {
+        if (param1 > -107) {
+            return;
+        }
+        if (!(param0 == ((aw) this).field_mc)) {
+            ((aw) this).field_mc = param0;
+            ((aw) this).cb(-31);
+        }
+    }
+
+    abstract void x(int param0);
+
+    private final void p(int param0) {
+        if (param0 != 5) {
+            ((aw) this).field_k = -39;
+        }
+    }
+
+    final int v(int param0) {
+        if (param0 != 15) {
+            return -11;
+        }
+        return ((aw) this).field_k;
+    }
+
+    abstract void c(int param0, int param1);
+
+    final int S(int param0) {
+        int var2 = -108 / ((64 - param0) / 32);
+        return ((aw) this).field_Ob;
+    }
+
+    private final boolean o(byte param0) {
+        if (param0 != 24) {
+            ((aw) this).cb(83);
+        }
+        return ((aw) this).field_X[3].b((byte) -59);
+    }
+
+    abstract void q(int param0);
+
+    abstract void eb(int param0);
+
+    private final void a(int param0, boolean param1, int param2, boolean param3, int param4, int param5) {
+        int var8 = 0;
+        int stackIn_10_0 = 0;
+        int stackOut_9_0 = 0;
+        int stackOut_8_0 = 0;
+        L0: {
+          var8 = Sumoblitz.field_L ? 1 : 0;
+          if (param0 == 2147483647) {
+            break L0;
+          } else {
+            ((aw) this).field_m = null;
+            break L0;
+          }
+        }
+        L1: {
+          param3 = param3 & this.o((byte) 24);
+          if (param3) {
+            break L1;
+          } else {
+            L2: {
+              if ((param5 ^ -1) == -5) {
+                break L2;
+              } else {
+                if (8 == param5) {
+                  break L2;
+                } else {
+                  if (9 != param5) {
+                    break L1;
+                  } else {
+                    break L2;
+                  }
+                }
+              }
+            }
+            L3: {
+              param5 = 2;
+              if ((param5 ^ -1) == -5) {
+                stackOut_9_0 = 1 & param4;
+                stackIn_10_0 = stackOut_9_0;
+                break L3;
+              } else {
+                stackOut_8_0 = 1;
+                stackIn_10_0 = stackOut_8_0;
+                break L3;
+              }
+            }
+            param2 = stackIn_10_0;
+            param4 = 0;
+            break L1;
+          }
+        }
+        L4: {
+          if (param5 == -1) {
+            break L4;
+          } else {
+            if (param1) {
+              param5 = param5 | -2147483648;
+              break L4;
+            } else {
+              break L4;
+            }
+          }
+        }
+        L5: {
+          if (param5 == ((aw) this).field_L) {
+            if (-1 != (((aw) this).field_L ^ -1)) {
+              L6: {
+                ((aw) this).field_X[((aw) this).field_L & 2147483647].a(param1, (byte) -127);
+                if (param4 != ((aw) this).field_xb) {
+                  break L6;
+                } else {
+                  if (((aw) this).field_ac != param2) {
+                    break L6;
+                  } else {
+                    break L5;
+                  }
+                }
+              }
+              ((aw) this).field_X[2147483647 & ((aw) this).field_L].a(34023, param2, param4);
+              ((aw) this).field_xb = param4;
+              ((aw) this).field_ac = param2;
+              break L5;
+            } else {
+              break L5;
+            }
+          } else {
+            L7: {
+              if (-1 != ((aw) this).field_L) {
+                ((aw) this).field_X[((aw) this).field_L & 2147483647].c(false);
+                break L7;
+              } else {
+                break L7;
+              }
+            }
+            L8: {
+              if (param5 != 0) {
+                ((aw) this).field_m = ((aw) this).field_X[2147483647 & param5];
+                ((aw) this).field_m.a(param1, 20186);
+                ((aw) this).field_m.a(param1, (byte) -79);
+                ((aw) this).field_m.a(param0 ^ 2147449624, param2, param4);
+                break L8;
+              } else {
+                ((aw) this).field_m = null;
+                break L8;
+              }
+            }
+            ((aw) this).field_L = param5;
+            ((aw) this).field_ac = param2;
+            ((aw) this).field_xb = param4;
+            break L5;
+          }
+        }
+    }
+
+    abstract void db(int param0);
+
+    final void w(int param0) {
+        if (!(2 == ((aw) this).field_ic)) {
+            ((aw) this).L(-25);
+            ((aw) this).c(false, -32);
+            ((aw) this).d(param0 + 109, false);
+            ((aw) this).c(83, false);
+            ((aw) this).b(false, 4);
+            ((aw) this).a(-2, false, param0 + 40, false);
+            ((aw) this).field_ic = 2;
+        }
+        if (param0 != 10) {
+            ((aw) this).a(-53, true, 73, false);
+        }
+    }
+
+    final int e(byte param0) {
+        if (param0 < 5) {
+            Object var3 = null;
+            ru discarded$0 = ((aw) this).a((io) null, (iw) null, -127, 20, (byte) -94);
+        }
+        return ((aw) this).field_mb;
+    }
+
+    final void h(int param0, int param1) {
+        int var4 = 0;
+        L0: {
+          var4 = Sumoblitz.field_L ? 1 : 0;
+          if (param0 > 28) {
+            break L0;
+          } else {
+            ((aw) this).field_R = true;
+            break L0;
+          }
+        }
+        L1: {
+          if (param1 == 1) {
+            ((aw) this).a((byte) -83, lf.field_e, lf.field_e);
+            break L1;
+          } else {
+            if (0 == param1) {
+              ((aw) this).a((byte) -83, vi.field_v, vi.field_v);
+              break L1;
+            } else {
+              if ((param1 ^ -1) == -3) {
+                ((aw) this).a((byte) -83, lf.field_e, ua.field_n);
+                break L1;
+              } else {
+                if (param1 == 3) {
+                  ((aw) this).a((byte) -83, vi.field_v, cv.field_F);
+                  break L1;
+                } else {
+                  if (param1 == 4) {
+                    ((aw) this).a((byte) -83, bj.field_c, bj.field_c);
+                    break L1;
+                  } else {
+                    break L1;
+                  }
+                }
+              }
+            }
+          }
+        }
+    }
+
+    final int h(int param0) {
+        int var2 = 21 % ((-37 - param0) / 47);
+        return ((aw) this).field_Cb + (((aw) this).field_o + ((aw) this).field_pc);
+    }
+
+    final void a(int param0, boolean param1, int param2, boolean param3) {
+        ru var5 = null;
+        int var6 = 0;
+        int var7 = 0;
+        int var8 = 0;
+        int var9 = 0;
+        wm var10 = null;
+        int var11 = 0;
+        int var12 = 0;
+        ut var13 = null;
+        int var14 = 0;
+        int stackIn_6_0 = 0;
+        int stackIn_7_0 = 0;
+        int stackIn_8_0 = 0;
+        int stackIn_9_0 = 0;
+        int stackIn_9_1 = 0;
+        int stackIn_14_0 = 0;
+        int stackIn_21_0 = 0;
+        int stackOut_5_0 = 0;
+        int stackOut_4_0 = 0;
+        int stackOut_6_0 = 0;
+        int stackOut_8_0 = 0;
+        int stackOut_8_1 = 0;
+        int stackOut_7_0 = 0;
+        int stackOut_7_1 = 0;
+        int stackOut_13_0 = 0;
+        int stackOut_12_0 = 0;
+        int stackOut_20_0 = 0;
+        int stackOut_19_0 = 0;
+        L0: {
+          var14 = Sumoblitz.field_L ? 1 : 0;
+          if (param2 == 50) {
+            break L0;
+          } else {
+            field_t = null;
+            break L0;
+          }
+        }
+        L1: {
+          L2: {
+            if (((aw) this).field_Vb != param0) {
+              break L2;
+            } else {
+              L3: {
+                if (((aw) this).field_fb) {
+                  stackOut_5_0 = 0;
+                  stackIn_6_0 = stackOut_5_0;
+                  break L3;
+                } else {
+                  stackOut_4_0 = 1;
+                  stackIn_6_0 = stackOut_4_0;
+                  break L3;
+                }
+              }
+              L4: {
+                stackOut_6_0 = stackIn_6_0;
+                stackIn_8_0 = stackOut_6_0;
+                stackIn_7_0 = stackOut_6_0;
+                if (((aw) this).field_bb) {
+                  stackOut_8_0 = stackIn_8_0;
+                  stackOut_8_1 = 0;
+                  stackIn_9_0 = stackOut_8_0;
+                  stackIn_9_1 = stackOut_8_1;
+                  break L4;
+                } else {
+                  stackOut_7_0 = stackIn_7_0;
+                  stackOut_7_1 = 1;
+                  stackIn_9_0 = stackOut_7_0;
+                  stackIn_9_1 = stackOut_7_1;
+                  break L4;
+                }
+              }
+              if (stackIn_9_0 != stackIn_9_1) {
+                break L2;
+              } else {
+                break L1;
+              }
+            }
+          }
+          L5: {
+            var5 = null;
+            var6 = 0;
+            var7 = 0;
+            var8 = 0;
+            if (!((aw) this).field_fb) {
+              stackOut_13_0 = 0;
+              stackIn_14_0 = stackOut_13_0;
+              break L5;
+            } else {
+              stackOut_12_0 = 3;
+              stackIn_14_0 = stackOut_12_0;
+              break L5;
+            }
+          }
+          L6: {
+            var9 = stackIn_14_0;
+            if (0 > param0) {
+              ((aw) this).l(0);
+              break L6;
+            } else {
+              L7: {
+                L8: {
+                  var5 = ((aw) this).field_lc.a(param2 + 37, param0);
+                  var10 = ((aw) this).field_h.a(-29193, param0);
+                  if (var10.field_c != 0) {
+                    break L8;
+                  } else {
+                    if (var10.field_u != 0) {
+                      break L8;
+                    } else {
+                      ((aw) this).l(0);
+                      break L7;
+                    }
+                  }
+                }
+                L9: {
+                  if (var10.field_n) {
+                    stackOut_20_0 = 64;
+                    stackIn_21_0 = stackOut_20_0;
+                    break L9;
+                  } else {
+                    stackOut_19_0 = 128;
+                    stackIn_21_0 = stackOut_19_0;
+                    break L9;
+                  }
+                }
+                var11 = stackIn_21_0;
+                var12 = var11 * 50;
+                var13 = ((aw) this).B(0);
+                var13.a((float)(((aw) this).field_kc % var12 * var10.field_u) / (float)var12, 0.0f, (float)(var10.field_c * (((aw) this).field_kc % var12)) / (float)var12, param2 + -50);
+                ((aw) this).a(rs.field_c, param2 + 28830);
+                break L7;
+              }
+              var6 = var10.field_q;
+              if (!((aw) this).field_fb) {
+                var9 = var10.field_d;
+                var8 = var10.field_h;
+                var7 = var10.field_j;
+                break L6;
+              } else {
+                break L6;
+              }
+            }
+          }
+          L10: {
+            this.a(2147483647, param1, var8, param3, var7, var9);
+            if (null == ((aw) this).field_m) {
+              ((aw) this).a((ed) (Object) var5, 117);
+              ((aw) this).h(45, var6);
+              break L10;
+            } else {
+              ((aw) this).field_m.a(var6, 18834, (ed) (Object) var5);
+              break L10;
+            }
+          }
+          ((aw) this).field_bb = ((aw) this).field_fb;
+          ((aw) this).field_Vb = param0;
+          break L1;
+        }
+        ((aw) this).field_ic = ((aw) this).field_ic & -8;
+    }
+
+    abstract void b(boolean param0);
+
+    final ut g(byte param0) {
+        if (param0 != -28) {
+            return null;
+        }
+        return ((aw) this).field_Gb;
+    }
+
+    abstract void a(int param0, boolean param1);
+
+    final void s(byte param0) {
+        java.awt.Canvas var3_ref_java_awt_Canvas = null;
+        int var4 = Sumoblitz.field_L ? 1 : 0;
+        Enumeration var2 = ((aw) this).field_Q.keys();
+        while (var2.hasMoreElements()) {
+            var3_ref_java_awt_Canvas = (java.awt.Canvas) var2.nextElement();
+            ((aw) this).a(var3_ref_java_awt_Canvas, ((aw) this).field_Q.get((Object) (Object) var3_ref_java_awt_Canvas), 0);
+        }
+        int var3 = 82 % ((11 - param0) / 51);
+        ((aw) this).field_x.b(12001);
+        ((aw) this).field_Wb.b(12001);
+        ((aw) this).field_Qb.b(12001);
+        ((aw) this).field_gc.b((byte) 100);
+        ((aw) this).field_qc.b((byte) 20);
+        ((aw) this).field_hc.b((byte) -128);
+        ((aw) this).field_Fb.b((byte) 7);
+        ((aw) this).field_ib.b((byte) -123);
+        ((aw) this).field_yb.b(-19073);
+        ((aw) this).field_M.b(12001);
+    }
+
+    final void c(boolean param0, int param1) {
+        if (param1 != -32) {
+            ut discarded$0 = ((aw) this).g((byte) -79);
+        }
+        if (param0 != ((aw) this).field_Bb) {
+            ((aw) this).field_Bb = param0 ? true : false;
+            ((aw) this).i((byte) -119);
+            ((aw) this).field_ic = ((aw) this).field_ic & -32;
+        }
+    }
+
+    abstract void V(int param0);
+
+    private final void m(byte param0) {
+        ((aw) this).field_ec[10] = ((aw) this).field_q;
+        ((aw) this).field_ec[14] = ((aw) this).field_kb;
+        if (param0 != -83) {
+            ((aw) this).field_Tb = 1.2932486534118652f;
+        }
+    }
+
+    final void P(int param0) {
+        Enumeration var3 = null;
+        java.awt.Canvas var4 = null;
+        int var5 = Sumoblitz.field_L ? 1 : 0;
+        Hashtable var2 = new Hashtable();
+        if (param0 >= -26) {
+            return;
+        }
+        if (null != ((aw) this).field_Q) {
+            if (!((aw) this).field_Q.isEmpty()) {
+                var3 = ((aw) this).field_Q.keys();
+                while (var3.hasMoreElements()) {
+                    var4 = (java.awt.Canvas) var3.nextElement();
+                    Object discarded$0 = var2.put((Object) (Object) var4, ((aw) this).a(var4, 3));
+                }
+            }
+        }
+        ((aw) this).field_Q = var2;
+        this.O(5);
+        this.r((byte) 121);
+        this.y(-101);
+        ((aw) this).field_yb.a(117, (aw) this);
+    }
+
+    private final void Z(int param0) {
+        float[] var2 = null;
+        float var3 = 0.0f;
+        float var4 = 0.0f;
+        float var5 = 0.0f;
+        float var6 = 0.0f;
+        float var7 = 0.0f;
+        float var8 = 0.0f;
+        float[] var9 = null;
+        L0: {
+          if (!((aw) this).field_O) {
+            L1: {
+              L2: {
+                var9 = ((aw) this).field_eb;
+                var2 = var9;
+                var3 = (float)((aw) this).field_oc;
+                var4 = (float)((aw) this).field_Yb;
+                var5 = (float)(-((aw) this).field_Hb) * ((aw) this).field_qb / (float)((aw) this).field_rc;
+                var6 = (float)(-((aw) this).field_P) * ((aw) this).field_qb / (float)((aw) this).field_sc;
+                var7 = (float)(-((aw) this).field_P + ((aw) this).field_rb) * ((aw) this).field_qb / (float)((aw) this).field_sc;
+                var8 = (float)(((aw) this).field_Sb - ((aw) this).field_Hb) * ((aw) this).field_qb / (float)((aw) this).field_rc;
+                if (var6 == var7) {
+                  break L2;
+                } else {
+                  if (var5 == var8) {
+                    break L2;
+                  } else {
+                    var9[14] = var3 / (var3 - var4);
+                    var9[1] = 0.0f;
+                    var9[10] = 1.0f / (-var4 + var3);
+                    var9[6] = 0.0f;
+                    var9[15] = 1.0f;
+                    var9[8] = 0.0f;
+                    var9[9] = 0.0f;
+                    var9[2] = 0.0f;
+                    var9[7] = 0.0f;
+                    var9[11] = 0.0f;
+                    var9[5] = 2.0f / (-var5 + var8);
+                    var9[12] = (var7 + var6) / (-var7 + var6);
+                    var9[0] = 2.0f / (-var6 + var7);
+                    var9[3] = 0.0f;
+                    var9[4] = 0.0f;
+                    var9[13] = (var8 + var5) / (-var5 + var8);
+                    break L1;
+                  }
+                }
+              }
+              var2[9] = 0.0f;
+              var2[5] = 1.0f;
+              var2[3] = 0.0f;
+              var2[15] = 1.0f;
+              var2[6] = 0.0f;
+              var2[12] = 0.0f;
+              var2[14] = 0.0f;
+              var2[11] = 0.0f;
+              var2[7] = 0.0f;
+              var2[0] = 1.0f;
+              var2[8] = 0.0f;
+              var2[1] = 0.0f;
+              var2[13] = 0.0f;
+              var2[10] = 1.0f;
+              var2[2] = 0.0f;
+              var2[4] = 0.0f;
+              break L1;
+            }
+            this.p(param0 + 5);
+            ((aw) this).field_O = true;
+            break L0;
+          } else {
+            break L0;
+          }
+        }
+        L3: {
+          if (param0 == 0) {
+            break L3;
+          } else {
+            int discarded$1 = ((aw) this).i();
+            break L3;
+          }
+        }
+    }
+
+    final ef d(byte param0) {
+        if (param0 != 122) {
+            aw.j((byte) 73);
+        }
+        if (((aw) this).field_uc == null) {
+            return null;
+        }
+        return ((aw) this).field_uc.b(param0 ^ 37);
+    }
+
+    abstract ru a(int param0, int param1, boolean param2, int param3, float[] param4, int param5, byte param6, iw param7);
+
+    abstract void a(int param0, boolean param1, byte param2, mi param3);
+
+    rq d(int param0, int param1) {
+        int var3 = 0;
+        int var4 = 0;
+        Object var5 = null;
+        L0: {
+          var4 = Sumoblitz.field_L ? 1 : 0;
+          if (param0 == 0) {
+            break L0;
+          } else {
+            var5 = null;
+            hq discarded$2 = ((aw) this).a((hu[]) null, (byte) -48);
+            break L0;
+          }
+        }
+        var3 = param1;
+        if (var3 != 6) {
+          if ((var3 ^ -1) == -2) {
+            return (rq) (Object) new ng((aw) this);
+          } else {
+            if (2 == var3) {
+              return (rq) (Object) new ib((aw) this, ((aw) this).field_Mb);
+            } else {
+              if (7 != var3) {
+                return (rq) (Object) new ni((aw) this);
+              } else {
+                return (rq) (Object) new uo((aw) this);
+              }
+            }
+          }
+        } else {
+          return (rq) (Object) new oc((aw) this);
+        }
+    }
+
+    abstract void cb(int param0);
+
+    abstract ru a(boolean param0, int param1, int[] param2, int param3, int param4, int param5, int param6);
+
+    private final void R(int param0) {
+        int var2 = 0;
+        float[] var3 = null;
+        float var4 = 0.0f;
+        float var5 = 0.0f;
+        float var6 = 0.0f;
+        float var7 = 0.0f;
+        float var8 = 0.0f;
+        float[] var9 = null;
+        float[] var10 = null;
+        float[] var11 = null;
+        float[] var12 = null;
+        L0: {
+          var2 = 115 / ((39 - param0) / 47);
+          if (((aw) this).field_Jb) {
+            break L0;
+          } else {
+            L1: {
+              L2: {
+                var12 = ((aw) this).field_ec;
+                var11 = var12;
+                var10 = var11;
+                var9 = var10;
+                var3 = var9;
+                var4 = (float)(((aw) this).field_oc * -((aw) this).field_P) / (float)((aw) this).field_sc;
+                var5 = (float)(((aw) this).field_oc * (-((aw) this).field_P + ((aw) this).field_rb)) / (float)((aw) this).field_sc;
+                var6 = (float)(((aw) this).field_Hb * ((aw) this).field_oc) / (float)((aw) this).field_rc;
+                var7 = (float)(((aw) this).field_oc * (((aw) this).field_Hb + -((aw) this).field_Sb)) / (float)((aw) this).field_rc;
+                if (var5 == var4) {
+                  break L2;
+                } else {
+                  if (var7 != var6) {
+                    var8 = (float)((aw) this).field_oc * 2.0f;
+                    var3[0] = var8 / (-var4 + var5);
+                    var3[1] = 0.0f;
+                    var3[4] = 0.0f;
+                    var3[9] = (var6 + var7) / (var6 - var7);
+                    var3[15] = 0.0f;
+                    var3[5] = var8 / (-var7 + var6);
+                    var3[8] = (var5 + var4) / (-var4 + var5);
+                    ((aw) this).field_kb = (float)(((aw) this).field_Yb * ((aw) this).field_oc) / (float)(-((aw) this).field_Yb + ((aw) this).field_oc);
+                    var3[14] = (float)(((aw) this).field_Yb * ((aw) this).field_oc) / (float)(-((aw) this).field_Yb + ((aw) this).field_oc);
+                    var3[6] = 0.0f;
+                    var3[2] = 0.0f;
+                    var12[11] = -1.0f;
+                    var3[12] = 0.0f;
+                    var3[7] = 0.0f;
+                    var3[13] = 0.0f;
+                    var3[3] = 0.0f;
+                    ((aw) this).field_q = (float)((aw) this).field_Yb / (float)(((aw) this).field_oc - ((aw) this).field_Yb);
+                    var3[10] = (float)((aw) this).field_Yb / (float)(((aw) this).field_oc - ((aw) this).field_Yb);
+                    break L1;
+                  } else {
+                    break L2;
+                  }
+                }
+              }
+              var3[5] = 1.0f;
+              var3[11] = 0.0f;
+              var3[9] = 0.0f;
+              var3[8] = 0.0f;
+              var3[12] = 0.0f;
+              var3[0] = 1.0f;
+              var3[6] = 0.0f;
+              var3[2] = 0.0f;
+              var3[7] = 0.0f;
+              var3[3] = 0.0f;
+              var3[15] = 1.0f;
+              var3[13] = 0.0f;
+              var3[10] = 1.0f;
+              var3[14] = 0.0f;
+              var3[4] = 0.0f;
+              var3[1] = 0.0f;
+              break L1;
+            }
+            this.m((byte) -83);
+            ((aw) this).field_Jb = true;
+            break L0;
+          }
+        }
+    }
+
+    static {
+        $cfr$clinit();
+    }
+
+    private static void $cfr$clinit() {
+        field_t = new tf();
+    }
+}

@@ -1,0 +1,293 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+import java.util.*;
+
+final class mm extends le {
+    static String field_l;
+    static int field_i;
+    static String field_j;
+    private vo field_h;
+    static float field_k;
+
+    final void a(byte param0, wk param1) {
+        int var4 = ZombieDawn.field_J;
+        pb var5 = (pb) (Object) ((mm) this).field_h.b((byte) 26);
+        while (var5 != null) {
+            var5.a((byte) -28, param1);
+            var5 = (pb) (Object) ((mm) this).field_h.a(false);
+        }
+        if (param0 != 117) {
+            field_j = null;
+        }
+    }
+
+    final static boolean a(boolean param0) {
+        if (!param0) {
+            field_k = 1.1166023015975952f;
+        }
+        if (j.field_l == null) {
+            j.field_l = t.a(false, 6);
+        }
+        if (j.field_l.field_k) {
+            j.field_l = null;
+            return true;
+        }
+        return false;
+    }
+
+    public static void e(byte param0) {
+        field_j = null;
+        int var1 = -73 / ((param0 - -7) / 41);
+        field_l = null;
+    }
+
+    final static void c(byte param0) {
+        se.field_j = oj.b(0);
+        if (param0 > -57) {
+            mm.c((byte) -40);
+        }
+        e.field_S = new dn();
+        pn.a(true, (byte) -52, true);
+    }
+
+    final void a(int param0) {
+        int var3 = ZombieDawn.field_J;
+        pb var5 = (pb) (Object) ((mm) this).field_h.b((byte) 26);
+        while (var5 != null) {
+            var5.e((byte) -113);
+            var5 = (pb) (Object) ((mm) this).field_h.a(false);
+        }
+        if (param0 != -25687) {
+            Object var4 = null;
+            boolean discarded$0 = ((mm) this).a((ah) null, (byte) 55);
+        }
+    }
+
+    final static void d(byte param0) {
+        if (!(!uh.field_g)) {
+            return;
+        }
+        if (param0 < 84) {
+            field_i = 0;
+        }
+        int var1 = 20;
+        int var2 = 40;
+        int var3 = pb.a(so.field_a, 5, 1);
+        if (var3 == -1) {
+            ga.field_q = ga.field_q - 3;
+        } else {
+            if (!(-2 != var3)) {
+                ga.field_q = ga.field_q + 3;
+            }
+        }
+        if (!(ga.field_q >= var2)) {
+            ga.field_q = var2;
+        }
+        if (ga.field_q > var1 + var2) {
+            ga.field_q = var1 + var2;
+        }
+    }
+
+    final static dj a(int param0, byte param1) {
+        if (param1 >= -18) {
+            field_i = -54;
+        }
+        return hd.a(false, true, param0, 1, true, false);
+    }
+
+    final boolean a(ah param0, byte param1) {
+        int var6 = ZombieDawn.field_J;
+        int var3 = param0.a(true);
+        int var4 = param0.f(237239984);
+        if (param1 <= 49) {
+            mm.e((byte) 37);
+        }
+        pb var5 = (pb) (Object) ((mm) this).field_h.b((byte) 26);
+        while (var5 != null) {
+            if (var5.a(var4, var3, 114)) {
+                return true;
+            }
+            var5 = (pb) (Object) ((mm) this).field_h.a(false);
+        }
+        return false;
+    }
+
+    mm(int param0, int param1) {
+        boolean[][] var3 = null;
+        boolean[][] var4 = null;
+        int var5 = 0;
+        int var6 = 0;
+        int var7 = 0;
+        int var8 = 0;
+        boolean[][] var8_ref_boolean____ = null;
+        int var9 = 0;
+        int var10 = 0;
+        int var11 = 0;
+        boolean[][] var13 = null;
+        int var14 = 0;
+        boolean[][] var15 = null;
+        boolean[][] var16 = null;
+        boolean[][] var17 = null;
+        boolean[][] var18 = null;
+        param0 = param0 / 24;
+        param1 = param1 / 24;
+        var18 = new boolean[1 + 2 * t.field_b][1 + t.field_b * 2];
+        var17 = var18;
+        var16 = var17;
+        var15 = var16;
+        var13 = var15;
+        var3 = var13;
+        var4 = new boolean[var18.length][var18[0].length];
+        var5 = param0 - t.field_b;
+        var6 = -t.field_b + param1;
+        var13[t.field_b][t.field_b] = true;
+        var7 = 0;
+        L0: while (true) {
+          if (var7 >= t.field_b) {
+            ((mm) this).field_h = new vo();
+            var7 = 0;
+            L1: while (true) {
+              if (var7 >= var3.length) {
+              } else {
+                var14 = 0;
+                var8 = var14;
+                L2: while (true) {
+                  if (var14 >= var3[0].length) {
+                    var7++;
+                    continue L1;
+                  } else {
+                    var9 = var5 + var14;
+                    var10 = var7 + var6;
+                    var11 = (param0 + -var9) * (param0 + -var9) + (-var10 + param1) * (param1 - var10);
+                    if ((var11 ^ -1) > -82) {
+                      if (var3[var7][var14]) {
+                        ((mm) this).field_h.a(0, (le) (Object) new pb(var9, var10, var11));
+                        var14++;
+                        continue L2;
+                      } else {
+                        var14++;
+                        continue L2;
+                      }
+                    } else {
+                      var14++;
+                      continue L2;
+                    }
+                  }
+                }
+              }
+            }
+          } else {
+            var8 = 0;
+            L3: while (true) {
+              if (var3.length <= var8) {
+                var8_ref_boolean____ = var3;
+                var3 = var4;
+                var4 = var8_ref_boolean____;
+                var7++;
+                continue L0;
+              } else {
+                var9 = 0;
+                L4: while (true) {
+                  if (var9 >= var3[0].length) {
+                    var8++;
+                    continue L3;
+                  } else {
+                    var10 = var5 + var9;
+                    var11 = var6 + var8;
+                    if (-1 > var10) {
+                      if (-1 < var11) {
+                        if (vg.field_a[0].length > var10) {
+                          if (vg.field_a.length > var11) {
+                            if ((1 & vg.field_a[var11][var10] ^ -1) == -2) {
+                              L5: {
+                                if (var3[var8][var9]) {
+                                  break L5;
+                                } else {
+                                  L6: {
+                                    if (var9 >= -1) {
+                                      break L6;
+                                    } else {
+                                      if (var3[var8][-1 + var9]) {
+                                        break L5;
+                                      } else {
+                                        break L6;
+                                      }
+                                    }
+                                  }
+                                  L7: {
+                                    if (-1 >= var8) {
+                                      break L7;
+                                    } else {
+                                      if (var3[var8 + -1][var9]) {
+                                        break L5;
+                                      } else {
+                                        break L7;
+                                      }
+                                    }
+                                  }
+                                  L8: {
+                                    if (-1 + var3[0].length <= var9) {
+                                      break L8;
+                                    } else {
+                                      if (var3[var8][1 + var9]) {
+                                        break L5;
+                                      } else {
+                                        break L8;
+                                      }
+                                    }
+                                  }
+                                  if (var3.length + -1 > var8) {
+                                    if (var3[var8 + 1][var9]) {
+                                      break L5;
+                                    } else {
+                                      var9++;
+                                      continue L4;
+                                    }
+                                  } else {
+                                    var9++;
+                                    continue L4;
+                                  }
+                                }
+                              }
+                              var4[var8][var9] = true;
+                              var9++;
+                              continue L4;
+                            } else {
+                              var9++;
+                              continue L4;
+                            }
+                          } else {
+                            var9++;
+                            continue L4;
+                          }
+                        } else {
+                          var9++;
+                          continue L4;
+                        }
+                      } else {
+                        var9++;
+                        continue L4;
+                      }
+                    } else {
+                      var9++;
+                      continue L4;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+    }
+
+    static {
+        $cfr$clinit();
+    }
+
+    private static void $cfr$clinit() {
+        field_i = -1;
+        field_j = "More suggestions";
+        field_l = "MELTDOWN";
+    }
+}

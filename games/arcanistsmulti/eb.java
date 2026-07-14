@@ -1,0 +1,319 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class eb implements pf {
+    static mc[] field_b;
+    static qb field_d;
+    static String field_c;
+    static int field_a;
+
+    final static nk a(boolean param0, int param1, int param2, int param3) {
+        nk var4 = null;
+        nk var4_ref = null;
+        int var5 = 0;
+        nk var6 = null;
+        nk var7 = null;
+        var5 = ArcanistsMulti.field_G ? 1 : 0;
+        var4 = (nk) (Object) pe.field_Lb.b(12623);
+        if (!param0) {
+          eb.a((byte) -57);
+          L0: while (true) {
+            if (var4_ref == null) {
+              var7 = new nk();
+              var4_ref = var7;
+              var7.field_p = param2;
+              var7.field_t = param1;
+              pe.field_Lb.b((pg) (Object) var7, -1);
+              fj.a(-26971, var7, param3);
+              return var7;
+            } else {
+              if (param2 != var4_ref.field_p) {
+                var4 = (nk) (Object) pe.field_Lb.a(0);
+                continue L0;
+              } else {
+                return var4_ref;
+              }
+            }
+          }
+        } else {
+          L1: while (true) {
+            if (var4 == null) {
+              var6 = new nk();
+              var4_ref = var6;
+              var6.field_p = param2;
+              var6.field_t = param1;
+              pe.field_Lb.b((pg) (Object) var6, -1);
+              fj.a(-26971, var6, param3);
+              return var6;
+            } else {
+              if (param2 != var4.field_p) {
+                var4 = (nk) (Object) pe.field_Lb.a(0);
+                continue L1;
+              } else {
+                return var4;
+              }
+            }
+          }
+        }
+    }
+
+    public static void a(byte param0) {
+        field_b = null;
+        field_c = null;
+        if (param0 != 49) {
+            return;
+        }
+        field_d = null;
+    }
+
+    public final void a(qm param0, int param1, int param2, int param3, boolean param4) {
+        if (param1 == 5592405) {
+            return;
+        }
+        Object var7 = null;
+        eb.a(-82, (jg) null);
+    }
+
+    final static void a(int param0, boolean param1) {
+        Object var3 = null;
+        L0: {
+          ul.field_A = param0;
+          if (null != jl.field_h) {
+            jl.field_h.a(param0, (byte) -66);
+            break L0;
+          } else {
+            break L0;
+          }
+        }
+        if (param1) {
+          L1: {
+            var3 = null;
+            eb.a(84, (jg) null);
+            if (gg.field_h != null) {
+              gg.field_h.a(2, param0);
+              break L1;
+            } else {
+              break L1;
+            }
+          }
+          return;
+        } else {
+          L2: {
+            if (gg.field_h != null) {
+              gg.field_h.a(2, param0);
+              break L2;
+            } else {
+              break L2;
+            }
+          }
+          return;
+        }
+    }
+
+    final static void a(int param0, jg param1) {
+        int var3 = 0;
+        int var4 = 0;
+        ne var5 = null;
+        String var6 = null;
+        ne var7 = null;
+        String var8 = null;
+        ne var9 = null;
+        String var10 = null;
+        ne var11 = null;
+        String var12 = null;
+        ne var13 = null;
+        int stackIn_1_0 = 0;
+        Object stackIn_1_1 = null;
+        Object stackIn_1_2 = null;
+        String stackIn_1_3 = null;
+        long stackIn_1_4 = 0L;
+        int stackIn_1_5 = 0;
+        int stackIn_2_0 = 0;
+        Object stackIn_2_1 = null;
+        Object stackIn_2_2 = null;
+        String stackIn_2_3 = null;
+        long stackIn_2_4 = 0L;
+        int stackIn_2_5 = 0;
+        int stackIn_3_0 = 0;
+        Object stackIn_3_1 = null;
+        Object stackIn_3_2 = null;
+        String stackIn_3_3 = null;
+        long stackIn_3_4 = 0L;
+        int stackIn_3_5 = 0;
+        int stackIn_3_6 = 0;
+        int stackOut_0_0 = 0;
+        Object stackOut_0_1 = null;
+        Object stackOut_0_2 = null;
+        String stackOut_0_3 = null;
+        long stackOut_0_4 = 0L;
+        int stackOut_0_5 = 0;
+        int stackOut_2_0 = 0;
+        Object stackOut_2_1 = null;
+        Object stackOut_2_2 = null;
+        String stackOut_2_3 = null;
+        long stackOut_2_4 = 0L;
+        int stackOut_2_5 = 0;
+        int stackOut_2_6 = 0;
+        int stackOut_1_0 = 0;
+        Object stackOut_1_1 = null;
+        Object stackOut_1_2 = null;
+        String stackOut_1_3 = null;
+        long stackOut_1_4 = 0L;
+        int stackOut_1_5 = 0;
+        int stackOut_1_6 = 0;
+        L0: {
+          stackOut_0_0 = -26335;
+          stackOut_0_1 = null;
+          stackOut_0_2 = null;
+          stackOut_0_3 = param1.field_n;
+          stackOut_0_4 = param1.field_h;
+          stackOut_0_5 = param1.field_m;
+          stackIn_2_0 = stackOut_0_0;
+          stackIn_2_1 = stackOut_0_1;
+          stackIn_2_2 = stackOut_0_2;
+          stackIn_2_3 = stackOut_0_3;
+          stackIn_2_4 = stackOut_0_4;
+          stackIn_2_5 = stackOut_0_5;
+          stackIn_1_0 = stackOut_0_0;
+          stackIn_1_1 = stackOut_0_1;
+          stackIn_1_2 = stackOut_0_2;
+          stackIn_1_3 = stackOut_0_3;
+          stackIn_1_4 = stackOut_0_4;
+          stackIn_1_5 = stackOut_0_5;
+          if (1 == param1.field_m) {
+            stackOut_2_0 = stackIn_2_0;
+            stackOut_2_1 = (Object) (Object) stackIn_2_1;
+            stackOut_2_2 = (Object) (Object) stackIn_2_2;
+            stackOut_2_3 = (String) (Object) stackIn_2_3;
+            stackOut_2_4 = stackIn_2_4;
+            stackOut_2_5 = stackIn_2_5;
+            stackOut_2_6 = param1.field_q;
+            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_1 = stackOut_2_1;
+            stackIn_3_2 = stackOut_2_2;
+            stackIn_3_3 = stackOut_2_3;
+            stackIn_3_4 = stackOut_2_4;
+            stackIn_3_5 = stackOut_2_5;
+            stackIn_3_6 = stackOut_2_6;
+            break L0;
+          } else {
+            stackOut_1_0 = stackIn_1_0;
+            stackOut_1_1 = (Object) (Object) stackIn_1_1;
+            stackOut_1_2 = (Object) (Object) stackIn_1_2;
+            stackOut_1_3 = (String) (Object) stackIn_1_3;
+            stackOut_1_4 = stackIn_1_4;
+            stackOut_1_5 = stackIn_1_5;
+            stackOut_1_6 = 0;
+            stackIn_3_0 = stackOut_1_0;
+            stackIn_3_1 = stackOut_1_1;
+            stackIn_3_2 = stackOut_1_2;
+            stackIn_3_3 = stackOut_1_3;
+            stackIn_3_4 = stackOut_1_4;
+            stackIn_3_5 = stackOut_1_5;
+            stackIn_3_6 = stackOut_1_6;
+            break L0;
+          }
+        }
+        L1: {
+          ArcanistsMulti.a(stackIn_3_0, (int[]) (Object) stackIn_3_1, (dn) (Object) stackIn_3_2, (String) (Object) stackIn_3_3, stackIn_3_4, stackIn_3_5, stackIn_3_6, param1.field_g, param1.field_a);
+          if (param1.field_m != param0) {
+            break L1;
+          } else {
+            if (lk.f(-1)) {
+              break L1;
+            } else {
+              if (wi.field_f != null) {
+                break L1;
+              } else {
+                if (null != om.field_x) {
+                  break L1;
+                } else {
+                  L2: {
+                    if (ld.field_p) {
+                      break L2;
+                    } else {
+                      var5 = eo.field_c;
+                      var6 = jd.field_i;
+                      var5.field_l.a(14, var6, (byte) -26);
+                      break L2;
+                    }
+                  }
+                  var7 = eo.field_c;
+                  var8 = lk.field_h;
+                  var7.field_l.a(20, var8, (byte) -26);
+                  break L1;
+                }
+              }
+            }
+          }
+        }
+        L3: {
+          if ((param1.field_m ^ -1) != -2) {
+            break L3;
+          } else {
+            if (lk.f(-1)) {
+              break L3;
+            } else {
+              if (null == wi.field_f) {
+                break L3;
+              } else {
+                if (param1.field_q != wi.field_f.h((byte) 78)) {
+                  break L3;
+                } else {
+                  L4: {
+                    if (ld.field_p) {
+                      break L4;
+                    } else {
+                      var9 = eo.field_c;
+                      var10 = vk.field_v;
+                      var9.field_l.a(14, var10, (byte) -26);
+                      break L4;
+                    }
+                  }
+                  var11 = eo.field_c;
+                  var12 = ef.field_s;
+                  var11.field_l.a(20, var12, (byte) -26);
+                  break L3;
+                }
+              }
+            }
+          }
+        }
+        eo.field_c.a(3);
+        eo.field_c.a((byte) 72, false);
+        eo.field_c.a(param1.field_m, param1.field_f, 13);
+        eo.field_c.d(5552);
+        eo.field_c.a(19, param1);
+        var13 = eo.field_c;
+        var3 = pb.field_h;
+        var4 = ja.field_s;
+        var13.field_l.a(0, 0, -29466, var4, var3);
+    }
+
+    final static void a(boolean param0, int param1) {
+        if (param1 > -81) {
+            return;
+        }
+        mj.a(-6578, param0);
+        if (!(null == kh.field_c)) {
+            fk.a(0, kh.field_c);
+        }
+    }
+
+    final static void a(qb[] param0, int param1, int param2, int param3) {
+        ol.field_f = new ec(param0);
+        mj.field_r = param3;
+        int var4 = -103 / ((param2 - 31) / 55);
+        tg.field_d = param1;
+        eg.b(403300833);
+    }
+
+    static {
+        $cfr$clinit();
+    }
+
+    private static void $cfr$clinit() {
+        field_b = null;
+        field_c = "Just one target left!";
+    }
+}

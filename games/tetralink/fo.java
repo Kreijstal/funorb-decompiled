@@ -1,0 +1,78 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class fo extends nn implements uc {
+    private vm field_fb;
+    static String field_db;
+    static String field_eb;
+    private int field_gb;
+
+    final void a(na param0, int param1, int param2, boolean param3) {
+        super.a(param0, param1, param2, param3);
+        if (!param3) {
+          return;
+        } else {
+          ((fo) this).field_gb = aa.field_Nb + -((fo) this).field_t - param1;
+          return;
+        }
+    }
+
+    fo(String param0, dn param1, int param2) {
+        super(param0, param1, param2);
+    }
+
+    final void j(int param0) {
+        super.j(param0);
+        if (((fo) this).field_fb != null) {
+            ((fo) this).field_fb.a(118);
+        }
+    }
+
+    final void a(byte param0, vm param1) {
+        ((fo) this).field_fb = param1;
+        int var3 = -96 % ((-9 - param0) / 48);
+    }
+
+    final String e(int param0) {
+        if (((fo) this).field_r) {
+          if (null != ((fo) this).field_C) {
+            if (param0 != 0) {
+              return null;
+            } else {
+              kj.a((byte) -77, ((fo) this).field_F + -((fo) this).field_gb + aa.field_Nb, a.field_a);
+              return ((fo) this).field_C;
+            }
+          } else {
+            return null;
+          }
+        } else {
+          return null;
+        }
+    }
+
+    public static void o(int param0) {
+        field_db = null;
+        field_eb = null;
+        if (param0 != 29790) {
+            field_db = null;
+        }
+    }
+
+    public final vm a(int param0) {
+        if (param0 >= -100) {
+            Object var3 = null;
+            ((fo) this).a((byte) -21, (vm) null);
+            return ((fo) this).field_fb;
+        }
+        return ((fo) this).field_fb;
+    }
+
+    static {
+        $cfr$clinit();
+    }
+
+    private static void $cfr$clinit() {
+        field_db = "Rankings";
+        field_eb = "Visit the Account Management section on the main site to view.";
+    }
+}

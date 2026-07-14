@@ -1,0 +1,67 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class lra extends ora implements va {
+    static String[] field_c;
+    static long field_f;
+    static jea field_e;
+    static jea field_d;
+    static int field_g;
+    private int field_h;
+
+    public final void a(int param0, int param1, byte param2, byte[] param3) {
+        ((lra) this).a(param3, param1);
+        if (param2 > -109) {
+          ((lra) this).field_h = param0;
+          return;
+        } else {
+          ((lra) this).field_h = param0;
+          return;
+        }
+    }
+
+    lra(cka param0, int param1, byte[] param2, int param3) {
+        super(param0, param2, param3);
+        ((lra) this).field_h = param1;
+    }
+
+    public final long b(int param0) {
+        int var2 = 54 % ((30 - param0) / 32);
+        return ((lra) this).field_b.getAddress();
+    }
+
+    public final int a(boolean param0) {
+        if (!param0) {
+            int discarded$0 = ((lra) this).a(-89);
+            return 0;
+        }
+        return 0;
+    }
+
+    public static void c(int param0) {
+        field_d = null;
+        field_c = null;
+        field_e = null;
+        if (param0 != 18168) {
+            lra.c(16);
+        }
+    }
+
+    public final int a(int param0) {
+        if (param0 != 26653) {
+            field_g = 30;
+            return ((lra) this).field_h;
+        }
+        return ((lra) this).field_h;
+    }
+
+    static {
+        $cfr$clinit();
+    }
+
+    private static void $cfr$clinit() {
+        field_f = 2023746978L;
+        field_c = new String[16];
+        field_g = 0;
+    }
+}

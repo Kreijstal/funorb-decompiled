@@ -1,0 +1,212 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class fn extends vw {
+    static int[] field_f;
+    private float field_e;
+    private hk field_d;
+
+    final static void a(int param0, long param1, int param2) {
+        kh var4 = ql.field_k;
+        var4.k(param0, -2988);
+        var4.field_h = var4.field_h + 1;
+        int var6 = -78 % ((-78 - param2) / 40);
+        int var5 = var4.field_h;
+        var4.i(7, 0);
+        var4.a(1736565456, param1);
+        var4.d(var4.field_h - var5, (byte) 11);
+    }
+
+    fn(eo param0, hk param1) {
+        super(param0);
+        ((fn) this).field_e = 0.0f;
+        ((fn) this).field_d = param1;
+    }
+
+    final void a(byte param0, int param1, int param2) {
+        int var4 = 0;
+        int var5 = 0;
+        L0: {
+          var5 = TombRacer.field_G ? 1 : 0;
+          if (param0 == 55) {
+            break L0;
+          } else {
+            boolean discarded$1 = ((fn) this).c(66);
+            break L0;
+          }
+        }
+        ((fn) this).field_c.e(1, false);
+        if (-1 == (param1 & 128 ^ -1)) {
+          if ((1 & param2 ^ -1) != -2) {
+            if (((fn) this).field_d.field_g) {
+              ((fn) this).field_c.a(true, (iva) (Object) ((fn) this).field_d.field_c);
+              ((fn) this).field_c.e(0, false);
+              return;
+            } else {
+              ((fn) this).field_c.a(true, (iva) (Object) ((fn) this).field_d.field_d[0]);
+              ((fn) this).field_c.e(0, false);
+              return;
+            }
+          } else {
+            if (((fn) this).field_d.field_g) {
+              ((fn) this).field_e = (float)(((fn) this).field_c.field_Dc % 4000) / 4000.0f;
+              ((fn) this).field_c.a(true, (iva) (Object) ((fn) this).field_d.field_c);
+              ((fn) this).field_c.e(0, false);
+              return;
+            } else {
+              var4 = ((fn) this).field_c.field_Dc % 4000 * 16 / 4000;
+              ((fn) this).field_c.a(true, (iva) (Object) ((fn) this).field_d.field_d[var4]);
+              ((fn) this).field_c.e(0, false);
+              return;
+            }
+          }
+        } else {
+          ((fn) this).field_c.a(true, (iva) null);
+          ((fn) this).field_c.e(0, false);
+          return;
+        }
+    }
+
+    final void a(int param0) {
+        if (param0 > -4) {
+          field_f = null;
+          ((fn) this).field_c.e(1, false);
+          ((fn) this).field_c.a(iw.field_c, (byte) -110, iw.field_c);
+          ((fn) this).field_c.a(ej.field_c, 0, -55);
+          ((fn) this).field_c.a(0, false, ej.field_c);
+          ((fn) this).field_c.a(1, (byte) 58);
+          ((fn) this).field_c.a(true, (iva) null);
+          ((fn) this).field_c.e(0, false);
+          ((fn) this).field_c.a(0, false, ej.field_c);
+          return;
+        } else {
+          ((fn) this).field_c.e(1, false);
+          ((fn) this).field_c.a(iw.field_c, (byte) -110, iw.field_c);
+          ((fn) this).field_c.a(ej.field_c, 0, -55);
+          ((fn) this).field_c.a(0, false, ej.field_c);
+          ((fn) this).field_c.a(1, (byte) 58);
+          ((fn) this).field_c.a(true, (iva) null);
+          ((fn) this).field_c.e(0, false);
+          ((fn) this).field_c.a(0, false, ej.field_c);
+          return;
+        }
+    }
+
+    final void c(boolean param0) {
+        asa var2 = null;
+        asa var3 = null;
+        eo stackIn_4_0 = null;
+        int stackIn_4_1 = 0;
+        eo stackIn_5_0 = null;
+        int stackIn_5_1 = 0;
+        eo stackIn_6_0 = null;
+        int stackIn_6_1 = 0;
+        int stackIn_6_2 = 0;
+        eo stackOut_3_0 = null;
+        int stackOut_3_1 = 0;
+        eo stackOut_5_0 = null;
+        int stackOut_5_1 = 0;
+        int stackOut_5_2 = 0;
+        eo stackOut_4_0 = null;
+        int stackOut_4_1 = 0;
+        int stackOut_4_2 = 0;
+        if (!param0) {
+          return;
+        } else {
+          L0: {
+            if (0 == ((fn) this).field_c.o((byte) 122)) {
+              L1: {
+                var2 = ((fn) this).field_c.a((byte) 80);
+                stackOut_3_0 = ((fn) this).field_c;
+                stackOut_3_1 = 1;
+                stackIn_5_0 = stackOut_3_0;
+                stackIn_5_1 = stackOut_3_1;
+                stackIn_4_0 = stackOut_3_0;
+                stackIn_4_1 = stackOut_3_1;
+                if (param0) {
+                  stackOut_5_0 = (eo) (Object) stackIn_5_0;
+                  stackOut_5_1 = stackIn_5_1;
+                  stackOut_5_2 = 0;
+                  stackIn_6_0 = stackOut_5_0;
+                  stackIn_6_1 = stackOut_5_1;
+                  stackIn_6_2 = stackOut_5_2;
+                  break L1;
+                } else {
+                  stackOut_4_0 = (eo) (Object) stackIn_4_0;
+                  stackOut_4_1 = stackIn_4_1;
+                  stackOut_4_2 = 1;
+                  stackIn_6_0 = stackOut_4_0;
+                  stackIn_6_1 = stackOut_4_1;
+                  stackIn_6_2 = stackOut_4_2;
+                  break L1;
+                }
+              }
+              ((eo) (Object) stackIn_6_0).e(stackIn_6_1, stackIn_6_2 != 0);
+              var3 = ((fn) this).field_c.C(0);
+              var3.a((gda) (Object) var2, 1);
+              var3.b(11403, 1.0f, 0.125f, 0.125f);
+              var3.a(0.0f, -120, 0.0f, ((fn) this).field_e);
+              ((fn) this).field_c.a(cva.field_b, false);
+              ((fn) this).field_c.e(0, false);
+              break L0;
+            } else {
+              break L0;
+            }
+          }
+          return;
+        }
+    }
+
+    final boolean c(int param0) {
+        if (param0 != 1185) {
+            return false;
+        }
+        return ((fn) this).field_d.c(param0 + -31819);
+    }
+
+    final void a(boolean param0, int param1) {
+        if (param1 != 5744) {
+          ((fn) this).field_e = 1.964166283607483f;
+          ((fn) this).field_c.a(ln.field_F, (byte) -110, iw.field_c);
+          return;
+        } else {
+          ((fn) this).field_c.a(ln.field_F, (byte) -110, iw.field_c);
+          return;
+        }
+    }
+
+    final void a(int param0, iva param1, int param2) {
+        ((fn) this).field_c.a(true, param1);
+        if (param2 != 24595) {
+            ((fn) this).field_e = -1.8459935188293457f;
+        }
+    }
+
+    public static void d(int param0) {
+        field_f = null;
+        if (param0 != -16973) {
+            field_f = null;
+        }
+    }
+
+    final void a(int param0, boolean param1) {
+        ((fn) this).field_c.e(1, false);
+        ((fn) this).field_c.a(ln.field_F, (byte) -110, jv.field_m);
+        ((fn) this).field_c.a(ej.field_c, 0, -6219, true, false);
+        ((fn) this).field_c.a(0, false, lja.field_j);
+        ((fn) this).field_c.a(0, (byte) 77);
+        ((fn) this).field_c.e(0, false);
+        ((fn) this).field_c.g(3625, -16777216);
+        ((fn) this).field_c.a(0, false, pea.field_c);
+        ((fn) this).c(true);
+        int var3 = -101 % ((41 - param0) / 62);
+    }
+
+    static {
+        $cfr$clinit();
+    }
+
+    private static void $cfr$clinit() {
+        field_f = new int[]{16777215, 16777215, 16711680};
+    }
+}

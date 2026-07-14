@@ -1,0 +1,74 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class oj extends rf {
+    static ae field_j;
+    int field_h;
+    int field_i;
+    static Boolean field_g;
+    static String field_k;
+    static java.applet.Applet field_f;
+
+    final static int a(int param0) {
+        if (param0 > -15) {
+            field_k = null;
+            return pg.field_g;
+        }
+        return pg.field_g;
+    }
+
+    final static hl a(int param0, int param1, int param2) {
+        int var4 = 0;
+        int var5 = StarCannon.field_A;
+        hl var6 = new hl(param2, param2);
+        hl var3 = var6;
+        for (var4 = param0; var3.field_B.length > var4; var4++) {
+            var6.field_B[var4] = param1;
+        }
+        return var3;
+    }
+
+    public static void d(int param0) {
+        field_f = null;
+        field_j = null;
+        field_g = null;
+        field_k = null;
+        if (param0 >= -70) {
+            hl discarded$0 = oj.a(-48, -110, -128);
+        }
+    }
+
+    final static hl[] a(int param0, int param1, int param2, int param3, int param4) {
+        hl[] var5 = null;
+        hl[] var6 = null;
+        var6 = new hl[9];
+        var5 = var6;
+        var6[6] = oj.a(0, param1, param2);
+        var5[3] = oj.a(0, param1, param2);
+        var5[2] = oj.a(0, param1, param2);
+        var5[1] = oj.a(0, param1, param2);
+        var5[0] = oj.a(0, param1, param2);
+        var6[8] = oj.a(0, param3, param2);
+        var5[7] = oj.a(0, param3, param2);
+        var5[5] = oj.a(0, param3, param2);
+        if ((param4 ^ -1) != param0) {
+          var6[4] = oj.a(0, param4, 64);
+          return var5;
+        } else {
+          return var5;
+        }
+    }
+
+    private oj() throws Throwable {
+        throw new Error();
+    }
+
+    static {
+        $cfr$clinit();
+    }
+
+    private static void $cfr$clinit() {
+        field_j = new ae();
+        field_k = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!#$%&'*+-/=?^_{}~";
+    }
+}

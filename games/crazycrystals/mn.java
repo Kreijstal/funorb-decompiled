@@ -1,0 +1,168 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class mn extends pd {
+    private int field_h;
+    static String[] field_l;
+    private int field_k;
+    static byte[][] field_i;
+    static sj field_j;
+    static String field_m;
+
+    final void a(byte param0) {
+        tb.field_d.a(de.field_l, 100, ((mn) this).field_h * gi.field_m * 48, ((mn) this).field_k / ((mn) this).field_h);
+        ((mn) this).field_h = 0;
+        ((mn) this).field_k = 0;
+        int var2 = 123 % ((param0 - 29) / 42);
+    }
+
+    final pb b(byte param0) {
+        if (param0 >= -127) {
+            mn.b(true);
+        }
+        return (pb) (Object) new ti();
+    }
+
+    final static dl[] c(int param0) {
+        dl[] var1 = null;
+        int var2 = 0;
+        int var3 = 0;
+        byte[] var5 = null;
+        int var6 = 0;
+        int[] var6_ref_int__ = null;
+        int var7 = 0;
+        int var8 = 0;
+        byte[] var9 = null;
+        int[] var10 = null;
+        byte[] var12 = null;
+        int[] var13 = null;
+        byte[] var16 = null;
+        int[] var17 = null;
+        byte[] var20 = null;
+        int[] var21 = null;
+        byte[] var23 = null;
+        byte[] var24 = null;
+        int[] var25 = null;
+        int[] var26 = null;
+        var8 = CrazyCrystals.field_B;
+        var1 = new dl[mg.field_a];
+        var2 = param0;
+        L0: while (true) {
+          if (var2 >= mg.field_a) {
+            ok.a(param0 ^ 2188450);
+            return var1;
+          } else {
+            var3 = je.field_c[var2] * uo.field_l[var2];
+            var23 = ui.field_c[var2];
+            if (!rh.field_a[var2]) {
+              var10 = new int[var3];
+              var26 = var10;
+              var6 = 0;
+              L1: while (true) {
+                if (var6 >= var3) {
+                  var1[var2] = new dl(km.field_c, bo.field_o, uo.field_k[var2], jm.field_a[var2], uo.field_l[var2], je.field_c[var2], var26);
+                  var2++;
+                  continue L0;
+                } else {
+                  var10[var6] = gh.field_z[pf.b((int) var23[var6], 255)];
+                  var6++;
+                  continue L1;
+                }
+              }
+            } else {
+              var24 = ng.field_g[var2];
+              var20 = var24;
+              var16 = var20;
+              var12 = var16;
+              var9 = var12;
+              var5 = var9;
+              var25 = new int[var3];
+              var21 = var25;
+              var17 = var21;
+              var13 = var17;
+              var6_ref_int__ = var13;
+              var7 = 0;
+              L2: while (true) {
+                if (var7 >= var3) {
+                  var1[var2] = (dl) (Object) new vi(km.field_c, bo.field_o, uo.field_k[var2], jm.field_a[var2], uo.field_l[var2], je.field_c[var2], var25);
+                  var2++;
+                  continue L0;
+                } else {
+                  var6_ref_int__[var7] = hm.a(gh.field_z[pf.b((int) var23[var7], 255)], pf.b((int) var24[var7], 255) << -621880424);
+                  var7++;
+                  continue L2;
+                }
+              }
+            }
+          }
+        }
+    }
+
+    final static void b(boolean param0) {
+        vl.field_f.a((byte) -116);
+        vl.field_f = null;
+        if (param0) {
+            field_l = null;
+        }
+        be.field_d.a((byte) -21);
+        be.field_d = null;
+        tl.field_a.a((byte) -87);
+        tl.field_a = null;
+        jo.field_p.a((byte) -96);
+        jo.field_p = null;
+        sa.field_mb.a((byte) -54);
+        sa.field_mb = null;
+        io.field_M.a((byte) -98);
+        io.field_M = null;
+        ec.field_k.a((byte) -43);
+        ec.field_k = null;
+    }
+
+    public static void c(byte param0) {
+        field_l = null;
+        field_i = null;
+        field_m = null;
+        field_j = null;
+        if (param0 != 19) {
+            field_j = null;
+        }
+    }
+
+    final void a(boolean param0, int param1, int param2, int param3) {
+        int var6 = CrazyCrystals.field_B;
+        if (!param0) {
+            field_j = null;
+        }
+        param2 = param2 + param3;
+        while (param2 > param3) {
+            pd.field_g[param1] = pd.field_g[param1] + (4 > q.field_a[ma.field_n[param1]].field_c[param3] ? 50 : 100);
+            param3++;
+        }
+    }
+
+    mn() {
+        ((mn) this).field_h = 0;
+        ((mn) this).field_k = 0;
+    }
+
+    final f a(boolean param0, int param1, int param2, int param3, ta param4) {
+        if (param0) {
+            return null;
+        }
+        ((mn) this).field_k = ((mn) this).field_k + param3;
+        ((mn) this).field_h = ((mn) this).field_h + 1;
+        ph.a((q.field_a[ma.field_n[param1]].field_c[param2] ^ -1) <= -5 ? 100 : 50, (byte) 107, param1, param4);
+        return bm.field_g;
+    }
+
+    static {
+        $cfr$clinit();
+    }
+
+    private static void $cfr$clinit() {
+        field_l = new String[]{"Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"};
+        field_i = new byte[1000][];
+        field_j = new sj(0, 2, 2, 1);
+        field_m = "All Spiders";
+    }
+}

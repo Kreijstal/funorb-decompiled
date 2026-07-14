@@ -1,0 +1,54 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class wm {
+    int field_e;
+    int field_b;
+    static ak field_d;
+    static ge field_a;
+    static int field_c;
+
+    final static void a(int param0, boolean[] param1) {
+        int var2 = 0;
+        var2 = param1[0] ? 1 : 0;
+        param1[0] = param1[2];
+        if (param0 != -11825) {
+          field_a = null;
+          param1[2] = param1[3];
+          param1[3] = param1[1];
+          param1[1] = var2 != 0;
+          return;
+        } else {
+          param1[2] = param1[3];
+          param1[3] = param1[1];
+          param1[1] = var2 != 0;
+          return;
+        }
+    }
+
+    public static void a(boolean param0) {
+        if (param0) {
+            return;
+        }
+        field_d = null;
+        field_a = null;
+    }
+
+    public final String toString() {
+        throw new IllegalStateException();
+    }
+
+    wm(int param0, int param1, int param2, int param3) {
+        ((wm) this).field_b = param0;
+        ((wm) this).field_e = param3;
+    }
+
+    static {
+        $cfr$clinit();
+    }
+
+    private static void $cfr$clinit() {
+        field_c = 0;
+        field_a = new ge();
+    }
+}

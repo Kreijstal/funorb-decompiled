@@ -1,0 +1,39 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class cd {
+    static int field_b;
+    static int field_c;
+    static String field_a;
+
+    public static void a(int param0) {
+        if (param0 != 5) {
+            int discarded$0 = cd.a(true);
+            field_a = null;
+            return;
+        }
+        field_a = null;
+    }
+
+    private cd() throws Throwable {
+        throw new Error();
+    }
+
+    final static int a(boolean param0) {
+        if (!param0) {
+            field_a = null;
+            return klb.field_r.f(-2147483648);
+        }
+        return klb.field_r.f(-2147483648);
+    }
+
+    static {
+        $cfr$clinit();
+    }
+
+    private static void $cfr$clinit() {
+        field_b = 5;
+        field_c = 0;
+        field_a = "Create random message";
+    }
+}

@@ -1,0 +1,117 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class vqb extends rqa {
+    static llb field_o;
+
+    vqb(String param0, Class[] param1, String param2) {
+        super(param0, param1, param2);
+    }
+
+    public static void e(byte param0) {
+        field_o = null;
+        if (param0 >= -15) {
+            field_o = null;
+        }
+    }
+
+    final nc a(nc[] param0, int param1) {
+        if (param1 > -119) {
+            return null;
+        }
+        return new nc((Object) (Object) frb.a(150, 94));
+    }
+
+    final static void f(byte param0) {
+        egb.field_o = new String[fva.field_o];
+        egb.field_o[5] = lr.field_q;
+        egb.field_o[21] = bda.field_a;
+        egb.field_o[15] = rq.field_G;
+        egb.field_o[17] = otb.field_p;
+        egb.field_o[9] = vqa.field_j;
+        if (param0 > -75) {
+          return;
+        } else {
+          egb.field_o[11] = fk.field_d;
+          egb.field_o[7] = gcb.field_o;
+          egb.field_o[19] = cfa.field_e;
+          egb.field_o[20] = rhb.field_o;
+          egb.field_o[4] = hcb.field_q;
+          egb.field_o[16] = hoa.field_p;
+          egb.field_o[18] = tr.field_b;
+          egb.field_o[13] = bjb.field_q;
+          egb.field_o[6] = uea.field_p;
+          return;
+        }
+    }
+
+    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13, int param14, int param15) {
+        int var17 = 0;
+        var17 = VoidHunters.field_G;
+        if (param15 >= param5) {
+          if (param15 < param11) {
+            emb.a(param7, param6, param14, param11, dma.field_i, param2, param12, param5, param1, param13, param8, param4, param0, param15, param3, -1, param10);
+            if (param9 != -18419) {
+              vqb.a(true, -61);
+              return;
+            } else {
+              return;
+            }
+          } else {
+            if (param11 <= param5) {
+              emb.a(param1, param2, param8, param15, dma.field_i, param0, param14, param11, param4, param10, param12, param7, param6, param5, param13, param9 ^ 18418, param3);
+              if (param9 != -18419) {
+                vqb.a(true, -61);
+                return;
+              } else {
+                return;
+              }
+            } else {
+              emb.a(param4, param0, param14, param15, dma.field_i, param2, param8, param5, param1, param13, param12, param7, param6, param11, param10, param9 + 18418, param3);
+              if (param9 != -18419) {
+                vqb.a(true, -61);
+                return;
+              } else {
+                return;
+              }
+            }
+          }
+        } else {
+          if (param11 > param5) {
+            emb.a(param1, param2, param12, param11, dma.field_i, param6, param14, param15, param7, param3, param8, param4, param0, param5, param13, param9 + 18418, param10);
+            if (param9 == -18419) {
+              return;
+            } else {
+              vqb.a(true, -61);
+              return;
+            }
+          } else {
+            if (param15 >= param11) {
+              emb.a(param7, param6, param8, param5, dma.field_i, param0, param12, param11, param4, param10, param14, param1, param2, param15, param3, -1, param13);
+              if (param9 == -18419) {
+                return;
+              } else {
+                vqb.a(true, -61);
+                return;
+              }
+            } else {
+              emb.a(param4, param0, param12, param5, dma.field_i, param6, param8, param15, param7, param3, param14, param1, param2, param11, param10, -1, param13);
+              if (param9 != -18419) {
+                vqb.a(true, -61);
+                return;
+              } else {
+                return;
+              }
+            }
+          }
+        }
+    }
+
+    final static void a(boolean param0, int param1) {
+        klb.field_r.a(0, 0, 0);
+        int var2 = 100 % ((-38 - param1) / 39);
+    }
+
+    static {
+    }
+}

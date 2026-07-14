@@ -1,0 +1,936 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class hj implements Runnable {
+    static String[] field_c;
+    volatile boolean field_b;
+    uf field_d;
+    static char[] field_f;
+    volatile boolean field_e;
+    volatile oa[] field_a;
+
+    public static void a(int param0) {
+        field_c = null;
+        if (param0 != -3968) {
+            hj.a((byte) 102, -80);
+            field_f = null;
+            return;
+        }
+        field_f = null;
+    }
+
+    final static void a(byte param0, int param1) {
+        hd.field_s = 3 & param1 >> -169374172;
+        he.field_d = param1 >> -652271166 & 3;
+        if (param0 == 100) {
+          if ((hd.field_s ^ -1) >= -3) {
+            fj.field_S = 3 & param1;
+            if ((he.field_d ^ -1) >= -3) {
+              if (2 < fj.field_S) {
+                fj.field_S = 2;
+                return;
+              } else {
+                return;
+              }
+            } else {
+              he.field_d = 2;
+              if (2 < fj.field_S) {
+                fj.field_S = 2;
+                return;
+              } else {
+                return;
+              }
+            }
+          } else {
+            hd.field_s = 2;
+            fj.field_S = 3 & param1;
+            if ((he.field_d ^ -1) >= -3) {
+              if (2 < fj.field_S) {
+                fj.field_S = 2;
+                return;
+              } else {
+                return;
+              }
+            } else {
+              he.field_d = 2;
+              if (2 < fj.field_S) {
+                fj.field_S = 2;
+                return;
+              } else {
+                return;
+              }
+            }
+          }
+        } else {
+          field_c = null;
+          if ((hd.field_s ^ -1) < -3) {
+            hd.field_s = 2;
+            fj.field_S = 3 & param1;
+            if ((he.field_d ^ -1) < -3) {
+              he.field_d = 2;
+              if (2 < fj.field_S) {
+                fj.field_S = 2;
+                return;
+              } else {
+                return;
+              }
+            } else {
+              L0: {
+                if (2 >= fj.field_S) {
+                  break L0;
+                } else {
+                  fj.field_S = 2;
+                  break L0;
+                }
+              }
+              return;
+            }
+          } else {
+            fj.field_S = 3 & param1;
+            if ((he.field_d ^ -1) < -3) {
+              he.field_d = 2;
+              if (2 >= fj.field_S) {
+                return;
+              } else {
+                fj.field_S = 2;
+                return;
+              }
+            } else {
+              L1: {
+                if (2 >= fj.field_S) {
+                  break L1;
+                } else {
+                  fj.field_S = 2;
+                  break L1;
+                }
+              }
+              return;
+            }
+          }
+        }
+    }
+
+    public final void run() {
+        int var1_int = 0;
+        Exception var1 = null;
+        oa var2 = null;
+        Throwable var3 = null;
+        int var4 = 0;
+        Object var5 = null;
+        int statePc = 0;
+        Throwable caughtException = null;
+        stateLoop: while (true) {
+            switch (statePc) {
+                case 0: {
+                    var4 = TrackController.field_F ? 1 : 0;
+                    ((hj) this).field_e = true;
+                    statePc = 1;
+                    continue stateLoop;
+                }
+                case 1: {
+                    try {
+                        if (((hj) this).field_b) {
+                            statePc = 9;
+                        } else {
+                            statePc = 2;
+                        }
+                        continue stateLoop;
+                    } catch (Throwable stateCaught_1) {
+                        caughtException = stateCaught_1;
+                        statePc = (stateCaught_1 instanceof Exception ? 10 : 12);
+                        continue stateLoop;
+                    }
+                }
+                case 2: {
+                    try {
+                        var1_int = 0;
+                        statePc = 3;
+                        continue stateLoop;
+                    } catch (Throwable stateCaught_2) {
+                        caughtException = stateCaught_2;
+                        statePc = (stateCaught_2 instanceof Exception ? 10 : 12);
+                        continue stateLoop;
+                    }
+                }
+                case 3: {
+                    try {
+                        if (2 <= var1_int) {
+                            statePc = 8;
+                        } else {
+                            statePc = 4;
+                        }
+                        continue stateLoop;
+                    } catch (Throwable stateCaught_3) {
+                        caughtException = stateCaught_3;
+                        statePc = (stateCaught_3 instanceof Exception ? 10 : 12);
+                        continue stateLoop;
+                    }
+                }
+                case 4: {
+                    try {
+                        var2 = ((hj) this).field_a[var1_int];
+                        if (var2 == null) {
+                            statePc = 6;
+                        } else {
+                            statePc = 5;
+                        }
+                        continue stateLoop;
+                    } catch (Throwable stateCaught_4) {
+                        caughtException = stateCaught_4;
+                        statePc = (stateCaught_4 instanceof Exception ? 10 : 12);
+                        continue stateLoop;
+                    }
+                }
+                case 5: {
+                    try {
+                        var2.b();
+                        statePc = 7;
+                        continue stateLoop;
+                    } catch (Throwable stateCaught_5) {
+                        caughtException = stateCaught_5;
+                        statePc = (stateCaught_5 instanceof Exception ? 10 : 12);
+                        continue stateLoop;
+                    }
+                }
+                case 6: {
+                    try {
+                        var1_int++;
+                        statePc = 7;
+                        continue stateLoop;
+                    } catch (Throwable stateCaught_6) {
+                        caughtException = stateCaught_6;
+                        statePc = (stateCaught_6 instanceof Exception ? 10 : 12);
+                        continue stateLoop;
+                    }
+                }
+                case 7: {
+                    try {
+                        var1_int++;
+                        statePc = 3;
+                        continue stateLoop;
+                    } catch (Throwable stateCaught_7) {
+                        caughtException = stateCaught_7;
+                        statePc = (stateCaught_7 instanceof Exception ? 10 : 12);
+                        continue stateLoop;
+                    }
+                }
+                case 8: {
+                    try {
+                        wl.a(10L, false);
+                        f.a((Object) null, (byte) -127, ((hj) this).field_d);
+                        statePc = 1;
+                        continue stateLoop;
+                    } catch (Throwable stateCaught_8) {
+                        caughtException = stateCaught_8;
+                        statePc = (stateCaught_8 instanceof Exception ? 10 : 12);
+                        continue stateLoop;
+                    }
+                }
+                case 9: {
+                    ((hj) this).field_e = false;
+                    return;
+                }
+                case 10: {
+                    try {
+                        var1 = (Exception) (Object) caughtException;
+                        var5 = null;
+                        hb.a((Throwable) (Object) var1, 0, (String) null);
+                        statePc = 11;
+                        continue stateLoop;
+                    } catch (Throwable stateCaught_10) {
+                        caughtException = stateCaught_10;
+                        statePc = 12;
+                        continue stateLoop;
+                    }
+                }
+                case 11: {
+                    ((hj) this).field_e = false;
+                    return;
+                }
+                case 12: {
+                    try {
+                        var3 = caughtException;
+                        statePc = 13;
+                        continue stateLoop;
+                    } catch (Throwable stateCaught_12) {
+                        caughtException = stateCaught_12;
+                        statePc = 12;
+                        continue stateLoop;
+                    }
+                }
+                case 13: {
+                    ((hj) this).field_e = false;
+                    throw (RuntimeException) (Object) var3;
+                }
+                default: throw new IllegalStateException("invalid CFG state " + statePc);
+            }
+        }
+    }
+
+    final static byte a(char param0, byte param1) {
+        int var2 = 0;
+        int var3 = 0;
+        var3 = TrackController.field_F ? 1 : 0;
+        if (param1 > -117) {
+          hj.a(118);
+          if (param0 > 0) {
+            if (param0 >= 128) {
+              L0: {
+                if (param0 < 160) {
+                  break L0;
+                } else {
+                  if (param0 > 255) {
+                    break L0;
+                  } else {
+                    var2 = (byte)param0;
+                    return (byte) var2;
+                  }
+                }
+              }
+              if (param0 != 8364) {
+                if (param0 != 8218) {
+                  if (param0 == 402) {
+                    var2 = -125;
+                    return (byte) var2;
+                  } else {
+                    if (param0 == 8222) {
+                      var2 = -124;
+                      return (byte) var2;
+                    } else {
+                      L1: {
+                        if (8230 != param0) {
+                          if (param0 == 8224) {
+                            var2 = -122;
+                            return (byte) var2;
+                          } else {
+                            if (param0 != 8225) {
+                              if (param0 == 710) {
+                                var2 = -120;
+                                return (byte) var2;
+                              } else {
+                                if (param0 == 8240) {
+                                  var2 = -119;
+                                  return (byte) var2;
+                                } else {
+                                  if (352 != param0) {
+                                    if (param0 == 8249) {
+                                      var2 = -117;
+                                      return (byte) var2;
+                                    } else {
+                                      if (338 != param0) {
+                                        if (param0 != 381) {
+                                          if (param0 == 8216) {
+                                            var2 = -111;
+                                            return (byte) var2;
+                                          } else {
+                                            if (param0 != 8217) {
+                                              if (8220 == param0) {
+                                                var2 = -109;
+                                                return (byte) var2;
+                                              } else {
+                                                if (8221 != param0) {
+                                                  if (param0 == 8226) {
+                                                    var2 = -107;
+                                                    return (byte) var2;
+                                                  } else {
+                                                    if (param0 != 8211) {
+                                                      if (param0 == 8212) {
+                                                        var2 = -105;
+                                                        return (byte) var2;
+                                                      } else {
+                                                        if (param0 != 732) {
+                                                          if (param0 != 8482) {
+                                                            if (param0 != 353) {
+                                                              if (param0 == 8250) {
+                                                                var2 = -101;
+                                                                return (byte) var2;
+                                                              } else {
+                                                                if (param0 == 339) {
+                                                                  var2 = -100;
+                                                                  return (byte) var2;
+                                                                } else {
+                                                                  if (382 == param0) {
+                                                                    var2 = -98;
+                                                                    return (byte) var2;
+                                                                  } else {
+                                                                    if (param0 == 376) {
+                                                                      var2 = -97;
+                                                                      return (byte) var2;
+                                                                    } else {
+                                                                      var2 = 63;
+                                                                      return (byte) var2;
+                                                                    }
+                                                                  }
+                                                                }
+                                                              }
+                                                            } else {
+                                                              var2 = -102;
+                                                              return (byte) var2;
+                                                            }
+                                                          } else {
+                                                            var2 = -103;
+                                                            break L1;
+                                                          }
+                                                        } else {
+                                                          var2 = -104;
+                                                          break L1;
+                                                        }
+                                                      }
+                                                    } else {
+                                                      var2 = -106;
+                                                      break L1;
+                                                    }
+                                                  }
+                                                } else {
+                                                  var2 = -108;
+                                                  break L1;
+                                                }
+                                              }
+                                            } else {
+                                              var2 = -110;
+                                              break L1;
+                                            }
+                                          }
+                                        } else {
+                                          var2 = -114;
+                                          break L1;
+                                        }
+                                      } else {
+                                        var2 = -116;
+                                        break L1;
+                                      }
+                                    }
+                                  } else {
+                                    var2 = -118;
+                                    break L1;
+                                  }
+                                }
+                              }
+                            } else {
+                              var2 = -121;
+                              break L1;
+                            }
+                          }
+                        } else {
+                          var2 = -123;
+                          break L1;
+                        }
+                      }
+                      return (byte) var2;
+                    }
+                  }
+                } else {
+                  var2 = -126;
+                  return (byte) var2;
+                }
+              } else {
+                var2 = -128;
+                return (byte) var2;
+              }
+            } else {
+              var2 = (byte)param0;
+              return (byte) var2;
+            }
+          } else {
+            if (param0 >= 160) {
+              if (param0 > 255) {
+                if (param0 != 8364) {
+                  if (param0 != 8218) {
+                    if (param0 != 402) {
+                      if (param0 != 8222) {
+                        L2: {
+                          if (8230 != param0) {
+                            if (param0 != 8224) {
+                              if (param0 != 8225) {
+                                if (param0 == 710) {
+                                  var2 = -120;
+                                  return (byte) var2;
+                                } else {
+                                  if (param0 == 8240) {
+                                    var2 = -119;
+                                    break L2;
+                                  } else {
+                                    if (352 != param0) {
+                                      if (param0 == 8249) {
+                                        var2 = -117;
+                                        break L2;
+                                      } else {
+                                        if (338 != param0) {
+                                          if (param0 != 381) {
+                                            if (param0 == 8216) {
+                                              var2 = -111;
+                                              break L2;
+                                            } else {
+                                              if (param0 != 8217) {
+                                                if (8220 == param0) {
+                                                  var2 = -109;
+                                                  break L2;
+                                                } else {
+                                                  if (8221 != param0) {
+                                                    if (param0 == 8226) {
+                                                      var2 = -107;
+                                                      break L2;
+                                                    } else {
+                                                      if (param0 != 8211) {
+                                                        if (param0 == 8212) {
+                                                          var2 = -105;
+                                                          break L2;
+                                                        } else {
+                                                          if (param0 != 732) {
+                                                            if (param0 != 8482) {
+                                                              if (param0 != 353) {
+                                                                if (param0 == 8250) {
+                                                                  var2 = -101;
+                                                                  break L2;
+                                                                } else {
+                                                                  if (param0 == 339) {
+                                                                    var2 = -100;
+                                                                    break L2;
+                                                                  } else {
+                                                                    if (382 == param0) {
+                                                                      var2 = -98;
+                                                                      break L2;
+                                                                    } else {
+                                                                      if (param0 == 376) {
+                                                                        var2 = -97;
+                                                                        break L2;
+                                                                      } else {
+                                                                        var2 = 63;
+                                                                        break L2;
+                                                                      }
+                                                                    }
+                                                                  }
+                                                                }
+                                                              } else {
+                                                                var2 = -102;
+                                                                break L2;
+                                                              }
+                                                            } else {
+                                                              var2 = -103;
+                                                              break L2;
+                                                            }
+                                                          } else {
+                                                            var2 = -104;
+                                                            break L2;
+                                                          }
+                                                        }
+                                                      } else {
+                                                        var2 = -106;
+                                                        break L2;
+                                                      }
+                                                    }
+                                                  } else {
+                                                    var2 = -108;
+                                                    break L2;
+                                                  }
+                                                }
+                                              } else {
+                                                var2 = -110;
+                                                break L2;
+                                              }
+                                            }
+                                          } else {
+                                            var2 = -114;
+                                            break L2;
+                                          }
+                                        } else {
+                                          var2 = -116;
+                                          break L2;
+                                        }
+                                      }
+                                    } else {
+                                      var2 = -118;
+                                      break L2;
+                                    }
+                                  }
+                                }
+                              } else {
+                                var2 = -121;
+                                break L2;
+                              }
+                            } else {
+                              var2 = -122;
+                              return (byte) var2;
+                            }
+                          } else {
+                            var2 = -123;
+                            break L2;
+                          }
+                        }
+                        return (byte) var2;
+                      } else {
+                        var2 = -124;
+                        return (byte) var2;
+                      }
+                    } else {
+                      var2 = -125;
+                      return (byte) var2;
+                    }
+                  } else {
+                    var2 = -126;
+                    return (byte) var2;
+                  }
+                } else {
+                  var2 = -128;
+                  return (byte) var2;
+                }
+              } else {
+                var2 = (byte)param0;
+                return (byte) var2;
+              }
+            } else {
+              if (param0 != 8364) {
+                if (param0 != 8218) {
+                  if (param0 != 402) {
+                    if (param0 != 8222) {
+                      L3: {
+                        if (8230 != param0) {
+                          if (param0 != 8224) {
+                            if (param0 != 8225) {
+                              if (param0 == 710) {
+                                var2 = -120;
+                                return (byte) var2;
+                              } else {
+                                if (param0 == 8240) {
+                                  var2 = -119;
+                                  break L3;
+                                } else {
+                                  if (352 != param0) {
+                                    if (param0 == 8249) {
+                                      var2 = -117;
+                                      break L3;
+                                    } else {
+                                      if (338 != param0) {
+                                        if (param0 != 381) {
+                                          if (param0 == 8216) {
+                                            var2 = -111;
+                                            break L3;
+                                          } else {
+                                            if (param0 != 8217) {
+                                              if (8220 == param0) {
+                                                var2 = -109;
+                                                break L3;
+                                              } else {
+                                                if (8221 != param0) {
+                                                  if (param0 == 8226) {
+                                                    var2 = -107;
+                                                    break L3;
+                                                  } else {
+                                                    if (param0 != 8211) {
+                                                      if (param0 == 8212) {
+                                                        var2 = -105;
+                                                        break L3;
+                                                      } else {
+                                                        if (param0 != 732) {
+                                                          if (param0 != 8482) {
+                                                            if (param0 != 353) {
+                                                              if (param0 == 8250) {
+                                                                var2 = -101;
+                                                                break L3;
+                                                              } else {
+                                                                if (param0 == 339) {
+                                                                  var2 = -100;
+                                                                  break L3;
+                                                                } else {
+                                                                  if (382 == param0) {
+                                                                    var2 = -98;
+                                                                    break L3;
+                                                                  } else {
+                                                                    if (param0 == 376) {
+                                                                      var2 = -97;
+                                                                      break L3;
+                                                                    } else {
+                                                                      var2 = 63;
+                                                                      break L3;
+                                                                    }
+                                                                  }
+                                                                }
+                                                              }
+                                                            } else {
+                                                              var2 = -102;
+                                                              break L3;
+                                                            }
+                                                          } else {
+                                                            var2 = -103;
+                                                            break L3;
+                                                          }
+                                                        } else {
+                                                          var2 = -104;
+                                                          break L3;
+                                                        }
+                                                      }
+                                                    } else {
+                                                      var2 = -106;
+                                                      break L3;
+                                                    }
+                                                  }
+                                                } else {
+                                                  var2 = -108;
+                                                  break L3;
+                                                }
+                                              }
+                                            } else {
+                                              var2 = -110;
+                                              break L3;
+                                            }
+                                          }
+                                        } else {
+                                          var2 = -114;
+                                          break L3;
+                                        }
+                                      } else {
+                                        var2 = -116;
+                                        break L3;
+                                      }
+                                    }
+                                  } else {
+                                    var2 = -118;
+                                    break L3;
+                                  }
+                                }
+                              }
+                            } else {
+                              var2 = -121;
+                              break L3;
+                            }
+                          } else {
+                            var2 = -122;
+                            return (byte) var2;
+                          }
+                        } else {
+                          var2 = -123;
+                          break L3;
+                        }
+                      }
+                      return (byte) var2;
+                    } else {
+                      var2 = -124;
+                      return (byte) var2;
+                    }
+                  } else {
+                    var2 = -125;
+                    return (byte) var2;
+                  }
+                } else {
+                  var2 = -126;
+                  return (byte) var2;
+                }
+              } else {
+                var2 = -128;
+                return (byte) var2;
+              }
+            }
+          }
+        } else {
+          L4: {
+            if (param0 <= 0) {
+              break L4;
+            } else {
+              if (param0 >= 128) {
+                break L4;
+              } else {
+                var2 = (byte)param0;
+                return (byte) var2;
+              }
+            }
+          }
+          L5: {
+            if (param0 < 160) {
+              break L5;
+            } else {
+              if (param0 > 255) {
+                break L5;
+              } else {
+                var2 = (byte)param0;
+                return (byte) var2;
+              }
+            }
+          }
+          if (param0 != 8364) {
+            if (param0 != 8218) {
+              if (param0 != 402) {
+                if (param0 != 8222) {
+                  L6: {
+                    if (8230 != param0) {
+                      if (param0 != 8224) {
+                        if (param0 != 8225) {
+                          if (param0 == 710) {
+                            var2 = -120;
+                            return (byte) var2;
+                          } else {
+                            if (param0 == 8240) {
+                              var2 = -119;
+                              break L6;
+                            } else {
+                              if (352 != param0) {
+                                if (param0 == 8249) {
+                                  var2 = -117;
+                                  break L6;
+                                } else {
+                                  if (338 != param0) {
+                                    if (param0 != 381) {
+                                      if (param0 == 8216) {
+                                        var2 = -111;
+                                        break L6;
+                                      } else {
+                                        if (param0 != 8217) {
+                                          if (8220 == param0) {
+                                            var2 = -109;
+                                            break L6;
+                                          } else {
+                                            if (8221 != param0) {
+                                              if (param0 == 8226) {
+                                                var2 = -107;
+                                                break L6;
+                                              } else {
+                                                if (param0 != 8211) {
+                                                  if (param0 == 8212) {
+                                                    var2 = -105;
+                                                    break L6;
+                                                  } else {
+                                                    if (param0 != 732) {
+                                                      if (param0 != 8482) {
+                                                        if (param0 != 353) {
+                                                          if (param0 == 8250) {
+                                                            var2 = -101;
+                                                            break L6;
+                                                          } else {
+                                                            if (param0 == 339) {
+                                                              var2 = -100;
+                                                              break L6;
+                                                            } else {
+                                                              if (382 == param0) {
+                                                                var2 = -98;
+                                                                break L6;
+                                                              } else {
+                                                                if (param0 == 376) {
+                                                                  var2 = -97;
+                                                                  break L6;
+                                                                } else {
+                                                                  var2 = 63;
+                                                                  break L6;
+                                                                }
+                                                              }
+                                                            }
+                                                          }
+                                                        } else {
+                                                          var2 = -102;
+                                                          break L6;
+                                                        }
+                                                      } else {
+                                                        var2 = -103;
+                                                        break L6;
+                                                      }
+                                                    } else {
+                                                      var2 = -104;
+                                                      break L6;
+                                                    }
+                                                  }
+                                                } else {
+                                                  var2 = -106;
+                                                  break L6;
+                                                }
+                                              }
+                                            } else {
+                                              var2 = -108;
+                                              break L6;
+                                            }
+                                          }
+                                        } else {
+                                          var2 = -110;
+                                          break L6;
+                                        }
+                                      }
+                                    } else {
+                                      var2 = -114;
+                                      break L6;
+                                    }
+                                  } else {
+                                    var2 = -116;
+                                    break L6;
+                                  }
+                                }
+                              } else {
+                                var2 = -118;
+                                break L6;
+                              }
+                            }
+                          }
+                        } else {
+                          var2 = -121;
+                          break L6;
+                        }
+                      } else {
+                        var2 = -122;
+                        return (byte) var2;
+                      }
+                    } else {
+                      var2 = -123;
+                      break L6;
+                    }
+                  }
+                  return (byte) var2;
+                } else {
+                  var2 = -124;
+                  return (byte) var2;
+                }
+              } else {
+                var2 = -125;
+                return (byte) var2;
+              }
+            } else {
+              var2 = -126;
+              return (byte) var2;
+            }
+          } else {
+            var2 = -128;
+            return (byte) var2;
+          }
+        }
+    }
+
+    final static ti a(int param0, int param1, int param2, int param3, byte param4) {
+        ti var5 = null;
+        ti var5_ref = null;
+        int var6 = 0;
+        var6 = TrackController.field_F ? 1 : 0;
+        var5 = (ti) (Object) ea.field_s.b(2);
+        L0: while (true) {
+          if (var5 == null) {
+            if (param4 != -102) {
+              return null;
+            } else {
+              var5_ref = new ti();
+              var5_ref.field_l = param3;
+              var5_ref.field_k = param2;
+              var5_ref.field_i = param1;
+              ea.field_s.a((byte) -105, (fc) (Object) var5_ref);
+              mc.a(false, param0, var5_ref);
+              return var5_ref;
+            }
+          } else {
+            if (var5.field_i != param1) {
+              var5 = (ti) (Object) ea.field_s.a(param4 + 112);
+              continue L0;
+            } else {
+              return var5;
+            }
+          }
+        }
+    }
+
+    hj() {
+        ((hj) this).field_a = new oa[2];
+        ((hj) this).field_b = false;
+        ((hj) this).field_e = false;
+    }
+
+    static {
+        $cfr$clinit();
+    }
+
+    private static void $cfr$clinit() {
+        field_c = new String[]{"January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"};
+        field_f = new char[]{(char)91, (char)93, (char)35};
+    }
+}

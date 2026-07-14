@@ -1,0 +1,376 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+abstract class df {
+    static oi field_c;
+    int field_h;
+    int[] field_f;
+    int field_d;
+    java.awt.Image field_g;
+    static String field_b;
+    static int field_a;
+    static String field_i;
+    static String field_e;
+
+    final static Boolean b(byte param0) {
+        Boolean var1 = gh.field_c;
+        gh.field_c = null;
+        if (param0 >= -21) {
+            field_e = null;
+        }
+        return var1;
+    }
+
+    abstract void a(byte param0, int param1, java.awt.Component param2, int param3);
+
+    final static boolean a(char param0, boolean param1) {
+        if (Character.isISOControl(param0)) {
+          return false;
+        } else {
+          if (kl.a(param0, param1)) {
+            return true;
+          } else {
+            if (45 != param0) {
+              if (param0 != 160) {
+                if (param0 != 32) {
+                  if (param0 != 95) {
+                    return false;
+                  } else {
+                    return true;
+                  }
+                } else {
+                  return true;
+                }
+              } else {
+                return true;
+              }
+            } else {
+              return true;
+            }
+          }
+        }
+    }
+
+    public static void a(byte param0) {
+        if (param0 != 75) {
+            df.a((byte) -6);
+        }
+        field_b = null;
+        field_e = null;
+        field_c = null;
+        field_i = null;
+    }
+
+    final static void a(int param0, int param1, o param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+        int var9 = param7 + param6 + (param2.field_u - param8);
+        int var10 = param7 + (param6 + (param2.field_u + param0));
+        int var11 = (param2.field_p >> -1761064351) + (param5 + param2.field_v);
+        ed.b(var9, param3, var10, var11 + param1);
+        param2.a(-1 + param6, param5 + -1, param4);
+        param2.a(param6 - 1, 1 + param5, param4);
+        ed.a(ld.field_b);
+        ed.b(var9 + 1, 0, var10 + 1, param1 + var11);
+        param2.a(1 + param6, param5 - 1, param4);
+        param2.a(param6 - -1, 1 + param5, param4);
+        ed.a(ld.field_b);
+        var10 = -param7 + param2.field_u + param2.field_z + param6 + -param8;
+        var9 = param6 + param2.field_z + (param2.field_u - (param7 - -param0));
+        ed.b(var9, var11 - param1, var10, 480);
+        param2.a(-1 + param6, -1 + param5, param4);
+        param2.a(param6 - 1, param5 + 1, param4);
+        ed.a(ld.field_b);
+        ed.b(var9 - -1, -param1 + var11, 1 + var10, 480);
+        param2.a(1 + param6, param5 - 1, param4);
+        param2.a(1 + param6, param5 + 1, param4);
+        ed.a(ld.field_b);
+    }
+
+    final void b(int param0) {
+        if (param0 <= 19) {
+            field_a = -35;
+        }
+        ed.a(((df) this).field_f, ((df) this).field_d, ((df) this).field_h);
+    }
+
+    final static void a(int param0) {
+        int[] var27 = null;
+        int var2 = 0;
+        int var3 = 0;
+        o var11 = null;
+        o var12 = null;
+        int var6 = 0;
+        int var7 = 0;
+        int[] var28 = null;
+        String var14 = null;
+        int var5 = 0;
+        int var8 = 0;
+        int var9_int = 0;
+        o var9 = null;
+        int[] var29 = null;
+        o var16 = null;
+        String var5_ref = null;
+        int[] var30 = null;
+        int var4 = 0;
+        o var1_ref = null;
+        int var1 = 0;
+        int var10 = wizardrun.field_H;
+        if (qk.field_j != null) {
+            if (qk.field_j.b(param0 + 17818)) {
+                if (qk.field_j.a((byte) 29, "benefits")) {
+                    if (null != pj.field_M) {
+                        if (pj.field_M.b(param0 + 17818)) {
+                            if (pj.field_M.a((byte) 29, "benefits")) {
+                                ab.field_c = vg.a(15, "headline", qk.field_j, "benefits");
+                                ta.field_b = vg.a(15, "blurbpane", qk.field_j, "benefits");
+                                mj.field_b = vg.a(15, "button", qk.field_j, "benefits");
+                                ei.field_l = vg.a(15, "signup_text", qk.field_j, "benefits");
+                                ae.field_c = vg.a(15, "menu_text", qk.field_j, "benefits");
+                                ef.field_H = vg.a(15, "button_frame", qk.field_j, "benefits");
+                                ra.field_p = vg.a(param0 + 13, "arrow", qk.field_j, "benefits");
+                                v.field_b = (vd) (Object) ti.a(800863586, "benefits", qk.field_j, "large_font", pj.field_M);
+                                bk.field_a = (vd) (Object) ti.a(800863586, "benefits", qk.field_j, "small_font", pj.field_M);
+                                var27 = ed.field_k;
+                                var2 = ed.field_h;
+                                var3 = ed.field_d;
+                                ed.b(ld.field_b);
+                                var11 = new o(4 + ra.field_p.field_z, ra.field_p.field_p + 4);
+                                var11.b();
+                                ra.field_p.e(2, 2, ug.field_H);
+                                oh.a(var11.field_p, var11, 0, var11.field_z, 2, (byte) 45, 0, 1);
+                                ra.field_p = var11;
+                                pf.field_b = ra.field_p.c();
+                                var12 = new o(195, 221);
+                                var6 = var12.field_z / 2;
+                                var12.b();
+                                v.field_b.b(di.a(new String[1], (byte) 53, of.field_l), var6, 40, 16777215, -1);
+                                bk.field_a.b(di.a(new String[1], (byte) 43, i.field_g), var6, 60, 16777215, -1);
+                                v.field_b.b(di.a(new String[1], (byte) 96, bc.field_b), var6, 110, 16777215, -1);
+                                bk.field_a.b(di.a(new String[1], (byte) 58, nh.field_q), var6, 130, 16777215, -1);
+                                v.field_b.b(jg.field_p, var6, 180, 16777215, -1);
+                                bk.field_a.b(ra.field_i, var6, 200, 16777215, -1);
+                                oh.a(var12.field_p, var12, 0, var12.field_z, 3, (byte) 82, 0, 1);
+                                ta.field_b.b();
+                                var12.e(18 + -ta.field_b.field_u, -ta.field_b.field_v + 241);
+                                for (var7 = 0; nl.field_w.length > var7; var7++) {
+                                    dc.field_s[var7].b();
+                                    int discarded$0 = bk.field_a.a(nl.field_w[var7], 3, 3, dc.field_s[var7].field_z + -6, -6 + dc.field_s[var7].field_p, ug.field_H, -1, 1, 1, bk.field_a.field_B + bk.field_a.field_M);
+                                    oh.a(dc.field_s[var7].field_p, dc.field_s[var7], 0, dc.field_s[var7].field_z, 3, (byte) 37, 0, 1);
+                                }
+                                nl.field_w = null;
+                                pa.field_a = ei.field_l.e();
+                                pa.field_a.b();
+                                l.a(2 * ed.field_d / 3, (byte) -105, 0, 0, ed.field_h, 64);
+                                ed.a(var27, var2, var3);
+                                ed.a(ld.field_b);
+                                wk.field_c = 231 - -((-ef.field_H.field_z + mj.field_b.field_z) / 2);
+                                qc.field_L = 390 - -((-ef.field_H.field_p + mj.field_b.field_p) / 2);
+                                qk.field_j = null;
+                                hf.field_b = (mj.field_b.field_p + -ef.field_H.field_p) / 2 + 390;
+                                hj.field_f = (-ef.field_H.field_z + mj.field_b.field_z) / 2 + 434;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        if (od.field_f == null) {
+            return;
+        }
+        if (uk.field_b != null) {
+            if (null != v.field_b) {
+                var28 = ed.field_k;
+                var2 = ed.field_h;
+                var3 = ed.field_d;
+                ed.b(ld.field_b);
+                var14 = di.a(new String[1], (byte) 49, si.field_b);
+                var5 = v.field_b.c(var14, ta.field_a);
+                var6 = v.field_b.a(var14, ta.field_a, v.field_b.field_B + v.field_b.field_M);
+                var7 = (ta.field_a - var5) / 2 + jg.field_m;
+                var7 -= 3;
+                var8 = cb.field_a + (r.field_a - var6) / 2;
+                var5 += 6;
+                var6 += 6;
+                if (0 > var7) {
+                    var9_int = -var7;
+                    sl.field_r = sl.field_r - var9_int;
+                    uk.field_b.field_u = uk.field_b.field_u + var9_int;
+                    var5 = var5 + 2 * var9_int;
+                    var7 = var7 + var9_int;
+                    uk.field_b.field_x = uk.field_b.field_x + var9_int * 2;
+                    jg.field_m = jg.field_m + var9_int;
+                }
+                var8 -= 3;
+                if (var5 + var7 > uk.field_b.field_x) {
+                    var9_int = -uk.field_b.field_x + (var7 + var5);
+                    var5 = var5 + 2 * var9_int;
+                    uk.field_b.field_x = uk.field_b.field_x + var9_int * 2;
+                    sl.field_r = sl.field_r - var9_int;
+                    var7 = var7 + var9_int;
+                    jg.field_m = jg.field_m + var9_int;
+                    uk.field_b.field_u = uk.field_b.field_u + var9_int;
+                }
+                if (0 > var8) {
+                    var9_int = -var8;
+                    var8 = var8 + var9_int;
+                    uk.field_b.field_v = uk.field_b.field_v + var9_int;
+                    uk.field_b.field_s = uk.field_b.field_s + 2 * var9_int;
+                    cb.field_a = cb.field_a + var9_int;
+                    ka.field_i = ka.field_i - var9_int;
+                    var6 = var6 + var9_int * 2;
+                }
+                if (uk.field_b.field_s < var6 + var8) {
+                    var9_int = var8 + var6 + -uk.field_b.field_s;
+                    uk.field_b.field_s = uk.field_b.field_s + 2 * var9_int;
+                    ka.field_i = ka.field_i - var9_int;
+                    uk.field_b.field_v = uk.field_b.field_v + var9_int;
+                    var6 = var6 + var9_int * 2;
+                    cb.field_a = cb.field_a + var9_int;
+                    var8 = var8 + var9_int;
+                }
+                uk.field_b.d();
+                var9 = new o(uk.field_b.field_x, uk.field_b.field_s);
+                var9.b();
+                int discarded$1 = v.field_b.a(var14, jg.field_m, cb.field_a, ta.field_a, r.field_a, 16777215, -1, 1, 1, v.field_b.field_M + v.field_b.field_B);
+                oh.a(var9.field_s, var9, 0, var9.field_x, 3, (byte) 98, 0, 1);
+                uk.field_b.b();
+                var9.e(0, 0);
+                ac.field_s = new o(640, 480);
+                ac.field_s.b();
+                uk.field_b.b(sl.field_r + (uk.field_b.field_x >> -1992525471), ka.field_i + (uk.field_b.field_s >> 792623745), kk.field_xb, 4096);
+                uk.field_b = null;
+                ac.field_s.a();
+                ed.a(var28, var2, var3);
+                ed.a(ld.field_b);
+            }
+        }
+        if (null != pc.field_r) {
+            if (!(bk.field_a == null)) {
+                var29 = ed.field_k;
+                var2 = ed.field_h;
+                var3 = ed.field_d;
+                ed.b(ld.field_b);
+                var16 = new o(412, 43);
+                var5_ref = di.a(new String[1], (byte) 79, field_b);
+                pc.field_r = null;
+                var16.b();
+                int discarded$2 = bk.field_a.a(var5_ref, 3, 3, var16.field_z + -6, -6 + var16.field_p, 16777215, -1, 0, 1, bk.field_a.field_B + bk.field_a.field_M);
+                oh.a(var16.field_p, var16, 0, var16.field_z, 3, (byte) 60, 0, 1);
+                od.field_f.b();
+                var16.e(199 - od.field_f.field_u, 83 + -od.field_f.field_v);
+                ed.a(var29, var2, var3);
+                ed.a(ld.field_b);
+            }
+        }
+        if (null != ag.field_v) {
+            if (bk.field_a != null) {
+                var30 = ed.field_k;
+                var2 = ed.field_h;
+                var3 = ed.field_d;
+                ed.b(ld.field_b);
+                var4 = 6 + bk.field_a.c(lg.field_b, 640);
+                var5 = ag.field_v.field_x + (var4 - -20);
+                var6 = 427 + -(var5 / 2);
+                var7 = 20 + var6 - -ag.field_v.field_x;
+                od.field_f.b();
+                bk.field_a.c(lg.field_b, var7 + -od.field_f.field_u, -od.field_f.field_v + (155 + (bk.field_a.field_M + bk.field_a.field_B)), 16777215, -1);
+                oh.a(50, od.field_f, var7 + -od.field_f.field_u + -4, var4, 3, (byte) 90, -od.field_f.field_v + 155, 1);
+                var8 = -((-bk.field_a.field_B + -bk.field_a.field_M + -3 + ag.field_v.field_s) / 2) + 155 + -od.field_f.field_v;
+                ag.field_v.e(var6 - od.field_f.field_u, var8);
+                ed.a(var30, var2, var3);
+                ed.a(ld.field_b);
+                ag.field_v = null;
+            }
+        }
+        ed.b(ld.field_b);
+        ed.a(16, 16, 608, 112, 15, nh.field_n, wd.field_g);
+        ed.a(231, 144, 393, 232, 15, nh.field_n, wd.field_g);
+        if (!(null == ab.field_c)) {
+            ab.field_c.e(0, 0);
+        }
+        if (!(ta.field_b == null)) {
+            ta.field_b.e(0, 0);
+        }
+        if (param0 != 2) {
+            Boolean discarded$3 = df.b((byte) -119);
+        }
+        od.field_f.e(0, 0);
+        if (!(null == ac.field_s)) {
+            ac.field_s.e(0, 0);
+        }
+        if (null != mj.field_b) {
+            if (!(null == ef.field_H)) {
+                mj.field_b.e(231, 390);
+                var1_ref = ei.field_l;
+                if (!(jj.field_d.field_g != 0)) {
+                    var1_ref = pa.field_a;
+                }
+                var1_ref.e(0, 0);
+                var2 = (40 * hg.b(hj.field_c << (jj.field_d.field_g != 0 ? 3 : 4), (byte) -89) >> -1398286224) + 40;
+                if (!(var2 <= 0)) {
+                    mj.field_b.a(230, 389, var2);
+                    mj.field_b.a(232, 389, var2);
+                    mj.field_b.a(232, 391, var2);
+                    mj.field_b.a(230, 391, var2);
+                    var1_ref.a(1, 1, var2);
+                    var1_ref.a(-1, 1, var2);
+                    var1_ref.a(1, -1, var2);
+                    var1_ref.a(-1, -1, var2);
+                }
+                de.a(2, jj.field_d.field_g == 0 ? true : false, wk.field_c, qc.field_L);
+            }
+        }
+        if (mj.field_b != null) {
+            if (!(null == ef.field_H)) {
+                mj.field_b.e(434, 390);
+                ae.field_c.e(0, 0);
+                if (-2 == (jj.field_d.field_g ^ -1)) {
+                    l.a(7 * mj.field_b.field_p / 12, (byte) -105, 392, 436, mj.field_b.field_z + -4, 64);
+                }
+                de.a(2, 1 == jj.field_d.field_g ? true : false, hj.field_f, hf.field_b);
+            }
+        }
+        if (ra.field_p != null) {
+            var1 = -(ra.field_p.field_s / 2) + 357;
+            ra.field_p.e(-ra.field_p.field_x + 269, var1);
+            pf.field_b.e(586, var1);
+            if (fi.field_B > var1) {
+                if (var1 - -ra.field_p.field_p > fi.field_B) {
+                    var2 = 40 - -(40 * hg.b(hj.field_c << 1327147044, (byte) -89) >> -875852592);
+                    if ((var2 ^ -1) < -1) {
+                        if (pg.field_n > 269 - ra.field_p.field_z) {
+                            // if_icmple L2618
+                            ra.field_p.a(269 + (-ra.field_p.field_x - 1), -1 + var1, var2);
+                            ra.field_p.a(270 - ra.field_p.field_x, -1 + var1, var2);
+                            ra.field_p.a(268 + -ra.field_p.field_x, var1 - -1, var2);
+                            ra.field_p.a(-ra.field_p.field_x + 269 - -1, var1 + 1, var2);
+                        } else {
+                            if ((pg.field_n ^ -1) < -587) {
+                                if (pg.field_n < 586 + ra.field_p.field_z) {
+                                    pf.field_b.a(585, var1 + -1, var2);
+                                    pf.field_b.a(587, var1 + -1, var2);
+                                    pf.field_b.a(585, var1 - -1, var2);
+                                    pf.field_b.a(587, var1 - -1, var2);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        qh.b(true);
+        dc.field_s[ej.field_c].e(269, 340);
+    }
+
+    abstract void a(java.awt.Graphics param0, int param1, int param2, int param3);
+
+    static {
+        $cfr$clinit();
+    }
+
+    private static void $cfr$clinit() {
+        field_c = new oi();
+        field_b = "(Including <%0>)";
+        field_e = "We closed the connection because the game was left unattended for 20 minutes. Please feel free to reconnect immediately if you are there.";
+        field_i = "Confirm Password: ";
+    }
+}

@@ -1,0 +1,92 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class gi {
+    static boolean field_b;
+    static int field_e;
+    static int field_a;
+    static int field_c;
+    static String field_d;
+
+    final static boolean a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+        if (param0 == 17) {
+          if (param6 <= param2) {
+            if (param3 + param6 > param2) {
+              if (param1 >= param4) {
+                if (param4 - -param5 <= param1) {
+                  return false;
+                } else {
+                  return true;
+                }
+              } else {
+                return false;
+              }
+            } else {
+              return false;
+            }
+          } else {
+            return false;
+          }
+        } else {
+          field_c = -63;
+          if (param6 <= param2) {
+            if (param3 + param6 > param2) {
+              if (param1 >= param4) {
+                if (param4 - -param5 <= param1) {
+                  return false;
+                } else {
+                  return true;
+                }
+              } else {
+                return false;
+              }
+            } else {
+              return false;
+            }
+          } else {
+            return false;
+          }
+        }
+    }
+
+    public static void a(int param0) {
+        int var1 = -114 % ((param0 - -21) / 55);
+        field_d = null;
+    }
+
+    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, byte param6) {
+        ie.field_c.a(param2, 0, param4, param0, param5);
+        if (null == mg.field_bc) {
+          if (param6 >= -83) {
+            field_e = -12;
+            return;
+          } else {
+            return;
+          }
+        } else {
+          mg.field_bc.a(param3, -l.field_f + param3, param0, param1, (byte) -18, param0);
+          if (param6 < -83) {
+            return;
+          } else {
+            field_e = -12;
+            return;
+          }
+        }
+    }
+
+    final static void a(int param0, int param1, int param2, wl param3, int param4) {
+        param3.a(true, 12);
+        param3.d(-1, param2);
+        param3.d(-1, param4);
+        param3.d(-1, param0);
+        param3.a(true, param1);
+    }
+
+    static {
+        $cfr$clinit();
+    }
+
+    private static void $cfr$clinit() {
+        field_d = "Warning: if you quit, you will lose any game you are in the middle of!";
+    }
+}

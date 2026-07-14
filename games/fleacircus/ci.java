@@ -1,0 +1,207 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class ci {
+    static int[] field_c;
+    private int[][] field_b;
+    private int field_d;
+    static boolean field_f;
+    private int field_a;
+    static String field_e;
+
+    public static void a(byte param0) {
+        if (param0 != 127) {
+            return;
+        }
+        field_e = null;
+        field_c = null;
+    }
+
+    final byte[] a(byte[] param0, int param1) {
+        int var3 = 0;
+        int var4 = 0;
+        int[] var5 = null;
+        int var6 = 0;
+        int var7 = 0;
+        int var8 = 0;
+        int var9 = 0;
+        int var11 = 0;
+        int var12 = 0;
+        int var13 = 0;
+        int[] var15 = null;
+        int[] var17 = null;
+        int[] var19 = null;
+        int[] var20 = null;
+        int[] var21 = null;
+        L0: {
+          var12 = fleas.field_A ? 1 : 0;
+          var3 = -55 % ((param1 - 6) / 44);
+          if (null == ((ci) this).field_b) {
+            break L0;
+          } else {
+            var4 = 14 + (int)((long)((ci) this).field_a * (long)param0.length / (long)((ci) this).field_d);
+            var21 = new int[var4];
+            var19 = var21;
+            var17 = var19;
+            var15 = var17;
+            var5 = var15;
+            var6 = 0;
+            var7 = 0;
+            var8 = 0;
+            L1: while (true) {
+              if (param0.length <= var8) {
+                param0 = new byte[var4];
+                var13 = 0;
+                var8 = var13;
+                L2: while (true) {
+                  if (var13 >= var4) {
+                    break L0;
+                  } else {
+                    var9 = 32768 + var21[var13] >> 488498128;
+                    if (127 >= var9) {
+                      if (-128 < var9) {
+                        param0[var13] = (byte)127;
+                        var13++;
+                        continue L2;
+                      } else {
+                        param0[var13] = (byte)var9;
+                        var13++;
+                        continue L2;
+                      }
+                    } else {
+                      param0[var13] = (byte)-128;
+                      var13++;
+                      continue L2;
+                    }
+                  }
+                }
+              } else {
+                var9 = param0[var8];
+                var20 = ((ci) this).field_b[var7];
+                var11 = 0;
+                L3: while (true) {
+                  if (-15 >= (var11 ^ -1)) {
+                    var7 = var7 + ((ci) this).field_a;
+                    var11 = var7 / ((ci) this).field_d;
+                    var6 = var6 + var11;
+                    var7 = var7 - var11 * ((ci) this).field_d;
+                    var8++;
+                    continue L1;
+                  } else {
+                    var5[var6 - -var11] = var5[var6 - -var11] + var9 * var20[var11];
+                    var11++;
+                    continue L3;
+                  }
+                }
+              }
+            }
+          }
+        }
+        return param0;
+    }
+
+    final int a(int param0, int param1) {
+        if (param1 != 18308) {
+            return -5;
+        }
+        if (null != ((ci) this).field_b) {
+            param0 = 6 - -(int)((long)((ci) this).field_a * (long)param0 / (long)((ci) this).field_d);
+        }
+        return param0;
+    }
+
+    final int b(int param0, int param1) {
+        if (null != ((ci) this).field_b) {
+            param0 = (int)((long)((ci) this).field_a * (long)param0 / (long)((ci) this).field_d);
+        }
+        if (param1 != 14698) {
+            int discarded$0 = ((ci) this).a(6, 33);
+        }
+        return param0;
+    }
+
+    ci(int param0, int param1) {
+        int var3 = 0;
+        int var4 = 0;
+        int[] var5 = null;
+        double var6 = 0.0;
+        int var8 = 0;
+        int var9 = 0;
+        double var10 = 0.0;
+        double var12 = 0.0;
+        double var14 = 0.0;
+        if (param1 != param0) {
+          var3 = vc.a(param1, -1, param0);
+          param0 = param0 / var3;
+          param1 = param1 / var3;
+          ((ci) this).field_d = param0;
+          ((ci) this).field_a = param1;
+          ((ci) this).field_b = new int[param0][14];
+          var4 = 0;
+          L0: while (true) {
+            if (var4 >= param0) {
+            } else {
+              L1: {
+                var5 = ((ci) this).field_b[var4];
+                var6 = (double)var4 / (double)param0 + 6.0;
+                var8 = (int)Math.floor(1.0 + (var6 - 7.0));
+                if (var8 >= 0) {
+                  break L1;
+                } else {
+                  var8 = 0;
+                  break L1;
+                }
+              }
+              L2: {
+                var9 = (int)Math.ceil(var6 + 7.0);
+                if (-15 <= (var9 ^ -1)) {
+                  break L2;
+                } else {
+                  var9 = 14;
+                  break L2;
+                }
+              }
+              var10 = (double)param1 / (double)param0;
+              L3: while (true) {
+                if (var9 <= var8) {
+                  var4++;
+                  continue L0;
+                } else {
+                  L4: {
+                    L5: {
+                      var12 = 3.141592653589793 * (-var6 + (double)var8);
+                      var14 = var10;
+                      if (-0.0001 > var12) {
+                        break L5;
+                      } else {
+                        if (0.0001 >= var12) {
+                          break L4;
+                        } else {
+                          break L5;
+                        }
+                      }
+                    }
+                    var14 = var14 * (Math.sin(var12) / var12);
+                    break L4;
+                  }
+                  var14 = var14 * (Math.cos((-var6 + (double)var8) * 0.2243994752564138) * 0.46 + 0.54);
+                  var5[var8] = (int)Math.floor(0.5 + 65536.0 * var14);
+                  var8++;
+                  continue L3;
+                }
+              }
+            }
+          }
+        } else {
+        }
+    }
+
+    static {
+        $cfr$clinit();
+    }
+
+    private static void $cfr$clinit() {
+        field_f = true;
+        field_c = new int[150];
+    }
+}

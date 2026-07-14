@@ -1,0 +1,94 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+class ta extends q {
+    static int field_n;
+    long field_l;
+    static int field_o;
+    static long field_k;
+    static String field_m;
+    ta field_p;
+    ta field_j;
+
+    final void h(int param0) {
+        if (null == ((ta) this).field_j) {
+          return;
+        } else {
+          ((ta) this).field_j.field_p = ((ta) this).field_p;
+          ((ta) this).field_p.field_j = ((ta) this).field_j;
+          ((ta) this).field_p = null;
+          if (param0 != 0) {
+            ((ta) this).h(3);
+            ((ta) this).field_j = null;
+            return;
+          } else {
+            ((ta) this).field_j = null;
+            return;
+          }
+        }
+    }
+
+    final boolean a(byte param0) {
+        if (param0 > 71) {
+          if (((ta) this).field_j == null) {
+            return false;
+          } else {
+            return true;
+          }
+        } else {
+          field_n = 110;
+          if (((ta) this).field_j == null) {
+            return false;
+          } else {
+            return true;
+          }
+        }
+    }
+
+    public static void g(int param0) {
+        field_m = null;
+        int var1 = -7 % ((13 - param0) / 62);
+    }
+
+    protected ta() {
+    }
+
+    final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {
+        int var6 = 0;
+        int var7 = 0;
+        var7 = Torquing.field_u;
+        var6 = param2;
+        if (param0 != 0) {
+          ta.g(-46);
+          L0: while (true) {
+            if (param1 >= var6) {
+              di.a(param4, (byte) -97, param3, qd.field_a[var6], param5);
+              var6++;
+              continue L0;
+            } else {
+              return;
+            }
+          }
+        } else {
+          L1: while (true) {
+            if (param1 >= var6) {
+              di.a(param4, (byte) -97, param3, qd.field_a[var6], param5);
+              var6++;
+              continue L1;
+            } else {
+              return;
+            }
+          }
+        }
+    }
+
+    static {
+        $cfr$clinit();
+    }
+
+    private static void $cfr$clinit() {
+        field_m = "Age:";
+        field_o = 0;
+        field_n = 0;
+    }
+}

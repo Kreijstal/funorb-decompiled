@@ -1,0 +1,35 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+abstract class sp extends le {
+    int field_j;
+    ik field_h;
+    volatile boolean field_k;
+    sp field_i;
+
+    final void b(int[] param0, int param1, int param2) {
+        if (((sp) this).field_k) {
+            ((sp) this).a(param0, param1, param2);
+        } else {
+            ((sp) this).a(param2);
+        }
+    }
+
+    int b() {
+        return 255;
+    }
+
+    abstract void a(int param0);
+
+    abstract void a(int[] param0, int param1, int param2);
+
+    abstract int a();
+
+    abstract sp c();
+
+    abstract sp d();
+
+    protected sp() {
+        ((sp) this).field_k = true;
+    }
+}

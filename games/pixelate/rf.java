@@ -1,0 +1,243 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+abstract class rf {
+    static dq field_i;
+    nj field_e;
+    nj field_f;
+    nj field_l;
+    static uc field_d;
+    static String[] field_j;
+    static int field_n;
+    nj field_p;
+    int field_o;
+    we field_b;
+    long field_k;
+    byte field_a;
+    volatile int field_h;
+    volatile int field_m;
+    we field_g;
+    rj field_c;
+
+    abstract boolean a(boolean param0);
+
+    public static void c(byte param0) {
+        Object var2 = null;
+        if (param0 != -53) {
+          var2 = null;
+          rf.a((po) null, 104, (fm) null);
+          field_d = null;
+          field_j = null;
+          field_i = null;
+          return;
+        } else {
+          field_d = null;
+          field_j = null;
+          field_i = null;
+          return;
+        }
+    }
+
+    abstract void b(byte param0);
+
+    abstract void a(Object param0, boolean param1, int param2);
+
+    final boolean a(int param0) {
+        if (param0 != 20) {
+            return false;
+        }
+        return ((rf) this).b(127) >= 20 ? true : false;
+    }
+
+    final int a(byte param0) {
+        if (param0 != 34) {
+            return 117;
+        }
+        return ((rf) this).field_l.b(param0 + 67) - -((rf) this).field_p.b(118);
+    }
+
+    final boolean d(byte param0) {
+        int stackIn_4_0 = 0;
+        int stackIn_8_0 = 0;
+        int stackOut_7_0 = 0;
+        int stackOut_6_0 = 0;
+        int stackOut_3_0 = 0;
+        int stackOut_2_0 = 0;
+        if (param0 <= 9) {
+          L0: {
+            ((rf) this).field_f = null;
+            if (-21 < ((rf) this).a((byte) 34)) {
+              stackOut_7_0 = 0;
+              stackIn_8_0 = stackOut_7_0;
+              break L0;
+            } else {
+              stackOut_6_0 = 1;
+              stackIn_8_0 = stackOut_6_0;
+              break L0;
+            }
+          }
+          return stackIn_8_0 != 0;
+        } else {
+          L1: {
+            if (-21 > ((rf) this).a((byte) 34)) {
+              stackOut_3_0 = 0;
+              stackIn_4_0 = stackOut_3_0;
+              break L1;
+            } else {
+              stackOut_2_0 = 1;
+              stackIn_4_0 = stackOut_2_0;
+              break L1;
+            }
+          }
+          return stackIn_4_0 != 0;
+        }
+    }
+
+    final rj a(byte param0, int param1, boolean param2, int param3, byte param4) {
+        if (param0 != -31) {
+            return null;
+        }
+        long var6 = (long)param3 + ((long)param1 << 1468960288);
+        rj var8 = new rj();
+        var8.field_B = param4;
+        var8.field_t = param2 ? true : false;
+        var8.field_q = var6;
+        if (param2) {
+            if (!(((rf) this).b(126) < 20)) {
+                throw new RuntimeException();
+            }
+            ((rf) this).field_e.a(-89, (lm) (Object) var8);
+        } else {
+            if ((((rf) this).a((byte) 34) ^ -1) > -21) {
+                ((rf) this).field_l.a(-45, (lm) (Object) var8);
+                return var8;
+            }
+            throw new RuntimeException();
+        }
+        return var8;
+    }
+
+    abstract void e(byte param0);
+
+    final int b(int param0) {
+        int var2 = 23 % ((58 - param0) / 55);
+        return ((rf) this).field_e.b(113) + ((rf) this).field_f.b(102);
+    }
+
+    final static void a(po param0, int param1, fm param2) {
+        int var3 = 0;
+        int var5 = 0;
+        String var6 = null;
+        String var7 = null;
+        var5 = Pixelate.field_H ? 1 : 0;
+        po.field_d = param0;
+        if (param1 == 5088) {
+          var3 = 0;
+          L0: while (true) {
+            if (16 <= var3) {
+              pg.field_f[128] = param0.a(true, "menu_select", "");
+              pg.field_f[131] = param0.a(true, "pix_grid_wipe", "");
+              pg.field_f[129] = param0.a(true, "pix_time_running_out", "");
+              pg.field_f[130] = param0.a(true, "pix_time_up", "");
+              return;
+            } else {
+              L1: {
+                var7 = Integer.toString(var3 - -1);
+                if (-6 == (var3 ^ -1)) {
+                  pg.field_f[0 + var3 * 8 + 0] = qd.a(param2, "", "pix_skin" + var7 + "_move1").a();
+                  pg.field_f[0 + 8 * var3 - -1] = qd.a(param2, "", "pix_skin" + var7 + "_move2").a();
+                  pg.field_f[2 + (0 + var3 * 8)] = qd.a(param2, "", "pix_skin" + var7 + "_move3").a();
+                  pg.field_f[3 + var3 * 8] = qd.a(param2, "", "pix_skin" + var7 + "_move4").a();
+                  break L1;
+                } else {
+                  pg.field_f[0 + (8 * var3 + 0)] = param0.a(true, "pix_skin" + var7 + "_move1", "");
+                  pg.field_f[0 + (var3 * 8 - -1)] = param0.a(true, "pix_skin" + var7 + "_move2", "");
+                  pg.field_f[2 + (0 + 8 * var3)] = param0.a(true, "pix_skin" + var7 + "_move3", "");
+                  pg.field_f[3 + var3 * 8] = param0.a(true, "pix_skin" + var7 + "_move4", "");
+                  break L1;
+                }
+              }
+              L2: {
+                pg.field_f[5 + var3 * 8] = param0.a(true, "pix_skin" + var7 + "_landing_normal", "");
+                if (7 != var3) {
+                  pg.field_f[6 + var3 * 8] = qd.a(param2, "", "pix_skin" + var7 + "_landing_special").a();
+                  pg.field_f[7 + var3 * 8] = qd.a(param2, "", "pix_skin" + var7 + "_picture_complete").a();
+                  break L2;
+                } else {
+                  pg.field_f[8 * var3 + 6] = param0.a(true, "pix_skin" + var7 + "_landing_special", "");
+                  pg.field_f[8 * var3 + 7] = param0.a(true, "pix_skin" + var7 + "_picture_complete", "");
+                  break L2;
+                }
+              }
+              pg.field_f[4 + 8 * var3] = param0.a(true, "pix_skin" + var7 + "_tile_rotate", "");
+              var3++;
+              continue L0;
+            }
+          }
+        } else {
+          field_i = null;
+          var3 = 0;
+          L3: while (true) {
+            if (16 <= var3) {
+              pg.field_f[128] = param0.a(true, "menu_select", "");
+              pg.field_f[131] = param0.a(true, "pix_grid_wipe", "");
+              pg.field_f[129] = param0.a(true, "pix_time_running_out", "");
+              pg.field_f[130] = param0.a(true, "pix_time_up", "");
+              return;
+            } else {
+              L4: {
+                var6 = Integer.toString(var3 - -1);
+                if (-6 == (var3 ^ -1)) {
+                  pg.field_f[0 + var3 * 8 + 0] = qd.a(param2, "", "pix_skin" + var6 + "_move1").a();
+                  pg.field_f[0 + 8 * var3 - -1] = qd.a(param2, "", "pix_skin" + var6 + "_move2").a();
+                  pg.field_f[2 + (0 + var3 * 8)] = qd.a(param2, "", "pix_skin" + var6 + "_move3").a();
+                  pg.field_f[3 + var3 * 8] = qd.a(param2, "", "pix_skin" + var6 + "_move4").a();
+                  break L4;
+                } else {
+                  pg.field_f[0 + (8 * var3 + 0)] = param0.a(true, "pix_skin" + var6 + "_move1", "");
+                  pg.field_f[0 + (var3 * 8 - -1)] = param0.a(true, "pix_skin" + var6 + "_move2", "");
+                  pg.field_f[2 + (0 + 8 * var3)] = param0.a(true, "pix_skin" + var6 + "_move3", "");
+                  pg.field_f[3 + var3 * 8] = param0.a(true, "pix_skin" + var6 + "_move4", "");
+                  break L4;
+                }
+              }
+              L5: {
+                pg.field_f[5 + var3 * 8] = param0.a(true, "pix_skin" + var6 + "_landing_normal", "");
+                if (7 != var3) {
+                  pg.field_f[6 + var3 * 8] = qd.a(param2, "", "pix_skin" + var6 + "_landing_special").a();
+                  pg.field_f[7 + var3 * 8] = qd.a(param2, "", "pix_skin" + var6 + "_picture_complete").a();
+                  break L5;
+                } else {
+                  pg.field_f[8 * var3 + 6] = param0.a(true, "pix_skin" + var6 + "_landing_special", "");
+                  pg.field_f[8 * var3 + 7] = param0.a(true, "pix_skin" + var6 + "_picture_complete", "");
+                  break L5;
+                }
+              }
+              pg.field_f[4 + 8 * var3] = param0.a(true, "pix_skin" + var6 + "_tile_rotate", "");
+              var3++;
+              continue L3;
+            }
+          }
+        }
+    }
+
+    rf() {
+        ((rf) this).field_e = new nj();
+        ((rf) this).field_f = new nj();
+        ((rf) this).field_l = new nj();
+        ((rf) this).field_p = new nj();
+        ((rf) this).field_b = new we(6);
+        ((rf) this).field_h = 0;
+        ((rf) this).field_a = (byte) 0;
+        ((rf) this).field_m = 0;
+        ((rf) this).field_g = new we(10);
+    }
+
+    static {
+        $cfr$clinit();
+    }
+
+    private static void $cfr$clinit() {
+        field_i = new dq();
+    }
+}
