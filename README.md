@@ -29,6 +29,26 @@ semantic meaning. This is expected and is not something the decompiler tries to
   assembler/disassembler, and the decompiler under `src/decompiler` that
   actually generated the Java source here.
 
+## Compilation stubs
+
+The games reference native/platform classes that are **not** part of the
+standard JDK — Microsoft J++ runtime (`com.ms.*`), DirectX/Direct3D bindings
+(`com.ms.directX`, `jagdx`), OpenGL (`jaggl`), Jagex native peers (`jaclib`,
+`jagex3`), the AlterOrb launcher hook, and the browser `netscape.javascript.JSObject`.
+Minimal source **stubs** for these live under [`stubs/src/`](stubs/src) (49 `.java`
+files) so the decompiled sources have something to compile against.
+
+Build them into a jar with:
+
+```sh
+cd stubs && ./build-stubs.sh   # produces stubs/funorb-stubs.jar
+```
+
+These stubs mirror `scripts/build-stubs.sh` in
+[dekobloko-work](https://github.com/Kreijstal/dekobloko-work). They provide
+signatures only (no real behavior) — enough to satisfy the compiler, not to run
+the games.
+
 ## Caveats
 
 - This is **decompiler output**. It is not guaranteed to recompile cleanly with
