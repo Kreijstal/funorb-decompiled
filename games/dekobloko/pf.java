@@ -543,10 +543,10 @@ final class pf {
               } else {
                 return;
               }
-            } catch (java.lang.Throwable decompiledCaughtParameter) {
-              decompiledCaughtException = decompiledCaughtParameter;
+            } catch (java.lang.Throwable decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              var6 = decompiledCaughtException;
             }
-            var6 = decompiledCaughtException;
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
@@ -1083,16 +1083,17 @@ final class pf {
     }
 
     private final boolean b(int param0, int param1, int param2) {
-        String var4 = null;
+        Object var4 = null;
+        String var4_ref = null;
         Object var5 = null;
         if (param2 == 0) {
           var4 = null;
           if (4 != param1) {
             if ((param1 ^ -1) == -6) {
-              var4 = md.a(param0, ((pf) this).field_b, false);
-              if (var4 != null) {
+              var4_ref = md.a(param0, ((pf) this).field_b, false);
+              if (var4_ref != null) {
                 var5 = null;
-                ca.a(((pf) this).field_b, (String) null, var4, (byte) -79, 2, 0);
+                ca.a(((pf) this).field_b, (String) null, var4_ref, (byte) -79, 2, 0);
                 return true;
               } else {
                 return true;
@@ -1100,10 +1101,10 @@ final class pf {
             } else {
               if ((param1 ^ -1) != -7) {
                 if (7 == param1) {
-                  var4 = sg.a(((pf) this).field_b, ((pf) this).field_m, param0, (byte) 126);
-                  if (var4 != null) {
+                  var4_ref = sg.a(((pf) this).field_b, ((pf) this).field_m, param0, (byte) 126);
+                  if (var4_ref != null) {
                     var5 = null;
-                    ca.a(((pf) this).field_b, (String) null, var4, (byte) -79, 2, 0);
+                    ca.a(((pf) this).field_b, (String) null, var4_ref, (byte) -79, 2, 0);
                     return true;
                   } else {
                     return true;
@@ -1112,23 +1113,23 @@ final class pf {
                   return false;
                 }
               } else {
-                var4 = dd.b(((pf) this).field_b, 127, param0);
-                if (var4 == null) {
+                var4_ref = dd.b(((pf) this).field_b, 127, param0);
+                if (var4_ref == null) {
                   return true;
                 } else {
                   var5 = null;
-                  ca.a(((pf) this).field_b, (String) null, var4, (byte) -79, 2, 0);
+                  ca.a(((pf) this).field_b, (String) null, var4_ref, (byte) -79, 2, 0);
                   return true;
                 }
               }
             }
           } else {
-            var4 = rb.a(param0, 0, ((pf) this).field_b);
-            if (var4 == null) {
+            var4_ref = rb.a(param0, 0, ((pf) this).field_b);
+            if (var4_ref == null) {
               return true;
             } else {
               var5 = null;
-              ca.a(((pf) this).field_b, (String) null, var4, (byte) -79, 2, 0);
+              ca.a(((pf) this).field_b, (String) null, var4_ref, (byte) -79, 2, 0);
               return true;
             }
           }

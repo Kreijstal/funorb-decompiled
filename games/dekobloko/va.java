@@ -394,8 +394,9 @@ final class va extends bh {
                         break L8;
                       }
                     }
+                    int incrementValue$1 = var3;
                     var3++;
-                    ((va) this).field_E[var3] = (byte)(var6 - 128);
+                    ((va) this).field_E[incrementValue$1] = (byte)(var6 - 128);
                     var5++;
                     continue L6;
                   }
@@ -449,8 +450,9 @@ final class va extends bh {
                       break L3;
                     }
                   }
+                  int incrementValue$1 = var2;
                   var2++;
-                  var1[var2] = (byte)(var7 - 128);
+                  var1[incrementValue$1] = (byte)(var7 - 128);
                   var6++;
                   continue L2;
                 } else {
@@ -1093,6 +1095,7 @@ final class va extends bh {
 
     final static va a(ji param0, int param1, int param2) {
         try {
+            va var4_ref = null;
             if (!va.a(param0)) {
                 boolean discarded$0 = param0.a((byte) -83, param2, param1);
                 return null;
@@ -1101,13 +1104,13 @@ final class va extends bh {
             if (var3 == null) {
                 return null;
             }
-            va var4 = null;
+            Object var4 = null;
             try {
-                var4 = new va(var3);
+                var4_ref = new va(var3);
             } catch (IOException iOException) {
                 iOException.printStackTrace();
             }
-            return var4;
+            return var4_ref;
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
@@ -1154,6 +1157,7 @@ final class va extends bh {
 
     final static va a(ji param0, String param1, String param2) {
         try {
+            va var4_ref = null;
             if (!va.a(param0)) {
                 boolean discarded$0 = param0.a(param2, true, param1);
                 return null;
@@ -1162,13 +1166,13 @@ final class va extends bh {
             if (var3 == null) {
                 return null;
             }
-            va var4 = null;
+            Object var4 = null;
             try {
-                var4 = new va(var3);
+                var4_ref = new va(var3);
             } catch (IOException iOException) {
                 iOException.printStackTrace();
             }
-            return var4;
+            return var4_ref;
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {

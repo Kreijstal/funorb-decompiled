@@ -15,127 +15,65 @@ final class mb {
     final static boolean a(boolean param0, int param1) {
         try {
             int var2 = 0;
-            uf var2_ref = null;
+            uf var2_ref_uf = null;
             IOException var2_ref_IOException = null;
             int stackIn_9_0 = 0;
-            int stackOut_7_0 = 0;
+            Throwable decompiledCaughtException = null;
             int stackOut_8_0 = 0;
-            int statePc = 0;
-            Throwable caughtException = null;
-            stateLoop: while (true) {
-                switch (statePc) {
-                    case 0: {
-                        if (k.field_c != null) {
-                            statePc = 2;
-                        } else {
-                            statePc = 1;
-                        }
-                        continue stateLoop;
+            int stackOut_7_0 = 0;
+            L0: {
+              if (k.field_c != null) {
+                break L0;
+              } else {
+                k.field_c = lf.field_f.a(114, mc.field_e, hc.field_a);
+                break L0;
+              }
+            }
+            if (k.field_c.field_c != -1) {
+              el.field_J = ik.a(4);
+              p.field_a = ik.a(4);
+              if (-2 == k.field_c.field_c) {
+                try {
+                  L1: {
+                    qc.field_s = new qk((java.net.Socket) k.field_c.field_b, lf.field_f);
+                    var2_ref_uf = de.field_V;
+                    we.field_b.field_n = 0;
+                    ph.field_xb = ba.field_f;
+                    if (!param0) {
+                      stackOut_8_0 = -1;
+                      stackIn_9_0 = stackOut_8_0;
+                      break L1;
+                    } else {
+                      stackOut_7_0 = -2;
+                      stackIn_9_0 = stackOut_7_0;
+                      break L1;
                     }
-                    case 1: {
-                        k.field_c = lf.field_f.a(114, mc.field_e, hc.field_a);
-                        statePc = 2;
-                        continue stateLoop;
-                    }
-                    case 2: {
-                        if (k.field_c.field_c != -1) {
-                            statePc = 4;
-                        } else {
-                            statePc = 3;
-                        }
-                        continue stateLoop;
-                    }
-                    case 3: {
-                        return false;
-                    }
-                    case 4: {
-                        el.field_J = ik.a(4);
-                        p.field_a = ik.a(4);
-                        if (-2 == k.field_c.field_c) {
-                            statePc = 6;
-                        } else {
-                            statePc = 5;
-                        }
-                        continue stateLoop;
-                    }
-                    case 5: {
-                        ph.field_xb = kl.field_B;
-                        k.field_c = null;
-                        var2 = 79 / ((param1 - 21) / 48);
-                        return true;
-                    }
-                    case 6: {
-                        try {
-                            qc.field_s = new qk((java.net.Socket) k.field_c.field_b, lf.field_f);
-                            var2_ref = de.field_V;
-                            we.field_b.field_n = 0;
-                            ph.field_xb = ba.field_f;
-                            if (!param0) {
-                                statePc = 8;
-                            } else {
-                                statePc = 7;
-                            }
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_6) {
-                            caughtException = stateCaught_6;
-                            statePc = 11;
-                            continue stateLoop;
-                        }
-                    }
-                    case 7: {
-                        try {
-                            stackOut_7_0 = -2;
-                            stackIn_9_0 = stackOut_7_0;
-                            statePc = 9;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_7) {
-                            caughtException = stateCaught_7;
-                            statePc = 11;
-                            continue stateLoop;
-                        }
-                    }
-                    case 8: {
-                        try {
-                            stackOut_8_0 = -1;
-                            stackIn_9_0 = stackOut_8_0;
-                            statePc = 9;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_8) {
-                            caughtException = stateCaught_8;
-                            statePc = 11;
-                            continue stateLoop;
-                        }
-                    }
-                    case 9: {
-                        try {
-                            lg.field_U = stackIn_9_0;
-                            bb.field_d = stackIn_9_0;
-                            kf.field_L = stackIn_9_0;
-                            var2_ref.field_n = 0;
-                            gi.a(kb.field_g, l.field_c, 17, (wl) (Object) we.field_b, qk.field_a);
-                            wj.c(4792, -1);
-                            statePc = 10;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_9) {
-                            caughtException = stateCaught_9;
-                            statePc = 11;
-                            continue stateLoop;
-                        }
-                    }
-                    case 10: {
-                        k.field_c = null;
-                        var2 = 79 / ((param1 - 21) / 48);
-                        return true;
-                    }
-                    case 11: {
-                        var2_ref_IOException = (IOException) (Object) caughtException;
-                        ph.field_xb = kl.field_B;
-                        k.field_c = null;
-                        var2 = 79 / ((param1 - 21) / 48);
-                        return true;
-                    }
-                    default: throw new IllegalStateException("invalid CFG state " + statePc);
+                  }
+                  lg.field_U = stackIn_9_0;
+                  bb.field_d = stackIn_9_0;
+                  kf.field_L = stackIn_9_0;
+                  var2_ref_uf.field_n = 0;
+                  gi.a(kb.field_g, l.field_c, 17, (wl) (Object) we.field_b, qk.field_a);
+                  wj.c(4792, -1);
+                } catch (java.io.IOException decompiledCaughtParameter0) {
+                  decompiledCaughtException = decompiledCaughtParameter0;
+                  var2_ref_IOException = (IOException) (Object) decompiledCaughtException;
+                  ph.field_xb = kl.field_B;
+                  k.field_c = null;
+                  var2 = 79 / ((param1 - 21) / 48);
+                  return true;
                 }
+                k.field_c = null;
+                var2 = 79 / ((param1 - 21) / 48);
+                return true;
+              } else {
+                ph.field_xb = kl.field_B;
+                k.field_c = null;
+                var2 = 79 / ((param1 - 21) / 48);
+                return true;
+              }
+            } else {
+              return false;
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -150,21 +88,22 @@ final class mb {
     }
 
     final static String a(int param0, hl param1) {
-        String var2 = null;
+        Object var2 = null;
+        String var2_ref = null;
         String var3 = null;
         int var4 = 0;
         String var5 = null;
         Object var6 = null;
         var4 = client.field_A ? 1 : 0;
         var6 = null;
-        var2 = (String) var6;
+        var2 = var6;
         if (param1.field_p != null) {
           L0: {
             var5 = param1.field_p;
             var3 = var5;
             var3 = var5;
             if (param1.field_l == 1) {
-              var2 = "<img=0>" + var5;
+              var2_ref = "<img=0>" + var5;
               break L0;
             } else {
               break L0;
@@ -172,9 +111,9 @@ final class mb {
           }
           L1: {
             if (-3 == (param1.field_l ^ -1)) {
-              var2 = "<img=1>" + var2;
-              var3 = var2;
-              var3 = var2;
+              var2_ref = "<img=1>" + var2_ref;
+              var3 = var2_ref;
+              var3 = var2_ref;
               break L1;
             } else {
               break L1;
@@ -235,7 +174,7 @@ final class mb {
                         }
                       }
                       if (!param1.field_j) {
-                        var3 = var3 + var2 + ": ";
+                        var3 = var3 + var2_ref + ": ";
                         return var3;
                       } else {
                         return var3;
@@ -250,7 +189,7 @@ final class mb {
                         }
                       }
                       if (!param1.field_j) {
-                        var3 = var3 + var2 + ": ";
+                        var3 = var3 + var2_ref + ": ";
                         return var3;
                       } else {
                         return var3;
@@ -284,7 +223,7 @@ final class mb {
                       }
                     }
                     if (!param1.field_j) {
-                      var3 = var3 + var2 + ": ";
+                      var3 = var3 + var2_ref + ": ";
                       return var3;
                     } else {
                       return var3;
@@ -301,7 +240,7 @@ final class mb {
                 }
               }
               if (!param1.field_j) {
-                var3 = var3 + var2 + ": ";
+                var3 = var3 + var2_ref + ": ";
                 return var3;
               } else {
                 return var3;
@@ -364,7 +303,7 @@ final class mb {
                       }
                     }
                     if (!param1.field_j) {
-                      var3 = var3 + var2 + ": ";
+                      var3 = var3 + var2_ref + ": ";
                       return var3;
                     } else {
                       return var3;
@@ -397,7 +336,7 @@ final class mb {
                       }
                     }
                     if (!param1.field_j) {
-                      var3 = var3 + var2 + ": ";
+                      var3 = var3 + var2_ref + ": ";
                       return var3;
                     } else {
                       return var3;
@@ -414,7 +353,7 @@ final class mb {
                 }
               }
               if (!param1.field_j) {
-                var3 = var3 + var2 + ": ";
+                var3 = var3 + var2_ref + ": ";
                 return var3;
               } else {
                 return var3;

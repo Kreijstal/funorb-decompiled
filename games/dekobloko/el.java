@@ -41,29 +41,33 @@ final class el extends sf {
             Object stackIn_2_0 = null;
             eh stackIn_4_0 = null;
             Throwable decompiledCaughtException = null;
-            Object stackOut_1_0 = null;
             eh stackOut_3_0 = null;
+            Object stackOut_1_0 = null;
             try {
               if (param1 >= 5) {
-                return (eh) (Object) stackIn_2_0;
+                var4 = Class.forName("rj");
+                var5 = (eh) var4.newInstance();
+                var5.a(param2, (byte) 83, param0, param3);
+                stackOut_3_0 = (eh) var5;
+                stackIn_4_0 = stackOut_3_0;
               } else {
                 stackOut_1_0 = null;
                 stackIn_2_0 = stackOut_1_0;
+                return (eh) (Object) stackIn_2_0;
               }
-            } catch (java.lang.Throwable decompiledCaughtParameter) {
-              decompiledCaughtException = decompiledCaughtParameter;
-              var4 = Class.forName("rj");
-              var5 = (eh) var4.newInstance();
-              var5.a(param2, (byte) 83, param0, param3);
-              stackOut_3_0 = (eh) var5;
-              stackIn_4_0 = stackOut_3_0;
+            } catch (java.lang.Throwable decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              var4_ref = decompiledCaughtException;
+              var5_ref = new wf();
+              ((eh) (Object) var5_ref).a(param2, (byte) 83, param0, param3);
+              return (eh) (Object) var5_ref;
             }
+            return stackIn_4_0;
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
             throw new RuntimeException(decompiledCheckedException);
         }
-        return null;
     }
 
     el() {

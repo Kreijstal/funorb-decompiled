@@ -17,67 +17,38 @@ final class qj implements gl {
     final static void a(byte param0) {
         try {
             Exception var1 = null;
-            int statePc = 0;
-            Throwable caughtException = null;
-            stateLoop: while (true) {
-                switch (statePc) {
-                    case 0: {
-                        if (null == dj.field_cb) {
-                            statePc = 7;
-                        } else {
-                            statePc = 1;
-                        }
-                        continue stateLoop;
-                    }
-                    case 1: {
-                        try {
-                            dj.field_cb.a(0L, (byte) -109);
-                            dj.field_cb.a(de.field_V.field_r, (byte) 117, de.field_V.field_n, 24);
-                            statePc = 2;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_1) {
-                            caughtException = stateCaught_1;
-                            statePc = 6;
-                            continue stateLoop;
-                        }
-                    }
-                    case 2: {
-                        if (param0 != 64) {
-                            statePc = 4;
-                        } else {
-                            statePc = 3;
-                        }
-                        continue stateLoop;
-                    }
-                    case 3: {
-                        de.field_V.field_n = de.field_V.field_n + 24;
-                        return;
-                    }
-                    case 4: {
-                        return;
-                    }
-                    case 6: {
-                        var1 = (Exception) (Object) caughtException;
-                        statePc = 7;
-                        continue stateLoop;
-                    }
-                    case 7: {
-                        if (param0 != 64) {
-                            statePc = 9;
-                        } else {
-                            statePc = 8;
-                        }
-                        continue stateLoop;
-                    }
-                    case 8: {
-                        de.field_V.field_n = de.field_V.field_n + 24;
-                        return;
-                    }
-                    case 9: {
-                        return;
-                    }
-                    default: throw new IllegalStateException("invalid CFG state " + statePc);
+            int decompiledRegionSelector0 = 0;
+            Throwable decompiledCaughtException = null;
+            L0: {
+              if (null == dj.field_cb) {
+                break L0;
+              } else {
+                try {
+                  dj.field_cb.a(0L, (byte) -109);
+                  dj.field_cb.a(de.field_V.field_r, (byte) 117, de.field_V.field_n, 24);
+                  decompiledRegionSelector0 = 0;
+                } catch (java.lang.Exception decompiledCaughtParameter0) {
+                  decompiledCaughtException = decompiledCaughtParameter0;
+                  var1 = (Exception) (Object) decompiledCaughtException;
+                  decompiledRegionSelector0 = 1;
                 }
+                if (decompiledRegionSelector0 == 0) {
+                  if (param0 != 64) {
+                    return;
+                  } else {
+                    de.field_V.field_n = de.field_V.field_n + 24;
+                    return;
+                  }
+                } else {
+                  break L0;
+                }
+              }
+            }
+            if (param0 != 64) {
+              return;
+            } else {
+              de.field_V.field_n = de.field_V.field_n + 24;
+              return;
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;

@@ -124,8 +124,9 @@ final class ih {
             for (var12 = 0; var12 < var8; var12++) {
                 var13 = ((ih) this).field_k[var7][var11 & var10];
                 var11 = var11 >>> var9;
+                int incrementValue$0 = var5;
                 var5++;
-                field_i[var5] = var13 >= 0 ? va.field_S[var13].a() : 0;
+                field_i[incrementValue$0] = var13 >= 0 ? va.field_S[var13].a() : 0;
             }
         }
         return true;
@@ -462,8 +463,9 @@ final class ih {
                               var6++;
                               continue L3;
                             } else {
+                              int incrementValue$1 = var5;
                               var5++;
-                              ((ih) this).field_f[var5] = va.c(var4);
+                              ((ih) this).field_f[incrementValue$1] = va.c(var4);
                               var8++;
                               continue L6;
                             }

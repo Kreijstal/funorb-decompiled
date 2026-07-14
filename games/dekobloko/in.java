@@ -587,7 +587,7 @@ final class in extends bh {
         var7 = hk.field_j;
         var8 = hk.field_i;
         ((in) this).field_t.a();
-        int discarded$1 = field_n.a(param0, 0, 0, 1 + var4, var5, param1, -1, 1, 1, 8);
+        int discarded$6 = field_n.a(param0, 0, 0, 1 + var4, var5, param1, -1, 1, 1, 8);
         hk.a(var34, var7, var8);
         ((in) this).field_q = new int[var4 * var5];
         var35 = new int[var5 * var4];
@@ -626,8 +626,9 @@ final class in extends bh {
                             break L3;
                           } else {
                             L5: {
+                              int incrementValue$7 = var17;
                               var17++;
-                              var20 = var9[var17];
+                              var20 = var9[incrementValue$7];
                               var21 = var20 % var4;
                               if (var21 >= var13) {
                                 break L5;
@@ -668,8 +669,9 @@ final class in extends bh {
                                 if ((-2147483617 & ((in) this).field_t.field_D[var20 + -1]) != var19) {
                                   break L9;
                                 } else {
+                                  int incrementValue$8 = var18;
                                   var18++;
-                                  var9[var18] = -1 + var20;
+                                  var9[incrementValue$8] = -1 + var20;
                                   ((in) this).field_t.field_D[-1 + var20] = ((in) this).field_t.field_D[-1 + var20] + -2147483648;
                                   break L9;
                                 }
@@ -682,8 +684,9 @@ final class in extends bh {
                                 if ((((in) this).field_t.field_D[1 + var20] & -2147483617) != var19) {
                                   break L10;
                                 } else {
+                                  int incrementValue$9 = var18;
                                   var18++;
-                                  var9[var18] = 1 + var20;
+                                  var9[incrementValue$9] = 1 + var20;
                                   ((in) this).field_t.field_D[var20 - -1] = ((in) this).field_t.field_D[var20 - -1] + -2147483648;
                                   break L10;
                                 }
@@ -696,8 +699,9 @@ final class in extends bh {
                                 if ((((in) this).field_t.field_D[-var4 + var20] & -2147483617) != var19) {
                                   break L11;
                                 } else {
+                                  int incrementValue$10 = var18;
                                   var18++;
-                                  var9[var18] = var20 - var4;
+                                  var9[incrementValue$10] = var20 - var4;
                                   ((in) this).field_t.field_D[-var4 + var20] = ((in) this).field_t.field_D[-var4 + var20] + -2147483648;
                                   break L11;
                                 }
@@ -709,8 +713,9 @@ final class in extends bh {
                               if (var19 != (((in) this).field_t.field_D[var20 + var4] & -2147483617)) {
                                 continue L4;
                               } else {
+                                int incrementValue$11 = var18;
                                 var18++;
-                                var9[var18] = var20 - -var4;
+                                var9[incrementValue$11] = var20 - -var4;
                                 ((in) this).field_t.field_D[var20 + var4] = ((in) this).field_t.field_D[var20 + var4] + -2147483648;
                                 continue L4;
                               }

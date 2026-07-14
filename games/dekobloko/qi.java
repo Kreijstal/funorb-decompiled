@@ -80,26 +80,50 @@ class qi extends ek {
     }
 
     final void a(String param0, int param1, int param2) {
-        String[] var7 = null;
         String[] var4 = null;
         int var5 = 0;
-        int var6 = client.field_A ? 1 : 0;
-        if (param2 != 1) {
-            return;
-        }
-        if (null != ((qi) this).field_K) {
-            // if_icmpge L31
-        } else {
-            var7 = new String[param1 + 1];
-            var4 = var7;
-            if (!(null == ((qi) this).field_K)) {
-                for (var5 = 0; ((qi) this).field_K.length > var5; var5++) {
-                    var7[var5] = ((qi) this).field_K[var5];
+        int var6 = 0;
+        String[] var7 = null;
+        var6 = client.field_A ? 1 : 0;
+        if (param2 == 1) {
+          L0: {
+            L1: {
+              if (null == ((qi) this).field_K) {
+                break L1;
+              } else {
+                if (param1 >= ((qi) this).field_K.length) {
+                  break L1;
+                } else {
+                  break L0;
                 }
+              }
+            }
+            L2: {
+              var7 = new String[param1 + 1];
+              var4 = var7;
+              if (null != ((qi) this).field_K) {
+                var5 = 0;
+                L3: while (true) {
+                  if (((qi) this).field_K.length <= var5) {
+                    break L2;
+                  } else {
+                    var7[var5] = ((qi) this).field_K[var5];
+                    var5++;
+                    continue L3;
+                  }
+                }
+              } else {
+                break L2;
+              }
             }
             ((qi) this).field_K = var4;
+            break L0;
+          }
+          ((qi) this).field_K[param1] = param0;
+          return;
+        } else {
+          return;
         }
-        ((qi) this).field_K[param1] = param0;
     }
 
     void a(int param0, int param1, int param2, int param3) {
@@ -237,7 +261,8 @@ class qi extends ek {
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
-        pk var10 = null;
+        Object var10 = null;
+        pk var10_ref = null;
         int var11 = 0;
         nf var12 = null;
         int var13 = 0;
@@ -315,14 +340,14 @@ class qi extends ek {
                   var14 = stackIn_14_0;
                   var15 = new pk(var7, var13, var12.field_c, var14 - var13, Math.max(var3.a((byte) -120), -var12.field_c + var12.field_i));
                   if (var10 != null) {
-                    var10.field_o = var15;
+                    ((pk) var10).field_o = var15;
                     break L5;
                   } else {
                     break L5;
                   }
                 }
                 ((qi) this).field_O.a((bh) (Object) var15, 2777);
-                var10 = var15;
+                var10_ref = var15;
                 var11++;
                 continue L2;
               }

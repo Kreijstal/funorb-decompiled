@@ -228,8 +228,9 @@ final class rb {
                         }
                       }
                     }
+                    int incrementValue$1 = var2;
                     var2++;
-                    pd.field_g[var2] = pd.field_g[var3];
+                    pd.field_g[incrementValue$1] = pd.field_g[var3];
                     var3++;
                     continue L3;
                   }

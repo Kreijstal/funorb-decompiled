@@ -24,7 +24,7 @@ final class dk extends java.awt.Canvas {
     final static void a(int param0) {
         int var2 = 0;
         int[] var3_ref_int__ = null;
-        f var3_ref = null;
+        f var3_ref_f = null;
         int var3 = 0;
         int[] var4 = null;
         uf var5 = null;
@@ -53,7 +53,7 @@ final class dk extends java.awt.Canvas {
           } else {
             if (var2 == 2) {
               var10 = (f) (Object) rc.field_e.c((byte) -64);
-              var3_ref = (f) (Object) rc.field_e.c((byte) -64);
+              var3_ref_f = (f) (Object) rc.field_e.c((byte) -64);
               if (var10 == null) {
                 si.a(115);
                 return;

@@ -95,30 +95,63 @@ final class wj extends gk implements vn {
 
     final static void c(int param0, int param1) {
         try {
-            if (qc.field_s != null) {
-                // iflt L30
-                // if_acmpne L22
-            } else {
-                we.field_b.field_n = 0;
+            IOException iOException = null;
+            Throwable decompiledCaughtException = null;
+            L0: {
+              if (qc.field_s == null) {
+                break L0;
+              } else {
+                L1: {
+                  if (param1 < 0) {
+                    break L1;
+                  } else {
+                    if (ph.field_xb != wf.field_u) {
+                      break L0;
+                    } else {
+                      break L1;
+                    }
+                  }
+                }
+                L2: {
+                  if (we.field_b.field_n != 0) {
+                    break L2;
+                  } else {
+                    if (ik.a(4) > 10000L + el.field_J) {
+                      we.field_b.f(param1, -4);
+                      break L2;
+                    } else {
+                      break L2;
+                    }
+                  }
+                }
+                L3: {
+                  if (param0 == 4792) {
+                    break L3;
+                  } else {
+                    field_Kb = null;
+                    break L3;
+                  }
+                }
+                L4: {
+                  if (-1 <= (we.field_b.field_n ^ -1)) {
+                    break L4;
+                  } else {
+                    try {
+                      qc.field_s.a(0, we.field_b.field_n, 1, we.field_b.field_r);
+                      el.field_J = ik.a(param0 ^ 4796);
+                    } catch (java.io.IOException decompiledCaughtParameter0) {
+                      decompiledCaughtException = decompiledCaughtParameter0;
+                      iOException = (IOException) (Object) decompiledCaughtException;
+                      si.a(100);
+                    }
+                    we.field_b.field_n = 0;
+                    break L4;
+                  }
+                }
                 return;
+              }
             }
-            if (we.field_b.field_n == 0) {
-                if (!(ik.a(4) <= 10000L + el.field_J)) {
-                    we.field_b.f(param1, -4);
-                }
-            }
-            if (param0 != 4792) {
-                field_Kb = null;
-            }
-            if (-1 > (we.field_b.field_n ^ -1)) {
-                try {
-                    qc.field_s.a(0, we.field_b.field_n, 1, we.field_b.field_r);
-                    el.field_J = ik.a(param0 ^ 4796);
-                } catch (IOException iOException) {
-                    si.a(100);
-                }
-                we.field_b.field_n = 0;
-            }
+            we.field_b.field_n = 0;
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
@@ -266,7 +299,8 @@ final class wj extends gk implements vn {
     }
 
     final static hl a(byte param0, int param1, int param2, int param3) {
-        hl var4 = null;
+        Object var4 = null;
+        hl var4_ref = null;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
@@ -352,7 +386,7 @@ final class wj extends gk implements vn {
                     }
                   }
                   sc.field_m = stackIn_41_0 != 0;
-                  return var4;
+                  return var4_ref;
                 } else {
                   var9_ref_hl = pd.field_g[var8];
                   if (null != var9_ref_hl.field_f) {
@@ -360,7 +394,7 @@ final class wj extends gk implements vn {
                     var9_ref_hl.field_f.a(var9_ref_hl.field_f.a(true), 0, var7, param1, param3);
                     var7 = var7 + param1;
                     if (var9_ref_hl.field_f.field_ob != 0) {
-                      var4 = var9_ref_hl;
+                      var4_ref = var9_ref_hl;
                       var8++;
                       continue L1;
                     } else {

@@ -233,6 +233,7 @@ final class g extends ek {
 
     final static wb a(int param0, String param1) {
         String var2 = null;
+        CharSequence var2_ref = null;
         Object var3 = null;
         wb var3_ref = null;
         String var4 = null;
@@ -249,12 +250,12 @@ final class g extends ek {
             if (var2 != null) {
               break L0;
             } else {
-              var2 = (String) (Object) var7;
+              var2_ref = var7;
               break L0;
             }
           }
           if (param0 == -3805) {
-            var3_ref = (wb) (Object) hg.field_e.a(24710, (long)var2.hashCode());
+            var3_ref = (wb) (Object) hg.field_e.a(24710, (long)((String) (Object) var2_ref).hashCode());
             L1: while (true) {
               if (var3_ref != null) {
                 L2: {
@@ -267,7 +268,7 @@ final class g extends ek {
                     break L2;
                   }
                 }
-                if (var4.equals((Object) (Object) var2)) {
+                if (var4.equals((Object) (Object) var2_ref)) {
                   return var3_ref;
                 } else {
                   var3_ref = (wb) (Object) hg.field_e.d(-17713);
@@ -279,7 +280,7 @@ final class g extends ek {
             }
           } else {
             g.a(106);
-            var3_ref = (wb) (Object) hg.field_e.a(24710, (long)var2.hashCode());
+            var3_ref = (wb) (Object) hg.field_e.a(24710, (long)((String) (Object) var2_ref).hashCode());
             L3: while (true) {
               if (var3_ref != null) {
                 L4: {
@@ -292,7 +293,7 @@ final class g extends ek {
                     break L4;
                   }
                 }
-                if (var4.equals((Object) (Object) var2)) {
+                if (var4.equals((Object) (Object) var2_ref)) {
                   return var3_ref;
                 } else {
                   var3_ref = (wb) (Object) hg.field_e.d(-17713);

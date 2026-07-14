@@ -227,10 +227,12 @@ final class ge {
                               var26++;
                               continue L3;
                             } else {
+                              int incrementValue$143 = var24;
                               var24++;
-                              if (var19[var24] != 0) {
+                              if (var19[incrementValue$143] != 0) {
+                                int incrementValue$144 = var25;
                                 var25++;
-                                var18[var25] = (byte) 1;
+                                var18[incrementValue$144] = (byte) 1;
                                 var27++;
                                 continue L4;
                               } else {
@@ -255,8 +257,9 @@ final class ge {
                       var25++;
                       continue L1;
                     } else {
+                      int incrementValue$145 = var24;
                       var24++;
-                      if (0 != var19[var24]) {
+                      if (0 != var19[incrementValue$145]) {
                         hk.a(var26, var25, (param2 << 1731923329) + 1, (param2 << -1375208415) + 1, 2);
                         var26++;
                         continue L5;

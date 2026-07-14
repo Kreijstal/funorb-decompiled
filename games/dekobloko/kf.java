@@ -25,17 +25,37 @@ class kf extends ce implements ra {
     }
 
     void a(ce param0, int param1, int param2, int param3) {
-        int var7 = client.field_A ? 1 : 0;
-        if (param1 <= 38) {
-            boolean discarded$0 = ((kf) this).a(false);
+        rd var5 = null;
+        ce var6 = null;
+        int var7 = 0;
+        ce var8 = null;
+        L0: {
+          var7 = client.field_A ? 1 : 0;
+          if (param1 > 38) {
+            break L0;
+          } else {
+            boolean discarded$2 = ((kf) this).a(false);
+            break L0;
+          }
         }
         super.a(param0, 68, param2, param3);
-        rd var5 = new rd(((kf) this).field_H);
-        ce var8 = (ce) (Object) var5.a((byte) 71);
-        while (var8 != null) {
-            // ifeq L107
-            var8.a(param0, 47, ((kf) this).field_D + param2, param3 - -((kf) this).field_u);
-            ce var6 = (ce) (Object) var5.a(-62);
+        var5 = new rd(((kf) this).field_H);
+        var8 = (ce) (Object) var5.a((byte) 71);
+        L1: while (true) {
+          L2: {
+            if (var8 == null) {
+              break L2;
+            } else {
+              if (!var8.a((byte) 38)) {
+                break L2;
+              } else {
+                var8.a(param0, 47, ((kf) this).field_D + param2, param3 - -((kf) this).field_u);
+                var6 = (ce) (Object) var5.a(-62);
+                continue L1;
+              }
+            }
+          }
+          return;
         }
     }
 
@@ -48,37 +68,94 @@ class kf extends ce implements ra {
     }
 
     boolean a(int param0, int param1, ce param2, char param3) {
-        int var8 = client.field_A ? 1 : 0;
-        rd var10 = new rd(((kf) this).field_H);
-        int var6 = 18 % ((-22 - param0) / 49);
-        ce var9 = (ce) (Object) var10.a((byte) 71);
-        while (var9 != null) {
-            // ifeq L100
-            if (var9.a(true)) {
-                if (!(!var9.a(-79, param1, param2, param3))) {
-                    return true;
+        int var6 = 0;
+        ce var7_ref_ce = null;
+        int var7 = 0;
+        int var8 = 0;
+        ce var9 = null;
+        rd var10 = null;
+        boolean stackIn_13_0 = false;
+        boolean stackOut_12_0 = false;
+        boolean stackOut_11_0 = false;
+        var8 = client.field_A ? 1 : 0;
+        var10 = new rd(((kf) this).field_H);
+        var6 = 18 % ((-22 - param0) / 49);
+        var9 = (ce) (Object) var10.a((byte) 71);
+        L0: while (true) {
+          L1: {
+            if (var9 == null) {
+              break L1;
+            } else {
+              if (!var9.a((byte) 124)) {
+                break L1;
+              } else {
+                L2: {
+                  if (!var9.a(true)) {
+                    break L2;
+                  } else {
+                    if (var9.a(-79, param1, param2, param3)) {
+                      return true;
+                    } else {
+                      break L2;
+                    }
+                  }
                 }
+                var7_ref_ce = (ce) (Object) var10.a(-78);
+                continue L0;
+              }
             }
-            ce var7_ref_ce = (ce) (Object) var10.a(-78);
-        }
-        int var7 = param1;
-        if (-81 != (var7 ^ -1)) {
+          }
+          var7 = param1;
+          if (-81 == (var7 ^ -1)) {
+            L3: {
+              if (!bj.field_d[81]) {
+                stackOut_12_0 = ((kf) this).a(32, param2);
+                stackIn_13_0 = stackOut_12_0;
+                break L3;
+              } else {
+                stackOut_11_0 = ((kf) this).a(param2, (byte) -120);
+                stackIn_13_0 = stackOut_11_0;
+                break L3;
+              }
+            }
+            return stackIn_13_0;
+          } else {
             return false;
+          }
         }
-        return bj.field_d[81] ? ((kf) this).a(param2, (byte) -120) : ((kf) this).a(32, param2);
     }
 
     final void a(int param0, int param1, int param2, ce param3, int param4, int param5) {
-        int var9 = client.field_A ? 1 : 0;
-        rd var7 = new rd(((kf) this).field_H);
-        ce var10 = (ce) (Object) var7.a((byte) 71);
-        while (var10 != null) {
-            // ifeq L86
-            var10.a(param0, param1 ^ 0, ((kf) this).field_u + param2, param3, ((kf) this).field_D + param4, param5);
-            ce var8 = (ce) (Object) var7.a(-126);
-        }
-        if (param1 != 64) {
-            field_J = null;
+        rd var7 = null;
+        ce var8 = null;
+        int var9 = 0;
+        ce var10 = null;
+        var9 = client.field_A ? 1 : 0;
+        var7 = new rd(((kf) this).field_H);
+        var10 = (ce) (Object) var7.a((byte) 71);
+        L0: while (true) {
+          L1: {
+            if (var10 == null) {
+              break L1;
+            } else {
+              if (!var10.a((byte) 119)) {
+                break L1;
+              } else {
+                var10.a(param0, param1 ^ 0, ((kf) this).field_u + param2, param3, ((kf) this).field_D + param4, param5);
+                var8 = (ce) (Object) var7.a(-126);
+                continue L0;
+              }
+            }
+          }
+          L2: {
+            if (param1 == 64) {
+              break L2;
+            } else {
+              field_J = null;
+              break L2;
+            }
+          }
+          return;
         }
     }
 
@@ -284,20 +361,35 @@ class kf extends ce implements ra {
     }
 
     final boolean a(int param0, int param1, ce param2, int param3, int param4, int param5, byte param6) {
-        int var10 = client.field_A ? 1 : 0;
-        rd var8 = new rd(((kf) this).field_H);
-        ce var9 = (ce) (Object) var8.a((byte) 71);
-        if (param6 != -55) {
-            return true;
-        }
-        while (var9 != null) {
-            // ifeq L103
-            if (!(!var9.a(param0, param1, param2, param3, ((kf) this).field_D + param4, ((kf) this).field_u + param5, (byte) -55))) {
-                return true;
+        rd var8 = null;
+        ce var9 = null;
+        int var10 = 0;
+        var10 = client.field_A ? 1 : 0;
+        var8 = new rd(((kf) this).field_H);
+        var9 = (ce) (Object) var8.a((byte) 71);
+        if (param6 == -55) {
+          L0: while (true) {
+            L1: {
+              if (var9 == null) {
+                break L1;
+              } else {
+                if (!var9.a((byte) 120)) {
+                  break L1;
+                } else {
+                  if (var9.a(param0, param1, param2, param3, ((kf) this).field_D + param4, ((kf) this).field_u + param5, (byte) -55)) {
+                    return true;
+                  } else {
+                    var9 = (ce) (Object) var8.a(-113);
+                    continue L0;
+                  }
+                }
+              }
             }
-            var9 = (ce) (Object) var8.a(-113);
+            return false;
+          }
+        } else {
+          return true;
         }
-        return false;
     }
 
     kf(int param0, int param1, int param2, int param3, gl param4) {
@@ -306,23 +398,49 @@ class kf extends ce implements ra {
     }
 
     final boolean a(int param0, int param1, int param2, ce param3, int param4, int param5, boolean param6) {
-        int var10 = client.field_A ? 1 : 0;
-        rd var13 = new rd(((kf) this).field_H);
-        if (param6) {
-            Object var11 = null;
-            boolean discarded$0 = ((kf) this).a(true, (ce) null);
+        ce var9 = null;
+        int var10 = 0;
+        Object var11 = null;
+        ce var12 = null;
+        rd var13 = null;
+        L0: {
+          var10 = client.field_A ? 1 : 0;
+          var13 = new rd(((kf) this).field_H);
+          if (!param6) {
+            break L0;
+          } else {
+            var11 = null;
+            boolean discarded$2 = ((kf) this).a(true, (ce) null);
+            break L0;
+          }
         }
-        ce var12 = (ce) (Object) var13.a((byte) 71);
-        while (var12 != null) {
-            // ifeq L114
-            if (var12.a(true)) {
-                if (!(!var12.a(param0, param1, param2, param3, param4, param5, param6))) {
-                    return true;
+        var12 = (ce) (Object) var13.a((byte) 71);
+        L1: while (true) {
+          L2: {
+            if (var12 == null) {
+              break L2;
+            } else {
+              if (!var12.a((byte) 67)) {
+                break L2;
+              } else {
+                L3: {
+                  if (!var12.a(true)) {
+                    break L3;
+                  } else {
+                    if (var12.a(param0, param1, param2, param3, param4, param5, param6)) {
+                      return true;
+                    } else {
+                      break L3;
+                    }
+                  }
                 }
+                var9 = (ce) (Object) var13.a(-128);
+                continue L1;
+              }
             }
-            ce var9 = (ce) (Object) var13.a(-128);
+          }
+          return false;
         }
-        return false;
     }
 
     private final void a(int param0, int param1, StringBuilder param2, Hashtable param3) {

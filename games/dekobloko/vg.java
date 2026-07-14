@@ -1,6 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
+import java.lang.String;
+
 final class vg {
     int[] field_K;
     short[] field_J;

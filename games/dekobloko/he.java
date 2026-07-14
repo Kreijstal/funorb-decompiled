@@ -1,6 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
+import java.lang.String;
+
 final class he extends kf implements qh, vn {
     private ek field_X;
     static int field_gb;
@@ -433,14 +435,32 @@ final class he extends kf implements qh, vn {
     }
 
     private final void f(byte param0) {
-        if (!ri.a(71)) {
-            // if_icmpge L62
-            // if_icmplt L43
-        } else {
-            da.a((byte) -109, ((he) this).field_bb.field_E, ((he) this).field_cb.field_E);
+        L0: {
+          L1: {
+            if (ri.a(71)) {
+              break L1;
+            } else {
+              if ((((he) this).field_bb.field_E.length() ^ -1) >= -1) {
+                break L0;
+              } else {
+                if ((((he) this).field_cb.field_E.length() ^ -1) < -1) {
+                  break L1;
+                } else {
+                  break L0;
+                }
+              }
+            }
+          }
+          da.a((byte) -109, ((he) this).field_bb.field_E, ((he) this).field_cb.field_E);
+          break L0;
         }
-        if (param0 > -26) {
+        L2: {
+          if (param0 <= -26) {
+            break L2;
+          } else {
             field_hb = null;
+            break L2;
+          }
         }
     }
 
@@ -457,14 +477,15 @@ final class he extends kf implements qh, vn {
     final static void a(boolean param0, boolean param1, int param2) {
         int var3 = 0;
         vj var4 = null;
-        wb var5 = null;
+        Object var5 = null;
+        wb var5_ref = null;
         wb var6 = null;
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
-        String var13_ref = null;
+        String var13_ref_String = null;
         int var13 = 0;
         int var14 = 0;
         int var15 = 0;
@@ -674,7 +695,7 @@ final class he extends kf implements qh, vn {
               }
               L11: {
                 if (var7 != 0) {
-                  ge.field_f.field_Sb.a((w) (Object) var5, (w) (Object) var6, 2, 0);
+                  ge.field_f.field_Sb.a((w) var5, (w) (Object) var6, 2, 0);
                   break L11;
                 } else {
                   break L11;
@@ -705,14 +726,14 @@ final class he extends kf implements qh, vn {
                 }
               }
               L14: {
-                var5 = var6;
+                var5_ref = var6;
                 if (var6.field_ob == 0) {
                   break L14;
                 } else {
                   sl.a(var6.field_Pb, (int[]) null, (byte) 112, ge.field_f.field_Rb, (w) (Object) var6, var6.field_Ob, 0L, -1, -1);
                   var16 = w.field_H;
-                  var13_ref = wk.field_o;
-                  var16.field_h.a(var13_ref, 7, 72);
+                  var13_ref_String = wk.field_o;
+                  var16.field_h.a(var13_ref_String, 7, 72);
                   var17 = w.field_H;
                   var13 = field_S;
                   var14 = nf.field_h;

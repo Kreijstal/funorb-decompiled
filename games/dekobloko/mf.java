@@ -1,6 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
+import java.lang.String;
+
 final class mf extends oe implements vn {
     static String field_S;
     static String field_V;
@@ -40,49 +42,23 @@ final class mf extends oe implements vn {
     final static void a(int param0, int param1, int param2, java.awt.Canvas param3) {
         java.awt.Graphics var4 = null;
         Exception var4_ref = null;
-        int statePc = 0;
-        Throwable caughtException = null;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    try {
-                        var4 = param3.getGraphics();
-                        le.field_m.a((byte) 54, var4, param1, param2);
-                        var4.dispose();
-                        if (param0 == 1) {
-                            statePc = 4;
-                        } else {
-                            statePc = 1;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_0) {
-                        caughtException = stateCaught_0;
-                        statePc = 3;
-                        continue stateLoop;
-                    }
-                }
-                case 1: {
-                    try {
-                        field_V = null;
-                        statePc = 4;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_1) {
-                        caughtException = stateCaught_1;
-                        statePc = 3;
-                        continue stateLoop;
-                    }
-                }
-                case 3: {
-                    var4_ref = (Exception) (Object) caughtException;
-                    param3.repaint();
-                    statePc = 4;
-                    continue stateLoop;
-                }
-                case 4: {
-                    return;
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
+        Throwable decompiledCaughtException = null;
+        try {
+          L0: {
+            var4 = param3.getGraphics();
+            le.field_m.a((byte) 54, var4, param1, param2);
+            var4.dispose();
+            if (param0 == 1) {
+              break L0;
+            } else {
+              field_V = null;
+              break L0;
             }
+          }
+        } catch (java.lang.Exception decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var4_ref = (Exception) (Object) decompiledCaughtException;
+          param3.repaint();
         }
     }
 

@@ -135,19 +135,39 @@ class rk extends ek {
     }
 
     private final int e(byte param0) {
+        int var2 = 0;
         int var3 = 0;
-        int var4 = client.field_A ? 1 : 0;
-        int var2 = ((rk) this).field_E.length();
-        if (!(var2 != ((rk) this).field_S)) {
-            return ((rk) this).field_S;
+        int var4 = 0;
+        var4 = client.field_A ? 1 : 0;
+        var2 = ((rk) this).field_E.length();
+        if (var2 == ((rk) this).field_S) {
+          return ((rk) this).field_S;
+        } else {
+          var3 = 1 + ((rk) this).field_S;
+          L0: while (true) {
+            L1: {
+              if (var3 >= var2) {
+                break L1;
+              } else {
+                if (-33 == (((rk) this).field_E.charAt(var3 + -1) ^ -1)) {
+                  break L1;
+                } else {
+                  var3++;
+                  continue L0;
+                }
+              }
+            }
+            L2: {
+              if (param0 == -30) {
+                break L2;
+              } else {
+                ((rk) this).field_X = 46;
+                break L2;
+              }
+            }
+            return var3;
+          }
         }
-        for (var3 = 1 + ((rk) this).field_S; var3 < var2; var3++) {
-            // if_icmpeq L64
-        }
-        if (param0 != -30) {
-            ((rk) this).field_X = 46;
-        }
-        return var3;
     }
 
     final boolean a(int param0, int param1, ce param2, int param3, int param4, int param5, byte param6) {
@@ -253,10 +273,10 @@ class rk extends ek {
               var2_ref = (String) java.awt.Toolkit.getDefaultToolkit().getSystemClipboard().getContents((Object) null).getTransferData(java.awt.datatransfer.DataFlavor.stringFlavor);
               this.f((byte) -92);
               this.a(var2_ref, true);
-            } catch (java.lang.Exception decompiledCaughtParameter) {
-              decompiledCaughtException = decompiledCaughtParameter;
+            } catch (java.lang.Exception decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              var2 = (Exception) (Object) decompiledCaughtException;
             }
-            var2 = (Exception) (Object) decompiledCaughtException;
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
@@ -619,14 +639,28 @@ class rk extends ek {
 
     private final int n(int param0) {
         int var2 = 0;
-        int var3 = client.field_A ? 1 : 0;
-        if (param0 == ((rk) this).field_S) {
-            return ((rk) this).field_S;
+        int var3 = 0;
+        var3 = client.field_A ? 1 : 0;
+        if (param0 != ((rk) this).field_S) {
+          var2 = ((rk) this).field_S - 1;
+          L0: while (true) {
+            L1: {
+              if (0 >= var2) {
+                break L1;
+              } else {
+                if (((rk) this).field_E.charAt(var2 - 1) == 32) {
+                  break L1;
+                } else {
+                  var2--;
+                  continue L0;
+                }
+              }
+            }
+            return var2;
+          }
+        } else {
+          return ((rk) this).field_S;
         }
-        for (var2 = ((rk) this).field_S - 1; 0 < var2; var2--) {
-            // if_icmpeq L50
-        }
-        return var2;
     }
 
     static {

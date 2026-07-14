@@ -111,7 +111,7 @@ final class bk extends w {
         uk var3 = (uk) (Object) param2.c((byte) -119);
         while (var5 != null) {
             var5.b(11976, param1);
-            uk var3_ref = (uk) (Object) param2.d(true);
+            var3 = (uk) (Object) param2.d(true);
         }
     }
 

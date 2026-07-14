@@ -30,7 +30,7 @@ final class nk {
     }
 
     final be b(int param0) {
-        be var2_ref = null;
+        be var2_ref_be = null;
         int var2 = 0;
         int var3 = 0;
         be var4 = null;
@@ -40,9 +40,9 @@ final class nk {
             break L0;
           } else {
             if (((nk) this).field_e[-1 + ((nk) this).field_o] != ((nk) this).field_m) {
-              var2_ref = ((nk) this).field_m;
-              ((nk) this).field_m = var2_ref.field_p;
-              return var2_ref;
+              var2_ref_be = ((nk) this).field_m;
+              ((nk) this).field_m = var2_ref_be.field_p;
+              return var2_ref_be;
             } else {
               break L0;
             }
@@ -55,10 +55,10 @@ final class nk {
           } else {
             ((nk) this).field_o = ((nk) this).field_o + 1;
             var4 = ((nk) this).field_e[((nk) this).field_o].field_p;
-            var2_ref = var4;
+            var2_ref_be = var4;
             if (var4 != ((nk) this).field_e[((nk) this).field_o + -1]) {
-              ((nk) this).field_m = var2_ref.field_p;
-              return var2_ref;
+              ((nk) this).field_m = var2_ref_be.field_p;
+              return var2_ref_be;
             } else {
               continue L1;
             }

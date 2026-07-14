@@ -1,6 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
+import java.lang.String;
+
 final class cb {
     static String field_k;
     private pb[] field_f;

@@ -63,15 +63,16 @@ final class j {
               ci.field_c = stackIn_8_0 != 0;
               re.field_v = param1;
               if (null == lf.field_f.field_v) {
-                var15 = (IOException) (Object) decompiledCaughtException;
-                throw new RuntimeException(var15.toString());
+                return;
               } else {
                 try {
                   dj.field_cb = new nh(lf.field_f.field_v, 64, 0);
-                } catch (java.io.IOException decompiledCaughtParameter) {
-                  decompiledCaughtException = decompiledCaughtParameter;
-                  return;
+                } catch (java.io.IOException decompiledCaughtParameter0) {
+                  decompiledCaughtException = decompiledCaughtParameter0;
+                  var15 = (IOException) (Object) decompiledCaughtException;
+                  throw new RuntimeException(var15.toString());
                 }
+                return;
               }
             } else {
               return;
@@ -171,8 +172,9 @@ final class j {
                       }
                     } else {
                       ch.field_a[var11] = ch.field_a[var8];
+                      int incrementValue$1 = var8;
                       var8++;
-                      ch.field_a[var8] = var12;
+                      ch.field_a[incrementValue$1] = var12;
                       if (var9 > var13) {
                         var9 = var13;
                         var11++;

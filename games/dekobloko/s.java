@@ -226,28 +226,61 @@ final class s extends w {
 
     final static int b(byte param0, int param1) {
         int var2 = 0;
-        if (param1 >= 0) {
-            // if_icmpgt L26
+        int var3 = 0;
+        L0: {
+          L1: {
+            var2 = 0;
+            if (param1 < 0) {
+              break L1;
+            } else {
+              if ((param1 ^ -1) > -65537) {
+                break L0;
+              } else {
+                break L1;
+              }
+            }
+          }
+          param1 = param1 >>> 16;
+          var2 += 16;
+          break L0;
         }
-        param1 = param1 >>> 16;
-        var2 += 16;
-        if (256 <= param1) {
+        L2: {
+          if (256 > param1) {
+            break L2;
+          } else {
             var2 += 8;
             param1 = param1 >>> 8;
+            break L2;
+          }
         }
-        if (!(-17 < (param1 ^ -1))) {
+        L3: {
+          if (-17 >= (param1 ^ -1)) {
             param1 = param1 >>> 4;
             var2 += 4;
+            break L3;
+          } else {
+            break L3;
+          }
         }
-        if (4 <= param1) {
+        L4: {
+          if (4 > param1) {
+            break L4;
+          } else {
             var2 += 2;
             param1 = param1 >>> 2;
+            break L4;
+          }
         }
-        if (!(param1 < 1)) {
+        L5: {
+          if (param1 >= 1) {
             param1 = param1 >>> 1;
             var2++;
+            break L5;
+          } else {
+            break L5;
+          }
         }
-        int var3 = -60 % ((param0 - 69) / 45);
+        var3 = -60 % ((param0 - 69) / 45);
         return var2 - -param1;
     }
 

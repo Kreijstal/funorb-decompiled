@@ -22,25 +22,45 @@ final class hl {
     long field_r;
 
     final int b(byte param0) {
-        if (!((hl) this).field_j) {
-            // if_icmpne L30
-            // if_icmpgt L28
-        } else {
-            return 2;
-        }
-        if ((uc.field_g ^ -1L) == (((hl) this).field_r ^ -1L)) {
-            return 1;
-        }
-        if (2 == jj.field_b) {
-            if (!(!qe.a(((hl) this).field_o, 3))) {
-                return 1;
+        L0: {
+          if (((hl) this).field_j) {
+            break L0;
+          } else {
+            L1: {
+              if (2 != ((hl) this).field_m) {
+                break L1;
+              } else {
+                if (-1 > (((hl) this).field_l ^ -1)) {
+                  break L0;
+                } else {
+                  break L1;
+                }
+              }
             }
+            if ((uc.field_g ^ -1L) != (((hl) this).field_r ^ -1L)) {
+              L2: {
+                if (2 != jj.field_b) {
+                  break L2;
+                } else {
+                  if (qe.a(((hl) this).field_o, 3)) {
+                    return 1;
+                  } else {
+                    break L2;
+                  }
+                }
+              }
+              if (param0 == 94) {
+                return 0;
+              } else {
+                ((hl) this).field_p = null;
+                return 0;
+              }
+            } else {
+              return 1;
+            }
+          }
         }
-        if (param0 != 94) {
-            ((hl) this).field_p = null;
-            return 0;
-        }
-        return 0;
+        return 2;
     }
 
     final static boolean a(byte param0) {

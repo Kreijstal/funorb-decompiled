@@ -437,15 +437,17 @@ class ck extends gg {
                     var10++;
                     continue L0;
                   } else {
+                    int incrementValue$218 = param3;
                     param3++;
-                    param2 = param1[param3];
+                    param2 = param1[incrementValue$218];
                     if (param2 == 0) {
                       param4++;
                       var11++;
                       continue L2;
                     } else {
+                      int incrementValue$219 = param4;
                       param4++;
-                      param0[param4] = param2;
+                      param0[incrementValue$219] = param2;
                       var11++;
                       continue L2;
                     }
@@ -453,50 +455,58 @@ class ck extends gg {
                 }
               } else {
                 L3: {
+                  int incrementValue$220 = param3;
                   param3++;
-                  param2 = param1[param3];
+                  param2 = param1[incrementValue$220];
                   if (param2 == 0) {
                     param4++;
                     break L3;
                   } else {
+                    int incrementValue$221 = param4;
                     param4++;
-                    param0[param4] = param2;
+                    param0[incrementValue$221] = param2;
                     break L3;
                   }
                 }
                 L4: {
+                  int incrementValue$222 = param3;
                   param3++;
-                  param2 = param1[param3];
+                  param2 = param1[incrementValue$222];
                   if (param2 == 0) {
                     param4++;
                     break L4;
                   } else {
+                    int incrementValue$223 = param4;
                     param4++;
-                    param0[param4] = param2;
+                    param0[incrementValue$223] = param2;
                     break L4;
                   }
                 }
                 L5: {
+                  int incrementValue$224 = param3;
                   param3++;
-                  param2 = param1[param3];
+                  param2 = param1[incrementValue$224];
                   if (param2 == 0) {
                     param4++;
                     break L5;
                   } else {
+                    int incrementValue$225 = param4;
                     param4++;
-                    param0[param4] = param2;
+                    param0[incrementValue$225] = param2;
                     break L5;
                   }
                 }
+                int incrementValue$226 = param3;
                 param3++;
-                param2 = param1[param3];
+                param2 = param1[incrementValue$226];
                 if (param2 == 0) {
                   param4++;
                   var11++;
                   continue L1;
                 } else {
+                  int incrementValue$227 = param4;
                   param4++;
-                  param0[param4] = param2;
+                  param0[incrementValue$227] = param2;
                   var11++;
                   continue L1;
                 }
@@ -520,8 +530,9 @@ class ck extends gg {
                 param8++;
                 continue L0;
               } else {
+                int incrementValue$66 = param5;
                 param5++;
-                param0 = param4[param5];
+                param0 = param4[incrementValue$66];
                 if (param0 == 0) {
                   param7++;
                   param6++;
@@ -531,8 +542,9 @@ class ck extends gg {
                   param2 = param0 + param1;
                   param0 = (param0 & 16711935) + (param1 & 16711935);
                   param1 = (param0 & 16777472) + (param2 - param0 & 65536);
+                  int incrementValue$67 = param7;
                   param7++;
-                  param3[param7] = param2 - param1 | param1 - (param1 >>> 8);
+                  param3[incrementValue$67] = param2 - param1 | param1 - (param1 >>> 8);
                   param6++;
                   continue L1;
                 }
@@ -679,8 +691,9 @@ class ck extends gg {
             for (var16 = -param7; var16 < 0; var16++) {
                 param2 = param1[(param3 >> 16) + var15];
                 if (param2 != 0) {
+                    int incrementValue$1 = param5;
                     param5++;
-                    param0[param5] = param12;
+                    param0[incrementValue$1] = param12;
                 } else {
                     param5++;
                 }
@@ -781,8 +794,9 @@ class ck extends gg {
                     break L5;
                   }
                 }
+                int incrementValue$1 = param2;
                 param2++;
-                hk.field_l[param2] = (var13 & 66847740 | var14 & 261120) >> 2;
+                hk.field_l[incrementValue$1] = (var13 & 66847740 | var14 & 261120) >> 2;
                 var9++;
                 param1 += 2;
                 continue L1;
@@ -1217,14 +1231,16 @@ class ck extends gg {
                     var10++;
                     continue L0;
                   } else {
+                    int incrementValue$218 = param3;
                     param3++;
-                    if (param1[param3] == 0) {
+                    if (param1[incrementValue$218] == 0) {
                       param4++;
                       var11++;
                       continue L2;
                     } else {
+                      int incrementValue$219 = param4;
                       param4++;
-                      param0[param4] = param2;
+                      param0[incrementValue$219] = param2;
                       var11++;
                       continue L2;
                     }
@@ -1232,46 +1248,54 @@ class ck extends gg {
                 }
               } else {
                 L3: {
+                  int incrementValue$220 = param3;
                   param3++;
-                  if (param1[param3] == 0) {
+                  if (param1[incrementValue$220] == 0) {
                     param4++;
                     break L3;
                   } else {
+                    int incrementValue$221 = param4;
                     param4++;
-                    param0[param4] = param2;
+                    param0[incrementValue$221] = param2;
                     break L3;
                   }
                 }
                 L4: {
+                  int incrementValue$222 = param3;
                   param3++;
-                  if (param1[param3] == 0) {
+                  if (param1[incrementValue$222] == 0) {
                     param4++;
                     break L4;
                   } else {
+                    int incrementValue$223 = param4;
                     param4++;
-                    param0[param4] = param2;
+                    param0[incrementValue$223] = param2;
                     break L4;
                   }
                 }
                 L5: {
+                  int incrementValue$224 = param3;
                   param3++;
-                  if (param1[param3] == 0) {
+                  if (param1[incrementValue$224] == 0) {
                     param4++;
                     break L5;
                   } else {
+                    int incrementValue$225 = param4;
                     param4++;
-                    param0[param4] = param2;
+                    param0[incrementValue$225] = param2;
                     break L5;
                   }
                 }
+                int incrementValue$226 = param3;
                 param3++;
-                if (param1[param3] == 0) {
+                if (param1[incrementValue$226] == 0) {
                   param4++;
                   var11++;
                   continue L1;
                 } else {
+                  int incrementValue$227 = param4;
                   param4++;
-                  param0[param4] = param2;
+                  param0[incrementValue$227] = param2;
                   var11++;
                   continue L1;
                 }
@@ -1364,8 +1388,9 @@ class ck extends gg {
             for (var15 = -param7; var15 < 0; var15++) {
                 param2 = param1[(param3 >> 16) + var14];
                 if (param2 != 0) {
+                    int incrementValue$1 = param5;
                     param5++;
-                    param0[param5] = param2;
+                    param0[incrementValue$1] = param2;
                 } else {
                     param5++;
                 }
@@ -1419,8 +1444,9 @@ class ck extends gg {
                 var10++;
                 continue L0;
               } else {
+                int incrementValue$66 = param3;
                 param3++;
-                param2 = param1[param3];
+                param2 = param1[incrementValue$66];
                 if (param2 == 0) {
                   param4++;
                   var11++;
@@ -1428,8 +1454,9 @@ class ck extends gg {
                 } else {
                   var12 = (param2 & 16711935) * param9 & -16711936;
                   var13 = (param2 & 65280) * param9 & 16711680;
+                  int incrementValue$67 = param4;
                   param4++;
-                  param0[param4] = (var12 | var13) >>> 8;
+                  param0[incrementValue$67] = (var12 | var13) >>> 8;
                   var11++;
                   continue L1;
                 }
@@ -1473,8 +1500,9 @@ class ck extends gg {
                 param2 = param1[(param3 >> 16) + var16];
                 if (param2 != 0) {
                     var18 = param0[param5];
+                    int incrementValue$0 = param5;
                     param5++;
-                    param0[param5] = ((param2 & 16711935) * param12 + (var18 & 16711935) * var13 & -16711936) + ((param2 & 65280) * param12 + (var18 & 65280) * var13 & 16711680) >> 8;
+                    param0[incrementValue$0] = ((param2 & 16711935) * param12 + (var18 & 16711935) * var13 & -16711936) + ((param2 & 65280) * param12 + (var18 & 65280) * var13 & 16711680) >> 8;
                 } else {
                     param5++;
                 }
@@ -1582,22 +1610,25 @@ class ck extends gg {
                 param6++;
                 continue L0;
               } else {
+                int incrementValue$403 = param3;
                 param3++;
-                param2 = param1[param3];
+                param2 = param1[incrementValue$403];
                 if (param2 == 0) {
                   param4++;
                   param5++;
                   continue L1;
                 } else {
                   if (param2 >> 8 != (param2 & 65535)) {
+                    int incrementValue$404 = param4;
                     param4++;
-                    param0[param4] = param2;
+                    param0[incrementValue$404] = param2;
                     param5++;
                     continue L1;
                   } else {
                     param2 = param2 & 255;
+                    int incrementValue$405 = param4;
                     param4++;
-                    param0[param4] = (param2 * var12 >> 8 & 16711934) + (param2 * var13 & 65280) + 1;
+                    param0[incrementValue$405] = (param2 * var12 >> 8 & 16711934) + (param2 * var13 & 65280) + 1;
                     param5++;
                     continue L1;
                   }
@@ -1688,8 +1719,9 @@ class ck extends gg {
         int var2 = 0;
         for (var3 = 0; var3 < ((ck) this).field_I; var3++) {
             for (var4 = ((ck) this).field_H - 1; var4 >= 0; var4--) {
+                int incrementValue$0 = var2;
                 var2++;
-                var1[var2] = ((ck) this).field_D[var3 + var4 * ((ck) this).field_I];
+                var1[incrementValue$0] = ((ck) this).field_D[var3 + var4 * ((ck) this).field_I];
             }
         }
         ((ck) this).field_D = var1;
@@ -2392,8 +2424,9 @@ class ck extends gg {
                 var15++;
                 continue L0;
               } else {
+                int incrementValue$4 = param3;
                 param3++;
-                param2 = param1[param3];
+                param2 = param1[incrementValue$4];
                 if (param2 == 0) {
                   param4++;
                   var16++;
@@ -2410,21 +2443,24 @@ class ck extends gg {
                         break L2;
                       } else {
                         if (var17 > 128) {
+                          int incrementValue$5 = param4;
                           param4++;
-                          param0[param4] = (var10 * (256 - var17) + 255 * (var17 - 128) >> 7 << 16) + (var11 * (256 - var18) + 255 * (var18 - 128) >> 7 << 8) + (var12 * (256 - var19) + 255 * (var19 - 128) >> 7);
+                          param0[incrementValue$5] = (var10 * (256 - var17) + 255 * (var17 - 128) >> 7 << 16) + (var11 * (256 - var18) + 255 * (var18 - 128) >> 7 << 8) + (var12 * (256 - var19) + 255 * (var19 - 128) >> 7);
                           var16++;
                           continue L1;
                         } else {
+                          int incrementValue$6 = param4;
                           param4++;
-                          param0[param4] = (var17 * var10 >> 7 << 16) + (var18 * var11 >> 7 << 8) + (var19 * var12 >> 7);
+                          param0[incrementValue$6] = (var17 * var10 >> 7 << 16) + (var18 * var11 >> 7 << 8) + (var19 * var12 >> 7);
                           var16++;
                           continue L1;
                         }
                       }
                     }
                   }
+                  int incrementValue$7 = param4;
                   param4++;
-                  param0[param4] = param2;
+                  param0[incrementValue$7] = param2;
                   var16++;
                   continue L1;
                 }
@@ -2448,8 +2484,9 @@ class ck extends gg {
                 param8++;
                 continue L0;
               } else {
+                int incrementValue$66 = param5;
                 param5++;
-                param0 = param4[param5];
+                param0 = param4[incrementValue$66];
                 if (param0 == 0) {
                   param7++;
                   param6++;
@@ -2461,8 +2498,9 @@ class ck extends gg {
                   param2 = param0 + param1;
                   param0 = (param0 & 16711935) + (param1 & 16711935);
                   param1 = (param0 & 16777472) + (param2 - param0 & 65536);
+                  int incrementValue$67 = param7;
                   param7++;
-                  param3[param7] = param2 - param1 | param1 - (param1 >>> 8);
+                  param3[incrementValue$67] = param2 - param1 | param1 - (param1 >>> 8);
                   param6++;
                   continue L1;
                 }
@@ -2478,24 +2516,34 @@ class ck extends gg {
         for (var8 = -param5; var8 < 0; var8++) {
             var9 = param3 + param4 - 3;
             while (param3 < var9) {
+                int incrementValue$0 = param3;
                 param3++;
+                int incrementValue$1 = param2;
                 param2++;
-                param0[param3] = param1[param2];
+                param0[incrementValue$0] = param1[incrementValue$1];
+                int incrementValue$2 = param3;
                 param3++;
+                int incrementValue$3 = param2;
                 param2++;
-                param0[param3] = param1[param2];
+                param0[incrementValue$2] = param1[incrementValue$3];
+                int incrementValue$4 = param3;
                 param3++;
+                int incrementValue$5 = param2;
                 param2++;
-                param0[param3] = param1[param2];
+                param0[incrementValue$4] = param1[incrementValue$5];
+                int incrementValue$6 = param3;
                 param3++;
+                int incrementValue$7 = param2;
                 param2++;
-                param0[param3] = param1[param2];
+                param0[incrementValue$6] = param1[incrementValue$7];
             }
             var9 += 3;
             while (param3 < var9) {
+                int incrementValue$8 = param3;
                 param3++;
+                int incrementValue$9 = param2;
                 param2++;
-                param0[param3] = param1[param2];
+                param0[incrementValue$8] = param1[incrementValue$9];
             }
             param3 = param3 + param6;
             param2 = param2 + param7;
@@ -2521,16 +2569,18 @@ class ck extends gg {
                 var10++;
                 continue L0;
               } else {
+                int incrementValue$14 = param4;
                 param4++;
-                param3 = param2[param4];
+                param3 = param2[incrementValue$14];
                 if (param3 != 0) {
                   param0 = param1[param5];
                   if (param0 != 0) {
                     var12 = ((param3 & 16711680) >>> 16) * ((param0 & 16711680) >>> 16) >>> 8;
                     var13 = (param3 & 65280) * (param0 & 65280) >>> 24;
                     var14 = (param3 & 255) * (param0 & 255) >>> 8;
+                    int incrementValue$15 = param5;
                     param5++;
-                    param1[param5] = (var12 << 16) + (var13 << 8) + var14;
+                    param1[incrementValue$15] = (var12 << 16) + (var13 << 8) + var14;
                     var11++;
                     continue L1;
                   } else {
@@ -2986,8 +3036,9 @@ class ck extends gg {
                 if (param2 != 0) {
                     var17 = (param2 & 16711935) * param12 & -16711936;
                     var18 = (param2 & 65280) * param12 & 16711680;
+                    int incrementValue$0 = param5;
                     param5++;
-                    param0[param5] = (var17 | var18) >>> 8;
+                    param0[incrementValue$0] = (var17 | var18) >>> 8;
                 } else {
                     param5++;
                 }
@@ -3028,16 +3079,18 @@ class ck extends gg {
                 var11++;
                 continue L0;
               } else {
+                int incrementValue$66 = param3;
                 param3++;
-                param2 = param1[param3];
+                param2 = param1[incrementValue$66];
                 if (param2 == 0) {
                   param4++;
                   var12++;
                   continue L1;
                 } else {
                   var13 = param0[param4];
+                  int incrementValue$67 = param4;
                   param4++;
-                  param0[param4] = ((param2 & 16711935) * param9 + (var13 & 16711935) * var10 & -16711936) + ((param2 & 65280) * param9 + (var13 & 65280) * var10 & 16711680) >> 8;
+                  param0[incrementValue$67] = ((param2 & 16711935) * param9 + (var13 & 16711935) * var10 & -16711936) + ((param2 & 65280) * param9 + (var13 & 65280) * var10 & 16711680) >> 8;
                   var12++;
                   continue L1;
                 }
@@ -3135,42 +3188,24 @@ class ck extends gg {
         java.awt.Image var3_ref = null;
         java.awt.MediaTracker var4 = null;
         java.awt.image.PixelGrabber var5 = null;
-        int statePc = 1;
-        Throwable caughtException = null;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 1: {
-                    try {
-                        var3_ref = java.awt.Toolkit.getDefaultToolkit().createImage(param0);
-                        var4 = new java.awt.MediaTracker(param1);
-                        var4.addImage(var3_ref, 0);
-                        var4.waitForAll();
-                        ((ck) this).field_I = var3_ref.getWidth((java.awt.image.ImageObserver) (Object) param1);
-                        ((ck) this).field_H = var3_ref.getHeight((java.awt.image.ImageObserver) (Object) param1);
-                        ((ck) this).field_K = ((ck) this).field_I;
-                        ((ck) this).field_C = ((ck) this).field_H;
-                        ((ck) this).field_F = 0;
-                        ((ck) this).field_z = 0;
-                        ((ck) this).field_D = new int[((ck) this).field_I * ((ck) this).field_H];
-                        var5 = new java.awt.image.PixelGrabber(var3_ref, 0, 0, ((ck) this).field_I, ((ck) this).field_H, ((ck) this).field_D, 0, ((ck) this).field_I);
-                        boolean discarded$1 = var5.grabPixels();
-                        statePc = 4;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_1) {
-                        caughtException = stateCaught_1;
-                        statePc = 3;
-                        continue stateLoop;
-                    }
-                }
-                case 3: {
-                    var3 = (InterruptedException) (Object) caughtException;
-                    statePc = 4;
-                    continue stateLoop;
-                }
-                case 4: {
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
-            }
+        Throwable decompiledCaughtException = null;
+        try {
+          var3_ref = java.awt.Toolkit.getDefaultToolkit().createImage(param0);
+          var4 = new java.awt.MediaTracker(param1);
+          var4.addImage(var3_ref, 0);
+          var4.waitForAll();
+          ((ck) this).field_I = var3_ref.getWidth((java.awt.image.ImageObserver) (Object) param1);
+          ((ck) this).field_H = var3_ref.getHeight((java.awt.image.ImageObserver) (Object) param1);
+          ((ck) this).field_K = ((ck) this).field_I;
+          ((ck) this).field_C = ((ck) this).field_H;
+          ((ck) this).field_F = 0;
+          ((ck) this).field_z = 0;
+          ((ck) this).field_D = new int[((ck) this).field_I * ((ck) this).field_H];
+          var5 = new java.awt.image.PixelGrabber(var3_ref, 0, 0, ((ck) this).field_I, ((ck) this).field_H, ((ck) this).field_D, 0, ((ck) this).field_I);
+          boolean discarded$1 = var5.grabPixels();
+        } catch (java.lang.Exception decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3 = (InterruptedException) (Object) decompiledCaughtException;
         }
     }
 

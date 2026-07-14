@@ -423,7 +423,8 @@ final class ig extends w {
         String var11 = null;
         String var12 = null;
         int var13 = 0;
-        ck var14 = null;
+        Object var14 = null;
+        ck var14_ref = null;
         int var15 = 0;
         mm var17 = null;
         mm var18 = null;
@@ -467,10 +468,10 @@ final class ig extends w {
                   }
                 }
               }
-              var14 = qb.field_q;
+              var14_ref = qb.field_q;
               break L2;
             }
-            ((ig) this).field_gc[var13] = new qd(0L, param2, (w) null, param3, var14, param6[var13]);
+            ((ig) this).field_gc[var13] = new qd(0L, param2, (w) null, param3, var14_ref, param6[var13]);
             ((ig) this).a((w) (Object) ((ig) this).field_gc[var13], -16834);
             var15 = var17.a(param6[var13]);
             if (var15 > ((ig) this).field_fc) {

@@ -230,8 +230,9 @@ final class lk {
                 var4++;
                 continue L3;
               } else {
+                int incrementValue$1 = var3;
                 var3++;
-                ((lk) this).field_B[var5] = ((lk) this).field_T[var3];
+                ((lk) this).field_B[var5] = ((lk) this).field_T[incrementValue$1];
                 var5 = var5 + ((lk) this).field_zb;
                 var6++;
                 continue L6;
@@ -577,8 +578,9 @@ final class lk {
                     }
                   } else {
                     L10: {
+                      int incrementValue$2 = var14;
                       var14++;
-                      var18 = ((lk) this).field_w[var14];
+                      var18 = ((lk) this).field_w[incrementValue$2];
                       if (var16 == 0) {
                         break L10;
                       } else {
@@ -663,8 +665,9 @@ final class lk {
                     break L15;
                   } else {
                     L17: {
+                      int incrementValue$3 = var14;
                       var14++;
-                      var19 = ((lk) this).field_w[var14];
+                      var19 = ((lk) this).field_w[incrementValue$3];
                       if ((var19 % ((lk) this).field_O ^ -1) >= -1) {
                         break L17;
                       } else {
@@ -1002,64 +1005,112 @@ final class lk {
 
     final rf b(int param0) {
         int var2 = 0;
-        int var4 = client.field_A ? 1 : 0;
+        rf var3 = null;
+        int var4 = 0;
+        var4 = client.field_A ? 1 : 0;
         this.c(0);
-        for (var2 = 0; ((lk) this).field_t > var2; var2++) {
-            // ifeq L38
-        }
-        if (((lk) this).field_t <= var2) {
+        var2 = 0;
+        L0: while (true) {
+          L1: {
+            if (((lk) this).field_t <= var2) {
+              break L1;
+            } else {
+              if (((lk) this).field_X[var2].field_e == 0) {
+                break L1;
+              } else {
+                var2++;
+                continue L0;
+              }
+            }
+          }
+          if (((lk) this).field_t > var2) {
+            if (param0 == -19939) {
+              var3 = ((lk) this).field_X[var2];
+              var3.field_e = var3.field_e + 1;
+              return var3;
+            } else {
+              return null;
+            }
+          } else {
             throw new IllegalStateException();
+          }
         }
-        if (param0 != -19939) {
-            return null;
-        }
-        rf var3 = ((lk) this).field_X[var2];
-        var3.field_e = var3.field_e + 1;
-        return var3;
     }
 
     final void a(int param0, int param1, int param2, boolean param3, int param4, int param5) {
-        int[] var17 = null;
-        int[] var16 = null;
-        int[] var15 = null;
-        int[] var14 = null;
-        int[] var13 = null;
         int[] var7 = null;
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
-        int var12 = client.field_A ? 1 : 0;
+        int var12 = 0;
+        int[] var13 = null;
+        int[] var14 = null;
+        int[] var15 = null;
+        int[] var16 = null;
+        int[] var17 = null;
+        var12 = client.field_A ? 1 : 0;
         ((lk) this).field_L = param5;
         ((lk) this).field_q = param4;
-        for (param2 = param0 & -((lk) this).field_ab + param2; -1 > (param2 ^ -1); param2--) {
-            var17 = ((lk) this).field_B;
-            var16 = var17;
-            var15 = var16;
-            var14 = var15;
-            var13 = var14;
-            var7 = var13;
-            if (var13 != null) {
-                // if_icmple L101
-            }
-            var7 = new int[((lk) this).field_C * ((lk) this).field_zb];
-            ((lk) this).field_B = new int[((lk) this).field_C * ((lk) this).field_zb];
-            var8 = 0;
-            for (var9 = 0; ((lk) this).field_zb > var9; var9++) {
-                var10 = -1 + ((lk) this).field_zb - var9;
-                for (var11 = 0; ((lk) this).field_C > var11; var11++) {
-                    var8++;
-                    ((lk) this).field_B[var10] = ((lk) this).field_T[var8];
-                    var10 = var10 + ((lk) this).field_zb;
+        param2 = param0 & -((lk) this).field_ab + param2;
+        L0: while (true) {
+          if (-1 <= (param2 ^ -1)) {
+            ((lk) this).a(param1, (byte) 126, param3);
+            return;
+          } else {
+            L1: {
+              L2: {
+                var17 = ((lk) this).field_B;
+                var16 = var17;
+                var15 = var16;
+                var14 = var15;
+                var13 = var14;
+                var7 = var13;
+                if (var13 == null) {
+                  break L2;
+                } else {
+                  if (((lk) this).field_zb * ((lk) this).field_C <= var17.length) {
+                    break L1;
+                  } else {
+                    break L2;
+                  }
                 }
+              }
+              var7 = new int[((lk) this).field_C * ((lk) this).field_zb];
+              ((lk) this).field_B = new int[((lk) this).field_C * ((lk) this).field_zb];
+              break L1;
             }
-            var8 = ((lk) this).field_C;
-            ((lk) this).field_C = ((lk) this).field_zb;
-            ((lk) this).field_B = ((lk) this).field_T;
-            ((lk) this).field_zb = var8;
-            ((lk) this).field_T = var7;
+            var8 = 0;
+            var9 = 0;
+            L3: while (true) {
+              if (((lk) this).field_zb <= var9) {
+                var8 = ((lk) this).field_C;
+                ((lk) this).field_C = ((lk) this).field_zb;
+                ((lk) this).field_B = ((lk) this).field_T;
+                ((lk) this).field_zb = var8;
+                ((lk) this).field_T = var7;
+                param2--;
+                continue L0;
+              } else {
+                var10 = -1 + ((lk) this).field_zb - var9;
+                var11 = 0;
+                L4: while (true) {
+                  if (((lk) this).field_C <= var11) {
+                    var9++;
+                    continue L3;
+                  } else {
+                    int incrementValue$2 = var8;
+                    var8++;
+                    ((lk) this).field_B[var10] = ((lk) this).field_T[incrementValue$2];
+                    var10 = var10 + ((lk) this).field_zb;
+                    var11++;
+                    continue L4;
+                  }
+                }
+              }
+            }
+          }
         }
-        ((lk) this).a(param1, (byte) 126, param3);
     }
 
     final void a(int param0, int param1, rf param2) {
@@ -1527,11 +1578,11 @@ final class lk {
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
-        ud var9_ref = null;
+        ud var9_ref_ud = null;
         int var10 = 0;
         ei var10_ref_ei = null;
         int var11 = 0;
-        ei var11_ref = null;
+        ei var11_ref_ei = null;
         ei[] var11_ref_ei__ = null;
         int var12 = 0;
         ei var13 = null;
@@ -1574,7 +1625,7 @@ final class lk {
                           }
                         }
                         L5: {
-                          var9_ref = stackIn_85_0;
+                          var9_ref_ud = stackIn_85_0;
                           if ((var6 ^ -1) < -1) {
                             L6: {
                               pg.field_a[((lk) this).field_Q] = true;
@@ -1588,8 +1639,8 @@ final class lk {
                             }
                             L7: {
                               var15 = wf.field_l[((lk) this).field_Q];
-                              var11_ref = var15;
-                              if (var11_ref == null) {
+                              var11_ref_ei = var15;
+                              if (var11_ref_ei == null) {
                                 break L7;
                               } else {
                                 var15.f(-1);
@@ -1597,14 +1648,14 @@ final class lk {
                               }
                             }
                             L8: {
-                              if (var11_ref == null) {
+                              if (var11_ref_ei == null) {
                                 break L8;
                               } else {
                                 if (!var15.a((byte) 93)) {
                                   break L8;
                                 } else {
-                                  if ((Object) (Object) var15.field_q == (Object) (Object) var9_ref) {
-                                    var11_ref.b(en.field_o / 50, var10 * pb.field_d, ((lk) this).field_lb << 522231430);
+                                  if ((Object) (Object) var15.field_q == (Object) (Object) var9_ref_ud) {
+                                    var11_ref_ei.b(en.field_o / 50, var10 * pb.field_d, ((lk) this).field_lb << 522231430);
                                     break L5;
                                   } else {
                                     break L8;
@@ -1613,15 +1664,15 @@ final class lk {
                               }
                             }
                             L9: {
-                              if (var11_ref != null) {
+                              if (var11_ref_ei != null) {
                                 var15.g(en.field_o / 50);
                                 break L9;
                               } else {
                                 break L9;
                               }
                             }
-                            var16 = ei.c(var9_ref, 100, var10 * pb.field_d, ((lk) this).field_lb << -273244250);
-                            var11_ref = var16;
+                            var16 = ei.c(var9_ref_ud, 100, var10 * pb.field_d, ((lk) this).field_lb << -273244250);
+                            var11_ref_ei = var16;
                             var16.f(-1);
                             dg.field_c.a((ol) (Object) var16);
                             wf.field_l[((lk) this).field_Q] = var16;
@@ -2827,16 +2878,34 @@ final class lk {
     }
 
     private final int a(int param0, int param1, int param2, int param3, int param4) {
-        if (param1 <= 123) {
+        int var6 = 0;
+        L0: {
+          if (param1 > 123) {
+            break L0;
+          } else {
             ((lk) this).field_pb = -105;
+            break L0;
+          }
         }
-        int var6 = ((lk) this).field_P[param0];
-        if ((-1879048193 & var6) != param4) {
-            // if_icmpne L71
+        L1: {
+          L2: {
+            var6 = ((lk) this).field_P[param0];
+            if ((-1879048193 & var6) == param4) {
+              break L2;
+            } else {
+              if ((var6 & -1879048193) != param2) {
+                break L1;
+              } else {
+                break L2;
+              }
+            }
+          }
+          int incrementValue$2 = param3;
+          param3++;
+          ((lk) this).field_w[incrementValue$2] = param0;
+          ((lk) this).field_P[param0] = var6 + -2147483648;
+          break L1;
         }
-        param3++;
-        ((lk) this).field_w[param3] = param0;
-        ((lk) this).field_P[param0] = var6 + -2147483648;
         return param3;
     }
 
@@ -2920,66 +2989,110 @@ final class lk {
     }
 
     private final boolean t(int param0) {
+        int[] var2 = null;
+        int var3 = 0;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
-        int var8 = client.field_A ? 1 : 0;
-        int[] var13 = ((lk) this).field_B;
-        int[] var12 = var13;
-        int[] var11 = var12;
-        int[] var10 = var11;
-        int[] var9 = var10;
-        int[] var2 = var9;
-        if (var9 != null) {
-            // if_icmplt L53
-        } else {
-            var2 = new int[((lk) this).field_C * ((lk) this).field_zb];
-            ((lk) this).field_B = new int[((lk) this).field_C * ((lk) this).field_zb];
-        }
-        int var3 = param0;
-        for (var4 = 0; ((lk) this).field_zb > var4; var4++) {
-            var5 = (-1 + ((lk) this).field_C) * ((lk) this).field_zb + var4;
-            for (var6 = 0; var6 < ((lk) this).field_C; var6++) {
-                var3++;
-                ((lk) this).field_B[var5] = ((lk) this).field_T[var3];
-                var5 = var5 - ((lk) this).field_zb;
+        int var8 = 0;
+        int[] var9 = null;
+        int[] var10 = null;
+        int[] var11 = null;
+        int[] var12 = null;
+        int[] var13 = null;
+        L0: {
+          L1: {
+            var8 = client.field_A ? 1 : 0;
+            var13 = ((lk) this).field_B;
+            var12 = var13;
+            var11 = var12;
+            var10 = var11;
+            var9 = var10;
+            var2 = var9;
+            if (var9 == null) {
+              break L1;
+            } else {
+              if (var13.length < ((lk) this).field_C * ((lk) this).field_zb) {
+                break L1;
+              } else {
+                break L0;
+              }
             }
+          }
+          var2 = new int[((lk) this).field_C * ((lk) this).field_zb];
+          ((lk) this).field_B = new int[((lk) this).field_C * ((lk) this).field_zb];
+          break L0;
         }
-        var4 = -((lk) this).field_o + -((lk) this).field_zb + (((lk) this).field_C - -((lk) this).field_db) >> -1674843007;
-        ((lk) this).field_q = ((lk) this).field_q + var4;
-        var5 = ((lk) this).field_o + ((lk) this).field_db + (-((lk) this).field_C + ((lk) this).field_zb) >> -212989087;
-        ((lk) this).field_L = ((lk) this).field_L + var5;
-        var3 = ((lk) this).field_C;
-        ((lk) this).field_C = ((lk) this).field_zb;
-        ((lk) this).field_zb = var3;
-        ((lk) this).field_B = ((lk) this).field_T;
-        ((lk) this).field_T = var2;
-        if (!this.c((byte) -117)) {
-            ((lk) this).field_ab = ((lk) this).field_ab - 1;
-            var3 = ((lk) this).field_db;
-            ((lk) this).field_db = ((lk) this).field_o;
-            ((lk) this).field_o = -var3;
-            this.d(30968);
-            var3 = 0;
-            this.h(param0 ^ -1);
-            for (var6 = 0; ((lk) this).field_zb > var6; var6++) {
-                for (var7 = 0; var7 < ((lk) this).field_C; var7++) {
-                    ((lk) this).field_tb[var3] = 0;
-                    ((lk) this).field_b[var3] = 8 * (-1 + -(var7 * 2) + ((lk) this).field_db + ((lk) this).field_C) / ((lk) this).field_C;
-                    var3++;
+        var3 = param0;
+        var4 = 0;
+        L2: while (true) {
+          if (((lk) this).field_zb <= var4) {
+            var4 = -((lk) this).field_o + -((lk) this).field_zb + (((lk) this).field_C - -((lk) this).field_db) >> -1674843007;
+            ((lk) this).field_q = ((lk) this).field_q + var4;
+            var5 = ((lk) this).field_o + ((lk) this).field_db + (-((lk) this).field_C + ((lk) this).field_zb) >> -212989087;
+            ((lk) this).field_L = ((lk) this).field_L + var5;
+            var3 = ((lk) this).field_C;
+            ((lk) this).field_C = ((lk) this).field_zb;
+            ((lk) this).field_zb = var3;
+            ((lk) this).field_B = ((lk) this).field_T;
+            ((lk) this).field_T = var2;
+            if (this.c((byte) -117)) {
+              ((lk) this).field_T = ((lk) this).field_B;
+              ((lk) this).field_zb = ((lk) this).field_C;
+              ((lk) this).field_B = var2;
+              ((lk) this).field_L = ((lk) this).field_L - var5;
+              ((lk) this).field_q = ((lk) this).field_q - var4;
+              ((lk) this).field_C = var3;
+              return false;
+            } else {
+              ((lk) this).field_ab = ((lk) this).field_ab - 1;
+              var3 = ((lk) this).field_db;
+              ((lk) this).field_db = ((lk) this).field_o;
+              ((lk) this).field_o = -var3;
+              this.d(30968);
+              var3 = 0;
+              this.h(param0 ^ -1);
+              var6 = 0;
+              L3: while (true) {
+                if (((lk) this).field_zb <= var6) {
+                  ge.a(((lk) this).field_lb, ((lk) this).field_k / 4, (byte) 127, ib.field_ob);
+                  return true;
+                } else {
+                  var7 = 0;
+                  L4: while (true) {
+                    if (var7 >= ((lk) this).field_C) {
+                      var6++;
+                      continue L3;
+                    } else {
+                      ((lk) this).field_tb[var3] = 0;
+                      ((lk) this).field_b[var3] = 8 * (-1 + -(var7 * 2) + ((lk) this).field_db + ((lk) this).field_C) / ((lk) this).field_C;
+                      var3++;
+                      var7++;
+                      continue L4;
+                    }
+                  }
                 }
+              }
             }
-            ge.a(((lk) this).field_lb, ((lk) this).field_k / 4, (byte) 127, ib.field_ob);
-            return true;
+          } else {
+            var5 = (-1 + ((lk) this).field_C) * ((lk) this).field_zb + var4;
+            var6 = 0;
+            L5: while (true) {
+              if (var6 >= ((lk) this).field_C) {
+                var4++;
+                continue L2;
+              } else {
+                int incrementValue$2 = var3;
+                var3++;
+                ((lk) this).field_B[var5] = ((lk) this).field_T[incrementValue$2];
+                var5 = var5 - ((lk) this).field_zb;
+                var6++;
+                continue L5;
+              }
+            }
+          }
         }
-        ((lk) this).field_T = ((lk) this).field_B;
-        ((lk) this).field_zb = ((lk) this).field_C;
-        ((lk) this).field_B = var2;
-        ((lk) this).field_L = ((lk) this).field_L - var5;
-        ((lk) this).field_q = ((lk) this).field_q - var4;
-        ((lk) this).field_C = var3;
-        return false;
     }
 
     final int a(int param0, byte param1, int param2) {
@@ -3657,7 +3770,8 @@ final class lk {
         int var11 = 0;
         int var12 = 0;
         int var13 = 0;
-        rf var14 = null;
+        Object var14 = null;
+        rf var14_ref = null;
         int var15 = 0;
         int var16 = 0;
         int var17 = 0;
@@ -3694,15 +3808,15 @@ final class lk {
               if (param1 == null) {
                 break L2;
               } else {
-                var14 = param1.a(false, var13);
+                var14_ref = param1.a(false, var13);
                 break L2;
               }
             }
             L3: {
-              if (var14 == null) {
+              if (var14_ref == null) {
                 L4: {
                   var21 = new rf(var13);
-                  var14 = var21;
+                  var14_ref = var21;
                   ((lk) this).field_p = ((lk) this).field_p + 1;
                   var21.field_m = ((lk) this).field_p;
                   if (param1 != null) {
@@ -3712,29 +3826,29 @@ final class lk {
                     break L4;
                   }
                 }
-                var14.field_b = var10;
-                var14.field_c = new byte[var12];
-                var14.field_n = var11;
+                var14_ref.field_b = var10;
+                var14_ref.field_c = new byte[var12];
+                var14_ref.field_n = var11;
                 var15 = 0;
                 L5: while (true) {
                   if (var15 >= var12) {
                     break L3;
                   } else {
-                    var14.field_c[var15] = (byte) 0;
+                    var14_ref.field_c[var15] = (byte) 0;
                     var15++;
                     continue L5;
                   }
                 }
               } else {
-                var14.field_b = var10;
-                var14.field_c = new byte[var12];
-                var14.field_n = var11;
+                var14_ref.field_b = var10;
+                var14_ref.field_c = new byte[var12];
+                var14_ref.field_n = var11;
                 var15 = 0;
                 L6: while (true) {
                   if (var15 >= var12) {
                     break L3;
                   } else {
-                    var14.field_c[var15] = (byte) 0;
+                    var14_ref.field_c[var15] = (byte) 0;
                     var15++;
                     continue L6;
                   }
@@ -3749,7 +3863,7 @@ final class lk {
                   if (param0 == null) {
                     break L8;
                   } else {
-                    param0.a(var14, (byte) -128);
+                    param0.a(var14_ref, (byte) -128);
                     break L8;
                   }
                 }
@@ -3758,7 +3872,7 @@ final class lk {
                 var16 = ((lk) this).field_w[var20];
                 var17 = -var6 + var16 % ((lk) this).field_O;
                 var18 = var16 / ((lk) this).field_O - var7;
-                var14.field_c[var17 + var18 * var10] = (byte)param2;
+                var14_ref.field_c[var17 + var18 * var10] = (byte)param2;
                 var20++;
                 continue L7;
               }
@@ -3840,12 +3954,13 @@ final class lk {
             if (-1879048193 < (var5 & 1879048192 ^ -1)) {
                 var5 = var5 + 268435456;
             }
+            int incrementValue$0 = param0;
             param0++;
-            ((lk) this).field_w[param0] = param1;
+            ((lk) this).field_w[incrementValue$0] = param1;
             ((lk) this).field_P[param1] = var5 + -2147483648;
         }
         if (param2 != -44) {
-            int discarded$0 = this.a(true, 26, -7, (lk) null, true, 84, -39, 24, (oi) null, false, (byte) -94);
+            int discarded$1 = this.a(true, 26, -7, (lk) null, true, 84, -39, 24, (oi) null, false, (byte) -94);
         }
         return param0;
     }

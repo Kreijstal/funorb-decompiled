@@ -80,39 +80,90 @@ final class ab {
     }
 
     final static long a(int param0, CharSequence param1) {
+        long var2 = 0L;
+        int var4 = 0;
         int var5 = 0;
         int var6 = 0;
-        int var7 = client.field_A ? 1 : 0;
-        long var2 = 0L;
-        int var4 = param1.length();
-        for (var5 = 0; var5 < var4; var5++) {
-            var2 = var2 * 37L;
-            var6 = param1.charAt(var5);
-            if (var6 >= 65) {
-                // if_icmpgt L75
-                var2 = var2 + (long)(-65 + var6 + 1);
+        int var7 = 0;
+        var7 = client.field_A ? 1 : 0;
+        var2 = 0L;
+        var4 = param1.length();
+        var5 = 0;
+        L0: while (true) {
+          L1: {
+            if (var5 >= var4) {
+              break L1;
             } else {
-                if (97 <= var6) {
-                    // if_icmpgt L103
-                    var2 = var2 + (long)(-97 + (var6 + 1));
-                } else {
-                    if (var6 >= 48) {
-                        if (57 >= var6) {
-                            var2 = var2 + (long)(var6 + 27 - 48);
-                        }
+              L2: {
+                L3: {
+                  var2 = var2 * 37L;
+                  var6 = param1.charAt(var5);
+                  if (var6 < 65) {
+                    break L3;
+                  } else {
+                    if (var6 > 90) {
+                      break L3;
+                    } else {
+                      var2 = var2 + (long)(-65 + var6 + 1);
+                      break L2;
                     }
+                  }
                 }
+                L4: {
+                  if (97 > var6) {
+                    break L4;
+                  } else {
+                    if (var6 > 122) {
+                      break L4;
+                    } else {
+                      var2 = var2 + (long)(-97 + (var6 + 1));
+                      break L2;
+                    }
+                  }
+                }
+                if (var6 < 48) {
+                  break L2;
+                } else {
+                  if (57 < var6) {
+                    break L2;
+                  } else {
+                    var2 = var2 + (long)(var6 + 27 - 48);
+                    break L2;
+                  }
+                }
+              }
+              if (var2 >= 177917621779460413L) {
+                break L1;
+              } else {
+                var5++;
+                continue L0;
+              }
             }
-            // ifge L143
+          }
+          L5: {
+            if (param0 > 95) {
+              break L5;
+            } else {
+              field_f = -6;
+              break L5;
+            }
+          }
+          L6: while (true) {
+            L7: {
+              if (0L != var2 % 37L) {
+                break L7;
+              } else {
+                if (var2 == 0L) {
+                  break L7;
+                } else {
+                  var2 = var2 / 37L;
+                  continue L6;
+                }
+              }
+            }
+            return var2;
+          }
         }
-        if (param0 <= 95) {
-            field_f = -6;
-        }
-        while (0L == var2 % 37L) {
-            // ifeq L182
-            var2 = var2 / 37L;
-        }
-        return var2;
     }
 
     final static boolean c(byte param0) {
@@ -121,86 +172,25 @@ final class ab {
         Throwable var3 = null;
         int stackIn_3_0 = 0;
         int stackIn_5_0 = 0;
-        int stackOut_2_0 = 0;
+        Throwable decompiledCaughtException = null;
         int stackOut_4_0 = 0;
-        int statePc = 0;
-        Throwable caughtException = null;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    var1 = 108 % ((-69 - param0) / 50);
-                    var2 = (Object) (Object) f.field_r;
-                    // monitorenter f.field_r
-                    statePc = 1;
-                    continue stateLoop;
-                }
-                case 1: {
-                    try {
-                        if (ea.field_n != sf.field_B) {
-                            statePc = 4;
-                        } else {
-                            statePc = 2;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_1) {
-                        caughtException = stateCaught_1;
-                        statePc = 6;
-                        continue stateLoop;
-                    }
-                }
-                case 2: {
-                    try {
-                        // monitorexit var2
-                        stackOut_2_0 = 0;
-                        stackIn_3_0 = stackOut_2_0;
-                        statePc = 3;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_2) {
-                        caughtException = stateCaught_2;
-                        statePc = 6;
-                        continue stateLoop;
-                    }
-                }
-                case 3: {
-                    return stackIn_3_0 != 0;
-                }
-                case 4: {
-                    try {
-                        wh.field_c = pf.field_i[sf.field_B];
-                        el.field_G = bl.field_Z[sf.field_B];
-                        sf.field_B = 1 + sf.field_B & 127;
-                        // monitorexit var2
-                        stackOut_4_0 = 1;
-                        stackIn_5_0 = stackOut_4_0;
-                        statePc = 5;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_4) {
-                        caughtException = stateCaught_4;
-                        statePc = 6;
-                        continue stateLoop;
-                    }
-                }
-                case 5: {
-                    return stackIn_5_0 != 0;
-                }
-                case 6: {
-                    try {
-                        var3 = caughtException;
-                        // monitorexit var2
-                        statePc = 7;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_6) {
-                        caughtException = stateCaught_6;
-                        statePc = 6;
-                        continue stateLoop;
-                    }
-                }
-                case 7: {
-                    throw (RuntimeException) (Object) var3;
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
-            }
+        int stackOut_2_0 = 0;
+        var1 = 108 % ((-69 - param0) / 50);
+        var2 = (Object) (Object) f.field_r;
+        synchronized (var2) {
+          if (ea.field_n != sf.field_B) {
+            wh.field_c = pf.field_i[sf.field_B];
+            el.field_G = bl.field_Z[sf.field_B];
+            sf.field_B = 1 + sf.field_B & 127;
+            stackOut_4_0 = 1;
+            stackIn_5_0 = stackOut_4_0;
+          } else {
+            stackOut_2_0 = 0;
+            stackIn_3_0 = stackOut_2_0;
+            return stackIn_3_0 != 0;
+          }
         }
+        return stackIn_5_0 != 0;
     }
 
     public static void d(int param0) {

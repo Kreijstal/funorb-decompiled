@@ -232,7 +232,6 @@ final class ai extends ek {
 
     final static cl a(int param0, int param1, byte param2, int param3) {
         cl var4 = null;
-        cl var4_ref = null;
         int var5 = 0;
         cl var6 = null;
         var5 = client.field_A ? 1 : 0;
@@ -260,7 +259,7 @@ final class ai extends ek {
             if (param3 == var6.field_q) {
               return var6;
             } else {
-              var4_ref = (cl) (Object) oe.field_I.d(true);
+              var4 = (cl) (Object) oe.field_I.d(true);
               continue L0;
             }
           }

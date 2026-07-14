@@ -354,8 +354,10 @@ final class qe {
         int var7 = 0;
         int var8 = 0;
         ck var9 = null;
-        ck var10 = null;
-        ck var11 = null;
+        Object var10 = null;
+        ck var10_ref = null;
+        Object var11 = null;
+        ck var11_ref = null;
         int[] var12 = null;
         ck var13 = null;
         ck var14 = null;
@@ -386,7 +388,7 @@ final class qe {
           var10 = null;
           if (param2) {
             var13 = var9.c();
-            var10 = var13;
+            var10_ref = var13;
             var13.a();
             hk.a(0, 0, 5, 0);
             hk.a(0, 1, 3, 0);
@@ -404,7 +406,7 @@ final class qe {
             break L2;
           } else {
             var14 = var9.c();
-            var11 = var14;
+            var11_ref = var14;
             var14.a();
             hk.a(11, 0, 5, 0);
             hk.a(13, 1, 3, 0);
@@ -415,7 +417,7 @@ final class qe {
           }
         }
         hk.a(var18, var7, var8);
-        return new ck[]{null, null, null, var10, var9, var11, null, null, null};
+        return new ck[]{null, null, null, var10_ref, var9, var11_ref, null, null, null};
     }
 
     public static void a(int param0) {
@@ -436,10 +438,11 @@ final class qe {
         if (param1 < -100) {
           try {
             Thread.sleep(param0);
-          } catch (java.lang.Exception decompiledCaughtParameter) {
-            decompiledCaughtException = decompiledCaughtParameter;
+          } catch (java.lang.Exception decompiledCaughtParameter0) {
+            decompiledCaughtException = decompiledCaughtParameter0;
+            var3 = (InterruptedException) (Object) decompiledCaughtException;
           }
-          var3 = (InterruptedException) (Object) decompiledCaughtException;
+          return;
         } else {
           return;
         }

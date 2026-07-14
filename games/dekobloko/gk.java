@@ -1,6 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
+import java.lang.String;
+
 class gk extends ca implements vn {
     static String field_Db;
     static boolean field_Ib;
@@ -67,7 +69,6 @@ class gk extends ca implements vn {
 
     final static void a(w param0, boolean param1) {
         w var2 = null;
-        w var2_ref = null;
         int var3 = 0;
         w var4 = null;
         var3 = client.field_A ? 1 : 0;
@@ -94,7 +95,7 @@ class gk extends ca implements vn {
             var4.field_Mb = 0;
             var4.field_F = 0;
             var4.field_N = 0;
-            var2_ref = (w) (Object) param0.field_M.d(true);
+            var2 = (w) (Object) param0.field_M.d(true);
             continue L0;
           }
         }

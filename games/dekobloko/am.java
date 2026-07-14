@@ -9,7 +9,6 @@ final class am {
 
     final static kc a(int param0, boolean param1, int param2, int param3, int param4) {
         kc var5 = null;
-        kc var5_ref = null;
         int var6 = 0;
         kc var7 = null;
         kc var8 = null;
@@ -60,7 +59,7 @@ final class am {
                     break L1;
                   }
                 }
-                var5_ref = (kc) (Object) ((vj) (Object) stackIn_19_0).d(stackIn_19_1 != 0);
+                var5 = (kc) (Object) ((vj) (Object) stackIn_19_0).d(stackIn_19_1 != 0);
                 continue L0;
               } else {
                 return var7;
@@ -101,7 +100,7 @@ final class am {
                     break L3;
                   }
                 }
-                var5_ref = (kc) (Object) ((vj) (Object) stackIn_9_0).d(stackIn_9_1 != 0);
+                var5 = (kc) (Object) ((vj) (Object) stackIn_9_0).d(stackIn_9_1 != 0);
                 continue L2;
               } else {
                 return var7;

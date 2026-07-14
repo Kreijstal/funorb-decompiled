@@ -103,7 +103,6 @@ final class sm {
 
     final me a(int param0, int param1) {
         me var3 = null;
-        me var3_ref = null;
         byte[] var4 = null;
         var3 = (me) ((sm) this).field_a.a((long)param1, (byte) -63);
         if (var3 != null) {
@@ -119,30 +118,30 @@ final class sm {
             }
           }
           L1: {
-            var3_ref = new me();
+            var3 = new me();
             if (var4 != null) {
-              var3_ref.a((byte) 80, new wl(var4));
+              var3.a((byte) 80, new wl(var4));
               break L1;
             } else {
               break L1;
             }
           }
           if (32768 > param1) {
-            ((sm) this).field_a.a((Object) (Object) var3_ref, (long)param1, 125);
+            ((sm) this).field_a.a((Object) (Object) var3, (long)param1, 125);
             if (param0 < 123) {
               int discarded$4 = sm.a((byte) 69);
-              return var3_ref;
+              return var3;
             } else {
-              return var3_ref;
+              return var3;
             }
           } else {
-            var3_ref.d(19423);
-            ((sm) this).field_a.a((Object) (Object) var3_ref, (long)param1, 125);
+            var3.d(19423);
+            ((sm) this).field_a.a((Object) (Object) var3, (long)param1, 125);
             if (param0 >= 123) {
-              return var3_ref;
+              return var3;
             } else {
               int discarded$5 = sm.a((byte) 69);
-              return var3_ref;
+              return var3;
             }
           }
         }

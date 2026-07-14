@@ -100,69 +100,25 @@ final class wf extends eh implements java.awt.image.ImageProducer, java.awt.imag
     final static void d(int param0) {
         Object var1 = null;
         Throwable var2 = null;
-        int statePc = 0;
-        Throwable caughtException = null;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    if (f.field_r != null) {
-                        statePc = 2;
-                    } else {
-                        statePc = 7;
-                    }
-                    continue stateLoop;
-                }
-                case 2: {
-                    var1 = (Object) (Object) f.field_r;
-                    // monitorenter f.field_r
-                    statePc = 3;
-                    continue stateLoop;
-                }
-                case 3: {
-                    try {
-                        f.field_r = null;
-                        // monitorexit var1
-                        statePc = 7;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_3) {
-                        caughtException = stateCaught_3;
-                        statePc = 5;
-                        continue stateLoop;
-                    }
-                }
-                case 5: {
-                    try {
-                        var2 = caughtException;
-                        // monitorexit var1
-                        statePc = 6;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_5) {
-                        caughtException = stateCaught_5;
-                        statePc = 5;
-                        continue stateLoop;
-                    }
-                }
-                case 6: {
-                    throw (RuntimeException) (Object) var2;
-                }
-                case 7: {
-                    if (param0 >= 88) {
-                        statePc = 9;
-                    } else {
-                        statePc = 8;
-                    }
-                    continue stateLoop;
-                }
-                case 8: {
-                    field_s = null;
-                    statePc = 9;
-                    continue stateLoop;
-                }
-                case 9: {
-                    return;
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
+        Throwable decompiledCaughtException = null;
+        L0: {
+          if (f.field_r != null) {
+            var1 = (Object) (Object) f.field_r;
+            synchronized (var1) {
+              f.field_r = null;
             }
+            break L0;
+          } else {
+            break L0;
+          }
+        }
+        L1: {
+          if (param0 >= 88) {
+            break L1;
+          } else {
+            field_s = null;
+            break L1;
+          }
         }
     }
 
@@ -236,191 +192,53 @@ final class wf extends eh implements java.awt.image.ImageProducer, java.awt.imag
         Throwable var3 = null;
         int var4 = 0;
         int var5 = 0;
-        int statePc = 0;
-        Throwable caughtException = null;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    var4 = client.field_A ? 1 : 0;
-                    var1 = (Object) (Object) f.field_r;
-                    // monitorenter f.field_r
-                    statePc = 1;
-                    continue stateLoop;
-                }
-                case 1: {
-                    try {
-                        if (param0 == 19012) {
-                            statePc = 3;
-                        } else {
-                            statePc = 2;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_1) {
-                        caughtException = stateCaught_1;
-                        statePc = 14;
-                        continue stateLoop;
-                    }
-                }
-                case 2: {
-                    try {
-                        field_p = null;
-                        statePc = 3;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_2) {
-                        caughtException = stateCaught_2;
-                        statePc = 14;
-                        continue stateLoop;
-                    }
-                }
-                case 3: {
-                    try {
-                        sf.field_B = ea.field_n;
-                        om.field_d = om.field_d + 1;
-                        if (wi.field_b < 0) {
-                            statePc = 8;
-                        } else {
-                            statePc = 4;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_3) {
-                        caughtException = stateCaught_3;
-                        statePc = 14;
-                        continue stateLoop;
-                    }
-                }
-                case 4: {
-                    try {
-                        if (wi.field_b == rc.field_a) {
-                            statePc = 12;
-                        } else {
-                            statePc = 5;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_4) {
-                        caughtException = stateCaught_4;
-                        statePc = 14;
-                        continue stateLoop;
-                    }
-                }
-                case 5: {
-                    try {
-                        var2 = la.field_h[rc.field_a];
-                        rc.field_a = 1 + rc.field_a & 127;
-                        if (0 > var2) {
-                            statePc = 7;
-                        } else {
-                            statePc = 6;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_5) {
-                        caughtException = stateCaught_5;
-                        statePc = 14;
-                        continue stateLoop;
-                    }
-                }
-                case 6: {
-                    try {
-                        bj.field_d[var2] = true;
-                        statePc = 4;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_6) {
-                        caughtException = stateCaught_6;
-                        statePc = 14;
-                        continue stateLoop;
-                    }
-                }
-                case 7: {
-                    try {
-                        bj.field_d[var2 ^ -1] = false;
-                        statePc = 4;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_7) {
-                        caughtException = stateCaught_7;
-                        statePc = 14;
-                        continue stateLoop;
-                    }
-                }
-                case 8: {
-                    try {
-                        var5 = 0;
-                        var2 = var5;
-                        statePc = 9;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_8) {
-                        caughtException = stateCaught_8;
-                        statePc = 14;
-                        continue stateLoop;
-                    }
-                }
-                case 9: {
-                    try {
-                        if ((var5 ^ -1) <= -113) {
-                            statePc = 11;
-                        } else {
-                            statePc = 10;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_9) {
-                        caughtException = stateCaught_9;
-                        statePc = 14;
-                        continue stateLoop;
-                    }
-                }
-                case 10: {
-                    try {
-                        bj.field_d[var5] = false;
-                        var5++;
-                        statePc = 9;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_10) {
-                        caughtException = stateCaught_10;
-                        statePc = 14;
-                        continue stateLoop;
-                    }
-                }
-                case 11: {
-                    try {
-                        wi.field_b = rc.field_a;
-                        statePc = 12;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_11) {
-                        caughtException = stateCaught_11;
-                        statePc = 14;
-                        continue stateLoop;
-                    }
-                }
-                case 12: {
-                    try {
-                        ea.field_n = jh.field_e;
-                        // monitorexit var1
-                        statePc = 16;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_12) {
-                        caughtException = stateCaught_12;
-                        statePc = 14;
-                        continue stateLoop;
-                    }
-                }
-                case 14: {
-                    try {
-                        var3 = caughtException;
-                        // monitorexit var1
-                        statePc = 15;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_14) {
-                        caughtException = stateCaught_14;
-                        statePc = 14;
-                        continue stateLoop;
-                    }
-                }
-                case 15: {
-                    throw (RuntimeException) (Object) var3;
-                }
-                case 16: {
-                    return;
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
+        Throwable decompiledCaughtException = null;
+        var4 = client.field_A ? 1 : 0;
+        var1 = (Object) (Object) f.field_r;
+        synchronized (var1) {
+          L0: {
+            if (param0 == 19012) {
+              break L0;
+            } else {
+              field_p = null;
+              break L0;
             }
+          }
+          L1: {
+            sf.field_B = ea.field_n;
+            om.field_d = om.field_d + 1;
+            if (wi.field_b < 0) {
+              var5 = 0;
+              var2 = var5;
+              L2: while (true) {
+                if ((var5 ^ -1) <= -113) {
+                  wi.field_b = rc.field_a;
+                  break L1;
+                } else {
+                  bj.field_d[var5] = false;
+                  var5++;
+                  continue L2;
+                }
+              }
+            } else {
+              L3: while (true) {
+                if (wi.field_b == rc.field_a) {
+                  break L1;
+                } else {
+                  var2 = la.field_h[rc.field_a];
+                  rc.field_a = 1 + rc.field_a & 127;
+                  if (0 > var2) {
+                    bj.field_d[var2 ^ -1] = false;
+                    continue L3;
+                  } else {
+                    bj.field_d[var2] = true;
+                    continue L3;
+                  }
+                }
+              }
+            }
+          }
+          ea.field_n = jh.field_e;
         }
     }
 

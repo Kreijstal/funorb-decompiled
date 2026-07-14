@@ -1,6 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
+import java.lang.String;
+
 final class mg extends w {
     static boolean field_Nb;
     static ig field_bc;

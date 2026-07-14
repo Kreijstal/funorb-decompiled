@@ -21,11 +21,11 @@ final class aj {
 
     final static void a(String param0, int param1, java.applet.Applet param2) {
         try {
-            java.net.URL var3_ref = null;
+            java.net.URL var3_ref_java_net_URL = null;
             try {
-                var3_ref = new java.net.URL(param2.getCodeBase(), param0);
-                var3_ref = gn.a(var3_ref, -1, param2);
-                c.a((byte) 92, var3_ref.toString(), true, param2);
+                var3_ref_java_net_URL = new java.net.URL(param2.getCodeBase(), param0);
+                var3_ref_java_net_URL = gn.a(var3_ref_java_net_URL, -1, param2);
+                c.a((byte) 92, var3_ref_java_net_URL.toString(), true, param2);
             } catch (Exception exception) {
                 exception.printStackTrace();
             }

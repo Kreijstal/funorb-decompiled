@@ -267,43 +267,76 @@ final class ee {
     }
 
     final static boolean a(byte param0, boolean param1, int param2, int param3) {
-        if (!param1) {
-            if (!(cc.field_h[param3] >= cc.field_h[param2])) {
-                return true;
-            }
-            if (!(cc.field_h[param3] <= cc.field_h[param2])) {
+        int var4 = 0;
+        int var5 = 0;
+        int stackIn_30_0 = 0;
+        int stackOut_29_0 = 0;
+        int stackOut_28_0 = 0;
+        L0: {
+          if (param1) {
+            if (ad.field_i[param3] >= ad.field_i[param2]) {
+              if (ad.field_i[param2] < ad.field_i[param3]) {
                 return false;
+              } else {
+                if (cc.field_h[param3] >= cc.field_h[param2]) {
+                  if (cc.field_h[param3] > cc.field_h[param2]) {
+                    return false;
+                  } else {
+                    break L0;
+                  }
+                } else {
+                  return true;
+                }
+              }
+            } else {
+              return true;
             }
-            if (ad.field_i[param3] < ad.field_i[param2]) {
-                return true;
+          } else {
+            if (cc.field_h[param3] < cc.field_h[param2]) {
+              return true;
+            } else {
+              if (cc.field_h[param3] > cc.field_h[param2]) {
+                return false;
+              } else {
+                if (ad.field_i[param3] >= ad.field_i[param2]) {
+                  if (ad.field_i[param3] <= ad.field_i[param2]) {
+                    break L0;
+                  } else {
+                    return false;
+                  }
+                } else {
+                  return true;
+                }
+              }
             }
-            // if_icmple L136
+          }
+        }
+        var4 = ln.field_a[param3] + (oa.field_e[param3] - -mk.field_b[param3]);
+        var5 = mk.field_b[param2] + ln.field_a[param2] + oa.field_e[param2];
+        if (var5 <= var4) {
+          if (var4 <= var5) {
+            if (param0 > 97) {
+              L1: {
+                if (param3 >= param2) {
+                  stackOut_29_0 = 0;
+                  stackIn_30_0 = stackOut_29_0;
+                  break L1;
+                } else {
+                  stackOut_28_0 = 1;
+                  stackIn_30_0 = stackOut_28_0;
+                  break L1;
+                }
+              }
+              return stackIn_30_0 != 0;
+            } else {
+              return false;
+            }
+          } else {
             return false;
+          }
+        } else {
+          return true;
         }
-        if (ad.field_i[param3] < ad.field_i[param2]) {
-            return true;
-        }
-        if (!(ad.field_i[param2] >= ad.field_i[param3])) {
-            return false;
-        }
-        if (cc.field_h[param3] < cc.field_h[param2]) {
-            return true;
-        }
-        if (!(cc.field_h[param3] <= cc.field_h[param2])) {
-            return false;
-        }
-        int var4 = ln.field_a[param3] + (oa.field_e[param3] - -mk.field_b[param3]);
-        int var5 = mk.field_b[param2] + ln.field_a[param2] + oa.field_e[param2];
-        if (var5 > var4) {
-            return true;
-        }
-        if (var4 > var5) {
-            return false;
-        }
-        if (param0 <= 97) {
-            return false;
-        }
-        return param3 < param2 ? true : false;
     }
 
     ee(int[] param0) {

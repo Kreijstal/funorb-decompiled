@@ -134,8 +134,9 @@ final class bn {
                         param5++;
                         continue L5;
                       } else {
+                        int incrementValue$2 = var9;
                         var9++;
-                        var17 = param4.field_D[var9];
+                        var17 = param4.field_D[incrementValue$2];
                         if (var17 != 0) {
                           if ((var15 ^ -1) >= -256) {
                             var18 = hk.field_l[var8];
@@ -246,8 +247,9 @@ final class bn {
                         param5++;
                         continue L11;
                       } else {
+                        int incrementValue$3 = var9;
                         var9++;
-                        var17 = param4.field_D[var9];
+                        var17 = param4.field_D[incrementValue$3];
                         if (var17 != 0) {
                           if ((var15 ^ -1) >= -256) {
                             var18 = hk.field_l[var8];

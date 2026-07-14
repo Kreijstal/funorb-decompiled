@@ -573,24 +573,37 @@ final class ib extends t implements vn {
 
     ib(ka param0, ln param1) {
         super(param0, 200, 150);
-        String var3 = null;
-        if (param1 == qb.field_s) {
-            var3 = si.field_c;
-        } else {
-            if (kl.field_p != param1) {
-                // if_acmpne L97
-                ((ib) this).field_y = ((ib) this).field_y + 30;
-                var3 = gd.field_i;
+        Object var3 = null;
+        String var3_ref = null;
+        ce var4 = null;
+        L0: {
+          var3 = null;
+          if (param1 != qb.field_s) {
+            if (kl.field_p == param1) {
+              var3_ref = dc.field_g;
+              ((ib) this).field_y = ((ib) this).field_y + 10;
+              if (!wj.r(98)) {
+                break L0;
+              } else {
+                ((ib) this).field_y = ((ib) this).field_y + 20;
+                var3_ref = wm.field_g;
+                break L0;
+              }
             } else {
-                var3 = dc.field_g;
-                ((ib) this).field_y = ((ib) this).field_y + 10;
-                if (wj.r(98)) {
-                    ((ib) this).field_y = ((ib) this).field_y + 20;
-                    var3 = wm.field_g;
-                }
+              if (gd.field_c != param1) {
+                break L0;
+              } else {
+                ((ib) this).field_y = ((ib) this).field_y + 30;
+                var3_ref = gd.field_i;
+                break L0;
+              }
             }
+          } else {
+            var3_ref = si.field_c;
+            break L0;
+          }
         }
-        ce var4 = new ce(var3, (kg) null);
+        var4 = new ce(var3_ref, (kg) null);
         var4.field_t = ((ib) this).field_t;
         var4.field_u = 0;
         var4.field_y = 80;

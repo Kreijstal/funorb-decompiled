@@ -60,7 +60,6 @@ final class pj extends sf {
 
     final static void a(ve param0, byte param1) {
         ve var2 = null;
-        ve var2_ref = null;
         int var3 = 0;
         ve var4 = null;
         var3 = client.field_A ? 1 : 0;
@@ -71,7 +70,7 @@ final class pj extends sf {
           L0: while (true) {
             if (var4 != null) {
               if (var4.a(param0, false)) {
-                var2_ref = (ve) (Object) h.field_b.d(true);
+                var2 = (ve) (Object) h.field_b.d(true);
                 continue L0;
               } else {
                 L1: {

@@ -60,31 +60,132 @@ final class dc {
     }
 
     final static void a(boolean param0, int param1) {
-        if (ph.n(-30146)) {
-            if (!tf.a((byte) 38, j.field_d)) {
-                // ifnonnull L38
-                // if_icmpgt L38
-            } else {
-                ba.field_c = true;
-                pd.field_d = rc.a(true, id.field_P > 0 ? true : false, null != gh.field_e ? true : false, (byte) -61, param0);
-                return;
+        int stackIn_6_0 = 0;
+        int stackIn_7_0 = 0;
+        int stackIn_8_0 = 0;
+        int stackIn_8_1 = 0;
+        int stackIn_9_0 = 0;
+        int stackIn_9_1 = 0;
+        int stackIn_10_0 = 0;
+        int stackIn_10_1 = 0;
+        int stackIn_11_0 = 0;
+        int stackIn_11_1 = 0;
+        int stackIn_11_2 = 0;
+        int stackOut_5_0 = 0;
+        int stackOut_7_0 = 0;
+        int stackOut_7_1 = 0;
+        int stackOut_6_0 = 0;
+        int stackOut_6_1 = 0;
+        int stackOut_8_0 = 0;
+        int stackOut_8_1 = 0;
+        int stackOut_10_0 = 0;
+        int stackOut_10_1 = 0;
+        int stackOut_10_2 = 0;
+        int stackOut_9_0 = 0;
+        int stackOut_9_1 = 0;
+        int stackOut_9_2 = 0;
+        L0: {
+          if (!ph.n(-30146)) {
+            break L0;
+          } else {
+            L1: {
+              if (tf.a((byte) 38, j.field_d)) {
+                break L1;
+              } else {
+                if (gh.field_e != null) {
+                  break L1;
+                } else {
+                  if (-1 > (id.field_P ^ -1)) {
+                    break L1;
+                  } else {
+                    break L0;
+                  }
+                }
+              }
             }
+            L2: {
+              ba.field_c = true;
+              stackOut_5_0 = 1;
+              stackIn_7_0 = stackOut_5_0;
+              stackIn_6_0 = stackOut_5_0;
+              if (id.field_P <= 0) {
+                stackOut_7_0 = stackIn_7_0;
+                stackOut_7_1 = 0;
+                stackIn_8_0 = stackOut_7_0;
+                stackIn_8_1 = stackOut_7_1;
+                break L2;
+              } else {
+                stackOut_6_0 = stackIn_6_0;
+                stackOut_6_1 = 1;
+                stackIn_8_0 = stackOut_6_0;
+                stackIn_8_1 = stackOut_6_1;
+                break L2;
+              }
+            }
+            L3: {
+              stackOut_8_0 = stackIn_8_0;
+              stackOut_8_1 = stackIn_8_1;
+              stackIn_10_0 = stackOut_8_0;
+              stackIn_10_1 = stackOut_8_1;
+              stackIn_9_0 = stackOut_8_0;
+              stackIn_9_1 = stackOut_8_1;
+              if (null == gh.field_e) {
+                stackOut_10_0 = stackIn_10_0;
+                stackOut_10_1 = stackIn_10_1;
+                stackOut_10_2 = 0;
+                stackIn_11_0 = stackOut_10_0;
+                stackIn_11_1 = stackOut_10_1;
+                stackIn_11_2 = stackOut_10_2;
+                break L3;
+              } else {
+                stackOut_9_0 = stackIn_9_0;
+                stackOut_9_1 = stackIn_9_1;
+                stackOut_9_2 = 1;
+                stackIn_11_0 = stackOut_9_0;
+                stackIn_11_1 = stackOut_9_1;
+                stackIn_11_2 = stackOut_9_2;
+                break L3;
+              }
+            }
+            pd.field_d = rc.a(stackIn_11_0 != 0, stackIn_11_1 != 0, stackIn_11_2 != 0, (byte) -61, param0);
+            return;
+          }
         }
-        ba.field_c = false;
-        ob.field_k = false;
-        if (tf.a((byte) 64, j.field_d)) {
+        L4: {
+          ba.field_c = false;
+          ob.field_k = false;
+          if (!tf.a((byte) 64, j.field_d)) {
+            break L4;
+          } else {
             lk.field_F = true;
+            break L4;
+          }
         }
-        if (!(!ge.field_c)) {
+        L5: {
+          if (ge.field_c) {
             ge.field_c = false;
             fm.field_e = true;
+            break L5;
+          } else {
+            break L5;
+          }
         }
-        if (gn.field_b) {
+        L6: {
+          if (!gn.field_b) {
+            break L6;
+          } else {
             mg.field_Zb = true;
             gn.field_b = false;
+            break L6;
+          }
         }
-        if (param1 <= 75) {
+        L7: {
+          if (param1 > 75) {
+            break L7;
+          } else {
             field_i = null;
+            break L7;
+          }
         }
         qi.a(param0, (byte) -108);
     }

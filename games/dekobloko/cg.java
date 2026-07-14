@@ -23,7 +23,6 @@ final class cg {
         String var16 = null;
         pf var17 = null;
         ck var18 = null;
-        ck var18_ref = null;
         String var19 = null;
         pf var20 = null;
         ck var21 = null;
@@ -33,7 +32,6 @@ final class cg {
         String var25 = null;
         pf var26 = null;
         ck var27 = null;
-        ck var27_ref = null;
         String var28 = null;
         pf var29 = null;
         ck var30 = null;
@@ -74,11 +72,11 @@ final class cg {
         L1: {
           if (param0 == param2) {
             var17 = w.field_H;
-            var18_ref = ef.field_O[0];
-            var27 = var18_ref;
-            var27 = var18_ref;
+            var18 = ef.field_O[0];
+            var27 = var18;
+            var27 = var18;
             var19 = dj.field_db;
-            var17.field_h.a(4193, 11, var18_ref, var19);
+            var17.field_h.a(4193, 11, var18, var19);
             var20 = w.field_H;
             var21 = ef.field_O[1];
             var27 = var21;
@@ -99,9 +97,9 @@ final class cg {
         L2: {
           if ((param2 ^ -1) == -3) {
             var26 = w.field_H;
-            var27_ref = ef.field_O[0];
+            var27 = ef.field_O[0];
             var28 = client.field_y;
-            var26.field_h.a(4193, 11, var27_ref, var28);
+            var26.field_h.a(4193, 11, var27, var28);
             var29 = w.field_H;
             var30 = ef.field_O[1];
             var31 = om.field_e;
@@ -142,22 +140,46 @@ final class cg {
     }
 
     final static void b(boolean param0, int param1) {
-        if (!(-1 <= (lg.field_W ^ -1))) {
-            if (!(!ve.field_Qb)) {
-                hk.d(0, 0, hk.field_j, ea.field_D.field_pb);
-                tc.field_Ob.a(param1 ^ 1141039779, param0);
+        L0: {
+          if (-1 > (lg.field_W ^ -1)) {
+            if (ve.field_Qb) {
+              hk.d(0, 0, hk.field_j, ea.field_D.field_pb);
+              tc.field_Ob.a(param1 ^ 1141039779, param0);
+              break L0;
+            } else {
+              break L0;
             }
+          } else {
+            break L0;
+          }
         }
-        if (bf.field_r >= -1) {
-            // if_icmplt L63
-        } else {
-            if (dn.field_k) {
-                hk.d(0, 0, hk.field_j, ea.field_D.field_pb);
-                mn.field_e.a(1141039778, param0);
+        L1: {
+          L2: {
+            if (bf.field_r < -1) {
+              break L2;
+            } else {
+              if (-1 < tg.field_e) {
+                break L2;
+              } else {
+                break L1;
+              }
             }
+          }
+          if (!dn.field_k) {
+            break L1;
+          } else {
+            hk.d(0, 0, hk.field_j, ea.field_D.field_pb);
+            mn.field_e.a(1141039778, param0);
+            break L1;
+          }
         }
-        if (param1 != 1) {
+        L3: {
+          if (param1 == 1) {
+            break L3;
+          } else {
             field_d = 1.5652884244918823f;
+            break L3;
+          }
         }
     }
 
@@ -176,8 +198,9 @@ final class cg {
                 if (var8[var10] != 0) {
                     var14 = var7[var10];
                 }
+                int incrementValue$0 = var11;
                 var11++;
-                var9[var11] = var14;
+                var9[incrementValue$0] = var14;
                 var10 += 2;
             }
             var10 += 36;
@@ -409,8 +432,9 @@ final class cg {
                 if (var5[var7] != 0) {
                     var11 = var4[var7];
                 }
+                int incrementValue$0 = var8;
                 var8++;
-                var6[var8] = var11;
+                var6[incrementValue$0] = var11;
                 var7++;
             }
         }

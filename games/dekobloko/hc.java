@@ -11,14 +11,14 @@ final class hc {
 
     final static void a(int param0) {
         int var2 = 0;
-        String var3 = null;
+        Object var3 = null;
         int var3_int = 0;
+        String var3_ref = null;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
         ck var7 = null;
         ck var8 = null;
-        ck var8_ref = null;
         ck var9 = null;
         var5 = client.field_A ? 1 : 0;
         hk.f(243, 197, 369, 143, 16777215);
@@ -45,17 +45,17 @@ final class hc {
             if (ac.field_F >= dk.field_i) {
               break L1;
             } else {
-              var8_ref = d.field_h[bh.field_m];
-              if (var8_ref == null) {
+              var8 = d.field_h[bh.field_m];
+              if (var8 == null) {
                 break L1;
               } else {
-                var3_int = (var8_ref.field_K - -60) * ac.field_F / dk.field_i;
+                var3_int = (var8.field_K - -60) * ac.field_F / dk.field_i;
                 var4 = -30 + var3_int;
                 if (lb.field_b) {
-                  bn.a((byte) -112, var4 * -256 / 30, (var8_ref.field_K - var4) * 256 / 30, 199, var8_ref, 245);
+                  bn.a((byte) -112, var4 * -256 / 30, (var8.field_K - var4) * 256 / 30, 199, var8, 245);
                   break L1;
                 } else {
-                  bn.a((byte) -115, (var8_ref.field_K + -var4) * 256 / 30, -256 * var4 / 30, 199, var8_ref, 245);
+                  bn.a((byte) -115, (var8.field_K + -var4) * 256 / 30, -256 * var4 / 30, 199, var8, 245);
                   break L1;
                 }
               }
@@ -70,10 +70,10 @@ final class hc {
               var4 = var6;
               L3: while (true) {
                 if (var6 >= d.field_h.length) {
-                  if (var3 == null) {
+                  if (var3_ref == null) {
                     break L2;
                   } else {
-                    int discarded$4 = bn.field_g.a("Screenshot(s) " + var3 + " is/are the wrong size! Should be " + 365 + "<times>" + 139, 245, 199, 365, 139, 16737843, 0, 1, 1, 0);
+                    int discarded$4 = bn.field_g.a("Screenshot(s) " + var3_ref + " is/are the wrong size! Should be " + 365 + "<times>" + 139, 245, 199, 365, 139, 16737843, 0, 1, 1, 0);
                     break L2;
                   }
                 } else {
@@ -92,11 +92,11 @@ final class hc {
                       }
                     }
                     if (var3 != null) {
-                      var3 = var3 + ", " + var6;
+                      var3_ref = var3_ref + ", " + var6;
                       var6++;
                       continue L3;
                     } else {
-                      var3 = Integer.toString(var6);
+                      var3_ref = Integer.toString(var6);
                       var6++;
                       continue L3;
                     }

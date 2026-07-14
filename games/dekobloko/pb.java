@@ -28,7 +28,6 @@ final class pb {
     final static void a(boolean param0) {
         int var1 = 0;
         String var2 = null;
-        String var2_ref = null;
         int var3 = 0;
         L0: {
           var3 = client.field_A ? 1 : 0;
@@ -50,14 +49,14 @@ final class pb {
           } else {
             if (id.field_P >= 3) {
               if ((id.field_P ^ -1) > -8) {
-                var2_ref = cm.a((byte) 83, field_f[2], new String[2]);
+                var2 = cm.a((byte) 83, field_f[2], new String[2]);
                 break L1;
               } else {
                 var2 = field_f[3];
                 break L1;
               }
             } else {
-              var2_ref = cm.a((byte) 85, field_f[1], new String[2]);
+              var2 = cm.a((byte) 85, field_f[1], new String[2]);
               break L1;
             }
           }
@@ -67,7 +66,7 @@ final class pb {
     }
 
     final static void a(int param0) {
-        ck var1_ref = null;
+        ck var1_ref_ck = null;
         int var1 = 0;
         int var2 = 0;
         int var3 = 0;
@@ -400,16 +399,16 @@ final class pb {
               if (null != c.field_i) {
                 L14: {
                   ea.field_l.c(231, 390);
-                  var1_ref = pj.field_I;
+                  var1_ref_ck = pj.field_I;
                   if ((rg.field_a.field_h ^ -1) != -1) {
                     break L14;
                   } else {
-                    var1_ref = oh.field_e;
+                    var1_ref_ck = oh.field_e;
                     break L14;
                   }
                 }
                 L15: {
-                  var1_ref.c(0, 0);
+                  var1_ref_ck.c(0, 0);
                   stackOut_48_0 = rb.field_b;
                   stackIn_50_0 = stackOut_48_0;
                   stackIn_49_0 = stackOut_48_0;
@@ -434,10 +433,10 @@ final class pb {
                     ea.field_l.f(232, 389, var2);
                     ea.field_l.f(232, 391, var2);
                     ea.field_l.f(230, 391, var2);
-                    var1_ref.f(1, 1, var2);
-                    var1_ref.f(-1, 1, var2);
-                    var1_ref.f(1, -1, var2);
-                    var1_ref.f(-1, -1, var2);
+                    var1_ref_ck.f(1, 1, var2);
+                    var1_ref_ck.f(-1, 1, var2);
+                    var1_ref_ck.f(1, -1, var2);
+                    var1_ref_ck.f(-1, -1, var2);
                     break L16;
                   } else {
                     break L16;

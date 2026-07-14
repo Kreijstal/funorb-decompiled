@@ -40,15 +40,14 @@ final class dh {
     }
 
     final static jb a(Throwable param0, String param1) {
-        jb var2_ref = null;
         jb var2 = null;
         if (param0 instanceof jb) {
             var2 = (jb) (Object) param0;
             var2.field_i = var2.field_i + 32 + param1;
         } else {
-            var2_ref = new jb(param0, param1);
+            var2 = new jb(param0, param1);
         }
-        return var2_ref;
+        return var2;
     }
 
     static {

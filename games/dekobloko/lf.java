@@ -42,12 +42,14 @@ final class lf {
                   try {
                     ((lf) this).field_a.setInput(param1.field_r, 10 + param1.field_n, -10 + -param1.field_n + -8 + param1.field_r.length);
                     int discarded$2 = ((lf) this).field_a.inflate(param2);
-                  } catch (java.lang.Exception decompiledCaughtParameter) {
-                    decompiledCaughtException = decompiledCaughtParameter;
+                  } catch (java.lang.Exception decompiledCaughtParameter0) {
+                    decompiledCaughtException = decompiledCaughtParameter0;
+                    exception = (Exception) (Object) decompiledCaughtException;
+                    ((lf) this).field_a.reset();
+                    throw new RuntimeException("");
                   }
-                  exception = (Exception) (Object) decompiledCaughtException;
                   ((lf) this).field_a.reset();
-                  throw new RuntimeException("");
+                  return;
                 } else {
                   break L0;
                 }

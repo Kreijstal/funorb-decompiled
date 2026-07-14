@@ -55,21 +55,38 @@ final class ob extends fm {
     }
 
     final static void a(int param0, ui param1, byte param2) {
-        int var4 = client.field_A ? 1 : 0;
-        if (rc.field_d == param1) {
-            wj.field_Ob.c(param0);
-        } else {
-            if (rc.field_d != null) {
-                // ifnull L57
-                wj.field_Ob.a(param1, 0, 0, 16);
-                rc.field_d = param1;
-                wj.field_Ob.c(param0);
-            } else {
-                nn.a(param0, param1, true);
+        int var4 = 0;
+        L0: {
+          var4 = client.field_A ? 1 : 0;
+          if (rc.field_d != param1) {
+            L1: {
+              if (rc.field_d == null) {
+                break L1;
+              } else {
+                if (param1 == null) {
+                  break L1;
+                } else {
+                  wj.field_Ob.a(param1, 0, 0, 16);
+                  rc.field_d = param1;
+                  wj.field_Ob.c(param0);
+                  break L0;
+                }
+              }
             }
+            nn.a(param0, param1, true);
+            break L0;
+          } else {
+            wj.field_Ob.c(param0);
+            break L0;
+          }
         }
-        if (param2 < 45) {
+        L2: {
+          if (param2 >= 45) {
+            break L2;
+          } else {
             field_g = 64;
+            break L2;
+          }
         }
     }
 

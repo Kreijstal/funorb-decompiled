@@ -206,8 +206,9 @@ final class uf extends wl {
         int var5 = 0;
         ((uf) this).field_x = ((uf) this).field_x + param0;
         while (var4 < param0) {
+            int incrementValue$0 = var3;
             var3++;
-            var5 = var5 + ((ee.field_b[var4] & ((uf) this).field_r[var3]) << param0 + -var4);
+            var5 = var5 + ((ee.field_b[var4] & ((uf) this).field_r[incrementValue$0]) << param0 + -var4);
             param0 = param0 - var4;
             var4 = 8;
         }

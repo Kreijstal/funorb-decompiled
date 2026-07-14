@@ -15,7 +15,6 @@ final class ul {
     final static void a(byte param0) {
         int var2 = 0;
         cl var3 = null;
-        cl var3_ref = null;
         int var4 = 0;
         int var5 = 0;
         int var6_int = 0;
@@ -41,14 +40,14 @@ final class ul {
               break L1;
             } else {
               if (var2 != var15.field_q) {
-                var3_ref = (cl) (Object) oe.field_I.d(true);
+                var3 = (cl) (Object) oe.field_I.d(true);
                 continue L0;
               } else {
                 break L1;
               }
             }
           }
-          if (var3_ref == null) {
+          if (var3 == null) {
             si.a(122);
             return;
           } else {
@@ -57,7 +56,7 @@ final class ul {
               if (-1 == (var4 ^ -1)) {
                 break L2;
               } else {
-                var5 = var3_ref.field_z;
+                var5 = var3.field_z;
                 t.field_cb[0] = oa.field_f;
                 var6_int = 1;
                 L3: while (true) {
@@ -67,9 +66,9 @@ final class ul {
                     L4: while (true) {
                       if (var6_int >= var4) {
                         pd.a(var5, (byte) 6);
-                        var3_ref.field_x = new String[2][var5];
+                        var3.field_x = new String[2][var5];
                         var6 = new String[2][var5];
-                        var3_ref.field_u = new int[2][var5 * 4];
+                        var3.field_u = new int[2][var5 * 4];
                         var7 = new int[2][var5 * 4];
                         var8 = og.field_eb;
                         var9 = 0;
@@ -138,10 +137,10 @@ final class ul {
                       } else {
                         pn.a(63, (wl) (Object) var16);
                         if (-1 == (var6_int ^ -1)) {
-                          var3_ref.field_p = oc.field_c;
-                          var3_ref.field_o = dj.field_Y;
-                          var3_ref.field_w = tj.field_Pb;
-                          var3_ref.field_t = vm.field_s;
+                          var3.field_p = oc.field_c;
+                          var3.field_o = dj.field_Y;
+                          var3.field_w = tj.field_Pb;
+                          var3.field_t = vm.field_s;
                           ri.a(var6_int, dj.field_Y, -1, vm.field_s, tj.field_Pb, oc.field_c);
                           var6_int++;
                           continue L4;
@@ -168,8 +167,8 @@ final class ul {
                 break L7;
               }
             }
-            var3_ref.field_A = true;
-            var3_ref.b((byte) 104);
+            var3.field_A = true;
+            var3.b((byte) 104);
             return;
           }
         }

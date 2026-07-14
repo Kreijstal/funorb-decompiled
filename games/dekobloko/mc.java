@@ -59,11 +59,12 @@ final class mc {
         String var18_ref_String = null;
         Object var19 = null;
         String var19_ref = null;
-        String var20 = null;
-        String var21 = null;
+        Object var20 = null;
+        String var20_ref = null;
+        Object var21 = null;
+        String var21_ref = null;
         String var22 = null;
         int var22_int = 0;
-        String var22_ref = null;
         int var23 = 0;
         int var24 = 0;
         String var25 = null;
@@ -1182,7 +1183,7 @@ final class mc {
                               if (((String) var19).equals((Object) (Object) var18_ref_String)) {
                                 break L61;
                               } else {
-                                var20 = (String) var19;
+                                var20 = var19;
                                 break L61;
                               }
                             }
@@ -1190,31 +1191,31 @@ final class mc {
                           L62: {
                             var21 = null;
                             if (var13 != 0) {
-                              var21 = gd.field_d;
-                              var22 = var21;
+                              var21_ref = gd.field_d;
+                              var22 = var21_ref;
                               var25 = var22;
                               var22 = var25;
-                              var21 = var22;
-                              var25 = var21;
+                              var21_ref = var22;
+                              var25 = var21_ref;
                               var22 = var25;
                               var25 = var22;
                               var22 = var25;
-                              var21 = var22;
+                              var21_ref = var22;
                               var22 = var25;
                               break L62;
                             } else {
                               if (var10 != 0) {
-                                var21 = pj.field_F;
+                                var21_ref = pj.field_F;
                                 break L62;
                               } else {
                                 L63: {
                                   if (var11 != 0) {
                                     var22_int = -rf.field_o + ik.field_h[var7][var9];
                                     if (var22_int != 1) {
-                                      var21 = cm.a((byte) 81, eb.field_g, new String[1]);
+                                      var21_ref = cm.a((byte) 81, eb.field_g, new String[1]);
                                       break L63;
                                     } else {
-                                      var21 = pl.field_f;
+                                      var21_ref = pl.field_f;
                                       break L63;
                                     }
                                   } else {
@@ -1227,14 +1228,14 @@ final class mc {
                                     var22 = var32;
                                     var25 = var22;
                                     var22 = var25;
-                                    var21 = var22;
+                                    var21_ref = var22;
                                     var25 = var32;
                                     var22 = var25;
-                                    if (var21 != null) {
-                                      var21 = var21 + "<br>" + var32;
+                                    if (var21_ref != null) {
+                                      var21_ref = var21_ref + "<br>" + var32;
                                       break L64;
                                     } else {
-                                      var21 = var32;
+                                      var21_ref = var32;
                                       break L64;
                                     }
                                   } else {
@@ -1256,18 +1257,18 @@ final class mc {
                                           if (lc.field_e[var15 - 1] == null) {
                                             break L65;
                                           } else {
-                                            var22_ref = lc.field_e[var15 + -1][0];
+                                            var22 = lc.field_e[var15 + -1][0];
                                             break L65;
                                           }
                                         }
                                       }
                                     }
                                   }
-                                  if (var21 != null) {
-                                    var21 = var21 + "<br>" + var22_ref;
+                                  if (var21_ref != null) {
+                                    var21_ref = var21_ref + "<br>" + var22;
                                     break L62;
                                   } else {
-                                    var21 = var22_ref;
+                                    var21_ref = var22;
                                     break L62;
                                   }
                                 } else {
@@ -1284,7 +1285,7 @@ final class mc {
                                 break L66;
                               } else {
                                 L67: {
-                                  var22_ref = null;
+                                  var22 = null;
                                   var23 = 0;
                                   if (!gd.field_b) {
                                     break L67;
@@ -1294,7 +1295,7 @@ final class mc {
                                     var22 = var25;
                                     var25 = var22;
                                     var22 = var25;
-                                    var21 = var22;
+                                    var21_ref = var22;
                                     break L67;
                                   }
                                 }
@@ -1302,22 +1303,22 @@ final class mc {
                                 L68: while (true) {
                                   if (var7 <= var24) {
                                     if (var23 == 0) {
-                                      var21 = cm.a((byte) 115, ai.field_T, new String[1]);
+                                      var21_ref = cm.a((byte) 115, ai.field_T, new String[1]);
                                       break L66;
                                     } else {
-                                      var21 = tl.field_x + var22;
+                                      var21_ref = tl.field_x + var22;
                                       break L66;
                                     }
                                   } else {
                                     if (rd.field_c[var24]) {
                                       var25 = "</col>" + pa.field_db[var24] + "<col=A00000>";
                                       var22 = var25;
-                                      var21 = var22;
+                                      var21_ref = var22;
                                       var22 = var25;
                                       if (var22 != null) {
                                         var22 = var22 + ", " + var25;
-                                        var21 = var22;
-                                        var21 = var22;
+                                        var21_ref = var22;
+                                        var21_ref = var22;
                                         var23 = 1;
                                         var24++;
                                         continue L68;
@@ -1336,24 +1337,24 @@ final class mc {
                             }
                           }
                           L69: {
-                            if (var21 == null) {
+                            if (var21_ref == null) {
                               break L69;
                             } else {
-                              var21 = "<col=A00000>" + var21;
-                              var33 = j.a("<br>", var21, "<br><col=A00000>", 0);
+                              var21_ref = "<col=A00000>" + var21_ref;
+                              var33 = j.a("<br>", var21_ref, "<br><col=A00000>", 0);
                               if (var20 != null) {
-                                var20 = var20 + "<br>" + var33;
+                                var20_ref = var20_ref + "<br>" + var33;
                                 break L69;
                               } else {
-                                var20 = var33;
+                                var20_ref = var33;
                                 break L69;
                               }
                             }
                           }
-                          if (var20 == null) {
+                          if (var20_ref == null) {
                             break L58;
                           } else {
-                            sl.field_g = var20;
+                            sl.field_g = var20_ref;
                             break L58;
                           }
                         } else {

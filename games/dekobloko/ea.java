@@ -158,7 +158,8 @@ final class ea extends cf {
         ck var11 = null;
         ck var12 = null;
         ck var13 = null;
-        ck var14 = null;
+        Object var14 = null;
+        ck var14_ref = null;
         int[] var15 = null;
         ck var16 = null;
         int[] var17 = null;
@@ -195,7 +196,7 @@ final class ea extends cf {
             var14 = null;
             if (param0 > 0) {
               var16 = new ck(16, 16);
-              var14 = var16;
+              var14_ref = var16;
               var16.a();
               hk.a(0, 0, 16, 16, param0);
               break L0;
@@ -204,7 +205,7 @@ final class ea extends cf {
             }
           }
           hk.a(var20, var7, var8);
-          return new ck[]{var10, var11, var10, var9, var14, var9, var12, var13, var12};
+          return new ck[]{var10, var11, var10, var9, var14_ref, var9, var12, var13, var12};
         }
     }
 

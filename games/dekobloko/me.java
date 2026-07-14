@@ -177,10 +177,10 @@ final class me extends be {
               Object discarded$9 = nc.a("updatelinks", -14541, param1, new Object[2]);
               Object discarded$10 = nc.a("updatelinks", -14541, param1, new Object[2]);
               Object discarded$11 = nc.a("updatelinks", -14541, param1, new Object[2]);
-            } catch (java.lang.Throwable decompiledCaughtParameter) {
-              decompiledCaughtException = decompiledCaughtParameter;
+            } catch (java.lang.Throwable decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              var2 = decompiledCaughtException;
             }
-            var2 = decompiledCaughtException;
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {

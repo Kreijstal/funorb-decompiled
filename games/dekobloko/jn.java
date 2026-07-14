@@ -1,6 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
+import javax.sound.sampled.AudioFormat;
+
 final class jn extends en {
     private int field_z;
     private boolean field_x;

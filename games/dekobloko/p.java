@@ -26,43 +26,17 @@ final class p {
         try {
             Throwable throwable = null;
             Throwable decompiledCaughtException = null;
-            int statePc = 0;
-            Throwable caughtException = null;
-            stateLoop: while (true) {
-                switch (statePc) {
-                    case 0: {
-                        try {
-                            Object discarded$3 = nc.a("resizing", param1 + -14511, se.h(param1 ^ -25126), new Object[1]);
-                            statePc = 3;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_0) {
-                            caughtException = stateCaught_0;
-                            statePc = 2;
-                            continue stateLoop;
-                        }
-                    }
-                    case 2: {
-                        throwable = caughtException;
-                        statePc = 3;
-                        continue stateLoop;
-                    }
-                    case 3: {
-                        if (param1 != -30) {
-                            statePc = 5;
-                        } else {
-                            statePc = 4;
-                        }
-                        continue stateLoop;
-                    }
-                    case 4: {
-                        return;
-                    }
-                    case 5: {
-                        p.a(72, (byte) -105);
-                        return;
-                    }
-                    default: throw new IllegalStateException("invalid CFG state " + statePc);
-                }
+            try {
+              Object discarded$2 = nc.a("resizing", param1 + -14511, se.h(param1 ^ -25126), new Object[1]);
+            } catch (java.lang.Throwable decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              throwable = decompiledCaughtException;
+            }
+            if (param1 != -30) {
+              p.a(72, (byte) -105);
+              return;
+            } else {
+              return;
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;

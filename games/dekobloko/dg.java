@@ -262,8 +262,7 @@ final class dg implements Iterator {
 
     final static void a(int param0, int param1) {
         kn var2 = null;
-        kn var2_ref = null;
-        kc var2_ref2 = null;
+        kc var2_ref = null;
         int var3 = 0;
         kn var4 = null;
         kc var5 = null;
@@ -274,33 +273,33 @@ final class dg implements Iterator {
           if (var4 == null) {
             if (param0 <= -47) {
               var5 = (kc) (Object) field_e.c((byte) -121);
-              var2 = (kn) (Object) (kc) (Object) field_e.c((byte) -121);
+              var2_ref = (kc) (Object) field_e.c((byte) -121);
               L1: while (true) {
                 if (var5 == null) {
                   return;
                 } else {
                   wb.a(var5, param1, 60);
-                  var2_ref2 = (kc) (Object) field_e.d(true);
+                  var2_ref = (kc) (Object) field_e.d(true);
                   continue L1;
                 }
               }
             } else {
               field_b = 100;
               var5 = (kc) (Object) field_e.c((byte) -121);
-              var2 = (kn) (Object) (kc) (Object) field_e.c((byte) -121);
+              var2_ref = (kc) (Object) field_e.c((byte) -121);
               L2: while (true) {
                 if (var5 == null) {
                   return;
                 } else {
                   wb.a(var5, param1, 60);
-                  var2_ref2 = (kc) (Object) field_e.d(true);
+                  var2_ref = (kc) (Object) field_e.d(true);
                   continue L2;
                 }
               }
             }
           } else {
             fm.a((byte) -125, param1, var4);
-            var2_ref = (kn) (Object) pb.field_c.d(true);
+            var2 = (kn) (Object) pb.field_c.d(true);
             continue L0;
           }
         }

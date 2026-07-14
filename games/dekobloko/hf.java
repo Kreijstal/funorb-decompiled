@@ -65,7 +65,7 @@ final class hf {
     }
 
     final static String a(int param0, int param1, CharSequence[] param2, byte param3) {
-        CharSequence var4_ref = null;
+        CharSequence var4_ref_CharSequence = null;
         int var4 = 0;
         int var5 = 0;
         int var6_int = 0;
@@ -126,8 +126,8 @@ final class hf {
             }
           } else {
             var11 = param2[param1];
-            var4_ref = var11;
-            if (var4_ref == null) {
+            var4_ref_CharSequence = var11;
+            if (var4_ref_CharSequence == null) {
               return "null";
             } else {
               return ((Object) (Object) var11).toString();

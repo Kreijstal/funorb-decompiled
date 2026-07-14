@@ -363,53 +363,102 @@ final class sk {
     }
 
     final void a(int param0, int param1, int param2) {
-        if (!(((sk) this).field_l > param0)) {
+        if (((sk) this).field_l <= param0) {
+          throw new IllegalArgumentException();
+        } else {
+          if (param2 >= ((sk) this).field_l) {
             throw new IllegalArgumentException();
-        }
-        if (!(param2 < ((sk) this).field_l)) {
-            throw new IllegalArgumentException();
-        }
-        ((sk) this).field_d = 0;
-        ((sk) this).field_p = 0;
-        ((sk) this).field_o = false;
-        if (-1 != (ig.field_Yb ^ -1)) {
-            ((sk) this).field_n = true;
-            ((sk) this).field_q = ig.field_Yb;
-            ((sk) this).field_p = ig.field_Yb;
-            ((sk) this).field_h = param2;
-            ((sk) this).field_j = ib.field_kb;
-        }
-        if (((sk) this).field_q != 0) {
-            if (be.field_n != 0) {
-                if (((sk) this).field_j <= 0) {
-                    ((sk) this).field_j = qd.field_Ob;
-                }
-                ((sk) this).field_j = ((sk) this).field_j - 1;
+          } else {
+            L0: {
+              ((sk) this).field_d = 0;
+              ((sk) this).field_p = 0;
+              ((sk) this).field_o = false;
+              if (-1 == (ig.field_Yb ^ -1)) {
+                break L0;
+              } else {
+                ((sk) this).field_n = true;
+                ((sk) this).field_q = ig.field_Yb;
+                ((sk) this).field_p = ig.field_Yb;
+                ((sk) this).field_h = param2;
+                ((sk) this).field_j = ib.field_kb;
+                break L0;
+              }
             }
-        }
-        if (param1 != -20563) {
-            return;
-        }
-        if (-1 == ig.field_Yb) {
-            if (!(-1 != be.field_n)) {
-                ((sk) this).field_q = 0;
-            }
-        }
-        if (-1 == (((sk) this).field_q ^ -1)) {
-            if (!((sk) this).field_n) {
-                // ifne L192
-            } else {
-                if (param0 < 0) {
-                    // ifeq L237
-                    ((sk) this).field_h = -1;
+            L1: {
+              if (((sk) this).field_q == 0) {
+                break L1;
+              } else {
+                if (be.field_n == 0) {
+                  break L1;
                 } else {
-                    if (((sk) this).field_h != param0) {
+                  L2: {
+                    if (((sk) this).field_j > 0) {
+                      break L2;
+                    } else {
+                      ((sk) this).field_j = qd.field_Ob;
+                      break L2;
+                    }
+                  }
+                  ((sk) this).field_j = ((sk) this).field_j - 1;
+                  break L1;
+                }
+              }
+            }
+            if (param1 == -20563) {
+              L3: {
+                if (-1 != ig.field_Yb) {
+                  break L3;
+                } else {
+                  if (-1 == be.field_n) {
+                    ((sk) this).field_q = 0;
+                    break L3;
+                  } else {
+                    break L3;
+                  }
+                }
+              }
+              L4: {
+                if (-1 != (((sk) this).field_q ^ -1)) {
+                  break L4;
+                } else {
+                  L5: {
+                    if (((sk) this).field_n) {
+                      break L5;
+                    } else {
+                      if (pm.field_b) {
+                        break L5;
+                      } else {
+                        break L4;
+                      }
+                    }
+                  }
+                  if (param0 >= 0) {
+                    L6: {
+                      if (((sk) this).field_h == param0) {
+                        break L6;
+                      } else {
                         ((sk) this).field_o = true;
+                        break L6;
+                      }
                     }
                     ((sk) this).field_n = true;
                     ((sk) this).field_h = param0;
+                    break L4;
+                  } else {
+                    if (!((sk) this).field_n) {
+                      break L4;
+                    } else {
+                      ((sk) this).field_h = -1;
+                      break L4;
+                    }
+                  }
                 }
+              }
+              return;
+            } else {
+              return;
             }
+          }
         }
     }
 

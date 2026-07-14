@@ -176,7 +176,7 @@ final class nm extends w {
     final static boolean a(int param0, int param1, int param2) {
         int var3 = 0;
         int var4 = 0;
-        String var4_ref = null;
+        String var4_ref_String = null;
         int var5 = 0;
         String var7 = null;
         String var8 = null;
@@ -362,10 +362,10 @@ final class nm extends w {
                 qk.a((byte) 94);
                 break L10;
               } else {
-                var4_ref = dj.field_ab.toString();
-                var7 = var4_ref;
-                var7 = var4_ref;
-                if (ue.a(param1 ^ 2049, var4_ref)) {
+                var4_ref_String = dj.field_ab.toString();
+                var7 = var4_ref_String;
+                var7 = var4_ref_String;
+                if (ue.a(param1 ^ 2049, var4_ref_String)) {
                   var13 = null;
                   var12 = null;
                   ca.a((String) null, (String) null, wd.field_a, (byte) 90, 2, 0);
@@ -396,7 +396,7 @@ final class nm extends w {
                       break L12;
                     }
                   }
-                  ce.a(param0, (byte) -85, pk.field_r, ed.field_c, -1, var4_ref);
+                  ce.a(param0, (byte) -85, pk.field_r, ed.field_c, -1, var4_ref_String);
                   qk.a((byte) 94);
                   break L10;
                 }

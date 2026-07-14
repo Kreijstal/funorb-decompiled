@@ -901,64 +901,27 @@ final class td {
         Object var5 = null;
         Throwable var6 = null;
         int stackIn_2_0 = 0;
+        Throwable decompiledCaughtException = null;
         int stackOut_1_0 = 0;
-        int statePc = 0;
-        Throwable caughtException = null;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    var5 = (Object) (Object) field_a;
-                    // monitorenter field_a
-                    statePc = 1;
-                    continue stateLoop;
-                }
-                case 1: {
-                    try {
-                        field_a.field_j = param2;
-                        field_a.field_r = param4;
-                        field_a.field_w = param0;
-                        field_a.field_E = 0;
-                        field_a.field_e = param1;
-                        field_a.field_F = 0;
-                        field_a.field_C = 0;
-                        field_a.field_i = 0;
-                        field_a.field_f = 0;
-                        td.d(field_a);
-                        param1 = param1 - field_a.field_e;
-                        field_a.field_j = null;
-                        field_a.field_w = null;
-                        // monitorexit var5
-                        stackOut_1_0 = param1;
-                        stackIn_2_0 = stackOut_1_0;
-                        statePc = 2;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_1) {
-                        caughtException = stateCaught_1;
-                        statePc = 3;
-                        continue stateLoop;
-                    }
-                }
-                case 2: {
-                    return stackIn_2_0;
-                }
-                case 3: {
-                    try {
-                        var6 = caughtException;
-                        // monitorexit var5
-                        statePc = 4;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_3) {
-                        caughtException = stateCaught_3;
-                        statePc = 3;
-                        continue stateLoop;
-                    }
-                }
-                case 4: {
-                    throw (RuntimeException) (Object) var6;
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
-            }
+        var5 = (Object) (Object) field_a;
+        synchronized (var5) {
+          field_a.field_j = param2;
+          field_a.field_r = param4;
+          field_a.field_w = param0;
+          field_a.field_E = 0;
+          field_a.field_e = param1;
+          field_a.field_F = 0;
+          field_a.field_C = 0;
+          field_a.field_i = 0;
+          field_a.field_f = 0;
+          td.d(field_a);
+          param1 = param1 - field_a.field_e;
+          field_a.field_j = null;
+          field_a.field_w = null;
+          stackOut_1_0 = param1;
+          stackIn_2_0 = stackOut_1_0;
         }
+        return stackIn_2_0;
     }
 
     private final static byte a(vl param0) {

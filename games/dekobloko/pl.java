@@ -1,6 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
+import java.net.URL;
+
 final class pl {
     private ng field_a;
     static String field_c;
@@ -172,10 +174,13 @@ final class pl {
                 try {
                   stackOut_39_0 = new java.net.URL(param3, var7.toString());
                   stackIn_40_0 = stackOut_39_0;
-                } catch (java.lang.Exception decompiledCaughtParameter) {
-                  decompiledCaughtException = decompiledCaughtParameter;
-                  return stackIn_40_0;
+                } catch (java.lang.Exception decompiledCaughtParameter0) {
+                  decompiledCaughtException = decompiledCaughtParameter0;
+                  var8 = (Exception) (Object) decompiledCaughtException;
+                  var8.printStackTrace();
+                  return param3;
                 }
+                return stackIn_40_0;
               } else {
                 return null;
               }
@@ -268,7 +273,6 @@ final class pl {
         int var5 = 0;
         long var6 = 0L;
         ud var8 = null;
-        ud var8_ref = null;
         va var9 = null;
         va var10 = null;
         var5 = param0 ^ (65532 & param2 << 58549220 | param2 >>> 391646732);
@@ -294,13 +298,13 @@ final class pl {
                 }
               }
               if (param3 == -15027) {
-                var8_ref = var9.a(param1);
-                if (var8_ref == null) {
+                var8 = var9.a(param1);
+                if (var8 == null) {
                   return null;
                 } else {
                   var9.b((byte) 101);
-                  ((pl) this).field_b.a(var6, -1, (bh) (Object) var8_ref);
-                  return var8_ref;
+                  ((pl) this).field_b.a(var6, -1, (bh) (Object) var8);
+                  return var8;
                 }
               } else {
                 return null;
@@ -325,13 +329,13 @@ final class pl {
               }
             }
             if (param3 == -15027) {
-              var8_ref = var9.a(param1);
-              if (var8_ref == null) {
+              var8 = var9.a(param1);
+              if (var8 == null) {
                 return null;
               } else {
                 var9.b((byte) 101);
-                ((pl) this).field_b.a(var6, -1, (bh) (Object) var8_ref);
-                return var8_ref;
+                ((pl) this).field_b.a(var6, -1, (bh) (Object) var8);
+                return var8;
               }
             } else {
               return null;

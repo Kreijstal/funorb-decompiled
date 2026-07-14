@@ -44,7 +44,6 @@ final class cm implements Iterator {
         int var4 = 0;
         ff var5 = null;
         int var5_int = 0;
-        ff var5_ref = null;
         int[] var6 = null;
         int var7 = 0;
         int var8 = 0;
@@ -92,15 +91,15 @@ final class cm implements Iterator {
                         }
                       }
                     }
-                    var5_ref = (ff) (Object) cd.field_c.d(true);
+                    var5 = (ff) (Object) cd.field_c.d(true);
                     continue L2;
                   }
                 }
-                if (var5_ref == null) {
+                if (var5 == null) {
                   si.a(71);
                   return;
                 } else {
-                  var5_ref.b((byte) 124);
+                  var5.b((byte) 124);
                   break L1;
                 }
               }
@@ -192,7 +191,7 @@ final class cm implements Iterator {
         int var5 = 0;
         int var6_int = 0;
         StringBuilder var6 = null;
-        String var7_ref = null;
+        String var7_ref_String = null;
         int var7 = 0;
         int var8 = 0;
         String var9 = null;
@@ -219,8 +218,8 @@ final class cm implements Iterator {
                   }
                 }
               }
-              var7_ref = param1.substring(2 + var6_int, var5);
-              if (be.a((byte) 98, (CharSequence) (Object) var7_ref)) {
+              var7_ref_String = param1.substring(2 + var6_int, var5);
+              if (be.a((byte) 98, (CharSequence) (Object) var7_ref_String)) {
                 if (var3 <= var5) {
                   continue L0;
                 } else {
@@ -228,7 +227,7 @@ final class cm implements Iterator {
                     continue L0;
                   } else {
                     var5++;
-                    var8 = cb.a((byte) -72, (CharSequence) (Object) var7_ref);
+                    var8 = cb.a((byte) -72, (CharSequence) (Object) var7_ref_String);
                     var4 = var4 + (var6_int - (var5 - param2[var8].length()));
                     continue L0;
                   }

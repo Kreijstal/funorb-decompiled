@@ -83,7 +83,6 @@ final class dl extends ek {
 
     final static void b(int param0, int param1) {
         cl var2 = null;
-        cl var2_ref = null;
         int var3 = 0;
         Object var4 = null;
         cl var5 = null;
@@ -101,7 +100,7 @@ final class dl extends ek {
             }
           } else {
             fh.a((byte) 104, var5, param1);
-            var2_ref = (cl) (Object) oe.field_I.d(true);
+            var2 = (cl) (Object) oe.field_I.d(true);
             continue L0;
           }
         }

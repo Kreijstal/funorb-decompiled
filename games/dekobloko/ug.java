@@ -17,7 +17,8 @@ final class ug extends bh {
         int var18 = 0;
         int var19 = 0;
         int var20 = 0;
-        dh var21 = null;
+        Object var21 = null;
+        dh var21_ref = null;
         int var22 = 0;
         int var23 = 0;
         int var24 = 0;
@@ -272,7 +273,7 @@ final class ug extends bh {
                   break L8;
                 }
                 L10: {
-                  var21 = stackIn_38_0;
+                  var21_ref = stackIn_38_0;
                   var22 = kl.field_n[var15];
                   var23 = rn.field_b[var15];
                   var24 = kl.field_n[var16];
@@ -286,8 +287,8 @@ final class ug extends bh {
                       L11: {
                         var28 = var66[var18];
                         var29 = var67[var18];
-                        if (var21 != null) {
-                          stackOut_50_0 = var21.field_a;
+                        if (var21_ref != null) {
+                          stackOut_50_0 = var21_ref.field_a;
                           stackIn_51_0 = stackOut_50_0;
                           break L11;
                         } else {
@@ -316,8 +317,8 @@ final class ug extends bh {
                   var31 = var67[var18];
                   var32 = var67[var19];
                   var33 = var67[var20];
-                  if (var21 != null) {
-                    stackOut_43_0 = var21.field_a;
+                  if (var21_ref != null) {
+                    stackOut_43_0 = var21_ref.field_a;
                     stackIn_44_0 = stackOut_43_0;
                     break L12;
                   } else {

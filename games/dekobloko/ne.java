@@ -33,7 +33,7 @@ final class ne {
         int var3 = 0;
         byte[] var4 = null;
         byte[] var5 = null;
-        java.math.BigInteger var7_ref = null;
+        java.math.BigInteger var7_ref_java_math_BigInteger = null;
         int var7 = 0;
         int var8 = 0;
         wl var10 = null;
@@ -78,8 +78,8 @@ final class ne {
                   } else {
                     if (null != ((ne) this).field_g) {
                       var12 = new java.math.BigInteger(var16);
-                      var7_ref = var12.modPow(((ne) this).field_e, ((ne) this).field_g);
-                      var5 = var7_ref.toByteArray();
+                      var7_ref_java_math_BigInteger = var12.modPow(((ne) this).field_e, ((ne) this).field_g);
+                      var5 = var7_ref_java_math_BigInteger.toByteArray();
                       break L1;
                     } else {
                       break L2;

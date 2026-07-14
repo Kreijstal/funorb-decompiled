@@ -35,11 +35,12 @@ final class li {
           var5 = un.a(var4, 0, 0, var3_int);
           stackOut_3_0 = (String) var5;
           stackIn_4_0 = stackOut_3_0;
-        } catch (java.lang.Exception decompiledCaughtParameter) {
-          decompiledCaughtException = decompiledCaughtParameter;
-          return stackIn_4_0;
+        } catch (java.lang.Exception decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3 = (Exception) (Object) decompiledCaughtException;
+          return "Cabbage";
         }
-        return null;
+        return stackIn_4_0;
     }
 
     public static void a(int param0) {

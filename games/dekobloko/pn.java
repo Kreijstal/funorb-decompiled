@@ -90,21 +90,23 @@ final class pn extends vb {
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
         Throwable decompiledCaughtException = null;
-        int stackOut_1_0 = 0;
         int stackOut_3_0 = 0;
+        int stackOut_1_0 = 0;
         try {
           if (!param0) {
-            return stackIn_2_0;
+            stackOut_3_0 = -1 + Integer.parseInt(((pn) this).field_hb.field_E);
+            stackIn_4_0 = stackOut_3_0;
           } else {
             stackOut_1_0 = 6;
             stackIn_2_0 = stackOut_1_0;
+            return stackIn_2_0;
           }
-        } catch (java.lang.Exception decompiledCaughtParameter) {
-          decompiledCaughtException = decompiledCaughtParameter;
-          stackOut_3_0 = -1 + Integer.parseInt(((pn) this).field_hb.field_E);
-          stackIn_4_0 = stackOut_3_0;
+        } catch (java.lang.Exception decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2 = (NumberFormatException) (Object) decompiledCaughtException;
+          return -1;
         }
-        return 0;
+        return stackIn_4_0;
     }
 
     final static void a(int param0, wl param1) {
@@ -155,11 +157,12 @@ final class pn extends vb {
         try {
           stackOut_2_0 = Integer.parseInt(((pn) this).field_gb.field_E);
           stackIn_3_0 = stackOut_2_0;
-        } catch (java.lang.Exception decompiledCaughtParameter) {
-          decompiledCaughtException = decompiledCaughtParameter;
-          return stackIn_3_0;
+        } catch (java.lang.Exception decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2 = (NumberFormatException) (Object) decompiledCaughtException;
+          return -1;
         }
-        return 0;
+        return stackIn_3_0;
     }
 
     final void a(byte param0, qf param1) {
@@ -174,26 +177,61 @@ final class pn extends vb {
     }
 
     final static boolean a(wb param0, wb param1, boolean param2) {
-        int var4 = client.field_A ? 1 : 0;
-        if (param2) {
-            Object var5 = null;
-            boolean discarded$0 = pn.a((wb) null, (wb) null, true);
+        int var3 = 0;
+        int var4 = 0;
+        Object var5 = null;
+        int stackIn_13_0 = 0;
+        int stackOut_12_0 = 0;
+        int stackOut_11_0 = 0;
+        L0: {
+          var4 = client.field_A ? 1 : 0;
+          if (!param2) {
+            break L0;
+          } else {
+            var5 = null;
+            boolean discarded$2 = pn.a((wb) null, (wb) null, true);
+            break L0;
+          }
         }
-        int var3 = -param0.field_Xb + param1.field_Xb;
-        if (f.field_w == param1.field_Vb) {
-            // wide iinc 3 -200
-        } else {
-            if (param1.field_Vb == null) {
-                // wide iinc 3 200
+        L1: {
+          var3 = -param0.field_Xb + param1.field_Xb;
+          if (f.field_w != param1.field_Vb) {
+            if (param1.field_Vb != null) {
+              break L1;
+            } else {
+              var3 += 200;
+              break L1;
             }
+          } else {
+            var3 -= 200;
+            break L1;
+          }
         }
-        if (f.field_w != param0.field_Vb) {
-            // ifnonnull L127
-            // wide iinc 3 -200
-        } else {
-            // wide iinc 3 200
+        L2: {
+          if (f.field_w == param0.field_Vb) {
+            var3 += 200;
+            break L2;
+          } else {
+            if (param0.field_Vb != null) {
+              break L2;
+            } else {
+              var3 -= 200;
+              break L2;
+            }
+          }
         }
-        return -1 > (var3 ^ -1) ? true : false;
+        L3: {
+          if (-1 <= (var3 ^ -1)) {
+            stackOut_12_0 = 0;
+            stackIn_13_0 = stackOut_12_0;
+            break L3;
+          } else {
+            stackOut_11_0 = 1;
+            stackIn_13_0 = stackOut_11_0;
+            break L3;
+          }
+        }
+        return stackIn_13_0 != 0;
     }
 
     public static void l(int param0) {
@@ -241,11 +279,12 @@ final class pn extends vb {
         try {
           stackOut_2_0 = Integer.parseInt(((pn) this).field_ib.field_E);
           stackIn_3_0 = stackOut_2_0;
-        } catch (java.lang.Exception decompiledCaughtParameter) {
-          decompiledCaughtException = decompiledCaughtParameter;
-          return stackIn_3_0;
+        } catch (java.lang.Exception decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2 = (NumberFormatException) (Object) decompiledCaughtException;
+          return -1;
         }
-        return 0;
+        return stackIn_3_0;
     }
 
     final boolean k(int param0) {

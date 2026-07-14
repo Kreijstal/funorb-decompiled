@@ -77,7 +77,7 @@ final class ad {
         var6.a(param2, param3);
         int var8 = param4;
         if (param5) {
-            // wide iinc 8 128
+            var8 += 128;
         }
         var6.a(param2, var8);
         var6.a(false, param0.length, param0, 0);

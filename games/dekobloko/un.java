@@ -324,8 +324,9 @@ final class un {
                   }
                 }
               }
+              int incrementValue$1 = var5;
               var5++;
-              var4[var5] = (char)var7;
+              var4[incrementValue$1] = (char)var7;
               var6++;
               continue L0;
             } else {
@@ -337,18 +338,35 @@ final class un {
     }
 
     final static boolean a(int param0, int param1, int param2, byte param3) {
-        if (param3 != 52) {
+        L0: {
+          if (param3 == 52) {
+            break L0;
+          } else {
             field_a = null;
+            break L0;
+          }
         }
-        if (0 <= param1) {
-            // if_icmpgt L30
-        } else {
-            return false;
-        }
-        if ((param2 ^ -1) <= -2) {
-            if (param2 <= gk.c(param0, 1, param1)) {
-                return true;
+        L1: {
+          if (0 > param1) {
+            break L1;
+          } else {
+            if (param1 > 11) {
+              break L1;
+            } else {
+              L2: {
+                if ((param2 ^ -1) > -2) {
+                  break L2;
+                } else {
+                  if (param2 > gk.c(param0, 1, param1)) {
+                    break L2;
+                  } else {
+                    return true;
+                  }
+                }
+              }
+              return false;
             }
+          }
         }
         return false;
     }

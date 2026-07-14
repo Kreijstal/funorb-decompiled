@@ -87,7 +87,7 @@ abstract class of {
 
     final static void a(boolean param0, int param1) {
         ki var2 = null;
-        ki var2_ref = null;
+        bh var2_ref = null;
         int var3 = 0;
         ki var4 = null;
         var3 = client.field_A ? 1 : 0;
@@ -96,32 +96,32 @@ abstract class of {
         L0: while (true) {
           if (var4 == null) {
             if (!param0) {
-              var2 = (ki) (Object) rc.field_e.c((byte) 109);
+              var2_ref = rc.field_e.c((byte) 109);
               L1: while (true) {
-                if (var2 == null) {
+                if (var2_ref == null) {
                   return;
                 } else {
                   gm.b(param1, 47);
-                  var2 = (ki) (Object) rc.field_e.d(true);
+                  var2_ref = rc.field_e.d(true);
                   continue L1;
                 }
               }
             } else {
               of.a(true, -48);
-              var2 = (ki) (Object) rc.field_e.c((byte) 109);
+              var2_ref = rc.field_e.c((byte) 109);
               L2: while (true) {
-                if (var2 == null) {
+                if (var2_ref == null) {
                   return;
                 } else {
                   gm.b(param1, 47);
-                  var2 = (ki) (Object) rc.field_e.d(true);
+                  var2_ref = rc.field_e.d(true);
                   continue L2;
                 }
               }
             }
           } else {
             kk.a(param1, -15016, var4);
-            var2_ref = (ki) (Object) cg.field_c.d(true);
+            var2 = (ki) (Object) cg.field_c.d(true);
             continue L0;
           }
         }

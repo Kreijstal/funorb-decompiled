@@ -16,7 +16,6 @@ class wk extends fm {
 
     final static void a(byte param0, tj param1) {
         tj var2 = null;
-        tj var2_ref = null;
         int var3 = 0;
         tj var4 = null;
         var3 = client.field_A ? 1 : 0;
@@ -26,7 +25,7 @@ class wk extends fm {
         L0: while (true) {
           if (var4 != null) {
             if (var4.a(-985, param1)) {
-              var2_ref = (tj) (Object) i.field_b.d(true);
+              var2 = (tj) (Object) i.field_b.d(true);
               continue L0;
             } else {
               if (param0 > 3) {

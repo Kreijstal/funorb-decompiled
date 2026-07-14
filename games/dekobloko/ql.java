@@ -121,82 +121,27 @@ final class ql extends java.awt.Canvas implements java.awt.event.FocusListener {
     final static void c(int param0) {
         Object var1 = null;
         Throwable var2 = null;
-        int statePc = 0;
-        Throwable caughtException = null;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    var1 = (Object) (Object) ik.field_f;
-                    // monitorenter ik.field_f
-                    statePc = 1;
-                    continue stateLoop;
-                }
-                case 1: {
-                    try {
-                        pf.field_g = pf.field_g + 1;
-                        be.field_n = pa.field_bb;
-                        bh.field_g = lc.field_f;
-                        if (param0 == -2) {
-                            statePc = 3;
-                        } else {
-                            statePc = 2;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_1) {
-                        caughtException = stateCaught_1;
-                        statePc = 5;
-                        continue stateLoop;
-                    }
-                }
-                case 2: {
-                    try {
-                        ql.c(-55);
-                        statePc = 3;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_2) {
-                        caughtException = stateCaught_2;
-                        statePc = 5;
-                        continue stateLoop;
-                    }
-                }
-                case 3: {
-                    try {
-                        pm.field_f = te.field_r;
-                        pm.field_b = ml.field_b;
-                        ml.field_b = false;
-                        ig.field_Yb = nk.field_l;
-                        he.field_S = ge.field_a;
-                        nf.field_h = qa.field_t;
-                        nk.field_l = 0;
-                        // monitorexit var1
-                        statePc = 7;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_3) {
-                        caughtException = stateCaught_3;
-                        statePc = 5;
-                        continue stateLoop;
-                    }
-                }
-                case 5: {
-                    try {
-                        var2 = caughtException;
-                        // monitorexit var1
-                        statePc = 6;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_5) {
-                        caughtException = stateCaught_5;
-                        statePc = 5;
-                        continue stateLoop;
-                    }
-                }
-                case 6: {
-                    throw (RuntimeException) (Object) var2;
-                }
-                case 7: {
-                    return;
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
+        Throwable decompiledCaughtException = null;
+        var1 = (Object) (Object) ik.field_f;
+        synchronized (var1) {
+          L0: {
+            pf.field_g = pf.field_g + 1;
+            be.field_n = pa.field_bb;
+            bh.field_g = lc.field_f;
+            if (param0 == -2) {
+              break L0;
+            } else {
+              ql.c(-55);
+              break L0;
             }
+          }
+          pm.field_f = te.field_r;
+          pm.field_b = ml.field_b;
+          ml.field_b = false;
+          ig.field_Yb = nk.field_l;
+          he.field_S = ge.field_a;
+          nf.field_h = qa.field_t;
+          nk.field_l = 0;
         }
     }
 

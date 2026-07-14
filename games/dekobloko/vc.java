@@ -7,47 +7,8 @@ final class vc {
 
     private final void a(java.awt.Frame param0, int param1) {
         int var3 = 0;
-        Throwable var4 = null;
-        int statePc = 0;
-        Throwable caughtException = null;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    var3 = -31 % ((1 - param1) / 51);
-                    statePc = 1;
-                    continue stateLoop;
-                }
-                case 1: {
-                    try {
-                        ((vc) this).field_a.setFullScreenWindow((java.awt.Window) (Object) param0);
-                        statePc = 5;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_1) {
-                        caughtException = stateCaught_1;
-                        statePc = 3;
-                        continue stateLoop;
-                    }
-                }
-                case 3: {
-                    try {
-                        var4 = caughtException;
-                        statePc = 4;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_3) {
-                        caughtException = stateCaught_3;
-                        statePc = 3;
-                        continue stateLoop;
-                    }
-                }
-                case 4: {
-                    throw (RuntimeException) (Object) var4;
-                }
-                case 5: {
-                    return;
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
-            }
-        }
+        var3 = -31 % ((1 - param1) / 51);
+        ((vc) this).field_a.setFullScreenWindow((java.awt.Window) (Object) param0);
     }
 
     public final int[] listmodes() {
@@ -65,79 +26,73 @@ final class vc {
     }
 
     public final void enter(java.awt.Frame param0, int param1, int param2, int param3, int param4) {
-        try {
-            int var6 = 0;
-            java.awt.DisplayMode[] var7 = null;
-            int var8 = 0;
-            int var9 = 0;
-            int var10 = 0;
-            ((vc) this).field_b = ((vc) this).field_a.getDisplayMode();
-            if (((vc) this).field_b == null) {
-              throw new NullPointerException();
+        int var6 = 0;
+        java.awt.DisplayMode[] var7 = null;
+        int var8 = 0;
+        int var9 = 0;
+        int var10 = 0;
+        ((vc) this).field_b = ((vc) this).field_a.getDisplayMode();
+        if (((vc) this).field_b == null) {
+          throw new NullPointerException();
+        } else {
+          L0: {
+            param0.setUndecorated(true);
+            param0.enableInputMethods(false);
+            this.a(param0, 127);
+            if (-1 != (param4 ^ -1)) {
+              break L0;
             } else {
-              L0: {
-                param0.setUndecorated(true);
-                param0.enableInputMethods(false);
-                this.a(param0, 127);
-                if (-1 != (param4 ^ -1)) {
-                  break L0;
+              var6 = ((vc) this).field_b.getRefreshRate();
+              var7 = ((vc) this).field_a.getDisplayModes();
+              var8 = 0;
+              var9 = 0;
+              L1: while (true) {
+                if (var9 >= var7.length) {
+                  if (var8 != 0) {
+                    break L0;
+                  } else {
+                    param4 = var6;
+                    break L0;
+                  }
                 } else {
-                  var6 = ((vc) this).field_b.getRefreshRate();
-                  var7 = ((vc) this).field_a.getDisplayModes();
-                  var8 = 0;
-                  var9 = 0;
-                  L1: while (true) {
-                    if (var9 >= var7.length) {
-                      if (var8 != 0) {
-                        break L0;
-                      } else {
-                        param4 = var6;
-                        break L0;
-                      }
-                    } else {
-                      if (var7[var9].getWidth() == param1) {
-                        if (var7[var9].getHeight() == param2) {
-                          if (param3 == var7[var9].getBitDepth()) {
-                            L2: {
-                              var10 = var7[var9].getRefreshRate();
-                              if (var8 == 0) {
-                                break L2;
-                              } else {
-                                if (Math.abs(var10 + -var6) < Math.abs(-var6 + param4)) {
-                                  break L2;
-                                } else {
-                                  var9++;
-                                  continue L1;
-                                }
-                              }
-                            }
-                            var8 = 1;
-                            param4 = var10;
-                            var9++;
-                            continue L1;
+                  if (var7[var9].getWidth() == param1) {
+                    if (var7[var9].getHeight() == param2) {
+                      if (param3 == var7[var9].getBitDepth()) {
+                        L2: {
+                          var10 = var7[var9].getRefreshRate();
+                          if (var8 == 0) {
+                            break L2;
                           } else {
-                            var9++;
-                            continue L1;
+                            if (Math.abs(var10 + -var6) < Math.abs(-var6 + param4)) {
+                              break L2;
+                            } else {
+                              var9++;
+                              continue L1;
+                            }
                           }
-                        } else {
-                          var9++;
-                          continue L1;
                         }
+                        var8 = 1;
+                        param4 = var10;
+                        var9++;
+                        continue L1;
                       } else {
                         var9++;
                         continue L1;
                       }
+                    } else {
+                      var9++;
+                      continue L1;
                     }
+                  } else {
+                    var9++;
+                    continue L1;
                   }
                 }
               }
-              ((vc) this).field_a.setDisplayMode(new java.awt.DisplayMode(param1, param2, param3, param4));
-              return;
             }
-        } catch (RuntimeException | Error decompiledUncheckedException) {
-            throw decompiledUncheckedException;
-        } catch (Throwable decompiledCheckedException) {
-            throw new RuntimeException(decompiledCheckedException);
+          }
+          ((vc) this).field_a.setDisplayMode(new java.awt.DisplayMode(param1, param2, param3, param4));
+          return;
         }
     }
 
@@ -167,7 +122,7 @@ final class vc {
           var4 = 0;
           L0: while (true) {
             if (var3.length <= var4) {
-              throw new Exception();
+              throw vc.<RuntimeException>$cfr$sneakyThrow(new Exception());
             } else {
               var5 = var3[var4];
               if (var5 != null) {
@@ -184,5 +139,10 @@ final class vc {
             }
           }
         }
+    }
+
+    @SuppressWarnings("unchecked")
+    private static <T extends Throwable> RuntimeException $cfr$sneakyThrow(Throwable throwable) throws T {
+        throw (T) throwable;
     }
 }

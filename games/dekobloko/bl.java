@@ -1,6 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
+import java.lang.String;
+
 abstract class bl extends kf {
     static int field_T;
     boolean field_S;

@@ -166,7 +166,7 @@ final class ll {
         ig[] var11 = null;
         int var12 = 0;
         int var13 = 0;
-        ac var13_ref = null;
+        ac var13_ref_ac = null;
         int var14 = 0;
         int var15 = 0;
         me var16 = null;
@@ -269,10 +269,10 @@ final class ll {
                     }
                   }
                 } else {
-                  var13_ref = oi.field_a.a(-126, param2.field_C[var12]);
-                  var8[var12] = var13_ref.field_H;
+                  var13_ref_ac = oi.field_a.a(-126, param2.field_C[var12]);
+                  var8[var12] = var13_ref_ac.field_H;
                   var9[var12] = param2.field_G[var12];
-                  var11[var12] = ll.a(param0, param1, var13_ref, param3, 0);
+                  var11[var12] = ll.a(param0, param1, var13_ref_ac, param3, 0);
                   var12++;
                   continue L2;
                 }

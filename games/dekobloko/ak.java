@@ -42,23 +42,44 @@ final class ak {
 
     final static void a(int param0, int param1, boolean param2, int param3) {
         int var4 = 0;
-        c.field_i.c(param0, param1);
-        if (!param2) {
-        } else {
-            var4 = rb.field_b % c.field_i.field_I * 2;
-            if (!(c.field_i.field_I > var4)) {
+        L0: {
+          c.field_i.c(param0, param1);
+          if (param2) {
+            L1: {
+              var4 = rb.field_b % c.field_i.field_I * 2;
+              if (c.field_i.field_I <= var4) {
                 var4 = c.field_i.field_I - (var4 + -c.field_i.field_I);
+                break L1;
+              } else {
+                break L1;
+              }
             }
-            if (var4 >= 10) {
-                // if_icmple L101
-                var4 = c.field_i.field_I - 40;
-            } else {
+            L2: {
+              if (var4 < 10) {
                 var4 = 10;
+                break L2;
+              } else {
+                if (var4 <= -40 + c.field_i.field_I) {
+                  break L2;
+                } else {
+                  var4 = c.field_i.field_I - 40;
+                  break L2;
+                }
+              }
             }
             sh.a(0, 80, 25547, param0, 30, 0, var4, c.field_i, param1);
+            break L0;
+          } else {
+            break L0;
+          }
         }
-        if (param3 != 40) {
+        L3: {
+          if (param3 == 40) {
+            break L3;
+          } else {
             ak.a(43, 33, true, -46);
+            break L3;
+          }
         }
     }
 

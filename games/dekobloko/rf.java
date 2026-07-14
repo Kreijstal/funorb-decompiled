@@ -97,67 +97,22 @@ final class rf {
     final static void a(byte param0) {
         Object var1 = null;
         Throwable var2 = null;
-        int statePc = 0;
-        Throwable caughtException = null;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    if (param0 == 0) {
-                        statePc = 2;
-                    } else {
-                        statePc = 1;
-                    }
-                    continue stateLoop;
-                }
-                case 1: {
-                    return;
-                }
-                case 2: {
-                    if (null == ik.field_f) {
-                        statePc = 8;
-                    } else {
-                        statePc = 3;
-                    }
-                    continue stateLoop;
-                }
-                case 3: {
-                    var1 = (Object) (Object) ik.field_f;
-                    // monitorenter ik.field_f
-                    statePc = 4;
-                    continue stateLoop;
-                }
-                case 4: {
-                    try {
-                        ik.field_f = null;
-                        // monitorexit var1
-                        statePc = 8;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_4) {
-                        caughtException = stateCaught_4;
-                        statePc = 6;
-                        continue stateLoop;
-                    }
-                }
-                case 6: {
-                    try {
-                        var2 = caughtException;
-                        // monitorexit var1
-                        statePc = 7;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_6) {
-                        caughtException = stateCaught_6;
-                        statePc = 6;
-                        continue stateLoop;
-                    }
-                }
-                case 7: {
-                    throw (RuntimeException) (Object) var2;
-                }
-                case 8: {
-                    return;
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
+        Throwable decompiledCaughtException = null;
+        if (param0 == 0) {
+          L0: {
+            if (null == ik.field_f) {
+              break L0;
+            } else {
+              var1 = (Object) (Object) ik.field_f;
+              synchronized (var1) {
+                ik.field_f = null;
+              }
+              break L0;
             }
+          }
+          return;
+        } else {
+          return;
         }
     }
 

@@ -21,90 +21,45 @@ final class wa {
         int var12 = 0;
         char[] var13 = null;
         char[] var14 = null;
-        int statePc = 0;
-        Throwable caughtException = null;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    var12 = client.field_A ? 1 : 0;
-                    if (param2 == -127) {
-                        statePc = 2;
-                    } else {
-                        statePc = 1;
-                    }
-                    continue stateLoop;
-                }
-                case 1: {
-                    return null;
-                }
-                case 2: {
-                    var5 = param0.length;
-                    var6 = new String[var5];
-                    var14 = new char[var5];
-                    var13 = var14;
-                    var7 = var13;
-                    var8 = new ig[var5];
-                    var9 = 49;
-                    statePc = 3;
-                    continue stateLoop;
-                }
-                case 3: {
-                    try {
-                        var10_int = 0;
-                        statePc = 4;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_3) {
-                        caughtException = stateCaught_3;
-                        statePc = 7;
-                        continue stateLoop;
-                    }
-                }
-                case 4: {
-                    try {
-                        if (var5 <= var10_int) {
-                            statePc = 8;
-                        } else {
-                            statePc = 5;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_4) {
-                        caughtException = stateCaught_4;
-                        statePc = 7;
-                        continue stateLoop;
-                    }
-                }
-                case 5: {
-                    try {
-                        var11 = wj.field_Qb.a(126, param0[var10_int]);
-                        var6[var10_int] = var11.f((byte) -92);
-                        var9 = (char)(var9 + 1);
-                        var7[var10_int] = (char)var9;
-                        var8[var10_int] = null;
-                        var10_int++;
-                        statePc = 4;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_5) {
-                        caughtException = stateCaught_5;
-                        statePc = 7;
-                        continue stateLoop;
-                    }
-                }
-                case 7: {
-                    var10 = (Exception) (Object) caughtException;
-                    return null;
-                }
-                case 8: {
-                    return new ig(0L, param1, param3, param4, var8, param0, var6, var14);
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
+        Throwable decompiledCaughtException = null;
+        var12 = client.field_A ? 1 : 0;
+        if (param2 == -127) {
+          var5 = param0.length;
+          var6 = new String[var5];
+          var14 = new char[var5];
+          var13 = var14;
+          var7 = var13;
+          var8 = new ig[var5];
+          var9 = 49;
+          try {
+            var10_int = 0;
+            L0: while (true) {
+              if (var5 <= var10_int) {
+                break L0;
+              } else {
+                var11 = wj.field_Qb.a(126, param0[var10_int]);
+                var6[var10_int] = var11.f((byte) -92);
+                var9 = (char)(var9 + 1);
+                var7[var10_int] = (char)var9;
+                var8[var10_int] = null;
+                var10_int++;
+                continue L0;
+              }
             }
+          } catch (java.lang.Exception decompiledCaughtParameter0) {
+            decompiledCaughtException = decompiledCaughtParameter0;
+            var10 = (Exception) (Object) decompiledCaughtException;
+            return null;
+          }
+          return new ig(0L, param1, param3, param4, var8, param0, var6, var14);
+        } else {
+          return null;
         }
     }
 
     final static void a(int param0, int param1) {
         ff var2 = null;
-        ff var2_ref = null;
-        sb var2_ref2 = null;
+        sb var2_ref = null;
         int var3 = 0;
         ff var4 = null;
         sb var5 = null;
@@ -117,20 +72,20 @@ final class wa {
               return;
             } else {
               var5 = (sb) (Object) ef.field_S.c((byte) 80);
-              var2 = (ff) (Object) (sb) (Object) ef.field_S.c((byte) 80);
+              var2_ref = (sb) (Object) ef.field_S.c((byte) 80);
               L1: while (true) {
                 if (var5 == null) {
                   return;
                 } else {
                   oi.a(param0 ^ -87, param1, var5);
-                  var2_ref2 = (sb) (Object) ef.field_S.d(true);
+                  var2_ref = (sb) (Object) ef.field_S.d(true);
                   continue L1;
                 }
               }
             }
           } else {
             mc.a(true, var4, param1);
-            var2_ref = (ff) (Object) cd.field_c.d(true);
+            var2 = (ff) (Object) cd.field_c.d(true);
             continue L0;
           }
         }

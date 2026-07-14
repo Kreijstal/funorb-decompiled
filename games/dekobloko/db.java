@@ -81,108 +81,46 @@ final class db extends IOException {
         Exception var3 = null;
         int var3_int = 0;
         int var4 = 0;
-        int statePc = 0;
-        Throwable caughtException = null;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    var4 = client.field_A ? 1 : 0;
-                    if (param2.field_w != null) {
-                        statePc = 2;
-                    } else {
-                        statePc = 1;
-                    }
-                    continue stateLoop;
+        Throwable decompiledCaughtException = null;
+        var4 = client.field_A ? 1 : 0;
+        if (param2.field_w != null) {
+          var3_int = 0;
+          L0: while (true) {
+            L1: {
+              if (-51 >= (var3_int ^ -1)) {
+                break L1;
+              } else {
+                if (null == param2.field_w.peekEvent()) {
+                  break L1;
+                } else {
+                  ua.a(1L, -128);
+                  var3_int++;
+                  continue L0;
                 }
-                case 1: {
-                    return;
-                }
-                case 2: {
-                    var3_int = 0;
-                    statePc = 3;
-                    continue stateLoop;
-                }
-                case 3: {
-                    if (-51 >= (var3_int ^ -1)) {
-                        statePc = 6;
-                    } else {
-                        statePc = 4;
-                    }
-                    continue stateLoop;
-                }
-                case 4: {
-                    if (null == param2.field_w.peekEvent()) {
-                        statePc = 6;
-                    } else {
-                        statePc = 5;
-                    }
-                    continue stateLoop;
-                }
-                case 5: {
-                    ua.a(1L, -128);
-                    var3_int++;
-                    statePc = 3;
-                    continue stateLoop;
-                }
-                case 6: {
-                    try {
-                        if (param0 < -33) {
-                            statePc = 8;
-                        } else {
-                            statePc = 7;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_6) {
-                        caughtException = stateCaught_6;
-                        statePc = 11;
-                        continue stateLoop;
-                    }
-                }
-                case 7: {
-                    try {
-                        String discarded$1 = db.a((CharSequence[]) null, -126);
-                        statePc = 8;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_7) {
-                        caughtException = stateCaught_7;
-                        statePc = 11;
-                        continue stateLoop;
-                    }
-                }
-                case 8: {
-                    try {
-                        if (param1 == null) {
-                            statePc = 12;
-                        } else {
-                            statePc = 9;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_8) {
-                        caughtException = stateCaught_8;
-                        statePc = 11;
-                        continue stateLoop;
-                    }
-                }
-                case 9: {
-                    try {
-                        param2.field_w.postEvent((java.awt.AWTEvent) (Object) new java.awt.event.ActionEvent(param1, 1001, "dummy"));
-                        return;
-                    } catch (Throwable stateCaught_9) {
-                        caughtException = stateCaught_9;
-                        statePc = 11;
-                        continue stateLoop;
-                    }
-                }
-                case 11: {
-                    var3 = (Exception) (Object) caughtException;
-                    statePc = 12;
-                    continue stateLoop;
-                }
-                case 12: {
-                    return;
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
+              }
             }
+            try {
+              L2: {
+                if (param0 < -33) {
+                  break L2;
+                } else {
+                  String discarded$1 = db.a((CharSequence[]) null, -126);
+                  break L2;
+                }
+              }
+              if (param1 == null) {
+              } else {
+                param2.field_w.postEvent((java.awt.AWTEvent) (Object) new java.awt.event.ActionEvent(param1, 1001, "dummy"));
+                return;
+              }
+            } catch (java.lang.Exception decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              var3 = (Exception) (Object) decompiledCaughtException;
+            }
+            return;
+          }
+        } else {
+          return;
         }
     }
 

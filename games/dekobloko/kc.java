@@ -463,211 +463,78 @@ final class kc extends bh {
 
     final static ji a(boolean param0, int param1, int param2, boolean param3, boolean param4, boolean param5) {
         try {
-            kh var6 = null;
-            IOException var6_ref = null;
-            kh var7 = null;
+            Object var6 = null;
+            kh var6_ref = null;
+            IOException var6_ref2 = null;
+            Object var7 = null;
+            kh var7_ref = null;
             le var8 = null;
             Object stackIn_2_0 = null;
             ji stackIn_15_0 = null;
             Throwable decompiledCaughtException = null;
-            Object stackOut_1_0 = null;
             ji stackOut_14_0 = null;
-            int statePc = 0;
-            Throwable caughtException = null;
-            stateLoop: while (true) {
-                switch (statePc) {
-                    case 0: {
-                        try {
-                            if (!param4) {
-                                statePc = 3;
-                            } else {
-                                statePc = 1;
-                            }
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_0) {
-                            caughtException = stateCaught_0;
-                            statePc = 16;
-                            continue stateLoop;
-                        }
-                    }
-                    case 1: {
-                        try {
-                            stackOut_1_0 = null;
-                            stackIn_2_0 = stackOut_1_0;
-                            statePc = 2;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_1) {
-                            caughtException = stateCaught_1;
-                            statePc = 16;
-                            continue stateLoop;
-                        }
-                    }
-                    case 2: {
-                        return (ji) (Object) stackIn_2_0;
-                    }
-                    case 3: {
-                        try {
-                            var6 = null;
-                            var7 = null;
-                            if (bl.field_U.field_i != null) {
-                                statePc = 5;
-                            } else {
-                                statePc = 4;
-                            }
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_3) {
-                            caughtException = stateCaught_3;
-                            statePc = 16;
-                            continue stateLoop;
-                        }
-                    }
-                    case 4: {
-                        try {
-                            statePc = 6;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_4) {
-                            caughtException = stateCaught_4;
-                            statePc = 16;
-                            continue stateLoop;
-                        }
-                    }
-                    case 5: {
-                        try {
-                            mk.field_d = new nh(bl.field_U.field_i, 5200, 0);
-                            bl.field_U.field_i = null;
-                            var6 = new kh(255, mk.field_d, new nh(bl.field_U.field_l, 12000, 0), 2097152);
-                            statePc = 6;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_5) {
-                            caughtException = stateCaught_5;
-                            statePc = 16;
-                            continue stateLoop;
-                        }
-                    }
-                    case 6: {
-                        try {
-                            if (mk.field_d == null) {
-                                statePc = 12;
-                            } else {
-                                statePc = 7;
-                            }
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_6) {
-                            caughtException = stateCaught_6;
-                            statePc = 16;
-                            continue stateLoop;
-                        }
-                    }
-                    case 7: {
-                        try {
-                            if (ig.field_cc != null) {
-                                statePc = 9;
-                            } else {
-                                statePc = 8;
-                            }
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_7) {
-                            caughtException = stateCaught_7;
-                            statePc = 16;
-                            continue stateLoop;
-                        }
-                    }
-                    case 8: {
-                        try {
-                            ig.field_cc = new nh[bl.field_U.field_o.length];
-                            statePc = 9;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_8) {
-                            caughtException = stateCaught_8;
-                            statePc = 16;
-                            continue stateLoop;
-                        }
-                    }
-                    case 9: {
-                        try {
-                            if (ig.field_cc[param2] != null) {
-                                statePc = 11;
-                            } else {
-                                statePc = 10;
-                            }
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_9) {
-                            caughtException = stateCaught_9;
-                            statePc = 16;
-                            continue stateLoop;
-                        }
-                    }
-                    case 10: {
-                        try {
-                            ig.field_cc[param2] = new nh(bl.field_U.field_o[param2], 12000, 0);
-                            bl.field_U.field_o[param2] = null;
-                            statePc = 11;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_10) {
-                            caughtException = stateCaught_10;
-                            statePc = 16;
-                            continue stateLoop;
-                        }
-                    }
-                    case 11: {
-                        try {
-                            var7 = new kh(param2, mk.field_d, ig.field_cc[param2], 2097152);
-                            statePc = 12;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_11) {
-                            caughtException = stateCaught_11;
-                            statePc = 16;
-                            continue stateLoop;
-                        }
-                    }
-                    case 12: {
-                        try {
-                            var8 = sc.field_l.a((byte) -86, param2, var7, var6, param3);
-                            if (!param5) {
-                                statePc = 14;
-                            } else {
-                                statePc = 13;
-                            }
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_12) {
-                            caughtException = stateCaught_12;
-                            statePc = 16;
-                            continue stateLoop;
-                        }
-                    }
-                    case 13: {
-                        try {
-                            var8.b((byte) 0);
-                            statePc = 14;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_13) {
-                            caughtException = stateCaught_13;
-                            statePc = 16;
-                            continue stateLoop;
-                        }
-                    }
-                    case 14: {
-                        try {
-                            stackOut_14_0 = new ji((of) (Object) var8, param0, param1);
-                            stackIn_15_0 = stackOut_14_0;
-                            statePc = 15;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_14) {
-                            caughtException = stateCaught_14;
-                            statePc = 16;
-                            continue stateLoop;
-                        }
-                    }
-                    case 15: {
-                        return stackIn_15_0;
-                    }
-                    case 16: {
-                        var6_ref = (IOException) (Object) caughtException;
-                        throw new RuntimeException(var6_ref.toString());
-                    }
-                    default: throw new IllegalStateException("invalid CFG state " + statePc);
+            Object stackOut_1_0 = null;
+            try {
+              if (!param4) {
+                L0: {
+                  var6 = null;
+                  var7 = null;
+                  if (bl.field_U.field_i != null) {
+                    mk.field_d = new nh(bl.field_U.field_i, 5200, 0);
+                    bl.field_U.field_i = null;
+                    var6_ref = new kh(255, mk.field_d, new nh(bl.field_U.field_l, 12000, 0), 2097152);
+                    break L0;
+                  } else {
+                    break L0;
+                  }
                 }
+                L1: {
+                  if (mk.field_d == null) {
+                    break L1;
+                  } else {
+                    L2: {
+                      if (ig.field_cc != null) {
+                        break L2;
+                      } else {
+                        ig.field_cc = new nh[bl.field_U.field_o.length];
+                        break L2;
+                      }
+                    }
+                    L3: {
+                      if (ig.field_cc[param2] != null) {
+                        break L3;
+                      } else {
+                        ig.field_cc[param2] = new nh(bl.field_U.field_o[param2], 12000, 0);
+                        bl.field_U.field_o[param2] = null;
+                        break L3;
+                      }
+                    }
+                    var7_ref = new kh(param2, mk.field_d, ig.field_cc[param2], 2097152);
+                    break L1;
+                  }
+                }
+                L4: {
+                  var8 = sc.field_l.a((byte) -86, param2, var7_ref, var6_ref, param3);
+                  if (!param5) {
+                    break L4;
+                  } else {
+                    var8.b((byte) 0);
+                    break L4;
+                  }
+                }
+                stackOut_14_0 = new ji((of) (Object) var8, param0, param1);
+                stackIn_15_0 = stackOut_14_0;
+              } else {
+                stackOut_1_0 = null;
+                stackIn_2_0 = stackOut_1_0;
+                return (ji) (Object) stackIn_2_0;
+              }
+            } catch (java.io.IOException decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              var6_ref2 = (IOException) (Object) decompiledCaughtException;
+              throw new RuntimeException(var6_ref2.toString());
             }
+            return stackIn_15_0;
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
