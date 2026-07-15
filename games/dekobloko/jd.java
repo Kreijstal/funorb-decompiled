@@ -247,39 +247,29 @@ final class jd extends w {
     }
 
     final boolean h(byte param0) {
-        if (0 != ((jd) this).field_Vb.field_ob) {
-          ((jd) this).field_Nb = 20;
-          return true;
-        } else {
-          if (((jd) this).field_Vb.field_gb != -1) {
-            L0: {
-              if (-1 < ((jd) this).field_Nb) {
-                ((jd) this).field_Nb = ((jd) this).field_Nb - 1;
-                break L0;
-              } else {
-                break L0;
-              }
-            }
-            if (((jd) this).field_Nb != 0) {
-              if (param0 < 67) {
+        if (!(0 == ((jd) this).field_Vb.field_ob)) {
+            ((jd) this).field_Nb = 20;
+            return true;
+        }
+        if ((((jd) this).field_Vb.field_gb ^ -1) == -1) {
+            if (param0 < 67) {
                 ((jd) this).field_Wb = null;
                 return false;
-              } else {
-                return false;
-              }
-            } else {
-              ((jd) this).field_Nb = 3;
-              return true;
             }
-          } else {
-            if (param0 < 67) {
-              ((jd) this).field_Wb = null;
-              return false;
-            } else {
-              return false;
-            }
-          }
+            return false;
         }
+        if (!(-1 <= (((jd) this).field_Nb ^ -1))) {
+            ((jd) this).field_Nb = ((jd) this).field_Nb - 1;
+        }
+        if (((jd) this).field_Nb != 0) {
+            if (param0 < 67) {
+                ((jd) this).field_Wb = null;
+                return false;
+            }
+            return false;
+        }
+        ((jd) this).field_Nb = 3;
+        return true;
     }
 
     public static void e(int param0) {

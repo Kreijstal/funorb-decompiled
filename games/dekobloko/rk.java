@@ -440,7 +440,7 @@ class rk extends ek {
                 } else {
                   if (param3 <= 126) {
                     L2: {
-                      if (((rk) this).field_S == ((rk) this).field_M) {
+                      if ((((rk) this).field_S ^ -1) == (((rk) this).field_M ^ -1)) {
                         break L2;
                       } else {
                         this.f((byte) -94);
@@ -452,7 +452,7 @@ class rk extends ek {
                         if ((((rk) this).field_X ^ -1) == 0) {
                           break L4;
                         } else {
-                          if (((rk) this).field_E.length() >= ((rk) this).field_X) {
+                          if ((((rk) this).field_E.length() ^ -1) <= (((rk) this).field_X ^ -1)) {
                             break L3;
                           } else {
                             break L4;
@@ -460,7 +460,7 @@ class rk extends ek {
                         }
                       }
                       L5: {
-                        if (((rk) this).field_S < ((rk) this).field_E.length()) {
+                        if ((((rk) this).field_S ^ -1) > (((rk) this).field_E.length() ^ -1)) {
                           ((rk) this).field_E = ((rk) this).field_E.substring(0, ((rk) this).field_S) + param3 + ((rk) this).field_E.substring(((rk) this).field_S, ((rk) this).field_E.length());
                           ((rk) this).field_S = ((rk) this).field_S + 1;
                           ((rk) this).field_M = ((rk) this).field_S;
@@ -501,7 +501,7 @@ class rk extends ek {
                     if ((param1 ^ -1) != -14) {
                       if ((param1 ^ -1) != -97) {
                         if (param1 == 97) {
-                          if (((rk) this).field_S >= ((rk) this).field_E.length()) {
+                          if ((((rk) this).field_S ^ -1) <= (((rk) this).field_E.length() ^ -1)) {
                             break L6;
                           } else {
                             L7: {
@@ -538,12 +538,12 @@ class rk extends ek {
                               this.b(-30305, ((rk) this).field_E.length());
                               return true;
                             } else {
-                              if (-85 != param1) {
+                              if (-85 != (param1 ^ -1)) {
                                 L8: {
                                   if (!bj.field_d[82]) {
                                     break L8;
                                   } else {
-                                    if (-66 == param1) {
+                                    if (-66 == (param1 ^ -1)) {
                                       this.g((byte) -76);
                                       return true;
                                     } else {
@@ -626,7 +626,7 @@ class rk extends ek {
                       this.f((byte) -65);
                       return true;
                     } else {
-                      if (((rk) this).field_S < ((rk) this).field_E.length()) {
+                      if ((((rk) this).field_S ^ -1) > (((rk) this).field_E.length() ^ -1)) {
                         ((rk) this).field_M = 1 + ((rk) this).field_S;
                         this.f((byte) -50);
                         return true;

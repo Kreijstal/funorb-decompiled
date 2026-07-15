@@ -574,10 +574,10 @@ final class he extends kf implements qh, vn {
           L2: {
             var3 = ((nm) (Object) stackIn_3_0).a(stackIn_3_1, stackIn_3_2, stackIn_3_3, stackIn_3_4 != 0, 2, param1) ? 1 : 0;
             var4 = ge.field_f.field_Sb.field_M;
-            if (-3 == jj.field_b) {
+            if (-3 == (jj.field_b ^ -1)) {
               break L2;
             } else {
-              if (-2 == jj.field_b) {
+              if (-2 == (jj.field_b ^ -1)) {
                 break L2;
               } else {
                 ge.field_f.field_Hb = false;
@@ -727,7 +727,7 @@ final class he extends kf implements qh, vn {
               }
               L14: {
                 var5 = (Object) (Object) var6;
-                if (var6.field_ob == 0) {
+                if ((var6.field_ob ^ -1) == -1) {
                   break L14;
                 } else {
                   sl.a(var6.field_Pb, (int[]) null, (byte) 112, ge.field_f.field_Rb, (w) (Object) var6, var6.field_Ob, 0L, -1, -1);

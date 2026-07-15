@@ -302,7 +302,7 @@ final class eg {
           var3 = var7;
           var4 = 0;
           L1: while (true) {
-            if (-9 >= var4) {
+            if (-9 >= (var4 ^ -1)) {
               return var3;
             } else {
               var7[var4] = lb.a(param1[var4], param0[var4]);

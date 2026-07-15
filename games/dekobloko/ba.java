@@ -103,7 +103,7 @@ abstract class ba implements nb {
               if (param0 == -32141) {
                 var4 = 0;
                 L0: while (true) {
-                  if (var17.field_o <= var4) {
+                  if ((var17.field_o ^ -1) >= (var4 ^ -1)) {
                     if (var3 != 0) {
                       return;
                     } else {
@@ -111,7 +111,7 @@ abstract class ba implements nb {
                       param1.a(var17.field_C, false);
                       var5 = 0;
                       L1: while (true) {
-                        if (var5 >= var17.field_o) {
+                        if ((var5 ^ -1) <= (var17.field_o ^ -1)) {
                           int discarded$1 = param1.a((byte) -15, var4);
                           var17.b((byte) 103);
                           return;
@@ -129,14 +129,14 @@ abstract class ba implements nb {
                                       param1.a(var8, false);
                                       break L4;
                                     } else {
-                                      if (-2 == var6_int) {
+                                      if (-2 == (var6_int ^ -1)) {
                                         var16_ref = (java.lang.reflect.Field) var17.field_y[var5].field_b;
                                         var19 = var16_ref;
                                         var19.setInt((Object) null, var17.field_q[var5]);
                                         param1.a(true, 0);
                                         break L4;
                                       } else {
-                                        if (-3 != var6_int) {
+                                        if (-3 != (var6_int ^ -1)) {
                                           break L4;
                                         } else {
                                           var26 = (java.lang.reflect.Field) var17.field_y[var5].field_b;
@@ -165,7 +165,7 @@ abstract class ba implements nb {
                                       var9 = new Object[var25.length];
                                       var10_int = 0;
                                       L6: while (true) {
-                                        if (var10_int >= var25.length) {
+                                        if ((var10_int ^ -1) <= (var25.length ^ -1)) {
                                           var10 = var27.invoke((Object) null, var9);
                                           if (var10 == null) {
                                             param1.a(true, 0);
@@ -257,7 +257,7 @@ abstract class ba implements nb {
                             break L20;
                           }
                         }
-                        if (var13.field_y[var4].field_c == 0) {
+                        if ((var13.field_y[var4].field_c ^ -1) == -1) {
                           var3 = 1;
                           break L19;
                         } else {
@@ -265,27 +265,28 @@ abstract class ba implements nb {
                         }
                       }
                     }
-                    if (var13.field_t[var4] != null) {
-                      L21: {
-                        if (var13.field_t[var4].field_c == -3) {
-                          var13.field_A[var4] = -6;
+                    L21: {
+                      if (var13.field_t[var4] != null) {
+                        L22: {
+                          if ((var13.field_t[var4].field_c ^ -1) == -3) {
+                            var13.field_A[var4] = -6;
+                            break L22;
+                          } else {
+                            break L22;
+                          }
+                        }
+                        if (-1 != (var13.field_t[var4].field_c ^ -1)) {
                           break L21;
                         } else {
+                          var3 = 1;
                           break L21;
                         }
-                      }
-                      if (-1 == var13.field_t[var4].field_c) {
-                        var3 = 1;
-                        var4++;
-                        continue L0;
                       } else {
-                        var4++;
-                        continue L0;
+                        break L21;
                       }
-                    } else {
-                      var4++;
-                      continue L0;
                     }
+                    var4++;
+                    continue L0;
                   }
                 }
               } else {

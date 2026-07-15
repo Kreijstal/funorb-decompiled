@@ -291,7 +291,7 @@ class w extends km {
                 break L14;
               }
             }
-            if (((w) this).field_db != 2147483647) {
+            if ((((w) this).field_db ^ -1) != 2147483647) {
               var20 = ((w) this).field_db;
               break L10;
             } else {
@@ -304,7 +304,7 @@ class w extends km {
             break L15;
           } else {
             L16: {
-              if (-1 <= ((w) this).field_rb) {
+              if (-1 >= (((w) this).field_rb ^ -1)) {
                 var18 = ((w) this).field_rb;
                 break L16;
               } else {
@@ -436,7 +436,7 @@ class w extends km {
                 }
                 L30: {
                   L31: {
-                    if (((w) this).field_J.a(var23_ref) > ((w) this).field_mb + -(2 * ((w) this).field_ub)) {
+                    if ((((w) this).field_J.a(var23_ref) ^ -1) < (((w) this).field_mb + -(2 * ((w) this).field_ub) ^ -1)) {
                       break L31;
                     } else {
                       if (0 > var23_ref.indexOf("<br>")) {
@@ -454,27 +454,35 @@ class w extends km {
                   }
                 }
                 L32: {
-                  if (((w) this).field_W != 1) {
-                    break L32;
-                  } else {
-                    var22 = var22 + (((w) this).field_N - ((w) this).field_J.field_R + -((w) this).field_J.field_K) / 2;
-                    break L32;
+                  L33: {
+                    if (((w) this).field_W != 1) {
+                      break L33;
+                    } else {
+                      var22 = var22 + (((w) this).field_N - ((w) this).field_J.field_R + -((w) this).field_J.field_K) / 2;
+                      if (var25 == 0) {
+                        break L32;
+                      } else {
+                        break L33;
+                      }
+                    }
                   }
-                }
-                L33: {
                   if (-3 != (((w) this).field_W ^ -1)) {
-                    break L33;
+                    break L32;
                   } else {
                     var22 = var22 + (-((w) this).field_J.field_R + (-((w) this).field_J.field_K + ((w) this).field_N));
-                    break L33;
+                    break L32;
                   }
                 }
                 L34: {
-                  if (((w) this).field_X != 0) {
+                  if ((((w) this).field_X ^ -1) != -1) {
                     break L34;
                   } else {
                     ((w) this).field_J.c(var23_ref, ((w) this).field_ub + (((w) this).field_E + var21), ((w) this).field_J.field_R + (var22 + ((w) this).field_pb), var18, -1, ((w) this).field_wb);
-                    break L34;
+                    if (var25 == 0) {
+                      break L28;
+                    } else {
+                      break L34;
+                    }
                   }
                 }
                 L35: {
@@ -486,11 +494,19 @@ class w extends km {
                         break L36;
                       } else {
                         int discarded$4 = ((w) this).field_J.a(var23_ref, var21 + ((w) this).field_ub + ((w) this).field_E, var22 + ((w) this).field_pb, -(2 * ((w) this).field_ub) + ((w) this).field_mb, ((w) this).field_N, var18, -1, ((w) this).field_wb, ((w) this).field_X, ((w) this).field_W, ((w) this).field_Db);
-                        break L36;
+                        if (var25 == 0) {
+                          break L28;
+                        } else {
+                          break L36;
+                        }
                       }
                     }
                     ((w) this).field_J.a(var23_ref, -(((w) this).field_ub * 2) + (((w) this).field_mb + ((w) this).field_E - -((w) this).field_ub) - -var21, ((w) this).field_pb + (var22 - -((w) this).field_J.field_R), var18, -1, ((w) this).field_wb);
-                    break L35;
+                    if (var25 == 0) {
+                      break L28;
+                    } else {
+                      break L35;
+                    }
                   }
                 }
                 ((w) this).field_J.b(var23_ref, (-(2 * ((w) this).field_ub) + ((w) this).field_mb) / 2 + (((w) this).field_E - (-((w) this).field_ub + -var21)), ((w) this).field_J.field_R + (((w) this).field_pb + var22), var18, -1, ((w) this).field_wb);
@@ -1196,7 +1212,7 @@ class w extends km {
               }
             }
             L12: {
-              if (-1 < param1.field_P) {
+              if (-1 < (param1.field_P ^ -1)) {
                 break L12;
               } else {
                 ((w) this).field_P = param1.field_P;
@@ -1204,7 +1220,7 @@ class w extends km {
               }
             }
             L13: {
-              if (-1 != param1.field_ub) {
+              if (-1 != (param1.field_ub ^ -1)) {
                 ((w) this).field_ub = param1.field_ub;
                 break L13;
               } else {
@@ -1276,7 +1292,7 @@ class w extends km {
               }
             }
             L22: {
-              if (param1.field_G != -1) {
+              if ((param1.field_G ^ -1) != -1) {
                 ((w) this).field_G = param1.field_G;
                 break L22;
               } else {
@@ -1284,7 +1300,7 @@ class w extends km {
               }
             }
             L23: {
-              if (-257 == param1.field_wb) {
+              if (-257 == (param1.field_wb ^ -1)) {
                 break L23;
               } else {
                 ((w) this).field_wb = param1.field_wb;

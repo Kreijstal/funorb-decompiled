@@ -86,10 +86,10 @@ abstract class t extends bl {
         }
         L1: {
           L2: {
-            if (-11 < hc.field_d) {
+            if (-11 < (hc.field_d ^ -1)) {
               break L2;
             } else {
-              if (-14 > ca.field_vb) {
+              if (-14 < (ca.field_vb ^ -1)) {
                 break L2;
               } else {
                 stackOut_4_0 = 1;

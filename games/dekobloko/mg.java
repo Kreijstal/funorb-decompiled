@@ -168,10 +168,10 @@ final class mg extends w {
         if (param0) {
             return false;
         }
-        if (1 != ((mg) this).field_Rb) {
+        if (1 != (((mg) this).field_Rb ^ -1)) {
             return false;
         }
-        if (-14 == wh.field_c) {
+        if (-14 == (wh.field_c ^ -1)) {
             ((mg) this).field_Rb = -1;
             return true;
         }
@@ -447,10 +447,10 @@ final class mg extends w {
         long stackIn_8_3 = 0L;
         ha stackIn_8_4 = null;
         String stackIn_8_5 = null;
+        w stackIn_13_0 = null;
         w stackIn_14_0 = null;
         w stackIn_15_0 = null;
-        w stackIn_16_0 = null;
-        int stackIn_16_1 = 0;
+        int stackIn_15_1 = 0;
         Object stackOut_4_0 = null;
         ha stackOut_4_1 = null;
         ha stackOut_4_2 = null;
@@ -473,11 +473,11 @@ final class mg extends w {
         long stackOut_7_3 = 0L;
         ha stackOut_7_4 = null;
         String stackOut_7_5 = null;
-        w stackOut_13_0 = null;
-        w stackOut_15_0 = null;
-        int stackOut_15_1 = 0;
+        w stackOut_12_0 = null;
         w stackOut_14_0 = null;
         int stackOut_14_1 = 0;
+        w stackOut_13_0 = null;
+        int stackOut_13_1 = 0;
         L0: {
           ((mg) this).field_Rb = -2;
           ((mg) this).field_Tb = param12;
@@ -503,10 +503,10 @@ final class mg extends w {
                 ((mg) this).field_Wb.field_G = 16764006;
                 ((mg) this).field_Pb.a(((mg) this).field_Wb, -16834);
                 ((mg) this).field_Wb.field_T = "|";
-                if (d.field_b <= -6) {
+                if ((d.field_b ^ -1) <= -6) {
                   break L2;
                 } else {
-                  if (te.field_p > -3) {
+                  if ((te.field_p ^ -1) > -3) {
                     break L1;
                   } else {
                     break L2;
@@ -530,7 +530,7 @@ final class mg extends w {
                   stackIn_5_2 = stackOut_4_2;
                   stackIn_5_3 = stackOut_4_3;
                   stackIn_5_4 = stackOut_4_4;
-                  if (-8 <= d.field_b) {
+                  if (-8 >= (d.field_b ^ -1)) {
                     break L4;
                   } else {
                     stackOut_5_0 = this;
@@ -548,7 +548,7 @@ final class mg extends w {
                     stackIn_6_2 = stackOut_5_2;
                     stackIn_6_3 = stackOut_5_3;
                     stackIn_6_4 = stackOut_5_4;
-                    if (-3 <= te.field_p) {
+                    if (-3 >= (te.field_p ^ -1)) {
                       break L4;
                     } else {
                       stackOut_6_0 = this;
@@ -627,7 +627,7 @@ final class mg extends w {
                 }
                 L9: {
                   var17 = param6.field_J.a(k.field_d);
-                  if (var17 <= var16) {
+                  if ((var17 ^ -1) >= (var16 ^ -1)) {
                     break L9;
                   } else {
                     var16 = var17;
@@ -636,7 +636,7 @@ final class mg extends w {
                 }
                 var17 = 0;
                 L10: while (true) {
-                  if (var17 >= qb.field_u) {
+                  if ((var17 ^ -1) <= (qb.field_u ^ -1)) {
                     L11: {
                       if (-141 <= (var16 ^ -1)) {
                         break L11;
@@ -671,7 +671,7 @@ final class mg extends w {
                       var18 = this.a(true, ((mg) this).field_Yb[18], var28[1], var18, var16);
                       var18 = this.a(true, ((mg) this).field_Yb[19], var28[1], var18, var16);
                       var18 = this.a(true, ((mg) this).field_Yb[20], var28[1], var18, var16);
-                      if (var17 >= var18) {
+                      if ((var17 ^ -1) <= (var18 ^ -1)) {
                         break L13;
                       } else {
                         var17 = var18;
@@ -694,7 +694,7 @@ final class mg extends w {
                     L15: {
                       var19 = 3 * var16 - -26;
                       var20 = ((mg) this).field_cc.a(true);
-                      if (var20 <= var19) {
+                      if ((var20 ^ -1) >= (var19 ^ -1)) {
                         break L15;
                       } else {
                         var19 = var20;
@@ -706,7 +706,7 @@ final class mg extends w {
                         break L16;
                       } else {
                         var20 = ((mg) this).field_Qb.c(4, -4168);
-                        if (var19 >= var20) {
+                        if ((var19 ^ -1) <= (var20 ^ -1)) {
                           break L16;
                         } else {
                           var19 = var20;
@@ -746,52 +746,55 @@ final class mg extends w {
                     ((mg) this).a(var23, 0, var26, var24, var25);
                     break L0;
                   } else {
-                    if (((mg) this).field_Yb[var17] != null) {
-                      var18 = ((mg) this).field_Yb[var17].a(true);
-                      if (var18 > var16) {
-                        var16 = var18;
-                        var17++;
-                        continue L10;
+                    L18: {
+                      if (((mg) this).field_Yb[var17] == null) {
+                        break L18;
                       } else {
-                        var17++;
-                        continue L10;
+                        var18 = ((mg) this).field_Yb[var17].a(true);
+                        if (var18 <= var16) {
+                          break L18;
+                        } else {
+                          var16 = var18;
+                          break L18;
+                        }
                       }
-                    } else {
-                      var17++;
-                      continue L10;
                     }
+                    var17++;
+                    continue L10;
                   }
                 }
               } else {
-                if (pn.field_bb[var16] != null) {
-                  L18: {
-                    ((mg) this).field_Yb[var16] = new w(0L, param10, pn.field_bb[var16]);
-                    ((mg) this).field_Yb[var16].field_X = 0;
-                    stackOut_13_0 = ((mg) this).field_Yb[var16];
-                    stackIn_15_0 = stackOut_13_0;
-                    stackIn_14_0 = stackOut_13_0;
-                    if (param11 == null) {
-                      stackOut_15_0 = (w) (Object) stackIn_15_0;
-                      stackOut_15_1 = 0;
-                      stackIn_16_0 = stackOut_15_0;
-                      stackIn_16_1 = stackOut_15_1;
-                      break L18;
-                    } else {
-                      stackOut_14_0 = (w) (Object) stackIn_14_0;
-                      stackOut_14_1 = 1;
-                      stackIn_16_0 = stackOut_14_0;
-                      stackIn_16_1 = stackOut_14_1;
-                      break L18;
+                L19: {
+                  if (pn.field_bb[var16] == null) {
+                    break L19;
+                  } else {
+                    L20: {
+                      ((mg) this).field_Yb[var16] = new w(0L, param10, pn.field_bb[var16]);
+                      ((mg) this).field_Yb[var16].field_X = 0;
+                      stackOut_12_0 = ((mg) this).field_Yb[var16];
+                      stackIn_14_0 = stackOut_12_0;
+                      stackIn_13_0 = stackOut_12_0;
+                      if (param11 == null) {
+                        stackOut_14_0 = (w) (Object) stackIn_14_0;
+                        stackOut_14_1 = 0;
+                        stackIn_15_0 = stackOut_14_0;
+                        stackIn_15_1 = stackOut_14_1;
+                        break L20;
+                      } else {
+                        stackOut_13_0 = (w) (Object) stackIn_13_0;
+                        stackOut_13_1 = 1;
+                        stackIn_15_0 = stackOut_13_0;
+                        stackIn_15_1 = stackOut_13_1;
+                        break L20;
+                      }
                     }
+                    stackIn_15_0.field_Hb = stackIn_15_1 != 0;
+                    ((mg) this).field_Pb.a(((mg) this).field_Yb[var16], -16834);
+                    break L19;
                   }
-                  stackIn_16_0.field_Hb = stackIn_16_1 != 0;
-                  ((mg) this).field_Pb.a(((mg) this).field_Yb[var16], -16834);
-                  var16++;
-                  continue L5;
-                } else {
-                  var16++;
-                  continue L5;
                 }
+                var16++;
+                continue L5;
               }
             }
           } else {

@@ -34,9 +34,7 @@ final class kc extends bh {
                 break L0;
               }
             }
-            if (param0 != 8192) {
-              return;
-            } else {
+            if (param0 == 8192) {
               L1: {
                 var4 = 1;
                 var5 = 0;
@@ -48,7 +46,7 @@ final class kc extends bh {
                 }
               }
               L2: {
-                if (-4 == param1) {
+                if (-4 == (param1 ^ -1)) {
                   var4 = -1;
                   break L2;
                 } else {
@@ -65,7 +63,7 @@ final class kc extends bh {
                 }
               }
               L4: {
-                if (-6 == param1) {
+                if (-6 == (param1 ^ -1)) {
                   var4 = -1;
                   var5 = 1;
                   break L4;
@@ -144,12 +142,12 @@ final class kc extends bh {
               }
               o.field_e = em.a(var5 * var2, var2 * var4, (byte) 90);
               return;
+            } else {
+              return;
             }
           } else {
             var2 = (-40960 + 16384 * var3) / 220;
-            if (param0 != 8192) {
-              return;
-            } else {
+            if (param0 == 8192) {
               L13: {
                 var4 = 1;
                 var5 = 0;
@@ -161,7 +159,7 @@ final class kc extends bh {
                 }
               }
               L14: {
-                if (-4 == param1) {
+                if (-4 == (param1 ^ -1)) {
                   var4 = -1;
                   break L14;
                 } else {
@@ -178,7 +176,7 @@ final class kc extends bh {
                 }
               }
               L16: {
-                if (-6 == param1) {
+                if (-6 == (param1 ^ -1)) {
                   var4 = -1;
                   var5 = 1;
                   break L16;
@@ -257,6 +255,8 @@ final class kc extends bh {
               }
               o.field_e = em.a(var5 * var2, var2 * var4, (byte) 90);
               return;
+            } else {
+              return;
             }
           }
         } else {
@@ -273,7 +273,7 @@ final class kc extends bh {
               }
             }
             L26: {
-              if (-4 == param1) {
+              if (-4 == (param1 ^ -1)) {
                 var4 = -1;
                 break L26;
               } else {
@@ -290,7 +290,7 @@ final class kc extends bh {
               }
             }
             L28: {
-              if (-6 == param1) {
+              if (-6 == (param1 ^ -1)) {
                 var4 = -1;
                 var5 = 1;
                 break L28;
@@ -308,10 +308,8 @@ final class kc extends bh {
               }
             }
             if (param1 != 7) {
-              if (8 == param1) {
+              if (8 != param1) {
                 L30: {
-                  var4 = -1;
-                  var5 = -1;
                   if (11 == param1) {
                     var4 = -1;
                     break L30;
@@ -359,6 +357,8 @@ final class kc extends bh {
                 return;
               } else {
                 L35: {
+                  var4 = -1;
+                  var5 = -1;
                   if (11 == param1) {
                     var4 = -1;
                     break L35;

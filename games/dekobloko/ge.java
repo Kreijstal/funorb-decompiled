@@ -14,70 +14,35 @@ final class ge {
     static boolean field_c;
 
     final static int a(lk param0, int param1) {
-        int var2 = 0;
-        int var3 = 0;
         int var4 = 0;
         int var5 = 0;
-        int var6 = 0;
-        Object var7 = null;
-        var6 = client.field_A ? 1 : 0;
-        if (param0 != null) {
-          L0: {
-            var2 = 0;
-            var3 = 10000 / param0.field_O;
-            if (param1 > 14) {
-              break L0;
-            } else {
-              var7 = null;
-              int discarded$2 = ge.a((lk) null, 96);
-              break L0;
-            }
-          }
-          var4 = param0.field_z;
-          L1: while (true) {
-            if (param0.field_a <= var4) {
-              L2: {
-                var2 = var2 + var3 * param0.field_O;
-                var4 = 0;
-                if (-5001 < var2) {
-                  break L2;
-                } else {
-                  var4 = 1;
-                  break L2;
-                }
-              }
-              L3: {
-                if (-20001 > var2) {
-                  break L3;
-                } else {
-                  var4 = 2;
-                  break L3;
-                }
-              }
-              return var4;
-            } else {
-              var5 = 0;
-              L4: while (true) {
-                if (param0.field_O <= var5) {
-                  var3 = var3 * 3 / 4;
-                  var4++;
-                  continue L1;
-                } else {
-                  if (-1 != (param0.field_P[var4 * param0.field_O - -var5] ^ -1)) {
-                    var2 = var2 + var3;
-                    var5++;
-                    continue L4;
-                  } else {
-                    var5++;
-                    continue L4;
-                  }
-                }
-              }
-            }
-          }
-        } else {
-          return 0;
+        int var6 = client.field_A ? 1 : 0;
+        if (param0 == null) {
+            return 0;
         }
+        int var2 = 0;
+        int var3 = 10000 / param0.field_O;
+        if (param1 <= 14) {
+            Object var7 = null;
+            int discarded$0 = ge.a((lk) null, 96);
+        }
+        for (var4 = param0.field_z; (param0.field_a ^ -1) < (var4 ^ -1); var4++) {
+            for (var5 = 0; param0.field_O > var5; var5++) {
+                if (-1 != (param0.field_P[var4 * param0.field_O - -var5] ^ -1)) {
+                    var2 = var2 + var3;
+                }
+            }
+            var3 = var3 * 3 / 4;
+        }
+        var2 = var2 + var3 * param0.field_O;
+        var4 = 0;
+        if (-5001 >= (var2 ^ -1)) {
+            var4 = 1;
+        }
+        if (-20001 >= (var2 ^ -1)) {
+            var4 = 2;
+        }
+        return var4;
     }
 
     final static jg b(byte param0) {

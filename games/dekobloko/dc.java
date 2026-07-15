@@ -40,12 +40,12 @@ final class dc {
             if (!ch.field_c) {
                 return false;
             }
-            if (qa.field_y == -3) {
+            if ((qa.field_y ^ -1) == -3) {
                 if (!sg.a(fa.field_r, param2 ^ 6671, li.field_e)) {
                     return false;
                 }
             }
-            if (-3 != qa.field_y) {
+            if (-3 != (qa.field_y ^ -1)) {
                 if (!(var3 == 0)) {
                     return false;
                 }

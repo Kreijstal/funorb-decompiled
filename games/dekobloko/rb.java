@@ -28,10 +28,10 @@ final class rb {
         if (param2 != null) {
           L0: {
             var3 = param2.length();
-            if (-2 < var3) {
+            if (-2 < (var3 ^ -1)) {
               break L0;
             } else {
-              if (-13 < var3) {
+              if (-13 > (var3 ^ -1)) {
                 break L0;
               } else {
                 L1: {
@@ -53,7 +53,7 @@ final class rb {
                               var5 = 0;
                               var6 = 0;
                               L3: while (true) {
-                                if (param2.length() <= var6) {
+                                if ((param2.length() ^ -1) >= (var6 ^ -1)) {
                                   if (var5 > 0) {
                                     return qf.field_j;
                                   } else {
@@ -70,17 +70,19 @@ final class rb {
                                       break L4;
                                     }
                                   }
-                                  if (2 <= var5) {
-                                    if (!param0) {
-                                      return un.field_b;
+                                  L5: {
+                                    if (2 > var5) {
+                                      break L5;
                                     } else {
-                                      var6++;
-                                      continue L3;
+                                      if (param0) {
+                                        break L5;
+                                      } else {
+                                        return un.field_b;
+                                      }
                                     }
-                                  } else {
-                                    var6++;
-                                    continue L3;
                                   }
+                                  var6++;
+                                  continue L3;
                                 }
                               }
                             } else {

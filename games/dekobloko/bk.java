@@ -77,10 +77,10 @@ final class bk extends w {
           L2: {
             L3: {
               ((bk) this).a(false, true);
-              if (-1 == ig.field_Yb) {
+              if (-1 == (ig.field_Yb ^ -1)) {
                 break L3;
               } else {
-                if (-1 == ((bk) this).field_ob) {
+                if (-1 == (((bk) this).field_ob ^ -1)) {
                   break L2;
                 } else {
                   break L3;

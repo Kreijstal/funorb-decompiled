@@ -32,10 +32,10 @@ final class ef extends ma {
             if (null == ((ef) this).field_L) {
               return;
             } else {
-              if (((ef) this).field_Q == -1) {
+              if ((((ef) this).field_Q ^ -1) == -1) {
                 return;
               } else {
-                if (-257 == ((ef) this).field_Q) {
+                if (-257 == (((ef) this).field_Q ^ -1)) {
                   ((ef) this).field_L.a(param0 + ((ef) this).field_u, -128, param2, ((ef) this).field_D + param3);
                   return;
                 } else {
@@ -57,10 +57,10 @@ final class ef extends ma {
             if (null == ((ef) this).field_L) {
               return;
             } else {
-              if (((ef) this).field_Q == -1) {
+              if ((((ef) this).field_Q ^ -1) == -1) {
                 return;
               } else {
-                if (-257 == ((ef) this).field_Q) {
+                if (-257 == (((ef) this).field_Q ^ -1)) {
                   ((ef) this).field_L.a(param0 + ((ef) this).field_u, -128, param2, ((ef) this).field_D + param3);
                   return;
                 } else {

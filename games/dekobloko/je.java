@@ -172,10 +172,10 @@ final class je {
                 if (param1 != 5) {
                   if (param1 != 6) {
                     if (param1 != 7) {
-                      if (-9 == param1) {
+                      if (-9 == (param1 ^ -1)) {
                         return cm.a((byte) 83, gf.field_d, new String[1]);
                       } else {
-                        if (-12 != param1) {
+                        if (-12 != (param1 ^ -1)) {
                           if (param1 != 12) {
                             if (13 == param1) {
                               return cm.a((byte) 127, sh.field_b, new String[1]);

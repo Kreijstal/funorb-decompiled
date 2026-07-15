@@ -29,11 +29,11 @@ final class mb {
                 break L0;
               }
             }
-            if (k.field_c.field_c != -1) {
+            if ((k.field_c.field_c ^ -1) != -1) {
               long dupTemp$2 = ik.a(4);
               el.field_J = dupTemp$2;
               p.field_a = dupTemp$2;
-              if (-2 == k.field_c.field_c) {
+              if (-2 == (k.field_c.field_c ^ -1)) {
                 try {
                   L1: {
                     L2: {

@@ -141,10 +141,10 @@ final class uf extends wl {
         if (lg.field_W > 0) {
             lg.field_W = lg.field_W - 1;
         } else {
-            if (bf.field_r < -1) {
+            if ((bf.field_r ^ -1) < -1) {
                 bf.field_r = bf.field_r - 1;
             } else {
-                if (-1 < tg.field_e) {
+                if (-1 > (tg.field_e ^ -1)) {
                     tg.field_e = tg.field_e - 1;
                 }
             }

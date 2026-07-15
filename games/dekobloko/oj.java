@@ -484,17 +484,17 @@ final class oj {
             IOException var1 = null;
             int var1_int = 0;
             wl var2 = null;
-            int stackIn_15_0 = 0;
-            int stackIn_25_0 = 0;
-            int stackIn_28_0 = 0;
-            int stackIn_32_0 = 0;
-            int stackIn_34_0 = 0;
+            int stackIn_14_0 = 0;
+            int stackIn_24_0 = 0;
+            int stackIn_27_0 = 0;
+            int stackIn_31_0 = 0;
+            int stackIn_33_0 = 0;
             Throwable decompiledCaughtException = null;
-            int stackOut_14_0 = 0;
-            int stackOut_27_0 = 0;
-            int stackOut_24_0 = 0;
-            int stackOut_33_0 = 0;
-            int stackOut_31_0 = 0;
+            int stackOut_13_0 = 0;
+            int stackOut_26_0 = 0;
+            int stackOut_23_0 = 0;
+            int stackOut_32_0 = 0;
+            int stackOut_30_0 = 0;
             if (4 > ta.field_k.field_j) {
               try {
                 L0: {
@@ -510,9 +510,9 @@ final class oj {
                   L2: {
                     if (hd.field_n == 1) {
                       if (2 == d.field_f.field_c) {
-                        stackOut_14_0 = al.a(0, -1);
-                        stackIn_15_0 = stackOut_14_0;
-                        return stackIn_15_0;
+                        stackOut_13_0 = al.a(0, -1);
+                        stackIn_14_0 = stackOut_13_0;
+                        return stackIn_14_0;
                       } else {
                         if (-2 != (d.field_f.field_c ^ -1)) {
                           break L2;
@@ -541,42 +541,42 @@ final class oj {
                     }
                   }
                   L4: {
-                    if (-4 == hd.field_n) {
-                      if (-1 < rk.field_L.b(0)) {
+                    if (-4 == (hd.field_n ^ -1)) {
+                      if (-1 > (rk.field_L.b(0) ^ -1)) {
                         var1_int = rk.field_L.c((byte) 8);
-                        if (-1 == var1_int) {
+                        if (-1 == (var1_int ^ -1)) {
                           hd.field_n = hd.field_n + 1;
                           break L4;
                         } else {
-                          stackOut_27_0 = al.a(0, var1_int);
-                          stackIn_28_0 = stackOut_27_0;
-                          return stackIn_28_0;
+                          stackOut_26_0 = al.a(0, var1_int);
+                          stackIn_27_0 = stackOut_26_0;
+                          return stackIn_27_0;
                         }
                       } else {
                         if (me.field_E >= ik.a(param0 ^ 4)) {
                           break L4;
                         } else {
-                          stackOut_24_0 = al.a(0, -2);
-                          stackIn_25_0 = stackOut_24_0;
-                          return stackIn_25_0;
+                          stackOut_23_0 = al.a(0, -2);
+                          stackIn_24_0 = stackOut_23_0;
+                          return stackIn_24_0;
                         }
                       }
                     } else {
                       break L4;
                     }
                   }
-                  if (-5 != hd.field_n) {
-                    stackOut_33_0 = -1;
-                    stackIn_34_0 = stackOut_33_0;
+                  if (-5 != (hd.field_n ^ -1)) {
+                    stackOut_32_0 = -1;
+                    stackIn_33_0 = stackOut_32_0;
                     break L0;
                   } else {
                     ta.field_k.a((Object) (Object) rk.field_L, (byte) -128, ta.field_f);
                     rk.field_L = null;
                     d.field_f = null;
                     hd.field_n = 0;
-                    stackOut_31_0 = 0;
-                    stackIn_32_0 = stackOut_31_0;
-                    return stackIn_32_0;
+                    stackOut_30_0 = 0;
+                    stackIn_31_0 = stackOut_30_0;
+                    return stackIn_31_0;
                   }
                 }
               } catch (java.io.IOException decompiledCaughtParameter0) {
@@ -584,15 +584,15 @@ final class oj {
                 var1 = (IOException) (Object) decompiledCaughtException;
                 return al.a(0, -3);
               }
-              return stackIn_34_0;
+              return stackIn_33_0;
             } else {
               if ((ta.field_k.field_o ^ -1) == 0) {
                 return 3;
               } else {
-                if (ta.field_k.field_o != -2) {
-                  return 1;
-                } else {
+                if (ta.field_k.field_o == -2) {
                   return 4;
+                } else {
+                  return 1;
                 }
               }
             }

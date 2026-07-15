@@ -89,7 +89,7 @@ final class ga implements lh {
         int var5 = 0;
         var5 = client.field_A ? 1 : 0;
         var2 = param1.length();
-        if (var2 == 0) {
+        if ((var2 ^ -1) == -1) {
           return hm.field_a;
         } else {
           if (var2 > 63) {
@@ -105,30 +105,32 @@ final class ga implements lh {
               }
             }
             L1: while (true) {
-              if (var3 < var2) {
-                var4 = param1.charAt(var3);
-                if (45 != var4) {
-                  if (0 == v.field_c.indexOf(var4)) {
-                    return be.field_x;
-                  } else {
-                    var3++;
-                    continue L1;
-                  }
-                } else {
-                  L2: {
-                    if (-1 == var3) {
-                      break L2;
+              if ((var3 ^ -1) > (var2 ^ -1)) {
+                L2: {
+                  var4 = param1.charAt(var3);
+                  if (45 != var4) {
+                    if (0 == (v.field_c.indexOf(var4) ^ -1)) {
+                      return be.field_x;
                     } else {
-                      if (var3 == -1 + var2) {
-                        break L2;
+                      break L2;
+                    }
+                  } else {
+                    L3: {
+                      if (-1 == (var3 ^ -1)) {
+                        break L3;
                       } else {
-                        var3++;
-                        continue L1;
+                        if (var3 != -1 + var2) {
+                          break L2;
+                        } else {
+                          break L3;
+                        }
                       }
                     }
+                    return be.field_x;
                   }
-                  return be.field_x;
                 }
+                var3++;
+                continue L1;
               } else {
                 return null;
               }

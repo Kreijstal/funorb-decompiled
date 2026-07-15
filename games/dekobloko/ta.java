@@ -50,14 +50,14 @@ final class ta {
         }
         L1: {
           L2: {
-            if (-21 < ca.field_vb) {
+            if (-21 < (ca.field_vb ^ -1)) {
               break L2;
             } else {
               if (!t.i((byte) 124)) {
                 break L2;
               } else {
                 L3: {
-                  if (-1 >= bb.field_e) {
+                  if (-1 <= (bb.field_e ^ -1)) {
                     break L3;
                   } else {
                     if (bd.d((byte) 31)) {

@@ -405,7 +405,7 @@ class a implements gl, nl {
             } else {
               L1: {
                 var12 = ((a) this).field_o;
-                if (var12 == 0) {
+                if ((var12 ^ -1) == -1) {
                   var11 = ((a) this).field_z.field_R;
                   break L1;
                 } else {
@@ -432,10 +432,10 @@ class a implements gl, nl {
               L3: {
                 var12 = ((a) this).field_f;
                 if (0 != var12) {
-                  if (-4 == var12) {
+                  if (-4 == (var12 ^ -1)) {
                     break L3;
                   } else {
-                    if (-2 == var12) {
+                    if (-2 == (var12 ^ -1)) {
                       ((a) this).field_z.b(((a) this).b(param4, (byte) -67), this.b(param4, param0, 122, param3) - -(var9 >> 505266145), var11 + this.a(param4, 20881, param6, param7), param1, param2);
                       break L0;
                     } else {

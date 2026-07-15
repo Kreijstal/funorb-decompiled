@@ -186,7 +186,7 @@ final class ji {
               var9_int = 0;
               L1: while (true) {
                 L2: {
-                  if (var9_int >= var5) {
+                  if ((var9_int ^ -1) <= (var5 ^ -1)) {
                     break L2;
                   } else {
                     L3: {
@@ -260,7 +260,7 @@ final class ji {
                     }
                   }
                   L8: {
-                    if (-2 <= var5) {
+                    if (-2 <= (var5 ^ -1)) {
                       L9: {
                         if (var6 == null) {
                           var11 = 0;
@@ -278,7 +278,7 @@ final class ji {
                         break L8;
                       }
                     } else {
-                      if (-3 == ((ji) this).field_g) {
+                      if (-3 == (((ji) this).field_g ^ -1)) {
                         var11 = var53.length;
                         var11--;
                         var12 = 255 & var23[var11];
@@ -290,7 +290,7 @@ final class ji {
                         var16 = 0;
                         L10: while (true) {
                           if (var12 <= var16) {
-                            if (var14 != 0) {
+                            if ((var14 ^ -1) != -1) {
                               var57 = new byte[var14];
                               var32.field_n = var11;
                               var14 = 0;
@@ -304,7 +304,7 @@ final class ji {
                                   var19 = 0;
                                   var20 = 0;
                                   L12: while (true) {
-                                    if (var20 >= var5) {
+                                    if ((var20 ^ -1) <= (var5 ^ -1)) {
                                       var18++;
                                       continue L11;
                                     } else {
@@ -341,7 +341,7 @@ final class ji {
                             var17 = 0;
                             var18 = 0;
                             L15: while (true) {
-                              if (var18 >= var5) {
+                              if ((var18 ^ -1) <= (var5 ^ -1)) {
                                 var16++;
                                 continue L10;
                               } else {
@@ -355,15 +355,17 @@ final class ji {
                                     break L16;
                                   }
                                 }
-                                if (param2 == var19) {
-                                  var15 = var19;
-                                  var14 = var14 + var17;
-                                  var18++;
-                                  continue L15;
-                                } else {
-                                  var18++;
-                                  continue L15;
+                                L17: {
+                                  if (param2 != var19) {
+                                    break L17;
+                                  } else {
+                                    var15 = var19;
+                                    var14 = var14 + var17;
+                                    break L17;
+                                  }
                                 }
+                                var18++;
+                                continue L15;
                               }
                             }
                           }
@@ -381,7 +383,7 @@ final class ji {
                         var14_ref_int__ = var30;
                         var29.field_n = var11;
                         var15 = 0;
-                        L17: while (true) {
+                        L18: while (true) {
                           if (var15 >= var12) {
                             var56 = new byte[var5][];
                             var48 = var56;
@@ -389,52 +391,54 @@ final class ji {
                             var31 = var40;
                             var15_ref_byte____ = var31;
                             var16 = 0;
-                            L18: while (true) {
-                              if (var5 <= var16) {
+                            L19: while (true) {
+                              if ((var5 ^ -1) >= (var16 ^ -1)) {
                                 var29.field_n = var11;
                                 var16 = 0;
                                 var17 = 0;
-                                L19: while (true) {
+                                L20: while (true) {
                                   if (var17 >= var12) {
                                     var17 = 0;
-                                    L20: while (true) {
-                                      if (var17 >= var5) {
+                                    L21: while (true) {
+                                      if ((var17 ^ -1) <= (var5 ^ -1)) {
                                         break L8;
                                       } else {
-                                        L21: {
+                                        L22: {
                                           if (var6 != null) {
                                             var18 = var50[var17];
-                                            break L21;
+                                            break L22;
                                           } else {
                                             var18 = var17;
-                                            break L21;
+                                            break L22;
                                           }
                                         }
-                                        if (((ji) this).field_g == 0) {
-                                          var7[var18] = qk.a(var56[var17], -1389597532, false);
-                                          var17++;
-                                          continue L20;
-                                        } else {
-                                          var7[var18] = (Object) (Object) var56[var17];
-                                          var17++;
-                                          continue L20;
+                                        L23: {
+                                          if ((((ji) this).field_g ^ -1) == -1) {
+                                            var7[var18] = qk.a(var56[var17], -1389597532, false);
+                                            break L23;
+                                          } else {
+                                            var7[var18] = (Object) (Object) var56[var17];
+                                            break L23;
+                                          }
                                         }
+                                        var17++;
+                                        continue L21;
                                       }
                                     }
                                   } else {
                                     var18 = 0;
                                     var19 = 0;
-                                    L22: while (true) {
-                                      if (var19 >= var5) {
+                                    L24: while (true) {
+                                      if ((var19 ^ -1) <= (var5 ^ -1)) {
                                         var17++;
-                                        continue L19;
+                                        continue L20;
                                       } else {
                                         var18 = var18 + var29.i(7553);
                                         an.a(var54, var16, var56[var19], var55[var19], var18);
                                         var14_ref_int__[var19] = var14_ref_int__[var19] + var18;
                                         var16 = var16 + var18;
                                         var19++;
-                                        continue L22;
+                                        continue L24;
                                       }
                                     }
                                   }
@@ -443,21 +447,21 @@ final class ji {
                                 var15_ref_byte____[var16] = new byte[var55[var16]];
                                 var55[var16] = 0;
                                 var16++;
-                                continue L18;
+                                continue L19;
                               }
                             }
                           } else {
                             var16 = 0;
                             var17 = 0;
-                            L23: while (true) {
+                            L25: while (true) {
                               if (var5 <= var17) {
                                 var15++;
-                                continue L17;
+                                continue L18;
                               } else {
                                 var16 = var16 + var29.i(7553);
                                 var14_ref_int__[var17] = var14_ref_int__[var17] + var16;
                                 var17++;
-                                continue L23;
+                                continue L25;
                               }
                             }
                           }
@@ -620,13 +624,13 @@ final class ji {
         }
         if (((ji) this).a((byte) 121)) {
           L1: {
-            if (-1 < param0) {
+            if (-1 < (param0 ^ -1)) {
               break L1;
             } else {
               if (param0 >= ((ji) this).field_f.field_k.length) {
                 break L1;
               } else {
-                if (-1 != ((ji) this).field_f.field_k[param0]) {
+                if (-1 != (((ji) this).field_f.field_k[param0] ^ -1)) {
                   return true;
                 } else {
                   break L1;

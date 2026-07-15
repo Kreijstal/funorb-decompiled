@@ -677,7 +677,7 @@ final class cb {
                               var6 = 0;
                               L3: while (true) {
                                 if (param1.length() <= var6) {
-                                  if (-1 < var5) {
+                                  if (-1 > (var5 ^ -1)) {
                                     return false;
                                   } else {
                                     return true;
@@ -693,18 +693,20 @@ final class cb {
                                       break L4;
                                     }
                                   }
-                                  if (-3 < var5) {
-                                    var6++;
-                                    var6++;
-                                    continue L3;
-                                  } else {
-                                    if (!param0) {
-                                      return false;
-                                    } else {
+                                  L5: {
+                                    if (-3 < (var5 ^ -1)) {
                                       var6++;
-                                      continue L3;
+                                      break L5;
+                                    } else {
+                                      if (!param0) {
+                                        return false;
+                                      } else {
+                                        break L5;
+                                      }
                                     }
                                   }
+                                  var6++;
+                                  continue L3;
                                 }
                               }
                             }
@@ -724,53 +726,55 @@ final class cb {
             var3 = param1.length();
             if (-2 >= (var3 ^ -1)) {
               if ((var3 ^ -1) >= -13) {
-                L5: {
+                L6: {
                   var9 = kf.a(param1, (byte) 2);
                   if (var9 == null) {
-                    break L5;
+                    break L6;
                   } else {
                     if ((var9.length() ^ -1) > -2) {
-                      break L5;
+                      break L6;
                     } else {
-                      L6: {
+                      L7: {
                         if (ug.a(var9.charAt(0), 32)) {
-                          break L6;
+                          break L7;
                         } else {
                           if (ug.a(var9.charAt(var9.length() + -1), 32)) {
-                            break L6;
+                            break L7;
                           } else {
                             var5 = 0;
                             var6 = 0;
-                            L7: while (true) {
+                            L8: while (true) {
                               if (param1.length() <= var6) {
-                                if (-1 < var5) {
+                                if (-1 > (var5 ^ -1)) {
                                   return false;
                                 } else {
                                   return true;
                                 }
                               } else {
-                                L8: {
+                                L9: {
                                   var7 = param1.charAt(var6);
                                   if (!ug.a((char) var7, 32)) {
                                     var5 = 0;
-                                    break L8;
+                                    break L9;
                                   } else {
                                     var5++;
-                                    break L8;
+                                    break L9;
                                   }
                                 }
-                                if (-3 < var5) {
-                                  var6++;
-                                  var6++;
-                                  continue L7;
-                                } else {
-                                  if (!param0) {
-                                    return false;
-                                  } else {
+                                L10: {
+                                  if (-3 < (var5 ^ -1)) {
                                     var6++;
-                                    continue L7;
+                                    break L10;
+                                  } else {
+                                    if (!param0) {
+                                      return false;
+                                    } else {
+                                      break L10;
+                                    }
                                   }
                                 }
+                                var6++;
+                                continue L8;
                               }
                             }
                           }

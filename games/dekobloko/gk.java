@@ -148,7 +148,7 @@ class gk extends ca implements vn {
             ((gk) this).field_Fb = true;
             ((gk) this).field_xb.a(4210752, 4088, 8405024);
             var6 = new dj((gk) this, ((gk) this).field_Bb, param1);
-            if (-6 == param2) {
+            if (-6 == (param2 ^ -1)) {
               var6.a(pb.field_e, 11, 14);
               var6.a(ig.field_Tb, 17, param0 ^ 62);
               if (3 != param2) {
@@ -179,7 +179,7 @@ class gk extends ca implements vn {
               }
             } else {
               L1: {
-                if (-257 != param2) {
+                if (-257 != (param2 ^ -1)) {
                   L2: {
                     stackOut_10_0 = (dj) var6;
                     stackIn_12_0 = stackOut_10_0;

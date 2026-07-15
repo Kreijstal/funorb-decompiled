@@ -51,10 +51,10 @@ final class i {
                     var3_int = 0;
                     L2: while (true) {
                       L3: {
-                        if (-25 >= var3_int) {
+                        if (-25 >= (var3_int ^ -1)) {
                           break L3;
                         } else {
-                          if (-1 == var2[var3_int]) {
+                          if (-1 == (var2[var3_int] ^ -1)) {
                             var3_int++;
                             continue L2;
                           } else {

@@ -37,7 +37,7 @@ final class ki extends bh {
             var8 = de.field_V;
             var3 = var8.d((byte) -99);
             mf.field_R = 127 & var3;
-            if (-1 == (var3 & 128)) {
+            if (-1 == (var3 & 128 ^ -1)) {
               stackOut_4_0 = 0;
               stackIn_5_0 = stackOut_4_0;
               break L0;
@@ -51,7 +51,7 @@ final class ki extends bh {
             fm.field_f = stackIn_5_0 != 0;
             tg.field_c = var8.d((byte) -71);
             fc.field_h = var8.f((byte) -108);
-            if (-3 != mf.field_R) {
+            if (-3 != (mf.field_R ^ -1)) {
               vl.field_k = 0;
               ic.field_a = 0;
               break L1;

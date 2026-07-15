@@ -78,7 +78,7 @@ final class wb extends w {
         int var12 = 0;
         L0: {
           var12 = client.field_A ? 1 : 0;
-          if (hk.field_c <= param1) {
+          if ((hk.field_c ^ -1) >= (param1 ^ -1)) {
             break L0;
           } else {
             param5 = param5 - (-param1 + hk.field_c);
@@ -87,7 +87,7 @@ final class wb extends w {
           }
         }
         L1: {
-          if (param1 + param5 > hk.field_g) {
+          if ((param1 + param5 ^ -1) < (hk.field_g ^ -1)) {
             param5 = hk.field_g + -param1;
             break L1;
           } else {
@@ -111,27 +111,36 @@ final class wb extends w {
             break L3;
           }
         }
-        if (0 < param5) {
+        if (0 >= param5) {
+          return;
+        } else {
           if (param2 > 0) {
             var6 = param3 * hk.field_j + param1;
-            if (param0 != 31) {
-              field_Qb = null;
+            if (param0 == 31) {
               var7 = -param5 + hk.field_j;
               param3 = -param2;
               L4: while (true) {
-                if (-1 >= param3) {
+                if (-1 >= (param3 ^ -1)) {
                   return;
                 } else {
                   param1 = -param5;
                   L5: while (true) {
-                    if (-1 <= param1) {
+                    if (-1 >= (param1 ^ -1)) {
                       var6 = var6 + var7;
                       param3++;
                       continue L4;
                     } else {
                       var8 = hk.field_l[var6];
-                      if ((65280 & var8) >> 1753310408 > param4) {
-                        if ((255 & var8 >> 459642768) <= (var8 >> -1566086360 & 255)) {
+                      if ((65280 & var8) >> 1753310408 <= param4) {
+                        var6++;
+                        param1++;
+                        continue L5;
+                      } else {
+                        if ((255 & var8 >> 459642768 ^ -1) < (var8 >> -1566086360 & 255 ^ -1)) {
+                          var6++;
+                          param1++;
+                          continue L5;
+                        } else {
                           L6: {
                             var9 = ((16711680 & var8) >> -1904407857) - 60;
                             if (-256 > (var9 ^ -1)) {
@@ -148,37 +157,38 @@ final class wb extends w {
                           var6++;
                           param1++;
                           continue L5;
-                        } else {
-                          var6++;
-                          param1++;
-                          continue L5;
                         }
-                      } else {
-                        var6++;
-                        param1++;
-                        continue L5;
                       }
                     }
                   }
                 }
               }
             } else {
+              field_Qb = null;
               var7 = -param5 + hk.field_j;
               param3 = -param2;
               L7: while (true) {
-                if (-1 >= param3) {
+                if (-1 >= (param3 ^ -1)) {
                   return;
                 } else {
                   param1 = -param5;
                   L8: while (true) {
-                    if (-1 <= param1) {
+                    if (-1 >= (param1 ^ -1)) {
                       var6 = var6 + var7;
                       param3++;
                       continue L7;
                     } else {
                       var8 = hk.field_l[var6];
-                      if ((65280 & var8) >> 1753310408 > param4) {
-                        if ((255 & var8 >> 459642768) <= (var8 >> -1566086360 & 255)) {
+                      if ((65280 & var8) >> 1753310408 <= param4) {
+                        var6++;
+                        param1++;
+                        continue L8;
+                      } else {
+                        if ((255 & var8 >> 459642768 ^ -1) < (var8 >> -1566086360 & 255 ^ -1)) {
+                          var6++;
+                          param1++;
+                          continue L8;
+                        } else {
                           L9: {
                             var9 = ((16711680 & var8) >> -1904407857) - 60;
                             if (-256 > (var9 ^ -1)) {
@@ -195,15 +205,7 @@ final class wb extends w {
                           var6++;
                           param1++;
                           continue L8;
-                        } else {
-                          var6++;
-                          param1++;
-                          continue L8;
                         }
-                      } else {
-                        var6++;
-                        param1++;
-                        continue L8;
                       }
                     }
                   }
@@ -213,8 +215,6 @@ final class wb extends w {
           } else {
             return;
           }
-        } else {
-          return;
         }
     }
 

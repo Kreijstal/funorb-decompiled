@@ -49,10 +49,10 @@ final class vk {
         var22 = client.field_A ? 1 : 0;
         if (param2 != null) {
           L0: {
-            if (-1 <= param3) {
+            if (-1 <= (param3 ^ -1)) {
               break L0;
             } else {
-              if (-1 >= param0) {
+              if (-1 <= (param0 ^ -1)) {
                 break L0;
               } else {
                 L1: {
@@ -124,7 +124,7 @@ final class vk {
                   L6: {
                     var18 = var14;
                     var19 = var15;
-                    if (var18 <= var19) {
+                    if ((var18 ^ -1) >= (var19 ^ -1)) {
                       break L6;
                     } else {
                       var19 = var8 * param0 / (var8 - -var9) + param4;
@@ -189,10 +189,14 @@ final class vk {
                             } else {
                               param2[1].c(var20, param4);
                               var20 = var20 + param2[1].field_K;
-                              if (0 == 0) {
-                                continue L12;
+                              if (0 != 0) {
+                                break L11;
                               } else {
-                                break L13;
+                                if (0 == 0) {
+                                  continue L12;
+                                } else {
+                                  break L13;
+                                }
                               }
                             }
                           }
@@ -216,10 +220,14 @@ final class vk {
                             } else {
                               param2[7].c(var20, var15);
                               var20 = var20 + param2[7].field_K;
-                              if (0 == 0) {
-                                continue L15;
+                              if (0 != 0) {
+                                break L14;
                               } else {
-                                break L16;
+                                if (0 == 0) {
+                                  continue L15;
+                                } else {
+                                  break L16;
+                                }
                               }
                             }
                           }
@@ -235,7 +243,7 @@ final class vk {
                     if (param2[3] == null) {
                       break L17;
                     } else {
-                      if (param2[3].field_C == 0) {
+                      if ((param2[3].field_C ^ -1) == -1) {
                         break L17;
                       } else {
                         hk.f(param5, var18, var16, var19);
@@ -247,10 +255,14 @@ final class vk {
                             } else {
                               param2[3].c(param5, var20);
                               var20 = var20 + param2[3].field_C;
-                              if (0 == 0) {
-                                continue L18;
+                              if (0 != 0) {
+                                break L17;
                               } else {
-                                break L19;
+                                if (0 == 0) {
+                                  continue L18;
+                                } else {
+                                  break L19;
+                                }
                               }
                             }
                           }
@@ -269,15 +281,19 @@ final class vk {
                         var20 = var14;
                         L21: while (true) {
                           L22: {
-                            if (var20 >= var15) {
+                            if ((var20 ^ -1) <= (var15 ^ -1)) {
                               break L22;
                             } else {
                               param2[5].c(var13, var20);
                               var20 = var20 + param2[5].field_C;
-                              if (0 == 0) {
-                                continue L21;
+                              if (0 != 0) {
+                                break L20;
                               } else {
-                                break L22;
+                                if (0 == 0) {
+                                  continue L21;
+                                } else {
+                                  break L22;
+                                }
                               }
                             }
                           }
@@ -296,7 +312,7 @@ final class vk {
                       if (0 == param2[4].field_K) {
                         break L23;
                       } else {
-                        if (param2[4].field_C != 0) {
+                        if ((param2[4].field_C ^ -1) != -1) {
                           hk.f(var16, var18, var17, var19);
                           var20 = var14;
                           L24: while (true) {
@@ -304,26 +320,37 @@ final class vk {
                               if (var20 >= var15) {
                                 break L25;
                               } else {
-                                var21 = var12;
-                                L26: while (true) {
-                                  L27: {
-                                    if (var21 >= var13) {
-                                      break L27;
-                                    } else {
-                                      param2[4].c(var21, var20);
-                                      var21 = var21 + param2[4].field_K;
-                                      if (0 == 0) {
-                                        continue L26;
-                                      } else {
-                                        break L27;
+                                if (0 != 0) {
+                                  break L23;
+                                } else {
+                                  var21 = var12;
+                                  L26: while (true) {
+                                    L27: {
+                                      L28: {
+                                        if ((var21 ^ -1) <= (var13 ^ -1)) {
+                                          break L28;
+                                        } else {
+                                          param2[4].c(var21, var20);
+                                          var21 = var21 + param2[4].field_K;
+                                          if (0 != 0) {
+                                            break L27;
+                                          } else {
+                                            if (0 == 0) {
+                                              continue L26;
+                                            } else {
+                                              break L28;
+                                            }
+                                          }
+                                        }
                                       }
+                                      var20 = var20 + param2[4].field_C;
+                                      break L27;
                                     }
-                                  }
-                                  var20 = var20 + param2[4].field_C;
-                                  if (0 == 0) {
-                                    continue L24;
-                                  } else {
-                                    break L25;
+                                    if (0 == 0) {
+                                      continue L24;
+                                    } else {
+                                      break L25;
+                                    }
                                   }
                                 }
                               }

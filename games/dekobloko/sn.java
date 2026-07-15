@@ -162,7 +162,7 @@ final class sn {
               }
             }
             L4: {
-              if (param3.field_f != -3) {
+              if ((param3.field_f ^ -1) != -3) {
                 break L4;
               } else {
                 var6_int = var6_int + (param1.field_t + -((sn) this).field_b.field_K);
@@ -170,7 +170,7 @@ final class sn {
               }
             }
             L5: {
-              if (-3 == param3.field_o) {
+              if (-3 == (param3.field_o ^ -1)) {
                 var7 = var7 + (-((sn) this).field_b.field_C + param1.field_y);
                 break L5;
               } else {
@@ -189,7 +189,7 @@ final class sn {
             if (param3.field_z == null) {
               break L6;
             } else {
-              if (((sn) this).field_f > -1) {
+              if ((((sn) this).field_f ^ -1) > -1) {
                 break L6;
               } else {
                 L7: {
@@ -199,7 +199,7 @@ final class sn {
                   stackIn_18_1 = stackOut_16_1;
                   stackIn_17_0 = stackOut_16_0;
                   stackIn_17_1 = stackOut_16_1;
-                  if (2147483647 == ((sn) this).field_i) {
+                  if (2147483647 == (((sn) this).field_i ^ -1)) {
                     stackOut_18_0 = (mm) (Object) stackIn_18_0;
                     stackOut_18_1 = (String) (Object) stackIn_18_1;
                     stackOut_18_2 = 0;
@@ -435,7 +435,7 @@ final class sn {
                 if (pe.b(25973, 1)) {
                   L4: {
                     var6 = de.field_V.d((byte) -85);
-                    if (var6 != 0) {
+                    if ((var6 ^ -1) != -1) {
                       bh.field_k = var6;
                       ph.field_xb = bh.field_l;
                       sm.field_e = -1;
@@ -557,7 +557,7 @@ final class sn {
                         }
                         L13: {
                           on.field_d = stackIn_47_0 != 0;
-                          if ((var7 & 2) == 0) {
+                          if ((var7 & 2 ^ -1) == -1) {
                             stackOut_49_0 = 0;
                             stackIn_50_0 = stackOut_49_0;
                             break L13;
@@ -597,7 +597,7 @@ final class sn {
                         ai.field_N = new byte[uj.field_a];
                         var8 = 0;
                         L16: while (true) {
-                          if (var8 >= uj.field_a) {
+                          if ((var8 ^ -1) <= (uj.field_a ^ -1)) {
                             break L15;
                           } else {
                             ai.field_N[var8] = de.field_V.g((byte) -99);
@@ -675,7 +675,7 @@ final class sn {
                       break L19;
                     }
                     L25: {
-                      if (-1 <= eh.field_a) {
+                      if (-1 <= (eh.field_a ^ -1)) {
                         break L25;
                       } else {
                         ce.field_w = true;
@@ -685,7 +685,7 @@ final class sn {
                     we.field_b.a(pd.field_h, (byte) 63);
                     var8 = 0;
                     L26: while (true) {
-                      if (-5 <= var8) {
+                      if (-5 >= (var8 ^ -1)) {
                         de.field_V.a(pd.field_h, (byte) 123);
                         return bh.field_k;
                       } else {

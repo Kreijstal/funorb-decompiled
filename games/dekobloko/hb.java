@@ -21,8 +21,8 @@ final class hb extends w {
         if (!param1) {
           ((hb) this).field_Sb.field_Y = ((hb) this).field_Xb.toString();
           if (param1) {
-            if (-1 != ig.field_Yb) {
-              if (((hb) this).field_ob == 0) {
+            if (-1 != (ig.field_Yb ^ -1)) {
+              if ((((hb) this).field_ob ^ -1) == -1) {
                 ((hb) this).field_Rb = 1;
                 if (param0 == -63) {
                   return ((hb) this).field_Rb;
@@ -39,18 +39,18 @@ final class hb extends w {
                 }
               }
             } else {
-              if (param0 != -63) {
-                field_Wb = 87;
+              if (param0 == -63) {
                 return ((hb) this).field_Rb;
               } else {
+                field_Wb = 87;
                 return ((hb) this).field_Rb;
               }
             }
           } else {
-            if (param0 != -63) {
-              field_Wb = 87;
+            if (param0 == -63) {
               return ((hb) this).field_Rb;
             } else {
+              field_Wb = 87;
               return ((hb) this).field_Rb;
             }
           }
@@ -107,11 +107,11 @@ final class hb extends w {
                 }
               }
               if (wh.field_c == 84) {
-                if (((hb) this).field_Xb.length() > 0) {
+                if (((hb) this).field_Xb.length() <= 0) {
+                  return 1;
+                } else {
                   ((hb) this).field_Y = ((hb) this).field_Xb.toString();
                   return 2;
-                } else {
-                  return 1;
                 }
               } else {
                 if (-14 != (wh.field_c ^ -1)) {
@@ -123,29 +123,33 @@ final class hb extends w {
             } else {
               L5: {
                 ((hb) this).field_Sb.field_Y = ((hb) this).field_Xb.toString();
-                if (-1 == (ig.field_Yb ^ -1)) {
+                if (!param1) {
                   break L5;
                 } else {
-                  if (((hb) this).field_ob != 0) {
+                  if (-1 == (ig.field_Yb ^ -1)) {
                     break L5;
                   } else {
-                    L6: {
-                      ((hb) this).field_Rb = 1;
-                      if (param0 == -63) {
-                        break L6;
-                      } else {
-                        field_Wb = 87;
-                        break L6;
+                    if ((((hb) this).field_ob ^ -1) != -1) {
+                      break L5;
+                    } else {
+                      L6: {
+                        ((hb) this).field_Rb = 1;
+                        if (param0 == -63) {
+                          break L6;
+                        } else {
+                          field_Wb = 87;
+                          break L6;
+                        }
                       }
+                      return ((hb) this).field_Rb;
                     }
-                    return ((hb) this).field_Rb;
                   }
                 }
               }
-              if (param0 != -63) {
-                field_Wb = 87;
+              if (param0 == -63) {
                 return ((hb) this).field_Rb;
               } else {
+                field_Wb = 87;
                 return ((hb) this).field_Rb;
               }
             }
@@ -155,9 +159,9 @@ final class hb extends w {
 
     final boolean f(int param0) {
         int var2 = 0;
-        if (((hb) this).field_Rb == -1) {
+        if ((((hb) this).field_Rb ^ -1) == -1) {
           if (wh.field_c == 85) {
-            if (((hb) this).field_Xb.length() < -1) {
+            if ((((hb) this).field_Xb.length() ^ -1) < -1) {
               L0: {
                 StringBuilder discarded$26 = vf.a(((hb) this).field_Xb, param0 ^ -23249, ((hb) this).field_Xb.length() + -1, ' ');
                 if (-13 >= (((hb) this).field_Xb.length() ^ -1)) {
@@ -191,8 +195,8 @@ final class hb extends w {
                     if (fl.a((char) var2, (byte) 23)) {
                       L3: {
                         StringBuilder discarded$29 = ((hb) this).field_Xb.append(var2);
-                        if (-85 == wh.field_c) {
-                          if (-1 < ((hb) this).field_Xb.length()) {
+                        if (-85 == (wh.field_c ^ -1)) {
+                          if (-1 > (((hb) this).field_Xb.length() ^ -1)) {
                             ((hb) this).field_Y = ((hb) this).field_Xb.toString();
                             ((hb) this).field_Rb = 2;
                             break L3;
@@ -232,46 +236,46 @@ final class hb extends w {
                   ((hb) this).field_Y = ((hb) this).field_Xb.toString();
                   ((hb) this).field_Rb = 2;
                   if ((wh.field_c ^ -1) != -14) {
-                    if (param0 != 261) {
-                      int discarded$31 = ((hb) this).a((byte) 13, false);
+                    if (param0 == 261) {
                       return true;
                     } else {
+                      int discarded$31 = ((hb) this).a((byte) 13, false);
                       return true;
                     }
                   } else {
                     ((hb) this).field_Rb = 1;
-                    if (param0 != 261) {
-                      int discarded$32 = ((hb) this).a((byte) 13, false);
+                    if (param0 == 261) {
                       return true;
                     } else {
+                      int discarded$32 = ((hb) this).a((byte) 13, false);
                       return true;
                     }
                   }
                 } else {
                   ((hb) this).field_Rb = 1;
                   if ((wh.field_c ^ -1) != -14) {
-                    if (param0 != 261) {
-                      int discarded$33 = ((hb) this).a((byte) 13, false);
+                    if (param0 == 261) {
                       return true;
                     } else {
+                      int discarded$33 = ((hb) this).a((byte) 13, false);
                       return true;
                     }
                   } else {
                     ((hb) this).field_Rb = 1;
-                    if (param0 != 261) {
-                      int discarded$34 = ((hb) this).a((byte) 13, false);
+                    if (param0 == 261) {
                       return true;
                     } else {
+                      int discarded$34 = ((hb) this).a((byte) 13, false);
                       return true;
                     }
                   }
                 }
               } else {
                 if ((wh.field_c ^ -1) != -14) {
-                  if (param0 != 261) {
-                    int discarded$35 = ((hb) this).a((byte) 13, false);
+                  if (param0 == 261) {
                     return true;
                   } else {
+                    int discarded$35 = ((hb) this).a((byte) 13, false);
                     return true;
                   }
                 } else {
@@ -289,7 +293,7 @@ final class hb extends w {
               }
             } else {
               L7: {
-                if (-13 <= ((hb) this).field_Xb.length()) {
+                if (-13 >= (((hb) this).field_Xb.length() ^ -1)) {
                   break L7;
                 } else {
                   L8: {
@@ -320,8 +324,8 @@ final class hb extends w {
                     if (fl.a((char) var2, (byte) 23)) {
                       L10: {
                         StringBuilder discarded$39 = ((hb) this).field_Xb.append(var2);
-                        if (-85 == wh.field_c) {
-                          if (-1 < ((hb) this).field_Xb.length()) {
+                        if (-85 == (wh.field_c ^ -1)) {
+                          if (-1 > (((hb) this).field_Xb.length() ^ -1)) {
                             ((hb) this).field_Y = ((hb) this).field_Xb.toString();
                             ((hb) this).field_Rb = 2;
                             break L10;
@@ -362,10 +366,10 @@ final class hb extends w {
                   ((hb) this).field_Rb = 2;
                   if ((wh.field_c ^ -1) == -14) {
                     ((hb) this).field_Rb = 1;
-                    if (param0 == 261) {
+                    if (param0 != 261) {
+                      int discarded$41 = ((hb) this).a((byte) 13, false);
                       return true;
                     } else {
-                      int discarded$41 = ((hb) this).a((byte) 13, false);
                       return true;
                     }
                   } else {
@@ -421,7 +425,7 @@ final class hb extends w {
             }
           } else {
             L18: {
-              if (-13 <= ((hb) this).field_Xb.length()) {
+              if (-13 >= (((hb) this).field_Xb.length() ^ -1)) {
                 break L18;
               } else {
                 L19: {
@@ -452,8 +456,8 @@ final class hb extends w {
                   if (fl.a((char) var2, (byte) 23)) {
                     L21: {
                       StringBuilder discarded$47 = ((hb) this).field_Xb.append(var2);
-                      if (-85 == wh.field_c) {
-                        if (-1 < ((hb) this).field_Xb.length()) {
+                      if (-85 == (wh.field_c ^ -1)) {
+                        if (-1 > (((hb) this).field_Xb.length() ^ -1)) {
                           ((hb) this).field_Y = ((hb) this).field_Xb.toString();
                           ((hb) this).field_Rb = 2;
                           break L21;
@@ -473,10 +477,10 @@ final class hb extends w {
                         break L22;
                       }
                     }
-                    if (param0 != 261) {
-                      int discarded$48 = ((hb) this).a((byte) 13, false);
+                    if (param0 == 261) {
                       return true;
                     } else {
+                      int discarded$48 = ((hb) this).a((byte) 13, false);
                       return true;
                     }
                   } else {
@@ -486,9 +490,10 @@ final class hb extends w {
               }
             }
             if (-85 == (wh.field_c ^ -1)) {
-              if (-1 <= (((hb) this).field_Xb.length() ^ -1)) {
+              if (-1 > (((hb) this).field_Xb.length() ^ -1)) {
                 L23: {
-                  ((hb) this).field_Rb = 1;
+                  ((hb) this).field_Y = ((hb) this).field_Xb.toString();
+                  ((hb) this).field_Rb = 2;
                   if ((wh.field_c ^ -1) != -14) {
                     break L23;
                   } else {
@@ -507,8 +512,7 @@ final class hb extends w {
                 return true;
               } else {
                 L25: {
-                  ((hb) this).field_Y = ((hb) this).field_Xb.toString();
-                  ((hb) this).field_Rb = 2;
+                  ((hb) this).field_Rb = 1;
                   if ((wh.field_c ^ -1) != -14) {
                     break L25;
                   } else {

@@ -3110,10 +3110,10 @@ final class lk {
             if (!(((lk) this).field_S)) {
                 var4 = param2 + -((lk) this).field_q;
                 var5 = -((lk) this).field_L + param0;
-                if (-1 >= var4) {
-                    if (-1 <= var5) {
-                        if (((lk) this).field_C > var4) {
-                            if (var5 >= ((lk) this).field_zb) {
+                if (-1 >= (var4 ^ -1)) {
+                    if (-1 >= (var5 ^ -1)) {
+                        if ((((lk) this).field_C ^ -1) < (var4 ^ -1)) {
+                            if ((var5 ^ -1) <= (((lk) this).field_zb ^ -1)) {
                                 var4 = 119 / ((45 - param1) / 37);
                                 return 0;
                             }
@@ -3597,7 +3597,7 @@ final class lk {
         ((lk) this).field_e = param1;
         L1: while (true) {
           L2: {
-            if (param1 != 0) {
+            if ((param1 ^ -1) != -1) {
               break L2;
             } else {
               if (((lk) this).field_y) {
@@ -3643,10 +3643,10 @@ final class lk {
             }
           }
           L4: {
-            if (((lk) this).field_g != -1) {
+            if ((((lk) this).field_g ^ -1) != -1) {
               break L4;
             } else {
-              if (-1 < param2) {
+              if (-1 > (param2 ^ -1)) {
                 L5: {
                   var4 = ((int)((double)((lk) this).field_k * Math.sqrt((double)(((lk) this).field_a - -param2) / ((double)((lk) this).field_a * 2.0))) + 4) / 8;
                   if (var4 > ((lk) this).field_k) {

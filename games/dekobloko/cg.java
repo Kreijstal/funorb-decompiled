@@ -155,10 +155,10 @@ final class cg {
         }
         L1: {
           L2: {
-            if (bf.field_r < -1) {
+            if ((bf.field_r ^ -1) < -1) {
               break L2;
             } else {
-              if (-1 < tg.field_e) {
+              if (-1 > (tg.field_e ^ -1)) {
                 break L2;
               } else {
                 break L1;

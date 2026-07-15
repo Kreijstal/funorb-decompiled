@@ -37,31 +37,30 @@ final class sb extends bh {
                 var1 = (tj) (Object) oc.field_b.c((byte) 50);
                 L2: while (true) {
                   if (var1 == null) {
-                    if (param0 != 123) {
-                      var5 = null;
-                      fm discarded$1 = sb.a(-113L, (String) null, false, (String) null, 29);
+                    if (param0 == 123) {
                       return;
                     } else {
+                      var5 = null;
+                      fm discarded$1 = sb.a(-113L, (String) null, false, (String) null, 29);
                       return;
                     }
                   } else {
                     if (0 < var1.field_Qb) {
-                      L3: {
-                        var1.field_Qb = var1.field_Qb - 1;
-                        if (var1.field_Qb != 0) {
-                          break L3;
+                      var1.field_Qb = var1.field_Qb - 1;
+                      if ((var1.field_Qb ^ -1) != -1) {
+                        var1 = (tj) (Object) oc.field_b.d(true);
+                        continue L2;
+                      } else {
+                        var1.field_hc = 0;
+                        if (!var1.g((byte) 59)) {
+                          var1 = (tj) (Object) oc.field_b.d(true);
+                          continue L2;
                         } else {
-                          var1.field_hc = 0;
-                          if (!var1.g((byte) 59)) {
-                            break L3;
-                          } else {
-                            var1.b((byte) 101);
-                            break L3;
-                          }
+                          var1.b((byte) 101);
+                          var1 = (tj) (Object) oc.field_b.d(true);
+                          continue L2;
                         }
                       }
-                      var1 = (tj) (Object) oc.field_b.d(true);
-                      continue L2;
                     } else {
                       var1 = (tj) (Object) oc.field_b.d(true);
                       continue L2;
@@ -69,49 +68,49 @@ final class sb extends bh {
                   }
                 }
               } else {
-                L4: {
-                  if (var1_ref.field_Rb > 0) {
-                    var1_ref.field_Rb = var1_ref.field_Rb - 1;
-                    if (-1 == (var1_ref.field_Rb ^ -1)) {
-                      var1_ref.field_oc = 0;
-                      if (!var1_ref.i((byte) 115)) {
-                        break L4;
-                      } else {
-                        var1_ref.b((byte) 113);
-                        break L4;
-                      }
+                if (var1_ref.field_Rb > 0) {
+                  var1_ref.field_Rb = var1_ref.field_Rb - 1;
+                  if (-1 == (var1_ref.field_Rb ^ -1)) {
+                    var1_ref.field_oc = 0;
+                    if (!var1_ref.i((byte) 115)) {
+                      var1_ref = (ve) (Object) h.field_b.d(true);
+                      continue L1;
                     } else {
-                      break L4;
+                      var1_ref.b((byte) 113);
+                      var1_ref = (ve) (Object) h.field_b.d(true);
+                      continue L1;
                     }
                   } else {
-                    break L4;
+                    var1_ref = (ve) (Object) h.field_b.d(true);
+                    continue L1;
                   }
+                } else {
+                  var1_ref = (ve) (Object) h.field_b.d(true);
+                  continue L1;
                 }
-                var1_ref = (ve) (Object) h.field_b.d(true);
-                continue L1;
               }
             }
           } else {
-            L5: {
-              if (var1.field_Qb >= -1) {
-                break L5;
+            if ((var1.field_Qb ^ -1) >= -1) {
+              var1 = (tj) (Object) i.field_b.d(true);
+              continue L0;
+            } else {
+              var1.field_Qb = var1.field_Qb - 1;
+              if (-1 != (var1.field_Qb ^ -1)) {
+                var1 = (tj) (Object) i.field_b.d(true);
+                continue L0;
               } else {
-                var1.field_Qb = var1.field_Qb - 1;
-                if (-1 != var1.field_Qb) {
-                  break L5;
+                var1.field_hc = 0;
+                if (var1.g((byte) 111)) {
+                  var1.b((byte) 112);
+                  var1 = (tj) (Object) i.field_b.d(true);
+                  continue L0;
                 } else {
-                  var1.field_hc = 0;
-                  if (var1.g((byte) 111)) {
-                    var1.b((byte) 112);
-                    break L5;
-                  } else {
-                    break L5;
-                  }
+                  var1 = (tj) (Object) i.field_b.d(true);
+                  continue L0;
                 }
               }
             }
-            var1 = (tj) (Object) i.field_b.d(true);
-            continue L0;
           }
         }
     }
