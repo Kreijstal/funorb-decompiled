@@ -22,19 +22,22 @@ final class li {
         String stackOut_3_0 = null;
         try {
           L0: {
-            var3_int = param2.a(false);
-            if (var3_int > param0) {
-              var3_int = param0;
-              break L0;
-            } else {
-              break L0;
+            L1: {
+              var3_int = param2.a(false);
+              if (var3_int > param0) {
+                var3_int = param0;
+                break L1;
+              } else {
+                break L1;
+              }
             }
+            var4 = new byte[var3_int];
+            param2.field_n = param2.field_n + me.field_z.a(param2.field_n, (byte) 91, param1, var4, param2.field_r, var3_int);
+            var5 = un.a(var4, 0, 0, var3_int);
+            stackOut_3_0 = (String) var5;
+            stackIn_4_0 = stackOut_3_0;
+            break L0;
           }
-          var4 = new byte[var3_int];
-          param2.field_n = param2.field_n + me.field_z.a(param2.field_n, (byte) 91, param1, var4, param2.field_r, var3_int);
-          var5 = un.a(var4, 0, 0, var3_int);
-          stackOut_3_0 = (String) var5;
-          stackIn_4_0 = stackOut_3_0;
         } catch (java.lang.Exception decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = (Exception) (Object) decompiledCaughtException;

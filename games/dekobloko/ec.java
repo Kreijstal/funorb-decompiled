@@ -55,8 +55,9 @@ final class ec {
             }
           } else {
             var1.f(8, -4);
+            int fieldTemp$2 = var1.field_n + 1;
             var1.field_n = var1.field_n + 1;
-            var2 = var1.field_n + 1;
+            var2 = fieldTemp$2;
             ba.a(-32141, var1);
             we.field_b.b(var1.field_n - var2, true);
             continue L0;

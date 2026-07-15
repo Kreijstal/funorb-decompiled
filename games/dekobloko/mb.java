@@ -30,31 +30,35 @@ final class mb {
               }
             }
             if (k.field_c.field_c != -1) {
-              el.field_J = ik.a(4);
-              p.field_a = ik.a(4);
+              long dupTemp$2 = ik.a(4);
+              el.field_J = dupTemp$2;
+              p.field_a = dupTemp$2;
               if (-2 == k.field_c.field_c) {
                 try {
                   L1: {
-                    qc.field_s = new qk((java.net.Socket) k.field_c.field_b, lf.field_f);
-                    var2_ref_uf = de.field_V;
-                    we.field_b.field_n = 0;
-                    ph.field_xb = ba.field_f;
-                    if (!param0) {
-                      stackOut_8_0 = -1;
-                      stackIn_9_0 = stackOut_8_0;
-                      break L1;
-                    } else {
-                      stackOut_7_0 = -2;
-                      stackIn_9_0 = stackOut_7_0;
-                      break L1;
+                    L2: {
+                      qc.field_s = new qk((java.net.Socket) k.field_c.field_b, lf.field_f);
+                      var2_ref_uf = de.field_V;
+                      we.field_b.field_n = 0;
+                      ph.field_xb = ba.field_f;
+                      if (!param0) {
+                        stackOut_8_0 = -1;
+                        stackIn_9_0 = stackOut_8_0;
+                        break L2;
+                      } else {
+                        stackOut_7_0 = -2;
+                        stackIn_9_0 = stackOut_7_0;
+                        break L2;
+                      }
                     }
+                    lg.field_U = stackIn_9_0;
+                    bb.field_d = stackIn_9_0;
+                    kf.field_L = stackIn_9_0;
+                    var2_ref_uf.field_n = 0;
+                    gi.a(kb.field_g, l.field_c, 17, (wl) (Object) we.field_b, qk.field_a);
+                    wj.c(4792, -1);
+                    break L1;
                   }
-                  lg.field_U = stackIn_9_0;
-                  bb.field_d = stackIn_9_0;
-                  kf.field_L = stackIn_9_0;
-                  var2_ref_uf.field_n = 0;
-                  gi.a(kb.field_g, l.field_c, 17, (wl) (Object) we.field_b, qk.field_a);
-                  wj.c(4792, -1);
                 } catch (java.io.IOException decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
                   var2_ref_IOException = (IOException) (Object) decompiledCaughtException;
@@ -89,7 +93,6 @@ final class mb {
 
     final static String a(int param0, hl param1) {
         Object var2 = null;
-        String var2_ref = null;
         String var3 = null;
         int var4 = 0;
         String var5 = null;
@@ -103,7 +106,7 @@ final class mb {
             var3 = var5;
             var3 = var5;
             if (param1.field_l == 1) {
-              var2_ref = "<img=0>" + var5;
+              var2 = (Object) (Object) ("<img=0>" + var5);
               break L0;
             } else {
               break L0;
@@ -111,9 +114,9 @@ final class mb {
           }
           L1: {
             if (-3 == (param1.field_l ^ -1)) {
-              var2_ref = "<img=1>" + var2_ref;
-              var3 = var2_ref;
-              var3 = var2_ref;
+              var2 = (Object) (Object) ("<img=1>" + var2);
+              var3 = (String) var2;
+              var3 = (String) var2;
               break L1;
             } else {
               break L1;
@@ -174,7 +177,7 @@ final class mb {
                         }
                       }
                       if (!param1.field_j) {
-                        var3 = var3 + var2_ref + ": ";
+                        var3 = var3 + var2 + ": ";
                         return var3;
                       } else {
                         return var3;
@@ -189,7 +192,7 @@ final class mb {
                         }
                       }
                       if (!param1.field_j) {
-                        var3 = var3 + var2_ref + ": ";
+                        var3 = var3 + var2 + ": ";
                         return var3;
                       } else {
                         return var3;
@@ -223,7 +226,7 @@ final class mb {
                       }
                     }
                     if (!param1.field_j) {
-                      var3 = var3 + var2_ref + ": ";
+                      var3 = var3 + var2 + ": ";
                       return var3;
                     } else {
                       return var3;
@@ -240,7 +243,7 @@ final class mb {
                 }
               }
               if (!param1.field_j) {
-                var3 = var3 + var2_ref + ": ";
+                var3 = var3 + var2 + ": ";
                 return var3;
               } else {
                 return var3;
@@ -303,7 +306,7 @@ final class mb {
                       }
                     }
                     if (!param1.field_j) {
-                      var3 = var3 + var2_ref + ": ";
+                      var3 = var3 + var2 + ": ";
                       return var3;
                     } else {
                       return var3;
@@ -336,7 +339,7 @@ final class mb {
                       }
                     }
                     if (!param1.field_j) {
-                      var3 = var3 + var2_ref + ": ";
+                      var3 = var3 + var2 + ": ";
                       return var3;
                     } else {
                       return var3;
@@ -353,7 +356,7 @@ final class mb {
                 }
               }
               if (!param1.field_j) {
-                var3 = var3 + var2_ref + ": ";
+                var3 = var3 + var2 + ": ";
                 return var3;
               } else {
                 return var3;

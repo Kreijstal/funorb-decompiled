@@ -40,8 +40,11 @@ final class lf {
                     }
                   }
                   try {
-                    ((lf) this).field_a.setInput(param1.field_r, 10 + param1.field_n, -10 + -param1.field_n + -8 + param1.field_r.length);
-                    int discarded$2 = ((lf) this).field_a.inflate(param2);
+                    L3: {
+                      ((lf) this).field_a.setInput(param1.field_r, 10 + param1.field_n, -10 + -param1.field_n + -8 + param1.field_r.length);
+                      int discarded$2 = ((lf) this).field_a.inflate(param2);
+                      break L3;
+                    }
                   } catch (java.lang.Exception decompiledCaughtParameter0) {
                     decompiledCaughtException = decompiledCaughtParameter0;
                     exception = (Exception) (Object) decompiledCaughtException;

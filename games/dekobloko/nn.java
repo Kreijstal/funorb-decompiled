@@ -21,27 +21,30 @@ final class nn {
         var3 = (Object) (Object) km.field_z;
         synchronized (var3) {
           L1: {
-            if (null != wj.field_Ob) {
-              sh.field_a.c((rh) (Object) wj.field_Ob);
-              wj.field_Ob = null;
-              break L1;
-            } else {
-              break L1;
+            L2: {
+              if (null != wj.field_Ob) {
+                sh.field_a.c((rh) (Object) wj.field_Ob);
+                wj.field_Ob = null;
+                break L2;
+              } else {
+                break L2;
+              }
             }
-          }
-          L2: {
-            if (param1 != null) {
-              wj.field_Ob = new ia(param1);
-              wj.field_Ob.a(a.field_g * 50 / 128);
-              wj.field_Ob.c(param0);
-              sh.field_a.a((rh) (Object) wj.field_Ob);
-              break L2;
-            } else {
-              break L2;
+            L3: {
+              if (param1 != null) {
+                wj.field_Ob = new ia(param1);
+                wj.field_Ob.a(a.field_g * 50 / 128);
+                wj.field_Ob.c(param0);
+                sh.field_a.a((rh) (Object) wj.field_Ob);
+                break L3;
+              } else {
+                break L3;
+              }
             }
+            km.field_z.a();
+            rc.field_d = param1;
+            break L1;
           }
-          km.field_z.a();
-          rc.field_d = param1;
         }
     }
 

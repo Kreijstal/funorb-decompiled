@@ -93,13 +93,16 @@ final class pn extends vb {
         int stackOut_3_0 = 0;
         int stackOut_1_0 = 0;
         try {
-          if (!param0) {
-            stackOut_3_0 = -1 + Integer.parseInt(((pn) this).field_hb.field_E);
-            stackIn_4_0 = stackOut_3_0;
-          } else {
-            stackOut_1_0 = 6;
-            stackIn_2_0 = stackOut_1_0;
-            return stackIn_2_0;
+          L0: {
+            if (!param0) {
+              stackOut_3_0 = -1 + Integer.parseInt(((pn) this).field_hb.field_E);
+              stackIn_4_0 = stackOut_3_0;
+              break L0;
+            } else {
+              stackOut_1_0 = 6;
+              stackIn_2_0 = stackOut_1_0;
+              return stackIn_2_0;
+            }
           }
         } catch (java.lang.Exception decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -155,8 +158,11 @@ final class pn extends vb {
           }
         }
         try {
-          stackOut_2_0 = Integer.parseInt(((pn) this).field_gb.field_E);
-          stackIn_3_0 = stackOut_2_0;
+          L1: {
+            stackOut_2_0 = Integer.parseInt(((pn) this).field_gb.field_E);
+            stackIn_3_0 = stackOut_2_0;
+            break L1;
+          }
         } catch (java.lang.Exception decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = (NumberFormatException) (Object) decompiledCaughtException;
@@ -277,8 +283,11 @@ final class pn extends vb {
           }
         }
         try {
-          stackOut_2_0 = Integer.parseInt(((pn) this).field_ib.field_E);
-          stackIn_3_0 = stackOut_2_0;
+          L1: {
+            stackOut_2_0 = Integer.parseInt(((pn) this).field_ib.field_E);
+            stackIn_3_0 = stackOut_2_0;
+            break L1;
+          }
         } catch (java.lang.Exception decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = (NumberFormatException) (Object) decompiledCaughtException;

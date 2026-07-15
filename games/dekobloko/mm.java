@@ -370,27 +370,33 @@ abstract class mm extends be {
                                             break L3;
                                           } else {
                                             try {
-                                              var18 = (CharSequence) (Object) var15.substring(4);
-                                              var16_int = cb.a((byte) -77, var18);
-                                              var4 = var4 + ((mm) this).field_z[var16_int].field_a;
-                                              var10 = 0;
+                                              L4: {
+                                                var18 = (CharSequence) (Object) var15.substring(4);
+                                                var16_int = cb.a((byte) -77, var18);
+                                                var4 = var4 + ((mm) this).field_z[var16_int].field_a;
+                                                var10 = 0;
+                                                break L4;
+                                              }
                                             } catch (java.lang.Exception decompiledCaughtParameter0) {
                                               decompiledCaughtException = decompiledCaughtParameter0;
-                                              var16 = (Exception) (Object) decompiledCaughtException;
+                                              L5: {
+                                                var16 = (Exception) (Object) decompiledCaughtException;
+                                                break L5;
+                                              }
                                             }
                                             break L3;
                                           }
                                         } else {
-                                          L4: {
+                                          L6: {
                                             var4 = var4 + ((mm) this).a('®');
                                             if (((mm) this).field_y == null) {
-                                              break L4;
+                                              break L6;
                                             } else {
                                               if (var10 == 0) {
-                                                break L4;
+                                                break L6;
                                               } else {
                                                 var4 = var4 + ((mm) this).field_y[(var10 << 8) + 174];
-                                                break L4;
+                                                break L6;
                                               }
                                             }
                                           }
@@ -398,16 +404,16 @@ abstract class mm extends be {
                                           break L3;
                                         }
                                       } else {
-                                        L5: {
+                                        L7: {
                                           var4 = var4 + ((mm) this).a('©');
                                           if (((mm) this).field_y == null) {
-                                            break L5;
+                                            break L7;
                                           } else {
                                             if (var10 == 0) {
-                                              break L5;
+                                              break L7;
                                             } else {
                                               var4 = var4 + ((mm) this).field_y[(var10 << 8) + 169];
-                                              break L5;
+                                              break L7;
                                             }
                                           }
                                         }
@@ -415,16 +421,16 @@ abstract class mm extends be {
                                         break L3;
                                       }
                                     } else {
-                                      L6: {
+                                      L8: {
                                         var4 = var4 + ((mm) this).a('€');
                                         if (((mm) this).field_y == null) {
-                                          break L6;
+                                          break L8;
                                         } else {
                                           if (var10 == 0) {
-                                            break L6;
+                                            break L8;
                                           } else {
                                             var4 = var4 + ((mm) this).field_y[(var10 << 8) + 128];
-                                            break L6;
+                                            break L8;
                                           }
                                         }
                                       }
@@ -432,16 +438,16 @@ abstract class mm extends be {
                                       break L3;
                                     }
                                   } else {
-                                    L7: {
+                                    L9: {
                                       var4 = var4 + ((mm) this).a('×');
                                       if (((mm) this).field_y == null) {
-                                        break L7;
+                                        break L9;
                                       } else {
                                         if (var10 == 0) {
-                                          break L7;
+                                          break L9;
                                         } else {
                                           var4 = var4 + ((mm) this).field_y[(var10 << 8) + 215];
-                                          break L7;
+                                          break L9;
                                         }
                                       }
                                     }
@@ -449,16 +455,16 @@ abstract class mm extends be {
                                     break L3;
                                   }
                                 } else {
-                                  L8: {
+                                  L10: {
                                     var4 = var4 + ((mm) this).a('­');
                                     if (((mm) this).field_y == null) {
-                                      break L8;
+                                      break L10;
                                     } else {
                                       if (var10 == 0) {
-                                        break L8;
+                                        break L10;
                                       } else {
                                         var4 = var4 + ((mm) this).field_y[(var10 << 8) + 173];
-                                        break L8;
+                                        break L10;
                                       }
                                     }
                                   }
@@ -466,16 +472,16 @@ abstract class mm extends be {
                                   break L3;
                                 }
                               } else {
-                                L9: {
+                                L11: {
                                   var4 = var4 + ((mm) this).a(' ');
                                   if (((mm) this).field_y == null) {
-                                    break L9;
+                                    break L11;
                                   } else {
                                     if (var10 == 0) {
-                                      break L9;
+                                      break L11;
                                     } else {
                                       var4 = var4 + ((mm) this).field_y[(var10 << 8) + 160];
-                                      break L9;
+                                      break L11;
                                     }
                                   }
                                 }
@@ -483,16 +489,16 @@ abstract class mm extends be {
                                 break L3;
                               }
                             } else {
-                              L10: {
+                              L12: {
                                 var4 = var4 + ((mm) this).a('>');
                                 if (((mm) this).field_y == null) {
-                                  break L10;
+                                  break L12;
                                 } else {
                                   if (var10 == 0) {
-                                    break L10;
+                                    break L12;
                                   } else {
                                     var4 = var4 + ((mm) this).field_y[(var10 << 8) + 62];
-                                    break L10;
+                                    break L12;
                                   }
                                 }
                               }
@@ -500,16 +506,16 @@ abstract class mm extends be {
                               break L3;
                             }
                           } else {
-                            L11: {
+                            L13: {
                               var4 = var4 + ((mm) this).a('<');
                               if (((mm) this).field_y == null) {
-                                break L11;
+                                break L13;
                               } else {
                                 if (var10 == 0) {
-                                  break L11;
+                                  break L13;
                                 } else {
                                   var4 = var4 + ((mm) this).field_y[(var10 << 8) + 60];
-                                  break L11;
+                                  break L13;
                                 }
                               }
                             }
@@ -532,44 +538,44 @@ abstract class mm extends be {
                   }
                 }
                 if (var9 == -1) {
-                  L12: {
+                  L14: {
                     if (var14 == 0) {
-                      break L12;
+                      break L14;
                     } else {
-                      L13: {
+                      L15: {
                         StringBuilder discarded$9 = field_J.append(var14);
                         var14 = (char)(j.a((char) var14, (byte) 28) & 255);
                         var4 = var4 + ((mm) this).field_L[var14];
                         if (((mm) this).field_y == null) {
-                          break L13;
+                          break L15;
                         } else {
                           if (var10 == 0) {
-                            break L13;
+                            break L15;
                           } else {
                             var4 = var4 + ((mm) this).field_y[(var10 << 8) + var14];
-                            break L13;
+                            break L15;
                           }
                         }
                       }
                       var10 = var14;
-                      break L12;
+                      break L14;
                     }
                   }
-                  L14: {
+                  L16: {
                     if (var14 != 32) {
-                      break L14;
+                      break L16;
                     } else {
                       var6 = field_J.length();
                       var7 = var4;
                       var8 = 1;
-                      break L14;
+                      break L16;
                     }
                   }
-                  L15: {
+                  L17: {
                     if (param1 == null) {
-                      break L15;
+                      break L17;
                     } else {
-                      L16: {
+                      L18: {
                         stackOut_65_0 = var4;
                         stackOut_65_1 = (int[]) param1;
                         stackIn_67_0 = stackOut_65_0;
@@ -583,7 +589,7 @@ abstract class mm extends be {
                           stackIn_68_0 = stackOut_67_0;
                           stackIn_68_1 = stackOut_67_1;
                           stackIn_68_2 = stackOut_67_2;
-                          break L16;
+                          break L18;
                         } else {
                           stackOut_66_0 = stackIn_66_0;
                           stackOut_66_1 = (int[]) (Object) stackIn_66_1;
@@ -591,14 +597,14 @@ abstract class mm extends be {
                           stackIn_68_0 = stackOut_66_0;
                           stackIn_68_1 = stackOut_66_1;
                           stackIn_68_2 = stackOut_66_2;
-                          break L16;
+                          break L18;
                         }
                       }
                       if (stackIn_68_0 <= stackIn_68_1[stackIn_68_2]) {
-                        break L15;
+                        break L17;
                       } else {
                         if (var6 < 0) {
-                          break L15;
+                          break L17;
                         } else {
                           param2[var11] = field_J.toString().substring(var5, var6 - var8);
                           var11++;
@@ -606,7 +612,7 @@ abstract class mm extends be {
                           var6 = -1;
                           var4 = var4 - var7;
                           var10 = 0;
-                          break L15;
+                          break L17;
                         }
                       }
                     }
@@ -652,7 +658,6 @@ abstract class mm extends be {
         int var12 = 0;
         CharSequence var13 = null;
         int stackIn_26_0 = 0;
-        int decompiledRegionSelector0 = 0;
         Throwable decompiledCaughtException = null;
         int stackOut_25_0 = 0;
         int stackOut_24_0 = 0;
@@ -690,48 +695,44 @@ abstract class mm extends be {
                                       continue L0;
                                     } else {
                                       try {
-                                        var13 = (CharSequence) (Object) var9_ref_String.substring(4);
-                                        var10 = cb.a((byte) 40, var13);
-                                        var11_ref_lc = ((mm) this).field_z[var10];
-                                        if (((mm) this).field_W == null) {
-                                          decompiledRegionSelector0 = 0;
-                                        } else {
-                                          decompiledRegionSelector0 = 1;
+                                        L2: {
+                                          L3: {
+                                            var13 = (CharSequence) (Object) var9_ref_String.substring(4);
+                                            var10 = cb.a((byte) 40, var13);
+                                            var11_ref_lc = ((mm) this).field_z[var10];
+                                            if (((mm) this).field_W == null) {
+                                              stackOut_25_0 = var11_ref_lc.field_g;
+                                              stackIn_26_0 = stackOut_25_0;
+                                              break L3;
+                                            } else {
+                                              stackOut_24_0 = ((mm) this).field_W[var10];
+                                              stackIn_26_0 = stackOut_24_0;
+                                              break L3;
+                                            }
+                                          }
+                                          L4: {
+                                            var12 = stackIn_26_0;
+                                            if (field_H != 256) {
+                                              var11_ref_lc.a(param1, param2 + ((mm) this).field_S - var12, field_H);
+                                              break L4;
+                                            } else {
+                                              var11_ref_lc.a(param1, param2 + ((mm) this).field_S - var12);
+                                              break L4;
+                                            }
+                                          }
+                                          param1 = param1 + var11_ref_lc.field_a;
+                                          var5 = 0;
+                                          var7++;
+                                          break L2;
                                         }
                                       } catch (java.lang.Exception decompiledCaughtParameter0) {
                                         decompiledCaughtException = decompiledCaughtParameter0;
-                                        var10_ref_Exception = (Exception) (Object) decompiledCaughtException;
-                                        var7++;
-                                        decompiledRegionSelector0 = 2;
-                                      }
-                                      L2: {
-                                        if (decompiledRegionSelector0 == 0) {
-                                          stackOut_25_0 = var11_ref_lc.field_g;
-                                          stackIn_26_0 = stackOut_25_0;
-                                          break L2;
-                                        } else {
-                                          if (decompiledRegionSelector0 == 1) {
-                                            stackOut_24_0 = ((mm) this).field_W[var10];
-                                            stackIn_26_0 = stackOut_24_0;
-                                            break L2;
-                                          } else {
-                                            continue L0;
-                                          }
+                                        L5: {
+                                          var10_ref_Exception = (Exception) (Object) decompiledCaughtException;
+                                          var7++;
+                                          break L5;
                                         }
                                       }
-                                      L3: {
-                                        var12 = stackIn_26_0;
-                                        if (field_H != 256) {
-                                          var11_ref_lc.a(param1, param2 + ((mm) this).field_S - var12, field_H);
-                                          break L3;
-                                        } else {
-                                          var11_ref_lc.a(param1, param2 + ((mm) this).field_S - var12);
-                                          break L3;
-                                        }
-                                      }
-                                      param1 = param1 + var11_ref_lc.field_a;
-                                      var5 = 0;
-                                      var7++;
                                       continue L0;
                                     }
                                   } else {
@@ -770,73 +771,73 @@ abstract class mm extends be {
                 }
               }
               if (var4 == -1) {
-                L4: {
+                L6: {
                   var8 = (char)(j.a((char) var8, (byte) 28) & 255);
                   if (((mm) this).field_y == null) {
-                    break L4;
+                    break L6;
                   } else {
                     if (var5 == 0) {
-                      break L4;
+                      break L6;
                     } else {
                       param1 = param1 + ((mm) this).field_y[(var5 << 8) + var8];
-                      break L4;
+                      break L6;
                     }
                   }
                 }
-                L5: {
+                L7: {
                   var9 = ((mm) this).field_V[var8];
                   var10 = ((mm) this).field_G[var8];
                   var11 = param1;
                   if (var8 == 32) {
                     if (field_B <= 0) {
-                      break L5;
+                      break L7;
                     } else {
                       field_O = field_O + field_B;
                       param1 = param1 + (field_O >> 8);
                       field_O = field_O & 255;
-                      break L5;
+                      break L7;
                     }
                   } else {
                     if (field_H != 256) {
-                      L6: {
+                      L8: {
                         if (field_U == -1) {
-                          break L6;
+                          break L8;
                         } else {
                           ((mm) this).a(var8, param1 + ((mm) this).field_T[var8] + 1, param2 + ((mm) this).field_P[var8] + 1, var9, var10, field_U, field_H, true);
-                          break L6;
+                          break L8;
                         }
                       }
                       ((mm) this).a(var8, param1 + ((mm) this).field_T[var8], param2 + ((mm) this).field_P[var8], var9, var10, field_D, field_H, false);
-                      break L5;
+                      break L7;
                     } else {
-                      L7: {
+                      L9: {
                         if (field_U == -1) {
-                          break L7;
+                          break L9;
                         } else {
                           ((mm) this).a(var8, param1 + ((mm) this).field_T[var8] + 1, param2 + ((mm) this).field_P[var8] + 1, var9, var10, field_U, true);
-                          break L7;
+                          break L9;
                         }
                       }
                       ((mm) this).a(var8, param1 + ((mm) this).field_T[var8], param2 + ((mm) this).field_P[var8], var9, var10, field_D, false);
-                      break L5;
+                      break L7;
                     }
                   }
                 }
-                L8: {
+                L10: {
                   param1 = param1 + ((mm) this).field_L[var8];
                   if (field_F == -1) {
-                    break L8;
+                    break L10;
                   } else {
                     hk.a(var11, param2 + (int)((double)((mm) this).field_S * 0.7), param1 - var11, field_F);
-                    break L8;
+                    break L10;
                   }
                 }
-                L9: {
+                L11: {
                   if (field_Q == -1) {
-                    break L9;
+                    break L11;
                   } else {
                     hk.a(var11, param2 + ((mm) this).field_S + 1, param1 - var11, field_Q);
-                    break L9;
+                    break L11;
                   }
                 }
                 var5 = var8;
@@ -902,15 +903,21 @@ abstract class mm extends be {
                                     if (!var8.equals((Object) (Object) "reg")) {
                                       if (var8.startsWith("img=")) {
                                         try {
-                                          var10 = (CharSequence) (Object) var8.substring(4);
-                                          var9_int = cb.a((byte) 91, var10);
-                                          var4 = var4 + ((mm) this).field_z[var9_int].field_a;
-                                          var3 = 0;
-                                          var6++;
+                                          L2: {
+                                            var10 = (CharSequence) (Object) var8.substring(4);
+                                            var9_int = cb.a((byte) 91, var10);
+                                            var4 = var4 + ((mm) this).field_z[var9_int].field_a;
+                                            var3 = 0;
+                                            var6++;
+                                            break L2;
+                                          }
                                         } catch (java.lang.Exception decompiledCaughtParameter0) {
                                           decompiledCaughtException = decompiledCaughtParameter0;
-                                          var9 = (Exception) (Object) decompiledCaughtException;
-                                          var6++;
+                                          L3: {
+                                            var9 = (Exception) (Object) decompiledCaughtException;
+                                            var6++;
+                                            break L3;
+                                          }
                                         }
                                         continue L0;
                                       } else {
@@ -953,17 +960,17 @@ abstract class mm extends be {
                   }
                 }
                 if (var2 == -1) {
-                  L2: {
+                  L4: {
                     var7 = (char)(j.a((char) var7, (byte) 28) & 255);
                     var4 = var4 + ((mm) this).field_L[var7];
                     if (((mm) this).field_y == null) {
-                      break L2;
+                      break L4;
                     } else {
                       if (var3 == 0) {
-                        break L2;
+                        break L4;
                       } else {
                         var4 = var4 + ((mm) this).field_y[(var3 << 8) + var7];
-                        break L2;
+                        break L4;
                       }
                     }
                   }
@@ -1006,86 +1013,92 @@ abstract class mm extends be {
         Throwable decompiledCaughtException = null;
         try {
           L0: {
-            if (!param0.startsWith("col=")) {
-              if (!param0.equals((Object) (Object) "/col")) {
-                if (!param0.startsWith("trans=")) {
-                  if (!param0.equals((Object) (Object) "/trans")) {
-                    if (!param0.startsWith("str=")) {
-                      if (!param0.equals((Object) (Object) "str")) {
-                        if (!param0.equals((Object) (Object) "/str")) {
-                          if (!param0.startsWith("u=")) {
-                            if (!param0.equals((Object) (Object) "u")) {
-                              if (!param0.equals((Object) (Object) "/u")) {
-                                if (!param0.startsWith("shad=")) {
-                                  if (!param0.equals((Object) (Object) "shad")) {
-                                    if (!param0.equals((Object) (Object) "/shad")) {
-                                      if (!param0.equals((Object) (Object) "br")) {
-                                        break L0;
+            L1: {
+              if (!param0.startsWith("col=")) {
+                if (!param0.equals((Object) (Object) "/col")) {
+                  if (!param0.startsWith("trans=")) {
+                    if (!param0.equals((Object) (Object) "/trans")) {
+                      if (!param0.startsWith("str=")) {
+                        if (!param0.equals((Object) (Object) "str")) {
+                          if (!param0.equals((Object) (Object) "/str")) {
+                            if (!param0.startsWith("u=")) {
+                              if (!param0.equals((Object) (Object) "u")) {
+                                if (!param0.equals((Object) (Object) "/u")) {
+                                  if (!param0.startsWith("shad=")) {
+                                    if (!param0.equals((Object) (Object) "shad")) {
+                                      if (!param0.equals((Object) (Object) "/shad")) {
+                                        if (!param0.equals((Object) (Object) "br")) {
+                                          break L1;
+                                        } else {
+                                          this.a(field_A, field_I, field_N);
+                                          break L1;
+                                        }
                                       } else {
-                                        this.a(field_A, field_I, field_N);
-                                        break L0;
+                                        field_U = field_I;
+                                        break L1;
                                       }
                                     } else {
-                                      field_U = field_I;
-                                      break L0;
+                                      field_U = 0;
+                                      break L1;
                                     }
                                   } else {
-                                    field_U = 0;
-                                    break L0;
+                                    var7 = (CharSequence) (Object) param0.substring(5);
+                                    field_U = bh.a(16, false, var7);
+                                    break L1;
                                   }
                                 } else {
-                                  var7 = (CharSequence) (Object) param0.substring(5);
-                                  field_U = bh.a(16, false, var7);
-                                  break L0;
+                                  field_Q = -1;
+                                  break L1;
                                 }
                               } else {
-                                field_Q = -1;
-                                break L0;
+                                field_Q = 0;
+                                break L1;
                               }
                             } else {
-                              field_Q = 0;
-                              break L0;
+                              var6 = (CharSequence) (Object) param0.substring(2);
+                              field_Q = bh.a(16, false, var6);
+                              break L1;
                             }
                           } else {
-                            var6 = (CharSequence) (Object) param0.substring(2);
-                            field_Q = bh.a(16, false, var6);
-                            break L0;
+                            field_F = -1;
+                            break L1;
                           }
                         } else {
-                          field_F = -1;
-                          break L0;
+                          field_F = 8388608;
+                          break L1;
                         }
                       } else {
-                        field_F = 8388608;
-                        break L0;
+                        var5 = (CharSequence) (Object) param0.substring(4);
+                        field_F = bh.a(16, false, var5);
+                        break L1;
                       }
                     } else {
-                      var5 = (CharSequence) (Object) param0.substring(4);
-                      field_F = bh.a(16, false, var5);
-                      break L0;
+                      field_H = field_N;
+                      break L1;
                     }
                   } else {
-                    field_H = field_N;
-                    break L0;
+                    var4 = (CharSequence) (Object) param0.substring(6);
+                    field_H = cb.a((byte) 46, var4);
+                    break L1;
                   }
                 } else {
-                  var4 = (CharSequence) (Object) param0.substring(6);
-                  field_H = cb.a((byte) 46, var4);
-                  break L0;
+                  field_D = field_A;
+                  break L1;
                 }
               } else {
-                field_D = field_A;
-                break L0;
+                var3 = (CharSequence) (Object) param0.substring(4);
+                field_D = bh.a(16, false, var3);
+                break L1;
               }
-            } else {
-              var3 = (CharSequence) (Object) param0.substring(4);
-              field_D = bh.a(16, false, var3);
-              break L0;
             }
+            break L0;
           }
         } catch (java.lang.Exception decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          var2 = (Exception) (Object) decompiledCaughtException;
+          L2: {
+            var2 = (Exception) (Object) decompiledCaughtException;
+            break L2;
+          }
         }
     }
 
@@ -1487,6 +1500,7 @@ abstract class mm extends be {
             ((mm) this).field_R = ((mm) this).field_S - var6;
             ((mm) this).field_K = var7 - ((mm) this).field_S;
             ((mm) this).field_C = ((mm) this).field_S - ((mm) this).field_P[88];
+            return;
           } else {
             L1: {
               if (((mm) this).field_P[var8] >= var6) {

@@ -178,16 +178,19 @@ final class ab {
         var1 = 108 % ((-69 - param0) / 50);
         var2 = (Object) (Object) f.field_r;
         synchronized (var2) {
-          if (ea.field_n != sf.field_B) {
-            wh.field_c = pf.field_i[sf.field_B];
-            el.field_G = bl.field_Z[sf.field_B];
-            sf.field_B = 1 + sf.field_B & 127;
-            stackOut_4_0 = 1;
-            stackIn_5_0 = stackOut_4_0;
-          } else {
-            stackOut_2_0 = 0;
-            stackIn_3_0 = stackOut_2_0;
-            return stackIn_3_0 != 0;
+          L0: {
+            if (ea.field_n != sf.field_B) {
+              wh.field_c = pf.field_i[sf.field_B];
+              el.field_G = bl.field_Z[sf.field_B];
+              sf.field_B = 1 + sf.field_B & 127;
+              stackOut_4_0 = 1;
+              stackIn_5_0 = stackOut_4_0;
+              break L0;
+            } else {
+              stackOut_2_0 = 0;
+              stackIn_3_0 = stackOut_2_0;
+              return stackIn_3_0 != 0;
+            }
           }
         }
         return stackIn_5_0 != 0;

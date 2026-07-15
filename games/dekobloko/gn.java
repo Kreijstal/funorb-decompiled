@@ -20,8 +20,7 @@ final class gn {
 
     final static java.net.URL a(java.net.URL param0, int param1, java.applet.Applet param2) {
         Object var3 = null;
-        String var3_ref = null;
-        String var4 = null;
+        Object var4 = null;
         var3 = null;
         if (param1 == -1) {
           L0: {
@@ -31,9 +30,9 @@ final class gn {
               if (rb.field_l.equals((Object) (Object) param2.getParameter("settings"))) {
                 break L0;
               } else {
-                var3_ref = rb.field_l;
-                var4 = var3_ref;
-                var4 = var3_ref;
+                var3 = (Object) (Object) rb.field_l;
+                var4 = var3;
+                var4 = var3;
                 break L0;
               }
             }
@@ -41,13 +40,13 @@ final class gn {
           var4 = null;
           if (u.field_a != null) {
             if (u.field_a.equals((Object) (Object) param2.getParameter("session"))) {
-              return pl.a(var4, var3_ref, false, param0, -1);
+              return pl.a((String) var4, (String) var3, false, param0, -1);
             } else {
-              var4 = u.field_a;
-              return pl.a(var4, var3_ref, false, param0, -1);
+              var4 = (Object) (Object) u.field_a;
+              return pl.a((String) var4, (String) var3, false, param0, -1);
             }
           } else {
-            return pl.a(var4, var3_ref, false, param0, -1);
+            return pl.a((String) var4, (String) var3, false, param0, -1);
           }
         } else {
           return null;

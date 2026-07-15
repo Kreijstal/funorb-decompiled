@@ -13,7 +13,6 @@ final class hc {
         int var2 = 0;
         Object var3 = null;
         int var3_int = 0;
-        String var3_ref = null;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
@@ -70,10 +69,10 @@ final class hc {
               var4 = var6;
               L3: while (true) {
                 if (var6 >= d.field_h.length) {
-                  if (var3_ref == null) {
+                  if (var3 == null) {
                     break L2;
                   } else {
-                    int discarded$4 = bn.field_g.a("Screenshot(s) " + var3_ref + " is/are the wrong size! Should be " + 365 + "<times>" + 139, 245, 199, 365, 139, 16737843, 0, 1, 1, 0);
+                    int discarded$4 = bn.field_g.a("Screenshot(s) " + var3 + " is/are the wrong size! Should be " + 365 + "<times>" + 139, 245, 199, 365, 139, 16737843, 0, 1, 1, 0);
                     break L2;
                   }
                 } else {
@@ -92,11 +91,11 @@ final class hc {
                       }
                     }
                     if (var3 != null) {
-                      var3_ref = var3_ref + ", " + var6;
+                      var3 = (Object) (Object) (var3 + ", " + var6);
                       var6++;
                       continue L3;
                     } else {
-                      var3_ref = Integer.toString(var6);
+                      var3 = (Object) (Object) Integer.toString(var6);
                       var6++;
                       continue L3;
                     }

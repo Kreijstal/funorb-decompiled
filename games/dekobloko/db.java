@@ -101,21 +101,27 @@ final class db extends IOException {
             }
             try {
               L2: {
-                if (param0 < -33) {
+                L3: {
+                  if (param0 < -33) {
+                    break L3;
+                  } else {
+                    String discarded$1 = db.a((CharSequence[]) null, -126);
+                    break L3;
+                  }
+                }
+                if (param1 == null) {
                   break L2;
                 } else {
-                  String discarded$1 = db.a((CharSequence[]) null, -126);
-                  break L2;
+                  param2.field_w.postEvent((java.awt.AWTEvent) (Object) new java.awt.event.ActionEvent(param1, 1001, "dummy"));
+                  return;
                 }
-              }
-              if (param1 == null) {
-              } else {
-                param2.field_w.postEvent((java.awt.AWTEvent) (Object) new java.awt.event.ActionEvent(param1, 1001, "dummy"));
-                return;
               }
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
-              var3 = (Exception) (Object) decompiledCaughtException;
+              L4: {
+                var3 = (Exception) (Object) decompiledCaughtException;
+                break L4;
+              }
             }
             return;
           }
@@ -130,14 +136,17 @@ final class db extends IOException {
         if (!param3) {
           return null;
         } else {
-          var5[8] = id.a(param2, param4, "", 8192);
-          var5[6] = id.a(param2, param4, "", 8192);
-          var5[2] = id.a(param2, param4, "", 8192);
-          var5[0] = id.a(param2, param4, "", 8192);
-          var5[7] = id.a(param2, param1, "", 8192);
-          var5[1] = id.a(param2, param1, "", 8192);
-          var5[5] = id.a(param2, param0, "", 8192);
-          var5[3] = id.a(param2, param0, "", 8192);
+          ck dupTemp$3 = id.a(param2, param4, "", 8192);
+          var5[8] = dupTemp$3;
+          var5[6] = dupTemp$3;
+          var5[2] = dupTemp$3;
+          var5[0] = dupTemp$3;
+          ck dupTemp$4 = id.a(param2, param1, "", 8192);
+          var5[7] = dupTemp$4;
+          var5[1] = dupTemp$4;
+          ck dupTemp$5 = id.a(param2, param0, "", 8192);
+          var5[5] = dupTemp$5;
+          var5[3] = dupTemp$5;
           return var5;
         }
     }

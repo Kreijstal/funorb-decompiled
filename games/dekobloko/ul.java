@@ -32,8 +32,9 @@ final class ul {
         var12 = client.field_A ? 1 : 0;
         var16 = de.field_V;
         var2 = var16.d((byte) -110);
-        var15 = (cl) (Object) oe.field_I.c((byte) -54);
-        var3 = (cl) (Object) oe.field_I.c((byte) -54);
+        cl dupTemp$4 = (cl) (Object) oe.field_I.c((byte) -54);
+        var15 = dupTemp$4;
+        var3 = dupTemp$4;
         L0: while (true) {
           L1: {
             if (var15 == null) {
@@ -66,10 +67,12 @@ final class ul {
                     L4: while (true) {
                       if (var6_int >= var4) {
                         pd.a(var5, (byte) 6);
-                        var3.field_x = new String[2][var5];
-                        var6 = new String[2][var5];
-                        var3.field_u = new int[2][var5 * 4];
-                        var7 = new int[2][var5 * 4];
+                        String[][] dupTemp$5 = new String[2][var5];
+                        var3.field_x = dupTemp$5;
+                        var6 = dupTemp$5;
+                        int[][] dupTemp$6 = new int[2][var5 * 4];
+                        var3.field_u = dupTemp$6;
+                        var7 = dupTemp$6;
                         var8 = og.field_eb;
                         var9 = 0;
                         var10 = 0;
@@ -163,7 +166,7 @@ final class ul {
               if (param0 > 107) {
                 break L7;
               } else {
-                int discarded$1 = ul.a(-19, 9, -103);
+                int discarded$7 = ul.a(-19, 9, -103);
                 break L7;
               }
             }

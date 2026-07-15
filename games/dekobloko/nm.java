@@ -50,22 +50,22 @@ final class nm extends w {
           var11 = (-(var9 * param3) + 1.0f) * param1;
           var12 = param1 * (-((1.0f - var9) * param3) + 1.0f);
           var13 = var8;
-          if (var13 != 0) {
-            if (var13 != -2) {
-              if (-3 == var13) {
+          if ((var13 ^ -1) != -1) {
+            if ((var13 ^ -1) != -2) {
+              if (-3 == (var13 ^ -1)) {
                 var5 = param1;
                 var4 = var10;
                 var6 = var12;
                 break L0;
               } else {
-                if (var13 == -4) {
+                if ((var13 ^ -1) == -4) {
                   var5 = var11;
                   var6 = param1;
                   var4 = var10;
                   break L0;
                 } else {
                   if (4 != var13) {
-                    if (-6 == var13) {
+                    if (-6 == (var13 ^ -1)) {
                       var4 = param1;
                       var6 = var11;
                       var5 = var10;

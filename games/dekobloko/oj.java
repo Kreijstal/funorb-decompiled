@@ -498,83 +498,86 @@ final class oj {
             if (4 > ta.field_k.field_j) {
               try {
                 L0: {
-                  if (param0 != hd.field_n) {
-                    break L0;
-                  } else {
-                    d.field_f = bl.field_U.a(124, pe.field_b, cb.field_c);
-                    hd.field_n = hd.field_n + 1;
-                    break L0;
-                  }
-                }
-                L1: {
-                  if (hd.field_n == 1) {
-                    if (2 == d.field_f.field_c) {
-                      stackOut_14_0 = al.a(0, -1);
-                      stackIn_15_0 = stackOut_14_0;
-                      return stackIn_15_0;
+                  L1: {
+                    if (param0 != hd.field_n) {
+                      break L1;
                     } else {
-                      if (-2 != (d.field_f.field_c ^ -1)) {
-                        break L1;
-                      } else {
-                        hd.field_n = hd.field_n + 1;
-                        break L1;
-                      }
+                      d.field_f = bl.field_U.a(124, pe.field_b, cb.field_c);
+                      hd.field_n = hd.field_n + 1;
+                      break L1;
                     }
-                  } else {
-                    break L1;
                   }
-                }
-                L2: {
-                  if ((hd.field_n ^ -1) != -3) {
-                    break L2;
-                  } else {
-                    rk.field_L = new qk((java.net.Socket) d.field_f.field_b, bl.field_U);
-                    var2 = new wl(13);
-                    gi.a(hh.field_f, fh.field_f, 17, var2, cn.field_U);
-                    var2.a(true, 15);
-                    var2.a(vm.field_w, false);
-                    rk.field_L.a(0, 13, param0 + 1, var2.field_r);
-                    hd.field_n = hd.field_n + 1;
-                    me.field_E = 30000L + ik.a(param0 ^ 4);
-                    break L2;
-                  }
-                }
-                L3: {
-                  if (-4 == hd.field_n) {
-                    if (-1 < rk.field_L.b(0)) {
-                      var1_int = rk.field_L.c((byte) 8);
-                      if (-1 == var1_int) {
-                        hd.field_n = hd.field_n + 1;
-                        break L3;
+                  L2: {
+                    if (hd.field_n == 1) {
+                      if (2 == d.field_f.field_c) {
+                        stackOut_14_0 = al.a(0, -1);
+                        stackIn_15_0 = stackOut_14_0;
+                        return stackIn_15_0;
                       } else {
-                        stackOut_27_0 = al.a(0, var1_int);
-                        stackIn_28_0 = stackOut_27_0;
-                        return stackIn_28_0;
+                        if (-2 != (d.field_f.field_c ^ -1)) {
+                          break L2;
+                        } else {
+                          hd.field_n = hd.field_n + 1;
+                          break L2;
+                        }
                       }
                     } else {
-                      if (me.field_E >= ik.a(param0 ^ 4)) {
-                        break L3;
-                      } else {
-                        stackOut_24_0 = al.a(0, -2);
-                        stackIn_25_0 = stackOut_24_0;
-                        return stackIn_25_0;
-                      }
+                      break L2;
                     }
-                  } else {
-                    break L3;
                   }
-                }
-                if (-5 != hd.field_n) {
-                  stackOut_33_0 = -1;
-                  stackIn_34_0 = stackOut_33_0;
-                } else {
-                  ta.field_k.a((Object) (Object) rk.field_L, (byte) -128, ta.field_f);
-                  rk.field_L = null;
-                  d.field_f = null;
-                  hd.field_n = 0;
-                  stackOut_31_0 = 0;
-                  stackIn_32_0 = stackOut_31_0;
-                  return stackIn_32_0;
+                  L3: {
+                    if ((hd.field_n ^ -1) != -3) {
+                      break L3;
+                    } else {
+                      rk.field_L = new qk((java.net.Socket) d.field_f.field_b, bl.field_U);
+                      var2 = new wl(13);
+                      gi.a(hh.field_f, fh.field_f, 17, var2, cn.field_U);
+                      var2.a(true, 15);
+                      var2.a(vm.field_w, false);
+                      rk.field_L.a(0, 13, param0 + 1, var2.field_r);
+                      hd.field_n = hd.field_n + 1;
+                      me.field_E = 30000L + ik.a(param0 ^ 4);
+                      break L3;
+                    }
+                  }
+                  L4: {
+                    if (-4 == hd.field_n) {
+                      if (-1 < rk.field_L.b(0)) {
+                        var1_int = rk.field_L.c((byte) 8);
+                        if (-1 == var1_int) {
+                          hd.field_n = hd.field_n + 1;
+                          break L4;
+                        } else {
+                          stackOut_27_0 = al.a(0, var1_int);
+                          stackIn_28_0 = stackOut_27_0;
+                          return stackIn_28_0;
+                        }
+                      } else {
+                        if (me.field_E >= ik.a(param0 ^ 4)) {
+                          break L4;
+                        } else {
+                          stackOut_24_0 = al.a(0, -2);
+                          stackIn_25_0 = stackOut_24_0;
+                          return stackIn_25_0;
+                        }
+                      }
+                    } else {
+                      break L4;
+                    }
+                  }
+                  if (-5 != hd.field_n) {
+                    stackOut_33_0 = -1;
+                    stackIn_34_0 = stackOut_33_0;
+                    break L0;
+                  } else {
+                    ta.field_k.a((Object) (Object) rk.field_L, (byte) -128, ta.field_f);
+                    rk.field_L = null;
+                    d.field_f = null;
+                    hd.field_n = 0;
+                    stackOut_31_0 = 0;
+                    stackIn_32_0 = stackOut_31_0;
+                    return stackIn_32_0;
+                  }
                 }
               } catch (java.io.IOException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;

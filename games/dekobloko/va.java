@@ -486,7 +486,6 @@ final class va extends bh {
         int var16 = 0;
         int var17_int = 0;
         Object var17 = null;
-        float[] var17_array = null;
         int var18_int = 0;
         float[] var18 = null;
         int var19 = 0;
@@ -1002,7 +1001,7 @@ final class va extends bh {
                   var50 = var54;
                   var46 = var50;
                   var40 = var46;
-                  var17_array = var40;
+                  var17 = (Object) (Object) var40;
                   if (((va) this).field_G) {
                     break L36;
                   } else {
@@ -1060,7 +1059,7 @@ final class va extends bh {
               }
             }
             ((va) this).field_G = stackIn_111_1 != 0;
-            return var17_array;
+            return (float[]) var17;
           } else {
             var42 = field_o[var14.field_d[var17_int]];
             var55 = field_H;

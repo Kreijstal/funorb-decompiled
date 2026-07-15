@@ -33,23 +33,26 @@ public class od {
         field_c = param1;
         field_d = param0;
         try {
-          field_a = System.getProperty("user.home");
-          if (null != field_a) {
-            field_a = field_a + "/";
-          } else {
-            field_e = true;
-            if (param2 == 7154) {
-              L0: {
-                if (null == field_a) {
-                  field_a = "~/";
-                  break L0;
-                } else {
-                  break L0;
-                }
-              }
-              return;
+          L0: {
+            field_a = System.getProperty("user.home");
+            if (null != field_a) {
+              field_a = field_a + "/";
+              break L0;
             } else {
-              return;
+              field_e = true;
+              if (param2 == 7154) {
+                L1: {
+                  if (null == field_a) {
+                    field_a = "~/";
+                    break L1;
+                  } else {
+                    break L1;
+                  }
+                }
+                return;
+              } else {
+                return;
+              }
             }
           }
         } catch (java.lang.Exception decompiledCaughtParameter0) {
@@ -59,12 +62,12 @@ public class od {
           if (param2 != 7154) {
             return;
           } else {
-            L1: {
+            L2: {
               if (null == field_a) {
                 field_a = "~/";
-                break L1;
+                break L2;
               } else {
-                break L1;
+                break L2;
               }
             }
             return;
@@ -74,12 +77,12 @@ public class od {
         if (param2 != 7154) {
           return;
         } else {
-          L2: {
+          L3: {
             if (null == field_a) {
               field_a = "~/";
-              break L2;
+              break L3;
             } else {
-              break L2;
+              break L3;
             }
           }
           return;

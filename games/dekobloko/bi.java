@@ -93,6 +93,7 @@ final class bi {
           if (var2 >= 10) {
             ((bi) this).field_c = param0.e(3);
             ((bi) this).field_a = param0.e(3);
+            return;
           } else {
             var3 = param0.d((byte) -82);
             if (var3 != 0) {

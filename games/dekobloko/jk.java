@@ -339,8 +339,9 @@ final class jk {
               var7 = var7 & -var13 >> -1061197921;
               var14 = var12 - -(var13 + (var11 + -1) >> 425602563);
               var13 += 24;
-              var7 = de.b(var7, var10 >>> var13);
-              param0[var12] = (byte)de.b(var7, var10 >>> var13);
+              int dupTemp$1 = de.b(var7, var10 >>> var13);
+              var7 = dupTemp$1;
+              param0[var12] = (byte)dupTemp$1;
               if (var14 > var12) {
                 L2: {
                   var12++;
@@ -419,6 +420,7 @@ final class jk {
         var5 = 0;
         L0: while (true) {
           if (var5 >= var2) {
+            return;
           } else {
             var6 = param0[var5];
             if (0 != var6) {

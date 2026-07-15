@@ -387,8 +387,7 @@ class ek extends ce {
             break L0;
           }
         }
-        new ec(stackIn_3_3, stackIn_3_4, (mm) (Object) a.field_t);
-        ((ke) (Object) stackIn_3_0).a(stackIn_3_1, 120);
+        ((ke) (Object) stackIn_3_0).a(new ec(stackIn_3_3, stackIn_3_4, (mm) (Object) a.field_t), 120);
         var8.a(new ec(26, og.field_hb, (mm) (Object) a.field_t), 122);
         var7.field_f[1].field_n = 40 + a.field_t.a(var7.field_f[1].field_o);
         var4 = var7.field_f[0];

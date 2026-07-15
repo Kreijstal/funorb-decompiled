@@ -45,39 +45,43 @@ final class i {
               var2 = var6;
               if (dj.field_cb != null) {
                 try {
-                  dj.field_cb.a(0L, (byte) -109);
-                  dj.field_cb.a(var6, (byte) -76);
-                  var3_int = 0;
-                  L1: while (true) {
-                    L2: {
-                      if (-25 >= var3_int) {
-                        break L2;
-                      } else {
-                        if (-1 == var2[var3_int]) {
-                          var3_int++;
-                          continue L1;
+                  L1: {
+                    dj.field_cb.a(0L, (byte) -109);
+                    dj.field_cb.a(var6, (byte) -76);
+                    var3_int = 0;
+                    L2: while (true) {
+                      L3: {
+                        if (-25 >= var3_int) {
+                          break L3;
                         } else {
-                          break L2;
+                          if (-1 == var2[var3_int]) {
+                            var3_int++;
+                            continue L2;
+                          } else {
+                            break L3;
+                          }
                         }
                       }
-                    }
-                    if (var3_int < 24) {
-                      break L1;
-                    } else {
-                      throw new IOException();
+                      if (var3_int < 24) {
+                        break L1;
+                      } else {
+                        throw new IOException();
+                      }
                     }
                   }
                 } catch (java.lang.Exception decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
-                  var3 = (Exception) (Object) decompiledCaughtException;
-                  var4 = 0;
-                  L3: while (true) {
-                    if ((var4 ^ -1) <= -25) {
-                      break L3;
-                    } else {
-                      var2[var4] = (byte)-1;
-                      var4++;
-                      continue L3;
+                  L4: {
+                    var3 = (Exception) (Object) decompiledCaughtException;
+                    var4 = 0;
+                    L5: while (true) {
+                      if ((var4 ^ -1) <= -25) {
+                        break L4;
+                      } else {
+                        var2[var4] = (byte)-1;
+                        var4++;
+                        continue L5;
+                      }
                     }
                   }
                 }
@@ -126,14 +130,14 @@ final class i {
               if (ad.field_u == 0) {
                 break L1;
               } else {
-                if (var4 > ad.field_u) {
+                if ((var4 ^ -1) < (ad.field_u ^ -1)) {
                   break L0;
                 } else {
                   break L1;
                 }
               }
             }
-            if (var3 == -1) {
+            if ((var3 ^ -1) == -1) {
               var18 = new byte[var4];
               var16 = var18;
               var14 = var16;
@@ -148,7 +152,7 @@ final class i {
                   break L2;
                 } else {
                   L3: {
-                    if (-1 == ad.field_u) {
+                    if (-1 == (ad.field_u ^ -1)) {
                       break L3;
                     } else {
                       if (ad.field_u >= var6_int) {
@@ -167,7 +171,10 @@ final class i {
                     if (1 != var3) {
                       var8 = (Object) (Object) jf.field_g;
                       synchronized (var8) {
-                        jf.field_g.a((byte) 111, var10, var17);
+                        L5: {
+                          jf.field_g.a((byte) 111, var10, var17);
+                          break L5;
+                        }
                       }
                       break L4;
                     } else {

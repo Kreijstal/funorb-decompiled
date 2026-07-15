@@ -40,16 +40,19 @@ final class mi extends ol {
               var6 = (Object) (Object) var5;
               synchronized (var6) {
                 L1: {
-                  var7 = var5.a((mi) this);
-                  if (var7 >= 0) {
-                    var5.field_o = var7;
-                    this.a(var5.field_b, var5);
-                    break L1;
-                  } else {
-                    var5.field_o = 0;
-                    this.b(var5);
-                    break L1;
+                  L2: {
+                    var7 = var5.a((mi) this);
+                    if (var7 >= 0) {
+                      var5.field_o = var7;
+                      this.a(var5.field_b, var5);
+                      break L2;
+                    } else {
+                      var5.field_o = 0;
+                      this.b(var5);
+                      break L2;
+                    }
                   }
+                  break L1;
                 }
               }
               if (param2 != 0) {
@@ -96,16 +99,19 @@ final class mi extends ol {
               var4 = (Object) (Object) var3;
               synchronized (var4) {
                 L1: {
-                  var5 = var3.a((mi) this);
-                  if (var5 >= 0) {
-                    var3.field_o = var5;
-                    this.a(var3.field_b, var3);
-                    break L1;
-                  } else {
-                    var3.field_o = 0;
-                    this.b(var3);
-                    break L1;
+                  L2: {
+                    var5 = var3.a((mi) this);
+                    if (var5 >= 0) {
+                      var3.field_o = var5;
+                      this.a(var3.field_b, var3);
+                      break L2;
+                    } else {
+                      var3.field_o = 0;
+                      this.b(var3);
+                      break L2;
+                    }
                   }
+                  break L1;
                 }
               }
               if (param0 != 0) {

@@ -45,20 +45,26 @@ final class mf extends oe implements vn {
         Throwable decompiledCaughtException = null;
         try {
           L0: {
-            var4 = param3.getGraphics();
-            le.field_m.a((byte) 54, var4, param1, param2);
-            var4.dispose();
-            if (param0 == 1) {
-              break L0;
-            } else {
-              field_V = null;
-              break L0;
+            L1: {
+              var4 = param3.getGraphics();
+              le.field_m.a((byte) 54, var4, param1, param2);
+              var4.dispose();
+              if (param0 == 1) {
+                break L1;
+              } else {
+                field_V = null;
+                break L1;
+              }
             }
+            break L0;
           }
         } catch (java.lang.Exception decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          var4_ref = (Exception) (Object) decompiledCaughtException;
-          param3.repaint();
+          L2: {
+            var4_ref = (Exception) (Object) decompiledCaughtException;
+            param3.repaint();
+            break L2;
+          }
         }
     }
 
@@ -237,10 +243,8 @@ final class mf extends oe implements vn {
         w var17 = null;
         int var18 = 0;
         Object var19_ref = null;
-        ck var19_ref_ck = null;
         int var19 = 0;
         Object var20 = null;
-        String var20_ref = null;
         int var21 = 0;
         w var23 = null;
         w var24 = null;
@@ -367,8 +371,7 @@ final class mf extends oe implements vn {
           }
         }
         L2: {
-          new w(stackIn_5_2, stackIn_5_3, ((String) (Object) stackIn_5_4).toUpperCase());
-          se.field_U = stackIn_5_0;
+          se.field_U = new w(stackIn_5_2, stackIn_5_3, ((String) (Object) stackIn_5_4).toUpperCase());
           wm.field_h = new w(0L, (w) null);
           wm.field_h.a(p.field_b, -16834);
           wm.field_h.a(li.field_h, -16834);
@@ -516,10 +519,10 @@ final class mf extends oe implements vn {
                             break L15;
                           } else {
                             if (null != rn.field_e[var17_int]) {
-                              var19_ref_ck = rn.field_e[var17_int][var18];
+                              var19_ref = (Object) (Object) rn.field_e[var17_int][var18];
                               break L15;
                             } else {
-                              var19_ref_ck = null;
+                              var19_ref = null;
                               break L15;
                             }
                           }
@@ -530,11 +533,11 @@ final class mf extends oe implements vn {
                               var20 = null;
                               break L16;
                             } else {
-                              var20_ref = gn.field_c[var17_int][var18];
+                              var20 = (Object) (Object) gn.field_c[var17_int][var18];
                               break L16;
                             }
                           } else {
-                            var20_ref = null;
+                            var20 = null;
                             break L16;
                           }
                         }

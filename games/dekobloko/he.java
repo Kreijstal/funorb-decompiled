@@ -197,8 +197,7 @@ final class he extends kf implements qh, vn {
                 break L6;
               }
             }
-            new ek(stackIn_17_3, (kg) null);
-            ((he) this).field_X = stackIn_17_1;
+            ((he) this).field_X = new ek(stackIn_17_3, (kg) null);
             if (!((he) this).field_eb) {
               break L5;
             } else {
@@ -277,11 +276,13 @@ final class he extends kf implements qh, vn {
           }
         }
         L13: {
-          var12 = new de(10, ((he) this).field_D, ((he) this).field_t - 20, 25, (ce) (Object) ((he) this).field_bb, false, 80, 3, var7, 16777215, var8);
-          ((he) this).b((ce) (Object) new de(10, ((he) this).field_D, ((he) this).field_t - 20, 25, (ce) (Object) ((he) this).field_bb, false, 80, 3, var7, 16777215, var8), (byte) -55);
+          de dupTemp$2 = new de(10, ((he) this).field_D, ((he) this).field_t - 20, 25, (ce) (Object) ((he) this).field_bb, false, 80, 3, var7, 16777215, var8);
+          var12 = dupTemp$2;
+          ((he) this).b((ce) (Object) dupTemp$2, (byte) -55);
           ((he) this).field_D = ((he) this).field_D + (((ce) (Object) var12).field_y + 5);
-          var13 = new de(10, ((he) this).field_D, -20 + ((he) this).field_t, 25, (ce) (Object) ((he) this).field_cb, false, 80, 3, var7, 16777215, ch.field_d);
-          ((he) this).b((ce) (Object) new de(10, ((he) this).field_D, -20 + ((he) this).field_t, 25, (ce) (Object) ((he) this).field_cb, false, 80, 3, var7, 16777215, ch.field_d), (byte) -55);
+          de dupTemp$3 = new de(10, ((he) this).field_D, -20 + ((he) this).field_t, 25, (ce) (Object) ((he) this).field_cb, false, 80, 3, var7, 16777215, ch.field_d);
+          var13 = dupTemp$3;
+          ((he) this).b((ce) (Object) dupTemp$3, (byte) -55);
           ((he) this).field_U.field_v = (kg) this;
           ((he) this).field_D = ((he) this).field_D + (5 + ((ce) (Object) var13).field_y);
           if (((he) this).field_ib == null) {
@@ -478,7 +479,6 @@ final class he extends kf implements qh, vn {
         int var3 = 0;
         vj var4 = null;
         Object var5 = null;
-        wb var5_ref = null;
         wb var6 = null;
         int var7 = 0;
         int var8 = 0;
@@ -726,7 +726,7 @@ final class he extends kf implements qh, vn {
                 }
               }
               L14: {
-                var5_ref = var6;
+                var5 = (Object) (Object) var6;
                 if (var6.field_ob == 0) {
                   break L14;
                 } else {

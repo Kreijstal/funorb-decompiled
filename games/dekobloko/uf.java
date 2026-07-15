@@ -20,8 +20,9 @@ final class uf extends wl {
 
     final int i(byte param0) {
         int var2 = -7 / ((param0 - -78) / 33);
+        int fieldTemp$0 = ((uf) this).field_n;
         ((uf) this).field_n = ((uf) this).field_n + 1;
-        return ((uf) this).field_r[((uf) this).field_n] - ((uf) this).field_u.a(false) & 255;
+        return ((uf) this).field_r[fieldTemp$0] - ((uf) this).field_u.a(false) & 255;
     }
 
     final void l(int param0) {
@@ -54,8 +55,9 @@ final class uf extends wl {
         }
         while (param0 > ((uf) this).field_v) {
             param0 = param0 - ((uf) this).field_v;
+            int fieldTemp$0 = ((uf) this).field_n;
             ((uf) this).field_n = ((uf) this).field_n + 1;
-            ((uf) this).field_r[((uf) this).field_n] = (byte)(((uf) this).field_r[((uf) this).field_n] + (param2 >>> param0));
+            ((uf) this).field_r[fieldTemp$0] = (byte)(((uf) this).field_r[fieldTemp$0] + (param2 >>> param0));
             ((uf) this).field_r[((uf) this).field_n] = (byte) 0;
             ((uf) this).field_v = 8;
         }
@@ -63,8 +65,9 @@ final class uf extends wl {
             ((uf) this).field_v = ((uf) this).field_v - param0;
             ((uf) this).field_r[((uf) this).field_n] = (byte)(((uf) this).field_r[((uf) this).field_n] + (param2 << ((uf) this).field_v));
         } else {
+            int fieldTemp$1 = ((uf) this).field_n;
             ((uf) this).field_n = ((uf) this).field_n + 1;
-            ((uf) this).field_r[((uf) this).field_n] = (byte)(((uf) this).field_r[((uf) this).field_n] + param2);
+            ((uf) this).field_r[fieldTemp$1] = (byte)(((uf) this).field_r[fieldTemp$1] + param2);
             ((uf) this).field_r[((uf) this).field_n] = (byte) 0;
             ((uf) this).field_v = 8;
         }
@@ -165,8 +168,9 @@ final class uf extends wl {
         int var7 = client.field_A ? 1 : 0;
         int var6 = 55 / ((5 - param0) / 45);
         for (var5 = 0; var5 < param2; var5++) {
+            int fieldTemp$0 = ((uf) this).field_n;
             ((uf) this).field_n = ((uf) this).field_n + 1;
-            param1[param3 + var5] = (byte)(((uf) this).field_r[((uf) this).field_n] + -((uf) this).field_u.a(false));
+            param1[param3 + var5] = (byte)(((uf) this).field_r[fieldTemp$0] + -((uf) this).field_u.a(false));
         }
     }
 
@@ -189,8 +193,9 @@ final class uf extends wl {
     }
 
     final void f(int param0, int param1) {
+        int fieldTemp$0 = ((uf) this).field_n;
         ((uf) this).field_n = ((uf) this).field_n + 1;
-        ((uf) this).field_r[((uf) this).field_n] = (byte)(param0 + ((uf) this).field_u.a(false));
+        ((uf) this).field_r[fieldTemp$0] = (byte)(param0 + ((uf) this).field_u.a(false));
         if (param1 != -4) {
             field_y = null;
         }

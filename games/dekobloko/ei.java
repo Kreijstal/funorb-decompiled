@@ -346,8 +346,9 @@ final class ei extends ol {
                     if (((ei) this).field_x < var5) {
                       ((ei) this).field_x = var5 + var5 - 1 - ((ei) this).field_x;
                       ((ei) this).field_z = -((ei) this).field_z;
+                      int fieldTemp$5 = ((ei) this).field_D - 1;
                       ((ei) this).field_D = ((ei) this).field_D - 1;
-                      if (((ei) this).field_D - 1 != 0) {
+                      if (fieldTemp$5 != 0) {
                         break L7;
                       } else {
                         break L4;
@@ -362,14 +363,16 @@ final class ei extends ol {
                   if (((ei) this).field_x >= var6) {
                     ((ei) this).field_x = var6 + var6 - 1 - ((ei) this).field_x;
                     ((ei) this).field_z = -((ei) this).field_z;
+                    int fieldTemp$6 = ((ei) this).field_D - 1;
                     ((ei) this).field_D = ((ei) this).field_D - 1;
-                    if (((ei) this).field_D - 1 != 0) {
+                    if (fieldTemp$6 != 0) {
                       var9 = this.a(param0, var9, var5, param2, (int) var4.field_o[((ei) this).field_G]);
                       if (((ei) this).field_x < var5) {
                         ((ei) this).field_x = var5 + var5 - 1 - ((ei) this).field_x;
                         ((ei) this).field_z = -((ei) this).field_z;
+                        int fieldTemp$7 = ((ei) this).field_D - 1;
                         ((ei) this).field_D = ((ei) this).field_D - 1;
-                        if (((ei) this).field_D - 1 != 0) {
+                        if (fieldTemp$7 != 0) {
                           continue L8;
                         } else {
                           break L4;
@@ -388,7 +391,7 @@ final class ei extends ol {
             }
           }
           if (((ei) this).field_z < 0) {
-            int discarded$2 = this.a(param0, var9, 0, param2, 0);
+            int discarded$8 = this.a(param0, var9, 0, param2, 0);
             if (((ei) this).field_x < 0) {
               ((ei) this).field_x = -1;
               this.e();
@@ -399,7 +402,7 @@ final class ei extends ol {
             }
           } else {
             L9: {
-              int discarded$3 = this.b(param0, var9, var7, param2, 0);
+              int discarded$9 = this.b(param0, var9, var7, param2, 0);
               if (((ei) this).field_x < var7) {
                 break L9;
               } else {
@@ -2110,8 +2113,9 @@ final class ei extends ol {
                     if (((ei) this).field_x < var3) {
                       ((ei) this).field_x = var3 + var3 - 1 - ((ei) this).field_x;
                       ((ei) this).field_z = -((ei) this).field_z;
+                      int fieldTemp$3 = ((ei) this).field_D - 1;
                       ((ei) this).field_D = ((ei) this).field_D - 1;
-                      if (((ei) this).field_D - 1 != 0) {
+                      if (fieldTemp$3 != 0) {
                         break L7;
                       } else {
                         break L5;
@@ -2125,13 +2129,15 @@ final class ei extends ol {
                   if (((ei) this).field_x >= var4) {
                     ((ei) this).field_x = var4 + var4 - 1 - ((ei) this).field_x;
                     ((ei) this).field_z = -((ei) this).field_z;
+                    int fieldTemp$4 = ((ei) this).field_D - 1;
                     ((ei) this).field_D = ((ei) this).field_D - 1;
-                    if (((ei) this).field_D - 1 != 0) {
+                    if (fieldTemp$4 != 0) {
                       if (((ei) this).field_x < var3) {
                         ((ei) this).field_x = var3 + var3 - 1 - ((ei) this).field_x;
                         ((ei) this).field_z = -((ei) this).field_z;
+                        int fieldTemp$5 = ((ei) this).field_D - 1;
                         ((ei) this).field_D = ((ei) this).field_D - 1;
-                        if (((ei) this).field_D - 1 != 0) {
+                        if (fieldTemp$5 != 0) {
                           continue L8;
                         } else {
                           break L5;

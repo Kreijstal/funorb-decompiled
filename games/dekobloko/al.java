@@ -118,16 +118,16 @@ final class al implements gl {
         var2 = cb.field_c;
         cb.field_c = gm.field_H;
         if (51 != param1) {
-          if (param1 != -51) {
+          if ((param1 ^ -1) != -51) {
             ta.field_k.field_o = 1;
             ta.field_k.field_j = ta.field_k.field_j + 1;
             gm.field_H = var2;
-            if (-3 < ta.field_k.field_j) {
+            if (-3 < (ta.field_k.field_j ^ -1)) {
               L0: {
                 if (2 > ta.field_k.field_j) {
                   break L0;
                 } else {
-                  if (-51 != param1) {
+                  if (-51 != (param1 ^ -1)) {
                     break L0;
                   } else {
                     return 5;
@@ -147,14 +147,14 @@ final class al implements gl {
                   if (2 > ta.field_k.field_j) {
                     break L1;
                   } else {
-                    if (-51 != param1) {
+                    if (-51 != (param1 ^ -1)) {
                       break L1;
                     } else {
                       return 5;
                     }
                   }
                 }
-                if (ta.field_k.field_j > -5) {
+                if ((ta.field_k.field_j ^ -1) > -5) {
                   return -1;
                 } else {
                   return 1;
@@ -165,12 +165,12 @@ final class al implements gl {
             ta.field_k.field_o = 5;
             ta.field_k.field_j = ta.field_k.field_j + 1;
             gm.field_H = var2;
-            if (-3 > ta.field_k.field_j) {
+            if (-3 < (ta.field_k.field_j ^ -1)) {
               L2: {
                 if (2 > ta.field_k.field_j) {
                   break L2;
                 } else {
-                  if (-51 != param1) {
+                  if (-51 != (param1 ^ -1)) {
                     break L2;
                   } else {
                     return 5;
@@ -197,7 +197,7 @@ final class al implements gl {
                     }
                   }
                 }
-                if (ta.field_k.field_j > -5) {
+                if ((ta.field_k.field_j ^ -1) > -5) {
                   return -1;
                 } else {
                   return 1;
@@ -214,7 +214,7 @@ final class al implements gl {
               return 2;
             } else {
               if (2 <= ta.field_k.field_j) {
-                if (-51 != param1) {
+                if (-51 != (param1 ^ -1)) {
                   if ((ta.field_k.field_j ^ -1) > -5) {
                     return -1;
                   } else {
@@ -224,7 +224,7 @@ final class al implements gl {
                   return 5;
                 }
               } else {
-                if (ta.field_k.field_j > -5) {
+                if ((ta.field_k.field_j ^ -1) > -5) {
                   return -1;
                 } else {
                   return 1;
@@ -233,7 +233,7 @@ final class al implements gl {
             }
           } else {
             if (2 <= ta.field_k.field_j) {
-              if (-51 == param1) {
+              if (-51 == (param1 ^ -1)) {
                 return 5;
               } else {
                 if ((ta.field_k.field_j ^ -1) > -5) {
@@ -243,10 +243,10 @@ final class al implements gl {
                 }
               }
             } else {
-              if ((ta.field_k.field_j ^ -1) <= -5) {
-                return 1;
-              } else {
+              if ((ta.field_k.field_j ^ -1) > -5) {
                 return -1;
+              } else {
+                return 1;
               }
             }
           }

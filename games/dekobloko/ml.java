@@ -12,16 +12,19 @@ final class ml {
         RuntimeException decompiledCaughtException = null;
         try {
           L0: {
-            field_a = null;
-            if (param0 == -33) {
-              break L0;
-            } else {
-              ml.a((ji) null, (byte) 123);
-              break L0;
+            L1: {
+              field_a = null;
+              if (param0 == -33) {
+                break L1;
+              } else {
+                ml.a((ji) null, (byte) 123);
+                break L1;
+              }
             }
+            field_d = null;
+            field_c = null;
+            break L0;
           }
-          field_d = null;
-          field_c = null;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;

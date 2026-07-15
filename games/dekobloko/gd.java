@@ -22,9 +22,9 @@ final class gd {
         int var5 = 0;
         if (param3 > 0) {
           if (!param0) {
-            if (-1 == param1) {
+            if (-1 == (param1 ^ -1)) {
               var4 = param3 % 100;
-              if (-12 > var4) {
+              if (-12 < (var4 ^ -1)) {
                 var5 = param3 % 10;
                 if ((var5 ^ -1) == -2) {
                   return param3 + "st";
@@ -40,7 +40,9 @@ final class gd {
                   }
                 }
               } else {
-                if (-14 > (var4 ^ -1)) {
+                if (-14 <= (var4 ^ -1)) {
+                  return param3 + "th";
+                } else {
                   var5 = param3 % 10;
                   if ((var5 ^ -1) == -2) {
                     return param3 + "st";
@@ -55,12 +57,10 @@ final class gd {
                       }
                     }
                   }
-                } else {
-                  return param3 + "th";
                 }
               }
             } else {
-              if (param1 == -2) {
+              if ((param1 ^ -1) == -2) {
                 return param3 + ".";
               } else {
                 if (2 != param1) {
@@ -71,30 +71,30 @@ final class gd {
                       return param3 + "e";
                     }
                   } else {
-                    if ((param2 ^ -1) != -3) {
-                      return param3 + "º";
-                    } else {
+                    if ((param2 ^ -1) == -3) {
                       return param3 + "ª";
+                    } else {
+                      return param3 + "º";
                     }
                   }
                 } else {
-                  if (-2 == param3) {
-                    if (2 != param2) {
-                      return param3 + "er";
-                    } else {
-                      return param3 + "ère";
-                    }
-                  } else {
+                  if (-2 != (param3 ^ -1)) {
                     return param3 + "ème";
+                  } else {
+                    if (2 == param2) {
+                      return param3 + "ère";
+                    } else {
+                      return param3 + "er";
+                    }
                   }
                 }
               }
             }
           } else {
             String discarded$1 = gd.a(false, 12, -120, -73);
-            if (-1 == param1) {
+            if (-1 == (param1 ^ -1)) {
               var4 = param3 % 100;
-              if (-12 <= var4) {
+              if (-12 >= (var4 ^ -1)) {
                 if (-14 <= (var4 ^ -1)) {
                   return param3 + "th";
                 } else {
@@ -130,32 +130,32 @@ final class gd {
                 }
               }
             } else {
-              if (param1 == -2) {
+              if ((param1 ^ -1) == -2) {
                 return param3 + ".";
               } else {
                 if (2 != param1) {
                   if (-4 != (param1 ^ -1)) {
-                    if ((param1 ^ -1) == -5) {
-                      return param3 + "e";
-                    } else {
+                    if ((param1 ^ -1) != -5) {
                       throw new IllegalArgumentException("Unsupported language " + param1);
+                    } else {
+                      return param3 + "e";
                     }
                   } else {
-                    if ((param2 ^ -1) != -3) {
-                      return param3 + "º";
-                    } else {
+                    if ((param2 ^ -1) == -3) {
                       return param3 + "ª";
+                    } else {
+                      return param3 + "º";
                     }
                   }
                 } else {
-                  if (-2 == param3) {
-                    if (2 != param2) {
-                      return param3 + "er";
-                    } else {
-                      return param3 + "ère";
-                    }
-                  } else {
+                  if (-2 != (param3 ^ -1)) {
                     return param3 + "ème";
+                  } else {
+                    if (2 == param2) {
+                      return param3 + "ère";
+                    } else {
+                      return param3 + "er";
+                    }
                   }
                 }
               }

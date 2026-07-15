@@ -3190,22 +3190,28 @@ class ck extends gg {
         java.awt.image.PixelGrabber var5 = null;
         Throwable decompiledCaughtException = null;
         try {
-          var3_ref = java.awt.Toolkit.getDefaultToolkit().createImage(param0);
-          var4 = new java.awt.MediaTracker(param1);
-          var4.addImage(var3_ref, 0);
-          var4.waitForAll();
-          ((ck) this).field_I = var3_ref.getWidth((java.awt.image.ImageObserver) (Object) param1);
-          ((ck) this).field_H = var3_ref.getHeight((java.awt.image.ImageObserver) (Object) param1);
-          ((ck) this).field_K = ((ck) this).field_I;
-          ((ck) this).field_C = ((ck) this).field_H;
-          ((ck) this).field_F = 0;
-          ((ck) this).field_z = 0;
-          ((ck) this).field_D = new int[((ck) this).field_I * ((ck) this).field_H];
-          var5 = new java.awt.image.PixelGrabber(var3_ref, 0, 0, ((ck) this).field_I, ((ck) this).field_H, ((ck) this).field_D, 0, ((ck) this).field_I);
-          boolean discarded$1 = var5.grabPixels();
+          L0: {
+            var3_ref = java.awt.Toolkit.getDefaultToolkit().createImage(param0);
+            var4 = new java.awt.MediaTracker(param1);
+            var4.addImage(var3_ref, 0);
+            var4.waitForAll();
+            ((ck) this).field_I = var3_ref.getWidth((java.awt.image.ImageObserver) (Object) param1);
+            ((ck) this).field_H = var3_ref.getHeight((java.awt.image.ImageObserver) (Object) param1);
+            ((ck) this).field_K = ((ck) this).field_I;
+            ((ck) this).field_C = ((ck) this).field_H;
+            ((ck) this).field_F = 0;
+            ((ck) this).field_z = 0;
+            ((ck) this).field_D = new int[((ck) this).field_I * ((ck) this).field_H];
+            var5 = new java.awt.image.PixelGrabber(var3_ref, 0, 0, ((ck) this).field_I, ((ck) this).field_H, ((ck) this).field_D, 0, ((ck) this).field_I);
+            boolean discarded$1 = var5.grabPixels();
+            break L0;
+          }
         } catch (java.lang.Exception decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          var3 = (InterruptedException) (Object) decompiledCaughtException;
+          L1: {
+            var3 = (InterruptedException) (Object) decompiledCaughtException;
+            break L1;
+          }
         }
     }
 

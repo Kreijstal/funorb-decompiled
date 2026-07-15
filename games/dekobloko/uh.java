@@ -105,8 +105,9 @@ final class uh implements Iterable {
     }
 
     final static void a(int param0) {
-        wc var2 = (wc) (Object) sn.field_e.d(-89);
-        wc var1 = (wc) (Object) sn.field_e.d(-89);
+        wc dupTemp$0 = (wc) (Object) sn.field_e.d(-89);
+        wc var2 = dupTemp$0;
+        wc var1 = dupTemp$0;
         if (param0 != -9074) {
             return;
         }

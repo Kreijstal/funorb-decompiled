@@ -316,16 +316,21 @@ final class hg {
               L1: while (true) {
                 if (te.field_w <= var8) {
                   gn.field_e = var7;
+                  int fieldTemp$40 = te.field_w;
                   te.field_w = te.field_w + 1;
-                  gn.field_e[te.field_w] = param2;
+                  gn.field_e[fieldTemp$40] = param2;
+                  int fieldTemp$41 = te.field_w;
                   te.field_w = te.field_w + 1;
-                  gn.field_e[te.field_w] = param1;
+                  gn.field_e[fieldTemp$41] = param1;
+                  int fieldTemp$42 = te.field_w;
                   te.field_w = te.field_w + 1;
-                  gn.field_e[te.field_w] = param5;
+                  gn.field_e[fieldTemp$42] = param5;
+                  int fieldTemp$43 = te.field_w;
                   te.field_w = te.field_w + 1;
-                  gn.field_e[te.field_w] = param4;
+                  gn.field_e[fieldTemp$43] = param4;
+                  int fieldTemp$44 = te.field_w;
                   te.field_w = te.field_w + 1;
-                  gn.field_e[te.field_w] = param3;
+                  gn.field_e[fieldTemp$44] = param3;
                   return;
                 } else {
                   var7[var8] = gn.field_e[var8];
@@ -334,16 +339,21 @@ final class hg {
                 }
               }
             } else {
+              int fieldTemp$45 = te.field_w;
               te.field_w = te.field_w + 1;
-              gn.field_e[te.field_w] = param2;
+              gn.field_e[fieldTemp$45] = param2;
+              int fieldTemp$46 = te.field_w;
               te.field_w = te.field_w + 1;
-              gn.field_e[te.field_w] = param1;
+              gn.field_e[fieldTemp$46] = param1;
+              int fieldTemp$47 = te.field_w;
               te.field_w = te.field_w + 1;
-              gn.field_e[te.field_w] = param5;
+              gn.field_e[fieldTemp$47] = param5;
+              int fieldTemp$48 = te.field_w;
               te.field_w = te.field_w + 1;
-              gn.field_e[te.field_w] = param4;
+              gn.field_e[fieldTemp$48] = param4;
+              int fieldTemp$49 = te.field_w;
               te.field_w = te.field_w + 1;
-              gn.field_e[te.field_w] = param3;
+              gn.field_e[fieldTemp$49] = param3;
               return;
             }
           } else {
@@ -361,16 +371,21 @@ final class hg {
             L3: while (true) {
               if (te.field_w <= var8) {
                 gn.field_e = var7;
+                int fieldTemp$50 = te.field_w;
                 te.field_w = te.field_w + 1;
-                gn.field_e[te.field_w] = param2;
+                gn.field_e[fieldTemp$50] = param2;
+                int fieldTemp$51 = te.field_w;
                 te.field_w = te.field_w + 1;
-                gn.field_e[te.field_w] = param1;
+                gn.field_e[fieldTemp$51] = param1;
+                int fieldTemp$52 = te.field_w;
                 te.field_w = te.field_w + 1;
-                gn.field_e[te.field_w] = param5;
+                gn.field_e[fieldTemp$52] = param5;
+                int fieldTemp$53 = te.field_w;
                 te.field_w = te.field_w + 1;
-                gn.field_e[te.field_w] = param4;
+                gn.field_e[fieldTemp$53] = param4;
+                int fieldTemp$54 = te.field_w;
                 te.field_w = te.field_w + 1;
-                gn.field_e[te.field_w] = param3;
+                gn.field_e[fieldTemp$54] = param3;
                 return;
               } else {
                 var7[var8] = gn.field_e[var8];
@@ -414,16 +429,21 @@ final class hg {
               }
             }
           }
+          int fieldTemp$55 = te.field_w;
           te.field_w = te.field_w + 1;
-          gn.field_e[te.field_w] = param2;
+          gn.field_e[fieldTemp$55] = param2;
+          int fieldTemp$56 = te.field_w;
           te.field_w = te.field_w + 1;
-          gn.field_e[te.field_w] = param1;
+          gn.field_e[fieldTemp$56] = param1;
+          int fieldTemp$57 = te.field_w;
           te.field_w = te.field_w + 1;
-          gn.field_e[te.field_w] = param5;
+          gn.field_e[fieldTemp$57] = param5;
+          int fieldTemp$58 = te.field_w;
           te.field_w = te.field_w + 1;
-          gn.field_e[te.field_w] = param4;
+          gn.field_e[fieldTemp$58] = param4;
+          int fieldTemp$59 = te.field_w;
           te.field_w = te.field_w + 1;
-          gn.field_e[te.field_w] = param3;
+          gn.field_e[fieldTemp$59] = param3;
           return;
         }
     }

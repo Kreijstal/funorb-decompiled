@@ -91,8 +91,9 @@ abstract class of {
         int var3 = 0;
         ki var4 = null;
         var3 = client.field_A ? 1 : 0;
-        var4 = (ki) (Object) cg.field_c.c((byte) -112);
-        var2 = (ki) (Object) cg.field_c.c((byte) -112);
+        ki dupTemp$2 = (ki) (Object) cg.field_c.c((byte) -112);
+        var4 = dupTemp$2;
+        var2 = dupTemp$2;
         L0: while (true) {
           if (var4 == null) {
             if (!param0) {

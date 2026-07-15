@@ -95,51 +95,57 @@ final class oh implements Runnable {
             } else {
               try {
                 L5: {
-                  if (0 != ((oh) this).field_k) {
-                    break L5;
-                  } else {
-                    ((oh) this).field_g = (DataInputStream) ((oh) this).field_o.field_b;
-                    break L5;
+                  L6: {
+                    if (0 != ((oh) this).field_k) {
+                      break L6;
+                    } else {
+                      ((oh) this).field_g = (DataInputStream) ((oh) this).field_o.field_b;
+                      break L6;
+                    }
                   }
-                }
-                L6: {
-                  if ((((oh) this).field_k ^ -1) == -2) {
-                    var4 = (java.net.Socket) ((oh) this).field_h.field_b;
-                    var4.setSoTimeout(10000);
-                    var3 = var4.getOutputStream();
-                    var3.write(17);
-                    var5 = (CharSequence) (Object) ("JAGGRAB " + ((oh) this).field_j.getFile() + "\n\n");
-                    var3.write(km.a(6216, var5));
-                    ((oh) this).field_g = new DataInputStream(var4.getInputStream());
-                    break L6;
-                  } else {
-                    break L6;
+                  L7: {
+                    if ((((oh) this).field_k ^ -1) == -2) {
+                      var4 = (java.net.Socket) ((oh) this).field_h.field_b;
+                      var4.setSoTimeout(10000);
+                      var3 = var4.getOutputStream();
+                      var3.write(17);
+                      var5 = (CharSequence) (Object) ("JAGGRAB " + ((oh) this).field_j.getFile() + "\n\n");
+                      var3.write(km.a(6216, var5));
+                      ((oh) this).field_g = new DataInputStream(var4.getInputStream());
+                      break L7;
+                    } else {
+                      break L7;
+                    }
                   }
+                  ((oh) this).field_a.field_n = 0;
+                  decompiledRegionSelector0 = 0;
+                  break L5;
                 }
-                ((oh) this).field_a.field_n = 0;
-                decompiledRegionSelector0 = 0;
               } catch (java.lang.Exception decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
-                var2 = (IOException) (Object) decompiledCaughtException;
-                ((oh) this).finalize();
-                ((oh) this).field_k = ((oh) this).field_k + 1;
-                decompiledRegionSelector0 = 1;
+                L8: {
+                  var2 = (IOException) (Object) decompiledCaughtException;
+                  ((oh) this).finalize();
+                  ((oh) this).field_k = ((oh) this).field_k + 1;
+                  decompiledRegionSelector0 = 1;
+                  break L8;
+                }
               }
               if (decompiledRegionSelector0 == 0) {
-                L7: {
+                L9: {
                   if (param0 < -89) {
-                    break L7;
+                    break L9;
                   } else {
                     wl discarded$2 = ((oh) this).a(true);
-                    break L7;
+                    break L9;
                   }
                 }
-                L8: {
+                L10: {
                   if (null == ((oh) this).field_l) {
                     ((oh) this).field_l = ((oh) this).field_m.a((byte) 121, 5, (Runnable) this);
-                    break L8;
+                    break L10;
                   } else {
-                    break L8;
+                    break L10;
                   }
                 }
                 if (0 == ((oh) this).field_l.field_c) {
@@ -159,12 +165,12 @@ final class oh implements Runnable {
             }
           }
           if (param0 < -89) {
-            L9: {
+            L11: {
               if (null == ((oh) this).field_l) {
                 ((oh) this).field_l = ((oh) this).field_m.a((byte) 121, 5, (Runnable) this);
-                break L9;
+                break L11;
               } else {
-                break L9;
+                break L11;
               }
             }
             if (0 == ((oh) this).field_l.field_c) {
@@ -179,13 +185,13 @@ final class oh implements Runnable {
               }
             }
           } else {
-            L10: {
+            L12: {
               wl discarded$3 = ((oh) this).a(true);
               if (null == ((oh) this).field_l) {
                 ((oh) this).field_l = ((oh) this).field_m.a((byte) 121, 5, (Runnable) this);
-                break L10;
+                break L12;
               } else {
-                break L10;
+                break L12;
               }
             }
             if (0 == ((oh) this).field_l.field_c) {
@@ -247,8 +253,11 @@ final class oh implements Runnable {
                 } else {
                   var1 = this;
                   synchronized (var1) {
-                    ((oh) this).finalize();
-                    ((oh) this).field_k = 3;
+                    L2: {
+                      ((oh) this).finalize();
+                      ((oh) this).field_k = 3;
+                      break L2;
+                    }
                   }
                   return;
                 }
@@ -258,8 +267,11 @@ final class oh implements Runnable {
               var1_ref = (Exception) (Object) decompiledCaughtException;
               var2_ref = this;
               synchronized (var2_ref) {
-                ((oh) this).finalize();
-                ((oh) this).field_k = ((oh) this).field_k + 1;
+                L3: {
+                  ((oh) this).finalize();
+                  ((oh) this).field_k = ((oh) this).field_k + 1;
+                  break L3;
+                }
               }
               return;
             }

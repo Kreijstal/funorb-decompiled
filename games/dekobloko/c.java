@@ -52,18 +52,24 @@ final class c {
             }
             try {
               L1: {
-                param3.getAppletContext().showDocument(new java.net.URL(param1), "_blank");
-                if (param0 > 72) {
-                  break L1;
-                } else {
-                  field_m = null;
-                  break L1;
+                L2: {
+                  param3.getAppletContext().showDocument(new java.net.URL(param1), "_blank");
+                  if (param0 > 72) {
+                    break L2;
+                  } else {
+                    field_m = null;
+                    break L2;
+                  }
                 }
+                break L1;
               }
             } catch (java.net.MalformedURLException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
-              var4 = (java.net.MalformedURLException) (Object) decompiledCaughtException;
-              qb.a((Throwable) null, 16408, "MGR1: " + param1);
+              L3: {
+                var4 = (java.net.MalformedURLException) (Object) decompiledCaughtException;
+                qb.a((Throwable) null, 16408, "MGR1: " + param1);
+                break L3;
+              }
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;

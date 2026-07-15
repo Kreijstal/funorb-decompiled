@@ -285,8 +285,9 @@ final class qe {
                 ((qe) this).field_m = 0;
                 break L0;
               } else {
+                int fieldTemp$2 = ((qe) this).field_m;
                 ((qe) this).field_m = ((qe) this).field_m + 1;
-                ((qe) this).field_d[((qe) this).field_m] = (byte) 0;
+                ((qe) this).field_d[fieldTemp$2] = (byte) 0;
                 continue L1;
               }
             }
@@ -325,8 +326,9 @@ final class qe {
               }
             }
           } else {
+            int fieldTemp$3 = ((qe) this).field_m;
             ((qe) this).field_m = ((qe) this).field_m + 1;
-            ((qe) this).field_d[((qe) this).field_m] = (byte) 0;
+            ((qe) this).field_d[fieldTemp$3] = (byte) 0;
             continue L2;
           }
         }
@@ -355,9 +357,7 @@ final class qe {
         int var8 = 0;
         ck var9 = null;
         Object var10 = null;
-        ck var10_ref = null;
         Object var11 = null;
-        ck var11_ref = null;
         int[] var12 = null;
         ck var13 = null;
         ck var14 = null;
@@ -388,7 +388,7 @@ final class qe {
           var10 = null;
           if (param2) {
             var13 = var9.c();
-            var10_ref = var13;
+            var10 = (Object) (Object) var13;
             var13.a();
             hk.a(0, 0, 5, 0);
             hk.a(0, 1, 3, 0);
@@ -406,7 +406,7 @@ final class qe {
             break L2;
           } else {
             var14 = var9.c();
-            var11_ref = var14;
+            var11 = (Object) (Object) var14;
             var14.a();
             hk.a(11, 0, 5, 0);
             hk.a(13, 1, 3, 0);
@@ -417,7 +417,7 @@ final class qe {
           }
         }
         hk.a(var18, var7, var8);
-        return new ck[]{null, null, null, var10_ref, var9, var11_ref, null, null, null};
+        return new ck[]{null, null, null, (ck) var10, var9, (ck) var11, null, null, null};
     }
 
     public static void a(int param0) {
@@ -437,10 +437,16 @@ final class qe {
         Throwable decompiledCaughtException = null;
         if (param1 < -100) {
           try {
-            Thread.sleep(param0);
+            L0: {
+              Thread.sleep(param0);
+              break L0;
+            }
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
-            var3 = (InterruptedException) (Object) decompiledCaughtException;
+            L1: {
+              var3 = (InterruptedException) (Object) decompiledCaughtException;
+              break L1;
+            }
           }
           return;
         } else {

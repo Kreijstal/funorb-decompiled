@@ -95,20 +95,21 @@ final class fc {
         }
         int var6 = param1.field_I - var5;
         for (var7 = 0; var7 < param0; var7++) {
-            var3[var7] = new ck(var5, param1.field_H);
-            var8 = new ck(var5, param1.field_H);
+            ck dupTemp$0 = new ck(var5, param1.field_H);
+            var3[var7] = dupTemp$0;
+            var8 = dupTemp$0;
             var9 = var8.field_D;
             var10 = var7 * var5 + param1.field_F;
             var11 = param1.field_z;
             var12 = var11 * var5 + var10;
             var13 = 0;
-            for (var14 = -param1.field_H; var14 > -1; var14++) {
-                for (var15 = -var5; -1 > var15; var15++) {
-                    int incrementValue$0 = var13;
+            for (var14 = -param1.field_H; (var14 ^ -1) > -1; var14++) {
+                for (var15 = -var5; -1 < (var15 ^ -1); var15++) {
+                    int incrementValue$1 = var13;
                     var13++;
-                    int incrementValue$1 = var12;
+                    int incrementValue$2 = var12;
                     var12++;
-                    var9[incrementValue$0] = var4[incrementValue$1];
+                    var9[incrementValue$1] = var4[incrementValue$2];
                 }
                 var12 = var12 + var6;
             }
@@ -134,46 +135,48 @@ final class fc {
         int stackOut_12_0 = 0;
         var4 = client.field_A ? 1 : 0;
         try {
-          if (!fd.field_d.startsWith("win")) {
-            stackOut_3_0 = 0;
-            stackIn_4_0 = stackOut_3_0;
-            return stackIn_4_0 != 0;
-          } else {
-            L0: {
-              if (param1.startsWith("http://")) {
-                break L0;
-              } else {
-                if (param1.startsWith("https://")) {
-                  break L0;
-                } else {
-                  stackOut_7_0 = 0;
-                  stackIn_8_0 = stackOut_7_0;
-                  return stackIn_8_0 != 0;
-                }
-              }
-            }
-            var2 = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789?&=,.%+-_#:/*";
-            var3 = 0;
-            L1: while (true) {
-              if (var3 >= param1.length()) {
-                Process discarded$11 = Runtime.getRuntime().exec("cmd /c start \"j\" \"" + param1 + "\"");
-                if (param0 == -19) {
-                  stackOut_18_0 = 1;
-                  stackIn_19_0 = stackOut_18_0;
+          L0: {
+            if (!fd.field_d.startsWith("win")) {
+              stackOut_3_0 = 0;
+              stackIn_4_0 = stackOut_3_0;
+              return stackIn_4_0 != 0;
+            } else {
+              L1: {
+                if (param1.startsWith("http://")) {
                   break L1;
                 } else {
-                  stackOut_16_0 = 0;
-                  stackIn_17_0 = stackOut_16_0;
-                  return stackIn_17_0 != 0;
+                  if (param1.startsWith("https://")) {
+                    break L1;
+                  } else {
+                    stackOut_7_0 = 0;
+                    stackIn_8_0 = stackOut_7_0;
+                    return stackIn_8_0 != 0;
+                  }
                 }
-              } else {
-                if (0 != (var2.indexOf((int) param1.charAt(var3)) ^ -1)) {
-                  var3++;
-                  continue L1;
+              }
+              var2 = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789?&=,.%+-_#:/*";
+              var3 = 0;
+              L2: while (true) {
+                if (var3 >= param1.length()) {
+                  Process discarded$11 = Runtime.getRuntime().exec("cmd /c start \"j\" \"" + param1 + "\"");
+                  if (param0 == -19) {
+                    stackOut_18_0 = 1;
+                    stackIn_19_0 = stackOut_18_0;
+                    break L0;
+                  } else {
+                    stackOut_16_0 = 0;
+                    stackIn_17_0 = stackOut_16_0;
+                    return stackIn_17_0 != 0;
+                  }
                 } else {
-                  stackOut_12_0 = 0;
-                  stackIn_13_0 = stackOut_12_0;
-                  return stackIn_13_0 != 0;
+                  if (0 != (var2.indexOf((int) param1.charAt(var3)) ^ -1)) {
+                    var3++;
+                    continue L2;
+                  } else {
+                    stackOut_12_0 = 0;
+                    stackIn_13_0 = stackOut_12_0;
+                    return stackIn_13_0 != 0;
+                  }
                 }
               }
             }
@@ -214,42 +217,54 @@ final class fc {
             L2: {
               if (null != mk.field_d) {
                 try {
-                  mk.field_d.c((byte) 124);
+                  L3: {
+                    mk.field_d.c((byte) 124);
+                    break L3;
+                  }
                 } catch (java.io.IOException decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
-                  iOException = (IOException) (Object) decompiledCaughtException;
+                  L4: {
+                    iOException = (IOException) (Object) decompiledCaughtException;
+                    break L4;
+                  }
                 }
                 break L2;
               } else {
                 break L2;
               }
             }
-            L3: {
+            L5: {
               var1 = -32 % ((param0 - -41) / 50);
               if (null != ig.field_cc) {
                 var2 = 0;
-                L4: while (true) {
+                L6: while (true) {
                   if (ig.field_cc.length <= var2) {
-                    break L3;
+                    break L5;
                   } else {
                     if (ig.field_cc[var2] != null) {
                       try {
-                        ig.field_cc[var2].c((byte) 125);
-                        var2++;
+                        L7: {
+                          ig.field_cc[var2].c((byte) 125);
+                          var2++;
+                          break L7;
+                        }
                       } catch (java.io.IOException decompiledCaughtParameter1) {
                         decompiledCaughtException = decompiledCaughtParameter1;
-                        var3 = (IOException) (Object) decompiledCaughtException;
-                        var2++;
+                        L8: {
+                          var3 = (IOException) (Object) decompiledCaughtException;
+                          var2++;
+                          break L8;
+                        }
                       }
-                      continue L4;
+                      continue L6;
                     } else {
                       var2++;
-                      continue L4;
+                      continue L6;
                     }
                   }
                 }
               } else {
-                break L3;
+                break L5;
               }
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {

@@ -246,10 +246,13 @@ final class si implements Iterable {
               }
               if (var1 != null) {
                 try {
-                  var2_ref = Runtime.getRuntime();
-                  var4 = null;
-                  var3 = (Long) var1.invoke((Object) (Object) var2_ref, (Object[]) null);
-                  ab.field_e = 1 + (int)(var3.longValue() / 1048576L);
+                  L1: {
+                    var2_ref = Runtime.getRuntime();
+                    var4 = null;
+                    var3 = (Long) var1.invoke((Object) (Object) var2_ref, (Object[]) null);
+                    ab.field_e = 1 + (int)(var3.longValue() / 1048576L);
+                    break L1;
+                  }
                 } catch (java.lang.Throwable decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
                   var2 = decompiledCaughtException;
@@ -313,8 +316,9 @@ final class si implements Iterable {
         ((si) this).field_a = param0;
         ((si) this).field_h = new bh[param0];
         for (var2 = 0; param0 > var2; var2++) {
-            var3 = new bh();
-            ((si) this).field_h[var2] = new bh();
+            bh dupTemp$0 = new bh();
+            var3 = dupTemp$0;
+            ((si) this).field_h[var2] = dupTemp$0;
             var3.field_a = var3;
             var3.field_b = var3;
         }

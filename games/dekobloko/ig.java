@@ -424,7 +424,6 @@ final class ig extends w {
         String var12 = null;
         int var13 = 0;
         Object var14 = null;
-        ck var14_ref = null;
         int var15 = 0;
         mm var17 = null;
         mm var18 = null;
@@ -446,6 +445,7 @@ final class ig extends w {
           if (((ig) this).field_Ob <= var13) {
             ((ig) this).field_fc = ((ig) this).field_fc + (qb.field_q.field_K - -10);
             this.b((byte) 67, 12);
+            return;
           } else {
             L1: {
               if (0 >= ((ig) this).field_Wb[var13]) {
@@ -468,10 +468,10 @@ final class ig extends w {
                   }
                 }
               }
-              var14_ref = qb.field_q;
+              var14 = (Object) (Object) qb.field_q;
               break L2;
             }
-            ((ig) this).field_gc[var13] = new qd(0L, param2, (w) null, param3, var14_ref, param6[var13]);
+            ((ig) this).field_gc[var13] = new qd(0L, param2, (w) null, param3, (ck) var14, param6[var13]);
             ((ig) this).a((w) (Object) ((ig) this).field_gc[var13], -16834);
             var15 = var17.a(param6[var13]);
             if (var15 > ((ig) this).field_fc) {

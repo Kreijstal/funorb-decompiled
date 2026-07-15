@@ -66,7 +66,10 @@ final class j {
                 return;
               } else {
                 try {
-                  dj.field_cb = new nh(lf.field_f.field_v, 64, 0);
+                  L2: {
+                    dj.field_cb = new nh(lf.field_f.field_v, 64, 0);
+                    break L2;
+                  }
                 } catch (java.io.IOException decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
                   var15 = (IOException) (Object) decompiledCaughtException;

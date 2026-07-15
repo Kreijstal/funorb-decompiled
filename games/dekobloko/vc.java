@@ -116,6 +116,7 @@ final class vc {
         var1 = java.awt.GraphicsEnvironment.getLocalGraphicsEnvironment();
         ((vc) this).field_a = var1.getDefaultScreenDevice();
         if (((vc) this).field_a.isFullScreenSupported()) {
+          return;
         } else {
           var2 = var1.getScreenDevices();
           var3 = var2;
@@ -128,6 +129,7 @@ final class vc {
               if (var5 != null) {
                 if (var5.isFullScreenSupported()) {
                   ((vc) this).field_a = var5;
+                  return;
                 } else {
                   var4++;
                   continue L0;

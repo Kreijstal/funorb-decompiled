@@ -346,8 +346,9 @@ final class ng {
           if (param0 >= 37) {
             L0: while (true) {
               if (((ng) this).field_f > ((ng) this).field_d) {
+                int fieldTemp$2 = ((ng) this).field_d;
                 ((ng) this).field_d = ((ng) this).field_d + 1;
-                var4 = ((ng) this).field_h[((ng) this).field_d].field_b;
+                var4 = ((ng) this).field_h[fieldTemp$2].field_b;
                 var2 = var4;
                 if (var4 != ((ng) this).field_h[-1 + ((ng) this).field_d]) {
                   ((ng) this).field_c = var2.field_b;
@@ -367,8 +368,9 @@ final class ng {
             if (param0 >= 37) {
               L1: while (true) {
                 if (((ng) this).field_f > ((ng) this).field_d) {
+                  int fieldTemp$3 = ((ng) this).field_d;
                   ((ng) this).field_d = ((ng) this).field_d + 1;
-                  var4 = ((ng) this).field_h[((ng) this).field_d].field_b;
+                  var4 = ((ng) this).field_h[fieldTemp$3].field_b;
                   var2 = var4;
                   if (var4 != ((ng) this).field_h[-1 + ((ng) this).field_d]) {
                     ((ng) this).field_c = var2.field_b;
@@ -400,13 +402,15 @@ final class ng {
         var2 = 0;
         L0: while (true) {
           if (param0 > var2) {
-            var3 = new bh();
-            ((ng) this).field_h[var2] = new bh();
+            bh dupTemp$2 = new bh();
+            var3 = dupTemp$2;
+            ((ng) this).field_h[var2] = dupTemp$2;
             var3.field_b = var3;
             var3.field_a = var3;
             var2++;
             continue L0;
           } else {
+            return;
           }
         }
     }

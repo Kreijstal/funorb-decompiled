@@ -244,6 +244,7 @@ final class je {
           var4 = 0;
           L0: while (true) {
             if (var4 >= param0) {
+              return;
             } else {
               L1: {
                 var5 = ((je) this).field_a[var4];
@@ -297,6 +298,7 @@ final class je {
             }
           }
         } else {
+          return;
         }
     }
 

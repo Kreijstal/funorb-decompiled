@@ -172,8 +172,11 @@ final class pl {
                   }
                 }
                 try {
-                  stackOut_39_0 = new java.net.URL(param3, var7.toString());
-                  stackIn_40_0 = stackOut_39_0;
+                  L10: {
+                    stackOut_39_0 = new java.net.URL(param3, var7.toString());
+                    stackIn_40_0 = stackOut_39_0;
+                    break L10;
+                  }
                 } catch (java.lang.Exception decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
                   var8 = (Exception) (Object) decompiledCaughtException;
@@ -283,8 +286,9 @@ final class pl {
           if (param1 != null) {
             if ((param1[0] ^ -1) < -1) {
               L0: {
-                var10 = (va) (Object) ((pl) this).field_a.a(var6, 55);
-                var9 = (va) (Object) ((pl) this).field_a.a(var6, 55);
+                va dupTemp$2 = (va) (Object) ((pl) this).field_a.a(var6, 55);
+                var10 = dupTemp$2;
+                var9 = dupTemp$2;
                 if (var10 != null) {
                   break L0;
                 } else {
@@ -314,8 +318,9 @@ final class pl {
             }
           } else {
             L1: {
-              var10 = (va) (Object) ((pl) this).field_a.a(var6, 55);
-              var9 = (va) (Object) ((pl) this).field_a.a(var6, 55);
+              va dupTemp$3 = (va) (Object) ((pl) this).field_a.a(var6, 55);
+              var10 = dupTemp$3;
+              var9 = dupTemp$3;
               if (var10 != null) {
                 break L1;
               } else {
@@ -363,8 +368,9 @@ final class pl {
         var5 = var5 | param1 << 1656051856;
         if (param0 >= 113) {
           var6 = (long)var5;
-          var11 = (ud) (Object) ((pl) this).field_b.a(var6, 106);
-          var8 = (ud) (Object) ((pl) this).field_b.a(var6, 106);
+          ud dupTemp$4 = (ud) (Object) ((pl) this).field_b.a(var6, 106);
+          var11 = dupTemp$4;
+          var8 = dupTemp$4;
           if (var11 == null) {
             if (param2 != null) {
               if ((param2[0] ^ -1) < -1) {
@@ -413,8 +419,9 @@ final class pl {
         } else {
           field_f = null;
           var6 = (long)var5;
-          var11 = (ud) (Object) ((pl) this).field_b.a(var6, 106);
-          var8 = (ud) (Object) ((pl) this).field_b.a(var6, 106);
+          ud dupTemp$5 = (ud) (Object) ((pl) this).field_b.a(var6, 106);
+          var11 = dupTemp$5;
+          var8 = dupTemp$5;
           if (var11 == null) {
             if (param2 != null) {
               if ((param2[0] ^ -1) < -1) {

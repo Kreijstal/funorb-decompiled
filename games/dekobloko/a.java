@@ -479,44 +479,49 @@ class a implements gl, nl {
             var8 = client.field_A ? 1 : 0;
             try {
               L0: {
-                if (param1 > 110) {
-                  break L0;
-                } else {
-                  var9 = null;
-                  a.a((String) null, false, (java.applet.Applet) null);
-                  break L0;
+                L1: {
+                  if (param1 > 110) {
+                    break L1;
+                  } else {
+                    var9 = null;
+                    a.a((String) null, false, (java.applet.Applet) null);
+                    break L1;
+                  }
                 }
-              }
-              var10 = param0.getParameter("cookieprefix");
-              var3 = var10 + "settings";
-              var4 = (String) nc.a(true, "getcookies", param0);
-              var5 = ji.a(';', (byte) 66, var4);
-              var6 = 0;
-              L1: while (true) {
-                if (var5.length <= var6) {
-                  break L1;
-                } else {
-                  L2: {
-                    var7 = var5[var6].indexOf('=');
-                    if ((var7 ^ -1) > -1) {
-                      break L2;
-                    } else {
-                      if (!var5[var6].substring(0, var7).trim().equals((Object) (Object) var3)) {
-                        break L2;
+                var10 = param0.getParameter("cookieprefix");
+                var3 = var10 + "settings";
+                var4 = (String) nc.a(true, "getcookies", param0);
+                var5 = ji.a(';', (byte) 66, var4);
+                var6 = 0;
+                L2: while (true) {
+                  if (var5.length <= var6) {
+                    break L0;
+                  } else {
+                    L3: {
+                      var7 = var5[var6].indexOf('=');
+                      if ((var7 ^ -1) > -1) {
+                        break L3;
                       } else {
-                        stackOut_7_0 = var5[var6].substring(var7 - -1).trim();
-                        stackIn_8_0 = stackOut_7_0;
-                        return stackIn_8_0;
+                        if (!var5[var6].substring(0, var7).trim().equals((Object) (Object) var3)) {
+                          break L3;
+                        } else {
+                          stackOut_7_0 = var5[var6].substring(var7 - -1).trim();
+                          stackIn_8_0 = stackOut_7_0;
+                          return stackIn_8_0;
+                        }
                       }
                     }
+                    var6++;
+                    continue L2;
                   }
-                  var6++;
-                  continue L1;
                 }
               }
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
-              var2 = decompiledCaughtException;
+              L4: {
+                var2 = decompiledCaughtException;
+                break L4;
+              }
             }
             if (null == rb.field_l) {
               return param0.getParameter("settings");

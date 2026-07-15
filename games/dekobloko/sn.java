@@ -643,10 +643,16 @@ final class sn {
                         } else {
                           if (!on.field_d) {
                             try {
-                              Object discarded$8 = nc.a(true, "unzap", se.h(25144));
+                              L21: {
+                                Object discarded$8 = nc.a(true, "unzap", se.h(25144));
+                                break L21;
+                              }
                             } catch (java.lang.Throwable decompiledCaughtParameter0) {
                               decompiledCaughtException = decompiledCaughtParameter0;
-                              var8_ref_Throwable = decompiledCaughtException;
+                              L22: {
+                                var8_ref_Throwable = decompiledCaughtException;
+                                break L22;
+                              }
                             }
                             break L19;
                           } else {
@@ -655,60 +661,66 @@ final class sn {
                         }
                       }
                       try {
-                        Object discarded$9 = nc.a("zap", -14541, se.h(25144), new Object[1]);
+                        L23: {
+                          Object discarded$9 = nc.a("zap", -14541, se.h(25144), new Object[1]);
+                          break L23;
+                        }
                       } catch (java.lang.Throwable decompiledCaughtParameter1) {
                         decompiledCaughtException = decompiledCaughtParameter1;
-                        var8_ref_Throwable = decompiledCaughtException;
+                        L24: {
+                          var8_ref_Throwable = decompiledCaughtException;
+                          break L24;
+                        }
                       }
                       break L19;
                     }
-                    L21: {
+                    L25: {
                       if (-1 <= eh.field_a) {
-                        break L21;
+                        break L25;
                       } else {
                         ce.field_w = true;
-                        break L21;
+                        break L25;
                       }
                     }
                     we.field_b.a(pd.field_h, (byte) 63);
                     var8 = 0;
-                    L22: while (true) {
+                    L26: while (true) {
                       if (-5 <= var8) {
                         de.field_V.a(pd.field_h, (byte) 123);
                         return bh.field_k;
                       } else {
                         pd.field_h[var8] = pd.field_h[var8] + 50;
                         var8++;
-                        continue L22;
+                        continue L26;
                       }
                     }
                   }
                 }
               }
-              L23: {
+              L27: {
                 if (ph.field_xb == bh.field_l) {
                   if (!fh.a((byte) 122)) {
-                    break L23;
+                    break L27;
                   } else {
-                    L24: {
+                    L28: {
                       si.a(119);
                       if ((bh.field_k ^ -1) != -8) {
-                        break L24;
+                        break L28;
                       } else {
                         if (jd.field_Qb) {
-                          break L24;
+                          break L28;
                         } else {
                           jd.field_Qb = true;
                           return -1;
                         }
                       }
                     }
-                    L25: {
+                    L29: {
                       if ((bh.field_k ^ -1) == -8) {
                         bh.field_k = 3;
-                        break L25;
+                        break L29;
                       } else {
-                        break L25;
+                        break L29;
                       }
                     }
                     rk.field_Y = de.field_V.c((byte) -38);
@@ -716,32 +728,32 @@ final class sn {
                     return bh.field_k;
                   }
                 } else {
-                  break L23;
+                  break L27;
                 }
               }
-              L26: {
+              L30: {
                 if (qc.field_s == null) {
                   if (!jd.field_Qb) {
                     var6 = hc.field_a;
                     hc.field_a = ef.field_P;
                     jd.field_Qb = true;
                     ef.field_P = var6;
-                    break L26;
+                    break L30;
                   } else {
-                    L27: {
+                    L31: {
                       if (sl.a(-1) <= 30000L) {
                         rk.field_Y = re.field_u;
-                        break L27;
+                        break L31;
                       } else {
                         rk.field_Y = kh.field_f;
-                        break L27;
+                        break L31;
                       }
                     }
                     jd.field_Qb = false;
                     return 3;
                   }
                 } else {
-                  break L26;
+                  break L30;
                 }
               }
               return -1;

@@ -44,9 +44,10 @@ final class bc extends a {
                     stackIn_8_0 = stackOut_6_0;
                     stackIn_7_0 = stackOut_6_0;
                     if (var6 == null) {
-                      param1.field_A[var4] = new sn();
+                      sn dupTemp$1 = new sn();
+                      param1.field_A[var4] = dupTemp$1;
                       stackOut_8_0 = (sn) (Object) stackIn_8_0;
-                      stackOut_8_1 = new sn();
+                      stackOut_8_1 = (sn) dupTemp$1;
                       stackIn_9_0 = stackOut_8_0;
                       stackIn_9_1 = stackOut_8_1;
                       break L2;
@@ -96,8 +97,9 @@ final class bc extends a {
     public bc() {
         ((bc) this).field_A = new sn[6];
         ((bc) this).field_C = new sn();
-        ((bc) this).field_A[0] = new sn();
-        sn var1 = new sn();
+        sn dupTemp$0 = new sn();
+        ((bc) this).field_A[0] = dupTemp$0;
+        sn var1 = dupTemp$0;
         var1.b((byte) 68);
     }
 
@@ -105,8 +107,9 @@ final class bc extends a {
         if (param1 <= 0) {
             field_E = null;
         }
-        ((bc) this).field_A[param0] = new sn();
-        return new sn();
+        sn dupTemp$0 = new sn();
+        ((bc) this).field_A[param0] = dupTemp$0;
+        return dupTemp$0;
     }
 
     final static String a(CharSequence param0, int param1) {

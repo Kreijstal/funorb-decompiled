@@ -31,52 +31,57 @@ final class rg {
             } else {
               try {
                 L0: {
-                  var2 = "tuhstatbut";
-                  var3 = (String) nc.a(true, "getcookies", param0);
-                  var4 = ji.a(';', (byte) 66, var3);
-                  if (param1 < -55) {
-                    break L0;
-                  } else {
-                    rg.a(-124);
-                    break L0;
+                  L1: {
+                    var2 = "tuhstatbut";
+                    var3 = (String) nc.a(true, "getcookies", param0);
+                    var4 = ji.a(';', (byte) 66, var3);
+                    if (param1 < -55) {
+                      break L1;
+                    } else {
+                      rg.a(-124);
+                      break L1;
+                    }
                   }
-                }
-                var5 = 0;
-                L1: while (true) {
-                  if (var5 >= var4.length) {
-                    break L1;
-                  } else {
-                    L2: {
-                      var6 = var4[var5].indexOf('=');
-                      if (var6 < 0) {
-                        break L2;
-                      } else {
-                        if (!var4[var5].substring(0, var6).trim().equals((Object) (Object) var2)) {
-                          break L2;
+                  var5 = 0;
+                  L2: while (true) {
+                    if (var5 >= var4.length) {
+                      break L0;
+                    } else {
+                      L3: {
+                        var6 = var4[var5].indexOf('=');
+                        if (var6 < 0) {
+                          break L3;
                         } else {
-                          stackOut_9_0 = 1;
-                          stackIn_10_0 = stackOut_9_0;
-                          return stackIn_10_0 != 0;
+                          if (!var4[var5].substring(0, var6).trim().equals((Object) (Object) var2)) {
+                            break L3;
+                          } else {
+                            stackOut_9_0 = 1;
+                            stackIn_10_0 = stackOut_9_0;
+                            return stackIn_10_0 != 0;
+                          }
                         }
                       }
+                      var5++;
+                      continue L2;
                     }
-                    var5++;
-                    continue L1;
                   }
                 }
               } catch (java.lang.Throwable decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
-                var2_ref = decompiledCaughtException;
+                L4: {
+                  var2_ref = decompiledCaughtException;
+                  break L4;
+                }
               }
-              L3: {
+              L5: {
                 if (null == param0.getParameter("tuhstatbut")) {
                   stackOut_16_0 = 0;
                   stackIn_17_0 = stackOut_16_0;
-                  break L3;
+                  break L5;
                 } else {
                   stackOut_15_0 = 1;
                   stackIn_17_0 = stackOut_15_0;
-                  break L3;
+                  break L5;
                 }
               }
               return stackIn_17_0 != 0;

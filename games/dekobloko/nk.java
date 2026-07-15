@@ -53,8 +53,9 @@ final class nk {
             var2 = -38 / ((param0 - -21) / 56);
             return null;
           } else {
+            int fieldTemp$7 = ((nk) this).field_o;
             ((nk) this).field_o = ((nk) this).field_o + 1;
-            var4 = ((nk) this).field_e[((nk) this).field_o].field_p;
+            var4 = ((nk) this).field_e[fieldTemp$7].field_p;
             var2_ref_be = var4;
             if (var4 != ((nk) this).field_e[((nk) this).field_o + -1]) {
               ((nk) this).field_m = var2_ref_be.field_p;
@@ -208,8 +209,9 @@ final class nk {
         ((nk) this).field_e = new be[param0];
         ((nk) this).field_a = param0;
         for (var2 = 0; param0 > var2; var2++) {
-            var3 = new be();
-            ((nk) this).field_e[var2] = new be();
+            be dupTemp$0 = new be();
+            var3 = dupTemp$0;
+            ((nk) this).field_e[var2] = dupTemp$0;
             var3.field_v = var3;
             var3.field_p = var3;
         }

@@ -235,8 +235,9 @@ final class ai extends ek {
         int var5 = 0;
         cl var6 = null;
         var5 = client.field_A ? 1 : 0;
-        var6 = (cl) (Object) oe.field_I.c((byte) 19);
-        var4 = (cl) (Object) oe.field_I.c((byte) 19);
+        cl dupTemp$1 = (cl) (Object) oe.field_I.c((byte) 19);
+        var6 = dupTemp$1;
+        var4 = dupTemp$1;
         L0: while (true) {
           if (var6 == null) {
             if (param2 != -111) {

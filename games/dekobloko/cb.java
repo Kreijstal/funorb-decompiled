@@ -36,8 +36,9 @@ final class cb {
         var10.field_b = param0;
         var10.field_h = param4;
         var10.field_g = param5;
+        int fieldTemp$0 = ((cb) this).field_g;
         ((cb) this).field_g = ((cb) this).field_g + 1;
-        ((cb) this).field_f[((cb) this).field_g] = var8;
+        ((cb) this).field_f[fieldTemp$0] = var8;
     }
 
     public static void b(int param0) {

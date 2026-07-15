@@ -32,18 +32,20 @@ final class wa {
           var8 = new ig[var5];
           var9 = 49;
           try {
-            var10_int = 0;
-            L0: while (true) {
-              if (var5 <= var10_int) {
-                break L0;
-              } else {
-                var11 = wj.field_Qb.a(126, param0[var10_int]);
-                var6[var10_int] = var11.f((byte) -92);
-                var9 = (char)(var9 + 1);
-                var7[var10_int] = (char)var9;
-                var8[var10_int] = null;
-                var10_int++;
-                continue L0;
+            L0: {
+              var10_int = 0;
+              L1: while (true) {
+                if (var5 <= var10_int) {
+                  break L0;
+                } else {
+                  var11 = wj.field_Qb.a(126, param0[var10_int]);
+                  var6[var10_int] = var11.f((byte) -92);
+                  var9 = (char)(var9 + 1);
+                  var7[var10_int] = (char)var9;
+                  var8[var10_int] = null;
+                  var10_int++;
+                  continue L1;
+                }
               }
             }
           } catch (java.lang.Exception decompiledCaughtParameter0) {
@@ -64,15 +66,17 @@ final class wa {
         ff var4 = null;
         sb var5 = null;
         var3 = client.field_A ? 1 : 0;
-        var4 = (ff) (Object) cd.field_c.c((byte) 119);
-        var2 = (ff) (Object) cd.field_c.c((byte) 119);
+        ff dupTemp$4 = (ff) (Object) cd.field_c.c((byte) 119);
+        var4 = dupTemp$4;
+        var2 = dupTemp$4;
         L0: while (true) {
           if (var4 == null) {
             if (param0 != 3) {
               return;
             } else {
-              var5 = (sb) (Object) ef.field_S.c((byte) 80);
-              var2_ref = (sb) (Object) ef.field_S.c((byte) 80);
+              sb dupTemp$5 = (sb) (Object) ef.field_S.c((byte) 80);
+              var5 = dupTemp$5;
+              var2_ref = dupTemp$5;
               L1: while (true) {
                 if (var5 == null) {
                   return;

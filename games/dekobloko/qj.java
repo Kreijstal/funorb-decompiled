@@ -24,13 +24,19 @@ final class qj implements gl {
                 break L0;
               } else {
                 try {
-                  dj.field_cb.a(0L, (byte) -109);
-                  dj.field_cb.a(de.field_V.field_r, (byte) 117, de.field_V.field_n, 24);
-                  decompiledRegionSelector0 = 0;
+                  L1: {
+                    dj.field_cb.a(0L, (byte) -109);
+                    dj.field_cb.a(de.field_V.field_r, (byte) 117, de.field_V.field_n, 24);
+                    decompiledRegionSelector0 = 0;
+                    break L1;
+                  }
                 } catch (java.lang.Exception decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
-                  var1 = (Exception) (Object) decompiledCaughtException;
-                  decompiledRegionSelector0 = 1;
+                  L2: {
+                    var1 = (Exception) (Object) decompiledCaughtException;
+                    decompiledRegionSelector0 = 1;
+                    break L2;
+                  }
                 }
                 if (decompiledRegionSelector0 == 0) {
                   if (param0 != 64) {

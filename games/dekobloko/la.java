@@ -18,13 +18,15 @@ final class la {
         if (param0 != 0) {
           var5 = null;
           la.a((ji) null, 118);
-          var6 = (vi) (Object) ((la) this).field_e.a(param1, (byte) -37);
-          var4 = (vi) (Object) ((la) this).field_e.a(param1, (byte) -37);
+          vi dupTemp$4 = (vi) (Object) ((la) this).field_e.a(param1, (byte) -37);
+          var6 = dupTemp$4;
+          var4 = dupTemp$4;
           this.a(-124, var6);
           return;
         } else {
-          var6 = (vi) (Object) ((la) this).field_e.a(param1, (byte) -37);
-          var4 = (vi) (Object) ((la) this).field_e.a(param1, (byte) -37);
+          vi dupTemp$5 = (vi) (Object) ((la) this).field_e.a(param1, (byte) -37);
+          var6 = dupTemp$5;
+          var4 = dupTemp$5;
           this.a(-124, var6);
           return;
         }
@@ -201,9 +203,11 @@ final class la {
               continue L0;
             } else {
               ((la) this).field_e = new si(var3);
+              return;
             }
           } else {
             ((la) this).field_e = new si(var3);
+            return;
           }
         }
     }

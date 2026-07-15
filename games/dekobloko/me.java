@@ -168,18 +168,24 @@ final class me extends be {
             java.net.URL var5 = null;
             Throwable decompiledCaughtException = null;
             try {
-              var5 = param1.getCodeBase();
-              var3 = gn.a(var5, -1, param1).getFile();
-              Object discarded$6 = nc.a("updatelinks", -14541, param1, new Object[2]);
-              var4 = -128 / ((param0 - 10) / 61);
-              Object discarded$7 = nc.a("updatelinks", -14541, param1, new Object[2]);
-              Object discarded$8 = nc.a("updatelinks", -14541, param1, new Object[2]);
-              Object discarded$9 = nc.a("updatelinks", -14541, param1, new Object[2]);
-              Object discarded$10 = nc.a("updatelinks", -14541, param1, new Object[2]);
-              Object discarded$11 = nc.a("updatelinks", -14541, param1, new Object[2]);
+              L0: {
+                var5 = param1.getCodeBase();
+                var3 = gn.a(var5, -1, param1).getFile();
+                Object discarded$6 = nc.a("updatelinks", -14541, param1, new Object[2]);
+                var4 = -128 / ((param0 - 10) / 61);
+                Object discarded$7 = nc.a("updatelinks", -14541, param1, new Object[2]);
+                Object discarded$8 = nc.a("updatelinks", -14541, param1, new Object[2]);
+                Object discarded$9 = nc.a("updatelinks", -14541, param1, new Object[2]);
+                Object discarded$10 = nc.a("updatelinks", -14541, param1, new Object[2]);
+                Object discarded$11 = nc.a("updatelinks", -14541, param1, new Object[2]);
+                break L0;
+              }
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
-              var2 = decompiledCaughtException;
+              L1: {
+                var2 = decompiledCaughtException;
+                break L1;
+              }
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -228,10 +234,10 @@ final class me extends be {
                               break L5;
                             } else {
                               L6: {
-                                if ((var6 & 16777215) == -1) {
+                                if ((var6 & 16777215 ^ -1) == -1) {
                                   break L6;
                                 } else {
-                                  if (-1 != (16777215 & var7)) {
+                                  if (-1 != (16777215 & var7 ^ -1)) {
                                     break L5;
                                   } else {
                                     break L6;
@@ -242,7 +248,7 @@ final class me extends be {
                               break L4;
                             }
                           }
-                          if (var8 != 0) {
+                          if ((var8 ^ -1) != -1) {
                             break L4;
                           } else {
                             var8 = 1;
@@ -293,7 +299,7 @@ final class me extends be {
                           break L11;
                         } else {
                           L12: {
-                            if ((16777215 & var7) == 0) {
+                            if ((16777215 & var7 ^ -1) == -1) {
                               break L12;
                             } else {
                               if ((16777215 & var8) != 0) {
@@ -307,7 +313,7 @@ final class me extends be {
                           break L10;
                         }
                       }
-                      if (var9 != 0) {
+                      if ((var9 ^ -1) != -1) {
                         break L10;
                       } else {
                         var9 = 1;
@@ -324,70 +330,72 @@ final class me extends be {
           } else {
             var6 = 0;
             L13: while (true) {
-              if (var6 <= -19) {
+              if ((var6 ^ -1) <= -19) {
                 var6 = 0;
                 L14: while (true) {
                   if (-18 >= (var6 ^ -1)) {
-                    if (param3) {
-                      L15: {
-                        var6 = var12.field_D[34 + 72 * var5];
-                        var7 = var11.field_D[72 * var5];
-                        var8 = ((16711422 & var6) >> -1241284703) + ((var7 & 16711423) >> 395104033);
-                        if (var8 != 0) {
-                          break L15;
-                        } else {
-                          if ((var7 | var6) == 0) {
-                            break L15;
-                          } else {
-                            var8 = 1;
-                            break L15;
-                          }
-                        }
-                      }
-                      L16: {
-                        if (var6 == 0) {
-                          break L16;
-                        } else {
-                          if (0 == var7) {
+                    L15: {
+                      if (param3) {
+                        L16: {
+                          var6 = var12.field_D[34 + 72 * var5];
+                          var7 = var11.field_D[72 * var5];
+                          var8 = ((16711422 & var6) >> -1241284703) + ((var7 & 16711423) >> 395104033);
+                          if (var8 != 0) {
                             break L16;
                           } else {
-                            var8 = var8 + 16777216;
-                            break L16;
+                            if ((var7 | var6) == 0) {
+                              break L16;
+                            } else {
+                              var8 = 1;
+                              break L16;
+                            }
                           }
                         }
+                        L17: {
+                          if ((var6 ^ -1) == -1) {
+                            break L17;
+                          } else {
+                            if (0 == var7) {
+                              break L17;
+                            } else {
+                              var8 = var8 + 16777216;
+                              break L17;
+                            }
+                          }
+                        }
+                        var12.field_D[34 + (var5 * 72 + 1)] = var8;
+                        break L15;
+                      } else {
+                        break L15;
                       }
-                      var12.field_D[34 + (var5 * 72 + 1)] = var8;
-                      var5++;
-                      continue L0;
-                    } else {
-                      var5++;
-                      continue L0;
                     }
+                    var5++;
+                    continue L0;
                   } else {
-                    L17: {
+                    L18: {
                       var7 = var12.field_D[var6 * 2 + 72 * var5];
                       var8 = var12.field_D[2 + var6 * 2 + var5 * 72];
                       var9 = ((var8 & 16711423) >> -860505119) + ((16711423 & var7) >> 1709048353);
                       if (-1 != (var9 ^ -1)) {
-                        break L17;
+                        break L18;
                       } else {
-                        if ((var8 | var7) != -1) {
+                        if (((var8 | var7) ^ -1) != -1) {
                           var9 = 1;
-                          break L17;
+                          break L18;
                         } else {
-                          break L17;
+                          break L18;
                         }
                       }
                     }
-                    L18: {
-                      if (-1 == var7) {
-                        break L18;
+                    L19: {
+                      if (-1 == (var7 ^ -1)) {
+                        break L19;
                       } else {
-                        if (var8 != 0) {
+                        if ((var8 ^ -1) != -1) {
                           var9 = var9 + 16777216;
-                          break L18;
+                          break L19;
                         } else {
-                          break L18;
+                          break L19;
                         }
                       }
                     }
@@ -397,13 +405,13 @@ final class me extends be {
                   }
                 }
               } else {
-                L19: {
+                L20: {
                   var7 = param0.field_D[var5 * 18 - -var6];
-                  if (-1 == var7) {
-                    break L19;
+                  if (-1 == (var7 ^ -1)) {
+                    break L20;
                   } else {
                     var7 = var7 + 16777216;
-                    break L19;
+                    break L20;
                   }
                 }
                 var12.field_D[var5 * 72 + 2 * var6] = var7;

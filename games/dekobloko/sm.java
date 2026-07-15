@@ -97,6 +97,7 @@ final class sm {
             int discarded$0 = ((sm) this).field_f.b(-5228, 1);
         }
         if (null == ((sm) this).field_b) {
+            return;
         }
         int discarded$1 = ((sm) this).field_b.b(-5228, 1);
     }

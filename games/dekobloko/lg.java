@@ -1190,21 +1190,17 @@ final class lg extends kf implements vn {
     }
 
     final boolean a(int param0, int param1, ce param2, char param3) {
-        int var5 = 0;
-        if (!super.a(95, param1, param2, param3)) {
-          if (param1 != -99) {
-            if (-100 == param1) {
-              return ((lg) this).a(32, param2);
-            } else {
-              var5 = 86 / ((param0 - -22) / 49);
-              return false;
-            }
-          } else {
-            return ((lg) this).a(param2, (byte) -74);
-          }
-        } else {
-          return true;
+        if (super.a(95, param1, param2, param3)) {
+            return true;
         }
+        if ((param1 ^ -1) == -99) {
+            return ((lg) this).a(param2, (byte) -74);
+        }
+        if (-100 == (param1 ^ -1)) {
+            return ((lg) this).a(32, param2);
+        }
+        int var5 = 86 / ((param0 - -22) / 49);
+        return false;
     }
 
     static {

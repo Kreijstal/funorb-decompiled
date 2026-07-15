@@ -108,19 +108,22 @@ final class ki extends bh {
             var5 = var8.e(3);
             try {
               L5: {
-                var9 = wj.field_Qb.a(127, var5);
-                ib.field_pb = var9.f((byte) -61);
-                if (sa.field_B.equals((Object) (Object) oa.field_f)) {
-                  stackOut_24_0 = null;
-                  stackIn_25_0 = (int[]) (Object) stackOut_24_0;
-                  break L5;
-                } else {
-                  stackOut_23_0 = var9.field_F;
-                  stackIn_25_0 = stackOut_23_0;
-                  break L5;
+                L6: {
+                  var9 = wj.field_Qb.a(127, var5);
+                  ib.field_pb = var9.f((byte) -61);
+                  if (sa.field_B.equals((Object) (Object) oa.field_f)) {
+                    stackOut_24_0 = null;
+                    stackIn_25_0 = (int[]) (Object) stackOut_24_0;
+                    break L6;
+                  } else {
+                    stackOut_23_0 = var9.field_F;
+                    stackIn_25_0 = stackOut_23_0;
+                    break L6;
+                  }
                 }
+                fa.field_q = stackIn_25_0;
+                break L5;
               }
-              fa.field_q = stackIn_25_0;
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var6 = (Exception) (Object) decompiledCaughtException;

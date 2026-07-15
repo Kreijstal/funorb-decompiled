@@ -44,16 +44,19 @@ final class el extends sf {
             eh stackOut_3_0 = null;
             Object stackOut_1_0 = null;
             try {
-              if (param1 >= 5) {
-                var4 = Class.forName("rj");
-                var5 = (eh) var4.newInstance();
-                var5.a(param2, (byte) 83, param0, param3);
-                stackOut_3_0 = (eh) var5;
-                stackIn_4_0 = stackOut_3_0;
-              } else {
-                stackOut_1_0 = null;
-                stackIn_2_0 = stackOut_1_0;
-                return (eh) (Object) stackIn_2_0;
+              L0: {
+                if (param1 >= 5) {
+                  var4 = Class.forName("rj");
+                  var5 = (eh) var4.newInstance();
+                  var5.a(param2, (byte) 83, param0, param3);
+                  stackOut_3_0 = (eh) var5;
+                  stackIn_4_0 = stackOut_3_0;
+                  break L0;
+                } else {
+                  stackOut_1_0 = null;
+                  stackIn_2_0 = stackOut_1_0;
+                  return (eh) (Object) stackIn_2_0;
+                }
               }
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;

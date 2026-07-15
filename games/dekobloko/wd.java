@@ -38,41 +38,46 @@ final class wd {
             var7 = client.field_A ? 1 : 0;
             try {
               L0: {
-                var3 = (String) nc.a(true, "getcookies", param0);
-                var4 = ji.a(';', (byte) 66, var3);
-                if (param1 == -1) {
-                  break L0;
-                } else {
-                  field_e = null;
-                  break L0;
+                L1: {
+                  var3 = (String) nc.a(true, "getcookies", param0);
+                  var4 = ji.a(';', (byte) 66, var3);
+                  if (param1 == -1) {
+                    break L1;
+                  } else {
+                    field_e = null;
+                    break L1;
+                  }
                 }
-              }
-              var5 = 0;
-              L1: while (true) {
-                if (var4.length <= var5) {
-                  break L1;
-                } else {
-                  L2: {
-                    var6 = var4[var5].indexOf('=');
-                    if (0 > var6) {
-                      break L2;
-                    } else {
-                      if (var4[var5].substring(0, var6).trim().equals((Object) (Object) param2)) {
-                        stackOut_8_0 = var4[var5].substring(var6 + 1).trim();
-                        stackIn_9_0 = stackOut_8_0;
-                        return stackIn_9_0;
+                var5 = 0;
+                L2: while (true) {
+                  if (var4.length <= var5) {
+                    break L0;
+                  } else {
+                    L3: {
+                      var6 = var4[var5].indexOf('=');
+                      if (0 > var6) {
+                        break L3;
                       } else {
-                        break L2;
+                        if (var4[var5].substring(0, var6).trim().equals((Object) (Object) param2)) {
+                          stackOut_8_0 = var4[var5].substring(var6 + 1).trim();
+                          stackIn_9_0 = stackOut_8_0;
+                          return stackIn_9_0;
+                        } else {
+                          break L3;
+                        }
                       }
                     }
+                    var5++;
+                    continue L2;
                   }
-                  var5++;
-                  continue L1;
                 }
               }
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
-              var3_ref = decompiledCaughtException;
+              L4: {
+                var3_ref = decompiledCaughtException;
+                break L4;
+              }
             }
             return null;
         } catch (RuntimeException | Error decompiledUncheckedException) {

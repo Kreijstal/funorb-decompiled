@@ -20,8 +20,9 @@ class wk extends fm {
         tj var4 = null;
         var3 = client.field_A ? 1 : 0;
         param1.b((byte) 111);
-        var4 = (tj) (Object) i.field_b.c((byte) -61);
-        var2 = (tj) (Object) i.field_b.c((byte) -61);
+        tj dupTemp$2 = (tj) (Object) i.field_b.c((byte) -61);
+        var4 = dupTemp$2;
+        var2 = dupTemp$2;
         L0: while (true) {
           if (var4 != null) {
             if (var4.a(-985, param1)) {

@@ -262,7 +262,6 @@ class qi extends ek {
         int var8 = 0;
         int var9 = 0;
         Object var10 = null;
-        pk var10_ref = null;
         int var11 = 0;
         nf var12 = null;
         int var13 = 0;
@@ -347,7 +346,7 @@ class qi extends ek {
                   }
                 }
                 ((qi) this).field_O.a((bh) (Object) var15, 2777);
-                var10_ref = var15;
+                var10 = (Object) (Object) var15;
                 var11++;
                 continue L2;
               }

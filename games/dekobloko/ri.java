@@ -214,8 +214,9 @@ final class ri {
             }
           }
           if (((ri) this).field_q) {
+            int fieldTemp$1 = ((ri) this).field_u - 1;
             ((ri) this).field_u = ((ri) this).field_u - 1;
-            if (((ri) this).field_u - 1 > 0) {
+            if (fieldTemp$1 > 0) {
               return;
             } else {
               ((ri) this).field_u = ((ri) this).field_s;

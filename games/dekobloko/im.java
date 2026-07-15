@@ -23,13 +23,22 @@ final class im implements Runnable {
         ((im) this).field_a = true;
         var3 = (Object) (Object) ((im) this).field_e;
         synchronized (var3) {
-          ((Object) (Object) ((im) this).field_e).notifyAll();
+          L0: {
+            ((Object) (Object) ((im) this).field_e).notifyAll();
+            break L0;
+          }
         }
         try {
-          ((im) this).field_h.join();
+          L1: {
+            ((im) this).field_h.join();
+            break L1;
+          }
         } catch (java.lang.Exception decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          interruptedException = (InterruptedException) (Object) decompiledCaughtException;
+          L2: {
+            interruptedException = (InterruptedException) (Object) decompiledCaughtException;
+            break L2;
+          }
         }
         ((im) this).field_h = null;
     }
@@ -67,7 +76,6 @@ final class im implements Runnable {
             Object var6 = null;
             el var7 = null;
             int decompiledRegionSelector0 = 0;
-            int decompiledRegionSelector1 = 0;
             Throwable decompiledCaughtException = null;
             var5 = client.field_A ? 1 : 0;
             L0: while (true) {
@@ -76,55 +84,64 @@ final class im implements Runnable {
               } else {
                 var2 = (Object) (Object) ((im) this).field_e;
                 synchronized (var2) {
-                  var7 = (el) (Object) ((im) this).field_e.a((byte) 79);
-                  if (var7 != null) {
-                    ((im) this).field_b = ((im) this).field_b - 1;
-                    decompiledRegionSelector0 = 1;
-                  } else {
-                    try {
-                      ((Object) (Object) ((im) this).field_e).wait();
-                    } catch (java.lang.InterruptedException decompiledCaughtParameter0) {
-                      decompiledCaughtException = decompiledCaughtParameter0;
-                      interruptedException = (InterruptedException) (Object) decompiledCaughtException;
+                  L1: {
+                    var7 = (el) (Object) ((im) this).field_e.a((byte) 79);
+                    if (var7 != null) {
+                      ((im) this).field_b = ((im) this).field_b - 1;
+                      decompiledRegionSelector0 = 1;
+                      break L1;
+                    } else {
+                      try {
+                        L2: {
+                          ((Object) (Object) ((im) this).field_e).wait();
+                          break L2;
+                        }
+                      } catch (java.lang.InterruptedException decompiledCaughtParameter0) {
+                        decompiledCaughtException = decompiledCaughtParameter0;
+                        L3: {
+                          interruptedException = (InterruptedException) (Object) decompiledCaughtException;
+                          break L3;
+                        }
+                      }
+                      decompiledRegionSelector0 = 0;
+                      break L1;
                     }
-                    decompiledRegionSelector0 = 0;
                   }
                 }
                 if (decompiledRegionSelector0 == 0) {
                   continue L0;
                 } else {
                   try {
-                    if (2 == var7.field_F) {
-                      decompiledRegionSelector1 = 0;
-                    } else {
-                      decompiledRegionSelector1 = 1;
+                    L4: {
+                      L5: {
+                        if (2 == var7.field_F) {
+                          boolean discarded$1 = var7.field_K.a((byte) 43, var7.field_H, (int)var7.field_r, var7.field_H.length);
+                          var7.field_z = false;
+                          break L5;
+                        } else {
+                          if (3 == var7.field_F) {
+                            var7.field_H = var7.field_K.a((int)var7.field_r, (byte) 117);
+                            var7.field_z = false;
+                            break L5;
+                          } else {
+                            var7.field_z = false;
+                            break L5;
+                          }
+                        }
+                      }
+                      break L4;
                     }
                   } catch (java.lang.Exception decompiledCaughtParameter1) {
                     decompiledCaughtException = decompiledCaughtParameter1;
-                    var2_ref = (Exception) (Object) decompiledCaughtException;
-                    var6 = null;
-                    qb.a((Throwable) (Object) var2_ref, 16408, (String) null);
-                    var7.field_z = false;
-                    decompiledRegionSelector1 = 2;
-                  }
-                  if (decompiledRegionSelector1 == 0) {
-                    boolean discarded$1 = var7.field_K.a((byte) 43, var7.field_H, (int)var7.field_r, var7.field_H.length);
-                    var7.field_z = false;
-                    continue L0;
-                  } else {
-                    if (decompiledRegionSelector1 == 1) {
-                      if (3 == var7.field_F) {
-                        var7.field_H = var7.field_K.a((int)var7.field_r, (byte) 117);
-                        var7.field_z = false;
-                        continue L0;
-                      } else {
-                        var7.field_z = false;
-                        continue L0;
-                      }
-                    } else {
-                      continue L0;
+                    L6: {
+                      var2_ref = (Exception) (Object) decompiledCaughtException;
+                      var6 = null;
+                      qb.a((Throwable) (Object) var2_ref, 16408, (String) null);
+                      var7.field_z = false;
+                      break L6;
                     }
                   }
+                  continue L0;
                 }
               }
             }
@@ -142,10 +159,13 @@ final class im implements Runnable {
         Throwable decompiledCaughtException = null;
         var3 = (Object) (Object) ((im) this).field_e;
         synchronized (var3) {
-          var4 = 78 % ((param0 - -34) / 50);
-          ((im) this).field_e.a((be) (Object) param1, -7267);
-          ((im) this).field_b = ((im) this).field_b + 1;
-          ((Object) (Object) ((im) this).field_e).notifyAll();
+          L0: {
+            var4 = 78 % ((param0 - -34) / 50);
+            ((im) this).field_e.a((be) (Object) param1, -7267);
+            ((im) this).field_b = ((im) this).field_b + 1;
+            ((Object) (Object) ((im) this).field_e).notifyAll();
+            break L0;
+          }
         }
     }
 
@@ -204,32 +224,34 @@ final class im implements Runnable {
         var4.field_F = 1;
         var5_ref_Object = (Object) (Object) ((im) this).field_e;
         synchronized (var5_ref_Object) {
-          var6 = (el) (Object) ((im) this).field_e.b(-2198);
-          L0: while (true) {
-            if (var6 == null) {
-              break L0;
-            } else {
-              L1: {
-                if (var6.field_r != (long)param0) {
-                  break L1;
-                } else {
-                  if (param1 != var6.field_K) {
-                    break L1;
+          L0: {
+            var6 = (el) (Object) ((im) this).field_e.b(-2198);
+            L1: while (true) {
+              if (var6 == null) {
+                break L0;
+              } else {
+                L2: {
+                  if (var6.field_r != (long)param0) {
+                    break L2;
                   } else {
-                    if (2 != var6.field_F) {
-                      break L1;
+                    if (param1 != var6.field_K) {
+                      break L2;
                     } else {
-                      var4.field_H = var6.field_H;
-                      var4.field_z = false;
-                      stackOut_6_0 = (el) var4;
-                      stackIn_7_0 = stackOut_6_0;
-                      return stackIn_7_0;
+                      if (2 != var6.field_F) {
+                        break L2;
+                      } else {
+                        var4.field_H = var6.field_H;
+                        var4.field_z = false;
+                        stackOut_6_0 = (el) var4;
+                        stackIn_7_0 = stackOut_6_0;
+                        return stackIn_7_0;
+                      }
                     }
                   }
                 }
+                var6 = (el) (Object) ((im) this).field_e.b((byte) 20);
+                continue L1;
               }
-              var6 = (el) (Object) ((im) this).field_e.b((byte) 20);
-              continue L0;
             }
           }
         }

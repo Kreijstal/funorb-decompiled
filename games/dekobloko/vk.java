@@ -360,7 +360,7 @@ final class vk {
         var9 = client.field_A ? 1 : 0;
         if (param6 == -22981) {
           L0: {
-            if (param4 <= -81) {
+            if ((param4 ^ -1) <= -81) {
               stackOut_4_0 = 54;
               stackIn_5_0 = stackOut_4_0;
               break L0;
@@ -377,7 +377,7 @@ final class vk {
               var7 = var7 + vl.a(param6 ^ -1254, 80, 40 + 18 * param3);
               break L1;
             } else {
-              if (-81 > param4) {
+              if (-81 < (param4 ^ -1)) {
                 var7 = var7 + vl.a(23841, 80, 40 + 18 * param0);
                 break L1;
               } else {
@@ -555,10 +555,10 @@ final class vk {
         if (param1 == 10) {
             return kb.field_b;
         }
-        if (param1 == -12) {
+        if ((param1 ^ -1) == -12) {
             return dc.field_i;
         }
-        if (-15 != param1) {
+        if (-15 != (param1 ^ -1)) {
             return null;
         }
         return cm.a((byte) 119, pd.field_c, new String[1]);

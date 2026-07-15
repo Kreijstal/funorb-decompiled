@@ -105,19 +105,22 @@ final class wf extends eh implements java.awt.image.ImageProducer, java.awt.imag
           if (f.field_r != null) {
             var1 = (Object) (Object) f.field_r;
             synchronized (var1) {
-              f.field_r = null;
+              L1: {
+                f.field_r = null;
+                break L1;
+              }
             }
             break L0;
           } else {
             break L0;
           }
         }
-        L1: {
+        L2: {
           if (param0 >= 88) {
-            break L1;
+            break L2;
           } else {
             field_s = null;
-            break L1;
+            break L2;
           }
         }
     }
@@ -197,48 +200,51 @@ final class wf extends eh implements java.awt.image.ImageProducer, java.awt.imag
         var1 = (Object) (Object) f.field_r;
         synchronized (var1) {
           L0: {
-            if (param0 == 19012) {
-              break L0;
-            } else {
-              field_p = null;
-              break L0;
-            }
-          }
-          L1: {
-            sf.field_B = ea.field_n;
-            om.field_d = om.field_d + 1;
-            if (wi.field_b < 0) {
-              var5 = 0;
-              var2 = var5;
-              L2: while (true) {
-                if ((var5 ^ -1) <= -113) {
-                  wi.field_b = rc.field_a;
-                  break L1;
-                } else {
-                  bj.field_d[var5] = false;
-                  var5++;
-                  continue L2;
-                }
+            L1: {
+              if (param0 == 19012) {
+                break L1;
+              } else {
+                field_p = null;
+                break L1;
               }
-            } else {
-              L3: while (true) {
-                if (wi.field_b == rc.field_a) {
-                  break L1;
-                } else {
-                  var2 = la.field_h[rc.field_a];
-                  rc.field_a = 1 + rc.field_a & 127;
-                  if (0 > var2) {
-                    bj.field_d[var2 ^ -1] = false;
-                    continue L3;
+            }
+            L2: {
+              sf.field_B = ea.field_n;
+              om.field_d = om.field_d + 1;
+              if (wi.field_b < 0) {
+                var5 = 0;
+                var2 = var5;
+                L3: while (true) {
+                  if ((var5 ^ -1) <= -113) {
+                    wi.field_b = rc.field_a;
+                    break L2;
                   } else {
-                    bj.field_d[var2] = true;
+                    bj.field_d[var5] = false;
+                    var5++;
                     continue L3;
+                  }
+                }
+              } else {
+                L4: while (true) {
+                  if (wi.field_b == rc.field_a) {
+                    break L2;
+                  } else {
+                    var2 = la.field_h[rc.field_a];
+                    rc.field_a = 1 + rc.field_a & 127;
+                    if (0 > var2) {
+                      bj.field_d[var2 ^ -1] = false;
+                      continue L4;
+                    } else {
+                      bj.field_d[var2] = true;
+                      continue L4;
+                    }
                   }
                 }
               }
             }
+            ea.field_n = jh.field_e;
+            break L0;
           }
-          ea.field_n = jh.field_e;
         }
     }
 

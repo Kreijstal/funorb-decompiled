@@ -581,8 +581,7 @@ final class mg extends w {
                 stackIn_8_5 = stackOut_7_5;
                 break L3;
               }
-              new ha(stackIn_8_3, stackIn_8_4, stackIn_8_5);
-              ((mg) this).field_Qb = stackIn_8_1;
+              ((mg) this).field_Qb = new ha(stackIn_8_3, stackIn_8_4, stackIn_8_5);
               ((mg) this).field_Pb.a((w) (Object) ((mg) this).field_Qb, -16834);
               break L1;
             }

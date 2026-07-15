@@ -137,12 +137,18 @@ final class wj extends gk implements vn {
                     break L4;
                   } else {
                     try {
-                      qc.field_s.a(0, we.field_b.field_n, 1, we.field_b.field_r);
-                      el.field_J = ik.a(param0 ^ 4796);
+                      L5: {
+                        qc.field_s.a(0, we.field_b.field_n, 1, we.field_b.field_r);
+                        el.field_J = ik.a(param0 ^ 4796);
+                        break L5;
+                      }
                     } catch (java.io.IOException decompiledCaughtParameter0) {
                       decompiledCaughtException = decompiledCaughtParameter0;
-                      iOException = (IOException) (Object) decompiledCaughtException;
-                      si.a(100);
+                      L6: {
+                        iOException = (IOException) (Object) decompiledCaughtException;
+                        si.a(100);
+                        break L6;
+                      }
                     }
                     we.field_b.field_n = 0;
                     break L4;
@@ -300,7 +306,6 @@ final class wj extends gk implements vn {
 
     final static hl a(byte param0, int param1, int param2, int param3) {
         Object var4 = null;
-        hl var4_ref = null;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
@@ -386,7 +391,7 @@ final class wj extends gk implements vn {
                     }
                   }
                   sc.field_m = stackIn_41_0 != 0;
-                  return var4_ref;
+                  return (hl) var4;
                 } else {
                   var9_ref_hl = pd.field_g[var8];
                   if (null != var9_ref_hl.field_f) {
@@ -394,7 +399,7 @@ final class wj extends gk implements vn {
                     var9_ref_hl.field_f.a(var9_ref_hl.field_f.a(true), 0, var7, param1, param3);
                     var7 = var7 + param1;
                     if (var9_ref_hl.field_f.field_ob != 0) {
-                      var4_ref = var9_ref_hl;
+                      var4 = (Object) (Object) var9_ref_hl;
                       var8++;
                       continue L1;
                     } else {

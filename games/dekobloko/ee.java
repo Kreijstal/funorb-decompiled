@@ -31,8 +31,9 @@ final class ee {
         if (param0) {
             return 55;
         }
+        int fieldTemp$0 = ((ee) this).field_e - 1;
         ((ee) this).field_e = ((ee) this).field_e - 1;
-        return ((ee) this).field_d[((ee) this).field_e - 1];
+        return ((ee) this).field_d[fieldTemp$0];
     }
 
     private final void b(int param0) {
@@ -49,8 +50,9 @@ final class ee {
             break L0;
           }
         }
+        int fieldTemp$3 = ((ee) this).field_h + 1;
         ((ee) this).field_h = ((ee) this).field_h + 1;
-        ((ee) this).field_j = ((ee) this).field_j + (((ee) this).field_h + 1);
+        ((ee) this).field_j = ((ee) this).field_j + fieldTemp$3;
         var2 = 0;
         L1: while (true) {
           if (256 <= var2) {
@@ -77,10 +79,12 @@ final class ee {
               }
             }
             ((ee) this).field_c = ((ee) this).field_c + ((ee) this).field_f[128 + var2 & 255];
-            var4 = ((ee) this).field_j + ((ee) this).field_c + ((ee) this).field_f[lb.a(1020, var3) >> 346011810];
-            ((ee) this).field_f[var2] = ((ee) this).field_j + ((ee) this).field_c + ((ee) this).field_f[lb.a(1020, var3) >> 346011810];
-            ((ee) this).field_j = var3 + ((ee) this).field_f[lb.a(255, var4 >> 1542245672 >> 212130562)];
-            ((ee) this).field_d[var2] = var3 + ((ee) this).field_f[lb.a(255, var4 >> 1542245672 >> 212130562)];
+            int dupTemp$4 = ((ee) this).field_j + ((ee) this).field_c + ((ee) this).field_f[lb.a(1020, var3) >> 346011810];
+            var4 = dupTemp$4;
+            ((ee) this).field_f[var2] = dupTemp$4;
+            int dupTemp$5 = var3 + ((ee) this).field_f[lb.a(255, var4 >> 1542245672 >> 212130562)];
+            ((ee) this).field_j = dupTemp$5;
+            ((ee) this).field_d[var2] = dupTemp$5;
             var2++;
             continue L1;
           }

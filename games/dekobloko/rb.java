@@ -204,14 +204,16 @@ final class rb {
             var2 = 0;
             L2: while (true) {
               if (ic.field_c <= var2) {
-                ql.field_d[param0.b((byte) 94)] = ql.field_d[param0.b((byte) 94)] + 1;
+                int dupTemp$4 = param0.b((byte) 94);
+                ql.field_d[dupTemp$4] = ql.field_d[dupTemp$4] + 1;
                 var2 = 0;
                 var3 = 0;
                 L3: while (true) {
                   if (ic.field_c <= var3) {
                     ic.field_c = var2;
+                    int fieldTemp$5 = ic.field_c;
                     ic.field_c = ic.field_c + 1;
-                    pd.field_g[ic.field_c] = param0;
+                    pd.field_g[fieldTemp$5] = param0;
                     return;
                   } else {
                     L4: {
@@ -228,16 +230,17 @@ final class rb {
                         }
                       }
                     }
-                    int incrementValue$1 = var2;
+                    int incrementValue$6 = var2;
                     var2++;
-                    pd.field_g[incrementValue$1] = pd.field_g[var3];
+                    pd.field_g[incrementValue$6] = pd.field_g[var3];
                     var3++;
                     continue L3;
                   }
                 }
               } else {
                 if (pd.field_g[var2].field_m == param0.field_m) {
-                  ql.field_d[pd.field_g[var2].b((byte) 94)] = ql.field_d[pd.field_g[var2].b((byte) 94)] + 1;
+                  int dupTemp$7 = pd.field_g[var2].b((byte) 94);
+                  ql.field_d[dupTemp$7] = ql.field_d[dupTemp$7] + 1;
                   var2++;
                   continue L2;
                 } else {

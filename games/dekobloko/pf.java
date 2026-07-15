@@ -101,30 +101,30 @@ final class pf {
         if (0 == param2) {
             bn.a(((pf) this).field_e, param0, (byte) -84);
         } else {
-            if (1 == param2) {
-                mn.a(param1, ((pf) this).field_e, param0);
-                return true;
-            }
-            if (param2 == -3) {
-                cg.a(((pf) this).field_f, (byte) -9, param0);
-                return true;
-            }
-            if (-4 == param2) {
-                md.a(9, param0, ((pf) this).field_f);
-                return true;
-            }
-            if (param2 == 10) {
+            if (1 != param2) {
+                if ((param2 ^ -1) == -3) {
+                    cg.a(((pf) this).field_f, (byte) -9, param0);
+                    return true;
+                }
+                if (-4 == (param2 ^ -1)) {
+                    md.a(9, param0, ((pf) this).field_f);
+                    return true;
+                }
+                if (param2 != 10) {
+                    if (param2 != 15) {
+                        if (param2 == 16) {
+                            vg.a(-20974, param0, 0);
+                            return true;
+                        }
+                        return false;
+                    }
+                    vg.a(-20974, param0, ((pf) this).field_f);
+                    return true;
+                }
                 ga.a(false, ((pf) this).field_f, param0);
                 return true;
             }
-            if (param2 == 15) {
-                vg.a(-20974, param0, ((pf) this).field_f);
-                return true;
-            }
-            if (param2 != 16) {
-                return false;
-            }
-            vg.a(-20974, param0, 0);
+            mn.a(param1, ((pf) this).field_e, param0);
             return true;
         }
         return true;
@@ -431,36 +431,36 @@ final class pf {
           ((pf) this).field_h = null;
           if (-9 != (param0 ^ -1)) {
             if (param0 != 18) {
-              if (param0 != 11) {
+              if (param0 == 11) {
+                eg.a(((pf) this).field_a, param1, 0, (byte) 73);
+                return true;
+              } else {
                 if (-13 != (param0 ^ -1)) {
-                  if ((param0 ^ -1) != -14) {
-                    if (14 != param0) {
-                      if (param0 != -21) {
-                        if (-20 != param0) {
+                  if ((param0 ^ -1) == -14) {
+                    eg.a(((pf) this).field_a, param1, 2, (byte) 91);
+                    return true;
+                  } else {
+                    if (14 == param0) {
+                      ke.o(0);
+                      return true;
+                    } else {
+                      if ((param0 ^ -1) == -21) {
+                        aj.a(-1045);
+                        return true;
+                      } else {
+                        if (-20 != (param0 ^ -1)) {
                           return false;
                         } else {
                           boolean discarded$2 = vm.a(((pf) this).field_j, ((pf) this).field_e, ((pf) this).field_b, param2 + -28, ((pf) this).field_a);
                           return true;
                         }
-                      } else {
-                        aj.a(-1045);
-                        return true;
                       }
-                    } else {
-                      ke.o(0);
-                      return true;
                     }
-                  } else {
-                    eg.a(((pf) this).field_a, param1, 2, (byte) 91);
-                    return true;
                   }
                 } else {
                   eg.a(((pf) this).field_a, param1, 1, (byte) 91);
                   return true;
                 }
-              } else {
-                eg.a(((pf) this).field_a, param1, 0, (byte) 73);
-                return true;
               }
             } else {
               pn.a(38, ((pf) this).field_e, ((pf) this).field_b);
@@ -473,36 +473,36 @@ final class pf {
         } else {
           if (-9 != (param0 ^ -1)) {
             if (param0 != 18) {
-              if (param0 != 11) {
+              if (param0 == 11) {
+                eg.a(((pf) this).field_a, param1, 0, (byte) 73);
+                return true;
+              } else {
                 if (-13 != (param0 ^ -1)) {
-                  if ((param0 ^ -1) != -14) {
-                    if (14 != param0) {
-                      if (param0 != -21) {
-                        if (-20 == param0) {
-                          boolean discarded$3 = vm.a(((pf) this).field_j, ((pf) this).field_e, ((pf) this).field_b, param2 + -28, ((pf) this).field_a);
-                          return true;
-                        } else {
-                          return false;
-                        }
-                      } else {
-                        aj.a(-1045);
-                        return true;
-                      }
-                    } else {
-                      ke.o(0);
-                      return true;
-                    }
-                  } else {
+                  if ((param0 ^ -1) == -14) {
                     eg.a(((pf) this).field_a, param1, 2, (byte) 91);
                     return true;
+                  } else {
+                    if (14 == param0) {
+                      ke.o(0);
+                      return true;
+                    } else {
+                      if ((param0 ^ -1) == -21) {
+                        aj.a(-1045);
+                        return true;
+                      } else {
+                        if (-20 != (param0 ^ -1)) {
+                          return false;
+                        } else {
+                          boolean discarded$3 = vm.a(((pf) this).field_j, ((pf) this).field_e, ((pf) this).field_b, param2 + -28, ((pf) this).field_a);
+                          return true;
+                        }
+                      }
+                    }
                   }
                 } else {
                   eg.a(((pf) this).field_a, param1, 1, (byte) 91);
                   return true;
                 }
-              } else {
-                eg.a(((pf) this).field_a, param1, 0, (byte) 73);
-                return true;
               }
             } else {
               pn.a(38, ((pf) this).field_e, ((pf) this).field_b);
@@ -523,29 +523,35 @@ final class pf {
             String var9 = null;
             Throwable decompiledCaughtException = null;
             try {
-              var8 = param0.getParameter("cookiehost");
-              var7 = var8;
-              var7 = var8;
-              var9 = param1 + "=" + param4 + "; version=1; path=/; domain=" + var8;
-              var7 = var9;
-              var7 = var9;
-              if (param3 > 87) {
-                L0: {
-                  if (-1L >= (param2 ^ -1L)) {
-                    var7 = var9 + "; Expires=" + uf.a((byte) 60, param2 * 1000L + ik.a(4)) + "; Max-Age=" + param2;
-                    break L0;
-                  } else {
-                    var7 = var9 + "; Discard;";
-                    break L0;
+              L0: {
+                var8 = param0.getParameter("cookiehost");
+                var7 = var8;
+                var7 = var8;
+                var9 = param1 + "=" + param4 + "; version=1; path=/; domain=" + var8;
+                var7 = var9;
+                var7 = var9;
+                if (param3 > 87) {
+                  L1: {
+                    if (-1L >= (param2 ^ -1L)) {
+                      var7 = var9 + "; Expires=" + uf.a((byte) 60, param2 * 1000L + ik.a(4)) + "; Max-Age=" + param2;
+                      break L1;
+                    } else {
+                      var7 = var9 + "; Discard;";
+                      break L1;
+                    }
                   }
+                  nc.a((byte) -51, param0, "document.cookie=\"" + var7 + "\"");
+                  break L0;
+                } else {
+                  return;
                 }
-                nc.a((byte) -51, param0, "document.cookie=\"" + var7 + "\"");
-              } else {
-                return;
               }
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
-              var6 = decompiledCaughtException;
+              L2: {
+                var6 = decompiledCaughtException;
+                break L2;
+              }
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;

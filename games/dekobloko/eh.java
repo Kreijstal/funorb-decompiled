@@ -227,8 +227,9 @@ abstract class eh {
                                         break L19;
                                       } else {
                                         L20: {
-                                          var9[var12] = var16.g((byte) -119);
-                                          var13 = var16.g((byte) -119);
+                                          byte dupTemp$2 = var16.g((byte) -119);
+                                          var9[var12] = dupTemp$2;
+                                          var13 = dupTemp$2;
                                           stackOut_34_0 = var10;
                                           stackIn_36_0 = stackOut_34_0;
                                           stackIn_35_0 = stackOut_34_0;
@@ -308,8 +309,9 @@ abstract class eh {
                                         break L27;
                                       } else {
                                         L28: {
-                                          var9[var12 + var13 * var5] = var16.g((byte) -115);
-                                          var14 = var16.g((byte) -115);
+                                          byte dupTemp$3 = var16.g((byte) -115);
+                                          var9[var12 + var13 * var5] = dupTemp$3;
+                                          var14 = dupTemp$3;
                                           stackOut_52_0 = var10;
                                           stackIn_54_0 = stackOut_52_0;
                                           stackIn_53_0 = stackOut_52_0;

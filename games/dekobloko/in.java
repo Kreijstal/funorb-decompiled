@@ -19,9 +19,7 @@ final class in extends bh {
         int var19 = 0;
         int var20 = 0;
         Object var21 = null;
-        ck[] var21_array = null;
         Object var22 = null;
-        pi var22_ref = null;
         int var23 = 0;
         int var24 = 0;
         int var25 = 0;
@@ -58,30 +56,30 @@ final class in extends bh {
         int var56 = 0;
         int var57 = 0;
         int var58 = 0;
-        ck var59 = null;
+        Object var59 = null;
         int var60 = 0;
-        ck[] stackIn_71_0 = null;
-        ck[] stackIn_72_0 = null;
-        ck[] stackIn_73_0 = null;
+        Object stackIn_71_0 = null;
+        Object stackIn_72_0 = null;
+        Object stackIn_73_0 = null;
         int stackIn_73_1 = 0;
-        ck stackIn_78_0 = null;
-        pi stackIn_78_1 = null;
+        Object stackIn_78_0 = null;
+        Object stackIn_78_1 = null;
         int stackIn_78_2 = 0;
         int stackIn_78_3 = 0;
         int stackIn_78_4 = 0;
         int stackIn_78_5 = 0;
         int stackIn_78_6 = 0;
         int stackIn_78_7 = 0;
-        ck stackIn_79_0 = null;
-        pi stackIn_79_1 = null;
+        Object stackIn_79_0 = null;
+        Object stackIn_79_1 = null;
         int stackIn_79_2 = 0;
         int stackIn_79_3 = 0;
         int stackIn_79_4 = 0;
         int stackIn_79_5 = 0;
         int stackIn_79_6 = 0;
         int stackIn_79_7 = 0;
-        ck stackIn_80_0 = null;
-        pi stackIn_80_1 = null;
+        Object stackIn_80_0 = null;
+        Object stackIn_80_1 = null;
         int stackIn_80_2 = 0;
         int stackIn_80_3 = 0;
         int stackIn_80_4 = 0;
@@ -89,21 +87,21 @@ final class in extends bh {
         int stackIn_80_6 = 0;
         int stackIn_80_7 = 0;
         int stackIn_80_8 = 0;
-        ck[] stackOut_70_0 = null;
-        ck[] stackOut_72_0 = null;
+        Object stackOut_70_0 = null;
+        Object stackOut_72_0 = null;
         int stackOut_72_1 = 0;
-        ck[] stackOut_71_0 = null;
+        Object stackOut_71_0 = null;
         int stackOut_71_1 = 0;
-        ck stackOut_77_0 = null;
-        pi stackOut_77_1 = null;
+        Object stackOut_77_0 = null;
+        Object stackOut_77_1 = null;
         int stackOut_77_2 = 0;
         int stackOut_77_3 = 0;
         int stackOut_77_4 = 0;
         int stackOut_77_5 = 0;
         int stackOut_77_6 = 0;
         int stackOut_77_7 = 0;
-        ck stackOut_79_0 = null;
-        pi stackOut_79_1 = null;
+        Object stackOut_79_0 = null;
+        Object stackOut_79_1 = null;
         int stackOut_79_2 = 0;
         int stackOut_79_3 = 0;
         int stackOut_79_4 = 0;
@@ -111,8 +109,8 @@ final class in extends bh {
         int stackOut_79_6 = 0;
         int stackOut_79_7 = 0;
         int stackOut_79_8 = 0;
-        ck stackOut_78_0 = null;
-        pi stackOut_78_1 = null;
+        Object stackOut_78_0 = null;
+        Object stackOut_78_1 = null;
         int stackOut_78_2 = 0;
         int stackOut_78_3 = 0;
         int stackOut_78_4 = 0;
@@ -254,8 +252,8 @@ final class in extends bh {
                 }
               }
             }
-            var21_array = ob.field_j[param0][var19 & 7];
-            var22_ref = gf.field_f[var23];
+            var21 = (Object) (Object) ob.field_j[param0][var19 & 7];
+            var22 = (Object) (Object) gf.field_f[var23];
             break L0;
           }
         }
@@ -307,7 +305,7 @@ final class in extends bh {
         param4 = param4 + var37;
         param5 = param5 + var35;
         param6 = param6 + var38;
-        if (var21_array == null) {
+        if (var21 == null) {
           return;
         } else {
           L7: {
@@ -354,17 +352,17 @@ final class in extends bh {
                   var58 = param2 + var50 * param3 / var52;
                   if (!param15) {
                     L10: {
-                      stackOut_70_0 = (ck[]) var21_array;
+                      stackOut_70_0 = var21;
                       stackIn_72_0 = stackOut_70_0;
                       stackIn_71_0 = stackOut_70_0;
                       if (var43 != var24) {
-                        stackOut_72_0 = (ck[]) (Object) stackIn_72_0;
+                        stackOut_72_0 = stackIn_72_0;
                         stackOut_72_1 = var23 & 12;
                         stackIn_73_0 = stackOut_72_0;
                         stackIn_73_1 = stackOut_72_1;
                         break L10;
                       } else {
-                        stackOut_71_0 = (ck[]) (Object) stackIn_71_0;
+                        stackOut_71_0 = stackIn_71_0;
                         stackOut_71_1 = var23;
                         stackIn_73_0 = stackOut_71_0;
                         stackIn_73_1 = stackOut_71_1;
@@ -372,12 +370,12 @@ final class in extends bh {
                       }
                     }
                     L11: {
-                      var59 = stackIn_73_0[stackIn_73_1];
+                      var59 = ((Object[]) (Object) stackIn_73_0)[stackIn_73_1];
                       var60 = 0;
                       if (param10 >= param12) {
                         break L11;
                       } else {
-                        var60 = (var24 - var43) * var59.field_K / (var24 * 2);
+                        var60 = (var24 - var43) * ((ck) var59).field_K / (var24 * 2);
                         break L11;
                       }
                     }
@@ -385,13 +383,13 @@ final class in extends bh {
                       if (param10 <= param12) {
                         break L12;
                       } else {
-                        var60 = (var24 + var43) * var59.field_K / (var24 * 2);
+                        var60 = (var24 + var43) * ((ck) var59).field_K / (var24 * 2);
                         break L12;
                       }
                     }
                     L13: {
-                      stackOut_77_0 = (ck) var59;
-                      stackOut_77_1 = (pi) var22_ref;
+                      stackOut_77_0 = var59;
+                      stackOut_77_1 = var22;
                       stackOut_77_2 = var53;
                       stackOut_77_3 = var54;
                       stackOut_77_4 = var55;
@@ -415,8 +413,8 @@ final class in extends bh {
                       stackIn_78_6 = stackOut_77_6;
                       stackIn_78_7 = stackOut_77_7;
                       if (var43 >= var24) {
-                        stackOut_79_0 = (ck) (Object) stackIn_79_0;
-                        stackOut_79_1 = (pi) (Object) stackIn_79_1;
+                        stackOut_79_0 = stackIn_79_0;
+                        stackOut_79_1 = stackIn_79_1;
                         stackOut_79_2 = stackIn_79_2;
                         stackOut_79_3 = stackIn_79_3;
                         stackOut_79_4 = stackIn_79_4;
@@ -435,8 +433,8 @@ final class in extends bh {
                         stackIn_80_8 = stackOut_79_8;
                         break L13;
                       } else {
-                        stackOut_78_0 = (ck) (Object) stackIn_78_0;
-                        stackOut_78_1 = (pi) (Object) stackIn_78_1;
+                        stackOut_78_0 = stackIn_78_0;
+                        stackOut_78_1 = stackIn_78_1;
                         stackOut_78_2 = stackIn_78_2;
                         stackOut_78_3 = stackIn_78_3;
                         stackOut_78_4 = stackIn_78_4;
@@ -456,7 +454,7 @@ final class in extends bh {
                         break L13;
                       }
                     }
-                    cg.a(stackIn_80_0, stackIn_80_1, stackIn_80_2, stackIn_80_3, stackIn_80_4, stackIn_80_5, stackIn_80_6, stackIn_80_7, stackIn_80_8 != 0, false, var60, -1);
+                    cg.a((ck) (Object) stackIn_80_0, (pi) (Object) stackIn_80_1, stackIn_80_2, stackIn_80_3, stackIn_80_4, stackIn_80_5, stackIn_80_6, stackIn_80_7, stackIn_80_8 != 0, false, var60, -1);
                     var43 += 2;
                     continue L8;
                   } else {
@@ -598,6 +596,7 @@ final class in extends bh {
         var10 = 0;
         L1: while (true) {
           if (var10 >= var5) {
+            return;
           } else {
             var11 = 0;
             L2: while (true) {

@@ -87,8 +87,9 @@ final class dl extends ek {
         Object var4 = null;
         cl var5 = null;
         var3 = client.field_A ? 1 : 0;
-        var5 = (cl) (Object) oe.field_I.c((byte) 113);
-        var2 = (cl) (Object) oe.field_I.c((byte) 113);
+        cl dupTemp$2 = (cl) (Object) oe.field_I.c((byte) 113);
+        var5 = dupTemp$2;
+        var2 = dupTemp$2;
         L0: while (true) {
           if (var5 == null) {
             if (param0 != 640) {

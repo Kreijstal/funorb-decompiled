@@ -159,7 +159,6 @@ final class ea extends cf {
         ck var12 = null;
         ck var13 = null;
         Object var14 = null;
-        ck var14_ref = null;
         int[] var15 = null;
         ck var16 = null;
         int[] var17 = null;
@@ -196,7 +195,7 @@ final class ea extends cf {
             var14 = null;
             if (param0 > 0) {
               var16 = new ck(16, 16);
-              var14_ref = var16;
+              var14 = (Object) (Object) var16;
               var16.a();
               hk.a(0, 0, 16, 16, param0);
               break L0;
@@ -205,7 +204,7 @@ final class ea extends cf {
             }
           }
           hk.a(var20, var7, var8);
-          return new ck[]{var10, var11, var10, var9, var14_ref, var9, var12, var13, var12};
+          return new ck[]{var10, var11, var10, var9, (ck) var14, var9, var12, var13, var12};
         }
     }
 
@@ -787,8 +786,7 @@ final class ea extends cf {
                       }
                     }
                     L8: {
-                      new nf(stackIn_33_2, stackIn_33_3, stackIn_33_4);
-                      var19 = stackIn_33_0;
+                      var19 = new nf(stackIn_33_2, stackIn_33_3, stackIn_33_4);
                       var19.field_a[0] = 0;
                       if (var18 != null) {
                         L9: {
@@ -892,8 +890,7 @@ final class ea extends cf {
                         }
                       }
                       L13: {
-                        new nf(stackIn_117_2, stackIn_117_3, stackIn_117_4);
-                        var35 = stackIn_117_0;
+                        var35 = new nf(stackIn_117_2, stackIn_117_3, stackIn_117_4);
                         var35.field_a[0] = 0;
                         if (var34 != null) {
                           L14: {
@@ -984,8 +981,7 @@ final class ea extends cf {
                         }
                       }
                       L17: {
-                        new nf(stackIn_100_2, stackIn_100_3, stackIn_100_4);
-                        var37 = stackIn_100_0;
+                        var37 = new nf(stackIn_100_2, stackIn_100_3, stackIn_100_4);
                         var37.field_a[0] = 0;
                         if (var36 != null) {
                           L18: {
@@ -1075,8 +1071,7 @@ final class ea extends cf {
                       }
                     }
                     L21: {
-                      new nf(stackIn_86_2, stackIn_86_3, stackIn_86_4);
-                      var39 = stackIn_86_0;
+                      var39 = new nf(stackIn_86_2, stackIn_86_3, stackIn_86_4);
                       var39.field_a[0] = 0;
                       if (var38 != null) {
                         L22: {
@@ -1164,8 +1159,7 @@ final class ea extends cf {
                     }
                   }
                   L25: {
-                    new nf(stackIn_73_2, stackIn_73_3, stackIn_73_4);
-                    var29 = stackIn_73_0;
+                    var29 = new nf(stackIn_73_2, stackIn_73_3, stackIn_73_4);
                     var29.field_a[0] = 0;
                     if (var28 != null) {
                       L26: {
@@ -1287,8 +1281,7 @@ final class ea extends cf {
                   }
                 }
                 L31: {
-                  new nf(stackIn_57_2, stackIn_57_3, stackIn_57_4);
-                  var21 = stackIn_57_0;
+                  var21 = new nf(stackIn_57_2, stackIn_57_3, stackIn_57_4);
                   var21.field_a[0] = 0;
                   if (var20 != null) {
                     L32: {

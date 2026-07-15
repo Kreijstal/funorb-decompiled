@@ -105,7 +105,10 @@ final class rf {
             } else {
               var1 = (Object) (Object) ik.field_f;
               synchronized (var1) {
-                ik.field_f = null;
+                L1: {
+                  ik.field_f = null;
+                  break L1;
+                }
               }
               break L0;
             }

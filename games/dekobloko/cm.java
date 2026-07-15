@@ -29,8 +29,9 @@ final class cm implements Iterator {
             if (((cm) this).field_k.field_a <= ((cm) this).field_e) {
                 return null;
             }
+            int fieldTemp$0 = ((cm) this).field_e;
             ((cm) this).field_e = ((cm) this).field_e + 1;
-            var1 = ((cm) this).field_k.field_h[((cm) this).field_e].field_b;
+            var1 = ((cm) this).field_k.field_h[fieldTemp$0].field_b;
         } while (var1 == ((cm) this).field_k.field_h[-1 + ((cm) this).field_e]);
         ((cm) this).field_c = var1.field_b;
         ((cm) this).field_j = var1;
@@ -73,8 +74,9 @@ final class cm implements Iterator {
               break L1;
             } else {
               var4 = var10.e((byte) -2);
-              var9 = (ff) (Object) cd.field_c.c((byte) -124);
-              var5 = (ff) (Object) cd.field_c.c((byte) -124);
+              ff dupTemp$1 = (ff) (Object) cd.field_c.c((byte) -124);
+              var9 = dupTemp$1;
+              var5 = dupTemp$1;
               L2: while (true) {
                 L3: {
                   if (var9 == null) {
@@ -154,8 +156,9 @@ final class cm implements Iterator {
             return true;
         }
         while (((cm) this).field_e < ((cm) this).field_k.field_a) {
+            int fieldTemp$0 = ((cm) this).field_e;
             ((cm) this).field_e = ((cm) this).field_e + 1;
-            if (((cm) this).field_k.field_h[((cm) this).field_e].field_b != ((cm) this).field_k.field_h[((cm) this).field_e - 1]) {
+            if (((cm) this).field_k.field_h[fieldTemp$0].field_b != ((cm) this).field_k.field_h[((cm) this).field_e - 1]) {
                 ((cm) this).field_c = ((cm) this).field_k.field_h[-1 + ((cm) this).field_e].field_b;
                 return true;
             }
@@ -355,6 +358,7 @@ final class cm implements Iterator {
                 var7[0] = de.b(var17[0], 2048);
                 field_i = "Creating your account";
                 field_d = "Connection lost. <%0>";
+                return;
               } else {
                 var1 = field_h;
                 var2 = var0;

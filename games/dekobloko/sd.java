@@ -16,8 +16,9 @@ final class sd {
 
     final int a(int param0) {
         if (((sd) this).field_k >= ((sd) this).field_b) {
+            int fieldTemp$0 = ((sd) this).field_g;
             ((sd) this).field_g = ((sd) this).field_g + 1;
-            ((sd) this).field_j = ((sd) this).field_c[((sd) this).field_g] << 15;
+            ((sd) this).field_j = ((sd) this).field_c[fieldTemp$0] << 15;
             if (((sd) this).field_g >= ((sd) this).field_f) {
                 ((sd) this).field_g = ((sd) this).field_f - 1;
             }

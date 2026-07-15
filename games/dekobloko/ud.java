@@ -12,8 +12,9 @@ final class ud extends ti {
         ((ud) this).field_o = param0.a(14, ((ud) this).field_o);
         ((ud) this).field_p = param0.a(false, ((ud) this).field_p);
         if (((ud) this).field_q == ((ud) this).field_s) {
-          ((ud) this).field_s = param0.b(((ud) this).field_q, 114);
-          ((ud) this).field_q = param0.b(((ud) this).field_q, 114);
+          int dupTemp$2 = param0.b(((ud) this).field_q, 114);
+          ((ud) this).field_s = dupTemp$2;
+          ((ud) this).field_q = dupTemp$2;
           return (ud) this;
         } else {
           L0: {

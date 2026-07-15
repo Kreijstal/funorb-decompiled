@@ -125,23 +125,26 @@ final class ql extends java.awt.Canvas implements java.awt.event.FocusListener {
         var1 = (Object) (Object) ik.field_f;
         synchronized (var1) {
           L0: {
-            pf.field_g = pf.field_g + 1;
-            be.field_n = pa.field_bb;
-            bh.field_g = lc.field_f;
-            if (param0 == -2) {
-              break L0;
-            } else {
-              ql.c(-55);
-              break L0;
+            L1: {
+              pf.field_g = pf.field_g + 1;
+              be.field_n = pa.field_bb;
+              bh.field_g = lc.field_f;
+              if (param0 == -2) {
+                break L1;
+              } else {
+                ql.c(-55);
+                break L1;
+              }
             }
+            pm.field_f = te.field_r;
+            pm.field_b = ml.field_b;
+            ml.field_b = false;
+            ig.field_Yb = nk.field_l;
+            he.field_S = ge.field_a;
+            nf.field_h = qa.field_t;
+            nk.field_l = 0;
+            break L0;
           }
-          pm.field_f = te.field_r;
-          pm.field_b = ml.field_b;
-          ml.field_b = false;
-          ig.field_Yb = nk.field_l;
-          he.field_S = ge.field_a;
-          nf.field_h = qa.field_t;
-          nk.field_l = 0;
         }
     }
 

@@ -464,10 +464,7 @@ final class kc extends bh {
     final static ji a(boolean param0, int param1, int param2, boolean param3, boolean param4, boolean param5) {
         try {
             Object var6 = null;
-            kh var6_ref = null;
-            IOException var6_ref2 = null;
             Object var7 = null;
-            kh var7_ref = null;
             le var8 = null;
             Object stackIn_2_0 = null;
             ji stackIn_15_0 = null;
@@ -475,64 +472,67 @@ final class kc extends bh {
             ji stackOut_14_0 = null;
             Object stackOut_1_0 = null;
             try {
-              if (!param4) {
-                L0: {
-                  var6 = null;
-                  var7 = null;
-                  if (bl.field_U.field_i != null) {
-                    mk.field_d = new nh(bl.field_U.field_i, 5200, 0);
-                    bl.field_U.field_i = null;
-                    var6_ref = new kh(255, mk.field_d, new nh(bl.field_U.field_l, 12000, 0), 2097152);
-                    break L0;
-                  } else {
-                    break L0;
-                  }
-                }
-                L1: {
-                  if (mk.field_d == null) {
-                    break L1;
-                  } else {
-                    L2: {
-                      if (ig.field_cc != null) {
-                        break L2;
-                      } else {
-                        ig.field_cc = new nh[bl.field_U.field_o.length];
-                        break L2;
-                      }
+              L0: {
+                if (!param4) {
+                  L1: {
+                    var6 = null;
+                    var7 = null;
+                    if (bl.field_U.field_i != null) {
+                      mk.field_d = new nh(bl.field_U.field_i, 5200, 0);
+                      bl.field_U.field_i = null;
+                      var6 = (Object) (Object) new kh(255, mk.field_d, new nh(bl.field_U.field_l, 12000, 0), 2097152);
+                      break L1;
+                    } else {
+                      break L1;
                     }
-                    L3: {
-                      if (ig.field_cc[param2] != null) {
-                        break L3;
-                      } else {
-                        ig.field_cc[param2] = new nh(bl.field_U.field_o[param2], 12000, 0);
-                        bl.field_U.field_o[param2] = null;
-                        break L3;
+                  }
+                  L2: {
+                    if (mk.field_d == null) {
+                      break L2;
+                    } else {
+                      L3: {
+                        if (ig.field_cc != null) {
+                          break L3;
+                        } else {
+                          ig.field_cc = new nh[bl.field_U.field_o.length];
+                          break L3;
+                        }
                       }
+                      L4: {
+                        if (ig.field_cc[param2] != null) {
+                          break L4;
+                        } else {
+                          ig.field_cc[param2] = new nh(bl.field_U.field_o[param2], 12000, 0);
+                          bl.field_U.field_o[param2] = null;
+                          break L4;
+                        }
+                      }
+                      var7 = (Object) (Object) new kh(param2, mk.field_d, ig.field_cc[param2], 2097152);
+                      break L2;
                     }
-                    var7_ref = new kh(param2, mk.field_d, ig.field_cc[param2], 2097152);
-                    break L1;
                   }
-                }
-                L4: {
-                  var8 = sc.field_l.a((byte) -86, param2, var7_ref, var6_ref, param3);
-                  if (!param5) {
-                    break L4;
-                  } else {
-                    var8.b((byte) 0);
-                    break L4;
+                  L5: {
+                    var8 = sc.field_l.a((byte) -86, param2, (kh) var7, (kh) var6, param3);
+                    if (!param5) {
+                      break L5;
+                    } else {
+                      var8.b((byte) 0);
+                      break L5;
+                    }
                   }
+                  stackOut_14_0 = new ji((of) (Object) var8, param0, param1);
+                  stackIn_15_0 = stackOut_14_0;
+                  break L0;
+                } else {
+                  stackOut_1_0 = null;
+                  stackIn_2_0 = stackOut_1_0;
+                  return (ji) (Object) stackIn_2_0;
                 }
-                stackOut_14_0 = new ji((of) (Object) var8, param0, param1);
-                stackIn_15_0 = stackOut_14_0;
-              } else {
-                stackOut_1_0 = null;
-                stackIn_2_0 = stackOut_1_0;
-                return (ji) (Object) stackIn_2_0;
               }
             } catch (java.io.IOException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
-              var6_ref2 = (IOException) (Object) decompiledCaughtException;
-              throw new RuntimeException(var6_ref2.toString());
+              var6 = (Object) (Object) decompiledCaughtException;
+              throw new RuntimeException(((IOException) var6).toString());
             }
             return stackIn_15_0;
         } catch (RuntimeException | Error decompiledUncheckedException) {

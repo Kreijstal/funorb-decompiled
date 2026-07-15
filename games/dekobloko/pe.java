@@ -73,8 +73,9 @@ final class pe {
           } else {
             if (var2 == 1) {
               var3 = var10.i(7553);
-              var8 = (fa) (Object) sa.field_C.c((byte) 46);
-              var4_ref_fa = (fa) (Object) sa.field_C.c((byte) 46);
+              fa dupTemp$4 = (fa) (Object) sa.field_C.c((byte) 46);
+              var8 = dupTemp$4;
+              var4_ref_fa = dupTemp$4;
               L3: while (true) {
                 L4: {
                   if (var8 == null) {
@@ -128,50 +129,57 @@ final class pe {
                 return false;
               } else {
                 try {
-                  var2_int = qc.field_s.b(0);
-                  if ((var2_int ^ -1) >= -1) {
-                    L1: {
-                      if (-1 < (var2_int ^ -1)) {
-                        si.a(69);
-                        break L1;
-                      } else {
-                        if ((sl.a(param0 + -25974) ^ -1L) >= -30001L) {
-                          decompiledRegionSelector0 = 0;
-                        } else {
+                  L1: {
+                    var2_int = qc.field_s.b(0);
+                    if ((var2_int ^ -1) >= -1) {
+                      L2: {
+                        if (-1 < (var2_int ^ -1)) {
                           si.a(69);
-                          break L1;
+                          break L2;
+                        } else {
+                          if ((sl.a(param0 + -25974) ^ -1L) >= -30001L) {
+                            decompiledRegionSelector0 = 0;
+                            break L1;
+                          } else {
+                            si.a(69);
+                            break L2;
+                          }
                         }
                       }
-                    }
-                    decompiledRegionSelector0 = 1;
-                  } else {
-                    L2: {
-                      if (-de.field_V.field_n + param1 >= var2_int) {
-                        break L2;
-                      } else {
-                        var2_int = -de.field_V.field_n + param1;
-                        break L2;
-                      }
-                    }
-                    qc.field_s.a(var2_int, de.field_V.field_n, (byte) 17, de.field_V.field_r);
-                    p.field_a = ik.a(4);
-                    de.field_V.field_n = de.field_V.field_n + var2_int;
-                    if (param1 > de.field_V.field_n) {
-                      stackOut_12_0 = 0;
-                      stackIn_13_0 = stackOut_12_0;
-                      return stackIn_13_0 != 0;
+                      decompiledRegionSelector0 = 1;
+                      break L1;
                     } else {
-                      de.field_V.field_n = 0;
-                      stackOut_14_0 = 1;
-                      stackIn_15_0 = stackOut_14_0;
-                      return stackIn_15_0 != 0;
+                      L3: {
+                        if (-de.field_V.field_n + param1 >= var2_int) {
+                          break L3;
+                        } else {
+                          var2_int = -de.field_V.field_n + param1;
+                          break L3;
+                        }
+                      }
+                      qc.field_s.a(var2_int, de.field_V.field_n, (byte) 17, de.field_V.field_r);
+                      p.field_a = ik.a(4);
+                      de.field_V.field_n = de.field_V.field_n + var2_int;
+                      if (param1 > de.field_V.field_n) {
+                        stackOut_12_0 = 0;
+                        stackIn_13_0 = stackOut_12_0;
+                        return stackIn_13_0 != 0;
+                      } else {
+                        de.field_V.field_n = 0;
+                        stackOut_14_0 = 1;
+                        stackIn_15_0 = stackOut_14_0;
+                        return stackIn_15_0 != 0;
+                      }
                     }
                   }
                 } catch (java.io.IOException decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
-                  var2 = (IOException) (Object) decompiledCaughtException;
-                  si.a(96);
-                  decompiledRegionSelector0 = 1;
+                  L4: {
+                    var2 = (IOException) (Object) decompiledCaughtException;
+                    si.a(96);
+                    decompiledRegionSelector0 = 1;
+                    break L4;
+                  }
                 }
                 if (decompiledRegionSelector0 == 0) {
                   return false;

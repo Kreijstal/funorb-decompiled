@@ -27,10 +27,16 @@ final class p {
             Throwable throwable = null;
             Throwable decompiledCaughtException = null;
             try {
-              Object discarded$2 = nc.a("resizing", param1 + -14511, se.h(param1 ^ -25126), new Object[1]);
+              L0: {
+                Object discarded$2 = nc.a("resizing", param1 + -14511, se.h(param1 ^ -25126), new Object[1]);
+                break L0;
+              }
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
-              throwable = decompiledCaughtException;
+              L1: {
+                throwable = decompiledCaughtException;
+                break L1;
+              }
             }
             if (param1 != -30) {
               p.a(72, (byte) -105);

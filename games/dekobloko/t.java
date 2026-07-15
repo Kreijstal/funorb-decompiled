@@ -20,8 +20,9 @@ abstract class t extends bl {
         if (-1 > (((t) this).field_hb ^ -1)) {
             var2 = ((t) this).field_jb;
             var3 = ((t) this).field_gb;
+            int fieldTemp$0 = ((t) this).field_eb + 1;
             ((t) this).field_eb = ((t) this).field_eb + 1;
-            if (((t) this).field_hb <= ((t) this).field_eb + 1) {
+            if (((t) this).field_hb <= fieldTemp$0) {
                 ((t) this).field_hb = 0;
                 ((t) this).j((byte) -52);
             } else {
@@ -310,8 +311,11 @@ abstract class t extends bl {
             hm stackOut_2_0 = null;
             if (param0 == -22) {
               try {
-                stackOut_2_0 = (hm) Class.forName("ag").newInstance();
-                stackIn_3_0 = stackOut_2_0;
+                L0: {
+                  stackOut_2_0 = (hm) Class.forName("ag").newInstance();
+                  stackIn_3_0 = stackOut_2_0;
+                  break L0;
+                }
               } catch (java.lang.Throwable decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 var1 = decompiledCaughtException;

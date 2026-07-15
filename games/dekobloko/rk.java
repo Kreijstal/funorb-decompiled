@@ -42,8 +42,9 @@ class rk extends ek {
                 ((rk) this).field_E = ((rk) this).field_E.substring(0, ((rk) this).field_X);
             }
         }
-        ((rk) this).field_M = ((rk) this).field_E.length();
-        ((rk) this).field_S = ((rk) this).field_E.length();
+        int dupTemp$0 = ((rk) this).field_E.length();
+        ((rk) this).field_M = dupTemp$0;
+        ((rk) this).field_S = dupTemp$0;
         if (param1 != 114) {
             field_U = null;
         }
@@ -270,12 +271,18 @@ class rk extends ek {
               }
             }
             try {
-              var2_ref = (String) java.awt.Toolkit.getDefaultToolkit().getSystemClipboard().getContents((Object) null).getTransferData(java.awt.datatransfer.DataFlavor.stringFlavor);
-              this.f((byte) -92);
-              this.a(var2_ref, true);
+              L1: {
+                var2_ref = (String) java.awt.Toolkit.getDefaultToolkit().getSystemClipboard().getContents((Object) null).getTransferData(java.awt.datatransfer.DataFlavor.stringFlavor);
+                this.f((byte) -92);
+                this.a(var2_ref, true);
+                break L1;
+              }
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
-              var2 = (Exception) (Object) decompiledCaughtException;
+              L2: {
+                var2 = (Exception) (Object) decompiledCaughtException;
+                break L2;
+              }
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -460,8 +467,9 @@ class rk extends ek {
                           break L5;
                         } else {
                           ((rk) this).field_E = ((rk) this).field_E + param3;
-                          ((rk) this).field_S = ((rk) this).field_E.length();
-                          ((rk) this).field_M = ((rk) this).field_E.length();
+                          int dupTemp$1 = ((rk) this).field_E.length();
+                          ((rk) this).field_S = dupTemp$1;
+                          ((rk) this).field_M = dupTemp$1;
                           break L5;
                         }
                       }

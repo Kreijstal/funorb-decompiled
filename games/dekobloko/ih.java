@@ -455,6 +455,7 @@ final class ih {
                             field_e = new boolean[var5];
                             break L4;
                           }
+                          return;
                         } else {
                           var7 = ((ih) this).field_a[var6];
                           var8 = 0;
@@ -463,9 +464,9 @@ final class ih {
                               var6++;
                               continue L3;
                             } else {
-                              int incrementValue$1 = var5;
+                              int incrementValue$2 = var5;
                               var5++;
-                              ((ih) this).field_f[incrementValue$1] = va.c(var4);
+                              ((ih) this).field_f[incrementValue$2] = va.c(var4);
                               var8++;
                               continue L6;
                             }
@@ -481,8 +482,9 @@ final class ih {
                 } else {
                   L7: {
                     ((ih) this).field_l[var4] = va.c(3) + 1;
-                    ((ih) this).field_b[var4] = va.c(2);
-                    var5 = va.c(2);
+                    int dupTemp$3 = va.c(2);
+                    ((ih) this).field_b[var4] = dupTemp$3;
+                    var5 = dupTemp$3;
                     if (var5 == 0) {
                       break L7;
                     } else {

@@ -69,8 +69,9 @@ final class kn extends bh {
     }
 
     kn(int param0, int param1, int param2, int param3, int param4, int param5, int[] param6) {
+        int fieldTemp$0 = dk.field_a;
         dk.field_a = dk.field_a + 1;
-        ((kn) this).field_u = 65535 & dk.field_a;
+        ((kn) this).field_u = 65535 & fieldTemp$0;
         ((kn) this).field_s = param6;
         ((kn) this).field_v = param3;
         ((kn) this).field_q = param1;

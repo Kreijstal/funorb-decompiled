@@ -52,8 +52,9 @@ final class dk extends java.awt.Canvas {
             }
           } else {
             if (var2 == 2) {
-              var10 = (f) (Object) rc.field_e.c((byte) -64);
-              var3_ref_f = (f) (Object) rc.field_e.c((byte) -64);
+              f dupTemp$1 = (f) (Object) rc.field_e.c((byte) -64);
+              var10 = dupTemp$1;
+              var3_ref_f = dupTemp$1;
               if (var10 == null) {
                 si.a(115);
                 return;

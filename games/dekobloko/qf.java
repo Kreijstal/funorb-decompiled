@@ -27,33 +27,37 @@ final class qf extends ba implements qh, tn {
         Object stackOut_8_0 = null;
         tb stackOut_5_0 = null;
         try {
-          var2_int = ((qf) this).field_g.i(-22079);
-          var3 = ((qf) this).field_g.b(false);
-          var4 = ((qf) this).field_g.f((byte) 48);
-          var5 = jj.a(-110);
-          if ((var4 ^ -1) > -1891) {
-            stackOut_2_0 = vm.field_u;
-            stackIn_3_0 = stackOut_2_0;
-            return stackIn_3_0;
-          } else {
-            if (var4 <= var5 - 3) {
-              if (param0 == -5520) {
-                if (!un.a(var4, var3, var2_int, (byte) 52)) {
-                  stackOut_12_0 = vm.field_u;
-                  stackIn_13_0 = stackOut_12_0;
-                  decompiledRegionSelector0 = 1;
+          L0: {
+            var2_int = ((qf) this).field_g.i(-22079);
+            var3 = ((qf) this).field_g.b(false);
+            var4 = ((qf) this).field_g.f((byte) 48);
+            var5 = jj.a(-110);
+            if ((var4 ^ -1) > -1891) {
+              stackOut_2_0 = vm.field_u;
+              stackIn_3_0 = stackOut_2_0;
+              return stackIn_3_0;
+            } else {
+              if (var4 <= var5 - 3) {
+                if (param0 == -5520) {
+                  if (!un.a(var4, var3, var2_int, (byte) 52)) {
+                    stackOut_12_0 = vm.field_u;
+                    stackIn_13_0 = stackOut_12_0;
+                    decompiledRegionSelector0 = 1;
+                    break L0;
+                  } else {
+                    decompiledRegionSelector0 = 0;
+                    break L0;
+                  }
                 } else {
-                  decompiledRegionSelector0 = 0;
+                  stackOut_8_0 = null;
+                  stackIn_9_0 = stackOut_8_0;
+                  return (tb) (Object) stackIn_9_0;
                 }
               } else {
-                stackOut_8_0 = null;
-                stackIn_9_0 = stackOut_8_0;
-                return (tb) (Object) stackIn_9_0;
+                stackOut_5_0 = vm.field_u;
+                stackIn_6_0 = stackOut_5_0;
+                return stackIn_6_0;
               }
-            } else {
-              stackOut_5_0 = vm.field_u;
-              stackIn_6_0 = stackOut_5_0;
-              return stackIn_6_0;
             }
           }
         } catch (java.lang.Exception decompiledCaughtParameter0) {
@@ -83,42 +87,49 @@ final class qf extends ba implements qh, tn {
         String stackOut_5_0 = null;
         try {
           L0: {
-            if (param0 > 2) {
-              break L0;
-            } else {
-              var6 = null;
-              qf.a((ji) null, (ji) null, -5);
-              break L0;
-            }
-          }
-          L1: {
-            var2_int = ((qf) this).field_g.i(-22079);
-            var3 = ((qf) this).field_g.b(false);
-            var4 = ((qf) this).field_g.f((byte) 48);
-            var5 = jj.a(-125);
-            if (var4 < 1890) {
-              break L1;
-            } else {
-              if (var4 <= var5 - 3) {
-                if (!un.a(var4, var3, var2_int, (byte) 52)) {
-                  decompiledRegionSelector0 = 0;
-                } else {
-                  stackOut_8_0 = null;
-                  stackIn_9_0 = stackOut_8_0;
-                  decompiledRegionSelector0 = 1;
-                }
+            L1: {
+              if (param0 > 2) {
+                break L1;
               } else {
+                var6 = null;
+                qf.a((ji) null, (ji) null, -5);
                 break L1;
               }
             }
+            L2: {
+              var2_int = ((qf) this).field_g.i(-22079);
+              var3 = ((qf) this).field_g.b(false);
+              var4 = ((qf) this).field_g.f((byte) 48);
+              var5 = jj.a(-125);
+              if (var4 < 1890) {
+                break L2;
+              } else {
+                if (var4 <= var5 - 3) {
+                  if (!un.a(var4, var3, var2_int, (byte) 52)) {
+                    decompiledRegionSelector0 = 0;
+                    break L0;
+                  } else {
+                    stackOut_8_0 = null;
+                    stackIn_9_0 = stackOut_8_0;
+                    decompiledRegionSelector0 = 1;
+                    break L0;
+                  }
+                } else {
+                  break L2;
+                }
+              }
+            }
+            stackOut_5_0 = cm.a((byte) 99, ad.field_b, new String[2]);
+            stackIn_6_0 = stackOut_5_0;
+            return stackIn_6_0;
           }
-          stackOut_5_0 = cm.a((byte) 99, ad.field_b, new String[2]);
-          stackIn_6_0 = stackOut_5_0;
-          return stackIn_6_0;
         } catch (java.lang.Exception decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          var2 = (NumberFormatException) (Object) decompiledCaughtException;
-          decompiledRegionSelector0 = 0;
+          L3: {
+            var2 = (NumberFormatException) (Object) decompiledCaughtException;
+            decompiledRegionSelector0 = 0;
+            break L3;
+          }
         }
         if (decompiledRegionSelector0 == 0) {
           return bf.field_q;

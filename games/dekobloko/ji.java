@@ -712,7 +712,6 @@ final class ji {
 
     private final synchronized byte[] a(int param0, int[] param1, int param2, byte param3) {
         Object var5 = null;
-        byte[] var5_array = null;
         byte[] var7 = null;
         if (this.a(param2, param0, param3)) {
           L0: {
@@ -745,7 +744,7 @@ final class ji {
                 break L2;
               } else {
                 var7 = cf.a(false, 95, ((ji) this).field_e[param2][param0]);
-                var5_array = var7;
+                var5 = (Object) (Object) var7;
                 if (var7 == null) {
                   throw new RuntimeException("");
                 } else {
@@ -754,7 +753,7 @@ final class ji {
               }
             }
             L3: {
-              if (var5_array != null) {
+              if (var5 != null) {
                 if (-2 == (((ji) this).field_g ^ -1)) {
                   ((ji) this).field_e[param2][param0] = null;
                   if ((((ji) this).field_f.field_k[param2] ^ -1) == -2) {
@@ -775,7 +774,7 @@ final class ji {
                 break L3;
               }
             }
-            return var5_array;
+            return (byte[]) var5;
           } else {
             throw new RuntimeException("");
           }
@@ -883,6 +882,7 @@ final class ji {
               ((ji) this).field_b = stackIn_6_1 != 0;
               ((ji) this).field_a = param0;
               ((ji) this).field_g = param2;
+              return;
             } else {
               break L0;
             }

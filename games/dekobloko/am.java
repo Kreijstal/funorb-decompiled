@@ -35,9 +35,10 @@ final class am {
         int stackOut_7_1 = 0;
         var6 = client.field_A ? 1 : 0;
         if (!param1) {
-          var10 = (kc) (Object) dg.field_e.c((byte) 49);
+          kc dupTemp$3 = (kc) (Object) dg.field_e.c((byte) 49);
+          var10 = dupTemp$3;
           var7 = var10;
-          var5 = (kc) (Object) dg.field_e.c((byte) 49);
+          var5 = dupTemp$3;
           L0: while (true) {
             if (var7 != null) {
               if (param3 != var10.field_n) {
@@ -75,10 +76,11 @@ final class am {
             }
           }
         } else {
-          kc discarded$1 = am.a(9, false, 66, -99, 40);
-          var8 = (kc) (Object) dg.field_e.c((byte) 49);
+          kc discarded$4 = am.a(9, false, 66, -99, 40);
+          kc dupTemp$5 = (kc) (Object) dg.field_e.c((byte) 49);
+          var8 = dupTemp$5;
           var7 = var8;
-          var5 = (kc) (Object) dg.field_e.c((byte) 49);
+          var5 = dupTemp$5;
           L2: while (true) {
             if (var7 != null) {
               if (param3 != var8.field_n) {

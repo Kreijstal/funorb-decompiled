@@ -178,10 +178,10 @@ final class md extends kf implements rl, vn {
         if (!(!super.a(-119, param1, param2, param3))) {
             return true;
         }
-        if (!(param1 != -99)) {
+        if (!((param1 ^ -1) != -99)) {
             return ((md) this).a(param2, (byte) -57);
         }
-        if (!(-100 != param1)) {
+        if (!(-100 != (param1 ^ -1))) {
             return ((md) this).a(32, param2);
         }
         int var5 = -29 / ((-22 - param0) / 49);

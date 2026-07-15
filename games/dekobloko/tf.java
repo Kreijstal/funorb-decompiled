@@ -50,12 +50,14 @@ final class tf extends kf implements rl, vn, fi {
         ((tf) this).field_X.field_p = (gl) (Object) new fk();
         ((tf) this).field_V.field_p = (gl) (Object) new on();
         ((tf) this).field_fb.field_p = (gl) (Object) new di(10000536);
-        ((tf) this).field_eb.field_p = (gl) (Object) new di(10000536);
-        ((tf) this).field_Y.field_p = (gl) (Object) new di(10000536);
+        di dupTemp$0 = new di(10000536);
+        ((tf) this).field_eb.field_p = (gl) (Object) dupTemp$0;
+        ((tf) this).field_Y.field_p = (gl) (Object) dupTemp$0;
         ((tf) this).field_T.field_p = (gl) (Object) new di(10000536);
         ((tf) this).field_W.field_p = (gl) (Object) new tg();
-        ((tf) this).field_S.field_p = (gl) (Object) new gm(10000536);
-        ((tf) this).field_hb.field_p = (gl) (Object) new gm(10000536);
+        gm dupTemp$1 = new gm(10000536);
+        ((tf) this).field_S.field_p = (gl) (Object) dupTemp$1;
+        ((tf) this).field_hb.field_p = (gl) (Object) dupTemp$1;
         String var2 = cm.a((byte) 102, me.field_G, new String[2]);
         int var3 = 20;
         var3 = var3 + this.a(9828, (ce) (Object) ((tf) this).field_Y, var3, eg.field_c, 170);
@@ -112,8 +114,8 @@ final class tf extends kf implements rl, vn, fi {
         if (param0 < 2) {
             return false;
         }
-        for (var2 = 0; var2 > -9; var2++) {
-            if (!(-1 == param1[var2])) {
+        for (var2 = 0; (var2 ^ -1) > -9; var2++) {
+            if (!(-1 == (param1[var2] ^ -1))) {
                 return true;
             }
         }
