@@ -71,10 +71,10 @@ class gk extends ca implements vn {
         w var2 = null;
         int var3 = 0;
         w var4 = null;
+        w var5 = null;
         var3 = client.field_A ? 1 : 0;
-        w dupTemp$2 = (w) (Object) param0.field_M.c((byte) -76);
-        var4 = dupTemp$2;
-        var2 = dupTemp$2;
+        var4 = (w) (Object) param0.field_M.c((byte) -76);
+        var2 = var4;
         L0: while (true) {
           if (var4 == null) {
             if (!param1) {
@@ -96,7 +96,8 @@ class gk extends ca implements vn {
             var4.field_Mb = 0;
             var4.field_F = 0;
             var4.field_N = 0;
-            var2 = (w) (Object) param0.field_M.d(true);
+            var5 = (w) (Object) param0.field_M.d(true);
+            var5 = var5;
             continue L0;
           }
         }

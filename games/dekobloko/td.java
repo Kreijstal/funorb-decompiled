@@ -670,11 +670,11 @@ final class td {
                                                 var1 = td.e(param0);
                                                 if (var1 != 0) {
                                                   var1 = td.e(param0);
-                                                  if (var1 == 0) {
+                                                  if (var1 != 0) {
                                                     var17--;
                                                     continue L39;
                                                   } else {
-                                                    var17--;
+                                                    var17++;
                                                     continue L39;
                                                   }
                                                 } else {

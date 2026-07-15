@@ -28,14 +28,13 @@ final class pe {
         int var4 = 0;
         Object var5 = null;
         int var6 = 0;
-        fa var8 = null;
-        hd var9 = null;
-        uf var10 = null;
-        byte[] var14 = null;
+        hd var8 = null;
+        uf var9 = null;
+        byte[] var13 = null;
         L0: {
           var6 = client.field_A ? 1 : 0;
-          var10 = de.field_V;
-          var2 = var10.d((byte) -119);
+          var9 = de.field_V;
+          var2 = var9.d((byte) -119);
           if (param0 == 14750) {
             break L0;
           } else {
@@ -45,43 +44,41 @@ final class pe {
         }
         L1: {
           if (-1 == (var2 ^ -1)) {
-            var9 = (hd) (Object) c.field_r.c((byte) 80);
-            if (var9 == null) {
+            var8 = (hd) (Object) c.field_r.c((byte) 80);
+            if (var8 == null) {
               si.a(67);
               return;
             } else {
               L2: {
-                var4 = var10.d((byte) -90);
+                var4 = var9.d((byte) -90);
                 if (0 == var4) {
                   var5 = null;
                   break L2;
                 } else {
-                  var14 = new byte[var4];
-                  var10.a(var14, 0, (byte) 125, var4);
+                  var13 = new byte[var4];
+                  var9.a(var13, 0, (byte) 125, var4);
                   break L2;
                 }
               }
-              var10.field_n = var10.field_n + 4;
-              if (!var10.g(0)) {
+              var9.field_n = var9.field_n + 4;
+              if (!var9.g(0)) {
                 si.a(param0 ^ 14802);
                 return;
               } else {
-                var9.b((byte) 109);
+                var8.b((byte) 109);
                 break L1;
               }
             }
           } else {
             if (var2 == 1) {
-              var3 = var10.i(7553);
-              fa dupTemp$4 = (fa) (Object) sa.field_C.c((byte) 46);
-              var8 = dupTemp$4;
-              var4_ref_fa = dupTemp$4;
+              var3 = var9.i(7553);
+              var4_ref_fa = (fa) (Object) sa.field_C.c((byte) 46);
               L3: while (true) {
                 L4: {
-                  if (var8 == null) {
+                  if (var4_ref_fa == null) {
                     break L4;
                   } else {
-                    if (var3 != var8.field_s) {
+                    if (var3 != var4_ref_fa.field_s) {
                       var4_ref_fa = (fa) (Object) sa.field_C.d(true);
                       continue L3;
                     } else {

@@ -17,15 +17,12 @@ class wk extends fm {
     final static void a(byte param0, tj param1) {
         tj var2 = null;
         int var3 = 0;
-        tj var4 = null;
         var3 = client.field_A ? 1 : 0;
         param1.b((byte) 111);
-        tj dupTemp$2 = (tj) (Object) i.field_b.c((byte) -61);
-        var4 = dupTemp$2;
-        var2 = dupTemp$2;
+        var2 = (tj) (Object) i.field_b.c((byte) -61);
         L0: while (true) {
-          if (var4 != null) {
-            if (var4.a(-985, param1)) {
+          if (var2 != null) {
+            if (var2.a(-985, param1)) {
               var2 = (tj) (Object) i.field_b.d(true);
               continue L0;
             } else {

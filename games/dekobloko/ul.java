@@ -27,20 +27,17 @@ final class ul {
         int var12 = 0;
         int var13 = 0;
         int var14 = 0;
-        cl var15 = null;
-        uf var16 = null;
+        uf var15 = null;
         var12 = client.field_A ? 1 : 0;
-        var16 = de.field_V;
-        var2 = var16.d((byte) -110);
-        cl dupTemp$4 = (cl) (Object) oe.field_I.c((byte) -54);
-        var15 = dupTemp$4;
-        var3 = dupTemp$4;
+        var15 = de.field_V;
+        var2 = var15.d((byte) -110);
+        var3 = (cl) (Object) oe.field_I.c((byte) -54);
         L0: while (true) {
           L1: {
-            if (var15 == null) {
+            if (var3 == null) {
               break L1;
             } else {
-              if (var2 != var15.field_q) {
+              if (var2 != var3.field_q) {
                 var3 = (cl) (Object) oe.field_I.d(true);
                 continue L0;
               } else {
@@ -53,7 +50,7 @@ final class ul {
             return;
           } else {
             L2: {
-              var4 = var16.d((byte) -125);
+              var4 = var15.d((byte) -125);
               if (-1 == (var4 ^ -1)) {
                 break L2;
               } else {
@@ -67,12 +64,12 @@ final class ul {
                     L4: while (true) {
                       if (var6_int >= var4) {
                         pd.a(var5, (byte) 6);
-                        String[][] dupTemp$5 = new String[2][var5];
-                        var3.field_x = dupTemp$5;
-                        var6 = dupTemp$5;
-                        int[][] dupTemp$6 = new int[2][var5 * 4];
-                        var3.field_u = dupTemp$6;
-                        var7 = dupTemp$6;
+                        String[][] dupTemp$3 = new String[2][var5];
+                        var3.field_x = dupTemp$3;
+                        var6 = dupTemp$3;
+                        int[][] dupTemp$4 = new int[2][var5 * 4];
+                        var3.field_u = dupTemp$4;
+                        var7 = dupTemp$4;
                         var8 = og.field_eb;
                         var9 = 0;
                         var10 = 0;
@@ -138,7 +135,7 @@ final class ul {
                           }
                         }
                       } else {
-                        pn.a(63, (wl) (Object) var16);
+                        pn.a(63, (wl) (Object) var15);
                         if (-1 == (var6_int ^ -1)) {
                           var3.field_p = oc.field_c;
                           var3.field_o = dj.field_Y;
@@ -155,7 +152,7 @@ final class ul {
                       }
                     }
                   } else {
-                    t.field_cb[var6_int] = var16.c((byte) -38);
+                    t.field_cb[var6_int] = var15.c((byte) -38);
                     var6_int++;
                     continue L3;
                   }
@@ -166,7 +163,7 @@ final class ul {
               if (param0 > 107) {
                 break L7;
               } else {
-                int discarded$7 = ul.a(-19, 9, -103);
+                int discarded$5 = ul.a(-19, 9, -103);
                 break L7;
               }
             }

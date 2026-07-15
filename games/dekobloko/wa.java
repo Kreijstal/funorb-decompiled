@@ -60,36 +60,30 @@ final class wa {
     }
 
     final static void a(int param0, int param1) {
-        ff var2 = null;
-        sb var2_ref = null;
         int var3 = 0;
         ff var4 = null;
         sb var5 = null;
         var3 = client.field_A ? 1 : 0;
-        ff dupTemp$4 = (ff) (Object) cd.field_c.c((byte) 119);
-        var4 = dupTemp$4;
-        var2 = dupTemp$4;
+        var4 = (ff) (Object) cd.field_c.c((byte) 119);
         L0: while (true) {
           if (var4 == null) {
             if (param0 != 3) {
               return;
             } else {
-              sb dupTemp$5 = (sb) (Object) ef.field_S.c((byte) 80);
-              var5 = dupTemp$5;
-              var2_ref = dupTemp$5;
+              var5 = (sb) (Object) ef.field_S.c((byte) 80);
               L1: while (true) {
                 if (var5 == null) {
                   return;
                 } else {
                   oi.a(param0 ^ -87, param1, var5);
-                  var2_ref = (sb) (Object) ef.field_S.d(true);
+                  var5 = (sb) (Object) ef.field_S.d(true);
                   continue L1;
                 }
               }
             }
           } else {
             mc.a(true, var4, param1);
-            var2 = (ff) (Object) cd.field_c.d(true);
+            var4 = (ff) (Object) cd.field_c.d(true);
             continue L0;
           }
         }

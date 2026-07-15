@@ -57,12 +57,10 @@ final class qn extends t {
         if (param0 != -20494) {
             field_pb = null;
         }
-        ug dupTemp$0 = (ug) (Object) qi.field_Q.c((byte) 125);
-        ug var4 = dupTemp$0;
-        ug var2 = dupTemp$0;
+        ug var4 = (ug) (Object) qi.field_Q.c((byte) 125);
         while (var4 != null) {
             in.a(var4, (byte) -70, param1);
-            var2 = (ug) (Object) qi.field_Q.d(true);
+            var4 = (ug) (Object) qi.field_Q.d(true);
         }
     }
 

@@ -8,12 +8,12 @@ final class mi extends ol {
     private int field_s;
 
     private final void e() {
-        rh var2 = null;
+        rh var1 = null;
         if (((mi) this).field_s > 0) {
-            var2 = (rh) (Object) ((mi) this).field_u.c((byte) -59);
-            while (var2 != null) {
-                var2.field_o = var2.field_o - ((mi) this).field_s;
-                rh var1 = (rh) (Object) ((mi) this).field_u.d(true);
+            var1 = (rh) (Object) ((mi) this).field_u.c((byte) -59);
+            while (var1 != null) {
+                var1.field_o = var1.field_o - ((mi) this).field_s;
+                var1 = (rh) (Object) ((mi) this).field_u.d(true);
             }
             ((mi) this).field_r = ((mi) this).field_r - ((mi) this).field_s;
             ((mi) this).field_s = 0;
@@ -73,10 +73,10 @@ final class mi extends ol {
     }
 
     private final void c(int param0) {
-        ol var3 = (ol) (Object) ((mi) this).field_t.c((byte) -69);
-        while (var3 != null) {
-            var3.a(param0);
-            ol var2 = (ol) (Object) ((mi) this).field_t.d(true);
+        ol var2 = (ol) (Object) ((mi) this).field_t.c((byte) -69);
+        while (var2 != null) {
+            var2.a(param0);
+            var2 = (ol) (Object) ((mi) this).field_t.d(true);
         }
     }
 
@@ -213,10 +213,10 @@ final class mi extends ol {
     }
 
     private final void c(int[] param0, int param1, int param2) {
-        ol var5 = (ol) (Object) ((mi) this).field_t.c((byte) -106);
-        while (var5 != null) {
-            var5.a(param0, param1, param2);
-            ol var4 = (ol) (Object) ((mi) this).field_t.d(true);
+        ol var4 = (ol) (Object) ((mi) this).field_t.c((byte) -106);
+        while (var4 != null) {
+            var4.a(param0, param1, param2);
+            var4 = (ol) (Object) ((mi) this).field_t.d(true);
         }
     }
 

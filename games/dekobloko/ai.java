@@ -233,13 +233,10 @@ final class ai extends ek {
     final static cl a(int param0, int param1, byte param2, int param3) {
         cl var4 = null;
         int var5 = 0;
-        cl var6 = null;
         var5 = client.field_A ? 1 : 0;
-        cl dupTemp$1 = (cl) (Object) oe.field_I.c((byte) 19);
-        var6 = dupTemp$1;
-        var4 = dupTemp$1;
+        var4 = (cl) (Object) oe.field_I.c((byte) 19);
         L0: while (true) {
-          if (var6 == null) {
+          if (var4 == null) {
             if (param2 != -111) {
               field_M = null;
               var4 = new cl();
@@ -257,8 +254,8 @@ final class ai extends ek {
               return var4;
             }
           } else {
-            if (param3 == var6.field_q) {
-              return var6;
+            if (param3 == var4.field_q) {
+              return var4;
             } else {
               var4 = (cl) (Object) oe.field_I.d(true);
               continue L0;

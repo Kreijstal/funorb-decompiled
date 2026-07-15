@@ -8,13 +8,11 @@ final class am {
     static boolean field_c;
 
     final static kc a(int param0, boolean param1, int param2, int param3, int param4) {
-        kc var5 = null;
+        Object var5 = null;
+        kc var5_ref = null;
         int var6 = 0;
         kc var7 = null;
         kc var8 = null;
-        kc var9 = null;
-        kc var10 = null;
-        kc var11 = null;
         vj stackIn_7_0 = null;
         vj stackIn_8_0 = null;
         vj stackIn_9_0 = null;
@@ -33,15 +31,13 @@ final class am {
         int stackOut_8_1 = 0;
         vj stackOut_7_0 = null;
         int stackOut_7_1 = 0;
+        var5 = null;
         var6 = client.field_A ? 1 : 0;
         if (!param1) {
-          kc dupTemp$3 = (kc) (Object) dg.field_e.c((byte) 49);
-          var10 = dupTemp$3;
-          var7 = var10;
-          var5 = dupTemp$3;
+          var5_ref = (kc) (Object) dg.field_e.c((byte) 49);
           L0: while (true) {
-            if (var7 != null) {
-              if (param3 != var10.field_n) {
+            if (var5_ref != null) {
+              if (param3 != var5_ref.field_n) {
                 L1: {
                   stackOut_16_0 = dg.field_e;
                   stackIn_18_0 = stackOut_16_0;
@@ -60,30 +56,27 @@ final class am {
                     break L1;
                   }
                 }
-                var5 = (kc) (Object) ((vj) (Object) stackIn_19_0).d(stackIn_19_1 != 0);
+                var5_ref = (kc) (Object) ((vj) (Object) stackIn_19_0).d(stackIn_19_1 != 0);
                 continue L0;
               } else {
-                return var7;
+                return var5_ref;
               }
             } else {
-              var11 = new kc();
-              var11.field_n = param3;
-              var11.field_o = param4;
-              var11.field_v = param2;
-              dg.field_e.a((bh) (Object) var11, 2777);
-              wb.a(var11, param0, 60);
-              return var11;
+              var8 = new kc();
+              var8.field_n = param3;
+              var8.field_o = param4;
+              var8.field_v = param2;
+              dg.field_e.a((bh) (Object) var8, 2777);
+              wb.a(var8, param0, 60);
+              return var8;
             }
           }
         } else {
-          kc discarded$4 = am.a(9, false, 66, -99, 40);
-          kc dupTemp$5 = (kc) (Object) dg.field_e.c((byte) 49);
-          var8 = dupTemp$5;
-          var7 = var8;
-          var5 = dupTemp$5;
+          kc discarded$1 = am.a(9, false, 66, -99, 40);
+          var5_ref = (kc) (Object) dg.field_e.c((byte) 49);
           L2: while (true) {
-            if (var7 != null) {
-              if (param3 != var8.field_n) {
+            if (var5_ref != null) {
+              if (param3 != var5_ref.field_n) {
                 L3: {
                   stackOut_6_0 = dg.field_e;
                   stackIn_8_0 = stackOut_6_0;
@@ -102,19 +95,19 @@ final class am {
                     break L3;
                   }
                 }
-                var5 = (kc) (Object) ((vj) (Object) stackIn_9_0).d(stackIn_9_1 != 0);
+                var5_ref = (kc) (Object) ((vj) (Object) stackIn_9_0).d(stackIn_9_1 != 0);
                 continue L2;
               } else {
-                return var7;
+                return var5_ref;
               }
             } else {
-              var9 = new kc();
-              var9.field_n = param3;
-              var9.field_o = param4;
-              var9.field_v = param2;
-              dg.field_e.a((bh) (Object) var9, 2777);
-              wb.a(var9, param0, 60);
-              return var9;
+              var7 = new kc();
+              var7.field_n = param3;
+              var7.field_o = param4;
+              var7.field_v = param2;
+              dg.field_e.a((bh) (Object) var7, 2777);
+              wb.a(var7, param0, 60);
+              return var7;
             }
           }
         }

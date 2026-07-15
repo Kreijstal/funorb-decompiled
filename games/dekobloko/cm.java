@@ -48,15 +48,14 @@ final class cm implements Iterator {
         int[] var6 = null;
         int var7 = 0;
         int var8 = 0;
-        ff var9 = null;
-        uf var10 = null;
+        uf var9 = null;
+        int[] var10 = null;
         int[] var11 = null;
         int[] var12 = null;
         int[] var13 = null;
-        int[] var14 = null;
         L0: {
           var8 = client.field_A ? 1 : 0;
-          var10 = de.field_V;
+          var9 = de.field_V;
           if (param0 == 53) {
             break L0;
           } else {
@@ -65,28 +64,26 @@ final class cm implements Iterator {
           }
         }
         L1: {
-          var2 = var10.d((byte) -44);
-          var3 = var10.d((byte) -117);
+          var2 = var9.d((byte) -44);
+          var3 = var9.d((byte) -117);
           if (var2 != 0) {
             if (var2 != 1) {
               qb.a((Throwable) null, 16408, "LR1: " + qk.d((byte) 74));
               si.a(100);
               break L1;
             } else {
-              var4 = var10.e((byte) -2);
-              ff dupTemp$1 = (ff) (Object) cd.field_c.c((byte) -124);
-              var9 = dupTemp$1;
-              var5 = dupTemp$1;
+              var4 = var9.e((byte) -2);
+              var5 = (ff) (Object) cd.field_c.c((byte) -124);
               L2: while (true) {
                 L3: {
-                  if (var9 == null) {
+                  if (var5 == null) {
                     break L3;
                   } else {
                     L4: {
-                      if (var3 != var9.field_q) {
+                      if (var3 != var5.field_q) {
                         break L4;
                       } else {
-                        if (var4 != var9.field_r) {
+                        if (var4 != var5.field_r) {
                           break L4;
                         } else {
                           break L3;
@@ -113,14 +110,14 @@ final class cm implements Iterator {
               return;
             } else {
               L5: {
-                var5_int = sm.field_e - var10.field_n;
-                var14 = var4_ref_sb.field_q;
-                var13 = var14;
+                var5_int = sm.field_e - var9.field_n;
+                var13 = var4_ref_sb.field_q;
                 var12 = var13;
                 var11 = var12;
-                var6 = var11;
-                if (var14.length << 1327655874 < var5_int) {
-                  var5_int = var14.length << -816484830;
+                var10 = var11;
+                var6 = var10;
+                if (var13.length << 1327655874 < var5_int) {
+                  var5_int = var13.length << -816484830;
                   break L5;
                 } else {
                   break L5;
@@ -133,7 +130,7 @@ final class cm implements Iterator {
                   var4_ref_sb.b((byte) 118);
                   break L1;
                 } else {
-                  var6[var7 >> -1175205182] = var6[var7 >> -1175205182] + (var10.d((byte) -108) << (lb.a(3, var7) << 1714134600));
+                  var6[var7 >> -1175205182] = var6[var7 >> -1175205182] + (var9.d((byte) -108) << (lb.a(3, var7) << 1714134600));
                   var7++;
                   continue L6;
                 }

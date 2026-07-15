@@ -44,22 +44,19 @@ class bh {
     }
 
     final static void a(int param0, int param1) {
-        fa var2 = null;
-        bh var2_ref = null;
+        bh var2 = null;
         int var3 = 0;
         fa var4 = null;
         var3 = client.field_A ? 1 : 0;
         if (param1 <= -116) {
-          fa dupTemp$1 = (fa) (Object) sa.field_C.c((byte) -114);
-          var4 = dupTemp$1;
-          var2 = dupTemp$1;
+          var4 = (fa) (Object) sa.field_C.c((byte) -114);
           L0: while (true) {
             if (var4 == null) {
-              var2_ref = c.field_r.c((byte) 99);
+              var2 = c.field_r.c((byte) 99);
               L1: while (true) {
-                if (var2_ref != null) {
+                if (var2 != null) {
                   ad.a(-1, param0);
-                  var2_ref = c.field_r.d(true);
+                  var2 = c.field_r.d(true);
                   if (var3 == 0) {
                     continue L1;
                   } else {
@@ -71,15 +68,15 @@ class bh {
               }
             } else {
               w.a(124, param0, var4);
-              var2 = (fa) (Object) sa.field_C.d(true);
+              var4 = (fa) (Object) sa.field_C.d(true);
               if (var3 == 0) {
                 continue L0;
               } else {
-                if (var2 == null) {
+                if (var4 == null) {
                   return;
                 } else {
                   ad.a(-1, param0);
-                  var2_ref = c.field_r.d(true);
+                  var2 = c.field_r.d(true);
                   return;
                 }
               }

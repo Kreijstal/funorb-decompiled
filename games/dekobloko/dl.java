@@ -82,14 +82,11 @@ final class dl extends ek {
     }
 
     final static void b(int param0, int param1) {
-        cl var2 = null;
         int var3 = 0;
         Object var4 = null;
         cl var5 = null;
         var3 = client.field_A ? 1 : 0;
-        cl dupTemp$2 = (cl) (Object) oe.field_I.c((byte) 113);
-        var5 = dupTemp$2;
-        var2 = dupTemp$2;
+        var5 = (cl) (Object) oe.field_I.c((byte) 113);
         L0: while (true) {
           if (var5 == null) {
             if (param0 != 640) {
@@ -101,7 +98,7 @@ final class dl extends ek {
             }
           } else {
             fh.a((byte) 104, var5, param1);
-            var2 = (cl) (Object) oe.field_I.d(true);
+            var5 = (cl) (Object) oe.field_I.d(true);
             continue L0;
           }
         }

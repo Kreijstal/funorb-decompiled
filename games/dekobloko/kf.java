@@ -28,7 +28,6 @@ class kf extends ce implements ra {
         rd var5 = null;
         ce var6 = null;
         int var7 = 0;
-        ce var8 = null;
         L0: {
           var7 = client.field_A ? 1 : 0;
           if (param1 > 38) {
@@ -40,16 +39,16 @@ class kf extends ce implements ra {
         }
         super.a(param0, 68, param2, param3);
         var5 = new rd(((kf) this).field_H);
-        var8 = (ce) (Object) var5.a((byte) 71);
+        var6 = (ce) (Object) var5.a((byte) 71);
         L1: while (true) {
           L2: {
-            if (var8 == null) {
+            if (var6 == null) {
               break L2;
             } else {
-              if (!var8.a((byte) 38)) {
+              if (!var6.a((byte) 38)) {
                 break L2;
               } else {
-                var8.a(param0, 47, ((kf) this).field_D + param2, param3 - -((kf) this).field_u);
+                var6.a(param0, 47, ((kf) this).field_D + param2, param3 - -((kf) this).field_u);
                 var6 = (ce) (Object) var5.a(-62);
                 continue L1;
               }
@@ -69,7 +68,6 @@ class kf extends ce implements ra {
 
     boolean a(int param0, int param1, ce param2, char param3) {
         int var6 = 0;
-        ce var7_ref_ce = null;
         int var7 = 0;
         int var8 = 0;
         ce var9 = null;
@@ -100,7 +98,7 @@ class kf extends ce implements ra {
                     }
                   }
                 }
-                var7_ref_ce = (ce) (Object) var10.a(-78);
+                var9 = (ce) (Object) var10.a(-78);
                 continue L0;
               }
             }
@@ -129,19 +127,18 @@ class kf extends ce implements ra {
         rd var7 = null;
         ce var8 = null;
         int var9 = 0;
-        ce var10 = null;
         var9 = client.field_A ? 1 : 0;
         var7 = new rd(((kf) this).field_H);
-        var10 = (ce) (Object) var7.a((byte) 71);
+        var8 = (ce) (Object) var7.a((byte) 71);
         L0: while (true) {
           L1: {
-            if (var10 == null) {
+            if (var8 == null) {
               break L1;
             } else {
-              if (!var10.a((byte) 119)) {
+              if (!var8.a((byte) 119)) {
                 break L1;
               } else {
-                var10.a(param0, param1 ^ 0, ((kf) this).field_u + param2, param3, ((kf) this).field_D + param4, param5);
+                var8.a(param0, param1 ^ 0, ((kf) this).field_u + param2, param3, ((kf) this).field_D + param4, param5);
                 var8 = (ce) (Object) var7.a(-126);
                 continue L0;
               }
@@ -250,13 +247,13 @@ class kf extends ce implements ra {
         int var6 = client.field_A ? 1 : 0;
         int var2 = 0;
         rd var3 = new rd(((kf) this).field_H);
-        ce var7 = (ce) (Object) var3.a((byte) 71);
-        while (var7 != null) {
-            var5 = var7.d(-31);
+        ce var4 = (ce) (Object) var3.a((byte) 71);
+        while (var4 != null) {
+            var5 = var4.d(-31);
             if (!(var2 >= var5)) {
                 var2 = var5;
             }
-            ce var4 = (ce) (Object) var3.a(-61);
+            var4 = (ce) (Object) var3.a(-61);
         }
         var5 = -18 / ((36 - param0) / 51);
         return var2;
@@ -301,10 +298,10 @@ class kf extends ce implements ra {
             field_L = -109;
         }
         rd var2 = new rd(((kf) this).field_H);
-        ce var5 = (ce) (Object) var2.a((byte) 71);
-        while (var5 != null) {
-            var5.f(121);
-            ce var3 = (ce) (Object) var2.a(param0 + -57);
+        ce var3 = (ce) (Object) var2.a((byte) 71);
+        while (var3 != null) {
+            var3.f(121);
+            var3 = (ce) (Object) var2.a(param0 + -57);
         }
     }
 
@@ -319,7 +316,7 @@ class kf extends ce implements ra {
 
     final boolean a(ce param0, byte param1) {
         rd var5 = null;
-        ce var8 = null;
+        ce var6 = null;
         int var7 = client.field_A ? 1 : 0;
         if (((kf) this).field_H.b(-105)) {
             return false;
@@ -330,12 +327,12 @@ class kf extends ce implements ra {
             if (var4.a(true)) {
                 var5 = new rd(((kf) this).field_H);
                 bh discarded$0 = var5.a((bh) (Object) var4, (byte) -88);
-                var8 = (ce) (Object) var5.d(2078965185);
-                while (var8 != null) {
-                    if (!(!var8.a(false, param0))) {
+                var6 = (ce) (Object) var5.d(2078965185);
+                while (var6 != null) {
+                    if (!(!var6.a(false, param0))) {
                         return true;
                     }
-                    ce var6 = (ce) (Object) var5.d(2078965185);
+                    var6 = (ce) (Object) var5.d(2078965185);
                 }
             }
             var4 = (ce) (Object) var3.d(2078965185);
@@ -353,10 +350,10 @@ class kf extends ce implements ra {
         if (param0 != -95) {
             String discarded$0 = ((kf) this).c((byte) 50);
         }
-        ce var5 = (ce) (Object) var2.a((byte) 71);
-        while (var5 != null) {
-            var5.d((byte) -95);
-            ce var3 = (ce) (Object) var2.a(-98);
+        ce var3 = (ce) (Object) var2.a((byte) 71);
+        while (var3 != null) {
+            var3.d((byte) -95);
+            var3 = (ce) (Object) var2.a(-98);
         }
     }
 
@@ -398,14 +395,13 @@ class kf extends ce implements ra {
     }
 
     final boolean a(int param0, int param1, int param2, ce param3, int param4, int param5, boolean param6) {
+        rd var8 = null;
         ce var9 = null;
         int var10 = 0;
         Object var11 = null;
-        ce var12 = null;
-        rd var13 = null;
         L0: {
           var10 = client.field_A ? 1 : 0;
-          var13 = new rd(((kf) this).field_H);
+          var8 = new rd(((kf) this).field_H);
           if (!param6) {
             break L0;
           } else {
@@ -414,27 +410,27 @@ class kf extends ce implements ra {
             break L0;
           }
         }
-        var12 = (ce) (Object) var13.a((byte) 71);
+        var9 = (ce) (Object) var8.a((byte) 71);
         L1: while (true) {
           L2: {
-            if (var12 == null) {
+            if (var9 == null) {
               break L2;
             } else {
-              if (!var12.a((byte) 67)) {
+              if (!var9.a((byte) 67)) {
                 break L2;
               } else {
                 L3: {
-                  if (!var12.a(true)) {
+                  if (!var9.a(true)) {
                     break L3;
                   } else {
-                    if (var12.a(param0, param1, param2, param3, param4, param5, param6)) {
+                    if (var9.a(param0, param1, param2, param3, param4, param5, param6)) {
                       return true;
                     } else {
                       break L3;
                     }
                   }
                 }
-                var9 = (ce) (Object) var13.a(-128);
+                var9 = (ce) (Object) var8.a(-128);
                 continue L1;
               }
             }
@@ -470,10 +466,10 @@ class kf extends ce implements ra {
             }
         }
         rd var5 = new rd(((kf) this).field_H);
-        ce var8 = (ce) (Object) var5.a(true);
-        while (var8 != null) {
-            var8.a(param0 + ((kf) this).field_u, -124, param2, param3 - -((kf) this).field_D);
-            ce var6 = (ce) (Object) var5.d(2078965185);
+        ce var6 = (ce) (Object) var5.a(true);
+        while (var6 != null) {
+            var6.a(param0 + ((kf) this).field_u, -124, param2, param3 - -((kf) this).field_D);
+            var6 = (ce) (Object) var5.d(2078965185);
         }
         if (param1 > -103) {
             ((kf) this).a(59, -115, 20, 76);
@@ -493,26 +489,26 @@ class kf extends ce implements ra {
 
     final boolean a(int param0, ce param1) {
         rd var5 = null;
-        ce var8 = null;
+        ce var6 = null;
         int var7 = client.field_A ? 1 : 0;
         if (!(!((kf) this).field_H.b(-15))) {
             return false;
         }
-        rd var9 = new rd(((kf) this).field_H);
-        ce var4 = (ce) (Object) var9.a((byte) 71);
+        rd var8 = new rd(((kf) this).field_H);
+        ce var4 = (ce) (Object) var8.a((byte) 71);
         while (var4 != null) {
             if (var4.a(true)) {
                 var5 = new rd(((kf) this).field_H);
                 bh discarded$0 = var5.a((bh) (Object) var4, false);
-                var8 = (ce) (Object) var5.a(param0 ^ -24);
-                while (var8 != null) {
-                    if (!(!var8.a(false, param1))) {
+                var6 = (ce) (Object) var5.a(param0 ^ -24);
+                while (var6 != null) {
+                    if (!(!var6.a(false, param1))) {
                         return true;
                     }
-                    ce var6 = (ce) (Object) var5.a(param0 + -119);
+                    var6 = (ce) (Object) var5.a(param0 + -119);
                 }
             }
-            var4 = (ce) (Object) var9.a(-109);
+            var4 = (ce) (Object) var8.a(-109);
         }
         if (param0 != 32) {
             kf.h(-42);
@@ -536,12 +532,12 @@ class kf extends ce implements ra {
     ce e(byte param0) {
         int var4 = client.field_A ? 1 : 0;
         rd var2 = new rd(((kf) this).field_H);
-        ce var5 = (ce) (Object) var2.a((byte) 71);
-        while (var5 != null) {
-            if (!(!var5.a(true))) {
-                return var5;
+        ce var3 = (ce) (Object) var2.a((byte) 71);
+        while (var3 != null) {
+            if (!(!var3.a(true))) {
+                return var3;
             }
-            ce var3 = (ce) (Object) var2.a(-92);
+            var3 = (ce) (Object) var2.a(-92);
         }
         if (param0 == -74) {
             return null;
@@ -556,12 +552,12 @@ class kf extends ce implements ra {
             field_O = -99;
         }
         rd var3 = new rd(((kf) this).field_H);
-        ce var6 = (ce) (Object) var3.a((byte) 71);
-        while (var6 != null) {
-            if (var6.a(false, param1)) {
+        ce var4 = (ce) (Object) var3.a((byte) 71);
+        while (var4 != null) {
+            if (var4.a(false, param1)) {
                 return true;
             }
-            ce var4 = (ce) (Object) var3.a(-69);
+            var4 = (ce) (Object) var3.a(-69);
         }
         return false;
     }

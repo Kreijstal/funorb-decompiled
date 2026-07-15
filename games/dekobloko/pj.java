@@ -61,16 +61,13 @@ final class pj extends sf {
     final static void a(ve param0, byte param1) {
         ve var2 = null;
         int var3 = 0;
-        ve var4 = null;
         var3 = client.field_A ? 1 : 0;
         param0.b((byte) 108);
         if (param1 == -50) {
-          ve dupTemp$2 = (ve) (Object) h.field_b.c((byte) -99);
-          var4 = dupTemp$2;
-          var2 = dupTemp$2;
+          var2 = (ve) (Object) h.field_b.c((byte) -99);
           L0: while (true) {
-            if (var4 != null) {
-              if (var4.a(param0, false)) {
+            if (var2 != null) {
+              if (var2.a(param0, false)) {
                 var2 = (ve) (Object) h.field_b.d(true);
                 continue L0;
               } else {

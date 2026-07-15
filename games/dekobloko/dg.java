@@ -261,48 +261,40 @@ final class dg implements Iterator {
     }
 
     final static void a(int param0, int param1) {
-        kn var2 = null;
-        kc var2_ref = null;
         int var3 = 0;
         kn var4 = null;
         kc var5 = null;
         var3 = client.field_A ? 1 : 0;
-        kn dupTemp$6 = (kn) (Object) pb.field_c.c((byte) -80);
-        var4 = dupTemp$6;
-        var2 = dupTemp$6;
+        var4 = (kn) (Object) pb.field_c.c((byte) -80);
         L0: while (true) {
           if (var4 == null) {
             if (param0 <= -47) {
-              kc dupTemp$7 = (kc) (Object) field_e.c((byte) -121);
-              var5 = dupTemp$7;
-              var2_ref = dupTemp$7;
+              var5 = (kc) (Object) field_e.c((byte) -121);
               L1: while (true) {
                 if (var5 == null) {
                   return;
                 } else {
                   wb.a(var5, param1, 60);
-                  var2_ref = (kc) (Object) field_e.d(true);
+                  var5 = (kc) (Object) field_e.d(true);
                   continue L1;
                 }
               }
             } else {
               field_b = 100;
-              kc dupTemp$8 = (kc) (Object) field_e.c((byte) -121);
-              var5 = dupTemp$8;
-              var2_ref = dupTemp$8;
+              var5 = (kc) (Object) field_e.c((byte) -121);
               L2: while (true) {
                 if (var5 == null) {
                   return;
                 } else {
                   wb.a(var5, param1, 60);
-                  var2_ref = (kc) (Object) field_e.d(true);
+                  var5 = (kc) (Object) field_e.d(true);
                   continue L2;
                 }
               }
             }
           } else {
             fm.a((byte) -125, param1, var4);
-            var2 = (kn) (Object) pb.field_c.d(true);
+            var4 = (kn) (Object) pb.field_c.d(true);
             continue L0;
           }
         }

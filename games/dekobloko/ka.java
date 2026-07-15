@@ -14,11 +14,10 @@ final class ka extends ma {
         rd var2 = null;
         bl var3 = null;
         int var4 = 0;
-        bl var5 = null;
         L0: {
           var4 = client.field_A ? 1 : 0;
           var2 = new rd(((ka) this).field_Q);
-          var5 = (bl) (Object) var2.a((byte) 71);
+          var3 = (bl) (Object) var2.a((byte) 71);
           if (param0 <= -73) {
             break L0;
           } else {
@@ -27,9 +26,9 @@ final class ka extends ma {
           }
         }
         L1: while (true) {
-          if (var5 != null) {
-            if (var5.field_S) {
-              return var5;
+          if (var3 != null) {
+            if (var3.field_S) {
+              return var3;
             } else {
               var3 = (bl) (Object) var2.a(-93);
               continue L1;
@@ -46,10 +45,10 @@ final class ka extends ma {
             field_O = null;
         }
         rd var2 = new rd(((ka) this).field_Q);
-        bl var5 = (bl) (Object) var2.a((byte) 71);
-        while (var5 != null) {
-            var5.field_S = false;
-            bl var3 = (bl) (Object) var2.a(-48);
+        bl var3 = (bl) (Object) var2.a((byte) 71);
+        while (var3 != null) {
+            var3.field_S = false;
+            var3 = (bl) (Object) var2.a(-48);
         }
         ((ka) this).field_L = null;
     }
@@ -514,12 +513,12 @@ final class ka extends ma {
             field_O = null;
         }
         rd var2 = new rd(((ka) this).field_Q);
-        bl var5 = (bl) (Object) var2.a((byte) 71);
-        while (var5 != null) {
-            if (!(!var5.h((byte) 39))) {
-                var5.b((byte) 124);
+        bl var3 = (bl) (Object) var2.a((byte) 71);
+        while (var3 != null) {
+            if (!(!var3.h((byte) 39))) {
+                var3.b((byte) 124);
             }
-            bl var3 = (bl) (Object) var2.a(param0 + -70);
+            var3 = (bl) (Object) var2.a(param0 + -70);
         }
         ((ka) this).field_L = (ce) (Object) ((ka) this).g((byte) -87);
     }
@@ -536,18 +535,17 @@ final class ka extends ma {
         rd var2 = null;
         bl var3 = null;
         int var4 = 0;
-        bl var5 = null;
         var4 = client.field_A ? 1 : 0;
         var2 = new rd(((ka) this).field_Q);
         if (param0 == 14) {
-          var5 = (bl) (Object) var2.a((byte) 71);
+          var3 = (bl) (Object) var2.a((byte) 71);
           L0: while (true) {
-            if (var5 != null) {
-              if (!var5.field_S) {
+            if (var3 != null) {
+              if (!var3.field_S) {
                 var3 = (bl) (Object) var2.a(-93);
                 continue L0;
               } else {
-                return var5.e((byte) -74);
+                return var3.e((byte) -74);
               }
             } else {
               return null;
@@ -564,12 +562,12 @@ final class ka extends ma {
             field_P = null;
         }
         rd var2 = new rd(((ka) this).field_Q);
-        bl var5 = (bl) (Object) var2.a((byte) 71);
-        while (var5 != null) {
-            if (var5.f((byte) 110)) {
-                var5.b((byte) 120);
+        bl var3 = (bl) (Object) var2.a((byte) 71);
+        while (var3 != null) {
+            if (var3.f((byte) 110)) {
+                var3.b((byte) 120);
             }
-            bl var3 = (bl) (Object) var2.a(param0 ^ 8);
+            var3 = (bl) (Object) var2.a(param0 ^ 8);
         }
     }
 
@@ -596,10 +594,10 @@ final class ka extends ma {
         if (param1 > -103) {
             return;
         }
-        ce var8 = (ce) (Object) var5.a(true);
-        while (var8 != null) {
-            var8.a(param0 + ((ka) this).field_u, -116, param2, ((ka) this).field_D + param3);
-            ce var6 = (ce) (Object) var5.d(2078965185);
+        ce var6 = (ce) (Object) var5.a(true);
+        while (var6 != null) {
+            var6.a(param0 + ((ka) this).field_u, -116, param2, ((ka) this).field_D + param3);
+            var6 = (ce) (Object) var5.d(2078965185);
         }
     }
 

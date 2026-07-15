@@ -107,12 +107,10 @@ final class bk extends w {
         if (param0 != -93) {
             bk.e(40);
         }
-        uk dupTemp$0 = (uk) (Object) param2.c((byte) -119);
-        uk var5 = dupTemp$0;
-        uk var3 = dupTemp$0;
+        uk var5 = (uk) (Object) param2.c((byte) -119);
         while (var5 != null) {
             var5.b(11976, param1);
-            var3 = (uk) (Object) param2.d(true);
+            var5 = (uk) (Object) param2.d(true);
         }
     }
 

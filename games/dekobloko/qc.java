@@ -4813,7 +4813,6 @@ final class qc {
         int var14_int = 0;
         Object var14 = null;
         int var15 = 0;
-        sa var15_ref_sa = null;
         int var16 = 0;
         String var16_ref_String = null;
         ck var16_ref_ck = null;
@@ -6251,7 +6250,7 @@ final class qc {
                               }
                             } else {
                               this.a(var68, (byte) 115);
-                              var15_ref_sa = (sa) (Object) var67.c(true);
+                              var68 = (sa) (Object) var67.c(true);
                               continue L65;
                             }
                           }
