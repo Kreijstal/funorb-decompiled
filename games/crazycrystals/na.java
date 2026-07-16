@@ -1,6 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
+import java.lang.String;
+
 class na extends ud implements vd {
     private boolean field_gb;
     static dl field_eb;
@@ -34,20 +36,20 @@ class na extends ud implements vd {
         jd stackIn_10_0 = null;
         jd stackIn_11_0 = null;
         String stackIn_11_1 = null;
-        jd stackIn_59_0 = null;
-        jd stackIn_60_0 = null;
-        jd stackIn_61_0 = null;
-        String stackIn_61_1 = null;
+        jd stackIn_56_0 = null;
+        jd stackIn_57_0 = null;
+        jd stackIn_58_0 = null;
+        String stackIn_58_1 = null;
         Object stackOut_2_0 = null;
         Object stackOut_4_0 = null;
         int stackOut_4_1 = 0;
         Object stackOut_3_0 = null;
         int stackOut_3_1 = 0;
-        jd stackOut_58_0 = null;
-        jd stackOut_60_0 = null;
-        String stackOut_60_1 = null;
-        jd stackOut_59_0 = null;
-        String stackOut_59_1 = null;
+        jd stackOut_55_0 = null;
+        jd stackOut_57_0 = null;
+        String stackOut_57_1 = null;
+        jd stackOut_56_0 = null;
+        String stackOut_56_1 = null;
         jd stackOut_8_0 = null;
         jd stackOut_10_0 = null;
         String stackOut_10_1 = null;
@@ -81,7 +83,7 @@ class na extends ud implements vd {
             var8 = new jd((na) this, ((na) this).field_jb, param2);
             var6 = var8;
             var4 = var8;
-            if (param0 == -6) {
+            if ((param0 ^ -1) == -6) {
               var8.a(ng.field_i, (byte) -124, 11);
               var8.a(dn.field_c, (byte) -124, 17);
               if (-4 != (param0 ^ -1)) {
@@ -91,11 +93,11 @@ class na extends ud implements vd {
                   return;
                 } else {
                   if (6 != param0) {
-                    if ((param0 ^ -1) == -10) {
-                      pc discarded$8 = var8.a(nk.field_k, (bi) this, 52);
+                    if ((param0 ^ -1) != -10) {
                       ((na) this).a((qm) (Object) var8, (byte) -50);
                       return;
                     } else {
+                      pc discarded$8 = var8.a(nk.field_k, (bi) this, 52);
                       ((na) this).a((qm) (Object) var8, (byte) -50);
                       return;
                     }
@@ -111,7 +113,7 @@ class na extends ud implements vd {
                 return;
               }
             } else {
-              if (-257 == param0) {
+              if (-257 == (param0 ^ -1)) {
                 pc discarded$9 = var8.a(ba.field_l, (bi) this, 98);
                 if (-4 != (param0 ^ -1)) {
                   if (4 == param0) {
@@ -120,11 +122,11 @@ class na extends ud implements vd {
                     return;
                   } else {
                     if (6 != param0) {
-                      if ((param0 ^ -1) == -10) {
-                        pc discarded$10 = var8.a(nk.field_k, (bi) this, 52);
+                      if ((param0 ^ -1) != -10) {
                         ((na) this).a((qm) (Object) var8, (byte) -50);
                         return;
                       } else {
+                        pc discarded$10 = var8.a(nk.field_k, (bi) this, 52);
                         ((na) this).a((qm) (Object) var8, (byte) -50);
                         return;
                       }
@@ -141,24 +143,24 @@ class na extends ud implements vd {
                 }
               } else {
                 L1: {
-                  stackOut_58_0 = (jd) var8;
-                  stackIn_60_0 = stackOut_58_0;
-                  stackIn_59_0 = stackOut_58_0;
+                  stackOut_55_0 = (jd) var8;
+                  stackIn_57_0 = stackOut_55_0;
+                  stackIn_56_0 = stackOut_55_0;
                   if (!((na) this).field_ib) {
-                    stackOut_60_0 = (jd) (Object) stackIn_60_0;
-                    stackOut_60_1 = cf.field_h;
-                    stackIn_61_0 = stackOut_60_0;
-                    stackIn_61_1 = stackOut_60_1;
+                    stackOut_57_0 = (jd) (Object) stackIn_57_0;
+                    stackOut_57_1 = cf.field_h;
+                    stackIn_58_0 = stackOut_57_0;
+                    stackIn_58_1 = stackOut_57_1;
                     break L1;
                   } else {
-                    stackOut_59_0 = (jd) (Object) stackIn_59_0;
-                    stackOut_59_1 = ba.field_l;
-                    stackIn_61_0 = stackOut_59_0;
-                    stackIn_61_1 = stackOut_59_1;
+                    stackOut_56_0 = (jd) (Object) stackIn_56_0;
+                    stackOut_56_1 = ba.field_l;
+                    stackIn_58_0 = stackOut_56_0;
+                    stackIn_58_1 = stackOut_56_1;
                     break L1;
                   }
                 }
-                ((jd) (Object) stackIn_61_0).a(stackIn_61_1, (byte) -124, -1);
+                ((jd) (Object) stackIn_58_0).a(stackIn_58_1, (byte) -124, -1);
                 if (-4 != (param0 ^ -1)) {
                   if (4 == param0) {
                     var8.a(pg.field_b, (byte) -124, 8);
@@ -166,11 +168,11 @@ class na extends ud implements vd {
                     return;
                   } else {
                     if (6 != param0) {
-                      if ((param0 ^ -1) == -10) {
-                        pc discarded$11 = var8.a(nk.field_k, (bi) this, 52);
+                      if ((param0 ^ -1) != -10) {
                         ((na) this).a((qm) (Object) var8, (byte) -50);
                         return;
                       } else {
+                        pc discarded$11 = var8.a(nk.field_k, (bi) this, 52);
                         ((na) this).a((qm) (Object) var8, (byte) -50);
                         return;
                       }
@@ -191,7 +193,7 @@ class na extends ud implements vd {
             var7 = new jd((na) this, ((na) this).field_jb, param2);
             var6 = var7;
             var4 = var7;
-            if (param0 == -6) {
+            if ((param0 ^ -1) == -6) {
               var7.a(ng.field_i, (byte) -124, 11);
               var7.a(dn.field_c, (byte) -124, 17);
               if (-4 != (param0 ^ -1)) {
@@ -201,11 +203,11 @@ class na extends ud implements vd {
                   return;
                 } else {
                   if (6 != param0) {
-                    if ((param0 ^ -1) == -10) {
-                      pc discarded$12 = var7.a(nk.field_k, (bi) this, 52);
+                    if ((param0 ^ -1) != -10) {
                       ((na) this).a((qm) (Object) var7, (byte) -50);
                       return;
                     } else {
+                      pc discarded$12 = var7.a(nk.field_k, (bi) this, 52);
                       ((na) this).a((qm) (Object) var7, (byte) -50);
                       return;
                     }
@@ -221,7 +223,7 @@ class na extends ud implements vd {
                 return;
               }
             } else {
-              if (-257 == param0) {
+              if (-257 == (param0 ^ -1)) {
                 pc discarded$13 = var7.a(ba.field_l, (bi) this, 98);
                 if (-4 != (param0 ^ -1)) {
                   if (4 == param0) {
@@ -230,11 +232,11 @@ class na extends ud implements vd {
                     return;
                   } else {
                     if (6 != param0) {
-                      if ((param0 ^ -1) == -10) {
-                        pc discarded$14 = var7.a(nk.field_k, (bi) this, 52);
+                      if ((param0 ^ -1) != -10) {
                         ((na) this).a((qm) (Object) var7, (byte) -50);
                         return;
                       } else {
+                        pc discarded$14 = var7.a(nk.field_k, (bi) this, 52);
                         ((na) this).a((qm) (Object) var7, (byte) -50);
                         return;
                       }
@@ -276,11 +278,11 @@ class na extends ud implements vd {
                     return;
                   } else {
                     if (6 != param0) {
-                      if ((param0 ^ -1) == -10) {
-                        pc discarded$15 = var7.a(nk.field_k, (bi) this, 52);
+                      if ((param0 ^ -1) != -10) {
                         ((na) this).a((qm) (Object) var7, (byte) -50);
                         return;
                       } else {
+                        pc discarded$15 = var7.a(nk.field_k, (bi) this, 52);
                         ((na) this).a((qm) (Object) var7, (byte) -50);
                         return;
                       }

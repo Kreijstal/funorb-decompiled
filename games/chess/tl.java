@@ -198,10 +198,11 @@ final class tl extends ci {
             boolean discarded$0 = tl.a(-57, -23, 14, -33);
         }
         if (hd.field_l.g(-18110) != null) {
+            int fieldTemp$1 = fb.field_K + 1;
             fb.field_K = fb.field_K + 1;
-            if (!((fb.field_K + 1 ^ -1) != -336)) {
+            if (!((fieldTemp$1 ^ -1) != -336)) {
                 fb.field_K = 0;
-                o discarded$1 = hd.field_l.f(1184188328);
+                o discarded$2 = hd.field_l.f(1184188328);
             }
         }
     }

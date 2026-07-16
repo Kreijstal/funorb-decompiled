@@ -17,103 +17,31 @@ final class fl {
         qe stackIn_6_0 = null;
         Throwable decompiledCaughtException = null;
         qe stackOut_5_0 = null;
-        int statePc = 0;
-        Throwable caughtException = null;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    try {
-                        if (param0 == -3060) {
-                            statePc = 2;
-                        } else {
-                            statePc = 1;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_0) {
-                        caughtException = stateCaught_0;
-                        statePc = 8;
-                        continue stateLoop;
-                    }
-                }
-                case 1: {
-                    try {
-                        fl.a((byte) 81);
-                        statePc = 2;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_1) {
-                        caughtException = stateCaught_1;
-                        statePc = 8;
-                        continue stateLoop;
-                    }
-                }
-                case 2: {
-                    try {
-                        var1_int = 0;
-                        statePc = 3;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_2) {
-                        caughtException = stateCaught_2;
-                        statePc = 8;
-                        continue stateLoop;
-                    }
-                }
-                case 3: {
-                    try {
-                        var2 = w.field_y.a(var1_int, false);
-                        if (var2.field_y) {
-                            statePc = 5;
-                        } else {
-                            statePc = 4;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_3) {
-                        caughtException = stateCaught_3;
-                        statePc = 8;
-                        continue stateLoop;
-                    }
-                }
-                case 4: {
-                    try {
-                        statePc = 7;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_4) {
-                        caughtException = stateCaught_4;
-                        statePc = 8;
-                        continue stateLoop;
-                    }
-                }
-                case 5: {
-                    try {
-                        stackOut_5_0 = (qe) var2;
-                        stackIn_6_0 = stackOut_5_0;
-                        statePc = 6;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_5) {
-                        caughtException = stateCaught_5;
-                        statePc = 8;
-                        continue stateLoop;
-                    }
-                }
-                case 6: {
-                    return stackIn_6_0;
-                }
-                case 7: {
-                    try {
-                        var1_int++;
-                        statePc = 3;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_7) {
-                        caughtException = stateCaught_7;
-                        statePc = 8;
-                        continue stateLoop;
-                    }
-                }
-                case 8: {
-                    var1 = (IllegalArgumentException) (Object) caughtException;
-                    return null;
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
+        try {
+          L0: {
+            if (param0 == -3060) {
+              break L0;
+            } else {
+              fl.a((byte) 81);
+              break L0;
             }
+          }
+          var1_int = 0;
+          L1: while (true) {
+            var2 = w.field_y.a(var1_int, false);
+            if (var2.field_y) {
+              stackOut_5_0 = (qe) var2;
+              stackIn_6_0 = stackOut_5_0;
+              return stackIn_6_0;
+            } else {
+              var1_int++;
+              continue L1;
+            }
+          }
+        } catch (java.lang.Exception decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1 = (IllegalArgumentException) (Object) decompiledCaughtException;
+          return null;
         }
     }
 

@@ -58,7 +58,7 @@ final class fi {
               if (-9 >= (var2 ^ -1)) {
                 var2 = 1;
                 L2: while (true) {
-                  if (var2 < -11) {
+                  if ((var2 ^ -1) < -11) {
                     L3: {
                       if (param0 == 24843) {
                         break L3;
@@ -80,7 +80,7 @@ final class fi {
                   } else {
                     var3 = 0;
                     L5: while (true) {
-                      if (-9 <= var3) {
+                      if (-9 >= (var3 ^ -1)) {
                         var3 = 0;
                         L6: while (true) {
                           if ((var3 ^ -1) <= -9) {
@@ -353,8 +353,9 @@ final class fi {
                 ((fi) this).field_c = 0;
                 break L1;
               } else {
+                int fieldTemp$2 = ((fi) this).field_c;
                 ((fi) this).field_c = ((fi) this).field_c + 1;
-                ((fi) this).field_g[((fi) this).field_c] = (byte) 0;
+                ((fi) this).field_g[fieldTemp$2] = (byte) 0;
                 continue L2;
               }
             }
@@ -387,8 +388,9 @@ final class fi {
               }
             }
           } else {
+            int fieldTemp$3 = ((fi) this).field_c;
             ((fi) this).field_c = ((fi) this).field_c + 1;
-            ((fi) this).field_g[((fi) this).field_c] = (byte) 0;
+            ((fi) this).field_g[fieldTemp$3] = (byte) 0;
             continue L3;
           }
         }

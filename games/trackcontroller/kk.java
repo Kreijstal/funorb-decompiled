@@ -13,45 +13,76 @@ final class kk {
     static int[] field_g;
 
     private final synchronized byte[] a(int[] param0, boolean param1, int param2, int param3) {
-        byte[] var7 = null;
-        byte[] var5_array = null;
-        if (!this.a(param1, param3, param2)) {
-            return null;
-        }
         Object var5 = null;
-        if (((kk) this).field_f[param3] != null) {
-            // ifnull L41
-        } else {
-            if (!this.a(4, param3, param2, param0)) {
-                this.d(118, param3);
-                if (!this.a(4, param3, param2, param0)) {
-                    return null;
+        byte[] var7 = null;
+        if (this.a(param1, param3, param2)) {
+          L0: {
+            L1: {
+              var5 = null;
+              if (((kk) this).field_f[param3] == null) {
+                break L1;
+              } else {
+                if (((kk) this).field_f[param3][param2] == null) {
+                  break L1;
+                } else {
+                  break L0;
                 }
+              }
             }
-        }
-        if (!(((kk) this).field_f[param3] != null)) {
-            throw new RuntimeException("");
-        }
-        if (null != ((kk) this).field_f[param3][param2]) {
-            var7 = me.a(false, 22692, ((kk) this).field_f[param3][param2]);
-            var5_array = var7;
-            if (!(var7 != null)) {
-                throw new RuntimeException("");
-            }
-        }
-        if (var5_array == null) {
-        } else {
-            if (((kk) this).field_i == 1) {
-                ((kk) this).field_f[param3][param2] = null;
-                // if_icmpne L221
-                ((kk) this).field_f[param3] = null;
+            if (this.a(4, param3, param2, param0)) {
+              break L0;
             } else {
-                if (!(2 != ((kk) this).field_i)) {
-                    ((kk) this).field_f[param3] = null;
-                }
+              this.d(118, param3);
+              if (this.a(4, param3, param2, param0)) {
+                break L0;
+              } else {
+                return null;
+              }
             }
+          }
+          if (((kk) this).field_f[param3] == null) {
+            throw new RuntimeException("");
+          } else {
+            L2: {
+              if (null == ((kk) this).field_f[param3][param2]) {
+                break L2;
+              } else {
+                var7 = me.a(false, 22692, ((kk) this).field_f[param3][param2]);
+                var5 = (Object) (Object) var7;
+                if (var7 == null) {
+                  throw new RuntimeException("");
+                } else {
+                  break L2;
+                }
+              }
+            }
+            L3: {
+              if (var5 != null) {
+                if (((kk) this).field_i != 1) {
+                  if (2 == ((kk) this).field_i) {
+                    ((kk) this).field_f[param3] = null;
+                    break L3;
+                  } else {
+                    break L3;
+                  }
+                } else {
+                  ((kk) this).field_f[param3][param2] = null;
+                  if (((kk) this).field_b.field_a[param3] != 1) {
+                    break L3;
+                  } else {
+                    ((kk) this).field_f[param3] = null;
+                    break L3;
+                  }
+                }
+              } else {
+                break L3;
+              }
+            }
+            return (byte[]) var5;
+          }
+        } else {
+          return null;
         }
-        return var5_array;
     }
 
     final synchronized boolean a(byte param0) {
@@ -163,46 +194,27 @@ final class kk {
     }
 
     final synchronized int a(boolean param0) {
+        int var4 = 0;
+        int var5 = TrackController.field_F ? 1 : 0;
+        if (!(((kk) this).c(100))) {
+            return 0;
+        }
         int var2 = 0;
         int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        var5 = TrackController.field_F ? 1 : 0;
-        if (!((kk) this).c(100)) {
-          return 0;
-        } else {
-          L0: {
-            var2 = 0;
-            var3 = 0;
-            if (param0) {
-              break L0;
-            } else {
-              field_a = (String) ((kk) this).field_d[2];
-              break L0;
-            }
-          }
-          var4 = 0;
-          L1: while (true) {
-            if (((kk) this).field_d.length <= var4) {
-              if (-1 == var2) {
-                return 100;
-              } else {
-                var4 = 100 * var3 / var2;
-                return var4;
-              }
-            } else {
-              if (-1 > ((kk) this).field_b.field_l[var4]) {
+        if (!param0) {
+            field_a = (String) ((kk) this).field_d[2];
+        }
+        for (var4 = 0; (((kk) this).field_d.length ^ -1) < (var4 ^ -1); var4++) {
+            if (!(-1 <= (((kk) this).field_b.field_l[var4] ^ -1))) {
                 var2 += 100;
                 var3 = var3 + ((kk) this).a(var4, -24214);
-                var4++;
-                continue L1;
-              } else {
-                var4++;
-                continue L1;
-              }
             }
-          }
         }
+        if (!(-1 != (var2 ^ -1))) {
+            return 100;
+        }
+        var4 = 100 * var3 / var2;
+        return var4;
     }
 
     final boolean a(String param0, String param1, byte param2) {
@@ -360,20 +372,32 @@ final class kk {
     }
 
     private final synchronized boolean c(int param0, int param1) {
-        if (!((kk) this).c(-79)) {
-            return false;
-        }
-        if (0 <= param1) {
-            // if_icmpge L43
-            // ifeq L43
-        } else {
-            if (sk.field_b) {
-                throw new IllegalArgumentException(Integer.toString(param1));
+        int var3 = 0;
+        if (((kk) this).c(-79)) {
+          L0: {
+            if (0 > param1) {
+              break L0;
+            } else {
+              if (param1 >= ((kk) this).field_b.field_a.length) {
+                break L0;
+              } else {
+                if (((kk) this).field_b.field_a[param1] == 0) {
+                  break L0;
+                } else {
+                  var3 = 91 % ((13 - param0) / 52);
+                  return true;
+                }
+              }
             }
+          }
+          if (!sk.field_b) {
             return false;
+          } else {
+            throw new IllegalArgumentException(Integer.toString(param1));
+          }
+        } else {
+          return false;
         }
-        int var3 = 91 % ((13 - param0) / 52);
-        return true;
     }
 
     final synchronized byte[] a(String param0, int param1, String param2) {
@@ -836,6 +860,7 @@ final class kk {
                 }
               }
               ((kk) this).field_e = stackIn_6_1 != 0;
+              return;
             } else {
               break L0;
             }

@@ -105,8 +105,9 @@ final class ql {
               L2: {
                 var10 = ((ql) this).field_d[var7];
                 if (0 > ((ql) this).field_d[var7]) {
+                  int incrementValue$8 = param1;
                   param1++;
-                  param2[param1] = (byte)(var10 ^ -1);
+                  param2[incrementValue$8] = (byte)(var10 ^ -1);
                   if (param3 > param1) {
                     var7 = 0;
                     break L2;
@@ -131,8 +132,9 @@ final class ql {
                 if (-1 >= (((ql) this).field_d[var7] ^ -1)) {
                   break L4;
                 } else {
+                  int incrementValue$9 = param1;
                   param1++;
-                  param2[param1] = (byte)(var10 ^ -1);
+                  param2[incrementValue$9] = (byte)(var10 ^ -1);
                   if (param1 < param3) {
                     var7 = 0;
                     break L4;
@@ -155,8 +157,9 @@ final class ql {
                 if (0 <= ((ql) this).field_d[var7]) {
                   break L6;
                 } else {
+                  int incrementValue$10 = param1;
                   param1++;
-                  param2[param1] = (byte)(var10 ^ -1);
+                  param2[incrementValue$10] = (byte)(var10 ^ -1);
                   if (param3 > param1) {
                     var7 = 0;
                     break L6;
@@ -177,8 +180,9 @@ final class ql {
               L8: {
                 var10 = ((ql) this).field_d[var7];
                 if (-1 > ((ql) this).field_d[var7]) {
+                  int incrementValue$11 = param1;
                   param1++;
-                  param2[param1] = (byte)(var10 ^ -1);
+                  param2[incrementValue$11] = (byte)(var10 ^ -1);
                   if (param1 < param3) {
                     var7 = 0;
                     break L8;
@@ -203,8 +207,9 @@ final class ql {
                 if (-1 <= ((ql) this).field_d[var7]) {
                   break L10;
                 } else {
+                  int incrementValue$12 = param1;
                   param1++;
-                  param2[param1] = (byte)(var10 ^ -1);
+                  param2[incrementValue$12] = (byte)(var10 ^ -1);
                   if (param3 > param1) {
                     var7 = 0;
                     break L10;
@@ -227,8 +232,9 @@ final class ql {
                 if (((ql) this).field_d[var7] >= 0) {
                   break L12;
                 } else {
+                  int incrementValue$13 = param1;
                   param1++;
-                  param2[param1] = (byte)(var10 ^ -1);
+                  param2[incrementValue$13] = (byte)(var10 ^ -1);
                   if (param1 < param3) {
                     var7 = 0;
                     break L12;
@@ -249,8 +255,9 @@ final class ql {
               L14: {
                 var10 = ((ql) this).field_d[var7];
                 if (0 > ((ql) this).field_d[var7]) {
+                  int incrementValue$14 = param1;
                   param1++;
-                  param2[param1] = (byte)(var10 ^ -1);
+                  param2[incrementValue$14] = (byte)(var10 ^ -1);
                   if (param3 > param1) {
                     var7 = 0;
                     break L14;
@@ -272,8 +279,9 @@ final class ql {
               }
               var10 = ((ql) this).field_d[var7];
               if (((ql) this).field_d[var7] < 0) {
+                int incrementValue$15 = param1;
                 param1++;
-                param2[param1] = (byte)(var10 ^ -1);
+                param2[incrementValue$15] = (byte)(var10 ^ -1);
                 if (param3 > param1) {
                   var7 = 0;
                   var8++;

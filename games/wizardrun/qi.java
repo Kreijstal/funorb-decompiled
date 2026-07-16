@@ -52,8 +52,9 @@ final class qi {
             }
           }
           if (((qi) this).field_d) {
+            int fieldTemp$2 = ((qi) this).field_e - 1;
             ((qi) this).field_e = ((qi) this).field_e - 1;
-            if ((((qi) this).field_e - 1 ^ -1) < -1) {
+            if ((fieldTemp$2 ^ -1) < -1) {
               return;
             } else {
               L1: {
@@ -134,9 +135,9 @@ final class qi {
     final static int a(ne param0, ne param1, String param2, int param3, int param4, boolean param5, int param6) {
         String var8 = null;
         int var9 = 0;
-        String var9_ref = null;
+        String var9_ref_String = null;
         int var10 = 0;
-        String var11_ref = null;
+        String var11_ref_String = null;
         int var11 = 0;
         int var12 = 0;
         int var13 = 0;
@@ -176,7 +177,7 @@ final class qi {
           var13 = wizardrun.field_H;
           var14 = param0.a(160);
           var8 = param1.a(160);
-          var11_ref = var8;
+          var11_ref_String = var8;
           if (null == jc.field_H) {
             if (!ol.a(127, false)) {
               return -1;
@@ -218,15 +219,15 @@ final class qi {
                   n.field_b.b((byte) 11, 18);
                   n.field_b.field_m = n.field_b.field_m + 2;
                   var10 = n.field_b.field_m;
-                  var11_ref = fb.a(jg.f(1), (byte) 102);
-                  if (var11_ref != null) {
+                  var11_ref_String = fb.a(jg.f(1), (byte) 102);
+                  if (var11_ref_String != null) {
                     break L4;
                   } else {
-                    var11_ref = "";
+                    var11_ref_String = "";
                     break L4;
                   }
                 }
-                n.field_b.a(var11_ref, false);
+                n.field_b.a(var11_ref_String, false);
                 pa.a(ag.field_s, 0, ad.field_d, re.field_G, (va) (Object) n.field_b);
                 n.field_b.a(n.field_b.field_m + -var10, (byte) -67);
                 break L2;
@@ -315,10 +316,10 @@ final class qi {
               L9: {
                 var9 = nk.field_N.f(255);
                 nk.field_N.field_m = 0;
-                if (var9 > -101) {
+                if ((var9 ^ -1) > -101) {
                   break L9;
                 } else {
-                  if (-106 >= var9) {
+                  if (-106 <= (var9 ^ -1)) {
                     pd.field_I = new String[-100 + var9];
                     wh.field_j = vj.field_a;
                     break L8;
@@ -389,11 +390,11 @@ final class qi {
                   bh.field_g = nk.field_N.d(0);
                   break L13;
                 } else {
-                  var9_ref = nk.field_N.c(-1);
-                  if (var9_ref == null) {
+                  var9_ref_String = nk.field_N.c(-1);
+                  if (var9_ref_String == null) {
                     break L13;
                   } else {
-                    q.a(26017, jg.f(1), var9_ref);
+                    q.a(26017, jg.f(1), var9_ref_String);
                     break L13;
                   }
                 }
@@ -408,29 +409,32 @@ final class qi {
             break L12;
           }
         }
-        if (jc.field_H == null) {
-          if (n.field_a) {
-            L14: {
-              if (eh.a(2) > 30000L) {
-                bh.field_g = sa.field_b;
-                break L14;
-              } else {
-                bh.field_g = fg.field_d;
-                break L14;
-              }
-            }
-            n.field_a = false;
-            return 249;
+        L14: {
+          if (jc.field_H != null) {
+            break L14;
           } else {
-            var9 = vl.field_d;
-            vl.field_d = tj.field_J;
-            tj.field_J = var9;
-            n.field_a = true;
-            return -1;
+            if (!n.field_a) {
+              var9 = vl.field_d;
+              vl.field_d = tj.field_J;
+              tj.field_J = var9;
+              n.field_a = true;
+              break L14;
+            } else {
+              L15: {
+                if (eh.a(2) > 30000L) {
+                  bh.field_g = sa.field_b;
+                  break L15;
+                } else {
+                  bh.field_g = fg.field_d;
+                  break L15;
+                }
+              }
+              n.field_a = false;
+              return 249;
+            }
           }
-        } else {
-          return -1;
         }
+        return -1;
     }
 
     final static void e(int param0) {

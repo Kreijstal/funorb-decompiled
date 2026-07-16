@@ -82,9 +82,11 @@ final class ra extends sl {
                   continue L1;
                 }
               } else {
+                int incrementValue$34 = param0;
                 param0++;
+                int incrementValue$35 = param10;
                 param10++;
-                param5[param0] = param7[param10];
+                param5[incrementValue$34] = param7[incrementValue$35];
                 param9++;
                 if (param1 == param9) {
                   param10 = param10 - param1;
@@ -141,6 +143,7 @@ final class ra extends sl {
                     ((ra) this).field_d[var7][var8] = ma.a(64, param1[var7][var8]);
                     ((ra) this).field_F = ud.a((byte) -56, ((ra) this).field_d[var7][var8]);
                     ((ra) this).field_s = e.a(((ra) this).field_d[var7][var8], -1932340400, ((ra) this).field_F);
+                    return;
                 }
             }
         }
@@ -221,8 +224,9 @@ final class ra extends sl {
                 return;
               } else {
                 L1: {
+                  int fieldTemp$1 = ((ra) this).field_G + 1;
                   ((ra) this).field_G = ((ra) this).field_G + 1;
-                  if (13 == ((ra) this).field_G + 1) {
+                  if (13 == fieldTemp$1) {
                     L2: {
                       ((ra) this).field_G = -13;
                       if (((ra) this).field_d[((ra) this).field_u][((ra) this).field_D] != 24) {
@@ -293,7 +297,7 @@ final class ra extends sl {
                         if (((ra) this).field_s != 4096) {
                           break L7;
                         } else {
-                          if (((ra) this).field_D == 0) {
+                          if ((((ra) this).field_D ^ -1) == -1) {
                             break L6;
                           } else {
                             break L7;
@@ -304,7 +308,7 @@ final class ra extends sl {
                         if (((ra) this).field_s != 8192) {
                           break L8;
                         } else {
-                          if (-1 + ((ra) this).field_o[0].length == ((ra) this).field_D) {
+                          if ((-1 + ((ra) this).field_o[0].length ^ -1) == (((ra) this).field_D ^ -1)) {
                             break L6;
                           } else {
                             break L8;
@@ -326,7 +330,7 @@ final class ra extends sl {
                         if ((((ra) this).field_s ^ -1) != -2049) {
                           break L10;
                         } else {
-                          if (((ra) this).field_u != ((ra) this).field_o.length + -1) {
+                          if ((((ra) this).field_u ^ -1) != (((ra) this).field_o.length + -1 ^ -1)) {
                             break L10;
                           } else {
                             break L6;
@@ -335,14 +339,14 @@ final class ra extends sl {
                       }
                       var3 = ((ra) this).field_s;
                       if (var3 != 4096) {
-                        if (var3 == -8193) {
+                        if ((var3 ^ -1) == -8193) {
                           ((ra) this).field_D = ((ra) this).field_D + 1;
                           ((ra) this).field_F = 256;
                           this.a(2048, 4, 8192, -48, 1, 16384, 16);
                           break L1;
                         } else {
                           if (16384 != var3) {
-                            if (-2049 != var3) {
+                            if (-2049 != (var3 ^ -1)) {
                               break L1;
                             } else {
                               ((ra) this).field_F = 1024;
@@ -431,8 +435,9 @@ final class ra extends sl {
                     if ((1 & param0 ^ -1) != -2) {
                       break L2;
                     } else {
+                      int incrementValue$2 = var6;
                       var6--;
-                      if (var6 == 0) {
+                      if (incrementValue$2 == 0) {
                         return 1 << var7;
                       } else {
                         break L2;
@@ -451,14 +456,14 @@ final class ra extends sl {
           var8 = 0;
           L3: while (true) {
             L4: {
-              if (-33 >= var8) {
+              if (-33 >= (var8 ^ -1)) {
                 break L4;
               } else {
                 L5: {
                   if (1 != (param0 & 1)) {
                     break L5;
                   } else {
-                    if (0 != var7) {
+                    if (0 != (var7 ^ -1)) {
                       var6 = var8;
                       break L4;
                     } else {
@@ -477,14 +482,14 @@ final class ra extends sl {
                 break L6;
               } else {
                 var12 = null;
-                hg discarded$1 = ra.a(-59, (byte[]) null);
+                hg discarded$3 = ra.a(-59, (byte[]) null);
                 break L6;
               }
             }
             L7: {
               var8 = (-var7 + 9) * var7 / 2 + (var6 - 1);
               var9 = 1 << var8;
-              if ((var9 & ((ra) this).field_B[param3][param1]) == 0) {
+              if ((var9 & ((ra) this).field_B[param3][param1] ^ -1) == -1) {
                 stackOut_22_0 = 0;
                 stackIn_23_0 = stackOut_22_0;
                 break L7;

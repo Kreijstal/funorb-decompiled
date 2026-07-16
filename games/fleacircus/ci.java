@@ -57,29 +57,30 @@ final class ci {
                   if (var13 >= var4) {
                     break L0;
                   } else {
-                    var9 = 32768 + var21[var13] >> 488498128;
-                    if (127 >= var9) {
-                      if (-128 < var9) {
-                        param0[var13] = (byte)127;
-                        var13++;
-                        continue L2;
+                    L3: {
+                      var9 = 32768 + var21[var13] >> 488498128;
+                      if (127 >= (var9 ^ -1)) {
+                        if (-128 > (var9 ^ -1)) {
+                          param0[var13] = (byte)127;
+                          break L3;
+                        } else {
+                          param0[var13] = (byte)var9;
+                          break L3;
+                        }
                       } else {
-                        param0[var13] = (byte)var9;
-                        var13++;
-                        continue L2;
+                        param0[var13] = (byte)-128;
+                        break L3;
                       }
-                    } else {
-                      param0[var13] = (byte)-128;
-                      var13++;
-                      continue L2;
                     }
+                    var13++;
+                    continue L2;
                   }
                 }
               } else {
                 var9 = param0[var8];
                 var20 = ((ci) this).field_b[var7];
                 var11 = 0;
-                L3: while (true) {
+                L4: while (true) {
                   if (-15 >= (var11 ^ -1)) {
                     var7 = var7 + ((ci) this).field_a;
                     var11 = var7 / ((ci) this).field_d;
@@ -90,7 +91,7 @@ final class ci {
                   } else {
                     var5[var6 - -var11] = var5[var6 - -var11] + var9 * var20[var11];
                     var11++;
-                    continue L3;
+                    continue L4;
                   }
                 }
               }
@@ -140,6 +141,7 @@ final class ci {
           var4 = 0;
           L0: while (true) {
             if (var4 >= param0) {
+              return;
             } else {
               L1: {
                 var5 = ((ci) this).field_b[var4];
@@ -193,6 +195,7 @@ final class ci {
             }
           }
         } else {
+          return;
         }
     }
 

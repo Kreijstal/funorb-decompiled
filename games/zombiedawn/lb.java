@@ -188,24 +188,70 @@ final class lb extends pn implements hh {
     }
 
     private final void a(an param0, int param1) {
+        an var3 = null;
+        int var4 = 0;
         int var5 = 0;
         re var6 = null;
-        ((lb) this).field_ib = param0;
-        int var4 = -49 / ((param1 - -40) / 47);
-        boolean discarded$0 = param0.a((byte) 68, (ga) this);
-        an var3 = this.o(16);
-        ((lb) this).field_gb.field_C = var3 != param0 ? true : false;
-        if (((lb) this).field_V == param0) {
-            if (var3 == param0) {
-                if (null != ((lb) this).field_hb) {
-                    var5 = ((lb) this).field_hb.h(0);
-                    var6 = ((lb) this).field_fb[var5];
-                    if (var6.field_a == rn.field_b.field_t) {
-                        // if_icmpeq L137
+        an stackIn_1_0 = null;
+        an stackIn_2_0 = null;
+        an stackIn_3_0 = null;
+        int stackIn_3_1 = 0;
+        an stackOut_0_0 = null;
+        an stackOut_2_0 = null;
+        int stackOut_2_1 = 0;
+        an stackOut_1_0 = null;
+        int stackOut_1_1 = 0;
+        L0: {
+          ((lb) this).field_ib = param0;
+          var4 = -49 / ((param1 - -40) / 47);
+          boolean discarded$2 = param0.a((byte) 68, (ga) this);
+          var3 = this.o(16);
+          stackOut_0_0 = ((lb) this).field_gb;
+          stackIn_2_0 = stackOut_0_0;
+          stackIn_1_0 = stackOut_0_0;
+          if (var3 == param0) {
+            stackOut_2_0 = (an) (Object) stackIn_2_0;
+            stackOut_2_1 = 0;
+            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_1 = stackOut_2_1;
+            break L0;
+          } else {
+            stackOut_1_0 = (an) (Object) stackIn_1_0;
+            stackOut_1_1 = 1;
+            stackIn_3_0 = stackOut_1_0;
+            stackIn_3_1 = stackOut_1_1;
+            break L0;
+          }
+        }
+        L1: {
+          stackIn_3_0.field_C = stackIn_3_1 != 0;
+          if (((lb) this).field_V != param0) {
+            break L1;
+          } else {
+            if (var3 != param0) {
+              break L1;
+            } else {
+              if (null == ((lb) this).field_hb) {
+                break L1;
+              } else {
+                L2: {
+                  var5 = ((lb) this).field_hb.h(0);
+                  var6 = ((lb) this).field_fb[var5];
+                  if (var6.field_a != rn.field_b.field_t) {
+                    break L2;
+                  } else {
+                    if (rn.field_b.field_i == var6.field_d) {
+                      break L1;
+                    } else {
+                      break L2;
                     }
-                    ((lb) this).field_gb.field_C = true;
+                  }
                 }
+                ((lb) this).field_gb.field_C = true;
+                break L1;
+              }
             }
+          }
         }
         this.n(-18681);
     }
@@ -288,14 +334,14 @@ final class lb extends pn implements hh {
     }
 
     final boolean a(int param0, int param1, ga param2, char param3) {
-        an var5 = null;
+        Object var5 = null;
         int var6 = 0;
         int var7 = 0;
         L0: {
           var7 = ZombieDawn.field_J;
           var5 = null;
           if (((lb) this).field_bb.e(-17741)) {
-            var5 = ((lb) this).field_bb;
+            var5 = (Object) (Object) ((lb) this).field_bb;
             break L0;
           } else {
             L1: {
@@ -305,21 +351,21 @@ final class lb extends pn implements hh {
                 if (!((lb) this).field_W.e(-17741)) {
                   break L1;
                 } else {
-                  var5 = ((lb) this).field_W;
+                  var5 = (Object) (Object) ((lb) this).field_W;
                   break L0;
                 }
               }
             }
             if (((lb) this).field_V.e(-17741)) {
-              var5 = ((lb) this).field_V;
+              var5 = (Object) (Object) ((lb) this).field_V;
               break L0;
             } else {
               if (((lb) this).field_X.e(-17741)) {
-                var5 = ((lb) this).field_X;
+                var5 = (Object) (Object) ((lb) this).field_X;
                 break L0;
               } else {
                 if (((lb) this).field_gb.e(-17741)) {
-                  var5 = ((lb) this).field_gb;
+                  var5 = (Object) (Object) ((lb) this).field_gb;
                   break L0;
                 } else {
                   if (!((lb) this).field_bb.field_x) {
@@ -330,7 +376,7 @@ final class lb extends pn implements hh {
                         if (!((lb) this).field_W.field_x) {
                           break L2;
                         } else {
-                          var5 = ((lb) this).field_W;
+                          var5 = (Object) (Object) ((lb) this).field_W;
                           break L0;
                         }
                       }
@@ -338,11 +384,11 @@ final class lb extends pn implements hh {
                     if (!((lb) this).field_V.field_x) {
                       break L0;
                     } else {
-                      var5 = ((lb) this).field_V;
+                      var5 = (Object) (Object) ((lb) this).field_V;
                       break L0;
                     }
                   } else {
-                    var5 = ((lb) this).field_bb;
+                    var5 = (Object) (Object) ((lb) this).field_bb;
                     break L0;
                   }
                 }
@@ -354,7 +400,7 @@ final class lb extends pn implements hh {
           var6 = param1;
           if (-97 != (var6 ^ -1)) {
             if (var6 == 97) {
-              if (var5 == ((lb) this).field_bb) {
+              if (var5 == (Object) (Object) ((lb) this).field_bb) {
                 L4: {
                   if (null == ((lb) this).field_W) {
                     boolean discarded$13 = ((lb) this).field_V.a((byte) 111, (ga) this);
@@ -366,11 +412,11 @@ final class lb extends pn implements hh {
                 }
                 return true;
               } else {
-                if (var5 == ((lb) this).field_W) {
+                if (var5 == (Object) (Object) ((lb) this).field_W) {
                   boolean discarded$15 = ((lb) this).field_V.a((byte) 85, (ga) this);
                   return true;
                 } else {
-                  if (var5 != ((lb) this).field_X) {
+                  if (var5 != (Object) (Object) ((lb) this).field_X) {
                     break L3;
                   } else {
                     if (!((lb) this).field_gb.field_C) {
@@ -388,11 +434,11 @@ final class lb extends pn implements hh {
                   break L3;
                 } else {
                   L5: {
-                    if (var5 == ((lb) this).field_bb) {
+                    if (var5 == (Object) (Object) ((lb) this).field_bb) {
                       break L5;
                     } else {
-                      if (var5 != ((lb) this).field_W) {
-                        if (var5 != ((lb) this).field_V) {
+                      if (var5 != (Object) (Object) ((lb) this).field_W) {
+                        if (var5 != (Object) (Object) ((lb) this).field_V) {
                           break L3;
                         } else {
                           L6: {
@@ -415,11 +461,11 @@ final class lb extends pn implements hh {
                   return true;
                 }
               } else {
-                if (var5 == ((lb) this).field_X) {
+                if (var5 == (Object) (Object) ((lb) this).field_X) {
                   boolean discarded$20 = ((lb) this).field_bb.a((byte) 89, (ga) this);
                   return true;
                 } else {
-                  if (((lb) this).field_gb == var5) {
+                  if ((Object) (Object) ((lb) this).field_gb == var5) {
                     boolean discarded$21 = ((lb) this).field_V.a((byte) 102, (ga) this);
                     return true;
                   } else {
@@ -430,12 +476,12 @@ final class lb extends pn implements hh {
               }
             }
           } else {
-            if (var5 != ((lb) this).field_V) {
-              if (var5 == ((lb) this).field_W) {
+            if (var5 != (Object) (Object) ((lb) this).field_V) {
+              if (var5 == (Object) (Object) ((lb) this).field_W) {
                 boolean discarded$22 = ((lb) this).field_bb.a((byte) 125, (ga) this);
                 return true;
               } else {
-                if (var5 != ((lb) this).field_gb) {
+                if (var5 != (Object) (Object) ((lb) this).field_gb) {
                   break L3;
                 } else {
                   boolean discarded$23 = ((lb) this).field_X.a((byte) 74, (ga) this);
@@ -528,6 +574,7 @@ final class lb extends pn implements hh {
         String[] var5_ref_String__ = null;
         int var6_int = 0;
         an var6 = null;
+        String var6_ref = null;
         int var7_int = 0;
         ga var7 = null;
         re var8 = null;
@@ -630,8 +677,9 @@ final class lb extends pn implements hh {
                         break L0;
                       } else {
                         if (var3_ref_re__[var5] != null) {
+                          int incrementValue$1 = var4;
                           var4++;
-                          ((lb) this).field_fb[var4] = var3_ref_re__[var5];
+                          ((lb) this).field_fb[incrementValue$1] = var3_ref_re__[var5];
                           var5++;
                           continue L3;
                         } else {
@@ -848,8 +896,7 @@ final class lb extends pn implements hh {
           break L10;
         }
         L12: {
-          new r(stackIn_56_3, stackIn_56_4, 410, 105, (io) null, var3, 1);
-          ((lb) this).field_T = stackIn_56_1;
+          ((lb) this).field_T = new r(stackIn_56_3, stackIn_56_4, 410, 105, (io) null, var3, 1);
           ((lb) this).field_T.field_M = 83;
           ((lb) this).field_T.a((byte) 106, 5, 5);
           ((lb) this).a((ga) (Object) ((lb) this).field_T, 10);
@@ -965,7 +1012,7 @@ final class lb extends pn implements hh {
             }
           }
           var10 = stackIn_78_0;
-          var6 = (an) (Object) var10;
+          var6_ref = var10;
           var7 = new ga(var10, (sk) null);
           var7.field_i = ((lb) this).field_i;
           var7.field_j = 163;

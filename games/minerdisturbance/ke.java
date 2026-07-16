@@ -82,161 +82,49 @@ final class ke extends ui implements sg {
     final static void a(wh param0, boolean param1, int param2, boolean param3) {
         Object var4 = null;
         Throwable var5 = null;
-        int statePc = 0;
-        Throwable caughtException = null;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    if (!param3) {
-                        statePc = 2;
-                    } else {
-                        statePc = 1;
-                    }
-                    continue stateLoop;
+        Throwable decompiledCaughtException = null;
+        L0: {
+          if (!param3) {
+            break L0;
+          } else {
+            ke.s(-5);
+            break L0;
+          }
+        }
+        L1: {
+          if (nj.field_e == null) {
+            break L1;
+          } else {
+            dl.a(param1, param0, -32532, 1048576, param2);
+            break L1;
+          }
+        }
+        if (km.field_a == null) {
+          return;
+        } else {
+          var4 = (Object) (Object) mj.field_o;
+          synchronized (var4) {
+            L2: {
+              km.field_a.a(param2, true, -1);
+              if (param0 == de.field_b) {
+                return;
+              } else {
+                L3: {
+                  km.field_a.c((byte) 108);
+                  mj.field_o.f();
+                  de.field_b = param0;
+                  if (de.field_b != null) {
+                    km.field_a.a(param1, de.field_b, (byte) 2);
+                    break L3;
+                  } else {
+                    break L3;
+                  }
                 }
-                case 1: {
-                    ke.s(-5);
-                    statePc = 2;
-                    continue stateLoop;
-                }
-                case 2: {
-                    if (nj.field_e == null) {
-                        statePc = 4;
-                    } else {
-                        statePc = 3;
-                    }
-                    continue stateLoop;
-                }
-                case 3: {
-                    dl.a(param1, param0, -32532, 1048576, param2);
-                    statePc = 4;
-                    continue stateLoop;
-                }
-                case 4: {
-                    if (km.field_a == null) {
-                        statePc = 17;
-                    } else {
-                        statePc = 5;
-                    }
-                    continue stateLoop;
-                }
-                case 5: {
-                    var4 = (Object) (Object) mj.field_o;
-                    // monitorenter mj.field_o
-                    statePc = 6;
-                    continue stateLoop;
-                }
-                case 6: {
-                    try {
-                        km.field_a.a(param2, true, -1);
-                        if (param0 == de.field_b) {
-                            statePc = 8;
-                        } else {
-                            statePc = 7;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_6) {
-                        caughtException = stateCaught_6;
-                        statePc = 15;
-                        continue stateLoop;
-                    }
-                }
-                case 7: {
-                    try {
-                        statePc = 10;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_7) {
-                        caughtException = stateCaught_7;
-                        statePc = 15;
-                        continue stateLoop;
-                    }
-                }
-                case 8: {
-                    try {
-                        // monitorexit var4
-                        statePc = 9;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_8) {
-                        caughtException = stateCaught_8;
-                        statePc = 15;
-                        continue stateLoop;
-                    }
-                }
-                case 9: {
-                    return;
-                }
-                case 10: {
-                    try {
-                        km.field_a.c((byte) 108);
-                        mj.field_o.f();
-                        de.field_b = param0;
-                        if (de.field_b != null) {
-                            statePc = 12;
-                        } else {
-                            statePc = 11;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_10) {
-                        caughtException = stateCaught_10;
-                        statePc = 15;
-                        continue stateLoop;
-                    }
-                }
-                case 11: {
-                    try {
-                        statePc = 13;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_11) {
-                        caughtException = stateCaught_11;
-                        statePc = 15;
-                        continue stateLoop;
-                    }
-                }
-                case 12: {
-                    try {
-                        km.field_a.a(param1, de.field_b, (byte) 2);
-                        statePc = 13;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_12) {
-                        caughtException = stateCaught_12;
-                        statePc = 15;
-                        continue stateLoop;
-                    }
-                }
-                case 13: {
-                    try {
-                        // monitorexit var4
-                        statePc = 14;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_13) {
-                        caughtException = stateCaught_13;
-                        statePc = 15;
-                        continue stateLoop;
-                    }
-                }
-                case 14: {
-                    return;
-                }
-                case 15: {
-                    try {
-                        var5 = caughtException;
-                        // monitorexit var4
-                        statePc = 16;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_15) {
-                        caughtException = stateCaught_15;
-                        statePc = 15;
-                        continue stateLoop;
-                    }
-                }
-                case 16: {
-                    throw (RuntimeException) (Object) var5;
-                }
-                case 17: {
-                    return;
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
+                break L2;
+              }
             }
+          }
+          return;
         }
     }
 

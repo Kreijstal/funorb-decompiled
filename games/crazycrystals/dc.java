@@ -68,12 +68,14 @@ final class dc extends og implements im, vd, fd {
         ((dc) this).field_G.field_i = (wo) (Object) new ve();
         ((dc) this).field_E.field_i = (wo) (Object) new ok();
         ((dc) this).field_N.field_i = (wo) (Object) new wc(10000536);
-        ((dc) this).field_K.field_i = (wo) (Object) new wc(10000536);
-        ((dc) this).field_A.field_i = (wo) (Object) new wc(10000536);
+        wc dupTemp$0 = new wc(10000536);
+        ((dc) this).field_K.field_i = (wo) (Object) dupTemp$0;
+        ((dc) this).field_A.field_i = (wo) (Object) dupTemp$0;
         ((dc) this).field_z.field_i = (wo) (Object) new wc(10000536);
         ((dc) this).field_F.field_i = (wo) (Object) new wn();
-        ((dc) this).field_I.field_i = (wo) (Object) new aq(10000536);
-        ((dc) this).field_M.field_i = (wo) (Object) new aq(10000536);
+        aq dupTemp$1 = new aq(10000536);
+        ((dc) this).field_I.field_i = (wo) (Object) dupTemp$1;
+        ((dc) this).field_M.field_i = (wo) (Object) dupTemp$1;
         String var2 = ci.a(new String[2], el.field_h, 3);
         int var3 = 20;
         var3 = var3 + this.a(var3, 170, vm.field_h, (qm) (Object) ((dc) this).field_A, 25406);
@@ -170,59 +172,29 @@ final class dc extends og implements im, vd, fd {
     private final boolean i(int param0) {
         NumberFormatException numberFormatException = null;
         int var2 = 0;
-        int statePc = 0;
-        Throwable caughtException = null;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    if (!this.k(-114)) {
-                        statePc = 2;
-                    } else {
-                        statePc = 3;
-                    }
-                    continue stateLoop;
-                }
-                case 2: {
-                    return false;
-                }
-                case 3: {
-                    var2 = -1;
-                    statePc = 4;
-                    continue stateLoop;
-                }
-                case 4: {
-                    try {
-                        var2 = Integer.parseInt(((dc) this).field_z.field_o);
-                        statePc = 7;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_4) {
-                        caughtException = stateCaught_4;
-                        statePc = 6;
-                        continue stateLoop;
-                    }
-                }
-                case 6: {
-                    numberFormatException = (NumberFormatException) (Object) caughtException;
-                    statePc = 7;
-                    continue stateLoop;
-                }
-                case 7: {
-                    if (param0 < 87) {
-                        statePc = 9;
-                    } else {
-                        statePc = 8;
-                    }
-                    continue stateLoop;
-                }
-                case 8: {
-                    return mp.a(0, ((dc) this).field_N.field_o, (dc) this, ((dc) this).field_A.field_o, ((dc) this).field_M.field_o, ((dc) this).field_F.field_A, var2);
-                }
-                case 9: {
-                    ((dc) this).field_E = null;
-                    return mp.a(0, ((dc) this).field_N.field_o, (dc) this, ((dc) this).field_A.field_o, ((dc) this).field_M.field_o, ((dc) this).field_F.field_A, var2);
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
+        Throwable decompiledCaughtException = null;
+        if (!this.k(-114)) {
+          return false;
+        } else {
+          var2 = -1;
+          try {
+            L0: {
+              var2 = Integer.parseInt(((dc) this).field_z.field_o);
+              break L0;
             }
+          } catch (java.lang.Exception decompiledCaughtParameter0) {
+            decompiledCaughtException = decompiledCaughtParameter0;
+            L1: {
+              numberFormatException = (NumberFormatException) (Object) decompiledCaughtException;
+              break L1;
+            }
+          }
+          if (param0 < 87) {
+            ((dc) this).field_E = null;
+            return mp.a(0, ((dc) this).field_N.field_o, (dc) this, ((dc) this).field_A.field_o, ((dc) this).field_M.field_o, ((dc) this).field_F.field_A, var2);
+          } else {
+            return mp.a(0, ((dc) this).field_N.field_o, (dc) this, ((dc) this).field_A.field_o, ((dc) this).field_M.field_o, ((dc) this).field_F.field_A, var2);
+          }
         }
     }
 
@@ -300,7 +272,6 @@ final class dc extends og implements im, vd, fd {
     final static rm a(boolean param0, String param1, byte param2) {
         long var3 = 0L;
         rm var5 = null;
-        rm var5_ref = null;
         int var6 = 0;
         CharSequence var7 = null;
         wg stackIn_8_0 = null;
@@ -346,7 +317,7 @@ final class dc extends og implements im, vd, fd {
               stackOut_7_0 = fq.field_x;
               stackOut_7_1 = rl.field_i;
               stackOut_7_2 = aa.field_b;
-              stackOut_7_3 = (rm) var5_ref;
+              stackOut_7_3 = (rm) var5;
               stackOut_7_4 = -128;
               stackIn_9_0 = stackOut_7_0;
               stackIn_9_1 = stackOut_7_1;
@@ -391,16 +362,16 @@ final class dc extends og implements im, vd, fd {
             if (!((wg) (Object) stackIn_10_0).a(stackIn_10_1, stackIn_10_2, stackIn_10_3, stackIn_10_4, stackIn_10_5)) {
               return null;
             } else {
-              ra.field_d.a(-22072, var3, (jb) (Object) var5_ref);
+              ra.field_d.a(-22072, var3, (jb) (Object) var5);
               var6 = -4 % ((param2 - -64) / 35);
-              return var5_ref;
+              return var5;
             }
           } else {
-            var5_ref = rm.a(mg.field_c, param1, "");
-            if (var5_ref == null) {
+            var5 = rm.a(mg.field_c, param1, "");
+            if (var5 == null) {
               return null;
             } else {
-              ah.field_a.a(-22072, var3, (jb) (Object) var5_ref);
+              ah.field_a.a(-22072, var3, (jb) (Object) var5);
               return null;
             }
           }

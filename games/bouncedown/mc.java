@@ -32,7 +32,10 @@ final class mc {
           if (null != nj.field_o) {
             var1 = (Object) (Object) nj.field_o;
             synchronized (var1) {
-              nj.field_o = null;
+              L0: {
+                nj.field_o = null;
+                break L0;
+              }
             }
             return;
           } else {

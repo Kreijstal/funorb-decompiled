@@ -35,8 +35,8 @@ final class vb implements fc {
         String var8 = null;
         int var9 = 0;
         int var10 = 0;
-        String var10_ref = null;
-        String var11_ref = null;
+        String var10_ref_String = null;
+        String var11_ref_String = null;
         int var11 = 0;
         int var12 = 0;
         int var13 = 0;
@@ -66,11 +66,11 @@ final class vb implements fc {
           var16 = null;
           var14 = Bounce.field_N;
           var15 = param4.c((byte) -56);
-          var11_ref = var15;
-          var11_ref = var15;
+          var11_ref_String = var15;
+          var11_ref_String = var15;
           var8 = param6.c((byte) -106);
-          var11_ref = var8;
-          var11_ref = var8;
+          var11_ref_String = var8;
+          var11_ref_String = var8;
           if (dh.field_a != null) {
             break L0;
           } else {
@@ -160,15 +160,15 @@ final class vb implements fc {
                   hh.field_p.a(18, (byte) 105);
                   hh.field_p.field_h = hh.field_p.field_h + 2;
                   var10 = hh.field_p.field_h;
-                  var11_ref = uj.a(true, vi.b(0));
-                  if (var11_ref != null) {
+                  var11_ref_String = uj.a(true, vi.b(0));
+                  if (var11_ref_String != null) {
                     break L6;
                   } else {
-                    var11_ref = "";
+                    var11_ref_String = "";
                     break L6;
                   }
                 }
-                hh.field_p.a(-256, var11_ref);
+                hh.field_p.a(-256, var11_ref_String);
                 f.a(dh.field_b, false, (wi) (Object) hh.field_p, lb.field_g, ja.field_a);
                 hh.field_p.c(-124, hh.field_p.field_h + -var10);
                 break L2;
@@ -246,53 +246,56 @@ final class vb implements fc {
                     return -1;
                   } else {
                     if (va.b(1)) {
-                      if (255 == wa.field_d) {
-                        var10_ref = jc.field_g.g((byte) 57);
-                        if (var10_ref == null) {
-                          kc.a((byte) 18);
-                          fa.field_a = false;
-                          return wa.field_d;
-                        } else {
-                          jd.a(0, vi.b(0), var10_ref);
-                          kc.a((byte) 18);
-                          fa.field_a = false;
-                          return wa.field_d;
-                        }
-                      } else {
+                      if (255 != wa.field_d) {
                         ib.field_o = jc.field_g.b(true);
                         kc.a((byte) 18);
                         fa.field_a = false;
                         return wa.field_d;
+                      } else {
+                        var10_ref_String = jc.field_g.g((byte) 57);
+                        if (var10_ref_String == null) {
+                          kc.a((byte) 18);
+                          fa.field_a = false;
+                          return wa.field_d;
+                        } else {
+                          jd.a(0, vi.b(0), var10_ref_String);
+                          kc.a((byte) 18);
+                          fa.field_a = false;
+                          return wa.field_d;
+                        }
                       }
                     } else {
-                      if (dh.field_a == null) {
-                        if (!fa.field_a) {
-                          var10 = td.field_b;
-                          td.field_b = wa.field_b;
-                          fa.field_a = true;
-                          wa.field_b = var10;
-                          return -1;
-                        } else {
-                          L11: {
-                            if (-30001L > (ph.a((byte) 76) ^ -1L)) {
-                              ib.field_o = jh.field_t;
-                              break L11;
-                            } else {
-                              ib.field_o = dg.field_k;
-                              break L11;
+                      L11: {
+                        if (dh.field_a == null) {
+                          if (!fa.field_a) {
+                            var10 = td.field_b;
+                            td.field_b = wa.field_b;
+                            fa.field_a = true;
+                            wa.field_b = var10;
+                            break L11;
+                          } else {
+                            L12: {
+                              if (-30001L > (ph.a((byte) 76) ^ -1L)) {
+                                ib.field_o = jh.field_t;
+                                break L12;
+                              } else {
+                                ib.field_o = dg.field_k;
+                                break L12;
+                              }
                             }
+                            fa.field_a = false;
+                            return 249;
                           }
-                          fa.field_a = false;
-                          return 249;
+                        } else {
+                          break L11;
                         }
-                      } else {
-                        return -1;
                       }
+                      return -1;
                     }
                   }
                 } else {
-                  if (var9 != -249) {
-                    if (-100 != var9) {
+                  if ((var9 ^ -1) != -249) {
+                    if (-100 != (var9 ^ -1)) {
                       pj.field_a = id.field_i;
                       pe.field_d = -1;
                       wa.field_d = var9;
@@ -312,21 +315,21 @@ final class vb implements fc {
                   }
                 }
               } else {
-                if (var9 != -249) {
-                  L12: {
-                    if (-100 != var9) {
+                if ((var9 ^ -1) != -249) {
+                  L13: {
+                    if (-100 != (var9 ^ -1)) {
                       pj.field_a = id.field_i;
                       pe.field_d = -1;
                       wa.field_d = var9;
-                      break L12;
+                      break L13;
                     } else {
                       boolean discarded$3 = qb.a(jf.b(false), 3);
                       lk.field_p = new Boolean(pb.a((wi) (Object) jc.field_g, (byte) 87));
                       jc.field_g.field_h = 0;
-                      break L12;
+                      break L13;
                     }
                   }
-                  L13: {
+                  L14: {
                     var9 = 71 / ((param2 - -45) / 32);
                     if (pj.field_a == kb.field_b) {
                       var10 = 2;
@@ -336,7 +339,7 @@ final class vb implements fc {
                         if (qb.a(var11, 3)) {
                           var12 = bi.field_l.length;
                           var13 = 0;
-                          L14: while (true) {
+                          L15: while (true) {
                             if (var12 <= var13) {
                               kc.a((byte) 18);
                               fa.field_a = false;
@@ -344,85 +347,91 @@ final class vb implements fc {
                             } else {
                               bi.field_l[var13] = jc.field_g.a(true);
                               var13++;
-                              continue L14;
+                              continue L15;
                             }
                           }
                         } else {
-                          break L13;
+                          break L14;
                         }
                       } else {
-                        break L13;
+                        break L14;
                       }
                     } else {
-                      break L13;
+                      break L14;
                     }
                   }
                   if (id.field_i != pj.field_a) {
-                    if (dh.field_a == null) {
-                      if (fa.field_a) {
-                        if (-30001L > (ph.a((byte) 76) ^ -1L)) {
-                          ib.field_o = jh.field_t;
-                          fa.field_a = false;
-                          return 249;
-                        } else {
-                          ib.field_o = dg.field_k;
-                          fa.field_a = false;
-                          return 249;
-                        }
-                      } else {
-                        var10 = td.field_b;
-                        td.field_b = wa.field_b;
-                        fa.field_a = true;
-                        wa.field_b = var10;
-                        return -1;
-                      }
-                    } else {
-                      return -1;
-                    }
-                  } else {
-                    if (va.b(1)) {
-                      if (255 == wa.field_d) {
-                        var10_ref = jc.field_g.g((byte) 57);
-                        if (var10_ref != null) {
-                          jd.a(0, vi.b(0), var10_ref);
-                          kc.a((byte) 18);
-                          fa.field_a = false;
-                          return wa.field_d;
-                        } else {
-                          kc.a((byte) 18);
-                          fa.field_a = false;
-                          return wa.field_d;
-                        }
-                      } else {
-                        ib.field_o = jc.field_g.b(true);
-                        kc.a((byte) 18);
-                        fa.field_a = false;
-                        return wa.field_d;
-                      }
-                    } else {
+                    L16: {
                       if (dh.field_a == null) {
-                        if (fa.field_a) {
-                          L15: {
-                            if (-30001L > (ph.a((byte) 76) ^ -1L)) {
-                              ib.field_o = jh.field_t;
-                              break L15;
-                            } else {
-                              ib.field_o = dg.field_k;
-                              break L15;
-                            }
-                          }
-                          fa.field_a = false;
-                          return 249;
-                        } else {
+                        if (!fa.field_a) {
                           var10 = td.field_b;
                           td.field_b = wa.field_b;
                           fa.field_a = true;
                           wa.field_b = var10;
-                          return -1;
+                          break L16;
+                        } else {
+                          if (-30001L > (ph.a((byte) 76) ^ -1L)) {
+                            ib.field_o = jh.field_t;
+                            fa.field_a = false;
+                            return 249;
+                          } else {
+                            ib.field_o = dg.field_k;
+                            fa.field_a = false;
+                            return 249;
+                          }
                         }
                       } else {
-                        return -1;
+                        break L16;
                       }
+                    }
+                    return -1;
+                  } else {
+                    if (va.b(1)) {
+                      if (255 != wa.field_d) {
+                        ib.field_o = jc.field_g.b(true);
+                        kc.a((byte) 18);
+                        fa.field_a = false;
+                        return wa.field_d;
+                      } else {
+                        var10_ref_String = jc.field_g.g((byte) 57);
+                        if (var10_ref_String == null) {
+                          kc.a((byte) 18);
+                          fa.field_a = false;
+                          return wa.field_d;
+                        } else {
+                          jd.a(0, vi.b(0), var10_ref_String);
+                          kc.a((byte) 18);
+                          fa.field_a = false;
+                          return wa.field_d;
+                        }
+                      }
+                    } else {
+                      L17: {
+                        if (dh.field_a == null) {
+                          if (!fa.field_a) {
+                            var10 = td.field_b;
+                            td.field_b = wa.field_b;
+                            fa.field_a = true;
+                            wa.field_b = var10;
+                            break L17;
+                          } else {
+                            L18: {
+                              if (-30001L > (ph.a((byte) 76) ^ -1L)) {
+                                ib.field_o = jh.field_t;
+                                break L18;
+                              } else {
+                                ib.field_o = dg.field_k;
+                                break L18;
+                              }
+                            }
+                            fa.field_a = false;
+                            return 249;
+                          }
+                        } else {
+                          break L17;
+                        }
+                      }
+                      return -1;
                     }
                   }
                 } else {
@@ -434,7 +443,7 @@ final class vb implements fc {
                 }
               }
             } else {
-              L16: {
+              L19: {
                 var9 = 71 / ((param2 - -45) / 32);
                 if (pj.field_a == kb.field_b) {
                   var10 = 2;
@@ -444,7 +453,7 @@ final class vb implements fc {
                     if (qb.a(var11, 3)) {
                       var12 = bi.field_l.length;
                       var13 = 0;
-                      L17: while (true) {
+                      L20: while (true) {
                         if (var12 <= var13) {
                           kc.a((byte) 18);
                           fa.field_a = false;
@@ -452,85 +461,91 @@ final class vb implements fc {
                         } else {
                           bi.field_l[var13] = jc.field_g.a(true);
                           var13++;
-                          continue L17;
+                          continue L20;
                         }
                       }
                     } else {
-                      break L16;
+                      break L19;
                     }
                   } else {
-                    break L16;
+                    break L19;
                   }
                 } else {
-                  break L16;
+                  break L19;
                 }
               }
               if (id.field_i != pj.field_a) {
-                if (dh.field_a == null) {
-                  if (fa.field_a) {
-                    if (-30001L <= (ph.a((byte) 76) ^ -1L)) {
-                      ib.field_o = dg.field_k;
-                      fa.field_a = false;
-                      return 249;
-                    } else {
-                      ib.field_o = jh.field_t;
-                      fa.field_a = false;
-                      return 249;
-                    }
-                  } else {
-                    var10 = td.field_b;
-                    td.field_b = wa.field_b;
-                    fa.field_a = true;
-                    wa.field_b = var10;
-                    return -1;
-                  }
-                } else {
-                  return -1;
-                }
-              } else {
-                if (va.b(1)) {
-                  if (255 == wa.field_d) {
-                    var10_ref = jc.field_g.g((byte) 57);
-                    if (var10_ref != null) {
-                      jd.a(0, vi.b(0), var10_ref);
-                      kc.a((byte) 18);
-                      fa.field_a = false;
-                      return wa.field_d;
-                    } else {
-                      kc.a((byte) 18);
-                      fa.field_a = false;
-                      return wa.field_d;
-                    }
-                  } else {
-                    ib.field_o = jc.field_g.b(true);
-                    kc.a((byte) 18);
-                    fa.field_a = false;
-                    return wa.field_d;
-                  }
-                } else {
+                L21: {
                   if (dh.field_a == null) {
-                    if (fa.field_a) {
-                      L18: {
-                        if (-30001L > (ph.a((byte) 76) ^ -1L)) {
-                          ib.field_o = jh.field_t;
-                          break L18;
-                        } else {
-                          ib.field_o = dg.field_k;
-                          break L18;
-                        }
-                      }
-                      fa.field_a = false;
-                      return 249;
-                    } else {
+                    if (!fa.field_a) {
                       var10 = td.field_b;
                       td.field_b = wa.field_b;
                       fa.field_a = true;
                       wa.field_b = var10;
-                      return -1;
+                      break L21;
+                    } else {
+                      if (-30001L > (ph.a((byte) 76) ^ -1L)) {
+                        ib.field_o = jh.field_t;
+                        fa.field_a = false;
+                        return 249;
+                      } else {
+                        ib.field_o = dg.field_k;
+                        fa.field_a = false;
+                        return 249;
+                      }
                     }
                   } else {
-                    return -1;
+                    break L21;
                   }
+                }
+                return -1;
+              } else {
+                if (va.b(1)) {
+                  if (255 != wa.field_d) {
+                    ib.field_o = jc.field_g.b(true);
+                    kc.a((byte) 18);
+                    fa.field_a = false;
+                    return wa.field_d;
+                  } else {
+                    var10_ref_String = jc.field_g.g((byte) 57);
+                    if (var10_ref_String == null) {
+                      kc.a((byte) 18);
+                      fa.field_a = false;
+                      return wa.field_d;
+                    } else {
+                      jd.a(0, vi.b(0), var10_ref_String);
+                      kc.a((byte) 18);
+                      fa.field_a = false;
+                      return wa.field_d;
+                    }
+                  }
+                } else {
+                  L22: {
+                    if (dh.field_a == null) {
+                      if (!fa.field_a) {
+                        var10 = td.field_b;
+                        td.field_b = wa.field_b;
+                        fa.field_a = true;
+                        wa.field_b = var10;
+                        break L22;
+                      } else {
+                        L23: {
+                          if (-30001L > (ph.a((byte) 76) ^ -1L)) {
+                            ib.field_o = jh.field_t;
+                            break L23;
+                          } else {
+                            ib.field_o = dg.field_k;
+                            break L23;
+                          }
+                        }
+                        fa.field_a = false;
+                        return 249;
+                      }
+                    } else {
+                      break L22;
+                    }
+                  }
+                  return -1;
                 }
               }
             }
@@ -547,7 +562,7 @@ final class vb implements fc {
             if (qb.a(var11, 3)) {
               var12 = bi.field_l.length;
               var13 = 0;
-              L19: while (true) {
+              L24: while (true) {
                 if (var12 <= var13) {
                   kc.a((byte) 18);
                   fa.field_a = false;
@@ -555,19 +570,19 @@ final class vb implements fc {
                 } else {
                   bi.field_l[var13] = jc.field_g.a(true);
                   var13++;
-                  continue L19;
+                  continue L24;
                 }
               }
             } else {
               if (id.field_i != pj.field_a) {
-                L20: {
+                L25: {
                   if (dh.field_a == null) {
                     if (!fa.field_a) {
                       var10 = td.field_b;
                       td.field_b = wa.field_b;
                       fa.field_a = true;
                       wa.field_b = var10;
-                      break L20;
+                      break L25;
                     } else {
                       if (-30001L > (ph.a((byte) 76) ^ -1L)) {
                         ib.field_o = jh.field_t;
@@ -580,7 +595,7 @@ final class vb implements fc {
                       }
                     }
                   } else {
-                    break L20;
+                    break L25;
                   }
                 }
                 return -1;
@@ -592,42 +607,42 @@ final class vb implements fc {
                     fa.field_a = false;
                     return wa.field_d;
                   } else {
-                    var10_ref = jc.field_g.g((byte) 57);
-                    if (var10_ref == null) {
+                    var10_ref_String = jc.field_g.g((byte) 57);
+                    if (var10_ref_String == null) {
                       kc.a((byte) 18);
                       fa.field_a = false;
                       return wa.field_d;
                     } else {
-                      jd.a(0, vi.b(0), var10_ref);
+                      jd.a(0, vi.b(0), var10_ref_String);
                       kc.a((byte) 18);
                       fa.field_a = false;
                       return wa.field_d;
                     }
                   }
                 } else {
-                  L21: {
+                  L26: {
                     if (dh.field_a == null) {
                       if (!fa.field_a) {
                         var10 = td.field_b;
                         td.field_b = wa.field_b;
                         fa.field_a = true;
                         wa.field_b = var10;
-                        break L21;
+                        break L26;
                       } else {
-                        L22: {
+                        L27: {
                           if (-30001L > (ph.a((byte) 76) ^ -1L)) {
                             ib.field_o = jh.field_t;
-                            break L22;
+                            break L27;
                           } else {
                             ib.field_o = dg.field_k;
-                            break L22;
+                            break L27;
                           }
                         }
                         fa.field_a = false;
                         return 249;
                       }
                     } else {
-                      break L21;
+                      break L26;
                     }
                   }
                   return -1;
@@ -636,14 +651,14 @@ final class vb implements fc {
             }
           } else {
             if (id.field_i != pj.field_a) {
-              L23: {
+              L28: {
                 if (dh.field_a == null) {
                   if (!fa.field_a) {
                     var10 = td.field_b;
                     td.field_b = wa.field_b;
                     fa.field_a = true;
                     wa.field_b = var10;
-                    break L23;
+                    break L28;
                   } else {
                     if (-30001L > (ph.a((byte) 76) ^ -1L)) {
                       ib.field_o = jh.field_t;
@@ -656,7 +671,7 @@ final class vb implements fc {
                     }
                   }
                 } else {
-                  break L23;
+                  break L28;
                 }
               }
               return -1;
@@ -668,42 +683,42 @@ final class vb implements fc {
                   fa.field_a = false;
                   return wa.field_d;
                 } else {
-                  var10_ref = jc.field_g.g((byte) 57);
-                  if (var10_ref == null) {
+                  var10_ref_String = jc.field_g.g((byte) 57);
+                  if (var10_ref_String == null) {
                     kc.a((byte) 18);
                     fa.field_a = false;
                     return wa.field_d;
                   } else {
-                    jd.a(0, vi.b(0), var10_ref);
+                    jd.a(0, vi.b(0), var10_ref_String);
                     kc.a((byte) 18);
                     fa.field_a = false;
                     return wa.field_d;
                   }
                 }
               } else {
-                L24: {
+                L29: {
                   if (dh.field_a == null) {
                     if (!fa.field_a) {
                       var10 = td.field_b;
                       td.field_b = wa.field_b;
                       fa.field_a = true;
                       wa.field_b = var10;
-                      break L24;
+                      break L29;
                     } else {
-                      L25: {
+                      L30: {
                         if (-30001L > (ph.a((byte) 76) ^ -1L)) {
                           ib.field_o = jh.field_t;
-                          break L25;
+                          break L30;
                         } else {
                           ib.field_o = dg.field_k;
-                          break L25;
+                          break L30;
                         }
                       }
                       fa.field_a = false;
                       return 249;
                     }
                   } else {
-                    break L24;
+                    break L29;
                   }
                 }
                 return -1;
@@ -712,14 +727,14 @@ final class vb implements fc {
           }
         } else {
           if (id.field_i != pj.field_a) {
-            L26: {
+            L31: {
               if (dh.field_a == null) {
                 if (!fa.field_a) {
                   var10 = td.field_b;
                   td.field_b = wa.field_b;
                   fa.field_a = true;
                   wa.field_b = var10;
-                  break L26;
+                  break L31;
                 } else {
                   if (-30001L > (ph.a((byte) 76) ^ -1L)) {
                     ib.field_o = jh.field_t;
@@ -732,7 +747,7 @@ final class vb implements fc {
                   }
                 }
               } else {
-                break L26;
+                break L31;
               }
             }
             return -1;
@@ -744,42 +759,42 @@ final class vb implements fc {
                 fa.field_a = false;
                 return wa.field_d;
               } else {
-                var10_ref = jc.field_g.g((byte) 57);
-                if (var10_ref == null) {
+                var10_ref_String = jc.field_g.g((byte) 57);
+                if (var10_ref_String == null) {
                   kc.a((byte) 18);
                   fa.field_a = false;
                   return wa.field_d;
                 } else {
-                  jd.a(0, vi.b(0), var10_ref);
+                  jd.a(0, vi.b(0), var10_ref_String);
                   kc.a((byte) 18);
                   fa.field_a = false;
                   return wa.field_d;
                 }
               }
             } else {
-              L27: {
+              L32: {
                 if (dh.field_a == null) {
                   if (!fa.field_a) {
                     var10 = td.field_b;
                     td.field_b = wa.field_b;
                     fa.field_a = true;
                     wa.field_b = var10;
-                    break L27;
+                    break L32;
                   } else {
-                    L28: {
+                    L33: {
                       if (-30001L > (ph.a((byte) 76) ^ -1L)) {
                         ib.field_o = jh.field_t;
-                        break L28;
+                        break L33;
                       } else {
                         ib.field_o = dg.field_k;
-                        break L28;
+                        break L33;
                       }
                     }
                     fa.field_a = false;
                     return 249;
                   }
                 } else {
-                  break L27;
+                  break L32;
                 }
               }
               return -1;

@@ -63,21 +63,20 @@ final class r extends ci {
 
     final static void k(int param0) {
         h var1 = null;
-        h var1_ref = null;
         if (param0 != 3029) {
           return;
         } else {
           L0: {
             var1 = (h) (Object) ni.field_c.c(101);
             if (var1 == null) {
-              var1_ref = new h();
+              var1 = new h();
               break L0;
             } else {
               break L0;
             }
           }
-          var1_ref.a(wb.field_h, wb.field_c, 0, wb.field_d, wb.field_j, wb.field_i, wb.field_b, wb.field_a);
-          tm.field_a.a((o) (Object) var1_ref, (byte) -39);
+          var1.a(wb.field_h, wb.field_c, 0, wb.field_d, wb.field_j, wb.field_i, wb.field_b, wb.field_a);
+          tm.field_a.a((o) (Object) var1, (byte) -39);
           return;
         }
     }

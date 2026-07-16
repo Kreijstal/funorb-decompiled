@@ -14,22 +14,30 @@ final class io extends ig {
         int var2 = 0;
         int var3 = var5.length;
         while (var2 < var3) {
+            int incrementValue$0 = var2;
             var2++;
-            var5[var2] = 0;
+            var5[incrementValue$0] = 0;
+            int incrementValue$1 = var2;
             var2++;
-            var5[var2] = 0;
+            var5[incrementValue$1] = 0;
+            int incrementValue$2 = var2;
             var2++;
-            var5[var2] = 0;
+            var5[incrementValue$2] = 0;
+            int incrementValue$3 = var2;
             var2++;
-            var5[var2] = 0;
+            var5[incrementValue$3] = 0;
+            int incrementValue$4 = var2;
             var2++;
-            var5[var2] = 0;
+            var5[incrementValue$4] = 0;
+            int incrementValue$5 = var2;
             var2++;
-            var5[var2] = 0;
+            var5[incrementValue$5] = 0;
+            int incrementValue$6 = var2;
             var2++;
-            var5[var2] = 0;
+            var5[incrementValue$6] = 0;
+            int incrementValue$7 = var2;
             var2++;
-            var5[var2] = 0;
+            var5[incrementValue$7] = 0;
         }
     }
 
@@ -177,10 +185,12 @@ final class io extends ig {
                           var17++;
                           continue L3;
                         } else {
+                          int incrementValue$3 = var15;
                           var15++;
-                          if (var10[var15] != 0) {
+                          if (var10[incrementValue$3] != 0) {
+                            int incrementValue$4 = var16;
                             var16++;
-                            var9[var16] = (byte) 0;
+                            var9[incrementValue$4] = (byte) 0;
                             var18++;
                             continue L4;
                           } else {
@@ -200,8 +210,9 @@ final class io extends ig {
                       var17++;
                       continue L2;
                     } else {
+                      int incrementValue$5 = var15;
                       var15++;
-                      if (-1 != (var10[var15] ^ -1)) {
+                      if (-1 != (var10[incrementValue$5] ^ -1)) {
                         var19 = var9;
                         var20 = var16 - var13;
                         var21 = var9;

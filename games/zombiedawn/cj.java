@@ -98,14 +98,14 @@ final class cj {
             field_e = null;
         }
         long var4 = 0L;
-        String var6 = null;
+        Object var6 = null;
         if (param2.indexOf('@') != -1) {
-            var6 = param2;
+            var6 = (Object) (Object) param2;
         } else {
             var7 = (CharSequence) (Object) param2;
             var4 = sd.a(-66, var7);
         }
-        return sn.a((byte) -116, var4, param0, param3, var6);
+        return sn.a((byte) -116, var4, param0, param3, (String) var6);
     }
 
     final static void a(String param0, int param1, int param2, int param3, int param4) {

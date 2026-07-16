@@ -6,7 +6,7 @@ final class wh {
 
     final static boolean a(String param0, boolean param1) {
         if (param1) {
-            String var3 = (String) null;
+            Object var3 = null;
             boolean discarded$0 = wh.a((String) null, false);
         }
         return null != jf.a(0, param0) ? true : false;
@@ -23,36 +23,36 @@ final class wh {
           if (param0 == null) {
             break L0;
           } else {
-            if (((uh) param0).field_q == null) {
+            if (param0.field_q == null) {
               break L0;
             } else {
               if (param3 == null) {
                 break L0;
               } else {
-                if (((ad) param3).field_r == ((uh) param0).field_g) {
+                if (param3.field_r == param0.field_g) {
                   L1: {
-                    var4 = ((ad) param3).field_o.length;
+                    var4 = param3.field_o.length;
                     if (param2 <= -12) {
                       break L1;
                     } else {
-                      field_a = (lb) null;
+                      field_a = null;
                       break L1;
                     }
                   }
-                  var5 = ((uh) param0).field_q[param1].length / var4;
+                  var5 = param0.field_q[param1].length / var4;
                   var6 = 0;
                   L2: while (true) {
                     if (var5 <= var6) {
                       return -1;
                     } else {
-                      if ((((ad) param3).field_h ^ -1L) == (((uh) param0).field_j[param1][var6] ^ -1L)) {
-                        if (rc.a(true, ((uh) param0).field_m[param1][var6])) {
+                      if ((param3.field_h ^ -1L) == (param0.field_j[param1][var6] ^ -1L)) {
+                        if (rc.a(true, param0.field_m[param1][var6])) {
                           var7 = 0;
                           L3: while (true) {
                             if (var7 >= var4) {
                               return var6;
                             } else {
-                              if (((uh) param0).field_q[param1][var6 * var4 - -var7] == ((ad) param3).field_o[var7]) {
+                              if (param0.field_q[param1][var6 * var4 - -var7] == param3.field_o[var7]) {
                                 var6 = var6;
                                 var7++;
                                 continue L3;
@@ -87,7 +87,7 @@ final class wh {
             db.field_a.field_L.a(param1 ^ -84, args);
         }
         if (param1 != 61) {
-            field_a = (lb) null;
+            field_a = null;
         }
         if (ti.field_e != null) {
             ti.field_e.field_I.a(-102, args);
@@ -141,19 +141,21 @@ final class wh {
         int var6 = 0;
         int var7 = Main.field_T;
         if (param4 <= 1) {
-            java.applet.Applet var8 = (java.applet.Applet) null;
+            Object var8 = null;
             wh.a((java.applet.Applet) null, -28);
         }
         for (var5 = 0; mb.field_c.length > var5; var5++) {
             param2 = mb.field_c[var5];
             var6 = var5 << -893323420;
             while (true) {
+                int incrementValue$0 = param2;
                 param2--;
-                if (0 == param2) {
+                if (0 == incrementValue$0) {
                     break;
                 }
+                int incrementValue$1 = var6;
                 var6++;
-                param1 = lf.field_a[var6];
+                param1 = lf.field_a[incrementValue$1];
                 param3[param0[param1]] = param3[param0[param1]] + 1;
                 lf.field_a[param3[param0[param1]]] = param1;
             }
@@ -162,7 +164,7 @@ final class wh {
 
     public static void b(int param0) {
         if (param0 <= 115) {
-            field_a = (lb) null;
+            field_a = null;
         }
         field_a = null;
     }

@@ -592,7 +592,6 @@ abstract class jg extends ng implements j {
         int var4 = 0;
         ng var5 = null;
         ng var6 = null;
-        ng var6_ref = null;
         int var7 = 0;
         var7 = Pixelate.field_H ? 1 : 0;
         if (null == ((jg) this).field_L) {
@@ -617,9 +616,9 @@ abstract class jg extends ng implements j {
                   L1: while (true) {
                     if (-1 >= (var4 ^ -1)) {
                       L2: {
-                        var6_ref = ((jg) this).field_L[var4];
-                        if (var6_ref != null) {
-                          if (var6_ref.a(param2, 27)) {
+                        var6 = ((jg) this).field_L[var4];
+                        if (var6 != null) {
+                          if (var6.a(param2, 27)) {
                             return true;
                           } else {
                             break L2;

@@ -104,8 +104,9 @@ final class ea implements Iterable {
         ((ea) this).field_i = param0;
         ((ea) this).field_d = new mc[param0];
         for (var2 = 0; var2 < param0; var2++) {
-            var3 = new mc();
-            ((ea) this).field_d[var2] = new mc();
+            mc dupTemp$0 = new mc();
+            var3 = dupTemp$0;
+            ((ea) this).field_d[var2] = dupTemp$0;
             var3.field_j = var3;
             var3.field_e = var3;
         }

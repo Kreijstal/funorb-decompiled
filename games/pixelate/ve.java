@@ -432,8 +432,8 @@ final class ve extends ak {
         int var7 = 0;
         int var8 = 0;
         tf var9 = null;
-        tf var10 = null;
-        tf var11 = null;
+        Object var10 = null;
+        Object var11 = null;
         int[] var12 = null;
         int[] var15 = null;
         int[] var16 = null;
@@ -460,7 +460,7 @@ final class ve extends ak {
             var10 = null;
             if (param0) {
               var17 = var9.a();
-              var10 = var17;
+              var10 = (Object) (Object) var17;
               var17.c();
               t.b(0, 0, 5, 0);
               t.b(0, 1, 3, 0);
@@ -476,7 +476,7 @@ final class ve extends ak {
             var11 = null;
             if (param1) {
               var18 = var9.a();
-              var11 = var18;
+              var11 = (Object) (Object) var18;
               var18.c();
               t.b(11, 0, 5, 0);
               t.b(13, 1, 3, 0);
@@ -489,14 +489,14 @@ final class ve extends ak {
             }
           }
           t.a(var22, var7, var8);
-          return new tf[]{null, null, null, var10, var9, var11, null, null, null};
+          return new tf[]{null, null, null, (tf) var10, var9, (tf) var11, null, null, null};
         } else {
           L2: {
             t.g(0, 0, 16, param3, param5, param2);
             var10 = null;
             if (param0) {
               var20 = var9.a();
-              var10 = var20;
+              var10 = (Object) (Object) var20;
               var20.c();
               t.b(0, 0, 5, 0);
               t.b(0, 1, 3, 0);
@@ -512,7 +512,7 @@ final class ve extends ak {
             var11 = null;
             if (param1) {
               var21 = var9.a();
-              var11 = var21;
+              var11 = (Object) (Object) var21;
               var21.c();
               t.b(11, 0, 5, 0);
               t.b(13, 1, 3, 0);
@@ -525,7 +525,7 @@ final class ve extends ak {
             }
           }
           t.a(var22, var7, var8);
-          return new tf[]{null, null, null, var10, var9, var11, null, null, null};
+          return new tf[]{null, null, null, (tf) var10, var9, (tf) var11, null, null, null};
         }
     }
 
@@ -538,7 +538,7 @@ final class ve extends ak {
             ((ve) this).field_Lb.field_cb = ((ve) this).field_Eb.toString();
             if (param1) {
               if (nm.field_c != 0) {
-                if (((ve) this).field_P == 0) {
+                if ((((ve) this).field_P ^ -1) == -1) {
                   ((ve) this).field_Hb = 1;
                   return ((ve) this).field_Hb;
                 } else {
@@ -554,7 +554,7 @@ final class ve extends ak {
             L0: while (true) {
               if (bh.b((byte) 108)) {
                 L1: {
-                  if (-86 != ke.field_a) {
+                  if (-86 != (ke.field_a ^ -1)) {
                     break L1;
                   } else {
                     if (-1 > (((ve) this).field_Eb.length() ^ -1)) {
@@ -609,25 +609,32 @@ final class ve extends ak {
                     continue L0;
                   }
                 } else {
-                  if ((((ve) this).field_Eb.length() ^ -1) < -1) {
+                  if ((((ve) this).field_Eb.length() ^ -1) >= -1) {
+                    return 1;
+                  } else {
                     ((ve) this).field_cb = ((ve) this).field_Eb.toString();
                     return 2;
-                  } else {
-                    return 1;
                   }
                 }
               } else {
-                ((ve) this).field_Lb.field_cb = ((ve) this).field_Eb.toString();
-                if (nm.field_c != 0) {
-                  if (((ve) this).field_P == -1) {
-                    ((ve) this).field_Hb = 1;
-                    return ((ve) this).field_Hb;
+                L5: {
+                  ((ve) this).field_Lb.field_cb = ((ve) this).field_Eb.toString();
+                  if (!param1) {
+                    break L5;
                   } else {
-                    return ((ve) this).field_Hb;
+                    if (nm.field_c == 0) {
+                      break L5;
+                    } else {
+                      if ((((ve) this).field_P ^ -1) != -1) {
+                        break L5;
+                      } else {
+                        ((ve) this).field_Hb = 1;
+                        return ((ve) this).field_Hb;
+                      }
+                    }
                   }
-                } else {
-                  return ((ve) this).field_Hb;
                 }
+                return ((ve) this).field_Hb;
               }
             }
           }

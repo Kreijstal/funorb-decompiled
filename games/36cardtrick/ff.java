@@ -20,7 +20,7 @@ abstract class ff {
         if (param0 > -76) {
             field_b = -43;
         }
-        String var2 = (String) null;
+        Object var2 = null;
         uk.a(lh.field_c, -23804, (String) null);
     }
 
@@ -36,13 +36,13 @@ abstract class ff {
         var9 = Main.field_T;
         if (param1 != null) {
           var2 = 0;
-          var3 = ((CharSequence) param1).length();
+          var3 = param1.length();
           L0: while (true) {
             L1: {
               if (var2 >= var3) {
                 break L1;
               } else {
-                if (!tg.a((byte) -63, ((CharSequence) param1).charAt(var2))) {
+                if (!tg.a((byte) -63, param1.charAt(var2))) {
                   break L1;
                 } else {
                   var2++;
@@ -55,7 +55,7 @@ abstract class ff {
                 if (var3 <= var2) {
                   break L3;
                 } else {
-                  if (!tg.a((byte) -63, ((CharSequence) param1).charAt(var3 - 1))) {
+                  if (!tg.a((byte) -63, param1.charAt(var3 - 1))) {
                     break L3;
                   } else {
                     var3--;
@@ -84,7 +84,7 @@ abstract class ff {
                         return null;
                       }
                     } else {
-                      var7 = ((CharSequence) param1).charAt(var6);
+                      var7 = param1.charAt(var6);
                       if (rf.a((char) var7, 0)) {
                         var8 = r.a(-219, (char) var7);
                         if (var8 != 0) {

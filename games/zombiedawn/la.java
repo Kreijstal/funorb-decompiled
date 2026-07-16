@@ -67,58 +67,33 @@ final class la extends java.awt.Canvas implements java.awt.event.FocusListener {
     final static void a(byte param0) {
         try {
             Exception var1 = null;
-            int statePc = 0;
-            Throwable caughtException = null;
-            stateLoop: while (true) {
-                switch (statePc) {
-                    case 0: {
-                        if (param0 >= 57) {
-                            statePc = 2;
-                        } else {
-                            statePc = 1;
-                        }
-                        continue stateLoop;
-                    }
-                    case 1: {
-                        field_b = null;
-                        statePc = 2;
-                        continue stateLoop;
-                    }
-                    case 2: {
-                        if (null != ce.field_t) {
-                            statePc = 4;
-                        } else {
-                            statePc = 3;
-                        }
-                        continue stateLoop;
-                    }
-                    case 3: {
-                        fj.field_g.field_j = fj.field_g.field_j + 24;
-                        return;
-                    }
-                    case 4: {
-                        try {
-                            ce.field_t.a(0, 0L);
-                            ce.field_t.a(122, fj.field_g.field_h, fj.field_g.field_j, 24);
-                            statePc = 5;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_4) {
-                            caughtException = stateCaught_4;
-                            statePc = 6;
-                            continue stateLoop;
-                        }
-                    }
-                    case 5: {
-                        fj.field_g.field_j = fj.field_g.field_j + 24;
-                        return;
-                    }
-                    case 6: {
-                        var1 = (Exception) (Object) caughtException;
-                        fj.field_g.field_j = fj.field_g.field_j + 24;
-                        return;
-                    }
-                    default: throw new IllegalStateException("invalid CFG state " + statePc);
+            Throwable decompiledCaughtException = null;
+            L0: {
+              if (param0 >= 57) {
+                break L0;
+              } else {
+                field_b = null;
+                break L0;
+              }
+            }
+            if (null != ce.field_t) {
+              try {
+                L1: {
+                  ce.field_t.a(0, 0L);
+                  ce.field_t.a(122, fj.field_g.field_h, fj.field_g.field_j, 24);
+                  break L1;
                 }
+              } catch (java.lang.Exception decompiledCaughtParameter0) {
+                decompiledCaughtException = decompiledCaughtParameter0;
+                var1 = (Exception) (Object) decompiledCaughtException;
+                fj.field_g.field_j = fj.field_g.field_j + 24;
+                return;
+              }
+              fj.field_g.field_j = fj.field_g.field_j + 24;
+              return;
+            } else {
+              fj.field_g.field_j = fj.field_g.field_j + 24;
+              return;
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;

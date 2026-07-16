@@ -121,10 +121,12 @@ final class ki extends am {
                     L4: while (true) {
                       if (var6_int >= var4) {
                         kf.a(var5, (byte) 63);
-                        var3.field_i = new String[2][var5];
-                        var6 = new String[2][var5];
-                        var3.field_o = new int[2][4 * var5];
-                        var7 = new int[2][4 * var5];
+                        String[][] dupTemp$2 = new String[2][var5];
+                        var3.field_i = dupTemp$2;
+                        var6 = dupTemp$2;
+                        int[][] dupTemp$3 = new int[2][4 * var5];
+                        var3.field_o = dupTemp$3;
+                        var7 = dupTemp$3;
                         var8 = wf.field_O;
                         var9 = 0;
                         var10 = 0;
@@ -260,7 +262,7 @@ final class ki extends am {
     }
 
     public final String toString() {
-        String var1 = null;
+        Object var1 = null;
         String var2 = null;
         int var3 = 0;
         int var4 = 0;
@@ -268,7 +270,7 @@ final class ki extends am {
           var4 = Kickabout.field_G;
           var1 = null;
           if (-1 == (((ki) this).field_r ^ -1)) {
-            var1 = "Keyheld";
+            var1 = (Object) (Object) "Keyheld";
             break L0;
           } else {
             break L0;
@@ -279,7 +281,7 @@ final class ki extends am {
           if ((((ki) this).field_r ^ -1) != -3) {
             break L1;
           } else {
-            var1 = "Mouse";
+            var1 = (Object) (Object) "Mouse";
             var2 = "Click(" + ((ki) this).field_o + "," + ((ki) this).field_p + ") ";
             break L1;
           }
@@ -288,7 +290,7 @@ final class ki extends am {
           if (((ki) this).field_r != 1) {
             break L2;
           } else {
-            var1 = "Keypress";
+            var1 = (Object) (Object) "Keypress";
             var3 = ((ki) this).field_v;
             if (0 == var3) {
               var2 = " DASH";
@@ -338,7 +340,7 @@ final class ki extends am {
             break L3;
           } else {
             L4: {
-              var1 = "Team";
+              var1 = (Object) (Object) "Team";
               var3 = ((ki) this).field_v;
               if (0 == var3) {
                 var2 = " Left";
@@ -366,7 +368,7 @@ final class ki extends am {
             break L5;
           } else {
             var2 = " data=" + ((ki) this).field_v;
-            var1 = "LineUp";
+            var1 = (Object) (Object) "LineUp";
             break L5;
           }
         }
@@ -374,7 +376,7 @@ final class ki extends am {
           if (-8 != (((ki) this).field_r ^ -1)) {
             break L6;
           } else {
-            var1 = "Cheat";
+            var1 = (Object) (Object) "Cheat";
             var2 = " data=" + ((ki) this).field_v;
             break L6;
           }
@@ -383,7 +385,7 @@ final class ki extends am {
           if (6 == ((ki) this).field_r) {
             L8: {
               var3 = ((ki) this).field_v;
-              if (var3 != 0) {
+              if ((var3 ^ -1) != -1) {
                 if (var3 != 1) {
                   if (2 != var3) {
                     if (var3 == 3) {
@@ -405,9 +407,9 @@ final class ki extends am {
                 break L8;
               }
             }
-            var1 = "meta";
-            var2 = var1;
-            var2 = var1;
+            var1 = (Object) (Object) "meta";
+            var2 = (String) var1;
+            var2 = (String) var1;
             break L7;
           } else {
             break L7;
@@ -419,12 +421,12 @@ final class ki extends am {
           } else {
             L10: {
               var3 = ((ki) this).field_v;
-              if (var3 != 0) {
-                if (var3 == -2) {
+              if ((var3 ^ -1) != -1) {
+                if ((var3 ^ -1) == -2) {
                   var2 = " Right";
                   break L10;
                 } else {
-                  if (-3 != var3) {
+                  if (-3 != (var3 ^ -1)) {
                     break L10;
                   } else {
                     var2 = " OK";
@@ -436,7 +438,7 @@ final class ki extends am {
                 break L10;
               }
             }
-            var1 = "formation";
+            var1 = (Object) (Object) "formation";
             break L9;
           }
         }

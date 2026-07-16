@@ -18,25 +18,31 @@ final class lj {
             Throwable decompiledCaughtException = null;
             try {
               L0: {
-                var7 = 105 % ((64 - param3) / 62);
-                var9 = param0.getParameter("cookiehost");
-                var8 = var9;
-                var8 = var9;
-                var10 = param1 + "=" + param2 + "; version=1; path=/; domain=" + var9;
-                var8 = var10;
-                var8 = var10;
-                if (param4 < 0L) {
-                  var8 = var10 + "; Discard;";
-                  break L0;
-                } else {
-                  var8 = var10 + "; Expires=" + se.a(-80, fa.a(82) + 1000L * param4) + "; Max-Age=" + param4;
-                  break L0;
+                L1: {
+                  var7 = 105 % ((64 - param3) / 62);
+                  var9 = param0.getParameter("cookiehost");
+                  var8 = var9;
+                  var8 = var9;
+                  var10 = param1 + "=" + param2 + "; version=1; path=/; domain=" + var9;
+                  var8 = var10;
+                  var8 = var10;
+                  if (param4 < 0L) {
+                    var8 = var10 + "; Discard;";
+                    break L1;
+                  } else {
+                    var8 = var10 + "; Expires=" + se.a(-80, fa.a(82) + 1000L * param4) + "; Max-Age=" + param4;
+                    break L1;
+                  }
                 }
+                ac.a((byte) 91, param0, "document.cookie=\"" + var8 + "\"");
+                break L0;
               }
-              ac.a((byte) 91, param0, "document.cookie=\"" + var8 + "\"");
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
-              var6 = decompiledCaughtException;
+              L2: {
+                var6 = decompiledCaughtException;
+                break L2;
+              }
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;

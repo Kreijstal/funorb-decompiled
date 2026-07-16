@@ -30,56 +30,40 @@ final class oe {
     final static void a(int param0) {
         try {
             Exception var1 = null;
-            int statePc = 0;
-            Throwable caughtException = null;
-            stateLoop: while (true) {
-                switch (statePc) {
-                    case 0: {
-                        if (param0 == 0) {
-                            statePc = 2;
-                        } else {
-                            statePc = 1;
-                        }
-                        continue stateLoop;
+            int decompiledRegionSelector0 = 0;
+            Throwable decompiledCaughtException = null;
+            if (param0 == 0) {
+              L0: {
+                if (null == gh.field_Ib) {
+                  break L0;
+                } else {
+                  try {
+                    L1: {
+                      gh.field_Ib.a(0L, 0);
+                      gh.field_Ib.a(sh.field_qb.field_l, sh.field_qb.field_g, 24, param0 ^ 0);
+                      decompiledRegionSelector0 = 0;
+                      break L1;
                     }
-                    case 1: {
-                        return;
+                  } catch (java.lang.Exception decompiledCaughtParameter0) {
+                    decompiledCaughtException = decompiledCaughtParameter0;
+                    L2: {
+                      var1 = (Exception) (Object) decompiledCaughtException;
+                      decompiledRegionSelector0 = 1;
+                      break L2;
                     }
-                    case 2: {
-                        if (null == gh.field_Ib) {
-                            statePc = 6;
-                        } else {
-                            statePc = 3;
-                        }
-                        continue stateLoop;
-                    }
-                    case 3: {
-                        try {
-                            gh.field_Ib.a(0L, 0);
-                            gh.field_Ib.a(sh.field_qb.field_l, sh.field_qb.field_g, 24, param0 ^ 0);
-                            statePc = 4;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_3) {
-                            caughtException = stateCaught_3;
-                            statePc = 5;
-                            continue stateLoop;
-                        }
-                    }
-                    case 4: {
-                        sh.field_qb.field_l = sh.field_qb.field_l + 24;
-                        return;
-                    }
-                    case 5: {
-                        var1 = (Exception) (Object) caughtException;
-                        statePc = 6;
-                        continue stateLoop;
-                    }
-                    case 6: {
-                        sh.field_qb.field_l = sh.field_qb.field_l + 24;
-                        return;
-                    }
-                    default: throw new IllegalStateException("invalid CFG state " + statePc);
+                  }
+                  if (decompiledRegionSelector0 == 0) {
+                    sh.field_qb.field_l = sh.field_qb.field_l + 24;
+                    return;
+                  } else {
+                    break L0;
+                  }
                 }
+              }
+              sh.field_qb.field_l = sh.field_qb.field_l + 24;
+              return;
+            } else {
+              return;
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;

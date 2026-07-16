@@ -14,25 +14,37 @@ final class bk {
     private ch field_c;
 
     final ij a(int param0, uh param1, boolean param2, int param3, uh param4) {
-        if (((bk) this).field_d == null) {
-            throw new RuntimeException();
-        }
-        if (param0 >= 0) {
-            // if_icmpge L31
+        int var6 = 0;
+        int var7 = 0;
+        ij var9 = null;
+        byte[] var11 = null;
+        if (((bk) this).field_d != null) {
+          L0: {
+            if (param0 < 0) {
+              break L0;
+            } else {
+              if (param0 >= ((bk) this).field_a.length) {
+                break L0;
+              } else {
+                if (((bk) this).field_a[param0] == null) {
+                  ((bk) this).field_d.field_o = 6 + 72 * param0;
+                  var6 = ((bk) this).field_d.b((byte) 76);
+                  var7 = ((bk) this).field_d.b((byte) 33);
+                  var11 = new byte[64];
+                  ((bk) this).field_d.a(var11, (byte) -120, param3, 64);
+                  var9 = new ij(param0, param1, param4, ((bk) this).field_c, ((bk) this).field_e, var6, var11, var7, param2);
+                  ((bk) this).field_a[param0] = var9;
+                  return var9;
+                } else {
+                  return ((bk) this).field_a[param0];
+                }
+              }
+            }
+          }
+          throw new RuntimeException();
         } else {
-            throw new RuntimeException();
+          throw new RuntimeException();
         }
-        if (((bk) this).field_a[param0] != null) {
-            return ((bk) this).field_a[param0];
-        }
-        ((bk) this).field_d.field_o = 6 + 72 * param0;
-        int var6 = ((bk) this).field_d.b((byte) 76);
-        int var7 = ((bk) this).field_d.b((byte) 33);
-        byte[] var11 = new byte[64];
-        ((bk) this).field_d.a(var11, (byte) -120, param3, 64);
-        ij var9 = new ij(param0, param1, param4, ((bk) this).field_c, ((bk) this).field_e, var6, var11, var7, param2);
-        ((bk) this).field_a[param0] = var9;
-        return var9;
     }
 
     bk(ch param0, nm param1) {
@@ -43,7 +55,7 @@ final class bk {
         int var3 = 0;
         byte[] var4 = null;
         byte[] var5 = null;
-        java.math.BigInteger var7_ref = null;
+        java.math.BigInteger var7_ref_java_math_BigInteger = null;
         int var7 = 0;
         int var8 = 0;
         sb var10 = null;
@@ -87,8 +99,8 @@ final class bk {
                     break L2;
                   } else {
                     var12 = new java.math.BigInteger(var16);
-                    var7_ref = var12.modPow(((bk) this).field_g, ((bk) this).field_f);
-                    var5 = var7_ref.toByteArray();
+                    var7_ref_java_math_BigInteger = var12.modPow(((bk) this).field_g, ((bk) this).field_f);
+                    var5 = var7_ref_java_math_BigInteger.toByteArray();
                     break L1;
                   }
                 }
@@ -200,7 +212,7 @@ final class bk {
                 }
                 L2: {
                   var2 = -19 % ((-8 - param0) / 45);
-                  if (sn.field_c.field_o != -1) {
+                  if ((sn.field_c.field_o ^ -1) != -1) {
                     break L2;
                   } else {
                     if (10000L + ck.field_d < sf.a((byte) 116)) {
@@ -212,21 +224,28 @@ final class bk {
                   }
                 }
                 L3: {
-                  if (-1 < sn.field_c.field_o) {
+                  if (-1 > (sn.field_c.field_o ^ -1)) {
                     try {
-                      ci.field_i.a((byte) 124, sn.field_c.field_u, sn.field_c.field_o, 0);
-                      ck.field_d = sf.a((byte) 115);
-                    } catch (java.io.IOException decompiledCaughtParameter) {
-                      decompiledCaughtException = decompiledCaughtParameter;
+                      L4: {
+                        ci.field_i.a((byte) 124, sn.field_c.field_u, sn.field_c.field_o, 0);
+                        ck.field_d = sf.a((byte) 115);
+                        break L4;
+                      }
+                    } catch (java.io.IOException decompiledCaughtParameter0) {
+                      decompiledCaughtException = decompiledCaughtParameter0;
+                      L5: {
+                        iOException = (IOException) (Object) decompiledCaughtException;
+                        si.a(-95);
+                        break L5;
+                      }
                     }
-                    iOException = (IOException) (Object) decompiledCaughtException;
-                    si.a(-95);
+                    sn.field_c.field_o = 0;
                     break L3;
                   } else {
                     break L3;
                   }
                 }
-                sn.field_c.field_o = 0;
+                return;
               }
             }
             sn.field_c.field_o = 0;

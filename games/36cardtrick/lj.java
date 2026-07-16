@@ -99,8 +99,8 @@ final class lj {
     }
 
     public static void a() {
-        field_g = (float[][]) null;
-        field_a = (int[][]) null;
+        field_g = null;
+        field_a = null;
     }
 
     final void a(pb param0, ih param1) {

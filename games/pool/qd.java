@@ -53,28 +53,45 @@ final class qd {
     }
 
     final up a(boolean param0, np param1, int param2, byte param3, np param4) {
-        if (!(((qd) this).field_a != null)) {
-            throw new RuntimeException();
-        }
-        if ((param2 ^ -1) <= -1) {
-            // if_icmple L37
+        int var6 = 0;
+        int var7 = 0;
+        up var9 = null;
+        byte[] var11 = null;
+        if (((qd) this).field_a == null) {
+          throw new RuntimeException();
         } else {
-            throw new RuntimeException();
+          L0: {
+            if ((param2 ^ -1) > -1) {
+              break L0;
+            } else {
+              if (((qd) this).field_f.length <= param2) {
+                break L0;
+              } else {
+                if (((qd) this).field_f[param2] != null) {
+                  return ((qd) this).field_f[param2];
+                } else {
+                  L1: {
+                    ((qd) this).field_a.field_v = 6 + param2 * 72;
+                    var6 = ((qd) this).field_a.b(true);
+                    var7 = ((qd) this).field_a.b(true);
+                    var11 = new byte[64];
+                    ((qd) this).field_a.a(0, (byte) -115, var11, 64);
+                    var9 = new up(param2, param1, param4, ((qd) this).field_i, ((qd) this).field_j, var6, var11, var7, param0);
+                    ((qd) this).field_f[param2] = var9;
+                    if (param3 == 0) {
+                      break L1;
+                    } else {
+                      ((qd) this).field_j = null;
+                      break L1;
+                    }
+                  }
+                  return var9;
+                }
+              }
+            }
+          }
+          throw new RuntimeException();
         }
-        if (!(((qd) this).field_f[param2] == null)) {
-            return ((qd) this).field_f[param2];
-        }
-        ((qd) this).field_a.field_v = 6 + param2 * 72;
-        int var6 = ((qd) this).field_a.b(true);
-        int var7 = ((qd) this).field_a.b(true);
-        byte[] var11 = new byte[64];
-        ((qd) this).field_a.a(0, (byte) -115, var11, 64);
-        up var9 = new up(param2, param1, param4, ((qd) this).field_i, ((qd) this).field_j, var6, var11, var7, param0);
-        ((qd) this).field_f[param2] = var9;
-        if (param3 != 0) {
-            ((qd) this).field_j = null;
-        }
-        return var9;
     }
 
     final void b(byte param0) {
@@ -137,7 +154,7 @@ final class qd {
         int var3 = 0;
         byte[] var4 = null;
         byte[] var5 = null;
-        java.math.BigInteger var7_ref = null;
+        java.math.BigInteger var7_ref_java_math_BigInteger = null;
         int var7 = 0;
         int var8 = 0;
         ge var10 = null;
@@ -227,8 +244,7 @@ final class qd {
             }
             L3: {
               L4: {
-                new ge(((sp) (Object) stackIn_14_2).b(stackIn_14_3 != 0));
-                var10 = stackIn_14_0;
+                var10 = new ge(((sp) (Object) stackIn_14_2).b(stackIn_14_3 != 0));
                 var10.field_v = 5;
                 var3 = var10.g(-62);
                 var10.field_v = var10.field_v + var3 * 72;
@@ -243,8 +259,8 @@ final class qd {
                 } else {
                   if (null != ((qd) this).field_l) {
                     var12 = new java.math.BigInteger(var16);
-                    var7_ref = var12.modPow(((qd) this).field_c, ((qd) this).field_l);
-                    var5 = var7_ref.toByteArray();
+                    var7_ref_java_math_BigInteger = var12.modPow(((qd) this).field_c, ((qd) this).field_l);
+                    var5 = var7_ref_java_math_BigInteger.toByteArray();
                     break L3;
                   } else {
                     break L4;

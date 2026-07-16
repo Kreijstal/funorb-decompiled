@@ -546,10 +546,10 @@ final class nl extends al {
                 if (-31 == (param0 ^ -1)) {
                   break L1;
                 } else {
-                  if (param0 == -32) {
+                  if ((param0 ^ -1) == -32) {
                     break L1;
                   } else {
-                    if (-21 != param0) {
+                    if (-21 != (param0 ^ -1)) {
                       stackOut_8_0 = 0;
                       stackIn_9_0 = stackOut_8_0;
                       break L0;
@@ -580,22 +580,30 @@ final class nl extends al {
         int var2 = 0;
         int var3 = var5.length;
         while (var3 > var2) {
+            int incrementValue$0 = var2;
             var2++;
-            var5[var2] = 0;
+            var5[incrementValue$0] = 0;
+            int incrementValue$1 = var2;
             var2++;
-            var5[var2] = 0;
+            var5[incrementValue$1] = 0;
+            int incrementValue$2 = var2;
             var2++;
-            var5[var2] = 0;
+            var5[incrementValue$2] = 0;
+            int incrementValue$3 = var2;
             var2++;
-            var5[var2] = 0;
+            var5[incrementValue$3] = 0;
+            int incrementValue$4 = var2;
             var2++;
-            var5[var2] = 0;
+            var5[incrementValue$4] = 0;
+            int incrementValue$5 = var2;
             var2++;
-            var5[var2] = 0;
+            var5[incrementValue$5] = 0;
+            int incrementValue$6 = var2;
             var2++;
-            var5[var2] = 0;
+            var5[incrementValue$6] = 0;
+            int incrementValue$7 = var2;
             var2++;
-            var5[var2] = 0;
+            var5[incrementValue$7] = 0;
         }
     }
 

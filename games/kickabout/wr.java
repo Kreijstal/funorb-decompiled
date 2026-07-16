@@ -11,25 +11,47 @@ final class wr extends mo {
     static int field_l;
 
     final void a(int param0, int param1, int param2) {
-        if (((wr) this).field_i[param0]) {
-            return;
-        }
-        if (param2 == 0) {
-            // if_icmpne L264
-            // if_icmple L264
-            ((wr) this).field_k[param0] = ((wr) this).field_k[param0] + 1;
-        } else {
-            if ((param2 ^ -1) == -2) {
-                if (-1 + ws.field_b.length > ((wr) this).field_k[param0]) {
-                    ((wr) this).field_k[param0] = ((wr) this).field_k[param0] + 1;
+        if (!((wr) this).field_i[param0]) {
+          L0: {
+            if (param2 != 0) {
+              if ((param2 ^ -1) != -2) {
+                break L0;
+              } else {
+                if (-1 + ws.field_b.length <= ((wr) this).field_k[param0]) {
+                  break L0;
+                } else {
+                  ((wr) this).field_k[param0] = ((wr) this).field_k[param0] + 1;
+                  break L0;
                 }
+              }
+            } else {
+              if ((param2 ^ -1) != -2) {
+                break L0;
+              } else {
+                if (-1 + ws.field_b.length <= ((wr) this).field_k[param0]) {
+                  break L0;
+                } else {
+                  ((wr) this).field_k[param0] = ((wr) this).field_k[param0] + 1;
+                  break L0;
+                }
+              }
             }
-        }
-        if (param1 != 1) {
+          }
+          if (param1 == 1) {
+            L1: {
+              if ((param2 ^ -1) == -3) {
+                ((wr) this).field_i[param0] = true;
+                break L1;
+              } else {
+                break L1;
+              }
+            }
             return;
-        }
-        if (!((param2 ^ -1) != -3)) {
-            ((wr) this).field_i[param0] = true;
+          } else {
+            return;
+          }
+        } else {
+          return;
         }
     }
 
@@ -43,8 +65,8 @@ final class wr extends mo {
 
     final static int a(int param0, ml param1, int param2, int param3, int param4, int param5) {
         int var6 = param1.l(param5, 59);
-        if (var6 == -1) {
-            return -1 >= param3 ? 0 : param1.l(param3, 59);
+        if ((var6 ^ -1) == -1) {
+            return -1 <= (param3 ^ -1) ? 0 : param1.l(param3, 59);
         }
         if (-2 != (var6 ^ -1)) {
             throw new IllegalStateException();
@@ -77,8 +99,9 @@ final class wr extends mo {
         for (var7 = 0; var7 < var3; var7++) {
             for (var8 = var6; param2 != param0.charAt(var8); var8++) {
             }
+            int incrementValue$0 = var5;
             var5++;
-            var4[var5] = param0.substring(var6, var8);
+            var4[incrementValue$0] = param0.substring(var6, var8);
             var6 = 1 + var8;
         }
         var4[var3] = param0.substring(var6);

@@ -56,33 +56,45 @@ final class hh extends ai {
                 break L2;
               } else {
                 try {
-                  jg.field_C.b(-747969087);
+                  L3: {
+                    jg.field_C.b(-747969087);
+                    break L3;
+                  }
                 } catch (java.io.IOException decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
-                  iOException = (IOException) (Object) decompiledCaughtException;
+                  L4: {
+                    iOException = (IOException) (Object) decompiledCaughtException;
+                    break L4;
+                  }
                 }
                 break L2;
               }
             }
             if (pd.field_a != null) {
               var1 = 0;
-              L3: while (true) {
+              L5: while (true) {
                 if (pd.field_a.length > var1) {
                   if (null != pd.field_a[var1]) {
                     try {
-                      pd.field_a[var1].b(-747969087);
-                      var1++;
-                      var1++;
+                      L6: {
+                        pd.field_a[var1].b(-747969087);
+                        var1++;
+                        var1++;
+                        break L6;
+                      }
                     } catch (java.io.IOException decompiledCaughtParameter1) {
                       decompiledCaughtException = decompiledCaughtParameter1;
-                      var2 = (IOException) (Object) decompiledCaughtException;
-                      var1++;
+                      L7: {
+                        var2 = (IOException) (Object) decompiledCaughtException;
+                        var1++;
+                        break L7;
+                      }
                     }
-                    continue L3;
+                    continue L5;
                   } else {
                     var1++;
                     var1++;
-                    continue L3;
+                    continue L5;
                   }
                 } else {
                   if (param0 != 48) {

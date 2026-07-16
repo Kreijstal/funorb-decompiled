@@ -204,38 +204,69 @@ abstract class uj {
     }
 
     final int a(int param0, byte param1, int param2) {
+        int var4 = 0;
         int var5 = 0;
         kp var6 = null;
         int var7 = 0;
-        int var8 = Torquing.field_u;
-        if (((uj) this).field_c != null) {
-            // if_icmpeq L37
-            // if_icmpgt L37
-        } else {
-            return -1;
-        }
-        if (!(((uj) this).field_c[-1 + ((uj) this).field_c.length].field_a >= param0)) {
-            return -1;
-        }
-        if (!((((uj) this).field_c.length ^ -1) != -2)) {
-            return ((uj) this).field_c[0].a((byte) -64, param2);
-        }
-        int var4 = 0;
-        if (param1 > -14) {
-            int discarded$0 = ((uj) this).a(-4, (byte) 109);
-        }
-        for (var5 = 0; var5 < ((uj) this).field_c.length; var5++) {
-            var6 = ((uj) this).field_c[var5];
-            if (var6.field_c <= param0) {
-                if (!(var6.field_a < param0)) {
-                    var7 = var6.a((byte) -64, param2);
-                    if ((var7 ^ -1) == 0) {
-                        return -1;
+        int var8 = 0;
+        L0: {
+          var8 = Torquing.field_u;
+          if (((uj) this).field_c == null) {
+            break L0;
+          } else {
+            if (0 == ((uj) this).field_c.length) {
+              break L0;
+            } else {
+              if (((uj) this).field_c[0].field_c > param0) {
+                break L0;
+              } else {
+                if (((uj) this).field_c[-1 + ((uj) this).field_c.length].field_a < param0) {
+                  return -1;
+                } else {
+                  if ((((uj) this).field_c.length ^ -1) == -2) {
+                    return ((uj) this).field_c[0].a((byte) -64, param2);
+                  } else {
+                    L1: {
+                      var4 = 0;
+                      if (param1 <= -14) {
+                        break L1;
+                      } else {
+                        int discarded$2 = ((uj) this).a(-4, (byte) 109);
+                        break L1;
+                      }
                     }
-                    return var4 - -var7;
+                    var5 = 0;
+                    L2: while (true) {
+                      if (var5 >= ((uj) this).field_c.length) {
+                        return -1;
+                      } else {
+                        L3: {
+                          var6 = ((uj) this).field_c[var5];
+                          if (var6.field_c > param0) {
+                            break L3;
+                          } else {
+                            if (var6.field_a >= param0) {
+                              var7 = var6.a((byte) -64, param2);
+                              if ((var7 ^ -1) != 0) {
+                                return var4 - -var7;
+                              } else {
+                                return -1;
+                              }
+                            } else {
+                              break L3;
+                            }
+                          }
+                        }
+                        var4 = var4 + (var6.field_b.length - 1);
+                        var5++;
+                        continue L2;
+                      }
+                    }
+                  }
                 }
+              }
             }
-            var4 = var4 + (var6.field_b.length - 1);
+          }
         }
         return -1;
     }

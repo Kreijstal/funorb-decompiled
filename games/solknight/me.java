@@ -17,7 +17,6 @@ final class me {
         int var5 = 0;
         long var6 = 0L;
         sh var8 = null;
-        sh var8_ref = null;
         ra var9 = null;
         ra var11 = null;
         sh var12 = null;
@@ -38,13 +37,13 @@ final class me {
                 var20 = ra.a(((me) this).field_a, param2, param3);
                 if (var20 != null) {
                   var21 = var20.b();
-                  var8_ref = var21;
-                  ((me) this).field_i.a((byte) 76, (gg) (Object) var8_ref, var6);
+                  var8 = var21;
+                  ((me) this).field_i.a((byte) 76, (gg) (Object) var8, var6);
                   if (param0 != null) {
                     param0[0] = param0[0] - var21.field_i.length;
-                    return var8_ref;
+                    return var8;
                   } else {
-                    return var8_ref;
+                    return var8;
                   }
                 } else {
                   return null;
@@ -54,13 +53,13 @@ final class me {
                 var18 = ra.a(((me) this).field_a, param2, param3);
                 if (var18 != null) {
                   var19 = var18.b();
-                  var8_ref = var19;
-                  ((me) this).field_i.a((byte) 76, (gg) (Object) var8_ref, var6);
+                  var8 = var19;
+                  ((me) this).field_i.a((byte) 76, (gg) (Object) var8, var6);
                   if (param0 != null) {
                     param0[0] = param0[0] - var19.field_i.length;
-                    return var8_ref;
+                    return var8;
                   } else {
-                    return var8_ref;
+                    return var8;
                   }
                 } else {
                   return null;
@@ -74,13 +73,13 @@ final class me {
               var16 = ra.a(((me) this).field_a, param2, param3);
               if (var16 != null) {
                 var17 = var16.b();
-                var8_ref = var17;
-                ((me) this).field_i.a((byte) 76, (gg) (Object) var8_ref, var6);
+                var8 = var17;
+                ((me) this).field_i.a((byte) 76, (gg) (Object) var8, var6);
                 if (param0 != null) {
                   param0[0] = param0[0] - var17.field_i.length;
-                  return var8_ref;
+                  return var8;
                 } else {
-                  return var8_ref;
+                  return var8;
                 }
               } else {
                 return null;
@@ -91,13 +90,13 @@ final class me {
               var9 = var11;
               if (var11 != null) {
                 var12 = var11.b();
-                var8_ref = var12;
-                ((me) this).field_i.a((byte) 76, (gg) (Object) var8_ref, var6);
+                var8 = var12;
+                ((me) this).field_i.a((byte) 76, (gg) (Object) var8, var6);
                 if (param0 != null) {
                   param0[0] = param0[0] - var12.field_i.length;
-                  return var8_ref;
+                  return var8;
                 } else {
-                  return var8_ref;
+                  return var8;
                 }
               } else {
                 return null;
@@ -132,9 +131,7 @@ final class me {
         int var5 = 0;
         long var6 = 0L;
         sh var8 = null;
-        sh var8_ref = null;
         sl var9 = null;
-        sl var9_ref = null;
         var5 = param1 ^ (65524 & param0 << 1829117700 | param0 >>> 1496353484);
         var5 = var5 | param0 << -1126249680;
         var6 = (long)var5 ^ 4294967296L;
@@ -147,23 +144,23 @@ final class me {
                 if (var9 != null) {
                   break L0;
                 } else {
-                  var9_ref = sl.a(((me) this).field_c, param0, param1);
-                  if (var9_ref != null) {
-                    ((me) this).field_j.a((byte) 113, (gg) (Object) var9_ref, var6);
+                  var9 = sl.a(((me) this).field_c, param0, param1);
+                  if (var9 != null) {
+                    ((me) this).field_j.a((byte) 113, (gg) (Object) var9, var6);
                     break L0;
                   } else {
                     return null;
                   }
                 }
               }
-              var8_ref = var9_ref.a(param2);
-              if (var8_ref != null) {
-                var9_ref.c(10);
+              var8 = var9.a(param2);
+              if (var8 != null) {
+                var9.c(10);
                 if (param3 > -52) {
                   return null;
                 } else {
-                  ((me) this).field_i.a((byte) 40, (gg) (Object) var8_ref, var6);
-                  return var8_ref;
+                  ((me) this).field_i.a((byte) 40, (gg) (Object) var8, var6);
+                  return var8;
                 }
               } else {
                 return null;
@@ -177,23 +174,23 @@ final class me {
               if (var9 != null) {
                 break L1;
               } else {
-                var9_ref = sl.a(((me) this).field_c, param0, param1);
-                if (var9_ref != null) {
-                  ((me) this).field_j.a((byte) 113, (gg) (Object) var9_ref, var6);
+                var9 = sl.a(((me) this).field_c, param0, param1);
+                if (var9 != null) {
+                  ((me) this).field_j.a((byte) 113, (gg) (Object) var9, var6);
                   break L1;
                 } else {
                   return null;
                 }
               }
             }
-            var8_ref = var9_ref.a(param2);
-            if (var8_ref != null) {
-              var9_ref.c(10);
+            var8 = var9.a(param2);
+            if (var8 != null) {
+              var9.c(10);
               if (param3 > -52) {
                 return null;
               } else {
-                ((me) this).field_i.a((byte) 40, (gg) (Object) var8_ref, var6);
-                return var8_ref;
+                ((me) this).field_i.a((byte) 40, (gg) (Object) var8, var6);
+                return var8;
               }
             } else {
               return null;
@@ -206,7 +203,7 @@ final class me {
 
     final static void a(boolean param0) {
         L0: {
-          if (-10001 >= lk.field_e) {
+          if (-10001 >= (lk.field_e ^ -1)) {
             vk.a(255, (byte) 89, 0);
             break L0;
           } else {
@@ -214,7 +211,7 @@ final class me {
           }
         }
         if (!param0) {
-          if (-20001 < lk.field_e) {
+          if (-20001 < (lk.field_e ^ -1)) {
             L1: {
               if (-30001 >= (lk.field_e ^ -1)) {
                 vk.a(253, (byte) 89, 2);
@@ -223,9 +220,8 @@ final class me {
                 break L1;
               }
             }
-            if ((lk.field_e ^ -1) <= -40001) {
+            if ((lk.field_e ^ -1) > -40001) {
               L2: {
-                vk.a(252, (byte) 89, 3);
                 if (50000 <= lk.field_e) {
                   vk.a(251, (byte) 89, 4);
                   break L2;
@@ -236,6 +232,7 @@ final class me {
               return;
             } else {
               L3: {
+                vk.a(252, (byte) 89, 3);
                 if (50000 <= lk.field_e) {
                   vk.a(251, (byte) 89, 4);
                   break L3;
@@ -248,16 +245,15 @@ final class me {
           } else {
             L4: {
               vk.a(254, (byte) 89, 1);
-              if (-30001 <= lk.field_e) {
+              if (-30001 >= (lk.field_e ^ -1)) {
                 vk.a(253, (byte) 89, 2);
                 break L4;
               } else {
                 break L4;
               }
             }
-            if ((lk.field_e ^ -1) <= -40001) {
+            if ((lk.field_e ^ -1) > -40001) {
               L5: {
-                vk.a(252, (byte) 89, 3);
                 if (50000 <= lk.field_e) {
                   vk.a(251, (byte) 89, 4);
                   break L5;
@@ -268,6 +264,7 @@ final class me {
               return;
             } else {
               L6: {
+                vk.a(252, (byte) 89, 3);
                 if (50000 <= lk.field_e) {
                   vk.a(251, (byte) 89, 4);
                   break L6;
@@ -280,7 +277,7 @@ final class me {
           }
         } else {
           field_g = true;
-          if (-20001 <= lk.field_e) {
+          if (-20001 >= (lk.field_e ^ -1)) {
             L7: {
               vk.a(254, (byte) 89, 1);
               if (-30001 >= (lk.field_e ^ -1)) {
@@ -290,8 +287,9 @@ final class me {
                 break L7;
               }
             }
-            if ((lk.field_e ^ -1) > -40001) {
+            if ((lk.field_e ^ -1) <= -40001) {
               L8: {
+                vk.a(252, (byte) 89, 3);
                 if (50000 <= lk.field_e) {
                   vk.a(251, (byte) 89, 4);
                   break L8;
@@ -302,7 +300,6 @@ final class me {
               return;
             } else {
               L9: {
-                vk.a(252, (byte) 89, 3);
                 if (50000 <= lk.field_e) {
                   vk.a(251, (byte) 89, 4);
                   break L9;
@@ -321,9 +318,8 @@ final class me {
                 break L10;
               }
             }
-            if ((lk.field_e ^ -1) <= -40001) {
+            if ((lk.field_e ^ -1) > -40001) {
               L11: {
-                vk.a(252, (byte) 89, 3);
                 if (50000 <= lk.field_e) {
                   vk.a(251, (byte) 89, 4);
                   break L11;
@@ -334,6 +330,7 @@ final class me {
               return;
             } else {
               L12: {
+                vk.a(252, (byte) 89, 3);
                 if (50000 <= lk.field_e) {
                   vk.a(251, (byte) 89, 4);
                   break L12;

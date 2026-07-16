@@ -107,46 +107,92 @@ final class aj extends vh {
 
     final boolean f(int param0) {
         int var2 = 0;
-        if (!(((aj) this).field_Lb == 0)) {
-            return false;
-        }
-        if (param0 != 20628) {
-            Object var3 = null;
-            ml discarded$0 = aj.a((java.applet.Applet) null, 1);
-        }
-        if (85 == qi.field_a) {
-            if (!(-1 <= (((aj) this).field_Nb.length() ^ -1))) {
-                StringBuilder discarded$1 = cj.a(' ', ((aj) this).field_Nb.length() + -1, -2790, ((aj) this).field_Nb);
+        Object var3 = null;
+        if (((aj) this).field_Lb != 0) {
+          return false;
+        } else {
+          L0: {
+            if (param0 == 20628) {
+              break L0;
+            } else {
+              var3 = null;
+              ml discarded$8 = aj.a((java.applet.Applet) null, 1);
+              break L0;
             }
-        }
-        if (((aj) this).field_Nb.length() < 12) {
-            var2 = Character.toLowerCase(ml.field_b);
-            if (!(var2 != 32)) {
-                var2 = 95;
+          }
+          L1: {
+            if (85 != qi.field_a) {
+              break L1;
+            } else {
+              if (-1 > (((aj) this).field_Nb.length() ^ -1)) {
+                StringBuilder discarded$9 = cj.a(' ', ((aj) this).field_Nb.length() + -1, -2790, ((aj) this).field_Nb);
+                break L1;
+              } else {
+                break L1;
+              }
             }
-            if (var2 == 95) {
-                if (!(-1 <= (((aj) this).field_Nb.length() ^ -1))) {
-                    StringBuilder discarded$2 = ((aj) this).field_Nb.append(var2);
+          }
+          L2: {
+            if (((aj) this).field_Nb.length() >= 12) {
+              break L2;
+            } else {
+              L3: {
+                var2 = Character.toLowerCase(ml.field_b);
+                if (var2 == 32) {
+                  var2 = 95;
+                  break L3;
+                } else {
+                  break L3;
                 }
+              }
+              L4: {
+                if (var2 != 95) {
+                  break L4;
+                } else {
+                  if (-1 > (((aj) this).field_Nb.length() ^ -1)) {
+                    StringBuilder discarded$10 = ((aj) this).field_Nb.append(var2);
+                    break L4;
+                  } else {
+                    break L4;
+                  }
+                }
+              }
+              L5: {
+                if (vq.a((char) var2, 22987)) {
+                  break L5;
+                } else {
+                  if (!kh.a((char) var2, (byte) 85)) {
+                    break L2;
+                  } else {
+                    break L5;
+                  }
+                }
+              }
+              StringBuilder discarded$11 = ((aj) this).field_Nb.append(var2);
+              break L2;
             }
-            if (!vq.a((char) var2, 22987)) {
-                // ifeq L177
-            }
-            StringBuilder discarded$3 = ((aj) this).field_Nb.append(var2);
-        }
-        if ((qi.field_a ^ -1) == -85) {
-            if ((((aj) this).field_Nb.length() ^ -1) < -1) {
+          }
+          L6: {
+            if ((qi.field_a ^ -1) != -85) {
+              break L6;
+            } else {
+              if ((((aj) this).field_Nb.length() ^ -1) >= -1) {
+                ((aj) this).field_Lb = 1;
+                break L6;
+              } else {
                 ((aj) this).field_nb = ((aj) this).field_Nb.toString();
                 ((aj) this).field_Lb = 2;
-            } else {
-                ((aj) this).field_Lb = 1;
+                break L6;
+              }
             }
-        }
-        if (13 != qi.field_a) {
+          }
+          if (13 == qi.field_a) {
+            ((aj) this).field_Lb = 1;
             return true;
+          } else {
+            return true;
+          }
         }
-        ((aj) this).field_Lb = 1;
-        return true;
     }
 
     final static ml a(java.applet.Applet param0, int param1) {
@@ -261,48 +307,106 @@ final class aj extends vh {
     }
 
     final int a(boolean param0, byte param1) {
-        int var4 = Pool.field_O;
+        int var4 = 0;
+        var4 = Pool.field_O;
         ((aj) this).a(param0, false);
-        if (param1 >= -74) {
-            return -46;
-        }
-        if (param0) {
-            do {
-                // ifeq L209
-                if (85 == qi.field_a) {
-                    if (!((((aj) this).field_Nb.length() ^ -1) >= -1)) {
-                        StringBuilder discarded$0 = cj.a(' ', -1 + ((aj) this).field_Nb.length(), -2790, ((aj) this).field_Nb);
+        if (param1 < -74) {
+          L0: {
+            if (!param0) {
+              break L0;
+            } else {
+              L1: while (true) {
+                if (!n.h(127)) {
+                  break L0;
+                } else {
+                  L2: {
+                    if (85 != qi.field_a) {
+                      break L2;
+                    } else {
+                      if ((((aj) this).field_Nb.length() ^ -1) < -1) {
+                        StringBuilder discarded$4 = cj.a(' ', -1 + ((aj) this).field_Nb.length(), -2790, ((aj) this).field_Nb);
+                        break L2;
+                      } else {
+                        break L2;
+                      }
                     }
-                }
-                if (!he.a(ml.field_b, (CharSequence) (Object) ((aj) this).field_Nb, 15692)) {
-                    if (((aj) this).field_Nb.length() == 0) {
-                        // if_icmpeq L148
+                  }
+                  L3: {
+                    L4: {
+                      if (he.a(ml.field_b, (CharSequence) (Object) ((aj) this).field_Nb, 15692)) {
+                        break L4;
+                      } else {
+                        L5: {
+                          if ((((aj) this).field_Nb.length() ^ -1) != -1) {
+                            break L5;
+                          } else {
+                            if (ml.field_b == 91) {
+                              break L4;
+                            } else {
+                              break L5;
+                            }
+                          }
+                        }
+                        L6: {
+                          if (1 != ((aj) this).field_Nb.length()) {
+                            break L6;
+                          } else {
+                            if (ml.field_b == 35) {
+                              break L4;
+                            } else {
+                              break L6;
+                            }
+                          }
+                        }
+                        if (ml.field_b != 93) {
+                          break L3;
+                        } else {
+                          break L4;
+                        }
+                      }
                     }
-                    if (1 == ((aj) this).field_Nb.length()) {
-                        // if_icmpeq L148
+                    StringBuilder discarded$5 = ((aj) this).field_Nb.append(ml.field_b);
+                    break L3;
+                  }
+                  if ((qi.field_a ^ -1) == -85) {
+                    if (-1 <= (((aj) this).field_Nb.length() ^ -1)) {
+                      return 1;
+                    } else {
+                      ((aj) this).field_nb = ((aj) this).field_Nb.toString();
+                      return 2;
                     }
-                    // if_icmpne L162
-                }
-                StringBuilder discarded$1 = ((aj) this).field_Nb.append(ml.field_b);
-                if (!(qi.field_a != -85)) {
-                    if (-1 < ((aj) this).field_Nb.length()) {
-                        ((aj) this).field_nb = ((aj) this).field_Nb.toString();
-                        return 2;
+                  } else {
+                    if (13 != qi.field_a) {
+                      continue L1;
+                    } else {
+                      return 1;
                     }
-                    return 1;
+                  }
                 }
-            } while (13 != qi.field_a);
-            return 1;
-        }
-        ((aj) this).field_Qb.field_nb = ((aj) this).field_Nb.toString();
-        if (param0) {
-            if (0 != ne.field_s) {
-                if (!(-1 != (((aj) this).field_R ^ -1))) {
-                    ((aj) this).field_Lb = 1;
-                }
+              }
             }
+          }
+          L7: {
+            ((aj) this).field_Qb.field_nb = ((aj) this).field_Nb.toString();
+            if (!param0) {
+              break L7;
+            } else {
+              if (0 == ne.field_s) {
+                break L7;
+              } else {
+                if (-1 == (((aj) this).field_R ^ -1)) {
+                  ((aj) this).field_Lb = 1;
+                  break L7;
+                } else {
+                  break L7;
+                }
+              }
+            }
+          }
+          return ((aj) this).field_Lb;
+        } else {
+          return -46;
         }
-        return ((aj) this).field_Lb;
     }
 
     static {
@@ -322,6 +426,7 @@ final class aj extends vh {
         L0: while (true) {
           if ((var0 ^ -1) <= -6) {
             field_Sb = "Waiting for music";
+            return;
           } else {
             if (field_Ob[var0] == null) {
               field_Ob[var0] = field_Ob[0];

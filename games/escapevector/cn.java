@@ -64,14 +64,14 @@ final class cn {
     }
 
     final void a(byte param0) {
-        hg var2_ref = null;
+        hg var2_ref_hg = null;
         int var2 = 0;
         int var3 = 0;
         var3 = EscapeVector.field_A;
         L0: while (true) {
-          var2_ref = ((cn) this).field_d.field_b;
-          if (var2_ref != ((cn) this).field_d) {
-            var2_ref.c((byte) -46);
+          var2_ref_hg = ((cn) this).field_d.field_b;
+          if (var2_ref_hg != ((cn) this).field_d) {
+            var2_ref_hg.c((byte) -46);
             continue L0;
           } else {
             var2 = -116 % ((53 - param0) / 46);

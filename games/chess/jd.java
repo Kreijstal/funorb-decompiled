@@ -50,140 +50,82 @@ final class jd {
             IOException var2 = null;
             int var3 = 0;
             Throwable decompiledCaughtException = null;
-            int statePc = 0;
-            Throwable caughtException = null;
-            stateLoop: while (true) {
-                switch (statePc) {
-                    case 0: {
-                        var3 = Chess.field_G;
-                        if (qh.field_c != null) {
-                            statePc = 2;
-                        } else {
-                            statePc = 3;
-                        }
-                        continue stateLoop;
-                    }
-                    case 2: {
-                        qh.field_c.a((byte) -103);
-                        statePc = 3;
-                        continue stateLoop;
-                    }
-                    case 3: {
-                        if (null != ba.field_O) {
-                            statePc = 5;
-                        } else {
-                            statePc = 6;
-                        }
-                        continue stateLoop;
-                    }
-                    case 5: {
-                        ba.field_O.a(3);
-                        statePc = 6;
-                        continue stateLoop;
-                    }
-                    case 6: {
-                        if (param0 == -91) {
-                            statePc = 8;
-                        } else {
-                            statePc = 7;
-                        }
-                        continue stateLoop;
-                    }
-                    case 7: {
-                        field_e = null;
-                        statePc = 8;
-                        continue stateLoop;
-                    }
-                    case 8: {
-                        if (kj.field_a == null) {
-                            statePc = 12;
-                        } else {
-                            statePc = 9;
-                        }
-                        continue stateLoop;
-                    }
-                    case 9: {
-                        try {
-                            kj.field_a.a((byte) -87);
-                            statePc = 12;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_9) {
-                            caughtException = stateCaught_9;
-                            statePc = 11;
-                            continue stateLoop;
-                        }
-                    }
-                    case 11: {
-                        iOException = (IOException) (Object) caughtException;
-                        statePc = 12;
-                        continue stateLoop;
-                    }
-                    case 12: {
-                        if (null != hj.field_n) {
-                            statePc = 14;
-                        } else {
-                            statePc = 13;
-                        }
-                        continue stateLoop;
-                    }
-                    case 13: {
-                        return;
-                    }
-                    case 14: {
-                        var1 = 0;
-                        statePc = 15;
-                        continue stateLoop;
-                    }
-                    case 15: {
-                        if (hj.field_n.length > var1) {
-                            statePc = 17;
-                        } else {
-                            statePc = 16;
-                        }
-                        continue stateLoop;
-                    }
-                    case 16: {
-                        return;
-                    }
-                    case 17: {
-                        if (hj.field_n[var1] != null) {
-                            statePc = 19;
-                        } else {
-                            statePc = 18;
-                        }
-                        continue stateLoop;
-                    }
-                    case 18: {
-                        var1++;
-                        var1++;
-                        statePc = 15;
-                        continue stateLoop;
-                    }
-                    case 19: {
-                        try {
-                            hj.field_n[var1].a((byte) -87);
-                            statePc = 20;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_19) {
-                            caughtException = stateCaught_19;
-                            statePc = 21;
-                            continue stateLoop;
-                        }
-                    }
-                    case 20: {
-                        var1++;
-                        var1++;
-                        statePc = 15;
-                        continue stateLoop;
-                    }
-                    case 21: {
-                        var2 = (IOException) (Object) caughtException;
-                        var1++;
-                        statePc = 15;
-                        continue stateLoop;
-                    }
-                    default: throw new IllegalStateException("invalid CFG state " + statePc);
+            L0: {
+              var3 = Chess.field_G;
+              if (qh.field_c != null) {
+                qh.field_c.a((byte) -103);
+                break L0;
+              } else {
+                break L0;
+              }
+            }
+            L1: {
+              if (null != ba.field_O) {
+                ba.field_O.a(3);
+                break L1;
+              } else {
+                break L1;
+              }
+            }
+            L2: {
+              if (param0 == -91) {
+                break L2;
+              } else {
+                field_e = null;
+                break L2;
+              }
+            }
+            L3: {
+              if (kj.field_a == null) {
+                break L3;
+              } else {
+                try {
+                  L4: {
+                    kj.field_a.a((byte) -87);
+                    break L4;
+                  }
+                } catch (java.io.IOException decompiledCaughtParameter0) {
+                  decompiledCaughtException = decompiledCaughtParameter0;
+                  L5: {
+                    iOException = (IOException) (Object) decompiledCaughtException;
+                    break L5;
+                  }
                 }
+                break L3;
+              }
+            }
+            if (null != hj.field_n) {
+              var1 = 0;
+              L6: while (true) {
+                if (hj.field_n.length > var1) {
+                  if (hj.field_n[var1] != null) {
+                    try {
+                      L7: {
+                        hj.field_n[var1].a((byte) -87);
+                        var1++;
+                        var1++;
+                        break L7;
+                      }
+                    } catch (java.io.IOException decompiledCaughtParameter1) {
+                      decompiledCaughtException = decompiledCaughtParameter1;
+                      L8: {
+                        var2 = (IOException) (Object) decompiledCaughtException;
+                        var1++;
+                        break L8;
+                      }
+                    }
+                    continue L6;
+                  } else {
+                    var1++;
+                    var1++;
+                    continue L6;
+                  }
+                } else {
+                  return;
+                }
+              }
+            } else {
+              return;
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;

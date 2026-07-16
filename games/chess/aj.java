@@ -35,7 +35,7 @@ final class aj {
             break L0;
           }
         }
-        qa.field_f = (id) (Object) stackIn_3_0;
+        qa.field_f = stackIn_3_0;
         fm.field_T = new ci(0L, (ci) null);
         fm.field_T.a((byte) 127, (ci) (Object) qa.field_f.field_a);
         fm.field_T.a((byte) 123, sc.field_d);

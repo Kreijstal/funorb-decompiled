@@ -256,16 +256,16 @@ final class vp extends sq {
             }
             L3: {
               var6 = var11.field_m.a(30);
-              if (var5 != 0) {
+              if ((var5 ^ -1) != -1) {
                 break L3;
               } else {
                 if (var6 != 1) {
                   break L3;
                 } else {
-                  if (((cr) (Object) var11.field_m.c((byte) 62)).field_n != -9) {
+                  if ((((cr) (Object) var11.field_m.c((byte) 62)).field_n ^ -1) != -9) {
                     break L3;
                   } else {
-                    if (-3 == var4) {
+                    if (-3 == (var4 ^ -1)) {
                       return ag.field_e;
                     } else {
                       break L3;

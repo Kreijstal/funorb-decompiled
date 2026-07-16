@@ -22,32 +22,32 @@ final class aa extends kj {
         var7 = na.field_r;
         var8 = var7;
         var8.h(param2, 0);
-        ((w) var8).field_i = ((w) var8).field_i + 1;
-        var4 = ((w) var8).field_i;
+        var8.field_i = var8.field_i + 1;
+        var4 = var8.field_i;
         var8.b(-9469, 1);
-        var8.e(((ad) param0).field_p, param1 + 22742);
-        var8.e(((ad) param0).field_r, 26040);
-        var8.e(((ad) param0).field_m, 26040);
-        var8.a(-246, ((ad) param0).field_k);
-        var8.a(-246, ((ad) param0).field_l);
-        var8.a(param1 ^ -3096, ((ad) param0).field_n);
-        var8.a(param1 + -3544, ((ad) param0).field_s);
-        var8.b(-9469, ((ad) param0).field_o.length);
+        var8.e(param0.field_p, param1 + 22742);
+        var8.e(param0.field_r, 26040);
+        var8.e(param0.field_m, 26040);
+        var8.a(-246, param0.field_k);
+        var8.a(-246, param0.field_l);
+        var8.a(param1 ^ -3096, param0.field_n);
+        var8.a(param1 + -3544, param0.field_s);
+        var8.b(-9469, param0.field_o.length);
         var5 = 0;
         L0: while (true) {
-          if (((ad) param0).field_o.length <= var5) {
+          if (param0.field_o.length <= var5) {
             if (param1 != 3298) {
-              field_fb = (String) null;
+              field_fb = null;
               int discarded$4 = var8.b(var4, (byte) 5);
-              var8.f(((w) var8).field_i + -var4, 8049);
+              var8.f(var8.field_i + -var4, 8049);
               return;
             } else {
               int discarded$5 = var8.b(var4, (byte) 5);
-              var8.f(((w) var8).field_i + -var4, 8049);
+              var8.f(var8.field_i + -var4, 8049);
               return;
             }
           } else {
-            var7.a(-246, ((ad) param0).field_o[var5]);
+            var7.a(-246, param0.field_o[var5]);
             var5++;
             continue L0;
           }
@@ -58,7 +58,7 @@ final class aa extends kj {
         field_fb = null;
         field_db = null;
         if (param0 != -49) {
-            ad var2 = (ad) null;
+            Object var2 = null;
             aa.a((ad) null, 19, 27);
         }
     }

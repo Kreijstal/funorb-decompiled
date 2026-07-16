@@ -37,30 +37,46 @@ final class ul extends gj implements nk, da {
     }
 
     private final void e(byte param0) {
-        if (!o.c((byte) 39)) {
-            // if_icmpge L62
-            // if_icmpge L62
+        L0: {
+          L1: {
+            if (o.c((byte) 39)) {
+              break L1;
+            } else {
+              if ((((ul) this).field_H.field_i.length() ^ -1) >= -1) {
+                break L0;
+              } else {
+                if (0 >= ((ul) this).field_J.field_i.length()) {
+                  break L0;
+                } else {
+                  break L1;
+                }
+              }
+            }
+          }
+          pc.a(false, ((ul) this).field_H.field_i, ((ul) this).field_J.field_i);
+          break L0;
         }
-        pc.a(false, ((ul) this).field_H.field_i, ((ul) this).field_J.field_i);
-        if (param0 != -32) {
+        L2: {
+          if (param0 == -32) {
+            break L2;
+          } else {
             ((ul) this).field_P = false;
+            break L2;
+          }
         }
     }
 
     final boolean a(int param0, int param1, qa param2, char param3) {
-        if (super.a(param0, param1, param2, param3)) {
-          return true;
-        } else {
-          if (-99 == param1) {
-            return ((ul) this).b(param2, -28533);
-          } else {
-            if (-100 != param1) {
-              return false;
-            } else {
-              return ((ul) this).a(32, param2);
-            }
-          }
+        if (!(!super.a(param0, param1, param2, param3))) {
+            return true;
         }
+        if (!(-99 != (param1 ^ -1))) {
+            return ((ul) this).b(param2, -28533);
+        }
+        if (-100 != (param1 ^ -1)) {
+            return false;
+        }
+        return ((ul) this).a(32, param2);
     }
 
     public final void a(int param0, c param1) {
@@ -396,8 +412,7 @@ final class ul extends gj implements nk, da {
                 break L6;
               }
             }
-            new bb(stackIn_17_3, (kd) null);
-            ((ul) this).field_L = stackIn_17_1;
+            ((ul) this).field_L = new bb(stackIn_17_3, (kd) null);
             if (!((ul) this).field_M) {
               break L5;
             } else {
@@ -476,11 +491,13 @@ final class ul extends gj implements nk, da {
           }
         }
         L13: {
-          var12 = new ml(10, ((ul) this).field_z, ((ul) this).field_u + -20, 25, (qa) (Object) ((ul) this).field_H, false, 80, 3, var7, 16777215, var8);
-          ((ul) this).a((qa) (Object) new ml(10, ((ul) this).field_z, ((ul) this).field_u + -20, 25, (qa) (Object) ((ul) this).field_H, false, 80, 3, var7, 16777215, var8), (byte) -61);
+          ml dupTemp$2 = new ml(10, ((ul) this).field_z, ((ul) this).field_u + -20, 25, (qa) (Object) ((ul) this).field_H, false, 80, 3, var7, 16777215, var8);
+          var12 = dupTemp$2;
+          ((ul) this).a((qa) (Object) dupTemp$2, (byte) -61);
           ((ul) this).field_z = ((ul) this).field_z + (5 + ((qa) (Object) var12).field_j);
-          var13 = new ml(10, ((ul) this).field_z, ((ul) this).field_u - 20, 25, (qa) (Object) ((ul) this).field_J, false, 80, 3, var7, 16777215, kc.field_g);
-          ((ul) this).a((qa) (Object) new ml(10, ((ul) this).field_z, ((ul) this).field_u - 20, 25, (qa) (Object) ((ul) this).field_J, false, 80, 3, var7, 16777215, kc.field_g), (byte) -118);
+          ml dupTemp$3 = new ml(10, ((ul) this).field_z, ((ul) this).field_u - 20, 25, (qa) (Object) ((ul) this).field_J, false, 80, 3, var7, 16777215, kc.field_g);
+          var13 = dupTemp$3;
+          ((ul) this).a((qa) (Object) dupTemp$3, (byte) -118);
           ((ul) this).field_I.field_s = (kd) this;
           ((ul) this).field_z = ((ul) this).field_z + (((qa) (Object) var13).field_j - -5);
           if (null == ((ul) this).field_N) {

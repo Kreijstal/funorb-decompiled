@@ -22,7 +22,7 @@ final class dl {
         } else {
           L0: {
             nj.field_n = fa.a(110) - -15000L;
-            if (-12 != mh.field_U) {
+            if (-12 != (mh.field_U ^ -1)) {
               stackOut_3_0 = 0;
               stackIn_4_0 = stackOut_3_0;
               break L0;

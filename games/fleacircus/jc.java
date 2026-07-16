@@ -14,8 +14,8 @@ final class jc implements ch {
             field_e = null;
         }
         param0 = param0 & 8191;
-        if (-4097 < param0) {
-            return -2049 <= param0 ? dk.field_D[4096 - param0] : dk.field_D[param0];
+        if (-4097 < (param0 ^ -1)) {
+            return -2049 >= (param0 ^ -1) ? dk.field_D[4096 - param0] : dk.field_D[param0];
         }
         return -6145 < (param0 ^ -1) ? -dk.field_D[-4096 + param0] : -dk.field_D[8192 - param0];
     }

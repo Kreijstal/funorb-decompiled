@@ -26,7 +26,7 @@ final class lr extends hs {
     }
 
     final void e(int param0) {
-        String var2_ref = null;
+        String var2_ref_String = null;
         int var2 = 0;
         int var3_int = 0;
         String var3 = null;
@@ -74,7 +74,7 @@ final class lr extends hs {
                           break L3;
                         }
                       }
-                      var2_ref = stackIn_14_0;
+                      var2_ref_String = stackIn_14_0;
                       break L0;
                     } else {
                       if (((lr) this).field_a.field_g[var4].field_p == ((lr) this).field_h) {
@@ -92,10 +92,10 @@ final class lr extends hs {
                 }
               }
             }
-            var2_ref = br.field_b;
+            var2_ref_String = br.field_b;
             break L0;
           } else {
-            var2_ref = cb.field_a;
+            var2_ref_String = cb.field_a;
             break L0;
           }
         }
@@ -112,7 +112,7 @@ final class lr extends hs {
         }
         L5: {
           var3_int = stackIn_18_0;
-          var4 = 8 + pb.field_C.c(var2_ref, 185, 16);
+          var4 = 8 + pb.field_C.c(var2_ref_String, 185, 16);
           var5 = -33 + (-var4 + ((lr) this).c(342, 0));
           stackOut_18_0 = 10 + var4;
           stackIn_20_0 = stackOut_18_0;
@@ -134,7 +134,7 @@ final class lr extends hs {
         var6 = stackIn_21_0 + stackIn_21_1;
         on.f(390, var5, 205, var6, 10, 983040);
         on.a(390, var5, 205, var6, 10, 65793, 140);
-        int discarded$1 = pb.field_C.a(var2_ref, 400, var5 + 8, 185, var6, 16777215, -1, param0, 0, 16);
+        int discarded$1 = pb.field_C.a(var2_ref_String, 400, var5 + 8, 185, var6, 16777215, -1, param0, 0, 16);
         ((lr) this).d(param0 + -95);
         ((lr) this).b(param0 ^ -2352, ((lr) this).field_a.field_v);
         var2 = ((lr) this).field_a.field_C.field_k[((lr) this).field_h];

@@ -58,167 +58,188 @@ final class nl {
             if (var1 != 0) {
               if ((cg.field_e.field_k ^ -1) <= -1) {
                 var3 = dd.field_j[cg.field_e.field_k];
-                if (-3 == var3) {
-                  re.c(3);
-                  if (-1 == (var3 ^ -1)) {
-                    if (v.field_R == 2) {
-                      var4 = -jl.field_c + id.a(54);
-                      var6 = (int)((10999L - var4) / 1000L);
-                      if (0 >= var6) {
-                        var3 = 2;
-                        sc.a(5, (byte) 126, true);
-                        return var3;
-                      } else {
-                        return var3;
-                      }
-                    } else {
-                      return var3;
-                    }
-                  } else {
-                    return var3;
-                  }
-                } else {
-                  if (var3 == 5) {
+                if (-3 == (var3 ^ -1)) {
+                  L2: {
                     re.c(3);
-                    if (-1 == (var3 ^ -1)) {
-                      if (v.field_R == 2) {
-                        var4 = -jl.field_c + id.a(54);
-                        var6 = (int)((10999L - var4) / 1000L);
-                        if (0 < var6) {
-                          return var3;
-                        } else {
-                          var3 = 2;
-                          sc.a(5, (byte) 126, true);
-                          return var3;
-                        }
-                      } else {
-                        return var3;
-                      }
+                    if (-1 != (var3 ^ -1)) {
+                      break L2;
                     } else {
-                      return var3;
-                    }
-                  } else {
-                    if (-1 == var3) {
                       if (v.field_R == 2) {
                         var4 = -jl.field_c + id.a(54);
                         var6 = (int)((10999L - var4) / 1000L);
                         if (0 >= var6) {
                           var3 = 2;
                           sc.a(5, (byte) 126, true);
-                          return var3;
+                          break L2;
                         } else {
                           return var3;
                         }
                       } else {
                         return var3;
                       }
-                    } else {
-                      return var3;
                     }
                   }
-                }
-              } else {
-                L2: {
-                  if (var2 == 0) {
-                    break L2;
-                  } else {
-                    if (v.field_R != -3) {
+                  return var3;
+                } else {
+                  if (var3 == 5) {
+                    L3: {
                       re.c(3);
-                      break L2;
-                    } else {
-                      if (-1 == var3) {
+                      if (-1 != (var3 ^ -1)) {
+                        break L3;
+                      } else {
                         if (v.field_R == 2) {
                           var4 = -jl.field_c + id.a(54);
                           var6 = (int)((10999L - var4) / 1000L);
-                          if (0 < var6) {
-                            return var3;
-                          } else {
+                          if (0 >= var6) {
                             var3 = 2;
                             sc.a(5, (byte) 126, true);
+                            break L3;
+                          } else {
                             return var3;
                           }
                         } else {
                           return var3;
                         }
-                      } else {
-                        return var3;
                       }
+                    }
+                    return var3;
+                  } else {
+                    L4: {
+                      if (-1 != (var3 ^ -1)) {
+                        break L4;
+                      } else {
+                        if (v.field_R == 2) {
+                          var4 = -jl.field_c + id.a(54);
+                          var6 = (int)((10999L - var4) / 1000L);
+                          if (0 >= var6) {
+                            var3 = 2;
+                            sc.a(5, (byte) 126, true);
+                            break L4;
+                          } else {
+                            return var3;
+                          }
+                        } else {
+                          return var3;
+                        }
+                      }
+                    }
+                    return var3;
+                  }
+                }
+              } else {
+                L5: {
+                  if (var2 == 0) {
+                    break L5;
+                  } else {
+                    if ((v.field_R ^ -1) != -3) {
+                      re.c(3);
+                      break L5;
+                    } else {
+                      L6: {
+                        if (-1 != (var3 ^ -1)) {
+                          break L6;
+                        } else {
+                          if (v.field_R == 2) {
+                            var4 = -jl.field_c + id.a(54);
+                            var6 = (int)((10999L - var4) / 1000L);
+                            if (0 >= var6) {
+                              var3 = 2;
+                              sc.a(5, (byte) 126, true);
+                              break L6;
+                            } else {
+                              return var3;
+                            }
+                          } else {
+                            return var3;
+                          }
+                        }
+                      }
+                      return var3;
                     }
                   }
                 }
-                if (-1 == (var3 ^ -1)) {
+                L7: {
+                  if (-1 != (var3 ^ -1)) {
+                    break L7;
+                  } else {
+                    if (v.field_R == 2) {
+                      var4 = -jl.field_c + id.a(54);
+                      var6 = (int)((10999L - var4) / 1000L);
+                      if (0 >= var6) {
+                        var3 = 2;
+                        sc.a(5, (byte) 126, true);
+                        break L7;
+                      } else {
+                        return var3;
+                      }
+                    } else {
+                      return var3;
+                    }
+                  }
+                }
+                return var3;
+              }
+            } else {
+              L8: {
+                if (var2 == 0) {
+                  break L8;
+                } else {
+                  if ((v.field_R ^ -1) != -3) {
+                    re.c(3);
+                    break L8;
+                  } else {
+                    L9: {
+                      if (-1 != (var3 ^ -1)) {
+                        break L9;
+                      } else {
+                        if (v.field_R == 2) {
+                          var4 = -jl.field_c + id.a(54);
+                          var6 = (int)((10999L - var4) / 1000L);
+                          if (0 >= var6) {
+                            var3 = 2;
+                            sc.a(5, (byte) 126, true);
+                            break L9;
+                          } else {
+                            return var3;
+                          }
+                        } else {
+                          return var3;
+                        }
+                      }
+                    }
+                    return var3;
+                  }
+                }
+              }
+              L10: {
+                if (-1 != (var3 ^ -1)) {
+                  break L10;
+                } else {
                   if (v.field_R == 2) {
                     var4 = -jl.field_c + id.a(54);
                     var6 = (int)((10999L - var4) / 1000L);
-                    if (0 < var6) {
-                      return var3;
-                    } else {
+                    if (0 >= var6) {
                       var3 = 2;
                       sc.a(5, (byte) 126, true);
-                      return var3;
-                    }
-                  } else {
-                    return var3;
-                  }
-                } else {
-                  return var3;
-                }
-              }
-            } else {
-              L3: {
-                if (var2 == 0) {
-                  break L3;
-                } else {
-                  if (v.field_R != -3) {
-                    re.c(3);
-                    break L3;
-                  } else {
-                    if (-1 == var3) {
-                      if (v.field_R == 2) {
-                        var4 = -jl.field_c + id.a(54);
-                        var6 = (int)((10999L - var4) / 1000L);
-                        if (0 < var6) {
-                          return var3;
-                        } else {
-                          var3 = 2;
-                          sc.a(5, (byte) 126, true);
-                          return var3;
-                        }
-                      } else {
-                        return var3;
-                      }
+                      break L10;
                     } else {
                       return var3;
                     }
-                  }
-                }
-              }
-              if (-1 == (var3 ^ -1)) {
-                if (v.field_R == 2) {
-                  var4 = -jl.field_c + id.a(54);
-                  var6 = (int)((10999L - var4) / 1000L);
-                  if (0 < var6) {
-                    return var3;
                   } else {
-                    var3 = 2;
-                    sc.a(5, (byte) 126, true);
                     return var3;
                   }
-                } else {
-                  return var3;
                 }
-              } else {
-                return var3;
               }
+              return var3;
             }
           } else {
-            L4: {
+            L11: {
               cg.field_e.b((byte) 76);
               if (cg.field_e.f(-85)) {
                 var1 = 1;
-                break L4;
+                break L11;
               } else {
-                break L4;
+                break L11;
               }
             }
             if (tb.field_d != 13) {

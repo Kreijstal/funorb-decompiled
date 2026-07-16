@@ -180,54 +180,59 @@ final class nd extends lc implements rc {
             var7 = Bounce.field_N;
             if (!oh.field_e) {
               try {
-                var2 = "tuhstatbut";
-                var3 = (String) ac.a(param1, "getcookies", -31185);
-                var4 = di.a(-112, ';', var3);
-                var5 = 0;
-                L0: while (true) {
-                  if (var4.length <= var5) {
-                    break L0;
-                  } else {
-                    L1: {
-                      var6 = var4[var5].indexOf('=');
-                      if ((var6 ^ -1) > -1) {
-                        break L1;
-                      } else {
-                        if (var4[var5].substring(0, var6).trim().equals((Object) (Object) var2)) {
-                          stackOut_7_0 = 1;
-                          stackIn_8_0 = stackOut_7_0;
-                          return stackIn_8_0 != 0;
+                L0: {
+                  var2 = "tuhstatbut";
+                  var3 = (String) ac.a(param1, "getcookies", -31185);
+                  var4 = di.a(-112, ';', var3);
+                  var5 = 0;
+                  L1: while (true) {
+                    if (var4.length <= var5) {
+                      break L0;
+                    } else {
+                      L2: {
+                        var6 = var4[var5].indexOf('=');
+                        if ((var6 ^ -1) > -1) {
+                          break L2;
                         } else {
-                          break L1;
+                          if (var4[var5].substring(0, var6).trim().equals((Object) (Object) var2)) {
+                            stackOut_7_0 = 1;
+                            stackIn_8_0 = stackOut_7_0;
+                            return stackIn_8_0 != 0;
+                          } else {
+                            break L2;
+                          }
                         }
                       }
+                      var5++;
+                      continue L1;
                     }
-                    var5++;
-                    continue L0;
                   }
                 }
               } catch (java.lang.Throwable decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
-                var2_ref = decompiledCaughtException;
+                L3: {
+                  var2_ref = decompiledCaughtException;
+                  break L3;
+                }
               }
-              L2: {
+              L4: {
                 if (!param0) {
-                  break L2;
+                  break L4;
                 } else {
                   var8 = null;
                   boolean discarded$1 = nd.a(true, (java.applet.Applet) null);
-                  break L2;
+                  break L4;
                 }
               }
-              L3: {
+              L5: {
                 if (null == param1.getParameter("tuhstatbut")) {
                   stackOut_16_0 = 0;
                   stackIn_17_0 = stackOut_16_0;
-                  break L3;
+                  break L5;
                 } else {
                   stackOut_15_0 = 1;
                   stackIn_17_0 = stackOut_15_0;
-                  break L3;
+                  break L5;
                 }
               }
               return stackIn_17_0 != 0;

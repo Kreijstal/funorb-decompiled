@@ -13,11 +13,11 @@ final class rh {
     String field_d;
 
     final static java.net.URL a(java.net.URL param0, java.applet.Applet param1, byte param2) {
-        String var4 = null;
-        String var3 = null;
+        Object var4 = null;
+        Object var3 = null;
         if (null != wg.field_p) {
             if (!wg.field_p.equals((Object) (Object) param1.getParameter("settings"))) {
-                var3 = wg.field_p;
+                var3 = (Object) (Object) wg.field_p;
                 var4 = var3;
                 var4 = var3;
             }
@@ -25,13 +25,13 @@ final class rh {
         var4 = null;
         if (null != qn.field_R) {
             if (!(qn.field_R.equals((Object) (Object) param1.getParameter("session")))) {
-                var4 = qn.field_R;
+                var4 = (Object) (Object) qn.field_R;
             }
         }
         if (param2 != -87) {
             return null;
         }
-        return va.a(var3, -148, param0, -1, var4);
+        return va.a((String) var3, -148, param0, -1, (String) var4);
     }
 
     final boolean b(int param0) {

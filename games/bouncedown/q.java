@@ -30,14 +30,17 @@ final class q extends lc implements rf, rc {
         } else {
           var1 = (Object) (Object) qj.field_c;
           synchronized (var1) {
-            qj.field_c = null;
-          }
-          L0: {
-            if (param0 == 8927) {
+            L0: {
+              qj.field_c = null;
               break L0;
+            }
+          }
+          L1: {
+            if (param0 == 8927) {
+              break L1;
             } else {
               field_F = null;
-              break L0;
+              break L1;
             }
           }
           return;
@@ -211,24 +214,27 @@ final class q extends lc implements rf, rc {
         int stackOut_7_0 = 0;
         var1 = (Object) (Object) qj.field_c;
         synchronized (var1) {
-          if (ec.field_bb == oh.field_a) {
-            stackOut_3_0 = 0;
-            stackIn_4_0 = stackOut_3_0;
-            return stackIn_4_0 != 0;
-          } else {
-            L0: {
-              lh.field_f = pf.field_A[oh.field_a];
-              gk.field_d = fk.field_b[oh.field_a];
-              if (param0 == -15) {
-                break L0;
-              } else {
-                field_N = null;
-                break L0;
+          L0: {
+            if (ec.field_bb == oh.field_a) {
+              stackOut_3_0 = 0;
+              stackIn_4_0 = stackOut_3_0;
+              return stackIn_4_0 != 0;
+            } else {
+              L1: {
+                lh.field_f = pf.field_A[oh.field_a];
+                gk.field_d = fk.field_b[oh.field_a];
+                if (param0 == -15) {
+                  break L1;
+                } else {
+                  field_N = null;
+                  break L1;
+                }
               }
+              oh.field_a = 1 + oh.field_a & 127;
+              stackOut_7_0 = 1;
+              stackIn_8_0 = stackOut_7_0;
+              break L0;
             }
-            oh.field_a = 1 + oh.field_a & 127;
-            stackOut_7_0 = 1;
-            stackIn_8_0 = stackOut_7_0;
           }
         }
         return stackIn_8_0 != 0;

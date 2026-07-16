@@ -93,7 +93,7 @@ final class b extends ta {
 
     final void a(byte param0, boolean param1) {
         kq var3 = null;
-        up var4_ref = null;
+        up var4_ref_up = null;
         int var4 = 0;
         pu[] var5_ref_pu__ = null;
         int var5 = 0;
@@ -118,14 +118,14 @@ final class b extends ta {
         L1: {
           var3 = ((b) this).field_L.j((byte) 21);
           if (var3 != null) {
-            var4_ref = ((b) this).field_L.j((byte) 21).field_Eb;
+            var4_ref_up = ((b) this).field_L.j((byte) 21).field_Eb;
             var5_ref_pu__ = ((b) this).field_T;
             var6_int = 0;
             L2: while (true) {
               if (var6_int >= var5_ref_pu__.length) {
                 L3: {
                   if (((b) this).field_Q.field_sb == 1) {
-                    dg.a((byte) -120, -1, ic.field_h.field_q[((b) this).field_L.field_Fb], var4_ref);
+                    dg.a((byte) -120, -1, ic.field_h.field_q[((b) this).field_L.field_Fb], var4_ref_up);
                     break L3;
                   } else {
                     break L3;
@@ -137,7 +137,7 @@ final class b extends ta {
                     break L1;
                   } else {
                     if (1 == ((b) this).field_K[var5].field_sb) {
-                      var6 = pa.field_g[var4_ref.field_h[var5]];
+                      var6 = pa.field_g[var4_ref_up.field_h[var5]];
                       s.c(-1, ic.field_h.field_q[((b) this).field_L.field_Fb], var5, var6.field_k);
                       var5++;
                       continue L4;
@@ -187,7 +187,6 @@ final class b extends ta {
         int var18 = 0;
         int var19 = 0;
         String var20 = null;
-        String var20_ref = null;
         int var21 = 0;
         int var22 = 0;
         pu[] var23 = null;
@@ -478,7 +477,7 @@ final class b extends ta {
                                   }
                                 } else {
                                   if ((var17_int ^ -1) != -2) {
-                                    var20_ref = ql.field_c[var28.field_s];
+                                    var20 = ql.field_c[var28.field_s];
                                     break L15;
                                   } else {
                                     if (var28.field_r) {

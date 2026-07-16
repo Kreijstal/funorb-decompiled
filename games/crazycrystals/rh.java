@@ -46,7 +46,7 @@ final class rh {
 
     final static void a(boolean param0) {
         dl var1 = null;
-        String var2 = null;
+        Object var2 = null;
         int var2_int = 0;
         int var3 = 0;
         int var4 = 0;
@@ -140,11 +140,11 @@ final class rh {
                       }
                     }
                     if (var2 != null) {
-                      var2 = var2 + ", " + var5;
+                      var2 = (Object) (Object) (var2 + ", " + var5);
                       var5++;
                       continue L5;
                     } else {
-                      var2 = Integer.toString(var5);
+                      var2 = (Object) (Object) Integer.toString(var5);
                       var5++;
                       continue L5;
                     }

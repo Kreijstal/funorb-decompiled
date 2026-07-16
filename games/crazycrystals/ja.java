@@ -2,6 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 import java.util.*;
+import java.lang.String;
 
 final class ja extends ff {
     private int field_g;
@@ -409,6 +410,7 @@ final class ja extends ff {
                       if (var8 >= var4) {
                         jj.field_b = (int)Math.floor(-172.5);
                         ((ja) this).field_c = (l) (Object) new ek();
+                        return;
                       } else {
                         kk.field_a[15][m.field_l[var8]] = aj.field_s;
                         kk.field_a[15][m.field_l[var8] - -1] = aj.field_s;
@@ -431,8 +433,9 @@ final class ja extends ff {
                 }
               } else {
                 if (q.field_a[var5].field_b) {
+                  int incrementValue$1 = var4;
                   var4++;
-                  ma.field_n[var4] = var5;
+                  ma.field_n[incrementValue$1] = var5;
                   var5++;
                   continue L2;
                 } else {
@@ -632,8 +635,7 @@ final class ja extends ff {
               }
             }
             L3: {
-              new ba(stackIn_15_5, 50, var2, var3);
-              stackIn_15_1[stackIn_15_2] = (ln) (Object) stackIn_15_3;
+              stackIn_15_1[stackIn_15_2] = (ln) (Object) new ba(stackIn_15_5, 50, var2, var3);
               stackOut_15_0 = (ln[]) (Object) stackIn_15_0;
               stackOut_15_1 = (ln[]) (Object) stackIn_15_0;
               stackOut_15_2 = 4;
@@ -680,8 +682,7 @@ final class ja extends ff {
               }
             }
             L4: {
-              new fn(stackIn_18_5, 50, var2, var3);
-              stackIn_18_1[stackIn_18_2] = (ln) (Object) stackIn_18_3;
+              stackIn_18_1[stackIn_18_2] = (ln) (Object) new fn(stackIn_18_5, 50, var2, var3);
               stackOut_18_0 = (ln[]) (Object) stackIn_18_0;
               stackOut_18_1 = (ln[]) (Object) stackIn_18_0;
               stackOut_18_2 = 5;
@@ -727,8 +728,7 @@ final class ja extends ff {
                 break L4;
               }
             }
-            new fh(stackIn_21_5, 50, var2, var3);
-            stackIn_21_1[stackIn_21_2] = (ln) (Object) stackIn_21_3;
+            stackIn_21_1[stackIn_21_2] = (ln) (Object) new fh(stackIn_21_5, 50, var2, var3);
             stackIn_21_0[6] = (ln) (Object) new le(jn.field_l, 0, var2, var3);
             stackIn_21_0[7] = (ln) (Object) new go(kp.field_l, -100, var2, var3);
             var4 = stackIn_21_0;

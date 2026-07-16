@@ -52,7 +52,7 @@ final class hb extends am {
           }
         }
         L1: {
-          if (param0 + param4 <= ph.field_a) {
+          if ((param0 + param4 ^ -1) >= (ph.field_a ^ -1)) {
             break L1;
           } else {
             param4 = ph.field_a + -param0;
@@ -60,7 +60,7 @@ final class hb extends am {
           }
         }
         L2: {
-          if (param6 >= ph.field_c) {
+          if ((param6 ^ -1) <= (ph.field_c ^ -1)) {
             break L2;
           } else {
             param3 = param3 - (-param6 + ph.field_c);
@@ -69,7 +69,7 @@ final class hb extends am {
           }
         }
         L3: {
-          if (ph.field_h < param3 + param6) {
+          if ((ph.field_h ^ -1) > (param3 + param6 ^ -1)) {
             param3 = -param6 + ph.field_h;
             break L3;
           } else {
@@ -108,7 +108,7 @@ final class hb extends am {
               var15 = var22;
               var16 = param6;
               L6: while (true) {
-                if (var16 >= param6 + param3) {
+                if ((var16 ^ -1) <= (param6 + param3 ^ -1)) {
                   var21.d(-param2.field_v, -param2.field_r);
                   ph.a(var32, var10, var11);
                   ph.a(var30);
@@ -121,65 +121,62 @@ final class hb extends am {
                       var16++;
                       continue L6;
                     } else {
-                      var18 = var31[var13];
-                      if (-1 != var18) {
-                        L8: {
+                      L8: {
+                        var18 = var31[var13];
+                        if (-1 != (var18 ^ -1)) {
                           L9: {
-                            if (var17 <= 0) {
-                              break L9;
-                            } else {
-                              if (-1 == var15[-1 + var13]) {
-                                break L8;
-                              } else {
-                                break L9;
-                              }
-                            }
-                          }
-                          L10: {
-                            if (-1 <= (var16 ^ -1)) {
-                              break L10;
-                            } else {
-                              if (var15[-param2.field_s + var13] == 0) {
-                                break L8;
-                              } else {
+                            L10: {
+                              if (var17 <= 0) {
                                 break L10;
-                              }
-                            }
-                          }
-                          L11: {
-                            if (var17 >= -1 + param2.field_s) {
-                              break L11;
-                            } else {
-                              if (var15[1 + var13] == 0) {
-                                break L8;
                               } else {
-                                break L11;
+                                if (-1 == (var15[-1 + var13] ^ -1)) {
+                                  break L9;
+                                } else {
+                                  break L10;
+                                }
                               }
                             }
-                          }
-                          if (-1 + param2.field_t > var16) {
-                            if (0 == var15[var13 - -param2.field_s]) {
+                            L11: {
+                              if (-1 <= (var16 ^ -1)) {
+                                break L11;
+                              } else {
+                                if ((var15[-param2.field_s + var13] ^ -1) == -1) {
+                                  break L9;
+                                } else {
+                                  break L11;
+                                }
+                              }
+                            }
+                            L12: {
+                              if (var17 >= -1 + param2.field_s) {
+                                break L12;
+                              } else {
+                                if ((var15[1 + var13] ^ -1) == -1) {
+                                  break L9;
+                                } else {
+                                  break L12;
+                                }
+                              }
+                            }
+                            if (-1 + param2.field_t <= var16) {
                               break L8;
                             } else {
-                              var13++;
-                              var17++;
-                              continue L7;
+                              if (0 == var15[var13 - -param2.field_s]) {
+                                break L9;
+                              } else {
+                                break L8;
+                              }
                             }
-                          } else {
-                            var13++;
-                            var17++;
-                            continue L7;
                           }
+                          ph.d(var17, var16, param7, param5);
+                          break L8;
+                        } else {
+                          break L8;
                         }
-                        ph.d(var17, var16, param7, param5);
-                        var13++;
-                        var17++;
-                        continue L7;
-                      } else {
-                        var13++;
-                        var17++;
-                        continue L7;
                       }
+                      var13++;
+                      var17++;
+                      continue L7;
                     }
                   }
                 }
@@ -362,11 +359,11 @@ final class hb extends am {
             ((hb) this).field_z = param0.i(7088);
             break L1;
           } else {
-            if (var4 == -2) {
+            if ((var4 ^ -1) == -2) {
               ((hb) this).field_w = param0.i(param1 ^ 7059);
               break L1;
             } else {
-              if (-3 != var4) {
+              if (-3 != (var4 ^ -1)) {
                 if (var4 != 3) {
                   break L1;
                 } else {

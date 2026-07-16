@@ -29,16 +29,16 @@ final class vf extends i {
         var4 = Kickabout.field_G;
         var2 = -19 / ((param0 - -30) / 34);
         var3 = param1;
-        if (var3 != -33) {
-          if (-161 != var3) {
+        if ((var3 ^ -1) != -33) {
+          if (-161 != (var3 ^ -1)) {
             if (var3 != 95) {
               if ((var3 ^ -1) != -46) {
                 if (var3 != 91) {
-                  if (var3 != -94) {
+                  if ((var3 ^ -1) != -94) {
                     if (var3 != 35) {
-                      if (-225 != var3) {
-                        if (-226 != var3) {
-                          if (-227 != var3) {
+                      if (-225 != (var3 ^ -1)) {
+                        if (-226 != (var3 ^ -1)) {
+                          if (-227 != (var3 ^ -1)) {
                             if (228 != var3) {
                               if ((var3 ^ -1) != -228) {
                                 if (192 != var3) {
@@ -50,21 +50,21 @@ final class vf extends i {
                                             if (var3 != 233) {
                                               if (234 != var3) {
                                                 if (235 != var3) {
-                                                  if (var3 != -201) {
-                                                    if (-202 != var3) {
+                                                  if ((var3 ^ -1) != -201) {
+                                                    if (-202 != (var3 ^ -1)) {
                                                       if (202 != var3) {
-                                                        if (var3 != -204) {
-                                                          if (-238 != var3) {
+                                                        if ((var3 ^ -1) != -204) {
+                                                          if (-238 != (var3 ^ -1)) {
                                                             if ((var3 ^ -1) != -239) {
-                                                              if (var3 != -240) {
-                                                                if (-206 != var3) {
+                                                              if ((var3 ^ -1) != -240) {
+                                                                if (-206 != (var3 ^ -1)) {
                                                                   if ((var3 ^ -1) != -207) {
-                                                                    if (var3 != -208) {
-                                                                      if (-243 != var3) {
-                                                                        if (var3 != -244) {
-                                                                          if (-245 != var3) {
-                                                                            if (-247 != var3) {
-                                                                              if (-246 != var3) {
+                                                                    if ((var3 ^ -1) != -208) {
+                                                                      if (-243 != (var3 ^ -1)) {
+                                                                        if ((var3 ^ -1) != -244) {
+                                                                          if (-245 != (var3 ^ -1)) {
+                                                                            if (-247 != (var3 ^ -1)) {
+                                                                              if (-246 != (var3 ^ -1)) {
                                                                                 if (210 != var3) {
                                                                                   if (-212 != (var3 ^ -1)) {
                                                                                     if (var3 != 212) {
@@ -73,42 +73,51 @@ final class vf extends i {
                                                                                           if ((var3 ^ -1) != -250) {
                                                                                             if ((var3 ^ -1) != -251) {
                                                                                               if (var3 != 251) {
-                                                                                                if ((var3 ^ -1) != -253) {
-                                                                                                  if (var3 != 217) {
-                                                                                                    if (var3 != -219) {
-                                                                                                      if (219 != var3) {
-                                                                                                        if (-221 != var3) {
-                                                                                                          if (-232 != (var3 ^ -1)) {
-                                                                                                            if (199 != var3) {
-                                                                                                              if (255 != var3) {
-                                                                                                                if (var3 != 376) {
-                                                                                                                  if (241 != var3) {
-                                                                                                                    if (209 != var3) {
-                                                                                                                      if (var3 == 223) {
-                                                                                                                        return 'b';
-                                                                                                                      } else {
-                                                                                                                        return Character.toLowerCase(param1);
-                                                                                                                      }
-                                                                                                                    } else {
-                                                                                                                      return 'n';
-                                                                                                                    }
-                                                                                                                  } else {
-                                                                                                                    return 'n';
-                                                                                                                  }
-                                                                                                                } else {
-                                                                                                                  return 'y';
-                                                                                                                }
+                                                                                                L0: {
+                                                                                                  if ((var3 ^ -1) == -253) {
+                                                                                                    break L0;
+                                                                                                  } else {
+                                                                                                    if (var3 != 217) {
+                                                                                                      if ((var3 ^ -1) != -219) {
+                                                                                                        if (219 == var3) {
+                                                                                                          break L0;
+                                                                                                        } else {
+                                                                                                          if (-221 == (var3 ^ -1)) {
+                                                                                                            break L0;
+                                                                                                          } else {
+                                                                                                            if (-232 != (var3 ^ -1)) {
+                                                                                                              if (199 == var3) {
+                                                                                                                return 'c';
                                                                                                               } else {
+                                                                                                                L1: {
+                                                                                                                  if (255 == var3) {
+                                                                                                                    break L1;
+                                                                                                                  } else {
+                                                                                                                    if (var3 == 376) {
+                                                                                                                      break L1;
+                                                                                                                    } else {
+                                                                                                                      if (241 != var3) {
+                                                                                                                        if (209 == var3) {
+                                                                                                                          return 'n';
+                                                                                                                        } else {
+                                                                                                                          if (var3 != 223) {
+                                                                                                                            return Character.toLowerCase(param1);
+                                                                                                                          } else {
+                                                                                                                            return 'b';
+                                                                                                                          }
+                                                                                                                        }
+                                                                                                                      } else {
+                                                                                                                        return 'n';
+                                                                                                                      }
+                                                                                                                    }
+                                                                                                                  }
+                                                                                                                }
                                                                                                                 return 'y';
                                                                                                               }
                                                                                                             } else {
                                                                                                               return 'c';
                                                                                                             }
-                                                                                                          } else {
-                                                                                                            return 'c';
                                                                                                           }
-                                                                                                        } else {
-                                                                                                          return 'u';
                                                                                                         }
                                                                                                       } else {
                                                                                                         return 'u';
@@ -116,12 +125,9 @@ final class vf extends i {
                                                                                                     } else {
                                                                                                       return 'u';
                                                                                                     }
-                                                                                                  } else {
-                                                                                                    return 'u';
                                                                                                   }
-                                                                                                } else {
-                                                                                                  return 'u';
                                                                                                 }
+                                                                                                return 'u';
                                                                                               } else {
                                                                                                 return 'u';
                                                                                               }

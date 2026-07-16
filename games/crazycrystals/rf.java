@@ -1,6 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
+import java.net.URL;
+
 class rf extends pc {
     private fo field_D;
     private wb field_B;
@@ -17,7 +19,7 @@ class rf extends pc {
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
-        fo var10 = null;
+        Object var10 = null;
         int var11 = 0;
         bh var12 = null;
         int var13 = 0;
@@ -87,12 +89,12 @@ class rf extends pc {
                   if (var10 == null) {
                     break L4;
                   } else {
-                    var10.field_k = var15;
+                    ((fo) var10).field_k = var15;
                     break L4;
                   }
                 }
                 ((rf) this).field_B.b(0, (jb) (Object) var15);
-                var10 = var15;
+                var10 = (Object) (Object) var15;
                 var11++;
                 continue L1;
               }
@@ -325,12 +327,18 @@ class rf extends pc {
                 }
               }
               try {
-                stackOut_40_0 = new java.net.URL(param4, var7.toString());
-                stackIn_41_0 = stackOut_40_0;
-              } catch (java.lang.Exception decompiledCaughtParameter) {
-                decompiledCaughtException = decompiledCaughtParameter;
-                return stackIn_41_0;
+                L10: {
+                  stackOut_40_0 = new java.net.URL(param4, var7.toString());
+                  stackIn_41_0 = stackOut_40_0;
+                  break L10;
+                }
+              } catch (java.lang.Exception decompiledCaughtParameter0) {
+                decompiledCaughtException = decompiledCaughtParameter0;
+                var8 = (Exception) (Object) decompiledCaughtException;
+                var8.printStackTrace();
+                return param4;
               }
+              return stackIn_41_0;
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -369,24 +377,51 @@ class rf extends pc {
     }
 
     final void a(int param0, String param1, int param2) {
-        String[] var7 = null;
         String[] var4 = null;
         int var5 = 0;
-        int var6 = CrazyCrystals.field_B;
-        if (param0 != 47) {
+        int var6 = 0;
+        String[] var7 = null;
+        L0: {
+          var6 = CrazyCrystals.field_B;
+          if (param0 == 47) {
+            break L0;
+          } else {
             ((rf) this).field_B = null;
+            break L0;
+          }
         }
-        if (null != ((rf) this).field_F) {
-            // if_icmpge L42
-        } else {
+        L1: {
+          L2: {
+            if (null == ((rf) this).field_F) {
+              break L2;
+            } else {
+              if (param2 >= ((rf) this).field_F.length) {
+                break L2;
+              } else {
+                break L1;
+              }
+            }
+          }
+          L3: {
             var7 = new String[1 + param2];
             var4 = var7;
-            if (!(((rf) this).field_F == null)) {
-                for (var5 = 0; var5 < ((rf) this).field_F.length; var5++) {
-                    var7[var5] = ((rf) this).field_F[var5];
+            if (((rf) this).field_F != null) {
+              var5 = 0;
+              L4: while (true) {
+                if (var5 >= ((rf) this).field_F.length) {
+                  break L3;
+                } else {
+                  var7[var5] = ((rf) this).field_F[var5];
+                  var5++;
+                  continue L4;
                 }
+              }
+            } else {
+              break L3;
             }
-            ((rf) this).field_F = var4;
+          }
+          ((rf) this).field_F = var4;
+          break L1;
         }
         ((rf) this).field_F[param2] = param1;
     }

@@ -317,6 +317,7 @@ final class md {
                       }
                     }
                   } else {
+                    return;
                   }
                 }
               } else {

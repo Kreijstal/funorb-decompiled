@@ -26,8 +26,9 @@ final class pq extends i {
             L0: {
               bg.field_r = param1;
               or.field_d.b(54, (byte) 89);
+              int fieldTemp$2 = or.field_d.field_n + 1;
               or.field_d.field_n = or.field_d.field_n + 1;
-              var3 = or.field_d.field_n + 1;
+              var3 = fieldTemp$2;
               or.field_d.a(param1, (byte) -127);
               or.field_d.a(102, param0);
               or.field_d.c(62, -var3 + or.field_d.field_n);

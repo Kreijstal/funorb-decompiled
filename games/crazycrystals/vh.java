@@ -150,7 +150,7 @@ final class vh {
         }
         if (param1 == 10718) {
           L9: {
-            if (param0 != -13) {
+            if ((param0 ^ -1) != -13) {
               break L9;
             } else {
               var5 = -1;
@@ -159,7 +159,7 @@ final class vh {
             }
           }
           L10: {
-            if (-14 == param0) {
+            if (-14 == (param0 ^ -1)) {
               var5 = -1;
               var4 = 1;
               break L10;

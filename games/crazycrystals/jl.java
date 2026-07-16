@@ -271,70 +271,49 @@ final class jl {
     final static void b(int param0) {
         try {
             Exception var1 = null;
-            int statePc = 0;
-            Throwable caughtException = null;
-            stateLoop: while (true) {
-                switch (statePc) {
-                    case 0: {
-                        if (fp.field_e == null) {
-                            statePc = 6;
-                        } else {
-                            statePc = 1;
-                        }
-                        continue stateLoop;
-                    }
-                    case 1: {
-                        try {
-                            fp.field_e.a(0L, -1);
-                            fp.field_e.a(126, kd.field_n.field_h, kd.field_n.field_f, 24);
-                            statePc = 2;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_1) {
-                            caughtException = stateCaught_1;
-                            statePc = 5;
-                            continue stateLoop;
-                        }
-                    }
-                    case 2: {
-                        kd.field_n.field_f = kd.field_n.field_f + 24;
-                        if (param0 > 26) {
-                            statePc = 4;
-                        } else {
-                            statePc = 3;
-                        }
-                        continue stateLoop;
-                    }
-                    case 3: {
-                        field_b = null;
-                        statePc = 4;
-                        continue stateLoop;
-                    }
-                    case 4: {
-                        return;
-                    }
-                    case 5: {
-                        var1 = (Exception) (Object) caughtException;
-                        statePc = 6;
-                        continue stateLoop;
-                    }
-                    case 6: {
-                        kd.field_n.field_f = kd.field_n.field_f + 24;
-                        if (param0 <= 26) {
-                            statePc = 8;
-                        } else {
-                            statePc = 7;
-                        }
-                        continue stateLoop;
-                    }
-                    case 7: {
-                        return;
-                    }
-                    case 8: {
-                        field_b = null;
-                        return;
-                    }
-                    default: throw new IllegalStateException("invalid CFG state " + statePc);
+            int decompiledRegionSelector0 = 0;
+            Throwable decompiledCaughtException = null;
+            L0: {
+              if (fp.field_e == null) {
+                break L0;
+              } else {
+                try {
+                  L1: {
+                    fp.field_e.a(0L, -1);
+                    fp.field_e.a(126, kd.field_n.field_h, kd.field_n.field_f, 24);
+                    decompiledRegionSelector0 = 0;
+                    break L1;
+                  }
+                } catch (java.lang.Exception decompiledCaughtParameter0) {
+                  decompiledCaughtException = decompiledCaughtParameter0;
+                  L2: {
+                    var1 = (Exception) (Object) decompiledCaughtException;
+                    decompiledRegionSelector0 = 1;
+                    break L2;
+                  }
                 }
+                if (decompiledRegionSelector0 == 0) {
+                  L3: {
+                    kd.field_n.field_f = kd.field_n.field_f + 24;
+                    if (param0 > 26) {
+                      break L3;
+                    } else {
+                      field_b = null;
+                      break L3;
+                    }
+                  }
+                  return;
+                } else {
+                  break L0;
+                }
+              }
+            }
+            kd.field_n.field_f = kd.field_n.field_f + 24;
+            if (param0 <= 26) {
+              field_b = null;
+              return;
+            } else {
+              return;
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;

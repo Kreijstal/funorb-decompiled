@@ -46,7 +46,7 @@ final class hb extends jb {
           }
         }
         L2: {
-          if (kh.field_b > param2) {
+          if ((kh.field_b ^ -1) < (param2 ^ -1)) {
             param1 = param1 - (-param2 + kh.field_b);
             param2 = kh.field_b;
             break L2;
@@ -63,10 +63,10 @@ final class hb extends jb {
           }
         }
         L4: {
-          if (param3 >= -1) {
+          if ((param3 ^ -1) >= -1) {
             break L4;
           } else {
-            if (-1 >= param1) {
+            if (-1 <= (param1 ^ -1)) {
               break L4;
             } else {
               var21 = param4.d();
@@ -87,7 +87,7 @@ final class hb extends jb {
                 var15 = var22;
                 var16 = param2;
                 L5: while (true) {
-                  if (var16 >= param2 + param1) {
+                  if ((var16 ^ -1) <= (param2 + param1 ^ -1)) {
                     var21.a(-param4.field_v, -param4.field_t);
                     kh.a(var32, var10, var11);
                     kh.a(var30);
@@ -95,19 +95,20 @@ final class hb extends jb {
                   } else {
                     var17 = param7;
                     L6: while (true) {
-                      if (param3 + param7 <= var17) {
+                      if ((param3 + param7 ^ -1) >= (var17 ^ -1)) {
                         var13 = var13 + var14;
                         var16++;
                         continue L5;
                       } else {
-                        var18 = var31[var13];
-                        if (-1 != (var18 ^ -1)) {
-                          L7: {
+                        L7: {
+                          var18 = var31[var13];
+                          if (-1 != (var18 ^ -1)) {
                             L8: {
                               if (var17 <= 0) {
                                 break L8;
                               } else {
-                                if (var15[var13 + -1] == 0) {
+                                if ((var15[var13 + -1] ^ -1) == -1) {
+                                  kh.b(var17, var16, param0, param6);
                                   break L7;
                                 } else {
                                   break L8;
@@ -119,6 +120,7 @@ final class hb extends jb {
                                 break L9;
                               } else {
                                 if (0 == var15[-param4.field_l + var13]) {
+                                  kh.b(var17, var16, param0, param6);
                                   break L7;
                                 } else {
                                   break L9;
@@ -126,39 +128,34 @@ final class hb extends jb {
                               }
                             }
                             L10: {
-                              if (var17 >= param4.field_l - 1) {
+                              if ((var17 ^ -1) <= (param4.field_l - 1 ^ -1)) {
                                 break L10;
                               } else {
                                 if (-1 == (var15[1 + var13] ^ -1)) {
+                                  kh.b(var17, var16, param0, param6);
                                   break L7;
                                 } else {
                                   break L10;
                                 }
                               }
                             }
-                            if (-1 + param4.field_u > var16) {
-                              if (var15[var13 - -param4.field_l] == 0) {
+                            if ((-1 + param4.field_u ^ -1) >= (var16 ^ -1)) {
+                              break L7;
+                            } else {
+                              if ((var15[var13 - -param4.field_l] ^ -1) != -1) {
                                 break L7;
                               } else {
-                                var13++;
-                                var17++;
-                                continue L6;
+                                kh.b(var17, var16, param0, param6);
+                                break L7;
                               }
-                            } else {
-                              var13++;
-                              var17++;
-                              continue L6;
                             }
+                          } else {
+                            break L7;
                           }
-                          kh.b(var17, var16, param0, param6);
-                          var13++;
-                          var17++;
-                          continue L6;
-                        } else {
-                          var13++;
-                          var17++;
-                          continue L6;
                         }
+                        var13++;
+                        var17++;
+                        continue L6;
                       }
                     }
                   }

@@ -187,10 +187,9 @@ abstract class op {
     final static void a(int[] param0, int param1, int[] param2, int param3, int[] param4, byte param5, int param6, int[] param7, int[] param8, byte param9, int[] param10) {
         int var11 = 0;
         int var12 = 0;
-        ro var13 = null;
+        Object var13 = null;
         ro var14 = null;
         ro var15 = null;
-        ro var15_ref = null;
         int var16 = 0;
         int var17 = 0;
         ro var18 = null;
@@ -229,12 +228,12 @@ abstract class op {
               var15 = var19;
               var15 = var19;
               var18.a((byte) 60, var19);
-              if (-1 != param9) {
+              if (-1 != (param9 ^ -1)) {
                 break L3;
               } else {
-                if (-1 == param5) {
+                if (-1 == (param5 ^ -1)) {
                   var20 = hr.field_c[-1 + param1];
-                  var13 = var20;
+                  var13 = (Object) (Object) var20;
                   var20.a((byte) 60, var18);
                   var18.a(var20, -16875);
                   break L3;
@@ -248,7 +247,7 @@ abstract class op {
                 if (param9 != 0) {
                   break L5;
                 } else {
-                  if (param5 != 0) {
+                  if ((param5 ^ -1) != -1) {
                     break L5;
                   } else {
                     stackOut_13_0 = param1 + 1;
@@ -269,25 +268,25 @@ abstract class op {
               } else {
                 L7: {
                   if (param1 > var17) {
-                    var15_ref = hr.field_c[var17];
+                    var15 = hr.field_c[var17];
                     break L7;
                   } else {
-                    var15_ref = hr.field_c[var17 % param1];
+                    var15 = hr.field_c[var17 % param1];
                     break L7;
                   }
                 }
                 L8: {
                   if (param1 > 1 + var17) {
-                    var15_ref.a((byte) 60, hr.field_c[1 + var17]);
-                    var15_ref.a(var14, -16875);
+                    var15.a((byte) 60, hr.field_c[1 + var17]);
+                    var15.a(var14, -16875);
                     break L8;
                   } else {
                     if (0 != param9) {
                       break L8;
                     } else {
                       if (param5 == 0) {
-                        var15_ref.a((byte) 60, hr.field_c[0]);
-                        var15_ref.a(var14, param3 ^ -16876);
+                        var15.a((byte) 60, hr.field_c[0]);
+                        var15.a(var14, param3 ^ -16876);
                         break L8;
                       } else {
                         break L8;
@@ -296,17 +295,17 @@ abstract class op {
                   }
                 }
                 L9: {
-                  if (var14.b(var15_ref, 24)) {
+                  if (var14.b(var15, 24)) {
                     break L9;
                   } else {
                     L10: {
-                      if ((var14.field_r & 240) == 0) {
+                      if ((var14.field_r & 240 ^ -1) == -1) {
                         L11: {
                           L12: {
-                            if (var15_ref.field_i != 0) {
+                            if (var15.field_i != 0) {
                               break L12;
                             } else {
-                              if (0 == var15_ref.field_k) {
+                              if (0 == var15.field_k) {
                                 ne.field_q = var14.field_f;
                                 di.field_h = var14.field_m;
                                 break L11;
@@ -315,8 +314,8 @@ abstract class op {
                               }
                             }
                           }
-                          ne.field_q = var15_ref.field_i;
-                          di.field_h = var15_ref.field_k;
+                          ne.field_q = var15.field_i;
+                          di.field_h = var15.field_k;
                           break L11;
                         }
                         var12 = 0;
@@ -347,8 +346,8 @@ abstract class op {
                     break L9;
                   }
                 }
-                var13 = var14;
-                var14 = var15_ref;
+                var13 = (Object) (Object) var14;
+                var14 = var15;
                 var17++;
                 continue L6;
               }
@@ -362,35 +361,61 @@ abstract class op {
     }
 
     final int a(int param0, int param1, int param2) {
+        int var4 = 0;
         int var5 = 0;
         vj var6 = null;
         int var7 = 0;
-        int var8 = Pool.field_O;
-        if (((op) this).field_b != null) {
-            // if_icmpeq L39
-            // if_icmpgt L39
-        } else {
-            return -1;
-        }
-        if (((op) this).field_b[param2 + ((op) this).field_b.length].field_i < param0) {
-            return -1;
-        }
-        if (!(-2 != (((op) this).field_b.length ^ -1))) {
-            return ((op) this).field_b[0].a(-109, param1);
-        }
-        int var4 = 0;
-        for (var5 = 0; ((op) this).field_b.length > var5; var5++) {
-            var6 = ((op) this).field_b[var5];
-            if (param0 >= var6.field_e) {
-                if (var6.field_i >= param0) {
-                    var7 = var6.a(-111, param1);
-                    if (var7 == -1) {
+        int var8 = 0;
+        L0: {
+          var8 = Pool.field_O;
+          if (((op) this).field_b == null) {
+            break L0;
+          } else {
+            if (-1 == (((op) this).field_b.length ^ -1)) {
+              break L0;
+            } else {
+              if (((op) this).field_b[0].field_e > param0) {
+                break L0;
+              } else {
+                if (((op) this).field_b[param2 + ((op) this).field_b.length].field_i >= param0) {
+                  if (-2 == (((op) this).field_b.length ^ -1)) {
+                    return ((op) this).field_b[0].a(-109, param1);
+                  } else {
+                    var4 = 0;
+                    var5 = 0;
+                    L1: while (true) {
+                      if (((op) this).field_b.length <= var5) {
                         return -1;
+                      } else {
+                        L2: {
+                          var6 = ((op) this).field_b[var5];
+                          if (param0 < var6.field_e) {
+                            break L2;
+                          } else {
+                            if (var6.field_i < param0) {
+                              break L2;
+                            } else {
+                              var7 = var6.a(-111, param1);
+                              if (var7 != -1) {
+                                return var7 + var4;
+                              } else {
+                                return -1;
+                              }
+                            }
+                          }
+                        }
+                        var4 = var4 + (-1 + var6.field_h.length);
+                        var5++;
+                        continue L1;
+                      }
                     }
-                    return var7 + var4;
+                  }
+                } else {
+                  return -1;
                 }
+              }
             }
-            var4 = var4 + (-1 + var6.field_h.length);
+          }
         }
         return -1;
     }

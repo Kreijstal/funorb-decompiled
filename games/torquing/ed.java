@@ -167,8 +167,9 @@ final class ed {
             continue L0;
           } else {
             L2: while (true) {
+              int incrementValue$4 = var1;
               var1--;
-              if (0 < var1) {
+              if (0 < incrementValue$4) {
                 sn.b((byte) 88);
                 continue L2;
               } else {

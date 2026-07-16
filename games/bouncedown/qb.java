@@ -17,22 +17,26 @@ final class qb {
         if (((qb) this).field_b != 0) {
           if (param0 != 123) {
             ((qb) this).field_b = 27;
+            int fieldTemp$4 = ((qb) this).field_b - 1;
             ((qb) this).field_b = ((qb) this).field_b - 1;
-            return ((qb) this).field_f[((qb) this).field_b - 1];
+            return ((qb) this).field_f[fieldTemp$4];
           } else {
+            int fieldTemp$5 = ((qb) this).field_b - 1;
             ((qb) this).field_b = ((qb) this).field_b - 1;
-            return ((qb) this).field_f[((qb) this).field_b - 1];
+            return ((qb) this).field_f[fieldTemp$5];
           }
         } else {
           this.a(4094);
           ((qb) this).field_b = 256;
           if (param0 == 123) {
+            int fieldTemp$6 = ((qb) this).field_b - 1;
             ((qb) this).field_b = ((qb) this).field_b - 1;
-            return ((qb) this).field_f[((qb) this).field_b - 1];
+            return ((qb) this).field_f[fieldTemp$6];
           } else {
             ((qb) this).field_b = 27;
+            int fieldTemp$7 = ((qb) this).field_b - 1;
             ((qb) this).field_b = ((qb) this).field_b - 1;
-            return ((qb) this).field_f[((qb) this).field_b - 1];
+            return ((qb) this).field_f[fieldTemp$7];
           }
         }
     }
@@ -46,13 +50,13 @@ final class qb {
         if (var1 != 10) {
           if (param0) {
             var2 = ne.field_w;
-            if (var2 == 0) {
+            if ((var2 ^ -1) == -1) {
               return 0;
             } else {
-              if (var2 != -2) {
+              if ((var2 ^ -1) != -2) {
                 if (var2 != 2) {
-                  if (-4 == var2) {
-                    if (-8 >= var1) {
+                  if (-4 == (var2 ^ -1)) {
+                    if (-8 <= (var1 ^ -1)) {
                       if (-2 == (var1 ^ -1)) {
                         return 2;
                       } else {
@@ -82,8 +86,10 @@ final class qb {
                       return 1;
                     }
                   } else {
-                    if (var2 != 4) {
-                      if (var2 == -6) {
+                    if (var2 == 4) {
+                      return var1 % 2 + 3;
+                    } else {
+                      if ((var2 ^ -1) == -6) {
                         if (var1 > 2) {
                           return 2;
                         } else {
@@ -92,15 +98,15 @@ final class qb {
                       } else {
                         if (var2 != 6) {
                           if (var2 != 7) {
-                            if (8 != var2) {
-                              if (-10 != var2) {
+                            if (8 == var2) {
+                              return (int)(Math.random() * 4.0);
+                            } else {
+                              if (-10 != (var2 ^ -1)) {
                                 return 0;
                               } else {
                                 ne.field_w = 0;
                                 return 0;
                               }
-                            } else {
-                              return (int)(Math.random() * 4.0);
                             }
                           } else {
                             return 2;
@@ -113,13 +119,11 @@ final class qb {
                           }
                         }
                       }
-                    } else {
-                      return var1 % 2 + 3;
                     }
                   }
                 } else {
                   L0: {
-                    if (var1 >= -4) {
+                    if ((var1 ^ -1) >= -4) {
                       break L0;
                     } else {
                       if (7 < var1) {
@@ -146,42 +150,46 @@ final class qb {
           } else {
             field_g = null;
             var2 = ne.field_w;
-            if (var2 != 0) {
-              if (var2 != -2) {
+            if ((var2 ^ -1) == -1) {
+              return 0;
+            } else {
+              if ((var2 ^ -1) != -2) {
                 if (var2 != 2) {
-                  if (-4 == var2) {
-                    if (-8 <= var1) {
-                      if (-2 != var1) {
+                  if (-4 == (var2 ^ -1)) {
+                    if (-8 <= (var1 ^ -1)) {
+                      if (-2 == (var1 ^ -1)) {
+                        return 2;
+                      } else {
                         if (2 != var1) {
-                          if ((var1 ^ -1) != -4) {
+                          if ((var1 ^ -1) == -4) {
+                            return 3;
+                          } else {
                             if (var1 != 4) {
-                              if (var1 != 5) {
+                              if (var1 == 5) {
+                                return 4;
+                              } else {
                                 if (var1 != 6) {
                                   return 0;
                                 } else {
                                   return 4;
                                 }
-                              } else {
-                                return 4;
                               }
                             } else {
                               return 3;
                             }
-                          } else {
-                            return 3;
                           }
                         } else {
                           return 2;
                         }
-                      } else {
-                        return 2;
                       }
                     } else {
                       return 1;
                     }
                   } else {
-                    if (var2 != 4) {
-                      if (var2 == -6) {
+                    if (var2 == 4) {
+                      return var1 % 2 + 3;
+                    } else {
+                      if ((var2 ^ -1) == -6) {
                         if (var1 > 2) {
                           return 2;
                         } else {
@@ -190,59 +198,55 @@ final class qb {
                       } else {
                         if (var2 != 6) {
                           if (var2 != 7) {
-                            if (8 != var2) {
-                              if (-10 == var2) {
-                                ne.field_w = 0;
+                            if (8 == var2) {
+                              return (int)(Math.random() * 4.0);
+                            } else {
+                              if (-10 != (var2 ^ -1)) {
                                 return 0;
                               } else {
+                                ne.field_w = 0;
                                 return 0;
                               }
-                            } else {
-                              return (int)(Math.random() * 4.0);
                             }
                           } else {
                             return 2;
                           }
                         } else {
-                          if (var1 > 3) {
-                            return 1;
-                          } else {
+                          if (var1 <= 3) {
                             return 2;
+                          } else {
+                            return 1;
                           }
                         }
                       }
-                    } else {
-                      return var1 % 2 + 3;
                     }
                   }
                 } else {
                   if ((var1 ^ -1) < -4) {
-                    if (7 < var1) {
-                      if (7 < var1) {
-                        return 2;
-                      } else {
-                        return 0;
-                      }
-                    } else {
+                    if (7 >= var1) {
                       return 1;
+                    } else {
+                      if (7 >= var1) {
+                        return 0;
+                      } else {
+                        return 2;
+                      }
                     }
                   } else {
-                    if (7 < var1) {
-                      return 2;
-                    } else {
+                    if (7 >= var1) {
                       return 0;
+                    } else {
+                      return 2;
                     }
                   }
                 }
               } else {
-                if (6 < var1) {
-                  return 1;
-                } else {
+                if (6 >= var1) {
                   return 0;
+                } else {
+                  return 1;
                 }
               }
-            } else {
-              return 0;
             }
           }
         } else {
@@ -278,50 +282,57 @@ final class qb {
                 return false;
               } else {
                 try {
-                  var2_int = dh.field_a.d(param1 ^ param1);
-                  if (0 < var2_int) {
-                    L0: {
-                      if (-jc.field_g.field_h + param0 < var2_int) {
-                        var2_int = -jc.field_g.field_h + param0;
-                        break L0;
-                      } else {
-                        break L0;
-                      }
-                    }
-                    dh.field_a.a(jc.field_g.field_i, true, var2_int, jc.field_g.field_h);
-                    qe.field_k = fa.a(-96);
-                    jc.field_g.field_h = jc.field_g.field_h + var2_int;
-                    if (jc.field_g.field_h < param0) {
-                      stackOut_13_0 = 0;
-                      stackIn_14_0 = stackOut_13_0;
-                      return stackIn_14_0 != 0;
-                    } else {
-                      jc.field_g.field_h = 0;
-                      stackOut_15_0 = 1;
-                      stackIn_16_0 = stackOut_15_0;
-                      return stackIn_16_0 != 0;
-                    }
-                  } else {
-                    L1: {
-                      if (var2_int < 0) {
-                        kc.a((byte) 18);
-                        break L1;
-                      } else {
-                        if (ph.a((byte) -111) <= 30000L) {
-                          decompiledRegionSelector0 = 0;
+                  L0: {
+                    var2_int = dh.field_a.d(param1 ^ param1);
+                    if (0 < var2_int) {
+                      L1: {
+                        if (-jc.field_g.field_h + param0 < var2_int) {
+                          var2_int = -jc.field_g.field_h + param0;
+                          break L1;
                         } else {
-                          kc.a((byte) 18);
                           break L1;
                         }
                       }
+                      dh.field_a.a(jc.field_g.field_i, true, var2_int, jc.field_g.field_h);
+                      qe.field_k = fa.a(-96);
+                      jc.field_g.field_h = jc.field_g.field_h + var2_int;
+                      if (jc.field_g.field_h < param0) {
+                        stackOut_13_0 = 0;
+                        stackIn_14_0 = stackOut_13_0;
+                        return stackIn_14_0 != 0;
+                      } else {
+                        jc.field_g.field_h = 0;
+                        stackOut_15_0 = 1;
+                        stackIn_16_0 = stackOut_15_0;
+                        return stackIn_16_0 != 0;
+                      }
+                    } else {
+                      L2: {
+                        if (var2_int < 0) {
+                          kc.a((byte) 18);
+                          break L2;
+                        } else {
+                          if (ph.a((byte) -111) <= 30000L) {
+                            decompiledRegionSelector0 = 0;
+                            break L0;
+                          } else {
+                            kc.a((byte) 18);
+                            break L2;
+                          }
+                        }
+                      }
+                      decompiledRegionSelector0 = 1;
+                      break L0;
                     }
-                    decompiledRegionSelector0 = 1;
                   }
                 } catch (java.io.IOException decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
-                  var2 = (IOException) (Object) decompiledCaughtException;
-                  kc.a((byte) 18);
-                  decompiledRegionSelector0 = 1;
+                  L3: {
+                    var2 = (IOException) (Object) decompiledCaughtException;
+                    kc.a((byte) 18);
+                    decompiledRegionSelector0 = 1;
+                    break L3;
+                  }
                 }
                 if (decompiledRegionSelector0 == 0) {
                   return false;
@@ -397,12 +408,13 @@ final class qb {
         int var5 = 0;
         Object var6 = null;
         var5 = Bounce.field_N;
+        int fieldTemp$6 = ((qb) this).field_a + 1;
         ((qb) this).field_a = ((qb) this).field_a + 1;
-        ((qb) this).field_e = ((qb) this).field_e + (((qb) this).field_a + 1);
+        ((qb) this).field_e = ((qb) this).field_e + fieldTemp$6;
         var2 = 0;
         if (param0 != 4094) {
           var6 = null;
-          boolean discarded$1 = qb.a(-56, (String) null, (String) null);
+          boolean discarded$7 = qb.a(-56, (String) null, (String) null);
           L0: while (true) {
             if (-257 < (var2 ^ -1)) {
               L1: {
@@ -426,10 +438,12 @@ final class qb {
                 }
               }
               ((qb) this).field_d = ((qb) this).field_d + ((qb) this).field_c[255 & var2 - -128];
-              var4 = ((qb) this).field_e + ((qb) this).field_c[da.b(1020, var3) >> 839191426] - -((qb) this).field_d;
-              ((qb) this).field_c[var2] = ((qb) this).field_e + ((qb) this).field_c[da.b(1020, var3) >> 839191426] - -((qb) this).field_d;
-              ((qb) this).field_e = ((qb) this).field_c[da.b(255, var4 >> -2116620216 >> -963449630)] - -var3;
-              ((qb) this).field_f[var2] = ((qb) this).field_c[da.b(255, var4 >> -2116620216 >> -963449630)] - -var3;
+              int dupTemp$8 = ((qb) this).field_e + ((qb) this).field_c[da.b(1020, var3) >> 839191426] - -((qb) this).field_d;
+              var4 = dupTemp$8;
+              ((qb) this).field_c[var2] = dupTemp$8;
+              int dupTemp$9 = ((qb) this).field_c[da.b(255, var4 >> -2116620216 >> -963449630)] - -var3;
+              ((qb) this).field_e = dupTemp$9;
+              ((qb) this).field_f[var2] = dupTemp$9;
               var2++;
               continue L0;
             } else {
@@ -460,10 +474,12 @@ final class qb {
                 }
               }
               ((qb) this).field_d = ((qb) this).field_d + ((qb) this).field_c[255 & var2 - -128];
-              var4 = ((qb) this).field_e + ((qb) this).field_c[da.b(1020, var3) >> 839191426] - -((qb) this).field_d;
-              ((qb) this).field_c[var2] = ((qb) this).field_e + ((qb) this).field_c[da.b(1020, var3) >> 839191426] - -((qb) this).field_d;
-              ((qb) this).field_e = ((qb) this).field_c[da.b(255, var4 >> -2116620216 >> -963449630)] - -var3;
-              ((qb) this).field_f[var2] = ((qb) this).field_c[da.b(255, var4 >> -2116620216 >> -963449630)] - -var3;
+              int dupTemp$10 = ((qb) this).field_e + ((qb) this).field_c[da.b(1020, var3) >> 839191426] - -((qb) this).field_d;
+              var4 = dupTemp$10;
+              ((qb) this).field_c[var2] = dupTemp$10;
+              int dupTemp$11 = ((qb) this).field_c[da.b(255, var4 >> -2116620216 >> -963449630)] - -var3;
+              ((qb) this).field_e = dupTemp$11;
+              ((qb) this).field_f[var2] = dupTemp$11;
               var2++;
               continue L2;
             } else {

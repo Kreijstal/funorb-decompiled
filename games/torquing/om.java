@@ -15,7 +15,6 @@ final class om {
 
     final int[][] a(int param0, int param1) {
         ka var3 = null;
-        ka var3_ref = null;
         ka var4 = null;
         int var5 = 0;
         Object stackIn_4_0 = null;
@@ -71,23 +70,23 @@ final class om {
                   L2: {
                     ((om) this).field_b = true;
                     if (((om) this).field_i < ((om) this).field_g) {
-                      var3_ref = new ka(param1, ((om) this).field_i);
+                      var3 = new ka(param1, ((om) this).field_i);
                       ((om) this).field_i = ((om) this).field_i + 1;
                       break L2;
                     } else {
                       var4 = (ka) (Object) ((om) this).field_a.c(-6938);
-                      var3_ref = new ka(param1, var4.field_k);
+                      var3 = new ka(param1, var4.field_k);
                       ((om) this).field_j[var4.field_m] = null;
                       var4.f(param0 + -15142);
                       break L2;
                     }
                   }
-                  ((om) this).field_j[param1] = var3_ref;
+                  ((om) this).field_j[param1] = var3;
                   break L1;
                 }
               }
-              ((om) this).field_a.b((byte) 68, (q) (Object) var3_ref);
-              return ((om) this).field_d[var3_ref.field_k];
+              ((om) this).field_a.b((byte) 68, (q) (Object) var3);
+              return ((om) this).field_d[var3.field_k];
             }
           } else {
             L3: {

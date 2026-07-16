@@ -212,17 +212,40 @@ final class rj extends am {
 
     final void a(byte param0) {
         int var2 = 0;
-        int var4 = Torquing.field_u;
-        ((rj) this).field_s = i.b(10758, ((rj) this).field_A);
-        if (param0 <= 123) {
+        int var3 = 0;
+        int var4 = 0;
+        L0: {
+          var4 = Torquing.field_u;
+          ((rj) this).field_s = i.b(10758, ((rj) this).field_A);
+          if (param0 > 123) {
+            break L0;
+          } else {
             ((rj) this).field_s = null;
+            break L0;
+          }
         }
         this.a(false);
-        for (var2 = -1 + ((rj) this).field_C; var2 >= 1; var2--) {
-            int var3 = ((rj) this).field_x[var2];
-            // if_icmpgt L92
-            // if_icmpgt L92
-            ((rj) this).field_C = ((rj) this).field_C - 1;
+        var2 = -1 + ((rj) this).field_C;
+        L1: while (true) {
+          L2: {
+            if (var2 < 1) {
+              break L2;
+            } else {
+              var3 = ((rj) this).field_x[var2];
+              if (-9 > (var3 ^ -1)) {
+                break L2;
+              } else {
+                if ((var3 ^ -1) > 7) {
+                  break L2;
+                } else {
+                  ((rj) this).field_C = ((rj) this).field_C - 1;
+                  var2--;
+                  continue L1;
+                }
+              }
+            }
+          }
+          return;
         }
     }
 
@@ -341,8 +364,8 @@ final class rj extends am {
                     ((rj) this).field_A = param0.i((byte) -101);
                     break L1;
                   } else {
-                    if (var4 != -6) {
-                      if (-7 != var4) {
+                    if ((var4 ^ -1) != -6) {
+                      if (-7 != (var4 ^ -1)) {
                         break L1;
                       } else {
                         ((rj) this).field_u = param0.i((byte) -101);
@@ -354,8 +377,9 @@ final class rj extends am {
                     }
                   }
                 } else {
-                  ((rj) this).field_u = param0.i((byte) -101);
-                  ((rj) this).field_D = param0.i((byte) -101);
+                  int dupTemp$1 = param0.i((byte) -101);
+                  ((rj) this).field_u = dupTemp$1;
+                  ((rj) this).field_D = dupTemp$1;
                   break L1;
                 }
               } else {
@@ -364,7 +388,7 @@ final class rj extends am {
                   ((rj) this).field_x = new short[((rj) this).field_C];
                   var4 = 0;
                   L3: while (true) {
-                    if (var4 >= ((rj) this).field_C) {
+                    if ((var4 ^ -1) <= (((rj) this).field_C ^ -1)) {
                       break L1;
                     } else {
                       ((rj) this).field_x[var4] = (short)param0.g(65536);

@@ -57,7 +57,7 @@ final class cc {
           if (param0 == 0) {
             break L0;
           } else {
-            field_b = (String) null;
+            field_b = null;
             break L0;
           }
         }

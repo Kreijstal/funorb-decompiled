@@ -44,7 +44,6 @@ final class kr {
         uv var27 = null;
         String var28 = null;
         ut var29 = null;
-        ut var29_ref = null;
         uv var30 = null;
         String var31 = null;
         ut var32 = null;
@@ -106,9 +105,9 @@ final class kr {
         L2: {
           if (param2 == 2) {
             var27 = wi.field_v;
-            var29_ref = il.field_d[0];
+            var29 = il.field_d[0];
             var28 = gb.field_I;
-            var27.field_j.a(var28, param1, 11, var29_ref);
+            var27.field_j.a(var28, param1, 11, var29);
             var30 = wi.field_v;
             var32 = il.field_d[1];
             var31 = fh.field_c;
@@ -136,10 +135,10 @@ final class kr {
     }
 
     final static String a(String param0, int param1, byte param2) {
-        if (-2 == param1) {
+        if (-2 == (param1 ^ -1)) {
           return vo.a((byte) -18, sp.field_Kb, new String[1]);
         } else {
-          if (-3 != param1) {
+          if (-3 != (param1 ^ -1)) {
             if (-4 == (param1 ^ -1)) {
               return vo.a((byte) -18, pn.field_E, new String[1]);
             } else {

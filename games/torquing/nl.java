@@ -109,17 +109,17 @@ final class nl extends am {
         var5 = Torquing.field_u;
         if (param1 == 35) {
           var4 = param2;
-          if (-1 != var4) {
-            if (-2 != var4) {
-              if ((var4 ^ -1) != -3) {
-                return;
-              } else {
-                ((nl) this).field_w = param0.i(7088);
-                return;
-              }
-            } else {
+          if (-1 != (var4 ^ -1)) {
+            if (-2 == (var4 ^ -1)) {
               ((nl) this).field_x = param0.i(param1 + 7053);
               return;
+            } else {
+              if ((var4 ^ -1) == -3) {
+                ((nl) this).field_w = param0.i(7088);
+                return;
+              } else {
+                return;
+              }
             }
           } else {
             ((nl) this).field_t = param0.i(7088);
@@ -128,17 +128,17 @@ final class nl extends am {
         } else {
           this.b(44);
           var4 = param2;
-          if (-1 != var4) {
-            if (-2 != var4) {
-              if ((var4 ^ -1) != -3) {
-                return;
-              } else {
-                ((nl) this).field_w = param0.i(7088);
-                return;
-              }
-            } else {
+          if (-1 != (var4 ^ -1)) {
+            if (-2 == (var4 ^ -1)) {
               ((nl) this).field_x = param0.i(param1 + 7053);
               return;
+            } else {
+              if ((var4 ^ -1) == -3) {
+                ((nl) this).field_w = param0.i(7088);
+                return;
+              } else {
+                return;
+              }
             }
           } else {
             ((nl) this).field_t = param0.i(7088);

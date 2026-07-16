@@ -31,25 +31,57 @@ abstract class hn implements ml {
     }
 
     final static void a(byte param0, String[] param1, int param2, String param3) {
+        int var5 = 0;
+        Object var6 = null;
         String[] var7 = null;
-        int var5 = Pixelate.field_H ? 1 : 0;
-        qo.field_n = h.field_N;
-        if ((param2 ^ -1) == -256) {
-            jc.field_f = pk.a(um.field_r > -14 ? true : false, 5731);
-            ro.a((String[]) null, param0 ^ -99);
-        } else {
-            if (-101 <= param2) {
-                // if_icmpgt L86
-                var7 = param1;
-                ro.a(var7, 2);
-                jc.field_f = fk.a((byte) -65, param1);
-            } else {
-                jc.field_f = pa.a(param2, param3, (byte) -97);
+        int stackIn_4_0 = 0;
+        int stackOut_3_0 = 0;
+        int stackOut_2_0 = 0;
+        L0: {
+          var5 = Pixelate.field_H ? 1 : 0;
+          qo.field_n = h.field_N;
+          if ((param2 ^ -1) != -256) {
+            L1: {
+              if (-101 < (param2 ^ -1)) {
+                break L1;
+              } else {
+                if (param2 > 105) {
+                  break L1;
+                } else {
+                  var7 = param1;
+                  ro.a(var7, 2);
+                  jc.field_f = fk.a((byte) -65, param1);
+                  break L0;
+                }
+              }
             }
+            jc.field_f = pa.a(param2, param3, (byte) -97);
+            break L0;
+          } else {
+            L2: {
+              if ((um.field_r ^ -1) <= -14) {
+                stackOut_3_0 = 0;
+                stackIn_4_0 = stackOut_3_0;
+                break L2;
+              } else {
+                stackOut_2_0 = 1;
+                stackIn_4_0 = stackOut_2_0;
+                break L2;
+              }
+            }
+            jc.field_f = pk.a(stackIn_4_0 != 0, 5731);
+            ro.a((String[]) null, param0 ^ -99);
+            break L0;
+          }
         }
-        if (param0 != -97) {
-            Object var6 = null;
+        L3: {
+          if (param0 == -97) {
+            break L3;
+          } else {
+            var6 = null;
             hn.a((byte) -92, (String[]) null, -31, (String) null);
+            break L3;
+          }
         }
     }
 
@@ -66,11 +98,11 @@ abstract class hn implements ml {
           var5 = Pixelate.field_H ? 1 : 0;
           var3 = -param2.field_Kb + param1.field_Kb;
           if (param1.field_Nb == qp.field_L) {
-            // wide iinc 3 -200
+            var3 -= 200;
             break L0;
           } else {
             if (param1.field_Nb == null) {
-              // wide iinc 3 200
+              var3 += 200;
               break L0;
             } else {
               break L0;
@@ -82,11 +114,11 @@ abstract class hn implements ml {
             if (param2.field_Nb != null) {
               break L1;
             } else {
-              // wide iinc 3 -200
+              var3 -= 200;
               break L1;
             }
           } else {
-            // wide iinc 3 200
+            var3 += 200;
             break L1;
           }
         }

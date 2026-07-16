@@ -1,6 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
+import java.lang.String;
+
 final class vc implements java.awt.event.KeyListener, java.awt.event.FocusListener {
     static String field_a;
     static String field_b;
@@ -29,24 +31,45 @@ final class vc implements java.awt.event.KeyListener, java.awt.event.FocusListen
 
     public final synchronized void keyReleased(java.awt.event.KeyEvent param0) {
         int var2 = 0;
-        if (null != lg.field_d) {
-            si.field_o = 0;
-            var2 = param0.getKeyCode();
-            if (0 <= var2) {
-                // if_icmple L42
-                var2 = -129 & o.field_a[var2];
-            } else {
-                var2 = -1;
-            }
-            if (0 <= lk.field_e) {
-                if (!(0 > var2)) {
-                    kl.field_h[lk.field_e] = var2 ^ -1;
-                    lk.field_e = 1 + lk.field_e & 127;
-                    if (sc.field_i == lk.field_e) {
-                        lk.field_e = -1;
-                    }
+        L0: {
+          if (null == lg.field_d) {
+            break L0;
+          } else {
+            L1: {
+              L2: {
+                si.field_o = 0;
+                var2 = param0.getKeyCode();
+                if (0 > var2) {
+                  break L2;
+                } else {
+                  if (o.field_a.length <= var2) {
+                    break L2;
+                  } else {
+                    var2 = -129 & o.field_a[var2];
+                    break L1;
+                  }
                 }
+              }
+              var2 = -1;
+              break L1;
             }
+            if (0 > lk.field_e) {
+              break L0;
+            } else {
+              if (0 <= var2) {
+                kl.field_h[lk.field_e] = var2 ^ -1;
+                lk.field_e = 1 + lk.field_e & 127;
+                if (sc.field_i != lk.field_e) {
+                  break L0;
+                } else {
+                  lk.field_e = -1;
+                  break L0;
+                }
+              } else {
+                break L0;
+              }
+            }
+          }
         }
         param0.consume();
     }
@@ -57,42 +80,85 @@ final class vc implements java.awt.event.KeyListener, java.awt.event.FocusListen
     public final synchronized void keyPressed(java.awt.event.KeyEvent param0) {
         int var2 = 0;
         int var3 = 0;
-        if (null == lg.field_d) {
-        } else {
-            si.field_o = 0;
-            var2 = param0.getKeyCode();
-            if (var2 >= 0) {
-                // if_icmpge L50
-                var2 = o.field_a[var2];
-                // ifeq L52
-                var2 = -1;
-            } else {
-                var2 = -1;
-            }
-            if (lk.field_e <= -1) {
-                if (!(-1 > var2)) {
-                    kl.field_h[lk.field_e] = var2;
-                    lk.field_e = lk.field_e - -1 & 127;
-                    if (sc.field_i == lk.field_e) {
-                        lk.field_e = -1;
+        L0: {
+          if (null != lg.field_d) {
+            L1: {
+              L2: {
+                si.field_o = 0;
+                var2 = param0.getKeyCode();
+                if (var2 < 0) {
+                  break L2;
+                } else {
+                  if ((var2 ^ -1) <= (o.field_a.length ^ -1)) {
+                    break L2;
+                  } else {
+                    var2 = o.field_a[var2];
+                    if ((var2 & 128) == 0) {
+                      break L1;
+                    } else {
+                      var2 = -1;
+                      break L1;
                     }
+                  }
                 }
+              }
+              var2 = -1;
+              break L1;
             }
-            if (!(var2 < 0)) {
+            L3: {
+              if ((lk.field_e ^ -1) > -1) {
+                break L3;
+              } else {
+                if (-1 >= (var2 ^ -1)) {
+                  kl.field_h[lk.field_e] = var2;
+                  lk.field_e = lk.field_e - -1 & 127;
+                  if (sc.field_i != lk.field_e) {
+                    break L3;
+                  } else {
+                    lk.field_e = -1;
+                    break L3;
+                  }
+                } else {
+                  break L3;
+                }
+              }
+            }
+            L4: {
+              if (var2 >= 0) {
                 var3 = 127 & 1 + ce.field_e;
-                if (!(var3 == ph.field_h)) {
-                    ag.field_a[ce.field_e] = var2;
-                    hj.field_a[ce.field_e] = (char)0;
-                    ce.field_e = var3;
+                if ((var3 ^ -1) != (ph.field_h ^ -1)) {
+                  ag.field_a[ce.field_e] = var2;
+                  hj.field_a[ce.field_e] = (char)0;
+                  ce.field_e = var3;
+                  break L4;
+                } else {
+                  break L4;
                 }
+              } else {
+                break L4;
+              }
             }
-            var3 = param0.getModifiers();
-            if ((10 & var3) == -1) {
-                // if_icmpeq L179
-                // if_icmpeq L179
-            } else {
-                param0.consume();
+            L5: {
+              var3 = param0.getModifiers();
+              if ((10 & var3 ^ -1) != -1) {
+                break L5;
+              } else {
+                if (-86 == (var2 ^ -1)) {
+                  break L5;
+                } else {
+                  if (-11 == (var2 ^ -1)) {
+                    break L5;
+                  } else {
+                    break L0;
+                  }
+                }
+              }
             }
+            param0.consume();
+            break L0;
+          } else {
+            break L0;
+          }
         }
     }
 
@@ -123,14 +189,14 @@ final class vc implements java.awt.event.KeyListener, java.awt.event.FocusListen
     final static void a(byte param0, boolean param1, int param2) {
         int var3 = 0;
         jc var4 = null;
-        ve var5 = null;
+        Object var5 = null;
         ve var6 = null;
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
-        String var13_ref = null;
+        String var13_ref_String = null;
         int var13 = 0;
         int var14 = 0;
         int var15 = 0;
@@ -286,7 +352,7 @@ final class vc implements java.awt.event.KeyListener, java.awt.event.FocusListen
                 }
               }
               L10: {
-                ((ci) (Object) stackIn_22_0).field_db = (String) (Object) stackIn_22_1;
+                stackIn_22_0.field_db = stackIn_22_1;
                 if (var6.field_Mb.field_db.equals((Object) (Object) var6.field_Fb)) {
                   stackOut_24_0 = 0;
                   stackIn_25_0 = stackOut_24_0;
@@ -309,7 +375,7 @@ final class vc implements java.awt.event.KeyListener, java.awt.event.FocusListen
               }
               L12: {
                 if (var7 != 0) {
-                  fg.field_d.field_Fb.a(true, (ci) (Object) var5, 2, (ci) (Object) var6);
+                  fg.field_d.field_Fb.a(true, (ci) var5, 2, (ci) (Object) var6);
                   break L12;
                 } else {
                   break L12;
@@ -340,12 +406,12 @@ final class vc implements java.awt.event.KeyListener, java.awt.event.FocusListen
                 }
               }
               L15: {
-                var5 = var6;
+                var5 = (Object) (Object) var6;
                 if (-1 != (var6.field_L ^ -1)) {
                   ja.a(0L, var6.field_Fb, (byte) -97, fg.field_d.field_Kb, -1, (ci) (Object) var6, (int[]) null, -1, var6.field_Kb);
                   var16 = pi.field_d;
-                  var13_ref = field_b;
-                  var16.field_b.a((byte) -12, var13_ref, 7);
+                  var13_ref_String = field_b;
+                  var16.field_b.a((byte) -12, var13_ref_String, 7);
                   var17 = pi.field_d;
                   var13 = re.field_m;
                   var14 = ag.field_f;
@@ -371,7 +437,7 @@ final class vc implements java.awt.event.KeyListener, java.awt.event.FocusListen
         int[] var10 = null;
         di[] var11 = null;
         int var12 = 0;
-        j var13_ref = null;
+        j var13_ref_j = null;
         int var13 = 0;
         int var14 = 0;
         int var15 = 0;
@@ -437,10 +503,10 @@ final class vc implements java.awt.event.KeyListener, java.awt.event.FocusListen
                 if (var12 >= param4.field_q.length) {
                   break L2;
                 } else {
-                  var13_ref = ak.field_u.a(param4.field_q[var12], 0);
-                  var8[var12] = var13_ref.field_x;
+                  var13_ref_j = ak.field_u.a(param4.field_q[var12], 0);
+                  var8[var12] = var13_ref_j.field_x;
                   var9[var12] = param4.field_r[var12];
-                  var11[var12] = vc.a((byte) 88, param1, param2, param3, var13_ref);
+                  var11[var12] = vc.a((byte) 88, param1, param2, param3, var13_ref_j);
                   var12++;
                   continue L3;
                 }

@@ -23,226 +23,125 @@ final class wg {
         int stackIn_3_0 = 0;
         int stackIn_11_0 = 0;
         int[] stackIn_24_0 = null;
-        int stackOut_1_0 = 0;
+        Throwable decompiledCaughtException = null;
         int stackOut_2_0 = 0;
-        int stackOut_9_0 = 0;
+        int stackOut_1_0 = 0;
         int stackOut_10_0 = 0;
-        int[] stackOut_22_0 = null;
+        int stackOut_9_0 = 0;
         Object stackOut_23_0 = null;
-        int statePc = 0;
-        Throwable caughtException = null;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    var7 = TetraLink.field_J;
-                    var8 = kb.field_q;
-                    var2 = var8;
-                    var3 = var8.d((byte) -99);
-                    if (-1 == (var3 & 128 ^ -1)) {
-                        statePc = 2;
-                    } else {
-                        statePc = 1;
-                    }
-                    continue stateLoop;
-                }
-                case 1: {
-                    stackOut_1_0 = 1;
-                    stackIn_3_0 = stackOut_1_0;
-                    statePc = 3;
-                    continue stateLoop;
-                }
-                case 2: {
-                    stackOut_2_0 = 0;
-                    stackIn_3_0 = stackOut_2_0;
-                    statePc = 3;
-                    continue stateLoop;
-                }
-                case 3: {
-                    bo.field_s = stackIn_3_0 != 0;
-                    ng.field_u = var3 & 127;
-                    og.field_i = var8.d((byte) -99);
-                    if (param0 == 85) {
-                        statePc = 5;
-                    } else {
-                        statePc = 4;
-                    }
-                    continue stateLoop;
-                }
-                case 4: {
-                    return null;
-                }
-                case 5: {
-                    el.field_tc = var8.c(255);
-                    if (ng.field_u == 2) {
-                        statePc = 7;
-                    } else {
-                        statePc = 6;
-                    }
-                    continue stateLoop;
-                }
-                case 6: {
-                    hg.field_a = 0;
-                    n.field_O = 0;
-                    statePc = 8;
-                    continue stateLoop;
-                }
-                case 7: {
-                    hg.field_a = var8.e(127);
-                    n.field_O = var8.d(-1);
-                    statePc = 8;
-                    continue stateLoop;
-                }
-                case 8: {
-                    if (1 != var8.d((byte) -99)) {
-                        statePc = 10;
-                    } else {
-                        statePc = 9;
-                    }
-                    continue stateLoop;
-                }
-                case 9: {
-                    stackOut_9_0 = 1;
-                    stackIn_11_0 = stackOut_9_0;
-                    statePc = 11;
-                    continue stateLoop;
-                }
-                case 10: {
-                    stackOut_10_0 = 0;
-                    stackIn_11_0 = stackOut_10_0;
-                    statePc = 11;
-                    continue stateLoop;
-                }
-                case 11: {
-                    var4 = stackIn_11_0;
-                    g.field_O = var8.g((byte) 81);
-                    if (var4 != 0) {
-                        statePc = 13;
-                    } else {
-                        statePc = 12;
-                    }
-                    continue stateLoop;
-                }
-                case 12: {
-                    TetraLink.field_M = g.field_O;
-                    statePc = 14;
-                    continue stateLoop;
-                }
-                case 13: {
-                    TetraLink.field_M = var8.g((byte) 81);
-                    statePc = 14;
-                    continue stateLoop;
-                }
-                case 14: {
-                    if (-2 == (ng.field_u ^ -1)) {
-                        statePc = 17;
-                    } else {
-                        statePc = 15;
-                    }
-                    continue stateLoop;
-                }
-                case 15: {
-                    if (4 != ng.field_u) {
-                        statePc = 18;
-                    } else {
-                        statePc = 17;
-                    }
-                    continue stateLoop;
-                }
-                case 17: {
-                    vi.field_c = var8.e(127);
-                    ab.field_U = var8.g((byte) 81);
-                    statePc = 19;
-                    continue stateLoop;
-                }
-                case 18: {
-                    vi.field_c = 0;
-                    ab.field_U = null;
-                    statePc = 19;
-                    continue stateLoop;
-                }
-                case 19: {
-                    if (!param1) {
-                        statePc = 27;
-                    } else {
-                        statePc = 20;
-                    }
-                    continue stateLoop;
-                }
-                case 20: {
-                    var5 = var8.e(127);
-                    statePc = 21;
-                    continue stateLoop;
-                }
-                case 21: {
-                    try {
-                        var9 = eh.field_p.a(var5, -128);
-                        ml.field_fb = var9.h(-15);
-                        if (TetraLink.field_M.equals((Object) (Object) ph.field_w)) {
-                            statePc = 23;
-                        } else {
-                            statePc = 22;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_21) {
-                        caughtException = stateCaught_21;
-                        statePc = 26;
-                        continue stateLoop;
-                    }
-                }
-                case 22: {
-                    try {
-                        stackOut_22_0 = var9.field_v;
-                        stackIn_24_0 = stackOut_22_0;
-                        statePc = 24;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_22) {
-                        caughtException = stateCaught_22;
-                        statePc = 26;
-                        continue stateLoop;
-                    }
-                }
-                case 23: {
-                    try {
-                        stackOut_23_0 = null;
-                        stackIn_24_0 = (int[]) (Object) stackOut_23_0;
-                        statePc = 24;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_23) {
-                        caughtException = stateCaught_23;
-                        statePc = 26;
-                        continue stateLoop;
-                    }
-                }
-                case 24: {
-                    try {
-                        ha.field_i = stackIn_24_0;
-                        statePc = 28;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_24) {
-                        caughtException = stateCaught_24;
-                        statePc = 26;
-                        continue stateLoop;
-                    }
-                }
-                case 26: {
-                    var6 = (Exception) (Object) caughtException;
-                    fk.a(param0 ^ -122, (Throwable) (Object) var6, "CC1");
-                    ml.field_fb = null;
-                    ha.field_i = null;
-                    statePc = 28;
-                    continue stateLoop;
-                }
-                case 27: {
-                    ml.field_fb = rh.a(119, (bh) (Object) var8, 80);
-                    ha.field_i = null;
-                    statePc = 28;
-                    continue stateLoop;
-                }
-                case 28: {
-                    return new fj(param1);
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
+        int[] stackOut_22_0 = null;
+        L0: {
+          var7 = TetraLink.field_J;
+          var8 = kb.field_q;
+          var2 = var8;
+          var3 = var8.d((byte) -99);
+          if (-1 == (var3 & 128 ^ -1)) {
+            stackOut_2_0 = 0;
+            stackIn_3_0 = stackOut_2_0;
+            break L0;
+          } else {
+            stackOut_1_0 = 1;
+            stackIn_3_0 = stackOut_1_0;
+            break L0;
+          }
+        }
+        bo.field_s = stackIn_3_0 != 0;
+        ng.field_u = var3 & 127;
+        og.field_i = var8.d((byte) -99);
+        if (param0 == 85) {
+          L1: {
+            el.field_tc = var8.c(255);
+            if (ng.field_u == 2) {
+              hg.field_a = var8.e(127);
+              n.field_O = var8.d(-1);
+              break L1;
+            } else {
+              hg.field_a = 0;
+              n.field_O = 0;
+              break L1;
             }
+          }
+          L2: {
+            if (1 != var8.d((byte) -99)) {
+              stackOut_10_0 = 0;
+              stackIn_11_0 = stackOut_10_0;
+              break L2;
+            } else {
+              stackOut_9_0 = 1;
+              stackIn_11_0 = stackOut_9_0;
+              break L2;
+            }
+          }
+          L3: {
+            var4 = stackIn_11_0;
+            g.field_O = var8.g((byte) 81);
+            if (var4 != 0) {
+              TetraLink.field_M = var8.g((byte) 81);
+              break L3;
+            } else {
+              TetraLink.field_M = g.field_O;
+              break L3;
+            }
+          }
+          L4: {
+            L5: {
+              if (-2 == (ng.field_u ^ -1)) {
+                break L5;
+              } else {
+                if (4 != ng.field_u) {
+                  vi.field_c = 0;
+                  ab.field_U = null;
+                  break L4;
+                } else {
+                  break L5;
+                }
+              }
+            }
+            vi.field_c = var8.e(127);
+            ab.field_U = var8.g((byte) 81);
+            break L4;
+          }
+          L6: {
+            if (!param1) {
+              ml.field_fb = rh.a(119, (bh) (Object) var8, 80);
+              ha.field_i = null;
+              break L6;
+            } else {
+              var5 = var8.e(127);
+              try {
+                L7: {
+                  L8: {
+                    var9 = eh.field_p.a(var5, -128);
+                    ml.field_fb = var9.h(-15);
+                    if (TetraLink.field_M.equals((Object) (Object) ph.field_w)) {
+                      stackOut_23_0 = null;
+                      stackIn_24_0 = (int[]) (Object) stackOut_23_0;
+                      break L8;
+                    } else {
+                      stackOut_22_0 = var9.field_v;
+                      stackIn_24_0 = stackOut_22_0;
+                      break L8;
+                    }
+                  }
+                  ha.field_i = stackIn_24_0;
+                  break L7;
+                }
+              } catch (java.lang.Exception decompiledCaughtParameter0) {
+                decompiledCaughtException = decompiledCaughtParameter0;
+                L9: {
+                  var6 = (Exception) (Object) decompiledCaughtException;
+                  fk.a(param0 ^ -122, (Throwable) (Object) var6, "CC1");
+                  ml.field_fb = null;
+                  ha.field_i = null;
+                  break L9;
+                }
+              }
+              break L6;
+            }
+          }
+          return new fj(param1);
+        } else {
+          return null;
         }
     }
 

@@ -658,38 +658,41 @@ class id implements uk, pj {
                         var6 = ((id) this).field_h;
                         if (-1 != (var6 ^ -1)) {
                           if (var6 != 3) {
-                            if (-2 != (var6 ^ -1)) {
-                              if (var6 == 2) {
-                                if (!(param1.field_r instanceof pd)) {
-                                  return;
+                            L2: {
+                              if (-2 != (var6 ^ -1)) {
+                                if (var6 != 2) {
+                                  break L2;
                                 } else {
-                                  ((pd) (Object) param1.field_r).a(var3, ((id) this).field_a, var5, ((id) this).b(param1, 0), (byte) 22);
-                                  return;
+                                  if (param1.field_r instanceof pd) {
+                                    ((pd) (Object) param1.field_r).a(var3, ((id) this).field_a, var5, ((id) this).b(param1, 0), (byte) 22);
+                                    break L2;
+                                  } else {
+                                    return;
+                                  }
                                 }
                               } else {
-                                return;
-                              }
-                            } else {
-                              if (!(param1.field_r instanceof pd)) {
-                                return;
-                              } else {
-                                ((pd) (Object) param1.field_r).a(true, ((id) this).b(param1, 0), var5, var3 >> 588558657, ((id) this).field_a);
-                                return;
+                                if (!(param1.field_r instanceof pd)) {
+                                  break L2;
+                                } else {
+                                  ((pd) (Object) param1.field_r).a(true, ((id) this).b(param1, 0), var5, var3 >> 588558657, ((id) this).field_a);
+                                  return;
+                                }
                               }
                             }
+                            return;
                           } else {
-                            if (param1.field_r instanceof pd) {
-                              ((pd) (Object) param1.field_r).a(0, ((id) this).field_a, ((id) this).b(param1, 0), 0, var5);
+                            if (!(param1.field_r instanceof pd)) {
                               return;
                             } else {
+                              ((pd) (Object) param1.field_r).a(0, ((id) this).field_a, ((id) this).b(param1, 0), 0, var5);
                               return;
                             }
                           }
                         } else {
-                          if (param1.field_r instanceof pd) {
-                            ((pd) (Object) param1.field_r).a(0, ((id) this).field_a, ((id) this).b(param1, 0), 0, var5);
+                          if (!(param1.field_r instanceof pd)) {
                             return;
                           } else {
+                            ((pd) (Object) param1.field_r).a(0, ((id) this).field_a, ((id) this).b(param1, 0), 0, var5);
                             return;
                           }
                         }
@@ -701,7 +704,7 @@ class id implements uk, pj {
                   var5 = (var4 - ((id) this).field_a.field_N - ((id) this).field_a.field_r >> 1392322465) + ((id) this).field_a.field_N;
                   break L0;
                 } else {
-                  L2: {
+                  L3: {
                     var5 = -((id) this).field_a.field_r + var4;
                     var6 = ((id) this).field_h;
                     if (-1 != (var6 ^ -1)) {
@@ -710,7 +713,7 @@ class id implements uk, pj {
                           if (var6 == 2) {
                             if (param1.field_r instanceof pd) {
                               ((pd) (Object) param1.field_r).a(var3, ((id) this).field_a, var5, ((id) this).b(param1, 0), (byte) 22);
-                              break L2;
+                              break L3;
                             } else {
                               return;
                             }
@@ -719,26 +722,26 @@ class id implements uk, pj {
                           }
                         } else {
                           if (!(param1.field_r instanceof pd)) {
-                            break L2;
+                            break L3;
                           } else {
                             ((pd) (Object) param1.field_r).a(true, ((id) this).b(param1, 0), var5, var3 >> 588558657, ((id) this).field_a);
                             return;
                           }
                         }
                       } else {
-                        L3: {
+                        L4: {
                           if (!(param1.field_r instanceof pd)) {
-                            break L3;
+                            break L4;
                           } else {
                             ((pd) (Object) param1.field_r).a(0, ((id) this).field_a, ((id) this).b(param1, 0), 0, var5);
-                            break L3;
+                            break L4;
                           }
                         }
                         return;
                       }
                     } else {
                       if (!(param1.field_r instanceof pd)) {
-                        break L2;
+                        break L3;
                       } else {
                         ((pd) (Object) param1.field_r).a(0, ((id) this).field_a, ((id) this).b(param1, 0), 0, var5);
                         return;
@@ -755,21 +758,21 @@ class id implements uk, pj {
             var6 = ((id) this).field_h;
             if (-1 != (var6 ^ -1)) {
               if (var6 != 3) {
-                L4: {
+                L5: {
                   if (-2 != (var6 ^ -1)) {
                     if (var6 != 2) {
-                      break L4;
+                      break L5;
                     } else {
                       if (param1.field_r instanceof pd) {
                         ((pd) (Object) param1.field_r).a(var3, ((id) this).field_a, var5, ((id) this).b(param1, 0), (byte) 22);
-                        break L4;
+                        break L5;
                       } else {
                         return;
                       }
                     }
                   } else {
                     if (!(param1.field_r instanceof pd)) {
-                      break L4;
+                      break L5;
                     } else {
                       ((pd) (Object) param1.field_r).a(true, ((id) this).b(param1, 0), var5, var3 >> 588558657, ((id) this).field_a);
                       return;
@@ -794,230 +797,236 @@ class id implements uk, pj {
               }
             }
           } else {
-            L5: {
+            L6: {
               var6 = ((id) this).field_d;
               if (var6 != 0) {
                 if (2 != var6) {
-                  L6: {
+                  L7: {
                     if (-4 != (var6 ^ -1)) {
                       if (1 != var6) {
-                        break L6;
+                        break L7;
                       } else {
-                        break L6;
+                        break L7;
                       }
                     } else {
-                      break L6;
+                      break L7;
                     }
                   }
                   var5 = (var4 - ((id) this).field_a.field_N - ((id) this).field_a.field_r >> 1392322465) + ((id) this).field_a.field_N;
-                  break L5;
+                  break L6;
                 } else {
-                  L7: {
-                    L8: {
+                  L8: {
+                    L9: {
                       var5 = -((id) this).field_a.field_r + var4;
                       var6 = ((id) this).field_h;
-                      if (-1 != var6) {
+                      if (-1 != (var6 ^ -1)) {
                         if (var6 != 3) {
-                          if (-2 != var6) {
+                          if (-2 != (var6 ^ -1)) {
                             if (var6 != 2) {
-                              break L7;
+                              break L8;
                             } else {
                               if (param1.field_r instanceof pd) {
                                 ((pd) (Object) param1.field_r).a(var3, ((id) this).field_a, var5, ((id) this).b(param1, 0), (byte) 22);
-                                break L7;
+                                break L8;
                               } else {
-                                break L7;
+                                break L8;
                               }
                             }
                           } else {
                             if (!(param1.field_r instanceof pd)) {
-                              break L7;
+                              break L8;
                             } else {
                               ((pd) (Object) param1.field_r).a(true, ((id) this).b(param1, 0), var5, var3 >> 588558657, ((id) this).field_a);
-                              break L7;
+                              break L8;
                             }
                           }
                         } else {
-                          break L8;
+                          break L9;
                         }
                       } else {
-                        break L8;
+                        break L9;
                       }
                     }
                     if (!(param1.field_r instanceof pd)) {
-                      break L7;
+                      break L8;
                     } else {
                       ((pd) (Object) param1.field_r).a(0, ((id) this).field_a, ((id) this).b(param1, 0), 0, var5);
-                      break L7;
+                      break L8;
                     }
                   }
                   return;
                 }
               } else {
                 var5 = ((id) this).field_a.field_N;
-                break L5;
+                break L6;
               }
             }
             var6 = ((id) this).field_h;
             if (-1 != (var6 ^ -1)) {
               if (var6 != 3) {
-                if (-2 != (var6 ^ -1)) {
-                  if (var6 == 2) {
-                    if (!(param1.field_r instanceof pd)) {
-                      return;
+                L10: {
+                  if (-2 != (var6 ^ -1)) {
+                    if (var6 != 2) {
+                      break L10;
                     } else {
-                      ((pd) (Object) param1.field_r).a(var3, ((id) this).field_a, var5, ((id) this).b(param1, 0), (byte) 22);
-                      return;
+                      if (param1.field_r instanceof pd) {
+                        ((pd) (Object) param1.field_r).a(var3, ((id) this).field_a, var5, ((id) this).b(param1, 0), (byte) 22);
+                        break L10;
+                      } else {
+                        return;
+                      }
                     }
                   } else {
-                    return;
-                  }
-                } else {
-                  if (param1.field_r instanceof pd) {
-                    ((pd) (Object) param1.field_r).a(true, ((id) this).b(param1, 0), var5, var3 >> 588558657, ((id) this).field_a);
-                    return;
-                  } else {
-                    return;
+                    if (!(param1.field_r instanceof pd)) {
+                      break L10;
+                    } else {
+                      ((pd) (Object) param1.field_r).a(true, ((id) this).b(param1, 0), var5, var3 >> 588558657, ((id) this).field_a);
+                      return;
+                    }
                   }
                 }
+                return;
               } else {
-                L9: {
+                L11: {
                   if (!(param1.field_r instanceof pd)) {
-                    break L9;
+                    break L11;
                   } else {
                     ((pd) (Object) param1.field_r).a(0, ((id) this).field_a, ((id) this).b(param1, 0), 0, var5);
-                    break L9;
+                    break L11;
                   }
                 }
                 return;
               }
             } else {
-              L10: {
+              L12: {
                 if (!(param1.field_r instanceof pd)) {
-                  break L10;
+                  break L12;
                 } else {
                   ((pd) (Object) param1.field_r).a(0, ((id) this).field_a, ((id) this).b(param1, 0), 0, var5);
-                  break L10;
+                  break L12;
                 }
               }
               return;
             }
           }
         } else {
-          L11: {
+          L13: {
             var3 = ((id) this).a(-27246, param1);
             var4 = this.a((byte) -89, param1);
             if (param0 > 77) {
-              break L11;
+              break L13;
             } else {
               ((id) this).field_e = 29;
-              break L11;
+              break L13;
             }
           }
-          L12: {
+          L14: {
             var6 = ((id) this).field_d;
             if (var6 != 0) {
               if (2 != var6) {
-                L13: {
+                L15: {
                   if (-4 != (var6 ^ -1)) {
                     if (1 != var6) {
-                      break L13;
+                      break L15;
                     } else {
-                      break L13;
+                      break L15;
                     }
                   } else {
-                    break L13;
+                    break L15;
                   }
                 }
                 var5 = (var4 - ((id) this).field_a.field_N - ((id) this).field_a.field_r >> 1392322465) + ((id) this).field_a.field_N;
-                break L12;
+                break L14;
               } else {
-                L14: {
-                  L15: {
+                L16: {
+                  L17: {
                     var5 = -((id) this).field_a.field_r + var4;
                     var6 = ((id) this).field_h;
-                    if (-1 != var6) {
+                    if (-1 != (var6 ^ -1)) {
                       if (var6 != 3) {
-                        if (-2 != var6) {
+                        if (-2 != (var6 ^ -1)) {
                           if (var6 != 2) {
-                            break L14;
+                            break L16;
                           } else {
                             if (param1.field_r instanceof pd) {
                               ((pd) (Object) param1.field_r).a(var3, ((id) this).field_a, var5, ((id) this).b(param1, 0), (byte) 22);
-                              break L14;
+                              break L16;
                             } else {
-                              break L14;
+                              break L16;
                             }
                           }
                         } else {
                           if (!(param1.field_r instanceof pd)) {
-                            break L14;
+                            break L16;
                           } else {
                             ((pd) (Object) param1.field_r).a(true, ((id) this).b(param1, 0), var5, var3 >> 588558657, ((id) this).field_a);
-                            break L14;
+                            break L16;
                           }
                         }
                       } else {
-                        break L15;
+                        break L17;
                       }
                     } else {
-                      break L15;
+                      break L17;
                     }
                   }
                   if (!(param1.field_r instanceof pd)) {
-                    break L14;
+                    break L16;
                   } else {
                     ((pd) (Object) param1.field_r).a(0, ((id) this).field_a, ((id) this).b(param1, 0), 0, var5);
-                    break L14;
+                    break L16;
                   }
                 }
                 return;
               }
             } else {
               var5 = ((id) this).field_a.field_N;
-              break L12;
+              break L14;
             }
           }
           var6 = ((id) this).field_h;
           if (-1 != (var6 ^ -1)) {
             if (var6 != 3) {
-              if (-2 != (var6 ^ -1)) {
-                if (var6 == 2) {
-                  if (!(param1.field_r instanceof pd)) {
-                    return;
+              L18: {
+                if (-2 != (var6 ^ -1)) {
+                  if (var6 != 2) {
+                    break L18;
                   } else {
-                    ((pd) (Object) param1.field_r).a(var3, ((id) this).field_a, var5, ((id) this).b(param1, 0), (byte) 22);
-                    return;
+                    if (param1.field_r instanceof pd) {
+                      ((pd) (Object) param1.field_r).a(var3, ((id) this).field_a, var5, ((id) this).b(param1, 0), (byte) 22);
+                      break L18;
+                    } else {
+                      return;
+                    }
                   }
                 } else {
-                  return;
-                }
-              } else {
-                if (param1.field_r instanceof pd) {
-                  ((pd) (Object) param1.field_r).a(true, ((id) this).b(param1, 0), var5, var3 >> 588558657, ((id) this).field_a);
-                  return;
-                } else {
-                  return;
+                  if (!(param1.field_r instanceof pd)) {
+                    break L18;
+                  } else {
+                    ((pd) (Object) param1.field_r).a(true, ((id) this).b(param1, 0), var5, var3 >> 588558657, ((id) this).field_a);
+                    return;
+                  }
                 }
               }
+              return;
             } else {
-              L16: {
+              L19: {
                 if (!(param1.field_r instanceof pd)) {
-                  break L16;
+                  break L19;
                 } else {
                   ((pd) (Object) param1.field_r).a(0, ((id) this).field_a, ((id) this).b(param1, 0), 0, var5);
-                  break L16;
+                  break L19;
                 }
               }
               return;
             }
           } else {
-            L17: {
+            L20: {
               if (!(param1.field_r instanceof pd)) {
-                break L17;
+                break L20;
               } else {
                 ((pd) (Object) param1.field_r).a(0, ((id) this).field_a, ((id) this).b(param1, 0), 0, var5);
-                break L17;
+                break L20;
               }
             }
             return;
@@ -1032,138 +1041,80 @@ class id implements uk, pj {
             IOException var2 = null;
             int var3 = 0;
             Throwable decompiledCaughtException = null;
-            int statePc = 0;
-            Throwable caughtException = null;
-            stateLoop: while (true) {
-                switch (statePc) {
-                    case 0: {
-                        var3 = stellarshard.field_B;
-                        if (od.field_v != null) {
-                            statePc = 2;
-                        } else {
-                            statePc = 3;
-                        }
-                        continue stateLoop;
-                    }
-                    case 2: {
-                        od.field_v.a((byte) 112);
-                        statePc = 3;
-                        continue stateLoop;
-                    }
-                    case 3: {
-                        if (ib.field_k == null) {
-                            statePc = 5;
-                        } else {
-                            statePc = 4;
-                        }
-                        continue stateLoop;
-                    }
-                    case 4: {
-                        ib.field_k.a((byte) -103);
-                        statePc = 5;
-                        continue stateLoop;
-                    }
-                    case 5: {
-                        if (param0) {
-                            statePc = 7;
-                        } else {
-                            statePc = 6;
-                        }
-                        continue stateLoop;
-                    }
-                    case 6: {
-                        id.a(true);
-                        statePc = 7;
-                        continue stateLoop;
-                    }
-                    case 7: {
-                        if (ma.field_s == null) {
-                            statePc = 11;
-                        } else {
-                            statePc = 8;
-                        }
-                        continue stateLoop;
-                    }
-                    case 8: {
-                        try {
-                            ma.field_s.a(-4506);
-                            statePc = 11;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_8) {
-                            caughtException = stateCaught_8;
-                            statePc = 10;
-                            continue stateLoop;
-                        }
-                    }
-                    case 10: {
-                        iOException = (IOException) (Object) caughtException;
-                        statePc = 11;
-                        continue stateLoop;
-                    }
-                    case 11: {
-                        if (null != df.field_d) {
-                            statePc = 13;
-                        } else {
-                            statePc = 12;
-                        }
-                        continue stateLoop;
-                    }
-                    case 12: {
-                        return;
-                    }
-                    case 13: {
-                        var1 = 0;
-                        statePc = 14;
-                        continue stateLoop;
-                    }
-                    case 14: {
-                        if (df.field_d.length > var1) {
-                            statePc = 16;
-                        } else {
-                            statePc = 15;
-                        }
-                        continue stateLoop;
-                    }
-                    case 15: {
-                        return;
-                    }
-                    case 16: {
-                        if (df.field_d[var1] != null) {
-                            statePc = 18;
-                        } else {
-                            statePc = 17;
-                        }
-                        continue stateLoop;
-                    }
-                    case 17: {
-                        var1++;
-                        statePc = 14;
-                        continue stateLoop;
-                    }
-                    case 18: {
-                        try {
-                            df.field_d[var1].a(-4506);
-                            statePc = 19;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_18) {
-                            caughtException = stateCaught_18;
-                            statePc = 20;
-                            continue stateLoop;
-                        }
-                    }
-                    case 19: {
-                        var1++;
-                        statePc = 14;
-                        continue stateLoop;
-                    }
-                    case 20: {
-                        var2 = (IOException) (Object) caughtException;
-                        var1++;
-                        statePc = 14;
-                        continue stateLoop;
-                    }
-                    default: throw new IllegalStateException("invalid CFG state " + statePc);
+            L0: {
+              var3 = stellarshard.field_B;
+              if (od.field_v != null) {
+                od.field_v.a((byte) 112);
+                break L0;
+              } else {
+                break L0;
+              }
+            }
+            L1: {
+              if (ib.field_k == null) {
+                break L1;
+              } else {
+                ib.field_k.a((byte) -103);
+                break L1;
+              }
+            }
+            L2: {
+              if (param0) {
+                break L2;
+              } else {
+                id.a(true);
+                break L2;
+              }
+            }
+            L3: {
+              if (ma.field_s == null) {
+                break L3;
+              } else {
+                try {
+                  L4: {
+                    ma.field_s.a(-4506);
+                    break L4;
+                  }
+                } catch (java.io.IOException decompiledCaughtParameter0) {
+                  decompiledCaughtException = decompiledCaughtParameter0;
+                  L5: {
+                    iOException = (IOException) (Object) decompiledCaughtException;
+                    break L5;
+                  }
                 }
+                break L3;
+              }
+            }
+            if (null != df.field_d) {
+              var1 = 0;
+              L6: while (true) {
+                if (df.field_d.length > var1) {
+                  if (df.field_d[var1] != null) {
+                    try {
+                      L7: {
+                        df.field_d[var1].a(-4506);
+                        var1++;
+                        break L7;
+                      }
+                    } catch (java.io.IOException decompiledCaughtParameter1) {
+                      decompiledCaughtException = decompiledCaughtParameter1;
+                      L8: {
+                        var2 = (IOException) (Object) decompiledCaughtException;
+                        var1++;
+                        break L8;
+                      }
+                    }
+                    continue L6;
+                  } else {
+                    var1++;
+                    continue L6;
+                  }
+                } else {
+                  return;
+                }
+              }
+            } else {
+              return;
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;

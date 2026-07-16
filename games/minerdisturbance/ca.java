@@ -125,26 +125,48 @@ final class ca extends ek {
 
     final int a(int param0, long param1) {
         int var4 = 0;
-        int var5 = MinerDisturbance.field_ab;
-        if (param0 != -1374) {
+        int var5 = 0;
+        L0: {
+          var5 = MinerDisturbance.field_ab;
+          if (param0 == -1374) {
+            break L0;
+          } else {
             ((ca) this).field_l = -50;
+            break L0;
+          }
         }
-        if ((((ca) this).field_h ^ -1L) <= (((ca) this).field_e ^ -1L)) {
-            var4 = 0;
-            do {
-                ((ca) this).field_e = ((ca) this).field_e + param1;
-                var4++;
-                // if_icmpge L84
-            } while ((((ca) this).field_e ^ -1L) > (((ca) this).field_h ^ -1L));
-            if (!(((ca) this).field_e >= ((ca) this).field_h)) {
+        if ((((ca) this).field_h ^ -1L) > (((ca) this).field_e ^ -1L)) {
+          ((ca) this).field_i = ((ca) this).field_i + (((ca) this).field_e - ((ca) this).field_h);
+          ((ca) this).field_h = ((ca) this).field_h + (-((ca) this).field_h + ((ca) this).field_e);
+          ((ca) this).field_e = ((ca) this).field_e + param1;
+          return 1;
+        } else {
+          var4 = 0;
+          L1: while (true) {
+            L2: {
+              ((ca) this).field_e = ((ca) this).field_e + param1;
+              var4++;
+              if (var4 >= 10) {
+                break L2;
+              } else {
+                if ((((ca) this).field_e ^ -1L) > (((ca) this).field_h ^ -1L)) {
+                  continue L1;
+                } else {
+                  break L2;
+                }
+              }
+            }
+            L3: {
+              if (((ca) this).field_e < ((ca) this).field_h) {
                 ((ca) this).field_e = ((ca) this).field_h;
+                break L3;
+              } else {
+                break L3;
+              }
             }
             return var4;
+          }
         }
-        ((ca) this).field_i = ((ca) this).field_i + (((ca) this).field_e - ((ca) this).field_h);
-        ((ca) this).field_h = ((ca) this).field_h + (-((ca) this).field_h + ((ca) this).field_e);
-        ((ca) this).field_e = ((ca) this).field_e + param1;
-        return 1;
     }
 
     static {

@@ -39,11 +39,11 @@ final class wc {
             if (param1.field_Pb != null) {
               break L0;
             } else {
-              // wide iinc 4 200
+              var4 += 200;
               break L0;
             }
           } else {
-            // wide iinc 4 -200
+            var4 -= 200;
             break L0;
           }
         }
@@ -63,7 +63,7 @@ final class wc {
             return stackIn_17_0 != 0;
           } else {
             L2: {
-              // wide iinc 4 -200
+              var4 -= 200;
               if ((var4 ^ -1) >= -1) {
                 stackOut_12_0 = 0;
                 stackIn_13_0 = stackOut_12_0;
@@ -78,7 +78,7 @@ final class wc {
           }
         } else {
           L3: {
-            // wide iinc 4 200
+            var4 += 200;
             if ((var4 ^ -1) >= -1) {
               stackOut_7_0 = 0;
               stackIn_8_0 = stackOut_7_0;

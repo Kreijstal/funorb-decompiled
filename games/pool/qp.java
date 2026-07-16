@@ -380,7 +380,7 @@ final class qp extends vh {
         String var11 = null;
         String var12 = null;
         int var13 = 0;
-        dd var14 = null;
+        Object var14 = null;
         int var15 = 0;
         lr var17 = null;
         lr var18 = null;
@@ -402,6 +402,7 @@ final class qp extends vh {
           if (((qp) this).field_cc <= var13) {
             ((qp) this).field_Xb = ((qp) this).field_Xb + (ue.field_c.field_w - -10);
             this.b(-88, 12);
+            return;
           } else {
             L1: {
               if (((qp) this).field_Tb[var13] <= 0) {
@@ -424,10 +425,10 @@ final class qp extends vh {
                   }
                 }
               }
-              var14 = ue.field_c;
+              var14 = (Object) (Object) ue.field_c;
               break L2;
             }
-            ((qp) this).field_Vb[var13] = new uo(0L, param2, (vh) null, param3, var14, param6[var13]);
+            ((qp) this).field_Vb[var13] = new uo(0L, param2, (vh) null, param3, (dd) var14, param6[var13]);
             ((qp) this).a(-126, (vh) (Object) ((qp) this).field_Vb[var13]);
             var15 = var17.b(param6[var13]);
             if (var15 > ((qp) this).field_Xb) {

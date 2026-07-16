@@ -325,6 +325,7 @@ final class mf {
             field_e[2] = 0;
             field_e[14] = -3;
             field_c = 0;
+            return;
           } else {
             field_a[var4] = 467;
             field_h[var4] = 229;

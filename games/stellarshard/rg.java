@@ -99,26 +99,50 @@ class rg extends ig {
     }
 
     final void a(String param0, int param1, int param2) {
-        String[] var7 = null;
         String[] var4 = null;
         int var5 = 0;
-        int var6 = stellarshard.field_B;
-        if (null != ((rg) this).field_G) {
-            // if_icmpge L25
-        } else {
+        int var6 = 0;
+        String[] var7 = null;
+        L0: {
+          L1: {
+            var6 = stellarshard.field_B;
+            if (null == ((rg) this).field_G) {
+              break L1;
+            } else {
+              if (param1 >= ((rg) this).field_G.length) {
+                break L1;
+              } else {
+                break L0;
+              }
+            }
+          }
+          L2: {
             var7 = new String[1 + param1];
             var4 = var7;
-            if (((rg) this).field_G != null) {
-                for (var5 = 0; ((rg) this).field_G.length > var5; var5++) {
-                    var7[var5] = ((rg) this).field_G[var5];
+            if (((rg) this).field_G == null) {
+              break L2;
+            } else {
+              var5 = 0;
+              L3: while (true) {
+                if (((rg) this).field_G.length <= var5) {
+                  break L2;
+                } else {
+                  var7[var5] = ((rg) this).field_G[var5];
+                  var5++;
+                  continue L3;
                 }
+              }
             }
-            ((rg) this).field_G = var4;
+          }
+          ((rg) this).field_G = var4;
+          break L0;
         }
-        if (param2 != 1) {
-            return;
+        if (param2 == 1) {
+          ((rg) this).field_G[param1] = param0;
+          return;
+        } else {
+          return;
         }
-        ((rg) this).field_G[param1] = param0;
     }
 
     boolean a(int param0, rj param1) {
@@ -169,7 +193,7 @@ class rg extends ig {
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
-        ja var11 = null;
+        Object var11 = null;
         int var12 = 0;
         uj var13 = null;
         int var14 = 0;
@@ -242,11 +266,11 @@ class rg extends ig {
                   if (var11 == null) {
                     break L4;
                   } else {
-                    var11.field_p = var16;
+                    ((ja) var11).field_p = var16;
                     break L4;
                   }
                 }
-                var11 = var16;
+                var11 = (Object) (Object) var16;
                 ((rg) this).field_H.b(-71, (gg) (Object) var16);
                 var12++;
                 continue L1;

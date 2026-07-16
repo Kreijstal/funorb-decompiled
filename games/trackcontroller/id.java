@@ -116,8 +116,9 @@ final class id {
               return null;
             }
           } else {
+            int fieldTemp$7 = ((id) this).field_f;
             ((id) this).field_f = ((id) this).field_f + 1;
-            var2 = ((id) this).field_c[((id) this).field_f].field_h;
+            var2 = ((id) this).field_c[fieldTemp$7].field_h;
             if (((id) this).field_c[-1 + ((id) this).field_f] != var2) {
               ((id) this).field_d = var2.field_h;
               return var2;
@@ -167,8 +168,9 @@ final class id {
         ((id) this).field_c = new fc[param0];
         ((id) this).field_b = param0;
         for (var2 = 0; var2 < param0; var2++) {
-            var3 = new fc();
-            ((id) this).field_c[var2] = new fc();
+            fc dupTemp$0 = new fc();
+            var3 = dupTemp$0;
+            ((id) this).field_c[var2] = dupTemp$0;
             var3.field_h = var3;
             var3.field_e = var3;
         }

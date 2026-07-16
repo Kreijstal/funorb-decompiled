@@ -30,21 +30,36 @@ final class kk extends lk {
     }
 
     final cg a(byte param0, String param1) {
-        CharSequence var4 = (CharSequence) (Object) param1;
-        if (!(rg.a((byte) 19, var4))) {
-            return qj.field_c;
-        }
-        if (param0 <= 10) {
-            field_k = null;
-        }
-        CharSequence var5 = (CharSequence) (Object) param1;
-        int var3 = pf.a(var5, (byte) 125);
-        if (0 < var3) {
-            // if_icmplt L68
+        int var3 = 0;
+        CharSequence var4 = null;
+        CharSequence var5 = null;
+        var4 = (CharSequence) (Object) param1;
+        if (!rg.a((byte) 19, var4)) {
+          return qj.field_c;
         } else {
-            return qj.field_c;
+          L0: {
+            if (param0 > 10) {
+              break L0;
+            } else {
+              field_k = null;
+              break L0;
+            }
+          }
+          L1: {
+            var5 = (CharSequence) (Object) param1;
+            var3 = pf.a(var5, (byte) 125);
+            if (0 >= var3) {
+              break L1;
+            } else {
+              if (130 < var3) {
+                break L1;
+              } else {
+                return lg.field_c;
+              }
+            }
+          }
+          return qj.field_c;
         }
-        return lg.field_c;
     }
 
     final static String a(int param0, byte param1, int param2, byte[] param3) {
@@ -90,8 +105,9 @@ final class kk extends lk {
                   }
                 }
               }
+              int incrementValue$1 = var5;
               var5++;
-              var4[var5] = (char)var7;
+              var4[incrementValue$1] = (char)var7;
               var6++;
               continue L0;
             } else {

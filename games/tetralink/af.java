@@ -14,17 +14,17 @@ final class af {
 
     final static String a(byte param0, int param1, String param2) {
         if (1 != param1) {
-          if (param1 != -3) {
-            if (-4 != param1) {
+          if ((param1 ^ -1) != -3) {
+            if (-4 != (param1 ^ -1)) {
               if (param1 != 4) {
                 if (param1 == 5) {
                   return sk.a(new String[1], sn.field_f, 120);
                 } else {
                   if (param1 != 6) {
-                    if (-8 == param1) {
+                    if (-8 == (param1 ^ -1)) {
                       return sk.a(new String[1], hm.field_c, 119);
                     } else {
-                      if (-9 == param1) {
+                      if (-9 == (param1 ^ -1)) {
                         return sk.a(new String[1], field_i, 121);
                       } else {
                         if (param0 >= 95) {
@@ -83,7 +83,6 @@ final class af {
 
     final static v a(int param0, byte param1, int param2, int param3) {
         v var4 = null;
-        v var4_ref = null;
         int var5 = 0;
         int var6 = 0;
         var6 = TetraLink.field_J;
@@ -91,19 +90,19 @@ final class af {
         var5 = 90 / ((-53 - param1) / 40);
         L0: while (true) {
           if (var4 != null) {
-            if (param0 != var4_ref.field_n) {
+            if (param0 != var4.field_n) {
               var4 = (v) (Object) tc.field_p.a((byte) -70);
               continue L0;
             } else {
-              return var4_ref;
+              return var4;
             }
           } else {
-            var4_ref = new v();
-            var4_ref.field_n = param0;
-            var4_ref.field_q = param3;
-            tc.field_p.a((mc) (Object) var4_ref, false);
-            fd.a(-68, param2, var4_ref);
-            return var4_ref;
+            var4 = new v();
+            var4.field_n = param0;
+            var4.field_q = param3;
+            tc.field_p.a((mc) (Object) var4, false);
+            fd.a(-68, param2, var4);
+            return var4;
           }
         }
     }

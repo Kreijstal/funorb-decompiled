@@ -24,8 +24,9 @@ final class hl {
 
     final int a(int param0) {
         if (((hl) this).field_d >= ((hl) this).field_g) {
+            int fieldTemp$0 = ((hl) this).field_f;
             ((hl) this).field_f = ((hl) this).field_f + 1;
-            ((hl) this).field_c = ((hl) this).field_i[((hl) this).field_f] << 15;
+            ((hl) this).field_c = ((hl) this).field_i[fieldTemp$0] << 15;
             if (((hl) this).field_f >= ((hl) this).field_k) {
                 ((hl) this).field_f = ((hl) this).field_k - 1;
             }

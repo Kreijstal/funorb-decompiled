@@ -46,66 +46,38 @@ final class ke extends si {
     final static void a(byte param0, java.applet.Applet param1, String param2, boolean param3) {
         try {
             java.net.MalformedURLException var4 = null;
-            int statePc = 0;
-            Throwable caughtException = null;
-            stateLoop: while (true) {
-                switch (statePc) {
-                    case 0: {
-                        if (!dl.field_t.startsWith("win")) {
-                            statePc = 3;
-                        } else {
-                            statePc = 1;
-                        }
-                        continue stateLoop;
-                    }
-                    case 1: {
-                        if (!sj.a(97, param2)) {
-                            statePc = 3;
-                        } else {
-                            statePc = 2;
-                        }
-                        continue stateLoop;
-                    }
-                    case 2: {
-                        return;
-                    }
-                    case 3: {
-                        try {
-                            param1.getAppletContext().showDocument(new java.net.URL(param2), "_blank");
-                            if (param0 < -60) {
-                                statePc = 7;
-                            } else {
-                                statePc = 4;
-                            }
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_3) {
-                            caughtException = stateCaught_3;
-                            statePc = 6;
-                            continue stateLoop;
-                        }
-                    }
-                    case 4: {
-                        try {
-                            int discarded$2 = ke.a((byte) -80);
-                            statePc = 7;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_4) {
-                            caughtException = stateCaught_4;
-                            statePc = 6;
-                            continue stateLoop;
-                        }
-                    }
-                    case 6: {
-                        var4 = (java.net.MalformedURLException) (Object) caughtException;
-                        hi.a((Throwable) null, "MGR1: " + param2, 1);
-                        statePc = 7;
-                        continue stateLoop;
-                    }
-                    case 7: {
-                        return;
-                    }
-                    default: throw new IllegalStateException("invalid CFG state " + statePc);
+            Throwable decompiledCaughtException = null;
+            L0: {
+              if (!dl.field_t.startsWith("win")) {
+                break L0;
+              } else {
+                if (!sj.a(97, param2)) {
+                  break L0;
+                } else {
+                  return;
                 }
+              }
+            }
+            try {
+              L1: {
+                L2: {
+                  param1.getAppletContext().showDocument(new java.net.URL(param2), "_blank");
+                  if (param0 < -60) {
+                    break L2;
+                  } else {
+                    int discarded$2 = ke.a((byte) -80);
+                    break L2;
+                  }
+                }
+                break L1;
+              }
+            } catch (java.net.MalformedURLException decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              L3: {
+                var4 = (java.net.MalformedURLException) (Object) decompiledCaughtException;
+                hi.a((Throwable) null, "MGR1: " + param2, 1);
+                break L3;
+              }
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -154,60 +126,67 @@ final class ke extends si {
                 break L3;
               } else {
                 L4: {
-                  if (ti.field_e < uc.field_c) {
-                    ti.field_e = ti.field_e + 1;
-                    if (ti.field_e > uc.field_e) {
-                      L5: {
-                        if (null == jb.field_d) {
-                          break L5;
-                        } else {
-                          break L5;
+                  if ((ti.field_e ^ -1) > (uc.field_c ^ -1)) {
+                    L5: {
+                      ti.field_e = ti.field_e + 1;
+                      if (ti.field_e <= uc.field_e) {
+                        break L5;
+                      } else {
+                        L6: {
+                          if (null == jb.field_d) {
+                            break L6;
+                          } else {
+                            if (null != jb.field_d[we.field_h]) {
+                              break L5;
+                            } else {
+                              break L6;
+                            }
+                          }
                         }
+                        ti.field_e = ti.field_e - 1;
+                        break L4;
                       }
-                      ti.field_e = ti.field_e - 1;
+                    }
+                    if (uc.field_c > ti.field_e) {
                       break L4;
                     } else {
-                      if (uc.field_c > ti.field_e) {
+                      if (null != jb.field_d[(we.field_h + 1) % var2]) {
                         break L4;
                       } else {
-                        if (null != jb.field_d[(we.field_h + 1) % var2]) {
-                          break L4;
-                        } else {
-                          ti.field_e = ti.field_e - 1;
-                          break L4;
-                        }
+                        ti.field_e = ti.field_e - 1;
+                        break L4;
                       }
                     }
                   } else {
                     break L4;
                   }
                 }
-                L6: {
+                L7: {
                   if (uc.field_c <= ti.field_e) {
-                    L7: {
+                    L8: {
                       vb.field_g = we.field_h;
                       if (!fh.field_g) {
                         we.field_h = we.field_h - 1;
                         if (-1 < (we.field_h ^ -1)) {
                           we.field_h = we.field_h + var2;
-                          break L7;
+                          break L8;
                         } else {
-                          break L7;
+                          break L8;
                         }
                       } else {
                         we.field_h = we.field_h + 1;
                         if (var2 <= we.field_h) {
                           we.field_h = we.field_h - var2;
-                          break L7;
+                          break L8;
                         } else {
-                          break L7;
+                          break L8;
                         }
                       }
                     }
                     ti.field_e = ti.field_e - uc.field_c;
-                    break L6;
+                    break L7;
                   } else {
-                    break L6;
+                    break L7;
                   }
                 }
                 if (uc.field_e < ti.field_e) {
@@ -223,73 +202,73 @@ final class ke extends si {
               var4 = 0;
               if (hg.field_F != 0) {
                 if (s.field_gb > var3) {
-                  if (s.field_gb < kj.field_S.field_t + var3) {
-                    L8: {
+                  if ((s.field_gb ^ -1) > (kj.field_S.field_t + var3 ^ -1)) {
+                    L9: {
                       if (db.field_o <= 269 + -kj.field_S.field_p) {
-                        break L8;
+                        break L9;
                       } else {
-                        if (-270 <= db.field_o) {
-                          break L8;
+                        if (-270 >= (db.field_o ^ -1)) {
+                          break L9;
                         } else {
                           var4 = 1;
                           ti.field_e = uc.field_c;
                           fh.field_g = false;
-                          break L8;
+                          break L9;
                         }
                       }
                     }
-                    L9: {
+                    L10: {
                       if (db.field_o <= 586) {
-                        break L9;
+                        break L10;
                       } else {
-                        if (kj.field_S.field_p + 586 > db.field_o) {
+                        if ((kj.field_S.field_p + 586 ^ -1) < (db.field_o ^ -1)) {
                           var4 = 1;
                           ti.field_e = uc.field_c;
                           fh.field_g = true;
-                          break L9;
+                          break L10;
                         } else {
-                          L10: {
+                          L11: {
                             if (var4 != 0) {
-                              break L10;
+                              break L11;
                             } else {
-                              if (uc.field_e >= ti.field_e) {
-                                break L10;
+                              if ((uc.field_e ^ -1) <= (ti.field_e ^ -1)) {
+                                break L11;
                               } else {
                                 if (var3 >= ad.field_m) {
-                                  break L10;
+                                  break L11;
                                 } else {
-                                  if (ad.field_m >= var3 - -kj.field_S.field_t) {
-                                    break L10;
+                                  if ((ad.field_m ^ -1) <= (var3 - -kj.field_S.field_t ^ -1)) {
+                                    break L11;
                                   } else {
-                                    L11: {
+                                    L12: {
                                       if (gb.field_j <= 269 - kj.field_S.field_p) {
-                                        break L11;
+                                        break L12;
                                       } else {
                                         if ((gb.field_j ^ -1) <= -270) {
-                                          break L11;
+                                          break L12;
                                         } else {
-                                          L12: {
+                                          L13: {
                                             ti.field_e = uc.field_e;
                                             if (586 >= gb.field_j) {
-                                              break L12;
+                                              break L13;
                                             } else {
                                               if (kj.field_S.field_p + 586 <= gb.field_j) {
-                                                break L12;
+                                                break L13;
                                               } else {
                                                 ti.field_e = uc.field_e;
-                                                break L12;
+                                                break L13;
                                               }
                                             }
                                           }
                                           if (param0) {
-                                            L13: {
+                                            L14: {
                                               qh.field_b.a(-117, ad.a(ad.field_m, gb.field_j, 0), ad.a(s.field_gb, db.field_o, 0));
                                               if (!qh.field_b.d((byte) -8)) {
-                                                break L13;
+                                                break L14;
                                               } else {
                                                 if (qh.field_b.field_f != 0) {
                                                   if (-2 != (qh.field_b.field_f ^ -1)) {
-                                                    break L13;
+                                                    break L14;
                                                   } else {
                                                     return 2;
                                                   }
@@ -298,14 +277,16 @@ final class ke extends si {
                                                 }
                                               }
                                             }
-                                            L14: while (true) {
-                                              if (wk.a((byte) -56)) {
-                                                L15: {
+                                            L15: while (true) {
+                                              if (!wk.a((byte) -56)) {
+                                                return 0;
+                                              } else {
+                                                L16: {
                                                   qh.field_b.a(0, false);
                                                   if (qh.field_b.d((byte) -33)) {
-                                                    if (-1 != qh.field_b.field_f) {
-                                                      if (-2 != qh.field_b.field_f) {
-                                                        break L15;
+                                                    if (-1 != (qh.field_b.field_f ^ -1)) {
+                                                      if (-2 != (qh.field_b.field_f ^ -1)) {
+                                                        break L16;
                                                       } else {
                                                         return 1;
                                                       }
@@ -313,16 +294,14 @@ final class ke extends si {
                                                       return 3;
                                                     }
                                                   } else {
-                                                    break L15;
+                                                    break L16;
                                                   }
                                                 }
                                                 if (-14 == (el.field_n ^ -1)) {
                                                   return 1;
                                                 } else {
-                                                  continue L14;
+                                                  continue L15;
                                                 }
-                                              } else {
-                                                return 0;
                                               }
                                             }
                                           } else {
@@ -332,59 +311,62 @@ final class ke extends si {
                                       }
                                     }
                                     if (586 >= gb.field_j) {
-                                      break L10;
+                                      break L11;
                                     } else {
                                       if (kj.field_S.field_p + 586 <= gb.field_j) {
-                                        break L10;
+                                        break L11;
                                       } else {
-                                        ti.field_e = uc.field_e;
-                                        if (param0) {
-                                          L16: {
-                                            qh.field_b.a(-117, ad.a(ad.field_m, gb.field_j, 0), ad.a(s.field_gb, db.field_o, 0));
-                                            if (!qh.field_b.d((byte) -8)) {
-                                              break L16;
-                                            } else {
-                                              if (qh.field_b.field_f != 0) {
-                                                if (-2 != (qh.field_b.field_f ^ -1)) {
-                                                  break L16;
-                                                } else {
-                                                  return 2;
-                                                }
+                                        L17: {
+                                          ti.field_e = uc.field_e;
+                                          if (param0) {
+                                            L18: {
+                                              qh.field_b.a(-117, ad.a(ad.field_m, gb.field_j, 0), ad.a(s.field_gb, db.field_o, 0));
+                                              if (!qh.field_b.d((byte) -8)) {
+                                                break L18;
                                               } else {
-                                                return 3;
-                                              }
-                                            }
-                                          }
-                                          L17: while (true) {
-                                            if (wk.a((byte) -56)) {
-                                              L18: {
-                                                qh.field_b.a(0, false);
-                                                if (qh.field_b.d((byte) -33)) {
-                                                  if (-1 != qh.field_b.field_f) {
-                                                    if (-2 != qh.field_b.field_f) {
-                                                      break L18;
-                                                    } else {
-                                                      return 1;
-                                                    }
+                                                if (qh.field_b.field_f != 0) {
+                                                  if (-2 != (qh.field_b.field_f ^ -1)) {
+                                                    break L18;
                                                   } else {
-                                                    return 3;
+                                                    return 2;
                                                   }
                                                 } else {
-                                                  break L18;
+                                                  return 3;
                                                 }
                                               }
-                                              if (-14 == (el.field_n ^ -1)) {
-                                                return 1;
-                                              } else {
-                                                continue L17;
-                                              }
-                                            } else {
-                                              return 0;
                                             }
+                                            L19: while (true) {
+                                              if (!wk.a((byte) -56)) {
+                                                break L17;
+                                              } else {
+                                                L20: {
+                                                  qh.field_b.a(0, false);
+                                                  if (qh.field_b.d((byte) -33)) {
+                                                    if (-1 != (qh.field_b.field_f ^ -1)) {
+                                                      if (-2 != (qh.field_b.field_f ^ -1)) {
+                                                        break L20;
+                                                      } else {
+                                                        return 1;
+                                                      }
+                                                    } else {
+                                                      return 3;
+                                                    }
+                                                  } else {
+                                                    break L20;
+                                                  }
+                                                }
+                                                if (-14 == (el.field_n ^ -1)) {
+                                                  return 1;
+                                                } else {
+                                                  continue L19;
+                                                }
+                                              }
+                                            }
+                                          } else {
+                                            break L17;
                                           }
-                                        } else {
-                                          return 0;
                                         }
+                                        return 0;
                                       }
                                     }
                                   }
@@ -393,14 +375,14 @@ final class ke extends si {
                             }
                           }
                           if (param0) {
-                            L19: {
+                            L21: {
                               qh.field_b.a(-117, ad.a(ad.field_m, gb.field_j, 0), ad.a(s.field_gb, db.field_o, 0));
                               if (!qh.field_b.d((byte) -8)) {
-                                break L19;
+                                break L21;
                               } else {
                                 if (qh.field_b.field_f != 0) {
                                   if (-2 != (qh.field_b.field_f ^ -1)) {
-                                    break L19;
+                                    break L21;
                                   } else {
                                     return 2;
                                   }
@@ -409,14 +391,16 @@ final class ke extends si {
                                 }
                               }
                             }
-                            L20: while (true) {
-                              if (wk.a((byte) -56)) {
-                                L21: {
+                            L22: while (true) {
+                              if (!wk.a((byte) -56)) {
+                                return 0;
+                              } else {
+                                L23: {
                                   qh.field_b.a(0, false);
                                   if (qh.field_b.d((byte) -33)) {
-                                    if (-1 != qh.field_b.field_f) {
-                                      if (-2 != qh.field_b.field_f) {
-                                        break L21;
+                                    if (-1 != (qh.field_b.field_f ^ -1)) {
+                                      if (-2 != (qh.field_b.field_f ^ -1)) {
+                                        break L23;
                                       } else {
                                         return 1;
                                       }
@@ -424,16 +408,14 @@ final class ke extends si {
                                       return 3;
                                     }
                                   } else {
-                                    break L21;
+                                    break L23;
                                   }
                                 }
                                 if (-14 == (el.field_n ^ -1)) {
                                   return 1;
                                 } else {
-                                  continue L20;
+                                  continue L22;
                                 }
-                              } else {
-                                return 0;
                               }
                             }
                           } else {
@@ -442,45 +424,45 @@ final class ke extends si {
                         }
                       }
                     }
-                    L22: {
+                    L24: {
                       if (var4 != 0) {
-                        break L22;
+                        break L24;
                       } else {
-                        if (uc.field_e >= ti.field_e) {
-                          break L22;
+                        if ((uc.field_e ^ -1) <= (ti.field_e ^ -1)) {
+                          break L24;
                         } else {
                           if (var3 >= ad.field_m) {
-                            break L22;
+                            break L24;
                           } else {
-                            if (ad.field_m >= var3 - -kj.field_S.field_t) {
-                              break L22;
+                            if ((ad.field_m ^ -1) <= (var3 - -kj.field_S.field_t ^ -1)) {
+                              break L24;
                             } else {
-                              L23: {
+                              L25: {
                                 if (gb.field_j <= 269 - kj.field_S.field_p) {
-                                  break L23;
+                                  break L25;
                                 } else {
                                   if ((gb.field_j ^ -1) <= -270) {
-                                    break L23;
+                                    break L25;
                                   } else {
-                                    L24: {
+                                    L26: {
                                       ti.field_e = uc.field_e;
                                       if (586 >= gb.field_j) {
-                                        break L24;
+                                        break L26;
                                       } else {
                                         if (kj.field_S.field_p + 586 <= gb.field_j) {
-                                          break L24;
+                                          break L26;
                                         } else {
-                                          L25: {
+                                          L27: {
                                             ti.field_e = uc.field_e;
                                             if (param0) {
-                                              L26: {
+                                              L28: {
                                                 qh.field_b.a(-117, ad.a(ad.field_m, gb.field_j, 0), ad.a(s.field_gb, db.field_o, 0));
                                                 if (!qh.field_b.d((byte) -8)) {
-                                                  break L26;
+                                                  break L28;
                                                 } else {
                                                   if (qh.field_b.field_f != 0) {
                                                     if (-2 != (qh.field_b.field_f ^ -1)) {
-                                                      break L26;
+                                                      break L28;
                                                     } else {
                                                       return 2;
                                                     }
@@ -489,16 +471,16 @@ final class ke extends si {
                                                   }
                                                 }
                                               }
-                                              L27: while (true) {
+                                              L29: while (true) {
                                                 if (!wk.a((byte) -56)) {
-                                                  break L25;
+                                                  break L27;
                                                 } else {
-                                                  L28: {
+                                                  L30: {
                                                     qh.field_b.a(0, false);
                                                     if (qh.field_b.d((byte) -33)) {
-                                                      if (-1 != qh.field_b.field_f) {
-                                                        if (-2 != qh.field_b.field_f) {
-                                                          break L28;
+                                                      if (-1 != (qh.field_b.field_f ^ -1)) {
+                                                        if (-2 != (qh.field_b.field_f ^ -1)) {
+                                                          break L30;
                                                         } else {
                                                           return 1;
                                                         }
@@ -506,18 +488,18 @@ final class ke extends si {
                                                         return 3;
                                                       }
                                                     } else {
-                                                      break L28;
+                                                      break L30;
                                                     }
                                                   }
                                                   if (-14 == (el.field_n ^ -1)) {
                                                     return 1;
                                                   } else {
-                                                    continue L27;
+                                                    continue L29;
                                                   }
                                                 }
                                               }
                                             } else {
-                                              break L25;
+                                              break L27;
                                             }
                                           }
                                           return 0;
@@ -525,14 +507,14 @@ final class ke extends si {
                                       }
                                     }
                                     if (param0) {
-                                      L29: {
+                                      L31: {
                                         qh.field_b.a(-117, ad.a(ad.field_m, gb.field_j, 0), ad.a(s.field_gb, db.field_o, 0));
                                         if (!qh.field_b.d((byte) -8)) {
-                                          break L29;
+                                          break L31;
                                         } else {
                                           if (qh.field_b.field_f != 0) {
                                             if (-2 != (qh.field_b.field_f ^ -1)) {
-                                              break L29;
+                                              break L31;
                                             } else {
                                               return 2;
                                             }
@@ -541,16 +523,16 @@ final class ke extends si {
                                           }
                                         }
                                       }
-                                      L30: while (true) {
+                                      L32: while (true) {
                                         if (!wk.a((byte) -56)) {
                                           return 0;
                                         } else {
-                                          L31: {
+                                          L33: {
                                             qh.field_b.a(0, false);
                                             if (qh.field_b.d((byte) -33)) {
-                                              if (-1 != qh.field_b.field_f) {
-                                                if (-2 != qh.field_b.field_f) {
-                                                  break L31;
+                                              if (-1 != (qh.field_b.field_f ^ -1)) {
+                                                if (-2 != (qh.field_b.field_f ^ -1)) {
+                                                  break L33;
                                                 } else {
                                                   return 1;
                                                 }
@@ -558,13 +540,13 @@ final class ke extends si {
                                                 return 3;
                                               }
                                             } else {
-                                              break L31;
+                                              break L33;
                                             }
                                           }
                                           if (-14 == (el.field_n ^ -1)) {
                                             return 1;
                                           } else {
-                                            continue L30;
+                                            continue L32;
                                           }
                                         }
                                       }
@@ -575,21 +557,21 @@ final class ke extends si {
                                 }
                               }
                               if (586 >= gb.field_j) {
-                                break L22;
+                                break L24;
                               } else {
                                 if (kj.field_S.field_p + 586 <= gb.field_j) {
-                                  break L22;
+                                  break L24;
                                 } else {
                                   ti.field_e = uc.field_e;
                                   if (param0) {
-                                    L32: {
+                                    L34: {
                                       qh.field_b.a(-117, ad.a(ad.field_m, gb.field_j, 0), ad.a(s.field_gb, db.field_o, 0));
                                       if (!qh.field_b.d((byte) -8)) {
-                                        break L32;
+                                        break L34;
                                       } else {
                                         if (qh.field_b.field_f != 0) {
                                           if (-2 != (qh.field_b.field_f ^ -1)) {
-                                            break L32;
+                                            break L34;
                                           } else {
                                             return 2;
                                           }
@@ -598,16 +580,16 @@ final class ke extends si {
                                         }
                                       }
                                     }
-                                    L33: while (true) {
+                                    L35: while (true) {
                                       if (!wk.a((byte) -56)) {
                                         return 0;
                                       } else {
-                                        L34: {
+                                        L36: {
                                           qh.field_b.a(0, false);
                                           if (qh.field_b.d((byte) -33)) {
-                                            if (-1 != qh.field_b.field_f) {
-                                              if (-2 != qh.field_b.field_f) {
-                                                break L34;
+                                            if (-1 != (qh.field_b.field_f ^ -1)) {
+                                              if (-2 != (qh.field_b.field_f ^ -1)) {
+                                                break L36;
                                               } else {
                                                 return 1;
                                               }
@@ -615,13 +597,13 @@ final class ke extends si {
                                               return 3;
                                             }
                                           } else {
-                                            break L34;
+                                            break L36;
                                           }
                                         }
                                         if (-14 == (el.field_n ^ -1)) {
                                           return 1;
                                         } else {
-                                          continue L33;
+                                          continue L35;
                                         }
                                       }
                                     }
@@ -636,14 +618,14 @@ final class ke extends si {
                       }
                     }
                     if (param0) {
-                      L35: {
+                      L37: {
                         qh.field_b.a(-117, ad.a(ad.field_m, gb.field_j, 0), ad.a(s.field_gb, db.field_o, 0));
                         if (!qh.field_b.d((byte) -8)) {
-                          break L35;
+                          break L37;
                         } else {
                           if (qh.field_b.field_f != 0) {
                             if (-2 != (qh.field_b.field_f ^ -1)) {
-                              break L35;
+                              break L37;
                             } else {
                               return 2;
                             }
@@ -652,16 +634,16 @@ final class ke extends si {
                           }
                         }
                       }
-                      L36: while (true) {
+                      L38: while (true) {
                         if (!wk.a((byte) -56)) {
                           return 0;
                         } else {
-                          L37: {
+                          L39: {
                             qh.field_b.a(0, false);
                             if (qh.field_b.d((byte) -33)) {
-                              if (-1 != qh.field_b.field_f) {
-                                if (-2 != qh.field_b.field_f) {
-                                  break L37;
+                              if (-1 != (qh.field_b.field_f ^ -1)) {
+                                if (-2 != (qh.field_b.field_f ^ -1)) {
+                                  break L39;
                                 } else {
                                   return 1;
                                 }
@@ -669,13 +651,13 @@ final class ke extends si {
                                 return 3;
                               }
                             } else {
-                              break L37;
+                              break L39;
                             }
                           }
                           if (-14 == (el.field_n ^ -1)) {
                             return 1;
                           } else {
-                            continue L36;
+                            continue L38;
                           }
                         }
                       }
@@ -683,54 +665,39 @@ final class ke extends si {
                       return 0;
                     }
                   } else {
-                    L38: {
+                    L40: {
                       if (var4 != 0) {
-                        break L38;
+                        break L40;
                       } else {
-                        if (uc.field_e >= ti.field_e) {
-                          break L38;
+                        if ((uc.field_e ^ -1) <= (ti.field_e ^ -1)) {
+                          break L40;
                         } else {
                           if (var3 >= ad.field_m) {
-                            break L38;
+                            break L40;
                           } else {
-                            if (ad.field_m >= var3 - -kj.field_S.field_t) {
-                              break L38;
+                            if ((ad.field_m ^ -1) <= (var3 - -kj.field_S.field_t ^ -1)) {
+                              break L40;
                             } else {
-                              if (gb.field_j > 269 - kj.field_S.field_p) {
-                                if ((gb.field_j ^ -1) > -270) {
-                                  ti.field_e = uc.field_e;
-                                  if (586 >= gb.field_j) {
-                                    break L38;
-                                  } else {
-                                    if (kj.field_S.field_p + 586 <= gb.field_j) {
-                                      break L38;
-                                    } else {
-                                      ti.field_e = uc.field_e;
-                                      break L38;
-                                    }
-                                  }
+                              L41: {
+                                if (gb.field_j <= 269 - kj.field_S.field_p) {
+                                  break L41;
                                 } else {
-                                  if (586 >= gb.field_j) {
-                                    break L38;
-                                  } else {
-                                    if (kj.field_S.field_p + 586 <= gb.field_j) {
-                                      break L38;
-                                    } else {
-                                      ti.field_e = uc.field_e;
-                                      break L38;
-                                    }
-                                  }
-                                }
-                              } else {
-                                if (586 >= gb.field_j) {
-                                  break L38;
-                                } else {
-                                  if (kj.field_S.field_p + 586 <= gb.field_j) {
-                                    break L38;
+                                  if ((gb.field_j ^ -1) <= -270) {
+                                    break L41;
                                   } else {
                                     ti.field_e = uc.field_e;
-                                    break L38;
+                                    break L41;
                                   }
+                                }
+                              }
+                              if (586 >= gb.field_j) {
+                                break L40;
+                              } else {
+                                if (kj.field_S.field_p + 586 <= gb.field_j) {
+                                  break L40;
+                                } else {
+                                  ti.field_e = uc.field_e;
+                                  break L40;
                                 }
                               }
                             }
@@ -739,14 +706,14 @@ final class ke extends si {
                       }
                     }
                     if (param0) {
-                      L39: {
+                      L42: {
                         qh.field_b.a(-117, ad.a(ad.field_m, gb.field_j, 0), ad.a(s.field_gb, db.field_o, 0));
                         if (!qh.field_b.d((byte) -8)) {
-                          break L39;
+                          break L42;
                         } else {
                           if (qh.field_b.field_f != 0) {
                             if (-2 != (qh.field_b.field_f ^ -1)) {
-                              break L39;
+                              break L42;
                             } else {
                               return 2;
                             }
@@ -755,14 +722,16 @@ final class ke extends si {
                           }
                         }
                       }
-                      L40: while (true) {
-                        if (wk.a((byte) -56)) {
-                          L41: {
+                      L43: while (true) {
+                        if (!wk.a((byte) -56)) {
+                          return 0;
+                        } else {
+                          L44: {
                             qh.field_b.a(0, false);
                             if (qh.field_b.d((byte) -33)) {
-                              if (-1 != qh.field_b.field_f) {
-                                if (-2 != qh.field_b.field_f) {
-                                  break L41;
+                              if (-1 != (qh.field_b.field_f ^ -1)) {
+                                if (-2 != (qh.field_b.field_f ^ -1)) {
+                                  break L44;
                                 } else {
                                   return 1;
                                 }
@@ -770,16 +739,14 @@ final class ke extends si {
                                 return 3;
                               }
                             } else {
-                              break L41;
+                              break L44;
                             }
                           }
-                          if (-14 == el.field_n) {
+                          if (-14 == (el.field_n ^ -1)) {
                             return 1;
                           } else {
-                            continue L40;
+                            continue L43;
                           }
-                        } else {
-                          return 0;
                         }
                       }
                     } else {
@@ -787,48 +754,48 @@ final class ke extends si {
                     }
                   }
                 } else {
-                  L42: {
+                  L45: {
                     if (var4 != 0) {
-                      break L42;
+                      break L45;
                     } else {
-                      if (uc.field_e >= ti.field_e) {
-                        break L42;
+                      if ((uc.field_e ^ -1) <= (ti.field_e ^ -1)) {
+                        break L45;
                       } else {
                         if (var3 >= ad.field_m) {
-                          break L42;
+                          break L45;
                         } else {
-                          if (ad.field_m >= var3 - -kj.field_S.field_t) {
-                            break L42;
+                          if ((ad.field_m ^ -1) <= (var3 - -kj.field_S.field_t ^ -1)) {
+                            break L45;
                           } else {
-                            L43: {
+                            L46: {
                               if (gb.field_j <= 269 - kj.field_S.field_p) {
-                                break L43;
+                                break L46;
                               } else {
                                 if ((gb.field_j ^ -1) <= -270) {
-                                  break L43;
+                                  break L46;
                                 } else {
-                                  L44: {
+                                  L47: {
                                     ti.field_e = uc.field_e;
                                     if (586 >= gb.field_j) {
-                                      break L44;
+                                      break L47;
                                     } else {
                                       if (kj.field_S.field_p + 586 <= gb.field_j) {
-                                        break L44;
+                                        break L47;
                                       } else {
                                         ti.field_e = uc.field_e;
-                                        break L44;
+                                        break L47;
                                       }
                                     }
                                   }
                                   if (param0) {
-                                    L45: {
+                                    L48: {
                                       qh.field_b.a(-117, ad.a(ad.field_m, gb.field_j, 0), ad.a(s.field_gb, db.field_o, 0));
                                       if (!qh.field_b.d((byte) -8)) {
-                                        break L45;
+                                        break L48;
                                       } else {
                                         if (qh.field_b.field_f != 0) {
                                           if (-2 != (qh.field_b.field_f ^ -1)) {
-                                            break L45;
+                                            break L48;
                                           } else {
                                             return 2;
                                           }
@@ -837,14 +804,16 @@ final class ke extends si {
                                         }
                                       }
                                     }
-                                    L46: while (true) {
-                                      if (wk.a((byte) -56)) {
-                                        L47: {
+                                    L49: while (true) {
+                                      if (!wk.a((byte) -56)) {
+                                        return 0;
+                                      } else {
+                                        L50: {
                                           qh.field_b.a(0, false);
                                           if (qh.field_b.d((byte) -33)) {
-                                            if (-1 != qh.field_b.field_f) {
-                                              if (-2 != qh.field_b.field_f) {
-                                                break L47;
+                                            if (-1 != (qh.field_b.field_f ^ -1)) {
+                                              if (-2 != (qh.field_b.field_f ^ -1)) {
+                                                break L50;
                                               } else {
                                                 return 1;
                                               }
@@ -852,16 +821,14 @@ final class ke extends si {
                                               return 3;
                                             }
                                           } else {
-                                            break L47;
+                                            break L50;
                                           }
                                         }
                                         if (-14 == (el.field_n ^ -1)) {
                                           return 1;
                                         } else {
-                                          continue L46;
+                                          continue L49;
                                         }
-                                      } else {
-                                        return 0;
                                       }
                                     }
                                   } else {
@@ -871,59 +838,62 @@ final class ke extends si {
                               }
                             }
                             if (586 >= gb.field_j) {
-                              break L42;
+                              break L45;
                             } else {
                               if (kj.field_S.field_p + 586 <= gb.field_j) {
-                                break L42;
+                                break L45;
                               } else {
-                                ti.field_e = uc.field_e;
-                                if (param0) {
-                                  L48: {
-                                    qh.field_b.a(-117, ad.a(ad.field_m, gb.field_j, 0), ad.a(s.field_gb, db.field_o, 0));
-                                    if (!qh.field_b.d((byte) -8)) {
-                                      break L48;
-                                    } else {
-                                      if (qh.field_b.field_f != 0) {
-                                        if (-2 != (qh.field_b.field_f ^ -1)) {
-                                          break L48;
-                                        } else {
-                                          return 2;
-                                        }
+                                L51: {
+                                  ti.field_e = uc.field_e;
+                                  if (param0) {
+                                    L52: {
+                                      qh.field_b.a(-117, ad.a(ad.field_m, gb.field_j, 0), ad.a(s.field_gb, db.field_o, 0));
+                                      if (!qh.field_b.d((byte) -8)) {
+                                        break L52;
                                       } else {
-                                        return 3;
-                                      }
-                                    }
-                                  }
-                                  L49: while (true) {
-                                    if (wk.a((byte) -56)) {
-                                      L50: {
-                                        qh.field_b.a(0, false);
-                                        if (qh.field_b.d((byte) -33)) {
-                                          if (-1 != qh.field_b.field_f) {
-                                            if (-2 != qh.field_b.field_f) {
-                                              break L50;
-                                            } else {
-                                              return 1;
-                                            }
+                                        if (qh.field_b.field_f != 0) {
+                                          if (-2 != (qh.field_b.field_f ^ -1)) {
+                                            break L52;
                                           } else {
-                                            return 3;
+                                            return 2;
                                           }
                                         } else {
-                                          break L50;
+                                          return 3;
                                         }
                                       }
-                                      if (-14 == (el.field_n ^ -1)) {
-                                        return 1;
-                                      } else {
-                                        continue L49;
-                                      }
-                                    } else {
-                                      return 0;
                                     }
+                                    L53: while (true) {
+                                      if (!wk.a((byte) -56)) {
+                                        break L51;
+                                      } else {
+                                        L54: {
+                                          qh.field_b.a(0, false);
+                                          if (qh.field_b.d((byte) -33)) {
+                                            if (-1 != (qh.field_b.field_f ^ -1)) {
+                                              if (-2 != (qh.field_b.field_f ^ -1)) {
+                                                break L54;
+                                              } else {
+                                                return 1;
+                                              }
+                                            } else {
+                                              return 3;
+                                            }
+                                          } else {
+                                            break L54;
+                                          }
+                                        }
+                                        if (-14 == (el.field_n ^ -1)) {
+                                          return 1;
+                                        } else {
+                                          continue L53;
+                                        }
+                                      }
+                                    }
+                                  } else {
+                                    break L51;
                                   }
-                                } else {
-                                  return 0;
                                 }
+                                return 0;
                               }
                             }
                           }
@@ -932,14 +902,14 @@ final class ke extends si {
                     }
                   }
                   if (param0) {
-                    L51: {
+                    L55: {
                       qh.field_b.a(-117, ad.a(ad.field_m, gb.field_j, 0), ad.a(s.field_gb, db.field_o, 0));
                       if (!qh.field_b.d((byte) -8)) {
-                        break L51;
+                        break L55;
                       } else {
                         if (qh.field_b.field_f != 0) {
                           if (-2 != (qh.field_b.field_f ^ -1)) {
-                            break L51;
+                            break L55;
                           } else {
                             return 2;
                           }
@@ -948,14 +918,16 @@ final class ke extends si {
                         }
                       }
                     }
-                    L52: while (true) {
-                      if (wk.a((byte) -56)) {
-                        L53: {
+                    L56: while (true) {
+                      if (!wk.a((byte) -56)) {
+                        return 0;
+                      } else {
+                        L57: {
                           qh.field_b.a(0, false);
                           if (qh.field_b.d((byte) -33)) {
-                            if (-1 != qh.field_b.field_f) {
-                              if (-2 != qh.field_b.field_f) {
-                                break L53;
+                            if (-1 != (qh.field_b.field_f ^ -1)) {
+                              if (-2 != (qh.field_b.field_f ^ -1)) {
+                                break L57;
                               } else {
                                 return 1;
                               }
@@ -963,16 +935,14 @@ final class ke extends si {
                               return 3;
                             }
                           } else {
-                            break L53;
+                            break L57;
                           }
                         }
                         if (-14 == (el.field_n ^ -1)) {
                           return 1;
                         } else {
-                          continue L52;
+                          continue L56;
                         }
-                      } else {
-                        return 0;
                       }
                     }
                   } else {
@@ -980,48 +950,48 @@ final class ke extends si {
                   }
                 }
               } else {
-                L54: {
+                L58: {
                   if (var4 != 0) {
-                    break L54;
+                    break L58;
                   } else {
-                    if (uc.field_e >= ti.field_e) {
-                      break L54;
+                    if ((uc.field_e ^ -1) <= (ti.field_e ^ -1)) {
+                      break L58;
                     } else {
                       if (var3 >= ad.field_m) {
-                        break L54;
+                        break L58;
                       } else {
-                        if (ad.field_m >= var3 - -kj.field_S.field_t) {
-                          break L54;
+                        if ((ad.field_m ^ -1) <= (var3 - -kj.field_S.field_t ^ -1)) {
+                          break L58;
                         } else {
-                          L55: {
+                          L59: {
                             if (gb.field_j <= 269 - kj.field_S.field_p) {
-                              break L55;
+                              break L59;
                             } else {
                               if ((gb.field_j ^ -1) <= -270) {
-                                break L55;
+                                break L59;
                               } else {
-                                L56: {
+                                L60: {
                                   ti.field_e = uc.field_e;
                                   if (586 >= gb.field_j) {
-                                    break L56;
+                                    break L60;
                                   } else {
                                     if (kj.field_S.field_p + 586 <= gb.field_j) {
-                                      break L56;
+                                      break L60;
                                     } else {
                                       ti.field_e = uc.field_e;
-                                      break L56;
+                                      break L60;
                                     }
                                   }
                                 }
                                 if (param0) {
-                                  L57: {
+                                  L61: {
                                     qh.field_b.a(-117, ad.a(ad.field_m, gb.field_j, 0), ad.a(s.field_gb, db.field_o, 0));
                                     if (!qh.field_b.d((byte) -8)) {
-                                      break L57;
+                                      break L61;
                                     } else {
                                       if (qh.field_b.field_f != 0) {
                                         if (-2 != (qh.field_b.field_f ^ -1)) {
-                                          break L57;
+                                          break L61;
                                         } else {
                                           return 2;
                                         }
@@ -1030,14 +1000,16 @@ final class ke extends si {
                                       }
                                     }
                                   }
-                                  L58: while (true) {
-                                    if (wk.a((byte) -56)) {
-                                      L59: {
+                                  L62: while (true) {
+                                    if (!wk.a((byte) -56)) {
+                                      return 0;
+                                    } else {
+                                      L63: {
                                         qh.field_b.a(0, false);
                                         if (qh.field_b.d((byte) -33)) {
-                                          if (-1 != qh.field_b.field_f) {
-                                            if (-2 != qh.field_b.field_f) {
-                                              break L59;
+                                          if (-1 != (qh.field_b.field_f ^ -1)) {
+                                            if (-2 != (qh.field_b.field_f ^ -1)) {
+                                              break L63;
                                             } else {
                                               return 1;
                                             }
@@ -1045,16 +1017,14 @@ final class ke extends si {
                                             return 3;
                                           }
                                         } else {
-                                          break L59;
+                                          break L63;
                                         }
                                       }
                                       if (-14 == (el.field_n ^ -1)) {
                                         return 1;
                                       } else {
-                                        continue L58;
+                                        continue L62;
                                       }
-                                    } else {
-                                      return 0;
                                     }
                                   }
                                 } else {
@@ -1064,59 +1034,62 @@ final class ke extends si {
                             }
                           }
                           if (586 >= gb.field_j) {
-                            break L54;
+                            break L58;
                           } else {
                             if (kj.field_S.field_p + 586 <= gb.field_j) {
-                              break L54;
+                              break L58;
                             } else {
-                              ti.field_e = uc.field_e;
-                              if (param0) {
-                                L60: {
-                                  qh.field_b.a(-117, ad.a(ad.field_m, gb.field_j, 0), ad.a(s.field_gb, db.field_o, 0));
-                                  if (!qh.field_b.d((byte) -8)) {
-                                    break L60;
-                                  } else {
-                                    if (qh.field_b.field_f != 0) {
-                                      if (-2 != (qh.field_b.field_f ^ -1)) {
-                                        break L60;
-                                      } else {
-                                        return 2;
-                                      }
+                              L64: {
+                                ti.field_e = uc.field_e;
+                                if (param0) {
+                                  L65: {
+                                    qh.field_b.a(-117, ad.a(ad.field_m, gb.field_j, 0), ad.a(s.field_gb, db.field_o, 0));
+                                    if (!qh.field_b.d((byte) -8)) {
+                                      break L65;
                                     } else {
-                                      return 3;
-                                    }
-                                  }
-                                }
-                                L61: while (true) {
-                                  if (wk.a((byte) -56)) {
-                                    L62: {
-                                      qh.field_b.a(0, false);
-                                      if (qh.field_b.d((byte) -33)) {
-                                        if (-1 != qh.field_b.field_f) {
-                                          if (-2 != qh.field_b.field_f) {
-                                            break L62;
-                                          } else {
-                                            return 1;
-                                          }
+                                      if (qh.field_b.field_f != 0) {
+                                        if (-2 != (qh.field_b.field_f ^ -1)) {
+                                          break L65;
                                         } else {
-                                          return 3;
+                                          return 2;
                                         }
                                       } else {
-                                        break L62;
+                                        return 3;
                                       }
                                     }
-                                    if (-14 == (el.field_n ^ -1)) {
-                                      return 1;
-                                    } else {
-                                      continue L61;
-                                    }
-                                  } else {
-                                    return 0;
                                   }
+                                  L66: while (true) {
+                                    if (!wk.a((byte) -56)) {
+                                      break L64;
+                                    } else {
+                                      L67: {
+                                        qh.field_b.a(0, false);
+                                        if (qh.field_b.d((byte) -33)) {
+                                          if (-1 != (qh.field_b.field_f ^ -1)) {
+                                            if (-2 != (qh.field_b.field_f ^ -1)) {
+                                              break L67;
+                                            } else {
+                                              return 1;
+                                            }
+                                          } else {
+                                            return 3;
+                                          }
+                                        } else {
+                                          break L67;
+                                        }
+                                      }
+                                      if (-14 == (el.field_n ^ -1)) {
+                                        return 1;
+                                      } else {
+                                        continue L66;
+                                      }
+                                    }
+                                  }
+                                } else {
+                                  break L64;
                                 }
-                              } else {
-                                return 0;
                               }
+                              return 0;
                             }
                           }
                         }
@@ -1125,14 +1098,14 @@ final class ke extends si {
                   }
                 }
                 if (param0) {
-                  L63: {
+                  L68: {
                     qh.field_b.a(-117, ad.a(ad.field_m, gb.field_j, 0), ad.a(s.field_gb, db.field_o, 0));
                     if (!qh.field_b.d((byte) -8)) {
-                      break L63;
+                      break L68;
                     } else {
                       if (qh.field_b.field_f != 0) {
                         if (-2 != (qh.field_b.field_f ^ -1)) {
-                          break L63;
+                          break L68;
                         } else {
                           return 2;
                         }
@@ -1141,14 +1114,16 @@ final class ke extends si {
                       }
                     }
                   }
-                  L64: while (true) {
-                    if (wk.a((byte) -56)) {
-                      L65: {
+                  L69: while (true) {
+                    if (!wk.a((byte) -56)) {
+                      return 0;
+                    } else {
+                      L70: {
                         qh.field_b.a(0, false);
                         if (qh.field_b.d((byte) -33)) {
-                          if (-1 != qh.field_b.field_f) {
-                            if (-2 != qh.field_b.field_f) {
-                              break L65;
+                          if (-1 != (qh.field_b.field_f ^ -1)) {
+                            if (-2 != (qh.field_b.field_f ^ -1)) {
+                              break L70;
                             } else {
                               return 1;
                             }
@@ -1156,16 +1131,14 @@ final class ke extends si {
                             return 3;
                           }
                         } else {
-                          break L65;
+                          break L70;
                         }
                       }
                       if (-14 == (el.field_n ^ -1)) {
                         return 1;
                       } else {
-                        continue L64;
+                        continue L69;
                       }
-                    } else {
-                      return 0;
                     }
                   }
                 } else {
@@ -1174,14 +1147,14 @@ final class ke extends si {
               }
             } else {
               if (param0) {
-                L66: {
+                L71: {
                   qh.field_b.a(-117, ad.a(ad.field_m, gb.field_j, 0), ad.a(s.field_gb, db.field_o, 0));
                   if (!qh.field_b.d((byte) -8)) {
-                    break L66;
+                    break L71;
                   } else {
                     if (qh.field_b.field_f != 0) {
                       if (-2 != (qh.field_b.field_f ^ -1)) {
-                        break L66;
+                        break L71;
                       } else {
                         return 2;
                       }
@@ -1190,14 +1163,16 @@ final class ke extends si {
                     }
                   }
                 }
-                L67: while (true) {
-                  if (wk.a((byte) -56)) {
-                    L68: {
+                L72: while (true) {
+                  if (!wk.a((byte) -56)) {
+                    return 0;
+                  } else {
+                    L73: {
                       qh.field_b.a(0, false);
                       if (qh.field_b.d((byte) -33)) {
-                        if (-1 != qh.field_b.field_f) {
-                          if (-2 != qh.field_b.field_f) {
-                            break L68;
+                        if (-1 != (qh.field_b.field_f ^ -1)) {
+                          if (-2 != (qh.field_b.field_f ^ -1)) {
+                            break L73;
                           } else {
                             return 1;
                           }
@@ -1205,16 +1180,14 @@ final class ke extends si {
                           return 3;
                         }
                       } else {
-                        break L68;
+                        break L73;
                       }
                     }
                     if (-14 == (el.field_n ^ -1)) {
                       return 1;
                     } else {
-                      continue L67;
+                      continue L72;
                     }
-                  } else {
-                    return 0;
                   }
                 }
               } else {

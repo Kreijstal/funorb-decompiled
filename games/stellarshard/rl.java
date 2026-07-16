@@ -148,51 +148,32 @@ final class rl {
             String var3 = null;
             java.net.URL var4 = null;
             Throwable decompiledCaughtException = null;
-            int statePc = 0;
-            Throwable caughtException = null;
-            stateLoop: while (true) {
-                switch (statePc) {
-                    case 0: {
-                        try {
-                            var4 = param0.getCodeBase();
-                            var3 = lk.a(param0, var4, 118).getFile();
-                            Object discarded$12 = sh.a(new Object[2], false, "updatelinks", param0);
-                            Object discarded$13 = sh.a(new Object[2], false, "updatelinks", param0);
-                            Object discarded$14 = sh.a(new Object[2], false, "updatelinks", param0);
-                            Object discarded$15 = sh.a(new Object[2], false, "updatelinks", param0);
-                            Object discarded$16 = sh.a(new Object[2], false, "updatelinks", param0);
-                            Object discarded$17 = sh.a(new Object[2], false, "updatelinks", param0);
-                            statePc = 3;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_0) {
-                            caughtException = stateCaught_0;
-                            statePc = 2;
-                            continue stateLoop;
-                        }
-                    }
-                    case 2: {
-                        var2 = caughtException;
-                        statePc = 3;
-                        continue stateLoop;
-                    }
-                    case 3: {
-                        if (param1 == 15) {
-                            statePc = 5;
-                        } else {
-                            statePc = 4;
-                        }
-                        continue stateLoop;
-                    }
-                    case 4: {
-                        field_a = -78;
-                        statePc = 5;
-                        continue stateLoop;
-                    }
-                    case 5: {
-                        return;
-                    }
-                    default: throw new IllegalStateException("invalid CFG state " + statePc);
-                }
+            try {
+              L0: {
+                var4 = param0.getCodeBase();
+                var3 = lk.a(param0, var4, 118).getFile();
+                Object discarded$6 = sh.a(new Object[2], false, "updatelinks", param0);
+                Object discarded$7 = sh.a(new Object[2], false, "updatelinks", param0);
+                Object discarded$8 = sh.a(new Object[2], false, "updatelinks", param0);
+                Object discarded$9 = sh.a(new Object[2], false, "updatelinks", param0);
+                Object discarded$10 = sh.a(new Object[2], false, "updatelinks", param0);
+                Object discarded$11 = sh.a(new Object[2], false, "updatelinks", param0);
+                break L0;
+              }
+            } catch (java.lang.Throwable decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              L1: {
+                var2 = decompiledCaughtException;
+                break L1;
+              }
+            }
+            L2: {
+              if (param1 == 15) {
+                break L2;
+              } else {
+                field_a = -78;
+                break L2;
+              }
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;

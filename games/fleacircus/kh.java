@@ -49,45 +49,134 @@ final class kh {
     }
 
     final static void a(int param0, int param1, int param2) {
-        if (rl.field_e != null) {
-            // if_icmplt L17
-        } else {
-            rl.field_e = new int[param1 * 2];
+        L0: {
+          L1: {
+            if (rl.field_e == null) {
+              break L1;
+            } else {
+              if (rl.field_e.length < param1) {
+                break L1;
+              } else {
+                break L0;
+              }
+            }
+          }
+          rl.field_e = new int[param1 * 2];
+          break L0;
         }
-        if (null != jl.field_b) {
-            // if_icmpgt L43
-        } else {
-            jl.field_b = new int[param1 * 2];
+        L2: {
+          L3: {
+            if (null == jl.field_b) {
+              break L3;
+            } else {
+              if (param1 > jl.field_b.length) {
+                break L3;
+              } else {
+                break L2;
+              }
+            }
+          }
+          jl.field_b = new int[param1 * 2];
+          break L2;
         }
-        if (null != kk.field_b) {
-            // if_icmple L80
+        L4: {
+          L5: {
+            if (null == kk.field_b) {
+              break L5;
+            } else {
+              if (param1 <= kk.field_b.length) {
+                break L4;
+              } else {
+                break L5;
+              }
+            }
+          }
+          kk.field_b = new int[param1 * 2];
+          break L4;
         }
-        kk.field_b = new int[param1 * 2];
-        if (hg.field_q != null) {
-            // if_icmple L108
+        L6: {
+          L7: {
+            if (hg.field_q == null) {
+              break L7;
+            } else {
+              if (param1 <= hg.field_q.length) {
+                break L6;
+              } else {
+                break L7;
+              }
+            }
+          }
+          hg.field_q = new int[param1 * 2];
+          break L6;
         }
-        hg.field_q = new int[param1 * 2];
-        if (vh.field_i != null) {
-            // if_icmpge L136
+        L8: {
+          L9: {
+            if (vh.field_i == null) {
+              break L9;
+            } else {
+              if (vh.field_i.length >= param1) {
+                break L8;
+              } else {
+                break L9;
+              }
+            }
+          }
+          vh.field_i = new int[2 * param1];
+          break L8;
         }
-        vh.field_i = new int[2 * param1];
-        if (null != uj.field_a) {
-            // if_icmplt L154
-        } else {
-            uj.field_a = new int[2 * param1];
+        L10: {
+          L11: {
+            if (null == uj.field_a) {
+              break L11;
+            } else {
+              if (uj.field_a.length < param1) {
+                break L11;
+              } else {
+                break L10;
+              }
+            }
+          }
+          uj.field_a = new int[2 * param1];
+          break L10;
         }
-        if (param2 != 26721) {
+        L12: {
+          if (param2 == 26721) {
+            break L12;
+          } else {
             kh.a(-42, -43, 83);
+            break L12;
+          }
         }
-        if (mh.field_y != null) {
-            // if_icmpgt L200
-        } else {
-            mh.field_y = new int[(param1 + param0) * 2];
+        L13: {
+          L14: {
+            if (mh.field_y == null) {
+              break L14;
+            } else {
+              if (param0 + param1 > mh.field_y.length) {
+                break L14;
+              } else {
+                break L13;
+              }
+            }
+          }
+          mh.field_y = new int[(param1 + param0) * 2];
+          break L13;
         }
-        if (null != se.field_d) {
-            // if_icmpge L239
+        L15: {
+          L16: {
+            if (null == se.field_d) {
+              break L16;
+            } else {
+              if (se.field_d.length >= param1) {
+                break L15;
+              } else {
+                break L16;
+              }
+            }
+          }
+          se.field_d = new boolean[param1 * 2];
+          break L15;
         }
-        se.field_d = new boolean[param1 * 2];
         lc.field_u = -2147483648;
         ok.field_L = -2147483648;
         ak.field_f = 2147483647;

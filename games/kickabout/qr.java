@@ -22,22 +22,30 @@ final class qr {
         int var2 = 0;
         int var3 = var5.length;
         while (var2 < var3) {
+            int incrementValue$0 = var2;
             var2++;
-            var5[var2] = 0;
+            var5[incrementValue$0] = 0;
+            int incrementValue$1 = var2;
             var2++;
-            var5[var2] = 0;
+            var5[incrementValue$1] = 0;
+            int incrementValue$2 = var2;
             var2++;
-            var5[var2] = 0;
+            var5[incrementValue$2] = 0;
+            int incrementValue$3 = var2;
             var2++;
-            var5[var2] = 0;
+            var5[incrementValue$3] = 0;
+            int incrementValue$4 = var2;
             var2++;
-            var5[var2] = 0;
+            var5[incrementValue$4] = 0;
+            int incrementValue$5 = var2;
             var2++;
-            var5[var2] = 0;
+            var5[incrementValue$5] = 0;
+            int incrementValue$6 = var2;
             var2++;
-            var5[var2] = 0;
+            var5[incrementValue$6] = 0;
+            int incrementValue$7 = var2;
             var2++;
-            var5[var2] = 0;
+            var5[incrementValue$7] = 0;
         }
     }
 
@@ -45,21 +53,21 @@ final class qr {
         if (param2 != 3) {
             return null;
         }
-        String var3 = null;
-        String var4 = null;
+        Object var3 = null;
+        Object var4 = null;
         if (wk.field_b != null) {
             if (!(wk.field_b.equals((Object) (Object) param0.getParameter("settings")))) {
-                var3 = wk.field_b;
+                var3 = (Object) (Object) wk.field_b;
                 var4 = var3;
                 var4 = var3;
             }
         }
         if (lu.field_t != null) {
             if (!lu.field_t.equals((Object) (Object) param0.getParameter("session"))) {
-                var4 = lu.field_t;
+                var4 = (Object) (Object) lu.field_t;
             }
         }
-        return rt.a(param1, var4, -1, var3, false);
+        return rt.a(param1, (String) var4, -1, (String) var3, false);
     }
 
     final static int a(int param0, byte param1) {
@@ -77,147 +85,69 @@ final class qr {
             int var4 = 0;
             int var5 = 0;
             byte[] var6 = null;
-            int statePc = 0;
-            Throwable caughtException = null;
-            stateLoop: while (true) {
-                switch (statePc) {
-                    case 0: {
-                        var5 = Kickabout.field_G;
-                        var6 = new byte[param0];
-                        var2 = var6;
-                        if (pd.field_G == null) {
-                            statePc = 13;
-                        } else {
-                            statePc = 1;
-                        }
-                        continue stateLoop;
-                    }
-                    case 1: {
-                        try {
-                            pd.field_G.a((byte) 4, 0L);
-                            pd.field_G.a(param0 ^ 64, var6);
-                            var3_int = 0;
-                            statePc = 2;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_1) {
-                            caughtException = stateCaught_1;
-                            statePc = 10;
-                            continue stateLoop;
-                        }
-                    }
-                    case 2: {
-                        try {
-                            if (var3_int >= 24) {
-                                statePc = 6;
-                            } else {
-                                statePc = 3;
-                            }
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_2) {
-                            caughtException = stateCaught_2;
-                            statePc = 10;
-                            continue stateLoop;
-                        }
-                    }
-                    case 3: {
-                        try {
+            int decompiledRegionSelector0 = 0;
+            Throwable decompiledCaughtException = null;
+            L0: {
+              L1: {
+                var5 = Kickabout.field_G;
+                var6 = new byte[param0];
+                var2 = var6;
+                if (pd.field_G == null) {
+                  break L1;
+                } else {
+                  try {
+                    L2: {
+                      pd.field_G.a((byte) 4, 0L);
+                      pd.field_G.a(param0 ^ 64, var6);
+                      var3_int = 0;
+                      L3: while (true) {
+                        L4: {
+                          if (var3_int >= 24) {
+                            break L4;
+                          } else {
                             if (0 == var2[var3_int]) {
-                                statePc = 5;
+                              var3_int++;
+                              continue L3;
                             } else {
-                                statePc = 4;
+                              break L4;
                             }
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_3) {
-                            caughtException = stateCaught_3;
-                            statePc = 10;
-                            continue stateLoop;
+                          }
                         }
-                    }
-                    case 4: {
-                        try {
-                            statePc = 6;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_4) {
-                            caughtException = stateCaught_4;
-                            statePc = 10;
-                            continue stateLoop;
-                        }
-                    }
-                    case 5: {
-                        try {
-                            var3_int++;
-                            statePc = 2;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_5) {
-                            caughtException = stateCaught_5;
-                            statePc = 10;
-                            continue stateLoop;
-                        }
-                    }
-                    case 6: {
-                        try {
-                            if (-25 >= (var3_int ^ -1)) {
-                                statePc = 8;
-                            } else {
-                                statePc = 7;
-                            }
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_6) {
-                            caughtException = stateCaught_6;
-                            statePc = 10;
-                            continue stateLoop;
-                        }
-                    }
-                    case 7: {
-                        try {
-                            param1.a(0, 24, param0 ^ 1991220136, var2);
-                            statePc = 14;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_7) {
-                            caughtException = stateCaught_7;
-                            statePc = 10;
-                            continue stateLoop;
-                        }
-                    }
-                    case 8: {
-                        try {
-                            throw new IOException();
-                        } catch (Throwable stateCaught_8) {
-                            caughtException = stateCaught_8;
-                            statePc = 10;
-                            continue stateLoop;
-                        }
-                    }
-                    case 10: {
-                        var3 = (Exception) (Object) caughtException;
-                        var4 = 0;
-                        statePc = 11;
-                        continue stateLoop;
-                    }
-                    case 11: {
-                        if (-25 >= (var4 ^ -1)) {
-                            statePc = 13;
+                        if (-25 >= (var3_int ^ -1)) {
+                          throw new IOException();
                         } else {
-                            statePc = 12;
+                          param1.a(0, 24, param0 ^ 1991220136, var2);
+                          decompiledRegionSelector0 = 0;
+                          break L2;
                         }
-                        continue stateLoop;
+                      }
                     }
-                    case 12: {
-                        var2[var4] = (byte)-1;
-                        var4++;
-                        statePc = 11;
-                        continue stateLoop;
+                  } catch (java.lang.Exception decompiledCaughtParameter0) {
+                    decompiledCaughtException = decompiledCaughtParameter0;
+                    L5: {
+                      var3 = (Exception) (Object) decompiledCaughtException;
+                      var4 = 0;
+                      L6: while (true) {
+                        if (-25 >= (var4 ^ -1)) {
+                          decompiledRegionSelector0 = 1;
+                          break L5;
+                        } else {
+                          var2[var4] = (byte)-1;
+                          var4++;
+                          continue L6;
+                        }
+                      }
                     }
-                    case 13: {
-                        param1.a(0, 24, param0 ^ 1991220136, var2);
-                        statePc = 14;
-                        continue stateLoop;
-                    }
-                    case 14: {
-                        return;
-                    }
-                    default: throw new IllegalStateException("invalid CFG state " + statePc);
+                  }
+                  if (decompiledRegionSelector0 == 0) {
+                    break L0;
+                  } else {
+                    break L1;
+                  }
                 }
+              }
+              param1.a(0, 24, param0 ^ 1991220136, var2);
+              break L0;
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;

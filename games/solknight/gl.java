@@ -155,8 +155,9 @@ final class gl {
             }
             return;
           } else {
+            int fieldTemp$1 = ((gl) this).field_r - 1;
             ((gl) this).field_r = ((gl) this).field_r - 1;
-            if ((((gl) this).field_r - 1 ^ -1) >= -1) {
+            if ((fieldTemp$1 ^ -1) >= -1) {
               ((gl) this).field_r = ((gl) this).field_a;
               if (bi.field_a >= ((gl) this).field_j) {
                 this.b(-110);

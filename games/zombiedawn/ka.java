@@ -15,7 +15,6 @@ final class ka {
         int var5 = 0;
         long var6 = 0L;
         gi var8 = null;
-        gi var8_ref = null;
         ml var9 = null;
         ml var11 = null;
         gi var12 = null;
@@ -36,13 +35,13 @@ final class ka {
                 var42 = ml.a(((ka) this).field_g, param0, param1);
                 if (var42 != null) {
                   var43 = var42.b();
-                  var8_ref = var43;
-                  ((ka) this).field_d.a(-99, var6, (le) (Object) var8_ref);
+                  var8 = var43;
+                  ((ka) this).field_d.a(-99, var6, (le) (Object) var8);
                   if (param2 != null) {
                     param2[0] = param2[0] - var43.field_l.length;
-                    return var8_ref;
+                    return var8;
                   } else {
-                    return var8_ref;
+                    return var8;
                   }
                 } else {
                   return null;
@@ -54,13 +53,13 @@ final class ka {
               var42 = ml.a(((ka) this).field_g, param0, param1);
               if (var42 != null) {
                 var43 = var42.b();
-                var8_ref = var43;
-                ((ka) this).field_d.a(-99, var6, (le) (Object) var8_ref);
+                var8 = var43;
+                ((ka) this).field_d.a(-99, var6, (le) (Object) var8);
                 if (param2 != null) {
                   param2[0] = param2[0] - var43.field_l.length;
-                  return var8_ref;
+                  return var8;
                 } else {
-                  return var8_ref;
+                  return var8;
                 }
               } else {
                 return null;
@@ -82,13 +81,13 @@ final class ka {
                 var9 = var34;
                 if (var34 != null) {
                   var35 = var34.b();
-                  var8_ref = var35;
-                  ((ka) this).field_d.a(-99, var6, (le) (Object) var8_ref);
+                  var8 = var35;
+                  ((ka) this).field_d.a(-99, var6, (le) (Object) var8);
                   if (param2 != null) {
                     param2[0] = param2[0] - var35.field_l.length;
-                    return var8_ref;
+                    return var8;
                   } else {
-                    return var8_ref;
+                    return var8;
                   }
                 } else {
                   return null;
@@ -101,13 +100,13 @@ final class ka {
               var9 = var11;
               if (var11 != null) {
                 var12 = var11.b();
-                var8_ref = var12;
-                ((ka) this).field_d.a(-99, var6, (le) (Object) var8_ref);
+                var8 = var12;
+                ((ka) this).field_d.a(-99, var6, (le) (Object) var8);
                 if (param2 != null) {
                   param2[0] = param2[0] - var12.field_l.length;
-                  return var8_ref;
+                  return var8;
                 } else {
-                  return var8_ref;
+                  return var8;
                 }
               } else {
                 return null;
@@ -171,9 +170,7 @@ final class ka {
         int var5 = 0;
         long var6 = 0L;
         gi var8 = null;
-        gi var8_ref = null;
         mb var9 = null;
-        mb var9_ref = null;
         var5 = param0 ^ (param2 >>> 2000147436 | param2 << -1890624124 & 65531);
         var5 = var5 | param2 << -871989392;
         var6 = 4294967296L ^ (long)var5;
@@ -187,22 +184,22 @@ final class ka {
                   if (var9 != null) {
                     break L0;
                   } else {
-                    var9_ref = mb.a(((ka) this).field_b, param2, param0);
-                    if (var9_ref != null) {
-                      ((ka) this).field_c.a(-118, var6, (le) (Object) var9_ref);
+                    var9 = mb.a(((ka) this).field_b, param2, param0);
+                    if (var9 != null) {
+                      ((ka) this).field_c.a(-118, var6, (le) (Object) var9);
                       break L0;
                     } else {
                       return null;
                     }
                   }
                 }
-                var8_ref = var9_ref.a(param1);
-                if (var8_ref == null) {
+                var8 = var9.a(param1);
+                if (var8 == null) {
                   return null;
                 } else {
-                  var9_ref.b(-27598);
-                  ((ka) this).field_d.a(-102, var6, (le) (Object) var8_ref);
-                  return var8_ref;
+                  var9.b(-27598);
+                  ((ka) this).field_d.a(-102, var6, (le) (Object) var8);
+                  return var8;
                 }
               } else {
                 return null;
@@ -213,22 +210,22 @@ final class ka {
                 if (var9 != null) {
                   break L1;
                 } else {
-                  var9_ref = mb.a(((ka) this).field_b, param2, param0);
-                  if (var9_ref != null) {
-                    ((ka) this).field_c.a(-118, var6, (le) (Object) var9_ref);
+                  var9 = mb.a(((ka) this).field_b, param2, param0);
+                  if (var9 != null) {
+                    ((ka) this).field_c.a(-118, var6, (le) (Object) var9);
                     break L1;
                   } else {
                     return null;
                   }
                 }
               }
-              var8_ref = var9_ref.a(param1);
-              if (var8_ref == null) {
+              var8 = var9.a(param1);
+              if (var8 == null) {
                 return null;
               } else {
-                var9_ref.b(-27598);
-                ((ka) this).field_d.a(-102, var6, (le) (Object) var8_ref);
-                return var8_ref;
+                var9.b(-27598);
+                ((ka) this).field_d.a(-102, var6, (le) (Object) var8);
+                return var8;
               }
             }
           } else {

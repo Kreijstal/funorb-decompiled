@@ -654,8 +654,9 @@ abstract class hs {
                 if (((hs) this).e(((hs) this).field_i.field_e, 50)) {
                   break L1;
                 } else {
+                  int incrementValue$181 = var4;
                   var4++;
-                  if (((hs) this).field_i.field_a < var4) {
+                  if (((hs) this).field_i.field_a < incrementValue$181) {
                     break L1;
                   } else {
                     if (96 == param2) {

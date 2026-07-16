@@ -143,8 +143,9 @@ final class mo extends am {
             if (param0 != 269) {
                 boolean discarded$0 = mo.a(-117, true);
             }
-            ak.field_k = km.b(-1);
-            rb.field_C = km.b(-1);
+            long dupTemp$1 = km.b(-1);
+            ak.field_k = dupTemp$1;
+            rb.field_C = dupTemp$1;
             if (1 != rh.field_b.field_a) {
                 ef.field_a = wj.field_i;
             } else {
@@ -741,8 +742,8 @@ final class mo extends am {
               var11 = var6 + var10;
               var12 = -var10 + var5;
               var13 = var8;
-              if (-1 != var13) {
-                if (-2 == var13) {
+              if (-1 != (var13 ^ -1)) {
+                if (-2 == (var13 ^ -1)) {
                   ((mo) this).field_u = var5;
                   ((mo) this).field_E = var6;
                   ((mo) this).field_s = var12;
@@ -834,9 +835,11 @@ final class mo extends am {
                   var7++;
                   continue L0;
                 } else {
+                  int incrementValue$2 = var6;
                   var6++;
+                  int incrementValue$3 = var5;
                   var5++;
-                  var4[var6] = param0.field_y[var5];
+                  var4[incrementValue$2] = param0.field_y[incrementValue$3];
                   var8++;
                   continue L1;
                 }

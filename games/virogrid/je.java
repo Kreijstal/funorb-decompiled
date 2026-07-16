@@ -41,20 +41,42 @@ final class je extends ec {
     }
 
     final static void a(lk param0, byte param1) {
-        int var3 = Virogrid.field_F ? 1 : 0;
-        if (param1 <= 87) {
+        lk var2 = null;
+        int var3 = 0;
+        L0: {
+          var3 = Virogrid.field_F ? 1 : 0;
+          if (param1 > 87) {
+            break L0;
+          } else {
             field_J = null;
+            break L0;
+          }
         }
         param0.a(false);
-        lk var2 = (lk) (Object) ci.field_o.a((byte) -64);
-        while (var2 != null) {
-            // ifeq L67
-            var2 = (lk) (Object) ci.field_o.a(16213);
-        }
-        if (var2 == null) {
-            ci.field_o.a((l) (Object) param0, (byte) -91);
-        } else {
-            td.a((l) (Object) var2, (byte) -73, (l) (Object) param0);
+        var2 = (lk) (Object) ci.field_o.a((byte) -64);
+        L1: while (true) {
+          L2: {
+            if (var2 == null) {
+              break L2;
+            } else {
+              if (!var2.a(37, param0)) {
+                break L2;
+              } else {
+                var2 = (lk) (Object) ci.field_o.a(16213);
+                continue L1;
+              }
+            }
+          }
+          L3: {
+            if (var2 != null) {
+              td.a((l) (Object) var2, (byte) -73, (l) (Object) param0);
+              break L3;
+            } else {
+              ci.field_o.a((l) (Object) param0, (byte) -91);
+              break L3;
+            }
+          }
+          return;
         }
     }
 

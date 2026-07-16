@@ -23,6 +23,7 @@ final class lk {
         field_a = null;
         field_d = null;
         if (param0 != 0) {
+            Object var2 = null;
             lk.a((java.math.BigInteger) null, (p) null, (p) null, 110, (java.math.BigInteger) null);
         }
     }
@@ -41,24 +42,24 @@ final class lk {
         var5 = Chess.field_G;
         g.field_a = kn.field_D;
         if (param1 != param2) {
-          if (100 <= param2) {
-            if (-106 < param2) {
-              lg.field_a = sc.a(param3, param2, (byte) 90);
-              return;
-            } else {
-              lg.field_a = a.a(args, param1 ^ -183);
-              return;
-            }
-          } else {
+          if (100 > param2) {
             lg.field_a = sc.a(param3, param2, (byte) 90);
             return;
+          } else {
+            if (-106 <= (param2 ^ -1)) {
+              lg.field_a = a.a(args, param1 ^ -183);
+              return;
+            } else {
+              lg.field_a = sc.a(param3, param2, (byte) 90);
+              return;
+            }
           }
         } else {
           L0: {
             stackOut_1_0 = 18621;
             stackIn_3_0 = stackOut_1_0;
             stackIn_2_0 = stackOut_1_0;
-            if (-14 >= cn.field_f) {
+            if (-14 >= (cn.field_f ^ -1)) {
               stackOut_3_0 = stackIn_3_0;
               stackOut_3_1 = 0;
               stackIn_4_0 = stackOut_3_0;

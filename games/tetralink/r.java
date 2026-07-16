@@ -2766,7 +2766,7 @@ final class r extends eb {
     }
 
     final static fj a(int param0, int param1, int param2, int param3) {
-        fj var4 = null;
+        Object var4 = null;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
@@ -2852,7 +2852,7 @@ final class r extends eb {
                           }
                         }
                         fi.field_Cb = stackIn_110_0 != 0;
-                        return var4;
+                        return (fj) var4;
                       } else {
                         L4: {
                           var9 = id.field_M.field_Ob.field_R - (id.field_M.field_Pb.field_R + id.field_M.field_Pb.field_mb);
@@ -2876,7 +2876,7 @@ final class r extends eb {
                           }
                         }
                         fi.field_Cb = stackIn_103_0 != 0;
-                        return var4;
+                        return (fj) var4;
                       }
                     } else {
                       L6: {
@@ -2901,7 +2901,7 @@ final class r extends eb {
                         }
                       }
                       fi.field_Cb = stackIn_95_0 != 0;
-                      return var4;
+                      return (fj) var4;
                     }
                   } else {
                     fi.field_Cb = true;
@@ -2933,7 +2933,7 @@ final class r extends eb {
                           }
                         }
                         fi.field_Cb = stackIn_86_0 != 0;
-                        return var4;
+                        return (fj) var4;
                       } else {
                         L10: {
                           fi.field_Cb = true;
@@ -2958,7 +2958,7 @@ final class r extends eb {
                           }
                         }
                         fi.field_Cb = stackIn_79_0 != 0;
-                        return var4;
+                        return (fj) var4;
                       }
                     } else {
                       L12: {
@@ -2983,7 +2983,7 @@ final class r extends eb {
                         }
                       }
                       fi.field_Cb = stackIn_71_0 != 0;
-                      return var4;
+                      return (fj) var4;
                     }
                   }
                 } else {
@@ -3019,7 +3019,7 @@ final class r extends eb {
                           }
                         }
                         fi.field_Cb = stackIn_61_0 != 0;
-                        return var4;
+                        return (fj) var4;
                       } else {
                         L16: {
                           var9 = id.field_M.field_Ob.field_R - (id.field_M.field_Pb.field_R + id.field_M.field_Pb.field_mb);
@@ -3043,7 +3043,7 @@ final class r extends eb {
                           }
                         }
                         fi.field_Cb = stackIn_54_0 != 0;
-                        return var4;
+                        return (fj) var4;
                       }
                     } else {
                       L18: {
@@ -3068,7 +3068,7 @@ final class r extends eb {
                         }
                       }
                       fi.field_Cb = stackIn_46_0 != 0;
-                      return var4;
+                      return (fj) var4;
                     }
                   } else {
                     L20: {
@@ -3106,7 +3106,7 @@ final class r extends eb {
                       }
                     }
                     fi.field_Cb = stackIn_38_0 != 0;
-                    return var4;
+                    return (fj) var4;
                   }
                 }
               } else {
@@ -3116,7 +3116,7 @@ final class r extends eb {
                   var9_ref_fj.field_f.a((byte) -126, var9_ref_fj.field_f.f(param3 + -121), var7, param2, param0);
                   var7 = var7 + param2;
                   if (-1 != (var9_ref_fj.field_f.field_F ^ -1)) {
-                    var4 = var9_ref_fj;
+                    var4 = (Object) (Object) var9_ref_fj;
                     var8++;
                     continue L1;
                   } else {

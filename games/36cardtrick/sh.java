@@ -21,7 +21,7 @@ final class sh extends mh {
         field_h = null;
         field_e = null;
         if (param0 != 4352) {
-            field_g = (qk) null;
+            field_g = null;
         }
     }
 
@@ -31,7 +31,7 @@ final class sh extends mh {
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
-        CharSequence var7 = null;
+        Object var7 = null;
         char[] var8 = null;
         char[] var9 = null;
         char[] var10 = null;
@@ -40,7 +40,7 @@ final class sh extends mh {
         char[] var13 = null;
         L0: {
           var6 = Main.field_T;
-          var2 = ((CharSequence) param0).length();
+          var2 = param0.length();
           if (-21 <= (var2 ^ -1)) {
             break L0;
           } else {
@@ -57,7 +57,7 @@ final class sh extends mh {
           var4 = 0;
           if (var2 > var4) {
             L1: {
-              var5 = ((CharSequence) param0).charAt(var4);
+              var5 = param0.charAt(var4);
               if (65 > var5) {
                 break L1;
               } else {
@@ -143,7 +143,7 @@ final class sh extends mh {
             return new String(var12);
           }
         } else {
-          var7 = (CharSequence) null;
+          var7 = null;
           String discarded$1 = sh.a((CharSequence) null, (byte) 31);
           var13 = new char[var2];
           var11 = var13;
@@ -153,7 +153,7 @@ final class sh extends mh {
           var4 = 0;
           if (var2 > var4) {
             L4: {
-              var5 = ((CharSequence) param0).charAt(var4);
+              var5 = param0.charAt(var4);
               if (65 > var5) {
                 break L4;
               } else {

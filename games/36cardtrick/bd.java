@@ -11,71 +11,50 @@ final class bd extends g implements qh {
     final static void d(byte param0) {
         try {
             Exception var1 = null;
-            int statePc = 0;
-            Throwable caughtException = null;
-            stateLoop: while (true) {
-                switch (statePc) {
-                    case 0: {
-                        if (null == e.field_e) {
-                            statePc = 6;
-                        } else {
-                            statePc = 1;
-                        }
-                        continue stateLoop;
-                    }
-                    case 1: {
-                        try {
-                            e.field_e.a(0L, 10);
-                            e.field_e.a(rd.field_j.field_g, rd.field_j.field_i, 24, -1);
-                            statePc = 2;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_1) {
-                            caughtException = stateCaught_1;
-                            statePc = 5;
-                            continue stateLoop;
-                        }
-                    }
-                    case 2: {
-                        if (param0 <= -59) {
-                            statePc = 4;
-                        } else {
-                            statePc = 3;
-                        }
-                        continue stateLoop;
-                    }
-                    case 3: {
-                        field_F = -108;
-                        statePc = 4;
-                        continue stateLoop;
-                    }
-                    case 4: {
-                        rd.field_j.field_i = rd.field_j.field_i + 24;
-                        return;
-                    }
-                    case 5: {
-                        var1 = (Exception) (Object) caughtException;
-                        statePc = 6;
-                        continue stateLoop;
-                    }
-                    case 6: {
-                        if (param0 > -59) {
-                            statePc = 8;
-                        } else {
-                            statePc = 7;
-                        }
-                        continue stateLoop;
-                    }
-                    case 7: {
-                        rd.field_j.field_i = rd.field_j.field_i + 24;
-                        return;
-                    }
-                    case 8: {
-                        field_F = -108;
-                        rd.field_j.field_i = rd.field_j.field_i + 24;
-                        return;
-                    }
-                    default: throw new IllegalStateException("invalid CFG state " + statePc);
+            int decompiledRegionSelector0 = 0;
+            Throwable decompiledCaughtException = null;
+            L0: {
+              if (null == e.field_e) {
+                break L0;
+              } else {
+                try {
+                  L1: {
+                    e.field_e.a(0L, 10);
+                    e.field_e.a(rd.field_j.field_g, rd.field_j.field_i, 24, -1);
+                    decompiledRegionSelector0 = 0;
+                    break L1;
+                  }
+                } catch (java.lang.Exception decompiledCaughtParameter0) {
+                  decompiledCaughtException = decompiledCaughtParameter0;
+                  L2: {
+                    var1 = (Exception) (Object) decompiledCaughtException;
+                    decompiledRegionSelector0 = 1;
+                    break L2;
+                  }
                 }
+                if (decompiledRegionSelector0 == 0) {
+                  L3: {
+                    if (param0 <= -59) {
+                      break L3;
+                    } else {
+                      field_F = -108;
+                      break L3;
+                    }
+                  }
+                  rd.field_j.field_i = rd.field_j.field_i + 24;
+                  return;
+                } else {
+                  break L0;
+                }
+              }
+            }
+            if (param0 > -59) {
+              field_F = -108;
+              rd.field_j.field_i = rd.field_j.field_i + 24;
+              return;
+            } else {
+              rd.field_j.field_i = rd.field_j.field_i + 24;
+              return;
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -138,7 +117,7 @@ final class bd extends g implements qh {
         var5 = 0;
         if (param0 != 255) {
           L0: {
-            field_H = (kc) null;
+            field_H = null;
             var6 = 0;
             if (param3 <= var6) {
               break L0;
@@ -170,8 +149,9 @@ final class bd extends g implements qh {
                       }
                     }
                   }
+                  int incrementValue$2 = var5;
                   var5++;
-                  var10[var5] = (char)var7;
+                  var10[incrementValue$2] = (char)var7;
                   break L1;
                 }
               }
@@ -211,8 +191,9 @@ final class bd extends g implements qh {
                     }
                   }
                 }
+                int incrementValue$3 = var5;
                 var5++;
-                var10[var5] = (char)var7;
+                var10[incrementValue$3] = (char)var7;
                 var6++;
                 continue L4;
               } else {
@@ -234,8 +215,8 @@ final class bd extends g implements qh {
     }
 
     final boolean a(char param0, byte param1, int param2, lk param3) {
-        byte[] var6 = null;
-        if (!this.a(param0, (byte) -116, param2, param3)) {
+        Object var6 = null;
+        if (!super.a(param0, (byte) -116, param2, param3)) {
           if ((param2 ^ -1) != -99) {
             if (param1 < -99) {
               if (-100 == param2) {
@@ -244,7 +225,7 @@ final class bd extends g implements qh {
                 return false;
               }
             } else {
-              var6 = (byte[]) null;
+              var6 = null;
               String discarded$5 = bd.a(101, 70, (byte[]) null, 118);
               if (-100 == param2) {
                 return ((bd) this).a(param3, (byte) -28);
@@ -262,24 +243,24 @@ final class bd extends g implements qh {
 
     final void a(int param0, int param1, int param2, int param3) {
         ee var5 = null;
-        lk var6 = null;
-        this.a(param0, param1, param2 ^ 0, param3);
+        Object var6 = null;
+        super.a(param0, param1, param2 ^ 0, param3);
         if (param3 == 0) {
           var5 = j.field_C;
           if (((bd) this).field_E == null) {
             if (param2 != -1) {
-              var6 = (lk) null;
+              var6 = null;
               boolean discarded$34 = ((bd) this).a('', (byte) 54, 78, (lk) null);
               return;
             } else {
               return;
             }
           } else {
-            int discarded$35 = var5.a(cb.field_h, param0 + ((bd) this).field_o, param1 + ((bd) this).field_i, ((bd) this).field_h, 20, 16777215, -1, 0, 0, ((ee) var5).field_s - -((ee) var5).field_x);
+            int discarded$35 = var5.a(cb.field_h, param0 + ((bd) this).field_o, param1 + ((bd) this).field_i, ((bd) this).field_h, 20, 16777215, -1, 0, 0, var5.field_s - -var5.field_x);
             if (param2 == -1) {
               return;
             } else {
-              var6 = (lk) null;
+              var6 = null;
               boolean discarded$36 = ((bd) this).a('', (byte) 54, 78, (lk) null);
               return;
             }
@@ -305,7 +286,7 @@ final class bd extends g implements qh {
             if (param2 == 122) {
               var5 = 0;
               var6 = 0;
-              var7 = ((CharSequence) param1).length();
+              var7 = param1.length();
               var8 = 0;
               L0: while (true) {
                 if (var7 <= var8) {
@@ -316,7 +297,7 @@ final class bd extends g implements qh {
                   }
                 } else {
                   L1: {
-                    var9 = ((CharSequence) param1).charAt(var8);
+                    var9 = param1.charAt(var8);
                     if (0 == var8) {
                       if (45 != var9) {
                         if (var9 != 43) {
@@ -404,7 +385,7 @@ final class bd extends g implements qh {
               bd.d((byte) -54);
               var5 = 0;
               var6 = 0;
-              var7 = ((CharSequence) param1).length();
+              var7 = param1.length();
               var8 = 0;
               L7: while (true) {
                 if (var7 <= var8) {
@@ -415,7 +396,7 @@ final class bd extends g implements qh {
                   }
                 } else {
                   L8: {
-                    var9 = ((CharSequence) param1).charAt(var8);
+                    var9 = param1.charAt(var8);
                     if (0 == var8) {
                       if (45 != var9) {
                         if (var9 != 43) {

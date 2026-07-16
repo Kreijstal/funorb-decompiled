@@ -31,67 +31,25 @@ final class ui extends di {
     final static void g(int param0) {
         Object var1 = null;
         Throwable var2 = null;
-        int statePc = 0;
-        Throwable caughtException = null;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    if (param0 == 95) {
-                        statePc = 2;
-                    } else {
-                        statePc = 1;
-                    }
-                    continue stateLoop;
+        Throwable decompiledCaughtException = null;
+        if (param0 == 95) {
+          L0: {
+            if (cj.field_o == null) {
+              break L0;
+            } else {
+              var1 = (Object) (Object) cj.field_o;
+              synchronized (var1) {
+                L1: {
+                  cj.field_o = null;
+                  break L1;
                 }
-                case 1: {
-                    return;
-                }
-                case 2: {
-                    if (cj.field_o == null) {
-                        statePc = 8;
-                    } else {
-                        statePc = 3;
-                    }
-                    continue stateLoop;
-                }
-                case 3: {
-                    var1 = (Object) (Object) cj.field_o;
-                    // monitorenter cj.field_o
-                    statePc = 4;
-                    continue stateLoop;
-                }
-                case 4: {
-                    try {
-                        cj.field_o = null;
-                        // monitorexit var1
-                        statePc = 8;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_4) {
-                        caughtException = stateCaught_4;
-                        statePc = 6;
-                        continue stateLoop;
-                    }
-                }
-                case 6: {
-                    try {
-                        var2 = caughtException;
-                        // monitorexit var1
-                        statePc = 7;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_6) {
-                        caughtException = stateCaught_6;
-                        statePc = 6;
-                        continue stateLoop;
-                    }
-                }
-                case 7: {
-                    throw (RuntimeException) (Object) var2;
-                }
-                case 8: {
-                    return;
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
+              }
+              break L0;
             }
+          }
+          return;
+        } else {
+          return;
         }
     }
 

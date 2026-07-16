@@ -351,8 +351,7 @@ final class qc extends pe implements fj, qd {
                 break L6;
               }
             }
-            new pl(stackIn_18_3, (ce) null);
-            ((qc) this).field_G = stackIn_18_1;
+            ((qc) this).field_G = new pl(stackIn_18_3, (ce) null);
             if (!((qc) this).field_P) {
               break L5;
             } else {
@@ -436,11 +435,13 @@ final class qc extends pe implements fj, qd {
           }
         }
         L13: {
-          var12 = new ik(10, ((qc) this).field_l, -20 + ((qc) this).field_r, 25, (ub) (Object) ((qc) this).field_K, false, 80, 3, var7, 16777215, var8);
-          ((qc) this).a((ub) (Object) new ik(10, ((qc) this).field_l, -20 + ((qc) this).field_r, 25, (ub) (Object) ((qc) this).field_K, false, 80, 3, var7, 16777215, var8), (byte) 57);
+          ik dupTemp$2 = new ik(10, ((qc) this).field_l, -20 + ((qc) this).field_r, 25, (ub) (Object) ((qc) this).field_K, false, 80, 3, var7, 16777215, var8);
+          var12 = dupTemp$2;
+          ((qc) this).a((ub) (Object) dupTemp$2, (byte) 57);
           ((qc) this).field_l = ((qc) this).field_l + (5 + ((ub) (Object) var12).field_n);
-          var13 = new ik(10, ((qc) this).field_l, -20 + ((qc) this).field_r, 25, (ub) (Object) ((qc) this).field_Q, false, 80, 3, var7, 16777215, qk.field_d);
-          ((qc) this).a((ub) (Object) new ik(10, ((qc) this).field_l, -20 + ((qc) this).field_r, 25, (ub) (Object) ((qc) this).field_Q, false, 80, 3, var7, 16777215, qk.field_d), (byte) 85);
+          ik dupTemp$3 = new ik(10, ((qc) this).field_l, -20 + ((qc) this).field_r, 25, (ub) (Object) ((qc) this).field_Q, false, 80, 3, var7, 16777215, qk.field_d);
+          var13 = dupTemp$3;
+          ((qc) this).a((ub) (Object) dupTemp$3, (byte) 85);
           ((qc) this).field_l = ((qc) this).field_l + (5 + ((ub) (Object) var13).field_n);
           ((qc) this).field_H.field_s = (ce) this;
           if (((qc) this).field_M == null) {

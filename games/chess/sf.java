@@ -38,13 +38,13 @@ final class sf extends hl {
         if (var1 == null) {
         } else {
             var3 = fb.field_K;
-            if (var3 <= -116) {
+            if ((var3 ^ -1) <= -116) {
                 var2 = -var3 + 230;
             } else {
                 var2 = var3;
             }
             var2 -= 32;
-            var2 = -9 < var2 ? 8 : var2;
+            var2 = -9 > (var2 ^ -1) ? 8 : var2;
             var4 = v.field_j.b(da.field_m[var6.field_k]);
             wb.a();
             var5 = 40;
@@ -162,6 +162,7 @@ final class sf extends hl {
         var2 = 0;
         L0: while (true) {
           if (var2 >= 256) {
+            return;
           } else {
             var0 = (long)var2;
             var3 = 0;

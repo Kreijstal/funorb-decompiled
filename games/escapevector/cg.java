@@ -38,34 +38,28 @@ final class cg extends vn implements java.awt.image.ImageProducer, java.awt.imag
     }
 
     final void a(int param0, int param1, java.awt.Component param2, int param3) {
-        try {
-            Object var6 = null;
-            ((cg) this).field_i = new int[1 + param3 * param1];
-            ((cg) this).field_h = param3;
-            ((cg) this).field_d = param1;
-            ((cg) this).field_j = (java.awt.image.ColorModel) (Object) new java.awt.image.DirectColorModel(32, 16711680, 65280, 255);
-            ((cg) this).field_f = param2.createImage((java.awt.image.ImageProducer) this);
-            this.b(2);
-            boolean discarded$5 = param2.prepareImage(((cg) this).field_f, (java.awt.image.ImageObserver) this);
-            this.b(2);
-            boolean discarded$6 = param2.prepareImage(((cg) this).field_f, (java.awt.image.ImageObserver) this);
-            if (param0 != 1018) {
-              var6 = null;
-              boolean discarded$7 = ((cg) this).imageUpdate((java.awt.Image) null, 84, -46, -64, -30, -50);
-              this.b(2);
-              boolean discarded$8 = param2.prepareImage(((cg) this).field_f, (java.awt.image.ImageObserver) this);
-              ((cg) this).a(param0 + -895);
-              return;
-            } else {
-              this.b(2);
-              boolean discarded$9 = param2.prepareImage(((cg) this).field_f, (java.awt.image.ImageObserver) this);
-              ((cg) this).a(param0 + -895);
-              return;
-            }
-        } catch (RuntimeException | Error decompiledUncheckedException) {
-            throw decompiledUncheckedException;
-        } catch (Throwable decompiledCheckedException) {
-            throw new RuntimeException(decompiledCheckedException);
+        Object var6 = null;
+        ((cg) this).field_i = new int[1 + param3 * param1];
+        ((cg) this).field_h = param3;
+        ((cg) this).field_d = param1;
+        ((cg) this).field_j = (java.awt.image.ColorModel) (Object) new java.awt.image.DirectColorModel(32, 16711680, 65280, 255);
+        ((cg) this).field_f = param2.createImage((java.awt.image.ImageProducer) this);
+        this.b(2);
+        boolean discarded$5 = param2.prepareImage(((cg) this).field_f, (java.awt.image.ImageObserver) this);
+        this.b(2);
+        boolean discarded$6 = param2.prepareImage(((cg) this).field_f, (java.awt.image.ImageObserver) this);
+        if (param0 != 1018) {
+          var6 = null;
+          boolean discarded$7 = ((cg) this).imageUpdate((java.awt.Image) null, 84, -46, -64, -30, -50);
+          this.b(2);
+          boolean discarded$8 = param2.prepareImage(((cg) this).field_f, (java.awt.image.ImageObserver) this);
+          ((cg) this).a(param0 + -895);
+          return;
+        } else {
+          this.b(2);
+          boolean discarded$9 = param2.prepareImage(((cg) this).field_f, (java.awt.image.ImageObserver) this);
+          ((cg) this).a(param0 + -895);
+          return;
         }
     }
 

@@ -174,7 +174,7 @@ class hm extends an {
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
-        eg var10 = null;
+        Object var10 = null;
         int var11 = 0;
         oe var12 = null;
         int var13 = 0;
@@ -243,13 +243,13 @@ class hm extends an {
                     var14 = stackIn_15_0;
                     var15 = new eg(var7, var13, var12.field_b, -var13 + var14, Math.max(var3.a(param0 ^ -39), var12.field_g - var12.field_b));
                     if (var10 != null) {
-                      var10.field_h = var15;
+                      ((eg) var10).field_h = var15;
                       break L4;
                     } else {
                       break L4;
                     }
                   }
-                  var10 = var15;
+                  var10 = (Object) (Object) var15;
                   ((hm) this).field_I.a(0, (le) (Object) var15);
                   var11++;
                   continue L1;

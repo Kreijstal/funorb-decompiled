@@ -23,7 +23,6 @@ final class fj extends gg {
         int var11 = 0;
         int var12 = 0;
         String var13 = null;
-        String var13_ref = null;
         int var14 = 0;
         int var15 = 0;
         var15 = SolKnight.field_L ? 1 : 0;
@@ -60,7 +59,7 @@ final class fj extends gg {
               if (var13 != null) {
                 break L1;
               } else {
-                var13_ref = "ERROR: missing text";
+                var13 = "ERROR: missing text";
                 break L1;
               }
             }
@@ -69,7 +68,7 @@ final class fj extends gg {
                 break L2;
               } else {
                 if (var12 != 13) {
-                  var14 = var9.b(var13_ref);
+                  var14 = var9.b(var13);
                   if (var14 > var7) {
                     var7 = var14;
                     var11++;

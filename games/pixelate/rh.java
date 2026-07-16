@@ -43,10 +43,10 @@ final class rh extends fa {
               break L0;
             } else {
               L2: {
-                if (param3 > -101) {
+                if ((param3 ^ -1) > -101) {
                   break L2;
                 } else {
-                  if (-106 >= param3) {
+                  if (-106 <= (param3 ^ -1)) {
                     v.field_b = fk.a((byte) 117, param2);
                     break L0;
                   } else {
@@ -82,8 +82,9 @@ final class rh extends fa {
     }
 
     rh(int param0, int param1, int param2, int param3, int param4, int param5, int[] param6) {
+        int fieldTemp$0 = dm.field_Bb;
         dm.field_Bb = dm.field_Bb + 1;
-        ((rh) this).field_o = dm.field_Bb & 65535;
+        ((rh) this).field_o = fieldTemp$0 & 65535;
         ((rh) this).field_v = param3;
         ((rh) this).field_n = param5;
         ((rh) this).field_l = param4;

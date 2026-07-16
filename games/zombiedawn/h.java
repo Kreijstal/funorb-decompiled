@@ -34,332 +34,558 @@ final class h implements java.awt.event.MouseListener, java.awt.event.MouseMotio
         int var6 = 0;
         var6 = ZombieDawn.field_J;
         if (param3 == -17) {
-          if (-1 != param1) {
-            L0: {
+          L0: {
+            if (-1 == (param1 ^ -1)) {
+              break L0;
+            } else {
               L1: {
-                if (param1 == 1) {
-                  break L1;
-                } else {
-                  L2: {
-                    if (param1 == 2) {
-                      break L2;
+                L2: {
+                  L3: {
+                    if (param1 == 1) {
+                      break L3;
                     } else {
-                      if (-4 == param1) {
-                        param0[param2].a();
-                        param0[param4].e(0, 0);
-                        var5 = 0;
-                        L3: while (true) {
-                          if ((var5 ^ -1) <= -25) {
-                            if (0 == 0) {
-                              break L0;
+                      L4: {
+                        if (param1 == 2) {
+                          break L4;
+                        } else {
+                          L5: {
+                            if (-4 == (param1 ^ -1)) {
+                              break L5;
                             } else {
-                              break L2;
-                            }
-                          } else {
-                            bi.a(0, var5, 24, 0, 5 * var5);
-                            var5++;
-                            if (0 == 0) {
-                              continue L3;
-                            } else {
-                              if (0 == 0) {
-                                cn.field_f.b(-124);
-                                return;
-                              } else {
-                                param0[param2].a();
-                                param0[param4].e(0, 0);
-                                var5 = 0;
-                                L4: while (true) {
-                                  L5: {
-                                    if (24 <= var5) {
-                                      break L5;
+                              L6: {
+                                if (param1 == 4) {
+                                  break L6;
+                                } else {
+                                  L7: {
+                                    if (6 == param1) {
+                                      break L7;
                                     } else {
-                                      bi.g(var5, 0, 24, 0, -(var5 * 5) + 120);
-                                      var5++;
-                                      if (0 == 0) {
-                                        continue L4;
+                                      L8: {
+                                        if (param1 != 8) {
+                                          break L8;
+                                        } else {
+                                          param0[param2].a();
+                                          param0[param4].e(0, 0);
+                                          var5 = 0;
+                                          L9: while (true) {
+                                            L10: {
+                                              if (var5 >= 24) {
+                                                break L10;
+                                              } else {
+                                                bi.a(0, var5, var5 + 1, 0, -(5 * var5) + 120);
+                                                bi.g(var5, 0, var5, 0, -(5 * var5) + 120);
+                                                var5++;
+                                                if (0 == 0) {
+                                                  if (0 == 0) {
+                                                    continue L9;
+                                                  } else {
+                                                    break L10;
+                                                  }
+                                                } else {
+                                                  return;
+                                                }
+                                              }
+                                            }
+                                            if (0 != 0) {
+                                              break L8;
+                                            } else {
+                                              cn.field_f.b(-124);
+                                              return;
+                                            }
+                                          }
+                                        }
+                                      }
+                                      L11: {
+                                        if (-8 != (param1 ^ -1)) {
+                                          break L11;
+                                        } else {
+                                          param0[param2].a();
+                                          param0[param4].e(0, 0);
+                                          var5 = 0;
+                                          L12: while (true) {
+                                            L13: {
+                                              if (-25 >= (var5 ^ -1)) {
+                                                break L13;
+                                              } else {
+                                                bi.a(0, var5, 24 + -var5, 0, var5 * 5);
+                                                bi.g(var5, -var5 + 24, var5, 0, 120 - var5 * 5);
+                                                var5++;
+                                                if (0 == 0) {
+                                                  if (0 == 0) {
+                                                    continue L12;
+                                                  } else {
+                                                    break L13;
+                                                  }
+                                                } else {
+                                                  return;
+                                                }
+                                              }
+                                            }
+                                            if (0 != 0) {
+                                              break L11;
+                                            } else {
+                                              cn.field_f.b(-124);
+                                              return;
+                                            }
+                                          }
+                                        }
+                                      }
+                                      if (-6 != (param1 ^ -1)) {
+                                        break L2;
                                       } else {
-                                        break L5;
+                                        param0[param2].a();
+                                        param0[param4].e(0, 0);
+                                        var5 = 0;
+                                        L14: while (true) {
+                                          L15: {
+                                            if (-25 >= (var5 ^ -1)) {
+                                              break L15;
+                                            } else {
+                                              bi.a(24 + -var5, var5, var5, 0, -(var5 * 5) + 120);
+                                              bi.g(var5, 0, 24 - var5, 0, 5 * var5);
+                                              var5++;
+                                              if (0 != 0) {
+                                                break L1;
+                                              } else {
+                                                if (0 == 0) {
+                                                  continue L14;
+                                                } else {
+                                                  break L15;
+                                                }
+                                              }
+                                            }
+                                          }
+                                          if (0 == 0) {
+                                            break L2;
+                                          } else {
+                                            break L7;
+                                          }
+                                        }
                                       }
                                     }
                                   }
-                                  cn.field_f.b(-124);
+                                  param0[param2].a();
+                                  param0[param4].e(0, 0);
+                                  var5 = 0;
+                                  L16: while (true) {
+                                    if (24 <= var5) {
+                                      if (0 == 0) {
+                                        break L2;
+                                      } else {
+                                        break L6;
+                                      }
+                                    } else {
+                                      bi.a(var5 + 1, var5, -var5 + 24, 0, var5 * 5);
+                                      bi.g(var5, var5, 24 - var5, 0, 5 * var5);
+                                      var5++;
+                                      if (0 != 0) {
+                                        break L1;
+                                      } else {
+                                        if (0 == 0) {
+                                          continue L16;
+                                        } else {
+                                          L17: {
+                                            L18: {
+                                              if (0 == 0) {
+                                                break L18;
+                                              } else {
+                                                param0[param2].a();
+                                                param0[param4].e(0, 0);
+                                                var5 = 0;
+                                                L19: while (true) {
+                                                  L20: {
+                                                    if ((var5 ^ -1) <= -25) {
+                                                      break L20;
+                                                    } else {
+                                                      bi.a(0, var5, 24, 0, -(var5 * 5) + 120);
+                                                      var5++;
+                                                      if (0 != 0) {
+                                                        break L17;
+                                                      } else {
+                                                        if (0 == 0) {
+                                                          continue L19;
+                                                        } else {
+                                                          break L20;
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                  if (0 == 0) {
+                                                    break L18;
+                                                  } else {
+                                                    param0[param2].a();
+                                                    param0[param4].e(0, 0);
+                                                    var5 = 0;
+                                                    L21: while (true) {
+                                                      L22: {
+                                                        if ((var5 ^ -1) <= -25) {
+                                                          break L22;
+                                                        } else {
+                                                          bi.a(0, var5, 24, 0, 5 * var5);
+                                                          var5++;
+                                                          if (0 != 0) {
+                                                            break L17;
+                                                          } else {
+                                                            if (0 == 0) {
+                                                              continue L21;
+                                                            } else {
+                                                              break L22;
+                                                            }
+                                                          }
+                                                        }
+                                                      }
+                                                      if (0 == 0) {
+                                                        break L18;
+                                                      } else {
+                                                        param0[param2].a();
+                                                        param0[param4].e(0, 0);
+                                                        var5 = 0;
+                                                        L23: while (true) {
+                                                          L24: {
+                                                            if (24 <= var5) {
+                                                              break L24;
+                                                            } else {
+                                                              bi.g(var5, 0, 24, 0, -(var5 * 5) + 120);
+                                                              var5++;
+                                                              if (0 != 0) {
+                                                                break L17;
+                                                              } else {
+                                                                if (0 == 0) {
+                                                                  continue L23;
+                                                                } else {
+                                                                  break L24;
+                                                                }
+                                                              }
+                                                            }
+                                                          }
+                                                          if (0 == 0) {
+                                                            break L18;
+                                                          } else {
+                                                            param0[param2].a();
+                                                            param0[param4].e(0, 0);
+                                                            var5 = 0;
+                                                            L25: while (true) {
+                                                              L26: {
+                                                                if (var5 >= 24) {
+                                                                  break L26;
+                                                                } else {
+                                                                  bi.g(var5, 0, 24, 0, 5 * var5);
+                                                                  var5++;
+                                                                  if (0 != 0) {
+                                                                    break L17;
+                                                                  } else {
+                                                                    if (0 == 0) {
+                                                                      continue L25;
+                                                                    } else {
+                                                                      break L26;
+                                                                    }
+                                                                  }
+                                                                }
+                                                              }
+                                                              if (0 == 0) {
+                                                                break L18;
+                                                              } else {
+                                                                param0[param2].a();
+                                                                param0[param4].e(0, 0);
+                                                                bi.a(0, 0, 24, 24, 0, 128);
+                                                                break L18;
+                                                              }
+                                                            }
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                            cn.field_f.b(-124);
+                                            break L17;
+                                          }
+                                          return;
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                              param0[param2].a();
+                              param0[param4].e(0, 0);
+                              var5 = 0;
+                              L27: while (true) {
+                                if ((var5 ^ -1) <= -25) {
+                                  if (0 == 0) {
+                                    break L2;
+                                  } else {
+                                    break L5;
+                                  }
+                                } else {
+                                  bi.a(0, var5, 24, 0, -(var5 * 5) + 120);
+                                  var5++;
+                                  if (0 != 0) {
+                                    break L1;
+                                  } else {
+                                    if (0 == 0) {
+                                      continue L27;
+                                    } else {
+                                      L28: {
+                                        L29: {
+                                          if (0 == 0) {
+                                            break L29;
+                                          } else {
+                                            param0[param2].a();
+                                            param0[param4].e(0, 0);
+                                            var5 = 0;
+                                            L30: while (true) {
+                                              L31: {
+                                                if ((var5 ^ -1) <= -25) {
+                                                  break L31;
+                                                } else {
+                                                  bi.a(0, var5, 24, 0, 5 * var5);
+                                                  var5++;
+                                                  if (0 != 0) {
+                                                    break L28;
+                                                  } else {
+                                                    if (0 == 0) {
+                                                      continue L30;
+                                                    } else {
+                                                      break L31;
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                              if (0 == 0) {
+                                                break L29;
+                                              } else {
+                                                param0[param2].a();
+                                                param0[param4].e(0, 0);
+                                                var5 = 0;
+                                                L32: while (true) {
+                                                  L33: {
+                                                    if (24 <= var5) {
+                                                      break L33;
+                                                    } else {
+                                                      bi.g(var5, 0, 24, 0, -(var5 * 5) + 120);
+                                                      var5++;
+                                                      if (0 != 0) {
+                                                        break L28;
+                                                      } else {
+                                                        if (0 == 0) {
+                                                          continue L32;
+                                                        } else {
+                                                          break L33;
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                  if (0 == 0) {
+                                                    break L29;
+                                                  } else {
+                                                    param0[param2].a();
+                                                    param0[param4].e(0, 0);
+                                                    var5 = 0;
+                                                    L34: while (true) {
+                                                      L35: {
+                                                        if (var5 >= 24) {
+                                                          break L35;
+                                                        } else {
+                                                          bi.g(var5, 0, 24, 0, 5 * var5);
+                                                          var5++;
+                                                          if (0 != 0) {
+                                                            break L28;
+                                                          } else {
+                                                            if (0 == 0) {
+                                                              continue L34;
+                                                            } else {
+                                                              break L35;
+                                                            }
+                                                          }
+                                                        }
+                                                      }
+                                                      if (0 == 0) {
+                                                        break L29;
+                                                      } else {
+                                                        param0[param2].a();
+                                                        param0[param4].e(0, 0);
+                                                        bi.a(0, 0, 24, 24, 0, 128);
+                                                        break L29;
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                        cn.field_f.b(-124);
+                                        break L28;
+                                      }
+                                      return;
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                          param0[param2].a();
+                          param0[param4].e(0, 0);
+                          var5 = 0;
+                          L36: while (true) {
+                            if ((var5 ^ -1) <= -25) {
+                              if (0 == 0) {
+                                break L2;
+                              } else {
+                                break L4;
+                              }
+                            } else {
+                              bi.a(0, var5, 24, 0, 5 * var5);
+                              var5++;
+                              if (0 != 0) {
+                                break L1;
+                              } else {
+                                if (0 == 0) {
+                                  continue L36;
+                                } else {
+                                  L37: {
+                                    if (0 == 0) {
+                                      cn.field_f.b(-124);
+                                      break L37;
+                                    } else {
+                                      param0[param2].a();
+                                      param0[param4].e(0, 0);
+                                      var5 = 0;
+                                      L38: while (true) {
+                                        L39: {
+                                          if (24 <= var5) {
+                                            break L39;
+                                          } else {
+                                            bi.g(var5, 0, 24, 0, -(var5 * 5) + 120);
+                                            var5++;
+                                            if (0 != 0) {
+                                              break L37;
+                                            } else {
+                                              if (0 == 0) {
+                                                continue L38;
+                                              } else {
+                                                break L39;
+                                              }
+                                            }
+                                          }
+                                        }
+                                        if (0 == 0) {
+                                          cn.field_f.b(-124);
+                                          return;
+                                        } else {
+                                          param0[param2].a();
+                                          param0[param4].e(0, 0);
+                                          var5 = 0;
+                                          L40: while (true) {
+                                            L41: {
+                                              if (var5 >= 24) {
+                                                break L41;
+                                              } else {
+                                                bi.g(var5, 0, 24, 0, 5 * var5);
+                                                var5++;
+                                                if (0 != 0) {
+                                                  break L37;
+                                                } else {
+                                                  if (0 == 0) {
+                                                    continue L40;
+                                                  } else {
+                                                    break L41;
+                                                  }
+                                                }
+                                              }
+                                            }
+                                            if (0 == 0) {
+                                              cn.field_f.b(-124);
+                                              return;
+                                            } else {
+                                              param0[param2].a();
+                                              param0[param4].e(0, 0);
+                                              bi.a(0, 0, 24, 24, 0, 128);
+                                              cn.field_f.b(-124);
+                                              return;
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
                                   return;
                                 }
                               }
                             }
                           }
                         }
-                      } else {
-                        if (param1 == 4) {
-                          param0[param2].a();
-                          param0[param4].e(0, 0);
-                          var5 = 0;
-                          L6: while (true) {
-                            if ((var5 ^ -1) > -25) {
-                              bi.a(0, var5, 24, 0, -(var5 * 5) + 120);
-                              var5++;
-                              if (0 == 0) {
-                                continue L6;
-                              } else {
-                                L7: {
+                      }
+                      param0[param2].a();
+                      param0[param4].e(0, 0);
+                      var5 = 0;
+                      L42: while (true) {
+                        if (24 <= var5) {
+                          if (0 == 0) {
+                            break L2;
+                          } else {
+                            break L3;
+                          }
+                        } else {
+                          bi.g(var5, 0, 24, 0, -(var5 * 5) + 120);
+                          var5++;
+                          if (0 != 0) {
+                            break L1;
+                          } else {
+                            if (0 == 0) {
+                              continue L42;
+                            } else {
+                              L43: {
+                                L44: {
                                   if (0 == 0) {
-                                    break L7;
+                                    break L44;
                                   } else {
                                     param0[param2].a();
                                     param0[param4].e(0, 0);
                                     var5 = 0;
-                                    L8: while (true) {
-                                      L9: {
-                                        if ((var5 ^ -1) <= -25) {
-                                          break L9;
-                                        } else {
-                                          bi.a(0, var5, 24, 0, 5 * var5);
-                                          var5++;
-                                          if (0 == 0) {
-                                            continue L8;
-                                          } else {
-                                            break L9;
-                                          }
-                                        }
-                                      }
-                                      if (0 == 0) {
-                                        break L7;
-                                      } else {
-                                        param0[param2].a();
-                                        param0[param4].e(0, 0);
-                                        var5 = 0;
-                                        L10: while (true) {
-                                          L11: {
-                                            if (24 <= var5) {
-                                              break L11;
-                                            } else {
-                                              bi.g(var5, 0, 24, 0, -(var5 * 5) + 120);
-                                              var5++;
-                                              if (0 == 0) {
-                                                continue L10;
-                                              } else {
-                                                break L11;
-                                              }
-                                            }
-                                          }
-                                          if (0 == 0) {
-                                            break L7;
-                                          } else {
-                                            param0[param2].a();
-                                            param0[param4].e(0, 0);
-                                            var5 = 0;
-                                            L12: while (true) {
-                                              L13: {
-                                                if (var5 >= 24) {
-                                                  break L13;
-                                                } else {
-                                                  bi.g(var5, 0, 24, 0, 5 * var5);
-                                                  var5++;
-                                                  if (0 == 0) {
-                                                    continue L12;
-                                                  } else {
-                                                    break L13;
-                                                  }
-                                                }
-                                              }
-                                              if (0 == 0) {
-                                                break L7;
-                                              } else {
-                                                param0[param2].a();
-                                                param0[param4].e(0, 0);
-                                                bi.a(0, 0, 24, 24, 0, 128);
-                                                break L7;
-                                              }
-                                            }
-                                          }
-                                        }
-                                      }
-                                    }
-                                  }
-                                }
-                                cn.field_f.b(-124);
-                                return;
-                              }
-                            } else {
-                              cn.field_f.b(-124);
-                              return;
-                            }
-                          }
-                        } else {
-                          if (6 == param1) {
-                            param0[param2].a();
-                            param0[param4].e(0, 0);
-                            var5 = 0;
-                            L14: while (true) {
-                              if (24 > var5) {
-                                bi.a(var5 + 1, var5, -var5 + 24, 0, var5 * 5);
-                                bi.g(var5, var5, 24 - var5, 0, 5 * var5);
-                                var5++;
-                                if (0 == 0) {
-                                  continue L14;
-                                } else {
-                                  L15: {
-                                    if (0 == 0) {
-                                      break L15;
-                                    } else {
-                                      param0[param2].a();
-                                      param0[param4].e(0, 0);
-                                      var5 = 0;
-                                      L16: while (true) {
-                                        L17: {
-                                          if ((var5 ^ -1) <= -25) {
-                                            break L17;
-                                          } else {
-                                            bi.a(0, var5, 24, 0, -(var5 * 5) + 120);
-                                            var5++;
-                                            if (0 == 0) {
-                                              continue L16;
-                                            } else {
-                                              break L17;
-                                            }
-                                          }
-                                        }
+                                    L45: while (true) {
+                                      if (var5 >= 24) {
                                         if (0 == 0) {
-                                          break L15;
+                                          break L44;
                                         } else {
                                           param0[param2].a();
                                           param0[param4].e(0, 0);
-                                          var5 = 0;
-                                          L18: while (true) {
-                                            L19: {
-                                              if ((var5 ^ -1) <= -25) {
-                                                break L19;
-                                              } else {
-                                                bi.a(0, var5, 24, 0, 5 * var5);
-                                                var5++;
-                                                if (0 == 0) {
-                                                  continue L18;
-                                                } else {
-                                                  break L19;
-                                                }
-                                              }
-                                            }
+                                          bi.a(0, 0, 24, 24, 0, 128);
+                                          cn.field_f.b(-124);
+                                          return;
+                                        }
+                                      } else {
+                                        bi.g(var5, 0, 24, 0, 5 * var5);
+                                        var5++;
+                                        if (0 != 0) {
+                                          break L43;
+                                        } else {
+                                          if (0 == 0) {
+                                            continue L45;
+                                          } else {
                                             if (0 == 0) {
-                                              break L15;
+                                              cn.field_f.b(-124);
+                                              return;
                                             } else {
                                               param0[param2].a();
                                               param0[param4].e(0, 0);
-                                              var5 = 0;
-                                              L20: while (true) {
-                                                L21: {
-                                                  if (24 <= var5) {
-                                                    break L21;
-                                                  } else {
-                                                    bi.g(var5, 0, 24, 0, -(var5 * 5) + 120);
-                                                    var5++;
-                                                    if (0 == 0) {
-                                                      continue L20;
-                                                    } else {
-                                                      break L21;
-                                                    }
-                                                  }
-                                                }
-                                                if (0 == 0) {
-                                                  break L15;
-                                                } else {
-                                                  param0[param2].a();
-                                                  param0[param4].e(0, 0);
-                                                  var5 = 0;
-                                                  L22: while (true) {
-                                                    L23: {
-                                                      if (var5 >= 24) {
-                                                        break L23;
-                                                      } else {
-                                                        bi.g(var5, 0, 24, 0, 5 * var5);
-                                                        var5++;
-                                                        if (0 == 0) {
-                                                          continue L22;
-                                                        } else {
-                                                          break L23;
-                                                        }
-                                                      }
-                                                    }
-                                                    if (0 == 0) {
-                                                      break L15;
-                                                    } else {
-                                                      param0[param2].a();
-                                                      param0[param4].e(0, 0);
-                                                      bi.a(0, 0, 24, 24, 0, 128);
-                                                      break L15;
-                                                    }
-                                                  }
-                                                }
-                                              }
+                                              bi.a(0, 0, 24, 24, 0, 128);
+                                              cn.field_f.b(-124);
+                                              return;
                                             }
                                           }
                                         }
                                       }
                                     }
                                   }
-                                  cn.field_f.b(-124);
-                                  return;
                                 }
-                              } else {
                                 cn.field_f.b(-124);
-                                return;
+                                break L43;
                               }
-                            }
-                          } else {
-                            if (param1 != 8) {
-                              if (-8 != param1) {
-                                if (-6 == param1) {
-                                  param0[param2].a();
-                                  param0[param4].e(0, 0);
-                                  var5 = 0;
-                                  L24: while (true) {
-                                    L25: {
-                                      if (-25 <= var5) {
-                                        break L25;
-                                      } else {
-                                        bi.a(24 + -var5, var5, var5, 0, -(var5 * 5) + 120);
-                                        bi.g(var5, 0, 24 - var5, 0, 5 * var5);
-                                        var5++;
-                                        if (0 == 0) {
-                                          continue L24;
-                                        } else {
-                                          break L25;
-                                        }
-                                      }
-                                    }
-                                    cn.field_f.b(-124);
-                                    return;
-                                  }
-                                } else {
-                                  cn.field_f.b(-124);
-                                  return;
-                                }
-                              } else {
-                                param0[param2].a();
-                                param0[param4].e(0, 0);
-                                var5 = 0;
-                                if (-25 > var5) {
-                                  bi.a(0, var5, 24 + -var5, 0, var5 * 5);
-                                  bi.g(var5, -var5 + 24, var5, 0, 120 - var5 * 5);
-                                  var5++;
-                                  return;
-                                } else {
-                                  cn.field_f.b(-124);
-                                  return;
-                                }
-                              }
-                            } else {
-                              param0[param2].a();
-                              param0[param4].e(0, 0);
-                              var5 = 0;
-                              if (var5 < 24) {
-                                bi.a(0, var5, var5 + 1, 0, -(5 * var5) + 120);
-                                bi.g(var5, 0, var5, 0, -(5 * var5) + 120);
-                                var5++;
-                                return;
-                              } else {
-                                cn.field_f.b(-124);
-                                return;
-                              }
+                              return;
                             }
                           }
                         }
@@ -369,108 +595,48 @@ final class h implements java.awt.event.MouseListener, java.awt.event.MouseMotio
                   param0[param2].a();
                   param0[param4].e(0, 0);
                   var5 = 0;
-                  L26: while (true) {
-                    if (24 <= var5) {
+                  L46: while (true) {
+                    if (var5 >= 24) {
                       if (0 == 0) {
-                        break L0;
+                        break L2;
                       } else {
-                        break L1;
+                        break L0;
                       }
                     } else {
-                      bi.g(var5, 0, 24, 0, -(var5 * 5) + 120);
+                      bi.g(var5, 0, 24, 0, 5 * var5);
                       var5++;
-                      if (0 == 0) {
-                        continue L26;
+                      if (0 != 0) {
+                        break L1;
                       } else {
-                        L27: {
+                        if (0 == 0) {
+                          continue L46;
+                        } else {
                           if (0 == 0) {
-                            break L27;
+                            cn.field_f.b(-124);
+                            return;
                           } else {
                             param0[param2].a();
                             param0[param4].e(0, 0);
-                            var5 = 0;
-                            L28: while (true) {
-                              if (var5 >= 24) {
-                                if (0 == 0) {
-                                  break L27;
-                                } else {
-                                  param0[param2].a();
-                                  param0[param4].e(0, 0);
-                                  bi.a(0, 0, 24, 24, 0, 128);
-                                  cn.field_f.b(-124);
-                                  return;
-                                }
-                              } else {
-                                bi.g(var5, 0, 24, 0, 5 * var5);
-                                var5++;
-                                if (0 == 0) {
-                                  continue L28;
-                                } else {
-                                  if (0 == 0) {
-                                    cn.field_f.b(-124);
-                                    return;
-                                  } else {
-                                    param0[param2].a();
-                                    param0[param4].e(0, 0);
-                                    bi.a(0, 0, 24, 24, 0, 128);
-                                    cn.field_f.b(-124);
-                                    return;
-                                  }
-                                }
-                              }
-                            }
+                            bi.a(0, 0, 24, 24, 0, 128);
+                            cn.field_f.b(-124);
+                            return;
                           }
                         }
-                        cn.field_f.b(-124);
-                        return;
                       }
                     }
                   }
                 }
+                cn.field_f.b(-124);
+                break L1;
               }
-              param0[param2].a();
-              param0[param4].e(0, 0);
-              var5 = 0;
-              L29: while (true) {
-                if (var5 >= 24) {
-                  if (0 == 0) {
-                    break L0;
-                  } else {
-                    param0[param2].a();
-                    param0[param4].e(0, 0);
-                    bi.a(0, 0, 24, 24, 0, 128);
-                    cn.field_f.b(-124);
-                    return;
-                  }
-                } else {
-                  bi.g(var5, 0, 24, 0, 5 * var5);
-                  var5++;
-                  if (0 == 0) {
-                    continue L29;
-                  } else {
-                    if (0 == 0) {
-                      cn.field_f.b(-124);
-                      return;
-                    } else {
-                      param0[param2].a();
-                      param0[param4].e(0, 0);
-                      bi.a(0, 0, 24, 24, 0, 128);
-                      cn.field_f.b(-124);
-                      return;
-                    }
-                  }
-                }
-              }
+              return;
             }
-            cn.field_f.b(-124);
-            return;
-          } else {
-            param0[param2].a();
-            param0[param4].e(0, 0);
-            bi.a(0, 0, 24, 24, 0, 128);
-            cn.field_f.b(-124);
-            return;
           }
+          param0[param2].a();
+          param0[param4].e(0, 0);
+          bi.a(0, 0, 24, 24, 0, 128);
+          cn.field_f.b(-124);
+          return;
         } else {
           return;
         }

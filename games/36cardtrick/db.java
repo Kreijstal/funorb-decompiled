@@ -43,7 +43,7 @@ final class db implements ci {
             break L0;
           }
         }
-        var11 = (ua) (ua) stackIn_3_0;
+        var11 = (ua) (Object) stackIn_3_0;
         if (param2 != 11447) {
           return;
         } else {
@@ -51,7 +51,7 @@ final class db implements ci {
             if (var11 == null) {
               break L1;
             } else {
-              param4 = param4 & ((ua) var11).field_B;
+              param4 = param4 & var11.field_B;
               break L1;
             }
           }
@@ -65,12 +65,12 @@ final class db implements ci {
             }
           }
           L3: {
-            vj.c(((lk) param1).field_o + param0, param3 - -((lk) param1).field_i, ((lk) param1).field_h, ((lk) param1).field_q, ((db) this).field_i);
-            var8 = ((db) this).field_q + param0 + ((lk) param1).field_o;
-            var9 = ((db) this).field_t + ((lk) param1).field_i + param3;
+            vj.c(param1.field_o + param0, param3 - -param1.field_i, param1.field_h, param1.field_q, ((db) this).field_i);
+            var8 = ((db) this).field_q + param0 + param1.field_o;
+            var9 = ((db) this).field_t + param1.field_i + param3;
             vj.f(var8, var9, ((db) this).field_d, ((db) this).field_g, 5592405);
             vj.c(var8, var9, ((db) this).field_d, ((db) this).field_g, var7);
-            if (!((ua) var11).field_D) {
+            if (!var11.field_D) {
               break L3;
             } else {
               vj.e(var8, var9, ((db) this).field_d + var8, ((db) this).field_g + var9, 1);
@@ -81,7 +81,7 @@ final class db implements ci {
           L4: {
             if (null != ((db) this).field_n) {
               var10 = ((db) this).field_d + (((db) this).field_q - -((db) this).field_j);
-              int discarded$1 = ((db) this).field_n.a(((lk) param1).field_r, var10 + param0 + ((lk) param1).field_o, ((lk) param1).field_i + (param3 - -((db) this).field_e), -((db) this).field_j + (-var10 + ((lk) param1).field_h), ((lk) param1).field_q - (((db) this).field_j << -1604369407), ((db) this).field_r, ((db) this).field_h, ((db) this).field_k, ((db) this).field_s, 0);
+              int discarded$1 = ((db) this).field_n.a(param1.field_r, var10 + param0 + param1.field_o, param1.field_i + (param3 - -((db) this).field_e), -((db) this).field_j + (-var10 + param1.field_h), param1.field_q - (((db) this).field_j << -1604369407), ((db) this).field_r, ((db) this).field_h, ((db) this).field_k, ((db) this).field_s, 0);
               break L4;
             } else {
               break L4;
@@ -105,7 +105,7 @@ final class db implements ci {
         int var13 = 0;
         int var14 = 0;
         int var15 = 0;
-        byte[] var16 = null;
+        Object var16 = null;
         pb var17 = null;
         pb var18 = null;
         byte[] var19 = null;
@@ -156,7 +156,7 @@ final class db implements ci {
           if (param0) {
             break L0;
           } else {
-            var16 = (byte[]) null;
+            var16 = null;
             db.a(false, (byte[]) null);
             break L0;
           }
@@ -321,8 +321,9 @@ final class db implements ci {
                                               break L23;
                                             } else {
                                               L24: {
-                                                var9[var5 * var13 + var12] = var17.a(true);
-                                                var14 = var17.a(true);
+                                                byte dupTemp$2 = var17.a(true);
+                                                var9[var5 * var13 + var12] = dupTemp$2;
+                                                var14 = dupTemp$2;
                                                 stackOut_39_0 = var10;
                                                 stackIn_41_0 = stackOut_39_0;
                                                 stackIn_40_0 = stackOut_39_0;
@@ -396,8 +397,9 @@ final class db implements ci {
                                   break L14;
                                 } else {
                                   L28: {
-                                    var9[var12] = var17.a(true);
-                                    var13 = var17.a(true);
+                                    byte dupTemp$3 = var17.a(true);
+                                    var9[var12] = dupTemp$3;
+                                    var13 = dupTemp$3;
                                     stackOut_55_0 = var10;
                                     stackIn_57_0 = stackOut_55_0;
                                     stackIn_56_0 = stackOut_55_0;

@@ -49,7 +49,7 @@ final class sm extends om {
               var1 = 0;
               break L1;
             } else {
-              if (-18 != var2) {
+              if (-18 != (var2 ^ -1)) {
                 if (var2 == 18) {
                   var1 = 2;
                   break L1;
@@ -62,7 +62,7 @@ final class sm extends om {
                       var1 = 4;
                       break L1;
                     } else {
-                      if (-22 != var2) {
+                      if (-22 != (var2 ^ -1)) {
                         if (22 != var2) {
                           if (var2 != 23) {
                             if ((var2 ^ -1) == -25) {
@@ -129,53 +129,171 @@ final class sm extends om {
     }
 
     final static void a(int param0, bf param1, int param2, pq param3) {
+        int var4 = 0;
+        int var5 = 0;
+        int var6 = 0;
+        long var7 = 0L;
         long var9 = 0L;
-        if (param2 <= 111) {
-            return;
-        }
-        param3.a(param0 + -1, 118);
-        int var4 = -param1.field_j + param1.field_l >> -1314126488;
-        int var5 = param1.field_a - param1.field_f >> 1883941224;
-        int var6 = rf.a(aj.a(var4, false, var4) - -aj.a(var5, false, var5), -123);
-        var4 = lh.a(var6, (byte) -101, (long)var4);
-        var5 = lh.a(var6, (byte) -61, (long)var5);
-        long var7 = param3.e(-14770);
-        if (param1.field_f == param1.field_a) {
-            param3.field_n = param3.field_n * kp.field_m >> -703839960;
-            param3.field_I = -(param3.field_I * dj.field_g) >> 1714461096;
-            param3.field_b = -(kp.field_m * param3.field_b) >> 1467207784;
-            // if_icmpge L603
-            nn.field_e[td.field_b][0] = (param3.field_g <= param1.field_a ? -524288 : 524288) + param3.field_g;
-            nn.field_e[td.field_b][1] = param3.field_k;
-            nn.field_e[td.field_b][2] = -524288;
-        } else {
-            if (param1.field_l == param1.field_j) {
-                param3.field_n = -(param3.field_n * kp.field_m) >> 12666440;
-                param3.field_b = param3.field_b * kp.field_m >> -664827800;
-                param3.field_t = -(dj.field_g * param3.field_t) >> 1069340968;
-                // if_icmpge L603
-                nn.field_e[td.field_b][0] = param3.field_g;
-                nn.field_e[td.field_b][1] = param3.field_k + (param3.field_k <= param1.field_j ? -524288 : 524288);
-                nn.field_e[td.field_b][2] = -524288;
-            } else {
+        int[] stackIn_5_0 = null;
+        int stackIn_5_1 = 0;
+        int[] stackIn_6_0 = null;
+        int stackIn_6_1 = 0;
+        int[] stackIn_7_0 = null;
+        int stackIn_7_1 = 0;
+        int stackIn_7_2 = 0;
+        int[] stackIn_11_0 = null;
+        int stackIn_11_1 = 0;
+        int stackIn_11_2 = 0;
+        int[] stackIn_12_0 = null;
+        int stackIn_12_1 = 0;
+        int stackIn_12_2 = 0;
+        int[] stackIn_13_0 = null;
+        int stackIn_13_1 = 0;
+        int stackIn_13_2 = 0;
+        int stackIn_13_3 = 0;
+        int[] stackOut_10_0 = null;
+        int stackOut_10_1 = 0;
+        int stackOut_10_2 = 0;
+        int[] stackOut_12_0 = null;
+        int stackOut_12_1 = 0;
+        int stackOut_12_2 = 0;
+        int stackOut_12_3 = 0;
+        int[] stackOut_11_0 = null;
+        int stackOut_11_1 = 0;
+        int stackOut_11_2 = 0;
+        int stackOut_11_3 = 0;
+        int[] stackOut_4_0 = null;
+        int stackOut_4_1 = 0;
+        int[] stackOut_6_0 = null;
+        int stackOut_6_1 = 0;
+        int stackOut_6_2 = 0;
+        int[] stackOut_5_0 = null;
+        int stackOut_5_1 = 0;
+        int stackOut_5_2 = 0;
+        if (param2 > 111) {
+          L0: {
+            param3.a(param0 + -1, 118);
+            var4 = -param1.field_j + param1.field_l >> -1314126488;
+            var5 = param1.field_a - param1.field_f >> 1883941224;
+            var6 = rf.a(aj.a(var4, false, var4) - -aj.a(var5, false, var5), -123);
+            var4 = lh.a(var6, (byte) -101, (long)var4);
+            var5 = lh.a(var6, (byte) -61, (long)var5);
+            var7 = param3.e(-14770);
+            if (param1.field_f != param1.field_a) {
+              if (param1.field_l != param1.field_j) {
                 var9 = (long)(aj.a(param3.field_I, false, var4) + aj.a(param3.field_t, false, var5));
                 param3.field_I = (int)((long)param3.field_I - (od.a((long)var4, var9, false) * (long)(256 + dj.field_g) >> 704883784));
                 param3.field_t = (int)((long)param3.field_t - (od.a((long)var5, var9, false) * (long)(256 + dj.field_g) >> 1836957384));
                 param3.field_b = 0;
                 param3.field_n = 0;
-                if (td.field_b < nn.field_e.length) {
-                    nn.field_e[td.field_b][0] = -(524288 * var4) + param3.field_g;
-                    nn.field_e[td.field_b][1] = param3.field_k + -(var5 * 524288);
-                    nn.field_e[td.field_b][2] = -524288;
+                if (td.field_b >= nn.field_e.length) {
+                  break L0;
+                } else {
+                  nn.field_e[td.field_b][0] = -(524288 * var4) + param3.field_g;
+                  nn.field_e[td.field_b][1] = param3.field_k + -(var5 * 524288);
+                  nn.field_e[td.field_b][2] = -524288;
+                  break L0;
                 }
+              } else {
+                param3.field_n = -(param3.field_n * kp.field_m) >> 12666440;
+                param3.field_b = param3.field_b * kp.field_m >> -664827800;
+                param3.field_t = -(dj.field_g * param3.field_t) >> 1069340968;
+                if (td.field_b >= nn.field_e.length) {
+                  break L0;
+                } else {
+                  L1: {
+                    nn.field_e[td.field_b][0] = param3.field_g;
+                    stackOut_10_0 = nn.field_e[td.field_b];
+                    stackOut_10_1 = 1;
+                    stackOut_10_2 = param3.field_k;
+                    stackIn_12_0 = stackOut_10_0;
+                    stackIn_12_1 = stackOut_10_1;
+                    stackIn_12_2 = stackOut_10_2;
+                    stackIn_11_0 = stackOut_10_0;
+                    stackIn_11_1 = stackOut_10_1;
+                    stackIn_11_2 = stackOut_10_2;
+                    if (param3.field_k > param1.field_j) {
+                      stackOut_12_0 = (int[]) (Object) stackIn_12_0;
+                      stackOut_12_1 = stackIn_12_1;
+                      stackOut_12_2 = stackIn_12_2;
+                      stackOut_12_3 = 524288;
+                      stackIn_13_0 = stackOut_12_0;
+                      stackIn_13_1 = stackOut_12_1;
+                      stackIn_13_2 = stackOut_12_2;
+                      stackIn_13_3 = stackOut_12_3;
+                      break L1;
+                    } else {
+                      stackOut_11_0 = (int[]) (Object) stackIn_11_0;
+                      stackOut_11_1 = stackIn_11_1;
+                      stackOut_11_2 = stackIn_11_2;
+                      stackOut_11_3 = -524288;
+                      stackIn_13_0 = stackOut_11_0;
+                      stackIn_13_1 = stackOut_11_1;
+                      stackIn_13_2 = stackOut_11_2;
+                      stackIn_13_3 = stackOut_11_3;
+                      break L1;
+                    }
+                  }
+                  stackIn_13_0[stackIn_13_1] = stackIn_13_2 + stackIn_13_3;
+                  nn.field_e[td.field_b][2] = -524288;
+                  break L0;
+                }
+              }
+            } else {
+              param3.field_n = param3.field_n * kp.field_m >> -703839960;
+              param3.field_I = -(param3.field_I * dj.field_g) >> 1714461096;
+              param3.field_b = -(kp.field_m * param3.field_b) >> 1467207784;
+              if (td.field_b >= nn.field_e.length) {
+                break L0;
+              } else {
+                L2: {
+                  stackOut_4_0 = nn.field_e[td.field_b];
+                  stackOut_4_1 = 0;
+                  stackIn_6_0 = stackOut_4_0;
+                  stackIn_6_1 = stackOut_4_1;
+                  stackIn_5_0 = stackOut_4_0;
+                  stackIn_5_1 = stackOut_4_1;
+                  if (param3.field_g > param1.field_a) {
+                    stackOut_6_0 = (int[]) (Object) stackIn_6_0;
+                    stackOut_6_1 = stackIn_6_1;
+                    stackOut_6_2 = 524288;
+                    stackIn_7_0 = stackOut_6_0;
+                    stackIn_7_1 = stackOut_6_1;
+                    stackIn_7_2 = stackOut_6_2;
+                    break L2;
+                  } else {
+                    stackOut_5_0 = (int[]) (Object) stackIn_5_0;
+                    stackOut_5_1 = stackIn_5_1;
+                    stackOut_5_2 = -524288;
+                    stackIn_7_0 = stackOut_5_0;
+                    stackIn_7_1 = stackOut_5_1;
+                    stackIn_7_2 = stackOut_5_2;
+                    break L2;
+                  }
+                }
+                stackIn_7_0[stackIn_7_1] = stackIn_7_2 + param3.field_g;
+                nn.field_e[td.field_b][1] = param3.field_k;
+                nn.field_e[td.field_b][2] = -524288;
+                break L0;
+              }
             }
-        }
-        param3.field_K = kp.field_m * param3.field_K >> -1743497528;
-        param3.field_v = 1;
-        var9 = param3.e(-14770);
-        if (!(td.field_b >= cf.field_g.length)) {
-            td.field_b = td.field_b + 1;
-            cf.field_g[td.field_b] = (int)(var7 + -var9);
+          }
+          L3: {
+            param3.field_K = kp.field_m * param3.field_K >> -1743497528;
+            param3.field_v = 1;
+            var9 = param3.e(-14770);
+            if (td.field_b < cf.field_g.length) {
+              int fieldTemp$2 = td.field_b;
+              td.field_b = td.field_b + 1;
+              cf.field_g[fieldTemp$2] = (int)(var7 + -var9);
+              break L3;
+            } else {
+              break L3;
+            }
+          }
+          return;
+        } else {
+          return;
         }
     }
 

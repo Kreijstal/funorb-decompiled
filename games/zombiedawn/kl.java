@@ -141,7 +141,6 @@ final class kl extends al {
         int var3 = 0;
         int var4 = 0;
         Object var5 = null;
-        String var5_ref = null;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
@@ -161,10 +160,10 @@ final class kl extends al {
           if (var8 >= jc.field_q.length) {
             L1: {
               var7 = 50 + var4;
-              if (var5_ref != null) {
+              if (var5 != null) {
                 L2: {
                   var8 = -5 + (sg.field_jb.field_I + sg.field_jb.field_x);
-                  if (var5_ref != gj.field_o[6]) {
+                  if (var5 != (Object) (Object) gj.field_o[6]) {
                     stackOut_16_0 = 0;
                     stackIn_17_0 = stackOut_16_0;
                     break L2;
@@ -180,7 +179,7 @@ final class kl extends al {
                     if (var9 != 0) {
                       break L4;
                     } else {
-                      if (var5_ref != gj.field_o[5]) {
+                      if (var5 != (Object) (Object) gj.field_o[5]) {
                         break L3;
                       } else {
                         break L4;
@@ -203,22 +202,22 @@ final class kl extends al {
                     if (null == eg.field_n) {
                       break L7;
                     } else {
-                      if (eg.field_n != var5_ref) {
+                      if ((Object) (Object) eg.field_n != var5) {
                         break L7;
                       } else {
                         break L6;
                       }
                     }
                   }
-                  this.a(var8, var7 + -var4, 5, var5_ref);
+                  this.a(var8, var7 + -var4, 5, (String) var5);
                   break L6;
                 }
                 if (256 > var6) {
-                  int discarded$4 = sg.field_jb.a(var5_ref, var2 + 60, var7, 520, 200, 0, 0, var6, 1, 0, var8);
+                  int discarded$4 = sg.field_jb.a((String) var5, var2 + 60, var7, 520, 200, 0, 0, var6, 1, 0, var8);
                   so.b(lf.field_h, var2, var4, var6);
                   break L1;
                 } else {
-                  int discarded$5 = sg.field_jb.a(var5_ref, var2 + 60, var7, 520, 200, 0, 0, 1, 0, var8);
+                  int discarded$5 = sg.field_jb.a((String) var5, var2 + 60, var7, 520, 200, 0, 0, 1, 0, var8);
                   if (var9 != 0) {
                     break L1;
                   } else {
@@ -230,7 +229,7 @@ final class kl extends al {
                 break L1;
               }
             }
-            eg.field_n = var5_ref;
+            eg.field_n = (String) var5;
             return;
           } else {
             var9 = -jc.field_q[var8] + ((kl) this).field_m;
@@ -245,7 +244,7 @@ final class kl extends al {
                     break L8;
                   }
                 }
-                var5_ref = gj.field_o[var8];
+                var5 = (Object) (Object) gj.field_o[var8];
                 if (var9 > 10 + a.field_g[var8]) {
                   var6 = -((-a.field_g[var8] + -10 + var9 << 1982415592) / 50) + 256;
                   var8++;

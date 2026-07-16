@@ -26,7 +26,7 @@ final class ol extends jc implements qh {
     private final hl a(String param0, int param1, pl param2) {
         hl var4 = new hl(param0, param2);
         if (param1 != -29995) {
-            qk var6 = (qk) null;
+            Object var6 = null;
             wb[] discarded$0 = ol.a(76, (qk) null, 39, 118);
         }
         var4.field_v = (ci) (Object) new ki();
@@ -40,36 +40,36 @@ final class ol extends jc implements qh {
 
     ol(j param0, ml param1) {
         super(param0, 200, 150);
-        String var3 = null;
+        Object var3 = null;
         lk var4 = null;
         L0: {
           var3 = null;
           if (param1 == rc.field_l) {
-            var3 = ll.field_a;
+            var3 = (Object) (Object) ll.field_a;
             break L0;
           } else {
             if (param1 == tk.field_b) {
-              var3 = fe.field_d;
+              var3 = (Object) (Object) fe.field_d;
               ((ol) this).field_q = ((ol) this).field_q + 10;
               if (!kb.a(false)) {
                 break L0;
               } else {
                 ((ol) this).field_q = ((ol) this).field_q + 20;
-                var3 = fj.field_f;
+                var3 = (Object) (Object) fj.field_f;
                 break L0;
               }
             } else {
               if (uk.field_d != param1) {
                 break L0;
               } else {
-                var3 = ij.field_b;
+                var3 = (Object) (Object) ij.field_b;
                 ((ol) this).field_q = ((ol) this).field_q + 30;
                 break L0;
               }
             }
           }
         }
-        var4 = new lk(var3, (pl) null);
+        var4 = new lk((String) var3, (pl) null);
         var4.field_o = 0;
         var4.field_q = 80;
         var4.field_i = 50;

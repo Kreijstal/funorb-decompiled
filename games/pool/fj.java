@@ -18,9 +18,9 @@ final class fj extends sq {
         var2.field_t = true;
         if (param0 == -1) {
           var3 = var2.field_u;
-          if (var3 != -3) {
+          if ((var3 ^ -1) != -3) {
             if (3 != var3) {
-              if (-2 != var3) {
+              if (-2 != (var3 ^ -1)) {
                 L0: {
                   if (-1 != (var3 ^ -1)) {
                     break L0;

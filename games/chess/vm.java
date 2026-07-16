@@ -41,33 +41,39 @@ abstract class vm extends jb implements ha {
             Throwable decompiledCaughtException = null;
             try {
               L0: {
-                var8 = param2.getParameter("cookiehost");
-                var7 = var8;
-                var7 = var8;
-                var9 = param4 + "=" + param0 + "; version=1; path=/; domain=" + var8;
-                var7 = var9;
-                var7 = var9;
-                if ((param3 ^ -1L) <= -1L) {
-                  var7 = var9 + "; Expires=" + sk.a(5, 1000L * param3 + ud.a(2)) + "; Max-Age=" + param3;
-                  break L0;
-                } else {
-                  var7 = var9 + "; Discard;";
-                  break L0;
+                L1: {
+                  var8 = param2.getParameter("cookiehost");
+                  var7 = var8;
+                  var7 = var8;
+                  var9 = param4 + "=" + param0 + "; version=1; path=/; domain=" + var8;
+                  var7 = var9;
+                  var7 = var9;
+                  if ((param3 ^ -1L) <= -1L) {
+                    var7 = var9 + "; Expires=" + sk.a(5, 1000L * param3 + ud.a(2)) + "; Max-Age=" + param3;
+                    break L1;
+                  } else {
+                    var7 = var9 + "; Discard;";
+                    break L1;
+                  }
                 }
-              }
-              L1: {
-                if (param1 == 11440) {
-                  break L1;
-                } else {
-                  field_h = null;
-                  break L1;
+                L2: {
+                  if (param1 == 11440) {
+                    break L2;
+                  } else {
+                    field_h = null;
+                    break L2;
+                  }
                 }
+                u.a((byte) -81, "document.cookie=\"" + var7 + "\"", param2);
+                break L0;
               }
-              u.a((byte) -81, "document.cookie=\"" + var7 + "\"", param2);
-            } catch (java.lang.Throwable decompiledCaughtParameter) {
-              decompiledCaughtException = decompiledCaughtParameter;
+            } catch (java.lang.Throwable decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              L3: {
+                var6 = decompiledCaughtException;
+                break L3;
+              }
             }
-            var6 = decompiledCaughtException;
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
@@ -168,8 +174,9 @@ abstract class vm extends jb implements ha {
           if (var9 >= var8) {
             L3: {
               if (var8 > var7) {
+                int incrementValue$3 = var6;
                 var6++;
-                param3[var6] = param0.substring(var7, var8).trim();
+                param3[incrementValue$3] = param0.substring(var7, var8).trim();
                 break L3;
               } else {
                 break L3;
@@ -194,8 +201,9 @@ abstract class vm extends jb implements ha {
               var12 = param2.b(var11);
               if (param4 <= var12) {
                 var7 = var9 - -1;
+                int incrementValue$4 = var6;
                 var6++;
-                param3[var6] = var11;
+                param3[incrementValue$4] = var11;
                 break L4;
               } else {
                 break L4;
@@ -203,8 +211,9 @@ abstract class vm extends jb implements ha {
             }
             if (var10 == 62) {
               if (param0.regionMatches(var9 + -3, "<br>", 0, 4)) {
+                int incrementValue$5 = var6;
                 var6++;
-                param3[var6] = param0.substring(var7, -3 + var9).trim();
+                param3[incrementValue$5] = param0.substring(var7, -3 + var9).trim();
                 var7 = var9 + 1;
                 var9++;
                 continue L2;

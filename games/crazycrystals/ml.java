@@ -31,8 +31,9 @@ final class ml {
 
     final int a(int param0) {
         if (((ml) this).field_j >= ((ml) this).field_f) {
+            int fieldTemp$0 = ((ml) this).field_a;
             ((ml) this).field_a = ((ml) this).field_a + 1;
-            ((ml) this).field_k = ((ml) this).field_b[((ml) this).field_a] << 15;
+            ((ml) this).field_k = ((ml) this).field_b[fieldTemp$0] << 15;
             if (((ml) this).field_a >= ((ml) this).field_e) {
                 ((ml) this).field_a = ((ml) this).field_e - 1;
             }

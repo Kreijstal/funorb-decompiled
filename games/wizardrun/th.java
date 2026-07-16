@@ -15,82 +15,30 @@ final class th {
     final static void b(byte param0) {
         Object var1 = null;
         Throwable var2 = null;
-        int statePc = 0;
-        Throwable caughtException = null;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    var1 = (Object) (Object) tc.field_m;
-                    // monitorenter tc.field_m
-                    statePc = 1;
-                    continue stateLoop;
-                }
-                case 1: {
-                    try {
-                        sh.field_c = ve.field_d;
-                        oc.field_a = oc.field_a + 1;
-                        pg.field_n = wizardrun.field_T;
-                        fi.field_B = gj.field_a;
-                        ih.field_a = jf.field_i;
-                        if (param0 == -21) {
-                            statePc = 3;
-                        } else {
-                            statePc = 2;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_1) {
-                        caughtException = stateCaught_1;
-                        statePc = 5;
-                        continue stateLoop;
-                    }
-                }
-                case 2: {
-                    try {
-                        th.a((byte) 88);
-                        statePc = 3;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_2) {
-                        caughtException = stateCaught_2;
-                        statePc = 5;
-                        continue stateLoop;
-                    }
-                }
-                case 3: {
-                    try {
-                        jf.field_i = false;
-                        w.field_c = fi.field_w;
-                        tf.field_e = mh.field_pb;
-                        dh.field_b = dc.field_t;
-                        fi.field_w = 0;
-                        // monitorexit var1
-                        statePc = 7;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_3) {
-                        caughtException = stateCaught_3;
-                        statePc = 5;
-                        continue stateLoop;
-                    }
-                }
-                case 5: {
-                    try {
-                        var2 = caughtException;
-                        // monitorexit var1
-                        statePc = 6;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_5) {
-                        caughtException = stateCaught_5;
-                        statePc = 5;
-                        continue stateLoop;
-                    }
-                }
-                case 6: {
-                    throw (RuntimeException) (Object) var2;
-                }
-                case 7: {
-                    return;
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
+        Throwable decompiledCaughtException = null;
+        var1 = (Object) (Object) tc.field_m;
+        synchronized (var1) {
+          L0: {
+            L1: {
+              sh.field_c = ve.field_d;
+              oc.field_a = oc.field_a + 1;
+              pg.field_n = wizardrun.field_T;
+              fi.field_B = gj.field_a;
+              ih.field_a = jf.field_i;
+              if (param0 == -21) {
+                break L1;
+              } else {
+                th.a((byte) 88);
+                break L1;
+              }
             }
+            jf.field_i = false;
+            w.field_c = fi.field_w;
+            tf.field_e = mh.field_pb;
+            dh.field_b = dc.field_t;
+            fi.field_w = 0;
+            break L0;
+          }
         }
     }
 

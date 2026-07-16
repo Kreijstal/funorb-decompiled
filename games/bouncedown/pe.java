@@ -13,22 +13,21 @@ final class pe {
 
     final static sa a(int param0, int param1, int param2, int param3, int param4) {
         sa var5 = null;
-        sa var5_ref = null;
         int var6 = 0;
         var6 = Bounce.field_N;
         var5 = (sa) (Object) jl.field_f.a((byte) -50);
         L0: while (true) {
           if (var5 == null) {
-            var5_ref = new sa();
-            var5_ref.field_n = param4;
-            var5_ref.field_g = param1;
-            var5_ref.field_m = param2;
-            jl.field_f.a(1, (ai) (Object) var5_ref);
-            ha.a(-17765, var5_ref, param0);
+            var5 = new sa();
+            var5.field_n = param4;
+            var5.field_g = param1;
+            var5.field_m = param2;
+            jl.field_f.a(1, (ai) (Object) var5);
+            ha.a(-17765, var5, param0);
             if (param3 != -16947) {
               return null;
             } else {
-              return var5_ref;
+              return var5;
             }
           } else {
             if (param4 == var5.field_n) {

@@ -14,20 +14,22 @@ final class na implements Iterator {
 
     public final Object next() {
         int var2 = 0;
-        lh var3 = null;
+        Object var3 = null;
+        lh var3_ref = null;
         lh var4 = null;
         var2 = fleas.field_A ? 1 : 0;
         if (((na) this).field_g.field_f[-1 + ((na) this).field_d] == ((na) this).field_a) {
           L0: while (true) {
             if (((na) this).field_g.field_g > ((na) this).field_d) {
+              int fieldTemp$2 = ((na) this).field_d;
               ((na) this).field_d = ((na) this).field_d + 1;
-              var3 = ((na) this).field_g.field_f[((na) this).field_d].field_h;
-              if (var3 == ((na) this).field_g.field_f[((na) this).field_d + -1]) {
+              var3_ref = ((na) this).field_g.field_f[fieldTemp$2].field_h;
+              if (var3_ref == ((na) this).field_g.field_f[((na) this).field_d + -1]) {
                 continue L0;
               } else {
-                ((na) this).field_e = var3;
-                ((na) this).field_a = var3.field_h;
-                return (Object) (Object) var3;
+                ((na) this).field_e = var3_ref;
+                ((na) this).field_a = var3_ref.field_h;
+                return (Object) (Object) var3_ref;
               }
             } else {
               return null;
@@ -71,8 +73,9 @@ final class na implements Iterator {
         if (((na) this).field_a == ((na) this).field_g.field_f[((na) this).field_d - 1]) {
           L0: while (true) {
             if (((na) this).field_d < ((na) this).field_g.field_g) {
+              int fieldTemp$1 = ((na) this).field_d;
               ((na) this).field_d = ((na) this).field_d + 1;
-              if (((na) this).field_g.field_f[((na) this).field_d].field_h == ((na) this).field_g.field_f[-1 + ((na) this).field_d]) {
+              if (((na) this).field_g.field_f[fieldTemp$1].field_h == ((na) this).field_g.field_f[-1 + ((na) this).field_d]) {
                 ((na) this).field_a = ((na) this).field_g.field_f[((na) this).field_d - 1];
                 continue L0;
               } else {

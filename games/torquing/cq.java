@@ -26,7 +26,7 @@ final class cq extends am {
         }
         L1: {
           var5 = param2;
-          if (-1 == var5) {
+          if (-1 == (var5 ^ -1)) {
             ((cq) this).field_s = param0.i(7088);
             break L1;
           } else {
@@ -35,7 +35,7 @@ final class cq extends am {
                 ((cq) this).field_t = param0.i(7088);
                 break L1;
               } else {
-                if (-4 != var5) {
+                if (-4 != (var5 ^ -1)) {
                   if (var5 == 4) {
                     var4 = param0.e((byte) 62);
                     ((cq) this).field_z[0] = ie.a(var4 << -1608898396, 267386880);
@@ -71,49 +71,29 @@ final class cq extends am {
             java.net.URL var2 = null;
             Exception var2_ref = null;
             Object var3 = null;
-            int statePc = 0;
-            Throwable caughtException = null;
-            stateLoop: while (true) {
-                switch (statePc) {
-                    case 0: {
-                        try {
-                            var2 = new java.net.URL(param1.getCodeBase(), "subscribe.ws");
-                            param1.getAppletContext().showDocument(og.a(var2, param1, (byte) -122), "_top");
-                            if (param0) {
-                                statePc = 4;
-                            } else {
-                                statePc = 1;
-                            }
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_0) {
-                            caughtException = stateCaught_0;
-                            statePc = 3;
-                            continue stateLoop;
-                        }
-                    }
-                    case 1: {
-                        try {
-                            var3 = null;
-                            cq.a(false, (java.applet.Applet) null);
-                            statePc = 4;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_1) {
-                            caughtException = stateCaught_1;
-                            statePc = 3;
-                            continue stateLoop;
-                        }
-                    }
-                    case 3: {
-                        var2_ref = (Exception) (Object) caughtException;
-                        var2_ref.printStackTrace();
-                        statePc = 4;
-                        continue stateLoop;
-                    }
-                    case 4: {
-                        return;
-                    }
-                    default: throw new IllegalStateException("invalid CFG state " + statePc);
+            Throwable decompiledCaughtException = null;
+            try {
+              L0: {
+                L1: {
+                  var2 = new java.net.URL(param1.getCodeBase(), "subscribe.ws");
+                  param1.getAppletContext().showDocument(og.a(var2, param1, (byte) -122), "_top");
+                  if (param0) {
+                    break L1;
+                  } else {
+                    var3 = null;
+                    cq.a(false, (java.applet.Applet) null);
+                    break L1;
+                  }
                 }
+                break L0;
+              }
+            } catch (java.lang.Exception decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              L2: {
+                var2_ref = (Exception) (Object) decompiledCaughtException;
+                var2_ref.printStackTrace();
+                break L2;
+              }
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;

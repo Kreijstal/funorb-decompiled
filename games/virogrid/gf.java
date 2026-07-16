@@ -412,7 +412,6 @@ abstract class gf extends fi implements ja {
         int var4 = 0;
         fi var5 = null;
         fi var6 = null;
-        fi var6_ref = null;
         int var7 = 0;
         var7 = Virogrid.field_F ? 1 : 0;
         if (null == ((gf) this).field_E) {
@@ -432,11 +431,11 @@ abstract class gf extends fi implements ja {
                   L1: while (true) {
                     if (var4 < ((gf) this).field_E.length) {
                       L2: {
-                        var6_ref = ((gf) this).field_E[var4];
-                        if (var6_ref == null) {
+                        var6 = ((gf) this).field_E[var4];
+                        if (var6 == null) {
                           break L2;
                         } else {
-                          if (!var6_ref.a(param1, -8515)) {
+                          if (!var6.a(param1, -8515)) {
                             break L2;
                           } else {
                             return true;
@@ -587,7 +586,8 @@ abstract class gf extends fi implements ja {
         int var18 = 0;
         int var19 = 0;
         int var20 = 0;
-        tf var21 = null;
+        Object var21 = null;
+        tf var21_ref = null;
         int var22 = 0;
         int var23 = 0;
         int var24 = 0;
@@ -767,7 +767,7 @@ abstract class gf extends fi implements ja {
                   break L8;
                 }
                 L10: {
-                  var21 = stackIn_38_0;
+                  var21_ref = stackIn_38_0;
                   var22 = en.field_Hb[var15];
                   var23 = ld.field_h[var15];
                   var24 = en.field_Hb[var16];
@@ -781,12 +781,12 @@ abstract class gf extends fi implements ja {
                       L11: {
                         var28 = var66[var18];
                         var29 = var67[var18];
-                        if (var21 == null) {
+                        if (var21_ref == null) {
                           stackOut_47_0 = 8355711;
                           stackIn_48_0 = stackOut_47_0;
                           break L11;
                         } else {
-                          stackOut_46_0 = var21.field_b;
+                          stackOut_46_0 = var21_ref.field_b;
                           stackIn_48_0 = stackOut_46_0;
                           break L11;
                         }
@@ -811,8 +811,8 @@ abstract class gf extends fi implements ja {
                   var31 = var67[var18];
                   var32 = var67[var19];
                   var33 = var67[var20];
-                  if (var21 != null) {
-                    stackOut_43_0 = var21.field_b;
+                  if (var21_ref != null) {
+                    stackOut_43_0 = var21_ref.field_b;
                     stackIn_44_0 = stackOut_43_0;
                     break L12;
                   } else {

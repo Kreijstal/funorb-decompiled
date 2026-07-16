@@ -112,7 +112,7 @@ final class rb extends de {
         ob var3 = null;
         tc var4 = null;
         int var5 = 0;
-        tf var6_ref = null;
+        tf var6_ref_tf = null;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
@@ -216,7 +216,7 @@ final class rb extends de {
             return;
           } else {
             L7: {
-              var6_ref = this.b((byte) 37, var5);
+              var6_ref_tf = this.b((byte) 37, var5);
               if (this.a((byte) 66, var5)) {
                 break L7;
               } else {
@@ -247,7 +247,7 @@ final class rb extends de {
                   break L9;
                 }
               }
-              var6_ref.e(var7, var8);
+              var6_ref_tf.e(var7, var8);
               var5++;
               continue L2;
             } else {

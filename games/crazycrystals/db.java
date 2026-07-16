@@ -14,23 +14,35 @@ final class db {
     static wj[] field_a;
 
     private final synchronized boolean a(byte param0, int param1) {
-        if (!(((db) this).a((byte) 102))) {
-            return false;
-        }
-        if (param1 >= 0) {
-            // if_icmple L45
-            // ifeq L45
+        if (!((db) this).a((byte) 102)) {
+          return false;
         } else {
-            if (!aq.field_r) {
-                return false;
+          L0: {
+            if (param1 < 0) {
+              break L0;
+            } else {
+              if (((db) this).field_b.field_l.length <= param1) {
+                break L0;
+              } else {
+                if (((db) this).field_b.field_l[param1] == 0) {
+                  break L0;
+                } else {
+                  if (param0 == 4) {
+                    return true;
+                  } else {
+                    ((long[]) ((db) this).field_h[6])[10] = 74L;
+                    return true;
+                  }
+                }
+              }
             }
+          }
+          if (aq.field_r) {
             throw new IllegalArgumentException(Integer.toString(param1));
+          } else {
+            return false;
+          }
         }
-        if (param0 != 4) {
-            ((long[]) ((db) this).field_h[6])[10] = 74L;
-            return true;
-        }
-        return true;
     }
 
     final synchronized boolean a(int param0, byte param1, int param2) {
@@ -778,7 +790,6 @@ final class db {
 
     private final synchronized byte[] a(int param0, boolean param1, int[] param2, int param3) {
         Object var5 = null;
-        byte[] var5_array = null;
         byte[] var7 = null;
         if (this.a(param3, 0, param0)) {
           L0: {
@@ -810,7 +821,7 @@ final class db {
               L2: {
                 if (((db) this).field_e[param0][param3] != null) {
                   var7 = l.a((byte) 110, false, ((db) this).field_e[param0][param3]);
-                  var5_array = var7;
+                  var5 = (Object) (Object) var7;
                   if (var7 == null) {
                     throw new RuntimeException("");
                   } else {
@@ -821,7 +832,7 @@ final class db {
                 }
               }
               L3: {
-                if (var5_array == null) {
+                if (var5 == null) {
                   break L3;
                 } else {
                   if (1 == ((db) this).field_d) {
@@ -842,7 +853,7 @@ final class db {
                   }
                 }
               }
-              return var5_array;
+              return (byte[]) var5;
             } else {
               return null;
             }
@@ -891,6 +902,7 @@ final class db {
               }
               ((db) this).field_c = stackIn_6_1 != 0;
               ((db) this).field_d = param2;
+              return;
             } else {
               break L0;
             }

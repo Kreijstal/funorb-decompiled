@@ -84,7 +84,7 @@ final class tg implements java.awt.event.KeyListener, java.awt.event.FocusListen
                     break L2;
                   } else {
                     var2 = ei.field_G[var2];
-                    if ((128 & var2) != 0) {
+                    if ((128 & var2 ^ -1) != -1) {
                       var2 = -1;
                       break L1;
                     } else {
@@ -131,13 +131,13 @@ final class tg implements java.awt.event.KeyListener, java.awt.event.FocusListen
             }
             L5: {
               var3 = param0.getModifiers();
-              if ((var3 & 10) != 0) {
+              if ((var3 & 10 ^ -1) != -1) {
                 break L5;
               } else {
-                if (var2 == -86) {
+                if ((var2 ^ -1) == -86) {
                   break L5;
                 } else {
-                  if (-11 == var2) {
+                  if (-11 == (var2 ^ -1)) {
                     break L5;
                   } else {
                     break L0;

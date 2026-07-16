@@ -96,36 +96,29 @@ final class rk {
     }
 
     final ed a(int param0, int param1) {
-        if (param1 != -1) {
-          if (-16385 != param1) {
-            if (param0 <= -63) {
-              if (-32769 == param1) {
-                return ((rk) this).field_f[2];
-              } else {
-                if (-49153 != param1) {
-                  return null;
-                } else {
-                  return ((rk) this).field_f[3];
-                }
-              }
-            } else {
-              rk.a(26, -60, 78);
-              if (-32769 == param1) {
-                return ((rk) this).field_f[2];
-              } else {
-                if (-49153 != param1) {
-                  return null;
-                } else {
-                  return ((rk) this).field_f[3];
-                }
-              }
-            }
-          } else {
-            return ((rk) this).field_f[1];
-          }
-        } else {
-          return ((rk) this).field_f[0];
+        if ((param1 ^ -1) == -1) {
+            return ((rk) this).field_f[0];
         }
+        if (-16385 == (param1 ^ -1)) {
+            return ((rk) this).field_f[1];
+        }
+        if (param0 > -63) {
+            rk.a(26, -60, 78);
+            if (!(-32769 != (param1 ^ -1))) {
+                return ((rk) this).field_f[2];
+            }
+            if (-49153 != (param1 ^ -1)) {
+                return null;
+            }
+            return ((rk) this).field_f[3];
+        }
+        if (!(-32769 != (param1 ^ -1))) {
+            return ((rk) this).field_f[2];
+        }
+        if (-49153 != (param1 ^ -1)) {
+            return null;
+        }
+        return ((rk) this).field_f[3];
     }
 
     private final fn a(ed param0, int param1, ed param2, fn param3) {
@@ -227,13 +220,13 @@ final class rk {
     }
 
     final fn a(byte param0, int param1) {
-        if (-1 == param1) {
+        if (-1 == (param1 ^ -1)) {
             return ((rk) this).field_g[0];
         }
         if (!(16384 != param1)) {
             return ((rk) this).field_g[1];
         }
-        if (!(-32769 != param1)) {
+        if (!(-32769 != (param1 ^ -1))) {
             return ((rk) this).field_g[2];
         }
         int var3 = 6 % ((-71 - param0) / 35);
@@ -265,10 +258,10 @@ final class rk {
             if (0 == param1) {
                 return ((rk) this).field_a[0];
             }
-            if (!(-16385 != param1)) {
+            if (!(-16385 != (param1 ^ -1))) {
                 return ((rk) this).field_a[1];
             }
-            if (-32769 == param1) {
+            if (-32769 == (param1 ^ -1)) {
                 return ((rk) this).field_a[2];
             }
             if (!(49152 != param1)) {
@@ -279,10 +272,10 @@ final class rk {
         if (0 == param1) {
             return ((rk) this).field_a[0];
         }
-        if (!(-16385 != param1)) {
+        if (!(-16385 != (param1 ^ -1))) {
             return ((rk) this).field_a[1];
         }
-        if (-32769 == param1) {
+        if (-32769 == (param1 ^ -1)) {
             return ((rk) this).field_a[2];
         }
         if (!(49152 != param1)) {

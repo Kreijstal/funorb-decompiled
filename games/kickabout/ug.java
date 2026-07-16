@@ -50,14 +50,14 @@ final class ug {
     final static void a(int param0, int param1, boolean param2) {
         int var3 = 0;
         tf var4 = null;
-        gg var5 = null;
+        Object var5 = null;
         gg var6 = null;
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
-        String var13_ref = null;
+        String var13_ref_String = null;
         int var13 = 0;
         int var14 = 0;
         int var15 = 0;
@@ -243,7 +243,7 @@ final class ug {
                 if (var7 == 0) {
                   break L11;
                 } else {
-                  nq.field_F.field_yb.a(true, 2, (hd) (Object) var6, (hd) (Object) var5);
+                  nq.field_F.field_yb.a(true, 2, (hd) (Object) var6, (hd) var5);
                   break L11;
                 }
               }
@@ -275,8 +275,8 @@ final class ug {
                 if (var6.field_sb != 0) {
                   el.a((hd) (Object) var6, false, nq.field_F.field_Cb, -1, var6.field_yb, (int[]) null, 0L, var6.field_Gb, -1);
                   var16 = wi.field_v;
-                  var13_ref = pb.field_D;
-                  var16.field_j.a(0, 7, var13_ref);
+                  var13_ref_String = pb.field_D;
+                  var16.field_j.a(0, 7, var13_ref_String);
                   var17 = wi.field_v;
                   var13 = sm.field_q;
                   var14 = vc.field_y;
@@ -286,7 +286,7 @@ final class ug {
                   break L14;
                 }
               }
-              var5 = var6;
+              var5 = (Object) (Object) var6;
               var6 = (gg) (Object) var4.c(33);
               continue L3;
             }

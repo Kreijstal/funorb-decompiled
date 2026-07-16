@@ -43,16 +43,16 @@ final class ea extends lk {
     }
 
     final String b(byte param0, String param1) {
-        w var3_ref = null;
+        w var3_ref_w = null;
         if (!(!(((ea) this).field_q instanceof je))) {
-            var3_ref = ((je) (Object) ((ea) this).field_q).a((byte) 54);
-            if (!(var3_ref == null)) {
-                if (var3_ref.b(-28036) == lg.field_c) {
+            var3_ref_w = ((je) (Object) ((ea) this).field_q).a((byte) 54);
+            if (!(var3_ref_w == null)) {
+                if (var3_ref_w.b(-28036) == lg.field_c) {
                     if (!(param1.equals((Object) (Object) ((ea) this).field_q.field_m))) {
                         return lc.field_o;
                     }
                 }
-                return var3_ref.c(-22773);
+                return var3_ref_w.c(-22773);
             }
         }
         int var3 = -99 / ((20 - param0) / 40);

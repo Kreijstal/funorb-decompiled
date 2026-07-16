@@ -918,22 +918,30 @@ final class dh {
               return;
             }
           } else {
+            int incrementValue$16 = var2;
             var2++;
-            var5[var2] = 0;
+            var5[incrementValue$16] = 0;
+            int incrementValue$17 = var2;
             var2++;
-            var5[var2] = 0;
+            var5[incrementValue$17] = 0;
+            int incrementValue$18 = var2;
             var2++;
-            var5[var2] = 0;
+            var5[incrementValue$18] = 0;
+            int incrementValue$19 = var2;
             var2++;
-            var5[var2] = 0;
+            var5[incrementValue$19] = 0;
+            int incrementValue$20 = var2;
             var2++;
-            var5[var2] = 0;
+            var5[incrementValue$20] = 0;
+            int incrementValue$21 = var2;
             var2++;
-            var5[var2] = 0;
+            var5[incrementValue$21] = 0;
+            int incrementValue$22 = var2;
             var2++;
-            var5[var2] = 0;
+            var5[incrementValue$22] = 0;
+            int incrementValue$23 = var2;
             var2++;
-            var5[var2] = 0;
+            var5[incrementValue$23] = 0;
             continue L0;
           }
         }
@@ -1045,31 +1053,31 @@ final class dh {
         if (param1 == 0) {
             ue.a(((dh) this).field_j, 16581, param2);
         } else {
-            if (-2 == param1) {
+            if (-2 == (param1 ^ -1)) {
                 fd.a(param2, -125, ((dh) this).field_j);
                 return true;
             }
-            if (-3 == param1) {
+            if (-3 == (param1 ^ -1)) {
                 fj.a(param2, 3, ((dh) this).field_d);
                 return true;
             }
-            if (-4 == (param1 ^ -1)) {
-                db.a(param2, ((dh) this).field_d, param0 ^ 32284);
-                return true;
-            }
-            if (10 == param1) {
+            if (-4 != (param1 ^ -1)) {
+                if (10 != param1) {
+                    if (param1 != 15) {
+                        if (16 != param1) {
+                            return false;
+                        }
+                        dh.c(113, param2, 0);
+                        return true;
+                    }
+                    dh.c(114, param2, ((dh) this).field_d);
+                    return true;
+                }
                 la.a(param2, (byte) 127, ((dh) this).field_d);
                 return true;
             }
-            if (param1 == 15) {
-                dh.c(114, param2, ((dh) this).field_d);
-                return true;
-            }
-            if (16 == param1) {
-                dh.c(113, param2, 0);
-                return true;
-            }
-            return false;
+            db.a(param2, ((dh) this).field_d, param0 ^ 32284);
+            return true;
         }
         return true;
     }

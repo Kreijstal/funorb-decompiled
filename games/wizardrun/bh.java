@@ -51,43 +51,26 @@ final class bh {
             cg var6 = null;
             df var6_ref = null;
             df stackIn_2_0 = null;
+            Throwable decompiledCaughtException = null;
             df stackOut_1_0 = null;
-            int statePc = 0;
-            Throwable caughtException = null;
-            stateLoop: while (true) {
-                switch (statePc) {
-                    case 0: {
-                        var4 = 63 / ((param1 - 14) / 40);
-                        statePc = 1;
-                        continue stateLoop;
-                    }
-                    case 1: {
-                        try {
-                            var5_ref = Class.forName("fk");
-                            var6_ref = (df) var5_ref.newInstance();
-                            var6_ref.a((byte) 54, param3, param0, param2);
-                            stackOut_1_0 = (df) var6_ref;
-                            stackIn_2_0 = stackOut_1_0;
-                            statePc = 2;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_1) {
-                            caughtException = stateCaught_1;
-                            statePc = 3;
-                            continue stateLoop;
-                        }
-                    }
-                    case 2: {
-                        return stackIn_2_0;
-                    }
-                    case 3: {
-                        var5 = caughtException;
-                        var6 = new cg();
-                        ((df) (Object) var6).a((byte) -9, param3, param0, param2);
-                        return (df) (Object) var6;
-                    }
-                    default: throw new IllegalStateException("invalid CFG state " + statePc);
-                }
+            var4 = 63 / ((param1 - 14) / 40);
+            try {
+              L0: {
+                var5_ref = Class.forName("fk");
+                var6_ref = (df) var5_ref.newInstance();
+                var6_ref.a((byte) 54, param3, param0, param2);
+                stackOut_1_0 = (df) var6_ref;
+                stackIn_2_0 = stackOut_1_0;
+                break L0;
+              }
+            } catch (java.lang.Throwable decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              var5 = decompiledCaughtException;
+              var6 = new cg();
+              ((df) (Object) var6).a((byte) -9, param3, param0, param2);
+              return (df) (Object) var6;
             }
+            return stackIn_2_0;
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {

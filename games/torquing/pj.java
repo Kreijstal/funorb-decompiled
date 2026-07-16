@@ -310,8 +310,9 @@ final class pj extends bk {
                                 ((pj) this).field_h[var10] = param0.field_u[var11] & 65535;
                                 ((pj) this).field_g[var10] = param0.field_n[var11] & 65535;
                                 ((pj) this).field_i[var10] = param0.field_x[var11] & 65535;
+                                int incrementValue$1 = var10;
                                 var10++;
-                                var9_ref_int__[var11] = var10;
+                                var9_ref_int__[var11] = incrementValue$1;
                                 var11++;
                                 continue L6;
                               }
@@ -356,6 +357,7 @@ final class pj extends bk {
         var9 = var16;
         L9: while (true) {
           if (var16 >= ((pj) this).field_x) {
+            return;
           } else {
             L10: {
               if (param0.field_j != null) {
@@ -563,7 +565,7 @@ final class pj extends bk {
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
-        pj var8_ref = null;
+        pj var8_ref_pj = null;
         int var8 = 0;
         int var9_int = 0;
         pj var9 = null;
@@ -698,6 +700,7 @@ final class pj extends bk {
                 var8 = 0;
                 L7: while (true) {
                   if (var8 >= param1) {
+                    return;
                   } else {
                     var9 = param0[var8];
                     if (var9 != null) {
@@ -757,8 +760,8 @@ final class pj extends bk {
               } else {
                 var11 = param0[var7];
                 var14 = var11;
-                var8_ref = var14;
-                if (var8_ref != null) {
+                var8_ref_pj = var14;
+                if (var8_ref_pj != null) {
                   var9_int = 0;
                   L12: while (true) {
                     if (var9_int >= var14.field_x) {
@@ -914,8 +917,8 @@ final class pj extends bk {
             }
           } else {
             var13 = param0[var7];
-            var8_ref = var13;
-            if (var8_ref != null) {
+            var8_ref_pj = var13;
+            if (var8_ref_pj != null) {
               L24: {
                 ((pj) this).field_k = ((pj) this).field_k + var13.field_k;
                 ((pj) this).field_x = ((pj) this).field_x + var13.field_x;

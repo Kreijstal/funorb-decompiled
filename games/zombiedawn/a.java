@@ -96,12 +96,13 @@ final class a {
               if (((a) this).field_b >= 2) {
                 return;
               } else {
+                int fieldTemp$4 = ((a) this).field_n + 1;
                 ((a) this).field_n = ((a) this).field_n + 1;
-                if (((a) this).field_d < ((a) this).field_n + 1) {
+                if (((a) this).field_d < fieldTemp$4) {
                   ((a) this).field_n = 0;
                   ((a) this).field_b = ((a) this).field_b + 1;
                   if ((((a) this).field_b ^ -1) == -3) {
-                    fn discarded$2 = kh.a(so.c(1) + 153, false);
+                    fn discarded$5 = kh.a(so.c(1) + 153, false);
                     return;
                   } else {
                     return;
@@ -116,14 +117,15 @@ final class a {
               if (((a) this).field_b >= 2) {
                 return;
               } else {
+                int fieldTemp$6 = ((a) this).field_n + 1;
                 ((a) this).field_n = ((a) this).field_n + 1;
-                if (((a) this).field_d < ((a) this).field_n + 1) {
+                if (((a) this).field_d < fieldTemp$6) {
                   ((a) this).field_n = 0;
                   ((a) this).field_b = ((a) this).field_b + 1;
                   if ((((a) this).field_b ^ -1) != -3) {
                     return;
                   } else {
-                    fn discarded$3 = kh.a(so.c(1) + 153, false);
+                    fn discarded$7 = kh.a(so.c(1) + 153, false);
                     return;
                   }
                 } else {

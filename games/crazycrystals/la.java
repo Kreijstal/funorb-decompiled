@@ -12,7 +12,7 @@ final class la {
     }
 
     final static void b(int param0) {
-        dl var1_ref = null;
+        dl var1_ref_dl = null;
         int var1 = 0;
         int var2 = 0;
         int var3 = 0;
@@ -363,16 +363,16 @@ final class la {
               if (fl.field_a != null) {
                 L14: {
                   ad.field_h.a(231, 390);
-                  var1_ref = ga.field_E;
+                  var1_ref_dl = ga.field_E;
                   if (bc.field_f.field_c != 0) {
                     break L14;
                   } else {
-                    var1_ref = kp.field_n;
+                    var1_ref_dl = kp.field_n;
                     break L14;
                   }
                 }
                 L15: {
-                  var1_ref.a(0, 0);
+                  var1_ref_dl.a(0, 0);
                   stackOut_48_0 = 40;
                   stackOut_48_1 = 40;
                   stackOut_48_2 = 2047;
@@ -420,10 +420,10 @@ final class la {
                     ad.field_h.d(232, 389, var2);
                     ad.field_h.d(232, 391, var2);
                     ad.field_h.d(230, 391, var2);
-                    var1_ref.d(1, 1, var2);
-                    var1_ref.d(-1, 1, var2);
-                    var1_ref.d(1, -1, var2);
-                    var1_ref.d(-1, -1, var2);
+                    var1_ref_dl.d(1, 1, var2);
+                    var1_ref_dl.d(-1, 1, var2);
+                    var1_ref_dl.d(1, -1, var2);
+                    var1_ref_dl.d(-1, -1, var2);
                     break L16;
                   }
                 }

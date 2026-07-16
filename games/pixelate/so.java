@@ -30,8 +30,9 @@ final class so {
         if (!(-1 <= (((so) this).field_p ^ -1))) {
             ((so) this).field_l = ((so) this).field_l + 37;
         }
+        int fieldTemp$0 = ((so) this).field_p;
         ((so) this).field_p = ((so) this).field_p + 1;
-        return ((so) this).field_i[((so) this).field_p];
+        return ((so) this).field_i[fieldTemp$0];
     }
 
     final int a(byte param0) {

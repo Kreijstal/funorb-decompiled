@@ -439,7 +439,7 @@ class fd extends ja {
           }
         }
         L4: {
-          if (param1 == -6) {
+          if ((param1 ^ -1) == -6) {
             var4 = -1;
             var5 = 1;
             break L4;
@@ -448,7 +448,7 @@ class fd extends ja {
           }
         }
         L5: {
-          if (-7 != param1) {
+          if (-7 != (param1 ^ -1)) {
             break L5;
           } else {
             var4 = 1;
@@ -498,7 +498,7 @@ class fd extends ja {
           }
         }
         L11: {
-          if (param1 != -14) {
+          if ((param1 ^ -1) != -14) {
             break L11;
           } else {
             var4 = 1;
@@ -507,7 +507,7 @@ class fd extends ja {
           }
         }
         L12: {
-          if (-15 == param1) {
+          if (-15 == (param1 ^ -1)) {
             var4 = -1;
             var5 = 1;
             break L12;

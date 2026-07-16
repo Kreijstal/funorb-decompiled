@@ -344,12 +344,12 @@ final class jc {
           }
           L6: {
             var6 = -140 + sl.field_a;
-            if (var6 >= -1) {
+            if ((var6 ^ -1) >= -1) {
               break L6;
             } else {
               L7: {
                 var7 = 256;
-                if (-21 <= var6) {
+                if (-21 >= (var6 ^ -1)) {
                   break L7;
                 } else {
                   var7 = var6 * 256 / 20;

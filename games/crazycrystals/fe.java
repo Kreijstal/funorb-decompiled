@@ -70,7 +70,7 @@ final class fe extends l {
           var3 = param1.length();
           L1: while (true) {
             L2: {
-              if (var3 <= var2) {
+              if ((var3 ^ -1) >= (var2 ^ -1)) {
                 break L2;
               } else {
                 if (!am.a(param1.charAt(var2), (byte) 71)) {
@@ -83,7 +83,7 @@ final class fe extends l {
             }
             L3: while (true) {
               L4: {
-                if (var3 <= var2) {
+                if ((var3 ^ -1) >= (var2 ^ -1)) {
                   break L4;
                 } else {
                   if (!am.a(param1.charAt(var3 + -1), (byte) 103)) {
@@ -95,33 +95,34 @@ final class fe extends l {
                 }
               }
               var4 = var3 + -var2;
-              if (var4 <= -2) {
-                if (-13 >= var4) {
+              if ((var4 ^ -1) <= -2) {
+                if (-13 <= (var4 ^ -1)) {
                   var5 = new StringBuilder(var4);
                   var6 = var2;
                   L5: while (true) {
-                    if (var6 >= var3) {
+                    if ((var6 ^ -1) <= (var3 ^ -1)) {
                       if (0 != var5.length()) {
                         return var5.toString();
                       } else {
                         return null;
                       }
                     } else {
-                      var7 = param1.charAt(var6);
-                      if (pf.a((byte) -96, (char) var7)) {
-                        var8 = tk.a(235, (char) var7);
-                        if (0 != var8) {
-                          StringBuilder discarded$1 = var5.append(var8);
-                          var6++;
-                          continue L5;
+                      L6: {
+                        var7 = param1.charAt(var6);
+                        if (pf.a((byte) -96, (char) var7)) {
+                          var8 = tk.a(235, (char) var7);
+                          if (0 != var8) {
+                            StringBuilder discarded$2 = var5.append(var8);
+                            break L6;
+                          } else {
+                            break L6;
+                          }
                         } else {
-                          var6++;
-                          continue L5;
+                          break L6;
                         }
-                      } else {
-                        var6++;
-                        continue L5;
                       }
+                      var6++;
+                      continue L5;
                     }
                   }
                 } else {

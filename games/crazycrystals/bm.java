@@ -53,23 +53,27 @@ final class bm {
     final int a(boolean param0) {
         if (0 != ((bm) this).field_b) {
           if (param0) {
-            String discarded$2 = bm.b((byte) 50);
+            String discarded$6 = bm.b((byte) 50);
+            int fieldTemp$7 = ((bm) this).field_b - 1;
             ((bm) this).field_b = ((bm) this).field_b - 1;
-            return ((bm) this).field_f[((bm) this).field_b - 1];
+            return ((bm) this).field_f[fieldTemp$7];
           } else {
+            int fieldTemp$8 = ((bm) this).field_b - 1;
             ((bm) this).field_b = ((bm) this).field_b - 1;
-            return ((bm) this).field_f[((bm) this).field_b - 1];
+            return ((bm) this).field_f[fieldTemp$8];
           }
         } else {
           this.a(-95);
           ((bm) this).field_b = 256;
           if (!param0) {
+            int fieldTemp$9 = ((bm) this).field_b - 1;
             ((bm) this).field_b = ((bm) this).field_b - 1;
-            return ((bm) this).field_f[((bm) this).field_b - 1];
+            return ((bm) this).field_f[fieldTemp$9];
           } else {
-            String discarded$3 = bm.b((byte) 50);
+            String discarded$10 = bm.b((byte) 50);
+            int fieldTemp$11 = ((bm) this).field_b - 1;
             ((bm) this).field_b = ((bm) this).field_b - 1;
-            return ((bm) this).field_f[((bm) this).field_b - 1];
+            return ((bm) this).field_f[fieldTemp$11];
           }
         }
     }
@@ -307,8 +311,9 @@ final class bm {
         int var5 = 0;
         var5 = CrazyCrystals.field_B;
         if (param0 <= -35) {
+          int fieldTemp$6 = ((bm) this).field_d + 1;
           ((bm) this).field_d = ((bm) this).field_d + 1;
-          ((bm) this).field_c = ((bm) this).field_c + (((bm) this).field_d + 1);
+          ((bm) this).field_c = ((bm) this).field_c + fieldTemp$6;
           var2 = 0;
           L0: while (true) {
             if (256 <= var2) {
@@ -335,18 +340,21 @@ final class bm {
                 }
               }
               ((bm) this).field_i = ((bm) this).field_i + ((bm) this).field_a[var2 - -128 & 255];
-              var4 = ((bm) this).field_a[pf.b(255, var3 >> -1441265758)] + ((bm) this).field_i + ((bm) this).field_c;
-              ((bm) this).field_a[var2] = ((bm) this).field_a[pf.b(255, var3 >> -1441265758)] + ((bm) this).field_i + ((bm) this).field_c;
-              ((bm) this).field_c = var3 + ((bm) this).field_a[pf.b(1020, var4 >> 1986300136) >> 1435372002];
-              ((bm) this).field_f[var2] = var3 + ((bm) this).field_a[pf.b(1020, var4 >> 1986300136) >> 1435372002];
+              int dupTemp$7 = ((bm) this).field_a[pf.b(255, var3 >> -1441265758)] + ((bm) this).field_i + ((bm) this).field_c;
+              var4 = dupTemp$7;
+              ((bm) this).field_a[var2] = dupTemp$7;
+              int dupTemp$8 = var3 + ((bm) this).field_a[pf.b(1020, var4 >> 1986300136) >> 1435372002];
+              ((bm) this).field_c = dupTemp$8;
+              ((bm) this).field_f[var2] = dupTemp$8;
               var2++;
               continue L0;
             }
           }
         } else {
           field_j = null;
+          int fieldTemp$9 = ((bm) this).field_d + 1;
           ((bm) this).field_d = ((bm) this).field_d + 1;
-          ((bm) this).field_c = ((bm) this).field_c + (((bm) this).field_d + 1);
+          ((bm) this).field_c = ((bm) this).field_c + fieldTemp$9;
           var2 = 0;
           L2: while (true) {
             if (256 <= var2) {
@@ -373,10 +381,12 @@ final class bm {
                 }
               }
               ((bm) this).field_i = ((bm) this).field_i + ((bm) this).field_a[var2 - -128 & 255];
-              var4 = ((bm) this).field_a[pf.b(255, var3 >> -1441265758)] + ((bm) this).field_i + ((bm) this).field_c;
-              ((bm) this).field_a[var2] = ((bm) this).field_a[pf.b(255, var3 >> -1441265758)] + ((bm) this).field_i + ((bm) this).field_c;
-              ((bm) this).field_c = var3 + ((bm) this).field_a[pf.b(1020, var4 >> 1986300136) >> 1435372002];
-              ((bm) this).field_f[var2] = var3 + ((bm) this).field_a[pf.b(1020, var4 >> 1986300136) >> 1435372002];
+              int dupTemp$10 = ((bm) this).field_a[pf.b(255, var3 >> -1441265758)] + ((bm) this).field_i + ((bm) this).field_c;
+              var4 = dupTemp$10;
+              ((bm) this).field_a[var2] = dupTemp$10;
+              int dupTemp$11 = var3 + ((bm) this).field_a[pf.b(1020, var4 >> 1986300136) >> 1435372002];
+              ((bm) this).field_c = dupTemp$11;
+              ((bm) this).field_f[var2] = dupTemp$11;
               var2++;
               continue L2;
             }

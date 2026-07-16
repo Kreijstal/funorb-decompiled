@@ -54,7 +54,7 @@ final class bm extends jj {
                       if (!param0) {
                         break L3;
                       } else {
-                        int discarded$1 = this.a(-32, -63, -42, -97);
+                        int discarded$3 = this.a(-32, -63, -42, -97);
                         break L3;
                       }
                     }
@@ -84,8 +84,9 @@ final class bm extends jj {
               }
             }
           } else {
+            int incrementValue$4 = var2;
             var2++;
-            t.field_k[var2] = 16777215;
+            t.field_k[incrementValue$4] = 16777215;
             continue L0;
           }
         }
@@ -197,8 +198,9 @@ final class bm extends jj {
             var4 = var6[var3];
             var4.b(-126);
         }
+        int fieldTemp$0 = ((bm) this).field_s + 1;
         ((bm) this).field_s = ((bm) this).field_s + 1;
-        if (((bm) this).field_s + 1 >= am.field_i.length) {
+        if (fieldTemp$0 >= am.field_i.length) {
             ((bm) this).field_s = 0;
         }
         this.a(am.field_i[((bm) this).field_s], 0);

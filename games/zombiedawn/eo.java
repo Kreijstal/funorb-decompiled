@@ -36,17 +36,17 @@ final class eo {
           if (-10 < (param2 ^ -1)) {
             return (ah) (Object) new wo(param1, param3, param2);
           } else {
-            if (param2 <= -12) {
+            if ((param2 ^ -1) <= -12) {
               L0: {
-                if (-18 > param2) {
+                if (-18 < (param2 ^ -1)) {
                   break L0;
                 } else {
                   if (28 == param2) {
                     break L0;
                   } else {
                     if (param2 != 23) {
-                      if (-19 != param2) {
-                        if (-20 != param2) {
+                      if (-19 != (param2 ^ -1)) {
+                        if (-20 != (param2 ^ -1)) {
                           if (-21 != (param2 ^ -1)) {
                             if (27 != param2) {
                               return (ah) (Object) new wo(param1, param3, param2);
@@ -86,13 +86,15 @@ final class eo {
           }
         } else {
           eo.a(false);
-          if (-10 >= (param2 ^ -1)) {
-            if (param2 <= -12) {
-              if (-18 <= param2) {
+          if (-10 < (param2 ^ -1)) {
+            return (ah) (Object) new wo(param1, param3, param2);
+          } else {
+            if ((param2 ^ -1) <= -12) {
+              if (-18 >= (param2 ^ -1)) {
                 if (28 != param2) {
                   if (param2 != 23) {
-                    if (-19 != param2) {
-                      if (-20 != param2) {
+                    if (-19 != (param2 ^ -1)) {
+                      if (-20 != (param2 ^ -1)) {
                         if (-21 != (param2 ^ -1)) {
                           if (27 != param2) {
                             return (ah) (Object) new wo(param1, param3, param2);
@@ -124,10 +126,10 @@ final class eo {
                 }
               } else {
                 if (!ng.field_e) {
-                  if (-8 != (dj.field_e.field_q ^ -1)) {
-                    return (ah) (Object) new qk(param1, param3, param2);
-                  } else {
+                  if (-8 == (dj.field_e.field_q ^ -1)) {
                     return (ah) (Object) new jo(param1, param3, param2);
+                  } else {
+                    return (ah) (Object) new qk(param1, param3, param2);
                   }
                 } else {
                   return (ah) (Object) new qk(param1, param3, param2);
@@ -136,8 +138,6 @@ final class eo {
             } else {
               return (ah) (Object) new po(param1, param3, param2);
             }
-          } else {
-            return (ah) (Object) new wo(param1, param3, param2);
           }
         }
     }

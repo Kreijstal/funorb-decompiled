@@ -21,10 +21,12 @@ final class aj {
     }
 
     public static void a(int param0) {
+        Object var2 = null;
         field_b = null;
         field_a = null;
         field_e = null;
         if (param0 != 0) {
+          var2 = null;
           aj.a(45, 15, (ij) null);
           field_f = null;
           field_c = null;

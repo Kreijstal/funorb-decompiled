@@ -19,121 +19,36 @@ final class bh extends gf {
         Object var3 = null;
         int stackIn_6_0 = 0;
         int stackIn_8_0 = 0;
+        Throwable decompiledCaughtException = null;
         int stackOut_5_0 = 0;
         int stackOut_7_0 = 0;
-        int statePc = 0;
-        Throwable caughtException = null;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    var1 = (Object) (Object) mc.field_r;
-                    // monitorenter mc.field_r
-                    statePc = 1;
-                    continue stateLoop;
-                }
-                case 1: {
-                    try {
-                        if (param0 >= 105) {
-                            statePc = 3;
-                        } else {
-                            statePc = 2;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_1) {
-                        caughtException = stateCaught_1;
-                        statePc = 9;
-                        continue stateLoop;
-                    }
-                }
-                case 2: {
-                    try {
-                        var3 = null;
-                        bh.a(42, (hf) null, -69);
-                        statePc = 3;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_2) {
-                        caughtException = stateCaught_2;
-                        statePc = 9;
-                        continue stateLoop;
-                    }
-                }
-                case 3: {
-                    try {
-                        if (ln.field_p == qn.field_p) {
-                            statePc = 5;
-                        } else {
-                            statePc = 4;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_3) {
-                        caughtException = stateCaught_3;
-                        statePc = 9;
-                        continue stateLoop;
-                    }
-                }
-                case 4: {
-                    try {
-                        statePc = 7;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_4) {
-                        caughtException = stateCaught_4;
-                        statePc = 9;
-                        continue stateLoop;
-                    }
-                }
-                case 5: {
-                    try {
-                        // monitorexit var1
-                        stackOut_5_0 = 0;
-                        stackIn_6_0 = stackOut_5_0;
-                        statePc = 6;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_5) {
-                        caughtException = stateCaught_5;
-                        statePc = 9;
-                        continue stateLoop;
-                    }
-                }
-                case 6: {
-                    return stackIn_6_0 != 0;
-                }
-                case 7: {
-                    try {
-                        ke.field_a = gn.field_z[qn.field_p];
-                        nj.field_f = fm.field_d[qn.field_p];
-                        qn.field_p = 1 + qn.field_p & 127;
-                        // monitorexit var1
-                        stackOut_7_0 = 1;
-                        stackIn_8_0 = stackOut_7_0;
-                        statePc = 8;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_7) {
-                        caughtException = stateCaught_7;
-                        statePc = 9;
-                        continue stateLoop;
-                    }
-                }
-                case 8: {
-                    return stackIn_8_0 != 0;
-                }
-                case 9: {
-                    try {
-                        var2 = caughtException;
-                        // monitorexit var1
-                        statePc = 10;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_9) {
-                        caughtException = stateCaught_9;
-                        statePc = 9;
-                        continue stateLoop;
-                    }
-                }
-                case 10: {
-                    throw (RuntimeException) (Object) var2;
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
+        var1 = (Object) (Object) mc.field_r;
+        synchronized (var1) {
+          L0: {
+            L1: {
+              if (param0 >= 105) {
+                break L1;
+              } else {
+                var3 = null;
+                bh.a(42, (hf) null, -69);
+                break L1;
+              }
             }
+            if (ln.field_p == qn.field_p) {
+              stackOut_5_0 = 0;
+              stackIn_6_0 = stackOut_5_0;
+              return stackIn_6_0 != 0;
+            } else {
+              ke.field_a = gn.field_z[qn.field_p];
+              nj.field_f = fm.field_d[qn.field_p];
+              qn.field_p = 1 + qn.field_p & 127;
+              stackOut_7_0 = 1;
+              stackIn_8_0 = stackOut_7_0;
+              break L0;
+            }
+          }
         }
+        return stackIn_8_0 != 0;
     }
 
     final byte[] b(int param0) {

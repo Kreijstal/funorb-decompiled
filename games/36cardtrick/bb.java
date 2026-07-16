@@ -121,8 +121,9 @@ final class bb extends pj {
                                           break L6;
                                         }
                                       }
-                                      ((bb) this).field_n[var1] = new e();
-                                      var16 = new e();
+                                      e dupTemp$1 = new e();
+                                      ((bb) this).field_n[var1] = dupTemp$1;
+                                      var16 = dupTemp$1;
                                       var16.field_g = var11;
                                       var16.field_h = var12;
                                       var16.field_d = var13;
@@ -134,20 +135,20 @@ final class bb extends pj {
                                     }
                                   } else {
                                     var17 = ((bb) this).field_j[var2];
-                                    ((dj) var17).field_g = ((dj) var17).field_g + var11;
-                                    ((dj) var17).field_b = ((dj) var17).field_b + var12;
-                                    ((dj) var17).field_c = ((dj) var17).field_c + var13;
-                                    ((dj) var17).field_d = ((dj) var17).field_d + 1;
+                                    var17.field_g = var17.field_g + var11;
+                                    var17.field_b = var17.field_b + var12;
+                                    var17.field_c = var17.field_c + var13;
+                                    var17.field_d = var17.field_d + 1;
                                     var18 = ((bb) this).field_j[var3];
-                                    ((dj) var18).field_g = ((dj) var18).field_g + var11;
-                                    ((dj) var18).field_b = ((dj) var18).field_b + var12;
-                                    ((dj) var18).field_c = ((dj) var18).field_c + var13;
-                                    ((dj) var18).field_d = ((dj) var18).field_d + 1;
+                                    var18.field_g = var18.field_g + var11;
+                                    var18.field_b = var18.field_b + var12;
+                                    var18.field_c = var18.field_c + var13;
+                                    var18.field_d = var18.field_d + 1;
                                     var19 = ((bb) this).field_j[var4];
-                                    ((dj) var19).field_g = ((dj) var19).field_g + var11;
-                                    ((dj) var19).field_b = ((dj) var19).field_b + var12;
-                                    ((dj) var19).field_c = ((dj) var19).field_c + var13;
-                                    ((dj) var19).field_d = ((dj) var19).field_d + 1;
+                                    var19.field_g = var19.field_g + var11;
+                                    var19.field_b = var19.field_b + var12;
+                                    var19.field_c = var19.field_c + var13;
+                                    var19.field_d = var19.field_d + 1;
                                     var1++;
                                     continue L1;
                                   }
@@ -190,8 +191,9 @@ final class bb extends pj {
         ((bb) this).field_d[((bb) this).field_f] = (short)param0;
         ((bb) this).field_B[((bb) this).field_f] = (short)param1;
         ((bb) this).field_z[((bb) this).field_f] = (short)param2;
+        int fieldTemp$0 = ((bb) this).field_f;
         ((bb) this).field_f = ((bb) this).field_f + 1;
-        return (byte)((bb) this).field_f;
+        return (byte)fieldTemp$0;
     }
 
     final void a() {
@@ -314,8 +316,9 @@ final class bb extends pj {
         ((bb) this).field_c[((bb) this).field_y] = (byte)param4;
         ((bb) this).field_l[((bb) this).field_y] = (short)param5;
         ((bb) this).field_i[((bb) this).field_y] = (short)param6;
+        int fieldTemp$0 = ((bb) this).field_y;
         ((bb) this).field_y = ((bb) this).field_y + 1;
-        return ((bb) this).field_y;
+        return fieldTemp$0;
     }
 
     final int a(int param0, int param1, int param2) {
@@ -326,8 +329,9 @@ final class bb extends pj {
             ((bb) this).field_w[((bb) this).field_r] = param0;
             ((bb) this).field_e[((bb) this).field_r] = param1;
             ((bb) this).field_u[((bb) this).field_r] = param2;
+            int fieldTemp$1 = ((bb) this).field_r + 1;
             ((bb) this).field_r = ((bb) this).field_r + 1;
-            ((bb) this).field_b = ((bb) this).field_r + 1;
+            ((bb) this).field_b = fieldTemp$1;
             return ((bb) this).field_r - 1;
           } else {
             if (((bb) this).field_w[var4] == param0) {

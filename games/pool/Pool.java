@@ -18,7 +18,7 @@ public final class Pool extends ep {
         int var3_int = 0;
         String var3 = null;
         int var4 = 0;
-        uf var4_ref = null;
+        uf var4_ref_uf = null;
         int var5 = 0;
         int var6 = 0;
         String[] var7 = null;
@@ -451,7 +451,7 @@ public final class Pool extends ep {
                                 continue L12;
                               }
                             } else {
-                              boolean discarded$2 = pa.a(false, 15, 13, 12);
+                              boolean discarded$3 = pa.a(false, 15, 13, 12);
                               break L13;
                             }
                           }
@@ -505,12 +505,13 @@ public final class Pool extends ep {
             if (null == ui.field_U.c((byte) 99)) {
               break L0;
             } else {
+              int fieldTemp$4 = aa.field_h + 1;
               aa.field_h = aa.field_h + 1;
-              if (-336 != (aa.field_h + 1 ^ -1)) {
+              if (-336 != (fieldTemp$4 ^ -1)) {
                 break L0;
               } else {
                 aa.field_h = 0;
-                ma discarded$3 = ui.field_U.e((byte) -41);
+                ma discarded$5 = ui.field_U.e((byte) -41);
                 break L0;
               }
             }
@@ -585,8 +586,7 @@ public final class Pool extends ep {
                   }
                 }
                 L20: {
-                  new uf(stackIn_89_2, stackIn_89_3, stackIn_89_4, stackIn_89_5, stackIn_89_6, stackIn_89_7 != 0, var9, 0, false);
-                  ba.field_ub = stackIn_89_0;
+                  ba.field_ub = new uf(stackIn_89_2, stackIn_89_3, stackIn_89_4, stackIn_89_5, stackIn_89_6, stackIn_89_7 != 0, var9, 0, false);
                   if (!jd.field_a) {
                     stackOut_91_0 = 0;
                     stackIn_92_0 = stackOut_91_0;
@@ -707,10 +707,9 @@ public final class Pool extends ep {
                   }
                 }
                 L25: {
-                  new uf(stackIn_103_2, stackIn_103_3, stackIn_103_4, stackIn_103_5, stackIn_103_6, stackIn_103_7 != 0, var10, 0, false);
-                  var4_ref = stackIn_103_0;
-                  var4_ref.field_I.a(ga.a(512, true, ea.field_r), -1, 0, (ba.field_ub.field_I.field_A - -1) % fr.field_n, param1 ^ 19063);
-                  ba.field_ub = var4_ref;
+                  var4_ref_uf = new uf(stackIn_103_2, stackIn_103_3, stackIn_103_4, stackIn_103_5, stackIn_103_6, stackIn_103_7 != 0, var10, 0, false);
+                  var4_ref_uf.field_I.a(ga.a(512, true, ea.field_r), -1, 0, (ba.field_ub.field_I.field_A - -1) % fr.field_n, param1 ^ 19063);
+                  ba.field_ub = var4_ref_uf;
                   var5 = jd.field_a ? 1 : 0;
                   stackOut_103_0 = -3405;
                   stackOut_103_1 = -1;
@@ -879,8 +878,7 @@ public final class Pool extends ep {
               }
             }
             L33: {
-              new uf(stackIn_125_2, stackIn_125_3, stackIn_125_4, stackIn_125_5, stackIn_125_6, stackIn_125_7 != 0, new String[1], 0, false);
-              ba.field_ub = stackIn_125_0;
+              ba.field_ub = new uf(stackIn_125_2, stackIn_125_3, stackIn_125_4, stackIn_125_5, stackIn_125_6, stackIn_125_7 != 0, new String[1], 0, false);
               if (!jd.field_a) {
                 stackOut_127_0 = 0;
                 stackIn_128_0 = stackOut_127_0;
@@ -1420,11 +1418,10 @@ public final class Pool extends ep {
     }
 
     private final void k(int param0) {
-        int[] var2 = null;
+        Object var2 = null;
         int var2_int = 0;
-        uf var2_ref = null;
         int var3 = 0;
-        oq var4_ref = null;
+        oq var4_ref_oq = null;
         int[] var4_ref_int__ = null;
         int var4 = 0;
         int var5 = 0;
@@ -1433,38 +1430,45 @@ public final class Pool extends ep {
         int var7_int = 0;
         uf var7 = null;
         int var8 = 0;
-        int[] var9 = null;
-        int[] var10 = null;
+        Object var9 = null;
+        Object var10 = null;
         int[] var11 = null;
         int[] var12 = null;
-        int[] var13 = null;
+        Object var13 = null;
         int[] var14 = null;
-        int[] var15 = null;
+        Object var15 = null;
         int[] var16 = null;
         int[] var17 = null;
-        int[] var18 = null;
-        int[] var19 = null;
-        uf var20 = null;
+        Object var18 = null;
+        Object var19 = null;
+        Object var20 = null;
         int[] var21 = null;
         int[] var22 = null;
-        int[] var23 = null;
-        int[] var24 = null;
-        int[] var25 = null;
+        Object var23 = null;
+        Object var24 = null;
+        Object var25 = null;
         int[] var26 = null;
         int[] var27 = null;
         int[] var28 = null;
-        int[] var29 = null;
+        Object var29 = null;
         int[] var30 = null;
-        int[] var31 = null;
-        int[] var32 = null;
+        Object var31 = null;
+        Object var32 = null;
         int[] var33 = null;
         int[] var34 = null;
         int[] var35 = null;
-        int[] var36 = null;
+        Object var36 = null;
         int[] var37 = null;
-        int[] var38 = null;
-        int stackIn_47_0 = 0;
-        int stackIn_50_0 = 0;
+        Object var38 = null;
+        int stackIn_46_0 = 0;
+        int stackIn_49_0 = 0;
+        uf stackIn_53_0 = null;
+        uf stackIn_53_1 = null;
+        int stackIn_53_2 = 0;
+        int stackIn_53_3 = 0;
+        int stackIn_53_4 = 0;
+        int stackIn_53_5 = 0;
+        int stackIn_53_6 = 0;
         uf stackIn_54_0 = null;
         uf stackIn_54_1 = null;
         int stackIn_54_2 = 0;
@@ -1479,48 +1483,33 @@ public final class Pool extends ep {
         int stackIn_55_4 = 0;
         int stackIn_55_5 = 0;
         int stackIn_55_6 = 0;
-        uf stackIn_56_0 = null;
-        uf stackIn_56_1 = null;
-        int stackIn_56_2 = 0;
-        int stackIn_56_3 = 0;
-        int stackIn_56_4 = 0;
-        int stackIn_56_5 = 0;
-        int stackIn_56_6 = 0;
-        int stackIn_56_7 = 0;
+        int stackIn_55_7 = 0;
+        int stackIn_97_0 = 0;
+        int stackIn_97_1 = 0;
         int stackIn_98_0 = 0;
         int stackIn_98_1 = 0;
         int stackIn_99_0 = 0;
         int stackIn_99_1 = 0;
-        int stackIn_100_0 = 0;
-        int stackIn_100_1 = 0;
-        int stackIn_100_2 = 0;
-        int stackOut_97_0 = 0;
-        int stackOut_97_1 = 0;
-        int stackOut_99_0 = 0;
-        int stackOut_99_1 = 0;
-        int stackOut_99_2 = 0;
+        int stackIn_99_2 = 0;
+        int stackOut_96_0 = 0;
+        int stackOut_96_1 = 0;
         int stackOut_98_0 = 0;
         int stackOut_98_1 = 0;
         int stackOut_98_2 = 0;
-        int stackOut_46_0 = 0;
+        int stackOut_97_0 = 0;
+        int stackOut_97_1 = 0;
+        int stackOut_97_2 = 0;
         int stackOut_45_0 = 0;
-        int stackOut_49_0 = 0;
+        int stackOut_44_0 = 0;
         int stackOut_48_0 = 0;
-        uf stackOut_53_0 = null;
-        uf stackOut_53_1 = null;
-        int stackOut_53_2 = 0;
-        int stackOut_53_3 = 0;
-        int stackOut_53_4 = 0;
-        int stackOut_53_5 = 0;
-        int stackOut_53_6 = 0;
-        uf stackOut_55_0 = null;
-        uf stackOut_55_1 = null;
-        int stackOut_55_2 = 0;
-        int stackOut_55_3 = 0;
-        int stackOut_55_4 = 0;
-        int stackOut_55_5 = 0;
-        int stackOut_55_6 = 0;
-        int stackOut_55_7 = 0;
+        int stackOut_47_0 = 0;
+        uf stackOut_52_0 = null;
+        uf stackOut_52_1 = null;
+        int stackOut_52_2 = 0;
+        int stackOut_52_3 = 0;
+        int stackOut_52_4 = 0;
+        int stackOut_52_5 = 0;
+        int stackOut_52_6 = 0;
         uf stackOut_54_0 = null;
         uf stackOut_54_1 = null;
         int stackOut_54_2 = 0;
@@ -1529,6 +1518,14 @@ public final class Pool extends ep {
         int stackOut_54_5 = 0;
         int stackOut_54_6 = 0;
         int stackOut_54_7 = 0;
+        uf stackOut_53_0 = null;
+        uf stackOut_53_1 = null;
+        int stackOut_53_2 = 0;
+        int stackOut_53_3 = 0;
+        int stackOut_53_4 = 0;
+        int stackOut_53_5 = 0;
+        int stackOut_53_6 = 0;
+        int stackOut_53_7 = 0;
         L0: {
           var8 = field_O;
           if (param0 == 3) {
@@ -1563,7 +1560,7 @@ public final class Pool extends ep {
               } else {
                 if (15 != uq.field_c) {
                   L2: {
-                    if (uq.field_c != -11) {
+                    if ((uq.field_c ^ -1) != -11) {
                       break L2;
                     } else {
                       if (td.field_d) {
@@ -1574,9 +1571,9 @@ public final class Pool extends ep {
                       }
                     }
                   }
-                  if (-75 != uq.field_c) {
+                  if (-75 != (uq.field_c ^ -1)) {
                     L3: {
-                      if (-66 == uq.field_c) {
+                      if (-66 == (uq.field_c ^ -1)) {
                         break L3;
                       } else {
                         if (uq.field_c != 64) {
@@ -1621,35 +1618,35 @@ public final class Pool extends ep {
                                 if (!mj.field_e) {
                                   break L7;
                                 } else {
-                                  var2_ref = am.field_e;
+                                  var2 = (Object) (Object) am.field_e;
                                   break L7;
                                 }
                               } else {
-                                var2_ref = ba.field_ub;
+                                var2 = (Object) (Object) ba.field_ub;
                                 break L7;
                               }
                             }
                             L8: {
-                              if (var2_ref != null) {
+                              if (var2 != null) {
                                 if ((uq.field_c ^ -1) != -80) {
                                   if ((uq.field_c ^ -1) == -68) {
-                                    var2_ref.b((ge) (Object) kn.field_e, false);
+                                    ((uf) var2).b((ge) (Object) kn.field_e, false);
                                     continue L1;
                                   } else {
                                     if ((uq.field_c ^ -1) != -69) {
                                       if (uq.field_c != 76) {
-                                        if (uq.field_c != -79) {
-                                          if (-76 != uq.field_c) {
+                                        if ((uq.field_c ^ -1) != -79) {
+                                          if (-76 != (uq.field_c ^ -1)) {
                                             if (-78 != (uq.field_c ^ -1)) {
                                               if ((uq.field_c ^ -1) != -70) {
                                                 if (uq.field_c != 70) {
                                                   if ((uq.field_c ^ -1) == -72) {
-                                                    var2_ref.field_I.field_p = kn.field_e.g(param0 + -63);
-                                                    var2_ref.field_I.field_x = var2_ref.field_I.field_x & (var2_ref.field_I.field_p ^ -1);
+                                                    ((uf) var2).field_I.field_p = kn.field_e.g(param0 + -63);
+                                                    ((uf) var2).field_I.field_x = ((uf) var2).field_I.field_x & (((uf) var2).field_I.field_p ^ -1);
                                                     continue L1;
                                                   } else {
                                                     if (uq.field_c == 72) {
-                                                      var2_ref.field_I.field_b = kn.field_e.g(param0 + -119);
+                                                      ((uf) var2).field_I.field_b = kn.field_e.g(param0 + -119);
                                                       if (ba.field_ub == null) {
                                                         continue L1;
                                                       } else {
@@ -1660,8 +1657,8 @@ public final class Pool extends ep {
                                                       if (73 != uq.field_c) {
                                                         break L8;
                                                       } else {
-                                                        var2_ref.field_cb = kn.field_e.g(-105);
-                                                        var2_ref.field_I.field_b = var2_ref.field_I.field_b & (var2_ref.field_cb ^ -1);
+                                                        ((uf) var2).field_cb = kn.field_e.g(-105);
+                                                        ((uf) var2).field_I.field_b = ((uf) var2).field_I.field_b & (((uf) var2).field_cb ^ -1);
                                                         if (null != ba.field_ub) {
                                                           ni.f((byte) -119);
                                                           continue L1;
@@ -1672,7 +1669,7 @@ public final class Pool extends ep {
                                                     }
                                                   }
                                                 } else {
-                                                  var2_ref.field_I.field_x = kn.field_e.g(param0 ^ -92);
+                                                  ((uf) var2).field_I.field_x = kn.field_e.g(param0 ^ -92);
                                                   if (ba.field_ub == null) {
                                                     continue L1;
                                                   } else {
@@ -1683,8 +1680,8 @@ public final class Pool extends ep {
                                               } else {
                                                 L9: {
                                                   var3 = kn.field_e.e((byte) 105);
-                                                  var2_ref.field_I.c(param0 + -14289, var3);
-                                                  if (var2_ref.field_db == var3) {
+                                                  ((uf) var2).field_I.c(param0 + -14289, var3);
+                                                  if (((uf) var2).field_db == var3) {
                                                     kh.field_gc.a(17, 256, (byte) -121, 128);
                                                     break L9;
                                                   } else {
@@ -1693,34 +1690,34 @@ public final class Pool extends ep {
                                                   }
                                                 }
                                                 L10: {
-                                                  var20 = var2_ref;
-                                                  stackOut_97_0 = -3405;
-                                                  stackOut_97_1 = -1;
-                                                  stackIn_99_0 = stackOut_97_0;
-                                                  stackIn_99_1 = stackOut_97_1;
-                                                  stackIn_98_0 = stackOut_97_0;
-                                                  stackIn_98_1 = stackOut_97_1;
+                                                  var20 = var2;
+                                                  stackOut_96_0 = -3405;
+                                                  stackOut_96_1 = -1;
+                                                  stackIn_98_0 = stackOut_96_0;
+                                                  stackIn_98_1 = stackOut_96_1;
+                                                  stackIn_97_0 = stackOut_96_0;
+                                                  stackIn_97_1 = stackOut_96_1;
                                                   if (mg.a(true)) {
-                                                    stackOut_99_0 = stackIn_99_0;
-                                                    stackOut_99_1 = stackIn_99_1;
-                                                    stackOut_99_2 = 21;
-                                                    stackIn_100_0 = stackOut_99_0;
-                                                    stackIn_100_1 = stackOut_99_1;
-                                                    stackIn_100_2 = stackOut_99_2;
-                                                    break L10;
-                                                  } else {
                                                     stackOut_98_0 = stackIn_98_0;
                                                     stackOut_98_1 = stackIn_98_1;
-                                                    stackOut_98_2 = 0;
-                                                    stackIn_100_0 = stackOut_98_0;
-                                                    stackIn_100_1 = stackOut_98_1;
-                                                    stackIn_100_2 = stackOut_98_2;
+                                                    stackOut_98_2 = 21;
+                                                    stackIn_99_0 = stackOut_98_0;
+                                                    stackIn_99_1 = stackOut_98_1;
+                                                    stackIn_99_2 = stackOut_98_2;
+                                                    break L10;
+                                                  } else {
+                                                    stackOut_97_0 = stackIn_97_0;
+                                                    stackOut_97_1 = stackIn_97_1;
+                                                    stackOut_97_2 = 0;
+                                                    stackIn_99_0 = stackOut_97_0;
+                                                    stackIn_99_1 = stackOut_97_1;
+                                                    stackIn_99_2 = stackOut_97_2;
                                                     break L10;
                                                   }
                                                 }
-                                                fq.a(stackIn_100_0, stackIn_100_1, stackIn_100_2, false);
-                                                var20.a(-23095);
-                                                if ((f.field_f & var20.field_L) == 0) {
+                                                fq.a(stackIn_99_0, stackIn_99_1, stackIn_99_2, false);
+                                                ((uf) var20).a(-23095);
+                                                if ((f.field_f & ((uf) var20).field_L ^ -1) == -1) {
                                                   continue L1;
                                                 } else {
                                                   ne.field_w = 23;
@@ -1729,28 +1726,28 @@ public final class Pool extends ep {
                                                 }
                                               }
                                             } else {
-                                              var2_ref.d(4096, (ge) (Object) kn.field_e);
+                                              ((uf) var2).d(4096, (ge) (Object) kn.field_e);
                                               continue L1;
                                             }
                                           } else {
-                                            var2_ref.a(96, (ge) (Object) kn.field_e);
+                                            ((uf) var2).a(96, (ge) (Object) kn.field_e);
                                             continue L1;
                                           }
                                         } else {
-                                          var2_ref.b(69, (ge) (Object) kn.field_e);
+                                          ((uf) var2).b(69, (ge) (Object) kn.field_e);
                                           continue L1;
                                         }
                                       } else {
-                                        var2_ref.a((ge) (Object) kn.field_e, false);
+                                        ((uf) var2).a((ge) (Object) kn.field_e, false);
                                         continue L1;
                                       }
                                     } else {
-                                      var2_ref.a((ge) (Object) kn.field_e, 0);
+                                      ((uf) var2).a((ge) (Object) kn.field_e, 0);
                                       continue L1;
                                     }
                                   }
                                 } else {
-                                  var2_ref.g(true);
+                                  ((uf) var2).g(true);
                                   continue L1;
                                 }
                               } else {
@@ -1783,28 +1780,28 @@ public final class Pool extends ep {
                       var3 = kn.field_e.e(3, 78);
                       un.field_e = kn.field_e.e(1, 70);
                       if (kn.field_e.e(1, 21) != 1) {
-                        stackOut_46_0 = 0;
-                        stackIn_47_0 = stackOut_46_0;
+                        stackOut_45_0 = 0;
+                        stackIn_46_0 = stackOut_45_0;
                         break L12;
                       } else {
-                        stackOut_45_0 = 1;
-                        stackIn_47_0 = stackOut_45_0;
+                        stackOut_44_0 = 1;
+                        stackIn_46_0 = stackOut_44_0;
                         break L12;
                       }
                     }
                     L13: {
-                      var4 = stackIn_47_0;
+                      var4 = stackIn_46_0;
                       if ((kn.field_e.e(1, 111) ^ -1) != -2) {
-                        stackOut_49_0 = 0;
-                        stackIn_50_0 = stackOut_49_0;
+                        stackOut_48_0 = 0;
+                        stackIn_49_0 = stackOut_48_0;
                         break L13;
                       } else {
-                        stackOut_48_0 = 1;
-                        stackIn_50_0 = stackOut_48_0;
+                        stackOut_47_0 = 1;
+                        stackIn_49_0 = stackOut_47_0;
                         break L13;
                       }
                     }
-                    var5 = stackIn_50_0;
+                    var5 = stackIn_49_0;
                     kn.field_e.o(8);
                     var6 = new String[kn.field_e.g(param0 ^ -70)];
                     var7_int = 0;
@@ -1812,46 +1809,28 @@ public final class Pool extends ep {
                       if (var7_int >= var6.length) {
                         L15: {
                           ti.field_d = null;
-                          stackOut_53_0 = null;
-                          stackOut_53_1 = null;
-                          stackOut_53_2 = hq.field_c;
-                          stackOut_53_3 = la.field_a;
-                          stackOut_53_4 = er.field_W;
-                          stackOut_53_5 = re.field_f;
-                          stackOut_53_6 = var3;
-                          stackIn_55_0 = stackOut_53_0;
-                          stackIn_55_1 = stackOut_53_1;
-                          stackIn_55_2 = stackOut_53_2;
-                          stackIn_55_3 = stackOut_53_3;
-                          stackIn_55_4 = stackOut_53_4;
-                          stackIn_55_5 = stackOut_53_5;
-                          stackIn_55_6 = stackOut_53_6;
-                          stackIn_54_0 = stackOut_53_0;
-                          stackIn_54_1 = stackOut_53_1;
-                          stackIn_54_2 = stackOut_53_2;
-                          stackIn_54_3 = stackOut_53_3;
-                          stackIn_54_4 = stackOut_53_4;
-                          stackIn_54_5 = stackOut_53_5;
-                          stackIn_54_6 = stackOut_53_6;
+                          stackOut_52_0 = null;
+                          stackOut_52_1 = null;
+                          stackOut_52_2 = hq.field_c;
+                          stackOut_52_3 = la.field_a;
+                          stackOut_52_4 = er.field_W;
+                          stackOut_52_5 = re.field_f;
+                          stackOut_52_6 = var3;
+                          stackIn_54_0 = stackOut_52_0;
+                          stackIn_54_1 = stackOut_52_1;
+                          stackIn_54_2 = stackOut_52_2;
+                          stackIn_54_3 = stackOut_52_3;
+                          stackIn_54_4 = stackOut_52_4;
+                          stackIn_54_5 = stackOut_52_5;
+                          stackIn_54_6 = stackOut_52_6;
+                          stackIn_53_0 = stackOut_52_0;
+                          stackIn_53_1 = stackOut_52_1;
+                          stackIn_53_2 = stackOut_52_2;
+                          stackIn_53_3 = stackOut_52_3;
+                          stackIn_53_4 = stackOut_52_4;
+                          stackIn_53_5 = stackOut_52_5;
+                          stackIn_53_6 = stackOut_52_6;
                           if (un.field_e != 0) {
-                            stackOut_55_0 = null;
-                            stackOut_55_1 = null;
-                            stackOut_55_2 = stackIn_55_2;
-                            stackOut_55_3 = stackIn_55_3;
-                            stackOut_55_4 = stackIn_55_4;
-                            stackOut_55_5 = stackIn_55_5;
-                            stackOut_55_6 = stackIn_55_6;
-                            stackOut_55_7 = 0;
-                            stackIn_56_0 = stackOut_55_0;
-                            stackIn_56_1 = stackOut_55_1;
-                            stackIn_56_2 = stackOut_55_2;
-                            stackIn_56_3 = stackOut_55_3;
-                            stackIn_56_4 = stackOut_55_4;
-                            stackIn_56_5 = stackOut_55_5;
-                            stackIn_56_6 = stackOut_55_6;
-                            stackIn_56_7 = stackOut_55_7;
-                            break L15;
-                          } else {
                             stackOut_54_0 = null;
                             stackOut_54_1 = null;
                             stackOut_54_2 = stackIn_54_2;
@@ -1859,21 +1838,38 @@ public final class Pool extends ep {
                             stackOut_54_4 = stackIn_54_4;
                             stackOut_54_5 = stackIn_54_5;
                             stackOut_54_6 = stackIn_54_6;
-                            stackOut_54_7 = 1;
-                            stackIn_56_0 = stackOut_54_0;
-                            stackIn_56_1 = stackOut_54_1;
-                            stackIn_56_2 = stackOut_54_2;
-                            stackIn_56_3 = stackOut_54_3;
-                            stackIn_56_4 = stackOut_54_4;
-                            stackIn_56_5 = stackOut_54_5;
-                            stackIn_56_6 = stackOut_54_6;
-                            stackIn_56_7 = stackOut_54_7;
+                            stackOut_54_7 = 0;
+                            stackIn_55_0 = stackOut_54_0;
+                            stackIn_55_1 = stackOut_54_1;
+                            stackIn_55_2 = stackOut_54_2;
+                            stackIn_55_3 = stackOut_54_3;
+                            stackIn_55_4 = stackOut_54_4;
+                            stackIn_55_5 = stackOut_54_5;
+                            stackIn_55_6 = stackOut_54_6;
+                            stackIn_55_7 = stackOut_54_7;
+                            break L15;
+                          } else {
+                            stackOut_53_0 = null;
+                            stackOut_53_1 = null;
+                            stackOut_53_2 = stackIn_53_2;
+                            stackOut_53_3 = stackIn_53_3;
+                            stackOut_53_4 = stackIn_53_4;
+                            stackOut_53_5 = stackIn_53_5;
+                            stackOut_53_6 = stackIn_53_6;
+                            stackOut_53_7 = 1;
+                            stackIn_55_0 = stackOut_53_0;
+                            stackIn_55_1 = stackOut_53_1;
+                            stackIn_55_2 = stackOut_53_2;
+                            stackIn_55_3 = stackOut_53_3;
+                            stackIn_55_4 = stackOut_53_4;
+                            stackIn_55_5 = stackOut_53_5;
+                            stackIn_55_6 = stackOut_53_6;
+                            stackIn_55_7 = stackOut_53_7;
                             break L15;
                           }
                         }
                         L16: {
-                          new uf(stackIn_56_2, stackIn_56_3, stackIn_56_4, stackIn_56_5, stackIn_56_6, stackIn_56_7 != 0, var6, var2_int, var4 != 0);
-                          var7 = stackIn_56_0;
+                          var7 = new uf(stackIn_55_2, stackIn_55_3, stackIn_55_4, stackIn_55_5, stackIn_55_6, stackIn_55_7 != 0, var6, var2_int, var4 != 0);
                           var7.c(16915, (ge) (Object) kn.field_e);
                           if (65 != uq.field_c) {
                             mj.field_e = true;
@@ -1911,13 +1907,13 @@ public final class Pool extends ep {
                     var27 = var34;
                     var22 = var27;
                     var17 = var22;
-                    var2 = var17;
+                    var2 = (Object) (Object) var17;
                     var9 = var2;
-                    var4_ref = kn.field_e;
-                    var5 = ((ge) (Object) var4_ref).g(-100);
+                    var4_ref_oq = kn.field_e;
+                    var5 = ((ge) (Object) var4_ref_oq).g(-100);
                     var6_int = 0;
                     L18: while (true) {
-                      if (var6_int >= var5) {
+                      if ((var6_int ^ -1) <= (var5 ^ -1)) {
                         var32 = var2;
                         var25 = var32;
                         var10 = var25;
@@ -1934,17 +1930,19 @@ public final class Pool extends ep {
                               if (em.field_K) {
                                 var3 = 0;
                                 L21: while (true) {
-                                  if (var3 >= md.field_a.length) {
+                                  if ((var3 ^ -1) <= (md.field_a.length ^ -1)) {
                                     break L20;
                                   } else {
-                                    if (fe.a(var34, param0 ^ -13670, var3)) {
-                                      ui.field_U.b((byte) -3, (ma) (Object) new bq(var3));
-                                      var3++;
-                                      continue L21;
-                                    } else {
-                                      var3++;
-                                      continue L21;
+                                    L22: {
+                                      if (!fe.a(var34, param0 ^ -13670, var3)) {
+                                        break L22;
+                                      } else {
+                                        ui.field_U.b((byte) -3, (ma) (Object) new bq(var3));
+                                        break L22;
+                                      }
                                     }
+                                    var3++;
+                                    continue L21;
                                   }
                                 }
                               } else {
@@ -1959,9 +1957,9 @@ public final class Pool extends ep {
                             var23 = var29;
                             var18 = var23;
                             var13 = var18;
-                            var4_ref_int__ = var13;
+                            var4_ref_int__ = (int[]) var13;
                             var5 = 0;
-                            L22: while (true) {
+                            L23: while (true) {
                               if (8 <= var5) {
                                 var37 = hp.field_c;
                                 var30 = var37;
@@ -1971,38 +1969,38 @@ public final class Pool extends ep {
                                 var24 = var31;
                                 var19 = var24;
                                 var15 = var19;
-                                var4_ref_int__ = var15;
+                                var4_ref_int__ = (int[]) var15;
                                 var5 = 0;
-                                L23: while (true) {
-                                  if (-9 >= var5) {
+                                L24: while (true) {
+                                  if (-9 >= (var5 ^ -1)) {
                                     continue L1;
                                   } else {
-                                    var14[var5] = md.a(var37[var5], var38[var5]);
+                                    var14[var5] = md.a(var37[var5], ((int[]) var38)[var5]);
                                     var5++;
-                                    continue L23;
+                                    continue L24;
                                   }
                                 }
                               } else {
-                                var12[var5] = md.a(var35[var5], var36[var5]);
+                                var12[var5] = md.a(var35[var5], ((int[]) var36)[var5]);
                                 var5++;
-                                continue L22;
+                                continue L23;
                               }
                             }
                           } else {
-                            var10[var5] = rb.b(var32[var5], var33[var5] ^ -1);
+                            ((int[]) var10)[var5] = rb.b(((int[]) var32)[var5], var33[var5] ^ -1);
                             var5++;
                             continue L19;
                           }
                         }
                       } else {
-                        var9[var6_int] = ((ge) (Object) var4_ref).b(true);
+                        ((int[]) var9)[var6_int] = ((ge) (Object) var4_ref_oq).b(true);
                         var6_int++;
                         continue L18;
                       }
                     }
                   }
                 } else {
-                  L24: {
+                  L25: {
                     if (td.field_d) {
                       al.l(param0 + -127);
                       lq.a(true);
@@ -2015,9 +2013,9 @@ public final class Pool extends ep {
                       ib.field_v = false;
                       l.field_a = true;
                       am.b(120);
-                      break L24;
+                      break L25;
                     } else {
-                      break L24;
+                      break L25;
                     }
                   }
                   ub.field_p = false;

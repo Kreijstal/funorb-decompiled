@@ -58,7 +58,7 @@ final class ac extends nk {
     }
 
     final static ae a(String param0, int param1) {
-        String var2 = null;
+        Object var2 = null;
         Object var3 = null;
         ae var3_ref = null;
         String var4 = null;
@@ -71,16 +71,16 @@ final class ac extends nk {
         if (null != ed.field_c) {
           L0: {
             var7 = (CharSequence) (Object) param0;
-            var2 = hf.a(var7, 102);
+            var2 = (Object) (Object) hf.a(var7, 102);
             if (var2 != null) {
               break L0;
             } else {
-              var2 = (String) (Object) var7;
+              var2 = (Object) (Object) var7;
               break L0;
             }
           }
           if (param1 == 0) {
-            var3_ref = (ae) (Object) ed.field_c.a((long)var2.hashCode(), param1 + -56);
+            var3_ref = (ae) (Object) ed.field_c.a((long)((String) var2).hashCode(), param1 + -56);
             L1: while (true) {
               if (var3_ref != null) {
                 L2: {
@@ -93,7 +93,7 @@ final class ac extends nk {
                     break L2;
                   }
                 }
-                if (!var4.equals((Object) (Object) var2)) {
+                if (!var4.equals(var2)) {
                   var3_ref = (ae) (Object) ed.field_c.b(-1);
                   continue L1;
                 } else {
@@ -105,7 +105,7 @@ final class ac extends nk {
             }
           } else {
             field_A = null;
-            var3_ref = (ae) (Object) ed.field_c.a((long)var2.hashCode(), param1 + -56);
+            var3_ref = (ae) (Object) ed.field_c.a((long)((String) var2).hashCode(), param1 + -56);
             L3: while (true) {
               if (var3_ref != null) {
                 L4: {
@@ -118,7 +118,7 @@ final class ac extends nk {
                     break L4;
                   }
                 }
-                if (!var4.equals((Object) (Object) var2)) {
+                if (!var4.equals(var2)) {
                   var3_ref = (ae) (Object) ed.field_c.b(-1);
                   continue L3;
                 } else {

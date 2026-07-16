@@ -27,26 +27,32 @@ abstract class ab extends og {
             Throwable decompiledCaughtException = null;
             try {
               L0: {
-                var7 = -75 / ((param3 - 32) / 56);
-                var9 = param0.getParameter("cookiehost");
-                var8 = var9;
-                var8 = var9;
-                var10 = param2 + "=" + param4 + "; version=1; path=/; domain=" + var9;
-                var8 = var10;
-                var8 = var10;
-                if (0L > param1) {
-                  var8 = var10 + "; Discard;";
-                  break L0;
-                } else {
-                  var8 = var10 + "; Expires=" + sm.a(lo.a((byte) -25) + param1 * 1000L, (byte) 121) + "; Max-Age=" + param1;
-                  break L0;
+                L1: {
+                  var7 = -75 / ((param3 - 32) / 56);
+                  var9 = param0.getParameter("cookiehost");
+                  var8 = var9;
+                  var8 = var9;
+                  var10 = param2 + "=" + param4 + "; version=1; path=/; domain=" + var9;
+                  var8 = var10;
+                  var8 = var10;
+                  if (0L > param1) {
+                    var8 = var10 + "; Discard;";
+                    break L1;
+                  } else {
+                    var8 = var10 + "; Expires=" + sm.a(lo.a((byte) -25) + param1 * 1000L, (byte) 121) + "; Max-Age=" + param1;
+                    break L1;
+                  }
                 }
+                hi.a("document.cookie=\"" + var8 + "\"", param0, (byte) -79);
+                break L0;
               }
-              hi.a("document.cookie=\"" + var8 + "\"", param0, (byte) -79);
-            } catch (java.lang.Throwable decompiledCaughtParameter) {
-              decompiledCaughtException = decompiledCaughtParameter;
+            } catch (java.lang.Throwable decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              L2: {
+                var6 = decompiledCaughtException;
+                break L2;
+              }
             }
-            var6 = decompiledCaughtException;
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
@@ -129,18 +135,18 @@ abstract class ab extends og {
     boolean g(byte param0) {
         int var2 = 0;
         int var3 = 0;
-        int stackIn_11_0 = 0;
+        int stackIn_12_0 = 0;
         int stackIn_20_0 = 0;
-        int stackIn_32_0 = 0;
-        int stackIn_38_0 = 0;
-        int stackOut_36_0 = 0;
-        int stackOut_37_0 = 0;
-        int stackOut_30_0 = 0;
-        int stackOut_31_0 = 0;
+        int stackIn_30_0 = 0;
+        int stackIn_36_0 = 0;
+        int stackOut_34_0 = 0;
+        int stackOut_35_0 = 0;
+        int stackOut_28_0 = 0;
+        int stackOut_29_0 = 0;
         int stackOut_19_0 = 0;
         int stackOut_18_0 = 0;
+        int stackOut_11_0 = 0;
         int stackOut_10_0 = 0;
-        int stackOut_9_0 = 0;
         if (param0 == 8) {
           L0: {
             var2 = this.a(-124);
@@ -152,55 +158,55 @@ abstract class ab extends og {
               break L0;
             }
           }
-          if (-1 < var3) {
+          if (-1 >= (var3 ^ -1)) {
             L1: {
               L2: {
-                ((ab) this).field_B = ((ab) this).field_B + (1 + (var3 + -16)) / 16;
-                if (-1 != ((ab) this).field_B) {
+                if (-1 != (((ab) this).field_B ^ -1)) {
                   break L2;
                 } else {
-                  if (var2 != -1) {
+                  if ((var2 ^ -1) != -1) {
                     break L2;
                   } else {
                     if (((ab) this).field_C) {
                       break L2;
                     } else {
-                      stackOut_36_0 = 1;
-                      stackIn_38_0 = stackOut_36_0;
+                      stackOut_34_0 = 1;
+                      stackIn_36_0 = stackOut_34_0;
                       break L1;
                     }
                   }
                 }
               }
-              stackOut_37_0 = 0;
-              stackIn_38_0 = stackOut_37_0;
+              stackOut_35_0 = 0;
+              stackIn_36_0 = stackOut_35_0;
               break L1;
             }
-            return stackIn_38_0 != 0;
+            return stackIn_36_0 != 0;
           } else {
             L3: {
               L4: {
-                if (-1 != ((ab) this).field_B) {
+                ((ab) this).field_B = ((ab) this).field_B + (1 + (var3 + -16)) / 16;
+                if (-1 != (((ab) this).field_B ^ -1)) {
                   break L4;
                 } else {
-                  if (var2 != 0) {
+                  if ((var2 ^ -1) != -1) {
                     break L4;
                   } else {
                     if (((ab) this).field_C) {
                       break L4;
                     } else {
-                      stackOut_30_0 = 1;
-                      stackIn_32_0 = stackOut_30_0;
+                      stackOut_28_0 = 1;
+                      stackIn_30_0 = stackOut_28_0;
                       break L3;
                     }
                   }
                 }
               }
-              stackOut_31_0 = 0;
-              stackIn_32_0 = stackOut_31_0;
+              stackOut_29_0 = 0;
+              stackIn_30_0 = stackOut_29_0;
               break L3;
             }
-            return stackIn_32_0 != 0;
+            return stackIn_30_0 != 0;
           }
         } else {
           L5: {
@@ -214,12 +220,10 @@ abstract class ab extends og {
               break L5;
             }
           }
-          if (-1 < var3) {
+          if (-1 < (var3 ^ -1)) {
             ((ab) this).field_B = ((ab) this).field_B + (1 + (var3 + -16)) / 16;
             if (-1 == (((ab) this).field_B ^ -1)) {
-              if (var2 != 0) {
-                return false;
-              } else {
+              if ((var2 ^ -1) == -1) {
                 L6: {
                   if (((ab) this).field_C) {
                     stackOut_19_0 = 0;
@@ -232,27 +236,29 @@ abstract class ab extends og {
                   }
                 }
                 return stackIn_20_0 != 0;
+              } else {
+                return false;
               }
             } else {
               return false;
             }
           } else {
-            if (-1 == ((ab) this).field_B) {
-              if (var2 != 0) {
-                return false;
-              } else {
+            if (-1 == (((ab) this).field_B ^ -1)) {
+              if ((var2 ^ -1) == -1) {
                 L7: {
                   if (((ab) this).field_C) {
-                    stackOut_10_0 = 0;
-                    stackIn_11_0 = stackOut_10_0;
+                    stackOut_11_0 = 0;
+                    stackIn_12_0 = stackOut_11_0;
                     break L7;
                   } else {
-                    stackOut_9_0 = 1;
-                    stackIn_11_0 = stackOut_9_0;
+                    stackOut_10_0 = 1;
+                    stackIn_12_0 = stackOut_10_0;
                     break L7;
                   }
                 }
-                return stackIn_11_0 != 0;
+                return stackIn_12_0 != 0;
+              } else {
+                return false;
               }
             } else {
               return false;

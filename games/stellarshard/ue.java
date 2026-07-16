@@ -75,19 +75,26 @@ final class ue {
                   var2 = 97 % ((-22 - param0) / 57);
                   if (0 < pg.field_fb.field_k) {
                     try {
-                      ob.field_b.a(pg.field_fb.field_r, 0, 113, pg.field_fb.field_k);
-                      t.field_d = ih.a((byte) -98);
-                    } catch (java.io.IOException decompiledCaughtParameter) {
-                      decompiledCaughtException = decompiledCaughtParameter;
+                      L4: {
+                        ob.field_b.a(pg.field_fb.field_r, 0, 113, pg.field_fb.field_k);
+                        t.field_d = ih.a((byte) -98);
+                        break L4;
+                      }
+                    } catch (java.io.IOException decompiledCaughtParameter0) {
+                      decompiledCaughtException = decompiledCaughtParameter0;
+                      L5: {
+                        iOException = (IOException) (Object) decompiledCaughtException;
+                        oj.c(-2290);
+                        break L5;
+                      }
                     }
-                    iOException = (IOException) (Object) decompiledCaughtException;
-                    oj.c(-2290);
+                    pg.field_fb.field_k = 0;
                     break L3;
                   } else {
                     break L3;
                   }
                 }
-                pg.field_fb.field_k = 0;
+                return;
               }
             }
             pg.field_fb.field_k = 0;

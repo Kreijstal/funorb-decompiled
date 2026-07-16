@@ -386,113 +386,115 @@ final class vi extends sj {
         }
         L1: {
           if (1048576 <= ((vi) this).field_z) {
-            if (-1 >= ((vi) this).field_I) {
-              break L1;
-            } else {
-              if (((vi) this).field_G == null) {
-                break L1;
-              } else {
-                ((vi) this).field_t.a(param0);
-                break L1;
-              }
-            }
+            break L1;
           } else {
-            if (-1 <= ((vi) this).field_I) {
+            if (null != ((vi) this).field_A) {
+              ((vi) this).field_H.a(param0);
               break L1;
             } else {
-              if (((vi) this).field_G == null) {
-                break L1;
-              } else {
-                ((vi) this).field_t.a(param0);
-                break L1;
-              }
+              break L1;
             }
           }
         }
         L2: {
+          if (-1 <= (((vi) this).field_I ^ -1)) {
+            break L2;
+          } else {
+            if (((vi) this).field_G == null) {
+              break L2;
+            } else {
+              ((vi) this).field_t.a(param0);
+              break L2;
+            }
+          }
+        }
+        L3: {
           if (((vi) this).field_r) {
-            L3: {
-              if (((vi) this).field_u >= -1) {
-                break L3;
+            L4: {
+              if ((((vi) this).field_u ^ -1) >= -1) {
+                break L4;
               } else {
                 if (!((vi) this).field_x.a((byte) -76)) {
                   ((vi) this).field_r = false;
                   ((vi) this).field_u = -((vi) this).field_u;
                   ((vi) this).field_q = null;
-                  break L2;
-                } else {
                   break L3;
+                } else {
+                  break L4;
                 }
               }
             }
-            if (-1 <= ((vi) this).field_u) {
-              break L2;
+            if (-1 >= (((vi) this).field_u ^ -1)) {
+              break L3;
             } else {
               if (!((vi) this).field_H.a((byte) 112)) {
                 ((vi) this).field_r = false;
                 ((vi) this).field_u = -((vi) this).field_u;
                 ((vi) this).field_A = null;
-                break L2;
+                break L3;
               } else {
-                break L2;
+                break L3;
               }
             }
           } else {
-            break L2;
+            break L3;
           }
         }
-        L4: {
-          if (((vi) this).field_u == 0) {
-            break L4;
+        L5: {
+          if ((((vi) this).field_u ^ -1) == -1) {
+            break L5;
           } else {
-            ((vi) this).field_z = ((vi) this).field_z + ((vi) this).field_u * param0;
-            if (((vi) this).field_z < 1048576) {
-              if (((vi) this).field_z <= 0) {
-                ((vi) this).field_z = 0;
-                if (((vi) this).field_r) {
-                  break L4;
-                } else {
-                  ((vi) this).field_u = 0;
-                  if (((vi) this).field_w) {
-                    break L4;
+            L6: {
+              ((vi) this).field_z = ((vi) this).field_z + ((vi) this).field_u * param0;
+              if (((vi) this).field_z < 1048576) {
+                if (((vi) this).field_z <= 0) {
+                  ((vi) this).field_z = 0;
+                  if (((vi) this).field_r) {
+                    break L6;
                   } else {
-                    L5: {
-                      if (null != ((vi) this).field_q) {
-                        ((vi) this).field_x.g(-104);
-                        break L5;
-                      } else {
-                        break L5;
-                      }
-                    }
-                    ((vi) this).field_q = null;
-                    break L4;
-                  }
-                }
-              } else {
-                break L4;
-              }
-            } else {
-              ((vi) this).field_z = 1048576;
-              if (((vi) this).field_r) {
-                break L4;
-              } else {
-                ((vi) this).field_u = 0;
-                if (!((vi) this).field_w) {
-                  L6: {
-                    if (((vi) this).field_A != null) {
-                      ((vi) this).field_H.g(-3);
+                    ((vi) this).field_u = 0;
+                    if (((vi) this).field_w) {
                       break L6;
                     } else {
+                      L7: {
+                        if (null != ((vi) this).field_q) {
+                          ((vi) this).field_x.g(-104);
+                          break L7;
+                        } else {
+                          break L7;
+                        }
+                      }
+                      ((vi) this).field_q = null;
                       break L6;
                     }
                   }
-                  ((vi) this).field_A = null;
-                  break L4;
                 } else {
-                  break L4;
+                  break L5;
+                }
+              } else {
+                ((vi) this).field_z = 1048576;
+                if (((vi) this).field_r) {
+                  break L6;
+                } else {
+                  ((vi) this).field_u = 0;
+                  if (!((vi) this).field_w) {
+                    L8: {
+                      if (((vi) this).field_A != null) {
+                        ((vi) this).field_H.g(-3);
+                        break L8;
+                      } else {
+                        break L8;
+                      }
+                    }
+                    ((vi) this).field_A = null;
+                    break L5;
+                  } else {
+                    break L5;
+                  }
                 }
               }
             }
+            break L5;
           }
         }
     }
@@ -509,67 +511,25 @@ final class vi extends sj {
     final static void a(byte param0) {
         Object var1 = null;
         Throwable var2 = null;
-        int statePc = 0;
-        Throwable caughtException = null;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    if (param0 == -109) {
-                        statePc = 2;
-                    } else {
-                        statePc = 1;
-                    }
-                    continue stateLoop;
+        Throwable decompiledCaughtException = null;
+        if (param0 == -109) {
+          L0: {
+            if (mc.field_r == null) {
+              break L0;
+            } else {
+              var1 = (Object) (Object) mc.field_r;
+              synchronized (var1) {
+                L1: {
+                  mc.field_r = null;
+                  break L1;
                 }
-                case 1: {
-                    return;
-                }
-                case 2: {
-                    if (mc.field_r == null) {
-                        statePc = 8;
-                    } else {
-                        statePc = 3;
-                    }
-                    continue stateLoop;
-                }
-                case 3: {
-                    var1 = (Object) (Object) mc.field_r;
-                    // monitorenter mc.field_r
-                    statePc = 4;
-                    continue stateLoop;
-                }
-                case 4: {
-                    try {
-                        mc.field_r = null;
-                        // monitorexit var1
-                        statePc = 8;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_4) {
-                        caughtException = stateCaught_4;
-                        statePc = 6;
-                        continue stateLoop;
-                    }
-                }
-                case 6: {
-                    try {
-                        var2 = caughtException;
-                        // monitorexit var1
-                        statePc = 7;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_6) {
-                        caughtException = stateCaught_6;
-                        statePc = 6;
-                        continue stateLoop;
-                    }
-                }
-                case 7: {
-                    throw (RuntimeException) (Object) var2;
-                }
-                case 8: {
-                    return;
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
+              }
+              break L0;
             }
+          }
+          return;
+        } else {
+          return;
         }
     }
 

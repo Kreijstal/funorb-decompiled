@@ -30,13 +30,13 @@ final class kl {
         if (param0 == 640) {
           L0: {
             L1: {
-              if (-1 < wt.field_x) {
+              if (-1 < (wt.field_x ^ -1)) {
                 break L1;
               } else {
                 if (640 <= wt.field_x) {
                   break L1;
                 } else {
-                  if (-1 > us.field_j) {
+                  if (-1 < (us.field_j ^ -1)) {
                     break L1;
                   } else {
                     if (g.field_a.field_T >= us.field_j) {
@@ -70,8 +70,9 @@ final class kl {
     }
 
     final static void c(int param0) {
+        int fieldTemp$0 = va.field_J + 1;
         va.field_J = va.field_J + 1;
-        if (32 <= va.field_J + 1) {
+        if (32 <= fieldTemp$0) {
             va.field_J = 0;
         }
         int var1 = -125 / ((param0 - 27) / 54);
@@ -163,8 +164,9 @@ final class kl {
                     if (((kl) this).field_n <= var10) {
                       break L5;
                     } else {
-                      var8 = var8 + var18.a((byte) 81);
-                      ((kl) this).field_b[var10] = var8 + var18.a((byte) 81);
+                      int dupTemp$4 = var8 + var18.a((byte) 81);
+                      var8 = dupTemp$4;
+                      ((kl) this).field_b[var10] = dupTemp$4;
                       if (((kl) this).field_b[var10] > var9) {
                         var9 = ((kl) this).field_b[var10];
                         var10++;
@@ -181,8 +183,9 @@ final class kl {
                     if (((kl) this).field_n <= var10) {
                       break L5;
                     } else {
-                      var8 = var8 + var18.f((byte) -27);
-                      ((kl) this).field_b[var10] = var8 + var18.f((byte) -27);
+                      int dupTemp$5 = var8 + var18.f((byte) -27);
+                      var8 = dupTemp$5;
+                      ((kl) this).field_b[var10] = dupTemp$5;
                       if (((kl) this).field_b[var10] > var9) {
                         var9 = ((kl) this).field_b[var10];
                         var10++;
@@ -304,9 +307,10 @@ final class kl {
                                     continue L19;
                                   }
                                 } else {
-                                  var8 = var8 + var18.f((byte) -96);
-                                  ((kl) this).field_r[var12][var15] = var8 + var18.f((byte) -96);
-                                  var16 = var8 + var18.f((byte) -96);
+                                  int dupTemp$6 = var8 + var18.f((byte) -96);
+                                  var8 = dupTemp$6;
+                                  ((kl) this).field_r[var12][var15] = dupTemp$6;
+                                  var16 = dupTemp$6;
                                   if (var14 < var16) {
                                     var14 = var16;
                                     var15++;
@@ -352,9 +356,10 @@ final class kl {
                                     continue L22;
                                   }
                                 } else {
-                                  var8 = var8 + var18.a((byte) 81);
-                                  ((kl) this).field_r[var12][var15] = var8 + var18.a((byte) 81);
-                                  var16 = var8 + var18.a((byte) 81);
+                                  int dupTemp$7 = var8 + var18.a((byte) 81);
+                                  var8 = dupTemp$7;
+                                  ((kl) this).field_r[var12][var15] = dupTemp$7;
+                                  var16 = dupTemp$7;
                                   if (var16 > var14) {
                                     var14 = var16;
                                     var15++;

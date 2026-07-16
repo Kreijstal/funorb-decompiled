@@ -35,10 +35,8 @@ final class em {
         hl var17 = null;
         int var18 = 0;
         Object var19_ref = null;
-        oh var19_ref_oh = null;
         int var19 = 0;
         Object var20 = null;
-        String var20_ref = null;
         int var21 = 0;
         hl var23 = null;
         hl var24 = null;
@@ -166,8 +164,7 @@ final class em {
             }
           }
           L2: {
-            new hl(stackIn_8_2, stackIn_8_3, ((String) (Object) stackIn_8_4).toUpperCase());
-            je.field_e = stackIn_8_0;
+            je.field_e = new hl(stackIn_8_2, stackIn_8_3, ((String) (Object) stackIn_8_4).toUpperCase());
             qe.field_c = new hl(0L, (hl) null);
             qe.field_c.a((byte) -96, qn.field_r);
             qe.field_c.a((byte) 39, da.field_f);
@@ -314,10 +311,10 @@ final class em {
                             break L15;
                           } else {
                             if (null != jm.field_g[var17_int]) {
-                              var19_ref_oh = jm.field_g[var17_int][var18];
+                              var19_ref = (Object) (Object) jm.field_g[var17_int][var18];
                               break L15;
                             } else {
-                              var19_ref_oh = null;
+                              var19_ref = null;
                               break L15;
                             }
                           }
@@ -328,10 +325,10 @@ final class em {
                             break L16;
                           } else {
                             if (null != lc.field_g[var17_int]) {
-                              var20_ref = lc.field_g[var17_int][var18];
+                              var20 = (Object) (Object) lc.field_g[var17_int][var18];
                               break L16;
                             } else {
-                              var20_ref = null;
+                              var20 = null;
                               break L16;
                             }
                           }

@@ -14,21 +14,27 @@ final class kc {
             java.net.URL var4 = null;
             Throwable decompiledCaughtException = null;
             try {
-              var4 = param0.getCodeBase();
-              var3 = ag.a(param0, var4, false).getFile();
-              Object discarded$6 = ac.a(true, new Object[2], param0, "updatelinks");
-              Object discarded$7 = ac.a(true, new Object[2], param0, "updatelinks");
-              Object discarded$8 = ac.a(true, new Object[2], param0, "updatelinks");
-              if (param1 == 27477) {
-                Object discarded$9 = ac.a(true, new Object[2], param0, "updatelinks");
-                Object discarded$10 = ac.a(true, new Object[2], param0, "updatelinks");
-                Object discarded$11 = ac.a(true, new Object[2], param0, "updatelinks");
-              } else {
-                return;
+              L0: {
+                var4 = param0.getCodeBase();
+                var3 = ag.a(param0, var4, false).getFile();
+                Object discarded$6 = ac.a(true, new Object[2], param0, "updatelinks");
+                Object discarded$7 = ac.a(true, new Object[2], param0, "updatelinks");
+                Object discarded$8 = ac.a(true, new Object[2], param0, "updatelinks");
+                if (param1 == 27477) {
+                  Object discarded$9 = ac.a(true, new Object[2], param0, "updatelinks");
+                  Object discarded$10 = ac.a(true, new Object[2], param0, "updatelinks");
+                  Object discarded$11 = ac.a(true, new Object[2], param0, "updatelinks");
+                  break L0;
+                } else {
+                  return;
+                }
               }
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
-              var2 = decompiledCaughtException;
+              L1: {
+                var2 = decompiledCaughtException;
+                break L1;
+              }
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;

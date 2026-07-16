@@ -50,7 +50,8 @@ class ef extends kc {
             L1: while (true) {
               if (var2 >= qb.field_a) {
                 L2: {
-                  bd.field_ob[param0.b(0)] = bd.field_ob[param0.b(0)] + 1;
+                  int dupTemp$4 = param0.b(0);
+                  bd.field_ob[dupTemp$4] = bd.field_ob[dupTemp$4] + 1;
                   if (param1 < -27) {
                     break L2;
                   } else {
@@ -63,8 +64,9 @@ class ef extends kc {
                 L3: while (true) {
                   if (qb.field_a <= var3) {
                     qb.field_a = var2;
+                    int fieldTemp$5 = qb.field_a;
                     qb.field_a = qb.field_a + 1;
-                    vg.field_H[qb.field_a] = param0;
+                    vg.field_H[fieldTemp$5] = param0;
                     return;
                   } else {
                     L4: {
@@ -81,15 +83,17 @@ class ef extends kc {
                         break L4;
                       }
                     }
+                    int incrementValue$6 = var2;
                     var2++;
-                    vg.field_H[var2] = vg.field_H[var3];
+                    vg.field_H[incrementValue$6] = vg.field_H[var3];
                     var3++;
                     continue L3;
                   }
                 }
               } else {
                 if (param0.field_j == vg.field_H[var2].field_j) {
-                  bd.field_ob[vg.field_H[var2].b(0)] = bd.field_ob[vg.field_H[var2].b(0)] + 1;
+                  int dupTemp$7 = vg.field_H[var2].b(0);
+                  bd.field_ob[dupTemp$7] = bd.field_ob[dupTemp$7] + 1;
                   var2++;
                   continue L1;
                 } else {

@@ -163,10 +163,12 @@ final class op extends qv {
             op.a(72, (byte) -7, (String) null);
         }
         while (var5 < 4) {
+            int incrementValue$0 = var4;
             var4++;
-            ws.field_b[param0][var5] = Integer.parseInt(var3[var4]);
+            ws.field_b[param0][var5] = Integer.parseInt(var3[incrementValue$0]);
+            int incrementValue$1 = var4;
             var4++;
-            ws.field_d[param0][var5] = Integer.parseInt(var3[var4]);
+            ws.field_d[param0][var5] = Integer.parseInt(var3[incrementValue$1]);
             var5++;
         }
     }

@@ -37,15 +37,26 @@ final class kk extends ae {
     }
 
     final int a(int param0, byte param1) {
-        if (param1 <= 110) {
+        L0: {
+          if (param1 > 110) {
+            break L0;
+          } else {
             ((kk) this).field_W = -87;
+            break L0;
+          }
         }
-        if (0 <= param0) {
-            // if_icmpge L35
-        } else {
-            return -1;
+        L1: {
+          if (0 > param0) {
+            break L1;
+          } else {
+            if (param0 >= ((kk) this).field_Q.a(false)) {
+              break L1;
+            } else {
+              return ((kk) this).field_Q.a(param0, (byte) 11);
+            }
+          }
         }
-        return ((kk) this).field_Q.a(param0, (byte) 11);
+        return -1;
     }
 
     final static void g(int param0) {
@@ -130,30 +141,55 @@ final class kk extends ae {
     }
 
     final static int i(int param0) {
-        int var3 = TetraLink.field_J;
         int var1 = 0;
-        if (param0 > -47) {
-            return -48;
-        }
-        while (nj.b((byte) 28)) {
-            hb.field_a.a(120);
-            // ifeq L15
-            var1 = 1;
-        }
-        hb.field_a.a(ai.a(aa.field_Nb, a.field_a, 121), ai.a(ci.field_B, li.field_o, -28), (byte) 93);
-        if (hb.field_a.b(83)) {
-            var1 = 1;
-        }
         int var2 = 0;
-        if (var1 != 0) {
-            if ((hb.field_a.field_b ^ -1) <= -1) {
-                var2 = j.field_x[hb.field_a.field_b];
-                if (var2 == 2) {
-                    ld.i(-21719);
+        int var3 = 0;
+        var3 = TetraLink.field_J;
+        var1 = 0;
+        if (param0 <= -47) {
+          L0: while (true) {
+            if (!nj.b((byte) 28)) {
+              L1: {
+                hb.field_a.a(ai.a(aa.field_Nb, a.field_a, 121), ai.a(ci.field_B, li.field_o, -28), (byte) 93);
+                if (!hb.field_a.b(83)) {
+                  break L1;
+                } else {
+                  var1 = 1;
+                  break L1;
                 }
+              }
+              L2: {
+                var2 = 0;
+                if (var1 == 0) {
+                  break L2;
+                } else {
+                  if ((hb.field_a.field_b ^ -1) > -1) {
+                    break L2;
+                  } else {
+                    var2 = j.field_x[hb.field_a.field_b];
+                    if (var2 != 2) {
+                      break L2;
+                    } else {
+                      ld.i(-21719);
+                      break L2;
+                    }
+                  }
+                }
+              }
+              return var2;
+            } else {
+              hb.field_a.a(120);
+              if (!hb.field_a.b(83)) {
+                continue L0;
+              } else {
+                var1 = 1;
+                continue L0;
+              }
             }
+          }
+        } else {
+          return -48;
         }
-        return var2;
     }
 
     final int e(byte param0) {

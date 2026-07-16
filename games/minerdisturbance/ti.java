@@ -17,14 +17,13 @@ final class ti extends hc {
     }
 
     final static void a(byte param0) {
-        nk var1_ref = null;
         nk var1 = (nk) (Object) ah.field_g.c(51510);
         if (var1 == null) {
-            var1_ref = new nk();
+            var1 = new nk();
         }
-        var1_ref.a(eh.field_c, eh.field_a, eh.field_k, 0, eh.field_g, eh.field_e, eh.field_d, eh.field_f);
+        var1.a(eh.field_c, eh.field_a, eh.field_k, 0, eh.field_g, eh.field_e, eh.field_d, eh.field_f);
         int var2 = -89 % ((66 - param0) / 60);
-        eb.field_f.a((byte) 121, (pi) (Object) var1_ref);
+        eb.field_f.a((byte) 121, (pi) (Object) var1);
     }
 
     final static void a(byte param0, int param1, int param2) {

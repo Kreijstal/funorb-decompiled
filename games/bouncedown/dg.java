@@ -27,7 +27,7 @@ final class dg {
           var9 = Bounce.field_N;
           var4 = ((dg) this).field_d;
           if (var4 == 0) {
-            if (((dg) this).field_b != 0) {
+            if ((((dg) this).field_b ^ -1) != -1) {
               kc.field_c.a((int)((double)param1 + ((dg) this).field_c - 64.0), (int)((dg) this).field_h - od.field_f.field_s * (((dg) this).field_b + 2));
               var4 = param1 + (int)((dg) this).field_c;
               var5_int = -(od.field_f.field_s * (2 + ((dg) this).field_b)) + (16 + ((int)((dg) this).field_h + 16));
@@ -43,10 +43,10 @@ final class dg {
             }
           } else {
             if (var4 != 1) {
-              if (var4 != -3) {
+              if ((var4 ^ -1) != -3) {
                 L1: {
-                  if (var4 != -4) {
-                    if (-5 == var4) {
+                  if ((var4 ^ -1) != -4) {
+                    if (-5 == (var4 ^ -1)) {
                       break L1;
                     } else {
                       if (5 == var4) {
@@ -86,7 +86,7 @@ final class dg {
                           break L0;
                         }
                       } else {
-                        if (-7 == var4) {
+                        if (-7 == (var4 ^ -1)) {
                           break L0;
                         } else {
                           break L0;
@@ -170,11 +170,11 @@ final class dg {
         L0: {
           var3 = Bounce.field_N;
           var2 = ((dg) this).field_d;
-          if (var2 != 0) {
+          if ((var2 ^ -1) != -1) {
             if (1 != var2) {
               if ((var2 ^ -1) == -3) {
                 ((dg) this).field_j = ((dg) this).field_h;
-                if (-1 >= ((dg) this).field_b) {
+                if (-1 <= (((dg) this).field_b ^ -1)) {
                   break L0;
                 } else {
                   L1: {
@@ -201,7 +201,7 @@ final class dg {
                         break L0;
                       }
                     } else {
-                      if (var2 == -7) {
+                      if ((var2 ^ -1) == -7) {
                         ((dg) this).field_j = ((dg) this).field_h;
                         break L0;
                       } else {
@@ -236,7 +236,7 @@ final class dg {
               } else {
                 ((dg) this).field_b = ((dg) this).field_b + 1;
                 ((dg) this).field_j = (double)(-re.field_a.field_q) + (((dg) this).field_h + (double)a.field_f.field_q);
-                if (-25 < ((dg) this).field_b) {
+                if (-25 < (((dg) this).field_b ^ -1)) {
                   break L0;
                 } else {
                   ((dg) this).field_b = 0;
@@ -246,7 +246,7 @@ final class dg {
             }
           } else {
             ((dg) this).field_j = ((dg) this).field_h;
-            if (-1 >= ((dg) this).field_b) {
+            if (-1 <= (((dg) this).field_b ^ -1)) {
               break L0;
             } else {
               ((dg) this).field_j = ((dg) this).field_j - (double)((2 + ((dg) this).field_b) * od.field_f.field_s);

@@ -289,8 +289,9 @@ abstract class gf extends rg {
             break L0;
           } else {
             if (((gf) this).field_db == sa.field_g) {
+              int fieldTemp$47 = ((gf) this).field_fb + 1;
               ((gf) this).field_fb = ((gf) this).field_fb + 1;
-              if (((gf) this).field_fb + 1 != ((gf) this).field_gb) {
+              if (fieldTemp$47 != ((gf) this).field_gb) {
                 ((gf) this).field_ab.field_G = -((((gf) this).field_fb << -142616376) / ((gf) this).field_gb) + 256;
                 break L0;
               } else {
@@ -304,8 +305,9 @@ abstract class gf extends rg {
               if (((gf) this).field_db != lj.field_c) {
                 break L0;
               } else {
+                int fieldTemp$48 = ((gf) this).field_fb + 1;
                 ((gf) this).field_fb = ((gf) this).field_fb + 1;
-                if (((gf) this).field_fb + 1 != ((gf) this).field_U) {
+                if (fieldTemp$48 != ((gf) this).field_U) {
                   ((gf) this).field_ab.field_G = (((gf) this).field_fb << 860043240) / ((gf) this).field_U;
                   break L0;
                 } else {

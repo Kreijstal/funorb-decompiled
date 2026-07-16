@@ -19,7 +19,6 @@ abstract class bn {
 
     final static bm a(int param0, int param1, int param2, byte param3, int param4) {
         bm var5 = null;
-        bm var5_ref = null;
         int var6 = 0;
         Object var7 = null;
         bm var8 = null;
@@ -28,22 +27,22 @@ abstract class bn {
         L0: while (true) {
           if (var5 == null) {
             var8 = new bm();
-            var5_ref = var8;
+            var5 = var8;
             var8.field_q = param4;
             if (param3 != 44) {
               var7 = null;
               boolean discarded$1 = bn.a((String) null, 73);
-              var5_ref.field_o = param2;
-              var5_ref.field_s = param0;
-              gl.field_d.a((byte) 54, (q) (Object) var5_ref);
-              mc.a((byte) 85, param1, var5_ref);
-              return var5_ref;
+              var5.field_o = param2;
+              var5.field_s = param0;
+              gl.field_d.a((byte) 54, (q) (Object) var5);
+              mc.a((byte) 85, param1, var5);
+              return var5;
             } else {
-              var5_ref.field_o = param2;
-              var5_ref.field_s = param0;
-              gl.field_d.a((byte) 54, (q) (Object) var5_ref);
-              mc.a((byte) 85, param1, var5_ref);
-              return var5_ref;
+              var5.field_o = param2;
+              var5.field_s = param0;
+              gl.field_d.a((byte) 54, (q) (Object) var5);
+              mc.a((byte) 85, param1, var5);
+              return var5;
             }
           } else {
             if (param0 != var5.field_s) {

@@ -18,12 +18,12 @@ final class fk extends hs {
         }
         if (param1 != -11934) {
             fk.f(-39);
-            if (!(-2 != param2)) {
+            if (!(-2 != (param2 ^ -1))) {
                 return var3 * param0;
             }
             return var3;
         }
-        if (!(-2 != param2)) {
+        if (!(-2 != (param2 ^ -1))) {
             return var3 * param0;
         }
         return var3;

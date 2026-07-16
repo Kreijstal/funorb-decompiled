@@ -192,12 +192,11 @@ final class ne extends dj {
     }
 
     final void a(byte param0, boolean param1) {
-        gm var3_ref = null;
+        gm var3_ref_gm = null;
         int var3 = 0;
         int var4 = 0;
-        gm var5_ref = null;
-        int var5 = 0;
         gm var5_ref_gm = null;
+        int var5 = 0;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
@@ -210,9 +209,9 @@ final class ne extends dj {
             L1: {
               bk.field_a[1].field_G = 0;
               var10 = bk.field_a[0];
-              var5_ref = var10;
-              var5_ref = var10;
-              var3_ref = var10;
+              var5_ref_gm = var10;
+              var5_ref_gm = var10;
+              var3_ref_gm = var10;
               var10.field_G = 0;
               if (field_G[rb.field_Kb]) {
                 bk.field_a[0].field_G = bk.field_a[0].field_G | 4;
@@ -387,11 +386,11 @@ final class ne extends dj {
         L0: {
           var4 = Kickabout.field_G;
           super.a(param0, param1);
-          if (((ne) this).field_C == -1) {
+          if ((((ne) this).field_C ^ -1) == -1) {
             this.i((byte) 96);
             break L0;
           } else {
-            if (-2 != ((ne) this).field_C) {
+            if (-2 != (((ne) this).field_C ^ -1)) {
               if (2 == ((ne) this).field_C) {
                 this.j(param0 + 335);
                 break L0;
@@ -661,7 +660,7 @@ final class ne extends dj {
             var5 = 0;
             L7: while (true) {
               if (-3 >= (var5 ^ -1)) {
-                // wide iinc 3 220
+                var3 += 220;
                 var4++;
                 continue L2;
               } else {
@@ -1247,7 +1246,7 @@ final class ne extends dj {
                 break L13;
               }
             }
-            // wide iinc 3 285
+            var3 += 285;
             var4++;
             continue L2;
           }
@@ -1266,13 +1265,13 @@ final class ne extends dj {
         L1: {
           if (0 == ((ne) this).field_C) {
             L2: {
-              if (-99 == param0) {
+              if (-99 == (param0 ^ -1)) {
                 break L2;
               } else {
                 if (99 == param0) {
                   break L2;
                 } else {
-                  if (-97 == param0) {
+                  if (-97 == (param0 ^ -1)) {
                     break L2;
                   } else {
                     if (97 != param0) {
@@ -1292,7 +1291,7 @@ final class ne extends dj {
                         }
                       } else {
                         L4: {
-                          if (bk.field_a[0].field_u != 0) {
+                          if ((bk.field_a[0].field_u ^ -1) != -1) {
                             break L4;
                           } else {
                             bk.field_a[0].a((byte) -31, 4);
@@ -1335,7 +1334,7 @@ final class ne extends dj {
             for (var6 = 0; var6 < hv.field_c[var4].length; var6++) {
                 var5 = var5 + (10 + 16 * pb.field_C.a(hv.field_c[var4][var6], 10 + var2, var5, 255, 1000, 16777215, -1, 0, 0, 16));
             }
-            // wide iinc 2 285
+            var2 += 285;
         }
     }
 

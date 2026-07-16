@@ -46,13 +46,13 @@ class qt extends js {
 
     final void d(byte param0) {
         int var2 = 0;
-        if (((qt) this).field_c == -25) {
+        if ((((qt) this).field_c ^ -1) == -25) {
             var2 = 12;
         }
         if (param0 <= 41) {
             field_y = null;
         }
-        if (!(-26 != ((qt) this).field_c)) {
+        if (!(-26 != (((qt) this).field_c ^ -1))) {
             var2 = 14;
         }
         if ((((qt) this).field_c ^ -1) == -15) {
@@ -82,9 +82,9 @@ class qt extends js {
 
     void a(int param0, boolean param1) {
         int var3 = 0;
-        js var3_ref = null;
+        js var3_ref_js = null;
         int var4 = 0;
-        js var4_ref = null;
+        js var4_ref_js = null;
         int var5 = 0;
         ut var5_ref_ut = null;
         int var6 = 0;
@@ -169,17 +169,17 @@ class qt extends js {
             if (!((qt) this).field_m) {
               break L7;
             } else {
-              var3_ref = cq.field_h;
-              var4_ref = ra.field_G;
-              if (var4_ref != null) {
+              var3_ref_js = cq.field_h;
+              var4_ref_js = ra.field_G;
+              if (var4_ref_js != null) {
                 L8: {
-                  if ((Object) (Object) var3_ref != this) {
+                  if ((Object) (Object) var3_ref_js != this) {
                     break L8;
                   } else {
-                    if (!(var4_ref instanceof qt)) {
+                    if (!(var4_ref_js instanceof qt)) {
                       break L8;
                     } else {
-                      if (!((qt) (Object) var4_ref).field_m) {
+                      if (!((qt) (Object) var4_ref_js).field_m) {
                         break L8;
                       } else {
                         ai.field_E.d(0, 430);
@@ -309,96 +309,96 @@ class qt extends js {
     boolean a(int param0, int param1, char param2) {
         int var4 = 0;
         int var5 = 0;
-        int stackIn_8_0 = 0;
+        int stackIn_6_0 = 0;
+        io stackIn_16_0 = null;
+        io stackIn_17_0 = null;
         io stackIn_18_0 = null;
-        io stackIn_19_0 = null;
-        io stackIn_20_0 = null;
-        int stackIn_20_1 = 0;
-        int stackOut_6_0 = 0;
+        int stackIn_18_1 = 0;
+        int stackOut_4_0 = 0;
         int stackOut_5_0 = 0;
-        int stackOut_3_0 = 0;
-        int stackOut_1_0 = 0;
+        io stackOut_15_0 = null;
         io stackOut_17_0 = null;
-        io stackOut_19_0 = null;
-        int stackOut_19_1 = 0;
-        io stackOut_18_0 = null;
-        int stackOut_18_1 = 0;
+        int stackOut_17_1 = 0;
+        io stackOut_16_0 = null;
+        int stackOut_16_1 = 0;
         L0: {
-          var5 = Kickabout.field_G;
-          if ((((qt) this).field_x.field_e ^ -1) <= -1) {
-            if (17 != ((qt) this).field_i[((qt) this).field_x.field_e].field_m) {
-              if (16 == ((qt) this).field_i[((qt) this).field_x.field_e].field_m) {
-                stackOut_6_0 = 1;
-                stackIn_8_0 = stackOut_6_0;
-                break L0;
-              } else {
-                stackOut_5_0 = 0;
-                stackIn_8_0 = stackOut_5_0;
-                break L0;
-              }
+          L1: {
+            var5 = Kickabout.field_G;
+            if ((((qt) this).field_x.field_e ^ -1) > -1) {
+              break L1;
             } else {
-              stackOut_3_0 = 1;
-              stackIn_8_0 = stackOut_3_0;
+              L2: {
+                if (17 == ((qt) this).field_i[((qt) this).field_x.field_e].field_m) {
+                  break L2;
+                } else {
+                  if (16 != ((qt) this).field_i[((qt) this).field_x.field_e].field_m) {
+                    break L1;
+                  } else {
+                    break L2;
+                  }
+                }
+              }
+              stackOut_4_0 = 1;
+              stackIn_6_0 = stackOut_4_0;
               break L0;
             }
-          } else {
-            stackOut_1_0 = 0;
-            stackIn_8_0 = stackOut_1_0;
-            break L0;
           }
+          stackOut_5_0 = 0;
+          stackIn_6_0 = stackOut_5_0;
+          break L0;
         }
-        L1: {
-          var4 = stackIn_8_0;
-          if (param0 == -14) {
+        L3: {
+          var4 = stackIn_6_0;
+          if ((param0 ^ -1) == -14) {
             this.c(-77);
-            break L1;
+            break L3;
           } else {
-            L2: {
+            L4: {
               if (var4 == 0) {
-                break L2;
+                break L4;
               } else {
-                L3: {
+                L5: {
                   if (param0 == 96) {
-                    break L3;
+                    break L5;
                   } else {
-                    if (-98 == param0) {
-                      break L3;
+                    if (-98 == (param0 ^ -1)) {
+                      break L5;
                     } else {
-                      break L2;
+                      break L4;
                     }
                   }
                 }
-                L4: {
-                  stackOut_17_0 = ((qt) this).field_i[((qt) this).field_x.field_e];
-                  stackIn_19_0 = stackOut_17_0;
-                  stackIn_18_0 = stackOut_17_0;
+                L6: {
+                  stackOut_15_0 = ((qt) this).field_i[((qt) this).field_x.field_e];
+                  stackIn_17_0 = stackOut_15_0;
+                  stackIn_16_0 = stackOut_15_0;
                   if ((param0 ^ -1) != -97) {
-                    stackOut_19_0 = (io) (Object) stackIn_19_0;
-                    stackOut_19_1 = 0;
-                    stackIn_20_0 = stackOut_19_0;
-                    stackIn_20_1 = stackOut_19_1;
-                    break L4;
+                    stackOut_17_0 = (io) (Object) stackIn_17_0;
+                    stackOut_17_1 = 0;
+                    stackIn_18_0 = stackOut_17_0;
+                    stackIn_18_1 = stackOut_17_1;
+                    break L6;
                   } else {
-                    stackOut_18_0 = (io) (Object) stackIn_18_0;
-                    stackOut_18_1 = 1;
-                    stackIn_20_0 = stackOut_18_0;
-                    stackIn_20_1 = stackOut_18_1;
-                    break L4;
+                    stackOut_16_0 = (io) (Object) stackIn_16_0;
+                    stackOut_16_1 = 1;
+                    stackIn_18_0 = stackOut_16_0;
+                    stackIn_18_1 = stackOut_16_1;
+                    break L6;
                   }
                 }
-                ((io) (Object) stackIn_20_0).a(stackIn_20_1 != 0, -27);
-                break L1;
+                ((io) (Object) stackIn_18_0).a(stackIn_18_1 != 0, -27);
+                break L3;
               }
             }
             ((qt) this).field_x.d(107);
             if (0 > ((qt) this).field_x.field_e) {
-              break L1;
+              break L3;
             } else {
               if (((qt) this).field_x.c(-1)) {
                 ((qt) this).field_i[((qt) this).field_x.field_e].a(-1, false);
-                break L1;
+                break L3;
               } else {
-                break L1;
+                break L3;
               }
             }
           }
@@ -413,25 +413,54 @@ class qt extends js {
 
     void a(int param0, boolean param1, int param2, js param3) {
         int var5 = 0;
-        if (!(param3 instanceof qt)) {
-            ((qt) this).field_j = wr.field_f + -po.a((js) this, -4);
-        } else {
-            var5 = -param0 + 256;
-            ((qt) this).field_j = var5 * (var5 * 640) >> -1768038128;
-            if (!(param1)) {
+        L0: {
+          if (param3 instanceof qt) {
+            L1: {
+              var5 = -param0 + 256;
+              ((qt) this).field_j = var5 * (var5 * 640) >> -1768038128;
+              if (!param1) {
                 ((qt) this).field_j = ((qt) this).field_j - 640;
+                break L1;
+              } else {
+                break L1;
+              }
             }
-            if (!param1) {
-                // ifne L113
-            }
-            if (param1) {
-                if (((qt) this).a((qt) (Object) param3, -4319)) {
-                    ((qt) this).field_j = -((qt) this).field_j;
+            L2: {
+              L3: {
+                if (param1) {
+                  break L3;
+                } else {
+                  if (((qt) (Object) param3).a((qt) this, -4319)) {
+                    break L2;
+                  } else {
+                    break L3;
+                  }
                 }
+              }
+              if (!param1) {
+                break L0;
+              } else {
+                if (!((qt) this).a((qt) (Object) param3, -4319)) {
+                  break L0;
+                } else {
+                  break L2;
+                }
+              }
             }
+            ((qt) this).field_j = -((qt) this).field_j;
+            break L0;
+          } else {
+            ((qt) this).field_j = wr.field_f + -po.a((js) this, -4);
+            break L0;
+          }
         }
-        if (param2 >= -28) {
+        L4: {
+          if (param2 < -28) {
+            break L4;
+          } else {
             ((qt) this).field_j = 124;
+            break L4;
+          }
         }
     }
 
@@ -537,7 +566,7 @@ class qt extends js {
         var3 = Kickabout.field_G;
         if (ks.field_e == 1) {
           L0: {
-            if (et.field_d.field_V.field_m != 0) {
+            if ((et.field_d.field_V.field_m ^ -1) != -1) {
               stackOut_67_0 = 0;
               stackIn_68_0 = stackOut_67_0;
               break L0;
@@ -554,10 +583,10 @@ class qt extends js {
               if (-5 == (ks.field_e ^ -1)) {
                 L1: {
                   L2: {
-                    if (et.field_d.field_V.field_m != -1) {
+                    if ((et.field_d.field_V.field_m ^ -1) != -1) {
                       break L2;
                     } else {
-                      if (-4 != et.field_d.field_V.field_s) {
+                      if (-4 != (et.field_d.field_V.field_s ^ -1)) {
                         break L2;
                       } else {
                         stackOut_62_0 = 1;
@@ -573,7 +602,7 @@ class qt extends js {
                 return stackIn_64_0 != 0;
               } else {
                 if (5 != ks.field_e) {
-                  if (-7 == ks.field_e) {
+                  if (-7 == (ks.field_e ^ -1)) {
                     L3: {
                       L4: {
                         if (-1 != (et.field_d.field_V.field_m ^ -1)) {
@@ -594,7 +623,7 @@ class qt extends js {
                     }
                     return stackIn_59_0 != 0;
                   } else {
-                    if (ks.field_e == -8) {
+                    if ((ks.field_e ^ -1) == -8) {
                       L5: {
                         if (-1 != (et.field_d.field_V.field_m ^ -1)) {
                           stackOut_47_0 = 0;
@@ -616,7 +645,7 @@ class qt extends js {
                             stackOut_50_0 = var1;
                             stackIn_52_0 = stackOut_50_0;
                             stackIn_51_0 = stackOut_50_0;
-                            if (et.field_d.field_P[1][var2].field_w != fm.a((byte) -27, 1)) {
+                            if ((et.field_d.field_P[1][var2].field_w ^ -1) != (fm.a((byte) -27, 1) ^ -1)) {
                               stackOut_52_0 = stackIn_52_0;
                               stackOut_52_1 = 0;
                               stackIn_53_0 = stackOut_52_0;
@@ -641,7 +670,7 @@ class qt extends js {
                           if (ks.field_e != 10) {
                             if (11 == ks.field_e) {
                               L8: {
-                                if (-1 != et.field_d.field_V.field_m) {
+                                if (-1 != (et.field_d.field_V.field_m ^ -1)) {
                                   stackOut_43_0 = 0;
                                   stackIn_44_0 = stackOut_43_0;
                                   break L8;
@@ -665,7 +694,7 @@ class qt extends js {
                             }
                           } else {
                             L10: {
-                              if (et.field_d.field_R[0].field_g != -5) {
+                              if ((et.field_d.field_R[0].field_g ^ -1) != -5) {
                                 stackOut_37_0 = 0;
                                 stackIn_38_0 = stackOut_37_0;
                                 break L10;
@@ -701,13 +730,13 @@ class qt extends js {
                       } else {
                         L13: {
                           L14: {
-                            if (-1 != et.field_d.field_V.field_m) {
+                            if (-1 != (et.field_d.field_V.field_m ^ -1)) {
                               break L14;
                             } else {
-                              if (-761 <= ld.field_f.f(-115)) {
+                              if (-761 <= (ld.field_f.f(-115) ^ -1)) {
                                 break L14;
                               } else {
-                                if (-1001 >= ld.field_f.a(true)) {
+                                if (-1001 <= (ld.field_f.a(true) ^ -1)) {
                                   break L14;
                                 } else {
                                   stackOut_25_0 = 1;
@@ -728,7 +757,7 @@ class qt extends js {
                 } else {
                   L15: {
                     L16: {
-                      if (et.field_d.field_V.field_m != -1) {
+                      if ((et.field_d.field_V.field_m ^ -1) != -1) {
                         break L16;
                       } else {
                         if (et.field_d.field_V.field_s != 1) {
@@ -1065,13 +1094,13 @@ class qt extends js {
                       L2: {
                         var3 = -124 % ((param0 - -49) / 52);
                         var4 = 190;
-                        if (((qt) this).field_i[param1].field_m == -47) {
+                        if ((((qt) this).field_i[param1].field_m ^ -1) == -47) {
                           break L2;
                         } else {
                           if (48 == ((qt) this).field_i[param1].field_m) {
                             break L2;
                           } else {
-                            if (-46 == ((qt) this).field_i[param1].field_m) {
+                            if (-46 == (((qt) this).field_i[param1].field_m ^ -1)) {
                               break L2;
                             } else {
                               if (((qt) this).field_i[param1].field_m == 28) {
@@ -1108,7 +1137,7 @@ class qt extends js {
                     }
                     var5 = 0;
                     L4: while (true) {
-                      if (param1 <= var5) {
+                      if ((param1 ^ -1) >= (var5 ^ -1)) {
                         return var4;
                       } else {
                         var4 = var4 + ((((qt) this).field_i[var5].field_h >> -741388863) - -5 - -(((qt) this).field_i[var5 + 1].field_h >> -2050160319));

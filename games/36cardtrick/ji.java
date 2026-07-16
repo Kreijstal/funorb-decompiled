@@ -7,11 +7,10 @@ final class ji {
 
     final static void a(boolean param0) {
         eh var1 = null;
-        eh var1_ref = null;
         L0: {
-          var1 = (eh) lk.field_g.b(-48);
+          var1 = (eh) (Object) lk.field_g.b(-48);
           if (var1 == null) {
-            var1_ref = new eh();
+            var1 = new eh();
             break L0;
           } else {
             break L0;
@@ -19,12 +18,12 @@ final class ji {
         }
         if (!param0) {
           ji.a(false);
-          var1_ref.a(vj.field_l, vj.field_h, vj.field_g, 107, vj.field_a, vj.field_b, vj.field_j, vj.field_f);
-          ai.field_k.a((qb) (Object) var1_ref, 27362);
+          var1.a(vj.field_l, vj.field_h, vj.field_g, 107, vj.field_a, vj.field_b, vj.field_j, vj.field_f);
+          ai.field_k.a((qb) (Object) var1, 27362);
           return;
         } else {
-          var1_ref.a(vj.field_l, vj.field_h, vj.field_g, 107, vj.field_a, vj.field_b, vj.field_j, vj.field_f);
-          ai.field_k.a((qb) (Object) var1_ref, 27362);
+          var1.a(vj.field_l, vj.field_h, vj.field_g, 107, vj.field_a, vj.field_b, vj.field_j, vj.field_f);
+          ai.field_k.a((qb) (Object) var1, 27362);
           return;
         }
     }
@@ -92,7 +91,7 @@ final class ji {
         jc.field_O.field_l[eb.field_d] = (short)(param0 >> -2127145567);
         if (param1 != 24355) {
           L0: {
-            field_b = (String) null;
+            field_b = null;
             stackOut_5_0 = jc.field_O.field_O;
             stackOut_5_1 = oj.field_c;
             stackOut_5_2 = jc.field_O.field_O;
@@ -233,21 +232,21 @@ final class ji {
           od.field_a = var19.a(var7, var5, var9, (byte) 1, cf.field_d, (short) 0, (short) 0);
           eb.field_d = var19.a(var4, var10, var6, (byte) 1, db.field_p, (short) 1, (short) 1);
           oj.field_c = var19.a(var8, var10, var4, (byte) 1, db.field_p, (short) 1, (short) 1);
-          jc.field_O = (ik) var19.a(127, 65535, -1, 0, 0);
-          jc.field_O.field_h = qa.a(-100, ((bb) var19).field_d);
-          jc.field_O.field_u = qa.a(-36, ((bb) var19).field_B);
-          jc.field_O.field_U = qa.a(-107, ((bb) var19).field_z);
-          jc.field_O.field_O = ((bb) var19).field_c;
+          jc.field_O = (ik) (Object) var19.a(127, 65535, -1, 0, 0);
+          jc.field_O.field_h = qa.a(-100, var19.field_d);
+          jc.field_O.field_u = qa.a(-36, var19.field_B);
+          jc.field_O.field_U = qa.a(-107, var19.field_z);
+          jc.field_O.field_O = var19.field_c;
           return;
         } else {
           od.field_a = var19.a(var7, var5, var9, (byte) 1, cf.field_d, (short) 0, (short) 0);
           eb.field_d = var19.a(var4, var10, var6, (byte) 1, db.field_p, (short) 1, (short) 1);
           oj.field_c = var19.a(var8, var10, var4, (byte) 1, db.field_p, (short) 1, (short) 1);
-          jc.field_O = (ik) var19.a(127, 65535, -1, 0, 0);
-          jc.field_O.field_h = qa.a(-100, ((bb) var19).field_d);
-          jc.field_O.field_u = qa.a(-36, ((bb) var19).field_B);
-          jc.field_O.field_U = qa.a(-107, ((bb) var19).field_z);
-          jc.field_O.field_O = ((bb) var19).field_c;
+          jc.field_O = (ik) (Object) var19.a(127, 65535, -1, 0, 0);
+          jc.field_O.field_h = qa.a(-100, var19.field_d);
+          jc.field_O.field_u = qa.a(-36, var19.field_B);
+          jc.field_O.field_U = qa.a(-107, var19.field_z);
+          jc.field_O.field_O = var19.field_c;
           return;
         }
     }
@@ -255,7 +254,7 @@ final class ji {
     public static void a(int param0) {
         field_b = null;
         if (param0 >= -15) {
-            kc[] var2 = (kc[]) null;
+            Object var2 = null;
             ji.a((byte) -45, (kc[]) null);
             field_a = null;
             return;

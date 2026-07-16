@@ -133,120 +133,35 @@ final class nj {
         Throwable var2 = null;
         int stackIn_4_0 = 0;
         int stackIn_8_0 = 0;
+        Throwable decompiledCaughtException = null;
         int stackOut_3_0 = 0;
         int stackOut_7_0 = 0;
-        int statePc = 0;
-        Throwable caughtException = null;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    var1 = (Object) (Object) vi.field_a;
-                    // monitorenter vi.field_a
-                    statePc = 1;
-                    continue stateLoop;
+        var1 = (Object) (Object) vi.field_a;
+        synchronized (var1) {
+          L0: {
+            if (dh.field_m == bb.field_e) {
+              stackOut_3_0 = 0;
+              stackIn_4_0 = stackOut_3_0;
+              return stackIn_4_0 != 0;
+            } else {
+              L1: {
+                dg.field_e = af.field_e[dh.field_m];
+                tb.field_m = fm.field_c[dh.field_m];
+                if (param0 == 28) {
+                  break L1;
+                } else {
+                  field_g = -102;
+                  break L1;
                 }
-                case 1: {
-                    try {
-                        if (dh.field_m == bb.field_e) {
-                            statePc = 3;
-                        } else {
-                            statePc = 2;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_1) {
-                        caughtException = stateCaught_1;
-                        statePc = 9;
-                        continue stateLoop;
-                    }
-                }
-                case 2: {
-                    try {
-                        statePc = 5;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_2) {
-                        caughtException = stateCaught_2;
-                        statePc = 9;
-                        continue stateLoop;
-                    }
-                }
-                case 3: {
-                    try {
-                        // monitorexit var1
-                        stackOut_3_0 = 0;
-                        stackIn_4_0 = stackOut_3_0;
-                        statePc = 4;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_3) {
-                        caughtException = stateCaught_3;
-                        statePc = 9;
-                        continue stateLoop;
-                    }
-                }
-                case 4: {
-                    return stackIn_4_0 != 0;
-                }
-                case 5: {
-                    try {
-                        dg.field_e = af.field_e[dh.field_m];
-                        tb.field_m = fm.field_c[dh.field_m];
-                        if (param0 == 28) {
-                            statePc = 7;
-                        } else {
-                            statePc = 6;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_5) {
-                        caughtException = stateCaught_5;
-                        statePc = 9;
-                        continue stateLoop;
-                    }
-                }
-                case 6: {
-                    try {
-                        field_g = -102;
-                        statePc = 7;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_6) {
-                        caughtException = stateCaught_6;
-                        statePc = 9;
-                        continue stateLoop;
-                    }
-                }
-                case 7: {
-                    try {
-                        dh.field_m = dh.field_m + 1 & 127;
-                        // monitorexit var1
-                        stackOut_7_0 = 1;
-                        stackIn_8_0 = stackOut_7_0;
-                        statePc = 8;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_7) {
-                        caughtException = stateCaught_7;
-                        statePc = 9;
-                        continue stateLoop;
-                    }
-                }
-                case 8: {
-                    return stackIn_8_0 != 0;
-                }
-                case 9: {
-                    try {
-                        var2 = caughtException;
-                        // monitorexit var1
-                        statePc = 10;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_9) {
-                        caughtException = stateCaught_9;
-                        statePc = 9;
-                        continue stateLoop;
-                    }
-                }
-                case 10: {
-                    throw (RuntimeException) (Object) var2;
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
+              }
+              dh.field_m = dh.field_m + 1 & 127;
+              stackOut_7_0 = 1;
+              stackIn_8_0 = stackOut_7_0;
+              break L0;
             }
+          }
         }
+        return stackIn_8_0 != 0;
     }
 
     final static void a(String param0, byte param1, String param2, int param3, int param4) {

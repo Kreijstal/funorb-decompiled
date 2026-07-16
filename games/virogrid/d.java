@@ -320,8 +320,9 @@ final class d extends km {
                                           break L18;
                                         } else {
                                           L19: {
-                                            var9[var12] = var16.a((byte) -114);
-                                            var13 = var16.a((byte) -114);
+                                            byte dupTemp$2 = var16.a((byte) -114);
+                                            var9[var12] = dupTemp$2;
+                                            var13 = dupTemp$2;
                                             stackOut_35_0 = var10;
                                             stackIn_37_0 = stackOut_35_0;
                                             stackIn_36_0 = stackOut_35_0;
@@ -403,8 +404,9 @@ final class d extends km {
                                           break L26;
                                         } else {
                                           L27: {
-                                            var9[var12 + var5 * var13] = var16.a((byte) -69);
-                                            var14 = var16.a((byte) -69);
+                                            byte dupTemp$3 = var16.a((byte) -69);
+                                            var9[var12 + var5 * var13] = dupTemp$3;
+                                            var14 = dupTemp$3;
                                             stackOut_52_0 = var10;
                                             stackIn_54_0 = stackOut_52_0;
                                             stackIn_53_0 = stackOut_52_0;
@@ -489,28 +491,53 @@ final class d extends km {
     }
 
     final static int f(byte param0) {
-        int var4 = Virogrid.field_F ? 1 : 0;
-        int var2 = -109 / ((param0 - -29) / 58);
         int var1 = 0;
-        while (nd.b((byte) -116)) {
-            g.field_b.e(-87);
-            // ifeq L18
-            var1 = 1;
-        }
-        g.field_b.a(ve.a(hk.field_Jb, nl.field_u, (byte) 66), false, ve.a(a.field_y, ii.field_b, (byte) 66));
-        if (!(!g.field_b.b(false))) {
-            var1 = 1;
-        }
+        int var2 = 0;
         int var3 = 0;
-        if (var1 != 0) {
-            if (-1 >= (g.field_b.field_d ^ -1)) {
-                var3 = ia.field_e[g.field_b.field_d];
-                if (!(var3 != 2)) {
-                    wn.c(false);
-                }
+        int var4 = 0;
+        var4 = Virogrid.field_F ? 1 : 0;
+        var2 = -109 / ((param0 - -29) / 58);
+        var1 = 0;
+        L0: while (true) {
+          if (!nd.b((byte) -116)) {
+            L1: {
+              g.field_b.a(ve.a(hk.field_Jb, nl.field_u, (byte) 66), false, ve.a(a.field_y, ii.field_b, (byte) 66));
+              if (g.field_b.b(false)) {
+                var1 = 1;
+                break L1;
+              } else {
+                break L1;
+              }
             }
+            L2: {
+              var3 = 0;
+              if (var1 == 0) {
+                break L2;
+              } else {
+                if (-1 < (g.field_b.field_d ^ -1)) {
+                  break L2;
+                } else {
+                  var3 = ia.field_e[g.field_b.field_d];
+                  if (var3 == 2) {
+                    wn.c(false);
+                    break L2;
+                  } else {
+                    break L2;
+                  }
+                }
+              }
+            }
+            return var3;
+          } else {
+            g.field_b.e(-87);
+            if (!g.field_b.b(false)) {
+              continue L0;
+            } else {
+              var1 = 1;
+              continue L0;
+            }
+          }
         }
-        return var3;
     }
 
     static {

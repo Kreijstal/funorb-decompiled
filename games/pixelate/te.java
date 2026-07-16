@@ -325,7 +325,7 @@ final class te extends ak {
         String var11 = null;
         String var12 = null;
         int var13 = 0;
-        tf var14 = null;
+        Object var14 = null;
         int var15 = 0;
         jl var17 = null;
         jl var18 = null;
@@ -347,6 +347,7 @@ final class te extends ak {
           if (var13 >= ((te) this).field_Mb) {
             ((te) this).field_Rb = ((te) this).field_Rb + (10 + fe.field_b.field_A);
             this.a(12, (byte) -85);
+            return;
           } else {
             L1: {
               if (((te) this).field_Hb[var13] <= 0) {
@@ -369,10 +370,10 @@ final class te extends ak {
                   }
                 }
               }
-              var14 = fe.field_b;
+              var14 = (Object) (Object) fe.field_b;
               break L2;
             }
-            ((te) this).field_Sb[var13] = new lo(0L, param2, (ak) null, param3, var14, param6[var13]);
+            ((te) this).field_Sb[var13] = new lo(0L, param2, (ak) null, param3, (tf) var14, param6[var13]);
             ((te) this).a((ak) (Object) ((te) this).field_Sb[var13], (byte) 26);
             var15 = var17.c(param6[var13]);
             if (var15 > ((te) this).field_Rb) {

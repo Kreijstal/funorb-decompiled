@@ -65,7 +65,7 @@ final class di {
         int var6_int = 0;
         StringBuilder var6 = null;
         int var7 = 0;
-        String var7_ref = null;
+        String var7_ref_String = null;
         int var8 = 0;
         String var9 = null;
         int var10 = 0;
@@ -141,8 +141,8 @@ final class di {
                   }
                 }
               }
-              var7_ref = param2.substring(var6_int - -2, var5);
-              if (!af.a((CharSequence) (Object) var7_ref, (byte) 78)) {
+              var7_ref_String = param2.substring(var6_int - -2, var5);
+              if (!af.a((CharSequence) (Object) var7_ref_String, (byte) 78)) {
                 continue L0;
               } else {
                 if (var3 <= var5) {
@@ -152,7 +152,7 @@ final class di {
                     continue L0;
                   } else {
                     var5++;
-                    var8 = ph.a(1124, (CharSequence) (Object) var7_ref);
+                    var8 = ph.a(1124, (CharSequence) (Object) var7_ref_String);
                     var4 = var4 + (args[var8].length() + -var5 + var6_int);
                     continue L0;
                   }
@@ -212,8 +212,9 @@ final class di {
         }
         while (ac.a((byte) 125)) {
             var1.c((byte) 49, 8);
+            int fieldTemp$0 = var1.field_m + 1;
             var1.field_m = var1.field_m + 1;
-            var2 = var1.field_m + 1;
+            var2 = fieldTemp$0;
             kb.a(39, var1);
             n.field_b.a(-var2 + var1.field_m, -57);
         }

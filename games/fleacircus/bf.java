@@ -69,25 +69,31 @@ final class bf {
             Throwable decompiledCaughtException = null;
             try {
               L0: {
-                var4 = param1.getCodeBase();
-                var3 = ib.a(param1, var4, param0 ^ -26699).getFile();
-                Object discarded$6 = eb.a("updatelinks", new Object[2], -11745, param1);
-                Object discarded$7 = eb.a("updatelinks", new Object[2], -11745, param1);
-                Object discarded$8 = eb.a("updatelinks", new Object[2], param0 + -43755, param1);
-                Object discarded$9 = eb.a("updatelinks", new Object[2], -11745, param1);
-                Object discarded$10 = eb.a("updatelinks", new Object[2], -11745, param1);
-                if (param0 == 32010) {
-                  break L0;
-                } else {
-                  field_d = null;
-                  break L0;
+                L1: {
+                  var4 = param1.getCodeBase();
+                  var3 = ib.a(param1, var4, param0 ^ -26699).getFile();
+                  Object discarded$6 = eb.a("updatelinks", new Object[2], -11745, param1);
+                  Object discarded$7 = eb.a("updatelinks", new Object[2], -11745, param1);
+                  Object discarded$8 = eb.a("updatelinks", new Object[2], param0 + -43755, param1);
+                  Object discarded$9 = eb.a("updatelinks", new Object[2], -11745, param1);
+                  Object discarded$10 = eb.a("updatelinks", new Object[2], -11745, param1);
+                  if (param0 == 32010) {
+                    break L1;
+                  } else {
+                    field_d = null;
+                    break L1;
+                  }
                 }
+                Object discarded$11 = eb.a("updatelinks", new Object[2], param0 + -43755, param1);
+                break L0;
               }
-              Object discarded$11 = eb.a("updatelinks", new Object[2], param0 + -43755, param1);
-            } catch (java.lang.Throwable decompiledCaughtParameter) {
-              decompiledCaughtException = decompiledCaughtParameter;
+            } catch (java.lang.Throwable decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              L2: {
+                var2 = decompiledCaughtException;
+                break L2;
+              }
             }
-            var2 = decompiledCaughtException;
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {

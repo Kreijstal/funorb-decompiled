@@ -15,85 +15,34 @@ final class cb extends IOException {
     final static void a(byte param0) {
         Object var1 = null;
         Throwable var2 = null;
-        int statePc = 0;
-        Throwable caughtException = null;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    if (i.field_J != null) {
-                        statePc = 4;
-                    } else {
-                        statePc = 1;
-                    }
-                    continue stateLoop;
-                }
-                case 1: {
-                    if (param0 == -15) {
-                        statePc = 3;
-                    } else {
-                        statePc = 2;
-                    }
-                    continue stateLoop;
-                }
-                case 2: {
-                    field_b = null;
-                    statePc = 3;
-                    continue stateLoop;
-                }
-                case 3: {
-                    return;
-                }
-                case 4: {
-                    var1 = (Object) (Object) i.field_J;
-                    // monitorenter i.field_J
-                    statePc = 5;
-                    continue stateLoop;
-                }
-                case 5: {
-                    try {
-                        i.field_J = null;
-                        // monitorexit var1
-                        statePc = 6;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_5) {
-                        caughtException = stateCaught_5;
-                        statePc = 9;
-                        continue stateLoop;
-                    }
-                }
-                case 6: {
-                    if (param0 == -15) {
-                        statePc = 8;
-                    } else {
-                        statePc = 7;
-                    }
-                    continue stateLoop;
-                }
-                case 7: {
-                    field_b = null;
-                    statePc = 8;
-                    continue stateLoop;
-                }
-                case 8: {
-                    return;
-                }
-                case 9: {
-                    try {
-                        var2 = caughtException;
-                        // monitorexit var1
-                        statePc = 10;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_9) {
-                        caughtException = stateCaught_9;
-                        statePc = 9;
-                        continue stateLoop;
-                    }
-                }
-                case 10: {
-                    throw (RuntimeException) (Object) var2;
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
+        Throwable decompiledCaughtException = null;
+        if (i.field_J != null) {
+          var1 = (Object) (Object) i.field_J;
+          synchronized (var1) {
+            L0: {
+              i.field_J = null;
+              break L0;
             }
+          }
+          L1: {
+            if (param0 == -15) {
+              break L1;
+            } else {
+              field_b = null;
+              break L1;
+            }
+          }
+          return;
+        } else {
+          L2: {
+            if (param0 == -15) {
+              break L2;
+            } else {
+              field_b = null;
+              break L2;
+            }
+          }
+          return;
         }
     }
 

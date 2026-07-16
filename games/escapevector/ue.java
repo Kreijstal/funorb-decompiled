@@ -42,24 +42,51 @@ class ue extends hc {
     }
 
     final void a(String param0, byte param1, int param2) {
-        String[] var7 = null;
         String[] var4 = null;
         int var5 = 0;
-        int var6 = EscapeVector.field_A;
-        if (((ue) this).field_F != null) {
-            // if_icmpge L24
-        } else {
+        int var6 = 0;
+        String[] var7 = null;
+        L0: {
+          L1: {
+            var6 = EscapeVector.field_A;
+            if (((ue) this).field_F == null) {
+              break L1;
+            } else {
+              if (param2 >= ((ue) this).field_F.length) {
+                break L1;
+              } else {
+                break L0;
+              }
+            }
+          }
+          L2: {
             var7 = new String[1 + param2];
             var4 = var7;
-            if (!(((ue) this).field_F == null)) {
-                for (var5 = 0; ((ue) this).field_F.length > var5; var5++) {
-                    var7[var5] = ((ue) this).field_F[var5];
+            if (((ue) this).field_F != null) {
+              var5 = 0;
+              L3: while (true) {
+                if (((ue) this).field_F.length <= var5) {
+                  break L2;
+                } else {
+                  var7[var5] = ((ue) this).field_F[var5];
+                  var5++;
+                  continue L3;
                 }
+              }
+            } else {
+              break L2;
             }
-            ((ue) this).field_F = var4;
+          }
+          ((ue) this).field_F = var4;
+          break L0;
         }
-        if (param1 < 51) {
+        L4: {
+          if (param1 >= 51) {
+            break L4;
+          } else {
             ue.b(-38, (byte) -110);
+            break L4;
+          }
         }
         ((ue) this).field_F[param2] = param0;
     }
@@ -73,7 +100,7 @@ class ue extends hc {
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
-        bl var10 = null;
+        Object var10 = null;
         int var11 = 0;
         vl var12 = null;
         int var13 = 0;
@@ -145,12 +172,12 @@ class ue extends hc {
                   if (var10 == null) {
                     break L4;
                   } else {
-                    var10.field_k = var15;
+                    ((bl) var10).field_k = var15;
                     break L4;
                   }
                 }
                 ((ue) this).field_D.a(-12328, (hg) (Object) var15);
-                var10 = var15;
+                var10 = (Object) (Object) var15;
                 var11++;
                 continue L1;
               }

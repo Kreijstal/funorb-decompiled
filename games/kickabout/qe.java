@@ -583,8 +583,9 @@ final class qe {
         var10.field_g = param2;
         var10.field_c = param3;
         var10.field_a = param5;
+        int fieldTemp$0 = ((qe) this).field_e;
         ((qe) this).field_e = ((qe) this).field_e + 1;
-        ((qe) this).field_d[((qe) this).field_e] = var8;
+        ((qe) this).field_d[fieldTemp$0] = var8;
         if (param0 != 18476) {
             ((qe) this).field_d = null;
         }

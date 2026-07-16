@@ -56,7 +56,7 @@ final class hh extends o {
     }
 
     final static ve a(int param0, String param1) {
-        String var2 = null;
+        Object var2 = null;
         Object var3 = null;
         ve var3_ref = null;
         String var4 = null;
@@ -71,15 +71,15 @@ final class hh extends o {
           if (null != r.field_Ib) {
             L0: {
               var8 = (CharSequence) (Object) param1;
-              var2 = ad.a(var8, -2);
+              var2 = (Object) (Object) ad.a(var8, -2);
               if (var2 != null) {
                 break L0;
               } else {
-                var2 = (String) (Object) var8;
+                var2 = (Object) (Object) var8;
                 break L0;
               }
             }
-            var3_ref = (ve) (Object) r.field_Ib.a((long)var2.hashCode(), 3000);
+            var3_ref = (ve) (Object) r.field_Ib.a((long)((String) var2).hashCode(), 3000);
             L1: while (true) {
               if (var3_ref != null) {
                 L2: {
@@ -92,7 +92,7 @@ final class hh extends o {
                     break L2;
                   }
                 }
-                if (!var4.equals((Object) (Object) var2)) {
+                if (!var4.equals(var2)) {
                   var3_ref = (ve) (Object) r.field_Ib.b(true);
                   continue L1;
                 } else {
@@ -110,15 +110,15 @@ final class hh extends o {
           if (null != r.field_Ib) {
             L3: {
               var6 = (CharSequence) (Object) param1;
-              var2 = ad.a(var6, -2);
+              var2 = (Object) (Object) ad.a(var6, -2);
               if (var2 != null) {
                 break L3;
               } else {
-                var2 = (String) (Object) var6;
+                var2 = (Object) (Object) var6;
                 break L3;
               }
             }
-            var3_ref = (ve) (Object) r.field_Ib.a((long)var2.hashCode(), 3000);
+            var3_ref = (ve) (Object) r.field_Ib.a((long)((String) var2).hashCode(), 3000);
             L4: while (true) {
               if (var3_ref != null) {
                 L5: {
@@ -131,7 +131,7 @@ final class hh extends o {
                     break L5;
                   }
                 }
-                if (!var4.equals((Object) (Object) var2)) {
+                if (!var4.equals(var2)) {
                   var3_ref = (ve) (Object) r.field_Ib.b(true);
                   continue L4;
                 } else {

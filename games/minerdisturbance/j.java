@@ -15,9 +15,9 @@ final class j implements Runnable {
     final static int a(int param0, int param1, boolean param2, int param3, pf param4, String param5, pf param6) {
         String var8 = null;
         int var9 = 0;
-        String var9_ref = null;
+        String var9_ref_String = null;
         int var10 = 0;
-        String var11_ref = null;
+        String var11_ref_String = null;
         int var11 = 0;
         int var12 = 0;
         int var13 = 0;
@@ -104,15 +104,15 @@ final class j implements Runnable {
                   sn.field_c.c(18, 25564);
                   sn.field_c.field_o = sn.field_c.field_o + 2;
                   var10 = sn.field_c.field_o;
-                  var11_ref = ag.a(bm.c(-104), true);
-                  if (var11_ref == null) {
-                    var11_ref = "";
+                  var11_ref_String = ag.a(bm.c(-104), true);
+                  if (var11_ref_String == null) {
+                    var11_ref_String = "";
                     break L5;
                   } else {
                     break L5;
                   }
                 }
-                sn.field_c.b(23446, var11_ref);
+                sn.field_c.b(23446, var11_ref_String);
                 jg.a(kc.field_b, -121, rf.field_c, ph.field_g, (sb) (Object) sn.field_c);
                 sn.field_c.b(-var10 + sn.field_c.field_o, -506270856);
                 break L3;
@@ -195,7 +195,7 @@ final class j implements Runnable {
               L9: {
                 var9 = kj.field_a.d((byte) -54);
                 kj.field_a.field_o = 0;
-                if (var9 > -101) {
+                if ((var9 ^ -1) > -101) {
                   break L9;
                 } else {
                   if (105 >= var9) {
@@ -214,7 +214,7 @@ final class j implements Runnable {
                 ek.field_c = false;
                 return var9;
               } else {
-                if (-100 != var9) {
+                if (-100 != (var9 ^ -1)) {
                   rj.field_d = -1;
                   oj.field_K = var9;
                   qd.field_Q = aa.field_l;
@@ -271,11 +271,11 @@ final class j implements Runnable {
                   nf.field_g = kj.field_a.a(false);
                   break L13;
                 } else {
-                  var9_ref = kj.field_a.j(81);
-                  if (var9_ref == null) {
+                  var9_ref_String = kj.field_a.j(81);
+                  if (var9_ref_String == null) {
                     break L13;
                   } else {
-                    nc.a(bm.c(-76), var9_ref, (byte) 115);
+                    nc.a(bm.c(-76), var9_ref_String, (byte) 115);
                     break L13;
                   }
                 }

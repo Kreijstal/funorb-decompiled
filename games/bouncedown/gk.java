@@ -540,7 +540,7 @@ final class gk {
           var6 = Bounce.field_N;
           var2 = 0;
           var3 = oa.field_a;
-          if (var3 > -6) {
+          if ((var3 ^ -1) > -6) {
             var2 = var3 * var3 * 8192 / 1100;
             break L0;
           } else {
@@ -548,7 +548,7 @@ final class gk {
               var2 = (-40960 + var3 * 16384) / 220;
               break L0;
             } else {
-              if (-121 <= var3) {
+              if (-121 >= (var3 ^ -1)) {
                 break L0;
               } else {
                 var3 = 120 - var3;
@@ -569,7 +569,7 @@ final class gk {
         }
         L2: {
           var5 = 0;
-          if (-4 == param0) {
+          if (-4 == (param0 ^ -1)) {
             var4 = -1;
             break L2;
           } else {
@@ -577,7 +577,7 @@ final class gk {
           }
         }
         L3: {
-          if (-2 == param0) {
+          if (-2 == (param0 ^ -1)) {
             var5 = 1;
             break L3;
           } else {
@@ -628,7 +628,7 @@ final class gk {
           break L7;
         }
         L9: {
-          if (param0 == -12) {
+          if ((param0 ^ -1) == -12) {
             var4 = -1;
             break L9;
           } else {
@@ -645,7 +645,7 @@ final class gk {
           }
         }
         L11: {
-          if (-14 == param0) {
+          if (-14 == (param0 ^ -1)) {
             var4 = 1;
             var5 = -1;
             break L11;
@@ -738,6 +738,7 @@ final class gk {
               ((gk) this).field_b = stackIn_6_1 != 0;
               ((gk) this).field_k = param2;
               ((gk) this).field_n = param0;
+              return;
             } else {
               break L0;
             }
@@ -748,7 +749,6 @@ final class gk {
 
     private final synchronized byte[] a(byte param0, int param1, int param2, int[] param3) {
         Object var5 = null;
-        byte[] var5_array = null;
         byte[] var7 = null;
         if (this.a(param1, param2, 0)) {
           L0: {
@@ -783,7 +783,7 @@ final class gk {
                 break L2;
               } else {
                 var7 = qf.a(0, false, ((gk) this).field_c[param1][param2]);
-                var5_array = var7;
+                var5 = (Object) (Object) var7;
                 if (var7 != null) {
                   break L2;
                 } else {
@@ -800,7 +800,7 @@ final class gk {
               }
             }
             L4: {
-              if (var5_array == null) {
+              if (var5 == null) {
                 break L4;
               } else {
                 if ((((gk) this).field_k ^ -1) != -2) {
@@ -821,7 +821,7 @@ final class gk {
                 }
               }
             }
-            return var5_array;
+            return (byte[]) var5;
           }
         } else {
           return null;

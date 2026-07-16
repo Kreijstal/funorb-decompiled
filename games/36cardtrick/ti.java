@@ -46,9 +46,9 @@ final class ti {
     }
 
     final static int a(jk param0, jk param1, int param2) {
-        byte[] var4 = null;
+        Object var4 = null;
         if (param2 != 0) {
-          var4 = (byte[]) null;
+          var4 = null;
           byte[] discarded$2 = ti.a(-112, (byte[]) null, -39, 50);
           return pa.a((String) null, param0, param1, 0, 0, param2 + 18, false);
         } else {
@@ -72,7 +72,7 @@ final class ti {
           vj.d();
           ga.a(true, 40);
           if (param1 != 54) {
-            field_d = (int[]) null;
+            field_d = null;
             return;
           } else {
             return;
@@ -86,7 +86,7 @@ final class ti {
           if (param1 == 54) {
             return;
           } else {
-            field_d = (int[]) null;
+            field_d = null;
             return;
           }
         }

@@ -57,8 +57,9 @@ final class ue {
                 if (((ue) this).field_c[var7] >= 0) {
                   break L2;
                 } else {
+                  int incrementValue$16 = param3;
                   param3++;
-                  param1[param3] = (byte)(var10 ^ -1);
+                  param1[incrementValue$16] = (byte)(var10 ^ -1);
                   if (param3 < param0) {
                     var7 = 0;
                     break L2;
@@ -81,8 +82,9 @@ final class ue {
                 if (-1 >= (((ue) this).field_c[var7] ^ -1)) {
                   break L4;
                 } else {
+                  int incrementValue$17 = param3;
                   param3++;
-                  param1[param3] = (byte)var10;
+                  param1[incrementValue$17] = (byte)var10;
                   if (param3 < param0) {
                     var7 = 0;
                     break L4;
@@ -103,8 +105,9 @@ final class ue {
               L6: {
                 var10 = ((ue) this).field_c[var7];
                 if (((ue) this).field_c[var7] < 0) {
+                  int incrementValue$18 = param3;
                   param3++;
-                  param1[param3] = (byte)(var10 ^ -1);
+                  param1[incrementValue$18] = (byte)(var10 ^ -1);
                   if (param0 > param3) {
                     var7 = 0;
                     break L6;
@@ -129,8 +132,9 @@ final class ue {
                 if (0 <= ((ue) this).field_c[var7]) {
                   break L8;
                 } else {
+                  int incrementValue$19 = param3;
                   param3++;
-                  param1[param3] = (byte)var10;
+                  param1[incrementValue$19] = (byte)var10;
                   if (param3 < param0) {
                     var7 = 0;
                     break L8;
@@ -153,8 +157,9 @@ final class ue {
                 if (-1 >= (((ue) this).field_c[var7] ^ -1)) {
                   break L10;
                 } else {
+                  int incrementValue$20 = param3;
                   param3++;
-                  param1[param3] = (byte)var10;
+                  param1[incrementValue$20] = (byte)var10;
                   if (param0 > param3) {
                     var7 = 0;
                     break L10;
@@ -177,8 +182,9 @@ final class ue {
                 if (((ue) this).field_c[var7] >= 0) {
                   break L12;
                 } else {
+                  int incrementValue$21 = param3;
                   param3++;
-                  param1[param3] = (byte)(var10 ^ -1);
+                  param1[incrementValue$21] = (byte)(var10 ^ -1);
                   if (param3 < param0) {
                     var7 = 0;
                     break L12;
@@ -199,8 +205,9 @@ final class ue {
               L14: {
                 var10 = ((ue) this).field_c[var7];
                 if (((ue) this).field_c[var7] < 0) {
+                  int incrementValue$22 = param3;
                   param3++;
-                  param1[param3] = (byte)(var10 ^ -1);
+                  param1[incrementValue$22] = (byte)(var10 ^ -1);
                   if (param0 > param3) {
                     var7 = 0;
                     break L14;
@@ -222,8 +229,9 @@ final class ue {
               }
               var10 = ((ue) this).field_c[var7];
               if (-1 < (((ue) this).field_c[var7] ^ -1)) {
+                int incrementValue$23 = param3;
                 param3++;
-                param1[param3] = (byte)(var10 ^ -1);
+                param1[incrementValue$23] = (byte)(var10 ^ -1);
                 if (param0 > param3) {
                   var7 = 0;
                   var8++;
@@ -237,7 +245,7 @@ final class ue {
               }
             }
           } else {
-            field_a = (qk) null;
+            field_a = null;
             var8 = param5;
             L16: while (true) {
               L17: {
@@ -255,8 +263,9 @@ final class ue {
                 if (((ue) this).field_c[var7] >= 0) {
                   break L18;
                 } else {
+                  int incrementValue$24 = param3;
                   param3++;
-                  param1[param3] = (byte)(var10 ^ -1);
+                  param1[incrementValue$24] = (byte)(var10 ^ -1);
                   if (param3 < param0) {
                     var7 = 0;
                     break L18;
@@ -280,8 +289,9 @@ final class ue {
                   if (-1 >= (((ue) this).field_c[var7] ^ -1)) {
                     break L21;
                   } else {
+                    int incrementValue$25 = param3;
                     param3++;
-                    param1[param3] = (byte)var10;
+                    param1[incrementValue$25] = (byte)var10;
                     if (param3 < param0) {
                       var7 = 0;
                       break L21;
@@ -302,8 +312,9 @@ final class ue {
                 L23: {
                   var10 = ((ue) this).field_c[var7];
                   if (((ue) this).field_c[var7] < 0) {
+                    int incrementValue$26 = param3;
                     param3++;
-                    param1[param3] = (byte)(var10 ^ -1);
+                    param1[incrementValue$26] = (byte)(var10 ^ -1);
                     if (param0 > param3) {
                       var7 = 0;
                       break L23;
@@ -328,8 +339,9 @@ final class ue {
                   if (0 <= ((ue) this).field_c[var7]) {
                     break L25;
                   } else {
+                    int incrementValue$27 = param3;
                     param3++;
-                    param1[param3] = (byte)(var10 ^ -1);
+                    param1[incrementValue$27] = (byte)(var10 ^ -1);
                     if (param3 < param0) {
                       var7 = 0;
                       break L25;
@@ -352,8 +364,9 @@ final class ue {
                   if (-1 <= ((ue) this).field_c[var7]) {
                     break L27;
                   } else {
+                    int incrementValue$28 = param3;
                     param3++;
-                    param1[param3] = (byte)var10;
+                    param1[incrementValue$28] = (byte)var10;
                     if (param0 > param3) {
                       var7 = 0;
                       break L27;
@@ -376,8 +389,9 @@ final class ue {
                   if (((ue) this).field_c[var7] >= 0) {
                     break L29;
                   } else {
+                    int incrementValue$29 = param3;
                     param3++;
-                    param1[param3] = (byte)(var10 ^ -1);
+                    param1[incrementValue$29] = (byte)(var10 ^ -1);
                     if (param3 < param0) {
                       var7 = 0;
                       break L29;
@@ -398,8 +412,9 @@ final class ue {
                 L31: {
                   var10 = ((ue) this).field_c[var7];
                   if (((ue) this).field_c[var7] < 0) {
+                    int incrementValue$30 = param3;
                     param3++;
-                    param1[param3] = (byte)(var10 ^ -1);
+                    param1[incrementValue$30] = (byte)(var10 ^ -1);
                     if (param0 > param3) {
                       var7 = 0;
                       break L31;
@@ -421,8 +436,9 @@ final class ue {
                 }
                 var10 = ((ue) this).field_c[var7];
                 if (-1 < (((ue) this).field_c[var7] ^ -1)) {
+                  int incrementValue$31 = param3;
                   param3++;
-                  param1[param3] = (byte)(var10 ^ -1);
+                  param1[incrementValue$31] = (byte)(var10 ^ -1);
                   if (param0 > param3) {
                     var7 = 0;
                     var8++;

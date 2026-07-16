@@ -139,12 +139,39 @@ final class bf {
     }
 
     final static boolean a(boolean param0, byte param1) {
-        // if_acmpne L27
-        ga.field_d = gf.field_o.a(79, ke.field_c, dc.field_o);
-        // goto L27
-        // if_icmpeq L40
-        // goto L42
-        return false;
+        L0: {
+          if (null != ga.field_d) {
+            break L0;
+          } else {
+            ga.field_d = gf.field_o.a(79, ke.field_c, dc.field_o);
+            break L0;
+          }
+        }
+        if (0 == ga.field_d.field_f) {
+          return false;
+        } else {
+          L1: {
+            long dupTemp$2 = qg.a(false);
+            qh.field_f = dupTemp$2;
+            he.field_a = dupTemp$2;
+            if ((ga.field_d.field_f ^ -1) != -2) {
+              break L1;
+            } else {
+              break L1;
+            }
+          }
+          jc.field_a = oc.field_m;
+          L2: {
+            if (param1 >= 31) {
+              break L2;
+            } else {
+              field_a = null;
+              break L2;
+            }
+          }
+          ga.field_d = null;
+          return true;
+        }
     }
 
     final void a(byte[] param0, int param1, int param2) {
@@ -164,8 +191,9 @@ final class bf {
                   ((bf) this).field_i = 0;
                   break L0;
                 } else {
+                  int fieldTemp$2 = ((bf) this).field_i;
                   ((bf) this).field_i = ((bf) this).field_i + 1;
-                  ((bf) this).field_g[((bf) this).field_i] = (byte) 0;
+                  ((bf) this).field_g[fieldTemp$2] = (byte) 0;
                   continue L1;
                 }
               }
@@ -198,8 +226,9 @@ final class bf {
                 }
               }
             } else {
+              int fieldTemp$3 = ((bf) this).field_i;
               ((bf) this).field_i = ((bf) this).field_i + 1;
-              ((bf) this).field_g[((bf) this).field_i] = (byte) 0;
+              ((bf) this).field_g[fieldTemp$3] = (byte) 0;
               continue L2;
             }
           }
@@ -252,7 +281,7 @@ final class bf {
                   if ((var2 ^ -1) < -11) {
                     var2 = 0;
                     L3: while (true) {
-                      if (-9 <= var2) {
+                      if (-9 >= (var2 ^ -1)) {
                         L4: {
                           if (param0 == -2) {
                             break L4;
@@ -281,7 +310,7 @@ final class bf {
                               if (-9 >= (var3 ^ -1)) {
                                 var3 = 0;
                                 L8: while (true) {
-                                  if (-9 >= var3) {
+                                  if (-9 >= (var3 ^ -1)) {
                                     var2++;
                                     continue L2;
                                   } else {

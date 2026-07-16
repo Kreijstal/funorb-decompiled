@@ -157,38 +157,65 @@ abstract class vk {
     }
 
     final int a(int param0, byte param1, int param2) {
+        int var4 = 0;
         int var5 = 0;
         uj var6 = null;
         int var7 = 0;
-        int var8 = stellarshard.field_B;
-        if (null != ((vk) this).field_a) {
-            // if_icmpeq L40
-            // if_icmpgt L40
-        } else {
-            return -1;
-        }
-        if (param2 > ((vk) this).field_a[((vk) this).field_a.length + -1].field_c) {
-            return -1;
-        }
-        if (!(-2 != (((vk) this).field_a.length ^ -1))) {
-            return ((vk) this).field_a[0].a(param0, (byte) -127);
-        }
-        int var4 = 0;
-        if (param1 != -53) {
-            return -68;
-        }
-        for (var5 = 0; var5 < ((vk) this).field_a.length; var5++) {
-            var6 = ((vk) this).field_a[var5];
-            if (var6.field_b <= param2) {
-                if (!(param2 > var6.field_c)) {
-                    var7 = var6.a(param0, (byte) -125);
-                    if (!(-1 != var7)) {
-                        return -1;
+        int var8 = 0;
+        L0: {
+          var8 = stellarshard.field_B;
+          if (null == ((vk) this).field_a) {
+            break L0;
+          } else {
+            if (-1 == (((vk) this).field_a.length ^ -1)) {
+              break L0;
+            } else {
+              if (((vk) this).field_a[0].field_b > param2) {
+                break L0;
+              } else {
+                if (param2 <= ((vk) this).field_a[((vk) this).field_a.length + -1].field_c) {
+                  if (-2 == (((vk) this).field_a.length ^ -1)) {
+                    return ((vk) this).field_a[0].a(param0, (byte) -127);
+                  } else {
+                    var4 = 0;
+                    if (param1 == -53) {
+                      var5 = 0;
+                      L1: while (true) {
+                        if (var5 >= ((vk) this).field_a.length) {
+                          return -1;
+                        } else {
+                          L2: {
+                            var6 = ((vk) this).field_a[var5];
+                            if (var6.field_b > param2) {
+                              break L2;
+                            } else {
+                              if (param2 <= var6.field_c) {
+                                var7 = var6.a(param0, (byte) -125);
+                                if (-1 == var7) {
+                                  return -1;
+                                } else {
+                                  return var4 - -var7;
+                                }
+                              } else {
+                                break L2;
+                              }
+                            }
+                          }
+                          var4 = var4 + (var6.field_a.length + -1);
+                          var5++;
+                          continue L1;
+                        }
+                      }
+                    } else {
+                      return -68;
                     }
-                    return var4 - -var7;
+                  }
+                } else {
+                  return -1;
                 }
+              }
             }
-            var4 = var4 + (var6.field_a.length + -1);
+          }
         }
         return -1;
     }

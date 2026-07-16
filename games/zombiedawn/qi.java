@@ -334,8 +334,9 @@ final class qi extends eh {
     qi(int param0, int param1, int param2, int param3, io param4, ga param5, io param6) {
         super(param0, param1, param2, param3, param4);
         ((qi) this).field_B = new ga[3];
-        ((qi) this).field_D = new rg(param0, param1, param2, param3, param6, param5);
-        ((qi) this).field_B[2] = (ga) (Object) new rg(param0, param1, param2, param3, param6, param5);
+        rg dupTemp$0 = new rg(param0, param1, param2, param3, param6, param5);
+        ((qi) this).field_D = dupTemp$0;
+        ((qi) this).field_B[2] = (ga) (Object) dupTemp$0;
         ((qi) this).e((byte) 82);
     }
 

@@ -16,32 +16,12 @@ final class wh {
         L0: {
           var3 = Chess.field_G;
           var2 = uh.field_l;
-          if (param1.field_k != -3) {
+          if ((param1.field_k ^ -1) != -3) {
             if (4 != param1.field_k) {
               if ((gb.field_t ^ -1L) == (param1.field_m ^ -1L)) {
                 var2 = vm.field_i[param1.field_k];
                 break L0;
               } else {
-                var2 = kg.field_P[param1.field_k];
-                if (param0 != -1) {
-                  field_c = null;
-                  return var2;
-                } else {
-                  return var2;
-                }
-              }
-            } else {
-              var2 = kg.field_P[param1.field_k];
-              if (param0 != -1) {
-                field_c = null;
-                return var2;
-              } else {
-                return var2;
-              }
-            }
-          } else {
-            if (!param1.field_d) {
-              if (-1 != param1.field_e) {
                 var2 = kg.field_P[param1.field_k];
                 if (param0 == -1) {
                   return var2;
@@ -49,21 +29,41 @@ final class wh {
                   field_c = null;
                   return var2;
                 }
+              }
+            } else {
+              var2 = kg.field_P[param1.field_k];
+              if (param0 == -1) {
+                return var2;
               } else {
-                if (param1.field_q == 0) {
-                  var2 = vm.field_i[param1.field_k];
-                  if (param0 != -1) {
-                    field_c = null;
-                    return var2;
-                  } else {
-                    return var2;
-                  }
+                field_c = null;
+                return var2;
+              }
+            }
+          } else {
+            if (!param1.field_d) {
+              if (-1 != (param1.field_e ^ -1)) {
+                var2 = kg.field_P[param1.field_k];
+                if (param0 != -1) {
+                  field_c = null;
+                  return var2;
                 } else {
-                  var2 = kg.field_P[param1.field_k];
+                  return var2;
+                }
+              } else {
+                if ((param1.field_q ^ -1) == -1) {
+                  var2 = vm.field_i[param1.field_k];
                   if (param0 == -1) {
                     return var2;
                   } else {
                     field_c = null;
+                    return var2;
+                  }
+                } else {
+                  var2 = kg.field_P[param1.field_k];
+                  if (param0 != -1) {
+                    field_c = null;
+                    return var2;
+                  } else {
                     return var2;
                   }
                 }
@@ -74,10 +74,10 @@ final class wh {
             }
           }
         }
-        if (param0 != -1) {
-          field_c = null;
+        if (param0 == -1) {
           return var2;
         } else {
+          field_c = null;
           return var2;
         }
     }
@@ -92,7 +92,7 @@ final class wh {
         km var12 = null;
         km var13 = null;
         km var14 = null;
-        km var15 = null;
+        Object var15 = null;
         int[] var16 = null;
         km var17 = null;
         int[] var18 = null;
@@ -129,14 +129,14 @@ final class wh {
             break L0;
           } else {
             var17 = new km(16, 16);
-            var15 = var17;
+            var15 = (Object) (Object) var17;
             var17.e();
             wb.f(0, 0, 16, 16, param5);
             break L0;
           }
         }
         wb.a(var21, var7, var9);
-        return new km[]{var11, var12, var11, var10, var15, var10, var13, var14, var13};
+        return new km[]{var11, var12, var11, var10, (km) var15, var10, var13, var14, var13};
     }
 
     public static void a(byte param0) {

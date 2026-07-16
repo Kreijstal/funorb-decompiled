@@ -1,6 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
+import java.lang.String;
+
 final class cg {
     static int field_a;
     static byte[][] field_b;
@@ -117,7 +119,7 @@ final class cg {
           }
         }
         L1: {
-          var6 = (String) (Object) stackIn_3_0;
+          var6 = stackIn_3_0;
           if (fj.field_g == 0) {
             var7 = vm.a(var11, -9224, sj.field_d, da.field_A, 480);
             var8 = 3 - -var7;
@@ -258,7 +260,7 @@ final class cg {
               }
             }
             L11: {
-              var9 = in.a((String) (Object) stackIn_25_0, stackIn_25_1, stackIn_25_2 != 0);
+              var9 = in.a(stackIn_25_0, stackIn_25_1, stackIn_25_2 != 0);
               if (-1 == ec.field_l[var8]) {
                 break L11;
               } else {

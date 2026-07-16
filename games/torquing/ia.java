@@ -15,7 +15,7 @@ final class ia extends af {
           return;
         } else {
           L0: {
-            if (-141 >= of.field_m) {
+            if (-141 >= (of.field_m ^ -1)) {
               ea.b(-108, 160);
               break L0;
             } else {

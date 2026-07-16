@@ -30,7 +30,7 @@ final class nk {
             }
           }
         } else {
-          return (ff) null;
+          return null;
         }
     }
 
@@ -154,7 +154,7 @@ final class nk {
 
     final static lb a(boolean param0, String param1) {
         if (param0) {
-            field_f = (String[]) null;
+            field_f = null;
             return new lb(param1);
         }
         return new lb(param1);

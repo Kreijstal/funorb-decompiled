@@ -28,22 +28,30 @@ final class vf {
         int var2 = 0;
         int var3 = var5.length;
         while (var2 < var3) {
+            int incrementValue$0 = var2;
             var2++;
-            var5[var2] = 0;
+            var5[incrementValue$0] = 0;
+            int incrementValue$1 = var2;
             var2++;
-            var5[var2] = 0;
+            var5[incrementValue$1] = 0;
+            int incrementValue$2 = var2;
             var2++;
-            var5[var2] = 0;
+            var5[incrementValue$2] = 0;
+            int incrementValue$3 = var2;
             var2++;
-            var5[var2] = 0;
+            var5[incrementValue$3] = 0;
+            int incrementValue$4 = var2;
             var2++;
-            var5[var2] = 0;
+            var5[incrementValue$4] = 0;
+            int incrementValue$5 = var2;
             var2++;
-            var5[var2] = 0;
+            var5[incrementValue$5] = 0;
+            int incrementValue$6 = var2;
             var2++;
-            var5[var2] = 0;
+            var5[incrementValue$6] = 0;
+            int incrementValue$7 = var2;
             var2++;
-            var5[var2] = 0;
+            var5[incrementValue$7] = 0;
         }
     }
 
@@ -85,14 +93,14 @@ final class vf {
     final static void a(boolean param0, int param1, int param2) {
         int var3 = 0;
         bb var4 = null;
-        im var5 = null;
+        Object var5 = null;
         im var6 = null;
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
-        String var13_ref = null;
+        String var13_ref_String = null;
         int var13 = 0;
         int var14 = 0;
         int var15 = 0;
@@ -276,7 +284,7 @@ final class vf {
               }
               L11: {
                 if (var7 != 0) {
-                  v.field_e.field_Fb.a((ak) (Object) var6, 2, -1, (ak) (Object) var5);
+                  v.field_e.field_Fb.a((ak) (Object) var6, 2, -1, (ak) var5);
                   break L11;
                 } else {
                   break L11;
@@ -310,8 +318,8 @@ final class vf {
                 if (var6.field_P != 0) {
                   em.a(var6.field_Fb, 0L, var6.field_Ib, -1, (ak) (Object) var6, -163, v.field_e.field_Gb, (int[]) null, -1);
                   var17 = eg.field_n;
-                  var13_ref = k.field_n;
-                  var17.field_b.a(var13_ref, (byte) -107, 7);
+                  var13_ref_String = k.field_n;
+                  var17.field_b.a(var13_ref_String, (byte) -107, 7);
                   var18 = eg.field_n;
                   var13 = uo.field_a;
                   var14 = ji.field_c;
@@ -321,7 +329,7 @@ final class vf {
                   break L14;
                 }
               }
-              var5 = var6;
+              var5 = (Object) (Object) var6;
               var6 = (im) (Object) var4.f(1504642273);
               continue L3;
             }

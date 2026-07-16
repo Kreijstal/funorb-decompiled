@@ -689,6 +689,7 @@ abstract class eg extends na implements nf {
         var2 = 0;
         L0: while (true) {
           if (256 <= var2) {
+            return;
           } else {
             var0 = (long)var2;
             var3 = 0;

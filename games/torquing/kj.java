@@ -23,8 +23,9 @@ abstract class kj {
               return;
             } else {
               var1.f(73, 8);
+              int fieldTemp$2 = var1.field_n + 1;
               var1.field_n = var1.field_n + 1;
-              var2 = var1.field_n + 1;
+              var2 = fieldTemp$2;
               hk.a(var1, -2933);
               wa.field_d.c((byte) 48, -var2 + var1.field_n);
               continue L0;

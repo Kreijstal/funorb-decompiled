@@ -29,8 +29,8 @@ final class og extends q {
     }
 
     final static java.net.URL a(java.net.URL param0, java.applet.Applet param1, byte param2) {
-        String var3 = null;
-        String var4 = null;
+        Object var3 = null;
+        Object var4 = null;
         var3 = null;
         if (param2 <= -65) {
           L0: {
@@ -41,7 +41,7 @@ final class og extends q {
               if (rd.field_t.equals((Object) (Object) param1.getParameter("settings"))) {
                 break L0;
               } else {
-                var3 = rd.field_t;
+                var3 = (Object) (Object) rd.field_t;
                 var4 = var3;
                 var4 = var3;
                 break L0;
@@ -50,13 +50,13 @@ final class og extends q {
           }
           if (null != jb.field_e) {
             if (jb.field_e.equals((Object) (Object) param1.getParameter("session"))) {
-              return pg.a(-1, var4, param0, 47, var3);
+              return pg.a(-1, (String) var4, param0, 47, (String) var3);
             } else {
-              var4 = jb.field_e;
-              return pg.a(-1, var4, param0, 47, var3);
+              var4 = (Object) (Object) jb.field_e;
+              return pg.a(-1, (String) var4, param0, 47, (String) var3);
             }
           } else {
-            return pg.a(-1, var4, param0, 47, var3);
+            return pg.a(-1, (String) var4, param0, 47, (String) var3);
           }
         } else {
           L1: {
@@ -68,23 +68,23 @@ final class og extends q {
               if (rd.field_t.equals((Object) (Object) param1.getParameter("settings"))) {
                 break L1;
               } else {
-                var3 = rd.field_t;
+                var3 = (Object) (Object) rd.field_t;
                 break L1;
               }
             }
           }
           if (null == jb.field_e) {
-            return pg.a(-1, var4, param0, 47, var3);
+            return pg.a(-1, (String) var4, param0, 47, (String) var3);
           } else {
             L2: {
               if (!jb.field_e.equals((Object) (Object) param1.getParameter("session"))) {
-                var4 = jb.field_e;
+                var4 = (Object) (Object) jb.field_e;
                 break L2;
               } else {
                 break L2;
               }
             }
-            return pg.a(-1, var4, param0, 47, var3);
+            return pg.a(-1, (String) var4, param0, 47, (String) var3);
           }
         }
     }

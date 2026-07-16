@@ -1264,7 +1264,7 @@ public final class fleas extends wb {
     private final boolean b(boolean param0, int param1) {
         int var3 = 0;
         byte[] var3_ref_byte__ = null;
-        String var4_ref = null;
+        String var4_ref_String = null;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
@@ -1350,8 +1350,8 @@ public final class fleas extends wb {
                             }
                           } else {
                             L4: {
-                              var4_ref = "classic_" + (1 + var6) + ".lvl";
-                              var21 = pa.field_l.a(0, var4_ref, "");
+                              var4_ref_String = "classic_" + (1 + var6) + ".lvl";
+                              var21 = pa.field_l.a(0, var4_ref_String, "");
                               var19 = var21;
                               var17 = var19;
                               var15 = var17;
@@ -1370,8 +1370,8 @@ public final class fleas extends wb {
                         }
                       } else {
                         L5: {
-                          var4_ref = 1 + var6 + ".lvl";
-                          var20 = pa.field_l.a(0, var4_ref, "");
+                          var4_ref_String = 1 + var6 + ".lvl";
+                          var20 = pa.field_l.a(0, var4_ref_String, "");
                           var18 = var20;
                           var16 = var18;
                           var14 = var16;
@@ -2267,7 +2267,7 @@ public final class fleas extends wb {
     final static re[] a(ih param0, int param1) {
         int var5 = 0;
         int var6 = 0;
-        re var6_ref = null;
+        re var6_ref_re = null;
         int var7 = field_A ? 1 : 0;
         if (param1 != -6383) {
             Object var8 = null;
@@ -2281,15 +2281,15 @@ public final class fleas extends wb {
         re[] var4 = new re[var3];
         for (var5 = 0; (var5 ^ -1) > (var3 ^ -1); var5++) {
             if (fb.a((byte) 98, param0)) {
-                var6_ref = new re();
+                var6_ref_re = new re();
                 int discarded$1 = param0.b(24, (byte) -87);
                 int discarded$2 = param0.b(24, (byte) -87);
-                var6_ref.field_a = param0.b(24, (byte) -87);
+                var6_ref_re.field_a = param0.b(24, (byte) -87);
                 int discarded$3 = param0.b(9, (byte) -87);
                 int discarded$4 = param0.b(12, (byte) -87);
                 int discarded$5 = param0.b(12, (byte) -87);
                 int discarded$6 = param0.b(12, (byte) -87);
-                var4[var5] = var6_ref;
+                var4[var5] = var6_ref_re;
             } else {
                 var6 = param0.b(qh.a(3, -1 + var5), (byte) -87);
                 var4[var5] = var4[var6];

@@ -61,62 +61,52 @@ abstract class am extends q {
     }
 
     final static void a(int param0) {
-        int var2 = 0;
-        var2 = Torquing.field_u;
+        int var2 = Torquing.field_u;
+        int fieldTemp$0 = fh.field_r + 1;
         fh.field_r = fh.field_r + 1;
-        if (100 == fh.field_r + 1) {
-          hj.field_b = true;
-          cq.field_w = null;
-          jb.field_b = null;
-          hj.field_c = null;
-          of.field_l = null;
-          nh.field_l = null;
-          la.field_j = null;
-          if (param0 < 53) {
-            am.c((byte) 72);
-            return;
-          } else {
-            return;
-          }
-        } else {
-          if (35 > fh.field_r) {
+        if (100 != fieldTemp$0) {
+            if (35 <= fh.field_r) {
+                if ((fh.field_r ^ -1) > -71) {
+                    if (4 > (-35 + fh.field_r + -35 ^ -1)) {
+                        vc.field_d = vc.field_d - 4;
+                        if (param0 >= 53) {
+                            return;
+                        }
+                        am.c((byte) 72);
+                        return;
+                    }
+                    vc.field_d = vc.field_d + 4;
+                    if (param0 >= 53) {
+                        return;
+                    }
+                    am.c((byte) 72);
+                    return;
+                }
+                nn.field_e = nn.field_e - pp.field_a;
+                if (param0 < 53) {
+                    am.c((byte) 72);
+                    return;
+                }
+                return;
+            }
             ub.field_E = ub.field_E + ra.field_c;
             tj.field_l = tj.field_l + ll.field_g;
             if (param0 < 53) {
-              am.c((byte) 72);
-              return;
-            } else {
-              return;
-            }
-          } else {
-            if (fh.field_r <= -71) {
-              nn.field_e = nn.field_e - pp.field_a;
-              if (param0 < 53) {
                 am.c((byte) 72);
                 return;
-              } else {
-                return;
-              }
-            } else {
-              if (4 >= -35 + fh.field_r + -35) {
-                vc.field_d = vc.field_d + 4;
-                if (param0 >= 53) {
-                  return;
-                } else {
-                  am.c((byte) 72);
-                  return;
-                }
-              } else {
-                vc.field_d = vc.field_d - 4;
-                if (param0 >= 53) {
-                  return;
-                } else {
-                  am.c((byte) 72);
-                  return;
-                }
-              }
             }
-          }
+            return;
+        }
+        hj.field_b = true;
+        cq.field_w = null;
+        jb.field_b = null;
+        hj.field_c = null;
+        of.field_l = null;
+        nh.field_l = null;
+        la.field_j = null;
+        if (param0 < 53) {
+            am.c((byte) 72);
+            return;
         }
     }
 

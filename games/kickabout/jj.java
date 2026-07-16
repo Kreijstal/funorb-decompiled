@@ -260,24 +260,46 @@ final class jj extends lq {
     }
 
     final void a(boolean param0, int param1, qm param2, int param3, int param4, int param5, int param6) {
-        if (-1 >= (param4 ^ -1)) {
-            // if_icmple L20
-        } else {
-            throw new IllegalArgumentException("Illegal midiplayer: " + param4);
+        L0: {
+          if (-1 < (param4 ^ -1)) {
+            break L0;
+          } else {
+            if (((jj) this).field_o <= param4) {
+              break L0;
+            } else {
+              L1: {
+                if (null != ((jj) this).field_p[param4]) {
+                  ((jj) this).field_k[param4].b(21404);
+                  break L1;
+                } else {
+                  break L1;
+                }
+              }
+              L2: {
+                ((jj) this).field_p[param4] = param2;
+                if (param2 != null) {
+                  ((jj) this).field_n[param4] = param5;
+                  ((jj) this).field_k[param4].d(-1, -1, param6);
+                  ((jj) this).field_k[param4].a(param0, 19134, param2);
+                  ((jj) this).field_k[param4].c(param1, 107342216);
+                  break L2;
+                } else {
+                  break L2;
+                }
+              }
+              L3: {
+                if (param3 == -9017) {
+                  break L3;
+                } else {
+                  field_m = null;
+                  break L3;
+                }
+              }
+              return;
+            }
+          }
         }
-        if (!(null == ((jj) this).field_p[param4])) {
-            ((jj) this).field_k[param4].b(21404);
-        }
-        ((jj) this).field_p[param4] = param2;
-        if (!(param2 == null)) {
-            ((jj) this).field_n[param4] = param5;
-            ((jj) this).field_k[param4].d(-1, -1, param6);
-            ((jj) this).field_k[param4].a(param0, 19134, param2);
-            ((jj) this).field_k[param4].c(param1, 107342216);
-        }
-        if (param3 != -9017) {
-            field_m = null;
-        }
+        throw new IllegalArgumentException("Illegal midiplayer: " + param4);
     }
 
     final void a(int param0, int param1, int param2) {

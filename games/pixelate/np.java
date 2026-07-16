@@ -101,6 +101,7 @@ final class np {
           if (var2 >= 10) {
             ((np) this).field_c = param0.a((byte) -116);
             ((np) this).field_a = param0.a((byte) -112);
+            return;
           } else {
             var3 = param0.f(255);
             if (var3 != 0) {

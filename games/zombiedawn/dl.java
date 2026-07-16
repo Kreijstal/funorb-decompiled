@@ -71,8 +71,9 @@ final class dl {
           if (((dl) this).field_d[((dl) this).field_k + -1] == ((dl) this).field_j) {
             L0: while (true) {
               if (((dl) this).field_k < ((dl) this).field_i) {
+                int fieldTemp$2 = ((dl) this).field_k;
                 ((dl) this).field_k = ((dl) this).field_k + 1;
-                var8 = ((dl) this).field_d[((dl) this).field_k].field_b;
+                var8 = ((dl) this).field_d[fieldTemp$2].field_b;
                 if (((dl) this).field_d[((dl) this).field_k + -1] == var8) {
                   continue L0;
                 } else {
@@ -92,8 +93,9 @@ final class dl {
         } else {
           L1: while (true) {
             if (((dl) this).field_k < ((dl) this).field_i) {
+              int fieldTemp$3 = ((dl) this).field_k;
               ((dl) this).field_k = ((dl) this).field_k + 1;
-              var4 = ((dl) this).field_d[((dl) this).field_k].field_b;
+              var4 = ((dl) this).field_d[fieldTemp$3].field_b;
               if (((dl) this).field_d[((dl) this).field_k + -1] == var4) {
                 continue L1;
               } else {
@@ -180,13 +182,15 @@ final class dl {
         var2 = 0;
         L0: while (true) {
           if (param0 > var2) {
-            var3 = new le();
-            ((dl) this).field_d[var2] = new le();
+            le dupTemp$2 = new le();
+            var3 = dupTemp$2;
+            ((dl) this).field_d[var2] = dupTemp$2;
             var3.field_b = var3;
             var3.field_d = var3;
             var2++;
             continue L0;
           } else {
+            return;
           }
         }
     }

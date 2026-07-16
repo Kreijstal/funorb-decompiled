@@ -134,25 +134,41 @@ final class sa {
     }
 
     sa(File param0, String param1, long param2) throws IOException {
-        if (-1L == param2) {
+        int var5 = 0;
+        L0: {
+          if (-1L != param2) {
+            break L0;
+          } else {
             param2 = 9223372036854775807L;
+            break L0;
+          }
         }
-        if (param0.length() > param2) {
-            boolean discarded$0 = param0.delete();
+        L1: {
+          if (param0.length() <= param2) {
+            break L1;
+          } else {
+            boolean discarded$2 = param0.delete();
+            break L1;
+          }
         }
         ((sa) this).field_d = new RandomAccessFile(param0, param1);
         ((sa) this).field_e = param2;
         ((sa) this).field_c = 0L;
-        int var5 = ((sa) this).field_d.read();
-        if (-1 != var5) {
-            // ifne L106
+        var5 = ((sa) this).field_d.read();
+        if (-1 == var5) {
+          ((sa) this).field_d.seek(0L);
+          return;
+        } else {
+          if (param1.equals((Object) (Object) "r")) {
+            ((sa) this).field_d.seek(0L);
+            return;
+          } else {
             ((sa) this).field_d.seek(0L);
             ((sa) this).field_d.write(var5);
-        } else {
             ((sa) this).field_d.seek(0L);
-            ((sa) this).field_d.seek(0L);
+            return;
+          }
         }
-        ((sa) this).field_d.seek(0L);
     }
 
     static {

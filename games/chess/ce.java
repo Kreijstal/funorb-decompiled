@@ -1,6 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
+import java.lang.String;
+
 final class ce {
     static String field_c;
     static ci field_d;
@@ -121,10 +123,10 @@ final class ce {
             stackOut_2_0 = stackIn_2_0;
             stackOut_2_1 = (String) (Object) stackIn_2_1;
             stackOut_2_2 = stackIn_2_2;
-            stackOut_2_3 = (Object) (Object) stackIn_2_3;
+            stackOut_2_3 = stackIn_2_3;
             stackOut_2_4 = stackIn_2_4;
             stackOut_2_5 = (ci) (Object) stackIn_2_5;
-            stackOut_2_6 = (Object) (Object) stackIn_2_6;
+            stackOut_2_6 = stackIn_2_6;
             stackOut_2_7 = param0.field_c;
             stackIn_3_0 = stackOut_2_0;
             stackIn_3_1 = stackOut_2_1;
@@ -139,10 +141,10 @@ final class ce {
             stackOut_1_0 = stackIn_1_0;
             stackOut_1_1 = (String) (Object) stackIn_1_1;
             stackOut_1_2 = stackIn_1_2;
-            stackOut_1_3 = (Object) (Object) stackIn_1_3;
+            stackOut_1_3 = stackIn_1_3;
             stackOut_1_4 = stackIn_1_4;
             stackOut_1_5 = (ci) (Object) stackIn_1_5;
-            stackOut_1_6 = (Object) (Object) stackIn_1_6;
+            stackOut_1_6 = stackIn_1_6;
             stackOut_1_7 = 0;
             stackIn_3_0 = stackOut_1_0;
             stackIn_3_1 = stackOut_1_1;
@@ -155,7 +157,7 @@ final class ce {
             break L0;
           }
         }
-        ja.a(stackIn_3_0, (String) (Object) stackIn_3_1, (byte) stackIn_3_2, (nb) (Object) stackIn_3_3, stackIn_3_4, (ci) (Object) stackIn_3_5, (int[]) (Object) stackIn_3_6, stackIn_3_7, param0.field_i);
+        ja.a(stackIn_3_0, stackIn_3_1, (byte) stackIn_3_2, (nb) (Object) stackIn_3_3, stackIn_3_4, stackIn_3_5, (int[]) (Object) stackIn_3_6, stackIn_3_7, param0.field_i);
         if (0 == param0.field_k) {
           if (!sb.j((byte) 78)) {
             L1: {

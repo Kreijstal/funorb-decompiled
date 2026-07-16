@@ -28,9 +28,9 @@ final class cm extends ob {
         eg var8 = null;
         int var9 = 0;
         int var10 = 0;
-        eg var11_ref = null;
+        eg var11_ref_eg = null;
         int var11 = 0;
-        eg var12_ref = null;
+        eg var12_ref_eg = null;
         int var12 = 0;
         eg var13 = null;
         int var14 = 0;
@@ -74,9 +74,9 @@ final class cm extends ob {
                   break L1;
                 } else {
                   var4 = hq.b((byte) 122);
-                  var11_ref = hq.b((byte) 124);
-                  ej.a(0, var4, param0.field_D + (1 - -var10) * (param0.field_w + -param0.field_D) / param1[0], false, 0, 0, 1, 0, var11_ref, var5);
-                  var5 = var11_ref;
+                  var11_ref_eg = hq.b((byte) 124);
+                  ej.a(0, var4, param0.field_D + (1 - -var10) * (param0.field_w + -param0.field_D) / param1[0], false, 0, 0, 1, 0, var11_ref_eg, var5);
+                  var5 = var11_ref_eg;
                   break L1;
                 }
               }
@@ -91,9 +91,9 @@ final class cm extends ob {
                     if (var11 < param1[1] - 1) {
                       var15 = hq.b((byte) 123);
                       var6 = var15;
-                      var12_ref = hq.b((byte) 125);
-                      ej.a((1 - -var11) * (-param0.field_y + param0.field_S) / param1[1] + param0.field_y, var15, 0, false, 0, 1, 0, 0, var12_ref, var7);
-                      var7 = var12_ref;
+                      var12_ref_eg = hq.b((byte) 125);
+                      ej.a((1 - -var11) * (-param0.field_y + param0.field_S) / param1[1] + param0.field_y, var15, 0, false, 0, 1, 0, 0, var12_ref_eg, var7);
+                      var7 = var12_ref_eg;
                       break L3;
                     } else {
                       var6 = var7;
@@ -244,9 +244,9 @@ final class cm extends ob {
         L0: {
           var5 = Pool.field_O;
           var4 = ((cm) this).field_h[param2];
-          if (-66 != var4) {
-            if (-65 != var4) {
-              if (var4 == -64) {
+          if (-66 != (var4 ^ -1)) {
+            if (-65 != (var4 ^ -1)) {
+              if ((var4 ^ -1) == -64) {
                 if (!((cm) this).field_B.b((byte) 89)) {
                   break L0;
                 } else {
@@ -262,11 +262,11 @@ final class cm extends ob {
                 if (27 != var4) {
                   if (28 != var4) {
                     if (44 != var4) {
-                      if (-46 == var4) {
+                      if (-46 == (var4 ^ -1)) {
                         if (!((cm) this).field_B.b((byte) 71)) {
                           break L0;
                         } else {
-                          if (la.field_a < te.field_p[0] - 1) {
+                          if ((la.field_a ^ -1) > (te.field_p[0] - 1 ^ -1)) {
                             la.field_a = la.field_a + 1;
                             kn.c(param0 ^ -16473);
                             break L0;
@@ -383,7 +383,7 @@ final class cm extends ob {
           if (param0 < -62) {
             break L1;
           } else {
-            int discarded$1 = ((cm) this).d(4, 111);
+            int discarded$7 = ((cm) this).d(4, 111);
             break L1;
           }
         }
@@ -393,10 +393,12 @@ final class cm extends ob {
         bm.field_e.field_F = rm.field_g;
         bm.field_e.field_Kb = ln.field_s;
         nm.field_a.a(-114, bm.field_e);
-        cj.field_V = u.a((byte) 68, 10, 55, false, 28);
-        bm.field_e.a(-102, u.a((byte) 68, 10, 55, false, 28));
-        we.field_f = u.a((byte) 120, 210, 55, true, 27);
-        bm.field_e.a(122, u.a((byte) 120, 210, 55, true, 27));
+        vh dupTemp$8 = u.a((byte) 68, 10, 55, false, 28);
+        cj.field_V = dupTemp$8;
+        bm.field_e.a(-102, dupTemp$8);
+        vh dupTemp$9 = u.a((byte) 120, 210, 55, true, 27);
+        we.field_f = dupTemp$9;
+        bm.field_e.a(122, dupTemp$9);
         va.a(false, bm.field_e, cj.field_V);
         va.a(false, bm.field_e, we.field_f);
         jq.field_f = new vh(-1L, (vh) null, 0, 0, 160, 150, (String) null);
@@ -416,10 +418,12 @@ final class cm extends ob {
         qk.field_f.field_F = mp.field_N;
         al.field_v.a(-106, qk.field_f);
         va.a(false, al.field_v, qk.field_f);
-        tn.field_w = u.a((byte) 67, 100, 10, false, 64);
-        al.field_v.a(114, u.a((byte) 67, 100, 10, false, 64));
-        ih.field_e = u.a((byte) 112, 235, 10, true, 63);
-        al.field_v.a(33, u.a((byte) 112, 235, 10, true, 63));
+        vh dupTemp$10 = u.a((byte) 67, 100, 10, false, 64);
+        tn.field_w = dupTemp$10;
+        al.field_v.a(114, dupTemp$10);
+        vh dupTemp$11 = u.a((byte) 112, 235, 10, true, 63);
+        ih.field_e = dupTemp$11;
+        al.field_v.a(33, dupTemp$11);
         va.a(false, al.field_v, tn.field_w);
         va.a(false, al.field_v, ih.field_e);
         rj.c((byte) -45);
@@ -436,10 +440,12 @@ final class cm extends ob {
         db.field_Nb.field_F = mp.field_N;
         db.field_Nb.field_cb = 1;
         hg.field_c.a(49, db.field_Nb);
-        tk.field_f = u.a((byte) 102, tn.field_w.field_qb, tn.field_w.field_eb, false, 45);
-        hg.field_c.a(112, u.a((byte) 102, tn.field_w.field_qb, tn.field_w.field_eb, false, 45));
-        kb.field_i = u.a((byte) 124, ih.field_e.field_qb, tn.field_w.field_eb, true, 44);
-        hg.field_c.a(84, u.a((byte) 124, ih.field_e.field_qb, tn.field_w.field_eb, true, 44));
+        vh dupTemp$12 = u.a((byte) 102, tn.field_w.field_qb, tn.field_w.field_eb, false, 45);
+        tk.field_f = dupTemp$12;
+        hg.field_c.a(112, dupTemp$12);
+        vh dupTemp$13 = u.a((byte) 124, ih.field_e.field_qb, tn.field_w.field_eb, true, 44);
+        kb.field_i = dupTemp$13;
+        hg.field_c.a(84, dupTemp$13);
         va.a(false, hg.field_c, tk.field_f);
         va.a(false, hg.field_c, kb.field_i);
         kn.c(13);

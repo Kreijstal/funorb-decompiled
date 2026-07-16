@@ -110,7 +110,7 @@ final class eb {
     }
 
     final q b(byte param0) {
-        q var2_ref = null;
+        q var2_ref_q = null;
         int var2 = 0;
         int var4 = 0;
         q var5 = null;
@@ -120,8 +120,9 @@ final class eb {
           var2 = 33 % ((-56 - param0) / 49);
           L0: while (true) {
             if (((eb) this).field_d > ((eb) this).field_e) {
+              int fieldTemp$7 = ((eb) this).field_e;
               ((eb) this).field_e = ((eb) this).field_e + 1;
-              var6 = ((eb) this).field_b[((eb) this).field_e].field_e;
+              var6 = ((eb) this).field_b[fieldTemp$7].field_e;
               if (((eb) this).field_b[-1 + ((eb) this).field_e] != var6) {
                 ((eb) this).field_a = var6.field_e;
                 return var6;
@@ -137,8 +138,9 @@ final class eb {
             var2 = 33 % ((-56 - param0) / 49);
             L1: while (true) {
               if (((eb) this).field_d > ((eb) this).field_e) {
+                int fieldTemp$8 = ((eb) this).field_e;
                 ((eb) this).field_e = ((eb) this).field_e + 1;
-                var5 = ((eb) this).field_b[((eb) this).field_e].field_e;
+                var5 = ((eb) this).field_b[fieldTemp$8].field_e;
                 if (((eb) this).field_b[-1 + ((eb) this).field_e] != var5) {
                   ((eb) this).field_a = var5.field_e;
                   return var5;
@@ -150,9 +152,9 @@ final class eb {
               }
             }
           } else {
-            var2_ref = ((eb) this).field_a;
-            ((eb) this).field_a = var2_ref.field_e;
-            return var2_ref;
+            var2_ref_q = ((eb) this).field_a;
+            ((eb) this).field_a = var2_ref_q.field_e;
+            return var2_ref_q;
           }
         }
     }
@@ -172,8 +174,9 @@ final class eb {
         ((eb) this).field_b = new q[param0];
         ((eb) this).field_d = param0;
         for (var2 = 0; param0 > var2; var2++) {
-            var3 = new q();
-            ((eb) this).field_b[var2] = new q();
+            q dupTemp$0 = new q();
+            var3 = dupTemp$0;
+            ((eb) this).field_b[var2] = dupTemp$0;
             var3.field_e = var3;
             var3.field_h = var3;
         }

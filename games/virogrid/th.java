@@ -106,178 +106,55 @@ final class th extends wb {
         int var2 = 0;
         Throwable var3 = null;
         int var4 = 0;
-        int statePc = 0;
-        Throwable caughtException = null;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    var4 = Virogrid.field_F ? 1 : 0;
-                    var1 = (Object) (Object) w.field_L;
-                    // monitorenter w.field_L
-                    statePc = 1;
-                    continue stateLoop;
-                }
-                case 1: {
-                    try {
-                        ph.field_h = re.field_l;
-                        um.field_Fb = um.field_Fb + 1;
-                        if (ch.field_f >= 0) {
-                            statePc = 6;
-                        } else {
-                            statePc = 2;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_1) {
-                        caughtException = stateCaught_1;
-                        statePc = 12;
-                        continue stateLoop;
-                    }
-                }
-                case 2: {
-                    try {
-                        var2 = 0;
-                        statePc = 3;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_2) {
-                        caughtException = stateCaught_2;
-                        statePc = 12;
-                        continue stateLoop;
-                    }
-                }
-                case 3: {
-                    try {
-                        if (112 <= var2) {
-                            statePc = 5;
-                        } else {
-                            statePc = 4;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_3) {
-                        caughtException = stateCaught_3;
-                        statePc = 12;
-                        continue stateLoop;
-                    }
-                }
-                case 4: {
-                    try {
-                        dc.field_Y[var2] = false;
-                        var2++;
-                        statePc = 3;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_4) {
-                        caughtException = stateCaught_4;
-                        statePc = 12;
-                        continue stateLoop;
-                    }
-                }
-                case 5: {
-                    try {
-                        ch.field_f = bf.field_i;
-                        statePc = 10;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_5) {
-                        caughtException = stateCaught_5;
-                        statePc = 12;
-                        continue stateLoop;
-                    }
-                }
-                case 6: {
-                    try {
-                        if (ch.field_f == bf.field_i) {
-                            statePc = 10;
-                        } else {
-                            statePc = 7;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_6) {
-                        caughtException = stateCaught_6;
-                        statePc = 12;
-                        continue stateLoop;
-                    }
-                }
-                case 7: {
-                    try {
-                        var2 = ab.field_H[bf.field_i];
-                        bf.field_i = bf.field_i - -1 & 127;
-                        if ((var2 ^ -1) > -1) {
-                            statePc = 9;
-                        } else {
-                            statePc = 8;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_7) {
-                        caughtException = stateCaught_7;
-                        statePc = 12;
-                        continue stateLoop;
-                    }
-                }
-                case 8: {
-                    try {
-                        dc.field_Y[var2] = true;
-                        statePc = 6;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_8) {
-                        caughtException = stateCaught_8;
-                        statePc = 12;
-                        continue stateLoop;
-                    }
-                }
-                case 9: {
-                    try {
-                        dc.field_Y[var2 ^ -1] = false;
-                        statePc = 6;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_9) {
-                        caughtException = stateCaught_9;
-                        statePc = 12;
-                        continue stateLoop;
-                    }
-                }
-                case 10: {
-                    try {
-                        re.field_l = hh.field_e;
-                        // monitorexit var1
-                        statePc = 14;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_10) {
-                        caughtException = stateCaught_10;
-                        statePc = 12;
-                        continue stateLoop;
-                    }
-                }
-                case 12: {
-                    try {
-                        var3 = caughtException;
-                        // monitorexit var1
-                        statePc = 13;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_12) {
-                        caughtException = stateCaught_12;
-                        statePc = 12;
-                        continue stateLoop;
-                    }
-                }
-                case 13: {
-                    throw (RuntimeException) (Object) var3;
-                }
-                case 14: {
-                    if (param0 == 112) {
-                        statePc = 16;
+        Throwable decompiledCaughtException = null;
+        var4 = Virogrid.field_F ? 1 : 0;
+        var1 = (Object) (Object) w.field_L;
+        synchronized (var1) {
+          L0: {
+            L1: {
+              ph.field_h = re.field_l;
+              um.field_Fb = um.field_Fb + 1;
+              if (ch.field_f >= 0) {
+                L2: while (true) {
+                  if (ch.field_f == bf.field_i) {
+                    break L1;
+                  } else {
+                    var2 = ab.field_H[bf.field_i];
+                    bf.field_i = bf.field_i - -1 & 127;
+                    if ((var2 ^ -1) > -1) {
+                      dc.field_Y[var2 ^ -1] = false;
+                      continue L2;
                     } else {
-                        statePc = 15;
+                      dc.field_Y[var2] = true;
+                      continue L2;
                     }
-                    continue stateLoop;
+                  }
                 }
-                case 15: {
-                    field_z = 45;
-                    statePc = 16;
-                    continue stateLoop;
+              } else {
+                var2 = 0;
+                L3: while (true) {
+                  if (112 <= var2) {
+                    ch.field_f = bf.field_i;
+                    break L1;
+                  } else {
+                    dc.field_Y[var2] = false;
+                    var2++;
+                    continue L3;
+                  }
                 }
-                case 16: {
-                    return;
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
+              }
             }
+            re.field_l = hh.field_e;
+            break L0;
+          }
+        }
+        L4: {
+          if (param0 == 112) {
+            break L4;
+          } else {
+            field_z = 45;
+            break L4;
+          }
         }
     }
 
@@ -288,13 +165,13 @@ final class th extends wb {
           if (-1 < (param3 ^ -1)) {
             break L0;
           } else {
-            if (param3 < -12) {
+            if ((param3 ^ -1) < -12) {
               break L0;
             } else {
-              if (-2 > param2) {
+              if (-2 < (param2 ^ -1)) {
                 return false;
               } else {
-                if (kb.a(false, param1, param3) >= param2) {
+                if ((kb.a(false, param1, param3) ^ -1) <= (param2 ^ -1)) {
                   return true;
                 } else {
                   return false;

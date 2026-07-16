@@ -166,27 +166,33 @@ abstract class tj extends ug {
                                             break L3;
                                           } else {
                                             try {
-                                              var18 = (CharSequence) (Object) var15.substring(4);
-                                              var16_int = gf.a(10, var18);
-                                              var4 = var4 + ((tj) this).field_B[var16_int].field_a;
-                                              var10 = 0;
+                                              L4: {
+                                                var18 = (CharSequence) (Object) var15.substring(4);
+                                                var16_int = gf.a(10, var18);
+                                                var4 = var4 + ((tj) this).field_B[var16_int].field_a;
+                                                var10 = 0;
+                                                break L4;
+                                              }
                                             } catch (java.lang.Exception decompiledCaughtParameter0) {
                                               decompiledCaughtException = decompiledCaughtParameter0;
-                                              var16 = (Exception) (Object) decompiledCaughtException;
+                                              L5: {
+                                                var16 = (Exception) (Object) decompiledCaughtException;
+                                                break L5;
+                                              }
                                             }
                                             break L3;
                                           }
                                         } else {
-                                          L4: {
+                                          L6: {
                                             var4 = var4 + ((tj) this).a('®');
                                             if (((tj) this).field_t == null) {
-                                              break L4;
+                                              break L6;
                                             } else {
                                               if (var10 == 0) {
-                                                break L4;
+                                                break L6;
                                               } else {
                                                 var4 = var4 + ((tj) this).field_t[(var10 << 8) + 174];
-                                                break L4;
+                                                break L6;
                                               }
                                             }
                                           }
@@ -194,16 +200,16 @@ abstract class tj extends ug {
                                           break L3;
                                         }
                                       } else {
-                                        L5: {
+                                        L7: {
                                           var4 = var4 + ((tj) this).a('©');
                                           if (((tj) this).field_t == null) {
-                                            break L5;
+                                            break L7;
                                           } else {
                                             if (var10 == 0) {
-                                              break L5;
+                                              break L7;
                                             } else {
                                               var4 = var4 + ((tj) this).field_t[(var10 << 8) + 169];
-                                              break L5;
+                                              break L7;
                                             }
                                           }
                                         }
@@ -211,16 +217,16 @@ abstract class tj extends ug {
                                         break L3;
                                       }
                                     } else {
-                                      L6: {
+                                      L8: {
                                         var4 = var4 + ((tj) this).a('€');
                                         if (((tj) this).field_t == null) {
-                                          break L6;
+                                          break L8;
                                         } else {
                                           if (var10 == 0) {
-                                            break L6;
+                                            break L8;
                                           } else {
                                             var4 = var4 + ((tj) this).field_t[(var10 << 8) + 128];
-                                            break L6;
+                                            break L8;
                                           }
                                         }
                                       }
@@ -228,16 +234,16 @@ abstract class tj extends ug {
                                       break L3;
                                     }
                                   } else {
-                                    L7: {
+                                    L9: {
                                       var4 = var4 + ((tj) this).a('×');
                                       if (((tj) this).field_t == null) {
-                                        break L7;
+                                        break L9;
                                       } else {
                                         if (var10 == 0) {
-                                          break L7;
+                                          break L9;
                                         } else {
                                           var4 = var4 + ((tj) this).field_t[(var10 << 8) + 215];
-                                          break L7;
+                                          break L9;
                                         }
                                       }
                                     }
@@ -245,16 +251,16 @@ abstract class tj extends ug {
                                     break L3;
                                   }
                                 } else {
-                                  L8: {
+                                  L10: {
                                     var4 = var4 + ((tj) this).a('­');
                                     if (((tj) this).field_t == null) {
-                                      break L8;
+                                      break L10;
                                     } else {
                                       if (var10 == 0) {
-                                        break L8;
+                                        break L10;
                                       } else {
                                         var4 = var4 + ((tj) this).field_t[(var10 << 8) + 173];
-                                        break L8;
+                                        break L10;
                                       }
                                     }
                                   }
@@ -262,16 +268,16 @@ abstract class tj extends ug {
                                   break L3;
                                 }
                               } else {
-                                L9: {
+                                L11: {
                                   var4 = var4 + ((tj) this).a(' ');
                                   if (((tj) this).field_t == null) {
-                                    break L9;
+                                    break L11;
                                   } else {
                                     if (var10 == 0) {
-                                      break L9;
+                                      break L11;
                                     } else {
                                       var4 = var4 + ((tj) this).field_t[(var10 << 8) + 160];
-                                      break L9;
+                                      break L11;
                                     }
                                   }
                                 }
@@ -279,16 +285,16 @@ abstract class tj extends ug {
                                 break L3;
                               }
                             } else {
-                              L10: {
+                              L12: {
                                 var4 = var4 + ((tj) this).a('>');
                                 if (((tj) this).field_t == null) {
-                                  break L10;
+                                  break L12;
                                 } else {
                                   if (var10 == 0) {
-                                    break L10;
+                                    break L12;
                                   } else {
                                     var4 = var4 + ((tj) this).field_t[(var10 << 8) + 62];
-                                    break L10;
+                                    break L12;
                                   }
                                 }
                               }
@@ -296,16 +302,16 @@ abstract class tj extends ug {
                               break L3;
                             }
                           } else {
-                            L11: {
+                            L13: {
                               var4 = var4 + ((tj) this).a('<');
                               if (((tj) this).field_t == null) {
-                                break L11;
+                                break L13;
                               } else {
                                 if (var10 == 0) {
-                                  break L11;
+                                  break L13;
                                 } else {
                                   var4 = var4 + ((tj) this).field_t[(var10 << 8) + 60];
-                                  break L11;
+                                  break L13;
                                 }
                               }
                             }
@@ -328,44 +334,44 @@ abstract class tj extends ug {
                   }
                 }
                 if (var9 == -1) {
-                  L12: {
+                  L14: {
                     if (var14 == 0) {
-                      break L12;
+                      break L14;
                     } else {
-                      L13: {
+                      L15: {
                         StringBuilder discarded$9 = field_z.append(var14);
                         var14 = (char)(lf.a((char) var14, (byte) 104) & 255);
                         var4 = var4 + ((tj) this).field_q[var14];
                         if (((tj) this).field_t == null) {
-                          break L13;
+                          break L15;
                         } else {
                           if (var10 == 0) {
-                            break L13;
+                            break L15;
                           } else {
                             var4 = var4 + ((tj) this).field_t[(var10 << 8) + var14];
-                            break L13;
+                            break L15;
                           }
                         }
                       }
                       var10 = var14;
-                      break L12;
+                      break L14;
                     }
                   }
-                  L14: {
+                  L16: {
                     if (var14 != 32) {
-                      break L14;
+                      break L16;
                     } else {
                       var6 = field_z.length();
                       var7 = var4;
                       var8 = 1;
-                      break L14;
+                      break L16;
                     }
                   }
-                  L15: {
+                  L17: {
                     if (param1 == null) {
-                      break L15;
+                      break L17;
                     } else {
-                      L16: {
+                      L18: {
                         stackOut_65_0 = var4;
                         stackOut_65_1 = (int[]) param1;
                         stackIn_67_0 = stackOut_65_0;
@@ -379,7 +385,7 @@ abstract class tj extends ug {
                           stackIn_68_0 = stackOut_67_0;
                           stackIn_68_1 = stackOut_67_1;
                           stackIn_68_2 = stackOut_67_2;
-                          break L16;
+                          break L18;
                         } else {
                           stackOut_66_0 = stackIn_66_0;
                           stackOut_66_1 = (int[]) (Object) stackIn_66_1;
@@ -387,14 +393,14 @@ abstract class tj extends ug {
                           stackIn_68_0 = stackOut_66_0;
                           stackIn_68_1 = stackOut_66_1;
                           stackIn_68_2 = stackOut_66_2;
-                          break L16;
+                          break L18;
                         }
                       }
                       if (stackIn_68_0 <= stackIn_68_1[stackIn_68_2]) {
-                        break L15;
+                        break L17;
                       } else {
                         if (var6 < 0) {
-                          break L15;
+                          break L17;
                         } else {
                           param2[var11] = field_z.toString().substring(var5, var6 - var8);
                           var11++;
@@ -402,7 +408,7 @@ abstract class tj extends ug {
                           var6 = -1;
                           var4 = var4 - var7;
                           var10 = 0;
-                          break L15;
+                          break L17;
                         }
                       }
                     }
@@ -582,86 +588,92 @@ abstract class tj extends ug {
         Throwable decompiledCaughtException = null;
         try {
           L0: {
-            if (!param0.startsWith("col=")) {
-              if (!param0.equals((Object) (Object) "/col")) {
-                if (!param0.startsWith("trans=")) {
-                  if (!param0.equals((Object) (Object) "/trans")) {
-                    if (!param0.startsWith("str=")) {
-                      if (!param0.equals((Object) (Object) "str")) {
-                        if (!param0.equals((Object) (Object) "/str")) {
-                          if (!param0.startsWith("u=")) {
-                            if (!param0.equals((Object) (Object) "u")) {
-                              if (!param0.equals((Object) (Object) "/u")) {
-                                if (!param0.startsWith("shad=")) {
-                                  if (!param0.equals((Object) (Object) "shad")) {
-                                    if (!param0.equals((Object) (Object) "/shad")) {
-                                      if (!param0.equals((Object) (Object) "br")) {
-                                        break L0;
+            L1: {
+              if (!param0.startsWith("col=")) {
+                if (!param0.equals((Object) (Object) "/col")) {
+                  if (!param0.startsWith("trans=")) {
+                    if (!param0.equals((Object) (Object) "/trans")) {
+                      if (!param0.startsWith("str=")) {
+                        if (!param0.equals((Object) (Object) "str")) {
+                          if (!param0.equals((Object) (Object) "/str")) {
+                            if (!param0.startsWith("u=")) {
+                              if (!param0.equals((Object) (Object) "u")) {
+                                if (!param0.equals((Object) (Object) "/u")) {
+                                  if (!param0.startsWith("shad=")) {
+                                    if (!param0.equals((Object) (Object) "shad")) {
+                                      if (!param0.equals((Object) (Object) "/shad")) {
+                                        if (!param0.equals((Object) (Object) "br")) {
+                                          break L1;
+                                        } else {
+                                          this.a(field_I, field_D, field_r);
+                                          break L1;
+                                        }
                                       } else {
-                                        this.a(field_I, field_D, field_r);
-                                        break L0;
+                                        field_v = field_D;
+                                        break L1;
                                       }
                                     } else {
-                                      field_v = field_D;
-                                      break L0;
+                                      field_v = 0;
+                                      break L1;
                                     }
                                   } else {
-                                    field_v = 0;
-                                    break L0;
+                                    var7 = (CharSequence) (Object) param0.substring(5);
+                                    field_v = wh.a(1, var7, 16);
+                                    break L1;
                                   }
                                 } else {
-                                  var7 = (CharSequence) (Object) param0.substring(5);
-                                  field_v = wh.a(1, var7, 16);
-                                  break L0;
+                                  field_w = -1;
+                                  break L1;
                                 }
                               } else {
-                                field_w = -1;
-                                break L0;
+                                field_w = 0;
+                                break L1;
                               }
                             } else {
-                              field_w = 0;
-                              break L0;
+                              var6 = (CharSequence) (Object) param0.substring(2);
+                              field_w = wh.a(1, var6, 16);
+                              break L1;
                             }
                           } else {
-                            var6 = (CharSequence) (Object) param0.substring(2);
-                            field_w = wh.a(1, var6, 16);
-                            break L0;
+                            field_C = -1;
+                            break L1;
                           }
                         } else {
-                          field_C = -1;
-                          break L0;
+                          field_C = 8388608;
+                          break L1;
                         }
                       } else {
-                        field_C = 8388608;
-                        break L0;
+                        var5 = (CharSequence) (Object) param0.substring(4);
+                        field_C = wh.a(1, var5, 16);
+                        break L1;
                       }
                     } else {
-                      var5 = (CharSequence) (Object) param0.substring(4);
-                      field_C = wh.a(1, var5, 16);
-                      break L0;
+                      field_u = field_r;
+                      break L1;
                     }
                   } else {
-                    field_u = field_r;
-                    break L0;
+                    var4 = (CharSequence) (Object) param0.substring(6);
+                    field_u = gf.a(10, var4);
+                    break L1;
                   }
                 } else {
-                  var4 = (CharSequence) (Object) param0.substring(6);
-                  field_u = gf.a(10, var4);
-                  break L0;
+                  field_J = field_I;
+                  break L1;
                 }
               } else {
-                field_J = field_I;
-                break L0;
+                var3 = (CharSequence) (Object) param0.substring(4);
+                field_J = wh.a(1, var3, 16);
+                break L1;
               }
-            } else {
-              var3 = (CharSequence) (Object) param0.substring(4);
-              field_J = wh.a(1, var3, 16);
-              break L0;
             }
+            break L0;
           }
         } catch (java.lang.Exception decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          var2 = (Exception) (Object) decompiledCaughtException;
+          L2: {
+            var2 = (Exception) (Object) decompiledCaughtException;
+            break L2;
+          }
         }
     }
 
@@ -740,15 +752,21 @@ abstract class tj extends ug {
                                     if (!var8.equals((Object) (Object) "reg")) {
                                       if (var8.startsWith("img=")) {
                                         try {
-                                          var10 = (CharSequence) (Object) var8.substring(4);
-                                          var9_int = gf.a(10, var10);
-                                          var4 = var4 + ((tj) this).field_B[var9_int].field_a;
-                                          var3 = 0;
-                                          var6++;
+                                          L2: {
+                                            var10 = (CharSequence) (Object) var8.substring(4);
+                                            var9_int = gf.a(10, var10);
+                                            var4 = var4 + ((tj) this).field_B[var9_int].field_a;
+                                            var3 = 0;
+                                            var6++;
+                                            break L2;
+                                          }
                                         } catch (java.lang.Exception decompiledCaughtParameter0) {
                                           decompiledCaughtException = decompiledCaughtParameter0;
-                                          var9 = (Exception) (Object) decompiledCaughtException;
-                                          var6++;
+                                          L3: {
+                                            var9 = (Exception) (Object) decompiledCaughtException;
+                                            var6++;
+                                            break L3;
+                                          }
                                         }
                                         continue L0;
                                       } else {
@@ -791,17 +809,17 @@ abstract class tj extends ug {
                   }
                 }
                 if (var2 == -1) {
-                  L2: {
+                  L4: {
                     var7 = (char)(lf.a((char) var7, (byte) -125) & 255);
                     var4 = var4 + ((tj) this).field_q[var7];
                     if (((tj) this).field_t == null) {
-                      break L2;
+                      break L4;
                     } else {
                       if (var3 == 0) {
-                        break L2;
+                        break L4;
                       } else {
                         var4 = var4 + ((tj) this).field_t[(var3 << 8) + var7];
-                        break L2;
+                        break L4;
                       }
                     }
                   }
@@ -948,8 +966,9 @@ abstract class tj extends ug {
                                     var7++;
                                     continue L5;
                                   } else {
+                                    int incrementValue$5 = var2;
                                     var2++;
-                                    var8 = (byte)(var8 + param0[var2]);
+                                    var8 = (byte)(var8 + param0[incrementValue$5]);
                                     var24[var7][var9] = (byte)var8;
                                     var9++;
                                     continue L8;
@@ -966,8 +985,9 @@ abstract class tj extends ug {
                                 var6_int++;
                                 continue L4;
                               } else {
+                                int incrementValue$6 = var2;
                                 var2++;
-                                var7 = (byte)(var7 + param0[var2]);
+                                var7 = (byte)(var7 + param0[incrementValue$6]);
                                 var23[var6_int][var8] = (byte)var7;
                                 var8++;
                                 continue L9;
@@ -976,22 +996,25 @@ abstract class tj extends ug {
                           }
                         }
                       } else {
+                        int incrementValue$7 = var2;
                         var2++;
-                        var4[var5_int] = param0[var2] & 255;
+                        var4[var5_int] = param0[incrementValue$7] & 255;
                         var5_int++;
                         continue L3;
                       }
                     }
                   } else {
+                    int incrementValue$8 = var2;
                     var2++;
-                    var3[var5_int] = param0[var2] & 255;
+                    var3[var5_int] = param0[incrementValue$8] & 255;
                     var5_int++;
                     continue L2;
                   }
                 }
               } else {
+                int incrementValue$9 = var2;
                 var2++;
-                ((tj) this).field_q[var3_int] = param0[var2] & 255;
+                ((tj) this).field_q[var3_int] = param0[incrementValue$9] & 255;
                 var3_int++;
                 continue L1;
               }
@@ -1032,7 +1055,7 @@ abstract class tj extends ug {
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
-        String var9_ref = null;
+        String var9_ref_String = null;
         int var9 = 0;
         Exception var10_ref_Exception = null;
         int var10 = 0;
@@ -1041,7 +1064,6 @@ abstract class tj extends ug {
         int var12 = 0;
         CharSequence var13 = null;
         int stackIn_26_0 = 0;
-        int decompiledRegionSelector0 = 0;
         Throwable decompiledCaughtException = null;
         int stackOut_25_0 = 0;
         int stackOut_24_0 = 0;
@@ -1063,64 +1085,60 @@ abstract class tj extends ug {
                   if (var4 == -1) {
                     break L1;
                   } else {
-                    var9_ref = param0.substring(var4 + 1, var7).toLowerCase();
+                    var9_ref_String = param0.substring(var4 + 1, var7).toLowerCase();
                     var4 = -1;
-                    if (!var9_ref.equals((Object) (Object) "lt")) {
-                      if (!var9_ref.equals((Object) (Object) "gt")) {
-                        if (!var9_ref.equals((Object) (Object) "nbsp")) {
-                          if (!var9_ref.equals((Object) (Object) "shy")) {
-                            if (!var9_ref.equals((Object) (Object) "times")) {
-                              if (!var9_ref.equals((Object) (Object) "euro")) {
-                                if (!var9_ref.equals((Object) (Object) "copy")) {
-                                  if (!var9_ref.equals((Object) (Object) "reg")) {
-                                    if (!var9_ref.startsWith("img=")) {
-                                      this.a(var9_ref);
+                    if (!var9_ref_String.equals((Object) (Object) "lt")) {
+                      if (!var9_ref_String.equals((Object) (Object) "gt")) {
+                        if (!var9_ref_String.equals((Object) (Object) "nbsp")) {
+                          if (!var9_ref_String.equals((Object) (Object) "shy")) {
+                            if (!var9_ref_String.equals((Object) (Object) "times")) {
+                              if (!var9_ref_String.equals((Object) (Object) "euro")) {
+                                if (!var9_ref_String.equals((Object) (Object) "copy")) {
+                                  if (!var9_ref_String.equals((Object) (Object) "reg")) {
+                                    if (!var9_ref_String.startsWith("img=")) {
+                                      this.a(var9_ref_String);
                                       var7++;
                                       continue L0;
                                     } else {
                                       try {
-                                        var13 = (CharSequence) (Object) var9_ref.substring(4);
-                                        var10 = gf.a(10, var13);
-                                        var11_ref_li = ((tj) this).field_B[var10];
-                                        if (((tj) this).field_o == null) {
-                                          decompiledRegionSelector0 = 0;
-                                        } else {
-                                          decompiledRegionSelector0 = 1;
+                                        L2: {
+                                          L3: {
+                                            var13 = (CharSequence) (Object) var9_ref_String.substring(4);
+                                            var10 = gf.a(10, var13);
+                                            var11_ref_li = ((tj) this).field_B[var10];
+                                            if (((tj) this).field_o == null) {
+                                              stackOut_25_0 = var11_ref_li.field_d;
+                                              stackIn_26_0 = stackOut_25_0;
+                                              break L3;
+                                            } else {
+                                              stackOut_24_0 = ((tj) this).field_o[var10];
+                                              stackIn_26_0 = stackOut_24_0;
+                                              break L3;
+                                            }
+                                          }
+                                          L4: {
+                                            var12 = stackIn_26_0;
+                                            if (field_u != 256) {
+                                              var11_ref_li.a(param1, param2 + ((tj) this).field_p - var12, field_u);
+                                              break L4;
+                                            } else {
+                                              var11_ref_li.a(param1, param2 + ((tj) this).field_p - var12);
+                                              break L4;
+                                            }
+                                          }
+                                          param1 = param1 + var11_ref_li.field_a;
+                                          var5 = 0;
+                                          var7++;
+                                          break L2;
                                         }
                                       } catch (java.lang.Exception decompiledCaughtParameter0) {
                                         decompiledCaughtException = decompiledCaughtParameter0;
-                                        var10_ref_Exception = (Exception) (Object) decompiledCaughtException;
-                                        var7++;
-                                        decompiledRegionSelector0 = 2;
-                                      }
-                                      L2: {
-                                        if (decompiledRegionSelector0 == 0) {
-                                          stackOut_25_0 = var11_ref_li.field_d;
-                                          stackIn_26_0 = stackOut_25_0;
-                                          break L2;
-                                        } else {
-                                          if (decompiledRegionSelector0 == 1) {
-                                            stackOut_24_0 = ((tj) this).field_o[var10];
-                                            stackIn_26_0 = stackOut_24_0;
-                                            break L2;
-                                          } else {
-                                            continue L0;
-                                          }
+                                        L5: {
+                                          var10_ref_Exception = (Exception) (Object) decompiledCaughtException;
+                                          var7++;
+                                          break L5;
                                         }
                                       }
-                                      L3: {
-                                        var12 = stackIn_26_0;
-                                        if (field_u != 256) {
-                                          var11_ref_li.a(param1, param2 + ((tj) this).field_p - var12, field_u);
-                                          break L3;
-                                        } else {
-                                          var11_ref_li.a(param1, param2 + ((tj) this).field_p - var12);
-                                          break L3;
-                                        }
-                                      }
-                                      param1 = param1 + var11_ref_li.field_a;
-                                      var5 = 0;
-                                      var7++;
                                       continue L0;
                                     }
                                   } else {
@@ -1159,73 +1177,73 @@ abstract class tj extends ug {
                 }
               }
               if (var4 == -1) {
-                L4: {
+                L6: {
                   var8 = (char)(lf.a((char) var8, (byte) -87) & 255);
                   if (((tj) this).field_t == null) {
-                    break L4;
+                    break L6;
                   } else {
                     if (var5 == 0) {
-                      break L4;
+                      break L6;
                     } else {
                       param1 = param1 + ((tj) this).field_t[(var5 << 8) + var8];
-                      break L4;
+                      break L6;
                     }
                   }
                 }
-                L5: {
+                L7: {
                   var9 = ((tj) this).field_A[var8];
                   var10 = ((tj) this).field_y[var8];
                   var11 = param1;
                   if (var8 == 32) {
                     if (field_m <= 0) {
-                      break L5;
+                      break L7;
                     } else {
                       field_G = field_G + field_m;
                       param1 = param1 + (field_G >> 8);
                       field_G = field_G & 255;
-                      break L5;
+                      break L7;
                     }
                   } else {
                     if (field_u != 256) {
-                      L6: {
+                      L8: {
                         if (field_v == -1) {
-                          break L6;
+                          break L8;
                         } else {
                           ((tj) this).a(var8, param1 + ((tj) this).field_E[var8] + 1, param2 + ((tj) this).field_H[var8] + 1, var9, var10, field_v, field_u, true);
-                          break L6;
+                          break L8;
                         }
                       }
                       ((tj) this).a(var8, param1 + ((tj) this).field_E[var8], param2 + ((tj) this).field_H[var8], var9, var10, field_J, field_u, false);
-                      break L5;
+                      break L7;
                     } else {
-                      L7: {
+                      L9: {
                         if (field_v == -1) {
-                          break L7;
+                          break L9;
                         } else {
                           ((tj) this).a(var8, param1 + ((tj) this).field_E[var8] + 1, param2 + ((tj) this).field_H[var8] + 1, var9, var10, field_v, true);
-                          break L7;
+                          break L9;
                         }
                       }
                       ((tj) this).a(var8, param1 + ((tj) this).field_E[var8], param2 + ((tj) this).field_H[var8], var9, var10, field_J, false);
-                      break L5;
+                      break L7;
                     }
                   }
                 }
-                L8: {
+                L10: {
                   param1 = param1 + ((tj) this).field_q[var8];
                   if (field_C == -1) {
-                    break L8;
+                    break L10;
                   } else {
                     na.a(var11, param2 + (int)((double)((tj) this).field_p * 0.7), param1 - var11, field_C);
-                    break L8;
+                    break L10;
                   }
                 }
-                L9: {
+                L11: {
                   if (field_w == -1) {
-                    break L9;
+                    break L11;
                   } else {
                     na.a(var11, param2 + ((tj) this).field_p + 1, param1 - var11, field_w);
-                    break L9;
+                    break L11;
                   }
                 }
                 var5 = var8;
@@ -1266,6 +1284,7 @@ abstract class tj extends ug {
             ((tj) this).field_s = ((tj) this).field_p - var6;
             ((tj) this).field_x = var7 - ((tj) this).field_p;
             ((tj) this).field_F = ((tj) this).field_p - ((tj) this).field_H[88];
+            return;
           } else {
             L1: {
               if (((tj) this).field_H[var8] >= var6) {
@@ -1345,9 +1364,11 @@ abstract class tj extends ug {
           if (var18 >= var12) {
             return -var13;
           } else {
+            int incrementValue$12 = var16;
             var16++;
+            int incrementValue$13 = var17;
             var17++;
-            var19 = var14[var16] + var15[var17];
+            var19 = var14[incrementValue$12] + var15[incrementValue$13];
             if (var19 < var13) {
               var13 = var19;
               var18++;

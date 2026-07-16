@@ -29,96 +29,158 @@ final class ne implements t {
         if (param0 == -24969) {
           if (!param1.field_q) {
             if (!param1.h(-84)) {
-              var6 = 2188450;
-              int discarded$3 = ((ne) this).field_e.a("<u=" + Integer.toString(var6, 16) + ">" + param1.field_s + "</u>", param4 - -param1.field_p, param1.field_m + param2, param1.field_x, param1.field_u, var6, -1, ((ne) this).field_c, ((ne) this).field_f, ((ne) this).field_e.field_u + ((ne) this).field_e.field_G);
-              if (param1.h(-95)) {
-                L0: {
-                  var7 = ((ne) this).field_e.a(param1.field_s);
-                  var8 = ((ne) this).field_e.field_u + ((ne) this).field_e.field_G;
-                  var9 = param4 - -param1.field_p;
-                  var10 = param2 + param1.field_m;
-                  if (((ne) this).field_c == -3) {
-                    var9 = var9 + (-var7 + param1.field_x);
-                    break L0;
-                  } else {
-                    if (-2 != ((ne) this).field_c) {
-                      break L0;
-                    } else {
-                      var9 = var9 + (-var7 + param1.field_x >> 1937472161);
-                      if (((ne) this).field_f != 2) {
-                        if (((ne) this).field_f != 1) {
-                          bc.a(var8, -28846, 4 + var7, 2 + var10, var9 - 2);
-                          return;
-                        } else {
-                          var10 = var10 + (param1.field_u - var8 >> 2132326305);
-                          bc.a(var8, -28846, 4 + var7, 2 + var10, var9 - 2);
-                          return;
-                        }
-                      } else {
-                        var10 = var10 + (param1.field_u - var8);
-                        bc.a(var8, -28846, 4 + var7, 2 + var10, var9 - 2);
-                        return;
-                      }
-                    }
-                  }
-                }
-                if (((ne) this).field_f != 2) {
-                  if (((ne) this).field_f != 1) {
-                    bc.a(var8, -28846, 4 + var7, 2 + var10, var9 - 2);
-                    return;
-                  } else {
-                    var10 = var10 + (param1.field_u - var8 >> 2132326305);
-                    bc.a(var8, -28846, 4 + var7, 2 + var10, var9 - 2);
-                    return;
-                  }
+              L0: {
+                var6 = 2188450;
+                int discarded$3 = ((ne) this).field_e.a("<u=" + Integer.toString(var6, 16) + ">" + param1.field_s + "</u>", param4 - -param1.field_p, param1.field_m + param2, param1.field_x, param1.field_u, var6, -1, ((ne) this).field_c, ((ne) this).field_f, ((ne) this).field_e.field_u + ((ne) this).field_e.field_G);
+                if (!param1.h(-95)) {
+                  break L0;
                 } else {
-                  var10 = var10 + (param1.field_u - var8);
-                  bc.a(var8, -28846, 4 + var7, 2 + var10, var9 - 2);
-                  return;
-                }
-              } else {
-                return;
-              }
-            } else {
-              var6 = 3249872;
-              int discarded$4 = ((ne) this).field_e.a("<u=" + Integer.toString(var6, 16) + ">" + param1.field_s + "</u>", param4 - -param1.field_p, param1.field_m + param2, param1.field_x, param1.field_u, var6, -1, ((ne) this).field_c, ((ne) this).field_f, ((ne) this).field_e.field_u + ((ne) this).field_e.field_G);
-              if (param1.h(-95)) {
-                L1: {
-                  var7 = ((ne) this).field_e.a(param1.field_s);
-                  var8 = ((ne) this).field_e.field_u + ((ne) this).field_e.field_G;
-                  var9 = param4 - -param1.field_p;
-                  var10 = param2 + param1.field_m;
-                  if (((ne) this).field_c == -3) {
-                    var9 = var9 + (-var7 + param1.field_x);
-                    break L1;
-                  } else {
-                    if (-2 != ((ne) this).field_c) {
+                  L1: {
+                    var7 = ((ne) this).field_e.a(param1.field_s);
+                    var8 = ((ne) this).field_e.field_u + ((ne) this).field_e.field_G;
+                    var9 = param4 - -param1.field_p;
+                    var10 = param2 + param1.field_m;
+                    if ((((ne) this).field_c ^ -1) == -3) {
+                      var9 = var9 + (-var7 + param1.field_x);
                       break L1;
                     } else {
-                      var9 = var9 + (-var7 + param1.field_x >> 1937472161);
-                      if (((ne) this).field_f != 2) {
-                        if (((ne) this).field_f != 1) {
-                          bc.a(var8, -28846, 4 + var7, 2 + var10, var9 - 2);
-                          return;
+                      if (-2 != (((ne) this).field_c ^ -1)) {
+                        break L1;
+                      } else {
+                        var9 = var9 + (-var7 + param1.field_x >> 1937472161);
+                        if (((ne) this).field_f != 2) {
+                          if (((ne) this).field_f == 1) {
+                            var10 = var10 + (param1.field_u - var8 >> 2132326305);
+                            bc.a(var8, -28846, 4 + var7, 2 + var10, var9 - 2);
+                            return;
+                          } else {
+                            bc.a(var8, -28846, 4 + var7, 2 + var10, var9 - 2);
+                            return;
+                          }
                         } else {
-                          var10 = var10 + (param1.field_u - var8 >> 2132326305);
+                          var10 = var10 + (param1.field_u - var8);
                           bc.a(var8, -28846, 4 + var7, 2 + var10, var9 - 2);
                           return;
                         }
-                      } else {
-                        var10 = var10 + (param1.field_u - var8);
-                        bc.a(var8, -28846, 4 + var7, 2 + var10, var9 - 2);
-                        return;
                       }
+                    }
+                  }
+                  if (((ne) this).field_f != 2) {
+                    if (((ne) this).field_f == 1) {
+                      var10 = var10 + (param1.field_u - var8 >> 2132326305);
+                      bc.a(var8, -28846, 4 + var7, 2 + var10, var9 - 2);
+                      break L0;
+                    } else {
+                      bc.a(var8, -28846, 4 + var7, 2 + var10, var9 - 2);
+                      return;
+                    }
+                  } else {
+                    var10 = var10 + (param1.field_u - var8);
+                    bc.a(var8, -28846, 4 + var7, 2 + var10, var9 - 2);
+                    return;
+                  }
+                }
+              }
+              return;
+            } else {
+              L2: {
+                var6 = 3249872;
+                int discarded$4 = ((ne) this).field_e.a("<u=" + Integer.toString(var6, 16) + ">" + param1.field_s + "</u>", param4 - -param1.field_p, param1.field_m + param2, param1.field_x, param1.field_u, var6, -1, ((ne) this).field_c, ((ne) this).field_f, ((ne) this).field_e.field_u + ((ne) this).field_e.field_G);
+                if (!param1.h(-95)) {
+                  break L2;
+                } else {
+                  L3: {
+                    var7 = ((ne) this).field_e.a(param1.field_s);
+                    var8 = ((ne) this).field_e.field_u + ((ne) this).field_e.field_G;
+                    var9 = param4 - -param1.field_p;
+                    var10 = param2 + param1.field_m;
+                    if ((((ne) this).field_c ^ -1) == -3) {
+                      var9 = var9 + (-var7 + param1.field_x);
+                      break L3;
+                    } else {
+                      if (-2 != (((ne) this).field_c ^ -1)) {
+                        break L3;
+                      } else {
+                        var9 = var9 + (-var7 + param1.field_x >> 1937472161);
+                        if (((ne) this).field_f != 2) {
+                          if (((ne) this).field_f == 1) {
+                            var10 = var10 + (param1.field_u - var8 >> 2132326305);
+                            bc.a(var8, -28846, 4 + var7, 2 + var10, var9 - 2);
+                            return;
+                          } else {
+                            bc.a(var8, -28846, 4 + var7, 2 + var10, var9 - 2);
+                            return;
+                          }
+                        } else {
+                          var10 = var10 + (param1.field_u - var8);
+                          bc.a(var8, -28846, 4 + var7, 2 + var10, var9 - 2);
+                          return;
+                        }
+                      }
+                    }
+                  }
+                  if (((ne) this).field_f != 2) {
+                    if (((ne) this).field_f == 1) {
+                      var10 = var10 + (param1.field_u - var8 >> 2132326305);
+                      bc.a(var8, -28846, 4 + var7, 2 + var10, var9 - 2);
+                      break L2;
+                    } else {
+                      bc.a(var8, -28846, 4 + var7, 2 + var10, var9 - 2);
+                      return;
+                    }
+                  } else {
+                    var10 = var10 + (param1.field_u - var8);
+                    bc.a(var8, -28846, 4 + var7, 2 + var10, var9 - 2);
+                    return;
+                  }
+                }
+              }
+              return;
+            }
+          } else {
+            L4: {
+              var6 = 3249872;
+              int discarded$5 = ((ne) this).field_e.a("<u=" + Integer.toString(var6, 16) + ">" + param1.field_s + "</u>", param4 - -param1.field_p, param1.field_m + param2, param1.field_x, param1.field_u, var6, -1, ((ne) this).field_c, ((ne) this).field_f, ((ne) this).field_e.field_u + ((ne) this).field_e.field_G);
+              if (!param1.h(-95)) {
+                break L4;
+              } else {
+                L5: {
+                  var7 = ((ne) this).field_e.a(param1.field_s);
+                  var8 = ((ne) this).field_e.field_u + ((ne) this).field_e.field_G;
+                  var9 = param4 - -param1.field_p;
+                  var10 = param2 + param1.field_m;
+                  if ((((ne) this).field_c ^ -1) == -3) {
+                    var9 = var9 + (-var7 + param1.field_x);
+                    break L5;
+                  } else {
+                    if (-2 != (((ne) this).field_c ^ -1)) {
+                      break L5;
+                    } else {
+                      L6: {
+                        var9 = var9 + (-var7 + param1.field_x >> 1937472161);
+                        if (((ne) this).field_f != 2) {
+                          if (((ne) this).field_f == 1) {
+                            var10 = var10 + (param1.field_u - var8 >> 2132326305);
+                            break L6;
+                          } else {
+                            break L6;
+                          }
+                        } else {
+                          var10 = var10 + (param1.field_u - var8);
+                          break L6;
+                        }
+                      }
+                      bc.a(var8, -28846, 4 + var7, 2 + var10, var9 - 2);
+                      return;
                     }
                   }
                 }
                 if (((ne) this).field_f != 2) {
-                  if (((ne) this).field_f != 1) {
-                    bc.a(var8, -28846, 4 + var7, 2 + var10, var9 - 2);
-                    return;
-                  } else {
+                  if (((ne) this).field_f == 1) {
                     var10 = var10 + (param1.field_u - var8 >> 2132326305);
+                    bc.a(var8, -28846, 4 + var7, 2 + var10, var9 - 2);
+                    break L4;
+                  } else {
                     bc.a(var8, -28846, 4 + var7, 2 + var10, var9 - 2);
                     return;
                   }
@@ -127,62 +189,9 @@ final class ne implements t {
                   bc.a(var8, -28846, 4 + var7, 2 + var10, var9 - 2);
                   return;
                 }
-              } else {
-                return;
               }
             }
-          } else {
-            var6 = 3249872;
-            int discarded$5 = ((ne) this).field_e.a("<u=" + Integer.toString(var6, 16) + ">" + param1.field_s + "</u>", param4 - -param1.field_p, param1.field_m + param2, param1.field_x, param1.field_u, var6, -1, ((ne) this).field_c, ((ne) this).field_f, ((ne) this).field_e.field_u + ((ne) this).field_e.field_G);
-            if (param1.h(-95)) {
-              L2: {
-                var7 = ((ne) this).field_e.a(param1.field_s);
-                var8 = ((ne) this).field_e.field_u + ((ne) this).field_e.field_G;
-                var9 = param4 - -param1.field_p;
-                var10 = param2 + param1.field_m;
-                if (((ne) this).field_c == -3) {
-                  var9 = var9 + (-var7 + param1.field_x);
-                  break L2;
-                } else {
-                  if (-2 != ((ne) this).field_c) {
-                    break L2;
-                  } else {
-                    L3: {
-                      var9 = var9 + (-var7 + param1.field_x >> 1937472161);
-                      if (((ne) this).field_f != 2) {
-                        if (((ne) this).field_f == 1) {
-                          var10 = var10 + (param1.field_u - var8 >> 2132326305);
-                          break L3;
-                        } else {
-                          break L3;
-                        }
-                      } else {
-                        var10 = var10 + (param1.field_u - var8);
-                        break L3;
-                      }
-                    }
-                    bc.a(var8, -28846, 4 + var7, 2 + var10, var9 - 2);
-                    return;
-                  }
-                }
-              }
-              if (((ne) this).field_f != 2) {
-                if (((ne) this).field_f != 1) {
-                  bc.a(var8, -28846, 4 + var7, 2 + var10, var9 - 2);
-                  return;
-                } else {
-                  var10 = var10 + (param1.field_u - var8 >> 2132326305);
-                  bc.a(var8, -28846, 4 + var7, 2 + var10, var9 - 2);
-                  return;
-                }
-              } else {
-                var10 = var10 + (param1.field_u - var8);
-                bc.a(var8, -28846, 4 + var7, 2 + var10, var9 - 2);
-                return;
-              }
-            } else {
-              return;
-            }
+            return;
           }
         } else {
           return;

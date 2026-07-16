@@ -123,6 +123,7 @@ final class mk extends dc implements ta {
             var11.field_w = (ol) (Object) new aj(dk.field_j, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true);
             ((mk) this).a(var11, (byte) -78);
             ((mk) this).field_db = this.a(je.field_I, (cd) this, (byte) 75);
+            return;
           } else {
             if (param1 == lb.field_a) {
               ((mk) this).field_m = ((mk) this).field_m + 30;
@@ -137,6 +138,7 @@ final class mk extends dc implements ta {
               var10.field_w = (ol) (Object) new aj(dk.field_j, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true);
               ((mk) this).a(var10, (byte) -78);
               ((mk) this).field_db = this.a(je.field_I, (cd) this, (byte) 75);
+              return;
             } else {
               var8 = new fi((String) var7, (cd) null);
               var8.field_u = 50;
@@ -146,6 +148,7 @@ final class mk extends dc implements ta {
               var8.field_w = (ol) (Object) new aj(dk.field_j, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true);
               ((mk) this).a(var8, (byte) -78);
               ((mk) this).field_db = this.a(je.field_I, (cd) this, (byte) 75);
+              return;
             }
           }
         } else {
@@ -158,6 +161,7 @@ final class mk extends dc implements ta {
           var6.field_w = (ol) (Object) new aj(dk.field_j, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true);
           ((mk) this).a(var6, (byte) -78);
           ((mk) this).field_db = this.a(je.field_I, (cd) this, (byte) 75);
+          return;
         }
     }
 

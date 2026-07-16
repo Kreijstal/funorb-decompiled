@@ -40,45 +40,24 @@ final class ob {
     final int a(byte param0) {
         int var2 = 0;
         if (param0 != -68) {
-          L0: {
             field_c = null;
             var2 = 20 * ((ob) this).field_a + ((ob) this).field_b;
-            if (-1 < (var2 ^ -1)) {
-              var2 = 0;
-              break L0;
-            } else {
-              break L0;
+            if (!(-1 >= (var2 ^ -1))) {
+                var2 = 0;
             }
-          }
-          L1: {
-            if (var2 < -300) {
-              var2 = 299;
-              break L1;
-            } else {
-              break L1;
+            if (!((var2 ^ -1) >= -300)) {
+                var2 = 299;
             }
-          }
-          return var2;
-        } else {
-          L2: {
-            var2 = 20 * ((ob) this).field_a + ((ob) this).field_b;
-            if (-1 > var2) {
-              var2 = 0;
-              break L2;
-            } else {
-              break L2;
-            }
-          }
-          L3: {
-            if ((var2 ^ -1) < -300) {
-              var2 = 299;
-              break L3;
-            } else {
-              break L3;
-            }
-          }
-          return var2;
+            return var2;
         }
+        var2 = 20 * ((ob) this).field_a + ((ob) this).field_b;
+        if (!(-1 >= (var2 ^ -1))) {
+            var2 = 0;
+        }
+        if (!((var2 ^ -1) >= -300)) {
+            var2 = 299;
+        }
+        return var2;
     }
 
     ob() {

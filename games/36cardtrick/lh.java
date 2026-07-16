@@ -168,8 +168,8 @@ final class lh {
         if (((lh) this).field_j == 0) {
             ((lh) this).field_e = tb.field_d;
         }
-        if (((lh) this).field_j == -1) {
-            if (-97 == tb.field_d) {
+        if ((((lh) this).field_j ^ -1) == -1) {
+            if (-97 == (tb.field_d ^ -1)) {
                 if (!(((lh) this).field_k > 0)) {
                     ((lh) this).field_k = ((lh) this).field_i;
                 }
@@ -272,26 +272,28 @@ final class lh {
             var2 = 0;
             L1: while (true) {
               if (var2 >= jh.field_c) {
-                ab.field_u[param1.b(2)] = ab.field_u[param1.b(2)] + 1;
+                int dupTemp$4 = param1.b(2);
+                ab.field_u[dupTemp$4] = ab.field_u[dupTemp$4] + 1;
                 var2 = 0;
                 var3 = 0;
                 L2: while (true) {
                   if (var3 >= jh.field_c) {
                     L3: {
                       jh.field_c = var2;
+                      int fieldTemp$5 = jh.field_c;
                       jh.field_c = jh.field_c + 1;
-                      me.field_b[jh.field_c] = param1;
+                      me.field_b[fieldTemp$5] = param1;
                       if (param0 == 7743) {
                         break L3;
                       } else {
-                        field_a = (de) null;
+                        field_a = null;
                         break L3;
                       }
                     }
                     return;
                   } else {
                     L4: {
-                      if (me.field_b[var3].field_k != ((vk) param1).field_k) {
+                      if (me.field_b[var3].field_k != param1.field_k) {
                         break L4;
                       } else {
                         var4 = me.field_b[var3].b(2);
@@ -304,15 +306,17 @@ final class lh {
                         }
                       }
                     }
+                    int incrementValue$6 = var2;
                     var2++;
-                    me.field_b[var2] = me.field_b[var3];
+                    me.field_b[incrementValue$6] = me.field_b[var3];
                     var3++;
                     continue L2;
                   }
                 }
               } else {
-                if (((vk) param1).field_k == me.field_b[var2].field_k) {
-                  ab.field_u[me.field_b[var2].b(2)] = ab.field_u[me.field_b[var2].b(2)] + 1;
+                if (param1.field_k == me.field_b[var2].field_k) {
+                  int dupTemp$7 = me.field_b[var2].b(2);
+                  ab.field_u[dupTemp$7] = ab.field_u[dupTemp$7] + 1;
                   var2++;
                   continue L1;
                 } else {
@@ -351,7 +355,7 @@ final class lh {
           if (param0 == -85) {
             break L0;
           } else {
-            field_a = (de) null;
+            field_a = null;
             break L0;
           }
         }

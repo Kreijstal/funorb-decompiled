@@ -36,23 +36,43 @@ final class mg {
 
     final void a(byte param0, byte[] param1, ni param2) {
         try {
-            if (param2.field_k[param2.field_i] == 31) {
-                // if_icmpne L47
-            } else {
-                throw new RuntimeException("");
+            Exception exception = null;
+            int var4 = 0;
+            Throwable decompiledCaughtException = null;
+            L0: {
+              if (param2.field_k[param2.field_i] != 31) {
+                break L0;
+              } else {
+                if (116 != (param2.field_k[param2.field_i + 1] ^ -1)) {
+                  break L0;
+                } else {
+                  L1: {
+                    if (((mg) this).field_c == null) {
+                      ((mg) this).field_c = new java.util.zip.Inflater(true);
+                      break L1;
+                    } else {
+                      break L1;
+                    }
+                  }
+                  var4 = 84 % ((-67 - param0) / 59);
+                  try {
+                    L2: {
+                      ((mg) this).field_c.setInput(param2.field_k, param2.field_i + 10, param2.field_k.length + -param2.field_i - 10 - 8);
+                      int discarded$2 = ((mg) this).field_c.inflate(param1);
+                      break L2;
+                    }
+                  } catch (java.lang.Exception decompiledCaughtParameter0) {
+                    decompiledCaughtException = decompiledCaughtParameter0;
+                    exception = (Exception) (Object) decompiledCaughtException;
+                    ((mg) this).field_c.reset();
+                    throw new RuntimeException("");
+                  }
+                  ((mg) this).field_c.reset();
+                  return;
+                }
+              }
             }
-            if (!(((mg) this).field_c != null)) {
-                ((mg) this).field_c = new java.util.zip.Inflater(true);
-            }
-            int var4 = 84 % ((-67 - param0) / 59);
-            try {
-                ((mg) this).field_c.setInput(param2.field_k, param2.field_i + 10, param2.field_k.length + -param2.field_i - 10 - 8);
-                int discarded$0 = ((mg) this).field_c.inflate(param1);
-            } catch (Exception exception) {
-                ((mg) this).field_c.reset();
-                throw new RuntimeException("");
-            }
-            ((mg) this).field_c.reset();
+            throw new RuntimeException("");
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {

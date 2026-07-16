@@ -151,6 +151,7 @@ final class jl extends wf {
         var2 = 0;
         L0: while (true) {
           if (var2 >= field_gb.length) {
+            return;
           } else {
             var3 = var2 / 96;
             var4 = -(96 * var3) + var2;

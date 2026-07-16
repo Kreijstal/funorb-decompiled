@@ -47,8 +47,9 @@ final class jk {
           var10.field_f = param1;
           var10.field_g = param3;
           var10.field_c = param0;
+          int fieldTemp$2 = ((jk) this).field_c;
           ((jk) this).field_c = ((jk) this).field_c + 1;
-          ((jk) this).field_e[((jk) this).field_c] = var8;
+          ((jk) this).field_e[fieldTemp$2] = var8;
           return;
         }
     }
@@ -104,7 +105,8 @@ final class jk {
                     var2++;
                     break L2;
                   } else {
-                    nl.field_o[cc.field_m[var2].a((byte) -82)] = nl.field_o[cc.field_m[var2].a((byte) -82)] + 1;
+                    int dupTemp$7 = cc.field_m[var2].a((byte) -82);
+                    nl.field_o[dupTemp$7] = nl.field_o[dupTemp$7] + 1;
                     var2++;
                     break L2;
                   }
@@ -117,7 +119,8 @@ final class jk {
             }
             if (param0 < -57) {
               L3: {
-                nl.field_o[param1.a((byte) -80)] = nl.field_o[param1.a((byte) -80)] + 1;
+                int dupTemp$8 = param1.a((byte) -80);
+                nl.field_o[dupTemp$8] = nl.field_o[dupTemp$8] + 1;
                 var2 = 0;
                 var3 = 0;
                 if (tb.field_E <= var3) {
@@ -138,8 +141,9 @@ final class jk {
                         }
                       }
                     }
+                    int incrementValue$9 = var2;
                     var2++;
-                    cc.field_m[var2] = cc.field_m[var3];
+                    cc.field_m[incrementValue$9] = cc.field_m[var3];
                     var3++;
                     break L4;
                   }
@@ -150,14 +154,16 @@ final class jk {
                 }
               }
               tb.field_E = var2;
+              int fieldTemp$10 = tb.field_E;
               tb.field_E = tb.field_E + 1;
-              cc.field_m[tb.field_E] = param1;
+              cc.field_m[fieldTemp$10] = param1;
               return;
             } else {
               var6 = null;
               jk.a((byte) -114, (aa) null);
               L6: {
-                nl.field_o[param1.a((byte) -80)] = nl.field_o[param1.a((byte) -80)] + 1;
+                int dupTemp$11 = param1.a((byte) -80);
+                nl.field_o[dupTemp$11] = nl.field_o[dupTemp$11] + 1;
                 var2 = 0;
                 var3 = 0;
                 if (tb.field_E <= var3) {
@@ -178,8 +184,9 @@ final class jk {
                         }
                       }
                     }
+                    int incrementValue$12 = var2;
                     var2++;
-                    cc.field_m[var2] = cc.field_m[var3];
+                    cc.field_m[incrementValue$12] = cc.field_m[var3];
                     var3++;
                     break L7;
                   }
@@ -190,8 +197,9 @@ final class jk {
                 }
               }
               tb.field_E = var2;
+              int fieldTemp$13 = tb.field_E;
               tb.field_E = tb.field_E + 1;
-              cc.field_m[tb.field_E] = param1;
+              cc.field_m[fieldTemp$13] = param1;
               return;
             }
           } else {

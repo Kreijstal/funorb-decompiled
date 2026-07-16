@@ -27,6 +27,7 @@ final class ia extends tb implements oi {
           var14.field_u = (uk) (Object) new id(de.field_c, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true);
           ((ia) this).b(4, var14);
           ((ia) this).field_P = this.a(-120, (lf) this, td.field_a);
+          return;
         } else {
           if (param1 == nb.field_K) {
             ((ia) this).field_t = ((ia) this).field_t + 10;
@@ -42,6 +43,7 @@ final class ia extends tb implements oi {
               var12.field_u = (uk) (Object) new id(de.field_c, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true);
               ((ia) this).b(4, var12);
               ((ia) this).field_P = this.a(-120, (lf) this, td.field_a);
+              return;
             } else {
               var10 = new rj(var9, (lf) null);
               var10.field_p = ((ia) this).field_p;
@@ -51,6 +53,7 @@ final class ia extends tb implements oi {
               var10.field_u = (uk) (Object) new id(de.field_c, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true);
               ((ia) this).b(4, var10);
               ((ia) this).field_P = this.a(-120, (lf) this, td.field_a);
+              return;
             }
           } else {
             if (param1 == jj.field_k) {
@@ -64,6 +67,7 @@ final class ia extends tb implements oi {
               var8.field_u = (uk) (Object) new id(de.field_c, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true);
               ((ia) this).b(4, var8);
               ((ia) this).field_P = this.a(-120, (lf) this, td.field_a);
+              return;
             } else {
               var6 = new rj((String) var5, (lf) null);
               var6.field_p = ((ia) this).field_p;
@@ -73,6 +77,7 @@ final class ia extends tb implements oi {
               var6.field_u = (uk) (Object) new id(de.field_c, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true);
               ((ia) this).b(4, var6);
               ((ia) this).field_P = this.a(-120, (lf) this, td.field_a);
+              return;
             }
           }
         }

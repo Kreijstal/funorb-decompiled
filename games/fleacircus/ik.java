@@ -74,7 +74,6 @@ final class ik extends wi {
     }
 
     final void c(int param0) {
-        String var5_ref = null;
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -109,7 +108,6 @@ final class ik extends wi {
         String stackOut_14_0 = null;
         int stackOut_17_0 = 0;
         int stackOut_16_0 = 0;
-        var5_ref = null;
         var9 = fleas.field_A ? 1 : 0;
         gb.a(ia.field_q);
         gb.a(((ik) this).field_l, ((ik) this).field_a + ((ik) this).field_D.field_N, ((ik) this).field_l - (-((ik) this).field_n + ((ik) this).field_P), ((ik) this).field_a + ((ik) this).field_d);
@@ -250,7 +248,7 @@ final class ik extends wi {
                 break L10;
               }
               L12: {
-                var5_ref = stackIn_15_0;
+                var5_ref_String = stackIn_15_0;
                 if (((ik) this).field_t[var3]) {
                   stackOut_17_0 = ((ik) this).field_Q;
                   stackIn_18_0 = stackOut_17_0;
@@ -262,7 +260,7 @@ final class ik extends wi {
                 }
               }
               var6 = stackIn_18_0;
-              ((ik) this).field_D.a(var5_ref, ((ik) this).field_l - -5, -((ik) this).field_D.field_K + (((ik) this).field_D.field_N + var2) + -((ik) this).field_S, k.field_a & var6, -1, var6 >>> ii.field_b);
+              ((ik) this).field_D.a(var5_ref_String, ((ik) this).field_l - -5, -((ik) this).field_D.field_K + (((ik) this).field_D.field_N + var2) + -((ik) this).field_S, k.field_a & var6, -1, var6 >>> ii.field_b);
               break L9;
             } else {
               break L9;
@@ -656,22 +654,30 @@ final class ik extends wi {
         int var2 = 0;
         int var3 = var5.length;
         while (var2 < var3) {
+            int incrementValue$0 = var2;
             var2++;
-            var5[var2] = 0;
+            var5[incrementValue$0] = 0;
+            int incrementValue$1 = var2;
             var2++;
-            var5[var2] = 0;
+            var5[incrementValue$1] = 0;
+            int incrementValue$2 = var2;
             var2++;
-            var5[var2] = 0;
+            var5[incrementValue$2] = 0;
+            int incrementValue$3 = var2;
             var2++;
-            var5[var2] = 0;
+            var5[incrementValue$3] = 0;
+            int incrementValue$4 = var2;
             var2++;
-            var5[var2] = 0;
+            var5[incrementValue$4] = 0;
+            int incrementValue$5 = var2;
             var2++;
-            var5[var2] = 0;
+            var5[incrementValue$5] = 0;
+            int incrementValue$6 = var2;
             var2++;
-            var5[var2] = 0;
+            var5[incrementValue$6] = 0;
+            int incrementValue$7 = var2;
             var2++;
-            var5[var2] = 0;
+            var5[incrementValue$7] = 0;
         }
     }
 

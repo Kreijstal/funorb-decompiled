@@ -142,7 +142,7 @@ abstract class qm {
               stackIn_6_0 = stackOut_5_0;
               break L0;
             } else {
-              if (-1 != var6) {
+              if (-1 != (var6 ^ -1)) {
                 stackOut_4_0 = -1;
                 stackIn_6_0 = stackOut_4_0;
                 break L0;

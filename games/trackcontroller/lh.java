@@ -75,6 +75,7 @@ final class lh extends tk {
             var0 = 1;
             L1: while (true) {
               if (var0 > 10) {
+                return;
               } else {
                 var1 = -8 + var0 * 8;
                 field_D[var0] = ib.a(al.a(255L, field_B[7][var1 + 7]), ib.a(al.a(field_B[6][6 + var1], 65280L), ib.a(ib.a(ib.a(al.a(field_B[3][var1 - -3], 1095216660480L), ib.a(al.a(field_B[2][2 + var1], 280375465082880L), ib.a(al.a(field_B[0][var1], -72057594037927936L), al.a(71776119061217280L, field_B[1][var1 + 1])))), al.a(field_B[4][4 + var1], 4278190080L)), al.a(field_B[5][var1 - -5], 16711680L))));
@@ -84,7 +85,7 @@ final class lh extends tk {
             }
           } else {
             L2: {
-              var1 = "ᠣ웨螸ŏ㚦틵祯酒悼鮎ꌌ笵ᷠퟂ⹋﹗ᕷ㟥鿰䫚壉⤊놠殅뵝ჴ쬾է䆋Ᵹ闘ﯮ籦���䞞쨭뼇굚茳挂ꩱ젙䧙守騦㊰햀뻍㑈ｺ遟⁨᪮둔錢擱猒䀈쏬���贽需켫皂혛떯橐䗳ワ㽕ꋪ斺⿀���﵍鉵ڊ닦ฟ拔ꢖ暈╙葲㥌幸㢌톥댡鰞䏇ﰄ写洍﫟縤㮫츑轎럫㲁铷뤓ⳓ쐃噄義⪻셓���鵬ㅴ겉ᓡᘺ椉炶탭챂颤⡜".charAt(var0 / 2);
+              var1 = "ᠣ웨螸ŏ㚦틵祯酒悼鮎ꌌ笵ᷠퟂ⹋﹗ᕷ㟥鿰䫚壉⤊놠殅뵝ჴ쬾է䆋Ᵹ闘ﯮ籦\udd17䞞쨭뼇굚茳挂ꩱ젙䧙守騦㊰햀뻍㑈ｺ遟⁨᪮둔錢擱猒䀈쏬\udba1贽需켫皂혛떯橐䗳ワ㽕ꋪ斺⿀\ude1c﵍鉵ڊ닦ฟ拔ꢖ暈╙葲㥌幸㢌톥댡鰞䏇ﰄ写洍﫟縤㮫츑轎럫㲁铷뤓ⳓ쐃噄義⪻셓\udc0b鵬ㅴ겉ᓡᘺ椉炶탭챂颤⡜".charAt(var0 / 2);
               if ((var0 & 1) == 0) {
                 stackOut_4_0 = (long)(var1 >>> -380795032);
                 stackIn_5_0 = stackOut_4_0;

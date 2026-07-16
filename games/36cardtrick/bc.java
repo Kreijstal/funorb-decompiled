@@ -49,7 +49,7 @@ final class bc {
         int var4 = param0.length();
         param0.setLength(param2);
         if (param3 != 2053368837) {
-            field_b = (String) null;
+            field_b = null;
         }
         for (var5 = var4; var5 < param2; var5++) {
             param0.setCharAt(var5, param1);

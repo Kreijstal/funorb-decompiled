@@ -114,21 +114,26 @@ final class ih extends bf {
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
         Throwable decompiledCaughtException = null;
-        int stackOut_1_0 = 0;
         int stackOut_3_0 = 0;
+        int stackOut_1_0 = 0;
         try {
-          if (!param0) {
-            return stackIn_2_0;
-          } else {
-            stackOut_1_0 = -32;
-            stackIn_2_0 = stackOut_1_0;
+          L0: {
+            if (!param0) {
+              stackOut_3_0 = Integer.parseInt(((ih) this).field_R.field_v);
+              stackIn_4_0 = stackOut_3_0;
+              break L0;
+            } else {
+              stackOut_1_0 = -32;
+              stackIn_2_0 = stackOut_1_0;
+              return stackIn_2_0;
+            }
           }
-        } catch (java.lang.Exception decompiledCaughtParameter) {
-          decompiledCaughtException = decompiledCaughtParameter;
-          stackOut_3_0 = Integer.parseInt(((ih) this).field_R.field_v);
-          stackIn_4_0 = stackOut_3_0;
+        } catch (java.lang.Exception decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2 = (NumberFormatException) (Object) decompiledCaughtException;
+          return -1;
         }
-        return 0;
+        return stackIn_4_0;
     }
 
     final void a(boolean param0, ri param1) {
@@ -162,16 +167,20 @@ final class ih extends bf {
         int stackOut_2_0 = 0;
         if (param0 >= 75) {
           try {
-            stackOut_2_0 = Integer.parseInt(((ih) this).field_W.field_v);
-            stackIn_3_0 = stackOut_2_0;
-          } catch (java.lang.Exception decompiledCaughtParameter) {
-            decompiledCaughtException = decompiledCaughtParameter;
-            return stackIn_3_0;
+            L0: {
+              stackOut_2_0 = Integer.parseInt(((ih) this).field_W.field_v);
+              stackIn_3_0 = stackOut_2_0;
+              break L0;
+            }
+          } catch (java.lang.Exception decompiledCaughtParameter0) {
+            decompiledCaughtException = decompiledCaughtParameter0;
+            var2 = (NumberFormatException) (Object) decompiledCaughtException;
+            return -1;
           }
+          return stackIn_3_0;
         } else {
           return -116;
         }
-        return 0;
     }
 
     public static void i(byte param0) {
@@ -211,21 +220,26 @@ final class ih extends bf {
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
         Throwable decompiledCaughtException = null;
-        int stackOut_1_0 = 0;
         int stackOut_3_0 = 0;
+        int stackOut_1_0 = 0;
         try {
-          if (param0 == -1) {
-            return stackIn_2_0;
-          } else {
-            stackOut_1_0 = -6;
-            stackIn_2_0 = stackOut_1_0;
+          L0: {
+            if (param0 == -1) {
+              stackOut_3_0 = -1 + Integer.parseInt(((ih) this).field_P.field_v);
+              stackIn_4_0 = stackOut_3_0;
+              break L0;
+            } else {
+              stackOut_1_0 = -6;
+              stackIn_2_0 = stackOut_1_0;
+              return stackIn_2_0;
+            }
           }
-        } catch (java.lang.Exception decompiledCaughtParameter) {
-          decompiledCaughtException = decompiledCaughtParameter;
-          stackOut_3_0 = -1 + Integer.parseInt(((ih) this).field_P.field_v);
-          stackIn_4_0 = stackOut_3_0;
+        } catch (java.lang.Exception decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2 = (NumberFormatException) (Object) decompiledCaughtException;
+          return -1;
         }
-        return 0;
+        return stackIn_4_0;
     }
 
     static {

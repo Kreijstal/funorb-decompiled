@@ -78,11 +78,11 @@ final class mr extends ga implements cw {
             }
             var2 = (hn) (Object) da.field_h.c(33);
         }
-        hn var2_ref = new hn(6, new int[1]);
+        var2 = new hn(6, new int[1]);
         if (param0 < 16) {
             mr.n((byte) 103);
         }
-        ii.a(var2_ref, 71);
+        ii.a(var2, 71);
     }
 
     final void a(int param0, l param1) {

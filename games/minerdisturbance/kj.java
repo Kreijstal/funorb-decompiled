@@ -16,23 +16,25 @@ final class kj {
         tm var6 = null;
         var3 = MinerDisturbance.field_ab;
         L0: while (true) {
-          var4 = (tm) (Object) ok.field_b.e(63854);
+          tm dupTemp$2 = (tm) (Object) ok.field_b.e(63854);
+          var4 = dupTemp$2;
           var1 = var4;
-          if (null != (tm) (Object) ok.field_b.e(63854)) {
+          if (null != dupTemp$2) {
             ke.field_X[var4.field_s] = false;
             continue L0;
           } else {
             L1: while (true) {
-              var6 = (tm) (Object) ec.field_c.e(63854);
+              tm dupTemp$3 = (tm) (Object) ec.field_c.e(63854);
+              var6 = dupTemp$3;
               var5 = var6;
               var1 = var5;
-              if (null == (tm) (Object) ec.field_c.e(63854)) {
+              if (null == dupTemp$3) {
                 if (param0 > -16) {
                   return;
                 } else {
                   var2 = 0;
                   L2: while (true) {
-                    if (-36 >= var2) {
+                    if (-36 >= (var2 ^ -1)) {
                       jn.a(0);
                       ja.field_u = 150;
                       return;

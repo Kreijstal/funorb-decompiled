@@ -246,8 +246,9 @@ abstract class k extends eh {
         } else {
             var2 = ((k) this).field_X;
             var3 = ((k) this).field_U;
+            int fieldTemp$0 = ((k) this).field_S + 1;
             ((k) this).field_S = ((k) this).field_S + 1;
-            if (((k) this).field_S + 1 >= ((k) this).field_Z) {
+            if (fieldTemp$0 >= ((k) this).field_Z) {
                 ((k) this).field_Z = 0;
                 ((k) this).j(194);
             } else {

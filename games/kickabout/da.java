@@ -78,10 +78,10 @@ final class da extends gn {
                                 } else {
                                   if (param1 != 35) {
                                     if ((param1 ^ -1) != -37) {
-                                      if (param1 == -39) {
+                                      if ((param1 ^ -1) == -39) {
                                         return mc.field_k[1];
                                       } else {
-                                        if (-40 != param1) {
+                                        if (-40 != (param1 ^ -1)) {
                                           if (param1 == 40) {
                                             return mc.field_k[1];
                                           } else {

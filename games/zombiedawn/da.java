@@ -39,8 +39,9 @@ final class da extends le {
               return;
             } else {
               var1.j(11, 8);
+              int fieldTemp$2 = var1.field_j + 1;
               var1.field_j = var1.field_j + 1;
-              var2 = var1.field_j + 1;
+              var2 = fieldTemp$2;
               dn.a(var1, 84);
               dp.field_e.d(-128, var1.field_j + -var2);
               continue L0;

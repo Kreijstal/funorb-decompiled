@@ -28,8 +28,9 @@ final class si extends qk {
             field_Rb = 94;
             if (-1 == (((si) this).field_F ^ -1)) {
               if (((si) this).field_Ob == null) {
+                int fieldTemp$14 = ((si) this).field_Pb;
                 ((si) this).field_Pb = ((si) this).field_Pb + 1;
-                if (5 <= ((si) this).field_Pb) {
+                if (5 <= fieldTemp$14) {
                   this.z(124);
                   ((si) this).field_Pb = 0;
                   return;
@@ -49,8 +50,9 @@ final class si extends qk {
                   return;
                 }
               } else {
+                int fieldTemp$15 = ((si) this).field_Pb;
                 ((si) this).field_Pb = ((si) this).field_Pb + 1;
-                if (((si) this).field_Pb >= 5) {
+                if (fieldTemp$15 >= 5) {
                   this.o((byte) 71);
                   ((si) this).field_Pb = 0;
                   if (((si) this).field_U != null) {
@@ -62,8 +64,9 @@ final class si extends qk {
                           break L0;
                         } else {
                           ((si) this).field_U = dc.a((byte) 18, 85);
+                          int fieldTemp$16 = ((si) this).field_Tb;
                           ((si) this).field_Tb = ((si) this).field_Tb + 1;
-                          if ((((si) this).field_Tb ^ -1) <= -5) {
+                          if ((fieldTemp$16 ^ -1) <= -5) {
                             ((si) this).l((byte) 52);
                             ((si) this).field_Tb = 0;
                             return;
@@ -73,8 +76,9 @@ final class si extends qk {
                         }
                       }
                     }
+                    int fieldTemp$17 = ((si) this).field_Tb;
                     ((si) this).field_Tb = ((si) this).field_Tb + 1;
-                    if (((si) this).field_Tb <= -5) {
+                    if (fieldTemp$17 <= -5) {
                       ((si) this).l((byte) 52);
                       ((si) this).field_Tb = 0;
                       return;
@@ -83,8 +87,9 @@ final class si extends qk {
                     }
                   } else {
                     if (0L != tp.field_p % 3L) {
+                      int fieldTemp$18 = ((si) this).field_Tb;
                       ((si) this).field_Tb = ((si) this).field_Tb + 1;
-                      if ((((si) this).field_Tb ^ -1) <= -5) {
+                      if ((fieldTemp$18 ^ -1) <= -5) {
                         ((si) this).l((byte) 52);
                         ((si) this).field_Tb = 0;
                         return;
@@ -93,8 +98,9 @@ final class si extends qk {
                       }
                     } else {
                       ((si) this).field_U = dc.a((byte) 18, 85);
+                      int fieldTemp$19 = ((si) this).field_Tb;
                       ((si) this).field_Tb = ((si) this).field_Tb + 1;
-                      if ((((si) this).field_Tb ^ -1) <= -5) {
+                      if ((fieldTemp$19 ^ -1) <= -5) {
                         ((si) this).l((byte) 52);
                         ((si) this).field_Tb = 0;
                         return;
@@ -104,8 +110,9 @@ final class si extends qk {
                     }
                   }
                 } else {
+                  int fieldTemp$20 = ((si) this).field_Tb;
                   ((si) this).field_Tb = ((si) this).field_Tb + 1;
-                  if ((((si) this).field_Tb ^ -1) > -5) {
+                  if ((fieldTemp$20 ^ -1) > -5) {
                     return;
                   } else {
                     ((si) this).l((byte) 52);
@@ -118,8 +125,9 @@ final class si extends qk {
           } else {
             if (-1 == ((si) this).field_F) {
               if (((si) this).field_Ob == null) {
+                int fieldTemp$21 = ((si) this).field_Pb;
                 ((si) this).field_Pb = ((si) this).field_Pb + 1;
-                if (5 > ((si) this).field_Pb) {
+                if (5 > fieldTemp$21) {
                   return;
                 } else {
                   this.z(124);
@@ -139,15 +147,17 @@ final class si extends qk {
                   return;
                 }
               } else {
+                int fieldTemp$22 = ((si) this).field_Pb;
                 ((si) this).field_Pb = ((si) this).field_Pb + 1;
-                if (((si) this).field_Pb >= 5) {
+                if (fieldTemp$22 >= 5) {
                   this.o((byte) 71);
                   ((si) this).field_Pb = 0;
                   if (((si) this).field_U == null) {
                     if (0L == tp.field_p % 3L) {
                       ((si) this).field_U = dc.a((byte) 18, 85);
+                      int fieldTemp$23 = ((si) this).field_Tb;
                       ((si) this).field_Tb = ((si) this).field_Tb + 1;
-                      if (((si) this).field_Tb > -5) {
+                      if (fieldTemp$23 > -5) {
                         return;
                       } else {
                         ((si) this).l((byte) 52);
@@ -155,8 +165,9 @@ final class si extends qk {
                         return;
                       }
                     } else {
+                      int fieldTemp$24 = ((si) this).field_Tb;
                       ((si) this).field_Tb = ((si) this).field_Tb + 1;
-                      if ((((si) this).field_Tb ^ -1) > -5) {
+                      if ((fieldTemp$24 ^ -1) > -5) {
                         return;
                       } else {
                         ((si) this).l((byte) 52);
@@ -174,8 +185,9 @@ final class si extends qk {
                           break L1;
                         }
                       }
+                      int fieldTemp$25 = ((si) this).field_Tb;
                       ((si) this).field_Tb = ((si) this).field_Tb + 1;
-                      if ((((si) this).field_Tb ^ -1) > -5) {
+                      if ((fieldTemp$25 ^ -1) > -5) {
                         return;
                       } else {
                         ((si) this).l((byte) 52);
@@ -183,8 +195,9 @@ final class si extends qk {
                         return;
                       }
                     } else {
+                      int fieldTemp$26 = ((si) this).field_Tb;
                       ((si) this).field_Tb = ((si) this).field_Tb + 1;
-                      if ((((si) this).field_Tb ^ -1) > -5) {
+                      if ((fieldTemp$26 ^ -1) > -5) {
                         return;
                       } else {
                         ((si) this).l((byte) 52);
@@ -194,8 +207,9 @@ final class si extends qk {
                     }
                   }
                 } else {
+                  int fieldTemp$27 = ((si) this).field_Tb;
                   ((si) this).field_Tb = ((si) this).field_Tb + 1;
-                  if ((((si) this).field_Tb ^ -1) > -5) {
+                  if ((fieldTemp$27 ^ -1) > -5) {
                     return;
                   } else {
                     ((si) this).l((byte) 52);
@@ -210,8 +224,8 @@ final class si extends qk {
     }
 
     private final void z(int param0) {
-        kd var2 = null;
-        kd var3 = null;
+        Object var2 = null;
+        Object var3 = null;
         int var4 = 0;
         int var5 = 0;
         Object var6 = null;
@@ -258,7 +272,7 @@ final class si extends qk {
                     return;
                   } else {
                     L3: {
-                      this.a(-48, var2);
+                      this.a(-48, (kd) var2);
                       if (null != ((si) this).field_Ob) {
                         this.o((byte) 71);
                         break L3;
@@ -270,7 +284,7 @@ final class si extends qk {
                   }
                 } else {
                   L4: {
-                    this.a(-123, var3);
+                    this.a(-123, (kd) var3);
                     if (null != ((si) this).field_Ob) {
                       this.o((byte) 71);
                       break L4;
@@ -300,7 +314,7 @@ final class si extends qk {
                           }
                         }
                         var4 = var11.field_g;
-                        var2 = var6_ref;
+                        var2 = (Object) (Object) var6_ref;
                         break L6;
                       }
                       if (0 == var6_ref.field_Bb) {
@@ -315,7 +329,7 @@ final class si extends qk {
                             }
                           }
                         }
-                        var3 = var6_ref;
+                        var3 = (Object) (Object) var6_ref;
                         var5 = var11.field_g;
                         break L5;
                       } else {
@@ -343,7 +357,7 @@ final class si extends qk {
                 if (var3 == null) {
                   if (var2 != null) {
                     L10: {
-                      this.a(-48, var2);
+                      this.a(-48, (kd) var2);
                       if (null != ((si) this).field_Ob) {
                         this.o((byte) 71);
                         break L10;
@@ -366,7 +380,7 @@ final class si extends qk {
                   }
                 } else {
                   L12: {
-                    this.a(-123, var3);
+                    this.a(-123, (kd) var3);
                     if (null != ((si) this).field_Ob) {
                       this.o((byte) 71);
                       break L12;
@@ -396,7 +410,7 @@ final class si extends qk {
                           }
                         }
                         var4 = var30.field_g;
-                        var2 = var6_ref;
+                        var2 = (Object) (Object) var6_ref;
                         break L14;
                       }
                       if (0 == var6_ref.field_Bb) {
@@ -411,7 +425,7 @@ final class si extends qk {
                             }
                           }
                         }
-                        var3 = var6_ref;
+                        var3 = (Object) (Object) var6_ref;
                         var5 = var30.field_g;
                         break L13;
                       } else {
@@ -452,11 +466,11 @@ final class si extends qk {
             if (var6_ref == null) {
               L19: {
                 if (var3 != null) {
-                  this.a(-123, var3);
+                  this.a(-123, (kd) var3);
                   break L19;
                 } else {
                   if (var2 != null) {
-                    this.a(-48, var2);
+                    this.a(-48, (kd) var2);
                     break L19;
                   } else {
                     this.y(124);
@@ -493,7 +507,7 @@ final class si extends qk {
                         }
                       }
                       var4 = var10.field_g;
-                      var2 = var6_ref;
+                      var2 = (Object) (Object) var6_ref;
                       break L22;
                     }
                     if (0 == var6_ref.field_Bb) {
@@ -508,7 +522,7 @@ final class si extends qk {
                           }
                         }
                       }
-                      var3 = var6_ref;
+                      var3 = (Object) (Object) var6_ref;
                       var5 = var10.field_g;
                       break L21;
                     } else {

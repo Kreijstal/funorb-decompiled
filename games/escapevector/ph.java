@@ -36,8 +36,9 @@ final class ph {
                 if (((ph) this).field_c[var7] >= 0) {
                   break L2;
                 } else {
+                  int incrementValue$8 = param2;
                   param2++;
-                  param0[param2] = (byte)(var10 ^ -1);
+                  param0[incrementValue$8] = (byte)(var10 ^ -1);
                   if (param2 < param4) {
                     var7 = 0;
                     break L2;
@@ -58,8 +59,9 @@ final class ph {
               L4: {
                 var10 = ((ph) this).field_c[var7];
                 if (((ph) this).field_c[var7] < 0) {
+                  int incrementValue$9 = param2;
                   param2++;
-                  param0[param2] = (byte)(var10 ^ -1);
+                  param0[incrementValue$9] = (byte)(var10 ^ -1);
                   if (param4 > param2) {
                     var7 = 0;
                     break L4;
@@ -82,8 +84,9 @@ final class ph {
               L6: {
                 var10 = ((ph) this).field_c[var7];
                 if (0 > ((ph) this).field_c[var7]) {
+                  int incrementValue$10 = param2;
                   param2++;
-                  param0[param2] = (byte)(var10 ^ -1);
+                  param0[incrementValue$10] = (byte)(var10 ^ -1);
                   if (param2 < param4) {
                     var7 = 0;
                     break L6;
@@ -108,8 +111,9 @@ final class ph {
                 if (-1 <= ((ph) this).field_c[var7]) {
                   break L8;
                 } else {
+                  int incrementValue$11 = param2;
                   param2++;
-                  param0[param2] = (byte)(var10 ^ -1);
+                  param0[incrementValue$11] = (byte)(var10 ^ -1);
                   if (param4 > param2) {
                     var7 = 0;
                     break L8;
@@ -132,8 +136,9 @@ final class ph {
                 if (((ph) this).field_c[var7] >= 0) {
                   break L10;
                 } else {
+                  int incrementValue$12 = param2;
                   param2++;
-                  param0[param2] = (byte)(var10 ^ -1);
+                  param0[incrementValue$12] = (byte)(var10 ^ -1);
                   if (param4 > param2) {
                     var7 = 0;
                     break L10;
@@ -156,8 +161,9 @@ final class ph {
                 if (-1 <= ((ph) this).field_c[var7]) {
                   break L12;
                 } else {
+                  int incrementValue$13 = param2;
                   param2++;
-                  param0[param2] = (byte)(var10 ^ -1);
+                  param0[incrementValue$13] = (byte)(var10 ^ -1);
                   if (param2 < param4) {
                     var7 = 0;
                     break L12;
@@ -180,8 +186,9 @@ final class ph {
                 if (-1 >= (((ph) this).field_c[var7] ^ -1)) {
                   break L14;
                 } else {
+                  int incrementValue$14 = param2;
                   param2++;
-                  param0[param2] = (byte)(var10 ^ -1);
+                  param0[incrementValue$14] = (byte)(var10 ^ -1);
                   if (param2 < param4) {
                     var7 = 0;
                     break L14;
@@ -201,8 +208,9 @@ final class ph {
               }
               var10 = ((ph) this).field_c[var7];
               if (((ph) this).field_c[var7] < 0) {
+                int incrementValue$15 = param2;
                 param2++;
-                param0[param2] = (byte)(var10 ^ -1);
+                param0[incrementValue$15] = (byte)(var10 ^ -1);
                 if (param4 > param2) {
                   var7 = 0;
                   var8++;

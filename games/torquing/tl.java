@@ -76,7 +76,6 @@ final class tl extends eh {
 
     final kh d(int param0) {
         kh var2 = null;
-        kh var2_ref = null;
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
@@ -88,10 +87,10 @@ final class tl extends eh {
         var6 = Torquing.field_u;
         if ((((tl) this).field_r ^ -1) != -3) {
           if ((((tl) this).field_r ^ -1) != -2) {
-            if (param0 == -2) {
-              return vc.field_c[((tl) this).field_r];
-            } else {
+            if (param0 != -2) {
               return null;
+            } else {
+              return vc.field_c[((tl) this).field_r];
             }
           } else {
             L0: {
@@ -100,7 +99,7 @@ final class tl extends eh {
                 L1: {
                   var8 = new kh(vc.field_c[((tl) this).field_r], true, false, true, true);
                   var10 = var8;
-                  var2_ref = var10;
+                  var2 = var10;
                   if (((tl) this).field_k > 100) {
                     if (((tl) this).field_k > 250) {
                       if ((((tl) this).field_k ^ -1) >= -501) {
@@ -125,95 +124,91 @@ final class tl extends eh {
                     on.field_e.a(false, (long)((tl) this).field_k, (q) (Object) var10);
                     break L0;
                   } else {
-                    L3: {
-                      if (var8.field_l.field_m[var4] == 127) {
-                        var8.field_l.field_m[var4] = (short)var3;
-                        break L3;
-                      } else {
-                        break L3;
-                      }
+                    if (var8.field_l.field_m[var4] == 127) {
+                      var8.field_l.field_m[var4] = (short)var3;
+                      var4--;
+                      continue L2;
+                    } else {
+                      var4--;
+                      continue L2;
                     }
-                    var4--;
-                    continue L2;
                   }
                 }
               } else {
                 break L0;
               }
             }
-            return var2_ref;
+            return var2;
           }
         } else {
-          L4: {
+          L3: {
             var2 = (kh) (Object) og.field_k.a((long)((tl) this).field_k, (byte) 117);
             if (var2 == null) {
-              L5: {
+              L4: {
                 var7 = new kh(vc.field_c[((tl) this).field_r], true, false, true, true);
                 var9 = var7;
-                var2_ref = var9;
+                var2 = var9;
                 if (((tl) this).field_k > 5) {
                   if (((tl) this).field_k > 10) {
                     if (-16 > (((tl) this).field_k ^ -1)) {
                       if (((tl) this).field_k <= 20) {
                         var4 = 1023;
                         var3 = 0;
-                        break L5;
+                        break L4;
                       } else {
                         if (25 >= ((tl) this).field_k) {
                           var3 = 44032;
                           var4 = 1023;
-                          break L5;
+                          break L4;
                         } else {
                           if ((((tl) this).field_k ^ -1) >= -31) {
                             var3 = 21504;
                             var4 = 1023;
-                            break L5;
+                            break L4;
                           } else {
                             var4 = 1023;
                             var3 = 11264;
-                            break L5;
+                            break L4;
                           }
                         }
                       }
                     } else {
                       var3 = 5120;
                       var4 = 1023;
-                      break L5;
+                      break L4;
                     }
                   } else {
                     var3 = 96;
                     var4 = 0;
-                    break L5;
+                    break L4;
                   }
                 } else {
                   var4 = 0;
                   var3 = 32;
-                  break L5;
+                  break L4;
                 }
               }
               var5 = var9.field_l.field_g + -1;
-              L6: while (true) {
+              L5: while (true) {
                 if ((var5 ^ -1) > -1) {
                   og.field_k.a(false, (long)((tl) this).field_k, (q) (Object) var9);
-                  break L4;
+                  break L3;
                 } else {
-                  L7: {
-                    if ((var7.field_l.field_m[var5] ^ -1) != -128) {
-                      var9.field_l.field_m[var5] = (short)gm.a(ie.a((int) var7.field_l.field_m[var5], var4), var3);
-                      break L7;
-                    } else {
-                      break L7;
-                    }
+                  if ((var7.field_l.field_m[var5] ^ -1) != -128) {
+                    var9.field_l.field_m[var5] = (short)gm.a(ie.a((int) var7.field_l.field_m[var5], var4), var3);
+                    var5--;
+                    continue L5;
+                  } else {
+                    var5--;
+                    continue L5;
                   }
-                  var5--;
-                  continue L6;
                 }
               }
             } else {
-              break L4;
+              break L3;
             }
           }
-          return var2_ref;
+          return var2;
         }
     }
 
@@ -418,8 +413,7 @@ final class tl extends eh {
                       break L1;
                     }
                   }
-                  new sb(stackIn_47_4, stackIn_47_5, stackIn_47_6, stackIn_47_7);
-                  ((ei) (Object) stackIn_47_0).a((byte) stackIn_47_1, (q) (Object) stackIn_47_2);
+                  ((ei) (Object) stackIn_47_0).a((byte) stackIn_47_1, (q) (Object) new sb(stackIn_47_4, stackIn_47_5, stackIn_47_6, stackIn_47_7));
                   th.a(100, th.field_F[7]);
                   break L0;
                 } else {
@@ -605,8 +599,7 @@ final class tl extends eh {
                     break L4;
                   }
                 }
-                new sb(stackIn_43_4, stackIn_43_5, stackIn_43_6, stackIn_43_7);
-                ((ei) (Object) stackIn_43_0).a((byte) stackIn_43_1, (q) (Object) stackIn_43_2);
+                ((ei) (Object) stackIn_43_0).a((byte) stackIn_43_1, (q) (Object) new sb(stackIn_43_4, stackIn_43_5, stackIn_43_6, stackIn_43_7));
                 th.a(param1 + 81, th.field_F[19]);
                 th.a(100, th.field_F[6]);
                 break L0;
@@ -625,26 +618,42 @@ final class tl extends eh {
     }
 
     private final int e(int param0) {
+        int var2 = 0;
         rm var3 = null;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
-        int var9 = Torquing.field_u;
-        int var2 = -108 % ((-61 - param0) / 36);
-        if (!(0 != al.field_e[((tl) this).field_r])) {
+        int var9 = 0;
+        L0: {
+          var9 = Torquing.field_u;
+          var2 = -108 % ((-61 - param0) / 36);
+          if (0 == al.field_e[((tl) this).field_r]) {
             var3 = ((tl) this).d(-2).field_l;
             var4 = 0;
-            for (var5 = 0; (var3.field_f ^ -1) < (var5 ^ -1); var5++) {
+            var5 = 0;
+            L1: while (true) {
+              if (var3.field_f <= var5) {
+                al.field_e[((tl) this).field_r] = (int)(0.99 + Math.sqrt((double)var4));
+                break L0;
+              } else {
                 var6 = var3.field_M[var5];
                 var7 = var3.field_E[var5];
                 var8 = var7 * var7 + var6 * var6;
-                if (!(var4 >= var8)) {
-                    var4 = var8;
+                if (var4 < var8) {
+                  var4 = var8;
+                  var5++;
+                  continue L1;
+                } else {
+                  var5++;
+                  continue L1;
                 }
+              }
             }
-            al.field_e[((tl) this).field_r] = (int)(0.99 + Math.sqrt((double)var4));
+          } else {
+            break L0;
+          }
         }
         return al.field_e[((tl) this).field_r];
     }
@@ -668,22 +677,40 @@ final class tl extends eh {
         ((tl) this).field_g[6] = 1.0;
         ((tl) this).field_g[0] = (double)((tl) this).field_m;
         if (param0 >= -77) {
-            return;
-        }
-        if (3 != ((tl) this).field_r) {
-            if ((((tl) this).field_r ^ -1) <= -26) {
-                // if_icmplt L89
-            } else {
-                boolean discarded$0 = he.a(((tl) this).field_a, 0.08, ((tl) this).field_g, 16777215, 30.0);
-            }
-        }
-        ((tl) this).c(0);
-        ((tl) this).field_d = null;
-        if (null == ((tl) this).field_q) {
-            ((tl) this).b(1);
-            ((tl) this).field_q = ((tl) this).field_d;
+          return;
         } else {
-            ((tl) this).field_d = ((tl) this).field_q;
+          L0: {
+            if (3 == ((tl) this).field_r) {
+              break L0;
+            } else {
+              L1: {
+                if ((((tl) this).field_r ^ -1) > -26) {
+                  break L1;
+                } else {
+                  if ((((tl) this).field_r ^ -1) < -32) {
+                    break L1;
+                  } else {
+                    break L0;
+                  }
+                }
+              }
+              boolean discarded$1 = he.a(((tl) this).field_a, 0.08, ((tl) this).field_g, 16777215, 30.0);
+              break L0;
+            }
+          }
+          L2: {
+            ((tl) this).c(0);
+            ((tl) this).field_d = null;
+            if (null != ((tl) this).field_q) {
+              ((tl) this).field_d = ((tl) this).field_q;
+              break L2;
+            } else {
+              ((tl) this).b(1);
+              ((tl) this).field_q = ((tl) this).field_d;
+              break L2;
+            }
+          }
+          return;
         }
     }
 

@@ -8,7 +8,7 @@ class mi extends ff {
 
     fe a(byte param0) {
         if (param0 != -24) {
-            return (fe) null;
+            return null;
         }
         return hc.field_h;
     }

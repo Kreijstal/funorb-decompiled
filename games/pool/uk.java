@@ -154,7 +154,7 @@ final class uk implements Iterable {
     }
 
     final static pn a(int param0, byte param1, int param2, int param3) {
-        pn var4 = null;
+        Object var4 = null;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
@@ -247,7 +247,7 @@ final class uk implements Iterable {
                   }
                 }
                 gd.field_b = stackIn_43_0 != 0;
-                return var4;
+                return (pn) var4;
               } else {
                 var9_ref_pn = wb.field_e[var8];
                 if (var9_ref_pn.field_u != null) {
@@ -257,7 +257,7 @@ final class uk implements Iterable {
                     if (var9_ref_pn.field_u.field_R == 0) {
                       break L8;
                     } else {
-                      var4 = var9_ref_pn;
+                      var4 = (Object) (Object) var9_ref_pn;
                       break L8;
                     }
                   }
@@ -379,8 +379,9 @@ final class uk implements Iterable {
         ((uk) this).field_h = param0;
         ((uk) this).field_k = new ma[param0];
         for (var2 = 0; var2 < param0; var2++) {
-            var3 = new ma();
-            ((uk) this).field_k[var2] = new ma();
+            ma dupTemp$0 = new ma();
+            var3 = dupTemp$0;
+            ((uk) this).field_k[var2] = dupTemp$0;
             var3.field_k = var3;
             var3.field_d = var3;
         }
@@ -394,25 +395,31 @@ final class uk implements Iterable {
             Throwable decompiledCaughtException = null;
             try {
               L0: {
-                var4 = param1.getCodeBase();
-                var3 = p.a((byte) -100, var4, param1).getFile();
-                Object discarded$6 = mo.a("updatelinks", new Object[2], 98, param1);
-                Object discarded$7 = mo.a("updatelinks", new Object[2], 70, param1);
-                Object discarded$8 = mo.a("updatelinks", new Object[2], 116, param1);
-                Object discarded$9 = mo.a("updatelinks", new Object[2], param0 ^ 558370174, param1);
-                Object discarded$10 = mo.a("updatelinks", new Object[2], param0 ^ 558370117, param1);
-                if (param0 == 558370049) {
-                  break L0;
-                } else {
-                  field_b = null;
-                  break L0;
+                L1: {
+                  var4 = param1.getCodeBase();
+                  var3 = p.a((byte) -100, var4, param1).getFile();
+                  Object discarded$6 = mo.a("updatelinks", new Object[2], 98, param1);
+                  Object discarded$7 = mo.a("updatelinks", new Object[2], 70, param1);
+                  Object discarded$8 = mo.a("updatelinks", new Object[2], 116, param1);
+                  Object discarded$9 = mo.a("updatelinks", new Object[2], param0 ^ 558370174, param1);
+                  Object discarded$10 = mo.a("updatelinks", new Object[2], param0 ^ 558370117, param1);
+                  if (param0 == 558370049) {
+                    break L1;
+                  } else {
+                    field_b = null;
+                    break L1;
+                  }
                 }
+                Object discarded$11 = mo.a("updatelinks", new Object[2], 125, param1);
+                break L0;
               }
-              Object discarded$11 = mo.a("updatelinks", new Object[2], 125, param1);
-            } catch (java.lang.Throwable decompiledCaughtParameter) {
-              decompiledCaughtException = decompiledCaughtParameter;
+            } catch (java.lang.Throwable decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              L2: {
+                var2 = decompiledCaughtException;
+                break L2;
+              }
             }
-            var2 = decompiledCaughtException;
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {

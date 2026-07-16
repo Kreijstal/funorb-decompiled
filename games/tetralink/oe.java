@@ -88,6 +88,7 @@ final class oe extends mc {
                         var4 = 0;
                         L4: while (true) {
                           if (((oe) this).field_r <= var4) {
+                            return;
                           } else {
                             var5 = 0;
                             L5: while (true) {

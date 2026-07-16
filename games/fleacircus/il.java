@@ -14,7 +14,7 @@ final class il {
 
     final static void b(int param0) {
         int var2_int = 0;
-        String var2 = null;
+        Object var2 = null;
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
@@ -71,11 +71,11 @@ final class il {
                                   }
                                 }
                                 if (var2 != null) {
-                                  var2 = var2 + ", " + var5;
+                                  var2 = (Object) (Object) (var2 + ", " + var5);
                                   var5++;
                                   continue L2;
                                 } else {
-                                  var2 = Integer.toString(var5);
+                                  var2 = (Object) (Object) Integer.toString(var5);
                                   var5++;
                                   continue L2;
                                 }
@@ -121,11 +121,11 @@ final class il {
                                   }
                                 }
                                 if (var2 != null) {
-                                  var2 = var2 + ", " + var5;
+                                  var2 = (Object) (Object) (var2 + ", " + var5);
                                   var5++;
                                   continue L5;
                                 } else {
-                                  var2 = Integer.toString(var5);
+                                  var2 = (Object) (Object) Integer.toString(var5);
                                   var5++;
                                   continue L5;
                                 }
@@ -173,11 +173,11 @@ final class il {
                           }
                         }
                         if (var2 != null) {
-                          var2 = var2 + ", " + var5;
+                          var2 = (Object) (Object) (var2 + ", " + var5);
                           var5++;
                           continue L8;
                         } else {
-                          var2 = Integer.toString(var5);
+                          var2 = (Object) (Object) Integer.toString(var5);
                           var5++;
                           continue L8;
                         }
@@ -223,11 +223,11 @@ final class il {
                             }
                           }
                           if (var2 != null) {
-                            var2 = var2 + ", " + var5;
+                            var2 = (Object) (Object) (var2 + ", " + var5);
                             var5++;
                             continue L10;
                           } else {
-                            var2 = Integer.toString(var5);
+                            var2 = (Object) (Object) Integer.toString(var5);
                             var5++;
                             continue L10;
                           }
@@ -276,11 +276,11 @@ final class il {
                                 }
                               }
                               if (var2 != null) {
-                                var2 = var2 + ", " + var5;
+                                var2 = (Object) (Object) (var2 + ", " + var5);
                                 var5++;
                                 continue L13;
                               } else {
-                                var2 = Integer.toString(var5);
+                                var2 = (Object) (Object) Integer.toString(var5);
                                 var5++;
                                 continue L13;
                               }
@@ -326,11 +326,11 @@ final class il {
                                 }
                               }
                               if (var2 != null) {
-                                var2 = var2 + ", " + var5;
+                                var2 = (Object) (Object) (var2 + ", " + var5);
                                 var5++;
                                 continue L16;
                               } else {
-                                var2 = Integer.toString(var5);
+                                var2 = (Object) (Object) Integer.toString(var5);
                                 var5++;
                                 continue L16;
                               }
@@ -377,11 +377,11 @@ final class il {
                             }
                           }
                           if (var2 != null) {
-                            var2 = var2 + ", " + var5;
+                            var2 = (Object) (Object) (var2 + ", " + var5);
                             var5++;
                             continue L19;
                           } else {
-                            var2 = Integer.toString(var5);
+                            var2 = (Object) (Object) Integer.toString(var5);
                             var5++;
                             continue L19;
                           }
@@ -451,11 +451,11 @@ final class il {
                       }
                     }
                     if (var2 != null) {
-                      var2 = var2 + ", " + var5;
+                      var2 = (Object) (Object) (var2 + ", " + var5);
                       var5++;
                       continue L22;
                     } else {
-                      var2 = Integer.toString(var5);
+                      var2 = (Object) (Object) Integer.toString(var5);
                       var5++;
                       continue L22;
                     }

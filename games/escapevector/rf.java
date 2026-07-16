@@ -6,27 +6,22 @@ final class rf {
     static int field_a;
 
     final static fn a(int param0, int param1) {
-        if (dj.field_d != null) {
-          if (0 == param0) {
-            return dj.field_d[0];
-          } else {
-            if (param0 != param1) {
-              if (-32769 != param0) {
-                if (-49153 != param0) {
-                  return null;
-                } else {
-                  return dj.field_d[3];
-                }
-              } else {
-                return dj.field_d[2];
-              }
-            } else {
-              return dj.field_d[1];
-            }
-          }
-        } else {
-          return null;
+        if (dj.field_d == null) {
+            return null;
         }
+        if (!(0 != param0)) {
+            return dj.field_d[0];
+        }
+        if (param0 == param1) {
+            return dj.field_d[1];
+        }
+        if (-32769 == (param0 ^ -1)) {
+            return dj.field_d[2];
+        }
+        if (-49153 != (param0 ^ -1)) {
+            return null;
+        }
+        return dj.field_d[3];
     }
 
     final static void a(fd param0, int param1, int param2, int param3, fd param4, int param5) {

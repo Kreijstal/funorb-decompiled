@@ -67,7 +67,7 @@ class sh extends mh implements rc {
               break L1;
             } else {
               if ((param2 ^ -1) == -257) {
-                wd discarded$2 = var6.a(mh.field_W, (sk) this, -4);
+                wd discarded$7 = var6.a(mh.field_W, (sk) this, -4);
                 break L1;
               } else {
                 L2: {
@@ -94,32 +94,32 @@ class sh extends mh implements rc {
             }
           }
           L3: {
-            if (3 != param2) {
-              if (param2 != -5) {
-                if (-7 == param2) {
-                  var6.a(da.field_c, 9, (byte) 106);
-                  ((sh) this).a(10768, (lk) (Object) var6);
-                  break L3;
-                } else {
-                  if (param2 == 9) {
-                    wd discarded$3 = var6.a(fj.field_d, (sk) this, -4);
-                    ((sh) this).a(10768, (lk) (Object) var6);
-                    break L3;
+            L4: {
+              if (3 != param2) {
+                if ((param2 ^ -1) != -5) {
+                  if (-7 == (param2 ^ -1)) {
+                    var6.a(da.field_c, 9, (byte) 106);
+                    break L4;
                   } else {
-                    ((sh) this).a(10768, (lk) (Object) var6);
-                    break L3;
+                    if (param2 == 9) {
+                      wd discarded$8 = var6.a(fj.field_d, (sk) this, -4);
+                      break L4;
+                    } else {
+                      ((sh) this).a(10768, (lk) (Object) var6);
+                      break L3;
+                    }
                   }
+                } else {
+                  var6.a(ck.field_f, 8, (byte) 97);
+                  break L4;
                 }
               } else {
-                var6.a(ck.field_f, 8, (byte) 97);
-                var6.a(da.field_c, 9, (byte) 106);
-                break L3;
+                var6.a(oc.field_c, 7, (byte) 60);
+                break L4;
               }
-            } else {
-              var6.a(oc.field_c, 7, (byte) 60);
-              ((sh) this).a(10768, (lk) (Object) var6);
-              break L3;
             }
+            ((sh) this).a(10768, (lk) (Object) var6);
+            break L3;
           }
           return;
         } else {
@@ -212,6 +212,7 @@ class sh extends mh implements rc {
         var1 = 0;
         L0: while (true) {
           if ((var1 ^ -1) <= -257) {
+            return;
           } else {
             var0 = var1;
             var2 = 0;

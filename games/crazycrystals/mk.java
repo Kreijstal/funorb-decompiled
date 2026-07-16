@@ -57,7 +57,7 @@ final class mk {
     }
 
     final static String a(int param0, CharSequence[] param1, int param2, int param3) {
-        CharSequence var4_ref = null;
+        CharSequence var4_ref_CharSequence = null;
         int var4 = 0;
         int var5 = 0;
         int var6_int = 0;
@@ -73,8 +73,8 @@ final class mk {
         } else {
           if ((param3 ^ -1) == -2) {
             var10 = param1[param2];
-            var4_ref = var10;
-            if (var4_ref == null) {
+            var4_ref_CharSequence = var10;
+            if (var4_ref_CharSequence == null) {
               return "null";
             } else {
               return ((Object) (Object) var10).toString();

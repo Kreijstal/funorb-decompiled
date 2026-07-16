@@ -12,7 +12,7 @@ final class je {
 
     final static ed b(int param0) {
         int var1 = 0;
-        ed var3 = null;
+        Object var3 = null;
         int var5 = 0;
         int[] var5_ref_int__ = null;
         int var6 = 0;
@@ -45,7 +45,7 @@ final class je {
               var5 = 0;
               L1: while (true) {
                 if (var1 <= var5) {
-                  var3 = new ed(on.field_e, hd.field_c, gn.field_k[0], gi.field_e[0], qh.field_k[0], bc.field_a[0], var25);
+                  var3 = (Object) (Object) new ed(on.field_e, hd.field_c, gn.field_k[0], gi.field_e[0], qh.field_k[0], bc.field_a[0], var25);
                   break L0;
                 } else {
                   var9[var5] = qk.field_f[ae.a((int) var23[var5], 255)];
@@ -63,7 +63,7 @@ final class je {
               var6 = 0;
               L2: while (true) {
                 if (var1 <= var6) {
-                  var3 = (ed) (Object) new uh(on.field_e, hd.field_c, gn.field_k[0], gi.field_e[0], qh.field_k[0], bc.field_a[0], var24);
+                  var3 = (Object) (Object) new uh(on.field_e, hd.field_c, gn.field_k[0], gi.field_e[0], qh.field_k[0], bc.field_a[0], var24);
                   break L0;
                 } else {
                   var5_ref_int__[var6] = lb.a(ae.a(var22[var6] << 93821816, -16777216), qk.field_f[ae.a((int) var23[var6], 255)]);
@@ -74,7 +74,7 @@ final class je {
             }
           }
           of.a(false);
-          return var3;
+          return (ed) var3;
         } else {
           L3: {
             var1 = qh.field_k[0] * bc.field_a[0];
@@ -86,7 +86,7 @@ final class je {
               var5 = 0;
               L4: while (true) {
                 if (var1 <= var5) {
-                  var3 = new ed(on.field_e, hd.field_c, gn.field_k[0], gi.field_e[0], qh.field_k[0], bc.field_a[0], var29);
+                  var3 = (Object) (Object) new ed(on.field_e, hd.field_c, gn.field_k[0], gi.field_e[0], qh.field_k[0], bc.field_a[0], var29);
                   break L3;
                 } else {
                   var9[var5] = qk.field_f[ae.a((int) var27[var5], 255)];
@@ -104,7 +104,7 @@ final class je {
               var6 = 0;
               L5: while (true) {
                 if (var1 <= var6) {
-                  var3 = (ed) (Object) new uh(on.field_e, hd.field_c, gn.field_k[0], gi.field_e[0], qh.field_k[0], bc.field_a[0], var28);
+                  var3 = (Object) (Object) new uh(on.field_e, hd.field_c, gn.field_k[0], gi.field_e[0], qh.field_k[0], bc.field_a[0], var28);
                   break L3;
                 } else {
                   var5_ref_int__[var6] = lb.a(ae.a(var26[var6] << 93821816, -16777216), qk.field_f[ae.a((int) var27[var6], 255)]);
@@ -115,7 +115,7 @@ final class je {
             }
           }
           of.a(false);
-          return var3;
+          return (ed) var3;
         }
     }
 

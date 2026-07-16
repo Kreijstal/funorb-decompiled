@@ -73,8 +73,9 @@ final class ai extends cg {
                       var13 = stackIn_23_0;
                       if (var7 < var13) {
                         re.field_c[var11] = re.field_c[var8];
+                        int incrementValue$1 = var8;
                         var8++;
-                        re.field_c[var8] = var12;
+                        re.field_c[incrementValue$1] = var12;
                         if (var9 > var13) {
                           var9 = var13;
                           var11++;
@@ -140,11 +141,11 @@ final class ai extends cg {
         int var3 = 0;
         CharSequence var4 = null;
         CharSequence var5 = null;
-        var4 = (CharSequence) param0;
+        var4 = (CharSequence) (Object) param0;
         if (!pg.a(false, var4)) {
           return pe.field_b;
         } else {
-          var5 = (CharSequence) param0;
+          var5 = (CharSequence) (Object) param0;
           var3 = ie.a(false, var5);
           if (param1 <= -58) {
             L0: {
@@ -160,7 +161,7 @@ final class ai extends cg {
             }
             return pe.field_b;
           } else {
-            return (sg) null;
+            return null;
           }
         }
     }

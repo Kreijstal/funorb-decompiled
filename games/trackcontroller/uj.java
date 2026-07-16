@@ -101,11 +101,16 @@ final class uj {
             sb.field_a = param1;
             if (null != gf.field_o.field_p) {
               try {
-                pl.field_b = new il(gf.field_o.field_p, 64, 0);
-              } catch (java.io.IOException decompiledCaughtParameter) {
-                decompiledCaughtException = decompiledCaughtParameter;
-                return;
+                L2: {
+                  pl.field_b = new il(gf.field_o.field_p, 64, 0);
+                  break L2;
+                }
+              } catch (java.io.IOException decompiledCaughtParameter0) {
+                decompiledCaughtException = decompiledCaughtParameter0;
+                var15 = (IOException) (Object) decompiledCaughtException;
+                throw new RuntimeException(var15.toString());
               }
+              return;
             } else {
               return;
             }

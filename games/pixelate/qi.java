@@ -49,8 +49,9 @@ final class qi extends jj {
         while (var2 != null) {
             var2.field_l = var2.field_l + var2.field_s;
             var2.field_r = var2.field_r + var2.field_y;
+            int fieldTemp$0 = var2.field_x + 1;
             var2.field_x = var2.field_x + 1;
-            if (var2.field_w <= var2.field_x + 1) {
+            if (var2.field_w <= fieldTemp$0) {
                 var2.field_x = 0;
                 var3 = ii.c(5, (byte) -120);
                 var2.field_n = var3 == var2.field_n ? 5 : var3;
@@ -61,8 +62,9 @@ final class qi extends jj {
             }
             var2 = (jn) (Object) ((qi) this).field_n.f(param0 + 1504642274);
         }
+        int fieldTemp$1 = ((qi) this).field_m - 1;
         ((qi) this).field_m = ((qi) this).field_m - 1;
-        if (!((((qi) this).field_m - 1 ^ -1) <= param0)) {
+        if (!((fieldTemp$1 ^ -1) <= param0)) {
             ((qi) this).field_n.a(22125, (fa) (Object) new jn(od.a((byte) 41, 189440, -25600), -25600));
             ((qi) this).field_m = od.a((byte) 41, 75, 25);
         }

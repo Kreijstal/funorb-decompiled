@@ -25,17 +25,19 @@ final class tj extends rb {
                 var12++;
                 continue L0;
               } else {
+                int incrementValue$50 = param4;
                 param4++;
-                param0 = param2[param4];
-                if (param2[param4] == 0) {
+                param0 = param2[incrementValue$50];
+                if (param2[incrementValue$50] == 0) {
                   param5++;
                   var13++;
                   continue L1;
                 } else {
                   var14 = param1[param5];
                   var15 = param3[param0 & 255];
+                  int incrementValue$51 = param5;
                   param5++;
-                  param1[param5] = ((var15 & 16711935) * param10 + (var14 & 16711935) * var11 & -16711936) + ((var15 & 65280) * param10 + (var14 & 65280) * var11 & 16711680) >> 8;
+                  param1[incrementValue$51] = ((var15 & 16711935) * param10 + (var14 & 16711935) * var11 & -16711936) + ((var15 & 65280) * param10 + (var14 & 65280) * var11 & 16711680) >> 8;
                   var13++;
                   continue L1;
                 }
@@ -156,15 +158,17 @@ final class tj extends rb {
                     var11++;
                     continue L0;
                   } else {
+                    int incrementValue$10 = param4;
                     param4++;
-                    param0 = param2[param4];
-                    if (param2[param4] == 0) {
+                    param0 = param2[incrementValue$10];
+                    if (param2[incrementValue$10] == 0) {
                       param5++;
                       var12++;
                       continue L2;
                     } else {
+                      int incrementValue$11 = param5;
                       param5++;
-                      param1[param5] = param3[param0 & 255];
+                      param1[incrementValue$11] = param3[param0 & 255];
                       var12++;
                       continue L2;
                     }
@@ -172,50 +176,58 @@ final class tj extends rb {
                 }
               } else {
                 L3: {
+                  int incrementValue$12 = param4;
                   param4++;
-                  param0 = param2[param4];
-                  if (param2[param4] == 0) {
+                  param0 = param2[incrementValue$12];
+                  if (param2[incrementValue$12] == 0) {
                     param5++;
                     break L3;
                   } else {
+                    int incrementValue$13 = param5;
                     param5++;
-                    param1[param5] = param3[param0 & 255];
+                    param1[incrementValue$13] = param3[param0 & 255];
                     break L3;
                   }
                 }
                 L4: {
+                  int incrementValue$14 = param4;
                   param4++;
-                  param0 = param2[param4];
-                  if (param2[param4] == 0) {
+                  param0 = param2[incrementValue$14];
+                  if (param2[incrementValue$14] == 0) {
                     param5++;
                     break L4;
                   } else {
+                    int incrementValue$15 = param5;
                     param5++;
-                    param1[param5] = param3[param0 & 255];
+                    param1[incrementValue$15] = param3[param0 & 255];
                     break L4;
                   }
                 }
                 L5: {
+                  int incrementValue$16 = param4;
                   param4++;
-                  param0 = param2[param4];
-                  if (param2[param4] == 0) {
+                  param0 = param2[incrementValue$16];
+                  if (param2[incrementValue$16] == 0) {
                     param5++;
                     break L5;
                   } else {
+                    int incrementValue$17 = param5;
                     param5++;
-                    param1[param5] = param3[param0 & 255];
+                    param1[incrementValue$17] = param3[param0 & 255];
                     break L5;
                   }
                 }
+                int incrementValue$18 = param4;
                 param4++;
-                param0 = param2[param4];
-                if (param2[param4] == 0) {
+                param0 = param2[incrementValue$18];
+                if (param2[incrementValue$18] == 0) {
                   param5++;
                   var12++;
                   continue L1;
                 } else {
+                  int incrementValue$19 = param5;
                   param5++;
-                  param1[param5] = param3[param0 & 255];
+                  param1[incrementValue$19] = param3[param0 & 255];
                   var12++;
                   continue L1;
                 }

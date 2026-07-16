@@ -14,7 +14,7 @@ final class ab extends la {
     final byte[] b(boolean param0) {
         if (!((ab) this).field_n) {
           if (!param0) {
-            ((ab) this).field_r = (byte[]) null;
+            ((ab) this).field_r = null;
             return ((ab) this).field_r;
           } else {
             return ((ab) this).field_r;
@@ -26,8 +26,8 @@ final class ab extends la {
 
     final static void a(qk param0, int param1) {
         kc var2 = new kc(param0.a((byte) 7, "", "final_frame.jpg"), (java.awt.Component) (Object) tb.field_c);
-        int var3 = ((kc) var2).field_p;
-        int var4 = ((kc) var2).field_o;
+        int var3 = var2.field_p;
+        int var4 = var2.field_o;
         ji.a(true);
         sg.field_d = new kc(var3, 3 * var4 / 4);
         sg.field_d.c();
@@ -70,25 +70,29 @@ final class ab extends la {
         String stackOut_3_0 = null;
         try {
           L0: {
-            var3_int = param0.a(0);
-            if (var3_int > param2) {
-              var3_int = param2;
-              break L0;
-            } else {
-              break L0;
+            L1: {
+              var3_int = param0.a(0);
+              if (var3_int > param2) {
+                var3_int = param2;
+                break L1;
+              } else {
+                break L1;
+              }
             }
+            var4 = new byte[var3_int];
+            var5 = 54 % ((6 - param1) / 55);
+            param0.field_i = param0.field_i + qf.field_J.a(var3_int, var4, param0.field_g, 0, 109, param0.field_i);
+            var6 = bd.a(255, 0, var4, var3_int);
+            stackOut_3_0 = (String) var6;
+            stackIn_4_0 = stackOut_3_0;
+            break L0;
           }
-          var4 = new byte[var3_int];
-          var5 = 54 % ((6 - param1) / 55);
-          ((pb) param0).field_i = ((pb) param0).field_i + qf.field_J.a(var3_int, var4, ((pb) param0).field_g, 0, 109, ((pb) param0).field_i);
-          var6 = bd.a(255, 0, var4, var3_int);
-          stackOut_3_0 = (String) var6;
-          stackIn_4_0 = stackOut_3_0;
-        } catch (java.lang.Exception decompiledCaughtParameter) {
-          decompiledCaughtException = decompiledCaughtParameter;
-          return (String) (Object) stackIn_4_0;
+        } catch (java.lang.Exception decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3 = (Exception) (Object) decompiledCaughtException;
+          return "Cabbage";
         }
-        return null;
+        return stackIn_4_0;
     }
 
     ab() {

@@ -80,12 +80,12 @@ abstract class dm extends wb {
         if (param1 != 4) {
           field_v = null;
           var2 = param0;
-          if (-33 != var2) {
+          if (-33 != (var2 ^ -1)) {
             L0: {
               if (var2 == 160) {
                 break L0;
               } else {
-                if (-96 != var2) {
+                if (-96 != (var2 ^ -1)) {
                   if (45 == var2) {
                     break L0;
                   } else {
@@ -93,7 +93,7 @@ abstract class dm extends wb {
                       if (91 == var2) {
                         break L1;
                       } else {
-                        if (var2 != -94) {
+                        if ((var2 ^ -1) != -94) {
                           if (35 == var2) {
                             break L1;
                           } else {
@@ -101,25 +101,25 @@ abstract class dm extends wb {
                               if (224 == var2) {
                                 break L2;
                               } else {
-                                if (var2 == -226) {
+                                if ((var2 ^ -1) == -226) {
                                   break L2;
                                 } else {
-                                  if (-227 == var2) {
+                                  if (-227 == (var2 ^ -1)) {
                                     break L2;
                                   } else {
-                                    if (-229 != var2) {
+                                    if (-229 != (var2 ^ -1)) {
                                       if (-228 == (var2 ^ -1)) {
                                         break L2;
                                       } else {
-                                        if (var2 != -193) {
-                                          if (-194 == var2) {
+                                        if ((var2 ^ -1) != -193) {
+                                          if (-194 == (var2 ^ -1)) {
                                             break L2;
                                           } else {
                                             if (194 != var2) {
                                               if (var2 == 196) {
                                                 break L2;
                                               } else {
-                                                if (var2 == -196) {
+                                                if ((var2 ^ -1) == -196) {
                                                   break L2;
                                                 } else {
                                                   if (var2 != 232) {
@@ -127,7 +127,7 @@ abstract class dm extends wb {
                                                       if (233 == var2) {
                                                         break L3;
                                                       } else {
-                                                        if (-235 == var2) {
+                                                        if (-235 == (var2 ^ -1)) {
                                                           break L3;
                                                         } else {
                                                           if (var2 == 235) {
@@ -147,27 +147,27 @@ abstract class dm extends wb {
                                                                   } else {
                                                                     if (237 != var2) {
                                                                       L4: {
-                                                                        if (var2 == -239) {
+                                                                        if ((var2 ^ -1) == -239) {
                                                                           break L4;
                                                                         } else {
                                                                           if (239 == var2) {
                                                                             break L4;
                                                                           } else {
-                                                                            if (-206 != var2) {
+                                                                            if (-206 != (var2 ^ -1)) {
                                                                               if (var2 != 206) {
-                                                                                if (var2 == -208) {
+                                                                                if ((var2 ^ -1) == -208) {
                                                                                   break L4;
                                                                                 } else {
                                                                                   L5: {
                                                                                     if (var2 == 242) {
                                                                                       break L5;
                                                                                     } else {
-                                                                                      if (-244 != var2) {
+                                                                                      if (-244 != (var2 ^ -1)) {
                                                                                         if (var2 == 244) {
                                                                                           break L5;
                                                                                         } else {
-                                                                                          if (-247 != var2) {
-                                                                                            if (-246 == var2) {
+                                                                                          if (-247 != (var2 ^ -1)) {
+                                                                                            if (-246 == (var2 ^ -1)) {
                                                                                               break L5;
                                                                                             } else {
                                                                                               if ((var2 ^ -1) != -211) {
@@ -177,7 +177,7 @@ abstract class dm extends wb {
                                                                                                   if (var2 == 212) {
                                                                                                     break L5;
                                                                                                   } else {
-                                                                                                    if (var2 != -215) {
+                                                                                                    if ((var2 ^ -1) != -215) {
                                                                                                       if (var2 == 213) {
                                                                                                         break L5;
                                                                                                       } else {
@@ -186,13 +186,13 @@ abstract class dm extends wb {
                                                                                                             break L6;
                                                                                                           } else {
                                                                                                             if (var2 != 250) {
-                                                                                                              if (-252 != var2) {
-                                                                                                                if (var2 == -253) {
+                                                                                                              if (-252 != (var2 ^ -1)) {
+                                                                                                                if ((var2 ^ -1) == -253) {
                                                                                                                   break L6;
                                                                                                                 } else {
                                                                                                                   if (var2 != 217) {
                                                                                                                     if (var2 != 218) {
-                                                                                                                      if (-220 == var2) {
+                                                                                                                      if (-220 == (var2 ^ -1)) {
                                                                                                                         break L6;
                                                                                                                       } else {
                                                                                                                         if ((var2 ^ -1) == -221) {
@@ -328,13 +328,13 @@ abstract class dm extends wb {
           }
         } else {
           var2 = param0;
-          if (-33 != var2) {
+          if (-33 != (var2 ^ -1)) {
             if (var2 != 160) {
               if (-96 != (var2 ^ -1)) {
                 if (45 != var2) {
                   if (91 != var2) {
                     L7: {
-                      if (var2 != -94) {
+                      if ((var2 ^ -1) != -94) {
                         if (35 == var2) {
                           break L7;
                         } else {
@@ -342,25 +342,25 @@ abstract class dm extends wb {
                             if (224 == var2) {
                               break L8;
                             } else {
-                              if (var2 == -226) {
+                              if ((var2 ^ -1) == -226) {
                                 break L8;
                               } else {
-                                if (-227 == var2) {
+                                if (-227 == (var2 ^ -1)) {
                                   break L8;
                                 } else {
-                                  if (-229 != var2) {
+                                  if (-229 != (var2 ^ -1)) {
                                     if (-228 == (var2 ^ -1)) {
                                       break L8;
                                     } else {
-                                      if (var2 != -193) {
-                                        if (-194 == var2) {
+                                      if ((var2 ^ -1) != -193) {
+                                        if (-194 == (var2 ^ -1)) {
                                           break L8;
                                         } else {
                                           if (194 != var2) {
                                             if (var2 == 196) {
                                               break L8;
                                             } else {
-                                              if (var2 == -196) {
+                                              if ((var2 ^ -1) == -196) {
                                                 break L8;
                                               } else {
                                                 L9: {
@@ -368,7 +368,7 @@ abstract class dm extends wb {
                                                     if (233 == var2) {
                                                       break L9;
                                                     } else {
-                                                      if (-235 == var2) {
+                                                      if (-235 == (var2 ^ -1)) {
                                                         break L9;
                                                       } else {
                                                         if (var2 == 235) {
@@ -388,27 +388,27 @@ abstract class dm extends wb {
                                                                 } else {
                                                                   L10: {
                                                                     if (237 != var2) {
-                                                                      if (var2 == -239) {
+                                                                      if ((var2 ^ -1) == -239) {
                                                                         break L10;
                                                                       } else {
                                                                         if (239 == var2) {
                                                                           break L10;
                                                                         } else {
-                                                                          if (-206 != var2) {
+                                                                          if (-206 != (var2 ^ -1)) {
                                                                             if (var2 != 206) {
-                                                                              if (var2 == -208) {
+                                                                              if ((var2 ^ -1) == -208) {
                                                                                 break L10;
                                                                               } else {
                                                                                 L11: {
                                                                                   if (var2 == 242) {
                                                                                     break L11;
                                                                                   } else {
-                                                                                    if (-244 != var2) {
+                                                                                    if (-244 != (var2 ^ -1)) {
                                                                                       if (var2 == 244) {
                                                                                         break L11;
                                                                                       } else {
-                                                                                        if (-247 != var2) {
-                                                                                          if (-246 == var2) {
+                                                                                        if (-247 != (var2 ^ -1)) {
+                                                                                          if (-246 == (var2 ^ -1)) {
                                                                                             break L11;
                                                                                           } else {
                                                                                             if ((var2 ^ -1) != -211) {
@@ -418,7 +418,7 @@ abstract class dm extends wb {
                                                                                                 if (var2 == 212) {
                                                                                                   break L11;
                                                                                                 } else {
-                                                                                                  if (var2 != -215) {
+                                                                                                  if ((var2 ^ -1) != -215) {
                                                                                                     if (var2 == 213) {
                                                                                                       break L11;
                                                                                                     } else {
@@ -427,13 +427,13 @@ abstract class dm extends wb {
                                                                                                           break L12;
                                                                                                         } else {
                                                                                                           if (var2 != 250) {
-                                                                                                            if (-252 != var2) {
-                                                                                                              if (var2 == -253) {
+                                                                                                            if (-252 != (var2 ^ -1)) {
+                                                                                                              if ((var2 ^ -1) == -253) {
                                                                                                                 break L12;
                                                                                                               } else {
                                                                                                                 if (var2 != 217) {
                                                                                                                   if (var2 != 218) {
-                                                                                                                    if (-220 == var2) {
+                                                                                                                    if (-220 == (var2 ^ -1)) {
                                                                                                                       break L12;
                                                                                                                     } else {
                                                                                                                       if ((var2 ^ -1) == -221) {

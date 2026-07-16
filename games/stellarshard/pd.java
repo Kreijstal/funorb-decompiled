@@ -122,16 +122,16 @@ final class pd extends vk {
                 if (((pd) this).field_o != param3) {
                   break L2;
                 } else {
-                  if (param0 != ((pd) this).field_i) {
+                  if ((param0 ^ -1) != (((pd) this).field_i ^ -1)) {
                     break L2;
                   } else {
-                    if (((pd) this).field_k != param1) {
+                    if ((((pd) this).field_k ^ -1) != (param1 ^ -1)) {
                       break L2;
                     } else {
                       if (param5 != ((pd) this).field_n) {
                         break L2;
                       } else {
-                        if (param2 != ((pd) this).field_v) {
+                        if ((param2 ^ -1) != (((pd) this).field_v ^ -1)) {
                           break L2;
                         } else {
                           if (null == ((pd) this).field_m) {
@@ -163,10 +163,10 @@ final class pd extends vk {
             var17 = new String[param4.c(param6, param2) - -1];
             var18 = var17;
             var10 = Math.max(1, param4.a(param6, new int[1], var18));
-            if (((pd) this).field_i != -4) {
+            if ((((pd) this).field_i ^ -1) != -4) {
               break L3;
             } else {
-              if (-2 != var10) {
+              if (-2 != (var10 ^ -1)) {
                 break L3;
               } else {
                 ((pd) this).field_i = 1;
@@ -176,7 +176,7 @@ final class pd extends vk {
           }
           L4: {
             ((pd) this).field_a = new uj[var10];
-            if (((pd) this).field_i == 0) {
+            if ((((pd) this).field_i ^ -1) == -1) {
               var11 = param4.field_N;
               break L4;
             } else {
@@ -250,8 +250,7 @@ final class pd extends vk {
                 }
               }
               L8: {
-                new uj(stackIn_35_2, stackIn_35_3, stackIn_35_4);
-                var14 = stackIn_35_0;
+                var14 = new uj(stackIn_35_2, stackIn_35_3, stackIn_35_4);
                 var14.field_a[0] = 0;
                 if (var13 == null) {
                   break L8;
@@ -433,6 +432,7 @@ final class pd extends vk {
             L1: while (true) {
               if (var15 > 10) {
                 field_p = "No highscores";
+                return;
               } else {
                 var1 = 8 * (-1 + var15);
                 field_j[var15] = ue.a(ue.a(ue.a(ue.a(ue.a(ue.a(stellarshard.a(field_l[2][var1 - -2], 280375465082880L), ue.a(stellarshard.a(-72057594037927936L, field_l[0][var1]), stellarshard.a(71776119061217280L, field_l[1][1 + var1]))), stellarshard.a(field_l[3][var1 - -3], 1095216660480L)), stellarshard.a(4278190080L, field_l[4][var1 - -4])), stellarshard.a(16711680L, field_l[5][5 + var1])), stellarshard.a(field_l[6][6 + var1], 65280L)), stellarshard.a(field_l[7][7 + var1], 255L));
@@ -442,7 +442,7 @@ final class pd extends vk {
             }
           } else {
             L2: {
-              var1 = "ᠣ웨螸ŏ㚦틵祯酒悼鮎ꌌ笵ᷠퟂ⹋﹗ᕷ㟥鿰䫚壉⤊놠殅뵝ჴ쬾է䆋Ᵹ闘ﯮ籦���䞞쨭뼇굚茳挂ꩱ젙䧙守騦㊰햀뻍㑈ｺ遟⁨᪮둔錢擱猒䀈쏬���贽需켫皂혛떯橐䗳ワ㽕ꋪ斺⿀���﵍鉵ڊ닦ฟ拔ꢖ暈╙葲㥌幸㢌톥댡鰞䏇ﰄ写洍﫟縤㮫츑轎럫㲁铷뤓ⳓ쐃噄義⪻셓���鵬ㅴ겉ᓡᘺ椉炶탭챂颤⡜".charAt(var0 / 2);
+              var1 = "ᠣ웨螸ŏ㚦틵祯酒悼鮎ꌌ笵ᷠퟂ⹋﹗ᕷ㟥鿰䫚壉⤊놠殅뵝ჴ쬾է䆋Ᵹ闘ﯮ籦\udd17䞞쨭뼇굚茳挂ꩱ젙䧙守騦㊰햀뻍㑈ｺ遟⁨᪮둔錢擱猒䀈쏬\udba1贽需켫皂혛떯橐䗳ワ㽕ꋪ斺⿀\ude1c﵍鉵ڊ닦ฟ拔ꢖ暈╙葲㥌幸㢌톥댡鰞䏇ﰄ写洍﫟縤㮫츑轎럫㲁铷뤓ⳓ쐃噄義⪻셓\udc0b鵬ㅴ겉ᓡᘺ椉炶탭챂颤⡜".charAt(var0 / 2);
               if (0 == (var0 & 1)) {
                 stackOut_4_0 = (long)(var1 >>> -811088888);
                 stackIn_5_0 = stackOut_4_0;

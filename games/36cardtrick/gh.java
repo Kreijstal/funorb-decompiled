@@ -24,7 +24,7 @@ final class gh extends qb {
         field_k = null;
         field_h = null;
         if (param0 != 256) {
-            field_i = (String) null;
+            field_i = null;
         }
     }
 

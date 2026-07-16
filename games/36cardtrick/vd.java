@@ -30,7 +30,7 @@ final class vd extends he {
           var10 = Main.field_T;
           var4 = -30 % ((param2 - 34) / 63);
           if (1 != param0) {
-            if (-3 == param0) {
+            if (-3 == (param0 ^ -1)) {
               var5 = param1.f(29);
               ((vd) this).field_m = new int[var5];
               var6 = 0;
@@ -44,7 +44,7 @@ final class vd extends he {
                 }
               }
             } else {
-              if (-4 != param0) {
+              if (-4 != (param0 ^ -1)) {
                 if ((param0 ^ -1) == -5) {
                   break L0;
                 } else {
@@ -56,29 +56,31 @@ final class vd extends he {
                 ((vd) this).field_t = new int[var5];
                 var6 = 0;
                 L2: while (true) {
-                  if (var5 <= var6) {
+                  if ((var5 ^ -1) >= (var6 ^ -1)) {
                     break L0;
                   } else {
-                    var7 = param1.d((byte) 72);
-                    var8 = p.a(-1, var7);
-                    if (var8 != null) {
-                      ((vd) this).field_t[var6] = var7;
-                      ((vd) this).field_v[var6] = new int[((de) var8).field_d];
-                      var9 = 0;
-                      L3: while (true) {
-                        if (((de) var8).field_d > var9) {
-                          ((vd) this).field_v[var6][var9] = param1.d((byte) 72);
-                          var9++;
-                          continue L3;
-                        } else {
-                          var6++;
-                          continue L2;
+                    L3: {
+                      var7 = param1.d((byte) 72);
+                      var8 = p.a(-1, var7);
+                      if (var8 != null) {
+                        ((vd) this).field_t[var6] = var7;
+                        ((vd) this).field_v[var6] = new int[var8.field_d];
+                        var9 = 0;
+                        L4: while (true) {
+                          if ((var8.field_d ^ -1) >= (var9 ^ -1)) {
+                            break L3;
+                          } else {
+                            ((vd) this).field_v[var6][var9] = param1.d((byte) 72);
+                            var9++;
+                            continue L4;
+                          }
                         }
+                      } else {
+                        break L3;
                       }
-                    } else {
-                      var6++;
-                      continue L2;
                     }
+                    var6++;
+                    continue L2;
                   }
                 }
               }
@@ -141,7 +143,7 @@ final class vd extends he {
     final void a(byte param0, pb param1) {
         int var3 = 0;
         int var4 = 0;
-        le var5 = null;
+        Object var5 = null;
         var4 = Main.field_T;
         L0: while (true) {
           var3 = param1.f(91);
@@ -153,7 +155,7 @@ final class vd extends he {
               if (param0 >= 29) {
                 break L1;
               } else {
-                var5 = (le) null;
+                var5 = null;
                 vd.a(73, -78, true, -52L, -55, -9, (String) null, -34, -78, -25, -16, 3, (le) null, false);
                 break L1;
               }
@@ -169,7 +171,7 @@ final class vd extends he {
         StringBuilder var5 = new StringBuilder(80);
         StringBuilder var2 = var5;
         if (param0 != 28) {
-            return (String) null;
+            return null;
         }
         if (!(((vd) this).field_o != null)) {
             return "";
@@ -187,7 +189,7 @@ final class vd extends he {
         if (param0 <= 45) {
             return;
         }
-        field_r = (byte[][]) null;
+        field_r = null;
         field_p = null;
         field_n = null;
         field_q = null;

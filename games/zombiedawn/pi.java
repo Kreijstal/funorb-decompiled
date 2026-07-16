@@ -599,17 +599,31 @@ final class pi extends dh implements java.awt.image.ImageProducer, java.awt.imag
     final static void a(int param0, int param1, byte param2) {
         param0 = param0 / 24;
         param1 = param1 / 24;
-        if (param2 != 101) {
-            return;
-        }
-        if (-1 >= (param1 ^ -1)) {
-            // if_icmple L49
-            // iflt L49
-            // if_icmple L49
+        if (param2 == 101) {
+          L0: {
+            if (-1 < (param1 ^ -1)) {
+              break L0;
+            } else {
+              if (vm.field_u[0].length <= param1) {
+                break L0;
+              } else {
+                if (param0 < 0) {
+                  break L0;
+                } else {
+                  if (vm.field_u.length <= param0) {
+                    break L0;
+                  } else {
+                    vm.field_u[param0][param1] = vm.field_u[param0][param1] + 1;
+                    return;
+                  }
+                }
+              }
+            }
+          }
+          return;
         } else {
-            return;
+          return;
         }
-        vm.field_u[param0][param1] = vm.field_u[param0][param1] + 1;
     }
 
     final static f[] a(int param0, am param1) {
@@ -618,7 +632,7 @@ final class pi extends dh implements java.awt.image.ImageProducer, java.awt.imag
         f[] var4 = null;
         int var5 = 0;
         int var6 = 0;
-        f var6_ref = null;
+        f var6_ref_f = null;
         int var7 = 0;
         var7 = ZombieDawn.field_J;
         var2 = param1.k(127, 8);
@@ -638,15 +652,15 @@ final class pi extends dh implements java.awt.image.ImageProducer, java.awt.imag
                 var5++;
                 continue L0;
               } else {
-                var6_ref = new f();
+                var6_ref_f = new f();
                 int discarded$6 = param1.k(param0 ^ 82, 24);
                 int discarded$7 = param1.k(108, 24);
-                var6_ref.field_h = param1.k(91, 24);
+                var6_ref_f.field_h = param1.k(91, 24);
                 int discarded$8 = param1.k(54, 9);
                 int discarded$9 = param1.k(116, 12);
                 int discarded$10 = param1.k(118, 12);
                 int discarded$11 = param1.k(param0 + 58, 12);
-                var4[var5] = var6_ref;
+                var4[var5] = var6_ref_f;
                 var5++;
                 continue L0;
               }

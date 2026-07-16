@@ -72,7 +72,7 @@ final class b {
               }
             }
             L2: {
-              var16 = (tl[]) (Object) stackIn_35_0[stackIn_35_1];
+              var16 = stackIn_35_0[stackIn_35_1];
               var18 = var16;
               var8 = var18;
               var9 = 1;
@@ -590,8 +590,9 @@ final class b {
                                           break L18;
                                         } else {
                                           L19: {
-                                            var9[var12] = var16.g(0);
-                                            var13 = var16.g(0);
+                                            byte dupTemp$2 = var16.g(0);
+                                            var9[var12] = dupTemp$2;
+                                            var13 = dupTemp$2;
                                             stackOut_33_0 = var10;
                                             stackIn_35_0 = stackOut_33_0;
                                             stackIn_34_0 = stackOut_33_0;
@@ -673,8 +674,9 @@ final class b {
                                           break L26;
                                         } else {
                                           L27: {
-                                            var9[var5 * var13 + var12] = var16.g(0);
-                                            var14 = var16.g(0);
+                                            byte dupTemp$3 = var16.g(0);
+                                            var9[var5 * var13 + var12] = dupTemp$3;
+                                            var14 = dupTemp$3;
                                             stackOut_50_0 = var10;
                                             stackIn_52_0 = stackOut_50_0;
                                             stackIn_51_0 = stackOut_50_0;

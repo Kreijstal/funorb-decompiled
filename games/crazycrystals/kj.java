@@ -43,14 +43,16 @@ final class kj {
               var2 = 0;
               L1: while (true) {
                 if (jl.field_d <= var2) {
-                  cl.field_j[param0.a(true)] = cl.field_j[param0.a(true)] + 1;
+                  int dupTemp$4 = param0.a(true);
+                  cl.field_j[dupTemp$4] = cl.field_j[dupTemp$4] + 1;
                   var2 = 0;
                   var3 = 0;
                   L2: while (true) {
                     if (jl.field_d <= var3) {
                       jl.field_d = var2;
+                      int fieldTemp$5 = jl.field_d;
                       jl.field_d = jl.field_d + 1;
-                      ol.field_D[jl.field_d] = param0;
+                      ol.field_D[fieldTemp$5] = param0;
                       return;
                     } else {
                       L3: {
@@ -67,15 +69,17 @@ final class kj {
                           break L3;
                         }
                       }
+                      int incrementValue$6 = var2;
                       var2++;
-                      ol.field_D[var2] = ol.field_D[var3];
+                      ol.field_D[incrementValue$6] = ol.field_D[var3];
                       var3++;
                       continue L2;
                     }
                   }
                 } else {
                   if (ol.field_D[var2].field_f == param0.field_f) {
-                    cl.field_j[ol.field_D[var2].a(true)] = cl.field_j[ol.field_D[var2].a(true)] + 1;
+                    int dupTemp$7 = ol.field_D[var2].a(true);
+                    cl.field_j[dupTemp$7] = cl.field_j[dupTemp$7] + 1;
                     var2++;
                     continue L1;
                   } else {

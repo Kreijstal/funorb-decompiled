@@ -153,295 +153,342 @@ class lk extends ai {
     final void a(int param0, StringBuilder param1, Hashtable param2, int param3) {
         int var6 = 0;
         var6 = Bounce.field_N;
-        StringBuilder discarded$45 = param1.append(this.getClass().getName()).append("[0x").append(Integer.toHexString(this.hashCode())).append("] @").append(((lk) this).field_r).append(",").append(((lk) this).field_i).append(" ").append(((lk) this).field_k).append("x").append(((lk) this).field_m);
-        if (((lk) this).field_h != null) {
+        StringBuilder discarded$39 = param1.append(this.getClass().getName()).append("[0x").append(Integer.toHexString(this.hashCode())).append("] @").append(((lk) this).field_r).append(",").append(((lk) this).field_i).append(" ").append(((lk) this).field_k).append("x").append(((lk) this).field_m);
+        if (((lk) this).field_h == null) {
           L0: {
-            StringBuilder discarded$46 = param1.append(" text=\"").append(((lk) this).field_h).append(34);
             if (((lk) this).field_g) {
-              StringBuilder discarded$47 = param1.append(" mouseover");
+              StringBuilder discarded$40 = param1.append(" mouseover");
               break L0;
             } else {
               break L0;
+            }
+          }
+          if (!((lk) this).e(param3 + -32361)) {
+            if (param3 == 32362) {
+              if (((lk) this).field_j != null) {
+                L1: {
+                  StringBuilder discarded$41 = param1.append(" renderer=");
+                  if (!(((lk) this).field_j instanceof lk)) {
+                    break L1;
+                  } else {
+                    param1 = ((lk) this).a(1 + param0, true, param2, param1);
+                    if (var6 == 0) {
+                      if (null != ((lk) this).field_n) {
+                        StringBuilder discarded$42 = param1.append(" listener=");
+                        if (((lk) this).field_n instanceof lk) {
+                          param1 = ((lk) this).a(1 + param0, true, param2, param1);
+                          if (var6 != 0) {
+                            StringBuilder discarded$43 = param1.append(((lk) this).field_n);
+                            return;
+                          } else {
+                            return;
+                          }
+                        } else {
+                          StringBuilder discarded$44 = param1.append(((lk) this).field_n);
+                          return;
+                        }
+                      } else {
+                        return;
+                      }
+                    } else {
+                      break L1;
+                    }
+                  }
+                }
+                L2: {
+                  StringBuilder discarded$45 = param1.append(((lk) this).field_j);
+                  if (null == ((lk) this).field_n) {
+                    break L2;
+                  } else {
+                    L3: {
+                      StringBuilder discarded$46 = param1.append(" listener=");
+                      if (!(((lk) this).field_n instanceof lk)) {
+                        break L3;
+                      } else {
+                        param1 = ((lk) this).a(1 + param0, true, param2, param1);
+                        break L3;
+                      }
+                    }
+                    StringBuilder discarded$47 = param1.append(((lk) this).field_n);
+                    break L2;
+                  }
+                }
+                return;
+              } else {
+                L4: {
+                  if (null == ((lk) this).field_n) {
+                    break L4;
+                  } else {
+                    L5: {
+                      StringBuilder discarded$48 = param1.append(" listener=");
+                      if (!(((lk) this).field_n instanceof lk)) {
+                        break L5;
+                      } else {
+                        param1 = ((lk) this).a(1 + param0, true, param2, param1);
+                        if (var6 == 0) {
+                          break L4;
+                        } else {
+                          break L5;
+                        }
+                      }
+                    }
+                    StringBuilder discarded$49 = param1.append(((lk) this).field_n);
+                    break L4;
+                  }
+                }
+                return;
+              }
+            } else {
+              L6: {
+                boolean discarded$50 = ((lk) this).c(-89, 94, 115, -98, -13);
+                if (((lk) this).field_j != null) {
+                  L7: {
+                    StringBuilder discarded$51 = param1.append(" renderer=");
+                    if (!(((lk) this).field_j instanceof lk)) {
+                      break L7;
+                    } else {
+                      param1 = ((lk) this).a(1 + param0, true, param2, param1);
+                      if (var6 == 0) {
+                        break L6;
+                      } else {
+                        break L7;
+                      }
+                    }
+                  }
+                  StringBuilder discarded$52 = param1.append(((lk) this).field_j);
+                  break L6;
+                } else {
+                  break L6;
+                }
+              }
+              L8: {
+                if (null == ((lk) this).field_n) {
+                  break L8;
+                } else {
+                  L9: {
+                    StringBuilder discarded$53 = param1.append(" listener=");
+                    if (!(((lk) this).field_n instanceof lk)) {
+                      break L9;
+                    } else {
+                      param1 = ((lk) this).a(1 + param0, true, param2, param1);
+                      if (var6 == 0) {
+                        break L8;
+                      } else {
+                        break L9;
+                      }
+                    }
+                  }
+                  StringBuilder discarded$54 = param1.append(((lk) this).field_n);
+                  break L8;
+                }
+              }
+              return;
+            }
+          } else {
+            L10: {
+              StringBuilder discarded$55 = param1.append(" focused");
+              if (param3 == 32362) {
+                break L10;
+              } else {
+                boolean discarded$56 = ((lk) this).c(-89, 94, 115, -98, -13);
+                break L10;
+              }
+            }
+            L11: {
+              if (((lk) this).field_j != null) {
+                L12: {
+                  StringBuilder discarded$57 = param1.append(" renderer=");
+                  if (!(((lk) this).field_j instanceof lk)) {
+                    break L12;
+                  } else {
+                    param1 = ((lk) this).a(1 + param0, true, param2, param1);
+                    if (var6 == 0) {
+                      break L11;
+                    } else {
+                      break L12;
+                    }
+                  }
+                }
+                StringBuilder discarded$58 = param1.append(((lk) this).field_j);
+                break L11;
+              } else {
+                break L11;
+              }
+            }
+            L13: {
+              if (null == ((lk) this).field_n) {
+                break L13;
+              } else {
+                L14: {
+                  StringBuilder discarded$59 = param1.append(" listener=");
+                  if (!(((lk) this).field_n instanceof lk)) {
+                    break L14;
+                  } else {
+                    param1 = ((lk) this).a(1 + param0, true, param2, param1);
+                    if (var6 == 0) {
+                      break L13;
+                    } else {
+                      break L14;
+                    }
+                  }
+                }
+                StringBuilder discarded$60 = param1.append(((lk) this).field_n);
+                break L13;
+              }
+            }
+            return;
+          }
+        } else {
+          L15: {
+            StringBuilder discarded$61 = param1.append(" text=\"").append(((lk) this).field_h).append(34);
+            if (((lk) this).field_g) {
+              StringBuilder discarded$62 = param1.append(" mouseover");
+              break L15;
+            } else {
+              break L15;
             }
           }
           if (((lk) this).e(param3 + -32361)) {
-            StringBuilder discarded$48 = param1.append(" focused");
+            StringBuilder discarded$63 = param1.append(" focused");
             if (param3 == 32362) {
-              if (((lk) this).field_j != null) {
-                StringBuilder discarded$49 = param1.append(" renderer=");
-                if (((lk) this).field_j instanceof lk) {
-                  L1: {
-                    param1 = ((lk) this).a(1 + param0, true, param2, param1);
-                    if (null == ((lk) this).field_n) {
-                      break L1;
-                    } else {
-                      StringBuilder discarded$50 = param1.append(" listener=");
-                      if (!(((lk) this).field_n instanceof lk)) {
-                        StringBuilder discarded$51 = param1.append(((lk) this).field_n);
-                        break L1;
-                      } else {
-                        param1 = ((lk) this).a(1 + param0, true, param2, param1);
-                        break L1;
-                      }
-                    }
-                  }
-                  return;
-                } else {
-                  L2: {
-                    StringBuilder discarded$52 = param1.append(((lk) this).field_j);
-                    if (null == ((lk) this).field_n) {
-                      break L2;
-                    } else {
-                      StringBuilder discarded$53 = param1.append(" listener=");
-                      if (!(((lk) this).field_n instanceof lk)) {
-                        StringBuilder discarded$54 = param1.append(((lk) this).field_n);
-                        break L2;
-                      } else {
-                        param1 = ((lk) this).a(1 + param0, true, param2, param1);
-                        break L2;
-                      }
-                    }
-                  }
-                  return;
-                }
-              } else {
-                L3: {
-                  if (null == ((lk) this).field_n) {
-                    break L3;
-                  } else {
-                    StringBuilder discarded$55 = param1.append(" listener=");
-                    if (!(((lk) this).field_n instanceof lk)) {
-                      StringBuilder discarded$56 = param1.append(((lk) this).field_n);
-                      break L3;
+              L16: {
+                if (((lk) this).field_j != null) {
+                  L17: {
+                    StringBuilder discarded$64 = param1.append(" renderer=");
+                    if (!(((lk) this).field_j instanceof lk)) {
+                      break L17;
                     } else {
                       param1 = ((lk) this).a(1 + param0, true, param2, param1);
-                      break L3;
+                      if (var6 == 0) {
+                        break L16;
+                      } else {
+                        break L17;
+                      }
                     }
                   }
-                }
-                return;
-              }
-            } else {
-              L4: {
-                boolean discarded$57 = ((lk) this).c(-89, 94, 115, -98, -13);
-                if (((lk) this).field_j != null) {
-                  StringBuilder discarded$58 = param1.append(" renderer=");
-                  if (!(((lk) this).field_j instanceof lk)) {
-                    StringBuilder discarded$59 = param1.append(((lk) this).field_j);
-                    break L4;
-                  } else {
-                    param1 = ((lk) this).a(1 + param0, true, param2, param1);
-                    break L4;
-                  }
+                  StringBuilder discarded$65 = param1.append(((lk) this).field_j);
+                  break L16;
                 } else {
-                  break L4;
+                  break L16;
                 }
               }
-              L5: {
+              L18: {
                 if (null == ((lk) this).field_n) {
-                  break L5;
+                  break L18;
                 } else {
-                  StringBuilder discarded$60 = param1.append(" listener=");
-                  if (!(((lk) this).field_n instanceof lk)) {
-                    StringBuilder discarded$61 = param1.append(((lk) this).field_n);
-                    break L5;
-                  } else {
-                    param1 = ((lk) this).a(1 + param0, true, param2, param1);
-                    break L5;
+                  L19: {
+                    StringBuilder discarded$66 = param1.append(" listener=");
+                    if (!(((lk) this).field_n instanceof lk)) {
+                      break L19;
+                    } else {
+                      param1 = ((lk) this).a(1 + param0, true, param2, param1);
+                      if (var6 == 0) {
+                        break L18;
+                      } else {
+                        break L19;
+                      }
+                    }
                   }
+                  StringBuilder discarded$67 = param1.append(((lk) this).field_n);
+                  break L18;
+                }
+              }
+              return;
+            } else {
+              L20: {
+                boolean discarded$68 = ((lk) this).c(-89, 94, 115, -98, -13);
+                if (((lk) this).field_j != null) {
+                  L21: {
+                    StringBuilder discarded$69 = param1.append(" renderer=");
+                    if (!(((lk) this).field_j instanceof lk)) {
+                      break L21;
+                    } else {
+                      param1 = ((lk) this).a(1 + param0, true, param2, param1);
+                      if (var6 == 0) {
+                        break L20;
+                      } else {
+                        break L21;
+                      }
+                    }
+                  }
+                  StringBuilder discarded$70 = param1.append(((lk) this).field_j);
+                  break L20;
+                } else {
+                  break L20;
+                }
+              }
+              L22: {
+                if (null == ((lk) this).field_n) {
+                  break L22;
+                } else {
+                  L23: {
+                    StringBuilder discarded$71 = param1.append(" listener=");
+                    if (!(((lk) this).field_n instanceof lk)) {
+                      break L23;
+                    } else {
+                      param1 = ((lk) this).a(1 + param0, true, param2, param1);
+                      if (var6 == 0) {
+                        break L22;
+                      } else {
+                        break L23;
+                      }
+                    }
+                  }
+                  StringBuilder discarded$72 = param1.append(((lk) this).field_n);
+                  break L22;
                 }
               }
               return;
             }
           } else {
-            if (param3 == 32362) {
-              if (((lk) this).field_j != null) {
-                StringBuilder discarded$62 = param1.append(" renderer=");
-                if (((lk) this).field_j instanceof lk) {
-                  L6: {
-                    param1 = ((lk) this).a(1 + param0, true, param2, param1);
-                    if (null == ((lk) this).field_n) {
-                      break L6;
-                    } else {
-                      StringBuilder discarded$63 = param1.append(" listener=");
-                      if (!(((lk) this).field_n instanceof lk)) {
-                        StringBuilder discarded$64 = param1.append(((lk) this).field_n);
-                        break L6;
-                      } else {
-                        param1 = ((lk) this).a(1 + param0, true, param2, param1);
-                        break L6;
-                      }
-                    }
-                  }
-                  return;
-                } else {
-                  L7: {
-                    StringBuilder discarded$65 = param1.append(((lk) this).field_j);
-                    if (null == ((lk) this).field_n) {
-                      break L7;
-                    } else {
-                      StringBuilder discarded$66 = param1.append(" listener=");
-                      if (!(((lk) this).field_n instanceof lk)) {
-                        StringBuilder discarded$67 = param1.append(((lk) this).field_n);
-                        break L7;
-                      } else {
-                        param1 = ((lk) this).a(1 + param0, true, param2, param1);
-                        break L7;
-                      }
-                    }
-                  }
-                  return;
-                }
+            L24: {
+              if (param3 == 32362) {
+                break L24;
               } else {
-                L8: {
-                  if (null == ((lk) this).field_n) {
-                    break L8;
-                  } else {
-                    StringBuilder discarded$68 = param1.append(" listener=");
-                    if (!(((lk) this).field_n instanceof lk)) {
-                      StringBuilder discarded$69 = param1.append(((lk) this).field_n);
-                      break L8;
-                    } else {
-                      param1 = ((lk) this).a(1 + param0, true, param2, param1);
-                      break L8;
-                    }
-                  }
-                }
-                return;
+                boolean discarded$73 = ((lk) this).c(-89, 94, 115, -98, -13);
+                break L24;
               }
-            } else {
-              L9: {
-                boolean discarded$70 = ((lk) this).c(-89, 94, 115, -98, -13);
-                if (((lk) this).field_j != null) {
-                  StringBuilder discarded$71 = param1.append(" renderer=");
+            }
+            L25: {
+              if (((lk) this).field_j != null) {
+                L26: {
+                  StringBuilder discarded$74 = param1.append(" renderer=");
                   if (!(((lk) this).field_j instanceof lk)) {
-                    StringBuilder discarded$72 = param1.append(((lk) this).field_j);
-                    break L9;
+                    break L26;
                   } else {
                     param1 = ((lk) this).a(1 + param0, true, param2, param1);
-                    break L9;
-                  }
-                } else {
-                  break L9;
-                }
-              }
-              L10: {
-                if (null == ((lk) this).field_n) {
-                  break L10;
-                } else {
-                  StringBuilder discarded$73 = param1.append(" listener=");
-                  if (!(((lk) this).field_n instanceof lk)) {
-                    StringBuilder discarded$74 = param1.append(((lk) this).field_n);
-                    break L10;
-                  } else {
-                    param1 = ((lk) this).a(1 + param0, true, param2, param1);
-                    break L10;
-                  }
-                }
-              }
-              return;
-            }
-          }
-        } else {
-          L11: {
-            if (((lk) this).field_g) {
-              StringBuilder discarded$75 = param1.append(" mouseover");
-              break L11;
-            } else {
-              break L11;
-            }
-          }
-          L12: {
-            if (!((lk) this).e(param3 + -32361)) {
-              break L12;
-            } else {
-              StringBuilder discarded$76 = param1.append(" focused");
-              break L12;
-            }
-          }
-          if (param3 == 32362) {
-            if (((lk) this).field_j != null) {
-              StringBuilder discarded$77 = param1.append(" renderer=");
-              if (((lk) this).field_j instanceof lk) {
-                L13: {
-                  param1 = ((lk) this).a(1 + param0, true, param2, param1);
-                  if (null == ((lk) this).field_n) {
-                    break L13;
-                  } else {
-                    StringBuilder discarded$78 = param1.append(" listener=");
-                    if (!(((lk) this).field_n instanceof lk)) {
-                      StringBuilder discarded$79 = param1.append(((lk) this).field_n);
-                      break L13;
+                    if (var6 == 0) {
+                      break L25;
                     } else {
-                      param1 = ((lk) this).a(1 + param0, true, param2, param1);
-                      break L13;
+                      break L26;
                     }
                   }
                 }
-                return;
+                StringBuilder discarded$75 = param1.append(((lk) this).field_j);
+                break L25;
               } else {
-                L14: {
-                  StringBuilder discarded$80 = param1.append(((lk) this).field_j);
-                  if (null == ((lk) this).field_n) {
-                    break L14;
-                  } else {
-                    StringBuilder discarded$81 = param1.append(" listener=");
-                    if (!(((lk) this).field_n instanceof lk)) {
-                      StringBuilder discarded$82 = param1.append(((lk) this).field_n);
-                      break L14;
-                    } else {
-                      param1 = ((lk) this).a(1 + param0, true, param2, param1);
-                      break L14;
-                    }
-                  }
-                }
-                return;
-              }
-            } else {
-              L15: {
-                if (null == ((lk) this).field_n) {
-                  break L15;
-                } else {
-                  StringBuilder discarded$83 = param1.append(" listener=");
-                  if (!(((lk) this).field_n instanceof lk)) {
-                    StringBuilder discarded$84 = param1.append(((lk) this).field_n);
-                    break L15;
-                  } else {
-                    param1 = ((lk) this).a(1 + param0, true, param2, param1);
-                    break L15;
-                  }
-                }
-              }
-              return;
-            }
-          } else {
-            L16: {
-              boolean discarded$85 = ((lk) this).c(-89, 94, 115, -98, -13);
-              if (((lk) this).field_j != null) {
-                StringBuilder discarded$86 = param1.append(" renderer=");
-                if (!(((lk) this).field_j instanceof lk)) {
-                  StringBuilder discarded$87 = param1.append(((lk) this).field_j);
-                  break L16;
-                } else {
-                  param1 = ((lk) this).a(1 + param0, true, param2, param1);
-                  break L16;
-                }
-              } else {
-                break L16;
+                break L25;
               }
             }
-            L17: {
+            L27: {
               if (null == ((lk) this).field_n) {
-                break L17;
+                break L27;
               } else {
-                StringBuilder discarded$88 = param1.append(" listener=");
-                if (!(((lk) this).field_n instanceof lk)) {
-                  StringBuilder discarded$89 = param1.append(((lk) this).field_n);
-                  break L17;
-                } else {
-                  param1 = ((lk) this).a(1 + param0, true, param2, param1);
-                  break L17;
+                L28: {
+                  StringBuilder discarded$76 = param1.append(" listener=");
+                  if (!(((lk) this).field_n instanceof lk)) {
+                    break L28;
+                  } else {
+                    param1 = ((lk) this).a(1 + param0, true, param2, param1);
+                    if (var6 == 0) {
+                      break L27;
+                    } else {
+                      break L28;
+                    }
+                  }
                 }
+                StringBuilder discarded$77 = param1.append(((lk) this).field_n);
+                break L27;
               }
             }
             return;
@@ -531,28 +578,43 @@ class lk extends ai {
               break L0;
             } else {
               if (var5 != 0) {
-                boolean discarded$1 = ((lk) this).a(param0, ll.field_y, va.field_a, uc.field_C, param3, (lk) this, true);
+                boolean discarded$2 = ((lk) this).a(param0, ll.field_y, va.field_a, uc.field_C, param3, (lk) this, true);
                 break L0;
               } else {
                 L1: {
                   if (vh.field_e == 0) {
                     break L1;
                   } else {
-                    if (((lk) this).a(vh.field_e, (lk) this, param0, og.field_a, 28455, rk.field_a, param3)) {
-                      param2 = false;
-                      break L1;
-                    } else {
-                      if (var5 == 0) {
-                        break L1;
+                    L2: {
+                      if (((lk) this).a(vh.field_e, (lk) this, param0, og.field_a, 28455, rk.field_a, param3)) {
+                        break L2;
                       } else {
-                        ((lk) this).c((byte) 114);
-                        break L1;
+                        if (var5 == 0) {
+                          break L1;
+                        } else {
+                          ((lk) this).c((byte) 114);
+                          if (var7 == 0) {
+                            break L1;
+                          } else {
+                            break L2;
+                          }
+                        }
                       }
                     }
+                    param2 = false;
+                    break L1;
                   }
                 }
                 if (0 == n.field_m) {
-                  if (0 != d.field_B) {
+                  if (0 == d.field_B) {
+                    d.field_B = n.field_m;
+                    if (param1) {
+                      gk.a(73, ((lk) this).d(0));
+                      return param2;
+                    } else {
+                      return false;
+                    }
+                  } else {
                     ((lk) this).a(ll.field_y, param0, (lk) this, param3, 34, uc.field_C);
                     var6 = nd.field_A;
                     if (var6 != null) {
@@ -585,14 +647,6 @@ class lk extends ai {
                         return param2;
                       }
                     }
-                  } else {
-                    d.field_B = n.field_m;
-                    if (!param1) {
-                      return false;
-                    } else {
-                      gk.a(73, ((lk) this).d(0));
-                      return param2;
-                    }
                   }
                 } else {
                   d.field_B = n.field_m;
@@ -606,70 +660,72 @@ class lk extends ai {
               }
             }
           }
-          L2: {
+          L3: {
             if (vh.field_e == 0) {
-              break L2;
+              break L3;
             } else {
               if (((lk) this).a(vh.field_e, (lk) this, param0, og.field_a, 28455, rk.field_a, param3)) {
                 param2 = false;
-                break L2;
+                break L3;
               } else {
-                L3: {
-                  if (var5 == 0) {
+                if (var5 == 0) {
+                  break L3;
+                } else {
+                  ((lk) this).c((byte) 114);
+                  if (var7 == 0) {
                     break L3;
                   } else {
-                    ((lk) this).c((byte) 114);
-                    break L3;
-                  }
-                }
-                L4: {
-                  if (0 != n.field_m) {
-                    break L4;
-                  } else {
-                    if (0 == d.field_B) {
-                      break L4;
-                    } else {
-                      ((lk) this).a(ll.field_y, param0, (lk) this, param3, 34, uc.field_C);
-                      var6 = nd.field_A;
-                      if (var6 != null) {
-                        if (!(var6.field_n instanceof df)) {
-                          nd.field_A = null;
-                          d.field_B = n.field_m;
-                          if (param1) {
-                            gk.a(73, ((lk) this).d(0));
-                            return param2;
-                          } else {
-                            return false;
-                          }
-                        } else {
-                          ((df) (Object) var6.field_n).a(var6, (byte) 109, (se) null);
-                          nd.field_A = null;
-                          d.field_B = n.field_m;
-                          if (param1) {
-                            gk.a(73, ((lk) this).d(0));
-                            return param2;
-                          } else {
-                            return false;
-                          }
-                        }
+                    L4: {
+                      param2 = false;
+                      if (0 != n.field_m) {
+                        break L4;
                       } else {
-                        d.field_B = n.field_m;
-                        if (param1) {
-                          gk.a(73, ((lk) this).d(0));
-                          return param2;
+                        if (0 == d.field_B) {
+                          break L4;
                         } else {
-                          return false;
+                          ((lk) this).a(ll.field_y, param0, (lk) this, param3, 34, uc.field_C);
+                          var6 = nd.field_A;
+                          if (var6 != null) {
+                            if (!(var6.field_n instanceof df)) {
+                              nd.field_A = null;
+                              d.field_B = n.field_m;
+                              if (param1) {
+                                gk.a(73, ((lk) this).d(0));
+                                return param2;
+                              } else {
+                                return false;
+                              }
+                            } else {
+                              ((df) (Object) var6.field_n).a(var6, (byte) 109, (se) null);
+                              nd.field_A = null;
+                              d.field_B = n.field_m;
+                              if (param1) {
+                                gk.a(73, ((lk) this).d(0));
+                                return param2;
+                              } else {
+                                return false;
+                              }
+                            }
+                          } else {
+                            d.field_B = n.field_m;
+                            if (param1) {
+                              gk.a(73, ((lk) this).d(0));
+                              return param2;
+                            } else {
+                              return false;
+                            }
+                          }
                         }
                       }
                     }
+                    d.field_B = n.field_m;
+                    if (param1) {
+                      gk.a(73, ((lk) this).d(0));
+                      return param2;
+                    } else {
+                      return false;
+                    }
                   }
-                }
-                d.field_B = n.field_m;
-                if (param1) {
-                  gk.a(73, ((lk) this).d(0));
-                  return param2;
-                } else {
-                  return false;
                 }
               }
             }
@@ -727,12 +783,82 @@ class lk extends ai {
           if (var5 != 0) {
             if (-1 != (vh.field_e ^ -1)) {
               ((lk) this).c((byte) 114);
-              d.field_B = n.field_m;
-              if (!param1) {
-                return false;
+              if (var7 != 0) {
+                L6: {
+                  if (0 == va.field_a) {
+                    break L6;
+                  } else {
+                    if (var5 != 0) {
+                      boolean discarded$3 = ((lk) this).a(param0, ll.field_y, va.field_a, uc.field_C, param3, (lk) this, true);
+                      break L6;
+                    } else {
+                      break L6;
+                    }
+                  }
+                }
+                L7: {
+                  if (vh.field_e == 0) {
+                    break L7;
+                  } else {
+                    L8: {
+                      if (((lk) this).a(vh.field_e, (lk) this, param0, og.field_a, 28455, rk.field_a, param3)) {
+                        break L8;
+                      } else {
+                        if (var5 == 0) {
+                          break L7;
+                        } else {
+                          ((lk) this).c((byte) 114);
+                          if (var7 == 0) {
+                            break L7;
+                          } else {
+                            break L8;
+                          }
+                        }
+                      }
+                    }
+                    param2 = false;
+                    break L7;
+                  }
+                }
+                L9: {
+                  if (0 != n.field_m) {
+                    break L9;
+                  } else {
+                    if (0 == d.field_B) {
+                      break L9;
+                    } else {
+                      ((lk) this).a(ll.field_y, param0, (lk) this, param3, 34, uc.field_C);
+                      var6 = nd.field_A;
+                      if (var6 != null) {
+                        if (!(var6.field_n instanceof df)) {
+                          nd.field_A = null;
+                          break L9;
+                        } else {
+                          ((df) (Object) var6.field_n).a(var6, (byte) 109, (se) null);
+                          nd.field_A = null;
+                          break L9;
+                        }
+                      } else {
+                        break L9;
+                      }
+                    }
+                  }
+                }
+                d.field_B = n.field_m;
+                if (!param1) {
+                  return false;
+                } else {
+                  gk.a(73, ((lk) this).d(0));
+                  return param2;
+                }
               } else {
-                gk.a(73, ((lk) this).d(0));
-                return param2;
+                d.field_B = n.field_m;
+                if (!param1) {
+                  return false;
+                } else {
+                  gk.a(73, ((lk) this).d(0));
+                  return param2;
+                }
               }
             } else {
               d.field_B = n.field_m;
@@ -842,7 +968,20 @@ class lk extends ai {
           } else {
             ((lk) this).a(var5_int, param0, 85, param1);
             var5_int++;
-            continue L0;
+            if (var6 == 0) {
+              continue L0;
+            } else {
+              L3: {
+                var5 = ag.b(-1);
+                if (var5 != null) {
+                  ma.field_m.a(ha.field_b, var5, mh.field_Z, true);
+                  break L3;
+                } else {
+                  break L3;
+                }
+              }
+              return;
+            }
           }
         }
     }

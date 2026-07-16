@@ -1,6 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
+import java.lang.String;
+
 final class m extends ue {
     static String[] field_e;
     private boolean field_o;

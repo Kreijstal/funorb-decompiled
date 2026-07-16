@@ -90,8 +90,9 @@ final class bj {
         ((bj) this).field_d = new gb[param0];
         ((bj) this).field_a = param0;
         for (var2 = 0; var2 < param0; var2++) {
-            var3 = new gb();
-            ((bj) this).field_d[var2] = new gb();
+            gb dupTemp$0 = new gb();
+            var3 = dupTemp$0;
+            ((bj) this).field_d[var2] = dupTemp$0;
             var3.field_j = var3;
             var3.field_k = var3;
         }

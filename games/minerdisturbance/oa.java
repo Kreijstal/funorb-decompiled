@@ -19,7 +19,7 @@ final class oa {
         int var6_int = 0;
         StringBuilder var6 = null;
         int var7 = 0;
-        String var7_ref = null;
+        String var7_ref_String = null;
         int var8 = 0;
         String var9 = null;
         int var10 = 0;
@@ -95,14 +95,14 @@ final class oa {
                   }
                 }
               }
-              var7_ref = param1.substring(var6_int + 2, var5);
-              if (oi.a(-19804, (CharSequence) (Object) var7_ref)) {
+              var7_ref_String = param1.substring(var6_int + 2, var5);
+              if (oi.a(-19804, (CharSequence) (Object) var7_ref_String)) {
                 if (var3 <= var5) {
                   continue L0;
                 } else {
                   if (param1.charAt(var5) == 62) {
                     var5++;
-                    var8 = md.a((CharSequence) (Object) var7_ref, true);
+                    var8 = md.a((CharSequence) (Object) var7_ref_String, true);
                     var4 = var4 + (param2[var8].length() + -var5 + var6_int);
                     continue L0;
                   } else {

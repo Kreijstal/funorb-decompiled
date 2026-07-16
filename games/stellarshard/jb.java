@@ -89,8 +89,9 @@ final class jb {
               }
             }
             if (((jb) this).field_f) {
+              int fieldTemp$2 = ((jb) this).field_g - 1;
               ((jb) this).field_g = ((jb) this).field_g - 1;
-              if (-1 <= (((jb) this).field_g - 1 ^ -1)) {
+              if (-1 <= (fieldTemp$2 ^ -1)) {
                 ((jb) this).field_g = ((jb) this).field_o;
                 if (fh.field_m < ((jb) this).field_d) {
                   ((jb) this).field_f = false;
@@ -156,8 +157,9 @@ final class jb {
               }
             }
             if (((jb) this).field_f) {
+              int fieldTemp$3 = ((jb) this).field_g - 1;
               ((jb) this).field_g = ((jb) this).field_g - 1;
-              if (-1 <= (((jb) this).field_g - 1 ^ -1)) {
+              if (-1 <= (fieldTemp$3 ^ -1)) {
                 ((jb) this).field_g = ((jb) this).field_o;
                 if (fh.field_m < ((jb) this).field_d) {
                   ((jb) this).field_f = false;

@@ -122,38 +122,69 @@ abstract class vg {
     }
 
     final int a(int param0, int param1, boolean param2) {
+        int var4 = 0;
         int var5 = 0;
         oe var6 = null;
         int var7 = 0;
-        int var8 = ZombieDawn.field_J;
-        if (!param2) {
+        int var8 = 0;
+        L0: {
+          var8 = ZombieDawn.field_J;
+          if (param2) {
+            break L0;
+          } else {
             field_a = null;
+            break L0;
+          }
         }
-        if (((vg) this).field_b != null) {
-            // ifeq L54
-            // if_icmpgt L54
-        } else {
-            return -1;
-        }
-        if (param1 > ((vg) this).field_b[-1 + ((vg) this).field_b.length].field_g) {
-            return -1;
-        }
-        if (-2 == (((vg) this).field_b.length ^ -1)) {
-            return ((vg) this).field_b[0].a(param0, 0);
-        }
-        int var4 = 0;
-        for (var5 = 0; ((vg) this).field_b.length > var5; var5++) {
-            var6 = ((vg) this).field_b[var5];
-            if (var6.field_b <= param1) {
-                if (!(var6.field_g < param1)) {
-                    var7 = var6.a(param0, 0);
-                    if (0 == (var7 ^ -1)) {
+        L1: {
+          if (((vg) this).field_b == null) {
+            break L1;
+          } else {
+            if (((vg) this).field_b.length == 0) {
+              break L1;
+            } else {
+              if (((vg) this).field_b[0].field_b > param1) {
+                break L1;
+              } else {
+                if (param1 <= ((vg) this).field_b[-1 + ((vg) this).field_b.length].field_g) {
+                  if (-2 != (((vg) this).field_b.length ^ -1)) {
+                    var4 = 0;
+                    var5 = 0;
+                    L2: while (true) {
+                      if (((vg) this).field_b.length <= var5) {
                         return -1;
+                      } else {
+                        L3: {
+                          var6 = ((vg) this).field_b[var5];
+                          if (var6.field_b > param1) {
+                            break L3;
+                          } else {
+                            if (var6.field_g >= param1) {
+                              var7 = var6.a(param0, 0);
+                              if (0 != (var7 ^ -1)) {
+                                return var7 + var4;
+                              } else {
+                                return -1;
+                              }
+                            } else {
+                              break L3;
+                            }
+                          }
+                        }
+                        var4 = var4 + (-1 + var6.field_e.length);
+                        var5++;
+                        continue L2;
+                      }
                     }
-                    return var7 + var4;
+                  } else {
+                    return ((vg) this).field_b[0].a(param0, 0);
+                  }
+                } else {
+                  return -1;
                 }
+              }
             }
-            var4 = var4 + (-1 + var6.field_e.length);
+          }
         }
         return -1;
     }

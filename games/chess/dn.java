@@ -31,87 +31,47 @@ final class dn {
         Object var13 = null;
         char[] var14 = null;
         char[] var15 = null;
-        int statePc = 0;
-        Throwable caughtException = null;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    var12 = Chess.field_G;
-                    var5 = param1.length;
-                    var6 = new String[var5];
-                    var15 = new char[var5];
-                    var14 = var15;
-                    var7 = var14;
-                    var8 = new di[var5];
-                    if (param4 == 13911) {
-                        statePc = 2;
-                    } else {
-                        statePc = 1;
-                    }
-                    continue stateLoop;
-                }
-                case 1: {
-                    var13 = null;
-                    pm discarded$2 = dn.a(21, -29, (byte) 51, (um) null, (um) null);
-                    statePc = 2;
-                    continue stateLoop;
-                }
-                case 2: {
-                    var9 = 49;
-                    statePc = 3;
-                    continue stateLoop;
-                }
-                case 3: {
-                    try {
-                        var10_int = 0;
-                        statePc = 4;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_3) {
-                        caughtException = stateCaught_3;
-                        statePc = 7;
-                        continue stateLoop;
-                    }
-                }
-                case 4: {
-                    try {
-                        if (var10_int >= var5) {
-                            statePc = 8;
-                        } else {
-                            statePc = 5;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_4) {
-                        caughtException = stateCaught_4;
-                        statePc = 7;
-                        continue stateLoop;
-                    }
-                }
-                case 5: {
-                    try {
-                        var11 = oa.field_b.a((byte) 79, param1[var10_int]);
-                        var6[var10_int] = var11.e((byte) -107);
-                        var9 = (char)(var9 + 1);
-                        var7[var10_int] = (char)var9;
-                        var8[var10_int] = null;
-                        var10_int++;
-                        statePc = 4;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_5) {
-                        caughtException = stateCaught_5;
-                        statePc = 7;
-                        continue stateLoop;
-                    }
-                }
-                case 7: {
-                    var10 = (Exception) (Object) caughtException;
-                    return null;
-                }
-                case 8: {
-                    return new di(0L, param0, param2, param3, var8, param1, var6, var15);
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
-            }
+        Throwable decompiledCaughtException = null;
+        L0: {
+          var12 = Chess.field_G;
+          var5 = param1.length;
+          var6 = new String[var5];
+          var15 = new char[var5];
+          var14 = var15;
+          var7 = var14;
+          var8 = new di[var5];
+          if (param4 == 13911) {
+            break L0;
+          } else {
+            var13 = null;
+            pm discarded$2 = dn.a(21, -29, (byte) 51, (um) null, (um) null);
+            break L0;
+          }
         }
+        var9 = 49;
+        try {
+          L1: {
+            var10_int = 0;
+            L2: while (true) {
+              if (var10_int >= var5) {
+                break L1;
+              } else {
+                var11 = oa.field_b.a((byte) 79, param1[var10_int]);
+                var6[var10_int] = var11.e((byte) -107);
+                var9 = (char)(var9 + 1);
+                var7[var10_int] = (char)var9;
+                var8[var10_int] = null;
+                var10_int++;
+                continue L2;
+              }
+            }
+          }
+        } catch (java.lang.Exception decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var10 = (Exception) (Object) decompiledCaughtException;
+          return null;
+        }
+        return new di(0L, param0, param2, param3, var8, param1, var6, var15);
     }
 
     final static void a(int param0, byte param1) {
@@ -177,6 +137,7 @@ final class dn {
         var1 = 0;
         L0: while (true) {
           if (-257 >= (var1 ^ -1)) {
+            return;
           } else {
             var0 = var1;
             var2 = 0;

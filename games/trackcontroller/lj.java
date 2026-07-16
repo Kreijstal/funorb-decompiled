@@ -636,67 +636,49 @@ final class lj implements java.awt.event.KeyListener, java.awt.event.FocusListen
     }
 
     public final synchronized void keyReleased(java.awt.event.KeyEvent param0) {
-        int var2 = 0;
-        if (cj.field_o != null) {
-          mb.field_f = 0;
-          var2 = param0.getKeyCode();
-          if (var2 <= -1) {
-            L0: {
-              if (pb.field_c.length <= var2) {
-                var2 = -1;
-                break L0;
-              } else {
-                var2 = -129 & pb.field_c[var2];
-                break L0;
-              }
-            }
-            if (-1 >= (mg.field_f ^ -1)) {
-              if (0 <= var2) {
-                md.field_b[mg.field_f] = var2 ^ -1;
-                mg.field_f = 1 + mg.field_f & 127;
-                if (mg.field_f != hb.field_f) {
-                  param0.consume();
-                  return;
-                } else {
-                  mg.field_f = -1;
-                  param0.consume();
-                  return;
-                }
-              } else {
-                param0.consume();
-                return;
-              }
-            } else {
-              param0.consume();
-              return;
-            }
-          } else {
-            var2 = -1;
-            if (-1 <= mg.field_f) {
-              if (0 <= var2) {
-                md.field_b[mg.field_f] = var2 ^ -1;
-                mg.field_f = 1 + mg.field_f & 127;
-                if (mg.field_f != hb.field_f) {
-                  param0.consume();
-                  return;
-                } else {
-                  mg.field_f = -1;
-                  param0.consume();
-                  return;
-                }
-              } else {
-                param0.consume();
-                return;
-              }
-            } else {
-              param0.consume();
-              return;
-            }
-          }
-        } else {
-          param0.consume();
-          return;
+        if (cj.field_o == null) {
+            param0.consume();
+            return;
         }
+        mb.field_f = 0;
+        int var2 = param0.getKeyCode();
+        if ((var2 ^ -1) > -1) {
+            var2 = -1;
+            if (-1 >= (mg.field_f ^ -1)) {
+                if (0 > var2) {
+                    param0.consume();
+                    return;
+                }
+                md.field_b[mg.field_f] = var2 ^ -1;
+                mg.field_f = 1 + mg.field_f & 127;
+                if (mg.field_f != hb.field_f) {
+                    param0.consume();
+                    return;
+                }
+                mg.field_f = -1;
+            }
+            param0.consume();
+            return;
+        }
+        if (pb.field_c.length > var2) {
+            var2 = -129 & pb.field_c[var2];
+        } else {
+            var2 = -1;
+        }
+        if (-1 >= (mg.field_f ^ -1)) {
+            if (0 > var2) {
+                param0.consume();
+                return;
+            }
+            md.field_b[mg.field_f] = var2 ^ -1;
+            mg.field_f = 1 + mg.field_f & 127;
+            if (mg.field_f != hb.field_f) {
+                param0.consume();
+                return;
+            }
+            mg.field_f = -1;
+        }
+        param0.consume();
     }
 
     public static void a(int param0) {
@@ -830,6 +812,7 @@ final class lj implements java.awt.event.KeyListener, java.awt.event.FocusListen
         var1 = 0;
         L0: while (true) {
           if (-257 >= (var1 ^ -1)) {
+            return;
           } else {
             var0 = var1;
             var2 = 0;

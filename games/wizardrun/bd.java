@@ -7,15 +7,14 @@ final class bd {
     static o[] field_c;
 
     final static eb a(Throwable param0, String param1) {
-        eb var2_ref = null;
         eb var2 = null;
         if (!(param0 instanceof eb)) {
             var2 = new eb(param0, param1);
         } else {
-            var2_ref = (eb) (Object) param0;
-            var2_ref.field_b = var2_ref.field_b + 32 + param1;
+            var2 = (eb) (Object) param0;
+            var2.field_b = var2.field_b + 32 + param1;
         }
-        return var2_ref;
+        return var2;
     }
 
     final static boolean b(int param0) {

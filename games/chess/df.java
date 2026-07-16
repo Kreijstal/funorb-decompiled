@@ -170,15 +170,16 @@ final class df {
           }
         }
         L1: {
-          if (((df) this).field_b < -33) {
+          if ((((df) this).field_b ^ -1) < -33) {
             L2: while (true) {
-              if (-65 <= ((df) this).field_b) {
+              if (-65 >= (((df) this).field_b ^ -1)) {
                 this.c(0);
                 ((df) this).field_b = 0;
                 break L1;
               } else {
+                int fieldTemp$2 = ((df) this).field_b;
                 ((df) this).field_b = ((df) this).field_b + 1;
-                ((df) this).field_j[((df) this).field_b] = (byte) 0;
+                ((df) this).field_j[fieldTemp$2] = (byte) 0;
                 continue L2;
               }
             }
@@ -211,8 +212,9 @@ final class df {
               }
             }
           } else {
+            int fieldTemp$3 = ((df) this).field_b;
             ((df) this).field_b = ((df) this).field_b + 1;
-            ((df) this).field_j[((df) this).field_b] = (byte) 0;
+            ((df) this).field_j[fieldTemp$3] = (byte) 0;
             continue L3;
           }
         }

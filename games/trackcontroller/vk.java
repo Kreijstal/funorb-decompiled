@@ -787,52 +787,40 @@ final class vk extends fc {
 
     final static String b(boolean param0) {
         RuntimeException var1 = null;
-        String stackIn_5_0 = null;
+        String stackIn_4_0 = null;
         RuntimeException decompiledCaughtException = null;
-        String stackOut_4_0 = null;
+        String stackOut_3_0 = null;
         try {
-          try {
-            L0: {
+          L0: {
+            L1: {
               if (param0) {
-                break L0;
+                break L1;
               } else {
                 field_j = -13;
-                break L0;
+                break L1;
               }
             }
-          } catch (java.lang.RuntimeException decompiledCaughtParameter) {
-            decompiledCaughtException = decompiledCaughtParameter;
+            stackOut_3_0 = ab.field_b;
+            stackIn_4_0 = stackOut_3_0;
+            break L0;
           }
-          throw decompiledCaughtException;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter) {
-          decompiledCaughtException = decompiledCaughtParameter;
-          stackOut_4_0 = ab.field_b;
-          stackIn_5_0 = stackOut_4_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1 = decompiledCaughtException;
+          throw sl.a((Throwable) (Object) var1, "vk.C(" + param0 + 41);
         }
-        return null;
+        return stackIn_4_0;
     }
 
     private vk() throws Throwable {
         RuntimeException var1 = null;
-        int statePc = 1;
-        Throwable caughtException = null;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 1: {
-                    try {
-                        throw new Error();
-                    } catch (Throwable stateCaught_1) {
-                        caughtException = stateCaught_1;
-                        statePc = 2;
-                        continue stateLoop;
-                    }
-                }
-                case 2: {
-                    var1 = (RuntimeException) (Object) caughtException;
-                    throw sl.a((Throwable) (Object) var1, "vk.<init>()");
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
-            }
+        RuntimeException decompiledCaughtException = null;
+        try {
+          throw new Error();
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1 = decompiledCaughtException;
+          throw sl.a((Throwable) (Object) var1, "vk.<init>()");
         }
     }
 

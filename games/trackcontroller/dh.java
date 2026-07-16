@@ -35,25 +35,32 @@ final class dh extends fc {
             if (param4 == 1000) {
               try {
                 L0: {
-                  var8 = param2.getParameter("cookiehost");
-                  var7 = var8;
-                  var7 = var8;
-                  var9 = param3 + "=" + param0 + "; version=1; path=/; domain=" + var8;
-                  var7 = var9;
-                  var7 = var9;
-                  if (param1 < 0L) {
-                    var7 = var9 + "; Discard;";
-                    break L0;
-                  } else {
-                    var7 = var9 + "; Expires=" + rb.a(qg.a(false) - -(1000L * param1), (byte) -101) + "; Max-Age=" + param1;
-                    break L0;
+                  L1: {
+                    var8 = param2.getParameter("cookiehost");
+                    var7 = var8;
+                    var7 = var8;
+                    var9 = param3 + "=" + param0 + "; version=1; path=/; domain=" + var8;
+                    var7 = var9;
+                    var7 = var9;
+                    if (param1 < 0L) {
+                      var7 = var9 + "; Discard;";
+                      break L1;
+                    } else {
+                      var7 = var9 + "; Expires=" + rb.a(qg.a(false) - -(1000L * param1), (byte) -101) + "; Max-Age=" + param1;
+                      break L1;
+                    }
                   }
+                  sj.a(param2, "document.cookie=\"" + var7 + "\"", param4 ^ -23611);
+                  break L0;
                 }
-                sj.a(param2, "document.cookie=\"" + var7 + "\"", param4 ^ -23611);
-              } catch (java.lang.Throwable decompiledCaughtParameter) {
-                decompiledCaughtException = decompiledCaughtParameter;
+              } catch (java.lang.Throwable decompiledCaughtParameter0) {
+                decompiledCaughtException = decompiledCaughtParameter0;
+                L2: {
+                  var6 = decompiledCaughtException;
+                  break L2;
+                }
               }
-              var6 = decompiledCaughtException;
+              return;
             } else {
               return;
             }
@@ -188,7 +195,7 @@ final class dh extends fc {
         int var6_int = 0;
         StringBuilder var6 = null;
         int var7 = 0;
-        String var7_ref = null;
+        String var7_ref_String = null;
         int var8 = 0;
         String var9 = null;
         int var10 = 0;
@@ -268,8 +275,8 @@ final class dh extends fc {
                   }
                 }
               }
-              var7_ref = param2.substring(2 + var6_int, var5);
-              if (!ej.a(false, (CharSequence) (Object) var7_ref)) {
+              var7_ref_String = param2.substring(2 + var6_int, var5);
+              if (!ej.a(false, (CharSequence) (Object) var7_ref_String)) {
                 continue L0;
               } else {
                 if (var3 <= var5) {
@@ -279,7 +286,7 @@ final class dh extends fc {
                     continue L0;
                   } else {
                     var5++;
-                    var8 = uk.a((CharSequence) (Object) var7_ref, 10);
+                    var8 = uk.a((CharSequence) (Object) var7_ref_String, 10);
                     var4 = var4 + (param1[var8].length() - var5 + var6_int);
                     continue L0;
                   }

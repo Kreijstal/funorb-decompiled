@@ -211,7 +211,7 @@ class vh extends o {
               }
             }
             L9: {
-              if (param1.field_tb != 0) {
+              if ((param1.field_tb ^ -1) != -1) {
                 ((vh) this).field_tb = param1.field_tb;
                 break L9;
               } else {
@@ -219,7 +219,7 @@ class vh extends o {
               }
             }
             L10: {
-              if (param1.field_N != 0) {
+              if ((param1.field_N ^ -1) != -1) {
                 ((vh) this).field_N = param1.field_N;
                 break L10;
               } else {
@@ -355,7 +355,7 @@ class vh extends o {
               }
             }
             L27: {
-              if (param1.field_Fb == -1) {
+              if ((param1.field_Fb ^ -1) == -1) {
                 break L27;
               } else {
                 ((vh) this).field_Fb = param1.field_Fb;
@@ -363,7 +363,7 @@ class vh extends o {
               }
             }
             L28: {
-              if (2147483647 != param1.field_Z) {
+              if (2147483647 != (param1.field_Z ^ -1)) {
                 ((vh) this).field_Z = param1.field_Z;
                 break L28;
               } else {
@@ -379,7 +379,7 @@ class vh extends o {
               }
             }
             L30: {
-              if (-1 != param1.field_cb) {
+              if (-1 != (param1.field_cb ^ -1)) {
                 ((vh) this).field_cb = param1.field_cb;
                 break L30;
               } else {
@@ -387,7 +387,7 @@ class vh extends o {
               }
             }
             L31: {
-              if (2147483647 != param1.field_H) {
+              if (2147483647 != (param1.field_H ^ -1)) {
                 ((vh) this).field_H = param1.field_H;
                 break L31;
               } else {
@@ -419,7 +419,7 @@ class vh extends o {
               }
             }
             L35: {
-              if (param1.field_wb != 2147483647) {
+              if ((param1.field_wb ^ -1) != 2147483647) {
                 ((vh) this).field_wb = param1.field_wb;
                 break L35;
               } else {
@@ -427,7 +427,7 @@ class vh extends o {
               }
             }
             L36: {
-              if (2147483647 != param1.field_vb) {
+              if (2147483647 != (param1.field_vb ^ -1)) {
                 ((vh) this).field_vb = param1.field_vb;
                 break L36;
               } else {
@@ -1000,7 +1000,6 @@ class vh extends o {
         int var12 = 0;
         int var13 = 0;
         Object var14 = null;
-        vh var14_ref = null;
         Object stackIn_27_0 = null;
         Object stackIn_28_0 = null;
         Object stackIn_29_0 = null;
@@ -1230,13 +1229,13 @@ class vh extends o {
         L12: {
           ((vh) this).field_W = stackIn_38_1 != 0;
           if (((vh) this).field_T != null) {
-            var14_ref = (vh) (Object) ((vh) this).field_T.a((byte) -127);
+            var14 = (Object) (Object) (vh) (Object) ((vh) this).field_T.a((byte) -127);
             L13: while (true) {
-              if (var14_ref == null) {
+              if (var14 == null) {
                 break L12;
               } else {
-                var14_ref.a(var14_ref.field_ib, param1, var14_ref.field_gb, var14_ref.field_Db, (byte) 63, var14_ref.field_sb);
-                var14_ref = (vh) (Object) var14_ref.field_T.b((byte) -46);
+                ((vh) var14).a(((vh) var14).field_ib, param1, ((vh) var14).field_gb, ((vh) var14).field_Db, (byte) 63, ((vh) var14).field_sb);
+                var14 = (Object) (Object) (vh) (Object) ((vh) var14).field_T.b((byte) -46);
                 continue L13;
               }
             }
@@ -1253,7 +1252,7 @@ class vh extends o {
           }
         }
         L15: {
-          if (!var14_ref.field_db) {
+          if (!((vh) var14).field_db) {
             break L15;
           } else {
             cl.field_f = true;
@@ -1262,14 +1261,14 @@ class vh extends o {
         }
         L16: {
           qh.c(var8, var9, var10, var12);
-          if (var14_ref.field_jb == 0) {
+          if (((vh) var14).field_jb == 0) {
             break L16;
           } else {
-            if (var14_ref.field_Jb) {
+            if (((vh) var14).field_Jb) {
               L17: {
-                ((vh) this).field_qb = -param5 + (wn.field_i + -var14_ref.field_mb);
-                ((vh) this).field_eb = -param0 + (gg.field_f + -var14_ref.field_Hb);
-                if (var14_ref.field_qb < 0) {
+                ((vh) this).field_qb = -param5 + (wn.field_i + -((vh) var14).field_mb);
+                ((vh) this).field_eb = -param0 + (gg.field_f + -((vh) var14).field_Hb);
+                if (((vh) var14).field_qb < 0) {
                   ((vh) this).field_qb = 0;
                   break L17;
                 } else {
@@ -1277,7 +1276,7 @@ class vh extends o {
                 }
               }
               L18: {
-                if (-1 < (var14_ref.field_eb ^ -1)) {
+                if (-1 < (((vh) var14).field_eb ^ -1)) {
                   ((vh) this).field_eb = 0;
                   break L18;
                 } else {
@@ -1285,25 +1284,25 @@ class vh extends o {
                 }
               }
               L19: {
-                if (param2 + -var14_ref.field_gb < var14_ref.field_qb) {
-                  ((vh) this).field_qb = param2 + -var14_ref.field_gb;
+                if (param2 + -((vh) var14).field_gb < ((vh) var14).field_qb) {
+                  ((vh) this).field_qb = param2 + -((vh) var14).field_gb;
                   break L19;
                 } else {
                   break L19;
                 }
               }
               L20: {
-                ((vh) this).field_sb = param5 + var14_ref.field_qb;
+                ((vh) this).field_sb = param5 + ((vh) var14).field_qb;
                 ((vh) this).field_rb = 0;
-                if (param3 + -var14_ref.field_Db < var14_ref.field_eb) {
-                  ((vh) this).field_eb = -var14_ref.field_Db + param3;
+                if (param3 + -((vh) var14).field_Db < ((vh) var14).field_eb) {
+                  ((vh) this).field_eb = -((vh) var14).field_Db + param3;
                   break L20;
                 } else {
                   break L20;
                 }
               }
               ((vh) this).field_E = 0;
-              ((vh) this).field_ib = var14_ref.field_eb + param0;
+              ((vh) this).field_ib = ((vh) var14).field_eb + param0;
               break L16;
             } else {
               break L16;

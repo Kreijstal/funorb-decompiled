@@ -33,14 +33,16 @@ final class vi {
               var2 = 0;
               L1: while (true) {
                 if (var2 >= hf.field_b) {
-                  mf.field_l[param0.b(108)] = mf.field_l[param0.b(108)] + 1;
+                  int dupTemp$4 = param0.b(108);
+                  mf.field_l[dupTemp$4] = mf.field_l[dupTemp$4] + 1;
                   var2 = 0;
                   var3 = 0;
                   L2: while (true) {
                     if (hf.field_b <= var3) {
                       hf.field_b = var2;
+                      int fieldTemp$5 = hf.field_b;
                       hf.field_b = hf.field_b + 1;
-                      qm.field_d[hf.field_b] = param0;
+                      qm.field_d[fieldTemp$5] = param0;
                       return;
                     } else {
                       L3: {
@@ -57,15 +59,17 @@ final class vi {
                           break L3;
                         }
                       }
+                      int incrementValue$6 = var2;
                       var2++;
-                      qm.field_d[var2] = qm.field_d[var3];
+                      qm.field_d[incrementValue$6] = qm.field_d[var3];
                       var3++;
                       continue L2;
                     }
                   }
                 } else {
                   if (qm.field_d[var2].field_a == param0.field_a) {
-                    mf.field_l[qm.field_d[var2].b(param1 ^ 83)] = mf.field_l[qm.field_d[var2].b(param1 ^ 83)] + 1;
+                    int dupTemp$7 = qm.field_d[var2].b(param1 ^ 83);
+                    mf.field_l[dupTemp$7] = mf.field_l[dupTemp$7] + 1;
                     var2++;
                     continue L1;
                   } else {

@@ -37,8 +37,9 @@ final class ja {
             break L0;
           } else {
             if ((to.field_p ^ -1) < -1) {
+              int fieldTemp$3 = to.field_p - 1;
               to.field_p = to.field_p - 1;
-              var2_ref_byte__ = uf.field_y[to.field_p - 1];
+              var2_ref_byte__ = uf.field_y[fieldTemp$3];
               uf.field_y[to.field_p] = null;
               return var2_ref_byte__;
             } else {
@@ -47,12 +48,13 @@ final class ja {
           }
         }
         L1: {
-          if (-5001 != param0) {
+          if (-5001 != (param0 ^ -1)) {
             break L1;
           } else {
-            if (-1 < em.field_I) {
+            if (-1 > (em.field_I ^ -1)) {
+              int fieldTemp$4 = em.field_I - 1;
               em.field_I = em.field_I - 1;
-              var2_ref_byte__ = th.field_j[em.field_I - 1];
+              var2_ref_byte__ = th.field_j[fieldTemp$4];
               th.field_j[em.field_I] = null;
               return var2_ref_byte__;
             } else {
@@ -67,8 +69,9 @@ final class ja {
             if (ii.field_a <= 0) {
               break L2;
             } else {
+              int fieldTemp$5 = ii.field_a - 1;
               ii.field_a = ii.field_a - 1;
-              var2_ref_byte__ = ec.field_g[ii.field_a - 1];
+              var2_ref_byte__ = ec.field_g[fieldTemp$5];
               ec.field_g[ii.field_a] = null;
               return var2_ref_byte__;
             }
@@ -86,23 +89,25 @@ final class ja {
           if (null != nk.field_l) {
             var2 = 0;
             L5: while (true) {
-              if (var2 >= s.field_f.length) {
+              if ((var2 ^ -1) <= (s.field_f.length ^ -1)) {
                 break L4;
               } else {
-                if (s.field_f[var2] == param0) {
-                  if ((ho.field_l[var2] ^ -1) < -1) {
-                    ho.field_l[var2] = ho.field_l[var2] - 1;
-                    var3 = nk.field_l[var2][ho.field_l[var2] - 1];
-                    nk.field_l[var2][ho.field_l[var2]] = null;
-                    return var3;
+                L6: {
+                  if ((s.field_f[var2] ^ -1) != (param0 ^ -1)) {
+                    break L6;
                   } else {
-                    var2++;
-                    continue L5;
+                    if ((ho.field_l[var2] ^ -1) >= -1) {
+                      break L6;
+                    } else {
+                      ho.field_l[var2] = ho.field_l[var2] - 1;
+                      var3 = nk.field_l[var2][ho.field_l[var2] - 1];
+                      nk.field_l[var2][ho.field_l[var2]] = null;
+                      return var3;
+                    }
                   }
-                } else {
-                  var2++;
-                  continue L5;
                 }
+                var2++;
+                continue L5;
               }
             }
           } else {

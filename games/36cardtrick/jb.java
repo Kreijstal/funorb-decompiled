@@ -58,8 +58,9 @@ final class jb {
                   param6 = param6 + param7;
                   param2 = ((param2 & 16711935) * var9 >> 8 & 16711935) + ((param2 & 65280) * var9 >> 8 & 65280);
                   var10 = param0[param1];
+                  int incrementValue$12 = param1;
                   param1++;
-                  param0[param1] = param2 + ((var10 & 16711935) * var8 >> 8 & 16711935) + ((var10 & 65280) * var8 >> 8 & 65280);
+                  param0[incrementValue$12] = param2 + ((var10 & 16711935) * var8 >> 8 & 16711935) + ((var10 & 65280) * var8 >> 8 & 65280);
                   param3--;
                   if (param3 > 0) {
                     continue L3;
@@ -69,8 +70,9 @@ final class jb {
                 }
               } else {
                 L4: while (true) {
+                  int incrementValue$13 = param1;
                   param1++;
-                  param0[param1] = field_p[param6 >> 8];
+                  param0[incrementValue$13] = field_p[param6 >> 8];
                   param6 = param6 + param7;
                   param3--;
                   if (param3 > 0) {
@@ -98,17 +100,21 @@ final class jb {
                       param6 = param6 + param7;
                       param2 = ((param2 & 16711935) * var9 >> 8 & 16711935) + ((param2 & 65280) * var9 >> 8 & 65280);
                       var10 = param0[param1];
+                      int incrementValue$14 = param1;
                       param1++;
-                      param0[param1] = param2 + ((var10 & 16711935) * var8 >> 8 & 16711935) + ((var10 & 65280) * var8 >> 8 & 65280);
+                      param0[incrementValue$14] = param2 + ((var10 & 16711935) * var8 >> 8 & 16711935) + ((var10 & 65280) * var8 >> 8 & 65280);
                       var10 = param0[param1];
+                      int incrementValue$15 = param1;
                       param1++;
-                      param0[param1] = param2 + ((var10 & 16711935) * var8 >> 8 & 16711935) + ((var10 & 65280) * var8 >> 8 & 65280);
+                      param0[incrementValue$15] = param2 + ((var10 & 16711935) * var8 >> 8 & 16711935) + ((var10 & 65280) * var8 >> 8 & 65280);
                       var10 = param0[param1];
+                      int incrementValue$16 = param1;
                       param1++;
-                      param0[param1] = param2 + ((var10 & 16711935) * var8 >> 8 & 16711935) + ((var10 & 65280) * var8 >> 8 & 65280);
+                      param0[incrementValue$16] = param2 + ((var10 & 16711935) * var8 >> 8 & 16711935) + ((var10 & 65280) * var8 >> 8 & 65280);
                       var10 = param0[param1];
+                      int incrementValue$17 = param1;
                       param1++;
-                      param0[param1] = param2 + ((var10 & 16711935) * var8 >> 8 & 16711935) + ((var10 & 65280) * var8 >> 8 & 65280);
+                      param0[incrementValue$17] = param2 + ((var10 & 16711935) * var8 >> 8 & 16711935) + ((var10 & 65280) * var8 >> 8 & 65280);
                       param3--;
                       if (param3 > 0) {
                         continue L7;
@@ -126,8 +132,9 @@ final class jb {
                   param2 = ((param2 & 16711935) * var9 >> 8 & 16711935) + ((param2 & 65280) * var9 >> 8 & 65280);
                   L8: while (true) {
                     var10 = param0[param1];
+                    int incrementValue$18 = param1;
                     param1++;
-                    param0[param1] = param2 + ((var10 & 16711935) * var8 >> 8 & 16711935) + ((var10 & 65280) * var8 >> 8 & 65280);
+                    param0[incrementValue$18] = param2 + ((var10 & 16711935) * var8 >> 8 & 16711935) + ((var10 & 65280) * var8 >> 8 & 65280);
                     param3--;
                     if (param3 > 0) {
                       continue L8;
@@ -144,14 +151,18 @@ final class jb {
                     L10: while (true) {
                       param2 = field_p[param6 >> 8];
                       param6 = param6 + param7;
+                      int incrementValue$19 = param1;
                       param1++;
-                      param0[param1] = param2;
+                      param0[incrementValue$19] = param2;
+                      int incrementValue$20 = param1;
                       param1++;
-                      param0[param1] = param2;
+                      param0[incrementValue$20] = param2;
+                      int incrementValue$21 = param1;
                       param1++;
-                      param0[param1] = param2;
+                      param0[incrementValue$21] = param2;
+                      int incrementValue$22 = param1;
                       param1++;
-                      param0[param1] = param2;
+                      param0[incrementValue$22] = param2;
                       param3--;
                       if (param3 > 0) {
                         continue L10;
@@ -167,8 +178,9 @@ final class jb {
                 } else {
                   param2 = field_p[param6 >> 8];
                   L11: while (true) {
+                    int incrementValue$23 = param1;
                     param1++;
-                    param0[param1] = param2;
+                    param0[incrementValue$23] = param2;
                     param3--;
                     if (param3 > 0) {
                       continue L11;
@@ -1837,24 +1849,29 @@ final class jb {
                         break L2;
                       } else {
                         var8 = param0[param1];
+                        int incrementValue$15 = param1;
                         param1++;
-                        param0[param1] = param2 + ((var8 & 16711935) * var6 >> 8 & 16711935) + ((var8 & 65280) * var6 >> 8 & 65280);
+                        param0[incrementValue$15] = param2 + ((var8 & 16711935) * var6 >> 8 & 16711935) + ((var8 & 65280) * var6 >> 8 & 65280);
                         continue L4;
                       }
                     }
                   } else {
                     var8 = param0[param1];
+                    int incrementValue$16 = param1;
                     param1++;
-                    param0[param1] = param2 + ((var8 & 16711935) * var6 >> 8 & 16711935) + ((var8 & 65280) * var6 >> 8 & 65280);
+                    param0[incrementValue$16] = param2 + ((var8 & 16711935) * var6 >> 8 & 16711935) + ((var8 & 65280) * var6 >> 8 & 65280);
                     var8 = param0[param1];
+                    int incrementValue$17 = param1;
                     param1++;
-                    param0[param1] = param2 + ((var8 & 16711935) * var6 >> 8 & 16711935) + ((var8 & 65280) * var6 >> 8 & 65280);
+                    param0[incrementValue$17] = param2 + ((var8 & 16711935) * var6 >> 8 & 16711935) + ((var8 & 65280) * var6 >> 8 & 65280);
                     var8 = param0[param1];
+                    int incrementValue$18 = param1;
                     param1++;
-                    param0[param1] = param2 + ((var8 & 16711935) * var6 >> 8 & 16711935) + ((var8 & 65280) * var6 >> 8 & 65280);
+                    param0[incrementValue$18] = param2 + ((var8 & 16711935) * var6 >> 8 & 16711935) + ((var8 & 65280) * var6 >> 8 & 65280);
                     var8 = param0[param1];
+                    int incrementValue$19 = param1;
                     param1++;
-                    param0[param1] = param2 + ((var8 & 16711935) * var6 >> 8 & 16711935) + ((var8 & 65280) * var6 >> 8 & 65280);
+                    param0[incrementValue$19] = param2 + ((var8 & 16711935) * var6 >> 8 & 16711935) + ((var8 & 65280) * var6 >> 8 & 65280);
                     continue L3;
                   }
                 }
@@ -1868,20 +1885,25 @@ final class jb {
                       if (param3 < 0) {
                         break L2;
                       } else {
+                        int incrementValue$20 = param1;
                         param1++;
-                        param0[param1] = param0[param1];
+                        param0[incrementValue$20] = param0[param1];
                         continue L6;
                       }
                     }
                   } else {
+                    int incrementValue$21 = param1;
                     param1++;
-                    param0[param1] = param0[param1];
+                    param0[incrementValue$21] = param0[param1];
+                    int incrementValue$22 = param1;
                     param1++;
-                    param0[param1] = param0[param1];
+                    param0[incrementValue$22] = param0[param1];
+                    int incrementValue$23 = param1;
                     param1++;
-                    param0[param1] = param0[param1];
+                    param0[incrementValue$23] = param0[param1];
+                    int incrementValue$24 = param1;
                     param1++;
-                    param0[param1] = param0[param1];
+                    param0[incrementValue$24] = param0[param1];
                     continue L5;
                   }
                 }
@@ -1898,20 +1920,25 @@ final class jb {
                   if (param3 < 0) {
                     return;
                   } else {
+                    int incrementValue$25 = param1;
                     param1++;
-                    param0[param1] = param2;
+                    param0[incrementValue$25] = param2;
                     continue L8;
                   }
                 }
               } else {
+                int incrementValue$26 = param1;
                 param1++;
-                param0[param1] = param2;
+                param0[incrementValue$26] = param2;
+                int incrementValue$27 = param1;
                 param1++;
-                param0[param1] = param2;
+                param0[incrementValue$27] = param2;
+                int incrementValue$28 = param1;
                 param1++;
-                param0[param1] = param2;
+                param0[incrementValue$28] = param2;
+                int incrementValue$29 = param1;
                 param1++;
-                param0[param1] = param2;
+                param0[incrementValue$29] = param2;
                 continue L7;
               }
             }
@@ -2067,8 +2094,9 @@ final class jb {
                     break L8;
                   }
                 }
+                int incrementValue$1 = var2;
                 var2++;
-                field_p[var2] = var20;
+                field_p[incrementValue$1] = var20;
                 var8++;
                 continue L1;
               }
@@ -2305,36 +2333,44 @@ final class jb {
                     L19: while (true) {
                       L20: {
                         param3 = param1[(param2 & 16256) + (param2 >>> 25)];
+                        int incrementValue$18 = param4;
                         param4++;
-                        param0[param4] = ((param3 & 16711935) * var15 & -16711936) + ((param3 & 65280) * var15 & 16711680) >> 8;
+                        param0[incrementValue$18] = ((param3 & 16711935) * var15 & -16711936) + ((param3 & 65280) * var15 & 16711680) >> 8;
                         param2 = param2 + var16;
                         param3 = param1[(param2 & 16256) + (param2 >>> 25)];
+                        int incrementValue$19 = param4;
                         param4++;
-                        param0[param4] = ((param3 & 16711935) * var15 & -16711936) + ((param3 & 65280) * var15 & 16711680) >> 8;
+                        param0[incrementValue$19] = ((param3 & 16711935) * var15 & -16711936) + ((param3 & 65280) * var15 & 16711680) >> 8;
                         param2 = param2 + var16;
                         param3 = param1[(param2 & 16256) + (param2 >>> 25)];
+                        int incrementValue$20 = param4;
                         param4++;
-                        param0[param4] = ((param3 & 16711935) * var15 & -16711936) + ((param3 & 65280) * var15 & 16711680) >> 8;
+                        param0[incrementValue$20] = ((param3 & 16711935) * var15 & -16711936) + ((param3 & 65280) * var15 & 16711680) >> 8;
                         param2 = param2 + var16;
                         param3 = param1[(param2 & 16256) + (param2 >>> 25)];
+                        int incrementValue$21 = param4;
                         param4++;
-                        param0[param4] = ((param3 & 16711935) * var15 & -16711936) + ((param3 & 65280) * var15 & 16711680) >> 8;
+                        param0[incrementValue$21] = ((param3 & 16711935) * var15 & -16711936) + ((param3 & 65280) * var15 & 16711680) >> 8;
                         param2 = param2 + var16;
                         param3 = param1[(param2 & 16256) + (param2 >>> 25)];
+                        int incrementValue$22 = param4;
                         param4++;
-                        param0[param4] = ((param3 & 16711935) * var15 & -16711936) + ((param3 & 65280) * var15 & 16711680) >> 8;
+                        param0[incrementValue$22] = ((param3 & 16711935) * var15 & -16711936) + ((param3 & 65280) * var15 & 16711680) >> 8;
                         param2 = param2 + var16;
                         param3 = param1[(param2 & 16256) + (param2 >>> 25)];
+                        int incrementValue$23 = param4;
                         param4++;
-                        param0[param4] = ((param3 & 16711935) * var15 & -16711936) + ((param3 & 65280) * var15 & 16711680) >> 8;
+                        param0[incrementValue$23] = ((param3 & 16711935) * var15 & -16711936) + ((param3 & 65280) * var15 & 16711680) >> 8;
                         param2 = param2 + var16;
                         param3 = param1[(param2 & 16256) + (param2 >>> 25)];
+                        int incrementValue$24 = param4;
                         param4++;
-                        param0[param4] = ((param3 & 16711935) * var15 & -16711936) + ((param3 & 65280) * var15 & 16711680) >> 8;
+                        param0[incrementValue$24] = ((param3 & 16711935) * var15 & -16711936) + ((param3 & 65280) * var15 & 16711680) >> 8;
                         param2 = param2 + var16;
                         param3 = param1[(param2 & 16256) + (param2 >>> 25)];
+                        int incrementValue$25 = param4;
                         param4++;
-                        param0[param4] = ((param3 & 16711935) * var15 & -16711936) + ((param3 & 65280) * var15 & 16711680) >> 8;
+                        param0[incrementValue$25] = ((param3 & 16711935) * var15 & -16711936) + ((param3 & 65280) * var15 & 16711680) >> 8;
                         param2 = param2 + var16;
                         var18 = var20;
                         var19 = var21;
@@ -2371,8 +2407,9 @@ final class jb {
                 } else {
                   L21: while (true) {
                     param3 = param1[(param2 & 16256) + (param2 >>> 25)];
+                    int incrementValue$26 = param4;
                     param4++;
-                    param0[param4] = ((param3 & 16711935) * var15 & -16711936) + ((param3 & 65280) * var15 & 16711680) >> 8;
+                    param0[incrementValue$26] = ((param3 & 16711935) * var15 & -16711936) + ((param3 & 65280) * var15 & 16711680) >> 8;
                     param2 = param2 + var16;
                     var17--;
                     if (var17 > 0) {
@@ -2576,36 +2613,44 @@ final class jb {
                     L38: while (true) {
                       L39: {
                         param3 = param1[(param2 & 4032) + (param2 >>> 26)];
+                        int incrementValue$27 = param4;
                         param4++;
-                        param0[param4] = ((param3 & 16711935) * var15 & -16711936) + ((param3 & 65280) * var15 & 16711680) >> 8;
+                        param0[incrementValue$27] = ((param3 & 16711935) * var15 & -16711936) + ((param3 & 65280) * var15 & 16711680) >> 8;
                         param2 = param2 + var16;
                         param3 = param1[(param2 & 4032) + (param2 >>> 26)];
+                        int incrementValue$28 = param4;
                         param4++;
-                        param0[param4] = ((param3 & 16711935) * var15 & -16711936) + ((param3 & 65280) * var15 & 16711680) >> 8;
+                        param0[incrementValue$28] = ((param3 & 16711935) * var15 & -16711936) + ((param3 & 65280) * var15 & 16711680) >> 8;
                         param2 = param2 + var16;
                         param3 = param1[(param2 & 4032) + (param2 >>> 26)];
+                        int incrementValue$29 = param4;
                         param4++;
-                        param0[param4] = ((param3 & 16711935) * var15 & -16711936) + ((param3 & 65280) * var15 & 16711680) >> 8;
+                        param0[incrementValue$29] = ((param3 & 16711935) * var15 & -16711936) + ((param3 & 65280) * var15 & 16711680) >> 8;
                         param2 = param2 + var16;
                         param3 = param1[(param2 & 4032) + (param2 >>> 26)];
+                        int incrementValue$30 = param4;
                         param4++;
-                        param0[param4] = ((param3 & 16711935) * var15 & -16711936) + ((param3 & 65280) * var15 & 16711680) >> 8;
+                        param0[incrementValue$30] = ((param3 & 16711935) * var15 & -16711936) + ((param3 & 65280) * var15 & 16711680) >> 8;
                         param2 = param2 + var16;
                         param3 = param1[(param2 & 4032) + (param2 >>> 26)];
+                        int incrementValue$31 = param4;
                         param4++;
-                        param0[param4] = ((param3 & 16711935) * var15 & -16711936) + ((param3 & 65280) * var15 & 16711680) >> 8;
+                        param0[incrementValue$31] = ((param3 & 16711935) * var15 & -16711936) + ((param3 & 65280) * var15 & 16711680) >> 8;
                         param2 = param2 + var16;
                         param3 = param1[(param2 & 4032) + (param2 >>> 26)];
+                        int incrementValue$32 = param4;
                         param4++;
-                        param0[param4] = ((param3 & 16711935) * var15 & -16711936) + ((param3 & 65280) * var15 & 16711680) >> 8;
+                        param0[incrementValue$32] = ((param3 & 16711935) * var15 & -16711936) + ((param3 & 65280) * var15 & 16711680) >> 8;
                         param2 = param2 + var16;
                         param3 = param1[(param2 & 4032) + (param2 >>> 26)];
+                        int incrementValue$33 = param4;
                         param4++;
-                        param0[param4] = ((param3 & 16711935) * var15 & -16711936) + ((param3 & 65280) * var15 & 16711680) >> 8;
+                        param0[incrementValue$33] = ((param3 & 16711935) * var15 & -16711936) + ((param3 & 65280) * var15 & 16711680) >> 8;
                         param2 = param2 + var16;
                         param3 = param1[(param2 & 4032) + (param2 >>> 26)];
+                        int incrementValue$34 = param4;
                         param4++;
-                        param0[param4] = ((param3 & 16711935) * var15 & -16711936) + ((param3 & 65280) * var15 & 16711680) >> 8;
+                        param0[incrementValue$34] = ((param3 & 16711935) * var15 & -16711936) + ((param3 & 65280) * var15 & 16711680) >> 8;
                         param2 = param2 + var16;
                         var18 = var20;
                         var19 = var21;
@@ -2642,8 +2687,9 @@ final class jb {
                 } else {
                   L40: while (true) {
                     param3 = param1[(param2 & 4032) + (param2 >>> 26)];
+                    int incrementValue$35 = param4;
                     param4++;
-                    param0[param4] = ((param3 & 16711935) * var15 & -16711936) + ((param3 & 65280) * var15 & 16711680) >> 8;
+                    param0[incrementValue$35] = ((param3 & 16711935) * var15 & -16711936) + ((param3 & 65280) * var15 & 16711680) >> 8;
                     param2 = param2 + var16;
                     var17--;
                     if (var17 > 0) {

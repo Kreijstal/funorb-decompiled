@@ -41,10 +41,12 @@ final class ea extends sl {
             break L0;
           } else {
             var5++;
+            int incrementValue$9 = var5;
             var5++;
-            var3 = fj.b(-48, (int) param1.charAt(var5));
+            var3 = fj.b(-48, (int) param1.charAt(incrementValue$9));
+            int incrementValue$10 = var5;
             var5++;
-            var4 = fj.b(-48, (int) param1.charAt(var5));
+            var4 = fj.b(-48, (int) param1.charAt(incrementValue$10));
             break L0;
           }
         }
@@ -60,9 +62,11 @@ final class ea extends sl {
                 ((ea) this).a(var23, (byte) 50, var24, var22);
                 var9 = new StringBuilder(12);
                 L3: while (true) {
+                  int incrementValue$11 = var5;
                   var5++;
-                  var10 = param1.charAt(var5);
-                  if (param1.charAt(var5) == 32) {
+                  char dupTemp$12 = param1.charAt(incrementValue$11);
+                  var10 = dupTemp$12;
+                  if (dupTemp$12 == 32) {
                     ((ea) this).field_q = var9.toString();
                     var11 = param1.substring(var5);
                     var5 = var11.indexOf('/');
@@ -70,8 +74,9 @@ final class ea extends sl {
                     ((ea) this).field_r = uk.a(var27, 10);
                     var28 = (CharSequence) (Object) var11.substring(1 + var5);
                     ((ea) this).field_v = uk.a(var28, 10);
+                    return;
                   } else {
-                    StringBuilder discarded$1 = var9.append(var10);
+                    StringBuilder discarded$13 = var9.append(var10);
                     continue L3;
                   }
                 }
@@ -82,8 +87,9 @@ final class ea extends sl {
                     var9_int++;
                     continue L2;
                   } else {
+                    int incrementValue$14 = var5;
                     var5++;
-                    var24[var9_int][var10] = fh.a(0, (int) param1.charAt(var5));
+                    var24[var9_int][var10] = fh.a(0, (int) param1.charAt(incrementValue$14));
                     var10++;
                     continue L4;
                   }
@@ -97,15 +103,18 @@ final class ea extends sl {
                 var8++;
                 continue L1;
               } else {
+                int incrementValue$15 = var5;
                 var5++;
-                var10 = fj.b(-48, (int) param1.charAt(var5));
+                var10 = fj.b(-48, (int) param1.charAt(incrementValue$15));
                 var22[var8][var9_int] = (byte)(var10 >> -161321277);
+                int incrementValue$16 = var5;
                 var5++;
-                var23[var8][var9_int] = fh.a(0, (int) param1.charAt(var5));
+                var23[var8][var9_int] = fh.a(0, (int) param1.charAt(incrementValue$16));
                 if (var4 > 1 + var9_int) {
                   var22[var8][var9_int - -1] = (byte)tc.a(7, var10);
+                  int incrementValue$17 = var5;
                   var5++;
-                  var23[var8][var9_int - -1] = fh.a(0, (int) param1.charAt(var5));
+                  var23[var8][var9_int - -1] = fh.a(0, (int) param1.charAt(incrementValue$17));
                   var9_int += 2;
                   continue L5;
                 } else {
@@ -148,8 +157,8 @@ final class ea extends sl {
             return 116;
         }
         for (var2 = 0; 16 > var2; var2++) {
-            for (var3 = 0; var3 > -17; var3++) {
-                if (-39 == ((ea) this).field_d[var2][var3]) {
+            for (var3 = 0; (var3 ^ -1) > -17; var3++) {
+                if (-39 == (((ea) this).field_d[var2][var3] ^ -1)) {
                     return var3;
                 }
             }
@@ -175,30 +184,67 @@ final class ea extends sl {
     }
 
     final static int b(boolean param0, int param1) {
-        if (param0) {
-            ea.d((byte) 81);
-        }
         int var2 = 0;
-        if (0 <= param1) {
-            // if_icmplt L36
+        L0: {
+          if (!param0) {
+            break L0;
+          } else {
+            ea.d((byte) 81);
+            break L0;
+          }
         }
-        param1 = param1 >>> 16;
-        var2 += 16;
-        if (-257 <= param1) {
+        L1: {
+          L2: {
+            var2 = 0;
+            if (0 > param1) {
+              break L2;
+            } else {
+              if (-65537 < (param1 ^ -1)) {
+                break L1;
+              } else {
+                break L2;
+              }
+            }
+          }
+          param1 = param1 >>> 16;
+          var2 += 16;
+          break L1;
+        }
+        L3: {
+          if (-257 < (param1 ^ -1)) {
+            break L3;
+          } else {
             param1 = param1 >>> 8;
             var2 += 8;
+            break L3;
+          }
         }
-        if (16 <= param1) {
+        L4: {
+          if (16 > param1) {
+            break L4;
+          } else {
             var2 += 4;
             param1 = param1 >>> 4;
+            break L4;
+          }
         }
-        if (-5 >= (param1 ^ -1)) {
+        L5: {
+          if (-5 < (param1 ^ -1)) {
+            break L5;
+          } else {
             var2 += 2;
             param1 = param1 >>> 2;
+            break L5;
+          }
         }
-        if (1 <= param1) {
+        L6: {
+          if (1 > param1) {
+            break L6;
+          } else {
             var2++;
             param1 = param1 >>> 1;
+            break L6;
+          }
         }
         return param1 + var2;
     }

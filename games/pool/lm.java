@@ -1,8 +1,6 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-import java.lang.String;
-
 final class lm extends tm {
     lm() {
     }
@@ -53,21 +51,23 @@ final class lm extends tm {
           if (param1 != 117) {
             return;
           } else {
-            ((lm) this).field_a[7] = eg.a(param0, "", "balls/SPACE/space_ball_01");
-            ((lm) this).field_a[6] = eg.a(param0, "", "balls/SPACE/space_ball_01");
-            ((lm) this).field_a[5] = eg.a(param0, "", "balls/SPACE/space_ball_01");
-            ((lm) this).field_a[4] = eg.a(param0, "", "balls/SPACE/space_ball_01");
-            ((lm) this).field_a[3] = eg.a(param0, "", "balls/SPACE/space_ball_01");
-            ((lm) this).field_a[2] = eg.a(param0, "", "balls/SPACE/space_ball_01");
-            ((lm) this).field_a[1] = eg.a(param0, "", "balls/SPACE/space_ball_01");
+            eg dupTemp$2 = eg.a(param0, "", "balls/SPACE/space_ball_01");
+            ((lm) this).field_a[7] = dupTemp$2;
+            ((lm) this).field_a[6] = dupTemp$2;
+            ((lm) this).field_a[5] = dupTemp$2;
+            ((lm) this).field_a[4] = dupTemp$2;
+            ((lm) this).field_a[3] = dupTemp$2;
+            ((lm) this).field_a[2] = dupTemp$2;
+            ((lm) this).field_a[1] = dupTemp$2;
             ((lm) this).field_a[8] = eg.a(param0, "", "balls/SPACE/space_ball_black");
-            ((lm) this).field_a[15] = eg.a(param0, "", "balls/SPACE/space_ball_02");
-            ((lm) this).field_a[14] = eg.a(param0, "", "balls/SPACE/space_ball_02");
-            ((lm) this).field_a[13] = eg.a(param0, "", "balls/SPACE/space_ball_02");
-            ((lm) this).field_a[12] = eg.a(param0, "", "balls/SPACE/space_ball_02");
-            ((lm) this).field_a[11] = eg.a(param0, "", "balls/SPACE/space_ball_02");
-            ((lm) this).field_a[10] = eg.a(param0, "", "balls/SPACE/space_ball_02");
-            ((lm) this).field_a[9] = eg.a(param0, "", "balls/SPACE/space_ball_02");
+            eg dupTemp$3 = eg.a(param0, "", "balls/SPACE/space_ball_02");
+            ((lm) this).field_a[15] = dupTemp$3;
+            ((lm) this).field_a[14] = dupTemp$3;
+            ((lm) this).field_a[13] = dupTemp$3;
+            ((lm) this).field_a[12] = dupTemp$3;
+            ((lm) this).field_a[11] = dupTemp$3;
+            ((lm) this).field_a[10] = dupTemp$3;
+            ((lm) this).field_a[9] = dupTemp$3;
             ((lm) this).field_a[0].a(8, 8, 8, 8);
             ((lm) this).field_a[1].a(8, 8, 8, 8);
             ((lm) this).field_a[8].a(8, 8, 8, 8);
@@ -80,42 +80,12 @@ final class lm extends tm {
     }
 
     final String a(byte param0, int param1) {
-        Object var4 = null;
-        String stackIn_4_0 = null;
-        String stackIn_8_0 = null;
-        String stackOut_7_0 = null;
-        String stackOut_6_0 = null;
-        String stackOut_3_0 = null;
-        String stackOut_2_0 = null;
         if (param0 < 9) {
-          L0: {
-            var4 = null;
+            Object var4 = null;
             lm.a(-24, 10, -99, 68, -80, 113, (String) null, 109, 92);
-            if (-1 != param1) {
-              stackOut_7_0 = dq.field_g;
-              stackIn_8_0 = stackOut_7_0;
-              break L0;
-            } else {
-              stackOut_6_0 = sn.field_j;
-              stackIn_8_0 = stackOut_6_0;
-              break L0;
-            }
-          }
-          return stackIn_8_0;
-        } else {
-          L1: {
-            if (-1 != param1) {
-              stackOut_3_0 = dq.field_g;
-              stackIn_4_0 = stackOut_3_0;
-              break L1;
-            } else {
-              stackOut_2_0 = sn.field_j;
-              stackIn_4_0 = stackOut_2_0;
-              break L1;
-            }
-          }
-          return stackIn_4_0;
+            return -1 == (param1 ^ -1) ? sn.field_j : dq.field_g;
         }
+        return -1 == (param1 ^ -1) ? sn.field_j : dq.field_g;
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, String param6, int param7, int param8) {
@@ -188,44 +158,49 @@ final class lm extends tm {
           var5 = null;
           ((lm) this).a((di) null, (byte) -106);
           var3 = param0;
-          if (-1 != var3) {
-            if (-2 != var3) {
+          if (-1 != (var3 ^ -1)) {
+            if (-2 != (var3 ^ -1)) {
               if ((var3 ^ -1) != -3) {
                 if ((var3 ^ -1) != -4) {
                   if (4 != var3) {
-                    if (var3 != -6) {
-                      if (-7 != var3) {
+                    if ((var3 ^ -1) == -6) {
+                      return this.b(0, (byte) -108);
+                    } else {
+                      if (-7 != (var3 ^ -1)) {
                         if (7 != var3) {
                           if (var3 != 8) {
-                            if (9 != var3) {
-                              if (-11 != var3) {
-                                if (var3 != 11) {
-                                  if (-13 != var3) {
-                                    if (13 != var3) {
-                                      if (var3 != 14) {
-                                        if (-16 == (var3 ^ -1)) {
-                                          return this.b(1, (byte) -108);
+                            L0: {
+                              if (9 == var3) {
+                                break L0;
+                              } else {
+                                if (-11 == (var3 ^ -1)) {
+                                  break L0;
+                                } else {
+                                  if (var3 == 11) {
+                                    break L0;
+                                  } else {
+                                    if (-13 == (var3 ^ -1)) {
+                                      break L0;
+                                    } else {
+                                      if (13 != var3) {
+                                        if (var3 != 14) {
+                                          if (-16 != (var3 ^ -1)) {
+                                            return 16711935;
+                                          } else {
+                                            return this.b(1, (byte) -108);
+                                          }
                                         } else {
-                                          return 16711935;
+                                          return this.b(1, (byte) -108);
                                         }
                                       } else {
                                         return this.b(1, (byte) -108);
                                       }
-                                    } else {
-                                      return this.b(1, (byte) -108);
                                     }
-                                  } else {
-                                    return this.b(1, (byte) -108);
                                   }
-                                } else {
-                                  return this.b(1, (byte) -108);
                                 }
-                              } else {
-                                return this.b(1, (byte) -108);
                               }
-                            } else {
-                              return this.b(1, (byte) -108);
                             }
+                            return this.b(1, (byte) -108);
                           } else {
                             return 3355443;
                           }
@@ -235,8 +210,6 @@ final class lm extends tm {
                       } else {
                         return this.b(0, (byte) -108);
                       }
-                    } else {
-                      return this.b(0, (byte) -108);
                     }
                   } else {
                     return this.b(0, (byte) -108);
@@ -255,52 +228,61 @@ final class lm extends tm {
           }
         } else {
           var3 = param0;
-          if (-1 != var3) {
-            if (-2 != var3) {
-              if ((var3 ^ -1) != -3) {
-                if ((var3 ^ -1) != -4) {
-                  if (4 != var3) {
-                    if (var3 != -6) {
-                      if (-7 != var3) {
-                        if (7 != var3) {
-                          if (var3 != 8) {
-                            if (9 != var3) {
-                              if (-11 != var3) {
-                                if (var3 != 11) {
-                                  if (-13 != var3) {
-                                    if (13 != var3) {
-                                      if (var3 != 14) {
-                                        if (-16 != (var3 ^ -1)) {
-                                          return 16711935;
+          if (-1 != (var3 ^ -1)) {
+            if (-2 != (var3 ^ -1)) {
+              L1: {
+                if ((var3 ^ -1) == -3) {
+                  break L1;
+                } else {
+                  if ((var3 ^ -1) != -4) {
+                    if (4 != var3) {
+                      if ((var3 ^ -1) == -6) {
+                        break L1;
+                      } else {
+                        if (-7 != (var3 ^ -1)) {
+                          if (7 != var3) {
+                            if (var3 != 8) {
+                              L2: {
+                                if (9 == var3) {
+                                  break L2;
+                                } else {
+                                  if (-11 == (var3 ^ -1)) {
+                                    break L2;
+                                  } else {
+                                    if (var3 == 11) {
+                                      break L2;
+                                    } else {
+                                      if (-13 == (var3 ^ -1)) {
+                                        break L2;
+                                      } else {
+                                        if (13 != var3) {
+                                          if (var3 != 14) {
+                                            if (-16 != (var3 ^ -1)) {
+                                              return 16711935;
+                                            } else {
+                                              return this.b(1, (byte) -108);
+                                            }
+                                          } else {
+                                            return this.b(1, (byte) -108);
+                                          }
                                         } else {
                                           return this.b(1, (byte) -108);
                                         }
-                                      } else {
-                                        return this.b(1, (byte) -108);
                                       }
-                                    } else {
-                                      return this.b(1, (byte) -108);
                                     }
-                                  } else {
-                                    return this.b(1, (byte) -108);
                                   }
-                                } else {
-                                  return this.b(1, (byte) -108);
                                 }
-                              } else {
-                                return this.b(1, (byte) -108);
                               }
-                            } else {
                               return this.b(1, (byte) -108);
+                            } else {
+                              return 3355443;
                             }
                           } else {
-                            return 3355443;
+                            return this.b(0, (byte) -108);
                           }
                         } else {
                           return this.b(0, (byte) -108);
                         }
-                      } else {
-                        return this.b(0, (byte) -108);
                       }
                     } else {
                       return this.b(0, (byte) -108);
@@ -308,12 +290,9 @@ final class lm extends tm {
                   } else {
                     return this.b(0, (byte) -108);
                   }
-                } else {
-                  return this.b(0, (byte) -108);
                 }
-              } else {
-                return this.b(0, (byte) -108);
               }
+              return this.b(0, (byte) -108);
             } else {
               return this.b(0, (byte) -108);
             }

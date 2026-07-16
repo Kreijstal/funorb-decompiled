@@ -37,7 +37,6 @@ final class jg {
         int var5 = 0;
         long var6 = 0L;
         ml var8 = null;
-        ml var8_ref = null;
         Object var10 = null;
         ml var11 = null;
         vn var12 = null;
@@ -60,8 +59,8 @@ final class jg {
                     var10 = null;
                     ml discarded$4 = ((jg) this).a((int[]) null, 119, 9);
                     var16 = var15.b();
-                    var8_ref = var16;
-                    ((jg) this).field_a.a((l) (Object) var8_ref, (byte) 2, var6);
+                    var8 = var16;
+                    ((jg) this).field_a.a((l) (Object) var8, (byte) 2, var6);
                     if (param0 != null) {
                       param0[0] = param0[0] - var16.field_k.length;
                       break L0;
@@ -69,13 +68,13 @@ final class jg {
                       break L0;
                     }
                   }
-                  return var8_ref;
+                  return var8;
                 } else {
                   L1: {
                     var17 = var15.b();
                     var11 = var17;
-                    var8_ref = var17;
-                    ((jg) this).field_a.a((l) (Object) var8_ref, (byte) 2, var6);
+                    var8 = var17;
+                    ((jg) this).field_a.a((l) (Object) var8, (byte) 2, var6);
                     if (param0 != null) {
                       param0[0] = param0[0] - var17.field_k.length;
                       break L1;
@@ -83,7 +82,7 @@ final class jg {
                       break L1;
                     }
                   }
-                  return var8_ref;
+                  return var8;
                 }
               } else {
                 return null;
@@ -99,8 +98,8 @@ final class jg {
                   var10 = null;
                   ml discarded$5 = ((jg) this).a((int[]) null, 119, 9);
                   var13 = var12.b();
-                  var8_ref = var13;
-                  ((jg) this).field_a.a((l) (Object) var8_ref, (byte) 2, var6);
+                  var8 = var13;
+                  ((jg) this).field_a.a((l) (Object) var8, (byte) 2, var6);
                   if (param0 != null) {
                     param0[0] = param0[0] - var13.field_k.length;
                     break L2;
@@ -108,12 +107,12 @@ final class jg {
                     break L2;
                   }
                 }
-                return var8_ref;
+                return var8;
               } else {
                 L3: {
                   var14 = var12.b();
-                  var8_ref = var14;
-                  ((jg) this).field_a.a((l) (Object) var8_ref, (byte) 2, var6);
+                  var8 = var14;
+                  ((jg) this).field_a.a((l) (Object) var8, (byte) 2, var6);
                   if (param0 != null) {
                     param0[0] = param0[0] - var14.field_k.length;
                     break L3;
@@ -121,7 +120,7 @@ final class jg {
                     break L3;
                   }
                 }
-                return var8_ref;
+                return var8;
               }
             } else {
               return null;
@@ -195,9 +194,7 @@ final class jg {
         int var5 = 0;
         long var6 = 0L;
         ml var8 = null;
-        ml var8_ref = null;
         gj var9 = null;
-        gj var9_ref = null;
         var5 = param2 ^ (param3 >>> -1854509044 | (-536866817 & param3) << 595749988);
         var5 = var5 | param3 << -1534116112;
         var6 = (long)var5 ^ 4294967296L;
@@ -209,9 +206,9 @@ final class jg {
                 L0: {
                   var9 = (gj) (Object) ((jg) this).field_h.a(var6, -14905);
                   if (var9 == null) {
-                    var9_ref = gj.a(((jg) this).field_d, param3, param2);
-                    if (var9_ref != null) {
-                      ((jg) this).field_h.a((l) (Object) var9_ref, (byte) 21, var6);
+                    var9 = gj.a(((jg) this).field_d, param3, param2);
+                    if (var9 != null) {
+                      ((jg) this).field_h.a((l) (Object) var9, (byte) 21, var6);
                       break L0;
                     } else {
                       return null;
@@ -220,13 +217,13 @@ final class jg {
                     break L0;
                   }
                 }
-                var8_ref = var9_ref.a(param0);
-                if (var8_ref == null) {
+                var8 = var9.a(param0);
+                if (var8 == null) {
                   return null;
                 } else {
-                  var9_ref.a(false);
-                  ((jg) this).field_a.a((l) (Object) var8_ref, (byte) 104, var6);
-                  return var8_ref;
+                  var9.a(false);
+                  ((jg) this).field_a.a((l) (Object) var8, (byte) 104, var6);
+                  return var8;
                 }
               } else {
                 return null;
@@ -239,9 +236,9 @@ final class jg {
               L1: {
                 var9 = (gj) (Object) ((jg) this).field_h.a(var6, -14905);
                 if (var9 == null) {
-                  var9_ref = gj.a(((jg) this).field_d, param3, param2);
-                  if (var9_ref != null) {
-                    ((jg) this).field_h.a((l) (Object) var9_ref, (byte) 21, var6);
+                  var9 = gj.a(((jg) this).field_d, param3, param2);
+                  if (var9 != null) {
+                    ((jg) this).field_h.a((l) (Object) var9, (byte) 21, var6);
                     break L1;
                   } else {
                     return null;
@@ -250,13 +247,13 @@ final class jg {
                   break L1;
                 }
               }
-              var8_ref = var9_ref.a(param0);
-              if (var8_ref == null) {
+              var8 = var9.a(param0);
+              if (var8 == null) {
                 return null;
               } else {
-                var9_ref.a(false);
-                ((jg) this).field_a.a((l) (Object) var8_ref, (byte) 104, var6);
-                return var8_ref;
+                var9.a(false);
+                ((jg) this).field_a.a((l) (Object) var8, (byte) 104, var6);
+                return var8;
               }
             } else {
               return null;

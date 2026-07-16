@@ -103,7 +103,7 @@ final class rp {
         int[] var6 = null;
         int var7 = 0;
         int var8 = 0;
-        dd var14 = null;
+        Object var14 = null;
         int[] var15 = null;
         int[] var17 = null;
         int[] var18 = null;
@@ -152,14 +152,14 @@ final class rp {
               break L0;
             } else {
               var24 = new dd(16, 16);
-              var14 = var24;
+              var14 = (Object) (Object) var24;
               var24.e();
               qh.f(0, 0, 16, 16, param2);
               break L0;
             }
           }
           qh.a(var32, var7, var8);
-          return new dd[]{var20, var21, var20, var19, var14, var19, var22, var23, var22};
+          return new dd[]{var20, var21, var20, var19, (dd) var14, var19, var22, var23, var22};
         } else {
           L1: {
             var8 = qh.field_f;
@@ -183,14 +183,14 @@ final class rp {
               break L1;
             } else {
               var31 = new dd(16, 16);
-              var14 = var31;
+              var14 = (Object) (Object) var31;
               var31.e();
               qh.f(0, 0, 16, 16, param2);
               break L1;
             }
           }
           qh.a(var32, var7, var8);
-          return new dd[]{var27, var28, var27, var26, var14, var26, var29, var30, var29};
+          return new dd[]{var27, var28, var27, var26, (dd) var14, var26, var29, var30, var29};
         }
     }
 

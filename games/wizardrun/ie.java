@@ -108,7 +108,7 @@ final class ie extends wl {
         ca[] var4 = null;
         int var5 = 0;
         int var6 = 0;
-        ca var6_ref = null;
+        ca var6_ref_ca = null;
         int var7 = 0;
         var7 = wizardrun.field_H;
         var2 = param1.g(8, -11719);
@@ -129,15 +129,15 @@ final class ie extends wl {
                 var5++;
                 continue L0;
               } else {
-                var6_ref = new ca();
+                var6_ref_ca = new ca();
                 int discarded$6 = param1.g(24, -11719);
                 int discarded$7 = param1.g(24, -11719);
-                var6_ref.field_b = param1.g(24, param0 + -11731);
+                var6_ref_ca.field_b = param1.g(24, param0 + -11731);
                 int discarded$8 = param1.g(9, -11719);
                 int discarded$9 = param1.g(12, -11719);
                 int discarded$10 = param1.g(12, param0 ^ -11723);
                 int discarded$11 = param1.g(12, -11719);
-                var4[var5] = var6_ref;
+                var4[var5] = var6_ref_ca;
                 var5++;
                 var5++;
                 continue L0;

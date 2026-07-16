@@ -22,8 +22,8 @@ final class wp extends am {
               ((wp) this).field_x = param0.i((byte) -101);
               break L0;
             } else {
-              if (var4 != -2) {
-                if (-3 == var4) {
+              if ((var4 ^ -1) != -2) {
+                if (-3 == (var4 ^ -1)) {
                   ((wp) this).field_z = param0.i((byte) -101);
                   break L0;
                 } else {

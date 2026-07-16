@@ -19,15 +19,14 @@ final class dn {
     }
 
     final static ub a(Throwable param0, String param1) {
-        ub var2_ref = null;
         ub var2 = null;
         if (!(param0 instanceof ub)) {
             var2 = new ub(param0, param1);
         } else {
-            var2_ref = (ub) (Object) param0;
-            var2_ref.field_a = var2_ref.field_a + 32 + param1;
+            var2 = (ub) (Object) param0;
+            var2.field_a = var2.field_a + 32 + param1;
         }
-        return var2_ref;
+        return var2;
     }
 
     static {

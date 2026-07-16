@@ -46,13 +46,26 @@ class pj extends rc {
     }
 
     boolean a(char param0, byte param1, int param2, rc param3) {
-        int var5 = 98 % ((param1 - 31) / 56);
-        if (((pj) this).b(true)) {
-            if (param2 != 84) {
-                // if_icmpne L47
+        int var5 = 0;
+        L0: {
+          var5 = 98 % ((param1 - 31) / 56);
+          if (!((pj) this).b(true)) {
+            break L0;
+          } else {
+            L1: {
+              if (param2 == 84) {
+                break L1;
+              } else {
+                if ((param2 ^ -1) != -84) {
+                  break L0;
+                } else {
+                  break L1;
+                }
+              }
             }
             ((pj) this).a(true, -1, 1, -1);
             return true;
+          }
         }
         return false;
     }

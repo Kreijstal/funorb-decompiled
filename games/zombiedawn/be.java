@@ -161,18 +161,72 @@ final class be extends im {
     }
 
     final void a(byte param0) {
-        if (param0 != 44) {
-            Object var3 = null;
-            vk discarded$0 = be.a((String) null, (byte) -57);
+        Object var3 = null;
+        byte[] stackIn_7_0 = null;
+        int stackIn_7_1 = 0;
+        byte[] stackIn_8_0 = null;
+        int stackIn_8_1 = 0;
+        byte[] stackIn_9_0 = null;
+        int stackIn_9_1 = 0;
+        int stackIn_9_2 = 0;
+        byte[] stackOut_6_0 = null;
+        int stackOut_6_1 = 0;
+        byte[] stackOut_8_0 = null;
+        int stackOut_8_1 = 0;
+        int stackOut_8_2 = 0;
+        byte[] stackOut_7_0 = null;
+        int stackOut_7_1 = 0;
+        int stackOut_7_2 = 0;
+        L0: {
+          if (param0 == 44) {
+            break L0;
+          } else {
+            var3 = null;
+            vk discarded$4 = be.a((String) null, (byte) -57);
+            break L0;
+          }
         }
-        if (4095 >= (((be) this).field_m ^ -1)) {
-            // if_icmpge L65
-            ((be) this).field_m = 4096;
-        } else {
+        L1: {
+          if (4095 < (((be) this).field_m ^ -1)) {
             ((be) this).field_m = -4096;
+            break L1;
+          } else {
+            if ((((be) this).field_m ^ -1) >= -4097) {
+              break L1;
+            } else {
+              ((be) this).field_m = 4096;
+              break L1;
+            }
+          }
         }
-        ((be) this).field_k = ((be) this).field_k + 1;
-        ((be) this).field_n[((be) this).field_k] = (byte)((((be) this).field_h ? 2048 + (((be) this).field_m >> -1728161183) : ((be) this).field_m) >> -154155708);
+        L2: {
+          int fieldTemp$5 = ((be) this).field_k;
+          ((be) this).field_k = ((be) this).field_k + 1;
+          stackOut_6_0 = ((be) this).field_n;
+          stackOut_6_1 = fieldTemp$5;
+          stackIn_8_0 = stackOut_6_0;
+          stackIn_8_1 = stackOut_6_1;
+          stackIn_7_0 = stackOut_6_0;
+          stackIn_7_1 = stackOut_6_1;
+          if (!((be) this).field_h) {
+            stackOut_8_0 = (byte[]) (Object) stackIn_8_0;
+            stackOut_8_1 = stackIn_8_1;
+            stackOut_8_2 = ((be) this).field_m;
+            stackIn_9_0 = stackOut_8_0;
+            stackIn_9_1 = stackOut_8_1;
+            stackIn_9_2 = stackOut_8_2;
+            break L2;
+          } else {
+            stackOut_7_0 = (byte[]) (Object) stackIn_7_0;
+            stackOut_7_1 = stackIn_7_1;
+            stackOut_7_2 = 2048 + (((be) this).field_m >> -1728161183);
+            stackIn_9_0 = stackOut_7_0;
+            stackIn_9_1 = stackOut_7_1;
+            stackIn_9_2 = stackOut_7_2;
+            break L2;
+          }
+        }
+        stackIn_9_0[stackIn_9_1] = (byte)(stackIn_9_2 >> -154155708);
         ((be) this).field_m = 0;
     }
 

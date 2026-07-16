@@ -113,9 +113,11 @@ abstract class ig extends gg implements pe {
                     var7++;
                     continue L0;
                   } else {
+                    int incrementValue$2 = var6;
                     var6++;
+                    int incrementValue$3 = var5;
                     var5++;
-                    var4[var6] = param0.field_D[var5];
+                    var4[incrementValue$2] = param0.field_D[incrementValue$3];
                     var8++;
                     continue L1;
                   }

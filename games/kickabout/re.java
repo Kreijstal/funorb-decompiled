@@ -27,7 +27,6 @@ final class re implements gj {
         int var4 = 0;
         int var5 = 0;
         String var6 = null;
-        String var6_ref = null;
         int var7 = 0;
         int var8 = 0;
         dg var9 = null;
@@ -149,7 +148,7 @@ final class re implements gj {
                             break L7;
                           }
                         }
-                        var6_ref = stackIn_25_0;
+                        var6 = stackIn_25_0;
                         break L6;
                       }
                     }
@@ -169,7 +168,7 @@ final class re implements gj {
                           break L8;
                         }
                       }
-                      var6_ref = stackIn_32_0;
+                      var6 = stackIn_32_0;
                       break L3;
                     } else {
                       break L3;
@@ -182,13 +181,13 @@ final class re implements gj {
               if (1 != (var4 ^ -1)) {
                 break L9;
               } else {
-                var6_ref = Integer.toString(var2);
+                var6 = Integer.toString(var2);
                 break L9;
               }
             }
             L10: {
               stackOut_35_0 = 10;
-              stackOut_35_1 = (String) var6_ref;
+              stackOut_35_1 = (String) var6;
               stackIn_37_0 = stackOut_35_0;
               stackIn_37_1 = stackOut_35_1;
               stackIn_36_0 = stackOut_35_0;
@@ -243,12 +242,12 @@ final class re implements gj {
               }
             }
             if (-1 < (var4 ^ -1)) {
-              cv.field_f.a(var6_ref, var8, jl.field_d + var1, var5, -1);
+              cv.field_f.a(var6, var8, jl.field_d + var1, var5, -1);
               var1 = var1 + la.field_c;
               var3++;
               continue L1;
             } else {
-              sf.field_F.a(var6_ref, var8, lk.field_g + var1, var5, -1);
+              sf.field_F.a(var6, var8, lk.field_g + var1, var5, -1);
               var1 = var1 + (nr.field_j + aj.field_a + pr.field_d);
               var3++;
               continue L1;
@@ -294,7 +293,7 @@ final class re implements gj {
                 L3: {
                   vd.a(0, 1);
                   if (0 != ih.field_c) {
-                    if (-2 == ih.field_c) {
+                    if (-2 == (ih.field_c ^ -1)) {
                       var1 = vc.b(123);
                       if ((var1 ^ -1) != 0) {
                         jm.a(100, 9863, var1);
@@ -307,7 +306,7 @@ final class re implements gj {
                         break L3;
                       } else {
                         var1 = k.b(-124);
-                        if (0 != var1) {
+                        if (0 != (var1 ^ -1)) {
                           jm.a(100, 9863, var1);
                           return;
                         } else {

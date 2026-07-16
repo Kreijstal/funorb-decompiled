@@ -84,7 +84,7 @@ final class dk extends wc {
           if (1 == ((dk) this).field_F) {
             ((dk) this).field_V = false;
             ((dk) this).g((byte) 87);
-            boolean discarded$3 = ((dk) this).h((byte) -91);
+            boolean discarded$6 = ((dk) this).h((byte) -91);
             ((dk) this).field_V = true;
             break L0;
           } else {
@@ -146,7 +146,7 @@ final class dk extends wc {
                       }
                     }
                   }
-                  if (((dk) this).field_Wb > -350) {
+                  if ((((dk) this).field_Wb ^ -1) > -350) {
                     L6: {
                       stackOut_53_0 = this;
                       stackIn_55_0 = stackOut_53_0;
@@ -168,7 +168,7 @@ final class dk extends wc {
                     ((dk) this).field_Ub = stackIn_56_1 != 0;
                     break L4;
                   } else {
-                    if (-366 > ((dk) this).field_Wb) {
+                    if (-366 < (((dk) this).field_Wb ^ -1)) {
                       ((dk) this).field_dc = ((dk) this).field_dc - 1;
                       break L4;
                     } else {
@@ -181,8 +181,8 @@ final class dk extends wc {
                         break L4;
                       } else {
                         if ((((dk) this).field_Wb ^ -1) != -403) {
-                          if (-15931 >= ((dk) this).field_Wb) {
-                            if (-15931 == ((dk) this).field_Wb) {
+                          if (-15931 >= (((dk) this).field_Wb ^ -1)) {
+                            if (-15931 == (((dk) this).field_Wb ^ -1)) {
                               ((dk) this).e(0, -6904);
                               super.g(112);
                               break L4;
@@ -192,10 +192,11 @@ final class dk extends wc {
                                 super.g(112);
                                 break L4;
                               } else {
-                                if (-15981 < ((dk) this).field_Wb) {
+                                if (-15981 > (((dk) this).field_Wb ^ -1)) {
                                   if (((dk) this).field_G >= 4) {
+                                    int fieldTemp$7 = ((dk) this).field_Yb;
                                     ((dk) this).field_Yb = ((dk) this).field_Yb + 1;
-                                    if (((dk) this).field_Yb < 2) {
+                                    if (fieldTemp$7 < 2) {
                                       ((dk) this).field_T = 0;
                                       ((dk) this).field_O = 0;
                                       ((dk) this).field_Y = ((dk) this).a(true);
@@ -221,11 +222,13 @@ final class dk extends wc {
                                       }
                                     }
                                     super.g(125);
+                                    int fieldTemp$8 = ((dk) this).field_N + 1;
                                     ((dk) this).field_N = ((dk) this).field_N + 1;
-                                    if (((dk) this).field_N + 1 > 5) {
+                                    if (fieldTemp$8 > 5) {
                                       ((dk) this).field_N = 0;
+                                      int fieldTemp$9 = ((dk) this).field_G + 1;
                                       ((dk) this).field_G = ((dk) this).field_G + 1;
-                                      if (((dk) this).field_G + 1 >= 6) {
+                                      if (fieldTemp$9 >= 6) {
                                         ((dk) this).field_G = 6;
                                         break L4;
                                       } else {
@@ -246,7 +249,7 @@ final class dk extends wc {
                             if (null == ((dk) this).field_yb) {
                               break L4;
                             } else {
-                              if (-11 != ((dk) this).field_F) {
+                              if (-11 != (((dk) this).field_F ^ -1)) {
                                 break L4;
                               } else {
                                 ((dk) this).field_cc = 0;
@@ -267,8 +270,8 @@ final class dk extends wc {
                             }
                           }
                         } else {
-                          fn discarded$4 = kh.a(110, false);
-                          fn discarded$5 = jp.a((byte) 127, 100);
+                          fn discarded$10 = kh.a(110, false);
+                          fn discarded$11 = jp.a((byte) 127, 100);
                           ((dk) this).e(0, -6904);
                           break L4;
                         }
@@ -350,10 +353,10 @@ final class dk extends wc {
           L1: {
             L2: {
               var7_int = ((dk) this).field_F;
-              if (var7_int == -1) {
+              if ((var7_int ^ -1) == -1) {
                 break L2;
               } else {
-                if (-2 != var7_int) {
+                if (-2 != (var7_int ^ -1)) {
                   if (-4 != (var7_int ^ -1)) {
                     if ((var7_int ^ -1) == -11) {
                       var5 = 6 * ((dk) this).field_cc + 6;

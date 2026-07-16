@@ -60,7 +60,7 @@ final class nt extends hd implements lv {
                           mj.a(220.0, 60, (double)(ld.field_f.f(-107) - -var2_ref_nl.f(-89) >> 869664577), (double)(ld.field_f.a(true) - -var2_ref_nl.a(true) >> 1403492833));
                           break L0;
                         } else {
-                          if (ks.field_e != -9) {
+                          if ((ks.field_e ^ -1) != -9) {
                             if (ks.field_e == 9) {
                               mj.a(220.0, 60, (double)(mh.field_k.f(-128) + ld.field_f.f(-121) >> -111219359), (double)mh.field_k.a(true));
                               break L0;
@@ -115,7 +115,7 @@ final class nt extends hd implements lv {
                             L3: {
                               var2 = ld.field_f.a(true);
                               var3 = 0;
-                              if (-811 >= var2) {
+                              if (-811 <= (var2 ^ -1)) {
                                 if (var2 > 400) {
                                   var3 = 1;
                                   break L3;
@@ -647,25 +647,31 @@ final class nt extends hd implements lv {
             Throwable decompiledCaughtException = null;
             try {
               L0: {
-                if (param1 > 5) {
-                  break L0;
-                } else {
-                  field_yb = null;
-                  break L0;
+                L1: {
+                  if (param1 > 5) {
+                    break L1;
+                  } else {
+                    field_yb = null;
+                    break L1;
+                  }
                 }
+                var4 = param0.getCodeBase();
+                var3 = qr.a(param0, var4, 3).getFile();
+                Object discarded$6 = mm.a(new Object[2], param0, "updatelinks", 25449);
+                Object discarded$7 = mm.a(new Object[2], param0, "updatelinks", 25449);
+                Object discarded$8 = mm.a(new Object[2], param0, "updatelinks", 25449);
+                Object discarded$9 = mm.a(new Object[2], param0, "updatelinks", 25449);
+                Object discarded$10 = mm.a(new Object[2], param0, "updatelinks", 25449);
+                Object discarded$11 = mm.a(new Object[2], param0, "updatelinks", 25449);
+                break L0;
               }
-              var4 = param0.getCodeBase();
-              var3 = qr.a(param0, var4, 3).getFile();
-              Object discarded$6 = mm.a(new Object[2], param0, "updatelinks", 25449);
-              Object discarded$7 = mm.a(new Object[2], param0, "updatelinks", 25449);
-              Object discarded$8 = mm.a(new Object[2], param0, "updatelinks", 25449);
-              Object discarded$9 = mm.a(new Object[2], param0, "updatelinks", 25449);
-              Object discarded$10 = mm.a(new Object[2], param0, "updatelinks", 25449);
-              Object discarded$11 = mm.a(new Object[2], param0, "updatelinks", 25449);
-            } catch (java.lang.Throwable decompiledCaughtParameter) {
-              decompiledCaughtException = decompiledCaughtParameter;
+            } catch (java.lang.Throwable decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              L2: {
+                var2 = decompiledCaughtException;
+                break L2;
+              }
             }
-            var2 = decompiledCaughtException;
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {

@@ -119,8 +119,9 @@ final class rf {
                     if (((rf) this).field_s <= var10) {
                       break L5;
                     } else {
-                      var8 = var8 + var17.d((byte) -62);
-                      ((rf) this).field_r[var10] = var8 + var17.d((byte) -62);
+                      int dupTemp$4 = var8 + var17.d((byte) -62);
+                      var8 = dupTemp$4;
+                      ((rf) this).field_r[var10] = dupTemp$4;
                       if (((rf) this).field_r[var10] > var9) {
                         var9 = ((rf) this).field_r[var10];
                         var10++;
@@ -137,8 +138,9 @@ final class rf {
                     if (var10 >= ((rf) this).field_s) {
                       break L5;
                     } else {
-                      var8 = var8 + var17.e((byte) 63);
-                      ((rf) this).field_r[var10] = var8 + var17.e((byte) 63);
+                      int dupTemp$5 = var8 + var17.e((byte) 63);
+                      var8 = dupTemp$5;
+                      ((rf) this).field_r[var10] = dupTemp$5;
                       if (var9 < ((rf) this).field_r[var10]) {
                         var9 = ((rf) this).field_r[var10];
                         var10++;
@@ -252,9 +254,10 @@ final class rf {
                                         continue L19;
                                       }
                                     } else {
-                                      var8 = var8 + var17.e((byte) 111);
-                                      ((rf) this).field_h[var11][var14] = var8 + var17.e((byte) 111);
-                                      var15 = var8 + var17.e((byte) 111);
+                                      int dupTemp$6 = var8 + var17.e((byte) 111);
+                                      var8 = dupTemp$6;
+                                      ((rf) this).field_h[var11][var14] = dupTemp$6;
+                                      var15 = dupTemp$6;
                                       if (var15 > var13) {
                                         var13 = var15;
                                         var14++;
@@ -300,9 +303,10 @@ final class rf {
                                         continue L22;
                                       }
                                     } else {
-                                      var8 = var8 + var17.d((byte) 122);
-                                      ((rf) this).field_h[var11][var14] = var8 + var17.d((byte) 122);
-                                      var15 = var8 + var17.d((byte) 122);
+                                      int dupTemp$7 = var8 + var17.d((byte) 122);
+                                      var8 = dupTemp$7;
+                                      ((rf) this).field_h[var11][var14] = dupTemp$7;
+                                      var15 = dupTemp$7;
                                       if (var13 < var15) {
                                         var13 = var15;
                                         var14++;

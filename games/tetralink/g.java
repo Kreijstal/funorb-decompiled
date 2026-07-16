@@ -695,23 +695,54 @@ final class g extends eb {
 
     final static void a(String[] args, String param1, int param2, byte param3) {
         String[] var4 = null;
-        int var5 = TetraLink.field_J;
-        if (param3 != 3) {
+        int var5 = 0;
+        int stackIn_6_0 = 0;
+        int stackOut_5_0 = 0;
+        int stackOut_4_0 = 0;
+        L0: {
+          var5 = TetraLink.field_J;
+          if (param3 == 3) {
+            break L0;
+          } else {
             field_O = null;
+            break L0;
+          }
         }
-        pi.field_a = ik.field_d;
-        if (param2 == 255) {
-            pm.field_f = al.a(13 > wh.field_k ? true : false, 1);
-            ia.a((String[]) null, param3 ^ 10535);
-        } else {
-            if ((param2 ^ -1) <= -101) {
-                // if_icmplt L102
-                var4 = args;
-                ia.a(var4, 10532);
-                pm.field_f = ng.a((byte) -67, args);
-            } else {
-                pm.field_f = hj.a(param1, param2, false);
+        L1: {
+          pi.field_a = ik.field_d;
+          if (param2 != 255) {
+            L2: {
+              if ((param2 ^ -1) > -101) {
+                break L2;
+              } else {
+                if (105 < param2) {
+                  break L2;
+                } else {
+                  var4 = args;
+                  ia.a(var4, 10532);
+                  pm.field_f = ng.a((byte) -67, args);
+                  break L1;
+                }
+              }
             }
+            pm.field_f = hj.a(param1, param2, false);
+            break L1;
+          } else {
+            L3: {
+              if (13 <= wh.field_k) {
+                stackOut_5_0 = 0;
+                stackIn_6_0 = stackOut_5_0;
+                break L3;
+              } else {
+                stackOut_4_0 = 1;
+                stackIn_6_0 = stackOut_4_0;
+                break L3;
+              }
+            }
+            pm.field_f = al.a(stackIn_6_0 != 0, 1);
+            ia.a((String[]) null, param3 ^ 10535);
+            break L1;
+          }
         }
     }
 
@@ -758,26 +789,59 @@ final class g extends eb {
     }
 
     private final void b(byte param0, int param1) {
-        int var5 = TetraLink.field_J;
-        int var4 = -66 / ((9 - param0) / 45);
-        oc var3 = (oc) (Object) ((g) this).field_y.field_u.c(false);
-        while (var3 != null) {
-            if (-1 >= (param1 ^ -1)) {
-                // if_icmpeq L57
-            } else {
-                if (var3.field_I != null) {
+        oc var3 = null;
+        int var4 = 0;
+        int var5 = 0;
+        var5 = TetraLink.field_J;
+        var4 = -66 / ((9 - param0) / 45);
+        var3 = (oc) (Object) ((g) this).field_y.field_u.c(false);
+        L0: while (true) {
+          if (var3 == null) {
+            return;
+          } else {
+            L1: {
+              L2: {
+                if (-1 < (param1 ^ -1)) {
+                  break L2;
+                } else {
+                  if (var3.field_n == param1) {
+                    break L2;
+                  } else {
+                    break L1;
+                  }
+                }
+              }
+              L3: {
+                if (var3.field_I == null) {
+                  break L3;
+                } else {
+                  L4: {
                     var3.field_I.g(nk.field_k / 100);
-                    if (var3.field_I.g()) {
-                        ((g) this).field_y.field_s.a((eb) (Object) var3.field_I);
+                    if (!var3.field_I.g()) {
+                      break L4;
+                    } else {
+                      ((g) this).field_y.field_s.a((eb) (Object) var3.field_I);
+                      break L4;
                     }
-                    var3.a(77);
+                  }
+                  var3.a(77);
+                  break L3;
                 }
-                if (0 > var3.field_v) {
-                    ((g) this).field_B[var3.field_n][var3.field_E] = null;
+              }
+              L5: {
+                if (0 <= var3.field_v) {
+                  break L5;
+                } else {
+                  ((g) this).field_B[var3.field_n][var3.field_E] = null;
+                  break L5;
                 }
-                var3.b(false);
+              }
+              var3.b(false);
+              break L1;
             }
             var3 = (oc) (Object) ((g) this).field_y.field_u.a((byte) -70);
+            continue L0;
+          }
         }
     }
 
@@ -1413,7 +1477,6 @@ final class g extends eb {
     final synchronized boolean a(fa param0, ri param1, ah param2, int param3, int param4) {
         int var6 = 0;
         Object var7 = null;
-        int[] var7_array = null;
         ch var8 = null;
         int var9 = 0;
         int var11 = 0;
@@ -1425,7 +1488,7 @@ final class g extends eb {
           var6 = 1;
           var7 = null;
           if (param3 > (param4 ^ -1)) {
-            var7_array = new int[]{param4};
+            var7 = (Object) (Object) new int[]{param4};
             break L0;
           } else {
             break L0;
@@ -1455,14 +1518,14 @@ final class g extends eb {
                     break L3;
                   } else {
                     ((g) this).field_A.a((long)var9, -53, (mc) (Object) var13);
-                    if (!var13.a(var7_array, param0, (byte) -114, var8.field_p)) {
+                    if (!var13.a((int[]) var7, param0, (byte) -114, var8.field_p)) {
                       break L4;
                     } else {
                       break L3;
                     }
                   }
                 } else {
-                  if (!var12.a(var7_array, param0, (byte) -114, var8.field_p)) {
+                  if (!var12.a((int[]) var7, param0, (byte) -114, var8.field_p)) {
                     break L4;
                   } else {
                     break L3;
@@ -1574,20 +1637,45 @@ final class g extends eb {
     }
 
     private final void e(int param0, int param1) {
-        int var4 = TetraLink.field_J;
-        if (param1 >= -12) {
+        oc var3 = null;
+        int var4 = 0;
+        L0: {
+          var4 = TetraLink.field_J;
+          if (param1 < -12) {
+            break L0;
+          } else {
             ((g) this).field_M = null;
+            break L0;
+          }
         }
-        oc var3 = (oc) (Object) ((g) this).field_y.field_u.c(false);
-        while (var3 != null) {
-            if ((param0 ^ -1) <= -1) {
-                // if_icmpne L106
-            }
-            if (!(0 <= var3.field_v)) {
+        var3 = (oc) (Object) ((g) this).field_y.field_u.c(false);
+        L1: while (true) {
+          if (var3 == null) {
+            return;
+          } else {
+            L2: {
+              L3: {
+                if ((param0 ^ -1) > -1) {
+                  break L3;
+                } else {
+                  if ((param0 ^ -1) != (var3.field_n ^ -1)) {
+                    break L2;
+                  } else {
+                    break L3;
+                  }
+                }
+              }
+              if (0 > var3.field_v) {
                 ((g) this).field_B[var3.field_n][var3.field_E] = null;
                 var3.field_v = 0;
+                break L2;
+              } else {
+                break L2;
+              }
             }
             var3 = (oc) (Object) ((g) this).field_y.field_u.a((byte) -70);
+            continue L1;
+          }
         }
     }
 

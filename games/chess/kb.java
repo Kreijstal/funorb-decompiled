@@ -691,111 +691,204 @@ final class kb extends kn {
 
     final static int a(int param0, int param1) {
         int var2 = 0;
-        if (param0 != -1) {
-          L0: {
-            if (param1 > 23) {
-              break L0;
+        if ((param0 ^ -1) != -1) {
+          if (param1 > 23) {
+            if (param0 <= 0) {
+              L0: {
+                var2 = 2;
+                if ((param0 ^ -1) > 65535) {
+                  var2 += 16;
+                  param0 = param0 >> 16;
+                  break L0;
+                } else {
+                  break L0;
+                }
+              }
+              L1: {
+                if (-256 > param0) {
+                  param0 = param0 >> 8;
+                  var2 += 8;
+                  break L1;
+                } else {
+                  break L1;
+                }
+              }
+              L2: {
+                if (param0 < -16) {
+                  var2 += 4;
+                  param0 = param0 >> 4;
+                  break L2;
+                } else {
+                  break L2;
+                }
+              }
+              L3: {
+                if (-4 > param0) {
+                  param0 = param0 >> 2;
+                  var2 += 2;
+                  break L3;
+                } else {
+                  break L3;
+                }
+              }
+              L4: {
+                if (param0 >= -2) {
+                  break L4;
+                } else {
+                  var2++;
+                  param0 = param0 >> 1;
+                  break L4;
+                }
+              }
+              return var2;
             } else {
-              boolean discarded$1 = kb.j(15);
-              break L0;
-            }
-          }
-          if (param0 > 0) {
-            L1: {
-              var2 = 1;
-              if (-65536 < param0) {
-                var2 += 16;
-                param0 = param0 >> 16;
-                break L1;
-              } else {
-                break L1;
+              L5: {
+                var2 = 1;
+                if (-65536 > (param0 ^ -1)) {
+                  var2 += 16;
+                  param0 = param0 >> 16;
+                  break L5;
+                } else {
+                  break L5;
+                }
               }
-            }
-            L2: {
-              if (255 >= param0) {
-                break L2;
-              } else {
-                param0 = param0 >> 8;
-                var2 += 8;
-                break L2;
+              L6: {
+                if (255 >= param0) {
+                  break L6;
+                } else {
+                  param0 = param0 >> 8;
+                  var2 += 8;
+                  break L6;
+                }
               }
-            }
-            L3: {
-              if ((param0 ^ -1) >= -16) {
-                break L3;
-              } else {
-                var2 += 4;
-                param0 = param0 >> 4;
-                break L3;
+              L7: {
+                if ((param0 ^ -1) >= -16) {
+                  break L7;
+                } else {
+                  var2 += 4;
+                  param0 = param0 >> 4;
+                  break L7;
+                }
               }
-            }
-            L4: {
-              if (3 < param0) {
-                param0 = param0 >> 2;
-                var2 += 2;
-                break L4;
-              } else {
-                break L4;
+              L8: {
+                if (3 < param0) {
+                  param0 = param0 >> 2;
+                  var2 += 2;
+                  break L8;
+                } else {
+                  break L8;
+                }
               }
-            }
-            L5: {
-              if (param0 > 1) {
-                param0 = param0 >> 1;
-                var2++;
-                break L5;
-              } else {
-                break L5;
+              L9: {
+                if (param0 > 1) {
+                  param0 = param0 >> 1;
+                  var2++;
+                  break L9;
+                } else {
+                  break L9;
+                }
               }
+              return var2;
             }
-            return var2;
           } else {
-            L6: {
-              var2 = 2;
-              if ((param0 ^ -1) > 65535) {
-                var2 += 16;
-                param0 = param0 >> 16;
-                break L6;
-              } else {
-                break L6;
+            boolean discarded$1 = kb.j(15);
+            if (param0 <= 0) {
+              L10: {
+                var2 = 2;
+                if ((param0 ^ -1) > 65535) {
+                  var2 += 16;
+                  param0 = param0 >> 16;
+                  break L10;
+                } else {
+                  break L10;
+                }
               }
-            }
-            L7: {
-              if (-256 > param0) {
-                param0 = param0 >> 8;
-                var2 += 8;
-                break L7;
-              } else {
-                break L7;
+              L11: {
+                if (-256 > param0) {
+                  param0 = param0 >> 8;
+                  var2 += 8;
+                  break L11;
+                } else {
+                  break L11;
+                }
               }
-            }
-            L8: {
-              if (param0 < -16) {
-                var2 += 4;
-                param0 = param0 >> 4;
-                break L8;
-              } else {
-                break L8;
+              L12: {
+                if (param0 < -16) {
+                  var2 += 4;
+                  param0 = param0 >> 4;
+                  break L12;
+                } else {
+                  break L12;
+                }
               }
-            }
-            L9: {
-              if (-4 > param0) {
-                param0 = param0 >> 2;
-                var2 += 2;
-                break L9;
-              } else {
-                break L9;
+              L13: {
+                if (-4 > param0) {
+                  param0 = param0 >> 2;
+                  var2 += 2;
+                  break L13;
+                } else {
+                  break L13;
+                }
               }
-            }
-            L10: {
-              if (param0 >= -2) {
-                break L10;
-              } else {
-                var2++;
-                param0 = param0 >> 1;
-                break L10;
+              L14: {
+                if (param0 >= -2) {
+                  break L14;
+                } else {
+                  var2++;
+                  param0 = param0 >> 1;
+                  break L14;
+                }
               }
+              return var2;
+            } else {
+              L15: {
+                var2 = 1;
+                if (-65536 > (param0 ^ -1)) {
+                  var2 += 16;
+                  param0 = param0 >> 16;
+                  break L15;
+                } else {
+                  break L15;
+                }
+              }
+              L16: {
+                if (255 >= param0) {
+                  break L16;
+                } else {
+                  param0 = param0 >> 8;
+                  var2 += 8;
+                  break L16;
+                }
+              }
+              L17: {
+                if ((param0 ^ -1) >= -16) {
+                  break L17;
+                } else {
+                  var2 += 4;
+                  param0 = param0 >> 4;
+                  break L17;
+                }
+              }
+              L18: {
+                if (3 < param0) {
+                  param0 = param0 >> 2;
+                  var2 += 2;
+                  break L18;
+                } else {
+                  break L18;
+                }
+              }
+              L19: {
+                if (param0 > 1) {
+                  param0 = param0 >> 1;
+                  var2++;
+                  break L19;
+                } else {
+                  break L19;
+                }
+              }
+              return var2;
             }
-            return var2;
           }
         } else {
           return 0;
@@ -886,144 +979,53 @@ final class kb extends kn {
             int var6 = 0;
             int var7 = 0;
             String stackIn_9_0 = null;
+            Throwable decompiledCaughtException = null;
             String stackOut_8_0 = null;
-            int statePc = 0;
-            Throwable caughtException = null;
-            stateLoop: while (true) {
-                switch (statePc) {
-                    case 0: {
-                        var7 = Chess.field_G;
-                        statePc = 1;
-                        continue stateLoop;
-                    }
-                    case 1: {
-                        try {
-                            var3 = (String) u.a(true, "getcookies", param1);
-                            if (param0 == -2147483648) {
-                                statePc = 3;
-                            } else {
-                                statePc = 2;
-                            }
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_1) {
-                            caughtException = stateCaught_1;
-                            statePc = 12;
-                            continue stateLoop;
-                        }
-                    }
-                    case 2: {
-                        try {
-                            boolean discarded$2 = kb.j(11);
-                            statePc = 3;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_2) {
-                            caughtException = stateCaught_2;
-                            statePc = 12;
-                            continue stateLoop;
-                        }
-                    }
-                    case 3: {
-                        try {
-                            var4 = gl.a((byte) -118, ';', var3);
-                            var5 = 0;
-                            statePc = 4;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_3) {
-                            caughtException = stateCaught_3;
-                            statePc = 12;
-                            continue stateLoop;
-                        }
-                    }
-                    case 4: {
-                        try {
-                            if (var4.length <= var5) {
-                                statePc = 13;
-                            } else {
-                                statePc = 5;
-                            }
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_4) {
-                            caughtException = stateCaught_4;
-                            statePc = 12;
-                            continue stateLoop;
-                        }
-                    }
-                    case 5: {
-                        try {
-                            var6 = var4[var5].indexOf('=');
-                            if ((var6 ^ -1) > -1) {
-                                statePc = 10;
-                            } else {
-                                statePc = 6;
-                            }
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_5) {
-                            caughtException = stateCaught_5;
-                            statePc = 12;
-                            continue stateLoop;
-                        }
-                    }
-                    case 6: {
-                        try {
-                            if (var4[var5].substring(0, var6).trim().equals((Object) (Object) param2)) {
-                                statePc = 8;
-                            } else {
-                                statePc = 7;
-                            }
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_6) {
-                            caughtException = stateCaught_6;
-                            statePc = 12;
-                            continue stateLoop;
-                        }
-                    }
-                    case 7: {
-                        try {
-                            statePc = 10;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_7) {
-                            caughtException = stateCaught_7;
-                            statePc = 12;
-                            continue stateLoop;
-                        }
-                    }
-                    case 8: {
-                        try {
-                            stackOut_8_0 = var4[var5].substring(var6 + 1).trim();
-                            stackIn_9_0 = stackOut_8_0;
-                            statePc = 9;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_8) {
-                            caughtException = stateCaught_8;
-                            statePc = 12;
-                            continue stateLoop;
-                        }
-                    }
-                    case 9: {
-                        return (String) (Object) stackIn_9_0;
-                    }
-                    case 10: {
-                        try {
-                            var5++;
-                            statePc = 4;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_10) {
-                            caughtException = stateCaught_10;
-                            statePc = 12;
-                            continue stateLoop;
-                        }
-                    }
-                    case 12: {
-                        var3_ref = caughtException;
-                        statePc = 13;
-                        continue stateLoop;
-                    }
-                    case 13: {
-                        return null;
-                    }
-                    default: throw new IllegalStateException("invalid CFG state " + statePc);
+            var7 = Chess.field_G;
+            try {
+              L0: {
+                L1: {
+                  var3 = (String) u.a(true, "getcookies", param1);
+                  if (param0 == -2147483648) {
+                    break L1;
+                  } else {
+                    boolean discarded$2 = kb.j(11);
+                    break L1;
+                  }
                 }
+                var4 = gl.a((byte) -118, ';', var3);
+                var5 = 0;
+                L2: while (true) {
+                  if (var4.length <= var5) {
+                    break L0;
+                  } else {
+                    L3: {
+                      var6 = var4[var5].indexOf('=');
+                      if ((var6 ^ -1) > -1) {
+                        break L3;
+                      } else {
+                        if (var4[var5].substring(0, var6).trim().equals((Object) (Object) param2)) {
+                          stackOut_8_0 = var4[var5].substring(var6 + 1).trim();
+                          stackIn_9_0 = stackOut_8_0;
+                          return stackIn_9_0;
+                        } else {
+                          break L3;
+                        }
+                      }
+                    }
+                    var5++;
+                    continue L2;
+                  }
+                }
+              }
+            } catch (java.lang.Throwable decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              L4: {
+                var3_ref = decompiledCaughtException;
+                break L4;
+              }
             }
+            return null;
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {

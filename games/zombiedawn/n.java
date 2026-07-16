@@ -33,25 +33,29 @@ final class n extends le {
             uc stackOut_2_0 = null;
             try {
               L0: {
-                if (param0 >= 81) {
-                  break L0;
-                } else {
-                  n.a(8);
-                  break L0;
+                L1: {
+                  if (param0 >= 81) {
+                    break L1;
+                  } else {
+                    n.a(8);
+                    break L1;
+                  }
                 }
+                stackOut_2_0 = (uc) Class.forName("ol").newInstance();
+                stackIn_3_0 = stackOut_2_0;
+                break L0;
               }
-              stackOut_2_0 = (uc) Class.forName("ol").newInstance();
-              stackIn_3_0 = stackOut_2_0;
-            } catch (java.lang.Throwable decompiledCaughtParameter) {
-              decompiledCaughtException = decompiledCaughtParameter;
-              return stackIn_3_0;
+            } catch (java.lang.Throwable decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              var1 = decompiledCaughtException;
+              return null;
             }
+            return stackIn_3_0;
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
             throw new RuntimeException(decompiledCheckedException);
         }
-        return null;
     }
 
     n() {

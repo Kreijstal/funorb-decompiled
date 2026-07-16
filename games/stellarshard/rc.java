@@ -50,26 +50,45 @@ final class rc extends ci {
     }
 
     final int a(boolean param0, long param1) {
-        int var5 = stellarshard.field_B;
-        if (!param0) {
-            return -54;
-        }
-        if ((((rc) this).field_g ^ -1L) < (((rc) this).field_n ^ -1L)) {
+        int var4 = 0;
+        int var5 = 0;
+        var5 = stellarshard.field_B;
+        if (param0) {
+          if ((((rc) this).field_g ^ -1L) >= (((rc) this).field_n ^ -1L)) {
+            var4 = 0;
+            L0: while (true) {
+              L1: {
+                ((rc) this).field_g = ((rc) this).field_g + param1;
+                var4++;
+                if (var4 >= 10) {
+                  break L1;
+                } else {
+                  if (((rc) this).field_n > ((rc) this).field_g) {
+                    continue L0;
+                  } else {
+                    break L1;
+                  }
+                }
+              }
+              L2: {
+                if (((rc) this).field_n > ((rc) this).field_g) {
+                  ((rc) this).field_g = ((rc) this).field_n;
+                  break L2;
+                } else {
+                  break L2;
+                }
+              }
+              return var4;
+            }
+          } else {
             ((rc) this).field_j = ((rc) this).field_j + (((rc) this).field_g + -((rc) this).field_n);
             ((rc) this).field_n = ((rc) this).field_n + (-((rc) this).field_n + ((rc) this).field_g);
             ((rc) this).field_g = ((rc) this).field_g + param1;
             return 1;
+          }
+        } else {
+          return -54;
         }
-        int var4 = 0;
-        do {
-            ((rc) this).field_g = ((rc) this).field_g + param1;
-            var4++;
-            // if_icmpge L118
-        } while (((rc) this).field_n > ((rc) this).field_g);
-        if (!(((rc) this).field_n <= ((rc) this).field_g)) {
-            ((rc) this).field_g = ((rc) this).field_n;
-        }
-        return var4;
     }
 
     final static int a(byte param0, int param1) {

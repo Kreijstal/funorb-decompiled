@@ -76,7 +76,7 @@ class vf implements io, ak {
           if (!((vf) this).field_e) {
             L2: {
               var12 = ((vf) this).field_i;
-              if (var12 == 0) {
+              if ((var12 ^ -1) == -1) {
                 var11 = ((vf) this).field_m.field_I;
                 break L2;
               } else {
@@ -102,10 +102,10 @@ class vf implements io, ak {
             }
             L4: {
               var12 = ((vf) this).field_h;
-              if (-1 == var12) {
+              if (-1 == (var12 ^ -1)) {
                 break L4;
               } else {
-                if (-4 != var12) {
+                if (-4 != (var12 ^ -1)) {
                   if (-2 == (var12 ^ -1)) {
                     ((vf) this).field_m.a(((vf) this).b(12307, param6), (var9 >> -1882848191) + this.a(true, param6, param0, param4), var11 + this.a(param6, param1, (byte) 24, param2), param3, param5);
                     break L1;
@@ -304,10 +304,10 @@ class vf implements io, ak {
           return;
         } else {
           L0: {
-            if (-1 <= param4) {
+            if (-1 <= (param4 ^ -1)) {
               break L0;
             } else {
-              if (-1 < param5) {
+              if (-1 > (param5 ^ -1)) {
                 L1: {
                   if (null == param1[3]) {
                     stackOut_8_0 = 0;
@@ -376,7 +376,7 @@ class vf implements io, ak {
                 L6: {
                   var18 = var14;
                   var19 = var15;
-                  if (var18 <= var19) {
+                  if ((var18 ^ -1) >= (var19 ^ -1)) {
                     break L6;
                   } else {
                     var19 = param5 * var8 / (var8 - -var9) + param0;
@@ -436,15 +436,19 @@ class vf implements io, ak {
                       var20 = var12;
                       L12: while (true) {
                         L13: {
-                          if (var20 >= var13) {
+                          if ((var20 ^ -1) <= (var13 ^ -1)) {
                             break L13;
                           } else {
                             param1[1].b(var20, param0);
                             var20 = var20 + param1[1].field_r;
-                            if (0 == 0) {
-                              continue L12;
+                            if (0 != 0) {
+                              break L11;
                             } else {
-                              break L13;
+                              if (0 == 0) {
+                                continue L12;
+                              } else {
+                                break L13;
+                              }
                             }
                           }
                         }
@@ -463,15 +467,19 @@ class vf implements io, ak {
                       var20 = var12;
                       L15: while (true) {
                         L16: {
-                          if (var20 >= var13) {
+                          if ((var20 ^ -1) <= (var13 ^ -1)) {
                             break L16;
                           } else {
                             param1[7].b(var20, var15);
                             var20 = var20 + param1[7].field_r;
-                            if (0 == 0) {
-                              continue L15;
+                            if (0 != 0) {
+                              break L14;
                             } else {
-                              break L16;
+                              if (0 == 0) {
+                                continue L15;
+                              } else {
+                                break L16;
+                              }
                             }
                           }
                         }
@@ -497,10 +505,14 @@ class vf implements io, ak {
                           } else {
                             param1[3].b(param2, var20);
                             var20 = var20 + param1[3].field_q;
-                            if (0 == 0) {
-                              continue L18;
+                            if (0 != 0) {
+                              break L17;
                             } else {
-                              break L19;
+                              if (0 == 0) {
+                                continue L18;
+                              } else {
+                                break L19;
+                              }
                             }
                           }
                         }
@@ -528,10 +540,14 @@ class vf implements io, ak {
                           } else {
                             param1[5].b(var13, var20);
                             var20 = var20 + param1[5].field_q;
-                            if (0 == 0) {
-                              continue L21;
+                            if (0 != 0) {
+                              break L20;
                             } else {
-                              break L22;
+                              if (0 == 0) {
+                                continue L21;
+                              } else {
+                                break L22;
+                              }
                             }
                           }
                         }
@@ -545,7 +561,7 @@ class vf implements io, ak {
                   if (null == param1[4]) {
                     break L23;
                   } else {
-                    if (param1[4].field_r == 0) {
+                    if ((param1[4].field_r ^ -1) == -1) {
                       break L23;
                     } else {
                       if (0 == param1[4].field_q) {
@@ -555,29 +571,40 @@ class vf implements io, ak {
                         var20 = var14;
                         L24: while (true) {
                           L25: {
-                            if (var15 <= var20) {
+                            if ((var15 ^ -1) >= (var20 ^ -1)) {
                               break L25;
                             } else {
-                              var21 = var12;
-                              L26: while (true) {
-                                L27: {
-                                  if (var21 >= var13) {
-                                    break L27;
-                                  } else {
-                                    param1[4].b(var21, var20);
-                                    var21 = var21 + param1[4].field_r;
-                                    if (0 == 0) {
-                                      continue L26;
-                                    } else {
-                                      break L27;
+                              if (0 != 0) {
+                                break L23;
+                              } else {
+                                var21 = var12;
+                                L26: while (true) {
+                                  L27: {
+                                    L28: {
+                                      if ((var21 ^ -1) <= (var13 ^ -1)) {
+                                        break L28;
+                                      } else {
+                                        param1[4].b(var21, var20);
+                                        var21 = var21 + param1[4].field_r;
+                                        if (0 != 0) {
+                                          break L27;
+                                        } else {
+                                          if (0 == 0) {
+                                            continue L26;
+                                          } else {
+                                            break L28;
+                                          }
+                                        }
+                                      }
                                     }
+                                    var20 = var20 + param1[4].field_q;
+                                    break L27;
                                   }
-                                }
-                                var20 = var20 + param1[4].field_q;
-                                if (0 == 0) {
-                                  continue L24;
-                                } else {
-                                  break L25;
+                                  if (0 == 0) {
+                                    continue L24;
+                                  } else {
+                                    break L25;
+                                  }
                                 }
                               }
                             }
@@ -675,12 +702,12 @@ class vf implements io, ak {
           var4 = this.a(param1, -23803);
           var6 = ((vf) this).field_i;
           if (-1 != (var6 ^ -1)) {
-            if (var6 != -3) {
+            if ((var6 ^ -1) != -3) {
               L2: {
                 if (var6 == 3) {
                   break L2;
                 } else {
-                  if (-2 == var6) {
+                  if (-2 == (var6 ^ -1)) {
                     break L2;
                   } else {
                     break L2;

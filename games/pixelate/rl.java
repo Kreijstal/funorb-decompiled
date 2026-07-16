@@ -228,7 +228,7 @@ final class rl {
                 if (var1 == 0) {
                   break L4;
                 } else {
-                  if (mj.field_c.field_j <= -1) {
+                  if ((mj.field_c.field_j ^ -1) <= -1) {
                     L5: {
                       var3 = jj.field_h[mj.field_c.field_j];
                       if (var3 == 2) {
@@ -251,7 +251,7 @@ final class rl {
               if (var2 == 0) {
                 break L3;
               } else {
-                if (-3 != ha.field_h) {
+                if (-3 != (ha.field_h ^ -1)) {
                   dh.a(0);
                   break L3;
                 } else {

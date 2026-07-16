@@ -12,12 +12,14 @@ final class qj {
             param3 = fb.field_b[var5];
             var6 = var5 << -634199996;
             while (true) {
+                int incrementValue$0 = param3;
                 param3--;
-                if (param3 == 0) {
+                if (incrementValue$0 == 0) {
                     break;
                 }
+                int incrementValue$1 = var6;
                 var6++;
-                param4 = he.field_a[var6];
+                param4 = he.field_a[incrementValue$1];
                 param2[param1[param4]] = param2[param1[param4]] + 1;
                 he.field_a[param2[param1[param4]]] = param4;
             }

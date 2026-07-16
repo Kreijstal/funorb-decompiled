@@ -103,8 +103,9 @@ final class vp {
         ((vp) this).field_h = param0;
         ((vp) this).field_e = new ij[param0];
         for (var2 = 0; param0 > var2; var2++) {
-            var3 = new ij();
-            ((vp) this).field_e[var2] = new ij();
+            ij dupTemp$0 = new ij();
+            var3 = dupTemp$0;
+            ((vp) this).field_e[var2] = dupTemp$0;
             var3.field_j = var3;
             var3.field_g = var3;
         }

@@ -181,9 +181,11 @@ final class ec {
               continue L0;
             } else {
               ((ec) this).field_m = new ea(var3);
+              return;
             }
           } else {
             ((ec) this).field_m = new ea(var3);
+            return;
           }
         }
     }

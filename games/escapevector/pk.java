@@ -569,8 +569,9 @@ final class pk {
             }
           } else {
             if (param0 == 9477) {
+              int fieldTemp$1 = ((pk) this).field_d - 1;
               ((pk) this).field_d = ((pk) this).field_d - 1;
-              if ((((pk) this).field_d - 1 ^ -1) < -1) {
+              if ((fieldTemp$1 ^ -1) < -1) {
                 return;
               } else {
                 ((pk) this).field_d = ((pk) this).field_b;

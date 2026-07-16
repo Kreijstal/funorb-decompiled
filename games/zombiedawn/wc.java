@@ -12,44 +12,86 @@ class wc extends qk {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
-        int var7 = ZombieDawn.field_J;
-        if (!(((wc) this).field_yb == null)) {
+        int var5 = 0;
+        le var6 = null;
+        int var7 = 0;
+        L0: {
+          var7 = ZombieDawn.field_J;
+          if (((wc) this).field_yb != null) {
             ((wc) this).field_yb = null;
+            break L0;
+          } else {
+            break L0;
+          }
         }
-        int var5 = -1;
-        le var6 = dj.field_e.field_R.b((byte) 26);
-        while (var6 instanceof fb) {
-            if (var6 instanceof kd) {
-                if (((kd) (Object) var6).x(94)) {
-                    var2 = ((kd) (Object) var6).a(true) + -((wc) this).a(true);
-                    var3 = ((kd) (Object) var6).f(237239984) - ((wc) this).f(237239984);
-                    if (var3 > 0) {
-                        if (var3 > Math.abs(var2)) {
-                            var4 = var3 * var3 + var2 * var2;
-                            if (var4 >= var5) {
-                                // if_icmpne L150
-                            }
-                            ((wc) this).field_yb = (kd) (Object) var6;
-                            var5 = var4;
-                        }
-                    }
+        var5 = -1;
+        var6 = dj.field_e.field_R.b((byte) 26);
+        L1: while (true) {
+          if (!(var6 instanceof fb)) {
+            if (param0 == -44) {
+              L2: {
+                if (67600 < var5) {
+                  ((wc) this).field_yb = null;
+                  break L2;
+                } else {
+                  break L2;
                 }
+              }
+              L3: {
+                if (null == ((wc) this).field_yb) {
+                  ((wc) this).field_Qb = 20;
+                  break L3;
+                } else {
+                  ((wc) this).e(10, -6904);
+                  ((wc) this).field_Gb = 10;
+                  ((wc) this).field_U = kh.a(44, false);
+                  ((wc) this).field_U.h(ge.field_c >> 1841201313);
+                  break L3;
+                }
+              }
+              return;
+            } else {
+              return;
+            }
+          } else {
+            L4: {
+              if (!(var6 instanceof kd)) {
+                break L4;
+              } else {
+                if (!((kd) (Object) var6).x(94)) {
+                  break L4;
+                } else {
+                  var2 = ((kd) (Object) var6).a(true) + -((wc) this).a(true);
+                  var3 = ((kd) (Object) var6).f(237239984) - ((wc) this).f(237239984);
+                  if (var3 <= 0) {
+                    break L4;
+                  } else {
+                    if (var3 <= Math.abs(var2)) {
+                      break L4;
+                    } else {
+                      L5: {
+                        var4 = var3 * var3 + var2 * var2;
+                        if (var4 < var5) {
+                          break L5;
+                        } else {
+                          if (-1 != var5) {
+                            break L4;
+                          } else {
+                            break L5;
+                          }
+                        }
+                      }
+                      ((wc) this).field_yb = (kd) (Object) var6;
+                      var5 = var4;
+                      break L4;
+                    }
+                  }
+                }
+              }
             }
             var6 = var6.field_b;
-        }
-        if (param0 != -44) {
-            return;
-        }
-        if (!(67600 >= var5)) {
-            ((wc) this).field_yb = null;
-        }
-        if (null != ((wc) this).field_yb) {
-            ((wc) this).e(10, -6904);
-            ((wc) this).field_Gb = 10;
-            ((wc) this).field_U = kh.a(44, false);
-            ((wc) this).field_U.h(ge.field_c >> 1841201313);
-        } else {
-            ((wc) this).field_Qb = 20;
+            continue L1;
+          }
         }
     }
 
@@ -130,21 +172,47 @@ class wc extends qk {
     }
 
     final static void a(re[] param0, int param1) {
+        int var2 = 0;
         int var3 = 0;
         re var4 = null;
         int var5 = 0;
-        int var6 = ZombieDawn.field_J;
-        int var2 = param0.length;
-        for (var3 = 1; var3 < var2; var3++) {
-            var4 = param0[var3];
-            for (var5 = -1 + var3; var5 >= 0; var5--) {
-                // ifeq L60
-                param0[1 + var5] = param0[var5];
+        int var6 = 0;
+        var6 = ZombieDawn.field_J;
+        var2 = param0.length;
+        var3 = 1;
+        L0: while (true) {
+          if (var3 >= var2) {
+            L1: {
+              if (param1 == 0) {
+                break L1;
+              } else {
+                wc.o((byte) 86);
+                break L1;
+              }
             }
-            param0[var5 + 1] = var4;
-        }
-        if (param1 != 0) {
-            wc.o((byte) 86);
+            return;
+          } else {
+            var4 = param0[var3];
+            var5 = -1 + var3;
+            L2: while (true) {
+              L3: {
+                if (var5 < 0) {
+                  break L3;
+                } else {
+                  if (!bn.a((byte) 82, param0[var5], var4)) {
+                    break L3;
+                  } else {
+                    param0[1 + var5] = param0[var5];
+                    var5--;
+                    continue L2;
+                  }
+                }
+              }
+              param0[var5 + 1] = var4;
+              var3++;
+              continue L0;
+            }
+          }
         }
     }
 
@@ -315,7 +383,7 @@ class wc extends qk {
           }
         }
         L1: {
-          if (((wc) this).field_Gb < -1) {
+          if ((((wc) this).field_Gb ^ -1) < -1) {
             ((wc) this).field_Gb = ((wc) this).field_Gb - 1;
             break L1;
           } else {
@@ -323,9 +391,9 @@ class wc extends qk {
           }
         }
         L2: {
-          if (-1 != ((wc) this).field_F) {
-            if ((((wc) this).field_F ^ -1) == -11) {
-              L3: {
+          L3: {
+            if (-1 != (((wc) this).field_F ^ -1)) {
+              if ((((wc) this).field_F ^ -1) == -11) {
                 ((wc) this).field_N = ((wc) this).field_N + 3;
                 if (2 == ((wc) this).field_G) {
                   ((wc) this).field_yb.z(0);
@@ -334,24 +402,22 @@ class wc extends qk {
                 } else {
                   break L3;
                 }
+              } else {
+                ((wc) this).d(((wc) this).field_F, -26109);
+                break L2;
               }
-              ((wc) this).d(((wc) this).field_F, -26109);
-              break L2;
             } else {
-              ((wc) this).d(((wc) this).field_F, -26109);
-              break L2;
-            }
-          } else {
-            if (((wc) this).field_Qb <= 0) {
-              this.x(-44);
-              ((wc) this).d(((wc) this).field_F, -26109);
-              break L2;
-            } else {
-              ((wc) this).field_Qb = ((wc) this).field_Qb - 1;
-              ((wc) this).d(((wc) this).field_F, -26109);
-              break L2;
+              if (((wc) this).field_Qb <= 0) {
+                this.x(-44);
+                break L3;
+              } else {
+                ((wc) this).field_Qb = ((wc) this).field_Qb - 1;
+                break L3;
+              }
             }
           }
+          ((wc) this).d(((wc) this).field_F, -26109);
+          break L2;
         }
     }
 

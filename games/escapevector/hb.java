@@ -36,8 +36,9 @@ final class hb implements Iterator {
             return true;
         }
         while (((hb) this).field_e.field_g > ((hb) this).field_f) {
+            int fieldTemp$0 = ((hb) this).field_f;
             ((hb) this).field_f = ((hb) this).field_f + 1;
-            if (((hb) this).field_e.field_b[((hb) this).field_f].field_b != ((hb) this).field_e.field_b[((hb) this).field_f - 1]) {
+            if (((hb) this).field_e.field_b[fieldTemp$0].field_b != ((hb) this).field_e.field_b[((hb) this).field_f - 1]) {
                 ((hb) this).field_g = ((hb) this).field_e.field_b[-1 + ((hb) this).field_f].field_b;
                 return true;
             }
@@ -67,8 +68,9 @@ final class hb implements Iterator {
         } else {
           L0: while (true) {
             if (((hb) this).field_e.field_g > ((hb) this).field_f) {
+              int fieldTemp$2 = ((hb) this).field_f;
               ((hb) this).field_f = ((hb) this).field_f + 1;
-              var1 = ((hb) this).field_e.field_b[((hb) this).field_f].field_b;
+              var1 = ((hb) this).field_e.field_b[fieldTemp$2].field_b;
               if (((hb) this).field_e.field_b[((hb) this).field_f + -1] != var1) {
                 ((hb) this).field_c = var1;
                 ((hb) this).field_g = var1.field_b;

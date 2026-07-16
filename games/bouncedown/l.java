@@ -40,15 +40,18 @@ final class l {
             L1: while (true) {
               if (var2 >= oh.field_c) {
                 var3 = 98 / ((param0 - 45) / 34);
-                ef.field_i[param1.a((byte) -94)] = ef.field_i[param1.a((byte) -94)] + 1;
+                int dupTemp$5 = param1.a((byte) -94);
+                ef.field_i[dupTemp$5] = ef.field_i[dupTemp$5] + 1;
                 var2 = 0;
                 var6 = 0;
                 var3 = var6;
                 L2: while (true) {
                   if (var6 >= oh.field_c) {
                     oh.field_c = var2;
+                    bl[] fieldTemp$6 = sh.field_cb;
+                    int fieldTemp$7 = oh.field_c;
                     oh.field_c = oh.field_c + 1;
-                    sh.field_cb[oh.field_c] = param1;
+                    fieldTemp$6[fieldTemp$7] = param1;
                     return;
                   } else {
                     L3: {
@@ -65,15 +68,17 @@ final class l {
                         break L3;
                       }
                     }
+                    int incrementValue$8 = var2;
                     var2++;
-                    sh.field_cb[var2] = sh.field_cb[var6];
+                    sh.field_cb[incrementValue$8] = sh.field_cb[var6];
                     var6++;
                     continue L2;
                   }
                 }
               } else {
                 if (param1.field_h == sh.field_cb[var2].field_h) {
-                  ef.field_i[sh.field_cb[var2].a((byte) 78)] = ef.field_i[sh.field_cb[var2].a((byte) 78)] + 1;
+                  int dupTemp$9 = sh.field_cb[var2].a((byte) 78);
+                  ef.field_i[dupTemp$9] = ef.field_i[dupTemp$9] + 1;
                   var2++;
                   continue L1;
                 } else {

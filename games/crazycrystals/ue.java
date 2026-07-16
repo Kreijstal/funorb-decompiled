@@ -15,14 +15,16 @@ abstract class ue {
         }
         dl[] var6 = new dl[9];
         dl[] var5 = var6;
-        var6[6] = mc.a(param2, -65, param1);
-        var5[3] = mc.a(param2, -65, param1);
-        var5[2] = mc.a(param2, -65, param1);
-        var5[1] = mc.a(param2, -65, param1);
-        var5[0] = mc.a(param2, -65, param1);
-        var6[8] = mc.a(param2, -34, param4);
-        var5[7] = mc.a(param2, -34, param4);
-        var5[5] = mc.a(param2, -34, param4);
+        dl dupTemp$0 = mc.a(param2, -65, param1);
+        var6[6] = dupTemp$0;
+        var5[3] = dupTemp$0;
+        var5[2] = dupTemp$0;
+        var5[1] = dupTemp$0;
+        var5[0] = dupTemp$0;
+        dl dupTemp$1 = mc.a(param2, -34, param4);
+        var6[8] = dupTemp$1;
+        var5[7] = dupTemp$1;
+        var5[5] = dupTemp$1;
         if (!(param3 == 0)) {
             var6[4] = mc.a(64, -55, param3);
         }

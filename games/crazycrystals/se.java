@@ -59,10 +59,10 @@ abstract class se extends li implements ho {
                 }
               }
               L1: {
-                if (oi.field_d.field_j > -3) {
+                if ((oi.field_d.field_j ^ -1) > -3) {
                   break L1;
                 } else {
-                  if (-51 != param0) {
+                  if (-51 != (param0 ^ -1)) {
                     break L1;
                   } else {
                     return 5;
@@ -88,10 +88,10 @@ abstract class se extends li implements ho {
                 }
               }
               L3: {
-                if (oi.field_d.field_j > -3) {
+                if ((oi.field_d.field_j ^ -1) > -3) {
                   break L3;
                 } else {
-                  if (-51 != param0) {
+                  if (-51 != (param0 ^ -1)) {
                     break L3;
                   } else {
                     return 5;
@@ -118,10 +118,10 @@ abstract class se extends li implements ho {
               }
             }
             L5: {
-              if (oi.field_d.field_j > -3) {
+              if ((oi.field_d.field_j ^ -1) > -3) {
                 break L5;
               } else {
-                if (-51 != param0) {
+                if (-51 != (param0 ^ -1)) {
                   break L5;
                 } else {
                   return 5;
@@ -147,10 +147,10 @@ abstract class se extends li implements ho {
                   return 2;
                 } else {
                   L6: {
-                    if (oi.field_d.field_j > -3) {
+                    if ((oi.field_d.field_j ^ -1) > -3) {
                       break L6;
                     } else {
-                      if (-51 != param0) {
+                      if (-51 != (param0 ^ -1)) {
                         break L6;
                       } else {
                         return 5;
@@ -165,10 +165,10 @@ abstract class se extends li implements ho {
                 }
               } else {
                 L7: {
-                  if (oi.field_d.field_j > -3) {
+                  if ((oi.field_d.field_j ^ -1) > -3) {
                     break L7;
                   } else {
-                    if (-51 != param0) {
+                    if (-51 != (param0 ^ -1)) {
                       break L7;
                     } else {
                       return 5;
@@ -188,10 +188,10 @@ abstract class se extends li implements ho {
                   return 2;
                 } else {
                   L8: {
-                    if (oi.field_d.field_j > -3) {
+                    if ((oi.field_d.field_j ^ -1) > -3) {
                       break L8;
                     } else {
-                      if (-51 != param0) {
+                      if (-51 != (param0 ^ -1)) {
                         break L8;
                       } else {
                         return 5;
@@ -206,10 +206,10 @@ abstract class se extends li implements ho {
                 }
               } else {
                 L9: {
-                  if (oi.field_d.field_j > -3) {
+                  if ((oi.field_d.field_j ^ -1) > -3) {
                     break L9;
                   } else {
-                    if (-51 != param0) {
+                    if (-51 != (param0 ^ -1)) {
                       break L9;
                     } else {
                       return 5;
@@ -230,10 +230,10 @@ abstract class se extends li implements ho {
                 return 2;
               } else {
                 L10: {
-                  if (oi.field_d.field_j > -3) {
+                  if ((oi.field_d.field_j ^ -1) > -3) {
                     break L10;
                   } else {
-                    if (-51 != param0) {
+                    if (-51 != (param0 ^ -1)) {
                       break L10;
                     } else {
                       return 5;
@@ -258,10 +258,10 @@ abstract class se extends li implements ho {
                   }
                 }
               } else {
-                if (4 <= oi.field_d.field_j) {
-                  return 1;
-                } else {
+                if (4 > oi.field_d.field_j) {
                   return -1;
+                } else {
+                  return 1;
                 }
               }
             }

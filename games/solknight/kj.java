@@ -212,22 +212,53 @@ class kj extends pj {
     }
 
     final void a(int param0, String param1, int param2) {
+        String[] var4 = null;
         int var5 = 0;
-        int var6 = SolKnight.field_L ? 1 : 0;
-        if (null != ((kj) this).field_M) {
-            // if_icmplt L87
-        }
-        String[] var8 = new String[param0 + 1];
-        String[] var4 = var8;
-        if (!(((kj) this).field_M == null)) {
-            for (var5 = 0; ((kj) this).field_M.length > var5; var5++) {
-                var8[var5] = ((kj) this).field_M[var5];
+        int var6 = 0;
+        Object var7 = null;
+        String[] var8 = null;
+        L0: {
+          L1: {
+            var6 = SolKnight.field_L ? 1 : 0;
+            if (null == ((kj) this).field_M) {
+              break L1;
+            } else {
+              if (param0 < ((kj) this).field_M.length) {
+                break L0;
+              } else {
+                break L1;
+              }
             }
+          }
+          L2: {
+            var8 = new String[param0 + 1];
+            var4 = var8;
+            if (((kj) this).field_M != null) {
+              var5 = 0;
+              L3: while (true) {
+                if (((kj) this).field_M.length <= var5) {
+                  break L2;
+                } else {
+                  var8[var5] = ((kj) this).field_M[var5];
+                  var5++;
+                  continue L3;
+                }
+              }
+            } else {
+              break L2;
+            }
+          }
+          ((kj) this).field_M = var4;
+          break L0;
         }
-        ((kj) this).field_M = var4;
-        if (param2 != 1) {
-            Object var7 = null;
+        L4: {
+          if (param2 == 1) {
+            break L4;
+          } else {
+            var7 = null;
             kj.a((java.applet.Applet) null, -17, (String) null);
+            break L4;
+          }
         }
         ((kj) this).field_M[param0] = param1;
     }
@@ -253,7 +284,7 @@ class kj extends pj {
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
-        li var10 = null;
+        Object var10 = null;
         int var11 = 0;
         le var12 = null;
         int var13 = 0;
@@ -331,14 +362,14 @@ class kj extends pj {
                   var14 = stackIn_12_0;
                   var15 = new li(var7, var13, var12.field_g, -var13 + var14, Math.max(var3.a(3), -var12.field_g + var12.field_e));
                   if (var10 != null) {
-                    var10.field_k = var15;
+                    ((li) var10).field_k = var15;
                     break L5;
                   } else {
                     break L5;
                   }
                 }
                 ((kj) this).field_L.a((gg) (Object) var15, -7044);
-                var10 = var15;
+                var10 = (Object) (Object) var15;
                 var11++;
                 continue L2;
               }

@@ -60,8 +60,9 @@ final class eg extends um {
         ((eg) this).field_n[((eg) this).field_K] = (short)param4;
         ((eg) this).field_L[((eg) this).field_K] = (short)-1;
         ((eg) this).field_f[((eg) this).field_K] = (byte)param5;
+        int fieldTemp$0 = ((eg) this).field_K;
         ((eg) this).field_K = ((eg) this).field_K + 1;
-        return ((eg) this).field_K;
+        return fieldTemp$0;
     }
 
     final void a(um param0, int param1, int param2, int param3, boolean param4) {
@@ -75,11 +76,8 @@ final class eg extends um {
         int var14 = 0;
         int var15 = 0;
         ah var16 = null;
-        ah var16_ref = null;
         ah var17 = null;
-        ah var17_ref = null;
         ah var18 = null;
-        ah var18_ref = null;
         int[] var22 = null;
         var6 = (eg) (Object) param0;
         var6.e();
@@ -184,11 +182,11 @@ final class eg extends um {
                           var15 = 0;
                           L6: while (true) {
                             if (var15 < var9) {
-                              var16_ref = var6.field_Z[var15];
+                              var16 = var6.field_Z[var15];
                               if (var13 == var22[var15]) {
                                 if (var14 == var6.field_q[var15]) {
                                   if (var12 == var6.field_Y[var15]) {
-                                    if (var16_ref.field_a != 0) {
+                                    if (var16.field_a != 0) {
                                       L7: {
                                         if (((eg) this).field_m != null) {
                                           break L7;
@@ -210,8 +208,9 @@ final class eg extends um {
                                         if (var17 != null) {
                                           break L9;
                                         } else {
-                                          ((eg) this).field_m[var10] = new ah(var11);
-                                          var17_ref = new ah(var11);
+                                          ah dupTemp$2 = new ah(var11);
+                                          ((eg) this).field_m[var10] = dupTemp$2;
+                                          var17 = dupTemp$2;
                                           break L9;
                                         }
                                       }
@@ -220,19 +219,20 @@ final class eg extends um {
                                         if (var18 != null) {
                                           break L10;
                                         } else {
-                                          var6.field_m[var15] = new ah(var16_ref);
-                                          var18_ref = new ah(var16_ref);
+                                          ah dupTemp$3 = new ah(var16);
+                                          var6.field_m[var15] = dupTemp$3;
+                                          var18 = dupTemp$3;
                                           break L10;
                                         }
                                       }
-                                      var17_ref.field_f = var17_ref.field_f + var16_ref.field_f;
-                                      var17_ref.field_j = var17_ref.field_j + var16_ref.field_j;
-                                      var17_ref.field_d = var17_ref.field_d + var16_ref.field_d;
-                                      var17_ref.field_a = var17_ref.field_a + var16_ref.field_a;
-                                      var18_ref.field_f = var18_ref.field_f + var11.field_f;
-                                      var18_ref.field_j = var18_ref.field_j + var11.field_j;
-                                      var18_ref.field_d = var18_ref.field_d + var11.field_d;
-                                      var18_ref.field_a = var18_ref.field_a + var11.field_a;
+                                      var17.field_f = var17.field_f + var16.field_f;
+                                      var17.field_j = var17.field_j + var16.field_j;
+                                      var17.field_d = var17.field_d + var16.field_d;
+                                      var17.field_a = var17.field_a + var16.field_a;
+                                      var18.field_f = var18.field_f + var11.field_f;
+                                      var18.field_j = var18.field_j + var11.field_j;
+                                      var18.field_d = var18.field_d + var11.field_d;
+                                      var18.field_a = var18.field_a + var11.field_a;
                                       var7++;
                                       field_I[var10] = field_G;
                                       field_O[var15] = field_G;
@@ -332,8 +332,9 @@ final class eg extends um {
             ((eg) this).field_g[((eg) this).field_B] = param0;
             ((eg) this).field_Y[((eg) this).field_B] = param1;
             ((eg) this).field_q[((eg) this).field_B] = param2;
+            int fieldTemp$1 = ((eg) this).field_B + 1;
             ((eg) this).field_B = ((eg) this).field_B + 1;
-            ((eg) this).field_M = ((eg) this).field_B + 1;
+            ((eg) this).field_M = fieldTemp$1;
             return ((eg) this).field_B - 1;
           } else {
             if (((eg) this).field_g[var4] == param0) {
@@ -474,8 +475,9 @@ final class eg extends um {
                 break L1;
               }
             }
+            int fieldTemp$1 = ((eg) this).field_B;
             ((eg) this).field_B = ((eg) this).field_B + 1;
-            return ((eg) this).field_B;
+            return fieldTemp$1;
           } else {
             if (var4 == ((eg) this).field_g[var7]) {
               if (var5 == ((eg) this).field_Y[var7]) {
@@ -610,8 +612,9 @@ final class eg extends um {
                                           break L6;
                                         }
                                       }
-                                      ((eg) this).field_J[var1] = new ef();
-                                      var16 = new ef();
+                                      ef dupTemp$1 = new ef();
+                                      ((eg) this).field_J[var1] = dupTemp$1;
+                                      var16 = dupTemp$1;
                                       var16.field_b = var11;
                                       var16.field_a = var12;
                                       var16.field_d = var13;
@@ -1407,8 +1410,9 @@ final class eg extends um {
                 break L2;
               } else {
                 L4: {
-                  ((eg) this).field_o[var28] = var2.e((byte) 105);
-                  var29 = var2.e((byte) 105);
+                  byte dupTemp$1 = var2.e((byte) 105);
+                  ((eg) this).field_o[var28] = dupTemp$1;
+                  var29 = dupTemp$1;
                   if (var29 != 0) {
                     break L4;
                   } else {
@@ -1964,21 +1968,32 @@ final class eg extends um {
         ((eg) this).field_p[((eg) this).field_l] = (short)param0;
         ((eg) this).field_H[((eg) this).field_l] = (short)param1;
         ((eg) this).field_C[((eg) this).field_l] = (short)param2;
+        int fieldTemp$0 = ((eg) this).field_l;
         ((eg) this).field_l = ((eg) this).field_l + 1;
-        return (byte)((eg) this).field_l;
+        return (byte)fieldTemp$0;
     }
 
     private eg(byte[] param0) {
-        ((eg) this).field_M = 0;
-        ((eg) this).field_B = 0;
-        ((eg) this).field_r = false;
-        ((eg) this).field_t = (byte) 0;
-        ((eg) this).field_K = 0;
-        if (param0[param0.length - 1] == -1) {
-            // if_icmpne L57
-            this.a(param0);
-        } else {
-            this.b(param0);
+        L0: {
+          L1: {
+            ((eg) this).field_M = 0;
+            ((eg) this).field_B = 0;
+            ((eg) this).field_r = false;
+            ((eg) this).field_t = (byte) 0;
+            ((eg) this).field_K = 0;
+            if (param0[param0.length - 1] != -1) {
+              break L1;
+            } else {
+              if (param0[param0.length - 2] != -1) {
+                break L1;
+              } else {
+                this.a(param0);
+                break L0;
+              }
+            }
+          }
+          this.b(param0);
+          break L0;
         }
     }
 
@@ -2207,6 +2222,7 @@ final class eg extends um {
                 var10 = 0;
                 L9: while (true) {
                   if (var10 >= param1) {
+                    return;
                   } else {
                     var16 = param0[var10];
                     var19 = var16;
@@ -2273,9 +2289,10 @@ final class eg extends um {
                           if (var8 != 0) {
                             L15: {
                               L16: {
+                                int incrementValue$1 = var9;
                                 var9++;
                                 stackOut_74_0 = ((eg) this).field_k;
-                                stackOut_74_1 = var9;
+                                stackOut_74_1 = incrementValue$1;
                                 stackIn_77_0 = stackOut_74_0;
                                 stackIn_77_1 = stackOut_74_1;
                                 stackIn_75_0 = stackOut_74_0;

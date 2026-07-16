@@ -54,8 +54,9 @@ final class ph {
             if (0 != var7) {
               if (var7 >= 128) {
                 if ((var7 ^ -1) <= -161) {
+                  int incrementValue$6 = var5;
                   var5++;
-                  var10[var5] = (char)var7;
+                  var10[incrementValue$6] = (char)var7;
                   var6++;
                   var6++;
                   var6++;
@@ -71,16 +72,18 @@ final class ph {
                     }
                   }
                   var7 = var8;
+                  int incrementValue$7 = var5;
                   var5++;
-                  var10[var5] = (char)var7;
+                  var10[incrementValue$7] = (char)var7;
                   var6++;
                   var6++;
                   var6++;
                   return new String(var15, 0, var5);
                 }
               } else {
+                int incrementValue$8 = var5;
                 var5++;
-                var10[var5] = (char)var7;
+                var10[incrementValue$8] = (char)var7;
                 var6++;
                 var6++;
                 var6++;
@@ -111,8 +114,9 @@ final class ph {
             if (0 != var7) {
               if (var7 >= 128) {
                 if ((var7 ^ -1) <= -161) {
+                  int incrementValue$9 = var5;
                   var5++;
-                  var10[var5] = (char)var7;
+                  var10[incrementValue$9] = (char)var7;
                   var6++;
                   var6++;
                   var6++;
@@ -128,16 +132,18 @@ final class ph {
                     }
                   }
                   var7 = var8;
+                  int incrementValue$10 = var5;
                   var5++;
-                  var10[var5] = (char)var7;
+                  var10[incrementValue$10] = (char)var7;
                   var6++;
                   var6++;
                   var6++;
                   return new String(var16, 0, var5);
                 }
               } else {
+                int incrementValue$11 = var5;
                 var5++;
-                var10[var5] = (char)var7;
+                var10[incrementValue$11] = (char)var7;
                 var6++;
                 var6++;
                 var6++;

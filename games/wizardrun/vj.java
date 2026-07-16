@@ -12,22 +12,30 @@ final class vj {
         int var2 = param0;
         int var3 = var5.length;
         while (var2 < var3) {
+            int incrementValue$0 = var2;
             var2++;
-            var5[var2] = 0;
+            var5[incrementValue$0] = 0;
+            int incrementValue$1 = var2;
             var2++;
-            var5[var2] = 0;
+            var5[incrementValue$1] = 0;
+            int incrementValue$2 = var2;
             var2++;
-            var5[var2] = 0;
+            var5[incrementValue$2] = 0;
+            int incrementValue$3 = var2;
             var2++;
-            var5[var2] = 0;
+            var5[incrementValue$3] = 0;
+            int incrementValue$4 = var2;
             var2++;
-            var5[var2] = 0;
+            var5[incrementValue$4] = 0;
+            int incrementValue$5 = var2;
             var2++;
-            var5[var2] = 0;
+            var5[incrementValue$5] = 0;
+            int incrementValue$6 = var2;
             var2++;
-            var5[var2] = 0;
+            var5[incrementValue$6] = 0;
+            int incrementValue$7 = var2;
             var2++;
-            var5[var2] = 0;
+            var5[incrementValue$7] = 0;
         }
     }
 
@@ -42,13 +50,13 @@ final class vj {
         var6 = var5;
         var5.field_b = 0;
         L0: while (true) {
-          if (var6.field_b <= -21) {
+          if ((var6.field_b ^ -1) <= -21) {
             var2 = -113 % ((param0 - -79) / 33);
             return;
           } else {
             var6.field_a = 0;
             L1: while (true) {
-              if (-16 <= var6.field_a) {
+              if (-16 >= (var6.field_a ^ -1)) {
                 var6.field_b = var6.field_b + 1;
                 continue L0;
               } else {
@@ -63,8 +71,8 @@ final class vj {
                         if (var3 != 1) {
                           if (var3 != 2) {
                             if (var3 != 3) {
-                              if (-5 != var3) {
-                                if (-6 == var3) {
+                              if (-5 != (var3 ^ -1)) {
+                                if (-6 == (var3 ^ -1)) {
                                   L4: {
                                     if ((tc.field_l.field_a[var6.a((byte) -68)] ^ -1) != -2) {
                                       break L4;
@@ -74,7 +82,7 @@ final class vj {
                                     }
                                   }
                                   L5: {
-                                    if (tc.field_l.field_a[var6.a((byte) -68)] != -3) {
+                                    if ((tc.field_l.field_a[var6.a((byte) -68)] ^ -1) != -3) {
                                       break L5;
                                     } else {
                                       var2 = 37;
@@ -82,7 +90,7 @@ final class vj {
                                     }
                                   }
                                   L6: {
-                                    if (-4 != tc.field_l.field_a[var6.a((byte) -68)]) {
+                                    if (-4 != (tc.field_l.field_a[var6.a((byte) -68)] ^ -1)) {
                                       break L6;
                                     } else {
                                       var2 = 38;
@@ -196,7 +204,7 @@ final class vj {
                               }
                             }
                             L17: {
-                              if (-3 != tc.field_l.field_a[var6.a((byte) -68)]) {
+                              if (-3 != (tc.field_l.field_a[var6.a((byte) -68)] ^ -1)) {
                                 break L17;
                               } else {
                                 var2 = 14;
@@ -204,7 +212,7 @@ final class vj {
                               }
                             }
                             L18: {
-                              if (-4 != tc.field_l.field_a[var6.a((byte) -68)]) {
+                              if (-4 != (tc.field_l.field_a[var6.a((byte) -68)] ^ -1)) {
                                 break L18;
                               } else {
                                 var2 = 15;
@@ -228,7 +236,7 @@ final class vj {
                           }
                         } else {
                           L20: {
-                            if (-2 == tc.field_l.field_a[var6.a((byte) -68)]) {
+                            if (-2 == (tc.field_l.field_a[var6.a((byte) -68)] ^ -1)) {
                               var2 = 7;
                               break L20;
                             } else {
@@ -272,7 +280,7 @@ final class vj {
                         }
                       } else {
                         L24: {
-                          if (-2 == tc.field_l.field_a[var6.a((byte) -68)]) {
+                          if (-2 == (tc.field_l.field_a[var6.a((byte) -68)] ^ -1)) {
                             var2 = 3;
                             break L24;
                           } else {
@@ -280,7 +288,7 @@ final class vj {
                           }
                         }
                         L25: {
-                          if (-3 == tc.field_l.field_a[var6.a((byte) -68)]) {
+                          if (-3 == (tc.field_l.field_a[var6.a((byte) -68)] ^ -1)) {
                             var2 = 4;
                             break L25;
                           } else {
@@ -295,7 +303,7 @@ final class vj {
                             break L26;
                           }
                         }
-                        if (-6 == tc.field_l.field_a[var6.a((byte) -68)]) {
+                        if (-6 == (tc.field_l.field_a[var6.a((byte) -68)] ^ -1)) {
                           var2 = 6;
                           break L3;
                         } else {

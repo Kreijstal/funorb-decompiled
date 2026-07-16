@@ -101,14 +101,20 @@ final class dh {
                     }
                   }
                   try {
-                    ((dh) this).field_a.setInput(param2.field_g, param2.field_m - -10, param2.field_g.length + (-10 + -param2.field_m) - 8);
-                    int discarded$2 = ((dh) this).field_a.inflate(param1);
-                  } catch (java.lang.Exception decompiledCaughtParameter) {
-                    decompiledCaughtException = decompiledCaughtParameter;
+                    L2: {
+                      ((dh) this).field_a.setInput(param2.field_g, param2.field_m - -10, param2.field_g.length + (-10 + -param2.field_m) - 8);
+                      int discarded$2 = ((dh) this).field_a.inflate(param1);
+                      break L2;
+                    }
+                  } catch (java.lang.Exception decompiledCaughtParameter0) {
+                    decompiledCaughtException = decompiledCaughtParameter0;
+                    exception = (Exception) (Object) decompiledCaughtException;
+                    ((dh) this).field_a.reset();
+                    throw new RuntimeException("");
                   }
-                  exception = (Exception) (Object) decompiledCaughtException;
                   ((dh) this).field_a.reset();
-                  throw new RuntimeException("");
+                  var4 = -73 % ((13 - param0) / 58);
+                  return;
                 } else {
                   break L0;
                 }

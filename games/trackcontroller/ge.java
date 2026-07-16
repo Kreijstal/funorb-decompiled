@@ -119,44 +119,50 @@ final class ge extends td implements jg, m {
           return false;
         } else {
           L0: {
-            var2 = qg.a(param1);
-            if (s.field_b == -1) {
-              break L0;
-            } else {
-              if (-1 <= vd.field_K) {
-                break L0;
+            L1: {
+              var2 = qg.a(param1);
+              if ((s.field_b ^ -1) == -1) {
+                break L1;
               } else {
-                var4_ref_wa = (wa) (Object) cg.field_f.b(2);
-                if (var4_ref_wa == null) {
-                  break L0;
+                if (-1 >= (vd.field_K ^ -1)) {
+                  break L1;
                 } else {
-                  if (var4_ref_wa.field_l >= var2) {
-                    break L0;
-                  } else {
-                    var4_ref_wa.a(-60);
-                    hd.field_o = var4_ref_wa.field_m.length;
-                    ne.field_a.field_k = 0;
-                    var5_int = 0;
-                    L1: while (true) {
-                      if (hd.field_o <= var5_int) {
-                        o.field_a = u.field_o;
-                        u.field_o = mc.field_L;
-                        mc.field_L = uk.field_c;
-                        uk.field_c = var4_ref_wa.field_i;
-                        return true;
+                  L2: {
+                    var4_ref_wa = (wa) (Object) cg.field_f.b(2);
+                    if (var4_ref_wa == null) {
+                      break L2;
+                    } else {
+                      if (var4_ref_wa.field_l >= var2) {
+                        break L2;
                       } else {
-                        ne.field_a.field_j[var5_int] = var4_ref_wa.field_m[var5_int];
-                        var5_int++;
-                        continue L1;
+                        var4_ref_wa.a(-60);
+                        hd.field_o = var4_ref_wa.field_m.length;
+                        ne.field_a.field_k = 0;
+                        var5_int = 0;
+                        L3: while (true) {
+                          if (hd.field_o <= var5_int) {
+                            o.field_a = u.field_o;
+                            u.field_o = mc.field_L;
+                            mc.field_L = uk.field_c;
+                            uk.field_c = var4_ref_wa.field_i;
+                            return true;
+                          } else {
+                            ne.field_a.field_j[var5_int] = var4_ref_wa.field_m[var5_int];
+                            var5_int++;
+                            continue L3;
+                          }
+                        }
                       }
                     }
                   }
+                  break L0;
                 }
               }
             }
+            break L0;
           }
-          L2: while (true) {
-            L3: {
+          L4: while (true) {
+            L5: {
               if (-1 < (vd.field_K ^ -1)) {
                 ne.field_a.field_k = 0;
                 if (!hf.a(1, false)) {
@@ -165,39 +171,39 @@ final class ge extends td implements jg, m {
                   vd.field_K = ne.field_a.e(false);
                   ne.field_a.field_k = 0;
                   hd.field_o = param0[vd.field_K];
-                  break L3;
+                  break L5;
                 }
               } else {
-                break L3;
+                break L5;
               }
             }
             if (fh.a(520)) {
               if (-1 != (s.field_b ^ -1)) {
-                L4: {
+                L6: {
                   var4 = s.field_b;
                   if (0.0 == w.field_U) {
-                    break L4;
+                    break L6;
                   } else {
                     var4 = (int)((double)var4 + ta.field_c.nextGaussian() * w.field_U);
                     if ((var4 ^ -1) <= -1) {
-                      break L4;
+                      break L6;
                     } else {
                       var4 = 0;
-                      break L4;
+                      break L6;
                     }
                   }
                 }
                 var5 = new wa((long)var4 + var2, vd.field_K, new byte[hd.field_o]);
                 var6 = 0;
-                L5: while (true) {
+                L7: while (true) {
                   if (var6 >= hd.field_o) {
                     cg.field_f.a((byte) -110, (fc) (Object) var5);
                     vd.field_K = -1;
-                    continue L2;
+                    continue L4;
                   } else {
                     var5.field_m[var6] = ne.field_a.field_j[var6];
                     var6++;
-                    continue L5;
+                    continue L7;
                   }
                 }
               } else {

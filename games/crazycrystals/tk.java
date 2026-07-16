@@ -56,20 +56,20 @@ final class tk extends bc implements java.awt.image.ImageProducer, java.awt.imag
                                         if (var2 == 192) {
                                           break L2;
                                         } else {
-                                          if (var2 != -194) {
-                                            if (-195 == var2) {
+                                          if ((var2 ^ -1) != -194) {
+                                            if (-195 == (var2 ^ -1)) {
                                               break L2;
                                             } else {
-                                              if (-197 == var2) {
+                                              if (-197 == (var2 ^ -1)) {
                                                 break L2;
                                               } else {
-                                                if (-196 == var2) {
+                                                if (-196 == (var2 ^ -1)) {
                                                   break L2;
                                                 } else {
                                                   L3: {
-                                                    if (-233 != var2) {
+                                                    if (-233 != (var2 ^ -1)) {
                                                       if (var2 != 233) {
-                                                        if (-235 == var2) {
+                                                        if (-235 == (var2 ^ -1)) {
                                                           break L3;
                                                         } else {
                                                           if (var2 == 235) {
@@ -88,8 +88,8 @@ final class tk extends bc implements java.awt.image.ImageProducer, java.awt.imag
                                                                         break L4;
                                                                       } else {
                                                                         if (238 != var2) {
-                                                                          if (var2 != -240) {
-                                                                            if (-206 == var2) {
+                                                                          if ((var2 ^ -1) != -240) {
+                                                                            if (-206 == (var2 ^ -1)) {
                                                                               break L4;
                                                                             } else {
                                                                               if (206 != var2) {
@@ -132,11 +132,11 @@ final class tk extends bc implements java.awt.image.ImageProducer, java.awt.imag
                                                                                                                             if ((var2 ^ -1) == -232) {
                                                                                                                               break L7;
                                                                                                                             } else {
-                                                                                                                              if (var2 == -200) {
+                                                                                                                              if ((var2 ^ -1) == -200) {
                                                                                                                                 break L7;
                                                                                                                               } else {
                                                                                                                                 if (255 != var2) {
-                                                                                                                                  if (-377 == var2) {
+                                                                                                                                  if (-377 == (var2 ^ -1)) {
                                                                                                                                     return 'y';
                                                                                                                                   } else {
                                                                                                                                     L8: {
@@ -282,7 +282,7 @@ final class tk extends bc implements java.awt.image.ImageProducer, java.awt.imag
             if (var2 != 32) {
               if (160 != var2) {
                 if (var2 != 95) {
-                  if (var2 != -46) {
+                  if ((var2 ^ -1) != -46) {
                     if (var2 != 91) {
                       if ((var2 ^ -1) != -94) {
                         if ((var2 ^ -1) != -36) {
@@ -303,20 +303,20 @@ final class tk extends bc implements java.awt.image.ImageProducer, java.awt.imag
                                       if (var2 == 192) {
                                         break L10;
                                       } else {
-                                        if (var2 != -194) {
-                                          if (-195 == var2) {
+                                        if ((var2 ^ -1) != -194) {
+                                          if (-195 == (var2 ^ -1)) {
                                             break L10;
                                           } else {
-                                            if (-197 == var2) {
+                                            if (-197 == (var2 ^ -1)) {
                                               break L10;
                                             } else {
-                                              if (-196 == var2) {
+                                              if (-196 == (var2 ^ -1)) {
                                                 break L10;
                                               } else {
                                                 L11: {
-                                                  if (-233 != var2) {
+                                                  if (-233 != (var2 ^ -1)) {
                                                     if (var2 != 233) {
-                                                      if (-235 == var2) {
+                                                      if (-235 == (var2 ^ -1)) {
                                                         break L11;
                                                       } else {
                                                         if (var2 == 235) {
@@ -335,8 +335,8 @@ final class tk extends bc implements java.awt.image.ImageProducer, java.awt.imag
                                                                       break L12;
                                                                     } else {
                                                                       if (238 != var2) {
-                                                                        if (var2 != -240) {
-                                                                          if (-206 == var2) {
+                                                                        if ((var2 ^ -1) != -240) {
+                                                                          if (-206 == (var2 ^ -1)) {
                                                                             break L12;
                                                                           } else {
                                                                             if (206 != var2) {
@@ -379,11 +379,11 @@ final class tk extends bc implements java.awt.image.ImageProducer, java.awt.imag
                                                                                                                           if ((var2 ^ -1) == -232) {
                                                                                                                             break L15;
                                                                                                                           } else {
-                                                                                                                            if (var2 == -200) {
+                                                                                                                            if ((var2 ^ -1) == -200) {
                                                                                                                               break L15;
                                                                                                                             } else {
                                                                                                                               if (255 != var2) {
-                                                                                                                                if (-377 == var2) {
+                                                                                                                                if (-377 == (var2 ^ -1)) {
                                                                                                                                   return 'y';
                                                                                                                                 } else {
                                                                                                                                   L16: {

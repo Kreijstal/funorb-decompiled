@@ -27,14 +27,16 @@ final class a {
         if (param3 <= -106) {
           var6 = new pb[9];
           var5 = var6;
-          var6[6] = cl.a(param0, -41, param2);
-          var5[3] = cl.a(param0, -41, param2);
-          var5[2] = cl.a(param0, -41, param2);
-          var5[1] = cl.a(param0, -41, param2);
-          var5[0] = cl.a(param0, -41, param2);
-          var6[8] = cl.a(param1, -117, param2);
-          var5[7] = cl.a(param1, -117, param2);
-          var5[5] = cl.a(param1, -117, param2);
+          pb dupTemp$4 = cl.a(param0, -41, param2);
+          var6[6] = dupTemp$4;
+          var5[3] = dupTemp$4;
+          var5[2] = dupTemp$4;
+          var5[1] = dupTemp$4;
+          var5[0] = dupTemp$4;
+          pb dupTemp$5 = cl.a(param1, -117, param2);
+          var6[8] = dupTemp$5;
+          var5[7] = dupTemp$5;
+          var5[5] = dupTemp$5;
           if (param4 != 0) {
             var6[4] = cl.a(param4, 119, 64);
             return var5;

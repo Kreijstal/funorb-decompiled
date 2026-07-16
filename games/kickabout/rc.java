@@ -28,25 +28,49 @@ final class rc {
 
     final void a(int param0, iw param1, byte[] param2) {
         try {
-            if (-32 == param1.field_f[param1.field_n]) {
-                // if_icmpne L45
-            } else {
-                throw new RuntimeException("");
-            }
-            if (null == ((rc) this).field_a) {
-                ((rc) this).field_a = new java.util.zip.Inflater(true);
-            }
-            try {
-                ((rc) this).field_a.setInput(param1.field_f, 10 + param1.field_n, param1.field_f.length + (-10 + (-param1.field_n + -8)));
-                if (param0 != -4019) {
-                    rc.a(51);
+            Exception exception = null;
+            Throwable decompiledCaughtException = null;
+            L0: {
+              if (-32 != param1.field_f[param1.field_n]) {
+                break L0;
+              } else {
+                if (116 != param1.field_f[param1.field_n + 1]) {
+                  break L0;
+                } else {
+                  L1: {
+                    if (null != ((rc) this).field_a) {
+                      break L1;
+                    } else {
+                      ((rc) this).field_a = new java.util.zip.Inflater(true);
+                      break L1;
+                    }
+                  }
+                  try {
+                    L2: {
+                      L3: {
+                        ((rc) this).field_a.setInput(param1.field_f, 10 + param1.field_n, param1.field_f.length + (-10 + (-param1.field_n + -8)));
+                        if (param0 == -4019) {
+                          break L3;
+                        } else {
+                          rc.a(51);
+                          break L3;
+                        }
+                      }
+                      int discarded$2 = ((rc) this).field_a.inflate(param2);
+                      break L2;
+                    }
+                  } catch (java.lang.Exception decompiledCaughtParameter0) {
+                    decompiledCaughtException = decompiledCaughtParameter0;
+                    exception = (Exception) (Object) decompiledCaughtException;
+                    ((rc) this).field_a.reset();
+                    throw new RuntimeException("");
+                  }
+                  ((rc) this).field_a.reset();
+                  return;
                 }
-                int discarded$0 = ((rc) this).field_a.inflate(param2);
-            } catch (Exception exception) {
-                ((rc) this).field_a.reset();
-                throw new RuntimeException("");
+              }
             }
-            ((rc) this).field_a.reset();
+            throw new RuntimeException("");
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {

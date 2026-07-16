@@ -240,27 +240,29 @@ final class nl {
         ((nl) this).field_g = new fa[param0];
         ((nl) this).field_a = param0;
         for (var2 = 0; var2 < param0; var2++) {
-            var3 = new fa();
-            ((nl) this).field_g[var2] = new fa();
+            fa dupTemp$0 = new fa();
+            var3 = dupTemp$0;
+            ((nl) this).field_g[var2] = dupTemp$0;
             var3.field_h = var3;
             var3.field_a = var3;
         }
     }
 
     final fa a(int param0) {
-        fa var2_ref = null;
+        fa var2_ref_fa = null;
         int var2 = 0;
         int var3 = 0;
-        fa var4 = null;
+        Object var4 = null;
+        fa var4_ref = null;
         L0: {
           var3 = Pixelate.field_H ? 1 : 0;
           if (-1 <= (((nl) this).field_e ^ -1)) {
             break L0;
           } else {
             if (((nl) this).field_g[-1 + ((nl) this).field_e] != ((nl) this).field_f) {
-              var2_ref = ((nl) this).field_f;
-              ((nl) this).field_f = var2_ref.field_a;
-              return var2_ref;
+              var2_ref_fa = ((nl) this).field_f;
+              ((nl) this).field_f = var2_ref_fa.field_a;
+              return var2_ref_fa;
             } else {
               break L0;
             }
@@ -271,14 +273,15 @@ final class nl {
             var2 = -114 / ((-79 - param0) / 36);
             return null;
           } else {
+            int fieldTemp$2 = ((nl) this).field_e;
             ((nl) this).field_e = ((nl) this).field_e + 1;
-            var4 = ((nl) this).field_g[((nl) this).field_e].field_a;
-            var2_ref = var4;
-            if (var4 == ((nl) this).field_g[-1 + ((nl) this).field_e]) {
+            var4_ref = ((nl) this).field_g[fieldTemp$2].field_a;
+            var2_ref_fa = var4_ref;
+            if (var4_ref == ((nl) this).field_g[-1 + ((nl) this).field_e]) {
               continue L1;
             } else {
-              ((nl) this).field_f = var2_ref.field_a;
-              return var2_ref;
+              ((nl) this).field_f = var2_ref_fa.field_a;
+              return var2_ref_fa;
             }
           }
         }

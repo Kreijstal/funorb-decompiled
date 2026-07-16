@@ -13,22 +13,19 @@ class lg extends gm {
     boolean a(int param0, gm param1, char param2, int param3) {
         int var5 = 0;
         if (((lg) this).g(2)) {
-          if (param0 != -85) {
-            if (-84 == param0) {
-              ((lg) this).a(1, -1, -1, -1);
-              return true;
-            } else {
-              var5 = 124 / ((-33 - param3) / 57);
-              return false;
+            if ((param0 ^ -1) == -85) {
+                ((lg) this).a(1, -1, -1, -1);
+                return true;
             }
-          } else {
-            ((lg) this).a(1, -1, -1, -1);
-            return true;
-          }
-        } else {
-          var5 = 124 / ((-33 - param3) / 57);
-          return false;
+            if (-84 == (param0 ^ -1)) {
+                ((lg) this).a(1, -1, -1, -1);
+                return true;
+            }
+            var5 = 124 / ((-33 - param3) / 57);
+            return false;
         }
+        var5 = 124 / ((-33 - param3) / 57);
+        return false;
     }
 
     final boolean g(int param0) {

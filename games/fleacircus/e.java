@@ -56,16 +56,28 @@ class e implements ch, eg {
         mi.a((byte) -52, param3.field_u + (param3.field_y + param1), param1 + param3.field_y, param3.field_j + (param3.field_z + param5), param3.field_z + param5);
         var9 = ((e) this).b(param3, (byte) -50);
         var11 = this.a(param3, 122);
-        if (!((e) this).field_l) {
+        if (((e) this).field_l) {
+          int discarded$1 = ((e) this).field_j.a(((e) this).c(66, param3), this.a(param3, param4, true, param1), this.a(param3, param5, param0, -3), var9, var11, param7, param6, ((e) this).field_i, ((e) this).field_h, ((e) this).field_d);
+          ia.a(-99);
+          return;
+        } else {
           L0: {
             var13 = ((e) this).field_h;
-            if (var13 != 0) {
+            if ((var13 ^ -1) != -1) {
               if ((var13 ^ -1) == -3) {
                 var12 = var11 + -((e) this).field_j.field_K;
                 var13 = ((e) this).field_i;
-                if (var13 != 0) {
-                  if (var13 != -4) {
-                    if (-2 != var13) {
+                if ((var13 ^ -1) != -1) {
+                  if ((var13 ^ -1) == -4) {
+                    ((e) this).field_j.c(((e) this).c(31, param3), this.a(param3, param4, true, param1), var12 + this.a(param3, param5, param0, -3), param7, param6);
+                    ia.a(-99);
+                    return;
+                  } else {
+                    if (-2 == (var13 ^ -1)) {
+                      ((e) this).field_j.a(((e) this).c(45, param3), (var9 >> -970278207) + this.a(param3, param4, true, param1), this.a(param3, param5, param0, -3) + var12, param7, param6);
+                      ia.a(-99);
+                      return;
+                    } else {
                       if (-3 == (var13 ^ -1)) {
                         ((e) this).field_j.b(((e) this).c(90, param3), this.a(param3, param4, true, param1) + var9, var12 + this.a(param3, param5, param0, -3), param7, param6);
                         ia.a(-99);
@@ -74,15 +86,7 @@ class e implements ch, eg {
                         ia.a(-99);
                         return;
                       }
-                    } else {
-                      ((e) this).field_j.a(((e) this).c(45, param3), (var9 >> -970278207) + this.a(param3, param4, true, param1), this.a(param3, param5, param0, -3) + var12, param7, param6);
-                      ia.a(-99);
-                      return;
                     }
-                  } else {
-                    ((e) this).field_j.c(((e) this).c(31, param3), this.a(param3, param4, true, param1), var12 + this.a(param3, param5, param0, -3), param7, param6);
-                    ia.a(-99);
-                    return;
                   }
                 } else {
                   ((e) this).field_j.c(((e) this).c(31, param3), this.a(param3, param4, true, param1), var12 + this.a(param3, param5, param0, -3), param7, param6);
@@ -94,26 +98,26 @@ class e implements ch, eg {
                   if ((var13 ^ -1) != -2) {
                     var12 = (-((e) this).field_j.field_H + var11 + -((e) this).field_j.field_K >> 1041347137) + ((e) this).field_j.field_H;
                     var13 = ((e) this).field_i;
-                    if (var13 != 0) {
-                      if (var13 != -4) {
-                        if (-2 != var13) {
-                          if (-3 != (var13 ^ -1)) {
-                            ia.a(-99);
-                            return;
-                          } else {
-                            ((e) this).field_j.b(((e) this).c(90, param3), this.a(param3, param4, true, param1) + var9, var12 + this.a(param3, param5, param0, -3), param7, param6);
-                            ia.a(-99);
-                            return;
-                          }
-                        } else {
-                          ((e) this).field_j.a(((e) this).c(45, param3), (var9 >> -970278207) + this.a(param3, param4, true, param1), this.a(param3, param5, param0, -3) + var12, param7, param6);
-                          ia.a(-99);
-                          return;
-                        }
-                      } else {
+                    if ((var13 ^ -1) != -1) {
+                      if ((var13 ^ -1) == -4) {
                         ((e) this).field_j.c(((e) this).c(31, param3), this.a(param3, param4, true, param1), var12 + this.a(param3, param5, param0, -3), param7, param6);
                         ia.a(-99);
                         return;
+                      } else {
+                        if (-2 == (var13 ^ -1)) {
+                          ((e) this).field_j.a(((e) this).c(45, param3), (var9 >> -970278207) + this.a(param3, param4, true, param1), this.a(param3, param5, param0, -3) + var12, param7, param6);
+                          ia.a(-99);
+                          return;
+                        } else {
+                          if (-3 == (var13 ^ -1)) {
+                            ((e) this).field_j.b(((e) this).c(90, param3), this.a(param3, param4, true, param1) + var9, var12 + this.a(param3, param5, param0, -3), param7, param6);
+                            ia.a(-99);
+                            return;
+                          } else {
+                            ia.a(-99);
+                            return;
+                          }
+                        }
                       }
                     } else {
                       ((e) this).field_j.c(((e) this).c(31, param3), this.a(param3, param4, true, param1), var12 + this.a(param3, param5, param0, -3), param7, param6);
@@ -123,26 +127,26 @@ class e implements ch, eg {
                   } else {
                     var12 = (-((e) this).field_j.field_H + var11 + -((e) this).field_j.field_K >> 1041347137) + ((e) this).field_j.field_H;
                     var13 = ((e) this).field_i;
-                    if (var13 != 0) {
-                      if (var13 != -4) {
-                        if (-2 != var13) {
-                          if (-3 != (var13 ^ -1)) {
-                            ia.a(-99);
-                            return;
-                          } else {
-                            ((e) this).field_j.b(((e) this).c(90, param3), this.a(param3, param4, true, param1) + var9, var12 + this.a(param3, param5, param0, -3), param7, param6);
-                            ia.a(-99);
-                            return;
-                          }
-                        } else {
-                          ((e) this).field_j.a(((e) this).c(45, param3), (var9 >> -970278207) + this.a(param3, param4, true, param1), this.a(param3, param5, param0, -3) + var12, param7, param6);
-                          ia.a(-99);
-                          return;
-                        }
-                      } else {
+                    if ((var13 ^ -1) != -1) {
+                      if ((var13 ^ -1) == -4) {
                         ((e) this).field_j.c(((e) this).c(31, param3), this.a(param3, param4, true, param1), var12 + this.a(param3, param5, param0, -3), param7, param6);
                         ia.a(-99);
                         return;
+                      } else {
+                        if (-2 == (var13 ^ -1)) {
+                          ((e) this).field_j.a(((e) this).c(45, param3), (var9 >> -970278207) + this.a(param3, param4, true, param1), this.a(param3, param5, param0, -3) + var12, param7, param6);
+                          ia.a(-99);
+                          return;
+                        } else {
+                          if (-3 == (var13 ^ -1)) {
+                            ((e) this).field_j.b(((e) this).c(90, param3), this.a(param3, param4, true, param1) + var9, var12 + this.a(param3, param5, param0, -3), param7, param6);
+                            ia.a(-99);
+                            return;
+                          } else {
+                            ia.a(-99);
+                            return;
+                          }
+                        }
                       }
                     } else {
                       ((e) this).field_j.c(((e) this).c(31, param3), this.a(param3, param4, true, param1), var12 + this.a(param3, param5, param0, -3), param7, param6);
@@ -161,9 +165,17 @@ class e implements ch, eg {
             }
           }
           var13 = ((e) this).field_i;
-          if (var13 != 0) {
-            if (var13 != -4) {
-              if (-2 != var13) {
+          if ((var13 ^ -1) != -1) {
+            if ((var13 ^ -1) == -4) {
+              ((e) this).field_j.c(((e) this).c(31, param3), this.a(param3, param4, true, param1), var12 + this.a(param3, param5, param0, -3), param7, param6);
+              ia.a(-99);
+              return;
+            } else {
+              if (-2 == (var13 ^ -1)) {
+                ((e) this).field_j.a(((e) this).c(45, param3), (var9 >> -970278207) + this.a(param3, param4, true, param1), this.a(param3, param5, param0, -3) + var12, param7, param6);
+                ia.a(-99);
+                return;
+              } else {
                 if (-3 == (var13 ^ -1)) {
                   ((e) this).field_j.b(((e) this).c(90, param3), this.a(param3, param4, true, param1) + var9, var12 + this.a(param3, param5, param0, -3), param7, param6);
                   ia.a(-99);
@@ -172,25 +184,13 @@ class e implements ch, eg {
                   ia.a(-99);
                   return;
                 }
-              } else {
-                ((e) this).field_j.a(((e) this).c(45, param3), (var9 >> -970278207) + this.a(param3, param4, true, param1), this.a(param3, param5, param0, -3) + var12, param7, param6);
-                ia.a(-99);
-                return;
               }
-            } else {
-              ((e) this).field_j.c(((e) this).c(31, param3), this.a(param3, param4, true, param1), var12 + this.a(param3, param5, param0, -3), param7, param6);
-              ia.a(-99);
-              return;
             }
           } else {
             ((e) this).field_j.c(((e) this).c(31, param3), this.a(param3, param4, true, param1), var12 + this.a(param3, param5, param0, -3), param7, param6);
             ia.a(-99);
             return;
           }
-        } else {
-          int discarded$1 = ((e) this).field_j.a(((e) this).c(66, param3), this.a(param3, param4, true, param1), this.a(param3, param5, param0, -3), var9, var11, param7, param6, ((e) this).field_i, ((e) this).field_h, ((e) this).field_d);
-          ia.a(-99);
-          return;
         }
     }
 

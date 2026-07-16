@@ -42,7 +42,7 @@ final class sd {
           return false;
         } else {
           L0: {
-            if (-2 == var2) {
+            if (-2 == (var2 ^ -1)) {
               stackOut_3_0 = 1;
               stackIn_4_0 = stackOut_3_0;
               break L0;

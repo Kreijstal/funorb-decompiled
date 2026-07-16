@@ -28,30 +28,69 @@ final class ak {
 
     final static void a(byte param0, int param1) {
         try {
-            if (null != wa.field_e) {
-                // if_icmplt L34
-                // if_acmpne L26
-            } else {
-                nd.field_Lb.field_t = 0;
+            IOException iOException = null;
+            Throwable decompiledCaughtException = null;
+            L0: {
+              if (null == wa.field_e) {
+                break L0;
+              } else {
+                L1: {
+                  if (-1 < (param1 ^ -1)) {
+                    break L1;
+                  } else {
+                    if (qi.field_p != li.field_a) {
+                      break L0;
+                    } else {
+                      break L1;
+                    }
+                  }
+                }
+                L2: {
+                  if (param0 <= -37) {
+                    break L2;
+                  } else {
+                    boolean discarded$2 = ak.a(69);
+                    break L2;
+                  }
+                }
+                L3: {
+                  if (0 != nd.field_Lb.field_t) {
+                    break L3;
+                  } else {
+                    if ((rj.field_n + 10000L ^ -1L) > (k.a(0) ^ -1L)) {
+                      nd.field_Lb.f(param1, (byte) -92);
+                      break L3;
+                    } else {
+                      break L3;
+                    }
+                  }
+                }
+                L4: {
+                  if (nd.field_Lb.field_t > 0) {
+                    try {
+                      L5: {
+                        wa.field_e.a(true, nd.field_Lb.field_t, nd.field_Lb.field_u, 0);
+                        rj.field_n = k.a(0);
+                        break L5;
+                      }
+                    } catch (java.io.IOException decompiledCaughtParameter0) {
+                      decompiledCaughtException = decompiledCaughtParameter0;
+                      L6: {
+                        iOException = (IOException) (Object) decompiledCaughtException;
+                        mk.a(false);
+                        break L6;
+                      }
+                    }
+                    nd.field_Lb.field_t = 0;
+                    break L4;
+                  } else {
+                    break L4;
+                  }
+                }
                 return;
+              }
             }
-            if (param0 > -37) {
-                boolean discarded$0 = ak.a(69);
-            }
-            if (0 == nd.field_Lb.field_t) {
-                if (!((rj.field_n + 10000L ^ -1L) <= (k.a(0) ^ -1L))) {
-                    nd.field_Lb.f(param1, (byte) -92);
-                }
-            }
-            if (!(nd.field_Lb.field_t <= 0)) {
-                try {
-                    wa.field_e.a(true, nd.field_Lb.field_t, nd.field_Lb.field_u, 0);
-                    rj.field_n = k.a(0);
-                } catch (IOException iOException) {
-                    mk.a(false);
-                }
-                nd.field_Lb.field_t = 0;
-            }
+            nd.field_Lb.field_t = 0;
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {

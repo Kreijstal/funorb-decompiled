@@ -70,7 +70,7 @@ final class ja extends ta {
                   }
                 }
                 L3: {
-                  if (((ja) this).field_K.field_sb != -2) {
+                  if ((((ja) this).field_K.field_sb ^ -1) != -2) {
                     break L3;
                   } else {
                     var4++;
@@ -79,10 +79,10 @@ final class ja extends ta {
                   }
                 }
                 L4: {
-                  if (wr.field_f >= wt.field_x) {
+                  if ((wr.field_f ^ -1) <= (wt.field_x ^ -1)) {
                     break L4;
                   } else {
-                    if (-1 != id.field_v) {
+                    if (-1 != (id.field_v ^ -1)) {
                       L5: {
                         stackOut_26_0 = var4;
                         stackIn_28_0 = stackOut_26_0;
@@ -121,7 +121,7 @@ final class ja extends ta {
                     if (((ja) this).field_bb != ic.field_h.field_w) {
                       break L8;
                     } else {
-                      if (((ja) this).field_N != ic.field_h.field_k) {
+                      if ((((ja) this).field_N ^ -1) != (ic.field_h.field_k ^ -1)) {
                         break L8;
                       } else {
                         if (ic.field_h.field_R != ((ja) this).field_Q) {
@@ -519,7 +519,7 @@ final class ja extends ta {
     final void a(int param0, boolean param1) {
         hd var3_ref_hd = null;
         int var3 = 0;
-        gi var4 = null;
+        Object var4 = null;
         gi var5 = null;
         int var6 = 0;
         nt var7 = null;
@@ -549,7 +549,7 @@ final class ja extends ta {
                         L4: while (true) {
                           if (var5 == null) {
                             if (var4 != null) {
-                              var4.a(param0 + 8);
+                              ((gi) var4).a(param0 + 8);
                               var3++;
                               continue L3;
                             } else {
@@ -562,7 +562,7 @@ final class ja extends ta {
                                 var5.a(param0 ^ -8);
                                 break L5;
                               } else {
-                                var4 = var5;
+                                var4 = (Object) (Object) var5;
                                 break L5;
                               }
                             }
@@ -672,7 +672,7 @@ final class ja extends ta {
 
     private final void f(int param0) {
         int var2 = 0;
-        up var3 = null;
+        Object var3 = null;
         int var4 = 0;
         up var5 = null;
         int var6 = 0;
@@ -730,9 +730,9 @@ final class ja extends ta {
         int stackOut_11_1 = 0;
         int stackOut_11_2 = 0;
         int stackOut_11_3 = 0;
-        up stackOut_11_4 = null;
+        Object stackOut_11_4 = null;
         int stackOut_11_5 = 0;
-        up stackOut_11_6 = null;
+        Object stackOut_11_6 = null;
         int stackOut_11_7 = 0;
         Object stackOut_13_0 = null;
         int stackOut_13_1 = 0;
@@ -798,7 +798,7 @@ final class ja extends ta {
               var5 = ic.field_h.field_i[ic.field_h.field_q[var4]];
               if (!var5.c(param0 ^ 3)) {
                 if (var2 == 0) {
-                  var3 = var5;
+                  var3 = (Object) (Object) var5;
                   break L2;
                 } else {
                   var2--;
@@ -821,25 +821,25 @@ final class ja extends ta {
                 stackOut_11_1 = 109;
                 stackOut_11_2 = ic.field_h.field_R;
                 stackOut_11_3 = ic.field_h.field_k;
-                stackOut_11_4 = (up) var3;
+                stackOut_11_4 = var3;
                 stackOut_11_5 = ic.field_h.field_w;
-                stackOut_11_6 = (up) var3;
+                stackOut_11_6 = var3;
                 stackOut_11_7 = -107;
                 stackIn_13_0 = stackOut_11_0;
                 stackIn_13_1 = stackOut_11_1;
                 stackIn_13_2 = stackOut_11_2;
                 stackIn_13_3 = stackOut_11_3;
-                stackIn_13_4 = (Object) (Object) stackOut_11_4;
+                stackIn_13_4 = stackOut_11_4;
                 stackIn_13_5 = stackOut_11_5;
-                stackIn_13_6 = (Object) (Object) stackOut_11_6;
+                stackIn_13_6 = stackOut_11_6;
                 stackIn_13_7 = stackOut_11_7;
                 stackIn_12_0 = stackOut_11_0;
                 stackIn_12_1 = stackOut_11_1;
                 stackIn_12_2 = stackOut_11_2;
                 stackIn_12_3 = stackOut_11_3;
-                stackIn_12_4 = (Object) (Object) stackOut_11_4;
+                stackIn_12_4 = stackOut_11_4;
                 stackIn_12_5 = stackOut_11_5;
-                stackIn_12_6 = (Object) (Object) stackOut_11_6;
+                stackIn_12_6 = stackOut_11_6;
                 stackIn_12_7 = stackOut_11_7;
                 if (jd.f(-1)) {
                   stackOut_13_0 = this;
@@ -962,13 +962,13 @@ final class ja extends ta {
                 break L5;
               }
               ((ja) this).field_db = pi.a(stackIn_18_1, stackIn_18_2, stackIn_18_3, (up) (Object) stackIn_18_4, stackIn_18_5, stackIn_18_6 != 0);
-              ((ja) this).field_T = 1 + ((ja) this).field_U + ": " + var3.d(100);
+              ((ja) this).field_T = 1 + ((ja) this).field_U + ": " + ((up) var3).d(100);
               ((ja) this).field_N = ic.field_h.field_k;
               ((ja) this).field_bb = ic.field_h.field_w;
               ((ja) this).field_Q = ic.field_h.field_R;
-              ((ja) this).field_cb.a(pv.field_I[var3.field_q][3], (byte) -107);
+              ((ja) this).field_cb.a(pv.field_I[((up) var3).field_q][3], (byte) -107);
               ((ja) this).field_cb.a(30, -81);
-              if ((var3.field_q ^ -1) != -3) {
+              if ((((up) var3).field_q ^ -1) != -3) {
                 break L3;
               } else {
                 ((ja) this).field_cb.a(10, param0 + -36);

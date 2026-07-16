@@ -199,11 +199,16 @@ final class qg implements ad {
               mh.field_c = param2;
               if (mm.field_b.field_i != null) {
                 try {
-                  w.field_W = new me(mm.field_b.field_i, 64, 0);
-                } catch (java.io.IOException decompiledCaughtParameter) {
-                  decompiledCaughtException = decompiledCaughtParameter;
-                  return;
+                  L2: {
+                    w.field_W = new me(mm.field_b.field_i, 64, 0);
+                    break L2;
+                  }
+                } catch (java.io.IOException decompiledCaughtParameter0) {
+                  decompiledCaughtException = decompiledCaughtParameter0;
+                  var15 = (IOException) (Object) decompiledCaughtException;
+                  throw new RuntimeException(var15.toString());
                 }
+                return;
               } else {
                 return;
               }

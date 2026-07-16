@@ -158,15 +158,15 @@ final class bt {
         if (ks.field_e == 1) {
           return tc.a(4, (byte) 97, 29360128, (nl) (Object) mh.field_k, 74973184);
         } else {
-          if (-3 != ks.field_e) {
-            if (-4 != ks.field_e) {
-              if (-5 == ks.field_e) {
+          if (-3 != (ks.field_e ^ -1)) {
+            if (-4 != (ks.field_e ^ -1)) {
+              if (-5 == (ks.field_e ^ -1)) {
                 var2 = 1;
                 var2 = var2 != 0 & tc.a(4, (byte) 121, 53084160, (nl) (Object) mh.field_k, 72744960) ? 1 : 0;
                 var2 = var2 != 0 & tc.a(1, (byte) 93, 49152000, (nl) (Object) ld.field_f, 55050240) ? 1 : 0;
                 return var2 != 0;
               } else {
-                if (-6 != ks.field_e) {
+                if (-6 != (ks.field_e ^ -1)) {
                   if (6 != ks.field_e) {
                     if (-8 == (ks.field_e ^ -1)) {
                       L0: {
@@ -190,7 +190,7 @@ final class bt {
                       }
                       return stackIn_57_0 != 0;
                     } else {
-                      if (ks.field_e == -9) {
+                      if ((ks.field_e ^ -1) == -9) {
                         L2: {
                           L3: {
                             var2 = 1;
@@ -225,7 +225,7 @@ final class bt {
                           stackOut_41_0 = var2;
                           stackIn_43_0 = stackOut_41_0;
                           stackIn_42_0 = stackOut_41_0;
-                          if (et.field_d.field_P[1][4].field_w != fm.a((byte) -27, 1)) {
+                          if ((et.field_d.field_P[1][4].field_w ^ -1) != (fm.a((byte) -27, 1) ^ -1)) {
                             stackOut_43_0 = stackIn_43_0;
                             stackOut_43_1 = 0;
                             stackIn_44_0 = stackOut_43_0;
@@ -279,7 +279,7 @@ final class bt {
                         }
                         return var2 != 0;
                       } else {
-                        if (-10 == ks.field_e) {
+                        if (-10 == (ks.field_e ^ -1)) {
                           var2 = 1;
                           var2 = var2 != 0 & tc.a(2, (byte) 119, 49152000, (nl) (Object) ld.field_f, 55050240) ? 1 : 0;
                           var2 = var2 != 0 & tc.a(8, (byte) 82, 20971520, (nl) (Object) mh.field_k, 55050240) ? 1 : 0;
@@ -422,15 +422,15 @@ final class bt {
         } else {
             var4 = ((bt) this).field_h.b(0, -32669, param1);
         }
-        tc var3_ref = new tc();
+        var3 = new tc();
         if (var4 != null) {
-            var3_ref.a(new iw(var4), 0);
+            var3.a(new iw(var4), 0);
         }
         if (32768 <= param1) {
-            var3_ref.a(-104);
+            var3.a(-104);
         }
-        ((bt) this).field_f.a((long)param1, (Object) (Object) var3_ref, (byte) -110);
-        return var3_ref;
+        ((bt) this).field_f.a((long)param1, (Object) (Object) var3, (byte) -110);
+        return var3;
     }
 
     bt(int param0, sj param1, sj param2) {

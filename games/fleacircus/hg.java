@@ -28,10 +28,11 @@ final class hg extends lh {
         vh.field_o = vh.field_o ^ ni.field_j;
         pg.field_d = pg.field_d ^ ni.field_j;
         if (null != pb.field_f.c((byte) 47)) {
+            int fieldTemp$0 = hi.field_q + 1;
             hi.field_q = hi.field_q + 1;
-            if ((hi.field_q + 1 ^ -1) == -336) {
+            if ((fieldTemp$0 ^ -1) == -336) {
                 hi.field_q = 0;
-                lh discarded$0 = pb.field_f.e(-22033);
+                lh discarded$1 = pb.field_f.e(-22033);
             }
         }
         if (param0 > -74) {

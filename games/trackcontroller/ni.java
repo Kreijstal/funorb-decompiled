@@ -196,18 +196,24 @@ final class ni extends di {
             Throwable decompiledCaughtException = null;
             try {
               L0: {
-                if (param0 <= -115) {
-                  break L0;
-                } else {
-                  field_m = null;
-                  break L0;
+                L1: {
+                  if (param0 <= -115) {
+                    break L1;
+                  } else {
+                    field_m = null;
+                    break L1;
+                  }
                 }
+                Object discarded$1 = sj.a(gd.b((byte) 77), new Object[1], 7648, "resizing");
+                break L0;
               }
-              Object discarded$1 = sj.a(gd.b((byte) 77), new Object[1], 7648, "resizing");
-            } catch (java.lang.Throwable decompiledCaughtParameter) {
-              decompiledCaughtException = decompiledCaughtParameter;
+            } catch (java.lang.Throwable decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              L2: {
+                var2 = decompiledCaughtException;
+                break L2;
+              }
             }
-            var2 = decompiledCaughtException;
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {

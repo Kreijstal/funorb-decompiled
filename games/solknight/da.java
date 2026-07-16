@@ -213,9 +213,9 @@ final class da {
             return false;
         }
         int var3 = -119 / ((param0 - -33) / 42);
-        if (-1 >= param1) {
-            if (param1 < ((da) this).field_g.field_o.length) {
-                if (-1 != ((da) this).field_g.field_o[param1]) {
+        if (-1 >= (param1 ^ -1)) {
+            if ((param1 ^ -1) > (((da) this).field_g.field_o.length ^ -1)) {
+                if (-1 != (((da) this).field_g.field_o[param1] ^ -1)) {
                     return true;
                 }
             }
@@ -260,7 +260,6 @@ final class da {
 
     private final synchronized byte[] a(int[] param0, int param1, int param2, int param3) {
         Object var5 = null;
-        byte[] var5_array = null;
         int var6 = 0;
         byte[] var7 = null;
         if (this.a(param1, false, param3)) {
@@ -296,7 +295,7 @@ final class da {
                 break L2;
               } else {
                 var7 = tk.a((byte) -59, false, ((da) this).field_b[param1][param3]);
-                var5_array = var7;
+                var5 = (Object) (Object) var7;
                 if (var7 != null) {
                   break L2;
                 } else {
@@ -305,7 +304,7 @@ final class da {
               }
             }
             L3: {
-              if (var5_array == null) {
+              if (var5 == null) {
                 break L3;
               } else {
                 if (1 == ((da) this).field_e) {
@@ -322,13 +321,13 @@ final class da {
                     break L3;
                   } else {
                     var6 = 91 / ((param2 - 50) / 45);
-                    return var5_array;
+                    return (byte[]) var5;
                   }
                 }
               }
             }
             var6 = 91 / ((param2 - 50) / 45);
-            return var5_array;
+            return (byte[]) var5;
           }
         } else {
           return null;
@@ -383,42 +382,27 @@ final class da {
     }
 
     final synchronized int b(byte param0) {
+        int var4 = 0;
+        int var5 = SolKnight.field_L ? 1 : 0;
+        if (param0 != -66) {
+            return 45;
+        }
+        if (!((da) this).c((byte) -121)) {
+            return 0;
+        }
         int var2 = 0;
         int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        var5 = SolKnight.field_L ? 1 : 0;
-        if (param0 == -66) {
-          if (((da) this).c((byte) -121)) {
-            var2 = 0;
-            var3 = 0;
-            var4 = 0;
-            L0: while (true) {
-              if (var4 >= ((da) this).field_c.length) {
-                if (-1 != var2) {
-                  var4 = var3 * 100 / var2;
-                  return var4;
-                } else {
-                  return 100;
-                }
-              } else {
-                if (((da) this).field_g.field_r[var4] < -1) {
-                  var3 = var3 + ((da) this).b((byte) 94, var4);
-                  var2 += 100;
-                  var4++;
-                  continue L0;
-                } else {
-                  var4++;
-                  continue L0;
-                }
-              }
+        for (var4 = 0; (var4 ^ -1) > (((da) this).field_c.length ^ -1); var4++) {
+            if (!((((da) this).field_g.field_r[var4] ^ -1) >= -1)) {
+                var3 = var3 + ((da) this).b((byte) 94, var4);
+                var2 += 100;
             }
-          } else {
-            return 0;
-          }
-        } else {
-          return 45;
         }
+        if (-1 == (var2 ^ -1)) {
+            return 100;
+        }
+        var4 = var3 * 100 / var2;
+        return var4;
     }
 
     final static void a(int param0, int param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
@@ -990,6 +974,7 @@ final class da {
                 }
               }
               ((da) this).field_h = stackIn_6_1 != 0;
+              return;
             } else {
               break L0;
             }

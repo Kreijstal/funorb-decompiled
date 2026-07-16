@@ -154,46 +154,38 @@ final class vp extends ak {
     }
 
     final boolean e(byte param0) {
-        if (((vp) this).field_Kb.field_P != -1) {
-          ((vp) this).field_Ob = 20;
-          return true;
-        } else {
-          if (0 == ((vp) this).field_Kb.field_J) {
-            if (param0 < 118) {
-              vp.c((byte) -109);
-              return false;
-            } else {
-              return false;
-            }
-          } else {
-            if (-1 >= ((vp) this).field_Ob) {
-              if (((vp) this).field_Ob != 0) {
-                if (param0 >= 118) {
-                  return false;
-                } else {
-                  vp.c((byte) -109);
-                  return false;
-                }
-              } else {
-                ((vp) this).field_Ob = 3;
-                return true;
-              }
-            } else {
-              ((vp) this).field_Ob = ((vp) this).field_Ob - 1;
-              if (((vp) this).field_Ob == 0) {
-                ((vp) this).field_Ob = 3;
-                return true;
-              } else {
-                if (param0 >= 118) {
-                  return false;
-                } else {
-                  vp.c((byte) -109);
-                  return false;
-                }
-              }
-            }
-          }
+        if (!((((vp) this).field_Kb.field_P ^ -1) == -1)) {
+            ((vp) this).field_Ob = 20;
+            return true;
         }
+        if (0 != ((vp) this).field_Kb.field_J) {
+            if (-1 > (((vp) this).field_Ob ^ -1)) {
+                ((vp) this).field_Ob = ((vp) this).field_Ob - 1;
+                if (!(((vp) this).field_Ob != 0)) {
+                    ((vp) this).field_Ob = 3;
+                    return true;
+                }
+                if (param0 >= 118) {
+                    return false;
+                }
+                vp.c((byte) -109);
+                return false;
+            }
+            if (((vp) this).field_Ob != 0) {
+                if (param0 >= 118) {
+                    return false;
+                }
+                vp.c((byte) -109);
+                return false;
+            }
+            ((vp) this).field_Ob = 3;
+            return true;
+        }
+        if (param0 < 118) {
+            vp.c((byte) -109);
+            return false;
+        }
+        return false;
     }
 
     final boolean k(int param0) {

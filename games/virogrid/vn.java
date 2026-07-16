@@ -101,6 +101,7 @@ final class vn {
           if (var2 >= 10) {
             ((vn) this).field_a = param0.c((byte) 114);
             ((vn) this).field_b = param0.c((byte) 58);
+            return;
           } else {
             var3 = param0.g(11132);
             if (var3 != 0) {

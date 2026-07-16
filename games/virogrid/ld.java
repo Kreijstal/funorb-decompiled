@@ -171,7 +171,9 @@ final class ld implements java.awt.event.KeyListener, java.awt.event.FocusListen
     public final synchronized void keyPressed(java.awt.event.KeyEvent param0) {
         int var2 = 0;
         int var3 = 0;
-        if (w.field_L != null) {
+        if (w.field_L == null) {
+          return;
+        } else {
           um.field_Fb = 0;
           var2 = param0.getKeyCode();
           if (var2 >= 0) {
@@ -194,11 +196,11 @@ final class ld implements java.awt.event.KeyListener, java.awt.event.FocusListen
                             param0.consume();
                             return;
                           } else {
-                            if (var2 == -86) {
+                            if ((var2 ^ -1) == -86) {
                               param0.consume();
                               return;
                             } else {
-                              if (-11 == var2) {
+                              if (-11 == (var2 ^ -1)) {
                                 param0.consume();
                                 return;
                               } else {
@@ -212,11 +214,11 @@ final class ld implements java.awt.event.KeyListener, java.awt.event.FocusListen
                             param0.consume();
                             return;
                           } else {
-                            if (var2 == -86) {
+                            if ((var2 ^ -1) == -86) {
                               param0.consume();
                               return;
                             } else {
-                              if (-11 == var2) {
+                              if (-11 == (var2 ^ -1)) {
                                 param0.consume();
                                 return;
                               } else {
@@ -231,11 +233,11 @@ final class ld implements java.awt.event.KeyListener, java.awt.event.FocusListen
                           param0.consume();
                           return;
                         } else {
-                          if (var2 == -86) {
+                          if ((var2 ^ -1) == -86) {
                             param0.consume();
                             return;
                           } else {
-                            if (-11 == var2) {
+                            if (-11 == (var2 ^ -1)) {
                               param0.consume();
                               return;
                             } else {
@@ -257,11 +259,11 @@ final class ld implements java.awt.event.KeyListener, java.awt.event.FocusListen
                             param0.consume();
                             return;
                           } else {
-                            if (var2 == -86) {
+                            if ((var2 ^ -1) == -86) {
                               param0.consume();
                               return;
                             } else {
-                              if (-11 == var2) {
+                              if (-11 == (var2 ^ -1)) {
                                 param0.consume();
                                 return;
                               } else {
@@ -275,11 +277,11 @@ final class ld implements java.awt.event.KeyListener, java.awt.event.FocusListen
                             param0.consume();
                             return;
                           } else {
-                            if (var2 == -86) {
+                            if ((var2 ^ -1) == -86) {
                               param0.consume();
                               return;
                             } else {
-                              if (-11 == var2) {
+                              if (-11 == (var2 ^ -1)) {
                                 param0.consume();
                                 return;
                               } else {
@@ -294,11 +296,11 @@ final class ld implements java.awt.event.KeyListener, java.awt.event.FocusListen
                           param0.consume();
                           return;
                         } else {
-                          if (var2 == -86) {
+                          if ((var2 ^ -1) == -86) {
                             param0.consume();
                             return;
                           } else {
-                            if (-11 == var2) {
+                            if (-11 == (var2 ^ -1)) {
                               param0.consume();
                               return;
                             } else {
@@ -320,11 +322,11 @@ final class ld implements java.awt.event.KeyListener, java.awt.event.FocusListen
                           param0.consume();
                           return;
                         } else {
-                          if (var2 == -86) {
+                          if ((var2 ^ -1) == -86) {
                             param0.consume();
                             return;
                           } else {
-                            if (-11 == var2) {
+                            if (-11 == (var2 ^ -1)) {
                               param0.consume();
                               return;
                             } else {
@@ -338,11 +340,11 @@ final class ld implements java.awt.event.KeyListener, java.awt.event.FocusListen
                           param0.consume();
                           return;
                         } else {
-                          if (var2 == -86) {
+                          if ((var2 ^ -1) == -86) {
                             param0.consume();
                             return;
                           } else {
-                            if (-11 == var2) {
+                            if (-11 == (var2 ^ -1)) {
                               param0.consume();
                               return;
                             } else {
@@ -357,11 +359,11 @@ final class ld implements java.awt.event.KeyListener, java.awt.event.FocusListen
                         param0.consume();
                         return;
                       } else {
-                        if (var2 == -86) {
+                        if ((var2 ^ -1) == -86) {
                           param0.consume();
                           return;
                         } else {
-                          if (-11 == var2) {
+                          if (-11 == (var2 ^ -1)) {
                             param0.consume();
                             return;
                           } else {
@@ -383,11 +385,11 @@ final class ld implements java.awt.event.KeyListener, java.awt.event.FocusListen
                         param0.consume();
                         return;
                       } else {
-                        if (var2 == -86) {
+                        if ((var2 ^ -1) == -86) {
                           param0.consume();
                           return;
                         } else {
-                          if (-11 == var2) {
+                          if (-11 == (var2 ^ -1)) {
                             param0.consume();
                             return;
                           } else {
@@ -401,11 +403,11 @@ final class ld implements java.awt.event.KeyListener, java.awt.event.FocusListen
                         param0.consume();
                         return;
                       } else {
-                        if (var2 == -86) {
+                        if ((var2 ^ -1) == -86) {
                           param0.consume();
                           return;
                         } else {
-                          if (-11 == var2) {
+                          if (-11 == (var2 ^ -1)) {
                             param0.consume();
                             return;
                           } else {
@@ -420,11 +422,11 @@ final class ld implements java.awt.event.KeyListener, java.awt.event.FocusListen
                       param0.consume();
                       return;
                     } else {
-                      if (var2 == -86) {
+                      if ((var2 ^ -1) == -86) {
                         param0.consume();
                         return;
                       } else {
-                        if (-11 == var2) {
+                        if (-11 == (var2 ^ -1)) {
                           param0.consume();
                           return;
                         } else {
@@ -469,11 +471,11 @@ final class ld implements java.awt.event.KeyListener, java.awt.event.FocusListen
                           param0.consume();
                           return;
                         } else {
-                          if (var2 == -86) {
+                          if ((var2 ^ -1) == -86) {
                             param0.consume();
                             return;
                           } else {
-                            if (-11 == var2) {
+                            if (-11 == (var2 ^ -1)) {
                               param0.consume();
                               return;
                             } else {
@@ -496,11 +498,11 @@ final class ld implements java.awt.event.KeyListener, java.awt.event.FocusListen
                       param0.consume();
                       return;
                     } else {
-                      if (var2 == -86) {
+                      if ((var2 ^ -1) == -86) {
                         param0.consume();
                         return;
                       } else {
-                        if (-11 == var2) {
+                        if (-11 == (var2 ^ -1)) {
                           param0.consume();
                           return;
                         } else {
@@ -514,11 +516,11 @@ final class ld implements java.awt.event.KeyListener, java.awt.event.FocusListen
                       param0.consume();
                       return;
                     } else {
-                      if (var2 == -86) {
+                      if ((var2 ^ -1) == -86) {
                         param0.consume();
                         return;
                       } else {
-                        if (-11 == var2) {
+                        if (-11 == (var2 ^ -1)) {
                           param0.consume();
                           return;
                         } else {
@@ -533,11 +535,11 @@ final class ld implements java.awt.event.KeyListener, java.awt.event.FocusListen
                     param0.consume();
                     return;
                   } else {
-                    if (var2 == -86) {
+                    if ((var2 ^ -1) == -86) {
                       param0.consume();
                       return;
                     } else {
-                      if (-11 == var2) {
+                      if (-11 == (var2 ^ -1)) {
                         param0.consume();
                         return;
                       } else {
@@ -576,16 +578,16 @@ final class ld implements java.awt.event.KeyListener, java.awt.event.FocusListen
                               param0.consume();
                               return;
                             } else {
-                              if (var2 != -86) {
-                                if (-11 != var2) {
-                                  return;
-                                } else {
-                                  param0.consume();
-                                  return;
-                                }
-                              } else {
+                              if ((var2 ^ -1) == -86) {
                                 param0.consume();
                                 return;
+                              } else {
+                                if (-11 == (var2 ^ -1)) {
+                                  param0.consume();
+                                  return;
+                                } else {
+                                  return;
+                                }
                               }
                             }
                           }
@@ -598,16 +600,16 @@ final class ld implements java.awt.event.KeyListener, java.awt.event.FocusListen
                         param0.consume();
                         return;
                       } else {
-                        if (var2 != -86) {
-                          if (-11 != var2) {
-                            return;
-                          } else {
-                            param0.consume();
-                            return;
-                          }
-                        } else {
+                        if ((var2 ^ -1) == -86) {
                           param0.consume();
                           return;
+                        } else {
+                          if (-11 == (var2 ^ -1)) {
+                            param0.consume();
+                            return;
+                          } else {
+                            return;
+                          }
                         }
                       }
                     }
@@ -625,11 +627,11 @@ final class ld implements java.awt.event.KeyListener, java.awt.event.FocusListen
                     param0.consume();
                     return;
                   } else {
-                    if (var2 == -86) {
+                    if ((var2 ^ -1) == -86) {
                       param0.consume();
                       return;
                     } else {
-                      if (-11 == var2) {
+                      if (-11 == (var2 ^ -1)) {
                         param0.consume();
                         return;
                       } else {
@@ -643,11 +645,11 @@ final class ld implements java.awt.event.KeyListener, java.awt.event.FocusListen
                     param0.consume();
                     return;
                   } else {
-                    if (var2 == -86) {
+                    if ((var2 ^ -1) == -86) {
                       param0.consume();
                       return;
                     } else {
-                      if (-11 == var2) {
+                      if (-11 == (var2 ^ -1)) {
                         param0.consume();
                         return;
                       } else {
@@ -662,11 +664,11 @@ final class ld implements java.awt.event.KeyListener, java.awt.event.FocusListen
                   param0.consume();
                   return;
                 } else {
-                  if (var2 == -86) {
+                  if ((var2 ^ -1) == -86) {
                     param0.consume();
                     return;
                   } else {
-                    if (-11 == var2) {
+                    if (-11 == (var2 ^ -1)) {
                       param0.consume();
                       return;
                     } else {
@@ -707,21 +709,21 @@ final class ld implements java.awt.event.KeyListener, java.awt.event.FocusListen
                       }
                     }
                     var3 = param0.getModifiers();
-                    if (0 == (10 & var3)) {
-                      if (var2 != -86) {
-                        if (-11 != var2) {
-                          return;
-                        } else {
-                          param0.consume();
-                          return;
-                        }
-                      } else {
-                        param0.consume();
-                        return;
-                      }
-                    } else {
+                    if (0 != (10 & var3)) {
                       param0.consume();
                       return;
+                    } else {
+                      if ((var2 ^ -1) == -86) {
+                        param0.consume();
+                        return;
+                      } else {
+                        if (-11 == (var2 ^ -1)) {
+                          param0.consume();
+                          return;
+                        } else {
+                          return;
+                        }
+                      }
                     }
                   }
                 }
@@ -734,63 +736,61 @@ final class ld implements java.awt.event.KeyListener, java.awt.event.FocusListen
                 hg.field_q[hh.field_e] = (char)0;
                 hh.field_e = var3;
                 var3 = param0.getModifiers();
-                if (0 == (10 & var3)) {
-                  if (var2 != -86) {
-                    if (-11 == var2) {
+                if (0 != (10 & var3)) {
+                  param0.consume();
+                  return;
+                } else {
+                  if ((var2 ^ -1) == -86) {
+                    param0.consume();
+                    return;
+                  } else {
+                    if (-11 == (var2 ^ -1)) {
                       param0.consume();
                       return;
                     } else {
                       return;
                     }
-                  } else {
-                    param0.consume();
-                    return;
                   }
-                } else {
-                  param0.consume();
-                  return;
                 }
               } else {
                 var3 = param0.getModifiers();
-                if (0 == (10 & var3)) {
-                  if (var2 != -86) {
-                    if (-11 != var2) {
-                      return;
-                    } else {
-                      param0.consume();
-                      return;
-                    }
-                  } else {
-                    param0.consume();
-                    return;
-                  }
-                } else {
+                if (0 != (10 & var3)) {
                   param0.consume();
                   return;
+                } else {
+                  if ((var2 ^ -1) == -86) {
+                    param0.consume();
+                    return;
+                  } else {
+                    if (-11 == (var2 ^ -1)) {
+                      param0.consume();
+                      return;
+                    } else {
+                      return;
+                    }
+                  }
                 }
               }
             } else {
               var3 = param0.getModifiers();
-              if (0 == (10 & var3)) {
-                if (var2 != -86) {
-                  if (-11 != var2) {
-                    return;
-                  } else {
-                    param0.consume();
-                    return;
-                  }
-                } else {
-                  param0.consume();
-                  return;
-                }
-              } else {
+              if (0 != (10 & var3)) {
                 param0.consume();
                 return;
+              } else {
+                if ((var2 ^ -1) == -86) {
+                  param0.consume();
+                  return;
+                } else {
+                  if (-11 == (var2 ^ -1)) {
+                    param0.consume();
+                    return;
+                  } else {
+                    return;
+                  }
+                }
               }
             }
           }
-        } else {
-          return;
         }
     }
 

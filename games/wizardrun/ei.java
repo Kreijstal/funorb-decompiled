@@ -48,15 +48,17 @@ final class ei extends wl {
         o[] var6 = null;
         var6 = new o[9];
         var5 = var6;
-        var6[6] = id.a((byte) 107, param1, param3);
-        var5[3] = id.a((byte) 107, param1, param3);
-        var5[2] = id.a((byte) 107, param1, param3);
-        var5[1] = id.a((byte) 107, param1, param3);
-        var5[0] = id.a((byte) 107, param1, param3);
+        o dupTemp$3 = id.a((byte) 107, param1, param3);
+        var6[6] = dupTemp$3;
+        var5[3] = dupTemp$3;
+        var5[2] = dupTemp$3;
+        var5[1] = dupTemp$3;
+        var5[0] = dupTemp$3;
         if (param4 == 20230) {
-          var6[8] = id.a((byte) 76, param0, param3);
-          var5[7] = id.a((byte) 76, param0, param3);
-          var5[5] = id.a((byte) 76, param0, param3);
+          o dupTemp$4 = id.a((byte) 76, param0, param3);
+          var6[8] = dupTemp$4;
+          var5[7] = dupTemp$4;
+          var5[5] = dupTemp$4;
           if (-1 != (param2 ^ -1)) {
             var6[4] = id.a((byte) 98, param2, 64);
             return var5;
@@ -65,9 +67,10 @@ final class ei extends wl {
           }
         } else {
           ei.a(-59);
-          var6[8] = id.a((byte) 76, param0, param3);
-          var5[7] = id.a((byte) 76, param0, param3);
-          var5[5] = id.a((byte) 76, param0, param3);
+          o dupTemp$5 = id.a((byte) 76, param0, param3);
+          var6[8] = dupTemp$5;
+          var5[7] = dupTemp$5;
+          var5[5] = dupTemp$5;
           if (-1 == (param2 ^ -1)) {
             return var5;
           } else {

@@ -50,13 +50,13 @@ final class ae {
     }
 
     final static void a(int param0) {
-        dd var1_ref = null;
+        dd var1_ref_dd = null;
         int var1 = 0;
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
-        String var5_ref = null;
+        String var5_ref_String = null;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
@@ -312,10 +312,10 @@ final class ae {
                 var3 = qh.field_f;
                 qh.a(ka.field_o);
                 var16 = new dd(412, 43);
-                var5_ref = nr.a(new String[1], -1, wm.field_cc);
+                var5_ref_String = nr.a(new String[1], -1, wm.field_cc);
                 nr.field_N = null;
                 var16.e();
-                int discarded$8 = so.field_h.a(var5_ref, 3, 3, -6 + var16.field_z, var16.field_A + -6, 16777215, -1, 0, 1, so.field_h.field_C + so.field_h.field_w);
+                int discarded$8 = so.field_h.a(var5_ref_String, 3, 3, -6 + var16.field_z, var16.field_A + -6, 16777215, -1, 0, 1, so.field_h.field_C + so.field_h.field_w);
                 hd.a(1, 3, var16.field_A, var16, 4, var16.field_z, 0, 0);
                 wa.field_gb.e();
                 var16.c(199 - wa.field_gb.field_G, -wa.field_gb.field_B + 83);
@@ -397,16 +397,16 @@ final class ae {
               } else {
                 L14: {
                   ph.field_f.c(231, 390);
-                  var1_ref = i.field_o;
+                  var1_ref_dd = i.field_o;
                   if ((jc.field_j.field_h ^ -1) != -1) {
                     break L14;
                   } else {
-                    var1_ref = td.field_a;
+                    var1_ref_dd = td.field_a;
                     break L14;
                   }
                 }
                 L15: {
-                  var1_ref.c(0, 0);
+                  var1_ref_dd.c(0, 0);
                   stackOut_49_0 = 40;
                   stackOut_49_1 = 40;
                   stackOut_49_2 = uf.field_X;
@@ -447,10 +447,10 @@ final class ae {
                     ph.field_f.c(232, 389, var2);
                     ph.field_f.c(232, 391, var2);
                     ph.field_f.c(230, 391, var2);
-                    var1_ref.c(1, 1, var2);
-                    var1_ref.c(-1, 1, var2);
-                    var1_ref.c(1, -1, var2);
-                    var1_ref.c(-1, -1, var2);
+                    var1_ref_dd.c(1, 1, var2);
+                    var1_ref_dd.c(-1, 1, var2);
+                    var1_ref_dd.c(1, -1, var2);
+                    var1_ref_dd.c(-1, -1, var2);
                     break L16;
                   }
                 }

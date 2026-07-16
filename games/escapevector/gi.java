@@ -26,7 +26,7 @@ final class gi {
               if (2 != ((gi) this).field_a) {
                 break L1;
               } else {
-                if (((gi) this).field_m >= -1) {
+                if ((((gi) this).field_m ^ -1) >= -1) {
                   break L1;
                 } else {
                   break L0;
@@ -35,7 +35,7 @@ final class gi {
             }
             if (((gi) this).field_b != en.field_l) {
               L2: {
-                if (-3 != mi.field_g) {
+                if (-3 != (mi.field_g ^ -1)) {
                   break L2;
                 } else {
                   if (kl.a(((gi) this).field_j, 0)) {
@@ -140,8 +140,9 @@ final class gi {
                   param4[var6] = var11;
                   var12 = param1[var10];
                   param1[var10] = param1[var6];
+                  int incrementValue$1 = var6;
                   var6++;
-                  param1[var6] = var12;
+                  param1[incrementValue$1] = var12;
                   var10++;
                   continue L3;
                 } else {

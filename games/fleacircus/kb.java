@@ -149,29 +149,35 @@ final class kb extends lh {
             uc stackOut_2_0 = null;
             try {
               L0: {
-                if (param3 == 1024) {
-                  break L0;
-                } else {
-                  var6 = null;
-                  uc discarded$2 = kb.a((java.awt.Component) null, 73, 77, -125);
-                  break L0;
+                L1: {
+                  if (param3 == 1024) {
+                    break L1;
+                  } else {
+                    var6 = null;
+                    uc discarded$2 = kb.a((java.awt.Component) null, 73, 77, -125);
+                    break L1;
+                  }
                 }
+                var4 = Class.forName("ka");
+                var5 = (uc) var4.newInstance();
+                var5.a(param0, param1, param2, -100);
+                stackOut_2_0 = (uc) var5;
+                stackIn_3_0 = stackOut_2_0;
+                break L0;
               }
-              var4 = Class.forName("ka");
-              var5 = (uc) var4.newInstance();
-              var5.a(param0, param1, param2, -100);
-              stackOut_2_0 = (uc) var5;
-              stackIn_3_0 = stackOut_2_0;
-            } catch (java.lang.Throwable decompiledCaughtParameter) {
-              decompiledCaughtException = decompiledCaughtParameter;
-              return stackIn_3_0;
+            } catch (java.lang.Throwable decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              var4_ref = decompiledCaughtException;
+              var5_ref = new bj();
+              ((uc) (Object) var5_ref).a(param0, param1, param2, -104);
+              return (uc) (Object) var5_ref;
             }
+            return stackIn_3_0;
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
             throw new RuntimeException(decompiledCheckedException);
         }
-        return null;
     }
 
     static {

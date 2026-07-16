@@ -67,10 +67,12 @@ final class pi {
                     L5: while (true) {
                       if (var4 <= var6_int) {
                         pd.b(var5, -109);
-                        var3.field_t = new String[2][var5];
-                        var6 = new String[2][var5];
-                        var3.field_j = new int[2][var5 * 4];
-                        var7 = new int[2][var5 * 4];
+                        String[][] dupTemp$2 = new String[2][var5];
+                        var3.field_t = dupTemp$2;
+                        var6 = dupTemp$2;
+                        int[][] dupTemp$3 = new int[2][var5 * 4];
+                        var3.field_j = dupTemp$3;
+                        var7 = dupTemp$3;
                         var8 = ed.field_b;
                         var9 = 0;
                         var10 = 0;

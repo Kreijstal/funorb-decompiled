@@ -84,7 +84,6 @@ final class mj {
     }
 
     private final tf a(boolean param0, int param1, int param2, int param3) {
-        tf var5_ref = null;
         if ((param1 ^ -1) <= (((mj) this).field_m ^ -1)) {
             return null;
         }
@@ -100,16 +99,17 @@ final class mj {
         tf var5 = ((mj) this).field_e[param2 - -(param1 * ((mj) this).field_d)];
         if (var5 == null) {
             if (param0) {
-                ((mj) this).field_e[param2 + param1 * ((mj) this).field_d] = new tf();
-                var5_ref = new tf();
+                tf dupTemp$0 = new tf();
+                ((mj) this).field_e[param2 + param1 * ((mj) this).field_d] = dupTemp$0;
+                var5 = dupTemp$0;
             }
         }
         if (param3 != 0) {
             Object var6 = null;
             mj.a(31, (java.awt.Component) null);
-            return var5_ref;
+            return var5;
         }
-        return var5_ref;
+        return var5;
     }
 
     final fa b(boolean param0) {

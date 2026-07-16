@@ -98,8 +98,9 @@ class nn extends ae {
                 ((nn) this).field_A = ((nn) this).field_A.substring(0, ((nn) this).field_P);
             }
         }
-        ((nn) this).field_Q = ((nn) this).field_A.length();
-        ((nn) this).field_V = ((nn) this).field_A.length();
+        int dupTemp$0 = ((nn) this).field_A.length();
+        ((nn) this).field_Q = dupTemp$0;
+        ((nn) this).field_V = dupTemp$0;
         if (!(param0)) {
             ((nn) this).j(-12956);
         }
@@ -247,7 +248,7 @@ class nn extends ae {
           if (param2 == 1) {
             break L0;
           } else {
-            int discarded$1 = nn.i(88);
+            int discarded$2 = nn.i(88);
             break L0;
           }
         }
@@ -277,7 +278,7 @@ class nn extends ae {
                       if ((((nn) this).field_P ^ -1) == 0) {
                         break L4;
                       } else {
-                        if (((nn) this).field_A.length() < ((nn) this).field_P) {
+                        if ((((nn) this).field_A.length() ^ -1) > (((nn) this).field_P ^ -1)) {
                           break L4;
                         } else {
                           return true;
@@ -287,8 +288,9 @@ class nn extends ae {
                     L5: {
                       if (((nn) this).field_V >= ((nn) this).field_A.length()) {
                         ((nn) this).field_A = ((nn) this).field_A + param1;
-                        ((nn) this).field_V = ((nn) this).field_A.length();
-                        ((nn) this).field_Q = ((nn) this).field_A.length();
+                        int dupTemp$3 = ((nn) this).field_A.length();
+                        ((nn) this).field_V = dupTemp$3;
+                        ((nn) this).field_Q = dupTemp$3;
                         break L5;
                       } else {
                         ((nn) this).field_A = ((nn) this).field_A.substring(0, ((nn) this).field_V) + param1 + ((nn) this).field_A.substring(((nn) this).field_V, ((nn) this).field_A.length());
@@ -305,7 +307,7 @@ class nn extends ae {
               L6: {
                 if (-86 != (param0 ^ -1)) {
                   if (101 != param0) {
-                    if (param0 == -14) {
+                    if ((param0 ^ -1) == -14) {
                       ((nn) this).k(0);
                       return true;
                     } else {
@@ -343,7 +345,7 @@ class nn extends ae {
                         }
                       } else {
                         if (param0 == 97) {
-                          if (((nn) this).field_V < ((nn) this).field_A.length()) {
+                          if ((((nn) this).field_V ^ -1) > (((nn) this).field_A.length() ^ -1)) {
                             L8: {
                               stackOut_48_0 = this;
                               stackOut_48_1 = 81;
@@ -375,7 +377,7 @@ class nn extends ae {
                             break L6;
                           }
                         } else {
-                          if (-103 != param0) {
+                          if (-103 != (param0 ^ -1)) {
                             if ((param0 ^ -1) != -104) {
                               if ((param0 ^ -1) == -85) {
                                 this.m(param2 ^ 83);
@@ -385,7 +387,7 @@ class nn extends ae {
                                   if (!sn.field_a[82]) {
                                     break L9;
                                   } else {
-                                    if (param0 == -66) {
+                                    if ((param0 ^ -1) == -66) {
                                       this.f(true);
                                       return true;
                                     } else {
@@ -397,7 +399,7 @@ class nn extends ae {
                                   if (!sn.field_a[82]) {
                                     break L10;
                                   } else {
-                                    if (-67 != param0) {
+                                    if (-67 != (param0 ^ -1)) {
                                       break L10;
                                     } else {
                                       this.l(83);
@@ -432,7 +434,7 @@ class nn extends ae {
                       this.h(1);
                       return true;
                     } else {
-                      if (((nn) this).field_V >= ((nn) this).field_A.length()) {
+                      if ((((nn) this).field_V ^ -1) <= (((nn) this).field_A.length() ^ -1)) {
                         break L6;
                       } else {
                         ((nn) this).field_Q = 1 + ((nn) this).field_V;
@@ -442,7 +444,7 @@ class nn extends ae {
                     }
                   }
                 } else {
-                  if (((nn) this).field_V != ((nn) this).field_Q) {
+                  if ((((nn) this).field_V ^ -1) != (((nn) this).field_Q ^ -1)) {
                     this.h(1);
                     return true;
                   } else {
@@ -473,17 +475,36 @@ class nn extends ae {
 
     private final int n(int param0) {
         int var2 = 0;
-        int var3 = TetraLink.field_J;
-        if (((nn) this).field_V == 0) {
-            return ((nn) this).field_V;
+        int var3 = 0;
+        var3 = TetraLink.field_J;
+        if (((nn) this).field_V != 0) {
+          L0: {
+            if (param0 == -33) {
+              break L0;
+            } else {
+              field_Y = null;
+              break L0;
+            }
+          }
+          var2 = ((nn) this).field_V - 1;
+          L1: while (true) {
+            L2: {
+              if ((var2 ^ -1) >= -1) {
+                break L2;
+              } else {
+                if (((nn) this).field_A.charAt(-1 + var2) == 32) {
+                  break L2;
+                } else {
+                  var2--;
+                  continue L1;
+                }
+              }
+            }
+            return var2;
+          }
+        } else {
+          return ((nn) this).field_V;
         }
-        if (param0 != -33) {
-            field_Y = null;
-        }
-        for (var2 = ((nn) this).field_V - 1; (var2 ^ -1) < -1; var2--) {
-            // if_icmpeq L67
-        }
-        return var2;
     }
 
     final static void g(byte param0) {
@@ -604,48 +625,28 @@ class nn extends ae {
         try {
             String var2 = null;
             Exception var2_ref = null;
-            int statePc = 0;
-            Throwable caughtException = null;
-            stateLoop: while (true) {
-                switch (statePc) {
-                    case 0: {
-                        try {
-                            var2 = (String) java.awt.Toolkit.getDefaultToolkit().getSystemClipboard().getContents((Object) null).getTransferData(java.awt.datatransfer.DataFlavor.stringFlavor);
-                            this.h(1);
-                            this.a(var2, true);
-                            if (param0 >= 29) {
-                                statePc = 4;
-                            } else {
-                                statePc = 1;
-                            }
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_0) {
-                            caughtException = stateCaught_0;
-                            statePc = 3;
-                            continue stateLoop;
-                        }
-                    }
-                    case 1: {
-                        try {
-                            ((nn) this).field_P = -31;
-                            statePc = 4;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_1) {
-                            caughtException = stateCaught_1;
-                            statePc = 3;
-                            continue stateLoop;
-                        }
-                    }
-                    case 3: {
-                        var2_ref = (Exception) (Object) caughtException;
-                        statePc = 4;
-                        continue stateLoop;
-                    }
-                    case 4: {
-                        return;
-                    }
-                    default: throw new IllegalStateException("invalid CFG state " + statePc);
+            Throwable decompiledCaughtException = null;
+            try {
+              L0: {
+                L1: {
+                  var2 = (String) java.awt.Toolkit.getDefaultToolkit().getSystemClipboard().getContents((Object) null).getTransferData(java.awt.datatransfer.DataFlavor.stringFlavor);
+                  this.h(1);
+                  this.a(var2, true);
+                  if (param0 >= 29) {
+                    break L1;
+                  } else {
+                    ((nn) this).field_P = -31;
+                    break L1;
+                  }
                 }
+                break L0;
+              }
+            } catch (java.lang.Exception decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              L2: {
+                var2_ref = (Exception) (Object) decompiledCaughtException;
+                break L2;
+              }
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -665,19 +666,39 @@ class nn extends ae {
     }
 
     private final int d(boolean param0) {
+        int var2 = 0;
         int var3 = 0;
-        int var4 = TetraLink.field_J;
-        if (param0) {
+        int var4 = 0;
+        L0: {
+          var4 = TetraLink.field_J;
+          if (!param0) {
+            break L0;
+          } else {
             field_cb = -17;
+            break L0;
+          }
         }
-        int var2 = ((nn) this).field_A.length();
-        if (((nn) this).field_V == var2) {
-            return ((nn) this).field_V;
+        var2 = ((nn) this).field_A.length();
+        if (((nn) this).field_V != var2) {
+          var3 = 1 + ((nn) this).field_V;
+          L1: while (true) {
+            L2: {
+              if (var2 <= var3) {
+                break L2;
+              } else {
+                if (((nn) this).field_A.charAt(var3 + -1) == 32) {
+                  break L2;
+                } else {
+                  var3++;
+                  continue L1;
+                }
+              }
+            }
+            return var3;
+          }
+        } else {
+          return ((nn) this).field_V;
         }
-        for (var3 = 1 + ((nn) this).field_V; var2 > var3; var3++) {
-            // if_icmpeq L71
-        }
-        return var3;
     }
 
     final static void a(String param0, float param1, int param2, boolean param3) {

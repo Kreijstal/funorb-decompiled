@@ -10,104 +10,37 @@ final class li implements uj {
     public final void a(boolean param0) {
         RuntimeException var2 = null;
         int stackIn_4_0 = 0;
-        int stackOut_1_0 = 0;
+        RuntimeException decompiledCaughtException = null;
         int stackOut_3_0 = 0;
-        int statePc = 0;
-        Throwable caughtException = null;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    try {
-                        if (uh.field_e) {
-                            statePc = 3;
-                        } else {
-                            statePc = 1;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_0) {
-                        caughtException = stateCaught_0;
-                        statePc = 9;
-                        continue stateLoop;
-                    }
-                }
-                case 1: {
-                    try {
-                        stackOut_1_0 = 1;
-                        stackIn_4_0 = stackOut_1_0;
-                        statePc = 4;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_1) {
-                        caughtException = stateCaught_1;
-                        statePc = 9;
-                        continue stateLoop;
-                    }
-                }
-                case 3: {
-                    try {
-                        stackOut_3_0 = 0;
-                        stackIn_4_0 = stackOut_3_0;
-                        statePc = 4;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_3) {
-                        caughtException = stateCaught_3;
-                        statePc = 9;
-                        continue stateLoop;
-                    }
-                }
-                case 4: {
-                    try {
-                        uh.field_e = stackIn_4_0 != 0;
-                        if (!param0) {
-                            statePc = 10;
-                        } else {
-                            statePc = 5;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_4) {
-                        caughtException = stateCaught_4;
-                        statePc = 7;
-                        continue stateLoop;
-                    }
-                }
-                case 5: {
-                    try {
-                        field_a = null;
-                        statePc = 6;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_5) {
-                        caughtException = stateCaught_5;
-                        statePc = 7;
-                        continue stateLoop;
-                    }
-                }
-                case 6: {
-                    try {
-                        statePc = 10;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_6) {
-                        caughtException = stateCaught_6;
-                        statePc = 9;
-                        continue stateLoop;
-                    }
-                }
-                case 7: {
-                    try {
-                        throw (RuntimeException) (Object) caughtException;
-                    } catch (Throwable stateCaught_7) {
-                        caughtException = stateCaught_7;
-                        statePc = 9;
-                        continue stateLoop;
-                    }
-                }
-                case 9: {
-                    var2 = (RuntimeException) (Object) caughtException;
-                    throw lj.a((Throwable) (Object) var2, "li.B(" + param0 + 41);
-                }
-                case 10: {
-                    return;
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
+        int stackOut_1_0 = 0;
+        try {
+          L0: {
+            L1: {
+              if (uh.field_e) {
+                stackOut_3_0 = 0;
+                stackIn_4_0 = stackOut_3_0;
+                break L1;
+              } else {
+                stackOut_1_0 = 1;
+                stackIn_4_0 = stackOut_1_0;
+                break L1;
+              }
             }
+            L2: {
+              uh.field_e = stackIn_4_0 != 0;
+              if (!param0) {
+                break L2;
+              } else {
+                field_a = null;
+                break L2;
+              }
+            }
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2 = decompiledCaughtException;
+          throw lj.a((Throwable) (Object) var2, "li.B(" + param0 + 41);
         }
     }
 
@@ -118,14 +51,18 @@ final class li implements uj {
         RuntimeException decompiledCaughtException = null;
         String stackOut_0_0 = null;
         try {
-          var2_int = 82 / ((param0 - -33) / 62);
-          stackOut_0_0 = "Toggle Drawing End Game Screen";
-          stackIn_1_0 = stackOut_0_0;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter) {
-          decompiledCaughtException = decompiledCaughtParameter;
-          return stackIn_1_0;
+          L0: {
+            var2_int = 82 / ((param0 - -33) / 62);
+            stackOut_0_0 = "Toggle Drawing End Game Screen";
+            stackIn_1_0 = stackOut_0_0;
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2 = decompiledCaughtException;
+          throw lj.a((Throwable) (Object) var2, "li.A(" + param0 + 41);
         }
-        return null;
+        return stackIn_1_0;
     }
 
     final static void a(int param0, bj param1) {
@@ -6866,24 +6803,24 @@ final class li implements uj {
         RuntimeException var1 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          try {
-            L0: {
+          L0: {
+            L1: {
               field_a = null;
               if (param0 <= -76) {
-                break L0;
+                break L1;
               } else {
                 field_a = null;
-                break L0;
+                break L1;
               }
             }
-          } catch (java.lang.RuntimeException decompiledCaughtParameter) {
-            decompiledCaughtException = decompiledCaughtParameter;
+            field_d = null;
+            field_b = null;
+            break L0;
           }
-          throw decompiledCaughtException;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter) {
-          decompiledCaughtException = decompiledCaughtParameter;
-          field_d = null;
-          field_b = null;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1 = decompiledCaughtException;
+          throw lj.a((Throwable) (Object) var1, "li.C(" + param0 + 41);
         }
     }
 

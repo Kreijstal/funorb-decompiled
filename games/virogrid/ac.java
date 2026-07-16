@@ -27,7 +27,6 @@ final class ac {
         cj var11 = null;
         cj var18 = null;
         km var19 = null;
-        km var19_ref = null;
         cj var20 = null;
         km var21 = null;
         km var23 = null;
@@ -48,12 +47,10 @@ final class ac {
         km var60 = null;
         cj var63 = null;
         km var64 = null;
-        km var64_ref = null;
         cj var65 = null;
         km var66 = null;
         cj var69 = null;
         km var70 = null;
-        km var70_ref = null;
         cj var71 = null;
         cj var72 = null;
         var7 = Virogrid.field_F ? 1 : 0;
@@ -183,7 +180,7 @@ final class ac {
                     } else {
                       var64 = ln.field_i[var4];
                       var66 = var64;
-                      var70_ref = var66;
+                      var70 = var66;
                       var66 = var64;
                       if (var64 != null) {
                         L11: {
@@ -256,7 +253,7 @@ final class ac {
                       var56 = ln.field_i[var4];
                       var58 = var56;
                       var60 = var58;
-                      var64_ref = var60;
+                      var64 = var60;
                       var58 = var56;
                       if (var56 != null) {
                         L17: {
@@ -439,17 +436,17 @@ final class ac {
                     }
                     return;
                   } else {
-                    var19_ref = ln.field_i[var4];
-                    var21 = var19_ref;
+                    var19 = ln.field_i[var4];
+                    var21 = var19;
                     var23 = var21;
                     var25 = var23;
-                    var21 = var19_ref;
-                    if (var19_ref != null) {
+                    var21 = var19;
+                    if (var19 != null) {
                       L32: {
-                        if (-1 == (var19_ref.field_nb ^ -1)) {
+                        if (-1 == (var19.field_nb ^ -1)) {
                           break L32;
                         } else {
-                          kh.a(var19_ref, var4, 20435);
+                          kh.a(var19, var4, 20435);
                           break L32;
                         }
                       }

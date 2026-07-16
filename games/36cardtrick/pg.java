@@ -18,43 +18,43 @@ final class pg {
         uh var5 = null;
         var3 = Main.field_T;
         if (param0) {
-          var4 = (ad) od.field_b.a((byte) 74);
+          var4 = (ad) (Object) od.field_b.a((byte) 74);
           L0: while (true) {
             if (var4 == null) {
-              var5 = (uh) tl.field_a.a((byte) 74);
+              var5 = (uh) (Object) tl.field_a.a((byte) 74);
               L1: while (true) {
                 if (var5 == null) {
                   return;
                 } else {
                   ei.a(-64, var5, param1);
-                  var5 = (uh) tl.field_a.b((byte) -113);
+                  var5 = (uh) (Object) tl.field_a.b((byte) -113);
                   continue L1;
                 }
               }
             } else {
               aa.a(var4, 3298, param1);
-              var4 = (ad) od.field_b.b((byte) -103);
+              var4 = (ad) (Object) od.field_b.b((byte) -103);
               continue L0;
             }
           }
         } else {
           pg.a(false, 127);
-          var4 = (ad) od.field_b.a((byte) 74);
+          var4 = (ad) (Object) od.field_b.a((byte) 74);
           L2: while (true) {
             if (var4 == null) {
-              var5 = (uh) tl.field_a.a((byte) 74);
+              var5 = (uh) (Object) tl.field_a.a((byte) 74);
               L3: while (true) {
                 if (var5 == null) {
                   return;
                 } else {
                   ei.a(-64, var5, param1);
-                  var5 = (uh) tl.field_a.b((byte) -113);
+                  var5 = (uh) (Object) tl.field_a.b((byte) -113);
                   continue L3;
                 }
               }
             } else {
               aa.a(var4, 3298, param1);
-              var4 = (ad) od.field_b.b((byte) -103);
+              var4 = (ad) (Object) od.field_b.b((byte) -103);
               continue L2;
             }
           }
@@ -64,7 +64,7 @@ final class pg {
     final void a(int param0, Object param1, long param2) {
         this.a(param2, 1, 10, param1);
         if (param0 <= 118) {
-            field_a = (Random) null;
+            field_a = null;
         }
     }
 
@@ -92,7 +92,7 @@ final class pg {
         this.a(param0, (byte) 124);
         ((pg) this).field_e = ((pg) this).field_e - param1;
         while ((((pg) this).field_e ^ -1) > -1) {
-            var8 = (pd) ((pg) this).field_g.a(false);
+            var8 = (pd) (Object) ((pg) this).field_g.a(false);
             this.a((byte) 107, var8);
         }
         tf var6 = new tf(param3, param1);
@@ -104,7 +104,7 @@ final class pg {
     private final void a(byte param0, pd param1) {
         if (param1 == null) {
           if (param0 != 107) {
-            field_b = (String) null;
+            field_b = null;
             return;
           } else {
             return;
@@ -112,11 +112,11 @@ final class pg {
         } else {
           param1.c(109);
           param1.d(param0 ^ 103);
-          ((pg) this).field_e = ((pg) this).field_e + ((pd) param1).field_k;
+          ((pg) this).field_e = ((pg) this).field_e + param1.field_k;
           if (param0 == 107) {
             return;
           } else {
-            field_b = (String) null;
+            field_b = null;
             return;
           }
         }
@@ -133,18 +133,18 @@ final class pg {
         Object var5 = null;
         tf var6 = null;
         pd var7 = null;
-        var7 = (pd) ((pg) this).field_c.a((byte) 120, param0);
+        var7 = (pd) (Object) ((pg) this).field_c.a((byte) 120, param0);
         if (var7 != null) {
           var5 = var7.e(param1);
           if (var5 == null) {
             var7.c(100);
             var7.d(12);
-            ((pg) this).field_e = ((pg) this).field_e + ((pd) var7).field_k;
+            ((pg) this).field_e = ((pg) this).field_e + var7.field_k;
             return null;
           } else {
             if (var7.f(param1 ^ 0)) {
-              var6 = new tf(var5, ((pd) var7).field_k);
-              ((pg) this).field_c.a(-96, ((pd) var7).field_e, (qb) (Object) var6);
+              var6 = new tf(var5, var7.field_k);
+              ((pg) this).field_c.a(-96, var7.field_e, (qb) (Object) var6);
               ((pg) this).field_g.a(-82, (he) (Object) var6);
               ((pd) (Object) var6).field_j = 0L;
               var7.c(105);
@@ -169,7 +169,7 @@ final class pg {
         if (param1 != 124) {
             return;
         }
-        pd var4 = (pd) ((pg) this).field_c.a((byte) 83, param0);
+        pd var4 = (pd) (Object) ((pg) this).field_c.a((byte) 83, param0);
         this.a((byte) 107, var4);
     }
 

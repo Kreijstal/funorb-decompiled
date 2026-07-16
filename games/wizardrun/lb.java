@@ -113,8 +113,9 @@ final class lb {
                       var16 = 256 - var15;
                       var14 = var14 + var6;
                       if (-1 >= (var15 ^ -1)) {
+                        int incrementValue$2 = var9;
                         var9++;
-                        var17 = param3.field_B[var9];
+                        var17 = param3.field_B[incrementValue$2];
                         if (var17 != 0) {
                           if (var15 <= 255) {
                             var18 = ed.field_k[var8];
@@ -222,8 +223,9 @@ final class lb {
                       var16 = 256 - var15;
                       var14 = var14 + var6;
                       if (-1 >= (var15 ^ -1)) {
+                        int incrementValue$3 = var9;
                         var9++;
-                        var17 = param3.field_B[var9];
+                        var17 = param3.field_B[incrementValue$3];
                         if (var17 != 0) {
                           if (var15 <= 255) {
                             var18 = ed.field_k[var8];

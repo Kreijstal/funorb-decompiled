@@ -225,15 +225,17 @@ final class qo extends vf {
         if (param0 != 73) {
             return null;
         }
-        ((qo) this).field_u[param1] = new gj();
-        return new gj();
+        gj dupTemp$0 = new gj();
+        ((qo) this).field_u[param1] = dupTemp$0;
+        return dupTemp$0;
     }
 
     public qo() {
         ((qo) this).field_u = new gj[6];
         ((qo) this).field_v = new gj();
-        ((qo) this).field_u[0] = new gj();
-        gj var1 = new gj();
+        gj dupTemp$0 = new gj();
+        ((qo) this).field_u[0] = dupTemp$0;
+        gj var1 = dupTemp$0;
         var1.a(false);
     }
 
@@ -291,10 +293,11 @@ final class qo extends vf {
                       stackIn_8_2 = stackOut_7_2;
                       break L2;
                     } else {
-                      param2.field_u[var5] = new gj();
+                      gj dupTemp$49 = new gj();
+                      param2.field_u[var5] = dupTemp$49;
                       stackOut_6_0 = (gj) (Object) stackIn_6_0;
                       stackOut_6_1 = stackIn_6_1;
-                      stackOut_6_2 = new gj();
+                      stackOut_6_2 = (gj) dupTemp$49;
                       stackIn_8_0 = stackOut_6_0;
                       stackIn_8_1 = stackOut_6_1;
                       stackIn_8_2 = stackOut_6_2;

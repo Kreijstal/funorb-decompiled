@@ -55,29 +55,52 @@ final class pq {
 
     final void f(int param0) {
         int var2 = 0;
-        ((pq) this).field_l = ((pq) this).field_I + ((pq) this).field_b * -8;
-        ((pq) this).field_h = ((pq) this).field_t - -(-((pq) this).field_n * -8);
-        if (0 == ((pq) this).field_l) {
-            // ifne L52
-        } else {
-            var2 = rf.a(aj.a(((pq) this).field_l, false, ((pq) this).field_l) + aj.a(((pq) this).field_h, false, ((pq) this).field_h), -123);
-            if (var2 != 0) {
-                ((pq) this).field_l = lh.a(var2, (byte) -100, (long)((pq) this).field_l);
-                ((pq) this).field_h = lh.a(var2, (byte) -75, (long)((pq) this).field_h);
+        L0: {
+          L1: {
+            ((pq) this).field_l = ((pq) this).field_I + ((pq) this).field_b * -8;
+            ((pq) this).field_h = ((pq) this).field_t - -(-((pq) this).field_n * -8);
+            if (0 != ((pq) this).field_l) {
+              break L1;
+            } else {
+              if (((pq) this).field_h != 0) {
+                break L1;
+              } else {
+                break L0;
+              }
             }
+          }
+          var2 = rf.a(aj.a(((pq) this).field_l, false, ((pq) this).field_l) + aj.a(((pq) this).field_h, false, ((pq) this).field_h), -123);
+          if (var2 == 0) {
+            break L0;
+          } else {
+            ((pq) this).field_l = lh.a(var2, (byte) -100, (long)((pq) this).field_l);
+            ((pq) this).field_h = lh.a(var2, (byte) -75, (long)((pq) this).field_h);
+            break L0;
+          }
         }
         var2 = 83 / ((param0 - 41) / 46);
     }
 
     final void a(int param0, int param1) {
-        if (((pq) this).field_I == -1) {
-            // if_icmpne L19
-        } else {
-            ((pq) this).field_g = ((pq) this).field_g + aj.a(-((pq) this).field_w + param0, false, ((pq) this).field_I);
-            ((pq) this).field_k = ((pq) this).field_k + aj.a(param0 - ((pq) this).field_w, false, ((pq) this).field_t);
-            ((pq) this).field_p = true;
+        int var3 = 0;
+        L0: {
+          L1: {
+            if ((((pq) this).field_I ^ -1) != -1) {
+              break L1;
+            } else {
+              if (-1 != (((pq) this).field_t ^ -1)) {
+                break L1;
+              } else {
+                break L0;
+              }
+            }
+          }
+          ((pq) this).field_g = ((pq) this).field_g + aj.a(-((pq) this).field_w + param0, false, ((pq) this).field_I);
+          ((pq) this).field_k = ((pq) this).field_k + aj.a(param0 - ((pq) this).field_w, false, ((pq) this).field_t);
+          ((pq) this).field_p = true;
+          break L0;
         }
-        int var3 = 34 / ((58 - param1) / 45);
+        var3 = 34 / ((58 - param1) / 45);
         ((pq) this).field_w = param0;
     }
 
@@ -179,18 +202,18 @@ final class pq {
           }
         }
         var2 = ((pq) this).field_v;
-        if (-1 != var2) {
-          if (-2 != var2) {
-            if (-3 != (var2 ^ -1)) {
-              return "invalid";
-            } else {
+        if (-1 == (var2 ^ -1)) {
+          return "Stopped";
+        } else {
+          if (-2 != (var2 ^ -1)) {
+            if (-3 == (var2 ^ -1)) {
               return "Rolling";
+            } else {
+              return "invalid";
             }
           } else {
             return "Sliding";
           }
-        } else {
-          return "Stopped";
         }
     }
 
@@ -292,45 +315,84 @@ final class pq {
     }
 
     final static void a(float param0, float param1, float param2, float param3, float param4, float param5, int param6) {
-        if (null != ta.field_h) {
-            // if_acmpeq L24
-            // if_acmpeq L24
-        } else {
-            wm.field_Xb = new ai();
-            ta.field_h = new gl((kd) (Object) wm.field_Xb);
-            qf.field_d.b((kd) (Object) ta.field_h);
-            mp.field_R = new ko();
+        L0: {
+          L1: {
+            if (null == ta.field_h) {
+              break L1;
+            } else {
+              if (null == wm.field_Xb) {
+                break L1;
+              } else {
+                if (null == mp.field_R) {
+                  break L1;
+                } else {
+                  break L0;
+                }
+              }
+            }
+          }
+          wm.field_Xb = new ai();
+          ta.field_h = new gl((kd) (Object) wm.field_Xb);
+          qf.field_d.b((kd) (Object) ta.field_h);
+          mp.field_R = new ko();
+          break L0;
         }
-        ta.field_h.a(param1);
-        ta.field_h.f(param4);
-        ta.field_h.b(param5);
-        ta.field_h.e(param0);
-        if (param6 != -1) {
+        L2: {
+          ta.field_h.a(param1);
+          ta.field_h.f(param4);
+          ta.field_h.b(param5);
+          ta.field_h.e(param0);
+          if (param6 == -1) {
+            break L2;
+          } else {
             field_J = null;
+            break L2;
+          }
         }
         ta.field_h.d(param2);
         ta.field_h.c(param3);
     }
 
     final void b(boolean param0) {
-        if (((pq) this).field_n == 0) {
-            if (0 == ((pq) this).field_b) {
-                // if_icmpeq L162
+        int var2 = 0;
+        L0: {
+          L1: {
+            if (((pq) this).field_n != 0) {
+              break L1;
+            } else {
+              if (0 != ((pq) this).field_b) {
+                break L1;
+              } else {
+                if (-1 == (((pq) this).field_K ^ -1)) {
+                  break L0;
+                } else {
+                  break L1;
+                }
+              }
             }
-        }
-        int var2 = rf.a(aj.a(((pq) this).field_n, false, ((pq) this).field_n) - -aj.a(((pq) this).field_b, false, ((pq) this).field_b) - -aj.a(((pq) this).field_K, false, ((pq) this).field_K), -121);
-        if (!(0 >= var2)) {
+          }
+          var2 = rf.a(aj.a(((pq) this).field_n, false, ((pq) this).field_n) - -aj.a(((pq) this).field_b, false, ((pq) this).field_b) - -aj.a(((pq) this).field_K, false, ((pq) this).field_K), -121);
+          if (0 < var2) {
             ((pq) this).field_E.a(111, -lh.a(var2, (byte) -92, (long)((pq) this).field_n), -lh.a(var2, (byte) -84, (long)((pq) this).field_b), lh.a(var2, (byte) -101, (long)((pq) this).field_K), (int)((double)(var2 * 1024) / 205887.41614566068));
             ((pq) this).field_x.a(3, ((pq) this).field_E);
             ((pq) this).field_x.b(true);
             ((pq) this).field_p = true;
+            break L0;
+          } else {
+            break L0;
+          }
         }
-        ((pq) this).a(65536, -116);
-        ((pq) this).field_k = ((pq) this).field_k + ((pq) this).field_t;
-        ((pq) this).field_j = ((pq) this).field_j + ((pq) this).field_e;
-        ((pq) this).field_g = ((pq) this).field_g + ((pq) this).field_I;
-        if (!param0) {
+        L2: {
+          ((pq) this).a(65536, -116);
+          ((pq) this).field_k = ((pq) this).field_k + ((pq) this).field_t;
+          ((pq) this).field_j = ((pq) this).field_j + ((pq) this).field_e;
+          ((pq) this).field_g = ((pq) this).field_g + ((pq) this).field_I;
+          if (param0) {
+            break L2;
+          } else {
             ((pq) this).field_l = 81;
+            break L2;
+          }
         }
     }
 
@@ -392,25 +454,13 @@ final class pq {
               L3: {
                 ((pq) this).field_l = ((pq) this).field_b * -8;
                 ((pq) this).field_h = -((pq) this).field_n * -8;
-                if (((pq) this).field_l != -1) {
+                if ((((pq) this).field_l ^ -1) != -1) {
                   break L3;
                 } else {
-                  if (-1 != ((pq) this).field_h) {
-                    break L3;
+                  if (-1 == (((pq) this).field_h ^ -1)) {
+                    break L2;
                   } else {
-                    L4: {
-                      if (aj.a(((pq) this).field_I, param0, ((pq) this).field_I) + aj.a(((pq) this).field_t, false, ((pq) this).field_t) >= aj.a(3276, false, 3276)) {
-                        break L4;
-                      } else {
-                        if (aj.a(((pq) this).field_n, param0, ((pq) this).field_n) + (aj.a(((pq) this).field_b, param0, ((pq) this).field_b) - -aj.a(((pq) this).field_K, false, ((pq) this).field_K)) >= aj.a(3276, false, 3276)) {
-                          break L4;
-                        } else {
-                          ((pq) this).d((byte) 112);
-                          break L4;
-                        }
-                      }
-                    }
-                    return;
+                    break L3;
                   }
                 }
               }
@@ -430,37 +480,25 @@ final class pq {
                 ((pq) this).field_t = -((pq) this).field_n * 8;
                 var3 = -8 * ((pq) this).field_b;
                 var4_int = -8 * -((pq) this).field_n;
-                if (0 > aj.a(var3, false, ((pq) this).field_l) - -aj.a(var4_int, param0, ((pq) this).field_h)) {
-                  ((pq) this).d((byte) 126);
+                if (0 <= aj.a(var3, false, ((pq) this).field_l) - -aj.a(var4_int, param0, ((pq) this).field_h)) {
                   break L2;
                 } else {
-                  L5: {
-                    if (aj.a(((pq) this).field_I, param0, ((pq) this).field_I) + aj.a(((pq) this).field_t, false, ((pq) this).field_t) >= aj.a(3276, false, 3276)) {
-                      break L5;
-                    } else {
-                      if (aj.a(((pq) this).field_n, param0, ((pq) this).field_n) + (aj.a(((pq) this).field_b, param0, ((pq) this).field_b) - -aj.a(((pq) this).field_K, false, ((pq) this).field_K)) >= aj.a(3276, false, 3276)) {
-                        break L5;
-                      } else {
-                        ((pq) this).d((byte) 112);
-                        break L5;
-                      }
-                    }
-                  }
-                  return;
+                  ((pq) this).d((byte) 126);
+                  break L2;
                 }
               } else {
                 break L2;
               }
             } else {
               if (var2_int == 1) {
-                L6: {
+                L4: {
                   ((pq) this).field_h = -8 * -((pq) this).field_n + ((pq) this).field_t;
                   ((pq) this).field_l = ((pq) this).field_I - -(-8 * ((pq) this).field_b);
                   if (((pq) this).field_l != 0) {
-                    break L6;
+                    break L4;
                   } else {
-                    if (((pq) this).field_h != 0) {
-                      break L6;
+                    if ((((pq) this).field_h ^ -1) != -1) {
+                      break L4;
                     } else {
                       break L2;
                     }
@@ -468,12 +506,12 @@ final class pq {
                 }
                 var2 = bm.a(-104, od.a((long)((pq) this).field_l, (long)((pq) this).field_l, false) + od.a((long)((pq) this).field_h, (long)((pq) this).field_h, false));
                 if (-1L != (var2 ^ -1L)) {
-                  L7: {
+                  L5: {
                     if (-2147483648L > var2) {
-                      break L7;
+                      break L5;
                     } else {
                       if (-2147483648L <= (var2 ^ -1L)) {
-                        L8: {
+                        L6: {
                           ((pq) this).field_l = lh.a((int)var2, (byte) -128, (long)((pq) this).field_l);
                           ((pq) this).field_h = lh.a((int)var2, (byte) -104, (long)((pq) this).field_h);
                           ((pq) this).field_A = -aj.a(dr.field_f, false, ((pq) this).field_l) / 50;
@@ -485,13 +523,13 @@ final class pq {
                             var10_long = bm.a(-99, var6);
                             ((pq) this).field_A = (int)((long)((pq) this).field_A * var10_long / var8_long);
                             ((pq) this).field_u = (int)(var10_long * (long)((pq) this).field_u / var8_long);
-                            break L8;
+                            break L6;
                           } else {
-                            break L8;
+                            break L6;
                           }
                         }
-                        L9: {
-                          L10: {
+                        L7: {
+                          L8: {
                             ((pq) this).field_I = ((pq) this).field_I + ((pq) this).field_A;
                             ((pq) this).field_t = ((pq) this).field_t + ((pq) this).field_u;
                             ((pq) this).field_a = -lh.a(uh.field_w, (byte) -87, (long)(vn.a(((pq) this).field_h * 8, 0, uh.field_q, dr.field_f) / 50));
@@ -510,12 +548,12 @@ final class pq {
                             var12 = aj.a(((pq) this).field_l, param0, var10) + aj.a(((pq) this).field_h, false, var11);
                             var13 = aj.a(var8, param0, var10) + aj.a(var9, param0, var11);
                             if (var12 >= 0) {
-                              break L10;
+                              break L8;
                             } else {
                               if (var13 > 0) {
-                                break L9;
+                                break L7;
                               } else {
-                                break L10;
+                                break L8;
                               }
                             }
                           }
@@ -525,7 +563,7 @@ final class pq {
                             if (var13 >= 0) {
                               break L2;
                             } else {
-                              break L9;
+                              break L7;
                             }
                           }
                         }
@@ -533,7 +571,7 @@ final class pq {
                         ((pq) this).field_v = 2;
                         break L2;
                       } else {
-                        break L7;
+                        break L5;
                       }
                     }
                   }
@@ -551,15 +589,15 @@ final class pq {
             break L2;
           }
         }
-        L11: {
+        L9: {
           if (aj.a(((pq) this).field_I, param0, ((pq) this).field_I) + aj.a(((pq) this).field_t, false, ((pq) this).field_t) >= aj.a(3276, false, 3276)) {
-            break L11;
+            break L9;
           } else {
-            if (aj.a(((pq) this).field_n, param0, ((pq) this).field_n) + (aj.a(((pq) this).field_b, param0, ((pq) this).field_b) - -aj.a(((pq) this).field_K, false, ((pq) this).field_K)) >= aj.a(3276, false, 3276)) {
-              break L11;
+            if ((aj.a(((pq) this).field_n, param0, ((pq) this).field_n) + (aj.a(((pq) this).field_b, param0, ((pq) this).field_b) - -aj.a(((pq) this).field_K, false, ((pq) this).field_K)) ^ -1) <= (aj.a(3276, false, 3276) ^ -1)) {
+              break L9;
             } else {
               ((pq) this).d((byte) 112);
-              break L11;
+              break L9;
             }
           }
         }

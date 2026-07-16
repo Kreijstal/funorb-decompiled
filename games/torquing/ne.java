@@ -47,8 +47,9 @@ final class ne {
                 if (((ne) this).field_c[var7] >= 0) {
                   break L4;
                 } else {
+                  int incrementValue$8 = param4;
                   param4++;
-                  param0[param4] = (byte)(var10 ^ -1);
+                  param0[incrementValue$8] = (byte)(var10 ^ -1);
                   if (param4 < param5) {
                     var7 = 0;
                     break L4;
@@ -69,8 +70,9 @@ final class ne {
               L6: {
                 var10 = ((ne) this).field_c[var7];
                 if (((ne) this).field_c[var7] < 0) {
+                  int incrementValue$9 = param4;
                   param4++;
-                  param0[param4] = (byte)(var10 ^ -1);
+                  param0[incrementValue$9] = (byte)(var10 ^ -1);
                   if (param5 > param4) {
                     var7 = 0;
                     break L6;
@@ -93,8 +95,9 @@ final class ne {
               L8: {
                 var10 = ((ne) this).field_c[var7];
                 if (((ne) this).field_c[var7] < 0) {
+                  int incrementValue$10 = param4;
                   param4++;
-                  param0[param4] = (byte)(var10 ^ -1);
+                  param0[incrementValue$10] = (byte)(var10 ^ -1);
                   if (param5 > param4) {
                     var7 = 0;
                     break L8;
@@ -119,8 +122,9 @@ final class ne {
                 if (((ne) this).field_c[var7] >= 0) {
                   break L10;
                 } else {
+                  int incrementValue$11 = param4;
                   param4++;
-                  param0[param4] = (byte)(var10 ^ -1);
+                  param0[incrementValue$11] = (byte)(var10 ^ -1);
                   if (param4 < param5) {
                     var7 = 0;
                     break L10;
@@ -141,8 +145,9 @@ final class ne {
               L12: {
                 var10 = ((ne) this).field_c[var7];
                 if (((ne) this).field_c[var7] < 0) {
+                  int incrementValue$12 = param4;
                   param4++;
-                  param0[param4] = (byte)(var10 ^ -1);
+                  param0[incrementValue$12] = (byte)(var10 ^ -1);
                   if (param4 < param5) {
                     var7 = 0;
                     break L12;
@@ -165,8 +170,9 @@ final class ne {
               L14: {
                 var10 = ((ne) this).field_c[var7];
                 if (((ne) this).field_c[var7] < 0) {
+                  int incrementValue$13 = param4;
                   param4++;
-                  param0[param4] = (byte)(var10 ^ -1);
+                  param0[incrementValue$13] = (byte)(var10 ^ -1);
                   if (param5 <= param4) {
                     break L3;
                   } else {
@@ -189,8 +195,9 @@ final class ne {
               L16: {
                 var10 = ((ne) this).field_c[var7];
                 if (((ne) this).field_c[var7] < 0) {
+                  int incrementValue$14 = param4;
                   param4++;
-                  param0[param4] = (byte)(var10 ^ -1);
+                  param0[incrementValue$14] = (byte)(var10 ^ -1);
                   if (param4 < param5) {
                     var7 = 0;
                     break L16;
@@ -212,8 +219,9 @@ final class ne {
               }
               var10 = ((ne) this).field_c[var7];
               if (-1 > ((ne) this).field_c[var7]) {
+                int incrementValue$15 = param4;
                 param4++;
-                param0[param4] = (byte)(var10 ^ -1);
+                param0[incrementValue$15] = (byte)(var10 ^ -1);
                 if (param4 < param5) {
                   var7 = 0;
                   var8++;
@@ -232,15 +240,29 @@ final class ne {
     }
 
     final static void a(java.applet.Applet param0, int param1) {
-        String var2 = param0.getParameter("username");
-        if (param1 != 0) {
+        String var2 = null;
+        CharSequence var3 = null;
+        L0: {
+          var2 = param0.getParameter("username");
+          if (param1 == 0) {
+            break L0;
+          } else {
             field_d = null;
+            break L0;
+          }
         }
-        if (var2 != null) {
-            CharSequence var3 = (CharSequence) (Object) var2;
-            // ifne L45
+        L1: {
+          if (var2 == null) {
+            break L1;
+          } else {
+            var3 = (CharSequence) (Object) var2;
+            if (0L != mm.a(var3, (byte) 116)) {
+              return;
+            } else {
+              break L1;
+            }
+          }
         }
-        return;
     }
 
     public static void a(int param0) {
@@ -270,6 +292,7 @@ final class ne {
           if ((var1 ^ -1) <= -257) {
             field_b = Calendar.getInstance(TimeZone.getTimeZone("GMT"));
             field_a = new int[12];
+            return;
           } else {
             var0 = var1;
             var2 = 0;

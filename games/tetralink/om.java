@@ -31,17 +31,17 @@ final class om extends hl {
             field_Nb = -127;
         }
         if (ul.field_e == param0.field_Ub) {
-            // wide iinc 3 -200
+            var3 -= 200;
         } else {
             if (!(null != param0.field_Ub)) {
-                // wide iinc 3 200
+                var3 += 200;
             }
         }
         if (param2.field_Ub == ul.field_e) {
-            // wide iinc 3 200
+            var3 += 200;
         } else {
             if (param2.field_Ub == null) {
-                // wide iinc 3 -200
+                var3 -= 200;
             }
         }
         return var3 > 0 ? true : false;
@@ -168,7 +168,7 @@ final class om extends hl {
           var9 = TetraLink.field_J;
           f.field_z = param2;
           me.field_d = true;
-          if (-1 == f.field_z) {
+          if (-1 == (f.field_z ^ -1)) {
             var3 = t.a(uf.field_f, 121, ti.field_b, kn.field_f, dk.field_d);
             var4 = 3 + var3;
             ml.field_mb = new int[var4];
@@ -179,7 +179,7 @@ final class om extends hl {
                 io.field_g = new int[2];
                 var5 = 0;
                 L2: while (true) {
-                  if (var5 >= var3) {
+                  if ((var5 ^ -1) <= (var3 ^ -1)) {
                     pj.field_h[-3 + var4] = "";
                     pj.field_h[-2 + var4] = ug.field_X;
                     ml.field_mb[-2 + var4] = 0;
@@ -231,7 +231,7 @@ final class om extends hl {
                 }
               }
             } else {
-              if (-3 == f.field_z) {
+              if (-3 == (f.field_z ^ -1)) {
                 var3 = t.a(uf.field_f, param1 ^ -59, sk.a(new String[1], jg.field_g, 126), kn.field_f, dk.field_d);
                 var4 = -1;
                 var5 = 0;
@@ -261,7 +261,7 @@ final class om extends hl {
                     var5 = 0;
                     L7: while (true) {
                       L8: {
-                        if (var3 <= var5) {
+                        if ((var3 ^ -1) >= (var5 ^ -1)) {
                           break L8;
                         } else {
                           if (!"<%0>".equals((Object) (Object) kn.field_f[var5])) {
@@ -279,7 +279,7 @@ final class om extends hl {
                           rd.a((Object[]) (Object) kn.field_f, 0, (Object[]) (Object) jl.field_b, 0, var4);
                           ah.field_j = new String[-1 + (-var4 + var3)];
                           rd.a((Object[]) (Object) kn.field_f, var4 + 1, (Object[]) (Object) ah.field_j, 0, -var4 + (var3 + -1));
-                          if (fi.field_Ab.length < jl.field_b.length) {
+                          if ((fi.field_Ab.length ^ -1) > (jl.field_b.length ^ -1)) {
                             stackOut_48_0 = jl.field_b.length;
                             stackIn_49_0 = stackOut_48_0;
                             break L9;
@@ -291,7 +291,7 @@ final class om extends hl {
                         }
                         L10: {
                           var5 = stackIn_49_0;
-                          if (qc.field_db.length >= ah.field_j.length) {
+                          if ((qc.field_db.length ^ -1) <= (ah.field_j.length ^ -1)) {
                             stackOut_51_0 = qc.field_db.length;
                             stackIn_52_0 = stackOut_51_0;
                             break L10;
@@ -307,7 +307,7 @@ final class om extends hl {
                         pj.field_h = new String[var7];
                         var8 = 0;
                         L11: while (true) {
-                          if (var7 <= var8) {
+                          if ((var7 ^ -1) >= (var8 ^ -1)) {
                             pj.field_h[1] = wa.field_g;
                             ml.field_mb[1] = 0;
                             io.field_g = new int[2];
@@ -321,12 +321,12 @@ final class om extends hl {
                             pj.field_h[2] = oi.field_g;
                             var8 = 0;
                             L12: while (true) {
-                              if (var8 >= var5) {
+                              if ((var8 ^ -1) <= (var5 ^ -1)) {
                                 pj.field_h[var5 + 6] = null;
                                 ml.field_mb[var5 + 6] = -2;
                                 var8 = 0;
                                 L13: while (true) {
-                                  if (var8 >= var6) {
+                                  if ((var8 ^ -1) <= (var6 ^ -1)) {
                                     tg.field_a = k.a(param1 ^ 10);
                                     break L0;
                                   } else {
@@ -337,7 +337,7 @@ final class om extends hl {
                                       stackIn_65_1 = stackOut_63_1;
                                       stackIn_64_0 = stackOut_63_0;
                                       stackIn_64_1 = stackOut_63_1;
-                                      if (ah.field_j.length <= var8) {
+                                      if ((ah.field_j.length ^ -1) >= (var8 ^ -1)) {
                                         stackOut_65_0 = (String[]) (Object) stackIn_65_0;
                                         stackOut_65_1 = stackIn_65_1;
                                         stackOut_65_2 = "";
@@ -419,7 +419,7 @@ final class om extends hl {
                   ml.field_mb = new int[var4];
                   var5 = 0;
                   L17: while (true) {
-                    if (var5 >= var4) {
+                    if ((var5 ^ -1) <= (var4 ^ -1)) {
                       io.field_g = new int[1];
                       var5 = 0;
                       L18: while (true) {
@@ -453,7 +453,7 @@ final class om extends hl {
                         io.field_g = new int[1];
                         var5 = 0;
                         L20: while (true) {
-                          if (var3 <= var5) {
+                          if ((var3 ^ -1) >= (var5 ^ -1)) {
                             pj.field_h[var4 - 2] = "";
                             pj.field_h[-1 + var4] = d.field_a;
                             ml.field_mb[-1 + var4] = 0;
@@ -481,11 +481,11 @@ final class om extends hl {
                       pj.field_h = new String[var4];
                       var5 = 0;
                       L21: while (true) {
-                        if (var5 >= var4) {
+                        if ((var5 ^ -1) <= (var4 ^ -1)) {
                           io.field_g = new int[2];
                           var5 = 0;
                           L22: while (true) {
-                            if (var3 <= var5) {
+                            if ((var3 ^ -1) >= (var5 ^ -1)) {
                               pj.field_h[-3 + var4] = "";
                               pj.field_h[-2 + var4] = mm.field_q;
                               ml.field_mb[-2 + var4] = 0;
@@ -517,42 +517,46 @@ final class om extends hl {
         var3 = 0;
         var4 = 0;
         L23: while (true) {
-          if (pj.field_h.length <= var4) {
+          if ((pj.field_h.length ^ -1) >= (var4 ^ -1)) {
             L24: {
               if (2 == f.field_z) {
                 var10 = fi.field_Ab;
                 var5 = 0;
                 L25: while (true) {
-                  if (var10.length <= var5) {
+                  if ((var10.length ^ -1) >= (var5 ^ -1)) {
                     var11 = qc.field_db;
                     var5 = 0;
                     L26: while (true) {
-                      if (var11.length <= var5) {
+                      if ((var11.length ^ -1) >= (var5 ^ -1)) {
                         break L24;
                       } else {
-                        var13 = var11[var5];
-                        var7 = fi.a(false, var13, (byte) -106);
-                        if (var3 < var7) {
-                          var3 = var7;
-                          var5++;
-                          continue L26;
-                        } else {
-                          var5++;
-                          continue L26;
+                        L27: {
+                          var13 = var11[var5];
+                          var7 = fi.a(false, var13, (byte) -106);
+                          if ((var3 ^ -1) <= (var7 ^ -1)) {
+                            break L27;
+                          } else {
+                            var3 = var7;
+                            break L27;
+                          }
                         }
+                        var5++;
+                        continue L26;
                       }
                     }
                   } else {
-                    var12 = var10[var5];
-                    var7 = fi.a(false, var12, (byte) -111);
-                    if (var7 > var3) {
-                      var3 = var7;
-                      var5++;
-                      continue L25;
-                    } else {
-                      var5++;
-                      continue L25;
+                    L28: {
+                      var12 = var10[var5];
+                      var7 = fi.a(false, var12, (byte) -111);
+                      if (var7 <= var3) {
+                        break L28;
+                      } else {
+                        var3 = var7;
+                        break L28;
+                      }
                     }
+                    var5++;
+                    continue L25;
                   }
                 }
               } else {
@@ -563,51 +567,53 @@ final class om extends hl {
             ia.field_K = -(var3 >> -1612166463) + var3 + vg.field_Lb;
             lb.field_V = vg.field_Lb - (var3 >> 151106721);
             var4 = 0;
-            L27: while (true) {
-              if (var4 >= pj.field_h.length) {
+            L29: while (true) {
+              if ((var4 ^ -1) <= (pj.field_h.length ^ -1)) {
                 pj.field_e = dh.field_i - (lg.field_X >> 549162945);
                 bl.field_Ob = new int[pj.field_h.length][];
                 if (param1 == 10) {
                   var4 = 0;
                   var5 = pj.field_e;
-                  L28: while (true) {
+                  L30: while (true) {
                     if (var4 >= pj.field_h.length) {
-                      L29: {
+                      L31: {
                         if ((f.field_z ^ -1) == -3) {
                           gm.field_h.a(-1, -1, param0, 101);
-                          break L29;
+                          break L31;
                         } else {
                           gm.field_h.a(gd.a(aa.field_Nb, a.field_a, 8395), 0, param0, 99);
-                          break L29;
+                          break L31;
                         }
                       }
                       return;
                     } else {
-                      var6 = ml.field_mb[var4];
-                      if ((var6 ^ -1) > -1) {
-                        var5 = var5 + la.field_e;
-                        var4++;
-                        continue L28;
-                      } else {
-                        var7 = fi.a(true, pj.field_h[var4], (byte) -83);
-                        var8 = -(var7 >> -915475423) + vg.field_Lb;
-                        var5 = var5 + mn.field_c;
-                        bl.field_Ob[var4] = new int[4];
-                        bl.field_Ob[var4][0] = var8 + -io.field_a;
-                        bl.field_Ob[var4][1] = var5;
-                        bl.field_Ob[var4][2] = var7 - -(io.field_a << -142131391);
-                        bl.field_Ob[var4][3] = (da.field_e << -341530111) + bj.field_d;
-                        var5 = var5 + ((da.field_e << 2078700769) + mn.field_c - -bj.field_d);
-                        var4++;
-                        continue L28;
+                      L32: {
+                        var6 = ml.field_mb[var4];
+                        if ((var6 ^ -1) > -1) {
+                          var5 = var5 + la.field_e;
+                          break L32;
+                        } else {
+                          var7 = fi.a(true, pj.field_h[var4], (byte) -83);
+                          var8 = -(var7 >> -915475423) + vg.field_Lb;
+                          var5 = var5 + mn.field_c;
+                          bl.field_Ob[var4] = new int[4];
+                          bl.field_Ob[var4][0] = var8 + -io.field_a;
+                          bl.field_Ob[var4][1] = var5;
+                          bl.field_Ob[var4][2] = var7 - -(io.field_a << -142131391);
+                          bl.field_Ob[var4][3] = (da.field_e << -341530111) + bj.field_d;
+                          var5 = var5 + ((da.field_e << 2078700769) + mn.field_c - -bj.field_d);
+                          break L32;
+                        }
                       }
+                      var4++;
+                      continue L30;
                     }
                   }
                 } else {
                   return;
                 }
               } else {
-                L30: {
+                L33: {
                   stackOut_104_0 = lg.field_X;
                   stackIn_106_0 = stackOut_104_0;
                   stackIn_105_0 = stackOut_104_0;
@@ -616,41 +622,43 @@ final class om extends hl {
                     stackOut_106_1 = bj.field_d;
                     stackIn_107_0 = stackOut_106_0;
                     stackIn_107_1 = stackOut_106_1;
-                    break L30;
+                    break L33;
                   } else {
                     stackOut_105_0 = stackIn_105_0;
                     stackOut_105_1 = la.field_e;
                     stackIn_107_0 = stackOut_105_0;
                     stackIn_107_1 = stackOut_105_1;
-                    break L30;
+                    break L33;
                   }
                 }
                 lg.field_X = stackIn_107_0 + stackIn_107_1;
                 var4++;
-                continue L27;
+                continue L29;
               }
             }
           } else {
-            L31: {
+            L34: {
               if (ml.field_mb[var4] < 0) {
                 stackOut_86_0 = 0;
                 stackIn_87_0 = stackOut_86_0;
-                break L31;
+                break L34;
               } else {
                 stackOut_85_0 = 1;
                 stackIn_87_0 = stackOut_85_0;
-                break L31;
+                break L34;
               }
             }
-            var5 = fi.a(stackIn_87_0 != 0, pj.field_h[var4], (byte) -77);
-            if (var3 < var5) {
-              var3 = var5;
-              var4++;
-              continue L23;
-            } else {
-              var4++;
-              continue L23;
+            L35: {
+              var5 = fi.a(stackIn_87_0 != 0, pj.field_h[var4], (byte) -77);
+              if (var3 >= var5) {
+                break L35;
+              } else {
+                var3 = var5;
+                break L35;
+              }
             }
+            var4++;
+            continue L23;
           }
         }
     }
@@ -831,8 +839,7 @@ final class om extends hl {
                 stackIn_8_5 = stackOut_6_5;
                 break L3;
               }
-              new mi(stackIn_8_3, stackIn_8_4, stackIn_8_5);
-              ((om) this).field_ac = stackIn_8_1;
+              ((om) this).field_ac = new mi(stackIn_8_3, stackIn_8_4, stackIn_8_5);
               ((om) this).field_Mb.a((byte) 19, (hl) (Object) ((om) this).field_ac);
               break L1;
             }
@@ -1080,8 +1087,9 @@ final class om extends hl {
             if (!(0 != cf.field_p.field_d)) {
                 return false;
             }
-            rj.field_n = k.a(0);
-            sj.field_k = k.a(0);
+            long dupTemp$0 = k.a(0);
+            rj.field_n = dupTemp$0;
+            sj.field_k = dupTemp$0;
             if (-2 != (cf.field_p.field_d ^ -1)) {
                 qi.field_p = hg.field_d;
             } else {

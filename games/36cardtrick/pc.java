@@ -28,6 +28,7 @@ final class pc {
         var1 = 0;
         L0: while (true) {
           if (var1 >= 256) {
+            return;
           } else {
             var0 = var1;
             var2 = 0;

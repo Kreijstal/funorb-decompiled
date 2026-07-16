@@ -122,7 +122,7 @@ final class c {
             }
           }
         }
-        if (param9 == param1) {
+        if ((param9 ^ -1) == (param1 ^ -1)) {
           return wh.a(param7, param9, param0, param5, param6, param3, param10, param2, param4, 98);
         } else {
           if (param7 != param3) {
@@ -154,10 +154,10 @@ final class c {
                   } else {
                     if (var17 <= -param0 + 65536) {
                       var18 = lh.a(var11, (byte) -110, (long)(-param9 + param5 - -aj.a(var17, false, param10)));
-                      if (-1 < var18) {
+                      if (-1 < (var18 ^ -1)) {
                         break L2;
                       } else {
-                        if (-65537 < var18) {
+                        if (-65537 > (var18 ^ -1)) {
                           break L2;
                         } else {
                           return var17 - -param0;

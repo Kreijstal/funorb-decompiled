@@ -38,6 +38,7 @@ final class bg implements Iterable {
     final static void a(byte param0, int param1, int param2, int param3, int param4, int param5) {
         int var6 = 0;
         int var7 = 0;
+        Object var8 = null;
         int stackIn_8_0 = 0;
         int stackIn_24_0 = 0;
         int stackIn_41_0 = 0;
@@ -106,6 +107,7 @@ final class bg implements Iterable {
             }
           } else {
             L4: {
+              var8 = null;
               bg.a(-95, -87, 106, 102, (ej) null, 54, (String) null, 31, -43);
               if (param1 > oe.field_c) {
                 ce.field_b = param1;
@@ -160,6 +162,7 @@ final class bg implements Iterable {
           af.field_k = param1;
           if (param0 < 73) {
             L8: {
+              var8 = null;
               bg.a(-95, -87, 106, 102, (ej) null, 54, (String) null, 31, -43);
               if (param1 > oe.field_c) {
                 ce.field_b = param1;
@@ -264,6 +267,7 @@ final class bg implements Iterable {
     }
 
     final static void a(int param0, int param1, int param2, int param3, ej param4, int param5, String param6, int param7, int param8) {
+        Object var10 = null;
         n.field_d = param1;
         ld.field_C = param2;
         ll.field_b = param3;
@@ -273,6 +277,7 @@ final class bg implements Iterable {
         vc.field_g = param6;
         fa.field_p = param4;
         if (param0 < 39) {
+          var10 = null;
           int discarded$2 = bg.a(7, (byte[]) null, -15);
           od.field_v = (fb) (Object) new wj();
           ib.field_k = new rk(param4);
@@ -291,7 +296,9 @@ final class bg implements Iterable {
     }
 
     final static int a(int param0, byte[] param1, int param2) {
+        Object var4 = null;
         if (param2 != 0) {
+          var4 = null;
           int discarded$2 = bg.a(-89, (byte[]) null, 45);
           return jj.a(0, param1, param0, -64);
         } else {
@@ -300,8 +307,10 @@ final class bg implements Iterable {
     }
 
     final void a(boolean param0, ah param1) {
+        Object var4 = null;
         if (param1.field_l == null) {
           if (!param0) {
+            var4 = null;
             ((bg) this).a(false, (ah) null);
             param1.field_m = ((bg) this).field_b;
             param1.field_l = ((bg) this).field_b.field_l;
@@ -324,6 +333,7 @@ final class bg implements Iterable {
             param1.field_m.field_l = param1;
             return;
           } else {
+            var4 = null;
             ((bg) this).a(false, (ah) null);
             param1.field_m = ((bg) this).field_b;
             param1.field_l = ((bg) this).field_b.field_l;

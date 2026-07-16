@@ -52,9 +52,8 @@ final class rn {
                 break L1;
               }
             }
-            if (param0 != -127) {
+            if (param0 == -127) {
               L2: {
-                rn.a((byte) -124);
                 if (param1 >= -16) {
                   break L2;
                 } else {
@@ -64,7 +63,7 @@ final class rn {
                 }
               }
               L3: {
-                if (3 < param1) {
+                if (3 < (param1 ^ -1)) {
                   var2 += 2;
                   param1 = param1 >> 2;
                   break L3;
@@ -73,7 +72,7 @@ final class rn {
                 }
               }
               L4: {
-                if (1 > param1) {
+                if (1 < (param1 ^ -1)) {
                   param1 = param1 >> 1;
                   var2++;
                   break L4;
@@ -84,6 +83,7 @@ final class rn {
               return var2;
             } else {
               L5: {
+                rn.a((byte) -124);
                 if (param1 >= -16) {
                   break L5;
                 } else {
@@ -93,7 +93,7 @@ final class rn {
                 }
               }
               L6: {
-                if (3 < param1) {
+                if (3 < (param1 ^ -1)) {
                   var2 += 2;
                   param1 = param1 >> 2;
                   break L6;
@@ -102,7 +102,7 @@ final class rn {
                 }
               }
               L7: {
-                if (1 > param1) {
+                if (1 < (param1 ^ -1)) {
                   param1 = param1 >> 1;
                   var2++;
                   break L7;

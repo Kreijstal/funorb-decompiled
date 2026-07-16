@@ -17,7 +17,6 @@ final class qi {
         int var4 = 0;
         int var5 = 0;
         String var6 = null;
-        String var6_ref = null;
         int var7 = 0;
         int var8 = 0;
         wg var9 = null;
@@ -127,7 +126,7 @@ final class qi {
                             break L7;
                           }
                         }
-                        var6_ref = stackIn_23_0;
+                        var6 = stackIn_23_0;
                         break L6;
                       } else {
                         break L6;
@@ -163,7 +162,7 @@ final class qi {
                           break L9;
                         }
                       }
-                      var6_ref = stackIn_32_0;
+                      var6 = stackIn_32_0;
                       break L4;
                     }
                   }
@@ -172,7 +171,7 @@ final class qi {
             }
             L10: {
               if (var4 == -2) {
-                var6_ref = Integer.toString(var2);
+                var6 = Integer.toString(var2);
                 break L10;
               } else {
                 break L10;
@@ -197,7 +196,7 @@ final class qi {
               }
             }
             L12: {
-              var7 = gl.a(stackIn_39_0, stackIn_39_1 != 0, var6_ref);
+              var7 = gl.a(stackIn_39_0, stackIn_39_1 != 0, var6);
               var8 = hn.field_q - (var7 >> -590538751);
               if (var4 < 0) {
                 break L12;
@@ -228,12 +227,12 @@ final class qi {
               }
             }
             if (0 > var4) {
-              j.field_h.b(var6_ref, var8, var1 - -vc.field_bb, var5, -1);
+              j.field_h.b(var6, var8, var1 - -vc.field_bb, var5, -1);
               var1 = var1 + re.field_m;
               var3++;
               continue L2;
             } else {
-              ti.field_g.b(var6_ref, var8, var1 - -ag.field_e, var5, -1);
+              ti.field_g.b(var6, var8, var1 - -ag.field_e, var5, -1);
               var1 = var1 + (bj.field_j - (-oh.field_d - mi.field_c));
               var3++;
               continue L2;

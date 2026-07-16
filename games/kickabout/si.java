@@ -60,15 +60,20 @@ final class si extends gn {
               }
             }
             try {
-              if (param2 != null) {
-                param1.field_a.postEvent((java.awt.AWTEvent) (Object) new java.awt.event.ActionEvent(param2, 1001, "dummy"));
-              } else {
-                return;
+              L3: {
+                if (param2 != null) {
+                  param1.field_a.postEvent((java.awt.AWTEvent) (Object) new java.awt.event.ActionEvent(param2, 1001, "dummy"));
+                  break L3;
+                } else {
+                  return;
+                }
               }
-            } catch (java.lang.Exception decompiledCaughtParameter) {
-              decompiledCaughtException = decompiledCaughtParameter;
+            } catch (java.lang.Exception decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              var3 = (Exception) (Object) decompiledCaughtException;
               return;
             }
+            return;
           }
         } else {
           return;

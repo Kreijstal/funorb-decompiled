@@ -3,7 +3,7 @@
  */
 final class we {
     final static void a(int param0, int param1, int param2, int param3, kc[] param4, int param5, int param6, int param7, int param8, ee param9, kc[] param10, int param11, boolean param12, boolean param13, ee param14) {
-        kc[] var16 = (kc[]) null;
+        Object var16 = null;
         af.a(param14, param5, param2, 0, (byte) -120, af.field_jb, param3, param6, 0, param0, 480, (kc[]) null, param1, param10, param8, param11, param9, wg.field_a, param7, ca.field_b, param4);
         if (!param12) {
             we.a(-28);
@@ -25,8 +25,8 @@ final class we {
         int stackOut_16_0 = 0;
         var6 = Main.field_T;
         var2 = param0.length();
-        if (-1 != var2) {
-          if (-65 < var2) {
+        if (-1 != (var2 ^ -1)) {
+          if (-65 > (var2 ^ -1)) {
             return dj.field_f;
           } else {
             if (param0.charAt(0) == 34) {
@@ -36,7 +36,7 @@ final class we {
                 var3 = 0;
                 var4 = 1;
                 L0: while (true) {
-                  if (-1 + var2 > var4) {
+                  if ((-1 + var2 ^ -1) < (var4 ^ -1)) {
                     var5 = param0.charAt(var4);
                     if (var5 == 92) {
                       L1: {
@@ -54,20 +54,19 @@ final class we {
                       var4++;
                       continue L0;
                     } else {
-                      L2: {
-                        if (var5 != 34) {
-                          break L2;
+                      if (var5 != 34) {
+                        var3 = 0;
+                        var4++;
+                        continue L0;
+                      } else {
+                        if (var3 != 0) {
+                          var3 = 0;
+                          var4++;
+                          continue L0;
                         } else {
-                          if (var3 != 0) {
-                            break L2;
-                          } else {
-                            return ij.field_i;
-                          }
+                          return ij.field_i;
                         }
                       }
-                      var3 = 0;
-                      var4++;
-                      continue L0;
                     }
                   } else {
                     return null;
@@ -78,24 +77,24 @@ final class we {
               var3 = 0;
               if (param1 == 34) {
                 var4 = 0;
-                L3: while (true) {
+                L2: while (true) {
                   if (var2 > var4) {
                     var5 = param0.charAt(var4);
                     if (var5 == 46) {
-                      L4: {
+                      L3: {
                         if (var4 == 0) {
-                          break L4;
+                          break L3;
                         } else {
-                          if (var4 == var2 - 1) {
-                            break L4;
+                          if ((var4 ^ -1) == (var2 - 1 ^ -1)) {
+                            break L3;
                           } else {
                             if (var3 != 0) {
-                              break L4;
+                              break L3;
                             } else {
                               var3 = 1;
                               var4++;
                               var4++;
-                              continue L3;
+                              continue L2;
                             }
                           }
                         }
@@ -108,7 +107,7 @@ final class we {
                         var3 = 0;
                         var4++;
                         var4++;
-                        continue L3;
+                        continue L2;
                       }
                     }
                   } else {
@@ -116,7 +115,7 @@ final class we {
                   }
                 }
               } else {
-                return (nc) null;
+                return null;
               }
             }
           }
@@ -140,10 +139,10 @@ final class we {
     }
 
     final static void b(int param0) {
-        String var2 = null;
+        Object var2 = null;
         if (vg.field_d) {
           if (param0 >= -117) {
-            var2 = (String) null;
+            var2 = null;
             nc discarded$2 = we.a((String) null, 15);
             tj.field_K = true;
             gh.a((byte) 59, false);
@@ -165,7 +164,7 @@ final class we {
         sd.field_c = new j();
         nf.a(true, (byte) -2, true);
         if (param0 != 0) {
-            String var2 = (String) null;
+            Object var2 = null;
             we.a(27, (String) null);
         }
     }

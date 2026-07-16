@@ -72,41 +72,91 @@ class hp extends ga implements jf {
     }
 
     boolean a(int param0, int param1, int param2, int param3, int param4, int param5, ga param6) {
-        int var10 = ZombieDawn.field_J;
-        cj var8 = new cj(((hp) this).field_x);
-        ga var9 = (ga) (Object) var8.c((byte) -127);
-        if (param1 != 1) {
-            return true;
-        }
-        while (var9 != null) {
-            // ifeq L101
-            if (!(!var9.a(param0, 1, ((hp) this).field_j + param2, param3, ((hp) this).field_k + param4, param5, param6))) {
-                return true;
+        cj var8 = null;
+        ga var9 = null;
+        int var10 = 0;
+        var10 = ZombieDawn.field_J;
+        var8 = new cj(((hp) this).field_x);
+        var9 = (ga) (Object) var8.c((byte) -127);
+        if (param1 == 1) {
+          L0: while (true) {
+            L1: {
+              if (var9 == null) {
+                break L1;
+              } else {
+                if (!var9.a((byte) 73)) {
+                  break L1;
+                } else {
+                  if (var9.a(param0, 1, ((hp) this).field_j + param2, param3, ((hp) this).field_k + param4, param5, param6)) {
+                    return true;
+                  } else {
+                    var9 = (ga) (Object) var8.a((byte) 61);
+                    continue L0;
+                  }
+                }
+              }
             }
-            var9 = (ga) (Object) var8.a((byte) 61);
+            return false;
+          }
+        } else {
+          return true;
         }
-        return false;
     }
 
     boolean a(int param0, int param1, ga param2, char param3) {
-        int var8 = ZombieDawn.field_J;
-        cj var9 = new cj(((hp) this).field_x);
-        int var6 = 65 % ((param0 - -83) / 32);
-        ga var7 = (ga) (Object) var9.c((byte) -118);
-        while (var7 != null) {
-            // ifeq L102
-            if (var7.e(-17741)) {
-                if (!(!var7.a(43, param1, param2, param3))) {
-                    return true;
+        int var6 = 0;
+        ga var7 = null;
+        int var8 = 0;
+        cj var9 = null;
+        boolean stackIn_12_0 = false;
+        boolean stackOut_11_0 = false;
+        boolean stackOut_10_0 = false;
+        var8 = ZombieDawn.field_J;
+        var9 = new cj(((hp) this).field_x);
+        var6 = 65 % ((param0 - -83) / 32);
+        var7 = (ga) (Object) var9.c((byte) -118);
+        L0: while (true) {
+          L1: {
+            if (var7 == null) {
+              break L1;
+            } else {
+              if (!var7.a((byte) 73)) {
+                break L1;
+              } else {
+                L2: {
+                  if (!var7.e(-17741)) {
+                    break L2;
+                  } else {
+                    if (var7.a(43, param1, param2, param3)) {
+                      return true;
+                    } else {
+                      break L2;
+                    }
+                  }
                 }
+                var7 = (ga) (Object) var9.a((byte) 61);
+                continue L0;
+              }
             }
-            var7 = (ga) (Object) var9.a((byte) 61);
+          }
+          var6 = param1;
+          if ((var6 ^ -1) != -81) {
+            return false;
+          } else {
+            L3: {
+              if (!bo.field_p[81]) {
+                stackOut_11_0 = ((hp) this).a(1, param2);
+                stackIn_12_0 = stackOut_11_0;
+                break L3;
+              } else {
+                stackOut_10_0 = ((hp) this).b((byte) 119, param2);
+                stackIn_12_0 = stackOut_10_0;
+                break L3;
+              }
+            }
+            return stackIn_12_0;
+          }
         }
-        var6 = param1;
-        if ((var6 ^ -1) == -81) {
-            return bo.field_p[81] ? ((hp) this).b((byte) 119, param2) : ((hp) this).a(1, param2);
-        }
-        return false;
     }
 
     void a(int param0, int param1, int param2, int param3) {
@@ -129,14 +179,14 @@ class hp extends ga implements jf {
     }
 
     String d(int param0) {
-        String var4_ref = null;
+        String var4_ref_String = null;
         int var5 = ZombieDawn.field_J;
         cj var2 = new cj(((hp) this).field_x);
         ga var3 = (ga) (Object) var2.c((byte) -123);
         while (var3 != null) {
-            var4_ref = var3.d(100);
-            if (var4_ref != null) {
-                return var4_ref;
+            var4_ref_String = var3.d(100);
+            if (var4_ref_String != null) {
+                return var4_ref_String;
             }
             var3 = (ga) (Object) var2.a((byte) 61);
         }
@@ -174,22 +224,42 @@ class hp extends ga implements jf {
     }
 
     final boolean a(ga param0, int param1, int param2, int param3, int param4, boolean param5, int param6) {
-        int var10 = ZombieDawn.field_J;
-        cj var8 = new cj(((hp) this).field_x);
-        ga var9 = (ga) (Object) var8.c((byte) -122);
-        while (var9 != null) {
-            // ifeq L95
-            if (var9.e(-17741)) {
-                if (!(!var9.a(param0, param1, param2, param3, param4, param5, param6))) {
-                    return true;
+        cj var8 = null;
+        ga var9 = null;
+        int var10 = 0;
+        var10 = ZombieDawn.field_J;
+        var8 = new cj(((hp) this).field_x);
+        var9 = (ga) (Object) var8.c((byte) -122);
+        L0: while (true) {
+          L1: {
+            if (var9 == null) {
+              break L1;
+            } else {
+              if (!var9.a((byte) 73)) {
+                break L1;
+              } else {
+                L2: {
+                  if (!var9.e(-17741)) {
+                    break L2;
+                  } else {
+                    if (var9.a(param0, param1, param2, param3, param4, param5, param6)) {
+                      return true;
+                    } else {
+                      break L2;
+                    }
+                  }
                 }
+                var9 = (ga) (Object) var8.a((byte) 61);
+                continue L0;
+              }
             }
-            var9 = (ga) (Object) var8.a((byte) 61);
-        }
-        if (!param5) {
+          }
+          if (param5) {
+            return false;
+          } else {
             return true;
+          }
         }
-        return false;
     }
 
     final StringBuilder a(Hashtable param0, StringBuilder param1, boolean param2, int param3) {
@@ -204,15 +274,30 @@ class hp extends ga implements jf {
     }
 
     void a(ga param0, byte param1, int param2, int param3) {
-        int var8 = ZombieDawn.field_J;
+        cj var5 = null;
+        int var6 = 0;
+        ga var7 = null;
+        int var8 = 0;
+        var8 = ZombieDawn.field_J;
         super.a(param0, (byte) -116, param2, param3);
-        cj var5 = new cj(((hp) this).field_x);
-        int var6 = -6 % ((param1 - 46) / 42);
-        ga var7 = (ga) (Object) var5.c((byte) -128);
-        while (var7 != null) {
-            // ifeq L104
-            var7.a(param0, (byte) -75, param2 + ((hp) this).field_j, param3 - -((hp) this).field_k);
-            var7 = (ga) (Object) var5.a((byte) 61);
+        var5 = new cj(((hp) this).field_x);
+        var6 = -6 % ((param1 - 46) / 42);
+        var7 = (ga) (Object) var5.c((byte) -128);
+        L0: while (true) {
+          L1: {
+            if (var7 == null) {
+              break L1;
+            } else {
+              if (!var7.a((byte) 73)) {
+                break L1;
+              } else {
+                var7.a(param0, (byte) -75, param2 + ((hp) this).field_j, param3 - -((hp) this).field_k);
+                var7 = (ga) (Object) var5.a((byte) 61);
+                continue L0;
+              }
+            }
+          }
+          return;
         }
     }
 
@@ -279,16 +364,35 @@ class hp extends ga implements jf {
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4, ga param5) {
-        int var9 = ZombieDawn.field_J;
-        cj var7 = new cj(((hp) this).field_x);
-        ga var8 = (ga) (Object) var7.c((byte) -121);
-        while (var8 != null) {
-            // ifeq L85
-            var8.a(((hp) this).field_k + param0, 21, param2, param3, ((hp) this).field_j + param4, param5);
-            var8 = (ga) (Object) var7.a((byte) 61);
-        }
-        if (param1 < 1) {
-            ((hp) this).field_x = null;
+        cj var7 = null;
+        ga var8 = null;
+        int var9 = 0;
+        var9 = ZombieDawn.field_J;
+        var7 = new cj(((hp) this).field_x);
+        var8 = (ga) (Object) var7.c((byte) -121);
+        L0: while (true) {
+          L1: {
+            if (var8 == null) {
+              break L1;
+            } else {
+              if (!var8.a((byte) 73)) {
+                break L1;
+              } else {
+                var8.a(((hp) this).field_k + param0, 21, param2, param3, ((hp) this).field_j + param4, param5);
+                var8 = (ga) (Object) var7.a((byte) 61);
+                continue L0;
+              }
+            }
+          }
+          L2: {
+            if (param1 >= 1) {
+              break L2;
+            } else {
+              ((hp) this).field_x = null;
+              break L2;
+            }
+          }
+          return;
         }
     }
 

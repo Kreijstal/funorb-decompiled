@@ -52,7 +52,7 @@ final class oj extends km {
         String var11 = null;
         String var12 = null;
         int var13 = 0;
-        mg var14 = null;
+        Object var14 = null;
         int var15 = 0;
         e var17 = null;
         e var18 = null;
@@ -74,6 +74,7 @@ final class oj extends km {
           if (var13 >= ((oj) this).field_Nb) {
             ((oj) this).field_Eb = ((oj) this).field_Eb + (da.field_h.field_u - -10);
             this.b(12, (byte) 49);
+            return;
           } else {
             L1: {
               if (0 >= ((oj) this).field_Jb[var13]) {
@@ -96,10 +97,10 @@ final class oj extends km {
                   }
                 }
               }
-              var14 = da.field_h;
+              var14 = (Object) (Object) da.field_h;
               break L2;
             }
-            ((oj) this).field_Ib[var13] = new hk(0L, param2, (km) null, param3, var14, param6[var13]);
+            ((oj) this).field_Ib[var13] = new hk(0L, param2, (km) null, param3, (mg) var14, param6[var13]);
             ((oj) this).a(0, (km) (Object) ((oj) this).field_Ib[var13]);
             var15 = var17.a(param6[var13]);
             if (var15 > ((oj) this).field_Eb) {
@@ -124,12 +125,12 @@ final class oj extends km {
           if (param0 <= -118) {
             break L0;
           } else {
-            boolean discarded$2 = ((oj) this).a(false, -98, -15);
+            boolean discarded$1 = ((oj) this).a(false, -98, -15);
             break L0;
           }
         }
         L1: {
-          if (param2 != ((oj) this).field_Tb) {
+          if ((param2 ^ -1) != (((oj) this).field_Tb ^ -1)) {
             if (null != ((oj) this).field_Wb[param2]) {
               ((oj) this).h(1026);
               this.b(0, (byte) 49);
@@ -139,7 +140,7 @@ final class oj extends km {
               ((oj) this).field_Qb.b(12, (byte) 49);
               break L1;
             } else {
-              if (0 == ((oj) this).field_Sb[param2]) {
+              if (0 == (((oj) this).field_Sb[param2] ^ -1)) {
                 aa.a((byte) 83);
                 f.a((byte) -38);
                 break L1;
@@ -147,7 +148,7 @@ final class oj extends km {
                 L2: {
                   var5 = ((oj) this).field_Sb[param2] | 32768;
                   var6 = sd.field_e;
-                  if (-1 != var6) {
+                  if (-1 != (var6 ^ -1)) {
                     break L2;
                   } else {
                     if (wl.field_d != null) {
@@ -357,7 +358,6 @@ final class oj extends km {
         ij var2 = null;
         fl var3 = null;
         ij var3_ref = null;
-        fl var3_ref2 = null;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
@@ -675,8 +675,7 @@ final class oj extends km {
                         break L23;
                       }
                     }
-                    new ij(stackIn_80_2, stackIn_80_3 != 0, sh.a(4712, 64));
-                    var7 = stackIn_80_0;
+                    var7 = new ij(stackIn_80_2, stackIn_80_3 != 0, sh.a(4712, 64));
                     var3_ref = (ij) (Object) sk.field_a.a((byte) -64);
                     L24: while (true) {
                       L25: {
@@ -725,8 +724,8 @@ final class oj extends km {
                           if (var4 * var4 - -(var5 * var5) >= 8388608) {
                             continue L29;
                           } else {
-                            var3_ref2 = new fl(0, 1638400, 0, var4, -8192, var5, 150);
-                            sh.field_tb.a((l) (Object) var3_ref2, (byte) -104);
+                            var3 = new fl(0, 1638400, 0, var4, -8192, var5, 150);
+                            sh.field_tb.a((l) (Object) var3, (byte) -104);
                             break L27;
                           }
                         }
@@ -767,8 +766,9 @@ final class oj extends km {
                     }
                     L33: {
                       if (wn.field_C != he.field_ec) {
+                        int fieldTemp$4 = ai.field_f + 8;
                         ai.field_f = ai.field_f + 8;
-                        if ((ai.field_f + 8 ^ -1) <= -257) {
+                        if ((fieldTemp$4 ^ -1) <= -257) {
                           ai.field_f = 0;
                           he.field_ec = wn.field_C;
                           break L33;
@@ -803,8 +803,9 @@ final class oj extends km {
                     return;
                   } else {
                     L35: {
+                      int fieldTemp$5 = var3.field_o - 1;
                       var3.field_o = var3.field_o - 1;
-                      if (-1 > (var3.field_o - 1 ^ -1)) {
+                      if (-1 > (fieldTemp$5 ^ -1)) {
                         var3.field_p = var3.field_p + var3.field_l;
                         var3.field_m = var3.field_m + var3.field_h;
                         var3.field_n = var3.field_n + var3.field_q;
@@ -821,8 +822,9 @@ final class oj extends km {
                 }
               } else {
                 L36: {
+                  int fieldTemp$6 = var2.field_o + 1;
                   var2.field_o = var2.field_o + 1;
-                  if (var2.field_o + 1 <= 83) {
+                  if (fieldTemp$6 <= 83) {
                     break L36;
                   } else {
                     var2.a(false);
@@ -835,8 +837,9 @@ final class oj extends km {
             }
           } else {
             L37: {
+              int fieldTemp$7 = var1.field_r - 1;
               var1.field_r = var1.field_r - 1;
-              if (0 != var1.field_r - 1) {
+              if (0 != fieldTemp$7) {
                 break L37;
               } else {
                 var1.a(false);
@@ -1045,6 +1048,7 @@ final class oj extends km {
         var2 = 0;
         L0: while (true) {
           if (var2 >= 256) {
+            return;
           } else {
             var0 = (long)var2;
             var3 = 0;

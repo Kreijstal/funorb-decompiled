@@ -52,8 +52,9 @@ final class lh {
                     }
                   }
                 }
+                int incrementValue$1 = var5;
                 var5++;
-                var4[var5] = (char)var7;
+                var4[incrementValue$1] = (char)var7;
                 var6++;
                 continue L0;
               } else {
@@ -76,7 +77,7 @@ final class lh {
     }
 
     final static String a(int param0, int param1, CharSequence[] param2, int param3) {
-        CharSequence var4_ref = null;
+        CharSequence var4_ref_CharSequence = null;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
@@ -91,8 +92,8 @@ final class lh {
         if (-1 != (param1 ^ -1)) {
           if (param1 == 1) {
             var11 = param2[param3];
-            var4_ref = var11;
-            if (var4_ref != null) {
+            var4_ref_CharSequence = var11;
+            if (var4_ref_CharSequence != null) {
               return ((Object) (Object) var11).toString();
             } else {
               return "null";

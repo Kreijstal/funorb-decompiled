@@ -79,87 +79,90 @@ final class ci {
     private final void a(boolean param0, int param1) {
         int var3 = 0;
         int var4 = 0;
-        int stackIn_11_0 = 0;
-        int stackIn_12_0 = 0;
-        int stackIn_13_0 = 0;
-        int stackIn_13_1 = 0;
-        int stackIn_42_0 = 0;
-        int stackIn_43_0 = 0;
-        int stackIn_44_0 = 0;
-        int stackIn_44_1 = 0;
-        int stackOut_41_0 = 0;
-        int stackOut_43_0 = 0;
-        int stackOut_43_1 = 0;
-        int stackOut_42_0 = 0;
-        int stackOut_42_1 = 0;
-        int stackOut_10_0 = 0;
-        int stackOut_12_0 = 0;
-        int stackOut_12_1 = 0;
-        int stackOut_11_0 = 0;
-        int stackOut_11_1 = 0;
+        int stackIn_21_0 = 0;
+        int stackIn_22_0 = 0;
+        int stackIn_23_0 = 0;
+        int stackIn_23_1 = 0;
+        int stackIn_50_0 = 0;
+        int stackIn_51_0 = 0;
+        int stackIn_52_0 = 0;
+        int stackIn_52_1 = 0;
+        int stackOut_49_0 = 0;
+        int stackOut_51_0 = 0;
+        int stackOut_51_1 = 0;
+        int stackOut_50_0 = 0;
+        int stackOut_50_1 = 0;
+        int stackOut_20_0 = 0;
+        int stackOut_22_0 = 0;
+        int stackOut_22_1 = 0;
+        int stackOut_21_0 = 0;
+        int stackOut_21_1 = 0;
         var4 = Pool.field_O;
         if (param0) {
           var3 = ((ci) this).field_n;
-          if (-1 != var3) {
-            if (-2 != var3) {
-              if (-3 != var3) {
+          if (-1 == (var3 ^ -1)) {
+            tl.field_K = param1 >> 1988070824;
+            return;
+          } else {
+            if (-2 != (var3 ^ -1)) {
+              if (-3 != (var3 ^ -1)) {
                 if (var3 != 3) {
-                  if (var3 != -5) {
-                    if (-6 != var3) {
-                      if (-7 != var3) {
-                        if (var3 != 7) {
-                          if (var3 != 8) {
-                            if (var3 != 9) {
-                              if (var3 != 10) {
-                                return;
-                              } else {
-                                pr.field_l = param1;
-                                return;
-                              }
-                            } else {
-                              kj.field_f = param1;
-                              return;
-                            }
-                          } else {
-                            wn.field_l = param1;
-                            return;
-                          }
-                        } else {
-                          uh.field_q = param1;
-                          uh.field_w = uh.field_q * 128 / 5;
-                          return;
-                        }
+                  if ((var3 ^ -1) == -5) {
+                    L0: {
+                      dr.field_b = param1;
+                      stackOut_49_0 = 6429081;
+                      stackIn_51_0 = stackOut_49_0;
+                      stackIn_50_0 = stackOut_49_0;
+                      if (param0) {
+                        stackOut_51_0 = stackIn_51_0;
+                        stackOut_51_1 = 0;
+                        stackIn_52_0 = stackOut_51_0;
+                        stackIn_52_1 = stackOut_51_1;
+                        break L0;
                       } else {
-                        bl.field_g = param1;
-                        return;
+                        stackOut_50_0 = stackIn_50_0;
+                        stackOut_50_1 = 1;
+                        stackIn_52_0 = stackOut_50_0;
+                        stackIn_52_1 = stackOut_50_1;
+                        break L0;
                       }
-                    } else {
+                    }
+                    dr.field_f = aj.a(stackIn_52_0, stackIn_52_1 != 0, dr.field_b);
+                    return;
+                  } else {
+                    if (-6 == (var3 ^ -1)) {
                       l.field_e = param1;
                       l.field_g = aj.a(6429081, false, l.field_e);
                       return;
-                    }
-                  } else {
-                    L0: {
-                      dr.field_b = param1;
-                      stackOut_41_0 = 6429081;
-                      stackIn_43_0 = stackOut_41_0;
-                      stackIn_42_0 = stackOut_41_0;
-                      if (param0) {
-                        stackOut_43_0 = stackIn_43_0;
-                        stackOut_43_1 = 0;
-                        stackIn_44_0 = stackOut_43_0;
-                        stackIn_44_1 = stackOut_43_1;
-                        break L0;
+                    } else {
+                      if (-7 == (var3 ^ -1)) {
+                        bl.field_g = param1;
+                        return;
                       } else {
-                        stackOut_42_0 = stackIn_42_0;
-                        stackOut_42_1 = 1;
-                        stackIn_44_0 = stackOut_42_0;
-                        stackIn_44_1 = stackOut_42_1;
-                        break L0;
+                        if (var3 == 7) {
+                          uh.field_q = param1;
+                          uh.field_w = uh.field_q * 128 / 5;
+                          return;
+                        } else {
+                          if (var3 == 8) {
+                            wn.field_l = param1;
+                            return;
+                          } else {
+                            if (var3 == 9) {
+                              kj.field_f = param1;
+                              return;
+                            } else {
+                              if (var3 == 10) {
+                                pr.field_l = param1;
+                                return;
+                              } else {
+                                return;
+                              }
+                            }
+                          }
+                        }
                       }
                     }
-                    dr.field_f = aj.a(stackIn_44_0, stackIn_44_1 != 0, dr.field_b);
-                    return;
                   }
                 } else {
                   kp.field_m = param1 >> -475290104;
@@ -173,73 +176,73 @@ final class ci {
               ca.field_l = param1 >> -2062854520;
               return;
             }
-          } else {
-            tl.field_K = param1 >> 1988070824;
-            return;
           }
         } else {
           ((ci) this).field_e = 58;
           var3 = ((ci) this).field_n;
-          if (-1 != var3) {
-            if (-2 != var3) {
-              if (-3 != var3) {
+          if (-1 == (var3 ^ -1)) {
+            tl.field_K = param1 >> 1988070824;
+            return;
+          } else {
+            if (-2 != (var3 ^ -1)) {
+              if (-3 != (var3 ^ -1)) {
                 if (var3 != 3) {
-                  if (var3 != -5) {
-                    if (-6 != var3) {
-                      if (-7 != var3) {
-                        if (var3 != 7) {
-                          if (var3 != 8) {
-                            if (var3 != 9) {
-                              if (var3 != 10) {
-                                return;
-                              } else {
-                                pr.field_l = param1;
-                                return;
-                              }
-                            } else {
-                              kj.field_f = param1;
-                              return;
-                            }
-                          } else {
-                            wn.field_l = param1;
-                            return;
-                          }
-                        } else {
-                          uh.field_q = param1;
-                          uh.field_w = uh.field_q * 128 / 5;
-                          return;
-                        }
+                  if ((var3 ^ -1) == -5) {
+                    L1: {
+                      dr.field_b = param1;
+                      stackOut_20_0 = 6429081;
+                      stackIn_22_0 = stackOut_20_0;
+                      stackIn_21_0 = stackOut_20_0;
+                      if (param0) {
+                        stackOut_22_0 = stackIn_22_0;
+                        stackOut_22_1 = 0;
+                        stackIn_23_0 = stackOut_22_0;
+                        stackIn_23_1 = stackOut_22_1;
+                        break L1;
                       } else {
-                        bl.field_g = param1;
-                        return;
+                        stackOut_21_0 = stackIn_21_0;
+                        stackOut_21_1 = 1;
+                        stackIn_23_0 = stackOut_21_0;
+                        stackIn_23_1 = stackOut_21_1;
+                        break L1;
                       }
-                    } else {
+                    }
+                    dr.field_f = aj.a(stackIn_23_0, stackIn_23_1 != 0, dr.field_b);
+                    return;
+                  } else {
+                    if (-6 == (var3 ^ -1)) {
                       l.field_e = param1;
                       l.field_g = aj.a(6429081, false, l.field_e);
                       return;
-                    }
-                  } else {
-                    L1: {
-                      dr.field_b = param1;
-                      stackOut_10_0 = 6429081;
-                      stackIn_12_0 = stackOut_10_0;
-                      stackIn_11_0 = stackOut_10_0;
-                      if (param0) {
-                        stackOut_12_0 = stackIn_12_0;
-                        stackOut_12_1 = 0;
-                        stackIn_13_0 = stackOut_12_0;
-                        stackIn_13_1 = stackOut_12_1;
-                        break L1;
+                    } else {
+                      if (-7 == (var3 ^ -1)) {
+                        bl.field_g = param1;
+                        return;
                       } else {
-                        stackOut_11_0 = stackIn_11_0;
-                        stackOut_11_1 = 1;
-                        stackIn_13_0 = stackOut_11_0;
-                        stackIn_13_1 = stackOut_11_1;
-                        break L1;
+                        if (var3 == 7) {
+                          uh.field_q = param1;
+                          uh.field_w = uh.field_q * 128 / 5;
+                          return;
+                        } else {
+                          if (var3 == 8) {
+                            wn.field_l = param1;
+                            return;
+                          } else {
+                            if (var3 == 9) {
+                              kj.field_f = param1;
+                              return;
+                            } else {
+                              if (var3 == 10) {
+                                pr.field_l = param1;
+                                return;
+                              } else {
+                                return;
+                              }
+                            }
+                          }
+                        }
                       }
                     }
-                    dr.field_f = aj.a(stackIn_13_0, stackIn_13_1 != 0, dr.field_b);
-                    return;
                   }
                 } else {
                   kp.field_m = param1 >> -475290104;
@@ -253,9 +256,6 @@ final class ci {
               ca.field_l = param1 >> -2062854520;
               return;
             }
-          } else {
-            tl.field_K = param1 >> 1988070824;
-            return;
           }
         }
     }
@@ -378,18 +378,24 @@ final class ci {
           var2 = ((ci) this).field_n;
           if (0 != var2) {
             if (var2 != 1) {
-              if (-3 != var2) {
-                if (-4 != var2) {
-                  if (-5 != var2) {
+              if (-3 == (var2 ^ -1)) {
+                return dj.field_g << -1826981944;
+              } else {
+                if (-4 != (var2 ^ -1)) {
+                  if (-5 == (var2 ^ -1)) {
+                    return dr.field_b;
+                  } else {
                     if (5 != var2) {
-                      if (-7 != var2) {
-                        if (7 != var2) {
+                      if (-7 != (var2 ^ -1)) {
+                        if (7 == var2) {
+                          return uh.field_q;
+                        } else {
                           if (-9 != (var2 ^ -1)) {
                             if (var2 != 9) {
-                              if (var2 == 10) {
-                                return pr.field_l;
-                              } else {
+                              if (var2 != 10) {
                                 return -1;
+                              } else {
+                                return pr.field_l;
                               }
                             } else {
                               return kj.field_f;
@@ -397,8 +403,6 @@ final class ci {
                           } else {
                             return wn.field_l;
                           }
-                        } else {
-                          return uh.field_q;
                         }
                       } else {
                         return bl.field_g;
@@ -406,14 +410,10 @@ final class ci {
                     } else {
                       return l.field_e;
                     }
-                  } else {
-                    return dr.field_b;
                   }
                 } else {
                   return kp.field_m << 122139080;
                 }
-              } else {
-                return dj.field_g << -1826981944;
               }
             } else {
               return ca.field_l << -195801560;
@@ -622,17 +622,27 @@ final class ci {
         int var2 = 0;
         if (param0 == 36) {
           var2 = ((ci) this).field_n;
-          if (-1 != (var2 ^ -1)) {
-            if (1 != var2) {
-              if (2 != var2) {
+          if (-1 == (var2 ^ -1)) {
+            return "Ball-ball";
+          } else {
+            if (1 == var2) {
+              return "Ball-ball ang";
+            } else {
+              if (2 == var2) {
+                return "Ball-cush";
+              } else {
                 if ((var2 ^ -1) != -4) {
                   if (var2 != 4) {
-                    if (var2 != -6) {
-                      if (-7 != var2) {
-                        if (var2 != 7) {
-                          if (-9 != var2) {
+                    if ((var2 ^ -1) == -6) {
+                      return "Roll coef";
+                    } else {
+                      if (-7 != (var2 ^ -1)) {
+                        if (var2 == 7) {
+                          return "Ball mass";
+                        } else {
+                          if (-9 != (var2 ^ -1)) {
                             if (9 != var2) {
-                              if (-11 == var2) {
+                              if (-11 == (var2 ^ -1)) {
                                 return "Side spin";
                               } else {
                                 return "Banana in disk drive error.";
@@ -643,14 +653,10 @@ final class ci {
                           } else {
                             return "Z spin fric";
                           }
-                        } else {
-                          return "Ball mass";
                         }
                       } else {
                         return "Overspin";
                       }
-                    } else {
-                      return "Roll coef";
                     }
                   } else {
                     return "Slid Coef";
@@ -658,32 +664,36 @@ final class ci {
                 } else {
                   return "Ball-cush ang";
                 }
-              } else {
-                return "Ball-cush";
               }
-            } else {
-              return "Ball-ball ang";
             }
-          } else {
-            return "Ball-ball";
           }
         } else {
           int discarded$1 = this.a(11);
           var2 = ((ci) this).field_n;
-          if (-1 != (var2 ^ -1)) {
-            if (1 != var2) {
-              if (2 != var2) {
+          if (-1 == (var2 ^ -1)) {
+            return "Ball-ball";
+          } else {
+            if (1 == var2) {
+              return "Ball-ball ang";
+            } else {
+              if (2 == var2) {
+                return "Ball-cush";
+              } else {
                 if ((var2 ^ -1) != -4) {
                   if (var2 != 4) {
-                    if (var2 != -6) {
-                      if (-7 != var2) {
-                        if (var2 != 7) {
-                          if (-9 != var2) {
+                    if ((var2 ^ -1) == -6) {
+                      return "Roll coef";
+                    } else {
+                      if (-7 != (var2 ^ -1)) {
+                        if (var2 == 7) {
+                          return "Ball mass";
+                        } else {
+                          if (-9 != (var2 ^ -1)) {
                             if (9 != var2) {
-                              if (-11 != var2) {
-                                return "Banana in disk drive error.";
-                              } else {
+                              if (-11 == (var2 ^ -1)) {
                                 return "Side spin";
+                              } else {
+                                return "Banana in disk drive error.";
                               }
                             } else {
                               return "Cue force";
@@ -691,14 +701,10 @@ final class ci {
                           } else {
                             return "Z spin fric";
                           }
-                        } else {
-                          return "Ball mass";
                         }
                       } else {
                         return "Overspin";
                       }
-                    } else {
-                      return "Roll coef";
                     }
                   } else {
                     return "Slid Coef";
@@ -706,14 +712,8 @@ final class ci {
                 } else {
                   return "Ball-cush ang";
                 }
-              } else {
-                return "Ball-cush";
               }
-            } else {
-              return "Ball-ball ang";
             }
-          } else {
-            return "Ball-ball";
           }
         }
     }

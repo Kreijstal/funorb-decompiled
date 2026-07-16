@@ -28,7 +28,7 @@ final class nr extends ch implements tb {
         int var6_int = 0;
         StringBuilder var6 = null;
         int var7 = 0;
-        String var7_ref = null;
+        String var7_ref_String = null;
         int var8 = 0;
         String var9 = null;
         int var10 = 0;
@@ -99,8 +99,8 @@ final class nr extends ch implements tb {
                     }
                   }
                 }
-                var7_ref = param2.substring(var6_int - -2, var5);
-                if (!ka.a(10, (CharSequence) (Object) var7_ref)) {
+                var7_ref_String = param2.substring(var6_int - -2, var5);
+                if (!ka.a(10, (CharSequence) (Object) var7_ref_String)) {
                   continue L0;
                 } else {
                   if (var5 >= var3) {
@@ -108,7 +108,7 @@ final class nr extends ch implements tb {
                   } else {
                     if (param2.charAt(var5) == 62) {
                       var5++;
-                      var8 = kq.a((byte) 89, (CharSequence) (Object) var7_ref);
+                      var8 = kq.a((byte) 89, (CharSequence) (Object) var7_ref_String);
                       var4 = var4 + (-var5 + var6_int + args[var8].length());
                       continue L0;
                     } else {
@@ -194,10 +194,10 @@ final class nr extends ch implements tb {
         if (super.a(param0, param1, param2, param3)) {
             return true;
         }
-        if (param1 == -99) {
+        if ((param1 ^ -1) == -99) {
             return ((nr) this).a(param3, 3);
         }
-        if (-100 != param1) {
+        if (-100 != (param1 ^ -1)) {
             return false;
         }
         return ((nr) this).b(param3, 0);

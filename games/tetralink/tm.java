@@ -23,25 +23,56 @@ final class tm extends um {
 
     final jk a(int param0, String param1) {
         sj var3 = null;
-        CharSequence var4 = (CharSequence) (Object) param1;
-        if (!(fl.a((byte) 123, var4))) {
-            return db.field_h;
-        }
-        if (param0 != 0) {
-            ((tm) this).d((byte) -30);
-        }
-        if (param1.equals((Object) (Object) ((tm) this).field_q)) {
+        CharSequence var4 = null;
+        jk stackIn_15_0 = null;
+        jk stackOut_14_0 = null;
+        jk stackOut_13_0 = null;
+        var4 = (CharSequence) (Object) param1;
+        if (!fl.a((byte) 123, var4)) {
+          return db.field_h;
         } else {
-            var3 = hi.a(param1, (byte) -80);
-            if (var3 != null) {
-                // if_acmpne L75
+          L0: {
+            if (param0 == 0) {
+              break L0;
             } else {
-                return ug.field_cb;
+              ((tm) this).d((byte) -30);
+              break L0;
             }
-            ((tm) this).field_q = param1;
-            ((tm) this).field_s = var3.field_f;
+          }
+          L1: {
+            if (!param1.equals((Object) (Object) ((tm) this).field_q)) {
+              L2: {
+                var3 = hi.a(param1, (byte) -80);
+                if (var3 == null) {
+                  break L2;
+                } else {
+                  if (null != var3.field_i) {
+                    break L2;
+                  } else {
+                    ((tm) this).field_q = param1;
+                    ((tm) this).field_s = var3.field_f;
+                    break L1;
+                  }
+                }
+              }
+              return ug.field_cb;
+            } else {
+              break L1;
+            }
+          }
+          L3: {
+            if (((tm) this).field_s) {
+              stackOut_14_0 = pf.field_a;
+              stackIn_15_0 = stackOut_14_0;
+              break L3;
+            } else {
+              stackOut_13_0 = db.field_h;
+              stackIn_15_0 = stackOut_13_0;
+              break L3;
+            }
+          }
+          return stackIn_15_0;
         }
-        return !((tm) this).field_s ? db.field_h : pf.field_a;
     }
 
     static long a(long param0, long param1) {

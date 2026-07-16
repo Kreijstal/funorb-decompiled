@@ -28,10 +28,12 @@ final class re extends mh {
     }
 
     final static String a(byte param0, cj param1) {
-        String var2 = null;
+        Object var3_ref = null;
+        Object var2 = null;
         String var3 = null;
         int var4 = 0;
         String var5 = null;
+        var3_ref = null;
         var4 = Virogrid.field_F ? 1 : 0;
         if (param0 < -91) {
           L0: {
@@ -41,21 +43,21 @@ final class re extends mh {
             } else {
               L1: {
                 var5 = param1.field_r;
-                var2 = var5;
-                var2 = var5;
+                var2 = (Object) (Object) var5;
+                var2 = (Object) (Object) var5;
                 if ((param1.field_e ^ -1) != -2) {
                   break L1;
                 } else {
-                  var2 = "<img=0>" + var5;
+                  var2 = (Object) (Object) ("<img=0>" + var5);
                   break L1;
                 }
               }
               if (2 != param1.field_e) {
                 break L0;
               } else {
-                var2 = "<img=1>" + var2;
-                var3 = var2;
-                var3 = var2;
+                var2 = (Object) (Object) ("<img=1>" + var2);
+                var3_ref = var2;
+                var3_ref = var2;
                 break L0;
               }
             }

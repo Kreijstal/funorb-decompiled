@@ -103,46 +103,36 @@ final class a extends java.awt.Canvas implements java.awt.event.FocusListener {
     }
 
     final static String a(int param0, String param1, int param2) {
-        Object var4 = null;
-        if (-4 != (param0 ^ -1)) {
-          if ((param0 ^ -1) != -7) {
-            if (param0 == -8) {
-              return jf.field_g;
-            } else {
-              if (-9 == param0) {
-                return lf.field_P;
-              } else {
-                if ((param0 ^ -1) == -10) {
-                  return ma.field_F;
-                } else {
-                  if (param0 == 10) {
-                    return dj.field_q;
-                  } else {
-                    if (param0 == 11) {
-                      return hk.field_N;
-                    } else {
-                      if (-15 != (param0 ^ -1)) {
-                        if (param2 == -3) {
-                          return null;
-                        } else {
-                          var4 = null;
-                          aj discarded$2 = a.a((String[]) null, -18);
-                          return null;
-                        }
-                      } else {
-                        return oc.a(hn.field_b, new String[1], (byte) -119);
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          } else {
-            return hk.field_L;
-          }
-        } else {
-          return uj.field_o;
+        if (-4 == (param0 ^ -1)) {
+            return uj.field_o;
         }
+        if ((param0 ^ -1) == -7) {
+            return hk.field_L;
+        }
+        if (!((param0 ^ -1) != -8)) {
+            return jf.field_g;
+        }
+        if (!(-9 != (param0 ^ -1))) {
+            return lf.field_P;
+        }
+        if (!((param0 ^ -1) != -10)) {
+            return ma.field_F;
+        }
+        if (!(param0 != 10)) {
+            return dj.field_q;
+        }
+        if (!(param0 != 11)) {
+            return hk.field_N;
+        }
+        if (-15 == (param0 ^ -1)) {
+            return oc.a(hn.field_b, new String[1], (byte) -119);
+        }
+        if (param2 == -3) {
+            return null;
+        }
+        Object var4 = null;
+        aj discarded$0 = a.a((String[]) null, -18);
+        return null;
     }
 
     final static void a(int param0, java.awt.Component param1) {

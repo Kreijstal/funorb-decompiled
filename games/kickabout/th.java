@@ -35,12 +35,14 @@ final class th {
             param4 = qe.field_b[var5];
             var6 = var5 << -763129436;
             while (true) {
+                int incrementValue$0 = param4;
                 param4--;
-                if (0 == param4) {
+                if (0 == incrementValue$0) {
                     break;
                 }
+                int incrementValue$1 = var6;
                 var6++;
-                param1 = nb.field_e[var6];
+                param1 = nb.field_e[incrementValue$1];
                 param3[param2[param1]] = param3[param2[param1]] + 1;
                 nb.field_e[param3[param2[param1]]] = param1;
             }

@@ -149,32 +149,64 @@ final class wi extends gg {
 
     final static int b(int param0, int param1) {
         int var2 = 0;
-        if (param1 >= 0) {
-            // if_icmpge L15
-        } else {
-            var2 += 16;
-            param1 = param1 >>> 16;
+        L0: {
+          L1: {
+            var2 = 0;
+            if (param1 < 0) {
+              break L1;
+            } else {
+              if (param1 >= 65536) {
+                break L1;
+              } else {
+                break L0;
+              }
+            }
+          }
+          var2 += 16;
+          param1 = param1 >>> 16;
+          break L0;
         }
-        if (param1 <= -257) {
+        L2: {
+          if ((param1 ^ -1) > -257) {
+            break L2;
+          } else {
             var2 += 8;
             param1 = param1 >>> 8;
+            break L2;
+          }
         }
-        if (!(-17 > param1)) {
+        L3: {
+          if (-17 >= (param1 ^ -1)) {
             param1 = param1 >>> 4;
             var2 += 4;
+            break L3;
+          } else {
+            break L3;
+          }
         }
-        if (param1 >= 4) {
+        L4: {
+          if (param1 < 4) {
+            break L4;
+          } else {
             var2 += 2;
             param1 = param1 >>> 2;
+            break L4;
+          }
         }
-        if (param0 < 72) {
-            return -3;
+        if (param0 >= 72) {
+          L5: {
+            if (param1 < 1) {
+              break L5;
+            } else {
+              var2++;
+              param1 = param1 >>> 1;
+              break L5;
+            }
+          }
+          return param1 + var2;
+        } else {
+          return -3;
         }
-        if (param1 >= 1) {
-            var2++;
-            param1 = param1 >>> 1;
-        }
-        return param1 + var2;
     }
 
     static {

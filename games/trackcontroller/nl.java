@@ -25,7 +25,6 @@ final class nl extends RuntimeException {
         int var4 = 0;
         int var5 = 0;
         String var6 = null;
-        String var6_ref = null;
         int var7 = 0;
         int var8 = 0;
         na var9 = null;
@@ -68,13 +67,13 @@ final class nl extends RuntimeException {
         var3 = 0;
         if (param0 <= -5) {
           L1: while (true) {
-            if (var3 >= sa.field_I.length) {
+            if ((var3 ^ -1) <= (sa.field_I.length ^ -1)) {
               return;
             } else {
               L2: {
                 var4 = mj.field_b[var3];
                 if (var4 >= 0) {
-                  if (vi.field_f.field_e == var4) {
+                  if ((vi.field_f.field_e ^ -1) == (var4 ^ -1)) {
                     var5 = j.field_a;
                     break L2;
                   } else {
@@ -93,7 +92,7 @@ final class nl extends RuntimeException {
                 } else {
                   if (1 == var2) {
                     L4: {
-                      if (jf.field_i.length <= el.field_O.length) {
+                      if ((jf.field_i.length ^ -1) >= (el.field_O.length ^ -1)) {
                         stackOut_17_0 = el.field_O.length;
                         stackIn_18_0 = stackOut_17_0;
                         break L4;
@@ -134,19 +133,19 @@ final class nl extends RuntimeException {
                               break L7;
                             }
                           }
-                          var6_ref = stackIn_26_0;
+                          var6 = stackIn_26_0;
                           break L6;
                         }
                       }
                     }
-                    if (var3 < 7 - -var7) {
+                    if ((var3 ^ -1) > (7 - -var7 ^ -1)) {
                       break L3;
                     } else {
-                      if (var3 >= 7 - (-var7 - var8)) {
+                      if ((var3 ^ -1) <= (7 - (-var7 - var8) ^ -1)) {
                         break L3;
                       } else {
                         L8: {
-                          if (bk.field_J.length <= -var7 + var3 + -7) {
+                          if ((bk.field_J.length ^ -1) >= (-var7 + var3 + -7 ^ -1)) {
                             stackOut_31_0 = "";
                             stackIn_32_0 = stackOut_31_0;
                             break L8;
@@ -156,7 +155,7 @@ final class nl extends RuntimeException {
                             break L8;
                           }
                         }
-                        var6_ref = stackIn_32_0;
+                        var6 = stackIn_32_0;
                         break L3;
                       }
                     }
@@ -166,15 +165,15 @@ final class nl extends RuntimeException {
                 }
               }
               L9: {
-                if (var4 == 1) {
-                  var6_ref = Integer.toString(var2);
+                if ((var4 ^ -1) == 1) {
+                  var6 = Integer.toString(var2);
                   break L9;
                 } else {
                   break L9;
                 }
               }
               L10: {
-                if (-1 > var4) {
+                if (-1 < (var4 ^ -1)) {
                   stackOut_38_0 = 0;
                   stackIn_39_0 = stackOut_38_0;
                   break L10;
@@ -185,12 +184,12 @@ final class nl extends RuntimeException {
                 }
               }
               L11: {
-                var7 = ib.a(stackIn_39_0 != 0, 10, var6_ref);
+                var7 = ib.a(stackIn_39_0 != 0, 10, var6);
                 var8 = sf.field_F + -(var7 >> 1186637313);
                 if (0 <= var4) {
                   L12: {
                     var1 = var1 + na.field_e;
-                    if (var4 == vi.field_f.field_e) {
+                    if ((var4 ^ -1) == (vi.field_f.field_e ^ -1)) {
                       stackOut_43_0 = nh.field_c;
                       stackIn_44_0 = stackOut_43_0;
                       break L12;
@@ -215,17 +214,19 @@ final class nl extends RuntimeException {
                   break L11;
                 }
               }
-              if (0 > var4) {
-                r.field_k.c(var6_ref, var8, ai.field_h + var1, var5, -1);
-                var1 = var1 + dh.field_l;
-                var3++;
-                continue L1;
-              } else {
-                mk.field_b.c(var6_ref, var8, dk.field_a + var1, var5, -1);
-                var1 = var1 + (na.field_e + of.field_f + pc.field_m);
-                var3++;
-                continue L1;
+              L14: {
+                if (0 > var4) {
+                  r.field_k.c(var6, var8, ai.field_h + var1, var5, -1);
+                  var1 = var1 + dh.field_l;
+                  break L14;
+                } else {
+                  mk.field_b.c(var6, var8, dk.field_a + var1, var5, -1);
+                  var1 = var1 + (na.field_e + of.field_f + pc.field_m);
+                  break L14;
+                }
               }
+              var3++;
+              continue L1;
             }
           }
         } else {
@@ -258,25 +259,24 @@ final class nl extends RuntimeException {
         int var13 = 0;
         int var14 = 0;
         int var15 = 0;
-        int stackIn_20_0 = 0;
-        int stackIn_27_0 = 0;
+        int stackIn_18_0 = 0;
+        int stackIn_25_0 = 0;
+        int stackIn_29_0 = 0;
         int stackIn_31_0 = 0;
+        int stackIn_32_0 = 0;
         int stackIn_33_0 = 0;
-        int stackIn_34_0 = 0;
-        int stackIn_35_0 = 0;
-        int stackIn_35_1 = 0;
-        int stackOut_18_0 = 0;
+        int stackIn_33_1 = 0;
+        int stackOut_16_0 = 0;
         int stackOut_17_0 = 0;
-        int stackOut_15_0 = 0;
+        int stackOut_28_0 = 0;
+        int stackOut_27_0 = 0;
+        int stackOut_24_0 = 0;
+        int stackOut_23_0 = 0;
         int stackOut_30_0 = 0;
-        int stackOut_29_0 = 0;
-        int stackOut_26_0 = 0;
-        int stackOut_25_0 = 0;
         int stackOut_32_0 = 0;
-        int stackOut_34_0 = 0;
-        int stackOut_34_1 = 0;
-        int stackOut_33_0 = 0;
-        int stackOut_33_1 = 0;
+        int stackOut_32_1 = 0;
+        int stackOut_31_0 = 0;
+        int stackOut_31_1 = 0;
         L0: {
           L1: {
             var15 = TrackController.field_F ? 1 : 0;
@@ -321,7 +321,7 @@ final class nl extends RuntimeException {
                   if ((param5 ^ -1) == -1025) {
                     break L5;
                   } else {
-                    if (param0 != -2049) {
+                    if ((param0 ^ -1) != -2049) {
                       break L3;
                     } else {
                       break L5;
@@ -337,76 +337,77 @@ final class nl extends RuntimeException {
           break L3;
         }
         L6: {
-          if (-1 != var10) {
-            if (0 != var11) {
-              stackOut_18_0 = 1;
-              stackIn_20_0 = stackOut_18_0;
-              break L6;
+          L7: {
+            if (-1 == (var10 ^ -1)) {
+              break L7;
             } else {
-              stackOut_17_0 = 0;
-              stackIn_20_0 = stackOut_17_0;
-              break L6;
+              if (0 == var11) {
+                break L7;
+              } else {
+                stackOut_16_0 = 1;
+                stackIn_18_0 = stackOut_16_0;
+                break L6;
+              }
             }
-          } else {
-            stackOut_15_0 = 0;
-            stackIn_20_0 = stackOut_15_0;
-            break L6;
           }
+          stackOut_17_0 = 0;
+          stackIn_18_0 = stackOut_17_0;
+          break L6;
         }
-        L7: {
-          var12 = stackIn_20_0;
+        L8: {
+          var12 = stackIn_18_0;
           if (var12 != 0) {
-            L8: {
-              L9: {
+            L9: {
+              L10: {
                 if (-129 == (param5 ^ -1)) {
-                  break L9;
+                  break L10;
                 } else {
                   if (2048 == param0) {
-                    break L9;
+                    break L10;
                   } else {
-                    break L8;
+                    break L9;
                   }
                 }
               }
               var9 += 25;
-              break L8;
+              break L9;
             }
-            L10: {
-              L11: {
-                if (param5 == -513) {
-                  break L11;
+            L11: {
+              L12: {
+                if ((param5 ^ -1) == -513) {
+                  break L12;
                 } else {
                   if (8192 != param0) {
-                    break L10;
-                  } else {
                     break L11;
+                  } else {
+                    break L12;
                   }
                 }
               }
               var8 += 25;
-              break L10;
+              break L11;
             }
-            L12: {
-              if (0 != var10) {
+            L13: {
+              if (0 != (var10 ^ -1)) {
                 if (param5 == 1024) {
                   if (4096 == param0) {
                     var13 = -param4 + 13;
                     var14 = -var13 + 52;
-                    break L12;
+                    break L13;
                   } else {
                     var13 = param4 - -39;
                     var14 = -var13;
-                    break L12;
+                    break L13;
                   }
                 } else {
                   if (-257 != (param5 ^ -1)) {
                     var13 = 13 - -param4;
                     var14 = -var13;
-                    break L12;
+                    break L13;
                   } else {
                     var13 = -param4 + 39;
                     var14 = 52 + -var13;
-                    break L12;
+                    break L13;
                   }
                 }
               } else {
@@ -414,21 +415,21 @@ final class nl extends RuntimeException {
                   if (-257 == (param5 ^ -1)) {
                     var13 = param4 + -39;
                     var14 = -var13;
-                    break L12;
+                    break L13;
                   } else {
                     var13 = -13 + -param4;
                     var14 = 52 + -var13;
-                    break L12;
+                    break L13;
                   }
                 } else {
                   if (4096 != param0) {
                     var13 = -39 + -param4;
                     var14 = -var13 + 52;
-                    break L12;
+                    break L13;
                   } else {
                     var13 = -13 + param4;
                     var14 = -var13;
-                    break L12;
+                    break L13;
                   }
                 }
               }
@@ -436,82 +437,82 @@ final class nl extends RuntimeException {
             var14 = gj.a(2, 104, var14);
             var8 = var8 + kj.field_s[var14];
             var9 = var9 - kj.field_t[var14];
-            break L7;
+            break L8;
           } else {
-            L13: {
+            L14: {
               var14 = param4;
               if (param7 == 24) {
-                L14: {
+                L15: {
                   if (param5 != 256) {
-                    stackOut_30_0 = Math.max(0, param4);
-                    stackIn_31_0 = stackOut_30_0;
-                    break L14;
+                    stackOut_28_0 = Math.max(0, param4);
+                    stackIn_29_0 = stackOut_28_0;
+                    break L15;
                   } else {
-                    stackOut_29_0 = Math.min(0, param4);
-                    stackIn_31_0 = stackOut_29_0;
-                    break L14;
+                    stackOut_27_0 = Math.min(0, param4);
+                    stackIn_29_0 = stackOut_27_0;
+                    break L15;
                   }
                 }
-                var14 = stackIn_31_0;
-                break L13;
+                var14 = stackIn_29_0;
+                break L14;
               } else {
                 if (param7 == 25) {
-                  L15: {
+                  L16: {
                     if ((param5 ^ -1) == -129) {
-                      stackOut_26_0 = Math.min(0, param4);
-                      stackIn_27_0 = stackOut_26_0;
-                      break L15;
+                      stackOut_24_0 = Math.min(0, param4);
+                      stackIn_25_0 = stackOut_24_0;
+                      break L16;
                     } else {
-                      stackOut_25_0 = Math.max(0, param4);
-                      stackIn_27_0 = stackOut_25_0;
-                      break L15;
+                      stackOut_23_0 = Math.max(0, param4);
+                      stackIn_25_0 = stackOut_23_0;
+                      break L16;
                     }
                   }
-                  var14 = stackIn_27_0;
-                  break L13;
+                  var14 = stackIn_25_0;
+                  break L14;
                 } else {
-                  break L13;
+                  break L14;
                 }
               }
             }
-            L16: {
-              stackOut_32_0 = 26;
-              stackIn_34_0 = stackOut_32_0;
-              stackIn_33_0 = stackOut_32_0;
+            L17: {
+              stackOut_30_0 = 26;
+              stackIn_32_0 = stackOut_30_0;
+              stackIn_31_0 = stackOut_30_0;
               if (-1 == (var10 ^ -1)) {
-                stackOut_34_0 = stackIn_34_0;
-                stackOut_34_1 = 1 + var11;
-                stackIn_35_0 = stackOut_34_0;
-                stackIn_35_1 = stackOut_34_1;
-                break L16;
+                stackOut_32_0 = stackIn_32_0;
+                stackOut_32_1 = 1 + var11;
+                stackIn_33_0 = stackOut_32_0;
+                stackIn_33_1 = stackOut_32_1;
+                break L17;
               } else {
-                stackOut_33_0 = stackIn_33_0;
-                stackOut_33_1 = 2 + -var10;
-                stackIn_35_0 = stackOut_33_0;
-                stackIn_35_1 = stackOut_33_1;
-                break L16;
+                stackOut_31_0 = stackIn_31_0;
+                stackOut_31_1 = 2 + -var10;
+                stackIn_33_0 = stackOut_31_0;
+                stackIn_33_1 = stackOut_31_1;
+                break L17;
               }
             }
-            var13 = stackIn_35_0 * stackIn_35_1;
+            var13 = stackIn_33_0 * stackIn_33_1;
             var9 = var9 + (13 + var10 * var14);
             var8 = var8 + (13 + var11 * var14);
-            break L7;
-          }
-        }
-        L17: {
-          if (!param1) {
-            var13 += 52;
-            break L17;
-          } else {
-            break L17;
+            break L8;
           }
         }
         L18: {
-          if (param2 == -257) {
+          if (!param1) {
+            var13 += 52;
             break L18;
           } else {
-            field_c = null;
             break L18;
+          }
+        }
+        L19: {
+          if (param2 == -257) {
+            break L19;
+          } else {
+            field_c = null;
+            break L19;
           }
         }
         var13 = gj.a(2, 104, var13);

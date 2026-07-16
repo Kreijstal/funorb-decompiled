@@ -39,66 +39,98 @@ final class ll extends hg {
           var5 = EscapeVector.field_A;
           if (param3 > 0) {
             if (30 <= param3) {
-              if (param3 >= -81) {
-                L1: {
-                  ea.field_f.e(8, param1);
-                  if (param2 == 8) {
-                    break L1;
-                  } else {
-                    ll.a(114, -28, -15, 125);
-                    break L1;
-                  }
-                }
-                if (param3 > 50) {
-                  if (80 <= param3) {
-                    if ((param3 ^ -1) < -81) {
-                      if (95 > param3) {
-                        mf.a(param0, -f.field_o.field_A + 632, (param3 - 80) * 4, f.field_o, param2 ^ -108);
+              if ((param3 ^ -1) >= -81) {
+                ea.field_f.e(8, param1);
+                if (param2 == 8) {
+                  if (param3 > 50) {
+                    if (80 > param3) {
+                      mf.a(param0, -f.field_o.field_A + 632, 2 * (-param3 + 80), f.field_o, param2 ^ -112);
+                      return;
+                    } else {
+                      if ((param3 ^ -1) >= -81) {
+                        f.field_o.e(632 + -f.field_o.field_A, param0);
                         return;
                       } else {
-                        return;
+                        if (95 > param3) {
+                          mf.a(param0, -f.field_o.field_A + 632, (param3 - 80) * 4, f.field_o, param2 ^ -108);
+                          return;
+                        } else {
+                          return;
+                        }
                       }
-                    } else {
-                      f.field_o.e(632 + -f.field_o.field_A, param0);
-                      return;
                     }
                   } else {
-                    mf.a(param0, -f.field_o.field_A + 632, 2 * (-param3 + 80), f.field_o, param2 ^ -112);
                     return;
                   }
                 } else {
-                  return;
-                }
-              } else {
-                if (-96 > param3) {
-                  L2: {
-                    mf.a(param1, 8, (param3 - 80) * 4, ea.field_f, param2 + -115);
-                    if (param2 == 8) {
-                      break L2;
-                    } else {
-                      ll.a(114, -28, -15, 125);
-                      break L2;
-                    }
-                  }
+                  ll.a(114, -28, -15, 125);
                   if (param3 > 50) {
-                    if (80 <= param3) {
-                      if ((param3 ^ -1) < -81) {
-                        if (95 <= param3) {
-                          return;
-                        } else {
-                          mf.a(param0, -f.field_o.field_A + 632, (param3 - 80) * 4, f.field_o, param2 ^ -108);
-                          return;
-                        }
-                      } else {
-                        f.field_o.e(632 + -f.field_o.field_A, param0);
-                        return;
-                      }
-                    } else {
+                    if (80 > param3) {
                       mf.a(param0, -f.field_o.field_A + 632, 2 * (-param3 + 80), f.field_o, param2 ^ -112);
                       return;
+                    } else {
+                      if ((param3 ^ -1) >= -81) {
+                        f.field_o.e(632 + -f.field_o.field_A, param0);
+                        return;
+                      } else {
+                        if (95 > param3) {
+                          mf.a(param0, -f.field_o.field_A + 632, (param3 - 80) * 4, f.field_o, param2 ^ -108);
+                          return;
+                        } else {
+                          return;
+                        }
+                      }
                     }
                   } else {
                     return;
+                  }
+                }
+              } else {
+                if (-96 < (param3 ^ -1)) {
+                  mf.a(param1, 8, (param3 - 80) * 4, ea.field_f, param2 + -115);
+                  if (param2 == 8) {
+                    if (param3 > 50) {
+                      if (80 > param3) {
+                        mf.a(param0, -f.field_o.field_A + 632, 2 * (-param3 + 80), f.field_o, param2 ^ -112);
+                        return;
+                      } else {
+                        if ((param3 ^ -1) >= -81) {
+                          f.field_o.e(632 + -f.field_o.field_A, param0);
+                          return;
+                        } else {
+                          if (95 > param3) {
+                            mf.a(param0, -f.field_o.field_A + 632, (param3 - 80) * 4, f.field_o, param2 ^ -108);
+                            return;
+                          } else {
+                            return;
+                          }
+                        }
+                      }
+                    } else {
+                      return;
+                    }
+                  } else {
+                    ll.a(114, -28, -15, 125);
+                    if (param3 > 50) {
+                      if (80 > param3) {
+                        mf.a(param0, -f.field_o.field_A + 632, 2 * (-param3 + 80), f.field_o, param2 ^ -112);
+                        return;
+                      } else {
+                        if ((param3 ^ -1) >= -81) {
+                          f.field_o.e(632 + -f.field_o.field_A, param0);
+                          return;
+                        } else {
+                          if (95 > param3) {
+                            mf.a(param0, -f.field_o.field_A + 632, (param3 - 80) * 4, f.field_o, param2 ^ -108);
+                            return;
+                          } else {
+                            return;
+                          }
+                        }
+                      }
+                    } else {
+                      return;
+                    }
                   }
                 } else {
                   break L0;
@@ -114,21 +146,21 @@ final class ll extends hg {
         }
         if (param2 == 8) {
           if (param3 > 50) {
-            if (80 <= param3) {
-              if ((param3 ^ -1) < -81) {
-                if (95 <= param3) {
-                  return;
-                } else {
-                  mf.a(param0, -f.field_o.field_A + 632, (param3 - 80) * 4, f.field_o, param2 ^ -108);
-                  return;
-                }
-              } else {
-                f.field_o.e(632 + -f.field_o.field_A, param0);
-                return;
-              }
-            } else {
+            if (80 > param3) {
               mf.a(param0, -f.field_o.field_A + 632, 2 * (-param3 + 80), f.field_o, param2 ^ -112);
               return;
+            } else {
+              if ((param3 ^ -1) >= -81) {
+                f.field_o.e(632 + -f.field_o.field_A, param0);
+                return;
+              } else {
+                if (95 > param3) {
+                  mf.a(param0, -f.field_o.field_A + 632, (param3 - 80) * 4, f.field_o, param2 ^ -108);
+                  return;
+                } else {
+                  return;
+                }
+              }
             }
           } else {
             return;
@@ -136,21 +168,21 @@ final class ll extends hg {
         } else {
           ll.a(114, -28, -15, 125);
           if (param3 > 50) {
-            if (80 <= param3) {
-              if ((param3 ^ -1) < -81) {
-                if (95 <= param3) {
-                  return;
-                } else {
-                  mf.a(param0, -f.field_o.field_A + 632, (param3 - 80) * 4, f.field_o, param2 ^ -108);
-                  return;
-                }
-              } else {
-                f.field_o.e(632 + -f.field_o.field_A, param0);
-                return;
-              }
-            } else {
+            if (80 > param3) {
               mf.a(param0, -f.field_o.field_A + 632, 2 * (-param3 + 80), f.field_o, param2 ^ -112);
               return;
+            } else {
+              if ((param3 ^ -1) >= -81) {
+                f.field_o.e(632 + -f.field_o.field_A, param0);
+                return;
+              } else {
+                if (95 > param3) {
+                  mf.a(param0, -f.field_o.field_A + 632, (param3 - 80) * 4, f.field_o, param2 ^ -108);
+                  return;
+                } else {
+                  return;
+                }
+              }
             }
           } else {
             return;

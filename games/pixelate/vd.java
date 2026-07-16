@@ -26,15 +26,17 @@ final class vd {
             var2 = 0;
             L1: while (true) {
               if (var2 >= sd.field_L) {
-                tm.field_O[param1.a((byte) -87)] = tm.field_O[param1.a((byte) -87)] + 1;
+                int dupTemp$4 = param1.a((byte) -87);
+                tm.field_O[dupTemp$4] = tm.field_O[dupTemp$4] + 1;
                 var2 = 0;
                 var3 = 0;
                 L2: while (true) {
                   if (var3 >= sd.field_L) {
                     sd.field_L = var2;
                     if (!param0) {
+                      int fieldTemp$5 = sd.field_L;
                       sd.field_L = sd.field_L + 1;
-                      de.field_e[sd.field_L] = param1;
+                      de.field_e[fieldTemp$5] = param1;
                       return;
                     } else {
                       return;
@@ -54,15 +56,17 @@ final class vd {
                         }
                       }
                     }
+                    int incrementValue$6 = var2;
                     var2++;
-                    de.field_e[var2] = de.field_e[var3];
+                    de.field_e[incrementValue$6] = de.field_e[var3];
                     var3++;
                     continue L2;
                   }
                 }
               } else {
                 if (param1.field_j == de.field_e[var2].field_j) {
-                  tm.field_O[de.field_e[var2].a((byte) 123)] = tm.field_O[de.field_e[var2].a((byte) 123)] + 1;
+                  int dupTemp$7 = de.field_e[var2].a((byte) 123);
+                  tm.field_O[dupTemp$7] = tm.field_O[dupTemp$7] + 1;
                   var2++;
                   continue L1;
                 } else {

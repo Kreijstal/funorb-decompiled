@@ -216,9 +216,11 @@ final class vi {
                         param6++;
                         continue L2;
                       } else {
+                        int incrementValue$10 = param3;
                         param3++;
+                        int incrementValue$11 = param2;
                         param2++;
-                        param0[param3] = param1[param2];
+                        param0[incrementValue$10] = param1[incrementValue$11];
                         param6++;
                         continue L2;
                       }
@@ -231,9 +233,11 @@ final class vi {
                       param2++;
                       break L3;
                     } else {
+                      int incrementValue$12 = param3;
                       param3++;
+                      int incrementValue$13 = param2;
                       param2++;
-                      param0[param3] = param1[param2];
+                      param0[incrementValue$12] = param1[incrementValue$13];
                       break L3;
                     }
                   }
@@ -244,9 +248,11 @@ final class vi {
                       param2++;
                       break L4;
                     } else {
+                      int incrementValue$14 = param3;
                       param3++;
+                      int incrementValue$15 = param2;
                       param2++;
-                      param0[param3] = param1[param2];
+                      param0[incrementValue$14] = param1[incrementValue$15];
                       break L4;
                     }
                   }
@@ -257,9 +263,11 @@ final class vi {
                       param2++;
                       break L5;
                     } else {
+                      int incrementValue$16 = param3;
                       param3++;
+                      int incrementValue$17 = param2;
                       param2++;
-                      param0[param3] = param1[param2];
+                      param0[incrementValue$16] = param1[incrementValue$17];
                       break L5;
                     }
                   }
@@ -270,9 +278,11 @@ final class vi {
                     param6++;
                     continue L1;
                   } else {
+                    int incrementValue$18 = param3;
                     param3++;
+                    int incrementValue$19 = param2;
                     param2++;
-                    param0[param3] = param1[param2];
+                    param0[incrementValue$18] = param1[incrementValue$19];
                     param6++;
                     continue L1;
                   }
@@ -320,9 +330,11 @@ final class vi {
                         var15++;
                         continue L2;
                       } else {
+                        int incrementValue$10 = param5;
                         param5++;
+                        int incrementValue$11 = param4;
                         param4++;
-                        param0[param5] = param2[param1[param4] & 255];
+                        param0[incrementValue$10] = param2[param1[incrementValue$11] & 255];
                         param8++;
                         var15++;
                         continue L2;
@@ -336,9 +348,11 @@ final class vi {
                       param4++;
                       break L3;
                     } else {
+                      int incrementValue$12 = param5;
                       param5++;
+                      int incrementValue$13 = param4;
                       param4++;
-                      param0[param5] = param2[param1[param4] & 255];
+                      param0[incrementValue$12] = param2[param1[incrementValue$13] & 255];
                       break L3;
                     }
                   }
@@ -349,9 +363,11 @@ final class vi {
                       param4++;
                       break L4;
                     } else {
+                      int incrementValue$14 = param5;
                       param5++;
+                      int incrementValue$15 = param4;
                       param4++;
-                      param0[param5] = param2[param1[param4] & 255];
+                      param0[incrementValue$14] = param2[param1[incrementValue$15] & 255];
                       break L4;
                     }
                   }
@@ -362,9 +378,11 @@ final class vi {
                       param4++;
                       break L5;
                     } else {
+                      int incrementValue$16 = param5;
                       param5++;
+                      int incrementValue$17 = param4;
                       param4++;
-                      param0[param5] = param2[param1[param4] & 255];
+                      param0[incrementValue$16] = param2[param1[incrementValue$17] & 255];
                       break L5;
                     }
                   }
@@ -376,9 +394,11 @@ final class vi {
                     var15++;
                     continue L1;
                   } else {
+                    int incrementValue$18 = param5;
                     param5++;
+                    int incrementValue$19 = param4;
                     param4++;
-                    param0[param5] = param2[param1[param4] & 255];
+                    param0[incrementValue$18] = param2[param1[incrementValue$19] & 255];
                     param8++;
                     var15++;
                     continue L1;

@@ -16,44 +16,35 @@ final class uk {
     }
 
     final static boolean a(byte param0) {
-        if (param0 == -44) {
-          if (ld.field_j <= -21) {
-            if (bj.d(param0 ^ -18868)) {
-              if (-1 < sd.field_b) {
-                if (nm.c(-23022)) {
-                  return false;
-                } else {
-                  return true;
-                }
-              } else {
-                return false;
-              }
-            } else {
-              return true;
+        if (param0 != -44) {
+            uk.a(31);
+            if ((ld.field_j ^ -1) > -21) {
+                return true;
             }
-          } else {
-            return true;
-          }
-        } else {
-          uk.a(31);
-          if (ld.field_j <= -21) {
-            if (bj.d(param0 ^ -18868)) {
-              if (-1 < sd.field_b) {
-                if (nm.c(-23022)) {
-                  return false;
-                } else {
-                  return true;
-                }
-              } else {
-                return false;
-              }
-            } else {
-              return true;
+            if (!bj.d(param0 ^ -18868)) {
+                return true;
             }
-          } else {
+            if (-1 <= (sd.field_b ^ -1)) {
+                return false;
+            }
+            if (nm.c(-23022)) {
+                return false;
+            }
             return true;
-          }
         }
+        if ((ld.field_j ^ -1) > -21) {
+            return true;
+        }
+        if (!bj.d(param0 ^ -18868)) {
+            return true;
+        }
+        if (-1 <= (sd.field_b ^ -1)) {
+            return false;
+        }
+        if (nm.c(-23022)) {
+            return false;
+        }
+        return true;
     }
 
     final static void a(boolean param0) {

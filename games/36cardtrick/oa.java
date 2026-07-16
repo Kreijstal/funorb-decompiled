@@ -28,7 +28,7 @@ final class oa {
               } else {
                 if (p.field_n[param3] >= p.field_n[param1]) {
                   if (param0 != -29680) {
-                    field_a = (int[]) null;
+                    field_a = null;
                     var4 = ij.field_c[param1] + (q.field_h[param1] + mj.field_b[param1]);
                     var5 = ij.field_c[param3] + mj.field_b[param3] + q.field_h[param3];
                     if (var4 >= var5) {
@@ -107,7 +107,7 @@ final class oa {
                       return true;
                     }
                   } else {
-                    field_a = (int[]) null;
+                    field_a = null;
                     var4 = ij.field_c[param1] + (q.field_h[param1] + mj.field_b[param1]);
                     var5 = ij.field_c[param3] + mj.field_b[param3] + q.field_h[param3];
                     if (var4 >= var5) {

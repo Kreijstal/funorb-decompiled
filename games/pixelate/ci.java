@@ -55,13 +55,14 @@ final class ci extends jj {
         var3 = var11;
         var4 = 0;
         L0: while (true) {
-          if (var4 >= var18.length) {
+          if ((var4 ^ -1) <= (var18.length ^ -1)) {
             var19 = new int[255];
             var5 = 0;
             L1: while (true) {
               if (var19.length <= var5) {
                 ((ci) this).field_p = new li(2, 47, var18);
                 ((ci) this).field_q = new li(1, 47, var19);
+                return;
               } else {
                 L2: {
                   var6 = 257 * var5;
@@ -143,7 +144,7 @@ final class ci extends jj {
               }
             }
             L9: {
-              if (var6 <= -1) {
+              if ((var6 ^ -1) <= -1) {
                 break L9;
               } else {
                 var6 = 0;
@@ -151,7 +152,7 @@ final class ci extends jj {
               }
             }
             L10: {
-              if (-256 >= var8) {
+              if (-256 <= (var8 ^ -1)) {
                 break L10;
               } else {
                 var8 = 255;

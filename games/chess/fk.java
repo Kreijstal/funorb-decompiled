@@ -11,15 +11,14 @@ abstract class fk extends l {
     static vl field_q;
 
     final static ae a(Throwable param0, String param1) {
-        ae var2_ref = null;
         ae var2 = null;
         if (param0 instanceof ae) {
             var2 = (ae) (Object) param0;
             var2.field_h = var2.field_h + 32 + param1;
         } else {
-            var2_ref = new ae(param0, param1);
+            var2 = new ae(param0, param1);
         }
-        return var2_ref;
+        return var2;
     }
 
     final static void a(int param0, int param1, int param2, int[] param3, int param4) {

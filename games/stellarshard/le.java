@@ -14,49 +14,37 @@ final class le extends gg {
         RuntimeException var1 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          try {
-            L0: {
+          L0: {
+            L1: {
               if (param0 <= -31) {
-                break L0;
+                break L1;
               } else {
                 le.a(43);
-                break L0;
+                break L1;
               }
             }
-          } catch (java.lang.RuntimeException decompiledCaughtParameter) {
-            decompiledCaughtException = decompiledCaughtParameter;
+            field_l = null;
+            field_n = null;
+            field_m = null;
+            field_q = null;
+            break L0;
           }
-          throw decompiledCaughtException;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter) {
-          decompiledCaughtException = decompiledCaughtParameter;
-          field_l = null;
-          field_n = null;
-          field_m = null;
-          field_q = null;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1 = decompiledCaughtException;
+          throw ma.a((Throwable) (Object) var1, "le.A(" + param0 + 41);
         }
     }
 
     private le() throws Throwable {
         RuntimeException var1 = null;
-        int statePc = 1;
-        Throwable caughtException = null;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 1: {
-                    try {
-                        throw new Error();
-                    } catch (Throwable stateCaught_1) {
-                        caughtException = stateCaught_1;
-                        statePc = 2;
-                        continue stateLoop;
-                    }
-                }
-                case 2: {
-                    var1 = (RuntimeException) (Object) caughtException;
-                    throw ma.a((Throwable) (Object) var1, "le.<init>()");
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
-            }
+        RuntimeException decompiledCaughtException = null;
+        try {
+          throw new Error();
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1 = decompiledCaughtException;
+          throw ma.a((Throwable) (Object) var1, "le.<init>()");
         }
     }
 

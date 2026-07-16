@@ -121,7 +121,7 @@ final class wd extends ta {
                   } else {
                     L7: {
                       var20 = var16[var19] >> -146838428;
-                      if (var20 >= -256) {
+                      if ((var20 ^ -1) >= -256) {
                         break L7;
                       } else {
                         var20 = 255;
@@ -138,7 +138,7 @@ final class wd extends ta {
                     }
                     L9: {
                       var21 = var17[var19] >> 701020452;
-                      if (-256 >= var21) {
+                      if (-256 <= (var21 ^ -1)) {
                         break L9;
                       } else {
                         var21 = 255;
@@ -155,7 +155,7 @@ final class wd extends ta {
                     }
                     L11: {
                       var22 = var18[var19] >> 240316292;
-                      if (var22 >= -256) {
+                      if ((var22 ^ -1) >= -256) {
                         break L11;
                       } else {
                         var22 = 255;
@@ -163,7 +163,7 @@ final class wd extends ta {
                       }
                     }
                     L12: {
-                      if (-1 > var22) {
+                      if (-1 < (var22 ^ -1)) {
                         var22 = 0;
                         break L12;
                       } else {
@@ -183,8 +183,9 @@ final class wd extends ta {
                       }
                     }
                     L14: {
+                      int incrementValue$1 = var14;
                       var14++;
-                      var26[var14] = var23;
+                      var26[incrementValue$1] = var23;
                       if (param0) {
                         var14 = var14 + (-1 + param7);
                         break L14;
@@ -345,9 +346,10 @@ final class wd extends ta {
             L1: while (true) {
               if (var6 >= var2) {
                 ((wd) this).field_u = ((wd) this).field_t[param0.i((byte) -101)];
-                int discarded$2 = param0.i((byte) -101);
-                int discarded$3 = param0.i((byte) -101);
+                int discarded$4 = param0.i((byte) -101);
+                int discarded$5 = param0.i((byte) -101);
                 var5 = null;
+                return;
               } else {
                 var16 = ((wd) this).field_t[var6];
                 var8 = var16.field_m.length;
@@ -360,8 +362,9 @@ final class wd extends ta {
                       if (-1 <= (var9 ^ -1)) {
                         break L3;
                       } else {
+                        int incrementValue$6 = var3;
                         var3++;
-                        ((wd) this).field_q[var3] = var9;
+                        ((wd) this).field_q[incrementValue$6] = var9;
                         break L3;
                       }
                     }
@@ -369,8 +372,9 @@ final class wd extends ta {
                       if ((var10 ^ -1) >= -1) {
                         break L4;
                       } else {
+                        int incrementValue$7 = var4;
                         var4++;
-                        ((wd) this).field_s[var4] = var10;
+                        ((wd) this).field_s[incrementValue$7] = var10;
                         break L4;
                       }
                     }

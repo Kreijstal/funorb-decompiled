@@ -23,13 +23,13 @@ final class lb {
         ((lb) this).field_d = true;
         ((lb) this).field_c = param1 ? true : false;
         if (param0 != 16511) {
-            ((lb) this).field_b = (String) null;
+            ((lb) this).field_b = null;
         }
     }
 
     final String d(int param0) {
         if (param0 != 640) {
-            return (String) null;
+            return null;
         }
         return ((lb) this).field_b;
     }

@@ -38,7 +38,7 @@ abstract class db extends gj {
           }
         }
         L1: {
-          if (-1 >= var4) {
+          if (-1 >= (var4 ^ -1)) {
             break L1;
           } else {
             ((db) this).field_K = ((db) this).field_K + (-15 + var4) / 16;
@@ -47,10 +47,10 @@ abstract class db extends gj {
         }
         L2: {
           L3: {
-            if (-1 != ((db) this).field_K) {
+            if (-1 != (((db) this).field_K ^ -1)) {
               break L3;
             } else {
-              if (var3 != 0) {
+              if ((var3 ^ -1) != -1) {
                 break L3;
               } else {
                 if (((db) this).field_G) {
@@ -170,7 +170,7 @@ abstract class db extends gj {
         int var6_int = 0;
         StringBuilder var6 = null;
         int var7 = 0;
-        String var7_ref = null;
+        String var7_ref_String = null;
         int var8 = 0;
         String var9 = null;
         int var10 = 0;
@@ -196,8 +196,8 @@ abstract class db extends gj {
                   }
                 }
               }
-              var7_ref = param0.substring(var6_int - -2, var5);
-              if (!ii.a(12969, (CharSequence) (Object) var7_ref)) {
+              var7_ref_String = param0.substring(var6_int - -2, var5);
+              if (!ii.a(12969, (CharSequence) (Object) var7_ref_String)) {
                 continue L0;
               } else {
                 if (var5 >= var3) {
@@ -207,7 +207,7 @@ abstract class db extends gj {
                     continue L0;
                   } else {
                     var5++;
-                    var8 = pl.a((CharSequence) (Object) var7_ref, -9816);
+                    var8 = pl.a((CharSequence) (Object) var7_ref_String, -9816);
                     var4 = var4 + (param1[var8].length() + (var6_int + -var5));
                     continue L0;
                   }

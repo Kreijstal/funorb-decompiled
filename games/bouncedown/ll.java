@@ -144,8 +144,8 @@ final class ll extends lk {
             return 28;
         }
         int var3 = 1;
-        while (param1 < -2) {
-            if (-1 != (1 & param1)) {
+        while ((param1 ^ -1) < -2) {
+            if (-1 != (1 & param1 ^ -1)) {
                 var3 = var3 * param2;
             }
             param1 = param1 >> 1;

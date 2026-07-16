@@ -2,6 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 import java.io.*;
+import java.net.Socket;
 
 abstract class tl {
     String field_c;
@@ -2620,14 +2621,18 @@ abstract class tl {
         RuntimeException decompiledCaughtException = null;
         java.net.Socket stackOut_0_0 = null;
         try {
-          var2_int = -43 % ((param0 - -56) / 53);
-          stackOut_0_0 = new java.net.Socket(((tl) this).field_c, ((tl) this).field_d);
-          stackIn_1_0 = stackOut_0_0;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter) {
-          decompiledCaughtException = decompiledCaughtParameter;
-          return stackIn_1_0;
+          L0: {
+            var2_int = -43 % ((param0 - -56) / 53);
+            stackOut_0_0 = new java.net.Socket(((tl) this).field_c, ((tl) this).field_d);
+            stackIn_1_0 = stackOut_0_0;
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2 = decompiledCaughtException;
+          throw dn.a((Throwable) (Object) var2, "tl.B(" + param0 + 41);
         }
-        return null;
+        return stackIn_1_0;
     }
 
     static {

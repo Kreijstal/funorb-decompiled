@@ -160,9 +160,11 @@ final class sl {
               continue L0;
             } else {
               ((sl) this).field_d = new gk(var3);
+              return;
             }
           } else {
             ((sl) this).field_d = new gk(var3);
+            return;
           }
         }
     }

@@ -129,13 +129,15 @@ final class wb extends wg {
                                         L13: while (true) {
                                           if (var16 >= 4) {
                                             if (var6 <= 12) {
+                                              int incrementValue$14 = param1;
                                               param1++;
-                                              param0[param1] = param0[param1] + (var15 * var11 + var13 * var9 >> 12 - var6);
+                                              param0[incrementValue$14] = param0[incrementValue$14] + (var15 * var11 + var13 * var9 >> 12 - var6);
                                               var12++;
                                               continue L11;
                                             } else {
+                                              int incrementValue$15 = param1;
                                               param1++;
-                                              param0[param1] = param0[param1] + (var15 * var11 + var13 * var9 << var6 - 12);
+                                              param0[incrementValue$15] = param0[incrementValue$15] + (var15 * var11 + var13 * var9 << var6 - 12);
                                               var12++;
                                               continue L11;
                                             }
@@ -144,8 +146,9 @@ final class wb extends wg {
                                             var18 = var28.field_b[var28.field_a] >> var6;
                                             var15 = var18 - var15;
                                             var28.field_b[var28.field_a] = var14 + (var18 * 2048 + 2048 >> 12) << var6;
+                                            int fieldTemp$16 = var28.field_a + 1;
                                             var28.field_a = var28.field_a + 1;
-                                            if (var28.field_a + 1 >= var28.field_b.length) {
+                                            if (fieldTemp$16 >= var28.field_b.length) {
                                               var28.field_a = 0;
                                               var16++;
                                               continue L13;
@@ -163,8 +166,9 @@ final class wb extends wg {
                                           var19 = var19 + ((var18 - var19) * var8 + 2048 >> 12);
                                           var27.field_c = var19 << var6;
                                           var27.field_a[var27.field_b] = var14 + (var19 * var7 + 2048 >> 12) << var6;
+                                          int fieldTemp$17 = var27.field_b + 1;
                                           var27.field_b = var27.field_b + 1;
-                                          if (var27.field_b + 1 < var27.field_a.length) {
+                                          if (fieldTemp$17 < var27.field_a.length) {
                                             break L14;
                                           } else {
                                             var27.field_b = 0;
@@ -187,10 +191,12 @@ final class wb extends wg {
                                     param1 = param1 >> 1;
                                     break L10;
                                   } else {
+                                    int incrementValue$18 = var13;
                                     var13++;
-                                    var14 = ((wb) this).field_t[var13] >> var6;
+                                    var14 = ((wb) this).field_t[incrementValue$18] >> var6;
+                                    int incrementValue$19 = var13;
                                     var13++;
-                                    var15 = ((wb) this).field_t[var13] >> var6;
+                                    var15 = ((wb) this).field_t[incrementValue$19] >> var6;
                                     var16 = (var14 + var15) * var10 >> 17;
                                     var17 = 0;
                                     var18 = 0;
@@ -207,16 +213,20 @@ final class wb extends wg {
                                                 L19: while (true) {
                                                   if (var19 >= 4) {
                                                     if (var6 <= 12) {
+                                                      int incrementValue$20 = param1;
                                                       param1++;
-                                                      param0[param1] = param0[param1] + (var17 * var11 + var18 * var12 + var14 * var9 >> 12 - var6);
+                                                      param0[incrementValue$20] = param0[incrementValue$20] + (var17 * var11 + var18 * var12 + var14 * var9 >> 12 - var6);
+                                                      int incrementValue$21 = param1;
                                                       param1++;
-                                                      param0[param1] = param0[param1] + (var18 * var11 + var17 * var12 + var15 * var9 >> 12 - var6);
+                                                      param0[incrementValue$21] = param0[incrementValue$21] + (var18 * var11 + var17 * var12 + var15 * var9 >> 12 - var6);
                                                       continue L15;
                                                     } else {
+                                                      int incrementValue$22 = param1;
                                                       param1++;
-                                                      param0[param1] = param0[param1] + (var17 * var11 + var18 * var12 + var14 * var9 << var6 - 12);
+                                                      param0[incrementValue$22] = param0[incrementValue$22] + (var17 * var11 + var18 * var12 + var14 * var9 << var6 - 12);
+                                                      int incrementValue$23 = param1;
                                                       param1++;
-                                                      param0[param1] = param0[param1] + (var18 * var11 + var17 * var12 + var15 * var9 << var6 - 12);
+                                                      param0[incrementValue$23] = param0[incrementValue$23] + (var18 * var11 + var17 * var12 + var15 * var9 << var6 - 12);
                                                       continue L15;
                                                     }
                                                   } else {
@@ -224,8 +234,9 @@ final class wb extends wg {
                                                     var21 = var26.field_b[var26.field_a] >> var6;
                                                     var18 = var21 - var18;
                                                     var26.field_b[var26.field_a] = var16 + (var21 * 2048 + 2048 >> 12) << var6;
+                                                    int fieldTemp$24 = var26.field_a + 1;
                                                     var26.field_a = var26.field_a + 1;
-                                                    if (var26.field_a + 1 >= var26.field_b.length) {
+                                                    if (fieldTemp$24 >= var26.field_b.length) {
                                                       var26.field_a = 0;
                                                       var19++;
                                                       continue L19;
@@ -243,8 +254,9 @@ final class wb extends wg {
                                                   var22 = var22 + ((var21 - var22) * var8 + 2048 >> 12);
                                                   var25.field_c = var22 << var6;
                                                   var25.field_a[var25.field_b] = var16 + (var22 * var7 + 2048 >> 12) << var6;
+                                                  int fieldTemp$25 = var25.field_b + 1;
                                                   var25.field_b = var25.field_b + 1;
-                                                  if (var25.field_b + 1 < var25.field_a.length) {
+                                                  if (fieldTemp$25 < var25.field_a.length) {
                                                     break L20;
                                                   } else {
                                                     var25.field_b = 0;
@@ -261,8 +273,9 @@ final class wb extends wg {
                                             var20 = var24.field_b[var24.field_a] >> var6;
                                             var17 = var20 - var17;
                                             var24.field_b[var24.field_a] = var16 + (var20 * 2048 + 2048 >> 12) << var6;
+                                            int fieldTemp$26 = var24.field_a + 1;
                                             var24.field_a = var24.field_a + 1;
-                                            if (var24.field_a + 1 >= var24.field_b.length) {
+                                            if (fieldTemp$26 >= var24.field_b.length) {
                                               var24.field_a = 0;
                                               var18++;
                                               continue L17;
@@ -280,8 +293,9 @@ final class wb extends wg {
                                           var21 = var21 + ((var20 - var21) * var8 + 2048 >> 12);
                                           var23.field_c = var21 << var6;
                                           var23.field_a[var23.field_b] = var16 + (var21 * var7 + 2048 >> 12) << var6;
+                                          int fieldTemp$27 = var23.field_b + 1;
                                           var23.field_b = var23.field_b + 1;
-                                          if (var23.field_b + 1 < var23.field_a.length) {
+                                          if (fieldTemp$27 < var23.field_a.length) {
                                             break L21;
                                           } else {
                                             var23.field_b = 0;

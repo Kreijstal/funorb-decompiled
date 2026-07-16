@@ -13,7 +13,7 @@ final class qc implements Iterable {
 
     final static ea c(int param0) {
         int var1 = 0;
-        og var3 = null;
+        Object var3 = null;
         int[] var5 = null;
         int var5_int = 0;
         int var6 = 0;
@@ -49,7 +49,7 @@ final class qc implements Iterable {
             var6 = 0;
             L2: while (true) {
               if (var6 >= var1) {
-                var3 = new og(pf.field_c, wd.field_a, bg.field_d[0], oc.field_e[0], qk.field_b[0], ng.field_e[0], var21);
+                var3 = (Object) (Object) new og(pf.field_c, wd.field_a, bg.field_d[0], oc.field_e[0], qk.field_b[0], ng.field_e[0], var21);
                 break L1;
               } else {
                 var5[var6] = hi.a(c.a(255, (int) var20[var6]) << -1930255720, af.field_p[c.a((int) var18[var6], 255)]);
@@ -64,7 +64,7 @@ final class qc implements Iterable {
             var5_int = 0;
             L3: while (true) {
               if (var1 <= var5_int) {
-                var3 = (og) (Object) new ea(pf.field_c, wd.field_a, bg.field_d[0], oc.field_e[0], qk.field_b[0], ng.field_e[0], var19);
+                var3 = (Object) (Object) new ea(pf.field_c, wd.field_a, bg.field_d[0], oc.field_e[0], qk.field_b[0], ng.field_e[0], var19);
                 break L1;
               } else {
                 var8[var5_int] = af.field_p[c.a(255, (int) var18[var5_int])];
@@ -75,7 +75,7 @@ final class qc implements Iterable {
           }
         }
         ec.a((byte) 40);
-        return (ea) (Object) var3;
+        return (ea) var3;
     }
 
     final al a(int param0) {

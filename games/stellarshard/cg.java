@@ -55,29 +55,36 @@ final class cg {
             Object stackIn_2_0 = null;
             vi stackIn_4_0 = null;
             Throwable decompiledCaughtException = null;
-            Object stackOut_1_0 = null;
             vi stackOut_3_0 = null;
+            Object stackOut_1_0 = null;
             try {
-              var4 = Class.forName("jk");
-              if (!param1) {
-                return (vi) (Object) stackIn_2_0;
-              } else {
-                stackOut_1_0 = null;
-                stackIn_2_0 = stackOut_1_0;
+              L0: {
+                var4 = Class.forName("jk");
+                if (!param1) {
+                  var5 = (vi) var4.newInstance();
+                  var5.a(param0, param3, param2, (byte) -122);
+                  stackOut_3_0 = (vi) var5;
+                  stackIn_4_0 = stackOut_3_0;
+                  break L0;
+                } else {
+                  stackOut_1_0 = null;
+                  stackIn_2_0 = stackOut_1_0;
+                  return (vi) (Object) stackIn_2_0;
+                }
               }
-            } catch (java.lang.Throwable decompiledCaughtParameter) {
-              decompiledCaughtException = decompiledCaughtParameter;
-              var5 = (vi) var4.newInstance();
-              var5.a(param0, param3, param2, (byte) -122);
-              stackOut_3_0 = (vi) var5;
-              stackIn_4_0 = stackOut_3_0;
+            } catch (java.lang.Throwable decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              var4_ref = decompiledCaughtException;
+              var5_ref = new mh();
+              ((vi) (Object) var5_ref).a(param0, param3, param2, (byte) -117);
+              return (vi) (Object) var5_ref;
             }
+            return stackIn_4_0;
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
             throw new RuntimeException(decompiledCheckedException);
         }
-        return null;
     }
 
     static {

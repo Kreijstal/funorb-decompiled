@@ -14,33 +14,33 @@ final class fh extends g implements wi, qh {
         ck var10 = null;
         var10 = new ck(20, param4, 120 + param1, 25, param2, false, 120, 3, j.field_C, 16777215, param0);
         ((fh) this).b((lk) (Object) var10, (byte) 118);
-        var9 = new pa(((of) param2).a(84), param3, 126, param4 - -((ck) var10).field_q, 25 + param1, param5);
+        var9 = new pa(((of) (Object) param2).a(84), param3, 126, param4 - -var10.field_q, 25 + param1, param5);
         var9.field_k = (pl) this;
         if (param6 < 112) {
           boolean discarded$2 = this.d((byte) 89);
           ((fh) this).b((lk) (Object) var9, (byte) 118);
-          return ((ck) var10).field_q - -((pa) var9).field_q;
+          return var10.field_q - -var9.field_q;
         } else {
           ((fh) this).b((lk) (Object) var9, (byte) 118);
-          return ((ck) var10).field_q - -((pa) var9).field_q;
+          return var10.field_q - -var9.field_q;
         }
     }
 
     public final void a(boolean param0) {
         if (!param0) {
-          ((fh) this).field_E = (v) null;
-          ((hj) ((fh) this).field_E.a(-67)).g(80);
+          ((fh) this).field_E = null;
+          ((hj) (Object) ((fh) this).field_E.a(-67)).g(80);
           return;
         } else {
-          ((hj) ((fh) this).field_E.a(-67)).g(80);
+          ((hj) (Object) ((fh) this).field_E.a(-67)).g(80);
           return;
         }
     }
 
     final boolean a(char param0, byte param1, int param2, lk param3) {
         if (param1 > -99) {
-            field_G = (int[][]) (int[][]) null;
-            if (this.a(param0, (byte) -115, param2, param3)) {
+            field_G = null;
+            if (super.a(param0, (byte) -115, param2, param3)) {
                 return true;
             }
             if (98 == param2) {
@@ -51,7 +51,7 @@ final class fh extends g implements wi, qh {
             }
             return false;
         }
-        if (this.a(param0, (byte) -115, param2, param3)) {
+        if (super.a(param0, (byte) -115, param2, param3)) {
             return true;
         }
         if (98 == param2) {
@@ -65,21 +65,21 @@ final class fh extends g implements wi, qh {
 
     public static void m(int param0) {
         if (param0 != 200) {
-            field_D = (String) null;
             field_D = null;
-            field_G = (int[][]) null;
+            field_D = null;
+            field_G = null;
             return;
         }
         field_D = null;
-        field_G = (int[][]) null;
+        field_G = null;
     }
 
     public final void a(String param0, boolean param1) {
         v var3 = null;
         String var4 = null;
-        String var5 = null;
+        Object var5 = null;
         if (!param1) {
-          var5 = (String) null;
+          var5 = null;
           ((fh) this).a((String) null, true);
           var3 = ((fh) this).field_E;
           var4 = param0;
@@ -146,7 +146,7 @@ final class fh extends g implements wi, qh {
     private final boolean d(byte param0) {
         if (this.a(98, (of) (Object) ((fh) this).field_E)) {
           if (param0 != 68) {
-            ((fh) this).field_F = (hl) null;
+            ((fh) this).field_F = null;
             return true;
           } else {
             return true;
@@ -157,12 +157,12 @@ final class fh extends g implements wi, qh {
     }
 
     final void a(int param0, int param1, lk param2, int param3) {
-        this.a(param0, param1, param2, param3);
+        super.a(param0, param1, param2, param3);
         ((fh) this).field_F.field_B = this.d((byte) 68);
     }
 
     private final void l(int param0) {
-        String var3 = null;
+        Object var3 = null;
         if (param0 == 14831) {
           if (!this.d((byte) 68)) {
             return;
@@ -171,7 +171,7 @@ final class fh extends g implements wi, qh {
             return;
           }
         } else {
-          var3 = (String) null;
+          var3 = null;
           ((fh) this).a((String) null, true);
           if (!this.d((byte) 68)) {
             return;
@@ -183,8 +183,8 @@ final class fh extends g implements wi, qh {
     }
 
     final static java.net.URL a(java.applet.Applet param0, java.net.URL param1, int param2) {
-        String var3 = null;
-        String var4 = null;
+        Object var3 = null;
+        Object var4 = null;
         if (param2 == -1) {
           var3 = null;
           if (ni.field_a != null) {
@@ -197,15 +197,15 @@ final class fh extends g implements wi, qh {
                   if (jf.field_l.equals((Object) (Object) param0.getParameter("session"))) {
                     break L0;
                   } else {
-                    var4 = jf.field_l;
+                    var4 = (Object) (Object) jf.field_l;
                     break L0;
                   }
                 }
               }
-              return hi.a(var3, param1, var4, -1, 353);
+              return hi.a((String) var3, param1, (String) var4, -1, 353);
             } else {
               L1: {
-                var3 = ni.field_a;
+                var3 = (Object) (Object) ni.field_a;
                 var4 = var3;
                 var4 = var3;
                 var4 = null;
@@ -215,12 +215,12 @@ final class fh extends g implements wi, qh {
                   if (jf.field_l.equals((Object) (Object) param0.getParameter("session"))) {
                     break L1;
                   } else {
-                    var4 = jf.field_l;
+                    var4 = (Object) (Object) jf.field_l;
                     break L1;
                   }
                 }
               }
-              return hi.a(var3, param1, var4, -1, 353);
+              return hi.a((String) var3, param1, (String) var4, -1, 353);
             }
           } else {
             L2: {
@@ -231,15 +231,15 @@ final class fh extends g implements wi, qh {
                 if (jf.field_l.equals((Object) (Object) param0.getParameter("session"))) {
                   break L2;
                 } else {
-                  var4 = jf.field_l;
+                  var4 = (Object) (Object) jf.field_l;
                   break L2;
                 }
               }
             }
-            return hi.a(var3, param1, var4, -1, 353);
+            return hi.a((String) var3, param1, (String) var4, -1, 353);
           }
         } else {
-          return (java.net.URL) null;
+          return null;
         }
     }
 
@@ -258,7 +258,7 @@ final class fh extends g implements wi, qh {
         int stackIn_7_0 = 0;
         int stackOut_6_0 = 0;
         int stackOut_5_0 = 0;
-        var3 = ((of) param1).a(-52);
+        var3 = param1.a(-52);
         if (var3 == null) {
           return true;
         } else {
@@ -266,7 +266,7 @@ final class fh extends g implements wi, qh {
             return false;
           } else {
             L0: {
-              var4 = ((ba) var3).a(true);
+              var4 = var3.a(true);
               if (ii.field_e != var4) {
                 stackOut_6_0 = 0;
                 stackIn_7_0 = stackOut_6_0;

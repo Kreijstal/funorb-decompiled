@@ -42,139 +42,52 @@ final class qn extends fa {
             int var7 = 0;
             Object stackIn_3_0 = null;
             String stackIn_9_0 = null;
-            Object stackOut_2_0 = null;
+            Throwable decompiledCaughtException = null;
             String stackOut_8_0 = null;
-            int statePc = 0;
-            Throwable caughtException = null;
-            stateLoop: while (true) {
-                switch (statePc) {
-                    case 0: {
-                        var7 = Pixelate.field_H ? 1 : 0;
-                        statePc = 1;
-                        continue stateLoop;
-                    }
-                    case 1: {
-                        try {
-                            var3 = (String) cq.a("getcookies", (byte) -114, param0);
-                            var4 = dd.a(var3, (byte) -61, ';');
-                            if (param2 == -85) {
-                                statePc = 4;
-                            } else {
-                                statePc = 2;
-                            }
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_1) {
-                            caughtException = stateCaught_1;
-                            statePc = 12;
-                            continue stateLoop;
-                        }
-                    }
-                    case 2: {
-                        try {
-                            stackOut_2_0 = null;
-                            stackIn_3_0 = stackOut_2_0;
-                            statePc = 3;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_2) {
-                            caughtException = stateCaught_2;
-                            statePc = 12;
-                            continue stateLoop;
-                        }
-                    }
-                    case 3: {
-                        return (String) (Object) stackIn_3_0;
-                    }
-                    case 4: {
-                        try {
-                            var5 = 0;
-                            statePc = 5;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_4) {
-                            caughtException = stateCaught_4;
-                            statePc = 12;
-                            continue stateLoop;
-                        }
-                    }
-                    case 5: {
-                        try {
-                            if (var5 >= var4.length) {
-                                statePc = 13;
-                            } else {
-                                statePc = 6;
-                            }
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_5) {
-                            caughtException = stateCaught_5;
-                            statePc = 12;
-                            continue stateLoop;
-                        }
-                    }
-                    case 6: {
-                        try {
-                            var6 = var4[var5].indexOf('=');
-                            if (0 > var6) {
-                                statePc = 10;
-                            } else {
-                                statePc = 7;
-                            }
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_6) {
-                            caughtException = stateCaught_6;
-                            statePc = 12;
-                            continue stateLoop;
-                        }
-                    }
-                    case 7: {
-                        try {
-                            if (!var4[var5].substring(0, var6).trim().equals((Object) (Object) param1)) {
-                                statePc = 10;
-                            } else {
-                                statePc = 8;
-                            }
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_7) {
-                            caughtException = stateCaught_7;
-                            statePc = 12;
-                            continue stateLoop;
-                        }
-                    }
-                    case 8: {
-                        try {
+            Object stackOut_2_0 = null;
+            var7 = Pixelate.field_H ? 1 : 0;
+            try {
+              L0: {
+                var3 = (String) cq.a("getcookies", (byte) -114, param0);
+                var4 = dd.a(var3, (byte) -61, ';');
+                if (param2 == -85) {
+                  var5 = 0;
+                  L1: while (true) {
+                    if (var5 >= var4.length) {
+                      break L0;
+                    } else {
+                      L2: {
+                        var6 = var4[var5].indexOf('=');
+                        if (0 > var6) {
+                          break L2;
+                        } else {
+                          if (!var4[var5].substring(0, var6).trim().equals((Object) (Object) param1)) {
+                            break L2;
+                          } else {
                             stackOut_8_0 = var4[var5].substring(1 + var6).trim();
                             stackIn_9_0 = stackOut_8_0;
-                            statePc = 9;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_8) {
-                            caughtException = stateCaught_8;
-                            statePc = 12;
-                            continue stateLoop;
+                            return stackIn_9_0;
+                          }
                         }
+                      }
+                      var5++;
+                      continue L1;
                     }
-                    case 9: {
-                        return stackIn_9_0;
-                    }
-                    case 10: {
-                        try {
-                            var5++;
-                            statePc = 5;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_10) {
-                            caughtException = stateCaught_10;
-                            statePc = 12;
-                            continue stateLoop;
-                        }
-                    }
-                    case 12: {
-                        var3_ref = caughtException;
-                        statePc = 13;
-                        continue stateLoop;
-                    }
-                    case 13: {
-                        return null;
-                    }
-                    default: throw new IllegalStateException("invalid CFG state " + statePc);
+                  }
+                } else {
+                  stackOut_2_0 = null;
+                  stackIn_3_0 = stackOut_2_0;
+                  return (String) (Object) stackIn_3_0;
                 }
+              }
+            } catch (java.lang.Throwable decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              L3: {
+                var3_ref = decompiledCaughtException;
+                break L3;
+              }
             }
+            return null;
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
@@ -219,7 +132,7 @@ final class qn extends fa {
           if (param3 < -99) {
             break L1;
           } else {
-            int discarded$1 = qn.e(-2);
+            int discarded$4 = qn.e(-2);
             break L1;
           }
         }
@@ -228,8 +141,9 @@ final class qn extends fa {
           if (var9 >= var8) {
             L3: {
               if (var8 > var7) {
+                int incrementValue$5 = var6;
                 var6++;
-                param2[var6] = param0.substring(var7, var8).trim();
+                param2[incrementValue$5] = param0.substring(var7, var8).trim();
                 break L3;
               } else {
                 break L3;
@@ -256,15 +170,17 @@ final class qn extends fa {
                 break L4;
               } else {
                 var7 = var9 + 1;
+                int incrementValue$6 = var6;
                 var6++;
-                param2[var6] = var11;
+                param2[incrementValue$6] = var11;
                 break L4;
               }
             }
             if (62 == var10) {
               if (param0.regionMatches(var9 - 3, "<br>", 0, 4)) {
+                int incrementValue$7 = var6;
                 var6++;
-                param2[var6] = param0.substring(var7, -3 + var9).trim();
+                param2[incrementValue$7] = param0.substring(var7, -3 + var9).trim();
                 var7 = var9 + 1;
                 var9++;
                 continue L2;

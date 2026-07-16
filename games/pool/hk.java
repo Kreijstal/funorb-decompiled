@@ -21,24 +21,43 @@ final class hk extends kb {
     }
 
     final int b(long param0, byte param1) {
-        int var6 = Pool.field_O;
-        int var4 = 53 % ((param1 - 46) / 44);
-        if (((hk) this).field_p > ((hk) this).field_m) {
-            ((hk) this).field_k = ((hk) this).field_k + (-((hk) this).field_m + ((hk) this).field_p);
-            ((hk) this).field_m = ((hk) this).field_m + (((hk) this).field_p + -((hk) this).field_m);
-            ((hk) this).field_p = ((hk) this).field_p + param0;
-            return 1;
-        }
+        int var4 = 0;
         int var5 = 0;
-        do {
-            var5++;
-            ((hk) this).field_p = ((hk) this).field_p + param0;
-            // if_icmpge L114
-        } while (((hk) this).field_m > ((hk) this).field_p);
-        if ((((hk) this).field_p ^ -1L) > (((hk) this).field_m ^ -1L)) {
-            ((hk) this).field_p = ((hk) this).field_m;
+        int var6 = 0;
+        var6 = Pool.field_O;
+        var4 = 53 % ((param1 - 46) / 44);
+        if (((hk) this).field_p <= ((hk) this).field_m) {
+          var5 = 0;
+          L0: while (true) {
+            L1: {
+              var5++;
+              ((hk) this).field_p = ((hk) this).field_p + param0;
+              if (var5 >= 10) {
+                break L1;
+              } else {
+                if (((hk) this).field_m > ((hk) this).field_p) {
+                  continue L0;
+                } else {
+                  break L1;
+                }
+              }
+            }
+            L2: {
+              if ((((hk) this).field_p ^ -1L) <= (((hk) this).field_m ^ -1L)) {
+                break L2;
+              } else {
+                ((hk) this).field_p = ((hk) this).field_m;
+                break L2;
+              }
+            }
+            return var5;
+          }
+        } else {
+          ((hk) this).field_k = ((hk) this).field_k + (-((hk) this).field_m + ((hk) this).field_p);
+          ((hk) this).field_m = ((hk) this).field_m + (((hk) this).field_p + -((hk) this).field_m);
+          ((hk) this).field_p = ((hk) this).field_p + param0;
+          return 1;
         }
-        return var5;
     }
 
     final static qp a(vh param0, vh param1, sf param2, vh param3, byte param4) {
@@ -50,7 +69,7 @@ final class hk extends kb {
         int[] var10 = null;
         qp[] var11 = null;
         int var12 = 0;
-        sf var13_ref = null;
+        sf var13_ref_sf = null;
         int var13 = 0;
         int var14 = 0;
         int var15 = 0;
@@ -116,10 +135,10 @@ final class hk extends kb {
                 if (param2.field_F.length <= var12) {
                   break L2;
                 } else {
-                  var13_ref = jp.field_N.a((byte) -55, param2.field_F[var12]);
-                  var8[var12] = var13_ref.field_G;
+                  var13_ref_sf = jp.field_N.a((byte) -55, param2.field_F[var12]);
+                  var8[var12] = var13_ref_sf.field_G;
                   var9[var12] = param2.field_w[var12];
-                  var11[var12] = hk.a(param0, param1, var13_ref, param3, (byte) 125);
+                  var11[var12] = hk.a(param0, param1, var13_ref_sf, param3, (byte) 125);
                   var12++;
                   continue L3;
                 }

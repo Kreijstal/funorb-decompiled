@@ -113,13 +113,17 @@ final class co extends eq {
           }
         }
         try {
-          stackOut_2_0 = Integer.parseInt(((co) this).field_bb.field_m) + -1;
-          stackIn_3_0 = stackOut_2_0;
-        } catch (java.lang.Exception decompiledCaughtParameter) {
-          decompiledCaughtException = decompiledCaughtParameter;
-          return stackIn_3_0;
+          L1: {
+            stackOut_2_0 = Integer.parseInt(((co) this).field_bb.field_m) + -1;
+            stackIn_3_0 = stackOut_2_0;
+            break L1;
+          }
+        } catch (java.lang.Exception decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2 = (NumberFormatException) (Object) decompiledCaughtException;
+          return -1;
         }
-        return 0;
+        return stackIn_3_0;
     }
 
     final boolean g(byte param0) {
@@ -216,20 +220,24 @@ final class co extends eq {
         int stackOut_2_0 = 0;
         try {
           L0: {
-            if (param0 > 13) {
-              break L0;
-            } else {
-              ((co) this).field_Z = null;
-              break L0;
+            L1: {
+              if (param0 > 13) {
+                break L1;
+              } else {
+                ((co) this).field_Z = null;
+                break L1;
+              }
             }
+            stackOut_2_0 = Integer.parseInt(((co) this).field_eb.field_m);
+            stackIn_3_0 = stackOut_2_0;
+            break L0;
           }
-          stackOut_2_0 = Integer.parseInt(((co) this).field_eb.field_m);
-          stackIn_3_0 = stackOut_2_0;
-        } catch (java.lang.Exception decompiledCaughtParameter) {
-          decompiledCaughtException = decompiledCaughtParameter;
-          return stackIn_3_0;
+        } catch (java.lang.Exception decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2 = (NumberFormatException) (Object) decompiledCaughtException;
+          return -1;
         }
-        return 0;
+        return stackIn_3_0;
     }
 
     final void a(int param0, sn param1) {
@@ -274,13 +282,17 @@ final class co extends eq {
           }
         }
         try {
-          stackOut_2_0 = Integer.parseInt(((co) this).field_Z.field_m);
-          stackIn_3_0 = stackOut_2_0;
-        } catch (java.lang.Exception decompiledCaughtParameter) {
-          decompiledCaughtException = decompiledCaughtParameter;
-          return stackIn_3_0;
+          L1: {
+            stackOut_2_0 = Integer.parseInt(((co) this).field_Z.field_m);
+            stackIn_3_0 = stackOut_2_0;
+            break L1;
+          }
+        } catch (java.lang.Exception decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2 = (NumberFormatException) (Object) decompiledCaughtException;
+          return -1;
         }
-        return 0;
+        return stackIn_3_0;
     }
 
     final void a(int param0, byte param1, int param2, int param3) {

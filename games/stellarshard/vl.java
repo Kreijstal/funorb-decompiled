@@ -273,7 +273,7 @@ final class vl {
           }
         }
         L1: {
-          if (((vl) this).field_f == 0) {
+          if ((((vl) this).field_f ^ -1) == -1) {
             if (((vl) this).field_n != -4) {
               if (((vl) this).field_n == -2) {
                 ti.c(var3, var4, 5 + ((vl) this).field_p, 16777215 + -var5, 32);
@@ -286,10 +286,10 @@ final class vl {
                   } else {
                     if (((vl) this).field_n != 0) {
                       L3: {
-                        if (-2 == ((vl) this).field_n) {
+                        if (-2 == (((vl) this).field_n ^ -1)) {
                           break L3;
                         } else {
-                          if (-7 == ((vl) this).field_n) {
+                          if (-7 == (((vl) this).field_n ^ -1)) {
                             break L3;
                           } else {
                             if ((((vl) this).field_n ^ -1) != -3) {
@@ -301,7 +301,7 @@ final class vl {
                                     break L1;
                                   } else {
                                     if ((((vl) this).field_n ^ -1) != -10) {
-                                      if (((vl) this).field_n == -6) {
+                                      if ((((vl) this).field_n ^ -1) == -6) {
                                         ti.c(var3, var4, ((vl) this).field_p + 5, var5, 32);
                                         ti.c(var3, var4, 3 - -((vl) this).field_p, var5, 32);
                                         ti.c(var3, var4, ((vl) this).field_p + 1, 16777215, 32);
@@ -309,7 +309,7 @@ final class vl {
                                       } else {
                                         if (((vl) this).field_n != -3) {
                                           L4: {
-                                            if (-11 == ((vl) this).field_n) {
+                                            if (-11 == (((vl) this).field_n ^ -1)) {
                                               break L4;
                                             } else {
                                               if (-12 == (((vl) this).field_n ^ -1)) {
@@ -729,34 +729,61 @@ final class vl {
     }
 
     private final boolean a(int param0, qe param1, boolean param2) {
-        if (param1.field_a - 48.0 < ((vl) this).field_c) {
-            if (((vl) this).field_c < 48.0 + param1.field_a) {
-                if (-48.0 + param1.field_l < ((vl) this).field_k) {
-                    if (param1.field_l + 48.0 <= ((vl) this).field_k) {
+        L0: {
+          if (param1.field_a - 48.0 >= ((vl) this).field_c) {
+            break L0;
+          } else {
+            if (((vl) this).field_c >= 48.0 + param1.field_a) {
+              break L0;
+            } else {
+              if (-48.0 + param1.field_l >= ((vl) this).field_k) {
+                break L0;
+              } else {
+                if (param1.field_l + 48.0 > ((vl) this).field_k) {
+                  L1: {
+                    if (param2) {
+                      break L1;
                     } else {
-                        if (!param2) {
-                            // ifne L135
-                        } else {
-                            return true;
-                        }
+                      if (param1.b(param0 ^ -688).c((int)(param1.field_a - 48.0), (int)(param1.field_l - 48.0), (int)((vl) this).field_c, (int)((vl) this).field_k)) {
+                        break L1;
+                      } else {
+                        break L0;
+                      }
                     }
+                  }
+                  return true;
+                } else {
+                  break L0;
                 }
+              }
             }
+          }
         }
-        if (-4.0 + param1.field_a < ((vl) this).field_c) {
-            if (((vl) this).field_c < 4.0 + param1.field_a) {
-                if (((vl) this).field_k > param1.field_l - 4.0) {
-                    if (!(((vl) this).field_k >= 4.0 + param1.field_l)) {
-                        return true;
-                    }
+        L2: {
+          if (-4.0 + param1.field_a >= ((vl) this).field_c) {
+            break L2;
+          } else {
+            if (((vl) this).field_c >= 4.0 + param1.field_a) {
+              break L2;
+            } else {
+              if (((vl) this).field_k <= param1.field_l - 4.0) {
+                break L2;
+              } else {
+                if (((vl) this).field_k < 4.0 + param1.field_l) {
+                  return true;
+                } else {
+                  break L2;
                 }
+              }
             }
+          }
         }
-        if (param0 != -48) {
-            field_r = null;
-            return false;
+        if (param0 == -48) {
+          return false;
+        } else {
+          field_r = null;
+          return false;
         }
-        return false;
     }
 
     private vl(vl param0) {

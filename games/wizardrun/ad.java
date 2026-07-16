@@ -72,7 +72,7 @@ final class ad {
         int var3 = 0;
         byte[] var4 = null;
         byte[] var5 = null;
-        java.math.BigInteger var7_ref = null;
+        java.math.BigInteger var7_ref_java_math_BigInteger = null;
         int var7 = 0;
         int var8 = 0;
         va var10 = null;
@@ -116,8 +116,8 @@ final class ad {
                     break L2;
                   } else {
                     var12 = new java.math.BigInteger(var16);
-                    var7_ref = var12.modPow(((ad) this).field_g, ((ad) this).field_e);
-                    var5 = var7_ref.toByteArray();
+                    var7_ref_java_math_BigInteger = var12.modPow(((ad) this).field_g, ((ad) this).field_e);
+                    var5 = var7_ref_java_math_BigInteger.toByteArray();
                     break L1;
                   }
                 }
@@ -162,25 +162,37 @@ final class ad {
     }
 
     final fh a(boolean param0, int param1, sg param2, int param3, sg param4) {
-        if (((ad) this).field_h == null) {
-            throw new RuntimeException();
-        }
-        if ((param3 ^ -1) <= -1) {
-            // if_icmpge L36
+        int var6 = 0;
+        int var7 = 0;
+        fh var9 = null;
+        byte[] var11 = null;
+        if (((ad) this).field_h != null) {
+          L0: {
+            if ((param3 ^ -1) > -1) {
+              break L0;
+            } else {
+              if (param3 >= ((ad) this).field_i.length) {
+                break L0;
+              } else {
+                if (null == ((ad) this).field_i[param3]) {
+                  ((ad) this).field_h.field_m = param1 * param3 + 6;
+                  var6 = ((ad) this).field_h.i(255);
+                  var7 = ((ad) this).field_h.i(param1 + 183);
+                  var11 = new byte[64];
+                  ((ad) this).field_h.a(true, 64, var11, 0);
+                  var9 = new fh(param3, param2, param4, ((ad) this).field_a, ((ad) this).field_b, var6, var11, var7, param0);
+                  ((ad) this).field_i[param3] = var9;
+                  return var9;
+                } else {
+                  return ((ad) this).field_i[param3];
+                }
+              }
+            }
+          }
+          throw new RuntimeException();
         } else {
-            throw new RuntimeException();
+          throw new RuntimeException();
         }
-        if (null != ((ad) this).field_i[param3]) {
-            return ((ad) this).field_i[param3];
-        }
-        ((ad) this).field_h.field_m = param1 * param3 + 6;
-        int var6 = ((ad) this).field_h.i(255);
-        int var7 = ((ad) this).field_h.i(param1 + 183);
-        byte[] var11 = new byte[64];
-        ((ad) this).field_h.a(true, 64, var11, 0);
-        fh var9 = new fh(param3, param2, param4, ((ad) this).field_a, ((ad) this).field_b, var6, var11, var7, param0);
-        ((ad) this).field_i[param3] = var9;
-        return var9;
     }
 
     final static sf a(String param0, int param1) {

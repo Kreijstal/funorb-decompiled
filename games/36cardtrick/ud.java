@@ -7,9 +7,9 @@ final class ud {
     private static String field_z;
 
     public static void a(int param0) {
-        field_a = (int[][]) null;
+        field_a = null;
         if (param0 != 21316) {
-            field_a = (int[][]) (int[][]) null;
+            field_a = null;
         }
     }
 

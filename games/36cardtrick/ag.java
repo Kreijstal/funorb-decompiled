@@ -139,7 +139,7 @@ final class ag implements java.awt.event.MouseListener, java.awt.event.MouseMoti
           i.field_a = new ak(var1, (String) null, true, false, false);
           sd.field_c.b((lk) (Object) vb.field_h, (byte) -71);
           if (param0 != -9145) {
-            field_c = (String) null;
+            field_c = null;
             vb.field_h.c((lk) (Object) i.field_a, (byte) 33);
             vb.field_h.q(0);
             return;

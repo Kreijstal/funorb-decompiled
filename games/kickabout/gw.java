@@ -25,8 +25,9 @@ final class gw {
             }
           } else {
             var1.b(8, (byte) 94);
+            int fieldTemp$2 = var1.field_n + 1;
             var1.field_n = var1.field_n + 1;
-            var2 = var1.field_n + 1;
+            var2 = fieldTemp$2;
             mo.a(var1, 0);
             or.field_d.c(param0 ^ 59, -var2 + var1.field_n);
             continue L0;
@@ -44,32 +45,36 @@ final class gw {
         String stackOut_5_0 = null;
         try {
           L0: {
-            var3_int = param2.f(-32768);
-            if (param0 < var3_int) {
-              var3_int = param0;
-              break L0;
-            } else {
-              break L0;
+            L1: {
+              var3_int = param2.f(-32768);
+              if (param0 < var3_int) {
+                var3_int = param0;
+                break L1;
+              } else {
+                break L1;
+              }
             }
-          }
-          L1: {
-            if (param1 < -68) {
-              break L1;
-            } else {
-              gw.c(-32);
-              break L1;
+            L2: {
+              if (param1 < -68) {
+                break L2;
+              } else {
+                gw.c(-32);
+                break L2;
+              }
             }
+            var4 = new byte[var3_int];
+            param2.field_n = param2.field_n + os.field_I.a(param2.field_n, var4, var3_int, param2.field_f, 0, false);
+            var5 = hf.a((byte) -121, var3_int, 0, var4);
+            stackOut_5_0 = (String) var5;
+            stackIn_6_0 = stackOut_5_0;
+            break L0;
           }
-          var4 = new byte[var3_int];
-          param2.field_n = param2.field_n + os.field_I.a(param2.field_n, var4, var3_int, param2.field_f, 0, false);
-          var5 = hf.a((byte) -121, var3_int, 0, var4);
-          stackOut_5_0 = (String) var5;
-          stackIn_6_0 = stackOut_5_0;
-        } catch (java.lang.Exception decompiledCaughtParameter) {
-          decompiledCaughtException = decompiledCaughtParameter;
-          return stackIn_6_0;
+        } catch (java.lang.Exception decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3 = (Exception) (Object) decompiledCaughtException;
+          return "Cabbage";
         }
-        return null;
+        return stackIn_6_0;
     }
 
     public static void d(int param0) {

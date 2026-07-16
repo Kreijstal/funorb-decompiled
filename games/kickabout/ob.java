@@ -46,7 +46,7 @@ final class ob extends tj {
         int stackIn_11_1 = 0;
         int stackIn_11_2 = 0;
         int stackIn_11_3 = 0;
-        int stackIn_31_0 = 0;
+        int stackIn_30_0 = 0;
         int stackOut_4_0 = 0;
         int stackOut_3_0 = 0;
         Object stackOut_5_0 = null;
@@ -70,7 +70,7 @@ final class ob extends tj {
         int stackOut_9_3 = 0;
         int stackOut_29_0 = 0;
         int stackOut_28_0 = 0;
-        int stackOut_26_0 = 0;
+        int stackOut_27_0 = 0;
         L0: {
           var8 = Kickabout.field_G;
           if (param0 != null) {
@@ -167,7 +167,7 @@ final class ob extends tj {
           }
           L5: {
             L6: {
-              if (-1 != var3) {
+              if (-1 != (var3 ^ -1)) {
                 break L6;
               } else {
                 if (var4 == 0) {
@@ -180,7 +180,7 @@ final class ob extends tj {
             if (8388608 <= Math.abs(var3)) {
               break L5;
             } else {
-              if (-8388609 <= Math.abs(var4)) {
+              if (-8388609 >= (Math.abs(var4) ^ -1)) {
                 break L5;
               } else {
                 var5 = tu.a(var3, var4, -23146);
@@ -214,24 +214,24 @@ final class ob extends tj {
               }
             } else {
               L8: {
-                if (ih.field_c != 0) {
-                  if ((ih.field_c ^ -1) != -2) {
-                    stackOut_29_0 = 2;
-                    stackIn_31_0 = stackOut_29_0;
+                if ((ih.field_c ^ -1) == -1) {
+                  stackOut_29_0 = 0;
+                  stackIn_30_0 = stackOut_29_0;
+                  break L8;
+                } else {
+                  if ((ih.field_c ^ -1) == -2) {
+                    stackOut_28_0 = 1;
+                    stackIn_30_0 = stackOut_28_0;
                     break L8;
                   } else {
-                    stackOut_28_0 = 1;
-                    stackIn_31_0 = stackOut_28_0;
+                    stackOut_27_0 = 2;
+                    stackIn_30_0 = stackOut_27_0;
                     break L8;
                   }
-                } else {
-                  stackOut_26_0 = 0;
-                  stackIn_31_0 = stackOut_26_0;
-                  break L8;
                 }
               }
               L9: {
-                var5 = stackIn_31_0;
+                var5 = stackIn_30_0;
                 if (0 == ((ob) this).field_n) {
                   var6 = 16;
                   break L9;
@@ -269,13 +269,13 @@ final class ob extends tj {
             }
           }
           L13: {
-            if (((ob) this).field_A >= -1) {
+            if ((((ob) this).field_A ^ -1) >= -1) {
               break L13;
             } else {
               L14: {
                 var5 = ((ob) this).e(92) >> 612786672;
                 var6 = var5 * 160 / 324;
-                if (-256 < var6) {
+                if (-256 > (var6 ^ -1)) {
                   var6 = 255;
                   break L14;
                 } else {
@@ -459,10 +459,10 @@ final class ob extends tj {
         }
         int var2 = ((ob) this).field_E >> 249327504;
         int var3 = ((ob) this).field_M >> -801529648;
-        if (!(-1 > var3)) {
+        if (!(-1 > (var3 ^ -1))) {
             return var2;
         }
-        if (-1001 <= var3) {
+        if (-1001 >= (var3 ^ -1)) {
             var3 = 999;
         }
         int var4 = var3 * 1000 / (-var3 + 1000);
@@ -565,7 +565,7 @@ final class ob extends tj {
     }
 
     final static String a(byte param0, tv param1) {
-        String var2 = null;
+        Object var2 = null;
         String var3 = null;
         int var4 = 0;
         String var5 = null;
@@ -585,26 +585,26 @@ final class ob extends tj {
           } else {
             L2: {
               var5 = param1.field_h;
-              var2 = var5;
-              var2 = var5;
+              var2 = (Object) (Object) var5;
+              var2 = (Object) (Object) var5;
               if ((param1.field_o ^ -1) != -2) {
                 break L2;
               } else {
-                var2 = "<img=0>" + var5;
+                var2 = (Object) (Object) ("<img=0>" + var5);
                 break L2;
               }
             }
-            if (param1.field_o != -3) {
+            if ((param1.field_o ^ -1) != -3) {
               break L1;
             } else {
-              var2 = "<img=1>" + var2;
+              var2 = (Object) (Object) ("<img=1>" + var2);
               break L1;
             }
           }
         }
         L3: {
           var3 = "";
-          if (-3 != param1.field_c) {
+          if (-3 != (param1.field_c ^ -1)) {
             L4: {
               if (0 != param1.field_c) {
                 break L4;
@@ -656,10 +656,10 @@ final class ob extends tj {
               break L3;
             } else {
               L8: {
-                if (param1.field_j != -1) {
+                if ((param1.field_j ^ -1) != -1) {
                   break L8;
                 } else {
-                  if (-1 == param1.field_p) {
+                  if (-1 == (param1.field_p ^ -1)) {
                     var3 = vo.a((byte) -18, b.field_F, new String[1]);
                     break L3;
                   } else {

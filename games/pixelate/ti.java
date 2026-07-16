@@ -131,87 +131,180 @@ final class ti extends sj {
     }
 
     private final void a(byte param0, int param1) {
-        int var4 = Pixelate.field_H ? 1 : 0;
-        if (param0 <= 66) {
+        in var3 = null;
+        int var4 = 0;
+        L0: {
+          var4 = Pixelate.field_H ? 1 : 0;
+          if (param0 > 66) {
+            break L0;
+          } else {
             ((ti) this).field_z = false;
+            break L0;
+          }
         }
-        in var3 = (in) (Object) ((ti) this).field_N.field_r.c(1504642273);
-        while (var3 != null) {
-            if (0 <= param1) {
-                // if_icmpeq L58
-            } else {
-                if (0 > var3.field_v) {
-                    ((ti) this).field_G[var3.field_I][var3.field_A] = null;
-                    var3.field_v = 0;
+        var3 = (in) (Object) ((ti) this).field_N.field_r.c(1504642273);
+        L1: while (true) {
+          if (var3 == null) {
+            return;
+          } else {
+            L2: {
+              L3: {
+                if (0 > param1) {
+                  break L3;
+                } else {
+                  if (param1 == var3.field_I) {
+                    break L3;
+                  } else {
+                    break L2;
+                  }
                 }
+              }
+              if (0 <= var3.field_v) {
+                break L2;
+              } else {
+                ((ti) this).field_G[var3.field_I][var3.field_A] = null;
+                var3.field_v = 0;
+                break L2;
+              }
             }
             var3 = (in) (Object) ((ti) this).field_N.field_r.f(1504642273);
+            continue L1;
+          }
         }
     }
 
     private final void a(int param0, int param1) {
-        int var4 = Pixelate.field_H ? 1 : 0;
-        if (param1 != 0) {
-            sj discarded$0 = ((ti) this).b();
+        in var3 = null;
+        int var4 = 0;
+        L0: {
+          var4 = Pixelate.field_H ? 1 : 0;
+          if (param1 == 0) {
+            break L0;
+          } else {
+            sj discarded$2 = ((ti) this).b();
+            break L0;
+          }
         }
-        in var3 = (in) (Object) ((ti) this).field_N.field_r.c(1504642273);
-        while (var3 != null) {
-            if (param0 >= 0) {
-                // if_icmpne L170
-            }
-            if (!(var3.field_G == null)) {
-                var3.field_G.e(mm.field_h / 100);
-                if (!(!var3.field_G.k())) {
-                    ((ti) this).field_N.field_o.a((sj) (Object) var3.field_G);
+        var3 = (in) (Object) ((ti) this).field_N.field_r.c(1504642273);
+        L1: while (true) {
+          if (var3 == null) {
+            return;
+          } else {
+            L2: {
+              L3: {
+                if (param0 < 0) {
+                  break L3;
+                } else {
+                  if ((var3.field_I ^ -1) != (param0 ^ -1)) {
+                    break L2;
+                  } else {
+                    break L3;
+                  }
                 }
-                var3.a(false);
+              }
+              L4: {
+                if (var3.field_G != null) {
+                  L5: {
+                    var3.field_G.e(mm.field_h / 100);
+                    if (var3.field_G.k()) {
+                      ((ti) this).field_N.field_o.a((sj) (Object) var3.field_G);
+                      break L5;
+                    } else {
+                      break L5;
+                    }
+                  }
+                  var3.a(false);
+                  break L4;
+                } else {
+                  break L4;
+                }
+              }
+              L6: {
+                if (-1 < (var3.field_v ^ -1)) {
+                  ((ti) this).field_G[var3.field_I][var3.field_A] = null;
+                  break L6;
+                } else {
+                  break L6;
+                }
+              }
+              var3.c(2779);
+              break L2;
             }
-            if (!(-1 >= (var3.field_v ^ -1))) {
-                ((ti) this).field_G[var3.field_I][var3.field_A] = null;
-            }
-            var3.c(2779);
             var3 = (in) (Object) ((ti) this).field_N.field_r.f(param1 + 1504642273);
+            continue L1;
+          }
         }
     }
 
     final synchronized boolean a(ua param0, po param1, fm param2, int param3, int param4) {
-        int[] var7_array = null;
+        int var6 = 0;
+        Object var7 = null;
+        qn var8 = null;
         int var9 = 0;
+        int var11 = 0;
         sn var12 = null;
         sn var13 = null;
-        int var11 = Pixelate.field_H ? 1 : 0;
-        param0.a();
-        int var6 = 1;
-        Object var7 = null;
-        if (-1 > (param4 ^ -1)) {
-            var7_array = new int[]{param4};
+        L0: {
+          var11 = Pixelate.field_H ? 1 : 0;
+          param0.a();
+          var6 = 1;
+          var7 = null;
+          if (-1 <= (param4 ^ -1)) {
+            break L0;
+          } else {
+            var7 = (Object) (Object) new int[]{param4};
+            break L0;
+          }
         }
-        qn var8 = (qn) (Object) param0.field_l.a((byte) -109);
-        while (var8 != null) {
-            var9 = (int)var8.field_e;
-            var12 = (sn) (Object) ((ti) this).field_F.a(-25484, (long)var9);
-            if (var12 != null) {
-                // ifeq L173
-            } else {
-                var13 = od.a(param2, var9, -30805);
-                if (var13 == null) {
-                    var6 = 0;
+        var8 = (qn) (Object) param0.field_l.a((byte) -109);
+        L1: while (true) {
+          if (var8 == null) {
+            if (param3 > 52) {
+              L2: {
+                if (var6 == 0) {
+                  break L2;
                 } else {
-                    ((ti) this).field_F.a((long)var9, 124, (fa) (Object) var13);
-                    if (!(var13.a(param1, var7_array, (byte) -52, var8.field_r))) {
-                        var6 = 0;
-                    }
+                  param0.b();
+                  break L2;
                 }
+              }
+              return var6 != 0;
+            } else {
+              return true;
+            }
+          } else {
+            L3: {
+              L4: {
+                var9 = (int)var8.field_e;
+                var12 = (sn) (Object) ((ti) this).field_F.a(-25484, (long)var9);
+                if (var12 == null) {
+                  var13 = od.a(param2, var9, -30805);
+                  if (var13 != null) {
+                    ((ti) this).field_F.a((long)var9, 124, (fa) (Object) var13);
+                    if (!var13.a(param1, (int[]) var7, (byte) -52, var8.field_r)) {
+                      break L4;
+                    } else {
+                      break L3;
+                    }
+                  } else {
+                    var6 = 0;
+                    break L3;
+                  }
+                } else {
+                  if (!var12.a(param1, (int[]) var7, (byte) -52, var8.field_r)) {
+                    break L4;
+                  } else {
+                    break L3;
+                  }
+                }
+              }
+              var6 = 0;
+              break L3;
             }
             var8 = (qn) (Object) param0.field_l.a(-119);
+            continue L1;
+          }
         }
-        if (param3 <= 52) {
-            return true;
-        }
-        if (var6 != 0) {
-            param0.b();
-        }
-        return var6 != 0;
     }
 
     private final int a(int param0, in param1) {
@@ -571,16 +664,15 @@ final class ti extends sj {
     }
 
     final static void a(boolean param0) {
-        jd var1_ref = null;
         jd var1 = (jd) (Object) vc.field_O.b(-88);
         if (!(var1 != null)) {
-            var1_ref = new jd();
+            var1 = new jd();
         }
         if (param0) {
             boolean discarded$0 = ti.a(-80, 'ￆ');
         }
-        var1_ref.a(t.field_k, t.field_a, t.field_d, t.field_e, (byte) -102, t.field_h, t.field_f, t.field_j);
-        oj.field_P.a(22125, (fa) (Object) var1_ref);
+        var1.a(t.field_k, t.field_a, t.field_d, t.field_e, (byte) -102, t.field_h, t.field_f, t.field_j);
+        oj.field_P.a(22125, (fa) (Object) var1);
     }
 
     final boolean a(int param0, in param1, int param2, boolean param3, int[] param4) {

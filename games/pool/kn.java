@@ -60,11 +60,11 @@ final class kn {
             if (-1 != (param2 ^ -1)) {
               if ((param2 ^ -1) != -2) {
                 if (2 != param2) {
-                  if (-4 == param2) {
+                  if (-4 == (param2 ^ -1)) {
                     nf.a(((kn) this).field_b, true, param1);
                     break L0;
                   } else {
-                    if (-11 == param2) {
+                    if (-11 == (param2 ^ -1)) {
                       ef.a(((kn) this).field_b, 3, param1);
                       break L0;
                     } else {
@@ -225,12 +225,12 @@ final class kn {
         int var5 = 0;
         L0: {
           var5 = Pool.field_O;
-          if (-9 != param2) {
+          if (-9 != (param2 ^ -1)) {
             if (param2 == 18) {
               tq.a(((kn) this).field_l, (byte) -104, ((kn) this).field_m);
               break L0;
             } else {
-              if (-12 != param2) {
+              if (-12 != (param2 ^ -1)) {
                 if (12 != param2) {
                   if (13 != param2) {
                     if (param2 == 14) {
@@ -244,7 +244,7 @@ final class kn {
                         if (-20 != (param2 ^ -1)) {
                           return false;
                         } else {
-                          boolean discarded$8182 = hj.a(((kn) this).field_a, ((kn) this).field_h, ((kn) this).field_l, ((kn) this).field_m, (byte) 76);
+                          boolean discarded$22726 = hj.a(((kn) this).field_a, ((kn) this).field_h, ((kn) this).field_l, ((kn) this).field_m, (byte) 76);
                           break L0;
                         }
                       }
@@ -344,26 +344,27 @@ final class kn {
     }
 
     private final boolean a(int param0, int param1, int param2) {
-        String var4 = null;
+        Object var4 = null;
+        String var4_ref = null;
         Object var5 = null;
         L0: {
           var4 = null;
-          if (-5 == param0) {
-            var4 = va.a(((kn) this).field_m, param1, 88);
+          if (-5 == (param0 ^ -1)) {
+            var4_ref = va.a(((kn) this).field_m, param1, 88);
             break L0;
           } else {
-            if (-6 == param0) {
-              var4 = ul.a((byte) 91, ((kn) this).field_m, param1);
+            if (-6 == (param0 ^ -1)) {
+              var4_ref = ul.a((byte) 91, ((kn) this).field_m, param1);
               break L0;
             } else {
               if (param0 == 6) {
-                var4 = jd.a(param1, ((kn) this).field_m, param2 ^ 4);
+                var4_ref = jd.a(param1, ((kn) this).field_m, param2 ^ 4);
                 break L0;
               } else {
                 if (-8 != (param0 ^ -1)) {
                   return false;
                 } else {
-                  var4 = ae.a(-3266, ((kn) this).field_d, ((kn) this).field_m, param1);
+                  var4_ref = ae.a(-3266, ((kn) this).field_d, ((kn) this).field_m, param1);
                   break L0;
                 }
               }
@@ -371,9 +372,9 @@ final class kn {
           }
         }
         L1: {
-          if (var4 != null) {
+          if (var4_ref != null) {
             var5 = null;
-            jh.a(0, var4, (String) null, 2, ((kn) this).field_m, true);
+            jh.a(0, var4_ref, (String) null, 2, ((kn) this).field_m, true);
             break L1;
           } else {
             break L1;

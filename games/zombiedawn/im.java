@@ -22,10 +22,10 @@ abstract class im {
             return;
         }
         Random var2 = new Random((long)((im) this).field_b);
-        for (var3 = 0; -256 < var3; var3++) {
+        for (var3 = 0; -256 < (var3 ^ -1); var3++) {
             ((im) this).field_e[var3] = (short)var3;
         }
-        for (var3 = 0; -256 > var3; var3++) {
+        for (var3 = 0; -256 < (var3 ^ -1); var3++) {
             var4 = -var3 + 255;
             var5 = pb.a(var2, var4, 1);
             var6 = ((im) this).field_e[var5];

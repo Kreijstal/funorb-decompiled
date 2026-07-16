@@ -61,7 +61,7 @@ final class pm {
         L0: while (true) {
           if (0 <= var3) {
             if (param0 != -16711936) {
-              boolean discarded$2 = pm.a(true);
+              boolean discarded$4 = pm.a(true);
               return;
             } else {
               return;
@@ -75,8 +75,9 @@ final class pm {
             var5 = var5 & -16711936;
             var4 = var4 & 16711680;
             var4 = (var5 | var4) >> 1750885544;
+            int incrementValue$5 = var2;
             var2++;
-            ra.field_b[var2] = var4;
+            ra.field_b[incrementValue$5] = var4;
             var3++;
             continue L0;
           }

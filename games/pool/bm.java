@@ -131,8 +131,9 @@ final class bm {
               return null;
             }
           } else {
+            int fieldTemp$2 = ((bm) this).field_m;
             ((bm) this).field_m = ((bm) this).field_m + 1;
-            var2 = ((bm) this).field_g[((bm) this).field_m].field_d;
+            var2 = ((bm) this).field_g[fieldTemp$2].field_d;
             if (((bm) this).field_g[-1 + ((bm) this).field_m] == var2) {
               continue L1;
             } else {
@@ -351,8 +352,9 @@ final class bm {
         ((bm) this).field_b = param0;
         ((bm) this).field_g = new ma[param0];
         for (var2 = 0; param0 > var2; var2++) {
-            var3 = new ma();
-            ((bm) this).field_g[var2] = new ma();
+            ma dupTemp$0 = new ma();
+            var3 = dupTemp$0;
+            ((bm) this).field_g[var2] = dupTemp$0;
             var3.field_k = var3;
             var3.field_d = var3;
         }

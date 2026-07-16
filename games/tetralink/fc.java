@@ -195,7 +195,7 @@ abstract class fc extends vh {
                               if (var31 < 1024) {
                                 break L13;
                               } else {
-                                // wide iinc 31 -2048
+                                var31 -= 2048;
                                 break L13;
                               }
                             }
@@ -203,7 +203,7 @@ abstract class fc extends vh {
                               if (var32 < 1024) {
                                 break L14;
                               } else {
-                                // wide iinc 32 -2048
+                                var32 -= 2048;
                                 break L14;
                               }
                             }
@@ -211,7 +211,7 @@ abstract class fc extends vh {
                               if (var33 < 1024) {
                                 break L15;
                               } else {
-                                // wide iinc 33 -2048
+                                var33 -= 2048;
                                 break L15;
                               }
                             }
@@ -333,7 +333,6 @@ abstract class fc extends vh {
     }
 
     final void a(f param0, int param1, f param2, int param3, int param4, int param5, boolean param6) {
-        pc var10_ref = null;
         if (param1 == -1) {
             return;
         }
@@ -344,12 +343,12 @@ abstract class fc extends vh {
         oe var9 = var8.field_f;
         Object var10 = null;
         if (param2 != null) {
-            var10_ref = param2.field_u[param3];
-            if (var10_ref.field_f != var9) {
-                var10_ref = null;
+            var10 = (Object) (Object) param2.field_u[param3];
+            if (((pc) var10).field_f != var9) {
+                var10 = null;
             }
         }
-        this.a(var9, var8, var10_ref, param4, param5, (boolean[]) null, false, param6, 65535, (int[]) null);
+        this.a(var9, var8, (pc) var10, param4, param5, (boolean[]) null, false, param6, 65535, (int[]) null);
         ((fc) this).b();
     }
 

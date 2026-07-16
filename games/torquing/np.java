@@ -47,26 +47,45 @@ final class np extends ha {
     }
 
     final int a(long param0, boolean param1) {
-        int var5 = Torquing.field_u;
-        if (!param1) {
-            return -63;
-        }
-        if (((np) this).field_i < ((np) this).field_h) {
+        int var4 = 0;
+        int var5 = 0;
+        var5 = Torquing.field_u;
+        if (param1) {
+          if (((np) this).field_i >= ((np) this).field_h) {
+            var4 = 0;
+            L0: while (true) {
+              L1: {
+                ((np) this).field_h = ((np) this).field_h + param0;
+                var4++;
+                if (var4 >= 10) {
+                  break L1;
+                } else {
+                  if (((np) this).field_h < ((np) this).field_i) {
+                    continue L0;
+                  } else {
+                    break L1;
+                  }
+                }
+              }
+              L2: {
+                if ((((np) this).field_i ^ -1L) < (((np) this).field_h ^ -1L)) {
+                  ((np) this).field_h = ((np) this).field_i;
+                  break L2;
+                } else {
+                  break L2;
+                }
+              }
+              return var4;
+            }
+          } else {
             ((np) this).field_g = ((np) this).field_g + (((np) this).field_h - ((np) this).field_i);
             ((np) this).field_i = ((np) this).field_i + (-((np) this).field_i + ((np) this).field_h);
             ((np) this).field_h = ((np) this).field_h + param0;
             return 1;
+          }
+        } else {
+          return -63;
         }
-        int var4 = 0;
-        do {
-            ((np) this).field_h = ((np) this).field_h + param0;
-            var4++;
-            // if_icmpge L109
-        } while (((np) this).field_h < ((np) this).field_i);
-        if (!((((np) this).field_i ^ -1L) >= (((np) this).field_h ^ -1L))) {
-            ((np) this).field_h = ((np) this).field_i;
-        }
-        return var4;
     }
 
     final static void a(wl param0, boolean param1, int param2) {
@@ -116,120 +135,35 @@ final class np extends ha {
         Throwable var2 = null;
         int stackIn_6_0 = 0;
         int stackIn_8_0 = 0;
+        Throwable decompiledCaughtException = null;
         int stackOut_5_0 = 0;
         int stackOut_7_0 = 0;
-        int statePc = 0;
-        Throwable caughtException = null;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    var1 = (Object) (Object) ha.field_b;
-                    // monitorenter ha.field_b
-                    statePc = 1;
-                    continue stateLoop;
-                }
-                case 1: {
-                    try {
-                        if (param0 == -13) {
-                            statePc = 3;
-                        } else {
-                            statePc = 2;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_1) {
-                        caughtException = stateCaught_1;
-                        statePc = 9;
-                        continue stateLoop;
-                    }
-                }
-                case 2: {
-                    try {
-                        np.d(-95);
-                        statePc = 3;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_2) {
-                        caughtException = stateCaught_2;
-                        statePc = 9;
-                        continue stateLoop;
-                    }
-                }
-                case 3: {
-                    try {
-                        if (q.field_g == mj.field_d) {
-                            statePc = 5;
-                        } else {
-                            statePc = 4;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_3) {
-                        caughtException = stateCaught_3;
-                        statePc = 9;
-                        continue stateLoop;
-                    }
-                }
-                case 4: {
-                    try {
-                        statePc = 7;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_4) {
-                        caughtException = stateCaught_4;
-                        statePc = 9;
-                        continue stateLoop;
-                    }
-                }
-                case 5: {
-                    try {
-                        // monitorexit var1
-                        stackOut_5_0 = 0;
-                        stackIn_6_0 = stackOut_5_0;
-                        statePc = 6;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_5) {
-                        caughtException = stateCaught_5;
-                        statePc = 9;
-                        continue stateLoop;
-                    }
-                }
-                case 6: {
-                    return stackIn_6_0 != 0;
-                }
-                case 7: {
-                    try {
-                        e.field_f = ol.field_c[q.field_g];
-                        m.field_t = pe.field_H[q.field_g];
-                        q.field_g = 127 & 1 + q.field_g;
-                        // monitorexit var1
-                        stackOut_7_0 = 1;
-                        stackIn_8_0 = stackOut_7_0;
-                        statePc = 8;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_7) {
-                        caughtException = stateCaught_7;
-                        statePc = 9;
-                        continue stateLoop;
-                    }
-                }
-                case 8: {
-                    return stackIn_8_0 != 0;
-                }
-                case 9: {
-                    try {
-                        var2 = caughtException;
-                        // monitorexit var1
-                        statePc = 10;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_9) {
-                        caughtException = stateCaught_9;
-                        statePc = 9;
-                        continue stateLoop;
-                    }
-                }
-                case 10: {
-                    throw (RuntimeException) (Object) var2;
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
+        var1 = (Object) (Object) ha.field_b;
+        synchronized (var1) {
+          L0: {
+            L1: {
+              if (param0 == -13) {
+                break L1;
+              } else {
+                np.d(-95);
+                break L1;
+              }
             }
+            if (q.field_g == mj.field_d) {
+              stackOut_5_0 = 0;
+              stackIn_6_0 = stackOut_5_0;
+              return stackIn_6_0 != 0;
+            } else {
+              e.field_f = ol.field_c[q.field_g];
+              m.field_t = pe.field_H[q.field_g];
+              q.field_g = 127 & 1 + q.field_g;
+              stackOut_7_0 = 1;
+              stackIn_8_0 = stackOut_7_0;
+              break L0;
+            }
+          }
         }
+        return stackIn_8_0 != 0;
     }
 
     final static byte[] a(int param0, byte[] param1, int param2, int param3) {

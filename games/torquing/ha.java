@@ -39,11 +39,11 @@ abstract class ha {
           var4 = Torquing.field_u;
           var3 = param1.field_kb + -param2.field_kb;
           if (param1.field_jb == og.field_m) {
-            // wide iinc 3 -200
+            var3 -= 200;
             break L0;
           } else {
             if (param1.field_jb == null) {
-              // wide iinc 3 200
+              var3 += 200;
               break L0;
             } else {
               break L0;
@@ -74,8 +74,8 @@ abstract class ha {
             return stackIn_20_0 != 0;
           } else {
             L3: {
-              // wide iinc 3 -200
-              if (-1 >= var3) {
+              var3 -= 200;
+              if (-1 <= (var3 ^ -1)) {
                 stackOut_15_0 = 0;
                 stackIn_16_0 = stackOut_15_0;
                 break L3;
@@ -89,8 +89,8 @@ abstract class ha {
           }
         } else {
           L4: {
-            // wide iinc 3 200
-            if (-1 <= var3) {
+            var3 += 200;
+            if (-1 <= (var3 ^ -1)) {
               stackOut_10_0 = 0;
               stackIn_11_0 = stackOut_10_0;
               break L4;

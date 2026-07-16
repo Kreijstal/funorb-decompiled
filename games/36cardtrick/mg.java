@@ -59,7 +59,7 @@ final class mg {
             ((mg) this).field_O[var5] = (short)(((mg) this).field_O[var5] + param3);
         }
         if (param0) {
-            field_K = (String) null;
+            field_K = null;
         }
         this.a(99);
     }
@@ -106,7 +106,7 @@ final class mg {
             jb.b();
             vj.d();
             de.b(33);
-            if (var5 <= -257) {
+            if ((var5 ^ -1) <= -257) {
               break L2;
             } else {
               vj.a(0, 0, vj.field_l, vj.field_g, 0, 256 - var5);
@@ -115,7 +115,7 @@ final class mg {
           }
           L3: {
             gg.a(14756);
-            if (-151 > h.field_F) {
+            if (-151 < (h.field_F ^ -1)) {
               id.field_e.c(var3, var4);
               break L3;
             } else {
@@ -128,7 +128,7 @@ final class mg {
             if (param1 == 207) {
               break L4;
             } else {
-              field_j = (kc[]) null;
+              field_j = null;
               break L4;
             }
           }
@@ -301,7 +301,7 @@ final class mg {
           if (param0 < -119) {
             break L0;
           } else {
-            field_K = (String) null;
+            field_K = null;
             break L0;
           }
         }
@@ -315,16 +315,16 @@ final class mg {
             } else {
               var3 = var27.d((byte) 72);
               var4 = var27.d(true);
-              var6 = (ad) od.field_b.a((byte) 74);
+              var6 = (ad) (Object) od.field_b.a((byte) 74);
               L2: while (true) {
                 L3: {
                   if (var6 == null) {
                     break L3;
                   } else {
-                    if (((ad) var6).field_p == var3) {
+                    if (var6.field_p == var3) {
                       break L3;
                     } else {
-                      var6 = (ad) od.field_b.b((byte) -122);
+                      var6 = (ad) (Object) od.field_b.b((byte) -122);
                       continue L2;
                     }
                   }
@@ -341,16 +341,16 @@ final class mg {
             }
           } else {
             var3 = var27.d((byte) 72);
-            var4_ref_uh = (uh) tl.field_a.a((byte) 74);
+            var4_ref_uh = (uh) (Object) tl.field_a.a((byte) 74);
             L4: while (true) {
               L5: {
                 if (var4_ref_uh == null) {
                   break L5;
                 } else {
-                  if (var3 == ((uh) var4_ref_uh).field_g) {
+                  if (var3 == var4_ref_uh.field_g) {
                     break L5;
                   } else {
-                    var4_ref_uh = (uh) tl.field_a.b((byte) -119);
+                    var4_ref_uh = (uh) (Object) tl.field_a.b((byte) -119);
                     continue L4;
                   }
                 }
@@ -364,21 +364,24 @@ final class mg {
                   if (-1 == (var5 ^ -1)) {
                     break L6;
                   } else {
-                    var6_int = ((uh) var4_ref_uh).field_k;
+                    var6_int = var4_ref_uh.field_k;
                     c.field_w[0].field_d = false;
                     c.field_w[0].field_f = null;
-                    var7 = ((uh) var4_ref_uh).field_h;
+                    var7 = var4_ref_uh.field_h;
                     c.field_w[0].field_e = ri.field_c;
                     var8_int = 1;
                     L7: while (true) {
                       if (var8_int >= var5) {
-                        var4_ref_uh.field_m = new String[3][var6_int];
-                        var8 = new String[3][var6_int];
+                        String[][] dupTemp$6 = new String[3][var6_int];
+                        var4_ref_uh.field_m = dupTemp$6;
+                        var8 = dupTemp$6;
                         var9 = new String[3][var6_int];
-                        var4_ref_uh.field_j = new long[3][var6_int];
-                        var10 = new long[3][var6_int];
-                        var4_ref_uh.field_q = new int[3][var6_int * var7];
-                        var11 = new int[3][var6_int * var7];
+                        long[][] dupTemp$7 = new long[3][var6_int];
+                        var4_ref_uh.field_j = dupTemp$7;
+                        var10 = dupTemp$7;
+                        int[][] dupTemp$8 = new int[3][var6_int * var7];
+                        var4_ref_uh.field_q = dupTemp$8;
+                        var11 = dupTemp$8;
                         var12 = 0;
                         var13 = 0;
                         var14 = 0;
@@ -398,7 +401,7 @@ final class mg {
                                 var20 = var27.f(121);
                                 var21 = c.field_w[var20].field_e;
                                 var22 = var27.d(true);
-                                var24 = ((w) var27).field_i;
+                                var24 = var27.field_i;
                                 if (var6_int <= var19) {
                                   break L9;
                                 } else {
@@ -411,8 +414,9 @@ final class mg {
                                     if (var7 <= var25) {
                                       break L9;
                                     } else {
+                                      int incrementValue$9 = var15;
                                       var15++;
-                                      var11[0][var15] = var27.e((byte) 126);
+                                      var11[0][incrementValue$9] = var27.e((byte) 126);
                                       var25++;
                                       continue L10;
                                     }
@@ -434,8 +438,9 @@ final class mg {
                                       if (var7 <= var25) {
                                         break L11;
                                       } else {
+                                        int incrementValue$10 = var16;
                                         var16++;
-                                        var11[1][var16] = var27.e((byte) 125);
+                                        var11[1][incrementValue$10] = var27.e((byte) 125);
                                         var25++;
                                         continue L12;
                                       }
@@ -456,8 +461,9 @@ final class mg {
                                   var25 = 0;
                                   L13: while (true) {
                                     if (var25 < var7) {
+                                      int incrementValue$11 = var17;
                                       var17++;
-                                      var11[2][var17] = var27.e((byte) 124);
+                                      var11[2][incrementValue$11] = var27.e((byte) 124);
                                       var25++;
                                       continue L13;
                                     } else {

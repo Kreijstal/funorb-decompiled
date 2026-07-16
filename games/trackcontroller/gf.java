@@ -81,8 +81,9 @@ final class gf {
             }
           } else {
             if (param0) {
+              int fieldTemp$1 = ((gf) this).field_i - 1;
               ((gf) this).field_i = ((gf) this).field_i - 1;
-              if ((((gf) this).field_i - 1 ^ -1) >= -1) {
+              if ((fieldTemp$1 ^ -1) >= -1) {
                 ((gf) this).field_i = ((gf) this).field_m;
                 if (((gf) this).field_t > eb.field_i) {
                   ((gf) this).field_d = false;

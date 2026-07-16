@@ -18,7 +18,7 @@ final class pi extends ak {
     private int field_Hb;
 
     final static String a(CharSequence[] param0, int param1, int param2, int param3) {
-        CharSequence var4_ref = null;
+        CharSequence var4_ref_CharSequence = null;
         int var4 = 0;
         int var5 = 0;
         int var6_int = 0;
@@ -32,8 +32,8 @@ final class pi extends ak {
         if (param2 != 0) {
           if ((param2 ^ -1) == -2) {
             var10 = param0[param1];
-            var4_ref = var10;
-            if (var4_ref != null) {
+            var4_ref_CharSequence = var10;
+            if (var4_ref_CharSequence != null) {
               return ((Object) (Object) var10).toString();
             } else {
               return "null";
@@ -140,12 +140,12 @@ final class pi extends ak {
         if (param0 != -12487) {
             return 40;
         }
-        for (var3 = 0; ((pi) this).field_Hb > var3; var3++) {
-            if (-1 != ((pi) this).field_Ib[var3].field_P) {
+        for (var3 = 0; (((pi) this).field_Hb ^ -1) < (var3 ^ -1); var3++) {
+            if (-1 != (((pi) this).field_Ib[var3].field_P ^ -1)) {
                 return ((pi) this).field_Mb[var3];
             }
         }
-        if (-1 != nm.field_c) {
+        if (-1 != (nm.field_c ^ -1)) {
             return -1;
         }
         return ((pi) this).field_Gb;

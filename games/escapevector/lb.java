@@ -13,16 +13,16 @@ final class lb extends ah {
     }
 
     final String a(byte param0, String param1) {
-        el var3_ref = null;
+        el var3_ref_el = null;
         if (!(!(((lb) this).field_o instanceof og))) {
-            var3_ref = ((og) (Object) ((lb) this).field_o).a((byte) -89);
-            if (var3_ref != null) {
-                if (var3_ref.a(17124) == df.field_h) {
+            var3_ref_el = ((og) (Object) ((lb) this).field_o).a((byte) -89);
+            if (var3_ref_el != null) {
+                if (var3_ref_el.a(17124) == df.field_h) {
                     if (!(param1.equals((Object) (Object) ((lb) this).field_o.field_l))) {
                         return me.field_n;
                     }
                 }
-                return var3_ref.b(54);
+                return var3_ref_el.b(54);
             }
         }
         int var3 = 126 % ((10 - param0) / 51);
@@ -94,69 +94,28 @@ final class lb extends ah {
     final static void c(boolean param0) {
         Object var1 = null;
         Throwable var2 = null;
-        int statePc = 0;
-        Throwable caughtException = null;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    if (om.field_b == null) {
-                        statePc = 6;
-                    } else {
-                        statePc = 1;
-                    }
-                    continue stateLoop;
-                }
-                case 1: {
-                    var1 = (Object) (Object) om.field_b;
-                    // monitorenter om.field_b
-                    statePc = 2;
-                    continue stateLoop;
-                }
-                case 2: {
-                    try {
-                        om.field_b = null;
-                        // monitorexit var1
-                        statePc = 6;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_2) {
-                        caughtException = stateCaught_2;
-                        statePc = 4;
-                        continue stateLoop;
-                    }
-                }
-                case 4: {
-                    try {
-                        var2 = caughtException;
-                        // monitorexit var1
-                        statePc = 5;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_4) {
-                        caughtException = stateCaught_4;
-                        statePc = 4;
-                        continue stateLoop;
-                    }
-                }
-                case 5: {
-                    throw (RuntimeException) (Object) var2;
-                }
-                case 6: {
-                    if (param0) {
-                        statePc = 8;
-                    } else {
-                        statePc = 7;
-                    }
-                    continue stateLoop;
-                }
-                case 7: {
-                    field_n = null;
-                    statePc = 8;
-                    continue stateLoop;
-                }
-                case 8: {
-                    return;
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
+        Throwable decompiledCaughtException = null;
+        L0: {
+          if (om.field_b == null) {
+            break L0;
+          } else {
+            var1 = (Object) (Object) om.field_b;
+            synchronized (var1) {
+              L1: {
+                om.field_b = null;
+                break L1;
+              }
             }
+            break L0;
+          }
+        }
+        L2: {
+          if (param0) {
+            break L2;
+          } else {
+            field_n = null;
+            break L2;
+          }
         }
     }
 

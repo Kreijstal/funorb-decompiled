@@ -53,8 +53,9 @@ final class ff {
                       var14++;
                       continue L1;
                     } else {
+                      int incrementValue$81 = var10;
                       var10++;
-                      var4[var10] = param1;
+                      var4[incrementValue$81] = param1;
                       var14++;
                       continue L1;
                     }

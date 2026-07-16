@@ -26,14 +26,16 @@ abstract class ln {
               param1 = ga.field_J[var5];
               var6 = var5 << -719032380;
               L1: while (true) {
+                int incrementValue$8 = param1;
                 param1--;
-                if (param1 == 0) {
+                if (incrementValue$8 == 0) {
                   var5++;
                   var5++;
                   continue L0;
                 } else {
+                  int incrementValue$9 = var6;
                   var6++;
-                  param4 = gh.field_E[var6];
+                  param4 = gh.field_E[incrementValue$9];
                   param3[param2[param4]] = param3[param2[param4]] + 1;
                   gh.field_E[param3[param2[param4]]] = param4;
                   continue L1;
@@ -50,14 +52,16 @@ abstract class ln {
               param1 = ga.field_J[var5];
               var6 = var5 << -719032380;
               L3: while (true) {
+                int incrementValue$10 = param1;
                 param1--;
-                if (param1 == 0) {
+                if (incrementValue$10 == 0) {
                   var5++;
                   var5++;
                   continue L2;
                 } else {
+                  int incrementValue$11 = var6;
                   var6++;
-                  param4 = gh.field_E[var6];
+                  param4 = gh.field_E[incrementValue$11];
                   param3[param2[param4]] = param3[param2[param4]] + 1;
                   gh.field_E[param3[param2[param4]]] = param4;
                   continue L3;

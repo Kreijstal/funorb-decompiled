@@ -59,10 +59,11 @@ final class eb implements Iterable {
         int var7 = 0;
         int var8 = 0;
         int var9_int = 0;
-        String var9 = null;
+        Object var9 = null;
         int var10 = 0;
         int var11_int = 0;
-        String var11 = null;
+        Object var11 = null;
+        String var11_ref = null;
         int var12 = 0;
         int var13 = 0;
         km var15 = null;
@@ -314,7 +315,7 @@ final class eb implements Iterable {
                     if (!vi.field_l) {
                       break L12;
                     } else {
-                      var9 = "<col=A00000>" + wg.field_d + "</col>";
+                      var9 = (Object) (Object) ("<col=A00000>" + wg.field_d + "</col>");
                       var11 = var9;
                       var9 = var11;
                       var11 = var9;
@@ -329,15 +330,15 @@ final class eb implements Iterable {
                       break L0;
                     } else {
                       if (hk.field_Lb[var10]) {
-                        var11 = "<col=A00000>" + bd.field_a[var10] + "</col>";
-                        var9 = var11;
-                        var9 = var11;
+                        var11_ref = "<col=A00000>" + bd.field_a[var10] + "</col>";
+                        var9 = (Object) (Object) var11_ref;
+                        var9 = (Object) (Object) var11_ref;
                         if (var9 != null) {
-                          var9 = var9 + ", " + var11;
+                          var9 = (Object) (Object) (var9 + ", " + var11_ref);
                           var10++;
                           continue L13;
                         } else {
-                          var9 = var11;
+                          var9 = (Object) (Object) var11_ref;
                           var10++;
                           continue L13;
                         }
@@ -369,11 +370,11 @@ final class eb implements Iterable {
               }
               L15: {
                 var16 = stackIn_25_0;
-                var9 = var16;
+                var9 = (Object) (Object) var16;
                 var10 = jk.field_b.field_C.a(var16) - -(3 * jk.field_b.field_C.a('.'));
                 jk.field_b.field_lb = 0;
                 if ((rl.field_y & 48 ^ -1) == -17) {
-                  var9 = var16 + ".";
+                  var9 = (Object) (Object) (var16 + ".");
                   break L15;
                 } else {
                   break L15;
@@ -382,7 +383,7 @@ final class eb implements Iterable {
               L16: {
                 jk.field_b.field_z = (-var10 + jk.field_b.field_K) / 2;
                 if ((48 & rl.field_y ^ -1) == -33) {
-                  var9 = var9 + "..";
+                  var9 = (Object) (Object) (var9 + "..");
                   break L16;
                 } else {
                   break L16;
@@ -390,13 +391,13 @@ final class eb implements Iterable {
               }
               L17: {
                 if ((48 & rl.field_y) == 48) {
-                  var9 = var9 + "...";
+                  var9 = (Object) (Object) (var9 + "...");
                   break L17;
                 } else {
                   break L17;
                 }
               }
-              jk.field_b.field_V = var9;
+              jk.field_b.field_V = (String) var9;
               ii.field_d.field_V = vb.field_g.toUpperCase();
               break L0;
             }

@@ -114,43 +114,85 @@ abstract class be implements hc {
     }
 
     private final tf b(int param0, String param1, int param2) {
+        tf var4 = null;
         int var5 = 0;
         String var6 = null;
         int var7 = 0;
-        int var8 = Kickabout.field_G;
-        if (param0 != 0) {
-            Object var9 = null;
-            hd discarded$0 = this.a(92, (String) null, -8);
+        int var8 = 0;
+        Object var9 = null;
+        L0: {
+          var8 = Kickabout.field_G;
+          if (param0 == 0) {
+            break L0;
+          } else {
+            var9 = null;
+            hd discarded$6 = this.a(92, (String) null, -8);
+            break L0;
+          }
         }
-        tf var4 = new tf();
-        while (param1 != null) {
-            var5 = ((be) this).field_d.a(param1);
-            var6 = param1;
-            if (var5 <= param2) {
-                param1 = null;
-            } else {
+        var4 = new tf();
+        L1: while (true) {
+          if (param1 == null) {
+            return var4;
+          } else {
+            L2: {
+              var5 = ((be) this).field_d.a(param1);
+              var6 = param1;
+              if (var5 > param2) {
                 var7 = param1.length() - 1;
-                while (0 < var7) {
-                    if (param2 >= var5) {
-                        // if_icmpeq L123
+                L3: while (true) {
+                  L4: {
+                    if (0 >= var7) {
+                      break L4;
+                    } else {
+                      L5: {
+                        if (param2 < var5) {
+                          break L5;
+                        } else {
+                          if (param1.charAt(var7) == 32) {
+                            break L4;
+                          } else {
+                            break L5;
+                          }
+                        }
+                      }
+                      int incrementValue$7 = var7;
+                      var7--;
+                      var5 = var5 - ((be) this).field_d.a(param1.charAt(incrementValue$7));
+                      continue L3;
                     }
-                    var7--;
-                    var5 = var5 - ((be) this).field_d.a(param1.charAt(var7));
-                }
-                if (var7 == 0) {
-                    var5 = ((be) this).field_d.a(param1);
-                    var7 = -1 + param1.length();
-                    while (param2 < var5) {
-                        var7--;
-                        var5 = var5 - ((be) this).field_d.a(param1.charAt(var7));
+                  }
+                  L6: {
+                    if (var7 != 0) {
+                      break L6;
+                    } else {
+                      var5 = ((be) this).field_d.a(param1);
+                      var7 = -1 + param1.length();
+                      L7: while (true) {
+                        if (param2 >= var5) {
+                          break L6;
+                        } else {
+                          int incrementValue$8 = var7;
+                          var7--;
+                          var5 = var5 - ((be) this).field_d.a(param1.charAt(incrementValue$8));
+                          continue L7;
+                        }
+                      }
                     }
+                  }
+                  var6 = param1.substring(0, var7);
+                  param1 = param1.substring(var7 + 1);
+                  break L2;
                 }
-                var6 = param1.substring(0, var7);
-                param1 = param1.substring(var7 + 1);
+              } else {
+                param1 = null;
+                break L2;
+              }
             }
             var4.a((gn) (Object) new lj(var6), param0 ^ 3);
+            continue L1;
+          }
         }
-        return var4;
     }
 
     abstract boolean a(String param0, boolean param1);
@@ -308,13 +350,30 @@ abstract class be implements hc {
     }
 
     private final void a(String param0, int param1) {
-        lj var3 = (lj) (Object) ((be) this).field_m.g(24009);
-        if (var3 != null) {
-            // ifne L54
+        lj var3 = null;
+        L0: {
+          L1: {
+            var3 = (lj) (Object) ((be) this).field_m.g(24009);
+            if (var3 == null) {
+              break L1;
+            } else {
+              if (param0.equals((Object) (Object) var3.field_i)) {
+                break L0;
+              } else {
+                break L1;
+              }
+            }
+          }
+          ((be) this).field_m.a(0, (gn) (Object) new lj(param0));
+          break L0;
         }
-        ((be) this).field_m.a(0, (gn) (Object) new lj(param0));
-        if (!(((be) this).field_m.a(false) <= param1)) {
-            gn discarded$0 = ((be) this).field_m.h(-124);
+        L2: {
+          if (((be) this).field_m.a(false) > param1) {
+            gn discarded$2 = ((be) this).field_m.h(-124);
+            break L2;
+          } else {
+            break L2;
+          }
         }
     }
 
@@ -421,18 +480,59 @@ abstract class be implements hc {
     }
 
     private final void c(byte param0) {
-        ((be) this).field_h = !((be) this).field_h ? true : false;
-        if (!((be) this).field_h) {
-            // if_acmpeq L75
-            ((be) this).field_l.a(param0 ^ -100, (hd) null);
-        } else {
-            ((be) this).field_e = 15;
-            if (!(((be) this).field_l == null)) {
-                ((be) this).field_l.a(-95, (hd) (Object) ((be) this).field_k);
-            }
+        Object stackIn_1_0 = null;
+        Object stackIn_2_0 = null;
+        Object stackIn_3_0 = null;
+        int stackIn_3_1 = 0;
+        Object stackOut_0_0 = null;
+        Object stackOut_2_0 = null;
+        int stackOut_2_1 = 0;
+        Object stackOut_1_0 = null;
+        int stackOut_1_1 = 0;
+        L0: {
+          stackOut_0_0 = this;
+          stackIn_2_0 = stackOut_0_0;
+          stackIn_1_0 = stackOut_0_0;
+          if (((be) this).field_h) {
+            stackOut_2_0 = this;
+            stackOut_2_1 = 0;
+            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_1 = stackOut_2_1;
+            break L0;
+          } else {
+            stackOut_1_0 = this;
+            stackOut_1_1 = 1;
+            stackIn_3_0 = stackOut_1_0;
+            stackIn_3_1 = stackOut_1_1;
+            break L0;
+          }
         }
-        if (param0 != -23) {
+        L1: {
+          ((be) this).field_h = stackIn_3_1 != 0;
+          if (((be) this).field_h) {
+            ((be) this).field_e = 15;
+            if (((be) this).field_l != null) {
+              ((be) this).field_l.a(-95, (hd) (Object) ((be) this).field_k);
+              break L1;
+            } else {
+              break L1;
+            }
+          } else {
+            if (null == ((be) this).field_l) {
+              break L1;
+            } else {
+              ((be) this).field_l.a(param0 ^ -100, (hd) null);
+              break L1;
+            }
+          }
+        }
+        L2: {
+          if (param0 == -23) {
+            break L2;
+          } else {
             ((be) this).field_a = null;
+            break L2;
+          }
         }
     }
 

@@ -169,115 +169,120 @@ final class ae {
             }
             try {
               L1: {
-                var3_ref = "";
-                if (param0 == null) {
-                  break L1;
-                } else {
-                  var3_ref = vj.a(param0, (byte) -93);
-                  break L1;
-                }
-              }
-              L2: {
-                if (param2 == null) {
-                  break L2;
-                } else {
-                  L3: {
-                    if (param0 != null) {
-                      var3_ref = var3_ref + " | ";
-                      break L3;
-                    } else {
-                      break L3;
-                    }
-                  }
-                  var3_ref = var3_ref + param2;
-                  break L2;
-                }
-              }
-              ed.a(83, var3_ref);
-              var7 = fg.a(":", -127, "%3a", var3_ref);
-              var8 = fg.a("@", -127, "%40", var7);
-              var9 = fg.a("&", -128, "%26", var8);
-              var10 = fg.a("#", -127, "%23", var9);
-              if (b.field_m == null) {
-                return;
-              } else {
-                L4: {
-                  stackOut_12_0 = mh.field_E;
-                  stackOut_12_1 = param1 ^ 13702;
-                  stackOut_12_2 = null;
-                  stackOut_12_3 = null;
-                  stackOut_12_4 = b.field_m.getCodeBase();
-                  stackOut_12_5 = new StringBuilder().append("clienterror.ws?c=").append(ke.field_b).append("&u=");
-                  stackIn_14_0 = stackOut_12_0;
-                  stackIn_14_1 = stackOut_12_1;
-                  stackIn_14_2 = stackOut_12_2;
-                  stackIn_14_3 = stackOut_12_3;
-                  stackIn_14_4 = stackOut_12_4;
-                  stackIn_14_5 = stackOut_12_5;
-                  stackIn_13_0 = stackOut_12_0;
-                  stackIn_13_1 = stackOut_12_1;
-                  stackIn_13_2 = stackOut_12_2;
-                  stackIn_13_3 = stackOut_12_3;
-                  stackIn_13_4 = stackOut_12_4;
-                  stackIn_13_5 = stackOut_12_5;
-                  if (null == i.field_U) {
-                    stackOut_14_0 = (ec) (Object) stackIn_14_0;
-                    stackOut_14_1 = stackIn_14_1;
-                    stackOut_14_2 = null;
-                    stackOut_14_3 = null;
-                    stackOut_14_4 = (java.net.URL) (Object) stackIn_14_4;
-                    stackOut_14_5 = (StringBuilder) (Object) stackIn_14_5;
-                    stackOut_14_6 = "" + nk.field_e;
-                    stackIn_15_0 = stackOut_14_0;
-                    stackIn_15_1 = stackOut_14_1;
-                    stackIn_15_2 = stackOut_14_2;
-                    stackIn_15_3 = stackOut_14_3;
-                    stackIn_15_4 = stackOut_14_4;
-                    stackIn_15_5 = stackOut_14_5;
-                    stackIn_15_6 = stackOut_14_6;
-                    break L4;
+                L2: {
+                  var3_ref = "";
+                  if (param0 == null) {
+                    break L2;
                   } else {
-                    stackOut_13_0 = (ec) (Object) stackIn_13_0;
-                    stackOut_13_1 = stackIn_13_1;
-                    stackOut_13_2 = null;
-                    stackOut_13_3 = null;
-                    stackOut_13_4 = (java.net.URL) (Object) stackIn_13_4;
-                    stackOut_13_5 = (StringBuilder) (Object) stackIn_13_5;
-                    stackOut_13_6 = i.field_U;
-                    stackIn_15_0 = stackOut_13_0;
-                    stackIn_15_1 = stackOut_13_1;
-                    stackIn_15_2 = stackOut_13_2;
-                    stackIn_15_3 = stackOut_13_3;
-                    stackIn_15_4 = stackOut_13_4;
-                    stackIn_15_5 = stackOut_13_5;
-                    stackIn_15_6 = stackOut_13_6;
-                    break L4;
+                    var3_ref = vj.a(param0, (byte) -93);
+                    break L2;
                   }
                 }
-                new java.net.URL(stackIn_15_4, stackIn_15_6 + "&v1=" + ec.field_h + "&v2=" + ec.field_g + "&e=" + var10);
-                var4 = ((ec) (Object) stackIn_15_0).a(stackIn_15_1, stackIn_15_2);
-                L5: while (true) {
-                  if (-1 != var4.field_f) {
-                    L6: {
-                      if (-2 != var4.field_f) {
-                        break L6;
+                L3: {
+                  if (param2 == null) {
+                    break L3;
+                  } else {
+                    L4: {
+                      if (param0 != null) {
+                        var3_ref = var3_ref + " | ";
+                        break L4;
                       } else {
-                        var5 = (DataInputStream) var4.field_d;
-                        int discarded$1 = var5.read();
-                        var5.close();
-                        break L6;
+                        break L4;
                       }
                     }
-                  } else {
-                    ld.a(1L, (byte) 62);
-                    continue L5;
+                    var3_ref = var3_ref + param2;
+                    break L3;
+                  }
+                }
+                ed.a(83, var3_ref);
+                var7 = fg.a(":", -127, "%3a", var3_ref);
+                var8 = fg.a("@", -127, "%40", var7);
+                var9 = fg.a("&", -128, "%26", var8);
+                var10 = fg.a("#", -127, "%23", var9);
+                if (b.field_m == null) {
+                  return;
+                } else {
+                  L5: {
+                    stackOut_12_0 = mh.field_E;
+                    stackOut_12_1 = param1 ^ 13702;
+                    stackOut_12_2 = null;
+                    stackOut_12_3 = null;
+                    stackOut_12_4 = b.field_m.getCodeBase();
+                    stackOut_12_5 = new StringBuilder().append("clienterror.ws?c=").append(ke.field_b).append("&u=");
+                    stackIn_14_0 = stackOut_12_0;
+                    stackIn_14_1 = stackOut_12_1;
+                    stackIn_14_2 = stackOut_12_2;
+                    stackIn_14_3 = stackOut_12_3;
+                    stackIn_14_4 = stackOut_12_4;
+                    stackIn_14_5 = stackOut_12_5;
+                    stackIn_13_0 = stackOut_12_0;
+                    stackIn_13_1 = stackOut_12_1;
+                    stackIn_13_2 = stackOut_12_2;
+                    stackIn_13_3 = stackOut_12_3;
+                    stackIn_13_4 = stackOut_12_4;
+                    stackIn_13_5 = stackOut_12_5;
+                    if (null == i.field_U) {
+                      stackOut_14_0 = (ec) (Object) stackIn_14_0;
+                      stackOut_14_1 = stackIn_14_1;
+                      stackOut_14_2 = null;
+                      stackOut_14_3 = null;
+                      stackOut_14_4 = (java.net.URL) (Object) stackIn_14_4;
+                      stackOut_14_5 = (StringBuilder) (Object) stackIn_14_5;
+                      stackOut_14_6 = "" + nk.field_e;
+                      stackIn_15_0 = stackOut_14_0;
+                      stackIn_15_1 = stackOut_14_1;
+                      stackIn_15_2 = stackOut_14_2;
+                      stackIn_15_3 = stackOut_14_3;
+                      stackIn_15_4 = stackOut_14_4;
+                      stackIn_15_5 = stackOut_14_5;
+                      stackIn_15_6 = stackOut_14_6;
+                      break L5;
+                    } else {
+                      stackOut_13_0 = (ec) (Object) stackIn_13_0;
+                      stackOut_13_1 = stackIn_13_1;
+                      stackOut_13_2 = null;
+                      stackOut_13_3 = null;
+                      stackOut_13_4 = (java.net.URL) (Object) stackIn_13_4;
+                      stackOut_13_5 = (StringBuilder) (Object) stackIn_13_5;
+                      stackOut_13_6 = i.field_U;
+                      stackIn_15_0 = stackOut_13_0;
+                      stackIn_15_1 = stackOut_13_1;
+                      stackIn_15_2 = stackOut_13_2;
+                      stackIn_15_3 = stackOut_13_3;
+                      stackIn_15_4 = stackOut_13_4;
+                      stackIn_15_5 = stackOut_13_5;
+                      stackIn_15_6 = stackOut_13_6;
+                      break L5;
+                    }
+                  }
+                  var4 = ((ec) (Object) stackIn_15_0).a(stackIn_15_1, new java.net.URL(stackIn_15_4, stackIn_15_6 + "&v1=" + ec.field_h + "&v2=" + ec.field_g + "&e=" + var10));
+                  L6: while (true) {
+                    if (-1 != var4.field_f) {
+                      L7: {
+                        if (-2 != var4.field_f) {
+                          break L7;
+                        } else {
+                          var5 = (DataInputStream) var4.field_d;
+                          int discarded$1 = var5.read();
+                          var5.close();
+                          break L7;
+                        }
+                      }
+                      break L1;
+                    } else {
+                      ld.a(1L, (byte) 62);
+                      continue L6;
+                    }
                   }
                 }
               }
-            } catch (java.lang.Exception decompiledCaughtParameter) {
-              decompiledCaughtException = decompiledCaughtParameter;
+            } catch (java.lang.Exception decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              L8: {
+                var3 = (Exception) (Object) decompiledCaughtException;
+                break L8;
+              }
             }
-            var3 = (Exception) (Object) decompiledCaughtException;
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {

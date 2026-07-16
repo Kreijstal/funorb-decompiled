@@ -480,93 +480,31 @@ final class kn extends ec {
         u stackIn_5_0 = null;
         Throwable decompiledCaughtException = null;
         u stackOut_4_0 = null;
-        int statePc = 0;
-        Throwable caughtException = null;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    try {
-                        var1_int = 0;
-                        if (param0 == 256) {
-                            statePc = 2;
-                        } else {
-                            statePc = 1;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_0) {
-                        caughtException = stateCaught_0;
-                        statePc = 7;
-                        continue stateLoop;
-                    }
-                }
-                case 1: {
-                    try {
-                        field_L = null;
-                        statePc = 2;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_1) {
-                        caughtException = stateCaught_1;
-                        statePc = 7;
-                        continue stateLoop;
-                    }
-                }
-                case 2: {
-                    try {
-                        var2 = dm.field_v.a(var1_int, (byte) 35);
-                        if (var2.field_o) {
-                            statePc = 4;
-                        } else {
-                            statePc = 3;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_2) {
-                        caughtException = stateCaught_2;
-                        statePc = 7;
-                        continue stateLoop;
-                    }
-                }
-                case 3: {
-                    try {
-                        statePc = 6;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_3) {
-                        caughtException = stateCaught_3;
-                        statePc = 7;
-                        continue stateLoop;
-                    }
-                }
-                case 4: {
-                    try {
-                        stackOut_4_0 = (u) var2;
-                        stackIn_5_0 = stackOut_4_0;
-                        statePc = 5;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_4) {
-                        caughtException = stateCaught_4;
-                        statePc = 7;
-                        continue stateLoop;
-                    }
-                }
-                case 5: {
-                    return stackIn_5_0;
-                }
-                case 6: {
-                    try {
-                        var1_int++;
-                        statePc = 2;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_6) {
-                        caughtException = stateCaught_6;
-                        statePc = 7;
-                        continue stateLoop;
-                    }
-                }
-                case 7: {
-                    var1 = (IllegalArgumentException) (Object) caughtException;
-                    return null;
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
+        try {
+          L0: {
+            var1_int = 0;
+            if (param0 == 256) {
+              break L0;
+            } else {
+              field_L = null;
+              break L0;
             }
+          }
+          L1: while (true) {
+            var2 = dm.field_v.a(var1_int, (byte) 35);
+            if (var2.field_o) {
+              stackOut_4_0 = (u) var2;
+              stackIn_5_0 = stackOut_4_0;
+              return stackIn_5_0;
+            } else {
+              var1_int++;
+              continue L1;
+            }
+          }
+        } catch (java.lang.Exception decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1 = (IllegalArgumentException) (Object) decompiledCaughtException;
+          return null;
         }
     }
 

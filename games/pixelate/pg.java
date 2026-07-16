@@ -187,6 +187,7 @@ final class pg implements Iterable {
               if (var0 > 10) {
                 field_f = new sp[132];
                 field_d = "Achievements";
+                return;
               } else {
                 var1 = (var0 + -1) * 8;
                 field_c[var0] = fp.a(fp.a(fp.a(fp.a(mk.a(4278190080L, field_b[4][4 + var1]), fp.a(mk.a(1095216660480L, field_b[3][var1 - -3]), fp.a(mk.a(field_b[2][var1 - -2], 280375465082880L), fp.a(mk.a(-72057594037927936L, field_b[0][var1]), mk.a(field_b[1][var1 + 1], 71776119061217280L))))), mk.a(field_b[5][5 + var1], 16711680L)), mk.a(65280L, field_b[6][var1 - -6])), mk.a(field_b[7][var1 - -7], 255L));
@@ -196,7 +197,7 @@ final class pg implements Iterable {
             }
           } else {
             L2: {
-              var1 = "ᠣ웨螸ŏ㚦틵祯酒悼鮎ꌌ笵ᷠퟂ⹋﹗ᕷ㟥鿰䫚壉⤊놠殅뵝ჴ쬾է䆋Ᵹ闘ﯮ籦���䞞쨭뼇굚茳挂ꩱ젙䧙守騦㊰햀뻍㑈ｺ遟⁨᪮둔錢擱猒䀈쏬���贽需켫皂혛떯橐䗳ワ㽕ꋪ斺⿀���﵍鉵ڊ닦ฟ拔ꢖ暈╙葲㥌幸㢌톥댡鰞䏇ﰄ写洍﫟縤㮫츑轎럫㲁铷뤓ⳓ쐃噄義⪻셓���鵬ㅴ겉ᓡᘺ椉炶탭챂颤⡜".charAt(var0 / 2);
+              var1 = "ᠣ웨螸ŏ㚦틵祯酒悼鮎ꌌ笵ᷠퟂ⹋﹗ᕷ㟥鿰䫚壉⤊놠殅뵝ჴ쬾է䆋Ᵹ闘ﯮ籦\udd17䞞쨭뼇굚茳挂ꩱ젙䧙守騦㊰햀뻍㑈ｺ遟⁨᪮둔錢擱猒䀈쏬\udba1贽需켫皂혛떯橐䗳ワ㽕ꋪ斺⿀\ude1c﵍鉵ڊ닦ฟ拔ꢖ暈╙葲㥌幸㢌톥댡鰞䏇ﰄ写洍﫟縤㮫츑轎럫㲁铷뤓ⳓ쐃噄義⪻셓\udc0b鵬ㅴ겉ᓡᘺ椉炶탭챂颤⡜".charAt(var0 / 2);
               if ((var0 & 1) == 0) {
                 stackOut_4_0 = (long)(var1 >>> -2128318232);
                 stackIn_5_0 = stackOut_4_0;

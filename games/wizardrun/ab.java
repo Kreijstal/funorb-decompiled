@@ -22,8 +22,9 @@ final class ab {
           if (param0 == 1) {
             L0: while (true) {
               if (((ab) this).field_g < ((ab) this).field_a) {
+                int fieldTemp$2 = ((ab) this).field_g;
                 ((ab) this).field_g = ((ab) this).field_g + 1;
-                var4 = ((ab) this).field_d[((ab) this).field_g].field_b;
+                var4 = ((ab) this).field_d[fieldTemp$2].field_b;
                 var9 = var4;
                 if (var4 == ((ab) this).field_d[-1 + ((ab) this).field_g]) {
                   continue L0;
@@ -43,8 +44,9 @@ final class ab {
             if (param0 == 1) {
               L1: while (true) {
                 if (((ab) this).field_g < ((ab) this).field_a) {
+                  int fieldTemp$3 = ((ab) this).field_g;
                   ((ab) this).field_g = ((ab) this).field_g + 1;
-                  var4 = ((ab) this).field_d[((ab) this).field_g].field_b;
+                  var4 = ((ab) this).field_d[fieldTemp$3].field_b;
                   var5 = var4;
                   if (var4 == ((ab) this).field_d[-1 + ((ab) this).field_g]) {
                     continue L1;
@@ -155,13 +157,15 @@ final class ab {
         var2 = 0;
         L0: while (true) {
           if (param0 > var2) {
-            var3 = new wl();
-            ((ab) this).field_d[var2] = new wl();
+            wl dupTemp$2 = new wl();
+            var3 = dupTemp$2;
+            ((ab) this).field_d[var2] = dupTemp$2;
             var3.field_c = var3;
             var3.field_b = var3;
             var2++;
             continue L0;
           } else {
+            return;
           }
         }
     }

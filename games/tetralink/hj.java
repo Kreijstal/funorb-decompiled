@@ -77,20 +77,20 @@ final class hj {
         } else {
             var4 = ((hj) this).field_d.a(-103, param0 & 32767, 0);
         }
-        qa var3_ref = new qa();
+        var3 = new qa();
         if (var4 != null) {
-            var3_ref.a(new bh(var4), 0);
+            var3.a(new bh(var4), 0);
             if (!(32768 > param0)) {
-                var3_ref.g(32768);
+                var3.g(32768);
             }
-            ((hj) this).field_f.a((Object) (Object) var3_ref, (long)param0, (byte) 50);
-            return var3_ref;
+            ((hj) this).field_f.a((Object) (Object) var3, (long)param0, (byte) 50);
+            return var3;
         }
         if (!(32768 > param0)) {
-            var3_ref.g(32768);
+            var3.g(32768);
         }
-        ((hj) this).field_f.a((Object) (Object) var3_ref, (long)param0, (byte) 50);
-        return var3_ref;
+        ((hj) this).field_f.a((Object) (Object) var3, (long)param0, (byte) 50);
+        return var3;
     }
 
     hj(int param0, ah param1, ah param2) {
@@ -106,57 +106,94 @@ final class hj {
     }
 
     final static void a(boolean param0, int param1, int param2, boolean param3) {
+        int var4 = 0;
         int var5 = 0;
-        if (!(hi.field_a)) {
-            return;
-        }
-        ck.field_bb.a(0, param0);
-        int var4 = gl.field_o.c(param3) ? 1 : 0;
-        if (param3) {
-            return;
-        }
-        if (0 != tm.field_t) {
-            if (var4 != 0) {
-                if (!(!param0)) {
-                    gl.field_o.a(0, param1, param2);
-                }
-                if (!(var4 == 0)) {
-                    ck.field_bb.a(0, param0);
-                }
-                var5 = gl.field_o.h(0) - -gl.field_o.field_eb;
-                if (640 >= var5) {
-                    if (var5 <= -636) {
-                        return;
+        if (!hi.field_a) {
+          return;
+        } else {
+          ck.field_bb.a(0, param0);
+          var4 = gl.field_o.c(param3) ? 1 : 0;
+          if (!param3) {
+            L0: {
+              if (0 == tm.field_t) {
+                break L0;
+              } else {
+                if (var4 == 0) {
+                  fk.e((byte) -8);
+                  param0 = false;
+                  break L0;
+                } else {
+                  L1: {
+                    if (param0) {
+                      gl.field_o.a(0, param1, param2);
+                      break L1;
+                    } else {
+                      break L1;
                     }
-                    if (-1 >= d.field_e) {
-                        return;
+                  }
+                  L2: {
+                    if (var4 != 0) {
+                      ck.field_bb.a(0, param0);
+                      break L2;
+                    } else {
+                      break L2;
                     }
-                    d.field_e = d.field_e - 5;
+                  }
+                  var5 = gl.field_o.h(0) - -gl.field_o.field_eb;
+                  if (640 < var5) {
+                    d.field_e = d.field_e + 5;
                     return;
+                  } else {
+                    if ((var5 ^ -1) > -636) {
+                      if (-1 > (d.field_e ^ -1)) {
+                        d.field_e = d.field_e - 5;
+                        return;
+                      } else {
+                        return;
+                      }
+                    } else {
+                      return;
+                    }
+                  }
                 }
-                d.field_e = d.field_e + 5;
-                return;
+              }
             }
-            fk.e((byte) -8);
-            param0 = false;
-        }
-        if (!(!param0)) {
-            gl.field_o.a(0, param1, param2);
-        }
-        if (!(var4 == 0)) {
-            ck.field_bb.a(0, param0);
-        }
-        var5 = gl.field_o.h(0) - -gl.field_o.field_eb;
-        if (640 >= var5) {
-            // if_icmple L234
-            if (-1 >= d.field_e) {
-                return;
+            L3: {
+              if (param0) {
+                gl.field_o.a(0, param1, param2);
+                break L3;
+              } else {
+                break L3;
+              }
             }
-            d.field_e = d.field_e - 5;
+            L4: {
+              if (var4 != 0) {
+                ck.field_bb.a(0, param0);
+                break L4;
+              } else {
+                break L4;
+              }
+            }
+            var5 = gl.field_o.h(0) - -gl.field_o.field_eb;
+            if (640 < var5) {
+              d.field_e = d.field_e + 5;
+              return;
+            } else {
+              if ((var5 ^ -1) <= -636) {
+                return;
+              } else {
+                if (-1 > (d.field_e ^ -1)) {
+                  d.field_e = d.field_e - 5;
+                  return;
+                } else {
+                  return;
+                }
+              }
+            }
+          } else {
             return;
+          }
         }
-        d.field_e = d.field_e + 5;
-        return;
     }
 
     static {

@@ -678,136 +678,73 @@ final class ce extends ec {
             hg var5 = null;
             hg var6 = null;
             int stackIn_13_0 = 0;
-            int stackOut_11_0 = 0;
+            Throwable decompiledCaughtException = null;
             int stackOut_12_0 = 0;
-            int statePc = 0;
-            Throwable caughtException = null;
-            stateLoop: while (true) {
-                switch (statePc) {
-                    case 0: {
-                        if (param0 < -35) {
-                            statePc = 2;
-                        } else {
-                            statePc = 1;
-                        }
-                        continue stateLoop;
+            int stackOut_11_0 = 0;
+            L0: {
+              if (param0 < -35) {
+                break L0;
+              } else {
+                var3 = null;
+                rm[] discarded$4 = ce.a(47, -49, (eh) null, -99);
+                break L0;
+              }
+            }
+            L1: {
+              if (td.field_b == null) {
+                td.field_b = qc.field_f.a(uh.field_b, 27402, fj.field_c);
+                break L1;
+              } else {
+                break L1;
+              }
+            }
+            if (td.field_b.field_a == 0) {
+              return false;
+            } else {
+              long dupTemp$5 = hc.a(-9986);
+              ud.field_a = dupTemp$5;
+              fa.field_l = dupTemp$5;
+              if (td.field_b.field_a == 1) {
+                try {
+                  L2: {
+                    L3: {
+                      oj.field_Ub = new el((java.net.Socket) td.field_b.field_f, qc.field_f);
+                      var5 = sh.field_qb;
+                      var6 = var5;
+                      gk.field_g.field_l = 0;
+                      if (param1) {
+                        stackOut_12_0 = -2;
+                        stackIn_13_0 = stackOut_12_0;
+                        break L3;
+                      } else {
+                        stackOut_11_0 = -1;
+                        stackIn_13_0 = stackOut_11_0;
+                        break L3;
+                      }
                     }
-                    case 1: {
-                        var3 = null;
-                        rm[] discarded$2 = ce.a(47, -49, (eh) null, -99);
-                        statePc = 2;
-                        continue stateLoop;
-                    }
-                    case 2: {
-                        if (td.field_b == null) {
-                            statePc = 4;
-                        } else {
-                            statePc = 5;
-                        }
-                        continue stateLoop;
-                    }
-                    case 4: {
-                        td.field_b = qc.field_f.a(uh.field_b, 27402, fj.field_c);
-                        statePc = 5;
-                        continue stateLoop;
-                    }
-                    case 5: {
-                        if (td.field_b.field_a == 0) {
-                            statePc = 7;
-                        } else {
-                            statePc = 8;
-                        }
-                        continue stateLoop;
-                    }
-                    case 7: {
-                        return false;
-                    }
-                    case 8: {
-                        ud.field_a = hc.a(-9986);
-                        fa.field_l = hc.a(-9986);
-                        if (td.field_b.field_a == 1) {
-                            statePc = 10;
-                        } else {
-                            statePc = 9;
-                        }
-                        continue stateLoop;
-                    }
-                    case 9: {
-                        ug.field_a = bd.field_d;
-                        td.field_b = null;
-                        return true;
-                    }
-                    case 10: {
-                        try {
-                            oj.field_Ub = new el((java.net.Socket) td.field_b.field_f, qc.field_f);
-                            var5 = sh.field_qb;
-                            var6 = var5;
-                            gk.field_g.field_l = 0;
-                            if (param1) {
-                                statePc = 12;
-                            } else {
-                                statePc = 11;
-                            }
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_10) {
-                            caughtException = stateCaught_10;
-                            statePc = 15;
-                            continue stateLoop;
-                        }
-                    }
-                    case 11: {
-                        try {
-                            stackOut_11_0 = -1;
-                            stackIn_13_0 = stackOut_11_0;
-                            statePc = 13;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_11) {
-                            caughtException = stateCaught_11;
-                            statePc = 15;
-                            continue stateLoop;
-                        }
-                    }
-                    case 12: {
-                        try {
-                            stackOut_12_0 = -2;
-                            stackIn_13_0 = stackOut_12_0;
-                            statePc = 13;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_12) {
-                            caughtException = stateCaught_12;
-                            statePc = 15;
-                            continue stateLoop;
-                        }
-                    }
-                    case 13: {
-                        try {
-                            ah.field_e = stackIn_13_0;
-                            pl.field_c = stackIn_13_0;
-                            md.field_b = stackIn_13_0;
-                            ug.field_a = ul.field_c;
-                            var6.field_l = 0;
-                            hj.a(m.field_m, (jc) (Object) gk.field_g, wc.field_m, oj.field_Yb, 12);
-                            al.b(-1, -1);
-                            statePc = 14;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_13) {
-                            caughtException = stateCaught_13;
-                            statePc = 15;
-                            continue stateLoop;
-                        }
-                    }
-                    case 14: {
-                        td.field_b = null;
-                        return true;
-                    }
-                    case 15: {
-                        var2 = (IOException) (Object) caughtException;
-                        ug.field_a = bd.field_d;
-                        td.field_b = null;
-                        return true;
-                    }
-                    default: throw new IllegalStateException("invalid CFG state " + statePc);
+                    ah.field_e = stackIn_13_0;
+                    pl.field_c = stackIn_13_0;
+                    md.field_b = stackIn_13_0;
+                    ug.field_a = ul.field_c;
+                    var6.field_l = 0;
+                    hj.a(m.field_m, (jc) (Object) gk.field_g, wc.field_m, oj.field_Yb, 12);
+                    al.b(-1, -1);
+                    break L2;
+                  }
+                } catch (java.io.IOException decompiledCaughtParameter0) {
+                  decompiledCaughtException = decompiledCaughtParameter0;
+                  var2 = (IOException) (Object) decompiledCaughtException;
+                  ug.field_a = bd.field_d;
+                  td.field_b = null;
+                  return true;
                 }
+                td.field_b = null;
+                return true;
+              } else {
+                ug.field_a = bd.field_d;
+                td.field_b = null;
+                return true;
+              }
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -906,8 +843,9 @@ final class ce extends ec {
           gg.field_D.a((byte) 65, param3);
           gg.field_D.a(on.field_a, ch.field_i, (byte) 86);
           gk.field_g.g(18, 8);
+          int fieldTemp$2 = gk.field_g.field_l + 1;
           gk.field_g.field_l = gk.field_g.field_l + 1;
-          var4 = gk.field_g.field_l + 1;
+          var4 = fieldTemp$2;
           gk.field_g.a(gg.field_D.field_g, gg.field_D.field_l, 0, (byte) -123);
           gk.field_g.b(-var4 + gk.field_g.field_l, -1);
           return;
@@ -920,8 +858,9 @@ final class ce extends ec {
           gg.field_D.a((byte) 65, param3);
           gg.field_D.a(on.field_a, ch.field_i, (byte) 86);
           gk.field_g.g(18, 8);
+          int fieldTemp$3 = gk.field_g.field_l + 1;
           gk.field_g.field_l = gk.field_g.field_l + 1;
-          var4 = gk.field_g.field_l + 1;
+          var4 = fieldTemp$3;
           gk.field_g.a(gg.field_D.field_g, gg.field_D.field_l, 0, (byte) -123);
           gk.field_g.b(-var4 + gk.field_g.field_l, -1);
           return;

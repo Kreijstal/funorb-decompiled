@@ -187,8 +187,7 @@ final class la extends g implements ec, oi {
                 break L6;
               }
             }
-            new ig(stackIn_18_3, (lf) null);
-            ((la) this).field_J = stackIn_18_1;
+            ((la) this).field_J = new ig(stackIn_18_3, (lf) null);
             if (!((la) this).field_M) {
               break L5;
             } else {
@@ -272,11 +271,13 @@ final class la extends g implements ec, oi {
           }
         }
         L13: {
-          var12 = new kg(10, ((la) this).field_k, -20 + ((la) this).field_p, 25, (rj) (Object) ((la) this).field_Q, false, 80, 3, var7, 16777215, var8);
-          ((la) this).b(4, (rj) (Object) new kg(10, ((la) this).field_k, -20 + ((la) this).field_p, 25, (rj) (Object) ((la) this).field_Q, false, 80, 3, var7, 16777215, var8));
+          kg dupTemp$2 = new kg(10, ((la) this).field_k, -20 + ((la) this).field_p, 25, (rj) (Object) ((la) this).field_Q, false, 80, 3, var7, 16777215, var8);
+          var12 = dupTemp$2;
+          ((la) this).b(4, (rj) (Object) dupTemp$2);
           ((la) this).field_k = ((la) this).field_k + (5 + ((rj) (Object) var12).field_t);
-          var13 = new kg(10, ((la) this).field_k, -20 + ((la) this).field_p, 25, (rj) (Object) ((la) this).field_K, false, 80, 3, var7, 16777215, th.field_b);
-          ((la) this).b(4, (rj) (Object) new kg(10, ((la) this).field_k, -20 + ((la) this).field_p, 25, (rj) (Object) ((la) this).field_K, false, 80, 3, var7, 16777215, th.field_b));
+          kg dupTemp$3 = new kg(10, ((la) this).field_k, -20 + ((la) this).field_p, 25, (rj) (Object) ((la) this).field_K, false, 80, 3, var7, 16777215, th.field_b);
+          var13 = dupTemp$3;
+          ((la) this).b(4, (rj) (Object) dupTemp$3);
           ((la) this).field_D.field_v = (lf) this;
           ((la) this).field_k = ((la) this).field_k + (((rj) (Object) var13).field_t - -5);
           if (((la) this).field_E == null) {
@@ -489,14 +490,30 @@ final class la extends g implements ec, oi {
     }
 
     private final void g(byte param0) {
-        if (param0 <= 50) {
-            return;
+        if (param0 > 50) {
+          L0: {
+            L1: {
+              if (sg.a((byte) 102)) {
+                break L1;
+              } else {
+                if (((la) this).field_Q.field_m.length() <= 0) {
+                  break L0;
+                } else {
+                  if (((la) this).field_K.field_m.length() <= 0) {
+                    break L0;
+                  } else {
+                    break L1;
+                  }
+                }
+              }
+            }
+            rc.a(((la) this).field_K.field_m, ((la) this).field_Q.field_m, true);
+            break L0;
+          }
+          return;
+        } else {
+          return;
         }
-        if (!sg.a((byte) 102)) {
-            // ifle L65
-            // ifle L65
-        }
-        rc.a(((la) this).field_K.field_m, ((la) this).field_Q.field_m, true);
     }
 
     final void b(String param0, int param1) {

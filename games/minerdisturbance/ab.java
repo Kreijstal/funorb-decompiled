@@ -136,22 +136,30 @@ final class ab {
         }
         int var3 = var5.length;
         while (var2 < var3) {
+            int incrementValue$0 = var2;
             var2++;
-            var5[var2] = 0;
+            var5[incrementValue$0] = 0;
+            int incrementValue$1 = var2;
             var2++;
-            var5[var2] = 0;
+            var5[incrementValue$1] = 0;
+            int incrementValue$2 = var2;
             var2++;
-            var5[var2] = 0;
+            var5[incrementValue$2] = 0;
+            int incrementValue$3 = var2;
             var2++;
-            var5[var2] = 0;
+            var5[incrementValue$3] = 0;
+            int incrementValue$4 = var2;
             var2++;
-            var5[var2] = 0;
+            var5[incrementValue$4] = 0;
+            int incrementValue$5 = var2;
             var2++;
-            var5[var2] = 0;
+            var5[incrementValue$5] = 0;
+            int incrementValue$6 = var2;
             var2++;
-            var5[var2] = 0;
+            var5[incrementValue$6] = 0;
+            int incrementValue$7 = var2;
             var2++;
-            var5[var2] = 0;
+            var5[incrementValue$7] = 0;
         }
     }
 
@@ -167,29 +175,35 @@ final class ab {
             ci stackOut_2_0 = null;
             try {
               L0: {
-                var4 = Class.forName("n");
-                if (param0 < -76) {
-                  break L0;
-                } else {
-                  var6 = null;
-                  ab.a(-60, -22, (wb) null);
-                  break L0;
+                L1: {
+                  var4 = Class.forName("n");
+                  if (param0 < -76) {
+                    break L1;
+                  } else {
+                    var6 = null;
+                    ab.a(-60, -22, (wb) null);
+                    break L1;
+                  }
                 }
+                var5 = (ci) var4.newInstance();
+                var5.a(param2, param3, 13961, param1);
+                stackOut_2_0 = (ci) var5;
+                stackIn_3_0 = stackOut_2_0;
+                break L0;
               }
-              var5 = (ci) var4.newInstance();
-              var5.a(param2, param3, 13961, param1);
-              stackOut_2_0 = (ci) var5;
-              stackIn_3_0 = stackOut_2_0;
-            } catch (java.lang.Throwable decompiledCaughtParameter) {
-              decompiledCaughtException = decompiledCaughtParameter;
-              return stackIn_3_0;
+            } catch (java.lang.Throwable decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              var4_ref = decompiledCaughtException;
+              var5_ref = new vj();
+              ((ci) (Object) var5_ref).a(param2, param3, 13961, param1);
+              return (ci) (Object) var5_ref;
             }
+            return stackIn_3_0;
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
             throw new RuntimeException(decompiledCheckedException);
         }
-        return null;
     }
 
     final static void a(byte param0, java.awt.Canvas param1) {

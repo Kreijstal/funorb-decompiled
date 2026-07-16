@@ -33,7 +33,7 @@ final class jk {
         int var3_int = 0;
         eg var3 = null;
         int var4 = 0;
-        eg var5_ref = null;
+        eg var5_ref_eg = null;
         int var5 = 0;
         int var6_int = 0;
         eg var6 = null;
@@ -74,10 +74,10 @@ final class jk {
                     break L3;
                   } else {
                     ((jk) this).field_b[var4] = hq.b((byte) 121);
-                    var5_ref = hq.b((byte) 124);
+                    var5_ref_eg = hq.b((byte) 124);
                     var6_int = (-param0.field_V + param0.field_x) * (1 + var4) / ((jk) this).field_b.length + param0.field_V;
-                    ej.a(0, ((jk) this).field_b[var4], 0, false, var6_int, 0, 0, 1, var5_ref, var3);
-                    var3 = var5_ref;
+                    ej.a(0, ((jk) this).field_b[var4], 0, false, var6_int, 0, 0, 1, var5_ref_eg, var3);
+                    var3 = var5_ref_eg;
                     break L3;
                   }
                 }

@@ -110,8 +110,9 @@ abstract class bb {
                           }
                         } else {
                           ep.field_H[var11] = ep.field_H[var8];
+                          int incrementValue$1 = var8;
                           var8++;
-                          ep.field_H[var8] = var12;
+                          ep.field_H[incrementValue$1] = var12;
                           if (var9 > var13) {
                             var9 = var13;
                             var11++;

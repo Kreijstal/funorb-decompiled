@@ -5,7 +5,7 @@ final class kl {
     static ec field_a;
 
     final static String a(CharSequence[] param0, int param1, int param2, boolean param3) {
-        CharSequence var4_ref = null;
+        CharSequence var4_ref_CharSequence = null;
         int var4 = 0;
         int var5 = 0;
         int var6_int = 0;
@@ -64,8 +64,8 @@ final class kl {
             }
           } else {
             var10 = param0[param2];
-            var4_ref = var10;
-            if (var4_ref == null) {
+            var4_ref_CharSequence = var10;
+            if (var4_ref_CharSequence == null) {
               return "null";
             } else {
               return ((Object) (Object) var10).toString();

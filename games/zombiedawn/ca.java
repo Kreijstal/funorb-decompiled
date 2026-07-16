@@ -14,16 +14,28 @@ final class ca {
     }
 
     final static void a(byte param0, java.applet.Applet param1) {
+        String var2 = null;
         CharSequence var3 = null;
-        if (param0 <= 63) {
+        L0: {
+          if (param0 > 63) {
+            break L0;
+          } else {
             field_a = 0.4810407079298756;
+            break L0;
+          }
         }
-        String var2 = param1.getParameter("username");
-        if (var2 != null) {
+        L1: {
+          var2 = param1.getParameter("username");
+          if (var2 == null) {
+            break L1;
+          } else {
             var3 = (CharSequence) (Object) var2;
-            // ifeq L51
-        } else {
-            return;
+            if (-1L == (sd.a(-66, var3) ^ -1L)) {
+              break L1;
+            } else {
+              return;
+            }
+          }
         }
     }
 
@@ -183,7 +195,7 @@ final class ca {
             break L0;
           } else {
             L1: {
-              if (-2 == param2) {
+              if (-2 == (param2 ^ -1)) {
                 ph.a((byte) 106, w.field_a[0]);
                 break L1;
               } else {
@@ -191,7 +203,7 @@ final class ca {
                   if (param2 != 2) {
                     break L1;
                   } else {
-                    if (-5 != ke.field_c.field_d) {
+                    if (-5 != (ke.field_c.field_d ^ -1)) {
                       break L1;
                     } else {
                       vl.field_b.c(9091);
@@ -204,7 +216,7 @@ final class ca {
                 }
               }
             }
-            if (ke.field_c.field_d == -1) {
+            if ((ke.field_c.field_d ^ -1) == -1) {
               if ((param2 ^ -1) == -3) {
                 qc.b(1400888196);
                 break L0;
@@ -213,7 +225,7 @@ final class ca {
                 break L0;
               }
             } else {
-              if (-3 != ke.field_c.field_d) {
+              if (-3 != (ke.field_c.field_d ^ -1)) {
                 break L0;
               } else {
                 if (param2 != 0) {
@@ -275,7 +287,7 @@ final class ca {
           break L4;
         }
         L7: {
-          if (sg.field_eb.field_d > -1) {
+          if ((sg.field_eb.field_d ^ -1) > -1) {
             break L7;
           } else {
             sg.field_eb.a((byte) 74, 0, param0);
@@ -283,7 +295,7 @@ final class ca {
           }
         }
         L8: {
-          if (-2 != sg.field_eb.field_d) {
+          if (-2 != (sg.field_eb.field_d ^ -1)) {
             break L8;
           } else {
             if (ke.field_c.field_d == 14) {

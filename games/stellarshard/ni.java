@@ -20,26 +20,45 @@ final class ni {
     }
 
     final static boolean a(pf param0, pf param1, pf param2, byte param3) {
-        if (param2.a((byte) -36)) {
-            // ifeq L23
-        } else {
-            return false;
+        L0: {
+          if (!param2.a((byte) -36)) {
+            break L0;
+          } else {
+            if (!param2.a("commonui", (byte) -109)) {
+              break L0;
+            } else {
+              L1: {
+                if (!param0.a((byte) -36)) {
+                  break L1;
+                } else {
+                  if (!param0.a("commonui", (byte) -109)) {
+                    break L1;
+                  } else {
+                    L2: {
+                      if (!param1.a((byte) -36)) {
+                        break L2;
+                      } else {
+                        if (!param1.a("button.gif", (byte) -109)) {
+                          break L2;
+                        } else {
+                          if (param3 == -104) {
+                            return true;
+                          } else {
+                            field_a = true;
+                            return true;
+                          }
+                        }
+                      }
+                    }
+                    return false;
+                  }
+                }
+              }
+              return false;
+            }
+          }
         }
-        if (param0.a((byte) -36)) {
-            // ifeq L48
-        } else {
-            return false;
-        }
-        if (param1.a((byte) -36)) {
-            // ifeq L73
-        } else {
-            return false;
-        }
-        if (param3 != -104) {
-            field_a = true;
-            return true;
-        }
-        return true;
+        return false;
     }
 
     final static String a(boolean param0, int param1, ka param2) {
@@ -50,102 +69,38 @@ final class ni {
         Object stackIn_2_0 = null;
         String stackIn_7_0 = null;
         Throwable decompiledCaughtException = null;
-        Object stackOut_1_0 = null;
         String stackOut_6_0 = null;
-        int statePc = 0;
-        Throwable caughtException = null;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    try {
-                        if (!param0) {
-                            statePc = 3;
-                        } else {
-                            statePc = 1;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_0) {
-                        caughtException = stateCaught_0;
-                        statePc = 8;
-                        continue stateLoop;
-                    }
+        Object stackOut_1_0 = null;
+        try {
+          L0: {
+            if (!param0) {
+              L1: {
+                var3_int = param2.d((byte) 113);
+                if (param1 < var3_int) {
+                  var3_int = param1;
+                  break L1;
+                } else {
+                  break L1;
                 }
-                case 1: {
-                    try {
-                        stackOut_1_0 = null;
-                        stackIn_2_0 = stackOut_1_0;
-                        statePc = 2;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_1) {
-                        caughtException = stateCaught_1;
-                        statePc = 8;
-                        continue stateLoop;
-                    }
-                }
-                case 2: {
-                    return (String) (Object) stackIn_2_0;
-                }
-                case 3: {
-                    try {
-                        var3_int = param2.d((byte) 113);
-                        if (param1 < var3_int) {
-                            statePc = 5;
-                        } else {
-                            statePc = 4;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_3) {
-                        caughtException = stateCaught_3;
-                        statePc = 8;
-                        continue stateLoop;
-                    }
-                }
-                case 4: {
-                    try {
-                        statePc = 6;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_4) {
-                        caughtException = stateCaught_4;
-                        statePc = 8;
-                        continue stateLoop;
-                    }
-                }
-                case 5: {
-                    try {
-                        var3_int = param1;
-                        statePc = 6;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_5) {
-                        caughtException = stateCaught_5;
-                        statePc = 8;
-                        continue stateLoop;
-                    }
-                }
-                case 6: {
-                    try {
-                        var4 = new byte[var3_int];
-                        param2.field_k = param2.field_k + fl.field_b.a(param2.field_r, param2.field_k, 0, var4, var3_int, true);
-                        var5 = kk.a(var3_int, (byte) 122, 0, var4);
-                        stackOut_6_0 = (String) var5;
-                        stackIn_7_0 = stackOut_6_0;
-                        statePc = 7;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_6) {
-                        caughtException = stateCaught_6;
-                        statePc = 8;
-                        continue stateLoop;
-                    }
-                }
-                case 7: {
-                    return stackIn_7_0;
-                }
-                case 8: {
-                    var3 = (Exception) (Object) caughtException;
-                    return "Cabbage";
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
+              }
+              var4 = new byte[var3_int];
+              param2.field_k = param2.field_k + fl.field_b.a(param2.field_r, param2.field_k, 0, var4, var3_int, true);
+              var5 = kk.a(var3_int, (byte) 122, 0, var4);
+              stackOut_6_0 = (String) var5;
+              stackIn_7_0 = stackOut_6_0;
+              break L0;
+            } else {
+              stackOut_1_0 = null;
+              stackIn_2_0 = stackOut_1_0;
+              return (String) (Object) stackIn_2_0;
             }
+          }
+        } catch (java.lang.Exception decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3 = (Exception) (Object) decompiledCaughtException;
+          return "Cabbage";
         }
+        return stackIn_7_0;
     }
 
     final static void a(ej param0, Object param1, int param2) {
@@ -174,17 +129,24 @@ final class ni {
             }
             try {
               L2: {
-                if (param1 != null) {
-                  param0.field_s.postEvent((java.awt.AWTEvent) (Object) new java.awt.event.ActionEvent(param1, 1001, "dummy"));
-                  break L2;
-                } else {
-                  break L2;
+                L3: {
+                  if (param1 != null) {
+                    param0.field_s.postEvent((java.awt.AWTEvent) (Object) new java.awt.event.ActionEvent(param1, 1001, "dummy"));
+                    break L3;
+                  } else {
+                    break L3;
+                  }
                 }
+                break L2;
               }
-            } catch (java.lang.Exception decompiledCaughtParameter) {
-              decompiledCaughtException = decompiledCaughtParameter;
+            } catch (java.lang.Exception decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              L4: {
+                var3 = (Exception) (Object) decompiledCaughtException;
+                break L4;
+              }
             }
-            var3 = (Exception) (Object) decompiledCaughtException;
+            return;
           }
         } else {
           return;

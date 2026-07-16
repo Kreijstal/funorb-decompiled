@@ -159,8 +159,9 @@ final class pg {
             for (var12 = 0; var12 < var8; var12++) {
                 var13 = ((pg) this).field_a[var7][var11 & var10];
                 var11 = var11 >>> var9;
+                int incrementValue$0 = var5;
                 var5++;
-                field_l[var5] = var13 >= 0 ? b.field_O[var13].b() : 0;
+                field_l[incrementValue$0] = var13 >= 0 ? b.field_O[var13].b() : 0;
             }
         }
         return true;
@@ -454,6 +455,7 @@ final class pg {
                             field_f = new boolean[var5];
                             break L4;
                           }
+                          return;
                         } else {
                           var7 = ((pg) this).field_j[var6];
                           var8 = 0;
@@ -462,8 +464,9 @@ final class pg {
                               var6++;
                               continue L3;
                             } else {
+                              int incrementValue$2 = var5;
                               var5++;
-                              ((pg) this).field_e[var5] = b.f(var4);
+                              ((pg) this).field_e[incrementValue$2] = b.f(var4);
                               var8++;
                               continue L6;
                             }
@@ -479,8 +482,9 @@ final class pg {
                 } else {
                   L7: {
                     ((pg) this).field_d[var4] = b.f(3) + 1;
-                    ((pg) this).field_i[var4] = b.f(2);
-                    var5 = b.f(2);
+                    int dupTemp$3 = b.f(2);
+                    ((pg) this).field_i[var4] = dupTemp$3;
+                    var5 = dupTemp$3;
                     if (var5 == 0) {
                       break L7;
                     } else {

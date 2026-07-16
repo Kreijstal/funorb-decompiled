@@ -34,8 +34,9 @@ final class kf {
           }
           L1: while (true) {
             if (((kf) this).field_b < ((kf) this).field_a) {
+              int fieldTemp$3 = ((kf) this).field_b;
               ((kf) this).field_b = ((kf) this).field_b + 1;
-              var4 = ((kf) this).field_f[((kf) this).field_b].field_h;
+              var4 = ((kf) this).field_f[fieldTemp$3].field_h;
               var2 = var4;
               if (var4 != ((kf) this).field_f[((kf) this).field_b + -1]) {
                 ((kf) this).field_h = var2.field_h;
@@ -53,8 +54,9 @@ final class kf {
             if (((kf) this).field_h == ((kf) this).field_f[((kf) this).field_b + -1]) {
               L2: while (true) {
                 if (((kf) this).field_b < ((kf) this).field_a) {
+                  int fieldTemp$4 = ((kf) this).field_b;
                   ((kf) this).field_b = ((kf) this).field_b + 1;
-                  var4 = ((kf) this).field_f[((kf) this).field_b].field_h;
+                  var4 = ((kf) this).field_f[fieldTemp$4].field_h;
                   var2 = var4;
                   if (var4 != ((kf) this).field_f[((kf) this).field_b + -1]) {
                     ((kf) this).field_h = var2.field_h;
@@ -74,8 +76,9 @@ final class kf {
           } else {
             L3: while (true) {
               if (((kf) this).field_b < ((kf) this).field_a) {
+                int fieldTemp$5 = ((kf) this).field_b;
                 ((kf) this).field_b = ((kf) this).field_b + 1;
-                var4 = ((kf) this).field_f[((kf) this).field_b].field_h;
+                var4 = ((kf) this).field_f[fieldTemp$5].field_h;
                 var2 = var4;
                 if (var4 != ((kf) this).field_f[((kf) this).field_b + -1]) {
                   ((kf) this).field_h = var2.field_h;
@@ -370,13 +373,15 @@ final class kf {
         var2 = 0;
         L0: while (true) {
           if (param0 > var2) {
-            var3 = new wb();
-            ((kf) this).field_f[var2] = new wb();
+            wb dupTemp$2 = new wb();
+            var3 = dupTemp$2;
+            ((kf) this).field_f[var2] = dupTemp$2;
             var3.field_h = var3;
             var3.field_k = var3;
             var2++;
             continue L0;
           } else {
+            return;
           }
         }
     }

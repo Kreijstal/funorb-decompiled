@@ -28,11 +28,11 @@ final class wg {
                 param0 = param0 >> 8;
                 var2 += 8;
             }
-            if (!(-16 <= param0)) {
+            if (!(-16 <= (param0 ^ -1))) {
                 var2 += 4;
                 param0 = param0 >> 4;
             }
-            if (!(-4 >= param0)) {
+            if (!(-4 <= (param0 ^ -1))) {
                 param0 = param0 >> 2;
                 var2 += 2;
             }
@@ -51,11 +51,11 @@ final class wg {
             var2 += 8;
             param0 = param0 >> 8;
         }
-        if (!(param0 <= 15)) {
+        if (!((param0 ^ -1) <= 15)) {
             param0 = param0 >> 4;
             var2 += 4;
         }
-        if (!(3 <= param0)) {
+        if (!(3 >= (param0 ^ -1))) {
             param0 = param0 >> 2;
             var2 += 2;
         }
@@ -231,50 +231,27 @@ final class wg {
     }
 
     final wg a(int param0, wg param1) {
-        int[] var3 = null;
         int var4 = 0;
         int var5 = 0;
         long var6 = 0L;
         int var8 = 0;
-        int var9 = 0;
-        int[] var10 = null;
-        int[] var11 = null;
-        var9 = Pixelate.field_H ? 1 : 0;
-        var11 = new int[9];
-        var10 = var11;
-        var3 = var10;
+        int var9 = Pixelate.field_H ? 1 : 0;
+        int[] var11 = new int[9];
+        int[] var10 = var11;
+        int[] var3 = var10;
         if (param0 != 8) {
-          return null;
-        } else {
-          var4 = 0;
-          L0: while (true) {
-            if (-4 >= var4) {
-              return new wg(var11);
-            } else {
-              var5 = 0;
-              L1: while (true) {
-                if (-4 <= var5) {
-                  var4++;
-                  continue L0;
-                } else {
-                  var6 = 0L;
-                  var8 = 0;
-                  L2: while (true) {
-                    if (-4 >= (var8 ^ -1)) {
-                      var3[3 * var4 + var5] = (int)(var6 >> -486180464);
-                      var5++;
-                      continue L1;
-                    } else {
-                      var6 = var6 + (long)param1.field_f[var8 * 3 - -var5] * (long)((wg) this).field_f[var4 * 3 + var8];
-                      var8++;
-                      continue L2;
-                    }
-                  }
-                }
-              }
-            }
-          }
+            return null;
         }
+        for (var4 = 0; -4 < (var4 ^ -1); var4++) {
+            for (var5 = 0; -4 < (var5 ^ -1); var5++) {
+                var6 = 0L;
+                for (var8 = 0; -4 < (var8 ^ -1); var8++) {
+                    var6 = var6 + (long)param1.field_f[var8 * 3 - -var5] * (long)((wg) this).field_f[var4 * 3 + var8];
+                }
+                var3[3 * var4 + var5] = (int)(var6 >> -486180464);
+            }
+        }
+        return new wg(var11);
     }
 
     public static void a(byte param0) {

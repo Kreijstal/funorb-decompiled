@@ -175,11 +175,12 @@ final class vg {
         var3 = Pixelate.field_H ? 1 : 0;
         if (0 >= ((vg) this).field_d) {
           if (param0 != 50) {
-            int discarded$2 = vg.a(-20, -121);
+            int discarded$6 = vg.a(-20, -121);
             L0: while (true) {
               if (((vg) this).field_d < ((vg) this).field_h) {
+                int fieldTemp$7 = ((vg) this).field_d;
                 ((vg) this).field_d = ((vg) this).field_d + 1;
-                var4 = ((vg) this).field_a[((vg) this).field_d].field_p;
+                var4 = ((vg) this).field_a[fieldTemp$7].field_p;
                 var59 = var4;
                 if (var4 != ((vg) this).field_a[((vg) this).field_d - 1]) {
                   ((vg) this).field_c = var59.field_p;
@@ -194,8 +195,9 @@ final class vg {
           } else {
             L1: while (true) {
               if (((vg) this).field_d < ((vg) this).field_h) {
+                int fieldTemp$8 = ((vg) this).field_d;
                 ((vg) this).field_d = ((vg) this).field_d + 1;
-                var4 = ((vg) this).field_a[((vg) this).field_d].field_p;
+                var4 = ((vg) this).field_a[fieldTemp$8].field_p;
                 var58 = var4;
                 if (var4 != ((vg) this).field_a[((vg) this).field_d - 1]) {
                   ((vg) this).field_c = var58.field_p;
@@ -211,11 +213,12 @@ final class vg {
         } else {
           if (((vg) this).field_c == ((vg) this).field_a[((vg) this).field_d + -1]) {
             if (param0 != 50) {
-              int discarded$3 = vg.a(-20, -121);
+              int discarded$9 = vg.a(-20, -121);
               L2: while (true) {
                 if (((vg) this).field_d < ((vg) this).field_h) {
+                  int fieldTemp$10 = ((vg) this).field_d;
                   ((vg) this).field_d = ((vg) this).field_d + 1;
-                  var4 = ((vg) this).field_a[((vg) this).field_d].field_p;
+                  var4 = ((vg) this).field_a[fieldTemp$10].field_p;
                   var29 = var4;
                   if (var4 != ((vg) this).field_a[((vg) this).field_d - 1]) {
                     ((vg) this).field_c = var29.field_p;
@@ -230,8 +233,9 @@ final class vg {
             } else {
               L3: while (true) {
                 if (((vg) this).field_d < ((vg) this).field_h) {
+                  int fieldTemp$11 = ((vg) this).field_d;
                   ((vg) this).field_d = ((vg) this).field_d + 1;
-                  var4 = ((vg) this).field_a[((vg) this).field_d].field_p;
+                  var4 = ((vg) this).field_a[fieldTemp$11].field_p;
                   var5 = var4;
                   if (var4 != ((vg) this).field_a[((vg) this).field_d - 1]) {
                     ((vg) this).field_c = var5.field_p;
@@ -256,41 +260,41 @@ final class vg {
         int var2 = 0;
         int var3 = 0;
         var3 = Pixelate.field_H ? 1 : 0;
-        if (param1 == param0) {
+        if (param1 == (param0 ^ -1)) {
           return 0;
         } else {
-          if (-1 > param0) {
+          if (-1 < (param0 ^ -1)) {
             throw new IllegalArgumentException("");
           } else {
             if ((param0 ^ -1) > -32769) {
-              if (-129 < param0) {
+              if (-129 < (param0 ^ -1)) {
                 if (param0 < 8) {
-                  if (-3 >= (param0 ^ -1)) {
+                  if (-3 < (param0 ^ -1)) {
+                    return 256;
+                  } else {
                     var2 = 7;
                     param0 = param0 << (var2 << 312350369);
                     return bl.field_a[-32768 + param0] >> var2;
-                  } else {
-                    return 256;
                   }
                 } else {
-                  if (32 > param0) {
-                    var2 = 6;
+                  if (32 <= param0) {
+                    var2 = 5;
                     param0 = param0 << (var2 << 312350369);
                     return bl.field_a[-32768 + param0] >> var2;
                   } else {
-                    var2 = 5;
+                    var2 = 6;
                     param0 = param0 << (var2 << 312350369);
                     return bl.field_a[-32768 + param0] >> var2;
                   }
                 }
               } else {
-                if (-2049 > param0) {
-                  if (512 > param0) {
-                    var2 = 4;
+                if (-2049 < (param0 ^ -1)) {
+                  if (512 <= param0) {
+                    var2 = 3;
                     param0 = param0 << (var2 << 312350369);
                     return bl.field_a[-32768 + param0] >> var2;
                   } else {
-                    var2 = 3;
+                    var2 = 4;
                     param0 = param0 << (var2 << 312350369);
                     return bl.field_a[-32768 + param0] >> var2;
                   }
@@ -310,41 +314,41 @@ final class vg {
               if (131072 <= param0) {
                 if (33554432 > param0) {
                   if (2097152 <= param0) {
-                    if (-8388609 >= (param0 ^ -1)) {
-                      var2 = 4;
+                    if (-8388609 < (param0 ^ -1)) {
+                      var2 = 3;
                       param0 = param0 >> (var2 << 1548094401);
                       return bl.field_a[param0 + -32768] << var2;
                     } else {
-                      var2 = 3;
+                      var2 = 4;
                       param0 = param0 >> (var2 << 1548094401);
                       return bl.field_a[param0 + -32768] << var2;
                     }
                   } else {
-                    if (-524289 >= (param0 ^ -1)) {
-                      var2 = 2;
+                    if (-524289 < (param0 ^ -1)) {
+                      var2 = 1;
                       param0 = param0 >> (var2 << 1548094401);
                       return bl.field_a[param0 + -32768] << var2;
                     } else {
-                      var2 = 1;
+                      var2 = 2;
                       param0 = param0 >> (var2 << 1548094401);
                       return bl.field_a[param0 + -32768] << var2;
                     }
                   }
                 } else {
-                  if ((param0 ^ -1) > -536870913) {
-                    if ((param0 ^ -1) > -134217729) {
-                      var2 = 5;
-                      param0 = param0 >> (var2 << 1548094401);
-                      return bl.field_a[param0 + -32768] << var2;
-                    } else {
-                      var2 = 6;
-                      param0 = param0 >> (var2 << 1548094401);
-                      return bl.field_a[param0 + -32768] << var2;
-                    }
-                  } else {
+                  if ((param0 ^ -1) <= -536870913) {
                     var2 = 7;
                     param0 = param0 >> (var2 << 1548094401);
                     return bl.field_a[param0 + -32768] << var2;
+                  } else {
+                    if ((param0 ^ -1) <= -134217729) {
+                      var2 = 6;
+                      param0 = param0 >> (var2 << 1548094401);
+                      return bl.field_a[param0 + -32768] << var2;
+                    } else {
+                      var2 = 5;
+                      param0 = param0 >> (var2 << 1548094401);
+                      return bl.field_a[param0 + -32768] << var2;
+                    }
                   }
                 }
               } else {
@@ -419,141 +423,72 @@ final class vg {
         try {
             IOException var2 = null;
             Throwable decompiledCaughtException = null;
-            int statePc = 0;
-            Throwable caughtException = null;
-            stateLoop: while (true) {
-                switch (statePc) {
-                    case 0: {
-                        if (null == sh.field_e) {
-                            statePc = 12;
-                        } else {
-                            statePc = 1;
-                        }
-                        continue stateLoop;
+            if (null == sh.field_e) {
+              aa.field_f.field_m = 0;
+              return;
+            } else {
+              L0: {
+                if (param0 < 0) {
+                  if (aa.field_f.field_m == 0) {
+                    if ((hm.a(64) ^ -1L) >= (aj.field_m + 10000L ^ -1L)) {
+                      break L0;
+                    } else {
+                      aa.field_f.g(param0, 15514);
+                      break L0;
                     }
-                    case 1: {
-                        if (param0 < 0) {
-                            statePc = 5;
-                        } else {
-                            statePc = 2;
-                        }
-                        continue stateLoop;
-                    }
-                    case 2: {
-                        if (aa.field_f.field_m != 0) {
-                            statePc = 14;
-                        } else {
-                            statePc = 3;
-                        }
-                        continue stateLoop;
-                    }
-                    case 3: {
-                        if ((hm.a(64) ^ -1L) >= (aj.field_m + 10000L ^ -1L)) {
-                            statePc = 14;
-                        } else {
-                            statePc = 4;
-                        }
-                        continue stateLoop;
-                    }
-                    case 4: {
+                  } else {
+                    if (aa.field_f.field_m != 0) {
+                      break L0;
+                    } else {
+                      if ((hm.a(64) ^ -1L) >= (aj.field_m + 10000L ^ -1L)) {
+                        break L0;
+                      } else {
                         aa.field_f.g(param0, 15514);
-                        statePc = 14;
-                        continue stateLoop;
+                        break L0;
+                      }
                     }
-                    case 5: {
-                        if (aa.field_f.field_m == 0) {
-                            statePc = 9;
-                        } else {
-                            statePc = 6;
-                        }
-                        continue stateLoop;
+                  }
+                } else {
+                  if (aa.field_f.field_m != 0) {
+                    break L0;
+                  } else {
+                    if ((hm.a(64) ^ -1L) >= (aj.field_m + 10000L ^ -1L)) {
+                      break L0;
+                    } else {
+                      aa.field_f.g(param0, 15514);
+                      break L0;
                     }
-                    case 6: {
-                        if (aa.field_f.field_m != 0) {
-                            statePc = 14;
-                        } else {
-                            statePc = 7;
-                        }
-                        continue stateLoop;
-                    }
-                    case 7: {
-                        if ((hm.a(64) ^ -1L) >= (aj.field_m + 10000L ^ -1L)) {
-                            statePc = 14;
-                        } else {
-                            statePc = 8;
-                        }
-                        continue stateLoop;
-                    }
-                    case 8: {
-                        aa.field_f.g(param0, 15514);
-                        statePc = 14;
-                        continue stateLoop;
-                    }
-                    case 9: {
-                        if ((hm.a(64) ^ -1L) >= (aj.field_m + 10000L ^ -1L)) {
-                            statePc = 14;
-                        } else {
-                            statePc = 10;
-                        }
-                        continue stateLoop;
-                    }
-                    case 10: {
-                        aa.field_f.g(param0, 15514);
-                        statePc = 14;
-                        continue stateLoop;
-                    }
-                    case 12: {
-                        aa.field_f.field_m = 0;
-                        return;
-                    }
-                    case 14: {
-                        if ((aa.field_f.field_m ^ -1) < -1) {
-                            statePc = 16;
-                        } else {
-                            statePc = 20;
-                        }
-                        continue stateLoop;
-                    }
-                    case 16: {
-                        try {
-                            sh.field_e.a(aa.field_f.field_m, -98, 0, aa.field_f.field_k);
-                            aj.field_m = hm.a(64);
-                            statePc = 19;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_16) {
-                            caughtException = stateCaught_16;
-                            statePc = 18;
-                            continue stateLoop;
-                        }
-                    }
-                    case 18: {
-                        var2 = (IOException) (Object) caughtException;
-                        na.a(true);
-                        statePc = 19;
-                        continue stateLoop;
-                    }
-                    case 19: {
-                        aa.field_f.field_m = 0;
-                        statePc = 20;
-                        continue stateLoop;
-                    }
-                    case 20: {
-                        if (param1 == 10000) {
-                            statePc = 22;
-                        } else {
-                            statePc = 21;
-                        }
-                        continue stateLoop;
-                    }
-                    case 21: {
-                        vg.a(true);
-                        return;
-                    }
-                    case 22: {
-                        return;
-                    }
-                    default: throw new IllegalStateException("invalid CFG state " + statePc);
+                  }
                 }
+              }
+              L1: {
+                if ((aa.field_f.field_m ^ -1) < -1) {
+                  try {
+                    L2: {
+                      sh.field_e.a(aa.field_f.field_m, -98, 0, aa.field_f.field_k);
+                      aj.field_m = hm.a(64);
+                      break L2;
+                    }
+                  } catch (java.io.IOException decompiledCaughtParameter0) {
+                    decompiledCaughtException = decompiledCaughtParameter0;
+                    L3: {
+                      var2 = (IOException) (Object) decompiledCaughtException;
+                      na.a(true);
+                      break L3;
+                    }
+                  }
+                  aa.field_f.field_m = 0;
+                  break L1;
+                } else {
+                  break L1;
+                }
+              }
+              if (param1 == 10000) {
+                return;
+              } else {
+                vg.a(true);
+                return;
+              }
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -571,13 +506,15 @@ final class vg {
         var2 = 0;
         L0: while (true) {
           if (param0 > var2) {
-            var3 = new lm();
-            ((vg) this).field_a[var2] = new lm();
+            lm dupTemp$2 = new lm();
+            var3 = dupTemp$2;
+            ((vg) this).field_a[var2] = dupTemp$2;
             var3.field_r = var3;
             var3.field_p = var3;
             var2++;
             continue L0;
           } else {
+            return;
           }
         }
     }

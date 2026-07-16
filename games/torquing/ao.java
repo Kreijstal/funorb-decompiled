@@ -16,8 +16,8 @@ abstract class ao {
             int discarded$0 = ao.b(1, 62);
         }
         param1 = param1 & 8191;
-        if (param1 > -4097) {
-            return -2049 <= param1 ? -bm.field_j[param1 + -2048] : bm.field_j[-param1 + 2048];
+        if ((param1 ^ -1) > -4097) {
+            return -2049 >= (param1 ^ -1) ? -bm.field_j[param1 + -2048] : bm.field_j[-param1 + 2048];
         }
         return (param1 ^ -1) <= -6145 ? bm.field_j[param1 + -6144] : -bm.field_j[6144 - param1];
     }

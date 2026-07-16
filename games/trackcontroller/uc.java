@@ -216,7 +216,7 @@ final class uc {
         int stackOut_22_0 = 0;
         int stackOut_21_0 = 0;
         L0: {
-          int discarded$1 = ml.f(24);
+          int discarded$2 = ml.f(24);
           ((uc) this).field_f = ml.f(16);
           ((uc) this).field_c = ml.f(24);
           ((uc) this).field_b = new int[((uc) this).field_c];
@@ -283,8 +283,9 @@ final class uc {
                     var3_int++;
                     continue L5;
                   } else {
+                    int incrementValue$3 = var2;
                     var2++;
-                    ((uc) this).field_b[var2] = var3_int;
+                    ((uc) this).field_b[incrementValue$3] = var3_int;
                     var5++;
                     continue L6;
                   }

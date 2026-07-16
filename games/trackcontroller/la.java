@@ -16,8 +16,9 @@ final class la extends be {
         int var5 = param0;
         ((la) this).field_r = ((la) this).field_r + param1;
         while (var4 < param1) {
+            int incrementValue$0 = var3;
             var3++;
-            var5 = var5 + ((pf.field_c[var4] & ((la) this).field_j[var3]) << -var4 + param1);
+            var5 = var5 + ((pf.field_c[var4] & ((la) this).field_j[incrementValue$0]) << -var4 + param1);
             param1 = param1 - var4;
             var4 = 8;
         }
@@ -43,8 +44,9 @@ final class la extends be {
         } else {
           L0: while (true) {
             if (var5 < param0) {
+              int fieldTemp$4 = ((la) this).field_k;
               ((la) this).field_k = ((la) this).field_k + 1;
-              param3[var5 + param2] = (byte)(((la) this).field_j[((la) this).field_k] + -((la) this).field_n.c(127));
+              param3[var5 + param2] = (byte)(((la) this).field_j[fieldTemp$4] + -((la) this).field_n.c(127));
               var5++;
               continue L0;
             } else {
@@ -90,8 +92,9 @@ final class la extends be {
     }
 
     final void c(int param0, int param1) {
+        int fieldTemp$0 = ((la) this).field_k;
         ((la) this).field_k = ((la) this).field_k + 1;
-        ((la) this).field_j[((la) this).field_k] = (byte)(((la) this).field_n.c(126) + param0);
+        ((la) this).field_j[fieldTemp$0] = (byte)(((la) this).field_n.c(126) + param0);
         if (param1 == 7) {
             return;
         }
@@ -102,11 +105,13 @@ final class la extends be {
         if (param0) {
             Object var3 = null;
             ((la) this).a(-123, false, 4, (byte[]) null);
+            int fieldTemp$0 = ((la) this).field_k;
             ((la) this).field_k = ((la) this).field_k + 1;
-            return ((la) this).field_j[((la) this).field_k] - ((la) this).field_n.c(125) & 255;
+            return ((la) this).field_j[fieldTemp$0] - ((la) this).field_n.c(125) & 255;
         }
+        int fieldTemp$1 = ((la) this).field_k;
         ((la) this).field_k = ((la) this).field_k + 1;
-        return ((la) this).field_j[((la) this).field_k] - ((la) this).field_n.c(125) & 255;
+        return ((la) this).field_j[fieldTemp$1] - ((la) this).field_n.c(125) & 255;
     }
 
     static {

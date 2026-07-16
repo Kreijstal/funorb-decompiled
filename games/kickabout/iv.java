@@ -331,10 +331,10 @@ class iv extends am {
         } else {
           L0: {
             var3 = param2.length();
-            if (-2 < var3) {
+            if (-2 < (var3 ^ -1)) {
               break L0;
             } else {
-              if (-13 < var3) {
+              if (-13 > (var3 ^ -1)) {
                 break L0;
               } else {
                 L1: {
@@ -370,17 +370,19 @@ class iv extends am {
                                     break L4;
                                   }
                                 }
-                                if (var5 >= 2) {
-                                  if (!param1) {
-                                    return lb.field_N;
+                                L5: {
+                                  if (var5 < 2) {
+                                    break L5;
                                   } else {
-                                    var6++;
-                                    continue L3;
+                                    if (!param1) {
+                                      return lb.field_N;
+                                    } else {
+                                      break L5;
+                                    }
                                   }
-                                } else {
-                                  var6++;
-                                  continue L3;
                                 }
+                                var6++;
+                                continue L3;
                               }
                             }
                           }

@@ -74,16 +74,16 @@ final class rj {
         if (param0 >= ((rj) this).field_c) {
           throw new IllegalArgumentException();
         } else {
-          if (((rj) this).field_c > param2) {
+          if ((((rj) this).field_c ^ -1) < (param2 ^ -1)) {
             ((rj) this).field_e = 0;
             ((rj) this).field_b = 0;
             if (-1 == (w.field_c ^ -1)) {
               L0: {
                 var4 = -3 % ((-4 - param1) / 32);
-                if (-1 == ((rj) this).field_h) {
+                if (-1 == (((rj) this).field_h ^ -1)) {
                   break L0;
                 } else {
-                  if (-1 == sh.field_c) {
+                  if (-1 == (sh.field_c ^ -1)) {
                     break L0;
                   } else {
                     L1: {
@@ -103,11 +103,13 @@ final class rj {
                 if (w.field_c != 0) {
                   break L2;
                 } else {
-                  if (sh.field_c != 0) {
+                  if ((sh.field_c ^ -1) != -1) {
                     break L2;
                   } else {
                     ((rj) this).field_h = 0;
-                    if (((rj) this).field_h == -1) {
+                    if ((((rj) this).field_h ^ -1) != -1) {
+                      return;
+                    } else {
                       L3: {
                         if (((rj) this).field_d) {
                           break L3;
@@ -119,7 +121,7 @@ final class rj {
                           }
                         }
                       }
-                      if (-1 <= param0) {
+                      if (-1 >= (param0 ^ -1)) {
                         if (((rj) this).field_g != param0) {
                           ((rj) this).field_g = param0;
                           ((rj) this).field_d = true;
@@ -130,20 +132,20 @@ final class rj {
                           return;
                         }
                       } else {
-                        if (!((rj) this).field_d) {
+                        if (((rj) this).field_d) {
+                          ((rj) this).field_g = -1;
                           return;
                         } else {
-                          ((rj) this).field_g = -1;
                           return;
                         }
                       }
-                    } else {
-                      return;
                     }
                   }
                 }
               }
-              if (((rj) this).field_h == -1) {
+              if ((((rj) this).field_h ^ -1) != -1) {
+                return;
+              } else {
                 L4: {
                   if (((rj) this).field_d) {
                     break L4;
@@ -155,7 +157,7 @@ final class rj {
                     }
                   }
                 }
-                if (-1 <= param0) {
+                if (-1 >= (param0 ^ -1)) {
                   if (((rj) this).field_g != param0) {
                     ((rj) this).field_g = param0;
                     ((rj) this).field_d = true;
@@ -166,15 +168,13 @@ final class rj {
                     return;
                   }
                 } else {
-                  if (!((rj) this).field_d) {
+                  if (((rj) this).field_d) {
+                    ((rj) this).field_g = -1;
                     return;
                   } else {
-                    ((rj) this).field_g = -1;
                     return;
                   }
                 }
-              } else {
-                return;
               }
             } else {
               ((rj) this).field_b = w.field_c;
@@ -198,7 +198,7 @@ final class rj {
                     if (w.field_c != 0) {
                       break L6;
                     } else {
-                      if (sh.field_c != 0) {
+                      if ((sh.field_c ^ -1) != -1) {
                         break L6;
                       } else {
                         ((rj) this).field_h = 0;
@@ -206,7 +206,9 @@ final class rj {
                       }
                     }
                   }
-                  if (((rj) this).field_h == -1) {
+                  if ((((rj) this).field_h ^ -1) != -1) {
+                    return;
+                  } else {
                     L7: {
                       if (((rj) this).field_d) {
                         break L7;
@@ -218,7 +220,7 @@ final class rj {
                         }
                       }
                     }
-                    if (-1 <= param0) {
+                    if (-1 >= (param0 ^ -1)) {
                       if (((rj) this).field_g != param0) {
                         ((rj) this).field_g = param0;
                         ((rj) this).field_d = true;
@@ -229,22 +231,20 @@ final class rj {
                         return;
                       }
                     } else {
-                      if (!((rj) this).field_d) {
+                      if (((rj) this).field_d) {
+                        ((rj) this).field_g = -1;
                         return;
                       } else {
-                        ((rj) this).field_g = -1;
                         return;
                       }
                     }
-                  } else {
-                    return;
                   }
                 } else {
                   L8: {
                     if (w.field_c != 0) {
                       break L8;
                     } else {
-                      if (sh.field_c != 0) {
+                      if ((sh.field_c ^ -1) != -1) {
                         break L8;
                       } else {
                         ((rj) this).field_h = 0;
@@ -252,8 +252,10 @@ final class rj {
                       }
                     }
                   }
-                  if (((rj) this).field_h == -1) {
-                    L9: {
+                  L9: {
+                    if ((((rj) this).field_h ^ -1) != -1) {
+                      break L9;
+                    } else {
                       L10: {
                         if (((rj) this).field_d) {
                           break L10;
@@ -265,7 +267,7 @@ final class rj {
                           }
                         }
                       }
-                      if (-1 <= param0) {
+                      if (-1 >= (param0 ^ -1)) {
                         if (((rj) this).field_g != param0) {
                           ((rj) this).field_g = param0;
                           ((rj) this).field_d = true;
@@ -284,17 +286,15 @@ final class rj {
                         }
                       }
                     }
-                    return;
-                  } else {
-                    return;
                   }
+                  return;
                 }
               } else {
                 L11: {
                   if (w.field_c != 0) {
                     break L11;
                   } else {
-                    if (sh.field_c != 0) {
+                    if ((sh.field_c ^ -1) != -1) {
                       break L11;
                     } else {
                       ((rj) this).field_h = 0;
@@ -302,8 +302,10 @@ final class rj {
                     }
                   }
                 }
-                if (((rj) this).field_h == -1) {
-                  L12: {
+                L12: {
+                  if ((((rj) this).field_h ^ -1) != -1) {
+                    break L12;
+                  } else {
                     L13: {
                       if (((rj) this).field_d) {
                         break L13;
@@ -315,7 +317,7 @@ final class rj {
                         }
                       }
                     }
-                    if (-1 <= param0) {
+                    if (-1 >= (param0 ^ -1)) {
                       if (((rj) this).field_g != param0) {
                         ((rj) this).field_g = param0;
                         ((rj) this).field_d = true;
@@ -334,10 +336,8 @@ final class rj {
                       }
                     }
                   }
-                  return;
-                } else {
-                  return;
                 }
+                return;
               }
             }
           } else {
@@ -410,89 +410,98 @@ final class rj {
                 break L1;
               } else {
                 if ((((rj) this).field_g ^ -1) < -1) {
-                  ((rj) this).field_d = false;
-                  ((rj) this).field_g = ((rj) this).field_g - 1;
-                  if (-1 == ((rj) this).field_h) {
-                    if (-100 == vk.field_r) {
-                      ((rj) this).field_g = ((rj) this).field_g + 1;
-                      ((rj) this).field_d = false;
-                      if (((rj) this).field_c <= ((rj) this).field_g) {
-                        ((rj) this).field_g = 0;
-                        return;
+                  L2: {
+                    ((rj) this).field_d = false;
+                    ((rj) this).field_g = ((rj) this).field_g - 1;
+                    if (-1 != (((rj) this).field_h ^ -1)) {
+                      break L2;
+                    } else {
+                      if (-100 == (vk.field_r ^ -1)) {
+                        ((rj) this).field_g = ((rj) this).field_g + 1;
+                        ((rj) this).field_d = false;
+                        if (((rj) this).field_c > ((rj) this).field_g) {
+                          break L2;
+                        } else {
+                          ((rj) this).field_g = 0;
+                          return;
+                        }
                       } else {
                         return;
                       }
-                    } else {
-                      return;
                     }
-                  } else {
-                    return;
                   }
+                  return;
                 } else {
                   ((rj) this).field_g = ((rj) this).field_c;
-                  ((rj) this).field_d = false;
-                  ((rj) this).field_g = ((rj) this).field_g - 1;
-                  if (-1 == ((rj) this).field_h) {
-                    if (-100 == vk.field_r) {
-                      ((rj) this).field_g = ((rj) this).field_g + 1;
-                      ((rj) this).field_d = false;
-                      if (((rj) this).field_c <= ((rj) this).field_g) {
-                        ((rj) this).field_g = 0;
-                        return;
+                  L3: {
+                    ((rj) this).field_d = false;
+                    ((rj) this).field_g = ((rj) this).field_g - 1;
+                    if (-1 != (((rj) this).field_h ^ -1)) {
+                      break L3;
+                    } else {
+                      if (-100 == (vk.field_r ^ -1)) {
+                        ((rj) this).field_g = ((rj) this).field_g + 1;
+                        ((rj) this).field_d = false;
+                        if (((rj) this).field_c > ((rj) this).field_g) {
+                          break L3;
+                        } else {
+                          ((rj) this).field_g = 0;
+                          return;
+                        }
                       } else {
                         return;
                       }
-                    } else {
-                      return;
                     }
-                  } else {
-                    return;
                   }
+                  return;
                 }
               }
             }
           }
-          if (-1 == ((rj) this).field_h) {
-            if (-100 == vk.field_r) {
-              ((rj) this).field_g = ((rj) this).field_g + 1;
-              ((rj) this).field_d = false;
-              if (((rj) this).field_c <= ((rj) this).field_g) {
-                ((rj) this).field_g = 0;
-                return;
+          L4: {
+            if (-1 != (((rj) this).field_h ^ -1)) {
+              break L4;
+            } else {
+              if (-100 == (vk.field_r ^ -1)) {
+                ((rj) this).field_g = ((rj) this).field_g + 1;
+                ((rj) this).field_d = false;
+                if (((rj) this).field_c > ((rj) this).field_g) {
+                  break L4;
+                } else {
+                  ((rj) this).field_g = 0;
+                  return;
+                }
               } else {
                 return;
               }
-            } else {
-              return;
             }
-          } else {
-            return;
           }
+          return;
         } else {
           var3 = null;
           rj.a((String) null, (String) null, true);
           if (0 == ((rj) this).field_h) {
-            if (-99 == vk.field_r) {
-              L2: {
+            if (-99 == (vk.field_r ^ -1)) {
+              L5: {
                 if ((((rj) this).field_g ^ -1) < -1) {
                   ((rj) this).field_d = false;
                   ((rj) this).field_g = ((rj) this).field_g - 1;
-                  break L2;
+                  break L5;
                 } else {
                   ((rj) this).field_g = ((rj) this).field_c;
                   ((rj) this).field_d = false;
                   ((rj) this).field_g = ((rj) this).field_g - 1;
-                  break L2;
+                  break L5;
                 }
               }
-              if (-1 == ((rj) this).field_h) {
-                if (-100 == vk.field_r) {
+              if (-1 == (((rj) this).field_h ^ -1)) {
+                if (-100 == (vk.field_r ^ -1)) {
                   ((rj) this).field_g = ((rj) this).field_g + 1;
                   ((rj) this).field_d = false;
-                  if (((rj) this).field_c <= ((rj) this).field_g) {
-                    ((rj) this).field_g = 0;
+                  if (((rj) this).field_c > ((rj) this).field_g) {
                     return;
                   } else {
+                    ((rj) this).field_g = 0;
                     return;
                   }
                 } else {
@@ -502,42 +511,42 @@ final class rj {
                 return;
               }
             } else {
-              L3: {
-                if (-1 != ((rj) this).field_h) {
-                  break L3;
+              L6: {
+                if (-1 != (((rj) this).field_h ^ -1)) {
+                  break L6;
                 } else {
                   if (-100 == (vk.field_r ^ -1)) {
                     ((rj) this).field_g = ((rj) this).field_g + 1;
                     ((rj) this).field_d = false;
                     if (((rj) this).field_c > ((rj) this).field_g) {
-                      break L3;
+                      break L6;
                     } else {
                       ((rj) this).field_g = 0;
-                      break L3;
+                      break L6;
                     }
                   } else {
-                    break L3;
+                    break L6;
                   }
                 }
               }
               return;
             }
           } else {
-            L4: {
-              if (-1 != ((rj) this).field_h) {
-                break L4;
+            L7: {
+              if (-1 != (((rj) this).field_h ^ -1)) {
+                break L7;
               } else {
-                if (-100 == vk.field_r) {
+                if (-100 == (vk.field_r ^ -1)) {
                   ((rj) this).field_g = ((rj) this).field_g + 1;
                   ((rj) this).field_d = false;
                   if (((rj) this).field_c > ((rj) this).field_g) {
-                    break L4;
+                    break L7;
                   } else {
                     ((rj) this).field_g = 0;
-                    break L4;
+                    break L7;
                   }
                 } else {
-                  break L4;
+                  break L7;
                 }
               }
             }
@@ -551,7 +560,7 @@ final class rj {
         ((rj) this).field_e = 0;
         ((rj) this).field_b = 0;
         if (0 == ((rj) this).field_h) {
-          if (-97 == vk.field_r) {
+          if (-97 == (vk.field_r ^ -1)) {
             if (-1 > (((rj) this).field_g ^ -1)) {
               L0: {
                 ((rj) this).field_d = false;
@@ -565,7 +574,7 @@ final class rj {
               }
               L1: {
                 var3 = -13 % ((param0 - 62) / 33);
-                if (((rj) this).field_h != 0) {
+                if ((((rj) this).field_h ^ -1) != -1) {
                   break L1;
                 } else {
                   if (vk.field_r != 97) {
@@ -576,91 +585,22 @@ final class rj {
                     if (((rj) this).field_c > ((rj) this).field_g) {
                       break L1;
                     } else {
-                      ((rj) this).field_g = 0;
-                      if (((rj) this).field_h == 0) {
-                        L2: {
-                          if ((vk.field_r ^ -1) == -99) {
-                            break L2;
-                          } else {
-                            if (vk.field_r == 99) {
-                              break L2;
+                      L2: {
+                        ((rj) this).field_g = 0;
+                        if ((((rj) this).field_h ^ -1) != -1) {
+                          break L2;
+                        } else {
+                          L3: {
+                            if ((vk.field_r ^ -1) == -99) {
+                              break L3;
                             } else {
-                              return;
+                              if (vk.field_r != 99) {
+                                break L2;
+                              } else {
+                                break L3;
+                              }
                             }
                           }
-                        }
-                        if ((((rj) this).field_g ^ -1) <= -1) {
-                          ((rj) this).field_d = false;
-                          return;
-                        } else {
-                          ((rj) this).field_g = param1;
-                          ((rj) this).field_d = false;
-                          return;
-                        }
-                      } else {
-                        return;
-                      }
-                    }
-                  }
-                }
-              }
-              if (((rj) this).field_h == 0) {
-                if ((vk.field_r ^ -1) == -99) {
-                  if ((((rj) this).field_g ^ -1) <= -1) {
-                    ((rj) this).field_d = false;
-                    return;
-                  } else {
-                    ((rj) this).field_g = param1;
-                    ((rj) this).field_d = false;
-                    return;
-                  }
-                } else {
-                  if (vk.field_r == 99) {
-                    if ((((rj) this).field_g ^ -1) <= -1) {
-                      ((rj) this).field_d = false;
-                      return;
-                    } else {
-                      ((rj) this).field_g = param1;
-                      ((rj) this).field_d = false;
-                      return;
-                    }
-                  } else {
-                    return;
-                  }
-                }
-              } else {
-                return;
-              }
-            } else {
-              ((rj) this).field_g = ((rj) this).field_c;
-              L3: {
-                ((rj) this).field_d = false;
-                ((rj) this).field_g = ((rj) this).field_g - 1;
-                if (-1 == (((rj) this).field_h ^ -1)) {
-                  ((rj) this).field_e = vk.field_r;
-                  break L3;
-                } else {
-                  break L3;
-                }
-              }
-              var3 = -13 % ((param0 - 62) / 33);
-              if (((rj) this).field_h == 0) {
-                if (vk.field_r == 97) {
-                  ((rj) this).field_g = ((rj) this).field_g + 1;
-                  ((rj) this).field_d = false;
-                  if (((rj) this).field_c > ((rj) this).field_g) {
-                    if (((rj) this).field_h == 0) {
-                      if ((vk.field_r ^ -1) == -99) {
-                        if ((((rj) this).field_g ^ -1) <= -1) {
-                          ((rj) this).field_d = false;
-                          return;
-                        } else {
-                          ((rj) this).field_g = param1;
-                          ((rj) this).field_d = false;
-                          return;
-                        }
-                      } else {
-                        if (vk.field_r == 99) {
                           if ((((rj) this).field_g ^ -1) <= -1) {
                             ((rj) this).field_d = false;
                             return;
@@ -669,74 +609,17 @@ final class rj {
                             ((rj) this).field_d = false;
                             return;
                           }
-                        } else {
-                          return;
                         }
                       }
-                    } else {
                       return;
                     }
-                  } else {
-                    ((rj) this).field_g = 0;
-                    if (((rj) this).field_h == 0) {
-                      if ((vk.field_r ^ -1) == -99) {
-                        if ((((rj) this).field_g ^ -1) <= -1) {
-                          ((rj) this).field_d = false;
-                          return;
-                        } else {
-                          ((rj) this).field_g = param1;
-                          ((rj) this).field_d = false;
-                          return;
-                        }
-                      } else {
-                        if (vk.field_r == 99) {
-                          if ((((rj) this).field_g ^ -1) <= -1) {
-                            ((rj) this).field_d = false;
-                            return;
-                          } else {
-                            ((rj) this).field_g = param1;
-                            ((rj) this).field_d = false;
-                            return;
-                          }
-                        } else {
-                          return;
-                        }
-                      }
-                    } else {
-                      return;
-                    }
-                  }
-                } else {
-                  if (((rj) this).field_h == 0) {
-                    if ((vk.field_r ^ -1) == -99) {
-                      if ((((rj) this).field_g ^ -1) <= -1) {
-                        ((rj) this).field_d = false;
-                        return;
-                      } else {
-                        ((rj) this).field_g = param1;
-                        ((rj) this).field_d = false;
-                        return;
-                      }
-                    } else {
-                      if (vk.field_r == 99) {
-                        if ((((rj) this).field_g ^ -1) <= -1) {
-                          ((rj) this).field_d = false;
-                          return;
-                        } else {
-                          ((rj) this).field_g = param1;
-                          ((rj) this).field_d = false;
-                          return;
-                        }
-                      } else {
-                        return;
-                      }
-                    }
-                  } else {
-                    return;
                   }
                 }
-              } else {
-                if (((rj) this).field_h == 0) {
+              }
+              L4: {
+                if ((((rj) this).field_h ^ -1) != -1) {
+                  break L4;
+                } else {
                   if ((vk.field_r ^ -1) == -99) {
                     if ((((rj) this).field_g ^ -1) <= -1) {
                       ((rj) this).field_d = false;
@@ -747,7 +630,9 @@ final class rj {
                       return;
                     }
                   } else {
-                    if (vk.field_r == 99) {
+                    if (vk.field_r != 99) {
+                      break L4;
+                    } else {
                       if ((((rj) this).field_g ^ -1) <= -1) {
                         ((rj) this).field_d = false;
                         return;
@@ -756,39 +641,62 @@ final class rj {
                         ((rj) this).field_d = false;
                         return;
                       }
-                    } else {
-                      return;
                     }
                   }
-                } else {
-                  return;
                 }
               }
-            }
-          } else {
-            L4: {
-              if (-1 == (((rj) this).field_h ^ -1)) {
-                ((rj) this).field_e = vk.field_r;
-                break L4;
-              } else {
-                break L4;
-              }
-            }
-            L5: {
-              var3 = -13 % ((param0 - 62) / 33);
-              if (((rj) this).field_h != 0) {
-                break L5;
-              } else {
-                if (vk.field_r != 97) {
+              return;
+            } else {
+              ((rj) this).field_g = ((rj) this).field_c;
+              L5: {
+                ((rj) this).field_d = false;
+                ((rj) this).field_g = ((rj) this).field_g - 1;
+                if (-1 == (((rj) this).field_h ^ -1)) {
+                  ((rj) this).field_e = vk.field_r;
                   break L5;
                 } else {
+                  break L5;
+                }
+              }
+              var3 = -13 % ((param0 - 62) / 33);
+              if ((((rj) this).field_h ^ -1) == -1) {
+                if (vk.field_r == 97) {
                   ((rj) this).field_g = ((rj) this).field_g + 1;
                   ((rj) this).field_d = false;
                   if (((rj) this).field_c > ((rj) this).field_g) {
-                    break L5;
+                    L6: {
+                      if ((((rj) this).field_h ^ -1) != -1) {
+                        break L6;
+                      } else {
+                        if ((vk.field_r ^ -1) == -99) {
+                          if ((((rj) this).field_g ^ -1) <= -1) {
+                            ((rj) this).field_d = false;
+                            return;
+                          } else {
+                            ((rj) this).field_g = param1;
+                            ((rj) this).field_d = false;
+                            return;
+                          }
+                        } else {
+                          if (vk.field_r != 99) {
+                            break L6;
+                          } else {
+                            if ((((rj) this).field_g ^ -1) <= -1) {
+                              ((rj) this).field_d = false;
+                              return;
+                            } else {
+                              ((rj) this).field_g = param1;
+                              ((rj) this).field_d = false;
+                              return;
+                            }
+                          }
+                        }
+                      }
+                    }
+                    return;
                   } else {
                     ((rj) this).field_g = 0;
-                    if (((rj) this).field_h == 0) {
+                    if ((((rj) this).field_h ^ -1) == -1) {
                       if ((vk.field_r ^ -1) == -99) {
                         if ((((rj) this).field_g ^ -1) <= -1) {
                           ((rj) this).field_d = false;
@@ -816,10 +724,216 @@ final class rj {
                       return;
                     }
                   }
+                } else {
+                  L7: {
+                    if ((((rj) this).field_h ^ -1) != -1) {
+                      break L7;
+                    } else {
+                      if ((vk.field_r ^ -1) == -99) {
+                        if ((((rj) this).field_g ^ -1) <= -1) {
+                          ((rj) this).field_d = false;
+                          return;
+                        } else {
+                          ((rj) this).field_g = param1;
+                          ((rj) this).field_d = false;
+                          return;
+                        }
+                      } else {
+                        if (vk.field_r != 99) {
+                          break L7;
+                        } else {
+                          if ((((rj) this).field_g ^ -1) <= -1) {
+                            ((rj) this).field_d = false;
+                            return;
+                          } else {
+                            ((rj) this).field_g = param1;
+                            ((rj) this).field_d = false;
+                            return;
+                          }
+                        }
+                      }
+                    }
+                  }
+                  return;
+                }
+              } else {
+                L8: {
+                  if ((((rj) this).field_h ^ -1) != -1) {
+                    break L8;
+                  } else {
+                    if ((vk.field_r ^ -1) == -99) {
+                      if ((((rj) this).field_g ^ -1) <= -1) {
+                        ((rj) this).field_d = false;
+                        return;
+                      } else {
+                        ((rj) this).field_g = param1;
+                        ((rj) this).field_d = false;
+                        return;
+                      }
+                    } else {
+                      if (vk.field_r != 99) {
+                        break L8;
+                      } else {
+                        if ((((rj) this).field_g ^ -1) <= -1) {
+                          ((rj) this).field_d = false;
+                          return;
+                        } else {
+                          ((rj) this).field_g = param1;
+                          ((rj) this).field_d = false;
+                          return;
+                        }
+                      }
+                    }
+                  }
+                }
+                return;
+              }
+            }
+          } else {
+            L9: {
+              if (-1 == (((rj) this).field_h ^ -1)) {
+                ((rj) this).field_e = vk.field_r;
+                break L9;
+              } else {
+                break L9;
+              }
+            }
+            L10: {
+              var3 = -13 % ((param0 - 62) / 33);
+              if ((((rj) this).field_h ^ -1) != -1) {
+                break L10;
+              } else {
+                if (vk.field_r != 97) {
+                  break L10;
+                } else {
+                  ((rj) this).field_g = ((rj) this).field_g + 1;
+                  ((rj) this).field_d = false;
+                  if (((rj) this).field_c > ((rj) this).field_g) {
+                    break L10;
+                  } else {
+                    L11: {
+                      ((rj) this).field_g = 0;
+                      if ((((rj) this).field_h ^ -1) != -1) {
+                        break L11;
+                      } else {
+                        if ((vk.field_r ^ -1) == -99) {
+                          if ((((rj) this).field_g ^ -1) <= -1) {
+                            ((rj) this).field_d = false;
+                            return;
+                          } else {
+                            ((rj) this).field_g = param1;
+                            ((rj) this).field_d = false;
+                            return;
+                          }
+                        } else {
+                          if (vk.field_r != 99) {
+                            break L11;
+                          } else {
+                            if ((((rj) this).field_g ^ -1) <= -1) {
+                              ((rj) this).field_d = false;
+                              return;
+                            } else {
+                              ((rj) this).field_g = param1;
+                              ((rj) this).field_d = false;
+                              return;
+                            }
+                          }
+                        }
+                      }
+                    }
+                    return;
+                  }
                 }
               }
             }
-            if (((rj) this).field_h == 0) {
+            L12: {
+              if ((((rj) this).field_h ^ -1) != -1) {
+                break L12;
+              } else {
+                if ((vk.field_r ^ -1) == -99) {
+                  if ((((rj) this).field_g ^ -1) <= -1) {
+                    ((rj) this).field_d = false;
+                    return;
+                  } else {
+                    ((rj) this).field_g = param1;
+                    ((rj) this).field_d = false;
+                    return;
+                  }
+                } else {
+                  if (vk.field_r != 99) {
+                    break L12;
+                  } else {
+                    if ((((rj) this).field_g ^ -1) <= -1) {
+                      ((rj) this).field_d = false;
+                      return;
+                    } else {
+                      ((rj) this).field_g = param1;
+                      ((rj) this).field_d = false;
+                      return;
+                    }
+                  }
+                }
+              }
+            }
+            return;
+          }
+        } else {
+          L13: {
+            if (-1 == (((rj) this).field_h ^ -1)) {
+              ((rj) this).field_e = vk.field_r;
+              break L13;
+            } else {
+              break L13;
+            }
+          }
+          L14: {
+            var3 = -13 % ((param0 - 62) / 33);
+            if ((((rj) this).field_h ^ -1) != -1) {
+              break L14;
+            } else {
+              if (vk.field_r != 97) {
+                break L14;
+              } else {
+                ((rj) this).field_g = ((rj) this).field_g + 1;
+                ((rj) this).field_d = false;
+                if (((rj) this).field_c > ((rj) this).field_g) {
+                  break L14;
+                } else {
+                  L15: {
+                    ((rj) this).field_g = 0;
+                    if ((((rj) this).field_h ^ -1) != -1) {
+                      break L15;
+                    } else {
+                      L16: {
+                        if ((vk.field_r ^ -1) == -99) {
+                          break L16;
+                        } else {
+                          if (vk.field_r != 99) {
+                            break L15;
+                          } else {
+                            break L16;
+                          }
+                        }
+                      }
+                      if ((((rj) this).field_g ^ -1) <= -1) {
+                        ((rj) this).field_d = false;
+                        return;
+                      } else {
+                        ((rj) this).field_g = param1;
+                        ((rj) this).field_d = false;
+                        return;
+                      }
+                    }
+                  }
+                  return;
+                }
+              }
+            }
+          }
+          L17: {
+            if ((((rj) this).field_h ^ -1) != -1) {
+              break L17;
+            } else {
               if ((vk.field_r ^ -1) == -99) {
                 if ((((rj) this).field_g ^ -1) <= -1) {
                   ((rj) this).field_d = false;
@@ -830,7 +944,9 @@ final class rj {
                   return;
                 }
               } else {
-                if (vk.field_r == 99) {
+                if (vk.field_r != 99) {
+                  break L17;
+                } else {
                   if ((((rj) this).field_g ^ -1) <= -1) {
                     ((rj) this).field_d = false;
                     return;
@@ -839,91 +955,11 @@ final class rj {
                     ((rj) this).field_d = false;
                     return;
                   }
-                } else {
-                  return;
-                }
-              }
-            } else {
-              return;
-            }
-          }
-        } else {
-          L6: {
-            if (-1 == (((rj) this).field_h ^ -1)) {
-              ((rj) this).field_e = vk.field_r;
-              break L6;
-            } else {
-              break L6;
-            }
-          }
-          L7: {
-            var3 = -13 % ((param0 - 62) / 33);
-            if (((rj) this).field_h != 0) {
-              break L7;
-            } else {
-              if (vk.field_r != 97) {
-                break L7;
-              } else {
-                ((rj) this).field_g = ((rj) this).field_g + 1;
-                ((rj) this).field_d = false;
-                if (((rj) this).field_c > ((rj) this).field_g) {
-                  break L7;
-                } else {
-                  ((rj) this).field_g = 0;
-                  if (((rj) this).field_h == 0) {
-                    L8: {
-                      if ((vk.field_r ^ -1) == -99) {
-                        break L8;
-                      } else {
-                        if (vk.field_r == 99) {
-                          break L8;
-                        } else {
-                          return;
-                        }
-                      }
-                    }
-                    if ((((rj) this).field_g ^ -1) <= -1) {
-                      ((rj) this).field_d = false;
-                      return;
-                    } else {
-                      ((rj) this).field_g = param1;
-                      ((rj) this).field_d = false;
-                      return;
-                    }
-                  } else {
-                    return;
-                  }
                 }
               }
             }
           }
-          if (((rj) this).field_h == 0) {
-            if ((vk.field_r ^ -1) == -99) {
-              if (((rj) this).field_g <= -1) {
-                ((rj) this).field_d = false;
-                return;
-              } else {
-                ((rj) this).field_g = param1;
-                ((rj) this).field_d = false;
-                return;
-              }
-            } else {
-              if (vk.field_r == 99) {
-                if ((((rj) this).field_g ^ -1) <= -1) {
-                  ((rj) this).field_d = false;
-                  return;
-                } else {
-                  ((rj) this).field_g = param1;
-                  ((rj) this).field_d = false;
-                  return;
-                }
-              } else {
-                return;
-              }
-            }
-          } else {
-            return;
-          }
+          return;
         }
     }
 

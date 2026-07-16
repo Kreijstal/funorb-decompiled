@@ -23,30 +23,51 @@ final class gh {
     }
 
     final static void a(int param0, int param1, int param2, oh[] param3, int param4) {
-        int var10 = TetraLink.field_J;
-        if (param3 != null) {
-            // ifle L16
-        } else {
-            return;
+        int var5 = 0;
+        int var6 = 0;
+        int var7 = 0;
+        int var8 = 0;
+        int var9 = 0;
+        int var10 = 0;
+        L0: {
+          var10 = TetraLink.field_J;
+          if (param3 == null) {
+            break L0;
+          } else {
+            if (param0 <= 0) {
+              break L0;
+            } else {
+              var5 = param3[0].field_t;
+              var6 = param3[2].field_t;
+              var7 = param3[1].field_t;
+              param3[0].c(param1, param2);
+              param3[2].c(param1 + param0 + -var6, param2);
+              ra.a(lj.field_a);
+              ra.b(var5 + param1, param2, -var6 + (param0 + param1), param2 - -param3[1].field_F);
+              var8 = var5 + param1;
+              var9 = param1 - (-param0 - -var6);
+              param1 = var8;
+              L1: while (true) {
+                if (var9 <= param1) {
+                  L2: {
+                    if (param4 <= -123) {
+                      break L2;
+                    } else {
+                      field_b = null;
+                      break L2;
+                    }
+                  }
+                  ra.b(lj.field_a);
+                  return;
+                } else {
+                  param3[1].c(param1, param2);
+                  param1 = param1 + var7;
+                  continue L1;
+                }
+              }
+            }
+          }
         }
-        int var5 = param3[0].field_t;
-        int var6 = param3[2].field_t;
-        int var7 = param3[1].field_t;
-        param3[0].c(param1, param2);
-        param3[2].c(param1 + param0 + -var6, param2);
-        ra.a(lj.field_a);
-        ra.b(var5 + param1, param2, -var6 + (param0 + param1), param2 - -param3[1].field_F);
-        int var8 = var5 + param1;
-        int var9 = param1 - (-param0 - -var6);
-        param1 = var8;
-        while (var9 > param1) {
-            param3[1].c(param1, param2);
-            param1 = param1 + var7;
-        }
-        if (param4 > -123) {
-            field_b = null;
-        }
-        ra.b(lj.field_a);
     }
 
     final static void a(byte param0, boolean param1) {
@@ -61,67 +82,44 @@ final class gh {
     }
 
     final static String a(CharSequence[] param0, int param1, int param2, int param3) {
-        CharSequence var4_ref = null;
-        int var4 = 0;
-        int var5 = 0;
+        CharSequence var10 = null;
+        CharSequence var4_ref_CharSequence = null;
         int var6_int = 0;
-        StringBuilder var6 = null;
         CharSequence var7_ref_CharSequence = null;
         int var7 = 0;
         CharSequence var8 = null;
-        int var9 = 0;
-        CharSequence var10 = null;
-        var9 = TetraLink.field_J;
-        if (-1 == param2) {
-          return "";
-        } else {
-          if (param3 == param2) {
-            var10 = param0[param1];
-            var4_ref = var10;
-            if (var4_ref != null) {
-              return ((Object) (Object) var10).toString();
-            } else {
-              return "null";
-            }
-          } else {
-            var4 = param1 + param2;
-            var5 = 0;
-            var6_int = param1;
-            L0: while (true) {
-              if (var4 <= var6_int) {
-                var6 = new StringBuilder(var5);
-                var7 = param1;
-                L1: while (true) {
-                  if (var7 >= var4) {
-                    return var6.toString();
-                  } else {
-                    var8 = param0[var7];
-                    if (var8 == null) {
-                      StringBuilder discarded$2 = var6.append("null");
-                      var7++;
-                      continue L1;
-                    } else {
-                      StringBuilder discarded$3 = var6.append(var8);
-                      var7++;
-                      continue L1;
-                    }
-                  }
-                }
-              } else {
-                var7_ref_CharSequence = param0[var6_int];
-                if (var7_ref_CharSequence == null) {
-                  var5 += 4;
-                  var6_int++;
-                  continue L0;
-                } else {
-                  var5 = var5 + var7_ref_CharSequence.length();
-                  var6_int++;
-                  continue L0;
-                }
-              }
-            }
-          }
+        int var9 = TetraLink.field_J;
+        if (!(-1 != (param2 ^ -1))) {
+            return "";
         }
+        if (!(param3 != (param2 ^ -1))) {
+            var10 = param0[param1];
+            var4_ref_CharSequence = var10;
+            if (var4_ref_CharSequence == null) {
+                return "null";
+            }
+            return ((Object) (Object) var10).toString();
+        }
+        int var4 = param1 + param2;
+        int var5 = 0;
+        for (var6_int = param1; (var4 ^ -1) < (var6_int ^ -1); var6_int++) {
+            var7_ref_CharSequence = param0[var6_int];
+            if (var7_ref_CharSequence != null) {
+                var5 = var5 + var7_ref_CharSequence.length();
+            } else {
+                var5 += 4;
+            }
+        }
+        StringBuilder var6 = new StringBuilder(var5);
+        for (var7 = param1; (var7 ^ -1) > (var4 ^ -1); var7++) {
+            var8 = param0[var7];
+            if (var8 != null) {
+                StringBuilder discarded$1 = var6.append(var8);
+            } else {
+                StringBuilder discarded$2 = var6.append("null");
+            }
+        }
+        return var6.toString();
     }
 
     static {

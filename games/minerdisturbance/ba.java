@@ -42,44 +42,35 @@ final class ba extends kn implements be, sh {
     }
 
     public final void a(tn param0, int param1, int param2, int param3) {
-        int var6 = 0;
-        var6 = MinerDisturbance.field_ab;
-        if (param2 == 12278) {
-          if (-1 != param3) {
+        int var6 = MinerDisturbance.field_ab;
+        if (param2 != 12278) {
+            String discarded$1 = this.a(true);
+            if (-1 == (param3 ^ -1)) {
+                qd.a(5, "terms.ws");
+                return;
+            }
             if ((param3 ^ -1) != -2) {
-              if (2 != param3) {
-                return;
-              } else {
+                if (2 != param3) {
+                    return;
+                }
                 qd.a(5, "conduct.ws");
                 return;
-              }
-            } else {
-              qd.a(5, "privacy.ws");
-              return;
             }
-          } else {
-            qd.a(5, "terms.ws");
+            qd.a(5, "privacy.ws");
             return;
-          }
-        } else {
-          String discarded$3 = this.a(true);
-          if (-1 != (param3 ^ -1)) {
-            if (param3 != -2) {
-              if (2 != param3) {
-                return;
-              } else {
-                qd.a(5, "conduct.ws");
-                return;
-              }
-            } else {
-              qd.a(5, "privacy.ws");
-              return;
-            }
-          } else {
-            qd.a(5, "terms.ws");
-            return;
-          }
         }
+        if (-1 == (param3 ^ -1)) {
+            qd.a(5, "terms.ws");
+            return;
+        }
+        if ((param3 ^ -1) != -2) {
+            if (2 != param3) {
+                return;
+            }
+            qd.a(5, "conduct.ws");
+            return;
+        }
+        qd.a(5, "privacy.ws");
     }
 
     public static void a(byte param0) {

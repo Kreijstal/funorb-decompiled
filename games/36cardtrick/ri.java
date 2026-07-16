@@ -60,7 +60,7 @@ final class ri {
         field_b = null;
         field_d = null;
         if (param0 != -2) {
-            field_b = (String) null;
+            field_b = null;
         }
         field_c = null;
         field_a = null;

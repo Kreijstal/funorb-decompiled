@@ -63,39 +63,45 @@ final class fn extends vh {
     }
 
     final boolean b(byte param0, boolean param1) {
-        int stackIn_6_0 = 0;
-        int stackIn_10_0 = 0;
-        int stackOut_9_0 = 0;
-        int stackOut_8_0 = 0;
-        int stackOut_4_0 = 0;
+        int stackIn_7_0 = 0;
+        int stackIn_12_0 = 0;
+        int stackOut_11_0 = 0;
+        int stackOut_10_0 = 0;
+        int stackOut_6_0 = 0;
+        int stackOut_5_0 = 0;
         if (param0 == -52) {
-          ((fn) this).a(true, false);
-          if (-1 == ne.field_s) {
-            if (-1 != ((fn) this).field_Pb.field_R) {
-              return true;
-            } else {
-              return false;
-            }
-          } else {
-            if (-1 != ((fn) this).field_R) {
-              L0: {
-                if (-1 == ((fn) this).field_Pb.field_R) {
-                  stackOut_9_0 = 0;
-                  stackIn_10_0 = stackOut_9_0;
-                  break L0;
-                } else {
-                  stackOut_8_0 = 1;
-                  stackIn_10_0 = stackOut_8_0;
-                  break L0;
-                }
+          L0: {
+            ((fn) this).a(true, false);
+            if (-1 == (ne.field_s ^ -1)) {
+              if (-1 == (((fn) this).field_Pb.field_R ^ -1)) {
+                stackOut_11_0 = 0;
+                stackIn_12_0 = stackOut_11_0;
+                break L0;
+              } else {
+                return true;
               }
-              return stackIn_10_0 != 0;
             } else {
-              stackOut_4_0 = 1;
-              stackIn_6_0 = stackOut_4_0;
-              return stackIn_6_0 != 0;
+              if (-1 == (((fn) this).field_R ^ -1)) {
+                stackOut_10_0 = 1;
+                stackIn_12_0 = stackOut_10_0;
+                break L0;
+              } else {
+                L1: {
+                  if (-1 == (((fn) this).field_Pb.field_R ^ -1)) {
+                    stackOut_6_0 = 0;
+                    stackIn_7_0 = stackOut_6_0;
+                    break L1;
+                  } else {
+                    stackOut_5_0 = 1;
+                    stackIn_7_0 = stackOut_5_0;
+                    break L1;
+                  }
+                }
+                return stackIn_7_0 != 0;
+              }
             }
           }
+          return stackIn_12_0 != 0;
         } else {
           return true;
         }

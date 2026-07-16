@@ -64,7 +64,7 @@ final class wk {
 
     final static void a(int param0, boolean param1, byte param2) {
         pf var5 = null;
-        String var6_ref = null;
+        String var6_ref_String = null;
         int var6 = 0;
         int var7 = 0;
         ud var3 = ae.a(param1, param0, -13047);
@@ -72,8 +72,8 @@ final class wk {
         if (var3 != null) {
             hd.field_s.a(19, false);
             var5 = hd.field_s;
-            var6_ref = re.field_S;
-            var5.field_j.a(var6_ref, 1, 5);
+            var6_ref_String = re.field_S;
+            var5.field_j.a(var6_ref_String, 1, 5);
             var5 = hd.field_s;
             var6 = ci.field_B;
             var7 = li.field_o;

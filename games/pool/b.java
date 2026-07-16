@@ -449,16 +449,27 @@ final class b extends ob {
         int var5 = 0;
         var5 = Pool.field_O;
         var4 = ((b) this).field_h[param2];
-        if (-26 != var4) {
-          if (-27 == var4) {
+        if (-26 != (var4 ^ -1)) {
+          if (-27 != (var4 ^ -1)) {
+            L0: {
+              super.b(param0 ^ 0, param1, param2);
+              if (param0 == -16470) {
+                break L0;
+              } else {
+                field_H = null;
+                break L0;
+              }
+            }
+            return;
+          } else {
             if (((b) this).field_B.b((byte) 127)) {
               if (((b) this).e(param2, -109)) {
                 ((b) this).field_I = ((b) this).field_I + 1;
                 if (!((b) this).e(param2, -111)) {
-                  if (param1) {
+                  if (!param1) {
+                    ((b) this).field_B.field_h = 1;
                     return;
                   } else {
-                    ((b) this).field_B.field_h = 1;
                     return;
                   }
                 } else {
@@ -470,32 +481,24 @@ final class b extends ob {
             } else {
               return;
             }
-          } else {
-            L0: {
-              super.b(param0 ^ 0, param1, param2);
-              if (param0 == -16470) {
-                break L0;
-              } else {
-                field_H = null;
-                break L0;
-              }
-            }
-            return;
           }
         } else {
           if (((b) this).field_B.b((byte) 66)) {
             if (((b) this).e(param2, -92)) {
-              ((b) this).field_I = ((b) this).field_I - 1;
-              if (!((b) this).e(param2, -91)) {
-                if (param1) {
-                  return;
+              L1: {
+                ((b) this).field_I = ((b) this).field_I - 1;
+                if (((b) this).e(param2, -91)) {
+                  break L1;
                 } else {
-                  ((b) this).field_B.field_h = 1;
-                  return;
+                  if (!param1) {
+                    ((b) this).field_B.field_h = 1;
+                    break L1;
+                  } else {
+                    return;
+                  }
                 }
-              } else {
-                return;
               }
+              return;
             } else {
               return;
             }
@@ -516,35 +519,28 @@ final class b extends ob {
 
     final boolean e(int param0, int param1) {
         int var3 = 0;
-        if (-1 != param0) {
-          if (2 == param0) {
-            if (rb.field_n.length - 1 != ((b) this).field_I) {
-              var3 = -55 % ((param1 - -42) / 49);
-              return true;
-            } else {
-              return false;
+        if (-1 == (param0 ^ -1)) {
+            if (-1 != (((b) this).field_I ^ -1)) {
+                if (2 != param0) {
+                    var3 = -55 % ((param1 - -42) / 49);
+                    return true;
+                }
+                if ((rb.field_n.length - 1 ^ -1) != (((b) this).field_I ^ -1)) {
+                    var3 = -55 % ((param1 - -42) / 49);
+                    return true;
+                }
             }
-          } else {
+            return false;
+        }
+        if (2 != param0) {
             var3 = -55 % ((param1 - -42) / 49);
             return true;
-          }
-        } else {
-          if (-1 != ((b) this).field_I) {
-            if (2 == param0) {
-              if (rb.field_n.length - 1 != ((b) this).field_I) {
-                var3 = -55 % ((param1 - -42) / 49);
-                return true;
-              } else {
-                return false;
-              }
-            } else {
-              var3 = -55 % ((param1 - -42) / 49);
-              return true;
-            }
-          } else {
-            return false;
-          }
         }
+        if ((rb.field_n.length - 1 ^ -1) != (((b) this).field_I ^ -1)) {
+            var3 = -55 % ((param1 - -42) / 49);
+            return true;
+        }
+        return false;
     }
 
     final int a(boolean param0, int param1) {

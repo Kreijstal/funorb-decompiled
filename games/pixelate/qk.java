@@ -36,8 +36,9 @@ final class qk {
 
     final void c(int param0) {
         L0: {
+          int fieldTemp$2 = ((qk) this).field_f;
           ((qk) this).field_f = ((qk) this).field_f + 1;
-          if (((qk) this).field_f > 30) {
+          if (fieldTemp$2 > 30) {
             ((qk) this).field_f = 0;
             ((qk) this).field_a = ((qk) this).field_a + 1;
             break L0;

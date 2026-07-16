@@ -16,8 +16,9 @@ final class qg {
 
     final int a(int param0) {
         if (((qg) this).field_k >= ((qg) this).field_g) {
+            int fieldTemp$0 = ((qg) this).field_f;
             ((qg) this).field_f = ((qg) this).field_f + 1;
-            ((qg) this).field_a = ((qg) this).field_b[((qg) this).field_f] << 15;
+            ((qg) this).field_a = ((qg) this).field_b[fieldTemp$0] << 15;
             if (((qg) this).field_f >= ((qg) this).field_e) {
                 ((qg) this).field_f = ((qg) this).field_e - 1;
             }

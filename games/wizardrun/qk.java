@@ -39,15 +39,16 @@ final class qk {
           var8 = wizardrun.field_H;
           ((qk) this).field_o[((qk) this).field_a] = (byte)sd.a((int) ((qk) this).field_o[((qk) this).field_a], 128 >>> kl.b(7, ((qk) this).field_p));
           ((qk) this).field_a = ((qk) this).field_a + 1;
-          if (((qk) this).field_a < -33) {
+          if ((((qk) this).field_a ^ -1) < -33) {
             L1: while (true) {
-              if (-65 <= ((qk) this).field_a) {
+              if (-65 >= (((qk) this).field_a ^ -1)) {
                 this.b(-42);
                 ((qk) this).field_a = 0;
                 break L0;
               } else {
+                int fieldTemp$2 = ((qk) this).field_a;
                 ((qk) this).field_a = ((qk) this).field_a + 1;
-                ((qk) this).field_o[((qk) this).field_a] = (byte) 0;
+                ((qk) this).field_o[fieldTemp$2] = (byte) 0;
                 continue L1;
               }
             }
@@ -81,8 +82,9 @@ final class qk {
               }
             }
           } else {
+            int fieldTemp$3 = ((qk) this).field_a;
             ((qk) this).field_a = ((qk) this).field_a + 1;
-            ((qk) this).field_o[((qk) this).field_a] = (byte) 0;
+            ((qk) this).field_o[fieldTemp$3] = (byte) 0;
             continue L2;
           }
         }
@@ -136,7 +138,7 @@ final class qk {
                             ((qk) this).field_n[0] = da.a(((qk) this).field_n[0], le.field_f[var2]);
                             var3 = 0;
                             L6: while (true) {
-                              if (-9 >= var3) {
+                              if (-9 >= (var3 ^ -1)) {
                                 var3 = 0;
                                 L7: while (true) {
                                   if (-9 >= (var3 ^ -1)) {
@@ -154,7 +156,7 @@ final class qk {
                                 var4 = var7;
                                 var5 = 56;
                                 L8: while (true) {
-                                  if (-9 <= var7) {
+                                  if (-9 >= (var7 ^ -1)) {
                                     var3++;
                                     continue L6;
                                   } else {

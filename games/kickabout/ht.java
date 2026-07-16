@@ -1270,8 +1270,9 @@ final class ht implements Iterable {
         ((ht) this).field_e = new gn[param0];
         ((ht) this).field_d = param0;
         for (var2 = 0; param0 > var2; var2++) {
-            var3 = new gn();
-            ((ht) this).field_e[var2] = new gn();
+            gn dupTemp$0 = new gn();
+            var3 = dupTemp$0;
+            ((ht) this).field_e[var2] = dupTemp$0;
             var3.field_d = var3;
             var3.field_b = var3;
         }

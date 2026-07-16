@@ -46,7 +46,6 @@ final class rj {
         int var5 = 0;
         long var6 = 0L;
         to var8 = null;
-        to var8_ref = null;
         int var10 = 0;
         ed var12 = null;
         to var13 = null;
@@ -68,8 +67,8 @@ final class rj {
               } else {
                 L0: {
                   var15 = var14.a();
-                  var8_ref = var15;
-                  ((rj) this).field_c.a((gn) (Object) var8_ref, -95, var6);
+                  var8 = var15;
+                  ((rj) this).field_c.a((gn) (Object) var8, -95, var6);
                   if (param1 != null) {
                     param1[0] = param1[0] - var15.field_i.length;
                     break L0;
@@ -77,7 +76,7 @@ final class rj {
                     break L0;
                   }
                 }
-                return var8_ref;
+                return var8;
               }
             } else {
               return null;
@@ -90,8 +89,8 @@ final class rj {
             } else {
               L1: {
                 var13 = var12.a();
-                var8_ref = var13;
-                ((rj) this).field_c.a((gn) (Object) var8_ref, -95, var6);
+                var8 = var13;
+                ((rj) this).field_c.a((gn) (Object) var8, -95, var6);
                 if (param1 != null) {
                   param1[0] = param1[0] - var13.field_i.length;
                   break L1;
@@ -99,7 +98,7 @@ final class rj {
                   break L1;
                 }
               }
-              return var8_ref;
+              return var8;
             }
           }
         }
@@ -109,25 +108,23 @@ final class rj {
         int var5 = 0;
         long var6 = 0L;
         to var8 = null;
-        to var8_ref = null;
         tg var9 = null;
-        tg var9_ref = null;
         var5 = (65524 & param2 << 1213174116 | param2 >>> 632088396) ^ param3;
         var5 = var5 | param2 << -1034093232;
         var6 = (long)var5 ^ 4294967296L;
         var8 = (to) (Object) ((rj) this).field_c.a(true, var6);
         if (param1 == 0) {
-          if (var8_ref != null) {
-            return var8_ref;
+          if (var8 != null) {
+            return var8;
           } else {
             if (param0 != null) {
               if (-1 > (param0[0] ^ -1)) {
                 L0: {
                   var9 = (tg) (Object) ((rj) this).field_f.a(true, var6);
                   if (var9 == null) {
-                    var9_ref = tg.a(((rj) this).field_d, param2, param3);
-                    if (var9_ref != null) {
-                      ((rj) this).field_f.a((gn) (Object) var9_ref, 79, var6);
+                    var9 = tg.a(((rj) this).field_d, param2, param3);
+                    if (var9 != null) {
+                      ((rj) this).field_f.a((gn) (Object) var9, 79, var6);
                       break L0;
                     } else {
                       return null;
@@ -136,13 +133,13 @@ final class rj {
                     break L0;
                   }
                 }
-                var8_ref = var9_ref.a(param0);
-                if (var8_ref == null) {
+                var8 = var9.a(param0);
+                if (var8 == null) {
                   return null;
                 } else {
-                  var9_ref.c((byte) -109);
-                  ((rj) this).field_c.a((gn) (Object) var8_ref, -82, var6);
-                  return var8_ref;
+                  var9.c((byte) -109);
+                  ((rj) this).field_c.a((gn) (Object) var8, -82, var6);
+                  return var8;
                 }
               } else {
                 return null;
@@ -151,9 +148,9 @@ final class rj {
               L1: {
                 var9 = (tg) (Object) ((rj) this).field_f.a(true, var6);
                 if (var9 == null) {
-                  var9_ref = tg.a(((rj) this).field_d, param2, param3);
-                  if (var9_ref != null) {
-                    ((rj) this).field_f.a((gn) (Object) var9_ref, 79, var6);
+                  var9 = tg.a(((rj) this).field_d, param2, param3);
+                  if (var9 != null) {
+                    ((rj) this).field_f.a((gn) (Object) var9, 79, var6);
                     break L1;
                   } else {
                     return null;
@@ -162,13 +159,13 @@ final class rj {
                   break L1;
                 }
               }
-              var8_ref = var9_ref.a(param0);
-              if (var8_ref == null) {
+              var8 = var9.a(param0);
+              if (var8 == null) {
                 return null;
               } else {
-                var9_ref.c((byte) -109);
-                ((rj) this).field_c.a((gn) (Object) var8_ref, -82, var6);
-                return var8_ref;
+                var9.c((byte) -109);
+                ((rj) this).field_c.a((gn) (Object) var8, -82, var6);
+                return var8;
               }
             }
           }
@@ -182,9 +179,9 @@ final class rj {
                 L2: {
                   var9 = (tg) (Object) ((rj) this).field_f.a(true, var6);
                   if (var9 == null) {
-                    var9_ref = tg.a(((rj) this).field_d, param2, param3);
-                    if (var9_ref != null) {
-                      ((rj) this).field_f.a((gn) (Object) var9_ref, 79, var6);
+                    var9 = tg.a(((rj) this).field_d, param2, param3);
+                    if (var9 != null) {
+                      ((rj) this).field_f.a((gn) (Object) var9, 79, var6);
                       break L2;
                     } else {
                       return null;
@@ -193,13 +190,13 @@ final class rj {
                     break L2;
                   }
                 }
-                var8_ref = var9_ref.a(param0);
-                if (var8_ref == null) {
+                var8 = var9.a(param0);
+                if (var8 == null) {
                   return null;
                 } else {
-                  var9_ref.c((byte) -109);
-                  ((rj) this).field_c.a((gn) (Object) var8_ref, -82, var6);
-                  return var8_ref;
+                  var9.c((byte) -109);
+                  ((rj) this).field_c.a((gn) (Object) var8, -82, var6);
+                  return var8;
                 }
               } else {
                 return null;
@@ -208,9 +205,9 @@ final class rj {
               L3: {
                 var9 = (tg) (Object) ((rj) this).field_f.a(true, var6);
                 if (var9 == null) {
-                  var9_ref = tg.a(((rj) this).field_d, param2, param3);
-                  if (var9_ref != null) {
-                    ((rj) this).field_f.a((gn) (Object) var9_ref, 79, var6);
+                  var9 = tg.a(((rj) this).field_d, param2, param3);
+                  if (var9 != null) {
+                    ((rj) this).field_f.a((gn) (Object) var9, 79, var6);
                     break L3;
                   } else {
                     return null;
@@ -219,13 +216,13 @@ final class rj {
                   break L3;
                 }
               }
-              var8_ref = var9_ref.a(param0);
-              if (var8_ref == null) {
+              var8 = var9.a(param0);
+              if (var8 == null) {
                 return null;
               } else {
-                var9_ref.c((byte) -109);
-                ((rj) this).field_c.a((gn) (Object) var8_ref, -82, var6);
-                return var8_ref;
+                var9.c((byte) -109);
+                ((rj) this).field_c.a((gn) (Object) var8, -82, var6);
+                return var8;
               }
             }
           }

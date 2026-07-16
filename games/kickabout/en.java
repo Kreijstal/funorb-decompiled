@@ -63,10 +63,10 @@ final class en extends sr {
                 }
               }
               L3: {
-                if (param0 <= -1) {
+                if ((param0 ^ -1) <= -1) {
                   break L3;
                 } else {
-                  if (6 >= param0) {
+                  if (6 <= (param0 ^ -1)) {
                     break L3;
                   } else {
                     var2 = var2 | 4;
@@ -83,16 +83,16 @@ final class en extends sr {
                     break L4;
                   }
                 }
-                if (param1 != -25147) {
-                  return 14;
-                } else {
+                if (param1 == -25147) {
                   return var2;
+                } else {
+                  return 14;
                 }
               } else {
-                if (param1 != -25147) {
-                  return 14;
-                } else {
+                if (param1 == -25147) {
                   return var2;
+                } else {
+                  return 14;
                 }
               }
             }
@@ -111,10 +111,10 @@ final class en extends sr {
           }
         }
         L6: {
-          if (param0 <= -1) {
+          if ((param0 ^ -1) <= -1) {
             break L6;
           } else {
-            if (6 >= param0) {
+            if (6 <= (param0 ^ -1)) {
               break L6;
             } else {
               var2 = var2 | 4;
@@ -130,18 +130,18 @@ final class en extends sr {
               var2 = var2 | 1;
               break L7;
             } else {
-              if (param1 != -25147) {
-                return 14;
-              } else {
+              if (param1 == -25147) {
                 return var2;
+              } else {
+                return 14;
               }
             }
           }
         }
-        if (param1 != -25147) {
-          return 14;
-        } else {
+        if (param1 == -25147) {
           return var2;
+        } else {
+          return 14;
         }
     }
 

@@ -56,7 +56,7 @@ final class fm {
         int stackOut_22_0 = 0;
         int stackOut_21_0 = 0;
         L0: {
-          int discarded$1 = in.e(24);
+          int discarded$2 = in.e(24);
           ((fm) this).field_f = in.e(16);
           ((fm) this).field_c = in.e(24);
           ((fm) this).field_d = new int[((fm) this).field_c];
@@ -123,8 +123,9 @@ final class fm {
                     var3_int++;
                     continue L5;
                   } else {
+                    int incrementValue$3 = var2;
                     var2++;
-                    ((fm) this).field_d[var2] = var3_int;
+                    ((fm) this).field_d[incrementValue$3] = var3_int;
                     var5++;
                     continue L6;
                   }

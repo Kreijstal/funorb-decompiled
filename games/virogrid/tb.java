@@ -117,8 +117,9 @@ final class tb extends l {
                                       var12++;
                                       continue L8;
                                     } else {
+                                      int incrementValue$2 = var11;
                                       var11++;
-                                      ((tb) this).field_l[var11] = var8[var7[(var13 >> 1) + (var12 >> 1 << 6)] & 255];
+                                      ((tb) this).field_l[incrementValue$2] = var8[var7[(var13 >> 1) + (var12 >> 1 << 6)] & 255];
                                       var13++;
                                       continue L9;
                                     }
@@ -148,8 +149,9 @@ final class tb extends l {
                                       var12++;
                                       continue L11;
                                     } else {
+                                      int incrementValue$3 = var11;
                                       var11++;
-                                      ((tb) this).field_l[var11] = var8[var7[(var13 << 1) + (var12 << 1 << 7)] & 255];
+                                      ((tb) this).field_l[incrementValue$3] = var8[var7[(var13 << 1) + (var12 << 1 << 7)] & 255];
                                       var13++;
                                       continue L12;
                                     }
@@ -299,6 +301,7 @@ final class tb extends l {
                       int discarded$2 = param0.g(11132);
                       int discarded$3 = param0.g(11132);
                       ((tb) this).field_l = null;
+                      return;
                     } else {
                       ((tb) this).field_k[var3] = param0.d((byte) 117);
                       var3++;

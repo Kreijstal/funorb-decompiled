@@ -106,26 +106,33 @@ final class fg extends al {
           sg.field_jb.c(gj.field_k[((fg) this).field_n][0], var10, var9, 0, 0);
           var20 = ((fg) this).field_n;
           if (-1 != (var20 ^ -1)) {
-            if (var20 == -2) {
+            if ((var20 ^ -1) == -2) {
               L4: {
-                var11 = 340;
-                var2 -= 4;
-                if (var8 != 0) {
-                  var11 = 400;
-                  break L4;
-                } else {
-                  break L4;
+                L5: {
+                  var11 = 340;
+                  var2 -= 4;
+                  if (var7 != 0) {
+                    break L5;
+                  } else {
+                    if (var8 != 0) {
+                      break L5;
+                    } else {
+                      break L4;
+                    }
+                  }
                 }
+                var11 = 400;
+                break L4;
               }
-              L5: {
+              L6: {
                 var13 = 24;
                 var12 = var9 + 20;
                 le.field_a[1].b(-50 + var6, -8 + var12);
                 if (var8 != 0) {
                   var13 = 20;
-                  break L5;
+                  break L6;
                 } else {
-                  break L5;
+                  break L6;
                 }
               }
               var12 = var12 + (bj.field_q.a(gj.field_g[1][0], var6, var12, var11, 50, 16777215, 0, 0, 0, var2) * var2 + var13);
@@ -148,7 +155,7 @@ final class fg extends al {
               bi.a(var14 - -5, var15 - -16, 73, 43, 3355647, 32);
               break L3;
             } else {
-              if (-3 == var20) {
+              if (-3 == (var20 ^ -1)) {
                 var13 = 32;
                 var12 = var9 + 40;
                 var2 -= 4;
@@ -166,11 +173,11 @@ final class fg extends al {
                 break L3;
               } else {
                 if (var20 != 3) {
-                  if (var20 != -5) {
-                    if (-6 == var20) {
+                  if ((var20 ^ -1) != -5) {
+                    if (-6 == (var20 ^ -1)) {
                       var5 = 19 - -var9;
                       var20 = 0;
-                      L6: while (true) {
+                      L7: while (true) {
                         if (var20 >= cc.field_h[((fg) this).field_n].length) {
                           break L3;
                         } else {
@@ -178,56 +185,56 @@ final class fg extends al {
                           kb.field_i[var21].b(var10, 5 + var5);
                           var5 = var5 + (var2 * bj.field_q.a(gj.field_j[var21], var10 - -40, var5, var3 + -40, 400, 16777215, 0, 0, 0, var2) + 15);
                           var20++;
-                          continue L6;
+                          continue L7;
                         }
                       }
                     } else {
                       if (var20 == 6) {
                         var5 = 20 + var9;
                         var20 = 0;
-                        L7: while (true) {
+                        L8: while (true) {
                           if (4 <= var20) {
                             break L3;
                           } else {
                             qn.field_k[var20].b(var10 - -8, var5 + -8);
                             var5 = var5 + (var2 * bj.field_q.a(gj.field_p[var20], 80 + var10, var5, -80 + var3, 400, 16777215, 0, 0, 0, var2) + 20);
                             var20++;
-                            continue L7;
+                            continue L8;
                           }
                         }
                       } else {
-                        if (var20 == -8) {
+                        if ((var20 ^ -1) == -8) {
                           var5 = var9 + 20;
                           var20 = 4;
-                          L8: while (true) {
-                            if (qn.field_k.length <= var20) {
+                          L9: while (true) {
+                            if ((qn.field_k.length ^ -1) >= (var20 ^ -1)) {
                               break L3;
                             } else {
                               qn.field_k[var20].b(var10 + 8, -8 + var5);
                               var5 = var5 + (var2 * bj.field_q.a(gj.field_p[var20], var10 - -80, var5, var3 - 80, 400, 16777215, 0, 0, 0, var2) + 20);
                               var20++;
-                              continue L8;
+                              continue L9;
                             }
                           }
                         } else {
-                          L9: {
+                          L10: {
                             if (var20 == 8) {
-                              break L9;
+                              break L10;
                             } else {
-                              if (-10 == var20) {
-                                break L9;
+                              if (-10 == (var20 ^ -1)) {
+                                break L10;
                               } else {
                                 if (var20 == 10) {
                                   var5 = var9 + 20;
                                   var20 = 0;
-                                  L10: while (true) {
+                                  L11: while (true) {
                                     if (-5 >= (var20 ^ -1)) {
                                       break L3;
                                     } else {
                                       j.field_e[var20].b(var10 - -8, -8 + var5);
                                       var5 = var5 + (bj.field_q.a(gj.field_p[var20 + 8], 80 + var10, var5, -80 + var3, 400, 16777215, 0, 0, 0, var2) * var2 + 20);
                                       var20++;
-                                      continue L10;
+                                      continue L11;
                                     }
                                   }
                                 } else {
@@ -257,7 +264,7 @@ final class fg extends al {
                           var4 = bj.field_q.a(gj.field_g[((fg) this).field_n][0], var10, var9 - -20, var3, 440, 16777215, 0, 0, 0, var2);
                           var5 = 39 + var2 * var4 - -var9;
                           var20 = 0;
-                          L11: while (true) {
+                          L12: while (true) {
                             if (cc.field_h[((fg) this).field_n].length <= var20) {
                               break L3;
                             } else {
@@ -265,7 +272,7 @@ final class fg extends al {
                               kb.field_i[var21].b(var10, 5 + var5);
                               var5 = var5 + (15 + bj.field_q.a(gj.field_j[var21], var10 + 40, var5, var3 - 40, 400, 16777215, 0, 0, 0, var2) * var2);
                               var20++;
-                              continue L11;
+                              continue L12;
                             }
                           }
                         }
@@ -275,7 +282,7 @@ final class fg extends al {
                     var4 = bj.field_q.a(gj.field_g[((fg) this).field_n][0], var10, var9 - -20, var3, 440, 16777215, 0, 0, 0, var2);
                     var5 = var9 + (39 + var2 * var4);
                     var20 = 0;
-                    L12: while (true) {
+                    L13: while (true) {
                       if (var20 >= cc.field_h[((fg) this).field_n].length) {
                         break L3;
                       } else {
@@ -283,7 +290,7 @@ final class fg extends al {
                         kb.field_i[var21].b(var10, var5 + 5);
                         var5 = var5 + (bj.field_q.a(gj.field_j[var21], vh.field_b + 60, var5, var3 - 40, 400, 16777215, 0, 0, 0, var2) * var2 + 15);
                         var20++;
-                        continue L12;
+                        continue L13;
                       }
                     }
                   }
@@ -299,7 +306,7 @@ final class fg extends al {
               }
             }
           } else {
-            L13: {
+            L14: {
               stackOut_24_0 = bj.field_q;
               stackOut_24_1 = gj.field_g[0][0];
               stackOut_24_2 = var10;
@@ -323,7 +330,7 @@ final class fg extends al {
                 stackIn_27_2 = stackOut_26_2;
                 stackIn_27_3 = stackOut_26_3;
                 stackIn_27_4 = stackOut_26_4;
-                break L13;
+                break L14;
               } else {
                 stackOut_25_0 = (oi) (Object) stackIn_25_0;
                 stackOut_25_1 = (String) (Object) stackIn_25_1;
@@ -335,17 +342,17 @@ final class fg extends al {
                 stackIn_27_2 = stackOut_25_2;
                 stackIn_27_3 = stackOut_25_3;
                 stackIn_27_4 = stackOut_25_4;
-                break L13;
+                break L14;
               }
             }
-            L14: {
+            L15: {
               var4 = ((oi) (Object) stackIn_27_0).a(stackIn_27_1, stackIn_27_2, stackIn_27_3, stackIn_27_4, 440, 16777215, 0, 0, 0, var2);
               var5 = var4 * var2;
               if (var7 == 0) {
-                break L14;
+                break L15;
               } else {
                 var5 -= 20;
-                break L14;
+                break L15;
               }
             }
             sg.field_jb.c(gj.field_k[0][1], var10, var5 + (var9 + 75), 0, 0);
@@ -376,7 +383,7 @@ final class fg extends al {
 
     final static vn d(int param0) {
         int var1 = 0;
-        vn var3 = null;
+        Object var3 = null;
         int var5 = 0;
         int[] var5_ref_int__ = null;
         int var6 = 0;
@@ -402,7 +409,7 @@ final class fg extends al {
               var5 = 0;
               L1: while (true) {
                 if (var1 <= var5) {
-                  var3 = new vn(gl.field_F, kd.field_pb, sl.field_d[0], bo.field_o[0], bn.field_c[0], uf.field_n[0], var21);
+                  var3 = (Object) (Object) new vn(gl.field_F, kd.field_pb, sl.field_d[0], bo.field_o[0], bn.field_c[0], uf.field_n[0], var21);
                   break L0;
                 } else {
                   var9[var5] = j.field_a[eg.a((int) var19[var5], 255)];
@@ -420,7 +427,7 @@ final class fg extends al {
               var6 = 0;
               L2: while (true) {
                 if (var1 <= var6) {
-                  var3 = (vn) (Object) new cd(gl.field_F, kd.field_pb, sl.field_d[0], bo.field_o[0], bn.field_c[0], uf.field_n[0], var20);
+                  var3 = (Object) (Object) new cd(gl.field_F, kd.field_pb, sl.field_d[0], bo.field_o[0], bn.field_c[0], uf.field_n[0], var20);
                   break L0;
                 } else {
                   var5_ref_int__[var6] = hi.a(eg.a((int) var18[var6], 255) << 236142616, j.field_a[eg.a(255, (int) var19[var6])]);
@@ -431,7 +438,7 @@ final class fg extends al {
             }
           }
           no.f((byte) -73);
-          return var3;
+          return (vn) var3;
         } else {
           return null;
         }
@@ -625,16 +632,16 @@ final class fg extends al {
             }
             var5 = (jc) (Object) on.field_g.a(false);
         }
-        jc var5_ref = new jc();
-        var5_ref.field_s = param3;
-        var5_ref.field_o = param4;
-        var5_ref.field_u = param1;
+        var5 = new jc();
+        var5.field_s = param3;
+        var5.field_o = param4;
+        var5.field_u = param1;
         if (param2 != 1) {
             return null;
         }
-        on.field_g.a(0, (le) (Object) var5_ref);
-        pm.a(0, param0, var5_ref);
-        return var5_ref;
+        on.field_g.a(0, (le) (Object) var5);
+        pm.a(0, param0, var5);
+        return var5;
     }
 
     final void c(int param0, boolean param1) {

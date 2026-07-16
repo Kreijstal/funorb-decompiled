@@ -17,7 +17,7 @@ final class ai {
     final static void a(boolean param0, int param1, int param2) {
         int var3 = 0;
         String var4 = null;
-        String var5 = null;
+        Object var5 = null;
         Object var6 = null;
         Object var16 = null;
         Object var17 = null;
@@ -60,7 +60,7 @@ final class ai {
                     L2: {
                       var5 = null;
                       if (pk.field_b == 0) {
-                        var5 = hf.a(param2, 79, var4);
+                        var5 = (Object) (Object) hf.a(param2, 79, var4);
                         break L2;
                       } else {
                         break L2;
@@ -70,7 +70,7 @@ final class ai {
                       if (pk.field_b != 1) {
                         break L3;
                       } else {
-                        var5 = ab.a(param2, param1 + 21247, var4);
+                        var5 = (Object) (Object) ab.a(param2, param1 + 21247, var4);
                         break L3;
                       }
                     }
@@ -78,13 +78,13 @@ final class ai {
                       if (pk.field_b != 2) {
                         break L4;
                       } else {
-                        var5 = a.a(param2, var4, (byte) 64);
+                        var5 = (Object) (Object) a.a(param2, var4, (byte) 64);
                         break L4;
                       }
                     }
                     L5: {
                       if (3 == pk.field_b) {
-                        var5 = of.a(var4, param2, var4, -1);
+                        var5 = (Object) (Object) of.a(var4, param2, var4, -1);
                         break L5;
                       } else {
                         break L5;
@@ -94,7 +94,7 @@ final class ai {
                       break L0;
                     } else {
                       var6 = null;
-                      lc.a(var4, (String) null, 2, 0, var5, false);
+                      lc.a(var4, (String) null, 2, 0, (String) var5, false);
                       pk.field_b = -1;
                       me.field_a = null;
                       if (param1 == 3) {
@@ -1035,7 +1035,7 @@ final class ai {
                       break L8;
                     }
                   }
-                  int discarded$1 = ((lh) (Object) stackIn_29_0).a((String) (Object) stackIn_29_1, stackIn_29_2, stackIn_29_3, stackIn_29_4, stackIn_29_5, stackIn_29_6, stackIn_29_7, stackIn_29_8, param1.field_l, param1.field_c, param1.field_j);
+                  int discarded$1 = ((lh) (Object) stackIn_29_0).a(stackIn_29_1, stackIn_29_2, stackIn_29_3, stackIn_29_4, stackIn_29_5, stackIn_29_6, stackIn_29_7, stackIn_29_8, param1.field_l, param1.field_c, param1.field_j);
                   break L5;
                 }
               }

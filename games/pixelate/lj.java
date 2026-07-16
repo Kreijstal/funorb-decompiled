@@ -61,32 +61,36 @@ final class lj {
         String stackOut_4_0 = null;
         try {
           L0: {
-            if (param1 <= -28) {
-              break L0;
-            } else {
-              field_b = null;
-              break L0;
+            L1: {
+              if (param1 <= -28) {
+                break L1;
+              } else {
+                field_b = null;
+                break L1;
+              }
             }
-          }
-          L1: {
-            var3_int = param2.g(21231);
-            if (var3_int <= param0) {
-              break L1;
-            } else {
-              var3_int = param0;
-              break L1;
+            L2: {
+              var3_int = param2.g(21231);
+              if (var3_int <= param0) {
+                break L2;
+              } else {
+                var3_int = param0;
+                break L2;
+              }
             }
+            var4 = new byte[var3_int];
+            param2.field_m = param2.field_m + kp.field_v.a(-1, var3_int, param2.field_k, 0, param2.field_m, var4);
+            var5 = ui.a(true, var4, 0, var3_int);
+            stackOut_4_0 = (String) var5;
+            stackIn_5_0 = stackOut_4_0;
+            break L0;
           }
-          var4 = new byte[var3_int];
-          param2.field_m = param2.field_m + kp.field_v.a(-1, var3_int, param2.field_k, 0, param2.field_m, var4);
-          var5 = ui.a(true, var4, 0, var3_int);
-          stackOut_4_0 = (String) var5;
-          stackIn_5_0 = stackOut_4_0;
-        } catch (java.lang.Exception decompiledCaughtParameter) {
-          decompiledCaughtException = decompiledCaughtParameter;
-          return stackIn_5_0;
+        } catch (java.lang.Exception decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3 = (Exception) (Object) decompiledCaughtException;
+          return "Cabbage";
         }
-        return null;
+        return stackIn_5_0;
     }
 
     final void b(int param0) throws IOException {
@@ -139,25 +143,41 @@ final class lj {
     }
 
     lj(File param0, String param1, long param2) throws IOException {
-        if (0L == (param2 ^ -1L)) {
+        int var5 = 0;
+        L0: {
+          if (0L != (param2 ^ -1L)) {
+            break L0;
+          } else {
             param2 = 9223372036854775807L;
+            break L0;
+          }
         }
-        if ((param2 ^ -1L) > (param0.length() ^ -1L)) {
-            boolean discarded$0 = param0.delete();
+        L1: {
+          if ((param2 ^ -1L) <= (param0.length() ^ -1L)) {
+            break L1;
+          } else {
+            boolean discarded$2 = param0.delete();
+            break L1;
+          }
         }
         ((lj) this).field_e = new RandomAccessFile(param0, param1);
         ((lj) this).field_a = 0L;
         ((lj) this).field_f = param2;
-        int var5 = ((lj) this).field_e.read();
-        if ((var5 ^ -1) != 0) {
-            // ifne L117
+        var5 = ((lj) this).field_e.read();
+        if ((var5 ^ -1) == 0) {
+          ((lj) this).field_e.seek(0L);
+          return;
+        } else {
+          if (param1.equals((Object) (Object) "r")) {
+            ((lj) this).field_e.seek(0L);
+            return;
+          } else {
             ((lj) this).field_e.seek(0L);
             ((lj) this).field_e.write(var5);
-        } else {
             ((lj) this).field_e.seek(0L);
-            ((lj) this).field_e.seek(0L);
+            return;
+          }
         }
-        ((lj) this).field_e.seek(0L);
     }
 
     final void a(int param0, byte[] param1, int param2, int param3) throws IOException {

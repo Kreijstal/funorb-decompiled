@@ -90,7 +90,7 @@ class nk extends tg {
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
-        pb var10 = null;
+        Object var10 = null;
         int var11 = 0;
         ri var12 = null;
         int var13 = 0;
@@ -170,13 +170,13 @@ class nk extends tg {
                   var14 = stackIn_14_0;
                   var15 = new pb(var7, var13, var12.field_c, -var13 + var14, Math.max(var3.a(0), var12.field_b + -var12.field_c));
                   if (var10 != null) {
-                    var10.field_q = var15;
+                    ((pb) var10).field_q = var15;
                     break L5;
                   } else {
                     break L5;
                   }
                 }
-                var10 = var15;
+                var10 = (Object) (Object) var15;
                 ((nk) this).field_G.a((l) (Object) var15, (byte) -91);
                 var11++;
                 continue L2;
@@ -243,26 +243,50 @@ class nk extends tg {
     }
 
     final void a(String param0, byte param1, int param2) {
-        String[] var7 = null;
         String[] var4 = null;
         int var5 = 0;
-        int var6 = Virogrid.field_F ? 1 : 0;
-        if (param1 >= -58) {
-            return;
-        }
-        if (((nk) this).field_F != null) {
-            // if_icmpge L31
-        } else {
-            var7 = new String[1 + param2];
-            var4 = var7;
-            if (((nk) this).field_F != null) {
-                for (var5 = 0; var5 < ((nk) this).field_F.length; var5++) {
-                    var7[var5] = ((nk) this).field_F[var5];
+        int var6 = 0;
+        String[] var7 = null;
+        var6 = Virogrid.field_F ? 1 : 0;
+        if (param1 < -58) {
+          L0: {
+            L1: {
+              if (((nk) this).field_F == null) {
+                break L1;
+              } else {
+                if (param2 >= ((nk) this).field_F.length) {
+                  break L1;
+                } else {
+                  break L0;
                 }
+              }
+            }
+            L2: {
+              var7 = new String[1 + param2];
+              var4 = var7;
+              if (((nk) this).field_F == null) {
+                break L2;
+              } else {
+                var5 = 0;
+                L3: while (true) {
+                  if (var5 >= ((nk) this).field_F.length) {
+                    break L2;
+                  } else {
+                    var7[var5] = ((nk) this).field_F[var5];
+                    var5++;
+                    continue L3;
+                  }
+                }
+              }
             }
             ((nk) this).field_F = var4;
+            break L0;
+          }
+          ((nk) this).field_F[param2] = param0;
+          return;
+        } else {
+          return;
         }
-        ((nk) this).field_F[param2] = param0;
     }
 
     static {

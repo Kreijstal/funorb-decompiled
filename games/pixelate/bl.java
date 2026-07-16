@@ -219,26 +219,31 @@ final class bl {
             Object stackIn_2_0 = null;
             v stackIn_4_0 = null;
             Throwable decompiledCaughtException = null;
-            Object stackOut_1_0 = null;
             v stackOut_3_0 = null;
+            Object stackOut_1_0 = null;
             try {
-              if (param0 >= 27) {
-                return (v) (Object) stackIn_2_0;
-              } else {
-                stackOut_1_0 = null;
-                stackIn_2_0 = stackOut_1_0;
+              L0: {
+                if (param0 >= 27) {
+                  stackOut_3_0 = (v) Class.forName("wj").newInstance();
+                  stackIn_4_0 = stackOut_3_0;
+                  break L0;
+                } else {
+                  stackOut_1_0 = null;
+                  stackIn_2_0 = stackOut_1_0;
+                  return (v) (Object) stackIn_2_0;
+                }
               }
-            } catch (java.lang.Throwable decompiledCaughtParameter) {
-              decompiledCaughtException = decompiledCaughtParameter;
-              stackOut_3_0 = (v) Class.forName("wj").newInstance();
-              stackIn_4_0 = stackOut_3_0;
+            } catch (java.lang.Throwable decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              var1 = decompiledCaughtException;
+              return null;
             }
+            return stackIn_4_0;
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
             throw new RuntimeException(decompiledCheckedException);
         }
-        return null;
     }
 
     final static void a(int param0, tf param1, String param2) {

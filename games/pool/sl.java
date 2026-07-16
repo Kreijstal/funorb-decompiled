@@ -78,8 +78,8 @@ class sl extends fe {
             if (!(!((sl) this).field_Q)) {
                 ((sl) this).field_N = this.j(32);
                 ((sl) this).field_R = this.h(27);
-                if (((sl) this).field_R < -1) {
-                    if (!(-33 != ((sl) this).field_m.charAt(((sl) this).field_R - 1))) {
+                if ((((sl) this).field_R ^ -1) < -1) {
+                    if (!(-33 != (((sl) this).field_m.charAt(((sl) this).field_R - 1) ^ -1))) {
                         ((sl) this).field_R = ((sl) this).field_R - 1;
                     }
                 }
@@ -109,19 +109,39 @@ class sl extends fe {
     }
 
     private final int h(int param0) {
+        int var2 = 0;
         int var3 = 0;
-        int var4 = Pool.field_O;
-        if (param0 <= 15) {
-            int discarded$0 = this.h(-3);
+        int var4 = 0;
+        L0: {
+          var4 = Pool.field_O;
+          if (param0 > 15) {
+            break L0;
+          } else {
+            int discarded$2 = this.h(-3);
+            break L0;
+          }
         }
-        int var2 = ((sl) this).field_m.length();
-        if (!(((sl) this).field_R != var2)) {
-            return ((sl) this).field_R;
+        var2 = ((sl) this).field_m.length();
+        if (((sl) this).field_R == var2) {
+          return ((sl) this).field_R;
+        } else {
+          var3 = 1 + ((sl) this).field_R;
+          L1: while (true) {
+            L2: {
+              if (var3 >= var2) {
+                break L2;
+              } else {
+                if (((sl) this).field_m.charAt(-1 + var3) == 32) {
+                  break L2;
+                } else {
+                  var3++;
+                  continue L1;
+                }
+              }
+            }
+            return var3;
+          }
         }
-        for (var3 = 1 + ((sl) this).field_R; var3 < var2; var3++) {
-            // if_icmpeq L78
-        }
-        return var3;
     }
 
     private final void a(int param0, int param1) {
@@ -180,8 +200,9 @@ class sl extends fe {
                 ((sl) this).field_m = ((sl) this).field_m.substring(0, ((sl) this).field_O);
             }
         }
-        ((sl) this).field_N = ((sl) this).field_m.length();
-        ((sl) this).field_R = ((sl) this).field_m.length();
+        int dupTemp$0 = ((sl) this).field_m.length();
+        ((sl) this).field_N = dupTemp$0;
+        ((sl) this).field_R = dupTemp$0;
         if (!param1) {
             ((sl) this).i(param0 + 211);
         }
@@ -227,13 +248,20 @@ class sl extends fe {
             Throwable decompiledCaughtException = null;
             if (param0 == 4) {
               try {
-                var2_ref = (String) java.awt.Toolkit.getDefaultToolkit().getSystemClipboard().getContents((Object) null).getTransferData(java.awt.datatransfer.DataFlavor.stringFlavor);
-                this.g(-14642);
-                this.a(param0 + 106, var2_ref);
-              } catch (java.lang.Exception decompiledCaughtParameter) {
-                decompiledCaughtException = decompiledCaughtParameter;
+                L0: {
+                  var2_ref = (String) java.awt.Toolkit.getDefaultToolkit().getSystemClipboard().getContents((Object) null).getTransferData(java.awt.datatransfer.DataFlavor.stringFlavor);
+                  this.g(-14642);
+                  this.a(param0 + 106, var2_ref);
+                  break L0;
+                }
+              } catch (java.lang.Exception decompiledCaughtParameter0) {
+                decompiledCaughtException = decompiledCaughtParameter0;
+                L1: {
+                  var2 = (Exception) (Object) decompiledCaughtException;
+                  break L1;
+                }
               }
-              var2 = (Exception) (Object) decompiledCaughtException;
+              return;
             } else {
               return;
             }
@@ -406,8 +434,9 @@ class sl extends fe {
                     L5: {
                       if (((sl) this).field_R >= ((sl) this).field_m.length()) {
                         ((sl) this).field_m = ((sl) this).field_m + param0;
-                        ((sl) this).field_R = ((sl) this).field_m.length();
-                        ((sl) this).field_N = ((sl) this).field_m.length();
+                        int dupTemp$1 = ((sl) this).field_m.length();
+                        ((sl) this).field_R = dupTemp$1;
+                        ((sl) this).field_N = dupTemp$1;
                         break L5;
                       } else {
                         ((sl) this).field_m = ((sl) this).field_m.substring(0, ((sl) this).field_R) + param0 + ((sl) this).field_m.substring(((sl) this).field_R, ((sl) this).field_m.length());
@@ -590,17 +619,36 @@ class sl extends fe {
 
     private final int j(int param0) {
         int var2 = 0;
-        int var3 = Pool.field_O;
-        if (0 == ((sl) this).field_R) {
-            return ((sl) this).field_R;
+        int var3 = 0;
+        var3 = Pool.field_O;
+        if (0 != ((sl) this).field_R) {
+          L0: {
+            if (param0 == 32) {
+              break L0;
+            } else {
+              ((sl) this).field_T = -5L;
+              break L0;
+            }
+          }
+          var2 = -1 + ((sl) this).field_R;
+          L1: while (true) {
+            L2: {
+              if (-1 <= (var2 ^ -1)) {
+                break L2;
+              } else {
+                if (32 == ((sl) this).field_m.charAt(var2 + -1)) {
+                  break L2;
+                } else {
+                  var2--;
+                  continue L1;
+                }
+              }
+            }
+            return var2;
+          }
+        } else {
+          return ((sl) this).field_R;
         }
-        if (param0 != 32) {
-            ((sl) this).field_T = -5L;
-        }
-        for (var2 = -1 + ((sl) this).field_R; -1 > (var2 ^ -1); var2--) {
-            // if_icmpeq L68
-        }
-        return var2;
     }
 
     private final String h(byte param0) {

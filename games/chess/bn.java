@@ -703,8 +703,9 @@ final class bn extends gf {
                 break L1;
               }
             }
+            int fieldTemp$1 = ((bn) this).field_h;
             ((bn) this).field_h = ((bn) this).field_h + 1;
-            return ((bn) this).field_h;
+            return fieldTemp$1;
           } else {
             if (var4 == ((bn) this).field_K[var7]) {
               if (var5 == ((bn) this).field_C[var7]) {
@@ -846,8 +847,9 @@ final class bn extends gf {
                                           break L6;
                                         }
                                       }
-                                      ((bn) this).field_p[var1] = new fh();
-                                      var16 = new fh();
+                                      fh dupTemp$1 = new fh();
+                                      ((bn) this).field_p[var1] = dupTemp$1;
+                                      var16 = dupTemp$1;
                                       var16.field_f = var11;
                                       var16.field_a = var12;
                                       var16.field_c = var13;
@@ -911,8 +913,9 @@ final class bn extends gf {
         ((bn) this).field_Q[((bn) this).field_y] = (byte)param4;
         ((bn) this).field_j[((bn) this).field_y] = (short)param5;
         ((bn) this).field_B[((bn) this).field_y] = (short)param6;
+        int fieldTemp$0 = ((bn) this).field_y;
         ((bn) this).field_y = ((bn) this).field_y + 1;
-        return ((bn) this).field_y;
+        return fieldTemp$0;
     }
 
     final int a(int param0, int param1, int param2) {
@@ -923,8 +926,9 @@ final class bn extends gf {
             ((bn) this).field_K[((bn) this).field_h] = param0;
             ((bn) this).field_C[((bn) this).field_h] = param1;
             ((bn) this).field_v[((bn) this).field_h] = param2;
+            int fieldTemp$1 = ((bn) this).field_h + 1;
             ((bn) this).field_h = ((bn) this).field_h + 1;
-            ((bn) this).field_q = ((bn) this).field_h + 1;
+            ((bn) this).field_q = fieldTemp$1;
             return ((bn) this).field_h - 1;
           } else {
             if (((bn) this).field_K[var4] == param0) {
@@ -1073,8 +1077,9 @@ final class bn extends gf {
                 break L2;
               } else {
                 L4: {
-                  ((bn) this).field_l[var28] = var2.g(0);
-                  var29 = var2.g(0);
+                  byte dupTemp$1 = var2.g(0);
+                  ((bn) this).field_l[var28] = dupTemp$1;
+                  var29 = dupTemp$1;
                   if (var29 != 0) {
                     break L4;
                   } else {
@@ -1623,15 +1628,25 @@ final class bn extends gf {
     }
 
     private bn(byte[] param0) {
-        ((bn) this).field_t = (byte) 0;
-        ((bn) this).field_y = 0;
-        ((bn) this).field_q = 0;
-        ((bn) this).field_h = 0;
-        if (param0[param0.length - 1] == -1) {
-            // if_icmpne L52
-            this.b(param0);
-        } else {
-            this.a(param0);
+        L0: {
+          L1: {
+            ((bn) this).field_t = (byte) 0;
+            ((bn) this).field_y = 0;
+            ((bn) this).field_q = 0;
+            ((bn) this).field_h = 0;
+            if (param0[param0.length - 1] != -1) {
+              break L1;
+            } else {
+              if (param0[param0.length - 2] != -1) {
+                break L1;
+              } else {
+                this.b(param0);
+                break L0;
+              }
+            }
+          }
+          this.a(param0);
+          break L0;
         }
     }
 
@@ -1858,6 +1873,7 @@ final class bn extends gf {
                 var10 = 0;
                 L9: while (true) {
                   if (var10 >= param1) {
+                    return;
                   } else {
                     var16 = param0[var10];
                     var19 = var16;
@@ -1924,9 +1940,10 @@ final class bn extends gf {
                           if (var8 != 0) {
                             L15: {
                               L16: {
+                                int incrementValue$1 = var9;
                                 var9++;
                                 stackOut_74_0 = ((bn) this).field_Q;
-                                stackOut_74_1 = var9;
+                                stackOut_74_1 = incrementValue$1;
                                 stackIn_77_0 = stackOut_74_0;
                                 stackIn_77_1 = stackOut_74_1;
                                 stackIn_75_0 = stackOut_74_0;

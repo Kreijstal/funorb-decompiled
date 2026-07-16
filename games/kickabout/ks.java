@@ -50,6 +50,7 @@ final class ks {
         var5 = 0;
         L0: while (true) {
           if (var5 >= var2) {
+            return;
           } else {
             var6 = param0[var5];
             if (0 != var6) {
@@ -199,8 +200,9 @@ final class ks {
               L4: {
                 var10 = ((ks) this).field_c[var7];
                 if (((ks) this).field_c[var7] < 0) {
+                  int incrementValue$7 = param4;
                   param4++;
-                  param1[param4] = (byte)(var10 ^ -1);
+                  param1[incrementValue$7] = (byte)(var10 ^ -1);
                   if (param2 > param4) {
                     var7 = 0;
                     break L4;
@@ -223,8 +225,9 @@ final class ks {
               L6: {
                 var10 = ((ks) this).field_c[var7];
                 if (((ks) this).field_c[var7] < 0) {
+                  int incrementValue$8 = param4;
                   param4++;
-                  param1[param4] = (byte)var10;
+                  param1[incrementValue$8] = (byte)var10;
                   if (param2 > param4) {
                     var7 = 0;
                     break L6;
@@ -247,8 +250,9 @@ final class ks {
               L8: {
                 var10 = ((ks) this).field_c[var7];
                 if (-1 < (((ks) this).field_c[var7] ^ -1)) {
+                  int incrementValue$9 = param4;
                   param4++;
-                  param1[param4] = (byte)(var10 ^ -1);
+                  param1[incrementValue$9] = (byte)(var10 ^ -1);
                   if (param2 <= param4) {
                     break L3;
                   } else {
@@ -271,8 +275,9 @@ final class ks {
               L10: {
                 var10 = ((ks) this).field_c[var7];
                 if (((ks) this).field_c[var7] < 0) {
+                  int incrementValue$10 = param4;
                   param4++;
-                  param1[param4] = (byte)var10;
+                  param1[incrementValue$10] = (byte)var10;
                   if (param4 >= param2) {
                     break L3;
                   } else {
@@ -297,8 +302,9 @@ final class ks {
                 if (0 <= ((ks) this).field_c[var7]) {
                   break L12;
                 } else {
+                  int incrementValue$11 = param4;
                   param4++;
-                  param1[param4] = (byte)(var10 ^ -1);
+                  param1[incrementValue$11] = (byte)(var10 ^ -1);
                   if (param2 > param4) {
                     var7 = 0;
                     break L12;
@@ -319,8 +325,9 @@ final class ks {
               L14: {
                 var10 = ((ks) this).field_c[var7];
                 if (-1 < (((ks) this).field_c[var7] ^ -1)) {
+                  int incrementValue$12 = param4;
                   param4++;
-                  param1[param4] = (byte)(var10 ^ -1);
+                  param1[incrementValue$12] = (byte)(var10 ^ -1);
                   if (param2 > param4) {
                     var7 = 0;
                     break L14;
@@ -345,8 +352,9 @@ final class ks {
                 if (((ks) this).field_c[var7] >= 0) {
                   break L16;
                 } else {
+                  int incrementValue$13 = param4;
                   param4++;
-                  param1[param4] = (byte)(var10 ^ -1);
+                  param1[incrementValue$13] = (byte)(var10 ^ -1);
                   if (param4 >= param2) {
                     break L3;
                   } else {
@@ -419,8 +427,9 @@ final class ks {
               var14 = (var13 - (-var11 + 1) >> 978944515) + var12;
               var8 = var8 + var11;
               var13 += 24;
-              var7 = hf.a(var7, var10 >>> var13);
-              param3[var12] = (byte)hf.a(var7, var10 >>> var13);
+              int dupTemp$1 = hf.a(var7, var10 >>> var13);
+              var7 = dupTemp$1;
+              param3[var12] = (byte)dupTemp$1;
               if (var14 > var12) {
                 var13 -= 8;
                 var12++;

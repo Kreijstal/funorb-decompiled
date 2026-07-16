@@ -41,15 +41,14 @@ final class kg {
     }
 
     final static rg a(Throwable param0, String param1) {
-        rg var2_ref = null;
         rg var2 = null;
         if (!(param0 instanceof rg)) {
             var2 = new rg(param0, param1);
         } else {
-            var2_ref = (rg) (Object) param0;
-            var2_ref.field_c = var2_ref.field_c + 32 + param1;
+            var2 = (rg) (Object) param0;
+            var2.field_c = var2.field_c + 32 + param1;
         }
-        return var2_ref;
+        return var2;
     }
 
     final void a(boolean param0, int param1) {

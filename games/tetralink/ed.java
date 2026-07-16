@@ -183,25 +183,29 @@ final class ed extends en {
             se stackOut_2_0 = null;
             try {
               L0: {
-                if (param0 >= 111) {
-                  break L0;
-                } else {
-                  ed.f((byte) -107);
-                  break L0;
+                L1: {
+                  if (param0 >= 111) {
+                    break L1;
+                  } else {
+                    ed.f((byte) -107);
+                    break L1;
+                  }
                 }
+                stackOut_2_0 = (se) Class.forName("tj").newInstance();
+                stackIn_3_0 = stackOut_2_0;
+                break L0;
               }
-              stackOut_2_0 = (se) Class.forName("tj").newInstance();
-              stackIn_3_0 = stackOut_2_0;
-            } catch (java.lang.Throwable decompiledCaughtParameter) {
-              decompiledCaughtException = decompiledCaughtParameter;
-              return stackIn_3_0;
+            } catch (java.lang.Throwable decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              var1 = decompiledCaughtException;
+              return null;
             }
+            return stackIn_3_0;
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
             throw new RuntimeException(decompiledCheckedException);
         }
-        return null;
     }
 
     final void a(na param0, int param1, int param2, boolean param3) {
@@ -422,7 +426,6 @@ final class ed extends en {
         qi var3 = null;
         kb var3_ref = null;
         int var3_int = 0;
-        qi var3_ref2 = null;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
@@ -740,8 +743,7 @@ final class ed extends en {
                         break L23;
                       }
                     }
-                    new kb(stackIn_84_2, stackIn_84_3 != 0, ui.a(64, 1692));
-                    var7 = stackIn_84_0;
+                    var7 = new kb(stackIn_84_2, stackIn_84_3 != 0, ui.a(64, 1692));
                     var3_ref = (kb) (Object) tb.field_d.c(false);
                     L24: while (true) {
                       L25: {
@@ -795,8 +797,9 @@ final class ed extends en {
                         }
                       } else {
                         L29: {
+                          int fieldTemp$6 = il.field_S - 1;
                           il.field_S = il.field_S - 1;
-                          if (il.field_S - 1 < 0) {
+                          if (fieldTemp$6 < 0) {
                             il.field_S = 0;
                             break L29;
                           } else {
@@ -826,7 +829,7 @@ final class ed extends en {
                         }
                       }
                     }
-                    boolean discarded$1 = ac.field_a.a((byte) -125);
+                    boolean discarded$7 = ac.field_a.a((byte) -125);
                     break L26;
                   } else {
                     break L26;
@@ -864,8 +867,8 @@ final class ed extends en {
                           if (-8388609 >= (var4 * var4 - -(var5 * var5) ^ -1)) {
                             continue L35;
                           } else {
-                            var3_ref2 = new qi(0, 1638400, 0, var4, -8192, var5, 150);
-                            nd.field_Sb.a((mc) (Object) var3_ref2, false);
+                            var3 = new qi(0, 1638400, 0, var4, -8192, var5, 150);
+                            nd.field_Sb.a((mc) (Object) var3, false);
                             break L33;
                           }
                         }
@@ -903,8 +906,9 @@ final class ed extends en {
                         wd.field_i = 0;
                         break L39;
                       } else {
+                        int fieldTemp$8 = wd.field_i + 8;
                         wd.field_i = wd.field_i + 8;
-                        if (wd.field_i + 8 >= 256) {
+                        if (fieldTemp$8 >= 256) {
                           wd.field_i = 0;
                           ml.field_ab = wk.field_u;
                           break L39;
@@ -936,8 +940,9 @@ final class ed extends en {
                     return;
                   } else {
                     L41: {
+                      int fieldTemp$9 = var3.field_s - 1;
                       var3.field_s = var3.field_s - 1;
-                      if (-1 <= (var3.field_s - 1 ^ -1)) {
+                      if (-1 <= (fieldTemp$9 ^ -1)) {
                         var3.b(false);
                         break L41;
                       } else {
@@ -954,8 +959,9 @@ final class ed extends en {
                 }
               } else {
                 L42: {
+                  int fieldTemp$10 = var2.field_r + 1;
                   var2.field_r = var2.field_r + 1;
-                  if (83 < var2.field_r + 1) {
+                  if (83 < fieldTemp$10) {
                     var2.b(false);
                     break L42;
                   } else {
@@ -968,8 +974,9 @@ final class ed extends en {
             }
           } else {
             L43: {
+              int fieldTemp$11 = var1.field_n - 1;
               var1.field_n = var1.field_n - 1;
-              if (0 != var1.field_n - 1) {
+              if (0 != fieldTemp$11) {
                 break L43;
               } else {
                 var1.b(false);

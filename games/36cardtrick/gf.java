@@ -18,10 +18,10 @@ final class gf {
         if (param2 == 73) {
           ((gf) this).field_g = var4 * (float)((gf) this).field_b / (float)(1 + ((gf) this).field_d);
           if (0 != param1) {
-            ((gf) this).field_i = ((t) param0).field_a + " - " + param1 + "%";
+            ((gf) this).field_i = param0.field_a + " - " + param1 + "%";
             return;
           } else {
-            ((gf) this).field_i = ((t) param0).field_g;
+            ((gf) this).field_i = param0.field_g;
             return;
           }
         } else {
@@ -46,28 +46,28 @@ final class gf {
           if (((gf) this).field_f < ((gf) this).field_d) {
             var4 = ((gf) this).field_c[((gf) this).field_f];
             var2 = var4;
-            if (!((t) var4).field_d.b(4)) {
+            if (!var4.field_d.b(4)) {
               this.a(var4, 0, (byte) 73);
               return false;
             } else {
               L1: {
-                if ((((t) var4).field_c ^ -1) > -1) {
+                if ((var4.field_c ^ -1) > -1) {
                   break L1;
                 } else {
-                  if (((t) var4).field_d.a(((t) var4).field_c, 70)) {
+                  if (var4.field_d.a(var4.field_c, 70)) {
                     break L1;
                   } else {
-                    this.a(var2, ((t) var4).field_d.a((byte) 60, ((t) var4).field_c), (byte) 73);
+                    this.a(var2, var4.field_d.a((byte) 60, var4.field_c), (byte) 73);
                     return false;
                   }
                 }
               }
               L2: {
-                if (null == ((t) var4).field_b) {
+                if (null == var4.field_b) {
                   break L2;
                 } else {
-                  if (!((t) var4).field_d.b(4, ((t) var4).field_b)) {
-                    this.a(var2, ((t) var4).field_d.a(((t) var4).field_b, 0), (byte) 73);
+                  if (!var4.field_d.b(4, var4.field_b)) {
+                    this.a(var2, var4.field_d.a(var4.field_b, 0), (byte) 73);
                     return false;
                   } else {
                     break L2;
@@ -75,17 +75,17 @@ final class gf {
                 }
               }
               L3: {
-                if (((t) var4).field_c >= 0) {
+                if (var4.field_c >= 0) {
                   break L3;
                 } else {
-                  if (null != ((t) var4).field_b) {
+                  if (null != var4.field_b) {
                     break L3;
                   } else {
-                    if (null == ((t) var4).field_a) {
+                    if (null == var4.field_a) {
                       break L3;
                     } else {
-                      if (!((t) var4).field_d.a((byte) 29)) {
-                        this.a(var2, ((t) var4).field_d.a(2), (byte) 73);
+                      if (!var4.field_d.a((byte) 29)) {
+                        this.a(var2, var4.field_d.a(2), (byte) 73);
                         return false;
                       } else {
                         break L3;
@@ -112,16 +112,16 @@ final class gf {
             return new md[]{};
         }
         if (param0 != -2) {
-            return (md[]) null;
+            return null;
         }
         vi var8 = param1.a((byte) 104);
-        while (((vi) var8).field_a == 0) {
+        while (var8.field_a == 0) {
             wk.a((byte) -117, 10L);
         }
-        if (!((((vi) var8).field_a ^ -1) != -3)) {
+        if (!((var8.field_a ^ -1) != -3)) {
             return new md[]{};
         }
-        int[] var12 = (int[]) (int[]) ((vi) var8).field_e;
+        int[] var12 = (int[]) var8.field_e;
         int[] var11 = var12;
         int[] var10 = var11;
         int[] var9 = var10;

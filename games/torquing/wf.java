@@ -49,14 +49,16 @@ abstract class wf extends ta {
     final static t[] a(int param0, int param1, int param2, int param3, byte param4) {
         t[] var6 = new t[9];
         t[] var5 = var6;
-        var6[6] = hj.a((byte) -87, param1, param2);
-        var5[3] = hj.a((byte) -87, param1, param2);
-        var5[2] = hj.a((byte) -87, param1, param2);
-        var5[1] = hj.a((byte) -87, param1, param2);
-        var5[0] = hj.a((byte) -87, param1, param2);
-        var6[8] = hj.a((byte) -86, param3, param2);
-        var5[7] = hj.a((byte) -86, param3, param2);
-        var5[5] = hj.a((byte) -86, param3, param2);
+        t dupTemp$0 = hj.a((byte) -87, param1, param2);
+        var6[6] = dupTemp$0;
+        var5[3] = dupTemp$0;
+        var5[2] = dupTemp$0;
+        var5[1] = dupTemp$0;
+        var5[0] = dupTemp$0;
+        t dupTemp$1 = hj.a((byte) -86, param3, param2);
+        var6[8] = dupTemp$1;
+        var5[7] = dupTemp$1;
+        var5[5] = dupTemp$1;
         if (!(param0 == 0)) {
             var6[4] = hj.a((byte) -88, param0, 64);
         }

@@ -311,51 +311,41 @@ final class uv {
     }
 
     private final boolean a(int param0, int param1, int param2) {
-        int var4 = 0;
-        int var5 = 0;
-        var5 = Kickabout.field_G;
-        var4 = -30 % ((param1 - 2) / 48);
+        int var5 = Kickabout.field_G;
+        int var4 = -30 % ((param1 - 2) / 48);
         if (param0 != 8) {
-          if ((param0 ^ -1) != -19) {
-            if (param0 != 11) {
-              if (-13 != param0) {
-                if (param0 != 13) {
-                  if (-15 != param0) {
-                    if (20 != param0) {
-                      if (-20 != (param0 ^ -1)) {
-                        return false;
-                      } else {
-                        boolean discarded$1 = mi.a(((uv) this).field_b, ((uv) this).field_k, (byte) 127, ((uv) this).field_l, ((uv) this).field_h);
-                        return true;
-                      }
-                    } else {
-                      hp.b(0);
-                      return true;
-                    }
-                  } else {
+            if ((param0 ^ -1) == -19) {
+                rr.a(((uv) this).field_k, (byte) -70, ((uv) this).field_b);
+                return true;
+            }
+            if (param0 == 11) {
+                gd.a(-100, 0, ((uv) this).field_l, param2);
+                return true;
+            }
+            if (-13 != (param0 ^ -1)) {
+                if (param0 == 13) {
+                    gd.a(63, 2, ((uv) this).field_l, param2);
+                    return true;
+                }
+                if (-15 == (param0 ^ -1)) {
                     uq.a((byte) -122);
                     return true;
-                  }
-                } else {
-                  gd.a(63, 2, ((uv) this).field_l, param2);
-                  return true;
                 }
-              } else {
-                gd.a(11, 1, ((uv) this).field_l, param2);
+                if (20 == param0) {
+                    hp.b(0);
+                    return true;
+                }
+                if (-20 != (param0 ^ -1)) {
+                    return false;
+                }
+                boolean discarded$0 = mi.a(((uv) this).field_b, ((uv) this).field_k, (byte) 127, ((uv) this).field_l, ((uv) this).field_h);
                 return true;
-              }
-            } else {
-              gd.a(-100, 0, ((uv) this).field_l, param2);
-              return true;
             }
-          } else {
-            rr.a(((uv) this).field_k, (byte) -70, ((uv) this).field_b);
+            gd.a(11, 1, ((uv) this).field_l, param2);
             return true;
-          }
-        } else {
-          ig.a(((uv) this).field_b, ((uv) this).field_k, (byte) 88);
-          return true;
         }
+        ig.a(((uv) this).field_b, ((uv) this).field_k, (byte) 88);
+        return true;
     }
 
     final static void a(int param0, int param1, boolean param2, int param3, int param4, boolean param5, int param6, int param7, bu param8, int param9, long param10, int param11, int param12, String param13) {
@@ -401,11 +391,16 @@ final class uv {
             uc.field_E = param13;
             if (vl.field_c.field_q != null) {
               try {
-                pd.field_G = new ew(vl.field_c.field_q, 64, 0);
-              } catch (java.io.IOException decompiledCaughtParameter) {
-                decompiledCaughtException = decompiledCaughtParameter;
-                return;
+                L2: {
+                  pd.field_G = new ew(vl.field_c.field_q, 64, 0);
+                  break L2;
+                }
+              } catch (java.io.IOException decompiledCaughtParameter0) {
+                decompiledCaughtException = decompiledCaughtParameter0;
+                var15 = (IOException) (Object) decompiledCaughtException;
+                throw new RuntimeException(var15.toString());
               }
+              return;
             } else {
               return;
             }
@@ -433,13 +428,14 @@ final class uv {
     }
 
     private final boolean a(int param0, int param1, byte param2) {
-        String var4 = null;
+        Object var4 = null;
+        String var4_ref = null;
         String var5 = null;
         String var10 = null;
         String var11 = null;
         String var12 = null;
         var4 = null;
-        if (param0 == -5) {
+        if ((param0 ^ -1) == -5) {
           L0: {
             var12 = lh.a(param1, 100, ((uv) this).field_k);
             if (var12 != null) {
@@ -449,14 +445,14 @@ final class uv {
               break L0;
             }
           }
-          if (param2 >= -13) {
-            boolean discarded$4 = ((uv) this).a((byte) 0);
+          if (param2 < -13) {
             return true;
           } else {
+            boolean discarded$4 = ((uv) this).a((byte) 0);
             return true;
           }
         } else {
-          if (-6 != param0) {
+          if (-6 != (param0 ^ -1)) {
             if (-7 != (param0 ^ -1)) {
               if (7 == param0) {
                 L1: {
@@ -468,10 +464,10 @@ final class uv {
                     break L1;
                   }
                 }
-                if (param2 >= -13) {
-                  boolean discarded$5 = ((uv) this).a((byte) 0);
+                if (param2 < -13) {
                   return true;
                 } else {
+                  boolean discarded$5 = ((uv) this).a((byte) 0);
                   return true;
                 }
               } else {
@@ -480,7 +476,7 @@ final class uv {
             } else {
               L2: {
                 var10 = il.a(((uv) this).field_k, param1, (byte) 126);
-                var4 = var10;
+                var4_ref = var10;
                 if (var10 != null) {
                   wi.a((String) null, ((uv) this).field_k, 0, 2, var10, -128);
                   break L2;
@@ -488,17 +484,17 @@ final class uv {
                   break L2;
                 }
               }
-              if (param2 < -13) {
+              if (param2 >= -13) {
+                boolean discarded$6 = ((uv) this).a((byte) 0);
                 return true;
               } else {
-                boolean discarded$6 = ((uv) this).a((byte) 0);
                 return true;
               }
             }
           } else {
             L3: {
               var5 = of.a(param1, (byte) 87, ((uv) this).field_k);
-              var4 = var5;
+              var4_ref = var5;
               if (var5 != null) {
                 wi.a((String) null, ((uv) this).field_k, 0, 2, var5, -128);
                 break L3;
@@ -506,10 +502,10 @@ final class uv {
                 break L3;
               }
             }
-            if (param2 < -13) {
+            if (param2 >= -13) {
+              boolean discarded$7 = ((uv) this).a((byte) 0);
               return true;
             } else {
-              boolean discarded$7 = ((uv) this).a((byte) 0);
               return true;
             }
           }

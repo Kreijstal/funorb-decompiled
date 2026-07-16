@@ -275,7 +275,7 @@ abstract class pa extends ga implements jf {
     }
 
     final static oh a(String param0, byte param1) {
-        String var2 = null;
+        Object var2 = null;
         oh var3 = null;
         String var4 = null;
         int var5 = 0;
@@ -285,15 +285,15 @@ abstract class pa extends ga implements jf {
         if (nk.field_a != null) {
           L0: {
             var6 = (CharSequence) (Object) param0;
-            var2 = fm.a(var6, -85);
+            var2 = (Object) (Object) fm.a(var6, -85);
             if (var2 == null) {
-              var2 = (String) (Object) var6;
+              var2 = (Object) (Object) var6;
               break L0;
             } else {
               break L0;
             }
           }
-          var3 = (oh) (Object) nk.field_a.a(93, (long)var2.hashCode());
+          var3 = (oh) (Object) nk.field_a.a(93, (long)((String) var2).hashCode());
           if (param1 == -66) {
             L1: while (true) {
               if (var3 != null) {
@@ -307,7 +307,7 @@ abstract class pa extends ga implements jf {
                     break L2;
                   }
                 }
-                if (!var4.equals((Object) (Object) var2)) {
+                if (!var4.equals(var2)) {
                   var3 = (oh) (Object) nk.field_a.b((byte) -117);
                   continue L1;
                 } else {

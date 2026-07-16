@@ -103,21 +103,17 @@ final class jl extends fd implements ta {
     }
 
     final boolean a(fi param0, char param1, int param2, int param3) {
-        int var5 = 0;
-        if (super.a(param0, param1, param2, 13)) {
-          return true;
-        } else {
-          if (-99 == param2) {
-            return ((jl) this).b(2, param0);
-          } else {
-            if (-100 == param2) {
-              return ((jl) this).a(-16234, param0);
-            } else {
-              var5 = -63 % ((-75 - param3) / 36);
-              return false;
-            }
-          }
+        if (!(!super.a(param0, param1, param2, 13))) {
+            return true;
         }
+        if (!(-99 != (param2 ^ -1))) {
+            return ((jl) this).b(2, param0);
+        }
+        if (-100 == (param2 ^ -1)) {
+            return ((jl) this).a(-16234, param0);
+        }
+        int var5 = -63 % ((-75 - param3) / 36);
+        return false;
     }
 
     public jl() {

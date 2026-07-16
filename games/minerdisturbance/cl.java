@@ -54,13 +54,27 @@ final class cl extends kn implements wg, sh {
     }
 
     private final void r(int param0) {
-        if (!dl.a(55)) {
-            // if_icmple L61
-            // if_icmplt L41
-        } else {
-            sj.a(((cl) this).field_L.field_s, 19260, ((cl) this).field_P.field_s);
+        int var2 = 0;
+        L0: {
+          L1: {
+            if (dl.a(55)) {
+              break L1;
+            } else {
+              if (-1 <= (((cl) this).field_P.field_s.length() ^ -1)) {
+                break L0;
+              } else {
+                if (0 < ((cl) this).field_L.field_s.length()) {
+                  break L1;
+                } else {
+                  break L0;
+                }
+              }
+            }
+          }
+          sj.a(((cl) this).field_L.field_s, 19260, ((cl) this).field_P.field_s);
+          break L0;
         }
-        int var2 = 33 % ((param0 - 78) / 45);
+        var2 = 33 % ((param0 - 78) / 45);
     }
 
     public final void b(ui param0, int param1) {
@@ -254,8 +268,7 @@ final class cl extends kn implements wg, sh {
                 break L6;
               }
             }
-            new hc(stackIn_18_3, (rm) null);
-            ((cl) this).field_Q = stackIn_18_1;
+            ((cl) this).field_Q = new hc(stackIn_18_3, (rm) null);
             if (!((cl) this).field_K) {
               break L5;
             } else {
@@ -339,11 +352,13 @@ final class cl extends kn implements wg, sh {
           }
         }
         L13: {
-          var12 = new am(10, ((cl) this).field_t, ((cl) this).field_v - 20, 25, (fe) (Object) ((cl) this).field_P, false, 80, 3, var7, 16777215, var8);
-          ((cl) this).a(-1, (fe) (Object) new am(10, ((cl) this).field_t, ((cl) this).field_v - 20, 25, (fe) (Object) ((cl) this).field_P, false, 80, 3, var7, 16777215, var8));
+          am dupTemp$2 = new am(10, ((cl) this).field_t, ((cl) this).field_v - 20, 25, (fe) (Object) ((cl) this).field_P, false, 80, 3, var7, 16777215, var8);
+          var12 = dupTemp$2;
+          ((cl) this).a(-1, (fe) (Object) dupTemp$2);
           ((cl) this).field_t = ((cl) this).field_t + (((fe) (Object) var12).field_q + 5);
-          var13 = new am(10, ((cl) this).field_t, ((cl) this).field_v - 20, 25, (fe) (Object) ((cl) this).field_L, false, 80, 3, var7, 16777215, tk.field_c);
-          ((cl) this).a(-1, (fe) (Object) new am(10, ((cl) this).field_t, ((cl) this).field_v - 20, 25, (fe) (Object) ((cl) this).field_L, false, 80, 3, var7, 16777215, tk.field_c));
+          am dupTemp$3 = new am(10, ((cl) this).field_t, ((cl) this).field_v - 20, 25, (fe) (Object) ((cl) this).field_L, false, 80, 3, var7, 16777215, tk.field_c);
+          var13 = dupTemp$3;
+          ((cl) this).a(-1, (fe) (Object) dupTemp$3);
           ((cl) this).field_S.field_y = (rm) this;
           ((cl) this).field_t = ((cl) this).field_t + (((fe) (Object) var13).field_q - -5);
           if (null == ((cl) this).field_J) {

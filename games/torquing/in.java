@@ -61,15 +61,19 @@ final class in {
             ih.field_b = param2;
             ul.field_f = param11;
             if (null == u.field_t.field_c) {
-              var15 = (IOException) (Object) decompiledCaughtException;
-              throw new RuntimeException(var15.toString());
+              return;
             } else {
               try {
-                jl.field_W = new o(u.field_t.field_c, 64, 0);
-              } catch (java.io.IOException decompiledCaughtParameter) {
-                decompiledCaughtException = decompiledCaughtParameter;
-                return;
+                L3: {
+                  jl.field_W = new o(u.field_t.field_c, 64, 0);
+                  break L3;
+                }
+              } catch (java.io.IOException decompiledCaughtParameter0) {
+                decompiledCaughtException = decompiledCaughtParameter0;
+                var15 = (IOException) (Object) decompiledCaughtException;
+                throw new RuntimeException(var15.toString());
               }
+              return;
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;

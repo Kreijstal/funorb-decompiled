@@ -207,10 +207,13 @@ final class qf {
         ((qf) this).field_n = param0;
         int var2 = ga.a(8192, true, ea.field_r);
         int var3 = 1024;
-        ((qf) this).field_q = -134217728 + ga.a(268435456, true, ea.field_r);
-        ((qf) this).field_m = af.c((byte) -128, var2) * var3;
-        ((qf) this).field_a = o.a(var2, (byte) 77) * var3;
-        ((qf) this).field_g = new int[]{-134217728 + ga.a(268435456, true, ea.field_r) >> -219057171, af.c((byte) -128, var2) * var3 >> -277340819, o.a(var2, (byte) 77) * var3 >> 2115785453, 65536, 0, 0, 0, 65536, 0, 0, 0, 65536};
+        int dupTemp$0 = -134217728 + ga.a(268435456, true, ea.field_r);
+        ((qf) this).field_q = dupTemp$0;
+        int dupTemp$1 = af.c((byte) -128, var2) * var3;
+        ((qf) this).field_m = dupTemp$1;
+        int dupTemp$2 = o.a(var2, (byte) 77) * var3;
+        ((qf) this).field_a = dupTemp$2;
+        ((qf) this).field_g = new int[]{dupTemp$0 >> -219057171, dupTemp$1 >> -277340819, dupTemp$2 >> 2115785453, 65536, 0, 0, 0, 65536, 0, 0, 0, 65536};
         ((qf) this).field_b = -(65536 + ga.a(131072, true, ea.field_r));
         ((qf) this).field_c = ga.a(9, true, ea.field_r) - 5;
         ((qf) this).field_h = -5 + ga.a(9, true, ea.field_r);

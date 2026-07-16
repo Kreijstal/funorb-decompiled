@@ -353,6 +353,7 @@ final class nc extends wl {
 
     final static nc a(kl param0, int param1, int param2) {
         try {
+            nc var4_ref = null;
             if (!nc.a(param0)) {
                 boolean discarded$0 = param0.a(param1, param2, (byte) -66);
                 return null;
@@ -361,13 +362,13 @@ final class nc extends wl {
             if (var3 == null) {
                 return null;
             }
-            nc var4 = null;
+            Object var4 = null;
             try {
-                var4 = new nc(var3);
+                var4_ref = new nc(var3);
             } catch (IOException iOException) {
                 iOException.printStackTrace();
             }
-            return var4;
+            return var4_ref;
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
@@ -416,8 +417,9 @@ final class nc extends wl {
                       break L3;
                     }
                   }
+                  int incrementValue$1 = var2;
                   var2++;
-                  var1[var2] = (byte)(var7 - 128);
+                  var1[incrementValue$1] = (byte)(var7 - 128);
                   var6++;
                   continue L2;
                 } else {
@@ -451,7 +453,6 @@ final class nc extends wl {
         int var16 = 0;
         int var17_int = 0;
         Object var17 = null;
-        float[] var17_array = null;
         int var18_int = 0;
         float[] var18 = null;
         int var19 = 0;
@@ -967,7 +968,7 @@ final class nc extends wl {
                   var50 = var54;
                   var46 = var50;
                   var40 = var46;
-                  var17_array = var40;
+                  var17 = (Object) (Object) var40;
                   if (((nc) this).field_p) {
                     break L36;
                   } else {
@@ -1025,7 +1026,7 @@ final class nc extends wl {
               }
             }
             ((nc) this).field_p = stackIn_111_1 != 0;
-            return var17_array;
+            return (float[]) var17;
           } else {
             var42 = field_C[var14.field_d[var17_int]];
             var55 = field_r;
@@ -1038,6 +1039,7 @@ final class nc extends wl {
 
     final static nc a(kl param0, String param1, String param2) {
         try {
+            nc var4_ref = null;
             if (!nc.a(param0)) {
                 boolean discarded$0 = param0.a(param2, param1, -127);
                 return null;
@@ -1046,13 +1048,13 @@ final class nc extends wl {
             if (var3 == null) {
                 return null;
             }
-            nc var4 = null;
+            Object var4 = null;
             try {
-                var4 = new nc(var3);
+                var4_ref = new nc(var3);
             } catch (IOException iOException) {
                 iOException.printStackTrace();
             }
-            return var4;
+            return var4_ref;
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
@@ -1150,8 +1152,9 @@ final class nc extends wl {
                         break L8;
                       }
                     }
+                    int incrementValue$1 = var3;
                     var3++;
-                    ((nc) this).field_Q[var3] = (byte)(var6 - 128);
+                    ((nc) this).field_Q[incrementValue$1] = (byte)(var6 - 128);
                     var5++;
                     continue L6;
                   }

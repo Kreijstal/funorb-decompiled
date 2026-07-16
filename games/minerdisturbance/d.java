@@ -70,10 +70,8 @@ final class d {
         if (param1 == -31479) {
           var2 = 0;
           if (0 <= param0) {
-            if (-65537 <= param0) {
+            if (-65537 < (param0 ^ -1)) {
               L0: {
-                var2 += 16;
-                param0 = param0 >>> 16;
                 if (256 <= param0) {
                   param0 = param0 >>> 8;
                   var2 += 8;
@@ -83,7 +81,7 @@ final class d {
                 }
               }
               L1: {
-                if (-17 < param0) {
+                if (-17 < (param0 ^ -1)) {
                   break L1;
                 } else {
                   param0 = param0 >>> 4;
@@ -92,7 +90,7 @@ final class d {
                 }
               }
               L2: {
-                if (-5 <= param0) {
+                if (-5 >= (param0 ^ -1)) {
                   param0 = param0 >>> 2;
                   var2 += 2;
                   break L2;
@@ -112,6 +110,8 @@ final class d {
               return var2 - -param0;
             } else {
               L4: {
+                var2 += 16;
+                param0 = param0 >>> 16;
                 if (256 <= param0) {
                   param0 = param0 >>> 8;
                   var2 += 8;
@@ -121,7 +121,7 @@ final class d {
                 }
               }
               L5: {
-                if (-17 < param0) {
+                if (-17 < (param0 ^ -1)) {
                   break L5;
                 } else {
                   param0 = param0 >>> 4;
@@ -130,7 +130,7 @@ final class d {
                 }
               }
               L6: {
-                if (-5 <= param0) {
+                if (-5 >= (param0 ^ -1)) {
                   param0 = param0 >>> 2;
                   var2 += 2;
                   break L6;
@@ -162,7 +162,7 @@ final class d {
               }
             }
             L9: {
-              if (-17 < param0) {
+              if (-17 < (param0 ^ -1)) {
                 break L9;
               } else {
                 param0 = param0 >>> 4;
@@ -171,7 +171,7 @@ final class d {
               }
             }
             L10: {
-              if (-5 <= param0) {
+              if (-5 >= (param0 ^ -1)) {
                 param0 = param0 >>> 2;
                 var2 += 2;
                 break L10;
@@ -180,7 +180,7 @@ final class d {
               }
             }
             L11: {
-              if (param0 <= -2) {
+              if ((param0 ^ -1) <= -2) {
                 param0 = param0 >>> 1;
                 var2++;
                 break L11;

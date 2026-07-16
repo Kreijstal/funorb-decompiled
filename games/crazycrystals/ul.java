@@ -2,6 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 import java.util.*;
+import java.util.Vector;
 
 final class ul extends um {
     private int field_h;

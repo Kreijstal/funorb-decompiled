@@ -145,7 +145,7 @@ final class d {
     final static void a(int param0, byte param1, boolean param2) {
         int var3 = 0;
         ko var4 = null;
-        eo var5_ref = null;
+        Object var5_ref = null;
         int var5 = 0;
         eo var6 = null;
         int var7 = 0;
@@ -153,7 +153,7 @@ final class d {
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
-        String var13_ref = null;
+        String var13_ref_String = null;
         int var13 = 0;
         int var14 = 0;
         kn var16 = null;
@@ -337,7 +337,7 @@ final class d {
                 if (var7 == 0) {
                   break L11;
                 } else {
-                  cp.field_c.field_Mb.a((vh) (Object) var5_ref, 2, (vh) (Object) var6, -41);
+                  cp.field_c.field_Mb.a((vh) var5_ref, 2, (vh) (Object) var6, -41);
                   break L11;
                 }
               }
@@ -371,8 +371,8 @@ final class d {
                 } else {
                   dr.a(var6.field_Zb, -1, 0L, -1, cp.field_c.field_Sb, var6.field_Yb, 32540, (vh) (Object) var6, (int[]) null);
                   var16 = vl.field_m;
-                  var13_ref = tp.field_f;
-                  var16.field_n.a(var13_ref, 17130, 7);
+                  var13_ref_String = tp.field_f;
+                  var16.field_n.a(var13_ref_String, 17130, 7);
                   var17 = vl.field_m;
                   var13 = lq.field_W;
                   var14 = ua.field_o;
@@ -380,7 +380,7 @@ final class d {
                   break L14;
                 }
               }
-              var5_ref = var6;
+              var5_ref = (Object) (Object) var6;
               var6 = (eo) (Object) var4.f((byte) -5);
               continue L3;
             }

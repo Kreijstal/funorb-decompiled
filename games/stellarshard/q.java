@@ -72,8 +72,9 @@ final class q {
                   param2[var6] = var11;
                   var12 = param3[var10];
                   param3[var10] = param3[var6];
+                  int incrementValue$1 = var6;
                   var6++;
-                  param3[var6] = var12;
+                  param3[incrementValue$1] = var12;
                   var10++;
                   continue L2;
                 } else {

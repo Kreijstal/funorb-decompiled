@@ -49,7 +49,7 @@ class rk extends wl {
         if (param0 == -2) {
           var9 = nk.field_N;
           var2 = var9.f(param0 + 257);
-          if (-1 == var2) {
+          if (-1 == (var2 ^ -1)) {
             var8 = (tc) (Object) df.field_c.b((byte) 107);
             if (var8 == null) {
               ql.a(-78);
@@ -57,7 +57,7 @@ class rk extends wl {
             } else {
               L0: {
                 var4 = var9.f(255);
-                if (var4 != 0) {
+                if ((var4 ^ -1) != -1) {
                   var11 = new byte[var4];
                   var9.a(true, var4, var11, 0);
                   break L0;
@@ -76,7 +76,11 @@ class rk extends wl {
               }
             }
           } else {
-            if (-2 == var2) {
+            if (-2 != (var2 ^ -1)) {
+              rg.a((Throwable) null, "A1: " + ni.c(6), -562);
+              ql.a(param0 ^ 117);
+              return;
+            } else {
               var3 = var9.i(param0 + 257);
               var4_ref_ie = (ie) (Object) pa.field_e.b((byte) 61);
               L1: while (true) {
@@ -89,7 +93,7 @@ class rk extends wl {
                     return;
                   }
                 } else {
-                  if (var3 != var4_ref_ie.field_k) {
+                  if ((var3 ^ -1) != (var4_ref_ie.field_k ^ -1)) {
                     var4_ref_ie = (ie) (Object) pa.field_e.d(8192);
                     continue L1;
                   } else {
@@ -103,17 +107,13 @@ class rk extends wl {
                   }
                 }
               }
-            } else {
-              rg.a((Throwable) null, "A1: " + ni.c(6), -562);
-              ql.a(param0 ^ 117);
-              return;
             }
           }
         } else {
           field_m = null;
           var9 = nk.field_N;
           var2 = var9.f(param0 + 257);
-          if (-1 == var2) {
+          if (-1 == (var2 ^ -1)) {
             var8 = (tc) (Object) df.field_c.b((byte) 107);
             if (var8 == null) {
               ql.a(-78);
@@ -121,7 +121,7 @@ class rk extends wl {
             } else {
               L2: {
                 var4 = var9.f(255);
-                if (var4 != 0) {
+                if ((var4 ^ -1) != -1) {
                   var11 = new byte[var4];
                   var9.a(true, var4, var11, 0);
                   break L2;
@@ -140,12 +140,16 @@ class rk extends wl {
               }
             }
           } else {
-            if (-2 == var2) {
+            if (-2 != (var2 ^ -1)) {
+              rg.a((Throwable) null, "A1: " + ni.c(6), -562);
+              ql.a(param0 ^ 117);
+              return;
+            } else {
               var3 = var9.i(param0 + 257);
               var4_ref_ie = (ie) (Object) pa.field_e.b((byte) 61);
               L3: while (true) {
                 if (var4_ref_ie != null) {
-                  if (var3 != var4_ref_ie.field_k) {
+                  if ((var3 ^ -1) != (var4_ref_ie.field_k ^ -1)) {
                     var4_ref_ie = (ie) (Object) pa.field_e.d(8192);
                     continue L3;
                   } else {
@@ -167,10 +171,6 @@ class rk extends wl {
                   }
                 }
               }
-            } else {
-              rg.a((Throwable) null, "A1: " + ni.c(6), -562);
-              ql.a(param0 ^ 117);
-              return;
             }
           }
         }

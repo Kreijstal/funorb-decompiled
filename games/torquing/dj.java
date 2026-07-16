@@ -53,8 +53,9 @@ final class dj {
             param3.field_u[param3.field_k] = (short)param7;
             param3.field_n[param3.field_k] = (short)param0;
             param3.field_x[param3.field_k] = (short)param1;
+            int fieldTemp$1 = param3.field_k;
             param3.field_k = param3.field_k + 1;
-            return param3.field_k;
+            return fieldTemp$1;
           } else {
             if (param7 == param3.field_u[var14]) {
               if (param0 == param3.field_n[var14]) {

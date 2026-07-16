@@ -45,7 +45,7 @@ final class ml {
     public static void a(int param0) {
         field_b = null;
         if (param0 < 69) {
-            field_b = (int[]) null;
+            field_b = null;
         }
     }
 

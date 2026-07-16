@@ -17,18 +17,25 @@ final class ie {
             Throwable decompiledCaughtException = null;
             if (param1) {
               try {
-                var4 = param0.getCodeBase();
-                var3 = nn.a(99, param0, var4).getFile();
-                Object discarded$6 = lk.a("updatelinks", param0, 16715, new Object[2]);
-                Object discarded$7 = lk.a("updatelinks", param0, 16715, new Object[2]);
-                Object discarded$8 = lk.a("updatelinks", param0, 16715, new Object[2]);
-                Object discarded$9 = lk.a("updatelinks", param0, 16715, new Object[2]);
-                Object discarded$10 = lk.a("updatelinks", param0, 16715, new Object[2]);
-                Object discarded$11 = lk.a("updatelinks", param0, 16715, new Object[2]);
-              } catch (java.lang.Throwable decompiledCaughtParameter) {
-                decompiledCaughtException = decompiledCaughtParameter;
+                L0: {
+                  var4 = param0.getCodeBase();
+                  var3 = nn.a(99, param0, var4).getFile();
+                  Object discarded$6 = lk.a("updatelinks", param0, 16715, new Object[2]);
+                  Object discarded$7 = lk.a("updatelinks", param0, 16715, new Object[2]);
+                  Object discarded$8 = lk.a("updatelinks", param0, 16715, new Object[2]);
+                  Object discarded$9 = lk.a("updatelinks", param0, 16715, new Object[2]);
+                  Object discarded$10 = lk.a("updatelinks", param0, 16715, new Object[2]);
+                  Object discarded$11 = lk.a("updatelinks", param0, 16715, new Object[2]);
+                  break L0;
+                }
+              } catch (java.lang.Throwable decompiledCaughtParameter0) {
+                decompiledCaughtException = decompiledCaughtParameter0;
+                L1: {
+                  var2 = decompiledCaughtException;
+                  break L1;
+                }
               }
-              var2 = decompiledCaughtException;
+              return;
             } else {
               return;
             }
@@ -45,14 +52,16 @@ final class ie {
         if (param2) {
             ((ie) this).a((byte) 47);
             for (var6 = 0; var6 < 5; var6++) {
+                int fieldTemp$0 = ((ie) this).field_b;
                 ((ie) this).field_b = ((ie) this).field_b + 1;
-                ((ie) this).field_c.a((byte) -126, (pi) (Object) new dn(((ie) this).field_b, ke.a(32, -21937, ((ie) this).field_d) + param4, param3 + ke.a(32, -21937, ((ie) this).field_d), param1 - -ke.a(32, -21937, ((ie) this).field_d), param0 - -ke.a(32, -21937, ((ie) this).field_d)));
+                ((ie) this).field_c.a((byte) -126, (pi) (Object) new dn(fieldTemp$0, ke.a(32, -21937, ((ie) this).field_d) + param4, param3 + ke.a(32, -21937, ((ie) this).field_d), param1 - -ke.a(32, -21937, ((ie) this).field_d), param0 - -ke.a(32, -21937, ((ie) this).field_d)));
             }
             return;
         }
         for (var6 = 0; var6 < 5; var6++) {
+            int fieldTemp$1 = ((ie) this).field_b;
             ((ie) this).field_b = ((ie) this).field_b + 1;
-            ((ie) this).field_c.a((byte) -126, (pi) (Object) new dn(((ie) this).field_b, ke.a(32, -21937, ((ie) this).field_d) + param4, param3 + ke.a(32, -21937, ((ie) this).field_d), param1 - -ke.a(32, -21937, ((ie) this).field_d), param0 - -ke.a(32, -21937, ((ie) this).field_d)));
+            ((ie) this).field_c.a((byte) -126, (pi) (Object) new dn(fieldTemp$1, ke.a(32, -21937, ((ie) this).field_d) + param4, param3 + ke.a(32, -21937, ((ie) this).field_d), param1 - -ke.a(32, -21937, ((ie) this).field_d), param0 - -ke.a(32, -21937, ((ie) this).field_d)));
         }
     }
 

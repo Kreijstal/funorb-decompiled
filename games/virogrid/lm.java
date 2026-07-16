@@ -26,16 +26,15 @@ final class lm implements Runnable {
     }
 
     final static void a(int param0) {
-        qg var1_ref = null;
         qg var1 = (qg) (Object) sg.field_m.b(-109);
         if (var1 == null) {
-            var1_ref = new qg();
+            var1 = new qg();
         }
-        var1_ref.a(df.field_d, df.field_i, df.field_h, (byte) -45, df.field_e, df.field_f, df.field_g, df.field_k);
+        var1.a(df.field_d, df.field_i, df.field_h, (byte) -45, df.field_e, df.field_f, df.field_g, df.field_k);
         if (param0 != 0) {
             return;
         }
-        jk.field_a.a((l) (Object) var1_ref, (byte) -37);
+        jk.field_a.a((l) (Object) var1, (byte) -37);
     }
 
     final static void a(int param0, int param1, boolean param2, int param3, int param4) {
@@ -314,8 +313,8 @@ final class lm implements Runnable {
         int var8 = 0;
         int var9 = 0;
         mg var10 = null;
-        mg var11 = null;
-        mg var12 = null;
+        Object var11 = null;
+        Object var12 = null;
         mg var13 = null;
         mg var14 = null;
         int[] var18 = null;
@@ -332,7 +331,7 @@ final class lm implements Runnable {
             break L0;
           } else {
             var13 = var10.d();
-            var11 = var13;
+            var11 = (Object) (Object) var13;
             var13.b();
             df.b(0, 0, 5, 0);
             df.b(0, 1, 3, 0);
@@ -348,7 +347,7 @@ final class lm implements Runnable {
             break L1;
           } else {
             var14 = var10.d();
-            var12 = var14;
+            var12 = (Object) (Object) var14;
             var14.b();
             df.b(11, 0, 5, 0);
             df.b(13, 1, 3, 0);
@@ -359,7 +358,7 @@ final class lm implements Runnable {
           }
         }
         df.a(var18, var8, var9);
-        return new mg[]{null, null, null, var11, var10, var12, null, null, null};
+        return new mg[]{null, null, null, (mg) var11, var10, (mg) var12, null, null, null};
     }
 
     static long a(long param0, long param1) {

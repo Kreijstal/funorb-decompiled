@@ -12,13 +12,13 @@ class wd extends lk {
 
     void a(int param0, int param1, int param2, lk param3) {
         super.a(param0, param1, param2, param3);
-        if (-1 != ((wd) this).field_u) {
-          if (((wd) this).field_u != n.field_m) {
+        if (-1 != (((wd) this).field_u ^ -1)) {
+          if ((((wd) this).field_u ^ -1) != (n.field_m ^ -1)) {
             if (!((wd) this).c(uc.field_C, 0, param2, param1, ll.field_y)) {
               ((wd) this).a(ll.field_y, param1, param3, param2, 34, uc.field_C);
               return;
             } else {
-              if (-1 == n.field_m) {
+              if (-1 == (n.field_m ^ -1)) {
                 ((wd) this).a(ll.field_y - param2, uc.field_C - param1, (byte) -127, ((wd) this).field_u);
                 ((wd) this).a(ll.field_y, param1, param3, param2, 34, uc.field_C);
                 return;
@@ -215,10 +215,10 @@ class wd extends lk {
         int var2 = 0;
         if (param1 < -71) {
           if (0 != param0) {
-            if (param0 < -1) {
+            if ((param0 ^ -1) < -1) {
               L0: {
                 var2 = 1;
-                if (-65536 < param0) {
+                if (-65536 > (param0 ^ -1)) {
                   var2 += 16;
                   param0 = param0 >> 16;
                   break L0;
@@ -254,7 +254,7 @@ class wd extends lk {
                 }
               }
               L4: {
-                if (param0 < -2) {
+                if ((param0 ^ -1) < -2) {
                   var2++;
                   param0 = param0 >> 1;
                   break L4;
@@ -266,7 +266,7 @@ class wd extends lk {
             } else {
               L5: {
                 var2 = 2;
-                if (65535 > param0) {
+                if (65535 < (param0 ^ -1)) {
                   param0 = param0 >> 16;
                   var2 += 16;
                   break L5;
@@ -284,7 +284,7 @@ class wd extends lk {
                 }
               }
               L7: {
-                if (param0 > 15) {
+                if ((param0 ^ -1) > 15) {
                   var2 += 4;
                   param0 = param0 >> 4;
                   break L7;
@@ -293,7 +293,7 @@ class wd extends lk {
                 }
               }
               L8: {
-                if (3 <= param0) {
+                if (3 >= (param0 ^ -1)) {
                   break L8;
                 } else {
                   var2 += 2;
@@ -318,10 +318,10 @@ class wd extends lk {
         } else {
           field_x = false;
           if (0 != param0) {
-            if (param0 < -1) {
+            if ((param0 ^ -1) < -1) {
               L10: {
                 var2 = 1;
-                if (-65536 < param0) {
+                if (-65536 > (param0 ^ -1)) {
                   var2 += 16;
                   param0 = param0 >> 16;
                   break L10;
@@ -357,7 +357,7 @@ class wd extends lk {
                 }
               }
               L14: {
-                if (param0 < -2) {
+                if ((param0 ^ -1) < -2) {
                   var2++;
                   param0 = param0 >> 1;
                   break L14;
@@ -369,7 +369,7 @@ class wd extends lk {
             } else {
               L15: {
                 var2 = 2;
-                if (65535 > param0) {
+                if (65535 < (param0 ^ -1)) {
                   param0 = param0 >> 16;
                   var2 += 16;
                   break L15;
@@ -387,7 +387,7 @@ class wd extends lk {
                 }
               }
               L17: {
-                if (param0 > 15) {
+                if ((param0 ^ -1) > 15) {
                   var2 += 4;
                   param0 = param0 >> 4;
                   break L17;
@@ -396,7 +396,7 @@ class wd extends lk {
                 }
               }
               L18: {
-                if (3 <= param0) {
+                if (3 >= (param0 ^ -1)) {
                   break L18;
                 } else {
                   var2 += 2;

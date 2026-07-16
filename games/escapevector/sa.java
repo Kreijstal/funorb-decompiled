@@ -225,7 +225,7 @@ final class sa extends hg {
     }
 
     final void a(int param0, byte param1, int param2) {
-        ed var4 = null;
+        Object var4 = null;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
@@ -255,7 +255,7 @@ final class sa extends hg {
               } else {
                 L1: {
                   var5 = ((sa) this).field_s;
-                  var4 = ((sa) this).field_t;
+                  var4 = (Object) (Object) ((sa) this).field_t;
                   var6 = ((sa) this).field_m;
                   if ((var5 ^ -1) <= -1) {
                     break L1;
@@ -312,7 +312,7 @@ final class sa extends hg {
                         break L6;
                       } else {
                         ((sa) this).field_i.e(var11 + var7, var10);
-                        var4.c(var5 + var11 - -var7, var10 - -var6, this.a((byte) 122));
+                        ((ed) var4).c(var5 + var11 - -var7, var10 - -var6, this.a((byte) 122));
                         break L6;
                       }
                     }
@@ -370,6 +370,7 @@ final class sa extends hg {
 
     final static void a(int param0, byte param1) {
         tj var2 = null;
+        String var2_ref = null;
         String var3 = null;
         ed[] var4 = null;
         String[] var5 = null;
@@ -382,11 +383,11 @@ final class sa extends hg {
             return;
         }
         if (!(-3 != (param0 ^ -1))) {
-            var2 = (tj) (Object) "vengeance_intro";
+            var2_ref = "vengeance_intro";
             var3 = "scene";
             var4 = tm.field_cb;
             var5 = me.field_o;
-            var6 = new tj((String) (Object) var2, var3, var4, var5, true);
+            var6 = new tj(var2_ref, var3, var4, var5, true);
             re.a(1820, var6);
         }
     }

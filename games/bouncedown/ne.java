@@ -253,13 +253,13 @@ final class ne extends ug {
         var9 = Bounce.field_N;
         if (param0 == 18) {
           L0: {
-            if (-2 != param2) {
-              if (-3 == param2) {
+            if (-2 != (param2 ^ -1)) {
+              if (-3 == (param2 ^ -1)) {
                 var4 = param1.d((byte) -83);
                 ((ne) this).field_s = new int[var4];
                 var5 = 0;
                 L1: while (true) {
-                  if (var5 >= var4) {
+                  if ((var5 ^ -1) <= (var4 ^ -1)) {
                     break L0;
                   } else {
                     ((ne) this).field_s[var5] = param1.a(-1640531527);
@@ -277,26 +277,28 @@ final class ne extends ug {
                     if (var4 <= var5) {
                       break L0;
                     } else {
-                      var6 = param1.a(-1640531527);
-                      var7 = jd.a(param0 + 21296, var6);
-                      if (var7 != null) {
-                        ((ne) this).field_t[var5] = var6;
-                        ((ne) this).field_o[var5] = new int[var7.field_c];
-                        var8 = 0;
-                        L3: while (true) {
-                          if (var7.field_c > var8) {
-                            ((ne) this).field_o[var5][var8] = param1.a(-1640531527);
-                            var8++;
-                            continue L3;
-                          } else {
-                            var5++;
-                            continue L2;
+                      L3: {
+                        var6 = param1.a(-1640531527);
+                        var7 = jd.a(param0 + 21296, var6);
+                        if (var7 == null) {
+                          break L3;
+                        } else {
+                          ((ne) this).field_t[var5] = var6;
+                          ((ne) this).field_o[var5] = new int[var7.field_c];
+                          var8 = 0;
+                          L4: while (true) {
+                            if ((var7.field_c ^ -1) >= (var8 ^ -1)) {
+                              break L3;
+                            } else {
+                              ((ne) this).field_o[var5][var8] = param1.a(-1640531527);
+                              var8++;
+                              continue L4;
+                            }
                           }
                         }
-                      } else {
-                        var5++;
-                        continue L2;
                       }
+                      var5++;
+                      continue L2;
                     }
                   }
                 } else {

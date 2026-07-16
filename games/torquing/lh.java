@@ -130,7 +130,7 @@ final class lh {
         byte[] var16 = null;
         ((lh) this).field_a = param1;
         ((lh) this).field_k = param0.i((byte) -101) - -1;
-        int discarded$1 = param0.i((byte) -101);
+        int discarded$7 = param0.i((byte) -101);
         ((lh) this).field_M = param0.i((byte) -101) - -1;
         ((lh) this).field_d = 1 + param0.i((byte) -101);
         ((lh) this).field_r = 1 + param0.i((byte) -101);
@@ -183,6 +183,7 @@ final class lh {
                     L3: while (true) {
                       if (((lh) this).field_r <= var6) {
                         this.a((byte) -71);
+                        return;
                       } else {
                         var7 = param0.i((byte) -101);
                         if (0 < var7) {
@@ -245,38 +246,43 @@ final class lh {
                                                 }
                                               }
                                             } else {
-                                              var4 = var4 + param0.i((byte) -101);
-                                              ((lh) this).field_f[var6][var11] = ie.a(var4 + param0.i((byte) -101), 255);
+                                              int dupTemp$8 = var4 + param0.i((byte) -101);
+                                              var4 = dupTemp$8;
+                                              ((lh) this).field_f[var6][var11] = ie.a(dupTemp$8, 255);
                                               var11++;
                                               continue L8;
                                             }
                                           }
                                         } else {
-                                          var10 = var10 + param0.g((byte) -116);
-                                          var4 = var4 + (var10 + param0.g((byte) -116));
-                                          ((lh) this).field_g[var6][var11] = var4 + (var10 + param0.g((byte) -116));
+                                          int dupTemp$9 = var10 + param0.g((byte) -116);
+                                          var10 = dupTemp$9;
+                                          var4 = var4 + dupTemp$9;
+                                          ((lh) this).field_g[var6][var11] = var4 + dupTemp$9;
                                           var11++;
                                           continue L7;
                                         }
                                       }
                                     } else {
-                                      var4 = var4 + param0.i((byte) -101);
-                                      ((lh) this).field_D[var6][var11] = ie.a(var4 + param0.i((byte) -101), 255);
+                                      int dupTemp$10 = var4 + param0.i((byte) -101);
+                                      var4 = dupTemp$10;
+                                      ((lh) this).field_D[var6][var11] = ie.a(dupTemp$10, 255);
                                       var11++;
                                       continue L6;
                                     }
                                   }
                                 } else {
-                                  var10 = var10 + param0.g((byte) -119);
-                                  var4 = var4 + (var10 + param0.g((byte) -119));
-                                  ((lh) this).field_e[var6][var11] = var4 + (var10 + param0.g((byte) -119));
+                                  int dupTemp$11 = var10 + param0.g((byte) -119);
+                                  var10 = dupTemp$11;
+                                  var4 = var4 + dupTemp$11;
+                                  ((lh) this).field_e[var6][var11] = var4 + dupTemp$11;
                                   var11++;
                                   continue L5;
                                 }
                               }
                             } else {
-                              var4 = var4 + param0.i((byte) -101);
-                              ((lh) this).field_l[var6][var8] = ie.a(var4 + param0.i((byte) -101), 255) + var5;
+                              int dupTemp$12 = var4 + param0.i((byte) -101);
+                              var4 = dupTemp$12;
+                              ((lh) this).field_l[var6][var8] = ie.a(dupTemp$12, 255) + var5;
                               var8++;
                               continue L4;
                             }
@@ -309,8 +315,9 @@ final class lh {
               }
             }
           } else {
-            var4 = var4 + param0.i((byte) -101);
-            ((lh) this).field_K[var5] = ie.a(var4 + param0.i((byte) -101), 255);
+            int dupTemp$13 = var4 + param0.i((byte) -101);
+            var4 = dupTemp$13;
+            ((lh) this).field_K[var5] = ie.a(dupTemp$13, 255);
             var5++;
             continue L0;
           }

@@ -55,9 +55,7 @@ final class pi {
         int var33_int = 0;
         int var34_int = 0;
         String var34 = null;
-        String var34_ref = null;
         Object var35 = null;
-        String var35_ref = null;
         int var36 = 0;
         int var37_int = 0;
         StringBuilder var37 = null;
@@ -349,8 +347,7 @@ final class pi {
                   }
                 }
                 L5: {
-                  new km(stackIn_12_3, stackIn_12_4);
-                  stackIn_12_0.field_Yb = stackIn_12_1;
+                  stackIn_12_0.field_Yb = new km(stackIn_12_3, stackIn_12_4);
                   var12.a(0, var12.field_Yb);
                   var12.field_jc = new km[vb.field_h];
                   var12.field_rc = new km(0L, (km) null);
@@ -437,8 +434,7 @@ final class pi {
                         break L10;
                       }
                     }
-                    new km(stackIn_31_3, stackIn_31_4);
-                    stackIn_31_0.field_Kb = stackIn_31_1;
+                    stackIn_31_0.field_Kb = new km(stackIn_31_3, stackIn_31_4);
                     var12.a(0, var12.field_Kb);
                     var12.field_Kb.field_lb = 2;
                     var12.field_uc = new km(0L, gg.field_F);
@@ -933,7 +929,7 @@ final class pi {
                             var34 = f.field_g;
                             break L44;
                           } else {
-                            var34_ref = cj.field_b[var12.field_fc];
+                            var34 = cj.field_b[var12.field_fc];
                             break L44;
                           }
                         }
@@ -1061,10 +1057,10 @@ final class pi {
                           break L55;
                         } else {
                           if (null != th.field_p[var34_int]) {
-                            var35_ref = th.field_p[var34_int][255 & var12.field_Pb[var34_int]];
+                            var35 = (Object) (Object) th.field_p[var34_int][255 & var12.field_Pb[var34_int]];
                             break L55;
                           } else {
-                            var35_ref = null;
+                            var35 = null;
                             break L55;
                           }
                         }

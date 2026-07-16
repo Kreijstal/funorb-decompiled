@@ -109,16 +109,16 @@ class ff extends pl {
             }
             var5 = (nj) (Object) pc.field_l.d(8192);
         }
-        nj var5_ref = new nj();
-        var5_ref.field_j = param0;
-        var5_ref.field_l = param1;
-        var5_ref.field_o = param4;
-        pc.field_l.a((wl) (Object) var5_ref, false);
-        ri.a(var5_ref, param3, (byte) 121);
+        var5 = new nj();
+        var5.field_j = param0;
+        var5.field_l = param1;
+        var5.field_o = param4;
+        pc.field_l.a((wl) (Object) var5, false);
+        ri.a(var5, param3, (byte) 121);
         if (param2 != 59) {
             nj discarded$0 = ff.a(88, 105, (byte) -48, -68, 37);
         }
-        return var5_ref;
+        return var5;
     }
 
     final void e(int param0) {
@@ -130,7 +130,7 @@ class ff extends pl {
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
-        dd var10 = null;
+        Object var10 = null;
         int var11 = 0;
         fg var12 = null;
         int var13 = 0;
@@ -200,13 +200,13 @@ class ff extends pl {
                   var14 = stackIn_12_0;
                   var15 = new dd(var7, var13, var12.field_a, var14 - var13, Math.max(var3.a((byte) -104), -var12.field_a + var12.field_b));
                   if (var10 != null) {
-                    var10.field_l = var15;
+                    ((dd) var10).field_l = var15;
                     break L4;
                   } else {
                     break L4;
                   }
                 }
-                var10 = var15;
+                var10 = (Object) (Object) var15;
                 ((ff) this).field_G.a((wl) (Object) var15, false);
                 var11++;
                 continue L1;
@@ -217,22 +217,52 @@ class ff extends pl {
     }
 
     final void a(int param0, String param1, int param2) {
+        String[] var4 = null;
         int var5 = 0;
-        int var6 = wizardrun.field_H;
-        if (param0 != 1) {
+        int var6 = 0;
+        String[] var7 = null;
+        L0: {
+          var6 = wizardrun.field_H;
+          if (param0 == 1) {
+            break L0;
+          } else {
             ((ff) this).field_F = null;
+            break L0;
+          }
         }
-        if (null != ((ff) this).field_I) {
-            // if_icmplt L103
-        }
-        String[] var7 = new String[1 + param2];
-        String[] var4 = var7;
-        if (!(((ff) this).field_I == null)) {
-            for (var5 = 0; ((ff) this).field_I.length > var5; var5++) {
-                var7[var5] = ((ff) this).field_I[var5];
+        L1: {
+          L2: {
+            if (null == ((ff) this).field_I) {
+              break L2;
+            } else {
+              if (param2 < ((ff) this).field_I.length) {
+                break L1;
+              } else {
+                break L2;
+              }
             }
+          }
+          L3: {
+            var7 = new String[1 + param2];
+            var4 = var7;
+            if (((ff) this).field_I != null) {
+              var5 = 0;
+              L4: while (true) {
+                if (((ff) this).field_I.length <= var5) {
+                  break L3;
+                } else {
+                  var7[var5] = ((ff) this).field_I[var5];
+                  var5++;
+                  continue L4;
+                }
+              }
+            } else {
+              break L3;
+            }
+          }
+          ((ff) this).field_I = var4;
+          break L1;
         }
-        ((ff) this).field_I = var4;
         ((ff) this).field_I[param2] = param1;
     }
 

@@ -246,69 +246,28 @@ final class wh implements Iterator {
     final static void b(byte param0) {
         Object var1 = null;
         Throwable var2 = null;
-        int statePc = 0;
-        Throwable caughtException = null;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    if (param0 < -28) {
-                        statePc = 2;
-                    } else {
-                        statePc = 1;
-                    }
-                    continue stateLoop;
-                }
-                case 1: {
-                    field_d = null;
-                    statePc = 2;
-                    continue stateLoop;
-                }
-                case 2: {
-                    if (null != tc.field_m) {
-                        statePc = 4;
-                    } else {
-                        statePc = 9;
-                    }
-                    continue stateLoop;
-                }
-                case 4: {
-                    var1 = (Object) (Object) tc.field_m;
-                    // monitorenter tc.field_m
-                    statePc = 5;
-                    continue stateLoop;
-                }
-                case 5: {
-                    try {
-                        tc.field_m = null;
-                        // monitorexit var1
-                        statePc = 9;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_5) {
-                        caughtException = stateCaught_5;
-                        statePc = 7;
-                        continue stateLoop;
-                    }
-                }
-                case 7: {
-                    try {
-                        var2 = caughtException;
-                        // monitorexit var1
-                        statePc = 8;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_7) {
-                        caughtException = stateCaught_7;
-                        statePc = 7;
-                        continue stateLoop;
-                    }
-                }
-                case 8: {
-                    throw (RuntimeException) (Object) var2;
-                }
-                case 9: {
-                    return;
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
+        Throwable decompiledCaughtException = null;
+        L0: {
+          if (param0 < -28) {
+            break L0;
+          } else {
+            field_d = null;
+            break L0;
+          }
+        }
+        L1: {
+          if (null != tc.field_m) {
+            var1 = (Object) (Object) tc.field_m;
+            synchronized (var1) {
+              L2: {
+                tc.field_m = null;
+                break L2;
+              }
             }
+            break L1;
+          } else {
+            break L1;
+          }
         }
     }
 
@@ -325,8 +284,9 @@ final class wh implements Iterator {
             if (((wh) this).field_i.field_d <= ((wh) this).field_f) {
                 return null;
             }
+            int fieldTemp$0 = ((wh) this).field_f;
             ((wh) this).field_f = ((wh) this).field_f + 1;
-            var1 = ((wh) this).field_i.field_c[((wh) this).field_f].field_b;
+            var1 = ((wh) this).field_i.field_c[fieldTemp$0].field_b;
         } while (var1 == ((wh) this).field_i.field_c[((wh) this).field_f - 1]);
         ((wh) this).field_a = var1.field_b;
         ((wh) this).field_h = var1;
@@ -341,8 +301,9 @@ final class wh implements Iterator {
             if (((wh) this).field_i.field_d <= ((wh) this).field_f) {
               return false;
             } else {
+              int fieldTemp$8 = ((wh) this).field_f;
               ((wh) this).field_f = ((wh) this).field_f + 1;
-              if (((wh) this).field_i.field_c[((wh) this).field_f].field_b != ((wh) this).field_i.field_c[((wh) this).field_f - 1]) {
+              if (((wh) this).field_i.field_c[fieldTemp$8].field_b != ((wh) this).field_i.field_c[((wh) this).field_f - 1]) {
                 ((wh) this).field_a = ((wh) this).field_i.field_c[((wh) this).field_f - 1].field_b;
                 return true;
               } else {

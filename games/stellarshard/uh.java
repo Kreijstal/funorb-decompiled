@@ -40,10 +40,10 @@ final class uh {
         int var4 = stellarshard.field_B;
         int var3 = param2.field_ob + -param0.field_ob;
         if (param2.field_pb == uf.field_f) {
-            // wide iinc 3 -200
+            var3 -= 200;
         } else {
             if (!(param2.field_pb != null)) {
-                // wide iinc 3 200
+                var3 += 200;
             }
         }
         if (param1 != 200) {
@@ -51,10 +51,10 @@ final class uh {
             boolean discarded$0 = uh.a((fd) null, 15, (fd) null);
         }
         if (uf.field_f == param0.field_pb) {
-            // wide iinc 3 200
+            var3 += 200;
         } else {
             if (param0.field_pb == null) {
-                // wide iinc 3 -200
+                var3 -= 200;
             }
         }
         return var3 > 0 ? true : false;
@@ -86,8 +86,9 @@ final class uh {
               return null;
             }
           } else {
+            int fieldTemp$7 = ((uh) this).field_e;
             ((uh) this).field_e = ((uh) this).field_e + 1;
-            var2 = ((uh) this).field_b[((uh) this).field_e].field_g;
+            var2 = ((uh) this).field_b[fieldTemp$7].field_g;
             if (((uh) this).field_b[((uh) this).field_e - 1] != var2) {
               ((uh) this).field_a = var2.field_g;
               return var2;
@@ -103,7 +104,7 @@ final class uh {
         int var3 = 0;
         wh[] var4 = null;
         int var5 = 0;
-        wh var6_ref = null;
+        wh var6_ref_wh = null;
         int var6 = 0;
         int var7 = 0;
         var7 = stellarshard.field_B;
@@ -123,15 +124,15 @@ final class uh {
                   var5++;
                   continue L0;
                 } else {
-                  var6_ref = new wh();
+                  var6_ref_wh = new wh();
                   int discarded$156 = param0.e(24, 8);
                   int discarded$157 = param0.e(24, param1 + 9);
-                  var6_ref.field_b = param0.e(24, 8);
+                  var6_ref_wh.field_b = param0.e(24, 8);
                   int discarded$158 = param0.e(9, 8);
                   int discarded$159 = param0.e(12, 8);
                   int discarded$160 = param0.e(12, 8);
                   int discarded$161 = param0.e(12, 8);
-                  var4[var5] = var6_ref;
+                  var4[var5] = var6_ref_wh;
                   var5++;
                   continue L0;
                 }
@@ -170,8 +171,9 @@ final class uh {
         ((uh) this).field_b = new gg[param0];
         ((uh) this).field_d = param0;
         for (var2 = 0; param0 > var2; var2++) {
-            var3 = new gg();
-            ((uh) this).field_b[var2] = new gg();
+            gg dupTemp$0 = new gg();
+            var3 = dupTemp$0;
+            ((uh) this).field_b[var2] = dupTemp$0;
             var3.field_c = var3;
             var3.field_g = var3;
         }

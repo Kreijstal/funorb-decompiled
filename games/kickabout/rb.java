@@ -23,7 +23,7 @@ final class rb extends hd {
     private hd field_Gb;
 
     final static tv a(int param0, int param1, byte param2, int param3) {
-        tv var4 = null;
+        Object var4 = null;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
@@ -109,7 +109,7 @@ final class rb extends hd {
                     }
                   }
                   dg.field_a = stackIn_41_0 != 0;
-                  return var4;
+                  return (tv) var4;
                 } else {
                   return null;
                 }
@@ -120,7 +120,7 @@ final class rb extends hd {
                   var9_ref_tv.field_s.a(true, var9_ref_tv.field_s.g((byte) -44), param3, var7, param1);
                   var7 = var7 + param1;
                   if (-1 != (var9_ref_tv.field_s.field_sb ^ -1)) {
-                    var4 = var9_ref_tv;
+                    var4 = (Object) (Object) var9_ref_tv;
                     var8++;
                     continue L1;
                   } else {
@@ -442,10 +442,10 @@ final class rb extends hd {
         long stackIn_7_3 = 0L;
         om stackIn_7_4 = null;
         String stackIn_7_5 = null;
+        hd stackIn_12_0 = null;
         hd stackIn_13_0 = null;
         hd stackIn_14_0 = null;
-        hd stackIn_15_0 = null;
-        int stackIn_15_1 = 0;
+        int stackIn_14_1 = 0;
         Object stackOut_3_0 = null;
         om stackOut_3_1 = null;
         om stackOut_3_2 = null;
@@ -468,11 +468,11 @@ final class rb extends hd {
         long stackOut_5_3 = 0L;
         om stackOut_5_4 = null;
         String stackOut_5_5 = null;
-        hd stackOut_12_0 = null;
-        hd stackOut_14_0 = null;
-        int stackOut_14_1 = 0;
+        hd stackOut_11_0 = null;
         hd stackOut_13_0 = null;
         int stackOut_13_1 = 0;
+        hd stackOut_12_0 = null;
+        int stackOut_12_1 = 0;
         L0: {
           ((rb) this).field_Ob = -2;
           ((rb) this).field_Eb = param12;
@@ -519,7 +519,7 @@ final class rb extends hd {
                 if (bl.field_c >= 5) {
                   break L2;
                 } else {
-                  if (tk.field_Ib > -3) {
+                  if ((tk.field_Ib ^ -1) > -3) {
                     break L1;
                   } else {
                     break L2;
@@ -543,7 +543,7 @@ final class rb extends hd {
                   stackIn_4_2 = stackOut_3_2;
                   stackIn_4_3 = stackOut_3_3;
                   stackIn_4_4 = stackOut_3_4;
-                  if (-8 <= bl.field_c) {
+                  if (-8 >= (bl.field_c ^ -1)) {
                     break L4;
                   } else {
                     stackOut_4_0 = this;
@@ -594,8 +594,7 @@ final class rb extends hd {
                 stackIn_7_5 = stackOut_5_5;
                 break L3;
               }
-              new om(stackIn_7_3, stackIn_7_4, stackIn_7_5);
-              ((rb) this).field_zb = stackIn_7_1;
+              ((rb) this).field_zb = new om(stackIn_7_3, stackIn_7_4, stackIn_7_5);
               ((rb) this).field_Nb.a((byte) -118, (hd) (Object) ((rb) this).field_zb);
               break L1;
             }
@@ -632,7 +631,7 @@ final class rb extends hd {
                 }
                 L8: {
                   var17 = param6.field_X.a(cj.field_H);
-                  if (var17 <= var16) {
+                  if ((var17 ^ -1) >= (var16 ^ -1)) {
                     break L8;
                   } else {
                     var16 = var17;
@@ -641,7 +640,7 @@ final class rb extends hd {
                 }
                 L9: {
                   var17 = param6.field_X.a(tk.field_Hb);
-                  if (var17 <= var16) {
+                  if ((var17 ^ -1) >= (var16 ^ -1)) {
                     break L9;
                   } else {
                     var16 = var17;
@@ -708,7 +707,7 @@ final class rb extends hd {
                     L15: {
                       var19 = 26 + var16 * 3;
                       var20 = ((rb) this).field_Gb.g((byte) 108);
-                      if (var19 >= var20) {
+                      if ((var19 ^ -1) <= (var20 ^ -1)) {
                         break L15;
                       } else {
                         var19 = var20;
@@ -760,52 +759,55 @@ final class rb extends hd {
                     ((rb) this).a(true, var23, var25, var26, var24);
                     break L0;
                   } else {
-                    if (((rb) this).field_Jb[var17] != null) {
-                      var18 = ((rb) this).field_Jb[var17].g((byte) -40);
-                      if (var18 > var16) {
-                        var16 = var18;
-                        var17++;
-                        continue L10;
+                    L18: {
+                      if (((rb) this).field_Jb[var17] == null) {
+                        break L18;
                       } else {
-                        var17++;
-                        continue L10;
+                        var18 = ((rb) this).field_Jb[var17].g((byte) -40);
+                        if (var18 <= var16) {
+                          break L18;
+                        } else {
+                          var16 = var18;
+                          break L18;
+                        }
                       }
-                    } else {
-                      var17++;
-                      continue L10;
                     }
+                    var17++;
+                    continue L10;
                   }
                 }
               } else {
-                if (null != bh.field_i[var16]) {
-                  L18: {
-                    ((rb) this).field_Jb[var16] = new hd(0L, param10, bh.field_i[var16]);
-                    ((rb) this).field_Jb[var16].field_A = 0;
-                    stackOut_12_0 = ((rb) this).field_Jb[var16];
-                    stackIn_14_0 = stackOut_12_0;
-                    stackIn_13_0 = stackOut_12_0;
-                    if (param11 == null) {
-                      stackOut_14_0 = (hd) (Object) stackIn_14_0;
-                      stackOut_14_1 = 0;
-                      stackIn_15_0 = stackOut_14_0;
-                      stackIn_15_1 = stackOut_14_1;
-                      break L18;
-                    } else {
-                      stackOut_13_0 = (hd) (Object) stackIn_13_0;
-                      stackOut_13_1 = 1;
-                      stackIn_15_0 = stackOut_13_0;
-                      stackIn_15_1 = stackOut_13_1;
-                      break L18;
+                L19: {
+                  if (null == bh.field_i[var16]) {
+                    break L19;
+                  } else {
+                    L20: {
+                      ((rb) this).field_Jb[var16] = new hd(0L, param10, bh.field_i[var16]);
+                      ((rb) this).field_Jb[var16].field_A = 0;
+                      stackOut_11_0 = ((rb) this).field_Jb[var16];
+                      stackIn_13_0 = stackOut_11_0;
+                      stackIn_12_0 = stackOut_11_0;
+                      if (param11 == null) {
+                        stackOut_13_0 = (hd) (Object) stackIn_13_0;
+                        stackOut_13_1 = 0;
+                        stackIn_14_0 = stackOut_13_0;
+                        stackIn_14_1 = stackOut_13_1;
+                        break L20;
+                      } else {
+                        stackOut_12_0 = (hd) (Object) stackIn_12_0;
+                        stackOut_12_1 = 1;
+                        stackIn_14_0 = stackOut_12_0;
+                        stackIn_14_1 = stackOut_12_1;
+                        break L20;
+                      }
                     }
+                    stackIn_14_0.field_lb = stackIn_14_1 != 0;
+                    ((rb) this).field_Nb.a((byte) -124, ((rb) this).field_Jb[var16]);
+                    break L19;
                   }
-                  stackIn_15_0.field_lb = stackIn_15_1 != 0;
-                  ((rb) this).field_Nb.a((byte) -124, ((rb) this).field_Jb[var16]);
-                  var16++;
-                  continue L5;
-                } else {
-                  var16++;
-                  continue L5;
                 }
+                var16++;
+                continue L5;
               }
             }
           }

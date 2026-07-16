@@ -8,17 +8,17 @@ final class rd extends cg {
     public static void c(boolean param0) {
         if (!param0) {
             rd.b((byte) 56);
-            field_k = (byte[][]) null;
+            field_k = null;
             field_j = null;
             return;
         }
-        field_k = (byte[][]) null;
+        field_k = null;
         field_j = null;
     }
 
     final static int a(int param0, int param1) {
         if (param1 != 1266438832) {
-          field_j = (w) null;
+          field_j = null;
           param0 = (1431655765 & param0) + ((param0 & -1431655766) >>> -1272223327);
           param0 = (param0 & 858993459) + (param0 >>> 2047830018 & -1288490189);
           param0 = 252645135 & param0 + (param0 >>> 1646212772);
@@ -38,7 +38,7 @@ final class rd extends cg {
     final static void a(byte param0, String param1) {
         we.a(-119, param1);
         if (param0 <= 54) {
-          field_j = (w) null;
+          field_j = null;
           ca.a(kj.field_q, false, 16777215);
           return;
         } else {
@@ -71,7 +71,7 @@ final class rd extends cg {
             return ii.field_e;
           }
         } else {
-          field_j = (w) null;
+          field_j = null;
           if (var3 == 0) {
             return pe.field_b;
           } else {
@@ -119,7 +119,7 @@ final class rd extends cg {
             return ha.field_c;
         }
         if (param1) {
-            field_k = (byte[][]) (byte[][]) null;
+            field_k = null;
             return gi.field_g;
         }
         return gi.field_g;

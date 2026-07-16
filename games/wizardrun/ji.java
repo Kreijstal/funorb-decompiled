@@ -27,7 +27,6 @@ final class ji extends wl {
         int var12 = 0;
         int var13 = 0;
         pb var14 = null;
-        pb var14_ref = null;
         int[] var15 = null;
         int[] var17 = null;
         int[] var18 = null;
@@ -117,12 +116,12 @@ final class ji extends wl {
                               if (var14 != null) {
                                 break L7;
                               } else {
-                                var14_ref = new pb(new byte[128]);
-                                ((ji) this).field_i.a((wl) (Object) var14_ref, -98, (long)var13);
+                                var14 = new pb(new byte[128]);
+                                ((ji) this).field_i.a((wl) (Object) var14, -98, (long)var13);
                                 break L7;
                               }
                             }
-                            var14_ref.field_j[var11] = (byte) 1;
+                            var14.field_j[var11] = (byte) 1;
                             break L6;
                           }
                         }
@@ -373,6 +372,7 @@ final class ji extends wl {
                     var60 = 0;
                     L4: while (true) {
                       if (var60 >= var2) {
+                        return;
                       } else {
                         var51.f(1297379947, 613003928);
                         var51.field_m = var51.field_m + 4;
@@ -382,8 +382,9 @@ final class ji extends wl {
                           L6: {
                             var63 = param0.f((byte) -90);
                             var51.a((byte) -117, var63);
+                            int incrementValue$29 = var29;
                             var29++;
-                            var64 = param0.field_k[var29] & 255;
+                            var64 = param0.field_k[incrementValue$29] & 255;
                             if (var64 == var62) {
                               stackOut_72_0 = 0;
                               stackIn_73_0 = stackOut_72_0;
@@ -416,8 +417,9 @@ final class ji extends wl {
                                                 break L7;
                                               }
                                             }
+                                            int incrementValue$30 = var44;
                                             var44++;
-                                            var51.b((byte) 11, (int) param0.field_k[var44]);
+                                            var51.b((byte) 11, (int) param0.field_k[incrementValue$30]);
                                             continue L5;
                                           }
                                         } else {
@@ -429,10 +431,12 @@ final class ji extends wl {
                                               break L8;
                                             }
                                           }
+                                          int incrementValue$31 = var37;
                                           var37++;
-                                          var53 = var53 + param0.field_k[var37];
+                                          var53 = var53 + param0.field_k[incrementValue$31];
+                                          int incrementValue$32 = var31;
                                           var31++;
-                                          var58 = var58 + param0.field_k[var31];
+                                          var58 = var58 + param0.field_k[incrementValue$32];
                                           var51.b((byte) 11, var53 & 127);
                                           var51.b((byte) 11, var58 & 127);
                                           continue L5;
@@ -446,8 +450,9 @@ final class ji extends wl {
                                             break L9;
                                           }
                                         }
+                                        int incrementValue$33 = var32;
                                         var32++;
-                                        var57 = var57 + param0.field_k[var32];
+                                        var57 = var57 + param0.field_k[incrementValue$33];
                                         var51.b((byte) 11, var57 & 127);
                                         continue L5;
                                       }
@@ -460,10 +465,12 @@ final class ji extends wl {
                                           break L10;
                                         }
                                       }
+                                      int incrementValue$34 = var45;
                                       var45++;
-                                      var56 = var56 + param0.field_k[var45];
+                                      var56 = var56 + param0.field_k[incrementValue$34];
+                                      int incrementValue$35 = var33;
                                       var33++;
-                                      var56 = var56 + (param0.field_k[var33] << 7);
+                                      var56 = var56 + (param0.field_k[incrementValue$35] << 7);
                                       var51.b((byte) 11, var56 & 127);
                                       var51.b((byte) 11, var56 >> 7 & 127);
                                       continue L5;
@@ -479,8 +486,9 @@ final class ji extends wl {
                                     }
                                     L12: {
                                       L13: {
+                                        int incrementValue$36 = var15;
                                         var15++;
-                                        var28 = var28 + param0.field_k[var15] & 127;
+                                        var28 = var28 + param0.field_k[incrementValue$36] & 127;
                                         var51.b((byte) 11, var28);
                                         if (var28 == 0) {
                                           break L13;
@@ -510,8 +518,9 @@ final class ji extends wl {
                                                                           break L14;
                                                                         } else {
                                                                           if (var28 != 123) {
+                                                                            int incrementValue$37 = var39;
                                                                             var39++;
-                                                                            var66 = param0.field_k[var39];
+                                                                            var66 = param0.field_k[incrementValue$37];
                                                                             break L12;
                                                                           } else {
                                                                             break L14;
@@ -521,57 +530,68 @@ final class ji extends wl {
                                                                     }
                                                                   }
                                                                 }
+                                                                int incrementValue$38 = var30;
                                                                 var30++;
-                                                                var66 = param0.field_k[var30];
+                                                                var66 = param0.field_k[incrementValue$38];
                                                                 break L12;
                                                               } else {
+                                                                int incrementValue$39 = var49;
                                                                 var49++;
-                                                                var66 = param0.field_k[var49];
+                                                                var66 = param0.field_k[incrementValue$39];
                                                                 break L12;
                                                               }
                                                             } else {
+                                                              int incrementValue$40 = var48;
                                                               var48++;
-                                                              var66 = param0.field_k[var48];
+                                                              var66 = param0.field_k[incrementValue$40];
                                                               break L12;
                                                             }
                                                           } else {
+                                                            int incrementValue$41 = var47;
                                                             var47++;
-                                                            var66 = param0.field_k[var47];
+                                                            var66 = param0.field_k[incrementValue$41];
                                                             break L12;
                                                           }
                                                         } else {
+                                                          int incrementValue$42 = var46;
                                                           var46++;
-                                                          var66 = param0.field_k[var46];
+                                                          var66 = param0.field_k[incrementValue$42];
                                                           break L12;
                                                         }
                                                       } else {
+                                                        int incrementValue$43 = var43;
                                                         var43++;
-                                                        var66 = param0.field_k[var43];
+                                                        var66 = param0.field_k[incrementValue$43];
                                                         break L12;
                                                       }
                                                     } else {
+                                                      int incrementValue$44 = var36;
                                                       var36++;
-                                                      var66 = param0.field_k[var36];
+                                                      var66 = param0.field_k[incrementValue$44];
                                                       break L12;
                                                     }
                                                   } else {
+                                                    int incrementValue$45 = var42;
                                                     var42++;
-                                                    var66 = param0.field_k[var42];
+                                                    var66 = param0.field_k[incrementValue$45];
                                                     break L12;
                                                   }
                                                 } else {
+                                                  int incrementValue$46 = var35;
                                                   var35++;
-                                                  var66 = param0.field_k[var35];
+                                                  var66 = param0.field_k[incrementValue$46];
                                                   break L12;
                                                 }
                                               } else {
+                                                int incrementValue$47 = var41;
                                                 var41++;
-                                                var66 = param0.field_k[var41];
+                                                var66 = param0.field_k[incrementValue$47];
                                                 break L12;
                                               }
                                             } else {
+                                              int incrementValue$48 = var34;
                                               var34++;
-                                              var66 = param0.field_k[var34];
+                                              var66 = param0.field_k[incrementValue$48];
                                               break L12;
                                             }
                                           } else {
@@ -579,8 +599,9 @@ final class ji extends wl {
                                           }
                                         }
                                       }
+                                      int incrementValue$49 = var44;
                                       var44++;
-                                      var66 = param0.field_k[var44];
+                                      var66 = param0.field_k[incrementValue$49];
                                       break L12;
                                     }
                                     var66 = var66 + var70[var28];
@@ -597,10 +618,12 @@ final class ji extends wl {
                                       break L15;
                                     }
                                   }
+                                  int incrementValue$50 = var37;
                                   var37++;
-                                  var53 = var53 + param0.field_k[var37];
+                                  var53 = var53 + param0.field_k[incrementValue$50];
+                                  int incrementValue$51 = var40;
                                   var40++;
-                                  var55 = var55 + param0.field_k[var40];
+                                  var55 = var55 + param0.field_k[incrementValue$51];
                                   var51.b((byte) 11, var53 & 127);
                                   var51.b((byte) 11, var55 & 127);
                                   continue L5;
@@ -614,10 +637,12 @@ final class ji extends wl {
                                     break L16;
                                   }
                                 }
+                                int incrementValue$52 = var37;
                                 var37++;
-                                var53 = var53 + param0.field_k[var37];
+                                var53 = var53 + param0.field_k[incrementValue$52];
+                                int incrementValue$53 = var38;
                                 var38++;
-                                var54 = var54 + param0.field_k[var38];
+                                var54 = var54 + param0.field_k[incrementValue$53];
                                 var51.b((byte) 11, var53 & 127);
                                 var51.b((byte) 11, var54 & 127);
                                 continue L5;
@@ -633,12 +658,15 @@ final class ji extends wl {
                               }
                               var51.b((byte) 11, 81);
                               var51.b((byte) 11, 3);
+                              int incrementValue$54 = var50;
                               var50++;
-                              var51.b((byte) 11, (int) param0.field_k[var50]);
+                              var51.b((byte) 11, (int) param0.field_k[incrementValue$54]);
+                              int incrementValue$55 = var50;
                               var50++;
-                              var51.b((byte) 11, (int) param0.field_k[var50]);
+                              var51.b((byte) 11, (int) param0.field_k[incrementValue$55]);
+                              int incrementValue$56 = var50;
                               var50++;
-                              var51.b((byte) 11, (int) param0.field_k[var50]);
+                              var51.b((byte) 11, (int) param0.field_k[incrementValue$56]);
                               continue L5;
                             }
                           } else {
@@ -769,7 +797,7 @@ final class ji extends wl {
                   }
                 }
               } else {
-                int discarded$1 = param0.f((byte) -90);
+                int discarded$57 = param0.f((byte) -90);
                 var15++;
                 continue L1;
               }

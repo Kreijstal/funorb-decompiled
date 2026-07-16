@@ -44,15 +44,15 @@ final class j implements fp {
                     var25 = lh.a(var16, (byte) -128, (long)(int)(var23 + -var17)) / 2;
                     var26 = lh.a(var16, (byte) -64, (long)(int)(-var23 + -var17)) / 2;
                     if (0 < var25) {
-                      if (var25 <= 65536 + -param4) {
+                      if ((var25 ^ -1) >= (65536 + -param4 ^ -1)) {
                         if (var25 <= var26) {
                           return param4 + var25;
                         } else {
                           L0: {
-                            if (-1 >= var26) {
+                            if (-1 <= (var26 ^ -1)) {
                               break L0;
                             } else {
-                              if (65536 - param4 < var26) {
+                              if ((65536 - param4 ^ -1) > (var26 ^ -1)) {
                                 break L0;
                               } else {
                                 return param4 + var26;
@@ -93,7 +93,7 @@ final class j implements fp {
                           if (-1 <= (var26 ^ -1)) {
                             break L2;
                           } else {
-                            if (65536 - param4 < var26) {
+                            if ((65536 - param4 ^ -1) > (var26 ^ -1)) {
                               break L2;
                             } else {
                               return param4 + var26;
@@ -102,7 +102,7 @@ final class j implements fp {
                         }
                         L3: {
                           if (var25 >= 0) {
-                            if (var26 <= -1) {
+                            if ((var26 ^ -1) <= -1) {
                               return -1;
                             } else {
                               if (var25 > 0) {
@@ -131,7 +131,7 @@ final class j implements fp {
                       }
                     } else {
                       if (-1 > (var26 ^ -1)) {
-                        if (65536 - param4 >= var26) {
+                        if ((65536 - param4 ^ -1) <= (var26 ^ -1)) {
                           return param4 + var26;
                         } else {
                           L4: {

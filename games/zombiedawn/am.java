@@ -15,8 +15,9 @@ final class am extends de {
         if (param0 <= 122) {
             return 95;
         }
+        int fieldTemp$0 = ((am) this).field_j;
         ((am) this).field_j = ((am) this).field_j + 1;
-        return ((am) this).field_h[((am) this).field_j] + -((am) this).field_l.a(92) & 255;
+        return ((am) this).field_h[fieldTemp$0] + -((am) this).field_l.a(92) & 255;
     }
 
     final void h(byte param0) {
@@ -59,8 +60,9 @@ final class am extends de {
         int var5 = 0;
         int var6 = ZombieDawn.field_J;
         for (var5 = param3; param0 > var5; var5++) {
+            int fieldTemp$0 = ((am) this).field_j;
             ((am) this).field_j = ((am) this).field_j + 1;
-            param1[var5 - -param2] = (byte)(((am) this).field_h[((am) this).field_j] + -((am) this).field_l.a(96));
+            param1[var5 - -param2] = (byte)(((am) this).field_h[fieldTemp$0] + -((am) this).field_l.a(96));
         }
     }
 
@@ -78,8 +80,9 @@ final class am extends de {
             field_m = null;
         }
         while (param1 > var4) {
+            int incrementValue$0 = var3;
             var3++;
-            var5 = var5 + ((((am) this).field_h[var3] & jd.field_e[var4]) << param1 + -var4);
+            var5 = var5 + ((((am) this).field_h[incrementValue$0] & jd.field_e[var4]) << param1 + -var4);
             param1 = param1 - var4;
             var4 = 8;
         }
@@ -101,8 +104,9 @@ final class am extends de {
     }
 
     final void j(int param0, int param1) {
+        int fieldTemp$0 = ((am) this).field_j;
         ((am) this).field_j = ((am) this).field_j + 1;
-        ((am) this).field_h[((am) this).field_j] = (byte)(param1 + ((am) this).field_l.a(124));
+        ((am) this).field_h[fieldTemp$0] = (byte)(param1 + ((am) this).field_l.a(124));
         if (param0 != 11) {
             ((am) this).field_n = -62;
         }

@@ -52,104 +52,45 @@ final class tc {
             Runtime var2_ref = null;
             Long var3 = null;
             Object var4 = null;
-            int statePc = 0;
-            Throwable caughtException = null;
-            stateLoop: while (true) {
-                switch (statePc) {
-                    case 0: {
-                        try {
-                            var1 = Runtime.class.getMethod("maxMemory", new Class[0]);
-                            if (var1 != null) {
-                                statePc = 2;
-                            } else {
-                                statePc = 1;
-                            }
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_0) {
-                            caughtException = stateCaught_0;
-                            statePc = 8;
-                            continue stateLoop;
-                        }
+            Throwable decompiledCaughtException = null;
+            try {
+              L0: {
+                L1: {
+                  var1 = Runtime.class.getMethod("maxMemory", new Class[0]);
+                  if (var1 != null) {
+                    try {
+                      L2: {
+                        var2_ref = Runtime.getRuntime();
+                        var4 = null;
+                        var3 = (Long) var1.invoke((Object) (Object) var2_ref, (Object[]) null);
+                        eb.field_i = (int)(var3.longValue() / 1048576L) - -1;
+                        break L2;
+                      }
+                    } catch (java.lang.Throwable decompiledCaughtParameter0) {
+                      decompiledCaughtException = decompiledCaughtParameter0;
+                      L3: {
+                        var2 = decompiledCaughtException;
+                        break L3;
+                      }
                     }
-                    case 1: {
-                        try {
-                            statePc = 5;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_1) {
-                            caughtException = stateCaught_1;
-                            statePc = 8;
-                            continue stateLoop;
-                        }
-                    }
-                    case 2: {
-                        try {
-                            var2_ref = Runtime.getRuntime();
-                            var4 = null;
-                            var3 = (Long) var1.invoke((Object) (Object) var2_ref, (Object[]) null);
-                            eb.field_i = (int)(var3.longValue() / 1048576L) - -1;
-                            statePc = 3;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_2) {
-                            caughtException = stateCaught_2;
-                            statePc = 4;
-                            continue stateLoop;
-                        }
-                    }
-                    case 3: {
-                        try {
-                            statePc = 5;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_3) {
-                            caughtException = stateCaught_3;
-                            statePc = 8;
-                            continue stateLoop;
-                        }
-                    }
-                    case 4: {
-                        try {
-                            var2 = caughtException;
-                            statePc = 5;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_4) {
-                            caughtException = stateCaught_4;
-                            statePc = 8;
-                            continue stateLoop;
-                        }
-                    }
-                    case 5: {
-                        try {
-                            if (param0 >= 5) {
-                                statePc = 9;
-                            } else {
-                                statePc = 6;
-                            }
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_5) {
-                            caughtException = stateCaught_5;
-                            statePc = 8;
-                            continue stateLoop;
-                        }
-                    }
-                    case 6: {
-                        try {
-                            tc.c((byte) 29);
-                            return;
-                        } catch (Throwable stateCaught_6) {
-                            caughtException = stateCaught_6;
-                            statePc = 8;
-                            continue stateLoop;
-                        }
-                    }
-                    case 8: {
-                        var1_ref = (Exception) (Object) caughtException;
-                        statePc = 9;
-                        continue stateLoop;
-                    }
-                    case 9: {
-                        return;
-                    }
-                    default: throw new IllegalStateException("invalid CFG state " + statePc);
+                    break L1;
+                  } else {
+                    break L1;
+                  }
                 }
+                if (param0 >= 5) {
+                  break L0;
+                } else {
+                  tc.c((byte) 29);
+                  return;
+                }
+              }
+            } catch (java.lang.Exception decompiledCaughtParameter1) {
+              decompiledCaughtException = decompiledCaughtParameter1;
+              L4: {
+                var1_ref = (Exception) (Object) decompiledCaughtException;
+                break L4;
+              }
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -214,25 +155,41 @@ final class tc {
     }
 
     tc(File param0, String param1, long param2) throws IOException {
-        if (-1L == param2) {
+        int var5 = 0;
+        L0: {
+          if (-1L != param2) {
+            break L0;
+          } else {
             param2 = 9223372036854775807L;
+            break L0;
+          }
         }
-        if ((param0.length() ^ -1L) < (param2 ^ -1L)) {
-            boolean discarded$0 = param0.delete();
+        L1: {
+          if ((param0.length() ^ -1L) >= (param2 ^ -1L)) {
+            break L1;
+          } else {
+            boolean discarded$2 = param0.delete();
+            break L1;
+          }
         }
         ((tc) this).field_d = new RandomAccessFile(param0, param1);
         ((tc) this).field_a = param2;
         ((tc) this).field_c = 0L;
-        int var5 = ((tc) this).field_d.read();
-        if ((var5 ^ -1) != 0) {
-            // ifne L115
+        var5 = ((tc) this).field_d.read();
+        if ((var5 ^ -1) == 0) {
+          ((tc) this).field_d.seek(0L);
+          return;
+        } else {
+          if (param1.equals((Object) (Object) "r")) {
+            ((tc) this).field_d.seek(0L);
+            return;
+          } else {
             ((tc) this).field_d.seek(0L);
             ((tc) this).field_d.write(var5);
-        } else {
             ((tc) this).field_d.seek(0L);
-            ((tc) this).field_d.seek(0L);
+            return;
+          }
         }
-        ((tc) this).field_d.seek(0L);
     }
 
     static {

@@ -91,8 +91,7 @@ final class ab {
               break L0;
             }
           }
-          new kh(stackIn_7_2, r.b(stackIn_7_3 != 0));
-          return stackIn_7_0;
+          return new kh(stackIn_7_2, r.b(stackIn_7_3 != 0));
         } else {
           stackOut_1_0 = null;
           stackOut_1_1 = null;
@@ -102,8 +101,7 @@ final class ab {
           stackIn_3_1 = stackOut_1_1;
           stackIn_3_2 = stackOut_1_2;
           stackIn_3_3 = stackOut_1_3;
-          new kh(stackIn_3_2, r.b(stackIn_3_3 != 0));
-          return stackIn_3_0;
+          return new kh(stackIn_3_2, r.b(stackIn_3_3 != 0));
         }
     }
 

@@ -63,28 +63,22 @@ final class gd extends wf implements java.awt.image.ImageProducer, java.awt.imag
     }
 
     final void a(int param0, int param1, byte param2, java.awt.Component param3) {
-        try {
-            ((gd) this).field_l = new int[param0 * param1 - -1];
-            ((gd) this).field_c = param1;
-            ((gd) this).field_b = param0;
-            if (param2 >= -24) {
-              return;
-            } else {
-              ((gd) this).field_s = (java.awt.image.ColorModel) (Object) new java.awt.image.DirectColorModel(32, 16711680, 65280, 255);
-              ((gd) this).field_h = param3.createImage((java.awt.image.ImageProducer) this);
-              this.b(2);
-              boolean discarded$3 = param3.prepareImage(((gd) this).field_h, (java.awt.image.ImageObserver) this);
-              this.b(2);
-              boolean discarded$4 = param3.prepareImage(((gd) this).field_h, (java.awt.image.ImageObserver) this);
-              this.b(2);
-              boolean discarded$5 = param3.prepareImage(((gd) this).field_h, (java.awt.image.ImageObserver) this);
-              ((gd) this).a((byte) 29);
-              return;
-            }
-        } catch (RuntimeException | Error decompiledUncheckedException) {
-            throw decompiledUncheckedException;
-        } catch (Throwable decompiledCheckedException) {
-            throw new RuntimeException(decompiledCheckedException);
+        ((gd) this).field_l = new int[param0 * param1 - -1];
+        ((gd) this).field_c = param1;
+        ((gd) this).field_b = param0;
+        if (param2 >= -24) {
+          return;
+        } else {
+          ((gd) this).field_s = (java.awt.image.ColorModel) (Object) new java.awt.image.DirectColorModel(32, 16711680, 65280, 255);
+          ((gd) this).field_h = param3.createImage((java.awt.image.ImageProducer) this);
+          this.b(2);
+          boolean discarded$3 = param3.prepareImage(((gd) this).field_h, (java.awt.image.ImageObserver) this);
+          this.b(2);
+          boolean discarded$4 = param3.prepareImage(((gd) this).field_h, (java.awt.image.ImageObserver) this);
+          this.b(2);
+          boolean discarded$5 = param3.prepareImage(((gd) this).field_h, (java.awt.image.ImageObserver) this);
+          ((gd) this).a((byte) 29);
+          return;
         }
     }
 

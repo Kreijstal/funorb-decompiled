@@ -113,19 +113,22 @@ final class vg implements fc {
           var5 = var8.a(-1640531527);
           try {
             L6: {
-              var9 = ag.field_a.a(var5, (byte) -127);
-              jg.field_D = var9.e(99);
-              if (!g.field_i.equals((Object) (Object) ja.field_b)) {
-                stackOut_24_0 = var9.field_s;
-                stackIn_25_0 = stackOut_24_0;
-                break L6;
-              } else {
-                stackOut_23_0 = null;
-                stackIn_25_0 = (int[]) (Object) stackOut_23_0;
-                break L6;
+              L7: {
+                var9 = ag.field_a.a(var5, (byte) -127);
+                jg.field_D = var9.e(99);
+                if (!g.field_i.equals((Object) (Object) ja.field_b)) {
+                  stackOut_24_0 = var9.field_s;
+                  stackIn_25_0 = stackOut_24_0;
+                  break L7;
+                } else {
+                  stackOut_23_0 = null;
+                  stackIn_25_0 = (int[]) (Object) stackOut_23_0;
+                  break L7;
+                }
               }
+              uf.field_c = stackIn_25_0;
+              break L6;
             }
-            uf.field_c = stackIn_25_0;
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             var6 = (Exception) (Object) decompiledCaughtException;
@@ -153,8 +156,9 @@ final class vg implements fc {
           L0: while (true) {
             if (fb.e((byte) 102)) {
               var1.a(true, 8);
+              int fieldTemp$2 = var1.field_h + 1;
               var1.field_h = var1.field_h + 1;
-              var2 = var1.field_h + 1;
+              var2 = fieldTemp$2;
               sa.a((byte) -97, var1);
               hh.field_p.b(-var2 + var1.field_h, true);
               continue L0;
@@ -166,8 +170,9 @@ final class vg implements fc {
           L1: while (true) {
             if (fb.e((byte) 102)) {
               var1.a(true, 8);
+              int fieldTemp$3 = var1.field_h + 1;
               var1.field_h = var1.field_h + 1;
-              var2 = var1.field_h + 1;
+              var2 = fieldTemp$3;
               sa.a((byte) -97, var1);
               hh.field_p.b(-var2 + var1.field_h, true);
               continue L1;

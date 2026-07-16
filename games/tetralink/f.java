@@ -29,7 +29,7 @@ final class f extends gb {
         int var6 = 0;
         bh var8 = null;
         int var9 = 0;
-        oe var10 = null;
+        Object var10 = null;
         oe var11 = null;
         int var12 = 0;
         int var13 = 0;
@@ -100,7 +100,7 @@ final class f extends gb {
                           break L6;
                         } else {
                           if (var9 == var11.field_o) {
-                            var10 = var11;
+                            var10 = (Object) (Object) var11;
                             break L6;
                           } else {
                             var11 = (oe) (Object) var3.a((byte) -70);
@@ -110,14 +110,14 @@ final class f extends gb {
                       }
                       L7: {
                         if (var10 == null) {
-                          var10 = new oe(var9, nn.field_T.a(0, var9));
-                          var3.a((mc) (Object) var10, false);
+                          var10 = (Object) (Object) new oe(var9, nn.field_T.a(0, var9));
+                          var3.a((mc) var10, false);
                           break L7;
                         } else {
                           break L7;
                         }
                       }
-                      ((f) this).field_u[var29[var6]] = new pc(var30, var10);
+                      ((f) this).field_u[var29[var6]] = new pc(var30, (oe) var10);
                       var6++;
                       continue L4;
                     }

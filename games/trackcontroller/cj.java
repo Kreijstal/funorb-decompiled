@@ -126,7 +126,7 @@ final class cj extends rb {
               if (((cj) this).field_l) {
                 break L1;
               } else {
-                if (param2 != ((cj) this).field_m) {
+                if ((param2 ^ -1) != (((cj) this).field_m ^ -1)) {
                   break L1;
                 } else {
                   if (param7 != ((cj) this).field_f) {
@@ -135,10 +135,10 @@ final class cj extends rb {
                     if (param4 != ((cj) this).field_g) {
                       break L1;
                     } else {
-                      if (param3 != ((cj) this).field_h) {
+                      if ((param3 ^ -1) != (((cj) this).field_h ^ -1)) {
                         break L1;
                       } else {
-                        if (((cj) this).field_i != param5) {
+                        if ((((cj) this).field_i ^ -1) != (param5 ^ -1)) {
                           break L1;
                         } else {
                           if (((cj) this).field_k == null) {
@@ -178,10 +178,10 @@ final class cj extends rb {
             var16 = new String[param0.b(param6, param5) + 1];
             var17 = var16;
             var10 = Math.max(1, param0.a(param6, new int[1], var17));
-            if (((cj) this).field_f != -4) {
+            if ((((cj) this).field_f ^ -1) != -4) {
               break L3;
             } else {
-              if (-2 != var10) {
+              if (-2 != (var10 ^ -1)) {
                 break L3;
               } else {
                 ((cj) this).field_f = 1;
@@ -196,13 +196,13 @@ final class cj extends rb {
               break L4;
             } else {
               if (((cj) this).field_f != 1) {
-                if (-3 == ((cj) this).field_f) {
+                if (-3 == (((cj) this).field_f ^ -1)) {
                   var11 = -(((cj) this).field_g * var10) + -param0.field_u + ((cj) this).field_h;
                   break L4;
                 } else {
                   L5: {
                     var12 = (-(var10 * ((cj) this).field_g) + ((cj) this).field_h) / (var10 - -1);
-                    if (-1 <= var12) {
+                    if (-1 >= (var12 ^ -1)) {
                       break L5;
                     } else {
                       var12 = 0;
@@ -265,8 +265,7 @@ final class cj extends rb {
                 }
               }
               L8: {
-                new va(stackIn_36_2, stackIn_36_3, stackIn_36_4);
-                var14 = stackIn_36_0;
+                var14 = new va(stackIn_36_2, stackIn_36_3, stackIn_36_4);
                 var14.field_b[0] = 0;
                 if (var13 != null) {
                   L9: {

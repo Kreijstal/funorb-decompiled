@@ -117,7 +117,7 @@ abstract class dc extends gg {
             var7 = 0;
             var8 = 35 + param0;
             L2: while (true) {
-              if (var4 <= var7) {
+              if ((var4 ^ -1) >= (var7 ^ -1)) {
                 ed.field_d.d(-90 + ((dc) this).field_g + param2, param0 + 10);
                 mb.a(-10 + ((dc) this).field_g, (byte) -117, qm.field_Kb, param2 - -5, 35 + param0);
                 mb.a(((dc) this).field_g, (byte) -117, qg.field_j, param2, param0 - -((dc) this).field_m - 22);
@@ -127,7 +127,7 @@ abstract class dc extends gg {
                 var7 = 0;
                 var8 = param0 - -57;
                 L3: while (true) {
-                  if (var7 >= var4) {
+                  if ((var7 ^ -1) <= (var4 ^ -1)) {
                     return;
                   } else {
                     var9 = var7 * (-var5 + var6) / var4 + var5;
@@ -150,90 +150,92 @@ abstract class dc extends gg {
               }
             }
           } else {
-            if (var8 >= df.field_g) {
-              if (var8 < df.field_h) {
-                L4: {
-                  var9 = var7 * (-var5 + var6) / var4 + var5;
-                  var10 = 0;
-                  var11 = ((dc) this).field_g;
-                  if ((var7 ^ -1) >= -21) {
-                    L5: while (true) {
-                      if (var10 > 20) {
-                        break L4;
-                      } else {
-                        var12 = (20 - var7) * (20 + -var7) - -((-var10 + 20) * (20 + -var10));
-                        if (-463 <= var12) {
-                          if (-421 > var12) {
-                            break L4;
-                          } else {
-                            var13 = var9 * (-var12 + 462) / 42;
-                            var13 = var13 | (var13 << 917519984 | var13 << -1904019064);
-                            df.field_d[param2 + df.field_e * var8 + var10] = var13;
-                            var10++;
-                            continue L5;
-                          }
-                        } else {
-                          var10++;
-                          continue L5;
-                        }
-                      }
-                    }
-                  } else {
-                    break L4;
-                  }
-                }
-                L6: {
-                  if ((var7 ^ -1) < -21) {
-                    break L6;
-                  } else {
-                    var12 = var11;
-                    var11 -= 21;
-                    var13 = 0;
-                    L7: while (true) {
-                      L8: {
-                        if (var13 > 20) {
-                          break L8;
-                        } else {
-                          var14 = (-var7 + 20) * (20 - var7) - -(var13 * var13);
-                          if (462 >= var14) {
-                            if ((var14 ^ -1) <= -421) {
-                              var15 = (462 + -var14) * var9 / 42;
-                              var15 = var15 | (var15 << -1900814232 | var15 << -606833808);
-                              df.field_d[var8 * df.field_e - -param2 - -var11] = var15;
-                              var11++;
-                              var13++;
-                              continue L7;
-                            } else {
-                              var12 = var11 + 1;
-                              var11++;
-                              var13++;
-                              continue L7;
-                            }
-                          } else {
-                            break L8;
-                          }
-                        }
-                      }
-                      var11 = var12;
-                      break L6;
-                    }
-                  }
-                }
-                var9 = var9 | (var9 << -1504501360 | var9 << 1959742024);
-                df.b(param2 + var10, var8, -var10 + var11, var9);
-                var8++;
-                var7++;
-                continue L1;
+            L4: {
+              if (var8 < df.field_g) {
+                break L4;
               } else {
-                var8++;
-                var7++;
-                continue L1;
+                if (var8 < df.field_h) {
+                  L5: {
+                    var9 = var7 * (-var5 + var6) / var4 + var5;
+                    var10 = 0;
+                    var11 = ((dc) this).field_g;
+                    if ((var7 ^ -1) >= -21) {
+                      L6: while (true) {
+                        if (var10 > 20) {
+                          break L5;
+                        } else {
+                          L7: {
+                            var12 = (20 - var7) * (20 + -var7) - -((-var10 + 20) * (20 + -var10));
+                            if (-463 <= (var12 ^ -1)) {
+                              if (-421 < (var12 ^ -1)) {
+                                break L5;
+                              } else {
+                                var13 = var9 * (-var12 + 462) / 42;
+                                var13 = var13 | (var13 << 917519984 | var13 << -1904019064);
+                                df.field_d[param2 + df.field_e * var8 + var10] = var13;
+                                break L7;
+                              }
+                            } else {
+                              break L7;
+                            }
+                          }
+                          var10++;
+                          continue L6;
+                        }
+                      }
+                    } else {
+                      break L5;
+                    }
+                  }
+                  L8: {
+                    if ((var7 ^ -1) < -21) {
+                      break L8;
+                    } else {
+                      var12 = var11;
+                      var11 -= 21;
+                      var13 = 0;
+                      L9: while (true) {
+                        L10: {
+                          if (var13 > 20) {
+                            break L10;
+                          } else {
+                            var14 = (-var7 + 20) * (20 - var7) - -(var13 * var13);
+                            if (462 >= var14) {
+                              L11: {
+                                if ((var14 ^ -1) <= -421) {
+                                  var15 = (462 + -var14) * var9 / 42;
+                                  var15 = var15 | (var15 << -1900814232 | var15 << -606833808);
+                                  df.field_d[var8 * df.field_e - -param2 - -var11] = var15;
+                                  break L11;
+                                } else {
+                                  var12 = var11 + 1;
+                                  break L11;
+                                }
+                              }
+                              var11++;
+                              var13++;
+                              continue L9;
+                            } else {
+                              break L10;
+                            }
+                          }
+                        }
+                        var11 = var12;
+                        break L8;
+                      }
+                    }
+                  }
+                  var9 = var9 | (var9 << -1504501360 | var9 << 1959742024);
+                  df.b(param2 + var10, var8, -var10 + var11, var9);
+                  break L4;
+                } else {
+                  break L4;
+                }
               }
-            } else {
-              var8++;
-              var7++;
-              continue L1;
             }
+            var8++;
+            var7++;
+            continue L1;
           }
         }
     }
@@ -258,8 +260,9 @@ abstract class dc extends gg {
         if ((((dc) this).field_T ^ -1) < -1) {
             var2 = ((dc) this).field_X;
             var3 = ((dc) this).field_S;
+            int fieldTemp$0 = ((dc) this).field_ab + 1;
             ((dc) this).field_ab = ((dc) this).field_ab + 1;
-            if (((dc) this).field_ab + 1 < ((dc) this).field_T) {
+            if (fieldTemp$0 < ((dc) this).field_T) {
                 var4 = ((dc) this).field_ab * (2 * ((dc) this).field_T - ((dc) this).field_ab);
                 var5 = ((dc) this).field_T * ((dc) this).field_T;
                 var3 = ((dc) this).field_W + (-((dc) this).field_W + ((dc) this).field_S) * var4 / var5;

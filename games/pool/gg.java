@@ -107,75 +107,38 @@ abstract class gg implements ip {
             String var4 = null;
             java.net.URL var5 = null;
             Throwable decompiledCaughtException = null;
-            int statePc = 0;
-            Throwable caughtException = null;
-            stateLoop: while (true) {
-                switch (statePc) {
-                    case 0: {
-                        try {
-                            var2 = param0.getDocumentBase().getFile();
-                            var4 = var2;
-                            var4 = var2;
-                            var3 = var2.indexOf('?');
-                            var4 = "reload.ws";
-                            if (-1 < (var3 ^ -1)) {
-                                statePc = 2;
-                            } else {
-                                statePc = 1;
-                            }
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_0) {
-                            caughtException = stateCaught_0;
-                            statePc = 4;
-                            continue stateLoop;
-                        }
-                    }
-                    case 1: {
-                        try {
-                            var4 = var4 + var2.substring(var3);
-                            statePc = 2;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_1) {
-                            caughtException = stateCaught_1;
-                            statePc = 4;
-                            continue stateLoop;
-                        }
-                    }
-                    case 2: {
-                        try {
-                            var5 = new java.net.URL(param0.getCodeBase(), var4);
-                            param0.getAppletContext().showDocument(p.a((byte) -103, var5, param0), "_self");
-                            statePc = 5;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_2) {
-                            caughtException = stateCaught_2;
-                            statePc = 4;
-                            continue stateLoop;
-                        }
-                    }
-                    case 4: {
-                        exception = (Exception) (Object) caughtException;
-                        exception.printStackTrace();
-                        statePc = 5;
-                        continue stateLoop;
-                    }
-                    case 5: {
-                        if (param1 >= -45) {
-                            statePc = 7;
-                        } else {
-                            statePc = 6;
-                        }
-                        continue stateLoop;
-                    }
-                    case 6: {
-                        return;
-                    }
-                    case 7: {
-                        boolean discarded$2 = gg.a(false);
-                        return;
-                    }
-                    default: throw new IllegalStateException("invalid CFG state " + statePc);
+            try {
+              L0: {
+                L1: {
+                  var2 = param0.getDocumentBase().getFile();
+                  var4 = var2;
+                  var4 = var2;
+                  var3 = var2.indexOf('?');
+                  var4 = "reload.ws";
+                  if (-1 < (var3 ^ -1)) {
+                    break L1;
+                  } else {
+                    var4 = var4 + var2.substring(var3);
+                    break L1;
+                  }
                 }
+                var5 = new java.net.URL(param0.getCodeBase(), var4);
+                param0.getAppletContext().showDocument(p.a((byte) -103, var5, param0), "_self");
+                break L0;
+              }
+            } catch (java.lang.Exception decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              L2: {
+                exception = (Exception) (Object) decompiledCaughtException;
+                exception.printStackTrace();
+                break L2;
+              }
+            }
+            if (param1 >= -45) {
+              boolean discarded$2 = gg.a(false);
+              return;
+            } else {
+              return;
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;

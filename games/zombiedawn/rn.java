@@ -200,8 +200,9 @@ final class rn {
                                         break L18;
                                       } else {
                                         L19: {
-                                          var9[var12] = var16.e((byte) 116);
-                                          var13 = var16.e((byte) 116);
+                                          byte dupTemp$2 = var16.e((byte) 116);
+                                          var9[var12] = dupTemp$2;
+                                          var13 = dupTemp$2;
                                           stackOut_32_0 = var10;
                                           stackIn_34_0 = stackOut_32_0;
                                           stackIn_33_0 = stackOut_32_0;
@@ -283,8 +284,9 @@ final class rn {
                                         break L26;
                                       } else {
                                         L27: {
-                                          var9[var13 * var5 + var12] = var16.e((byte) 116);
-                                          var14 = var16.e((byte) 116);
+                                          byte dupTemp$3 = var16.e((byte) 116);
+                                          var9[var13 * var5 + var12] = dupTemp$3;
+                                          var14 = dupTemp$3;
                                           stackOut_50_0 = var10;
                                           stackIn_52_0 = stackOut_50_0;
                                           stackIn_51_0 = stackOut_50_0;

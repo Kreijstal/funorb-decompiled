@@ -137,7 +137,7 @@ final class kh {
           L1: {
             var6 = 256 + param2;
             if (-2049 >= (var6 ^ -1)) {
-              // wide iinc 6 -2048
+              var6 -= 2048;
               break L1;
             } else {
               break L1;
@@ -158,7 +158,7 @@ final class kh {
             L2: {
               var6 = param2 + 1280;
               if (-2049 >= (var6 ^ -1)) {
-                // wide iinc 6 -2048
+                var6 -= 2048;
                 break L2;
               } else {
                 break L2;
@@ -229,8 +229,9 @@ final class kh {
             }
           }
           if (((kh) this).field_l) {
+            int fieldTemp$1 = ((kh) this).field_p - 1;
             ((kh) this).field_p = ((kh) this).field_p - 1;
-            if (0 < ((kh) this).field_p - 1) {
+            if (0 < fieldTemp$1) {
               return;
             } else {
               ((kh) this).field_p = ((kh) this).field_i;

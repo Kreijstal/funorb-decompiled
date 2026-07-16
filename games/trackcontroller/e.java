@@ -444,52 +444,52 @@ final class e {
     final static int a(int param0, int param1, int param2) {
         int var3 = 0;
         int var4 = 0;
-        int stackIn_13_0 = 0;
-        int stackIn_19_0 = 0;
-        int stackOut_12_0 = 0;
+        int stackIn_12_0 = 0;
+        int stackIn_16_0 = 0;
         int stackOut_11_0 = 0;
-        int stackOut_18_0 = 0;
-        int stackOut_17_0 = 0;
+        int stackOut_10_0 = 0;
+        int stackOut_15_0 = 0;
+        int stackOut_14_0 = 0;
         var4 = TrackController.field_F ? 1 : 0;
         if (param1 == -1932340400) {
           var3 = param2;
           if (512 == var3) {
-            if ((1 & field_a[param0]) != 0) {
-              return 4096;
-            } else {
+            if ((1 & field_a[param0]) == 0) {
               L0: {
                 if ((field_a[param0] & 8) == 0) {
-                  stackOut_12_0 = 16384;
-                  stackIn_13_0 = stackOut_12_0;
+                  stackOut_11_0 = 16384;
+                  stackIn_12_0 = stackOut_11_0;
                   break L0;
                 } else {
-                  stackOut_11_0 = 2048;
-                  stackIn_13_0 = stackOut_11_0;
+                  stackOut_10_0 = 2048;
+                  stackIn_12_0 = stackOut_10_0;
                   break L0;
                 }
               }
-              return stackIn_13_0;
+              return stackIn_12_0;
+            } else {
+              return 4096;
             }
           } else {
-            if (var3 != -1025) {
-              if (-129 == var3) {
-                return 4096;
-              } else {
+            if ((var3 ^ -1) != -1025) {
+              if (-129 != (var3 ^ -1)) {
                 throw new IllegalArgumentException();
+              } else {
+                return 4096;
               }
             } else {
               L1: {
                 if ((16 & field_a[param0]) != 0) {
-                  stackOut_18_0 = 4096;
-                  stackIn_19_0 = stackOut_18_0;
+                  stackOut_15_0 = 4096;
+                  stackIn_16_0 = stackOut_15_0;
                   break L1;
                 } else {
-                  stackOut_17_0 = 2048;
-                  stackIn_19_0 = stackOut_17_0;
+                  stackOut_14_0 = 2048;
+                  stackIn_16_0 = stackOut_14_0;
                   break L1;
                 }
               }
-              return stackIn_19_0;
+              return stackIn_16_0;
             }
           }
         } else {

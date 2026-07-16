@@ -15,66 +15,36 @@ final class ec extends ln {
         try {
             java.net.MalformedURLException var4 = null;
             Object var5 = null;
-            int statePc = 0;
-            Throwable caughtException = null;
-            stateLoop: while (true) {
-                switch (statePc) {
-                    case 0: {
-                        if (!un.field_u.startsWith("win")) {
-                            statePc = 3;
-                        } else {
-                            statePc = 1;
-                        }
-                        continue stateLoop;
-                    }
-                    case 1: {
-                        if (!re.a(false, param1)) {
-                            statePc = 3;
-                        } else {
-                            statePc = 2;
-                        }
-                        continue stateLoop;
-                    }
-                    case 2: {
-                        return;
-                    }
-                    case 3: {
-                        try {
-                            param2.getAppletContext().showDocument(new java.net.URL(param1), "_blank");
-                            if (param3 == -17) {
-                                statePc = 7;
-                            } else {
-                                statePc = 4;
-                            }
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_3) {
-                            caughtException = stateCaught_3;
-                            statePc = 6;
-                            continue stateLoop;
-                        }
-                    }
-                    case 4: {
-                        try {
-                            var5 = null;
-                            ec.a(true, (String) null, (java.applet.Applet) null, (byte) 126);
-                            return;
-                        } catch (Throwable stateCaught_4) {
-                            caughtException = stateCaught_4;
-                            statePc = 6;
-                            continue stateLoop;
-                        }
-                    }
-                    case 6: {
-                        var4 = (java.net.MalformedURLException) (Object) caughtException;
-                        wp.a((Throwable) null, "MGR1: " + param1, 21862);
-                        statePc = 7;
-                        continue stateLoop;
-                    }
-                    case 7: {
-                        return;
-                    }
-                    default: throw new IllegalStateException("invalid CFG state " + statePc);
+            Throwable decompiledCaughtException = null;
+            L0: {
+              if (!un.field_u.startsWith("win")) {
+                break L0;
+              } else {
+                if (!re.a(false, param1)) {
+                  break L0;
+                } else {
+                  return;
                 }
+              }
+            }
+            try {
+              L1: {
+                param2.getAppletContext().showDocument(new java.net.URL(param1), "_blank");
+                if (param3 == -17) {
+                  break L1;
+                } else {
+                  var5 = null;
+                  ec.a(true, (String) null, (java.applet.Applet) null, (byte) 126);
+                  return;
+                }
+              }
+            } catch (java.net.MalformedURLException decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              L2: {
+                var4 = (java.net.MalformedURLException) (Object) decompiledCaughtException;
+                wp.a((Throwable) null, "MGR1: " + param1, 21862);
+                break L2;
+              }
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;

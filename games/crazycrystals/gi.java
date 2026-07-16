@@ -45,13 +45,24 @@ final class gi extends pn implements Cloneable {
     }
 
     final void b(int param0, int param1, int param2, boolean param3, int param4, int param5) {
-        if (-25 == param1) {
-            // if_icmpne L44
-            fl.field_i[((gi) this).field_o >> 1421964705].c(param4, -param2 + param5, f.field_g[((gi) this).field_p]);
-        } else {
-            fl.field_i[((gi) this).field_o >> -415815295].b(param4, -param2 + param5, param1 * 2, param2 * 3, f.field_g[((gi) this).field_p]);
+        int var7 = 0;
+        L0: {
+          L1: {
+            if (-25 != (param1 ^ -1)) {
+              break L1;
+            } else {
+              if (-25 != (param2 ^ -1)) {
+                break L1;
+              } else {
+                fl.field_i[((gi) this).field_o >> 1421964705].c(param4, -param2 + param5, f.field_g[((gi) this).field_p]);
+                break L0;
+              }
+            }
+          }
+          fl.field_i[((gi) this).field_o >> -415815295].b(param4, -param2 + param5, param1 * 2, param2 * 3, f.field_g[((gi) this).field_p]);
+          break L0;
         }
-        int var7 = 101 % ((74 - param0) / 41);
+        var7 = 101 % ((74 - param0) / 41);
     }
 
     gi(int param0, f param1) {
@@ -133,8 +144,9 @@ final class gi extends pn implements Cloneable {
               if (ab.field_D == null) {
                 L4: {
                   var11 = q.field_a[var15.field_u];
+                  int fieldTemp$1 = q.field_a[var15.field_u].field_m;
                   q.field_a[var15.field_u].field_m = q.field_a[var15.field_u].field_m + 1;
-                  var12 = q.field_a[var15.field_u].field_m;
+                  var12 = fieldTemp$1;
                   if (var12 < var11.field_c.length) {
                     break L4;
                   } else {

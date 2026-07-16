@@ -16,7 +16,7 @@ final class vb {
 
     final qb b(int param0) {
         if (param0 >= -31) {
-            return (qb) null;
+            return null;
         }
         ((vb) this).field_j = 0;
         return ((vb) this).a(true);
@@ -47,18 +47,19 @@ final class vb {
           if ((((vb) this).field_j ^ -1) < -1) {
             if (((vb) this).field_f[((vb) this).field_j + -1] != ((vb) this).field_i) {
               var42 = ((vb) this).field_i;
-              ((vb) this).field_i = ((qb) var42).field_d;
+              ((vb) this).field_i = var42.field_d;
               return var42;
             } else {
               L0: while (true) {
                 if (((vb) this).field_j < ((vb) this).field_d) {
+                  int fieldTemp$4 = ((vb) this).field_j;
                   ((vb) this).field_j = ((vb) this).field_j + 1;
-                  var4 = ((vb) this).field_f[((vb) this).field_j].field_d;
+                  var4 = ((vb) this).field_f[fieldTemp$4].field_d;
                   var39 = var4;
                   if (var4 == ((vb) this).field_f[((vb) this).field_j - 1]) {
                     continue L0;
                   } else {
-                    ((vb) this).field_i = ((qb) var39).field_d;
+                    ((vb) this).field_i = var39.field_d;
                     return var39;
                   }
                 } else {
@@ -69,13 +70,14 @@ final class vb {
           } else {
             L1: while (true) {
               if (((vb) this).field_j < ((vb) this).field_d) {
+                int fieldTemp$5 = ((vb) this).field_j;
                 ((vb) this).field_j = ((vb) this).field_j + 1;
-                var4 = ((vb) this).field_f[((vb) this).field_j].field_d;
+                var4 = ((vb) this).field_f[fieldTemp$5].field_d;
                 var38 = var4;
                 if (var4 == ((vb) this).field_f[((vb) this).field_j - 1]) {
                   continue L1;
                 } else {
-                  ((vb) this).field_i = ((qb) var38).field_d;
+                  ((vb) this).field_i = var38.field_d;
                   return var38;
                 }
               } else {
@@ -84,22 +86,23 @@ final class vb {
             }
           }
         } else {
-          ((vb) this).field_g = (qb) null;
+          ((vb) this).field_g = null;
           if ((((vb) this).field_j ^ -1) < -1) {
             if (((vb) this).field_f[((vb) this).field_j + -1] != ((vb) this).field_i) {
               var36 = ((vb) this).field_i;
-              ((vb) this).field_i = ((qb) var36).field_d;
+              ((vb) this).field_i = var36.field_d;
               return var36;
             } else {
               L2: while (true) {
                 if (((vb) this).field_j < ((vb) this).field_d) {
+                  int fieldTemp$6 = ((vb) this).field_j;
                   ((vb) this).field_j = ((vb) this).field_j + 1;
-                  var4 = ((vb) this).field_f[((vb) this).field_j].field_d;
+                  var4 = ((vb) this).field_f[fieldTemp$6].field_d;
                   var37 = var4;
                   if (var4 == ((vb) this).field_f[((vb) this).field_j - 1]) {
                     continue L2;
                   } else {
-                    ((vb) this).field_i = ((qb) var37).field_d;
+                    ((vb) this).field_i = var37.field_d;
                     return var37;
                   }
                 } else {
@@ -110,13 +113,14 @@ final class vb {
           } else {
             L3: while (true) {
               if (((vb) this).field_j < ((vb) this).field_d) {
+                int fieldTemp$7 = ((vb) this).field_j;
                 ((vb) this).field_j = ((vb) this).field_j + 1;
-                var4 = ((vb) this).field_f[((vb) this).field_j].field_d;
+                var4 = ((vb) this).field_f[fieldTemp$7].field_d;
                 var5 = var4;
                 if (var4 == ((vb) this).field_f[((vb) this).field_j - 1]) {
                   continue L3;
                 } else {
-                  ((vb) this).field_i = ((qb) var5).field_d;
+                  ((vb) this).field_i = var5.field_d;
                   return var5;
                 }
               } else {
@@ -129,13 +133,13 @@ final class vb {
 
     final void a(long param0, byte param1, qb param2) {
         qb var5 = null;
-        if (((qb) param2).field_a != null) {
+        if (param2.field_a != null) {
             param2.c(106);
             var5 = ((vb) this).field_f[(int)((long)(-1 + ((vb) this).field_d) & param0)];
             param2.field_d = var5;
-            param2.field_a = ((qb) var5).field_a;
-            ((qb) param2).field_a.field_d = param2;
-            ((qb) param2).field_d.field_a = param2;
+            param2.field_a = var5.field_a;
+            param2.field_a.field_d = param2;
+            param2.field_d.field_a = param2;
             param2.field_e = param0;
             if (param1 >= 24) {
                 return;
@@ -145,9 +149,9 @@ final class vb {
         }
         var5 = ((vb) this).field_f[(int)((long)(-1 + ((vb) this).field_d) & param0)];
         param2.field_d = var5;
-        param2.field_a = ((qb) var5).field_a;
-        ((qb) param2).field_a.field_d = param2;
-        ((qb) param2).field_d.field_a = param2;
+        param2.field_a = var5.field_a;
+        param2.field_a.field_d = param2;
+        param2.field_d.field_a = param2;
         param2.field_e = param0;
         if (param1 >= 24) {
             return;
@@ -170,14 +174,14 @@ final class vb {
         qb var4 = null;
         qb var5 = null;
         int var6 = 0;
-        qb var7 = null;
+        Object var7 = null;
         qb var8 = null;
         qb var9 = null;
         var6 = Main.field_T;
         if (!param0) {
           var8 = ((vb) this).field_f[(int)(param1 & (long)(((vb) this).field_d - 1))];
           var4 = var8;
-          ((vb) this).field_g = ((qb) var8).field_d;
+          ((vb) this).field_g = var8.field_d;
           L0: while (true) {
             if (var4 == ((vb) this).field_g) {
               ((vb) this).field_g = null;
@@ -194,11 +198,11 @@ final class vb {
             }
           }
         } else {
-          var7 = (qb) null;
+          var7 = null;
           ((vb) this).a(47L, (byte) 72, (qb) null);
           var9 = ((vb) this).field_f[(int)(param1 & (long)(((vb) this).field_d - 1))];
           var4 = var9;
-          ((vb) this).field_g = ((qb) var9).field_d;
+          ((vb) this).field_g = var9.field_d;
           L1: while (true) {
             if (var4 == ((vb) this).field_g) {
               ((vb) this).field_g = null;
@@ -226,13 +230,15 @@ final class vb {
         var2 = 0;
         L0: while (true) {
           if (var2 < param0) {
-            var3 = new qb();
-            ((vb) this).field_f[var2] = new qb();
-            var3.field_d = (qb) var3;
-            var3.field_a = (qb) var3;
+            qb dupTemp$2 = new qb();
+            var3 = dupTemp$2;
+            ((vb) this).field_f[var2] = dupTemp$2;
+            var3.field_d = var3;
+            var3.field_a = var3;
             var2++;
             continue L0;
           } else {
+            return;
           }
         }
     }

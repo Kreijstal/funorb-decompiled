@@ -188,8 +188,9 @@ final class pb {
                   }
                 }
               } else {
+                int fieldTemp$2 = ((pb) this).field_t - 1;
                 ((pb) this).field_t = ((pb) this).field_t - 1;
-                if (-1 > (((pb) this).field_t - 1 ^ -1)) {
+                if (-1 > (fieldTemp$2 ^ -1)) {
                   return;
                 } else {
                   ((pb) this).field_t = ((pb) this).field_m;
@@ -256,8 +257,9 @@ final class pb {
                   return;
                 }
               } else {
+                int fieldTemp$3 = ((pb) this).field_t - 1;
                 ((pb) this).field_t = ((pb) this).field_t - 1;
-                if (-1 > (((pb) this).field_t - 1 ^ -1)) {
+                if (-1 > (fieldTemp$3 ^ -1)) {
                   return;
                 } else {
                   ((pb) this).field_t = ((pb) this).field_m;

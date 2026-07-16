@@ -164,6 +164,7 @@ final class ei extends kn implements sh {
           if (var1 >= 256) {
             field_K = "Climbing hooks: Allows sheer surfaces to be scaled.";
             field_P = "Waiting for levels";
+            return;
           } else {
             var0 = var1;
             var2 = 0;

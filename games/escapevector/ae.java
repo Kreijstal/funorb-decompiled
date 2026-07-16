@@ -27,11 +27,18 @@ final class ae implements db {
         Throwable decompiledCaughtException = null;
         if (param1 == 118) {
           try {
-            Thread.sleep(param0);
-          } catch (java.lang.Exception decompiledCaughtParameter) {
-            decompiledCaughtException = decompiledCaughtParameter;
+            L0: {
+              Thread.sleep(param0);
+              break L0;
+            }
+          } catch (java.lang.Exception decompiledCaughtParameter0) {
+            decompiledCaughtException = decompiledCaughtParameter0;
+            L1: {
+              var3 = (InterruptedException) (Object) decompiledCaughtException;
+              break L1;
+            }
           }
-          var3 = (InterruptedException) (Object) decompiledCaughtException;
+          return;
         } else {
           return;
         }

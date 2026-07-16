@@ -33,8 +33,9 @@ final class ga implements Iterator {
         if (((ga) this).field_e.field_e[-1 + ((ga) this).field_d] == ((ga) this).field_c) {
           L0: while (true) {
             if (((ga) this).field_d < ((ga) this).field_e.field_b) {
+              int fieldTemp$1 = ((ga) this).field_d;
               ((ga) this).field_d = ((ga) this).field_d + 1;
-              if (((ga) this).field_e.field_e[((ga) this).field_d].field_g == ((ga) this).field_e.field_e[-1 + ((ga) this).field_d]) {
+              if (((ga) this).field_e.field_e[fieldTemp$1].field_g == ((ga) this).field_e.field_e[-1 + ((ga) this).field_d]) {
                 ((ga) this).field_c = ((ga) this).field_e.field_e[-1 + ((ga) this).field_d];
                 continue L0;
               } else {
@@ -61,20 +62,22 @@ final class ga implements Iterator {
 
     public final Object next() {
         int var2 = 0;
-        gg var3 = null;
+        Object var3 = null;
+        gg var3_ref = null;
         gg var4 = null;
         var2 = stellarshard.field_B;
         if (((ga) this).field_e.field_e[-1 + ((ga) this).field_d] == ((ga) this).field_c) {
           L0: while (true) {
             if (((ga) this).field_d < ((ga) this).field_e.field_b) {
+              int fieldTemp$2 = ((ga) this).field_d;
               ((ga) this).field_d = ((ga) this).field_d + 1;
-              var3 = ((ga) this).field_e.field_e[((ga) this).field_d].field_g;
-              if (((ga) this).field_e.field_e[((ga) this).field_d + -1] == var3) {
+              var3_ref = ((ga) this).field_e.field_e[fieldTemp$2].field_g;
+              if (((ga) this).field_e.field_e[((ga) this).field_d + -1] == var3_ref) {
                 continue L0;
               } else {
-                ((ga) this).field_b = var3;
-                ((ga) this).field_c = var3.field_g;
-                return (Object) (Object) var3;
+                ((ga) this).field_b = var3_ref;
+                ((ga) this).field_c = var3_ref.field_g;
+                return (Object) (Object) var3_ref;
               }
             } else {
               return null;

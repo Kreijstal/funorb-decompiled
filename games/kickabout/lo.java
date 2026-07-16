@@ -175,15 +175,29 @@ final class lo extends jd {
     }
 
     final static void a(byte param0, java.applet.Applet param1) {
-        String var2 = param1.getParameter("username");
-        if (param0 > -78) {
+        String var2 = null;
+        CharSequence var3 = null;
+        L0: {
+          var2 = param1.getParameter("username");
+          if (param0 <= -78) {
+            break L0;
+          } else {
             lo.a(110, 93, 93);
+            break L0;
+          }
         }
-        if (var2 != null) {
-            CharSequence var3 = (CharSequence) (Object) var2;
-            // ifne L55
+        L1: {
+          if (var2 == null) {
+            break L1;
+          } else {
+            var3 = (CharSequence) (Object) var2;
+            if ((jc.a(var3, false) ^ -1L) != -1L) {
+              return;
+            } else {
+              break L1;
+            }
+          }
         }
-        return;
     }
 
     final static he a(long param0, boolean param1) {

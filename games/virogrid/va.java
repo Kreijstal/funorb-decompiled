@@ -13,80 +13,83 @@ final class va {
 
     final static eh a(int param0, boolean param1, int param2, int param3, boolean param4, boolean param5) {
         try {
-            gl var6 = null;
-            IOException var6_ref = null;
-            gl var7 = null;
+            Object var6 = null;
+            Object var7 = null;
             oa var8 = null;
             eh stackIn_17_0 = null;
             Throwable decompiledCaughtException = null;
             eh stackOut_16_0 = null;
             try {
               L0: {
-                var6 = null;
-                var7 = null;
-                if (null != ii.field_a.field_c) {
-                  dj.field_l = new nh(ii.field_a.field_c, 5200, 0);
-                  ii.field_a.field_c = null;
-                  var6 = new gl(255, dj.field_l, new nh(ii.field_a.field_j, 12000, 0), 2097152);
-                  break L0;
-                } else {
-                  break L0;
-                }
-              }
-              L1: {
-                if (param3 <= -56) {
-                  break L1;
-                } else {
-                  field_f = null;
-                  break L1;
-                }
-              }
-              L2: {
-                if (dj.field_l != null) {
-                  L3: {
-                    if (ij.field_n == null) {
-                      ij.field_n = new nh[ii.field_a.field_i.length];
-                      break L3;
-                    } else {
-                      break L3;
-                    }
+                L1: {
+                  var6 = null;
+                  var7 = null;
+                  if (null != ii.field_a.field_c) {
+                    dj.field_l = new nh(ii.field_a.field_c, 5200, 0);
+                    ii.field_a.field_c = null;
+                    var6 = (Object) (Object) new gl(255, dj.field_l, new nh(ii.field_a.field_j, 12000, 0), 2097152);
+                    break L1;
+                  } else {
+                    break L1;
                   }
-                  L4: {
-                    if (ij.field_n[param2] != null) {
-                      break L4;
-                    } else {
-                      ij.field_n[param2] = new nh(ii.field_a.field_i[param2], 12000, 0);
-                      ii.field_a.field_i[param2] = null;
-                      break L4;
-                    }
+                }
+                L2: {
+                  if (param3 <= -56) {
+                    break L2;
+                  } else {
+                    field_f = null;
+                    break L2;
                   }
-                  var7 = new gl(param2, dj.field_l, ij.field_n[param2], 2097152);
-                  break L2;
-                } else {
-                  break L2;
                 }
-              }
-              L5: {
-                var8 = ql.field_q.a(72, param2, param1, var6, var7);
-                if (param5) {
-                  var8.a(true);
-                  break L5;
-                } else {
-                  break L5;
+                L3: {
+                  if (dj.field_l != null) {
+                    L4: {
+                      if (ij.field_n == null) {
+                        ij.field_n = new nh[ii.field_a.field_i.length];
+                        break L4;
+                      } else {
+                        break L4;
+                      }
+                    }
+                    L5: {
+                      if (ij.field_n[param2] != null) {
+                        break L5;
+                      } else {
+                        ij.field_n[param2] = new nh(ii.field_a.field_i[param2], 12000, 0);
+                        ii.field_a.field_i[param2] = null;
+                        break L5;
+                      }
+                    }
+                    var7 = (Object) (Object) new gl(param2, dj.field_l, ij.field_n[param2], 2097152);
+                    break L3;
+                  } else {
+                    break L3;
+                  }
                 }
+                L6: {
+                  var8 = ql.field_q.a(72, param2, param1, (gl) var6, (gl) var7);
+                  if (param5) {
+                    var8.a(true);
+                    break L6;
+                  } else {
+                    break L6;
+                  }
+                }
+                stackOut_16_0 = new eh((ba) (Object) var8, param4, param0);
+                stackIn_17_0 = stackOut_16_0;
+                break L0;
               }
-              stackOut_16_0 = new eh((ba) (Object) var8, param4, param0);
-              stackIn_17_0 = stackOut_16_0;
-            } catch (java.io.IOException decompiledCaughtParameter) {
-              decompiledCaughtException = decompiledCaughtParameter;
-              return stackIn_17_0;
+            } catch (java.io.IOException decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              var6 = (Object) (Object) decompiledCaughtException;
+              throw new RuntimeException(((IOException) var6).toString());
             }
+            return stackIn_17_0;
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
             throw new RuntimeException(decompiledCheckedException);
         }
-        return null;
     }
 
     public static void a(int param0) {

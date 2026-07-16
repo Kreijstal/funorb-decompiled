@@ -115,20 +115,39 @@ final class af {
     }
 
     final void a(int param0, int param1, uk param2, int param3, int param4) {
-        if (!(!((af) this).field_d)) {
-            throw new IllegalStateException();
-        }
-        if (0 <= param0) {
-            // if_icmple L47
-            // if_icmpgt L47
-            // if_icmpge L47
+        if (((af) this).field_d) {
+          throw new IllegalStateException();
         } else {
-            throw new IllegalArgumentException();
+          L0: {
+            if (0 > param0) {
+              break L0;
+            } else {
+              if (64 <= param0) {
+                break L0;
+              } else {
+                if (0 > param4) {
+                  break L0;
+                } else {
+                  if (-65 >= (param4 ^ -1)) {
+                    break L0;
+                  } else {
+                    L1: {
+                      if (param3 == -65) {
+                        break L1;
+                      } else {
+                        ((af) this).field_l = -106;
+                        break L1;
+                      }
+                    }
+                    param2.a((byte) 19, param1, param0, param4);
+                    return;
+                  }
+                }
+              }
+            }
+          }
+          throw new IllegalArgumentException();
         }
-        if (param3 != -65) {
-            ((af) this).field_l = -106;
-        }
-        param2.a((byte) 19, param1, param0, param4);
     }
 
     static {

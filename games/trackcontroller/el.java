@@ -46,7 +46,7 @@ class el extends rh {
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
-        fi var10 = null;
+        Object var10 = null;
         int var11 = 0;
         va var12 = null;
         int var13 = 0;
@@ -115,14 +115,14 @@ class el extends rh {
                     var14 = stackIn_15_0;
                     var15 = new fi(var7, var13, var12.field_c, var14 + -var13, Math.max(var3.a((byte) 46), var12.field_f + -var12.field_c));
                     if (var10 != null) {
-                      var10.field_j = var15;
+                      ((fi) var10).field_j = var15;
                       break L4;
                     } else {
                       break L4;
                     }
                   }
                   ((el) this).field_I.a((byte) -121, (fc) (Object) var15);
-                  var10 = var15;
+                  var10 = (Object) (Object) var15;
                   var11++;
                   continue L1;
                 }
@@ -268,19 +268,44 @@ class el extends rh {
     }
 
     final void a(byte param0, String param1, int param2) {
+        int var4 = 0;
+        String[] var5 = null;
         int var6 = 0;
-        int var7 = TrackController.field_F ? 1 : 0;
-        int var4 = 118 % ((param0 - -2) / 52);
-        if (null != ((el) this).field_M) {
-            // if_icmpgt L93
-        }
-        String[] var5 = new String[1 + param2];
-        if (null != ((el) this).field_M) {
-            for (var6 = 0; var6 < ((el) this).field_M.length; var6++) {
-                var5[var6] = ((el) this).field_M[var6];
+        int var7 = 0;
+        L0: {
+          L1: {
+            var7 = TrackController.field_F ? 1 : 0;
+            var4 = 118 % ((param0 - -2) / 52);
+            if (null == ((el) this).field_M) {
+              break L1;
+            } else {
+              if (((el) this).field_M.length > param2) {
+                break L0;
+              } else {
+                break L1;
+              }
             }
+          }
+          L2: {
+            var5 = new String[1 + param2];
+            if (null == ((el) this).field_M) {
+              break L2;
+            } else {
+              var6 = 0;
+              L3: while (true) {
+                if (var6 >= ((el) this).field_M.length) {
+                  break L2;
+                } else {
+                  var5[var6] = ((el) this).field_M[var6];
+                  var6++;
+                  continue L3;
+                }
+              }
+            }
+          }
+          ((el) this).field_M = var5;
+          break L0;
         }
-        ((el) this).field_M = var5;
         ((el) this).field_M[param2] = param1;
     }
 

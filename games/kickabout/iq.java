@@ -199,38 +199,69 @@ abstract class iq {
     }
 
     final int a(int param0, int param1, int param2) {
+        int var4 = 0;
         int var5 = 0;
         qj var6 = null;
         int var7 = 0;
-        int var8 = Kickabout.field_G;
-        if (((iq) this).field_c != null) {
-            // ifeq L36
-            // if_icmpgt L36
-        } else {
-            return -1;
-        }
-        if (!(((iq) this).field_c[-1 + ((iq) this).field_c.length].field_d >= param0)) {
-            return -1;
-        }
-        if (-2 == (((iq) this).field_c.length ^ -1)) {
-            return ((iq) this).field_c[0].a((byte) 101, param1);
-        }
-        int var4 = 0;
-        if (param2 != 29889) {
-            int discarded$0 = ((iq) this).b(19, -114);
-        }
-        for (var5 = 0; ((iq) this).field_c.length > var5; var5++) {
-            var6 = ((iq) this).field_c[var5];
-            if (var6.field_g <= param0) {
-                if (!(var6.field_d < param0)) {
-                    var7 = var6.a((byte) 101, param1);
-                    if (!(0 != (var7 ^ -1))) {
-                        return -1;
+        int var8 = 0;
+        L0: {
+          var8 = Kickabout.field_G;
+          if (((iq) this).field_c == null) {
+            break L0;
+          } else {
+            if (((iq) this).field_c.length == 0) {
+              break L0;
+            } else {
+              if (((iq) this).field_c[0].field_g > param0) {
+                break L0;
+              } else {
+                if (((iq) this).field_c[-1 + ((iq) this).field_c.length].field_d < param0) {
+                  return -1;
+                } else {
+                  if (-2 != (((iq) this).field_c.length ^ -1)) {
+                    L1: {
+                      var4 = 0;
+                      if (param2 == 29889) {
+                        break L1;
+                      } else {
+                        int discarded$2 = ((iq) this).b(19, -114);
+                        break L1;
+                      }
                     }
-                    return var4 + var7;
+                    var5 = 0;
+                    L2: while (true) {
+                      if (((iq) this).field_c.length <= var5) {
+                        return -1;
+                      } else {
+                        L3: {
+                          var6 = ((iq) this).field_c[var5];
+                          if (var6.field_g > param0) {
+                            break L3;
+                          } else {
+                            if (var6.field_d >= param0) {
+                              var7 = var6.a((byte) 101, param1);
+                              if (0 == (var7 ^ -1)) {
+                                return -1;
+                              } else {
+                                return var4 + var7;
+                              }
+                            } else {
+                              break L3;
+                            }
+                          }
+                        }
+                        var4 = var4 + (var6.field_b.length + -1);
+                        var5++;
+                        continue L2;
+                      }
+                    }
+                  } else {
+                    return ((iq) this).field_c[0].a((byte) 101, param1);
+                  }
                 }
+              }
             }
-            var4 = var4 + (var6.field_b.length + -1);
+          }
         }
         return -1;
     }

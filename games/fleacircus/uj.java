@@ -200,6 +200,7 @@ final class uj {
             field_f = "Resume Game";
             field_e = "Play free version";
             field_d = "Level failed! Too many fleas died!";
+            return;
           } else {
             var0 = var1;
             var2 = 0;

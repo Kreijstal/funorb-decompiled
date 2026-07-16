@@ -117,153 +117,50 @@ final class hj implements Runnable {
         Throwable var3 = null;
         int var4 = 0;
         Object var5 = null;
-        int statePc = 0;
-        Throwable caughtException = null;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    var4 = TrackController.field_F ? 1 : 0;
-                    ((hj) this).field_e = true;
-                    statePc = 1;
-                    continue stateLoop;
-                }
-                case 1: {
-                    try {
-                        if (((hj) this).field_b) {
-                            statePc = 9;
-                        } else {
-                            statePc = 2;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_1) {
-                        caughtException = stateCaught_1;
-                        statePc = (stateCaught_1 instanceof Exception ? 10 : 12);
-                        continue stateLoop;
+        Throwable decompiledCaughtException = null;
+        var4 = TrackController.field_F ? 1 : 0;
+        ((hj) this).field_e = true;
+        try {
+          L0: while (true) {
+            if (((hj) this).field_b) {
+              ((hj) this).field_e = false;
+              return;
+            } else {
+              var1_int = 0;
+              L1: while (true) {
+                if (2 <= var1_int) {
+                  wl.a(10L, false);
+                  f.a((Object) null, (byte) -127, ((hj) this).field_d);
+                  continue L0;
+                } else {
+                  L2: {
+                    var2 = ((hj) this).field_a[var1_int];
+                    if (var2 == null) {
+                      var1_int++;
+                      break L2;
+                    } else {
+                      var2.b();
+                      break L2;
                     }
+                  }
+                  var1_int++;
+                  continue L1;
                 }
-                case 2: {
-                    try {
-                        var1_int = 0;
-                        statePc = 3;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_2) {
-                        caughtException = stateCaught_2;
-                        statePc = (stateCaught_2 instanceof Exception ? 10 : 12);
-                        continue stateLoop;
-                    }
-                }
-                case 3: {
-                    try {
-                        if (2 <= var1_int) {
-                            statePc = 8;
-                        } else {
-                            statePc = 4;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_3) {
-                        caughtException = stateCaught_3;
-                        statePc = (stateCaught_3 instanceof Exception ? 10 : 12);
-                        continue stateLoop;
-                    }
-                }
-                case 4: {
-                    try {
-                        var2 = ((hj) this).field_a[var1_int];
-                        if (var2 == null) {
-                            statePc = 6;
-                        } else {
-                            statePc = 5;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_4) {
-                        caughtException = stateCaught_4;
-                        statePc = (stateCaught_4 instanceof Exception ? 10 : 12);
-                        continue stateLoop;
-                    }
-                }
-                case 5: {
-                    try {
-                        var2.b();
-                        statePc = 7;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_5) {
-                        caughtException = stateCaught_5;
-                        statePc = (stateCaught_5 instanceof Exception ? 10 : 12);
-                        continue stateLoop;
-                    }
-                }
-                case 6: {
-                    try {
-                        var1_int++;
-                        statePc = 7;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_6) {
-                        caughtException = stateCaught_6;
-                        statePc = (stateCaught_6 instanceof Exception ? 10 : 12);
-                        continue stateLoop;
-                    }
-                }
-                case 7: {
-                    try {
-                        var1_int++;
-                        statePc = 3;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_7) {
-                        caughtException = stateCaught_7;
-                        statePc = (stateCaught_7 instanceof Exception ? 10 : 12);
-                        continue stateLoop;
-                    }
-                }
-                case 8: {
-                    try {
-                        wl.a(10L, false);
-                        f.a((Object) null, (byte) -127, ((hj) this).field_d);
-                        statePc = 1;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_8) {
-                        caughtException = stateCaught_8;
-                        statePc = (stateCaught_8 instanceof Exception ? 10 : 12);
-                        continue stateLoop;
-                    }
-                }
-                case 9: {
-                    ((hj) this).field_e = false;
-                    return;
-                }
-                case 10: {
-                    try {
-                        var1 = (Exception) (Object) caughtException;
-                        var5 = null;
-                        hb.a((Throwable) (Object) var1, 0, (String) null);
-                        statePc = 11;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_10) {
-                        caughtException = stateCaught_10;
-                        statePc = 12;
-                        continue stateLoop;
-                    }
-                }
-                case 11: {
-                    ((hj) this).field_e = false;
-                    return;
-                }
-                case 12: {
-                    try {
-                        var3 = caughtException;
-                        statePc = 13;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_12) {
-                        caughtException = stateCaught_12;
-                        statePc = 12;
-                        continue stateLoop;
-                    }
-                }
-                case 13: {
-                    ((hj) this).field_e = false;
-                    throw (RuntimeException) (Object) var3;
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
+              }
             }
+          }
+        } catch (java.lang.Exception decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1 = (Exception) (Object) decompiledCaughtException;
+          var5 = null;
+          hb.a((Throwable) (Object) var1, 0, (String) null);
+          ((hj) this).field_e = false;
+          return;
+        } catch (java.lang.Throwable decompiledCaughtParameter1) {
+          decompiledCaughtException = decompiledCaughtParameter1;
+          var3 = decompiledCaughtException;
+          ((hj) this).field_e = false;
+          throw hj.<RuntimeException>$cfr$sneakyThrow(var3);
         }
     }
 
@@ -891,7 +788,6 @@ final class hj implements Runnable {
 
     final static ti a(int param0, int param1, int param2, int param3, byte param4) {
         ti var5 = null;
-        ti var5_ref = null;
         int var6 = 0;
         var6 = TrackController.field_F ? 1 : 0;
         var5 = (ti) (Object) ea.field_s.b(2);
@@ -900,13 +796,13 @@ final class hj implements Runnable {
             if (param4 != -102) {
               return null;
             } else {
-              var5_ref = new ti();
-              var5_ref.field_l = param3;
-              var5_ref.field_k = param2;
-              var5_ref.field_i = param1;
-              ea.field_s.a((byte) -105, (fc) (Object) var5_ref);
-              mc.a(false, param0, var5_ref);
-              return var5_ref;
+              var5 = new ti();
+              var5.field_l = param3;
+              var5.field_k = param2;
+              var5.field_i = param1;
+              ea.field_s.a((byte) -105, (fc) (Object) var5);
+              mc.a(false, param0, var5);
+              return var5;
             }
           } else {
             if (var5.field_i != param1) {
@@ -932,5 +828,10 @@ final class hj implements Runnable {
     private static void $cfr$clinit() {
         field_c = new String[]{"January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"};
         field_f = new char[]{(char)91, (char)93, (char)35};
+    }
+
+    @SuppressWarnings("unchecked")
+    private static <T extends Throwable> RuntimeException $cfr$sneakyThrow(Throwable throwable) throws T {
+        throw (T) throwable;
     }
 }

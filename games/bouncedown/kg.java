@@ -76,14 +76,16 @@ final class kg {
           L0: {
             var6 = new tg[9];
             var5 = var6;
-            var6[6] = hc.a(param1, param2, (byte) -126);
-            var5[3] = hc.a(param1, param2, (byte) -126);
-            var5[2] = hc.a(param1, param2, (byte) -126);
-            var5[1] = hc.a(param1, param2, (byte) -126);
-            var5[0] = hc.a(param1, param2, (byte) -126);
-            var6[8] = hc.a(param1, param0, (byte) -123);
-            var5[7] = hc.a(param1, param0, (byte) -123);
-            var5[5] = hc.a(param1, param0, (byte) -123);
+            tg dupTemp$2 = hc.a(param1, param2, (byte) -126);
+            var6[6] = dupTemp$2;
+            var5[3] = dupTemp$2;
+            var5[2] = dupTemp$2;
+            var5[1] = dupTemp$2;
+            var5[0] = dupTemp$2;
+            tg dupTemp$3 = hc.a(param1, param0, (byte) -123);
+            var6[8] = dupTemp$3;
+            var5[7] = dupTemp$3;
+            var5[5] = dupTemp$3;
             if (param4 == 0) {
               break L0;
             } else {
@@ -785,10 +787,10 @@ final class kg {
             param0.a(param2, param3, param5, param1, -89);
             param0.a(-29776);
         }
-        if (((kg) this).field_a != 2147483647) {
+        if ((((kg) this).field_a ^ -1) != 2147483647) {
             param0.field_a = ((kg) this).field_a;
         }
-        if (!(0 > ((kg) this).field_l)) {
+        if (!(0 < (((kg) this).field_l ^ -1))) {
             param0.field_l = ((kg) this).field_l;
         }
         if (!(null == ((kg) this).field_o)) {

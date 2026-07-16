@@ -181,8 +181,9 @@ final class df {
             this.b(-118);
             ((df) this).field_g = 256;
         }
+        int fieldTemp$0 = ((df) this).field_g - 1;
         ((df) this).field_g = ((df) this).field_g - 1;
-        return ((df) this).field_c[((df) this).field_g - 1];
+        return ((df) this).field_c[fieldTemp$0];
     }
 
     private final void b(int param0) {
@@ -191,8 +192,9 @@ final class df {
         int var4 = 0;
         int var5 = 0;
         var5 = EscapeVector.field_A;
+        int fieldTemp$3 = ((df) this).field_a + 1;
         ((df) this).field_a = ((df) this).field_a + 1;
-        ((df) this).field_e = ((df) this).field_e + (((df) this).field_a + 1);
+        ((df) this).field_e = ((df) this).field_e + fieldTemp$3;
         if (param0 <= -96) {
           var2 = 0;
           L0: while (true) {
@@ -220,10 +222,12 @@ final class df {
                 }
               }
               ((df) this).field_b = ((df) this).field_b + ((df) this).field_i[255 & var2 + 128];
-              var4 = ((df) this).field_b + (((df) this).field_i[ae.a(var3, 1020) >> 1900691618] - -((df) this).field_e);
-              ((df) this).field_i[var2] = ((df) this).field_b + (((df) this).field_i[ae.a(var3, 1020) >> 1900691618] - -((df) this).field_e);
-              ((df) this).field_e = var3 + ((df) this).field_i[ae.a(var4 >> -1854611896, 1020) >> 2067746082];
-              ((df) this).field_c[var2] = var3 + ((df) this).field_i[ae.a(var4 >> -1854611896, 1020) >> 2067746082];
+              int dupTemp$4 = ((df) this).field_b + (((df) this).field_i[ae.a(var3, 1020) >> 1900691618] - -((df) this).field_e);
+              var4 = dupTemp$4;
+              ((df) this).field_i[var2] = dupTemp$4;
+              int dupTemp$5 = var3 + ((df) this).field_i[ae.a(var4 >> -1854611896, 1020) >> 2067746082];
+              ((df) this).field_e = dupTemp$5;
+              ((df) this).field_c[var2] = dupTemp$5;
               var2++;
               continue L0;
             }

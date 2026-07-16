@@ -171,10 +171,10 @@ final class ik extends q {
               break L0;
             } else {
               L1: {
-                if (((ik) this).field_q <= -1) {
+                if ((((ik) this).field_q ^ -1) <= -1) {
                   break L1;
                 } else {
-                  if (-1 > var2 - -((ik) this).field_j.field_v + ((ik) this).field_j.field_s) {
+                  if (-1 < (var2 - -((ik) this).field_j.field_v + ((ik) this).field_j.field_s ^ -1)) {
                     ((ik) this).f(param0 + 2857);
                     break L0;
                   } else {
@@ -240,6 +240,7 @@ final class ik extends q {
             }
             ((ik) this).field_r = va.a(128, (byte) 120, hg.field_e) + 128;
             ((ik) this).field_n = (int)Math.sqrt((double)va.a(230400, (byte) 121, hg.field_e));
+            return;
           } else {
             L2: {
               var6 = -1 + var5 >> 51355873;
@@ -272,10 +273,10 @@ final class ik extends q {
               var10 = var8 + (-var9 + va.a((var9 >> -965763967) + var9, (byte) 125, hg.field_e));
               var11 = va.a(512, (byte) 125, hg.field_e);
               if (var7 == 0) {
-                // wide iinc 11 1280
+                var11 += 1280;
                 break L4;
               } else {
-                // wide iinc 11 256
+                var11 += 256;
                 break L4;
               }
             }

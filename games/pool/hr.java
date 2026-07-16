@@ -30,7 +30,7 @@ final class hr {
     private bd field_o;
 
     final static void a(di param0, int param1) {
-        jk var2 = null;
+        Object var2 = null;
         int var3 = 0;
         oo var4 = null;
         int var5 = 0;
@@ -54,7 +54,7 @@ final class hr {
                 }
               } else {
                 if (nn.field_b[var3].field_A == null) {
-                  nn.field_b[var3].field_A = var2;
+                  nn.field_b[var3].field_A = (jk) var2;
                   var3++;
                   continue L1;
                 } else {
@@ -68,7 +68,7 @@ final class hr {
             var4.a(param0, param1 ^ -98);
             if (null != var4.field_A) {
               if (var2 == null) {
-                var2 = var4.field_A;
+                var2 = (Object) (Object) var4.field_A;
                 var3++;
                 continue L0;
               } else {
@@ -97,8 +97,9 @@ final class hr {
           }
           if (param0) {
             if (((hr) this).field_e) {
+              int fieldTemp$1 = ((hr) this).field_r - 1;
               ((hr) this).field_r = ((hr) this).field_r - 1;
-              if (-1 <= (((hr) this).field_r - 1 ^ -1)) {
+              if (-1 <= (fieldTemp$1 ^ -1)) {
                 ((hr) this).field_r = ((hr) this).field_l;
                 if (((hr) this).field_v <= rf.field_d) {
                   this.a(2);
@@ -158,7 +159,7 @@ final class hr {
 
     final static void a(boolean param0, int param1, int param2) {
         kn var4 = null;
-        String var5_ref = null;
+        String var5_ref_String = null;
         int var5 = 0;
         int var6 = 0;
         eo var3 = wp.a(param0, param2, 100);
@@ -169,8 +170,8 @@ final class hr {
         if (!(var3 == null)) {
             vl.field_m.a((byte) 124, false);
             var4 = vl.field_m;
-            var5_ref = ge.field_m;
-            var4.field_n.a(var5_ref, 17130, 5);
+            var5_ref_String = ge.field_m;
+            var4.field_n.a(var5_ref_String, 17130, 5);
             var4 = vl.field_m;
             var5 = lq.field_W;
             var6 = ua.field_o;

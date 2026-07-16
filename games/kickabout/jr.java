@@ -691,7 +691,7 @@ final class jr extends im {
                     if (3 <= var7) {
                       L11: {
                         var4 = var4 + ((jr) this).field_Db[2];
-                        if (((jr) this).field_Hb.field_m.field_h.length != 0) {
+                        if ((((jr) this).field_Hb.field_m.field_h.length ^ -1) != -1) {
                           break L11;
                         } else {
                           pb.field_C.d(hi.field_w, var4 + (((jr) this).field_Db[3] >> 890221121), 4 + (((jr) this).field_T + (((jr) this).field_mb >> -810517279)), 16777215, -1);
@@ -739,8 +739,8 @@ final class jr extends im {
                     } else {
                       L15: {
                         var8 = 5 + ((jr) this).field_T - -(15 * var7);
-                        if (var7 != -1) {
-                          if (-2 != var7) {
+                        if ((var7 ^ -1) != -1) {
+                          if (-2 != (var7 ^ -1)) {
                             stackOut_35_0 = var12.field_o;
                             stackIn_36_0 = stackOut_35_0;
                             break L15;
@@ -757,8 +757,8 @@ final class jr extends im {
                       }
                       L16: {
                         var9_int = stackIn_36_0;
-                        if (var7 != -1) {
-                          if (-2 == var7) {
+                        if ((var7 ^ -1) != -1) {
+                          if (-2 == (var7 ^ -1)) {
                             stackOut_40_0 = var12.a(5205, oi.b(87));
                             stackIn_41_0 = stackOut_40_0;
                             break L16;
@@ -897,7 +897,6 @@ final class jr extends im {
 
     jr(vc param0, int[] param1) {
         jr var3 = null;
-        jr var3_ref = null;
         int var4 = 0;
         Object var5 = null;
         int var6 = 0;
@@ -920,7 +919,7 @@ final class jr extends im {
           if (var3 != null) {
             break L0;
           } else {
-            var3_ref = new jr();
+            var3 = new jr();
             break L0;
           }
         }
@@ -978,6 +977,7 @@ final class jr extends im {
         var8 = 0;
         L3: while (true) {
           if (((jr) this).field_Eb.length <= var8) {
+            return;
           } else {
             L4: {
               var9 = pa.field_g[((jr) this).field_Hb.field_m.field_h[var8]];

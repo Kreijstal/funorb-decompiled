@@ -10,59 +10,34 @@ final class ka {
     static ba field_b;
 
     final static String a(int param0, int param1, byte[] param2, int param3) {
-        char[] var4 = null;
-        int var5 = 0;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
-        int var9 = 0;
-        char[] var10 = null;
-        var9 = TrackController.field_F ? 1 : 0;
-        var10 = new char[param3];
-        var4 = var10;
-        var5 = 0;
-        if (param1 == -129) {
-          var6 = 0;
-          L0: while (true) {
-            if (var6 >= param3) {
-              return new String(var10, 0, var5);
-            } else {
-              var7 = param2[param0 + var6] & 255;
-              if (var7 != 0) {
-                L1: {
-                  if (var7 > -129) {
-                    break L1;
-                  } else {
-                    if (-161 > var7) {
-                      L2: {
-                        var8 = h.field_e[var7 + -128];
-                        if (var8 != 0) {
-                          break L2;
-                        } else {
-                          var8 = 63;
-                          break L2;
-                        }
-                      }
-                      var7 = var8;
-                      break L1;
-                    } else {
-                      break L1;
-                    }
-                  }
-                }
-                var5++;
-                var10[var5] = (char)var7;
-                var6++;
-                continue L0;
-              } else {
-                var6++;
-                continue L0;
-              }
-            }
-          }
-        } else {
-          return null;
+        int var9 = TrackController.field_F ? 1 : 0;
+        char[] var10 = new char[param3];
+        char[] var4 = var10;
+        int var5 = 0;
+        if (param1 != -129) {
+            return null;
         }
+        for (var6 = 0; var6 < param3; var6++) {
+            var7 = param2[param0 + var6] & 255;
+            if (var7 != 0) {
+                if ((var7 ^ -1) <= -129) {
+                    if (!(-161 >= (var7 ^ -1))) {
+                        var8 = h.field_e[var7 + -128];
+                        if (var8 == 0) {
+                            var8 = 63;
+                        }
+                        var7 = var8;
+                    }
+                }
+                int incrementValue$0 = var5;
+                var5++;
+                var10[incrementValue$0] = (char)var7;
+            }
+        }
+        return new String(var10, 0, var5);
     }
 
     final static boolean a(CharSequence param0, boolean param1, int param2) {

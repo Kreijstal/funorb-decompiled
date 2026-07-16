@@ -103,15 +103,20 @@ final class pg {
               }
             }
             try {
-              if (param1 == null) {
-                break L0;
-              } else {
-                param2.field_e.postEvent((java.awt.AWTEvent) (Object) new java.awt.event.ActionEvent(param1, 1001, "dummy"));
-                return;
+              L3: {
+                if (param1 == null) {
+                  break L3;
+                } else {
+                  param2.field_e.postEvent((java.awt.AWTEvent) (Object) new java.awt.event.ActionEvent(param1, 1001, "dummy"));
+                  return;
+                }
               }
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
-              var3 = (Exception) (Object) decompiledCaughtException;
+              L4: {
+                var3 = (Exception) (Object) decompiledCaughtException;
+                break L4;
+              }
             }
             return;
           }

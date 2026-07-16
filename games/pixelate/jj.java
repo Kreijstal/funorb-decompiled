@@ -207,6 +207,7 @@ class jj {
                 var7 = 0;
                 L2: while (true) {
                   if ((var7 ^ -1) <= -3) {
+                    return;
                   } else {
                     var8 = ((jj) this).field_f[var7];
                     var9 = 0;

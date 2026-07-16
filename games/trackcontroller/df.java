@@ -354,8 +354,9 @@ final class df {
             for (var12 = 0; var12 < var8; var12++) {
                 var13 = ((df) this).field_h[var7][var11 & var10];
                 var11 = var11 >>> var9;
+                int incrementValue$0 = var5;
                 var5++;
-                field_c[var5] = var13 >= 0 ? ml.field_w[var13].a() : 0;
+                field_c[incrementValue$0] = var13 >= 0 ? ml.field_w[var13].a() : 0;
             }
         }
         return true;
@@ -454,6 +455,7 @@ final class df {
                             field_f = new boolean[var5];
                             break L4;
                           }
+                          return;
                         } else {
                           var7 = ((df) this).field_e[var6];
                           var8 = 0;
@@ -462,8 +464,9 @@ final class df {
                               var6++;
                               continue L3;
                             } else {
+                              int incrementValue$2 = var5;
                               var5++;
-                              ((df) this).field_a[var5] = ml.f(var4);
+                              ((df) this).field_a[incrementValue$2] = ml.f(var4);
                               var8++;
                               continue L6;
                             }
@@ -479,8 +482,9 @@ final class df {
                 } else {
                   L7: {
                     ((df) this).field_l[var4] = ml.f(3) + 1;
-                    ((df) this).field_b[var4] = ml.f(2);
-                    var5 = ml.f(2);
+                    int dupTemp$3 = ml.f(2);
+                    ((df) this).field_b[var4] = dupTemp$3;
+                    var5 = dupTemp$3;
                     if (var5 == 0) {
                       break L7;
                     } else {

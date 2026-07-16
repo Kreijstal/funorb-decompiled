@@ -725,7 +725,7 @@ final class pj extends mi {
         if (param0 == -17144) {
           var2 = var9.f(255);
           var3 = var9.f(255);
-          if (var2 == -1) {
+          if ((var2 ^ -1) == -1) {
             var27_ref = (sc) (Object) tg.field_c.b((byte) 110);
             if (var27_ref != null) {
               L0: {
@@ -759,7 +759,7 @@ final class pj extends mi {
               return;
             }
           } else {
-            if (-2 != var2) {
+            if (-2 != (var2 ^ -1)) {
               rg.a((Throwable) null, "LR1: " + ni.c(6), -562);
               ql.a(-66);
               return;
@@ -800,7 +800,7 @@ final class pj extends mi {
           pj.f(16);
           var2 = var9.f(255);
           var3 = var9.f(255);
-          if (var2 == -1) {
+          if ((var2 ^ -1) == -1) {
             var25_ref = (sc) (Object) tg.field_c.b((byte) 110);
             if (var25_ref != null) {
               L5: {
@@ -834,7 +834,11 @@ final class pj extends mi {
               return;
             }
           } else {
-            if (-2 == var2) {
+            if (-2 != (var2 ^ -1)) {
+              rg.a((Throwable) null, "LR1: " + ni.c(6), -562);
+              ql.a(-66);
+              return;
+            } else {
               var4 = var9.a(param0 + 37623);
               var5_ref_dc = (dc) (Object) v.field_d.b((byte) 100);
               L7: while (true) {
@@ -868,10 +872,6 @@ final class pj extends mi {
                   }
                 }
               }
-            } else {
-              rg.a((Throwable) null, "LR1: " + ni.c(6), -562);
-              ql.a(-66);
-              return;
             }
           }
         }

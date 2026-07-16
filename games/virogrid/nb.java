@@ -51,17 +51,20 @@ abstract class nb extends wb {
             if (!param0) {
               if (var4 == 0) {
                 var5 = dk.field_v.g(-10) + dk.field_v.field_Bb;
-                if (var5 >= -641) {
-                  if (-636 > var5) {
-                    if (-1 <= (bf.field_o ^ -1)) {
-                      return;
+                if ((var5 ^ -1) >= -641) {
+                  L1: {
+                    if (-636 >= (var5 ^ -1)) {
+                      break L1;
                     } else {
-                      bf.field_o = bf.field_o - 5;
-                      return;
+                      if (-1 > (bf.field_o ^ -1)) {
+                        bf.field_o = bf.field_o - 5;
+                        break L1;
+                      } else {
+                        return;
+                      }
                     }
-                  } else {
-                    return;
                   }
+                  return;
                 } else {
                   bf.field_o = bf.field_o + 5;
                   return;
@@ -69,17 +72,20 @@ abstract class nb extends wb {
               } else {
                 cm.field_h.a(param0, (byte) 126);
                 var5 = dk.field_v.g(-10) + dk.field_v.field_Bb;
-                if (var5 >= -641) {
-                  if (-636 > var5) {
-                    if (-1 <= (bf.field_o ^ -1)) {
-                      return;
+                if ((var5 ^ -1) >= -641) {
+                  L2: {
+                    if (-636 >= (var5 ^ -1)) {
+                      break L2;
                     } else {
-                      bf.field_o = bf.field_o - 5;
-                      return;
+                      if (-1 > (bf.field_o ^ -1)) {
+                        bf.field_o = bf.field_o - 5;
+                        break L2;
+                      } else {
+                        return;
+                      }
                     }
-                  } else {
-                    return;
                   }
+                  return;
                 } else {
                   bf.field_o = bf.field_o + 5;
                   return;
@@ -90,12 +96,12 @@ abstract class nb extends wb {
               if (var4 != 0) {
                 cm.field_h.a(param0, (byte) 126);
                 var5 = dk.field_v.g(-10) + dk.field_v.field_Bb;
-                if (var5 >= -641) {
-                  if (-636 > var5) {
-                    if (-1 <= (bf.field_o ^ -1)) {
+                if ((var5 ^ -1) >= -641) {
+                  if (-636 < (var5 ^ -1)) {
+                    if (-1 > (bf.field_o ^ -1)) {
+                      bf.field_o = bf.field_o - 5;
                       return;
                     } else {
-                      bf.field_o = bf.field_o - 5;
                       return;
                     }
                   } else {
@@ -107,17 +113,20 @@ abstract class nb extends wb {
                 }
               } else {
                 var5 = dk.field_v.g(-10) + dk.field_v.field_Bb;
-                if (var5 >= -641) {
-                  if (-636 > var5) {
-                    if (-1 <= (bf.field_o ^ -1)) {
-                      return;
+                if ((var5 ^ -1) >= -641) {
+                  L3: {
+                    if (-636 >= (var5 ^ -1)) {
+                      break L3;
                     } else {
-                      bf.field_o = bf.field_o - 5;
-                      return;
+                      if (-1 > (bf.field_o ^ -1)) {
+                        bf.field_o = bf.field_o - 5;
+                        break L3;
+                      } else {
+                        return;
+                      }
                     }
-                  } else {
-                    return;
                   }
+                  return;
                 } else {
                   bf.field_o = bf.field_o + 5;
                   return;

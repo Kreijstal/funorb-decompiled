@@ -23,8 +23,8 @@ final class iu extends gn {
             var3 = "";
             var4 = 0;
             var5 = -71 / ((param0 - -58) / 61);
-            if (-3 != param2) {
-              if (-2 == param2) {
+            if (-3 != (param2 ^ -1)) {
+              if (-2 == (param2 ^ -1)) {
                 var4 = 3;
                 var3 = "goal_pipe";
                 break L0;

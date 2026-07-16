@@ -11,7 +11,7 @@ final class cb extends qb {
         field_h = null;
         field_j = null;
         if (param0 != -1962269296) {
-            field_h = (String) null;
+            field_h = null;
             field_g = null;
             return;
         }

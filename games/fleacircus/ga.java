@@ -10,41 +10,33 @@ final class ga extends r {
     static String field_n;
 
     final wd a(int param0, String param1) {
-        int var3 = 0;
-        CharSequence var4 = null;
         CharSequence var5 = null;
-        CharSequence var6 = null;
-        var4 = (CharSequence) (Object) param1;
-        if (!ii.a(12969, var4)) {
-          return ml.field_K;
-        } else {
-          if (param0 == 160) {
-            var6 = (CharSequence) (Object) param1;
-            var3 = pl.a(var6, -9816);
-            if (-1 > var3) {
-              if (-131 < var3) {
-                return ml.field_K;
-              } else {
-                return hm.field_b;
-              }
-            } else {
-              return ml.field_K;
-            }
-          } else {
+        int var3 = 0;
+        CharSequence var4 = (CharSequence) (Object) param1;
+        if (!(ii.a(12969, var4))) {
+            return ml.field_K;
+        }
+        if (param0 != 160) {
             ga.c((byte) -73);
             var5 = (CharSequence) (Object) param1;
             var3 = pl.a(var5, -9816);
-            if (-1 > var3) {
-              if (-131 < var3) {
+            if (-1 <= (var3 ^ -1)) {
                 return ml.field_K;
-              } else {
-                return hm.field_b;
-              }
-            } else {
-              return ml.field_K;
             }
-          }
+            if (-131 > (var3 ^ -1)) {
+                return ml.field_K;
+            }
+            return hm.field_b;
         }
+        CharSequence var6 = (CharSequence) (Object) param1;
+        var3 = pl.a(var6, -9816);
+        if (-1 <= (var3 ^ -1)) {
+            return ml.field_K;
+        }
+        if (-131 > (var3 ^ -1)) {
+            return ml.field_K;
+        }
+        return hm.field_b;
     }
 
     final String a(byte param0, String param1) {

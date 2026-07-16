@@ -209,8 +209,7 @@ final class ih extends hp implements ok, hh {
                 break L6;
               }
             }
-            new an(stackIn_17_3, (sk) null);
-            ((ih) this).field_Q = stackIn_17_1;
+            ((ih) this).field_Q = new an(stackIn_17_3, (sk) null);
             if (!((ih) this).field_L) {
               break L5;
             } else {
@@ -289,11 +288,13 @@ final class ih extends hp implements ok, hh {
           }
         }
         L13: {
-          var12 = new q(10, ((ih) this).field_j, -20 + ((ih) this).field_i, 25, (ga) (Object) ((ih) this).field_N, false, 80, 3, var7, 16777215, var8);
-          ((ih) this).a((ga) (Object) new q(10, ((ih) this).field_j, -20 + ((ih) this).field_i, 25, (ga) (Object) ((ih) this).field_N, false, 80, 3, var7, 16777215, var8), 10);
+          q dupTemp$2 = new q(10, ((ih) this).field_j, -20 + ((ih) this).field_i, 25, (ga) (Object) ((ih) this).field_N, false, 80, 3, var7, 16777215, var8);
+          var12 = dupTemp$2;
+          ((ih) this).a((ga) (Object) dupTemp$2, 10);
           ((ih) this).field_j = ((ih) this).field_j + (((ga) (Object) var12).field_n + 5);
-          var13 = new q(10, ((ih) this).field_j, ((ih) this).field_i - 20, 25, (ga) (Object) ((ih) this).field_M, false, 80, 3, var7, 16777215, ui.field_c);
-          ((ih) this).a((ga) (Object) new q(10, ((ih) this).field_j, ((ih) this).field_i - 20, 25, (ga) (Object) ((ih) this).field_M, false, 80, 3, var7, 16777215, ui.field_c), 10);
+          q dupTemp$3 = new q(10, ((ih) this).field_j, ((ih) this).field_i - 20, 25, (ga) (Object) ((ih) this).field_M, false, 80, 3, var7, 16777215, ui.field_c);
+          var13 = dupTemp$3;
+          ((ih) this).a((ga) (Object) dupTemp$3, 10);
           ((ih) this).field_R.field_v = (sk) this;
           ((ih) this).field_j = ((ih) this).field_j + (5 + ((ga) (Object) var13).field_n);
           if (null == ((ih) this).field_K) {

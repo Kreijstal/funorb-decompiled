@@ -63,7 +63,7 @@ abstract class ua {
                   }
                   return var3;
                 } else {
-                  if (-6 == var3) {
+                  if (-6 == (var3 ^ -1)) {
                     L3: {
                       qo.g((byte) -68);
                       if (0 != var3) {
@@ -90,7 +90,7 @@ abstract class ua {
                       if (0 != var3) {
                         break L4;
                       } else {
-                        if (-3 != go.field_x) {
+                        if (-3 != (go.field_x ^ -1)) {
                           break L4;
                         } else {
                           var4 = km.b(-1) + -dc.field_c;
@@ -110,7 +110,7 @@ abstract class ua {
                 }
               } else {
                 if (var2 != 0) {
-                  if (-3 != go.field_x) {
+                  if (-3 != (go.field_x ^ -1)) {
                     qo.g((byte) -68);
                     if (0 == var3) {
                       if (-3 == (go.field_x ^ -1)) {
@@ -161,7 +161,7 @@ abstract class ua {
                       } else {
                         var4 = km.b(-1) + -dc.field_c;
                         var6 = (int)((10999L - var4) / 1000L);
-                        if (var6 >= -1) {
+                        if ((var6 ^ -1) >= -1) {
                           ka.a(5, true, (byte) -115);
                           var3 = 2;
                           break L6;
@@ -176,7 +176,7 @@ abstract class ua {
               }
             } else {
               if (var2 != 0) {
-                if (-3 != go.field_x) {
+                if (-3 != (go.field_x ^ -1)) {
                   L7: {
                     qo.g((byte) -68);
                     if (0 != var3) {
@@ -218,33 +218,36 @@ abstract class ua {
                   }
                 }
               } else {
-                if (0 == var3) {
-                  if (-3 == (go.field_x ^ -1)) {
-                    var4 = km.b(-1) + -dc.field_c;
-                    var6 = (int)((10999L - var4) / 1000L);
-                    if ((var6 ^ -1) < -1) {
-                      return var3;
-                    } else {
-                      ka.a(5, true, (byte) -115);
-                      var3 = 2;
-                      return var3;
-                    }
+                L8: {
+                  if (0 != var3) {
+                    break L8;
                   } else {
-                    return var3;
+                    if (-3 != (go.field_x ^ -1)) {
+                      break L8;
+                    } else {
+                      var4 = km.b(-1) + -dc.field_c;
+                      var6 = (int)((10999L - var4) / 1000L);
+                      if ((var6 ^ -1) >= -1) {
+                        ka.a(5, true, (byte) -115);
+                        var3 = 2;
+                        break L8;
+                      } else {
+                        return var3;
+                      }
+                    }
                   }
-                } else {
-                  return var3;
                 }
+                return var3;
               }
             }
           } else {
-            L8: {
+            L9: {
               kb.field_g.a(0);
               if (!kb.field_g.f((byte) -60)) {
-                break L8;
+                break L9;
               } else {
                 var1 = 1;
-                break L8;
+                break L9;
               }
             }
             if (-14 != (e.field_f ^ -1)) {

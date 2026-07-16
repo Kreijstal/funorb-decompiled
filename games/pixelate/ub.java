@@ -212,12 +212,18 @@ final class ub {
                 }
               }
               try {
-                stackOut_43_0 = new java.net.URL(param1, var7.toString());
-                stackIn_44_0 = stackOut_43_0;
-              } catch (java.lang.Exception decompiledCaughtParameter) {
-                decompiledCaughtException = decompiledCaughtParameter;
-                return stackIn_44_0;
+                L10: {
+                  stackOut_43_0 = new java.net.URL(param1, var7.toString());
+                  stackIn_44_0 = stackOut_43_0;
+                  break L10;
+                }
+              } catch (java.lang.Exception decompiledCaughtParameter0) {
+                decompiledCaughtException = decompiledCaughtParameter0;
+                var8 = (Exception) (Object) decompiledCaughtException;
+                var8.printStackTrace();
+                return param1;
               }
+              return stackIn_44_0;
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;

@@ -35,7 +35,6 @@ final class e {
         int var4 = 0;
         int var5 = 0;
         String var6 = null;
-        String var6_ref = null;
         int var7 = 0;
         int var8 = 0;
         nm var9 = null;
@@ -131,7 +130,7 @@ final class e {
             if (param0 > -78) {
               break L1;
             } else {
-              if (dq.field_j.length > var3) {
+              if ((dq.field_j.length ^ -1) < (var3 ^ -1)) {
                 L2: {
                   var4 = bm.field_c[var3];
                   if ((var4 ^ -1) > -1) {
@@ -149,14 +148,14 @@ final class e {
                 }
                 L3: {
                   var6 = dq.field_j[var3];
-                  if (-3 != oa.field_h) {
+                  if (-3 != (oa.field_h ^ -1)) {
                     break L3;
                   } else {
-                    if (-2 != var2) {
+                    if (-2 != (var2 ^ -1)) {
                       break L3;
                     } else {
                       L4: {
-                        if (va.field_W.length <= hk.field_n.length) {
+                        if ((va.field_W.length ^ -1) >= (hk.field_n.length ^ -1)) {
                           stackOut_64_0 = hk.field_n.length;
                           stackIn_65_0 = stackOut_64_0;
                           break L4;
@@ -183,7 +182,7 @@ final class e {
                                 break L6;
                               }
                             }
-                            var6_ref = stackIn_71_0;
+                            var6 = stackIn_71_0;
                             break L5;
                           } else {
                             break L5;
@@ -191,7 +190,7 @@ final class e {
                         }
                       }
                       L7: {
-                        if (rq.field_H.length >= fo.field_a.length) {
+                        if ((rq.field_H.length ^ -1) <= (fo.field_a.length ^ -1)) {
                           stackOut_74_0 = rq.field_H.length;
                           stackIn_75_0 = stackOut_74_0;
                           break L7;
@@ -202,7 +201,7 @@ final class e {
                         }
                       }
                       var8 = stackIn_75_0;
-                      if (var7 + 7 > var3) {
+                      if ((var7 + 7 ^ -1) < (var3 ^ -1)) {
                         break L3;
                       } else {
                         if (var8 + var7 + 7 <= var3) {
@@ -219,7 +218,7 @@ final class e {
                               break L8;
                             }
                           }
-                          var6_ref = stackIn_80_0;
+                          var6 = stackIn_80_0;
                           break L3;
                         }
                       }
@@ -230,12 +229,12 @@ final class e {
                   if ((var4 ^ -1) != 1) {
                     break L9;
                   } else {
-                    var6_ref = Integer.toString(var2);
+                    var6 = Integer.toString(var2);
                     break L9;
                   }
                 }
                 L10: {
-                  stackOut_83_0 = (String) var6_ref;
+                  stackOut_83_0 = (String) var6;
                   stackIn_85_0 = stackOut_83_0;
                   stackIn_84_0 = stackOut_83_0;
                   if (var4 < 0) {
@@ -285,11 +284,11 @@ final class e {
                 }
                 L14: {
                   if (-1 < (var4 ^ -1)) {
-                    dq.field_f.d(var6_ref, var8, vc.field_K + var1, var5, -1);
+                    dq.field_f.d(var6, var8, vc.field_K + var1, var5, -1);
                     var1 = var1 + qe.field_y;
                     break L14;
                   } else {
-                    gj.field_R.d(var6_ref, var8, var1 - -mm.field_b, var5, -1);
+                    gj.field_R.d(var6, var8, var1 - -mm.field_b, var5, -1);
                     var1 = var1 + (ch.field_I + qi.field_e + fj.field_h);
                     var3++;
                     break L14;
@@ -306,7 +305,7 @@ final class e {
           }
           L15: {
             field_e = null;
-            if (dq.field_j.length <= var3) {
+            if ((dq.field_j.length ^ -1) >= (var3 ^ -1)) {
               break L15;
             } else {
               L16: {
@@ -326,14 +325,14 @@ final class e {
               }
               L17: {
                 var6 = dq.field_j[var3];
-                if (-3 != oa.field_h) {
+                if (-3 != (oa.field_h ^ -1)) {
                   break L17;
                 } else {
-                  if (-2 != var2) {
+                  if (-2 != (var2 ^ -1)) {
                     break L17;
                   } else {
                     L18: {
-                      if (va.field_W.length <= hk.field_n.length) {
+                      if ((va.field_W.length ^ -1) >= (hk.field_n.length ^ -1)) {
                         stackOut_110_0 = hk.field_n.length;
                         stackIn_111_0 = stackOut_110_0;
                         break L18;
@@ -360,7 +359,7 @@ final class e {
                               break L20;
                             }
                           }
-                          var6_ref = stackIn_117_0;
+                          var6 = stackIn_117_0;
                           break L19;
                         } else {
                           break L19;
@@ -368,7 +367,7 @@ final class e {
                       }
                     }
                     L21: {
-                      if (rq.field_H.length >= fo.field_a.length) {
+                      if ((rq.field_H.length ^ -1) <= (fo.field_a.length ^ -1)) {
                         stackOut_120_0 = rq.field_H.length;
                         stackIn_121_0 = stackOut_120_0;
                         break L21;
@@ -379,7 +378,7 @@ final class e {
                       }
                     }
                     var8 = stackIn_121_0;
-                    if (var7 + 7 > var3) {
+                    if ((var7 + 7 ^ -1) < (var3 ^ -1)) {
                       break L17;
                     } else {
                       if (var8 + var7 + 7 <= var3) {
@@ -396,7 +395,7 @@ final class e {
                             break L22;
                           }
                         }
-                        var6_ref = stackIn_126_0;
+                        var6 = stackIn_126_0;
                         break L17;
                       }
                     }
@@ -407,12 +406,12 @@ final class e {
                 if ((var4 ^ -1) != 1) {
                   break L23;
                 } else {
-                  var6_ref = Integer.toString(var2);
+                  var6 = Integer.toString(var2);
                   break L23;
                 }
               }
               L24: {
-                stackOut_129_0 = (String) var6_ref;
+                stackOut_129_0 = (String) var6;
                 stackIn_131_0 = stackOut_129_0;
                 stackIn_130_0 = stackOut_129_0;
                 if (var4 < 0) {
@@ -462,11 +461,11 @@ final class e {
               }
               L28: {
                 if (-1 < (var4 ^ -1)) {
-                  dq.field_f.d(var6_ref, var8, vc.field_K + var1, var5, -1);
+                  dq.field_f.d(var6, var8, vc.field_K + var1, var5, -1);
                   var1 = var1 + qe.field_y;
                   break L28;
                 } else {
-                  gj.field_R.d(var6_ref, var8, var1 - -mm.field_b, var5, -1);
+                  gj.field_R.d(var6, var8, var1 - -mm.field_b, var5, -1);
                   var1 = var1 + (ch.field_I + qi.field_e + fj.field_h);
                   var3++;
                   break L28;
@@ -490,7 +489,7 @@ final class e {
             }
           }
           L30: {
-            if (dq.field_j.length <= var3) {
+            if ((dq.field_j.length ^ -1) >= (var3 ^ -1)) {
               break L30;
             } else {
               L31: {
@@ -510,14 +509,14 @@ final class e {
               }
               L32: {
                 var6 = dq.field_j[var3];
-                if (-3 != oa.field_h) {
+                if (-3 != (oa.field_h ^ -1)) {
                   break L32;
                 } else {
-                  if (-2 != var2) {
+                  if (-2 != (var2 ^ -1)) {
                     break L32;
                   } else {
                     L33: {
-                      if (va.field_W.length <= hk.field_n.length) {
+                      if ((va.field_W.length ^ -1) >= (hk.field_n.length ^ -1)) {
                         stackOut_13_0 = hk.field_n.length;
                         stackIn_14_0 = stackOut_13_0;
                         break L33;
@@ -544,7 +543,7 @@ final class e {
                               break L35;
                             }
                           }
-                          var6_ref = stackIn_20_0;
+                          var6 = stackIn_20_0;
                           break L34;
                         } else {
                           break L34;
@@ -552,7 +551,7 @@ final class e {
                       }
                     }
                     L36: {
-                      if (rq.field_H.length >= fo.field_a.length) {
+                      if ((rq.field_H.length ^ -1) <= (fo.field_a.length ^ -1)) {
                         stackOut_23_0 = rq.field_H.length;
                         stackIn_24_0 = stackOut_23_0;
                         break L36;
@@ -563,7 +562,7 @@ final class e {
                       }
                     }
                     var8 = stackIn_24_0;
-                    if (var7 + 7 > var3) {
+                    if ((var7 + 7 ^ -1) < (var3 ^ -1)) {
                       break L32;
                     } else {
                       if (var8 + var7 + 7 <= var3) {
@@ -580,7 +579,7 @@ final class e {
                             break L37;
                           }
                         }
-                        var6_ref = stackIn_29_0;
+                        var6 = stackIn_29_0;
                         break L32;
                       }
                     }
@@ -591,12 +590,12 @@ final class e {
                 if ((var4 ^ -1) != 1) {
                   break L38;
                 } else {
-                  var6_ref = Integer.toString(var2);
+                  var6 = Integer.toString(var2);
                   break L38;
                 }
               }
               L39: {
-                stackOut_32_0 = (String) var6_ref;
+                stackOut_32_0 = (String) var6;
                 stackIn_34_0 = stackOut_32_0;
                 stackIn_33_0 = stackOut_32_0;
                 if (var4 < 0) {
@@ -646,11 +645,11 @@ final class e {
               }
               L43: {
                 if (-1 < (var4 ^ -1)) {
-                  dq.field_f.d(var6_ref, var8, vc.field_K + var1, var5, -1);
+                  dq.field_f.d(var6, var8, vc.field_K + var1, var5, -1);
                   var1 = var1 + qe.field_y;
                   break L43;
                 } else {
-                  gj.field_R.d(var6_ref, var8, var1 - -mm.field_b, var5, -1);
+                  gj.field_R.d(var6, var8, var1 - -mm.field_b, var5, -1);
                   var1 = var1 + (ch.field_I + qi.field_e + fj.field_h);
                   var3++;
                   break L43;

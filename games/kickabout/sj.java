@@ -113,7 +113,6 @@ final class sj {
 
     private final synchronized byte[] a(int param0, int[] param1, boolean param2, int param3) {
         Object var5 = null;
-        byte[] var5_array = null;
         byte[] var7 = null;
         L0: {
           if (param2) {
@@ -156,7 +155,7 @@ final class sj {
                 break L3;
               } else {
                 var7 = lg.a(((sj) this).field_a[param0][param3], false, 18828);
-                var5_array = var7;
+                var5 = (Object) (Object) var7;
                 if (var7 != null) {
                   break L3;
                 } else {
@@ -165,7 +164,7 @@ final class sj {
               }
             }
             L4: {
-              if (var5_array == null) {
+              if (var5 == null) {
                 break L4;
               } else {
                 if (-2 != ((sj) this).field_c) {
@@ -186,7 +185,7 @@ final class sj {
                 }
               }
             }
-            return var5_array;
+            return (byte[]) var5;
           }
         } else {
           return null;
@@ -287,9 +286,9 @@ final class sj {
             return false;
         }
         int var3 = 38 % ((22 - param0) / 62);
-        if (-1 >= param1) {
-            if (((sj) this).field_d.field_e.length > param1) {
-                if (-1 != ((sj) this).field_d.field_e[param1]) {
+        if (-1 >= (param1 ^ -1)) {
+            if ((((sj) this).field_d.field_e.length ^ -1) < (param1 ^ -1)) {
+                if (-1 != (((sj) this).field_d.field_e[param1] ^ -1)) {
                     return true;
                 }
             }
@@ -984,6 +983,7 @@ final class sj {
                 }
               }
               ((sj) this).field_b = stackIn_6_1 != 0;
+              return;
             } else {
               break L0;
             }

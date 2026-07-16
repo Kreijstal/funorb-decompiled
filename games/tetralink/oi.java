@@ -20,65 +20,35 @@ abstract class oi {
     final static void a(byte param0, String param1, boolean param2, java.applet.Applet param3) {
         try {
             java.net.MalformedURLException var4 = null;
-            int statePc = 0;
-            Throwable caughtException = null;
-            stateLoop: while (true) {
-                switch (statePc) {
-                    case 0: {
-                        if (ie.field_l.startsWith("win")) {
-                            statePc = 2;
-                        } else {
-                            statePc = 5;
-                        }
-                        continue stateLoop;
-                    }
-                    case 2: {
-                        if (in.a(18, param1)) {
-                            statePc = 4;
-                        } else {
-                            statePc = 5;
-                        }
-                        continue stateLoop;
-                    }
-                    case 4: {
-                        return;
-                    }
-                    case 5: {
-                        try {
-                            param3.getAppletContext().showDocument(new java.net.URL(param1), "_blank");
-                            if (param0 < -36) {
-                                statePc = 9;
-                            } else {
-                                statePc = 6;
-                            }
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_5) {
-                            caughtException = stateCaught_5;
-                            statePc = 8;
-                            continue stateLoop;
-                        }
-                    }
-                    case 6: {
-                        try {
-                            oi.a(90);
-                            return;
-                        } catch (Throwable stateCaught_6) {
-                            caughtException = stateCaught_6;
-                            statePc = 8;
-                            continue stateLoop;
-                        }
-                    }
-                    case 8: {
-                        var4 = (java.net.MalformedURLException) (Object) caughtException;
-                        fk.a(-41, (Throwable) null, "MGR1: " + param1);
-                        statePc = 9;
-                        continue stateLoop;
-                    }
-                    case 9: {
-                        return;
-                    }
-                    default: throw new IllegalStateException("invalid CFG state " + statePc);
+            Throwable decompiledCaughtException = null;
+            L0: {
+              if (ie.field_l.startsWith("win")) {
+                if (in.a(18, param1)) {
+                  return;
+                } else {
+                  break L0;
                 }
+              } else {
+                break L0;
+              }
+            }
+            try {
+              L1: {
+                param3.getAppletContext().showDocument(new java.net.URL(param1), "_blank");
+                if (param0 < -36) {
+                  break L1;
+                } else {
+                  oi.a(90);
+                  return;
+                }
+              }
+            } catch (java.net.MalformedURLException decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              L2: {
+                var4 = (java.net.MalformedURLException) (Object) decompiledCaughtException;
+                fk.a(-41, (Throwable) null, "MGR1: " + param1);
+                break L2;
+              }
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -119,15 +89,14 @@ abstract class oi {
     }
 
     final static cn a(Throwable param0, String param1) {
-        cn var2_ref = null;
         cn var2 = null;
         if (!(param0 instanceof cn)) {
             var2 = new cn(param0, param1);
         } else {
-            var2_ref = (cn) (Object) param0;
-            var2_ref.field_d = var2_ref.field_d + 32 + param1;
+            var2 = (cn) (Object) param0;
+            var2.field_d = var2.field_d + 32 + param1;
         }
-        return var2_ref;
+        return var2;
     }
 
     abstract void a(int param0, int param1, int param2);

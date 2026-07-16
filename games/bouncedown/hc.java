@@ -408,8 +408,9 @@ final class hc {
         ((hc) this).field_f = new ug[param0];
         ((hc) this).field_c = param0;
         for (var2 = 0; param0 > var2; var2++) {
-            var3 = new ug();
-            ((hc) this).field_f[var2] = new ug();
+            ug dupTemp$0 = new ug();
+            var3 = dupTemp$0;
+            ((hc) this).field_f[var2] = dupTemp$0;
             var3.field_l = var3;
             var3.field_i = var3;
         }

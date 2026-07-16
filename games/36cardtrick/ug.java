@@ -13,9 +13,9 @@ final class ug implements ci {
     private int field_d;
 
     final static void a(float param0, int param1, String param2) {
-        String var4 = null;
+        Object var4 = null;
         if (param1 <= 51) {
-          var4 = (String) null;
+          var4 = null;
           ug.a(-0.46710100769996643f, 7, (String) null);
           he.field_g = param0;
           ck.field_G = param2;
@@ -28,9 +28,9 @@ final class ug implements ci {
     }
 
     final static jg a(je param0, int param1, int param2) {
-        String var4 = null;
+        Object var4 = null;
         if (param1 != 1) {
-          var4 = (String) null;
+          var4 = null;
           ug.a(-0.6929006576538086f, 125, (String) null);
           return new jg(param0, gd.field_m * param2 / 1000);
         } else {
@@ -72,7 +72,7 @@ final class ug implements ci {
           }
         }
         L1: {
-          var14 = (se) (se) stackIn_3_0;
+          var14 = (se) (Object) stackIn_3_0;
           if (var14 != null) {
             break L1;
           } else {
@@ -80,14 +80,14 @@ final class ug implements ci {
           }
         }
         L2: {
-          vj.c(((lk) param1).field_o + param0, param3 - -((lk) param1).field_i, ((lk) param1).field_h, ((lk) param1).field_q, ((ug) this).field_g);
-          var7 = param0 + ((lk) param1).field_o + ((se) var14).field_E;
-          var8 = ((lk) param1).field_i + param3 + ((se) var14).field_M;
-          vj.b(var7, var8, ((se) var14).field_H, ((ug) this).field_i);
-          if (-1 != ((se) var14).field_I) {
-            var9 = (double)((se) var14).field_I * 3.141592653589793 * 2.0 / (double)((se) var14).field_N;
-            var11 = (int)(-Math.sin(var9) * (double)((se) var14).field_H);
-            var12 = (int)(Math.cos(var9) * (double)((se) var14).field_H);
+          vj.c(param1.field_o + param0, param3 - -param1.field_i, param1.field_h, param1.field_q, ((ug) this).field_g);
+          var7 = param0 + param1.field_o + var14.field_E;
+          var8 = param1.field_i + param3 + var14.field_M;
+          vj.b(var7, var8, var14.field_H, ((ug) this).field_i);
+          if (-1 != var14.field_I) {
+            var9 = (double)var14.field_I * 3.141592653589793 * 2.0 / (double)var14.field_N;
+            var11 = (int)(-Math.sin(var9) * (double)var14.field_H);
+            var12 = (int)(Math.cos(var9) * (double)var14.field_H);
             vj.b(var11 + var7, var8 + var12, 1, ((ug) this).field_e);
             break L2;
           } else {
@@ -95,16 +95,16 @@ final class ug implements ci {
           }
         }
         vj.b(var7, var8, 2, 1);
-        var9 = (double)((se) var14).field_L * 3.141592653589793 * 2.0 / (double)((se) var14).field_N;
-        var11 = (int)(-Math.sin(var9) * (double)((se) var14).field_H);
-        var12 = (int)(Math.cos(var9) * (double)((se) var14).field_H);
+        var9 = (double)var14.field_L * 3.141592653589793 * 2.0 / (double)var14.field_N;
+        var11 = (int)(-Math.sin(var9) * (double)var14.field_H);
+        var12 = (int)(Math.cos(var9) * (double)var14.field_H);
         if (param2 != 11447) {
           L3: {
             ((ug) this).field_f = -46;
             vj.e(var7, var8, var11 + var7, var12 + var8, 1);
             if (((ug) this).field_c != null) {
-              var13 = ((ug) this).field_a + (((se) var14).field_H + ((se) var14).field_E);
-              int discarded$2 = ((ug) this).field_c.a(((lk) param1).field_r, ((lk) param1).field_o + param0 + var13, ((ug) this).field_d + param3 + ((lk) param1).field_i, ((lk) param1).field_h - var13 + -((ug) this).field_a, -(((ug) this).field_a << -273569375) + ((lk) param1).field_q, ((ug) this).field_b, ((ug) this).field_f, 1, 1, 0);
+              var13 = ((ug) this).field_a + (var14.field_H + var14.field_E);
+              int discarded$2 = ((ug) this).field_c.a(param1.field_r, param1.field_o + param0 + var13, ((ug) this).field_d + param3 + param1.field_i, param1.field_h - var13 + -((ug) this).field_a, -(((ug) this).field_a << -273569375) + param1.field_q, ((ug) this).field_b, ((ug) this).field_f, 1, 1, 0);
               break L3;
             } else {
               break L3;
@@ -115,8 +115,8 @@ final class ug implements ci {
           L4: {
             vj.e(var7, var8, var11 + var7, var12 + var8, 1);
             if (((ug) this).field_c != null) {
-              var13 = ((ug) this).field_a + (((se) var14).field_H + ((se) var14).field_E);
-              int discarded$3 = ((ug) this).field_c.a(((lk) param1).field_r, ((lk) param1).field_o + param0 + var13, ((ug) this).field_d + param3 + ((lk) param1).field_i, ((lk) param1).field_h - var13 + -((ug) this).field_a, -(((ug) this).field_a << -273569375) + ((lk) param1).field_q, ((ug) this).field_b, ((ug) this).field_f, 1, 1, 0);
+              var13 = ((ug) this).field_a + (var14.field_H + var14.field_E);
+              int discarded$3 = ((ug) this).field_c.a(param1.field_r, param1.field_o + param0 + var13, ((ug) this).field_d + param3 + param1.field_i, param1.field_h - var13 + -((ug) this).field_a, -(((ug) this).field_a << -273569375) + param1.field_q, ((ug) this).field_b, ((ug) this).field_f, 1, 1, 0);
               break L4;
             } else {
               break L4;

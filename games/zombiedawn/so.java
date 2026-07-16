@@ -50,8 +50,9 @@ final class so {
                 var11++;
                 continue L0;
               } else {
+                int incrementValue$66 = param3;
                 param3++;
-                param2 = param1[param3];
+                param2 = param1[incrementValue$66];
                 if (param2 == 0) {
                   param4++;
                   var12++;
@@ -59,8 +60,9 @@ final class so {
                 } else {
                   var9 = param0[param4];
                   var10 = 256 - (param2 & 255);
+                  int incrementValue$67 = param4;
                   param4++;
-                  param0[param4] = (var9 & 16711935) * var10 >> 8 & 16711935 | (var9 & 65280) * var10 >> 8 & 65280;
+                  param0[incrementValue$67] = (var9 & 16711935) * var10 >> 8 & 16711935 | (var9 & 65280) * var10 >> 8 & 65280;
                   var12++;
                   continue L1;
                 }
@@ -144,31 +146,32 @@ final class so {
     }
 
     final static void b(vo param0) {
-        le var1 = null;
+        Object var1 = null;
+        le var1_ref = null;
         le var2 = null;
         L0: while (true) {
           if (so.a(param0)) {
             return;
           } else {
-            var1 = param0.b((byte) 26);
+            var1_ref = param0.b((byte) 26);
             L1: while (true) {
-              if (!(var1 instanceof fb)) {
+              if (!(var1_ref instanceof fb)) {
                 continue L0;
               } else {
-                if (!(var1.field_b instanceof fb)) {
+                if (!(var1_ref.field_b instanceof fb)) {
                   continue L0;
                 } else {
                   L2: {
-                    var2 = var1.field_b;
-                    if (((fb) (Object) var1).field_x <= ((fb) (Object) var2).field_x) {
+                    var2 = var1_ref.field_b;
+                    if (((fb) (Object) var1_ref).field_x <= ((fb) (Object) var2).field_x) {
                       break L2;
                     } else {
-                      var1.b(-27598);
-                      im.a(var1, -30395, var2);
+                      var1_ref.b(-27598);
+                      im.a(var1_ref, -30395, var2);
                       break L2;
                     }
                   }
-                  var1 = var2;
+                  var1_ref = var2;
                   continue L1;
                 }
               }
@@ -329,14 +332,16 @@ final class so {
                         }
                       }
                     }
+                    int incrementValue$7877 = var1;
                     var1++;
-                    var6[var1] = param0;
+                    var6[incrementValue$7877] = param0;
                     var8++;
                     continue L1;
                   }
                 }
+                int incrementValue$7878 = var1;
                 var1++;
-                var6[var1] = var2[var1];
+                var6[incrementValue$7878] = var2[incrementValue$7878];
                 var8++;
                 continue L1;
               }
@@ -363,8 +368,9 @@ final class so {
                 var12++;
                 continue L0;
               } else {
+                int incrementValue$66 = param3;
                 param3++;
-                param2 = param1[param3];
+                param2 = param1[incrementValue$66];
                 if (param2 == 0) {
                   param4++;
                   var13++;
@@ -372,8 +378,9 @@ final class so {
                 } else {
                   var10 = param0[param4];
                   var11 = 256 - ((param2 & 255) * param9 >> 8);
+                  int incrementValue$67 = param4;
                   param4++;
-                  param0[param4] = (var10 & 16711935) * var11 >> 8 & 16711935 | (var10 & 65280) * var11 >> 8 & 65280;
+                  param0[incrementValue$67] = (var10 & 16711935) * var11 >> 8 & 16711935 | (var10 & 65280) * var11 >> 8 & 65280;
                   var13++;
                   continue L1;
                 }
@@ -463,15 +470,27 @@ final class so {
     }
 
     private final static boolean a(vo param0) {
-        le var1 = param0.b((byte) 26);
-        while (var1 instanceof fb) {
-            // ifeq L63
-            if (((fb) (Object) var1).field_x > ((fb) (Object) var1.field_b).field_x) {
-                return false;
+        le var1 = null;
+        var1 = param0.b((byte) 26);
+        L0: while (true) {
+          L1: {
+            if (!(var1 instanceof fb)) {
+              break L1;
+            } else {
+              if (!(var1.field_b instanceof fb)) {
+                break L1;
+              } else {
+                if (((fb) (Object) var1).field_x <= ((fb) (Object) var1.field_b).field_x) {
+                  var1 = var1.field_b;
+                  continue L0;
+                } else {
+                  return false;
+                }
+              }
             }
-            var1 = var1.field_b;
+          }
+          return true;
         }
-        return true;
     }
 
     private final static void b(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
@@ -494,22 +513,25 @@ final class so {
                 var12++;
                 continue L0;
               } else {
+                int incrementValue$403 = param3;
                 param3--;
-                param2 = param1[param3];
+                param2 = param1[incrementValue$403];
                 if (param2 == 0) {
                   param4++;
                   var13++;
                   continue L1;
                 } else {
                   if (param2 >> 8 != (param2 & 65535)) {
+                    int incrementValue$404 = param4;
                     param4++;
-                    param0[param4] = param2;
+                    param0[incrementValue$404] = param2;
                     var13++;
                     continue L1;
                   } else {
                     param2 = param2 & 255;
+                    int incrementValue$405 = param4;
                     param4++;
-                    param0[param4] = (param2 * var10 >> 8 & 16711934) + (param2 * var11 & 65280) + 1;
+                    param0[incrementValue$405] = (param2 * var10 >> 8 & 16711934) + (param2 * var11 & 65280) + 1;
                     var13++;
                     continue L1;
                   }

@@ -85,8 +85,9 @@ final class no extends fb {
         if (param0 >= 95) {
           if (hp.field_A.a(true) > 18 + ((no) this).a(true)) {
             if (159 > ((no) this).field_F) {
+              int fieldTemp$4 = ((no) this).field_D - 1;
               ((no) this).field_D = ((no) this).field_D - 1;
-              if (-1 > (((no) this).field_D - 1 ^ -1)) {
+              if (-1 > (fieldTemp$4 ^ -1)) {
                 return;
               } else {
                 ((no) this).field_F = ((no) this).field_F + 1;
@@ -97,8 +98,9 @@ final class no extends fb {
               return;
             }
           } else {
+            int fieldTemp$5 = ((no) this).field_D - 1;
             ((no) this).field_D = ((no) this).field_D - 1;
-            if (((no) this).field_D - 1 > 0) {
+            if (fieldTemp$5 > 0) {
               return;
             } else {
               hp.field_A.field_x = hp.field_A.field_x - 65536;

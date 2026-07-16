@@ -68,45 +68,97 @@ class ch extends ei implements lj {
     }
 
     final boolean a(ei param0, int param1, boolean param2, int param3, int param4, int param5, int param6) {
-        int var10 = Pool.field_O;
-        aa var8 = new aa(((ch) this).field_F);
-        if (!param2) {
+        aa var8 = null;
+        ei var9 = null;
+        int var10 = 0;
+        L0: {
+          var10 = Pool.field_O;
+          var8 = new aa(((ch) this).field_F);
+          if (param2) {
+            break L0;
+          } else {
             field_H = 45;
+            break L0;
+          }
         }
-        ei var9 = (ei) (Object) var8.b((byte) -92);
-        while (var9 != null) {
-            // ifeq L108
-            if (!(!var9.a(param0, param1 - -((ch) this).field_C, true, param3, param4, ((ch) this).field_D + param5, param6))) {
-                return true;
+        var9 = (ei) (Object) var8.b((byte) -92);
+        L1: while (true) {
+          L2: {
+            if (var9 == null) {
+              break L2;
+            } else {
+              if (!var9.b(-109)) {
+                break L2;
+              } else {
+                if (var9.a(param0, param1 - -((ch) this).field_C, true, param3, param4, ((ch) this).field_D + param5, param6)) {
+                  return true;
+                } else {
+                  var9 = (ei) (Object) var8.b(-119);
+                  continue L1;
+                }
+              }
             }
-            var9 = (ei) (Object) var8.b(-119);
+          }
+          return false;
         }
-        return false;
     }
 
     void a(ei param0, int param1, int param2, int param3) {
-        int var7 = Pool.field_O;
+        aa var5 = null;
+        ei var6 = null;
+        int var7 = 0;
+        var7 = Pool.field_O;
         super.a(param0, param1, param2, param3);
-        aa var5 = new aa(((ch) this).field_F);
-        ei var6 = (ei) (Object) var5.b((byte) -92);
-        while (var6 != null) {
-            // ifeq L92
-            var6.a(param0, param1 ^ 0, param2 - -((ch) this).field_C, ((ch) this).field_D + param3);
-            var6 = (ei) (Object) var5.b(-89);
+        var5 = new aa(((ch) this).field_F);
+        var6 = (ei) (Object) var5.b((byte) -92);
+        L0: while (true) {
+          L1: {
+            if (var6 == null) {
+              break L1;
+            } else {
+              if (!var6.b(-107)) {
+                break L1;
+              } else {
+                var6.a(param0, param1 ^ 0, param2 - -((ch) this).field_C, ((ch) this).field_D + param3);
+                var6 = (ei) (Object) var5.b(-89);
+                continue L0;
+              }
+            }
+          }
+          return;
         }
     }
 
     final void a(int param0, int param1, int param2, int param3, byte param4, ei param5) {
-        int var9 = Pool.field_O;
-        aa var7 = new aa(((ch) this).field_F);
-        ei var8 = (ei) (Object) var7.b((byte) -92);
-        if (param4 <= 62) {
+        aa var7 = null;
+        ei var8 = null;
+        int var9 = 0;
+        L0: {
+          var9 = Pool.field_O;
+          var7 = new aa(((ch) this).field_F);
+          var8 = (ei) (Object) var7.b((byte) -92);
+          if (param4 > 62) {
+            break L0;
+          } else {
             field_I = 75;
+            break L0;
+          }
         }
-        while (var8 != null) {
-            // ifeq L100
-            var8.a(param0 - -((ch) this).field_C, param1, ((ch) this).field_D + param2, param3, (byte) 94, param5);
-            var8 = (ei) (Object) var7.b(-82);
+        L1: while (true) {
+          L2: {
+            if (var8 == null) {
+              break L2;
+            } else {
+              if (!var8.b(-128)) {
+                break L2;
+              } else {
+                var8.a(param0 - -((ch) this).field_C, param1, ((ch) this).field_D + param2, param3, (byte) 94, param5);
+                var8 = (ei) (Object) var7.b(-82);
+                continue L1;
+              }
+            }
+          }
+          return;
         }
     }
 
@@ -162,22 +214,46 @@ class ch extends ei implements lj {
     }
 
     final boolean a(ei param0, int param1, int param2, int param3, byte param4, int param5, int param6) {
-        int var10 = Pool.field_O;
-        aa var8 = new aa(((ch) this).field_F);
-        if (param4 >= -126) {
+        aa var8 = null;
+        ei var9 = null;
+        int var10 = 0;
+        L0: {
+          var10 = Pool.field_O;
+          var8 = new aa(((ch) this).field_F);
+          if (param4 < -126) {
+            break L0;
+          } else {
             this.g(-115);
+            break L0;
+          }
         }
-        ei var9 = (ei) (Object) var8.b((byte) -92);
-        while (var9 != null) {
-            // ifeq L107
-            if (var9.d(-122)) {
-                if (var9.a(param0, param1, param2, param3, (byte) -127, param5, param6)) {
-                    return true;
+        var9 = (ei) (Object) var8.b((byte) -92);
+        L1: while (true) {
+          L2: {
+            if (var9 == null) {
+              break L2;
+            } else {
+              if (!var9.b(-116)) {
+                break L2;
+              } else {
+                L3: {
+                  if (!var9.d(-122)) {
+                    break L3;
+                  } else {
+                    if (!var9.a(param0, param1, param2, param3, (byte) -127, param5, param6)) {
+                      break L3;
+                    } else {
+                      return true;
+                    }
+                  }
                 }
+                var9 = (ei) (Object) var8.b(-103);
+                continue L1;
+              }
             }
-            var9 = (ei) (Object) var8.b(-103);
+          }
+          return false;
         }
-        return false;
     }
 
     final void a(boolean param0, ei param1) {
@@ -245,26 +321,62 @@ class ch extends ei implements lj {
     }
 
     boolean a(char param0, int param1, boolean param2, ei param3) {
-        int var7 = Pool.field_O;
-        aa var5 = new aa(((ch) this).field_F);
-        ei var8 = (ei) (Object) var5.b((byte) -92);
-        while (var8 != null) {
-            // ifeq L88
-            if (var8.d(109)) {
-                if (!(!var8.a(param0, param1, false, param3))) {
-                    return true;
+        aa var5 = null;
+        int var6 = 0;
+        int var7 = 0;
+        ei var8 = null;
+        boolean stackIn_12_0 = false;
+        boolean stackOut_11_0 = false;
+        boolean stackOut_10_0 = false;
+        var7 = Pool.field_O;
+        var5 = new aa(((ch) this).field_F);
+        var8 = (ei) (Object) var5.b((byte) -92);
+        L0: while (true) {
+          L1: {
+            if (var8 == null) {
+              break L1;
+            } else {
+              if (!var8.b(-115)) {
+                break L1;
+              } else {
+                L2: {
+                  if (!var8.d(109)) {
+                    break L2;
+                  } else {
+                    if (var8.a(param0, param1, false, param3)) {
+                      return true;
+                    } else {
+                      break L2;
+                    }
+                  }
                 }
+                var8 = (ei) (Object) var5.b(-80);
+                continue L0;
+              }
             }
-            var8 = (ei) (Object) var5.b(-80);
+          }
+          var6 = param1;
+          if (-81 != (var6 ^ -1)) {
+            if (!param2) {
+              return false;
+            } else {
+              return true;
+            }
+          } else {
+            L3: {
+              if (!vj.field_c[81]) {
+                stackOut_11_0 = ((ch) this).b(param3, 0);
+                stackIn_12_0 = stackOut_11_0;
+                break L3;
+              } else {
+                stackOut_10_0 = ((ch) this).a(param3, 3);
+                stackIn_12_0 = stackOut_10_0;
+                break L3;
+              }
+            }
+            return stackIn_12_0;
+          }
         }
-        int var6 = param1;
-        if (-81 == (var6 ^ -1)) {
-            return vj.field_c[81] ? ((ch) this).a(param3, 3) : ((ch) this).b(param3, 0);
-        }
-        if (param2) {
-            return true;
-        }
-        return false;
     }
 
     final StringBuilder a(StringBuilder param0, int param1, Hashtable param2, int param3) {

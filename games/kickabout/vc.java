@@ -76,7 +76,7 @@ final class vc extends fp {
 
     final static void h(byte param0) {
         int var2 = 0;
-        nl var2_ref = null;
+        nl var2_ref_nl = null;
         nl var3 = null;
         int var3_int = 0;
         la[] var4 = null;
@@ -153,7 +153,7 @@ final class vc extends fp {
                   break L1;
                 } else {
                   if ((var9.field_p ^ -1) > -88080385) {
-                    var2_ref = et.field_d.a((byte) 120, 0);
+                    var2_ref_nl = et.field_d.a((byte) 120, 0);
                     var3_int = 0;
                     var4 = et.field_d.field_x;
                     var5 = 0;
@@ -171,7 +171,7 @@ final class vc extends fp {
                         }
                       } else {
                         var6 = var4[var5];
-                        var3_int = var3_int != 0 | var6.a(var2_ref.field_M, var2_ref.field_w, 703166480, var2_ref.field_v) ? 1 : 0;
+                        var3_int = var3_int != 0 | var6.a(var2_ref_nl.field_M, var2_ref_nl.field_w, 703166480, var2_ref_nl.field_v) ? 1 : 0;
                         var5++;
                         continue L5;
                       }

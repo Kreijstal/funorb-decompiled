@@ -186,8 +186,9 @@ abstract class gf extends ld {
         if (param0 == 1784) {
           if (((gf) this).field_U != null) {
             if (((gf) this).field_U == ah.field_j) {
+              int fieldTemp$5 = ((gf) this).field_bb + 1;
               ((gf) this).field_bb = ((gf) this).field_bb + 1;
-              if (((gf) this).field_ab == ((gf) this).field_bb + 1) {
+              if (((gf) this).field_ab == fieldTemp$5) {
                 ((gf) this).field_U = kc.field_I;
                 ((gf) this).b(((gf) this).field_S.field_x + 12 - -((gf) this).field_eb, 0, ((gf) this).field_W, ((gf) this).field_S.field_t + 12);
                 ((gf) this).field_bb = 0;
@@ -199,8 +200,9 @@ abstract class gf extends ld {
               }
             } else {
               if (((gf) this).field_U == oa.field_j) {
+                int fieldTemp$6 = ((gf) this).field_bb + 1;
                 ((gf) this).field_bb = ((gf) this).field_bb + 1;
-                if (((gf) this).field_bb + 1 != ((gf) this).field_db) {
+                if (fieldTemp$6 != ((gf) this).field_db) {
                   ((gf) this).field_V.field_H = (((gf) this).field_bb << 88565416) / ((gf) this).field_db;
                   return super.h(param0 + 0);
                 } else {
@@ -217,11 +219,12 @@ abstract class gf extends ld {
           }
         } else {
           var4 = null;
-          boolean discarded$1 = ((gf) this).a('ﾴ', (byte) -22, -26, (rc) null);
+          boolean discarded$7 = ((gf) this).a('ﾴ', (byte) -22, -26, (rc) null);
           if (((gf) this).field_U != null) {
             if (((gf) this).field_U == ah.field_j) {
+              int fieldTemp$8 = ((gf) this).field_bb + 1;
               ((gf) this).field_bb = ((gf) this).field_bb + 1;
-              if (((gf) this).field_ab == ((gf) this).field_bb + 1) {
+              if (((gf) this).field_ab == fieldTemp$8) {
                 ((gf) this).field_U = kc.field_I;
                 ((gf) this).b(((gf) this).field_S.field_x + 12 - -((gf) this).field_eb, 0, ((gf) this).field_W, ((gf) this).field_S.field_t + 12);
                 ((gf) this).field_bb = 0;
@@ -233,8 +236,9 @@ abstract class gf extends ld {
               }
             } else {
               if (((gf) this).field_U == oa.field_j) {
+                int fieldTemp$9 = ((gf) this).field_bb + 1;
                 ((gf) this).field_bb = ((gf) this).field_bb + 1;
-                if (((gf) this).field_bb + 1 != ((gf) this).field_db) {
+                if (fieldTemp$9 != ((gf) this).field_db) {
                   ((gf) this).field_V.field_H = (((gf) this).field_bb << 88565416) / ((gf) this).field_db;
                   return super.h(param0 + 0);
                 } else {

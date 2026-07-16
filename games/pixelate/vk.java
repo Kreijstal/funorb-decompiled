@@ -105,7 +105,7 @@ class vk extends hb implements vo {
     final static void n(int param0) {
         int var2 = 0;
         var2 = Pixelate.field_H ? 1 : 0;
-        if (-1 > oo.field_b) {
+        if (-1 > (oo.field_b ^ -1)) {
           L0: {
             oo.field_b = oo.field_b - 1;
             if ((oo.field_b ^ -1) < -1) {
@@ -124,10 +124,10 @@ class vk extends hb implements vo {
                 break L1;
               }
             }
-            if (h.field_W > 0) {
-              cm.b(h.field_W, 4740);
+            if (h.field_W <= 0) {
               return;
             } else {
+              cm.b(h.field_W, 4740);
               return;
             }
           } else {
@@ -140,15 +140,15 @@ class vk extends hb implements vo {
                 break L2;
               }
             }
-            if (h.field_W > 0) {
-              cm.b(h.field_W, 4740);
+            if (h.field_W <= 0) {
               return;
             } else {
+              cm.b(h.field_W, 4740);
               return;
             }
           }
         } else {
-          if (-1 < vn.field_g) {
+          if (-1 > (vn.field_g ^ -1)) {
             L3: {
               vn.field_g = vn.field_g - 1;
               if ((oo.field_b ^ -1) < -1) {
@@ -167,10 +167,10 @@ class vk extends hb implements vo {
                   break L4;
                 }
               }
-              if (h.field_W > 0) {
-                cm.b(h.field_W, 4740);
+              if (h.field_W <= 0) {
                 return;
               } else {
+                cm.b(h.field_W, 4740);
                 return;
               }
             } else {
@@ -214,10 +214,10 @@ class vk extends hb implements vo {
                     break L8;
                   }
                 }
-                if (h.field_W > 0) {
-                  cm.b(h.field_W, 4740);
+                if (h.field_W <= 0) {
                   return;
                 } else {
+                  cm.b(h.field_W, 4740);
                   return;
                 }
               } else {
@@ -229,10 +229,10 @@ class vk extends hb implements vo {
                     break L9;
                   }
                 }
-                if (h.field_W > 0) {
-                  cm.b(h.field_W, 4740);
+                if (h.field_W <= 0) {
                   return;
                 } else {
+                  cm.b(h.field_W, 4740);
                   return;
                 }
               }
@@ -255,10 +255,10 @@ class vk extends hb implements vo {
                     break L11;
                   }
                 }
-                if (h.field_W <= 0) {
+                if (h.field_W > 0) {
+                  cm.b(h.field_W, 4740);
                   return;
                 } else {
-                  cm.b(h.field_W, 4740);
                   return;
                 }
               } else {
@@ -643,22 +643,28 @@ class vk extends hb implements vo {
             Throwable decompiledCaughtException = null;
             ha stackOut_0_0 = null;
             try {
-              var4 = Class.forName("me");
-              var6 = 32 / ((param1 - 70) / 45);
-              var5 = (ha) var4.newInstance();
-              var5.a(param3, param2, param0, (byte) -100);
-              stackOut_0_0 = (ha) var5;
-              stackIn_1_0 = stackOut_0_0;
-            } catch (java.lang.Throwable decompiledCaughtParameter) {
-              decompiledCaughtException = decompiledCaughtParameter;
-              return stackIn_1_0;
+              L0: {
+                var4 = Class.forName("me");
+                var6 = 32 / ((param1 - 70) / 45);
+                var5 = (ha) var4.newInstance();
+                var5.a(param3, param2, param0, (byte) -100);
+                stackOut_0_0 = (ha) var5;
+                stackIn_1_0 = stackOut_0_0;
+                break L0;
+              }
+            } catch (java.lang.Throwable decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              var4_ref = decompiledCaughtException;
+              var5_ref = new i();
+              ((ha) (Object) var5_ref).a(param3, param2, param0, (byte) -78);
+              return (ha) (Object) var5_ref;
             }
+            return stackIn_1_0;
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
             throw new RuntimeException(decompiledCheckedException);
         }
-        return null;
     }
 
     static {

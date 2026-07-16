@@ -174,8 +174,9 @@ final class lj {
                 ((lj) this).field_b = 0;
                 break L0;
               } else {
+                int fieldTemp$2 = ((lj) this).field_b;
                 ((lj) this).field_b = ((lj) this).field_b + 1;
-                ((lj) this).field_h[((lj) this).field_b] = (byte) 0;
+                ((lj) this).field_h[fieldTemp$2] = (byte) 0;
                 continue L1;
               }
             }
@@ -215,8 +216,9 @@ final class lj {
               }
             }
           } else {
+            int fieldTemp$3 = ((lj) this).field_b;
             ((lj) this).field_b = ((lj) this).field_b + 1;
-            ((lj) this).field_h[((lj) this).field_b] = (byte) 0;
+            ((lj) this).field_h[fieldTemp$3] = (byte) 0;
             continue L2;
           }
         }

@@ -48,78 +48,37 @@ final class nj {
     final static void a(byte param0) {
         try {
             Exception var1 = null;
-            int statePc = 0;
-            Throwable caughtException = null;
-            stateLoop: while (true) {
-                switch (statePc) {
-                    case 0: {
-                        if (null != w.field_W) {
-                            statePc = 5;
-                        } else {
-                            statePc = 1;
-                        }
-                        continue stateLoop;
-                    }
-                    case 1: {
-                        if (param0 != 89) {
-                            statePc = 3;
-                        } else {
-                            statePc = 2;
-                        }
-                        continue stateLoop;
-                    }
-                    case 2: {
-                        kj.field_a.field_o = kj.field_a.field_o + 24;
-                        return;
-                    }
-                    case 3: {
-                        return;
-                    }
-                    case 5: {
-                        try {
-                            w.field_W.a((byte) 115, 0L);
-                            w.field_W.a(kj.field_a.field_u, 24, kj.field_a.field_o, true);
-                            statePc = 6;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_5) {
-                            caughtException = stateCaught_5;
-                            statePc = 10;
-                            continue stateLoop;
-                        }
-                    }
-                    case 6: {
-                        if (param0 != 89) {
-                            statePc = 8;
-                        } else {
-                            statePc = 7;
-                        }
-                        continue stateLoop;
-                    }
-                    case 7: {
-                        kj.field_a.field_o = kj.field_a.field_o + 24;
-                        return;
-                    }
-                    case 8: {
-                        return;
-                    }
-                    case 10: {
-                        var1 = (Exception) (Object) caughtException;
-                        if (param0 != 89) {
-                            statePc = 12;
-                        } else {
-                            statePc = 11;
-                        }
-                        continue stateLoop;
-                    }
-                    case 11: {
-                        kj.field_a.field_o = kj.field_a.field_o + 24;
-                        return;
-                    }
-                    case 12: {
-                        return;
-                    }
-                    default: throw new IllegalStateException("invalid CFG state " + statePc);
+            Throwable decompiledCaughtException = null;
+            if (null != w.field_W) {
+              try {
+                L0: {
+                  w.field_W.a((byte) 115, 0L);
+                  w.field_W.a(kj.field_a.field_u, 24, kj.field_a.field_o, true);
+                  break L0;
                 }
+              } catch (java.lang.Exception decompiledCaughtParameter0) {
+                decompiledCaughtException = decompiledCaughtParameter0;
+                var1 = (Exception) (Object) decompiledCaughtException;
+                if (param0 != 89) {
+                  return;
+                } else {
+                  kj.field_a.field_o = kj.field_a.field_o + 24;
+                  return;
+                }
+              }
+              if (param0 != 89) {
+                return;
+              } else {
+                kj.field_a.field_o = kj.field_a.field_o + 24;
+                return;
+              }
+            } else {
+              if (param0 != 89) {
+                return;
+              } else {
+                kj.field_a.field_o = kj.field_a.field_o + 24;
+                return;
+              }
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -164,7 +123,7 @@ final class nj {
                   break L1;
                 }
               }
-              if (var1 <= -256) {
+              if ((var1 ^ -1) <= -256) {
                 mf.field_c.g(0, 0);
                 return;
               } else {
@@ -176,7 +135,7 @@ final class nj {
                     mf.field_c.f(0, 0, var1);
                     return;
                   } else {
-                    if (-12 < oj.field_J) {
+                    if (-12 > (oj.field_J ^ -1)) {
                       mf.field_c.f(0, 0, var1);
                       return;
                     } else {
@@ -203,16 +162,19 @@ final class nj {
                   break L3;
                 }
               }
-              if (var1 <= -256) {
+              if ((var1 ^ -1) <= -256) {
                 mf.field_c.g(0, 0);
                 return;
               } else {
-                if (!tb.field_e) {
+                if (tb.field_e) {
+                  mf.field_c.f(0, 0, var1);
+                  return;
+                } else {
                   if (el.field_c) {
                     mf.field_c.f(0, 0, var1);
                     return;
                   } else {
-                    if (-12 < oj.field_J) {
+                    if (-12 > (oj.field_J ^ -1)) {
                       mf.field_c.f(0, 0, var1);
                       return;
                     } else {
@@ -220,9 +182,6 @@ final class nj {
                       return;
                     }
                   }
-                } else {
-                  mf.field_c.f(0, 0, var1);
-                  return;
                 }
               }
             }
@@ -243,26 +202,26 @@ final class nj {
                 break L5;
               }
             }
-            if (var1 <= -256) {
+            if ((var1 ^ -1) <= -256) {
               mf.field_c.g(0, 0);
               return;
             } else {
-              if (!tb.field_e) {
-                if (!el.field_c) {
-                  if (-12 >= oj.field_J) {
-                    mf.field_c.g(0, 0);
-                    return;
-                  } else {
-                    mf.field_c.f(0, 0, var1);
-                    return;
-                  }
-                } else {
-                  mf.field_c.f(0, 0, var1);
-                  return;
-                }
-              } else {
+              if (tb.field_e) {
                 mf.field_c.f(0, 0, var1);
                 return;
+              } else {
+                if (el.field_c) {
+                  mf.field_c.f(0, 0, var1);
+                  return;
+                } else {
+                  if (-12 > (oj.field_J ^ -1)) {
+                    mf.field_c.f(0, 0, var1);
+                    return;
+                  } else {
+                    mf.field_c.g(0, 0);
+                    return;
+                  }
+                }
               }
             }
           }
@@ -301,27 +260,27 @@ final class nj {
                   break L8;
                 }
               }
-              if (var1 > -256) {
-                if (!tb.field_e) {
-                  if (!el.field_c) {
-                    if (-12 >= oj.field_J) {
-                      mf.field_c.g(0, 0);
-                      return;
-                    } else {
-                      mf.field_c.f(0, 0, var1);
-                      return;
-                    }
-                  } else {
-                    mf.field_c.f(0, 0, var1);
-                    return;
-                  }
-                } else {
-                  mf.field_c.f(0, 0, var1);
-                  return;
-                }
-              } else {
+              if ((var1 ^ -1) <= -256) {
                 mf.field_c.g(0, 0);
                 return;
+              } else {
+                if (tb.field_e) {
+                  mf.field_c.f(0, 0, var1);
+                  return;
+                } else {
+                  if (el.field_c) {
+                    mf.field_c.f(0, 0, var1);
+                    return;
+                  } else {
+                    if (-12 > (oj.field_J ^ -1)) {
+                      mf.field_c.f(0, 0, var1);
+                      return;
+                    } else {
+                      mf.field_c.g(0, 0);
+                      return;
+                    }
+                  }
+                }
               }
             } else {
               L10: {
@@ -341,7 +300,10 @@ final class nj {
                 }
               }
               L12: {
-                if (var1 > -256) {
+                if ((var1 ^ -1) <= -256) {
+                  mf.field_c.g(0, 0);
+                  break L12;
+                } else {
                   if (tb.field_e) {
                     mf.field_c.f(0, 0, var1);
                     break L12;
@@ -350,7 +312,7 @@ final class nj {
                       mf.field_c.f(0, 0, var1);
                       break L12;
                     } else {
-                      if (-12 < oj.field_J) {
+                      if (-12 > (oj.field_J ^ -1)) {
                         mf.field_c.f(0, 0, var1);
                         break L12;
                       } else {
@@ -359,9 +321,6 @@ final class nj {
                       }
                     }
                   }
-                } else {
-                  mf.field_c.g(0, 0);
-                  break L12;
                 }
               }
               return;
@@ -384,7 +343,10 @@ final class nj {
               }
             }
             L15: {
-              if (var1 > -256) {
+              if ((var1 ^ -1) <= -256) {
+                mf.field_c.g(0, 0);
+                break L15;
+              } else {
                 if (tb.field_e) {
                   mf.field_c.f(0, 0, var1);
                   break L15;
@@ -393,7 +355,7 @@ final class nj {
                     mf.field_c.f(0, 0, var1);
                     break L15;
                   } else {
-                    if (-12 < oj.field_J) {
+                    if (-12 > (oj.field_J ^ -1)) {
                       mf.field_c.f(0, 0, var1);
                       break L15;
                     } else {
@@ -402,9 +364,6 @@ final class nj {
                     }
                   }
                 }
-              } else {
-                mf.field_c.g(0, 0);
-                break L15;
               }
             }
             return;

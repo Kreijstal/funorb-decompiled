@@ -138,46 +138,12 @@ final class ea extends am {
     }
 
     final void a(fj param0, int param1, int param2) {
-        Object stackIn_3_0 = null;
-        Object stackIn_4_0 = null;
-        Object stackIn_5_0 = null;
-        int stackIn_5_1 = 0;
-        Object stackOut_2_0 = null;
-        Object stackOut_4_0 = null;
-        int stackOut_4_1 = 0;
-        Object stackOut_3_0 = null;
-        int stackOut_3_1 = 0;
-        L0: {
-          if (-1 == param2) {
-            L1: {
-              stackOut_2_0 = this;
-              stackIn_4_0 = stackOut_2_0;
-              stackIn_3_0 = stackOut_2_0;
-              if (-2 != param0.i((byte) -101)) {
-                stackOut_4_0 = this;
-                stackOut_4_1 = 0;
-                stackIn_5_0 = stackOut_4_0;
-                stackIn_5_1 = stackOut_4_1;
-                break L1;
-              } else {
-                stackOut_3_0 = this;
-                stackOut_3_1 = 1;
-                stackIn_5_0 = stackOut_3_0;
-                stackIn_5_1 = stackOut_3_1;
-                break L1;
-              }
-            }
-            ((ea) this).field_p = stackIn_5_1 != 0;
-            break L0;
-          } else {
-            break L0;
-          }
+        if (!(-1 != (param2 ^ -1))) {
+            ((ea) this).field_p = -2 == (param0.i((byte) -101) ^ -1) ? true : false;
         }
         if (param1 != 35) {
-          ea.b(-102, -67);
-          return;
-        } else {
-          return;
+            ea.b(-102, -67);
+            return;
         }
     }
 

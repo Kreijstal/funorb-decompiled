@@ -28,8 +28,9 @@ final class ke {
             this.a(true);
             ((ke) this).field_k = 256;
         }
+        int fieldTemp$0 = ((ke) this).field_k - 1;
         ((ke) this).field_k = ((ke) this).field_k - 1;
-        return ((ke) this).field_a[((ke) this).field_k - 1];
+        return ((ke) this).field_a[fieldTemp$0];
     }
 
     private final void a(boolean param0) {
@@ -46,8 +47,9 @@ final class ke {
             break L0;
           }
         }
+        int fieldTemp$3 = ((ke) this).field_h + 1;
         ((ke) this).field_h = ((ke) this).field_h + 1;
-        ((ke) this).field_f = ((ke) this).field_f + (((ke) this).field_h + 1);
+        ((ke) this).field_f = ((ke) this).field_f + fieldTemp$3;
         var2 = 0;
         L1: while (true) {
           if ((var2 ^ -1) <= -257) {
@@ -74,10 +76,12 @@ final class ke {
               }
             }
             ((ke) this).field_m = ((ke) this).field_m + ((ke) this).field_j[255 & var2 + 128];
-            var4 = ((ke) this).field_m + ((ke) this).field_j[ce.a(1020, var3) >> 898509890] - -((ke) this).field_f;
-            ((ke) this).field_j[var2] = ((ke) this).field_m + ((ke) this).field_j[ce.a(1020, var3) >> 898509890] - -((ke) this).field_f;
-            ((ke) this).field_f = var3 + ((ke) this).field_j[ce.a(var4, 261311) >> -1336342712 >> 413519362];
-            ((ke) this).field_a[var2] = var3 + ((ke) this).field_j[ce.a(var4, 261311) >> -1336342712 >> 413519362];
+            int dupTemp$4 = ((ke) this).field_m + ((ke) this).field_j[ce.a(1020, var3) >> 898509890] - -((ke) this).field_f;
+            var4 = dupTemp$4;
+            ((ke) this).field_j[var2] = dupTemp$4;
+            int dupTemp$5 = var3 + ((ke) this).field_j[ce.a(var4, 261311) >> -1336342712 >> 413519362];
+            ((ke) this).field_f = dupTemp$5;
+            ((ke) this).field_a[var2] = dupTemp$5;
             var2++;
             continue L1;
           }

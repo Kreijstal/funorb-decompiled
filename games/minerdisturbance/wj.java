@@ -82,22 +82,38 @@ final class wj extends cb {
     }
 
     final ag a(String param0, int param1) {
-        if (param1 != 5) {
-            Object var4 = null;
-            String discarded$0 = ((wj) this).a((byte) 97, (String) null);
+        int var3 = 0;
+        Object var4 = null;
+        CharSequence var5 = null;
+        CharSequence var6 = null;
+        L0: {
+          if (param1 == 5) {
+            break L0;
+          } else {
+            var4 = null;
+            String discarded$2 = ((wj) this).a((byte) 97, (String) null);
+            break L0;
+          }
         }
-        CharSequence var5 = (CharSequence) (Object) param0;
-        if (!(oi.a(-19804, var5))) {
-            return fg.field_d;
-        }
-        CharSequence var6 = (CharSequence) (Object) param0;
-        int var3 = md.a(var6, true);
-        if (-1 > (var3 ^ -1)) {
-            // if_icmplt L78
+        var5 = (CharSequence) (Object) param0;
+        if (!oi.a(-19804, var5)) {
+          return fg.field_d;
         } else {
-            return fg.field_d;
+          L1: {
+            var6 = (CharSequence) (Object) param0;
+            var3 = md.a(var6, true);
+            if (-1 <= (var3 ^ -1)) {
+              break L1;
+            } else {
+              if ((var3 ^ -1) < -131) {
+                break L1;
+              } else {
+                return sc.field_a;
+              }
+            }
+          }
+          return fg.field_d;
         }
-        return sc.field_a;
     }
 
     wj(ui param0) {

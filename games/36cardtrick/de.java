@@ -23,7 +23,7 @@ final class de {
         int var1 = 0;
         int[] var2 = null;
         int var3 = 0;
-        mg var4_ref = null;
+        mg var4_ref_mg = null;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
@@ -136,12 +136,12 @@ final class de {
               }
             }
           } else {
-            var4_ref = il.field_a[var3];
-            var4_ref.a((byte) 116);
+            var4_ref_mg = il.field_a[var3];
+            var4_ref_mg.a((byte) 116);
             kj.a((byte) 104, var3);
-            var5 = ((mg) var4_ref).field_f + ((mg) var4_ref).field_e >> 12352481;
-            var6 = ((mg) var4_ref).field_s + ((mg) var4_ref).field_u >> -449277279;
-            var7 = ((mg) var4_ref).field_z - -((mg) var4_ref).field_i >> 314211073;
+            var5 = var4_ref_mg.field_f + var4_ref_mg.field_e >> 12352481;
+            var6 = var4_ref_mg.field_s + var4_ref_mg.field_u >> -449277279;
+            var7 = var4_ref_mg.field_z - -var4_ref_mg.field_i >> 314211073;
             var8 = rh.field_h[9] >> 1078957890;
             var9 = rh.field_h[10] >> 1829716674;
             var10_int = rh.field_h[11] >> -694065886;

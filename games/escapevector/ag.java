@@ -508,67 +508,51 @@ final class ag implements java.awt.event.KeyListener, java.awt.event.FocusListen
     }
 
     public final synchronized void keyReleased(java.awt.event.KeyEvent param0) {
-        int var2 = 0;
-        if (ck.field_v != null) {
-          ui.field_e = 0;
-          var2 = param0.getKeyCode();
-          if (0 <= var2) {
-            L0: {
-              if (var2 >= jc.field_a.length) {
-                var2 = -1;
-                break L0;
-              } else {
-                var2 = -129 & jc.field_a[var2];
-                break L0;
-              }
-            }
-            if (sb.field_b <= -1) {
-              if (-1 <= var2) {
-                hc.field_C[sb.field_b] = var2 ^ -1;
-                sb.field_b = sb.field_b - -1 & 127;
-                if (m.field_k == sb.field_b) {
-                  sb.field_b = -1;
-                  param0.consume();
-                  return;
-                } else {
-                  param0.consume();
-                  return;
-                }
-              } else {
-                param0.consume();
-                return;
-              }
-            } else {
-              param0.consume();
-              return;
-            }
-          } else {
-            var2 = -1;
-            if (sb.field_b <= -1) {
-              if (-1 <= var2) {
-                hc.field_C[sb.field_b] = var2 ^ -1;
-                sb.field_b = sb.field_b - -1 & 127;
-                if (m.field_k != sb.field_b) {
-                  param0.consume();
-                  return;
-                } else {
-                  sb.field_b = -1;
-                  param0.consume();
-                  return;
-                }
-              } else {
-                param0.consume();
-                return;
-              }
-            } else {
-              param0.consume();
-              return;
-            }
-          }
-        } else {
-          param0.consume();
-          return;
+        if (ck.field_v == null) {
+            param0.consume();
+            return;
         }
+        ui.field_e = 0;
+        int var2 = param0.getKeyCode();
+        if (0 > var2) {
+            var2 = -1;
+            if ((sb.field_b ^ -1) > -1) {
+                param0.consume();
+                return;
+            }
+            if (-1 < (var2 ^ -1)) {
+                param0.consume();
+                return;
+            }
+            hc.field_C[sb.field_b] = var2 ^ -1;
+            sb.field_b = sb.field_b - -1 & 127;
+            if ((m.field_k ^ -1) != (sb.field_b ^ -1)) {
+                param0.consume();
+                return;
+            }
+            sb.field_b = -1;
+            param0.consume();
+            return;
+        }
+        if (var2 < jc.field_a.length) {
+            var2 = -129 & jc.field_a[var2];
+        } else {
+            var2 = -1;
+        }
+        if ((sb.field_b ^ -1) <= -1) {
+            if (-1 < (var2 ^ -1)) {
+                param0.consume();
+                return;
+            }
+            hc.field_C[sb.field_b] = var2 ^ -1;
+            sb.field_b = sb.field_b - -1 & 127;
+            if ((m.field_k ^ -1) == (sb.field_b ^ -1)) {
+                sb.field_b = -1;
+                param0.consume();
+                return;
+            }
+        }
+        param0.consume();
     }
 
     final static void a(String param0, byte param1, java.applet.Applet param2) {

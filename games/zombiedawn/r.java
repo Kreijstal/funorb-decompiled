@@ -125,8 +125,9 @@ final class r extends eh {
                 L2: while (true) {
                   if (((r) this).field_B.length > var2) {
                     if (var4 < ((r) this).field_C.length) {
+                      int incrementValue$1 = var2;
                       var2++;
-                      var5 = ((r) this).field_B[var2];
+                      var5 = ((r) this).field_B[incrementValue$1];
                       if (var5 != null) {
                         this.a(127, var5, var3, var4);
                         var4++;
@@ -365,7 +366,7 @@ final class r extends eh {
             var15 = param1.field_j;
             var16 = param1.field_i;
             var17 = param1.field_n;
-            if (var16 >= -var7 + var9) {
+            if ((var16 ^ -1) <= (-var7 + var9 ^ -1)) {
               break L4;
             } else {
               if (-1 == (1 & ((r) this).field_L[var11] ^ -1)) {
@@ -378,10 +379,10 @@ final class r extends eh {
             }
           }
           L5: {
-            if (-var7 + var9 >= var16) {
+            if ((-var7 + var9 ^ -1) <= (var16 ^ -1)) {
               break L5;
             } else {
-              if ((4 & ((r) this).field_L[var11]) == 0) {
+              if ((4 & ((r) this).field_L[var11] ^ -1) == -1) {
                 break L5;
               } else {
                 var14 = var7;
@@ -421,7 +422,7 @@ final class r extends eh {
             if (var17 <= -var8 + var10) {
               break L8;
             } else {
-              if ((8 & ((r) this).field_L[var11]) != -1) {
+              if ((8 & ((r) this).field_L[var11] ^ -1) != -1) {
                 var17 = -var8 + var10;
                 var15 = var8;
                 break L6;
@@ -430,7 +431,7 @@ final class r extends eh {
               }
             }
           }
-          if (-65 != var13) {
+          if (-65 != (var13 ^ -1)) {
             if (128 == var13) {
               var15 = var10 - var17;
               break L6;

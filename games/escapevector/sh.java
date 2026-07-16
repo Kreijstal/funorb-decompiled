@@ -57,8 +57,8 @@ abstract class sh extends fl {
     }
 
     final static java.net.URL a(byte param0, java.applet.Applet param1, java.net.URL param2) {
-        String var3 = null;
-        String var4 = null;
+        Object var3 = null;
+        Object var4 = null;
         var3 = null;
         var4 = null;
         if (param0 < 11) {
@@ -71,7 +71,7 @@ abstract class sh extends fl {
               if (oh.field_p.equals((Object) (Object) param1.getParameter("settings"))) {
                 break L0;
               } else {
-                var3 = oh.field_p;
+                var3 = (Object) (Object) oh.field_p;
                 var4 = var3;
                 var4 = var3;
                 break L0;
@@ -85,12 +85,12 @@ abstract class sh extends fl {
               if (wi.field_i.equals((Object) (Object) param1.getParameter("session"))) {
                 break L1;
               } else {
-                var4 = wi.field_i;
+                var4 = (Object) (Object) wi.field_i;
                 break L1;
               }
             }
           }
-          return vn.a(var4, -1, var3, param2, 1);
+          return vn.a((String) var4, -1, (String) var3, param2, 1);
         }
     }
 

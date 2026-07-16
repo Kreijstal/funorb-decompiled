@@ -91,22 +91,28 @@ final class ad {
             Throwable decompiledCaughtException = null;
             vj stackOut_0_0 = null;
             try {
-              var4 = Class.forName("mb");
-              var5 = (vj) var4.newInstance();
-              var6 = 99 % ((param1 - 68) / 40);
-              var5.a(param0, 84, param2, param3);
-              stackOut_0_0 = (vj) var5;
-              stackIn_1_0 = stackOut_0_0;
-            } catch (java.lang.Throwable decompiledCaughtParameter) {
-              decompiledCaughtException = decompiledCaughtParameter;
-              return (vj) (Object) stackIn_1_0;
+              L0: {
+                var4 = Class.forName("mb");
+                var5 = (vj) var4.newInstance();
+                var6 = 99 % ((param1 - 68) / 40);
+                var5.a(param0, 84, param2, param3);
+                stackOut_0_0 = (vj) var5;
+                stackIn_1_0 = stackOut_0_0;
+                break L0;
+              }
+            } catch (java.lang.Throwable decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              var4_ref = decompiledCaughtException;
+              var5_ref = new si();
+              ((vj) (Object) var5_ref).a(param0, 107, param2, param3);
+              return (vj) (Object) var5_ref;
             }
+            return stackIn_1_0;
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
             throw new RuntimeException(decompiledCheckedException);
         }
-        return null;
     }
 
     final void a(int param0, l param1) {

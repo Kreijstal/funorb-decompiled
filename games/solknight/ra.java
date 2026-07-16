@@ -109,6 +109,7 @@ final class ra {
           if (var2 >= 10) {
             ((ra) this).field_c = param0.i(59);
             ((ra) this).field_b = param0.i(-113);
+            return;
           } else {
             var3 = param0.j(255);
             if (var3 != 0) {

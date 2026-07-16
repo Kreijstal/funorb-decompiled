@@ -790,8 +790,9 @@ final class nj extends hl {
     public nj() {
         ((nj) this).field_y = new ai[6];
         ((nj) this).field_s = new ai();
-        ((nj) this).field_y[0] = new ai();
-        ai var1 = new ai();
+        ai dupTemp$0 = new ai();
+        ((nj) this).field_y[0] = dupTemp$0;
+        ai var1 = dupTemp$0;
         var1.a((byte) 102);
     }
 
@@ -924,7 +925,6 @@ final class nj extends hl {
         int var4 = 0;
         ai var5 = null;
         ai var6 = null;
-        ai var6_ref = null;
         int var7 = 0;
         ai stackIn_10_0 = null;
         ai stackIn_11_0 = null;
@@ -947,26 +947,27 @@ final class nj extends hl {
                 var6 = var5;
                 if (var5 != null) {
                   L1: {
-                    var6_ref = param2.field_y[var4];
+                    var6 = param2.field_y[var4];
                     stackOut_9_0 = (ai) var5;
                     stackIn_11_0 = stackOut_9_0;
                     stackIn_10_0 = stackOut_9_0;
-                    if (var6_ref != null) {
+                    if (var6 != null) {
                       stackOut_11_0 = (ai) (Object) stackIn_11_0;
-                      stackOut_11_1 = (ai) var6_ref;
+                      stackOut_11_1 = (ai) var6;
                       stackIn_12_0 = stackOut_11_0;
                       stackIn_12_1 = stackOut_11_1;
                       break L1;
                     } else {
-                      param2.field_y[var4] = new ai();
+                      ai dupTemp$1 = new ai();
+                      param2.field_y[var4] = dupTemp$1;
                       stackOut_10_0 = (ai) (Object) stackIn_10_0;
-                      stackOut_10_1 = new ai();
+                      stackOut_10_1 = (ai) dupTemp$1;
                       stackIn_12_0 = stackOut_10_0;
                       stackIn_12_1 = stackOut_10_1;
                       break L1;
                     }
                   }
-                  ((ai) (Object) stackIn_12_0).a((ai) (Object) stackIn_12_1, (byte) -103);
+                  ((ai) (Object) stackIn_12_0).a(stackIn_12_1, (byte) -103);
                   var4++;
                   continue L0;
                 } else {
@@ -990,11 +991,13 @@ final class nj extends hl {
     final ai a(int param0, int param1) {
         if (param0 <= 59) {
           field_u = null;
-          ((nj) this).field_y[param1] = new ai();
-          return new ai();
+          ai dupTemp$4 = new ai();
+          ((nj) this).field_y[param1] = dupTemp$4;
+          return dupTemp$4;
         } else {
-          ((nj) this).field_y[param1] = new ai();
-          return new ai();
+          ai dupTemp$5 = new ai();
+          ((nj) this).field_y[param1] = dupTemp$5;
+          return dupTemp$5;
         }
     }
 

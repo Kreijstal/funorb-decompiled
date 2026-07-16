@@ -47,7 +47,7 @@ final class d extends bb {
           var11 = param2.field_w;
           var12 = -var11 + gb.field_d;
           var13 = 0;
-          if (gb.field_b <= param1) {
+          if ((gb.field_b ^ -1) >= (param1 ^ -1)) {
             break L1;
           } else {
             var14 = -param1 + gb.field_b;
@@ -59,7 +59,7 @@ final class d extends bb {
           }
         }
         L2: {
-          if (var10 + param1 <= gb.field_i) {
+          if ((var10 + param1 ^ -1) >= (gb.field_i ^ -1)) {
             break L2;
           } else {
             var10 = var10 - (var10 + (param1 - gb.field_i));
@@ -96,54 +96,56 @@ final class d extends bb {
           if (var11 <= 0) {
             break L5;
           } else {
-            if (var10 >= -1) {
+            if ((var10 ^ -1) >= -1) {
               break L5;
             } else {
               param1 = -var10;
               L6: while (true) {
-                if (-1 <= param1) {
+                if (-1 >= (param1 ^ -1)) {
                   return;
                 } else {
                   var14 = var7;
                   param3 = -var11;
                   L7: while (true) {
-                    if (-1 >= param3) {
+                    if (-1 >= (param3 ^ -1)) {
                       var8 = var8 + var12;
                       var9 = var9 + var13;
                       param1++;
                       continue L6;
                     } else {
-                      var15 = var14 >> -2068757560;
-                      var16 = 256 - var15;
-                      var14 = var14 + var6;
-                      if (-1 <= var15) {
-                        var9++;
-                        var17 = param2.field_B[var9];
-                        if (0 != var17) {
-                          if (255 < var15) {
-                            gb.field_a[var8] = var17;
-                            var8++;
-                            param3++;
-                            continue L7;
-                          } else {
-                            var18 = gb.field_a[var8];
-                            var19 = (16711935 & var17) * var15 + (var18 & 16711935) * var16 >> -129030680 & 16711935;
-                            gb.field_a[var8] = (sc.a(16711908, sc.a(var17, 65280) * var15 + sc.a(65280, var18) * var16) >> -1641925464) + var19;
-                            var8++;
-                            param3++;
-                            continue L7;
+                      L8: {
+                        var15 = var14 >> -2068757560;
+                        var16 = 256 - var15;
+                        var14 = var14 + var6;
+                        if (-1 >= (var15 ^ -1)) {
+                          L9: {
+                            int incrementValue$1 = var9;
+                            var9++;
+                            var17 = param2.field_B[incrementValue$1];
+                            if (0 == var17) {
+                              break L9;
+                            } else {
+                              if (255 < var15) {
+                                gb.field_a[var8] = var17;
+                                break L9;
+                              } else {
+                                var18 = gb.field_a[var8];
+                                var19 = (16711935 & var17) * var15 + (var18 & 16711935) * var16 >> -129030680 & 16711935;
+                                gb.field_a[var8] = (sc.a(16711908, sc.a(var17, 65280) * var15 + sc.a(65280, var18) * var16) >> -1641925464) + var19;
+                                break L9;
+                              }
+                            }
                           }
+                          var8++;
+                          break L8;
                         } else {
                           var8++;
-                          param3++;
-                          continue L7;
+                          var9++;
+                          break L8;
                         }
-                      } else {
-                        var8++;
-                        var9++;
-                        param3++;
-                        continue L7;
                       }
+                      param3++;
+                      continue L7;
                     }
                   }
                 }

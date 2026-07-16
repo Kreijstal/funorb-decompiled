@@ -53,11 +53,17 @@ final class ab {
               }
             }
             try {
-              Object discarded$1 = mo.a("resizing", new Object[1], param0 ^ 25619, hk.d(116));
-            } catch (java.lang.Throwable decompiledCaughtParameter) {
-              decompiledCaughtException = decompiledCaughtParameter;
+              L1: {
+                Object discarded$1 = mo.a("resizing", new Object[1], param0 ^ 25619, hk.d(116));
+                break L1;
+              }
+            } catch (java.lang.Throwable decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              L2: {
+                var2 = decompiledCaughtException;
+                break L2;
+              }
             }
-            var2 = decompiledCaughtException;
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {

@@ -34,8 +34,9 @@ final class hk extends fb {
           }
         }
         L1: {
+          int fieldTemp$3 = ((hk) this).field_N;
           ((hk) this).field_N = ((hk) this).field_N - 1;
-          if ((((hk) this).field_N ^ -1) <= -1) {
+          if ((fieldTemp$3 ^ -1) <= -1) {
             break L1;
           } else {
             if (((hk) this).field_D) {
@@ -43,10 +44,10 @@ final class hk extends fb {
             } else {
               ((hk) this).field_D = true;
               if (!((hk) this).field_K) {
-                fn discarded$2 = kh.a(7, false);
+                fn discarded$4 = kh.a(7, false);
                 break L1;
               } else {
-                fn discarded$3 = kh.a(6, false);
+                fn discarded$5 = kh.a(6, false);
                 break L1;
               }
             }
@@ -446,13 +447,12 @@ final class hk extends fb {
     }
 
     final static void i(int param0) {
-        uf var1_ref = null;
         uf var1 = (uf) (Object) ad.field_h.a(param0 + -1584);
         if (!(var1 != null)) {
-            var1_ref = new uf();
+            var1 = new uf();
         }
-        var1_ref.a(bi.field_l, (byte) -29, bi.field_f, bi.field_b, bi.field_d, bi.field_c, bi.field_g, bi.field_a);
-        rm.field_d.a(param0 ^ param0, (le) (Object) var1_ref);
+        var1.a(bi.field_l, (byte) -29, bi.field_f, bi.field_b, bi.field_d, bi.field_c, bi.field_g, bi.field_a);
+        rm.field_d.a(param0 ^ param0, (le) (Object) var1);
     }
 
     static {

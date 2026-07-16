@@ -136,21 +136,26 @@ final class go {
                   }
                   try {
                     L2: {
-                      if (param0 >= 70) {
-                        break L2;
-                      } else {
-                        field_g = null;
-                        break L2;
+                      L3: {
+                        if (param0 >= 70) {
+                          break L3;
+                        } else {
+                          field_g = null;
+                          break L3;
+                        }
                       }
+                      ((go) this).field_f.setInput(param2.field_u, param2.field_t - -10, -10 + -param2.field_t + (-8 + param2.field_u.length));
+                      int discarded$2 = ((go) this).field_f.inflate(param1);
+                      break L2;
                     }
-                    ((go) this).field_f.setInput(param2.field_u, param2.field_t - -10, -10 + -param2.field_t + (-8 + param2.field_u.length));
-                    int discarded$2 = ((go) this).field_f.inflate(param1);
-                  } catch (java.lang.Exception decompiledCaughtParameter) {
-                    decompiledCaughtException = decompiledCaughtParameter;
+                  } catch (java.lang.Exception decompiledCaughtParameter0) {
+                    decompiledCaughtException = decompiledCaughtParameter0;
+                    exception = (Exception) (Object) decompiledCaughtException;
+                    ((go) this).field_f.reset();
+                    throw new RuntimeException("");
                   }
-                  exception = (Exception) (Object) decompiledCaughtException;
                   ((go) this).field_f.reset();
-                  throw new RuntimeException("");
+                  return;
                 } else {
                   break L0;
                 }

@@ -52,10 +52,10 @@ final class rk implements Iterable {
         if (param0 != -8243) {
             field_b = null;
         }
-        for (var1 = 0; var1 > -33; var1++) {
+        for (var1 = 0; (var1 ^ -1) > -33; var1++) {
             uh.field_c[var1] = 0L;
         }
-        for (var1 = 0; -33 > var1; var1++) {
+        for (var1 = 0; -33 < (var1 ^ -1); var1++) {
             ui.field_c[var1] = 0L;
         }
         qh.field_n = 0;

@@ -541,7 +541,7 @@ final class tj extends hg {
                   stackIn_37_1 = stackOut_36_1;
                   stackIn_37_2 = stackOut_36_2;
                   stackIn_37_3 = stackOut_36_3;
-                  if (((tj) this).field_w.field_h == 0) {
+                  if ((((tj) this).field_w.field_h ^ -1) == -1) {
                     stackOut_38_0 = stackIn_38_0;
                     stackOut_38_1 = stackIn_38_1;
                     stackOut_38_2 = stackIn_38_2;
@@ -589,7 +589,7 @@ final class tj extends hg {
                   stackIn_40_4 = stackOut_39_4;
                   stackIn_40_5 = stackOut_39_5;
                   stackIn_40_6 = stackOut_39_6;
-                  if (var3 != 0) {
+                  if ((var3 ^ -1) != -1) {
                     stackOut_41_0 = stackIn_41_0;
                     stackOut_41_1 = stackIn_41_1;
                     stackOut_41_2 = stackIn_41_2;
@@ -936,7 +936,7 @@ final class tj extends hg {
                 stackIn_4_1 = stackOut_3_1;
                 stackIn_4_2 = stackOut_3_2;
                 stackIn_4_3 = stackOut_3_3;
-                if (((tj) this).field_w.field_h == -1) {
+                if ((((tj) this).field_w.field_h ^ -1) == -1) {
                   stackOut_5_0 = stackIn_5_0;
                   stackOut_5_1 = stackIn_5_1;
                   stackOut_5_2 = stackIn_5_2;
@@ -984,7 +984,7 @@ final class tj extends hg {
                 stackIn_7_4 = stackOut_6_4;
                 stackIn_7_5 = stackOut_6_5;
                 stackIn_7_6 = stackOut_6_6;
-                if (-1 != var3) {
+                if (-1 != (var3 ^ -1)) {
                   stackOut_8_0 = stackIn_8_0;
                   stackOut_8_1 = stackIn_8_1;
                   stackOut_8_2 = stackIn_8_2;
@@ -1128,7 +1128,7 @@ final class tj extends hg {
               L16: {
                 var8 = ((tj) this).field_B;
                 var9 = ((tj) this).field_j;
-                if (((tj) this).field_C > var8) {
+                if ((((tj) this).field_C ^ -1) < (var8 ^ -1)) {
                   break L16;
                 } else {
                   var8--;
@@ -1167,7 +1167,7 @@ final class tj extends hg {
                         if (var10 != 1) {
                           break L20;
                         } else {
-                          if (614 + -var2 < var11 - -var14) {
+                          if ((614 + -var2 ^ -1) > (var11 - -var14 ^ -1)) {
                             var11 = -var14 + (-12 + -var2 + 626);
                             break L20;
                           } else {
@@ -1180,7 +1180,7 @@ final class tj extends hg {
                     }
                   }
                   L21: {
-                    if (var8 == var10) {
+                    if ((var8 ^ -1) == (var10 ^ -1)) {
                       var17 = var16.substring(0, var9);
                       var13 = var17;
                       var13 = var17;
@@ -1455,7 +1455,7 @@ final class tj extends hg {
                         break L4;
                       } else {
                         L5: {
-                          if (((tj) this).field_s != 0) {
+                          if ((((tj) this).field_s ^ -1) != -1) {
                             break L5;
                           } else {
                             sj.a(this.d(8192), (byte) 51);
@@ -1505,7 +1505,7 @@ final class tj extends hg {
                           if (!((tj) this).field_l) {
                             break L9;
                           } else {
-                            if (((tj) this).field_E < ((tj) this).field_g.length) {
+                            if ((((tj) this).field_E ^ -1) > (((tj) this).field_g.length ^ -1)) {
                               break L7;
                             } else {
                               break L9;
@@ -1641,11 +1641,12 @@ final class tj extends hg {
                           if (-1 <= (((tj) this).field_t ^ -1)) {
                             break L15;
                           } else {
+                            int fieldTemp$2 = ((tj) this).field_t - 1;
                             ((tj) this).field_t = ((tj) this).field_t - 1;
-                            if (((tj) this).field_t - 1 == 0) {
+                            if ((fieldTemp$2 ^ -1) == -1) {
                               if (((tj) this).field_C <= ((tj) this).field_B) {
                                 ((tj) this).field_E = ((tj) this).field_E + 1;
-                                if (((tj) this).field_g.length <= ((tj) this).field_E) {
+                                if ((((tj) this).field_g.length ^ -1) >= (((tj) this).field_E ^ -1)) {
                                   rk.field_e.b((wg) (Object) ((tj) this).field_A);
                                   ((tj) this).field_A = null;
                                   ((tj) this).field_F = 0;
@@ -1674,7 +1675,7 @@ final class tj extends hg {
                                 var3 = ((tj) this).field_x[((tj) this).field_B];
                                 L16: while (true) {
                                   L17: {
-                                    if (((tj) this).field_j >= var3.length()) {
+                                    if ((((tj) this).field_j ^ -1) <= (var3.length() ^ -1)) {
                                       break L17;
                                     } else {
                                       if (var3.regionMatches(((tj) this).field_j, "<photo>", 0, "<photo>".length())) {
@@ -1693,15 +1694,16 @@ final class tj extends hg {
                                     }
                                   }
                                   L18: {
-                                    if (((tj) this).field_j >= var3.length()) {
+                                    if ((((tj) this).field_j ^ -1) <= (var3.length() ^ -1)) {
                                       ((tj) this).field_B = ((tj) this).field_B + 1;
                                       ((tj) this).field_j = 0;
                                       ((tj) this).field_u.e(ie.field_q / 200, 0);
                                       break L18;
                                     } else {
                                       L19: {
+                                        int fieldTemp$3 = ((tj) this).field_j;
                                         ((tj) this).field_j = ((tj) this).field_j + 1;
-                                        var4 = var3.charAt(((tj) this).field_j);
+                                        var4 = var3.charAt(fieldTemp$3);
                                         if (var4 != 60) {
                                           break L19;
                                         } else {
@@ -1774,10 +1776,10 @@ final class tj extends hg {
                     if (-14 == (nk.field_n ^ -1)) {
                       break L22;
                     } else {
-                      if (nk.field_n == -85) {
+                      if ((nk.field_n ^ -1) == -85) {
                         break L22;
                       } else {
-                        if (-84 == nk.field_n) {
+                        if (-84 == (nk.field_n ^ -1)) {
                           break L22;
                         } else {
                           if (82 == nk.field_n) {
@@ -2018,30 +2020,36 @@ final class tj extends hg {
             String var9 = null;
             Throwable decompiledCaughtException = null;
             try {
-              var8 = param1.getParameter("cookiehost");
-              var7 = var8;
-              var7 = var8;
-              if (param0 > 59) {
-                L0: {
-                  var9 = param2 + "=" + param3 + "; version=1; path=/; domain=" + var8;
-                  var7 = var9;
-                  var7 = var9;
-                  if ((param4 ^ -1L) <= -1L) {
-                    var7 = var9 + "; Expires=" + bh.a(-100, td.b(128) + param4 * 1000L) + "; Max-Age=" + param4;
-                    break L0;
-                  } else {
-                    var7 = var9 + "; Discard;";
-                    break L0;
+              L0: {
+                var8 = param1.getParameter("cookiehost");
+                var7 = var8;
+                var7 = var8;
+                if (param0 > 59) {
+                  L1: {
+                    var9 = param2 + "=" + param3 + "; version=1; path=/; domain=" + var8;
+                    var7 = var9;
+                    var7 = var9;
+                    if ((param4 ^ -1L) <= -1L) {
+                      var7 = var9 + "; Expires=" + bh.a(-100, td.b(128) + param4 * 1000L) + "; Max-Age=" + param4;
+                      break L1;
+                    } else {
+                      var7 = var9 + "; Discard;";
+                      break L1;
+                    }
                   }
+                  sd.a((byte) -111, param1, "document.cookie=\"" + var7 + "\"");
+                  break L0;
+                } else {
+                  return;
                 }
-                sd.a((byte) -111, param1, "document.cookie=\"" + var7 + "\"");
-              } else {
-                return;
               }
-            } catch (java.lang.Throwable decompiledCaughtParameter) {
-              decompiledCaughtException = decompiledCaughtParameter;
+            } catch (java.lang.Throwable decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              L2: {
+                var6 = decompiledCaughtException;
+                break L2;
+              }
             }
-            var6 = decompiledCaughtException;
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
@@ -2101,10 +2109,10 @@ final class tj extends hg {
             if (param1 < 626 + -var4) {
               break L0;
             } else {
-              if (param1 <= -627) {
+              if ((param1 ^ -1) <= -627) {
                 break L0;
               } else {
-                if (-449 > param2) {
+                if (-449 < (param2 ^ -1)) {
                   break L0;
                 } else {
                   if (-476 >= (param2 ^ -1)) {
@@ -2117,10 +2125,10 @@ final class tj extends hg {
             }
           } else {
             if (!((tj) this).field_H) {
-              if (param1 < 632 - var4) {
+              if ((param1 ^ -1) > (632 - var4 ^ -1)) {
                 break L0;
               } else {
-                if (-633 <= param1) {
+                if (-633 >= (param1 ^ -1)) {
                   break L0;
                 } else {
                   if (382 > param2) {
@@ -2135,16 +2143,16 @@ final class tj extends hg {
                 }
               }
             } else {
-              if (-var4 + 162 > param1) {
+              if ((-var4 + 162 ^ -1) < (param1 ^ -1)) {
                 break L0;
               } else {
-                if (param1 <= -163) {
+                if ((param1 ^ -1) <= -163) {
                   break L0;
                 } else {
-                  if (-383 > param2) {
+                  if (-383 < (param2 ^ -1)) {
                     break L0;
                   } else {
-                    if (-410 < param2) {
+                    if (-410 < (param2 ^ -1)) {
                       return 0;
                     } else {
                       break L0;

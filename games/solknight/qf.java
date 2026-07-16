@@ -66,19 +66,26 @@ final class qf {
                 L3: {
                   if (id.field_c.field_m > 0) {
                     try {
-                      lf.field_d.a(-28748, 0, id.field_c.field_m, id.field_c.field_l);
-                      gf.field_Y = je.a(1);
-                    } catch (java.io.IOException decompiledCaughtParameter) {
-                      decompiledCaughtException = decompiledCaughtParameter;
+                      L4: {
+                        lf.field_d.a(-28748, 0, id.field_c.field_m, id.field_c.field_l);
+                        gf.field_Y = je.a(1);
+                        break L4;
+                      }
+                    } catch (java.io.IOException decompiledCaughtParameter0) {
+                      decompiledCaughtException = decompiledCaughtParameter0;
+                      L5: {
+                        iOException = (IOException) (Object) decompiledCaughtException;
+                        je.a(false);
+                        break L5;
+                      }
                     }
-                    iOException = (IOException) (Object) decompiledCaughtException;
-                    je.a(false);
+                    id.field_c.field_m = 0;
                     break L3;
                   } else {
                     break L3;
                   }
                 }
-                id.field_c.field_m = 0;
+                return;
               }
             }
             id.field_c.field_m = 0;

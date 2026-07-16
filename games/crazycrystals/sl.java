@@ -235,16 +235,15 @@ final class sl extends pn {
     }
 
     final f a(mj param0, byte param1, boolean param2, f[][] param3) {
-        Object var5_ref = null;
         f var6 = null;
-        f var5 = null;
+        Object var5 = null;
         if (param1 > -74) {
             field_r = null;
         }
         if (((sl) this).field_o.field_s >= 0) {
-            var5 = super.a(param0, (byte) -89, param2, param3);
+            var5 = (Object) (Object) super.a(param0, (byte) -89, param2, param3);
         } else {
-            var5_ref = this;
+            var5 = this;
             ((sl) this).field_l = ((sl) this).field_l.a(param0, (byte) -125, param2, param3);
         }
         if (param2) {
@@ -254,7 +253,7 @@ final class sl extends pn {
                 return ((sl) this).field_l;
             }
         }
-        return (f) var5_ref;
+        return (f) var5;
     }
 
     final static boolean a(boolean param0, CharSequence param1, int param2) {
@@ -387,25 +386,47 @@ final class sl extends pn {
     }
 
     final f a(int param0, ea param1, int param2, int param3, byte param4, int param5, f[][] param6) {
-        ((sl) this).field_l = ((sl) this).field_l.a(param0, param1, param2, param3, (byte) -126, param5, param6);
-        if (param4 > -87) {
-            Object var9 = null;
+        Object var9 = null;
+        f var10 = null;
+        L0: {
+          ((sl) this).field_l = ((sl) this).field_l.a(param0, param1, param2, param3, (byte) -126, param5, param6);
+          if (param4 <= -87) {
+            break L0;
+          } else {
+            var9 = null;
             sl.a((vc) null, (vc) null, -42, -91);
+            break L0;
+          }
         }
-        if (!(param1 != ((sl) this).field_o)) {
-            return (f) this;
-        }
-        if (((sl) this).field_o.field_o == -param2) {
-            if (-param0 == ((sl) this).field_o.field_s) {
-                // if_icmpgt L218
+        if (param1 == ((sl) this).field_o) {
+          return (f) this;
+        } else {
+          L1: {
+            L2: {
+              if (((sl) this).field_o.field_o != -param2) {
+                break L2;
+              } else {
+                if (-param0 != ((sl) this).field_o.field_s) {
+                  break L2;
+                } else {
+                  if (((sl) this).field_o.field_p * param1.field_p > param1.field_p * ((sl) this).field_o.field_m + ((sl) this).field_o.field_p * param1.field_m) {
+                    break L1;
+                  } else {
+                    break L2;
+                  }
+                }
+              }
             }
+            var10 = ((sl) this).field_o.a(param0, param2 + param5 - ((sl) this).field_o.field_o, param6, -31135, -((sl) this).field_o.field_s + (param0 + param3), param2, param1);
+            if ((Object) (Object) ((sl) this).field_o != (Object) (Object) var10) {
+              this.a(param3 - -param0, param5 - -param2, param6, 12, var10);
+              return ((sl) this).field_l;
+            } else {
+              break L1;
+            }
+          }
+          return super.a(param0, param1, param2, param3, (byte) -117, param5, param6);
         }
-        f var10 = ((sl) this).field_o.a(param0, param2 + param5 - ((sl) this).field_o.field_o, param6, -31135, -((sl) this).field_o.field_s + (param0 + param3), param2, param1);
-        if (!((Object) (Object) ((sl) this).field_o == (Object) (Object) var10)) {
-            this.a(param3 - -param0, param5 - -param2, param6, 12, var10);
-            return ((sl) this).field_l;
-        }
-        return super.a(param0, param1, param2, param3, (byte) -117, param5, param6);
     }
 
     final f a(int param0, byte param1, int param2) {

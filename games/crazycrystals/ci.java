@@ -52,7 +52,7 @@ final class ci extends se {
         int var6_int = 0;
         StringBuilder var6 = null;
         int var7 = 0;
-        String var7_ref = null;
+        String var7_ref_String = null;
         int var8 = 0;
         String var9 = null;
         int var10 = 0;
@@ -128,8 +128,8 @@ final class ci extends se {
                   }
                 }
               }
-              var7_ref = param1.substring(2 + var6_int, var5);
-              if (!cd.a((CharSequence) (Object) var7_ref, (byte) -109)) {
+              var7_ref_String = param1.substring(2 + var6_int, var5);
+              if (!cd.a((CharSequence) (Object) var7_ref_String, (byte) -109)) {
                 continue L0;
               } else {
                 if (var5 >= var3) {
@@ -139,7 +139,7 @@ final class ci extends se {
                     continue L0;
                   } else {
                     var5++;
-                    var8 = ti.a(param2 ^ 103, (CharSequence) (Object) var7_ref);
+                    var8 = ti.a(param2 ^ 103, (CharSequence) (Object) var7_ref_String);
                     var4 = var4 + (args[var8].length() + (var6_int + -var5));
                     continue L0;
                   }
@@ -203,7 +203,7 @@ final class ci extends se {
         }
         L1: {
           var7 = stackIn_3_0;
-          if (param1 > kh.field_b) {
+          if ((param1 ^ -1) < (kh.field_b ^ -1)) {
             stackOut_5_0 = param1;
             stackIn_6_0 = stackOut_5_0;
             break L1;
@@ -215,7 +215,7 @@ final class ci extends se {
         }
         L2: {
           var8 = stackIn_6_0;
-          if (var5 >= kh.field_g) {
+          if ((var5 ^ -1) <= (kh.field_g ^ -1)) {
             stackOut_8_0 = kh.field_g;
             stackIn_9_0 = stackOut_8_0;
             break L2;
@@ -227,7 +227,7 @@ final class ci extends se {
         }
         L3: {
           var9 = stackIn_9_0;
-          if (var6 >= kh.field_j) {
+          if ((var6 ^ -1) <= (kh.field_j ^ -1)) {
             stackOut_11_0 = kh.field_j;
             stackIn_12_0 = stackOut_11_0;
             break L3;
@@ -238,7 +238,7 @@ final class ci extends se {
           }
         }
         var10 = stackIn_12_0;
-        if (param0 >= kh.field_c) {
+        if ((param0 ^ -1) <= (kh.field_c ^ -1)) {
           if (kh.field_g > param0) {
             var11 = param0 + kh.field_l * var8;
             var12 = 1 + var10 + -var8 >> 690746817;
@@ -249,7 +249,7 @@ final class ci extends se {
                   if (kh.field_b > param1) {
                     break L5;
                   } else {
-                    if (kh.field_j > var6) {
+                    if ((kh.field_j ^ -1) < (var6 ^ -1)) {
                       var11 = param1 * kh.field_l + var7;
                       var12 = -var7 + 1 - -var9 >> -1089102623;
                       L6: while (true) {
@@ -283,15 +283,15 @@ final class ci extends se {
                               }
                             } else {
                               L9: {
-                                if (kh.field_b > param1) {
+                                if ((kh.field_b ^ -1) < (param1 ^ -1)) {
                                   break L9;
                                 } else {
-                                  if (var6 < kh.field_j) {
+                                  if ((var6 ^ -1) > (kh.field_j ^ -1)) {
                                     var11 = var7 + (var6 * kh.field_l - -(var6 + -param1 & 1));
                                     var12 = -var7 + var9 + 1 >> 1887266785;
                                     L10: while (true) {
                                       var12--;
-                                      if (var12 > -1) {
+                                      if ((var12 ^ -1) > -1) {
                                         break L9;
                                       } else {
                                         kh.field_i[var11] = 16777215;
@@ -308,69 +308,72 @@ final class ci extends se {
                             }
                           }
                         }
-                        if (kh.field_b <= param1) {
-                          if (var6 < kh.field_j) {
-                            var11 = var7 + (var6 * kh.field_l - -(var6 + -param1 & 1));
-                            var12 = -var7 + var9 + 1 >> 1887266785;
-                            L11: while (true) {
-                              var12--;
-                              if (var12 > -1) {
-                                return;
-                              } else {
-                                kh.field_i[var11] = 16777215;
-                                var11 += 2;
-                                continue L11;
-                              }
-                            }
+                        L11: {
+                          if ((kh.field_b ^ -1) < (param1 ^ -1)) {
+                            break L11;
                           } else {
-                            return;
+                            if ((var6 ^ -1) > (kh.field_j ^ -1)) {
+                              var11 = var7 + (var6 * kh.field_l - -(var6 + -param1 & 1));
+                              var12 = -var7 + var9 + 1 >> 1887266785;
+                              L12: while (true) {
+                                var12--;
+                                if ((var12 ^ -1) > -1) {
+                                  break L11;
+                                } else {
+                                  kh.field_i[var11] = 16777215;
+                                  var11 += 2;
+                                  continue L12;
+                                }
+                              }
+                            } else {
+                              return;
+                            }
                           }
-                        } else {
-                          return;
                         }
+                        return;
                       } else {
-                        L12: {
+                        L13: {
                           field_i = null;
                           if (var5 < kh.field_c) {
-                            break L12;
+                            break L13;
                           } else {
                             if (var5 < kh.field_g) {
                               var11 = (var8 + (1 & -param0 + var5)) * kh.field_l + var5;
                               var12 = -var8 + 1 + var10 >> 1275402529;
-                              L13: while (true) {
+                              L14: while (true) {
                                 var12--;
                                 if (-1 < (var12 ^ -1)) {
-                                  break L12;
+                                  break L13;
                                 } else {
                                   kh.field_i[var11] = 16777215;
                                   var11 = var11 + 2 * kh.field_l;
-                                  continue L13;
+                                  continue L14;
                                 }
                               }
                             } else {
-                              break L12;
+                              break L13;
                             }
                           }
                         }
-                        L14: {
-                          if (kh.field_b > param1) {
-                            break L14;
+                        L15: {
+                          if ((kh.field_b ^ -1) < (param1 ^ -1)) {
+                            break L15;
                           } else {
-                            if (var6 < kh.field_j) {
+                            if ((var6 ^ -1) > (kh.field_j ^ -1)) {
                               var11 = var7 + (var6 * kh.field_l - -(var6 + -param1 & 1));
                               var12 = -var7 + var9 + 1 >> 1887266785;
-                              L15: while (true) {
+                              L16: while (true) {
                                 var12--;
-                                if (var12 > -1) {
-                                  break L14;
+                                if ((var12 ^ -1) > -1) {
+                                  break L15;
                                 } else {
                                   kh.field_i[var11] = 16777215;
                                   var11 += 2;
-                                  continue L15;
+                                  continue L16;
                                 }
                               }
                             } else {
-                              break L14;
+                              break L15;
                             }
                           }
                         }
@@ -380,39 +383,39 @@ final class ci extends se {
                   }
                 }
                 if (!param2) {
-                  L16: {
+                  L17: {
                     if (var5 < kh.field_c) {
-                      break L16;
+                      break L17;
                     } else {
                       if (var5 < kh.field_g) {
                         var11 = (var8 + (1 & -param0 + var5)) * kh.field_l + var5;
                         var12 = -var8 + 1 + var10 >> 1275402529;
-                        L17: while (true) {
+                        L18: while (true) {
                           var12--;
                           if (-1 < (var12 ^ -1)) {
-                            break L16;
+                            break L17;
                           } else {
                             kh.field_i[var11] = 16777215;
                             var11 = var11 + 2 * kh.field_l;
-                            continue L17;
+                            continue L18;
                           }
                         }
                       } else {
-                        L18: {
-                          if (kh.field_b > param1) {
-                            break L18;
+                        L19: {
+                          if ((kh.field_b ^ -1) < (param1 ^ -1)) {
+                            break L19;
                           } else {
-                            if (var6 < kh.field_j) {
+                            if ((var6 ^ -1) > (kh.field_j ^ -1)) {
                               var11 = var7 + (var6 * kh.field_l - -(var6 + -param1 & 1));
                               var12 = -var7 + var9 + 1 >> 1887266785;
-                              L19: while (true) {
+                              L20: while (true) {
                                 var12--;
                                 if ((var12 ^ -1) > -1) {
-                                  break L18;
+                                  break L19;
                                 } else {
                                   kh.field_i[var11] = 16777215;
                                   var11 += 2;
-                                  continue L19;
+                                  continue L20;
                                 }
                               }
                             } else {
@@ -424,21 +427,21 @@ final class ci extends se {
                       }
                     }
                   }
-                  L20: {
-                    if (kh.field_b > param1) {
-                      break L20;
+                  L21: {
+                    if ((kh.field_b ^ -1) < (param1 ^ -1)) {
+                      break L21;
                     } else {
-                      if (var6 < kh.field_j) {
+                      if ((var6 ^ -1) > (kh.field_j ^ -1)) {
                         var11 = var7 + (var6 * kh.field_l - -(var6 + -param1 & 1));
                         var12 = -var7 + var9 + 1 >> 1887266785;
-                        L21: while (true) {
+                        L22: while (true) {
                           var12--;
                           if ((var12 ^ -1) > -1) {
-                            break L20;
+                            break L21;
                           } else {
                             kh.field_i[var11] = 16777215;
                             var11 += 2;
-                            continue L21;
+                            continue L22;
                           }
                         }
                       } else {
@@ -448,44 +451,44 @@ final class ci extends se {
                   }
                   return;
                 } else {
-                  L22: {
+                  L23: {
                     field_i = null;
                     if (var5 < kh.field_c) {
-                      break L22;
+                      break L23;
                     } else {
                       if (var5 < kh.field_g) {
                         var11 = (var8 + (1 & -param0 + var5)) * kh.field_l + var5;
                         var12 = -var8 + 1 + var10 >> 1275402529;
-                        L23: while (true) {
+                        L24: while (true) {
                           var12--;
                           if (-1 < (var12 ^ -1)) {
-                            break L22;
+                            break L23;
                           } else {
                             kh.field_i[var11] = 16777215;
                             var11 = var11 + 2 * kh.field_l;
-                            continue L23;
+                            continue L24;
                           }
                         }
                       } else {
-                        L24: {
-                          if (kh.field_b > param1) {
-                            break L24;
+                        L25: {
+                          if ((kh.field_b ^ -1) < (param1 ^ -1)) {
+                            break L25;
                           } else {
-                            if (var6 < kh.field_j) {
+                            if ((var6 ^ -1) > (kh.field_j ^ -1)) {
                               var11 = var7 + (var6 * kh.field_l - -(var6 + -param1 & 1));
                               var12 = -var7 + var9 + 1 >> 1887266785;
-                              L25: while (true) {
+                              L26: while (true) {
                                 var12--;
                                 if ((var12 ^ -1) > -1) {
-                                  break L24;
+                                  break L25;
                                 } else {
                                   kh.field_i[var11] = 16777215;
                                   var11 += 2;
-                                  continue L25;
+                                  continue L26;
                                 }
                               }
                             } else {
-                              break L24;
+                              break L25;
                             }
                           }
                         }
@@ -493,21 +496,21 @@ final class ci extends se {
                       }
                     }
                   }
-                  L26: {
-                    if (kh.field_b > param1) {
-                      break L26;
+                  L27: {
+                    if ((kh.field_b ^ -1) < (param1 ^ -1)) {
+                      break L27;
                     } else {
-                      if (var6 < kh.field_j) {
+                      if ((var6 ^ -1) > (kh.field_j ^ -1)) {
                         var11 = var7 + (var6 * kh.field_l - -(var6 + -param1 & 1));
                         var12 = -var7 + var9 + 1 >> 1887266785;
-                        L27: while (true) {
+                        L28: while (true) {
                           var12--;
                           if ((var12 ^ -1) > -1) {
-                            break L26;
+                            break L27;
                           } else {
                             kh.field_i[var11] = 16777215;
                             var11 += 2;
-                            continue L27;
+                            continue L28;
                           }
                         }
                       } else {
@@ -524,73 +527,73 @@ final class ci extends se {
               }
             }
           } else {
-            L28: {
+            L29: {
               if (kh.field_b > param1) {
-                break L28;
+                break L29;
               } else {
-                if (kh.field_j > var6) {
+                if ((kh.field_j ^ -1) < (var6 ^ -1)) {
                   var11 = param1 * kh.field_l + var7;
                   var12 = -var7 + 1 - -var9 >> -1089102623;
-                  L29: while (true) {
+                  L30: while (true) {
                     var12--;
                     if (-1 < (var12 ^ -1)) {
-                      break L28;
+                      break L29;
                     } else {
                       kh.field_i[var11] = 16777215;
                       var11 += 2;
-                      continue L29;
+                      continue L30;
                     }
                   }
                 } else {
-                  L30: {
+                  L31: {
                     if (!param2) {
-                      break L30;
+                      break L31;
                     } else {
                       field_i = null;
-                      break L30;
+                      break L31;
                     }
                   }
-                  L31: {
+                  L32: {
                     if (var5 < kh.field_c) {
-                      break L31;
+                      break L32;
                     } else {
                       if (var5 < kh.field_g) {
                         var11 = (var8 + (1 & -param0 + var5)) * kh.field_l + var5;
                         var12 = -var8 + 1 + var10 >> 1275402529;
-                        L32: while (true) {
+                        L33: while (true) {
                           var12--;
                           if (-1 < (var12 ^ -1)) {
-                            break L31;
+                            break L32;
                           } else {
                             kh.field_i[var11] = 16777215;
                             var11 = var11 + 2 * kh.field_l;
-                            continue L32;
+                            continue L33;
                           }
                         }
                       } else {
-                        break L31;
+                        break L32;
                       }
                     }
                   }
-                  L33: {
-                    if (kh.field_b > param1) {
-                      break L33;
+                  L34: {
+                    if ((kh.field_b ^ -1) < (param1 ^ -1)) {
+                      break L34;
                     } else {
-                      if (var6 < kh.field_j) {
+                      if ((var6 ^ -1) > (kh.field_j ^ -1)) {
                         var11 = var7 + (var6 * kh.field_l - -(var6 + -param1 & 1));
                         var12 = -var7 + var9 + 1 >> 1887266785;
-                        L34: while (true) {
+                        L35: while (true) {
                           var12--;
                           if ((var12 ^ -1) > -1) {
-                            break L33;
+                            break L34;
                           } else {
                             kh.field_i[var11] = 16777215;
                             var11 += 2;
-                            continue L34;
+                            continue L35;
                           }
                         }
                       } else {
-                        break L33;
+                        break L34;
                       }
                     }
                   }
@@ -599,43 +602,43 @@ final class ci extends se {
               }
             }
             if (!param2) {
-              L35: {
+              L36: {
                 if (var5 < kh.field_c) {
-                  break L35;
+                  break L36;
                 } else {
                   if (var5 < kh.field_g) {
                     var11 = (var8 + (1 & -param0 + var5)) * kh.field_l + var5;
                     var12 = -var8 + 1 + var10 >> 1275402529;
-                    L36: while (true) {
+                    L37: while (true) {
                       var12--;
                       if (-1 < (var12 ^ -1)) {
-                        break L35;
+                        break L36;
                       } else {
                         kh.field_i[var11] = 16777215;
                         var11 = var11 + 2 * kh.field_l;
-                        continue L36;
+                        continue L37;
                       }
                     }
                   } else {
-                    L37: {
-                      if (kh.field_b > param1) {
-                        break L37;
+                    L38: {
+                      if ((kh.field_b ^ -1) < (param1 ^ -1)) {
+                        break L38;
                       } else {
-                        if (var6 < kh.field_j) {
+                        if ((var6 ^ -1) > (kh.field_j ^ -1)) {
                           var11 = var7 + (var6 * kh.field_l - -(var6 + -param1 & 1));
                           var12 = -var7 + var9 + 1 >> 1887266785;
-                          L38: while (true) {
+                          L39: while (true) {
                             var12--;
                             if ((var12 ^ -1) > -1) {
-                              break L37;
+                              break L38;
                             } else {
                               kh.field_i[var11] = 16777215;
                               var11 += 2;
-                              continue L38;
+                              continue L39;
                             }
                           }
                         } else {
-                          break L37;
+                          break L38;
                         }
                       }
                     }
@@ -643,64 +646,45 @@ final class ci extends se {
                   }
                 }
               }
-              if (kh.field_b <= param1) {
-                if (var6 >= kh.field_j) {
-                  return;
-                } else {
-                  var11 = var7 + (var6 * kh.field_l - -(var6 + -param1 & 1));
-                  var12 = -var7 + var9 + 1 >> 1887266785;
-                  L39: while (true) {
-                    var12--;
-                    if ((var12 ^ -1) > -1) {
-                      return;
-                    } else {
-                      kh.field_i[var11] = 16777215;
-                      var11 += 2;
-                      continue L39;
-                    }
-                  }
-                }
-              } else {
-                return;
-              }
-            } else {
               L40: {
-                field_i = null;
-                if (var5 < kh.field_c) {
+                if ((kh.field_b ^ -1) < (param1 ^ -1)) {
                   break L40;
                 } else {
-                  if (var5 < kh.field_g) {
-                    var11 = (var8 + (1 & -param0 + var5)) * kh.field_l + var5;
-                    var12 = -var8 + 1 + var10 >> 1275402529;
+                  if ((var6 ^ -1) > (kh.field_j ^ -1)) {
+                    var11 = var7 + (var6 * kh.field_l - -(var6 + -param1 & 1));
+                    var12 = -var7 + var9 + 1 >> 1887266785;
                     L41: while (true) {
                       var12--;
-                      if (-1 < (var12 ^ -1)) {
+                      if ((var12 ^ -1) > -1) {
                         break L40;
                       } else {
                         kh.field_i[var11] = 16777215;
-                        var11 = var11 + 2 * kh.field_l;
+                        var11 += 2;
                         continue L41;
                       }
                     }
                   } else {
-                    break L40;
+                    return;
                   }
                 }
               }
+              return;
+            } else {
               L42: {
-                if (kh.field_b > param1) {
+                field_i = null;
+                if (var5 < kh.field_c) {
                   break L42;
                 } else {
-                  if (var6 < kh.field_j) {
-                    var11 = var7 + (var6 * kh.field_l - -(var6 + -param1 & 1));
-                    var12 = -var7 + var9 + 1 >> 1887266785;
+                  if (var5 < kh.field_g) {
+                    var11 = (var8 + (1 & -param0 + var5)) * kh.field_l + var5;
+                    var12 = -var8 + 1 + var10 >> 1275402529;
                     L43: while (true) {
                       var12--;
-                      if ((var12 ^ -1) > -1) {
+                      if (-1 < (var12 ^ -1)) {
                         break L42;
                       } else {
                         kh.field_i[var11] = 16777215;
-                        var11 += 2;
+                        var11 = var11 + 2 * kh.field_l;
                         continue L43;
                       }
                     }
@@ -709,72 +693,72 @@ final class ci extends se {
                   }
                 }
               }
+              L44: {
+                if ((kh.field_b ^ -1) < (param1 ^ -1)) {
+                  break L44;
+                } else {
+                  if ((var6 ^ -1) > (kh.field_j ^ -1)) {
+                    var11 = var7 + (var6 * kh.field_l - -(var6 + -param1 & 1));
+                    var12 = -var7 + var9 + 1 >> 1887266785;
+                    L45: while (true) {
+                      var12--;
+                      if ((var12 ^ -1) > -1) {
+                        break L44;
+                      } else {
+                        kh.field_i[var11] = 16777215;
+                        var11 += 2;
+                        continue L45;
+                      }
+                    }
+                  } else {
+                    break L44;
+                  }
+                }
+              }
               return;
             }
           }
         } else {
-          L44: {
+          L46: {
             if (kh.field_b > param1) {
-              break L44;
+              break L46;
             } else {
-              if (kh.field_j > var6) {
+              if ((kh.field_j ^ -1) < (var6 ^ -1)) {
                 var11 = param1 * kh.field_l + var7;
                 var12 = -var7 + 1 - -var9 >> -1089102623;
-                L45: while (true) {
+                L47: while (true) {
                   var12--;
                   if (-1 < (var12 ^ -1)) {
-                    break L44;
+                    break L46;
                   } else {
                     kh.field_i[var11] = 16777215;
                     var11 += 2;
-                    continue L45;
+                    continue L47;
                   }
                 }
               } else {
-                L46: {
+                L48: {
                   if (!param2) {
-                    break L46;
+                    break L48;
                   } else {
                     field_i = null;
-                    break L46;
+                    break L48;
                   }
                 }
-                L47: {
+                L49: {
                   if (var5 < kh.field_c) {
-                    break L47;
+                    break L49;
                   } else {
                     if (var5 < kh.field_g) {
                       var11 = (var8 + (1 & -param0 + var5)) * kh.field_l + var5;
                       var12 = -var8 + 1 + var10 >> 1275402529;
-                      L48: while (true) {
-                        var12--;
-                        if (-1 < (var12 ^ -1)) {
-                          break L47;
-                        } else {
-                          kh.field_i[var11] = 16777215;
-                          var11 = var11 + 2 * kh.field_l;
-                          continue L48;
-                        }
-                      }
-                    } else {
-                      break L47;
-                    }
-                  }
-                }
-                L49: {
-                  if (kh.field_b > param1) {
-                    break L49;
-                  } else {
-                    if (var6 < kh.field_j) {
-                      var11 = var7 + (var6 * kh.field_l - -(var6 + -param1 & 1));
-                      var12 = -var7 + var9 + 1 >> 1887266785;
                       L50: while (true) {
                         var12--;
-                        if ((var12 ^ -1) > -1) {
+                        if (-1 < (var12 ^ -1)) {
                           break L49;
                         } else {
                           kh.field_i[var11] = 16777215;
-                          var11 += 2;
+                          var11 = var11 + 2 * kh.field_l;
                           continue L50;
                         }
                       }
@@ -783,48 +767,70 @@ final class ci extends se {
                     }
                   }
                 }
+                L51: {
+                  if ((kh.field_b ^ -1) < (param1 ^ -1)) {
+                    break L51;
+                  } else {
+                    if ((var6 ^ -1) > (kh.field_j ^ -1)) {
+                      var11 = var7 + (var6 * kh.field_l - -(var6 + -param1 & 1));
+                      var12 = -var7 + var9 + 1 >> 1887266785;
+                      L52: while (true) {
+                        var12--;
+                        if ((var12 ^ -1) > -1) {
+                          break L51;
+                        } else {
+                          kh.field_i[var11] = 16777215;
+                          var11 += 2;
+                          continue L52;
+                        }
+                      }
+                    } else {
+                      break L51;
+                    }
+                  }
+                }
                 return;
               }
             }
           }
           if (!param2) {
-            L51: {
+            L53: {
               if (var5 < kh.field_c) {
-                break L51;
+                break L53;
               } else {
                 if (var5 < kh.field_g) {
                   var11 = (var8 + (1 & -param0 + var5)) * kh.field_l + var5;
                   var12 = -var8 + 1 + var10 >> 1275402529;
-                  L52: while (true) {
+                  L54: while (true) {
                     var12--;
                     if (-1 < (var12 ^ -1)) {
-                      break L51;
+                      break L53;
                     } else {
                       kh.field_i[var11] = 16777215;
                       var11 = var11 + 2 * kh.field_l;
-                      continue L52;
+                      continue L54;
                     }
                   }
                 } else {
-                  L53: {
-                    if (kh.field_b > param1) {
-                      break L53;
+                  L55: {
+                    if ((kh.field_b ^ -1) < (param1 ^ -1)) {
+                      break L55;
                     } else {
-                      if (var6 < kh.field_j) {
+                      if ((var6 ^ -1) > (kh.field_j ^ -1)) {
                         var11 = var7 + (var6 * kh.field_l - -(var6 + -param1 & 1));
                         var12 = -var7 + var9 + 1 >> 1887266785;
-                        L54: while (true) {
+                        L56: while (true) {
                           var12--;
                           if ((var12 ^ -1) > -1) {
-                            break L53;
+                            break L55;
                           } else {
                             kh.field_i[var11] = 16777215;
                             var11 += 2;
-                            continue L54;
+                            continue L56;
                           }
                         }
                       } else {
-                        break L53;
+                        break L55;
                       }
                     }
                   }
@@ -832,69 +838,72 @@ final class ci extends se {
                 }
               }
             }
-            if (kh.field_b <= param1) {
-              if (var6 >= kh.field_j) {
-                return;
+            L57: {
+              if ((kh.field_b ^ -1) < (param1 ^ -1)) {
+                break L57;
               } else {
-                var11 = var7 + (var6 * kh.field_l - -(var6 + -param1 & 1));
-                var12 = -var7 + var9 + 1 >> 1887266785;
-                L55: while (true) {
-                  var12--;
-                  if ((var12 ^ -1) > -1) {
-                    return;
-                  } else {
-                    kh.field_i[var11] = 16777215;
-                    var11 += 2;
-                    continue L55;
+                if ((var6 ^ -1) > (kh.field_j ^ -1)) {
+                  var11 = var7 + (var6 * kh.field_l - -(var6 + -param1 & 1));
+                  var12 = -var7 + var9 + 1 >> 1887266785;
+                  L58: while (true) {
+                    var12--;
+                    if ((var12 ^ -1) > -1) {
+                      break L57;
+                    } else {
+                      kh.field_i[var11] = 16777215;
+                      var11 += 2;
+                      continue L58;
+                    }
                   }
+                } else {
+                  return;
                 }
               }
-            } else {
-              return;
             }
+            return;
           } else {
-            L56: {
+            L59: {
               field_i = null;
               if (var5 < kh.field_c) {
-                break L56;
+                break L59;
               } else {
                 if (var5 < kh.field_g) {
                   var11 = (var8 + (1 & -param0 + var5)) * kh.field_l + var5;
                   var12 = -var8 + 1 + var10 >> 1275402529;
-                  L57: while (true) {
+                  L60: while (true) {
                     var12--;
                     if (-1 < (var12 ^ -1)) {
-                      break L56;
+                      break L59;
                     } else {
                       kh.field_i[var11] = 16777215;
                       var11 = var11 + 2 * kh.field_l;
-                      continue L57;
+                      continue L60;
                     }
                   }
                 } else {
-                  break L56;
+                  break L59;
                 }
               }
             }
-            L58: {
-              if (kh.field_b > param1) {
-                break L58;
+            L61: {
+              if ((kh.field_b ^ -1) < (param1 ^ -1)) {
+                break L61;
               } else {
-                if (var6 < kh.field_j) {
+                if ((var6 ^ -1) > (kh.field_j ^ -1)) {
                   var11 = var7 + (var6 * kh.field_l - -(var6 + -param1 & 1));
                   var12 = -var7 + var9 + 1 >> 1887266785;
-                  L59: while (true) {
+                  L62: while (true) {
                     var12--;
                     if ((var12 ^ -1) > -1) {
-                      break L58;
+                      break L61;
                     } else {
                       kh.field_i[var11] = 16777215;
                       var11 += 2;
-                      continue L59;
+                      continue L62;
                     }
                   }
                 } else {
-                  break L58;
+                  break L61;
                 }
               }
             }

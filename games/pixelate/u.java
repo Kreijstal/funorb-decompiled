@@ -30,7 +30,6 @@ final class u {
 
     final kp a(int param0, int param1) {
         kp var3 = null;
-        kp var3_ref = null;
         byte[] var4 = null;
         if (param0 == -21209) {
           var3 = (kp) ((u) this).field_i.a((long)param1, 0);
@@ -44,30 +43,30 @@ final class u {
                 break L0;
               }
             }
-            var3_ref = new kp();
+            var3 = new kp();
             if (var4 != null) {
               L1: {
-                var3_ref.a(param0 ^ 21212, new we(var4));
+                var3.a(param0 ^ 21212, new we(var4));
                 if (32768 <= param1) {
-                  var3_ref.g(126);
+                  var3.g(126);
                   break L1;
                 } else {
                   break L1;
                 }
               }
-              ((u) this).field_i.a((long)param1, (Object) (Object) var3_ref, (byte) 83);
-              return var3_ref;
+              ((u) this).field_i.a((long)param1, (Object) (Object) var3, (byte) 83);
+              return var3;
             } else {
               L2: {
                 if (32768 <= param1) {
-                  var3_ref.g(126);
+                  var3.g(126);
                   break L2;
                 } else {
                   break L2;
                 }
               }
-              ((u) this).field_i.a((long)param1, (Object) (Object) var3_ref, (byte) 83);
-              return var3_ref;
+              ((u) this).field_i.a((long)param1, (Object) (Object) var3, (byte) 83);
+              return var3;
             }
           } else {
             return var3;

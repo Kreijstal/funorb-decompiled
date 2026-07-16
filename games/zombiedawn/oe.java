@@ -165,21 +165,40 @@ final class oe {
 
     final int a(int param0, int param1) {
         int var3 = 0;
-        int var4 = ZombieDawn.field_J;
-        if (param1 != 0) {
+        int var4 = 0;
+        L0: {
+          var4 = ZombieDawn.field_J;
+          if (param1 == 0) {
+            break L0;
+          } else {
             oe.a((byte) -32);
+            break L0;
+          }
         }
-        if (((oe) this).field_e != null) {
-            // ifeq L35
-        } else {
-            return 0;
-        }
-        for (var3 = 1; ((oe) this).field_e.length > var3; var3++) {
-            if (((oe) this).field_e[var3] + ((oe) this).field_e[-1 + var3] >> -747544255 > param0) {
-                return -1 + var3;
+        L1: {
+          if (((oe) this).field_e == null) {
+            break L1;
+          } else {
+            if (((oe) this).field_e.length == 0) {
+              break L1;
+            } else {
+              var3 = 1;
+              L2: while (true) {
+                if (((oe) this).field_e.length <= var3) {
+                  return ((oe) this).field_e.length - 1;
+                } else {
+                  if (((oe) this).field_e[var3] + ((oe) this).field_e[-1 + var3] >> -747544255 <= param0) {
+                    var3++;
+                    continue L2;
+                  } else {
+                    return -1 + var3;
+                  }
+                }
+              }
             }
+          }
         }
-        return ((oe) this).field_e.length - 1;
+        return 0;
     }
 
     oe(int param0, int param1, int param2) {

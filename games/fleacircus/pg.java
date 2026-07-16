@@ -79,8 +79,9 @@ final class pg {
                         var7 = var8;
                     }
                 }
+                int incrementValue$0 = var5;
                 var5++;
-                var4[var5] = (char)var7;
+                var4[incrementValue$0] = (char)var7;
             }
         }
         return new String(var11, 0, var5);

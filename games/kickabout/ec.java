@@ -70,15 +70,17 @@ final class ec {
             var2 = 0;
             L1: while (true) {
               if (vb.field_j <= var2) {
-                pj.field_C[param1.b(80)] = pj.field_C[param1.b(80)] + 1;
+                int dupTemp$4 = param1.b(80);
+                pj.field_C[dupTemp$4] = pj.field_C[dupTemp$4] + 1;
                 var2 = 0;
                 var3 = 0;
                 L2: while (true) {
                   if (vb.field_j <= var3) {
                     if (param0) {
                       vb.field_j = var2;
+                      int fieldTemp$5 = vb.field_j;
                       vb.field_j = vb.field_j + 1;
-                      fu.field_b[vb.field_j] = param1;
+                      fu.field_b[fieldTemp$5] = param1;
                       return;
                     } else {
                       return;
@@ -98,15 +100,17 @@ final class ec {
                         break L3;
                       }
                     }
+                    int incrementValue$6 = var2;
                     var2++;
-                    fu.field_b[var2] = fu.field_b[var3];
+                    fu.field_b[incrementValue$6] = fu.field_b[var3];
                     var3++;
                     continue L2;
                   }
                 }
               } else {
                 if (fu.field_b[var2].field_c == param1.field_c) {
-                  pj.field_C[fu.field_b[var2].b(80)] = pj.field_C[fu.field_b[var2].b(80)] + 1;
+                  int dupTemp$7 = fu.field_b[var2].b(80);
+                  pj.field_C[dupTemp$7] = pj.field_C[dupTemp$7] + 1;
                   var2++;
                   continue L1;
                 } else {

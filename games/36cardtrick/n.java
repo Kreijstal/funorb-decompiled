@@ -12,7 +12,7 @@ final class n extends qg {
     final static void a(String param0, byte param1) {
         System.out.println("Error: " + sb.a(param0, "%0a", "\n", 127));
         if (param1 < 105) {
-            String var3 = (String) null;
+            Object var3 = null;
             n.a((String) null, (byte) 75);
         }
     }
@@ -71,7 +71,7 @@ final class n extends qg {
     }
 
     n(lk param0) {
-        super(((lk) param0).field_o, ((lk) param0).field_i, ((lk) param0).field_h, ((lk) param0).field_q, (ci) null, (pl) null);
+        super(param0.field_o, param0.field_i, param0.field_h, param0.field_q, (ci) null, (pl) null);
         param0.a(((n) this).field_q, 0, ((n) this).field_h, 0, true);
         ((n) this).field_A = 256;
         ((n) this).field_y = param0;
@@ -89,10 +89,10 @@ final class n extends qg {
         if (!(((n) this).field_y != null)) {
             return;
         }
-        if (((n) this).field_A == -1) {
+        if ((((n) this).field_A ^ -1) == -1) {
             return;
         }
-        if (!(-257 != ((n) this).field_A)) {
+        if (!(-257 != (((n) this).field_A ^ -1))) {
             ((n) this).field_y.a(param0 + ((n) this).field_o, param1 + ((n) this).field_i, -1, param3);
             return;
         }

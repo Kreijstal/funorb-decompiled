@@ -53,11 +53,9 @@ final class vk extends kd {
     final synchronized boolean a(cf param0, di param1, cg param2, int param3, int param4) {
         int var6 = 0;
         Object var7 = null;
-        int[] var7_array = null;
         te var8 = null;
         int var9 = 0;
         g var10 = null;
-        g var10_ref = null;
         int var11 = 0;
         var11 = Pool.field_O;
         if (param3 > 54) {
@@ -68,7 +66,7 @@ final class vk extends kd {
             if (param4 <= 0) {
               break L0;
             } else {
-              var7_array = new int[]{param4};
+              var7 = (Object) (Object) new int[]{param4};
               break L0;
             }
           }
@@ -89,13 +87,13 @@ final class vk extends kd {
               var10 = (g) (Object) ((vk) this).field_z.a(false, (long)var9);
               if (var10 == null) {
                 L3: {
-                  var10_ref = hk.a(param1, (byte) 127, var9);
-                  if (var10_ref == null) {
+                  var10 = hk.a(param1, (byte) 127, var9);
+                  if (var10 == null) {
                     var6 = 0;
                     break L3;
                   } else {
-                    ((vk) this).field_z.a((byte) -120, (ma) (Object) var10_ref, (long)var9);
-                    if (var10_ref.a(23605, var8.field_l, var7_array, param0)) {
+                    ((vk) this).field_z.a((byte) -120, (ma) (Object) var10, (long)var9);
+                    if (var10.a(23605, var8.field_l, (int[]) var7, param0)) {
                       break L3;
                     } else {
                       var6 = 0;
@@ -107,7 +105,7 @@ final class vk extends kd {
                 continue L1;
               } else {
                 L4: {
-                  if (var10.a(23605, var8.field_l, var7_array, param0)) {
+                  if (var10.a(23605, var8.field_l, (int[]) var7, param0)) {
                     break L4;
                   } else {
                     var6 = 0;
@@ -437,20 +435,39 @@ final class vk extends kd {
     }
 
     private final void a(int param0, int param1) {
-        if (param1 != 0) {
-            return;
-        }
-        pr var3 = (pr) (Object) ((vk) this).field_u.field_t.c((byte) 124);
-        while (var3 != null) {
-            if (param0 >= 0) {
-                // if_icmpeq L43
+        pr var3 = null;
+        if (param1 == 0) {
+          var3 = (pr) (Object) ((vk) this).field_u.field_t.c((byte) 124);
+          L0: while (true) {
+            if (var3 == null) {
+              return;
             } else {
-                if (!((var3.field_G ^ -1) <= -1)) {
-                    ((vk) this).field_I[var3.field_t][var3.field_A] = null;
-                    var3.field_G = 0;
+              L1: {
+                L2: {
+                  if (param0 < 0) {
+                    break L2;
+                  } else {
+                    if (param0 == var3.field_t) {
+                      break L2;
+                    } else {
+                      break L1;
+                    }
+                  }
                 }
+                if ((var3.field_G ^ -1) > -1) {
+                  ((vk) this).field_I[var3.field_t][var3.field_A] = null;
+                  var3.field_G = 0;
+                  break L1;
+                } else {
+                  break L1;
+                }
+              }
+              var3 = (pr) (Object) ((vk) this).field_u.field_t.f((byte) -5);
+              continue L0;
             }
-            var3 = (pr) (Object) ((vk) this).field_u.field_t.f((byte) -5);
+          }
+        } else {
+          return;
         }
     }
 
@@ -705,27 +722,63 @@ final class vk extends kd {
     }
 
     private final void c(int param0, int param1) {
-        pr var3 = (pr) (Object) ((vk) this).field_u.field_t.c((byte) 62);
-        if (param0 >= -17) {
+        pr var3 = null;
+        L0: {
+          var3 = (pr) (Object) ((vk) this).field_u.field_t.c((byte) 62);
+          if (param0 < -17) {
+            break L0;
+          } else {
             this.a(-123, -25, 81);
+            break L0;
+          }
         }
-        while (var3 != null) {
-            if (0 <= param1) {
-                // if_icmpeq L58
-            } else {
-                if (null != var3.field_o) {
+        L1: while (true) {
+          if (var3 == null) {
+            return;
+          } else {
+            L2: {
+              L3: {
+                if (0 > param1) {
+                  break L3;
+                } else {
+                  if (param1 == var3.field_t) {
+                    break L3;
+                  } else {
+                    break L2;
+                  }
+                }
+              }
+              L4: {
+                if (null == var3.field_o) {
+                  break L4;
+                } else {
+                  L5: {
                     var3.field_o.c(bp.field_h / 100);
-                    if (!(!var3.field_o.g())) {
-                        ((vk) this).field_u.field_p.b((kd) (Object) var3.field_o);
+                    if (var3.field_o.g()) {
+                      ((vk) this).field_u.field_p.b((kd) (Object) var3.field_o);
+                      break L5;
+                    } else {
+                      break L5;
                     }
-                    var3.a(2);
+                  }
+                  var3.a(2);
+                  break L4;
                 }
-                if (!((var3.field_G ^ -1) <= -1)) {
-                    ((vk) this).field_I[var3.field_t][var3.field_A] = null;
+              }
+              L6: {
+                if ((var3.field_G ^ -1) > -1) {
+                  ((vk) this).field_I[var3.field_t][var3.field_A] = null;
+                  break L6;
+                } else {
+                  break L6;
                 }
-                var3.a((byte) -117);
+              }
+              var3.a((byte) -117);
+              break L2;
             }
             var3 = (pr) (Object) ((vk) this).field_u.field_t.f((byte) -5);
+            continue L1;
+          }
         }
     }
 
@@ -962,7 +1015,7 @@ final class vk extends kd {
                   var4 = 15 & param0;
                   var5 = param0 >> 722181352 & 127;
                   var6 = (param0 & 8325787) >> -1170767120;
-                  if (var5 != 0) {
+                  if ((var5 ^ -1) != -1) {
                     break L1;
                   } else {
                     ((vk) this).field_J[var4] = rb.b(((vk) this).field_J[var4], -2080769) + (var6 << -642386482);
@@ -1117,7 +1170,7 @@ final class vk extends kd {
                   }
                 }
                 L19: {
-                  if (-121 != var5) {
+                  if (-121 != (var5 ^ -1)) {
                     break L19;
                   } else {
                     this.c(-50, var4);
@@ -1125,7 +1178,7 @@ final class vk extends kd {
                   }
                 }
                 L20: {
-                  if (-122 == var5) {
+                  if (-122 == (var5 ^ -1)) {
                     this.a((byte) -44, var4);
                     break L20;
                   } else {

@@ -40,7 +40,8 @@ final class tc {
         int var18 = 0;
         int var19 = 0;
         int var20 = 0;
-        re var21 = null;
+        Object var21 = null;
+        re var21_ref = null;
         int var22 = 0;
         int var23 = 0;
         int var24 = 0;
@@ -220,7 +221,7 @@ final class tc {
                   break L8;
                 }
                 L10: {
-                  var21 = stackIn_37_0;
+                  var21_ref = stackIn_37_0;
                   var22 = kb.field_o[var15];
                   var23 = il.field_c[var15];
                   var24 = kb.field_o[var16];
@@ -236,12 +237,12 @@ final class tc {
                       L11: {
                         var28 = var66[var18];
                         var29 = var67[var18];
-                        if (var21 == null) {
+                        if (var21_ref == null) {
                           stackOut_41_0 = 8355711;
                           stackIn_42_0 = stackOut_41_0;
                           break L11;
                         } else {
-                          stackOut_40_0 = var21.field_a;
+                          stackOut_40_0 = var21_ref.field_a;
                           stackIn_42_0 = stackOut_40_0;
                           break L11;
                         }
@@ -264,8 +265,8 @@ final class tc {
                   var31 = var67[var18];
                   var32 = var67[var19];
                   var33 = var67[var20];
-                  if (var21 != null) {
-                    stackOut_45_0 = var21.field_a;
+                  if (var21_ref != null) {
+                    stackOut_45_0 = var21_ref.field_a;
                     stackIn_46_0 = stackOut_45_0;
                     break L12;
                   } else {

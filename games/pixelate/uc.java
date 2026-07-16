@@ -21,6 +21,7 @@ class uc implements eb, af {
 
     private final void a(int param0, ng param1, int param2, int param3) {
         if (param0 > -71) {
+            Object var6 = null;
             int discarded$0 = ((uc) this).a(74, (ng) null, (byte) -48);
         }
         this.a(0, ((uc) this).field_p, param1, param2, ((uc) this).field_g, param3, -3, 0);
@@ -44,6 +45,7 @@ class uc implements eb, af {
 
     public final int a(int param0) {
         if (param0 != -3) {
+            Object var3 = null;
             uc.a(false, -120, (java.awt.Canvas) null);
         }
         return ((uc) this).field_a.field_z + ((uc) this).field_a.field_w;
@@ -51,6 +53,7 @@ class uc implements eb, af {
 
     public final int a(byte param0, ng param1, int param2) {
         if (param0 != 69) {
+            Object var5 = null;
             int discarded$0 = ((uc) this).a(113, (ng) null);
         }
         return this.b(param2, param1, 2, 0);
@@ -175,7 +178,7 @@ class uc implements eb, af {
     }
 
     final static String a(aa param0, int param1) {
-        String var2 = null;
+        Object var2 = null;
         String var3 = null;
         int var4 = 0;
         int var5 = 0;
@@ -188,10 +191,10 @@ class uc implements eb, af {
           } else {
             L1: {
               var6 = param0.field_m;
-              var2 = var6;
-              var2 = var6;
+              var2 = (Object) (Object) var6;
+              var2 = (Object) (Object) var6;
               if (1 == param0.field_i) {
-                var2 = "<img=0>" + var6;
+                var2 = (Object) (Object) ("<img=0>" + var6);
                 break L1;
               } else {
                 break L1;
@@ -200,7 +203,7 @@ class uc implements eb, af {
             if (param0.field_i != 2) {
               break L0;
             } else {
-              var2 = "<img=1>" + var2;
+              var2 = (Object) (Object) ("<img=1>" + var2);
               break L0;
             }
           }
@@ -258,10 +261,10 @@ class uc implements eb, af {
           } else {
             if (!param0.field_a) {
               L7: {
-                if (param0.field_d != -1) {
+                if ((param0.field_d ^ -1) != -1) {
                   break L7;
                 } else {
-                  if (-1 != param0.field_e) {
+                  if (-1 != (param0.field_e ^ -1)) {
                     break L7;
                   } else {
                     var3 = sd.a(dg.field_b, 77, new String[1]);
@@ -321,8 +324,9 @@ class uc implements eb, af {
         int var14 = 0;
         int var15 = 0;
         int var16 = 0;
-        kd var17 = null;
+        Object var17 = null;
         kd var18 = null;
+        kd var19 = null;
         int stackIn_14_0 = 0;
         int stackIn_19_0 = 0;
         int stackOut_13_0 = 0;
@@ -335,6 +339,7 @@ class uc implements eb, af {
           if (param2 == -1) {
             break L0;
           } else {
+            var17 = null;
             int discarded$1 = ((uc) this).a(-51, -38, 41, 14, 84, (ng) null);
             break L0;
           }
@@ -343,8 +348,8 @@ class uc implements eb, af {
           L1: {
             if (param1.b(true)) {
               L2: {
-                var17 = ((uc) this).b(param2 ^ 44, param1);
-                var18 = var17;
+                var18 = ((uc) this).b(param2 ^ 44, param1);
+                var19 = var18;
                 if (param0 >= param3) {
                   var8 = param3;
                   var9 = param0;
@@ -355,8 +360,8 @@ class uc implements eb, af {
                   break L2;
                 }
               }
-              var10 = var18.a(false, var8);
-              var11 = var18.a(false, var9);
+              var10 = var19.a(false, var8);
+              var11 = var19.a(false, var9);
               hp.a(param1.field_z + param5, param4 + (param1.field_p - -param1.field_C), param1.field_E + (param5 + param1.field_z), (byte) -104, param4 + param1.field_p);
               var12 = var10;
               L3: while (true) {
@@ -365,13 +370,13 @@ class uc implements eb, af {
                   break L1;
                 } else {
                   L4: {
-                    var13 = var17.field_b[var12];
+                    var13 = var18.field_b[var12];
                     if (var10 != var12) {
                       stackOut_13_0 = var13.field_g[0];
                       stackIn_14_0 = stackOut_13_0;
                       break L4;
                     } else {
-                      stackOut_12_0 = var18.b(true, var8);
+                      stackOut_12_0 = var19.b(true, var8);
                       stackIn_14_0 = stackOut_12_0;
                       break L4;
                     }
@@ -389,7 +394,7 @@ class uc implements eb, af {
                         break L5;
                       }
                     } else {
-                      stackOut_15_0 = var18.b(true, var9);
+                      stackOut_15_0 = var19.b(true, var9);
                       stackIn_19_0 = stackOut_15_0;
                       break L5;
                     }
@@ -431,6 +436,7 @@ class uc implements eb, af {
 
     private final int a(int param0, int param1, int param2, ng param3) {
         if (param0 < 41) {
+            Object var6 = null;
             this.d(-45, (ng) null);
         }
         return param2 + (param3.field_p + ((uc) this).field_k) - (-param3.field_x - param1);
@@ -551,13 +557,13 @@ class uc implements eb, af {
             L2: {
               var12 = ((uc) this).field_d;
               if (var12 != 0) {
-                if (var12 == -3) {
+                if ((var12 ^ -1) == -3) {
                   var11 = var10 - ((uc) this).field_a.field_z;
                   break L2;
                 } else {
                   L3: {
                     if (3 != var12) {
-                      if (-2 != var12) {
+                      if (-2 != (var12 ^ -1)) {
                         break L3;
                       } else {
                         break L3;
@@ -664,9 +670,9 @@ class uc implements eb, af {
           L5: {
             var6 = ((uc) this).field_l;
             if (var6 != 0) {
-              if (-4 != var6) {
+              if (-4 != (var6 ^ -1)) {
                 if (1 != var6) {
-                  if (-3 != var6) {
+                  if (-3 != (var6 ^ -1)) {
                     break L4;
                   } else {
                     if (!(param1.field_r instanceof no)) {

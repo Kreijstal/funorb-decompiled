@@ -262,8 +262,7 @@ final class kf {
           }
         }
         L1: {
-          new ml(stackIn_3_4, stackIn_3_5, stackIn_3_6, stackIn_3_7, stackIn_3_8, 270, 270 / var3.length, true, 1);
-          stackIn_3_0[stackIn_3_1] = stackIn_3_2;
+          stackIn_3_0[stackIn_3_1] = new ml(stackIn_3_4, stackIn_3_5, stackIn_3_6, stackIn_3_7, stackIn_3_8, 270, 270 / var3.length, true, 1);
           var2 = new int[]{11, 0, 10, 18};
           stackOut_3_0 = nb.field_i;
           stackOut_3_1 = 1;
@@ -346,8 +345,7 @@ final class kf {
           }
         }
         L2: {
-          new ml(stackIn_6_4, stackIn_6_5, stackIn_6_6, stackIn_6_7, stackIn_6_8, stackIn_6_9, stackIn_6_10, false, 1);
-          stackIn_6_0[stackIn_6_1] = stackIn_6_2;
+          stackIn_6_0[stackIn_6_1] = new ml(stackIn_6_4, stackIn_6_5, stackIn_6_6, stackIn_6_7, stackIn_6_8, stackIn_6_9, stackIn_6_10, false, 1);
           var4 = new int[]{0};
           nb.field_i[3] = new ml(3, var4, 320, 430, 640, 320, 320, false, 1);
           var5 = new int[]{7, 8, 9, 0};
@@ -421,8 +419,7 @@ final class kf {
             break L2;
           }
         }
-        new ml(stackIn_9_4, stackIn_9_5, stackIn_9_6, stackIn_9_7, stackIn_9_8, 240, 240 / var6.length, true, 1);
-        stackIn_9_0[stackIn_9_1] = stackIn_9_2;
+        stackIn_9_0[stackIn_9_1] = new ml(stackIn_9_4, stackIn_9_5, stackIn_9_6, stackIn_9_7, stackIn_9_8, 240, 240 / var6.length, true, 1);
         var7 = new int[]{2, 0};
         nb.field_i[5] = new ml(5, var7, 320, 430, 640, 320, 320, false, 1);
         var8 = new int[]{16, 15};

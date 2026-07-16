@@ -157,7 +157,7 @@ abstract class jc extends qf {
             boolean discarded$0 = ((jc) this).o(22);
         }
         ((jc) this).q(0);
-        return this.o(928516712);
+        return super.o(928516712);
     }
 
     final static short[] a(w param0, int param1, int param2, short[] param3) {
@@ -254,12 +254,12 @@ abstract class jc extends qf {
             var7 = 0;
             var8 = 35 + param2;
             L1: while (true) {
-              if (var7 >= var4) {
+              if ((var7 ^ -1) <= (var4 ^ -1)) {
                 L2: {
                   if (param1 == -77) {
                     break L2;
                   } else {
-                    field_O = (ik) null;
+                    field_O = null;
                     break L2;
                   }
                 }
@@ -272,7 +272,7 @@ abstract class jc extends qf {
                 var7 = 0;
                 var8 = param2 - -57;
                 L3: while (true) {
-                  if (var7 >= var4) {
+                  if ((var7 ^ -1) <= (var4 ^ -1)) {
                     return;
                   } else {
                     var9 = (-var5 + var6) * var7 / var4 + var5;
@@ -295,90 +295,92 @@ abstract class jc extends qf {
               }
             }
           } else {
-            if (vj.field_h <= var8) {
-              if (var8 < vj.field_b) {
-                L4: {
-                  var9 = var5 + var7 * (-var5 + var6) / var4;
-                  var10 = 0;
-                  var11 = ((jc) this).field_h;
-                  if (var7 > 20) {
-                    break L4;
-                  } else {
-                    L5: while (true) {
-                      if ((var10 ^ -1) < -21) {
-                        break L4;
-                      } else {
-                        var12 = (20 - var10) * (-var10 + 20) + (20 - var7) * (20 + -var7);
-                        if (-463 <= var12) {
-                          if (-421 <= var12) {
-                            var13 = var9 * (-var12 + 462) / 42;
-                            var13 = var13 | (var13 << 1651975912 | var13 << 343515088);
-                            vj.field_j[param0 + vj.field_l * var8 - -var10] = var13;
-                            var10++;
-                            continue L5;
-                          } else {
-                            break L4;
-                          }
-                        } else {
-                          var10++;
-                          continue L5;
-                        }
-                      }
-                    }
-                  }
-                }
-                L6: {
-                  if (20 >= var7) {
-                    var12 = var11;
-                    var11 -= 21;
-                    var13 = 0;
-                    L7: while (true) {
-                      L8: {
-                        if (20 < var13) {
-                          break L8;
-                        } else {
-                          var14 = var13 * var13 + (20 + -var7) * (20 - var7);
-                          if (-463 <= var14) {
-                            if (-421 > var14) {
-                              var12 = 1 + var11;
-                              var13++;
-                              var11++;
-                              continue L7;
-                            } else {
-                              var15 = (-var14 + 462) * var9 / 42;
-                              var15 = var15 | (var15 << 710527208 | var15 << -169723984);
-                              vj.field_j[param0 + (vj.field_l * var8 + var11)] = var15;
-                              var13++;
-                              var11++;
-                              continue L7;
-                            }
-                          } else {
-                            break L8;
-                          }
-                        }
-                      }
-                      var11 = var12;
-                      break L6;
-                    }
-                  } else {
-                    break L6;
-                  }
-                }
-                var9 = var9 | (var9 << 928516712 | var9 << 1114861680);
-                vj.d(var10 - -param0, var8, var11 - var10, var9);
-                var7++;
-                var8++;
-                continue L0;
+            L4: {
+              if (vj.field_h > var8) {
+                break L4;
               } else {
-                var7++;
-                var8++;
-                continue L0;
+                if ((var8 ^ -1) > (vj.field_b ^ -1)) {
+                  L5: {
+                    var9 = var5 + var7 * (-var5 + var6) / var4;
+                    var10 = 0;
+                    var11 = ((jc) this).field_h;
+                    if (var7 > 20) {
+                      break L5;
+                    } else {
+                      L6: while (true) {
+                        if ((var10 ^ -1) < -21) {
+                          break L5;
+                        } else {
+                          L7: {
+                            var12 = (20 - var10) * (-var10 + 20) + (20 - var7) * (20 + -var7);
+                            if (-463 > (var12 ^ -1)) {
+                              break L7;
+                            } else {
+                              if (-421 >= (var12 ^ -1)) {
+                                var13 = var9 * (-var12 + 462) / 42;
+                                var13 = var13 | (var13 << 1651975912 | var13 << 343515088);
+                                vj.field_j[param0 + vj.field_l * var8 - -var10] = var13;
+                                break L7;
+                              } else {
+                                break L5;
+                              }
+                            }
+                          }
+                          var10++;
+                          continue L6;
+                        }
+                      }
+                    }
+                  }
+                  L8: {
+                    if (20 >= var7) {
+                      var12 = var11;
+                      var11 -= 21;
+                      var13 = 0;
+                      L9: while (true) {
+                        L10: {
+                          if (20 < var13) {
+                            break L10;
+                          } else {
+                            var14 = var13 * var13 + (20 + -var7) * (20 - var7);
+                            if (-463 <= (var14 ^ -1)) {
+                              L11: {
+                                if (-421 < (var14 ^ -1)) {
+                                  var12 = 1 + var11;
+                                  break L11;
+                                } else {
+                                  var15 = (-var14 + 462) * var9 / 42;
+                                  var15 = var15 | (var15 << 710527208 | var15 << -169723984);
+                                  vj.field_j[param0 + (vj.field_l * var8 + var11)] = var15;
+                                  break L11;
+                                }
+                              }
+                              var13++;
+                              var11++;
+                              continue L9;
+                            } else {
+                              break L10;
+                            }
+                          }
+                        }
+                        var11 = var12;
+                        break L8;
+                      }
+                    } else {
+                      break L8;
+                    }
+                  }
+                  var9 = var9 | (var9 << 928516712 | var9 << 1114861680);
+                  vj.d(var10 - -param0, var8, var11 - var10, var9);
+                  break L4;
+                } else {
+                  break L4;
+                }
               }
-            } else {
-              var7++;
-              var8++;
-              continue L0;
             }
+            var7++;
+            var8++;
+            continue L0;
           }
         }
     }
@@ -392,8 +394,9 @@ abstract class jc extends qf {
         } else {
             var2 = ((jc) this).field_U;
             var3 = ((jc) this).field_T;
+            int fieldTemp$0 = ((jc) this).field_K + 1;
             ((jc) this).field_K = ((jc) this).field_K + 1;
-            if (((jc) this).field_Q > ((jc) this).field_K + 1) {
+            if (((jc) this).field_Q > fieldTemp$0) {
                 var4 = ((jc) this).field_K * (-((jc) this).field_K + ((jc) this).field_Q * 2);
                 var5 = ((jc) this).field_Q * ((jc) this).field_Q;
                 var2 = var4 * (-((jc) this).field_M + ((jc) this).field_U) / var5 + ((jc) this).field_M;
@@ -407,7 +410,7 @@ abstract class jc extends qf {
         if (!param0) {
             ((jc) this).d((byte) -65);
         }
-        return this.a(true);
+        return super.a(true);
     }
 
     static {

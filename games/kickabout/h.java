@@ -19,7 +19,7 @@ final class h {
         bb[] var11 = null;
         int var12 = 0;
         int var13 = 0;
-        tc var13_ref = null;
+        tc var13_ref_tc = null;
         int var14 = 0;
         int var15 = 0;
         bg var16 = null;
@@ -87,10 +87,10 @@ final class h {
                   if (var12 >= param1.field_o.length) {
                     break L2;
                   } else {
-                    var13_ref = vc.field_x.a(200, param1.field_o[var12]);
-                    var8[var12] = var13_ref.field_r;
+                    var13_ref_tc = vc.field_x.a(200, param1.field_o[var12]);
+                    var8[var12] = var13_ref_tc.field_r;
                     var9[var12] = param1.field_q[var12];
-                    var11[var12] = h.a(0, var13_ref, param2, param3, param4);
+                    var11[var12] = h.a(0, var13_ref_tc, param2, param3, param4);
                     var12++;
                     continue L3;
                   }

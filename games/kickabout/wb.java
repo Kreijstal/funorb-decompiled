@@ -21,8 +21,8 @@ final class wb extends hs {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
-        String var4_ref = null;
-        String var5_ref = null;
+        String var4_ref_String = null;
+        String var5_ref_String = null;
         int var5 = 0;
         hd var6 = null;
         int var7 = 0;
@@ -99,8 +99,8 @@ final class wb extends hs {
                   }
                 }
                 L5: {
-                  var4_ref = stackIn_22_0;
-                  wb.a(var4_ref, 302, 46, 316, 88, 0);
+                  var4_ref_String = stackIn_22_0;
+                  wb.a(var4_ref_String, 302, 46, 316, 88, 0);
                   stackOut_22_0 = ((wb) this).field_l;
                   stackIn_24_0 = stackOut_22_0;
                   stackIn_23_0 = stackOut_22_0;
@@ -173,19 +173,19 @@ final class wb extends hs {
           } else {
             L9: {
               if (var4 == 1) {
-                var5_ref = wh.field_e;
+                var5_ref_String = wh.field_e;
                 break L9;
               } else {
                 if (var4 == 0) {
-                  var5_ref = he.field_Ub;
+                  var5_ref_String = he.field_Ub;
                   break L9;
                 } else {
-                  var5_ref = nu.field_a;
+                  var5_ref_String = nu.field_a;
                   break L9;
                 }
               }
             }
-            wj.a(var3, 8, var5_ref, var4 * 162 + 78, 105, 126);
+            wj.a(var3, 8, var5_ref_String, var4 * 162 + 78, 105, 126);
             var4++;
             continue L2;
           }
@@ -281,6 +281,7 @@ final class wb extends hs {
                 break L1;
               }
             }
+            return;
           } else {
             L2: {
               var5 = new hd();

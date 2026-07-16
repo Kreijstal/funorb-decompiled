@@ -30,15 +30,15 @@ final class pa extends dg {
 
     final void a(int param0, int param1, lk param2, int param3) {
         ((pa) this).field_R = ((pa) this).field_R + 1;
-        this.a(param0, param1, param2, param3);
+        super.a(param0, param1, param2, param3);
     }
 
     final static int a(String param0, jk param1, jk param2, int param3, int param4, int param5, boolean param6) {
         String var8 = null;
         int var9 = 0;
-        String var9_ref = null;
+        String var9_ref_String = null;
         int var10 = 0;
-        String var11_ref = null;
+        String var11_ref_String = null;
         int var11 = 0;
         int var12 = 0;
         int var13 = 0;
@@ -111,7 +111,7 @@ final class pa extends dg {
                   gh.field_h.a(-246, pg.field_a.nextInt());
                   gh.field_h.a(744825352, var14);
                   gh.field_h.a(744825352, var8);
-                  var15 = (CharSequence) param0;
+                  var15 = (CharSequence) (Object) param0;
                   gh.field_h.a(744825352, sh.a(var15, (byte) -128));
                   gh.field_h.e(param3, 26040);
                   gh.field_h.b(param5 ^ -9455, param4);
@@ -119,15 +119,15 @@ final class pa extends dg {
                   na.field_r.b(-9469, 18);
                   na.field_r.field_i = na.field_r.field_i + 2;
                   var10 = na.field_r.field_i;
-                  var11_ref = bi.a((byte) -27, mk.g(-119));
-                  if (var11_ref == null) {
-                    var11_ref = "";
+                  var11_ref_String = bi.a((byte) -27, mk.g(-119));
+                  if (var11_ref_String == null) {
+                    var11_ref_String = "";
                     break L4;
                   } else {
                     break L4;
                   }
                 }
-                na.field_r.a(var11_ref, 19235);
+                na.field_r.a(var11_ref_String, 19235);
                 lf.a(wd.field_c, (pb) (Object) na.field_r, id.field_c, (byte) -75, gh.field_h);
                 na.field_r.d(na.field_r.field_i + -var10, -27308);
                 break L2;
@@ -161,7 +161,7 @@ final class pa extends dg {
                   }
                 }
                 L6: {
-                  ((pb) (Object) stackIn_9_0).a(stackIn_9_1, (String) (Object) stackIn_9_2);
+                  ((pb) (Object) stackIn_9_0).a(stackIn_9_1, stackIn_9_2);
                   stackOut_9_0 = gh.field_h;
                   stackOut_9_1 = 744825352;
                   stackIn_11_0 = stackOut_9_0;
@@ -186,7 +186,7 @@ final class pa extends dg {
                     break L6;
                   }
                 }
-                ((pb) (Object) stackIn_12_0).a(stackIn_12_1, (String) (Object) stackIn_12_2);
+                ((pb) (Object) stackIn_12_0).a(stackIn_12_1, stackIn_12_2);
                 na.field_r.b(-9469, 16);
                 na.field_r.field_i = na.field_r.field_i + 1;
                 var9 = na.field_r.field_i;
@@ -208,7 +208,7 @@ final class pa extends dg {
               L8: {
                 var9 = rd.field_j.f(72);
                 rd.field_j.field_i = 0;
-                if (-101 < var9) {
+                if (-101 < (var9 ^ -1)) {
                   break L8;
                 } else {
                   if (105 < var9) {
@@ -220,7 +220,7 @@ final class pa extends dg {
                   }
                 }
               }
-              if (-249 == var9) {
+              if (-249 == (var9 ^ -1)) {
                 wf.a((byte) -83, mk.g(-126));
                 e.field_a = qk.field_i;
                 mc.a((byte) -127);
@@ -284,11 +284,11 @@ final class pa extends dg {
                   e.field_a = rd.field_j.c(false);
                   break L12;
                 } else {
-                  var9_ref = rd.field_j.f((byte) 29);
-                  if (var9_ref == null) {
+                  var9_ref_String = rd.field_j.f((byte) 29);
+                  if (var9_ref_String == null) {
                     break L12;
                   } else {
-                    lk.a(mk.g(param5 + -146), 0, var9_ref);
+                    lk.a(mk.g(param5 + -146), 0, var9_ref_String);
                     break L12;
                   }
                 }
@@ -330,7 +330,7 @@ final class pa extends dg {
           if (param5 == 18) {
             break L15;
           } else {
-            field_N = (String) null;
+            field_N = null;
             break L15;
           }
         }
@@ -342,7 +342,7 @@ final class pa extends dg {
             return null;
         }
         if (param1 != -1) {
-            field_N = (String) null;
+            field_N = null;
         }
         ic var2 = new ic(param0, kb.field_c, ml.field_b, na.field_q, hb.field_a, jf.field_i, rd.field_k);
         rh.d(-41);
@@ -360,12 +360,12 @@ final class pa extends dg {
         if (param0 == -79) {
             return null;
         }
-        return (String) null;
+        return null;
     }
 
     final boolean a(int param0, lk param1) {
         if (param0 <= 71) {
-            ((pa) this).field_O = (ba) null;
+            ((pa) this).field_O = null;
             return false;
         }
         return false;
@@ -395,7 +395,7 @@ final class pa extends dg {
           var2 = var11.f(param0 ^ -121);
           if (var2 != param0) {
             if (-2 == (var2 ^ -1)) {
-              var15 = (dh) vb.field_c.a((byte) 74);
+              var15 = (dh) (Object) vb.field_c.a((byte) 74);
               if (var15 == null) {
                 mc.a((byte) -128);
                 return;
@@ -409,10 +409,10 @@ final class pa extends dg {
                 mc.a((byte) -128);
                 break L0;
               } else {
-                var14 = (rc) ue.field_b.a((byte) 74);
+                var14 = (rc) (Object) ue.field_b.a((byte) 74);
                 if (var14 != null) {
                   var14.field_p = eg.a(85);
-                  var14.field_h = ((rc) var14).field_p[0];
+                  var14.field_h = var14.field_p[0];
                   var14.field_j = true;
                   var14.c(118);
                   break L0;
@@ -436,7 +436,7 @@ final class pa extends dg {
             var7 = 0;
             L1: while (true) {
               if (var7 >= var6) {
-                var13 = (rc) ue.field_b.a((byte) 74);
+                var13 = (rc) (Object) ue.field_b.a((byte) 74);
                 if (var13 == null) {
                   mc.a((byte) -127);
                   return;
@@ -473,7 +473,7 @@ final class pa extends dg {
         int var11 = 0;
         int var12 = 0;
         int var13 = 0;
-        lk var14 = null;
+        Object var14 = null;
         kc var15 = null;
         kc var16 = null;
         kc var17 = null;
@@ -510,15 +510,15 @@ final class pa extends dg {
           }
         }
         L3: {
-          this.a(param0, param1, param2 ^ 0, param3);
+          super.a(param0, param1, param2 ^ 0, param3);
           var6 = ((pa) this).field_O.a(true);
-          var8 = (ne) ((pa) this).field_v;
+          var8 = (ne) (Object) ((pa) this).field_v;
           var9 = ((pa) this).field_o + param0;
-          var10 = var8.a((lk) this, -1815612287, param1) - -(((ne) var8).a((byte) 92, (lk) this).b(0) >> -1542173183);
+          var10 = var8.a((lk) this, -1815612287, param1) - -(var8.a((byte) 92, (lk) this).b(0) >> -1542173183);
           if (param2 == -1) {
             break L3;
           } else {
-            var14 = (lk) null;
+            var14 = null;
             boolean discarded$1 = ((pa) this).a(-10, (lk) null);
             break L3;
           }
@@ -533,14 +533,14 @@ final class pa extends dg {
               } else {
                 if (pe.field_b == var6) {
                   var16 = gh.field_n[2];
-                  var16.b(var9, -(((kc) var16).field_o >> -820729919) + var10, 256);
+                  var16.b(var9, -(var16.field_o >> -820729919) + var10, 256);
                   break L4;
                 } else {
                   if (ii.field_e != var6) {
                     break L4;
                   } else {
                     var15 = gh.field_n[1];
-                    var15.b(var9, -(((kc) var15).field_o >> 286077697) + var10, 256);
+                    var15.b(var9, -(var15.field_o >> 286077697) + var10, 256);
                     break L4;
                   }
                 }
@@ -550,8 +550,8 @@ final class pa extends dg {
           L6: {
             L7: {
               var17 = gh.field_n[0];
-              var11 = ((kc) var17).field_l << 694707649;
-              var12 = ((kc) var17).field_k << 235294849;
+              var11 = var17.field_l << 694707649;
+              var12 = var17.field_k << 235294849;
               if (((pa) this).field_Q == null) {
                 break L7;
               } else {
@@ -572,9 +572,9 @@ final class pa extends dg {
             dl.a(-33, ((pa) this).field_Q);
             break L6;
           }
-          var17.a(112, 144, ((kc) var17).field_l << 2055347236, ((kc) var17).field_k << -331014396, -((pa) this).field_R << 1030662410, 4096);
+          var17.a(112, 144, var17.field_l << 2055347236, var17.field_k << -331014396, -((pa) this).field_R << 1030662410, 4096);
           gg.a(14756);
-          ((pa) this).field_Q.b(var9 + -(((kc) var17).field_l >> -2022163295), var10 + -((kc) var17).field_k, 256);
+          ((pa) this).field_Q.b(var9 + -(var17.field_l >> -2022163295), var10 + -var17.field_k, 256);
           break L4;
         }
     }

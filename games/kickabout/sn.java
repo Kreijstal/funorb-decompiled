@@ -64,44 +64,24 @@ final class sn {
         try {
             java.net.URL var2 = null;
             java.net.MalformedURLException var2_ref = null;
-            int statePc = 1;
-            Throwable caughtException = null;
-            stateLoop: while (true) {
-                switch (statePc) {
-                    case 1: {
-                        try {
-                            var2 = param0.getCodeBase();
-                            if (var2 == null) {
-                                statePc = 5;
-                            } else {
-                                statePc = 2;
-                            }
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_1) {
-                            caughtException = stateCaught_1;
-                            statePc = 4;
-                            continue stateLoop;
-                        }
-                    }
-                    case 2: {
-                        try {
-                            ((sn) this).field_h = new u(oo.field_c, new java.net.URL(var2, "motd"), 100000);
-                        } catch (Throwable stateCaught_2) {
-                            caughtException = stateCaught_2;
-                            statePc = 4;
-                            continue stateLoop;
-                        }
-                    }
-                    case 4: {
-                        var2_ref = (java.net.MalformedURLException) (Object) caughtException;
-                        ((sn) this).field_h = null;
-                        statePc = 5;
-                        continue stateLoop;
-                    }
-                    case 5: {
-                    }
-                    default: throw new IllegalStateException("invalid CFG state " + statePc);
+            Throwable decompiledCaughtException = null;
+            try {
+              L0: {
+                var2 = param0.getCodeBase();
+                if (var2 == null) {
+                  break L0;
+                } else {
+                  ((sn) this).field_h = new u(oo.field_c, new java.net.URL(var2, "motd"), 100000);
+                  return;
                 }
+              }
+            } catch (java.net.MalformedURLException decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              L1: {
+                var2_ref = (java.net.MalformedURLException) (Object) decompiledCaughtException;
+                ((sn) this).field_h = null;
+                break L1;
+              }
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;

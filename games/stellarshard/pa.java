@@ -691,8 +691,9 @@ final class pa extends tf {
                 break L2;
               } else {
                 L4: {
-                  ((pa) this).field_i[var28] = var2.g(112);
-                  var29 = var2.g(112);
+                  byte dupTemp$1 = var2.g(112);
+                  ((pa) this).field_i[var28] = dupTemp$1;
+                  var29 = dupTemp$1;
                   if (var29 != 0) {
                     break L4;
                   } else {
@@ -1442,8 +1443,9 @@ final class pa extends tf {
                                           break L6;
                                         }
                                       }
-                                      ((pa) this).field_l[var1] = new l();
-                                      var16 = new l();
+                                      l dupTemp$1 = new l();
+                                      ((pa) this).field_l[var1] = dupTemp$1;
+                                      var16 = dupTemp$1;
                                       var16.field_i = var11;
                                       var16.field_c = var12;
                                       var16.field_a = var13;
@@ -1508,14 +1510,24 @@ final class pa extends tf {
     }
 
     private pa(byte[] param0) {
-        ((pa) this).field_v = 0;
-        ((pa) this).field_h = 0;
-        ((pa) this).field_m = 0;
-        if (param0[param0.length - 1] == -1) {
-            // if_icmpne L47
-            this.b(param0);
-        } else {
-            this.a(param0);
+        L0: {
+          L1: {
+            ((pa) this).field_v = 0;
+            ((pa) this).field_h = 0;
+            ((pa) this).field_m = 0;
+            if (param0[param0.length - 1] != -1) {
+              break L1;
+            } else {
+              if (param0[param0.length - 2] != -1) {
+                break L1;
+              } else {
+                this.b(param0);
+                break L0;
+              }
+            }
+          }
+          this.a(param0);
+          break L0;
         }
     }
 

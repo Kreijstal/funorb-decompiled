@@ -203,20 +203,39 @@ final class kk {
     }
 
     final static boolean a(int param0, tf param1) {
-        int var3 = Kickabout.field_G;
-        gn var2 = param1.g(24009);
-        if (param0 != -27054) {
-            Object var4 = null;
-            boolean discarded$0 = kk.a(-43, (tf) null);
+        gn var2 = null;
+        int var3 = 0;
+        Object var4 = null;
+        L0: {
+          var3 = Kickabout.field_G;
+          var2 = param1.g(24009);
+          if (param0 == -27054) {
+            break L0;
+          } else {
+            var4 = null;
+            boolean discarded$2 = kk.a(-43, (tf) null);
+            break L0;
+          }
         }
-        while (var2 instanceof ak) {
-            // ifeq L95
-            if (((ak) (Object) var2).a((byte) 126) > ((ak) (Object) var2.field_d).a((byte) 112)) {
-                return false;
+        L1: while (true) {
+          L2: {
+            if (!(var2 instanceof ak)) {
+              break L2;
+            } else {
+              if (!(var2.field_d instanceof ak)) {
+                break L2;
+              } else {
+                if (((ak) (Object) var2).a((byte) 126) <= ((ak) (Object) var2.field_d).a((byte) 112)) {
+                  var2 = var2.field_d;
+                  continue L1;
+                } else {
+                  return false;
+                }
+              }
             }
-            var2 = var2.field_d;
+          }
+          return true;
         }
-        return true;
     }
 
     final static ot a(up param0, int param1, boolean param2) {
@@ -264,6 +283,7 @@ final class kk {
         var2 = 0;
         L0: while (true) {
           if (var2 >= 256) {
+            return;
           } else {
             var0 = (long)var2;
             var3 = 0;

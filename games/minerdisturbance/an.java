@@ -43,7 +43,7 @@ final class an {
 
     final static pe a(byte param0, String param1) {
         int var2 = 0;
-        String var3 = null;
+        Object var3 = null;
         pe var4 = null;
         String var5 = null;
         int var6 = 0;
@@ -54,15 +54,15 @@ final class an {
           L0: {
             var2 = -65 / ((-21 - param0) / 63);
             var7 = (CharSequence) (Object) param1;
-            var3 = cl.a(-95, var7);
+            var3 = (Object) (Object) cl.a(-95, var7);
             if (var3 != null) {
               break L0;
             } else {
-              var3 = (String) (Object) var7;
+              var3 = (Object) (Object) var7;
               break L0;
             }
           }
-          var4 = (pe) (Object) tc.field_o.a(-7895, (long)var3.hashCode());
+          var4 = (pe) (Object) tc.field_o.a(-7895, (long)((String) var3).hashCode());
           L1: while (true) {
             if (var4 != null) {
               L2: {
@@ -75,7 +75,7 @@ final class an {
                   break L2;
                 }
               }
-              if (var5.equals((Object) (Object) var3)) {
+              if (var5.equals(var3)) {
                 return var4;
               } else {
                 var4 = (pe) (Object) tc.field_o.c(1);
@@ -154,25 +154,41 @@ final class an {
     }
 
     an(File param0, String param1, long param2) throws IOException {
-        if (param2 == -1L) {
+        int var5 = 0;
+        L0: {
+          if (param2 != -1L) {
+            break L0;
+          } else {
             param2 = 9223372036854775807L;
+            break L0;
+          }
         }
-        if ((param0.length() ^ -1L) < (param2 ^ -1L)) {
-            boolean discarded$0 = param0.delete();
+        L1: {
+          if ((param0.length() ^ -1L) >= (param2 ^ -1L)) {
+            break L1;
+          } else {
+            boolean discarded$2 = param0.delete();
+            break L1;
+          }
         }
         ((an) this).field_e = new RandomAccessFile(param0, param1);
         ((an) this).field_c = param2;
         ((an) this).field_b = 0L;
-        int var5 = ((an) this).field_e.read();
-        if (0 != (var5 ^ -1)) {
-            // ifne L116
+        var5 = ((an) this).field_e.read();
+        if (0 == (var5 ^ -1)) {
+          ((an) this).field_e.seek(0L);
+          return;
+        } else {
+          if (param1.equals((Object) (Object) "r")) {
+            ((an) this).field_e.seek(0L);
+            return;
+          } else {
             ((an) this).field_e.seek(0L);
             ((an) this).field_e.write(var5);
-        } else {
             ((an) this).field_e.seek(0L);
-            ((an) this).field_e.seek(0L);
+            return;
+          }
         }
-        ((an) this).field_e.seek(0L);
     }
 
     final void b(int param0) throws IOException {

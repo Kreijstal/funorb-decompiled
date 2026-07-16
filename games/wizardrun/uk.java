@@ -21,15 +21,15 @@ final class uk {
         } else {
             var4 = ((uk) this).field_c.a(param1, 1, 1);
         }
-        ac var3_ref = new ac();
+        var3 = new ac();
         if (!(var4 == null)) {
-            var3_ref.a(new va(var4), 72);
+            var3.a(new va(var4), 72);
         }
         if (!(-32769 < (param1 ^ -1))) {
-            var3_ref.d((byte) -127);
+            var3.d((byte) -127);
         }
-        ((uk) this).field_d.a((long)param1, 1, (Object) (Object) var3_ref);
-        return var3_ref;
+        ((uk) this).field_d.a((long)param1, 1, (Object) (Object) var3);
+        return var3;
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int[] param6, boolean param7, int param8, int param9) {

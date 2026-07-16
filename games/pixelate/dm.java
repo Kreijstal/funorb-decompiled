@@ -466,25 +466,28 @@ final class dm extends vk implements vo {
         L0: while (true) {
           if (256 <= var1) {
             field_Cb = 300;
+            return;
           } else {
             var0 = var1;
             var2 = 0;
             L1: while (true) {
-              if (-9 >= var2) {
+              if (-9 >= (var2 ^ -1)) {
                 field_zb[var1] = var0;
                 var1++;
                 continue L0;
               } else {
-                if (-2 == (1 & var0)) {
-                  var0 = -306674912 ^ var0 >>> -1602097567;
-                  var2++;
-                  continue L1;
-                } else {
-                  var0 = var0 >>> 1;
-                  var2++;
-                  var2++;
-                  continue L1;
+                L2: {
+                  if (-2 == (1 & var0 ^ -1)) {
+                    var0 = -306674912 ^ var0 >>> -1602097567;
+                    break L2;
+                  } else {
+                    var0 = var0 >>> 1;
+                    var2++;
+                    break L2;
+                  }
                 }
+                var2++;
+                continue L1;
               }
             }
           }

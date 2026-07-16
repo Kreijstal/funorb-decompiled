@@ -216,7 +216,7 @@ final class sl {
         int stackOut_22_0 = 0;
         int stackOut_21_0 = 0;
         L0: {
-          int discarded$1 = hk.e(24);
+          int discarded$2 = hk.e(24);
           ((sl) this).field_e = hk.e(16);
           ((sl) this).field_a = hk.e(24);
           ((sl) this).field_c = new int[((sl) this).field_a];
@@ -283,8 +283,9 @@ final class sl {
                     var3_int++;
                     continue L5;
                   } else {
+                    int incrementValue$3 = var2;
                     var2++;
-                    ((sl) this).field_c[var2] = var3_int;
+                    ((sl) this).field_c[incrementValue$3] = var3_int;
                     var5++;
                     continue L6;
                   }

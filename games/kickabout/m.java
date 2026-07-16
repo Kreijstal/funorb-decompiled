@@ -191,9 +191,9 @@ final class m {
     final static int a(int param0, ec param1, ec param2, int param3, boolean param4, String param5, boolean param6) {
         String var8 = null;
         int var9 = 0;
-        String var9_ref = null;
+        String var9_ref_String = null;
         int var10 = 0;
-        String var11_ref = null;
+        String var11_ref_String = null;
         int var11 = 0;
         int var12 = 0;
         int var13 = 0;
@@ -310,15 +310,15 @@ final class m {
                   or.field_d.a(123, 18);
                   or.field_d.field_n = or.field_d.field_n + 2;
                   var10 = or.field_d.field_n;
-                  var11_ref = sa.a(so.a(50), (byte) 123);
-                  if (var11_ref == null) {
-                    var11_ref = "";
+                  var11_ref_String = sa.a(so.a(50), (byte) 123);
+                  if (var11_ref_String == null) {
+                    var11_ref_String = "";
                     break L6;
                   } else {
                     break L6;
                   }
                 }
-                or.field_d.a(14190, var11_ref);
+                or.field_d.a(14190, var11_ref_String);
                 om.a(hn.field_h, (iw) (Object) or.field_d, (byte) -94, gl.field_a, bb.field_Nb);
                 or.field_d.d(-var10 + or.field_d.field_n, 62);
                 break L2;
@@ -338,16 +338,16 @@ final class m {
                 if (-101 < (var9 ^ -1)) {
                   break L8;
                 } else {
-                  if (var9 < -106) {
-                    break L8;
-                  } else {
+                  if ((var9 ^ -1) >= -106) {
                     un.field_c = id.field_t;
                     mr.field_X = new String[-100 + var9];
                     break L7;
+                  } else {
+                    break L8;
                   }
                 }
               }
-              if (-249 == var9) {
+              if (-249 == (var9 ^ -1)) {
                 wc.a((byte) -50, so.a(-71));
                 gd.field_b = ld.field_i;
                 lr.b((byte) -116);
@@ -415,11 +415,11 @@ final class m {
                   gd.field_b = un.field_e.a(61);
                   break L12;
                 } else {
-                  var9_ref = un.field_e.a(true);
-                  if (var9_ref == null) {
+                  var9_ref_String = un.field_e.a(true);
+                  if (var9_ref_String == null) {
                     break L12;
                   } else {
-                    mp.a(so.a(62), true, var9_ref);
+                    mp.a(so.a(62), true, var9_ref_String);
                     break L12;
                   }
                 }
@@ -481,8 +481,9 @@ final class m {
                 ((m) this).field_l = 0;
                 break L0;
               } else {
+                int fieldTemp$3 = ((m) this).field_l;
                 ((m) this).field_l = ((m) this).field_l + 1;
-                ((m) this).field_e[((m) this).field_l] = (byte) 0;
+                ((m) this).field_e[fieldTemp$3] = (byte) 0;
                 continue L1;
               }
             }
@@ -495,7 +496,7 @@ final class m {
                 break L3;
               } else {
                 var9 = null;
-                int discarded$1 = m.a(64, (ec) null, (ec) null, -29, false, (String) null, true);
+                int discarded$4 = m.a(64, (ec) null, (ec) null, -29, false, (String) null, true);
                 break L3;
               }
             }
@@ -522,8 +523,9 @@ final class m {
               }
             }
           } else {
+            int fieldTemp$5 = ((m) this).field_l;
             ((m) this).field_l = ((m) this).field_l + 1;
-            ((m) this).field_e[((m) this).field_l] = (byte) 0;
+            ((m) this).field_e[fieldTemp$5] = (byte) 0;
             continue L2;
           }
         }
@@ -600,10 +602,10 @@ final class m {
               } else {
                 L6: {
                   var8 = 255 & param2[var5] << var6 | (255 & param2[1 + var5]) >>> -var6 + 8;
-                  if (-1 < var8) {
+                  if (-1 < (var8 ^ -1)) {
                     break L6;
                   } else {
-                    if (-257 <= var8) {
+                    if (-257 >= (var8 ^ -1)) {
                       break L6;
                     } else {
                       L7: {

@@ -44,8 +44,9 @@ abstract class nb extends ld {
         if (param0 > (((nb) this).field_S ^ -1)) {
             var2 = ((nb) this).field_R;
             var3 = ((nb) this).field_Q;
+            int fieldTemp$0 = ((nb) this).field_P + 1;
             ((nb) this).field_P = ((nb) this).field_P + 1;
-            if (((nb) this).field_S <= ((nb) this).field_P + 1) {
+            if (((nb) this).field_S <= fieldTemp$0) {
                 ((nb) this).field_S = 0;
                 ((nb) this).m(-7718);
             } else {

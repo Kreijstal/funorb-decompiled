@@ -182,23 +182,41 @@ final class uj {
     }
 
     final int a(int param0, byte param1) {
-        int var4 = stellarshard.field_B;
-        if (((uj) this).field_a != null) {
-            // if_icmpeq L26
-        } else {
-            return 0;
-        }
-        int var3 = 1;
-        if (param1 > -121) {
-            int discarded$0 = ((uj) this).a(119);
-        }
-        while (var3 < ((uj) this).field_a.length) {
-            if (param0 < ((uj) this).field_a[var3] + ((uj) this).field_a[-1 + var3] >> -1417274431) {
-                return -1 + var3;
+        int var3 = 0;
+        int var4 = 0;
+        L0: {
+          var4 = stellarshard.field_B;
+          if (((uj) this).field_a == null) {
+            break L0;
+          } else {
+            if (-1 == (((uj) this).field_a.length ^ -1)) {
+              break L0;
+            } else {
+              L1: {
+                var3 = 1;
+                if (param1 <= -121) {
+                  break L1;
+                } else {
+                  int discarded$2 = ((uj) this).a(119);
+                  break L1;
+                }
+              }
+              L2: while (true) {
+                if (var3 >= ((uj) this).field_a.length) {
+                  return ((uj) this).field_a.length - 1;
+                } else {
+                  if (param0 >= ((uj) this).field_a[var3] + ((uj) this).field_a[-1 + var3] >> -1417274431) {
+                    var3++;
+                    continue L2;
+                  } else {
+                    return -1 + var3;
+                  }
+                }
+              }
             }
-            var3++;
+          }
         }
-        return ((uj) this).field_a.length - 1;
+        return 0;
     }
 
     static {

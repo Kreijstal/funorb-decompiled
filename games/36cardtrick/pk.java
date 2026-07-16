@@ -11,7 +11,7 @@ final class pk {
         field_b = null;
         field_c = null;
         if (param0 != 8450) {
-            field_a = (String) null;
+            field_a = null;
         }
     }
 
@@ -20,7 +20,7 @@ final class pk {
         param1.removeFocusListener((java.awt.event.FocusListener) (Object) sj.field_d);
         bg.field_rb = -1;
         if (param0 > -87) {
-            field_a = (String) null;
+            field_a = null;
         }
     }
 
@@ -28,7 +28,7 @@ final class pk {
         ad var9 = null;
         var9 = new ad(param0, param3, param6, param4, param5, param2, param1);
         if (param7 <= 50) {
-          return (ad) null;
+          return null;
         } else {
           od.field_b.a((qb) (Object) var9, 27362);
           aa.a(var9, 3298, param8);

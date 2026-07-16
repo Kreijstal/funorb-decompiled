@@ -110,7 +110,8 @@ final class kh implements java.awt.event.MouseListener, java.awt.event.MouseMoti
             var2 = 0;
             L1: while (true) {
               if (var2 >= sb.field_p) {
-                c.field_c[param0.a(119)] = c.field_c[param0.a(119)] + 1;
+                int dupTemp$5 = param0.a(119);
+                c.field_c[dupTemp$5] = c.field_c[dupTemp$5] + 1;
                 var2 = 0;
                 var3 = 0;
                 L2: while (true) {
@@ -120,13 +121,14 @@ final class kh implements java.awt.event.MouseListener, java.awt.event.MouseMoti
                         break L3;
                       } else {
                         var6 = null;
-                        byte[] discarded$1 = kh.a((byte[]) null, (byte) -81);
+                        byte[] discarded$6 = kh.a((byte[]) null, (byte) -81);
                         break L3;
                       }
                     }
                     sb.field_p = var2;
+                    int fieldTemp$7 = sb.field_p;
                     sb.field_p = sb.field_p + 1;
-                    im.field_a[sb.field_p] = param0;
+                    im.field_a[fieldTemp$7] = param0;
                     return;
                   } else {
                     L4: {
@@ -143,15 +145,17 @@ final class kh implements java.awt.event.MouseListener, java.awt.event.MouseMoti
                         break L4;
                       }
                     }
+                    int incrementValue$8 = var2;
                     var2++;
-                    im.field_a[var2] = im.field_a[var3];
+                    im.field_a[incrementValue$8] = im.field_a[var3];
                     var3++;
                     continue L2;
                   }
                 }
               } else {
                 if (param0.field_g == im.field_a[var2].field_g) {
-                  c.field_c[im.field_a[var2].a(126)] = c.field_c[im.field_a[var2].a(126)] + 1;
+                  int dupTemp$9 = im.field_a[var2].a(126);
+                  c.field_c[dupTemp$9] = c.field_c[dupTemp$9] + 1;
                   var2++;
                   continue L1;
                 } else {

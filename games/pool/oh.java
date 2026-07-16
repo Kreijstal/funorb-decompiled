@@ -20,25 +20,49 @@ final class oh {
 
     final void a(byte[] param0, boolean param1, ge param2) {
         try {
-            if (!param1) {
+            Exception exception = null;
+            Throwable decompiledCaughtException = null;
+            L0: {
+              if (param1) {
+                break L0;
+              } else {
                 oh.a((byte) 4);
+                break L0;
+              }
             }
-            if (-32 == param2.field_t[param2.field_v]) {
-                // if_icmpne L57
-            } else {
-                throw new RuntimeException("");
+            L1: {
+              if (-32 != param2.field_t[param2.field_v]) {
+                break L1;
+              } else {
+                if (116 != param2.field_t[param2.field_v + 1]) {
+                  break L1;
+                } else {
+                  L2: {
+                    if (null != ((oh) this).field_b) {
+                      break L2;
+                    } else {
+                      ((oh) this).field_b = new java.util.zip.Inflater(true);
+                      break L2;
+                    }
+                  }
+                  try {
+                    L3: {
+                      ((oh) this).field_b.setInput(param2.field_t, 10 + param2.field_v, -10 + (-param2.field_v + -8 + param2.field_t.length));
+                      int discarded$2 = ((oh) this).field_b.inflate(param0);
+                      break L3;
+                    }
+                  } catch (java.lang.Exception decompiledCaughtParameter0) {
+                    decompiledCaughtException = decompiledCaughtParameter0;
+                    exception = (Exception) (Object) decompiledCaughtException;
+                    ((oh) this).field_b.reset();
+                    throw new RuntimeException("");
+                  }
+                  ((oh) this).field_b.reset();
+                  return;
+                }
+              }
             }
-            if (null == ((oh) this).field_b) {
-                ((oh) this).field_b = new java.util.zip.Inflater(true);
-            }
-            try {
-                ((oh) this).field_b.setInput(param2.field_t, 10 + param2.field_v, -10 + (-param2.field_v + -8 + param2.field_t.length));
-                int discarded$0 = ((oh) this).field_b.inflate(param0);
-            } catch (Exception exception) {
-                ((oh) this).field_b.reset();
-                throw new RuntimeException("");
-            }
-            ((oh) this).field_b.reset();
+            throw new RuntimeException("");
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {

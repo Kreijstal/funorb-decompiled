@@ -223,114 +223,120 @@ final class sc extends bj {
         int stackOut_14_2 = 0;
         try {
           L0: {
-            if (((sc) this).field_L) {
-              break L0;
-            } else {
-              this.a();
-              break L0;
+            L1: {
+              if (((sc) this).field_L) {
+                break L1;
+              } else {
+                this.a();
+                break L1;
+              }
             }
-          }
-          var10_int = cc.field_n;
-          var11 = cc.field_p;
-          var12 = cc.field_g[param0];
-          var13 = cc.field_h[param0];
-          var14 = cc.field_g[param1];
-          var15 = cc.field_h[param1];
-          var16 = cc.field_g[param2];
-          var17 = cc.field_h[param2];
-          var18 = cc.field_g[param3];
-          var19 = cc.field_h[param3];
-          var20 = param5 * var18 + param6 * var19 >> 16;
-          var21 = 0;
-          L1: while (true) {
-            if (var21 >= ((sc) this).field_p) {
-              L2: {
-                stackOut_13_0 = this;
-                stackOut_13_1 = 0;
-                stackIn_15_0 = stackOut_13_0;
-                stackIn_15_1 = stackOut_13_1;
-                stackIn_14_0 = stackOut_13_0;
-                stackIn_14_1 = stackOut_13_1;
-                if (param7 < 0L) {
-                  stackOut_15_0 = this;
-                  stackOut_15_1 = stackIn_15_1;
-                  stackOut_15_2 = 0;
-                  stackIn_16_0 = stackOut_15_0;
-                  stackIn_16_1 = stackOut_15_1;
-                  stackIn_16_2 = stackOut_15_2;
-                  break L2;
-                } else {
-                  stackOut_14_0 = this;
-                  stackOut_14_1 = stackIn_14_1;
-                  stackOut_14_2 = 1;
-                  stackIn_16_0 = stackOut_14_0;
-                  stackIn_16_1 = stackOut_14_1;
-                  stackIn_16_2 = stackOut_14_2;
-                  break L2;
+            var10_int = cc.field_n;
+            var11 = cc.field_p;
+            var12 = cc.field_g[param0];
+            var13 = cc.field_h[param0];
+            var14 = cc.field_g[param1];
+            var15 = cc.field_h[param1];
+            var16 = cc.field_g[param2];
+            var17 = cc.field_h[param2];
+            var18 = cc.field_g[param3];
+            var19 = cc.field_h[param3];
+            var20 = param5 * var18 + param6 * var19 >> 16;
+            var21 = 0;
+            L2: while (true) {
+              if (var21 >= ((sc) this).field_p) {
+                L3: {
+                  stackOut_13_0 = this;
+                  stackOut_13_1 = 0;
+                  stackIn_15_0 = stackOut_13_0;
+                  stackIn_15_1 = stackOut_13_1;
+                  stackIn_14_0 = stackOut_13_0;
+                  stackIn_14_1 = stackOut_13_1;
+                  if (param7 < 0L) {
+                    stackOut_15_0 = this;
+                    stackOut_15_1 = stackIn_15_1;
+                    stackOut_15_2 = 0;
+                    stackIn_16_0 = stackOut_15_0;
+                    stackIn_16_1 = stackOut_15_1;
+                    stackIn_16_2 = stackOut_15_2;
+                    break L3;
+                  } else {
+                    stackOut_14_0 = this;
+                    stackOut_14_1 = stackIn_14_1;
+                    stackOut_14_2 = 1;
+                    stackIn_16_0 = stackOut_14_0;
+                    stackIn_16_1 = stackOut_14_1;
+                    stackIn_16_2 = stackOut_14_2;
+                    break L3;
+                  }
                 }
-              }
-              this.a(stackIn_16_1 != 0, stackIn_16_2 != 0, param7, (int) ((sc) this).field_B, ((sc) this).field_B << 1);
-            } else {
-              L3: {
-                var22 = ((sc) this).field_P[var21];
-                var23 = ((sc) this).field_e[var21];
-                var24 = ((sc) this).field_N[var21];
-                if (param2 == 0) {
-                  break L3;
-                } else {
-                  var25 = var23 * var16 + var22 * var17 >> 16;
-                  var23 = var23 * var17 - var22 * var16 >> 16;
-                  var22 = var25;
-                  break L3;
+                this.a(stackIn_16_1 != 0, stackIn_16_2 != 0, param7, (int) ((sc) this).field_B, ((sc) this).field_B << 1);
+                break L0;
+              } else {
+                L4: {
+                  var22 = ((sc) this).field_P[var21];
+                  var23 = ((sc) this).field_e[var21];
+                  var24 = ((sc) this).field_N[var21];
+                  if (param2 == 0) {
+                    break L4;
+                  } else {
+                    var25 = var23 * var16 + var22 * var17 >> 16;
+                    var23 = var23 * var17 - var22 * var16 >> 16;
+                    var22 = var25;
+                    break L4;
+                  }
                 }
-              }
-              L4: {
-                if (param0 == 0) {
-                  break L4;
-                } else {
-                  var25 = var23 * var13 - var24 * var12 >> 16;
-                  var24 = var23 * var12 + var24 * var13 >> 16;
+                L5: {
+                  if (param0 == 0) {
+                    break L5;
+                  } else {
+                    var25 = var23 * var13 - var24 * var12 >> 16;
+                    var24 = var23 * var12 + var24 * var13 >> 16;
+                    var23 = var25;
+                    break L5;
+                  }
+                }
+                L6: {
+                  if (param1 == 0) {
+                    break L6;
+                  } else {
+                    var25 = var24 * var14 + var22 * var15 >> 16;
+                    var24 = var24 * var15 - var22 * var14 >> 16;
+                    var22 = var25;
+                    break L6;
+                  }
+                }
+                L7: {
+                  var22 = var22 + param4;
+                  var23 = var23 + param5;
+                  var24 = var24 + param6;
+                  var25 = var23 * var19 - var24 * var18 >> 16;
+                  var24 = var23 * var18 + var24 * var19 >> 16;
                   var23 = var25;
-                  break L4;
+                  field_F[var21] = var24 - var20;
+                  field_V[var21] = var10_int + (var22 << 9) / var24;
+                  field_v[var21] = var11 + (var23 << 9) / var24;
+                  if (((sc) this).field_u <= 0) {
+                    break L7;
+                  } else {
+                    field_D[var21] = var22;
+                    field_S[var21] = var23;
+                    field_l[var21] = var24;
+                    break L7;
+                  }
                 }
+                var21++;
+                continue L2;
               }
-              L5: {
-                if (param1 == 0) {
-                  break L5;
-                } else {
-                  var25 = var24 * var14 + var22 * var15 >> 16;
-                  var24 = var24 * var15 - var22 * var14 >> 16;
-                  var22 = var25;
-                  break L5;
-                }
-              }
-              L6: {
-                var22 = var22 + param4;
-                var23 = var23 + param5;
-                var24 = var24 + param6;
-                var25 = var23 * var19 - var24 * var18 >> 16;
-                var24 = var23 * var18 + var24 * var19 >> 16;
-                var23 = var25;
-                field_F[var21] = var24 - var20;
-                field_V[var21] = var10_int + (var22 << 9) / var24;
-                field_v[var21] = var11 + (var23 << 9) / var24;
-                if (((sc) this).field_u <= 0) {
-                  break L6;
-                } else {
-                  field_D[var21] = var22;
-                  field_S[var21] = var23;
-                  field_l[var21] = var24;
-                  break L6;
-                }
-              }
-              var21++;
-              continue L1;
             }
           }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter) {
-          decompiledCaughtException = decompiledCaughtParameter;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L8: {
+            var10 = decompiledCaughtException;
+            break L8;
+          }
         }
-        var10 = decompiledCaughtException;
     }
 
     private final boolean a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
@@ -721,8 +727,9 @@ final class sc extends bj {
                       return;
                     } else {
                       L29: {
+                        int incrementValue$7 = var12;
                         var12++;
-                        this.d(var14[var12]);
+                        this.d(var14[incrementValue$7]);
                         if (var12 != var13) {
                           break L29;
                         } else {
@@ -756,8 +763,9 @@ final class sc extends bj {
                           break L31;
                         } else {
                           L32: {
+                            int incrementValue$8 = var12;
                             var12++;
-                            this.d(var14[var12]);
+                            this.d(var14[incrementValue$8]);
                             if (var12 != var13) {
                               break L32;
                             } else {
@@ -791,8 +799,9 @@ final class sc extends bj {
                             break L34;
                           } else {
                             L35: {
+                              int incrementValue$9 = var12;
                               var12++;
-                              this.d(var14[var12]);
+                              this.d(var14[incrementValue$9]);
                               if (var12 != var13) {
                                 break L35;
                               } else {
@@ -826,8 +835,9 @@ final class sc extends bj {
                               break L37;
                             } else {
                               L38: {
+                                int incrementValue$10 = var12;
                                 var12++;
-                                this.d(var14[var12]);
+                                this.d(var14[incrementValue$10]);
                                 if (var12 != var13) {
                                   break L38;
                                 } else {
@@ -950,8 +960,9 @@ final class sc extends bj {
                         }
                       } else {
                         field_y[var7] = (field_F[var9] + field_F[var10] + field_F[var11]) / 3;
+                        int incrementValue$11 = var7;
                         var7++;
-                        field_f[var7] = var8;
+                        field_f[incrementValue$11] = var8;
                         var8++;
                         continue L3;
                       }
@@ -968,8 +979,9 @@ final class sc extends bj {
                     if (!this.a(o.field_f + cc.field_n, tc.field_v + cc.field_p, field_v[var9], field_v[var10], field_v[var11], var12, var13, var14_int)) {
                       break L43;
                     } else {
+                      int fieldTemp$12 = db.field_c;
                       db.field_c = db.field_c + 1;
-                      pl.field_Q[db.field_c] = param2;
+                      pl.field_Q[fieldTemp$12] = param2;
                       param1 = false;
                       break L43;
                     }
@@ -1041,8 +1053,9 @@ final class sc extends bj {
                     }
                   } else {
                     field_y[var7] = (field_F[var9] + field_F[var10] + field_F[var11]) / 3;
+                    int incrementValue$13 = var7;
                     var7++;
-                    field_f[var7] = var8;
+                    field_f[incrementValue$13] = var8;
                     var8++;
                     continue L3;
                   }
@@ -1111,8 +1124,9 @@ final class sc extends bj {
                 var14 = (50 - var8) * cc.field_l[var10 - var8];
                 field_n[var4] = var2 + (var11 + ((field_D[var7] - var11) * var14 >> 16) << 9) / 50;
                 field_G[var4] = var3 + (var12 + ((field_S[var7] - var12) * var14 >> 16) << 9) / 50;
+                int incrementValue$9 = var4;
                 var4++;
-                field_i[var4] = var13 + (((((sc) this).field_g[param0] & 65535) - var13) * var14 >> 16);
+                field_i[incrementValue$9] = var13 + (((((sc) this).field_g[param0] & 65535) - var13) * var14 >> 16);
                 break L2;
               }
             }
@@ -1122,15 +1136,17 @@ final class sc extends bj {
               var14 = (50 - var8) * cc.field_l[var9 - var8];
               field_n[var4] = var2 + (var11 + ((field_D[var6] - var11) * var14 >> 16) << 9) / 50;
               field_G[var4] = var3 + (var12 + ((field_S[var6] - var12) * var14 >> 16) << 9) / 50;
+              int incrementValue$10 = var4;
               var4++;
-              field_i[var4] = var13 + (((((sc) this).field_A[param0] & 65535) - var13) * var14 >> 16);
+              field_i[incrementValue$10] = var13 + (((((sc) this).field_A[param0] & 65535) - var13) * var14 >> 16);
               break L1;
             }
           } else {
             field_n[var4] = field_V[var5];
             field_G[var4] = field_v[var5];
+            int incrementValue$11 = var4;
             var4++;
-            field_i[var4] = ((sc) this).field_z[param0] & 65535;
+            field_i[incrementValue$11] = ((sc) this).field_z[param0] & 65535;
             break L1;
           }
         }
@@ -1146,8 +1162,9 @@ final class sc extends bj {
                 var14 = (50 - var9) * cc.field_l[var8 - var9];
                 field_n[var4] = var2 + (var11 + ((field_D[var5] - var11) * var14 >> 16) << 9) / 50;
                 field_G[var4] = var3 + (var12 + ((field_S[var5] - var12) * var14 >> 16) << 9) / 50;
+                int incrementValue$12 = var4;
                 var4++;
-                field_i[var4] = var13 + (((((sc) this).field_z[param0] & 65535) - var13) * var14 >> 16);
+                field_i[incrementValue$12] = var13 + (((((sc) this).field_z[param0] & 65535) - var13) * var14 >> 16);
                 break L4;
               }
             }
@@ -1157,15 +1174,17 @@ final class sc extends bj {
               var14 = (50 - var9) * cc.field_l[var10 - var9];
               field_n[var4] = var2 + (var11 + ((field_D[var7] - var11) * var14 >> 16) << 9) / 50;
               field_G[var4] = var3 + (var12 + ((field_S[var7] - var12) * var14 >> 16) << 9) / 50;
+              int incrementValue$13 = var4;
               var4++;
-              field_i[var4] = var13 + (((((sc) this).field_g[param0] & 65535) - var13) * var14 >> 16);
+              field_i[incrementValue$13] = var13 + (((((sc) this).field_g[param0] & 65535) - var13) * var14 >> 16);
               break L3;
             }
           } else {
             field_n[var4] = field_V[var6];
             field_G[var4] = field_v[var6];
+            int incrementValue$14 = var4;
             var4++;
-            field_i[var4] = ((sc) this).field_A[param0] & 65535;
+            field_i[incrementValue$14] = ((sc) this).field_A[param0] & 65535;
             break L3;
           }
         }
@@ -1181,8 +1200,9 @@ final class sc extends bj {
                 var14 = (50 - var10) * cc.field_l[var9 - var10];
                 field_n[var4] = var2 + (var11 + ((field_D[var6] - var11) * var14 >> 16) << 9) / 50;
                 field_G[var4] = var3 + (var12 + ((field_S[var6] - var12) * var14 >> 16) << 9) / 50;
+                int incrementValue$15 = var4;
                 var4++;
-                field_i[var4] = var13 + (((((sc) this).field_A[param0] & 65535) - var13) * var14 >> 16);
+                field_i[incrementValue$15] = var13 + (((((sc) this).field_A[param0] & 65535) - var13) * var14 >> 16);
                 break L6;
               }
             }
@@ -1192,15 +1212,17 @@ final class sc extends bj {
               var14 = (50 - var10) * cc.field_l[var8 - var10];
               field_n[var4] = var2 + (var11 + ((field_D[var5] - var11) * var14 >> 16) << 9) / 50;
               field_G[var4] = var3 + (var12 + ((field_S[var5] - var12) * var14 >> 16) << 9) / 50;
+              int incrementValue$16 = var4;
               var4++;
-              field_i[var4] = var13 + (((((sc) this).field_z[param0] & 65535) - var13) * var14 >> 16);
+              field_i[incrementValue$16] = var13 + (((((sc) this).field_z[param0] & 65535) - var13) * var14 >> 16);
               break L5;
             }
           } else {
             field_n[var4] = field_V[var7];
             field_G[var4] = field_v[var7];
+            int incrementValue$17 = var4;
             var4++;
-            field_i[var4] = ((sc) this).field_g[param0] & 65535;
+            field_i[incrementValue$17] = ((sc) this).field_g[param0] & 65535;
             break L5;
           }
         }
@@ -1626,8 +1648,9 @@ final class sc extends bj {
                                 ((sc) this).field_Q[var10] = param0.field_B[var11] & 65535;
                                 ((sc) this).field_t[var10] = param0.field_w[var11] & 65535;
                                 ((sc) this).field_h[var10] = param0.field_k[var11] & 65535;
+                                int incrementValue$1 = var10;
                                 var10++;
-                                var9_ref_int__[var11] = var10;
+                                var9_ref_int__[var11] = incrementValue$1;
                                 var11++;
                                 continue L6;
                               }
@@ -1672,6 +1695,7 @@ final class sc extends bj {
         var9 = var16;
         L9: while (true) {
           if (var16 >= ((sc) this).field_I) {
+            return;
           } else {
             L10: {
               if (param0.field_q != null) {

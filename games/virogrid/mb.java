@@ -24,8 +24,9 @@ abstract class mb extends dc {
           if (null != ((mb) this).field_fb) {
             if (dk.field_e != ((mb) this).field_fb) {
               if (vf.field_b == ((mb) this).field_fb) {
+                int fieldTemp$4 = ((mb) this).field_jb + 1;
                 ((mb) this).field_jb = ((mb) this).field_jb + 1;
-                if (((mb) this).field_hb != ((mb) this).field_jb + 1) {
+                if (((mb) this).field_hb != fieldTemp$4) {
                   ((mb) this).field_kb.field_H = (((mb) this).field_jb << -894494360) / ((mb) this).field_hb;
                   return super.f(3);
                 } else {
@@ -37,8 +38,9 @@ abstract class mb extends dc {
                 return super.f(3);
               }
             } else {
+              int fieldTemp$5 = ((mb) this).field_jb + 1;
               ((mb) this).field_jb = ((mb) this).field_jb + 1;
-              if (((mb) this).field_jb + 1 == ((mb) this).field_cb) {
+              if (fieldTemp$5 == ((mb) this).field_cb) {
                 ((mb) this).field_fb = lm.field_e;
                 ((mb) this).a(((mb) this).field_lb + (12 - -((mb) this).field_ib.field_m), param0 ^ 3, ((mb) this).field_nb, 12 + ((mb) this).field_ib.field_g);
                 ((mb) this).field_kb.field_H = 0;
@@ -56,8 +58,9 @@ abstract class mb extends dc {
           if (null != ((mb) this).field_fb) {
             if (dk.field_e != ((mb) this).field_fb) {
               if (vf.field_b == ((mb) this).field_fb) {
+                int fieldTemp$6 = ((mb) this).field_jb + 1;
                 ((mb) this).field_jb = ((mb) this).field_jb + 1;
-                if (((mb) this).field_hb != ((mb) this).field_jb + 1) {
+                if (((mb) this).field_hb != fieldTemp$6) {
                   ((mb) this).field_kb.field_H = (((mb) this).field_jb << -894494360) / ((mb) this).field_hb;
                   return super.f(3);
                 } else {
@@ -69,8 +72,9 @@ abstract class mb extends dc {
                 return super.f(3);
               }
             } else {
+              int fieldTemp$7 = ((mb) this).field_jb + 1;
               ((mb) this).field_jb = ((mb) this).field_jb + 1;
-              if (((mb) this).field_jb + 1 == ((mb) this).field_cb) {
+              if (fieldTemp$7 == ((mb) this).field_cb) {
                 ((mb) this).field_fb = lm.field_e;
                 ((mb) this).a(((mb) this).field_lb + (12 - -((mb) this).field_ib.field_m), param0 ^ 3, ((mb) this).field_nb, 12 + ((mb) this).field_ib.field_g);
                 ((mb) this).field_kb.field_H = 0;

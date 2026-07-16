@@ -71,8 +71,9 @@ abstract class bj extends k {
                 return super.g((byte) -52);
               }
             } else {
+              int fieldTemp$2 = ((bj) this).field_fb + 1;
               ((bj) this).field_fb = ((bj) this).field_fb + 1;
-              if (((bj) this).field_mb != ((bj) this).field_fb + 1) {
+              if (((bj) this).field_mb != fieldTemp$2) {
                 ((bj) this).field_kb.field_R = (((bj) this).field_fb << -1271048984) / ((bj) this).field_mb;
                 if (param0 >= -4) {
                   field_bb = null;
@@ -92,8 +93,9 @@ abstract class bj extends k {
               }
             }
           } else {
+            int fieldTemp$3 = ((bj) this).field_fb + 1;
             ((bj) this).field_fb = ((bj) this).field_fb + 1;
-            if (((bj) this).field_fb + 1 != ((bj) this).field_hb) {
+            if (fieldTemp$3 != ((bj) this).field_hb) {
               ((bj) this).field_kb.field_R = 256 - (((bj) this).field_fb << -85817176) / ((bj) this).field_hb;
               if (param0 >= -4) {
                 field_bb = null;

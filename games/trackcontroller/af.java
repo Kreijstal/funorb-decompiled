@@ -89,84 +89,44 @@ final class af extends di {
 
     final static void a(int param0, int param1, String param2) {
         int var3 = 0;
-        L0: {
-          gh.field_k = false;
-          u.field_i = false;
-          if (kb.field_a == null) {
-            break L0;
-          } else {
-            if (!kb.field_a.field_E) {
-              break L0;
-            } else {
-              L1: {
+        gh.field_k = false;
+        u.field_i = false;
+        if (kb.field_a != null) {
+            if (kb.field_a.field_E) {
                 var3 = 1;
-                if (-9 != param1) {
-                  break L1;
-                } else {
-                  L2: {
-                    if (vg.field_o) {
-                      param2 = vi.field_e;
-                      break L2;
+                if (-9 == (param1 ^ -1)) {
+                    if (!vg.field_o) {
+                        param2 = ba.field_d;
                     } else {
-                      param2 = ba.field_d;
-                      break L2;
+                        param2 = vi.field_e;
                     }
-                  }
-                  param1 = 2;
-                  ra.field_y.a((byte) 114, qg.field_c);
-                  break L1;
+                    param1 = 2;
+                    ra.field_y.a((byte) 114, qg.field_c);
                 }
-              }
-              L3: {
-                if (-11 == param1) {
-                  pl.a(0);
-                  var3 = 0;
-                  break L3;
-                } else {
-                  break L3;
+                if (!(-11 != (param1 ^ -1))) {
+                    pl.a(0);
+                    var3 = 0;
                 }
-              }
-              if (var3 == 0) {
-                if (-257 == param1) {
-                  break L0;
-                } else {
-                  if (10 == param1) {
-                    break L0;
-                  } else {
-                    if (vg.field_o) {
-                      break L0;
-                    } else {
-                      ra.field_y.a((byte) 121);
-                      break L0;
+                if (var3 != 0) {
+                    if (u.field_i) {
+                        param2 = dh.a((byte) -73, new String[1], od.field_b);
                     }
-                  }
-                }
-              } else {
-                if (-257 == param1) {
-                  break L0;
-                } else {
-                  if (10 == param1) {
-                    break L0;
-                  } else {
-                    if (vg.field_o) {
-                      break L0;
-                    } else {
-                      ra.field_y.a((byte) 121);
-                      break L0;
+                    if (pc.field_h) {
+                        param2 = cb.field_a;
                     }
-                  }
+                    kb.field_a.a(param1, param2, -10);
                 }
-              }
+                if (-257 != (param1 ^ -1)) {
+                    if (10 != param1) {
+                        if (!vg.field_o) {
+                            ra.field_y.a((byte) 121);
+                        }
+                    }
+                }
             }
-          }
         }
-        L4: {
-          if (param0 < -60) {
-            break L4;
-          } else {
+        if (param0 >= -60) {
             field_n = null;
-            break L4;
-          }
         }
     }
 
@@ -208,151 +168,70 @@ final class af extends di {
             int var7 = 0;
             int stackIn_10_0 = 0;
             int stackIn_17_0 = 0;
+            Throwable decompiledCaughtException = null;
             int stackOut_9_0 = 0;
-            int stackOut_15_0 = 0;
             int stackOut_16_0 = 0;
-            int statePc = 0;
-            Throwable caughtException = null;
-            stateLoop: while (true) {
-                switch (statePc) {
-                    case 0: {
-                        var7 = TrackController.field_F ? 1 : 0;
-                        if (wd.field_R) {
-                            statePc = 2;
+            int stackOut_15_0 = 0;
+            var7 = TrackController.field_F ? 1 : 0;
+            if (wd.field_R) {
+              return true;
+            } else {
+              L0: {
+                if (param0 == 9819) {
+                  break L0;
+                } else {
+                  af.d((byte) 51);
+                  break L0;
+                }
+              }
+              try {
+                L1: {
+                  var2 = "tuhstatbut";
+                  var3 = (String) sj.a((byte) -29, "getcookies", param1);
+                  var4 = te.a(var3, ';', (byte) -46);
+                  var5 = 0;
+                  L2: while (true) {
+                    if (var5 >= var4.length) {
+                      break L1;
+                    } else {
+                      L3: {
+                        var6 = var4[var5].indexOf('=');
+                        if (0 > var6) {
+                          break L3;
                         } else {
-                            statePc = 3;
-                        }
-                        continue stateLoop;
-                    }
-                    case 2: {
-                        return true;
-                    }
-                    case 3: {
-                        if (param0 == 9819) {
-                            statePc = 5;
-                        } else {
-                            statePc = 4;
-                        }
-                        continue stateLoop;
-                    }
-                    case 4: {
-                        af.d((byte) 51);
-                        statePc = 5;
-                        continue stateLoop;
-                    }
-                    case 5: {
-                        try {
-                            var2 = "tuhstatbut";
-                            var3 = (String) sj.a((byte) -29, "getcookies", param1);
-                            var4 = te.a(var3, ';', (byte) -46);
-                            var5 = 0;
-                            statePc = 6;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_5) {
-                            caughtException = stateCaught_5;
-                            statePc = 13;
-                            continue stateLoop;
-                        }
-                    }
-                    case 6: {
-                        try {
-                            if (var5 >= var4.length) {
-                                statePc = 14;
-                            } else {
-                                statePc = 7;
-                            }
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_6) {
-                            caughtException = stateCaught_6;
-                            statePc = 13;
-                            continue stateLoop;
-                        }
-                    }
-                    case 7: {
-                        try {
-                            var6 = var4[var5].indexOf('=');
-                            if (0 > var6) {
-                                statePc = 11;
-                            } else {
-                                statePc = 8;
-                            }
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_7) {
-                            caughtException = stateCaught_7;
-                            statePc = 13;
-                            continue stateLoop;
-                        }
-                    }
-                    case 8: {
-                        try {
-                            if (!var4[var5].substring(0, var6).trim().equals((Object) (Object) var2)) {
-                                statePc = 11;
-                            } else {
-                                statePc = 9;
-                            }
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_8) {
-                            caughtException = stateCaught_8;
-                            statePc = 13;
-                            continue stateLoop;
-                        }
-                    }
-                    case 9: {
-                        try {
+                          if (!var4[var5].substring(0, var6).trim().equals((Object) (Object) var2)) {
+                            break L3;
+                          } else {
                             stackOut_9_0 = 1;
                             stackIn_10_0 = stackOut_9_0;
-                            statePc = 10;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_9) {
-                            caughtException = stateCaught_9;
-                            statePc = 13;
-                            continue stateLoop;
+                            return stackIn_10_0 != 0;
+                          }
                         }
+                      }
+                      var5++;
+                      continue L2;
                     }
-                    case 10: {
-                        return stackIn_10_0 != 0;
-                    }
-                    case 11: {
-                        try {
-                            var5++;
-                            statePc = 6;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_11) {
-                            caughtException = stateCaught_11;
-                            statePc = 13;
-                            continue stateLoop;
-                        }
-                    }
-                    case 13: {
-                        var2_ref = caughtException;
-                        statePc = 14;
-                        continue stateLoop;
-                    }
-                    case 14: {
-                        if (param1.getParameter("tuhstatbut") == null) {
-                            statePc = 16;
-                        } else {
-                            statePc = 15;
-                        }
-                        continue stateLoop;
-                    }
-                    case 15: {
-                        stackOut_15_0 = 1;
-                        stackIn_17_0 = stackOut_15_0;
-                        statePc = 17;
-                        continue stateLoop;
-                    }
-                    case 16: {
-                        stackOut_16_0 = 0;
-                        stackIn_17_0 = stackOut_16_0;
-                        statePc = 17;
-                        continue stateLoop;
-                    }
-                    case 17: {
-                        return stackIn_17_0 != 0;
-                    }
-                    default: throw new IllegalStateException("invalid CFG state " + statePc);
+                  }
                 }
+              } catch (java.lang.Throwable decompiledCaughtParameter0) {
+                decompiledCaughtException = decompiledCaughtParameter0;
+                L4: {
+                  var2_ref = decompiledCaughtException;
+                  break L4;
+                }
+              }
+              L5: {
+                if (param1.getParameter("tuhstatbut") == null) {
+                  stackOut_16_0 = 0;
+                  stackIn_17_0 = stackOut_16_0;
+                  break L5;
+                } else {
+                  stackOut_15_0 = 1;
+                  stackIn_17_0 = stackOut_15_0;
+                  break L5;
+                }
+              }
+              return stackIn_17_0 != 0;
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;

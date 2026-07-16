@@ -29,24 +29,28 @@ final class tf extends dk {
         String stackOut_2_0 = null;
         try {
           L0: {
-            var3_int = param0.d(-13583);
-            if (var3_int <= param2) {
-              break L0;
-            } else {
-              var3_int = param2;
-              break L0;
+            L1: {
+              var3_int = param0.d(-13583);
+              if (var3_int <= param2) {
+                break L1;
+              } else {
+                var3_int = param2;
+                break L1;
+              }
             }
+            var4 = new byte[var3_int];
+            param0.field_i = param0.field_i + qg.field_e.a(param0.field_k, param0.field_i, 0, var3_int, var4, param1 + -1);
+            var5 = pg.a(var3_int, 0, var4, param1);
+            stackOut_2_0 = (String) var5;
+            stackIn_3_0 = stackOut_2_0;
+            break L0;
           }
-          var4 = new byte[var3_int];
-          param0.field_i = param0.field_i + qg.field_e.a(param0.field_k, param0.field_i, 0, var3_int, var4, param1 + -1);
-          var5 = pg.a(var3_int, 0, var4, param1);
-          stackOut_2_0 = (String) var5;
-          stackIn_3_0 = stackOut_2_0;
-        } catch (java.lang.Exception decompiledCaughtParameter) {
-          decompiledCaughtException = decompiledCaughtParameter;
-          return stackIn_3_0;
+        } catch (java.lang.Exception decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3 = (Exception) (Object) decompiledCaughtException;
+          return "Cabbage";
         }
-        return null;
+        return stackIn_3_0;
     }
 
     public static void i(int param0) {
@@ -61,16 +65,16 @@ final class tf extends dk {
     }
 
     final void b(int param0, int param1, boolean param2, int param3) {
-        if (!(param3 == 0)) {
+        if (!((param3 ^ -1) == -1)) {
             return;
         }
         if (!(((tf) this).field_A != null)) {
             return;
         }
-        if (((tf) this).field_F == -1) {
+        if ((((tf) this).field_F ^ -1) == -1) {
             return;
         }
-        if (!(-257 != ((tf) this).field_F)) {
+        if (!(-257 != (((tf) this).field_F ^ -1))) {
             ((tf) this).field_A.b(((tf) this).field_z + param0, ((tf) this).field_y + param1, true, param3);
             return;
         }
@@ -128,7 +132,7 @@ final class tf extends dk {
         if (param2 != -2) {
           tf.d(false);
           L0: while (true) {
-            if (param1 >= -2) {
+            if ((param1 ^ -1) >= -2) {
               if (1 == param1) {
                 return var3 * param0;
               } else {
@@ -136,7 +140,7 @@ final class tf extends dk {
               }
             } else {
               L1: {
-                if (-1 != (1 & param1)) {
+                if (-1 != (1 & param1 ^ -1)) {
                   var3 = var3 * param0;
                   break L1;
                 } else {
@@ -150,7 +154,7 @@ final class tf extends dk {
           }
         } else {
           L2: while (true) {
-            if (param1 >= -2) {
+            if ((param1 ^ -1) >= -2) {
               if (1 == param1) {
                 return var3 * param0;
               } else {
@@ -158,7 +162,7 @@ final class tf extends dk {
               }
             } else {
               L3: {
-                if (-1 != (1 & param1)) {
+                if (-1 != (1 & param1 ^ -1)) {
                   var3 = var3 * param0;
                   break L3;
                 } else {

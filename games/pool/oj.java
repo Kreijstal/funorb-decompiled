@@ -160,8 +160,9 @@ final class oj extends ma {
     }
 
     oj(int param0, int param1, int param2, int param3, int param4, int param5, int[] param6) {
+        int fieldTemp$0 = kh.field_Wb;
         kh.field_Wb = kh.field_Wb + 1;
-        ((oj) this).field_B = kh.field_Wb & 65535;
+        ((oj) this).field_B = fieldTemp$0 & 65535;
         ((oj) this).field_A = param4;
         ((oj) this).field_n = param2;
         ((oj) this).field_l = param0;

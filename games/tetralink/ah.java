@@ -70,7 +70,7 @@ final class ah {
         oh var11 = null;
         oh var12 = null;
         oh var13 = null;
-        oh var14 = null;
+        Object var14 = null;
         int[] var15 = null;
         oh var16 = null;
         int[] var17 = null;
@@ -104,7 +104,7 @@ final class ah {
           var14 = null;
           if (param0 > 0) {
             var16 = new oh(16, 16);
-            var14 = var16;
+            var14 = (Object) (Object) var16;
             var16.c();
             ra.c(0, 0, 16, 16, param0);
             break L0;
@@ -113,7 +113,7 @@ final class ah {
           }
         }
         ra.a(var20, var7, var8);
-        return new oh[]{var10, var11, var10, var9, var14, var9, var12, var13, var12};
+        return new oh[]{var10, var11, var10, var9, (oh) var14, var9, var12, var13, var12};
     }
 
     final boolean a(String param0, byte param1) {
@@ -155,7 +155,6 @@ final class ah {
 
     private final synchronized byte[] a(int param0, int[] param1, int param2, int param3) {
         Object var5 = null;
-        byte[] var5_array = null;
         byte[] var7 = null;
         if (this.a(param2, (byte) -72, param3)) {
           L0: {
@@ -189,7 +188,7 @@ final class ah {
                   break L2;
                 } else {
                   var7 = vj.a(false, (byte) -28, ((ah) this).field_h[param2][param3]);
-                  var5_array = var7;
+                  var5 = (Object) (Object) var7;
                   if (var7 == null) {
                     throw new RuntimeException("");
                   } else {
@@ -198,10 +197,10 @@ final class ah {
                 }
               }
               L3: {
-                if (var5_array == null) {
+                if (var5 == null) {
                   break L3;
                 } else {
-                  if (((ah) this).field_d != -2) {
+                  if ((((ah) this).field_d ^ -1) != -2) {
                     if ((((ah) this).field_d ^ -1) != -3) {
                       break L3;
                     } else {
@@ -210,7 +209,7 @@ final class ah {
                     }
                   } else {
                     ((ah) this).field_h[param2][param3] = null;
-                    if (-2 == ((ah) this).field_e.field_d[param2]) {
+                    if (-2 == (((ah) this).field_e.field_d[param2] ^ -1)) {
                       ((ah) this).field_h[param2] = null;
                       break L3;
                     } else {
@@ -219,7 +218,7 @@ final class ah {
                   }
                 }
               }
-              return var5_array;
+              return (byte[]) var5;
             } else {
               throw new RuntimeException("");
             }
@@ -767,9 +766,9 @@ final class ah {
         if (!((ah) this).c(104)) {
             return false;
         }
-        if (param1 <= -1) {
+        if ((param1 ^ -1) <= -1) {
             if (param1 < ((ah) this).field_e.field_d.length) {
-                if (-1 != ((ah) this).field_e.field_d[param1]) {
+                if (-1 != (((ah) this).field_e.field_d[param1] ^ -1)) {
                     return true;
                 }
             }
@@ -873,6 +872,7 @@ final class ah {
               ((ah) this).field_f = stackIn_6_1 != 0;
               ((ah) this).field_b = param0;
               ((ah) this).field_d = param2;
+              return;
             } else {
               break L0;
             }

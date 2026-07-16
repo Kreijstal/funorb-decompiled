@@ -113,7 +113,7 @@ final class aj {
                             }
                           }
                           L7: {
-                            // wide iinc 11 256
+                            var11 += 256;
                             if (var11 < var12) {
                               break L7;
                             } else {
@@ -212,7 +212,7 @@ final class aj {
                                 if (var14 < param0 - var12) {
                                   var12 = ((aj) this).field_o.a(0, (float)var11 / 65536.0f);
                                   var13 = ((aj) this).field_o.a(1, (float)var11 / 65536.0f);
-                                  // wide iinc 15 128
+                                  var15 += 128;
                                   continue L15;
                                 } else {
                                   L18: while (true) {

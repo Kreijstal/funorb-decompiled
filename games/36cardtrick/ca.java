@@ -11,7 +11,7 @@ final class ca {
         ij.field_g = param1 ? true : false;
         r.field_p = true;
         if (param2 != 16777215) {
-            qj var4 = (qj) null;
+            Object var4 = null;
             ca.a((qk) null, (qj) null, -27, -28);
         }
         pc.field_a = new af(sd.field_c, vd.field_p, param0, ei.field_e, ij.field_g);
@@ -56,10 +56,10 @@ final class ca {
         int[][] var7 = var16;
         var7[0] = var5[0].field_j;
         for (var8 = 1; var8 < var21.length; var8++) {
-            var7[var8] = (int[]) (int[]) var21[0].clone();
+            var7[var8] = (int[]) var21[0].clone();
         }
         if (param3 != -25188) {
-            field_c = (int[]) null;
+            field_c = null;
         }
         var8 = var5[0].field_i[0];
         var21[2][var8] = 16777215;
@@ -72,7 +72,7 @@ final class ca {
                 var14[var11_int] = a.a(var5[var9], var21[var11_int], -88);
             }
         }
-        var9 = ((kc) var17).field_o;
+        var9 = var17.field_o;
         ji.a(true);
         var17.c();
         vj.e(0, 0, vj.field_l, vj.field_g);
@@ -82,8 +82,8 @@ final class ca {
         var17.b(0, 0);
         kc var11 = new kc(var9, var9);
         var11.c();
-        var17.b(var9 - ((kc) var17).field_p, 0);
-        kc var12 = new kc(-(2 * var9) + ((kc) var17).field_p, var9);
+        var17.b(var9 - var17.field_p, 0);
+        kc var12 = new kc(-(2 * var9) + var17.field_p, var9);
         var12.c();
         var17.b(-var9, 0);
         gg.a(14756);
@@ -92,7 +92,7 @@ final class ca {
 
     final static gk a(boolean param0) {
         if (param0) {
-            return (gk) null;
+            return null;
         }
         return (gk) (Object) new ec();
     }

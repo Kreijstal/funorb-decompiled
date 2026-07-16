@@ -85,13 +85,13 @@ final class rj extends sq {
             if (fm.field_H) {
               break L6;
             } else {
-              if (qi.field_a == -10) {
+              if ((qi.field_a ^ -1) == -10) {
                 break L6;
               } else {
                 if (10 == qi.field_a) {
                   break L6;
                 } else {
-                  if (-12 != qi.field_a) {
+                  if (-12 != (qi.field_a ^ -1)) {
                     if ((qi.field_a ^ -1) != -81) {
                       return false;
                     } else {
@@ -127,7 +127,7 @@ final class rj extends sq {
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
-        aa var6_ref = null;
+        aa var6_ref_aa = null;
         int var6 = 0;
         cr var7_ref_cr = null;
         int var7 = 0;
@@ -167,8 +167,8 @@ final class rj extends sq {
               }
             }
             var5 = 0;
-            var6_ref = new aa(var10.field_m);
-            var7_ref_cr = (cr) (Object) var6_ref.b((byte) -92);
+            var6_ref_aa = new aa(var10.field_m);
+            var7_ref_cr = (cr) (Object) var6_ref_aa.b((byte) -92);
             L2: while (true) {
               if (var7_ref_cr == null) {
                 L3: {
@@ -265,7 +265,7 @@ final class rj extends sq {
                     break L8;
                   }
                 }
-                var7_ref_cr = (cr) (Object) var6_ref.b(-95);
+                var7_ref_cr = (cr) (Object) var6_ref_aa.b(-95);
                 continue L2;
               }
             }
@@ -274,22 +274,45 @@ final class rj extends sq {
     }
 
     final void a(ge param0, boolean param1) {
-        int var4 = 0;
-        int var5 = Pool.field_O;
-        if (!(((rj) this).field_d.field_h.length == ((rj) this).field_e.length)) {
-            ((rj) this).field_e = new int[((rj) this).field_d.field_h.length];
-        }
         int var3 = 0;
-        do {
+        int var4 = 0;
+        int var5 = 0;
+        L0: {
+          var5 = Pool.field_O;
+          if (((rj) this).field_d.field_h.length != ((rj) this).field_e.length) {
+            ((rj) this).field_e = new int[((rj) this).field_d.field_h.length];
+            break L0;
+          } else {
+            break L0;
+          }
+        }
+        var3 = 0;
+        L1: while (true) {
+          L2: {
             var4 = param0.g(-119);
             ((rj) this).field_e[var3] = rb.b(var4, 254) >> -1481028636;
             var3++;
-            // if_icmpeq L111
-            ((rj) this).field_e[var3] = rb.b(var4, 15);
-            var3++;
-        } while (var3 != ((rj) this).field_d.field_h.length);
-        if (!param1) {
-            field_j = null;
+            if (((rj) this).field_d.field_h.length == var3) {
+              break L2;
+            } else {
+              ((rj) this).field_e[var3] = rb.b(var4, 15);
+              var3++;
+              if (var3 != ((rj) this).field_d.field_h.length) {
+                continue L1;
+              } else {
+                break L2;
+              }
+            }
+          }
+          L3: {
+            if (param1) {
+              break L3;
+            } else {
+              field_j = null;
+              break L3;
+            }
+          }
+          return;
         }
     }
 
@@ -468,8 +491,8 @@ final class rj extends sq {
           var6 = ((rj) this).field_d.j(45);
           var3 = 0;
           var4 = var6.field_u;
-          if (var4 != -3) {
-            if (-4 != var4) {
+          if ((var4 ^ -1) != -3) {
+            if (-4 != (var4 ^ -1)) {
               if ((var4 ^ -1) == -2) {
                 var3 = ll.field_f | nr.field_R;
                 break L0;

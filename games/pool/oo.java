@@ -96,9 +96,9 @@ abstract class oo {
         var8 = (long)(var13.field_k - param0.field_f);
         var10 = bm.a(param1 ^ -24621, od.a(var6, var6, false) - -od.a(var8, var8, false));
         var13.b(true);
-        if (var13.field_j >= -4194305) {
+        if ((var13.field_j ^ -1) >= -4194305) {
           L0: {
-            if (-1 > var13.field_j) {
+            if (-1 < (var13.field_j ^ -1)) {
               var12 = 1179648 + -rf.a(4194304 + -(var13.field_j * var13.field_j >> -1796827312), param1 ^ -24622);
               break L0;
             } else {
@@ -1271,30 +1271,33 @@ abstract class oo {
           if ((var6 ^ -1) != -16) {
             if ((var6 ^ -1) != -17) {
               if (var6 != 10) {
-                if (var6 != -18) {
-                  if (-19 != var6) {
-                    break L0;
-                  } else {
-                    if (null != ((oo) this).field_n) {
-                      ac.a(256, false, false, ((oo) this).field_n);
+                L1: {
+                  if ((var6 ^ -1) != -18) {
+                    if (-19 != (var6 ^ -1)) {
                       break L0;
                     } else {
-                      if (null == ((oo) this).field_i) {
-                        break L0;
+                      if (null != ((oo) this).field_n) {
+                        ac.a(256, false, false, ((oo) this).field_n);
+                        break L1;
                       } else {
-                        ac.a(256, false, false, ((oo) this).field_i);
-                        break L0;
+                        if (null == ((oo) this).field_i) {
+                          break L1;
+                        } else {
+                          ac.a(256, false, false, ((oo) this).field_i);
+                          break L0;
+                        }
                       }
                     }
-                  }
-                } else {
-                  if (((oo) this).field_i == null) {
-                    break L0;
                   } else {
-                    ac.a(256, false, false, ((oo) this).field_i);
-                    break L0;
+                    if (((oo) this).field_i == null) {
+                      break L1;
+                    } else {
+                      ac.a(256, false, false, ((oo) this).field_i);
+                      break L0;
+                    }
                   }
                 }
+                break L0;
               } else {
                 ac.a(256, true, true, ((oo) this).field_b);
                 break L0;
@@ -1480,14 +1483,16 @@ abstract class oo {
                 if (var3 < var13) {
                   var3 = var13;
                   var6 = 0;
+                  int incrementValue$2 = var6;
                   var6++;
-                  var5[var6] = new int[2];
+                  var5[incrementValue$2] = new int[2];
                   var8++;
                   continue L3;
                 } else {
                   if ((var3 ^ -1L) == (var13 ^ -1L)) {
+                    int incrementValue$3 = var6;
                     var6++;
-                    var5[var6] = new int[2];
+                    var5[incrementValue$3] = new int[2];
                     var8++;
                     continue L3;
                   } else {
@@ -1502,28 +1507,53 @@ abstract class oo {
     }
 
     void a(boolean param0, mm param1) {
-        if (param1.field_m < 0.0) {
-            param1.field_m = 0.0;
-        } else {
-            if (!(param1.field_m <= 288.0)) {
-                param1.field_m = 288.0;
+        double var3 = 0.0;
+        Object var5 = null;
+        L0: {
+          if (param1.field_m >= 0.0) {
+            if (param1.field_m > 288.0) {
+              param1.field_m = 288.0;
+              break L0;
+            } else {
+              break L0;
             }
+          } else {
+            param1.field_m = 0.0;
+            break L0;
+          }
         }
-        if (param1.field_f >= 0.0) {
-            // ifle L85
-            param1.field_f = 576.0;
-        } else {
+        L1: {
+          if (param1.field_f < 0.0) {
             param1.field_f = 0.0;
+            break L1;
+          } else {
+            if (param1.field_f <= 576.0) {
+              break L1;
+            } else {
+              param1.field_f = 576.0;
+              break L1;
+            }
+          }
         }
-        if (param0) {
-            Object var5 = null;
+        L2: {
+          if (!param0) {
+            break L2;
+          } else {
+            var5 = null;
             ((oo) this).a((int[]) null, (byte) -29, true, (pq[]) null, false);
+            break L2;
+          }
         }
-        double var3 = param1.d(8);
-        if (!(var3 <= 768.0)) {
+        L3: {
+          var3 = param1.d(8);
+          if (var3 > 768.0) {
             param1.field_a = 768.0 * (-param1.field_m + param1.field_a) / var3 + param1.field_m;
             param1.field_h = (param1.field_h - param1.field_k) * 768.0 / var3 + param1.field_k;
             param1.field_d = param1.field_f + (param1.field_d - param1.field_f) * 768.0 / var3;
+            break L3;
+          } else {
+            break L3;
+          }
         }
     }
 

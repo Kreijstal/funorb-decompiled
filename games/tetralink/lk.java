@@ -34,87 +34,47 @@ class lk extends ml implements dm {
         Object var13 = null;
         char[] var14 = null;
         char[] var15 = null;
-        int statePc = 0;
-        Throwable caughtException = null;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    var12 = TetraLink.field_J;
-                    var5 = param4.length;
-                    if (param0 <= -26) {
-                        statePc = 2;
-                    } else {
-                        statePc = 1;
-                    }
-                    continue stateLoop;
-                }
-                case 1: {
-                    var13 = null;
-                    le discarded$2 = lk.a(90, (hl) null, (hl) null, (hl) null, (int[]) null);
-                    statePc = 2;
-                    continue stateLoop;
-                }
-                case 2: {
-                    var6 = new String[var5];
-                    var15 = new char[var5];
-                    var14 = var15;
-                    var7 = var14;
-                    var8 = new le[var5];
-                    var9 = 49;
-                    statePc = 3;
-                    continue stateLoop;
-                }
-                case 3: {
-                    try {
-                        var10_int = 0;
-                        statePc = 4;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_3) {
-                        caughtException = stateCaught_3;
-                        statePc = 7;
-                        continue stateLoop;
-                    }
-                }
-                case 4: {
-                    try {
-                        if ((var10_int ^ -1) <= (var5 ^ -1)) {
-                            statePc = 8;
-                        } else {
-                            statePc = 5;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_4) {
-                        caughtException = stateCaught_4;
-                        statePc = 7;
-                        continue stateLoop;
-                    }
-                }
-                case 5: {
-                    try {
-                        var11 = eh.field_p.a(param4[var10_int], -128);
-                        var6[var10_int] = var11.h(-107);
-                        var9 = (char)(var9 + 1);
-                        var7[var10_int] = (char)var9;
-                        var8[var10_int] = null;
-                        var10_int++;
-                        statePc = 4;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_5) {
-                        caughtException = stateCaught_5;
-                        statePc = 7;
-                        continue stateLoop;
-                    }
-                }
-                case 7: {
-                    var10 = (Exception) (Object) caughtException;
-                    return null;
-                }
-                case 8: {
-                    return new le(0L, param3, param2, param1, var8, param4, var6, var15);
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
-            }
+        Throwable decompiledCaughtException = null;
+        L0: {
+          var12 = TetraLink.field_J;
+          var5 = param4.length;
+          if (param0 <= -26) {
+            break L0;
+          } else {
+            var13 = null;
+            le discarded$2 = lk.a(90, (hl) null, (hl) null, (hl) null, (int[]) null);
+            break L0;
+          }
         }
+        var6 = new String[var5];
+        var15 = new char[var5];
+        var14 = var15;
+        var7 = var14;
+        var8 = new le[var5];
+        var9 = 49;
+        try {
+          L1: {
+            var10_int = 0;
+            L2: while (true) {
+              if (var10_int >= var5) {
+                break L1;
+              } else {
+                var11 = eh.field_p.a(param4[var10_int], -128);
+                var6[var10_int] = var11.h(-107);
+                var9 = (char)(var9 + 1);
+                var7[var10_int] = (char)var9;
+                var8[var10_int] = null;
+                var10_int++;
+                continue L2;
+              }
+            }
+          }
+        } catch (java.lang.Exception decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var10 = (Exception) (Object) decompiledCaughtException;
+          return null;
+        }
+        return new le(0L, param3, param2, param1, var8, param4, var6, var15);
     }
 
     lk(pk param0, jb param1, String param2, boolean param3, boolean param4) {
@@ -206,7 +166,7 @@ class lk extends ml implements dm {
             return false;
         }
         if (tk.a((byte) 81, param0)) {
-            if ((var3 ^ -1) != -1) {
+            if (var3 != 0) {
                 return true;
             }
             return false;
@@ -233,26 +193,26 @@ class lk extends ml implements dm {
         int[] var20 = null;
         int[] var21 = null;
         int[] var22 = null;
-        nh[][] stackIn_33_0 = null;
-        nh[][] stackIn_34_0 = null;
-        nh[][] stackIn_35_0 = null;
-        int stackIn_35_1 = 0;
-        int stackIn_53_0 = 0;
-        int stackIn_68_0 = 0;
-        int stackIn_75_0 = 0;
-        nh[][] stackOut_32_0 = null;
-        nh[][] stackOut_34_0 = null;
-        int stackOut_34_1 = 0;
-        nh[][] stackOut_33_0 = null;
-        int stackOut_33_1 = 0;
-        int stackOut_52_0 = 0;
-        int stackOut_51_0 = 0;
-        int stackOut_74_0 = 0;
+        nh[][] stackIn_36_0 = null;
+        nh[][] stackIn_37_0 = null;
+        nh[][] stackIn_38_0 = null;
+        int stackIn_38_1 = 0;
+        int stackIn_56_0 = 0;
+        int stackIn_71_0 = 0;
+        int stackIn_80_0 = 0;
+        nh[][] stackOut_35_0 = null;
+        nh[][] stackOut_37_0 = null;
+        int stackOut_37_1 = 0;
+        nh[][] stackOut_36_0 = null;
+        int stackOut_36_1 = 0;
+        int stackOut_55_0 = 0;
+        int stackOut_54_0 = 0;
+        int stackOut_78_0 = 0;
+        int stackOut_77_0 = 0;
+        int stackOut_75_0 = 0;
         int stackOut_73_0 = 0;
-        int stackOut_67_0 = 0;
-        int stackOut_66_0 = 0;
-        int stackOut_64_0 = 0;
-        int stackOut_63_0 = 0;
+        int stackOut_70_0 = 0;
+        int stackOut_69_0 = 0;
         L0: {
           var15 = TetraLink.field_J;
           if (param1 < -111) {
@@ -264,27 +224,27 @@ class lk extends ml implements dm {
           }
         }
         L1: {
-          if ((param6 ^ -1) < (param2 ^ -1)) {
+          if (param6 > param2) {
             L2: {
-              stackOut_32_0 = cn.field_e;
-              stackIn_34_0 = stackOut_32_0;
-              stackIn_33_0 = stackOut_32_0;
+              stackOut_35_0 = cn.field_e;
+              stackIn_37_0 = stackOut_35_0;
+              stackIn_36_0 = stackOut_35_0;
               if (-1 == param2) {
-                stackOut_34_0 = (nh[][]) (Object) stackIn_34_0;
-                stackOut_34_1 = 1;
-                stackIn_35_0 = stackOut_34_0;
-                stackIn_35_1 = stackOut_34_1;
+                stackOut_37_0 = (nh[][]) (Object) stackIn_37_0;
+                stackOut_37_1 = 1;
+                stackIn_38_0 = stackOut_37_0;
+                stackIn_38_1 = stackOut_37_1;
                 break L2;
               } else {
-                stackOut_33_0 = (nh[][]) (Object) stackIn_33_0;
-                stackOut_33_1 = param2 + 4;
-                stackIn_35_0 = stackOut_33_0;
-                stackIn_35_1 = stackOut_33_1;
+                stackOut_36_0 = (nh[][]) (Object) stackIn_36_0;
+                stackOut_36_1 = param2 + 4;
+                stackIn_38_0 = stackOut_36_0;
+                stackIn_38_1 = stackOut_36_1;
                 break L2;
               }
             }
             L3: {
-              var17 = stackIn_35_0[stackIn_35_1];
+              var17 = stackIn_38_0[stackIn_38_1];
               var19 = var17;
               var8 = var19;
               var9 = 1;
@@ -310,7 +270,7 @@ class lk extends ml implements dm {
                   var10 = 0;
                   L5: while (true) {
                     L6: {
-                      if ((var10 ^ -1) <= (-1 + var17.length ^ -1)) {
+                      if (var10 >= -1 + var17.length) {
                         break L6;
                       } else {
                         if (-1 != (lo.field_a[(param4 - -var10) / 8] & 1 << (7 & param4 + var10) ^ -1)) {
@@ -334,16 +294,16 @@ class lk extends ml implements dm {
               L8: {
                 if (0 != (param2 ^ -1)) {
                   var19 = var8;
-                  stackOut_52_0 = var19.length + -1;
-                  stackIn_53_0 = stackOut_52_0;
+                  stackOut_55_0 = var19.length + -1;
+                  stackIn_56_0 = stackOut_55_0;
                   break L8;
                 } else {
-                  stackOut_51_0 = cl.field_f.length;
-                  stackIn_53_0 = stackOut_51_0;
+                  stackOut_54_0 = cl.field_f.length;
+                  stackIn_56_0 = stackOut_54_0;
                   break L8;
                 }
               }
-              if (stackIn_53_0 <= var11) {
+              if (stackIn_56_0 <= var11) {
                 if (var10 == 0) {
                   var11 = 0;
                   L9: while (true) {
@@ -397,67 +357,63 @@ class lk extends ml implements dm {
                   var13 = var8[var11 + 1];
                   if (param0) {
                     L14: {
-                      L15: {
-                        if (var13.field_zb) {
-                          break L15;
-                        } else {
-                          L16: {
-                            if (var9 == 0) {
-                              break L16;
-                            } else {
-                              if (!var13.field_S) {
-                                break L16;
-                              } else {
-                                break L15;
-                              }
-                            }
+                      if (!var13.field_zb) {
+                        if (var9 != 0) {
+                          if (var13.field_S) {
+                            stackOut_78_0 = 1;
+                            stackIn_80_0 = stackOut_78_0;
+                            break L14;
+                          } else {
+                            stackOut_77_0 = 0;
+                            stackIn_80_0 = stackOut_77_0;
+                            break L14;
                           }
-                          stackOut_74_0 = 0;
-                          stackIn_75_0 = stackOut_74_0;
+                        } else {
+                          stackOut_75_0 = 0;
+                          stackIn_80_0 = stackOut_75_0;
                           break L14;
                         }
+                      } else {
+                        stackOut_73_0 = 1;
+                        stackIn_80_0 = stackOut_73_0;
+                        break L14;
                       }
-                      stackOut_73_0 = 1;
-                      stackIn_75_0 = stackOut_73_0;
-                      break L14;
                     }
-                    var12 = stackIn_75_0;
+                    var12 = stackIn_80_0;
                     break L12;
                   } else {
-                    L17: {
-                      if (0 == (param2 ^ -1)) {
-                        if ((cl.field_f[var11] ^ -1) != (qb.field_N.field_rc ^ -1)) {
-                          stackOut_67_0 = 0;
-                          stackIn_68_0 = stackOut_67_0;
-                          break L17;
+                    if (0 == (param2 ^ -1)) {
+                      L15: {
+                        if (cl.field_f[var11] != qb.field_N.field_rc) {
+                          stackOut_70_0 = 0;
+                          stackIn_71_0 = stackOut_70_0;
+                          break L15;
                         } else {
-                          stackOut_66_0 = 1;
-                          stackIn_68_0 = stackOut_66_0;
-                          break L17;
-                        }
-                      } else {
-                        if (var11 != (255 & qb.field_N.field_sc[param2])) {
-                          stackOut_64_0 = 0;
-                          stackIn_68_0 = stackOut_64_0;
-                          break L17;
-                        } else {
-                          stackOut_63_0 = 1;
-                          stackIn_68_0 = stackOut_63_0;
-                          break L17;
+                          stackOut_69_0 = 1;
+                          stackIn_71_0 = stackOut_69_0;
+                          break L15;
                         }
                       }
+                      var12 = stackIn_71_0;
+                      break L12;
+                    } else {
+                      if (var11 != (255 & qb.field_N.field_sc[param2])) {
+                        var12 = 0;
+                        break L12;
+                      } else {
+                        var12 = 1;
+                        break L12;
+                      }
                     }
-                    var12 = stackIn_68_0;
-                    break L12;
                   }
                 }
-                L18: {
+                L16: {
                   if (var12 != 0) {
                     lk.a(param0, (byte) -120, param2 - -1, param3, param4, param5, param6, param7);
                     var10 = 1;
-                    break L18;
+                    break L16;
                   } else {
-                    break L18;
+                    break L16;
                   }
                 }
                 if (nn.field_R) {
@@ -471,8 +427,8 @@ class lk extends ml implements dm {
           } else {
             var8_int = 1;
             var9 = 0;
-            L19: while (true) {
-              if ((var9 ^ -1) <= (uj.field_s.length ^ -1)) {
+            L17: while (true) {
+              if (var9 >= uj.field_s.length) {
                 if (var8_int != 0) {
                   nn.field_R = true;
                   break L1;
@@ -487,84 +443,86 @@ class lk extends ml implements dm {
                 var10_ref_int__ = var18;
                 var11 = 0;
                 var12 = 0;
-                L20: while (true) {
-                  L21: {
-                    if ((var12 ^ -1) <= (var22.length ^ -1)) {
-                      L22: {
-                        if (var11 != 0) {
-                          break L22;
+                L18: while (true) {
+                  if (var12 >= var22.length) {
+                    L19: {
+                      if (var11 != 0) {
+                        break L19;
+                      } else {
+                        if (hg.field_k == param2) {
+                          break L19;
                         } else {
-                          if ((hg.field_k ^ -1) == (param2 ^ -1)) {
-                            break L22;
-                          } else {
-                            break L21;
-                          }
+                          var9++;
+                          continue L17;
                         }
                       }
-                      var8_int = 0;
-                      var12 = 0;
-                      L23: while (true) {
-                        if (var12 >= var22.length) {
+                    }
+                    var8_int = 0;
+                    var12 = 0;
+                    L20: while (true) {
+                      if (var12 < var22.length) {
+                        var13_int = var22[var12];
+                        if (0 != (var13_int ^ -1)) {
+                          if (param2 > var13_int) {
+                            rh.field_G[var13_int] = true;
+                            var12 += 2;
+                            continue L20;
+                          } else {
+                            var12 += 2;
+                            continue L20;
+                          }
+                        } else {
+                          n.field_P = true;
+                          var12 += 2;
+                          continue L20;
+                        }
+                      } else {
+                        var9++;
+                        continue L17;
+                      }
+                    }
+                  } else {
+                    L21: {
+                      var13_int = var22[var12];
+                      var14 = var10_ref_int__[1 + var12];
+                      if (-1 == var13_int) {
+                        if (cl.field_f[param5] != var14) {
                           break L21;
                         } else {
-                          L24: {
-                            var13_int = var22[var12];
-                            if (0 != (var13_int ^ -1)) {
-                              if ((param2 ^ -1) < (var13_int ^ -1)) {
-                                rh.field_G[var13_int] = true;
-                                break L24;
-                              } else {
-                                break L24;
-                              }
+                          var12 += 2;
+                          continue L18;
+                        }
+                      } else {
+                        L22: {
+                          if (param2 != var13_int) {
+                            break L22;
+                          } else {
+                            if (param7 != var14) {
+                              break L22;
                             } else {
-                              n.field_P = true;
-                              break L24;
+                              var11 = 1;
+                              var12 += 2;
+                              continue L18;
                             }
                           }
-                          var12 += 2;
-                          continue L23;
                         }
-                      }
-                    } else {
-                      L25: {
-                        var13_int = var22[var12];
-                        var14 = var10_ref_int__[1 + var12];
-                        if (-1 == var13_int) {
-                          if (cl.field_f[param5] == var14) {
-                            break L25;
-                          } else {
+                        if (var13_int < param2) {
+                          if ((255 & eg.field_K[var13_int]) != var14) {
                             break L21;
+                          } else {
+                            var12 += 2;
+                            continue L18;
                           }
                         } else {
-                          L26: {
-                            if (param2 != var13_int) {
-                              break L26;
-                            } else {
-                              if (param7 != var14) {
-                                break L26;
-                              } else {
-                                var11 = 1;
-                                break L25;
-                              }
-                            }
-                          }
-                          if ((var13_int ^ -1) <= (param2 ^ -1)) {
-                            break L21;
-                          } else {
-                            if ((255 & eg.field_K[var13_int]) == var14) {
-                              break L25;
-                            } else {
-                              break L21;
-                            }
-                          }
+                          var9++;
+                          continue L17;
                         }
                       }
-                      var12 += 2;
-                      continue L20;
                     }
+                    var12 = var12;
+                    var9++;
+                    continue L17;
                   }
-                  var9++;
-                  continue L19;
                 }
               }
             }

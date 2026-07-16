@@ -89,8 +89,9 @@ final class kl implements Iterable {
         ((kl) this).field_a = param0;
         ((kl) this).field_e = new fa[param0];
         for (var2 = 0; param0 > var2; var2++) {
-            var3 = new fa();
-            ((kl) this).field_e[var2] = new fa();
+            fa dupTemp$0 = new fa();
+            var3 = dupTemp$0;
+            ((kl) this).field_e[var2] = dupTemp$0;
             var3.field_a = var3;
             var3.field_h = var3;
         }
@@ -99,8 +100,9 @@ final class kl implements Iterable {
     final static void a(byte param0) {
         if (7500 <= jd.field_r) {
           L0: {
+            int fieldTemp$2 = ko.field_hb + 1;
             ko.field_hb = ko.field_hb + 1;
-            if (ko.field_hb + 1 == jm.field_g.length) {
+            if (fieldTemp$2 == jm.field_g.length) {
               ko.field_hb = 0;
               break L0;
             } else {

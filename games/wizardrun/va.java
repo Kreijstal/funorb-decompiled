@@ -11,15 +11,18 @@ class va extends wl {
     static ji field_j;
 
     final void a(int param0, boolean param1) {
+        int fieldTemp$0 = ((va) this).field_m;
         ((va) this).field_m = ((va) this).field_m + 1;
-        ((va) this).field_k[((va) this).field_m] = (byte)(param0 >> 654986384);
+        ((va) this).field_k[fieldTemp$0] = (byte)(param0 >> 654986384);
+        int fieldTemp$1 = ((va) this).field_m;
         ((va) this).field_m = ((va) this).field_m + 1;
-        ((va) this).field_k[((va) this).field_m] = (byte)(param0 >> 727059944);
+        ((va) this).field_k[fieldTemp$1] = (byte)(param0 >> 727059944);
         if (param1) {
             field_l = null;
         }
+        int fieldTemp$2 = ((va) this).field_m;
         ((va) this).field_m = ((va) this).field_m + 1;
-        ((va) this).field_k[((va) this).field_m] = (byte)param0;
+        ((va) this).field_k[fieldTemp$2] = (byte)param0;
     }
 
     final void a(String param0, int param1) {
@@ -108,8 +111,9 @@ class va extends wl {
         int var7 = wizardrun.field_H;
         int var5 = -119 % ((-47 - param3) / 41);
         for (var6 = param1; param2 + param1 > var6; var6++) {
+            int fieldTemp$0 = ((va) this).field_m;
             ((va) this).field_m = ((va) this).field_m + 1;
-            ((va) this).field_k[((va) this).field_m] = param0[var6];
+            ((va) this).field_k[fieldTemp$0] = param0[var6];
         }
     }
 
@@ -119,8 +123,9 @@ class va extends wl {
         }
         int var2 = ((va) this).field_m;
         while (true) {
+            int fieldTemp$0 = ((va) this).field_m;
             ((va) this).field_m = ((va) this).field_m + 1;
-            if (((va) this).field_k[((va) this).field_m] == 0) {
+            if (((va) this).field_k[fieldTemp$0] == 0) {
                 break;
             }
         }
@@ -132,8 +137,9 @@ class va extends wl {
     }
 
     final void b(byte param0, int param1) {
+        int fieldTemp$0 = ((va) this).field_m;
         ((va) this).field_m = ((va) this).field_m + 1;
-        ((va) this).field_k[((va) this).field_m] = (byte)param1;
+        ((va) this).field_k[fieldTemp$0] = (byte)param1;
         if (param0 != 11) {
             field_i = null;
         }
@@ -142,8 +148,9 @@ class va extends wl {
     final void b(int param0, long param1) {
         Object var5 = null;
         L0: {
+          int fieldTemp$8 = ((va) this).field_m;
           ((va) this).field_m = ((va) this).field_m + 1;
-          ((va) this).field_k[((va) this).field_m] = (byte)(int)(param1 >> -195708040);
+          ((va) this).field_k[fieldTemp$8] = (byte)(int)(param1 >> -195708040);
           if (param0 == 1290648728) {
             break L0;
           } else {
@@ -152,20 +159,27 @@ class va extends wl {
             break L0;
           }
         }
+        int fieldTemp$9 = ((va) this).field_m;
         ((va) this).field_m = ((va) this).field_m + 1;
-        ((va) this).field_k[((va) this).field_m] = (byte)(int)(param1 >> 1088471216);
+        ((va) this).field_k[fieldTemp$9] = (byte)(int)(param1 >> 1088471216);
+        int fieldTemp$10 = ((va) this).field_m;
         ((va) this).field_m = ((va) this).field_m + 1;
-        ((va) this).field_k[((va) this).field_m] = (byte)(int)(param1 >> -1278008792);
+        ((va) this).field_k[fieldTemp$10] = (byte)(int)(param1 >> -1278008792);
+        int fieldTemp$11 = ((va) this).field_m;
         ((va) this).field_m = ((va) this).field_m + 1;
-        ((va) this).field_k[((va) this).field_m] = (byte)(int)(param1 >> -244826912);
+        ((va) this).field_k[fieldTemp$11] = (byte)(int)(param1 >> -244826912);
+        int fieldTemp$12 = ((va) this).field_m;
         ((va) this).field_m = ((va) this).field_m + 1;
-        ((va) this).field_k[((va) this).field_m] = (byte)(int)(param1 >> 1290648728);
+        ((va) this).field_k[fieldTemp$12] = (byte)(int)(param1 >> 1290648728);
+        int fieldTemp$13 = ((va) this).field_m;
         ((va) this).field_m = ((va) this).field_m + 1;
-        ((va) this).field_k[((va) this).field_m] = (byte)(int)(param1 >> 1799809936);
+        ((va) this).field_k[fieldTemp$13] = (byte)(int)(param1 >> 1799809936);
+        int fieldTemp$14 = ((va) this).field_m;
         ((va) this).field_m = ((va) this).field_m + 1;
-        ((va) this).field_k[((va) this).field_m] = (byte)(int)(param1 >> -79645368);
+        ((va) this).field_k[fieldTemp$14] = (byte)(int)(param1 >> -79645368);
+        int fieldTemp$15 = ((va) this).field_m;
         ((va) this).field_m = ((va) this).field_m + 1;
-        ((va) this).field_k[((va) this).field_m] = (byte)(int)param1;
+        ((va) this).field_k[fieldTemp$15] = (byte)(int)param1;
     }
 
     final void a(boolean param0, int[] param1, int param2, int param3) {
@@ -189,8 +203,9 @@ class va extends wl {
             var11 = -1640531527;
             var12 = 32;
             while (true) {
+                int incrementValue$0 = var12;
                 var12--;
-                if (0 >= var12) {
+                if (0 >= incrementValue$0) {
                     break;
                 }
                 var9 = var9 - (param1[1470103555 & var10 >>> -1065531925] + var10 ^ (var8 << -126492316 ^ var8 >>> 1710370149) - -var8);
@@ -206,12 +221,12 @@ class va extends wl {
 
     final void d(int param0, int param1) {
         if ((param1 ^ -1) > -65) {
-            if (!(param1 > 63)) {
+            if (!((param1 ^ -1) > 63)) {
                 ((va) this).b((byte) 11, 64 + param1);
                 return;
             }
         }
-        if (-16385 > param1) {
+        if (-16385 < (param1 ^ -1)) {
             if (!(16383 < (param1 ^ -1))) {
                 ((va) this).b(-1947079288, 49152 + param1);
                 return;
@@ -279,10 +294,12 @@ class va extends wl {
     }
 
     final void b(int param0, int param1) {
+        int fieldTemp$0 = ((va) this).field_m;
         ((va) this).field_m = ((va) this).field_m + 1;
-        ((va) this).field_k[((va) this).field_m] = (byte)(param1 >> -1947079288);
+        ((va) this).field_k[fieldTemp$0] = (byte)(param1 >> -1947079288);
+        int fieldTemp$1 = ((va) this).field_m;
         ((va) this).field_m = ((va) this).field_m + 1;
-        ((va) this).field_k[((va) this).field_m] = (byte)param1;
+        ((va) this).field_k[fieldTemp$1] = (byte)param1;
         if (param0 != -1947079288) {
             field_j = null;
         }
@@ -292,8 +309,9 @@ class va extends wl {
         if (param0 != 255) {
             field_l = null;
         }
+        int fieldTemp$0 = ((va) this).field_m;
         ((va) this).field_m = ((va) this).field_m + 1;
-        return 255 & ((va) this).field_k[((va) this).field_m];
+        return 255 & ((va) this).field_k[fieldTemp$0];
     }
 
     final void a(boolean param0, int param1, byte[] param2, int param3) {
@@ -303,8 +321,9 @@ class va extends wl {
             return;
         }
         for (var5 = param3; var5 < param3 - -param1; var5++) {
+            int fieldTemp$0 = ((va) this).field_m;
             ((va) this).field_m = ((va) this).field_m + 1;
-            param2[var5] = ((va) this).field_k[((va) this).field_m];
+            param2[var5] = ((va) this).field_k[fieldTemp$0];
         }
     }
 
@@ -318,13 +337,15 @@ class va extends wl {
         if (param1) {
             return;
         }
+        int fieldTemp$0 = ((va) this).field_m;
         ((va) this).field_m = ((va) this).field_m + 1;
-        ((va) this).field_k[((va) this).field_m] = (byte) 0;
+        ((va) this).field_k[fieldTemp$0] = (byte) 0;
     }
 
     final String h(int param0) {
+        int fieldTemp$0 = ((va) this).field_m;
         ((va) this).field_m = ((va) this).field_m + 1;
-        int var2 = ((va) this).field_k[((va) this).field_m];
+        int var2 = ((va) this).field_k[fieldTemp$0];
         if (param0 != 727059944) {
             return null;
         }
@@ -333,8 +354,9 @@ class va extends wl {
         }
         int var3 = ((va) this).field_m;
         while (true) {
+            int fieldTemp$1 = ((va) this).field_m;
             ((va) this).field_m = ((va) this).field_m + 1;
-            if (((va) this).field_k[((va) this).field_m] == 0) {
+            if (((va) this).field_k[fieldTemp$1] == 0) {
                 break;
             }
         }
@@ -390,8 +412,9 @@ class va extends wl {
             String discarded$0 = ((va) this).d(-54);
         }
         while (((va) this).field_m < param0) {
+            int fieldTemp$1 = ((va) this).field_m;
             ((va) this).field_m = ((va) this).field_m + 1;
-            ((va) this).field_k[((va) this).field_m] = (byte) 0;
+            ((va) this).field_k[fieldTemp$1] = (byte) 0;
         }
     }
 
@@ -408,26 +431,32 @@ class va extends wl {
         if (!(param0 > var3)) {
             throw new IllegalArgumentException("");
         }
+        int fieldTemp$0 = ((va) this).field_m;
         ((va) this).field_m = ((va) this).field_m + 1;
-        ((va) this).field_k[((va) this).field_m] = (byte) 0;
+        ((va) this).field_k[fieldTemp$0] = (byte) 0;
         CharSequence var4 = (CharSequence) (Object) param1;
         ((va) this).field_m = ((va) this).field_m + pg.a(8220, ((va) this).field_k, 0, var4, ((va) this).field_m, param1.length());
+        int fieldTemp$1 = ((va) this).field_m;
         ((va) this).field_m = ((va) this).field_m + 1;
-        ((va) this).field_k[((va) this).field_m] = (byte) 0;
+        ((va) this).field_k[fieldTemp$1] = (byte) 0;
     }
 
     final void f(int param0, int param1) {
+        int fieldTemp$0 = ((va) this).field_m;
         ((va) this).field_m = ((va) this).field_m + 1;
-        ((va) this).field_k[((va) this).field_m] = (byte)(param0 >> 613003928);
+        ((va) this).field_k[fieldTemp$0] = (byte)(param0 >> 613003928);
+        int fieldTemp$1 = ((va) this).field_m;
         ((va) this).field_m = ((va) this).field_m + 1;
-        ((va) this).field_k[((va) this).field_m] = (byte)(param0 >> 617378768);
+        ((va) this).field_k[fieldTemp$1] = (byte)(param0 >> 617378768);
+        int fieldTemp$2 = ((va) this).field_m;
         ((va) this).field_m = ((va) this).field_m + 1;
-        ((va) this).field_k[((va) this).field_m] = (byte)(param0 >> 196155528);
+        ((va) this).field_k[fieldTemp$2] = (byte)(param0 >> 196155528);
         if (param1 != 613003928) {
             return;
         }
+        int fieldTemp$3 = ((va) this).field_m;
         ((va) this).field_m = ((va) this).field_m + 1;
-        ((va) this).field_k[((va) this).field_m] = (byte)param0;
+        ((va) this).field_k[fieldTemp$3] = (byte)param0;
     }
 
     final void a(boolean param0, int[] param1) {
@@ -449,8 +478,9 @@ class va extends wl {
             var8 = -1640531527;
             var9 = 32;
             while (true) {
+                int incrementValue$0 = var9;
                 var9--;
-                if (var9 <= 0) {
+                if (incrementValue$0 <= 0) {
                     break;
                 }
                 var5 = var5 + (var7 - -param1[var7 & 3] ^ (var6 << -945565660 ^ var6 >>> -906239355) + var6);
@@ -485,16 +515,21 @@ class va extends wl {
     }
 
     final void a(long param0, byte param1) {
+        int fieldTemp$0 = ((va) this).field_m;
         ((va) this).field_m = ((va) this).field_m + 1;
-        ((va) this).field_k[((va) this).field_m] = (byte)(int)(param0 >> 579952544);
+        ((va) this).field_k[fieldTemp$0] = (byte)(int)(param0 >> 579952544);
+        int fieldTemp$1 = ((va) this).field_m;
         ((va) this).field_m = ((va) this).field_m + 1;
-        ((va) this).field_k[((va) this).field_m] = (byte)(int)(param0 >> -2059590376);
+        ((va) this).field_k[fieldTemp$1] = (byte)(int)(param0 >> -2059590376);
+        int fieldTemp$2 = ((va) this).field_m;
         ((va) this).field_m = ((va) this).field_m + 1;
-        ((va) this).field_k[((va) this).field_m] = (byte)(int)(param0 >> 93344400);
+        ((va) this).field_k[fieldTemp$2] = (byte)(int)(param0 >> 93344400);
+        int fieldTemp$3 = ((va) this).field_m;
         ((va) this).field_m = ((va) this).field_m + 1;
-        ((va) this).field_k[((va) this).field_m] = (byte)(int)(param0 >> 1271166344);
+        ((va) this).field_k[fieldTemp$3] = (byte)(int)(param0 >> 1271166344);
+        int fieldTemp$4 = ((va) this).field_m;
         ((va) this).field_m = ((va) this).field_m + 1;
-        ((va) this).field_k[((va) this).field_m] = (byte)(int)param0;
+        ((va) this).field_k[fieldTemp$4] = (byte)(int)param0;
         if (param1 <= 101) {
             field_j = null;
         }
@@ -504,8 +539,9 @@ class va extends wl {
         if (param0 != 0) {
             ((va) this).field_m = 10;
         }
+        int fieldTemp$0 = ((va) this).field_m;
         ((va) this).field_m = ((va) this).field_m + 1;
-        return ((va) this).field_k[((va) this).field_m];
+        return ((va) this).field_k[fieldTemp$0];
     }
 
     final int j(int param0) {
@@ -537,20 +573,27 @@ class va extends wl {
         if (param0 != -17729) {
             return;
         }
+        int fieldTemp$0 = ((va) this).field_m;
         ((va) this).field_m = ((va) this).field_m + 1;
-        ((va) this).field_k[((va) this).field_m] = (byte)(int)(param1 >> -869651216);
+        ((va) this).field_k[fieldTemp$0] = (byte)(int)(param1 >> -869651216);
+        int fieldTemp$1 = ((va) this).field_m;
         ((va) this).field_m = ((va) this).field_m + 1;
-        ((va) this).field_k[((va) this).field_m] = (byte)(int)(param1 >> -724284184);
+        ((va) this).field_k[fieldTemp$1] = (byte)(int)(param1 >> -724284184);
+        int fieldTemp$2 = ((va) this).field_m;
         ((va) this).field_m = ((va) this).field_m + 1;
-        ((va) this).field_k[((va) this).field_m] = (byte)(int)(param1 >> -968117280);
+        ((va) this).field_k[fieldTemp$2] = (byte)(int)(param1 >> -968117280);
+        int fieldTemp$3 = ((va) this).field_m;
         ((va) this).field_m = ((va) this).field_m + 1;
-        ((va) this).field_k[((va) this).field_m] = (byte)(int)(param1 >> -1061967208);
+        ((va) this).field_k[fieldTemp$3] = (byte)(int)(param1 >> -1061967208);
+        int fieldTemp$4 = ((va) this).field_m;
         ((va) this).field_m = ((va) this).field_m + 1;
-        ((va) this).field_k[((va) this).field_m] = (byte)(int)(param1 >> -1182887024);
+        ((va) this).field_k[fieldTemp$4] = (byte)(int)(param1 >> -1182887024);
+        int fieldTemp$5 = ((va) this).field_m;
         ((va) this).field_m = ((va) this).field_m + 1;
-        ((va) this).field_k[((va) this).field_m] = (byte)(int)(param1 >> -721628152);
+        ((va) this).field_k[fieldTemp$5] = (byte)(int)(param1 >> -721628152);
+        int fieldTemp$6 = ((va) this).field_m;
         ((va) this).field_m = ((va) this).field_m + 1;
-        ((va) this).field_k[((va) this).field_m] = (byte)(int)param1;
+        ((va) this).field_k[fieldTemp$6] = (byte)(int)param1;
     }
 
     final void a(java.math.BigInteger param0, int param1, java.math.BigInteger param2) {
@@ -571,16 +614,18 @@ class va extends wl {
 
     final int f(byte param0) {
         int var4 = wizardrun.field_H;
+        int fieldTemp$0 = ((va) this).field_m;
         ((va) this).field_m = ((va) this).field_m + 1;
-        int var2 = ((va) this).field_k[((va) this).field_m];
+        int var2 = ((va) this).field_k[fieldTemp$0];
         if (param0 != -90) {
             field_l = null;
         }
         int var3 = 0;
         while (var2 < 0) {
             var3 = (var2 & 127 | var3) << -1473799097;
+            int fieldTemp$1 = ((va) this).field_m;
             ((va) this).field_m = ((va) this).field_m + 1;
-            var2 = ((va) this).field_k[((va) this).field_m];
+            var2 = ((va) this).field_k[fieldTemp$1];
         }
         return var3 | var2;
     }

@@ -130,30 +130,42 @@ final class ha {
     }
 
     final oa a(int param0, int param1, boolean param2, gl param3, gl param4) {
-        if (!(null != ((ha) this).field_c)) {
-            throw new RuntimeException();
-        }
-        if (0 <= param1) {
-            // if_icmple L36
+        int var6 = 0;
+        int var7 = 0;
+        oa var9 = null;
+        byte[] var11 = null;
+        if (null == ((ha) this).field_c) {
+          throw new RuntimeException();
         } else {
-            throw new RuntimeException();
+          L0: {
+            if (0 > param1) {
+              break L0;
+            } else {
+              if (((ha) this).field_b.length <= param1) {
+                break L0;
+              } else {
+                if (null == ((ha) this).field_b[param1]) {
+                  ((ha) this).field_c.field_l = param0 * param1 + 6;
+                  var6 = ((ha) this).field_c.d((byte) 120);
+                  var7 = ((ha) this).field_c.d((byte) 114);
+                  var11 = new byte[64];
+                  ((ha) this).field_c.a(0, 64, true, var11);
+                  var9 = new oa(param1, param4, param3, ((ha) this).field_f, ((ha) this).field_i, var6, var11, var7, param2);
+                  ((ha) this).field_b[param1] = var9;
+                  return var9;
+                } else {
+                  return ((ha) this).field_b[param1];
+                }
+              }
+            }
+          }
+          throw new RuntimeException();
         }
-        if (null != ((ha) this).field_b[param1]) {
-            return ((ha) this).field_b[param1];
-        }
-        ((ha) this).field_c.field_l = param0 * param1 + 6;
-        int var6 = ((ha) this).field_c.d((byte) 120);
-        int var7 = ((ha) this).field_c.d((byte) 114);
-        byte[] var11 = new byte[64];
-        ((ha) this).field_c.a(0, 64, true, var11);
-        oa var9 = new oa(param1, param4, param3, ((ha) this).field_f, ((ha) this).field_i, var6, var11, var7, param2);
-        ((ha) this).field_b[param1] = var9;
-        return var9;
     }
 
     final static int a(int param0, int param1, int param2) {
         int var3 = 86 % ((param1 - 19) / 49);
-        if (-1 == param2) {
+        if (-1 == (param2 ^ -1)) {
             if (param0 == 0) {
                 return 0;
             }
@@ -163,7 +175,7 @@ final class ha {
             return -2048;
         }
         if (0 > param2) {
-            if (-1 == param0) {
+            if (-1 == (param0 ^ -1)) {
                 return 4096;
             }
             if (0 > param0) {
@@ -271,7 +283,7 @@ final class ha {
         int var3 = 0;
         byte[] var4 = null;
         byte[] var5 = null;
-        java.math.BigInteger var7_ref = null;
+        java.math.BigInteger var7_ref_java_math_BigInteger = null;
         int var7 = 0;
         int var8 = 0;
         jc var10 = null;
@@ -323,8 +335,8 @@ final class ha {
                     break L3;
                   } else {
                     var12 = new java.math.BigInteger(var16);
-                    var7_ref = var12.modPow(((ha) this).field_j, ((ha) this).field_a);
-                    var5 = var7_ref.toByteArray();
+                    var7_ref_java_math_BigInteger = var12.modPow(((ha) this).field_j, ((ha) this).field_a);
+                    var5 = var7_ref_java_math_BigInteger.toByteArray();
                     break L2;
                   }
                 }

@@ -60,7 +60,7 @@ class lb extends rh {
                 } else {
                   if (param1 <= 126) {
                     L2: {
-                      if (((lb) this).field_N == ((lb) this).field_Q) {
+                      if ((((lb) this).field_N ^ -1) == (((lb) this).field_Q ^ -1)) {
                         break L2;
                       } else {
                         this.j(29388);
@@ -72,7 +72,7 @@ class lb extends rh {
                         if (((lb) this).field_J == -1) {
                           break L4;
                         } else {
-                          if (((lb) this).field_s.length() < ((lb) this).field_J) {
+                          if ((((lb) this).field_s.length() ^ -1) > (((lb) this).field_J ^ -1)) {
                             break L4;
                           } else {
                             break L3;
@@ -87,8 +87,9 @@ class lb extends rh {
                           break L5;
                         } else {
                           ((lb) this).field_s = ((lb) this).field_s + param1;
-                          ((lb) this).field_Q = ((lb) this).field_s.length();
-                          ((lb) this).field_N = ((lb) this).field_s.length();
+                          int dupTemp$1 = ((lb) this).field_s.length();
+                          ((lb) this).field_Q = dupTemp$1;
+                          ((lb) this).field_N = dupTemp$1;
                           break L5;
                         }
                       }
@@ -104,11 +105,11 @@ class lb extends rh {
               L6: {
                 if (param3 != 85) {
                   if ((param3 ^ -1) == -102) {
-                    if (((lb) this).field_Q != ((lb) this).field_N) {
+                    if ((((lb) this).field_Q ^ -1) != (((lb) this).field_N ^ -1)) {
                       this.j(29388);
                       return true;
                     } else {
-                      if (((lb) this).field_Q >= ((lb) this).field_s.length()) {
+                      if ((((lb) this).field_Q ^ -1) <= (((lb) this).field_s.length() ^ -1)) {
                         break L6;
                       } else {
                         ((lb) this).field_N = 1 + ((lb) this).field_Q;
@@ -131,12 +132,12 @@ class lb extends rh {
                               this.a(-19166, ((lb) this).field_s.length());
                               return true;
                             } else {
-                              if (param3 != -85) {
+                              if ((param3 ^ -1) != -85) {
                                 L7: {
                                   if (!ni.field_m[82]) {
                                     break L7;
                                   } else {
-                                    if (-66 == param3) {
+                                    if (-66 == (param3 ^ -1)) {
                                       this.d((byte) 13);
                                       return true;
                                     } else {
@@ -241,7 +242,7 @@ class lb extends rh {
                     }
                   }
                 } else {
-                  if (((lb) this).field_N == ((lb) this).field_Q) {
+                  if ((((lb) this).field_N ^ -1) == (((lb) this).field_Q ^ -1)) {
                     if (((lb) this).field_Q <= 0) {
                       break L6;
                     } else {
@@ -276,14 +277,20 @@ class lb extends rh {
             int var3 = 0;
             Throwable decompiledCaughtException = null;
             try {
-              var3 = -49 % ((-7 - param0) / 53);
-              var2 = (String) java.awt.Toolkit.getDefaultToolkit().getSystemClipboard().getContents((Object) null).getTransferData(java.awt.datatransfer.DataFlavor.stringFlavor);
-              this.j(29388);
-              this.a(0, var2);
-            } catch (java.lang.Exception decompiledCaughtParameter) {
-              decompiledCaughtException = decompiledCaughtParameter;
+              L0: {
+                var3 = -49 % ((-7 - param0) / 53);
+                var2 = (String) java.awt.Toolkit.getDefaultToolkit().getSystemClipboard().getContents((Object) null).getTransferData(java.awt.datatransfer.DataFlavor.stringFlavor);
+                this.j(29388);
+                this.a(0, var2);
+                break L0;
+              }
+            } catch (java.lang.Exception decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              L1: {
+                var2_ref = (Exception) (Object) decompiledCaughtException;
+                break L1;
+              }
             }
-            var2_ref = (Exception) (Object) decompiledCaughtException;
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
@@ -362,8 +369,9 @@ class lb extends rh {
                 ((lb) this).field_s = ((lb) this).field_s.substring(0, ((lb) this).field_J);
             }
         }
-        ((lb) this).field_N = ((lb) this).field_s.length();
-        ((lb) this).field_Q = ((lb) this).field_s.length();
+        int dupTemp$0 = ((lb) this).field_s.length();
+        ((lb) this).field_N = dupTemp$0;
+        ((lb) this).field_Q = dupTemp$0;
         if (!(param0)) {
             ((lb) this).b(true);
         }
@@ -398,30 +406,64 @@ class lb extends rh {
 
     private final int k(int param0) {
         int var2 = 0;
-        int var3 = TrackController.field_F ? 1 : 0;
-        if (0 == ((lb) this).field_Q) {
-            return ((lb) this).field_Q;
+        int var3 = 0;
+        var3 = TrackController.field_F ? 1 : 0;
+        if (0 != ((lb) this).field_Q) {
+          var2 = param0 + ((lb) this).field_Q;
+          L0: while (true) {
+            L1: {
+              if (-1 <= (var2 ^ -1)) {
+                break L1;
+              } else {
+                if (-33 == (((lb) this).field_s.charAt(-1 + var2) ^ -1)) {
+                  break L1;
+                } else {
+                  var2--;
+                  continue L0;
+                }
+              }
+            }
+            return var2;
+          }
+        } else {
+          return ((lb) this).field_Q;
         }
-        for (var2 = param0 + ((lb) this).field_Q; -1 > var2; var2--) {
-            // if_icmpeq L50
-        }
-        return var2;
     }
 
     private final int r(int param0) {
+        int var2 = 0;
         int var3 = 0;
-        int var4 = TrackController.field_F ? 1 : 0;
-        int var2 = ((lb) this).field_s.length();
-        if (((lb) this).field_Q == var2) {
-            return ((lb) this).field_Q;
+        int var4 = 0;
+        var4 = TrackController.field_F ? 1 : 0;
+        var2 = ((lb) this).field_s.length();
+        if (((lb) this).field_Q != var2) {
+          L0: {
+            if (param0 == 0) {
+              break L0;
+            } else {
+              lb.o(54);
+              break L0;
+            }
+          }
+          var3 = 1 + ((lb) this).field_Q;
+          L1: while (true) {
+            L2: {
+              if (var3 >= var2) {
+                break L2;
+              } else {
+                if (32 == ((lb) this).field_s.charAt(-1 + var3)) {
+                  break L2;
+                } else {
+                  var3++;
+                  continue L1;
+                }
+              }
+            }
+            return var3;
+          }
+        } else {
+          return ((lb) this).field_Q;
         }
-        if (param0 != 0) {
-            lb.o(54);
-        }
-        for (var3 = 1 + ((lb) this).field_Q; var3 < var2; var3++) {
-            // if_icmpeq L71
-        }
-        return var3;
     }
 
     private final void a(int param0, String param1) {

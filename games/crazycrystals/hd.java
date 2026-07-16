@@ -9,7 +9,6 @@ final class hd {
 
     final static void a(boolean param0) {
         pe var1 = null;
-        pe var1_ref = null;
         if (param0) {
           L0: {
             field_b = null;
@@ -17,12 +16,12 @@ final class hd {
             if (var1 != null) {
               break L0;
             } else {
-              var1_ref = new pe();
+              var1 = new pe();
               break L0;
             }
           }
-          var1_ref.a(kh.field_l, kh.field_i, kh.field_d, -26690, kh.field_g, kh.field_j, kh.field_c, kh.field_b);
-          ok.field_a.b(0, (jb) (Object) var1_ref);
+          var1.a(kh.field_l, kh.field_i, kh.field_d, -26690, kh.field_g, kh.field_j, kh.field_c, kh.field_b);
+          ok.field_a.b(0, (jb) (Object) var1);
           return;
         } else {
           L1: {
@@ -30,12 +29,12 @@ final class hd {
             if (var1 != null) {
               break L1;
             } else {
-              var1_ref = new pe();
+              var1 = new pe();
               break L1;
             }
           }
-          var1_ref.a(kh.field_l, kh.field_i, kh.field_d, -26690, kh.field_g, kh.field_j, kh.field_c, kh.field_b);
-          ok.field_a.b(0, (jb) (Object) var1_ref);
+          var1.a(kh.field_l, kh.field_i, kh.field_d, -26690, kh.field_g, kh.field_j, kh.field_c, kh.field_b);
+          ok.field_a.b(0, (jb) (Object) var1);
           return;
         }
     }

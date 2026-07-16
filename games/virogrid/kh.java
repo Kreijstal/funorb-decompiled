@@ -120,136 +120,83 @@ final class kh {
             int var3 = 0;
             Object var4 = null;
             Throwable decompiledCaughtException = null;
-            int statePc = 0;
-            Throwable caughtException = null;
-            stateLoop: while (true) {
-                switch (statePc) {
-                    case 0: {
-                        var3 = Virogrid.field_F ? 1 : 0;
-                        if (param0 == 0) {
-                            statePc = 2;
-                        } else {
-                            statePc = 1;
-                        }
-                        continue stateLoop;
-                    }
-                    case 1: {
-                        var4 = null;
-                        gh discarded$3 = kh.a((byte) -112, (String) null);
-                        statePc = 2;
-                        continue stateLoop;
-                    }
-                    case 2: {
-                        if (ji.field_e != null) {
-                            statePc = 4;
-                        } else {
-                            statePc = 5;
-                        }
-                        continue stateLoop;
-                    }
-                    case 4: {
-                        ji.field_e.b(120);
-                        statePc = 5;
-                        continue stateLoop;
-                    }
-                    case 5: {
-                        if (null == bc.field_a) {
-                            statePc = 7;
-                        } else {
-                            statePc = 6;
-                        }
-                        continue stateLoop;
-                    }
-                    case 6: {
-                        bc.field_a.b((byte) -56);
-                        statePc = 7;
-                        continue stateLoop;
-                    }
-                    case 7: {
-                        if (dj.field_l == null) {
-                            statePc = 11;
-                        } else {
-                            statePc = 8;
-                        }
-                        continue stateLoop;
-                    }
-                    case 8: {
-                        try {
-                            dj.field_l.b((byte) 14);
-                            statePc = 11;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_8) {
-                            caughtException = stateCaught_8;
-                            statePc = 10;
-                            continue stateLoop;
-                        }
-                    }
-                    case 10: {
-                        iOException = (IOException) (Object) caughtException;
-                        statePc = 11;
-                        continue stateLoop;
-                    }
-                    case 11: {
-                        if (null != ij.field_n) {
-                            statePc = 13;
-                        } else {
-                            statePc = 20;
-                        }
-                        continue stateLoop;
-                    }
-                    case 13: {
-                        var1 = 0;
-                        statePc = 14;
-                        continue stateLoop;
-                    }
-                    case 14: {
-                        if (var1 >= ij.field_n.length) {
-                            statePc = 20;
-                        } else {
-                            statePc = 15;
-                        }
-                        continue stateLoop;
-                    }
-                    case 15: {
-                        if (ij.field_n[var1] != null) {
-                            statePc = 17;
-                        } else {
-                            statePc = 16;
-                        }
-                        continue stateLoop;
-                    }
-                    case 16: {
-                        var1++;
-                        statePc = 14;
-                        continue stateLoop;
-                    }
-                    case 17: {
-                        try {
-                            ij.field_n[var1].b((byte) 14);
-                            statePc = 18;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_17) {
-                            caughtException = stateCaught_17;
-                            statePc = 19;
-                            continue stateLoop;
-                        }
-                    }
-                    case 18: {
-                        var1++;
-                        statePc = 14;
-                        continue stateLoop;
-                    }
-                    case 19: {
-                        var2 = (IOException) (Object) caughtException;
-                        var1++;
-                        statePc = 14;
-                        continue stateLoop;
-                    }
-                    case 20: {
-                        return;
-                    }
-                    default: throw new IllegalStateException("invalid CFG state " + statePc);
+            L0: {
+              var3 = Virogrid.field_F ? 1 : 0;
+              if (param0 == 0) {
+                break L0;
+              } else {
+                var4 = null;
+                gh discarded$2 = kh.a((byte) -112, (String) null);
+                break L0;
+              }
+            }
+            L1: {
+              if (ji.field_e != null) {
+                ji.field_e.b(120);
+                break L1;
+              } else {
+                break L1;
+              }
+            }
+            L2: {
+              if (null == bc.field_a) {
+                break L2;
+              } else {
+                bc.field_a.b((byte) -56);
+                break L2;
+              }
+            }
+            L3: {
+              if (dj.field_l == null) {
+                break L3;
+              } else {
+                try {
+                  L4: {
+                    dj.field_l.b((byte) 14);
+                    break L4;
+                  }
+                } catch (java.io.IOException decompiledCaughtParameter0) {
+                  decompiledCaughtException = decompiledCaughtParameter0;
+                  L5: {
+                    iOException = (IOException) (Object) decompiledCaughtException;
+                    break L5;
+                  }
                 }
+                break L3;
+              }
+            }
+            L6: {
+              if (null != ij.field_n) {
+                var1 = 0;
+                L7: while (true) {
+                  if (var1 >= ij.field_n.length) {
+                    break L6;
+                  } else {
+                    if (ij.field_n[var1] != null) {
+                      try {
+                        L8: {
+                          ij.field_n[var1].b((byte) 14);
+                          var1++;
+                          break L8;
+                        }
+                      } catch (java.io.IOException decompiledCaughtParameter1) {
+                        decompiledCaughtException = decompiledCaughtParameter1;
+                        L9: {
+                          var2 = (IOException) (Object) decompiledCaughtException;
+                          var1++;
+                          break L9;
+                        }
+                      }
+                      continue L7;
+                    } else {
+                      var1++;
+                      continue L7;
+                    }
+                  }
+                }
+              } else {
+                break L6;
+              }
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -284,7 +231,6 @@ final class kh {
         dj var27 = null;
         String var28 = null;
         mg var29 = null;
-        mg var29_ref = null;
         dj var30 = null;
         String var31 = null;
         mg var32 = null;
@@ -346,9 +292,9 @@ final class kh {
         L2: {
           if (param1 == 2) {
             var27 = md.field_e;
-            var29_ref = j.field_k[0];
+            var29 = j.field_k[0];
             var28 = bf.field_s;
-            var27.field_a.a(var28, (byte) 89, 11, var29_ref);
+            var27.field_a.a(var28, (byte) 89, 11, var29);
             var30 = md.field_e;
             var32 = j.field_k[1];
             var31 = ql.field_f;
@@ -516,7 +462,7 @@ final class kh {
 
     final static gh a(byte param0, String param1) {
         int var2 = 0;
-        String var3 = null;
+        Object var3 = null;
         gh var4 = null;
         String var5 = null;
         int var6 = 0;
@@ -527,15 +473,15 @@ final class kh {
           L0: {
             var2 = 0 % ((param0 - -51) / 62);
             var7 = (CharSequence) (Object) param1;
-            var3 = c.a(var7, true);
+            var3 = (Object) (Object) c.a(var7, true);
             if (var3 == null) {
-              var3 = (String) (Object) var7;
+              var3 = (Object) (Object) var7;
               break L0;
             } else {
               break L0;
             }
           }
-          var4 = (gh) (Object) ie.field_a.a((long)var3.hashCode(), (byte) 96);
+          var4 = (gh) (Object) ie.field_a.a((long)((String) var3).hashCode(), (byte) 96);
           L1: while (true) {
             if (var4 != null) {
               L2: {
@@ -548,7 +494,7 @@ final class kh {
                   break L2;
                 }
               }
-              if (var5.equals((Object) (Object) var3)) {
+              if (var5.equals(var3)) {
                 return var4;
               } else {
                 var4 = (gh) (Object) ie.field_a.c(48);

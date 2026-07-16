@@ -14,15 +14,15 @@ final class ge {
             Exception exception = null;
             Throwable decompiledCaughtException = null;
             L0: {
-              if (-32 != (((pb) param0).field_g[((pb) param0).field_i] ^ -1)) {
+              if (-32 != (param0.field_g[param0.field_i] ^ -1)) {
                 break L0;
               } else {
-                if (-117 == ((pb) param0).field_g[1 + ((pb) param0).field_i]) {
+                if (-117 == param0.field_g[1 + param0.field_i]) {
                   L1: {
                     if (param1 == 2) {
                       break L1;
                     } else {
-                      field_c = (boolean[]) null;
+                      field_c = null;
                       break L1;
                     }
                   }
@@ -35,14 +35,19 @@ final class ge {
                     }
                   }
                   try {
-                    ((ge) this).field_d.setInput(((pb) param0).field_g, ((pb) param0).field_i - -10, -18 - ((pb) param0).field_i + ((pb) param0).field_g.length);
-                    int discarded$2 = ((ge) this).field_d.inflate(param2);
-                  } catch (java.lang.Exception decompiledCaughtParameter) {
-                    decompiledCaughtException = decompiledCaughtParameter;
+                    L3: {
+                      ((ge) this).field_d.setInput(param0.field_g, param0.field_i - -10, -18 - param0.field_i + param0.field_g.length);
+                      int discarded$2 = ((ge) this).field_d.inflate(param2);
+                      break L3;
+                    }
+                  } catch (java.lang.Exception decompiledCaughtParameter0) {
+                    decompiledCaughtException = decompiledCaughtParameter0;
+                    exception = (Exception) (Object) decompiledCaughtException;
+                    ((ge) this).field_d.reset();
+                    throw new RuntimeException("");
                   }
-                  exception = (Exception) (Object) decompiledCaughtException;
                   ((ge) this).field_d.reset();
-                  throw new RuntimeException("");
+                  return;
                 } else {
                   break L0;
                 }
@@ -131,7 +136,7 @@ final class ge {
             return new jk(ij.a((byte) 122), dg.a(0));
           }
         } else {
-          field_b = (String[]) null;
+          field_b = null;
           var1 = ij.a((byte) 114);
           if (var1 == null) {
             return new jk(ij.a((byte) 122), dg.a(0));
@@ -156,123 +161,41 @@ final class ge {
         int stackIn_3_0 = 0;
         int stackIn_6_0 = 0;
         int stackIn_8_0 = 0;
-        int stackOut_2_0 = 0;
-        int stackOut_5_0 = 0;
+        Throwable decompiledCaughtException = null;
         int stackOut_7_0 = 0;
-        int statePc = 0;
-        Throwable caughtException = null;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    var1_ref = (Object) (Object) sj.field_d;
-                    // monitorenter sj.field_d
-                    statePc = 1;
-                    continue stateLoop;
-                }
-                case 1: {
-                    try {
-                        if (ce.field_b != ab.field_t) {
-                            statePc = 4;
-                        } else {
-                            statePc = 2;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_1) {
-                        caughtException = stateCaught_1;
-                        statePc = 9;
-                        continue stateLoop;
-                    }
-                }
-                case 2: {
-                    try {
-                        // monitorexit var1_ref
-                        stackOut_2_0 = 0;
-                        stackIn_3_0 = stackOut_2_0;
-                        statePc = 3;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_2) {
-                        caughtException = stateCaught_2;
-                        statePc = 9;
-                        continue stateLoop;
-                    }
-                }
-                case 3: {
-                    return stackIn_3_0 != 0;
-                }
-                case 4: {
-                    try {
-                        tb.field_d = db.field_c[ab.field_t];
-                        fd.field_n = e.field_b[ab.field_t];
-                        if (param0 == -114) {
-                            statePc = 7;
-                        } else {
-                            statePc = 5;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_4) {
-                        caughtException = stateCaught_4;
-                        statePc = 9;
-                        continue stateLoop;
-                    }
-                }
-                case 5: {
-                    try {
-                        // monitorexit var1_ref
-                        stackOut_5_0 = 0;
-                        stackIn_6_0 = stackOut_5_0;
-                        statePc = 6;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_5) {
-                        caughtException = stateCaught_5;
-                        statePc = 9;
-                        continue stateLoop;
-                    }
-                }
-                case 6: {
-                    return stackIn_6_0 != 0;
-                }
-                case 7: {
-                    try {
-                        ab.field_t = ab.field_t - -1 & 127;
-                        // monitorexit var1_ref
-                        stackOut_7_0 = 1;
-                        stackIn_8_0 = stackOut_7_0;
-                        statePc = 8;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_7) {
-                        caughtException = stateCaught_7;
-                        statePc = 9;
-                        continue stateLoop;
-                    }
-                }
-                case 8: {
-                    return stackIn_8_0 != 0;
-                }
-                case 9: {
-                    try {
-                        var2 = caughtException;
-                        // monitorexit var1_ref
-                        statePc = 10;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_9) {
-                        caughtException = stateCaught_9;
-                        statePc = 9;
-                        continue stateLoop;
-                    }
-                }
-                case 10: {
-                    throw (RuntimeException) (Object) var2;
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
+        int stackOut_5_0 = 0;
+        int stackOut_2_0 = 0;
+        var1_ref = (Object) (Object) sj.field_d;
+        synchronized (var1_ref) {
+          L0: {
+            if (ce.field_b != ab.field_t) {
+              tb.field_d = db.field_c[ab.field_t];
+              fd.field_n = e.field_b[ab.field_t];
+              if (param0 == -114) {
+                ab.field_t = ab.field_t - -1 & 127;
+                stackOut_7_0 = 1;
+                stackIn_8_0 = stackOut_7_0;
+                break L0;
+              } else {
+                stackOut_5_0 = 0;
+                stackIn_6_0 = stackOut_5_0;
+                return stackIn_6_0 != 0;
+              }
+            } else {
+              stackOut_2_0 = 0;
+              stackIn_3_0 = stackOut_2_0;
+              return stackIn_3_0 != 0;
             }
+          }
         }
+        return stackIn_8_0 != 0;
     }
 
     public static void a(byte param0) {
         field_b = null;
         field_c = null;
         if (param0 != -117) {
-            kc[] var2 = (kc[]) null;
+            Object var2 = null;
             ge.a(120, (kc[]) null, -103, -3, 58, (byte) 16);
         }
     }
@@ -286,7 +209,7 @@ final class ge {
 
     final static String a(byte[] param0, byte param1) {
         if (param1 < 77) {
-            return (String) null;
+            return null;
         }
         return bd.a(255, 0, param0, param0.length);
     }

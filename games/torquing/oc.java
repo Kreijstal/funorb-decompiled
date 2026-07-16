@@ -52,11 +52,13 @@ final class oc {
                     var11++;
                     continue L1;
                   } else {
+                    int incrementValue$10 = param8;
                     param8++;
-                    param0 = param9[param8];
+                    param0 = param9[incrementValue$10];
                     if (param0 != 0) {
+                      int incrementValue$11 = param2;
                       param2++;
-                      param3[param2] = (byte)param0;
+                      param3[incrementValue$11] = (byte)param0;
                       var12++;
                       continue L3;
                     } else {
@@ -68,46 +70,54 @@ final class oc {
                 }
               } else {
                 L4: {
+                  int incrementValue$12 = param8;
                   param8++;
-                  param0 = param9[param8];
+                  param0 = param9[incrementValue$12];
                   if (param0 == 0) {
                     param2++;
                     break L4;
                   } else {
+                    int incrementValue$13 = param2;
                     param2++;
-                    param3[param2] = (byte)param0;
+                    param3[incrementValue$13] = (byte)param0;
                     break L4;
                   }
                 }
                 L5: {
+                  int incrementValue$14 = param8;
                   param8++;
-                  param0 = param9[param8];
+                  param0 = param9[incrementValue$14];
                   if (0 == param0) {
                     param2++;
                     break L5;
                   } else {
+                    int incrementValue$15 = param2;
                     param2++;
-                    param3[param2] = (byte)param0;
+                    param3[incrementValue$15] = (byte)param0;
                     break L5;
                   }
                 }
                 L6: {
+                  int incrementValue$16 = param8;
                   param8++;
-                  param0 = param9[param8];
+                  param0 = param9[incrementValue$16];
                   if (param0 == 0) {
                     param2++;
                     break L6;
                   } else {
+                    int incrementValue$17 = param2;
                     param2++;
-                    param3[param2] = (byte)param0;
+                    param3[incrementValue$17] = (byte)param0;
                     break L6;
                   }
                 }
+                int incrementValue$18 = param8;
                 param8++;
-                param0 = param9[param8];
+                param0 = param9[incrementValue$18];
                 if (param0 != 0) {
+                  int incrementValue$19 = param2;
                   param2++;
-                  param3[param2] = (byte)param0;
+                  param3[incrementValue$19] = (byte)param0;
                   var12++;
                   continue L2;
                 } else {

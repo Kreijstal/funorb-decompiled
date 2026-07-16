@@ -36,9 +36,9 @@ final class fq extends de {
             return 74;
         }
         if (jg.a((byte) 62)) {
-            return param0 != -1 ? 470 : 50;
+            return (param0 ^ -1) != -1 ? 470 : 50;
         }
-        int var3 = -2 < param0 ? -2 + param0 : param0;
+        int var3 = -2 > (param0 ^ -1) ? -2 + param0 : param0;
         return ((fq) this).field_m + var3 * 290;
     }
 
@@ -58,20 +58,20 @@ final class fq extends de {
               L1: {
                 var2 = ((fq) this).field_g.field_j;
                 var3 = ke.field_a;
-                if (0 != var2) {
+                if (0 != (var2 ^ -1)) {
                   break L1;
                 } else {
                   L2: {
-                    if (-97 == var3) {
+                    if (-97 == (var3 ^ -1)) {
                       break L2;
                     } else {
-                      if (var3 == -98) {
+                      if ((var3 ^ -1) == -98) {
                         break L2;
                       } else {
                         if (98 == var3) {
                           break L2;
                         } else {
-                          if (-100 != var3) {
+                          if (-100 != (var3 ^ -1)) {
                             break L1;
                           } else {
                             break L2;
@@ -323,7 +323,7 @@ final class fq extends de {
     final void a(int param0) {
         String var2 = null;
         int var3 = 0;
-        ob var3_ref = null;
+        ob var3_ref_ob = null;
         ue var4 = null;
         String[] var5 = null;
         int var7 = 0;
@@ -360,7 +360,7 @@ final class fq extends de {
                 break L1;
               }
             }
-            var3_ref = rk.field_e;
+            var3_ref_ob = rk.field_e;
             var4 = aa.field_p;
             if (var4.field_n) {
               if (var4.field_r == null) {
@@ -374,10 +374,10 @@ final class fq extends de {
                 var8 = 16777215;
                 var9 = 0;
                 var10 = 16711680;
-                var11 = var3_ref.field_w + 150;
-                var3_ref.c(kh.field_b, 150, var11, 0, 0);
-                var3_ref.a(ij.field_q, 170, var11, 0, 0);
-                var3_ref.c(lo.field_Kb, 500, var11, 0, 0);
+                var11 = var3_ref_ob.field_w + 150;
+                var3_ref_ob.c(kh.field_b, 150, var11, 0, 0);
+                var3_ref_ob.a(ij.field_q, 170, var11, 0, 0);
+                var3_ref_ob.c(lo.field_Kb, 500, var11, 0, 0);
                 var11 += 20;
                 var12 = 0;
                 L2: while (true) {

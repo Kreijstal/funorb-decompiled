@@ -32,7 +32,7 @@ final class wb {
                 }
               }
               L2: {
-                if (param1 > -17) {
+                if ((param1 ^ -1) > -17) {
                   break L2;
                 } else {
                   var2 += 4;
@@ -40,11 +40,9 @@ final class wb {
                   break L2;
                 }
               }
-              if (param0 != 100) {
-                return -116;
-              } else {
+              if (param0 == 100) {
                 L3: {
-                  if (-5 <= param1) {
+                  if (-5 >= (param1 ^ -1)) {
                     var2 += 2;
                     param1 = param1 >>> 2;
                     break L3;
@@ -62,6 +60,8 @@ final class wb {
                   }
                 }
                 return var2 - -param1;
+              } else {
+                return -116;
               }
             }
           }
@@ -76,7 +76,7 @@ final class wb {
           }
         }
         L6: {
-          if (param1 > -17) {
+          if ((param1 ^ -1) > -17) {
             break L6;
           } else {
             var2 += 4;
@@ -84,11 +84,9 @@ final class wb {
             break L6;
           }
         }
-        if (param0 != 100) {
-          return -116;
-        } else {
+        if (param0 == 100) {
           L7: {
-            if (-5 <= param1) {
+            if (-5 >= (param1 ^ -1)) {
               var2 += 2;
               param1 = param1 >>> 2;
               break L7;
@@ -106,6 +104,8 @@ final class wb {
             }
           }
           return var2 - -param1;
+        } else {
+          return -116;
         }
     }
 

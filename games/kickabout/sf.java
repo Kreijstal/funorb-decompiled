@@ -88,182 +88,177 @@ final class sf extends qt {
           var4 = ((sf) this).field_x.field_e;
           if (-100 != (param0 ^ -1)) {
             if (98 != param0) {
-              if (-98 != (param0 ^ -1)) {
-                if (param0 != 96) {
-                  ((sf) this).field_x.b(-99);
-                  if ((((sf) this).field_x.field_e ^ -1) <= -1) {
-                    if (!((sf) this).field_x.c(-1)) {
-                      return true;
-                    } else {
-                      ((sf) this).field_i[((sf) this).field_x.field_e].a(-1, false);
-                      return true;
-                    }
+              if (-98 == (param0 ^ -1)) {
+                L0: {
+                  var5 = var4;
+                  if (3 != var4) {
+                    break L0;
                   } else {
-                    return true;
+                    var5 = 4;
+                    break L0;
                   }
+                }
+                L1: {
+                  if (4 == var4) {
+                    var5 = 3;
+                    break L1;
+                  } else {
+                    break L1;
+                  }
+                }
+                L2: {
+                  if ((var4 ^ -1) == -6) {
+                    var5 = 6;
+                    break L2;
+                  } else {
+                    break L2;
+                  }
+                }
+                L3: {
+                  if (var4 == 6) {
+                    var5 = 5;
+                    break L3;
+                  } else {
+                    break L3;
+                  }
+                }
+                L4: {
+                  if (-1 >= (var5 ^ -1)) {
+                    break L4;
+                  } else {
+                    var5 = 6;
+                    break L4;
+                  }
+                }
+                ((sf) this).field_x.a((byte) 68, var5);
+                return true;
+              } else {
+                if (param0 != 96) {
+                  L5: {
+                    ((sf) this).field_x.b(-99);
+                    if ((((sf) this).field_x.field_e ^ -1) > -1) {
+                      break L5;
+                    } else {
+                      if (((sf) this).field_x.c(-1)) {
+                        ((sf) this).field_i[((sf) this).field_x.field_e].a(-1, false);
+                        break L5;
+                      } else {
+                        return true;
+                      }
+                    }
+                  }
+                  return true;
                 } else {
-                  L0: {
+                  L6: {
                     var5 = var4;
                     if (3 != var4) {
-                      break L0;
+                      break L6;
                     } else {
                       var5 = 4;
-                      break L0;
+                      break L6;
                     }
                   }
-                  L1: {
+                  L7: {
                     if (4 == var4) {
                       var5 = 3;
-                      break L1;
+                      break L7;
                     } else {
-                      break L1;
+                      break L7;
                     }
                   }
-                  L2: {
-                    if (var4 == -6) {
+                  L8: {
+                    if ((var4 ^ -1) == -6) {
                       var5 = 6;
-                      break L2;
+                      break L8;
                     } else {
-                      break L2;
+                      break L8;
                     }
                   }
-                  L3: {
+                  L9: {
                     if (var4 == 6) {
                       var5 = 5;
-                      break L3;
+                      break L9;
                     } else {
-                      break L3;
+                      break L9;
                     }
                   }
-                  L4: {
-                    if (-1 <= var5) {
-                      break L4;
+                  L10: {
+                    if (-1 >= (var5 ^ -1)) {
+                      break L10;
                     } else {
                       var5 = 6;
-                      break L4;
+                      break L10;
                     }
                   }
                   ((sf) this).field_x.a((byte) 68, var5);
                   return true;
                 }
-              } else {
-                L5: {
-                  var5 = var4;
-                  if (3 != var4) {
-                    break L5;
-                  } else {
-                    var5 = 4;
-                    break L5;
-                  }
-                }
-                L6: {
-                  if (4 == var4) {
-                    var5 = 3;
-                    break L6;
-                  } else {
-                    break L6;
-                  }
-                }
-                L7: {
-                  if (var4 == -6) {
-                    var5 = 6;
-                    break L7;
-                  } else {
-                    break L7;
-                  }
-                }
-                L8: {
-                  if (var4 == 6) {
-                    var5 = 5;
-                    break L8;
-                  } else {
-                    break L8;
-                  }
-                }
-                L9: {
-                  if (-1 <= var5) {
-                    break L9;
-                  } else {
-                    var5 = 6;
-                    break L9;
-                  }
-                }
-                ((sf) this).field_x.a((byte) 68, var5);
-                return true;
               }
             } else {
-              L10: {
+              L11: {
                 var5 = -1 + var4;
                 if (-1 == (var4 ^ -1)) {
                   var5 = 5;
-                  break L10;
-                } else {
-                  break L10;
-                }
-              }
-              L11: {
-                if (var4 == 4) {
-                  var5 = 2;
                   break L11;
                 } else {
                   break L11;
                 }
               }
               L12: {
-                if (var4 != -6) {
+                if (var4 == 4) {
+                  var5 = 2;
                   break L12;
                 } else {
-                  var5 = 3;
                   break L12;
                 }
               }
               L13: {
-                if (-7 == var4) {
-                  var5 = 4;
+                if ((var4 ^ -1) != -6) {
                   break L13;
                 } else {
+                  var5 = 3;
                   break L13;
                 }
               }
               L14: {
-                if (var5 >= 0) {
+                if (-7 == (var4 ^ -1)) {
+                  var5 = 4;
                   break L14;
                 } else {
-                  var5 = 6;
                   break L14;
+                }
+              }
+              L15: {
+                if (var5 >= 0) {
+                  break L15;
+                } else {
+                  var5 = 6;
+                  break L15;
                 }
               }
               ((sf) this).field_x.a((byte) 68, var5);
               return true;
             }
           } else {
-            L15: {
+            L16: {
               var5 = 1 + var4;
               if (var4 != 3) {
-                break L15;
-              } else {
-                var5 = 5;
-                break L15;
-              }
-            }
-            L16: {
-              if (4 == var4) {
-                var5 = 6;
                 break L16;
               } else {
+                var5 = 5;
                 break L16;
               }
             }
             L17: {
-              if ((var4 ^ -1) != -6) {
+              if (4 == var4) {
+                var5 = 6;
                 break L17;
               } else {
-                var5 = 0;
                 break L17;
               }
             }
             L18: {
-              if (6 != var4) {
+              if ((var4 ^ -1) != -6) {
                 break L18;
               } else {
                 var5 = 0;
@@ -271,11 +266,19 @@ final class sf extends qt {
               }
             }
             L19: {
-              if (var5 < 0) {
-                var5 = 0;
+              if (6 != var4) {
                 break L19;
               } else {
+                var5 = 0;
                 break L19;
+              }
+            }
+            L20: {
+              if (var5 < 0) {
+                var5 = 0;
+                break L20;
+              } else {
+                break L20;
               }
             }
             ((sf) this).field_x.a((byte) 68, var5);
@@ -328,15 +331,15 @@ final class sf extends qt {
         var3 = -((sf) this).field_i[param0].field_d + ((sf) this).field_i[0].field_d >> 1733467681;
         if (param1 == -22667) {
           if (3 != param0) {
-            if (-6 != param0) {
-              if (param0 != 4) {
-                if (-7 == param0) {
-                  return 190 - -var3;
-                } else {
-                  return 190;
-                }
-              } else {
+            if (-6 != (param0 ^ -1)) {
+              if (param0 == 4) {
                 return 190 - -var3;
+              } else {
+                if (-7 != (param0 ^ -1)) {
+                  return 190;
+                } else {
+                  return 190 - -var3;
+                }
               }
             } else {
               return -var3 + 190;
@@ -347,15 +350,15 @@ final class sf extends qt {
         } else {
           ((sf) this).a(false, 58);
           if (3 != param0) {
-            if (-6 != param0) {
-              if (param0 != 4) {
-                if (-7 == param0) {
-                  return 190 - -var3;
-                } else {
-                  return 190;
-                }
-              } else {
+            if (-6 != (param0 ^ -1)) {
+              if (param0 == 4) {
                 return 190 - -var3;
+              } else {
+                if (-7 != (param0 ^ -1)) {
+                  return 190;
+                } else {
+                  return 190 - -var3;
+                }
               }
             } else {
               return -var3 + 190;

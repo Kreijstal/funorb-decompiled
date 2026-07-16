@@ -84,10 +84,12 @@ final class io {
                     L2: while (true) {
                       if (var4 <= var7) {
                         bc.a(var6, (byte) 31);
-                        var3.field_o = new String[2][var6];
-                        var19 = new String[2][var6];
-                        var3.field_r = new int[2][var6 * 4];
-                        var20 = new int[2][var6 * 4];
+                        String[][] dupTemp$4 = new String[2][var6];
+                        var3.field_o = dupTemp$4;
+                        var19 = dupTemp$4;
+                        int[][] dupTemp$5 = new int[2][var6 * 4];
+                        var3.field_r = dupTemp$5;
+                        var20 = dupTemp$5;
                         var9 = pg.field_e;
                         var10 = 0;
                         var11 = 0;
@@ -233,10 +235,12 @@ final class io {
                           }
                         }
                         bc.a(var6, (byte) 31);
-                        var3.field_o = new String[2][var6];
-                        var17 = new String[2][var6];
-                        var3.field_r = new int[2][var6 * 4];
-                        var18 = new int[2][var6 * 4];
+                        String[][] dupTemp$6 = new String[2][var6];
+                        var3.field_o = dupTemp$6;
+                        var17 = dupTemp$6;
+                        int[][] dupTemp$7 = new int[2][var6 * 4];
+                        var3.field_r = dupTemp$7;
+                        var18 = dupTemp$7;
                         var9 = pg.field_e;
                         var10 = 0;
                         var11 = 0;

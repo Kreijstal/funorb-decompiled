@@ -121,11 +121,13 @@ final class m extends wg {
                 var13 = var13 + (this.a(((m) this).field_m, var16, 3, -60) >> 1316450241);
                 ((m) this).field_m = ((m) this).field_m + (var15 * var8 >> -1223166896);
                 var17 = this.a(((m) this).field_p, var14, 2, -68);
+                int incrementValue$2 = var12;
                 var12++;
-                param0[var12] = param0[var12] + var17;
+                param0[incrementValue$2] = param0[incrementValue$2] + var17;
                 if (ie.field_o) {
+                  int incrementValue$3 = var12;
                   var12++;
-                  param0[var12] = param0[var12] + var17;
+                  param0[incrementValue$3] = param0[incrementValue$3] + var17;
                   break L2;
                 } else {
                   break L2;

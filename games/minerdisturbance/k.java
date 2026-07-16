@@ -20,85 +20,26 @@ final class k extends cb {
         Object var1 = null;
         Object var1_ref = null;
         Throwable var2 = null;
-        int statePc = 0;
-        Throwable caughtException = null;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    var1_ref = (Object) (Object) lb.field_y;
-                    // monitorenter lb.field_y
-                    statePc = 1;
-                    continue stateLoop;
-                }
-                case 1: {
-                    try {
-                        ld.field_B = qd.field_J;
-                        t.field_c = t.field_c + 1;
-                        nk.field_w = sa.field_o;
-                        gb.field_e = nm.field_a;
-                        field_i = kk.field_d;
-                        kk.field_d = false;
-                        jk.field_ab = ic.field_n;
-                        wi.field_w = al.field_n;
-                        m.field_e = vl.field_G;
-                        if (param0 == 10525) {
-                            statePc = 4;
-                        } else {
-                            statePc = 2;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_1) {
-                        caughtException = stateCaught_1;
-                        statePc = 6;
-                        continue stateLoop;
-                    }
-                }
-                case 2: {
-                    try {
-                        // monitorexit var1_ref
-                        statePc = 3;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_2) {
-                        caughtException = stateCaught_2;
-                        statePc = 6;
-                        continue stateLoop;
-                    }
-                }
-                case 3: {
-                    return;
-                }
-                case 4: {
-                    try {
-                        ic.field_n = 0;
-                        // monitorexit var1_ref
-                        statePc = 8;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_4) {
-                        caughtException = stateCaught_4;
-                        statePc = 6;
-                        continue stateLoop;
-                    }
-                }
-                case 6: {
-                    try {
-                        var2 = caughtException;
-                        // monitorexit var1_ref
-                        statePc = 7;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_6) {
-                        caughtException = stateCaught_6;
-                        statePc = 6;
-                        continue stateLoop;
-                    }
-                }
-                case 7: {
-                    throw (RuntimeException) (Object) var2;
-                }
-                case 8: {
-                    return;
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
+        Throwable decompiledCaughtException = null;
+        var1_ref = (Object) (Object) lb.field_y;
+        synchronized (var1_ref) {
+          L0: {
+            ld.field_B = qd.field_J;
+            t.field_c = t.field_c + 1;
+            nk.field_w = sa.field_o;
+            gb.field_e = nm.field_a;
+            field_i = kk.field_d;
+            kk.field_d = false;
+            jk.field_ab = ic.field_n;
+            wi.field_w = al.field_n;
+            m.field_e = vl.field_G;
+            if (param0 == 10525) {
+              ic.field_n = 0;
+              break L0;
+            } else {
+              return;
             }
+          }
         }
     }
 

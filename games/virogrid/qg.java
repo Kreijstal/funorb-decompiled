@@ -23,7 +23,7 @@ final class qg extends l {
     final static void a(int param0, boolean param1, int param2) {
         int var3 = 0;
         String var4 = null;
-        String var5 = null;
+        Object var5 = null;
         Object var6 = null;
         Object var16 = null;
         Object var17 = null;
@@ -66,23 +66,23 @@ final class qg extends l {
                     L2: {
                       var5 = null;
                       if (0 == ge.field_d) {
-                        var5 = ab.a((byte) 73, var4, param2);
+                        var5 = (Object) (Object) ab.a((byte) 73, var4, param2);
                         break L2;
                       } else {
                         break L2;
                       }
                     }
                     L3: {
-                      if (ge.field_d == -2) {
-                        var5 = og.a(var4, true, param2);
+                      if ((ge.field_d ^ -1) == -2) {
+                        var5 = (Object) (Object) og.a(var4, true, param2);
                         break L3;
                       } else {
                         break L3;
                       }
                     }
                     L4: {
-                      if (-3 == ge.field_d) {
-                        var5 = g.a(var4, -128, param2);
+                      if (-3 == (ge.field_d ^ -1)) {
+                        var5 = (Object) (Object) g.a(var4, -128, param2);
                         break L4;
                       } else {
                         break L4;
@@ -92,7 +92,7 @@ final class qg extends l {
                       if (-4 != (ge.field_d ^ -1)) {
                         break L5;
                       } else {
-                        var5 = og.a(var4, param2, (byte) 60, var4);
+                        var5 = (Object) (Object) og.a(var4, param2, (byte) 60, var4);
                         break L5;
                       }
                     }
@@ -100,7 +100,7 @@ final class qg extends l {
                       break L0;
                     } else {
                       var6 = null;
-                      gf.a(var4, 0, false, var5, 2, (String) null);
+                      gf.a(var4, 0, false, (String) var5, 2, (String) null);
                       he.field_Xb = null;
                       ge.field_d = -1;
                       if (param0 == 7377) {
@@ -140,10 +140,10 @@ final class qg extends l {
             }
           }
         } else {
-          if (param0 == 7377) {
+          if (param0 != 7377) {
+            qg.a(119);
             return;
           } else {
-            qg.a(119);
             return;
           }
         }

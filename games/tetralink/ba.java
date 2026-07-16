@@ -31,11 +31,11 @@ final class ba extends gn implements dm {
         L0: {
           var2 = TetraLink.field_J;
           if (aa.field_bc.field_c) {
-            if ((aa.field_bc.field_a.field_n & 1 << aa.field_bc.field_i) != 0) {
+            if ((aa.field_bc.field_a.field_n & 1 << aa.field_bc.field_i ^ -1) != -1) {
               cd.field_c[18] = wk.field_a;
               break L0;
             } else {
-              if (aa.field_bc.field_a.field_n == 0) {
+              if ((aa.field_bc.field_a.field_n ^ -1) == -1) {
                 if ((aa.field_bc.field_m | 1 << aa.field_bc.field_i) == 3) {
                   cd.field_c[18] = fn.field_M;
                   break L0;
@@ -49,12 +49,12 @@ final class ba extends gn implements dm {
               }
             }
           } else {
-            if ((aa.field_bc.field_a.field_n & 1 << aa.field_bc.field_i) == 0) {
-              if (aa.field_bc.field_a.field_n != -1) {
+            if ((aa.field_bc.field_a.field_n & 1 << aa.field_bc.field_i ^ -1) == -1) {
+              if ((aa.field_bc.field_a.field_n ^ -1) != -1) {
                 cd.field_c[18] = tc.field_q;
                 break L0;
               } else {
-                if (-4 != (aa.field_bc.field_m | 1 << aa.field_bc.field_i)) {
+                if (-4 != ((aa.field_bc.field_m | 1 << aa.field_bc.field_i) ^ -1)) {
                   cd.field_c[18] = ej.field_w;
                   break L0;
                 } else {

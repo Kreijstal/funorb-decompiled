@@ -10,30 +10,69 @@ final class jd extends jh {
 
     final static void a(byte param0, int param1) {
         try {
-            if (null != vk.field_E) {
-                // if_icmpgt L34
-                // if_acmpne L26
-            } else {
-                wa.field_d.field_n = 0;
+            IOException iOException = null;
+            Throwable decompiledCaughtException = null;
+            L0: {
+              if (null == vk.field_E) {
+                break L0;
+              } else {
+                L1: {
+                  if ((param1 ^ -1) > -1) {
+                    break L1;
+                  } else {
+                    if (w.field_cb != ef.field_a) {
+                      break L0;
+                    } else {
+                      break L1;
+                    }
+                  }
+                }
+                L2: {
+                  if (-1 != (wa.field_d.field_n ^ -1)) {
+                    break L2;
+                  } else {
+                    if (km.b(-1) > 10000L + ak.field_k) {
+                      wa.field_d.f(-44, param1);
+                      break L2;
+                    } else {
+                      break L2;
+                    }
+                  }
+                }
+                L3: {
+                  if (param0 <= -48) {
+                    break L3;
+                  } else {
+                    field_D = null;
+                    break L3;
+                  }
+                }
+                L4: {
+                  if ((wa.field_d.field_n ^ -1) < -1) {
+                    try {
+                      L5: {
+                        vk.field_E.a(0, wa.field_d.field_j, (byte) 47, wa.field_d.field_n);
+                        ak.field_k = km.b(-1);
+                        break L5;
+                      }
+                    } catch (java.io.IOException decompiledCaughtParameter0) {
+                      decompiledCaughtException = decompiledCaughtParameter0;
+                      L6: {
+                        iOException = (IOException) (Object) decompiledCaughtException;
+                        ih.b(true);
+                        break L6;
+                      }
+                    }
+                    wa.field_d.field_n = 0;
+                    break L4;
+                  } else {
+                    break L4;
+                  }
+                }
                 return;
+              }
             }
-            if (-1 == (wa.field_d.field_n ^ -1)) {
-                if (!(km.b(-1) <= 10000L + ak.field_k)) {
-                    wa.field_d.f(-44, param1);
-                }
-            }
-            if (param0 > -48) {
-                field_D = null;
-            }
-            if (!((wa.field_d.field_n ^ -1) >= -1)) {
-                try {
-                    vk.field_E.a(0, wa.field_d.field_j, (byte) 47, wa.field_d.field_n);
-                    ak.field_k = km.b(-1);
-                } catch (IOException iOException) {
-                    ih.b(true);
-                }
-                wa.field_d.field_n = 0;
-            }
+            wa.field_d.field_n = 0;
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
@@ -42,28 +81,51 @@ final class jd extends jh {
     }
 
     final static boolean g(byte param0) {
-        int var4 = Torquing.field_u;
-        pm var5 = (pm) (Object) ul.field_e.b(0);
-        pm var1 = var5;
-        if (!(var1 != null)) {
-            return false;
-        }
+        pm var1 = null;
         int var2 = 0;
-        int var3 = 60 / ((param0 - -84) / 40);
-        while (var1.field_l > var2) {
-            if (!(null == var5.field_u[var2])) {
-                if (!(var5.field_u[var2].field_a != 0)) {
+        int var3 = 0;
+        int var4 = 0;
+        pm var5 = null;
+        var4 = Torquing.field_u;
+        var5 = (pm) (Object) ul.field_e.b(0);
+        var1 = var5;
+        if (var1 == null) {
+          return false;
+        } else {
+          var2 = 0;
+          var3 = 60 / ((param0 - -84) / 40);
+          L0: while (true) {
+            if (var1.field_l <= var2) {
+              return true;
+            } else {
+              L1: {
+                if (null != var5.field_u[var2]) {
+                  if (var5.field_u[var2].field_a == 0) {
                     return false;
+                  } else {
+                    break L1;
+                  }
+                } else {
+                  break L1;
                 }
+              }
+              L2: {
+                if (null != var5.field_n[var2]) {
+                  if (0 != var5.field_n[var2].field_a) {
+                    break L2;
+                  } else {
+                    return false;
+                  }
+                } else {
+                  var2++;
+                  break L2;
+                }
+              }
+              var2++;
+              continue L0;
             }
-            if (!(null == var5.field_n[var2])) {
-                // if_icmpne L133
-                return false;
-            }
-            var2++;
-            var2++;
+          }
         }
-        return true;
     }
 
     final static int a(int param0) {

@@ -31,100 +31,86 @@ final class bd {
     }
 
     public final void enter(java.awt.Frame param0, int param1, int param2, int param3, int param4) {
-        try {
-            int var6 = 0;
-            java.awt.DisplayMode[] var7 = null;
-            int var8 = 0;
-            int var9 = 0;
-            int var10 = 0;
-            ((bd) this).field_a = ((bd) this).field_b.getDisplayMode();
-            if (null == ((bd) this).field_a) {
-              throw new NullPointerException();
+        int var6 = 0;
+        java.awt.DisplayMode[] var7 = null;
+        int var8 = 0;
+        int var9 = 0;
+        int var10 = 0;
+        ((bd) this).field_a = ((bd) this).field_b.getDisplayMode();
+        if (null == ((bd) this).field_a) {
+          throw new NullPointerException();
+        } else {
+          L0: {
+            param0.setUndecorated(true);
+            param0.enableInputMethods(false);
+            this.a((byte) 111, param0);
+            if (0 != param4) {
+              break L0;
             } else {
-              L0: {
-                param0.setUndecorated(true);
-                param0.enableInputMethods(false);
-                this.a((byte) 111, param0);
-                if (0 != param4) {
-                  break L0;
+              var6 = ((bd) this).field_a.getRefreshRate();
+              var7 = ((bd) this).field_b.getDisplayModes();
+              var8 = 0;
+              var9 = 0;
+              L1: while (true) {
+                if (var9 >= var7.length) {
+                  if (var8 == 0) {
+                    param4 = var6;
+                    break L0;
+                  } else {
+                    break L0;
+                  }
                 } else {
-                  var6 = ((bd) this).field_a.getRefreshRate();
-                  var7 = ((bd) this).field_b.getDisplayModes();
-                  var8 = 0;
-                  var9 = 0;
-                  L1: while (true) {
-                    if (var9 >= var7.length) {
-                      if (var8 == 0) {
-                        param4 = var6;
-                        break L0;
-                      } else {
-                        break L0;
-                      }
-                    } else {
-                      if (param1 == var7[var9].getWidth()) {
-                        if (var7[var9].getHeight() == param2) {
-                          if (var7[var9].getBitDepth() == param3) {
-                            L2: {
-                              var10 = var7[var9].getRefreshRate();
-                              if (var8 == 0) {
-                                break L2;
-                              } else {
-                                if (Math.abs(-var6 + var10) < Math.abs(param4 - var6)) {
-                                  break L2;
-                                } else {
-                                  var9++;
-                                  continue L1;
-                                }
-                              }
-                            }
-                            var8 = 1;
-                            param4 = var10;
-                            var9++;
-                            continue L1;
+                  if (param1 == var7[var9].getWidth()) {
+                    if (var7[var9].getHeight() == param2) {
+                      if (var7[var9].getBitDepth() == param3) {
+                        L2: {
+                          var10 = var7[var9].getRefreshRate();
+                          if (var8 == 0) {
+                            break L2;
                           } else {
-                            var9++;
-                            continue L1;
+                            if (Math.abs(-var6 + var10) < Math.abs(param4 - var6)) {
+                              break L2;
+                            } else {
+                              var9++;
+                              continue L1;
+                            }
                           }
-                        } else {
-                          var9++;
-                          continue L1;
                         }
+                        var8 = 1;
+                        param4 = var10;
+                        var9++;
+                        continue L1;
                       } else {
                         var9++;
                         continue L1;
                       }
+                    } else {
+                      var9++;
+                      continue L1;
                     }
+                  } else {
+                    var9++;
+                    continue L1;
                   }
                 }
               }
-              ((bd) this).field_b.setDisplayMode(new java.awt.DisplayMode(param1, param2, param3, param4));
-              return;
             }
-        } catch (RuntimeException | Error decompiledUncheckedException) {
-            throw decompiledUncheckedException;
-        } catch (Throwable decompiledCheckedException) {
-            throw new RuntimeException(decompiledCheckedException);
+          }
+          ((bd) this).field_b.setDisplayMode(new java.awt.DisplayMode(param1, param2, param3, param4));
+          return;
         }
     }
 
     private final void a(byte param0, java.awt.Frame param1) {
-        Throwable var3 = null;
-        Throwable decompiledCaughtException = null;
-        try {
-          L0: {
-            ((bd) this).field_b.setFullScreenWindow((java.awt.Window) (Object) param1);
-            if (param0 >= 100) {
-              break L0;
-            } else {
-              ((bd) this).field_b = null;
-              break L0;
-            }
+        L0: {
+          ((bd) this).field_b.setFullScreenWindow((java.awt.Window) (Object) param1);
+          if (param0 >= 100) {
+            break L0;
+          } else {
+            ((bd) this).field_b = null;
+            break L0;
           }
-        } catch (java.lang.Throwable decompiledCaughtParameter) {
-          decompiledCaughtException = decompiledCaughtParameter;
-          var3 = decompiledCaughtException;
         }
-        throw (RuntimeException) (Object) var3;
     }
 
     public bd() throws Exception {
@@ -136,18 +122,20 @@ final class bd {
         var1 = java.awt.GraphicsEnvironment.getLocalGraphicsEnvironment();
         ((bd) this).field_b = var1.getDefaultScreenDevice();
         if (((bd) this).field_b.isFullScreenSupported()) {
+          return;
         } else {
           var2 = var1.getScreenDevices();
           var3 = var2;
           var4 = 0;
           L0: while (true) {
             if (var4 >= var3.length) {
-              throw new Exception();
+              throw bd.<RuntimeException>$cfr$sneakyThrow(new Exception());
             } else {
               var5 = var3[var4];
               if (var5 != null) {
                 if (var5.isFullScreenSupported()) {
                   ((bd) this).field_b = var5;
+                  return;
                 } else {
                   var4++;
                   continue L0;
@@ -159,5 +147,10 @@ final class bd {
             }
           }
         }
+    }
+
+    @SuppressWarnings("unchecked")
+    private static <T extends Throwable> RuntimeException $cfr$sneakyThrow(Throwable throwable) throws T {
+        throw (T) throwable;
     }
 }

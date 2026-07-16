@@ -862,7 +862,6 @@ public final class TetraLink extends ph {
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
-        int var8 = 0;
         var7 = field_J;
         var2 = 400 - dh.field_e % 400;
         var4 = 0;
@@ -897,16 +896,15 @@ public final class TetraLink extends ph {
             L2: {
               var5 = (int)(mb.a((float)var4 / 200.0f, (float)dh.field_e, false) * 3.0f);
               if (var5 > 0) {
-                var8 = ra.field_f * var4 + 100;
-                var6 = var8;
+                var6 = ra.field_f * var4 + 100;
                 var3 = 440;
                 L3: while (true) {
                   if (-1 <= (var3 ^ -1)) {
                     break L2;
                   } else {
-                    ra.field_b[var8 + -var5] = ra.field_b[var8];
+                    ra.field_b[var6 + -var5] = ra.field_b[var6];
                     var3--;
-                    var8++;
+                    var6++;
                     continue L3;
                   }
                 }
@@ -936,12 +934,12 @@ public final class TetraLink extends ph {
     }
 
     final void f(int param0) {
+        Object var4_ref = null;
         int var2 = 0;
-        ei var2_ref = null;
+        Object var2_ref = null;
         int var3 = 0;
         String[] var4 = null;
         int var4_int = 0;
-        ei var4_ref = null;
         int var5 = 0;
         int var6_int = 0;
         ei var6 = null;
@@ -953,7 +951,7 @@ public final class TetraLink extends ph {
         String var12 = null;
         String var13 = null;
         String var14 = null;
-        ei var15 = null;
+        Object var15 = null;
         Object stackIn_4_0 = null;
         int stackIn_4_1 = 0;
         Object stackIn_5_0 = null;
@@ -1005,6 +1003,7 @@ public final class TetraLink extends ph {
         String stackOut_100_3 = null;
         double stackOut_69_0 = 0.0;
         double stackOut_70_0 = 0.0;
+        var4_ref = null;
         L0: {
           var10 = field_J;
           int discarded$4 = pm.a((byte) 26);
@@ -1433,11 +1432,11 @@ public final class TetraLink extends ph {
                             L31: {
                               var2_ref = null;
                               if (ph.field_s) {
-                                var2_ref = aa.field_bc;
+                                var2_ref = (Object) (Object) aa.field_bc;
                                 break L31;
                               } else {
                                 if (sj.field_a) {
-                                  var2_ref = ud.field_Qb;
+                                  var2_ref = (Object) (Object) ud.field_Qb;
                                   break L31;
                                 } else {
                                   break L31;
@@ -1453,47 +1452,47 @@ public final class TetraLink extends ph {
                                     var3 = kb.field_q.d((byte) -99);
                                     var4_int = kb.field_q.d((byte) -99);
                                     var5 = kb.field_q.e(127);
-                                    var2_ref.field_a.a(var4_int, 18936, var3);
-                                    var2_ref.field_d = var5 - 50;
-                                    if (0 != (var2_ref.field_a.field_g ^ -1)) {
+                                    ((ei) var2_ref).field_a.a(var4_int, 18936, var3);
+                                    ((ei) var2_ref).field_d = var5 - 50;
+                                    if (0 != (((ei) var2_ref).field_a.field_g ^ -1)) {
                                       break L33;
                                     } else {
-                                      var2_ref.field_a.field_g = var3;
+                                      ((ei) var2_ref).field_a.field_g = var3;
                                       break L33;
                                     }
                                   }
-                                  if (-2 >= (var2_ref.field_d ^ -1)) {
+                                  if (-2 >= (((ei) var2_ref).field_d ^ -1)) {
                                     continue L14;
                                   } else {
-                                    var2_ref.field_d = 1;
+                                    ((ei) var2_ref).field_d = 1;
                                     continue L14;
                                   }
                                 } else {
                                   if (-62 == (ua.field_c ^ -1)) {
                                     var3 = kb.field_q.d((byte) -99);
                                     var4_int = kb.field_q.d((byte) -99);
-                                    var2_ref.field_a.a(var4_int >> 1291493667, var4_int & 7, var3, -28067);
-                                    var2_ref.field_g.a((byte) 56);
+                                    ((ei) var2_ref).field_a.a(var4_int >> 1291493667, var4_int & 7, var3, -28067);
+                                    ((ei) var2_ref).field_g.a((byte) 56);
                                     continue L14;
                                   } else {
                                     if ((ua.field_c ^ -1) == -63) {
                                       L34: {
                                         var3 = kb.field_q.g(-1772093437);
-                                        var2_ref.field_a.a(var3, 4);
+                                        ((ei) var2_ref).field_a.a(var3, 4);
                                         var15 = var2_ref;
                                         var4_ref = var15;
-                                        if (1 == (var15.field_i ^ -1)) {
+                                        if (1 == (((ei) var15).field_i ^ -1)) {
                                           break L34;
                                         } else {
-                                          var15.a(false, -112, false, -1);
+                                          ((ei) var15).a(false, -112, false, -1);
                                           break L34;
                                         }
                                       }
-                                      var4_ref.field_p = 0;
+                                      ((ei) var4_ref).field_p = 0;
                                       continue L14;
                                     } else {
                                       if ((ua.field_c ^ -1) == -64) {
-                                        var2_ref.field_a.field_h = kb.field_q.d((byte) -99);
+                                        ((ei) var2_ref).field_a.field_h = kb.field_q.d((byte) -99);
                                         if (aa.field_bc != null) {
                                           ci.c(63);
                                           continue L14;
@@ -1502,11 +1501,11 @@ public final class TetraLink extends ph {
                                         }
                                       } else {
                                         if ((ua.field_c ^ -1) == -65) {
-                                          var2_ref.field_a.field_j = kb.field_q.d((byte) -99);
+                                          ((ei) var2_ref).field_a.field_j = kb.field_q.d((byte) -99);
                                           continue L14;
                                         } else {
                                           if (ua.field_c == 65) {
-                                            var2_ref.field_a.field_n = kb.field_q.d((byte) -99);
+                                            ((ei) var2_ref).field_a.field_n = kb.field_q.d((byte) -99);
                                             if (null == aa.field_bc) {
                                               continue L14;
                                             } else {
@@ -1515,7 +1514,7 @@ public final class TetraLink extends ph {
                                             }
                                           } else {
                                             if (ua.field_c == 66) {
-                                              var2_ref.field_m = kb.field_q.d((byte) -99);
+                                              ((ei) var2_ref).field_m = kb.field_q.d((byte) -99);
                                               if (aa.field_bc != null) {
                                                 ba.a(1);
                                                 continue L14;
@@ -2182,11 +2181,11 @@ public final class TetraLink extends ph {
                             var12--;
                             if (-1 < (var12 ^ -1)) {
                               var12 = 420;
-                              // wide iinc 13 220
+                              var13 += 220;
                               L28: while (true) {
                                 var12--;
                                 if ((var12 ^ -1) > -1) {
-                                  // wide iinc 13 1500
+                                  var13 += 1500;
                                   var14++;
                                   continue L26;
                                 } else {
@@ -2235,7 +2234,7 @@ public final class TetraLink extends ph {
                           L32: while (true) {
                             var14--;
                             if (var14 <= 0) {
-                              // wide iinc 12 -220
+                              var12 -= 220;
                               continue L31;
                             } else {
                               L33: {
@@ -2283,7 +2282,7 @@ public final class TetraLink extends ph {
                         L35: while (true) {
                           var12--;
                           if (var12 < 0) {
-                            // wide iinc 13 860
+                            var13 += 860;
                             var14++;
                             continue L34;
                           } else {
@@ -2450,149 +2449,52 @@ public final class TetraLink extends ph {
             int var7 = 0;
             Object stackIn_3_0 = null;
             String stackIn_10_0 = null;
-            Object stackOut_2_0 = null;
+            Throwable decompiledCaughtException = null;
             String stackOut_9_0 = null;
-            int statePc = 0;
-            Throwable caughtException = null;
-            stateLoop: while (true) {
-                switch (statePc) {
-                    case 0: {
-                        var7 = field_J;
-                        statePc = 1;
-                        continue stateLoop;
-                    }
-                    case 1: {
-                        try {
-                            if (param1 == -28536) {
-                                statePc = 4;
-                            } else {
-                                statePc = 2;
-                            }
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_1) {
-                            caughtException = stateCaught_1;
-                            statePc = 13;
-                            continue stateLoop;
-                        }
-                    }
-                    case 2: {
-                        try {
-                            stackOut_2_0 = null;
-                            stackIn_3_0 = stackOut_2_0;
-                            statePc = 3;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_2) {
-                            caughtException = stateCaught_2;
-                            statePc = 13;
-                            continue stateLoop;
-                        }
-                    }
-                    case 3: {
-                        return (String) (Object) stackIn_3_0;
-                    }
-                    case 4: {
-                        try {
-                            var3 = (String) ii.a((byte) 121, "getcookies", param2);
-                            var4 = hi.a(var3, ';', 783);
-                            var5 = 0;
-                            statePc = 5;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_4) {
-                            caughtException = stateCaught_4;
-                            statePc = 13;
-                            continue stateLoop;
-                        }
-                    }
-                    case 5: {
-                        try {
-                            if (var4.length <= var5) {
-                                statePc = 14;
-                            } else {
-                                statePc = 6;
-                            }
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_5) {
-                            caughtException = stateCaught_5;
-                            statePc = 13;
-                            continue stateLoop;
-                        }
-                    }
-                    case 6: {
-                        try {
-                            var6 = var4[var5].indexOf('=');
-                            if (-1 < (var6 ^ -1)) {
-                                statePc = 11;
-                            } else {
-                                statePc = 7;
-                            }
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_6) {
-                            caughtException = stateCaught_6;
-                            statePc = 13;
-                            continue stateLoop;
-                        }
-                    }
-                    case 7: {
-                        try {
-                            if (var4[var5].substring(0, var6).trim().equals((Object) (Object) param0)) {
-                                statePc = 9;
-                            } else {
-                                statePc = 8;
-                            }
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_7) {
-                            caughtException = stateCaught_7;
-                            statePc = 13;
-                            continue stateLoop;
-                        }
-                    }
-                    case 8: {
-                        try {
-                            statePc = 11;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_8) {
-                            caughtException = stateCaught_8;
-                            statePc = 13;
-                            continue stateLoop;
-                        }
-                    }
-                    case 9: {
-                        try {
+            Object stackOut_2_0 = null;
+            var7 = field_J;
+            try {
+              L0: {
+                if (param1 == -28536) {
+                  var3 = (String) ii.a((byte) 121, "getcookies", param2);
+                  var4 = hi.a(var3, ';', 783);
+                  var5 = 0;
+                  L1: while (true) {
+                    if (var4.length <= var5) {
+                      break L0;
+                    } else {
+                      L2: {
+                        var6 = var4[var5].indexOf('=');
+                        if (-1 < (var6 ^ -1)) {
+                          break L2;
+                        } else {
+                          if (var4[var5].substring(0, var6).trim().equals((Object) (Object) param0)) {
                             stackOut_9_0 = var4[var5].substring(1 + var6).trim();
                             stackIn_10_0 = stackOut_9_0;
-                            statePc = 10;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_9) {
-                            caughtException = stateCaught_9;
-                            statePc = 13;
-                            continue stateLoop;
+                            return stackIn_10_0;
+                          } else {
+                            break L2;
+                          }
                         }
+                      }
+                      var5++;
+                      continue L1;
                     }
-                    case 10: {
-                        return stackIn_10_0;
-                    }
-                    case 11: {
-                        try {
-                            var5++;
-                            statePc = 5;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_11) {
-                            caughtException = stateCaught_11;
-                            statePc = 13;
-                            continue stateLoop;
-                        }
-                    }
-                    case 13: {
-                        var3_ref = caughtException;
-                        statePc = 14;
-                        continue stateLoop;
-                    }
-                    case 14: {
-                        return null;
-                    }
-                    default: throw new IllegalStateException("invalid CFG state " + statePc);
+                  }
+                } else {
+                  stackOut_2_0 = null;
+                  stackIn_3_0 = stackOut_2_0;
+                  return (String) (Object) stackIn_3_0;
                 }
+              }
+            } catch (java.lang.Throwable decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              L3: {
+                var3_ref = decompiledCaughtException;
+                break L3;
+              }
             }
+            return null;
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
@@ -2756,7 +2658,7 @@ public final class TetraLink extends ph {
                       } else {
                         L11: {
                           if (tb.field_e) {
-                            boolean discarded$3 = nj.a(param0 + 15718, 13, 12, 15);
+                            boolean discarded$4 = nj.a(param0 + 15718, 13, 12, 15);
                             break L11;
                           } else {
                             break L11;
@@ -2826,12 +2728,13 @@ public final class TetraLink extends ph {
               if (((TetraLink) this).field_L.c(false) == null) {
                 break L17;
               } else {
+                int fieldTemp$5 = ((TetraLink) this).field_K + 1;
                 ((TetraLink) this).field_K = ((TetraLink) this).field_K + 1;
-                if ((((TetraLink) this).field_K + 1 ^ -1) != -336) {
+                if ((fieldTemp$5 ^ -1) != -336) {
                   break L17;
                 } else {
                   ((TetraLink) this).field_K = 0;
-                  mc discarded$4 = ((TetraLink) this).field_L.a(false);
+                  mc discarded$6 = ((TetraLink) this).field_L.a(false);
                   break L17;
                 }
               }
@@ -2892,7 +2795,7 @@ public final class TetraLink extends ph {
           L22: {
             ed.f((byte) -85);
             if (ui.a(1000, 1692) == 0) {
-              bf discarded$5 = dg.a(24, (byte) 127, mb.field_y[ui.a(3, 1692)]);
+              bf discarded$7 = dg.a(24, (byte) 127, mb.field_y[ui.a(3, 1692)]);
               break L22;
             } else {
               break L22;
@@ -2991,8 +2894,9 @@ public final class TetraLink extends ph {
         qe.field_g = 3;
         vn.field_b = false;
         va.field_p = 3;
-        cd.field_d = new c();
-        wk.field_i = new c();
+        c dupTemp$1 = new c();
+        cd.field_d = dupTemp$1;
+        wk.field_i = dupTemp$1;
         ti.field_g = new double[]{0.0, 0.0, -128.0};
         dj.field_h = 3.1415927410125732f;
         uk.field_x = 3.1415927410125732f;
@@ -3027,7 +2931,7 @@ public final class TetraLink extends ph {
 
     private final void a(ah param0, ah param1, boolean param2, ah param3, ah param4, ah param5) {
         int var9_int = 0;
-        oh var10_ref = null;
+        oh var10_ref_oh = null;
         int var10 = 0;
         int var11 = field_J;
         mk.field_b = pm.a("", "font", param1, param3, -89);
@@ -3051,10 +2955,10 @@ public final class TetraLink extends ph {
         hl.field_G = new oh[var8];
         me.a(false);
         for (var9_int = 0; var9_int < var8; var9_int++) {
-            var10_ref = new oh(32, 32);
-            var10_ref.c();
+            var10_ref_oh = new oh(32, 32);
+            var10_ref_oh.c();
             sd.field_qb[var9_int].b(0, 0, 32, 32);
-            hl.field_G[var9_int] = var10_ref;
+            hl.field_G[var9_int] = var10_ref_oh;
         }
         cm.field_F = new oh(32, 32);
         cm.field_F.c();

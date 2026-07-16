@@ -60,14 +60,16 @@ final class ap {
         tf[] var6 = null;
         var6 = new tf[9];
         var5 = var6;
-        var6[6] = cl.a(param4, param3, (byte) -108);
-        var5[3] = cl.a(param4, param3, (byte) -108);
-        var5[2] = cl.a(param4, param3, (byte) -108);
-        var5[1] = cl.a(param4, param3, (byte) -108);
-        var5[0] = cl.a(param4, param3, (byte) -108);
-        var6[8] = cl.a(param4, param0, (byte) -116);
-        var5[7] = cl.a(param4, param0, (byte) -116);
-        var5[param2] = cl.a(param4, param0, (byte) -116);
+        tf dupTemp$4 = cl.a(param4, param3, (byte) -108);
+        var6[6] = dupTemp$4;
+        var5[3] = dupTemp$4;
+        var5[2] = dupTemp$4;
+        var5[1] = dupTemp$4;
+        var5[0] = dupTemp$4;
+        tf dupTemp$5 = cl.a(param4, param0, (byte) -116);
+        var6[8] = dupTemp$5;
+        var5[7] = dupTemp$5;
+        var5[param2] = dupTemp$5;
         if (param1 != 0) {
           var6[4] = cl.a(64, param1, (byte) -50);
           return var5;
@@ -103,6 +105,7 @@ final class ap {
                       }
                     }
                   } else {
+                    return;
                   }
                 }
               } else {

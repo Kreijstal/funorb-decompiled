@@ -72,8 +72,9 @@ abstract class vj {
                               break L3;
                             }
                           }
+                          int incrementValue$1 = var8;
                           var8++;
-                          cd.field_q[var8] = var12;
+                          cd.field_q[incrementValue$1] = var12;
                           var11++;
                           continue L1;
                         } else {

@@ -67,9 +67,8 @@ class eg implements ad, cf {
 
     final static bj a(int param0, int param1, boolean param2, boolean param3, boolean param4, int param5) {
         try {
-            uh var6 = null;
-            IOException var6_ref = null;
-            uh var7 = null;
+            Object var6 = null;
+            Object var7 = null;
             int var8 = 0;
             ij var9 = null;
             bj stackIn_12_0 = null;
@@ -77,64 +76,68 @@ class eg implements ad, cf {
             bj stackOut_11_0 = null;
             try {
               L0: {
-                var6 = null;
-                if (jl.field_fb.field_k != null) {
-                  fe.field_z = new me(jl.field_fb.field_k, 5200, 0);
-                  jl.field_fb.field_k = null;
-                  var6 = new uh(255, fe.field_z, new me(jl.field_fb.field_f, 12000, 0), 2097152);
-                  break L0;
-                } else {
-                  break L0;
-                }
-              }
-              L1: {
-                var7 = null;
-                var8 = -4 / ((param0 - 18) / 41);
-                if (fe.field_z == null) {
-                  break L1;
-                } else {
-                  L2: {
-                    if (null != aa.field_h) {
-                      break L2;
-                    } else {
-                      aa.field_h = new me[jl.field_fb.field_e.length];
-                      break L2;
-                    }
+                L1: {
+                  var6 = null;
+                  if (jl.field_fb.field_k != null) {
+                    fe.field_z = new me(jl.field_fb.field_k, 5200, 0);
+                    jl.field_fb.field_k = null;
+                    var6 = (Object) (Object) new uh(255, fe.field_z, new me(jl.field_fb.field_f, 12000, 0), 2097152);
+                    break L1;
+                  } else {
+                    break L1;
                   }
-                  L3: {
-                    if (null != aa.field_h[param1]) {
-                      break L3;
-                    } else {
-                      aa.field_h[param1] = new me(jl.field_fb.field_e[param1], 12000, 0);
-                      jl.field_fb.field_e[param1] = null;
-                      break L3;
+                }
+                L2: {
+                  var7 = null;
+                  var8 = -4 / ((param0 - 18) / 41);
+                  if (fe.field_z == null) {
+                    break L2;
+                  } else {
+                    L3: {
+                      if (null != aa.field_h) {
+                        break L3;
+                      } else {
+                        aa.field_h = new me[jl.field_fb.field_e.length];
+                        break L3;
+                      }
                     }
+                    L4: {
+                      if (null != aa.field_h[param1]) {
+                        break L4;
+                      } else {
+                        aa.field_h[param1] = new me(jl.field_fb.field_e[param1], 12000, 0);
+                        jl.field_fb.field_e[param1] = null;
+                        break L4;
+                      }
+                    }
+                    var7 = (Object) (Object) new uh(param1, fe.field_z, aa.field_h[param1], 2097152);
+                    break L2;
                   }
-                  var7 = new uh(param1, fe.field_z, aa.field_h[param1], 2097152);
-                  break L1;
                 }
-              }
-              L4: {
-                var9 = ke.field_U.a(param1, var7, param2, 0, var6);
-                if (!param3) {
-                  break L4;
-                } else {
-                  var9.b(-37);
-                  break L4;
+                L5: {
+                  var9 = ke.field_U.a(param1, (uh) var7, param2, 0, (uh) var6);
+                  if (!param3) {
+                    break L5;
+                  } else {
+                    var9.b(-37);
+                    break L5;
+                  }
                 }
+                stackOut_11_0 = new bj((vb) (Object) var9, param4, param5);
+                stackIn_12_0 = stackOut_11_0;
+                break L0;
               }
-              stackOut_11_0 = new bj((vb) (Object) var9, param4, param5);
-              stackIn_12_0 = stackOut_11_0;
-            } catch (java.io.IOException decompiledCaughtParameter) {
-              decompiledCaughtException = decompiledCaughtParameter;
-              return stackIn_12_0;
+            } catch (java.io.IOException decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              var6 = (Object) (Object) decompiledCaughtException;
+              throw new RuntimeException(((IOException) var6).toString());
             }
+            return stackIn_12_0;
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
             throw new RuntimeException(decompiledCheckedException);
         }
-        return null;
     }
 
     public final nf c(int param0, fe param1) {
@@ -319,23 +322,42 @@ class eg implements ad, cf {
     }
 
     final static boolean a(bj param0, int param1, bj param2, bj param3) {
-        if (param2.a((byte) 127)) {
-            // ifeq L23
-        } else {
-            return false;
-        }
-        if (param0.a((byte) 95)) {
-            // ifeq L48
-        } else {
-            return false;
-        }
-        if (param1 != 4) {
-            return false;
-        }
-        if (param3.a((byte) 83)) {
-            if (param3.a(false, "button.gif")) {
-                return true;
+        L0: {
+          if (!param2.a((byte) 127)) {
+            break L0;
+          } else {
+            if (!param2.a(false, "commonui")) {
+              break L0;
+            } else {
+              L1: {
+                if (!param0.a((byte) 95)) {
+                  break L1;
+                } else {
+                  if (!param0.a(false, "commonui")) {
+                    break L1;
+                  } else {
+                    if (param1 == 4) {
+                      L2: {
+                        if (!param3.a((byte) 83)) {
+                          break L2;
+                        } else {
+                          if (!param3.a(false, "button.gif")) {
+                            break L2;
+                          } else {
+                            return true;
+                          }
+                        }
+                      }
+                      return false;
+                    } else {
+                      return false;
+                    }
+                  }
+                }
+              }
+              return false;
             }
+          }
         }
         return false;
     }
@@ -477,8 +499,8 @@ class eg implements ad, cf {
               break L1;
             } else {
               L2: {
-                if (var6 != -4) {
-                  if (-2 != var6) {
+                if ((var6 ^ -1) != -4) {
+                  if (-2 != (var6 ^ -1)) {
                     break L2;
                   } else {
                     break L2;
@@ -551,26 +573,32 @@ class eg implements ad, cf {
             Throwable decompiledCaughtException = null;
             try {
               L0: {
-                var9 = param4.getParameter("cookiehost");
-                var7 = var9;
-                var7 = var9;
-                var10 = param0 + "=" + param2 + "; version=1; path=/; domain=" + var9;
-                var7 = var10;
-                var7 = var10;
-                if (param3 >= 0L) {
-                  var7 = var10 + "; Expires=" + e.a(sf.a((byte) 99) - -(1000L * param3), -128) + "; Max-Age=" + param3;
-                  break L0;
-                } else {
-                  var7 = var10 + "; Discard;";
-                  break L0;
+                L1: {
+                  var9 = param4.getParameter("cookiehost");
+                  var7 = var9;
+                  var7 = var9;
+                  var10 = param0 + "=" + param2 + "; version=1; path=/; domain=" + var9;
+                  var7 = var10;
+                  var7 = var10;
+                  if (param3 >= 0L) {
+                    var7 = var10 + "; Expires=" + e.a(sf.a((byte) 99) - -(1000L * param3), -128) + "; Max-Age=" + param3;
+                    break L1;
+                  } else {
+                    var7 = var10 + "; Discard;";
+                    break L1;
+                  }
                 }
+                lk.a(param4, "document.cookie=\"" + var7 + "\"", (byte) -106);
+                var8 = 39 / ((12 - param1) / 62);
+                break L0;
               }
-              lk.a(param4, "document.cookie=\"" + var7 + "\"", (byte) -106);
-              var8 = 39 / ((12 - param1) / 62);
-            } catch (java.lang.Throwable decompiledCaughtParameter) {
-              decompiledCaughtException = decompiledCaughtParameter;
+            } catch (java.lang.Throwable decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              L2: {
+                var6 = decompiledCaughtException;
+                break L2;
+              }
             }
-            var6 = decompiledCaughtException;
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {

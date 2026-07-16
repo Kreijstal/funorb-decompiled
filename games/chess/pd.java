@@ -20,24 +20,55 @@ final class pd extends ci {
     private ci field_Gb;
 
     final static boolean a(byte param0, ve param1, ve param2) {
-        int var4 = Chess.field_G;
-        if (param0 != -15) {
-            return true;
-        }
-        int var3 = -param2.field_Ib + param1.field_Ib;
-        if (f.field_a != param1.field_Lb) {
-            // if_acmpne L72
-            // wide iinc 3 200
+        int var3 = 0;
+        int var4 = 0;
+        int stackIn_13_0 = 0;
+        int stackOut_12_0 = 0;
+        int stackOut_11_0 = 0;
+        var4 = Chess.field_G;
+        if (param0 == -15) {
+          L0: {
+            var3 = -param2.field_Ib + param1.field_Ib;
+            if (f.field_a == param1.field_Lb) {
+              var3 -= 200;
+              break L0;
+            } else {
+              if (null != param1.field_Lb) {
+                break L0;
+              } else {
+                var3 += 200;
+                break L0;
+              }
+            }
+          }
+          L1: {
+            if (param2.field_Lb == f.field_a) {
+              var3 += 200;
+              break L1;
+            } else {
+              if (null != param2.field_Lb) {
+                break L1;
+              } else {
+                var3 -= 200;
+                break L1;
+              }
+            }
+          }
+          L2: {
+            if (var3 <= 0) {
+              stackOut_12_0 = 0;
+              stackIn_13_0 = stackOut_12_0;
+              break L2;
+            } else {
+              stackOut_11_0 = 1;
+              stackIn_13_0 = stackOut_11_0;
+              break L2;
+            }
+          }
+          return stackIn_13_0 != 0;
         } else {
-            // wide iinc 3 -200
+          return true;
         }
-        if (param2.field_Lb != f.field_a) {
-            // if_acmpne L114
-            // wide iinc 3 -200
-        } else {
-            // wide iinc 3 200
-        }
-        return var3 > 0 ? true : false;
     }
 
     final static boolean a(String param0, byte param1) {
@@ -335,9 +366,9 @@ final class pd extends ci {
           }
         }
         L5: {
-          ((ci) (Object) stackIn_15_2).field_tb = stackIn_15_3 != 0;
-          ((ci) (Object) stackIn_15_1).field_tb = stackIn_15_3 != 0;
-          ((ci) (Object) stackIn_15_0).field_tb = stackIn_15_3 != 0;
+          stackIn_15_2.field_tb = stackIn_15_3 != 0;
+          stackIn_15_1.field_tb = stackIn_15_3 != 0;
+          stackIn_15_0.field_tb = stackIn_15_3 != 0;
           var19.field_V = var11;
           if (param0) {
             break L5;
@@ -392,31 +423,62 @@ final class pd extends ci {
     }
 
     final int b(int param0, int param1, boolean param2, int param3) {
+        int var5 = 0;
+        int var6 = 0;
         int var7 = 0;
         int var8 = 0;
-        int var5 = 0;
-        int var6 = -((pd) this).field_Qb.field_pb + ((pd) this).field_Gb.field_pb;
-        if (0 < var6) {
+        L0: {
+          var5 = 0;
+          var6 = -((pd) this).field_Qb.field_pb + ((pd) this).field_Gb.field_pb;
+          if (0 >= var6) {
+            break L0;
+          } else {
             var7 = ((pd) this).field_Qb.field_V;
             var8 = -param3 + param1;
             var5 = (var8 * var7 - -(var6 / 2)) / var6;
+            break L0;
+          }
         }
-        if (param0 != -1) {
-            boolean discarded$0 = ((pd) this).m(52);
+        L1: {
+          if (param0 == -1) {
+            break L1;
+          } else {
+            boolean discarded$2 = ((pd) this).m(52);
+            break L1;
+          }
         }
-        if (!param2) {
-            if (var5 > -param3 + param1) {
-                var5 = -param3 + param1;
-            }
-            // ifge L140
-            var5 = 0;
-        } else {
-            if (!((var5 ^ -1) <= -1)) {
+        L2: {
+          if (param2) {
+            L3: {
+              if ((var5 ^ -1) > -1) {
                 var5 = 0;
+                break L3;
+              } else {
+                break L3;
+              }
             }
-            if (!(var5 <= param1 + -param3)) {
-                var5 = param1 + -param3;
+            if (var5 > param1 + -param3) {
+              var5 = param1 + -param3;
+              break L2;
+            } else {
+              break L2;
             }
+          } else {
+            L4: {
+              if (var5 <= -param3 + param1) {
+                break L4;
+              } else {
+                var5 = -param3 + param1;
+                break L4;
+              }
+            }
+            if (var5 >= 0) {
+              break L2;
+            } else {
+              var5 = 0;
+              break L2;
+            }
+          }
         }
         return var5;
     }

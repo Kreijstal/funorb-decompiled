@@ -11,21 +11,40 @@ final class bh {
 
     final int a(int param0, int param1) {
         int var3 = 0;
-        int var4 = CrazyCrystals.field_B;
-        if (param0 > -32) {
-            int discarded$0 = ((bh) this).b(-83);
+        int var4 = 0;
+        L0: {
+          var4 = CrazyCrystals.field_B;
+          if (param0 <= -32) {
+            break L0;
+          } else {
+            int discarded$2 = ((bh) this).b(-83);
+            break L0;
+          }
         }
-        if (null != ((bh) this).field_e) {
-            // ifeq L40
-        } else {
-            return 0;
-        }
-        for (var3 = 1; var3 < ((bh) this).field_e.length; var3++) {
-            if (!(((bh) this).field_e[-1 + var3] - -((bh) this).field_e[var3] >> -2051005375 <= param1)) {
-                return var3 - 1;
+        L1: {
+          if (null == ((bh) this).field_e) {
+            break L1;
+          } else {
+            if (((bh) this).field_e.length == 0) {
+              break L1;
+            } else {
+              var3 = 1;
+              L2: while (true) {
+                if (var3 >= ((bh) this).field_e.length) {
+                  return ((bh) this).field_e.length - 1;
+                } else {
+                  if (((bh) this).field_e[-1 + var3] - -((bh) this).field_e[var3] >> -2051005375 > param1) {
+                    return var3 - 1;
+                  } else {
+                    var3++;
+                    continue L2;
+                  }
+                }
+              }
             }
+          }
         }
-        return ((bh) this).field_e.length - 1;
+        return 0;
     }
 
     final static boolean a(byte param0) {

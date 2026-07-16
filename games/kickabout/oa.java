@@ -151,7 +151,7 @@ final class oa {
         var10.a(104, param2);
         int var8 = param4;
         if (!(!param3)) {
-            // wide iinc 8 128
+            var8 += 128;
         }
         var10.a(108, var8);
         var10.a(0, param5.length, 1991220144, param5);

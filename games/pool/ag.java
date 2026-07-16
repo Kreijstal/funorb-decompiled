@@ -51,7 +51,7 @@ final class ag {
                         }
                     }
                 }
-                gi var5_ref = var5.field_s;
+                var5 = var5.field_s;
             }
             var5 = (gi) (Object) var9.b(-81);
         }

@@ -416,62 +416,21 @@ final class pk extends kj {
     final static void a(byte param0, int param1, boolean param2) {
         Object var3 = null;
         Throwable var4 = null;
-        int statePc = 0;
-        Throwable caughtException = null;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    var3 = (Object) (Object) kj.field_P;
-                    // monitorenter kj.field_P
-                    statePc = 1;
-                    continue stateLoop;
-                }
-                case 1: {
-                    try {
-                        jg.a(c.field_M[param1], param0 + 182, param2);
-                        be.field_K = qc.field_o[param1];
-                        ed.a((byte) -122);
-                        // monitorexit var3
-                        statePc = 5;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_1) {
-                        caughtException = stateCaught_1;
-                        statePc = 3;
-                        continue stateLoop;
-                    }
-                }
-                case 3: {
-                    try {
-                        var4 = caughtException;
-                        // monitorexit var3
-                        statePc = 4;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_3) {
-                        caughtException = stateCaught_3;
-                        statePc = 3;
-                        continue stateLoop;
-                    }
-                }
-                case 4: {
-                    throw (RuntimeException) (Object) var4;
-                }
-                case 5: {
-                    if (param0 != -96) {
-                        statePc = 7;
-                    } else {
-                        statePc = 6;
-                    }
-                    continue stateLoop;
-                }
-                case 6: {
-                    return;
-                }
-                case 7: {
-                    int[] discarded$2 = pk.a(-56, true, 93);
-                    return;
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
-            }
+        Throwable decompiledCaughtException = null;
+        var3 = (Object) (Object) kj.field_P;
+        synchronized (var3) {
+          L0: {
+            jg.a(c.field_M[param1], param0 + 182, param2);
+            be.field_K = qc.field_o[param1];
+            ed.a((byte) -122);
+            break L0;
+          }
+        }
+        if (param0 != -96) {
+          int[] discarded$2 = pk.a(-56, true, 93);
+          return;
+        } else {
+          return;
         }
     }
 

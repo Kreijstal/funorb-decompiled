@@ -15,132 +15,48 @@ final class qh extends d implements ih, cg {
         int var5 = 0;
         Object stackIn_2_0 = null;
         String stackIn_7_0 = null;
-        Object stackOut_1_0 = null;
+        Throwable decompiledCaughtException = null;
         String stackOut_6_0 = null;
-        int statePc = 0;
-        Throwable caughtException = null;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    try {
-                        var2_int = ((qh) this).field_m.g((byte) 12);
-                        if (param0 == 0) {
-                            statePc = 3;
-                        } else {
-                            statePc = 1;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_0) {
-                        caughtException = stateCaught_0;
-                        statePc = 11;
-                        continue stateLoop;
+        Object stackOut_1_0 = null;
+        try {
+          L0: {
+            var2_int = ((qh) this).field_m.g((byte) 12);
+            if (param0 == 0) {
+              L1: {
+                var3 = ((qh) this).field_m.a(false);
+                var4 = ((qh) this).field_m.f((byte) 94);
+                var5 = df.a(true);
+                if (var4 < 1890) {
+                  break L1;
+                } else {
+                  if (var4 <= var5 - 3) {
+                    if (!fk.a(var4, (byte) -40, var2_int, var3)) {
+                      break L0;
+                    } else {
+                      return null;
                     }
+                  } else {
+                    break L1;
+                  }
                 }
-                case 1: {
-                    try {
-                        stackOut_1_0 = null;
-                        stackIn_2_0 = stackOut_1_0;
-                        statePc = 2;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_1) {
-                        caughtException = stateCaught_1;
-                        statePc = 11;
-                        continue stateLoop;
-                    }
-                }
-                case 2: {
-                    return (String) (Object) stackIn_2_0;
-                }
-                case 3: {
-                    try {
-                        var3 = ((qh) this).field_m.a(false);
-                        var4 = ((qh) this).field_m.f((byte) 94);
-                        var5 = df.a(true);
-                        if (var4 < 1890) {
-                            statePc = 6;
-                        } else {
-                            statePc = 4;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_3) {
-                        caughtException = stateCaught_3;
-                        statePc = 11;
-                        continue stateLoop;
-                    }
-                }
-                case 4: {
-                    try {
-                        if (var4 <= var5 - 3) {
-                            statePc = 8;
-                        } else {
-                            statePc = 5;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_4) {
-                        caughtException = stateCaught_4;
-                        statePc = 11;
-                        continue stateLoop;
-                    }
-                }
-                case 5: {
-                    try {
-                        statePc = 6;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_5) {
-                        caughtException = stateCaught_5;
-                        statePc = 11;
-                        continue stateLoop;
-                    }
-                }
-                case 6: {
-                    try {
-                        stackOut_6_0 = sk.a(new String[2], fm.field_d, param0 + 122);
-                        stackIn_7_0 = stackOut_6_0;
-                        statePc = 7;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_6) {
-                        caughtException = stateCaught_6;
-                        statePc = 11;
-                        continue stateLoop;
-                    }
-                }
-                case 7: {
-                    return stackIn_7_0;
-                }
-                case 8: {
-                    try {
-                        if (!fk.a(var4, (byte) -40, var2_int, var3)) {
-                            statePc = 12;
-                        } else {
-                            statePc = 9;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_8) {
-                        caughtException = stateCaught_8;
-                        statePc = 11;
-                        continue stateLoop;
-                    }
-                }
-                case 9: {
-                    try {
-                        return null;
-                    } catch (Throwable stateCaught_9) {
-                        caughtException = stateCaught_9;
-                        statePc = 11;
-                        continue stateLoop;
-                    }
-                }
-                case 11: {
-                    var2 = (NumberFormatException) (Object) caughtException;
-                    statePc = 12;
-                    continue stateLoop;
-                }
-                case 12: {
-                    return nm.field_y;
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
+              }
+              stackOut_6_0 = sk.a(new String[2], fm.field_d, param0 + 122);
+              stackIn_7_0 = stackOut_6_0;
+              return stackIn_7_0;
+            } else {
+              stackOut_1_0 = null;
+              stackIn_2_0 = stackOut_1_0;
+              return (String) (Object) stackIn_2_0;
             }
+          }
+        } catch (java.lang.Exception decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            var2 = (NumberFormatException) (Object) decompiledCaughtException;
+            break L2;
+          }
         }
+        return nm.field_y;
     }
 
     public final void a(byte param0, nn param1) {
@@ -264,134 +180,48 @@ final class qh extends d implements ih, cg {
         jk stackIn_3_0 = null;
         jk stackIn_7_0 = null;
         jk stackIn_10_0 = null;
+        int decompiledRegionSelector0 = 0;
         Throwable decompiledCaughtException = null;
         jk stackOut_2_0 = null;
         jk stackOut_6_0 = null;
         jk stackOut_9_0 = null;
-        int statePc = 0;
-        Throwable caughtException = null;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    try {
-                        var2_int = ((qh) this).field_m.g((byte) 12);
-                        var3 = ((qh) this).field_m.a(param0);
-                        var4 = ((qh) this).field_m.f((byte) 66);
-                        var5 = df.a(true);
-                        if ((var4 ^ -1) > -1891) {
-                            statePc = 2;
-                        } else {
-                            statePc = 1;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_0) {
-                        caughtException = stateCaught_0;
-                        statePc = 11;
-                        continue stateLoop;
-                    }
+        try {
+          L0: {
+            var2_int = ((qh) this).field_m.g((byte) 12);
+            var3 = ((qh) this).field_m.a(param0);
+            var4 = ((qh) this).field_m.f((byte) 66);
+            var5 = df.a(true);
+            if ((var4 ^ -1) > -1891) {
+              stackOut_2_0 = db.field_h;
+              stackIn_3_0 = stackOut_2_0;
+              return stackIn_3_0;
+            } else {
+              if (var4 > -3 + var5) {
+                stackOut_6_0 = db.field_h;
+                stackIn_7_0 = stackOut_6_0;
+                return stackIn_7_0;
+              } else {
+                if (fk.a(var4, (byte) -40, var2_int, var3)) {
+                  decompiledRegionSelector0 = 0;
+                  break L0;
+                } else {
+                  stackOut_9_0 = db.field_h;
+                  stackIn_10_0 = stackOut_9_0;
+                  decompiledRegionSelector0 = 1;
+                  break L0;
                 }
-                case 1: {
-                    try {
-                        statePc = 4;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_1) {
-                        caughtException = stateCaught_1;
-                        statePc = 11;
-                        continue stateLoop;
-                    }
-                }
-                case 2: {
-                    try {
-                        stackOut_2_0 = db.field_h;
-                        stackIn_3_0 = stackOut_2_0;
-                        statePc = 3;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_2) {
-                        caughtException = stateCaught_2;
-                        statePc = 11;
-                        continue stateLoop;
-                    }
-                }
-                case 3: {
-                    return stackIn_3_0;
-                }
-                case 4: {
-                    try {
-                        if (var4 > -3 + var5) {
-                            statePc = 6;
-                        } else {
-                            statePc = 5;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_4) {
-                        caughtException = stateCaught_4;
-                        statePc = 11;
-                        continue stateLoop;
-                    }
-                }
-                case 5: {
-                    try {
-                        statePc = 8;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_5) {
-                        caughtException = stateCaught_5;
-                        statePc = 11;
-                        continue stateLoop;
-                    }
-                }
-                case 6: {
-                    try {
-                        stackOut_6_0 = db.field_h;
-                        stackIn_7_0 = stackOut_6_0;
-                        statePc = 7;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_6) {
-                        caughtException = stateCaught_6;
-                        statePc = 11;
-                        continue stateLoop;
-                    }
-                }
-                case 7: {
-                    return stackIn_7_0;
-                }
-                case 8: {
-                    try {
-                        if (fk.a(var4, (byte) -40, var2_int, var3)) {
-                            statePc = 12;
-                        } else {
-                            statePc = 9;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_8) {
-                        caughtException = stateCaught_8;
-                        statePc = 11;
-                        continue stateLoop;
-                    }
-                }
-                case 9: {
-                    try {
-                        stackOut_9_0 = db.field_h;
-                        stackIn_10_0 = stackOut_9_0;
-                        statePc = 10;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_9) {
-                        caughtException = stateCaught_9;
-                        statePc = 11;
-                        continue stateLoop;
-                    }
-                }
-                case 10: {
-                    return stackIn_10_0;
-                }
-                case 11: {
-                    var2 = (NumberFormatException) (Object) caughtException;
-                    return db.field_h;
-                }
-                case 12: {
-                    return pf.field_a;
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
+              }
             }
+          }
+        } catch (java.lang.Exception decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2 = (NumberFormatException) (Object) decompiledCaughtException;
+          return db.field_h;
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return pf.field_a;
+        } else {
+          return stackIn_10_0;
         }
     }
 

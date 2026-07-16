@@ -30,29 +30,36 @@ final class fd {
             Object stackIn_2_0 = null;
             kn stackIn_4_0 = null;
             Throwable decompiledCaughtException = null;
-            Object stackOut_1_0 = null;
             kn stackOut_3_0 = null;
+            Object stackOut_1_0 = null;
             try {
-              var4 = Class.forName("fg");
-              var5 = (kn) var4.newInstance();
-              var5.a(param3, (byte) 24, param1, param2);
-              if (param0 == 0) {
-                return (kn) (Object) stackIn_2_0;
-              } else {
-                stackOut_1_0 = null;
-                stackIn_2_0 = stackOut_1_0;
+              L0: {
+                var4 = Class.forName("fg");
+                var5 = (kn) var4.newInstance();
+                var5.a(param3, (byte) 24, param1, param2);
+                if (param0 == 0) {
+                  stackOut_3_0 = (kn) var5;
+                  stackIn_4_0 = stackOut_3_0;
+                  break L0;
+                } else {
+                  stackOut_1_0 = null;
+                  stackIn_2_0 = stackOut_1_0;
+                  return (kn) (Object) stackIn_2_0;
+                }
               }
-            } catch (java.lang.Throwable decompiledCaughtParameter) {
-              decompiledCaughtException = decompiledCaughtParameter;
-              stackOut_3_0 = (kn) var5;
-              stackIn_4_0 = stackOut_3_0;
+            } catch (java.lang.Throwable decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              var4_ref = decompiledCaughtException;
+              var5_ref = new sn();
+              ((kn) (Object) var5_ref).a(param3, (byte) 24, param1, param2);
+              return (kn) (Object) var5_ref;
             }
+            return stackIn_4_0;
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
             throw new RuntimeException(decompiledCheckedException);
         }
-        return null;
     }
 
     final static void a(boolean param0, la param1, int param2, la param3, la param4) {
@@ -197,8 +204,9 @@ final class fd {
                       if (((fd) this).field_f <= var10) {
                         break L5;
                       } else {
-                        var8 = var8 + var17.i(7088);
-                        ((fd) this).field_b[var10] = var8 + var17.i(7088);
+                        int dupTemp$4 = var8 + var17.i(7088);
+                        var8 = dupTemp$4;
+                        ((fd) this).field_b[var10] = dupTemp$4;
                         if (((fd) this).field_b[var10] > var9) {
                           var9 = ((fd) this).field_b[var10];
                           var10++;
@@ -215,8 +223,9 @@ final class fd {
                       if (((fd) this).field_f <= var10) {
                         break L5;
                       } else {
-                        var8 = var8 + var17.c(0);
-                        ((fd) this).field_b[var10] = var8 + var17.c(0);
+                        int dupTemp$5 = var8 + var17.c(0);
+                        var8 = dupTemp$5;
+                        ((fd) this).field_b[var10] = dupTemp$5;
                         if (((fd) this).field_b[var10] > var9) {
                           var9 = ((fd) this).field_b[var10];
                           var10++;
@@ -322,9 +331,10 @@ final class fd {
                                           continue L18;
                                         }
                                       } else {
-                                        var8 = var8 + var17.i(7088);
-                                        ((fd) this).field_m[var11][var14] = var8 + var17.i(7088);
-                                        var15 = var8 + var17.i(7088);
+                                        int dupTemp$6 = var8 + var17.i(7088);
+                                        var8 = dupTemp$6;
+                                        ((fd) this).field_m[var11][var14] = dupTemp$6;
+                                        var15 = dupTemp$6;
                                         if (var13 < var15) {
                                           var13 = var15;
                                           var14++;
@@ -370,9 +380,10 @@ final class fd {
                                           continue L21;
                                         }
                                       } else {
-                                        var8 = var8 + var17.c(0);
-                                        ((fd) this).field_m[var11][var14] = var8 + var17.c(0);
-                                        var15 = var8 + var17.c(0);
+                                        int dupTemp$7 = var8 + var17.c(0);
+                                        var8 = dupTemp$7;
+                                        ((fd) this).field_m[var11][var14] = dupTemp$7;
+                                        var15 = dupTemp$7;
                                         if (var13 < var15) {
                                           var13 = var15;
                                           var14++;

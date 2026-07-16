@@ -67,10 +67,12 @@ final class fn extends sp {
                 return param5 >> 1;
               } else {
                 param0 = (param1 << 8) + (param2[param4 >> 8] - param1) * (param4 & 255);
+                int incrementValue$4 = param5;
                 param5++;
-                param3[param5] = param3[param5] + (param0 * param6 >> 6);
+                param3[incrementValue$4] = param3[incrementValue$4] + (param0 * param6 >> 6);
+                int incrementValue$5 = param5;
                 param5++;
-                param3[param5] = param3[param5] + (param0 * param7 >> 6);
+                param3[incrementValue$5] = param3[incrementValue$5] + (param0 * param7 >> 6);
                 param4 = param4 + param12;
                 continue L5;
               }
@@ -79,10 +81,12 @@ final class fn extends sp {
             param1 = param4 >> 8;
             param0 = param2[param1 - 1];
             param0 = (param0 << 8) + (param2[param1] - param0) * (param4 & 255);
+            int incrementValue$6 = param5;
             param5++;
-            param3[param5] = param3[param5] + (param0 * param6 >> 6);
+            param3[incrementValue$6] = param3[incrementValue$6] + (param0 * param6 >> 6);
+            int incrementValue$7 = param5;
             param5++;
-            param3[param5] = param3[param5] + (param0 * param7 >> 6);
+            param3[incrementValue$7] = param3[incrementValue$7] + (param0 * param7 >> 6);
             param4 = param4 + param12;
             continue L2;
           }
@@ -99,24 +103,34 @@ final class fn extends sp {
         }
         param5 -= 3;
         while (param3 < param5) {
+            int incrementValue$0 = param3;
             param3++;
+            int incrementValue$1 = param2;
             param2++;
-            param1[param3] = param1[param3] + param0[param2] * param4;
+            param1[incrementValue$0] = param1[incrementValue$0] + param0[incrementValue$1] * param4;
+            int incrementValue$2 = param3;
             param3++;
+            int incrementValue$3 = param2;
             param2++;
-            param1[param3] = param1[param3] + param0[param2] * param4;
+            param1[incrementValue$2] = param1[incrementValue$2] + param0[incrementValue$3] * param4;
+            int incrementValue$4 = param3;
             param3++;
+            int incrementValue$5 = param2;
             param2++;
-            param1[param3] = param1[param3] + param0[param2] * param4;
+            param1[incrementValue$4] = param1[incrementValue$4] + param0[incrementValue$5] * param4;
+            int incrementValue$6 = param3;
             param3++;
+            int incrementValue$7 = param2;
             param2++;
-            param1[param3] = param1[param3] + param0[param2] * param4;
+            param1[incrementValue$6] = param1[incrementValue$6] + param0[incrementValue$7] * param4;
         }
         param5 += 3;
         while (param3 < param5) {
+            int incrementValue$8 = param3;
             param3++;
+            int incrementValue$9 = param2;
             param2++;
-            param1[param3] = param1[param3] + param0[param2] * param4;
+            param1[incrementValue$8] = param1[incrementValue$8] + param0[incrementValue$9] * param4;
         }
         param8.field_t = param2 << 8;
         return param3;
@@ -203,11 +217,13 @@ final class fn extends sp {
               } else {
                 param0 = param2[param4 >> 8];
                 param0 = (param0 << 8) + (param1 - param0) * (param4 & 255);
+                int incrementValue$4 = param5;
                 param5++;
-                param3[param5] = param3[param5] + (param0 * param6 >> 6);
+                param3[incrementValue$4] = param3[incrementValue$4] + (param0 * param6 >> 6);
                 param6 = param6 + param8;
+                int incrementValue$5 = param5;
                 param5++;
-                param3[param5] = param3[param5] + (param0 * param7 >> 6);
+                param3[incrementValue$5] = param3[incrementValue$5] + (param0 * param7 >> 6);
                 param7 = param7 + param9;
                 param4 = param4 + param14;
                 continue L5;
@@ -217,11 +233,13 @@ final class fn extends sp {
             param1 = param4 >> 8;
             param0 = param2[param1];
             param0 = (param0 << 8) + (param2[param1 + 1] - param0) * (param4 & 255);
+            int incrementValue$6 = param5;
             param5++;
-            param3[param5] = param3[param5] + (param0 * param6 >> 6);
+            param3[incrementValue$6] = param3[incrementValue$6] + (param0 * param6 >> 6);
             param6 = param6 + param8;
+            int incrementValue$7 = param5;
             param5++;
-            param3[param5] = param3[param5] + (param0 * param7 >> 6);
+            param3[incrementValue$7] = param3[incrementValue$7] + (param0 * param7 >> 6);
             param7 = param7 + param9;
             param4 = param4 + param14;
             continue L2;
@@ -390,29 +408,39 @@ final class fn extends sp {
                 param9.field_t = param2 << 8;
                 return param3;
               } else {
+                int incrementValue$10 = param3;
                 param3++;
+                int incrementValue$11 = param2;
                 param2++;
-                param1[param3] = param1[param3] + param0[param2] * param4;
+                param1[incrementValue$10] = param1[incrementValue$10] + param0[incrementValue$11] * param4;
                 param4 = param4 + param5;
                 continue L2;
               }
             }
           } else {
+            int incrementValue$12 = param3;
             param3++;
+            int incrementValue$13 = param2;
             param2++;
-            param1[param3] = param1[param3] + param0[param2] * param4;
+            param1[incrementValue$12] = param1[incrementValue$12] + param0[incrementValue$13] * param4;
             param4 = param4 + param5;
+            int incrementValue$14 = param3;
             param3++;
+            int incrementValue$15 = param2;
             param2++;
-            param1[param3] = param1[param3] + param0[param2] * param4;
+            param1[incrementValue$14] = param1[incrementValue$14] + param0[incrementValue$15] * param4;
             param4 = param4 + param5;
+            int incrementValue$16 = param3;
             param3++;
+            int incrementValue$17 = param2;
             param2++;
-            param1[param3] = param1[param3] + param0[param2] * param4;
+            param1[incrementValue$16] = param1[incrementValue$16] + param0[incrementValue$17] * param4;
             param4 = param4 + param5;
+            int incrementValue$18 = param3;
             param3++;
+            int incrementValue$19 = param2;
             param2++;
-            param1[param3] = param1[param3] + param0[param2] * param4;
+            param1[incrementValue$18] = param1[incrementValue$18] + param0[incrementValue$19] * param4;
             param4 = param4 + param5;
             continue L1;
           }
@@ -444,40 +472,55 @@ final class fn extends sp {
                 param10.field_t = param3 << 8;
                 return param4 >> 1;
               } else {
+                int incrementValue$15 = param3;
                 param3++;
-                param0 = param1[param3];
+                param0 = param1[incrementValue$15];
+                int incrementValue$16 = param4;
                 param4++;
-                param2[param4] = param2[param4] + param0 * param5;
+                param2[incrementValue$16] = param2[incrementValue$16] + param0 * param5;
+                int incrementValue$17 = param4;
                 param4++;
-                param2[param4] = param2[param4] + param0 * param6;
+                param2[incrementValue$17] = param2[incrementValue$17] + param0 * param6;
                 continue L2;
               }
             }
           } else {
+            int incrementValue$18 = param3;
             param3++;
-            param0 = param1[param3];
+            param0 = param1[incrementValue$18];
+            int incrementValue$19 = param4;
             param4++;
-            param2[param4] = param2[param4] + param0 * param5;
+            param2[incrementValue$19] = param2[incrementValue$19] + param0 * param5;
+            int incrementValue$20 = param4;
             param4++;
-            param2[param4] = param2[param4] + param0 * param6;
+            param2[incrementValue$20] = param2[incrementValue$20] + param0 * param6;
+            int incrementValue$21 = param3;
             param3++;
-            param0 = param1[param3];
+            param0 = param1[incrementValue$21];
+            int incrementValue$22 = param4;
             param4++;
-            param2[param4] = param2[param4] + param0 * param5;
+            param2[incrementValue$22] = param2[incrementValue$22] + param0 * param5;
+            int incrementValue$23 = param4;
             param4++;
-            param2[param4] = param2[param4] + param0 * param6;
+            param2[incrementValue$23] = param2[incrementValue$23] + param0 * param6;
+            int incrementValue$24 = param3;
             param3++;
-            param0 = param1[param3];
+            param0 = param1[incrementValue$24];
+            int incrementValue$25 = param4;
             param4++;
-            param2[param4] = param2[param4] + param0 * param5;
+            param2[incrementValue$25] = param2[incrementValue$25] + param0 * param5;
+            int incrementValue$26 = param4;
             param4++;
-            param2[param4] = param2[param4] + param0 * param6;
+            param2[incrementValue$26] = param2[incrementValue$26] + param0 * param6;
+            int incrementValue$27 = param3;
             param3++;
-            param0 = param1[param3];
+            param0 = param1[incrementValue$27];
+            int incrementValue$28 = param4;
             param4++;
-            param2[param4] = param2[param4] + param0 * param5;
+            param2[incrementValue$28] = param2[incrementValue$28] + param0 * param5;
+            int incrementValue$29 = param4;
             param4++;
-            param2[param4] = param2[param4] + param0 * param6;
+            param2[incrementValue$29] = param2[incrementValue$29] + param0 * param6;
             continue L1;
           }
         }
@@ -533,10 +576,12 @@ final class fn extends sp {
               } else {
                 param0 = param2[param4 >> 8];
                 param0 = (param0 << 8) + (param1 - param0) * (param4 & 255);
+                int incrementValue$4 = param5;
                 param5++;
-                param3[param5] = param3[param5] + (param0 * param6 >> 6);
+                param3[incrementValue$4] = param3[incrementValue$4] + (param0 * param6 >> 6);
+                int incrementValue$5 = param5;
                 param5++;
-                param3[param5] = param3[param5] + (param0 * param7 >> 6);
+                param3[incrementValue$5] = param3[incrementValue$5] + (param0 * param7 >> 6);
                 param4 = param4 + param12;
                 continue L5;
               }
@@ -545,10 +590,12 @@ final class fn extends sp {
             param1 = param4 >> 8;
             param0 = param2[param1];
             param0 = (param0 << 8) + (param2[param1 + 1] - param0) * (param4 & 255);
+            int incrementValue$6 = param5;
             param5++;
-            param3[param5] = param3[param5] + (param0 * param6 >> 6);
+            param3[incrementValue$6] = param3[incrementValue$6] + (param0 * param6 >> 6);
+            int incrementValue$7 = param5;
             param5++;
-            param3[param5] = param3[param5] + (param0 * param7 >> 6);
+            param3[incrementValue$7] = param3[incrementValue$7] + (param0 * param7 >> 6);
             param4 = param4 + param12;
             continue L2;
           }
@@ -595,29 +642,39 @@ final class fn extends sp {
                 param9.field_t = param2 << 8;
                 return param3;
               } else {
+                int incrementValue$10 = param3;
                 param3++;
+                int incrementValue$11 = param2;
                 param2--;
-                param1[param3] = param1[param3] + param0[param2] * param4;
+                param1[incrementValue$10] = param1[incrementValue$10] + param0[incrementValue$11] * param4;
                 param4 = param4 + param5;
                 continue L2;
               }
             }
           } else {
+            int incrementValue$12 = param3;
             param3++;
+            int incrementValue$13 = param2;
             param2--;
-            param1[param3] = param1[param3] + param0[param2] * param4;
+            param1[incrementValue$12] = param1[incrementValue$12] + param0[incrementValue$13] * param4;
             param4 = param4 + param5;
+            int incrementValue$14 = param3;
             param3++;
+            int incrementValue$15 = param2;
             param2--;
-            param1[param3] = param1[param3] + param0[param2] * param4;
+            param1[incrementValue$14] = param1[incrementValue$14] + param0[incrementValue$15] * param4;
             param4 = param4 + param5;
+            int incrementValue$16 = param3;
             param3++;
+            int incrementValue$17 = param2;
             param2--;
-            param1[param3] = param1[param3] + param0[param2] * param4;
+            param1[incrementValue$16] = param1[incrementValue$16] + param0[incrementValue$17] * param4;
             param4 = param4 + param5;
+            int incrementValue$18 = param3;
             param3++;
+            int incrementValue$19 = param2;
             param2--;
-            param1[param3] = param1[param3] + param0[param2] * param4;
+            param1[incrementValue$18] = param1[incrementValue$18] + param0[incrementValue$19] * param4;
             param4 = param4 + param5;
             continue L1;
           }
@@ -671,8 +728,9 @@ final class fn extends sp {
                 param11.field_t = param4;
                 return param5;
               } else {
+                int incrementValue$2 = param5;
                 param5++;
-                param3[param5] = param3[param5] + (((param0 << 8) + (param2[param4 >> 8] - param0) * (param4 & 255)) * param6 >> 6);
+                param3[incrementValue$2] = param3[incrementValue$2] + (((param0 << 8) + (param2[param4 >> 8] - param0) * (param4 & 255)) * param6 >> 6);
                 param6 = param6 + param7;
                 param4 = param4 + param1;
                 continue L5;
@@ -681,8 +739,9 @@ final class fn extends sp {
           } else {
             param1 = param4 >> 8;
             param0 = param2[param1 - 1];
+            int incrementValue$3 = param5;
             param5++;
-            param3[param5] = param3[param5] + (((param0 << 8) + (param2[param1] - param0) * (param4 & 255)) * param6 >> 6);
+            param3[incrementValue$3] = param3[incrementValue$3] + (((param0 << 8) + (param2[param1] - param0) * (param4 & 255)) * param6 >> 6);
             param6 = param6 + param7;
             param4 = param4 + param12;
             continue L2;
@@ -720,49 +779,64 @@ final class fn extends sp {
                 param12.field_t = param3 << 8;
                 return param4 >> 1;
               } else {
+                int incrementValue$15 = param3;
                 param3++;
-                param0 = param1[param3];
+                param0 = param1[incrementValue$15];
+                int incrementValue$16 = param4;
                 param4++;
-                param2[param4] = param2[param4] + param0 * param5;
+                param2[incrementValue$16] = param2[incrementValue$16] + param0 * param5;
                 param5 = param5 + param7;
+                int incrementValue$17 = param4;
                 param4++;
-                param2[param4] = param2[param4] + param0 * param6;
+                param2[incrementValue$17] = param2[incrementValue$17] + param0 * param6;
                 param6 = param6 + param8;
                 continue L2;
               }
             }
           } else {
+            int incrementValue$18 = param3;
             param3++;
-            param0 = param1[param3];
+            param0 = param1[incrementValue$18];
+            int incrementValue$19 = param4;
             param4++;
-            param2[param4] = param2[param4] + param0 * param5;
+            param2[incrementValue$19] = param2[incrementValue$19] + param0 * param5;
             param5 = param5 + param7;
+            int incrementValue$20 = param4;
             param4++;
-            param2[param4] = param2[param4] + param0 * param6;
+            param2[incrementValue$20] = param2[incrementValue$20] + param0 * param6;
             param6 = param6 + param8;
+            int incrementValue$21 = param3;
             param3++;
-            param0 = param1[param3];
+            param0 = param1[incrementValue$21];
+            int incrementValue$22 = param4;
             param4++;
-            param2[param4] = param2[param4] + param0 * param5;
+            param2[incrementValue$22] = param2[incrementValue$22] + param0 * param5;
             param5 = param5 + param7;
+            int incrementValue$23 = param4;
             param4++;
-            param2[param4] = param2[param4] + param0 * param6;
+            param2[incrementValue$23] = param2[incrementValue$23] + param0 * param6;
             param6 = param6 + param8;
+            int incrementValue$24 = param3;
             param3++;
-            param0 = param1[param3];
+            param0 = param1[incrementValue$24];
+            int incrementValue$25 = param4;
             param4++;
-            param2[param4] = param2[param4] + param0 * param5;
+            param2[incrementValue$25] = param2[incrementValue$25] + param0 * param5;
             param5 = param5 + param7;
+            int incrementValue$26 = param4;
             param4++;
-            param2[param4] = param2[param4] + param0 * param6;
+            param2[incrementValue$26] = param2[incrementValue$26] + param0 * param6;
             param6 = param6 + param8;
+            int incrementValue$27 = param3;
             param3++;
-            param0 = param1[param3];
+            param0 = param1[incrementValue$27];
+            int incrementValue$28 = param4;
             param4++;
-            param2[param4] = param2[param4] + param0 * param5;
+            param2[incrementValue$28] = param2[incrementValue$28] + param0 * param5;
             param5 = param5 + param7;
+            int incrementValue$29 = param4;
             param4++;
-            param2[param4] = param2[param4] + param0 * param6;
+            param2[incrementValue$29] = param2[incrementValue$29] + param0 * param6;
             param6 = param6 + param8;
             continue L1;
           }
@@ -770,32 +844,64 @@ final class fn extends sp {
     }
 
     private final static int b(int param0, int param1, byte[] param2, int[] param3, int param4, int param5, int param6, int param7, int param8, int param9, fn param10, int param11, int param12) {
-        if (param11 != 0) {
-            param7 = param5 + (param9 + 256 - param4 + param11) / param11;
-            // if_icmple L38
+        L0: {
+          L1: {
+            if (param11 == 0) {
+              break L1;
+            } else {
+              param7 = param5 + (param9 + 256 - param4 + param11) / param11;
+              if (param5 + (param9 + 256 - param4 + param11) / param11 <= param8) {
+                break L0;
+              } else {
+                break L1;
+              }
+            }
+          }
+          param7 = param8;
+          break L0;
         }
-        param7 = param8;
-        while (param5 < param7) {
+        L2: while (true) {
+          if (param5 >= param7) {
+            L3: {
+              L4: {
+                if (param11 == 0) {
+                  break L4;
+                } else {
+                  param7 = param5 + (param9 - param4 + param11) / param11;
+                  if (param5 + (param9 - param4 + param11) / param11 <= param8) {
+                    break L3;
+                  } else {
+                    break L4;
+                  }
+                }
+              }
+              param7 = param8;
+              break L3;
+            }
+            param0 = param12;
+            param1 = param11;
+            L5: while (true) {
+              if (param5 >= param7) {
+                param10.field_t = param4;
+                return param5;
+              } else {
+                int incrementValue$4 = param5;
+                param5++;
+                param3[incrementValue$4] = param3[incrementValue$4] + (((param0 << 8) + (param2[param4 >> 8] - param0) * (param4 & 255)) * param6 >> 6);
+                param4 = param4 + param1;
+                continue L5;
+              }
+            }
+          } else {
             param1 = param4 >> 8;
             param0 = param2[param1 - 1];
+            int incrementValue$5 = param5;
             param5++;
-            param3[param5] = param3[param5] + (((param0 << 8) + (param2[param1] - param0) * (param4 & 255)) * param6 >> 6);
+            param3[incrementValue$5] = param3[incrementValue$5] + (((param0 << 8) + (param2[param1] - param0) * (param4 & 255)) * param6 >> 6);
             param4 = param4 + param11;
+            continue L2;
+          }
         }
-        if (param11 != 0) {
-            param7 = param5 + (param9 - param4 + param11) / param11;
-            // if_icmple L131
-        }
-        param7 = param8;
-        param0 = param12;
-        param1 = param11;
-        while (param5 < param7) {
-            param5++;
-            param3[param5] = param3[param5] + (((param0 << 8) + (param2[param4 >> 8] - param0) * (param4 & 255)) * param6 >> 6);
-            param4 = param4 + param1;
-        }
-        param10.field_t = param4;
-        return param5;
     }
 
     final synchronized int k() {
@@ -827,32 +933,64 @@ final class fn extends sp {
     }
 
     private final static int a(int param0, int param1, byte[] param2, int[] param3, int param4, int param5, int param6, int param7, int param8, int param9, fn param10, int param11, int param12) {
-        if (param11 != 0) {
-            param7 = param5 + (param9 - param4 + param11 - 257) / param11;
-            // if_icmple L38
+        L0: {
+          L1: {
+            if (param11 == 0) {
+              break L1;
+            } else {
+              param7 = param5 + (param9 - param4 + param11 - 257) / param11;
+              if (param5 + (param9 - param4 + param11 - 257) / param11 <= param8) {
+                break L0;
+              } else {
+                break L1;
+              }
+            }
+          }
+          param7 = param8;
+          break L0;
         }
-        param7 = param8;
-        while (param5 < param7) {
+        L2: while (true) {
+          if (param5 >= param7) {
+            L3: {
+              L4: {
+                if (param11 == 0) {
+                  break L4;
+                } else {
+                  param7 = param5 + (param9 - param4 + param11 - 1) / param11;
+                  if (param5 + (param9 - param4 + param11 - 1) / param11 <= param8) {
+                    break L3;
+                  } else {
+                    break L4;
+                  }
+                }
+              }
+              param7 = param8;
+              break L3;
+            }
+            param1 = param12;
+            L5: while (true) {
+              if (param5 >= param7) {
+                param10.field_t = param4;
+                return param5;
+              } else {
+                param0 = param2[param4 >> 8];
+                int incrementValue$4 = param5;
+                param5++;
+                param3[incrementValue$4] = param3[incrementValue$4] + (((param0 << 8) + (param1 - param0) * (param4 & 255)) * param6 >> 6);
+                param4 = param4 + param11;
+                continue L5;
+              }
+            }
+          } else {
             param1 = param4 >> 8;
             param0 = param2[param1];
+            int incrementValue$5 = param5;
             param5++;
-            param3[param5] = param3[param5] + (((param0 << 8) + (param2[param1 + 1] - param0) * (param4 & 255)) * param6 >> 6);
+            param3[incrementValue$5] = param3[incrementValue$5] + (((param0 << 8) + (param2[param1 + 1] - param0) * (param4 & 255)) * param6 >> 6);
             param4 = param4 + param11;
+            continue L2;
+          }
         }
-        if (param11 != 0) {
-            param7 = param5 + (param9 - param4 + param11 - 1) / param11;
-            // if_icmple L133
-        }
-        param7 = param8;
-        param1 = param12;
-        while (param5 < param7) {
-            param0 = param2[param4 >> 8];
-            param5++;
-            param3[param5] = param3[param5] + (((param0 << 8) + (param1 - param0) * (param4 & 255)) * param6 >> 6);
-            param4 = param4 + param11;
-        }
-        param10.field_t = param4;
-        return param5;
     }
 
     private final static int b(int param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, fn param12) {
@@ -885,49 +1023,64 @@ final class fn extends sp {
                 param12.field_t = param3 << 8;
                 return param4 >> 1;
               } else {
+                int incrementValue$15 = param3;
                 param3--;
-                param0 = param1[param3];
+                param0 = param1[incrementValue$15];
+                int incrementValue$16 = param4;
                 param4++;
-                param2[param4] = param2[param4] + param0 * param5;
+                param2[incrementValue$16] = param2[incrementValue$16] + param0 * param5;
                 param5 = param5 + param7;
+                int incrementValue$17 = param4;
                 param4++;
-                param2[param4] = param2[param4] + param0 * param6;
+                param2[incrementValue$17] = param2[incrementValue$17] + param0 * param6;
                 param6 = param6 + param8;
                 continue L2;
               }
             }
           } else {
+            int incrementValue$18 = param3;
             param3--;
-            param0 = param1[param3];
+            param0 = param1[incrementValue$18];
+            int incrementValue$19 = param4;
             param4++;
-            param2[param4] = param2[param4] + param0 * param5;
+            param2[incrementValue$19] = param2[incrementValue$19] + param0 * param5;
             param5 = param5 + param7;
+            int incrementValue$20 = param4;
             param4++;
-            param2[param4] = param2[param4] + param0 * param6;
+            param2[incrementValue$20] = param2[incrementValue$20] + param0 * param6;
             param6 = param6 + param8;
+            int incrementValue$21 = param3;
             param3--;
-            param0 = param1[param3];
+            param0 = param1[incrementValue$21];
+            int incrementValue$22 = param4;
             param4++;
-            param2[param4] = param2[param4] + param0 * param5;
+            param2[incrementValue$22] = param2[incrementValue$22] + param0 * param5;
             param5 = param5 + param7;
+            int incrementValue$23 = param4;
             param4++;
-            param2[param4] = param2[param4] + param0 * param6;
+            param2[incrementValue$23] = param2[incrementValue$23] + param0 * param6;
             param6 = param6 + param8;
+            int incrementValue$24 = param3;
             param3--;
-            param0 = param1[param3];
+            param0 = param1[incrementValue$24];
+            int incrementValue$25 = param4;
             param4++;
-            param2[param4] = param2[param4] + param0 * param5;
+            param2[incrementValue$25] = param2[incrementValue$25] + param0 * param5;
             param5 = param5 + param7;
+            int incrementValue$26 = param4;
             param4++;
-            param2[param4] = param2[param4] + param0 * param6;
+            param2[incrementValue$26] = param2[incrementValue$26] + param0 * param6;
             param6 = param6 + param8;
+            int incrementValue$27 = param3;
             param3--;
-            param0 = param1[param3];
+            param0 = param1[incrementValue$27];
+            int incrementValue$28 = param4;
             param4++;
-            param2[param4] = param2[param4] + param0 * param5;
+            param2[incrementValue$28] = param2[incrementValue$28] + param0 * param5;
             param5 = param5 + param7;
+            int incrementValue$29 = param4;
             param4++;
-            param2[param4] = param2[param4] + param0 * param6;
+            param2[incrementValue$29] = param2[incrementValue$29] + param0 * param6;
             param6 = param6 + param8;
             continue L1;
           }
@@ -988,11 +1141,13 @@ final class fn extends sp {
                 return param5;
               } else {
                 param0 = (param1 << 8) + (param2[param4 >> 8] - param1) * (param4 & 255);
+                int incrementValue$4 = param5;
                 param5++;
-                param3[param5] = param3[param5] + (param0 * param6 >> 6);
+                param3[incrementValue$4] = param3[incrementValue$4] + (param0 * param6 >> 6);
                 param6 = param6 + param8;
+                int incrementValue$5 = param5;
                 param5++;
-                param3[param5] = param3[param5] + (param0 * param7 >> 6);
+                param3[incrementValue$5] = param3[incrementValue$5] + (param0 * param7 >> 6);
                 param7 = param7 + param9;
                 param4 = param4 + param14;
                 continue L5;
@@ -1002,11 +1157,13 @@ final class fn extends sp {
             param1 = param4 >> 8;
             param0 = param2[param1 - 1];
             param0 = (param0 << 8) + (param2[param1] - param0) * (param4 & 255);
+            int incrementValue$6 = param5;
             param5++;
-            param3[param5] = param3[param5] + (param0 * param6 >> 6);
+            param3[incrementValue$6] = param3[incrementValue$6] + (param0 * param6 >> 6);
             param6 = param6 + param8;
+            int incrementValue$7 = param5;
             param5++;
-            param3[param5] = param3[param5] + (param0 * param7 >> 6);
+            param3[incrementValue$7] = param3[incrementValue$7] + (param0 * param7 >> 6);
             param7 = param7 + param9;
             param4 = param4 + param14;
             continue L2;
@@ -1216,8 +1373,9 @@ final class fn extends sp {
                     if (((fn) this).field_t < var3) {
                       ((fn) this).field_t = var3 + var3 - 1 - ((fn) this).field_t;
                       ((fn) this).field_m = -((fn) this).field_m;
+                      int fieldTemp$3 = ((fn) this).field_s - 1;
                       ((fn) this).field_s = ((fn) this).field_s - 1;
-                      if (((fn) this).field_s - 1 != 0) {
+                      if (fieldTemp$3 != 0) {
                         break L7;
                       } else {
                         break L5;
@@ -1231,13 +1389,15 @@ final class fn extends sp {
                   if (((fn) this).field_t >= var4) {
                     ((fn) this).field_t = var4 + var4 - 1 - ((fn) this).field_t;
                     ((fn) this).field_m = -((fn) this).field_m;
+                    int fieldTemp$4 = ((fn) this).field_s - 1;
                     ((fn) this).field_s = ((fn) this).field_s - 1;
-                    if (((fn) this).field_s - 1 != 0) {
+                    if (fieldTemp$4 != 0) {
                       if (((fn) this).field_t < var3) {
                         ((fn) this).field_t = var3 + var3 - 1 - ((fn) this).field_t;
                         ((fn) this).field_m = -((fn) this).field_m;
+                        int fieldTemp$5 = ((fn) this).field_s - 1;
                         ((fn) this).field_s = ((fn) this).field_s - 1;
-                        if (((fn) this).field_s - 1 != 0) {
+                        if (fieldTemp$5 != 0) {
                           continue L8;
                         } else {
                           break L5;
@@ -1352,40 +1512,55 @@ final class fn extends sp {
                 param10.field_t = param3 << 8;
                 return param4 >> 1;
               } else {
+                int incrementValue$15 = param3;
                 param3--;
-                param0 = param1[param3];
+                param0 = param1[incrementValue$15];
+                int incrementValue$16 = param4;
                 param4++;
-                param2[param4] = param2[param4] + param0 * param5;
+                param2[incrementValue$16] = param2[incrementValue$16] + param0 * param5;
+                int incrementValue$17 = param4;
                 param4++;
-                param2[param4] = param2[param4] + param0 * param6;
+                param2[incrementValue$17] = param2[incrementValue$17] + param0 * param6;
                 continue L2;
               }
             }
           } else {
+            int incrementValue$18 = param3;
             param3--;
-            param0 = param1[param3];
+            param0 = param1[incrementValue$18];
+            int incrementValue$19 = param4;
             param4++;
-            param2[param4] = param2[param4] + param0 * param5;
+            param2[incrementValue$19] = param2[incrementValue$19] + param0 * param5;
+            int incrementValue$20 = param4;
             param4++;
-            param2[param4] = param2[param4] + param0 * param6;
+            param2[incrementValue$20] = param2[incrementValue$20] + param0 * param6;
+            int incrementValue$21 = param3;
             param3--;
-            param0 = param1[param3];
+            param0 = param1[incrementValue$21];
+            int incrementValue$22 = param4;
             param4++;
-            param2[param4] = param2[param4] + param0 * param5;
+            param2[incrementValue$22] = param2[incrementValue$22] + param0 * param5;
+            int incrementValue$23 = param4;
             param4++;
-            param2[param4] = param2[param4] + param0 * param6;
+            param2[incrementValue$23] = param2[incrementValue$23] + param0 * param6;
+            int incrementValue$24 = param3;
             param3--;
-            param0 = param1[param3];
+            param0 = param1[incrementValue$24];
+            int incrementValue$25 = param4;
             param4++;
-            param2[param4] = param2[param4] + param0 * param5;
+            param2[incrementValue$25] = param2[incrementValue$25] + param0 * param5;
+            int incrementValue$26 = param4;
             param4++;
-            param2[param4] = param2[param4] + param0 * param6;
+            param2[incrementValue$26] = param2[incrementValue$26] + param0 * param6;
+            int incrementValue$27 = param3;
             param3--;
-            param0 = param1[param3];
+            param0 = param1[incrementValue$27];
+            int incrementValue$28 = param4;
             param4++;
-            param2[param4] = param2[param4] + param0 * param5;
+            param2[incrementValue$28] = param2[incrementValue$28] + param0 * param5;
+            int incrementValue$29 = param4;
             param4++;
-            param2[param4] = param2[param4] + param0 * param6;
+            param2[incrementValue$29] = param2[incrementValue$29] + param0 * param6;
             continue L1;
           }
         }
@@ -1401,24 +1576,34 @@ final class fn extends sp {
         }
         param5 -= 3;
         while (param3 < param5) {
+            int incrementValue$0 = param3;
             param3++;
+            int incrementValue$1 = param2;
             param2--;
-            param1[param3] = param1[param3] + param0[param2] * param4;
+            param1[incrementValue$0] = param1[incrementValue$0] + param0[incrementValue$1] * param4;
+            int incrementValue$2 = param3;
             param3++;
+            int incrementValue$3 = param2;
             param2--;
-            param1[param3] = param1[param3] + param0[param2] * param4;
+            param1[incrementValue$2] = param1[incrementValue$2] + param0[incrementValue$3] * param4;
+            int incrementValue$4 = param3;
             param3++;
+            int incrementValue$5 = param2;
             param2--;
-            param1[param3] = param1[param3] + param0[param2] * param4;
+            param1[incrementValue$4] = param1[incrementValue$4] + param0[incrementValue$5] * param4;
+            int incrementValue$6 = param3;
             param3++;
+            int incrementValue$7 = param2;
             param2--;
-            param1[param3] = param1[param3] + param0[param2] * param4;
+            param1[incrementValue$6] = param1[incrementValue$6] + param0[incrementValue$7] * param4;
         }
         param5 += 3;
         while (param3 < param5) {
+            int incrementValue$8 = param3;
             param3++;
+            int incrementValue$9 = param2;
             param2--;
-            param1[param3] = param1[param3] + param0[param2] * param4;
+            param1[incrementValue$8] = param1[incrementValue$8] + param0[incrementValue$9] * param4;
         }
         param8.field_t = param2 << 8;
         return param3;
@@ -1573,8 +1758,9 @@ final class fn extends sp {
                     if (((fn) this).field_t < var5) {
                       ((fn) this).field_t = var5 + var5 - 1 - ((fn) this).field_t;
                       ((fn) this).field_m = -((fn) this).field_m;
+                      int fieldTemp$5 = ((fn) this).field_s - 1;
                       ((fn) this).field_s = ((fn) this).field_s - 1;
-                      if (((fn) this).field_s - 1 != 0) {
+                      if (fieldTemp$5 != 0) {
                         break L7;
                       } else {
                         break L4;
@@ -1589,14 +1775,16 @@ final class fn extends sp {
                   if (((fn) this).field_t >= var6) {
                     ((fn) this).field_t = var6 + var6 - 1 - ((fn) this).field_t;
                     ((fn) this).field_m = -((fn) this).field_m;
+                    int fieldTemp$6 = ((fn) this).field_s - 1;
                     ((fn) this).field_s = ((fn) this).field_s - 1;
-                    if (((fn) this).field_s - 1 != 0) {
+                    if (fieldTemp$6 != 0) {
                       var9 = this.a(param0, var9, var5, param2, (int) var4.field_l[((fn) this).field_x]);
                       if (((fn) this).field_t < var5) {
                         ((fn) this).field_t = var5 + var5 - 1 - ((fn) this).field_t;
                         ((fn) this).field_m = -((fn) this).field_m;
+                        int fieldTemp$7 = ((fn) this).field_s - 1;
                         ((fn) this).field_s = ((fn) this).field_s - 1;
-                        if (((fn) this).field_s - 1 != 0) {
+                        if (fieldTemp$7 != 0) {
                           continue L8;
                         } else {
                           break L4;
@@ -1615,7 +1803,7 @@ final class fn extends sp {
             }
           }
           if (((fn) this).field_m < 0) {
-            int discarded$2 = this.a(param0, var9, 0, param2, 0);
+            int discarded$8 = this.a(param0, var9, 0, param2, 0);
             if (((fn) this).field_t < 0) {
               ((fn) this).field_t = -1;
               this.e();
@@ -1626,7 +1814,7 @@ final class fn extends sp {
             }
           } else {
             L9: {
-              int discarded$3 = this.b(param0, var9, var7, param2, 0);
+              int discarded$9 = this.b(param0, var9, var7, param2, 0);
               if (((fn) this).field_t < var7) {
                 break L9;
               } else {
@@ -1989,8 +2177,9 @@ final class fn extends sp {
                 return param5;
               } else {
                 param0 = param2[param4 >> 8];
+                int incrementValue$2 = param5;
                 param5++;
-                param3[param5] = param3[param5] + (((param0 << 8) + (param1 - param0) * (param4 & 255)) * param6 >> 6);
+                param3[incrementValue$2] = param3[incrementValue$2] + (((param0 << 8) + (param1 - param0) * (param4 & 255)) * param6 >> 6);
                 param6 = param6 + param7;
                 param4 = param4 + param12;
                 continue L5;
@@ -1999,8 +2188,9 @@ final class fn extends sp {
           } else {
             param1 = param4 >> 8;
             param0 = param2[param1];
+            int incrementValue$3 = param5;
             param5++;
-            param3[param5] = param3[param5] + (((param0 << 8) + (param2[param1 + 1] - param0) * (param4 & 255)) * param6 >> 6);
+            param3[incrementValue$3] = param3[incrementValue$3] + (((param0 << 8) + (param2[param1 + 1] - param0) * (param4 & 255)) * param6 >> 6);
             param6 = param6 + param7;
             param4 = param4 + param12;
             continue L2;

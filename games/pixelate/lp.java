@@ -22,30 +22,59 @@ final class lp {
     }
 
     final static int a(int param0) {
-        int var3 = Pixelate.field_H ? 1 : 0;
         int var1 = 0;
-        while (bh.b((byte) 107)) {
-            vp.field_Gb.a((byte) -48);
-            // ifeq L6
-            var1 = 1;
-        }
-        vp.field_Gb.a(ec.a(false, uo.field_a, ji.field_c), ec.a(false, uf.field_d, bg.field_k), -1);
-        if (param0 != 2) {
-            field_d = 101;
-        }
-        if (!(!vp.field_Gb.a(117))) {
-            var1 = 1;
-        }
         int var2 = 0;
-        if (var1 != 0) {
-            if (vp.field_Gb.field_j >= 0) {
-                var2 = di.field_b[vp.field_Gb.field_j];
-                if (2 == var2) {
-                    un.a(true);
-                }
+        int var3 = 0;
+        var3 = Pixelate.field_H ? 1 : 0;
+        var1 = 0;
+        L0: while (true) {
+          if (!bh.b((byte) 107)) {
+            L1: {
+              vp.field_Gb.a(ec.a(false, uo.field_a, ji.field_c), ec.a(false, uf.field_d, bg.field_k), -1);
+              if (param0 == 2) {
+                break L1;
+              } else {
+                field_d = 101;
+                break L1;
+              }
             }
+            L2: {
+              if (vp.field_Gb.a(117)) {
+                var1 = 1;
+                break L2;
+              } else {
+                break L2;
+              }
+            }
+            L3: {
+              var2 = 0;
+              if (var1 == 0) {
+                break L3;
+              } else {
+                if (vp.field_Gb.field_j < 0) {
+                  break L3;
+                } else {
+                  var2 = di.field_b[vp.field_Gb.field_j];
+                  if (2 != var2) {
+                    break L3;
+                  } else {
+                    un.a(true);
+                    break L3;
+                  }
+                }
+              }
+            }
+            return var2;
+          } else {
+            vp.field_Gb.a((byte) -48);
+            if (!vp.field_Gb.a(121)) {
+              continue L0;
+            } else {
+              var1 = 1;
+              continue L0;
+            }
+          }
         }
-        return var2;
     }
 
     final void a() {
@@ -72,8 +101,9 @@ final class lp {
         int var5 = var1 + var2 * 640;
         for (var6 = -var3; var6 < 0; var6++) {
             for (var7 = -var3; var7 < 0; var7++) {
+                int incrementValue$0 = var5;
                 var5++;
-                t.field_k[var5] = t.field_k[var5] + uj.field_Ob;
+                t.field_k[incrementValue$0] = t.field_k[incrementValue$0] + uj.field_Ob;
             }
             var5 = var5 + var4;
         }

@@ -22,13 +22,14 @@ abstract class ik {
         for (var7 = 0; var7 < var3; var7++) {
             for (var8 = var6; param2 != param0.charAt(var8); var8++) {
             }
+            int incrementValue$0 = var5;
             var5++;
-            var4[var5] = param0.substring(var6, var8);
+            var4[incrementValue$0] = param0.substring(var6, var8);
             var6 = var8 - -1;
         }
         if (param1 != -76) {
             Object var10 = null;
-            String[] discarded$0 = ik.a((String) null, (byte) 127, 'ﾸ');
+            String[] discarded$1 = ik.a((String) null, (byte) 127, 'ﾸ');
         }
         var4[var3] = param0.substring(var6);
         return var4;

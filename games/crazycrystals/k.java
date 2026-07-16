@@ -216,7 +216,7 @@ final class k {
         int stackOut_22_0 = 0;
         int stackOut_21_0 = 0;
         L0: {
-          int discarded$1 = bl.a(24);
+          int discarded$2 = bl.a(24);
           ((k) this).field_b = bl.a(16);
           ((k) this).field_d = bl.a(24);
           ((k) this).field_c = new int[((k) this).field_d];
@@ -283,8 +283,9 @@ final class k {
                     var3_int++;
                     continue L5;
                   } else {
+                    int incrementValue$3 = var2;
                     var2++;
-                    ((k) this).field_c[var2] = var3_int;
+                    ((k) this).field_c[incrementValue$3] = var3_int;
                     var5++;
                     continue L6;
                   }

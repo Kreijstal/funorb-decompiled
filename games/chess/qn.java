@@ -89,8 +89,9 @@ class qn extends fb {
                 ((qn) this).field_v = ((qn) this).field_v.substring(0, ((qn) this).field_T);
             }
         }
-        ((qn) this).field_X = ((qn) this).field_v.length();
-        ((qn) this).field_Q = ((qn) this).field_v.length();
+        int dupTemp$1 = ((qn) this).field_v.length();
+        ((qn) this).field_X = dupTemp$1;
+        ((qn) this).field_Q = dupTemp$1;
         if (!(param1)) {
             ((qn) this).g((byte) 63);
         }
@@ -112,20 +113,26 @@ class qn extends fb {
             Throwable decompiledCaughtException = null;
             try {
               L0: {
-                if (param0 == -18) {
-                  break L0;
-                } else {
-                  ((qn) this).field_W = true;
-                  break L0;
+                L1: {
+                  if (param0 == -18) {
+                    break L1;
+                  } else {
+                    ((qn) this).field_W = true;
+                    break L1;
+                  }
                 }
+                var2_ref = (String) java.awt.Toolkit.getDefaultToolkit().getSystemClipboard().getContents((Object) null).getTransferData(java.awt.datatransfer.DataFlavor.stringFlavor);
+                this.j(1);
+                this.a(var2_ref, 99);
+                break L0;
               }
-              var2_ref = (String) java.awt.Toolkit.getDefaultToolkit().getSystemClipboard().getContents((Object) null).getTransferData(java.awt.datatransfer.DataFlavor.stringFlavor);
-              this.j(1);
-              this.a(var2_ref, 99);
-            } catch (java.lang.Exception decompiledCaughtParameter) {
-              decompiledCaughtException = decompiledCaughtParameter;
+            } catch (java.lang.Exception decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              L2: {
+                var2 = (Exception) (Object) decompiledCaughtException;
+                break L2;
+              }
             }
-            var2 = (Exception) (Object) decompiledCaughtException;
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
@@ -135,17 +142,36 @@ class qn extends fb {
 
     private final int l(int param0) {
         int var2 = 0;
-        int var3 = Chess.field_G;
-        if (param0 <= 47) {
+        int var3 = 0;
+        L0: {
+          var3 = Chess.field_G;
+          if (param0 > 47) {
+            break L0;
+          } else {
             ((qn) this).field_V = -33L;
+            break L0;
+          }
         }
-        if (!(((qn) this).field_Q != 0)) {
-            return ((qn) this).field_Q;
+        if (((qn) this).field_Q == 0) {
+          return ((qn) this).field_Q;
+        } else {
+          var2 = -1 + ((qn) this).field_Q;
+          L1: while (true) {
+            L2: {
+              if (var2 <= 0) {
+                break L2;
+              } else {
+                if (-33 == (((qn) this).field_v.charAt(var2 + -1) ^ -1)) {
+                  break L2;
+                } else {
+                  var2--;
+                  continue L1;
+                }
+              }
+            }
+            return var2;
+          }
         }
-        for (var2 = -1 + ((qn) this).field_Q; var2 > 0; var2--) {
-            // if_icmpeq L69
-        }
-        return var2;
     }
 
     final void a(int param0, int param1, int param2, int param3) {
@@ -271,19 +297,35 @@ class qn extends fb {
     }
 
     private final int k(int param0) {
+        int var2 = 0;
         int var3 = 0;
-        int var4 = Chess.field_G;
-        if (param0 != -23811) {
-            return 12;
-        }
-        int var2 = ((qn) this).field_v.length();
-        if (!(((qn) this).field_Q != var2)) {
+        int var4 = 0;
+        var4 = Chess.field_G;
+        if (param0 == -23811) {
+          var2 = ((qn) this).field_v.length();
+          if (((qn) this).field_Q == var2) {
             return ((qn) this).field_Q;
+          } else {
+            var3 = 1 + ((qn) this).field_Q;
+            L0: while (true) {
+              L1: {
+                if (var2 <= var3) {
+                  break L1;
+                } else {
+                  if (((qn) this).field_v.charAt(-1 + var3) == 32) {
+                    break L1;
+                  } else {
+                    var3++;
+                    continue L0;
+                  }
+                }
+              }
+              return var3;
+            }
+          }
+        } else {
+          return 12;
         }
-        for (var3 = 1 + ((qn) this).field_Q; var2 > var3; var3++) {
-            // if_icmpeq L72
-        }
-        return var3;
     }
 
     private final void f(byte param0) {
@@ -325,7 +367,7 @@ class qn extends fb {
                 } else {
                   if (param0 <= 126) {
                     L1: {
-                      if (((qn) this).field_X == ((qn) this).field_Q) {
+                      if ((((qn) this).field_X ^ -1) == (((qn) this).field_Q ^ -1)) {
                         break L1;
                       } else {
                         this.j(1);
@@ -352,8 +394,9 @@ class qn extends fb {
                           break L4;
                         } else {
                           ((qn) this).field_v = ((qn) this).field_v + param0;
-                          ((qn) this).field_Q = ((qn) this).field_v.length();
-                          ((qn) this).field_X = ((qn) this).field_v.length();
+                          int dupTemp$1 = ((qn) this).field_v.length();
+                          ((qn) this).field_Q = dupTemp$1;
+                          ((qn) this).field_X = dupTemp$1;
                           break L4;
                         }
                       }
@@ -382,8 +425,8 @@ class qn extends fb {
                   }
                 } else {
                   if ((param1 ^ -1) != -102) {
-                    if (-14 != param1) {
-                      if (-97 == param1) {
+                    if (-14 != (param1 ^ -1)) {
+                      if (-97 == (param1 ^ -1)) {
                         if ((((qn) this).field_Q ^ -1) >= -1) {
                           break L5;
                         } else {
@@ -409,8 +452,8 @@ class qn extends fb {
                           return true;
                         }
                       } else {
-                        if (param1 == -98) {
-                          if (((qn) this).field_Q < ((qn) this).field_v.length()) {
+                        if ((param1 ^ -1) == -98) {
+                          if ((((qn) this).field_Q ^ -1) > (((qn) this).field_v.length() ^ -1)) {
                             L7: {
                               stackOut_37_0 = this;
                               stackIn_39_0 = stackOut_37_0;
@@ -436,7 +479,7 @@ class qn extends fb {
                           }
                         } else {
                           if (102 != param1) {
-                            if (-104 != param1) {
+                            if (-104 != (param1 ^ -1)) {
                               if (param1 == 84) {
                                 this.c(true);
                                 return true;
@@ -491,7 +534,7 @@ class qn extends fb {
                       return true;
                     }
                   } else {
-                    if (((qn) this).field_Q == ((qn) this).field_X) {
+                    if ((((qn) this).field_Q ^ -1) == (((qn) this).field_X ^ -1)) {
                       if (((qn) this).field_Q >= ((qn) this).field_v.length()) {
                         break L5;
                       } else {

@@ -212,44 +212,24 @@ final class lc extends gg {
         InterruptedException interruptedException = null;
         Object var4 = null;
         Throwable decompiledCaughtException = null;
-        int statePc = 0;
-        Throwable caughtException = null;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    try {
-                        Thread.sleep(param1);
-                        statePc = 3;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_0) {
-                        caughtException = stateCaught_0;
-                        statePc = 2;
-                        continue stateLoop;
-                    }
-                }
-                case 2: {
-                    interruptedException = (InterruptedException) (Object) caughtException;
-                    statePc = 3;
-                    continue stateLoop;
-                }
-                case 3: {
-                    if (param0 != 2767) {
-                        statePc = 5;
-                    } else {
-                        statePc = 4;
-                    }
-                    continue stateLoop;
-                }
-                case 4: {
-                    return;
-                }
-                case 5: {
-                    var4 = null;
-                    lc.a(14, 1, (String) null, (le) null, (mg) null);
-                    return;
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
-            }
+        try {
+          L0: {
+            Thread.sleep(param1);
+            break L0;
+          }
+        } catch (java.lang.Exception decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L1: {
+            interruptedException = (InterruptedException) (Object) decompiledCaughtException;
+            break L1;
+          }
+        }
+        if (param0 != 2767) {
+          var4 = null;
+          lc.a(14, 1, (String) null, (le) null, (mg) null);
+          return;
+        } else {
+          return;
         }
     }
 

@@ -774,6 +774,7 @@ final class c {
           ((c) this).field_d = false;
           ((c) this).field_l = 0;
           ((c) this).field_e = -1;
+          return;
         } else {
           if ((var2 ^ -1) == -2) {
             ((c) this).field_c = false;
@@ -786,6 +787,7 @@ final class c {
             ((c) this).field_h = 50;
             ((c) this).field_e = 1;
             ((c) this).field_n = false;
+            return;
           } else {
             if (var2 == 2) {
               ((c) this).field_l = 0;
@@ -795,6 +797,7 @@ final class c {
               ((c) this).field_g = false;
               ((c) this).field_c = true;
               ((c) this).field_j = false;
+              return;
             } else {
               if (var2 == 3) {
                 ((c) this).field_d = false;
@@ -804,6 +807,7 @@ final class c {
                 ((c) this).field_j = true;
                 ((c) this).field_n = false;
                 ((c) this).field_g = false;
+                return;
               } else {
                 if (var2 == 4) {
                   ((c) this).field_p = 1;
@@ -816,7 +820,9 @@ final class c {
                   ((c) this).field_e = 1;
                   ((c) this).field_c = true;
                   ((c) this).field_g = true;
+                  return;
                 } else {
+                  return;
                 }
               }
             }

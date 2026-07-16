@@ -27,8 +27,9 @@ final class fd {
                 if (fa.field_c <= 0) {
                   break L0;
                 } else {
+                  int fieldTemp$13 = fa.field_c - 1;
                   fa.field_c = fa.field_c - 1;
-                  var2_ref_byte__ = db.field_S[fa.field_c - 1];
+                  var2_ref_byte__ = db.field_S[fieldTemp$13];
                   db.field_S[fa.field_c] = null;
                   return var2_ref_byte__;
                 }
@@ -90,15 +91,17 @@ final class fd {
                   return new byte[param1];
                 }
               } else {
+                int fieldTemp$14 = jd.field_n - 1;
                 jd.field_n = jd.field_n - 1;
-                var2_ref_byte__ = pc.field_w[jd.field_n - 1];
+                var2_ref_byte__ = pc.field_w[fieldTemp$14];
                 pc.field_w[jd.field_n] = null;
                 return var2_ref_byte__;
               }
             }
           } else {
+            int fieldTemp$15 = fb.field_Hb - 1;
             fb.field_Hb = fb.field_Hb - 1;
-            var2_ref_byte__ = sc.field_e[fb.field_Hb - 1];
+            var2_ref_byte__ = sc.field_e[fieldTemp$15];
             sc.field_e[fb.field_Hb] = null;
             return var2_ref_byte__;
           }
@@ -110,8 +113,9 @@ final class fd {
               if (fa.field_c <= 0) {
                 break L3;
               } else {
+                int fieldTemp$16 = fa.field_c - 1;
                 fa.field_c = fa.field_c - 1;
-                var2_ref_byte__ = db.field_S[fa.field_c - 1];
+                var2_ref_byte__ = db.field_S[fieldTemp$16];
                 db.field_S[fa.field_c] = null;
                 return var2_ref_byte__;
               }
@@ -179,8 +183,9 @@ final class fd {
                 return new byte[param1];
               }
             } else {
+              int fieldTemp$17 = jd.field_n - 1;
               jd.field_n = jd.field_n - 1;
-              var2_ref_byte__ = pc.field_w[jd.field_n - 1];
+              var2_ref_byte__ = pc.field_w[fieldTemp$17];
               pc.field_w[jd.field_n] = null;
               return var2_ref_byte__;
             }

@@ -62,8 +62,9 @@ final class vk {
         L0: {
           var17 = ZombieDawn.field_J;
           var2 = 1;
+          int incrementValue$12 = var2;
           var2++;
-          var3 = md.a(var2, param1, 49);
+          var3 = md.a(incrementValue$12, param1, 49);
           var4 = 0;
           if (0 != (4096 & var3)) {
             var4 = 1;
@@ -73,10 +74,12 @@ final class vk {
             break L0;
           }
         }
+        int incrementValue$13 = var2;
         var2++;
-        var5 = md.a(var2, param1, 91);
+        var5 = md.a(incrementValue$13, param1, 91);
+        int incrementValue$14 = var2;
         var2++;
-        var6 = md.a(var2, param1, 75);
+        var6 = md.a(incrementValue$14, param1, 75);
         var32 = new int[4];
         var28 = var32;
         var24 = var28;
@@ -91,20 +94,25 @@ final class vk {
           var9 = 0;
           L1: while (true) {
             if (4 <= var9) {
+              int incrementValue$15 = var2;
               var2++;
-              var9 = md.a(var2, param1, 86);
+              var9 = md.a(incrementValue$15, param1, 86);
+              int incrementValue$16 = var2;
               var2++;
-              var10 = md.a(var2, param1, 55);
+              var10 = md.a(incrementValue$16, param1, 55);
+              int incrementValue$17 = var2;
               var2++;
-              var11 = md.a(var2, param1, 107);
+              var11 = md.a(incrementValue$17, param1, 107);
+              int incrementValue$18 = var2;
               var2++;
-              var12 = md.a(var2, param1, 76);
+              var12 = md.a(incrementValue$18, param1, 76);
               var30 = new int[var12][var11];
               var14 = 0;
               L2: while (true) {
                 if (var14 >= var12) {
+                  int incrementValue$19 = var2;
                   var2++;
-                  var14 = md.a(var2, param1, 79);
+                  var14 = md.a(incrementValue$19, param1, 79);
                   var31 = new int[4 * var14];
                   var27 = var31;
                   var23 = var27;
@@ -115,8 +123,9 @@ final class vk {
                     if (4 * var14 <= var16) {
                       return new on(var30, var31, var3, var5, var6, var32, var33, var9, var10, var4 != 0);
                     } else {
+                      int incrementValue$20 = var2;
                       var2++;
-                      var15[var16] = md.a(var2, param1, 76);
+                      var15[var16] = md.a(incrementValue$20, param1, 76);
                       var16++;
                       continue L3;
                     }
@@ -128,8 +137,9 @@ final class vk {
                       var14++;
                       continue L2;
                     } else {
+                      int incrementValue$21 = var2;
                       var2++;
-                      var30[var14][var15_int] = md.a(var2, param1, 94);
+                      var30[var14][var15_int] = md.a(incrementValue$21, param1, 94);
                       var15_int++;
                       continue L4;
                     }
@@ -137,10 +147,12 @@ final class vk {
                 }
               }
             } else {
+              int incrementValue$22 = var2;
               var2++;
-              var7[var9] = md.a(var2, param1, 59);
+              var7[var9] = md.a(incrementValue$22, param1, 59);
+              int incrementValue$23 = var2;
               var2++;
-              var8[var9] = md.a(var2, param1, 119);
+              var8[var9] = md.a(incrementValue$23, param1, 119);
               var9++;
               continue L1;
             }

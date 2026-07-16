@@ -43,108 +43,35 @@ final class wf implements Iterable {
         Throwable var2 = null;
         int stackIn_6_0 = 0;
         int stackIn_8_0 = 0;
+        Throwable decompiledCaughtException = null;
         int stackOut_5_0 = 0;
         int stackOut_7_0 = 0;
-        int statePc = 0;
-        Throwable caughtException = null;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    if (param0 < -90) {
-                        statePc = 2;
-                    } else {
-                        statePc = 1;
-                    }
-                    continue stateLoop;
-                }
-                case 1: {
-                    field_d = null;
-                    statePc = 2;
-                    continue stateLoop;
-                }
-                case 2: {
-                    var1 = (Object) (Object) rh.field_f;
-                    // monitorenter rh.field_f
-                    statePc = 3;
-                    continue stateLoop;
-                }
-                case 3: {
-                    try {
-                        if (tl.field_o == tc.field_h) {
-                            statePc = 5;
-                        } else {
-                            statePc = 4;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_3) {
-                        caughtException = stateCaught_3;
-                        statePc = 9;
-                        continue stateLoop;
-                    }
-                }
-                case 4: {
-                    try {
-                        statePc = 7;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_4) {
-                        caughtException = stateCaught_4;
-                        statePc = 9;
-                        continue stateLoop;
-                    }
-                }
-                case 5: {
-                    try {
-                        // monitorexit var1
-                        stackOut_5_0 = 0;
-                        stackIn_6_0 = stackOut_5_0;
-                        statePc = 6;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_5) {
-                        caughtException = stateCaught_5;
-                        statePc = 9;
-                        continue stateLoop;
-                    }
-                }
-                case 6: {
-                    return stackIn_6_0 != 0;
-                }
-                case 7: {
-                    try {
-                        ji.field_a = hj.field_b[tl.field_o];
-                        id.field_b = pf.field_d[tl.field_o];
-                        tl.field_o = 1 + tl.field_o & 127;
-                        // monitorexit var1
-                        stackOut_7_0 = 1;
-                        stackIn_8_0 = stackOut_7_0;
-                        statePc = 8;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_7) {
-                        caughtException = stateCaught_7;
-                        statePc = 9;
-                        continue stateLoop;
-                    }
-                }
-                case 8: {
-                    return stackIn_8_0 != 0;
-                }
-                case 9: {
-                    try {
-                        var2 = caughtException;
-                        // monitorexit var1
-                        statePc = 10;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_9) {
-                        caughtException = stateCaught_9;
-                        statePc = 9;
-                        continue stateLoop;
-                    }
-                }
-                case 10: {
-                    throw (RuntimeException) (Object) var2;
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
-            }
+        L0: {
+          if (param0 < -90) {
+            break L0;
+          } else {
+            field_d = null;
+            break L0;
+          }
         }
+        var1 = (Object) (Object) rh.field_f;
+        synchronized (var1) {
+          L1: {
+            if (tl.field_o == tc.field_h) {
+              stackOut_5_0 = 0;
+              stackIn_6_0 = stackOut_5_0;
+              return stackIn_6_0 != 0;
+            } else {
+              ji.field_a = hj.field_b[tl.field_o];
+              id.field_b = pf.field_d[tl.field_o];
+              tl.field_o = 1 + tl.field_o & 127;
+              stackOut_7_0 = 1;
+              stackIn_8_0 = stackOut_7_0;
+              break L1;
+            }
+          }
+        }
+        return stackIn_8_0 != 0;
     }
 
     final pa d(int param0) {

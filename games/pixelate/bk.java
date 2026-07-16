@@ -31,8 +31,9 @@ final class bk {
 
     final int a(int param0) {
         if (((bk) this).field_f >= ((bk) this).field_k) {
+            int fieldTemp$0 = ((bk) this).field_h;
             ((bk) this).field_h = ((bk) this).field_h + 1;
-            ((bk) this).field_d = ((bk) this).field_j[((bk) this).field_h] << 15;
+            ((bk) this).field_d = ((bk) this).field_j[fieldTemp$0] << 15;
             if (((bk) this).field_h >= ((bk) this).field_i) {
                 ((bk) this).field_h = ((bk) this).field_i - 1;
             }

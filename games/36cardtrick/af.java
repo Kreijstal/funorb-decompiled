@@ -1,6 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
+import java.lang.String;
+
 class af extends ta implements qh {
     private ng field_kb;
     static int field_ob;
@@ -16,7 +18,7 @@ class af extends ta implements qh {
         ui var2 = new ui((af) this, ((af) this).field_pb, dg.field_E);
         var2.a(sh.field_h, 15, -14);
         if (param0) {
-            lk var3 = (lk) null;
+            Object var3 = null;
             boolean discarded$0 = ((af) this).a('9', (byte) -80, 48, (lk) null);
         }
         ((af) this).c((lk) (Object) var2, (byte) 110);
@@ -30,7 +32,7 @@ class af extends ta implements qh {
             ((af) this).s(-122);
             return true;
         }
-        return this.a(param0, (byte) -106, param2, param3);
+        return super.a(param0, (byte) -106, param2, param3);
     }
 
     public void a(int param0, int param1, int param2, hl param3, int param4) {
@@ -112,7 +114,7 @@ class af extends ta implements qh {
 
     final static qj r(int param0) {
         if (param0 != 77) {
-            return (qj) null;
+            return null;
         }
         return gh.field_k;
     }
@@ -122,7 +124,7 @@ class af extends ta implements qh {
             return (java.awt.Container) (Object) q.field_g;
         }
         if (param0 != 3) {
-            return (java.awt.Container) null;
+            return null;
         }
         return (java.awt.Container) (Object) mk.g(-120);
     }
@@ -142,7 +144,7 @@ class af extends ta implements qh {
     final static String a(int param0, boolean param1, boolean param2, boolean param3) {
         int var4 = 0;
         if (param0 < 33) {
-            CharSequence var5 = (CharSequence) null;
+            Object var5 = null;
             int discarded$0 = af.a(-80, (CharSequence) null, (byte) 110);
         }
         if (param2) {
@@ -247,7 +249,7 @@ class af extends ta implements qh {
                     break L3;
                   }
                 }
-                ((ui) (Object) stackIn_13_0).a((String) (Object) stackIn_13_1, -1, -14);
+                ((ui) (Object) stackIn_13_0).a(stackIn_13_1, -1, -14);
                 break L2;
               } else {
                 hl discarded$4 = var6.a((pl) this, true, tc.field_c);

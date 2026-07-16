@@ -42,7 +42,7 @@ final class il implements Iterator {
             break L0;
           }
         }
-        ((nk) (Object) stackIn_3_0).field_e = stackIn_3_1 != 0;
+        stackIn_3_0.field_e = stackIn_3_1 != 0;
         if (param0 != -1) {
           il.b((byte) 34);
           return var2;
@@ -68,33 +68,32 @@ final class il implements Iterator {
 
     final static uh a(int param0, int param1, int param2, int param3, int param4) {
         uh var5 = null;
-        uh var5_ref = null;
         int var6 = 0;
         uh var7 = null;
         var6 = Main.field_T;
-        var5 = (uh) tl.field_a.a((byte) 74);
+        var5 = (uh) (Object) tl.field_a.a((byte) 74);
         L0: while (true) {
           if (var5 == null) {
             var7 = new uh();
-            var5_ref = var7;
+            var5 = var7;
             var7.field_g = param3;
             var7.field_h = param4;
             var7.field_k = param0;
             if (param2 != 25404) {
-              field_f = (char[]) null;
-              tl.field_a.a((qb) (Object) var5_ref, 27362);
-              ei.a(-91, var5_ref, param1);
-              return var5_ref;
-            } else {
-              tl.field_a.a((qb) (Object) var5_ref, 27362);
-              ei.a(-91, var5_ref, param1);
-              return var5_ref;
-            }
-          } else {
-            if (((uh) var5).field_g == param3) {
+              field_f = null;
+              tl.field_a.a((qb) (Object) var5, 27362);
+              ei.a(-91, var5, param1);
               return var5;
             } else {
-              var5 = (uh) tl.field_a.b((byte) -123);
+              tl.field_a.a((qb) (Object) var5, 27362);
+              ei.a(-91, var5, param1);
+              return var5;
+            }
+          } else {
+            if (var5.field_g == param3) {
+              return var5;
+            } else {
+              var5 = (uh) (Object) tl.field_a.b((byte) -123);
               continue L0;
             }
           }
@@ -107,8 +106,10 @@ final class il implements Iterator {
         if (((il) this).field_g.field_b[((il) this).field_b - 1] == ((il) this).field_c) {
           L0: while (true) {
             if (((il) this).field_b < ((il) this).field_g.field_a) {
+              qb[] fieldTemp$2 = ((il) this).field_g.field_b;
+              int fieldTemp$3 = ((il) this).field_b;
               ((il) this).field_b = ((il) this).field_b + 1;
-              if (((il) this).field_g.field_b[((il) this).field_b].field_d == ((il) this).field_g.field_b[((il) this).field_b - 1]) {
+              if (fieldTemp$2[fieldTemp$3].field_d == ((il) this).field_g.field_b[((il) this).field_b - 1]) {
                 ((il) this).field_c = ((il) this).field_g.field_b[-1 + ((il) this).field_b];
                 continue L0;
               } else {
@@ -126,20 +127,23 @@ final class il implements Iterator {
 
     public final Object next() {
         int var2 = 0;
-        qb var3 = null;
+        Object var3 = null;
+        qb var3_ref = null;
         qb var4 = null;
         var2 = Main.field_T;
         if (((il) this).field_g.field_b[-1 + ((il) this).field_b] == ((il) this).field_c) {
           L0: while (true) {
             if (((il) this).field_g.field_a > ((il) this).field_b) {
+              qb[] fieldTemp$4 = ((il) this).field_g.field_b;
+              int fieldTemp$5 = ((il) this).field_b;
               ((il) this).field_b = ((il) this).field_b + 1;
-              var3 = ((il) this).field_g.field_b[((il) this).field_b].field_d;
-              if (((il) this).field_g.field_b[((il) this).field_b + -1] == var3) {
+              var3_ref = fieldTemp$4[fieldTemp$5].field_d;
+              if (((il) this).field_g.field_b[((il) this).field_b + -1] == var3_ref) {
                 continue L0;
               } else {
-                ((il) this).field_d = var3;
-                ((il) this).field_c = ((qb) var3).field_d;
-                return (Object) (Object) var3;
+                ((il) this).field_d = var3_ref;
+                ((il) this).field_c = var3_ref.field_d;
+                return (Object) (Object) var3_ref;
               }
             } else {
               return null;
@@ -148,7 +152,7 @@ final class il implements Iterator {
         } else {
           var4 = ((il) this).field_c;
           ((il) this).field_d = var4;
-          ((il) this).field_c = ((qb) var4).field_d;
+          ((il) this).field_c = var4.field_d;
           return (Object) (Object) var4;
         }
     }

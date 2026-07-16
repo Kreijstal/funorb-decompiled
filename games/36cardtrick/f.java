@@ -6,7 +6,7 @@ final class f {
 
     public static void a(int param0) {
         if (param0 != -663255224) {
-            String var2 = (String) null;
+            Object var2 = null;
             boolean discarded$0 = f.a((String) null, 6, (String) null);
             field_a = null;
             return;
@@ -34,14 +34,14 @@ final class f {
         var2 = var9.f(-98);
         var3 = var9.f(92);
         if (param0 == (var2 ^ -1)) {
-          var4 = (dl) tf.field_q.a((byte) 74);
+          var4 = (dl) (Object) tf.field_q.a((byte) 74);
           if (var4 == null) {
             mc.a((byte) -126);
             return;
           } else {
             L0: {
-              var5 = -((w) var9).field_i + al.field_a;
-              var13 = ((dl) var4).field_i;
+              var5 = -var9.field_i + al.field_a;
+              var13 = var4.field_i;
               var12 = var13;
               var11 = var12;
               var10 = var11;
@@ -68,7 +68,7 @@ final class f {
         } else {
           if (1 == var2) {
             var4_int = var9.b((byte) 59);
-            var5_ref_gh = (gh) sj.field_a.a((byte) 74);
+            var5_ref_gh = (gh) (Object) sj.field_a.a((byte) 74);
             L2: while (true) {
               if (var5_ref_gh == null) {
                 if (var5_ref_gh == null) {
@@ -80,10 +80,10 @@ final class f {
                 }
               } else {
                 L3: {
-                  if (var3 != ((gh) var5_ref_gh).field_m) {
+                  if (var3 != var5_ref_gh.field_m) {
                     break L3;
                   } else {
-                    if (var4_int != ((gh) var5_ref_gh).field_l) {
+                    if (var4_int != var5_ref_gh.field_l) {
                       break L3;
                     } else {
                       if (var5_ref_gh == null) {
@@ -96,7 +96,7 @@ final class f {
                     }
                   }
                 }
-                var5_ref_gh = (gh) sj.field_a.b((byte) -106);
+                var5_ref_gh = (gh) (Object) sj.field_a.b((byte) -106);
                 continue L2;
               }
             }

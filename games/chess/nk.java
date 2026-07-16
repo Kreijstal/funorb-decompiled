@@ -27,8 +27,9 @@ final class nk extends p {
         int var5 = 0;
         int var6 = -116 / ((65 - param0) / 33);
         while (param1 > var4) {
+            int incrementValue$0 = var3;
             var3++;
-            var5 = var5 + ((((nk) this).field_o[var3] & mi.field_s[var4]) << param1 + -var4);
+            var5 = var5 + ((((nk) this).field_o[incrementValue$0] & mi.field_s[var4]) << param1 + -var4);
             param1 = param1 - var4;
             var4 = 8;
         }
@@ -62,11 +63,13 @@ final class nk extends p {
     final int n(int param0) {
         if (param0 >= -15) {
           field_x = null;
+          int fieldTemp$4 = ((nk) this).field_l;
           ((nk) this).field_l = ((nk) this).field_l + 1;
-          return ((nk) this).field_o[((nk) this).field_l] + -((nk) this).field_p.b(-1) & 255;
+          return ((nk) this).field_o[fieldTemp$4] + -((nk) this).field_p.b(-1) & 255;
         } else {
+          int fieldTemp$5 = ((nk) this).field_l;
           ((nk) this).field_l = ((nk) this).field_l + 1;
-          return ((nk) this).field_o[((nk) this).field_l] + -((nk) this).field_p.b(-1) & 255;
+          return ((nk) this).field_o[fieldTemp$5] + -((nk) this).field_p.b(-1) & 255;
         }
     }
 
@@ -91,8 +94,9 @@ final class nk extends p {
               return;
             }
           } else {
+            int fieldTemp$2 = ((nk) this).field_l;
             ((nk) this).field_l = ((nk) this).field_l + 1;
-            param1[param3 + var5] = (byte)(((nk) this).field_o[((nk) this).field_l] + -((nk) this).field_p.b(-1));
+            param1[param3 + var5] = (byte)(((nk) this).field_o[fieldTemp$2] + -((nk) this).field_p.b(-1));
             var5++;
             continue L0;
           }
@@ -101,7 +105,7 @@ final class nk extends p {
 
     final static dm a(boolean param0, String param1, String param2, boolean param3) {
         long var4 = 0L;
-        String var6 = null;
+        Object var6 = null;
         CharSequence var7 = null;
         L0: {
           var4 = 0L;
@@ -111,23 +115,24 @@ final class nk extends p {
             var4 = jl.a(var7, false);
             break L0;
           } else {
-            var6 = param2;
+            var6 = (Object) (Object) param2;
             break L0;
           }
         }
         if (!param3) {
           return null;
         } else {
-          return l.a(param0, param1, (byte) 36, var6, var4);
+          return l.a(param0, param1, (byte) 36, (String) var6, var4);
         }
     }
 
     final void f(int param0, int param1) {
+        int fieldTemp$0 = ((nk) this).field_l;
         ((nk) this).field_l = ((nk) this).field_l + 1;
-        ((nk) this).field_o[((nk) this).field_l] = (byte)(param0 + ((nk) this).field_p.b(-1));
+        ((nk) this).field_o[fieldTemp$0] = (byte)(param0 + ((nk) this).field_p.b(-1));
         if (param1 > -49) {
             Object var4 = null;
-            dm discarded$0 = nk.a(true, (String) null, (String) null, true);
+            dm discarded$1 = nk.a(true, (String) null, (String) null, true);
         }
     }
 

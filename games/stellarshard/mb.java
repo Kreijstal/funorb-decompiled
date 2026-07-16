@@ -230,8 +230,9 @@ final class mb {
                                               break L22;
                                             } else {
                                               L23: {
-                                                var9[var12 + var13 * var5] = var16.g(ih.a(param0, 102));
-                                                var14 = var16.g(ih.a(param0, 102));
+                                                byte dupTemp$2 = var16.g(ih.a(param0, 102));
+                                                var9[var12 + var13 * var5] = dupTemp$2;
+                                                var14 = dupTemp$2;
                                                 stackOut_39_0 = var10;
                                                 stackIn_41_0 = stackOut_39_0;
                                                 stackIn_40_0 = stackOut_39_0;
@@ -301,8 +302,9 @@ final class mb {
                                   break L13;
                                 } else {
                                   L27: {
-                                    var9[var12] = var16.g(-81);
-                                    var13 = var16.g(-81);
+                                    byte dupTemp$3 = var16.g(-81);
+                                    var9[var12] = dupTemp$3;
+                                    var13 = dupTemp$3;
                                     stackOut_53_0 = var10;
                                     stackIn_55_0 = stackOut_53_0;
                                     stackIn_54_0 = stackOut_53_0;

@@ -50,8 +50,9 @@ final class gd {
                       return param1;
                     }
                   } else {
+                    int incrementValue$2 = param3;
                     param3++;
-                    param1.setCharAt(param3, param2.charAt(var7));
+                    param1.setCharAt(incrementValue$2, param2.charAt(var7));
                     var7++;
                     continue L0;
                   }
@@ -68,8 +69,9 @@ final class gd {
                       return param1;
                     }
                   } else {
+                    int incrementValue$3 = param3;
                     param3++;
-                    param1.setCharAt(param3, param2.charAt(var7));
+                    param1.setCharAt(incrementValue$3, param2.charAt(var7));
                     var7++;
                     continue L1;
                   }

@@ -85,13 +85,16 @@ final class eh {
                     var8_int = 1;
                     L4: while (true) {
                       if (var5 <= var8_int) {
-                        var4.field_u = new String[3][var6];
-                        var8 = new String[3][var6];
+                        String[][] dupTemp$6 = new String[3][var6];
+                        var4.field_u = dupTemp$6;
+                        var8 = dupTemp$6;
                         var9 = new String[3][var6];
-                        var4.field_w = new long[3][var6];
-                        var10 = new long[3][var6];
-                        var4.field_o = new int[3][var6 * var7];
-                        var11 = new int[3][var6 * var7];
+                        long[][] dupTemp$7 = new long[3][var6];
+                        var4.field_w = dupTemp$7;
+                        var10 = dupTemp$7;
+                        int[][] dupTemp$8 = new int[3][var6 * var7];
+                        var4.field_o = dupTemp$8;
+                        var11 = dupTemp$8;
                         var12 = 0;
                         var13 = 0;
                         var14 = 0;
@@ -122,8 +125,9 @@ final class eh {
                                       var12++;
                                       break L6;
                                     } else {
+                                      int incrementValue$9 = var15;
                                       var15++;
-                                      var11[0][var15] = var28.b(false);
+                                      var11[0][incrementValue$9] = var28.b(false);
                                       var25++;
                                       continue L7;
                                     }
@@ -149,8 +153,9 @@ final class eh {
                                       if (var25 >= var7) {
                                         break L8;
                                       } else {
+                                        int incrementValue$10 = var16;
                                         var16++;
-                                        var11[1][var16] = var28.b(false);
+                                        var11[1][incrementValue$10] = var28.b(false);
                                         var25++;
                                         continue L9;
                                       }
@@ -169,8 +174,9 @@ final class eh {
                                   var25 = 0;
                                   L10: while (true) {
                                     if (var25 < var7) {
+                                      int incrementValue$11 = var17;
                                       var17++;
-                                      var11[2][var17] = var28.b(false);
+                                      var11[2][incrementValue$11] = var28.b(false);
                                       var25++;
                                       continue L10;
                                     } else {
@@ -248,16 +254,16 @@ final class eh {
 
     final static int a(int param0, byte param1) {
         int var2 = 0;
-        if (!(param0 != -1)) {
+        if (!((param0 ^ -1) != -1)) {
             return 0;
         }
-        if (!(-1 >= param0)) {
+        if (!(-1 <= (param0 ^ -1))) {
             var2 = 1;
-            if (!(param0 >= -65536)) {
+            if (!((param0 ^ -1) >= -65536)) {
                 param0 = param0 >> 16;
                 var2 += 16;
             }
-            if (-256 < param0) {
+            if (-256 > (param0 ^ -1)) {
                 param0 = param0 >> 8;
                 var2 += 8;
             }
@@ -283,7 +289,7 @@ final class eh {
             param0 = param0 >> 16;
             var2 += 16;
         }
-        if (255 < param0) {
+        if (255 < (param0 ^ -1)) {
             var2 += 8;
             param0 = param0 >> 8;
         }
@@ -291,7 +297,7 @@ final class eh {
             param0 = param0 >> 4;
             var2 += 4;
         }
-        if (3 > param0) {
+        if (3 < (param0 ^ -1)) {
             param0 = param0 >> 2;
             var2 += 2;
         }

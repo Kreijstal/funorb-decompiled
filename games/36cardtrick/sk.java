@@ -11,7 +11,7 @@ final class sk {
     final static int a(int param0, int param1, int param2) {
         int var3 = 0;
         if (param0 <= 17) {
-          field_b = (int[][]) (int[][]) null;
+          field_b = null;
           var3 = param2 >> -1364724737 & -1 + param1;
           return var3 + ((param2 >>> -1789106177) + param2) % param1;
         } else {
@@ -28,10 +28,10 @@ final class sk {
     }
 
     public static void a(int param0) {
-        field_b = (int[][]) null;
+        field_b = null;
         field_c = null;
         if (param0 != -12865) {
-            field_c = (kc) null;
+            field_c = null;
             field_a = null;
             return;
         }
@@ -41,7 +41,7 @@ final class sk {
     final static rc a(int param0, byte param1) {
         rc var2 = null;
         if (param1 != 125) {
-          return (rc) null;
+          return null;
         } else {
           var2 = new rc();
           ue.field_b.a((qb) (Object) var2, param1 + 27237);

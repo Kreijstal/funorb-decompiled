@@ -125,24 +125,43 @@ final class oo extends id {
     final void a(byte param0, wk param1) {
         int var3 = 0;
         int var4 = 0;
-        if (param0 > -76) {
-            return;
-        }
-        this.a(param1, true);
-        if (!ld.field_m) {
-        } else {
-            var3 = bd.field_e + 80;
-            var4 = nh.field_P - -80;
-            if (hn.field_p != null) {
-                // if_icmpne L67
-                // if_icmpne L67
-            } else {
+        if (param0 <= -76) {
+          L0: {
+            this.a(param1, true);
+            if (ld.field_m) {
+              L1: {
+                L2: {
+                  var3 = bd.field_e + 80;
+                  var4 = nh.field_P - -80;
+                  if (hn.field_p == null) {
+                    break L2;
+                  } else {
+                    if (var3 != hn.field_p.field_w) {
+                      break L2;
+                    } else {
+                      if (hn.field_p.field_t != var4) {
+                        break L2;
+                      } else {
+                        break L1;
+                      }
+                    }
+                  }
+                }
                 hn.field_p = null;
                 hn.field_p = new vn(var3, var4);
+                break L1;
+              }
+              ki.a((byte) -114, hn.field_p);
+              this.a(param1, 47);
+              pa.a(-21189);
+              break L0;
+            } else {
+              break L0;
             }
-            ki.a((byte) -114, hn.field_p);
-            this.a(param1, 47);
-            pa.a(-21189);
+          }
+          return;
+        } else {
+          return;
         }
     }
 

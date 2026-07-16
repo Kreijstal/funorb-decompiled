@@ -570,8 +570,9 @@ final class dh implements Iterator {
         } else {
           L0: while (true) {
             if (((dh) this).field_c < ((dh) this).field_e.field_e) {
+              int fieldTemp$2 = ((dh) this).field_c;
               ((dh) this).field_c = ((dh) this).field_c + 1;
-              var1 = ((dh) this).field_e.field_a[((dh) this).field_c].field_e;
+              var1 = ((dh) this).field_e.field_a[fieldTemp$2].field_e;
               if (((dh) this).field_e.field_a[-1 + ((dh) this).field_c] != var1) {
                 ((dh) this).field_b = var1.field_e;
                 ((dh) this).field_f = var1;
@@ -594,8 +595,9 @@ final class dh implements Iterator {
         } else {
           L0: while (true) {
             if (((dh) this).field_c < ((dh) this).field_e.field_e) {
+              int fieldTemp$2 = ((dh) this).field_c;
               ((dh) this).field_c = ((dh) this).field_c + 1;
-              if (((dh) this).field_e.field_a[((dh) this).field_c].field_e == ((dh) this).field_e.field_a[((dh) this).field_c + -1]) {
+              if (((dh) this).field_e.field_a[fieldTemp$2].field_e == ((dh) this).field_e.field_a[((dh) this).field_c + -1]) {
                 ((dh) this).field_b = ((dh) this).field_e.field_a[-1 + ((dh) this).field_c];
                 continue L0;
               } else {

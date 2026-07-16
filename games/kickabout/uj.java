@@ -93,181 +93,67 @@ final class uj extends tm {
             Throwable decompiledCaughtException = null;
             int stackOut_10_0 = 0;
             int stackOut_8_0 = 0;
-            int statePc = 0;
-            Throwable caughtException = null;
-            stateLoop: while (true) {
-                switch (statePc) {
-                    case 0: {
-                        if (un.field_e.field_n < param1) {
-                            statePc = 2;
-                        } else {
-                            statePc = 1;
-                        }
-                        continue stateLoop;
-                    }
-                    case 1: {
-                        return true;
-                    }
-                    case 2: {
-                        if (op.field_y != null) {
-                            statePc = 4;
-                        } else {
-                            statePc = 3;
-                        }
-                        continue stateLoop;
-                    }
-                    case 3: {
-                        return false;
-                    }
-                    case 4: {
-                        try {
-                            var2 = op.field_y.a((byte) 63);
-                            if (0 >= var2) {
-                                statePc = 12;
-                            } else {
-                                statePc = 5;
-                            }
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_4) {
-                            caughtException = stateCaught_4;
-                            statePc = 17;
-                            continue stateLoop;
-                        }
-                    }
-                    case 5: {
-                        try {
-                            if (param1 - un.field_e.field_n >= var2) {
-                                statePc = 7;
-                            } else {
-                                statePc = 6;
-                            }
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_5) {
-                            caughtException = stateCaught_5;
-                            statePc = 17;
-                            continue stateLoop;
-                        }
-                    }
-                    case 6: {
-                        try {
-                            var2 = -un.field_e.field_n + param1;
-                            statePc = 7;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_6) {
-                            caughtException = stateCaught_6;
-                            statePc = 17;
-                            continue stateLoop;
-                        }
-                    }
-                    case 7: {
-                        try {
-                            op.field_y.a(un.field_e.field_f, var2, un.field_e.field_n, -4847);
-                            ci.field_c = nj.a(-128);
-                            un.field_e.field_n = un.field_e.field_n + var2;
-                            if (param1 <= un.field_e.field_n) {
-                                statePc = 10;
-                            } else {
-                                statePc = 8;
-                            }
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_7) {
-                            caughtException = stateCaught_7;
-                            statePc = 17;
-                            continue stateLoop;
-                        }
-                    }
-                    case 8: {
-                        try {
-                            stackOut_8_0 = 0;
-                            stackIn_9_0 = stackOut_8_0;
-                            statePc = 9;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_8) {
-                            caughtException = stateCaught_8;
-                            statePc = 17;
-                            continue stateLoop;
-                        }
-                    }
-                    case 9: {
-                        return stackIn_9_0 != 0;
-                    }
-                    case 10: {
-                        try {
-                            un.field_e.field_n = 0;
-                            stackOut_10_0 = 1;
-                            stackIn_11_0 = stackOut_10_0;
-                            statePc = 11;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_10) {
-                            caughtException = stateCaught_10;
-                            statePc = 17;
-                            continue stateLoop;
-                        }
-                    }
-                    case 11: {
-                        return stackIn_11_0 != 0;
-                    }
-                    case 12: {
-                        try {
-                            if (0 > var2) {
-                                statePc = 15;
-                            } else {
-                                statePc = 13;
-                            }
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_12) {
-                            caughtException = stateCaught_12;
-                            statePc = 17;
-                            continue stateLoop;
-                        }
-                    }
-                    case 13: {
-                        try {
+            if (un.field_e.field_n < param1) {
+              if (op.field_y != null) {
+                try {
+                  L0: {
+                    var2 = op.field_y.a((byte) 63);
+                    if (0 >= var2) {
+                      L1: {
+                        L2: {
+                          if (0 > var2) {
+                            break L2;
+                          } else {
                             if (30000L < aa.c(29680)) {
-                                statePc = 15;
+                              break L2;
                             } else {
-                                statePc = 14;
+                              break L1;
                             }
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_13) {
-                            caughtException = stateCaught_13;
-                            statePc = 17;
-                            continue stateLoop;
+                          }
                         }
-                    }
-                    case 14: {
-                        try {
-                            statePc = 18;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_14) {
-                            caughtException = stateCaught_14;
-                            statePc = 17;
-                            continue stateLoop;
-                        }
-                    }
-                    case 15: {
-                        try {
-                            lr.b((byte) -116);
-                            statePc = 18;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_15) {
-                            caughtException = stateCaught_15;
-                            statePc = 17;
-                            continue stateLoop;
-                        }
-                    }
-                    case 17: {
-                        var2_ref_IOException = (IOException) (Object) caughtException;
                         lr.b((byte) -116);
-                        statePc = 18;
-                        continue stateLoop;
+                        break L1;
+                      }
+                      break L0;
+                    } else {
+                      L3: {
+                        if (param1 - un.field_e.field_n >= var2) {
+                          break L3;
+                        } else {
+                          var2 = -un.field_e.field_n + param1;
+                          break L3;
+                        }
+                      }
+                      op.field_y.a(un.field_e.field_f, var2, un.field_e.field_n, -4847);
+                      ci.field_c = nj.a(-128);
+                      un.field_e.field_n = un.field_e.field_n + var2;
+                      if (param1 <= un.field_e.field_n) {
+                        un.field_e.field_n = 0;
+                        stackOut_10_0 = 1;
+                        stackIn_11_0 = stackOut_10_0;
+                        return stackIn_11_0 != 0;
+                      } else {
+                        stackOut_8_0 = 0;
+                        stackIn_9_0 = stackOut_8_0;
+                        return stackIn_9_0 != 0;
+                      }
                     }
-                    case 18: {
-                        var2 = -124 / ((param0 - -30) / 55);
-                        return false;
-                    }
-                    default: throw new IllegalStateException("invalid CFG state " + statePc);
+                  }
+                } catch (java.io.IOException decompiledCaughtParameter0) {
+                  decompiledCaughtException = decompiledCaughtParameter0;
+                  L4: {
+                    var2_ref_IOException = (IOException) (Object) decompiledCaughtException;
+                    lr.b((byte) -116);
+                    break L4;
+                  }
                 }
+                var2 = -124 / ((param0 - -30) / 55);
+                return false;
+              } else {
+                return false;
+              }
+            } else {
+              return true;
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -294,72 +180,76 @@ final class uj extends tm {
         try {
             int var6_int = 0;
             IOException var6 = null;
-            qh var7 = null;
-            qh var8 = null;
+            Object var7 = null;
+            Object var8 = null;
             wm var9 = null;
             sj stackIn_14_0 = null;
             Throwable decompiledCaughtException = null;
             sj stackOut_13_0 = null;
             try {
               L0: {
-                var6_int = 60 % ((20 - param1) / 35);
-                var7 = null;
-                if (hf.field_e.field_c != null) {
-                  ao.field_h = new ew(hf.field_e.field_c, 5200, 0);
-                  hf.field_e.field_c = null;
-                  var7 = new qh(255, ao.field_h, new ew(hf.field_e.field_j, 12000, 0), 2097152);
-                  break L0;
-                } else {
-                  break L0;
-                }
-              }
-              L1: {
-                var8 = null;
-                if (null != ao.field_h) {
-                  L2: {
-                    if (null != u.field_j) {
-                      break L2;
-                    } else {
-                      u.field_j = new ew[hf.field_e.field_v.length];
-                      break L2;
-                    }
+                L1: {
+                  var6_int = 60 % ((20 - param1) / 35);
+                  var7 = null;
+                  if (hf.field_e.field_c != null) {
+                    ao.field_h = new ew(hf.field_e.field_c, 5200, 0);
+                    hf.field_e.field_c = null;
+                    var7 = (Object) (Object) new qh(255, ao.field_h, new ew(hf.field_e.field_j, 12000, 0), 2097152);
+                    break L1;
+                  } else {
+                    break L1;
                   }
-                  L3: {
-                    if (u.field_j[param0] != null) {
-                      break L3;
-                    } else {
-                      u.field_j[param0] = new ew(hf.field_e.field_v[param0], 12000, 0);
-                      hf.field_e.field_v[param0] = null;
-                      break L3;
+                }
+                L2: {
+                  var8 = null;
+                  if (null != ao.field_h) {
+                    L3: {
+                      if (null != u.field_j) {
+                        break L3;
+                      } else {
+                        u.field_j = new ew[hf.field_e.field_v.length];
+                        break L3;
+                      }
                     }
+                    L4: {
+                      if (u.field_j[param0] != null) {
+                        break L4;
+                      } else {
+                        u.field_j[param0] = new ew(hf.field_e.field_v[param0], 12000, 0);
+                        hf.field_e.field_v[param0] = null;
+                        break L4;
+                      }
+                    }
+                    var8 = (Object) (Object) new qh(param0, ao.field_h, u.field_j[param0], 2097152);
+                    break L2;
+                  } else {
+                    break L2;
                   }
-                  var8 = new qh(param0, ao.field_h, u.field_j[param0], 2097152);
-                  break L1;
-                } else {
-                  break L1;
                 }
-              }
-              L4: {
-                var9 = al.field_Ab.a(var8, -122, param0, param4, var7);
-                if (param3) {
-                  var9.b((byte) 55);
-                  break L4;
-                } else {
-                  break L4;
+                L5: {
+                  var9 = al.field_Ab.a((qh) var8, -122, param0, param4, (qh) var7);
+                  if (param3) {
+                    var9.b((byte) 55);
+                    break L5;
+                  } else {
+                    break L5;
+                  }
                 }
+                stackOut_13_0 = new sj((ow) (Object) var9, param5, param2);
+                stackIn_14_0 = stackOut_13_0;
+                break L0;
               }
-              stackOut_13_0 = new sj((ow) (Object) var9, param5, param2);
-              stackIn_14_0 = stackOut_13_0;
-            } catch (java.io.IOException decompiledCaughtParameter) {
-              decompiledCaughtException = decompiledCaughtParameter;
-              return stackIn_14_0;
+            } catch (java.io.IOException decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              var6 = (IOException) (Object) decompiledCaughtException;
+              throw new RuntimeException(var6.toString());
             }
+            return stackIn_14_0;
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
             throw new RuntimeException(decompiledCheckedException);
         }
-        return null;
     }
 
     static {

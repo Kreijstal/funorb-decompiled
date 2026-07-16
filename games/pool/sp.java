@@ -27,15 +27,22 @@ final class sp extends gr {
     }
 
     final byte[] b(boolean param0) {
-        if (param0) {
-            return null;
-        }
-        if (!((sp) this).field_F) {
-            // if_icmplt L43
+        if (!param0) {
+          L0: {
+            if (((sp) this).field_F) {
+              break L0;
+            } else {
+              if (((sp) this).field_K.field_v < ((sp) this).field_K.field_t.length + -((sp) this).field_L) {
+                break L0;
+              } else {
+                return ((sp) this).field_K.field_t;
+              }
+            }
+          }
+          throw new RuntimeException();
         } else {
-            throw new RuntimeException();
+          return null;
         }
-        return ((sp) this).field_K.field_t;
     }
 
     sp() {

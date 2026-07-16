@@ -17,11 +17,17 @@ final class rc {
               }
             }
             try {
-              Object discarded$1 = cl.a(new Object[1], "resizing", param0 + 30383, jg.f(1));
-            } catch (java.lang.Throwable decompiledCaughtParameter) {
-              decompiledCaughtException = decompiledCaughtParameter;
+              L1: {
+                Object discarded$1 = cl.a(new Object[1], "resizing", param0 + 30383, jg.f(1));
+                break L1;
+              }
+            } catch (java.lang.Throwable decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              L2: {
+                var2 = decompiledCaughtException;
+                break L2;
+              }
             }
-            var2 = decompiledCaughtException;
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {

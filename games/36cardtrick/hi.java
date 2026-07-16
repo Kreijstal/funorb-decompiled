@@ -1,13 +1,15 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
+import java.net.URL;
+
 final class hi {
     static boolean field_a;
     static String field_b;
 
     public static void a(int param0) {
         if (param0 != 0) {
-            field_b = (String) null;
+            field_b = null;
         }
         field_b = null;
     }
@@ -148,14 +150,20 @@ final class hi {
                 }
                 if (param4 == 353) {
                   try {
-                    stackOut_40_0 = new java.net.URL(param1, var7.toString());
-                    stackIn_41_0 = stackOut_40_0;
-                  } catch (java.lang.Exception decompiledCaughtParameter) {
-                    decompiledCaughtException = decompiledCaughtParameter;
-                    return (java.net.URL) (Object) stackIn_41_0;
+                    L11: {
+                      stackOut_40_0 = new java.net.URL(param1, var7.toString());
+                      stackIn_41_0 = stackOut_40_0;
+                      break L11;
+                    }
+                  } catch (java.lang.Exception decompiledCaughtParameter0) {
+                    decompiledCaughtException = decompiledCaughtParameter0;
+                    var8 = (Exception) (Object) decompiledCaughtException;
+                    var8.printStackTrace();
+                    return param1;
                   }
+                  return stackIn_41_0;
                 } else {
-                  return (java.net.URL) null;
+                  return null;
                 }
               }
               var6 = var7_int;
@@ -369,7 +377,7 @@ final class hi {
               L2: {
                 L3: {
                   L4: {
-                    var8 = ((CharSequence) param3).charAt(param1 + var7);
+                    var8 = param3.charAt(param1 + var7);
                     if ((var8 ^ -1) >= -1) {
                       break L4;
                     } else {

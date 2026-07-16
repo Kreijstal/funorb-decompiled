@@ -88,8 +88,7 @@ final class ek extends l {
                 break L0;
               }
             }
-            new o(stackIn_12_2, (l) (Object) stackIn_12_3);
-            return (l) (Object) stackIn_12_0;
+            return (l) (Object) new o(stackIn_12_2, (l) (Object) stackIn_12_3);
           }
         } else {
           l discarded$6 = ((ek) this).a(-85);
@@ -129,8 +128,7 @@ final class ek extends l {
                 break L1;
               }
             }
-            new o(stackIn_5_2, (l) (Object) stackIn_5_3);
-            return (l) (Object) stackIn_5_0;
+            return (l) (Object) new o(stackIn_5_2, (l) (Object) stackIn_5_3);
           }
         }
     }

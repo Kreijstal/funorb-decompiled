@@ -67,8 +67,8 @@ final class th {
         int var4 = 0;
         int var5 = MinerDisturbance.field_ab;
         param1.c(true);
-        for (var3 = 0; -36 < var3; var3++) {
-            for (var4 = 0; -3 > var4; var4++) {
+        for (var3 = 0; -36 < (var3 ^ -1); var3++) {
+            for (var4 = 0; -3 < (var4 ^ -1); var4++) {
                 param1.a(!((th) this).field_c[var3][var4] ? 0 : 1, (byte) 14, 1);
             }
         }

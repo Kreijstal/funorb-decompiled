@@ -20,21 +20,17 @@ final class ok extends fd implements im, ta {
     }
 
     final boolean a(fi param0, char param1, int param2, int param3) {
-        int var5 = 0;
-        if (super.a(param0, param1, param2, 94)) {
-          return true;
-        } else {
-          if (-99 == param2) {
-            return ((ok) this).b(2, param0);
-          } else {
-            var5 = -34 % ((param3 - -75) / 36);
-            if (-100 == param2) {
-              return ((ok) this).a(-16234, param0);
-            } else {
-              return false;
-            }
-          }
+        if (!(!super.a(param0, param1, param2, 94))) {
+            return true;
         }
+        if (!(-99 != (param2 ^ -1))) {
+            return ((ok) this).b(2, param0);
+        }
+        int var5 = -34 % ((param3 - -75) / 36);
+        if (-100 == (param2 ^ -1)) {
+            return ((ok) this).a(-16234, param0);
+        }
+        return false;
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, e param9, int param10, mg[] param11, int param12, int param13, int param14, int param15, mg[] param16, e param17, mg[] param18, int param19, int param20) {
@@ -109,39 +105,39 @@ final class ok extends fd implements im, ta {
         int var6 = 0;
         var6 = Virogrid.field_F ? 1 : 0;
         if (param2) {
-          if (0 != param0) {
-            if (-2 != param0) {
-              if (-3 == param0) {
-                wf.a("conduct.ws", 12);
-                return;
-              } else {
-                return;
-              }
-            } else {
-              wf.a("privacy.ws", 12);
-              return;
-            }
-          } else {
+          if (0 == param0) {
             wf.a("terms.ws", 12);
             return;
+          } else {
+            if (-2 == (param0 ^ -1)) {
+              wf.a("privacy.ws", 12);
+              return;
+            } else {
+              if (-3 != (param0 ^ -1)) {
+                return;
+              } else {
+                wf.a("conduct.ws", 12);
+                return;
+              }
+            }
           }
         } else {
           field_J = true;
-          if (0 != param0) {
-            if (-2 != param0) {
-              if (-3 != param0) {
-                return;
-              } else {
-                wf.a("conduct.ws", 12);
-                return;
-              }
-            } else {
-              wf.a("privacy.ws", 12);
-              return;
-            }
-          } else {
+          if (0 == param0) {
             wf.a("terms.ws", 12);
             return;
+          } else {
+            if (-2 == (param0 ^ -1)) {
+              wf.a("privacy.ws", 12);
+              return;
+            } else {
+              if (-3 == (param0 ^ -1)) {
+                wf.a("conduct.ws", 12);
+                return;
+              } else {
+                return;
+              }
+            }
           }
         }
     }

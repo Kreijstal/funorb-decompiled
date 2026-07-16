@@ -87,16 +87,25 @@ final class nl extends aj {
     }
 
     final static void a(java.applet.Applet param0, int param1) {
+        String var2 = null;
         CharSequence var3 = null;
-        String var2 = param0.getParameter("username");
-        if (param1 != 17574) {
-            return;
-        }
-        if (var2 != null) {
-            var3 = (CharSequence) (Object) var2;
-            // ifeq L44
+        var2 = param0.getParameter("username");
+        if (param1 == 17574) {
+          L0: {
+            if (var2 == null) {
+              break L0;
+            } else {
+              var3 = (CharSequence) (Object) var2;
+              if (-1L == (jc.a(var3, (byte) -126) ^ -1L)) {
+                break L0;
+              } else {
+                return;
+              }
+            }
+          }
+          return;
         } else {
-            return;
+          return;
         }
     }
 
@@ -244,8 +253,9 @@ final class nl extends aj {
         if (param0 < 77) {
             field_v = null;
         }
-        ((nl) this).field_w[param1] = new jj();
-        return new jj();
+        jj dupTemp$0 = new jj();
+        ((nl) this).field_w[param1] = dupTemp$0;
+        return dupTemp$0;
     }
 
     final static int b(int param0) {
@@ -277,8 +287,9 @@ final class nl extends aj {
     public nl() {
         ((nl) this).field_w = new jj[6];
         ((nl) this).field_y = new jj();
-        ((nl) this).field_w[0] = new jj();
-        jj var1 = new jj();
+        jj dupTemp$0 = new jj();
+        ((nl) this).field_w[0] = dupTemp$0;
+        jj var1 = dupTemp$0;
         var1.a(31749);
     }
 
@@ -323,10 +334,11 @@ final class nl extends aj {
                       stackIn_9_0 = stackOut_8_0;
                       stackIn_9_1 = stackOut_8_1;
                       if (var6 == null) {
-                        param2.field_w[var4] = new jj();
+                        jj dupTemp$1 = new jj();
+                        param2.field_w[var4] = dupTemp$1;
                         stackOut_10_0 = (jj) (Object) stackIn_10_0;
                         stackOut_10_1 = stackIn_10_1;
-                        stackOut_10_2 = new jj();
+                        stackOut_10_2 = (jj) dupTemp$1;
                         stackIn_11_0 = stackOut_10_0;
                         stackIn_11_1 = stackOut_10_1;
                         stackIn_11_2 = stackOut_10_2;

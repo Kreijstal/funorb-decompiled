@@ -14,7 +14,6 @@ final class df extends fa {
     final static void a(int param0, int param1, int param2) {
         pc var4 = null;
         eq var6 = null;
-        eq var6_ref = null;
         eq var7 = null;
         eq var9 = null;
         eq var12 = null;
@@ -27,7 +26,7 @@ final class df extends fa {
               L1: {
                 var6 = (eq) (Object) dg.field_f.a(-11434, (long)ec.field_r);
                 var7 = var6;
-                var6_ref = var7;
+                var6 = var7;
                 ec.field_r = param1;
                 if (var7 != null) {
                   var7.field_Ub = null;
@@ -52,7 +51,7 @@ final class df extends fa {
             } else {
               L3: {
                 var12 = (eq) (Object) dg.field_f.a(-11434, (long)ec.field_r);
-                var6_ref = var12;
+                var6 = var12;
                 var9 = var12;
                 ec.field_r = param1;
                 if (var9 != null) {

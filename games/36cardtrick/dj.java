@@ -20,7 +20,7 @@ final class dj {
     public static void a(int param0) {
         field_f = null;
         if (param0 <= 48) {
-            field_f = (nc) null;
+            field_f = null;
             field_e = null;
             return;
         }
@@ -30,7 +30,7 @@ final class dj {
     final static ek b(int param0) {
         if (null != t.field_j) {
           if (param0 != 31959) {
-            field_f = (nc) null;
+            field_f = null;
             return t.field_j;
           } else {
             return t.field_j;
@@ -40,7 +40,7 @@ final class dj {
           if (param0 == 31959) {
             return t.field_j;
           } else {
-            field_f = (nc) null;
+            field_f = null;
             return t.field_j;
           }
         }

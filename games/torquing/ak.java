@@ -40,24 +40,21 @@ final class ak extends kj {
 
     final static boolean c(int param0) {
         int var2 = 0;
-        int stackIn_8_0 = 0;
-        int stackIn_20_0 = 0;
-        int stackIn_26_0 = 0;
-        int stackIn_32_0 = 0;
-        int stackIn_49_0 = 0;
-        int stackOut_48_0 = 0;
-        int stackOut_47_0 = 0;
-        int stackOut_31_0 = 0;
-        int stackOut_30_0 = 0;
-        int stackOut_19_0 = 0;
-        int stackOut_18_0 = 0;
-        int stackOut_25_0 = 0;
-        int stackOut_24_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_6_0 = 0;
+        int stackIn_16_0 = 0;
+        int stackIn_23_0 = 0;
+        int stackIn_29_0 = 0;
+        int stackIn_46_0 = 0;
+        int stackOut_45_0 = 0;
+        int stackOut_44_0 = 0;
+        int stackOut_28_0 = 0;
+        int stackOut_27_0 = 0;
+        int stackOut_15_0 = 0;
+        int stackOut_14_0 = 0;
+        int stackOut_22_0 = 0;
+        int stackOut_21_0 = 0;
         L0: {
           var2 = Torquing.field_u;
-          if (i.field_P.length == po.field_z) {
+          if ((i.field_P.length ^ -1) == (po.field_z ^ -1)) {
             po.field_z = -1;
             break L0;
           } else {
@@ -67,24 +64,25 @@ final class ak extends kj {
         if (param0 != -85) {
           field_h = null;
           L1: while (true) {
+            int fieldTemp$10 = po.field_z + 1;
             po.field_z = po.field_z + 1;
-            if (po.field_z + 1 < i.field_P.length) {
+            if ((fieldTemp$10 ^ -1) > (i.field_P.length ^ -1)) {
               if (i.field_P[po.field_z]) {
                 L2: {
                   L3: {
-                    if (po.field_z == -14) {
+                    if ((po.field_z ^ -1) == -14) {
                       break L3;
                     } else {
-                      if (-85 == po.field_z) {
+                      if (-85 == (po.field_z ^ -1)) {
                         break L3;
                       } else {
                         if (83 == po.field_z) {
                           break L3;
                         } else {
-                          if (po.field_z == -82) {
+                          if ((po.field_z ^ -1) == -82) {
                             break L3;
                           } else {
-                            if (-81 == po.field_z) {
+                            if (-81 == (po.field_z ^ -1)) {
                               break L3;
                             } else {
                               if (r.field_b[po.field_z] == un.field_i) {
@@ -99,7 +97,7 @@ final class ak extends kj {
                       }
                     }
                   }
-                  if (r.field_b[po.field_z] == nn.field_b) {
+                  if ((r.field_b[po.field_z] ^ -1) == (nn.field_b ^ -1)) {
                     r.field_b[po.field_z] = rn.field_e;
                     break L2;
                   } else {
@@ -107,115 +105,108 @@ final class ak extends kj {
                   }
                 }
                 L4: {
-                  if (po.field_z >= i.field_P.length) {
-                    stackOut_48_0 = 0;
-                    stackIn_49_0 = stackOut_48_0;
+                  if ((po.field_z ^ -1) <= (i.field_P.length ^ -1)) {
+                    stackOut_45_0 = 0;
+                    stackIn_46_0 = stackOut_45_0;
                     break L4;
                   } else {
-                    stackOut_47_0 = 1;
-                    stackIn_49_0 = stackOut_47_0;
+                    stackOut_44_0 = 1;
+                    stackIn_46_0 = stackOut_44_0;
                     break L4;
                   }
                 }
-                return stackIn_49_0 != 0;
+                return stackIn_46_0 != 0;
               } else {
                 r.field_b[po.field_z] = nn.field_b;
                 continue L1;
               }
             } else {
               L5: {
-                if (po.field_z >= i.field_P.length) {
-                  stackOut_31_0 = 0;
-                  stackIn_32_0 = stackOut_31_0;
+                if ((po.field_z ^ -1) <= (i.field_P.length ^ -1)) {
+                  stackOut_28_0 = 0;
+                  stackIn_29_0 = stackOut_28_0;
                   break L5;
                 } else {
-                  stackOut_30_0 = 1;
-                  stackIn_32_0 = stackOut_30_0;
+                  stackOut_27_0 = 1;
+                  stackIn_29_0 = stackOut_27_0;
                   break L5;
                 }
               }
-              return stackIn_32_0 != 0;
+              return stackIn_29_0 != 0;
             }
           }
         } else {
           L6: while (true) {
-            po.field_z = po.field_z + 1;
-            if (po.field_z + 1 < i.field_P.length) {
-              if (i.field_P[po.field_z]) {
-                L7: {
-                  if (po.field_z == -14) {
-                    break L7;
-                  } else {
-                    if (-85 == po.field_z) {
-                      break L7;
+            L7: {
+              int fieldTemp$11 = po.field_z + 1;
+              po.field_z = po.field_z + 1;
+              if ((fieldTemp$11 ^ -1) <= (i.field_P.length ^ -1)) {
+                break L7;
+              } else {
+                if (i.field_P[po.field_z]) {
+                  L8: {
+                    if ((po.field_z ^ -1) == -14) {
+                      break L8;
                     } else {
-                      if (83 == po.field_z) {
-                        break L7;
+                      if (-85 == (po.field_z ^ -1)) {
+                        break L8;
                       } else {
-                        if (po.field_z == -82) {
-                          break L7;
+                        if (83 == po.field_z) {
+                          break L8;
                         } else {
-                          if (-81 == po.field_z) {
-                            break L7;
+                          if ((po.field_z ^ -1) == -82) {
+                            break L8;
                           } else {
-                            if (r.field_b[po.field_z] == un.field_i) {
-                              continue L6;
+                            if (-81 == (po.field_z ^ -1)) {
+                              break L8;
                             } else {
-                              L8: {
-                                r.field_b[po.field_z] = rn.field_e;
-                                if (po.field_z >= i.field_P.length) {
-                                  stackOut_19_0 = 0;
-                                  stackIn_20_0 = stackOut_19_0;
-                                  break L8;
-                                } else {
-                                  stackOut_18_0 = 1;
-                                  stackIn_20_0 = stackOut_18_0;
-                                  break L8;
+                              if (r.field_b[po.field_z] == un.field_i) {
+                                continue L6;
+                              } else {
+                                L9: {
+                                  r.field_b[po.field_z] = rn.field_e;
+                                  if ((po.field_z ^ -1) <= (i.field_P.length ^ -1)) {
+                                    stackOut_15_0 = 0;
+                                    stackIn_16_0 = stackOut_15_0;
+                                    break L9;
+                                  } else {
+                                    stackOut_14_0 = 1;
+                                    stackIn_16_0 = stackOut_14_0;
+                                    break L9;
+                                  }
                                 }
+                                return stackIn_16_0 != 0;
                               }
-                              return stackIn_20_0 != 0;
                             }
                           }
                         }
                       }
                     }
                   }
-                }
-                if (r.field_b[po.field_z] == nn.field_b) {
-                  L9: {
+                  if ((r.field_b[po.field_z] ^ -1) == (nn.field_b ^ -1)) {
                     r.field_b[po.field_z] = rn.field_e;
-                    if (po.field_z >= i.field_P.length) {
-                      stackOut_25_0 = 0;
-                      stackIn_26_0 = stackOut_25_0;
-                      break L9;
-                    } else {
-                      stackOut_24_0 = 1;
-                      stackIn_26_0 = stackOut_24_0;
-                      break L9;
-                    }
+                    break L7;
+                  } else {
+                    continue L6;
                   }
-                  return stackIn_26_0 != 0;
                 } else {
+                  r.field_b[po.field_z] = nn.field_b;
                   continue L6;
                 }
-              } else {
-                r.field_b[po.field_z] = nn.field_b;
-                continue L6;
               }
-            } else {
-              L10: {
-                if (po.field_z >= i.field_P.length) {
-                  stackOut_7_0 = 0;
-                  stackIn_8_0 = stackOut_7_0;
-                  break L10;
-                } else {
-                  stackOut_6_0 = 1;
-                  stackIn_8_0 = stackOut_6_0;
-                  break L10;
-                }
-              }
-              return stackIn_8_0 != 0;
             }
+            L10: {
+              if ((po.field_z ^ -1) <= (i.field_P.length ^ -1)) {
+                stackOut_22_0 = 0;
+                stackIn_23_0 = stackOut_22_0;
+                break L10;
+              } else {
+                stackOut_21_0 = 1;
+                stackIn_23_0 = stackOut_21_0;
+                break L10;
+              }
+            }
+            return stackIn_23_0 != 0;
           }
         }
     }

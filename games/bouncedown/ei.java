@@ -109,6 +109,7 @@ final class ei {
           if (var2 >= 10) {
             ((ei) this).field_b = param0.a(-1640531527);
             ((ei) this).field_c = param0.a(-1640531527);
+            return;
           } else {
             var3 = param0.d((byte) -67);
             if (var3 != 0) {

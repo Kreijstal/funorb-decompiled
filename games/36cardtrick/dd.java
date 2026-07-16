@@ -31,7 +31,7 @@ final class dd {
         int var5 = 0;
         int var6 = 0;
         var6 = Main.field_T;
-        var2 = ((CharSequence) param0).length();
+        var2 = param0.length();
         var3 = new byte[var2];
         var4 = 0;
         L0: while (true) {
@@ -40,7 +40,7 @@ final class dd {
               if (param1 <= -29) {
                 break L1;
               } else {
-                field_e = (String) null;
+                field_e = null;
                 break L1;
               }
             }
@@ -49,7 +49,7 @@ final class dd {
             L2: {
               L3: {
                 L4: {
-                  var5 = ((CharSequence) param0).charAt(var4);
+                  var5 = param0.charAt(var4);
                   if (var5 <= 0) {
                     break L4;
                   } else {
@@ -240,7 +240,7 @@ final class dd {
               if (param1 > 109) {
                 break L1;
               } else {
-                ((dd) this).field_k = (byte[]) null;
+                ((dd) this).field_k = null;
                 break L1;
               }
             }
@@ -342,8 +342,9 @@ final class dd {
                 ((dd) this).field_a = 0;
                 break L0;
               } else {
+                int fieldTemp$2 = ((dd) this).field_a;
                 ((dd) this).field_a = ((dd) this).field_a + 1;
-                ((dd) this).field_k[((dd) this).field_a] = (byte) 0;
+                ((dd) this).field_k[fieldTemp$2] = (byte) 0;
                 continue L1;
               }
             }
@@ -382,8 +383,9 @@ final class dd {
               }
             }
           } else {
+            int fieldTemp$3 = ((dd) this).field_a;
             ((dd) this).field_a = ((dd) this).field_a + 1;
-            ((dd) this).field_k[((dd) this).field_a] = (byte) 0;
+            ((dd) this).field_k[fieldTemp$3] = (byte) 0;
             continue L2;
           }
         }

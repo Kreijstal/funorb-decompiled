@@ -35,112 +35,127 @@ final class um extends fa {
         var11 = var18;
         var12 = 0;
         L0: while (true) {
-          if (-9 >= var12) {
+          if (-9 >= (var12 ^ -1)) {
             if ((param2.field_f[8] ^ -1) < -1) {
-              L1: {
-                w.a(param10, param8 + -param0, var18[1], param4 - param7, var18[0], var18[2], var18[3], param6, (byte) -43, param9);
-                if (param5 <= -85) {
-                  break L1;
-                } else {
+              w.a(param10, param8 + -param0, var18[1], param4 - param7, var18[0], var18[2], var18[3], param6, (byte) -43, param9);
+              if (param5 > -85) {
+                L1: {
                   um.a(-74);
-                  break L1;
+                  if (param2.field_f[7] <= 0) {
+                    w.a(param10, param3 + -param1, var18[7], -param0 + param8, var18[3], var18[2], var18[6], param6, (byte) -104, param9);
+                    break L1;
+                  } else {
+                    w.a(param10, param3 - param1, var18[4], -param0 + param8, var18[0], var18[1], var18[5], param6, (byte) -125, param9);
+                    break L1;
+                  }
                 }
-              }
-              L2: {
-                if (param2.field_f[7] <= 0) {
-                  w.a(param10, param3 + -param1, var18[7], -param0 + param8, var18[3], var18[2], var18[6], param6, (byte) -104, param9);
-                  break L2;
-                } else {
-                  w.a(param10, param3 - param1, var18[4], -param0 + param8, var18[0], var18[1], var18[5], param6, (byte) -125, param9);
-                  break L2;
+                L2: {
+                  if ((param2.field_f[6] ^ -1) < -1) {
+                    w.a(param10, param4 - param7, var18[4], param3 - param1, var18[6], var18[2], var18[0], param6, (byte) -118, param9);
+                    break L2;
+                  } else {
+                    w.a(param10, param4 - param7, var18[1], param3 - param1, var18[3], var18[7], var18[5], param6, (byte) -96, param9);
+                    break L2;
+                  }
                 }
-              }
-              L3: {
-                if ((param2.field_f[6] ^ -1) < -1) {
-                  w.a(param10, param4 - param7, var18[4], param3 - param1, var18[6], var18[2], var18[0], param6, (byte) -118, param9);
-                  break L3;
-                } else {
-                  w.a(param10, param4 - param7, var18[1], param3 - param1, var18[3], var18[7], var18[5], param6, (byte) -96, param9);
-                  break L3;
+                return;
+              } else {
+                L3: {
+                  if (param2.field_f[7] <= 0) {
+                    w.a(param10, param3 + -param1, var18[7], -param0 + param8, var18[3], var18[2], var18[6], param6, (byte) -104, param9);
+                    break L3;
+                  } else {
+                    w.a(param10, param3 - param1, var18[4], -param0 + param8, var18[0], var18[1], var18[5], param6, (byte) -125, param9);
+                    break L3;
+                  }
                 }
+                L4: {
+                  if ((param2.field_f[6] ^ -1) < -1) {
+                    w.a(param10, param4 - param7, var18[4], param3 - param1, var18[6], var18[2], var18[0], param6, (byte) -118, param9);
+                    break L4;
+                  } else {
+                    w.a(param10, param4 - param7, var18[1], param3 - param1, var18[3], var18[7], var18[5], param6, (byte) -96, param9);
+                    break L4;
+                  }
+                }
+                return;
               }
-              return;
             } else {
               w.a(param10, param8 - param0, var18[4], param4 - param7, var18[5], var18[7], var18[6], param6, (byte) -38, param9);
               if (param5 <= -85) {
                 if (param2.field_f[7] <= 0) {
                   w.a(param10, param3 + -param1, var18[7], -param0 + param8, var18[3], var18[2], var18[6], param6, (byte) -104, param9);
-                  if ((param2.field_f[6] ^ -1) >= -1) {
-                    w.a(param10, param4 - param7, var18[1], param3 - param1, var18[3], var18[7], var18[5], param6, (byte) -96, param9);
+                  if ((param2.field_f[6] ^ -1) < -1) {
+                    w.a(param10, param4 - param7, var18[4], param3 - param1, var18[6], var18[2], var18[0], param6, (byte) -118, param9);
                     return;
                   } else {
-                    w.a(param10, param4 - param7, var18[4], param3 - param1, var18[6], var18[2], var18[0], param6, (byte) -118, param9);
+                    w.a(param10, param4 - param7, var18[1], param3 - param1, var18[3], var18[7], var18[5], param6, (byte) -96, param9);
                     return;
                   }
                 } else {
                   w.a(param10, param3 - param1, var18[4], -param0 + param8, var18[0], var18[1], var18[5], param6, (byte) -125, param9);
-                  if ((param2.field_f[6] ^ -1) >= -1) {
-                    w.a(param10, param4 - param7, var18[1], param3 - param1, var18[3], var18[7], var18[5], param6, (byte) -96, param9);
+                  if ((param2.field_f[6] ^ -1) < -1) {
+                    w.a(param10, param4 - param7, var18[4], param3 - param1, var18[6], var18[2], var18[0], param6, (byte) -118, param9);
                     return;
                   } else {
-                    w.a(param10, param4 - param7, var18[4], param3 - param1, var18[6], var18[2], var18[0], param6, (byte) -118, param9);
+                    w.a(param10, param4 - param7, var18[1], param3 - param1, var18[3], var18[7], var18[5], param6, (byte) -96, param9);
                     return;
                   }
                 }
               } else {
-                L4: {
+                L5: {
                   um.a(-74);
                   if (param2.field_f[7] <= 0) {
                     w.a(param10, param3 + -param1, var18[7], -param0 + param8, var18[3], var18[2], var18[6], param6, (byte) -104, param9);
-                    break L4;
+                    break L5;
                   } else {
                     w.a(param10, param3 - param1, var18[4], -param0 + param8, var18[0], var18[1], var18[5], param6, (byte) -125, param9);
-                    break L4;
+                    break L5;
                   }
                 }
-                if ((param2.field_f[6] ^ -1) >= -1) {
-                  w.a(param10, param4 - param7, var18[1], param3 - param1, var18[3], var18[7], var18[5], param6, (byte) -96, param9);
+                if ((param2.field_f[6] ^ -1) < -1) {
+                  w.a(param10, param4 - param7, var18[4], param3 - param1, var18[6], var18[2], var18[0], param6, (byte) -118, param9);
                   return;
                 } else {
-                  w.a(param10, param4 - param7, var18[4], param3 - param1, var18[6], var18[2], var18[0], param6, (byte) -118, param9);
+                  w.a(param10, param4 - param7, var18[1], param3 - param1, var18[3], var18[7], var18[5], param6, (byte) -96, param9);
                   return;
                 }
               }
             }
           } else {
-            L5: {
-              if (-1 == (1 & var12)) {
+            L6: {
+              if (-1 == (1 & var12 ^ -1)) {
                 stackOut_4_0 = param0;
                 stackIn_5_0 = stackOut_4_0;
-                break L5;
+                break L6;
               } else {
                 stackOut_3_0 = param8;
                 stackIn_5_0 = stackOut_3_0;
-                break L5;
-              }
-            }
-            L6: {
-              var13 = stackIn_5_0;
-              if ((var12 & 2) == 0) {
-                stackOut_7_0 = param7;
-                stackIn_8_0 = stackOut_7_0;
-                break L6;
-              } else {
-                stackOut_6_0 = param4;
-                stackIn_8_0 = stackOut_6_0;
                 break L6;
               }
             }
             L7: {
+              var13 = stackIn_5_0;
+              if ((var12 & 2) == 0) {
+                stackOut_7_0 = param7;
+                stackIn_8_0 = stackOut_7_0;
+                break L7;
+              } else {
+                stackOut_6_0 = param4;
+                stackIn_8_0 = stackOut_6_0;
+                break L7;
+              }
+            }
+            L8: {
               var14 = stackIn_8_0;
               if (-1 != (var12 & 4 ^ -1)) {
                 stackOut_10_0 = param3;
                 stackIn_11_0 = stackOut_10_0;
-                break L7;
+                break L8;
               } else {
                 stackOut_9_0 = param1;
                 stackIn_11_0 = stackOut_9_0;
-                break L7;
+                break L8;
               }
             }
             var15 = stackIn_11_0;

@@ -49,14 +49,14 @@ final class bl {
           var3 = ((bl) this).field_b + -param1[0];
           var5 = -param1[2] + ((bl) this).field_u;
           ((bl) this).field_B = var4 * param1[10] + (var3 * param1[9] + param1[11] * var5) >> -1627368720;
-          if (((bl) this).field_B != -1) {
+          if ((((bl) this).field_B ^ -1) != -1) {
             break L0;
           } else {
             ((bl) this).field_B = -1;
             break L0;
           }
         }
-        if (-1 < ((bl) this).field_B) {
+        if (-1 > (((bl) this).field_B ^ -1)) {
           L1: {
             ((bl) this).field_o = 320 - -((param1[5] * var5 + (param1[3] * var3 + param1[4] * var4) >> -146015513) / ((bl) this).field_B);
             ((bl) this).field_l = (var5 * param1[8] + (param1[6] * var3 + param1[7] * var4) >> -1794877753) / ((bl) this).field_B + 240;

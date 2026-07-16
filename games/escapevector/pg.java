@@ -196,38 +196,69 @@ abstract class pg {
     }
 
     final int a(byte param0, int param1, int param2) {
+        int var4 = 0;
         int var5 = 0;
         vl var6 = null;
         int var7 = 0;
-        int var8 = EscapeVector.field_A;
-        if (null != ((pg) this).field_a) {
-            // if_icmpeq L40
-            // if_icmpgt L40
-        } else {
-            return -1;
-        }
-        if (!(((pg) this).field_a[((pg) this).field_a.length - 1].field_a >= param2)) {
-            return -1;
-        }
-        if (!(1 != ((pg) this).field_a.length)) {
-            return ((pg) this).field_a[0].a((byte) 52, param1);
-        }
-        int var4 = 0;
-        if (param0 < 8) {
-            int discarded$0 = ((pg) this).a((byte) 53, -122, 65);
-        }
-        for (var5 = 0; ((pg) this).field_a.length > var5; var5++) {
-            var6 = ((pg) this).field_a[var5];
-            if (param2 >= var6.field_d) {
-                if (param2 <= var6.field_a) {
-                    var7 = var6.a((byte) 52, param1);
-                    if (!(-1 != var7)) {
-                        return -1;
+        int var8 = 0;
+        L0: {
+          var8 = EscapeVector.field_A;
+          if (null == ((pg) this).field_a) {
+            break L0;
+          } else {
+            if (-1 == (((pg) this).field_a.length ^ -1)) {
+              break L0;
+            } else {
+              if (((pg) this).field_a[0].field_d > param2) {
+                break L0;
+              } else {
+                if (((pg) this).field_a[((pg) this).field_a.length - 1].field_a < param2) {
+                  return -1;
+                } else {
+                  if (1 == ((pg) this).field_a.length) {
+                    return ((pg) this).field_a[0].a((byte) 52, param1);
+                  } else {
+                    L1: {
+                      var4 = 0;
+                      if (param0 >= 8) {
+                        break L1;
+                      } else {
+                        int discarded$2 = ((pg) this).a((byte) 53, -122, 65);
+                        break L1;
+                      }
                     }
-                    return var7 + var4;
+                    var5 = 0;
+                    L2: while (true) {
+                      if (((pg) this).field_a.length <= var5) {
+                        return -1;
+                      } else {
+                        L3: {
+                          var6 = ((pg) this).field_a[var5];
+                          if (param2 < var6.field_d) {
+                            break L3;
+                          } else {
+                            if (param2 > var6.field_a) {
+                              break L3;
+                            } else {
+                              var7 = var6.a((byte) 52, param1);
+                              if (-1 == var7) {
+                                return -1;
+                              } else {
+                                return var7 + var4;
+                              }
+                            }
+                          }
+                        }
+                        var4 = var4 + (-1 + var6.field_b.length);
+                        var5++;
+                        continue L2;
+                      }
+                    }
+                  }
                 }
+              }
             }
-            var4 = var4 + (-1 + var6.field_b.length);
+          }
         }
         return -1;
     }

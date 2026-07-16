@@ -64,69 +64,28 @@ final class jl {
     final static void a(int param0) {
         Object var1 = null;
         Throwable var2 = null;
-        int statePc = 0;
-        Throwable caughtException = null;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    if (param0 >= 108) {
-                        statePc = 2;
-                    } else {
-                        statePc = 1;
-                    }
-                    continue stateLoop;
-                }
-                case 1: {
-                    field_b = null;
-                    statePc = 2;
-                    continue stateLoop;
-                }
-                case 2: {
-                    if (kd.field_g != null) {
-                        statePc = 4;
-                    } else {
-                        statePc = 9;
-                    }
-                    continue stateLoop;
-                }
-                case 4: {
-                    var1 = (Object) (Object) kd.field_g;
-                    // monitorenter kd.field_g
-                    statePc = 5;
-                    continue stateLoop;
-                }
-                case 5: {
-                    try {
-                        kd.field_g = null;
-                        // monitorexit var1
-                        statePc = 9;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_5) {
-                        caughtException = stateCaught_5;
-                        statePc = 7;
-                        continue stateLoop;
-                    }
-                }
-                case 7: {
-                    try {
-                        var2 = caughtException;
-                        // monitorexit var1
-                        statePc = 8;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_7) {
-                        caughtException = stateCaught_7;
-                        statePc = 7;
-                        continue stateLoop;
-                    }
-                }
-                case 8: {
-                    throw (RuntimeException) (Object) var2;
-                }
-                case 9: {
-                    return;
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
+        Throwable decompiledCaughtException = null;
+        L0: {
+          if (param0 >= 108) {
+            break L0;
+          } else {
+            field_b = null;
+            break L0;
+          }
+        }
+        L1: {
+          if (kd.field_g != null) {
+            var1 = (Object) (Object) kd.field_g;
+            synchronized (var1) {
+              L2: {
+                kd.field_g = null;
+                break L2;
+              }
             }
+            break L1;
+          } else {
+            break L1;
+          }
         }
     }
 
@@ -144,8 +103,9 @@ final class jl {
                 if (0 > var5) {
                     break;
                 }
+                int incrementValue$0 = var4;
                 var4++;
-                ra.field_b[var4] = 11513855;
+                ra.field_b[incrementValue$0] = 11513855;
             }
         }
     }

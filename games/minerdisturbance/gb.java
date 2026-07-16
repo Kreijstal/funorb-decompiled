@@ -17,8 +17,10 @@ final class gb implements Iterator {
         if (((gb) this).field_f.field_b[((gb) this).field_b - 1] == ((gb) this).field_d) {
           L0: while (true) {
             if (((gb) this).field_b < ((gb) this).field_f.field_f) {
+              pi[] fieldTemp$2 = ((gb) this).field_f.field_b;
+              int fieldTemp$3 = ((gb) this).field_b;
               ((gb) this).field_b = ((gb) this).field_b + 1;
-              if (((gb) this).field_f.field_b[((gb) this).field_b].field_f == ((gb) this).field_f.field_b[-1 + ((gb) this).field_b]) {
+              if (fieldTemp$2[fieldTemp$3].field_f == ((gb) this).field_f.field_b[-1 + ((gb) this).field_b]) {
                 ((gb) this).field_d = ((gb) this).field_f.field_b[-1 + ((gb) this).field_b];
                 continue L0;
               } else {
@@ -148,8 +150,10 @@ final class gb implements Iterator {
         if (((gb) this).field_d == ((gb) this).field_f.field_b[((gb) this).field_b + -1]) {
           L0: while (true) {
             if (((gb) this).field_f.field_f > ((gb) this).field_b) {
+              pi[] fieldTemp$4 = ((gb) this).field_f.field_b;
+              int fieldTemp$5 = ((gb) this).field_b;
               ((gb) this).field_b = ((gb) this).field_b + 1;
-              var1 = ((gb) this).field_f.field_b[((gb) this).field_b].field_f;
+              var1 = fieldTemp$4[fieldTemp$5].field_f;
               if (((gb) this).field_f.field_b[((gb) this).field_b - 1] == var1) {
                 continue L0;
               } else {

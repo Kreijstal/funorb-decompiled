@@ -201,8 +201,9 @@ final class he extends ai {
     he(int param0, int param1, int param2, int param3, int param4, int param5, int[] param6) {
         ((he) this).field_q = param4;
         ((he) this).field_r = param1;
+        int fieldTemp$0 = el.field_k;
         el.field_k = el.field_k + 1;
-        ((he) this).field_j = 65535 & el.field_k;
+        ((he) this).field_j = 65535 & fieldTemp$0;
         ((he) this).field_t = param5;
         ((he) this).field_h = param3;
         ((he) this).field_g = param6;

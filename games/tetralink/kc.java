@@ -132,8 +132,9 @@ final class kc extends vh {
                                           break L6;
                                         }
                                       }
-                                      ((kc) this).field_o[var1] = new ce();
-                                      var16 = new ce();
+                                      ce dupTemp$1 = new ce();
+                                      ((kc) this).field_o[var1] = dupTemp$1;
+                                      var16 = dupTemp$1;
                                       var16.field_g = var11;
                                       var16.field_d = var12;
                                       var16.field_h = var13;
@@ -439,8 +440,9 @@ final class kc extends vh {
                 break L2;
               } else {
                 L4: {
-                  ((kc) this).field_v[var28] = var2.g(-1772093437);
-                  var29 = var2.g(-1772093437);
+                  byte dupTemp$1 = var2.g(-1772093437);
+                  ((kc) this).field_v[var28] = dupTemp$1;
+                  var29 = dupTemp$1;
                   if (var29 != 0) {
                     break L4;
                   } else {
@@ -1491,15 +1493,25 @@ final class kc extends vh {
     }
 
     private kc(byte[] param0) {
-        ((kc) this).field_K = 0;
-        ((kc) this).field_t = 0;
-        ((kc) this).field_s = (byte) 0;
-        ((kc) this).field_E = 0;
-        if (param0[param0.length - 1] == -1) {
-            // if_icmpne L52
-            this.a(param0);
-        } else {
-            this.b(param0);
+        L0: {
+          L1: {
+            ((kc) this).field_K = 0;
+            ((kc) this).field_t = 0;
+            ((kc) this).field_s = (byte) 0;
+            ((kc) this).field_E = 0;
+            if (param0[param0.length - 1] != -1) {
+              break L1;
+            } else {
+              if (param0[param0.length - 2] != -1) {
+                break L1;
+              } else {
+                this.a(param0);
+                break L0;
+              }
+            }
+          }
+          this.b(param0);
+          break L0;
         }
     }
 }

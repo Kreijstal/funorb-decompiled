@@ -92,12 +92,12 @@ final class kp extends f implements Cloneable {
               var7 = ((kp) this).field_o;
               if (0 <= var7) {
                 if ((param2 ^ -1) == -25) {
-                  if (-25 != (param0 ^ -1)) {
-                    tb.field_e[var7].b(param5, param4, param2 * 2, 2 * param0);
+                  if (-25 == (param0 ^ -1)) {
+                    tb.field_e[var7].c(param5, param4);
                     var8 = -39 % ((-70 - param1) / 33);
                     return;
                   } else {
-                    tb.field_e[var7].c(param5, param4);
+                    tb.field_e[var7].b(param5, param4, param2 * 2, 2 * param0);
                     var8 = -39 % ((-70 - param1) / 33);
                     return;
                   }
@@ -114,20 +114,20 @@ final class kp extends f implements Cloneable {
           }
         }
         if (0 <= var7) {
-          if (param2 == -25) {
-            if (-25 != param0) {
-              tb.field_e[var7].b(param5, param4, param2 * 2, 2 * param0);
-              var8 = -39 % ((-70 - param1) / 33);
-              return;
-            } else {
-              tb.field_e[var7].c(param5, param4);
-              var8 = -39 % ((-70 - param1) / 33);
-              return;
-            }
-          } else {
+          if ((param2 ^ -1) != -25) {
             tb.field_e[var7].b(param5, param4, param2 * 2, 2 * param0);
             var8 = -39 % ((-70 - param1) / 33);
             return;
+          } else {
+            if (-25 == (param0 ^ -1)) {
+              tb.field_e[var7].c(param5, param4);
+              var8 = -39 % ((-70 - param1) / 33);
+              return;
+            } else {
+              tb.field_e[var7].b(param5, param4, param2 * 2, 2 * param0);
+              var8 = -39 % ((-70 - param1) / 33);
+              return;
+            }
           }
         } else {
           var8 = -39 % ((-70 - param1) / 33);

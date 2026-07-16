@@ -322,168 +322,69 @@ final class ck {
             int stackIn_4_0 = 0;
             int stackIn_10_0 = 0;
             int stackIn_17_0 = 0;
-            int stackOut_3_0 = 0;
+            Throwable decompiledCaughtException = null;
             int stackOut_9_0 = 0;
-            int stackOut_15_0 = 0;
+            int stackOut_3_0 = 0;
             int stackOut_16_0 = 0;
-            int statePc = 0;
-            Throwable caughtException = null;
-            stateLoop: while (true) {
-                switch (statePc) {
-                    case 0: {
-                        var7 = Pixelate.field_H ? 1 : 0;
-                        if (!c.field_T) {
-                            statePc = 2;
-                        } else {
-                            statePc = 1;
-                        }
-                        continue stateLoop;
-                    }
-                    case 1: {
-                        return true;
-                    }
-                    case 2: {
-                        try {
-                            var2 = "tuhstatbut";
-                            if (param0) {
-                                statePc = 5;
-                            } else {
-                                statePc = 3;
-                            }
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_2) {
-                            caughtException = stateCaught_2;
-                            statePc = 13;
-                            continue stateLoop;
-                        }
-                    }
-                    case 3: {
-                        try {
-                            stackOut_3_0 = 1;
-                            stackIn_4_0 = stackOut_3_0;
-                            statePc = 4;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_3) {
-                            caughtException = stateCaught_3;
-                            statePc = 13;
-                            continue stateLoop;
-                        }
-                    }
-                    case 4: {
-                        return stackIn_4_0 != 0;
-                    }
-                    case 5: {
-                        try {
-                            var3 = (String) cq.a("getcookies", (byte) -113, param1);
-                            var4 = dd.a(var3, (byte) -52, ';');
-                            var5 = 0;
-                            statePc = 6;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_5) {
-                            caughtException = stateCaught_5;
-                            statePc = 13;
-                            continue stateLoop;
-                        }
-                    }
-                    case 6: {
-                        try {
-                            if (var5 >= var4.length) {
-                                statePc = 14;
-                            } else {
-                                statePc = 7;
-                            }
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_6) {
-                            caughtException = stateCaught_6;
-                            statePc = 13;
-                            continue stateLoop;
-                        }
-                    }
-                    case 7: {
-                        try {
-                            var6 = var4[var5].indexOf('=');
-                            if (0 > var6) {
-                                statePc = 11;
-                            } else {
-                                statePc = 8;
-                            }
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_7) {
-                            caughtException = stateCaught_7;
-                            statePc = 13;
-                            continue stateLoop;
-                        }
-                    }
-                    case 8: {
-                        try {
+            int stackOut_15_0 = 0;
+            var7 = Pixelate.field_H ? 1 : 0;
+            if (!c.field_T) {
+              try {
+                L0: {
+                  var2 = "tuhstatbut";
+                  if (param0) {
+                    var3 = (String) cq.a("getcookies", (byte) -113, param1);
+                    var4 = dd.a(var3, (byte) -52, ';');
+                    var5 = 0;
+                    L1: while (true) {
+                      if (var5 >= var4.length) {
+                        break L0;
+                      } else {
+                        L2: {
+                          var6 = var4[var5].indexOf('=');
+                          if (0 > var6) {
+                            break L2;
+                          } else {
                             if (!var4[var5].substring(0, var6).trim().equals((Object) (Object) var2)) {
-                                statePc = 11;
+                              break L2;
                             } else {
-                                statePc = 9;
+                              stackOut_9_0 = 1;
+                              stackIn_10_0 = stackOut_9_0;
+                              return stackIn_10_0 != 0;
                             }
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_8) {
-                            caughtException = stateCaught_8;
-                            statePc = 13;
-                            continue stateLoop;
+                          }
                         }
+                        var5++;
+                        continue L1;
+                      }
                     }
-                    case 9: {
-                        try {
-                            stackOut_9_0 = 1;
-                            stackIn_10_0 = stackOut_9_0;
-                            statePc = 10;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_9) {
-                            caughtException = stateCaught_9;
-                            statePc = 13;
-                            continue stateLoop;
-                        }
-                    }
-                    case 10: {
-                        return stackIn_10_0 != 0;
-                    }
-                    case 11: {
-                        try {
-                            var5++;
-                            statePc = 6;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_11) {
-                            caughtException = stateCaught_11;
-                            statePc = 13;
-                            continue stateLoop;
-                        }
-                    }
-                    case 13: {
-                        var2_ref = caughtException;
-                        statePc = 14;
-                        continue stateLoop;
-                    }
-                    case 14: {
-                        if (param1.getParameter("tuhstatbut") == null) {
-                            statePc = 16;
-                        } else {
-                            statePc = 15;
-                        }
-                        continue stateLoop;
-                    }
-                    case 15: {
-                        stackOut_15_0 = 1;
-                        stackIn_17_0 = stackOut_15_0;
-                        statePc = 17;
-                        continue stateLoop;
-                    }
-                    case 16: {
-                        stackOut_16_0 = 0;
-                        stackIn_17_0 = stackOut_16_0;
-                        statePc = 17;
-                        continue stateLoop;
-                    }
-                    case 17: {
-                        return stackIn_17_0 != 0;
-                    }
-                    default: throw new IllegalStateException("invalid CFG state " + statePc);
+                  } else {
+                    stackOut_3_0 = 1;
+                    stackIn_4_0 = stackOut_3_0;
+                    return stackIn_4_0 != 0;
+                  }
                 }
+              } catch (java.lang.Throwable decompiledCaughtParameter0) {
+                decompiledCaughtException = decompiledCaughtParameter0;
+                L3: {
+                  var2_ref = decompiledCaughtException;
+                  break L3;
+                }
+              }
+              L4: {
+                if (param1.getParameter("tuhstatbut") == null) {
+                  stackOut_16_0 = 0;
+                  stackIn_17_0 = stackOut_16_0;
+                  break L4;
+                } else {
+                  stackOut_15_0 = 1;
+                  stackIn_17_0 = stackOut_15_0;
+                  break L4;
+                }
+              }
+              return stackIn_17_0 != 0;
+            } else {
+              return true;
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -493,21 +394,34 @@ final class ck {
     }
 
     ck() {
-        this.a(-22970);
-        int var1 = ok.a(ea.field_b, -128, 250);
-        if (var1 < 180) {
-            ((ck) this).field_f = 0;
-            ((ck) this).field_a = ((ck) this).field_a + ((ck) this).field_e * (float)var1;
-            ((ck) this).field_h = ((ck) this).field_h + (float)var1 * ((ck) this).field_i;
-            ((ck) this).field_c = ((ck) this).field_c - (float)var1 * ((ck) this).field_d;
-            if (((ck) this).field_c < 0.0f) {
+        int var1 = 0;
+        L0: {
+          this.a(-22970);
+          var1 = ok.a(ea.field_b, -128, 250);
+          if (var1 >= 180) {
+            ((ck) this).field_f = ((ck) this).field_f + ok.a(ea.field_b, -116, 50);
+            break L0;
+          } else {
+            L1: {
+              ((ck) this).field_f = 0;
+              ((ck) this).field_a = ((ck) this).field_a + ((ck) this).field_e * (float)var1;
+              ((ck) this).field_h = ((ck) this).field_h + (float)var1 * ((ck) this).field_i;
+              ((ck) this).field_c = ((ck) this).field_c - (float)var1 * ((ck) this).field_d;
+              if (((ck) this).field_c >= 0.0f) {
+                break L1;
+              } else {
                 this.a(-22970);
+                break L1;
+              }
             }
             ((ck) this).field_k = (int)((ck) this).field_c * 100 / 400;
-            // if_icmple L152
-            ((ck) this).field_k = 100;
-        } else {
-            ((ck) this).field_f = ((ck) this).field_f + ok.a(ea.field_b, -116, 50);
+            if (((ck) this).field_k <= 100) {
+              break L0;
+            } else {
+              ((ck) this).field_k = 100;
+              break L0;
+            }
+          }
         }
     }
 

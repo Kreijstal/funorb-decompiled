@@ -104,8 +104,8 @@ final class ql extends am {
     }
 
     final void a(fj param0, int param1, int param2) {
-        if (!(param2 != -1)) {
-            ((ql) this).field_p = -2 == param0.i((byte) -101) ? true : false;
+        if (!((param2 ^ -1) != -1)) {
+            ((ql) this).field_p = -2 == (param0.i((byte) -101) ^ -1) ? true : false;
         }
         if (param1 != 35) {
             field_u = null;
@@ -220,8 +220,9 @@ final class ql extends am {
                         var14 = var14 + var6;
                         var16 = -var15 + 256;
                         if (0 <= var15) {
+                          int incrementValue$1 = var9;
                           var9++;
-                          var17 = param2.field_y[var9];
+                          var17 = param2.field_y[incrementValue$1];
                           if (var17 != 0) {
                             if (var15 <= 255) {
                               var18 = ph.field_e[var8];

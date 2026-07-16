@@ -51,44 +51,35 @@ final class bl extends gg {
     }
 
     final static boolean a(byte param0) {
-        if (param0 == -81) {
-          if (kj.field_R <= -21) {
-            if (bb.h(param0 + -44)) {
-              if (-1 < c.field_H) {
-                if (rd.b(6144)) {
-                  return false;
-                } else {
-                  return true;
-                }
-              } else {
-                return false;
-              }
-            } else {
-              return true;
+        if (param0 != -81) {
+            boolean discarded$3 = bl.a((byte) -9);
+            if ((kj.field_R ^ -1) > -21) {
+                return true;
             }
-          } else {
-            return true;
-          }
-        } else {
-          boolean discarded$5 = bl.a((byte) -9);
-          if (kj.field_R <= -21) {
-            if (bb.h(param0 + -44)) {
-              if (-1 < c.field_H) {
-                if (rd.b(6144)) {
-                  return false;
-                } else {
-                  return true;
-                }
-              } else {
-                return false;
-              }
-            } else {
-              return true;
+            if (!bb.h(param0 + -44)) {
+                return true;
             }
-          } else {
+            if (-1 <= (c.field_H ^ -1)) {
+                return false;
+            }
+            if (rd.b(6144)) {
+                return false;
+            }
             return true;
-          }
         }
+        if ((kj.field_R ^ -1) > -21) {
+            return true;
+        }
+        if (!bb.h(param0 + -44)) {
+            return true;
+        }
+        if (-1 <= (c.field_H ^ -1)) {
+            return false;
+        }
+        if (rd.b(6144)) {
+            return false;
+        }
+        return true;
     }
 
     final static od[] b(boolean param0) {

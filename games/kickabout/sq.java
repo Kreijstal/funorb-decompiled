@@ -60,11 +60,11 @@ final class sq extends i {
             nk.c((byte) -56);
             jm.a(13, true, -2);
         } else {
-            if (param1 == -2) {
+            if ((param1 ^ -1) == -2) {
                 wb.f(-120);
                 jm.a(13, true, -2);
             } else {
-                if (-3 != param1) {
+                if (-3 != (param1 ^ -1)) {
                 }
             }
         }

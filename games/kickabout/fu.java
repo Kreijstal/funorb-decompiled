@@ -191,18 +191,31 @@ final class fu {
     }
 
     final void a(int param0, int param1) {
-        if (param1 >= 0) {
-            // if_icmplt L15
-        } else {
-            throw new ArrayIndexOutOfBoundsException(param1);
+        L0: {
+          if (param1 < 0) {
+            break L0;
+          } else {
+            if (((fu) this).field_g < param1) {
+              break L0;
+            } else {
+              if (param0 == -1) {
+                L1: {
+                  if (param1 != ((fu) this).field_g) {
+                    dv.a(((fu) this).field_d, param1 - -1, ((fu) this).field_d, param1, ((fu) this).field_g - param1);
+                    break L1;
+                  } else {
+                    break L1;
+                  }
+                }
+                ((fu) this).field_g = ((fu) this).field_g - 1;
+                return;
+              } else {
+                return;
+              }
+            }
+          }
         }
-        if (param0 != -1) {
-            return;
-        }
-        if (!(param1 == ((fu) this).field_g)) {
-            dv.a(((fu) this).field_d, param1 - -1, ((fu) this).field_d, param1, ((fu) this).field_g - param1);
-        }
-        ((fu) this).field_g = ((fu) this).field_g - 1;
+        throw new ArrayIndexOutOfBoundsException(param1);
     }
 
     final void c(int param0, int param1) {

@@ -1655,7 +1655,6 @@ final class uf extends sf {
     private final void a(int param0, int param1, int param2, int param3, int param4, int param5) {
         li var7 = null;
         Object var8 = null;
-        Object var8_ref = null;
         Throwable var9 = null;
         ib stackIn_13_0 = null;
         int stackIn_13_1 = 0;
@@ -1672,253 +1671,151 @@ final class uf extends sf {
         li stackIn_20_0 = null;
         li stackIn_21_0 = null;
         int stackIn_21_1 = 0;
+        Throwable decompiledCaughtException = null;
         ib stackOut_12_0 = null;
         int stackOut_12_1 = 0;
-        ib stackOut_13_0 = null;
-        int stackOut_13_1 = 0;
-        int stackOut_13_2 = 0;
         ib stackOut_14_0 = null;
         int stackOut_14_1 = 0;
         int stackOut_14_2 = 0;
+        ib stackOut_13_0 = null;
+        int stackOut_13_1 = 0;
+        int stackOut_13_2 = 0;
         li stackOut_15_0 = null;
-        li stackOut_16_0 = null;
-        int stackOut_16_1 = 0;
         li stackOut_17_0 = null;
         int stackOut_17_1 = 0;
+        li stackOut_16_0 = null;
+        int stackOut_16_1 = 0;
         li stackOut_18_0 = null;
-        li stackOut_19_0 = null;
-        int stackOut_19_1 = 0;
         li stackOut_20_0 = null;
         int stackOut_20_1 = 0;
-        int statePc = 0;
-        Throwable caughtException = null;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    this.d(param0);
-                    if (param3 <= field_nb[7999]) {
-                        statePc = 3;
-                    } else {
-                        statePc = 1;
-                    }
-                    continue stateLoop;
-                }
-                case 1: {
-                    if (param3 < field_nb[0]) {
-                        statePc = 4;
-                    } else {
-                        statePc = 3;
-                    }
-                    continue stateLoop;
-                }
-                case 3: {
-                    return;
-                }
-                case 4: {
-                    if (param4 >= 0) {
-                        statePc = 6;
-                    } else {
-                        statePc = 5;
-                    }
-                    continue stateLoop;
-                }
-                case 5: {
-                    param4 = 0;
-                    statePc = 8;
-                    continue stateLoop;
-                }
-                case 6: {
-                    if (param4 <= 64) {
-                        statePc = 8;
-                    } else {
-                        statePc = 7;
-                    }
-                    continue stateLoop;
-                }
-                case 7: {
+        li stackOut_19_0 = null;
+        int stackOut_19_1 = 0;
+        L0: {
+          this.d(param0);
+          if (param3 <= field_nb[7999]) {
+            break L0;
+          } else {
+            if (param3 < field_nb[0]) {
+              L1: {
+                if (param4 >= 0) {
+                  if (param4 <= 64) {
+                    break L1;
+                  } else {
                     param4 = 64;
-                    statePc = 8;
-                    continue stateLoop;
+                    break L1;
+                  }
+                } else {
+                  param4 = 0;
+                  break L1;
                 }
-                case 8: {
-                    if (param5 >= 0) {
-                        statePc = 10;
-                    } else {
-                        statePc = 9;
-                    }
-                    continue stateLoop;
-                }
-                case 9: {
-                    param5 = 0;
-                    statePc = 12;
-                    continue stateLoop;
-                }
-                case 10: {
-                    if (param5 <= 255) {
-                        statePc = 12;
-                    } else {
-                        statePc = 11;
-                    }
-                    continue stateLoop;
-                }
-                case 11: {
+              }
+              L2: {
+                if (param5 >= 0) {
+                  if (param5 <= 255) {
+                    break L2;
+                  } else {
                     param5 = 255;
-                    statePc = 12;
-                    continue stateLoop;
+                    break L2;
+                  }
+                } else {
+                  param5 = 0;
+                  break L2;
                 }
-                case 12: {
-                    stackOut_12_0 = ((uf) this).field_J.field_D[param1];
-                    stackOut_12_1 = param3 * 256 / gd.field_m;
-                    stackIn_14_0 = stackOut_12_0;
-                    stackIn_14_1 = stackOut_12_1;
-                    stackIn_13_0 = stackOut_12_0;
-                    stackIn_13_1 = stackOut_12_1;
-                    if (param2 == 0) {
-                        statePc = 14;
-                    } else {
-                        statePc = 13;
+              }
+              L3: {
+                stackOut_12_0 = ((uf) this).field_J.field_D[param1];
+                stackOut_12_1 = param3 * 256 / gd.field_m;
+                stackIn_14_0 = stackOut_12_0;
+                stackIn_14_1 = stackOut_12_1;
+                stackIn_13_0 = stackOut_12_0;
+                stackIn_13_1 = stackOut_12_1;
+                if (param2 == 0) {
+                  stackOut_14_0 = (ib) (Object) stackIn_14_0;
+                  stackOut_14_1 = stackIn_14_1;
+                  stackOut_14_2 = param4 * ((uf) this).field_jb * ((uf) this).field_B >> 12;
+                  stackIn_15_0 = stackOut_14_0;
+                  stackIn_15_1 = stackOut_14_1;
+                  stackIn_15_2 = stackOut_14_2;
+                  break L3;
+                } else {
+                  stackOut_13_0 = (ib) (Object) stackIn_13_0;
+                  stackOut_13_1 = stackIn_13_1;
+                  stackOut_13_2 = 0;
+                  stackIn_15_0 = stackOut_13_0;
+                  stackIn_15_1 = stackOut_13_1;
+                  stackIn_15_2 = stackOut_13_2;
+                  break L3;
+                }
+              }
+              L4: {
+                var7 = li.a(stackIn_15_0, stackIn_15_1, stackIn_15_2, param5);
+                var7.c(((uf) this).field_J.field_A[param1], ((uf) this).field_J.field_u[param1]);
+                stackOut_15_0 = (li) var7;
+                stackIn_17_0 = stackOut_15_0;
+                stackIn_16_0 = stackOut_15_0;
+                if (((uf) this).field_J.field_z[param1] == 0) {
+                  stackOut_17_0 = (li) (Object) stackIn_17_0;
+                  stackOut_17_1 = 0;
+                  stackIn_18_0 = stackOut_17_0;
+                  stackIn_18_1 = stackOut_17_1;
+                  break L4;
+                } else {
+                  stackOut_16_0 = (li) (Object) stackIn_16_0;
+                  stackOut_16_1 = -1;
+                  stackIn_18_0 = stackOut_16_0;
+                  stackIn_18_1 = stackOut_16_1;
+                  break L4;
+                }
+              }
+              L5: {
+                ((li) (Object) stackIn_18_0).e(stackIn_18_1);
+                stackOut_18_0 = (li) var7;
+                stackIn_20_0 = stackOut_18_0;
+                stackIn_19_0 = stackOut_18_0;
+                if (((uf) this).field_J.field_z[param1] != 2) {
+                  stackOut_20_0 = (li) (Object) stackIn_20_0;
+                  stackOut_20_1 = 0;
+                  stackIn_21_0 = stackOut_20_0;
+                  stackIn_21_1 = stackOut_20_1;
+                  break L5;
+                } else {
+                  stackOut_19_0 = (li) (Object) stackIn_19_0;
+                  stackOut_19_1 = 1;
+                  stackIn_21_0 = stackOut_19_0;
+                  stackIn_21_1 = stackOut_19_1;
+                  break L5;
+                }
+              }
+              L6: {
+                ((li) (Object) stackIn_21_0).a(stackIn_21_1 != 0);
+                if (param2 == 0) {
+                  break L6;
+                } else {
+                  var7.h(param2);
+                  var7.b(gd.field_m >> 7, param4 * ((uf) this).field_jb * ((uf) this).field_B >> 12, param5);
+                  break L6;
+                }
+              }
+              L7: {
+                ((uf) this).field_O[param0] = var7;
+                if (((uf) this).field_h == null) {
+                  break L7;
+                } else {
+                  var8 = (Object) (Object) ((uf) this).field_h;
+                  synchronized (var8) {
+                    L8: {
+                      ((uf) this).field_h.b((je) (Object) var7);
+                      break L8;
                     }
-                    continue stateLoop;
+                  }
+                  break L7;
                 }
-                case 13: {
-                    stackOut_13_0 = (ib) (Object) stackIn_13_0;
-                    stackOut_13_1 = stackIn_13_1;
-                    stackOut_13_2 = 0;
-                    stackIn_15_0 = stackOut_13_0;
-                    stackIn_15_1 = stackOut_13_1;
-                    stackIn_15_2 = stackOut_13_2;
-                    statePc = 15;
-                    continue stateLoop;
-                }
-                case 14: {
-                    stackOut_14_0 = (ib) (Object) stackIn_14_0;
-                    stackOut_14_1 = stackIn_14_1;
-                    stackOut_14_2 = param4 * ((uf) this).field_jb * ((uf) this).field_B >> 12;
-                    stackIn_15_0 = stackOut_14_0;
-                    stackIn_15_1 = stackOut_14_1;
-                    stackIn_15_2 = stackOut_14_2;
-                    statePc = 15;
-                    continue stateLoop;
-                }
-                case 15: {
-                    var7 = li.a((ib) (Object) stackIn_15_0, stackIn_15_1, stackIn_15_2, param5);
-                    var7.c(((uf) this).field_J.field_A[param1], ((uf) this).field_J.field_u[param1]);
-                    stackOut_15_0 = (li) var7;
-                    stackIn_17_0 = stackOut_15_0;
-                    stackIn_16_0 = stackOut_15_0;
-                    if (((uf) this).field_J.field_z[param1] == 0) {
-                        statePc = 17;
-                    } else {
-                        statePc = 16;
-                    }
-                    continue stateLoop;
-                }
-                case 16: {
-                    stackOut_16_0 = (li) (Object) stackIn_16_0;
-                    stackOut_16_1 = -1;
-                    stackIn_18_0 = stackOut_16_0;
-                    stackIn_18_1 = stackOut_16_1;
-                    statePc = 18;
-                    continue stateLoop;
-                }
-                case 17: {
-                    stackOut_17_0 = (li) (Object) stackIn_17_0;
-                    stackOut_17_1 = 0;
-                    stackIn_18_0 = stackOut_17_0;
-                    stackIn_18_1 = stackOut_17_1;
-                    statePc = 18;
-                    continue stateLoop;
-                }
-                case 18: {
-                    ((li) (Object) stackIn_18_0).e(stackIn_18_1);
-                    stackOut_18_0 = (li) var7;
-                    stackIn_20_0 = stackOut_18_0;
-                    stackIn_19_0 = stackOut_18_0;
-                    if (((uf) this).field_J.field_z[param1] != 2) {
-                        statePc = 20;
-                    } else {
-                        statePc = 19;
-                    }
-                    continue stateLoop;
-                }
-                case 19: {
-                    stackOut_19_0 = (li) (Object) stackIn_19_0;
-                    stackOut_19_1 = 1;
-                    stackIn_21_0 = stackOut_19_0;
-                    stackIn_21_1 = stackOut_19_1;
-                    statePc = 21;
-                    continue stateLoop;
-                }
-                case 20: {
-                    stackOut_20_0 = (li) (Object) stackIn_20_0;
-                    stackOut_20_1 = 0;
-                    stackIn_21_0 = stackOut_20_0;
-                    stackIn_21_1 = stackOut_20_1;
-                    statePc = 21;
-                    continue stateLoop;
-                }
-                case 21: {
-                    ((li) (Object) stackIn_21_0).a(stackIn_21_1 != 0);
-                    if (param2 == 0) {
-                        statePc = 23;
-                    } else {
-                        statePc = 22;
-                    }
-                    continue stateLoop;
-                }
-                case 22: {
-                    var7.h(param2);
-                    var7.b(gd.field_m >> 7, param4 * ((uf) this).field_jb * ((uf) this).field_B >> 12, param5);
-                    statePc = 23;
-                    continue stateLoop;
-                }
-                case 23: {
-                    ((uf) this).field_O[param0] = var7;
-                    if (((uf) this).field_h == null) {
-                        statePc = 29;
-                    } else {
-                        statePc = 24;
-                    }
-                    continue stateLoop;
-                }
-                case 24: {
-                    var8_ref = (Object) (Object) ((uf) this).field_h;
-                    // monitorenter ((uf) this).field_h
-                    statePc = 25;
-                    continue stateLoop;
-                }
-                case 25: {
-                    try {
-                        ((uf) this).field_h.b((je) (Object) var7);
-                        // monitorexit var8_ref
-                        statePc = 29;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_25) {
-                        caughtException = stateCaught_25;
-                        statePc = 27;
-                        continue stateLoop;
-                    }
-                }
-                case 27: {
-                    try {
-                        var9 = caughtException;
-                        // monitorexit var8_ref
-                        statePc = 28;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_27) {
-                        caughtException = stateCaught_27;
-                        statePc = 27;
-                        continue stateLoop;
-                    }
-                }
-                case 28: {
-                    throw (RuntimeException) (Object) var9;
-                }
-                case 29: {
-                    return;
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
+              }
+              return;
+            } else {
+              break L0;
             }
+          }
         }
     }
 

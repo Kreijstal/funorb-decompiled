@@ -712,15 +712,14 @@ final class pf {
     }
 
     final static h a(Throwable param0, String param1) {
-        h var2_ref = null;
         h var2 = null;
         if (!(param0 instanceof h)) {
             var2 = new h(param0, param1);
         } else {
-            var2_ref = (h) (Object) param0;
-            var2_ref.field_f = var2_ref.field_f + 32 + param1;
+            var2 = (h) (Object) param0;
+            var2.field_f = var2.field_f + 32 + param1;
         }
-        return var2_ref;
+        return var2;
     }
 
     static {

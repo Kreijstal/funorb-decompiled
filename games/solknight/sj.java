@@ -140,191 +140,60 @@ final class sj implements j {
         int stackIn_7_0 = 0;
         int stackIn_13_0 = 0;
         int stackIn_16_0 = 0;
-        int stackOut_2_0 = 0;
+        Throwable decompiledCaughtException = null;
         int stackOut_6_0 = 0;
-        int stackOut_12_0 = 0;
         int stackOut_15_0 = 0;
-        int statePc = 0;
-        Throwable caughtException = null;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    var5 = SolKnight.field_L ? 1 : 0;
-                    statePc = 1;
-                    continue stateLoop;
-                }
-                case 1: {
-                    try {
-                        if (dl.field_t.startsWith("win")) {
-                            statePc = 4;
-                        } else {
-                            statePc = 2;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_1) {
-                        caughtException = stateCaught_1;
-                        statePc = 17;
-                        continue stateLoop;
-                    }
-                }
-                case 2: {
-                    try {
-                        stackOut_2_0 = 0;
-                        stackIn_3_0 = stackOut_2_0;
-                        statePc = 3;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_2) {
-                        caughtException = stateCaught_2;
-                        statePc = 17;
-                        continue stateLoop;
-                    }
-                }
-                case 3: {
-                    return stackIn_3_0 != 0;
-                }
-                case 4: {
-                    try {
-                        if (param1.startsWith("http://")) {
-                            statePc = 8;
-                        } else {
-                            statePc = 5;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_4) {
-                        caughtException = stateCaught_4;
-                        statePc = 17;
-                        continue stateLoop;
-                    }
-                }
-                case 5: {
-                    try {
-                        if (param1.startsWith("https://")) {
-                            statePc = 8;
-                        } else {
-                            statePc = 6;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_5) {
-                        caughtException = stateCaught_5;
-                        statePc = 17;
-                        continue stateLoop;
-                    }
-                }
-                case 6: {
-                    try {
-                        stackOut_6_0 = 0;
-                        stackIn_7_0 = stackOut_6_0;
-                        statePc = 7;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_6) {
-                        caughtException = stateCaught_6;
-                        statePc = 17;
-                        continue stateLoop;
-                    }
-                }
-                case 7: {
+        int stackOut_12_0 = 0;
+        int stackOut_2_0 = 0;
+        var5 = SolKnight.field_L ? 1 : 0;
+        try {
+          L0: {
+            if (dl.field_t.startsWith("win")) {
+              L1: {
+                if (param1.startsWith("http://")) {
+                  break L1;
+                } else {
+                  if (param1.startsWith("https://")) {
+                    break L1;
+                  } else {
+                    stackOut_6_0 = 0;
+                    stackIn_7_0 = stackOut_6_0;
                     return stackIn_7_0 != 0;
+                  }
                 }
-                case 8: {
-                    try {
-                        var3 = 33 % ((35 - param0) / 35);
-                        var2 = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789?&=,.%+-_#:/*";
-                        var4 = 0;
-                        statePc = 9;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_8) {
-                        caughtException = stateCaught_8;
-                        statePc = 17;
-                        continue stateLoop;
-                    }
-                }
-                case 9: {
-                    try {
-                        if (param1.length() <= var4) {
-                            statePc = 15;
-                        } else {
-                            statePc = 10;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_9) {
-                        caughtException = stateCaught_9;
-                        statePc = 17;
-                        continue stateLoop;
-                    }
-                }
-                case 10: {
-                    try {
-                        if (0 == (var2.indexOf((int) param1.charAt(var4)) ^ -1)) {
-                            statePc = 12;
-                        } else {
-                            statePc = 11;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_10) {
-                        caughtException = stateCaught_10;
-                        statePc = 17;
-                        continue stateLoop;
-                    }
-                }
-                case 11: {
-                    try {
-                        statePc = 14;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_11) {
-                        caughtException = stateCaught_11;
-                        statePc = 17;
-                        continue stateLoop;
-                    }
-                }
-                case 12: {
-                    try {
-                        stackOut_12_0 = 0;
-                        stackIn_13_0 = stackOut_12_0;
-                        statePc = 13;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_12) {
-                        caughtException = stateCaught_12;
-                        statePc = 17;
-                        continue stateLoop;
-                    }
-                }
-                case 13: {
+              }
+              var3 = 33 % ((35 - param0) / 35);
+              var2 = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789?&=,.%+-_#:/*";
+              var4 = 0;
+              L2: while (true) {
+                if (param1.length() <= var4) {
+                  Process discarded$2 = Runtime.getRuntime().exec("cmd /c start \"j\" \"" + param1 + "\"");
+                  stackOut_15_0 = 1;
+                  stackIn_16_0 = stackOut_15_0;
+                  break L0;
+                } else {
+                  if (0 == (var2.indexOf((int) param1.charAt(var4)) ^ -1)) {
+                    stackOut_12_0 = 0;
+                    stackIn_13_0 = stackOut_12_0;
                     return stackIn_13_0 != 0;
+                  } else {
+                    var4++;
+                    continue L2;
+                  }
                 }
-                case 14: {
-                    try {
-                        var4++;
-                        statePc = 9;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_14) {
-                        caughtException = stateCaught_14;
-                        statePc = 17;
-                        continue stateLoop;
-                    }
-                }
-                case 15: {
-                    try {
-                        Process discarded$2 = Runtime.getRuntime().exec("cmd /c start \"j\" \"" + param1 + "\"");
-                        stackOut_15_0 = 1;
-                        stackIn_16_0 = stackOut_15_0;
-                        statePc = 16;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_15) {
-                        caughtException = stateCaught_15;
-                        statePc = 17;
-                        continue stateLoop;
-                    }
-                }
-                case 16: {
-                    return stackIn_16_0 != 0;
-                }
-                case 17: {
-                    var2_ref = (Exception) (Object) caughtException;
-                    return false;
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
+              }
+            } else {
+              stackOut_2_0 = 0;
+              stackIn_3_0 = stackOut_2_0;
+              return stackIn_3_0 != 0;
             }
+          }
+        } catch (java.lang.Exception decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2_ref = (Exception) (Object) decompiledCaughtException;
+          return false;
         }
+        return stackIn_16_0 != 0;
     }
 
     sj(mg param0, int param1, int param2, int param3, int param4, int param5, int param6) {

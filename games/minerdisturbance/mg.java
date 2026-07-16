@@ -31,17 +31,19 @@ final class mg {
             field_f = 8;
         }
         while (true) {
-            var3 = (tm) (Object) ok.field_b.e(63854);
+            tm dupTemp$0 = (tm) (Object) ok.field_b.e(63854);
+            var3 = dupTemp$0;
             var1 = var3;
-            if (null == (tm) (Object) ok.field_b.e(63854)) {
+            if (null == dupTemp$0) {
                 break;
             }
             ke.field_X[var3.field_s] = false;
         }
         while (true) {
-            var4 = (tm) (Object) ec.field_c.e(63854);
+            tm dupTemp$1 = (tm) (Object) ec.field_c.e(63854);
+            var4 = dupTemp$1;
             var1 = var4;
-            if (null == (tm) (Object) ec.field_c.e(63854)) {
+            if (null == dupTemp$1) {
                 break;
             }
             ke.field_X[var4.field_s] = false;
@@ -99,21 +101,36 @@ final class mg {
 
     final int a(int param0, int param1) {
         int var3 = 0;
-        int var4 = MinerDisturbance.field_ab;
-        if (((mg) this).field_d != null) {
-            // if_icmpeq L24
-        } else {
-            return 0;
-        }
-        for (var3 = 1; var3 < ((mg) this).field_d.length; var3++) {
-            if (!(((mg) this).field_d[var3] + ((mg) this).field_d[-1 + var3] >> 1963987425 <= param0)) {
-                return var3 - 1;
+        int var4 = 0;
+        L0: {
+          var4 = MinerDisturbance.field_ab;
+          if (((mg) this).field_d == null) {
+            break L0;
+          } else {
+            if (0 == ((mg) this).field_d.length) {
+              break L0;
+            } else {
+              var3 = 1;
+              L1: while (true) {
+                if (var3 >= ((mg) this).field_d.length) {
+                  if (param1 == -24040) {
+                    return ((mg) this).field_d.length - 1;
+                  } else {
+                    return -91;
+                  }
+                } else {
+                  if (((mg) this).field_d[var3] + ((mg) this).field_d[-1 + var3] >> 1963987425 > param0) {
+                    return var3 - 1;
+                  } else {
+                    var3++;
+                    continue L1;
+                  }
+                }
+              }
             }
+          }
         }
-        if (param1 != -24040) {
-            return -91;
-        }
-        return ((mg) this).field_d.length - 1;
+        return 0;
     }
 
     static {

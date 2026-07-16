@@ -67,18 +67,18 @@ final class ml implements java.awt.event.KeyListener, java.awt.event.FocusListen
           po.field_w = 0;
           var2 = param0.getKeyCode();
           if (0 <= var2) {
-            if (var2 < vo.field_a.length) {
+            if ((var2 ^ -1) > (vo.field_a.length ^ -1)) {
               var2 = vo.field_a[var2];
-              if ((var2 & 128) != -1) {
+              if ((var2 & 128 ^ -1) != -1) {
                 L0: {
                   var2 = -1;
-                  if (-1 > hb.field_y) {
+                  if (-1 < (hb.field_y ^ -1)) {
                     break L0;
                   } else {
                     if (var2 >= 0) {
                       no.field_i[hb.field_y] = var2;
                       hb.field_y = hb.field_y + 1 & 127;
-                      if (n.field_w != hb.field_y) {
+                      if ((n.field_w ^ -1) != (hb.field_y ^ -1)) {
                         break L0;
                       } else {
                         L1: {
@@ -98,11 +98,11 @@ final class ml implements java.awt.event.KeyListener, java.awt.event.FocusListen
                           }
                         }
                         var3 = param0.getModifiers();
-                        if ((var3 & 10) != -1) {
+                        if ((var3 & 10 ^ -1) != -1) {
                           param0.consume();
                           return;
                         } else {
-                          if (-86 == var2) {
+                          if (-86 == (var2 ^ -1)) {
                             param0.consume();
                             return;
                           } else {
@@ -132,11 +132,11 @@ final class ml implements java.awt.event.KeyListener, java.awt.event.FocusListen
                         }
                       }
                       var3 = param0.getModifiers();
-                      if ((var3 & 10) != -1) {
+                      if ((var3 & 10 ^ -1) != -1) {
                         param0.consume();
                         return;
                       } else {
-                        if (-86 == var2) {
+                        if (-86 == (var2 ^ -1)) {
                           param0.consume();
                           return;
                         } else {
@@ -163,11 +163,11 @@ final class ml implements java.awt.event.KeyListener, java.awt.event.FocusListen
                       break L3;
                     } else {
                       var3 = param0.getModifiers();
-                      if ((var3 & 10) != -1) {
+                      if ((var3 & 10 ^ -1) != -1) {
                         param0.consume();
                         return;
                       } else {
-                        if (-86 == var2) {
+                        if (-86 == (var2 ^ -1)) {
                           param0.consume();
                           return;
                         } else {
@@ -183,11 +183,11 @@ final class ml implements java.awt.event.KeyListener, java.awt.event.FocusListen
                   }
                 }
                 var3 = param0.getModifiers();
-                if ((var3 & 10) != -1) {
+                if ((var3 & 10 ^ -1) != -1) {
                   param0.consume();
                   return;
                 } else {
-                  if (-86 == var2) {
+                  if (-86 == (var2 ^ -1)) {
                     param0.consume();
                     return;
                   } else {
@@ -201,13 +201,13 @@ final class ml implements java.awt.event.KeyListener, java.awt.event.FocusListen
                 }
               } else {
                 L4: {
-                  if (-1 > hb.field_y) {
+                  if (-1 < (hb.field_y ^ -1)) {
                     break L4;
                   } else {
                     if (var2 >= 0) {
                       no.field_i[hb.field_y] = var2;
                       hb.field_y = hb.field_y + 1 & 127;
-                      if (n.field_w != hb.field_y) {
+                      if ((n.field_w ^ -1) != (hb.field_y ^ -1)) {
                         break L4;
                       } else {
                         L5: {
@@ -227,11 +227,11 @@ final class ml implements java.awt.event.KeyListener, java.awt.event.FocusListen
                           }
                         }
                         var3 = param0.getModifiers();
-                        if ((var3 & 10) != -1) {
+                        if ((var3 & 10 ^ -1) != -1) {
                           param0.consume();
                           return;
                         } else {
-                          if (-86 == var2) {
+                          if (-86 == (var2 ^ -1)) {
                             param0.consume();
                             return;
                           } else {
@@ -261,11 +261,11 @@ final class ml implements java.awt.event.KeyListener, java.awt.event.FocusListen
                       break L6;
                     } else {
                       var3 = param0.getModifiers();
-                      if ((var3 & 10) != -1) {
+                      if ((var3 & 10 ^ -1) != -1) {
                         param0.consume();
                         return;
                       } else {
-                        if (-86 == var2) {
+                        if (-86 == (var2 ^ -1)) {
                           param0.consume();
                           return;
                         } else {
@@ -281,15 +281,15 @@ final class ml implements java.awt.event.KeyListener, java.awt.event.FocusListen
                   }
                 }
                 var3 = param0.getModifiers();
-                if ((var3 & 10) != -1) {
+                if ((var3 & 10 ^ -1) != -1) {
                   param0.consume();
                   return;
                 } else {
-                  if (-86 == var2) {
+                  if (-86 == (var2 ^ -1)) {
                     param0.consume();
                     return;
                   } else {
-                    if (var2 == -11) {
+                    if ((var2 ^ -1) == -11) {
                       param0.consume();
                       return;
                     } else {
@@ -307,7 +307,7 @@ final class ml implements java.awt.event.KeyListener, java.awt.event.FocusListen
                   if (var2 >= 0) {
                     no.field_i[hb.field_y] = var2;
                     hb.field_y = hb.field_y + 1 & 127;
-                    if (n.field_w != hb.field_y) {
+                    if ((n.field_w ^ -1) != (hb.field_y ^ -1)) {
                       break L7;
                     } else {
                       L8: {
@@ -327,20 +327,20 @@ final class ml implements java.awt.event.KeyListener, java.awt.event.FocusListen
                         }
                       }
                       var3 = param0.getModifiers();
-                      if ((var3 & 10) != -1) {
+                      if ((var3 & 10 ^ -1) != -1) {
                         param0.consume();
                         return;
                       } else {
-                        if (-86 != var2) {
-                          if ((var2 ^ -1) != -11) {
-                            return;
-                          } else {
-                            param0.consume();
-                            return;
-                          }
-                        } else {
+                        if (-86 == (var2 ^ -1)) {
                           param0.consume();
                           return;
+                        } else {
+                          if ((var2 ^ -1) == -11) {
+                            param0.consume();
+                            return;
+                          } else {
+                            return;
+                          }
                         }
                       }
                     }
@@ -361,21 +361,21 @@ final class ml implements java.awt.event.KeyListener, java.awt.event.FocusListen
                       }
                     }
                     var3 = param0.getModifiers();
-                    if ((var3 & 10) == -1) {
-                      if (-86 != var2) {
-                        if ((var2 ^ -1) != -11) {
-                          return;
-                        } else {
-                          param0.consume();
-                          return;
-                        }
-                      } else {
-                        param0.consume();
-                        return;
-                      }
-                    } else {
+                    if ((var3 & 10 ^ -1) != -1) {
                       param0.consume();
                       return;
+                    } else {
+                      if (-86 == (var2 ^ -1)) {
+                        param0.consume();
+                        return;
+                      } else {
+                        if ((var2 ^ -1) == -11) {
+                          param0.consume();
+                          return;
+                        } else {
+                          return;
+                        }
+                      }
                     }
                   }
                 }
@@ -392,11 +392,11 @@ final class ml implements java.awt.event.KeyListener, java.awt.event.FocusListen
                     break L10;
                   } else {
                     var3 = param0.getModifiers();
-                    if ((var3 & 10) != -1) {
+                    if ((var3 & 10 ^ -1) != -1) {
                       param0.consume();
                       return;
                     } else {
-                      if (-86 == var2) {
+                      if (-86 == (var2 ^ -1)) {
                         param0.consume();
                         return;
                       } else {
@@ -412,11 +412,11 @@ final class ml implements java.awt.event.KeyListener, java.awt.event.FocusListen
                 }
               }
               var3 = param0.getModifiers();
-              if ((var3 & 10) != -1) {
+              if ((var3 & 10 ^ -1) != -1) {
                 param0.consume();
                 return;
               } else {
-                if (-86 == var2) {
+                if (-86 == (var2 ^ -1)) {
                   param0.consume();
                   return;
                 } else {
@@ -438,7 +438,7 @@ final class ml implements java.awt.event.KeyListener, java.awt.event.FocusListen
                 if (var2 >= 0) {
                   no.field_i[hb.field_y] = var2;
                   hb.field_y = hb.field_y + 1 & 127;
-                  if (n.field_w != hb.field_y) {
+                  if ((n.field_w ^ -1) != (hb.field_y ^ -1)) {
                     break L11;
                   } else {
                     L12: {
@@ -458,21 +458,21 @@ final class ml implements java.awt.event.KeyListener, java.awt.event.FocusListen
                       }
                     }
                     var3 = param0.getModifiers();
-                    if ((var3 & 10) == -1) {
-                      if (-86 != var2) {
-                        if ((var2 ^ -1) != -11) {
-                          return;
-                        } else {
-                          param0.consume();
-                          return;
-                        }
-                      } else {
-                        param0.consume();
-                        return;
-                      }
-                    } else {
+                    if ((var3 & 10 ^ -1) != -1) {
                       param0.consume();
                       return;
+                    } else {
+                      if (-86 == (var2 ^ -1)) {
+                        param0.consume();
+                        return;
+                      } else {
+                        if ((var2 ^ -1) == -11) {
+                          param0.consume();
+                          return;
+                        } else {
+                          return;
+                        }
+                      }
                     }
                   }
                 } else {
@@ -492,21 +492,21 @@ final class ml implements java.awt.event.KeyListener, java.awt.event.FocusListen
                     }
                   }
                   var3 = param0.getModifiers();
-                  if ((var3 & 10) == -1) {
-                    if (-86 != var2) {
-                      if ((var2 ^ -1) != -11) {
-                        return;
-                      } else {
-                        param0.consume();
-                        return;
-                      }
-                    } else {
-                      param0.consume();
-                      return;
-                    }
-                  } else {
+                  if ((var3 & 10 ^ -1) != -1) {
                     param0.consume();
                     return;
+                  } else {
+                    if (-86 == (var2 ^ -1)) {
+                      param0.consume();
+                      return;
+                    } else {
+                      if ((var2 ^ -1) == -11) {
+                        param0.consume();
+                        return;
+                      } else {
+                        return;
+                      }
+                    }
                   }
                 }
               }
@@ -523,41 +523,41 @@ final class ml implements java.awt.event.KeyListener, java.awt.event.FocusListen
                   break L14;
                 } else {
                   var3 = param0.getModifiers();
-                  if ((var3 & 10) == -1) {
-                    if (-86 != var2) {
-                      if ((var2 ^ -1) != -11) {
-                        return;
-                      } else {
-                        param0.consume();
-                        return;
-                      }
-                    } else {
-                      param0.consume();
-                      return;
-                    }
-                  } else {
+                  if ((var3 & 10 ^ -1) != -1) {
                     param0.consume();
                     return;
+                  } else {
+                    if (-86 == (var2 ^ -1)) {
+                      param0.consume();
+                      return;
+                    } else {
+                      if ((var2 ^ -1) == -11) {
+                        param0.consume();
+                        return;
+                      } else {
+                        return;
+                      }
+                    }
                   }
                 }
               }
             }
             var3 = param0.getModifiers();
-            if ((var3 & 10) == -1) {
-              if (-86 != var2) {
+            if ((var3 & 10 ^ -1) != -1) {
+              param0.consume();
+              return;
+            } else {
+              if (-86 == (var2 ^ -1)) {
+                param0.consume();
+                return;
+              } else {
                 if ((var2 ^ -1) == -11) {
                   param0.consume();
                   return;
                 } else {
                   return;
                 }
-              } else {
-                param0.consume();
-                return;
               }
-            } else {
-              param0.consume();
-              return;
             }
           }
         } else {
@@ -574,7 +574,7 @@ final class ml implements java.awt.event.KeyListener, java.awt.event.FocusListen
           L0: {
             po.field_w = 0;
             var2 = param0.getKeyCode();
-            if (-1 < var2) {
+            if (-1 < (var2 ^ -1)) {
               var2 = -1;
               break L0;
             } else {
@@ -583,22 +583,24 @@ final class ml implements java.awt.event.KeyListener, java.awt.event.FocusListen
                 break L0;
               } else {
                 var2 = -1;
-                if (-1 <= hb.field_y) {
-                  if ((var2 ^ -1) <= -1) {
-                    no.field_i[hb.field_y] = var2 ^ -1;
-                    hb.field_y = 127 & 1 + hb.field_y;
-                    if (hb.field_y == n.field_w) {
-                      hb.field_y = -1;
-                      param0.consume();
-                      return;
+                if (-1 >= (hb.field_y ^ -1)) {
+                  L1: {
+                    if ((var2 ^ -1) > -1) {
+                      break L1;
                     } else {
-                      param0.consume();
-                      return;
+                      no.field_i[hb.field_y] = var2 ^ -1;
+                      hb.field_y = 127 & 1 + hb.field_y;
+                      if (hb.field_y != n.field_w) {
+                        break L1;
+                      } else {
+                        hb.field_y = -1;
+                        param0.consume();
+                        return;
+                      }
                     }
-                  } else {
-                    param0.consume();
-                    return;
                   }
+                  param0.consume();
+                  return;
                 } else {
                   param0.consume();
                   return;
@@ -606,26 +608,27 @@ final class ml implements java.awt.event.KeyListener, java.awt.event.FocusListen
               }
             }
           }
-          if (-1 >= (hb.field_y ^ -1)) {
-            if ((var2 ^ -1) <= -1) {
-              no.field_i[hb.field_y] = var2 ^ -1;
-              hb.field_y = 127 & 1 + hb.field_y;
-              if (hb.field_y == n.field_w) {
-                hb.field_y = -1;
-                param0.consume();
-                return;
-              } else {
-                param0.consume();
-                return;
-              }
+          L2: {
+            if (-1 < (hb.field_y ^ -1)) {
+              break L2;
             } else {
-              param0.consume();
-              return;
+              if ((var2 ^ -1) > -1) {
+                break L2;
+              } else {
+                no.field_i[hb.field_y] = var2 ^ -1;
+                hb.field_y = 127 & 1 + hb.field_y;
+                if (hb.field_y != n.field_w) {
+                  break L2;
+                } else {
+                  hb.field_y = -1;
+                  param0.consume();
+                  return;
+                }
+              }
             }
-          } else {
-            param0.consume();
-            return;
           }
+          param0.consume();
+          return;
         } else {
           param0.consume();
           return;

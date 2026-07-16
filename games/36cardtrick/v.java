@@ -8,7 +8,7 @@ final class v extends hf implements of {
     private ba field_P;
 
     final void a(int param0, int param1, lk param2, int param3) {
-        this.a(param0, param1, param2, param3 ^ 0);
+        super.a(param0, param1, param2, param3 ^ 0);
         ((v) this).field_E = -param1 + eg.field_b + -((v) this).field_o;
         if (param3 != 3) {
             ((v) this).k(25);
@@ -43,7 +43,7 @@ final class v extends hf implements of {
     }
 
     final void k(int param0) {
-        this.k(param0 ^ 0);
+        super.k(param0 ^ 0);
         if (param0 != 64) {
           return;
         } else {
@@ -71,7 +71,7 @@ final class v extends hf implements of {
     final void a(byte param0, ba param1) {
         ((v) this).field_P = param1;
         if (param0 != 68) {
-            lk var4 = (lk) null;
+            Object var4 = null;
             ((v) this).a(-14, 64, (lk) null, 35);
         }
     }

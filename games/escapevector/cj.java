@@ -30,22 +30,30 @@ final class cj {
         int var3 = 0;
         int var4 = var6.length;
         while (var4 > var3) {
+            int incrementValue$0 = var3;
             var3++;
-            var6[var3] = 0;
+            var6[incrementValue$0] = 0;
+            int incrementValue$1 = var3;
             var3++;
-            var6[var3] = 0;
+            var6[incrementValue$1] = 0;
+            int incrementValue$2 = var3;
             var3++;
-            var6[var3] = 0;
+            var6[incrementValue$2] = 0;
+            int incrementValue$3 = var3;
             var3++;
-            var6[var3] = 0;
+            var6[incrementValue$3] = 0;
+            int incrementValue$4 = var3;
             var3++;
-            var6[var3] = 0;
+            var6[incrementValue$4] = 0;
+            int incrementValue$5 = var3;
             var3++;
-            var6[var3] = 0;
+            var6[incrementValue$5] = 0;
+            int incrementValue$6 = var3;
             var3++;
-            var6[var3] = 0;
+            var6[incrementValue$6] = 0;
+            int incrementValue$7 = var3;
             var3++;
-            var6[var3] = 0;
+            var6[incrementValue$7] = 0;
         }
     }
 

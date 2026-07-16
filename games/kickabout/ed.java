@@ -101,6 +101,7 @@ final class ed {
           if (var2 >= 10) {
             ((ed) this).field_a = param0.a((byte) 81);
             ((ed) this).field_b = param0.a((byte) 81);
+            return;
           } else {
             var3 = param0.h((byte) -117);
             if (var3 != 0) {

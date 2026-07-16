@@ -49,19 +49,35 @@ class og extends pl {
     }
 
     private final int g(byte param0) {
+        int var2 = 0;
         int var3 = 0;
-        int var4 = wizardrun.field_H;
-        int var2 = ((og) this).field_k.length();
-        if (((og) this).field_L == var2) {
-            return ((og) this).field_L;
-        }
-        if (param0 < 19) {
+        int var4 = 0;
+        var4 = wizardrun.field_H;
+        var2 = ((og) this).field_k.length();
+        if (((og) this).field_L != var2) {
+          if (param0 >= 19) {
+            var3 = 1 + ((og) this).field_L;
+            L0: while (true) {
+              L1: {
+                if (var3 >= var2) {
+                  break L1;
+                } else {
+                  if (((og) this).field_k.charAt(-1 + var3) == 32) {
+                    break L1;
+                  } else {
+                    var3++;
+                    continue L0;
+                  }
+                }
+              }
+              return var3;
+            }
+          } else {
             return 50;
+          }
+        } else {
+          return ((og) this).field_L;
         }
-        for (var3 = 1 + ((og) this).field_L; var3 < var2; var3++) {
-            // if_icmpeq L68
-        }
-        return var3;
     }
 
     og(String param0, ce param1, int param2) {
@@ -124,7 +140,7 @@ class og extends pl {
                       break L1;
                     } else {
                       L2: {
-                        if (((og) this).field_J == ((og) this).field_L) {
+                        if ((((og) this).field_J ^ -1) == (((og) this).field_L ^ -1)) {
                           break L2;
                         } else {
                           this.g(-110);
@@ -135,7 +151,7 @@ class og extends pl {
                         if ((((og) this).field_H ^ -1) == 0) {
                           break L3;
                         } else {
-                          if (((og) this).field_k.length() < ((og) this).field_H) {
+                          if ((((og) this).field_k.length() ^ -1) > (((og) this).field_H ^ -1)) {
                             break L3;
                           } else {
                             return true;
@@ -145,8 +161,9 @@ class og extends pl {
                       L4: {
                         if (((og) this).field_L >= ((og) this).field_k.length()) {
                           ((og) this).field_k = ((og) this).field_k + param0;
-                          ((og) this).field_L = ((og) this).field_k.length();
-                          ((og) this).field_J = ((og) this).field_k.length();
+                          int dupTemp$1 = ((og) this).field_k.length();
+                          ((og) this).field_L = dupTemp$1;
+                          ((og) this).field_J = dupTemp$1;
                           break L4;
                         } else {
                           ((og) this).field_k = ((og) this).field_k.substring(0, ((og) this).field_L) + param0 + ((og) this).field_k.substring(((og) this).field_L, ((og) this).field_k.length());
@@ -205,8 +222,8 @@ class og extends pl {
                               this.a((byte) 10, 0);
                               return true;
                             } else {
-                              if (param1 != -104) {
-                                if (-85 != param1) {
+                              if ((param1 ^ -1) != -104) {
+                                if (-85 != (param1 ^ -1)) {
                                   L7: {
                                     if (!hi.field_p[82]) {
                                       break L7;
@@ -251,7 +268,7 @@ class og extends pl {
                               }
                             }
                           } else {
-                            if (((og) this).field_L >= ((og) this).field_k.length()) {
+                            if ((((og) this).field_L ^ -1) <= (((og) this).field_k.length() ^ -1)) {
                               break L5;
                             } else {
                               L9: {
@@ -286,7 +303,7 @@ class og extends pl {
                         }
                       }
                     } else {
-                      if (((og) this).field_L != ((og) this).field_J) {
+                      if ((((og) this).field_L ^ -1) != (((og) this).field_J ^ -1)) {
                         this.g(76);
                         return true;
                       } else {
@@ -456,17 +473,36 @@ class og extends pl {
 
     private final int d(int param0) {
         int var2 = 0;
-        int var3 = wizardrun.field_H;
-        if (!(-1 != (((og) this).field_L ^ -1))) {
-            return ((og) this).field_L;
+        int var3 = 0;
+        var3 = wizardrun.field_H;
+        if (-1 == (((og) this).field_L ^ -1)) {
+          return ((og) this).field_L;
+        } else {
+          L0: {
+            if (param0 == 31823) {
+              break L0;
+            } else {
+              field_O = -60;
+              break L0;
+            }
+          }
+          var2 = ((og) this).field_L - 1;
+          L1: while (true) {
+            L2: {
+              if (0 >= var2) {
+                break L2;
+              } else {
+                if (((og) this).field_k.charAt(-1 + var2) == 32) {
+                  break L2;
+                } else {
+                  var2--;
+                  continue L1;
+                }
+              }
+            }
+            return var2;
+          }
         }
-        if (param0 != 31823) {
-            field_O = -60;
-        }
-        for (var2 = ((og) this).field_L - 1; 0 < var2; var2--) {
-            // if_icmpeq L70
-        }
-        return var2;
     }
 
     private final void h(int param0) {
@@ -584,8 +620,9 @@ class og extends pl {
                 ((og) this).field_k = ((og) this).field_k.substring(0, ((og) this).field_H);
             }
         }
-        ((og) this).field_J = ((og) this).field_k.length();
-        ((og) this).field_L = ((og) this).field_k.length();
+        int dupTemp$0 = ((og) this).field_k.length();
+        ((og) this).field_J = dupTemp$0;
+        ((og) this).field_L = dupTemp$0;
         if (!param1) {
             ((og) this).i((byte) -94);
         }
@@ -612,20 +649,26 @@ class og extends pl {
             Throwable decompiledCaughtException = null;
             try {
               L0: {
-                var2 = (String) java.awt.Toolkit.getDefaultToolkit().getSystemClipboard().getContents((Object) null).getTransferData(java.awt.datatransfer.DataFlavor.stringFlavor);
-                if (param0 >= 1) {
-                  break L0;
-                } else {
-                  ((og) this).field_J = -125;
-                  break L0;
+                L1: {
+                  var2 = (String) java.awt.Toolkit.getDefaultToolkit().getSystemClipboard().getContents((Object) null).getTransferData(java.awt.datatransfer.DataFlavor.stringFlavor);
+                  if (param0 >= 1) {
+                    break L1;
+                  } else {
+                    ((og) this).field_J = -125;
+                    break L1;
+                  }
                 }
+                this.g(-125);
+                this.b(var2, 84);
+                break L0;
               }
-              this.g(-125);
-              this.b(var2, 84);
-            } catch (java.lang.Exception decompiledCaughtParameter) {
-              decompiledCaughtException = decompiledCaughtParameter;
+            } catch (java.lang.Exception decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              L2: {
+                var2_ref = (Exception) (Object) decompiledCaughtException;
+                break L2;
+              }
             }
-            var2_ref = (Exception) (Object) decompiledCaughtException;
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {

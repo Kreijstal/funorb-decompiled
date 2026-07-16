@@ -204,13 +204,13 @@ final class wk {
           }
         }
         L1: while (true) {
-          if (var4 <= -6) {
+          if ((var4 ^ -1) <= -6) {
             return var11;
           } else {
             L2: {
               var5 = new up();
               var5.field_q = 0;
-              if (-1 == var4) {
+              if (-1 == (var4 ^ -1)) {
                 var5.field_q = 0;
                 break L2;
               } else {
@@ -218,7 +218,7 @@ final class wk {
               }
             }
             L3: {
-              if (-3 == var4) {
+              if (-3 == (var4 ^ -1)) {
                 var5.field_q = 3;
                 break L3;
               } else {
@@ -226,7 +226,7 @@ final class wk {
               }
             }
             L4: {
-              if (-4 != var4) {
+              if (-4 != (var4 ^ -1)) {
                 break L4;
               } else {
                 var5.field_q = 1;

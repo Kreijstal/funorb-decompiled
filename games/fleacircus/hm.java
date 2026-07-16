@@ -56,13 +56,13 @@ abstract class hm {
         }
         L1: {
           if (param1.field_lb == ul.field_F) {
-            // wide iinc 3 -200
+            var3 -= 200;
             break L1;
           } else {
             if (param1.field_lb != null) {
               break L1;
             } else {
-              // wide iinc 3 200
+              var3 += 200;
               break L1;
             }
           }
@@ -70,7 +70,7 @@ abstract class hm {
         if (param0.field_lb != ul.field_F) {
           if (param0.field_lb == null) {
             L2: {
-              // wide iinc 3 -200
+              var3 -= 200;
               if ((var3 ^ -1) >= -1) {
                 stackOut_18_0 = 0;
                 stackIn_19_0 = stackOut_18_0;
@@ -98,7 +98,7 @@ abstract class hm {
           }
         } else {
           L4: {
-            // wide iinc 3 200
+            var3 += 200;
             if ((var3 ^ -1) >= -1) {
               stackOut_9_0 = 0;
               stackIn_10_0 = stackOut_9_0;

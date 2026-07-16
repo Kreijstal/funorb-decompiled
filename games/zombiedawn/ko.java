@@ -31,8 +31,9 @@ final class ko {
 
     final int a(int param0) {
         if (((ko) this).field_a >= ((ko) this).field_i) {
+            int fieldTemp$0 = ((ko) this).field_f;
             ((ko) this).field_f = ((ko) this).field_f + 1;
-            ((ko) this).field_j = ((ko) this).field_c[((ko) this).field_f] << 15;
+            ((ko) this).field_j = ((ko) this).field_c[fieldTemp$0] << 15;
             if (((ko) this).field_f >= ((ko) this).field_k) {
                 ((ko) this).field_f = ((ko) this).field_k - 1;
             }

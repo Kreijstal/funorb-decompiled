@@ -144,8 +144,9 @@ abstract class db extends wd {
                 return super.j(-94);
               }
             } else {
+              int fieldTemp$2 = ((db) this).field_U + 1;
               ((db) this).field_U = ((db) this).field_U + 1;
-              if (((db) this).field_U + 1 != ((db) this).field_T) {
+              if (fieldTemp$2 != ((db) this).field_T) {
                 ((db) this).field_cb.field_H = (((db) this).field_U << -309737176) / ((db) this).field_T;
                 if (param0 > -18) {
                   var4 = null;
@@ -167,8 +168,9 @@ abstract class db extends wd {
               }
             }
           } else {
+            int fieldTemp$3 = ((db) this).field_U + 1;
             ((db) this).field_U = ((db) this).field_U + 1;
-            if (((db) this).field_Y == ((db) this).field_U + 1) {
+            if (((db) this).field_Y == fieldTemp$3) {
               ((db) this).field_ab = dc.field_w;
               ((db) this).a(((db) this).field_V.field_x + 12, ((db) this).field_S, false, ((db) this).field_V.field_u + 12 + ((db) this).field_W);
               ((db) this).field_cb.field_H = 0;
@@ -264,7 +266,7 @@ abstract class db extends wd {
         L0: {
           var6 = 0;
           var7 = 0;
-          if (param4 < ll.field_a) {
+          if ((param4 ^ -1) > (ll.field_a ^ -1)) {
             var7 = ll.field_a - param4;
             param4 = ll.field_a;
             param3 = param3 - var7;
@@ -289,7 +291,7 @@ abstract class db extends wd {
           }
         }
         L2: {
-          if (ll.field_e < param4 + param3) {
+          if ((ll.field_e ^ -1) > (param4 + param3 ^ -1)) {
             param3 = -param4 + ll.field_e;
             break L2;
           } else {
@@ -304,13 +306,13 @@ abstract class db extends wd {
             break L3;
           }
         }
-        if (param3 < -1) {
-          if (-1 >= param0) {
-            return;
-          } else {
+        if ((param3 ^ -1) < -1) {
+          if (-1 > (param0 ^ -1)) {
             var9 = param1 * ll.field_d + param4;
             ra.a(var9, param2.field_t, param0, var8, (byte) -64, ll.field_i, param3, param2.field_z, -param3 + ll.field_d, var7, var6, param2.field_q);
             var10 = 77 / ((param5 - 56) / 53);
+            return;
+          } else {
             return;
           }
         } else {

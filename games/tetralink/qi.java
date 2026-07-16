@@ -398,98 +398,47 @@ final class qi extends mc {
             String var5 = null;
             String var6 = null;
             String var7 = null;
-            int statePc = 0;
-            Throwable caughtException = null;
-            stateLoop: while (true) {
-                switch (statePc) {
-                    case 0: {
-                        bm.field_s = param0;
-                        statePc = 1;
-                        continue stateLoop;
-                    }
-                    case 1: {
-                        try {
-                            var6 = param2.getParameter("cookieprefix");
-                            var5 = var6;
-                            var5 = var6;
-                            var4 = param2.getParameter("cookiehost");
-                            var5 = var4;
-                            var5 = var4;
-                            var7 = var6 + "settings=" + param0 + "; version=1; path=/; domain=" + var4;
-                            var5 = var7;
-                            var5 = var7;
-                            if (-1 != (param0.length() ^ -1)) {
-                                statePc = 3;
-                            } else {
-                                statePc = 2;
-                            }
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_1) {
-                            caughtException = stateCaught_1;
-                            statePc = 7;
-                            continue stateLoop;
-                        }
-                    }
-                    case 2: {
-                        try {
-                            var5 = var7 + "; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0";
-                            statePc = 4;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_2) {
-                            caughtException = stateCaught_2;
-                            statePc = 7;
-                            continue stateLoop;
-                        }
-                    }
-                    case 3: {
-                        try {
-                            var5 = var7 + "; Expires=" + ei.a((byte) 2, 94608000000L + k.a(0)) + "; Max-Age=" + 94608000L;
-                            statePc = 4;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_3) {
-                            caughtException = stateCaught_3;
-                            statePc = 7;
-                            continue stateLoop;
-                        }
-                    }
-                    case 4: {
-                        try {
-                            ii.a(-19149, "document.cookie=\"" + var5 + "\"", param2);
-                            if (param1 == -7011) {
-                                statePc = 8;
-                            } else {
-                                statePc = 5;
-                            }
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_4) {
-                            caughtException = stateCaught_4;
-                            statePc = 7;
-                            continue stateLoop;
-                        }
-                    }
-                    case 5: {
-                        try {
-                            field_n = null;
-                            statePc = 8;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_5) {
-                            caughtException = stateCaught_5;
-                            statePc = 7;
-                            continue stateLoop;
-                        }
-                    }
-                    case 7: {
-                        var3 = caughtException;
-                        statePc = 8;
-                        continue stateLoop;
-                    }
-                    case 8: {
-                        q.a(param2, param1 + 7075);
-                        return;
-                    }
-                    default: throw new IllegalStateException("invalid CFG state " + statePc);
+            Throwable decompiledCaughtException = null;
+            bm.field_s = param0;
+            try {
+              L0: {
+                L1: {
+                  var6 = param2.getParameter("cookieprefix");
+                  var5 = var6;
+                  var5 = var6;
+                  var4 = param2.getParameter("cookiehost");
+                  var5 = var4;
+                  var5 = var4;
+                  var7 = var6 + "settings=" + param0 + "; version=1; path=/; domain=" + var4;
+                  var5 = var7;
+                  var5 = var7;
+                  if (-1 != (param0.length() ^ -1)) {
+                    var5 = var7 + "; Expires=" + ei.a((byte) 2, 94608000000L + k.a(0)) + "; Max-Age=" + 94608000L;
+                    break L1;
+                  } else {
+                    var5 = var7 + "; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0";
+                    break L1;
+                  }
                 }
+                L2: {
+                  ii.a(-19149, "document.cookie=\"" + var5 + "\"", param2);
+                  if (param1 == -7011) {
+                    break L2;
+                  } else {
+                    field_n = null;
+                    break L2;
+                  }
+                }
+                break L0;
+              }
+            } catch (java.lang.Throwable decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              L3: {
+                var3 = decompiledCaughtException;
+                break L3;
+              }
             }
+            q.a(param2, param1 + 7075);
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {

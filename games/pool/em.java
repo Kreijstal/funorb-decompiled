@@ -317,10 +317,10 @@ final class em extends ob {
                     break L1;
                   } else {
                     if (var3 != 2) {
-                      if (var3 == -4) {
+                      if ((var3 ^ -1) == -4) {
                         return 60;
                       } else {
-                        if (-5 == var3) {
+                        if (-5 == (var3 ^ -1)) {
                           return 170;
                         } else {
                           if (var3 != 5) {
@@ -346,23 +346,53 @@ final class em extends ob {
     }
 
     final void e(int param0) {
-        if (hk.b(param0 + 37)) {
-            super.e(-34);
-        } else {
-            if ((qi.field_a ^ -1) == -97) {
+        L0: {
+          if (!hk.b(param0 + 37)) {
+            L1: {
+              if ((qi.field_a ^ -1) != -97) {
+                break L1;
+              } else {
                 ((em) this).field_B.a(((em) this).field_B.field_h / 3 * 3 + (((em) this).field_B.field_h - -2) % 3, (byte) 1);
+                break L1;
+              }
             }
-            if (qi.field_a == 97) {
+            L2: {
+              if (qi.field_a != 97) {
+                break L2;
+              } else {
                 ((em) this).field_B.a(3 * (((em) this).field_B.field_h / 3) + (((em) this).field_B.field_h + 1) % 3, (byte) 1);
+                break L2;
+              }
             }
-            if (qi.field_a != 99) {
-                // if_icmpne L151
+            L3: {
+              L4: {
+                if (qi.field_a == 99) {
+                  break L4;
+                } else {
+                  if ((qi.field_a ^ -1) != -99) {
+                    break L3;
+                  } else {
+                    break L4;
+                  }
+                }
+              }
+              ((em) this).field_B.a((((em) this).field_B.field_h - -3) % 6, (byte) 1);
+              break L3;
             }
-            ((em) this).field_B.a((((em) this).field_B.field_h - -3) % 6, (byte) 1);
             ((em) this).field_B.a(false);
+            break L0;
+          } else {
+            super.e(-34);
+            break L0;
+          }
         }
-        if (param0 != -34) {
+        L5: {
+          if (param0 == -34) {
+            break L5;
+          } else {
             field_I = -119;
+            break L5;
+          }
         }
     }
 
@@ -505,7 +535,7 @@ final class em extends ob {
                 break L0;
               }
             } else {
-              if (var4 == -17) {
+              if ((var4 ^ -1) == -17) {
                 if (((em) this).field_B.b((byte) 91)) {
                   hd.field_J = 2;
                   break L0;
@@ -531,7 +561,7 @@ final class em extends ob {
                       break L0;
                     }
                   } else {
-                    if (-24 != var4) {
+                    if (-24 != (var4 ^ -1)) {
                       super.b(-16470, param1, param2);
                       break L0;
                     } else {

@@ -69,11 +69,11 @@ final class ce extends dj {
         var5 = var2[2];
         if (param0 < -121) {
           L3: {
-            // wide iinc 5 -192
-            // wide iinc 3 -192
+            var5 -= 192;
+            var3 -= 192;
             var6 = var2[3];
-            // wide iinc 4 192
-            // wide iinc 6 192
+            var4 += 192;
+            var6 += 192;
             var7 = -var3 + var4;
             if (-var5 + var6 <= var7) {
               break L3;

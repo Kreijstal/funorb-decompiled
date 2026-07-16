@@ -100,8 +100,9 @@ final class hq {
                   param1[var6] = var11;
                   var12 = param2[var10];
                   param2[var10] = param2[var6];
+                  int incrementValue$1 = var6;
                   var6++;
-                  param2[var6] = var12;
+                  param2[incrementValue$1] = var12;
                   var10++;
                   continue L3;
                 } else {
@@ -484,7 +485,7 @@ final class hq {
         int var4_int = 0;
         qe var4 = null;
         int var5_int = 0;
-        ko var5 = null;
+        Object var5 = null;
         int var6 = 0;
         pq var8_ref_pq = null;
         int var8 = 0;
@@ -496,7 +497,6 @@ final class hq {
         dl var16 = null;
         pq var17 = null;
         dl var18 = null;
-        dl var18_ref = null;
         var10 = Pool.field_O;
         if (param0 >= 85) {
           L0: {
@@ -532,8 +532,8 @@ final class hq {
                     } else {
                       ((hq) this).field_a.field_I.e(-54);
                       var4.field_s = nd.field_j;
-                      var4.field_n = ((cr) (Object) var5.c((byte) -64)).field_n;
-                      var4.field_m = var5;
+                      var4.field_n = ((cr) (Object) ((ko) var5).c((byte) -64)).field_n;
+                      var4.field_m = (ko) var5;
                       var4.field_q = 2;
                       boolean discarded$5 = ((hq) this).field_a.field_I.f((byte) 117);
                       ((hq) this).field_a.s((byte) -62);
@@ -545,20 +545,20 @@ final class hq {
                       if (var3 == ((hq) this).field_a.field_I.field_f.b(var14, 30554)) {
                         L3: {
                           var8 = ((hq) this).field_a.field_I.a(17897, var14);
-                          var18_ref = ((hq) this).field_a.field_I.field_w[var8];
-                          var17.field_g = var18_ref.field_g;
+                          var18 = ((hq) this).field_a.field_I.field_w[var8];
+                          var17.field_g = var18.field_g;
                           var17.field_s = false;
-                          var17.field_k = var18_ref.field_f;
+                          var17.field_k = var18.field_f;
                           var17.field_p = true;
-                          var18_ref.a(var14, -106);
+                          var18.a(var14, -106);
                           if (var5 == null) {
-                            var5 = new ko();
+                            var5 = (Object) (Object) new ko();
                             break L3;
                           } else {
                             break L3;
                           }
                         }
-                        var5.b((byte) -43, (ma) (Object) new cr(var14, var8));
+                        ((ko) var5).b((byte) -43, (ma) (Object) new cr(var14, var8));
                         var14++;
                         continue L2;
                       } else {
@@ -1023,7 +1023,7 @@ final class hq {
     }
 
     final static String a(int param0, byte param1, CharSequence[] param2, int param3) {
-        CharSequence var4_ref = null;
+        CharSequence var4_ref_CharSequence = null;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
@@ -1038,8 +1038,8 @@ final class hq {
         if (param3 != 0) {
           if ((param3 ^ -1) == -2) {
             var11 = param2[param0];
-            var4_ref = var11;
-            if (var4_ref != null) {
+            var4_ref_CharSequence = var11;
+            if (var4_ref_CharSequence != null) {
               return ((Object) (Object) var11).toString();
             } else {
               return "null";

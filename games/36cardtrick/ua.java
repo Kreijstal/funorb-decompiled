@@ -19,7 +19,7 @@ final class ua extends hl {
 
     final void a(int param0, boolean param1, int param2, int param3) {
         ((ua) this).field_D = !((ua) this).field_D ? true : false;
-        this.a(param0, param1, param2, param3);
+        super.a(param0, param1, param2, param3);
     }
 
     private ua(String param0, ci param1, pl param2) {

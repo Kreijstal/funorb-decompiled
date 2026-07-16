@@ -127,44 +127,23 @@ final class dd {
 
     final static void a(byte param0) {
         int var1 = 0;
-        int var2 = 0;
-        var2 = Kickabout.field_G;
+        int var2 = Kickabout.field_G;
         e.field_k.b(-1);
-        var1 = 0;
-        L0: while (true) {
-          if (-33 >= var1) {
-            if (param0 <= 40) {
-              dd.a((byte) 120);
-              var1 = 0;
-              L1: while (true) {
-                if (-33 <= var1) {
-                  qh.field_b = 0;
-                  return;
-                } else {
-                  cp.field_d[var1] = 0L;
-                  var1++;
-                  continue L1;
-                }
-              }
-            } else {
-              var1 = 0;
-              L2: while (true) {
-                if (-33 >= (var1 ^ -1)) {
-                  qh.field_b = 0;
-                  return;
-                } else {
-                  cp.field_d[var1] = 0L;
-                  var1++;
-                  continue L2;
-                }
-              }
-            }
-          } else {
+        for (var1 = 0; -33 < (var1 ^ -1); var1++) {
             mi.field_b[var1] = 0L;
-            var1++;
-            continue L0;
-          }
         }
+        if (param0 <= 40) {
+            dd.a((byte) 120);
+            for (var1 = 0; -33 < (var1 ^ -1); var1++) {
+                cp.field_d[var1] = 0L;
+            }
+            qh.field_b = 0;
+            return;
+        }
+        for (var1 = 0; -33 < (var1 ^ -1); var1++) {
+            cp.field_d[var1] = 0L;
+        }
+        qh.field_b = 0;
     }
 
     final int a(boolean param0) {

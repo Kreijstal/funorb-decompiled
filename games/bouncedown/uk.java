@@ -61,8 +61,9 @@ final class uk {
           if (((uk) this).field_e == ((uk) this).field_c[-1 + ((uk) this).field_h]) {
             L0: while (true) {
               if (((uk) this).field_a > ((uk) this).field_h) {
+                int fieldTemp$2 = ((uk) this).field_h;
                 ((uk) this).field_h = ((uk) this).field_h + 1;
-                var4 = ((uk) this).field_c[((uk) this).field_h].field_c;
+                var4 = ((uk) this).field_c[fieldTemp$2].field_c;
                 var6 = var4;
                 if (var4 != ((uk) this).field_c[((uk) this).field_h + -1]) {
                   ((uk) this).field_e = var6.field_c;
@@ -82,8 +83,9 @@ final class uk {
         } else {
           L1: while (true) {
             if (((uk) this).field_a > ((uk) this).field_h) {
+              int fieldTemp$3 = ((uk) this).field_h;
               ((uk) this).field_h = ((uk) this).field_h + 1;
-              var4 = ((uk) this).field_c[((uk) this).field_h].field_c;
+              var4 = ((uk) this).field_c[fieldTemp$3].field_c;
               var5 = var4;
               if (var4 != ((uk) this).field_c[((uk) this).field_h + -1]) {
                 ((uk) this).field_e = var5.field_c;
@@ -194,13 +196,15 @@ final class uk {
         var2 = 0;
         L0: while (true) {
           if (param0 > var2) {
-            var3 = new ai();
-            ((uk) this).field_c[var2] = new ai();
+            ai dupTemp$2 = new ai();
+            var3 = dupTemp$2;
+            ((uk) this).field_c[var2] = dupTemp$2;
             var3.field_c = var3;
             var3.field_f = var3;
             var2++;
             continue L0;
           } else {
+            return;
           }
         }
     }

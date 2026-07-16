@@ -223,12 +223,18 @@ abstract class vn {
                   }
                 }
                 try {
-                  stackOut_47_0 = new java.net.URL(param3, var7.toString());
-                  stackIn_48_0 = stackOut_47_0;
-                } catch (java.lang.Exception decompiledCaughtParameter) {
-                  decompiledCaughtException = decompiledCaughtParameter;
-                  return stackIn_48_0;
+                  L9: {
+                    stackOut_47_0 = new java.net.URL(param3, var7.toString());
+                    stackIn_48_0 = stackOut_47_0;
+                    break L9;
+                  }
+                } catch (java.lang.Exception decompiledCaughtParameter0) {
+                  decompiledCaughtException = decompiledCaughtParameter0;
+                  var8 = (Exception) (Object) decompiledCaughtException;
+                  var8.printStackTrace();
+                  return param3;
                 }
+                return stackIn_48_0;
               } else {
                 return null;
               }

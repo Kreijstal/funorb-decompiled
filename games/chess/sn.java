@@ -42,8 +42,9 @@ final class sn {
                   if (0 <= ((sn) this).field_c[var7]) {
                     break L3;
                   } else {
+                    int incrementValue$8 = param4;
                     param4++;
-                    param5[param4] = (byte)(var10 ^ -1);
+                    param5[incrementValue$8] = (byte)(var10 ^ -1);
                     if (param2 > param4) {
                       var7 = 0;
                       break L3;
@@ -66,8 +67,9 @@ final class sn {
                   if (((sn) this).field_c[var7] >= 0) {
                     break L5;
                   } else {
+                    int incrementValue$9 = param4;
                     param4++;
-                    param5[param4] = (byte)var10;
+                    param5[incrementValue$9] = (byte)var10;
                     if (param4 < param2) {
                       var7 = 0;
                       break L5;
@@ -88,8 +90,9 @@ final class sn {
                 L7: {
                   var10 = ((sn) this).field_c[var7];
                   if (-1 < (((sn) this).field_c[var7] ^ -1)) {
+                    int incrementValue$10 = param4;
                     param4++;
-                    param5[param4] = (byte)(var10 ^ -1);
+                    param5[incrementValue$10] = (byte)(var10 ^ -1);
                     if (param2 > param4) {
                       var7 = 0;
                       break L7;
@@ -114,8 +117,9 @@ final class sn {
                   if (0 <= ((sn) this).field_c[var7]) {
                     break L9;
                   } else {
+                    int incrementValue$11 = param4;
                     param4++;
-                    param5[param4] = (byte)(var10 ^ -1);
+                    param5[incrementValue$11] = (byte)(var10 ^ -1);
                     if (param2 > param4) {
                       var7 = 0;
                       break L9;
@@ -138,8 +142,9 @@ final class sn {
                   if (0 <= ((sn) this).field_c[var7]) {
                     break L11;
                   } else {
+                    int incrementValue$12 = param4;
                     param4++;
-                    param5[param4] = (byte)(var10 ^ -1);
+                    param5[incrementValue$12] = (byte)(var10 ^ -1);
                     if (param2 > param4) {
                       var7 = 0;
                       break L11;
@@ -160,8 +165,9 @@ final class sn {
                 L13: {
                   var10 = ((sn) this).field_c[var7];
                   if (((sn) this).field_c[var7] < 0) {
+                    int incrementValue$13 = param4;
                     param4++;
-                    param5[param4] = (byte)var10;
+                    param5[incrementValue$13] = (byte)var10;
                     if (param4 >= param2) {
                       break L2;
                     } else {
@@ -184,8 +190,9 @@ final class sn {
                 L15: {
                   var10 = ((sn) this).field_c[var7];
                   if (((sn) this).field_c[var7] < 0) {
+                    int incrementValue$14 = param4;
                     param4++;
-                    param5[param4] = (byte)(var10 ^ -1);
+                    param5[incrementValue$14] = (byte)(var10 ^ -1);
                     if (param4 < param2) {
                       var7 = 0;
                       break L15;
@@ -207,8 +214,9 @@ final class sn {
                 }
                 var10 = ((sn) this).field_c[var7];
                 if (-1 < (((sn) this).field_c[var7] ^ -1)) {
+                  int incrementValue$15 = param4;
                   param4++;
-                  param5[param4] = (byte)(var10 ^ -1);
+                  param5[incrementValue$15] = (byte)(var10 ^ -1);
                   if (param2 > param4) {
                     var7 = 0;
                     var8++;
@@ -265,8 +273,9 @@ final class sn {
                 var7 = var7 & -var13 >> 2124791775;
                 var14 = var12 + (var13 - (-var11 - -1) >> -2083736509);
                 var13 += 24;
-                var7 = s.a(var7, var10 >>> var13);
-                param4[var12] = (byte)s.a(var7, var10 >>> var13);
+                int dupTemp$1 = s.a(var7, var10 >>> var13);
+                var7 = dupTemp$1;
+                param4[var12] = (byte)dupTemp$1;
                 if (var12 >= var14) {
                   break L2;
                 } else {
@@ -359,6 +368,7 @@ final class sn {
         var5 = 0;
         L0: while (true) {
           if (var2 <= var5) {
+            return;
           } else {
             var6 = param0[var5];
             if (var6 != 0) {

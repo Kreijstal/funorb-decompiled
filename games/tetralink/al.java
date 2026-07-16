@@ -90,7 +90,7 @@ class al implements kg, jh {
             return;
           }
         } else {
-          // wide iinc 8 128
+          var8 += 128;
           var10.a(var8, false);
           if (param4) {
             var10.a(0, 128, param2, param2.length);
@@ -143,8 +143,8 @@ class al implements kg, jh {
         if (param0 != 2) {
           ((al) this).field_f = -119;
           var6 = ((al) this).field_d;
-          if (var6 != -1) {
-            if (-3 != var6) {
+          if ((var6 ^ -1) != -1) {
+            if (-3 != (var6 ^ -1)) {
               if ((var6 ^ -1) != -4) {
                 if (1 != var6) {
                   var5 = ((al) this).field_b.field_N + (-((al) this).field_b.field_K + -((al) this).field_b.field_N + var4 >> 397202721);
@@ -194,38 +194,41 @@ class al implements kg, jh {
                   var6 = ((al) this).field_k;
                   if (var6 != 0) {
                     if (3 != var6) {
-                      if (var6 != 1) {
-                        if (var6 == 2) {
-                          if (!(param1.field_D instanceof we)) {
-                            return;
+                      L2: {
+                        if (var6 != 1) {
+                          if (var6 != 2) {
+                            break L2;
                           } else {
-                            ((we) (Object) param1.field_D).a(((al) this).c(param1, 4373), var5, var3, false, ((al) this).field_b);
-                            return;
+                            if (param1.field_D instanceof we) {
+                              ((we) (Object) param1.field_D).a(((al) this).c(param1, 4373), var5, var3, false, ((al) this).field_b);
+                              break L2;
+                            } else {
+                              return;
+                            }
                           }
                         } else {
-                          return;
-                        }
-                      } else {
-                        if (!(param1.field_D instanceof we)) {
-                          return;
-                        } else {
-                          ((we) (Object) param1.field_D).a(((al) this).c(param1, 4373), (byte) 124, ((al) this).field_b, var3 >> 196350017, var5);
-                          return;
+                          if (!(param1.field_D instanceof we)) {
+                            break L2;
+                          } else {
+                            ((we) (Object) param1.field_D).a(((al) this).c(param1, 4373), (byte) 124, ((al) this).field_b, var3 >> 196350017, var5);
+                            return;
+                          }
                         }
                       }
+                      return;
                     } else {
-                      if (!(param1.field_D instanceof we)) {
+                      if (param1.field_D instanceof we) {
+                        ((we) (Object) param1.field_D).a(0, ((al) this).field_b, 0, var5, ((al) this).c(param1, 4373));
                         return;
                       } else {
-                        ((we) (Object) param1.field_D).a(0, ((al) this).field_b, 0, var5, ((al) this).c(param1, 4373));
                         return;
                       }
                     }
                   } else {
-                    if (!(param1.field_D instanceof we)) {
+                    if (param1.field_D instanceof we) {
+                      ((we) (Object) param1.field_D).a(0, ((al) this).field_b, 0, var5, ((al) this).c(param1, 4373));
                       return;
                     } else {
-                      ((we) (Object) param1.field_D).a(0, ((al) this).field_b, 0, var5, ((al) this).c(param1, 4373));
                       return;
                     }
                   }
@@ -235,75 +238,39 @@ class al implements kg, jh {
                 var6 = ((al) this).field_k;
                 if (var6 != 0) {
                   if (3 != var6) {
-                    if (var6 != 1) {
-                      if (var6 == 2) {
-                        if (!(param1.field_D instanceof we)) {
-                          return;
+                    L3: {
+                      if (var6 != 1) {
+                        if (var6 != 2) {
+                          break L3;
                         } else {
-                          ((we) (Object) param1.field_D).a(((al) this).c(param1, 4373), var5, var3, false, ((al) this).field_b);
-                          return;
+                          if (param1.field_D instanceof we) {
+                            ((we) (Object) param1.field_D).a(((al) this).c(param1, 4373), var5, var3, false, ((al) this).field_b);
+                            break L3;
+                          } else {
+                            return;
+                          }
                         }
                       } else {
-                        return;
-                      }
-                    } else {
-                      if (param1.field_D instanceof we) {
-                        ((we) (Object) param1.field_D).a(((al) this).c(param1, 4373), (byte) 124, ((al) this).field_b, var3 >> 196350017, var5);
-                        return;
-                      } else {
-                        return;
+                        if (!(param1.field_D instanceof we)) {
+                          break L3;
+                        } else {
+                          ((we) (Object) param1.field_D).a(((al) this).c(param1, 4373), (byte) 124, ((al) this).field_b, var3 >> 196350017, var5);
+                          return;
+                        }
                       }
                     }
+                    return;
                   } else {
-                    L2: {
+                    L4: {
                       if (param1.field_D instanceof we) {
                         ((we) (Object) param1.field_D).a(0, ((al) this).field_b, 0, var5, ((al) this).c(param1, 4373));
-                        break L2;
+                        break L4;
                       } else {
-                        break L2;
+                        break L4;
                       }
                     }
                     return;
                   }
-                } else {
-                  L3: {
-                    if (param1.field_D instanceof we) {
-                      ((we) (Object) param1.field_D).a(0, ((al) this).field_b, 0, var5, ((al) this).c(param1, 4373));
-                      break L3;
-                    } else {
-                      break L3;
-                    }
-                  }
-                  return;
-                }
-              }
-            } else {
-              var5 = -((al) this).field_b.field_K + var4;
-              var6 = ((al) this).field_k;
-              if (var6 != 0) {
-                if (3 != var6) {
-                  L4: {
-                    if (var6 != 1) {
-                      if (var6 == 2) {
-                        if (param1.field_D instanceof we) {
-                          ((we) (Object) param1.field_D).a(((al) this).c(param1, 4373), var5, var3, false, ((al) this).field_b);
-                          break L4;
-                        } else {
-                          return;
-                        }
-                      } else {
-                        return;
-                      }
-                    } else {
-                      if (!(param1.field_D instanceof we)) {
-                        break L4;
-                      } else {
-                        ((we) (Object) param1.field_D).a(((al) this).c(param1, 4373), (byte) 124, ((al) this).field_b, var3 >> 196350017, var5);
-                        return;
-                      }
-                    }
-                  }
-                  return;
                 } else {
                   L5: {
                     if (param1.field_D instanceof we) {
@@ -315,45 +282,45 @@ class al implements kg, jh {
                   }
                   return;
                 }
-              } else {
-                L6: {
-                  if (param1.field_D instanceof we) {
-                    ((we) (Object) param1.field_D).a(0, ((al) this).field_b, 0, var5, ((al) this).c(param1, 4373));
-                    break L6;
-                  } else {
-                    break L6;
-                  }
-                }
-                return;
               }
-            }
-          } else {
-            var5 = ((al) this).field_b.field_N;
-            var6 = ((al) this).field_k;
-            if (var6 != 0) {
-              if (3 != var6) {
-                L7: {
-                  if (var6 != 1) {
-                    if (var6 != 2) {
-                      break L7;
-                    } else {
-                      if (param1.field_D instanceof we) {
-                        ((we) (Object) param1.field_D).a(((al) this).c(param1, 4373), var5, var3, false, ((al) this).field_b);
-                        break L7;
+            } else {
+              var5 = -((al) this).field_b.field_K + var4;
+              var6 = ((al) this).field_k;
+              if (var6 != 0) {
+                if (3 != var6) {
+                  L6: {
+                    if (var6 != 1) {
+                      if (var6 == 2) {
+                        if (param1.field_D instanceof we) {
+                          ((we) (Object) param1.field_D).a(((al) this).c(param1, 4373), var5, var3, false, ((al) this).field_b);
+                          break L6;
+                        } else {
+                          return;
+                        }
                       } else {
                         return;
                       }
-                    }
-                  } else {
-                    if (!(param1.field_D instanceof we)) {
-                      break L7;
                     } else {
-                      ((we) (Object) param1.field_D).a(((al) this).c(param1, 4373), (byte) 124, ((al) this).field_b, var3 >> 196350017, var5);
-                      return;
+                      if (!(param1.field_D instanceof we)) {
+                        break L6;
+                      } else {
+                        ((we) (Object) param1.field_D).a(((al) this).c(param1, 4373), (byte) 124, ((al) this).field_b, var3 >> 196350017, var5);
+                        return;
+                      }
                     }
                   }
+                  return;
+                } else {
+                  L7: {
+                    if (param1.field_D instanceof we) {
+                      ((we) (Object) param1.field_D).a(0, ((al) this).field_b, 0, var5, ((al) this).c(param1, 4373));
+                      break L7;
+                    } else {
+                      break L7;
+                    }
+                  }
+                  return;
                 }
-                return;
               } else {
                 L8: {
                   if (param1.field_D instanceof we) {
@@ -365,85 +332,127 @@ class al implements kg, jh {
                 }
                 return;
               }
+            }
+          } else {
+            var5 = ((al) this).field_b.field_N;
+            var6 = ((al) this).field_k;
+            if (var6 != 0) {
+              if (3 != var6) {
+                L9: {
+                  if (var6 != 1) {
+                    if (var6 != 2) {
+                      break L9;
+                    } else {
+                      if (param1.field_D instanceof we) {
+                        ((we) (Object) param1.field_D).a(((al) this).c(param1, 4373), var5, var3, false, ((al) this).field_b);
+                        break L9;
+                      } else {
+                        return;
+                      }
+                    }
+                  } else {
+                    if (!(param1.field_D instanceof we)) {
+                      break L9;
+                    } else {
+                      ((we) (Object) param1.field_D).a(((al) this).c(param1, 4373), (byte) 124, ((al) this).field_b, var3 >> 196350017, var5);
+                      return;
+                    }
+                  }
+                }
+                return;
+              } else {
+                L10: {
+                  if (param1.field_D instanceof we) {
+                    ((we) (Object) param1.field_D).a(0, ((al) this).field_b, 0, var5, ((al) this).c(param1, 4373));
+                    break L10;
+                  } else {
+                    break L10;
+                  }
+                }
+                return;
+              }
             } else {
-              L9: {
+              L11: {
                 if (param1.field_D instanceof we) {
                   ((we) (Object) param1.field_D).a(0, ((al) this).field_b, 0, var5, ((al) this).c(param1, 4373));
-                  break L9;
+                  break L11;
                 } else {
-                  break L9;
+                  break L11;
                 }
               }
               return;
             }
           }
         } else {
-          L10: {
+          L12: {
             var6 = ((al) this).field_d;
-            if (var6 != -1) {
-              if (-3 != var6) {
-                L11: {
+            if ((var6 ^ -1) != -1) {
+              if (-3 != (var6 ^ -1)) {
+                L13: {
                   if ((var6 ^ -1) == -4) {
-                    break L11;
+                    break L13;
                   } else {
                     if (1 == var6) {
-                      break L11;
+                      break L13;
                     } else {
-                      break L11;
+                      break L13;
                     }
                   }
                 }
                 var5 = ((al) this).field_b.field_N + (-((al) this).field_b.field_K + -((al) this).field_b.field_N + var4 >> 397202721);
-                break L10;
+                break L12;
               } else {
                 var5 = -((al) this).field_b.field_K + var4;
-                break L10;
+                break L12;
               }
             } else {
               var5 = ((al) this).field_b.field_N;
-              break L10;
+              break L12;
             }
           }
           var6 = ((al) this).field_k;
           if (var6 != 0) {
             if (3 != var6) {
-              if (var6 != 1) {
-                if (var6 == 2) {
-                  if (!(param1.field_D instanceof we)) {
-                    return;
+              L14: {
+                if (var6 != 1) {
+                  if (var6 != 2) {
+                    break L14;
                   } else {
-                    ((we) (Object) param1.field_D).a(((al) this).c(param1, 4373), var5, var3, false, ((al) this).field_b);
-                    return;
+                    if (param1.field_D instanceof we) {
+                      ((we) (Object) param1.field_D).a(((al) this).c(param1, 4373), var5, var3, false, ((al) this).field_b);
+                      break L14;
+                    } else {
+                      return;
+                    }
                   }
                 } else {
-                  return;
-                }
-              } else {
-                if (param1.field_D instanceof we) {
-                  ((we) (Object) param1.field_D).a(((al) this).c(param1, 4373), (byte) 124, ((al) this).field_b, var3 >> 196350017, var5);
-                  return;
-                } else {
-                  return;
+                  if (!(param1.field_D instanceof we)) {
+                    break L14;
+                  } else {
+                    ((we) (Object) param1.field_D).a(((al) this).c(param1, 4373), (byte) 124, ((al) this).field_b, var3 >> 196350017, var5);
+                    return;
+                  }
                 }
               }
+              return;
             } else {
-              L12: {
+              L15: {
                 if (param1.field_D instanceof we) {
                   ((we) (Object) param1.field_D).a(0, ((al) this).field_b, 0, var5, ((al) this).c(param1, 4373));
-                  break L12;
+                  break L15;
                 } else {
-                  break L12;
+                  break L15;
                 }
               }
               return;
             }
           } else {
-            L13: {
+            L16: {
               if (param1.field_D instanceof we) {
                 ((we) (Object) param1.field_D).a(0, ((al) this).field_b, 0, var5, ((al) this).c(param1, 4373));
-                break L13;
+                break L16;
               } else {
-                break L13;
+                break L16;
               }
             }
             return;
@@ -823,12 +832,12 @@ class al implements kg, jh {
         } else {
           L0: {
             var12 = ((al) this).field_d;
-            if (var12 != -1) {
-              if (-3 == var12) {
+            if ((var12 ^ -1) != -1) {
+              if (-3 == (var12 ^ -1)) {
                 L1: {
                   var11 = -((al) this).field_b.field_K + var10;
                   var12 = ((al) this).field_k;
-                  if (var12 != 0) {
+                  if ((var12 ^ -1) != -1) {
                     if ((var12 ^ -1) == -4) {
                       break L1;
                     } else {
@@ -887,7 +896,7 @@ class al implements kg, jh {
                   if ((var12 ^ -1) != -2) {
                     var11 = ((al) this).field_b.field_N + (-((al) this).field_b.field_K + (-((al) this).field_b.field_N + var10) >> -77187071);
                     var12 = ((al) this).field_k;
-                    if (var12 != 0) {
+                    if ((var12 ^ -1) != -1) {
                       if ((var12 ^ -1) == -4) {
                         ((al) this).field_b.b(((al) this).c(param0, 4373), this.a(0, param0, param1, param6), var11 + this.a(param7, param0, (byte) -79, param2), param5, param4);
                         if (param3 >= 37) {
@@ -951,7 +960,7 @@ class al implements kg, jh {
                   } else {
                     var11 = ((al) this).field_b.field_N + (-((al) this).field_b.field_K + (-((al) this).field_b.field_N + var10) >> -77187071);
                     var12 = ((al) this).field_k;
-                    if (var12 != 0) {
+                    if ((var12 ^ -1) != -1) {
                       if ((var12 ^ -1) == -4) {
                         ((al) this).field_b.b(((al) this).c(param0, 4373), this.a(0, param0, param1, param6), var11 + this.a(param7, param0, (byte) -79, param2), param5, param4);
                         if (param3 >= 37) {
@@ -1024,7 +1033,7 @@ class al implements kg, jh {
             }
           }
           var12 = ((al) this).field_k;
-          if (var12 != 0) {
+          if ((var12 ^ -1) != -1) {
             if ((var12 ^ -1) == -4) {
               ((al) this).field_b.b(((al) this).c(param0, 4373), this.a(0, param0, param1, param6), var11 + this.a(param7, param0, (byte) -79, param2), param5, param4);
               if (param3 >= 37) {

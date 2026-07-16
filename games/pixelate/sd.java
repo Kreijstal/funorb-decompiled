@@ -56,7 +56,7 @@ final class sd extends ie {
         int var6_int = 0;
         StringBuilder var6 = null;
         int var7 = 0;
-        String var7_ref = null;
+        String var7_ref_String = null;
         int var8 = 0;
         String var9 = null;
         int var10 = 0;
@@ -82,8 +82,8 @@ final class sd extends ie {
                   }
                 }
               }
-              var7_ref = param0.substring(var6_int + 2, var5);
-              if (!td.a(-128, (CharSequence) (Object) var7_ref)) {
+              var7_ref_String = param0.substring(var6_int + 2, var5);
+              if (!td.a(-128, (CharSequence) (Object) var7_ref_String)) {
                 continue L0;
               } else {
                 if (var5 >= var3) {
@@ -93,7 +93,7 @@ final class sd extends ie {
                     continue L0;
                   } else {
                     var5++;
-                    var8 = na.a((CharSequence) (Object) var7_ref, (byte) -33);
+                    var8 = na.a((CharSequence) (Object) var7_ref_String, (byte) -33);
                     var4 = var4 + (param2[var8].length() + var6_int + -var5);
                     continue L0;
                   }
@@ -265,7 +265,7 @@ final class sd extends ie {
               break L2;
             } else {
               var16 = null;
-              String discarded$1 = sd.a((String) null, 80, (String[]) null);
+              String discarded$3 = sd.a((String) null, 80, (String[]) null);
               break L2;
             }
           }
@@ -393,8 +393,9 @@ final class sd extends ie {
                                         break L19;
                                       } else {
                                         L20: {
-                                          var9[var12] = var17.a(bn.a((int) param0, -95));
-                                          var13 = var17.a(bn.a((int) param0, -95));
+                                          byte dupTemp$4 = var17.a(bn.a((int) param0, -95));
+                                          var9[var12] = dupTemp$4;
+                                          var13 = dupTemp$4;
                                           stackOut_33_0 = var10;
                                           stackIn_35_0 = stackOut_33_0;
                                           stackIn_34_0 = stackOut_33_0;
@@ -474,8 +475,9 @@ final class sd extends ie {
                                         break L27;
                                       } else {
                                         L28: {
-                                          var9[var12 + var13 * var5] = var17.a(0);
-                                          var14 = var17.a(0);
+                                          byte dupTemp$5 = var17.a(0);
+                                          var9[var12 + var13 * var5] = dupTemp$5;
+                                          var14 = dupTemp$5;
                                           stackOut_51_0 = var10;
                                           stackIn_53_0 = stackOut_51_0;
                                           stackIn_52_0 = stackOut_51_0;

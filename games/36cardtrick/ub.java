@@ -37,8 +37,8 @@ final class ub extends mj {
         ((ub) this).field_i = 0;
         di var7 = this.a(param3, (byte) -88, param2, param0);
         di var8 = var7;
-        ((di) var7).field_a[0] = param4;
-        ((di) var8).field_a[param0.length()] = param4 - -param2.a(param0);
+        var7.field_a[0] = param4;
+        var8.field_a[param0.length()] = param4 - -param2.a(param0);
         s.a(param2, (byte) 61, 0, var8, param0);
     }
 
@@ -67,14 +67,14 @@ final class ub extends mj {
         ((ub) this).field_i = 2;
         di var8 = this.a(param2, (byte) -103, param3, param0);
         di var9 = var8;
-        ((di) var9).field_a[0] = -param3.a(param0) + param4;
-        ((di) var9).field_a[param0.length()] = param4;
+        var9.field_a[0] = -param3.a(param0) + param4;
+        var9.field_a[param0.length()] = param4;
         s.a(param3, (byte) 61, 0, var9, param0);
     }
 
     private final di a(int param0, byte param1, ee param2, String param3) {
         int var5 = -67 % ((-6 - param1) / 42);
-        di var6 = new di(-((ee) param2).field_s + param0, param0 - -((ee) param2).field_x, param3.length());
+        di var6 = new di(-param2.field_s + param0, param0 - -param2.field_x, param3.length());
         ((ub) this).field_d = new di[]{var6};
         return var6;
     }
@@ -115,8 +115,8 @@ final class ub extends mj {
         int var6 = 99 % ((35 - param3) / 59);
         di var7 = this.a(param1, (byte) 41, param0, param2);
         int var8 = param0.a(param2);
-        ((di) var7).field_a[0] = param4 - (var8 >> 128144513);
-        ((di) var7).field_a[param2.length()] = param4 - -(var8 >> -1397818463);
+        var7.field_a[0] = param4 - (var8 >> 128144513);
+        var7.field_a[param2.length()] = param4 - -(var8 >> -1397818463);
         s.a(param0, (byte) 61, 0, var7, param2);
     }
 
@@ -174,7 +174,7 @@ final class ub extends mj {
         L0: {
           var15 = Main.field_T;
           if (0 == param7) {
-            param7 = ((ee) param4).field_E;
+            param7 = param4.field_E;
             break L0;
           } else {
             break L0;
@@ -251,7 +251,7 @@ final class ub extends mj {
               if (((ub) this).field_n != 0) {
                 if (((ub) this).field_n != 1) {
                   if (-3 == ((ub) this).field_n) {
-                    var11 = ((ub) this).field_f - (((ee) param4).field_x - -(var10 * ((ub) this).field_g));
+                    var11 = ((ub) this).field_f - (param4.field_x - -(var10 * ((ub) this).field_g));
                     break L3;
                   } else {
                     L4: {
@@ -263,16 +263,16 @@ final class ub extends mj {
                         break L4;
                       }
                     }
-                    var11 = ((ee) param4).field_s + var12;
+                    var11 = param4.field_s + var12;
                     ((ub) this).field_g = ((ub) this).field_g + var12;
                     break L3;
                   }
                 } else {
-                  var11 = (-(((ub) this).field_g * var10) + ((ub) this).field_f >> 841570337) + ((ee) param4).field_s;
+                  var11 = (-(((ub) this).field_g * var10) + ((ub) this).field_f >> 841570337) + param4.field_s;
                   break L3;
                 }
               } else {
-                var11 = ((ee) param4).field_s;
+                var11 = param4.field_s;
                 break L3;
               }
             }
@@ -286,8 +286,8 @@ final class ub extends mj {
                   var13 = var16[var12];
                   stackOut_33_0 = null;
                   stackOut_33_1 = null;
-                  stackOut_33_2 = -((ee) param4).field_s + var11;
-                  stackOut_33_3 = ((ee) param4).field_x + var11;
+                  stackOut_33_2 = -param4.field_s + var11;
+                  stackOut_33_3 = param4.field_x + var11;
                   stackIn_35_0 = stackOut_33_0;
                   stackIn_35_1 = stackOut_33_1;
                   stackIn_35_2 = stackOut_33_2;
@@ -323,14 +323,13 @@ final class ub extends mj {
                   }
                 }
                 L7: {
-                  new di(stackIn_36_2, stackIn_36_3, stackIn_36_4);
-                  var14 = (di) (Object) stackIn_36_0;
-                  ((di) var14).field_a[0] = 0;
+                  var14 = new di(stackIn_36_2, stackIn_36_3, stackIn_36_4);
+                  var14.field_a[0] = 0;
                   if (var13 == null) {
                     break L7;
                   } else {
                     L8: {
-                      ((di) var14).field_a[var13.length()] = param4.a(var13);
+                      var14.field_a[var13.length()] = param4.a(var13);
                       stackOut_37_0 = (ee) param4;
                       stackOut_37_1 = 61;
                       stackIn_39_0 = stackOut_37_0;
@@ -355,7 +354,7 @@ final class ub extends mj {
                         break L8;
                       }
                     }
-                    s.a((ee) (Object) stackIn_40_0, (byte) stackIn_40_1, stackIn_40_2, var14, var13);
+                    s.a(stackIn_40_0, (byte) stackIn_40_1, stackIn_40_2, var14, var13);
                     break L7;
                   }
                 }

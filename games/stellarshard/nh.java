@@ -13,11 +13,31 @@ class nh extends sk {
     private long field_j;
 
     final static boolean a(int param0, boolean param1) {
-        // if_acmpne L27
-        am.field_c = il.field_v.a(df.field_j, (byte) 34, ue.field_d);
-        // goto L27
-        // if_icmpne L39
-        return false;
+        L0: {
+          if (null != am.field_c) {
+            break L0;
+          } else {
+            am.field_c = il.field_v.a(df.field_j, (byte) 34, ue.field_d);
+            break L0;
+          }
+        }
+        if (param0 != am.field_c.field_f) {
+          L1: {
+            long dupTemp$2 = ih.a((byte) -98);
+            t.field_d = dupTemp$2;
+            ka.field_o = dupTemp$2;
+            if (-2 != am.field_c.field_f) {
+              break L1;
+            } else {
+              break L1;
+            }
+          }
+          sl.field_d = lh.field_n;
+          am.field_c = null;
+          return true;
+        } else {
+          return false;
+        }
     }
 
     ua a(int param0) {
@@ -158,22 +178,30 @@ class nh extends sk {
         int var2 = 0;
         int var3 = var5.length;
         while (var2 < var3) {
+            int incrementValue$0 = var2;
             var2++;
-            var5[var2] = 0;
+            var5[incrementValue$0] = 0;
+            int incrementValue$1 = var2;
             var2++;
-            var5[var2] = 0;
+            var5[incrementValue$1] = 0;
+            int incrementValue$2 = var2;
             var2++;
-            var5[var2] = 0;
+            var5[incrementValue$2] = 0;
+            int incrementValue$3 = var2;
             var2++;
-            var5[var2] = 0;
+            var5[incrementValue$3] = 0;
+            int incrementValue$4 = var2;
             var2++;
-            var5[var2] = 0;
+            var5[incrementValue$4] = 0;
+            int incrementValue$5 = var2;
             var2++;
-            var5[var2] = 0;
+            var5[incrementValue$5] = 0;
+            int incrementValue$6 = var2;
             var2++;
-            var5[var2] = 0;
+            var5[incrementValue$6] = 0;
+            int incrementValue$7 = var2;
             var2++;
-            var5[var2] = 0;
+            var5[incrementValue$7] = 0;
         }
         if (param0 > -17) {
             field_h = 114;

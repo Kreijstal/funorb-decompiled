@@ -55,36 +55,36 @@ final class qc extends nb implements dm {
 
     qc(pk param0, af param1) {
         super(param0, 200, 150);
-        String var3 = null;
+        Object var3 = null;
         na var4 = null;
         L0: {
           var3 = null;
           if (param1 == ka.field_l) {
-            var3 = wn.field_v;
+            var3 = (Object) (Object) wn.field_v;
             break L0;
           } else {
             if (wg.field_d != param1) {
               if (ko.field_o != param1) {
                 break L0;
               } else {
-                var3 = km.field_p;
+                var3 = (Object) (Object) km.field_p;
                 ((qc) this).field_u = ((qc) this).field_u + 30;
                 break L0;
               }
             } else {
-              var3 = am.field_c;
+              var3 = (Object) (Object) am.field_c;
               ((qc) this).field_u = ((qc) this).field_u + 10;
               if (!jo.b(0)) {
                 break L0;
               } else {
                 ((qc) this).field_u = ((qc) this).field_u + 20;
-                var3 = w.field_s;
+                var3 = (Object) (Object) w.field_s;
                 break L0;
               }
             }
           }
         }
-        var4 = new na(var3, (dn) null);
+        var4 = new na((String) var3, (dn) null);
         var4.field_F = ((qc) this).field_F;
         var4.field_w = 50;
         var4.field_u = 80;

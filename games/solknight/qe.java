@@ -11,37 +11,37 @@ final class qe extends ki implements re, ka {
     public final void a(int param0, int param1, int param2, kj param3) {
         int var6 = 0;
         var6 = SolKnight.field_L ? 1 : 0;
-        if (param1 == 0) {
+        if ((param1 ^ -1) == -1) {
           ud.a(11692, "terms.ws");
-          if (param2 != 50) {
-            ((qe) this).field_E = null;
+          if (param2 == 50) {
             return;
           } else {
+            ((qe) this).field_E = null;
             return;
           }
         } else {
-          if (param1 == -2) {
+          if ((param1 ^ -1) == -2) {
             ud.a(11692, "privacy.ws");
-            if (param2 == 50) {
+            if (param2 != 50) {
+              ((qe) this).field_E = null;
               return;
             } else {
-              ((qe) this).field_E = null;
               return;
             }
           } else {
-            if (-3 != param1) {
-              if (param2 != 50) {
-                ((qe) this).field_E = null;
-                return;
-              } else {
-                return;
-              }
-            } else {
-              ud.a(11692, "conduct.ws");
+            if (-3 != (param1 ^ -1)) {
               if (param2 == 50) {
                 return;
               } else {
                 ((qe) this).field_E = null;
+                return;
+              }
+            } else {
+              ud.a(11692, "conduct.ws");
+              if (param2 != 50) {
+                ((qe) this).field_E = null;
+                return;
+              } else {
                 return;
               }
             }

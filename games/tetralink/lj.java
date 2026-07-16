@@ -116,8 +116,9 @@ final class lj implements Iterator {
         } else {
           L0: while (true) {
             if (((lj) this).field_g < ((lj) this).field_e.field_i) {
+              int fieldTemp$2 = ((lj) this).field_g;
               ((lj) this).field_g = ((lj) this).field_g + 1;
-              var1 = ((lj) this).field_e.field_d[((lj) this).field_g].field_j;
+              var1 = ((lj) this).field_e.field_d[fieldTemp$2].field_j;
               if (((lj) this).field_e.field_d[((lj) this).field_g - 1] != var1) {
                 ((lj) this).field_f = var1.field_j;
                 ((lj) this).field_d = var1;
@@ -142,8 +143,9 @@ final class lj implements Iterator {
             if (((lj) this).field_e.field_i <= ((lj) this).field_g) {
               return false;
             } else {
+              int fieldTemp$8 = ((lj) this).field_g;
               ((lj) this).field_g = ((lj) this).field_g + 1;
-              if (((lj) this).field_e.field_d[((lj) this).field_g].field_j != ((lj) this).field_e.field_d[-1 + ((lj) this).field_g]) {
+              if (((lj) this).field_e.field_d[fieldTemp$8].field_j != ((lj) this).field_e.field_d[-1 + ((lj) this).field_g]) {
                 ((lj) this).field_f = ((lj) this).field_e.field_d[((lj) this).field_g + -1].field_j;
                 return true;
               } else {

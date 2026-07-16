@@ -63,25 +63,48 @@ final class o extends wj {
     }
 
     final int a(int param0, long param1) {
-        int var5 = fleas.field_A ? 1 : 0;
-        if (param0 != -23124) {
-        }
-        if ((((o) this).field_e ^ -1L) > (((o) this).field_k ^ -1L)) {
-            ((o) this).field_i = ((o) this).field_i + (((o) this).field_k - ((o) this).field_e);
-            ((o) this).field_e = ((o) this).field_e + (((o) this).field_k + -((o) this).field_e);
-            ((o) this).field_k = ((o) this).field_k + param1;
-            return 1;
-        }
         int var4 = 0;
-        do {
-            ((o) this).field_k = ((o) this).field_k + param1;
-            var4++;
-            // if_icmpge L128
-        } while (((o) this).field_e > ((o) this).field_k);
-        if (!(((o) this).field_e <= ((o) this).field_k)) {
-            ((o) this).field_k = ((o) this).field_e;
+        int var5 = 0;
+        L0: {
+          var5 = fleas.field_A ? 1 : 0;
+          if (param0 == -23124) {
+            break L0;
+          } else {
+            break L0;
+          }
         }
-        return var4;
+        if ((((o) this).field_e ^ -1L) <= (((o) this).field_k ^ -1L)) {
+          var4 = 0;
+          L1: while (true) {
+            L2: {
+              ((o) this).field_k = ((o) this).field_k + param1;
+              var4++;
+              if (-11 >= (var4 ^ -1)) {
+                break L2;
+              } else {
+                if (((o) this).field_e > ((o) this).field_k) {
+                  continue L1;
+                } else {
+                  break L2;
+                }
+              }
+            }
+            L3: {
+              if (((o) this).field_e > ((o) this).field_k) {
+                ((o) this).field_k = ((o) this).field_e;
+                break L3;
+              } else {
+                break L3;
+              }
+            }
+            return var4;
+          }
+        } else {
+          ((o) this).field_i = ((o) this).field_i + (((o) this).field_k - ((o) this).field_e);
+          ((o) this).field_e = ((o) this).field_e + (((o) this).field_k + -((o) this).field_e);
+          ((o) this).field_k = ((o) this).field_k + param1;
+          return 1;
+        }
     }
 
     final static boolean c(byte param0) {

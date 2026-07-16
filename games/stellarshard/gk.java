@@ -25,9 +25,9 @@ final class gk {
     final static int a(int param0, boolean param1, am param2, String param3, int param4, am param5, boolean param6) {
         String var8 = null;
         int var9 = 0;
-        String var9_ref = null;
+        String var9_ref_String = null;
         int var10 = 0;
-        String var11_ref = null;
+        String var11_ref_String = null;
         int var11 = 0;
         int var12 = 0;
         int var13 = 0;
@@ -67,11 +67,11 @@ final class gk {
         if (!param6) {
           L0: {
             var14 = param2.a((byte) 125);
-            var11_ref = var14;
-            var11_ref = var14;
+            var11_ref_String = var14;
+            var11_ref_String = var14;
             var8 = param5.a((byte) -22);
-            var11_ref = var8;
-            var11_ref = var8;
+            var11_ref_String = var8;
+            var11_ref_String = var8;
             if (null == ob.field_b) {
               if (nh.a(-1, false)) {
                 break L0;
@@ -111,15 +111,15 @@ final class gk {
                     pg.field_fb.a(false, 18);
                     pg.field_fb.field_k = pg.field_fb.field_k + 2;
                     var10 = pg.field_fb.field_k;
-                    var11_ref = dd.a(0, hf.a((byte) -118));
-                    if (var11_ref != null) {
+                    var11_ref_String = dd.a(0, hf.a((byte) -118));
+                    if (var11_ref_String != null) {
                       break L4;
                     } else {
-                      var11_ref = "";
+                      var11_ref_String = "";
                       break L4;
                     }
                   }
-                  pg.field_fb.b(var11_ref, -9799);
+                  pg.field_fb.b(var11_ref_String, -9799);
                   ha.a(fj.field_l, (ka) (Object) pg.field_fb, uc.field_c, -105, u.field_o);
                   pg.field_fb.d(-1, -var10 + pg.field_fb.field_k);
                   break L2;
@@ -216,8 +216,8 @@ final class gk {
                     }
                   }
                 }
-                if (-249 != var9) {
-                  if (-100 == var9) {
+                if (-249 != (var9 ^ -1)) {
+                  if (-100 == (var9 ^ -1)) {
                     boolean discarded$1 = qe.b(64, ug.b(1));
                     nb.field_M = new Boolean(h.a((ka) (Object) ae.field_N, 31184));
                     ae.field_N.field_k = 0;
@@ -254,7 +254,7 @@ final class gk {
                   var11 = fc.field_b.length;
                   var12 = 0;
                   L10: while (true) {
-                    if (var12 >= var11) {
+                    if ((var12 ^ -1) <= (var11 ^ -1)) {
                       oj.c(-2290);
                       ta.field_u = false;
                       return var11 + 100;
@@ -273,11 +273,11 @@ final class gk {
               if (cd.e((byte) 123)) {
                 L12: {
                   if (-256 == (ja.field_t ^ -1)) {
-                    var9_ref = ae.field_N.a(0);
-                    if (var9_ref == null) {
+                    var9_ref_String = ae.field_N.a(0);
+                    if (var9_ref_String == null) {
                       break L12;
                     } else {
-                      dj.a(false, hf.a((byte) -101), var9_ref);
+                      dj.a(false, hf.a((byte) -101), var9_ref_String);
                       break L12;
                     }
                   } else {
@@ -348,12 +348,12 @@ final class gk {
             return null;
         }
         ud var11 = var9.a();
-        ud var8_ref = var11;
-        ((gk) this).field_f.a((gg) (Object) var8_ref, var6, 1);
+        var8 = var11;
+        ((gk) this).field_f.a((gg) (Object) var8, var6, 1);
         if (param1 != null) {
             param1[0] = param1[0] - var11.field_n.length;
         }
-        return var8_ref;
+        return var8;
     }
 
     public static void a(int param0) {
@@ -365,7 +365,6 @@ final class gk {
     }
 
     private final ud a(int param0, int param1, int[] param2, int param3) {
-        ad var9_ref = null;
         int var5 = param0 ^ (param1 >>> -1030678868 | 65523 & param1 << 526509892);
         var5 = var5 | param1 << 665284592;
         long var6 = (long)var5 ^ 4294967296L;
@@ -380,19 +379,19 @@ final class gk {
         }
         ad var9 = (ad) (Object) ((gk) this).field_e.a(var6, param3 ^ -125);
         if (!(var9 != null)) {
-            var9_ref = ad.a(((gk) this).field_d, param1, param0);
-            if (var9_ref == null) {
+            var9 = ad.a(((gk) this).field_d, param1, param0);
+            if (var9 == null) {
                 return null;
             }
-            ((gk) this).field_e.a((gg) (Object) var9_ref, var6, param3 + 0);
+            ((gk) this).field_e.a((gg) (Object) var9, var6, param3 + 0);
         }
-        ud var8_ref = var9_ref.a(param2);
-        if (var8_ref == null) {
+        var8 = var9.a(param2);
+        if (var8 == null) {
             return null;
         }
-        var9_ref.c(20);
-        ((gk) this).field_f.a((gg) (Object) var8_ref, var6, param3);
-        return var8_ref;
+        var9.c(20);
+        ((gk) this).field_f.a((gg) (Object) var8, var6, param3);
+        return var8;
     }
 
     final ud a(int param0, int param1, boolean param2) {

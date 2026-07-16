@@ -1,6 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
+import java.lang.String;
+
 final class sc {
     static gj field_b;
     static byte field_a;
@@ -343,7 +345,7 @@ final class sc {
                                         break L19;
                                       }
                                     }
-                                    stackIn_47_0[stackIn_47_1] = (String) (Object) stackIn_47_2;
+                                    stackIn_47_0[stackIn_47_1] = stackIn_47_2;
                                     var8++;
                                     continue L18;
                                   }
@@ -374,7 +376,7 @@ final class sc {
                                     break L20;
                                   }
                                 }
-                                stackIn_41_0[stackIn_41_1] = (String) (Object) stackIn_41_2;
+                                stackIn_41_0[stackIn_41_1] = stackIn_41_2;
                                 var8++;
                                 continue L17;
                               }
@@ -571,7 +573,7 @@ final class sc {
     public static void a(int param0) {
         field_c = null;
         if (param0 != 178313985) {
-            field_c = (String) null;
+            field_c = null;
         }
         field_b = null;
     }
@@ -583,7 +585,7 @@ final class sc {
 
     final static void a(byte param0) {
         if (param0 != 20) {
-            field_c = (String) null;
+            field_c = null;
         }
         if (h.field_F != 0 - vb.field_b) {
             if (h.field_F != -vb.field_b + 250) {

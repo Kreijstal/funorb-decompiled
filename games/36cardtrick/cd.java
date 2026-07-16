@@ -14,13 +14,13 @@ final class cd {
     final he b(byte param0) {
         he var2 = ((cd) this).field_c;
         if (param0 != -122) {
-            return (he) null;
+            return null;
         }
         if (!(((cd) this).field_d != var2)) {
             ((cd) this).field_c = null;
             return null;
         }
-        ((cd) this).field_c = ((he) var2).field_h;
+        ((cd) this).field_c = var2.field_h;
         return var2;
     }
 
@@ -78,7 +78,7 @@ final class cd {
             if (((cd) this).field_d == var3) {
               return var2;
             } else {
-              var3 = ((he) var3).field_h;
+              var3 = var3.field_h;
               var2++;
               continue L0;
             }
@@ -89,7 +89,7 @@ final class cd {
             if (((cd) this).field_d == var3) {
               return var2;
             } else {
-              var3 = ((he) var3).field_h;
+              var3 = var3.field_h;
               var2++;
               continue L1;
             }
@@ -106,7 +106,7 @@ final class cd {
             if (param3 == -1) {
               return;
             } else {
-              field_f = (String) null;
+              field_f = null;
               return;
             }
           } else {
@@ -115,7 +115,7 @@ final class cd {
               if (param3 == -1) {
                 return;
               } else {
-                field_f = (String) null;
+                field_f = null;
                 return;
               }
             } else {
@@ -123,7 +123,7 @@ final class cd {
               if (param3 == -1) {
                 return;
               } else {
-                field_f = (String) null;
+                field_f = null;
                 return;
               }
             }
@@ -134,7 +134,7 @@ final class cd {
             if (param3 == -1) {
               return;
             } else {
-              field_f = (String) null;
+              field_f = null;
               return;
             }
           } else {
@@ -143,7 +143,7 @@ final class cd {
               if (param3 == -1) {
                 return;
               } else {
-                field_f = (String) null;
+                field_f = null;
                 return;
               }
             } else {
@@ -151,7 +151,7 @@ final class cd {
               if (param3 == -1) {
                 return;
               } else {
-                field_f = (String) null;
+                field_f = null;
                 return;
               }
             }
@@ -180,17 +180,17 @@ final class cd {
             ((cd) this).field_c = null;
             return null;
           } else {
-            ((cd) this).field_c = ((he) var2).field_h;
+            ((cd) this).field_c = var2.field_h;
             return var2;
           }
         } else {
-          return (he) null;
+          return null;
         }
     }
 
     final void a(byte param0, he param1) {
         L0: {
-          if (null != ((he) param1).field_i) {
+          if (null != param1.field_i) {
             param1.d(12);
             break L0;
           } else {
@@ -202,8 +202,8 @@ final class cd {
           return;
         } else {
           param1.field_h = ((cd) this).field_d;
-          ((he) param1).field_i.field_h = param1;
-          ((he) param1).field_h.field_i = param1;
+          param1.field_i.field_h = param1;
+          param1.field_h.field_i = param1;
           return;
         }
     }

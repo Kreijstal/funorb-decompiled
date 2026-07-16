@@ -32,13 +32,13 @@ final class mc extends fa {
     }
 
     final static void e(int param0) {
-        tf var1_ref = null;
+        tf var1_ref_tf = null;
         int var1 = 0;
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
-        String var5_ref = null;
+        String var5_ref_String = null;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
@@ -285,10 +285,10 @@ final class mc extends fa {
                 var3 = t.field_d;
                 t.a(wi.field_f);
                 var17 = new tf(412, 43);
-                var5_ref = sd.a(dk.field_f, param0 + 18, new String[1]);
+                var5_ref_String = sd.a(dk.field_f, param0 + 18, new String[1]);
                 fa.field_i = null;
                 var17.c();
-                int discarded$10 = qe.field_A.a(var5_ref, 3, 3, var17.field_F + -6, -6 + var17.field_E, 16777215, -1, 0, 1, qe.field_A.field_w - -qe.field_A.field_z);
+                int discarded$10 = qe.field_A.a(var5_ref_String, 3, 3, var17.field_F + -6, -6 + var17.field_E, 16777215, -1, 0, 1, qe.field_A.field_w - -qe.field_A.field_z);
                 de.a(0, 0, 1, var17, var17.field_F, -1, 3, var17.field_E);
                 qf.field_c.c();
                 var17.b(199 - qf.field_c.field_D, -qf.field_c.field_y + 83);
@@ -373,16 +373,16 @@ final class mc extends fa {
               } else {
                 L14: {
                   wo.field_c.b(231, 390);
-                  var1_ref = ro.field_b;
+                  var1_ref_tf = ro.field_b;
                   if (a.field_I.field_j == 0) {
-                    var1_ref = ph.field_n;
+                    var1_ref_tf = ph.field_n;
                     break L14;
                   } else {
                     break L14;
                   }
                 }
                 L15: {
-                  var1_ref.b(0, 0);
+                  var1_ref_tf.b(0, 0);
                   stackOut_48_0 = 40;
                   stackOut_48_1 = qk.field_e;
                   stackIn_50_0 = stackOut_48_0;
@@ -414,10 +414,10 @@ final class mc extends fa {
                     wo.field_c.b(232, 389, var2);
                     wo.field_c.b(232, 391, var2);
                     wo.field_c.b(230, 391, var2);
-                    var1_ref.b(1, 1, var2);
-                    var1_ref.b(-1, 1, var2);
-                    var1_ref.b(1, -1, var2);
-                    var1_ref.b(-1, -1, var2);
+                    var1_ref_tf.b(1, 1, var2);
+                    var1_ref_tf.b(-1, 1, var2);
+                    var1_ref_tf.b(1, -1, var2);
+                    var1_ref_tf.b(-1, -1, var2);
                     break L16;
                   } else {
                     break L16;

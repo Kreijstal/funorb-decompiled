@@ -16,23 +16,45 @@ class al {
     jp field_b;
 
     private final void d(int param0, int param1) {
-        if (-1 >= (param0 ^ -1)) {
-            // if_icmple L19
-        } else {
-            return;
-        }
-        param0 = ((al) this).field_h[param0];
-        if (0 <= param0) {
-            if (param0 != 12) {
-                if (13 != param0) {
-                    if (!(!((al) this).field_b.d(param1 ^ -61))) {
-                        hn discarded$0 = wm.a(param1 + 28, vb.field_D[68]);
+        L0: {
+          if (-1 < (param0 ^ -1)) {
+            break L0;
+          } else {
+            if (((al) this).field_h.length <= param0) {
+              break L0;
+            } else {
+              L1: {
+                param0 = ((al) this).field_h[param0];
+                if (0 > param0) {
+                  break L1;
+                } else {
+                  if (param0 == 12) {
+                    break L1;
+                  } else {
+                    if (13 == param0) {
+                      break L1;
+                    } else {
+                      if (((al) this).field_b.d(param1 ^ -61)) {
+                        hn discarded$4 = wm.a(param1 + 28, vb.field_D[68]);
+                        break L1;
+                      } else {
+                        break L1;
+                      }
                     }
+                  }
                 }
+              }
+              L2: {
+                if (param1 == 68) {
+                  break L2;
+                } else {
+                  int discarded$5 = ((al) this).a(35, 8);
+                  break L2;
+                }
+              }
+              return;
             }
-        }
-        if (param1 != 68) {
-            int discarded$1 = ((al) this).a(35, 8);
+          }
         }
     }
 
@@ -838,24 +860,23 @@ class al {
                       var3 = 0;
                       var4 = 0;
                       L1: while (true) {
-                        if ((((al) this).field_h.length ^ -1) >= (var4 ^ -1)) {
+                        if (((al) this).field_h.length <= var4) {
                           ((al) this).field_h = var6;
                           ((al) this).field_b = new jp(((al) this).field_h.length);
                           boolean discarded$1 = la.field_d.b(param0 ^ -20093, 1);
                           break L0;
                         } else {
-                          L2: {
-                            var6[var3] = ((al) this).field_h[var4];
-                            if (var10[var3] != 42) {
-                              break L2;
-                            } else {
-                              var3--;
-                              break L2;
-                            }
+                          var6[var3] = ((al) this).field_h[var4];
+                          if (var10[var3] == 42) {
+                            var3--;
+                            var4++;
+                            var3++;
+                            continue L1;
+                          } else {
+                            var4++;
+                            var3++;
+                            continue L1;
                           }
-                          var4++;
-                          var3++;
-                          continue L1;
                         }
                       }
                     }
@@ -867,12 +888,12 @@ class al {
             }
           }
         }
-        L3: {
+        L2: {
           if (param0 == 24136) {
-            break L3;
+            break L2;
           } else {
             ((al) this).field_h = null;
-            break L3;
+            break L2;
           }
         }
     }
@@ -880,25 +901,46 @@ class al {
     int b(boolean param0, int param1, int param2) {
         int var4 = 0;
         int var5 = 0;
-        int var6 = ZombieDawn.field_J;
-        if (!param0) {
-            return 7;
-        }
-        for (var4 = 0; var4 < ((al) this).field_h.length; var4++) {
-            var5 = ((al) this).a(var4, -1);
-            if (((al) this).b(var4, -1)) {
+        int var6 = 0;
+        var6 = ZombieDawn.field_J;
+        if (param0) {
+          var4 = 0;
+          L0: while (true) {
+            if (var4 >= ((al) this).field_h.length) {
+              return -1;
+            } else {
+              var5 = ((al) this).a(var4, -1);
+              if (((al) this).b(var4, -1)) {
                 if (((al) this).c(var4, 6) <= param1) {
-                    if ((((al) this).a(true, var4) ^ -1) < (param1 ^ -1)) {
-                        if ((var5 ^ -1) >= (param2 ^ -1)) {
-                            if ((param2 ^ -1) > (var5 + ((al) this).b(var4, param0) ^ -1)) {
-                                return var4;
-                            }
-                        }
+                  if (((al) this).a(true, var4) > param1) {
+                    if (var5 <= param2) {
+                      if (param2 < var5 + ((al) this).b(var4, param0)) {
+                        return var4;
+                      } else {
+                        var4++;
+                        continue L0;
+                      }
+                    } else {
+                      var4++;
+                      continue L0;
                     }
+                  } else {
+                    var4++;
+                    continue L0;
+                  }
+                } else {
+                  var4++;
+                  continue L0;
                 }
+              } else {
+                var4++;
+                continue L0;
+              }
             }
+          }
+        } else {
+          return 7;
         }
-        return -1;
     }
 
     boolean a(int param0, int param1, char param2) {
@@ -1635,22 +1677,38 @@ class al {
     }
 
     boolean b(int param0, int param1) {
-        if (((al) this).field_h[param0] != 39) {
-            // if_icmpeq L38
-            // if_icmpeq L38
-        } else {
-            return false;
-        }
-        if (param1 != -1) {
-            int discarded$0 = ((al) this).a(71, -63);
-        }
-        if (((al) this).field_h[param0] == 21) {
-            if (-1 != (dj.field_e.j(-5402) ^ -1)) {
-                return true;
+        L0: {
+          if (((al) this).field_h[param0] == 39) {
+            break L0;
+          } else {
+            if (-46 == (((al) this).field_h[param0] ^ -1)) {
+              break L0;
+            } else {
+              if (((al) this).field_h[param0] == 46) {
+                break L0;
+              } else {
+                L1: {
+                  if (param1 == -1) {
+                    break L1;
+                  } else {
+                    int discarded$2 = ((al) this).a(71, -63);
+                    break L1;
+                  }
+                }
+                if (((al) this).field_h[param0] != 21) {
+                  return true;
+                } else {
+                  if (-1 == (dj.field_e.j(-5402) ^ -1)) {
+                    return false;
+                  } else {
+                    return true;
+                  }
+                }
+              }
             }
-            return false;
+          }
         }
-        return true;
+        return false;
     }
 
     void a(byte param0) {

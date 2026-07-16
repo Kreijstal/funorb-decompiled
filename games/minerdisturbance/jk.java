@@ -118,100 +118,48 @@ abstract class jk extends wf {
         Exception var3 = null;
         int var3_int = 0;
         int var4 = 0;
-        int statePc = 0;
-        Throwable caughtException = null;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    var4 = MinerDisturbance.field_ab;
-                    if (null != param1.field_p) {
-                        statePc = 2;
-                    } else {
-                        statePc = 1;
-                    }
-                    continue stateLoop;
+        Throwable decompiledCaughtException = null;
+        var4 = MinerDisturbance.field_ab;
+        if (null != param1.field_p) {
+          var3_int = 0;
+          L0: while (true) {
+            L1: {
+              if (-51 >= (var3_int ^ -1)) {
+                break L1;
+              } else {
+                if (null == param1.field_p.peekEvent()) {
+                  break L1;
+                } else {
+                  gf.a(1L, -10309);
+                  var3_int++;
+                  continue L0;
                 }
-                case 1: {
-                    return;
-                }
-                case 2: {
-                    var3_int = 0;
-                    statePc = 3;
-                    continue stateLoop;
-                }
-                case 3: {
-                    if (-51 >= (var3_int ^ -1)) {
-                        statePc = 6;
-                    } else {
-                        statePc = 4;
-                    }
-                    continue stateLoop;
-                }
-                case 4: {
-                    if (null == param1.field_p.peekEvent()) {
-                        statePc = 6;
-                    } else {
-                        statePc = 5;
-                    }
-                    continue stateLoop;
-                }
-                case 5: {
-                    gf.a(1L, -10309);
-                    var3_int++;
-                    statePc = 3;
-                    continue stateLoop;
-                }
-                case 6: {
-                    try {
-                        if (param0 == -23765) {
-                            statePc = 8;
-                        } else {
-                            statePc = 7;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_6) {
-                        caughtException = stateCaught_6;
-                        statePc = 11;
-                        continue stateLoop;
-                    }
-                }
-                case 7: {
-                    return;
-                }
-                case 8: {
-                    try {
-                        if (param2 == null) {
-                            statePc = 12;
-                        } else {
-                            statePc = 9;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_8) {
-                        caughtException = stateCaught_8;
-                        statePc = 11;
-                        continue stateLoop;
-                    }
-                }
-                case 9: {
-                    try {
-                        param1.field_p.postEvent((java.awt.AWTEvent) (Object) new java.awt.event.ActionEvent(param2, 1001, "dummy"));
-                        return;
-                    } catch (Throwable stateCaught_9) {
-                        caughtException = stateCaught_9;
-                        statePc = 11;
-                        continue stateLoop;
-                    }
-                }
-                case 11: {
-                    var3 = (Exception) (Object) caughtException;
-                    statePc = 12;
-                    continue stateLoop;
-                }
-                case 12: {
-                    return;
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
+              }
             }
+            try {
+              L2: {
+                if (param0 == -23765) {
+                  if (param2 == null) {
+                    break L2;
+                  } else {
+                    param1.field_p.postEvent((java.awt.AWTEvent) (Object) new java.awt.event.ActionEvent(param2, 1001, "dummy"));
+                    return;
+                  }
+                } else {
+                  return;
+                }
+              }
+            } catch (java.lang.Exception decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              L3: {
+                var3 = (Exception) (Object) decompiledCaughtException;
+                break L3;
+              }
+            }
+            return;
+          }
+        } else {
+          return;
         }
     }
 
@@ -271,8 +219,9 @@ abstract class jk extends wf {
         if (param0 == -4) {
           if (null != ((jk) this).field_cb) {
             if (ah.field_a == ((jk) this).field_cb) {
+              int fieldTemp$4 = ((jk) this).field_kb + 1;
               ((jk) this).field_kb = ((jk) this).field_kb + 1;
-              if (((jk) this).field_kb + 1 != ((jk) this).field_eb) {
+              if (fieldTemp$4 != ((jk) this).field_eb) {
                 ((jk) this).field_bb.field_L = -((((jk) this).field_kb << -2021282680) / ((jk) this).field_eb) + 256;
                 return super.n(param0 + 0);
               } else {
@@ -284,8 +233,9 @@ abstract class jk extends wf {
               }
             } else {
               if (((jk) this).field_cb == lm.field_O) {
+                int fieldTemp$5 = ((jk) this).field_kb + 1;
                 ((jk) this).field_kb = ((jk) this).field_kb + 1;
-                if (((jk) this).field_kb + 1 == ((jk) this).field_Z) {
+                if (fieldTemp$5 == ((jk) this).field_Z) {
                   ((jk) this).field_bb.field_L = 256;
                   ((jk) this).field_cb = null;
                   return super.n(param0 + 0);
@@ -304,8 +254,9 @@ abstract class jk extends wf {
           ((jk) this).field_Z = -38;
           if (null != ((jk) this).field_cb) {
             if (ah.field_a == ((jk) this).field_cb) {
+              int fieldTemp$6 = ((jk) this).field_kb + 1;
               ((jk) this).field_kb = ((jk) this).field_kb + 1;
-              if (((jk) this).field_kb + 1 != ((jk) this).field_eb) {
+              if (fieldTemp$6 != ((jk) this).field_eb) {
                 ((jk) this).field_bb.field_L = -((((jk) this).field_kb << -2021282680) / ((jk) this).field_eb) + 256;
                 return super.n(param0 + 0);
               } else {
@@ -317,8 +268,9 @@ abstract class jk extends wf {
               }
             } else {
               if (((jk) this).field_cb == lm.field_O) {
+                int fieldTemp$7 = ((jk) this).field_kb + 1;
                 ((jk) this).field_kb = ((jk) this).field_kb + 1;
-                if (((jk) this).field_kb + 1 == ((jk) this).field_Z) {
+                if (fieldTemp$7 == ((jk) this).field_Z) {
                   ((jk) this).field_bb.field_L = 256;
                   ((jk) this).field_cb = null;
                   return super.n(param0 + 0);

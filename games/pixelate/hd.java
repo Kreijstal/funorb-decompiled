@@ -91,7 +91,7 @@ final class hd {
           }
         }
         L1: {
-          if (-3 == param0) {
+          if (-3 == (param0 ^ -1)) {
             L2: {
               if (((hd) this).field_e == 0) {
                 break L2;
@@ -110,7 +110,7 @@ final class hd {
             }
             return false;
           } else {
-            if (-4 == param0) {
+            if (-4 == (param0 ^ -1)) {
               L3: {
                 if (-2 + ((hd) this).field_i == ((hd) this).field_e) {
                   break L3;
@@ -129,9 +129,9 @@ final class hd {
               }
               return false;
             } else {
-              if (param0 == 0) {
+              if ((param0 ^ -1) == -1) {
                 L4: {
-                  if (((hd) this).field_h == 0) {
+                  if ((((hd) this).field_h ^ -1) == -1) {
                     break L4;
                   } else {
                     if (-1 == ((hd) this).field_r[((hd) this).field_h * ((hd) this).field_i + ((hd) this).field_e - ((hd) this).field_i]) {
@@ -169,8 +169,8 @@ final class hd {
                 } else {
                   if (4 != param0) {
                     if (param0 != 6) {
-                      if (param0 != -8) {
-                        if (-6 == param0) {
+                      if ((param0 ^ -1) != -8) {
+                        if (-6 == (param0 ^ -1)) {
                           var10 = new int[4];
                           var9 = var10;
                           var8 = var9;
@@ -190,13 +190,13 @@ final class hd {
                                   if (-1 == (((hd) this).field_e ^ -1)) {
                                     break L8;
                                   } else {
-                                    if (((hd) this).field_h == 0) {
+                                    if ((((hd) this).field_h ^ -1) == -1) {
                                       break L8;
                                     } else {
                                       if (((hd) this).field_e == -2 + ((hd) this).field_i) {
                                         break L8;
                                       } else {
-                                        if (-2 + ((hd) this).field_a == ((hd) this).field_h) {
+                                        if ((-2 + ((hd) this).field_a ^ -1) == (((hd) this).field_h ^ -1)) {
                                           break L8;
                                         } else {
                                           break L7;
@@ -359,9 +359,9 @@ final class hd {
         }
         var3 = 0;
         L3: while (true) {
-          if (var3 <= -5) {
+          if ((var3 ^ -1) <= -5) {
             L4: {
-              if (-2 != oa.field_j) {
+              if (-2 != (oa.field_j ^ -1)) {
                 ((hd) this).field_u = ((hd) this).field_u + 1;
                 var3 = ok.a(((hd) this).field_t, -116, 4);
                 var4 = 0;

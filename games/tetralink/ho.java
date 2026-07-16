@@ -75,12 +75,14 @@ final class ho extends gn implements ij, dm, sh {
         ((ho) this).field_V.field_H = (kg) (Object) new uj();
         ((ho) this).field_S.field_H = (kg) (Object) new q();
         ((ho) this).field_O.field_H = (kg) (Object) new mf(10000536);
-        ((ho) this).field_K.field_H = (kg) (Object) new mf(10000536);
-        ((ho) this).field_W.field_H = (kg) (Object) new mf(10000536);
+        mf dupTemp$0 = new mf(10000536);
+        ((ho) this).field_K.field_H = (kg) (Object) dupTemp$0;
+        ((ho) this).field_W.field_H = (kg) (Object) dupTemp$0;
         ((ho) this).field_U.field_H = (kg) (Object) new mf(10000536);
         ((ho) this).field_T.field_H = (kg) (Object) new ul();
-        ((ho) this).field_N.field_H = (kg) (Object) new ci(10000536);
-        ((ho) this).field_R.field_H = (kg) (Object) new ci(10000536);
+        ci dupTemp$1 = new ci(10000536);
+        ((ho) this).field_N.field_H = (kg) (Object) dupTemp$1;
+        ((ho) this).field_R.field_H = (kg) (Object) dupTemp$1;
         String var2 = sk.a(new String[2], ej.field_t, 120);
         int var3 = 20;
         var3 = var3 + this.a(rm.field_c, (na) (Object) ((ho) this).field_W, 96, var3, 170);
@@ -116,28 +118,22 @@ final class ho extends gn implements ij, dm, sh {
     }
 
     public final void a(int param0, byte param1, fk param2, int param3) {
-        int var6 = 0;
-        var6 = TetraLink.field_J;
-        if (param1 == -103) {
-          if (-1 != param0) {
-            if (-2 != param0) {
-              if ((param0 ^ -1) != -3) {
-                return;
-              } else {
-                al.a("conduct.ws", (byte) 24);
-                return;
-              }
-            } else {
-              al.a("privacy.ws", (byte) 24);
-              return;
-            }
-          } else {
+        int var6 = TetraLink.field_J;
+        if (param1 != -103) {
+            return;
+        }
+        if (-1 == (param0 ^ -1)) {
             al.a("terms.ws", (byte) 24);
             return;
-          }
-        } else {
-          return;
         }
+        if (-2 == (param0 ^ -1)) {
+            al.a("privacy.ws", (byte) 24);
+            return;
+        }
+        if ((param0 ^ -1) != -3) {
+            return;
+        }
+        al.a("conduct.ws", (byte) 24);
     }
 
     private final boolean a(byte param0, uc param1) {

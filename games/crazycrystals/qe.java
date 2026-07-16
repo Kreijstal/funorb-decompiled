@@ -31,60 +31,104 @@ final class qe extends ln {
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
-        StringBuilder var8 = null;
         int var8_int = 0;
+        StringBuilder var8 = null;
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
-        L0: {
-          var11 = CrazyCrystals.field_B;
-          if (param0 == 36) {
-            break L0;
+        StringBuilder var12 = null;
+        StringBuilder var13 = null;
+        var11 = CrazyCrystals.field_B;
+        if (param0 == 36) {
+          var4 = param2.length();
+          var5 = param3.length();
+          var6 = var4;
+          var7 = -1 + var5;
+          if (0 == var7) {
+            var12 = new StringBuilder(var6);
+            var9 = 0;
+            L0: while (true) {
+              var10 = param2.indexOf((int) param1, var9);
+              if (-1 < (var10 ^ -1)) {
+                StringBuilder discarded$12 = var12.append(param2.substring(var9));
+                return var12.toString();
+              } else {
+                StringBuilder discarded$13 = var12.append(param2.substring(var9, var10));
+                var9 = var10 + 1;
+                StringBuilder discarded$14 = var12.append(param3);
+                continue L0;
+              }
+            }
           } else {
-            qe.a(10);
-            break L0;
-          }
-        }
-        var4 = param2.length();
-        var5 = param3.length();
-        var6 = var4;
-        var7 = -1 + var5;
-        if (0 == var7) {
-          var8 = new StringBuilder(var6);
-          var9 = 0;
-          L1: while (true) {
-            var10 = param2.indexOf((int) param1, var9);
-            if (-1 < (var10 ^ -1)) {
-              StringBuilder discarded$6 = var8.append(param2.substring(var9));
-              return var8.toString();
-            } else {
-              StringBuilder discarded$7 = var8.append(param2.substring(var9, var10));
-              var9 = var10 + 1;
-              StringBuilder discarded$8 = var8.append(param3);
-              continue L1;
+            var8_int = 0;
+            L1: while (true) {
+              var8_int = param2.indexOf((int) param1, var8_int);
+              if (-1 >= (var8_int ^ -1)) {
+                var8_int++;
+                var6 = var6 + var7;
+                continue L1;
+              } else {
+                var13 = new StringBuilder(var6);
+                var8 = var13;
+                var9 = 0;
+                L2: while (true) {
+                  var10 = param2.indexOf((int) param1, var9);
+                  if (-1 < (var10 ^ -1)) {
+                    StringBuilder discarded$15 = var13.append(param2.substring(var9));
+                    return var13.toString();
+                  } else {
+                    StringBuilder discarded$16 = var13.append(param2.substring(var9, var10));
+                    var9 = var10 + 1;
+                    StringBuilder discarded$17 = var13.append(param3);
+                    continue L2;
+                  }
+                }
+              }
             }
           }
         } else {
-          var8_int = 0;
-          L2: while (true) {
-            var8_int = param2.indexOf((int) param1, var8_int);
-            if (-1 >= (var8_int ^ -1)) {
-              var8_int++;
-              var6 = var6 + var7;
-              continue L2;
-            } else {
-              var8 = new StringBuilder(var6);
-              var9 = 0;
-              L3: while (true) {
-                var10 = param2.indexOf((int) param1, var9);
-                if (-1 < (var10 ^ -1)) {
-                  StringBuilder discarded$9 = var8.append(param2.substring(var9));
-                  return var8.toString();
-                } else {
-                  StringBuilder discarded$10 = var8.append(param2.substring(var9, var10));
-                  var9 = var10 + 1;
-                  StringBuilder discarded$11 = var8.append(param3);
-                  continue L3;
+          qe.a(10);
+          var4 = param2.length();
+          var5 = param3.length();
+          var6 = var4;
+          var7 = -1 + var5;
+          if (0 == var7) {
+            var8 = new StringBuilder(var6);
+            var9 = 0;
+            L3: while (true) {
+              var10 = param2.indexOf((int) param1, var9);
+              if (-1 < (var10 ^ -1)) {
+                StringBuilder discarded$18 = var8.append(param2.substring(var9));
+                return var8.toString();
+              } else {
+                StringBuilder discarded$19 = var8.append(param2.substring(var9, var10));
+                var9 = var10 + 1;
+                StringBuilder discarded$20 = var8.append(param3);
+                continue L3;
+              }
+            }
+          } else {
+            var8_int = 0;
+            L4: while (true) {
+              var8_int = param2.indexOf((int) param1, var8_int);
+              if (-1 >= (var8_int ^ -1)) {
+                var8_int++;
+                var6 = var6 + var7;
+                continue L4;
+              } else {
+                var8 = new StringBuilder(var6);
+                var9 = 0;
+                L5: while (true) {
+                  var10 = param2.indexOf((int) param1, var9);
+                  if (-1 < (var10 ^ -1)) {
+                    StringBuilder discarded$21 = var8.append(param2.substring(var9));
+                    return var8.toString();
+                  } else {
+                    StringBuilder discarded$22 = var8.append(param2.substring(var9, var10));
+                    var9 = var10 + 1;
+                    StringBuilder discarded$23 = var8.append(param3);
+                    continue L5;
+                  }
                 }
               }
             }
@@ -180,15 +224,19 @@ final class qe extends ln {
               mc.field_r = param5;
               tb.field_g = param12;
               if (null == gf.field_b.field_s) {
-                var15 = (IOException) (Object) decompiledCaughtException;
-                throw new RuntimeException(var15.toString());
+                return;
               } else {
                 try {
-                  fp.field_e = new qa(gf.field_b.field_s, 64, 0);
-                } catch (java.io.IOException decompiledCaughtParameter) {
-                  decompiledCaughtException = decompiledCaughtParameter;
-                  return;
+                  L2: {
+                    fp.field_e = new qa(gf.field_b.field_s, 64, 0);
+                    break L2;
+                  }
+                } catch (java.io.IOException decompiledCaughtParameter0) {
+                  decompiledCaughtException = decompiledCaughtParameter0;
+                  var15 = (IOException) (Object) decompiledCaughtException;
+                  throw new RuntimeException(var15.toString());
                 }
+                return;
               }
             } else {
               return;

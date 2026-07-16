@@ -740,16 +740,14 @@ final class ru extends lq {
     }
 
     final synchronized boolean a(int param0, int param1, sj param2, rj param3, qm param4) {
-        int[] var7_array = null;
         int var9 = 0;
         jk var10 = null;
-        jk var10_ref = null;
         int var11 = Kickabout.field_G;
         param4.b();
         int var6 = 1;
         Object var7 = null;
         if (param1 > 0) {
-            var7_array = new int[]{param1};
+            var7 = (Object) (Object) new int[]{param1};
         }
         if (param0 != 1) {
             ((ru) this).field_m = null;
@@ -759,15 +757,15 @@ final class ru extends lq {
             var9 = (int)var8.field_a;
             var10 = (jk) (Object) ((ru) this).field_w.a(true, (long)var9);
             if (var10 == null) {
-                var10_ref = jr.a(param2, var9, 116);
-                if (var10_ref == null) {
+                var10 = jr.a(param2, var9, 116);
+                if (var10 == null) {
                     var6 = 0;
                 } else {
-                    ((ru) this).field_w.a((gn) (Object) var10_ref, param0 ^ 124, (long)var9);
+                    ((ru) this).field_w.a((gn) (Object) var10, param0 ^ 124, (long)var9);
                 }
             }
-            if (var10_ref != null) {
-                if (!(var10_ref.a(param3, var7_array, (byte) 123, var8.field_g))) {
+            if (var10 != null) {
+                if (!(var10.a(param3, (int[]) var7, (byte) 123, var8.field_g))) {
                     var6 = 0;
                 }
             }
@@ -791,28 +789,65 @@ final class ru extends lq {
     }
 
     private final void f(int param0, int param1) {
-        int var4 = Kickabout.field_G;
-        if (param1 != 100) {
+        da var3 = null;
+        int var4 = 0;
+        L0: {
+          var4 = Kickabout.field_G;
+          if (param1 == 100) {
+            break L0;
+          } else {
             this.a(15, 115, (byte) 81);
+            break L0;
+          }
         }
-        da var3 = (da) (Object) ((ru) this).field_m.field_j.g(24009);
-        while (var3 != null) {
-            if (param0 >= 0) {
-                // if_icmpeq L63
-            } else {
-                if (!(var3.field_F == null)) {
+        var3 = (da) (Object) ((ru) this).field_m.field_j.g(24009);
+        L1: while (true) {
+          if (var3 == null) {
+            return;
+          } else {
+            L2: {
+              L3: {
+                if (param0 < 0) {
+                  break L3;
+                } else {
+                  if (var3.field_q == param0) {
+                    break L3;
+                  } else {
+                    break L2;
+                  }
+                }
+              }
+              L4: {
+                if (var3.field_F != null) {
+                  L5: {
                     var3.field_F.e(uh.field_i / 100);
-                    if (var3.field_F.n()) {
-                        ((ru) this).field_m.field_i.a((lq) (Object) var3.field_F);
+                    if (!var3.field_F.n()) {
+                      break L5;
+                    } else {
+                      ((ru) this).field_m.field_i.a((lq) (Object) var3.field_F);
+                      break L5;
                     }
-                    var3.a(true);
+                  }
+                  var3.a(true);
+                  break L4;
+                } else {
+                  break L4;
                 }
-                if (0 > var3.field_s) {
-                    ((ru) this).field_O[var3.field_q][var3.field_e] = null;
+              }
+              L6: {
+                if (0 <= var3.field_s) {
+                  break L6;
+                } else {
+                  ((ru) this).field_O[var3.field_q][var3.field_e] = null;
+                  break L6;
                 }
-                var3.c((byte) -109);
+              }
+              var3.c((byte) -109);
+              break L2;
             }
             var3 = (da) (Object) ((ru) this).field_m.field_j.c(33);
+            continue L1;
+          }
         }
     }
 
@@ -1123,21 +1158,45 @@ final class ru extends lq {
     }
 
     private final void g(int param0, int param1) {
-        int var4 = Kickabout.field_G;
-        da var3 = (da) (Object) ((ru) this).field_m.field_j.g(24009);
-        while (var3 != null) {
-            if (0 <= param1) {
-                // if_icmpeq L49
-            } else {
-                if (0 > var3.field_s) {
-                    ((ru) this).field_O[var3.field_q][var3.field_e] = null;
-                    var3.field_s = 0;
+        da var3 = null;
+        int var4 = 0;
+        var4 = Kickabout.field_G;
+        var3 = (da) (Object) ((ru) this).field_m.field_j.g(24009);
+        L0: while (true) {
+          if (var3 == null) {
+            L1: {
+              if (param0 <= -8) {
+                break L1;
+              } else {
+                this.d(4, -110);
+                break L1;
+              }
+            }
+            return;
+          } else {
+            L2: {
+              L3: {
+                if (0 > param1) {
+                  break L3;
+                } else {
+                  if ((param1 ^ -1) == (var3.field_q ^ -1)) {
+                    break L3;
+                  } else {
+                    break L2;
+                  }
                 }
+              }
+              if (0 <= var3.field_s) {
+                break L2;
+              } else {
+                ((ru) this).field_O[var3.field_q][var3.field_e] = null;
+                var3.field_s = 0;
+                break L2;
+              }
             }
             var3 = (da) (Object) ((ru) this).field_m.field_j.c(33);
-        }
-        if (param0 > -8) {
-            this.d(4, -110);
+            continue L0;
+          }
         }
     }
 
@@ -1242,7 +1301,6 @@ final class ru extends lq {
 
     final static void a(boolean param0, byte param1) {
         Object var2 = null;
-        ut var2_ref = null;
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
@@ -1314,11 +1372,11 @@ final class ru extends lq {
                 if (-3 > (rm.field_C ^ -1)) {
                   if (-4 == (rm.field_C ^ -1)) {
                     if (!param0) {
-                      var2_ref = kc.field_g[0];
+                      var2 = (Object) (Object) kc.field_g[0];
                       var4 = var4 - (hw.field_i * 58 >> 1762924200);
                       break L1;
                     } else {
-                      var2_ref = kc.field_g[1];
+                      var2 = (Object) (Object) kc.field_g[1];
                       var4 = var4 - (hw.field_i * 97 >> 1610917896);
                       break L1;
                     }
@@ -1327,7 +1385,7 @@ final class ru extends lq {
                   }
                 } else {
                   var4 = var4 - (55 * hw.field_i >> -1638033688);
-                  var2_ref = kc.field_g[2];
+                  var2 = (Object) (Object) kc.field_g[2];
                   if (param0) {
                     break L1;
                   } else {
@@ -1337,7 +1395,7 @@ final class ru extends lq {
                 }
               } else {
                 var4 = var4 - (hw.field_i * 62 >> -1443509912);
-                var2_ref = kc.field_g[3];
+                var2 = (Object) (Object) kc.field_g[3];
                 if (!param0) {
                   var4 = var4 - (5 * hw.field_i >> 1086683848);
                   break L1;
@@ -1367,7 +1425,7 @@ final class ru extends lq {
                     }
                   }
                   var4 = stackIn_12_0 - (stackIn_12_1 * hw.field_i >> 291121768);
-                  var2_ref = kc.field_g[6];
+                  var2 = (Object) (Object) kc.field_g[6];
                   break L2;
                 } else {
                   break L2;
@@ -1376,7 +1434,7 @@ final class ru extends lq {
               L4: {
                 if (ih.field_c == 1) {
                   L5: {
-                    var2_ref = kc.field_g[5];
+                    var2 = (Object) (Object) kc.field_g[5];
                     stackOut_15_0 = var4;
                     stackOut_15_1 = hw.field_i;
                     stackIn_17_0 = stackOut_15_0;
@@ -1409,7 +1467,7 @@ final class ru extends lq {
               }
               if (ih.field_c == 2) {
                 L6: {
-                  var2_ref = kc.field_g[4];
+                  var2 = (Object) (Object) kc.field_g[4];
                   stackOut_21_0 = var4;
                   stackIn_23_0 = stackOut_21_0;
                   stackIn_22_0 = stackOut_21_0;
@@ -1488,7 +1546,7 @@ final class ru extends lq {
             }
           }
           L12: {
-            im.a(-12376, var3, var4, var2_ref);
+            im.a(-12376, var3, var4, (ut) var2);
             if (param1 == -114) {
               break L12;
             } else {

@@ -13,18 +13,24 @@ final class ef extends lk {
         Throwable decompiledCaughtException = null;
         try {
           L0: {
-            if (param0 == 11) {
-              break L0;
-            } else {
-              ef.a(true);
-              break L0;
+            L1: {
+              if (param0 == 11) {
+                break L1;
+              } else {
+                ef.a(true);
+                break L1;
+              }
             }
+            Thread.sleep(param1);
+            break L0;
           }
-          Thread.sleep(param1);
-        } catch (java.lang.Exception decompiledCaughtParameter) {
-          decompiledCaughtException = decompiledCaughtParameter;
+        } catch (java.lang.Exception decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            var3 = (InterruptedException) (Object) decompiledCaughtException;
+            break L2;
+          }
         }
-        var3 = (InterruptedException) (Object) decompiledCaughtException;
     }
 
     final cg a(byte param0, String param1) {

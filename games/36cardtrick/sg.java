@@ -26,7 +26,7 @@ final class sg {
         field_g = null;
         field_f = null;
         if (param0 != 511) {
-          field_g = (int[]) null;
+          field_g = null;
           field_d = null;
           field_c = null;
           field_e = null;

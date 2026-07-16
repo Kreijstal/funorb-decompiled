@@ -33,20 +33,20 @@ final class ll {
           var3 = -param2.field_db + param0.field_db;
           if (nh.field_z != param0.field_cb) {
             if (null == param0.field_cb) {
-              // wide iinc 3 200
+              var3 += 200;
               break L1;
             } else {
               break L1;
             }
           } else {
-            // wide iinc 3 -200
+            var3 -= 200;
             break L1;
           }
         }
         if (nh.field_z != param2.field_cb) {
           if (null == param2.field_cb) {
             L2: {
-              // wide iinc 3 -200
+              var3 -= 200;
               if ((var3 ^ -1) >= -1) {
                 stackOut_19_0 = 0;
                 stackIn_20_0 = stackOut_19_0;
@@ -74,7 +74,7 @@ final class ll {
           }
         } else {
           L4: {
-            // wide iinc 3 200
+            var3 += 200;
             if ((var3 ^ -1) >= -1) {
               stackOut_10_0 = 0;
               stackIn_11_0 = stackOut_10_0;

@@ -34,25 +34,71 @@ final class al extends mi implements bo, wi {
 
     final static void a(String param0, int param1, String[] param2, int param3) {
         String[] var4 = null;
-        int var5 = Virogrid.field_F ? 1 : 0;
-        cb.field_c = rg.field_d;
-        if (param3 != 100) {
-            Object var6 = null;
+        int var5 = 0;
+        Object var6 = null;
+        Object var7 = null;
+        int stackIn_4_0 = 0;
+        int stackIn_5_0 = 0;
+        int stackIn_6_0 = 0;
+        int stackIn_6_1 = 0;
+        int stackOut_3_0 = 0;
+        int stackOut_5_0 = 0;
+        int stackOut_5_1 = 0;
+        int stackOut_4_0 = 0;
+        int stackOut_4_1 = 0;
+        L0: {
+          var5 = Virogrid.field_F ? 1 : 0;
+          cb.field_c = rg.field_d;
+          if (param3 == 100) {
+            break L0;
+          } else {
+            var6 = null;
             al.a((String) null, -66, 0.017817853018641472f);
+            break L0;
+          }
         }
-        if (-256 == (param1 ^ -1)) {
-            de.field_ob = Virogrid.b((byte) -32, 13 > nf.field_d ? true : false);
-            Object var7 = null;
-            nl.a(-22063, (String[]) null);
-        } else {
-            if (param1 >= 100) {
-                // if_icmplt L116
-                var4 = param2;
-                nl.a(-22063, var4);
-                de.field_ob = md.a(param2, 7655);
-            } else {
-                de.field_ob = lc.a(param1, param0, param3 ^ 29521);
+        L1: {
+          if (-256 != (param1 ^ -1)) {
+            L2: {
+              if (param1 < 100) {
+                break L2;
+              } else {
+                if (105 < param1) {
+                  break L2;
+                } else {
+                  var4 = param2;
+                  nl.a(-22063, var4);
+                  de.field_ob = md.a(param2, 7655);
+                  break L1;
+                }
+              }
             }
+            de.field_ob = lc.a(param1, param0, param3 ^ 29521);
+            break L1;
+          } else {
+            L3: {
+              stackOut_3_0 = -32;
+              stackIn_5_0 = stackOut_3_0;
+              stackIn_4_0 = stackOut_3_0;
+              if (13 <= nf.field_d) {
+                stackOut_5_0 = stackIn_5_0;
+                stackOut_5_1 = 0;
+                stackIn_6_0 = stackOut_5_0;
+                stackIn_6_1 = stackOut_5_1;
+                break L3;
+              } else {
+                stackOut_4_0 = stackIn_4_0;
+                stackOut_4_1 = 1;
+                stackIn_6_0 = stackOut_4_0;
+                stackIn_6_1 = stackOut_4_1;
+                break L3;
+              }
+            }
+            de.field_ob = Virogrid.b((byte) stackIn_6_0, stackIn_6_1 != 0);
+            var7 = null;
+            nl.a(-22063, (String[]) null);
+            break L1;
+          }
         }
     }
 
@@ -65,149 +111,50 @@ final class al extends mi implements bo, wi {
         wl stackIn_2_0 = null;
         wl stackIn_5_0 = null;
         wl stackIn_9_0 = null;
-        wl stackOut_1_0 = null;
-        wl stackOut_4_0 = null;
+        Throwable decompiledCaughtException = null;
         wl stackOut_8_0 = null;
-        int statePc = 0;
-        Throwable caughtException = null;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    try {
-                        var2_int = ((al) this).field_h.f(-2);
-                        var3 = ((al) this).field_h.g(param0 ^ 843083348);
-                        var4 = ((al) this).field_h.g(true);
-                        var5 = hn.c(false);
-                        if (var4 >= 1890) {
-                            statePc = 3;
-                        } else {
-                            statePc = 1;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_0) {
-                        caughtException = stateCaught_0;
-                        statePc = 13;
-                        continue stateLoop;
+        wl stackOut_4_0 = null;
+        wl stackOut_1_0 = null;
+        try {
+          L0: {
+            var2_int = ((al) this).field_h.f(-2);
+            var3 = ((al) this).field_h.g(param0 ^ 843083348);
+            var4 = ((al) this).field_h.g(true);
+            var5 = hn.c(false);
+            if (var4 >= 1890) {
+              if (-3 + var5 >= var4) {
+                if (!th.a((byte) 127, var4, var2_int, var3)) {
+                  stackOut_8_0 = ee.field_c;
+                  stackIn_9_0 = stackOut_8_0;
+                  return stackIn_9_0;
+                } else {
+                  L1: {
+                    if (param0 == -843083384) {
+                      break L1;
+                    } else {
+                      field_i = null;
+                      break L1;
                     }
+                  }
+                  break L0;
                 }
-                case 1: {
-                    try {
-                        stackOut_1_0 = ee.field_c;
-                        stackIn_2_0 = stackOut_1_0;
-                        statePc = 2;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_1) {
-                        caughtException = stateCaught_1;
-                        statePc = 13;
-                        continue stateLoop;
-                    }
-                }
-                case 2: {
-                    return stackIn_2_0;
-                }
-                case 3: {
-                    try {
-                        if (-3 + var5 >= var4) {
-                            statePc = 6;
-                        } else {
-                            statePc = 4;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_3) {
-                        caughtException = stateCaught_3;
-                        statePc = 13;
-                        continue stateLoop;
-                    }
-                }
-                case 4: {
-                    try {
-                        stackOut_4_0 = ee.field_c;
-                        stackIn_5_0 = stackOut_4_0;
-                        statePc = 5;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_4) {
-                        caughtException = stateCaught_4;
-                        statePc = 13;
-                        continue stateLoop;
-                    }
-                }
-                case 5: {
-                    return stackIn_5_0;
-                }
-                case 6: {
-                    try {
-                        if (!th.a((byte) 127, var4, var2_int, var3)) {
-                            statePc = 8;
-                        } else {
-                            statePc = 7;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_6) {
-                        caughtException = stateCaught_6;
-                        statePc = 13;
-                        continue stateLoop;
-                    }
-                }
-                case 7: {
-                    try {
-                        statePc = 10;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_7) {
-                        caughtException = stateCaught_7;
-                        statePc = 13;
-                        continue stateLoop;
-                    }
-                }
-                case 8: {
-                    try {
-                        stackOut_8_0 = ee.field_c;
-                        stackIn_9_0 = stackOut_8_0;
-                        statePc = 9;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_8) {
-                        caughtException = stateCaught_8;
-                        statePc = 13;
-                        continue stateLoop;
-                    }
-                }
-                case 9: {
-                    return stackIn_9_0;
-                }
-                case 10: {
-                    try {
-                        if (param0 == -843083384) {
-                            statePc = 14;
-                        } else {
-                            statePc = 11;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_10) {
-                        caughtException = stateCaught_10;
-                        statePc = 13;
-                        continue stateLoop;
-                    }
-                }
-                case 11: {
-                    try {
-                        field_i = null;
-                        statePc = 14;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_11) {
-                        caughtException = stateCaught_11;
-                        statePc = 13;
-                        continue stateLoop;
-                    }
-                }
-                case 13: {
-                    var2 = (NumberFormatException) (Object) caughtException;
-                    return ee.field_c;
-                }
-                case 14: {
-                    return bm.field_i;
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
+              } else {
+                stackOut_4_0 = ee.field_c;
+                stackIn_5_0 = stackOut_4_0;
+                return stackIn_5_0;
+              }
+            } else {
+              stackOut_1_0 = ee.field_c;
+              stackIn_2_0 = stackOut_1_0;
+              return stackIn_2_0;
             }
+          }
+        } catch (java.lang.Exception decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2 = (NumberFormatException) (Object) decompiledCaughtException;
+          return ee.field_c;
         }
+        return bm.field_i;
     }
 
     final static void a(byte[] param0, int[] param1, int param2, int param3, int param4) {
@@ -219,12 +166,14 @@ final class al extends mi implements bo, wi {
             param2 = da.field_g[var5];
             var7 = var5 << -70172348;
             while (true) {
+                int incrementValue$0 = param2;
                 param2--;
-                if (param2 == 0) {
+                if (incrementValue$0 == 0) {
                     break;
                 }
+                int incrementValue$1 = var7;
                 var7++;
-                param3 = bf.field_m[var7];
+                param3 = bf.field_m[incrementValue$1];
                 param1[param0[param3]] = param1[param0[param3]] + 1;
                 bf.field_m[param1[param0[param3]]] = param3;
             }
@@ -273,19 +222,26 @@ final class al extends mi implements bo, wi {
                 L4: {
                   if (0 < gk.field_g.field_l) {
                     try {
-                      oj.field_Ub.a(gk.field_g.field_g, param0 + 1, 0, gk.field_g.field_l);
-                      ud.field_a = hc.a(-9986);
-                    } catch (java.io.IOException decompiledCaughtParameter) {
-                      decompiledCaughtException = decompiledCaughtParameter;
+                      L5: {
+                        oj.field_Ub.a(gk.field_g.field_g, param0 + 1, 0, gk.field_g.field_l);
+                        ud.field_a = hc.a(-9986);
+                        break L5;
+                      }
+                    } catch (java.io.IOException decompiledCaughtParameter0) {
+                      decompiledCaughtException = decompiledCaughtParameter0;
+                      L6: {
+                        iOException = (IOException) (Object) decompiledCaughtException;
+                        tn.a(false);
+                        break L6;
+                      }
                     }
-                    iOException = (IOException) (Object) decompiledCaughtException;
-                    tn.a(false);
+                    gk.field_g.field_l = 0;
                     break L4;
                   } else {
                     break L4;
                   }
                 }
-                gk.field_g.field_l = 0;
+                return;
               }
             }
             gk.field_g.field_l = 0;
@@ -343,115 +299,49 @@ final class al extends mi implements bo, wi {
         int var4 = 0;
         int var5 = 0;
         String stackIn_4_0 = null;
+        Throwable decompiledCaughtException = null;
         String stackOut_3_0 = null;
-        int statePc = 0;
-        Throwable caughtException = null;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    try {
-                        var2_int = ((al) this).field_h.f(-2);
-                        var3 = ((al) this).field_h.g(-39);
-                        var4 = ((al) this).field_h.g(true);
-                        var5 = hn.c(false);
-                        if ((var4 ^ -1) > -1891) {
-                            statePc = 3;
-                        } else {
-                            statePc = 1;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_0) {
-                        caughtException = stateCaught_0;
-                        statePc = 8;
-                        continue stateLoop;
-                    }
+        try {
+          L0: {
+            L1: {
+              var2_int = ((al) this).field_h.f(-2);
+              var3 = ((al) this).field_h.g(-39);
+              var4 = ((al) this).field_h.g(true);
+              var5 = hn.c(false);
+              if ((var4 ^ -1) > -1891) {
+                break L1;
+              } else {
+                if (var4 <= -3 + var5) {
+                  if (!th.a((byte) -41, var4, var2_int, var3)) {
+                    break L0;
+                  } else {
+                    return null;
+                  }
+                } else {
+                  break L1;
                 }
-                case 1: {
-                    try {
-                        if (var4 <= -3 + var5) {
-                            statePc = 5;
-                        } else {
-                            statePc = 2;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_1) {
-                        caughtException = stateCaught_1;
-                        statePc = 8;
-                        continue stateLoop;
-                    }
-                }
-                case 2: {
-                    try {
-                        statePc = 3;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_2) {
-                        caughtException = stateCaught_2;
-                        statePc = 8;
-                        continue stateLoop;
-                    }
-                }
-                case 3: {
-                    try {
-                        stackOut_3_0 = oi.a(new String[2], re.field_p, 2);
-                        stackIn_4_0 = stackOut_3_0;
-                        statePc = 4;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_3) {
-                        caughtException = stateCaught_3;
-                        statePc = 8;
-                        continue stateLoop;
-                    }
-                }
-                case 4: {
-                    return stackIn_4_0;
-                }
-                case 5: {
-                    try {
-                        if (!th.a((byte) -41, var4, var2_int, var3)) {
-                            statePc = 9;
-                        } else {
-                            statePc = 6;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_5) {
-                        caughtException = stateCaught_5;
-                        statePc = 8;
-                        continue stateLoop;
-                    }
-                }
-                case 6: {
-                    try {
-                        return null;
-                    } catch (Throwable stateCaught_6) {
-                        caughtException = stateCaught_6;
-                        statePc = 8;
-                        continue stateLoop;
-                    }
-                }
-                case 8: {
-                    var2 = (NumberFormatException) (Object) caughtException;
-                    statePc = 9;
-                    continue stateLoop;
-                }
-                case 9: {
-                    if (param0 < -86) {
-                        statePc = 11;
-                    } else {
-                        statePc = 10;
-                    }
-                    continue stateLoop;
-                }
-                case 10: {
-                    field_g = null;
-                    statePc = 11;
-                    continue stateLoop;
-                }
-                case 11: {
-                    return gf.field_C;
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
+              }
             }
+            stackOut_3_0 = oi.a(new String[2], re.field_p, 2);
+            stackIn_4_0 = stackOut_3_0;
+            return stackIn_4_0;
+          }
+        } catch (java.lang.Exception decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            var2 = (NumberFormatException) (Object) decompiledCaughtException;
+            break L2;
+          }
         }
+        L3: {
+          if (param0 < -86) {
+            break L3;
+          } else {
+            field_g = null;
+            break L3;
+          }
+        }
+        return gf.field_C;
     }
 
     final static void a(String param0, int param1, float param2) {

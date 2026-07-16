@@ -309,7 +309,7 @@ abstract class ea extends pn {
                     }
                   }
                 }
-                var5_ref = (sl) (Object) var6.field_l;
+                var5 = var6.field_l;
                 continue L0;
               }
             } else {
@@ -335,7 +335,7 @@ abstract class ea extends pn {
                   }
                 }
               }
-              var5_ref = (sl) (Object) var6.field_l;
+              var5 = var6.field_l;
               continue L2;
             }
           }
@@ -360,7 +360,7 @@ abstract class ea extends pn {
                     }
                   }
                 }
-                var5_ref = (sl) (Object) var6.field_l;
+                var5 = var6.field_l;
                 continue L4;
               }
             } else {
@@ -386,7 +386,7 @@ abstract class ea extends pn {
                   }
                 }
               }
-              var5_ref = (sl) (Object) var6.field_l;
+              var5 = var6.field_l;
               continue L6;
             }
           }
@@ -403,10 +403,7 @@ abstract class ea extends pn {
 
     f b(f[][] param0, int param1, byte param2, int param3) {
         int var5 = 0;
-        f var6 = null;
-        f var6_ref = null;
-        Object var6_ref2 = null;
-        pn var6_ref3 = null;
+        Object var6 = null;
         sl var7 = null;
         int var8 = 0;
         int var9 = 0;
@@ -417,17 +414,17 @@ abstract class ea extends pn {
         var12 = CrazyCrystals.field_B;
         var5 = -13 / ((-43 - param2) / 51);
         if (0 == (((ea) this).field_s | ((ea) this).field_o)) {
-          var6_ref2 = this;
+          var6 = this;
           L0: while (true) {
-            if (!(((pn) var6_ref2).field_l instanceof cb)) {
-              if (((pn) var6_ref2).field_l instanceof pn) {
-                var6_ref3 = (pn) (Object) ((pn) var6_ref2).field_l;
+            if (!(((pn) var6).field_l instanceof cb)) {
+              if (((pn) var6).field_l instanceof pn) {
+                var6 = (Object) (Object) (pn) (Object) ((pn) var6).field_l;
                 continue L0;
               } else {
                 return ((ea) this).e(param1, param3, param0, 122);
               }
             } else {
-              var13 = (cb) (Object) ((pn) var6_ref2).field_l;
+              var13 = (cb) (Object) ((pn) var6).field_l;
               if (-1 != ((var13.field_u | var13.field_v) ^ -1)) {
                 var8 = param3 - -var13.field_v;
                 var9 = var13.field_u + param1;
@@ -458,13 +455,13 @@ abstract class ea extends pn {
                               L2: {
                                 var13.field_o = var13.field_o - 1;
                                 if (var13.field_o == 0) {
-                                  ((pn) var6_ref2).field_l = var13.field_l;
+                                  ((pn) var6).field_l = var13.field_l;
                                   break L2;
                                 } else {
                                   break L2;
                                 }
                               }
-                              ((pn) var6_ref2).field_l.a((byte) 94, (f) this);
+                              ((pn) var6).field_l.a((byte) 94, (f) this);
                               break L1;
                             }
                           }
@@ -505,13 +502,13 @@ abstract class ea extends pn {
         } else {
           ((ea) this).field_m = ((ea) this).field_m + 1;
           if (((ea) this).field_m != ((ea) this).field_p) {
-            var6_ref = param0[((ea) this).field_s + param1][((ea) this).field_o + param3];
+            var6 = (Object) (Object) param0[((ea) this).field_s + param1][((ea) this).field_o + param3];
             L4: while (true) {
-              if (var6_ref instanceof ma) {
+              if (var6 instanceof ma) {
                 return ((ea) this).a(param0, (f) this, ((ea) this).field_s + param1, param3 - -((ea) this).field_o, true);
               } else {
-                if (var6_ref instanceof pn) {
-                  var6 = ((pn) (Object) var6_ref).field_l;
+                if (var6 instanceof pn) {
+                  var6 = (Object) (Object) ((pn) var6).field_l;
                   continue L4;
                 } else {
                   return (f) this;
@@ -520,7 +517,7 @@ abstract class ea extends pn {
             }
           } else {
             ((ea) this).b(param3, param1, -663, param0);
-            var6 = ((ea) this).field_l;
+            var6 = (Object) (Object) ((ea) this).field_l;
             var7 = ((ea) this).a(param3, param0, param1, (byte) -88);
             ((ea) this).field_l = param0[((ea) this).field_s + param1][((ea) this).field_o + param3];
             param0[((ea) this).field_s + param1][((ea) this).field_o + param3] = ((ea) this).a(var7, param0, ((ea) this).field_o, param1 + ((ea) this).field_s, 17512, ((ea) this).field_s, param3 - -((ea) this).field_o);
@@ -535,7 +532,7 @@ abstract class ea extends pn {
             fp.field_a = fp.field_a + 30;
             we.field_h = we.field_h + 30;
             b.field_a = b.field_a + 15;
-            return var6;
+            return (f) var6;
           }
         }
     }
@@ -609,7 +606,6 @@ abstract class ea extends pn {
 
     void a(f[][] param0, int param1, int param2, boolean param3) {
         f var5 = null;
-        f var5_ref = null;
         int var6 = 0;
         var6 = CrazyCrystals.field_B;
         if (!param3) {
@@ -643,7 +639,7 @@ abstract class ea extends pn {
                         if (!(var5 instanceof pn)) {
                           return;
                         } else {
-                          var5_ref = ((pn) (Object) var5).field_l;
+                          var5 = ((pn) (Object) var5).field_l;
                           continue L1;
                         }
                       }
@@ -666,7 +662,7 @@ abstract class ea extends pn {
                 }
               } else {
                 if (var5 instanceof pn) {
-                  var5_ref = ((pn) (Object) var5_ref).field_l;
+                  var5 = ((pn) (Object) var5).field_l;
                   continue L0;
                 } else {
                   ((ea) this).f(1, param2, param0, param1);
@@ -694,7 +690,7 @@ abstract class ea extends pn {
                         if (!(var5 instanceof pn)) {
                           return;
                         } else {
-                          var5_ref = ((pn) (Object) var5).field_l;
+                          var5 = ((pn) (Object) var5).field_l;
                           continue L2;
                         }
                       }
@@ -922,7 +918,6 @@ abstract class ea extends pn {
 
     final sl d(int param0, int param1, f[][] param2, int param3) {
         f var5 = null;
-        f var5_ref = null;
         int var6 = 0;
         var6 = CrazyCrystals.field_B;
         if (param3 > 58) {
@@ -939,7 +934,7 @@ abstract class ea extends pn {
                 }
               }
             }
-            var5_ref = ((pn) (Object) var5).field_l;
+            var5 = ((pn) (Object) var5).field_l;
             continue L0;
           }
         } else {
@@ -957,7 +952,7 @@ abstract class ea extends pn {
                 }
               }
             }
-            var5_ref = ((pn) (Object) var5).field_l;
+            var5 = ((pn) (Object) var5).field_l;
             continue L2;
           }
         }

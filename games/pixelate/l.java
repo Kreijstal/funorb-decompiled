@@ -165,11 +165,16 @@ final class l extends de {
             }
             if (null != op.field_p.field_e) {
               try {
-                vi.field_p = new uo(op.field_p.field_e, 64, 0);
-              } catch (java.io.IOException decompiledCaughtParameter) {
-                decompiledCaughtException = decompiledCaughtParameter;
-                return;
+                L3: {
+                  vi.field_p = new uo(op.field_p.field_e, 64, 0);
+                  break L3;
+                }
+              } catch (java.io.IOException decompiledCaughtParameter0) {
+                decompiledCaughtException = decompiledCaughtParameter0;
+                var15 = (IOException) (Object) decompiledCaughtException;
+                throw new RuntimeException(var15.toString());
               }
+              return;
             } else {
               return;
             }
@@ -181,52 +186,28 @@ final class l extends de {
     }
 
     final static void b(boolean param0) {
-        if (qo.field_o == qa.field_f.field_i) {
-          L0: {
-            if (-1 < oh.field_b) {
-              oh.field_b = oh.field_b - 1;
-              break L0;
-            } else {
-              break L0;
-            }
-          }
-          if (!param0) {
-            return;
-          } else {
-            L1: {
-              if ((oh.field_b ^ -1) < -1) {
-                r.b(-96);
-                break L1;
-              } else {
-                break L1;
-              }
-            }
-            return;
-          }
-        } else {
-          L2: {
+        if (qo.field_o != qa.field_f.field_i) {
             wa.field_i = wa.field_i + (qa.field_f.field_i + -qo.field_o);
             qo.field_o = qa.field_f.field_i;
-            if (-1 > (oh.field_b ^ -1)) {
-              oh.field_b = oh.field_b - 1;
-              break L2;
-            } else {
-              break L2;
+            if (!(-1 <= (oh.field_b ^ -1))) {
+                oh.field_b = oh.field_b - 1;
             }
-          }
-          if (!param0) {
-            return;
-          } else {
-            L3: {
-              if (oh.field_b < -1) {
+            if (!param0) {
+                return;
+            }
+            if (!((oh.field_b ^ -1) >= -1)) {
                 r.b(-96);
-                break L3;
-              } else {
-                break L3;
-              }
             }
             return;
-          }
+        }
+        if (!(-1 <= (oh.field_b ^ -1))) {
+            oh.field_b = oh.field_b - 1;
+        }
+        if (!param0) {
+            return;
+        }
+        if (!((oh.field_b ^ -1) >= -1)) {
+            r.b(-96);
         }
     }
 

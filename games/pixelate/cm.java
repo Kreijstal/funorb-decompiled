@@ -148,71 +148,31 @@ final class cm extends fa {
         Object var1 = null;
         Throwable var2 = null;
         Object var3 = null;
-        int statePc = 0;
-        Throwable caughtException = null;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    if (param0 < -84) {
-                        statePc = 2;
-                    } else {
-                        statePc = 1;
-                    }
-                    continue stateLoop;
-                }
-                case 1: {
-                    var3 = null;
-                    cm.a(-64, true, 36L, (String) null, -110, -88);
-                    statePc = 2;
-                    continue stateLoop;
-                }
-                case 2: {
-                    var1 = (Object) (Object) fj.field_c;
-                    // monitorenter fj.field_c
-                    statePc = 3;
-                    continue stateLoop;
-                }
-                case 3: {
-                    try {
-                        oi.field_c = oi.field_c + 1;
-                        ef.field_b = jm.field_o;
-                        uf.field_d = u.field_b;
-                        bg.field_k = ra.field_d;
-                        im.field_Jb = u.field_j;
-                        u.field_j = false;
-                        nm.field_c = tl.field_a;
-                        uo.field_a = c.field_X;
-                        ji.field_c = fa.field_j;
-                        tl.field_a = 0;
-                        // monitorexit var1
-                        statePc = 7;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_3) {
-                        caughtException = stateCaught_3;
-                        statePc = 5;
-                        continue stateLoop;
-                    }
-                }
-                case 5: {
-                    try {
-                        var2 = caughtException;
-                        // monitorexit var1
-                        statePc = 6;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_5) {
-                        caughtException = stateCaught_5;
-                        statePc = 5;
-                        continue stateLoop;
-                    }
-                }
-                case 6: {
-                    throw (RuntimeException) (Object) var2;
-                }
-                case 7: {
-                    return;
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
-            }
+        Throwable decompiledCaughtException = null;
+        L0: {
+          if (param0 < -84) {
+            break L0;
+          } else {
+            var3 = null;
+            cm.a(-64, true, 36L, (String) null, -110, -88);
+            break L0;
+          }
+        }
+        var1 = (Object) (Object) fj.field_c;
+        synchronized (var1) {
+          L1: {
+            oi.field_c = oi.field_c + 1;
+            ef.field_b = jm.field_o;
+            uf.field_d = u.field_b;
+            bg.field_k = ra.field_d;
+            im.field_Jb = u.field_j;
+            u.field_j = false;
+            nm.field_c = tl.field_a;
+            uo.field_a = c.field_X;
+            ji.field_c = fa.field_j;
+            tl.field_a = 0;
+            break L1;
+          }
         }
     }
 

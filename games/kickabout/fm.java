@@ -53,7 +53,6 @@ final class fm extends qt {
         int var10 = 0;
         int var11 = 0;
         String var12 = null;
-        String var12_ref = null;
         int var13 = 0;
         int var14 = 0;
         int var15 = 0;
@@ -150,7 +149,7 @@ final class fm extends qt {
                               if (var6 != 0) {
                                 break L6;
                               } else {
-                                var12_ref = field_A;
+                                var12 = field_A;
                                 break L6;
                               }
                             }
@@ -167,7 +166,7 @@ final class fm extends qt {
                               L8: {
                                 var11 += 9;
                                 var14 = 16;
-                                if (3 >= var18.b(var12_ref, var9)) {
+                                if (3 >= var18.b(var12, var9)) {
                                   break L8;
                                 } else {
                                   var11 -= 4;
@@ -175,7 +174,7 @@ final class fm extends qt {
                                   break L8;
                                 }
                               }
-                              int discarded$9 = var18.a(var12_ref, var7, var11, var9, 200, 16777215, -1, 0, 0, var14);
+                              int discarded$9 = var18.a(var12, var7, var11, var9, 200, 16777215, -1, 0, 0, var14);
                               return;
                             } else {
                               var15 = 5 * var14 + (var13 + (var7 - 2));
@@ -199,7 +198,7 @@ final class fm extends qt {
                           if (var6 != 0) {
                             break L9;
                           } else {
-                            var12_ref = field_A;
+                            var12 = field_A;
                             break L9;
                           }
                         }
@@ -216,7 +215,7 @@ final class fm extends qt {
                           L11: {
                             var11 += 9;
                             var14 = 16;
-                            if (3 >= var18.b(var12_ref, var9)) {
+                            if (3 >= var18.b(var12, var9)) {
                               break L11;
                             } else {
                               var11 -= 4;
@@ -224,7 +223,7 @@ final class fm extends qt {
                               break L11;
                             }
                           }
-                          int discarded$10 = var18.a(var12_ref, var7, var11, var9, 200, 16777215, -1, 0, 0, var14);
+                          int discarded$10 = var18.a(var12, var7, var11, var9, 200, 16777215, -1, 0, 0, var14);
                           return;
                         } else {
                           var15 = 5 * var14 + (var13 + (var7 - 2));
@@ -241,7 +240,7 @@ final class fm extends qt {
                         if (!th.field_a[var5]) {
                           break L12;
                         } else {
-                          var12_ref = field_A;
+                          var12 = field_A;
                           break L12;
                         }
                       }
@@ -257,7 +256,7 @@ final class fm extends qt {
                           L14: {
                             var11 += 9;
                             var14 = 16;
-                            if (3 >= var18.b(var12_ref, var9)) {
+                            if (3 >= var18.b(var12, var9)) {
                               break L14;
                             } else {
                               var11 -= 4;
@@ -265,7 +264,7 @@ final class fm extends qt {
                               break L14;
                             }
                           }
-                          int discarded$11 = var18.a(var12_ref, var7, var11, var9, 200, 16777215, -1, 0, 0, var14);
+                          int discarded$11 = var18.a(var12, var7, var11, var9, 200, 16777215, -1, 0, 0, var14);
                           return;
                         } else {
                           var15 = 5 * var14 + (var13 + (var7 - 2));
@@ -291,7 +290,7 @@ final class fm extends qt {
                   if (!th.field_a[var5]) {
                     break L15;
                   } else {
-                    var12_ref = field_A;
+                    var12 = field_A;
                     break L15;
                   }
                 }
@@ -307,7 +306,7 @@ final class fm extends qt {
                     L17: {
                       var11 += 9;
                       var14 = 16;
-                      if (3 >= var18.b(var12_ref, var9)) {
+                      if (3 >= var18.b(var12, var9)) {
                         break L17;
                       } else {
                         var11 -= 4;
@@ -315,7 +314,7 @@ final class fm extends qt {
                         break L17;
                       }
                     }
-                    int discarded$12 = var18.a(var12_ref, var7, var11, var9, 200, 16777215, -1, 0, 0, var14);
+                    int discarded$12 = var18.a(var12, var7, var11, var9, 200, 16777215, -1, 0, 0, var14);
                     return;
                   } else {
                     var15 = 5 * var14 + (var13 + (var7 - 2));
@@ -333,7 +332,7 @@ final class fm extends qt {
                     if (var6 != 0) {
                       break L18;
                     } else {
-                      var12_ref = field_A;
+                      var12 = field_A;
                       break L18;
                     }
                   }
@@ -350,7 +349,7 @@ final class fm extends qt {
                     L20: {
                       var11 += 9;
                       var14 = 16;
-                      if (3 >= var18.b(var12_ref, var9)) {
+                      if (3 >= var18.b(var12, var9)) {
                         break L20;
                       } else {
                         var11 -= 4;
@@ -358,7 +357,7 @@ final class fm extends qt {
                         break L20;
                       }
                     }
-                    int discarded$13 = var18.a(var12_ref, var7, var11, var9, 200, 16777215, -1, 0, 0, var14);
+                    int discarded$13 = var18.a(var12, var7, var11, var9, 200, 16777215, -1, 0, 0, var14);
                     return;
                   } else {
                     var15 = 5 * var14 + (var13 + (var7 - 2));

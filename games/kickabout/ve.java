@@ -140,6 +140,7 @@ final class ve extends cm implements vh {
           var14.field_r = (gj) (Object) new qv(qo.field_k, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true);
           ((ve) this).a(-98, var14);
           ((ve) this).field_U = this.a((byte) -53, (jv) this, pg.field_c);
+          return;
         } else {
           if (param1 == hf.field_a) {
             ((ve) this).field_i = ((ve) this).field_i + 10;
@@ -155,6 +156,7 @@ final class ve extends cm implements vh {
               var12.field_r = (gj) (Object) new qv(qo.field_k, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true);
               ((ve) this).a(-98, var12);
               ((ve) this).field_U = this.a((byte) -53, (jv) this, pg.field_c);
+              return;
             } else {
               var10 = new fd(var9, (jv) null);
               var10.field_t = 0;
@@ -164,6 +166,7 @@ final class ve extends cm implements vh {
               var10.field_r = (gj) (Object) new qv(qo.field_k, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true);
               ((ve) this).a(-98, var10);
               ((ve) this).field_U = this.a((byte) -53, (jv) this, pg.field_c);
+              return;
             }
           } else {
             if (ds.field_d == param1) {
@@ -177,6 +180,7 @@ final class ve extends cm implements vh {
               var8.field_r = (gj) (Object) new qv(qo.field_k, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true);
               ((ve) this).a(-98, var8);
               ((ve) this).field_U = this.a((byte) -53, (jv) this, pg.field_c);
+              return;
             } else {
               var6 = new fd((String) var5, (jv) null);
               var6.field_t = 0;
@@ -186,6 +190,7 @@ final class ve extends cm implements vh {
               var6.field_r = (gj) (Object) new qv(qo.field_k, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true);
               ((ve) this).a(-98, var6);
               ((ve) this).field_U = this.a((byte) -53, (jv) this, pg.field_c);
+              return;
             }
           }
         }
@@ -248,80 +253,85 @@ final class ve extends cm implements vh {
                   if (10 <= var2) {
                     break L2;
                   } else {
-                    if (-1 < -var2 + -1 + vb.field_j) {
+                    if (-1 < (-var2 + -1 + vb.field_j ^ -1)) {
                       break L2;
                     } else {
                       var4_ref_tv = fu.field_b[-var2 + (vb.field_j + -1)];
                       if (var4_ref_tv != ae.field_D) {
-                        if (null != var4_ref_tv.field_s) {
-                          var3[var2] = var4_ref_tv.field_s.field_E;
-                          var2++;
-                          continue L1;
-                        } else {
-                          var2++;
-                          continue L1;
+                        L3: {
+                          if (null != var4_ref_tv.field_s) {
+                            var3[var2] = var4_ref_tv.field_s.field_E;
+                            break L3;
+                          } else {
+                            break L3;
+                          }
                         }
+                        var2++;
+                        continue L1;
                       } else {
                         var4 = 9;
-                        L3: while (true) {
-                          if (-1 > var4) {
-                            L4: {
+                        L4: while (true) {
+                          if (-1 < (var4 ^ -1)) {
+                            L5: {
                               ae.field_D = var1;
-                              if (e.field_j <= -19) {
-                                break L4;
+                              if ((e.field_j ^ -1) <= -19) {
+                                break L5;
                               } else {
                                 e.field_j = e.field_j + 1;
-                                break L4;
+                                break L5;
                               }
                             }
                             if (param0 == -28033) {
-                              L5: {
-                                if (-19 <= e.field_j) {
+                              L6: {
+                                if (-19 >= (e.field_j ^ -1)) {
                                   e.field_j = 18;
                                   var28_ref = (gv) (Object) js.field_d.b((byte) 126);
                                   if (var28_ref == null) {
-                                    break L5;
+                                    break L6;
                                   } else {
                                     ge.a(var28_ref, false);
-                                    break L5;
+                                    break L6;
                                   }
                                 } else {
-                                  break L5;
+                                  break L6;
                                 }
                               }
                               var6 = 0;
                               var2 = var6;
-                              L6: while (true) {
-                                if (bk.field_c.length <= var6) {
+                              L7: while (true) {
+                                if ((bk.field_c.length ^ -1) >= (var6 ^ -1)) {
                                   return;
                                 } else {
-                                  if (null != bk.field_c[var6]) {
-                                    bk.field_c[var6].a(0);
-                                    var6++;
-                                    continue L6;
-                                  } else {
-                                    var6++;
-                                    continue L6;
+                                  L8: {
+                                    if (null != bk.field_c[var6]) {
+                                      bk.field_c[var6].a(0);
+                                      break L8;
+                                    } else {
+                                      break L8;
+                                    }
                                   }
+                                  var6++;
+                                  continue L7;
                                 }
                               }
                             } else {
                               return;
                             }
                           } else {
-                            if (null != var3[var4]) {
-                              if (var3[var4] != "") {
-                                gv discarded$2 = gm.a(var3[var4], false, (byte) -116);
-                                var4--;
-                                continue L3;
+                            L9: {
+                              if (null == var3[var4]) {
+                                break L9;
                               } else {
-                                var4--;
-                                continue L3;
+                                if (var3[var4] != "") {
+                                  gv discarded$2 = gm.a(var3[var4], false, (byte) -116);
+                                  break L9;
+                                } else {
+                                  break L9;
+                                }
                               }
-                            } else {
-                              var4--;
-                              continue L3;
                             }
+                            var4--;
+                            continue L4;
                           }
                         }
                       }
@@ -329,85 +339,92 @@ final class ve extends cm implements vh {
                   }
                 }
                 var4 = 9;
-                L7: while (true) {
+                L10: while (true) {
                   if (-1 < (var4 ^ -1)) {
                     ae.field_D = var1;
                     break L0;
                   } else {
-                    if (null != var3[var4]) {
-                      if (var3[var4] != "") {
-                        gv discarded$3 = gm.a(var3[var4], false, (byte) -116);
-                        var4--;
-                        continue L7;
+                    L11: {
+                      if (null == var3[var4]) {
+                        break L11;
                       } else {
-                        var4--;
-                        continue L7;
+                        if (var3[var4] != "") {
+                          gv discarded$3 = gm.a(var3[var4], false, (byte) -116);
+                          break L11;
+                        } else {
+                          break L11;
+                        }
                       }
-                    } else {
-                      var4--;
-                      continue L7;
                     }
+                    var4--;
+                    continue L10;
                   }
                 }
               }
             } else {
-              if (e.field_j > -19) {
+              if ((e.field_j ^ -1) > -19) {
                 e.field_j = e.field_j + 1;
                 if (param0 == -28033) {
                   if (-19 >= (e.field_j ^ -1)) {
                     e.field_j = 18;
                     var24_ref = (gv) (Object) js.field_d.b((byte) 126);
-                    if (var24_ref == null) {
-                      var6 = 0;
-                      var2 = var6;
-                      L8: while (true) {
-                        if (bk.field_c.length <= var6) {
-                          return;
-                        } else {
-                          if (null != bk.field_c[var6]) {
-                            bk.field_c[var6].a(0);
-                            var6++;
-                            continue L8;
-                          } else {
-                            var6++;
-                            continue L8;
-                          }
-                        }
-                      }
-                    } else {
+                    if (var24_ref != null) {
                       ge.a(var24_ref, false);
                       var6 = 0;
                       var2 = var6;
-                      L9: while (true) {
-                        if (bk.field_c.length <= var6) {
+                      L12: while (true) {
+                        if ((bk.field_c.length ^ -1) >= (var6 ^ -1)) {
                           return;
                         } else {
-                          if (null != bk.field_c[var6]) {
-                            bk.field_c[var6].a(0);
-                            var6++;
-                            continue L9;
-                          } else {
-                            var6++;
-                            continue L9;
+                          L13: {
+                            if (null != bk.field_c[var6]) {
+                              bk.field_c[var6].a(0);
+                              break L13;
+                            } else {
+                              break L13;
+                            }
                           }
+                          var6++;
+                          continue L12;
+                        }
+                      }
+                    } else {
+                      var6 = 0;
+                      var2 = var6;
+                      L14: while (true) {
+                        if ((bk.field_c.length ^ -1) >= (var6 ^ -1)) {
+                          return;
+                        } else {
+                          L15: {
+                            if (null != bk.field_c[var6]) {
+                              bk.field_c[var6].a(0);
+                              break L15;
+                            } else {
+                              break L15;
+                            }
+                          }
+                          var6++;
+                          continue L14;
                         }
                       }
                     }
                   } else {
                     var6 = 0;
                     var2 = var6;
-                    L10: while (true) {
-                      if (bk.field_c.length <= var6) {
+                    L16: while (true) {
+                      if ((bk.field_c.length ^ -1) >= (var6 ^ -1)) {
                         return;
                       } else {
-                        if (null != bk.field_c[var6]) {
-                          bk.field_c[var6].a(0);
-                          var6++;
-                          continue L10;
-                        } else {
-                          var6++;
-                          continue L10;
+                        L17: {
+                          if (null != bk.field_c[var6]) {
+                            bk.field_c[var6].a(0);
+                            break L17;
+                          } else {
+                            break L17;
+                          }
                         }
+                        var6++;
+                        continue L16;
                       }
                     }
                   }
@@ -415,51 +432,51 @@ final class ve extends cm implements vh {
                   return;
                 }
               } else {
-                if (param0 != -28033) {
-                  return;
-                } else {
-                  L11: {
-                    if (-19 <= e.field_j) {
+                if (param0 == -28033) {
+                  L18: {
+                    if (-19 >= (e.field_j ^ -1)) {
                       e.field_j = 18;
                       var8 = (gv) (Object) js.field_d.b((byte) 126);
                       if (var8 == null) {
-                        break L11;
+                        break L18;
                       } else {
                         ge.a(var8, false);
-                        break L11;
+                        break L18;
                       }
                     } else {
-                      break L11;
+                      break L18;
                     }
                   }
-                  L12: {
+                  L19: {
                     var6 = 0;
                     var2 = var6;
-                    if (bk.field_c.length <= var6) {
-                      break L12;
+                    if ((bk.field_c.length ^ -1) >= (var6 ^ -1)) {
+                      break L19;
                     } else {
-                      L13: {
+                      L20: {
                         if (null != bk.field_c[var6]) {
                           bk.field_c[var6].a(0);
-                          break L13;
+                          break L20;
                         } else {
                           var6++;
-                          break L13;
+                          break L20;
                         }
                       }
                       var6++;
                       var6++;
                       var6++;
-                      break L12;
+                      break L19;
                     }
                   }
+                  return;
+                } else {
                   return;
                 }
               }
             }
           }
         }
-        if (e.field_j <= -19) {
+        if ((e.field_j ^ -1) <= -19) {
           if (param0 == -28033) {
             if (-19 >= (e.field_j ^ -1)) {
               e.field_j = 18;
@@ -467,60 +484,60 @@ final class ve extends cm implements vh {
               if (var30_ref == null) {
                 var6 = 0;
                 var2 = var6;
-                L14: while (true) {
-                  if (bk.field_c.length <= var6) {
+                L21: while (true) {
+                  if ((bk.field_c.length ^ -1) >= (var6 ^ -1)) {
                     return;
                   } else {
-                    L15: {
+                    L22: {
                       if (null != bk.field_c[var6]) {
                         bk.field_c[var6].a(0);
-                        break L15;
+                        break L22;
                       } else {
-                        break L15;
+                        break L22;
                       }
                     }
                     var6++;
-                    continue L14;
+                    continue L21;
                   }
                 }
               } else {
                 ge.a(var30_ref, false);
                 var6 = 0;
                 var2 = var6;
-                L16: while (true) {
-                  if (bk.field_c.length <= var6) {
+                L23: while (true) {
+                  if ((bk.field_c.length ^ -1) >= (var6 ^ -1)) {
                     return;
                   } else {
-                    L17: {
+                    L24: {
                       if (null != bk.field_c[var6]) {
                         bk.field_c[var6].a(0);
-                        break L17;
+                        break L24;
                       } else {
-                        break L17;
+                        break L24;
                       }
                     }
                     var6++;
-                    continue L16;
+                    continue L23;
                   }
                 }
               }
             } else {
               var6 = 0;
               var2 = var6;
-              L18: while (true) {
-                if (bk.field_c.length <= var6) {
+              L25: while (true) {
+                if ((bk.field_c.length ^ -1) >= (var6 ^ -1)) {
                   return;
                 } else {
-                  L19: {
+                  L26: {
                     if (null != bk.field_c[var6]) {
                       bk.field_c[var6].a(0);
-                      break L19;
+                      break L26;
                     } else {
-                      break L19;
+                      break L26;
                     }
                   }
                   var6++;
-                  continue L18;
+                  continue L25;
                 }
               }
             }
@@ -530,64 +547,66 @@ final class ve extends cm implements vh {
         } else {
           e.field_j = e.field_j + 1;
           if (param0 == -28033) {
-            if (-19 <= e.field_j) {
+            if (-19 >= (e.field_j ^ -1)) {
               e.field_j = 18;
               var29_ref = (gv) (Object) js.field_d.b((byte) 126);
               if (var29_ref == null) {
                 var6 = 0;
                 var2 = var6;
-                L20: while (true) {
-                  if (bk.field_c.length <= var6) {
+                L27: while (true) {
+                  if ((bk.field_c.length ^ -1) >= (var6 ^ -1)) {
                     return;
                   } else {
-                    L21: {
+                    L28: {
                       if (null != bk.field_c[var6]) {
                         bk.field_c[var6].a(0);
-                        break L21;
+                        break L28;
                       } else {
-                        break L21;
+                        break L28;
                       }
                     }
                     var6++;
-                    continue L20;
+                    continue L27;
                   }
                 }
               } else {
                 ge.a(var29_ref, false);
                 var6 = 0;
                 var2 = var6;
-                L22: while (true) {
-                  if (bk.field_c.length <= var6) {
+                L29: while (true) {
+                  if ((bk.field_c.length ^ -1) >= (var6 ^ -1)) {
                     return;
                   } else {
-                    L23: {
+                    L30: {
                       if (null != bk.field_c[var6]) {
                         bk.field_c[var6].a(0);
-                        break L23;
+                        break L30;
                       } else {
-                        break L23;
+                        break L30;
                       }
                     }
                     var6++;
-                    continue L22;
+                    continue L29;
                   }
                 }
               }
             } else {
               var6 = 0;
               var2 = var6;
-              L24: while (true) {
-                if (bk.field_c.length <= var6) {
+              L31: while (true) {
+                if ((bk.field_c.length ^ -1) >= (var6 ^ -1)) {
                   return;
                 } else {
-                  if (null != bk.field_c[var6]) {
-                    bk.field_c[var6].a(0);
-                    var6++;
-                    continue L24;
-                  } else {
-                    var6++;
-                    continue L24;
+                  L32: {
+                    if (null != bk.field_c[var6]) {
+                      bk.field_c[var6].a(0);
+                      break L32;
+                    } else {
+                      break L32;
+                    }
                   }
+                  var6++;
+                  continue L31;
                 }
               }
             }

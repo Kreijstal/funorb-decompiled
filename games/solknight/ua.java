@@ -36,11 +36,11 @@ final class ua extends ki implements ka {
         vc.field_e = var2;
         il.field_c.field_l = il.field_c.field_l + 1;
         if (2 <= il.field_c.field_l) {
-            if (param0 == -52) {
+            if ((param0 ^ -1) == -52) {
                 return 2;
             }
         }
-        if (-3 <= il.field_c.field_l) {
+        if (-3 >= (il.field_c.field_l ^ -1)) {
             if (!(param0 != 50)) {
                 return 5;
             }
@@ -290,8 +290,9 @@ final class ua extends ki implements ka {
                                         break L18;
                                       } else {
                                         L19: {
-                                          var9[var12] = var16.a((byte) -14);
-                                          var13 = var16.a((byte) -14);
+                                          byte dupTemp$2 = var16.a((byte) -14);
+                                          var9[var12] = dupTemp$2;
+                                          var13 = dupTemp$2;
                                           stackOut_31_0 = var10;
                                           stackIn_33_0 = stackOut_31_0;
                                           stackIn_32_0 = stackOut_31_0;
@@ -373,8 +374,9 @@ final class ua extends ki implements ka {
                                         break L26;
                                       } else {
                                         L27: {
-                                          var9[var12 - -(var13 * var5)] = var16.a((byte) -14);
-                                          var14 = var16.a((byte) -14);
+                                          byte dupTemp$3 = var16.a((byte) -14);
+                                          var9[var12 - -(var13 * var5)] = dupTemp$3;
+                                          var14 = dupTemp$3;
                                           stackOut_48_0 = var10;
                                           stackIn_50_0 = stackOut_48_0;
                                           stackIn_49_0 = stackOut_48_0;

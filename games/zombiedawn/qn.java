@@ -46,25 +46,41 @@ final class qn {
     }
 
     qn(File param0, String param1, long param2) throws IOException {
-        if (0L == (param2 ^ -1L)) {
+        int var5 = 0;
+        L0: {
+          if (0L != (param2 ^ -1L)) {
+            break L0;
+          } else {
             param2 = 9223372036854775807L;
+            break L0;
+          }
         }
-        if (param0.length() > param2) {
-            boolean discarded$0 = param0.delete();
+        L1: {
+          if (param0.length() <= param2) {
+            break L1;
+          } else {
+            boolean discarded$2 = param0.delete();
+            break L1;
+          }
         }
         ((qn) this).field_c = new RandomAccessFile(param0, param1);
         ((qn) this).field_d = param2;
         ((qn) this).field_f = 0L;
-        int var5 = ((qn) this).field_c.read();
-        if (var5 != -1) {
-            // ifne L108
+        var5 = ((qn) this).field_c.read();
+        if (var5 == -1) {
+          ((qn) this).field_c.seek(0L);
+          return;
+        } else {
+          if (param1.equals((Object) (Object) "r")) {
+            ((qn) this).field_c.seek(0L);
+            return;
+          } else {
             ((qn) this).field_c.seek(0L);
             ((qn) this).field_c.write(var5);
-        } else {
             ((qn) this).field_c.seek(0L);
-            ((qn) this).field_c.seek(0L);
+            return;
+          }
         }
-        ((qn) this).field_c.seek(0L);
     }
 
     final void c(int param0) throws IOException {

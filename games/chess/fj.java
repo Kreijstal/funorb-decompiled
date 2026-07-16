@@ -119,7 +119,7 @@ final class fj {
     }
 
     final static ld a(int param0, int param1, int param2, int param3) {
-        ld var4 = null;
+        Object var4 = null;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
@@ -212,7 +212,7 @@ final class fj {
                   }
                 }
                 fl.field_j = stackIn_44_0 != 0;
-                return var4;
+                return (ld) var4;
               } else {
                 var9_ref_ld = ik.field_i[var8];
                 if (var9_ref_ld.field_f != null) {
@@ -220,7 +220,7 @@ final class fj {
                   var9_ref_ld.field_f.a(param0, var9_ref_ld.field_f.e((byte) 89), param3 + 2147483640, param2, var7);
                   var7 = var7 + param2;
                   if (var9_ref_ld.field_f.field_L != 0) {
-                    var4 = var9_ref_ld;
+                    var4 = (Object) (Object) var9_ref_ld;
                     var8++;
                     continue L2;
                   } else {

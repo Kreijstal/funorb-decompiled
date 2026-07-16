@@ -31,44 +31,14 @@ final class pj {
     }
 
     final static int a(int param0, int param1) {
-        int stackIn_6_0 = 0;
-        int stackIn_10_0 = 0;
-        int stackOut_9_0 = 0;
-        int stackOut_8_0 = 0;
-        int stackOut_5_0 = 0;
-        int stackOut_4_0 = 0;
-        if (param0 >= 99) {
-          param1 = param1 & 8191;
-          if (param1 < 4096) {
-            L0: {
-              if (param1 > -2049) {
-                stackOut_9_0 = hj.field_b[param1];
-                stackIn_10_0 = stackOut_9_0;
-                break L0;
-              } else {
-                stackOut_8_0 = hj.field_b[4096 + -param1];
-                stackIn_10_0 = stackOut_8_0;
-                break L0;
-              }
-            }
-            return stackIn_10_0;
-          } else {
-            L1: {
-              if (-6145 > param1) {
-                stackOut_5_0 = -hj.field_b[-4096 + param1];
-                stackIn_6_0 = stackOut_5_0;
-                break L1;
-              } else {
-                stackOut_4_0 = -hj.field_b[8192 + -param1];
-                stackIn_6_0 = stackOut_4_0;
-                break L1;
-              }
-            }
-            return stackIn_6_0;
-          }
-        } else {
-          return 32;
+        if (param0 < 99) {
+            return 32;
         }
+        param1 = param1 & 8191;
+        if (param1 < 4096) {
+            return (param1 ^ -1) <= -2049 ? hj.field_b[4096 + -param1] : hj.field_b[param1];
+        }
+        return -6145 >= (param1 ^ -1) ? -hj.field_b[8192 + -param1] : -hj.field_b[-4096 + param1];
     }
 
     final static void a(boolean param0, int param1, boolean param2, int param3, dm param4) {
@@ -225,25 +195,49 @@ final class pj {
 
     final void a(byte[] param0, byte param1, p param2) {
         try {
-            if (31 == param2.field_o[param2.field_l]) {
-                // if_icmpne L47
-            } else {
-                throw new RuntimeException("");
-            }
-            if (null == ((pj) this).field_a) {
-                ((pj) this).field_a = new java.util.zip.Inflater(true);
-            }
-            try {
-                if (param1 >= -19) {
-                    pj.b(106, 101);
+            Exception exception = null;
+            Throwable decompiledCaughtException = null;
+            L0: {
+              if (31 != param2.field_o[param2.field_l]) {
+                break L0;
+              } else {
+                if (116 != (param2.field_o[param2.field_l - -1] ^ -1)) {
+                  break L0;
+                } else {
+                  L1: {
+                    if (null != ((pj) this).field_a) {
+                      break L1;
+                    } else {
+                      ((pj) this).field_a = new java.util.zip.Inflater(true);
+                      break L1;
+                    }
+                  }
+                  try {
+                    L2: {
+                      L3: {
+                        if (param1 < -19) {
+                          break L3;
+                        } else {
+                          pj.b(106, 101);
+                          break L3;
+                        }
+                      }
+                      ((pj) this).field_a.setInput(param2.field_o, param2.field_l - -10, -8 - (param2.field_l + 10 - param2.field_o.length));
+                      int discarded$2 = ((pj) this).field_a.inflate(param0);
+                      break L2;
+                    }
+                  } catch (java.lang.Exception decompiledCaughtParameter0) {
+                    decompiledCaughtException = decompiledCaughtParameter0;
+                    exception = (Exception) (Object) decompiledCaughtException;
+                    ((pj) this).field_a.reset();
+                    throw new RuntimeException("");
+                  }
+                  ((pj) this).field_a.reset();
+                  return;
                 }
-                ((pj) this).field_a.setInput(param2.field_o, param2.field_l - -10, -8 - (param2.field_l + 10 - param2.field_o.length));
-                int discarded$0 = ((pj) this).field_a.inflate(param0);
-            } catch (Exception exception) {
-                ((pj) this).field_a.reset();
-                throw new RuntimeException("");
+              }
             }
-            ((pj) this).field_a.reset();
+            throw new RuntimeException("");
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {

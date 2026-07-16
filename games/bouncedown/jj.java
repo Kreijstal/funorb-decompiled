@@ -59,12 +59,18 @@ final class jj {
                     break L4;
                   } else {
                     try {
-                      dh.field_a.a(hh.field_p.field_h, hh.field_p.field_i, 0, 0);
-                      wa.field_e = fa.a(-76);
+                      L5: {
+                        dh.field_a.a(hh.field_p.field_h, hh.field_p.field_i, 0, 0);
+                        wa.field_e = fa.a(-76);
+                        break L5;
+                      }
                     } catch (java.io.IOException decompiledCaughtParameter0) {
                       decompiledCaughtException = decompiledCaughtParameter0;
-                      iOException = (IOException) (Object) decompiledCaughtException;
-                      kc.a((byte) 18);
+                      L6: {
+                        iOException = (IOException) (Object) decompiledCaughtException;
+                        kc.a((byte) 18);
+                        break L6;
+                      }
                     }
                     hh.field_p.field_h = 0;
                     break L4;
@@ -95,7 +101,7 @@ final class jj {
         byte[] var3 = null;
         if (param0 == 10000) {
           if (100 != param1) {
-            if (param1 != -5001) {
+            if ((param1 ^ -1) != -5001) {
               L0: {
                 if (30000 != param1) {
                   break L0;
@@ -103,8 +109,9 @@ final class jj {
                   if ((ch.field_a ^ -1) >= -1) {
                     break L0;
                   } else {
+                    int fieldTemp$45 = ch.field_a - 1;
                     ch.field_a = ch.field_a - 1;
-                    var2_ref_byte__ = hh.field_r[ch.field_a - 1];
+                    var2_ref_byte__ = hh.field_r[fieldTemp$45];
                     hh.field_r[ch.field_a] = null;
                     return var2_ref_byte__;
                   }
@@ -116,42 +123,46 @@ final class jj {
                   if (ok.field_c.length <= var2) {
                     return new byte[param1];
                   } else {
-                    if (param1 != ok.field_c[var2]) {
-                      var2++;
-                      var2++;
-                      continue L1;
-                    } else {
-                      if (de.field_e[var2] > 0) {
-                        de.field_e[var2] = de.field_e[var2] - 1;
-                        var3 = ri.field_B[var2][de.field_e[var2] - 1];
-                        ri.field_B[var2][de.field_e[var2]] = null;
-                        return var3;
-                      } else {
+                    L2: {
+                      if (param1 != ok.field_c[var2]) {
                         var2++;
-                        continue L1;
+                        break L2;
+                      } else {
+                        if (de.field_e[var2] <= 0) {
+                          break L2;
+                        } else {
+                          de.field_e[var2] = de.field_e[var2] - 1;
+                          var3 = ri.field_B[var2][de.field_e[var2] - 1];
+                          ri.field_B[var2][de.field_e[var2]] = null;
+                          return var3;
+                        }
                       }
                     }
+                    var2++;
+                    continue L1;
                   }
                 }
               } else {
                 return new byte[param1];
               }
             } else {
-              if (-1 < hj.field_b) {
+              if (-1 > (hj.field_b ^ -1)) {
+                int fieldTemp$46 = hj.field_b - 1;
                 hj.field_b = hj.field_b - 1;
-                var2_ref_byte__ = jh.field_r[hj.field_b - 1];
+                var2_ref_byte__ = jh.field_r[fieldTemp$46];
                 jh.field_r[hj.field_b] = null;
                 return var2_ref_byte__;
               } else {
-                L2: {
+                L3: {
                   if (30000 != param1) {
-                    break L2;
+                    break L3;
                   } else {
                     if ((ch.field_a ^ -1) >= -1) {
-                      break L2;
+                      break L3;
                     } else {
+                      int fieldTemp$47 = ch.field_a - 1;
                       ch.field_a = ch.field_a - 1;
-                      var2_ref_byte__ = hh.field_r[ch.field_a - 1];
+                      var2_ref_byte__ = hh.field_r[fieldTemp$47];
                       hh.field_r[ch.field_a] = null;
                       return var2_ref_byte__;
                     }
@@ -159,25 +170,27 @@ final class jj {
                 }
                 if (ri.field_B != null) {
                   var2 = 0;
-                  L3: while (true) {
+                  L4: while (true) {
                     if (ok.field_c.length <= var2) {
                       return new byte[param1];
                     } else {
-                      if (param1 != ok.field_c[var2]) {
-                        var2++;
-                        var2++;
-                        continue L3;
-                      } else {
-                        if (de.field_e[var2] > 0) {
-                          de.field_e[var2] = de.field_e[var2] - 1;
-                          var3 = ri.field_B[var2][de.field_e[var2] - 1];
-                          ri.field_B[var2][de.field_e[var2]] = null;
-                          return var3;
-                        } else {
+                      L5: {
+                        if (param1 != ok.field_c[var2]) {
                           var2++;
-                          continue L3;
+                          break L5;
+                        } else {
+                          if (de.field_e[var2] <= 0) {
+                            break L5;
+                          } else {
+                            de.field_e[var2] = de.field_e[var2] - 1;
+                            var3 = ri.field_B[var2][de.field_e[var2] - 1];
+                            ri.field_B[var2][de.field_e[var2]] = null;
+                            return var3;
+                          }
                         }
                       }
+                      var2++;
+                      continue L4;
                     }
                   }
                 } else {
@@ -186,36 +199,45 @@ final class jj {
               }
             }
           } else {
-            if (-1 <= (dk.field_a ^ -1)) {
-              if (param1 != -5001) {
+            if (-1 > (dk.field_a ^ -1)) {
+              int fieldTemp$48 = dk.field_a - 1;
+              dk.field_a = dk.field_a - 1;
+              var2_ref_byte__ = qh.field_b[fieldTemp$48];
+              qh.field_b[dk.field_a] = null;
+              return var2_ref_byte__;
+            } else {
+              if ((param1 ^ -1) != -5001) {
                 if (30000 == param1) {
                   if ((ch.field_a ^ -1) < -1) {
+                    int fieldTemp$49 = ch.field_a - 1;
                     ch.field_a = ch.field_a - 1;
-                    var2_ref_byte__ = hh.field_r[ch.field_a - 1];
+                    var2_ref_byte__ = hh.field_r[fieldTemp$49];
                     hh.field_r[ch.field_a] = null;
                     return var2_ref_byte__;
                   } else {
                     if (ri.field_B != null) {
                       var2 = 0;
-                      L4: while (true) {
+                      L6: while (true) {
                         if (ok.field_c.length <= var2) {
                           return new byte[param1];
                         } else {
-                          if (param1 != ok.field_c[var2]) {
-                            var2++;
-                            var2++;
-                            continue L4;
-                          } else {
-                            if (de.field_e[var2] > 0) {
-                              de.field_e[var2] = de.field_e[var2] - 1;
-                              var3 = ri.field_B[var2][de.field_e[var2] - 1];
-                              ri.field_B[var2][de.field_e[var2]] = null;
-                              return var3;
-                            } else {
+                          L7: {
+                            if (param1 != ok.field_c[var2]) {
                               var2++;
-                              continue L4;
+                              break L7;
+                            } else {
+                              if (de.field_e[var2] <= 0) {
+                                break L7;
+                              } else {
+                                de.field_e[var2] = de.field_e[var2] - 1;
+                                var3 = ri.field_B[var2][de.field_e[var2] - 1];
+                                ri.field_B[var2][de.field_e[var2]] = null;
+                                return var3;
+                              }
                             }
                           }
+                          var2++;
+                          continue L6;
                         }
                       }
                     } else {
@@ -225,25 +247,27 @@ final class jj {
                 } else {
                   if (ri.field_B != null) {
                     var2 = 0;
-                    L5: while (true) {
+                    L8: while (true) {
                       if (ok.field_c.length <= var2) {
                         return new byte[param1];
                       } else {
-                        if (param1 != ok.field_c[var2]) {
-                          var2++;
-                          var2++;
-                          continue L5;
-                        } else {
-                          if (de.field_e[var2] > 0) {
-                            de.field_e[var2] = de.field_e[var2] - 1;
-                            var3 = ri.field_B[var2][de.field_e[var2] - 1];
-                            ri.field_B[var2][de.field_e[var2]] = null;
-                            return var3;
-                          } else {
+                        L9: {
+                          if (param1 != ok.field_c[var2]) {
                             var2++;
-                            continue L5;
+                            break L9;
+                          } else {
+                            if (de.field_e[var2] <= 0) {
+                              break L9;
+                            } else {
+                              de.field_e[var2] = de.field_e[var2] - 1;
+                              var3 = ri.field_B[var2][de.field_e[var2] - 1];
+                              ri.field_B[var2][de.field_e[var2]] = null;
+                              return var3;
+                            }
                           }
                         }
+                        var2++;
+                        continue L8;
                       }
                     }
                   } else {
@@ -251,86 +275,91 @@ final class jj {
                   }
                 }
               } else {
-                if (-1 >= hj.field_b) {
-                  L6: {
+                if (-1 > (hj.field_b ^ -1)) {
+                  int fieldTemp$50 = hj.field_b - 1;
+                  hj.field_b = hj.field_b - 1;
+                  var2_ref_byte__ = jh.field_r[fieldTemp$50];
+                  jh.field_r[hj.field_b] = null;
+                  return var2_ref_byte__;
+                } else {
+                  L10: {
                     if (30000 != param1) {
-                      break L6;
+                      break L10;
                     } else {
                       if ((ch.field_a ^ -1) >= -1) {
-                        break L6;
+                        break L10;
                       } else {
+                        int fieldTemp$51 = ch.field_a - 1;
                         ch.field_a = ch.field_a - 1;
-                        var2_ref_byte__ = hh.field_r[ch.field_a - 1];
+                        var2_ref_byte__ = hh.field_r[fieldTemp$51];
                         hh.field_r[ch.field_a] = null;
                         return var2_ref_byte__;
                       }
                     }
                   }
-                  if (ri.field_B != null) {
-                    var2 = 0;
-                    L7: while (true) {
-                      if (ok.field_c.length > var2) {
-                        if (param1 != ok.field_c[var2]) {
-                          var2++;
-                          var2++;
-                          continue L7;
+                  L11: {
+                    if (ri.field_B != null) {
+                      var2 = 0;
+                      L12: while (true) {
+                        if (ok.field_c.length <= var2) {
+                          break L11;
                         } else {
-                          if (de.field_e[var2] > 0) {
-                            de.field_e[var2] = de.field_e[var2] - 1;
-                            var3 = ri.field_B[var2][de.field_e[var2] - 1];
-                            ri.field_B[var2][de.field_e[var2]] = null;
-                            return var3;
-                          } else {
-                            var2++;
-                            continue L7;
+                          L13: {
+                            if (param1 != ok.field_c[var2]) {
+                              var2++;
+                              break L13;
+                            } else {
+                              if (de.field_e[var2] <= 0) {
+                                break L13;
+                              } else {
+                                de.field_e[var2] = de.field_e[var2] - 1;
+                                var3 = ri.field_B[var2][de.field_e[var2] - 1];
+                                ri.field_B[var2][de.field_e[var2]] = null;
+                                return var3;
+                              }
+                            }
                           }
+                          var2++;
+                          continue L12;
                         }
-                      } else {
-                        return new byte[param1];
                       }
+                    } else {
+                      break L11;
                     }
-                  } else {
-                    return new byte[param1];
                   }
-                } else {
-                  hj.field_b = hj.field_b - 1;
-                  var2_ref_byte__ = jh.field_r[hj.field_b - 1];
-                  jh.field_r[hj.field_b] = null;
-                  return var2_ref_byte__;
+                  return new byte[param1];
                 }
               }
-            } else {
-              dk.field_a = dk.field_a - 1;
-              var2_ref_byte__ = qh.field_b[dk.field_a - 1];
-              qh.field_b[dk.field_a] = null;
-              return var2_ref_byte__;
             }
           }
         } else {
           field_a = null;
           if (100 == param1) {
             if (-1 > (dk.field_a ^ -1)) {
+              int fieldTemp$52 = dk.field_a - 1;
               dk.field_a = dk.field_a - 1;
-              var2_ref_byte__ = qh.field_b[dk.field_a - 1];
+              var2_ref_byte__ = qh.field_b[fieldTemp$52];
               qh.field_b[dk.field_a] = null;
               return var2_ref_byte__;
             } else {
               if ((param1 ^ -1) == -5001) {
                 if (-1 > (hj.field_b ^ -1)) {
+                  int fieldTemp$53 = hj.field_b - 1;
                   hj.field_b = hj.field_b - 1;
-                  var2_ref_byte__ = jh.field_r[hj.field_b - 1];
+                  var2_ref_byte__ = jh.field_r[fieldTemp$53];
                   jh.field_r[hj.field_b] = null;
                   return var2_ref_byte__;
                 } else {
-                  L8: {
+                  L14: {
                     if (30000 != param1) {
-                      break L8;
+                      break L14;
                     } else {
                       if ((ch.field_a ^ -1) >= -1) {
-                        break L8;
+                        break L14;
                       } else {
+                        int fieldTemp$54 = ch.field_a - 1;
                         ch.field_a = ch.field_a - 1;
-                        var2_ref_byte__ = hh.field_r[ch.field_a - 1];
+                        var2_ref_byte__ = hh.field_r[fieldTemp$54];
                         hh.field_r[ch.field_a] = null;
                         return var2_ref_byte__;
                       }
@@ -338,25 +367,27 @@ final class jj {
                   }
                   if (ri.field_B != null) {
                     var2 = 0;
-                    L9: while (true) {
-                      if (ok.field_c.length > var2) {
-                        if (param1 != ok.field_c[var2]) {
-                          var2++;
-                          var2++;
-                          continue L9;
-                        } else {
-                          if (de.field_e[var2] > 0) {
-                            de.field_e[var2] = de.field_e[var2] - 1;
-                            var3 = ri.field_B[var2][de.field_e[var2] - 1];
-                            ri.field_B[var2][de.field_e[var2]] = null;
-                            return var3;
-                          } else {
+                    L15: while (true) {
+                      if (ok.field_c.length <= var2) {
+                        return new byte[param1];
+                      } else {
+                        L16: {
+                          if (param1 != ok.field_c[var2]) {
                             var2++;
-                            continue L9;
+                            break L16;
+                          } else {
+                            if (de.field_e[var2] <= 0) {
+                              break L16;
+                            } else {
+                              de.field_e[var2] = de.field_e[var2] - 1;
+                              var3 = ri.field_B[var2][de.field_e[var2] - 1];
+                              ri.field_B[var2][de.field_e[var2]] = null;
+                              return var3;
+                            }
                           }
                         }
-                      } else {
-                        return new byte[param1];
+                        var2++;
+                        continue L15;
                       }
                     }
                   } else {
@@ -364,106 +395,117 @@ final class jj {
                   }
                 }
               } else {
-                L10: {
+                L17: {
                   if (30000 != param1) {
-                    break L10;
+                    break L17;
                   } else {
                     if ((ch.field_a ^ -1) >= -1) {
-                      break L10;
+                      break L17;
                     } else {
+                      int fieldTemp$55 = ch.field_a - 1;
                       ch.field_a = ch.field_a - 1;
-                      var2_ref_byte__ = hh.field_r[ch.field_a - 1];
+                      var2_ref_byte__ = hh.field_r[fieldTemp$55];
                       hh.field_r[ch.field_a] = null;
                       return var2_ref_byte__;
                     }
                   }
                 }
-                if (ri.field_B != null) {
-                  var2 = 0;
-                  L11: while (true) {
-                    if (ok.field_c.length > var2) {
-                      if (param1 != ok.field_c[var2]) {
-                        var2++;
-                        var2++;
-                        continue L11;
+                L18: {
+                  if (ri.field_B != null) {
+                    var2 = 0;
+                    L19: while (true) {
+                      if (ok.field_c.length <= var2) {
+                        break L18;
                       } else {
-                        if (de.field_e[var2] > 0) {
-                          de.field_e[var2] = de.field_e[var2] - 1;
-                          var3 = ri.field_B[var2][de.field_e[var2] - 1];
-                          ri.field_B[var2][de.field_e[var2]] = null;
-                          return var3;
-                        } else {
-                          var2++;
-                          continue L11;
+                        L20: {
+                          if (param1 != ok.field_c[var2]) {
+                            var2++;
+                            break L20;
+                          } else {
+                            if (de.field_e[var2] <= 0) {
+                              break L20;
+                            } else {
+                              de.field_e[var2] = de.field_e[var2] - 1;
+                              var3 = ri.field_B[var2][de.field_e[var2] - 1];
+                              ri.field_B[var2][de.field_e[var2]] = null;
+                              return var3;
+                            }
+                          }
                         }
+                        var2++;
+                        continue L19;
                       }
-                    } else {
-                      return new byte[param1];
                     }
+                  } else {
+                    break L18;
                   }
-                } else {
-                  return new byte[param1];
                 }
+                return new byte[param1];
               }
             }
           } else {
-            L12: {
-              if (param1 != -5001) {
-                break L12;
+            L21: {
+              if ((param1 ^ -1) != -5001) {
+                break L21;
               } else {
-                if (-1 < hj.field_b) {
+                if (-1 > (hj.field_b ^ -1)) {
+                  int fieldTemp$56 = hj.field_b - 1;
                   hj.field_b = hj.field_b - 1;
-                  var2_ref_byte__ = jh.field_r[hj.field_b - 1];
+                  var2_ref_byte__ = jh.field_r[fieldTemp$56];
                   jh.field_r[hj.field_b] = null;
                   return var2_ref_byte__;
                 } else {
-                  break L12;
+                  break L21;
                 }
               }
             }
-            L13: {
+            L22: {
               if (30000 != param1) {
-                break L13;
+                break L22;
               } else {
                 if ((ch.field_a ^ -1) >= -1) {
-                  break L13;
+                  break L22;
                 } else {
+                  int fieldTemp$57 = ch.field_a - 1;
                   ch.field_a = ch.field_a - 1;
-                  var2_ref_byte__ = hh.field_r[ch.field_a - 1];
+                  var2_ref_byte__ = hh.field_r[fieldTemp$57];
                   hh.field_r[ch.field_a] = null;
                   return var2_ref_byte__;
                 }
               }
             }
-            if (ri.field_B != null) {
-              var2 = 0;
-              if (ok.field_c.length > var2) {
-                if (param1 == ok.field_c[var2]) {
-                  if (de.field_e[var2] > 0) {
-                    de.field_e[var2] = de.field_e[var2] - 1;
-                    var3 = ri.field_B[var2][de.field_e[var2] - 1];
-                    ri.field_B[var2][de.field_e[var2]] = null;
-                    return var3;
-                  } else {
-                    var2++;
-                    var2++;
-                    var2++;
-                    var2++;
-                    return new byte[param1];
-                  }
+            L23: {
+              if (ri.field_B != null) {
+                var2 = 0;
+                if (ok.field_c.length <= var2) {
+                  break L23;
                 } else {
+                  L24: {
+                    if (param1 != ok.field_c[var2]) {
+                      var2++;
+                      break L24;
+                    } else {
+                      if (de.field_e[var2] <= 0) {
+                        var2++;
+                        break L24;
+                      } else {
+                        de.field_e[var2] = de.field_e[var2] - 1;
+                        var3 = ri.field_B[var2][de.field_e[var2] - 1];
+                        ri.field_B[var2][de.field_e[var2]] = null;
+                        return var3;
+                      }
+                    }
+                  }
                   var2++;
                   var2++;
                   var2++;
-                  var2++;
-                  return new byte[param1];
+                  break L23;
                 }
               } else {
-                return new byte[param1];
+                break L23;
               }
-            } else {
-              return new byte[param1];
             }
+            return new byte[param1];
           }
         }
     }

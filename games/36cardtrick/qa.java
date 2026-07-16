@@ -9,7 +9,7 @@ final class qa {
     final static int a(boolean param0, String param1, String param2, int param3, String param4, boolean param5, int param6) {
         jk var7 = new jk(param1);
         if (!param5) {
-            field_b = (oh) null;
+            field_b = null;
         }
         jk var8 = new jk(param2);
         return pa.a(param4, var7, var8, param6, param3, 18, param0);
@@ -26,7 +26,7 @@ final class qa {
         }
         oe var7 = new oe();
         var7.field_c = var8;
-        java.awt.Component discarded$1 = ((oe) var7).field_c.add((java.awt.Component) (Object) var7);
+        java.awt.Component discarded$1 = var7.field_c.add((java.awt.Component) (Object) var7);
         var7.setBounds(0, 0, param5, param1);
         var7.addFocusListener((java.awt.event.FocusListener) (Object) var7);
         var7.requestFocus();
@@ -43,7 +43,7 @@ final class qa {
         int[] var6 = new int[param1.length];
         int[] var2 = var6;
         if (param0 > -32) {
-            String var5 = (String) null;
+            Object var5 = null;
             int discarded$0 = qa.a(false, (String) null, (String) null, -53, (String) null, true, -83);
         }
         for (var3 = 0; var3 < param1.length; var3++) {
@@ -55,13 +55,13 @@ final class qa {
     final void a(java.applet.Applet param0, int param1) {
         uh.a(31536000L, 126, "jagex-last-login-method", ((qa) this).field_a, param0);
         if (param1 != 0) {
-            ((qa) this).field_a = (String) null;
+            ((qa) this).field_a = null;
         }
     }
 
     public static void a(byte param0) {
         if (param0 != -31) {
-            field_b = (oh) null;
+            field_b = null;
         }
         field_b = null;
     }
@@ -80,7 +80,7 @@ final class qa {
         }
         int var3 = var2 + param0;
         if (param1 != 8) {
-            field_b = (oh) null;
+            field_b = null;
         }
         return var3;
     }

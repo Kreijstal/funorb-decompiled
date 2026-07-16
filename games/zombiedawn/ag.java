@@ -57,18 +57,18 @@ final class ag implements Iterator {
     }
 
     final static void a(int param0, boolean param1) {
-        cl var2 = null;
+        Object var2 = null;
         L0: {
           var2 = null;
           if (!param1) {
-            var2 = (cl) (Object) new wh();
+            var2 = (Object) (Object) new wh();
             break L0;
           } else {
-            var2 = new cl();
+            var2 = (Object) (Object) new cl();
             break L0;
           }
         }
-        nl.a(new lg((wa) (Object) var2), (byte) -121);
+        nl.a(new lg((wa) var2), (byte) -121);
         if (param0 > -105) {
           field_e = null;
           return;

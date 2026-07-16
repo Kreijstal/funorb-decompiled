@@ -85,141 +85,29 @@ final class vj extends mc {
     }
 
     final static void a(int param0, int param1, int param2, int param3) {
-        if (param3 > 85) {
-          L0: {
-            if (-1 == param0) {
-              L1: {
-                if (ik.field_e != param2) {
-                  hg.field_c = true;
-                  ik.field_e = param2;
-                  nl.a(107, param1);
-                  if (-2 == (param0 ^ -1)) {
-                    if (param2 != me.field_b) {
-                      me.field_b = param2;
-                      hg.field_c = true;
-                      nl.a(102, param1);
-                      break L1;
-                    } else {
-                      if (param0 != 2) {
-                        break L0;
-                      } else {
-                        if (mc.field_f == param2) {
-                          break L0;
-                        } else {
-                          hg.field_c = true;
-                          mc.field_f = param2;
-                          nl.a(108, param1);
-                          break L0;
-                        }
-                      }
-                    }
-                  } else {
-                    if (param0 != 2) {
-                      break L0;
-                    } else {
-                      if (mc.field_f == param2) {
-                        break L0;
-                      } else {
-                        hg.field_c = true;
-                        mc.field_f = param2;
-                        nl.a(108, param1);
-                        break L0;
-                      }
-                    }
-                  }
-                } else {
-                  if (-2 == (param0 ^ -1)) {
-                    if (param2 != me.field_b) {
-                      me.field_b = param2;
-                      hg.field_c = true;
-                      nl.a(102, param1);
-                      break L1;
-                    } else {
-                      if (param0 != 2) {
-                        break L0;
-                      } else {
-                        if (mc.field_f == param2) {
-                          break L0;
-                        } else {
-                          hg.field_c = true;
-                          mc.field_f = param2;
-                          nl.a(108, param1);
-                          break L0;
-                        }
-                      }
-                    }
-                  } else {
-                    if (param0 != 2) {
-                      break L0;
-                    } else {
-                      if (mc.field_f == param2) {
-                        break L0;
-                      } else {
-                        hg.field_c = true;
-                        mc.field_f = param2;
-                        nl.a(108, param1);
-                        break L0;
-                      }
-                    }
-                  }
-                }
-              }
-              if (param0 != 2) {
-                break L0;
-              } else {
-                if (mc.field_f == param2) {
-                  break L0;
-                } else {
-                  hg.field_c = true;
-                  mc.field_f = param2;
-                  nl.a(108, param1);
-                  break L0;
-                }
-              }
-            } else {
-              if (-2 != param0) {
-                if (param0 == 2) {
-                  if (mc.field_f == param2) {
-                    break L0;
-                  } else {
-                    hg.field_c = true;
-                    mc.field_f = param2;
-                    nl.a(108, param1);
-                    break L0;
-                  }
-                } else {
-                  if (param0 != 2) {
-                    break L0;
-                  } else {
-                    if (mc.field_f == param2) {
-                      break L0;
-                    } else {
-                      hg.field_c = true;
-                      mc.field_f = param2;
-                      nl.a(108, param1);
-                      break L0;
-                    }
-                  }
-                }
-              } else {
-                if (param0 != 2) {
-                  break L0;
-                } else {
-                  if (mc.field_f == param2) {
-                    break L0;
-                  } else {
-                    hg.field_c = true;
-                    mc.field_f = param2;
-                    nl.a(108, param1);
-                    break L0;
-                  }
-                }
-              }
+        if (param3 <= 85) {
+            return;
+        }
+        if (-1 == (param0 ^ -1)) {
+            if (ik.field_e != param2) {
+                hg.field_c = true;
+                ik.field_e = param2;
+                nl.a(107, param1);
             }
-          }
-          return;
-        } else {
-          return;
+        }
+        if (-2 == (param0 ^ -1)) {
+            if ((param2 ^ -1) != (me.field_b ^ -1)) {
+                me.field_b = param2;
+                hg.field_c = true;
+                nl.a(102, param1);
+            }
+        }
+        if (param0 == 2) {
+            if ((mc.field_f ^ -1) != (param2 ^ -1)) {
+                hg.field_c = true;
+                mc.field_f = param2;
+                nl.a(108, param1);
+            }
         }
     }
 

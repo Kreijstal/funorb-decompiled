@@ -18,7 +18,7 @@ final class kl extends g implements cl, qh, wi {
 
     private final String n(int param0) {
         if (param0 != 2716) {
-            return (String) null;
+            return null;
         }
         return "<u=2164A2><col=2164A2>";
     }
@@ -28,30 +28,30 @@ final class kl extends g implements cl, qh, wi {
         ck var8 = null;
         var8 = new ck(20, param1, param0 + 120, 25, param4, false, 120, 3, j.field_C, 16777215, param2);
         ((kl) this).b((lk) (Object) var8, (byte) 118);
-        var7 = new gl(((of) param4).a(-108));
+        var7 = new gl(((of) (Object) param4).a(-108));
         ((kl) this).b((lk) (Object) var7, (byte) 118);
         if (param3 != -21) {
           return -4;
         } else {
-          var7.a(15, (-15 + ((ck) var8).field_q >> -2023095551) + ((ck) var8).field_i, 15, 3 + (((ck) var8).field_h + ((ck) var8).field_o), true);
-          return ((ck) var8).field_q;
+          var7.a(15, (-15 + var8.field_q >> -2023095551) + var8.field_i, 15, 3 + (var8.field_h + var8.field_o), true);
+          return var8.field_q;
         }
     }
 
     final void a(int param0, int param1, lk param2, int param3) {
-        this.a(param0, param1, param2, param3);
+        super.a(param0, param1, param2, param3);
         ((kl) this).field_O.field_B = this.e((byte) 60);
     }
 
     public final void a(boolean param0) {
-        ((hj) ((kl) this).field_D.a(109)).g(102);
+        ((hj) (Object) ((kl) this).field_D.a(109)).g(102);
         if (!param0) {
             kl.b(-18, 20, -112, 46, -45);
         }
     }
 
     final boolean a(char param0, byte param1, int param2, lk param3) {
-        if (this.a(param0, (byte) -109, param2, param3)) {
+        if (super.a(param0, (byte) -109, param2, param3)) {
           return true;
         } else {
           if (-99 != (param2 ^ -1)) {
@@ -59,7 +59,7 @@ final class kl extends g implements cl, qh, wi {
               return ((kl) this).a(param3, (byte) -28);
             } else {
               if (param1 > -99) {
-                ((kl) this).field_J = (v) null;
+                ((kl) this).field_J = null;
                 return false;
               } else {
                 return false;
@@ -72,43 +72,34 @@ final class kl extends g implements cl, qh, wi {
     }
 
     public final void a(int param0, int param1, byte param2, dg param3) {
-        int var6 = 0;
-        var6 = Main.field_T;
-        if (param1 != -1) {
-          if (-2 == param1) {
-            he.a(0, "privacy.ws");
+        int var6 = Main.field_T;
+        if ((param1 ^ -1) == -1) {
+            he.a(0, "terms.ws");
+            if (param2 == 26) {
+                return;
+            }
+            ((kl) this).field_J = null;
+            return;
+        }
+        if (-2 != (param1 ^ -1)) {
+            if (param1 != 2) {
+                if (param2 == 26) {
+                    return;
+                }
+                ((kl) this).field_J = null;
+                return;
+            }
+            he.a(0, "conduct.ws");
             if (param2 != 26) {
-              ((kl) this).field_J = (v) null;
-              return;
-            } else {
-              return;
+                ((kl) this).field_J = null;
+                return;
             }
-          } else {
-            if (param1 == 2) {
-              he.a(0, "conduct.ws");
-              if (param2 != 26) {
-                ((kl) this).field_J = (v) null;
-                return;
-              } else {
-                return;
-              }
-            } else {
-              if (param2 == 26) {
-                return;
-              } else {
-                ((kl) this).field_J = (v) null;
-                return;
-              }
-            }
-          }
-        } else {
-          he.a(0, "terms.ws");
-          if (param2 == 26) {
             return;
-          } else {
-            ((kl) this).field_J = (v) null;
+        }
+        he.a(0, "privacy.ws");
+        if (param2 != 26) {
+            ((kl) this).field_J = null;
             return;
-          }
         }
     }
 
@@ -169,7 +160,7 @@ final class kl extends g implements cl, qh, wi {
         int var7 = 95 % ((-3 - param3) / 53);
         ck var6 = new ck(20, param4, param1 + 120, 25, param2, false, 120, 3, j.field_C, 16777215, param0);
         ((kl) this).b((lk) (Object) var6, (byte) 118);
-        return ((ck) var6).field_q;
+        return var6.field_q;
     }
 
     public final void a(String param0, boolean param1) {
@@ -183,9 +174,9 @@ final class kl extends g implements cl, qh, wi {
     }
 
     private final int a(lk param0, boolean param1, int param2, String param3, String param4, int param5) {
-        String var8 = null;
+        Object var8 = null;
         if (!param1) {
-          var8 = (String) null;
+          var8 = null;
           ((kl) this).a((String) null, true);
           return this.a(param0, param5, param4, param3, param2, 25, 35);
         } else {
@@ -221,7 +212,7 @@ final class kl extends g implements cl, qh, wi {
         int stackOut_5_1 = 0;
         ba stackOut_4_0 = null;
         int stackOut_4_1 = 0;
-        var3 = ((of) param1).a(94);
+        var3 = param1.a(94);
         if (var3 == null) {
           return true;
         } else {
@@ -267,7 +258,7 @@ final class kl extends g implements cl, qh, wi {
 
     private final String d(byte param0) {
         if (param0 != 62) {
-            return (String) null;
+            return null;
         }
         return "</col></u>";
     }
@@ -322,10 +313,10 @@ final class kl extends g implements cl, qh, wi {
     private final int a(lk param0, int param1, String param2, String param3, int param4, int param5, int param6) {
         ck var10 = new ck(20, param4, param1 + 120, param5, param0, false, 120, 3, j.field_C, 16777215, param3);
         ((kl) this).b((lk) (Object) var10, (byte) 118);
-        pa var9 = new pa(((of) param0).a(-125), param2, 126, ((ck) var10).field_q + param4, 50 + param1, param6);
+        pa var9 = new pa(((of) (Object) param0).a(-125), param2, 126, var10.field_q + param4, 50 + param1, param6);
         var9.field_k = (pl) this;
         ((kl) this).b((lk) (Object) var9, (byte) 118);
-        return ((pa) var9).field_q + ((ck) var10).field_q;
+        return var9.field_q + var10.field_q;
     }
 
     public kl() {
@@ -357,12 +348,14 @@ final class kl extends g implements cl, qh, wi {
         ((kl) this).field_O.field_v = (ci) (Object) new ki();
         ((kl) this).field_F.field_v = (ci) (Object) new nb();
         ((kl) this).field_D.field_v = (ci) (Object) new r(10000536);
-        ((kl) this).field_J.field_v = (ci) (Object) new r(10000536);
-        ((kl) this).field_M.field_v = (ci) (Object) new r(10000536);
+        r dupTemp$0 = new r(10000536);
+        ((kl) this).field_J.field_v = (ci) (Object) dupTemp$0;
+        ((kl) this).field_M.field_v = (ci) (Object) dupTemp$0;
         ((kl) this).field_I.field_v = (ci) (Object) new r(10000536);
         ((kl) this).field_N.field_v = (ci) (Object) new tg();
-        ((kl) this).field_K.field_v = (ci) (Object) new rl(10000536);
-        ((kl) this).field_G.field_v = (ci) (Object) new rl(10000536);
+        rl dupTemp$1 = new rl(10000536);
+        ((kl) this).field_K.field_v = (ci) (Object) dupTemp$1;
+        ((kl) this).field_G.field_v = (ci) (Object) dupTemp$1;
         String var2 = re.a(lk.field_t, new String[2], (byte) -50);
         int var3 = 20;
         var3 = var3 + this.a(cf.field_a, 170, (lk) (Object) ((kl) this).field_M, -74, var3);
@@ -373,7 +366,7 @@ final class kl extends g implements cl, qh, wi {
         var3 = var3 + this.a(170, var3, th.field_b, (byte) -21, (lk) (Object) ((kl) this).field_I);
         ck var4 = new ck(46, var3, -90 + ((kl) this).field_h, 25, (lk) (Object) ((kl) this).field_N, true, -120 + ((kl) this).field_h, 5, me.field_c, 11579568, Main.field_M);
         ((kl) this).b((lk) (Object) var4, (byte) 118);
-        var3 = var3 + ((ck) var4).field_q;
+        var3 = var3 + var4.field_q;
         ek var5 = new ek(j.field_C, 0, 0, 0, 0, 16777215, -1, 0, 0, j.field_C.field_s, -1, 2147483647, true);
         ((kl) this).field_H = new dg(var2, (ci) (Object) var5);
         ((kl) this).field_H.field_n = "";

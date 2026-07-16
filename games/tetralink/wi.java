@@ -28,77 +28,42 @@ public class wi {
 
     public static void a(String param0, int param1, int param2) {
         Exception exception = null;
-        int statePc = 0;
-        Throwable caughtException = null;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    field_d = param2;
-                    field_e = param0;
-                    statePc = 1;
-                    continue stateLoop;
-                }
-                case 1: {
-                    try {
-                        field_a = System.getProperty("user.home");
-                        if (field_a == null) {
-                            statePc = 5;
-                        } else {
-                            statePc = 2;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_1) {
-                        caughtException = stateCaught_1;
-                        statePc = 4;
-                        continue stateLoop;
-                    }
-                }
-                case 2: {
-                    try {
-                        field_a = field_a + "/";
-                        statePc = 5;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_2) {
-                        caughtException = stateCaught_2;
-                        statePc = 4;
-                        continue stateLoop;
-                    }
-                }
-                case 4: {
-                    exception = (Exception) (Object) caughtException;
-                    statePc = 5;
-                    continue stateLoop;
-                }
-                case 5: {
-                    if (null == field_a) {
-                        statePc = 7;
-                    } else {
-                        statePc = 8;
-                    }
-                    continue stateLoop;
-                }
-                case 7: {
-                    field_a = "~/";
-                    statePc = 8;
-                    continue stateLoop;
-                }
-                case 8: {
-                    if (param1 != 11217) {
-                        statePc = 10;
-                    } else {
-                        statePc = 9;
-                    }
-                    continue stateLoop;
-                }
-                case 9: {
-                    field_b = true;
-                    return;
-                }
-                case 10: {
-                    return;
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
+        Throwable decompiledCaughtException = null;
+        field_d = param2;
+        field_e = param0;
+        try {
+          L0: {
+            L1: {
+              field_a = System.getProperty("user.home");
+              if (field_a == null) {
+                break L1;
+              } else {
+                field_a = field_a + "/";
+                break L1;
+              }
             }
+            break L0;
+          }
+        } catch (java.lang.Exception decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            exception = (Exception) (Object) decompiledCaughtException;
+            break L2;
+          }
+        }
+        L3: {
+          if (null == field_a) {
+            field_a = "~/";
+            break L3;
+          } else {
+            break L3;
+          }
+        }
+        if (param1 != 11217) {
+          return;
+        } else {
+          field_b = true;
+          return;
         }
     }
 

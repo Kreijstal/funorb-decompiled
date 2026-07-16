@@ -99,26 +99,66 @@ class og extends qm implements he {
     }
 
     boolean a(int param0, int param1, qm param2, char param3) {
-        int var7 = CrazyCrystals.field_B;
-        if (param1 != 19279) {
+        int var6 = 0;
+        int var7 = 0;
+        qm var8 = null;
+        tm var9 = null;
+        boolean stackIn_14_0 = false;
+        boolean stackOut_13_0 = false;
+        boolean stackOut_12_0 = false;
+        L0: {
+          var7 = CrazyCrystals.field_B;
+          if (param1 == 19279) {
+            break L0;
+          } else {
             field_y = null;
+            break L0;
+          }
         }
-        tm var9 = new tm(((og) this).field_v);
-        qm var8 = (qm) (Object) var9.a((byte) 32);
-        while (var8 != null) {
-            // ifeq L107
-            if (var8.e(-123)) {
-                if (!(!var8.a(param0, param1 + 0, param2, param3))) {
-                    return true;
+        var9 = new tm(((og) this).field_v);
+        var8 = (qm) (Object) var9.a((byte) 32);
+        L1: while (true) {
+          L2: {
+            if (var8 == null) {
+              break L2;
+            } else {
+              if (!var8.b(-72)) {
+                break L2;
+              } else {
+                L3: {
+                  if (!var8.e(-123)) {
+                    break L3;
+                  } else {
+                    if (var8.a(param0, param1 + 0, param2, param3)) {
+                      return true;
+                    } else {
+                      break L3;
+                    }
+                  }
                 }
+                var8 = (qm) (Object) var9.b(106);
+                continue L1;
+              }
             }
-            var8 = (qm) (Object) var9.b(106);
+          }
+          var6 = param0;
+          if (80 != var6) {
+            return false;
+          } else {
+            L4: {
+              if (cp.field_k[81]) {
+                stackOut_13_0 = ((og) this).a((byte) -57, param2);
+                stackIn_14_0 = stackOut_13_0;
+                break L4;
+              } else {
+                stackOut_12_0 = ((og) this).a(param2, -25911);
+                stackIn_14_0 = stackOut_12_0;
+                break L4;
+              }
+            }
+            return stackIn_14_0;
+          }
         }
-        int var6 = param0;
-        if (80 == var6) {
-            return !cp.field_k[81] ? ((og) this).a(param2, -25911) : ((og) this).a((byte) -57, param2);
-        }
-        return false;
     }
 
     final static int a(int param0, int param1, int param2) {
@@ -233,15 +273,30 @@ class og extends qm implements he {
     }
 
     void a(qm param0, int param1, int param2, int param3) {
-        int var8 = CrazyCrystals.field_B;
+        tm var5 = null;
+        qm var6 = null;
+        int var7 = 0;
+        int var8 = 0;
+        var8 = CrazyCrystals.field_B;
         super.a(param0, 11, param2, param3);
-        tm var5 = new tm(((og) this).field_v);
-        int var7 = -15 % ((param1 - -50) / 59);
-        qm var6 = (qm) (Object) var5.a((byte) 32);
-        while (var6 != null) {
-            // ifeq L103
-            var6.a(param0, -124, ((og) this).field_j + param2, param3 + ((og) this).field_r);
-            var6 = (qm) (Object) var5.b(-118);
+        var5 = new tm(((og) this).field_v);
+        var7 = -15 % ((param1 - -50) / 59);
+        var6 = (qm) (Object) var5.a((byte) 32);
+        L0: while (true) {
+          L1: {
+            if (var6 == null) {
+              break L1;
+            } else {
+              if (!var6.b(120)) {
+                break L1;
+              } else {
+                var6.a(param0, -124, ((og) this).field_j + param2, param3 + ((og) this).field_r);
+                var6 = (qm) (Object) var5.b(-118);
+                continue L0;
+              }
+            }
+          }
+          return;
         }
     }
 
@@ -287,53 +342,107 @@ class og extends qm implements he {
     }
 
     final void a(int param0, int param1, int param2, int param3, qm param4, int param5) {
-        int var9 = CrazyCrystals.field_B;
-        tm var7 = new tm(((og) this).field_v);
-        qm var8 = (qm) (Object) var7.a((byte) 89);
-        if (param5 != 0) {
+        tm var7 = null;
+        qm var8 = null;
+        int var9 = 0;
+        var9 = CrazyCrystals.field_B;
+        var7 = new tm(((og) this).field_v);
+        var8 = (qm) (Object) var7.a((byte) 89);
+        if (param5 == 0) {
+          L0: while (true) {
+            L1: {
+              if (var8 == null) {
+                break L1;
+              } else {
+                if (!var8.b(-94)) {
+                  break L1;
+                } else {
+                  var8.a(param0, param1 - -((og) this).field_j, ((og) this).field_r + param2, param3, param4, 0);
+                  var8 = (qm) (Object) var7.b(param5 ^ 3);
+                  continue L0;
+                }
+              }
+            }
             return;
-        }
-        while (var8 != null) {
-            // ifeq L92
-            var8.a(param0, param1 - -((og) this).field_j, ((og) this).field_r + param2, param3, param4, 0);
-            var8 = (qm) (Object) var7.b(param5 ^ 3);
+          }
+        } else {
+          return;
         }
     }
 
     final boolean a(int param0, int param1, qm param2, boolean param3, int param4, int param5, int param6) {
-        int var10 = CrazyCrystals.field_B;
-        if (param3) {
+        tm var8 = null;
+        qm var9 = null;
+        int var10 = 0;
+        L0: {
+          var10 = CrazyCrystals.field_B;
+          if (!param3) {
+            break L0;
+          } else {
             field_y = null;
+            break L0;
+          }
         }
-        tm var8 = new tm(((og) this).field_v);
-        qm var9 = (qm) (Object) var8.a((byte) 72);
-        while (var9 != null) {
-            // ifeq L109
-            if (!(!var9.a(((og) this).field_r + param0, param1, param2, param3, param4 + ((og) this).field_j, param5, param6))) {
-                return true;
+        var8 = new tm(((og) this).field_v);
+        var9 = (qm) (Object) var8.a((byte) 72);
+        L1: while (true) {
+          L2: {
+            if (var9 == null) {
+              break L2;
+            } else {
+              if (!var9.b(110)) {
+                break L2;
+              } else {
+                if (var9.a(((og) this).field_r + param0, param1, param2, param3, param4 + ((og) this).field_j, param5, param6)) {
+                  return true;
+                } else {
+                  var9 = (qm) (Object) var8.b(-22);
+                  continue L1;
+                }
+              }
             }
-            var9 = (qm) (Object) var8.b(-22);
+          }
+          return false;
         }
-        return false;
     }
 
     final boolean a(int param0, int param1, qm param2, int param3, int param4, int param5, int param6) {
-        int var10 = CrazyCrystals.field_B;
-        tm var8 = new tm(((og) this).field_v);
-        if (param0 != 1) {
-            return false;
-        }
-        qm var9 = (qm) (Object) var8.a((byte) 112);
-        while (var9 != null) {
-            // ifeq L102
-            if (var9.e(param0 ^ -128)) {
-                if (var9.a(1, param1, param2, param3, param4, param5, param6)) {
-                    return true;
+        tm var8 = null;
+        qm var9 = null;
+        int var10 = 0;
+        var10 = CrazyCrystals.field_B;
+        var8 = new tm(((og) this).field_v);
+        if (param0 == 1) {
+          var9 = (qm) (Object) var8.a((byte) 112);
+          L0: while (true) {
+            L1: {
+              if (var9 == null) {
+                break L1;
+              } else {
+                if (!var9.b(param0 + -62)) {
+                  break L1;
+                } else {
+                  L2: {
+                    if (!var9.e(param0 ^ -128)) {
+                      break L2;
+                    } else {
+                      if (!var9.a(1, param1, param2, param3, param4, param5, param6)) {
+                        break L2;
+                      } else {
+                        return true;
+                      }
+                    }
+                  }
+                  var9 = (qm) (Object) var8.b(-103);
+                  continue L0;
                 }
+              }
             }
-            var9 = (qm) (Object) var8.b(-103);
+            return false;
+          }
+        } else {
+          return false;
         }
-        return false;
     }
 
     final StringBuilder a(int param0, int param1, Hashtable param2, StringBuilder param3) {

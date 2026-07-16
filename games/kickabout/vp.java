@@ -194,99 +194,84 @@ final class vp implements hc {
     final static void c(int param0) {
         Object var1 = null;
         Throwable var2 = null;
-        int statePc = 0;
-        Throwable caughtException = null;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    if (null != lw.field_e) {
-                        statePc = 2;
-                    } else {
-                        statePc = 7;
-                    }
-                    continue stateLoop;
-                }
-                case 2: {
-                    var1 = (Object) (Object) lw.field_e;
-                    // monitorenter lw.field_e
-                    statePc = 3;
-                    continue stateLoop;
-                }
-                case 3: {
-                    try {
-                        lw.field_e = null;
-                        // monitorexit var1
-                        statePc = 7;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_3) {
-                        caughtException = stateCaught_3;
-                        statePc = 5;
-                        continue stateLoop;
-                    }
-                }
-                case 5: {
-                    try {
-                        var2 = caughtException;
-                        // monitorexit var1
-                        statePc = 6;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_5) {
-                        caughtException = stateCaught_5;
-                        statePc = 5;
-                        continue stateLoop;
-                    }
-                }
-                case 6: {
-                    throw (RuntimeException) (Object) var2;
-                }
-                case 7: {
-                    if (param0 <= -103) {
-                        statePc = 9;
-                    } else {
-                        statePc = 8;
-                    }
-                    continue stateLoop;
-                }
-                case 8: {
-                    field_b = null;
-                    statePc = 9;
-                    continue stateLoop;
-                }
-                case 9: {
-                    return;
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
+        Throwable decompiledCaughtException = null;
+        L0: {
+          if (null != lw.field_e) {
+            var1 = (Object) (Object) lw.field_e;
+            synchronized (var1) {
+              L1: {
+                lw.field_e = null;
+                break L1;
+              }
             }
+            break L0;
+          } else {
+            break L0;
+          }
+        }
+        L2: {
+          if (param0 <= -103) {
+            break L2;
+          } else {
+            field_b = null;
+            break L2;
+          }
         }
     }
 
     public final void a(int param0, boolean param1) {
-        pe.b(0);
         Object var4 = null;
-        vc.a((String) null, -1);
-        if (param0 != -25) {
+        L0: {
+          pe.b(0);
+          var4 = null;
+          vc.a((String) null, -1);
+          if (param0 == -25) {
+            break L0;
+          } else {
             field_a = -18;
+            break L0;
+          }
         }
-        if (this.b(8)) {
-            if (sr.field_l != null) {
+        L1: {
+          if (!this.b(8)) {
+            break L1;
+          } else {
+            L2: {
+              if (sr.field_l == null) {
+                if (um.field_e == null) {
+                  break L2;
+                } else {
+                  if (!um.field_e.field_A) {
+                    break L2;
+                  } else {
+                    L3: {
+                      if (!um.field_e.e(param0 ^ 25)) {
+                        break L3;
+                      } else {
+                        if (um.field_e.b(-21660)) {
+                          break L3;
+                        } else {
+                          break L2;
+                        }
+                      }
+                    }
+                    ui.h(param0 ^ 15419);
+                    vc.a(wn.field_h, param0 ^ 24);
+                    jh.a(6356832, (byte) -25);
+                    break L2;
+                  }
+                }
+              } else {
                 ui.h(-15396);
                 vc.a(qr.field_g, -1);
                 jh.a(6356832, (byte) -25);
-            } else {
-                if (um.field_e != null) {
-                    if (um.field_e.field_A) {
-                        if (um.field_e.e(param0 ^ 25)) {
-                            // ifne L110
-                        } else {
-                            ui.h(param0 ^ 15419);
-                            vc.a(wn.field_h, param0 ^ 24);
-                            jh.a(6356832, (byte) -25);
-                        }
-                    }
-                }
+                break L2;
+              }
             }
             ((vp) this).field_i = ((vp) this).field_i + 1;
             ul.a(true, 300, 320, param1);
+            break L1;
+          }
         }
     }
 

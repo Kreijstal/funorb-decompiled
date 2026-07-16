@@ -22,7 +22,7 @@ final class p extends cg {
         if (param0 == -1) {
             return null;
         }
-        return (de) null;
+        return null;
     }
 
     p(hf param0, hf param1) {
@@ -41,7 +41,7 @@ final class p extends cg {
 
     final String a(String param0, boolean param1) {
         if (param1) {
-            ((p) this).field_j = (String) null;
+            ((p) this).field_j = null;
         }
         if (!(((p) this).field_o.a(param0, -79) != pe.field_b)) {
             return ((p) this).field_o.a(param0, param1);

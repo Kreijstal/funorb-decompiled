@@ -1,6 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
+import javax.sound.sampled.AudioFormat;
+
 final class kd extends gd {
     private javax.sound.sampled.AudioFormat field_v;
     private byte[] field_w;
@@ -183,8 +185,7 @@ final class kd extends gd {
           }
         }
         L4: {
-          new javax.sound.sampled.AudioFormat(stackIn_13_3, stackIn_13_4, stackIn_13_5, true, false);
-          ((kd) this).field_v = (javax.sound.sampled.AudioFormat) (Object) stackIn_13_1;
+          ((kd) this).field_v = new javax.sound.sampled.AudioFormat(stackIn_13_3, stackIn_13_4, stackIn_13_5, true, false);
           stackOut_13_0 = this;
           stackOut_13_1 = 256;
           stackIn_15_0 = stackOut_13_0;
@@ -216,7 +217,7 @@ final class kd extends gd {
         javax.sound.sampled.DataLine.Info var2 = null;
         try {
             var2 = new javax.sound.sampled.DataLine.Info(javax.sound.sampled.SourceDataLine.class, ((kd) this).field_v, param0 << (field_q ? 2 : 1));
-            ((kd) this).field_y = (javax.sound.sampled.SourceDataLine) javax.sound.sampled.AudioSystem.getLine((javax.sound.sampled.Line.Info) (Object) var2);
+            ((kd) this).field_y = (javax.sound.sampled.SourceDataLine) (Object) javax.sound.sampled.AudioSystem.getLine((javax.sound.sampled.Line.Info) (Object) var2);
             ((kd) this).field_y.open();
             ((kd) this).field_y.start();
             ((kd) this).field_x = param0;

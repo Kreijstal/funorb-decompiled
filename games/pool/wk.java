@@ -103,17 +103,18 @@ final class wk extends ch implements tb {
     }
 
     final static void a(boolean param0, int param1, boolean param2, int param3) {
-        vh var4_ref = null;
+        vh var4_ref_vh = null;
         int var4 = 0;
         vh var5 = null;
         vh var6 = null;
         int var7 = 0;
         int var8 = 0;
         int var9_int = 0;
-        String var9 = null;
+        Object var9 = null;
         int var10 = 0;
         int var11_int = 0;
-        String var11 = null;
+        Object var11 = null;
+        String var11_ref = null;
         int var12 = 0;
         int var13 = 0;
         String var14 = null;
@@ -198,9 +199,9 @@ final class wk extends ch implements tb {
           if (null != tp.field_e) {
             L1: {
               L2: {
-                var4_ref = kc.field_b;
+                var4_ref_vh = kc.field_b;
                 kc.field_b.field_Db = 0;
-                var4_ref.field_gb = 0;
+                var4_ref_vh.field_gb = 0;
                 var5 = d.field_c;
                 d.field_c.field_Db = 0;
                 var5.field_gb = 0;
@@ -377,7 +378,7 @@ final class wk extends ch implements tb {
                   L12: {
                     var9 = null;
                     if (ln.field_p) {
-                      var9 = "<col=A00000>" + ab.field_h + "</col>";
+                      var9 = (Object) (Object) ("<col=A00000>" + ab.field_h + "</col>");
                       var11 = var9;
                       var9 = var11;
                       var11 = var9;
@@ -394,15 +395,15 @@ final class wk extends ch implements tb {
                       break L0;
                     } else {
                       if (gf.field_b[var10]) {
-                        var11 = "<col=A00000>" + ck.field_R[var10] + "</col>";
-                        var9 = var11;
-                        var9 = var11;
+                        var11_ref = "<col=A00000>" + ck.field_R[var10] + "</col>";
+                        var9 = (Object) (Object) var11_ref;
+                        var9 = (Object) (Object) var11_ref;
                         if (var9 == null) {
-                          var9 = var11;
+                          var9 = (Object) (Object) var11_ref;
                           var10++;
                           continue L13;
                         } else {
-                          var9 = var9 + ", " + var11;
+                          var9 = (Object) (Object) (var9 + ", " + var11_ref);
                           var10++;
                           continue L13;
                         }
@@ -430,14 +431,14 @@ final class wk extends ch implements tb {
               }
               L15: {
                 var14 = stackIn_26_0;
-                var9 = var14;
-                var9 = var14;
-                var9 = var14;
+                var9 = (Object) (Object) var14;
+                var9 = (Object) (Object) var14;
+                var9 = (Object) (Object) var14;
                 var10 = gi.field_o.field_I.b(var14) - -(3 * gi.field_o.field_I.a('.'));
                 if ((48 & va.field_V) != 16) {
                   break L15;
                 } else {
-                  var9 = var14 + ".";
+                  var9 = (Object) (Object) (var14 + ".");
                   break L15;
                 }
               }
@@ -445,7 +446,7 @@ final class wk extends ch implements tb {
                 gi.field_o.field_Fb = 0;
                 gi.field_o.field_tb = (gi.field_o.field_gb - var10) / 2;
                 if (-33 == (48 & va.field_V ^ -1)) {
-                  var9 = var9 + "..";
+                  var9 = (Object) (Object) (var9 + "..");
                   break L16;
                 } else {
                   break L16;
@@ -453,13 +454,13 @@ final class wk extends ch implements tb {
               }
               L17: {
                 if ((48 & va.field_V) == 48) {
-                  var9 = var9 + "...";
+                  var9 = (Object) (Object) (var9 + "...");
                   break L17;
                 } else {
                   break L17;
                 }
               }
-              gi.field_o.field_nb = var9;
+              gi.field_o.field_nb = (String) var9;
               d.field_c.field_nb = be.field_K.toUpperCase();
               break L0;
             }
@@ -625,23 +626,23 @@ final class wk extends ch implements tb {
         L1: {
           if (param0.field_Wb != cm.field_J) {
             if (null == param0.field_Wb) {
-              // wide iinc 3 200
+              var3 += 200;
               break L1;
             } else {
               break L1;
             }
           } else {
-            // wide iinc 3 -200
+            var3 -= 200;
             break L1;
           }
         }
         L2: {
           if (param1.field_Wb == cm.field_J) {
-            // wide iinc 3 200
+            var3 += 200;
             break L2;
           } else {
             if (param1.field_Wb == null) {
-              // wide iinc 3 -200
+              var3 -= 200;
               break L2;
             } else {
               break L2;

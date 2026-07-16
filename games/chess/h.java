@@ -55,12 +55,14 @@ final class h extends o {
             param1 = ge.field_eb[var5];
             var6 = var5 << 1187598372;
             while (true) {
+                int incrementValue$0 = param1;
                 param1--;
-                if (param1 == 0) {
+                if (incrementValue$0 == 0) {
                     break;
                 }
+                int incrementValue$1 = var6;
                 var6++;
-                param4 = ve.field_Hb[var6];
+                param4 = ve.field_Hb[incrementValue$1];
                 param3[param0[param4]] = param3[param0[param4]] + 1;
                 ve.field_Hb[param3[param0[param4]]] = param4;
             }

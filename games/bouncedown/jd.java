@@ -166,12 +166,12 @@ class jd implements fc, sf {
                 var11 = ((jd) this).field_b.field_s;
                 break L2;
               } else {
-                if (var12 == -3) {
+                if ((var12 ^ -1) == -3) {
                   var11 = var10 - ((jd) this).field_b.field_x;
                   break L2;
                 } else {
                   L3: {
-                    if (-4 != var12) {
+                    if (-4 != (var12 ^ -1)) {
                       if ((var12 ^ -1) != -2) {
                         break L3;
                       } else {
@@ -429,10 +429,10 @@ class jd implements fc, sf {
           var4 = this.a((byte) 97, param1);
           var6 = ((jd) this).field_p;
           if (0 != var6) {
-            if (var6 != -3) {
+            if ((var6 ^ -1) != -3) {
               L3: {
                 if (var6 != 3) {
-                  if (-2 == var6) {
+                  if (-2 == (var6 ^ -1)) {
                     break L3;
                   } else {
                     break L3;
@@ -455,29 +455,32 @@ class jd implements fc, sf {
         L4: {
           L5: {
             var6 = ((jd) this).field_d;
-            if (-1 != var6) {
-              if (-4 == var6) {
+            if (-1 != (var6 ^ -1)) {
+              if (-4 == (var6 ^ -1)) {
                 break L5;
               } else {
-                if (var6 != 1) {
-                  if (2 != var6) {
-                    break L4;
-                  } else {
-                    if (param1.field_l instanceof mb) {
-                      ((mb) (Object) param1.field_l).a(((jd) this).a(true, param1), ((jd) this).field_b, var5, 97, var3);
+                L6: {
+                  if (var6 != 1) {
+                    if (2 != var6) {
                       break L4;
                     } else {
+                      if (param1.field_l instanceof mb) {
+                        ((mb) (Object) param1.field_l).a(((jd) this).a(true, param1), ((jd) this).field_b, var5, 97, var3);
+                        break L6;
+                      } else {
+                        break L4;
+                      }
+                    }
+                  } else {
+                    if (!(param1.field_l instanceof mb)) {
+                      break L6;
+                    } else {
+                      ((mb) (Object) param1.field_l).a(var5, ((jd) this).a(true, param1), ((jd) this).field_b, var3 >> 1277950913, false);
                       break L4;
                     }
                   }
-                } else {
-                  if (!(param1.field_l instanceof mb)) {
-                    break L4;
-                  } else {
-                    ((mb) (Object) param1.field_l).a(var5, ((jd) this).a(true, param1), ((jd) this).field_b, var3 >> 1277950913, false);
-                    break L4;
-                  }
                 }
+                break L4;
               }
             } else {
               break L5;

@@ -1,6 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
+import java.net.URL;
+
 final class va {
     static String field_b;
     static ci field_d;
@@ -162,12 +164,18 @@ final class va {
                   }
                 }
                 try {
-                  stackOut_46_0 = new java.net.URL(param2, var7.toString());
-                  stackIn_47_0 = stackOut_46_0;
-                } catch (java.lang.Exception decompiledCaughtParameter) {
-                  decompiledCaughtException = decompiledCaughtParameter;
-                  return (java.net.URL) (Object) stackIn_47_0;
+                  L9: {
+                    stackOut_46_0 = new java.net.URL(param2, var7.toString());
+                    stackIn_47_0 = stackOut_46_0;
+                    break L9;
+                  }
+                } catch (java.lang.Exception decompiledCaughtParameter0) {
+                  decompiledCaughtException = decompiledCaughtParameter0;
+                  var8 = (Exception) (Object) decompiledCaughtException;
+                  var8.printStackTrace();
+                  return param2;
                 }
+                return stackIn_47_0;
               }
             } else {
               return null;

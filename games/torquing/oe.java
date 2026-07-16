@@ -31,17 +31,24 @@ final class oe {
             }
             try {
               L2: {
-                if (param2 != null) {
-                  param0.field_p.postEvent((java.awt.AWTEvent) (Object) new java.awt.event.ActionEvent(param2, 1001, "dummy"));
-                  break L2;
-                } else {
-                  break L2;
+                L3: {
+                  if (param2 != null) {
+                    param0.field_p.postEvent((java.awt.AWTEvent) (Object) new java.awt.event.ActionEvent(param2, 1001, "dummy"));
+                    break L3;
+                  } else {
+                    break L3;
+                  }
                 }
+                break L2;
               }
-            } catch (java.lang.Exception decompiledCaughtParameter) {
-              decompiledCaughtException = decompiledCaughtParameter;
+            } catch (java.lang.Exception decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              L4: {
+                var3 = (Exception) (Object) decompiledCaughtException;
+                break L4;
+              }
             }
-            var3 = (Exception) (Object) decompiledCaughtException;
+            return;
           }
         }
     }

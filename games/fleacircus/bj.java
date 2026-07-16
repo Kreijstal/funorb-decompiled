@@ -38,28 +38,22 @@ final class bj extends uc implements java.awt.image.ImageProducer, java.awt.imag
     }
 
     final void a(java.awt.Component param0, int param1, int param2, int param3) {
-        try {
-            ((bj) this).field_g = new int[param1 * param2 + 1];
-            ((bj) this).field_h = param1;
-            ((bj) this).field_f = param2;
-            ((bj) this).field_j = (java.awt.image.ColorModel) (Object) new java.awt.image.DirectColorModel(32, 16711680, 65280, 255);
-            ((bj) this).field_b = param0.createImage((java.awt.image.ImageProducer) this);
-            this.d((byte) -112);
-            boolean discarded$12 = param0.prepareImage(((bj) this).field_b, (java.awt.image.ImageObserver) this);
-            if (param3 > -72) {
-              return;
-            } else {
-              this.d((byte) -112);
-              boolean discarded$13 = param0.prepareImage(((bj) this).field_b, (java.awt.image.ImageObserver) this);
-              this.d((byte) -112);
-              boolean discarded$14 = param0.prepareImage(((bj) this).field_b, (java.awt.image.ImageObserver) this);
-              ((bj) this).a((byte) 74);
-              return;
-            }
-        } catch (RuntimeException | Error decompiledUncheckedException) {
-            throw decompiledUncheckedException;
-        } catch (Throwable decompiledCheckedException) {
-            throw new RuntimeException(decompiledCheckedException);
+        ((bj) this).field_g = new int[param1 * param2 + 1];
+        ((bj) this).field_h = param1;
+        ((bj) this).field_f = param2;
+        ((bj) this).field_j = (java.awt.image.ColorModel) (Object) new java.awt.image.DirectColorModel(32, 16711680, 65280, 255);
+        ((bj) this).field_b = param0.createImage((java.awt.image.ImageProducer) this);
+        this.d((byte) -112);
+        boolean discarded$12 = param0.prepareImage(((bj) this).field_b, (java.awt.image.ImageObserver) this);
+        if (param3 > -72) {
+          return;
+        } else {
+          this.d((byte) -112);
+          boolean discarded$13 = param0.prepareImage(((bj) this).field_b, (java.awt.image.ImageObserver) this);
+          this.d((byte) -112);
+          boolean discarded$14 = param0.prepareImage(((bj) this).field_b, (java.awt.image.ImageObserver) this);
+          ((bj) this).a((byte) 74);
+          return;
         }
     }
 
@@ -79,8 +73,9 @@ final class bj extends uc implements java.awt.image.ImageProducer, java.awt.imag
             }
           } else {
             var1.e(8, 8);
+            int fieldTemp$2 = var1.field_i + 1;
             var1.field_i = var1.field_i + 1;
-            var2 = var1.field_i + 1;
+            var2 = fieldTemp$2;
             ec.a(var1, false);
             ud.field_b.c((byte) -80, var1.field_i - var2);
             continue L0;

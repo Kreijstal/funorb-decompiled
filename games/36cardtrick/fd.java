@@ -16,7 +16,7 @@ final class fd extends qb {
     int[] field_k;
 
     final static boolean a(boolean param0, char param1) {
-        ib var3 = null;
+        Object var3 = null;
         char stackIn_4_0 = 0;
         char stackIn_5_0 = 0;
         char stackIn_6_0 = 0;
@@ -53,7 +53,7 @@ final class fd extends qb {
                 if (32 != param1) {
                   if (param1 != 95) {
                     if (!param0) {
-                      var3 = (ib) null;
+                      var3 = null;
                       fd.a(-68, (ib) null, false);
                       return false;
                     } else {
@@ -79,7 +79,7 @@ final class fd extends qb {
 
     final static int a(int param0) {
         if (param0 != -28506) {
-            field_g = (int[]) null;
+            field_g = null;
             return kl.field_E;
         }
         return kl.field_E;
@@ -88,7 +88,7 @@ final class fd extends qb {
     public static void b(byte param0) {
         field_q = null;
         if (param0 != 3) {
-            ib var2 = (ib) null;
+            Object var2 = null;
             fd.a(21, (ib) null, false);
             field_g = null;
             return;

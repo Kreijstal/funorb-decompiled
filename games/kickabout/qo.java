@@ -103,24 +103,25 @@ final class qo extends jd {
 
     final static boolean a(boolean param0, byte param1) {
         try {
-            ml var2_ref = null;
+            ml var2_ref_ml = null;
             if (!(wt.field_A != null)) {
                 wt.field_A = vl.field_c.a(true, uc.field_E, rl.field_o);
             }
             if (wt.field_A.field_a == 0) {
                 return false;
             }
-            mp.field_i = nj.a(-100);
-            ci.field_c = nj.a(-100);
+            long dupTemp$0 = nj.a(-100);
+            mp.field_i = dupTemp$0;
+            ci.field_c = dupTemp$0;
             if (1 != wt.field_A.field_a) {
                 un.field_c = cp.field_h;
             } else {
                 try {
                     op.field_y = new bh((java.net.Socket) wt.field_A.field_b, vl.field_c);
                     or.field_d.field_n = 0;
-                    var2_ref = un.field_e;
+                    var2_ref_ml = un.field_e;
                     un.field_c = sd.field_d;
-                    var2_ref.field_n = 0;
+                    var2_ref_ml.field_n = 0;
                     dj.field_A = param0 ? -2 : -1;
                     wb.field_n = param0 ? -2 : -1;
                     kq.field_Ab = param0 ? -2 : -1;

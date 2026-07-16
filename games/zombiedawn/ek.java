@@ -67,8 +67,9 @@ final class ek extends fb {
         int var3 = 0;
         int var4 = 0;
         if (!((ek) this).field_G) {
+          int fieldTemp$1 = ((ek) this).field_K - 1;
           ((ek) this).field_K = ((ek) this).field_K - 1;
-          if (((ek) this).field_K - 1 <= 0) {
+          if (fieldTemp$1 <= 0) {
             if (param0 < -76) {
               var3 = param1.a(((ek) this).a(true), (byte) -59);
               var4 = param1.a(((ek) this).f(237239984), 0) + -24;
@@ -123,11 +124,13 @@ final class ek extends fb {
     }
 
     final void g(int param0) {
+        int fieldTemp$2 = ((ek) this).field_D + 1;
         ((ek) this).field_D = ((ek) this).field_D + 1;
-        if (-5 >= (((ek) this).field_D + 1 ^ -1)) {
+        if (-5 >= (fieldTemp$2 ^ -1)) {
           ((ek) this).field_D = 0;
+          int fieldTemp$3 = ((ek) this).field_F + 1;
           ((ek) this).field_F = ((ek) this).field_F + 1;
-          if (((ek) this).field_F + 1 < bg.field_o.length) {
+          if (fieldTemp$3 < bg.field_o.length) {
             if (param0 < 95) {
               ((ek) this).a(-13, -95, -104, 35);
               return;

@@ -12,152 +12,54 @@ final class jl {
     static tg field_c;
 
     public static void a(int param0) {
-        RuntimeException var1 = null;
-        RuntimeException decompiledCaughtException = null;
-        try {
-          L0: {
-            if (param0 > 68) {
-              break L0;
-            } else {
-              field_a = -28;
-              break L0;
-            }
-          }
+        if (param0 <= 68) {
+          field_a = -28;
           field_d = null;
           field_f = null;
           field_h = null;
           field_e = null;
           field_c = null;
           field_b = null;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var1 = decompiledCaughtException;
-          throw ii.a((Throwable) (Object) var1, "jl.B(" + param0 + 41);
+          return;
+        } else {
+          field_d = null;
+          field_f = null;
+          field_h = null;
+          field_e = null;
+          field_c = null;
+          field_b = null;
+          return;
         }
     }
 
     final static ng a(String param0, boolean param1, int param2, String param3) {
-        long var4_long = 0L;
-        RuntimeException var4 = null;
-        String var6 = null;
-        Object stackIn_2_0 = null;
-        ng stackIn_7_0 = null;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
-        RuntimeException stackIn_11_0 = null;
-        StringBuilder stackIn_11_1 = null;
-        RuntimeException stackIn_12_0 = null;
-        StringBuilder stackIn_12_1 = null;
-        String stackIn_12_2 = null;
-        RuntimeException stackIn_13_0 = null;
-        StringBuilder stackIn_13_1 = null;
-        RuntimeException stackIn_15_0 = null;
-        StringBuilder stackIn_15_1 = null;
-        RuntimeException stackIn_16_0 = null;
-        StringBuilder stackIn_16_1 = null;
-        String stackIn_16_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        ng stackOut_6_0 = null;
-        Object stackOut_1_0 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        RuntimeException stackOut_11_0 = null;
-        StringBuilder stackOut_11_1 = null;
-        String stackOut_11_2 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        String stackOut_9_2 = null;
-        RuntimeException stackOut_12_0 = null;
-        StringBuilder stackOut_12_1 = null;
-        RuntimeException stackOut_15_0 = null;
-        StringBuilder stackOut_15_1 = null;
-        String stackOut_15_2 = null;
-        RuntimeException stackOut_13_0 = null;
-        StringBuilder stackOut_13_1 = null;
-        String stackOut_13_2 = null;
-        try {
-          var4_long = 0L;
-          var6 = null;
-          if (param2 == 7117) {
-            L0: {
-              L1: {
-                if (param3.indexOf('@') != -1) {
-                  break L1;
+        long var4 = 0L;
+        Object var6 = null;
+        CharSequence var7 = null;
+        var4 = 0L;
+        var6 = null;
+        if (param2 != 7117) {
+          return null;
+        } else {
+          L0: {
+            L1: {
+              if (param3.indexOf('@') != -1) {
+                break L1;
+              } else {
+                var7 = (CharSequence) (Object) param3;
+                var4 = ma.a((byte) 82, var7);
+                if (Bounce.field_N == 0) {
+                  break L0;
                 } else {
-                  var4_long = ma.a((byte) 82, (CharSequence) (Object) param3);
-                  if (Bounce.field_N == 0) {
-                    break L0;
-                  } else {
-                    break L1;
-                  }
+                  break L1;
                 }
               }
-              var6 = param3;
-              break L0;
             }
-            stackOut_6_0 = ck.a(param0, var6, var4_long, 112, param1);
-            stackIn_7_0 = stackOut_6_0;
-          } else {
-            stackOut_1_0 = null;
-            stackIn_2_0 = stackOut_1_0;
-            return (ng) (Object) stackIn_2_0;
+            var6 = (Object) (Object) param3;
+            break L0;
           }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var4 = decompiledCaughtException;
-            stackOut_8_0 = (RuntimeException) var4;
-            stackOut_8_1 = new StringBuilder().append("jl.A(");
-            stackIn_11_0 = stackOut_8_0;
-            stackIn_11_1 = stackOut_8_1;
-            stackIn_9_0 = stackOut_8_0;
-            stackIn_9_1 = stackOut_8_1;
-            if (param0 == null) {
-              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
-              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
-              stackOut_11_2 = "null";
-              stackIn_12_0 = stackOut_11_0;
-              stackIn_12_1 = stackOut_11_1;
-              stackIn_12_2 = stackOut_11_2;
-              break L2;
-            } else {
-              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
-              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
-              stackOut_9_2 = "{...}";
-              stackIn_12_0 = stackOut_9_0;
-              stackIn_12_1 = stackOut_9_1;
-              stackIn_12_2 = stackOut_9_2;
-              break L2;
-            }
-          }
-          L3: {
-            stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
-            stackOut_12_1 = ((StringBuilder) (Object) stackIn_12_1).append(stackIn_12_2).append(44).append(param1).append(44).append(param2).append(44);
-            stackIn_15_0 = stackOut_12_0;
-            stackIn_15_1 = stackOut_12_1;
-            stackIn_13_0 = stackOut_12_0;
-            stackIn_13_1 = stackOut_12_1;
-            if (param3 == null) {
-              stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
-              stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
-              stackOut_15_2 = "null";
-              stackIn_16_0 = stackOut_15_0;
-              stackIn_16_1 = stackOut_15_1;
-              stackIn_16_2 = stackOut_15_2;
-              break L3;
-            } else {
-              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
-              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
-              stackOut_13_2 = "{...}";
-              stackIn_16_0 = stackOut_13_0;
-              stackIn_16_1 = stackOut_13_1;
-              stackIn_16_2 = stackOut_13_2;
-              break L3;
-            }
-          }
-          throw ii.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + 41);
+          return ck.a(param0, (String) var6, var4, 112, param1);
         }
-        return stackIn_7_0;
     }
 
     static {

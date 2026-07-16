@@ -71,47 +71,25 @@ final class vr {
         try {
             java.net.URL var2 = null;
             Exception var2_ref = null;
-            int statePc = 0;
-            Throwable caughtException = null;
-            stateLoop: while (true) {
-                switch (statePc) {
-                    case 0: {
-                        try {
-                            var2 = new java.net.URL(param0.getCodeBase(), "toserverlist.ws");
-                            param0.getAppletContext().showDocument(qr.a(param0, var2, 3), "_top");
-                            if (param1 == 23607) {
-                                statePc = 4;
-                            } else {
-                                statePc = 1;
-                            }
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_0) {
-                            caughtException = stateCaught_0;
-                            statePc = 3;
-                            continue stateLoop;
-                        }
-                    }
-                    case 1: {
-                        try {
-                            field_a = null;
-                            return;
-                        } catch (Throwable stateCaught_1) {
-                            caughtException = stateCaught_1;
-                            statePc = 3;
-                            continue stateLoop;
-                        }
-                    }
-                    case 3: {
-                        var2_ref = (Exception) (Object) caughtException;
-                        var2_ref.printStackTrace();
-                        statePc = 4;
-                        continue stateLoop;
-                    }
-                    case 4: {
-                        return;
-                    }
-                    default: throw new IllegalStateException("invalid CFG state " + statePc);
+            Throwable decompiledCaughtException = null;
+            try {
+              L0: {
+                var2 = new java.net.URL(param0.getCodeBase(), "toserverlist.ws");
+                param0.getAppletContext().showDocument(qr.a(param0, var2, 3), "_top");
+                if (param1 == 23607) {
+                  break L0;
+                } else {
+                  field_a = null;
+                  return;
                 }
+              }
+            } catch (java.lang.Exception decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              L1: {
+                var2_ref = (Exception) (Object) decompiledCaughtException;
+                var2_ref.printStackTrace();
+                break L1;
+              }
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -274,7 +252,7 @@ final class vr {
     }
 
     final static int a(int param0, int param1, byte param2) {
-        String var3 = null;
+        Object var3 = null;
         String var5 = null;
         String var6 = null;
         if (null != cv.field_b[param1][param0]) {
@@ -285,13 +263,13 @@ final class vr {
             if (0 != param1) {
               break L0;
             } else {
-              var3 = "park";
+              var3 = (Object) (Object) "park";
               break L0;
             }
           }
           L1: {
             if (1 == param1) {
-              var3 = "beach";
+              var3 = (Object) (Object) "beach";
               break L1;
             } else {
               break L1;
@@ -301,7 +279,7 @@ final class vr {
             if (-3 != (param1 ^ -1)) {
               break L2;
             } else {
-              var3 = "street";
+              var3 = (Object) (Object) "street";
               break L2;
             }
           }
@@ -310,11 +288,11 @@ final class vr {
           if (param2 <= -48) {
             if (bo.field_Cb.a(false, var6)) {
               cv.field_b[param1][param0] = wa.a((byte) 113, var6, bo.field_Cb, "");
-              if (param1 == -2) {
-                if (-4 != param0) {
+              if ((param1 ^ -1) == -2) {
+                if (-4 == (param0 ^ -1)) {
+                  nh.a(cv.field_b[param1][param0], 0.0, 1.6, 1.0);
                   return -1;
                 } else {
-                  nh.a(cv.field_b[param1][param0], 0.0, 1.6, 1.0);
                   return -1;
                 }
               } else {
@@ -327,11 +305,11 @@ final class vr {
             vr.a(22);
             if (bo.field_Cb.a(false, var6)) {
               cv.field_b[param1][param0] = wa.a((byte) 113, var6, bo.field_Cb, "");
-              if (param1 == -2) {
-                if (-4 != param0) {
+              if ((param1 ^ -1) == -2) {
+                if (-4 == (param0 ^ -1)) {
+                  nh.a(cv.field_b[param1][param0], 0.0, 1.6, 1.0);
                   return -1;
                 } else {
-                  nh.a(cv.field_b[param1][param0], 0.0, 1.6, 1.0);
                   return -1;
                 }
               } else {

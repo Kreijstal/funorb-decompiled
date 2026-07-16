@@ -308,30 +308,59 @@ final class df extends dj {
     }
 
     final static int g(int param0) {
-        int var3 = Kickabout.field_G;
         int var1 = 0;
-        while (nk.b((byte) -59)) {
-            re.field_c.d(105);
-            // ifeq L6
-            var1 = 1;
-        }
-        if (param0 >= -35) {
-            df.c(true);
-        }
-        re.field_c.a(-21174, ts.b(n.field_m, el.field_A, 16756), ts.b(vc.field_y, sm.field_q, 16756));
-        if (re.field_c.c(-1)) {
-            var1 = 1;
-        }
         int var2 = 0;
-        if (var1 != 0) {
-            if (!((re.field_c.field_e ^ -1) > -1)) {
-                var2 = gl.field_d[re.field_c.field_e];
-                if (!(2 != var2)) {
-                    dh.c((byte) -77);
-                }
+        int var3 = 0;
+        var3 = Kickabout.field_G;
+        var1 = 0;
+        L0: while (true) {
+          if (!nk.b((byte) -59)) {
+            L1: {
+              if (param0 < -35) {
+                break L1;
+              } else {
+                df.c(true);
+                break L1;
+              }
             }
+            L2: {
+              re.field_c.a(-21174, ts.b(n.field_m, el.field_A, 16756), ts.b(vc.field_y, sm.field_q, 16756));
+              if (!re.field_c.c(-1)) {
+                break L2;
+              } else {
+                var1 = 1;
+                break L2;
+              }
+            }
+            L3: {
+              var2 = 0;
+              if (var1 == 0) {
+                break L3;
+              } else {
+                if ((re.field_c.field_e ^ -1) <= -1) {
+                  var2 = gl.field_d[re.field_c.field_e];
+                  if (2 == var2) {
+                    dh.c((byte) -77);
+                    break L3;
+                  } else {
+                    break L3;
+                  }
+                } else {
+                  break L3;
+                }
+              }
+            }
+            return var2;
+          } else {
+            re.field_c.d(105);
+            if (!re.field_c.c(-1)) {
+              continue L0;
+            } else {
+              var1 = 1;
+              continue L0;
+            }
+          }
         }
-        return var2;
     }
 
     static {

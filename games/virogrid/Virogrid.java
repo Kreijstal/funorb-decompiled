@@ -29,8 +29,9 @@ public final class Virogrid extends od {
           bc.field_c = 3;
           ln.field_g = 3;
           co.field_l = 3;
-          gb.field_H = new jf();
-          ke.field_p = new jf();
+          jf dupTemp$2 = new jf();
+          gb.field_H = dupTemp$2;
+          ke.field_p = dupTemp$2;
           ad.field_g = new double[]{1.0, 0.0, 0.0};
           vm.field_d = new double[]{0.0, 0.0, -128.0};
           da.field_k = new double[3];
@@ -46,7 +47,7 @@ public final class Virogrid extends od {
           if (param0 > 59) {
             break L0;
           } else {
-            ck discarded$1 = Virogrid.b((byte) -64, false);
+            ck discarded$3 = Virogrid.b((byte) -64, false);
             break L0;
           }
         }
@@ -552,11 +553,11 @@ public final class Virogrid extends od {
           L1: {
             var8 = field_F ? 1 : 0;
             var2 = 1;
-            if (hm.field_c != i.field_y) {
+            if ((hm.field_c ^ -1) != (i.field_y ^ -1)) {
               break L1;
             } else {
               if (nf.field_g == pg.field_g) {
-                if (1 == i.field_y) {
+                if (1 == (i.field_y ^ -1)) {
                   ej.a(false, 25680);
                   var2 = 0;
                   break L0;
@@ -571,7 +572,7 @@ public final class Virogrid extends od {
           }
           if (i.field_y != -2) {
             if (1 == (hm.field_c ^ -1)) {
-              if (we.field_l > -17) {
+              if ((we.field_l ^ -1) > -17) {
                 dj.a(nf.field_g, false, -1, 3, i.field_y);
                 break L0;
               } else {
@@ -638,7 +639,7 @@ public final class Virogrid extends od {
                 if ((var6 ^ -1) <= -4) {
                   var6 = 3;
                   L6: while (true) {
-                    if (var34.length <= var6) {
+                    if ((var34.length ^ -1) >= (var6 ^ -1)) {
                       this.e((byte) -62);
                       kg.field_c.a(pe.field_j, bi.field_c);
                       nb.field_x.a(pe.field_j, bi.field_c);
@@ -741,12 +742,12 @@ public final class Virogrid extends od {
                   var19 = var26;
                   var12 = var19;
                   var3_ref_int__ = var12;
-                  if (-1 <= co.field_h) {
+                  if (-1 <= (co.field_h ^ -1)) {
                     break L10;
                   } else {
                     var6 = 256000;
                     L11: while (true) {
-                      if (-1 >= var6) {
+                      if (-1 <= (var6 ^ -1)) {
                         break L10;
                       } else {
                         var6--;
@@ -963,15 +964,15 @@ public final class Virogrid extends od {
 
     final void c(int param0) {
         int var2 = 0;
-        ic var2_ref = null;
+        Object var2_ref = null;
         int var3 = 0;
         int var4_int = 0;
-        ic var4 = null;
+        Object var4 = null;
         String[] var5_ref_String__ = null;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
-        ic var7_ref = null;
+        ic var7_ref_ic = null;
         String var8 = null;
         String var9 = null;
         int var9_int = 0;
@@ -1301,13 +1302,13 @@ public final class Virogrid extends od {
                             L22: {
                               var2_ref = null;
                               if (dd.field_a) {
-                                var2_ref = vg.field_I;
+                                var2_ref = (Object) (Object) vg.field_I;
                                 break L22;
                               } else {
                                 if (!on.field_d) {
                                   break L22;
                                 } else {
-                                  var2_ref = ei.field_b;
+                                  var2_ref = (Object) (Object) ei.field_b;
                                   break L22;
                                 }
                               }
@@ -1319,20 +1320,20 @@ public final class Virogrid extends od {
                                     var3 = sh.field_qb.g(11132);
                                     var4_int = sh.field_qb.g(11132);
                                     var5 = sh.field_qb.c((byte) -92);
-                                    var2_ref.field_C.a(var3, var4_int, 21428);
-                                    if (var2_ref.field_C.field_v != -1) {
+                                    ((ic) var2_ref).field_C.a(var3, var4_int, 21428);
+                                    if (((ic) var2_ref).field_C.field_v != -1) {
                                       break L24;
                                     } else {
-                                      var2_ref.field_C.field_v = var3;
+                                      ((ic) var2_ref).field_C.field_v = var3;
                                       break L24;
                                     }
                                   }
-                                  var2_ref.field_C.a(var2_ref.field_A.field_h, var2_ref.field_C.field_A, (byte) 14);
-                                  var2_ref.field_w = var5 + -50;
-                                  if (1 <= var2_ref.field_w) {
+                                  ((ic) var2_ref).field_C.a(((ic) var2_ref).field_A.field_h, ((ic) var2_ref).field_C.field_A, (byte) 14);
+                                  ((ic) var2_ref).field_w = var5 + -50;
+                                  if (1 <= ((ic) var2_ref).field_w) {
                                     continue L6;
                                   } else {
-                                    var2_ref.field_w = 1;
+                                    ((ic) var2_ref).field_w = 1;
                                     continue L6;
                                   }
                                 } else {
@@ -1342,18 +1343,18 @@ public final class Virogrid extends od {
                                     var5 = sh.field_qb.g(param0 ^ 11132);
                                     var6 = sh.field_qb.g(11132);
                                     var7 = sh.field_qb.g(11132);
-                                    int discarded$7 = var2_ref.field_C.a(var6, var7, (byte) 119, var3, var4_int, var5);
-                                    var2_ref.field_A.a(var2_ref.field_g, 31626);
-                                    var2_ref.field_A.field_k = -1;
-                                    var2_ref.field_D = false;
-                                    var2_ref.field_A.field_c = -1;
+                                    int discarded$7 = ((ic) var2_ref).field_C.a(var6, var7, (byte) 119, var3, var4_int, var5);
+                                    ((ic) var2_ref).field_A.a(((ic) var2_ref).field_g, 31626);
+                                    ((ic) var2_ref).field_A.field_k = -1;
+                                    ((ic) var2_ref).field_D = false;
+                                    ((ic) var2_ref).field_A.field_c = -1;
                                     continue L6;
                                   } else {
                                     if (-63 != (ci.field_q ^ -1)) {
-                                      if (-64 != ci.field_q) {
+                                      if (-64 != (ci.field_q ^ -1)) {
                                         if (64 != ci.field_q) {
                                           if (ci.field_q == 65) {
-                                            var2_ref.field_C.field_b = sh.field_qb.g(param0 ^ 11132);
+                                            ((ic) var2_ref).field_C.field_b = sh.field_qb.g(param0 ^ 11132);
                                             if (null == vg.field_I) {
                                               continue L6;
                                             } else {
@@ -1364,7 +1365,7 @@ public final class Virogrid extends od {
                                             if (66 != ci.field_q) {
                                               break L23;
                                             } else {
-                                              var2_ref.field_v = sh.field_qb.g(11132);
+                                              ((ic) var2_ref).field_v = sh.field_qb.g(11132);
                                               if (null == vg.field_I) {
                                                 continue L6;
                                               } else {
@@ -1374,11 +1375,11 @@ public final class Virogrid extends od {
                                             }
                                           }
                                         } else {
-                                          var2_ref.field_C.field_r = sh.field_qb.g(11132);
+                                          ((ic) var2_ref).field_C.field_r = sh.field_qb.g(11132);
                                           continue L6;
                                         }
                                       } else {
-                                        var2_ref.field_C.field_D = sh.field_qb.g(11132);
+                                        ((ic) var2_ref).field_C.field_D = sh.field_qb.g(11132);
                                         if (null == vg.field_I) {
                                           continue L6;
                                         } else {
@@ -1389,17 +1390,17 @@ public final class Virogrid extends od {
                                     } else {
                                       L25: {
                                         var3 = sh.field_qb.a((byte) -72);
-                                        var2_ref.field_C.d(-39, var3);
-                                        var2_ref.field_C.c((int) sh.field_qb.a((byte) -103), 2);
+                                        ((ic) var2_ref).field_C.d(-39, var3);
+                                        ((ic) var2_ref).field_C.c((int) sh.field_qb.a((byte) -103), 2);
                                         var4 = var2_ref;
-                                        if (1 == var4.field_e) {
+                                        if (1 == (((ic) var4).field_e ^ -1)) {
                                           break L25;
                                         } else {
-                                          var4.a(false, -1, 22273, false);
+                                          ((ic) var4).a(false, -1, 22273, false);
                                           break L25;
                                         }
                                       }
-                                      var4.field_n = 0;
+                                      ((ic) var4).field_n = 0;
                                       continue L6;
                                     }
                                   }
@@ -1452,7 +1453,7 @@ public final class Virogrid extends od {
                       wm.c((byte) -86);
                       var2 = sh.field_qb.g(11132);
                       var3 = sh.field_qb.g(11132);
-                      if (sh.field_qb.g(11132) == 0) {
+                      if ((sh.field_qb.g(11132) ^ -1) == -1) {
                         stackOut_45_0 = 0;
                         stackIn_46_0 = stackOut_45_0;
                         break L29;
@@ -1466,39 +1467,39 @@ public final class Virogrid extends od {
                     var5_ref_String__ = new String[2];
                     var7 = 0;
                     L30: while (true) {
-                      if (var5_ref_String__.length <= var7) {
+                      if ((var5_ref_String__.length ^ -1) >= (var7 ^ -1)) {
                         L31: {
                           var6 = -2;
                           var6 = sh.field_qb.a((byte) 62);
                           var6 = var6 - (var6 >>> 677961951);
-                          var7_ref = new ic(true, var2, var5_ref_String__, var6, var4_int != 0, var3, 0);
-                          var7_ref.field_C.a((jc) (Object) sh.field_qb, (byte) 57);
-                          var7_ref.field_A.a(false);
+                          var7_ref_ic = new ic(true, var2, var5_ref_String__, var6, var4_int != 0, var3, 0);
+                          var7_ref_ic.field_C.a((jc) (Object) sh.field_qb, (byte) 57);
+                          var7_ref_ic.field_A.a(false);
                           if (-58 != (ci.field_q ^ -1)) {
-                            ei.field_b = var7_ref;
+                            ei.field_b = var7_ref_ic;
                             on.field_d = true;
-                            var8 = var7_ref.field_C.field_c[0];
-                            var9 = var7_ref.field_C.field_c[1];
+                            var8 = var7_ref_ic.field_C.field_c[0];
+                            var9 = var7_ref_ic.field_C.field_c[1];
                             var14 = oi.a(new String[2], lm.field_k, 2);
-                            gf.a(mi.field_d, 0, false, var14, 1, var7_ref.field_C.field_c[0]);
+                            gf.a(mi.field_d, 0, false, var14, 1, var7_ref_ic.field_C.field_c[0]);
                             break L31;
                           } else {
                             L32: {
                               dd.field_a = true;
-                              vg.field_I = var7_ref;
-                              if (!var7_ref.field_t) {
+                              vg.field_I = var7_ref_ic;
+                              if (!var7_ref_ic.field_t) {
                                 break L32;
                               } else {
-                                var8 = var7_ref.field_C.field_c[0];
+                                var8 = var7_ref_ic.field_C.field_c[0];
                                 var9_int = 0;
                                 L33: while (true) {
                                   if (!jc.a(var8, true)) {
                                     var12 = oi.a(new String[1], pc.field_e, 2);
-                                    gf.a(mi.field_d, 0, false, var12, 1, var7_ref.field_C.field_c[0]);
+                                    gf.a(mi.field_d, 0, false, var12, 1, var7_ref_ic.field_C.field_c[0]);
                                     break L32;
                                   } else {
                                     var9_int++;
-                                    var8 = var7_ref.field_C.field_c[var9_int];
+                                    var8 = var7_ref_ic.field_C.field_c[var9_int];
                                     continue L33;
                                   }
                                 }
@@ -1538,7 +1539,7 @@ public final class Virogrid extends od {
                             }
                             stackIn_58_1[stackIn_58_2] = stackIn_58_3;
                             var13 = oi.a(stackIn_58_0, rf.field_f, 2);
-                            gf.a(mi.field_d, 0, false, var13, 1, var7_ref.field_C.field_c[0]);
+                            gf.a(mi.field_d, 0, false, var13, 1, var7_ref_ic.field_C.field_c[0]);
                             break L31;
                           }
                         }
@@ -1580,8 +1581,112 @@ public final class Virogrid extends od {
 
     private final void e(boolean param0) {
         int var2 = 0;
+        int[] var3 = null;
+        int var4 = 0;
+        int var5 = 0;
+        int var6 = 0;
+        int var7 = 0;
+        int[] var8 = null;
+        int[] var9 = null;
+        int[] var10 = null;
+        int var11 = 0;
+        double[] var11_ref_double__ = null;
+        int var12 = 0;
+        int var13 = 0;
+        int var14 = 0;
+        int var15 = 0;
         Object var16 = null;
+        fl var16_ref = null;
         int var17 = 0;
+        int[] var18 = null;
+        int[] var19 = null;
+        int[] var20 = null;
+        int[] var21 = null;
+        double[] var22 = null;
+        int[] var23 = null;
+        int[] var24 = null;
+        int[] var25 = null;
+        int[] var26 = null;
+        double[] var27 = null;
+        int[] var28 = null;
+        int[] var29 = null;
+        int[] var30 = null;
+        int[] var31 = null;
+        double[] var32 = null;
+        int[] var33 = null;
+        int[] var34 = null;
+        int[] var35 = null;
+        int[] var36 = null;
+        double[] var37 = null;
+        int stackIn_27_0 = 0;
+        int stackIn_30_0 = 0;
+        int stackIn_35_0 = 0;
+        int stackIn_64_0 = 0;
+        int stackIn_71_0 = 0;
+        il stackIn_90_0 = null;
+        il stackIn_91_0 = null;
+        il stackIn_92_0 = null;
+        int stackIn_92_1 = 0;
+        il stackIn_100_0 = null;
+        il stackIn_101_0 = null;
+        il stackIn_102_0 = null;
+        int stackIn_102_1 = 0;
+        il stackIn_105_0 = null;
+        il stackIn_106_0 = null;
+        il stackIn_107_0 = null;
+        int stackIn_107_1 = 0;
+        il stackIn_110_0 = null;
+        il stackIn_111_0 = null;
+        il stackIn_112_0 = null;
+        int stackIn_112_1 = 0;
+        il stackIn_115_0 = null;
+        il stackIn_116_0 = null;
+        il stackIn_117_0 = null;
+        int stackIn_117_1 = 0;
+        il stackIn_119_0 = null;
+        il stackIn_120_0 = null;
+        il stackIn_121_0 = null;
+        int stackIn_121_1 = 0;
+        int stackOut_26_0 = 0;
+        int stackOut_25_0 = 0;
+        int stackOut_29_0 = 0;
+        int stackOut_28_0 = 0;
+        int stackOut_34_0 = 0;
+        int stackOut_33_0 = 0;
+        int stackOut_63_0 = 0;
+        int stackOut_62_0 = 0;
+        int stackOut_70_0 = 0;
+        int stackOut_69_0 = 0;
+        il stackOut_99_0 = null;
+        il stackOut_101_0 = null;
+        int stackOut_101_1 = 0;
+        il stackOut_100_0 = null;
+        int stackOut_100_1 = 0;
+        il stackOut_109_0 = null;
+        il stackOut_111_0 = null;
+        int stackOut_111_1 = 0;
+        il stackOut_110_0 = null;
+        int stackOut_110_1 = 0;
+        il stackOut_114_0 = null;
+        il stackOut_116_0 = null;
+        int stackOut_116_1 = 0;
+        il stackOut_115_0 = null;
+        int stackOut_115_1 = 0;
+        il stackOut_118_0 = null;
+        il stackOut_120_0 = null;
+        int stackOut_120_1 = 0;
+        il stackOut_119_0 = null;
+        int stackOut_119_1 = 0;
+        il stackOut_104_0 = null;
+        il stackOut_106_0 = null;
+        int stackOut_106_1 = 0;
+        il stackOut_105_0 = null;
+        int stackOut_105_1 = 0;
+        il stackOut_89_0 = null;
+        il stackOut_91_0 = null;
+        int stackOut_91_1 = 0;
+        il stackOut_90_0 = null;
+        int stackOut_90_1 = 0;
         L0: {
           L1: {
             var16 = null;
@@ -1604,7 +1709,7 @@ public final class Virogrid extends od {
               }
             }
           }
-          if (1 != i.field_y) {
+          if (1 != (i.field_y ^ -1)) {
             if (1 != (hm.field_c ^ -1)) {
               if ((we.field_l ^ -1) <= -17) {
                 lm.a(hm.field_c, 1 + (-we.field_l + 32), false, pg.field_g, 0);
@@ -1624,7 +1729,7 @@ public final class Virogrid extends od {
               }
             }
           } else {
-            if (-17 <= we.field_l) {
+            if (-17 >= (we.field_l ^ -1)) {
               lm.a(hm.field_c, -1, false, pg.field_g, 0);
               break L0;
             } else {
@@ -1636,26 +1741,495 @@ public final class Virogrid extends od {
         }
         L2: {
           if (var2 == 0) {
-            if (i.field_y != 10) {
-              break L2;
-            } else {
-              if (-11 != hm.field_c) {
-                break L2;
+            break L2;
+          } else {
+            df.b(0, 0, 640, 480, 3158064);
+            this.e((byte) -62);
+            pc.a(mk.field_bb, (byte) -86);
+            si.a(nk.field_K, new double[3], new double[3], 64.0, 114.0, mk.field_bb, 2621440, 10420224, 10485760, 26148864, ke.field_p.field_k);
+            lk.field_Qb.a(pe.field_j, bi.field_c);
+            var33 = new int[12];
+            var28 = var33;
+            var23 = var28;
+            var18 = var23;
+            var3 = var18;
+            var4 = 0;
+            L3: while (true) {
+              if (var4 >= 3) {
+                var4 = 3;
+                L4: while (true) {
+                  if ((var4 ^ -1) <= (var33.length ^ -1)) {
+                    L5: {
+                      if (vm.field_d[2] <= 0.0) {
+                        stackOut_26_0 = 0;
+                        stackIn_27_0 = stackOut_26_0;
+                        break L5;
+                      } else {
+                        stackOut_25_0 = 1;
+                        stackIn_27_0 = stackOut_25_0;
+                        break L5;
+                      }
+                    }
+                    L6: {
+                      var4 = stackIn_27_0;
+                      if (0.0 >= vm.field_d[0]) {
+                        stackOut_29_0 = 0;
+                        stackIn_30_0 = stackOut_29_0;
+                        break L6;
+                      } else {
+                        stackOut_28_0 = 1;
+                        stackIn_30_0 = stackOut_28_0;
+                        break L6;
+                      }
+                    }
+                    L7: {
+                      L8: {
+                        var5 = stackIn_30_0;
+                        if (72.0 < vm.field_d[0]) {
+                          break L8;
+                        } else {
+                          if (vm.field_d[0] >= -72.0) {
+                            stackOut_34_0 = 0;
+                            stackIn_35_0 = stackOut_34_0;
+                            break L7;
+                          } else {
+                            break L8;
+                          }
+                        }
+                      }
+                      stackOut_33_0 = 1;
+                      stackIn_35_0 = stackOut_33_0;
+                      break L7;
+                    }
+                    L9: {
+                      L10: {
+                        var6 = stackIn_35_0;
+                        if ((we.field_c.field_F ^ -1) != (((Virogrid) this).field_E ^ -1)) {
+                          break L10;
+                        } else {
+                          if (da.field_k[0] != vm.field_d[0]) {
+                            break L10;
+                          } else {
+                            if (vm.field_d[1] != da.field_k[1]) {
+                              break L10;
+                            } else {
+                              if (vm.field_d[2] != da.field_k[2]) {
+                                break L10;
+                              } else {
+                                break L9;
+                              }
+                            }
+                          }
+                        }
+                      }
+                      L11: {
+                        ((Virogrid) this).field_E = we.field_c.field_F;
+                        da.field_k[1] = vm.field_d[1];
+                        da.field_k[2] = vm.field_d[2];
+                        da.field_k[0] = vm.field_d[0];
+                        qc.a(118);
+                        vb.field_l.b();
+                        df.b(0, 0, 640, 480, 0);
+                        kg.field_c.a(pe.field_j, bi.field_c);
+                        nb.field_x.a(pe.field_j, bi.field_c);
+                        kf.field_c.a(pe.field_j, bi.field_c);
+                        cm.field_k.a(pe.field_j, bi.field_c);
+                        ba.field_c.a(pe.field_j, bi.field_c);
+                        wf.field_j.a(pe.field_j, bi.field_c);
+                        fl.field_s.a(pe.field_j, bi.field_c);
+                        if (var4 == 0) {
+                          th.field_y.a(var33, ((Virogrid) this).field_J);
+                          pj.field_a.a(var33, ((Virogrid) this).field_H);
+                          if (var5 == 0) {
+                            L12: {
+                              if (var6 != 0) {
+                                break L12;
+                              } else {
+                                qg.field_h.a(var33, ((Virogrid) this).field_M);
+                                break L12;
+                              }
+                            }
+                            jg.field_i.a(var33, ((Virogrid) this).field_G);
+                            break L11;
+                          } else {
+                            L13: {
+                              if (var6 == 0) {
+                                jg.field_i.a(var33, ((Virogrid) this).field_G);
+                                break L13;
+                              } else {
+                                break L13;
+                              }
+                            }
+                            qg.field_h.a(var33, ((Virogrid) this).field_M);
+                            break L11;
+                          }
+                        } else {
+                          ee.field_a.a(var33, ((Virogrid) this).field_K);
+                          og.field_l.a(var33, ((Virogrid) this).field_J);
+                          if (var5 == 0) {
+                            L14: {
+                              if (var6 != 0) {
+                                break L14;
+                              } else {
+                                ab.field_L.a(var33, ((Virogrid) this).field_D);
+                                break L14;
+                              }
+                            }
+                            rc.field_o.a(var33, ((Virogrid) this).field_B);
+                            break L11;
+                          } else {
+                            L15: {
+                              if (var6 == 0) {
+                                rc.field_o.a(var33, ((Virogrid) this).field_B);
+                                break L15;
+                              } else {
+                                break L15;
+                              }
+                            }
+                            ab.field_L.a(var33, ((Virogrid) this).field_D);
+                            break L11;
+                          }
+                        }
+                      }
+                      L16: {
+                        if (var4 == 0) {
+                          td.field_i.a(var33, ((Virogrid) this).field_L);
+                          break L16;
+                        } else {
+                          hn.field_x.a(var33, ((Virogrid) this).field_N);
+                          break L16;
+                        }
+                      }
+                      ul.b((byte) 116);
+                      break L9;
+                    }
+                    L17: {
+                      vb.field_l.d(0, 0);
+                      var7 = id.field_r % 64;
+                      if (32 > var7) {
+                        stackOut_63_0 = -16 + var7;
+                        stackIn_64_0 = stackOut_63_0;
+                        break L17;
+                      } else {
+                        stackOut_62_0 = -var7 + 48;
+                        stackIn_64_0 = stackOut_62_0;
+                        break L17;
+                      }
+                    }
+                    L18: {
+                      var7 = stackIn_64_0;
+                      var7 = var7 << 2;
+                      if (!ke.field_p.field_d) {
+                        break L18;
+                      } else {
+                        var7 = 0;
+                        break L18;
+                      }
+                    }
+                    L19: {
+                      var36 = new int[3];
+                      var31 = var36;
+                      var26 = var31;
+                      var21 = var26;
+                      var8 = var21;
+                      var34 = new int[3];
+                      var29 = var34;
+                      var24 = var29;
+                      var19 = var24;
+                      var9 = var19;
+                      var35 = new int[3];
+                      var30 = var35;
+                      var25 = var30;
+                      var20 = var25;
+                      var10 = var20;
+                      var8[0] = (int)ao.field_Hb << 2115963748;
+                      var34[0] = 800;
+                      var8[1] = -(int)ao.field_Hb << 62284740;
+                      var35[0] = var7;
+                      var34[1] = 800;
+                      var36[2] = 0;
+                      var35[1] = var7;
+                      var34[2] = 1280;
+                      var35[2] = 0;
+                      si.a(pe.field_j, var36, var34, var35);
+                      if (ke.field_p.field_m) {
+                        L20: {
+                          var11 = id.field_r % 128;
+                          if (-65 < (var11 ^ -1)) {
+                            stackOut_70_0 = var11;
+                            stackIn_71_0 = stackOut_70_0;
+                            break L20;
+                          } else {
+                            stackOut_69_0 = -var11 + 128;
+                            stackIn_71_0 = stackOut_69_0;
+                            break L20;
+                          }
+                        }
+                        var11 = stackIn_71_0;
+                        var12 = 38784 - -(var11 * 2);
+                        qf.a(240, 0, 0, var36, var34, var35, var12, var12, var12);
+                        var7 = var36[0];
+                        var8[0] = var36[1];
+                        var36[1] = var7;
+                        var7 = var34[0];
+                        var9[0] = var34[1];
+                        var34[1] = var7;
+                        var7 = var35[0];
+                        var10[0] = var35[1];
+                        var35[1] = var7;
+                        qf.a(240, 0, 0, var36, var34, var35, var12, var12, var12);
+                        break L19;
+                      } else {
+                        break L19;
+                      }
+                    }
+                    L21: {
+                      if (!ke.field_p.field_d) {
+                        System.out.println("Warning, drawing non-single plane");
+                        break L21;
+                      } else {
+                        L22: {
+                          if (0.0 > nk.field_K[11]) {
+                            var37 = new double[ad.field_g.length];
+                            var32 = var37;
+                            var27 = var32;
+                            var22 = var27;
+                            var11_ref_double__ = var22;
+                            var12 = 0;
+                            L23: while (true) {
+                              if ((var12 ^ -1) <= (var37.length ^ -1)) {
+                                si.a(nk.field_K, new double[3], var11_ref_double__, (double)ao.field_Hb, (double)we.field_k, c.field_d, 7208960, 34668544, 0, 26148864, ke.field_p.field_k);
+                                break L22;
+                              } else {
+                                var11_ref_double__[var12] = -ad.field_g[var12];
+                                var12++;
+                                continue L23;
+                              }
+                            }
+                          } else {
+                            si.a(nk.field_K, new double[3], ad.field_g, (double)ao.field_Hb, (double)we.field_k, c.field_d, 7208960, 34668544, 0, 26148864, ke.field_p.field_k);
+                            break L22;
+                          }
+                        }
+                        if (ke.field_p.field_f > 0) {
+                          si.a(nk.field_K, new double[3], ad.field_g, (double)ao.field_Hb, (double)we.field_k, pj.field_d, 40, ke.field_p.field_f);
+                          break L21;
+                        } else {
+                          break L21;
+                        }
+                      }
+                    }
+                    var16_ref = (fl) (Object) sh.field_tb.a((byte) -61);
+                    L24: while (true) {
+                      if (var16_ref == null) {
+                        if (var4 != 0) {
+                          L25: {
+                            stackOut_99_0 = th.field_y;
+                            stackIn_101_0 = stackOut_99_0;
+                            stackIn_100_0 = stackOut_99_0;
+                            if (param0) {
+                              stackOut_101_0 = (il) (Object) stackIn_101_0;
+                              stackOut_101_1 = 0;
+                              stackIn_102_0 = stackOut_101_0;
+                              stackIn_102_1 = stackOut_101_1;
+                              break L25;
+                            } else {
+                              stackOut_100_0 = (il) (Object) stackIn_100_0;
+                              stackOut_100_1 = 1;
+                              stackIn_102_0 = stackOut_100_0;
+                              stackIn_102_1 = stackOut_100_1;
+                              break L25;
+                            }
+                          }
+                          sj.a(stackIn_102_0, stackIn_102_1 != 0, var33, ((Virogrid) this).field_J);
+                          sj.a(pj.field_a, false, var33, ((Virogrid) this).field_H);
+                          if (var5 != 0) {
+                            L26: {
+                              stackOut_109_0 = qg.field_h;
+                              stackIn_111_0 = stackOut_109_0;
+                              stackIn_110_0 = stackOut_109_0;
+                              if (param0) {
+                                stackOut_111_0 = (il) (Object) stackIn_111_0;
+                                stackOut_111_1 = 0;
+                                stackIn_112_0 = stackOut_111_0;
+                                stackIn_112_1 = stackOut_111_1;
+                                break L26;
+                              } else {
+                                stackOut_110_0 = (il) (Object) stackIn_110_0;
+                                stackOut_110_1 = 1;
+                                stackIn_112_0 = stackOut_110_0;
+                                stackIn_112_1 = stackOut_110_1;
+                                break L26;
+                              }
+                            }
+                            L27: {
+                              sj.a(stackIn_112_0, stackIn_112_1 != 0, var33, ((Virogrid) this).field_M);
+                              if (var6 != 0) {
+                                L28: {
+                                  stackOut_114_0 = rc.field_o;
+                                  stackIn_116_0 = stackOut_114_0;
+                                  stackIn_115_0 = stackOut_114_0;
+                                  if (param0) {
+                                    stackOut_116_0 = (il) (Object) stackIn_116_0;
+                                    stackOut_116_1 = 0;
+                                    stackIn_117_0 = stackOut_116_0;
+                                    stackIn_117_1 = stackOut_116_1;
+                                    break L28;
+                                  } else {
+                                    stackOut_115_0 = (il) (Object) stackIn_115_0;
+                                    stackOut_115_1 = 1;
+                                    stackIn_117_0 = stackOut_115_0;
+                                    stackIn_117_1 = stackOut_115_1;
+                                    break L28;
+                                  }
+                                }
+                                sj.a(stackIn_117_0, stackIn_117_1 != 0, var33, ((Virogrid) this).field_B);
+                                break L27;
+                              } else {
+                                break L27;
+                              }
+                            }
+                            L29: {
+                              stackOut_118_0 = jg.field_i;
+                              stackIn_120_0 = stackOut_118_0;
+                              stackIn_119_0 = stackOut_118_0;
+                              if (param0) {
+                                stackOut_120_0 = (il) (Object) stackIn_120_0;
+                                stackOut_120_1 = 0;
+                                stackIn_121_0 = stackOut_120_0;
+                                stackIn_121_1 = stackOut_120_1;
+                                break L29;
+                              } else {
+                                stackOut_119_0 = (il) (Object) stackIn_119_0;
+                                stackOut_119_1 = 1;
+                                stackIn_121_0 = stackOut_119_0;
+                                stackIn_121_1 = stackOut_119_1;
+                                break L29;
+                              }
+                            }
+                            sj.a(stackIn_121_0, stackIn_121_1 != 0, var33, ((Virogrid) this).field_G);
+                            break L2;
+                          } else {
+                            L30: {
+                              sj.a(jg.field_i, false, var33, ((Virogrid) this).field_G);
+                              if (var6 == 0) {
+                                break L30;
+                              } else {
+                                L31: {
+                                  stackOut_104_0 = ab.field_L;
+                                  stackIn_106_0 = stackOut_104_0;
+                                  stackIn_105_0 = stackOut_104_0;
+                                  if (param0) {
+                                    stackOut_106_0 = (il) (Object) stackIn_106_0;
+                                    stackOut_106_1 = 0;
+                                    stackIn_107_0 = stackOut_106_0;
+                                    stackIn_107_1 = stackOut_106_1;
+                                    break L31;
+                                  } else {
+                                    stackOut_105_0 = (il) (Object) stackIn_105_0;
+                                    stackOut_105_1 = 1;
+                                    stackIn_107_0 = stackOut_105_0;
+                                    stackIn_107_1 = stackOut_105_1;
+                                    break L31;
+                                  }
+                                }
+                                sj.a(stackIn_107_0, stackIn_107_1 != 0, var33, ((Virogrid) this).field_D);
+                                break L30;
+                              }
+                            }
+                            sj.a(qg.field_h, false, var33, ((Virogrid) this).field_M);
+                            break L2;
+                          }
+                        } else {
+                          L32: {
+                            stackOut_89_0 = ee.field_a;
+                            stackIn_91_0 = stackOut_89_0;
+                            stackIn_90_0 = stackOut_89_0;
+                            if (param0) {
+                              stackOut_91_0 = (il) (Object) stackIn_91_0;
+                              stackOut_91_1 = 0;
+                              stackIn_92_0 = stackOut_91_0;
+                              stackIn_92_1 = stackOut_91_1;
+                              break L32;
+                            } else {
+                              stackOut_90_0 = (il) (Object) stackIn_90_0;
+                              stackOut_90_1 = 1;
+                              stackIn_92_0 = stackOut_90_0;
+                              stackIn_92_1 = stackOut_90_1;
+                              break L32;
+                            }
+                          }
+                          sj.a(stackIn_92_0, stackIn_92_1 != 0, var33, ((Virogrid) this).field_K);
+                          sj.a(og.field_l, false, var33, ((Virogrid) this).field_C);
+                          if (var5 == 0) {
+                            L33: {
+                              sj.a(rc.field_o, false, var33, ((Virogrid) this).field_B);
+                              if (var6 == 0) {
+                                break L33;
+                              } else {
+                                sj.a(qg.field_h, false, var33, ((Virogrid) this).field_M);
+                                break L33;
+                              }
+                            }
+                            sj.a(ab.field_L, false, var33, ((Virogrid) this).field_D);
+                            break L2;
+                          } else {
+                            L34: {
+                              sj.a(ab.field_L, false, var33, ((Virogrid) this).field_D);
+                              if (var6 == 0) {
+                                break L34;
+                              } else {
+                                sj.a(jg.field_i, false, var33, ((Virogrid) this).field_G);
+                                break L34;
+                              }
+                            }
+                            sj.a(rc.field_o, false, var33, ((Virogrid) this).field_B);
+                            break L2;
+                          }
+                        }
+                      } else {
+                        L35: {
+                          var11 = -(pe.field_j[0] << -603747578) + (var16_ref.field_n >> 664161928);
+                          var7 = -(pe.field_j[2] << -1367555290) + (var16_ref.field_m >> -435917880);
+                          var12 = -(pe.field_j[1] << 533482790) + (var16_ref.field_p >> 1925002888);
+                          var13 = pe.field_j[5] * var7 + var12 * pe.field_j[4] + var11 * pe.field_j[3];
+                          var15 = var7 * pe.field_j[11] + (var12 * pe.field_j[10] + var11 * pe.field_j[9]);
+                          var14 = var7 * pe.field_j[8] + var12 * pe.field_j[7] + pe.field_j[6] * var11;
+                          var7 = var15 >> 144557622;
+                          if (-1 <= (var15 ^ -1)) {
+                            break L35;
+                          } else {
+                            df.a((j.field_b << 903978180) - -((var13 >> 1501989897) / var7), (var14 >> -890619063) / var7 + (tm.field_g << -1979774556), 16384 / var7, var16_ref.field_o * 5 / 3, pj.field_d);
+                            break L35;
+                          }
+                        }
+                        var16_ref = (fl) (Object) sh.field_tb.a(16213);
+                        continue L24;
+                      }
+                    }
+                  } else {
+                    var3[var4] = pe.field_j[var4];
+                    var4++;
+                    continue L4;
+                  }
+                }
               } else {
-                ij.a((byte) 105);
-                break L2;
+                var3[var4] = pe.field_j[var4] << -188484317;
+                var4++;
+                continue L3;
               }
             }
+          }
+        }
+        L36: {
+          if (i.field_y != 10) {
+            break L36;
           } else {
-            if (i.field_y != 10) {
-              break L2;
+            if (-11 != (hm.field_c ^ -1)) {
+              break L36;
             } else {
-              if (-11 != hm.field_c) {
-                break L2;
-              } else {
-                ij.a((byte) 105);
-                break L2;
-              }
+              ij.a((byte) 105);
+              break L36;
             }
           }
         }
@@ -1677,7 +2251,7 @@ public final class Virogrid extends od {
         var7 = field_F ? 1 : 0;
         if (!param0) {
           L0: {
-            if (-1 == tg.field_x) {
+            if (-1 == (tg.field_x ^ -1)) {
               L1: {
                 var3 = 0;
                 var4 = 0;
@@ -1687,7 +2261,7 @@ public final class Virogrid extends od {
                       if (i.field_y != hm.field_c) {
                         break L3;
                       } else {
-                        if (pg.field_g == nf.field_g) {
+                        if ((pg.field_g ^ -1) == (nf.field_g ^ -1)) {
                           if (i.field_y == -1) {
                             if (!aj.field_a) {
                               vg.field_I.a(-104, true);
@@ -1762,7 +2336,7 @@ public final class Virogrid extends od {
                               if (!bl.field_B) {
                                 break L8;
                               } else {
-                                boolean discarded$5 = ln.a(15, (byte) 104, 12, 13);
+                                boolean discarded$6 = ln.a(15, (byte) 104, 12, 13);
                                 break L8;
                               }
                             }
@@ -1820,7 +2394,7 @@ public final class Virogrid extends od {
                               if (!bl.field_B) {
                                 break L13;
                               } else {
-                                boolean discarded$6 = ln.a(15, (byte) 104, 12, 13);
+                                boolean discarded$7 = ln.a(15, (byte) 104, 12, 13);
                                 break L13;
                               }
                             }
@@ -1889,10 +2463,11 @@ public final class Virogrid extends od {
                 if (null == ((Virogrid) this).field_I.a((byte) -102)) {
                   break L19;
                 } else {
+                  int fieldTemp$8 = ((Virogrid) this).field_A + 1;
                   ((Virogrid) this).field_A = ((Virogrid) this).field_A + 1;
-                  if (((Virogrid) this).field_A + 1 == 335) {
+                  if (fieldTemp$8 == 335) {
                     ((Virogrid) this).field_A = 0;
-                    l discarded$7 = ((Virogrid) this).field_I.d(-29889);
+                    l discarded$9 = ((Virogrid) this).field_I.d(-29889);
                     break L19;
                   } else {
                     break L19;
@@ -1906,7 +2481,7 @@ public final class Virogrid extends od {
                 break L0;
               }
             } else {
-              if (-2 == tg.field_x) {
+              if (-2 == (tg.field_x ^ -1)) {
                 wa.field_K = wa.field_K + 1;
                 if ((wa.field_K ^ -1) == -17) {
                   L20: {
@@ -1926,39 +2501,38 @@ public final class Virogrid extends od {
               } else {
                 if (2 != tg.field_x) {
                   wa.field_K = wa.field_K - 1;
-                  if (wa.field_K == 0) {
+                  if ((wa.field_K ^ -1) == -1) {
                     tg.field_x = 0;
                     break L0;
                   } else {
                     break L0;
                   }
                 } else {
-                  if (!qm.i(20)) {
-                    L21: {
-                      hm.field_c = pm.field_k;
-                      wn.c(param0);
-                      if (a.field_D) {
-                        a.field_D = false;
-                        ic.a(ib.field_b, hd.field_b.field_A, 320, ib.field_b, 8, (e) (Object) mc.field_b, 2, hd.field_b.field_G + hd.field_b.field_A, 8, -16824, false, 240);
-                        break L21;
-                      } else {
-                        break L21;
+                  L21: {
+                    if (!qm.i(20)) {
+                      L22: {
+                        hm.field_c = pm.field_k;
+                        wn.c(param0);
+                        if (a.field_D) {
+                          a.field_D = false;
+                          ic.a(ib.field_b, hd.field_b.field_A, 320, ib.field_b, 8, (e) (Object) mc.field_b, 2, hd.field_b.field_G + hd.field_b.field_A, 8, -16824, false, 240);
+                          break L22;
+                        } else {
+                          break L22;
+                        }
                       }
-                    }
-                    L22: {
                       if (mf.a(86, hm.field_c)) {
                         wm.c((byte) -86);
-                        break L22;
+                        break L21;
                       } else {
-                        break L22;
+                        break L21;
                       }
+                    } else {
+                      break L21;
                     }
-                    tg.field_x = 3;
-                    break L0;
-                  } else {
-                    tg.field_x = 3;
-                    break L0;
                   }
+                  tg.field_x = 3;
+                  break L0;
                 }
               }
             }
@@ -2020,7 +2594,7 @@ public final class Virogrid extends od {
                     if (!vg.field_I.field_t) {
                       break L28;
                     } else {
-                      if (vg.field_I.field_C.field_u <= sh.a(4712, 40000)) {
+                      if ((vg.field_I.field_C.field_u ^ -1) >= (sh.a(4712, 40000) ^ -1)) {
                         break L28;
                       } else {
                         if (!vg.field_I.field_l) {
@@ -2036,7 +2610,7 @@ public final class Virogrid extends od {
                   }
                 }
               }
-              if (-1 <= hj.field_h) {
+              if (-1 <= (hj.field_h ^ -1)) {
                 var3 = 1 + c.field_a;
                 if (ca.field_G < var3) {
                   ca.field_G = 0;
@@ -2049,7 +2623,7 @@ public final class Virogrid extends od {
                 L29: {
                   hj.field_h = hj.field_h - 1;
                   var3 = c.field_a + -4;
-                  if (-1 <= var3) {
+                  if (-1 >= (var3 ^ -1)) {
                     break L29;
                   } else {
                     var3 = 0;
@@ -2060,7 +2634,7 @@ public final class Virogrid extends od {
                 if (0 != sh.a(4712, 20)) {
                   break L27;
                 } else {
-                  pe discarded$8 = ed.a(sh.a(4712, 256), dj.field_f[sh.a(4712, 3)], -629134904, 96);
+                  pe discarded$10 = ed.a(sh.a(4712, 256), dj.field_f[sh.a(4712, 3)], -629134904, 96);
                   break L27;
                 }
               }
@@ -2068,7 +2642,7 @@ public final class Virogrid extends od {
               if (-1 != (sh.a(4712, 1000) ^ -1)) {
                 break L27;
               } else {
-                pe discarded$9 = gi.a(dj.field_f[sh.a(4712, 3)], 100, 24);
+                pe discarded$11 = gi.a(dj.field_f[sh.a(4712, 3)], 100, 24);
                 break L27;
               }
             }

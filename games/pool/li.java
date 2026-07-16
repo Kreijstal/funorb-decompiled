@@ -49,8 +49,9 @@ final class li {
         int var3 = 0;
         int var4 = 0;
         L0: {
+          int fieldTemp$3 = ((li) this).field_i + 1;
           ((li) this).field_i = ((li) this).field_i + 1;
-          ((li) this).field_k = ((li) this).field_k + (((li) this).field_i + 1);
+          ((li) this).field_k = ((li) this).field_k + fieldTemp$3;
           var2 = 0;
           if (param0) {
             break L0;
@@ -84,10 +85,12 @@ final class li {
               }
             }
             ((li) this).field_m = ((li) this).field_m + ((li) this).field_a[255 & var2 + 128];
-            var4 = ((li) this).field_k + (((li) this).field_a[rb.b(var3 >> -108857086, 255)] + ((li) this).field_m);
-            ((li) this).field_a[var2] = ((li) this).field_k + (((li) this).field_a[rb.b(var3 >> -108857086, 255)] + ((li) this).field_m);
-            ((li) this).field_k = ((li) this).field_a[rb.b(var4, 261279) >> -1635328984 >> -1893269758] - -var3;
-            ((li) this).field_j[var2] = ((li) this).field_a[rb.b(var4, 261279) >> -1635328984 >> -1893269758] - -var3;
+            int dupTemp$4 = ((li) this).field_k + (((li) this).field_a[rb.b(var3 >> -108857086, 255)] + ((li) this).field_m);
+            var4 = dupTemp$4;
+            ((li) this).field_a[var2] = dupTemp$4;
+            int dupTemp$5 = ((li) this).field_a[rb.b(var4, 261279) >> -1635328984 >> -1893269758] - -var3;
+            ((li) this).field_k = dupTemp$5;
+            ((li) this).field_j[var2] = dupTemp$5;
             var2++;
             continue L1;
           }
@@ -402,8 +405,9 @@ final class li {
             this.a(true);
             ((li) this).field_c = 256;
         }
+        int fieldTemp$0 = ((li) this).field_c - 1;
         ((li) this).field_c = ((li) this).field_c - 1;
-        return ((li) this).field_j[((li) this).field_c - 1];
+        return ((li) this).field_j[fieldTemp$0];
     }
 
     final static void a(int param0, al param1) {

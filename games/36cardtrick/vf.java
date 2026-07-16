@@ -12,7 +12,7 @@ abstract class vf {
     public static void b(int param0) {
         field_a = null;
         if (param0 >= -88) {
-            field_a = (cc) null;
+            field_a = null;
         }
     }
 
@@ -22,7 +22,7 @@ abstract class vf {
         char[] var3 = var6;
         int var4 = 0;
         if (param0 != 4) {
-            return (String) null;
+            return null;
         }
         while (var4 < param1) {
             var6[var4] = param2;
@@ -88,14 +88,14 @@ abstract class vf {
           }
         }
         var2 = var14.f(param0 ^ 28154);
-        var3 = (mf) wg.field_b.a((byte) 74);
+        var3 = (mf) (Object) wg.field_b.a((byte) 74);
         L1: while (true) {
           L2: {
             if (var3 == null) {
               break L2;
             } else {
-              if (((mf) var3).field_k != var2) {
-                var3 = (mf) wg.field_b.b((byte) -115);
+              if (var3.field_k != var2) {
+                var3 = (mf) (Object) wg.field_b.b((byte) -115);
                 continue L1;
               } else {
                 break L2;
@@ -107,7 +107,7 @@ abstract class vf {
               var4 = var14.f(64);
               if (0 != var4) {
                 ad.field_i[0] = ri.field_c;
-                var5 = ((mf) var3).field_h;
+                var5 = var3.field_h;
                 var6_int = 1;
                 L4: while (true) {
                   if (var4 <= var6_int) {

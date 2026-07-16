@@ -25,7 +25,7 @@ final class vb extends java.awt.Canvas implements java.awt.event.FocusListener {
     }
 
     final static gm a(String param0, byte param1) {
-        String var2 = null;
+        Object var2 = null;
         int var3 = 0;
         gm var4 = null;
         String var5 = null;
@@ -37,15 +37,15 @@ final class vb extends java.awt.Canvas implements java.awt.event.FocusListener {
           L0: {
             var3 = -16 % ((param1 - 18) / 62);
             var7 = (CharSequence) (Object) param0;
-            var2 = uk.a(0, var7);
+            var2 = (Object) (Object) uk.a(0, var7);
             if (var2 != null) {
               break L0;
             } else {
-              var2 = (String) (Object) var7;
+              var2 = (Object) (Object) var7;
               break L0;
             }
           }
-          var4 = (gm) (Object) kc.field_c.a((long)var2.hashCode(), 16571);
+          var4 = (gm) (Object) kc.field_c.a((long)((String) var2).hashCode(), 16571);
           L1: while (true) {
             if (var4 != null) {
               L2: {
@@ -58,7 +58,7 @@ final class vb extends java.awt.Canvas implements java.awt.event.FocusListener {
                   break L2;
                 }
               }
-              if (!var5.equals((Object) (Object) var2)) {
+              if (!var5.equals(var2)) {
                 var4 = (gm) (Object) kc.field_c.a(-113);
                 continue L1;
               } else {

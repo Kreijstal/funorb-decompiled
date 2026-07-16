@@ -20,18 +20,24 @@ final class ib {
             java.net.URL var4 = null;
             Throwable decompiledCaughtException = null;
             try {
-              var4 = param0.getCodeBase();
-              var3 = lg.a(param1, param0, var4).getFile();
-              Object discarded$6 = cq.a(param0, (byte) -62, new Object[2], "updatelinks");
-              Object discarded$7 = cq.a(param0, (byte) -115, new Object[2], "updatelinks");
-              Object discarded$8 = cq.a(param0, (byte) 108, new Object[2], "updatelinks");
-              Object discarded$9 = cq.a(param0, (byte) -44, new Object[2], "updatelinks");
-              Object discarded$10 = cq.a(param0, (byte) 78, new Object[2], "updatelinks");
-              Object discarded$11 = cq.a(param0, (byte) 66, new Object[2], "updatelinks");
-            } catch (java.lang.Throwable decompiledCaughtParameter) {
-              decompiledCaughtException = decompiledCaughtParameter;
+              L0: {
+                var4 = param0.getCodeBase();
+                var3 = lg.a(param1, param0, var4).getFile();
+                Object discarded$6 = cq.a(param0, (byte) -62, new Object[2], "updatelinks");
+                Object discarded$7 = cq.a(param0, (byte) -115, new Object[2], "updatelinks");
+                Object discarded$8 = cq.a(param0, (byte) 108, new Object[2], "updatelinks");
+                Object discarded$9 = cq.a(param0, (byte) -44, new Object[2], "updatelinks");
+                Object discarded$10 = cq.a(param0, (byte) 78, new Object[2], "updatelinks");
+                Object discarded$11 = cq.a(param0, (byte) 66, new Object[2], "updatelinks");
+                break L0;
+              }
+            } catch (java.lang.Throwable decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              L1: {
+                var2 = decompiledCaughtException;
+                break L1;
+              }
             }
-            var2 = decompiledCaughtException;
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {

@@ -42,46 +42,26 @@ final class qd {
         Exception exception = null;
         java.awt.Graphics var4 = null;
         Throwable decompiledCaughtException = null;
-        int statePc = 0;
-        Throwable caughtException = null;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    try {
-                        var4 = param0.getGraphics();
-                        ia.field_b.a(-11, var4, param1, param2);
-                        var4.dispose();
-                        statePc = 3;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_0) {
-                        caughtException = stateCaught_0;
-                        statePc = 2;
-                        continue stateLoop;
-                    }
-                }
-                case 2: {
-                    exception = (Exception) (Object) caughtException;
-                    param0.repaint();
-                    statePc = 3;
-                    continue stateLoop;
-                }
-                case 3: {
-                    if (param3 != 2901) {
-                        statePc = 5;
-                    } else {
-                        statePc = 4;
-                    }
-                    continue stateLoop;
-                }
-                case 4: {
-                    return;
-                }
-                case 5: {
-                    field_a = null;
-                    return;
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
-            }
+        try {
+          L0: {
+            var4 = param0.getGraphics();
+            ia.field_b.a(-11, var4, param1, param2);
+            var4.dispose();
+            break L0;
+          }
+        } catch (java.lang.Exception decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L1: {
+            exception = (Exception) (Object) decompiledCaughtException;
+            param0.repaint();
+            break L1;
+          }
+        }
+        if (param3 != 2901) {
+          field_a = null;
+          return;
+        } else {
+          return;
         }
     }
 

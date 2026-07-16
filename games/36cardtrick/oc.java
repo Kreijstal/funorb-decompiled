@@ -23,7 +23,7 @@ final class oc {
 
     final static void a(java.awt.Component param0, byte param1) {
         if (param1 != 6) {
-          field_h = (int[]) null;
+          field_h = null;
           param0.setFocusTraversalKeysEnabled(false);
           param0.addKeyListener((java.awt.event.KeyListener) (Object) sj.field_d);
           param0.addFocusListener((java.awt.event.FocusListener) (Object) sj.field_d);
@@ -240,39 +240,39 @@ final class oc {
           }
         }
         L1: {
-          uk.a(((oc) this).field_f, (byte) -104, ((lk) param1).field_q, param2 + ((lk) param1).field_i, ((lk) param1).field_h, ((lk) param1).field_o + param0);
+          uk.a(((oc) this).field_f, (byte) -104, param1.field_q, param2 + param1.field_i, param1.field_h, param1.field_o + param0);
           if (null == ((oc) this).field_b) {
             break L1;
           } else {
             L2: {
-              var6_int = ((oc) this).field_d + (param0 + ((lk) param1).field_o);
-              var7 = ((oc) this).field_c + param2 - -((lk) param1).field_i;
-              if ((((nd) param4).field_i ^ -1) != -2) {
+              var6_int = ((oc) this).field_d + (param0 + param1.field_o);
+              var7 = ((oc) this).field_c + param2 - -param1.field_i;
+              if ((param4.field_i ^ -1) != -2) {
                 break L2;
               } else {
-                var6_int = var6_int + (((lk) param1).field_h - ((oc) this).field_b.field_l) / 2;
+                var6_int = var6_int + (param1.field_h - ((oc) this).field_b.field_l) / 2;
                 break L2;
               }
             }
             L3: {
-              if ((((nd) param4).field_i ^ -1) == -3) {
-                var6_int = var6_int + (((lk) param1).field_h + -((oc) this).field_b.field_l);
+              if ((param4.field_i ^ -1) == -3) {
+                var6_int = var6_int + (param1.field_h + -((oc) this).field_b.field_l);
                 break L3;
               } else {
                 break L3;
               }
             }
             L4: {
-              if (((nd) param4).field_f == 1) {
-                var7 = var7 + (((lk) param1).field_q - ((oc) this).field_b.field_k) / 2;
+              if (param4.field_f == 1) {
+                var7 = var7 + (param1.field_q - ((oc) this).field_b.field_k) / 2;
                 break L4;
               } else {
                 break L4;
               }
             }
             L5: {
-              if (((nd) param4).field_f == 2) {
-                var7 = var7 + (-((oc) this).field_b.field_k + ((lk) param1).field_q);
+              if (param4.field_f == 2) {
+                var7 = var7 + (-((oc) this).field_b.field_k + param1.field_q);
                 break L5;
               } else {
                 break L5;
@@ -284,12 +284,12 @@ final class oc {
         }
         var6 = param4.b(96, param1);
         if (var6 != null) {
-          if (((nd) param4).field_c != null) {
+          if (param4.field_c != null) {
             if (((oc) this).field_e < 0) {
               return;
             } else {
               L6: {
-                stackOut_20_0 = ((nd) param4).field_c;
+                stackOut_20_0 = param4.field_c;
                 stackOut_20_1 = (String) var6;
                 stackIn_22_0 = stackOut_20_0;
                 stackIn_22_1 = stackOut_20_1;
@@ -316,9 +316,9 @@ final class oc {
               L7: {
                 stackOut_23_0 = (ee) (Object) stackIn_23_0;
                 stackOut_23_1 = (String) (Object) stackIn_23_1;
-                stackOut_23_2 = stackIn_23_2 + ((nd) param4).field_k + (param0 + ((lk) param1).field_o);
-                stackOut_23_3 = ((nd) param4).field_m;
-                stackOut_23_4 = param2 + ((lk) param1).field_i;
+                stackOut_23_2 = stackIn_23_2 + param4.field_k + (param0 + param1.field_o);
+                stackOut_23_3 = param4.field_m;
+                stackOut_23_4 = param2 + param1.field_i;
                 stackIn_25_0 = stackOut_23_0;
                 stackIn_25_1 = stackOut_23_1;
                 stackIn_25_2 = stackOut_23_2;
@@ -364,8 +364,8 @@ final class oc {
                 stackOut_26_1 = (String) (Object) stackIn_26_1;
                 stackOut_26_2 = stackIn_26_2;
                 stackOut_26_3 = stackIn_26_3 + (stackIn_26_4 - -stackIn_26_5);
-                stackOut_26_4 = -((nd) param4).field_k + ((lk) param1).field_h - ((nd) param4).field_n;
-                stackOut_26_5 = ((lk) param1).field_q + -((nd) param4).field_m + -((nd) param4).field_j;
+                stackOut_26_4 = -param4.field_k + param1.field_h - param4.field_n;
+                stackOut_26_5 = param1.field_q + -param4.field_m + -param4.field_j;
                 stackOut_26_6 = ((oc) this).field_e;
                 stackOut_26_7 = ((oc) this).field_a;
                 stackIn_28_0 = stackOut_26_0;
@@ -426,7 +426,7 @@ final class oc {
                   break L8;
                 }
               }
-              int discarded$1 = ((ee) (Object) stackIn_29_0).a((String) (Object) stackIn_29_1, stackIn_29_2, stackIn_29_3, stackIn_29_4, stackIn_29_5, stackIn_29_6, stackIn_29_7, stackIn_29_8, ((nd) param4).field_i, ((nd) param4).field_f, ((nd) param4).field_b);
+              int discarded$1 = ((ee) (Object) stackIn_29_0).a(stackIn_29_1, stackIn_29_2, stackIn_29_3, stackIn_29_4, stackIn_29_5, stackIn_29_6, stackIn_29_7, stackIn_29_8, param4.field_i, param4.field_f, param4.field_b);
               return;
             }
           } else {
@@ -440,7 +440,7 @@ final class oc {
     public static void a(int param0) {
         field_h = null;
         if (param0 > -40) {
-            field_h = (int[]) null;
+            field_h = null;
         }
     }
 
@@ -586,9 +586,9 @@ final class oc {
 
     final oc a(kc[] param0, boolean param1) {
         if (!param1) {
-            return (oc) null;
+            return null;
         }
-        ((oc) this).field_f = (kc[]) param0;
+        ((oc) this).field_f = param0;
         return (oc) this;
     }
 

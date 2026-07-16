@@ -160,44 +160,35 @@ final class fk extends hp implements oa, hh, ri {
     }
 
     public final void a(hm param0, int param1, int param2, int param3) {
-        int var6 = 0;
-        var6 = ZombieDawn.field_J;
-        if (param1 == 120) {
-          if (-1 != param2) {
-            if ((param2 ^ -1) != -2) {
-              if (2 != param2) {
+        int var6 = ZombieDawn.field_J;
+        if (param1 != 120) {
+            ((fk) this).field_Q = null;
+            if (-1 == (param2 ^ -1)) {
+                nf.a(12, "terms.ws");
                 return;
-              } else {
-                nf.a(12, "conduct.ws");
-                return;
-              }
-            } else {
-              nf.a(12, "privacy.ws");
-              return;
             }
-          } else {
-            nf.a(12, "terms.ws");
-            return;
-          }
-        } else {
-          ((fk) this).field_Q = null;
-          if (-1 != (param2 ^ -1)) {
-            if (param2 != -2) {
-              if (2 != param2) {
+            if ((param2 ^ -1) == -2) {
+                nf.a(12, "privacy.ws");
                 return;
-              } else {
-                nf.a(12, "conduct.ws");
-                return;
-              }
-            } else {
-              nf.a(12, "privacy.ws");
-              return;
             }
-          } else {
-            nf.a(12, "terms.ws");
+            if (2 != param2) {
+                return;
+            }
+            nf.a(12, "conduct.ws");
             return;
-          }
         }
+        if (-1 == (param2 ^ -1)) {
+            nf.a(12, "terms.ws");
+            return;
+        }
+        if ((param2 ^ -1) == -2) {
+            nf.a(12, "privacy.ws");
+            return;
+        }
+        if (2 != param2) {
+            return;
+        }
+        nf.a(12, "conduct.ws");
     }
 
     public final void a(int param0, int param1, an param2, int param3, int param4) {
@@ -281,12 +272,14 @@ final class fk extends hp implements oa, hh, ri {
         ((fk) this).field_L.field_h = (io) (Object) new vm();
         ((fk) this).field_H.field_h = (io) (Object) new dp();
         ((fk) this).field_N.field_h = (io) (Object) new tc(10000536);
-        ((fk) this).field_M.field_h = (io) (Object) new tc(10000536);
-        ((fk) this).field_G.field_h = (io) (Object) new tc(10000536);
+        tc dupTemp$0 = new tc(10000536);
+        ((fk) this).field_M.field_h = (io) (Object) dupTemp$0;
+        ((fk) this).field_G.field_h = (io) (Object) dupTemp$0;
         ((fk) this).field_R.field_h = (io) (Object) new tc(10000536);
         ((fk) this).field_O.field_h = (io) (Object) new jb();
-        ((fk) this).field_Q.field_h = (io) (Object) new jm(10000536);
-        ((fk) this).field_P.field_h = (io) (Object) new jm(10000536);
+        jm dupTemp$1 = new jm(10000536);
+        ((fk) this).field_Q.field_h = (io) (Object) dupTemp$1;
+        ((fk) this).field_P.field_h = (io) (Object) dupTemp$1;
         String var2 = s.a(1938762664, jb.field_d, new String[2]);
         int var3 = 20;
         var3 = var3 + this.a(dk.field_Vb, 120, (ga) (Object) ((fk) this).field_G, var3, 170);
@@ -322,8 +315,9 @@ final class fk extends hp implements oa, hh, ri {
     }
 
     final static void b(boolean param0) {
+        int fieldTemp$2 = oo.field_R;
         oo.field_R = oo.field_R - 1;
-        if ((oo.field_R ^ -1) < -1) {
+        if ((fieldTemp$2 ^ -1) < -1) {
           if (param0) {
             fk.b(false);
             return;

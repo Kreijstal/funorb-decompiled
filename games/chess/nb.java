@@ -119,26 +119,26 @@ final class nb extends ci {
             }
           }
           var6 = var5;
-          if (-1 != var6) {
-            if (-2 != var6) {
+          if (-1 != (var6 ^ -1)) {
+            if (-2 != (var6 ^ -1)) {
               if (0 == (var6 ^ -1)) {
                 var10 = pe.field_d;
                 wb.a(21, param1 + -3, 198, 96, 6, 1, 170);
                 var6 = 32 + (10 - (-param1 - v.field_j.field_C / 2));
                 v.field_j.b(var10, 120, var6, 16777215, -1);
                 if (var3 == null) {
-                  if (param0 != 0) {
-                    field_Fb = null;
-                    return;
-                  } else {
-                    return;
-                  }
-                } else {
-                  jj.field_b.b((String) var3, 120, var6 - (-v.field_j.field_C - v.field_j.field_t), 16777215, -1);
                   if (param0 == 0) {
                     return;
                   } else {
                     field_Fb = null;
+                    return;
+                  }
+                } else {
+                  jj.field_b.b((String) var3, 120, var6 - (-v.field_j.field_C - v.field_j.field_t), 16777215, -1);
+                  if (param0 != 0) {
+                    field_Fb = null;
+                    return;
+                  } else {
                     return;
                   }
                 }
@@ -157,10 +157,10 @@ final class nb extends ci {
                     }
                   } else {
                     jj.field_b.b((String) var3, 120, var6 - (-v.field_j.field_C - v.field_j.field_t), 16777215, -1);
-                    if (param0 != 0) {
-                      field_Fb = null;
+                    if (param0 == 0) {
                       return;
                     } else {
+                      field_Fb = null;
                       return;
                     }
                   }
@@ -170,18 +170,18 @@ final class nb extends ci {
                   var6 = 32 + (10 - (-param1 - v.field_j.field_C / 2));
                   v.field_j.b(var11, 120, var6, 16777215, -1);
                   if (var3 == null) {
-                    if (param0 != 0) {
-                      field_Fb = null;
+                    if (param0 == 0) {
                       return;
                     } else {
+                      field_Fb = null;
                       return;
                     }
                   } else {
                     jj.field_b.b((String) var3, 120, var6 - (-v.field_j.field_C - v.field_j.field_t), 16777215, -1);
-                    if (param0 != 0) {
-                      field_Fb = null;
+                    if (param0 == 0) {
                       return;
                     } else {
+                      field_Fb = null;
                       return;
                     }
                   }
@@ -200,10 +200,10 @@ final class nb extends ci {
                   break L1;
                 }
               }
-              if (param0 != 0) {
-                field_Fb = null;
+              if (param0 == 0) {
                 return;
               } else {
+                field_Fb = null;
                 return;
               }
             }
@@ -212,8 +212,9 @@ final class nb extends ci {
             wb.a(21, param1 + -3, 198, 96, 6, 1, 170);
             var6 = 32 + (10 - (-param1 - v.field_j.field_C / 2));
             v.field_j.b(var8, 120, var6, 16777215, -1);
-            if (var3 == null) {
+            if (var3 != null) {
               L2: {
+                jj.field_b.b((String) var3, 120, var6 - (-v.field_j.field_C - v.field_j.field_t), 16777215, -1);
                 if (param0 == 0) {
                   break L2;
                 } else {
@@ -224,7 +225,6 @@ final class nb extends ci {
               return;
             } else {
               L3: {
-                jj.field_b.b((String) var3, 120, var6 - (-v.field_j.field_C - v.field_j.field_t), 16777215, -1);
                 if (param0 == 0) {
                   break L3;
                 } else {
@@ -236,10 +236,10 @@ final class nb extends ci {
             }
           }
         } else {
-          if (param0 != 0) {
-            field_Fb = null;
+          if (param0 == 0) {
             return;
           } else {
+            field_Fb = null;
             return;
           }
         }

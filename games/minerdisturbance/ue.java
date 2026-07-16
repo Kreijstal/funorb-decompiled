@@ -26,239 +26,131 @@ final class ue extends com.ms.dll.Callback {
         Object stackIn_28_0 = null;
         Object stackIn_29_0 = null;
         int stackIn_29_1 = 0;
+        Throwable decompiledCaughtException = null;
         boolean stackOut_1_0 = false;
-        boolean stackOut_2_0 = false;
-        int stackOut_2_1 = 0;
         boolean stackOut_3_0 = false;
         int stackOut_3_1 = 0;
-        Object stackOut_20_0 = null;
-        Object stackOut_21_0 = null;
-        int stackOut_21_1 = 0;
-        Object stackOut_22_0 = null;
-        int stackOut_22_1 = 0;
+        boolean stackOut_2_0 = false;
+        int stackOut_2_1 = 0;
         Object stackOut_26_0 = null;
-        Object stackOut_27_0 = null;
-        int stackOut_27_1 = 0;
         Object stackOut_28_0 = null;
         int stackOut_28_1 = 0;
-        int statePc = 0;
-        Throwable caughtException = null;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    var9 = null;
-                    var5 = var9.getTopHwnd();
-                    if (((ue) this).field_d != var5) {
-                        statePc = 7;
-                    } else {
-                        statePc = 1;
-                    }
-                    continue stateLoop;
-                }
-                case 1: {
-                    stackOut_1_0 = param2;
-                    stackIn_3_0 = stackOut_1_0;
-                    stackIn_2_0 = stackOut_1_0;
-                    if (((ue) this).field_c) {
-                        statePc = 3;
-                    } else {
-                        statePc = 2;
-                    }
-                    continue stateLoop;
-                }
-                case 2: {
-                    stackOut_2_0 = stackIn_2_0;
-                    stackOut_2_1 = 1;
-                    stackIn_4_0 = stackOut_2_0;
-                    stackIn_4_1 = stackOut_2_1;
-                    statePc = 4;
-                    continue stateLoop;
-                }
-                case 3: {
-                    stackOut_3_0 = stackIn_3_0;
-                    stackOut_3_1 = 0;
-                    stackIn_4_0 = stackOut_3_0;
-                    stackIn_4_1 = stackOut_3_1;
-                    statePc = 4;
-                    continue stateLoop;
-                }
-                case 4: {
-                    if ((stackIn_4_0 ? 1 : 0) != stackIn_4_1) {
-                        statePc = 6;
-                    } else {
-                        statePc = 7;
-                    }
-                    continue stateLoop;
-                }
-                case 6: {
-                    return;
-                }
-                case 7: {
-                    if (!((ue) this).field_a) {
-                        statePc = 9;
-                    } else {
-                        statePc = 10;
-                    }
-                    continue stateLoop;
-                }
-                case 9: {
-                    ((ue) this).field_e = com.ms.win32.User32.LoadCursor(0, 32512);
-                    int discarded$12 = com.ms.dll.Root.alloc(this);
-                    ((ue) this).field_a = true;
-                    statePc = 10;
-                    continue stateLoop;
-                }
-                case 10: {
-                    if (((ue) this).field_d == var5) {
-                        statePc = 26;
-                    } else {
-                        statePc = 11;
-                    }
-                    continue stateLoop;
-                }
-                case 11: {
-                    if (((ue) this).field_d != 0) {
-                        statePc = 13;
-                    } else {
-                        statePc = 18;
-                    }
-                    continue stateLoop;
-                }
-                case 13: {
-                    ((ue) this).field_c = true;
-                    int discarded$13 = com.ms.win32.User32.SendMessage(var5, 101024, 0, 0);
-                    var6 = this;
-                    // monitorenter this
-                    statePc = 14;
-                    continue stateLoop;
-                }
-                case 14: {
-                    try {
-                        int discarded$14 = com.ms.win32.User32.SetWindowLong(((ue) this).field_d, -4, ((ue) this).field_b);
-                        // monitorexit var6
-                        statePc = 18;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_14) {
-                        caughtException = stateCaught_14;
-                        statePc = 16;
-                        continue stateLoop;
-                    }
-                }
-                case 16: {
-                    try {
-                        var7 = caughtException;
-                        // monitorexit var6
-                        statePc = 17;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_16) {
-                        caughtException = stateCaught_16;
-                        statePc = 16;
-                        continue stateLoop;
-                    }
-                }
-                case 17: {
-                    throw (RuntimeException) (Object) var7;
-                }
-                case 18: {
-                    var6 = this;
-                    // monitorenter this
-                    statePc = 19;
-                    continue stateLoop;
-                }
-                case 19: {
-                    try {
-                        ((ue) this).field_d = var5;
-                        ((ue) this).field_b = com.ms.win32.User32.SetWindowLong(((ue) this).field_d, -4, this);
-                        // monitorexit var6
-                        statePc = 20;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_19) {
-                        caughtException = stateCaught_19;
-                        statePc = 24;
-                        continue stateLoop;
-                    }
-                }
-                case 20: {
-                    stackOut_20_0 = this;
-                    stackIn_22_0 = stackOut_20_0;
-                    stackIn_21_0 = stackOut_20_0;
-                    if (!param2) {
-                        statePc = 22;
-                    } else {
-                        statePc = 21;
-                    }
-                    continue stateLoop;
-                }
-                case 21: {
-                    stackOut_21_0 = this;
-                    stackOut_21_1 = 1;
-                    stackIn_23_0 = stackOut_21_0;
-                    stackIn_23_1 = stackOut_21_1;
-                    statePc = 23;
-                    continue stateLoop;
-                }
-                case 22: {
-                    stackOut_22_0 = this;
-                    stackOut_22_1 = 0;
-                    stackIn_23_0 = stackOut_22_0;
-                    stackIn_23_1 = stackOut_22_1;
-                    statePc = 23;
-                    continue stateLoop;
-                }
-                case 23: {
-                    ((ue) this).field_c = stackIn_23_1 != 0;
-                    int discarded$15 = com.ms.win32.User32.SendMessage(var5, 101024, param0, 0);
-                    return;
-                }
-                case 24: {
-                    try {
-                        var8 = caughtException;
-                        // monitorexit var6
-                        statePc = 25;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_24) {
-                        caughtException = stateCaught_24;
-                        statePc = 24;
-                        continue stateLoop;
-                    }
-                }
-                case 25: {
-                    throw (RuntimeException) (Object) var8;
-                }
-                case 26: {
-                    stackOut_26_0 = this;
-                    stackIn_28_0 = stackOut_26_0;
-                    stackIn_27_0 = stackOut_26_0;
-                    if (!param2) {
-                        statePc = 28;
-                    } else {
-                        statePc = 27;
-                    }
-                    continue stateLoop;
-                }
-                case 27: {
-                    stackOut_27_0 = this;
-                    stackOut_27_1 = 1;
-                    stackIn_29_0 = stackOut_27_0;
-                    stackIn_29_1 = stackOut_27_1;
-                    statePc = 29;
-                    continue stateLoop;
-                }
-                case 28: {
-                    stackOut_28_0 = this;
-                    stackOut_28_1 = 0;
-                    stackIn_29_0 = stackOut_28_0;
-                    stackIn_29_1 = stackOut_28_1;
-                    statePc = 29;
-                    continue stateLoop;
-                }
-                case 29: {
-                    ((ue) this).field_c = stackIn_29_1 != 0;
-                    int discarded$16 = com.ms.win32.User32.SendMessage(var5, 101024, param0, 0);
-                    return;
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
+        Object stackOut_27_0 = null;
+        int stackOut_27_1 = 0;
+        Object stackOut_20_0 = null;
+        Object stackOut_22_0 = null;
+        int stackOut_22_1 = 0;
+        Object stackOut_21_0 = null;
+        int stackOut_21_1 = 0;
+        L0: {
+          var9 = null;
+          var5 = var9.getTopHwnd();
+          if (((ue) this).field_d != var5) {
+            break L0;
+          } else {
+            L1: {
+              stackOut_1_0 = param2;
+              stackIn_3_0 = stackOut_1_0;
+              stackIn_2_0 = stackOut_1_0;
+              if (((ue) this).field_c) {
+                stackOut_3_0 = stackIn_3_0;
+                stackOut_3_1 = 0;
+                stackIn_4_0 = stackOut_3_0;
+                stackIn_4_1 = stackOut_3_1;
+                break L1;
+              } else {
+                stackOut_2_0 = stackIn_2_0;
+                stackOut_2_1 = 1;
+                stackIn_4_0 = stackOut_2_0;
+                stackIn_4_1 = stackOut_2_1;
+                break L1;
+              }
             }
+            if ((stackIn_4_0 ? 1 : 0) != stackIn_4_1) {
+              return;
+            } else {
+              break L0;
+            }
+          }
+        }
+        L2: {
+          if (!((ue) this).field_a) {
+            ((ue) this).field_e = com.ms.win32.User32.LoadCursor(0, 32512);
+            int discarded$12 = com.ms.dll.Root.alloc(this);
+            ((ue) this).field_a = true;
+            break L2;
+          } else {
+            break L2;
+          }
+        }
+        if (((ue) this).field_d == var5) {
+          L3: {
+            stackOut_26_0 = this;
+            stackIn_28_0 = stackOut_26_0;
+            stackIn_27_0 = stackOut_26_0;
+            if (!param2) {
+              stackOut_28_0 = this;
+              stackOut_28_1 = 0;
+              stackIn_29_0 = stackOut_28_0;
+              stackIn_29_1 = stackOut_28_1;
+              break L3;
+            } else {
+              stackOut_27_0 = this;
+              stackOut_27_1 = 1;
+              stackIn_29_0 = stackOut_27_0;
+              stackIn_29_1 = stackOut_27_1;
+              break L3;
+            }
+          }
+          ((ue) this).field_c = stackIn_29_1 != 0;
+          int discarded$13 = com.ms.win32.User32.SendMessage(var5, 101024, param0, 0);
+          return;
+        } else {
+          L4: {
+            if (((ue) this).field_d != 0) {
+              ((ue) this).field_c = true;
+              int discarded$14 = com.ms.win32.User32.SendMessage(var5, 101024, 0, 0);
+              var6 = this;
+              synchronized (var6) {
+                L5: {
+                  int discarded$15 = com.ms.win32.User32.SetWindowLong(((ue) this).field_d, -4, ((ue) this).field_b);
+                  break L5;
+                }
+              }
+              break L4;
+            } else {
+              break L4;
+            }
+          }
+          var6 = this;
+          synchronized (var6) {
+            L6: {
+              ((ue) this).field_d = var5;
+              ((ue) this).field_b = com.ms.win32.User32.SetWindowLong(((ue) this).field_d, -4, this);
+              break L6;
+            }
+          }
+          L7: {
+            stackOut_20_0 = this;
+            stackIn_22_0 = stackOut_20_0;
+            stackIn_21_0 = stackOut_20_0;
+            if (!param2) {
+              stackOut_22_0 = this;
+              stackOut_22_1 = 0;
+              stackIn_23_0 = stackOut_22_0;
+              stackIn_23_1 = stackOut_22_1;
+              break L7;
+            } else {
+              stackOut_21_0 = this;
+              stackOut_21_1 = 1;
+              stackIn_23_0 = stackOut_21_0;
+              stackIn_23_1 = stackOut_21_1;
+              break L7;
+            }
+          }
+          ((ue) this).field_c = stackIn_23_1 != 0;
+          int discarded$16 = com.ms.win32.User32.SendMessage(var5, 101024, param0, 0);
+          return;
         }
     }
 

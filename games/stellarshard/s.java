@@ -42,7 +42,7 @@ final class s implements Iterator {
             if (1 > var3) {
               break L1;
             } else {
-              if (var3 < -13) {
+              if ((var3 ^ -1) < -13) {
                 break L1;
               } else {
                 L2: {
@@ -50,7 +50,7 @@ final class s implements Iterator {
                   if (var4 == null) {
                     break L2;
                   } else {
-                    if (-2 > var4.length()) {
+                    if (-2 < (var4.length() ^ -1)) {
                       break L2;
                     } else {
                       L3: {
@@ -78,17 +78,19 @@ final class s implements Iterator {
                                     break L5;
                                   }
                                 }
-                                if ((var5 ^ -1) <= -3) {
-                                  if (!param1) {
-                                    return t.field_c;
+                                L6: {
+                                  if ((var5 ^ -1) > -3) {
+                                    break L6;
                                   } else {
-                                    var6++;
-                                    continue L4;
+                                    if (!param1) {
+                                      return t.field_c;
+                                    } else {
+                                      break L6;
+                                    }
                                   }
-                                } else {
-                                  var6++;
-                                  continue L4;
                                 }
+                                var6++;
+                                continue L4;
                               }
                             }
                           } else {

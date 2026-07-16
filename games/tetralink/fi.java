@@ -41,8 +41,8 @@ final class fi extends lk implements dm {
                     }
                     fl.field_u.a(param0, param1, 17);
                 }
-                if (-257 != param1) {
-                    if (-11 != param1) {
+                if (-257 != (param1 ^ -1)) {
+                    if (-11 != (param1 ^ -1)) {
                         if (!qa.field_v) {
                             ao.field_c.a(1379);
                         }

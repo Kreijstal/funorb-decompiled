@@ -113,7 +113,7 @@ final class hd {
                             }
                           }
                           L7: {
-                            // wide iinc 11 256
+                            var11 += 256;
                             if (var11 < var12) {
                               break L7;
                             } else {
@@ -212,7 +212,7 @@ final class hd {
                                 if (var14 < param0 - var12) {
                                   var12 = ((hd) this).field_w.a(0, (float)var11 / 65536.0f);
                                   var13 = ((hd) this).field_w.a(1, (float)var11 / 65536.0f);
-                                  // wide iinc 15 128
+                                  var15 += 128;
                                   continue L15;
                                 } else {
                                   L18: while (true) {
@@ -425,7 +425,7 @@ final class hd {
           if (var2 == 0) {
             break L0;
           } else {
-            ((pb) param0).field_i = ((pb) param0).field_i - 1;
+            param0.field_i = param0.field_i - 1;
             ((hd) this).field_j = new ih();
             ((hd) this).field_j.b(param0);
             ((hd) this).field_u = new ih();
@@ -438,7 +438,7 @@ final class hd {
           if (var2 == 0) {
             break L1;
           } else {
-            ((pb) param0).field_i = ((pb) param0).field_i - 1;
+            param0.field_i = param0.field_i - 1;
             ((hd) this).field_d = new ih();
             ((hd) this).field_d.b(param0);
             ((hd) this).field_i = new ih();
@@ -451,7 +451,7 @@ final class hd {
           if (var2 == 0) {
             break L2;
           } else {
-            ((pb) param0).field_i = ((pb) param0).field_i - 1;
+            param0.field_i = param0.field_i - 1;
             ((hd) this).field_e = new ih();
             ((hd) this).field_e.b(param0);
             ((hd) this).field_q = new ih();

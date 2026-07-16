@@ -28,14 +28,14 @@ final class dg extends fi {
             dg.a((byte) 84);
         }
         long var4 = 0L;
-        String var6 = null;
+        Object var6 = null;
         if ((param0.indexOf('@') ^ -1) != 0) {
-            var6 = param0;
+            var6 = (Object) (Object) param0;
         } else {
             var7 = (CharSequence) (Object) param0;
             var4 = jc.a(var7, (byte) -105);
         }
-        return pl.a(var4, var6, 127, param2, param3);
+        return pl.a(var4, (String) var6, 127, param2, param3);
     }
 
     private final mg e(int param0) {

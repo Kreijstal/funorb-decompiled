@@ -95,16 +95,16 @@ final class dm extends nb {
           if (param2 == -9604) {
             break L0;
           } else {
-            String discarded$2 = ((dm) this).e(58);
+            String discarded$1 = ((dm) this).e(58);
             break L0;
           }
         }
         L1: {
-          if (param1 == -2) {
+          if ((param1 ^ -1) == -2) {
             ((dm) this).field_t = de.a('<', param0.a(true), -123);
             break L1;
           } else {
-            if (-3 != param1) {
+            if (-3 != (param1 ^ -1)) {
               if ((param1 ^ -1) != -4) {
                 if ((param1 ^ -1) == -5) {
                   break L1;
@@ -117,29 +117,31 @@ final class dm extends nb {
                 ((dm) this).field_w = new int[var4][];
                 var5 = 0;
                 L2: while (true) {
-                  if (var5 >= var4) {
+                  if ((var5 ^ -1) <= (var4 ^ -1)) {
                     break L1;
                   } else {
-                    var6 = param0.f(param2 ^ -9602);
-                    var7 = cj.a(var6, 0);
-                    if (var7 != null) {
-                      ((dm) this).field_v[var5] = var6;
-                      ((dm) this).field_w[var5] = new int[var7.field_a];
-                      var8 = 0;
-                      L3: while (true) {
-                        if (var7.field_a > var8) {
-                          ((dm) this).field_w[var5][var8] = param0.f(rd.b(param2, -9602));
-                          var8++;
-                          continue L3;
-                        } else {
-                          var5++;
-                          continue L2;
+                    L3: {
+                      var6 = param0.f(param2 ^ -9602);
+                      var7 = cj.a(var6, 0);
+                      if (var7 != null) {
+                        ((dm) this).field_v[var5] = var6;
+                        ((dm) this).field_w[var5] = new int[var7.field_a];
+                        var8 = 0;
+                        L4: while (true) {
+                          if (var7.field_a <= var8) {
+                            break L3;
+                          } else {
+                            ((dm) this).field_w[var5][var8] = param0.f(rd.b(param2, -9602));
+                            var8++;
+                            continue L4;
+                          }
                         }
+                      } else {
+                        break L3;
                       }
-                    } else {
-                      var5++;
-                      continue L2;
                     }
+                    var5++;
+                    continue L2;
                   }
                 }
               }
@@ -147,13 +149,13 @@ final class dm extends nb {
               var4 = param0.d((byte) -122);
               ((dm) this).field_u = new int[var4];
               var5 = 0;
-              L4: while (true) {
-                if (var5 >= var4) {
+              L5: while (true) {
+                if ((var5 ^ -1) <= (var4 ^ -1)) {
                   break L1;
                 } else {
                   ((dm) this).field_u[var5] = param0.f(2);
                   var5++;
-                  continue L4;
+                  continue L5;
                 }
               }
             }

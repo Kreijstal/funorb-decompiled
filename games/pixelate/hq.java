@@ -293,14 +293,14 @@ final class hq extends de {
         }
         L1: {
           L2: {
-            if (-1 == param1) {
+            if (-1 == (param1 ^ -1)) {
               break L2;
             } else {
               L3: {
                 if (1 != ((hq) this).field_G) {
                   break L3;
                 } else {
-                  if (0 != ((hq) this).field_x) {
+                  if (0 != (((hq) this).field_x ^ -1)) {
                     break L2;
                   } else {
                     break L3;
@@ -489,11 +489,11 @@ final class hq extends de {
           var2 = ro.field_e.field_z;
           var3 = ro.field_e.field_a.field_p;
           var4 = ro.field_e.field_o;
-          if (-1 != (var3 & param0 << var2)) {
+          if (-1 != (var3 & param0 << var2 ^ -1)) {
             ((hq) this).field_s = fg.field_c;
             break L0;
           } else {
-            if (-1 == var3) {
+            if (-1 == (var3 ^ -1)) {
               if (3 == (1 << ro.field_e.field_z | var4)) {
                 ((hq) this).field_s = bm.field_t;
                 break L0;
@@ -530,20 +530,51 @@ final class hq extends de {
     final void b(byte param0, boolean param1) {
         int var3 = 0;
         int var4 = 0;
-        if (oa.field_j == 2) {
-            if (md.field_Y) {
+        int stackIn_8_0 = 0;
+        int stackOut_7_0 = 0;
+        int stackOut_6_0 = 0;
+        L0: {
+          if (oa.field_j != 2) {
+            L1: {
+              var3 = ((hq) this).field_I;
+              var4 = param1 ? 1 : 0;
+              if (!gq.d(104)) {
+                stackOut_7_0 = 0;
+                stackIn_8_0 = stackOut_7_0;
+                break L1;
+              } else {
+                stackOut_6_0 = 12;
+                stackIn_8_0 = stackOut_6_0;
+                break L1;
+              }
+            }
+            la.a(stackIn_8_0, var3, var4 != 0, -25528);
+            break L0;
+          } else {
+            L2: {
+              if (!md.field_Y) {
+                break L2;
+              } else {
                 var3 = param1 ? 1 : 0;
                 la.a(ti.field_t, -5, var3 != 0, -25528);
+                break L2;
+              }
             }
-            // ifeq L74
-            qj.a(false, 0, 11);
-        } else {
-            var3 = ((hq) this).field_I;
-            var4 = param1 ? 1 : 0;
-            la.a(gq.d(104) ? 12 : 0, var3, var4 != 0, -25528);
+            if (!oa.field_i) {
+              break L0;
+            } else {
+              qj.a(false, 0, 11);
+              break L0;
+            }
+          }
         }
-        if (param0 != 12) {
+        L3: {
+          if (param0 == 12) {
+            break L3;
+          } else {
             ((hq) this).field_A = null;
+            break L3;
+          }
         }
     }
 
@@ -581,14 +612,14 @@ final class hq extends de {
             break L0;
           } else {
             L1: {
-              if (0 != ((hq) this).field_g.field_j) {
+              if (0 != (((hq) this).field_g.field_j ^ -1)) {
                 break L1;
               } else {
                 L2: {
-                  if (var2 == -99) {
+                  if ((var2 ^ -1) == -99) {
                     break L2;
                   } else {
-                    if (-100 == var2) {
+                    if (-100 == (var2 ^ -1)) {
                       break L2;
                     } else {
                       break L1;
@@ -625,7 +656,7 @@ final class hq extends de {
               }
             }
             L4: {
-              if (-1 != ((hq) this).field_g.field_j) {
+              if (-1 != (((hq) this).field_g.field_j ^ -1)) {
                 break L4;
               } else {
                 if ((var2 ^ -1) != -98) {

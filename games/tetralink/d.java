@@ -24,161 +24,70 @@ abstract class d implements vm {
             int var7 = 0;
             int stackIn_10_0 = 0;
             int stackIn_17_0 = 0;
+            Throwable decompiledCaughtException = null;
             int stackOut_9_0 = 0;
-            int stackOut_15_0 = 0;
             int stackOut_16_0 = 0;
-            int statePc = 0;
-            Throwable caughtException = null;
-            stateLoop: while (true) {
-                switch (statePc) {
-                    case 0: {
-                        var7 = TetraLink.field_J;
-                        if (!kn.field_e) {
-                            statePc = 2;
+            int stackOut_15_0 = 0;
+            var7 = TetraLink.field_J;
+            if (!kn.field_e) {
+              L0: {
+                if (param0 == -17840) {
+                  break L0;
+                } else {
+                  field_c = null;
+                  break L0;
+                }
+              }
+              try {
+                L1: {
+                  var2 = "tuhstatbut";
+                  var3 = (String) ii.a((byte) 122, "getcookies", param1);
+                  var4 = hi.a(var3, ';', 783);
+                  var5 = 0;
+                  L2: while (true) {
+                    if (var4.length <= var5) {
+                      break L1;
+                    } else {
+                      L3: {
+                        var6 = var4[var5].indexOf('=');
+                        if (var6 < 0) {
+                          break L3;
                         } else {
-                            statePc = 1;
-                        }
-                        continue stateLoop;
-                    }
-                    case 1: {
-                        return true;
-                    }
-                    case 2: {
-                        if (param0 == -17840) {
-                            statePc = 4;
-                        } else {
-                            statePc = 3;
-                        }
-                        continue stateLoop;
-                    }
-                    case 3: {
-                        field_c = null;
-                        statePc = 4;
-                        continue stateLoop;
-                    }
-                    case 4: {
-                        try {
-                            var2 = "tuhstatbut";
-                            var3 = (String) ii.a((byte) 122, "getcookies", param1);
-                            var4 = hi.a(var3, ';', 783);
-                            var5 = 0;
-                            statePc = 5;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_4) {
-                            caughtException = stateCaught_4;
-                            statePc = 13;
-                            continue stateLoop;
-                        }
-                    }
-                    case 5: {
-                        try {
-                            if (var4.length <= var5) {
-                                statePc = 14;
-                            } else {
-                                statePc = 6;
-                            }
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_5) {
-                            caughtException = stateCaught_5;
-                            statePc = 13;
-                            continue stateLoop;
-                        }
-                    }
-                    case 6: {
-                        try {
-                            var6 = var4[var5].indexOf('=');
-                            if (var6 < 0) {
-                                statePc = 11;
-                            } else {
-                                statePc = 7;
-                            }
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_6) {
-                            caughtException = stateCaught_6;
-                            statePc = 13;
-                            continue stateLoop;
-                        }
-                    }
-                    case 7: {
-                        try {
-                            if (var4[var5].substring(0, var6).trim().equals((Object) (Object) var2)) {
-                                statePc = 9;
-                            } else {
-                                statePc = 8;
-                            }
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_7) {
-                            caughtException = stateCaught_7;
-                            statePc = 13;
-                            continue stateLoop;
-                        }
-                    }
-                    case 8: {
-                        try {
-                            statePc = 11;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_8) {
-                            caughtException = stateCaught_8;
-                            statePc = 13;
-                            continue stateLoop;
-                        }
-                    }
-                    case 9: {
-                        try {
+                          if (var4[var5].substring(0, var6).trim().equals((Object) (Object) var2)) {
                             stackOut_9_0 = 1;
                             stackIn_10_0 = stackOut_9_0;
-                            statePc = 10;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_9) {
-                            caughtException = stateCaught_9;
-                            statePc = 13;
-                            continue stateLoop;
+                            return stackIn_10_0 != 0;
+                          } else {
+                            break L3;
+                          }
                         }
+                      }
+                      var5++;
+                      continue L2;
                     }
-                    case 10: {
-                        return stackIn_10_0 != 0;
-                    }
-                    case 11: {
-                        try {
-                            var5++;
-                            statePc = 5;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_11) {
-                            caughtException = stateCaught_11;
-                            statePc = 13;
-                            continue stateLoop;
-                        }
-                    }
-                    case 13: {
-                        var2_ref = caughtException;
-                        statePc = 14;
-                        continue stateLoop;
-                    }
-                    case 14: {
-                        if (null == param1.getParameter("tuhstatbut")) {
-                            statePc = 16;
-                        } else {
-                            statePc = 15;
-                        }
-                        continue stateLoop;
-                    }
-                    case 15: {
-                        stackOut_15_0 = 1;
-                        stackIn_17_0 = stackOut_15_0;
-                        statePc = 17;
-                        continue stateLoop;
-                    }
-                    case 16: {
-                        stackOut_16_0 = 0;
-                        stackIn_17_0 = stackOut_16_0;
-                        statePc = 17;
-                        continue stateLoop;
-                    }
-                    case 17: {
-                        return stackIn_17_0 != 0;
-                    }
-                    default: throw new IllegalStateException("invalid CFG state " + statePc);
+                  }
                 }
+              } catch (java.lang.Throwable decompiledCaughtParameter0) {
+                decompiledCaughtException = decompiledCaughtParameter0;
+                L4: {
+                  var2_ref = decompiledCaughtException;
+                  break L4;
+                }
+              }
+              L5: {
+                if (null == param1.getParameter("tuhstatbut")) {
+                  stackOut_16_0 = 0;
+                  stackIn_17_0 = stackOut_16_0;
+                  break L5;
+                } else {
+                  stackOut_15_0 = 1;
+                  stackIn_17_0 = stackOut_15_0;
+                  break L5;
+                }
+              }
+              return stackIn_17_0 != 0;
+            } else {
+              return true;
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -310,22 +219,30 @@ abstract class d implements vm {
             if (var2 >= var3) {
               return;
             } else {
+              int incrementValue$32 = var2;
               var2++;
-              var5[var2] = 0;
+              var5[incrementValue$32] = 0;
+              int incrementValue$33 = var2;
               var2++;
-              var5[var2] = 0;
+              var5[incrementValue$33] = 0;
+              int incrementValue$34 = var2;
               var2++;
-              var5[var2] = 0;
+              var5[incrementValue$34] = 0;
+              int incrementValue$35 = var2;
               var2++;
-              var5[var2] = 0;
+              var5[incrementValue$35] = 0;
+              int incrementValue$36 = var2;
               var2++;
-              var5[var2] = 0;
+              var5[incrementValue$36] = 0;
+              int incrementValue$37 = var2;
               var2++;
-              var5[var2] = 0;
+              var5[incrementValue$37] = 0;
+              int incrementValue$38 = var2;
               var2++;
-              var5[var2] = 0;
+              var5[incrementValue$38] = 0;
+              int incrementValue$39 = var2;
               var2++;
-              var5[var2] = 0;
+              var5[incrementValue$39] = 0;
               continue L0;
             }
           }
@@ -336,22 +253,30 @@ abstract class d implements vm {
             if (var2 >= var3) {
               return;
             } else {
+              int incrementValue$40 = var2;
               var2++;
-              var5[var2] = 0;
+              var5[incrementValue$40] = 0;
+              int incrementValue$41 = var2;
               var2++;
-              var5[var2] = 0;
+              var5[incrementValue$41] = 0;
+              int incrementValue$42 = var2;
               var2++;
-              var5[var2] = 0;
+              var5[incrementValue$42] = 0;
+              int incrementValue$43 = var2;
               var2++;
-              var5[var2] = 0;
+              var5[incrementValue$43] = 0;
+              int incrementValue$44 = var2;
               var2++;
-              var5[var2] = 0;
+              var5[incrementValue$44] = 0;
+              int incrementValue$45 = var2;
               var2++;
-              var5[var2] = 0;
+              var5[incrementValue$45] = 0;
+              int incrementValue$46 = var2;
               var2++;
-              var5[var2] = 0;
+              var5[incrementValue$46] = 0;
+              int incrementValue$47 = var2;
               var2++;
-              var5[var2] = 0;
+              var5[incrementValue$47] = 0;
               continue L1;
             }
           }

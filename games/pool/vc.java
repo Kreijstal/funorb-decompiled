@@ -211,233 +211,94 @@ abstract class vc extends oo {
         java.awt.Graphics var9 = null;
         java.awt.Graphics var10 = null;
         Throwable decompiledCaughtException = null;
-        int statePc = 0;
-        Throwable caughtException = null;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    try {
-                        var9 = pa.field_K.getGraphics();
-                        if (cl.field_c == null) {
-                            statePc = 2;
-                        } else {
-                            statePc = 1;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_0) {
-                        caughtException = stateCaught_0;
-                        statePc = 17;
-                        continue stateLoop;
-                    }
-                }
-                case 1: {
-                    try {
-                        statePc = 3;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_1) {
-                        caughtException = stateCaught_1;
-                        statePc = 17;
-                        continue stateLoop;
-                    }
-                }
-                case 2: {
-                    try {
-                        cl.field_c = new java.awt.Font("Helvetica", 1, 13);
-                        statePc = 3;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_2) {
-                        caughtException = stateCaught_2;
-                        statePc = 17;
-                        continue stateLoop;
-                    }
-                }
-                case 3: {
-                    try {
-                        if (!param0) {
-                            statePc = 5;
-                        } else {
-                            statePc = 4;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_3) {
-                        caughtException = stateCaught_3;
-                        statePc = 17;
-                        continue stateLoop;
-                    }
-                }
-                case 4: {
-                    try {
-                        var9.setColor(java.awt.Color.black);
-                        var9.fillRect(0, 0, ml.field_d, ad.field_c);
-                        statePc = 5;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_4) {
-                        caughtException = stateCaught_4;
-                        statePc = 17;
-                        continue stateLoop;
-                    }
-                }
-                case 5: {
-                    try {
-                        if (param3 != null) {
-                            statePc = 7;
-                        } else {
-                            statePc = 6;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_5) {
-                        caughtException = stateCaught_5;
-                        statePc = 17;
-                        continue stateLoop;
-                    }
-                }
-                case 6: {
-                    try {
-                        param3 = new java.awt.Color(140, 17, 17);
-                        statePc = 7;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_6) {
-                        caughtException = stateCaught_6;
-                        statePc = 17;
-                        continue stateLoop;
-                    }
-                }
-                case 7: {
-                    try {
-                        if (wf.field_c == null) {
-                            statePc = 9;
-                        } else {
-                            statePc = 8;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_7) {
-                        caughtException = stateCaught_7;
-                        statePc = 12;
-                        continue stateLoop;
-                    }
-                }
-                case 8: {
-                    try {
-                        statePc = 10;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_8) {
-                        caughtException = stateCaught_8;
-                        statePc = 12;
-                        continue stateLoop;
-                    }
-                }
-                case 9: {
-                    try {
-                        wf.field_c = pa.field_K.createImage(304, 34);
-                        statePc = 10;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_9) {
-                        caughtException = stateCaught_9;
-                        statePc = 12;
-                        continue stateLoop;
-                    }
-                }
-                case 10: {
-                    try {
-                        var10 = wf.field_c.getGraphics();
-                        var10.setColor(param3);
-                        var10.drawRect(0, 0, 303, 33);
-                        var10.fillRect(2, 2, param4 * 3, param1);
-                        var10.setColor(java.awt.Color.black);
-                        var10.drawRect(1, 1, 301, 31);
-                        var10.fillRect(param4 * 3 + 2, 2, -(3 * param4) + 300, 30);
-                        var10.setFont(cl.field_c);
-                        var10.setColor(java.awt.Color.white);
-                        var10.drawString(param2, (304 + -(param2.length() * 6)) / 2, 22);
-                        boolean discarded$2 = var9.drawImage(wf.field_c, ml.field_d / 2 + -152, ad.field_c / 2 - 18, (java.awt.image.ImageObserver) null);
-                        statePc = 11;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_10) {
-                        caughtException = stateCaught_10;
-                        statePc = 12;
-                        continue stateLoop;
-                    }
-                }
-                case 11: {
-                    try {
-                        statePc = 13;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_11) {
-                        caughtException = stateCaught_11;
-                        statePc = 17;
-                        continue stateLoop;
-                    }
-                }
-                case 12: {
-                    try {
-                        var6 = (Exception) (Object) caughtException;
-                        var7 = ml.field_d / 2 + -152;
-                        var8 = ad.field_c / 2 + -18;
-                        var9.setColor(param3);
-                        var9.drawRect(var7, var8, 303, 33);
-                        var9.fillRect(var7 + 2, var8 - -2, 3 * param4, 30);
-                        var9.setColor(java.awt.Color.black);
-                        var9.drawRect(1 + var7, 1 + var8, 301, 31);
-                        var9.fillRect(param4 * 3 + (var7 - -2), 2 + var8, 300 - 3 * param4, 30);
-                        var9.setFont(cl.field_c);
-                        var9.setColor(java.awt.Color.white);
-                        var9.drawString(param2, (-(6 * param2.length()) + 304) / 2 + var7, 22 + var8);
-                        statePc = 13;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_12) {
-                        caughtException = stateCaught_12;
-                        statePc = 17;
-                        continue stateLoop;
-                    }
-                }
-                case 13: {
-                    try {
-                        if (null != jf.field_o) {
-                            statePc = 15;
-                        } else {
-                            statePc = 14;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_13) {
-                        caughtException = stateCaught_13;
-                        statePc = 17;
-                        continue stateLoop;
-                    }
-                }
-                case 14: {
-                    try {
-                        statePc = 18;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_14) {
-                        caughtException = stateCaught_14;
-                        statePc = 17;
-                        continue stateLoop;
-                    }
-                }
-                case 15: {
-                    try {
-                        var9.setFont(cl.field_c);
-                        var9.setColor(java.awt.Color.white);
-                        var9.drawString(jf.field_o, ml.field_d / 2 - jf.field_o.length() * 6 / 2, ad.field_c / 2 - 26);
-                        statePc = 18;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_15) {
-                        caughtException = stateCaught_15;
-                        statePc = 17;
-                        continue stateLoop;
-                    }
-                }
-                case 17: {
-                    var5 = (Exception) (Object) caughtException;
-                    pa.field_K.repaint();
-                    statePc = 18;
-                    continue stateLoop;
-                }
-                case 18: {
-                    return;
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
+        try {
+          L0: {
+            L1: {
+              var9 = pa.field_K.getGraphics();
+              if (cl.field_c == null) {
+                cl.field_c = new java.awt.Font("Helvetica", 1, 13);
+                break L1;
+              } else {
+                break L1;
+              }
             }
+            L2: {
+              if (!param0) {
+                break L2;
+              } else {
+                var9.setColor(java.awt.Color.black);
+                var9.fillRect(0, 0, ml.field_d, ad.field_c);
+                break L2;
+              }
+            }
+            L3: {
+              if (param3 != null) {
+                break L3;
+              } else {
+                param3 = new java.awt.Color(140, 17, 17);
+                break L3;
+              }
+            }
+            try {
+              L4: {
+                L5: {
+                  if (wf.field_c == null) {
+                    wf.field_c = pa.field_K.createImage(304, 34);
+                    break L5;
+                  } else {
+                    break L5;
+                  }
+                }
+                var10 = wf.field_c.getGraphics();
+                var10.setColor(param3);
+                var10.drawRect(0, 0, 303, 33);
+                var10.fillRect(2, 2, param4 * 3, param1);
+                var10.setColor(java.awt.Color.black);
+                var10.drawRect(1, 1, 301, 31);
+                var10.fillRect(param4 * 3 + 2, 2, -(3 * param4) + 300, 30);
+                var10.setFont(cl.field_c);
+                var10.setColor(java.awt.Color.white);
+                var10.drawString(param2, (304 + -(param2.length() * 6)) / 2, 22);
+                boolean discarded$1 = var9.drawImage(wf.field_c, ml.field_d / 2 + -152, ad.field_c / 2 - 18, (java.awt.image.ImageObserver) null);
+                break L4;
+              }
+            } catch (java.lang.Exception decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              L6: {
+                var6 = (Exception) (Object) decompiledCaughtException;
+                var7 = ml.field_d / 2 + -152;
+                var8 = ad.field_c / 2 + -18;
+                var9.setColor(param3);
+                var9.drawRect(var7, var8, 303, 33);
+                var9.fillRect(var7 + 2, var8 - -2, 3 * param4, 30);
+                var9.setColor(java.awt.Color.black);
+                var9.drawRect(1 + var7, 1 + var8, 301, 31);
+                var9.fillRect(param4 * 3 + (var7 - -2), 2 + var8, 300 - 3 * param4, 30);
+                var9.setFont(cl.field_c);
+                var9.setColor(java.awt.Color.white);
+                var9.drawString(param2, (-(6 * param2.length()) + 304) / 2 + var7, 22 + var8);
+                break L6;
+              }
+            }
+            L7: {
+              if (null != jf.field_o) {
+                var9.setFont(cl.field_c);
+                var9.setColor(java.awt.Color.white);
+                var9.drawString(jf.field_o, ml.field_d / 2 - jf.field_o.length() * 6 / 2, ad.field_c / 2 - 26);
+                break L7;
+              } else {
+                break L7;
+              }
+            }
+            break L0;
+          }
+        } catch (java.lang.Exception decompiledCaughtParameter1) {
+          decompiledCaughtException = decompiledCaughtParameter1;
+          L8: {
+            var5 = (Exception) (Object) decompiledCaughtException;
+            pa.field_K.repaint();
+            break L8;
+          }
         }
     }
 

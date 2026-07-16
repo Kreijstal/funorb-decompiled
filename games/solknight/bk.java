@@ -63,8 +63,9 @@ final class bk {
               if (param0 != 3) {
                 bk.a((byte) -51);
                 if ((var7 ^ -1) > (var8 ^ -1)) {
+                  int incrementValue$8 = var6;
                   var6++;
-                  param4[var6] = param1.substring(var7, var8).trim();
+                  param4[incrementValue$8] = param1.substring(var7, var8).trim();
                   return var6;
                 } else {
                   return var6;
@@ -74,8 +75,9 @@ final class bk {
                   if ((var7 ^ -1) <= (var8 ^ -1)) {
                     break L1;
                   } else {
+                    int incrementValue$9 = var6;
                     var6++;
-                    param4[var6] = param1.substring(var7, var8).trim();
+                    param4[incrementValue$9] = param1.substring(var7, var8).trim();
                     break L1;
                   }
                 }
@@ -100,8 +102,9 @@ final class bk {
                 if (var12 < param3) {
                   break L2;
                 } else {
+                  int incrementValue$10 = var6;
                   var6++;
-                  param4[var6] = var11;
+                  param4[incrementValue$10] = var11;
                   var7 = 1 + var9;
                   break L2;
                 }
@@ -112,8 +115,9 @@ final class bk {
                   break L4;
                 } else {
                   if (param1.regionMatches(var9 - 3, "<br>", 0, 4)) {
+                    int incrementValue$11 = var6;
                     var6++;
-                    param4[var6] = param1.substring(var7, var9 - 3).trim();
+                    param4[incrementValue$11] = param1.substring(var7, var9 - 3).trim();
                     var7 = var9 + 1;
                     break L4;
                   } else {
@@ -142,15 +146,17 @@ final class bk {
                   if ((var7 ^ -1) <= (var8 ^ -1)) {
                     return var6;
                   } else {
+                    int incrementValue$12 = var6;
                     var6++;
-                    param4[var6] = param1.substring(var7, var8).trim();
+                    param4[incrementValue$12] = param1.substring(var7, var8).trim();
                     return var6;
                   }
                 } else {
                   bk.a((byte) -51);
                   if ((var7 ^ -1) > (var8 ^ -1)) {
+                    int incrementValue$13 = var6;
                     var6++;
-                    param4[var6] = param1.substring(var7, var8).trim();
+                    param4[incrementValue$13] = param1.substring(var7, var8).trim();
                     return var6;
                   } else {
                     return var6;
@@ -175,8 +181,9 @@ final class bk {
                   if (var12 < param3) {
                     break L6;
                   } else {
+                    int incrementValue$14 = var6;
                     var6++;
-                    param4[var6] = var11;
+                    param4[incrementValue$14] = var11;
                     var7 = 1 + var9;
                     break L6;
                   }
@@ -187,8 +194,9 @@ final class bk {
                     break L8;
                   } else {
                     if (param1.regionMatches(var9 - 3, "<br>", 0, 4)) {
+                      int incrementValue$15 = var6;
                       var6++;
-                      param4[var6] = param1.substring(var7, var9 - 3).trim();
+                      param4[incrementValue$15] = param1.substring(var7, var9 - 3).trim();
                       var7 = var9 + 1;
                       break L8;
                     } else {

@@ -46,8 +46,9 @@ final class mf {
         int var4 = 0;
         int var5 = 0;
         var5 = MinerDisturbance.field_ab;
+        int fieldTemp$3 = ((mf) this).field_n + 1;
         ((mf) this).field_n = ((mf) this).field_n + 1;
-        ((mf) this).field_g = ((mf) this).field_g + (((mf) this).field_n + 1);
+        ((mf) this).field_g = ((mf) this).field_g + fieldTemp$3;
         var2 = 0;
         L0: while (true) {
           if (-257 >= (var2 ^ -1)) {
@@ -82,10 +83,12 @@ final class mf {
               }
             }
             ((mf) this).field_b = ((mf) this).field_b + ((mf) this).field_e[var2 + 128 & 255];
-            var4 = ((mf) this).field_g + (((mf) this).field_b + ((mf) this).field_e[c.a(1020, var3) >> 654921122]);
-            ((mf) this).field_e[var2] = ((mf) this).field_g + (((mf) this).field_b + ((mf) this).field_e[c.a(1020, var3) >> 654921122]);
-            ((mf) this).field_g = var3 + ((mf) this).field_e[c.a(261205, var4) >> 705589640 >> 296878274];
-            ((mf) this).field_l[var2] = var3 + ((mf) this).field_e[c.a(261205, var4) >> 705589640 >> 296878274];
+            int dupTemp$4 = ((mf) this).field_g + (((mf) this).field_b + ((mf) this).field_e[c.a(1020, var3) >> 654921122]);
+            var4 = dupTemp$4;
+            ((mf) this).field_e[var2] = dupTemp$4;
+            int dupTemp$5 = var3 + ((mf) this).field_e[c.a(261205, var4) >> 705589640 >> 296878274];
+            ((mf) this).field_g = dupTemp$5;
+            ((mf) this).field_l[var2] = dupTemp$5;
             var2++;
             continue L0;
           }
@@ -266,8 +269,9 @@ final class mf {
             this.a((byte) -91);
             ((mf) this).field_d = 256;
         }
+        int fieldTemp$0 = ((mf) this).field_d - 1;
         ((mf) this).field_d = ((mf) this).field_d - 1;
-        return ((mf) this).field_l[((mf) this).field_d - 1];
+        return ((mf) this).field_l[fieldTemp$0];
     }
 
     mf(int[] param0) {

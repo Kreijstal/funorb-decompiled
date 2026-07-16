@@ -16,14 +16,16 @@ final class bd {
         if (param4 == 126) {
           var6 = new oh[9];
           var5 = var6;
-          var5[6] = ce.a(param2, param1, param4 + -126);
-          var5[3] = ce.a(param2, param1, param4 + -126);
-          var5[2] = ce.a(param2, param1, param4 + -126);
-          var5[1] = ce.a(param2, param1, param4 + -126);
-          var5[0] = ce.a(param2, param1, param4 + -126);
-          var6[8] = ce.a(param0, param1, 0);
-          var5[7] = ce.a(param0, param1, 0);
-          var5[5] = ce.a(param0, param1, 0);
+          oh dupTemp$4 = ce.a(param2, param1, param4 + -126);
+          var5[6] = dupTemp$4;
+          var5[3] = dupTemp$4;
+          var5[2] = dupTemp$4;
+          var5[1] = dupTemp$4;
+          var5[0] = dupTemp$4;
+          oh dupTemp$5 = ce.a(param0, param1, 0);
+          var6[8] = dupTemp$5;
+          var5[7] = dupTemp$5;
+          var5[5] = dupTemp$5;
           if (param3 != 0) {
             var5[4] = ce.a(param3, 64, param4 + -126);
             return var5;
@@ -34,14 +36,16 @@ final class bd {
           bd.a((byte) -37);
           var6 = new oh[9];
           var5 = var6;
-          var5[6] = ce.a(param2, param1, param4 + -126);
-          var5[3] = ce.a(param2, param1, param4 + -126);
-          var5[2] = ce.a(param2, param1, param4 + -126);
-          var5[1] = ce.a(param2, param1, param4 + -126);
-          var5[0] = ce.a(param2, param1, param4 + -126);
-          var6[8] = ce.a(param0, param1, 0);
-          var5[7] = ce.a(param0, param1, 0);
-          var5[5] = ce.a(param0, param1, 0);
+          oh dupTemp$6 = ce.a(param2, param1, param4 + -126);
+          var5[6] = dupTemp$6;
+          var5[3] = dupTemp$6;
+          var5[2] = dupTemp$6;
+          var5[1] = dupTemp$6;
+          var5[0] = dupTemp$6;
+          oh dupTemp$7 = ce.a(param0, param1, 0);
+          var6[8] = dupTemp$7;
+          var5[7] = dupTemp$7;
+          var5[5] = dupTemp$7;
           if (param3 == 0) {
             return var5;
           } else {

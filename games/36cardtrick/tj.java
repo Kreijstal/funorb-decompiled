@@ -15,7 +15,7 @@ final class tj extends g implements qh {
         field_D = null;
         field_F = null;
         if (param0 != 0) {
-          field_D = (String) null;
+          field_D = null;
           field_H = null;
           field_J = null;
           return;
@@ -27,7 +27,7 @@ final class tj extends g implements qh {
     }
 
     final boolean a(char param0, byte param1, int param2, lk param3) {
-        if (!this.a(param0, (byte) -117, param2, param3)) {
+        if (!super.a(param0, (byte) -117, param2, param3)) {
           if (98 != param2) {
             if ((param2 ^ -1) != -100) {
               if (param1 >= -99) {
@@ -76,38 +76,44 @@ final class tj extends g implements qh {
         int var5 = ((tj) this).field_o - -param0;
         int var6 = ((tj) this).field_i + param1;
         int discarded$0 = j.field_C.a(gk.field_e, var5 + 20, 20 + var6, ((tj) this).field_h - 40, -50 + ((tj) this).field_q, 16777215, param2, 1, 0, j.field_C.field_s);
-        this.a(param0, param1, -1, param3);
+        super.a(param0, param1, -1, param3);
     }
 
     final static void a(boolean param0, java.applet.Applet param1) {
         try {
             Throwable var2 = null;
             String var3 = null;
-            java.applet.Applet var4 = null;
+            Object var4 = null;
             java.net.URL var5 = null;
             Throwable decompiledCaughtException = null;
             try {
               L0: {
-                var5 = param1.getCodeBase();
-                var3 = fh.a(param1, var5, -1).getFile();
-                if (param0) {
-                  break L0;
-                } else {
-                  var4 = (java.applet.Applet) null;
-                  tj.a(false, (java.applet.Applet) null);
-                  break L0;
+                L1: {
+                  var5 = param1.getCodeBase();
+                  var3 = fh.a(param1, var5, -1).getFile();
+                  if (param0) {
+                    break L1;
+                  } else {
+                    var4 = null;
+                    tj.a(false, (java.applet.Applet) null);
+                    break L1;
+                  }
                 }
+                Object discarded$6 = vh.a(new Object[2], "updatelinks", (byte) -30, param1);
+                Object discarded$7 = vh.a(new Object[2], "updatelinks", (byte) 121, param1);
+                Object discarded$8 = vh.a(new Object[2], "updatelinks", (byte) 117, param1);
+                Object discarded$9 = vh.a(new Object[2], "updatelinks", (byte) 118, param1);
+                Object discarded$10 = vh.a(new Object[2], "updatelinks", (byte) -43, param1);
+                Object discarded$11 = vh.a(new Object[2], "updatelinks", (byte) 119, param1);
+                break L0;
               }
-              Object discarded$6 = vh.a(new Object[2], "updatelinks", (byte) -30, param1);
-              Object discarded$7 = vh.a(new Object[2], "updatelinks", (byte) 121, param1);
-              Object discarded$8 = vh.a(new Object[2], "updatelinks", (byte) 117, param1);
-              Object discarded$9 = vh.a(new Object[2], "updatelinks", (byte) 118, param1);
-              Object discarded$10 = vh.a(new Object[2], "updatelinks", (byte) -43, param1);
-              Object discarded$11 = vh.a(new Object[2], "updatelinks", (byte) 119, param1);
-            } catch (java.lang.Throwable decompiledCaughtParameter) {
-              decompiledCaughtException = decompiledCaughtParameter;
+            } catch (java.lang.Throwable decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              L2: {
+                var2 = decompiledCaughtException;
+                break L2;
+              }
             }
-            var2 = decompiledCaughtException;
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {

@@ -64,8 +64,9 @@ final class vn extends cv {
                 break L1;
               }
             }
+            int fieldTemp$1 = ((vn) this).field_m;
             ((vn) this).field_m = ((vn) this).field_m + 1;
-            return ((vn) this).field_m;
+            return fieldTemp$1;
           } else {
             if (var4 == ((vn) this).field_H[var7]) {
               if (var5 == ((vn) this).field_l[var7]) {
@@ -693,8 +694,9 @@ final class vn extends cv {
                                           break L6;
                                         }
                                       }
-                                      ((vn) this).field_J[var1] = new ia();
-                                      var16 = new ia();
+                                      ia dupTemp$1 = new ia();
+                                      ((vn) this).field_J[var1] = dupTemp$1;
+                                      var16 = dupTemp$1;
                                       var16.field_f = var11;
                                       var16.field_a = var12;
                                       var16.field_g = var13;
@@ -876,8 +878,9 @@ final class vn extends cv {
                 break L2;
               } else {
                 L4: {
-                  ((vn) this).field_T[var28] = var2.j((byte) -114);
-                  var29 = var2.j((byte) -114);
+                  byte dupTemp$1 = var2.j((byte) -114);
+                  ((vn) this).field_T[var28] = dupTemp$1;
+                  var29 = dupTemp$1;
                   if (var29 != 0) {
                     break L4;
                   } else {
@@ -1542,15 +1545,25 @@ final class vn extends cv {
     }
 
     private vn(byte[] param0) {
-        ((vn) this).field_D = 0;
-        ((vn) this).field_m = 0;
-        ((vn) this).field_t = 0;
-        ((vn) this).field_F = (byte) 0;
-        if (param0[param0.length - 1] == -1) {
-            // if_icmpne L52
-            this.a(param0);
-        } else {
-            this.b(param0);
+        L0: {
+          L1: {
+            ((vn) this).field_D = 0;
+            ((vn) this).field_m = 0;
+            ((vn) this).field_t = 0;
+            ((vn) this).field_F = (byte) 0;
+            if (param0[param0.length - 1] != -1) {
+              break L1;
+            } else {
+              if (param0[param0.length - 2] != -1) {
+                break L1;
+              } else {
+                this.a(param0);
+                break L0;
+              }
+            }
+          }
+          this.b(param0);
+          break L0;
         }
     }
 
@@ -1742,6 +1755,7 @@ final class vn extends cv {
                 var10 = 0;
                 L9: while (true) {
                   if (var10 >= param1) {
+                    return;
                   } else {
                     var16 = param0[var10];
                     var19 = var16;
@@ -1808,9 +1822,10 @@ final class vn extends cv {
                           if (var8 != 0) {
                             L15: {
                               L16: {
+                                int incrementValue$1 = var9;
                                 var9++;
                                 stackOut_74_0 = ((vn) this).field_I;
-                                stackOut_74_1 = var9;
+                                stackOut_74_1 = incrementValue$1;
                                 stackIn_77_0 = stackOut_74_0;
                                 stackIn_77_1 = stackOut_74_1;
                                 stackIn_75_0 = stackOut_74_0;

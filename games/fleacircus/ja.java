@@ -18,7 +18,7 @@ class ja extends bb {
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
-        mi var10 = null;
+        Object var10 = null;
         int var11 = 0;
         pi var12 = null;
         int var13 = 0;
@@ -98,13 +98,13 @@ class ja extends bb {
                   var14 = stackIn_14_0;
                   var15 = new mi(var7, var13, var12.field_a, -var13 + var14, Math.max(var3.a((byte) 127), -var12.field_a + var12.field_c));
                   if (var10 != null) {
-                    var10.field_q = var15;
+                    ((mi) var10).field_q = var15;
                     break L5;
                   } else {
                     break L5;
                   }
                 }
-                var10 = var15;
+                var10 = (Object) (Object) var15;
                 ((ja) this).field_N.a(false, (lh) (Object) var15);
                 var11++;
                 continue L2;
@@ -115,22 +115,52 @@ class ja extends bb {
     }
 
     final void a(int param0, String param1, int param2) {
+        String[] var4 = null;
         int var5 = 0;
-        int var6 = fleas.field_A ? 1 : 0;
-        if (param0 != 0) {
+        int var6 = 0;
+        String[] var7 = null;
+        L0: {
+          var6 = fleas.field_A ? 1 : 0;
+          if (param0 == 0) {
+            break L0;
+          } else {
             ((ja) this).b(55, 20, false, -78);
+            break L0;
+          }
         }
-        if (((ja) this).field_K != null) {
-            // if_icmplt L102
-        }
-        String[] var7 = new String[param2 - -1];
-        String[] var4 = var7;
-        if (null != ((ja) this).field_K) {
-            for (var5 = 0; var5 < ((ja) this).field_K.length; var5++) {
-                var7[var5] = ((ja) this).field_K[var5];
+        L1: {
+          L2: {
+            if (((ja) this).field_K == null) {
+              break L2;
+            } else {
+              if (param2 < ((ja) this).field_K.length) {
+                break L1;
+              } else {
+                break L2;
+              }
             }
+          }
+          L3: {
+            var7 = new String[param2 - -1];
+            var4 = var7;
+            if (null == ((ja) this).field_K) {
+              break L3;
+            } else {
+              var5 = 0;
+              L4: while (true) {
+                if (var5 >= ((ja) this).field_K.length) {
+                  break L3;
+                } else {
+                  var7[var5] = ((ja) this).field_K[var5];
+                  var5++;
+                  continue L4;
+                }
+              }
+            }
+          }
+          ((ja) this).field_K = var4;
+          break L1;
         }
-        ((ja) this).field_K = var4;
         ((ja) this).field_K[param2] = param1;
     }
 

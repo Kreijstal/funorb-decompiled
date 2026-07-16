@@ -36,18 +36,32 @@ class wv extends mu implements vh {
     }
 
     final void q(int param0) {
-        if (!(((wv) this).field_C)) {
-            return;
-        }
-        ((wv) this).field_C = false;
-        if (!((wv) this).field_gb) {
-            // ifeq L45
-            vr.c(-3);
+        if (!((wv) this).field_C) {
+          return;
         } else {
-            uj.b(true);
-        }
-        if (param0 >= -75) {
-            field_ib = -91;
+          L0: {
+            ((wv) this).field_C = false;
+            if (((wv) this).field_gb) {
+              uj.b(true);
+              break L0;
+            } else {
+              if (!((wv) this).field_db) {
+                break L0;
+              } else {
+                vr.c(-3);
+                break L0;
+              }
+            }
+          }
+          L1: {
+            if (param0 < -75) {
+              break L1;
+            } else {
+              field_ib = -91;
+              break L1;
+            }
+          }
+          return;
         }
     }
 

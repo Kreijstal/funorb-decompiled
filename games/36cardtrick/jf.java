@@ -13,16 +13,16 @@ final class jf extends kh implements java.awt.image.ImageProducer, java.awt.imag
 
     public final synchronized void addConsumer(java.awt.image.ImageConsumer param0) {
         ((jf) this).field_j = param0;
-        ((java.awt.image.ImageConsumer) param0).setDimensions(((jf) this).field_b, ((jf) this).field_d);
-        ((java.awt.image.ImageConsumer) param0).setProperties((Hashtable) null);
-        ((java.awt.image.ImageConsumer) param0).setColorModel(((jf) this).field_m);
-        ((java.awt.image.ImageConsumer) param0).setHints(14);
+        param0.setDimensions(((jf) this).field_b, ((jf) this).field_d);
+        param0.setProperties((Hashtable) null);
+        param0.setColorModel(((jf) this).field_m);
+        param0.setHints(14);
     }
 
     final static void a(java.awt.Canvas param0, boolean param1, boolean param2) {
         int var3 = 0;
         int var4 = 0;
-        java.awt.Canvas var5 = null;
+        Object var5 = null;
         var4 = Main.field_T;
         if (!param1) {
           if ((g.field_A ^ -1) <= -11) {
@@ -56,7 +56,7 @@ final class jf extends kh implements java.awt.image.ImageProducer, java.awt.imag
             return;
           }
         } else {
-          var5 = (java.awt.Canvas) null;
+          var5 = null;
           jf.a((java.awt.Canvas) null, false, false);
           if ((g.field_A ^ -1) <= -11) {
             if (lc.a((byte) -82)) {
@@ -115,7 +115,7 @@ final class jf extends kh implements java.awt.image.ImageProducer, java.awt.imag
 
     final void a(java.awt.Graphics param0, int param1, int param2, byte param3) {
         if (param3 <= 110) {
-          ((jf) this).field_j = (java.awt.image.ImageConsumer) null;
+          ((jf) this).field_j = null;
           this.c(14);
           boolean discarded$4 = param0.drawImage(((jf) this).field_a, param1, param2, (java.awt.image.ImageObserver) this);
           return;
@@ -133,28 +133,22 @@ final class jf extends kh implements java.awt.image.ImageProducer, java.awt.imag
     }
 
     final void a(java.awt.Component param0, int param1, byte param2, int param3) {
-        try {
-            ((jf) this).field_d = param1;
-            ((jf) this).field_b = param3;
-            if (param2 != 68) {
-              return;
-            } else {
-              ((jf) this).field_h = new int[param1 * param3 - -1];
-              ((jf) this).field_m = (java.awt.image.ColorModel) (Object) new java.awt.image.DirectColorModel(32, 16711680, 65280, 255);
-              ((jf) this).field_a = param0.createImage((java.awt.image.ImageProducer) this);
-              this.c(14);
-              boolean discarded$3 = param0.prepareImage(((jf) this).field_a, (java.awt.image.ImageObserver) this);
-              this.c(14);
-              boolean discarded$4 = param0.prepareImage(((jf) this).field_a, (java.awt.image.ImageObserver) this);
-              this.c(param2 ^ 74);
-              boolean discarded$5 = param0.prepareImage(((jf) this).field_a, (java.awt.image.ImageObserver) this);
-              ((jf) this).a(200);
-              return;
-            }
-        } catch (RuntimeException | Error decompiledUncheckedException) {
-            throw decompiledUncheckedException;
-        } catch (Throwable decompiledCheckedException) {
-            throw new RuntimeException(decompiledCheckedException);
+        ((jf) this).field_d = param1;
+        ((jf) this).field_b = param3;
+        if (param2 != 68) {
+          return;
+        } else {
+          ((jf) this).field_h = new int[param1 * param3 - -1];
+          ((jf) this).field_m = (java.awt.image.ColorModel) (Object) new java.awt.image.DirectColorModel(32, 16711680, 65280, 255);
+          ((jf) this).field_a = param0.createImage((java.awt.image.ImageProducer) this);
+          this.c(14);
+          boolean discarded$3 = param0.prepareImage(((jf) this).field_a, (java.awt.image.ImageObserver) this);
+          this.c(14);
+          boolean discarded$4 = param0.prepareImage(((jf) this).field_a, (java.awt.image.ImageObserver) this);
+          this.c(param2 ^ 74);
+          boolean discarded$5 = param0.prepareImage(((jf) this).field_a, (java.awt.image.ImageObserver) this);
+          ((jf) this).a(200);
+          return;
         }
     }
 
@@ -169,19 +163,19 @@ final class jf extends kh implements java.awt.image.ImageProducer, java.awt.imag
         if (null != rf.field_d) {
           if (param1 != null) {
             if (0 != param1.length()) {
-              var6 = (CharSequence) param1;
+              var6 = (CharSequence) (Object) param1;
               var2 = ff.a((byte) 116, var6);
               if (var2 != null) {
-                var3 = (aa) rf.field_d.a(-78, (long)var2.hashCode());
+                var3 = (aa) (Object) rf.field_d.a(-78, (long)var2.hashCode());
                 if (param0 == 0) {
                   L0: while (true) {
                     if (var3 != null) {
-                      var7 = (CharSequence) ((aa) var3).field_gb;
+                      var7 = (CharSequence) (Object) var3.field_gb;
                       var4 = ff.a((byte) 116, var7);
                       if (var4.equals((Object) (Object) var2)) {
                         return var3;
                       } else {
-                        var3 = (aa) rf.field_d.a(26847);
+                        var3 = (aa) (Object) rf.field_d.a(26847);
                         continue L0;
                       }
                     } else {
@@ -189,7 +183,7 @@ final class jf extends kh implements java.awt.image.ImageProducer, java.awt.imag
                     }
                   }
                 } else {
-                  return (aa) null;
+                  return null;
                 }
               } else {
                 return null;
@@ -214,7 +208,7 @@ final class jf extends kh implements java.awt.image.ImageProducer, java.awt.imag
 
     private final synchronized void c(int param0) {
         if (param0 != 14) {
-            field_k = (String) null;
+            field_k = null;
             if (!(null != ((jf) this).field_j)) {
                 return;
             }

@@ -52,67 +52,36 @@ final class hf {
     }
 
     final static String a(byte param0, int param1, int param2, byte[] param3) {
-        char[] var4 = null;
-        int var5 = 0;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
-        int var9 = 0;
-        Object var10 = null;
-        char[] var11 = null;
-        char[] var12 = null;
-        var9 = Kickabout.field_G;
-        var12 = new char[param1];
-        var11 = var12;
-        var4 = var11;
-        var5 = 0;
-        var6 = 0;
-        L0: while (true) {
-          if (param1 <= var6) {
-            L1: {
-              if (param0 < -119) {
-                break L1;
-              } else {
-                var10 = null;
-                boolean discarded$1 = hf.a((String) null, 99);
-                break L1;
-              }
-            }
-            return new String(var12, 0, var5);
-          } else {
+        int var9 = Kickabout.field_G;
+        char[] var12 = new char[param1];
+        char[] var11 = var12;
+        char[] var4 = var11;
+        int var5 = 0;
+        for (var6 = 0; (param1 ^ -1) < (var6 ^ -1); var6++) {
             var7 = param3[param2 + var6] & 255;
-            if (-1 != var7) {
-              L2: {
-                if (-129 > var7) {
-                  break L2;
-                } else {
-                  if ((var7 ^ -1) <= -161) {
-                    break L2;
-                  } else {
-                    L3: {
-                      var8 = ts.field_c[var7 - 128];
-                      if (var8 != 0) {
-                        break L3;
-                      } else {
-                        var8 = 63;
-                        break L3;
-                      }
+            if (!(-1 == (var7 ^ -1))) {
+                if (-129 >= (var7 ^ -1)) {
+                    if ((var7 ^ -1) > -161) {
+                        var8 = ts.field_c[var7 - 128];
+                        if (var8 == 0) {
+                            var8 = 63;
+                        }
+                        var7 = var8;
                     }
-                    var7 = var8;
-                    break L2;
-                  }
                 }
-              }
-              var5++;
-              var4[var5] = (char)var7;
-              var6++;
-              continue L0;
-            } else {
-              var6++;
-              continue L0;
+                int incrementValue$0 = var5;
+                var5++;
+                var4[incrementValue$0] = (char)var7;
             }
-          }
         }
+        if (param0 >= -119) {
+            Object var10 = null;
+            boolean discarded$1 = hf.a((String) null, 99);
+        }
+        return new String(var12, 0, var5);
     }
 
     static int a(int param0, int param1) {

@@ -94,46 +94,26 @@ final class fc {
             java.net.URL var2 = null;
             Object var3 = null;
             Throwable decompiledCaughtException = null;
-            int statePc = 0;
-            Throwable caughtException = null;
-            stateLoop: while (true) {
-                switch (statePc) {
-                    case 0: {
-                        try {
-                            var2 = new java.net.URL(param0.getCodeBase(), "tosupport.ws");
-                            param0.getAppletContext().showDocument(lg.a(false, param0, var2), "_top");
-                            statePc = 3;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_0) {
-                            caughtException = stateCaught_0;
-                            statePc = 2;
-                            continue stateLoop;
-                        }
-                    }
-                    case 2: {
-                        exception = (Exception) (Object) caughtException;
-                        exception.printStackTrace();
-                        statePc = 3;
-                        continue stateLoop;
-                    }
-                    case 3: {
-                        if (param1 != 19) {
-                            statePc = 5;
-                        } else {
-                            statePc = 4;
-                        }
-                        continue stateLoop;
-                    }
-                    case 4: {
-                        return;
-                    }
-                    case 5: {
-                        var3 = null;
-                        fc.a((java.applet.Applet) null, (byte) -14);
-                        return;
-                    }
-                    default: throw new IllegalStateException("invalid CFG state " + statePc);
-                }
+            try {
+              L0: {
+                var2 = new java.net.URL(param0.getCodeBase(), "tosupport.ws");
+                param0.getAppletContext().showDocument(lg.a(false, param0, var2), "_top");
+                break L0;
+              }
+            } catch (java.lang.Exception decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              L1: {
+                exception = (Exception) (Object) decompiledCaughtException;
+                exception.printStackTrace();
+                break L1;
+              }
+            }
+            if (param1 != 19) {
+              var3 = null;
+              fc.a((java.applet.Applet) null, (byte) -14);
+              return;
+            } else {
+              return;
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;

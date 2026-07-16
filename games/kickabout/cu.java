@@ -11,7 +11,7 @@ final class cu {
     static String[] field_e;
 
     final static cf a(boolean param0, int param1, int param2, int param3, boolean param4, boolean param5) {
-        cf var6 = null;
+        Object var6 = null;
         cf var6_ref = null;
         Object var7 = null;
         cf stackIn_5_0 = null;
@@ -69,16 +69,16 @@ final class cu {
             int discarded$1 = cu.a((byte) 95, (String) null, (iw) null);
             var6_ref = (cf) (Object) field_a.b((byte) -32);
             if (var6_ref == null) {
-              var6 = new cf();
+              var6_ref = new cf();
               break L0;
             } else {
               break L0;
             }
           }
           L1: {
-            var6.field_Ab = param2;
-            var6.field_yb = param3;
-            stackOut_14_0 = (cf) var6;
+            var6_ref.field_Ab = param2;
+            var6_ref.field_yb = param3;
+            stackOut_14_0 = (cf) var6_ref;
             stackIn_16_0 = stackOut_14_0;
             stackIn_15_0 = stackOut_14_0;
             if (!param0) {
@@ -97,13 +97,13 @@ final class cu {
           }
           L2: {
             stackIn_17_0.field_Fb = stackIn_17_1 != 0;
-            stackOut_17_0 = (cf) var6;
+            stackOut_17_0 = (cf) var6_ref;
             stackOut_17_1 = new StringBuilder().append("");
             stackIn_19_0 = stackOut_17_0;
             stackIn_19_1 = stackOut_17_1;
             stackIn_18_0 = stackOut_17_0;
             stackIn_18_1 = stackOut_17_1;
-            if (var6.field_Fb) {
+            if (var6_ref.field_Fb) {
               stackOut_19_0 = (cf) (Object) stackIn_19_0;
               stackOut_19_1 = (StringBuilder) (Object) stackIn_19_1;
               stackOut_19_2 = "=";
@@ -122,21 +122,21 @@ final class cu {
             }
           }
           stackIn_20_0.field_Bb = stackIn_20_2;
-          return var6;
+          return var6_ref;
         } else {
           L3: {
             var6_ref = (cf) (Object) field_a.b((byte) -32);
             if (var6_ref == null) {
-              var6 = new cf();
+              var6_ref = new cf();
               break L3;
             } else {
               break L3;
             }
           }
           L4: {
-            var6.field_Ab = param2;
-            var6.field_yb = param3;
-            stackOut_4_0 = (cf) var6;
+            var6_ref.field_Ab = param2;
+            var6_ref.field_yb = param3;
+            stackOut_4_0 = (cf) var6_ref;
             stackIn_6_0 = stackOut_4_0;
             stackIn_5_0 = stackOut_4_0;
             if (!param0) {
@@ -155,13 +155,13 @@ final class cu {
           }
           L5: {
             stackIn_7_0.field_Fb = stackIn_7_1 != 0;
-            stackOut_7_0 = (cf) var6;
+            stackOut_7_0 = (cf) var6_ref;
             stackOut_7_1 = new StringBuilder().append("");
             stackIn_9_0 = stackOut_7_0;
             stackIn_9_1 = stackOut_7_1;
             stackIn_8_0 = stackOut_7_0;
             stackIn_8_1 = stackOut_7_1;
-            if (var6.field_Fb) {
+            if (var6_ref.field_Fb) {
               stackOut_9_0 = (cf) (Object) stackIn_9_0;
               stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
               stackOut_9_2 = "=";
@@ -180,7 +180,7 @@ final class cu {
             }
           }
           stackIn_10_0.field_Bb = stackIn_10_2;
-          return var6;
+          return var6_ref;
         }
     }
 

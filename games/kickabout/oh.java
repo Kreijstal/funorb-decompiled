@@ -79,8 +79,9 @@ final class oh {
                 if ((param0.a(2, param2[var8], var7) ^ -1) >= -1) {
                   var9 = param2[var8];
                   param2[var8] = param2[var6];
+                  int incrementValue$1 = var6;
                   var6++;
-                  param2[var6] = var9;
+                  param2[incrementValue$1] = var9;
                   var8++;
                   continue L2;
                 } else {

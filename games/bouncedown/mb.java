@@ -227,8 +227,7 @@ final class mb extends ed {
                 }
               }
               L8: {
-                new bh(stackIn_35_2, stackIn_35_3, stackIn_35_4);
-                var14 = stackIn_35_0;
+                var14 = new bh(stackIn_35_2, stackIn_35_3, stackIn_35_4);
                 var14.field_a[0] = 0;
                 if (var13 != null) {
                   L9: {

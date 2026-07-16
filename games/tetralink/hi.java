@@ -35,38 +35,69 @@ abstract class hi {
     }
 
     final int a(int param0, int param1, int param2) {
+        int var4 = 0;
         int var5 = 0;
         bk var6 = null;
         int var7 = 0;
-        int var8 = TetraLink.field_J;
-        if (((hi) this).field_c != null) {
-            // if_icmpeq L37
-            // if_icmpgt L37
-        } else {
-            return -1;
-        }
-        if (param1 > ((hi) this).field_c[((hi) this).field_c.length - 1].field_a) {
-            return -1;
-        }
-        if (param2 != 12024) {
-            ((hi) this).field_c = null;
-        }
-        if (1 == ((hi) this).field_c.length) {
-            return ((hi) this).field_c[0].a((byte) 109, param0);
-        }
-        int var4 = 0;
-        for (var5 = 0; var5 < ((hi) this).field_c.length; var5++) {
-            var6 = ((hi) this).field_c[var5];
-            if (param1 >= var6.field_h) {
-                if (!(param1 > var6.field_a)) {
-                    var7 = var6.a((byte) 118, param0);
-                    if (var7 == -1) {
-                        return -1;
+        int var8 = 0;
+        L0: {
+          var8 = TetraLink.field_J;
+          if (((hi) this).field_c == null) {
+            break L0;
+          } else {
+            if (0 == ((hi) this).field_c.length) {
+              break L0;
+            } else {
+              if (((hi) this).field_c[0].field_h > param1) {
+                break L0;
+              } else {
+                if (param1 <= ((hi) this).field_c[((hi) this).field_c.length - 1].field_a) {
+                  L1: {
+                    if (param2 == 12024) {
+                      break L1;
+                    } else {
+                      ((hi) this).field_c = null;
+                      break L1;
                     }
-                    return var7 + var4;
+                  }
+                  if (1 != ((hi) this).field_c.length) {
+                    var4 = 0;
+                    var5 = 0;
+                    L2: while (true) {
+                      if (var5 >= ((hi) this).field_c.length) {
+                        return -1;
+                      } else {
+                        L3: {
+                          var6 = ((hi) this).field_c[var5];
+                          if (param1 < var6.field_h) {
+                            break L3;
+                          } else {
+                            if (param1 <= var6.field_a) {
+                              var7 = var6.a((byte) 118, param0);
+                              if (var7 != -1) {
+                                return var7 + var4;
+                              } else {
+                                return -1;
+                              }
+                            } else {
+                              break L3;
+                            }
+                          }
+                        }
+                        var4 = var4 + (var6.field_j.length - 1);
+                        var5++;
+                        continue L2;
+                      }
+                    }
+                  } else {
+                    return ((hi) this).field_c[0].a((byte) 109, param0);
+                  }
+                } else {
+                  return -1;
                 }
+              }
             }
-            var4 = var4 + (var6.field_j.length - 1);
+          }
         }
         return -1;
     }
@@ -172,8 +203,9 @@ abstract class hi {
         for (var7 = 0; var3 > var7; var7++) {
             for (var8 = var6; param1 != param0.charAt(var8); var8++) {
             }
+            int incrementValue$0 = var5;
             var5++;
-            var4[var5] = param0.substring(var6, var8);
+            var4[incrementValue$0] = param0.substring(var6, var8);
             var6 = var8 - -1;
         }
         var4[var3] = param0.substring(var6);

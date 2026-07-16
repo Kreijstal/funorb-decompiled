@@ -46,7 +46,6 @@ final class ff {
 
     final si a(int param0, byte param1) {
         si var3 = null;
-        si var3_ref = null;
         byte[] var4 = null;
         var3 = (si) ((ff) this).field_c.a((long)param0, (byte) -54);
         if (var3 == null) {
@@ -60,9 +59,9 @@ final class ff {
             }
           }
           L1: {
-            var3_ref = new si();
+            var3 = new si();
             if (var4 != null) {
-              var3_ref.a(new n(var4), 0);
+              var3.a(new n(var4), 0);
               break L1;
             } else {
               break L1;
@@ -70,7 +69,7 @@ final class ff {
           }
           L2: {
             if (-32769 >= (param0 ^ -1)) {
-              var3_ref.d((byte) 88);
+              var3.d((byte) 88);
               break L2;
             } else {
               break L2;
@@ -78,11 +77,11 @@ final class ff {
           }
           if (param1 > -118) {
             field_e = -127;
-            ((ff) this).field_c.a((Object) (Object) var3_ref, (long)param0, (byte) 100);
-            return var3_ref;
+            ((ff) this).field_c.a((Object) (Object) var3, (long)param0, (byte) 100);
+            return var3;
           } else {
-            ((ff) this).field_c.a((Object) (Object) var3_ref, (long)param0, (byte) 100);
-            return var3_ref;
+            ((ff) this).field_c.a((Object) (Object) var3, (long)param0, (byte) 100);
+            return var3;
           }
         } else {
           return var3;
@@ -90,44 +89,51 @@ final class ff {
     }
 
     final static void a(byte param0) {
-        L0: {
-          if (param0 > 50) {
-            break L0;
-          } else {
-            ff.a((byte) -15);
-            break L0;
-          }
-        }
-        jg.a((byte) 123);
-        if (mj.field_d == -1) {
-          if (dj.field_c == null) {
-            dj.field_c = hl.c(nn.field_g, 100, 3072 * qm.field_c / 64, 8192);
-            rk.field_e.a((wg) (Object) dj.field_c);
-            sj.a(8192, (byte) 51);
-            if (-1001 >= (mj.field_d ^ -1)) {
-              pl.field_q.a(400);
-              r.field_y = true;
-              de.field_j = true;
-              return;
+        if (param0 > 50) {
+          jg.a((byte) 123);
+          if ((mj.field_d ^ -1) == -1) {
+            if (dj.field_c == null) {
+              dj.field_c = hl.c(nn.field_g, 100, 3072 * qm.field_c / 64, 8192);
+              rk.field_e.a((wg) (Object) dj.field_c);
+              sj.a(8192, (byte) 51);
+              if (-1001 >= (mj.field_d ^ -1)) {
+                pl.field_q.a(400);
+                r.field_y = true;
+                de.field_j = true;
+                return;
+              } else {
+                mj.field_d = mj.field_d + 1;
+                pl.field_q.a(400);
+                r.field_y = true;
+                de.field_j = true;
+                return;
+              }
             } else {
-              mj.field_d = mj.field_d + 1;
-              pl.field_q.a(400);
-              r.field_y = true;
-              de.field_j = true;
-              return;
+              dj.field_c.g(2048);
+              dj.field_c = hl.c(nn.field_g, 100, 3072 * qm.field_c / 64, 8192);
+              rk.field_e.a((wg) (Object) dj.field_c);
+              sj.a(8192, (byte) 51);
+              if (-1001 >= (mj.field_d ^ -1)) {
+                pl.field_q.a(400);
+                r.field_y = true;
+                de.field_j = true;
+                return;
+              } else {
+                mj.field_d = mj.field_d + 1;
+                pl.field_q.a(400);
+                r.field_y = true;
+                de.field_j = true;
+                return;
+              }
             }
           } else {
-            dj.field_c.g(2048);
-            dj.field_c = hl.c(nn.field_g, 100, 3072 * qm.field_c / 64, 8192);
-            rk.field_e.a((wg) (Object) dj.field_c);
-            sj.a(8192, (byte) 51);
-            if (-1001 >= (mj.field_d ^ -1)) {
+            if (-1001 < (mj.field_d ^ -1)) {
+              mj.field_d = mj.field_d + 1;
               pl.field_q.a(400);
               r.field_y = true;
               de.field_j = true;
               return;
             } else {
-              mj.field_d = mj.field_d + 1;
               pl.field_q.a(400);
               r.field_y = true;
               de.field_j = true;
@@ -135,17 +141,56 @@ final class ff {
             }
           }
         } else {
-          if (-1001 <= mj.field_d) {
-            pl.field_q.a(400);
-            r.field_y = true;
-            de.field_j = true;
-            return;
+          ff.a((byte) -15);
+          jg.a((byte) 123);
+          if ((mj.field_d ^ -1) == -1) {
+            if (dj.field_c == null) {
+              dj.field_c = hl.c(nn.field_g, 100, 3072 * qm.field_c / 64, 8192);
+              rk.field_e.a((wg) (Object) dj.field_c);
+              sj.a(8192, (byte) 51);
+              if (-1001 < (mj.field_d ^ -1)) {
+                mj.field_d = mj.field_d + 1;
+                pl.field_q.a(400);
+                r.field_y = true;
+                de.field_j = true;
+                return;
+              } else {
+                pl.field_q.a(400);
+                r.field_y = true;
+                de.field_j = true;
+                return;
+              }
+            } else {
+              dj.field_c.g(2048);
+              dj.field_c = hl.c(nn.field_g, 100, 3072 * qm.field_c / 64, 8192);
+              rk.field_e.a((wg) (Object) dj.field_c);
+              sj.a(8192, (byte) 51);
+              if (-1001 < (mj.field_d ^ -1)) {
+                mj.field_d = mj.field_d + 1;
+                pl.field_q.a(400);
+                r.field_y = true;
+                de.field_j = true;
+                return;
+              } else {
+                pl.field_q.a(400);
+                r.field_y = true;
+                de.field_j = true;
+                return;
+              }
+            }
           } else {
-            mj.field_d = mj.field_d + 1;
-            pl.field_q.a(400);
-            r.field_y = true;
-            de.field_j = true;
-            return;
+            if (-1001 < (mj.field_d ^ -1)) {
+              mj.field_d = mj.field_d + 1;
+              pl.field_q.a(400);
+              r.field_y = true;
+              de.field_j = true;
+              return;
+            } else {
+              pl.field_q.a(400);
+              r.field_y = true;
+              de.field_j = true;
+              return;
+            }
           }
         }
     }

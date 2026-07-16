@@ -534,8 +534,9 @@ final class gg {
               }
             }
           } else {
+            int fieldTemp$1 = ((gg) this).field_u - 1;
             ((gg) this).field_u = ((gg) this).field_u - 1;
-            if (-1 <= (((gg) this).field_u - 1 ^ -1)) {
+            if (-1 <= (fieldTemp$1 ^ -1)) {
               ((gg) this).field_u = ((gg) this).field_b;
               if (((gg) this).field_j > jg.field_K) {
                 ((gg) this).field_c = false;

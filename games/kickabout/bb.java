@@ -146,7 +146,7 @@ final class bb extends hd {
         String var11 = null;
         String var12 = null;
         int var13 = 0;
-        ut var14 = null;
+        Object var14 = null;
         int var15 = 0;
         hu var17 = null;
         hu var18 = null;
@@ -168,6 +168,7 @@ final class bb extends hd {
           if (((bb) this).field_Fb <= var13) {
             ((bb) this).field_Gb = ((bb) this).field_Gb + (ci.field_g.field_o - -10);
             this.b(-88, 12);
+            return;
           } else {
             L1: {
               if (((bb) this).field_Hb[var13] <= 0) {
@@ -190,10 +191,10 @@ final class bb extends hd {
                   }
                 }
               }
-              var14 = ci.field_g;
+              var14 = (Object) (Object) ci.field_g;
               break L2;
             }
-            ((bb) this).field_Eb[var13] = new vu(0L, param2, (hd) null, param3, var14, param6[var13]);
+            ((bb) this).field_Eb[var13] = new vu(0L, param2, (hd) null, param3, (ut) var14, param6[var13]);
             ((bb) this).a((byte) -112, (hd) (Object) ((bb) this).field_Eb[var13]);
             var15 = var17.a(param6[var13]);
             if (var15 > ((bb) this).field_Gb) {
@@ -286,10 +287,10 @@ final class bb extends hd {
                 ds.a(-1, ((bb) this).field_Kb);
                 ((bb) this).field_Kb.b(-94, 12);
             } else {
-                if (0 != ((bb) this).field_Jb[param0]) {
+                if (0 != (((bb) this).field_Jb[param0] ^ -1)) {
                     var5 = ((bb) this).field_Jb[param0] | 32768;
                     var6 = ov.field_b;
-                    if (-1 == var6) {
+                    if (-1 == (var6 ^ -1)) {
                         if (uv.field_i != null) {
                             var6 = 1;
                         }

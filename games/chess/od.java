@@ -1,6 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
+import java.applet.Applet;
+
 final class od extends fb {
     int field_S;
     static long[] field_N;
@@ -32,43 +34,49 @@ final class od extends fb {
             int stackOut_1_1 = 0;
             try {
               L0: {
-                var4 = param1.getCodeBase();
-                var3 = rh.a(var4, param1, (byte) -87).getFile();
-                Object discarded$6 = u.a(param1, true, new Object[2], "updatelinks");
-                Object discarded$7 = u.a(param1, true, new Object[2], "updatelinks");
-                stackOut_0_0 = (java.applet.Applet) param1;
-                stackIn_2_0 = stackOut_0_0;
-                stackIn_1_0 = stackOut_0_0;
-                if (param0) {
-                  stackOut_2_0 = (java.applet.Applet) (Object) stackIn_2_0;
-                  stackOut_2_1 = 0;
-                  stackIn_3_0 = stackOut_2_0;
-                  stackIn_3_1 = stackOut_2_1;
-                  break L0;
-                } else {
-                  stackOut_1_0 = (java.applet.Applet) (Object) stackIn_1_0;
-                  stackOut_1_1 = 1;
-                  stackIn_3_0 = stackOut_1_0;
-                  stackIn_3_1 = stackOut_1_1;
-                  break L0;
+                L1: {
+                  var4 = param1.getCodeBase();
+                  var3 = rh.a(var4, param1, (byte) -87).getFile();
+                  Object discarded$6 = u.a(param1, true, new Object[2], "updatelinks");
+                  Object discarded$7 = u.a(param1, true, new Object[2], "updatelinks");
+                  stackOut_0_0 = (java.applet.Applet) param1;
+                  stackIn_2_0 = stackOut_0_0;
+                  stackIn_1_0 = stackOut_0_0;
+                  if (param0) {
+                    stackOut_2_0 = (java.applet.Applet) (Object) stackIn_2_0;
+                    stackOut_2_1 = 0;
+                    stackIn_3_0 = stackOut_2_0;
+                    stackIn_3_1 = stackOut_2_1;
+                    break L1;
+                  } else {
+                    stackOut_1_0 = (java.applet.Applet) (Object) stackIn_1_0;
+                    stackOut_1_1 = 1;
+                    stackIn_3_0 = stackOut_1_0;
+                    stackIn_3_1 = stackOut_1_1;
+                    break L1;
+                  }
                 }
-              }
-              L1: {
-                Object discarded$8 = u.a((java.applet.Applet) (Object) stackIn_3_0, stackIn_3_1 != 0, new Object[2], "updatelinks");
-                if (!param0) {
-                  break L1;
-                } else {
-                  od.b(false);
-                  break L1;
+                L2: {
+                  Object discarded$8 = u.a(stackIn_3_0, stackIn_3_1 != 0, new Object[2], "updatelinks");
+                  if (!param0) {
+                    break L2;
+                  } else {
+                    od.b(false);
+                    break L2;
+                  }
                 }
+                Object discarded$9 = u.a(param1, true, new Object[2], "updatelinks");
+                Object discarded$10 = u.a(param1, true, new Object[2], "updatelinks");
+                Object discarded$11 = u.a(param1, true, new Object[2], "updatelinks");
+                break L0;
               }
-              Object discarded$9 = u.a(param1, true, new Object[2], "updatelinks");
-              Object discarded$10 = u.a(param1, true, new Object[2], "updatelinks");
-              Object discarded$11 = u.a(param1, true, new Object[2], "updatelinks");
-            } catch (java.lang.Throwable decompiledCaughtParameter) {
-              decompiledCaughtException = decompiledCaughtParameter;
+            } catch (java.lang.Throwable decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              L3: {
+                var2 = decompiledCaughtException;
+                break L3;
+              }
             }
-            var2 = decompiledCaughtException;
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
@@ -80,30 +88,48 @@ final class od extends fb {
         int var8 = 0;
         int var9 = 0;
         double var10 = 0.0;
-        int var12 = Chess.field_G;
-        if (super.a(param0, param1, param2, param3, param4, param5, param6)) {
-            var8 = -((od) this).field_Q + (-param6 + (-((od) this).field_u + param1));
-            var9 = -param5 - (((od) this).field_r + ((od) this).field_M) + param2;
-            if (((od) this).field_T * ((od) this).field_T <= var8 * var8 + var9 * var9) {
-                return true;
-            }
-            var10 = Math.atan2((double)var9, (double)var8) - e.field_L;
-            if (var10 >= 0.0) {
-                // ifge L144
-                var10 = var10 + 3.141592653589793 / (double)((od) this).field_P;
-            } else {
+        int var12 = 0;
+        var12 = Chess.field_G;
+        if (!super.a(param0, param1, param2, param3, param4, param5, param6)) {
+          return false;
+        } else {
+          var8 = -((od) this).field_Q + (-param6 + (-((od) this).field_u + param1));
+          var9 = -param5 - (((od) this).field_r + ((od) this).field_M) + param2;
+          if (((od) this).field_T * ((od) this).field_T > var8 * var8 + var9 * var9) {
+            L0: {
+              var10 = Math.atan2((double)var9, (double)var8) - e.field_L;
+              if (var10 < 0.0) {
                 var10 = var10 - 3.141592653589793 / (double)((od) this).field_P;
+                break L0;
+              } else {
+                if (0.0 >= var10) {
+                  break L0;
+                } else {
+                  var10 = var10 + 3.141592653589793 / (double)((od) this).field_P;
+                  break L0;
+                }
+              }
             }
             ((od) this).field_R = (int)(var10 * (double)((od) this).field_P / 6.283185307179586);
-            while (((od) this).field_P <= ((od) this).field_R) {
+            L1: while (true) {
+              if (((od) this).field_P > ((od) this).field_R) {
+                L2: while (true) {
+                  if (0 <= ((od) this).field_R) {
+                    return true;
+                  } else {
+                    ((od) this).field_R = ((od) this).field_R + ((od) this).field_P;
+                    continue L2;
+                  }
+                }
+              } else {
                 ((od) this).field_R = ((od) this).field_R - ((od) this).field_P;
+                continue L1;
+              }
             }
-            while (0 > ((od) this).field_R) {
-                ((od) this).field_R = ((od) this).field_R + ((od) this).field_P;
-            }
+          } else {
             return true;
+          }
         }
-        return false;
     }
 
     final static boolean a(int param0) {
@@ -159,6 +185,7 @@ final class od extends fb {
                 field_X = "Please enter a year between <%0> and <%1>";
                 field_W = true;
                 field_U = "Offer rematch";
+                return;
               } else {
                 var1 = 8 * (-1 + var15);
                 field_N[var15] = la.a(cd.a(field_O[7][var1 - -7], 255L), la.a(cd.a(65280L, field_O[6][6 + var1]), la.a(la.a(cd.a(field_O[4][4 + var1], 4278190080L), la.a(cd.a(1095216660480L, field_O[3][3 + var1]), la.a(la.a(cd.a(-72057594037927936L, field_O[0][var1]), cd.a(71776119061217280L, field_O[1][1 + var1])), cd.a(280375465082880L, field_O[2][var1 + 2])))), cd.a(16711680L, field_O[5][var1 - -5]))));
@@ -168,7 +195,7 @@ final class od extends fb {
             }
           } else {
             L2: {
-              var1 = "ᠣ웨螸ŏ㚦틵祯酒悼鮎ꌌ笵ᷠퟂ⹋﹗ᕷ㟥鿰䫚壉⤊놠殅뵝ჴ쬾է䆋Ᵹ闘ﯮ籦���䞞쨭뼇굚茳挂ꩱ젙䧙守騦㊰햀뻍㑈ｺ遟⁨᪮둔錢擱猒䀈쏬���贽需켫皂혛떯橐䗳ワ㽕ꋪ斺⿀���﵍鉵ڊ닦ฟ拔ꢖ暈╙葲㥌幸㢌톥댡鰞䏇ﰄ写洍﫟縤㮫츑轎럫㲁铷뤓ⳓ쐃噄義⪻셓���鵬ㅴ겉ᓡᘺ椉炶탭챂颤⡜".charAt(var0 / 2);
+              var1 = "ᠣ웨螸ŏ㚦틵祯酒悼鮎ꌌ笵ᷠퟂ⹋﹗ᕷ㟥鿰䫚壉⤊놠殅뵝ჴ쬾է䆋Ᵹ闘ﯮ籦\udd17䞞쨭뼇굚茳挂ꩱ젙䧙守騦㊰햀뻍㑈ｺ遟⁨᪮둔錢擱猒䀈쏬\udba1贽需켫皂혛떯橐䗳ワ㽕ꋪ斺⿀\ude1c﵍鉵ڊ닦ฟ拔ꢖ暈╙葲㥌幸㢌톥댡鰞䏇ﰄ写洍﫟縤㮫츑轎럫㲁铷뤓ⳓ쐃噄義⪻셓\udc0b鵬ㅴ겉ᓡᘺ椉炶탭챂颤⡜".charAt(var0 / 2);
               if (0 != (1 & var0)) {
                 stackOut_4_0 = (long)(var1 & 255);
                 stackIn_5_0 = stackOut_4_0;

@@ -205,85 +205,42 @@ final class be implements java.awt.event.MouseListener, java.awt.event.MouseMoti
             Throwable var3_ref = null;
             String var4 = null;
             String var5 = null;
-            int statePc = 0;
-            Throwable caughtException = null;
-            stateLoop: while (true) {
-                switch (statePc) {
-                    case 0: {
-                        oc.field_a = param1;
-                        statePc = 1;
-                        continue stateLoop;
-                    }
-                    case 1: {
-                        try {
-                            var3 = param0.getParameter("cookieprefix");
-                            var5 = var3;
-                            var5 = var3;
-                            var4 = param0.getParameter("cookiehost");
-                            var5 = var4;
-                            var5 = var4;
-                            var5 = var3 + "session=" + param1 + "; version=1; path=/; domain=" + var4;
-                            if (-1 != (param1.length() ^ -1)) {
-                                statePc = 3;
-                            } else {
-                                statePc = 2;
-                            }
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_1) {
-                            caughtException = stateCaught_1;
-                            statePc = 6;
-                            continue stateLoop;
-                        }
-                    }
-                    case 2: {
-                        try {
-                            var5 = var5 + "; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0";
-                            statePc = 3;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_2) {
-                            caughtException = stateCaught_2;
-                            statePc = 6;
-                            continue stateLoop;
-                        }
-                    }
-                    case 3: {
-                        try {
-                            sh.a(-13847, "document.cookie=\"" + var5 + "\"", param0);
-                            if (param2 >= 109) {
-                                statePc = 7;
-                            } else {
-                                statePc = 4;
-                            }
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_3) {
-                            caughtException = stateCaught_3;
-                            statePc = 6;
-                            continue stateLoop;
-                        }
-                    }
-                    case 4: {
-                        try {
-                            field_b = null;
-                            rl.a(param0, (byte) 15);
-                            return;
-                        } catch (Throwable stateCaught_4) {
-                            caughtException = stateCaught_4;
-                            statePc = 6;
-                            continue stateLoop;
-                        }
-                    }
-                    case 6: {
-                        var3_ref = caughtException;
-                        statePc = 7;
-                        continue stateLoop;
-                    }
-                    case 7: {
-                        rl.a(param0, (byte) 15);
-                        return;
-                    }
-                    default: throw new IllegalStateException("invalid CFG state " + statePc);
+            Throwable decompiledCaughtException = null;
+            oc.field_a = param1;
+            try {
+              L0: {
+                L1: {
+                  var3 = param0.getParameter("cookieprefix");
+                  var5 = var3;
+                  var5 = var3;
+                  var4 = param0.getParameter("cookiehost");
+                  var5 = var4;
+                  var5 = var4;
+                  var5 = var3 + "session=" + param1 + "; version=1; path=/; domain=" + var4;
+                  if (-1 != (param1.length() ^ -1)) {
+                    break L1;
+                  } else {
+                    var5 = var5 + "; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0";
+                    break L1;
+                  }
                 }
+                sh.a(-13847, "document.cookie=\"" + var5 + "\"", param0);
+                if (param2 >= 109) {
+                  break L0;
+                } else {
+                  field_b = null;
+                  rl.a(param0, (byte) 15);
+                  return;
+                }
+              }
+            } catch (java.lang.Throwable decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              L2: {
+                var3_ref = decompiledCaughtException;
+                break L2;
+              }
             }
+            rl.a(param0, (byte) 15);
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {

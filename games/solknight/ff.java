@@ -183,15 +183,19 @@ final class ff {
               jh.field_f = param12;
               wk.field_b = param13;
               if (qa.field_n.field_b == null) {
-                var15 = (IOException) (Object) decompiledCaughtException;
-                throw new RuntimeException(var15.toString());
+                return;
               } else {
                 try {
-                  pj.field_D = new hb(qa.field_n.field_b, 64, 0);
-                } catch (java.io.IOException decompiledCaughtParameter) {
-                  decompiledCaughtException = decompiledCaughtParameter;
-                  return;
+                  L2: {
+                    pj.field_D = new hb(qa.field_n.field_b, 64, 0);
+                    break L2;
+                  }
+                } catch (java.io.IOException decompiledCaughtParameter0) {
+                  decompiledCaughtException = decompiledCaughtParameter0;
+                  var15 = (IOException) (Object) decompiledCaughtException;
+                  throw new RuntimeException(var15.toString());
                 }
+                return;
               }
             } else {
               return;

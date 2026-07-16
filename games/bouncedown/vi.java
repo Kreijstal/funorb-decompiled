@@ -51,7 +51,7 @@ final class vi implements Runnable {
                       if (var4 == 2) {
                         break L4;
                       } else {
-                        if (var4 != -6) {
+                        if ((var4 ^ -1) != -6) {
                           break L2;
                         } else {
                           break L4;
@@ -80,7 +80,7 @@ final class vi implements Runnable {
               if (0 != var4) {
                 break L5;
               } else {
-                if (-3 == ne.field_u) {
+                if (-3 == (ne.field_u ^ -1)) {
                   var5 = fa.a(84) + -gd.field_a;
                   var7 = (int)((-var5 + 10999L) / 1000L);
                   if (0 >= var7) {
@@ -215,13 +215,16 @@ final class vi implements Runnable {
                       var8_int = 1;
                       L6: while (true) {
                         if (var5 <= var8_int) {
-                          var4_ref_sa.field_h = new String[3][var6_int];
-                          var8 = new String[3][var6_int];
+                          String[][] dupTemp$6 = new String[3][var6_int];
+                          var4_ref_sa.field_h = dupTemp$6;
+                          var8 = dupTemp$6;
                           var9 = new String[3][var6_int];
-                          var4_ref_sa.field_l = new long[3][var6_int];
-                          var10 = new long[3][var6_int];
-                          var4_ref_sa.field_o = new int[3][var7 * var6_int];
-                          var11 = new int[3][var7 * var6_int];
+                          long[][] dupTemp$7 = new long[3][var6_int];
+                          var4_ref_sa.field_l = dupTemp$7;
+                          var10 = dupTemp$7;
+                          int[][] dupTemp$8 = new int[3][var7 * var6_int];
+                          var4_ref_sa.field_o = dupTemp$8;
+                          var11 = dupTemp$8;
                           var12 = 0;
                           var13 = 0;
                           var14 = 0;
@@ -250,8 +253,9 @@ final class vi implements Runnable {
                                       if (var25 >= var7) {
                                         break L8;
                                       } else {
+                                        int incrementValue$9 = var15;
                                         var15++;
-                                        var11[0][var15] = var27.j(-3);
+                                        var11[0][incrementValue$9] = var27.j(-3);
                                         var25++;
                                         continue L9;
                                       }
@@ -275,8 +279,9 @@ final class vi implements Runnable {
                                         if (var25 >= var7) {
                                           break L10;
                                         } else {
+                                          int incrementValue$10 = var16;
                                           var16++;
-                                          var11[1][var16] = var27.j(-3);
+                                          var11[1][incrementValue$10] = var27.j(-3);
                                           var25++;
                                           continue L11;
                                         }
@@ -297,8 +302,9 @@ final class vi implements Runnable {
                                     var25 = 0;
                                     L12: while (true) {
                                       if (var25 < var7) {
+                                        int incrementValue$11 = var17;
                                         var17++;
-                                        var11[2][var17] = var27.j(-3);
+                                        var11[2][incrementValue$11] = var27.j(-3);
                                         var25++;
                                         continue L12;
                                       } else {
@@ -356,21 +362,30 @@ final class vi implements Runnable {
         ((vi) this).field_a = true;
         var2 = (Object) (Object) ((vi) this).field_d;
         synchronized (var2) {
-          ((Object) (Object) ((vi) this).field_d).notifyAll();
+          L0: {
+            ((Object) (Object) ((vi) this).field_d).notifyAll();
+            break L0;
+          }
         }
         try {
-          L0: {
-            if (param0 == -1) {
-              break L0;
-            } else {
-              int discarded$2 = vi.c(-89);
-              break L0;
+          L1: {
+            L2: {
+              if (param0 == -1) {
+                break L2;
+              } else {
+                int discarded$2 = vi.c(-89);
+                break L2;
+              }
             }
+            ((vi) this).field_e.join();
+            break L1;
           }
-          ((vi) this).field_e.join();
         } catch (java.lang.Exception decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          interruptedException = (InterruptedException) (Object) decompiledCaughtException;
+          L3: {
+            interruptedException = (InterruptedException) (Object) decompiledCaughtException;
+            break L3;
+          }
         }
         ((vi) this).field_e = null;
     }
@@ -392,16 +407,19 @@ final class vi implements Runnable {
         var3 = (Object) (Object) ((vi) this).field_d;
         synchronized (var3) {
           L0: {
-            ((vi) this).field_d.a((byte) -78, (ug) (Object) param0);
-            ((vi) this).field_b = ((vi) this).field_b + 1;
-            if (param1 <= -25) {
-              break L0;
-            } else {
-              field_c = 84;
-              break L0;
+            L1: {
+              ((vi) this).field_d.a((byte) -78, (ug) (Object) param0);
+              ((vi) this).field_b = ((vi) this).field_b + 1;
+              if (param1 <= -25) {
+                break L1;
+              } else {
+                field_c = 84;
+                break L1;
+              }
             }
+            ((Object) (Object) ((vi) this).field_d).notifyAll();
+            break L0;
           }
-          ((Object) (Object) ((vi) this).field_d).notifyAll();
         }
     }
 
@@ -438,35 +456,38 @@ final class vi implements Runnable {
         var4.field_p = 1;
         var5 = (Object) (Object) ((vi) this).field_d;
         synchronized (var5) {
-          var6 = (md) (Object) ((vi) this).field_d.d(-86);
-          L0: while (true) {
-            if (var6 == null) {
-            } else {
-              L1: {
-                if (((long)param0 ^ -1L) != (var6.field_j ^ -1L)) {
-                  break L1;
-                } else {
-                  if (param1 != var6.field_r) {
-                    break L1;
+          L0: {
+            var6 = (md) (Object) ((vi) this).field_d.d(-86);
+            L1: while (true) {
+              if (var6 == null) {
+                break L0;
+              } else {
+                L2: {
+                  if (((long)param0 ^ -1L) != (var6.field_j ^ -1L)) {
+                    break L2;
                   } else {
-                    if (2 != var6.field_p) {
-                      break L1;
+                    if (param1 != var6.field_r) {
+                      break L2;
                     } else {
-                      var4.field_n = false;
-                      var4.field_s = var6.field_s;
-                      stackOut_6_0 = (md) var4;
-                      stackIn_7_0 = stackOut_6_0;
-                      return stackIn_7_0;
+                      if (2 != var6.field_p) {
+                        break L2;
+                      } else {
+                        var4.field_n = false;
+                        var4.field_s = var6.field_s;
+                        stackOut_6_0 = (md) var4;
+                        stackIn_7_0 = stackOut_6_0;
+                        return stackIn_7_0;
+                      }
                     }
                   }
                 }
+                var6 = (md) (Object) ((vi) this).field_d.b(0);
+                continue L1;
               }
-              var6 = (md) (Object) ((vi) this).field_d.b(0);
-              continue L0;
             }
           }
         }
-        L2: {
+        L3: {
           var4.field_s = param1.a(106, param0);
           stackOut_13_0 = (md) var4;
           stackIn_15_0 = stackOut_13_0;
@@ -476,13 +497,13 @@ final class vi implements Runnable {
             stackOut_15_1 = 0;
             stackIn_16_0 = stackOut_15_0;
             stackIn_16_1 = stackOut_15_1;
-            break L2;
+            break L3;
           } else {
             stackOut_14_0 = (md) (Object) stackIn_14_0;
             stackOut_14_1 = 1;
             stackIn_16_0 = stackOut_14_0;
             stackIn_16_1 = stackOut_14_1;
-            break L2;
+            break L3;
           }
         }
         stackIn_16_0.field_m = stackIn_16_1 != 0;
@@ -512,7 +533,6 @@ final class vi implements Runnable {
             Object var6 = null;
             md var7 = null;
             int decompiledRegionSelector0 = 0;
-            int decompiledRegionSelector1 = 0;
             Throwable decompiledCaughtException = null;
             var5 = Bounce.field_N;
             L0: while (true) {
@@ -521,55 +541,64 @@ final class vi implements Runnable {
               } else {
                 var2 = (Object) (Object) ((vi) this).field_d;
                 synchronized (var2) {
-                  var7 = (md) (Object) ((vi) this).field_d.a(-1);
-                  if (var7 != null) {
-                    ((vi) this).field_b = ((vi) this).field_b - 1;
-                    decompiledRegionSelector0 = 1;
-                  } else {
-                    try {
-                      ((Object) (Object) ((vi) this).field_d).wait();
-                    } catch (java.lang.InterruptedException decompiledCaughtParameter0) {
-                      decompiledCaughtException = decompiledCaughtParameter0;
-                      interruptedException = (InterruptedException) (Object) decompiledCaughtException;
+                  L1: {
+                    var7 = (md) (Object) ((vi) this).field_d.a(-1);
+                    if (var7 != null) {
+                      ((vi) this).field_b = ((vi) this).field_b - 1;
+                      decompiledRegionSelector0 = 1;
+                      break L1;
+                    } else {
+                      try {
+                        L2: {
+                          ((Object) (Object) ((vi) this).field_d).wait();
+                          break L2;
+                        }
+                      } catch (java.lang.InterruptedException decompiledCaughtParameter0) {
+                        decompiledCaughtException = decompiledCaughtParameter0;
+                        L3: {
+                          interruptedException = (InterruptedException) (Object) decompiledCaughtException;
+                          break L3;
+                        }
+                      }
+                      decompiledRegionSelector0 = 0;
+                      break L1;
                     }
-                    decompiledRegionSelector0 = 0;
                   }
                 }
                 if (decompiledRegionSelector0 == 0) {
                   continue L0;
                 } else {
                   try {
-                    if (var7.field_p == 2) {
-                      decompiledRegionSelector1 = 0;
-                    } else {
-                      decompiledRegionSelector1 = 1;
+                    L4: {
+                      L5: {
+                        if (var7.field_p == 2) {
+                          boolean discarded$1 = var7.field_r.a(var7.field_s.length, (byte) 118, (int)var7.field_j, var7.field_s);
+                          var7.field_n = false;
+                          break L5;
+                        } else {
+                          if (3 == var7.field_p) {
+                            var7.field_s = var7.field_r.a(102, (int)var7.field_j);
+                            var7.field_n = false;
+                            break L5;
+                          } else {
+                            var7.field_n = false;
+                            break L5;
+                          }
+                        }
+                      }
+                      break L4;
                     }
                   } catch (java.lang.Exception decompiledCaughtParameter1) {
                     decompiledCaughtException = decompiledCaughtParameter1;
-                    var2_ref = (Exception) (Object) decompiledCaughtException;
-                    var6 = null;
-                    ti.a((Throwable) (Object) var2_ref, (byte) 100, (String) null);
-                    var7.field_n = false;
-                    decompiledRegionSelector1 = 2;
-                  }
-                  if (decompiledRegionSelector1 == 0) {
-                    boolean discarded$1 = var7.field_r.a(var7.field_s.length, (byte) 118, (int)var7.field_j, var7.field_s);
-                    var7.field_n = false;
-                    continue L0;
-                  } else {
-                    if (decompiledRegionSelector1 == 1) {
-                      if (3 == var7.field_p) {
-                        var7.field_s = var7.field_r.a(102, (int)var7.field_j);
-                        var7.field_n = false;
-                        continue L0;
-                      } else {
-                        var7.field_n = false;
-                        continue L0;
-                      }
-                    } else {
-                      continue L0;
+                    L6: {
+                      var2_ref = (Exception) (Object) decompiledCaughtException;
+                      var6 = null;
+                      ti.a((Throwable) (Object) var2_ref, (byte) 100, (String) null);
+                      var7.field_n = false;
+                      break L6;
                     }
                   }
+                  continue L0;
                 }
               }
             }

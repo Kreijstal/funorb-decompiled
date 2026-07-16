@@ -151,30 +151,57 @@ final class dk {
     }
 
     private final void h(int param0) {
+        int var2 = 0;
+        int var3 = 0;
+        int var4 = 0;
+        int var5 = 0;
         int var6_int = 0;
-        int var7 = EscapeVector.field_A;
-        if (!(((dk) this).field_d == 4)) {
+        String var6 = null;
+        int var7 = 0;
+        var7 = EscapeVector.field_A;
+        if (((dk) this).field_d != 4) {
+          return;
+        } else {
+          var2 = ((dk) this).field_f - -((dk) this).field_j;
+          var3 = ((dk) this).field_p + ((dk) this).field_f;
+          var4 = 1 + var3 + -var2;
+          var5 = ((dk) this).field_s.b(((dk) this).field_o);
+          if (var5 > var4) {
+            var6_int = ((dk) this).field_o.length();
+            L0: while (true) {
+              L1: {
+                if (-1 < (var6_int ^ -1)) {
+                  break L1;
+                } else {
+                  ((dk) this).field_o = ((dk) this).field_o.substring(0, var6_int);
+                  var5 = ((dk) this).field_s.b(((dk) this).field_o);
+                  if (var4 >= var5) {
+                    break L1;
+                  } else {
+                    var6_int--;
+                    continue L0;
+                  }
+                }
+              }
+              var6 = oe.field_cc;
+              if (((dk) this).field_o.length() > var6.length()) {
+                L2: {
+                  ((dk) this).field_o = ((dk) this).field_o.substring(0, ((dk) this).field_o.length() + -var6.length()) + var6;
+                  if (param0 == 160) {
+                    break L2;
+                  } else {
+                    ((dk) this).a(true, false, (byte) 77);
+                    break L2;
+                  }
+                }
+                return;
+              } else {
+                return;
+              }
+            }
+          } else {
             return;
-        }
-        int var2 = ((dk) this).field_f - -((dk) this).field_j;
-        int var3 = ((dk) this).field_p + ((dk) this).field_f;
-        int var4 = 1 + var3 + -var2;
-        int var5 = ((dk) this).field_s.b(((dk) this).field_o);
-        if (var5 <= var4) {
-            return;
-        }
-        for (var6_int = ((dk) this).field_o.length(); -1 >= (var6_int ^ -1); var6_int--) {
-            ((dk) this).field_o = ((dk) this).field_o.substring(0, var6_int);
-            var5 = ((dk) this).field_s.b(((dk) this).field_o);
-            // if_icmpge L124
-        }
-        String var6 = oe.field_cc;
-        if (((dk) this).field_o.length() <= var6.length()) {
-            return;
-        }
-        ((dk) this).field_o = ((dk) this).field_o.substring(0, ((dk) this).field_o.length() + -var6.length()) + var6;
-        if (param0 != 160) {
-            ((dk) this).a(true, false, (byte) 77);
+          }
         }
     }
 
@@ -544,20 +571,35 @@ final class dk {
     }
 
     final boolean a(byte param0, int param1, int param2) {
-        int var4 = ((dk) this).field_p + ((dk) this).field_f;
-        if (((dk) this).field_f <= param1) {
-            // if_icmpge L28
-        } else {
-            return false;
-        }
-        if (param0 != 65) {
-            return true;
-        }
-        int var5 = ((dk) this).field_l + ((dk) this).field_i;
-        if (((dk) this).field_l <= param2) {
-            if (param2 < var5) {
+        int var4 = 0;
+        int var5 = 0;
+        L0: {
+          var4 = ((dk) this).field_p + ((dk) this).field_f;
+          if (((dk) this).field_f > param1) {
+            break L0;
+          } else {
+            if (param1 >= var4) {
+              break L0;
+            } else {
+              if (param0 == 65) {
+                L1: {
+                  var5 = ((dk) this).field_l + ((dk) this).field_i;
+                  if (((dk) this).field_l > param2) {
+                    break L1;
+                  } else {
+                    if (param2 >= var5) {
+                      break L1;
+                    } else {
+                      return true;
+                    }
+                  }
+                }
+                return false;
+              } else {
                 return true;
+              }
             }
+          }
         }
         return false;
     }

@@ -55,7 +55,7 @@ final class ig extends wo {
                         ((ig) this).d(0);
                         return;
                       } else {
-                        if (24 + dj.field_e.field_H.field_u <= var2) {
+                        if ((24 + dj.field_e.field_H.field_u ^ -1) >= (var2 ^ -1)) {
                           ((ig) this).b(-27598);
                           ((ig) this).d(0);
                           return;
@@ -70,14 +70,14 @@ final class ig extends wo {
             }
             L1: {
               var7 = 0;
-              if (var6 == -11) {
+              if ((var6 ^ -1) == -11) {
                 ((ig) this).field_X = var4;
                 ((ig) this).field_Y = -96 + var2;
                 var7 = 1;
                 break L1;
               } else {
                 L2: {
-                  if (-15 == var6) {
+                  if (-15 == (var6 ^ -1)) {
                     break L2;
                   } else {
                     L3: {
@@ -91,8 +91,8 @@ final class ig extends wo {
                         }
                       }
                     }
-                    if (var6 != -3) {
-                      if (-49 >= var2) {
+                    if ((var6 ^ -1) != -3) {
+                      if (-49 <= (var2 ^ -1)) {
                         L4: {
                           ((ig) this).field_Y = 24 + (so.c(48) + 96);
                           var7 = 1;
@@ -119,7 +119,7 @@ final class ig extends wo {
                               ((ig) this).d(0);
                               break L5;
                             } else {
-                              if (24 + dj.field_e.field_H.field_u <= var2) {
+                              if ((24 + dj.field_e.field_H.field_u ^ -1) >= (var2 ^ -1)) {
                                 ((ig) this).b(-27598);
                                 ((ig) this).d(0);
                                 return;
@@ -184,7 +184,7 @@ final class ig extends wo {
                   ((ig) this).d(0);
                   return;
                 } else {
-                  if (24 + dj.field_e.field_H.field_u <= var2) {
+                  if ((24 + dj.field_e.field_H.field_u ^ -1) >= (var2 ^ -1)) {
                     ((ig) this).b(-27598);
                     ((ig) this).d(0);
                     return;
@@ -206,7 +206,7 @@ final class ig extends wo {
                   ((ig) this).d(0);
                   return;
                 } else {
-                  if (24 + dj.field_e.field_H.field_u <= var2) {
+                  if ((24 + dj.field_e.field_H.field_u ^ -1) >= (var2 ^ -1)) {
                     ((ig) this).b(-27598);
                     ((ig) this).d(0);
                     return;
@@ -219,14 +219,14 @@ final class ig extends wo {
           } else {
             L6: {
               var7 = 0;
-              if (var6 == -11) {
+              if ((var6 ^ -1) == -11) {
                 ((ig) this).field_X = var4;
                 ((ig) this).field_Y = -96 + var2;
                 var7 = 1;
                 break L6;
               } else {
                 L7: {
-                  if (-15 == var6) {
+                  if (-15 == (var6 ^ -1)) {
                     break L7;
                   } else {
                     L8: {
@@ -240,8 +240,8 @@ final class ig extends wo {
                         }
                       }
                     }
-                    if (var6 != -3) {
-                      if (-49 >= var2) {
+                    if ((var6 ^ -1) != -3) {
+                      if (-49 <= (var2 ^ -1)) {
                         L9: {
                           ((ig) this).field_Y = 24 + (so.c(48) + 96);
                           var7 = 1;
@@ -268,7 +268,7 @@ final class ig extends wo {
                               ((ig) this).d(0);
                               break L10;
                             } else {
-                              if (24 + dj.field_e.field_H.field_u <= var2) {
+                              if ((24 + dj.field_e.field_H.field_u ^ -1) >= (var2 ^ -1)) {
                                 ((ig) this).b(-27598);
                                 ((ig) this).d(0);
                                 break L10;
@@ -330,7 +330,7 @@ final class ig extends wo {
                   ((ig) this).d(0);
                   return;
                 } else {
-                  if (24 + dj.field_e.field_H.field_u <= var2) {
+                  if ((24 + dj.field_e.field_H.field_u ^ -1) >= (var2 ^ -1)) {
                     ((ig) this).b(-27598);
                     ((ig) this).d(0);
                     return;
@@ -356,7 +356,7 @@ final class ig extends wo {
                     ((ig) this).d(0);
                     break L11;
                   } else {
-                    if (24 + dj.field_e.field_H.field_u <= var2) {
+                    if ((24 + dj.field_e.field_H.field_u ^ -1) >= (var2 ^ -1)) {
                       ((ig) this).b(-27598);
                       ((ig) this).d(0);
                       break L11;
@@ -382,7 +382,7 @@ final class ig extends wo {
               ((ig) this).d(0);
               return;
             } else {
-              if (24 + dj.field_e.field_H.field_u <= var2) {
+              if ((24 + dj.field_e.field_H.field_u ^ -1) >= (var2 ^ -1)) {
                 ((ig) this).b(-27598);
                 ((ig) this).d(0);
                 return;
@@ -396,29 +396,36 @@ final class ig extends wo {
 
     final void g(int param0) {
         super.g(107);
-        if (param0 < 95) {
-            ((ig) this).g(18);
-            if (((ig) this).f(237239984) + -48 > dj.field_e.field_H.field_p) {
-                ((ig) this).b(-27598);
-                ((ig) this).d(0);
-                return;
-            }
+        if (param0 >= 95) {
+          if (((ig) this).f(237239984) + -48 > dj.field_e.field_H.field_p) {
+            ((ig) this).b(-27598);
+            ((ig) this).d(0);
+            return;
+          } else {
             if (((ig) this).a(true) + -48 <= dj.field_e.field_H.field_u) {
-                return;
+              return;
+            } else {
+              ((ig) this).b(-27598);
+              ((ig) this).d(0);
+              return;
             }
+          }
+        } else {
+          ((ig) this).g(18);
+          if (((ig) this).f(237239984) + -48 <= dj.field_e.field_H.field_p) {
+            if (((ig) this).a(true) + -48 > dj.field_e.field_H.field_u) {
+              ((ig) this).b(-27598);
+              ((ig) this).d(0);
+              return;
+            } else {
+              return;
+            }
+          } else {
             ((ig) this).b(-27598);
             ((ig) this).d(0);
             return;
+          }
         }
-        if (((ig) this).f(237239984) + -48 <= dj.field_e.field_H.field_p) {
-            // if_icmple L153
-            ((ig) this).b(-27598);
-            ((ig) this).d(0);
-            return;
-        }
-        ((ig) this).b(-27598);
-        ((ig) this).d(0);
-        return;
     }
 
     final void a(wk param0, int param1) {

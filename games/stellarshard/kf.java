@@ -68,7 +68,8 @@ final class kf implements uk {
         int var18 = 0;
         int var19 = 0;
         int var20 = 0;
-        wh var21 = null;
+        Object var21 = null;
+        wh var21_ref = null;
         int var22 = 0;
         int var23 = 0;
         int var24 = 0;
@@ -241,7 +242,7 @@ final class kf implements uk {
                   break L7;
                 }
                 L9: {
-                  var21 = stackIn_36_0;
+                  var21_ref = stackIn_36_0;
                   var22 = nh.field_d[var15];
                   var23 = od.field_s[var15];
                   var24 = nh.field_d[var16];
@@ -255,12 +256,12 @@ final class kf implements uk {
                       L10: {
                         var28 = var66[var18];
                         var29 = var67[var18];
-                        if (var21 == null) {
+                        if (var21_ref == null) {
                           stackOut_45_0 = 8355711;
                           stackIn_46_0 = stackOut_45_0;
                           break L10;
                         } else {
-                          stackOut_44_0 = var21.field_b;
+                          stackOut_44_0 = var21_ref.field_b;
                           stackIn_46_0 = stackOut_44_0;
                           break L10;
                         }
@@ -285,8 +286,8 @@ final class kf implements uk {
                   var31 = var67[var18];
                   var32 = var67[var19];
                   var33 = var67[var20];
-                  if (var21 != null) {
-                    stackOut_41_0 = var21.field_b;
+                  if (var21_ref != null) {
+                    stackOut_41_0 = var21_ref.field_b;
                     stackIn_42_0 = stackOut_41_0;
                     break L11;
                   } else {

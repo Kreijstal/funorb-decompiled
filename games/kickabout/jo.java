@@ -140,19 +140,33 @@ final class jo extends tm {
     }
 
     final static boolean a(tf param0, boolean param1) {
-        int var3 = Kickabout.field_G;
-        if (param1) {
-            return false;
-        }
-        gn var2 = param0.g(24009);
-        while (var2 instanceof ak) {
-            // ifeq L81
-            if (!(((ak) (Object) var2).a((byte) -56) >= ((ak) (Object) var2.field_d).a((byte) -9))) {
-                return false;
+        gn var2 = null;
+        int var3 = 0;
+        var3 = Kickabout.field_G;
+        if (!param1) {
+          var2 = param0.g(24009);
+          L0: while (true) {
+            L1: {
+              if (!(var2 instanceof ak)) {
+                break L1;
+              } else {
+                if (!(var2.field_d instanceof ak)) {
+                  break L1;
+                } else {
+                  if (((ak) (Object) var2).a((byte) -56) < ((ak) (Object) var2.field_d).a((byte) -9)) {
+                    return false;
+                  } else {
+                    var2 = var2.field_d;
+                    continue L0;
+                  }
+                }
+              }
             }
-            var2 = var2.field_d;
+            return true;
+          }
+        } else {
+          return false;
         }
-        return true;
     }
 
     static {

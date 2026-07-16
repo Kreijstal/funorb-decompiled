@@ -61,8 +61,9 @@ class ro extends am {
                   if (var8 >= ci.field_c) {
                     break L0;
                   } else {
+                    int incrementValue$1 = var7;
                     var7++;
-                    var9 = ((ro) this).field_s[var7];
+                    var9 = ((ro) this).field_s[incrementValue$1];
                     var6[var8] = ie.a(255, var9) << 1134694212;
                     var5[var8] = ie.a(65280, var9) >> -1089780060;
                     var4[var8] = ie.a(16711680, var9) >> -1214938676;

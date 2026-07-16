@@ -12,8 +12,9 @@ final class gi extends ic {
         if (param0 != 118) {
             field_o = -123;
         }
-        ((gi) this).field_s[param1] = new qi();
-        return new qi();
+        qi dupTemp$0 = new qi();
+        ((gi) this).field_s[param1] = dupTemp$0;
+        return dupTemp$0;
     }
 
     private final void a(boolean param0, gi param1, int param2) {
@@ -71,10 +72,11 @@ final class gi extends ic {
                     stackIn_7_0 = stackOut_6_0;
                     stackIn_7_1 = stackOut_6_1;
                     if (var6 == null) {
-                      param1.field_s[var4] = new qi();
+                      qi dupTemp$37 = new qi();
+                      param1.field_s[var4] = dupTemp$37;
                       stackOut_8_0 = (qi) (Object) stackIn_8_0;
                       stackOut_8_1 = stackIn_8_1;
-                      stackOut_8_2 = new qi();
+                      stackOut_8_2 = (qi) dupTemp$37;
                       stackIn_9_0 = stackOut_8_0;
                       stackIn_9_1 = stackOut_8_1;
                       stackIn_9_2 = stackOut_8_2;
@@ -301,8 +303,9 @@ final class gi extends ic {
     public gi() {
         ((gi) this).field_s = new qi[6];
         ((gi) this).field_p = new qi();
-        ((gi) this).field_s[0] = new qi();
-        qi var1 = new qi();
+        qi dupTemp$0 = new qi();
+        ((gi) this).field_s[0] = dupTemp$0;
+        qi var1 = dupTemp$0;
         var1.a((byte) 127);
     }
 

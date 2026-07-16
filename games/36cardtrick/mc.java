@@ -22,7 +22,7 @@ final class mc {
             cb.field_j = null;
         }
         if (param0 > -124) {
-            field_b = (int[]) null;
+            field_b = null;
             return;
         }
     }

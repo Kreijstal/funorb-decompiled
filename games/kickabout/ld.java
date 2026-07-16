@@ -124,7 +124,7 @@ final class ld {
               if (32 < var18) {
                 var18 = 1;
                 L3: while (true) {
-                  if (-33 > var18) {
+                  if (-33 > (var18 ^ -1)) {
                     var17++;
                     continue L0;
                   } else {
@@ -135,7 +135,7 @@ final class ld {
                     var14 = 0.0;
                     var19 = 1;
                     L4: while (true) {
-                      if (-33 < var19) {
+                      if (-33 > (var19 ^ -1)) {
                         var18++;
                         continue L3;
                       } else {

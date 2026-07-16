@@ -114,7 +114,7 @@ abstract class vg extends bb {
             var7 = 0;
             var8 = param0 + 35;
             L1: while (true) {
-              if (var7 >= var4) {
+              if ((var7 ^ -1) <= (var4 ^ -1)) {
                 L2: {
                   cc.field_j.e(-90 + (param1 - -((vg) this).field_g), 10 + param0);
                   ee.a(5 + param1, -10 + ((vg) this).field_g, true, nn.field_a, 35 + param0);
@@ -155,90 +155,92 @@ abstract class vg extends bb {
               }
             }
           } else {
-            if (em.field_k <= var8) {
-              if (var8 < em.field_j) {
-                L4: {
-                  var9 = var7 * (var6 + -var5) / var4 + var5;
-                  var10 = 0;
-                  var11 = ((vg) this).field_g;
-                  if (20 >= var7) {
-                    L5: while (true) {
-                      if ((var10 ^ -1) < -21) {
-                        break L4;
-                      } else {
-                        var12 = (20 - var7) * (20 - var7) + (20 - var10) * (-var10 + 20);
-                        if (462 >= var12) {
-                          if (var12 >= 420) {
-                            var13 = var9 * (462 + -var12) / 42;
-                            var13 = var13 | (var13 << 896559208 | var13 << 1797436624);
-                            em.field_i[em.field_l * var8 - (-param1 - var10)] = var13;
-                            var10++;
-                            continue L5;
-                          } else {
-                            break L4;
-                          }
-                        } else {
-                          var10++;
-                          continue L5;
-                        }
-                      }
-                    }
-                  } else {
-                    break L4;
-                  }
-                }
-                L6: {
-                  if (-21 > var7) {
-                    break L6;
-                  } else {
-                    var12 = var11;
-                    var11 -= 21;
-                    var13 = 0;
-                    L7: while (true) {
-                      L8: {
-                        if (-21 < var13) {
-                          break L8;
-                        } else {
-                          var14 = (20 + -var7) * (-var7 + 20) + var13 * var13;
-                          if (-463 <= var14) {
-                            if (-421 <= var14) {
-                              var15 = var9 * (-var14 + 462) / 42;
-                              var15 = var15 | (var15 << -1198907928 | var15 << 680747888);
-                              em.field_i[em.field_l * var8 + param1 + var11] = var15;
-                              var11++;
-                              var13++;
-                              continue L7;
-                            } else {
-                              var12 = var11 - -1;
-                              var11++;
-                              var13++;
-                              continue L7;
-                            }
-                          } else {
-                            break L8;
-                          }
-                        }
-                      }
-                      var11 = var12;
-                      break L6;
-                    }
-                  }
-                }
-                var9 = var9 | (var9 << -1438859568 | var9 << -768663576);
-                em.e(param1 + var10, var8, -var10 + var11, var9);
-                var7++;
-                var8++;
-                continue L0;
+            L4: {
+              if ((em.field_k ^ -1) < (var8 ^ -1)) {
+                break L4;
               } else {
-                var7++;
-                var8++;
-                continue L0;
+                if (var8 < em.field_j) {
+                  L5: {
+                    var9 = var7 * (var6 + -var5) / var4 + var5;
+                    var10 = 0;
+                    var11 = ((vg) this).field_g;
+                    if (20 >= var7) {
+                      L6: while (true) {
+                        if ((var10 ^ -1) < -21) {
+                          break L5;
+                        } else {
+                          L7: {
+                            var12 = (20 - var7) * (20 - var7) + (20 - var10) * (-var10 + 20);
+                            if (462 < var12) {
+                              break L7;
+                            } else {
+                              if (var12 >= 420) {
+                                var13 = var9 * (462 + -var12) / 42;
+                                var13 = var13 | (var13 << 896559208 | var13 << 1797436624);
+                                em.field_i[em.field_l * var8 - (-param1 - var10)] = var13;
+                                break L7;
+                              } else {
+                                break L5;
+                              }
+                            }
+                          }
+                          var10++;
+                          continue L6;
+                        }
+                      }
+                    } else {
+                      break L5;
+                    }
+                  }
+                  L8: {
+                    if (-21 > (var7 ^ -1)) {
+                      break L8;
+                    } else {
+                      var12 = var11;
+                      var11 -= 21;
+                      var13 = 0;
+                      L9: while (true) {
+                        L10: {
+                          if (-21 > (var13 ^ -1)) {
+                            break L10;
+                          } else {
+                            var14 = (20 + -var7) * (-var7 + 20) + var13 * var13;
+                            if (-463 <= (var14 ^ -1)) {
+                              L11: {
+                                if (-421 >= (var14 ^ -1)) {
+                                  var15 = var9 * (-var14 + 462) / 42;
+                                  var15 = var15 | (var15 << -1198907928 | var15 << 680747888);
+                                  em.field_i[em.field_l * var8 + param1 + var11] = var15;
+                                  break L11;
+                                } else {
+                                  var12 = var11 - -1;
+                                  break L11;
+                                }
+                              }
+                              var11++;
+                              var13++;
+                              continue L9;
+                            } else {
+                              break L10;
+                            }
+                          }
+                        }
+                        var11 = var12;
+                        break L8;
+                      }
+                    }
+                  }
+                  var9 = var9 | (var9 << -1438859568 | var9 << -768663576);
+                  em.e(param1 + var10, var8, -var10 + var11, var9);
+                  break L4;
+                } else {
+                  break L4;
+                }
               }
-            } else {
-              var7++;
-              var8++;
-              continue L0;
             }
+            var7++;
+            var8++;
+            continue L0;
           }
         }
     }
@@ -255,8 +257,9 @@ abstract class vg extends bb {
         } else {
             var2 = ((vg) this).field_M;
             var3 = ((vg) this).field_X;
+            int fieldTemp$0 = ((vg) this).field_Y + 1;
             ((vg) this).field_Y = ((vg) this).field_Y + 1;
-            if (((vg) this).field_Y + 1 >= ((vg) this).field_V) {
+            if (fieldTemp$0 >= ((vg) this).field_V) {
                 ((vg) this).field_V = 0;
                 ((vg) this).m(-105);
             } else {

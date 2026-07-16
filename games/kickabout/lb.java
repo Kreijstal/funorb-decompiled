@@ -210,24 +210,51 @@ class lb extends wi {
     }
 
     final void a(String param0, int param1, int param2) {
-        String[] var7 = null;
         String[] var4 = null;
         int var5 = 0;
-        int var6 = Kickabout.field_G;
-        if (param2 != 12082) {
+        int var6 = 0;
+        String[] var7 = null;
+        L0: {
+          var6 = Kickabout.field_G;
+          if (param2 == 12082) {
+            break L0;
+          } else {
             field_H = null;
+            break L0;
+          }
         }
-        if (((lb) this).field_J != null) {
-            // if_icmpge L41
-        } else {
+        L1: {
+          L2: {
+            if (((lb) this).field_J == null) {
+              break L2;
+            } else {
+              if (param1 >= ((lb) this).field_J.length) {
+                break L2;
+              } else {
+                break L1;
+              }
+            }
+          }
+          L3: {
             var7 = new String[1 + param1];
             var4 = var7;
-            if (null != ((lb) this).field_J) {
-                for (var5 = 0; var5 < ((lb) this).field_J.length; var5++) {
-                    var7[var5] = ((lb) this).field_J[var5];
+            if (null == ((lb) this).field_J) {
+              break L3;
+            } else {
+              var5 = 0;
+              L4: while (true) {
+                if (var5 >= ((lb) this).field_J.length) {
+                  break L3;
+                } else {
+                  var7[var5] = ((lb) this).field_J[var5];
+                  var5++;
+                  continue L4;
                 }
+              }
             }
-            ((lb) this).field_J = var4;
+          }
+          ((lb) this).field_J = var4;
+          break L1;
         }
         ((lb) this).field_J[param1] = param0;
     }
@@ -267,7 +294,7 @@ class lb extends wi {
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
-        er var10 = null;
+        Object var10 = null;
         int var11 = 0;
         qj var12 = null;
         int var13 = 0;
@@ -343,13 +370,13 @@ class lb extends wi {
                   var14 = stackIn_14_0;
                   var15 = new er(var7, var13, var12.field_g, -var13 + var14, Math.max(var3.a((byte) -76), -var12.field_g + var12.field_d));
                   if (var10 != null) {
-                    var10.field_j = var15;
+                    ((er) var10).field_j = var15;
                     break L5;
                   } else {
                     break L5;
                   }
                 }
-                var10 = var15;
+                var10 = (Object) (Object) var15;
                 ((lb) this).field_E.a((gn) (Object) var15, param0 + 44);
                 var11++;
                 continue L2;

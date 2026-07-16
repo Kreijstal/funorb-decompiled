@@ -126,7 +126,7 @@ class mn extends aa implements ng {
             var8 = new fo((mn) this, ((mn) this).field_cb, param1);
             var6 = var8;
             var4 = var8;
-            if (param0 == -6) {
+            if ((param0 ^ -1) == -6) {
               var8.a(kl.field_n, 5177, 11);
               var8.a(pf.field_q, 5177, 17);
               if (param0 == 3) {
@@ -156,7 +156,7 @@ class mn extends aa implements ng {
                 }
               }
             } else {
-              if (-257 == param0) {
+              if (-257 == (param0 ^ -1)) {
                 lg discarded$9 = var8.a(0, qm.field_b, (ca) this);
                 if (param0 == 3) {
                   var8.a(dc.field_b, 5177, 7);

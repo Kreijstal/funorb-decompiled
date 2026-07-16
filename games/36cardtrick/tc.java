@@ -7,10 +7,10 @@ final class tc {
     static String field_c;
 
     public static void a(byte param0) {
-        qk var2 = null;
+        Object var2 = null;
         field_c = null;
         if (param0 >= -82) {
-          var2 = (qk) null;
+          var2 = null;
           boolean discarded$2 = tc.a(51, -63, -35, (qk) null);
           field_a = null;
           return;
@@ -43,7 +43,7 @@ final class tc {
             return true;
           }
         } else {
-          field_c = (String) null;
+          field_c = null;
           var5 = param3.a(param0, (byte) -115, param1);
           var4 = var5;
           if (var5 == null) {

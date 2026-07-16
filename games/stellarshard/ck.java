@@ -263,18 +263,22 @@ class ck extends wl implements oi {
               }
             }
             try {
-              stackOut_2_0 = (fe) Class.forName("hb").newInstance();
-              stackIn_3_0 = stackOut_2_0;
-            } catch (java.lang.Throwable decompiledCaughtParameter) {
-              decompiledCaughtException = decompiledCaughtParameter;
-              return stackIn_3_0;
+              L1: {
+                stackOut_2_0 = (fe) Class.forName("hb").newInstance();
+                stackIn_3_0 = stackOut_2_0;
+                break L1;
+              }
+            } catch (java.lang.Throwable decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              var1 = decompiledCaughtException;
+              return null;
             }
+            return stackIn_3_0;
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
             throw new RuntimeException(decompiledCheckedException);
         }
-        return null;
     }
 
     final void h(byte param0) {

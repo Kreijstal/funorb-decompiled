@@ -27,8 +27,9 @@ final class pc {
         int var5 = 0;
         L0: {
           var5 = fleas.field_A ? 1 : 0;
+          int fieldTemp$3 = ((pc) this).field_a + 1;
           ((pc) this).field_a = ((pc) this).field_a + 1;
-          ((pc) this).field_k = ((pc) this).field_k + (((pc) this).field_a + 1);
+          ((pc) this).field_k = ((pc) this).field_k + fieldTemp$3;
           if (param0 == 2) {
             break L0;
           } else {
@@ -62,10 +63,12 @@ final class pc {
               }
             }
             ((pc) this).field_g = ((pc) this).field_g + ((pc) this).field_l[255 & var2 + 128];
-            var4 = ((pc) this).field_k + (((pc) this).field_l[sc.a(var3 >> 1698005762, 255)] + ((pc) this).field_g);
-            ((pc) this).field_l[var2] = ((pc) this).field_k + (((pc) this).field_l[sc.a(var3 >> 1698005762, 255)] + ((pc) this).field_g);
-            ((pc) this).field_k = ((pc) this).field_l[sc.a(var4 >> 1267318600 >> -587620766, 255)] + var3;
-            ((pc) this).field_e[var2] = ((pc) this).field_l[sc.a(var4 >> 1267318600 >> -587620766, 255)] + var3;
+            int dupTemp$4 = ((pc) this).field_k + (((pc) this).field_l[sc.a(var3 >> 1698005762, 255)] + ((pc) this).field_g);
+            var4 = dupTemp$4;
+            ((pc) this).field_l[var2] = dupTemp$4;
+            int dupTemp$5 = ((pc) this).field_l[sc.a(var4 >> 1267318600 >> -587620766, 255)] + var3;
+            ((pc) this).field_k = dupTemp$5;
+            ((pc) this).field_e[var2] = dupTemp$5;
             var2++;
             continue L1;
           }
@@ -252,13 +255,13 @@ final class pc {
             if (wi.field_b != 0) {
               break L2;
             } else {
-              if (-1 != fleas.field_L) {
+              if (-1 != (fleas.field_L ^ -1)) {
                 break L2;
               } else {
                 if (hj.field_a[1] != 0) {
                   break L2;
                 } else {
-                  if (-1 == hj.field_a[0]) {
+                  if (-1 == (hj.field_a[0] ^ -1)) {
                     stackOut_8_0 = 0;
                     stackIn_9_0 = stackOut_8_0;
                     break L1;
@@ -293,8 +296,9 @@ final class pc {
             this.b(2);
             ((pc) this).field_c = 256;
         }
+        int fieldTemp$0 = ((pc) this).field_c - 1;
         ((pc) this).field_c = ((pc) this).field_c - 1;
-        return ((pc) this).field_e[((pc) this).field_c - 1];
+        return ((pc) this).field_e[fieldTemp$0];
     }
 
     pc(int[] param0) {

@@ -100,7 +100,6 @@ final class rm {
         String var25 = null;
         pf var26 = null;
         oh var27 = null;
-        oh var27_ref = null;
         String var28 = null;
         pf var29 = null;
         oh var30 = null;
@@ -163,9 +162,9 @@ final class rm {
         L2: {
           if ((param0 ^ -1) == -3) {
             var26 = hd.field_s;
-            var27_ref = ec.field_n[0];
+            var27 = ec.field_n[0];
             var28 = mb.field_A;
-            var26.field_j.a(11, var27_ref, 0, var28);
+            var26.field_j.a(11, var27, 0, var28);
             var29 = hd.field_s;
             var30 = ec.field_n[1];
             var31 = dk.field_a;

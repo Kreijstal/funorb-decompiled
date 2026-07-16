@@ -56,8 +56,9 @@ abstract class cv {
                           break L0;
                         } else {
                           L4: {
+                            int incrementValue$27 = var1;
                             var1++;
-                            oi.field_e[var1] = new oh(ku.field_g[p.a((byte) -24, 2)], var2, -90);
+                            oi.field_e[incrementValue$27] = new oh(ku.field_g[p.a((byte) -24, 2)], var2, -90);
                             stackOut_20_0 = var2;
                             stackIn_22_0 = stackOut_20_0;
                             stackIn_21_0 = stackOut_20_0;
@@ -82,8 +83,9 @@ abstract class cv {
                       }
                     } else {
                       L5: {
+                        int incrementValue$28 = var1;
                         var1++;
-                        oi.field_e[var1] = new oh(ku.field_g[p.a((byte) -24, 2)], var2, 1394);
+                        oi.field_e[incrementValue$28] = new oh(ku.field_g[p.a((byte) -24, 2)], var2, 1394);
                         stackOut_14_0 = var2;
                         stackIn_16_0 = stackOut_14_0;
                         stackIn_15_0 = stackOut_14_0;
@@ -118,8 +120,9 @@ abstract class cv {
                       break L6;
                     }
                   }
+                  int incrementValue$29 = var1;
                   var1++;
-                  oi.field_e[var1] = new oh(var3_ref_ut, var4, var5);
+                  oi.field_e[incrementValue$29] = new oh(var3_ref_ut, var4, var5);
                   var2++;
                   continue L1;
                 }
@@ -128,16 +131,21 @@ abstract class cv {
               if (rm.field_C == 2) {
                 oi.field_e = new oh[5];
                 var1 = 0;
+                int incrementValue$30 = var1;
                 var1++;
-                oi.field_e[var1] = new oh(oo.field_b[1], 1002, -229);
+                oi.field_e[incrementValue$30] = new oh(oo.field_b[1], 1002, -229);
+                int incrementValue$31 = var1;
                 var1++;
-                oi.field_e[var1] = new oh(oo.field_b[2], 1126, -206);
+                oi.field_e[incrementValue$31] = new oh(oo.field_b[2], 1126, -206);
+                int incrementValue$32 = var1;
                 var1++;
-                oi.field_e[var1] = new oh(oo.field_b[0], -332, 200);
+                oi.field_e[incrementValue$32] = new oh(oo.field_b[0], -332, 200);
+                int incrementValue$33 = var1;
                 var1++;
-                oi.field_e[var1] = new oh(oo.field_b[0], -170, 1428);
+                oi.field_e[incrementValue$33] = new oh(oo.field_b[0], -170, 1428);
+                int incrementValue$34 = var1;
                 var1++;
-                oi.field_e[var1] = new oh(oo.field_b[1], -296, 1415);
+                oi.field_e[incrementValue$34] = new oh(oo.field_b[1], -296, 1415);
                 break L0;
               } else {
                 if ((rm.field_C ^ -1) != -4) {
@@ -151,44 +159,63 @@ abstract class cv {
           } else {
             oi.field_e = new oh[19];
             var1 = 0;
+            int incrementValue$35 = var1;
             var1++;
-            oi.field_e[var1] = new oh(oo.field_b[0], -156, -31);
+            oi.field_e[incrementValue$35] = new oh(oo.field_b[0], -156, -31);
+            int incrementValue$36 = var1;
             var1++;
-            oi.field_e[var1] = new oh(oo.field_b[2], 933, 763);
+            oi.field_e[incrementValue$36] = new oh(oo.field_b[2], 933, 763);
+            int incrementValue$37 = var1;
             var1++;
-            oi.field_e[var1] = new oh(oo.field_b[0], 943, -36);
+            oi.field_e[incrementValue$37] = new oh(oo.field_b[0], 943, -36);
+            int incrementValue$38 = var1;
             var1++;
-            oi.field_e[var1] = new oh(oo.field_b[0], -141, 1275);
+            oi.field_e[incrementValue$38] = new oh(oo.field_b[0], -141, 1275);
+            int incrementValue$39 = var1;
             var1++;
-            oi.field_e[var1] = new oh(ku.field_g[0], -390, 629);
+            oi.field_e[incrementValue$39] = new oh(ku.field_g[0], -390, 629);
+            int incrementValue$40 = var1;
             var1++;
-            oi.field_e[var1] = new oh(ku.field_g[1], -264, 584);
+            oi.field_e[incrementValue$40] = new oh(ku.field_g[1], -264, 584);
+            int incrementValue$41 = var1;
             var1++;
-            oi.field_e[var1] = new oh(ku.field_g[1], -357, 447);
+            oi.field_e[incrementValue$41] = new oh(ku.field_g[1], -357, 447);
+            int incrementValue$42 = var1;
             var1++;
-            oi.field_e[var1] = new oh(ku.field_g[0], -259, 379);
+            oi.field_e[incrementValue$42] = new oh(ku.field_g[0], -259, 379);
+            int incrementValue$43 = var1;
             var1++;
-            oi.field_e[var1] = new oh(oo.field_b[0], 180, 1371);
+            oi.field_e[incrementValue$43] = new oh(oo.field_b[0], 180, 1371);
+            int incrementValue$44 = var1;
             var1++;
-            oi.field_e[var1] = new oh(oo.field_b[1], 566, 1422);
+            oi.field_e[incrementValue$44] = new oh(oo.field_b[1], 566, 1422);
+            int incrementValue$45 = var1;
             var1++;
-            oi.field_e[var1] = new oh(oo.field_b[0], 750, 1353);
+            oi.field_e[incrementValue$45] = new oh(oo.field_b[0], 750, 1353);
+            int incrementValue$46 = var1;
             var1++;
-            oi.field_e[var1] = new oh(oo.field_b[2], 51, 1415);
+            oi.field_e[incrementValue$46] = new oh(oo.field_b[2], 51, 1415);
+            int incrementValue$47 = var1;
             var1++;
-            oi.field_e[var1] = new oh(oo.field_b[1], 1014, 211);
+            oi.field_e[incrementValue$47] = new oh(oo.field_b[1], 1014, 211);
+            int incrementValue$48 = var1;
             var1++;
-            oi.field_e[var1] = new oh(oo.field_b[2], 775, -174);
+            oi.field_e[incrementValue$48] = new oh(oo.field_b[2], 775, -174);
+            int incrementValue$49 = var1;
             var1++;
-            oi.field_e[var1] = new oh(oo.field_b[1], 570, -220);
+            oi.field_e[incrementValue$49] = new oh(oo.field_b[1], 570, -220);
+            int incrementValue$50 = var1;
             var1++;
-            oi.field_e[var1] = new oh(oo.field_b[0], 211, -199);
+            oi.field_e[incrementValue$50] = new oh(oo.field_b[0], 211, -199);
+            int incrementValue$51 = var1;
             var1++;
-            oi.field_e[var1] = new oh(oo.field_b[2], -31, -163);
+            oi.field_e[incrementValue$51] = new oh(oo.field_b[2], -31, -163);
+            int incrementValue$52 = var1;
             var1++;
-            oi.field_e[var1] = new oh(oo.field_b[1], -288, 1213);
+            oi.field_e[incrementValue$52] = new oh(oo.field_b[1], -288, 1213);
+            int incrementValue$53 = var1;
             var1++;
-            oi.field_e[var1] = new oh(oo.field_b[2], -200, 1041);
+            oi.field_e[incrementValue$53] = new oh(oo.field_b[2], -200, 1041);
             break L0;
           }
         }

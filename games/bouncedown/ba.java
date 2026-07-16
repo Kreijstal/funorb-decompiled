@@ -99,8 +99,9 @@ class ba extends wd {
                 ((ba) this).field_h = ((ba) this).field_h.substring(0, ((ba) this).field_D);
             }
         }
-        ((ba) this).field_K = ((ba) this).field_h.length();
-        ((ba) this).field_G = ((ba) this).field_h.length();
+        int dupTemp$0 = ((ba) this).field_h.length();
+        ((ba) this).field_K = dupTemp$0;
+        ((ba) this).field_G = dupTemp$0;
         if (!(param0)) {
             ((ba) this).h((byte) 88);
         }
@@ -113,13 +114,19 @@ class ba extends wd {
             String var3 = null;
             Throwable decompiledCaughtException = null;
             try {
-              var2_int = 12 % ((param0 - 66) / 57);
-              var3 = (String) java.awt.Toolkit.getDefaultToolkit().getSystemClipboard().getContents((Object) null).getTransferData(java.awt.datatransfer.DataFlavor.stringFlavor);
-              this.b(true);
-              this.a(28383, var3);
+              L0: {
+                var2_int = 12 % ((param0 - 66) / 57);
+                var3 = (String) java.awt.Toolkit.getDefaultToolkit().getSystemClipboard().getContents((Object) null).getTransferData(java.awt.datatransfer.DataFlavor.stringFlavor);
+                this.b(true);
+                this.a(28383, var3);
+                break L0;
+              }
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
-              var2 = (Exception) (Object) decompiledCaughtException;
+              L1: {
+                var2 = (Exception) (Object) decompiledCaughtException;
+                break L1;
+              }
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -248,7 +255,7 @@ class ba extends wd {
                     break L2;
                   } else {
                     L3: {
-                      if (((ba) this).field_G == ((ba) this).field_K) {
+                      if ((((ba) this).field_G ^ -1) == (((ba) this).field_K ^ -1)) {
                         break L3;
                       } else {
                         this.b(true);
@@ -275,8 +282,9 @@ class ba extends wd {
                           break L6;
                         } else {
                           ((ba) this).field_h = ((ba) this).field_h + param1;
-                          ((ba) this).field_G = ((ba) this).field_h.length();
-                          ((ba) this).field_K = ((ba) this).field_h.length();
+                          int dupTemp$1 = ((ba) this).field_h.length();
+                          ((ba) this).field_G = dupTemp$1;
+                          ((ba) this).field_K = dupTemp$1;
                           break L6;
                         }
                       }
@@ -291,7 +299,7 @@ class ba extends wd {
                 L7: {
                   if (param2 != 101) {
                     if (13 != param2) {
-                      if (-97 != param2) {
+                      if (-97 != (param2 ^ -1)) {
                         if (param2 != 97) {
                           if (102 == param2) {
                             this.b(0, 102);
@@ -343,7 +351,7 @@ class ba extends wd {
                             }
                           }
                         } else {
-                          if (((ba) this).field_G >= ((ba) this).field_h.length()) {
+                          if ((((ba) this).field_G ^ -1) <= (((ba) this).field_h.length() ^ -1)) {
                             break L7;
                           } else {
                             L10: {
@@ -369,7 +377,7 @@ class ba extends wd {
                           }
                         }
                       } else {
-                        if (-1 >= ((ba) this).field_G) {
+                        if (-1 <= (((ba) this).field_G ^ -1)) {
                           break L7;
                         } else {
                           L11: {
@@ -399,7 +407,7 @@ class ba extends wd {
                       return true;
                     }
                   } else {
-                    if (((ba) this).field_K != ((ba) this).field_G) {
+                    if ((((ba) this).field_K ^ -1) != (((ba) this).field_G ^ -1)) {
                       this.b(true);
                       return true;
                     } else {
@@ -544,17 +552,23 @@ class ba extends wd {
         Throwable decompiledCaughtException = null;
         try {
           L0: {
-            Thread.sleep(param1);
-            if (param0 <= -29) {
-              break L0;
-            } else {
-              ba.a((byte) 115, 7L);
-              break L0;
+            L1: {
+              Thread.sleep(param1);
+              if (param0 <= -29) {
+                break L1;
+              } else {
+                ba.a((byte) 115, 7L);
+                break L1;
+              }
             }
+            break L0;
           }
         } catch (java.lang.Exception decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          var3 = (InterruptedException) (Object) decompiledCaughtException;
+          L2: {
+            var3 = (InterruptedException) (Object) decompiledCaughtException;
+            break L2;
+          }
         }
     }
 

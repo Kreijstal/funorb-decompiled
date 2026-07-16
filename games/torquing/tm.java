@@ -113,78 +113,44 @@ final class tm {
         try {
             Exception exception = null;
             Throwable decompiledCaughtException = null;
-            int statePc = 0;
-            Throwable caughtException = null;
-            stateLoop: while (true) {
-                switch (statePc) {
-                    case 0: {
-                        if (param1.field_j[param1.field_n] != 31) {
-                            statePc = 3;
-                        } else {
-                            statePc = 1;
-                        }
-                        continue stateLoop;
+            L0: {
+              if (param1.field_j[param1.field_n] != 31) {
+                break L0;
+              } else {
+                if (116 != (param1.field_j[1 + param1.field_n] ^ -1)) {
+                  break L0;
+                } else {
+                  L1: {
+                    if (null == ((tm) this).field_d) {
+                      ((tm) this).field_d = new java.util.zip.Inflater(true);
+                      break L1;
+                    } else {
+                      break L1;
                     }
-                    case 1: {
-                        if (116 != (param1.field_j[1 + param1.field_n] ^ -1)) {
-                            statePc = 3;
-                        } else {
-                            statePc = 4;
-                        }
-                        continue stateLoop;
+                  }
+                  try {
+                    L2: {
+                      ((tm) this).field_d.setInput(param1.field_j, 10 + param1.field_n, -param1.field_n + -18 + param1.field_j.length);
+                      int discarded$2 = ((tm) this).field_d.inflate(param2);
+                      break L2;
                     }
-                    case 3: {
-                        throw new RuntimeException("");
-                    }
-                    case 4: {
-                        if (null == ((tm) this).field_d) {
-                            statePc = 6;
-                        } else {
-                            statePc = 7;
-                        }
-                        continue stateLoop;
-                    }
-                    case 6: {
-                        ((tm) this).field_d = new java.util.zip.Inflater(true);
-                        statePc = 7;
-                        continue stateLoop;
-                    }
-                    case 7: {
-                        try {
-                            ((tm) this).field_d.setInput(param1.field_j, 10 + param1.field_n, -param1.field_n + -18 + param1.field_j.length);
-                            int discarded$3 = ((tm) this).field_d.inflate(param2);
-                            statePc = 10;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_7) {
-                            caughtException = stateCaught_7;
-                            statePc = 9;
-                            continue stateLoop;
-                        }
-                    }
-                    case 9: {
-                        exception = (Exception) (Object) caughtException;
-                        ((tm) this).field_d.reset();
-                        throw new RuntimeException("");
-                    }
-                    case 10: {
-                        ((tm) this).field_d.reset();
-                        if (param0 != -67) {
-                            statePc = 12;
-                        } else {
-                            statePc = 11;
-                        }
-                        continue stateLoop;
-                    }
-                    case 11: {
-                        return;
-                    }
-                    case 12: {
-                        field_e = null;
-                        return;
-                    }
-                    default: throw new IllegalStateException("invalid CFG state " + statePc);
+                  } catch (java.lang.Exception decompiledCaughtParameter0) {
+                    decompiledCaughtException = decompiledCaughtParameter0;
+                    exception = (Exception) (Object) decompiledCaughtException;
+                    ((tm) this).field_d.reset();
+                    throw new RuntimeException("");
+                  }
+                  ((tm) this).field_d.reset();
+                  if (param0 != -67) {
+                    field_e = null;
+                    return;
+                  } else {
+                    return;
+                  }
                 }
+              }
             }
+            throw new RuntimeException("");
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {

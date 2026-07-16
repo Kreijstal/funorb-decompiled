@@ -147,11 +147,11 @@ final class ha extends i {
           if ((param4 ^ -1) == 0) {
             L2: {
               var9.field_q = param1 / 2;
-              if (-3 == var9.field_q) {
+              if (-3 == (var9.field_q ^ -1)) {
                 var9.field_q = 3;
                 break L2;
               } else {
-                if (-4 != var9.field_q) {
+                if (-4 != (var9.field_q ^ -1)) {
                   break L2;
                 } else {
                   var9.field_q = 2;
@@ -192,74 +192,75 @@ final class ha extends i {
                 if (var12 >= var9.field_h.length) {
                   break L1;
                 } else {
-                  if (2 == param1) {
-                    var9.field_h[var12] = 0;
-                    var12++;
-                    continue L5;
-                  } else {
-                    L6: {
-                      if ((param1 ^ -1) >= -3) {
-                        break L6;
-                      } else {
-                        if (5 > param1) {
-                          var9.field_h[var12] = dq.a((byte) -118, 2, var8);
-                          var12++;
-                          continue L5;
+                  L6: {
+                    if (2 == param1) {
+                      var9.field_h[var12] = 0;
+                      break L6;
+                    } else {
+                      L7: {
+                        if ((param1 ^ -1) >= -3) {
+                          break L7;
                         } else {
-                          break L6;
+                          if (5 > param1) {
+                            var9.field_h[var12] = dq.a((byte) -118, 2, var8);
+                            break L6;
+                          } else {
+                            break L7;
+                          }
                         }
                       }
+                      var9.field_h[var12] = dq.a((byte) 120, 3, var8);
+                      break L6;
                     }
-                    var9.field_h[var12] = dq.a((byte) 120, 3, var8);
-                    var12++;
-                    continue L5;
                   }
+                  var12++;
+                  continue L5;
                 }
               }
             }
           } else {
-            L7: {
+            L8: {
               if (3 <= param4) {
                 stackOut_5_0 = 2;
                 stackIn_6_0 = stackOut_5_0;
-                break L7;
+                break L8;
               } else {
                 stackOut_4_0 = 3;
                 stackIn_6_0 = stackOut_4_0;
-                break L7;
+                break L8;
               }
             }
-            L8: {
+            L9: {
               var10 = stackIn_6_0;
               var9.field_q = param1 / var10;
               if ((var9.field_q ^ -1) == -3) {
                 var9.field_q = 3;
-                break L8;
+                break L9;
               } else {
                 if (var9.field_q == 3) {
                   var9.field_q = 2;
-                  break L8;
-                } else {
-                  break L8;
-                }
-              }
-            }
-            L9: {
-              if (-3 >= (param4 ^ -1)) {
-                break L9;
-              } else {
-                if (var9.field_q != 2) {
                   break L9;
                 } else {
-                  var9.field_q = 3;
                   break L9;
                 }
               }
             }
             L10: {
+              if (-3 >= (param4 ^ -1)) {
+                break L10;
+              } else {
+                if (var9.field_q != 2) {
+                  break L10;
+                } else {
+                  var9.field_q = 3;
+                  break L10;
+                }
+              }
+            }
+            L11: {
               var11 = 40 + dq.a((byte) -69, 4, var8) * 10;
               if (var9.field_q == 0) {
-                L11: {
+                L12: {
                   stackOut_16_0 = (up) var9;
                   stackOut_16_1 = ng.field_d[param4];
                   stackOut_16_2 = 86;
@@ -278,7 +279,7 @@ final class ha extends i {
                     stackIn_19_1 = stackOut_18_1;
                     stackIn_19_2 = stackOut_18_2;
                     stackIn_19_3 = stackOut_18_3;
-                    break L11;
+                    break L12;
                   } else {
                     stackOut_17_0 = (up) (Object) stackIn_17_0;
                     stackOut_17_1 = stackIn_17_1;
@@ -288,20 +289,20 @@ final class ha extends i {
                     stackIn_19_1 = stackOut_17_1;
                     stackIn_19_2 = stackOut_17_2;
                     stackIn_19_3 = stackOut_17_3;
-                    break L11;
+                    break L12;
                   }
                 }
                 stackIn_19_0.field_o = stackIn_19_1 + dq.a((byte) stackIn_19_2, stackIn_19_3, var8);
                 var9.field_g = var11 * var9.field_o / 100;
                 var9.field_n = (100 - var11) * var9.field_o / 100;
-                break L10;
+                break L11;
               } else {
-                break L10;
+                break L11;
               }
             }
-            L12: {
-              if (-4 == var9.field_q) {
-                L13: {
+            L13: {
+              if (-4 == (var9.field_q ^ -1)) {
+                L14: {
                   stackOut_22_0 = (up) var9;
                   stackOut_22_1 = ng.field_d[param4];
                   stackOut_22_2 = -60;
@@ -311,7 +312,7 @@ final class ha extends i {
                   stackIn_23_0 = stackOut_22_0;
                   stackIn_23_1 = stackOut_22_1;
                   stackIn_23_2 = stackOut_22_2;
-                  if (-1 == param4) {
+                  if (-1 == (param4 ^ -1)) {
                     stackOut_24_0 = (up) (Object) stackIn_24_0;
                     stackOut_24_1 = stackIn_24_1;
                     stackOut_24_2 = stackIn_24_2;
@@ -320,7 +321,7 @@ final class ha extends i {
                     stackIn_25_1 = stackOut_24_1;
                     stackIn_25_2 = stackOut_24_2;
                     stackIn_25_3 = stackOut_24_3;
-                    break L13;
+                    break L14;
                   } else {
                     stackOut_23_0 = (up) (Object) stackIn_23_0;
                     stackOut_23_1 = stackIn_23_1;
@@ -330,20 +331,20 @@ final class ha extends i {
                     stackIn_25_1 = stackOut_23_1;
                     stackIn_25_2 = stackOut_23_2;
                     stackIn_25_3 = stackOut_23_3;
-                    break L13;
+                    break L14;
                   }
                 }
                 stackIn_25_0.field_g = stackIn_25_1 + dq.a((byte) stackIn_25_2, stackIn_25_3, var8);
                 var9.field_o = var11 * var9.field_g / 100;
                 var9.field_n = (100 - var11) * var9.field_g / 100;
-                break L12;
+                break L13;
               } else {
-                break L12;
+                break L13;
               }
             }
-            L14: {
+            L15: {
               if (var9.field_q == 1) {
-                L15: {
+                L16: {
                   stackOut_28_0 = (up) var9;
                   stackOut_28_1 = ng.field_d[param4];
                   stackOut_28_2 = -66;
@@ -362,7 +363,7 @@ final class ha extends i {
                     stackIn_31_1 = stackOut_30_1;
                     stackIn_31_2 = stackOut_30_2;
                     stackIn_31_3 = stackOut_30_3;
-                    break L15;
+                    break L16;
                   } else {
                     stackOut_29_0 = (up) (Object) stackIn_29_0;
                     stackOut_29_1 = stackIn_29_1;
@@ -372,18 +373,18 @@ final class ha extends i {
                     stackIn_31_1 = stackOut_29_1;
                     stackIn_31_2 = stackOut_29_2;
                     stackIn_31_3 = stackOut_29_3;
-                    break L15;
+                    break L16;
                   }
                 }
                 stackIn_31_0.field_n = stackIn_31_1 - -dq.a((byte) stackIn_31_2, stackIn_31_3, var8);
                 var9.field_g = var9.field_n * var11 / 100;
                 var9.field_o = (-var11 + 100) * var9.field_n / 100;
-                break L14;
+                break L15;
               } else {
-                break L14;
+                break L15;
               }
             }
-            L16: {
+            L17: {
               if (2 == var9.field_q) {
                 var12 = ng.field_d[param4] + dq.a((byte) -41, 11, var8);
                 var11 = dq.a((byte) 81, 3, var8) * 10 + 60;
@@ -392,130 +393,136 @@ final class ha extends i {
                 var9.field_g = var12 * var11 / 100;
                 var11 = 60 + dq.a((byte) 127, 3, var8) * 10;
                 var9.field_n = var12 * var11 / 100;
-                break L16;
-              } else {
-                break L16;
-              }
-            }
-            L17: {
-              var9.field_r = 0;
-              if (-81 <= (var9.field_o ^ -1)) {
                 break L17;
               } else {
-                var9.field_o = 80;
                 break L17;
               }
             }
             L18: {
-              if (var9.field_g <= 80) {
+              var9.field_r = 0;
+              if (-81 <= (var9.field_o ^ -1)) {
                 break L18;
               } else {
-                var9.field_g = 80;
+                var9.field_o = 80;
                 break L18;
               }
             }
             L19: {
-              if ((var9.field_n ^ -1) >= -81) {
+              if (var9.field_g <= 80) {
                 break L19;
               } else {
-                var9.field_n = 80;
+                var9.field_g = 80;
                 break L19;
               }
             }
             L20: {
+              if ((var9.field_n ^ -1) >= -81) {
+                break L20;
+              } else {
+                var9.field_n = 80;
+                break L20;
+              }
+            }
+            L21: {
               var12 = 0;
               if ((var9.field_q ^ -1) != -3) {
                 var12++;
                 if ((param4 ^ -1) > -5) {
-                  break L20;
+                  break L21;
                 } else {
                   if (dq.a((byte) 89, 2, var8) != 0) {
-                    break L20;
+                    break L21;
                   } else {
                     var12++;
-                    break L20;
+                    break L21;
                   }
                 }
               } else {
-                L21: {
+                L22: {
                   var12++;
                   if (param4 < 5) {
-                    break L21;
+                    break L22;
                   } else {
                     var12++;
-                    break L21;
+                    break L22;
                   }
                 }
                 if (0 != dq.a((byte) -73, 2, var8)) {
-                  break L20;
+                  break L21;
                 } else {
                   var12++;
-                  break L20;
+                  break L21;
                 }
               }
             }
-            var9.field_h = new int[var12];
-            if (2 != var9.field_q) {
-              var13 = 0;
-              L22: while (true) {
-                if (var9.field_h.length <= var13) {
-                  break L1;
-                } else {
-                  if ((param4 ^ -1) <= -3) {
-                    var14 = dq.a((byte) 122, 100, var8);
-                    var17 = 0;
-                    var15 = var17;
-                    L23: while (true) {
-                      if (ct.field_v[param4].length > var17) {
-                        if (var14 > ct.field_v[param4][var17]) {
-                          var14 = var14 - ct.field_v[param4][var17];
-                          var17++;
-                          continue L23;
-                        } else {
-                          var9.field_h[var13] = var17;
-                          var13++;
-                          continue L22;
+            L23: {
+              var9.field_h = new int[var12];
+              if (2 != var9.field_q) {
+                var13 = 0;
+                L24: while (true) {
+                  if (var9.field_h.length <= var13) {
+                    break L23;
+                  } else {
+                    L25: {
+                      if ((param4 ^ -1) <= -3) {
+                        var14 = dq.a((byte) 122, 100, var8);
+                        var17 = 0;
+                        var15 = var17;
+                        L26: while (true) {
+                          if ((ct.field_v[param4].length ^ -1) >= (var17 ^ -1)) {
+                            break L25;
+                          } else {
+                            if (var14 > ct.field_v[param4][var17]) {
+                              var14 = var14 - ct.field_v[param4][var17];
+                              var17++;
+                              continue L26;
+                            } else {
+                              var9.field_h[var13] = var17;
+                              break L25;
+                            }
+                          }
                         }
                       } else {
-                        var13++;
-                        continue L22;
+                        var9.field_h[var13] = 0;
+                        break L25;
                       }
                     }
-                  } else {
-                    var9.field_h[var13] = 0;
                     var13++;
-                    continue L22;
+                    continue L24;
                   }
                 }
-              }
-            } else {
-              var9.field_h[0] = 3;
-              var13 = 1;
-              L24: while (true) {
-                if (var9.field_h.length <= var13) {
-                  break L1;
-                } else {
-                  var14 = dq.a((byte) -89, 100, var8);
-                  var15 = 0;
-                  L25: while (true) {
-                    if (var15 < vo.field_eb[param4].length) {
-                      if (var14 <= vo.field_eb[param4][var15]) {
-                        var9.field_h[var13] = var15;
-                        var13++;
-                        continue L24;
-                      } else {
-                        var14 = var14 - vo.field_eb[param4][var15];
-                        var15++;
-                        continue L25;
+              } else {
+                var9.field_h[0] = 3;
+                var13 = 1;
+                L27: while (true) {
+                  if ((var9.field_h.length ^ -1) >= (var13 ^ -1)) {
+                    break L23;
+                  } else {
+                    var14 = dq.a((byte) -89, 100, var8);
+                    var15 = 0;
+                    L28: while (true) {
+                      L29: {
+                        if ((var15 ^ -1) <= (vo.field_eb[param4].length ^ -1)) {
+                          break L29;
+                        } else {
+                          if ((var14 ^ -1) >= (vo.field_eb[param4][var15] ^ -1)) {
+                            var9.field_h[var13] = var15;
+                            break L29;
+                          } else {
+                            var14 = var14 - vo.field_eb[param4][var15];
+                            var15++;
+                            continue L28;
+                          }
+                        }
                       }
-                    } else {
                       var13++;
-                      continue L24;
+                      continue L27;
                     }
                   }
                 }
               }
             }
+            break L1;
           }
         }
         var9.field_e = dq.a((byte) -67, td.field_a.length, var8);

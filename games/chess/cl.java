@@ -60,7 +60,7 @@ final class cl {
         fn[] var4 = null;
         int var5 = 0;
         int var6 = 0;
-        fn var6_ref = null;
+        fn var6_ref_fn = null;
         int var7 = 0;
         fn[] var8 = null;
         fn[] var9 = null;
@@ -85,15 +85,15 @@ final class cl {
                   var5++;
                   continue L0;
                 } else {
-                  var6_ref = new fn();
+                  var6_ref_fn = new fn();
                   int discarded$12 = param1.e(param0 + 5096, 24);
                   int discarded$13 = param1.e(-33, 24);
-                  var6_ref.field_g = param1.e(-94, 24);
+                  var6_ref_fn.field_g = param1.e(-94, 24);
                   int discarded$14 = param1.e(123, 9);
                   int discarded$15 = param1.e(-18, 12);
                   int discarded$16 = param1.e(110, 12);
                   int discarded$17 = param1.e(105, 12);
-                  var4[var5] = var6_ref;
+                  var4[var5] = var6_ref_fn;
                   var5++;
                   var5++;
                   continue L0;
@@ -121,15 +121,15 @@ final class cl {
                     var4[var5] = var8[var6];
                     break L2;
                   } else {
-                    var6_ref = new fn();
+                    var6_ref_fn = new fn();
                     int discarded$18 = param1.e(param0 + 5096, 24);
                     int discarded$19 = param1.e(-33, 24);
-                    var6_ref.field_g = param1.e(-94, 24);
+                    var6_ref_fn.field_g = param1.e(-94, 24);
                     int discarded$20 = param1.e(123, 9);
                     int discarded$21 = param1.e(-18, 12);
                     int discarded$22 = param1.e(110, 12);
                     int discarded$23 = param1.e(105, 12);
-                    var4[var5] = var6_ref;
+                    var4[var5] = var6_ref_fn;
                     var5++;
                     break L2;
                   }

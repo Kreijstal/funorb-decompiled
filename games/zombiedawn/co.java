@@ -23,43 +23,43 @@ final class co {
     }
 
     final static id a(boolean param0, int param1, int param2, boolean param3, int param4, int param5) {
-        kc var6 = null;
+        Object var6 = null;
         int var7 = 0;
-        kc stackIn_11_0 = null;
-        kc stackIn_12_0 = null;
-        kc stackIn_13_0 = null;
+        Object stackIn_11_0 = null;
+        Object stackIn_12_0 = null;
+        Object stackIn_13_0 = null;
         int stackIn_13_1 = 0;
-        kc stackIn_14_0 = null;
-        kc stackIn_15_0 = null;
-        kc stackIn_16_0 = null;
+        Object stackIn_14_0 = null;
+        Object stackIn_15_0 = null;
+        Object stackIn_16_0 = null;
         int stackIn_16_1 = 0;
-        kc stackIn_26_0 = null;
-        kc stackIn_27_0 = null;
-        kc stackIn_28_0 = null;
+        Object stackIn_26_0 = null;
+        Object stackIn_27_0 = null;
+        Object stackIn_28_0 = null;
         int stackIn_28_1 = 0;
-        kc stackIn_29_0 = null;
-        kc stackIn_30_0 = null;
-        kc stackIn_31_0 = null;
+        Object stackIn_29_0 = null;
+        Object stackIn_30_0 = null;
+        Object stackIn_31_0 = null;
         int stackIn_31_1 = 0;
-        kc stackOut_25_0 = null;
-        kc stackOut_27_0 = null;
+        Object stackOut_25_0 = null;
+        Object stackOut_27_0 = null;
         int stackOut_27_1 = 0;
-        kc stackOut_26_0 = null;
+        Object stackOut_26_0 = null;
         int stackOut_26_1 = 0;
-        kc stackOut_28_0 = null;
-        kc stackOut_30_0 = null;
+        Object stackOut_28_0 = null;
+        Object stackOut_30_0 = null;
         int stackOut_30_1 = 0;
-        kc stackOut_29_0 = null;
+        Object stackOut_29_0 = null;
         int stackOut_29_1 = 0;
-        kc stackOut_10_0 = null;
-        kc stackOut_12_0 = null;
+        Object stackOut_10_0 = null;
+        Object stackOut_12_0 = null;
         int stackOut_12_1 = 0;
-        kc stackOut_11_0 = null;
+        Object stackOut_11_0 = null;
         int stackOut_11_1 = 0;
-        kc stackOut_13_0 = null;
-        kc stackOut_15_0 = null;
+        Object stackOut_13_0 = null;
+        Object stackOut_15_0 = null;
         int stackOut_15_1 = 0;
-        kc stackOut_14_0 = null;
+        Object stackOut_14_0 = null;
         int stackOut_14_1 = 0;
         if (param5 == -19653) {
           var6 = null;
@@ -68,10 +68,10 @@ final class co {
             if (bm.field_a.length > var7) {
               if (bm.field_a[var7] == param4) {
                 L1: {
-                  var6 = new kc(param2, param1, hd.field_u[var7], param0, param3, hg.field_a[var7], si.field_Qb[var7]);
-                  rg.field_J.a((nb) (Object) var6, (byte) -119);
+                  var6 = (Object) (Object) new kc(param2, param1, hd.field_u[var7], param0, param3, hg.field_a[var7], si.field_Qb[var7]);
+                  rg.field_J.a((nb) var6, (byte) -119);
                   if (param4 == ch.field_b) {
-                    var6 = (kc) (Object) new te(param2, param1, 0, param0);
+                    var6 = (Object) (Object) new te(param2, param1, 0, param0);
                     break L1;
                   } else {
                     break L1;
@@ -79,24 +79,24 @@ final class co {
                 }
                 L2: {
                   if (var6 == null) {
-                    var6 = (kc) (Object) new id(param2, param1, param4);
+                    var6 = (Object) (Object) new id(param2, param1, param4);
                     break L2;
                   } else {
                     break L2;
                   }
                 }
                 L3: {
-                  stackOut_25_0 = (kc) var6;
+                  stackOut_25_0 = var6;
                   stackIn_27_0 = stackOut_25_0;
                   stackIn_26_0 = stackOut_25_0;
                   if (!param0) {
-                    stackOut_27_0 = (kc) (Object) stackIn_27_0;
+                    stackOut_27_0 = stackIn_27_0;
                     stackOut_27_1 = 0;
                     stackIn_28_0 = stackOut_27_0;
                     stackIn_28_1 = stackOut_27_1;
                     break L3;
                   } else {
-                    stackOut_26_0 = (kc) (Object) stackIn_26_0;
+                    stackOut_26_0 = stackIn_26_0;
                     stackOut_26_1 = 1;
                     stackIn_28_0 = stackOut_26_0;
                     stackIn_28_1 = stackOut_26_1;
@@ -105,17 +105,17 @@ final class co {
                 }
                 L4: {
                   ((id) (Object) stackIn_28_0).field_P = stackIn_28_1 != 0;
-                  stackOut_28_0 = (kc) var6;
+                  stackOut_28_0 = var6;
                   stackIn_30_0 = stackOut_28_0;
                   stackIn_29_0 = stackOut_28_0;
                   if (!param3) {
-                    stackOut_30_0 = (kc) (Object) stackIn_30_0;
+                    stackOut_30_0 = stackIn_30_0;
                     stackOut_30_1 = 0;
                     stackIn_31_0 = stackOut_30_0;
                     stackIn_31_1 = stackOut_30_1;
                     break L4;
                   } else {
-                    stackOut_29_0 = (kc) (Object) stackIn_29_0;
+                    stackOut_29_0 = stackIn_29_0;
                     stackOut_29_1 = 1;
                     stackIn_31_0 = stackOut_29_0;
                     stackIn_31_1 = stackOut_29_1;
@@ -123,7 +123,7 @@ final class co {
                   }
                 }
                 ((id) (Object) stackIn_31_0).field_J = stackIn_31_1 != 0;
-                return (id) (Object) var6;
+                return (id) var6;
               } else {
                 var7++;
                 continue L0;
@@ -131,7 +131,7 @@ final class co {
             } else {
               L5: {
                 if (param4 == ch.field_b) {
-                  var6 = (kc) (Object) new te(param2, param1, 0, param0);
+                  var6 = (Object) (Object) new te(param2, param1, 0, param0);
                   break L5;
                 } else {
                   break L5;
@@ -139,24 +139,24 @@ final class co {
               }
               L6: {
                 if (var6 == null) {
-                  var6 = (kc) (Object) new id(param2, param1, param4);
+                  var6 = (Object) (Object) new id(param2, param1, param4);
                   break L6;
                 } else {
                   break L6;
                 }
               }
               L7: {
-                stackOut_10_0 = (kc) var6;
+                stackOut_10_0 = var6;
                 stackIn_12_0 = stackOut_10_0;
                 stackIn_11_0 = stackOut_10_0;
                 if (!param0) {
-                  stackOut_12_0 = (kc) (Object) stackIn_12_0;
+                  stackOut_12_0 = stackIn_12_0;
                   stackOut_12_1 = 0;
                   stackIn_13_0 = stackOut_12_0;
                   stackIn_13_1 = stackOut_12_1;
                   break L7;
                 } else {
-                  stackOut_11_0 = (kc) (Object) stackIn_11_0;
+                  stackOut_11_0 = stackIn_11_0;
                   stackOut_11_1 = 1;
                   stackIn_13_0 = stackOut_11_0;
                   stackIn_13_1 = stackOut_11_1;
@@ -165,17 +165,17 @@ final class co {
               }
               L8: {
                 ((id) (Object) stackIn_13_0).field_P = stackIn_13_1 != 0;
-                stackOut_13_0 = (kc) var6;
+                stackOut_13_0 = var6;
                 stackIn_15_0 = stackOut_13_0;
                 stackIn_14_0 = stackOut_13_0;
                 if (!param3) {
-                  stackOut_15_0 = (kc) (Object) stackIn_15_0;
+                  stackOut_15_0 = stackIn_15_0;
                   stackOut_15_1 = 0;
                   stackIn_16_0 = stackOut_15_0;
                   stackIn_16_1 = stackOut_15_1;
                   break L8;
                 } else {
-                  stackOut_14_0 = (kc) (Object) stackIn_14_0;
+                  stackOut_14_0 = stackIn_14_0;
                   stackOut_14_1 = 1;
                   stackIn_16_0 = stackOut_14_0;
                   stackIn_16_1 = stackOut_14_1;
@@ -183,7 +183,7 @@ final class co {
                 }
               }
               ((id) (Object) stackIn_16_0).field_J = stackIn_16_1 != 0;
-              return (id) (Object) var6;
+              return (id) var6;
             }
           }
         } else {

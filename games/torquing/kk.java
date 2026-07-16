@@ -74,9 +74,11 @@ final class kk extends lf {
               if (var4 <= var5) {
                 return;
               } else {
+                int incrementValue$12 = param1;
                 param1++;
+                int incrementValue$13 = var5;
                 var5++;
-                param0[param1] = param0[param1] + on.field_c * ((kk) this).field_p[var5] / 160;
+                param0[incrementValue$12] = param0[incrementValue$12] + on.field_c * ((kk) this).field_p[incrementValue$13] / 160;
                 continue L2;
               }
             }
@@ -96,9 +98,11 @@ final class kk extends lf {
               if (var4 <= var5) {
                 return;
               } else {
+                int incrementValue$14 = param1;
                 param1++;
+                int incrementValue$15 = var5;
                 var5++;
-                param0[param1] = param0[param1] + on.field_c * ((kk) this).field_p[var5] / 160;
+                param0[incrementValue$14] = param0[incrementValue$14] + on.field_c * ((kk) this).field_p[incrementValue$15] / 160;
                 continue L4;
               }
             }
@@ -119,9 +123,11 @@ final class kk extends lf {
             if (var4 <= var5) {
               return;
             } else {
+              int incrementValue$16 = param1;
               param1++;
+              int incrementValue$17 = var5;
               var5++;
-              param0[param1] = param0[param1] + on.field_c * ((kk) this).field_p[var5] / 160;
+              param0[incrementValue$16] = param0[incrementValue$16] + on.field_c * ((kk) this).field_p[incrementValue$17] / 160;
               continue L6;
             }
           }

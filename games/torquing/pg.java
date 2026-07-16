@@ -180,12 +180,18 @@ final class pg {
                 }
               }
               try {
-                stackOut_39_0 = new java.net.URL(param2, var7.toString());
-                stackIn_40_0 = stackOut_39_0;
-              } catch (java.lang.Exception decompiledCaughtParameter) {
-                decompiledCaughtException = decompiledCaughtParameter;
-                return stackIn_40_0;
+                L11: {
+                  stackOut_39_0 = new java.net.URL(param2, var7.toString());
+                  stackIn_40_0 = stackOut_39_0;
+                  break L11;
+                }
+              } catch (java.lang.Exception decompiledCaughtParameter0) {
+                decompiledCaughtException = decompiledCaughtParameter0;
+                var8 = (Exception) (Object) decompiledCaughtException;
+                var8.printStackTrace();
+                return param2;
               }
+              return stackIn_40_0;
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -276,7 +282,7 @@ final class pg {
                       return -1;
                     }
                   } else {
-                    if (-51 == param0) {
+                    if (-51 == (param0 ^ -1)) {
                       return 5;
                     } else {
                       if ((nn.field_c.field_g ^ -1) <= -5) {
@@ -289,7 +295,7 @@ final class pg {
                 }
               } else {
                 if (2 > nn.field_c.field_g) {
-                  if (nn.field_c.field_g <= -5) {
+                  if ((nn.field_c.field_g ^ -1) <= -5) {
                     return 1;
                   } else {
                     return -1;
@@ -313,7 +319,9 @@ final class pg {
             gi.field_c = var2;
             if (param1 < -27) {
               if (2 <= nn.field_c.field_g) {
-                if (param0 != 51) {
+                if (param0 == 51) {
+                  return 2;
+                } else {
                   if (2 > nn.field_c.field_g) {
                     if ((nn.field_c.field_g ^ -1) <= -5) {
                       return 1;
@@ -321,61 +329,16 @@ final class pg {
                       return -1;
                     }
                   } else {
-                    if (-51 != param0) {
+                    if (-51 == (param0 ^ -1)) {
+                      return 5;
+                    } else {
                       if ((nn.field_c.field_g ^ -1) <= -5) {
                         return 1;
                       } else {
                         return -1;
                       }
-                    } else {
-                      return 5;
                     }
                   }
-                } else {
-                  return 2;
-                }
-              } else {
-                if (2 > nn.field_c.field_g) {
-                  if (nn.field_c.field_g <= -5) {
-                    return 1;
-                  } else {
-                    return -1;
-                  }
-                } else {
-                  if (-51 != (param0 ^ -1)) {
-                    if ((nn.field_c.field_g ^ -1) <= -5) {
-                      return 1;
-                    } else {
-                      return -1;
-                    }
-                  } else {
-                    return 5;
-                  }
-                }
-              }
-            } else {
-              field_a = null;
-              if (2 <= nn.field_c.field_g) {
-                if (param0 != 51) {
-                  if (2 > nn.field_c.field_g) {
-                    if ((nn.field_c.field_g ^ -1) <= -5) {
-                      return 1;
-                    } else {
-                      return -1;
-                    }
-                  } else {
-                    if (-51 != (param0 ^ -1)) {
-                      if ((nn.field_c.field_g ^ -1) <= -5) {
-                        return 1;
-                      } else {
-                        return -1;
-                      }
-                    } else {
-                      return 5;
-                    }
-                  }
-                } else {
-                  return 2;
                 }
               } else {
                 if (2 > nn.field_c.field_g) {
@@ -385,14 +348,57 @@ final class pg {
                     return -1;
                   }
                 } else {
-                  if (-51 != (param0 ^ -1)) {
+                  if (-51 == (param0 ^ -1)) {
+                    return 5;
+                  } else {
+                    if ((nn.field_c.field_g ^ -1) <= -5) {
+                      return 1;
+                    } else {
+                      return -1;
+                    }
+                  }
+                }
+              }
+            } else {
+              field_a = null;
+              if (2 <= nn.field_c.field_g) {
+                if (param0 == 51) {
+                  return 2;
+                } else {
+                  if (2 > nn.field_c.field_g) {
                     if ((nn.field_c.field_g ^ -1) <= -5) {
                       return 1;
                     } else {
                       return -1;
                     }
                   } else {
+                    if (-51 == (param0 ^ -1)) {
+                      return 5;
+                    } else {
+                      if ((nn.field_c.field_g ^ -1) <= -5) {
+                        return 1;
+                      } else {
+                        return -1;
+                      }
+                    }
+                  }
+                }
+              } else {
+                if (2 > nn.field_c.field_g) {
+                  if ((nn.field_c.field_g ^ -1) <= -5) {
+                    return 1;
+                  } else {
+                    return -1;
+                  }
+                } else {
+                  if (-51 == (param0 ^ -1)) {
                     return 5;
+                  } else {
+                    if ((nn.field_c.field_g ^ -1) <= -5) {
+                      return 1;
+                    } else {
+                      return -1;
+                    }
                   }
                 }
               }
@@ -413,14 +419,14 @@ final class pg {
                     return -1;
                   }
                 } else {
-                  if (-51 != (param0 ^ -1)) {
+                  if (-51 == (param0 ^ -1)) {
+                    return 5;
+                  } else {
                     if ((nn.field_c.field_g ^ -1) <= -5) {
                       return 1;
                     } else {
                       return -1;
                     }
-                  } else {
-                    return 5;
                   }
                 }
               } else {
@@ -434,14 +440,14 @@ final class pg {
                   return -1;
                 }
               } else {
-                if (-51 != (param0 ^ -1)) {
+                if (-51 == (param0 ^ -1)) {
+                  return 5;
+                } else {
                   if ((nn.field_c.field_g ^ -1) <= -5) {
                     return 1;
                   } else {
                     return -1;
                   }
-                } else {
-                  return 5;
                 }
               }
             }
@@ -464,14 +470,14 @@ final class pg {
                 return -1;
               }
             } else {
-              if (-51 != (param0 ^ -1)) {
+              if (-51 == (param0 ^ -1)) {
+                return 5;
+              } else {
                 if ((nn.field_c.field_g ^ -1) <= -5) {
                   return 1;
                 } else {
                   return -1;
                 }
-              } else {
-                return 5;
               }
             }
           }

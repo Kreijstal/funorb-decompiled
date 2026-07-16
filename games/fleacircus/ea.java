@@ -88,24 +88,37 @@ final class ea {
             }
             try {
               L1: {
-                var1_ref = Runtime.class.getMethod("maxMemory", new Class[0]);
-                if (var1_ref != null) {
-                  try {
-                    var2_ref = Runtime.getRuntime();
-                    var5 = null;
-                    var3 = (Long) var1_ref.invoke((Object) (Object) var2_ref, (Object[]) null);
-                    kf.field_k = 1 + (int)(var3.longValue() / 1048576L);
-                  } catch (java.lang.Throwable decompiledCaughtParameter) {
-                    decompiledCaughtException = decompiledCaughtParameter;
+                L2: {
+                  var1_ref = Runtime.class.getMethod("maxMemory", new Class[0]);
+                  if (var1_ref != null) {
+                    try {
+                      L3: {
+                        var2_ref = Runtime.getRuntime();
+                        var5 = null;
+                        var3 = (Long) var1_ref.invoke((Object) (Object) var2_ref, (Object[]) null);
+                        kf.field_k = 1 + (int)(var3.longValue() / 1048576L);
+                        break L3;
+                      }
+                    } catch (java.lang.Throwable decompiledCaughtParameter0) {
+                      decompiledCaughtException = decompiledCaughtParameter0;
+                      L4: {
+                        var2 = decompiledCaughtException;
+                        break L4;
+                      }
+                    }
+                    break L2;
+                  } else {
+                    break L2;
                   }
-                  break L1;
-                } else {
-                  break L1;
                 }
+                break L1;
               }
-            } catch (java.lang.Exception decompiledCaughtParameter) {
-              decompiledCaughtException = decompiledCaughtParameter;
-              var2 = decompiledCaughtException;
+            } catch (java.lang.Exception decompiledCaughtParameter1) {
+              decompiledCaughtException = decompiledCaughtParameter1;
+              L5: {
+                var1 = (Exception) (Object) decompiledCaughtException;
+                break L5;
+              }
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;

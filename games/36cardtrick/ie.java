@@ -11,7 +11,7 @@ abstract class ie extends he {
     int field_n;
 
     final static boolean b(byte param0) {
-        CharSequence var2 = null;
+        Object var2 = null;
         int stackIn_7_0 = 0;
         int stackIn_16_0 = 0;
         int stackOut_15_0 = 0;
@@ -40,7 +40,7 @@ abstract class ie extends he {
             return false;
           }
         } else {
-          var2 = (CharSequence) null;
+          var2 = null;
           int discarded$4 = ie.a(false, (CharSequence) null);
           if ((cd.field_e ^ -1) <= -11) {
             if (vg.field_d) {
@@ -77,24 +77,30 @@ abstract class ie extends he {
         Throwable decompiledCaughtException = null;
         try {
           L0: {
-            if (param0 == 10) {
-              break L0;
-            } else {
-              field_m = (vg) null;
-              break L0;
+            L1: {
+              if (param0 == 10) {
+                break L1;
+              } else {
+                field_m = null;
+                break L1;
+              }
             }
+            Thread.sleep(param1);
+            break L0;
           }
-          Thread.sleep(param1);
-        } catch (java.lang.Exception decompiledCaughtParameter) {
-          decompiledCaughtException = decompiledCaughtParameter;
+        } catch (java.lang.Exception decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            var3 = (InterruptedException) (Object) decompiledCaughtException;
+            break L2;
+          }
         }
-        var3 = (InterruptedException) (Object) decompiledCaughtException;
     }
 
     final static int a(boolean param0, CharSequence param1) {
-        CharSequence var3 = null;
+        Object var3 = null;
         if (param0) {
-          var3 = (CharSequence) null;
+          var3 = null;
           int discarded$2 = ie.a(false, (CharSequence) null);
           return bd.a(true, param1, (byte) 122, 10);
         } else {

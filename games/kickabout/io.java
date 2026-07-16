@@ -42,7 +42,7 @@ final class io {
               ((qt) (Object) cq.field_h).d((byte) 52);
               break L0;
             } else {
-              if (-1 == ((io) this).field_m) {
+              if (-1 == (((io) this).field_m ^ -1)) {
                 if (tu.field_E.d((byte) 91)) {
                   if (tu.field_E.field_J[0]) {
                     vr.b((byte) -124);
@@ -56,7 +56,7 @@ final class io {
                   break L0;
                 }
               } else {
-                if (-2 != ((io) this).field_m) {
+                if (-2 != (((io) this).field_m ^ -1)) {
                   if (-3 == (((io) this).field_m ^ -1)) {
                     if (null != um.field_e) {
                       jm.a(-1, param1, param0 + -1);
@@ -87,19 +87,19 @@ final class io {
                             if ((((io) this).field_m ^ -1) != -24) {
                               if (45 != ((io) this).field_m) {
                                 if (((io) this).field_m != 48) {
-                                  if (((io) this).field_m == -47) {
+                                  if ((((io) this).field_m ^ -1) == -47) {
                                     jm.a(24, param1, -2);
                                     break L0;
                                   } else {
-                                    if (-29 == ((io) this).field_m) {
+                                    if (-29 == (((io) this).field_m ^ -1)) {
                                       jm.a(14, param1, -2);
                                       break L0;
                                     } else {
-                                      if (((io) this).field_m == -26) {
+                                      if ((((io) this).field_m ^ -1) == -26) {
                                         jm.a(15, param1, -2);
                                         break L0;
                                       } else {
-                                        if (-27 == ((io) this).field_m) {
+                                        if (-27 == (((io) this).field_m ^ -1)) {
                                           jm.a(16, param1, -2);
                                           break L0;
                                         } else {
@@ -113,16 +113,16 @@ final class io {
                                                 break L0;
                                               } else {
                                                 if (((io) this).field_m != 22) {
-                                                  if (((io) this).field_m != -5) {
+                                                  if ((((io) this).field_m ^ -1) != -5) {
                                                     if (33 == ((io) this).field_m) {
                                                       jm.a(19, param1, -2);
                                                       break L0;
                                                     } else {
-                                                      if (-35 == ((io) this).field_m) {
+                                                      if (-35 == (((io) this).field_m ^ -1)) {
                                                         jm.a(20, param1, param0 ^ 1);
                                                         break L0;
                                                       } else {
-                                                        if (((io) this).field_m == -36) {
+                                                        if ((((io) this).field_m ^ -1) == -36) {
                                                           jm.a(22, param1, -2);
                                                           break L0;
                                                         } else {
@@ -130,18 +130,18 @@ final class io {
                                                             jm.a(21, param1, param0 + -1);
                                                             break L0;
                                                           } else {
-                                                            if (-25 != ((io) this).field_m) {
-                                                              if (-8 == ((io) this).field_m) {
+                                                            if (-25 != (((io) this).field_m ^ -1)) {
+                                                              if (-8 == (((io) this).field_m ^ -1)) {
                                                                 vj.a(param0 ^ -106, param1);
                                                                 break L0;
                                                               } else {
-                                                                if (-4 == ((io) this).field_m) {
+                                                                if (-4 == (((io) this).field_m ^ -1)) {
                                                                   jm.a(7, param1, param0 ^ 1);
                                                                   break L0;
                                                                 } else {
                                                                   if (-6 != (((io) this).field_m ^ -1)) {
-                                                                    if (((io) this).field_m != -9) {
-                                                                      if (-10 == ((io) this).field_m) {
+                                                                    if ((((io) this).field_m ^ -1) != -9) {
+                                                                      if (-10 == (((io) this).field_m ^ -1)) {
                                                                         um.field_e.f(-94);
                                                                         jm.a(-1, param1, param0 + -1);
                                                                         break L0;
@@ -156,11 +156,11 @@ final class io {
                                                                                 vi.c((byte) -59);
                                                                                 break L0;
                                                                               } else {
-                                                                                if (((io) this).field_m == -14) {
+                                                                                if ((((io) this).field_m ^ -1) == -14) {
                                                                                   wv.field_ib = 0;
                                                                                   break L0;
                                                                                 } else {
-                                                                                  if (-15 != ((io) this).field_m) {
+                                                                                  if (-15 != (((io) this).field_m ^ -1)) {
                                                                                     if (((io) this).field_m != 19) {
                                                                                       if (-33 != (((io) this).field_m ^ -1)) {
                                                                                         if (49 == ((io) this).field_m) {
@@ -185,7 +185,7 @@ final class io {
                                                                                         } else {
                                                                                           if (30 == ((io) this).field_m) {
                                                                                             L2: {
-                                                                                              if (-2 != tb.field_v) {
+                                                                                              if (-2 != (tb.field_v ^ -1)) {
                                                                                                 stackOut_75_0 = 1;
                                                                                                 stackIn_76_0 = stackOut_75_0;
                                                                                                 break L2;
@@ -198,7 +198,7 @@ final class io {
                                                                                             tb.field_v = stackIn_76_0;
                                                                                             break L0;
                                                                                           } else {
-                                                                                            if (-16 == ((io) this).field_m) {
+                                                                                            if (-16 == (((io) this).field_m ^ -1)) {
                                                                                               js.a(20338, so.a(101));
                                                                                               break L0;
                                                                                             } else {

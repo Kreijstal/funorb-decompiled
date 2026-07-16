@@ -430,6 +430,7 @@ class wk implements si {
                                                                                     var5 = 0;
                                                                                     L19: while (true) {
                                                                                       if (var5 >= ((wk) this).field_g) {
+                                                                                        return;
                                                                                       } else {
                                                                                         if (((wk) this).field_b[var5] != null) {
                                                                                           ((wk) this).field_b[var5].field_j = var7.i((byte) -101);

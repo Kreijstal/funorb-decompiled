@@ -154,121 +154,50 @@ abstract class w {
             int var8 = 0;
             String var9 = null;
             String stackIn_6_0 = null;
+            Throwable decompiledCaughtException = null;
             String stackOut_5_0 = null;
-            int statePc = 0;
-            Throwable caughtException = null;
-            stateLoop: while (true) {
-                switch (statePc) {
-                    case 0: {
-                        var8 = fleas.field_A ? 1 : 0;
-                        statePc = 1;
-                        continue stateLoop;
-                    }
-                    case 1: {
-                        try {
-                            var9 = param1.getParameter("cookieprefix");
-                            var3 = var9 + "settings";
-                            var4 = (String) eb.a("getcookies", param1, param0 + -250);
-                            var5 = m.a(';', 122, var4);
-                            var6 = param0;
-                            statePc = 2;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_1) {
-                            caughtException = stateCaught_1;
-                            statePc = 9;
-                            continue stateLoop;
-                        }
-                    }
-                    case 2: {
-                        try {
-                            if (var5.length <= var6) {
-                                statePc = 10;
-                            } else {
-                                statePc = 3;
-                            }
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_2) {
-                            caughtException = stateCaught_2;
-                            statePc = 9;
-                            continue stateLoop;
-                        }
-                    }
-                    case 3: {
-                        try {
-                            var7 = var5[var6].indexOf('=');
-                            if (var7 < 0) {
-                                statePc = 7;
-                            } else {
-                                statePc = 4;
-                            }
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_3) {
-                            caughtException = stateCaught_3;
-                            statePc = 9;
-                            continue stateLoop;
-                        }
-                    }
-                    case 4: {
-                        try {
-                            if (!var5[var6].substring(0, var7).trim().equals((Object) (Object) var3)) {
-                                statePc = 7;
-                            } else {
-                                statePc = 5;
-                            }
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_4) {
-                            caughtException = stateCaught_4;
-                            statePc = 9;
-                            continue stateLoop;
-                        }
-                    }
-                    case 5: {
-                        try {
-                            stackOut_5_0 = var5[var6].substring(1 + var7).trim();
-                            stackIn_6_0 = stackOut_5_0;
-                            statePc = 6;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_5) {
-                            caughtException = stateCaught_5;
-                            statePc = 9;
-                            continue stateLoop;
-                        }
-                    }
-                    case 6: {
-                        return stackIn_6_0;
-                    }
-                    case 7: {
-                        try {
-                            var6++;
-                            statePc = 2;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_7) {
-                            caughtException = stateCaught_7;
-                            statePc = 9;
-                            continue stateLoop;
-                        }
-                    }
-                    case 9: {
-                        var2 = caughtException;
-                        statePc = 10;
-                        continue stateLoop;
-                    }
-                    case 10: {
-                        if (lj.field_g != null) {
-                            statePc = 12;
+            var8 = fleas.field_A ? 1 : 0;
+            try {
+              L0: {
+                var9 = param1.getParameter("cookieprefix");
+                var3 = var9 + "settings";
+                var4 = (String) eb.a("getcookies", param1, param0 + -250);
+                var5 = m.a(';', 122, var4);
+                var6 = param0;
+                L1: while (true) {
+                  if (var5.length <= var6) {
+                    break L0;
+                  } else {
+                    L2: {
+                      var7 = var5[var6].indexOf('=');
+                      if (var7 < 0) {
+                        break L2;
+                      } else {
+                        if (!var5[var6].substring(0, var7).trim().equals((Object) (Object) var3)) {
+                          break L2;
                         } else {
-                            statePc = 11;
+                          stackOut_5_0 = var5[var6].substring(1 + var7).trim();
+                          stackIn_6_0 = stackOut_5_0;
+                          return stackIn_6_0;
                         }
-                        continue stateLoop;
+                      }
                     }
-                    case 11: {
-                        return param1.getParameter("settings");
-                    }
-                    case 12: {
-                        return lj.field_g;
-                    }
-                    default: throw new IllegalStateException("invalid CFG state " + statePc);
+                    var6++;
+                    continue L1;
+                  }
                 }
+              }
+            } catch (java.lang.Throwable decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              L3: {
+                var2 = decompiledCaughtException;
+                break L3;
+              }
+            }
+            if (lj.field_g != null) {
+              return lj.field_g;
+            } else {
+              return param1.getParameter("settings");
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;

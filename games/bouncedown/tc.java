@@ -13,12 +13,18 @@ class tc extends jd {
             java.net.URL var2 = null;
             Throwable decompiledCaughtException = null;
             try {
-              var2 = new java.net.URL(param0.getCodeBase(), "quit.ws");
-              param0.getAppletContext().showDocument(ag.a(param0, var2, false), "_top");
+              L0: {
+                var2 = new java.net.URL(param0.getCodeBase(), "quit.ws");
+                param0.getAppletContext().showDocument(ag.a(param0, var2, false), "_top");
+                break L0;
+              }
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
-              exception = (Exception) (Object) decompiledCaughtException;
-              exception.printStackTrace();
+              L1: {
+                exception = (Exception) (Object) decompiledCaughtException;
+                exception.printStackTrace();
+                break L1;
+              }
             }
             if (param1 != 6091) {
               tc.a(true);

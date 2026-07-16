@@ -16,7 +16,6 @@ final class bn {
         int var5 = 0;
         long var6 = 0L;
         ko var8 = null;
-        ko var8_ref = null;
         ha var9 = null;
         ko var10 = null;
         ha var11 = null;
@@ -39,8 +38,8 @@ final class bn {
                 } else {
                   L0: {
                     var24 = var23.b();
-                    var8_ref = var24;
-                    ((bn) this).field_a.a(-22072, var6, (jb) (Object) var8_ref);
+                    var8 = var24;
+                    ((bn) this).field_a.a(-22072, var6, (jb) (Object) var8);
                     if (param2 != null) {
                       param2[0] = param2[0] - var24.field_k.length;
                       break L0;
@@ -48,7 +47,7 @@ final class bn {
                       break L0;
                     }
                   }
-                  return var8_ref;
+                  return var8;
                 }
               } else {
                 return null;
@@ -60,8 +59,8 @@ final class bn {
               } else {
                 L1: {
                   var24 = var23.b();
-                  var8_ref = var24;
-                  ((bn) this).field_a.a(-22072, var6, (jb) (Object) var8_ref);
+                  var8 = var24;
+                  ((bn) this).field_a.a(-22072, var6, (jb) (Object) var8);
                   if (param2 != null) {
                     param2[0] = param2[0] - var24.field_k.length;
                     break L1;
@@ -69,7 +68,7 @@ final class bn {
                     break L1;
                   }
                 }
-                return var8_ref;
+                return var8;
               }
             }
           } else {
@@ -89,8 +88,8 @@ final class bn {
                 } else {
                   L2: {
                     var21 = var20.b();
-                    var8_ref = var21;
-                    ((bn) this).field_a.a(-22072, var6, (jb) (Object) var8_ref);
+                    var8 = var21;
+                    ((bn) this).field_a.a(-22072, var6, (jb) (Object) var8);
                     if (param2 != null) {
                       param2[0] = param2[0] - var21.field_k.length;
                       break L2;
@@ -98,7 +97,7 @@ final class bn {
                       break L2;
                     }
                   }
-                  return var8_ref;
+                  return var8;
                 }
               } else {
                 return null;
@@ -112,8 +111,8 @@ final class bn {
                 L3: {
                   var12 = var11.b();
                   var10 = var12;
-                  var8_ref = var12;
-                  ((bn) this).field_a.a(-22072, var6, (jb) (Object) var8_ref);
+                  var8 = var12;
+                  ((bn) this).field_a.a(-22072, var6, (jb) (Object) var8);
                   if (param2 != null) {
                     param2[0] = param2[0] - var12.field_k.length;
                     break L3;
@@ -121,7 +120,7 @@ final class bn {
                     break L3;
                   }
                 }
-                return var8_ref;
+                return var8;
               }
             }
           } else {
@@ -165,9 +164,7 @@ final class bn {
         int var5 = 0;
         long var6 = 0L;
         ko var8 = null;
-        ko var8_ref = null;
         bl var9 = null;
-        bl var9_ref = null;
         Object var10 = null;
         if (param1 < -20) {
           var5 = (param0 >>> 1867718860 | (536875007 & param0) << -1601173980) ^ param2;
@@ -180,9 +177,9 @@ final class bn {
                 L0: {
                   var9 = (bl) (Object) ((bn) this).field_b.a(var6, 0);
                   if (var9 == null) {
-                    var9_ref = bl.a(((bn) this).field_e, param0, param2);
-                    if (var9_ref != null) {
-                      ((bn) this).field_b.a(-22072, var6, (jb) (Object) var9_ref);
+                    var9 = bl.a(((bn) this).field_e, param0, param2);
+                    if (var9 != null) {
+                      ((bn) this).field_b.a(-22072, var6, (jb) (Object) var9);
                       break L0;
                     } else {
                       return null;
@@ -191,13 +188,13 @@ final class bn {
                     break L0;
                   }
                 }
-                var8_ref = var9_ref.a(param3);
-                if (var8_ref == null) {
+                var8 = var9.a(param3);
+                if (var8 == null) {
                   return null;
                 } else {
-                  var9_ref.a(false);
-                  ((bn) this).field_a.a(-22072, var6, (jb) (Object) var8_ref);
-                  return var8_ref;
+                  var9.a(false);
+                  ((bn) this).field_a.a(-22072, var6, (jb) (Object) var8);
+                  return var8;
                 }
               } else {
                 return null;
@@ -206,9 +203,9 @@ final class bn {
               L1: {
                 var9 = (bl) (Object) ((bn) this).field_b.a(var6, 0);
                 if (var9 == null) {
-                  var9_ref = bl.a(((bn) this).field_e, param0, param2);
-                  if (var9_ref != null) {
-                    ((bn) this).field_b.a(-22072, var6, (jb) (Object) var9_ref);
+                  var9 = bl.a(((bn) this).field_e, param0, param2);
+                  if (var9 != null) {
+                    ((bn) this).field_b.a(-22072, var6, (jb) (Object) var9);
                     break L1;
                   } else {
                     return null;
@@ -217,13 +214,13 @@ final class bn {
                   break L1;
                 }
               }
-              var8_ref = var9_ref.a(param3);
-              if (var8_ref == null) {
+              var8 = var9.a(param3);
+              if (var8 == null) {
                 return null;
               } else {
-                var9_ref.a(false);
-                ((bn) this).field_a.a(-22072, var6, (jb) (Object) var8_ref);
-                return var8_ref;
+                var9.a(false);
+                ((bn) this).field_a.a(-22072, var6, (jb) (Object) var8);
+                return var8;
               }
             }
           } else {
@@ -242,9 +239,9 @@ final class bn {
                 L2: {
                   var9 = (bl) (Object) ((bn) this).field_b.a(var6, 0);
                   if (var9 == null) {
-                    var9_ref = bl.a(((bn) this).field_e, param0, param2);
-                    if (var9_ref != null) {
-                      ((bn) this).field_b.a(-22072, var6, (jb) (Object) var9_ref);
+                    var9 = bl.a(((bn) this).field_e, param0, param2);
+                    if (var9 != null) {
+                      ((bn) this).field_b.a(-22072, var6, (jb) (Object) var9);
                       break L2;
                     } else {
                       return null;
@@ -253,13 +250,13 @@ final class bn {
                     break L2;
                   }
                 }
-                var8_ref = var9_ref.a(param3);
-                if (var8_ref == null) {
+                var8 = var9.a(param3);
+                if (var8 == null) {
                   return null;
                 } else {
-                  var9_ref.a(false);
-                  ((bn) this).field_a.a(-22072, var6, (jb) (Object) var8_ref);
-                  return var8_ref;
+                  var9.a(false);
+                  ((bn) this).field_a.a(-22072, var6, (jb) (Object) var8);
+                  return var8;
                 }
               } else {
                 return null;
@@ -268,9 +265,9 @@ final class bn {
               L3: {
                 var9 = (bl) (Object) ((bn) this).field_b.a(var6, 0);
                 if (var9 == null) {
-                  var9_ref = bl.a(((bn) this).field_e, param0, param2);
-                  if (var9_ref != null) {
-                    ((bn) this).field_b.a(-22072, var6, (jb) (Object) var9_ref);
+                  var9 = bl.a(((bn) this).field_e, param0, param2);
+                  if (var9 != null) {
+                    ((bn) this).field_b.a(-22072, var6, (jb) (Object) var9);
                     break L3;
                   } else {
                     return null;
@@ -279,13 +276,13 @@ final class bn {
                   break L3;
                 }
               }
-              var8_ref = var9_ref.a(param3);
-              if (var8_ref == null) {
+              var8 = var9.a(param3);
+              if (var8 == null) {
                 return null;
               } else {
-                var9_ref.a(false);
-                ((bn) this).field_a.a(-22072, var6, (jb) (Object) var8_ref);
-                return var8_ref;
+                var9.a(false);
+                ((bn) this).field_a.a(-22072, var6, (jb) (Object) var8);
+                return var8;
               }
             }
           } else {

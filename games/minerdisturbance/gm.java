@@ -19,7 +19,9 @@ final class gm {
         if (param0 == 100) {
           var1 = 0;
           L0: while (true) {
-            if (-4 < (var1 ^ -1)) {
+            if (-4 >= (var1 ^ -1)) {
+              return;
+            } else {
               L1: {
                 if (null == pa.field_a[var1]) {
                   break L1;
@@ -36,15 +38,13 @@ final class gm {
               pa.field_a[var1] = rc.a(re.field_a[ll.a((byte) -73, 5) + 25], 100, oc.field_f);
               sa discarded$2 = mg.a(1963987425, pa.field_a[var1]);
               return;
-            } else {
-              return;
             }
           }
         } else {
           gm.b(26);
           var1 = 0;
           L2: while (true) {
-            if (-4 < var1) {
+            if (-4 < (var1 ^ -1)) {
               L3: {
                 if (null == pa.field_a[var1]) {
                   break L3;

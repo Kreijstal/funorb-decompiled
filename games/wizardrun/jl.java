@@ -22,136 +22,83 @@ final class jl extends ll {
             int var3 = 0;
             Object var4 = null;
             Throwable decompiledCaughtException = null;
-            int statePc = 0;
-            Throwable caughtException = null;
-            stateLoop: while (true) {
-                switch (statePc) {
-                    case 0: {
-                        var3 = wizardrun.field_H;
-                        if (param0 == 1) {
-                            statePc = 2;
-                        } else {
-                            statePc = 1;
-                        }
-                        continue stateLoop;
-                    }
-                    case 1: {
-                        var4 = null;
-                        java.net.URL discarded$3 = jl.a(74, (java.net.URL) null, (java.applet.Applet) null);
-                        statePc = 2;
-                        continue stateLoop;
-                    }
-                    case 2: {
-                        if (null != ii.field_f) {
-                            statePc = 4;
-                        } else {
-                            statePc = 5;
-                        }
-                        continue stateLoop;
-                    }
-                    case 4: {
-                        ii.field_f.a((byte) -96);
-                        statePc = 5;
-                        continue stateLoop;
-                    }
-                    case 5: {
-                        if (null == ig.field_q) {
-                            statePc = 7;
-                        } else {
-                            statePc = 6;
-                        }
-                        continue stateLoop;
-                    }
-                    case 6: {
-                        ig.field_q.a((byte) 79);
-                        statePc = 7;
-                        continue stateLoop;
-                    }
-                    case 7: {
-                        if (null != ld.field_e) {
-                            statePc = 9;
-                        } else {
-                            statePc = 12;
-                        }
-                        continue stateLoop;
-                    }
-                    case 9: {
-                        try {
-                            ld.field_e.a(-1);
-                            statePc = 12;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_9) {
-                            caughtException = stateCaught_9;
-                            statePc = 11;
-                            continue stateLoop;
-                        }
-                    }
-                    case 11: {
-                        iOException = (IOException) (Object) caughtException;
-                        statePc = 12;
-                        continue stateLoop;
-                    }
-                    case 12: {
-                        if (sl.field_o != null) {
-                            statePc = 14;
-                        } else {
-                            statePc = 22;
-                        }
-                        continue stateLoop;
-                    }
-                    case 14: {
-                        var1 = 0;
-                        statePc = 15;
-                        continue stateLoop;
-                    }
-                    case 15: {
-                        if (var1 >= sl.field_o.length) {
-                            statePc = 22;
-                        } else {
-                            statePc = 16;
-                        }
-                        continue stateLoop;
-                    }
-                    case 16: {
-                        if (null != sl.field_o[var1]) {
-                            statePc = 19;
-                        } else {
-                            statePc = 17;
-                        }
-                        continue stateLoop;
-                    }
-                    case 17: {
-                        var1++;
-                        statePc = 15;
-                        continue stateLoop;
-                    }
-                    case 19: {
-                        try {
-                            sl.field_o[var1].a(-1);
-                            statePc = 20;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_19) {
-                            caughtException = stateCaught_19;
-                            statePc = 21;
-                            continue stateLoop;
-                        }
-                    }
-                    case 20: {
-                        var1++;
-                        statePc = 15;
-                        continue stateLoop;
-                    }
-                    case 21: {
-                        var2 = (IOException) (Object) caughtException;
-                        var1++;
-                        statePc = 15;
-                        continue stateLoop;
-                    }
-                    case 22: {
-                        return;
-                    }
-                    default: throw new IllegalStateException("invalid CFG state " + statePc);
+            L0: {
+              var3 = wizardrun.field_H;
+              if (param0 == 1) {
+                break L0;
+              } else {
+                var4 = null;
+                java.net.URL discarded$2 = jl.a(74, (java.net.URL) null, (java.applet.Applet) null);
+                break L0;
+              }
+            }
+            L1: {
+              if (null != ii.field_f) {
+                ii.field_f.a((byte) -96);
+                break L1;
+              } else {
+                break L1;
+              }
+            }
+            L2: {
+              if (null == ig.field_q) {
+                break L2;
+              } else {
+                ig.field_q.a((byte) 79);
+                break L2;
+              }
+            }
+            L3: {
+              if (null != ld.field_e) {
+                try {
+                  L4: {
+                    ld.field_e.a(-1);
+                    break L4;
+                  }
+                } catch (java.io.IOException decompiledCaughtParameter0) {
+                  decompiledCaughtException = decompiledCaughtParameter0;
+                  L5: {
+                    iOException = (IOException) (Object) decompiledCaughtException;
+                    break L5;
+                  }
                 }
+                break L3;
+              } else {
+                break L3;
+              }
+            }
+            L6: {
+              if (sl.field_o != null) {
+                var1 = 0;
+                L7: while (true) {
+                  if (var1 >= sl.field_o.length) {
+                    break L6;
+                  } else {
+                    if (null != sl.field_o[var1]) {
+                      try {
+                        L8: {
+                          sl.field_o[var1].a(-1);
+                          var1++;
+                          break L8;
+                        }
+                      } catch (java.io.IOException decompiledCaughtParameter1) {
+                        decompiledCaughtException = decompiledCaughtParameter1;
+                        L9: {
+                          var2 = (IOException) (Object) decompiledCaughtException;
+                          var1++;
+                          break L9;
+                        }
+                      }
+                      continue L7;
+                    } else {
+                      var1++;
+                      continue L7;
+                    }
+                  }
+                }
+              } else {
+                break L6;
+              }
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -161,24 +108,24 @@ final class jl extends ll {
     }
 
     final static java.net.URL a(int param0, java.net.URL param1, java.applet.Applet param2) {
-        String var3 = null;
-        String var4 = null;
+        Object var3 = null;
+        Object var4 = null;
         if (null != pa.field_f) {
             if (!(pa.field_f.equals((Object) (Object) param2.getParameter("settings")))) {
-                var3 = pa.field_f;
+                var3 = (Object) (Object) pa.field_f;
                 var4 = var3;
                 var4 = var3;
             }
         }
         if (null != nk.field_M) {
             if (!(nk.field_M.equals((Object) (Object) param2.getParameter("session")))) {
-                var4 = nk.field_M;
+                var4 = (Object) (Object) nk.field_M;
             }
         }
         if (param0 > -60) {
             jl.d(-41);
         }
-        return da.a(121, -1, var4, param1, var3);
+        return da.a(121, -1, (String) var4, param1, (String) var3);
     }
 
     final static void a(int param0, int param1, int param2, qj param3, qj param4, int param5) {

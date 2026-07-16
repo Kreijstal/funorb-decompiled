@@ -68,41 +68,31 @@ final class ma extends jc {
     }
 
     final StringBuilder a(byte param0, Hashtable param1, int param2, StringBuilder param3) {
-        if (((ma) this).a(param3, true, param2, param1)) {
-          L0: {
-            ((ma) this).a(param1, param3, 34, param2);
-            ((ma) this).a(param1, param2, param3, -125);
-            StringBuilder discarded$26 = param3.append(" revert=").append(((ma) this).field_L);
-            if (((ma) this).field_J == -2147483648) {
-              break L0;
-            } else {
-              if (-2147483648 != ((ma) this).field_P) {
-                StringBuilder discarded$27 = param3.append(" to ").append(((ma) this).field_J).append(44).append(((ma) this).field_P);
-                break L0;
-              } else {
-                if (param0 == -70) {
-                  return param3;
-                } else {
-                  ((ma) this).field_M = false;
-                  return param3;
-                }
-              }
+        if (!((ma) this).a(param3, true, param2, param1)) {
+            if (param0 == -70) {
+                return param3;
             }
-          }
-          if (param0 != -70) {
             ((ma) this).field_M = false;
             return param3;
-          } else {
-            return param3;
-          }
-        } else {
-          if (param0 == -70) {
-            return param3;
-          } else {
-            ((ma) this).field_M = false;
-            return param3;
-          }
         }
+        ((ma) this).a(param1, param3, 34, param2);
+        ((ma) this).a(param1, param2, param3, -125);
+        StringBuilder discarded$22 = param3.append(" revert=").append(((ma) this).field_L);
+        if ((((ma) this).field_J ^ -1) != -2147483648) {
+            if (-2147483648 == (((ma) this).field_P ^ -1)) {
+                if (param0 == -70) {
+                    return param3;
+                }
+                ((ma) this).field_M = false;
+                return param3;
+            }
+            StringBuilder discarded$23 = param3.append(" to ").append(((ma) this).field_J).append(44).append(((ma) this).field_P);
+        }
+        if (param0 != -70) {
+            ((ma) this).field_M = false;
+            return param3;
+        }
+        return param3;
     }
 
     final static int o(int param0) {

@@ -16,7 +16,7 @@ abstract class hb extends ka {
     private int field_ab;
 
     final static void a(boolean param0, int param1, int param2, int param3, int[] param4, int param5, int param6) {
-        if (param2 != 0) {
+        if ((param2 ^ -1) != -1) {
           if ((param2 ^ -1) == -5) {
             oc.field_H[param2] = (de) (Object) new dp(param2, param6, param3, param1, param5, param4);
             if (param0) {
@@ -26,7 +26,7 @@ abstract class hb extends ka {
               return;
             }
           } else {
-            if (param2 == -3) {
+            if ((param2 ^ -1) == -3) {
               oc.field_H[param2] = (de) (Object) new dp(param2, param6, param3, param1, param5, param4);
               if (param0) {
                 return;
@@ -35,7 +35,7 @@ abstract class hb extends ka {
                 return;
               }
             } else {
-              if (-2 == param2) {
+              if (-2 == (param2 ^ -1)) {
                 oc.field_H[param2] = (de) (Object) new dp(param2, param6, param3, param1, param5, param4);
                 if (param0) {
                   return;
@@ -102,19 +102,19 @@ abstract class hb extends ka {
                                   }
                                 } else {
                                   oc.field_H[param2] = (de) (Object) new hq(param2, param6, param3, param1, param5, param4);
-                                  if (!param0) {
-                                    String discarded$24 = hb.e((byte) 29);
+                                  if (param0) {
                                     return;
                                   } else {
+                                    String discarded$24 = hb.e((byte) 29);
                                     return;
                                   }
                                 }
                               } else {
                                 oc.field_H[param2] = (de) (Object) new ol(param2, param6, param3, param1, param5, param4);
-                                if (!param0) {
-                                  String discarded$25 = hb.e((byte) 29);
+                                if (param0) {
                                   return;
                                 } else {
+                                  String discarded$25 = hb.e((byte) 29);
                                   return;
                                 }
                               }
@@ -122,46 +122,46 @@ abstract class hb extends ka {
                           }
                         } else {
                           oc.field_H[param2] = (de) (Object) new rb(param2, param6, param3, param1, param5, param4);
-                          if (param0) {
+                          if (!param0) {
+                            String discarded$26 = hb.e((byte) 29);
                             return;
                           } else {
-                            String discarded$26 = hb.e((byte) 29);
                             return;
                           }
                         }
                       } else {
                         oc.field_H[param2] = (de) (Object) new rb(param2, param6, param3, param1, param5, param4);
-                        if (param0) {
+                        if (!param0) {
+                          String discarded$27 = hb.e((byte) 29);
                           return;
                         } else {
-                          String discarded$27 = hb.e((byte) 29);
                           return;
                         }
                       }
                     } else {
                       oc.field_H[param2] = (de) (Object) new fk(param2, param6, param3, param1, param5, param4);
-                      if (!param0) {
-                        String discarded$28 = hb.e((byte) 29);
+                      if (param0) {
                         return;
                       } else {
+                        String discarded$28 = hb.e((byte) 29);
                         return;
                       }
                     }
                   } else {
                     oc.field_H[param2] = (de) (Object) new wh(param2, param6, param3, param1, param5, param4);
-                    if (!param0) {
-                      String discarded$29 = hb.e((byte) 29);
+                    if (param0) {
                       return;
                     } else {
+                      String discarded$29 = hb.e((byte) 29);
                       return;
                     }
                   }
                 } else {
                   oc.field_H[param2] = (de) (Object) new fq(param2, param6, param3, param1, param5, param4);
-                  if (!param0) {
-                    String discarded$30 = hb.e((byte) 29);
+                  if (param0) {
                     return;
                   } else {
+                    String discarded$30 = hb.e((byte) 29);
                     return;
                   }
                 }
@@ -170,10 +170,10 @@ abstract class hb extends ka {
           }
         } else {
           oc.field_H[param2] = (de) (Object) new to(param2, param6, param3, param1, param5, param4);
-          if (!param0) {
-            String discarded$31 = hb.e((byte) 29);
+          if (param0) {
             return;
           } else {
+            String discarded$31 = hb.e((byte) 29);
             return;
           }
         }
@@ -236,11 +236,12 @@ abstract class hb extends ka {
         int var3 = 0;
         var3 = Pixelate.field_H ? 1 : 0;
         if (param0) {
-          String discarded$1 = hb.e((byte) 58);
+          String discarded$5 = hb.e((byte) 58);
           if (((hb) this).field_lb != null) {
             if (fh.field_I == ((hb) this).field_lb) {
+              int fieldTemp$6 = ((hb) this).field_cb + 1;
               ((hb) this).field_cb = ((hb) this).field_cb + 1;
-              if (((hb) this).field_cb + 1 == ((hb) this).field_ab) {
+              if (fieldTemp$6 == ((hb) this).field_ab) {
                 ((hb) this).field_lb = co.field_h;
                 ((hb) this).a(((hb) this).field_db.field_C + ((hb) this).field_fb + 12, 12 - -((hb) this).field_db.field_E, ((hb) this).field_gb, 57);
                 ((hb) this).field_cb = 0;
@@ -252,8 +253,9 @@ abstract class hb extends ka {
               }
             } else {
               if (((hb) this).field_lb == rf.field_i) {
+                int fieldTemp$7 = ((hb) this).field_cb + 1;
                 ((hb) this).field_cb = ((hb) this).field_cb + 1;
-                if (((hb) this).field_ib != ((hb) this).field_cb + 1) {
+                if (((hb) this).field_ib != fieldTemp$7) {
                   ((hb) this).field_bb.field_O = (((hb) this).field_cb << -231020888) / ((hb) this).field_ib;
                   return super.c(false);
                 } else {
@@ -271,8 +273,9 @@ abstract class hb extends ka {
         } else {
           if (((hb) this).field_lb != null) {
             if (fh.field_I == ((hb) this).field_lb) {
+              int fieldTemp$8 = ((hb) this).field_cb + 1;
               ((hb) this).field_cb = ((hb) this).field_cb + 1;
-              if (((hb) this).field_cb + 1 == ((hb) this).field_ab) {
+              if (fieldTemp$8 == ((hb) this).field_ab) {
                 ((hb) this).field_lb = co.field_h;
                 ((hb) this).a(((hb) this).field_db.field_C + ((hb) this).field_fb + 12, 12 - -((hb) this).field_db.field_E, ((hb) this).field_gb, 57);
                 ((hb) this).field_cb = 0;
@@ -284,8 +287,9 @@ abstract class hb extends ka {
               }
             } else {
               if (((hb) this).field_lb == rf.field_i) {
+                int fieldTemp$9 = ((hb) this).field_cb + 1;
                 ((hb) this).field_cb = ((hb) this).field_cb + 1;
-                if (((hb) this).field_ib != ((hb) this).field_cb + 1) {
+                if (((hb) this).field_ib != fieldTemp$9) {
                   ((hb) this).field_bb.field_O = (((hb) this).field_cb << -231020888) / ((hb) this).field_ib;
                   return super.c(false);
                 } else {

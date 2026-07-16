@@ -55,14 +55,16 @@ final class sc {
         if (param1 < 120) {
           L0: {
             field_e = -99;
-            var6[6] = rd.a(param3, param2, 14727);
-            var5[3] = rd.a(param3, param2, 14727);
-            var5[2] = rd.a(param3, param2, 14727);
-            var5[1] = rd.a(param3, param2, 14727);
-            var5[0] = rd.a(param3, param2, 14727);
-            var6[8] = rd.a(param3, param0, 14727);
-            var5[7] = rd.a(param3, param0, 14727);
-            var5[5] = rd.a(param3, param0, 14727);
+            km dupTemp$4 = rd.a(param3, param2, 14727);
+            var6[6] = dupTemp$4;
+            var5[3] = dupTemp$4;
+            var5[2] = dupTemp$4;
+            var5[1] = dupTemp$4;
+            var5[0] = dupTemp$4;
+            km dupTemp$5 = rd.a(param3, param0, 14727);
+            var6[8] = dupTemp$5;
+            var5[7] = dupTemp$5;
+            var5[5] = dupTemp$5;
             if (0 != param4) {
               var6[4] = rd.a(64, param4, 14727);
               break L0;
@@ -73,14 +75,16 @@ final class sc {
           return var5;
         } else {
           L1: {
-            var6[6] = rd.a(param3, param2, 14727);
-            var5[3] = rd.a(param3, param2, 14727);
-            var5[2] = rd.a(param3, param2, 14727);
-            var5[1] = rd.a(param3, param2, 14727);
-            var5[0] = rd.a(param3, param2, 14727);
-            var6[8] = rd.a(param3, param0, 14727);
-            var5[7] = rd.a(param3, param0, 14727);
-            var5[5] = rd.a(param3, param0, 14727);
+            km dupTemp$6 = rd.a(param3, param2, 14727);
+            var6[6] = dupTemp$6;
+            var5[3] = dupTemp$6;
+            var5[2] = dupTemp$6;
+            var5[1] = dupTemp$6;
+            var5[0] = dupTemp$6;
+            km dupTemp$7 = rd.a(param3, param0, 14727);
+            var6[8] = dupTemp$7;
+            var5[7] = dupTemp$7;
+            var5[5] = dupTemp$7;
             if (0 != param4) {
               var6[4] = rd.a(64, param4, 14727);
               break L1;

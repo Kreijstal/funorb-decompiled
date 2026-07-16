@@ -93,6 +93,7 @@ final class cg {
           if (var2 >= 10) {
             ((cg) this).field_b = param0.i(7088);
             ((cg) this).field_c = param0.i(7088);
+            return;
           } else {
             var3 = param0.i((byte) -101);
             if (var3 != 0) {

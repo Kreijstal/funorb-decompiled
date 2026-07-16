@@ -56,9 +56,7 @@ final class bd extends am {
         var13 = var14;
         var3 = var13;
         if (param0 > 86) {
-          if (!((bd) this).field_l.field_b) {
-            return var3;
-          } else {
+          if (((bd) this).field_l.field_b) {
             var4 = 0;
             L0: while (true) {
               if (ci.field_c <= var4) {
@@ -75,16 +73,16 @@ final class bd extends am {
                     if (((bd) this).field_v > var10) {
                       var7 = var7 - var8;
                       L3: while (true) {
-                        if (-1 >= var7) {
+                        if (-1 >= (var7 ^ -1)) {
                           L4: while (true) {
                             if (3 >= var7) {
-                              if (-2 != var7) {
+                              if (-2 != (var7 ^ -1)) {
                                 var16[var4] = 0;
                                 var4++;
-                                var4++;
-                                continue L0;
+                                break L1;
                               } else {
-                                if (((bd) this).field_v > var9) {
+                                if ((((bd) this).field_v ^ -1) < (var9 ^ -1)) {
+                                  var16[var4] = 0;
                                   break L1;
                                 } else {
                                   break L2;
@@ -112,6 +110,7 @@ final class bd extends am {
                           L7: while (true) {
                             if ((var7 ^ -1) >= -4) {
                               if (var7 > 0) {
+                                var16[var4] = 0;
                                 break L1;
                               } else {
                                 break L5;
@@ -131,14 +130,14 @@ final class bd extends am {
                     }
                   }
                   var16[var4] = 4096;
-                  var4++;
-                  continue L0;
+                  break L1;
                 }
-                var16[var4] = 0;
                 var4++;
                 continue L0;
               }
             }
+          } else {
+            return var3;
           }
         } else {
           L8: {
@@ -156,68 +155,65 @@ final class bd extends am {
                 if (((bd) this).field_v > var10) {
                   var7 = var7 - var8;
                   L9: while (true) {
-                    if (-1 >= var7) {
+                    if (-1 >= (var7 ^ -1)) {
                       L10: while (true) {
                         if (3 >= var7) {
                           L11: {
-                            if (-2 != var7) {
+                            if (-2 != (var7 ^ -1)) {
                               var16[var4] = 0;
                               var4++;
                               break L11;
                             } else {
-                              if (((bd) this).field_v > var9) {
+                              if ((((bd) this).field_v ^ -1) < (var9 ^ -1)) {
                                 var16[var4] = 0;
                                 var4++;
                                 var4++;
                                 var4++;
                                 break L11;
                               } else {
-                                if (var9 < ((bd) this).field_v) {
-                                  var7 = var7 - var8;
-                                  L12: while (true) {
-                                    if (var7 >= 0) {
-                                      L13: while (true) {
-                                        if ((var7 ^ -1) >= -4) {
-                                          if (var7 <= 0) {
-                                            var16[var4] = 4096;
-                                            var4++;
-                                            var4++;
-                                            var4++;
-                                            var4++;
-                                            var4++;
-                                            var4++;
-                                            return var3;
+                                L12: {
+                                  if (var9 < ((bd) this).field_v) {
+                                    var7 = var7 - var8;
+                                    L13: while (true) {
+                                      if (var7 >= 0) {
+                                        L14: while (true) {
+                                          if ((var7 ^ -1) >= -4) {
+                                            if (var7 > 0) {
+                                              var16[var4] = 0;
+                                              var4++;
+                                              break L12;
+                                            } else {
+                                              var16[var4] = 4096;
+                                              var4++;
+                                              var4++;
+                                              var4++;
+                                              var4++;
+                                              var4++;
+                                              var4++;
+                                              return var3;
+                                            }
                                           } else {
-                                            var16[var4] = 0;
-                                            var4++;
-                                            var4++;
-                                            var4++;
-                                            var4++;
-                                            var4++;
-                                            var4++;
-                                            var4++;
-                                            return var3;
+                                            var7 -= 4;
+                                            continue L14;
                                           }
-                                        } else {
-                                          var7 -= 4;
-                                          continue L13;
                                         }
+                                      } else {
+                                        var7 += 4;
+                                        continue L13;
                                       }
-                                    } else {
-                                      var7 += 4;
-                                      continue L12;
                                     }
+                                  } else {
+                                    var16[var4] = 4096;
+                                    break L12;
                                   }
-                                } else {
-                                  var16[var4] = 4096;
-                                  var4++;
-                                  var4++;
-                                  var4++;
-                                  var4++;
-                                  var4++;
-                                  var4++;
-                                  return var3;
                                 }
+                                var4++;
+                                var4++;
+                                var4++;
+                                var4++;
+                                var4++;
+                                var4++;
+                                return var3;
                               }
                             }
                           }
@@ -238,52 +234,49 @@ final class bd extends am {
                     }
                   }
                 } else {
-                  if (var9 < ((bd) this).field_v) {
-                    var7 = var7 - var8;
-                    L14: while (true) {
-                      if (var7 >= 0) {
-                        L15: while (true) {
-                          if ((var7 ^ -1) >= -4) {
-                            if (var7 <= 0) {
-                              var16[var4] = 4096;
-                              var4++;
-                              var4++;
-                              var4++;
-                              var4++;
-                              var4++;
-                              var4++;
-                              return var3;
+                  L15: {
+                    if (var9 < ((bd) this).field_v) {
+                      var7 = var7 - var8;
+                      L16: while (true) {
+                        if (var7 >= 0) {
+                          L17: while (true) {
+                            if ((var7 ^ -1) >= -4) {
+                              if (var7 > 0) {
+                                var16[var4] = 0;
+                                var4++;
+                                break L15;
+                              } else {
+                                var16[var4] = 4096;
+                                var4++;
+                                var4++;
+                                var4++;
+                                var4++;
+                                var4++;
+                                var4++;
+                                return var3;
+                              }
                             } else {
-                              var16[var4] = 0;
-                              var4++;
-                              var4++;
-                              var4++;
-                              var4++;
-                              var4++;
-                              var4++;
-                              var4++;
-                              return var3;
+                              var7 -= 4;
+                              continue L17;
                             }
-                          } else {
-                            var7 -= 4;
-                            continue L15;
                           }
+                        } else {
+                          var7 += 4;
+                          continue L16;
                         }
-                      } else {
-                        var7 += 4;
-                        continue L14;
                       }
+                    } else {
+                      var16[var4] = 4096;
+                      break L15;
                     }
-                  } else {
-                    var16[var4] = 4096;
-                    var4++;
-                    var4++;
-                    var4++;
-                    var4++;
-                    var4++;
-                    var4++;
-                    return var3;
                   }
+                  var4++;
+                  var4++;
+                  var4++;
+                  var4++;
+                  var4++;
+                  var4++;
+                  return var3;
                 }
               } else {
                 return var3;

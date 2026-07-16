@@ -14,8 +14,9 @@ class bh extends mc {
     final String g(byte param0) {
         int var2 = ((bh) this).field_t;
         while (true) {
+            int fieldTemp$0 = ((bh) this).field_t;
             ((bh) this).field_t = ((bh) this).field_t + 1;
-            if (0 == ((bh) this).field_u[((bh) this).field_t]) {
+            if (0 == ((bh) this).field_u[fieldTemp$0]) {
                 break;
             }
         }
@@ -33,8 +34,9 @@ class bh extends mc {
         if (param0 != -1772093437) {
             ((bh) this).field_t = 119;
         }
+        int fieldTemp$0 = ((bh) this).field_t;
         ((bh) this).field_t = ((bh) this).field_t + 1;
-        return ((bh) this).field_u[((bh) this).field_t];
+        return ((bh) this).field_u[fieldTemp$0];
     }
 
     final boolean h(int param0) {
@@ -275,8 +277,9 @@ class bh extends mc {
             var11 = -1640531527;
             var12 = 32;
             while (true) {
+                int incrementValue$0 = var12;
                 var12--;
-                if ((var12 ^ -1) >= -1) {
+                if ((incrementValue$0 ^ -1) >= -1) {
                     break;
                 }
                 var9 = var9 - (var8 + (var8 << -2065572924 ^ var8 >>> 1850351269) ^ param1[-1772093437 & var10 >>> -804818485] + var10);
@@ -291,14 +294,18 @@ class bh extends mc {
     }
 
     final void d(int param0, byte param1) {
+        int fieldTemp$0 = ((bh) this).field_t;
         ((bh) this).field_t = ((bh) this).field_t + 1;
-        ((bh) this).field_u[((bh) this).field_t] = (byte)(param0 >> 1608165720);
+        ((bh) this).field_u[fieldTemp$0] = (byte)(param0 >> 1608165720);
+        int fieldTemp$1 = ((bh) this).field_t;
         ((bh) this).field_t = ((bh) this).field_t + 1;
-        ((bh) this).field_u[((bh) this).field_t] = (byte)(param0 >> 381054160);
+        ((bh) this).field_u[fieldTemp$1] = (byte)(param0 >> 381054160);
+        int fieldTemp$2 = ((bh) this).field_t;
         ((bh) this).field_t = ((bh) this).field_t + 1;
-        ((bh) this).field_u[((bh) this).field_t] = (byte)(param0 >> 1976116104);
+        ((bh) this).field_u[fieldTemp$2] = (byte)(param0 >> 1976116104);
+        int fieldTemp$3 = ((bh) this).field_t;
         ((bh) this).field_t = ((bh) this).field_t + 1;
-        ((bh) this).field_u[((bh) this).field_t] = (byte)param0;
+        ((bh) this).field_u[fieldTemp$3] = (byte)param0;
         if (param1 != -124) {
             Object var4 = null;
             ((bh) this).a((java.math.BigInteger) null, (java.math.BigInteger) null, -19);
@@ -310,8 +317,9 @@ class bh extends mc {
         int var5 = param1;
         int var6 = 47 / ((param3 - 66) / 60);
         while (var5 < param1 + param0) {
+            int fieldTemp$0 = ((bh) this).field_t;
             ((bh) this).field_t = ((bh) this).field_t + 1;
-            param2[var5] = ((bh) this).field_u[((bh) this).field_t];
+            param2[var5] = ((bh) this).field_u[fieldTemp$0];
             var5++;
         }
     }
@@ -338,28 +346,36 @@ class bh extends mc {
         if (param0 != -99) {
             return 117;
         }
+        int fieldTemp$0 = ((bh) this).field_t;
         ((bh) this).field_t = ((bh) this).field_t + 1;
-        return 255 & ((bh) this).field_u[((bh) this).field_t];
+        return 255 & ((bh) this).field_u[fieldTemp$0];
     }
 
     private final void b(int param0, long param1) {
+        int fieldTemp$0 = ((bh) this).field_t;
         ((bh) this).field_t = ((bh) this).field_t + 1;
-        ((bh) this).field_u[((bh) this).field_t] = (byte)(int)(param1 >> 1937149040);
+        ((bh) this).field_u[fieldTemp$0] = (byte)(int)(param1 >> 1937149040);
+        int fieldTemp$1 = ((bh) this).field_t;
         ((bh) this).field_t = ((bh) this).field_t + 1;
-        ((bh) this).field_u[((bh) this).field_t] = (byte)(int)(param1 >> -1341777880);
+        ((bh) this).field_u[fieldTemp$1] = (byte)(int)(param1 >> -1341777880);
+        int fieldTemp$2 = ((bh) this).field_t;
         ((bh) this).field_t = ((bh) this).field_t + 1;
-        ((bh) this).field_u[((bh) this).field_t] = (byte)(int)(param1 >> -1427754144);
+        ((bh) this).field_u[fieldTemp$2] = (byte)(int)(param1 >> -1427754144);
+        int fieldTemp$3 = ((bh) this).field_t;
         ((bh) this).field_t = ((bh) this).field_t + 1;
-        ((bh) this).field_u[((bh) this).field_t] = (byte)(int)(param1 >> 820767256);
+        ((bh) this).field_u[fieldTemp$3] = (byte)(int)(param1 >> 820767256);
         if (param0 != -1427754144) {
-            byte discarded$0 = ((bh) this).g(-73);
+            byte discarded$4 = ((bh) this).g(-73);
         }
+        int fieldTemp$5 = ((bh) this).field_t;
         ((bh) this).field_t = ((bh) this).field_t + 1;
-        ((bh) this).field_u[((bh) this).field_t] = (byte)(int)(param1 >> 581619344);
+        ((bh) this).field_u[fieldTemp$5] = (byte)(int)(param1 >> 581619344);
+        int fieldTemp$6 = ((bh) this).field_t;
         ((bh) this).field_t = ((bh) this).field_t + 1;
-        ((bh) this).field_u[((bh) this).field_t] = (byte)(int)(param1 >> -194724344);
+        ((bh) this).field_u[fieldTemp$6] = (byte)(int)(param1 >> -194724344);
+        int fieldTemp$7 = ((bh) this).field_t;
         ((bh) this).field_t = ((bh) this).field_t + 1;
-        ((bh) this).field_u[((bh) this).field_t] = (byte)(int)param1;
+        ((bh) this).field_u[fieldTemp$7] = (byte)(int)param1;
     }
 
     final int e(byte param0) {
@@ -374,15 +390,18 @@ class bh extends mc {
     }
 
     final void a(int param0, byte param1) {
+        int fieldTemp$0 = ((bh) this).field_t;
         ((bh) this).field_t = ((bh) this).field_t + 1;
-        ((bh) this).field_u[((bh) this).field_t] = (byte)(param0 >> -448967248);
+        ((bh) this).field_u[fieldTemp$0] = (byte)(param0 >> -448967248);
+        int fieldTemp$1 = ((bh) this).field_t;
         ((bh) this).field_t = ((bh) this).field_t + 1;
-        ((bh) this).field_u[((bh) this).field_t] = (byte)(param0 >> -1161751064);
+        ((bh) this).field_u[fieldTemp$1] = (byte)(param0 >> -1161751064);
         if (param1 > -63) {
             field_p = false;
         }
+        int fieldTemp$2 = ((bh) this).field_t;
         ((bh) this).field_t = ((bh) this).field_t + 1;
-        ((bh) this).field_u[((bh) this).field_t] = (byte)param0;
+        ((bh) this).field_u[fieldTemp$2] = (byte)param0;
     }
 
     final void a(java.math.BigInteger param0, java.math.BigInteger param1, int param2) {
@@ -414,16 +433,18 @@ class bh extends mc {
 
     final int b(byte param0) {
         int var4 = TetraLink.field_J;
+        int fieldTemp$0 = ((bh) this).field_t;
         ((bh) this).field_t = ((bh) this).field_t + 1;
-        int var2 = ((bh) this).field_u[((bh) this).field_t];
+        int var2 = ((bh) this).field_u[fieldTemp$0];
         if (param0 != 120) {
             return 14;
         }
         int var3 = 0;
         while ((var2 ^ -1) > -1) {
             var3 = (var3 | 127 & var2) << -841350073;
+            int fieldTemp$1 = ((bh) this).field_t;
             ((bh) this).field_t = ((bh) this).field_t + 1;
-            var2 = ((bh) this).field_u[((bh) this).field_t];
+            var2 = ((bh) this).field_u[fieldTemp$1];
         }
         return var3 | var2;
     }
@@ -431,8 +452,9 @@ class bh extends mc {
     final void b(byte param0, int param1) {
         int var4 = TetraLink.field_J;
         while (param1 > ((bh) this).field_t) {
+            int fieldTemp$0 = ((bh) this).field_t;
             ((bh) this).field_t = ((bh) this).field_t + 1;
-            ((bh) this).field_u[((bh) this).field_t] = (byte) 0;
+            ((bh) this).field_u[fieldTemp$0] = (byte) 0;
         }
         int var3 = -121 / ((param0 - -7) / 36);
     }
@@ -444,8 +466,9 @@ class bh extends mc {
         }
         CharSequence var4 = (CharSequence) (Object) param0;
         ((bh) this).field_t = ((bh) this).field_t + wd.a(var4, param0.length(), 0, ((bh) this).field_u, ((bh) this).field_t, (byte) -82);
+        int fieldTemp$0 = ((bh) this).field_t;
         ((bh) this).field_t = ((bh) this).field_t + 1;
-        ((bh) this).field_u[((bh) this).field_t] = (byte) 0;
+        ((bh) this).field_u[fieldTemp$0] = (byte) 0;
     }
 
     final int c(int param0, int param1) {
@@ -465,34 +488,44 @@ class bh extends mc {
         if (!(var3 < 0)) {
             throw new IllegalArgumentException("");
         }
+        int fieldTemp$0 = ((bh) this).field_t;
         ((bh) this).field_t = ((bh) this).field_t + 1;
-        ((bh) this).field_u[((bh) this).field_t] = (byte) 0;
+        ((bh) this).field_u[fieldTemp$0] = (byte) 0;
         CharSequence var4 = (CharSequence) (Object) param0;
         ((bh) this).field_t = ((bh) this).field_t + wd.a(var4, param0.length(), 0, ((bh) this).field_u, ((bh) this).field_t, (byte) 125);
+        int fieldTemp$1 = ((bh) this).field_t;
         ((bh) this).field_t = ((bh) this).field_t + 1;
-        ((bh) this).field_u[((bh) this).field_t] = (byte) 0;
+        ((bh) this).field_u[fieldTemp$1] = (byte) 0;
     }
 
     final void a(int param0, long param1) {
+        int fieldTemp$0 = ((bh) this).field_t;
         ((bh) this).field_t = ((bh) this).field_t + 1;
-        ((bh) this).field_u[((bh) this).field_t] = (byte)(int)(param1 >> -402349128);
+        ((bh) this).field_u[fieldTemp$0] = (byte)(int)(param1 >> -402349128);
+        int fieldTemp$1 = ((bh) this).field_t;
         ((bh) this).field_t = ((bh) this).field_t + 1;
-        ((bh) this).field_u[((bh) this).field_t] = (byte)(int)(param1 >> -2107199504);
+        ((bh) this).field_u[fieldTemp$1] = (byte)(int)(param1 >> -2107199504);
         if (param0 != -1) {
             return;
         }
+        int fieldTemp$2 = ((bh) this).field_t;
         ((bh) this).field_t = ((bh) this).field_t + 1;
-        ((bh) this).field_u[((bh) this).field_t] = (byte)(int)(param1 >> 1990289896);
+        ((bh) this).field_u[fieldTemp$2] = (byte)(int)(param1 >> 1990289896);
+        int fieldTemp$3 = ((bh) this).field_t;
         ((bh) this).field_t = ((bh) this).field_t + 1;
-        ((bh) this).field_u[((bh) this).field_t] = (byte)(int)(param1 >> 1075252576);
+        ((bh) this).field_u[fieldTemp$3] = (byte)(int)(param1 >> 1075252576);
+        int fieldTemp$4 = ((bh) this).field_t;
         ((bh) this).field_t = ((bh) this).field_t + 1;
-        ((bh) this).field_u[((bh) this).field_t] = (byte)(int)(param1 >> -1200680744);
+        ((bh) this).field_u[fieldTemp$4] = (byte)(int)(param1 >> -1200680744);
+        int fieldTemp$5 = ((bh) this).field_t;
         ((bh) this).field_t = ((bh) this).field_t + 1;
-        ((bh) this).field_u[((bh) this).field_t] = (byte)(int)(param1 >> 780576016);
+        ((bh) this).field_u[fieldTemp$5] = (byte)(int)(param1 >> 780576016);
+        int fieldTemp$6 = ((bh) this).field_t;
         ((bh) this).field_t = ((bh) this).field_t + 1;
-        ((bh) this).field_u[((bh) this).field_t] = (byte)(int)(param1 >> -137344248);
+        ((bh) this).field_u[fieldTemp$6] = (byte)(int)(param1 >> -137344248);
+        int fieldTemp$7 = ((bh) this).field_t;
         ((bh) this).field_t = ((bh) this).field_t + 1;
-        ((bh) this).field_u[((bh) this).field_t] = (byte)(int)param1;
+        ((bh) this).field_u[fieldTemp$7] = (byte)(int)param1;
     }
 
     final void a(int param0, int[] param1) {
@@ -515,8 +548,9 @@ class bh extends mc {
             var8 = -1640531527;
             var9 = 32;
             while (true) {
+                int incrementValue$0 = var9;
                 var9--;
-                if ((var9 ^ -1) >= -1) {
+                if ((incrementValue$0 ^ -1) >= -1) {
                     break;
                 }
                 var5 = var5 + (var7 - -param1[3 & var7] ^ (var6 << 1093916740 ^ var6 >>> -616524187) + var6);
@@ -641,8 +675,9 @@ class bh extends mc {
         int var5 = 0;
         int var6 = TetraLink.field_J;
         for (var5 = param0; param3 + param0 > var5; var5++) {
+            int fieldTemp$0 = ((bh) this).field_t;
             ((bh) this).field_t = ((bh) this).field_t + 1;
-            ((bh) this).field_u[((bh) this).field_t] = param2[var5];
+            ((bh) this).field_u[fieldTemp$0] = param2[var5];
         }
         if (param1 != 128) {
             field_q = null;
@@ -650,13 +685,15 @@ class bh extends mc {
     }
 
     final void b(int param0, boolean param1) {
+        int fieldTemp$0 = ((bh) this).field_t;
         ((bh) this).field_t = ((bh) this).field_t + 1;
-        ((bh) this).field_u[((bh) this).field_t] = (byte)(param0 >> -1879464696);
+        ((bh) this).field_u[fieldTemp$0] = (byte)(param0 >> -1879464696);
         if (param1) {
             return;
         }
+        int fieldTemp$1 = ((bh) this).field_t;
         ((bh) this).field_t = ((bh) this).field_t + 1;
-        ((bh) this).field_u[((bh) this).field_t] = (byte)param0;
+        ((bh) this).field_u[fieldTemp$1] = (byte)param0;
     }
 
     final static int h(byte param0) {
@@ -697,8 +734,9 @@ class bh extends mc {
     }
 
     final String a(boolean param0) {
+        int fieldTemp$0 = ((bh) this).field_t;
         ((bh) this).field_t = ((bh) this).field_t + 1;
-        int var2 = ((bh) this).field_u[((bh) this).field_t];
+        int var2 = ((bh) this).field_u[fieldTemp$0];
         if (0 != var2) {
             throw new IllegalStateException("");
         }
@@ -707,8 +745,9 @@ class bh extends mc {
         }
         int var3 = ((bh) this).field_t;
         while (true) {
+            int fieldTemp$1 = ((bh) this).field_t;
             ((bh) this).field_t = ((bh) this).field_t + 1;
-            if (((bh) this).field_u[((bh) this).field_t] == 0) {
+            if (((bh) this).field_u[fieldTemp$1] == 0) {
                 break;
             }
         }
@@ -723,24 +762,30 @@ class bh extends mc {
         if (param1) {
             field_r = false;
         }
+        int fieldTemp$0 = ((bh) this).field_t;
         ((bh) this).field_t = ((bh) this).field_t + 1;
-        ((bh) this).field_u[((bh) this).field_t] = (byte)param0;
+        ((bh) this).field_u[fieldTemp$0] = (byte)param0;
     }
 
     final void a(long param0, boolean param1) {
         if (!param1) {
             field_o = null;
         }
+        int fieldTemp$0 = ((bh) this).field_t;
         ((bh) this).field_t = ((bh) this).field_t + 1;
-        ((bh) this).field_u[((bh) this).field_t] = (byte)(int)(param0 >> -1025475168);
+        ((bh) this).field_u[fieldTemp$0] = (byte)(int)(param0 >> -1025475168);
+        int fieldTemp$1 = ((bh) this).field_t;
         ((bh) this).field_t = ((bh) this).field_t + 1;
-        ((bh) this).field_u[((bh) this).field_t] = (byte)(int)(param0 >> -761625704);
+        ((bh) this).field_u[fieldTemp$1] = (byte)(int)(param0 >> -761625704);
+        int fieldTemp$2 = ((bh) this).field_t;
         ((bh) this).field_t = ((bh) this).field_t + 1;
-        ((bh) this).field_u[((bh) this).field_t] = (byte)(int)(param0 >> 1165797840);
+        ((bh) this).field_u[fieldTemp$2] = (byte)(int)(param0 >> 1165797840);
+        int fieldTemp$3 = ((bh) this).field_t;
         ((bh) this).field_t = ((bh) this).field_t + 1;
-        ((bh) this).field_u[((bh) this).field_t] = (byte)(int)(param0 >> -189707128);
+        ((bh) this).field_u[fieldTemp$3] = (byte)(int)(param0 >> -189707128);
+        int fieldTemp$4 = ((bh) this).field_t;
         ((bh) this).field_t = ((bh) this).field_t + 1;
-        ((bh) this).field_u[((bh) this).field_t] = (byte)(int)param0;
+        ((bh) this).field_u[fieldTemp$4] = (byte)(int)param0;
     }
 
     final String i(int param0) {

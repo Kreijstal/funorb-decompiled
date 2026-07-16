@@ -164,15 +164,14 @@ final class ma extends gg {
     }
 
     final static wg a(Throwable param0, String param1) {
-        wg var2_ref = null;
         wg var2 = null;
         if (param0 instanceof wg) {
             var2 = (wg) (Object) param0;
             var2.field_f = var2.field_f + 32 + param1;
         } else {
-            var2_ref = new wg(param0, param1);
+            var2 = new wg(param0, param1);
         }
-        return var2_ref;
+        return var2;
     }
 
     static {

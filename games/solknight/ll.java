@@ -120,8 +120,9 @@ final class ll {
                         var19++;
                         continue L6;
                       } else {
+                        int incrementValue$1 = var17;
                         var17++;
-                        mi.field_f[var17] = var13;
+                        mi.field_f[incrementValue$1] = var13;
                         var20++;
                         continue L7;
                       }

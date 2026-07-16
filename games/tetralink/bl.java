@@ -292,28 +292,54 @@ final class bl extends hl {
     }
 
     final int a(int param0, boolean param1, int param2, int param3) {
+        int var5 = 0;
+        int var6 = 0;
         int var7 = 0;
         int var8 = 0;
-        int var5 = param2;
-        int var6 = -((bl) this).field_Rb.field_R + ((bl) this).field_Wb.field_R;
-        if (!(var6 <= 0)) {
+        L0: {
+          var5 = param2;
+          var6 = -((bl) this).field_Rb.field_R + ((bl) this).field_Wb.field_R;
+          if (var6 > 0) {
             var7 = ((bl) this).field_Rb.field_yb;
             var8 = -param3 + param0;
             var5 = (var7 * var8 + var6 / 2) / var6;
+            break L0;
+          } else {
+            break L0;
+          }
         }
-        if (!param1) {
-            if (var5 > param0 + -param3) {
-                var5 = -param3 + param0;
-            }
-            // ifge L119
-            var5 = 0;
-        } else {
-            if (!(var5 >= 0)) {
+        L1: {
+          if (param1) {
+            L2: {
+              if (var5 < 0) {
                 var5 = 0;
+                break L2;
+              } else {
+                break L2;
+              }
             }
-            if (var5 > param0 + -param3) {
-                var5 = param0 - param3;
+            if (var5 <= param0 + -param3) {
+              break L1;
+            } else {
+              var5 = param0 - param3;
+              break L1;
             }
+          } else {
+            L3: {
+              if (var5 <= param0 + -param3) {
+                break L3;
+              } else {
+                var5 = -param3 + param0;
+                break L3;
+              }
+            }
+            if (var5 >= 0) {
+              break L1;
+            } else {
+              var5 = 0;
+              break L1;
+            }
+          }
         }
         return var5;
     }
@@ -377,6 +403,7 @@ final class bl extends hl {
           if ((var1 ^ -1) <= -257) {
             field_Xb = 0;
             field_Kb = 2;
+            return;
           } else {
             var0 = var1;
             var2 = 0;

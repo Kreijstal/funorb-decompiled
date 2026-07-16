@@ -178,59 +178,52 @@ final class we extends qk {
     }
 
     final void g(int param0) {
-        int var3 = 0;
-        var3 = ZombieDawn.field_J;
+        int var3 = ZombieDawn.field_J;
         super.g(103);
-        if (param0 > 95) {
-          if (0 != ((we) this).field_F) {
-            if (((we) this).field_F != -2) {
-              if (10 == ((we) this).field_F) {
-                ((we) this).field_N = ((we) this).field_N + 3;
+        if (param0 <= 95) {
+            return;
+        }
+        if (0 == ((we) this).field_F) {
+            if (null != ((we) this).field_Qb) {
+                this.b(false);
                 return;
-              } else {
+            }
+            int fieldTemp$0 = ((we) this).field_Ob;
+            ((we) this).field_Ob = ((we) this).field_Ob + 1;
+            if (fieldTemp$0 < 50) {
                 return;
-              }
-            } else {
-              ((we) this).field_Ob = ((we) this).field_Ob + 1;
-              if (-51 > ((we) this).field_Ob) {
-                ((we) this).field_Pb = ((we) this).field_Pb + 1;
-                if (((we) this).field_Pb < 4) {
-                  return;
-                } else {
-                  ((we) this).l((byte) 52);
-                  ((we) this).field_Pb = 0;
-                  return;
-                }
-              } else {
+            }
+            this.y(3);
+            ((we) this).field_Ob = 0;
+            return;
+        }
+        if ((((we) this).field_F ^ -1) == -2) {
+            int fieldTemp$1 = ((we) this).field_Ob;
+            ((we) this).field_Ob = ((we) this).field_Ob + 1;
+            if (-51 >= (fieldTemp$1 ^ -1)) {
                 this.b(false);
                 ((we) this).field_Ob = 0;
+                int fieldTemp$2 = ((we) this).field_Pb;
                 ((we) this).field_Pb = ((we) this).field_Pb + 1;
-                if (((we) this).field_Pb < 4) {
-                  return;
-                } else {
-                  ((we) this).l((byte) 52);
-                  ((we) this).field_Pb = 0;
-                  return;
+                if (fieldTemp$2 < 4) {
+                    return;
                 }
-              }
-            }
-          } else {
-            if (null == ((we) this).field_Qb) {
-              ((we) this).field_Ob = ((we) this).field_Ob + 1;
-              if (((we) this).field_Ob < 50) {
+                ((we) this).l((byte) 52);
+                ((we) this).field_Pb = 0;
                 return;
-              } else {
-                this.y(3);
-                ((we) this).field_Ob = 0;
-                return;
-              }
-            } else {
-              this.b(false);
-              return;
             }
-          }
-        } else {
-          return;
+            int fieldTemp$3 = ((we) this).field_Pb;
+            ((we) this).field_Pb = ((we) this).field_Pb + 1;
+            if (fieldTemp$3 < 4) {
+                return;
+            }
+            ((we) this).l((byte) 52);
+            ((we) this).field_Pb = 0;
+            return;
+        }
+        if (10 == ((we) this).field_F) {
+            ((we) this).field_N = ((we) this).field_N + 3;
+            return;
         }
     }
 
@@ -309,8 +302,8 @@ final class we extends qk {
     }
 
     private final void y(int param0) {
-        kd var2 = null;
-        kd var3 = null;
+        Object var2 = null;
+        Object var3 = null;
         int var4 = 0;
         int var5 = 0;
         Object var6 = null;
@@ -354,7 +347,7 @@ final class we extends qk {
                     return;
                   } else {
                     L3: {
-                      this.a(var2, (byte) 110);
+                      this.a((kd) var2, (byte) 110);
                       if (null != ((we) this).field_Qb) {
                         this.b(false);
                         break L3;
@@ -366,7 +359,7 @@ final class we extends qk {
                   }
                 } else {
                   L4: {
-                    this.a(var3, (byte) 108);
+                    this.a((kd) var3, (byte) 108);
                     if (null != ((we) this).field_Qb) {
                       this.b(false);
                       break L4;
@@ -396,7 +389,7 @@ final class we extends qk {
                               }
                             }
                           }
-                          var3 = var6_ref;
+                          var3 = (Object) (Object) var6_ref;
                           var5 = var10.field_g;
                           break L6;
                         } else {
@@ -415,7 +408,7 @@ final class we extends qk {
                         }
                       }
                       var4 = var10.field_g;
-                      var2 = var6_ref;
+                      var2 = (Object) (Object) var6_ref;
                       break L5;
                     }
                   }
@@ -446,7 +439,7 @@ final class we extends qk {
                     return;
                   } else {
                     L11: {
-                      this.a(var2, (byte) 110);
+                      this.a((kd) var2, (byte) 110);
                       if (null != ((we) this).field_Qb) {
                         this.b(false);
                         break L11;
@@ -458,7 +451,7 @@ final class we extends qk {
                   }
                 } else {
                   L12: {
-                    this.a(var3, (byte) 108);
+                    this.a((kd) var3, (byte) 108);
                     if (null != ((we) this).field_Qb) {
                       this.b(false);
                       break L12;
@@ -488,7 +481,7 @@ final class we extends qk {
                               }
                             }
                           }
-                          var3 = var6_ref;
+                          var3 = (Object) (Object) var6_ref;
                           var5 = var29.field_g;
                           break L14;
                         } else {
@@ -507,7 +500,7 @@ final class we extends qk {
                         }
                       }
                       var4 = var29.field_g;
-                      var2 = var6_ref;
+                      var2 = (Object) (Object) var6_ref;
                       break L13;
                     }
                   }
@@ -551,14 +544,14 @@ final class we extends qk {
               L20: {
                 if (var3 == null) {
                   if (var2 != null) {
-                    this.a(var2, (byte) 110);
+                    this.a((kd) var2, (byte) 110);
                     break L20;
                   } else {
                     this.z(12451);
                     break L20;
                   }
                 } else {
-                  this.a(var3, (byte) 108);
+                  this.a((kd) var3, (byte) 108);
                   break L20;
                 }
               }
@@ -591,7 +584,7 @@ final class we extends qk {
                             }
                           }
                         }
-                        var3 = var6_ref;
+                        var3 = (Object) (Object) var6_ref;
                         var5 = var9.field_g;
                         break L23;
                       } else {
@@ -610,7 +603,7 @@ final class we extends qk {
                       }
                     }
                     var4 = var9.field_g;
-                    var2 = var6_ref;
+                    var2 = (Object) (Object) var6_ref;
                     break L22;
                   }
                 }

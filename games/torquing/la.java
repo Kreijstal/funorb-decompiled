@@ -61,10 +61,10 @@ final class la {
         if (param0) {
           L0: {
             L1: {
-              if (op.field_i > -11) {
+              if ((op.field_i ^ -1) > -11) {
                 break L1;
               } else {
-                if (-14 > b.field_x) {
+                if (-14 < (b.field_x ^ -1)) {
                   break L1;
                 } else {
                   stackOut_4_0 = 1;
@@ -575,7 +575,6 @@ final class la {
 
     private final synchronized byte[] a(int[] param0, int param1, int param2, int param3) {
         Object var5 = null;
-        byte[] var5_array = null;
         int var6 = 0;
         byte[] var7 = null;
         if (this.a(true, param2, param1)) {
@@ -609,7 +608,7 @@ final class la {
                 break L2;
               } else {
                 var7 = ui.a(false, ((la) this).field_d[param1][param2], (byte) 37);
-                var5_array = var7;
+                var5 = (Object) (Object) var7;
                 if (var7 != null) {
                   break L2;
                 } else {
@@ -618,7 +617,7 @@ final class la {
               }
             }
             L3: {
-              if (var5_array != null) {
+              if (var5 != null) {
                 if (-2 == ((la) this).field_l) {
                   ((la) this).field_d[param1][param2] = null;
                   if (((la) this).field_e.field_h[param1] != 1) {
@@ -633,7 +632,7 @@ final class la {
                     break L3;
                   } else {
                     var6 = 120 % ((-57 - param3) / 33);
-                    return var5_array;
+                    return (byte[]) var5;
                   }
                 }
               } else {
@@ -641,7 +640,7 @@ final class la {
               }
             }
             var6 = 120 % ((-57 - param3) / 33);
-            return var5_array;
+            return (byte[]) var5;
           } else {
             throw new RuntimeException("");
           }
@@ -913,6 +912,7 @@ final class la {
               ((la) this).field_i = stackIn_6_1 != 0;
               ((la) this).field_a = param0;
               ((la) this).field_l = param2;
+              return;
             } else {
               break L0;
             }
@@ -948,49 +948,30 @@ final class la {
         int var14 = 0;
         int var15 = 0;
         int var16 = 0;
-        int var17 = 0;
-        L0: {
-          var17 = Torquing.field_u;
-          if (param8 == 65280) {
-            break L0;
-          } else {
-            vc discarded$2 = la.b(123);
-            break L0;
-          }
+        int var17 = Torquing.field_u;
+        if (param8 != 65280) {
+            vc discarded$0 = la.b(123);
         }
-        var10 = -param6;
-        L1: while (true) {
-          if (var10 >= 0) {
-            return;
-          } else {
-            var11 = -param5;
-            L2: while (true) {
-              if (-1 >= var11) {
-                param1 = param1 + param9;
-                param7 = param7 + param3;
-                var10++;
-                continue L1;
-              } else {
+        for (var10 = -param6; var10 < 0; var10++) {
+            for (var11 = -param5; -1 < (var11 ^ -1); var11++) {
+                int incrementValue$1 = param1;
                 param1++;
-                param0 = param2[param1];
-                if (-1 != param0) {
-                  var12 = 255 & param0;
-                  var13 = 256 - var12;
-                  var14 = param4[param7];
-                  var15 = var14 & 16711935;
-                  var16 = 65280 & var14;
-                  param7++;
-                  param4[param7] = gm.a(ie.a(16711855, var13 * var16) >> 1885321640, ie.a(16711935, var13 * var15 >> 748574184));
-                  var11++;
-                  continue L2;
+                param0 = param2[incrementValue$1];
+                if (-1 == (param0 ^ -1)) {
+                    param7++;
                 } else {
-                  param7++;
-                  var11++;
-                  continue L2;
+                    var12 = 255 & param0;
+                    var13 = 256 - var12;
+                    var14 = param4[param7];
+                    var15 = var14 & 16711935;
+                    var16 = 65280 & var14;
+                    int incrementValue$2 = param7;
+                    param7++;
+                    param4[incrementValue$2] = gm.a(ie.a(16711855, var13 * var16) >> 1885321640, ie.a(16711935, var13 * var15 >> 748574184));
                 }
-              }
             }
-          }
+            param1 = param1 + param9;
+            param7 = param7 + param3;
         }
     }
 
@@ -1002,12 +983,17 @@ final class la {
             vc stackOut_2_0 = null;
             if (param0 > 11) {
               try {
-                stackOut_2_0 = (vc) Class.forName("dl").newInstance();
-                stackIn_3_0 = stackOut_2_0;
-              } catch (java.lang.Throwable decompiledCaughtParameter) {
-                decompiledCaughtException = decompiledCaughtParameter;
-                return stackIn_3_0;
+                L0: {
+                  stackOut_2_0 = (vc) Class.forName("dl").newInstance();
+                  stackIn_3_0 = stackOut_2_0;
+                  break L0;
+                }
+              } catch (java.lang.Throwable decompiledCaughtParameter0) {
+                decompiledCaughtException = decompiledCaughtParameter0;
+                var1 = decompiledCaughtException;
+                return null;
               }
+              return stackIn_3_0;
             } else {
               return null;
             }
@@ -1016,7 +1002,6 @@ final class la {
         } catch (Throwable decompiledCheckedException) {
             throw new RuntimeException(decompiledCheckedException);
         }
-        return null;
     }
 
     static {

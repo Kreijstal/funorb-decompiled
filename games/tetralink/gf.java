@@ -134,8 +134,9 @@ final class gf extends mc {
                                       var12++;
                                       continue L8;
                                     } else {
+                                      int incrementValue$2 = var11;
                                       var11++;
-                                      ((gf) this).field_u[var11] = var8[var7[(var13 >> 1) + (var12 >> 1 << 6)] & 255];
+                                      ((gf) this).field_u[incrementValue$2] = var8[var7[(var13 >> 1) + (var12 >> 1 << 6)] & 255];
                                       var13++;
                                       continue L9;
                                     }
@@ -165,8 +166,9 @@ final class gf extends mc {
                                       var12++;
                                       continue L11;
                                     } else {
+                                      int incrementValue$3 = var11;
                                       var11++;
-                                      ((gf) this).field_u[var11] = var8[var7[(var13 << 1) + (var12 << 1 << 7)] & 255];
+                                      ((gf) this).field_u[incrementValue$3] = var8[var7[(var13 << 1) + (var12 << 1 << 7)] & 255];
                                       var13++;
                                       continue L12;
                                     }
@@ -299,6 +301,7 @@ final class gf extends mc {
                       int discarded$2 = param0.d((byte) -99);
                       int discarded$3 = param0.d((byte) -99);
                       ((gf) this).field_u = null;
+                      return;
                     } else {
                       ((gf) this).field_t[var3] = param0.f(119);
                       var3++;

@@ -42,8 +42,9 @@ final class wj {
 
     final int a(int param0) {
         if (((wj) this).field_b >= ((wj) this).field_e) {
+            int fieldTemp$0 = ((wj) this).field_k;
             ((wj) this).field_k = ((wj) this).field_k + 1;
-            ((wj) this).field_a = ((wj) this).field_d[((wj) this).field_k] << 15;
+            ((wj) this).field_a = ((wj) this).field_d[fieldTemp$0] << 15;
             if (((wj) this).field_k >= ((wj) this).field_i) {
                 ((wj) this).field_k = ((wj) this).field_i - 1;
             }

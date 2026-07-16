@@ -51,11 +51,11 @@ final class ha {
           if (5 > var4) {
             break L0;
           } else {
-            if (var4 < -8) {
+            if ((var4 ^ -1) < -8) {
               break L0;
             } else {
               L1: {
-                if (-7 > var4) {
+                if (-7 < (var4 ^ -1)) {
                   ((ha) this).field_m = 0;
                   break L1;
                 } else {
@@ -65,7 +65,7 @@ final class ha {
               }
               L2: {
                 var5 = var17.j(255);
-                if ((1 & var5) == -1) {
+                if ((1 & var5 ^ -1) == -1) {
                   stackOut_9_0 = 0;
                   stackIn_10_0 = stackOut_9_0;
                   break L2;
@@ -77,7 +77,7 @@ final class ha {
               }
               L3: {
                 var6 = stackIn_10_0;
-                if (-1 == (2 & var5)) {
+                if (-1 == (2 & var5 ^ -1)) {
                   stackOut_12_0 = 0;
                   stackIn_13_0 = stackOut_12_0;
                   break L3;
@@ -107,34 +107,40 @@ final class ha {
                     if (var10 >= ((ha) this).field_h) {
                       break L5;
                     } else {
-                      var8 = var8 + var17.e(6715);
-                      ((ha) this).field_f[var10] = var8 + var17.e(6715);
-                      if (var9 < ((ha) this).field_f[var10]) {
-                        var9 = ((ha) this).field_f[var10];
-                        var10++;
-                        continue L6;
-                      } else {
-                        var10++;
-                        continue L6;
+                      L7: {
+                        int dupTemp$4 = var8 + var17.e(6715);
+                        var8 = dupTemp$4;
+                        ((ha) this).field_f[var10] = dupTemp$4;
+                        if ((var9 ^ -1) > (((ha) this).field_f[var10] ^ -1)) {
+                          var9 = ((ha) this).field_f[var10];
+                          break L7;
+                        } else {
+                          break L7;
+                        }
                       }
+                      var10++;
+                      continue L6;
                     }
                   }
                 } else {
                   var10 = 0;
-                  L7: while (true) {
+                  L8: while (true) {
                     if (var10 >= ((ha) this).field_h) {
                       break L5;
                     } else {
-                      var8 = var8 + var17.i(-126);
-                      ((ha) this).field_f[var10] = var8 + var17.i(-126);
-                      if (var9 < ((ha) this).field_f[var10]) {
-                        var9 = ((ha) this).field_f[var10];
-                        var10++;
-                        continue L7;
-                      } else {
-                        var10++;
-                        continue L7;
+                      L9: {
+                        int dupTemp$5 = var8 + var17.i(-126);
+                        var8 = dupTemp$5;
+                        ((ha) this).field_f[var10] = dupTemp$5;
+                        if (var9 >= ((ha) this).field_f[var10]) {
+                          break L9;
+                        } else {
+                          var9 = ((ha) this).field_f[var10];
+                          break L9;
+                        }
                       }
+                      var10++;
+                      continue L8;
                     }
                   }
                 }
@@ -143,77 +149,77 @@ final class ha {
               ((ha) this).field_a = new int[((ha) this).field_l][];
               ((ha) this).field_b = new int[((ha) this).field_l];
               if (param0 < -73) {
-                L8: {
+                L10: {
                   ((ha) this).field_s = new int[((ha) this).field_l];
                   ((ha) this).field_r = new int[((ha) this).field_l];
                   ((ha) this).field_o = new int[((ha) this).field_l];
                   if (var7 == 0) {
-                    break L8;
+                    break L10;
                   } else {
                     ((ha) this).field_q = new byte[((ha) this).field_l][];
-                    break L8;
+                    break L10;
                   }
                 }
-                L9: {
+                L11: {
                   if (var6 != 0) {
                     ((ha) this).field_i = new int[((ha) this).field_l];
                     var10 = 0;
-                    L10: while (true) {
-                      if (((ha) this).field_l <= var10) {
+                    L12: while (true) {
+                      if ((((ha) this).field_l ^ -1) >= (var10 ^ -1)) {
                         var10 = 0;
-                        L11: while (true) {
-                          if (var10 >= ((ha) this).field_h) {
+                        L13: while (true) {
+                          if ((var10 ^ -1) <= (((ha) this).field_h ^ -1)) {
                             ((ha) this).field_e = new qg(((ha) this).field_i);
-                            break L9;
+                            break L11;
                           } else {
                             ((ha) this).field_i[((ha) this).field_f[var10]] = var17.e(true);
                             var10++;
-                            continue L11;
+                            continue L13;
                           }
                         }
                       } else {
                         ((ha) this).field_i[var10] = -1;
                         var10++;
-                        continue L10;
+                        continue L12;
                       }
                     }
                   } else {
-                    break L9;
+                    break L11;
                   }
                 }
                 var10 = 0;
-                L12: while (true) {
-                  if (var10 >= ((ha) this).field_h) {
-                    L13: {
+                L14: while (true) {
+                  if ((var10 ^ -1) <= (((ha) this).field_h ^ -1)) {
+                    L15: {
                       if (var7 == 0) {
-                        break L13;
+                        break L15;
                       } else {
                         var10 = 0;
-                        L14: while (true) {
-                          if (((ha) this).field_h <= var10) {
-                            break L13;
+                        L16: while (true) {
+                          if ((((ha) this).field_h ^ -1) >= (var10 ^ -1)) {
+                            break L15;
                           } else {
                             var21 = new byte[64];
                             var17.a(64, 0, -111, var21);
                             ((ha) this).field_q[((ha) this).field_f[var10]] = var21;
                             var10++;
-                            continue L14;
+                            continue L16;
                           }
                         }
                       }
                     }
                     var10 = 0;
-                    L15: while (true) {
+                    L17: while (true) {
                       if (((ha) this).field_h <= var10) {
-                        L16: {
+                        L18: {
                           if (7 > var4) {
                             var10 = 0;
-                            L17: while (true) {
+                            L19: while (true) {
                               if (((ha) this).field_h <= var10) {
                                 var10 = 0;
-                                L18: while (true) {
+                                L20: while (true) {
                                   if (var10 >= ((ha) this).field_h) {
-                                    break L16;
+                                    break L18;
                                   } else {
                                     var11 = ((ha) this).field_f[var10];
                                     var8 = 0;
@@ -221,29 +227,34 @@ final class ha {
                                     var13 = -1;
                                     ((ha) this).field_a[var11] = new int[var12];
                                     var14 = 0;
-                                    L19: while (true) {
+                                    L21: while (true) {
                                       if (var14 >= var12) {
-                                        ((ha) this).field_o[var11] = var13 + 1;
-                                        if (var13 + 1 == var12) {
-                                          ((ha) this).field_a[var11] = null;
-                                          var10++;
-                                          continue L18;
-                                        } else {
-                                          var10++;
-                                          continue L18;
+                                        L22: {
+                                          ((ha) this).field_o[var11] = var13 + 1;
+                                          if ((var13 + 1 ^ -1) == (var12 ^ -1)) {
+                                            ((ha) this).field_a[var11] = null;
+                                            break L22;
+                                          } else {
+                                            break L22;
+                                          }
                                         }
+                                        var10++;
+                                        continue L20;
                                       } else {
-                                        var8 = var8 + var17.i(-118);
-                                        ((ha) this).field_a[var11][var14] = var8 + var17.i(-118);
-                                        var15 = var8 + var17.i(-118);
-                                        if (var13 < var15) {
-                                          var13 = var15;
-                                          var14++;
-                                          continue L19;
-                                        } else {
-                                          var14++;
-                                          continue L19;
+                                        L23: {
+                                          int dupTemp$6 = var8 + var17.i(-118);
+                                          var8 = dupTemp$6;
+                                          ((ha) this).field_a[var11][var14] = dupTemp$6;
+                                          var15 = dupTemp$6;
+                                          if ((var13 ^ -1) > (var15 ^ -1)) {
+                                            var13 = var15;
+                                            break L23;
+                                          } else {
+                                            break L23;
+                                          }
                                         }
+                                        var14++;
+                                        continue L21;
                                       }
                                     }
                                   }
@@ -251,17 +262,17 @@ final class ha {
                               } else {
                                 ((ha) this).field_r[((ha) this).field_f[var10]] = var17.i(46);
                                 var10++;
-                                continue L17;
+                                continue L19;
                               }
                             }
                           } else {
                             var10 = 0;
-                            L20: while (true) {
+                            L24: while (true) {
                               if (((ha) this).field_h <= var10) {
                                 var10 = 0;
-                                L21: while (true) {
+                                L25: while (true) {
                                   if (((ha) this).field_h <= var10) {
-                                    break L16;
+                                    break L18;
                                   } else {
                                     var11 = ((ha) this).field_f[var10];
                                     var8 = 0;
@@ -269,29 +280,34 @@ final class ha {
                                     var13 = -1;
                                     ((ha) this).field_a[var11] = new int[var12];
                                     var14 = 0;
-                                    L22: while (true) {
+                                    L26: while (true) {
                                       if (var14 >= var12) {
-                                        ((ha) this).field_o[var11] = var13 - -1;
-                                        if (1 + var13 == var12) {
-                                          ((ha) this).field_a[var11] = null;
-                                          var10++;
-                                          continue L21;
-                                        } else {
-                                          var10++;
-                                          continue L21;
+                                        L27: {
+                                          ((ha) this).field_o[var11] = var13 - -1;
+                                          if ((1 + var13 ^ -1) != (var12 ^ -1)) {
+                                            break L27;
+                                          } else {
+                                            ((ha) this).field_a[var11] = null;
+                                            break L27;
+                                          }
                                         }
+                                        var10++;
+                                        continue L25;
                                       } else {
-                                        var8 = var8 + var17.e(6715);
-                                        ((ha) this).field_a[var11][var14] = var8 + var17.e(6715);
-                                        var15 = var8 + var17.e(6715);
-                                        if (var13 < var15) {
-                                          var13 = var15;
-                                          var14++;
-                                          continue L22;
-                                        } else {
-                                          var14++;
-                                          continue L22;
+                                        L28: {
+                                          int dupTemp$7 = var8 + var17.e(6715);
+                                          var8 = dupTemp$7;
+                                          ((ha) this).field_a[var11][var14] = dupTemp$7;
+                                          var15 = dupTemp$7;
+                                          if ((var13 ^ -1) > (var15 ^ -1)) {
+                                            var13 = var15;
+                                            break L28;
+                                          } else {
+                                            break L28;
+                                          }
                                         }
+                                        var14++;
+                                        continue L26;
                                       }
                                     }
                                   }
@@ -299,53 +315,53 @@ final class ha {
                               } else {
                                 ((ha) this).field_r[((ha) this).field_f[var10]] = var17.e(6715);
                                 var10++;
-                                continue L20;
+                                continue L24;
                               }
                             }
                           }
                         }
-                        L23: {
+                        L29: {
                           if (var6 == 0) {
-                            break L23;
+                            break L29;
                           } else {
                             ((ha) this).field_j = new qg[var9 - -1];
                             ((ha) this).field_k = new int[var9 + 1][];
                             var10 = 0;
-                            L24: while (true) {
+                            L30: while (true) {
                               if (var10 >= ((ha) this).field_h) {
-                                break L23;
+                                break L29;
                               } else {
                                 var11 = ((ha) this).field_f[var10];
                                 var12 = ((ha) this).field_r[var11];
                                 ((ha) this).field_k[var11] = new int[((ha) this).field_o[var11]];
                                 var13 = 0;
-                                L25: while (true) {
-                                  if (var13 >= ((ha) this).field_o[var11]) {
+                                L31: while (true) {
+                                  if ((var13 ^ -1) <= (((ha) this).field_o[var11] ^ -1)) {
                                     var13 = 0;
-                                    L26: while (true) {
-                                      if (var12 <= var13) {
+                                    L32: while (true) {
+                                      if ((var12 ^ -1) >= (var13 ^ -1)) {
                                         ((ha) this).field_j[var11] = new qg(((ha) this).field_k[var11]);
                                         var10++;
-                                        continue L24;
+                                        continue L30;
                                       } else {
-                                        L27: {
+                                        L33: {
                                           if (null == ((ha) this).field_a[var11]) {
                                             var14 = var13;
-                                            break L27;
+                                            break L33;
                                           } else {
                                             var14 = ((ha) this).field_a[var11][var13];
-                                            break L27;
+                                            break L33;
                                           }
                                         }
                                         ((ha) this).field_k[var11][var14] = var17.e(true);
                                         var13++;
-                                        continue L26;
+                                        continue L32;
                                       }
                                     }
                                   } else {
                                     ((ha) this).field_k[var11][var13] = -1;
                                     var13++;
-                                    continue L25;
+                                    continue L31;
                                   }
                                 }
                               }
@@ -356,13 +372,13 @@ final class ha {
                       } else {
                         ((ha) this).field_s[((ha) this).field_f[var10]] = var17.e(true);
                         var10++;
-                        continue L15;
+                        continue L17;
                       }
                     }
                   } else {
                     ((ha) this).field_b[((ha) this).field_f[var10]] = var17.e(true);
                     var10++;
-                    continue L12;
+                    continue L14;
                   }
                 }
               } else {

@@ -23,7 +23,6 @@ final class bd {
         ak var10 = null;
         aa var11 = null;
         ak var16 = null;
-        ak var16_ref = null;
         aa var17 = null;
         ak var18 = null;
         ak var20 = null;
@@ -383,17 +382,17 @@ final class bd {
                     }
                   } else {
                     L28: {
-                      var16_ref = fm.field_f[var4];
-                      var18 = var16_ref;
+                      var16 = fm.field_f[var4];
+                      var18 = var16;
                       var20 = var18;
                       var22 = var20;
-                      var18 = var16_ref;
-                      if (var16_ref != null) {
+                      var18 = var16;
+                      if (var16 != null) {
                         L29: {
-                          if (-1 == (var16_ref.field_P ^ -1)) {
+                          if (-1 == (var16.field_P ^ -1)) {
                             break L29;
                           } else {
-                            cg.a((byte) -13, var16_ref, var4);
+                            cg.a((byte) -13, var16, var4);
                             break L29;
                           }
                         }

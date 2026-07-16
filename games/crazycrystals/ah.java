@@ -182,122 +182,136 @@ final class ah {
             var6 = 0;
             L0: while (true) {
               if (var6 >= var19.field_i) {
-                var7_ref4 = decompiledCaughtException;
-                var19.field_n[var6] = -5;
-                var6++;
+                hc.field_b.b(0, (jb) (Object) var19);
+                return;
               } else {
                 try {
                   L1: {
                     L2: {
-                      var7_int = param0.h(255);
-                      if (0 == var7_int) {
-                        break L2;
-                      } else {
-                        if (-2 == (var7_int ^ -1)) {
-                          break L2;
+                      L3: {
+                        var7_int = param0.h(255);
+                        if (0 == var7_int) {
+                          break L3;
                         } else {
-                          if (2 != var7_int) {
-                            L3: {
-                              if (-4 == (var7_int ^ -1)) {
-                                break L3;
-                              } else {
-                                if ((var7_int ^ -1) == -5) {
-                                  break L3;
+                          if (-2 == (var7_int ^ -1)) {
+                            break L3;
+                          } else {
+                            if (2 != var7_int) {
+                              L4: {
+                                if (-4 == (var7_int ^ -1)) {
+                                  break L4;
                                 } else {
-                                  var6++;
-                                  break L1;
+                                  if ((var7_int ^ -1) == -5) {
+                                    break L4;
+                                  } else {
+                                    var6++;
+                                    break L2;
+                                  }
                                 }
                               }
-                            }
-                            var21 = param0.i(122);
-                            var22 = param0.i(115);
-                            var10 = param0.h(255);
-                            var11 = new String[var10];
-                            var12_int = 0;
-                            L4: while (true) {
-                              if (var12_int >= var10) {
-                                L5: {
-                                  var25 = new byte[var10][];
-                                  var24 = var25;
-                                  var23 = var24;
-                                  var20 = var23;
-                                  var12 = var20;
-                                  if ((var7_int ^ -1) != -4) {
-                                    break L5;
-                                  } else {
-                                    var13_int = 0;
-                                    L6: while (true) {
-                                      if (var10 <= var13_int) {
-                                        break L5;
-                                      } else {
-                                        var14 = param0.b((byte) 126);
-                                        var12[var13_int] = new byte[var14];
-                                        param0.a(var14, var25[var13_int], (byte) -89, 0);
-                                        var13_int++;
-                                        continue L6;
+                              var21 = param0.i(122);
+                              var22 = param0.i(115);
+                              var10 = param0.h(255);
+                              var11 = new String[var10];
+                              var12_int = 0;
+                              L5: while (true) {
+                                if (var12_int >= var10) {
+                                  L6: {
+                                    var25 = new byte[var10][];
+                                    var24 = var25;
+                                    var23 = var24;
+                                    var20 = var23;
+                                    var12 = var20;
+                                    if ((var7_int ^ -1) != -4) {
+                                      break L6;
+                                    } else {
+                                      var13_int = 0;
+                                      L7: while (true) {
+                                        if (var10 <= var13_int) {
+                                          break L6;
+                                        } else {
+                                          var14 = param0.b((byte) 126);
+                                          var12[var13_int] = new byte[var14];
+                                          param0.a(var14, var25[var13_int], (byte) -89, 0);
+                                          var13_int++;
+                                          continue L7;
+                                        }
                                       }
                                     }
                                   }
-                                }
-                                var19.field_f[var6] = var7_int;
-                                var13 = new Class[var10];
-                                var18 = 0;
-                                var14 = var18;
-                                L7: while (true) {
-                                  if (var18 >= var10) {
-                                    var19.field_m[var6] = param3.a((byte) -93, nh.a((byte) -126, var21), var13, var22);
-                                    var19.field_h[var6] = var25;
-                                    break L1;
-                                  } else {
-                                    var13[var18] = nh.a((byte) 121, var11[var18]);
-                                    var18++;
-                                    continue L7;
+                                  var19.field_f[var6] = var7_int;
+                                  var13 = new Class[var10];
+                                  var18 = 0;
+                                  var14 = var18;
+                                  L8: while (true) {
+                                    if (var18 >= var10) {
+                                      var19.field_m[var6] = param3.a((byte) -93, nh.a((byte) -126, var21), var13, var22);
+                                      var19.field_h[var6] = var25;
+                                      var6++;
+                                      break L2;
+                                    } else {
+                                      var13[var18] = nh.a((byte) 121, var11[var18]);
+                                      var18++;
+                                      continue L8;
+                                    }
                                   }
+                                } else {
+                                  var11[var12_int] = param0.i(116);
+                                  var12_int++;
+                                  continue L5;
                                 }
-                              } else {
-                                var11[var12_int] = param0.i(116);
-                                var12_int++;
-                                continue L4;
                               }
+                            } else {
+                              break L3;
                             }
-                          } else {
-                            break L2;
                           }
                         }
                       }
-                    }
-                    L8: {
-                      var17 = param0.i(111);
-                      var8 = var17;
-                      var16 = param0.i(115);
-                      var9 = var16;
-                      var10 = 0;
-                      if (var7_int != 1) {
-                        break L8;
-                      } else {
-                        var10 = param0.b((byte) 126);
-                        break L8;
+                      L9: {
+                        var17 = param0.i(111);
+                        var8 = var17;
+                        var16 = param0.i(115);
+                        var9 = var16;
+                        var10 = 0;
+                        if (var7_int != 1) {
+                          break L9;
+                        } else {
+                          var10 = param0.b((byte) 126);
+                          break L9;
+                        }
                       }
+                      var19.field_f[var6] = var7_int;
+                      var19.field_g[var6] = var10;
+                      var19.field_k[var6] = param3.a(22, var16, nh.a((byte) -105, var17));
+                      var6++;
+                      break L2;
                     }
-                    var19.field_f[var6] = var7_int;
-                    var19.field_g[var6] = var10;
-                    var19.field_k[var6] = param3.a(22, var16, nh.a((byte) -105, var17));
-                    var6++;
                     break L1;
                   }
-                } catch (java.lang.ClassNotFoundException decompiledCaughtParameter) {
-                  decompiledCaughtException = decompiledCaughtParameter;
-                  var6++;
-                } catch (java.lang.Exception decompiledCaughtParameter) {
-                  decompiledCaughtException = decompiledCaughtParameter;
-                  var7_ref2 = (NullPointerException) (Object) decompiledCaughtException;
-                  var19.field_n[var6] = -3;
-                  var6++;
-                } catch (java.lang.Throwable decompiledCaughtParameter) {
-                  decompiledCaughtException = decompiledCaughtParameter;
-                  var7_ref3 = (Exception) (Object) decompiledCaughtException;
-                  var19.field_n[var6] = -4;
-                  var6++;
+                } catch (java.lang.ClassNotFoundException decompiledCaughtParameter0) {
+                  decompiledCaughtException = decompiledCaughtParameter0;
+                  L10: {
+                    var7 = (ClassNotFoundException) (Object) decompiledCaughtException;
+                    var19.field_n[var6] = -1;
+                    var6++;
+                    break L10;
+                  }
+                } catch (java.lang.Exception decompiledCaughtParameter3) {
+                  decompiledCaughtException = decompiledCaughtParameter3;
+                  L13: {
+                    var7_ref3 = (Exception) (Object) decompiledCaughtException;
+                    var19.field_n[var6] = -4;
+                    var6++;
+                    break L13;
+                  }
+                } catch (java.lang.Throwable decompiledCaughtParameter4) {
+                  decompiledCaughtException = decompiledCaughtParameter4;
+                  L14: {
+                    var7_ref4 = decompiledCaughtException;
+                    var19.field_n[var6] = -5;
+                    var6++;
+                    break L14;
+                  }
                 }
                 continue L0;
               }
@@ -440,145 +454,54 @@ final class ah {
             int var7 = 0;
             Object var8 = null;
             String stackIn_9_0 = null;
+            Throwable decompiledCaughtException = null;
             String stackOut_8_0 = null;
-            int statePc = 0;
-            Throwable caughtException = null;
-            stateLoop: while (true) {
-                switch (statePc) {
-                    case 0: {
-                        var7 = CrazyCrystals.field_B;
-                        statePc = 1;
-                        continue stateLoop;
-                    }
-                    case 1: {
-                        try {
-                            var3 = (String) hi.a(param1, "getcookies", -92);
-                            if (param0) {
-                                statePc = 3;
-                            } else {
-                                statePc = 2;
-                            }
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_1) {
-                            caughtException = stateCaught_1;
-                            statePc = 12;
-                            continue stateLoop;
-                        }
-                    }
-                    case 2: {
-                        try {
-                            var8 = null;
-                            ah.a(33, (String) null, (java.applet.Applet) null);
-                            statePc = 3;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_2) {
-                            caughtException = stateCaught_2;
-                            statePc = 12;
-                            continue stateLoop;
-                        }
-                    }
-                    case 3: {
-                        try {
-                            var4 = ik.a(var3, (byte) -76, ';');
-                            var5 = 0;
-                            statePc = 4;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_3) {
-                            caughtException = stateCaught_3;
-                            statePc = 12;
-                            continue stateLoop;
-                        }
-                    }
-                    case 4: {
-                        try {
-                            if (var5 >= var4.length) {
-                                statePc = 13;
-                            } else {
-                                statePc = 5;
-                            }
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_4) {
-                            caughtException = stateCaught_4;
-                            statePc = 12;
-                            continue stateLoop;
-                        }
-                    }
-                    case 5: {
-                        try {
-                            var6 = var4[var5].indexOf('=');
-                            if (0 > var6) {
-                                statePc = 10;
-                            } else {
-                                statePc = 6;
-                            }
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_5) {
-                            caughtException = stateCaught_5;
-                            statePc = 12;
-                            continue stateLoop;
-                        }
-                    }
-                    case 6: {
-                        try {
-                            if (var4[var5].substring(0, var6).trim().equals((Object) (Object) param2)) {
-                                statePc = 8;
-                            } else {
-                                statePc = 7;
-                            }
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_6) {
-                            caughtException = stateCaught_6;
-                            statePc = 12;
-                            continue stateLoop;
-                        }
-                    }
-                    case 7: {
-                        try {
-                            statePc = 10;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_7) {
-                            caughtException = stateCaught_7;
-                            statePc = 12;
-                            continue stateLoop;
-                        }
-                    }
-                    case 8: {
-                        try {
-                            stackOut_8_0 = var4[var5].substring(1 + var6).trim();
-                            stackIn_9_0 = stackOut_8_0;
-                            statePc = 9;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_8) {
-                            caughtException = stateCaught_8;
-                            statePc = 12;
-                            continue stateLoop;
-                        }
-                    }
-                    case 9: {
-                        return stackIn_9_0;
-                    }
-                    case 10: {
-                        try {
-                            var5++;
-                            statePc = 4;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_10) {
-                            caughtException = stateCaught_10;
-                            statePc = 12;
-                            continue stateLoop;
-                        }
-                    }
-                    case 12: {
-                        var3_ref = caughtException;
-                        statePc = 13;
-                        continue stateLoop;
-                    }
-                    case 13: {
-                        return null;
-                    }
-                    default: throw new IllegalStateException("invalid CFG state " + statePc);
+            var7 = CrazyCrystals.field_B;
+            try {
+              L0: {
+                L1: {
+                  var3 = (String) hi.a(param1, "getcookies", -92);
+                  if (param0) {
+                    break L1;
+                  } else {
+                    var8 = null;
+                    ah.a(33, (String) null, (java.applet.Applet) null);
+                    break L1;
+                  }
                 }
+                var4 = ik.a(var3, (byte) -76, ';');
+                var5 = 0;
+                L2: while (true) {
+                  if (var5 >= var4.length) {
+                    break L0;
+                  } else {
+                    L3: {
+                      var6 = var4[var5].indexOf('=');
+                      if (0 > var6) {
+                        break L3;
+                      } else {
+                        if (var4[var5].substring(0, var6).trim().equals((Object) (Object) param2)) {
+                          stackOut_8_0 = var4[var5].substring(1 + var6).trim();
+                          stackIn_9_0 = stackOut_8_0;
+                          return stackIn_9_0;
+                        } else {
+                          break L3;
+                        }
+                      }
+                    }
+                    var5++;
+                    continue L2;
+                  }
+                }
+              }
+            } catch (java.lang.Throwable decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              L4: {
+                var3_ref = decompiledCaughtException;
+                break L4;
+              }
             }
+            return null;
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
@@ -617,8 +540,9 @@ final class ah {
                 ((ah) this).field_j = 0;
                 break L1;
               } else {
+                int fieldTemp$2 = ((ah) this).field_j;
                 ((ah) this).field_j = ((ah) this).field_j + 1;
-                ((ah) this).field_c[((ah) this).field_j] = (byte) 0;
+                ((ah) this).field_c[fieldTemp$2] = (byte) 0;
                 continue L2;
               }
             }
@@ -651,8 +575,9 @@ final class ah {
               }
             }
           } else {
+            int fieldTemp$3 = ((ah) this).field_j;
             ((ah) this).field_j = ((ah) this).field_j + 1;
-            ((ah) this).field_c[((ah) this).field_j] = (byte) 0;
+            ((ah) this).field_c[fieldTemp$3] = (byte) 0;
             continue L3;
           }
         }

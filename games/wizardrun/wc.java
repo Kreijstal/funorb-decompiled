@@ -52,24 +52,48 @@ final class wc {
     }
 
     final int a(byte param0) {
-        if (!((wc) this).field_a) {
-            // if_icmpne L30
-            // if_icmpgt L28
-        } else {
-            return 2;
-        }
-        if (param0 != 102) {
-            ((wc) this).field_i = -108;
-        }
-        if (!((tg.field_e ^ -1L) != (((wc) this).field_e ^ -1L))) {
-            return 1;
-        }
-        if (jg.field_k == 2) {
-            if (aa.a(((wc) this).field_b, (byte) -85)) {
-                return 1;
+        L0: {
+          if (((wc) this).field_a) {
+            break L0;
+          } else {
+            L1: {
+              if (((wc) this).field_i != 2) {
+                break L1;
+              } else {
+                if (-1 > (((wc) this).field_g ^ -1)) {
+                  break L0;
+                } else {
+                  break L1;
+                }
+              }
             }
+            L2: {
+              if (param0 == 102) {
+                break L2;
+              } else {
+                ((wc) this).field_i = -108;
+                break L2;
+              }
+            }
+            if ((tg.field_e ^ -1L) == (((wc) this).field_e ^ -1L)) {
+              return 1;
+            } else {
+              L3: {
+                if (jg.field_k != 2) {
+                  break L3;
+                } else {
+                  if (!aa.a(((wc) this).field_b, (byte) -85)) {
+                    break L3;
+                  } else {
+                    return 1;
+                  }
+                }
+              }
+              return 0;
+            }
+          }
         }
-        return 0;
+        return 2;
     }
 
     wc(boolean param0) {

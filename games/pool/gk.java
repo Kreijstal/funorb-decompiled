@@ -88,6 +88,7 @@ final class gk extends tj implements tb {
             var11.field_z = (fp) (Object) new am(qk.field_a, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true);
             ((gk) this).a(true, var11);
             ((gk) this).field_gb = this.a(2391, hi.field_i, (cc) this);
+            return;
           } else {
             if (param1 == ni.field_eb) {
               var9 = de.field_c;
@@ -102,6 +103,7 @@ final class gk extends tj implements tb {
               var10.field_z = (fp) (Object) new am(qk.field_a, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true);
               ((gk) this).a(true, var10);
               ((gk) this).field_gb = this.a(2391, hi.field_i, (cc) this);
+              return;
             } else {
               var8 = new ei((String) var7, (cc) null);
               var8.field_y = 80;
@@ -111,6 +113,7 @@ final class gk extends tj implements tb {
               var8.field_z = (fp) (Object) new am(qk.field_a, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true);
               ((gk) this).a(true, var8);
               ((gk) this).field_gb = this.a(2391, hi.field_i, (cc) this);
+              return;
             }
           }
         } else {
@@ -123,6 +126,7 @@ final class gk extends tj implements tb {
           var6.field_z = (fp) (Object) new am(qk.field_a, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true);
           ((gk) this).a(true, var6);
           ((gk) this).field_gb = this.a(2391, hi.field_i, (cc) this);
+          return;
         }
     }
 

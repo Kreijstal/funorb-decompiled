@@ -91,12 +91,12 @@ final class rf {
             hq.field_b[4] = new nm(param2, "fans", "fan05_cheer");
             var5 = 0;
             L2: while (true) {
-              if (var5 <= -6) {
+              if ((var5 ^ -1) <= -6) {
                 return;
               } else {
                 var6 = 0;
                 L3: while (true) {
-                  if (-18 <= var6) {
+                  if (-18 >= (var6 ^ -1)) {
                     var5++;
                     continue L2;
                   } else {
@@ -106,8 +106,9 @@ final class rf {
                         var6++;
                         continue L3;
                       } else {
+                        int incrementValue$1 = var7;
                         var7++;
-                        pv.field_I[var5][var6] = pv.field_I[var7][var6];
+                        pv.field_I[var5][var6] = pv.field_I[incrementValue$1][var6];
                         continue L4;
                       }
                     }

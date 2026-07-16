@@ -82,90 +82,92 @@ abstract class im extends bb {
               }
             }
           } else {
-            if (var8 >= ph.field_c) {
-              if (ph.field_h > var8) {
-                L4: {
-                  var9 = var5 - -((-var5 + var6) * var7 / var4);
-                  var10 = 0;
-                  var11 = ((im) this).field_p;
-                  if (-21 > (var7 ^ -1)) {
-                    break L4;
-                  } else {
-                    L5: while (true) {
-                      if (var10 > 20) {
-                        break L4;
-                      } else {
-                        var12 = (-var7 + 20) * (-var7 + 20) + (20 + -var10) * (20 + -var10);
-                        if (var12 >= -463) {
-                          if (-421 > var12) {
-                            break L4;
-                          } else {
-                            var13 = (462 + -var12) * var9 / 42;
-                            var13 = var13 | (var13 << 1670508872 | var13 << 129677552);
-                            ph.field_e[var10 + (param1 + var8 * ph.field_j)] = var13;
-                            var10++;
-                            continue L5;
-                          }
-                        } else {
-                          var10++;
-                          continue L5;
-                        }
-                      }
-                    }
-                  }
-                }
-                L6: {
-                  if (var7 >= -21) {
-                    var12 = var11;
-                    var11 -= 21;
-                    var13 = 0;
-                    L7: while (true) {
-                      L8: {
-                        if (-21 < var13) {
-                          break L8;
-                        } else {
-                          var14 = (-var7 + 20) * (-var7 + 20) + var13 * var13;
-                          if (var14 <= 462) {
-                            if (420 <= var14) {
-                              var15 = (462 - var14) * var9 / 42;
-                              var15 = var15 | (var15 << -432517272 | var15 << 678802064);
-                              ph.field_e[param1 + (var8 * ph.field_j - -var11)] = var15;
-                              var11++;
-                              var13++;
-                              continue L7;
-                            } else {
-                              var12 = 1 + var11;
-                              var11++;
-                              var13++;
-                              continue L7;
-                            }
-                          } else {
-                            break L8;
-                          }
-                        }
-                      }
-                      var11 = var12;
-                      break L6;
-                    }
-                  } else {
-                    break L6;
-                  }
-                }
-                var9 = var9 | (var9 << 1399942928 | var9 << 904071048);
-                ph.b(var10 + param1, var8, -var10 + var11, var9);
-                var7++;
-                var8++;
-                continue L1;
+            L4: {
+              if (var8 < ph.field_c) {
+                break L4;
               } else {
-                var7++;
-                var8++;
-                continue L1;
+                if ((ph.field_h ^ -1) >= (var8 ^ -1)) {
+                  break L4;
+                } else {
+                  L5: {
+                    var9 = var5 - -((-var5 + var6) * var7 / var4);
+                    var10 = 0;
+                    var11 = ((im) this).field_p;
+                    if (-21 > (var7 ^ -1)) {
+                      break L5;
+                    } else {
+                      L6: while (true) {
+                        if (var10 > 20) {
+                          break L5;
+                        } else {
+                          L7: {
+                            var12 = (-var7 + 20) * (-var7 + 20) + (20 + -var10) * (20 + -var10);
+                            if ((var12 ^ -1) < -463) {
+                              break L7;
+                            } else {
+                              if (-421 < (var12 ^ -1)) {
+                                break L5;
+                              } else {
+                                var13 = (462 + -var12) * var9 / 42;
+                                var13 = var13 | (var13 << 1670508872 | var13 << 129677552);
+                                ph.field_e[var10 + (param1 + var8 * ph.field_j)] = var13;
+                                break L7;
+                              }
+                            }
+                          }
+                          var10++;
+                          continue L6;
+                        }
+                      }
+                    }
+                  }
+                  L8: {
+                    if ((var7 ^ -1) >= -21) {
+                      var12 = var11;
+                      var11 -= 21;
+                      var13 = 0;
+                      L9: while (true) {
+                        L10: {
+                          if (-21 > (var13 ^ -1)) {
+                            break L10;
+                          } else {
+                            var14 = (-var7 + 20) * (-var7 + 20) + var13 * var13;
+                            if (var14 <= 462) {
+                              L11: {
+                                if (420 <= var14) {
+                                  var15 = (462 - var14) * var9 / 42;
+                                  var15 = var15 | (var15 << -432517272 | var15 << 678802064);
+                                  ph.field_e[param1 + (var8 * ph.field_j - -var11)] = var15;
+                                  break L11;
+                                } else {
+                                  var12 = 1 + var11;
+                                  break L11;
+                                }
+                              }
+                              var11++;
+                              var13++;
+                              continue L9;
+                            } else {
+                              break L10;
+                            }
+                          }
+                        }
+                        var11 = var12;
+                        break L8;
+                      }
+                    } else {
+                      break L8;
+                    }
+                  }
+                  var9 = var9 | (var9 << 1399942928 | var9 << 904071048);
+                  ph.b(var10 + param1, var8, -var10 + var11, var9);
+                  break L4;
+                }
               }
-            } else {
-              var7++;
-              var8++;
-              continue L1;
             }
+            var7++;
+            var8++;
+            continue L1;
           }
         }
     }
@@ -252,8 +254,9 @@ abstract class im extends bb {
         if (0 < ((im) this).field_K) {
             var2 = ((im) this).field_G;
             var3 = ((im) this).field_H;
+            int fieldTemp$0 = ((im) this).field_F + 1;
             ((im) this).field_F = ((im) this).field_F + 1;
-            if (((im) this).field_K <= ((im) this).field_F + 1) {
+            if (((im) this).field_K <= fieldTemp$0) {
                 ((im) this).field_K = 0;
                 ((im) this).g((byte) 124);
             } else {

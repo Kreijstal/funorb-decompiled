@@ -21,7 +21,7 @@ final class uh extends qb {
         var8 = new dh(param5, param3, param0, param6, param4, param7);
         vb.field_c.a((qb) (Object) var8, 27362);
         if (param1 <= 49) {
-          field_i = (java.applet.Applet) null;
+          field_i = null;
           ke.a(var8, param2, 21719);
           return var8;
         } else {
@@ -40,7 +40,7 @@ final class uh extends qb {
     final static kc[] a(int param0, qk param1, int param2, byte param3) {
         if (tc.a(param0, param2, param3 + 25552, param1)) {
           if (param3 != -73) {
-            field_n = (de) null;
+            field_n = null;
             return ol.s(-106);
           } else {
             return ol.s(-106);
@@ -86,7 +86,7 @@ final class uh extends qb {
 
     final static void b(byte param0) {
         if (param0 > -62) {
-            field_l = (Random) null;
+            field_l = null;
         }
     }
 
@@ -94,7 +94,7 @@ final class uh extends qb {
         field_n = null;
         field_l = null;
         if (param0 != -12908) {
-            field_l = (Random) null;
+            field_l = null;
             field_i = null;
             return;
         }
@@ -109,30 +109,36 @@ final class uh extends qb {
             String var9 = null;
             Throwable decompiledCaughtException = null;
             try {
-              var8 = param4.getParameter("cookiehost");
-              var7 = var8;
-              var7 = var8;
-              var9 = param2 + "=" + param3 + "; version=1; path=/; domain=" + var8;
-              var7 = var9;
-              var7 = var9;
-              if (param1 > 95) {
-                L0: {
-                  if (0L <= param0) {
-                    var7 = var9 + "; Expires=" + h.a(-60, id.a(106) + param0 * 1000L) + "; Max-Age=" + param0;
-                    break L0;
-                  } else {
-                    var7 = var9 + "; Discard;";
-                    break L0;
+              L0: {
+                var8 = param4.getParameter("cookiehost");
+                var7 = var8;
+                var7 = var8;
+                var9 = param2 + "=" + param3 + "; version=1; path=/; domain=" + var8;
+                var7 = var9;
+                var7 = var9;
+                if (param1 > 95) {
+                  L1: {
+                    if (0L <= param0) {
+                      var7 = var9 + "; Expires=" + h.a(-60, id.a(106) + param0 * 1000L) + "; Max-Age=" + param0;
+                      break L1;
+                    } else {
+                      var7 = var9 + "; Discard;";
+                      break L1;
+                    }
                   }
+                  vh.a(param4, "document.cookie=\"" + var7 + "\"", -12300);
+                  break L0;
+                } else {
+                  return;
                 }
-                vh.a(param4, "document.cookie=\"" + var7 + "\"", -12300);
-              } else {
-                return;
               }
-            } catch (java.lang.Throwable decompiledCaughtParameter) {
-              decompiledCaughtException = decompiledCaughtParameter;
+            } catch (java.lang.Throwable decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              L2: {
+                var6 = decompiledCaughtException;
+                break L2;
+              }
             }
-            var6 = decompiledCaughtException;
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {

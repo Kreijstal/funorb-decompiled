@@ -483,7 +483,7 @@ final class cd extends pk {
         var6.c(param4, (byte) 83);
         int var9 = param0;
         if (!(!param2)) {
-            // wide iinc 9 128
+            var9 += 128;
         }
         var6.c(var9, (byte) 81);
         var6.a(param1, (byte) -45, 0, param1.length);

@@ -2,6 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 import java.util.*;
+import java.awt.Canvas;
 
 public final class Main extends c {
     uh field_cb;
@@ -244,7 +245,7 @@ public final class Main extends c {
           if (param0 == 16777215) {
             break L5;
           } else {
-            ((Main) this).field_X = (bk) null;
+            ((Main) this).field_X = null;
             break L5;
           }
         }
@@ -534,7 +535,7 @@ public final class Main extends c {
 
     private final int j(int param0) {
         if (param0 != 0) {
-            int[] var3 = (int[]) null;
+            Object var3 = null;
             boolean discarded$0 = Main.a((byte) -61, (int[]) null);
         }
         return ((Main) this).field_Y & 15;
@@ -568,16 +569,19 @@ public final class Main extends c {
         int var3 = ((Main) this).field_H.length + -1;
         int var4 = 19;
         while (var3 >= 0) {
+            int incrementValue$0 = var3;
             var3--;
-            ((Main) this).field_H[var3] = (byte)var4;
+            ((Main) this).field_H[incrementValue$0] = (byte)var4;
+            int incrementValue$1 = var3;
             var3--;
-            ((Main) this).field_H[var3] = (byte)var4;
+            ((Main) this).field_H[incrementValue$1] = (byte)var4;
             var4--;
         }
         var3 = ((Main) this).field_H.length;
         while (-1 > (var3 ^ -1)) {
+            int incrementValue$2 = var3;
             var3--;
-            var4 = sj.a(10999, var3, uh.field_l);
+            var4 = sj.a(10999, incrementValue$2, uh.field_l);
             var5 = ((Main) this).field_H[var3];
             ((Main) this).field_H[var3] = ((Main) this).field_H[var4];
             ((Main) this).field_H[var4] = (byte)var5;
@@ -876,10 +880,11 @@ public final class Main extends c {
                         if (((Main) this).field_X.a((byte) 74) == null) {
                           break L19;
                         } else {
+                          int fieldTemp$3 = ((Main) this).field_B + 1;
                           ((Main) this).field_B = ((Main) this).field_B + 1;
-                          if ((((Main) this).field_B + 1 ^ -1) == -336) {
+                          if ((fieldTemp$3 ^ -1) == -336) {
                             ((Main) this).field_B = 0;
-                            qb discarded$2 = ((Main) this).field_X.d(-89);
+                            qb discarded$4 = ((Main) this).field_X.d(-89);
                             break L19;
                           } else {
                             break L19;
@@ -907,7 +912,7 @@ public final class Main extends c {
                     nb.field_e = nb.field_e & (rg.field_e ^ -1);
                     ue.field_d = ue.field_d & (rg.field_e ^ -1);
                     db.field_m = db.field_m | rg.field_e;
-                    var4 = (dh) ij.field_h.a((byte) 74);
+                    var4 = (dh) (Object) ij.field_h.a((byte) 74);
                     L20: while (true) {
                       if (var4 == null) {
                         L21: {
@@ -924,7 +929,7 @@ public final class Main extends c {
                         break L6;
                       } else {
                         ii.a(var4, 4, 8192);
-                        var4 = (dh) ij.field_h.b((byte) -98);
+                        var4 = (dh) (Object) ij.field_h.b((byte) -98);
                         continue L20;
                       }
                     }
@@ -934,7 +939,7 @@ public final class Main extends c {
             } else {
               ((Main) this).k((byte) -100);
               if (ri.b((byte) 38)) {
-                int discarded$3 = this.b(false, (byte) -59);
+                int discarded$5 = this.b(false, (byte) -59);
                 break L6;
               } else {
                 break L6;
@@ -1041,8 +1046,9 @@ public final class Main extends c {
                             }
                           }
                         }
+                        int incrementValue$4 = var3;
                         var3++;
-                        var9[var3] = (short)var6;
+                        var9[incrementValue$4] = (short)var6;
                         break L3;
                       }
                       L5: {
@@ -1052,8 +1058,9 @@ public final class Main extends c {
                           if (((Main) this).field_H[6 + var7] == -1) {
                             break L5;
                           } else {
+                            int incrementValue$5 = var3;
                             var3++;
-                            var9[var3] = (short)var6;
+                            var9[incrementValue$5] = (short)var6;
                             break L5;
                           }
                         }
@@ -1085,8 +1092,9 @@ public final class Main extends c {
                         }
                       }
                     }
+                    int incrementValue$6 = var3;
                     var3++;
-                    var9[var3] = (short)var6;
+                    var9[incrementValue$6] = (short)var6;
                     break L7;
                   }
                   L9: {
@@ -1096,8 +1104,9 @@ public final class Main extends c {
                       if ((((Main) this).field_H[var7 - -1] ^ -1) == 0) {
                         break L9;
                       } else {
+                        int incrementValue$7 = var3;
                         var3++;
-                        var9[var3] = (short)var6;
+                        var9[incrementValue$7] = (short)var6;
                         break L9;
                       }
                     }
@@ -1381,7 +1390,7 @@ public final class Main extends c {
         int var4 = 0;
         Throwable decompiledCaughtException = null;
         var4 = field_T;
-        if (null != ((le) param1).field_e) {
+        if (null != param1.field_e) {
           L0: {
             var3_int = 0;
             if (param2 > 101) {
@@ -1396,7 +1405,7 @@ public final class Main extends c {
               if ((var3_int ^ -1) <= -51) {
                 break L2;
               } else {
-                if (null == ((le) param1).field_e.peekEvent()) {
+                if (null == param1.field_e.peekEvent()) {
                   break L2;
                 } else {
                   wk.a((byte) -107, 1L);
@@ -1407,17 +1416,24 @@ public final class Main extends c {
             }
             try {
               L3: {
-                if (param0 != null) {
-                  ((le) param1).field_e.postEvent((java.awt.AWTEvent) (Object) new java.awt.event.ActionEvent(param0, 1001, "dummy"));
-                  break L3;
-                } else {
-                  break L3;
+                L4: {
+                  if (param0 != null) {
+                    param1.field_e.postEvent((java.awt.AWTEvent) (Object) new java.awt.event.ActionEvent(param0, 1001, "dummy"));
+                    break L4;
+                  } else {
+                    break L4;
+                  }
                 }
+                break L3;
               }
-            } catch (java.lang.Exception decompiledCaughtParameter) {
-              decompiledCaughtException = decompiledCaughtParameter;
+            } catch (java.lang.Exception decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              L5: {
+                var3 = (Exception) (Object) decompiledCaughtException;
+                break L5;
+              }
             }
-            var3 = (Exception) (Object) decompiledCaughtException;
+            return;
           }
         } else {
           return;
@@ -1606,7 +1622,7 @@ public final class Main extends c {
             break L0;
           }
         }
-        ((oh) (Object) stackIn_3_0).c((String) (Object) stackIn_3_1, stackIn_3_2, stackIn_3_3, stackIn_3_4, -1);
+        ((oh) (Object) stackIn_3_0).c(stackIn_3_1, stackIn_3_2, stackIn_3_3, stackIn_3_4, -1);
         if (param1 == 2) {
           L1: {
             var3 = "";
@@ -1624,7 +1640,7 @@ public final class Main extends c {
           }
           L2: {
             qa.field_b.c(var3, 148, 134, 16777215, -1);
-            var4 = (hh) ((Main) this).field_X.a((byte) 74);
+            var4 = (hh) (Object) ((Main) this).field_X.a((byte) 74);
             if (var4 != null) {
               L3: {
                 var6 = ((Main) this).field_B;
@@ -1641,8 +1657,8 @@ public final class Main extends c {
                   }
                 }
               }
-              qk.field_a[((hh) var4).field_h].a(8, var5);
-              qa.field_b.b(ge.field_b[((hh) var4).field_h], 45, var5 - -qa.field_b.field_s, 0, -1);
+              qk.field_a[var4.field_h].a(8, var5);
+              qa.field_b.b(ge.field_b[var4.field_h], 45, var5 - -qa.field_b.field_s, 0, -1);
               break L2;
             } else {
               break L2;
@@ -1964,7 +1980,7 @@ public final class Main extends c {
     private final void v(int param0) {
         h.a(param0 ^ -17429, 50);
         if (param0 != 256) {
-            ((Main) this).field_Z = (String) null;
+            ((Main) this).field_Z = null;
         }
         mg.a(50, true);
         sc.a((byte) 42, lc.field_a[0]);
@@ -1974,7 +1990,7 @@ public final class Main extends c {
     }
 
     private final int b(boolean param0, byte param1) {
-        da var3_ref = null;
+        da var3_ref_da = null;
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
@@ -1982,7 +1998,7 @@ public final class Main extends c {
         int[] var8 = null;
         int var9_int = 0;
         hg var9 = null;
-        kc var10_ref = null;
+        kc var10_ref_kc = null;
         int var10 = 0;
         int var11_int = 0;
         kc var11 = null;
@@ -2061,12 +2077,12 @@ public final class Main extends c {
           if (null != ll.field_e) {
             ug.a(85.0f, 105, j.field_A);
             ((Main) this).b((byte) 59);
-            var3_ref = new da(sh.field_g, fb.field_a);
+            var3_ref_da = new da(sh.field_g, fb.field_a);
             sh.field_g = null;
             fb.field_a = null;
-            lc.field_a[0] = new uf(gg.a("music/36 Card Trick - Title Screen Music", var3_ref, ll.field_e, -16351, ""));
-            lc.field_a[1] = new uf(gg.a("music/36 Card Trick - In-game Music", var3_ref, ll.field_e, -16351, ""));
-            lc.field_a[2] = new uf(gg.a("music/36 Card Trick - Pause Screen", var3_ref, ll.field_e, -16351, ""));
+            lc.field_a[0] = new uf(gg.a("music/36 Card Trick - Title Screen Music", var3_ref_da, ll.field_e, -16351, ""));
+            lc.field_a[1] = new uf(gg.a("music/36 Card Trick - In-game Music", var3_ref_da, ll.field_e, -16351, ""));
+            lc.field_a[2] = new uf(gg.a("music/36 Card Trick - Pause Screen", var3_ref_da, ll.field_e, -16351, ""));
             ll.field_e = null;
             var4 = 0;
             L0: while (true) {
@@ -2095,34 +2111,34 @@ public final class Main extends c {
                 gf.field_e.a(200);
                 ((Main) this).field_I = gl.a("tiles", mh.field_c, "", -13244);
                 var52 = lh.a("canyonmask2", mh.field_c, "", 120);
-                var7 = ((wb) var52).field_c;
+                var7 = var52.field_c;
                 var52.field_c = 0;
-                var52.field_f = ((wb) var52).field_b;
+                var52.field_f = var52.field_b;
                 td.field_c[0] = new kc(415, 415);
                 td.field_c[0].c();
                 vj.c(0, 0, 415, 415, 9351922);
-                ((wb) var52).field_j[1] = 8024722;
+                var52.field_j[1] = 8024722;
                 var52.a(0, var7);
                 vj.b(0, 261, 415, 154, 8090514, 11373689);
                 lh.a("hs", mh.field_c, "", -89).a(0, 0);
                 td.field_c[3] = new kc(415, 415);
                 td.field_c[3].c();
                 vj.c(0, 0, 415, 415, 10932727);
-                ((wb) var52).field_j[1] = 9675196;
+                var52.field_j[1] = 9675196;
                 var52.a(0, var7);
                 vj.b(0, 261, 415, 154, 9675196, 11645356);
                 lh.a("atl", mh.field_c, "", -108).a(0, 0);
                 td.field_c[5] = new kc(415, 415);
                 td.field_c[5].c();
                 vj.c(0, 0, 415, 415, 13869944);
-                ((wb) var52).field_j[1] = 11698531;
+                var52.field_j[1] = 11698531;
                 var52.a(0, var7);
                 vj.b(0, 261, 415, 154, 11698531, 13734228);
                 lh.a("atg", mh.field_c, "", -21).a(0, 0);
                 td.field_c[4] = new kc(415, 415);
                 td.field_c[4].c();
                 vj.c(0, 0, 415, 415, 10211583);
-                ((wb) var52).field_j[1] = 5081598;
+                var52.field_j[1] = 5081598;
                 var52.a(0, var7);
                 vj.b(0, 261, 415, 154, 5081598, 11974562);
                 lh.a("ld", mh.field_c, "", -96).a(0, 0);
@@ -2136,18 +2152,21 @@ public final class Main extends c {
                   if (var53.length <= var9_int) {
                     ij.a(vb.field_k, (byte) 124);
                     mg.field_j = new kc[9];
-                    mg.field_j[8] = new kc(4, 4);
-                    mg.field_j[6] = new kc(4, 4);
-                    mg.field_j[2] = new kc(4, 4);
-                    mg.field_j[0] = new kc(4, 4);
+                    kc dupTemp$6 = new kc(4, 4);
+                    mg.field_j[8] = dupTemp$6;
+                    mg.field_j[6] = dupTemp$6;
+                    mg.field_j[2] = dupTemp$6;
+                    mg.field_j[0] = dupTemp$6;
                     mg.field_j[0].c();
                     vj.c(0, 0, vj.field_l, vj.field_g, 6962948);
-                    mg.field_j[7] = new kc(256, 4);
-                    mg.field_j[1] = new kc(256, 4);
+                    kc dupTemp$7 = new kc(256, 4);
+                    mg.field_j[7] = dupTemp$7;
+                    mg.field_j[1] = dupTemp$7;
                     mg.field_j[1].c();
                     vj.c(0, 0, vj.field_l, vj.field_g, 6962948);
-                    mg.field_j[5] = new kc(4, 256);
-                    mg.field_j[3] = new kc(4, 256);
+                    kc dupTemp$8 = new kc(4, 256);
+                    mg.field_j[5] = dupTemp$8;
+                    mg.field_j[3] = dupTemp$8;
                     mg.field_j[3].c();
                     vj.c(0, 0, vj.field_l, vj.field_g, 6962948);
                     var62 = ce.a(-126, "woodpal", "", mh.field_c).field_r;
@@ -2170,8 +2189,8 @@ public final class Main extends c {
                             var12.c();
                             vj.b(0, 0, 640, 300, 21670, 39641);
                             var13 = lh.a("canyonmask", mh.field_c, "", 127);
-                            var14 = ((wb) var13).field_c;
-                            var13.field_f = ((wb) var13).field_b;
+                            var14 = var13.field_c;
+                            var13.field_f = var13.field_b;
                             var13.field_c = 0;
                             di.a(var13, 4997716, 0, 5000797, 13449, var14);
                             vj.b(0, 316, 640, 164, 5066333, 9336387);
@@ -2306,10 +2325,10 @@ public final class Main extends c {
                             gf.field_e.a(200);
                             tc.field_a = new kc[9];
                             var28 = new kc(2, 2);
-                            var29 = ((kc) var28).field_r;
-                            var30 = ((kc) var28).field_r;
-                            ((kc) var28).field_r[3] = 7750664;
-                            var31 = ((kc) var28).field_r;
+                            var29 = var28.field_r;
+                            var30 = var28.field_r;
+                            var28.field_r[3] = 7750664;
+                            var31 = var28.field_r;
                             var31[2] = 7750664;
                             var29[0] = 7750664;
                             var30[1] = 7750664;
@@ -2410,8 +2429,8 @@ public final class Main extends c {
                       }
                     }
                   } else {
-                    var10_ref = var53[var9_int];
-                    ij.a(var10_ref, (byte) 123);
+                    var10_ref_kc = var53[var9_int];
+                    ij.a(var10_ref_kc, (byte) 123);
                     var9_int++;
                     continue L1;
                   }
@@ -2426,7 +2445,7 @@ public final class Main extends c {
                     ff.field_b = -1;
                     dj.field_a = 2;
                     var56 = ia.field_c[15];
-                    la.field_k = new kc(((kc) var56).field_p, ((kc) var56).field_o);
+                    la.field_k = new kc(var56.field_p, var56.field_o);
                     la.field_k.c();
                     var4 = 40 / ((param1 - 23) / 52);
                     var56.c(0, 0, 4405028);
@@ -2508,13 +2527,13 @@ public final class Main extends c {
                                                 jd.field_c[14] = ig.a(fb.field_a, "", "chicken").c();
                                                 jd.field_c[15] = uj.a(sh.field_g, "", "menu_click").a();
                                                 var47 = uj.a(sh.field_g, "", "score-count").a();
-                                                var47.field_k = ((ib) var47).field_h.length;
+                                                var47.field_k = var47.field_h.length;
                                                 ve.field_c = li.a(var47, 100, 30);
                                                 ve.field_c.e(-1);
                                                 var48 = new ib(jd.field_c[15].field_l, jd.field_c[15].field_h.length + 1000);
-                                                og.a(jd.field_c[15].field_h, 0, ((ib) var48).field_h, 0, jd.field_c[15].field_h.length);
+                                                og.a(jd.field_c[15].field_h, 0, var48.field_h, 0, jd.field_c[15].field_h.length);
                                                 lh.field_d = li.a(var48, 100, 96);
-                                                lh.field_d.c(0, ((ib) var48).field_h.length);
+                                                lh.field_d.c(0, var48.field_h.length);
                                                 lh.field_d.e(0);
                                                 var5 = 0;
                                                 L13: while (true) {
@@ -2532,7 +2551,7 @@ public final class Main extends c {
                                                       if (var49 != null) {
                                                         stackOut_31_0 = (int[]) (Object) stackIn_31_0;
                                                         stackOut_31_1 = stackIn_31_1;
-                                                        stackOut_31_2 = 1000 * ((ib) var49).field_h.length / ((ib) var49).field_l;
+                                                        stackOut_31_2 = 1000 * var49.field_h.length / var49.field_l;
                                                         stackIn_32_0 = stackOut_31_0;
                                                         stackIn_32_1 = stackOut_31_1;
                                                         stackIn_32_2 = stackOut_31_2;
@@ -2869,7 +2888,7 @@ public final class Main extends c {
               break L0;
             }
           }
-          var7 = (Object) (Object) stackIn_5_0;
+          var7 = stackIn_5_0;
           var2 = var7;
           if (!th.a(true)) {
             if (!fg.field_k) {
@@ -2952,7 +2971,7 @@ public final class Main extends c {
               stackIn_7_0 = stackOut_6_0;
               stackIn_7_1 = stackOut_6_1;
               if (gj.field_a == null) {
-                stackOut_8_0 = (Object) (Object) stackIn_8_0;
+                stackOut_8_0 = stackIn_8_0;
                 stackOut_8_1 = stackIn_8_1;
                 stackOut_8_2 = r.field_q;
                 stackIn_9_0 = stackOut_8_0;
@@ -2960,7 +2979,7 @@ public final class Main extends c {
                 stackIn_9_2 = stackOut_8_2 ? 1 : 0;
                 break L5;
               } else {
-                stackOut_7_0 = (Object) (Object) stackIn_7_0;
+                stackOut_7_0 = stackIn_7_0;
                 stackOut_7_1 = stackIn_7_1;
                 stackOut_7_2 = 1;
                 stackIn_9_0 = stackOut_7_0;
@@ -3016,7 +3035,7 @@ public final class Main extends c {
     private final void q(byte param0) {
         int var2 = 0;
         int var3 = 0;
-        kc var3_ref = null;
+        kc var3_ref_kc = null;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
@@ -3104,9 +3123,9 @@ public final class Main extends c {
                           }
                         }
                         var10 = td.field_c[-5 + rk.field_X];
-                        var3_ref = var10;
-                        var3_ref.b(198 + hb.field_d * ((kc) var10).field_p / 64, 33 + ((kc) var10).field_o * hb.field_d / 64, ((kc) var10).field_p * (-hb.field_d + 32) / 32, (-hb.field_d + 32) * ((kc) var10).field_o / 32);
-                        la.field_k.b(198 + (-hb.field_d + 32) * (-((kc) var10).field_p + 298) / 64 - -(((kc) var10).field_p / 2), 33 + (32 + -hb.field_d) * (-((kc) var10).field_o + 736) / 64 - -(((kc) var10).field_o / 2), (32 + -hb.field_d) * la.field_k.field_p / 32, (32 - hb.field_d) * la.field_k.field_o / 32);
+                        var3_ref_kc = var10;
+                        var3_ref_kc.b(198 + hb.field_d * var10.field_p / 64, 33 + var10.field_o * hb.field_d / 64, var10.field_p * (-hb.field_d + 32) / 32, (-hb.field_d + 32) * var10.field_o / 32);
+                        la.field_k.b(198 + (-hb.field_d + 32) * (-var10.field_p + 298) / 64 - -(var10.field_p / 2), 33 + (32 + -hb.field_d) * (-var10.field_o + 736) / 64 - -(var10.field_o / 2), (32 + -hb.field_d) * la.field_k.field_p / 32, (32 - hb.field_d) * la.field_k.field_o / 32);
                         break L0;
                       }
                     } else {
@@ -3118,9 +3137,9 @@ public final class Main extends c {
                   } else {
                     ((Main) this).b(0, 2);
                     var9 = td.field_c[-5 + rk.field_X];
-                    var3_ref = var9;
-                    var3_ref.b(198 - -((32 - hb.field_d) * ((kc) var9).field_p / 64), 33 - -(((kc) var9).field_o * (-hb.field_d + 32) / 64), hb.field_d * ((kc) var9).field_p / 32, ((kc) var9).field_o * hb.field_d / 32);
-                    la.field_k.b(((kc) var9).field_p / 2 + (-((kc) var9).field_p + 298) * hb.field_d / 64 + 198, 33 + ((-((kc) var9).field_o + 736) * hb.field_d / 64 + ((kc) var9).field_o / 2), hb.field_d * la.field_k.field_p / 32, hb.field_d * la.field_k.field_o / 32);
+                    var3_ref_kc = var9;
+                    var3_ref_kc.b(198 - -((32 - hb.field_d) * var9.field_p / 64), 33 - -(var9.field_o * (-hb.field_d + 32) / 64), hb.field_d * var9.field_p / 32, var9.field_o * hb.field_d / 32);
+                    la.field_k.b(var9.field_p / 2 + (-var9.field_p + 298) * hb.field_d / 64 + 198, 33 + ((-var9.field_o + 736) * hb.field_d / 64 + var9.field_o / 2), hb.field_d * la.field_k.field_p / 32, hb.field_d * la.field_k.field_o / 32);
                     break L0;
                   }
                 } else {
@@ -3152,13 +3171,14 @@ public final class Main extends c {
         w var1 = na.field_r;
         while (gl.b(true)) {
             var1.h(8, 0);
-            ((w) var1).field_i = ((w) var1).field_i + 1;
-            var2 = ((w) var1).field_i + 1;
+            int fieldTemp$0 = var1.field_i + 1;
+            var1.field_i = var1.field_i + 1;
+            var2 = fieldTemp$0;
             fl.a(var1, false);
-            na.field_r.f(-var2 + ((w) var1).field_i, 8049);
+            na.field_r.f(-var2 + var1.field_i, 8049);
         }
         if (param0 <= 75) {
-            le var4 = (le) null;
+            Object var4 = null;
             Main.a((Object) null, (le) null, (byte) 100);
         }
     }
@@ -3183,13 +3203,13 @@ public final class Main extends c {
               break L0;
             } else {
               if (-1 < (vd.field_u ^ -1)) {
-                var5_ref_kf = (kf) jl.field_e.a((byte) 74);
+                var5_ref_kf = (kf) (Object) jl.field_e.a((byte) 74);
                 if (var5_ref_kf == null) {
                   break L0;
                 } else {
-                  if ((var3 ^ -1L) < (((kf) var5_ref_kf).field_g ^ -1L)) {
+                  if ((var3 ^ -1L) < (var5_ref_kf.field_g ^ -1L)) {
                     var5_ref_kf.c(119);
-                    al.field_a = ((kf) var5_ref_kf).field_i.length;
+                    al.field_a = var5_ref_kf.field_i.length;
                     rd.field_j.field_i = 0;
                     var6_int = 0;
                     L1: while (true) {
@@ -3197,10 +3217,10 @@ public final class Main extends c {
                         ni.field_d = hc.field_f;
                         hc.field_f = sb.field_a;
                         sb.field_a = pd.field_l;
-                        pd.field_l = ((kf) var5_ref_kf).field_h;
+                        pd.field_l = var5_ref_kf.field_h;
                         return true;
                       } else {
-                        rd.field_j.field_g[var6_int] = ((kf) var5_ref_kf).field_i[var6_int];
+                        rd.field_j.field_g[var6_int] = var5_ref_kf.field_i[var6_int];
                         var6_int++;
                         continue L1;
                       }
@@ -3263,7 +3283,7 @@ public final class Main extends c {
                     vd.field_u = -1;
                     continue L2;
                   } else {
-                    ((kf) var6).field_i[var7] = rd.field_j.field_g[var7];
+                    var6.field_i[var7] = rd.field_j.field_g[var7];
                     var7++;
                     continue L5;
                   }
@@ -3279,22 +3299,46 @@ public final class Main extends c {
     }
 
     final void a(int param0, int param1, int param2, boolean param3) {
-        if (param0 != 11246) {
-            return;
-        }
-        hb.field_d = 0;
-        ff.field_b = param2;
-        rk.field_X = param1;
-        this.p(-97283608);
-        if (2 != param2) {
-            // if_icmpeq L68
-            // if_icmpeq L68
-            // if_icmpeq L68
-            // if_icmpeq L68
-            // if_icmpeq L68
-        } else {
+        if (param0 == 11246) {
+          L0: {
+            L1: {
+              hb.field_d = 0;
+              ff.field_b = param2;
+              rk.field_X = param1;
+              this.p(-97283608);
+              if (2 == param2) {
+                break L1;
+              } else {
+                if (6 == param2) {
+                  break L1;
+                } else {
+                  if (5 == param2) {
+                    break L1;
+                  } else {
+                    if ((param2 ^ -1) == -9) {
+                      break L1;
+                    } else {
+                      if (-4 == (param2 ^ -1)) {
+                        break L1;
+                      } else {
+                        if (param2 == 7) {
+                          break L1;
+                        } else {
+                          break L0;
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
             ((Main) this).field_E[param1].a(-31102, param3);
             ((Main) this).field_E[param1].b(param0 + -11139);
+            break L0;
+          }
+          return;
+        } else {
+          return;
         }
     }
 
@@ -3555,8 +3599,9 @@ public final class Main extends c {
                   vf.field_b = vf.field_b - var4;
                   ol.field_W = ol.field_W + tk.field_a;
                   rj.field_p = rj.field_p + var4;
+                  int fieldTemp$2 = ((Main) this).field_Q - 1;
                   ((Main) this).field_Q = ((Main) this).field_Q - 1;
-                  if ((((Main) this).field_Q - 1 ^ -1) != -1) {
+                  if ((fieldTemp$2 ^ -1) != -1) {
                     if (-2 > (((Main) this).field_Q ^ -1)) {
                       ((Main) this).field_O = ((Main) this).field_O + 1;
                       if (-4 < (((Main) this).field_O ^ -1)) {
@@ -3587,8 +3632,9 @@ public final class Main extends c {
                   }
                 } else {
                   ((Main) this).field_O = 0;
+                  int fieldTemp$3 = ((Main) this).field_J - 1;
                   ((Main) this).field_J = ((Main) this).field_J - 1;
-                  if (0 > ((Main) this).field_J - 1) {
+                  if (0 > fieldTemp$3) {
                     ((Main) this).c(param0 + -36, 0);
                     break L10;
                   } else {

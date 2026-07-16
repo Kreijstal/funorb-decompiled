@@ -39,7 +39,7 @@ final class am {
         int stackOut_26_1 = 0;
         L0: {
           var15 = CrazyCrystals.field_B;
-          if (-61 != param0) {
+          if (-61 != (param0 ^ -1)) {
             break L0;
           } else {
             param0 = 72;
@@ -47,7 +47,7 @@ final class am {
           }
         }
         L1: {
-          if (-61 != param0) {
+          if (-61 != (param0 ^ -1)) {
             break L1;
           } else {
             param0 = 72;
@@ -77,10 +77,10 @@ final class am {
                 }
               }
               L5: {
-                if (var8 >= var9) {
+                if ((var8 ^ -1) <= (var9 ^ -1)) {
                   break L5;
                 } else {
-                  if (var8 < -var9) {
+                  if ((var8 ^ -1) > (-var9 ^ -1)) {
                     var13_int = -var8;
                     break L3;
                   } else {
@@ -176,7 +176,7 @@ final class am {
           }
           L1: {
             var4 = stackIn_5_0;
-            if (var4 >= -1) {
+            if ((var4 ^ -1) >= -1) {
               if (!((am) this).field_h) {
                 break L1;
               } else {
@@ -187,7 +187,7 @@ final class am {
             } else {
               L2: {
                 var5 = (int)(0.5 + 16384.0 * ((am) this).field_i / ((am) this).field_b);
-                if (-1 > var5) {
+                if (-1 < (var5 ^ -1)) {
                   var5 = 0;
                   break L2;
                 } else {

@@ -22,29 +22,70 @@ final class nf {
     private static int field_d;
 
     private final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
-        if (param3 < 0) {
-            if (param4 < 0) {
-                // iflt L82
-            }
-        }
-        if (param3 > be.field_p) {
-            if (param4 > be.field_p) {
-                // if_icmpgt L82
-            }
-        }
-        if (param0 < 0) {
-            if (param1 < 0) {
-                // iflt L82
-            }
-        }
-        if (param0 > be.field_f) {
-            if (param1 > be.field_f) {
-                if (param2 > be.field_f) {
-                    return;
+        L0: {
+          L1: {
+            if (param3 >= 0) {
+              break L1;
+            } else {
+              if (param4 >= 0) {
+                break L1;
+              } else {
+                if (param5 < 0) {
+                  break L0;
+                } else {
+                  break L1;
                 }
+              }
             }
+          }
+          L2: {
+            if (param3 <= be.field_p) {
+              break L2;
+            } else {
+              if (param4 <= be.field_p) {
+                break L2;
+              } else {
+                if (param5 > be.field_p) {
+                  break L0;
+                } else {
+                  break L2;
+                }
+              }
+            }
+          }
+          L3: {
+            if (param0 >= 0) {
+              break L3;
+            } else {
+              if (param1 >= 0) {
+                break L3;
+              } else {
+                if (param2 < 0) {
+                  break L0;
+                } else {
+                  break L3;
+                }
+              }
+            }
+          }
+          L4: {
+            if (param0 <= be.field_f) {
+              break L4;
+            } else {
+              if (param1 <= be.field_f) {
+                break L4;
+              } else {
+                if (param2 <= be.field_f) {
+                  break L4;
+                } else {
+                  break L0;
+                }
+              }
+            }
+          }
+          be.a(param0, param1, param2, param3, param4, param5, param6);
+          return;
         }
-        be.a(param0, param1, param2, param3, param4, param5, param6);
     }
 
     private final static void a() {
@@ -122,8 +163,9 @@ final class nf {
                 var9 = (50 - var3) * be.field_e[var5 - var3];
                 field_g[var2] = var0 + (var6 + ((field_p[2] - var6) * var9 >> 16) << 9) / 50;
                 field_o[var2] = var1 + (var7 + ((field_b[2] - var7) * var9 >> 16) << 9) / 50;
+                int incrementValue$9 = var2;
                 var2++;
-                field_a[var2] = var8 + ((field_d - var8) * var9 >> 16);
+                field_a[incrementValue$9] = var8 + ((field_d - var8) * var9 >> 16);
                 break L1;
               }
             }
@@ -133,15 +175,17 @@ final class nf {
               var9 = (50 - var3) * be.field_e[var4 - var3];
               field_g[var2] = var0 + (var6 + ((field_p[1] - var6) * var9 >> 16) << 9) / 50;
               field_o[var2] = var1 + (var7 + ((field_b[1] - var7) * var9 >> 16) << 9) / 50;
+              int incrementValue$10 = var2;
               var2++;
-              field_a[var2] = var8 + ((field_i - var8) * var9 >> 16);
+              field_a[incrementValue$10] = var8 + ((field_i - var8) * var9 >> 16);
               break L0;
             }
           } else {
             field_g[var2] = field_q[0];
             field_o[var2] = field_j[0];
+            int incrementValue$11 = var2;
             var2++;
-            field_a[var2] = field_f;
+            field_a[incrementValue$11] = field_f;
             break L0;
           }
         }
@@ -157,8 +201,9 @@ final class nf {
                 var9 = (50 - var4) * be.field_e[var3 - var4];
                 field_g[var2] = var0 + (var6 + ((field_p[0] - var6) * var9 >> 16) << 9) / 50;
                 field_o[var2] = var1 + (var7 + ((field_b[0] - var7) * var9 >> 16) << 9) / 50;
+                int incrementValue$12 = var2;
                 var2++;
-                field_a[var2] = var8 + ((field_f - var8) * var9 >> 16);
+                field_a[incrementValue$12] = var8 + ((field_f - var8) * var9 >> 16);
                 break L3;
               }
             }
@@ -168,15 +213,17 @@ final class nf {
               var9 = (50 - var4) * be.field_e[var5 - var4];
               field_g[var2] = var0 + (var6 + ((field_p[2] - var6) * var9 >> 16) << 9) / 50;
               field_o[var2] = var1 + (var7 + ((field_b[2] - var7) * var9 >> 16) << 9) / 50;
+              int incrementValue$13 = var2;
               var2++;
-              field_a[var2] = var8 + ((field_d - var8) * var9 >> 16);
+              field_a[incrementValue$13] = var8 + ((field_d - var8) * var9 >> 16);
               break L2;
             }
           } else {
             field_g[var2] = field_q[1];
             field_o[var2] = field_j[1];
+            int incrementValue$14 = var2;
             var2++;
-            field_a[var2] = field_i;
+            field_a[incrementValue$14] = field_i;
             break L2;
           }
         }
@@ -192,8 +239,9 @@ final class nf {
                 var9 = (50 - var5) * be.field_e[var4 - var5];
                 field_g[var2] = var0 + (var6 + ((field_p[1] - var6) * var9 >> 16) << 9) / 50;
                 field_o[var2] = var1 + (var7 + ((field_b[1] - var7) * var9 >> 16) << 9) / 50;
+                int incrementValue$15 = var2;
                 var2++;
-                field_a[var2] = var8 + ((field_i - var8) * var9 >> 16);
+                field_a[incrementValue$15] = var8 + ((field_i - var8) * var9 >> 16);
                 break L5;
               }
             }
@@ -203,15 +251,17 @@ final class nf {
               var9 = (50 - var5) * be.field_e[var3 - var5];
               field_g[var2] = var0 + (var6 + ((field_p[0] - var6) * var9 >> 16) << 9) / 50;
               field_o[var2] = var1 + (var7 + ((field_b[0] - var7) * var9 >> 16) << 9) / 50;
+              int incrementValue$16 = var2;
               var2++;
-              field_a[var2] = var8 + ((field_f - var8) * var9 >> 16);
+              field_a[incrementValue$16] = var8 + ((field_f - var8) * var9 >> 16);
               break L4;
             }
           } else {
             field_g[var2] = field_q[2];
             field_o[var2] = field_j[2];
+            int incrementValue$17 = var2;
             var2++;
-            field_a[var2] = field_d;
+            field_a[incrementValue$17] = field_d;
             break L4;
           }
         }
@@ -363,29 +413,70 @@ final class nf {
     }
 
     private final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
-        if (param3 < 0) {
-            if (param4 < 0) {
-                // iflt L82
-            }
-        }
-        if (param3 > be.field_p) {
-            if (param4 > be.field_p) {
-                // if_icmpgt L82
-            }
-        }
-        if (param0 < 0) {
-            if (param1 < 0) {
-                // iflt L82
-            }
-        }
-        if (param0 > be.field_f) {
-            if (param1 > be.field_f) {
-                if (param2 > be.field_f) {
-                    return;
+        L0: {
+          L1: {
+            if (param3 >= 0) {
+              break L1;
+            } else {
+              if (param4 >= 0) {
+                break L1;
+              } else {
+                if (param5 < 0) {
+                  break L0;
+                } else {
+                  break L1;
                 }
+              }
             }
+          }
+          L2: {
+            if (param3 <= be.field_p) {
+              break L2;
+            } else {
+              if (param4 <= be.field_p) {
+                break L2;
+              } else {
+                if (param5 > be.field_p) {
+                  break L0;
+                } else {
+                  break L2;
+                }
+              }
+            }
+          }
+          L3: {
+            if (param0 >= 0) {
+              break L3;
+            } else {
+              if (param1 >= 0) {
+                break L3;
+              } else {
+                if (param2 < 0) {
+                  break L0;
+                } else {
+                  break L3;
+                }
+              }
+            }
+          }
+          L4: {
+            if (param0 <= be.field_f) {
+              break L4;
+            } else {
+              if (param1 <= be.field_f) {
+                break L4;
+              } else {
+                if (param2 <= be.field_f) {
+                  break L4;
+                } else {
+                  break L0;
+                }
+              }
+            }
+          }
+          be.a(param0, param1, param2, param3, param4, param5, param6, param7, param8);
+          return;
         }
-        be.a(param0, param1, param2, param3, param4, param5, param6, param7, param8);
     }
 
     final static void a(int param0, int param1, int[] param2, int[] param3, int[] param4, int param5, int param6, int param7) {
@@ -499,29 +590,70 @@ final class nf {
     }
 
     private final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13, int param14, int param15, int param16, int param17, int param18) {
-        if (param3 < 0) {
-            if (param4 < 0) {
-                // iflt L82
-            }
-        }
-        if (param3 > be.field_p) {
-            if (param4 > be.field_p) {
-                // if_icmpgt L82
-            }
-        }
-        if (param0 < 0) {
-            if (param1 < 0) {
-                // iflt L82
-            }
-        }
-        if (param0 > be.field_f) {
-            if (param1 > be.field_f) {
-                if (param2 > be.field_f) {
-                    return;
+        L0: {
+          L1: {
+            if (param3 >= 0) {
+              break L1;
+            } else {
+              if (param4 >= 0) {
+                break L1;
+              } else {
+                if (param5 < 0) {
+                  break L0;
+                } else {
+                  break L1;
                 }
+              }
             }
+          }
+          L2: {
+            if (param3 <= be.field_p) {
+              break L2;
+            } else {
+              if (param4 <= be.field_p) {
+                break L2;
+              } else {
+                if (param5 > be.field_p) {
+                  break L0;
+                } else {
+                  break L2;
+                }
+              }
+            }
+          }
+          L3: {
+            if (param0 >= 0) {
+              break L3;
+            } else {
+              if (param1 >= 0) {
+                break L3;
+              } else {
+                if (param2 < 0) {
+                  break L0;
+                } else {
+                  break L3;
+                }
+              }
+            }
+          }
+          L4: {
+            if (param0 <= be.field_f) {
+              break L4;
+            } else {
+              if (param1 <= be.field_f) {
+                break L4;
+              } else {
+                if (param2 <= be.field_f) {
+                  break L4;
+                } else {
+                  break L0;
+                }
+              }
+            }
+          }
+          be.a(param0, param1, param2, param3, param4, param5, param6, param7, param8, param9, param10, param11, param12, param13, param14, param15, param16, param17, param18);
+          return;
         }
-        be.a(param0, param1, param2, param3, param4, param5, param6, param7, param8, param9, param10, param11, param12, param13, param14, param15, param16, param17, param18);
     }
 
     static {

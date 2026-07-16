@@ -53,7 +53,7 @@ final class vh {
         var2 = ce.field_c;
         var3 = 0;
         L1: while (true) {
-          if (var3 >= pl.field_J.length) {
+          if ((var3 ^ -1) <= (pl.field_J.length ^ -1)) {
             return;
           } else {
             L2: {
@@ -79,7 +79,7 @@ final class vh {
               stackIn_11_1 = stackOut_9_1;
               stackIn_10_0 = stackOut_9_0;
               stackIn_10_1 = stackOut_9_1;
-              if (-1 < var4) {
+              if (-1 < (var4 ^ -1)) {
                 stackOut_11_0 = (String) (Object) stackIn_11_0;
                 stackOut_11_1 = stackIn_11_1;
                 stackOut_11_2 = 0;
@@ -100,9 +100,9 @@ final class vh {
             L4: {
               var7 = jp.a(stackIn_12_0, stackIn_12_1, stackIn_12_2 != 0);
               var8 = bq.field_d - (var7 >> -1874173151);
-              if (-1 <= var4) {
+              if (-1 >= (var4 ^ -1)) {
                 L5: {
-                  if (vp.field_Gb.field_j != var4) {
+                  if ((vp.field_Gb.field_j ^ -1) != (var4 ^ -1)) {
                     stackOut_16_0 = uo.field_m;
                     stackIn_17_0 = stackOut_16_0;
                     break L5;
@@ -128,17 +128,19 @@ final class vh {
                 break L4;
               }
             }
-            if ((var4 ^ -1) <= -1) {
-              ie.field_G.a(var6, var8, var2 + w.field_q, var5, -1);
-              var2 = var2 + (dk.field_d + lf.field_b - -ki.field_e);
-              var3++;
-              continue L1;
-            } else {
-              lm.field_o.a(var6, var8, ab.field_b + var2, var5, -1);
-              var2 = var2 + da.field_m;
-              var3++;
-              continue L1;
+            L7: {
+              if ((var4 ^ -1) <= -1) {
+                ie.field_G.a(var6, var8, var2 + w.field_q, var5, -1);
+                var2 = var2 + (dk.field_d + lf.field_b - -ki.field_e);
+                break L7;
+              } else {
+                lm.field_o.a(var6, var8, ab.field_b + var2, var5, -1);
+                var2 = var2 + da.field_m;
+                break L7;
+              }
             }
+            var3++;
+            continue L1;
           }
         }
     }
@@ -161,14 +163,19 @@ final class vh {
                     }
                   }
                   try {
-                    ((vh) this).field_a.setInput(param2.field_k, param2.field_m + 10, param0 - param2.field_m - (10 - param2.field_k.length));
-                    int discarded$2 = ((vh) this).field_a.inflate(param1);
-                  } catch (java.lang.Exception decompiledCaughtParameter) {
-                    decompiledCaughtException = decompiledCaughtParameter;
+                    L2: {
+                      ((vh) this).field_a.setInput(param2.field_k, param2.field_m + 10, param0 - param2.field_m - (10 - param2.field_k.length));
+                      int discarded$2 = ((vh) this).field_a.inflate(param1);
+                      break L2;
+                    }
+                  } catch (java.lang.Exception decompiledCaughtParameter0) {
+                    decompiledCaughtException = decompiledCaughtParameter0;
+                    exception = (Exception) (Object) decompiledCaughtException;
+                    ((vh) this).field_a.reset();
+                    throw new RuntimeException("");
                   }
-                  exception = (Exception) (Object) decompiledCaughtException;
                   ((vh) this).field_a.reset();
-                  throw new RuntimeException("");
+                  return;
                 } else {
                   break L0;
                 }

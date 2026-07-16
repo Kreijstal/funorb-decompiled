@@ -66,8 +66,9 @@ final class vd {
                   param0 = j.field_q;
                   break L3;
                 } else {
+                  int incrementValue$2 = param0;
                   param0++;
-                  di.a(param4, (byte) -101, param3, qd.field_a[param0], param2);
+                  di.a(param4, (byte) -101, param3, qd.field_a[incrementValue$2], param2);
                   break L3;
                 }
               }
@@ -76,8 +77,9 @@ final class vd {
                   param5 = qk.field_p;
                   break L4;
                 } else {
+                  int incrementValue$3 = param5;
                   param5--;
-                  di.a(param4, (byte) 113, param3, qd.field_a[param5], param2);
+                  di.a(param4, (byte) 113, param3, qd.field_a[incrementValue$3], param2);
                   break L4;
                 }
               }

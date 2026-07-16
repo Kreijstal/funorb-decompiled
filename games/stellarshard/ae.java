@@ -278,13 +278,19 @@ class ae extends ig {
               }
             }
             try {
-              var2_ref = (String) java.awt.Toolkit.getDefaultToolkit().getSystemClipboard().getContents((Object) null).getTransferData(java.awt.datatransfer.DataFlavor.stringFlavor);
-              this.i(0);
-              this.a(var2_ref, (byte) 97);
-            } catch (java.lang.Exception decompiledCaughtParameter) {
-              decompiledCaughtException = decompiledCaughtParameter;
+              L1: {
+                var2_ref = (String) java.awt.Toolkit.getDefaultToolkit().getSystemClipboard().getContents((Object) null).getTransferData(java.awt.datatransfer.DataFlavor.stringFlavor);
+                this.i(0);
+                this.a(var2_ref, (byte) 97);
+                break L1;
+              }
+            } catch (java.lang.Exception decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              L2: {
+                var2 = (Exception) (Object) decompiledCaughtException;
+                break L2;
+              }
             }
-            var2 = (Exception) (Object) decompiledCaughtException;
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
@@ -326,8 +332,9 @@ class ae extends ig {
                 ((ae) this).field_m = ((ae) this).field_m.substring(0, ((ae) this).field_M);
             }
         }
-        ((ae) this).field_I = ((ae) this).field_m.length();
-        ((ae) this).field_H = ((ae) this).field_m.length();
+        int dupTemp$0 = ((ae) this).field_m.length();
+        ((ae) this).field_I = dupTemp$0;
+        ((ae) this).field_H = dupTemp$0;
         if (param0 != 20) {
             ((ae) this).field_G = false;
         }
@@ -371,7 +378,7 @@ class ae extends ig {
           if (param0 == 29657) {
             break L0;
           } else {
-            int discarded$1 = this.n(-114);
+            int discarded$2 = this.n(-114);
             break L0;
           }
         }
@@ -416,8 +423,9 @@ class ae extends ig {
                           break L6;
                         } else {
                           ((ae) this).field_m = ((ae) this).field_m + param2;
-                          ((ae) this).field_H = ((ae) this).field_m.length();
-                          ((ae) this).field_I = ((ae) this).field_m.length();
+                          int dupTemp$3 = ((ae) this).field_m.length();
+                          ((ae) this).field_H = dupTemp$3;
+                          ((ae) this).field_I = dupTemp$3;
                           break L6;
                         }
                       }
@@ -592,32 +600,67 @@ class ae extends ig {
     }
 
     private final int j(int param0) {
+        int var2 = 0;
         int var3 = 0;
-        int var4 = stellarshard.field_B;
-        if (param0 != -4238) {
-            Object var5 = null;
+        int var4 = 0;
+        Object var5 = null;
+        L0: {
+          var4 = stellarshard.field_B;
+          if (param0 == -4238) {
+            break L0;
+          } else {
+            var5 = null;
             ((ae) this).a((byte) 68, (String) null, true);
+            break L0;
+          }
         }
-        int var2 = ((ae) this).field_m.length();
-        if (!(((ae) this).field_H != var2)) {
-            return ((ae) this).field_H;
+        var2 = ((ae) this).field_m.length();
+        if (((ae) this).field_H == var2) {
+          return ((ae) this).field_H;
+        } else {
+          var3 = 1 + ((ae) this).field_H;
+          L1: while (true) {
+            L2: {
+              if (var2 <= var3) {
+                break L2;
+              } else {
+                if (((ae) this).field_m.charAt(var3 + -1) == 32) {
+                  break L2;
+                } else {
+                  var3++;
+                  continue L1;
+                }
+              }
+            }
+            return var3;
+          }
         }
-        for (var3 = 1 + ((ae) this).field_H; var2 > var3; var3++) {
-            // if_icmpeq L86
-        }
-        return var3;
     }
 
     private final int n(int param0) {
         int var2 = 0;
-        int var3 = stellarshard.field_B;
-        if (!(((ae) this).field_H != 0)) {
-            return ((ae) this).field_H;
+        int var3 = 0;
+        var3 = stellarshard.field_B;
+        if (((ae) this).field_H == 0) {
+          return ((ae) this).field_H;
+        } else {
+          var2 = param0 + ((ae) this).field_H;
+          L0: while (true) {
+            L1: {
+              if ((var2 ^ -1) >= -1) {
+                break L1;
+              } else {
+                if (((ae) this).field_m.charAt(var2 + -1) == 32) {
+                  break L1;
+                } else {
+                  var2--;
+                  continue L0;
+                }
+              }
+            }
+            return var2;
+          }
         }
-        for (var2 = param0 + ((ae) this).field_H; (var2 ^ -1) < -1; var2--) {
-            // if_icmpeq L54
-        }
-        return var2;
     }
 
     private final void g(int param0) {

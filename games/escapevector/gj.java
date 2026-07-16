@@ -31,11 +31,11 @@ final class gj {
     private final void a(byte param0) {
         me var3 = null;
         int var4 = EscapeVector.field_A;
-        hg var2_ref = ((gj) this).field_n.a(false);
-        while (var2_ref != null) {
-            var3 = (me) (Object) var2_ref;
+        hg var2_ref_hg = ((gj) this).field_n.a(false);
+        while (var2_ref_hg != null) {
+            var3 = (me) (Object) var2_ref_hg;
             this.a(-23672, var3);
-            var2_ref = ((gj) this).field_n.b((byte) 70);
+            var2_ref_hg = ((gj) this).field_n.b((byte) 70);
         }
         int var2 = -40 % ((15 - param0) / 47);
     }
@@ -243,13 +243,13 @@ final class gj {
     }
 
     final static boolean a(int param0, int param1, byte param2) {
-        if (param1 > -1) {
+        if ((param1 ^ -1) > -1) {
             return false;
         }
         if (!(q.field_E.length > param1)) {
             return false;
         }
-        if (-1 > param0) {
+        if (-1 < (param0 ^ -1)) {
             return false;
         }
         if (param2 < 23) {

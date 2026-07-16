@@ -82,85 +82,48 @@ final class pb implements j {
         Exception var3 = null;
         int var3_int = 0;
         int var4 = 0;
-        int statePc = 0;
-        Throwable caughtException = null;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    var4 = SolKnight.field_L ? 1 : 0;
-                    if (null != param0.field_d) {
-                        statePc = 2;
-                    } else {
-                        statePc = 1;
-                    }
-                    continue stateLoop;
+        Throwable decompiledCaughtException = null;
+        var4 = SolKnight.field_L ? 1 : 0;
+        if (null != param0.field_d) {
+          var3_int = 0;
+          L0: while (true) {
+            L1: {
+              if ((var3_int ^ -1) <= -51) {
+                break L1;
+              } else {
+                if (null == param0.field_d.peekEvent()) {
+                  break L1;
+                } else {
+                  i.a((byte) 100, 1L);
+                  var3_int++;
+                  continue L0;
                 }
-                case 1: {
-                    return;
-                }
-                case 2: {
-                    var3_int = 0;
-                    statePc = 3;
-                    continue stateLoop;
-                }
-                case 3: {
-                    if ((var3_int ^ -1) <= -51) {
-                        statePc = 6;
-                    } else {
-                        statePc = 4;
-                    }
-                    continue stateLoop;
-                }
-                case 4: {
-                    if (null == param0.field_d.peekEvent()) {
-                        statePc = 6;
-                    } else {
-                        statePc = 5;
-                    }
-                    continue stateLoop;
-                }
-                case 5: {
-                    i.a((byte) 100, 1L);
-                    var3_int++;
-                    statePc = 3;
-                    continue stateLoop;
-                }
-                case 6: {
-                    try {
-                        var3_int = 13 % ((param2 - -37) / 43);
-                        if (param1 == null) {
-                            statePc = 10;
-                        } else {
-                            statePc = 7;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_6) {
-                        caughtException = stateCaught_6;
-                        statePc = 9;
-                        continue stateLoop;
-                    }
-                }
-                case 7: {
-                    try {
-                        param0.field_d.postEvent((java.awt.AWTEvent) (Object) new java.awt.event.ActionEvent(param1, 1001, "dummy"));
-                        statePc = 10;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_7) {
-                        caughtException = stateCaught_7;
-                        statePc = 9;
-                        continue stateLoop;
-                    }
-                }
-                case 9: {
-                    var3 = (Exception) (Object) caughtException;
-                    statePc = 10;
-                    continue stateLoop;
-                }
-                case 10: {
-                    return;
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
+              }
             }
+            try {
+              L2: {
+                L3: {
+                  var3_int = 13 % ((param2 - -37) / 43);
+                  if (param1 == null) {
+                    break L3;
+                  } else {
+                    param0.field_d.postEvent((java.awt.AWTEvent) (Object) new java.awt.event.ActionEvent(param1, 1001, "dummy"));
+                    break L3;
+                  }
+                }
+                break L2;
+              }
+            } catch (java.lang.Exception decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              L4: {
+                var3 = (Exception) (Object) decompiledCaughtException;
+                break L4;
+              }
+            }
+            return;
+          }
+        } else {
+          return;
         }
     }
 

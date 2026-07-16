@@ -149,9 +149,10 @@ final class ek {
               var6 = null;
               ek.a((vh) null, (byte) 119, -128);
               var5 = var7.indexOf("mm");
+              int incrementValue$8 = var5;
               var5++;
               stackOut_17_0 = (char[]) var4;
-              stackOut_17_1 = var5;
+              stackOut_17_1 = incrementValue$8;
               stackIn_19_0 = stackOut_17_0;
               stackIn_19_1 = stackOut_17_1;
               stackIn_18_0 = stackOut_17_0;
@@ -176,9 +177,10 @@ final class ek {
             }
             L1: {
               stackIn_20_0[stackIn_20_1] = (char)stackIn_20_2;
+              int incrementValue$9 = var5;
               var5++;
               stackOut_20_0 = (char[]) var4;
-              stackOut_20_1 = var5;
+              stackOut_20_1 = incrementValue$9;
               stackIn_22_0 = stackOut_20_0;
               stackIn_22_1 = stackOut_20_1;
               stackIn_21_0 = stackOut_20_0;
@@ -204,9 +206,10 @@ final class ek {
             L2: {
               stackIn_23_0[stackIn_23_1] = (char)stackIn_23_2;
               var5 = var7.indexOf("ss");
+              int incrementValue$10 = var5;
               var5++;
               stackOut_23_0 = (char[]) var4;
-              stackOut_23_1 = var5;
+              stackOut_23_1 = incrementValue$10;
               stackIn_25_0 = stackOut_23_0;
               stackIn_25_1 = stackOut_23_1;
               stackIn_24_0 = stackOut_23_0;
@@ -231,9 +234,10 @@ final class ek {
             }
             L3: {
               stackIn_26_0[stackIn_26_1] = (char)stackIn_26_2;
+              int incrementValue$11 = var5;
               var5++;
               stackOut_26_0 = (char[]) var4;
-              stackOut_26_1 = var5;
+              stackOut_26_1 = incrementValue$11;
               stackIn_28_0 = stackOut_26_0;
               stackIn_28_1 = stackOut_26_1;
               stackIn_27_0 = stackOut_26_0;
@@ -261,9 +265,10 @@ final class ek {
           } else {
             L4: {
               var5 = var7.indexOf("mm");
+              int incrementValue$12 = var5;
               var5++;
               stackOut_4_0 = (char[]) var4;
-              stackOut_4_1 = var5;
+              stackOut_4_1 = incrementValue$12;
               stackIn_6_0 = stackOut_4_0;
               stackIn_6_1 = stackOut_4_1;
               stackIn_5_0 = stackOut_4_0;
@@ -288,9 +293,10 @@ final class ek {
             }
             L5: {
               stackIn_7_0[stackIn_7_1] = (char)stackIn_7_2;
+              int incrementValue$13 = var5;
               var5++;
               stackOut_7_0 = (char[]) var4;
-              stackOut_7_1 = var5;
+              stackOut_7_1 = incrementValue$13;
               stackIn_9_0 = stackOut_7_0;
               stackIn_9_1 = stackOut_7_1;
               stackIn_8_0 = stackOut_7_0;
@@ -316,9 +322,10 @@ final class ek {
             L6: {
               stackIn_10_0[stackIn_10_1] = (char)stackIn_10_2;
               var5 = var7.indexOf("ss");
+              int incrementValue$14 = var5;
               var5++;
               stackOut_10_0 = (char[]) var4;
-              stackOut_10_1 = var5;
+              stackOut_10_1 = incrementValue$14;
               stackIn_12_0 = stackOut_10_0;
               stackIn_12_1 = stackOut_10_1;
               stackIn_11_0 = stackOut_10_0;
@@ -343,9 +350,10 @@ final class ek {
             }
             L7: {
               stackIn_13_0[stackIn_13_1] = (char)stackIn_13_2;
+              int incrementValue$15 = var5;
               var5++;
               stackOut_13_0 = (char[]) var4;
-              stackOut_13_1 = var5;
+              stackOut_13_1 = incrementValue$15;
               stackIn_15_0 = stackOut_13_0;
               stackIn_15_1 = stackOut_13_1;
               stackIn_14_0 = stackOut_13_0;

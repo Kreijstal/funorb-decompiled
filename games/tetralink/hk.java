@@ -244,8 +244,9 @@ abstract class hk {
                                               break L23;
                                             } else {
                                               L24: {
-                                                var9[var5 * var13 + var12] = var17.g(-1772093437);
-                                                var14 = var17.g(-1772093437);
+                                                byte dupTemp$2 = var17.g(-1772093437);
+                                                var9[var5 * var13 + var12] = dupTemp$2;
+                                                var14 = dupTemp$2;
                                                 stackOut_39_0 = var10;
                                                 stackIn_41_0 = stackOut_39_0;
                                                 stackIn_40_0 = stackOut_39_0;
@@ -317,8 +318,9 @@ abstract class hk {
                                   break L14;
                                 } else {
                                   L28: {
-                                    var9[var12] = var17.g(-1772093437);
-                                    var13 = var17.g(-1772093437);
+                                    byte dupTemp$3 = var17.g(-1772093437);
+                                    var9[var12] = dupTemp$3;
+                                    var13 = dupTemp$3;
                                     stackOut_52_0 = var10;
                                     stackIn_54_0 = stackOut_52_0;
                                     stackIn_53_0 = stackOut_52_0;

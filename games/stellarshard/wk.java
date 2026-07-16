@@ -84,18 +84,18 @@ final class wk {
         } else {
             var4 = ((wk) this).field_d.a(32767 & param1, 16, 1);
         }
-        od var3_ref = new od();
+        var3 = new od();
         if (var4 != null) {
-            var3_ref.a(new ka(var4), 745);
+            var3.a(new ka(var4), 745);
         }
         if (!((param1 ^ -1) > -32769)) {
-            var3_ref.f(20865);
+            var3.f(20865);
         }
-        ((wk) this).field_e.a((Object) (Object) var3_ref, (long)param1, -22424);
+        ((wk) this).field_e.a((Object) (Object) var3, (long)param1, -22424);
         if (param0 != 32767) {
             field_a = null;
         }
-        return var3_ref;
+        return var3;
     }
 
     private wk() throws Throwable {

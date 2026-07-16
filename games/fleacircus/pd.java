@@ -14,44 +14,37 @@ final class pd extends lh {
         String var3 = null;
         String var4 = null;
         ob var5 = null;
-        if (param1 != null) {
-          if (param1.length() != -1) {
-            if (param0 <= -69) {
-              var2 = param1.indexOf('@');
-              if (0 != (var2 ^ -1)) {
-                var3 = param1.substring(0, var2);
-                var4 = param1.substring(1 + var2);
-                var5 = jk.a(var3, (byte) 113);
-                if (var5 != null) {
-                  return var5;
-                } else {
-                  return id.a(var4, 31592);
-                }
-              } else {
-                return tf.field_H;
-              }
-            } else {
-              field_l = -22;
-              var2 = param1.indexOf('@');
-              if (0 != var2) {
-                var3 = param1.substring(0, var2);
-                var4 = param1.substring(1 + var2);
-                var5 = jk.a(var3, (byte) 113);
-                if (var5 != null) {
-                  return var5;
-                } else {
-                  return id.a(var4, 31592);
-                }
-              } else {
-                return tf.field_H;
-              }
-            }
-          } else {
+        if (param1 == null) {
             return tf.field_G;
-          }
-        } else {
-          return tf.field_G;
         }
+        if ((param1.length() ^ -1) == -1) {
+            return tf.field_G;
+        }
+        if (param0 > -69) {
+            field_l = -22;
+            var2 = param1.indexOf('@');
+            if (0 == (var2 ^ -1)) {
+                return tf.field_H;
+            }
+            var3 = param1.substring(0, var2);
+            var4 = param1.substring(1 + var2);
+            var5 = jk.a(var3, (byte) 113);
+            if (var5 != null) {
+                return var5;
+            }
+            return id.a(var4, 31592);
+        }
+        var2 = param1.indexOf('@');
+        if (0 == (var2 ^ -1)) {
+            return tf.field_H;
+        }
+        var3 = param1.substring(0, var2);
+        var4 = param1.substring(1 + var2);
+        var5 = jk.a(var3, (byte) 113);
+        if (var5 != null) {
+            return var5;
+        }
+        return id.a(var4, 31592);
     }
 
     public static void a(byte param0) {

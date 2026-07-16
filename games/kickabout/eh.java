@@ -373,21 +373,27 @@ final class eh implements pk {
             if ((rm.field_C ^ -1) == -2) {
               oi.field_e = new oh[34];
               var4 = 0;
+              int incrementValue$93 = var4;
               var4++;
-              oi.field_e[var4] = new oh(el.field_D, 0, 1375);
+              oi.field_e[incrementValue$93] = new oh(el.field_D, 0, 1375);
               var5 = 0;
               L2: while (true) {
                 if (12 <= var5) {
+                  int incrementValue$94 = var4;
                   var4++;
-                  oi.field_e[var4] = new oh(var3, -203, 169);
+                  oi.field_e[incrementValue$94] = new oh(var3, -203, 169);
+                  int incrementValue$95 = var4;
                   var4++;
-                  oi.field_e[var4] = new oh(je.field_h, -219, 292);
+                  oi.field_e[incrementValue$95] = new oh(je.field_h, -219, 292);
+                  int incrementValue$96 = var4;
                   var4++;
-                  oi.field_e[var4] = new oh(ns.field_c, 824, -60);
+                  oi.field_e[incrementValue$96] = new oh(ns.field_c, 824, -60);
+                  int incrementValue$97 = var4;
                   var4++;
-                  oi.field_e[var4] = new oh(je.field_h, 753, -69);
+                  oi.field_e[incrementValue$97] = new oh(je.field_h, 753, -69);
+                  int incrementValue$98 = var4;
                   var4++;
-                  oi.field_e[var4] = new oh(el.field_D, 1030, 568);
+                  oi.field_e[incrementValue$98] = new oh(el.field_D, 1030, 568);
                   var5 = 0;
                   L3: while (true) {
                     if ((var5 ^ -1) <= -9) {
@@ -403,10 +409,12 @@ final class eh implements pk {
                           break L4;
                         }
                       }
+                      int incrementValue$99 = var4;
                       var4++;
-                      oi.field_e[var4] = new oh(wn.field_a[p.a((byte) -24, wn.field_a.length)], var6, var7);
+                      oi.field_e[incrementValue$99] = new oh(wn.field_a[p.a((byte) -24, wn.field_a.length)], var6, var7);
+                      int incrementValue$100 = var4;
                       var4++;
-                      oi.field_e[var4] = new oh(wn.field_a[p.a((byte) -24, wn.field_a.length)], -var6 + 876, var7);
+                      oi.field_e[incrementValue$100] = new oh(wn.field_a[p.a((byte) -24, wn.field_a.length)], -var6 + 876, var7);
                       var5++;
                       continue L3;
                     }
@@ -419,18 +427,19 @@ final class eh implements pk {
                       break L5;
                     } else {
                       var6 = -var6 + 896;
-                      // wide iinc 7 1724
+                      var7 += 1724;
                       break L5;
                     }
                   }
+                  int incrementValue$101 = var4;
                   var4++;
-                  oi.field_e[var4] = new oh(c.field_e, var6, var7);
+                  oi.field_e[incrementValue$101] = new oh(c.field_e, var6, var7);
                   var5++;
                   continue L2;
                 }
               }
             } else {
-              if (rm.field_C == -3) {
+              if ((rm.field_C ^ -1) == -3) {
                 oi.field_e = new oh[9];
                 oi.field_e[0] = new oh(var3, -142, 231);
                 oi.field_e[1] = new oh(c.field_e, -140, 549);
@@ -443,7 +452,7 @@ final class eh implements pk {
                 oi.field_e[8] = new oh(el.field_D, 924, 240);
                 break L1;
               } else {
-                if (-4 == rm.field_C) {
+                if (-4 == (rm.field_C ^ -1)) {
                   oi.field_e = new oh[]{};
                   break L1;
                 } else {
@@ -457,53 +466,73 @@ final class eh implements pk {
             var5 = 0;
             L6: while (true) {
               if (4 <= var5) {
+                int incrementValue$102 = var4;
                 var4++;
-                oi.field_e[var4] = new oh(ns.field_c, 50, -100);
+                oi.field_e[incrementValue$102] = new oh(ns.field_c, 50, -100);
+                int incrementValue$103 = var4;
                 var4++;
-                oi.field_e[var4] = new oh(je.field_h, 80, -150);
+                oi.field_e[incrementValue$103] = new oh(je.field_h, 80, -150);
+                int incrementValue$104 = var4;
                 var4++;
-                oi.field_e[var4] = new oh(je.field_h, 120, -105);
+                oi.field_e[incrementValue$104] = new oh(je.field_h, 120, -105);
+                int incrementValue$105 = var4;
                 var4++;
-                oi.field_e[var4] = new oh(var3, -100, -170);
+                oi.field_e[incrementValue$105] = new oh(var3, -100, -170);
+                int incrementValue$106 = var4;
                 var4++;
-                oi.field_e[var4] = new oh(var2, 530, -240);
+                oi.field_e[incrementValue$106] = new oh(var2, 530, -240);
+                int incrementValue$107 = var4;
                 var4++;
-                oi.field_e[var4] = new oh(var3, 670, -170);
+                oi.field_e[incrementValue$107] = new oh(var3, 670, -170);
+                int incrementValue$108 = var4;
                 var4++;
-                oi.field_e[var4] = new oh(var2, 790, -195);
+                oi.field_e[incrementValue$108] = new oh(var2, 790, -195);
+                int incrementValue$109 = var4;
                 var4++;
-                oi.field_e[var4] = new oh(ns.field_c, 700, 1354);
+                oi.field_e[incrementValue$109] = new oh(ns.field_c, 700, 1354);
+                int incrementValue$110 = var4;
                 var4++;
-                oi.field_e[var4] = new oh(je.field_h, 720, 1394);
+                oi.field_e[incrementValue$110] = new oh(je.field_h, 720, 1394);
+                int incrementValue$111 = var4;
                 var4++;
-                oi.field_e[var4] = new oh(je.field_h, 780, 1374);
+                oi.field_e[incrementValue$111] = new oh(je.field_h, 780, 1374);
+                int incrementValue$112 = var4;
                 var4++;
-                oi.field_e[var4] = new oh(var3, -171, 1037);
+                oi.field_e[incrementValue$112] = new oh(var3, -171, 1037);
+                int incrementValue$113 = var4;
                 var4++;
-                oi.field_e[var4] = new oh(vq.field_a, -51, 1082);
+                oi.field_e[incrementValue$113] = new oh(vq.field_a, -51, 1082);
+                int incrementValue$114 = var4;
                 var4++;
-                oi.field_e[var4] = new oh(vq.field_a, -30, 1105);
+                oi.field_e[incrementValue$114] = new oh(vq.field_a, -30, 1105);
+                int incrementValue$115 = var4;
                 var4++;
-                oi.field_e[var4] = new oh(vq.field_a, -20, 1055);
+                oi.field_e[incrementValue$115] = new oh(vq.field_a, -20, 1055);
+                int incrementValue$116 = var4;
                 var4++;
-                oi.field_e[var4] = new oh(ns.field_c, -68, 1143);
+                oi.field_e[incrementValue$116] = new oh(ns.field_c, -68, 1143);
                 var5 = 0;
                 L7: while (true) {
                   if (7 <= var5) {
+                    int incrementValue$117 = var4;
                     var4++;
-                    oi.field_e[var4] = new oh(var2, -111, 138);
+                    oi.field_e[incrementValue$117] = new oh(var2, -111, 138);
+                    int incrementValue$118 = var4;
                     var4++;
-                    oi.field_e[var4] = new oh(var2, -191, 290);
+                    oi.field_e[incrementValue$118] = new oh(var2, -191, 290);
+                    int incrementValue$119 = var4;
                     var4++;
-                    oi.field_e[var4] = new oh(var2, 30, 1324);
+                    oi.field_e[incrementValue$119] = new oh(var2, 30, 1324);
+                    int incrementValue$120 = var4;
                     var4++;
-                    oi.field_e[var4] = new oh(var2, 170, 1364);
+                    oi.field_e[incrementValue$120] = new oh(var2, 170, 1364);
                     break L1;
                   } else {
                     var6 = el.a(29430, 40, 956);
                     var7 = el.a(29430, 70, var5 * 150 + 200);
+                    int incrementValue$121 = var4;
                     var4++;
-                    oi.field_e[var4] = new oh(c.field_e, var6, var7);
+                    oi.field_e[incrementValue$121] = new oh(c.field_e, var6, var7);
                     var5++;
                     continue L7;
                   }
@@ -511,8 +540,9 @@ final class eh implements pk {
               } else {
                 var6 = p.a((byte) -24, 896 + -var11.field_o);
                 var7 = p.a((byte) -24, 1344 - var11.field_v);
+                int incrementValue$122 = var4;
                 var4++;
-                oi.field_e[var4] = new oh(var10, var6, var7);
+                oi.field_e[incrementValue$122] = new oh(var10, var6, var7);
                 var5++;
                 continue L6;
               }
@@ -629,169 +659,72 @@ final class eh implements pk {
         ue var9 = null;
         ue var10 = null;
         byte[] var14 = null;
-        int statePc = 0;
-        Throwable caughtException = null;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    var7 = Kickabout.field_G;
-                    if (wc.field_k == null) {
-                        statePc = 2;
+        Throwable decompiledCaughtException = null;
+        var7 = Kickabout.field_G;
+        if (wc.field_k == null) {
+          return true;
+        } else {
+          if (!wc.field_k.a((byte) -109)) {
+            return false;
+          } else {
+            var8 = wc.field_k.a(false);
+            wc.field_k = null;
+            if (var8 != null) {
+              try {
+                L0: {
+                  L1: {
+                    var3_int = var8.field_n;
+                    var8.field_n = param0;
+                    var4 = new ti(var8, var3_int);
+                    var9 = var4.a(-116, "motd_message");
+                    if (var9 == null) {
+                      lf.field_b = null;
+                      break L1;
                     } else {
-                        statePc = 3;
+                      var8.field_n = var9.field_i;
+                      lf.field_b = var8.a(param0 ^ -114);
+                      break L1;
                     }
-                    continue stateLoop;
-                }
-                case 2: {
-                    return true;
-                }
-                case 3: {
-                    if (!wc.field_k.a((byte) -109)) {
-                        statePc = 5;
+                  }
+                  L2: {
+                    var10 = var4.a(-116, "motd_image");
+                    if (var10 == null) {
+                      jm.field_g = null;
+                      break L2;
                     } else {
-                        statePc = 6;
-                    }
-                    continue stateLoop;
-                }
-                case 5: {
-                    return false;
-                }
-                case 6: {
-                    var8 = wc.field_k.a(false);
-                    wc.field_k = null;
-                    if (var8 != null) {
-                        statePc = 8;
-                    } else {
-                        statePc = 7;
-                    }
-                    continue stateLoop;
-                }
-                case 7: {
-                    lf.field_b = null;
-                    jm.field_g = null;
-                    return true;
-                }
-                case 8: {
-                    try {
-                        var3_int = var8.field_n;
-                        var8.field_n = param0;
-                        var4 = new ti(var8, var3_int);
-                        var9 = var4.a(-116, "motd_message");
-                        if (var9 == null) {
-                            statePc = 10;
-                        } else {
-                            statePc = 9;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_8) {
-                        caughtException = stateCaught_8;
-                        statePc = 18;
-                        continue stateLoop;
-                    }
-                }
-                case 9: {
-                    try {
-                        var8.field_n = var9.field_i;
-                        lf.field_b = var8.a(param0 ^ -114);
-                        statePc = 11;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_9) {
-                        caughtException = stateCaught_9;
-                        statePc = 18;
-                        continue stateLoop;
-                    }
-                }
-                case 10: {
-                    try {
-                        lf.field_b = null;
-                        statePc = 11;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_10) {
-                        caughtException = stateCaught_10;
-                        statePc = 18;
-                        continue stateLoop;
-                    }
-                }
-                case 11: {
-                    try {
-                        var10 = var4.a(-116, "motd_image");
-                        if (var10 == null) {
-                            statePc = 16;
-                        } else {
-                            statePc = 12;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_11) {
-                        caughtException = stateCaught_11;
-                        statePc = 18;
-                        continue stateLoop;
-                    }
-                }
-                case 12: {
-                    try {
-                        var8.field_n = var10.field_i;
-                        var14 = new byte[var10.field_h];
-                        var8.a(var14, 0, (byte) -6, var10.field_h);
-                        jm.field_g = new ot(var14, (java.awt.Component) (Object) nm.field_g);
-                        if (-1 != jm.field_g.field_q) {
-                            statePc = 19;
-                        } else {
-                            statePc = 13;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_12) {
-                        caughtException = stateCaught_12;
-                        statePc = 18;
-                        continue stateLoop;
-                    }
-                }
-                case 13: {
-                    try {
+                      var8.field_n = var10.field_i;
+                      var14 = new byte[var10.field_h];
+                      var8.a(var14, 0, (byte) -6, var10.field_h);
+                      jm.field_g = new ot(var14, (java.awt.Component) (Object) nm.field_g);
+                      if (-1 != jm.field_g.field_q) {
+                        break L2;
+                      } else {
                         if (0 != (jm.field_g.field_w ^ -1)) {
-                            statePc = 19;
+                          break L2;
                         } else {
-                            statePc = 14;
+                          jm.field_g = null;
+                          return true;
                         }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_13) {
-                        caughtException = stateCaught_13;
-                        statePc = 18;
-                        continue stateLoop;
+                      }
                     }
+                  }
+                  break L0;
                 }
-                case 14: {
-                    try {
-                        jm.field_g = null;
-                        return true;
-                    } catch (Throwable stateCaught_14) {
-                        caughtException = stateCaught_14;
-                        statePc = 18;
-                        continue stateLoop;
-                    }
-                }
-                case 16: {
-                    try {
-                        jm.field_g = null;
-                        statePc = 19;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_16) {
-                        caughtException = stateCaught_16;
-                        statePc = 18;
-                        continue stateLoop;
-                    }
-                }
-                case 18: {
-                    var3 = (Exception) (Object) caughtException;
-                    lf.field_b = null;
-                    jm.field_g = null;
-                    bd.a("Error when unpacking the MOTD data in KickaboutLoader.service_motd()", (Throwable) (Object) var3, 1);
-                    return true;
-                }
-                case 19: {
-                    return true;
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
+              } catch (java.lang.Exception decompiledCaughtParameter0) {
+                decompiledCaughtException = decompiledCaughtParameter0;
+                var3 = (Exception) (Object) decompiledCaughtException;
+                lf.field_b = null;
+                jm.field_g = null;
+                bd.a("Error when unpacking the MOTD data in KickaboutLoader.service_motd()", (Throwable) (Object) var3, 1);
+                return true;
+              }
+              return true;
+            } else {
+              lf.field_b = null;
+              jm.field_g = null;
+              return true;
             }
+          }
         }
     }
 

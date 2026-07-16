@@ -17,7 +17,6 @@ final class ja extends ta implements ec {
     final static ja a(ec param0, int param1) {
         long var2 = 0L;
         ja var4 = null;
-        ja var4_ref = null;
         int[] var5 = null;
         int var6 = 0;
         int var7 = 0;
@@ -77,16 +76,16 @@ final class ja extends ta implements ec {
                 var11.field_q = var6;
                 break L2;
               } else {
-                var4_ref = new ja(var6, new int[var8]);
+                var4 = new ja(var6, new int[var8]);
                 break L2;
               }
             }
-            var9 = var4_ref.field_s;
+            var9 = var4.field_s;
             var10 = var8 - 1;
             L3: while (true) {
               if (var10 < 0) {
-                field_r.a(var2, (ta) (Object) var4_ref, 0);
-                return var4_ref;
+                field_r.a(var2, (ta) (Object) var4, 0);
+                return var4;
               } else {
                 var9[var10] = ja.i(var15[var10]);
                 var10--;
@@ -102,16 +101,15 @@ final class ja extends ta implements ec {
     final static ja a(long[] param0, int param1) {
         long var8 = 0L;
         int var10 = 0;
-        ja var3_ref = null;
         int var2 = be.field_a[param1];
         ja var3 = (ja) (Object) field_t.a((byte) -114);
         if (var3 == null) {
-            var3_ref = new ja(var2, new int[4096]);
+            var3 = new ja(var2, new int[4096]);
         } else {
-            var3_ref.field_q = var2;
+            var3.field_q = var2;
         }
         int var4 = be.field_a[pj.a(param1, 64)];
-        int[] var5 = var3_ref.field_s;
+        int[] var5 = var3.field_s;
         int var6 = 63;
         int var7 = 4096;
         while (var6 >= 0) {
@@ -123,7 +121,7 @@ final class ja extends ta implements ec {
             }
             var6--;
         }
-        return var3_ref;
+        return var3;
     }
 
     public final int c(int param0) {
@@ -143,7 +141,6 @@ final class ja extends ta implements ec {
         int var4 = 0;
         int var5 = 0;
         ja var6 = null;
-        ja var6_ref = null;
         int[] var7 = null;
         int var8 = 0;
         int var9 = 0;
@@ -208,14 +205,14 @@ final class ja extends ta implements ec {
           L2: {
             var6 = (ja) (Object) stackIn_8_0;
             if (var6 != null) {
-              var6_ref.field_q = param1.b(param2);
+              var6.field_q = param1.b(param2);
               break L2;
             } else {
-              var6_ref = new ja(param1.b(param2), new int[var5]);
+              var6 = new ja(param1.b(param2), new int[var5]);
               break L2;
             }
           }
-          var7 = var6_ref.field_s;
+          var7 = var6.field_s;
           if (var4 != 64) {
             var8 = 63;
             var9 = var5 - 1;
@@ -234,16 +231,20 @@ final class ja extends ta implements ec {
                       } else {
                         L6: {
                           if (var10 % 2L == 0L) {
+                            int incrementValue$9 = var9;
                             var9--;
-                            var7[var9] = var17[var9];
+                            var7[incrementValue$9] = var17[var9];
+                            int incrementValue$10 = var9;
                             var9--;
-                            var7[var9] = var17[var9];
+                            var7[incrementValue$10] = var17[var9];
                             break L6;
                           } else {
+                            int incrementValue$11 = var9;
                             var9--;
-                            var7[var9] = ja.i(var17[var9]);
+                            var7[incrementValue$11] = ja.i(var17[var9]);
+                            int incrementValue$12 = var9;
                             var9--;
-                            var7[var9] = ja.i(var17[var9]);
+                            var7[incrementValue$12] = ja.i(var17[var9]);
                             break L6;
                           }
                         }
@@ -255,16 +256,20 @@ final class ja extends ta implements ec {
                   } else {
                     L7: {
                       if (var10 % 2L == 0L) {
+                        int incrementValue$13 = var9;
                         var9--;
-                        var7[var9] = var17[var9];
+                        var7[incrementValue$13] = var17[var9];
+                        int incrementValue$14 = var9;
                         var9--;
-                        var7[var9] = var17[var9];
+                        var7[incrementValue$14] = var17[var9];
                         break L7;
                       } else {
+                        int incrementValue$15 = var9;
                         var9--;
-                        var7[var9] = ja.i(var17[var9]);
+                        var7[incrementValue$15] = ja.i(var17[var9]);
+                        int incrementValue$16 = var9;
                         var9--;
-                        var7[var9] = ja.i(var17[var9]);
+                        var7[incrementValue$16] = ja.i(var17[var9]);
                         break L7;
                       }
                     }
@@ -274,7 +279,7 @@ final class ja extends ta implements ec {
                   }
                 }
               } else {
-                return var6_ref;
+                return var6;
               }
             }
           } else {
@@ -291,9 +296,10 @@ final class ja extends ta implements ec {
                   } else {
                     L10: {
                       var13 = var17[var9];
+                      int incrementValue$17 = var9;
                       var9--;
                       stackOut_17_0 = (int[]) var7;
-                      stackOut_17_1 = var9;
+                      stackOut_17_1 = incrementValue$17;
                       stackIn_19_0 = stackOut_17_0;
                       stackIn_19_1 = stackOut_17_1;
                       stackIn_18_0 = stackOut_17_0;
@@ -323,7 +329,7 @@ final class ja extends ta implements ec {
                   }
                 }
               } else {
-                return var6_ref;
+                return var6;
               }
             }
           }

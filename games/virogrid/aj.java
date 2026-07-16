@@ -24,7 +24,9 @@ class aj implements ol, gm {
     int field_c;
 
     public final int b(int param0, fi param1, int param2) {
+        Object var5 = null;
         if (param0 != -587719039) {
+          var5 = null;
           int discarded$2 = this.a(23, -29, (byte) 22, (fi) null);
           return this.a((byte) -92, param1, param2, 0);
         } else {
@@ -221,12 +223,15 @@ class aj implements ol, gm {
     private final void a(int param0, int param1, fi param2, int param3) {
         this.a(param0, ((aj) this).field_b, param3, 0, 0, -103, ((aj) this).field_c, param2);
         if (param1 != 29940) {
+            Object var6 = null;
             this.b((fi) null, 57);
         }
     }
 
     public final int a(fi param0, int param1) {
+        Object var4 = null;
         if (param1 <= 65) {
+          var4 = null;
           int discarded$6 = ((aj) this).b(-67, (fi) null, -114);
           ie discarded$7 = ((aj) this).a(param0, (byte) -128);
           return param0.field_r.a((byte) 20) - -((aj) this).field_n + ((aj) this).field_r;
@@ -266,10 +271,10 @@ class aj implements ol, gm {
                   if (var6 == 0) {
                     break L1;
                   } else {
-                    if (-4 == var6) {
+                    if (-4 == (var6 ^ -1)) {
                       break L1;
                     } else {
-                      if (-2 == var6) {
+                      if (-2 == (var6 ^ -1)) {
                         if (!(param0.field_r instanceof bm)) {
                           break L0;
                         } else {
@@ -307,11 +312,11 @@ class aj implements ol, gm {
                   if (var6 == 0) {
                     break L2;
                   } else {
-                    if (-4 == var6) {
+                    if (-4 == (var6 ^ -1)) {
                       break L2;
                     } else {
                       L3: {
-                        if (-2 == var6) {
+                        if (-2 == (var6 ^ -1)) {
                           if (!(param0.field_r instanceof bm)) {
                             break L3;
                           } else {
@@ -350,101 +355,107 @@ class aj implements ol, gm {
                       if (var6 == 0) {
                         break L4;
                       } else {
-                        if (-4 == var6) {
+                        if (-4 == (var6 ^ -1)) {
                           break L4;
                         } else {
-                          if (-2 == var6) {
-                            if (param0.field_r instanceof bm) {
-                              ((bm) (Object) param0.field_r).a(((aj) this).c(param0, 218479361), (byte) -98, ((aj) this).field_i, var3 >> 218479361, var5);
-                              return;
-                            } else {
-                              return;
-                            }
-                          } else {
-                            if (var6 == 2) {
-                              if (param0.field_r instanceof bm) {
-                                ((bm) (Object) param0.field_r).a((byte) -92, var3, ((aj) this).c(param0, 218479361), var5, ((aj) this).field_i);
-                                return;
+                          L5: {
+                            if (-2 == (var6 ^ -1)) {
+                              if (!(param0.field_r instanceof bm)) {
+                                break L5;
                               } else {
+                                ((bm) (Object) param0.field_r).a(((aj) this).c(param0, 218479361), (byte) -98, ((aj) this).field_i, var3 >> 218479361, var5);
                                 return;
                               }
                             } else {
-                              return;
+                              if (var6 != 2) {
+                                break L5;
+                              } else {
+                                if (param0.field_r instanceof bm) {
+                                  ((bm) (Object) param0.field_r).a((byte) -92, var3, ((aj) this).c(param0, 218479361), var5, ((aj) this).field_i);
+                                  break L5;
+                                } else {
+                                  return;
+                                }
+                              }
                             }
                           }
+                          return;
                         }
                       }
                     }
-                    if (!(param0.field_r instanceof bm)) {
+                    if (param0.field_r instanceof bm) {
+                      ((bm) (Object) param0.field_r).a(var5, (byte) 59, ((aj) this).field_i, 0, ((aj) this).c(param0, 218479361));
                       return;
                     } else {
-                      ((bm) (Object) param0.field_r).a(var5, (byte) 59, ((aj) this).field_i, 0, ((aj) this).c(param0, 218479361));
                       return;
                     }
                   } else {
-                    L5: {
+                    L6: {
                       var5 = (var4 + -((aj) this).field_i.field_H - ((aj) this).field_i.field_G >> 909668449) + ((aj) this).field_i.field_H;
                       var6 = ((aj) this).field_j;
                       if (var6 == 0) {
-                        break L5;
+                        break L6;
                       } else {
-                        if (-4 == var6) {
-                          break L5;
+                        if (-4 == (var6 ^ -1)) {
+                          break L6;
                         } else {
-                          if (-2 == var6) {
-                            if (param0.field_r instanceof bm) {
-                              ((bm) (Object) param0.field_r).a(((aj) this).c(param0, 218479361), (byte) -98, ((aj) this).field_i, var3 >> 218479361, var5);
-                              return;
-                            } else {
-                              return;
-                            }
-                          } else {
-                            if (var6 == 2) {
-                              if (param0.field_r instanceof bm) {
-                                ((bm) (Object) param0.field_r).a((byte) -92, var3, ((aj) this).c(param0, 218479361), var5, ((aj) this).field_i);
-                                return;
+                          L7: {
+                            if (-2 == (var6 ^ -1)) {
+                              if (!(param0.field_r instanceof bm)) {
+                                break L7;
                               } else {
+                                ((bm) (Object) param0.field_r).a(((aj) this).c(param0, 218479361), (byte) -98, ((aj) this).field_i, var3 >> 218479361, var5);
                                 return;
                               }
                             } else {
-                              return;
+                              if (var6 != 2) {
+                                break L7;
+                              } else {
+                                if (param0.field_r instanceof bm) {
+                                  ((bm) (Object) param0.field_r).a((byte) -92, var3, ((aj) this).c(param0, 218479361), var5, ((aj) this).field_i);
+                                  break L7;
+                                } else {
+                                  return;
+                                }
+                              }
                             }
                           }
+                          return;
                         }
                       }
                     }
-                    if (!(param0.field_r instanceof bm)) {
+                    if (param0.field_r instanceof bm) {
+                      ((bm) (Object) param0.field_r).a(var5, (byte) 59, ((aj) this).field_i, 0, ((aj) this).c(param0, 218479361));
                       return;
                     } else {
-                      ((bm) (Object) param0.field_r).a(var5, (byte) 59, ((aj) this).field_i, 0, ((aj) this).c(param0, 218479361));
                       return;
                     }
                   }
                 } else {
-                  L6: {
+                  L8: {
                     var5 = (var4 + -((aj) this).field_i.field_H - ((aj) this).field_i.field_G >> 909668449) + ((aj) this).field_i.field_H;
                     var6 = ((aj) this).field_j;
                     if (var6 == 0) {
-                      break L6;
+                      break L8;
                     } else {
-                      if (-4 == var6) {
-                        break L6;
+                      if (-4 == (var6 ^ -1)) {
+                        break L8;
                       } else {
-                        L7: {
-                          if (-2 == var6) {
+                        L9: {
+                          if (-2 == (var6 ^ -1)) {
                             if (!(param0.field_r instanceof bm)) {
-                              break L7;
+                              break L9;
                             } else {
                               ((bm) (Object) param0.field_r).a(((aj) this).c(param0, 218479361), (byte) -98, ((aj) this).field_i, var3 >> 218479361, var5);
                               return;
                             }
                           } else {
                             if (var6 != 2) {
-                              break L7;
+                              break L9;
                             } else {
                               if (param0.field_r instanceof bm) {
                                 ((bm) (Object) param0.field_r).a((byte) -92, var3, ((aj) this).c(param0, 218479361), var5, ((aj) this).field_i);
-                                break L7;
+                                break L9;
                               } else {
                                 return;
                               }
@@ -472,125 +483,33 @@ class aj implements ol, gm {
             var3 = ((aj) this).b(param0, true);
             var4 = this.a(0, param0);
             var6 = ((aj) this).field_k;
-            if (var6 != 0) {
-              if (-3 != (var6 ^ -1)) {
-                L8: {
-                  if ((var6 ^ -1) != -4) {
-                    if (var6 != 1) {
-                      break L8;
-                    } else {
-                      break L8;
-                    }
-                  } else {
-                    break L8;
-                  }
-                }
-                L9: {
-                  var5 = (var4 + -((aj) this).field_i.field_H - ((aj) this).field_i.field_G >> 909668449) + ((aj) this).field_i.field_H;
-                  var6 = ((aj) this).field_j;
-                  if (var6 == 0) {
-                    break L9;
-                  } else {
-                    if (-4 == var6) {
-                      break L9;
-                    } else {
-                      if (-2 == var6) {
-                        if (param0.field_r instanceof bm) {
-                          ((bm) (Object) param0.field_r).a(((aj) this).c(param0, 218479361), (byte) -98, ((aj) this).field_i, var3 >> 218479361, var5);
-                          return;
-                        } else {
-                          return;
-                        }
-                      } else {
-                        if (var6 == 2) {
-                          if (!(param0.field_r instanceof bm)) {
-                            return;
-                          } else {
-                            ((bm) (Object) param0.field_r).a((byte) -92, var3, ((aj) this).c(param0, 218479361), var5, ((aj) this).field_i);
-                            return;
-                          }
-                        } else {
-                          return;
-                        }
-                      }
-                    }
-                  }
-                }
-                if (!(param0.field_r instanceof bm)) {
-                  return;
-                } else {
-                  ((bm) (Object) param0.field_r).a(var5, (byte) 59, ((aj) this).field_i, 0, ((aj) this).c(param0, 218479361));
-                  return;
-                }
-              } else {
-                L10: {
-                  L11: {
-                    var5 = -((aj) this).field_i.field_G + var4;
-                    var6 = ((aj) this).field_j;
-                    if (var6 == 0) {
-                      break L11;
-                    } else {
-                      if (-4 == var6) {
-                        break L11;
-                      } else {
-                        if (-2 == var6) {
-                          if (!(param0.field_r instanceof bm)) {
-                            break L10;
-                          } else {
-                            ((bm) (Object) param0.field_r).a(((aj) this).c(param0, 218479361), (byte) -98, ((aj) this).field_i, var3 >> 218479361, var5);
-                            break L10;
-                          }
-                        } else {
-                          if (var6 != 2) {
-                            break L10;
-                          } else {
-                            if (param0.field_r instanceof bm) {
-                              ((bm) (Object) param0.field_r).a((byte) -92, var3, ((aj) this).c(param0, 218479361), var5, ((aj) this).field_i);
-                              break L10;
-                            } else {
-                              break L10;
-                            }
-                          }
-                        }
-                      }
-                    }
-                  }
-                  if (param0.field_r instanceof bm) {
-                    ((bm) (Object) param0.field_r).a(var5, (byte) 59, ((aj) this).field_i, 0, ((aj) this).c(param0, 218479361));
-                    break L10;
-                  } else {
-                    break L10;
-                  }
-                }
-                return;
-              }
-            } else {
-              L12: {
-                L13: {
+            if (var6 == 0) {
+              L10: {
+                L11: {
                   var5 = ((aj) this).field_i.field_H;
                   var6 = ((aj) this).field_j;
                   if (var6 == 0) {
-                    break L13;
+                    break L11;
                   } else {
-                    if (-4 == var6) {
-                      break L13;
+                    if (-4 == (var6 ^ -1)) {
+                      break L11;
                     } else {
-                      if (-2 == var6) {
+                      if (-2 == (var6 ^ -1)) {
                         if (!(param0.field_r instanceof bm)) {
-                          break L12;
+                          break L10;
                         } else {
                           ((bm) (Object) param0.field_r).a(((aj) this).c(param0, 218479361), (byte) -98, ((aj) this).field_i, var3 >> 218479361, var5);
-                          break L12;
+                          break L10;
                         }
                       } else {
                         if (var6 != 2) {
-                          break L12;
+                          break L10;
                         } else {
                           if (param0.field_r instanceof bm) {
                             ((bm) (Object) param0.field_r).a((byte) -92, var3, ((aj) this).c(param0, 218479361), var5, ((aj) this).field_i);
-                            break L12;
+                            break L10;
                           } else {
-                            break L12;
+                            break L10;
                           }
                         }
                       }
@@ -599,12 +518,107 @@ class aj implements ol, gm {
                 }
                 if (param0.field_r instanceof bm) {
                   ((bm) (Object) param0.field_r).a(var5, (byte) 59, ((aj) this).field_i, 0, ((aj) this).c(param0, 218479361));
-                  break L12;
+                  break L10;
                 } else {
-                  break L12;
+                  break L10;
                 }
               }
               return;
+            } else {
+              if (-3 == (var6 ^ -1)) {
+                L12: {
+                  L13: {
+                    var5 = -((aj) this).field_i.field_G + var4;
+                    var6 = ((aj) this).field_j;
+                    if (var6 == 0) {
+                      break L13;
+                    } else {
+                      if (-4 == (var6 ^ -1)) {
+                        break L13;
+                      } else {
+                        if (-2 == (var6 ^ -1)) {
+                          if (!(param0.field_r instanceof bm)) {
+                            break L12;
+                          } else {
+                            ((bm) (Object) param0.field_r).a(((aj) this).c(param0, 218479361), (byte) -98, ((aj) this).field_i, var3 >> 218479361, var5);
+                            break L12;
+                          }
+                        } else {
+                          if (var6 != 2) {
+                            break L12;
+                          } else {
+                            if (param0.field_r instanceof bm) {
+                              ((bm) (Object) param0.field_r).a((byte) -92, var3, ((aj) this).c(param0, 218479361), var5, ((aj) this).field_i);
+                              break L12;
+                            } else {
+                              break L12;
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                  if (param0.field_r instanceof bm) {
+                    ((bm) (Object) param0.field_r).a(var5, (byte) 59, ((aj) this).field_i, 0, ((aj) this).c(param0, 218479361));
+                    break L12;
+                  } else {
+                    break L12;
+                  }
+                }
+                return;
+              } else {
+                L14: {
+                  if ((var6 ^ -1) != -4) {
+                    if (var6 != 1) {
+                      break L14;
+                    } else {
+                      break L14;
+                    }
+                  } else {
+                    break L14;
+                  }
+                }
+                L15: {
+                  var5 = (var4 + -((aj) this).field_i.field_H - ((aj) this).field_i.field_G >> 909668449) + ((aj) this).field_i.field_H;
+                  var6 = ((aj) this).field_j;
+                  if (var6 == 0) {
+                    break L15;
+                  } else {
+                    if (-4 == (var6 ^ -1)) {
+                      break L15;
+                    } else {
+                      L16: {
+                        if (-2 == (var6 ^ -1)) {
+                          if (!(param0.field_r instanceof bm)) {
+                            break L16;
+                          } else {
+                            ((bm) (Object) param0.field_r).a(((aj) this).c(param0, 218479361), (byte) -98, ((aj) this).field_i, var3 >> 218479361, var5);
+                            return;
+                          }
+                        } else {
+                          if (var6 != 2) {
+                            break L16;
+                          } else {
+                            if (param0.field_r instanceof bm) {
+                              ((bm) (Object) param0.field_r).a((byte) -92, var3, ((aj) this).c(param0, 218479361), var5, ((aj) this).field_i);
+                              break L16;
+                            } else {
+                              return;
+                            }
+                          }
+                        }
+                      }
+                      return;
+                    }
+                  }
+                }
+                if (param0.field_r instanceof bm) {
+                  ((bm) (Object) param0.field_r).a(var5, (byte) 59, ((aj) this).field_i, 0, ((aj) this).c(param0, 218479361));
+                  return;
+                } else {
+                  return;
+                }
+              }
             }
           } else {
             return;
@@ -752,10 +766,10 @@ class aj implements ol, gm {
                 if (var13 == 0) {
                   break L0;
                 } else {
-                  if (-4 == var13) {
+                  if (-4 == (var13 ^ -1)) {
                     break L0;
                   } else {
-                    if (-2 == var13) {
+                    if (-2 == (var13 ^ -1)) {
                       ((aj) this).field_i.c(((aj) this).c(param7, 218479361), this.a(param2, param4, (byte) -42, param7) - -(var10 >> 135250817), this.a((byte) 23, param7, param0, param3) - -var12, param6, param1);
                       ai.a(true);
                       return;
@@ -784,10 +798,10 @@ class aj implements ol, gm {
                     if (var13 == 0) {
                       break L1;
                     } else {
-                      if (-4 == var13) {
+                      if (-4 == (var13 ^ -1)) {
                         break L1;
                       } else {
-                        if (-2 == var13) {
+                        if (-2 == (var13 ^ -1)) {
                           ((aj) this).field_i.c(((aj) this).c(param7, 218479361), this.a(param2, param4, (byte) -42, param7) - -(var10 >> 135250817), this.a((byte) 23, param7, param0, param3) - -var12, param6, param1);
                           ai.a(true);
                           return;
@@ -844,10 +858,10 @@ class aj implements ol, gm {
                   if (var13 == 0) {
                     break L2;
                   } else {
-                    if (-4 == var13) {
+                    if (-4 == (var13 ^ -1)) {
                       break L2;
                     } else {
-                      if (-2 == var13) {
+                      if (-2 == (var13 ^ -1)) {
                         ((aj) this).field_i.c(((aj) this).c(param7, 218479361), this.a(param2, param4, (byte) -42, param7) - -(var10 >> 135250817), this.a((byte) 23, param7, param0, param3) - -var12, param6, param1);
                         ai.a(true);
                         return;
@@ -918,8 +932,10 @@ class aj implements ol, gm {
     }
 
     public final int a(fi param0, boolean param1) {
+        Object var4 = null;
         ie discarded$7 = ((aj) this).a(param0, (byte) -118);
         if (param1) {
+          var4 = null;
           ((aj) this).a(-29, (fi) null, false, -86, -114);
           return param0.field_r.a(3209) + (((aj) this).field_p + ((aj) this).field_d);
         } else {

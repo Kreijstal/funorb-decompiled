@@ -82,9 +82,9 @@ final class ho {
           var5 = 10210196;
           var6 = param2;
           if (var6 != -1) {
-            if (var6 != -1) {
+            if ((var6 ^ -1) != -1) {
               if (var6 != 1) {
-                if (-3 != var6) {
+                if (-3 != (var6 ^ -1)) {
                   if (3 == var6) {
                     L0: {
                       var5 = 2267494;
@@ -200,7 +200,7 @@ final class ho {
             sj.a(var4, -1380633400, var5, param0);
             return;
           } else {
-            if (var6 != 0) {
+            if ((var6 ^ -1) != -1) {
               if (var6 != 1) {
                 if (-3 != (var6 ^ -1)) {
                   if (3 == var6) {

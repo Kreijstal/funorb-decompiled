@@ -21,10 +21,8 @@ class fa {
         ak var17 = null;
         int var18 = 0;
         Object var19_ref = null;
-        tf var19_ref_tf = null;
         int var19 = 0;
         Object var20 = null;
-        String var20_ref = null;
         int var21 = 0;
         ak var23 = null;
         ak var24 = null;
@@ -161,8 +159,7 @@ class fa {
           }
         }
         L3: {
-          new ak(stackIn_8_2, stackIn_8_3, ((String) (Object) stackIn_8_4).toUpperCase());
-          in.field_p = stackIn_8_0;
+          in.field_p = new ak(stackIn_8_2, stackIn_8_3, ((String) (Object) stackIn_8_4).toUpperCase());
           ti.field_E = new ak(0L, (ak) null);
           ti.field_E.a(sd.field_P, (byte) 26);
           ti.field_E.a(gm.field_a, (byte) 26);
@@ -309,10 +306,10 @@ class fa {
                           break L16;
                         } else {
                           if (dk.field_a[var17_int] != null) {
-                            var19_ref_tf = dk.field_a[var17_int][var18];
+                            var19_ref = (Object) (Object) dk.field_a[var17_int][var18];
                             break L16;
                           } else {
-                            var19_ref_tf = null;
+                            var19_ref = null;
                             break L16;
                           }
                         }
@@ -323,10 +320,10 @@ class fa {
                           break L17;
                         } else {
                           if (bf.field_q[var17_int] != null) {
-                            var20_ref = bf.field_q[var17_int][var18];
+                            var20 = (Object) (Object) bf.field_q[var17_int][var18];
                             break L17;
                           } else {
-                            var20_ref = null;
+                            var20 = null;
                             break L17;
                           }
                         }

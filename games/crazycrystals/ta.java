@@ -79,7 +79,7 @@ abstract class ta extends l {
 
     final l b(byte param0) {
         int var2_int = 0;
-        ta var2 = null;
+        Object var2 = null;
         int var3 = 0;
         int var4 = 0;
         var4 = CrazyCrystals.field_B;
@@ -88,15 +88,15 @@ abstract class ta extends l {
           L0: while (true) {
             if (ma.field_n.length <= var2_int) {
               L1: {
-                var2 = this.e((byte) -102);
+                var2 = (Object) (Object) this.e((byte) -102);
                 if (var2 != null) {
                   break L1;
                 } else {
-                  var2 = (ta) (Object) ((ta) this).b(false);
+                  var2 = (Object) (Object) ((ta) this).b(false);
                   break L1;
                 }
               }
-              return (l) (Object) var2;
+              return (l) var2;
             } else {
               var3 = ((ta) this).field_e.a(param0 ^ -1843275132, var2_int) - ((ta) this).field_f;
               if (var3 > 0) {
@@ -144,11 +144,11 @@ abstract class ta extends l {
         if (param0 != -2) {
             ((ta) this).field_e = null;
         }
-        ta var3 = this.e((byte) -40);
+        Object var3 = (Object) (Object) this.e((byte) -40);
         if (var3 == null) {
-            var3 = (ta) (Object) ((ta) this).b(false);
+            var3 = (Object) (Object) ((ta) this).b(false);
         }
-        return ((l) (Object) var3).a(-2);
+        return ((l) var3).a(-2);
     }
 
     final static void a(java.applet.Applet param0, int param1) {

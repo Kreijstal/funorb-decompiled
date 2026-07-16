@@ -54,7 +54,7 @@ final class oh {
         var15 = Torquing.field_u;
         var6 = param2 - param1;
         var7 = -param0 + param4;
-        if (var7 != -1) {
+        if ((var7 ^ -1) != -1) {
           if (-1 == (var6 ^ -1)) {
             rh.a((byte) -115, param4, param1, param0, param5);
             return;
@@ -101,7 +101,7 @@ final class oh {
               }
             }
             L4: {
-              if (param0 > param4) {
+              if ((param0 ^ -1) < (param4 ^ -1)) {
                 var9 = param0;
                 param0 = param4;
                 var10 = param1;
@@ -114,9 +114,8 @@ final class oh {
               }
             }
             var9 = param1;
-            if (param3 != -128) {
+            if (param3 == -128) {
               L5: {
-                field_c = 118;
                 var10 = -param0 + param4;
                 var11 = param2 + -param1;
                 var12 = -(var10 >> -235750591);
@@ -153,6 +152,8 @@ final class oh {
                         if (0 >= var12) {
                           break L9;
                         } else {
+                          var9 = var9 + var13;
+                          var12 = var12 - var10;
                           break L9;
                         }
                       }
@@ -163,87 +164,94 @@ final class oh {
                 } else {
                   var14 = param0;
                   L10: while (true) {
-                    if (param4 < var14) {
+                    if ((param4 ^ -1) > (var14 ^ -1)) {
                       break L7;
                     } else {
-                      qd.field_a[var9][var14] = param5;
-                      var12 = var12 + var11;
-                      if (0 < var12) {
-                        var12 = var12 - var10;
-                        var9 = var9 + var13;
-                        var14++;
-                        continue L10;
-                      } else {
-                        var14++;
-                        continue L10;
+                      L11: {
+                        qd.field_a[var9][var14] = param5;
+                        var12 = var12 + var11;
+                        if (0 < var12) {
+                          var12 = var12 - var10;
+                          var9 = var9 + var13;
+                          break L11;
+                        } else {
+                          break L11;
+                        }
                       }
+                      var14++;
+                      continue L10;
                     }
                   }
                 }
               }
               return;
             } else {
-              L11: {
+              L12: {
+                field_c = 118;
                 var10 = -param0 + param4;
                 var11 = param2 + -param1;
                 var12 = -(var10 >> -235750591);
                 if ((var11 ^ -1) <= -1) {
-                  break L11;
-                } else {
-                  var11 = -var11;
-                  break L11;
-                }
-              }
-              L12: {
-                if (param2 > param1) {
-                  stackOut_27_0 = 1;
-                  stackIn_28_0 = stackOut_27_0;
                   break L12;
                 } else {
-                  stackOut_26_0 = -1;
-                  stackIn_28_0 = stackOut_26_0;
+                  var11 = -var11;
                   break L12;
                 }
               }
               L13: {
+                if (param2 > param1) {
+                  stackOut_27_0 = 1;
+                  stackIn_28_0 = stackOut_27_0;
+                  break L13;
+                } else {
+                  stackOut_26_0 = -1;
+                  stackIn_28_0 = stackOut_26_0;
+                  break L13;
+                }
+              }
+              L14: {
                 var13 = stackIn_28_0;
                 if (var8 != 0) {
                   var16 = param0;
                   var14 = var16;
-                  L14: while (true) {
+                  L15: while (true) {
                     if (param4 < var16) {
-                      break L13;
+                      break L14;
                     } else {
-                      L15: {
+                      L16: {
                         var12 = var12 + var11;
                         qd.field_a[var16][var9] = param5;
                         if (0 >= var12) {
-                          break L15;
+                          break L16;
                         } else {
-                          break L15;
+                          var9 = var9 + var13;
+                          var12 = var12 - var10;
+                          break L16;
                         }
                       }
                       var16++;
-                      continue L14;
+                      continue L15;
                     }
                   }
                 } else {
                   var14 = param0;
-                  L16: while (true) {
-                    if (param4 < var14) {
-                      break L13;
+                  L17: while (true) {
+                    if ((param4 ^ -1) > (var14 ^ -1)) {
+                      break L14;
                     } else {
-                      qd.field_a[var9][var14] = param5;
-                      var12 = var12 + var11;
-                      if (0 < var12) {
-                        var12 = var12 - var10;
-                        var9 = var9 + var13;
-                        var14++;
-                        continue L16;
-                      } else {
-                        var14++;
-                        continue L16;
+                      L18: {
+                        qd.field_a[var9][var14] = param5;
+                        var12 = var12 + var11;
+                        if (0 < var12) {
+                          var12 = var12 - var10;
+                          var9 = var9 + var13;
+                          break L18;
+                        } else {
+                          break L18;
+                        }
                       }
+                      var14++;
+                      continue L17;
                     }
                   }
                 }
@@ -252,10 +260,10 @@ final class oh {
             }
           }
         } else {
-          if (-1 != var6) {
-            wa.a(param5, param0, true, param2, param1);
+          if (-1 == (var6 ^ -1)) {
             return;
           } else {
+            wa.a(param5, param0, true, param2, param1);
             return;
           }
         }

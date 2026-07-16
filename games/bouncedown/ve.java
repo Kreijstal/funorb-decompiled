@@ -364,23 +364,26 @@ final class ve {
         var1 = (Object) (Object) nj.field_o;
         synchronized (var1) {
           L0: {
-            n.field_m = c.field_c;
-            wh.field_d = wh.field_d + 1;
-            uc.field_C = th.field_a;
-            ll.field_y = q.field_H;
-            mi.field_j = cl.field_o;
-            cl.field_o = false;
-            vh.field_e = ta.field_a;
-            og.field_a = hb.field_B;
-            rk.field_a = nc.field_b;
-            if (param0 == -91) {
-              break L0;
-            } else {
-              ve.a(108);
-              break L0;
+            L1: {
+              n.field_m = c.field_c;
+              wh.field_d = wh.field_d + 1;
+              uc.field_C = th.field_a;
+              ll.field_y = q.field_H;
+              mi.field_j = cl.field_o;
+              cl.field_o = false;
+              vh.field_e = ta.field_a;
+              og.field_a = hb.field_B;
+              rk.field_a = nc.field_b;
+              if (param0 == -91) {
+                break L1;
+              } else {
+                ve.a(108);
+                break L1;
+              }
             }
+            ta.field_a = 0;
+            break L0;
           }
-          ta.field_a = 0;
         }
     }
 

@@ -498,7 +498,6 @@ class km extends ke {
         int var25 = 0;
         int var26 = 0;
         Object var28 = null;
-        hn var28_ref = null;
         hg var29 = null;
         Object var30 = null;
         hn var30_ref = null;
@@ -510,7 +509,7 @@ class km extends ke {
           var26 = Virogrid.field_F ? 1 : 0;
           var29 = sh.field_qb;
           var2 = var29.g(11132);
-          if (-1 == var2) {
+          if (-1 == (var2 ^ -1)) {
             var3 = var29.c((byte) 87);
             var4 = (oc) (Object) fn.field_a.a((byte) -77);
             L1: while (true) {
@@ -559,7 +558,7 @@ class km extends ke {
                         } else {
                           var19 = 0;
                           L5: while (true) {
-                            if (var18 <= var19) {
+                            if ((var18 ^ -1) >= (var19 ^ -1)) {
                               break L3;
                             } else {
                               L6: {
@@ -567,7 +566,7 @@ class km extends ke {
                                 var21 = qd.field_m[var20].field_g;
                                 var22 = var29.e((byte) -60);
                                 var24 = var29.field_l;
-                                if (var19 < var6) {
+                                if ((var19 ^ -1) > (var6 ^ -1)) {
                                   var8[0][var12] = var21;
                                   var9[0][var12] = qd.field_m[var20].field_d;
                                   var37[0][var12] = var22;
@@ -577,8 +576,9 @@ class km extends ke {
                                     if (var25 >= var7) {
                                       break L6;
                                     } else {
+                                      int incrementValue$3 = var15;
                                       var15++;
-                                      var38[0][var15] = var29.d((byte) 93);
+                                      var38[0][incrementValue$3] = var29.d((byte) 93);
                                       var25++;
                                       continue L7;
                                     }
@@ -599,11 +599,12 @@ class km extends ke {
                                     var29.field_l = var24;
                                     var25 = 0;
                                     L9: while (true) {
-                                      if (var25 >= var7) {
+                                      if ((var25 ^ -1) <= (var7 ^ -1)) {
                                         break L8;
                                       } else {
+                                        int incrementValue$4 = var16;
                                         var16++;
-                                        var38[1][var16] = var29.d((byte) 103);
+                                        var38[1][incrementValue$4] = var29.d((byte) 103);
                                         var25++;
                                         continue L9;
                                       }
@@ -613,49 +614,53 @@ class km extends ke {
                                   }
                                 }
                               }
-                              if (var6 > var14) {
-                                if (!qd.field_m[var20].field_e) {
-                                  qd.field_m[var20].field_e = true;
-                                  var8[2][var14] = var21;
-                                  var9[2][var14] = qd.field_m[var20].field_d;
-                                  var37[2][var14] = var22;
-                                  var14++;
-                                  var29.field_l = var24;
-                                  var25 = 0;
-                                  L10: while (true) {
-                                    if (var7 > var25) {
-                                      var17++;
-                                      var38[2][var17] = var29.d((byte) 127);
-                                      var25++;
-                                      continue L10;
-                                    } else {
-                                      var19++;
-                                      continue L5;
-                                    }
-                                  }
+                              L10: {
+                                if (var6 <= var14) {
+                                  break L10;
                                 } else {
-                                  var19++;
-                                  continue L5;
+                                  if (!qd.field_m[var20].field_e) {
+                                    qd.field_m[var20].field_e = true;
+                                    var8[2][var14] = var21;
+                                    var9[2][var14] = qd.field_m[var20].field_d;
+                                    var37[2][var14] = var22;
+                                    var14++;
+                                    var29.field_l = var24;
+                                    var25 = 0;
+                                    L11: while (true) {
+                                      if ((var7 ^ -1) >= (var25 ^ -1)) {
+                                        break L10;
+                                      } else {
+                                        int incrementValue$5 = var17;
+                                        var17++;
+                                        var38[2][incrementValue$5] = var29.d((byte) 127);
+                                        var25++;
+                                        continue L11;
+                                      }
+                                    }
+                                  } else {
+                                    break L10;
+                                  }
                                 }
-                              } else {
-                                var19++;
-                                continue L5;
                               }
+                              var19++;
+                              continue L5;
                             }
                           }
                         }
                       } else {
-                        qd.field_m[var8_int].field_g = var29.h(param0 ^ -59);
-                        qd.field_m[var8_int].field_e = false;
-                        if (var29.g(11132) == 1) {
-                          qd.field_m[var8_int].field_d = var29.h(param0 + -204);
-                          var8_int++;
-                          continue L4;
-                        } else {
-                          qd.field_m[var8_int].field_d = null;
-                          var8_int++;
-                          continue L4;
+                        L12: {
+                          qd.field_m[var8_int].field_g = var29.h(param0 ^ -59);
+                          qd.field_m[var8_int].field_e = false;
+                          if (var29.g(11132) == 1) {
+                            qd.field_m[var8_int].field_d = var29.h(param0 + -204);
+                            break L12;
+                          } else {
+                            qd.field_m[var8_int].field_d = null;
+                            break L12;
+                          }
                         }
+                        var8_int++;
+                        continue L4;
                       }
                     }
                   }
@@ -665,27 +670,27 @@ class km extends ke {
               }
             }
           } else {
-            if (-2 == var2) {
+            if (-2 == (var2 ^ -1)) {
               var3 = var29.c((byte) 83);
               var30_ref = (hn) (Object) qn.field_P.a((byte) -44);
-              L11: while (true) {
-                L12: {
+              L13: while (true) {
+                L14: {
                   if (var30_ref == null) {
-                    break L12;
+                    break L14;
                   } else {
-                    if (var3 != var30_ref.field_j) {
-                      var28_ref = (hn) (Object) qn.field_P.a(16213);
-                      continue L11;
+                    if ((var3 ^ -1) != (var30_ref.field_j ^ -1)) {
+                      var28 = (Object) (Object) (hn) (Object) qn.field_P.a(16213);
+                      continue L13;
                     } else {
-                      break L12;
+                      break L14;
                     }
                   }
                 }
-                if (var28_ref == null) {
+                if (var28 == null) {
                   tn.a(false);
                   return;
                 } else {
-                  var28_ref.a(false);
+                  ((hn) var28).a(false);
                   break L0;
                 }
               }
@@ -696,12 +701,12 @@ class km extends ke {
             }
           }
         }
-        L13: {
+        L15: {
           if (param0 == 76) {
-            break L13;
+            break L15;
           } else {
             field_yb = null;
-            break L13;
+            break L15;
           }
         }
     }
@@ -771,7 +776,6 @@ class km extends ke {
         int var11 = 0;
         int var12 = 0;
         Object var13 = null;
-        km var13_ref = null;
         int var14 = 0;
         Object stackIn_25_0 = null;
         Object stackIn_26_0 = null;
@@ -1000,13 +1004,13 @@ class km extends ke {
           L11: {
             ((km) this).field_S = stackIn_39_1 != 0;
             if (((km) this).field_W != null) {
-              var13_ref = (km) (Object) ((km) this).field_W.b(false);
+              var13 = (Object) (Object) (km) (Object) ((km) this).field_W.b(false);
               L12: while (true) {
-                if (var13_ref == null) {
+                if (var13 == null) {
                   break L11;
                 } else {
-                  var13_ref.a(var13_ref.field_ub, var13_ref.field_K, var13_ref.field_J, param3, param4, var13_ref.field_Bb);
-                  var13_ref = (km) (Object) var13_ref.field_W.e(9003);
+                  ((km) var13).a(((km) var13).field_ub, ((km) var13).field_K, ((km) var13).field_J, param3, param4, ((km) var13).field_Bb);
+                  var13 = (Object) (Object) (km) (Object) ((km) var13).field_W.e(9003);
                   continue L12;
                 }
               }
@@ -1015,7 +1019,7 @@ class km extends ke {
             }
           }
           L13: {
-            if (!var13_ref.field_G) {
+            if (!((km) var13).field_G) {
               break L13;
             } else {
               ch.field_b = true;
@@ -1032,14 +1036,14 @@ class km extends ke {
           }
           L15: {
             df.a(var8, var9, var10, var11);
-            if (var13_ref.field_w == 0) {
+            if (((km) var13).field_w == 0) {
               break L15;
             } else {
-              if (var13_ref.field_X) {
+              if (((km) var13).field_X) {
                 L16: {
-                  ((km) this).field_F = hk.field_Jb + (-var13_ref.field_U - param2);
-                  ((km) this).field_tb = nl.field_u + (-var13_ref.field_Q + -param5);
-                  if (-1 < (var13_ref.field_tb ^ -1)) {
+                  ((km) this).field_F = hk.field_Jb + (-((km) var13).field_U - param2);
+                  ((km) this).field_tb = nl.field_u + (-((km) var13).field_Q + -param5);
+                  if (-1 < (((km) var13).field_tb ^ -1)) {
                     ((km) this).field_tb = 0;
                     break L16;
                   } else {
@@ -1047,7 +1051,7 @@ class km extends ke {
                   }
                 }
                 L17: {
-                  if (0 > var13_ref.field_F) {
+                  if (0 > ((km) var13).field_F) {
                     ((km) this).field_F = 0;
                     break L17;
                   } else {
@@ -1055,25 +1059,25 @@ class km extends ke {
                   }
                 }
                 L18: {
-                  if (-var13_ref.field_K + param1 >= var13_ref.field_tb) {
+                  if (-((km) var13).field_K + param1 >= ((km) var13).field_tb) {
                     break L18;
                   } else {
-                    ((km) this).field_tb = -var13_ref.field_K + param1;
+                    ((km) this).field_tb = -((km) var13).field_K + param1;
                     break L18;
                   }
                 }
                 L19: {
                   ((km) this).field_M = 0;
-                  ((km) this).field_Bb = param5 + var13_ref.field_tb;
-                  if (param0 + -var13_ref.field_ub >= var13_ref.field_F) {
+                  ((km) this).field_Bb = param5 + ((km) var13).field_tb;
+                  if (param0 + -((km) var13).field_ub >= ((km) var13).field_F) {
                     break L19;
                   } else {
-                    ((km) this).field_F = param0 - var13_ref.field_ub;
+                    ((km) this).field_F = param0 - ((km) var13).field_ub;
                     break L19;
                   }
                 }
                 ((km) this).field_Cb = 0;
-                ((km) this).field_J = param2 + var13_ref.field_F;
+                ((km) this).field_J = param2 + ((km) var13).field_F;
                 break L15;
               } else {
                 break L15;
@@ -1257,7 +1261,7 @@ class km extends ke {
               }
             }
             L13: {
-              if (((km) this).field_R == 2147483647) {
+              if ((((km) this).field_R ^ -1) == 2147483647) {
                 break L13;
               } else {
                 var19 = ((km) this).field_R;
@@ -1265,7 +1269,7 @@ class km extends ke {
               }
             }
             L14: {
-              if (2147483647 == ((km) this).field_O) {
+              if (2147483647 == (((km) this).field_O ^ -1)) {
                 break L14;
               } else {
                 var20 = ((km) this).field_O;
@@ -1307,14 +1311,14 @@ class km extends ke {
               }
             }
             L19: {
-              if (((km) this).field_hb != 2147483647) {
+              if ((((km) this).field_hb ^ -1) != 2147483647) {
                 var19 = ((km) this).field_hb;
                 break L19;
               } else {
                 break L19;
               }
             }
-            if (-1 <= ((km) this).field_bb) {
+            if (-1 >= (((km) this).field_bb ^ -1)) {
               var18 = ((km) this).field_bb;
               break L15;
             } else {

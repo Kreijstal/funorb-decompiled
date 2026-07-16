@@ -185,12 +185,18 @@ final class tg {
                 }
               }
               try {
-                stackOut_45_0 = new java.net.URL(param0, var7.toString());
-                stackIn_46_0 = stackOut_45_0;
-              } catch (java.lang.Exception decompiledCaughtParameter) {
-                decompiledCaughtException = decompiledCaughtParameter;
-                return stackIn_46_0;
+                L10: {
+                  stackOut_45_0 = new java.net.URL(param0, var7.toString());
+                  stackIn_46_0 = stackOut_45_0;
+                  break L10;
+                }
+              } catch (java.lang.Exception decompiledCaughtParameter0) {
+                decompiledCaughtException = decompiledCaughtParameter0;
+                var8 = (Exception) (Object) decompiledCaughtException;
+                var8.printStackTrace();
+                return param0;
               }
+              return stackIn_46_0;
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;

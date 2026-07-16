@@ -149,7 +149,7 @@ abstract class bb extends bj {
             break L0;
           } else {
             var21 = null;
-            String[] discarded$1 = bb.a(-7, (String) null, 'ﾱ');
+            String[] discarded$2 = bb.a(-7, (String) null, 'ﾱ');
             break L0;
           }
         }
@@ -184,7 +184,7 @@ abstract class bb extends bj {
           }
         }
         L3: {
-          if (param0 < em.field_a) {
+          if ((param0 ^ -1) > (em.field_a ^ -1)) {
             var14 = -param0 + em.field_a;
             var8 = var8 + var14;
             var7 = var7 + var6 * var14;
@@ -199,7 +199,7 @@ abstract class bb extends bj {
           }
         }
         L4: {
-          if (var11 + param0 > em.field_b) {
+          if ((var11 + param0 ^ -1) < (em.field_b ^ -1)) {
             var14 = -em.field_b + var11 + param0;
             var13 = var13 + var14;
             var11 = var11 - var14;
@@ -209,10 +209,10 @@ abstract class bb extends bj {
             break L4;
           }
         }
-        if (var11 >= -1) {
+        if ((var11 ^ -1) >= -1) {
           return;
         } else {
-          if (-1 < var10) {
+          if (-1 > (var10 ^ -1)) {
             param4 = -var10;
             L5: while (true) {
               if (0 <= param4) {
@@ -227,37 +227,39 @@ abstract class bb extends bj {
                     param4++;
                     continue L5;
                   } else {
-                    var15 = var14 >> -1759791704;
-                    var16 = 256 - var15;
-                    var14 = var14 + var6;
-                    if (-1 < (var15 ^ -1)) {
-                      var8++;
-                      var9++;
-                      param0++;
-                      continue L6;
-                    } else {
-                      var9++;
-                      var17 = param3.field_l[param3.field_k[var9] & 255];
-                      if (var17 != 0) {
-                        if (255 >= var15) {
-                          var18 = em.field_i[var8];
-                          var19 = 16711935 & var15 * (16711935 & var17) + var16 * (var18 & 16711935) >> 908123272;
-                          em.field_i[var8] = (ae.a(ae.a(var17, 65280) * var15 + var16 * ae.a(var18, 65280), 16711906) >> 642414920) + var19;
-                          var8++;
-                          param0++;
-                          continue L6;
-                        } else {
-                          em.field_i[var8] = var17;
-                          var8++;
-                          param0++;
-                          continue L6;
-                        }
-                      } else {
+                    L7: {
+                      var15 = var14 >> -1759791704;
+                      var16 = 256 - var15;
+                      var14 = var14 + var6;
+                      if (-1 < (var15 ^ -1)) {
                         var8++;
-                        param0++;
-                        continue L6;
+                        var9++;
+                        break L7;
+                      } else {
+                        L8: {
+                          int incrementValue$3 = var9;
+                          var9++;
+                          var17 = param3.field_l[param3.field_k[incrementValue$3] & 255];
+                          if ((var17 ^ -1) == -1) {
+                            break L8;
+                          } else {
+                            if (255 >= var15) {
+                              var18 = em.field_i[var8];
+                              var19 = 16711935 & var15 * (16711935 & var17) + var16 * (var18 & 16711935) >> 908123272;
+                              em.field_i[var8] = (ae.a(ae.a(var17, 65280) * var15 + var16 * ae.a(var18, 65280), 16711906) >> 642414920) + var19;
+                              break L8;
+                            } else {
+                              em.field_i[var8] = var17;
+                              break L8;
+                            }
+                          }
+                        }
+                        var8++;
+                        break L7;
                       }
                     }
+                    param0++;
+                    continue L6;
                   }
                 }
               }
@@ -361,8 +363,9 @@ abstract class bb extends bj {
         for (var7 = 0; var7 < var3; var7++) {
             for (var8 = var6; param1.charAt(var8) != param2; var8++) {
             }
+            int incrementValue$1 = var5;
             var5++;
-            var4[var5] = param1.substring(var6, var8);
+            var4[incrementValue$1] = param1.substring(var6, var8);
             var6 = var8 + 1;
         }
         var4[var3] = param1.substring(var6);

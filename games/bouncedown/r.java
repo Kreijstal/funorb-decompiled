@@ -37,8 +37,9 @@ final class r implements fc {
                   if (var7 >= var8) {
                     break L1;
                   } else {
+                    int incrementValue$6 = var6;
                     var6++;
-                    param1[var6] = param2.substring(var7, var8).trim();
+                    param1[incrementValue$6] = param2.substring(var7, var8).trim();
                     break L1;
                   }
                 }
@@ -61,8 +62,9 @@ final class r implements fc {
                   var12 = param0.b(var11);
                   if (param4 <= var12) {
                     var7 = 1 + var9;
+                    int incrementValue$7 = var6;
                     var6++;
-                    param1[var6] = var11;
+                    param1[incrementValue$7] = var11;
                     break L2;
                   } else {
                     break L2;
@@ -70,8 +72,9 @@ final class r implements fc {
                 }
                 if (var10 == 62) {
                   if (param2.regionMatches(-3 + var9, "<br>", 0, 4)) {
+                    int incrementValue$8 = var6;
                     var6++;
-                    param1[var6] = param2.substring(var7, -3 + var9).trim();
+                    param1[incrementValue$8] = param2.substring(var7, -3 + var9).trim();
                     var7 = 1 + var9;
                     var9++;
                     continue L0;
@@ -99,8 +102,9 @@ final class r implements fc {
                 if (var7 >= var8) {
                   break L5;
                 } else {
+                  int incrementValue$9 = var6;
                   var6++;
-                  param1[var6] = param2.substring(var7, var8).trim();
+                  param1[incrementValue$9] = param2.substring(var7, var8).trim();
                   break L5;
                 }
               }
@@ -123,8 +127,9 @@ final class r implements fc {
                 var12 = param0.b(var11);
                 if (param4 <= var12) {
                   var7 = 1 + var9;
+                  int incrementValue$10 = var6;
                   var6++;
-                  param1[var6] = var11;
+                  param1[incrementValue$10] = var11;
                   break L6;
                 } else {
                   break L6;
@@ -132,8 +137,9 @@ final class r implements fc {
               }
               if (var10 == 62) {
                 if (param2.regionMatches(-3 + var9, "<br>", 0, 4)) {
+                  int incrementValue$11 = var6;
                   var6++;
-                  param1[var6] = param2.substring(var7, -3 + var9).trim();
+                  param1[incrementValue$11] = param2.substring(var7, -3 + var9).trim();
                   var7 = 1 + var9;
                   var9++;
                   continue L4;

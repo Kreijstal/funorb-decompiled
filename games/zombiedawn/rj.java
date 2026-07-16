@@ -276,28 +276,61 @@ final class rj extends sp {
     }
 
     private final void b(byte param0, int param1) {
-        int var4 = ZombieDawn.field_J;
-        if (param0 != -128) {
-            return;
-        }
-        lf var3 = (lf) (Object) ((rj) this).field_J.field_s.b((byte) 26);
-        while (var3 != null) {
-            if (0 <= param1) {
-                // if_icmpeq L51
+        lf var3 = null;
+        int var4 = 0;
+        var4 = ZombieDawn.field_J;
+        if (param0 == -128) {
+          var3 = (lf) (Object) ((rj) this).field_J.field_s.b((byte) 26);
+          L0: while (true) {
+            if (var3 == null) {
+              return;
             } else {
-                if (!(null == var3.field_E)) {
-                    var3.field_E.c(qf.field_p / 100);
-                    if (var3.field_E.f()) {
+              L1: {
+                L2: {
+                  if (0 > param1) {
+                    break L2;
+                  } else {
+                    if (param1 == var3.field_z) {
+                      break L2;
+                    } else {
+                      break L1;
+                    }
+                  }
+                }
+                L3: {
+                  if (null != var3.field_E) {
+                    L4: {
+                      var3.field_E.c(qf.field_p / 100);
+                      if (!var3.field_E.f()) {
+                        break L4;
+                      } else {
                         ((rj) this).field_J.field_m.b((sp) (Object) var3.field_E);
+                        break L4;
+                      }
                     }
                     var3.c((byte) 125);
+                    break L3;
+                  } else {
+                    break L3;
+                  }
                 }
-                if (!(0 <= var3.field_k)) {
+                L5: {
+                  if (0 > var3.field_k) {
                     ((rj) this).field_G[var3.field_z][var3.field_i] = null;
+                    break L5;
+                  } else {
+                    break L5;
+                  }
                 }
                 var3.b(-27598);
+                break L1;
+              }
+              var3 = (lf) (Object) ((rj) this).field_J.field_s.a(false);
+              continue L0;
             }
-            var3 = (lf) (Object) ((rj) this).field_J.field_s.a(false);
+          }
+        } else {
+          return;
         }
     }
 
@@ -388,11 +421,11 @@ final class rj extends sp {
 
     final boolean b(int param0, lf param1) {
         if (null == param1.field_E) {
-            if (param1.field_k > -1) {
+            if ((param1.field_k ^ -1) > -1) {
                 return true;
             }
             param1.b(param0 + -57894);
-            if (-1 < param1.field_B) {
+            if (-1 > (param1.field_B ^ -1)) {
                 if (!(param1 != ((rj) this).field_x[param1.field_z][param1.field_B])) {
                     ((rj) this).field_x[param1.field_z][param1.field_B] = null;
                 }
@@ -454,44 +487,82 @@ final class rj extends sp {
     }
 
     final synchronized boolean a(wj param0, byte param1, dj param2, int param3, ka param4) {
-        int[] var7_array = null;
+        int var6 = 0;
+        Object var7 = null;
+        int var8 = 0;
+        bh var9 = null;
         int var10 = 0;
         ma var11 = null;
-        ma var11_ref = null;
-        int var12 = ZombieDawn.field_J;
-        param0.b();
-        int var8 = 121 / ((param1 - -78) / 32);
-        int var6 = 1;
-        Object var7 = null;
-        if (!((param3 ^ -1) >= -1)) {
-            var7_array = new int[]{param3};
+        int var12 = 0;
+        L0: {
+          var12 = ZombieDawn.field_J;
+          param0.b();
+          var8 = 121 / ((param1 - -78) / 32);
+          var6 = 1;
+          var7 = null;
+          if ((param3 ^ -1) < -1) {
+            var7 = (Object) (Object) new int[]{param3};
+            break L0;
+          } else {
+            break L0;
+          }
         }
-        bh var9 = (bh) (Object) param0.field_h.a((byte) -113);
-        while (var9 != null) {
-            var10 = (int)var9.field_f;
-            var11 = (ma) (Object) ((rj) this).field_A.a((long)var10, 101);
-            if (var11 != null) {
-                // ifnull L201
-                // ifeq L198
-            } else {
-                var11_ref = vk.a(param2, var10, 0);
-                if (var11_ref == null) {
-                    var6 = 0;
-                } else {
-                    ((rj) this).field_A.a(-106, (long)var10, (le) (Object) var11_ref);
-                }
-                if (var11_ref != null) {
-                    if (!(var11_ref.a(true, var7_array, param4, var9.field_k))) {
-                        var6 = 0;
+        var9 = (bh) (Object) param0.field_h.a((byte) -113);
+        L1: while (true) {
+          if (var9 == null) {
+            L2: {
+              if (var6 != 0) {
+                param0.a();
+                break L2;
+              } else {
+                break L2;
+              }
+            }
+            return var6 != 0;
+          } else {
+            L3: {
+              L4: {
+                var10 = (int)var9.field_f;
+                var11 = (ma) (Object) ((rj) this).field_A.a((long)var10, 101);
+                if (var11 == null) {
+                  L5: {
+                    var11 = vk.a(param2, var10, 0);
+                    if (var11 != null) {
+                      ((rj) this).field_A.a(-106, (long)var10, (le) (Object) var11);
+                      break L5;
+                    } else {
+                      var6 = 0;
+                      break L5;
                     }
+                  }
+                  if (var11 == null) {
+                    break L3;
+                  } else {
+                    if (!var11.a(true, (int[]) var7, param4, var9.field_k)) {
+                      break L4;
+                    } else {
+                      break L3;
+                    }
+                  }
+                } else {
+                  if (var11 == null) {
+                    break L3;
+                  } else {
+                    if (!var11.a(true, (int[]) var7, param4, var9.field_k)) {
+                      break L4;
+                    } else {
+                      break L3;
+                    }
+                  }
                 }
+              }
+              var6 = 0;
+              break L3;
             }
             var9 = (bh) (Object) param0.field_h.b((byte) 99);
+            continue L1;
+          }
         }
-        if (!(var6 == 0)) {
-            param0.a();
-        }
-        return var6 != 0;
     }
 
     private final void a(boolean param0) {
@@ -616,20 +687,45 @@ final class rj extends sp {
     }
 
     private final void d(int param0, int param1) {
-        int var4 = ZombieDawn.field_J;
-        lf var3 = (lf) (Object) ((rj) this).field_J.field_s.b((byte) 26);
-        while (var3 != null) {
-            if (param1 >= 0) {
-                // if_icmpne L85
+        lf var3 = null;
+        int var4 = 0;
+        var4 = ZombieDawn.field_J;
+        var3 = (lf) (Object) ((rj) this).field_J.field_s.b((byte) 26);
+        L0: while (true) {
+          if (var3 == null) {
+            L1: {
+              if (param0 == 0) {
+                break L1;
+              } else {
+                ((rj) this).a(7, true);
+                break L1;
+              }
             }
-            if (!(-1 >= (var3.field_k ^ -1))) {
+            return;
+          } else {
+            L2: {
+              L3: {
+                if (param1 < 0) {
+                  break L3;
+                } else {
+                  if (param1 != var3.field_z) {
+                    break L2;
+                  } else {
+                    break L3;
+                  }
+                }
+              }
+              if (-1 < (var3.field_k ^ -1)) {
                 ((rj) this).field_G[var3.field_z][var3.field_i] = null;
                 var3.field_k = 0;
+                break L2;
+              } else {
+                break L2;
+              }
             }
             var3 = (lf) (Object) ((rj) this).field_J.field_s.a(false);
-        }
-        if (param0 != 0) {
-            ((rj) this).a(7, true);
+            continue L0;
+          }
         }
     }
 
@@ -909,7 +1005,7 @@ final class rj extends sp {
                   }
                 }
                 L5: {
-                  if (-38 == var5) {
+                  if (-38 == (var5 ^ -1)) {
                     ((rj) this).field_H[var4] = eg.a(((rj) this).field_H[var4], -128) + var6;
                     break L5;
                   } else {
@@ -917,7 +1013,7 @@ final class rj extends sp {
                   }
                 }
                 L6: {
-                  if (-8 != var5) {
+                  if (-8 != (var5 ^ -1)) {
                     break L6;
                   } else {
                     ((rj) this).field_I[var4] = (var6 << -1131444121) + eg.a(-16257, ((rj) this).field_I[var4]);
@@ -1048,9 +1144,9 @@ final class rj extends sp {
                   }
                 }
                 L21: {
-                  if (var5 == -7) {
+                  if ((var5 ^ -1) == -7) {
                     var7 = ((rj) this).field_u[var4];
-                    if (-16385 != var7) {
+                    if (-16385 != (var7 ^ -1)) {
                       break L21;
                     } else {
                       ((rj) this).field_Q[var4] = eg.a(-16257, ((rj) this).field_Q[var4]) - -(var6 << 1134049671);
@@ -1382,11 +1478,11 @@ final class rj extends sp {
           L0: {
             var3 = var3 + ((((rj) this).field_L[param1.field_z] + -8192) * ((rj) this).field_Q[param1.field_z] >> -752114804);
             var4 = param1.field_t;
-            if (var4.field_a >= -1) {
+            if ((var4.field_a ^ -1) >= -1) {
               break L0;
             } else {
               L1: {
-                if (-1 < var4.field_f) {
+                if (-1 > (var4.field_f ^ -1)) {
                   break L1;
                 } else {
                   if (((rj) this).field_n[param1.field_z] <= 0) {
@@ -1483,7 +1579,7 @@ final class rj extends sp {
     private final void b(int param0, int param1) {
         int var4 = 0;
         var4 = ZombieDawn.field_J;
-        if (-1 >= param0) {
+        if (-1 >= (param0 ^ -1)) {
           ((rj) this).field_I[param0] = 12800;
           ((rj) this).field_q[param0] = 8192;
           ((rj) this).field_B[param0] = 16383;
@@ -1501,7 +1597,7 @@ final class rj extends sp {
         } else {
           param0 = 0;
           L0: while (true) {
-            if (-17 <= param0) {
+            if (-17 >= (param0 ^ -1)) {
               return;
             } else {
               this.b(param0, param1 ^ 0);

@@ -104,13 +104,15 @@ final class qk {
         var2 = 0;
         L0: while (true) {
           if (param0 > var2) {
-            var3 = new pa();
-            ((qk) this).field_c[var2] = new pa();
+            pa dupTemp$2 = new pa();
+            var3 = dupTemp$2;
+            ((qk) this).field_c[var2] = dupTemp$2;
             var3.field_m = var3;
             var3.field_p = var3;
             var2++;
             continue L0;
           } else {
+            return;
           }
         }
     }

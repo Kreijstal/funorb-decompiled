@@ -137,20 +137,26 @@ class c extends bb {
             Throwable decompiledCaughtException = null;
             try {
               L0: {
-                if (param0 == -1) {
-                  break L0;
-                } else {
-                  ((c) this).field_N = 63;
-                  break L0;
+                L1: {
+                  if (param0 == -1) {
+                    break L1;
+                  } else {
+                    ((c) this).field_N = 63;
+                    break L1;
+                  }
                 }
+                var2_ref = (String) java.awt.Toolkit.getDefaultToolkit().getSystemClipboard().getContents((Object) null).getTransferData(java.awt.datatransfer.DataFlavor.stringFlavor);
+                this.c(false);
+                this.a(param0 + 1, var2_ref);
+                break L0;
               }
-              var2_ref = (String) java.awt.Toolkit.getDefaultToolkit().getSystemClipboard().getContents((Object) null).getTransferData(java.awt.datatransfer.DataFlavor.stringFlavor);
-              this.c(false);
-              this.a(param0 + 1, var2_ref);
-            } catch (java.lang.Exception decompiledCaughtParameter) {
-              decompiledCaughtException = decompiledCaughtParameter;
+            } catch (java.lang.Exception decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              L2: {
+                var2 = (Exception) (Object) decompiledCaughtException;
+                break L2;
+              }
             }
-            var2 = (Exception) (Object) decompiledCaughtException;
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
@@ -249,19 +255,37 @@ class c extends bb {
     }
 
     private final int j(int param0) {
-        int var3 = fleas.field_A ? 1 : 0;
-        if (0 == ((c) this).field_M) {
-            return ((c) this).field_M;
+        int var2 = 0;
+        int var3 = 0;
+        var3 = fleas.field_A ? 1 : 0;
+        if (0 != ((c) this).field_M) {
+          L0: {
+            var2 = -1 + ((c) this).field_M;
+            if (param0 > 79) {
+              break L0;
+            } else {
+              ((c) this).r(-57);
+              break L0;
+            }
+          }
+          L1: while (true) {
+            L2: {
+              if ((var2 ^ -1) >= -1) {
+                break L2;
+              } else {
+                if (-33 == (((c) this).field_i.charAt(var2 - 1) ^ -1)) {
+                  break L2;
+                } else {
+                  var2--;
+                  continue L1;
+                }
+              }
+            }
+            return var2;
+          }
+        } else {
+          return ((c) this).field_M;
         }
-        int var2 = -1 + ((c) this).field_M;
-        if (param0 <= 79) {
-            ((c) this).r(-57);
-        }
-        while (var2 < -1) {
-            // if_icmpeq L65
-            var2--;
-        }
-        return var2;
     }
 
     final void a(boolean param0, byte param1, String param2) {
@@ -278,8 +302,9 @@ class c extends bb {
                 ((c) this).field_i = ((c) this).field_i.substring(0, ((c) this).field_O);
             }
         }
-        ((c) this).field_K = ((c) this).field_i.length();
-        ((c) this).field_M = ((c) this).field_i.length();
+        int dupTemp$0 = ((c) this).field_i.length();
+        ((c) this).field_K = dupTemp$0;
+        ((c) this).field_M = dupTemp$0;
         if (!(param0)) {
             ((c) this).i(-1);
         }
@@ -392,7 +417,7 @@ class c extends bb {
                       break L1;
                     } else {
                       L2: {
-                        if (((c) this).field_K != ((c) this).field_M) {
+                        if ((((c) this).field_K ^ -1) != (((c) this).field_M ^ -1)) {
                           this.c(false);
                           break L2;
                         } else {
@@ -403,7 +428,7 @@ class c extends bb {
                         if (0 == (((c) this).field_O ^ -1)) {
                           break L3;
                         } else {
-                          if (((c) this).field_i.length() < ((c) this).field_O) {
+                          if ((((c) this).field_i.length() ^ -1) > (((c) this).field_O ^ -1)) {
                             break L3;
                           } else {
                             return true;
@@ -411,10 +436,11 @@ class c extends bb {
                         }
                       }
                       L4: {
-                        if (((c) this).field_M >= ((c) this).field_i.length()) {
+                        if ((((c) this).field_M ^ -1) <= (((c) this).field_i.length() ^ -1)) {
                           ((c) this).field_i = ((c) this).field_i + param3;
-                          ((c) this).field_M = ((c) this).field_i.length();
-                          ((c) this).field_K = ((c) this).field_i.length();
+                          int dupTemp$1 = ((c) this).field_i.length();
+                          ((c) this).field_M = dupTemp$1;
+                          ((c) this).field_K = dupTemp$1;
                           break L4;
                         } else {
                           ((c) this).field_i = ((c) this).field_i.substring(0, ((c) this).field_M) + param3 + ((c) this).field_i.substring(((c) this).field_M, ((c) this).field_i.length());
@@ -430,7 +456,7 @@ class c extends bb {
                 }
                 L5: {
                   if (85 == param1) {
-                    if (((c) this).field_M == ((c) this).field_K) {
+                    if ((((c) this).field_M ^ -1) == (((c) this).field_K ^ -1)) {
                       if (0 >= ((c) this).field_M) {
                         break L5;
                       } else {
@@ -443,8 +469,8 @@ class c extends bb {
                       return true;
                     }
                   } else {
-                    if (-102 == param1) {
-                      if (((c) this).field_M != ((c) this).field_K) {
+                    if (-102 == (param1 ^ -1)) {
+                      if ((((c) this).field_M ^ -1) != (((c) this).field_K ^ -1)) {
                         this.c(false);
                         return true;
                       } else {
@@ -457,7 +483,7 @@ class c extends bb {
                         }
                       }
                     } else {
-                      if (-14 != param1) {
+                      if (-14 != (param1 ^ -1)) {
                         if ((param1 ^ -1) != -97) {
                           if (param1 != 97) {
                             if (102 == param1) {
@@ -510,7 +536,7 @@ class c extends bb {
                               }
                             }
                           } else {
-                            if (((c) this).field_M < ((c) this).field_i.length()) {
+                            if ((((c) this).field_M ^ -1) > (((c) this).field_i.length() ^ -1)) {
                               L8: {
                                 stackOut_32_0 = this;
                                 stackIn_34_0 = stackOut_32_0;
@@ -579,19 +605,35 @@ class c extends bb {
     }
 
     private final int l(int param0) {
+        int var2 = 0;
         int var3 = 0;
-        int var4 = fleas.field_A ? 1 : 0;
-        int var2 = ((c) this).field_i.length();
-        if (!(var2 != ((c) this).field_M)) {
-            return ((c) this).field_M;
-        }
-        if (param0 != 32) {
+        int var4 = 0;
+        var4 = fleas.field_A ? 1 : 0;
+        var2 = ((c) this).field_i.length();
+        if (var2 == ((c) this).field_M) {
+          return ((c) this).field_M;
+        } else {
+          if (param0 == 32) {
+            var3 = ((c) this).field_M - -1;
+            L0: while (true) {
+              L1: {
+                if (var3 >= var2) {
+                  break L1;
+                } else {
+                  if (((c) this).field_i.charAt(var3 + -1) == 32) {
+                    break L1;
+                  } else {
+                    var3++;
+                    continue L0;
+                  }
+                }
+              }
+              return var3;
+            }
+          } else {
             return -60;
+          }
         }
-        for (var3 = ((c) this).field_M - -1; var3 < var2; var3++) {
-            // if_icmpeq L71
-        }
-        return var3;
     }
 
     static {

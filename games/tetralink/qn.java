@@ -54,9 +54,10 @@ final class qn extends al {
                       stackIn_9_0 = stackOut_7_0;
                       stackIn_8_0 = stackOut_7_0;
                       if (var6 == null) {
-                        param0.field_q[var4] = new dg();
+                        dg dupTemp$49 = new dg();
+                        param0.field_q[var4] = dupTemp$49;
                         stackOut_9_0 = (dg) (Object) stackIn_9_0;
-                        stackOut_9_1 = new dg();
+                        stackOut_9_1 = (dg) dupTemp$49;
                         stackIn_10_0 = stackOut_9_0;
                         stackIn_10_1 = stackOut_9_1;
                         break L2;
@@ -328,8 +329,9 @@ final class qn extends al {
     public qn() {
         ((qn) this).field_q = new dg[6];
         ((qn) this).field_u = new dg();
-        ((qn) this).field_q[0] = new dg();
-        dg var1 = new dg();
+        dg dupTemp$0 = new dg();
+        ((qn) this).field_q[0] = dupTemp$0;
+        dg var1 = dupTemp$0;
         var1.a(30033);
     }
 
@@ -337,8 +339,9 @@ final class qn extends al {
         if (param0 != -41) {
             return null;
         }
-        ((qn) this).field_q[param1] = new dg();
-        return new dg();
+        dg dupTemp$0 = new dg();
+        ((qn) this).field_q[param1] = dupTemp$0;
+        return dupTemp$0;
     }
 
     static {

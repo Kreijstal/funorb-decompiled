@@ -1,6 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
+import java.lang.String;
+
 final class ak extends g implements pi, qh {
     private hf field_J;
     private boolean field_G;
@@ -18,7 +20,7 @@ final class ak extends g implements pi, qh {
 
     final boolean a(char param0, byte param1, int param2, lk param3) {
         if (param1 <= -99) {
-          if (!this.a(param0, (byte) -105, param2, param3)) {
+          if (!super.a(param0, (byte) -105, param2, param3)) {
             if (param2 != 98) {
               if (param2 != 99) {
                 return false;
@@ -46,7 +48,7 @@ final class ak extends g implements pi, qh {
 
     public final void a(hf param0, int param1) {
         if (param1 != 12891) {
-            hf var4 = (hf) null;
+            Object var4 = null;
             ((ak) this).a(-102, (hf) null);
         }
     }
@@ -220,8 +222,7 @@ final class ak extends g implements pi, qh {
                 break L6;
               }
             }
-            new hl((String) (Object) stackIn_18_3, (pl) null);
-            ((ak) this).field_H = (hl) (Object) stackIn_18_1;
+            ((ak) this).field_H = new hl(stackIn_18_3, (pl) null);
             if (!((ak) this).field_D) {
               break L5;
             } else {
@@ -285,7 +286,7 @@ final class ak extends g implements pi, qh {
           if (((ak) this).field_F == null) {
             break L11;
           } else {
-            ((ak) this).field_i = ((ak) this).field_i + (5 + var7.b(((ak) this).field_F, ((ak) this).field_h - 40, ((ee) var7).field_s));
+            ((ak) this).field_i = ((ak) this).field_i + (5 + var7.b(((ak) this).field_F, ((ak) this).field_h - 40, var7.field_s));
             break L11;
           }
         }
@@ -305,12 +306,14 @@ final class ak extends g implements pi, qh {
           }
         }
         L13: {
-          var12 = new ck(10, ((ak) this).field_i, ((ak) this).field_h + -20, 25, (lk) (Object) ((ak) this).field_J, false, 80, 3, var7, 16777215, var8);
-          ((ak) this).b((lk) (Object) new ck(10, ((ak) this).field_i, ((ak) this).field_h + -20, 25, (lk) (Object) ((ak) this).field_J, false, 80, 3, var7, 16777215, var8), (byte) 118);
-          ((ak) this).field_i = ((ak) this).field_i + (5 + ((lk) var12).field_q);
-          var13 = new ck(10, ((ak) this).field_i, ((ak) this).field_h + -20, 25, (lk) (Object) ((ak) this).field_K, false, 80, 3, var7, 16777215, fl.field_b);
-          ((ak) this).b((lk) (Object) new ck(10, ((ak) this).field_i, ((ak) this).field_h + -20, 25, (lk) (Object) ((ak) this).field_K, false, 80, 3, var7, 16777215, fl.field_b), (byte) 118);
-          ((ak) this).field_i = ((ak) this).field_i + (((lk) var13).field_q - -5);
+          ck dupTemp$2 = new ck(10, ((ak) this).field_i, ((ak) this).field_h + -20, 25, (lk) (Object) ((ak) this).field_J, false, 80, 3, var7, 16777215, var8);
+          var12 = dupTemp$2;
+          ((ak) this).b((lk) (Object) dupTemp$2, (byte) 118);
+          ((ak) this).field_i = ((ak) this).field_i + (5 + ((lk) (Object) var12).field_q);
+          ck dupTemp$3 = new ck(10, ((ak) this).field_i, ((ak) this).field_h + -20, 25, (lk) (Object) ((ak) this).field_K, false, 80, 3, var7, 16777215, fl.field_b);
+          var13 = dupTemp$3;
+          ((ak) this).b((lk) (Object) dupTemp$3, (byte) 118);
+          ((ak) this).field_i = ((ak) this).field_i + (((lk) (Object) var13).field_q - -5);
           ((ak) this).field_I.field_k = (pl) this;
           if (null == ((ak) this).field_M) {
             break L13;
@@ -464,7 +467,7 @@ final class ak extends g implements pi, qh {
               break L1;
             }
           }
-          this.a(param0, param1, param2 ^ 0, param3);
+          super.a(param0, param1, param2 ^ 0, param3);
           return;
         }
     }
@@ -482,7 +485,7 @@ final class ak extends g implements pi, qh {
         hf var3 = ((ak) this).field_J;
         String var4 = param0;
         if (param1 != -95) {
-            lk var5 = (lk) null;
+            Object var5 = null;
             boolean discarded$0 = ((ak) this).a(',', (byte) -38, -43, (lk) null);
         }
         var3.a(var4, -18845, false);
@@ -490,14 +493,32 @@ final class ak extends g implements pi, qh {
     }
 
     private final void e(byte param0) {
-        if (param0 != 121) {
+        L0: {
+          if (param0 == 121) {
+            break L0;
+          } else {
             ((ak) this).field_E = false;
+            break L0;
+          }
         }
-        if (!cc.a(77)) {
-            // if_icmple L74
-            // if_icmplt L53
-        } else {
-            tl.a(((ak) this).field_J.field_r, ((ak) this).field_K.field_r, param0 ^ 9);
+        L1: {
+          L2: {
+            if (cc.a(77)) {
+              break L2;
+            } else {
+              if (-1 <= ((ak) this).field_J.field_r.length()) {
+                break L1;
+              } else {
+                if (-1 < ((ak) this).field_K.field_r.length()) {
+                  break L2;
+                } else {
+                  break L1;
+                }
+              }
+            }
+          }
+          tl.a(((ak) this).field_J.field_r, ((ak) this).field_K.field_r, param0 ^ 9);
+          break L1;
         }
     }
 

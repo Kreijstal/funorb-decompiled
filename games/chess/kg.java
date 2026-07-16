@@ -1,6 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
+import java.lang.String;
+
 final class kg extends kn {
     static int field_V;
     private int field_N;
@@ -272,7 +274,7 @@ final class kg extends kn {
                 break L1;
               }
             }
-            int discarded$2 = ((lh) (Object) stackIn_18_0).a((String) (Object) stackIn_18_1, stackIn_18_2, stackIn_18_3, stackIn_18_4, stackIn_18_5, stackIn_18_6, stackIn_18_7, stackIn_18_8, 1, ((kg) this).field_Q.field_C);
+            int discarded$2 = ((lh) (Object) stackIn_18_0).a(stackIn_18_1, stackIn_18_2, stackIn_18_3, stackIn_18_4, stackIn_18_5, stackIn_18_6, stackIn_18_7, stackIn_18_8, 1, ((kg) this).field_Q.field_C);
             return;
           }
         } else {
@@ -359,7 +361,7 @@ final class kg extends kn {
                 break L3;
               }
             }
-            int discarded$3 = ((lh) (Object) stackIn_8_0).a((String) (Object) stackIn_8_1, stackIn_8_2, stackIn_8_3, stackIn_8_4, stackIn_8_5, stackIn_8_6, stackIn_8_7, stackIn_8_8, 1, ((kg) this).field_Q.field_C);
+            int discarded$3 = ((lh) (Object) stackIn_8_0).a(stackIn_8_1, stackIn_8_2, stackIn_8_3, stackIn_8_4, stackIn_8_5, stackIn_8_6, stackIn_8_7, stackIn_8_8, 1, ((kg) this).field_Q.field_C);
             return;
           }
         }

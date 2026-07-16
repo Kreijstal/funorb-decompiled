@@ -120,25 +120,52 @@ final class ec extends mg {
 
     final dj a(String param0, boolean param1) {
         id var3 = null;
-        CharSequence var4 = (CharSequence) (Object) param0;
-        if (!fm.a((byte) 63, var4)) {
-            return sk.field_a;
-        }
-        if (!param1) {
-            return null;
-        }
-        if (param0.equals((Object) (Object) ((ec) this).field_p)) {
-        } else {
-            var3 = ig.a(200, param0);
-            if (var3 != null) {
-                // if_acmpne L70
-            } else {
+        CharSequence var4 = null;
+        dj stackIn_14_0 = null;
+        dj stackOut_13_0 = null;
+        dj stackOut_12_0 = null;
+        var4 = (CharSequence) (Object) param0;
+        if (fm.a((byte) 63, var4)) {
+          if (param1) {
+            L0: {
+              if (!param0.equals((Object) (Object) ((ec) this).field_p)) {
+                L1: {
+                  var3 = ig.a(200, param0);
+                  if (var3 == null) {
+                    break L1;
+                  } else {
+                    if (null != var3.field_c) {
+                      break L1;
+                    } else {
+                      ((ec) this).field_p = param0;
+                      ((ec) this).field_s = var3.field_g;
+                      break L0;
+                    }
+                  }
+                }
                 return tg.field_j;
+              } else {
+                break L0;
+              }
             }
-            ((ec) this).field_p = param0;
-            ((ec) this).field_s = var3.field_g;
+            L2: {
+              if (((ec) this).field_s) {
+                stackOut_13_0 = qk.field_g;
+                stackIn_14_0 = stackOut_13_0;
+                break L2;
+              } else {
+                stackOut_12_0 = sk.field_a;
+                stackIn_14_0 = stackOut_12_0;
+                break L2;
+              }
+            }
+            return stackIn_14_0;
+          } else {
+            return null;
+          }
+        } else {
+          return sk.field_a;
         }
-        return !((ec) this).field_s ? sk.field_a : qk.field_g;
     }
 
     static {

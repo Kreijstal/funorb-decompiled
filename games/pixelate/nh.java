@@ -10,19 +10,35 @@ final class nh {
     final static ae c(byte param0) {
         int var1 = 0;
         int var2 = 0;
+        int var3 = 0;
         int var4 = 0;
-        int var6 = Pixelate.field_H ? 1 : 0;
-        int var3 = -63 / ((param0 - -27) / 63);
-        do {
+        ae var5 = null;
+        int var6 = 0;
+        var6 = Pixelate.field_H ? 1 : 0;
+        var3 = -63 / ((param0 - -27) / 63);
+        L0: while (true) {
+          L1: {
             var1 = od.a((byte) 41, 65536, -65536);
             var2 = od.a((byte) 41, 65536, -65536);
             var4 = od.a((byte) 41, 65536, -65536);
-            // if_icmpne L68
-            // if_icmpne L68
-        } while (-1 == (var4 ^ -1));
-        ae var5 = new ae(var1, var2, var4);
-        var5.a((byte) -7);
-        return var5;
+            if (0 != var1) {
+              break L1;
+            } else {
+              if (0 != var2) {
+                break L1;
+              } else {
+                if (-1 == (var4 ^ -1)) {
+                  continue L0;
+                } else {
+                  break L1;
+                }
+              }
+            }
+          }
+          var5 = new ae(var1, var2, var4);
+          var5.a((byte) -7);
+          return var5;
+        }
     }
 
     public static void b(byte param0) {

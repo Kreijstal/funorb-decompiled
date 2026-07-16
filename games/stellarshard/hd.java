@@ -8,78 +8,19 @@ final class hd {
     static int[] field_a;
 
     final static int a(int param0, int param1) {
-        int stackIn_5_0 = 0;
-        int stackIn_9_0 = 0;
-        int stackIn_15_0 = 0;
-        int stackIn_19_0 = 0;
-        int stackOut_18_0 = 0;
-        int stackOut_17_0 = 0;
-        int stackOut_14_0 = 0;
-        int stackOut_13_0 = 0;
-        int stackOut_8_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_3_0 = 0;
-        if (param1 >= 28) {
-          param0 = param0 & 8191;
-          if (-4097 < (param0 ^ -1)) {
-            L0: {
-              if (param0 <= -2049) {
-                stackOut_18_0 = fh.field_h[4096 - param0];
-                stackIn_19_0 = stackOut_18_0;
-                break L0;
-              } else {
-                stackOut_17_0 = fh.field_h[param0];
-                stackIn_19_0 = stackOut_17_0;
-                break L0;
-              }
+        if (param1 < 28) {
+            int discarded$0 = hd.a(-38, -105);
+            param0 = param0 & 8191;
+            if (-4097 < (param0 ^ -1)) {
+                return (param0 ^ -1) > -2049 ? fh.field_h[param0] : fh.field_h[4096 - param0];
             }
-            return stackIn_19_0;
-          } else {
-            L1: {
-              if (-6145 <= param0) {
-                stackOut_14_0 = -fh.field_h[-param0 + 8192];
-                stackIn_15_0 = stackOut_14_0;
-                break L1;
-              } else {
-                stackOut_13_0 = -fh.field_h[-4096 + param0];
-                stackIn_15_0 = stackOut_13_0;
-                break L1;
-              }
-            }
-            return stackIn_15_0;
-          }
-        } else {
-          int discarded$1 = hd.a(-38, -105);
-          param0 = param0 & 8191;
-          if (-4097 < (param0 ^ -1)) {
-            L2: {
-              if (param0 <= -2049) {
-                stackOut_8_0 = fh.field_h[4096 - param0];
-                stackIn_9_0 = stackOut_8_0;
-                break L2;
-              } else {
-                stackOut_7_0 = fh.field_h[param0];
-                stackIn_9_0 = stackOut_7_0;
-                break L2;
-              }
-            }
-            return stackIn_9_0;
-          } else {
-            L3: {
-              if (-6145 <= param0) {
-                stackOut_4_0 = -fh.field_h[-param0 + 8192];
-                stackIn_5_0 = stackOut_4_0;
-                break L3;
-              } else {
-                stackOut_3_0 = -fh.field_h[-4096 + param0];
-                stackIn_5_0 = stackOut_3_0;
-                break L3;
-              }
-            }
-            return stackIn_5_0;
-          }
+            return -6145 < (param0 ^ -1) ? -fh.field_h[-4096 + param0] : -fh.field_h[-param0 + 8192];
         }
+        param0 = param0 & 8191;
+        if (-4097 < (param0 ^ -1)) {
+            return (param0 ^ -1) > -2049 ? fh.field_h[param0] : fh.field_h[4096 - param0];
+        }
+        return -6145 < (param0 ^ -1) ? -fh.field_h[-4096 + param0] : -fh.field_h[-param0 + 8192];
     }
 
     public static void a(byte param0) {

@@ -8,7 +8,6 @@ final class kh {
 
     final ne a(int param0, byte param1) {
         ne var3 = null;
-        ne var3_ref = null;
         byte[] var4 = null;
         var3 = (ne) ((kh) this).field_a.a((long)param0, 1872);
         if (var3 != null) {
@@ -23,23 +22,23 @@ final class kh {
               break L0;
             }
           }
-          var3_ref = new ne();
+          var3 = new ne();
           if (param1 <= -88) {
             L1: {
               if (var4 != null) {
-                var3_ref.a(-124, new wi(var4));
+                var3.a(-124, new wi(var4));
                 break L1;
               } else {
                 break L1;
               }
             }
             if (32768 <= param0) {
-              var3_ref.d(31680);
-              ((kh) this).field_a.a((Object) (Object) var3_ref, (long)param0, 1);
-              return var3_ref;
+              var3.d(31680);
+              ((kh) this).field_a.a((Object) (Object) var3, (long)param0, 1);
+              return var3;
             } else {
-              ((kh) this).field_a.a((Object) (Object) var3_ref, (long)param0, 1);
-              return var3_ref;
+              ((kh) this).field_a.a((Object) (Object) var3, (long)param0, 1);
+              return var3;
             }
           } else {
             return null;

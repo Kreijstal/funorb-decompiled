@@ -31,14 +31,14 @@ final class ko extends mc {
     final static void a(int param0, boolean param1, byte param2) {
         int var3 = 0;
         je var4 = null;
-        ud var5 = null;
+        Object var5 = null;
         ud var6 = null;
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
-        String var13_ref = null;
+        String var13_ref_String = null;
         int var13 = 0;
         int var14 = 0;
         int var15 = 0;
@@ -269,7 +269,7 @@ final class ko extends mc {
               }
               L12: {
                 if (var7 != 0) {
-                  fl.field_n.field_Kb.a((hl) (Object) var5, true, (hl) (Object) var6, 2);
+                  fl.field_n.field_Kb.a((hl) var5, true, (hl) (Object) var6, 2);
                   break L12;
                 } else {
                   break L12;
@@ -300,12 +300,12 @@ final class ko extends mc {
                 }
               }
               L15: {
-                var5 = var6;
+                var5 = (Object) (Object) var6;
                 if (var6.field_F != 0) {
                   gd.a(var6.field_Lb, 255, var6.field_Mb, -1, fl.field_n.field_Rb, (int[]) null, 0L, (hl) (Object) var6, -1);
                   var16 = hd.field_s;
-                  var13_ref = kk.field_P;
-                  var16.field_j.a(var13_ref, param2 ^ -63, 7);
+                  var13_ref_String = kk.field_P;
+                  var16.field_j.a(var13_ref_String, param2 ^ -63, 7);
                   var17 = hd.field_s;
                   var13 = ci.field_B;
                   var14 = li.field_o;

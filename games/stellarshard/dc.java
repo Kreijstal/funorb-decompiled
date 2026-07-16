@@ -40,10 +40,10 @@ final class dc {
             if (-1 <= (mk.field_k ^ -1)) {
               break L2;
             } else {
-              if (stellarshard.field_U[7] > -4) {
+              if ((stellarshard.field_U[7] ^ -1) > -4) {
                 break L2;
               } else {
-                if (-4 <= stellarshard.field_U[3]) {
+                if (-4 >= (stellarshard.field_U[3] ^ -1)) {
                   stellarshard.field_U[3] = stellarshard.field_U[3] - 3;
                   stellarshard.field_U[7] = stellarshard.field_U[7] - 3;
                   return 7;
@@ -81,13 +81,13 @@ final class dc {
               }
             }
             L5: {
-              if (-1 <= mk.field_k) {
+              if (-1 <= (mk.field_k ^ -1)) {
                 break L5;
               } else {
                 if (stellarshard.field_U[13] < 2) {
                   break L5;
                 } else {
-                  if (-3 > stellarshard.field_U[12]) {
+                  if (-3 < (stellarshard.field_U[12] ^ -1)) {
                     break L5;
                   } else {
                     stellarshard.field_U[13] = stellarshard.field_U[13] - 2;
@@ -98,10 +98,10 @@ final class dc {
               }
             }
             L6: {
-              if (mk.field_k >= -1) {
+              if ((mk.field_k ^ -1) >= -1) {
                 break L6;
               } else {
-                if (-3 > stellarshard.field_U[12]) {
+                if (-3 < (stellarshard.field_U[12] ^ -1)) {
                   break L6;
                 } else {
                   if (-3 >= (stellarshard.field_U[9] ^ -1)) {
@@ -115,10 +115,10 @@ final class dc {
               }
             }
             L7: {
-              if (-1 <= mk.field_k) {
+              if (-1 <= (mk.field_k ^ -1)) {
                 break L7;
               } else {
-                if (-3 > stellarshard.field_U[15]) {
+                if (-3 < (stellarshard.field_U[15] ^ -1)) {
                   break L7;
                 } else {
                   if (stellarshard.field_U[14] < 2) {
@@ -151,11 +151,11 @@ final class dc {
             if (stellarshard.field_U[0] < 5) {
               if (-6 < (stellarshard.field_U[1] ^ -1)) {
                 if (stellarshard.field_U[3] < 5) {
-                  if (-11 >= stellarshard.field_U[4]) {
+                  if (-11 >= (stellarshard.field_U[4] ^ -1)) {
                     stellarshard.field_U[4] = stellarshard.field_U[4] - 10;
                     return 4;
                   } else {
-                    if (-11 <= stellarshard.field_U[5]) {
+                    if (-11 >= (stellarshard.field_U[5] ^ -1)) {
                       stellarshard.field_U[5] = stellarshard.field_U[5] - 10;
                       return 5;
                     } else {

@@ -1033,7 +1033,7 @@ final class pn implements uj {
                 int discarded$3 = wi.field_A.a(var5.field_n, var3 + -10 + 60, var2 + -10, 140, var1 + 20, 16777215, -1, 0, 1, 0);
                 var2 = var2 + (var1 + 24);
                 if ((var2 ^ -1) < -421) {
-                  // wide iinc 3 220
+                  var3 += 220;
                   var2 = var4;
                   break L3;
                 } else {

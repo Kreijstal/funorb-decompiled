@@ -17,8 +17,9 @@ final class mg {
               if ((gl.field_q ^ -1) >= -1) {
                 break L0;
               } else {
+                int fieldTemp$29 = gl.field_q - 1;
                 gl.field_q = gl.field_q - 1;
-                var2_ref_byte__ = mb.field_b[gl.field_q - 1];
+                var2_ref_byte__ = mb.field_b[fieldTemp$29];
                 mb.field_b[gl.field_q] = null;
                 return var2_ref_byte__;
               }
@@ -54,8 +55,9 @@ final class mg {
               }
             } else {
               if (d.field_s > 0) {
+                int fieldTemp$30 = d.field_s - 1;
                 d.field_s = d.field_s - 1;
-                var2_ref_byte__ = lk.field_t[d.field_s - 1];
+                var2_ref_byte__ = lk.field_t[fieldTemp$30];
                 lk.field_t[d.field_s] = null;
                 return var2_ref_byte__;
               } else {
@@ -118,8 +120,9 @@ final class mg {
                 }
               } else {
                 if (d.field_s > 0) {
+                  int fieldTemp$31 = d.field_s - 1;
                   d.field_s = d.field_s - 1;
-                  var2_ref_byte__ = lk.field_t[d.field_s - 1];
+                  var2_ref_byte__ = lk.field_t[fieldTemp$31];
                   lk.field_t[d.field_s] = null;
                   return var2_ref_byte__;
                 } else {
@@ -155,8 +158,9 @@ final class mg {
                 }
               }
             } else {
+              int fieldTemp$32 = ok.field_E - 1;
               ok.field_E = ok.field_E - 1;
-              var2_ref_byte__ = pd.field_b[ok.field_E - 1];
+              var2_ref_byte__ = pd.field_b[fieldTemp$32];
               pd.field_b[ok.field_E] = null;
               return var2_ref_byte__;
             }
@@ -170,8 +174,9 @@ final class mg {
                   break L6;
                 } else {
                   if (ok.field_E > 0) {
+                    int fieldTemp$33 = ok.field_E - 1;
                     ok.field_E = ok.field_E - 1;
-                    var2_ref_byte__ = pd.field_b[ok.field_E - 1];
+                    var2_ref_byte__ = pd.field_b[fieldTemp$33];
                     pd.field_b[ok.field_E] = null;
                     return var2_ref_byte__;
                   } else {
@@ -184,8 +189,9 @@ final class mg {
                   break L7;
                 } else {
                   if (d.field_s > 0) {
+                    int fieldTemp$34 = d.field_s - 1;
                     d.field_s = d.field_s - 1;
-                    var2_ref_byte__ = lk.field_t[d.field_s - 1];
+                    var2_ref_byte__ = lk.field_t[fieldTemp$34];
                     lk.field_t[d.field_s] = null;
                     return var2_ref_byte__;
                   } else {
@@ -220,8 +226,9 @@ final class mg {
                 return new byte[param1];
               }
             } else {
+              int fieldTemp$35 = gl.field_q - 1;
               gl.field_q = gl.field_q - 1;
-              var2_ref_byte__ = mb.field_b[gl.field_q - 1];
+              var2_ref_byte__ = mb.field_b[fieldTemp$35];
               mb.field_b[gl.field_q] = null;
               return var2_ref_byte__;
             }
@@ -231,8 +238,9 @@ final class mg {
                 break L9;
               } else {
                 if (ok.field_E > 0) {
+                  int fieldTemp$36 = ok.field_E - 1;
                   ok.field_E = ok.field_E - 1;
-                  var2_ref_byte__ = pd.field_b[ok.field_E - 1];
+                  var2_ref_byte__ = pd.field_b[fieldTemp$36];
                   pd.field_b[ok.field_E] = null;
                   return var2_ref_byte__;
                 } else {
@@ -245,8 +253,9 @@ final class mg {
                 break L10;
               } else {
                 if (d.field_s > 0) {
+                  int fieldTemp$37 = d.field_s - 1;
                   d.field_s = d.field_s - 1;
-                  var2_ref_byte__ = lk.field_t[d.field_s - 1];
+                  var2_ref_byte__ = lk.field_t[fieldTemp$37];
                   lk.field_t[d.field_s] = null;
                   return var2_ref_byte__;
                 } else {

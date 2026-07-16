@@ -241,8 +241,7 @@ final class cm extends uj {
                   }
                 }
                 L7: {
-                  new kp(stackIn_35_2, stackIn_35_3, stackIn_35_4);
-                  var14 = stackIn_35_0;
+                  var14 = new kp(stackIn_35_2, stackIn_35_3, stackIn_35_4);
                   var14.field_b[0] = 0;
                   if (var13 != null) {
                     L8: {

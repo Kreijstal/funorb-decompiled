@@ -253,388 +253,118 @@ final class fw extends ta {
             int stackIn_37_0 = 0;
             Throwable decompiledCaughtException = null;
             int stackOut_15_0 = 0;
-            int stackOut_26_0 = 0;
             int stackOut_31_0 = 0;
-            int stackOut_34_0 = 0;
+            int stackOut_26_0 = 0;
             int stackOut_36_0 = 0;
-            int statePc = 0;
-            Throwable caughtException = null;
-            stateLoop: while (true) {
-                switch (statePc) {
-                    case 0: {
-                        if (gt.field_t.field_o > -5) {
-                            statePc = 7;
-                        } else {
-                            statePc = 1;
-                        }
-                        continue stateLoop;
-                    }
-                    case 1: {
-                        if (0 == gt.field_t.field_l) {
-                            statePc = 3;
-                        } else {
-                            statePc = 4;
-                        }
-                        continue stateLoop;
-                    }
-                    case 3: {
-                        return 3;
-                    }
-                    case 4: {
-                        if (gt.field_t.field_l == -2) {
-                            statePc = 6;
-                        } else {
-                            statePc = 5;
-                        }
-                        continue stateLoop;
-                    }
-                    case 5: {
-                        return 1;
-                    }
-                    case 6: {
-                        return 4;
-                    }
-                    case 7: {
-                        if (param0 == 66) {
-                            statePc = 9;
-                        } else {
-                            statePc = 8;
-                        }
-                        continue stateLoop;
-                    }
-                    case 8: {
-                        field_G = 1.4183330929861455;
-                        statePc = 9;
-                        continue stateLoop;
-                    }
-                    case 9: {
-                        try {
-                            if (ci.field_a == 0) {
-                                statePc = 11;
-                            } else {
-                                statePc = 10;
-                            }
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_9) {
-                            caughtException = stateCaught_9;
-                            statePc = 38;
-                            continue stateLoop;
-                        }
-                    }
-                    case 10: {
-                        try {
-                            statePc = 12;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_10) {
-                            caughtException = stateCaught_10;
-                            statePc = 38;
-                            continue stateLoop;
-                        }
-                    }
-                    case 11: {
-                        try {
-                            iv.field_o = hf.field_e.a(true, tk.field_yb, nb.field_b);
-                            ci.field_a = ci.field_a + 1;
-                            statePc = 12;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_11) {
-                            caughtException = stateCaught_11;
-                            statePc = 38;
-                            continue stateLoop;
-                        }
-                    }
-                    case 12: {
-                        try {
-                            if (-2 != (ci.field_a ^ -1)) {
-                                statePc = 20;
-                            } else {
-                                statePc = 13;
-                            }
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_12) {
-                            caughtException = stateCaught_12;
-                            statePc = 38;
-                            continue stateLoop;
-                        }
-                    }
-                    case 13: {
-                        try {
-                            if (iv.field_o.field_a == 2) {
-                                statePc = 15;
-                            } else {
-                                statePc = 14;
-                            }
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_13) {
-                            caughtException = stateCaught_13;
-                            statePc = 38;
-                            continue stateLoop;
-                        }
-                    }
-                    case 14: {
-                        try {
-                            statePc = 17;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_14) {
-                            caughtException = stateCaught_14;
-                            statePc = 38;
-                            continue stateLoop;
-                        }
-                    }
-                    case 15: {
-                        try {
-                            stackOut_15_0 = vk.a(-120, -1);
-                            stackIn_16_0 = stackOut_15_0;
-                            statePc = 16;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_15) {
-                            caughtException = stateCaught_15;
-                            statePc = 38;
-                            continue stateLoop;
-                        }
-                    }
-                    case 16: {
-                        return stackIn_16_0;
-                    }
-                    case 17: {
-                        try {
-                            if (1 == iv.field_o.field_a) {
-                                statePc = 19;
-                            } else {
-                                statePc = 18;
-                            }
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_17) {
-                            caughtException = stateCaught_17;
-                            statePc = 38;
-                            continue stateLoop;
-                        }
-                    }
-                    case 18: {
-                        try {
-                            statePc = 20;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_18) {
-                            caughtException = stateCaught_18;
-                            statePc = 38;
-                            continue stateLoop;
-                        }
-                    }
-                    case 19: {
-                        try {
-                            ci.field_a = ci.field_a + 1;
-                            statePc = 20;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_19) {
-                            caughtException = stateCaught_19;
-                            statePc = 38;
-                            continue stateLoop;
-                        }
-                    }
-                    case 20: {
-                        try {
-                            if (ci.field_a != 2) {
-                                statePc = 22;
-                            } else {
-                                statePc = 21;
-                            }
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_20) {
-                            caughtException = stateCaught_20;
-                            statePc = 38;
-                            continue stateLoop;
-                        }
-                    }
-                    case 21: {
-                        try {
-                            je.field_e = new bh((java.net.Socket) iv.field_o.field_b, hf.field_e);
-                            var2 = new iw(13);
-                            dh.a(or.field_c, rc.field_f, var2, -3210, wo.field_k);
-                            var2.a(param0 + 52, 15);
-                            var2.b(param0 ^ -44, gg.field_Db);
-                            je.field_e.a(13, (byte) -127, 0, var2.field_f);
-                            ci.field_a = ci.field_a + 1;
-                            qq.field_I = 30000L + nj.a(93);
-                            statePc = 22;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_21) {
-                            caughtException = stateCaught_21;
-                            statePc = 38;
-                            continue stateLoop;
-                        }
-                    }
-                    case 22: {
-                        try {
-                            if (ci.field_a == 3) {
-                                statePc = 24;
-                            } else {
-                                statePc = 23;
-                            }
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_22) {
-                            caughtException = stateCaught_22;
-                            statePc = 38;
-                            continue stateLoop;
-                        }
-                    }
-                    case 23: {
-                        try {
-                            statePc = 33;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_23) {
-                            caughtException = stateCaught_23;
-                            statePc = 38;
-                            continue stateLoop;
-                        }
-                    }
-                    case 24: {
-                        try {
-                            if (-1 <= je.field_e.a((byte) 63)) {
-                                statePc = 29;
-                            } else {
-                                statePc = 25;
-                            }
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_24) {
-                            caughtException = stateCaught_24;
-                            statePc = 38;
-                            continue stateLoop;
-                        }
-                    }
-                    case 25: {
-                        try {
-                            var1_int = je.field_e.b(1);
-                            if (-1 == var1_int) {
-                                statePc = 28;
-                            } else {
-                                statePc = 26;
-                            }
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_25) {
-                            caughtException = stateCaught_25;
-                            statePc = 38;
-                            continue stateLoop;
-                        }
-                    }
-                    case 26: {
-                        try {
-                            stackOut_26_0 = vk.a(param0 + -182, var1_int);
-                            stackIn_27_0 = stackOut_26_0;
-                            statePc = 27;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_26) {
-                            caughtException = stateCaught_26;
-                            statePc = 38;
-                            continue stateLoop;
-                        }
-                    }
-                    case 27: {
-                        return stackIn_27_0;
-                    }
-                    case 28: {
-                        try {
-                            ci.field_a = ci.field_a + 1;
-                            statePc = 33;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_28) {
-                            caughtException = stateCaught_28;
-                            statePc = 38;
-                            continue stateLoop;
-                        }
-                    }
-                    case 29: {
-                        try {
-                            if ((nj.a(param0 ^ 102) ^ -1L) < (qq.field_I ^ -1L)) {
-                                statePc = 31;
-                            } else {
-                                statePc = 30;
-                            }
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_29) {
-                            caughtException = stateCaught_29;
-                            statePc = 38;
-                            continue stateLoop;
-                        }
-                    }
-                    case 30: {
-                        try {
-                            statePc = 33;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_30) {
-                            caughtException = stateCaught_30;
-                            statePc = 38;
-                            continue stateLoop;
-                        }
-                    }
-                    case 31: {
-                        try {
-                            stackOut_31_0 = vk.a(-126, -2);
-                            stackIn_32_0 = stackOut_31_0;
-                            statePc = 32;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_31) {
-                            caughtException = stateCaught_31;
-                            statePc = 38;
-                            continue stateLoop;
-                        }
-                    }
-                    case 32: {
-                        return stackIn_32_0;
-                    }
-                    case 33: {
-                        try {
-                            if ((ci.field_a ^ -1) != -5) {
-                                statePc = 36;
-                            } else {
-                                statePc = 34;
-                            }
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_33) {
-                            caughtException = stateCaught_33;
-                            statePc = 38;
-                            continue stateLoop;
-                        }
-                    }
-                    case 34: {
-                        try {
-                            gt.field_t.a((Object) (Object) je.field_e, 20, ac.field_f);
-                            je.field_e = null;
-                            ci.field_a = 0;
-                            iv.field_o = null;
-                            stackOut_34_0 = 0;
-                            stackIn_35_0 = stackOut_34_0;
-                            statePc = 35;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_34) {
-                            caughtException = stateCaught_34;
-                            statePc = 38;
-                            continue stateLoop;
-                        }
-                    }
-                    case 35: {
-                        return stackIn_35_0;
-                    }
-                    case 36: {
-                        try {
-                            stackOut_36_0 = -1;
-                            stackIn_37_0 = stackOut_36_0;
-                            statePc = 37;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_36) {
-                            caughtException = stateCaught_36;
-                            statePc = 38;
-                            continue stateLoop;
-                        }
-                    }
-                    case 37: {
-                        return stackIn_37_0;
-                    }
-                    case 38: {
-                        var1 = (IOException) (Object) caughtException;
-                        return vk.a(-125, -3);
-                    }
-                    default: throw new IllegalStateException("invalid CFG state " + statePc);
+            int stackOut_34_0 = 0;
+            if ((gt.field_t.field_o ^ -1) > -5) {
+              L0: {
+                if (param0 == 66) {
+                  break L0;
+                } else {
+                  field_G = 1.4183330929861455;
+                  break L0;
                 }
+              }
+              try {
+                L1: {
+                  L2: {
+                    if (ci.field_a == 0) {
+                      iv.field_o = hf.field_e.a(true, tk.field_yb, nb.field_b);
+                      ci.field_a = ci.field_a + 1;
+                      break L2;
+                    } else {
+                      break L2;
+                    }
+                  }
+                  L3: {
+                    if (-2 != (ci.field_a ^ -1)) {
+                      break L3;
+                    } else {
+                      if (iv.field_o.field_a == 2) {
+                        stackOut_15_0 = vk.a(-120, -1);
+                        stackIn_16_0 = stackOut_15_0;
+                        return stackIn_16_0;
+                      } else {
+                        if (1 == iv.field_o.field_a) {
+                          ci.field_a = ci.field_a + 1;
+                          break L3;
+                        } else {
+                          break L3;
+                        }
+                      }
+                    }
+                  }
+                  L4: {
+                    if (ci.field_a != 2) {
+                      break L4;
+                    } else {
+                      je.field_e = new bh((java.net.Socket) iv.field_o.field_b, hf.field_e);
+                      var2 = new iw(13);
+                      dh.a(or.field_c, rc.field_f, var2, -3210, wo.field_k);
+                      var2.a(param0 + 52, 15);
+                      var2.b(param0 ^ -44, gg.field_Db);
+                      je.field_e.a(13, (byte) -127, 0, var2.field_f);
+                      ci.field_a = ci.field_a + 1;
+                      qq.field_I = 30000L + nj.a(93);
+                      break L4;
+                    }
+                  }
+                  L5: {
+                    if (ci.field_a == 3) {
+                      if (-1 <= (je.field_e.a((byte) 63) ^ -1)) {
+                        if ((nj.a(param0 ^ 102) ^ -1L) < (qq.field_I ^ -1L)) {
+                          stackOut_31_0 = vk.a(-126, -2);
+                          stackIn_32_0 = stackOut_31_0;
+                          return stackIn_32_0;
+                        } else {
+                          break L5;
+                        }
+                      } else {
+                        var1_int = je.field_e.b(1);
+                        if (-1 == (var1_int ^ -1)) {
+                          ci.field_a = ci.field_a + 1;
+                          break L5;
+                        } else {
+                          stackOut_26_0 = vk.a(param0 + -182, var1_int);
+                          stackIn_27_0 = stackOut_26_0;
+                          return stackIn_27_0;
+                        }
+                      }
+                    } else {
+                      break L5;
+                    }
+                  }
+                  if ((ci.field_a ^ -1) != -5) {
+                    stackOut_36_0 = -1;
+                    stackIn_37_0 = stackOut_36_0;
+                    break L1;
+                  } else {
+                    gt.field_t.a((Object) (Object) je.field_e, 20, ac.field_f);
+                    je.field_e = null;
+                    ci.field_a = 0;
+                    iv.field_o = null;
+                    stackOut_34_0 = 0;
+                    stackIn_35_0 = stackOut_34_0;
+                    return stackIn_35_0;
+                  }
+                }
+              } catch (java.io.IOException decompiledCaughtParameter0) {
+                decompiledCaughtException = decompiledCaughtParameter0;
+                var1 = (IOException) (Object) decompiledCaughtException;
+                return vk.a(-125, -3);
+              }
+              return stackIn_37_0;
+            } else {
+              if (0 == (gt.field_t.field_l ^ -1)) {
+                return 3;
+              } else {
+                if (gt.field_t.field_l == -2) {
+                  return 4;
+                } else {
+                  return 1;
+                }
+              }
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;

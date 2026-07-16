@@ -9,73 +9,21 @@ final class ni extends q {
     final static void a(nj param0, boolean param1) {
         Object var2 = null;
         Throwable var3 = null;
-        int statePc = 0;
-        Throwable caughtException = null;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    var2 = (Object) (Object) Torquing.field_v;
-                    // monitorenter Torquing.field_v
-                    statePc = 1;
-                    continue stateLoop;
-                }
-                case 1: {
-                    try {
-                        Torquing.field_v.field_r.b((lf) (Object) param0);
-                        if (param1) {
-                            statePc = 3;
-                        } else {
-                            statePc = 2;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_1) {
-                        caughtException = stateCaught_1;
-                        statePc = 5;
-                        continue stateLoop;
-                    }
-                }
-                case 2: {
-                    try {
-                        field_l = null;
-                        statePc = 3;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_2) {
-                        caughtException = stateCaught_2;
-                        statePc = 5;
-                        continue stateLoop;
-                    }
-                }
-                case 3: {
-                    try {
-                        // monitorexit var2
-                        statePc = 7;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_3) {
-                        caughtException = stateCaught_3;
-                        statePc = 5;
-                        continue stateLoop;
-                    }
-                }
-                case 5: {
-                    try {
-                        var3 = caughtException;
-                        // monitorexit var2
-                        statePc = 6;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_5) {
-                        caughtException = stateCaught_5;
-                        statePc = 5;
-                        continue stateLoop;
-                    }
-                }
-                case 6: {
-                    throw (RuntimeException) (Object) var3;
-                }
-                case 7: {
-                    return;
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
+        Throwable decompiledCaughtException = null;
+        var2 = (Object) (Object) Torquing.field_v;
+        synchronized (var2) {
+          L0: {
+            L1: {
+              Torquing.field_v.field_r.b((lf) (Object) param0);
+              if (param1) {
+                break L1;
+              } else {
+                field_l = null;
+                break L1;
+              }
             }
+            break L0;
+          }
         }
     }
 
@@ -481,34 +429,40 @@ final class ni extends q {
             Throwable decompiledCaughtException = null;
             try {
               L0: {
-                var9 = param1.getParameter("cookiehost");
-                var7 = var9;
-                var7 = var9;
-                var10 = param4 + "=" + param2 + "; version=1; path=/; domain=" + var9;
-                var7 = var10;
-                var7 = var10;
-                if (param0 >= 69) {
-                  break L0;
-                } else {
-                  var8 = null;
-                  ni.a((nj) null, false);
-                  break L0;
+                L1: {
+                  var9 = param1.getParameter("cookiehost");
+                  var7 = var9;
+                  var7 = var9;
+                  var10 = param4 + "=" + param2 + "; version=1; path=/; domain=" + var9;
+                  var7 = var10;
+                  var7 = var10;
+                  if (param0 >= 69) {
+                    break L1;
+                  } else {
+                    var8 = null;
+                    ni.a((nj) null, false);
+                    break L1;
+                  }
                 }
-              }
-              L1: {
-                if (param3 >= 0L) {
-                  var7 = var10 + "; Expires=" + ka.a(param3 * 1000L + km.b(-1), -2) + "; Max-Age=" + param3;
-                  break L1;
-                } else {
-                  var7 = var10 + "; Discard;";
-                  break L1;
+                L2: {
+                  if (param3 >= 0L) {
+                    var7 = var10 + "; Expires=" + ka.a(param3 * 1000L + km.b(-1), -2) + "; Max-Age=" + param3;
+                    break L2;
+                  } else {
+                    var7 = var10 + "; Discard;";
+                    break L2;
+                  }
                 }
+                hp.a("document.cookie=\"" + var7 + "\"", 27476, param1);
+                break L0;
               }
-              hp.a("document.cookie=\"" + var7 + "\"", 27476, param1);
-            } catch (java.lang.Throwable decompiledCaughtParameter) {
-              decompiledCaughtException = decompiledCaughtParameter;
+            } catch (java.lang.Throwable decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              L3: {
+                var6 = decompiledCaughtException;
+                break L3;
+              }
             }
-            var6 = decompiledCaughtException;
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {

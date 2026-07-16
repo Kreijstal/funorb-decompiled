@@ -101,6 +101,7 @@ final class ck {
           if (var2 >= 10) {
             ((ck) this).field_a = param0.f(674914976);
             ((ck) this).field_c = param0.f(674914976);
+            return;
           } else {
             var3 = param0.i(-101);
             if (var3 != 0) {

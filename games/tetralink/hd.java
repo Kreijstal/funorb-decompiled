@@ -71,7 +71,6 @@ final class hd extends um {
         int var3 = 0;
         hl var4 = null;
         hl var5 = null;
-        hl var5_ref = null;
         var3 = TetraLink.field_J;
         if (param1 == -104) {
           var4 = (hl) (Object) param0.field_fb.c(false);
@@ -89,7 +88,7 @@ final class hd extends um {
               var4.field_yb = 0;
               var4.field_R = 0;
               var5 = (hl) (Object) param0.field_fb.a((byte) -70);
-              var5_ref = var5;
+              var5 = var5;
               continue L0;
             }
           }
@@ -110,7 +109,7 @@ final class hd extends um {
               var4.field_yb = 0;
               var4.field_R = 0;
               var5 = (hl) (Object) param0.field_fb.a((byte) -70);
-              var5_ref = var5;
+              var5 = var5;
               continue L1;
             }
           }

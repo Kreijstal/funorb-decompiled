@@ -83,10 +83,16 @@ final class nb implements Iterator {
             var14 = wc.field_m[param0];
             if (-1 != (param0 ^ -1)) {
               if (1 != param0) {
-                if (-3 != param0) {
-                  if (-4 != param0) {
+                if (-3 != (param0 ^ -1)) {
+                  if (-4 == (param0 ^ -1)) {
+                    rj.field_C[param0] = (jj) (Object) new lk(var14, var16);
+                    return;
+                  } else {
                     if ((param0 ^ -1) != -5) {
-                      if (param0 != 5) {
+                      if (param0 == 5) {
+                        rj.field_C[param0] = (jj) (Object) new da(var14, var16);
+                        return;
+                      } else {
                         if ((param0 ^ -1) != -7) {
                           if (param0 != 7) {
                             return;
@@ -98,17 +104,11 @@ final class nb implements Iterator {
                           rj.field_C[param0] = (jj) (Object) new bm(var14, var16);
                           return;
                         }
-                      } else {
-                        rj.field_C[param0] = (jj) (Object) new da(var14, var16);
-                        return;
                       }
                     } else {
                       rj.field_C[param0] = (jj) (Object) new se(var14, var16);
                       return;
                     }
-                  } else {
-                    rj.field_C[param0] = (jj) (Object) new lk(var14, var16);
-                    return;
                   }
                 } else {
                   rj.field_C[param0] = (jj) (Object) new ci(var14, var16);
@@ -131,32 +131,32 @@ final class nb implements Iterator {
             var4 = var11;
             if (-1 != (param0 ^ -1)) {
               if (1 != param0) {
-                if (-3 != param0) {
-                  if (-4 != param0) {
+                if (-3 != (param0 ^ -1)) {
+                  if (-4 == (param0 ^ -1)) {
+                    rj.field_C[param0] = (jj) (Object) new lk(var11, var13);
+                    return;
+                  } else {
                     if ((param0 ^ -1) != -5) {
-                      if (param0 != 5) {
+                      if (param0 == 5) {
+                        rj.field_C[param0] = (jj) (Object) new da(var11, var13);
+                        return;
+                      } else {
                         if ((param0 ^ -1) != -7) {
-                          if (param0 == 7) {
-                            rj.field_C[param0] = (jj) (Object) new wc(var11, var13);
+                          if (param0 != 7) {
                             return;
                           } else {
+                            rj.field_C[param0] = (jj) (Object) new wc(var11, var13);
                             return;
                           }
                         } else {
                           rj.field_C[param0] = (jj) (Object) new bm(var11, var13);
                           return;
                         }
-                      } else {
-                        rj.field_C[param0] = (jj) (Object) new da(var11, var13);
-                        return;
                       }
                     } else {
                       rj.field_C[param0] = (jj) (Object) new se(var11, var13);
                       return;
                     }
-                  } else {
-                    rj.field_C[param0] = (jj) (Object) new lk(var11, var13);
-                    return;
                   }
                 } else {
                   rj.field_C[param0] = (jj) (Object) new ci(var11, var13);
@@ -188,32 +188,32 @@ final class nb implements Iterator {
           var4 = var8;
           if (-1 != (param0 ^ -1)) {
             if (1 != param0) {
-              if (-3 != param0) {
-                if (-4 != param0) {
+              if (-3 != (param0 ^ -1)) {
+                if (-4 == (param0 ^ -1)) {
+                  rj.field_C[param0] = (jj) (Object) new lk(var8, var10);
+                  return;
+                } else {
                   if ((param0 ^ -1) != -5) {
-                    if (param0 != 5) {
+                    if (param0 == 5) {
+                      rj.field_C[param0] = (jj) (Object) new da(var8, var10);
+                      return;
+                    } else {
                       if ((param0 ^ -1) != -7) {
-                        if (param0 == 7) {
-                          rj.field_C[param0] = (jj) (Object) new wc(var8, var10);
+                        if (param0 != 7) {
                           return;
                         } else {
+                          rj.field_C[param0] = (jj) (Object) new wc(var8, var10);
                           return;
                         }
                       } else {
                         rj.field_C[param0] = (jj) (Object) new bm(var8, var10);
                         return;
                       }
-                    } else {
-                      rj.field_C[param0] = (jj) (Object) new da(var8, var10);
-                      return;
                     }
                   } else {
                     rj.field_C[param0] = (jj) (Object) new se(var8, var10);
                     return;
                   }
-                } else {
-                  rj.field_C[param0] = (jj) (Object) new lk(var8, var10);
-                  return;
                 }
               } else {
                 rj.field_C[param0] = (jj) (Object) new ci(var8, var10);

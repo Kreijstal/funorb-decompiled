@@ -237,7 +237,7 @@ final class ei extends sh {
                 return;
               } else {
                 if (-177 != (var3 ^ -1)) {
-                  if (-193 != var3) {
+                  if (-193 != (var3 ^ -1)) {
                     if (param0 == -128) {
                       if ((var3 ^ -1) == -209) {
                         var4 = 15 & param1;
@@ -437,7 +437,7 @@ final class ei extends sh {
                     }
                   }
                   L20: {
-                    if (-122 != var5) {
+                    if (-122 != (var5 ^ -1)) {
                       break L20;
                     } else {
                       this.e(var4, 15198);
@@ -445,7 +445,7 @@ final class ei extends sh {
                     }
                   }
                   L21: {
-                    if (-124 == var5) {
+                    if (-124 == (var5 ^ -1)) {
                       this.a(param0 ^ 29, var4);
                       break L21;
                     } else {
@@ -516,7 +516,7 @@ final class ei extends sh {
                       break L27;
                     }
                   }
-                  if (var5 != -50) {
+                  if ((var5 ^ -1) != -50) {
                     break L0;
                   } else {
                     this.d(var6 + (((ei) this).field_y[var4] & -128), -24344, var4);
@@ -842,13 +842,13 @@ final class ei extends sh {
         Object var6 = null;
         L0: {
           var5 = fleas.field_A ? 1 : 0;
-          if (param2 <= -1) {
+          if ((param2 ^ -1) <= -1) {
             ((ei) this).field_P[param2] = param0;
             break L0;
           } else {
             var4 = 0;
             L1: while (true) {
-              if (-17 <= var4) {
+              if (-17 >= (var4 ^ -1)) {
                 break L0;
               } else {
                 ((ei) this).field_P[var4] = param0;
@@ -1091,27 +1091,51 @@ final class ei extends sh {
     }
 
     private final void a(int param0, int param1) {
-        int var4 = fleas.field_A ? 1 : 0;
-        tk var3 = (tk) (Object) ((ei) this).field_O.field_n.c((byte) 47);
-        while (var3 != null) {
-            if ((param1 ^ -1) <= -1) {
-                // if_icmpne L86
+        tk var3 = null;
+        int var4 = 0;
+        var4 = fleas.field_A ? 1 : 0;
+        var3 = (tk) (Object) ((ei) this).field_O.field_n.c((byte) 47);
+        L0: while (true) {
+          if (var3 == null) {
+            L1: {
+              if (param0 <= -87) {
+                break L1;
+              } else {
+                ((ei) this).b(100, -119);
+                break L1;
+              }
             }
-            if (0 > var3.field_q) {
+            return;
+          } else {
+            L2: {
+              L3: {
+                if ((param1 ^ -1) > -1) {
+                  break L3;
+                } else {
+                  if (var3.field_o != param1) {
+                    break L2;
+                  } else {
+                    break L3;
+                  }
+                }
+              }
+              if (0 <= var3.field_q) {
+                break L2;
+              } else {
                 ((ei) this).field_D[var3.field_o][var3.field_F] = null;
                 var3.field_q = 0;
+                break L2;
+              }
             }
             var3 = (tk) (Object) ((ei) this).field_O.field_n.b((byte) -105);
-        }
-        if (param0 > -87) {
-            ((ei) this).b(100, -119);
+            continue L0;
+          }
         }
     }
 
     final synchronized boolean a(ng param0, rh param1, int param2, int param3, wk param4) {
         int var6 = 0;
         Object var7 = null;
-        int[] var7_array = null;
         oj var8 = null;
         int var9 = 0;
         int var11 = 0;
@@ -1133,7 +1157,7 @@ final class ei extends sh {
           if ((param3 ^ -1) >= -1) {
             break L1;
           } else {
-            var7_array = new int[]{param3};
+            var7 = (Object) (Object) new int[]{param3};
             break L1;
           }
         }
@@ -1157,7 +1181,7 @@ final class ei extends sh {
                 var13 = ub.a(var9, (byte) -95, param1);
                 if (var13 != null) {
                   ((ei) this).field_S.a((lh) (Object) var13, true, (long)var9);
-                  if (var13.a(param0, var8.field_l, false, var7_array)) {
+                  if (var13.a(param0, var8.field_l, false, (int[]) var7)) {
                     break L4;
                   } else {
                     var6 = 0;
@@ -1168,7 +1192,7 @@ final class ei extends sh {
                   break L4;
                 }
               } else {
-                if (var12.a(param0, var8.field_l, false, var7_array)) {
+                if (var12.a(param0, var8.field_l, false, (int[]) var7)) {
                   break L4;
                 } else {
                   var6 = 0;
@@ -1464,26 +1488,59 @@ final class ei extends sh {
     }
 
     private final void a(int param0, byte param1) {
-        int var5 = fleas.field_A ? 1 : 0;
-        int var4 = -69 / ((param1 - 56) / 55);
-        tk var3 = (tk) (Object) ((ei) this).field_O.field_n.c((byte) 47);
-        while (var3 != null) {
-            if (-1 >= (param0 ^ -1)) {
-                // if_icmpeq L58
-            } else {
-                if (!(var3.field_k == null)) {
+        tk var3 = null;
+        int var4 = 0;
+        int var5 = 0;
+        var5 = fleas.field_A ? 1 : 0;
+        var4 = -69 / ((param1 - 56) / 55);
+        var3 = (tk) (Object) ((ei) this).field_O.field_n.c((byte) 47);
+        L0: while (true) {
+          if (var3 == null) {
+            return;
+          } else {
+            L1: {
+              L2: {
+                if (-1 < (param0 ^ -1)) {
+                  break L2;
+                } else {
+                  if (var3.field_o == param0) {
+                    break L2;
+                  } else {
+                    break L1;
+                  }
+                }
+              }
+              L3: {
+                if (var3.field_k != null) {
+                  L4: {
                     var3.field_k.f(la.field_a / 100);
-                    if (var3.field_k.i()) {
-                        ((ei) this).field_O.field_o.a((sh) (Object) var3.field_k);
+                    if (!var3.field_k.i()) {
+                      break L4;
+                    } else {
+                      ((ei) this).field_O.field_o.a((sh) (Object) var3.field_k);
+                      break L4;
                     }
-                    var3.d(-30);
+                  }
+                  var3.d(-30);
+                  break L3;
+                } else {
+                  break L3;
                 }
-                if (!(var3.field_q >= 0)) {
-                    ((ei) this).field_D[var3.field_o][var3.field_F] = null;
+              }
+              L5: {
+                if (var3.field_q < 0) {
+                  ((ei) this).field_D[var3.field_o][var3.field_F] = null;
+                  break L5;
+                } else {
+                  break L5;
                 }
-                var3.c(-1);
+              }
+              var3.c(-1);
+              break L1;
             }
             var3 = (tk) (Object) ((ei) this).field_O.field_n.b((byte) -105);
+            continue L0;
+          }
         }
     }
 

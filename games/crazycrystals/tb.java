@@ -257,39 +257,69 @@ abstract class tb {
     }
 
     final int a(int param0, int param1, byte param2) {
-        bh var6 = null;
-        int var7 = 0;
-        int var8 = CrazyCrystals.field_B;
-        if (((tb) this).field_h != null) {
-            // ifeq L36
-            // if_icmplt L36
-        } else {
-            return -1;
-        }
-        if (param0 > ((tb) this).field_h[((tb) this).field_h.length + -1].field_b) {
-            return -1;
-        }
-        if (!(1 != ((tb) this).field_h.length)) {
-            return ((tb) this).field_h[0].a(-64, param1);
-        }
         int var4 = 0;
         int var5 = 0;
-        if (param2 != 51) {
-            int discarded$0 = ((tb) this).a(85, 75);
-        }
-        while (var5 < ((tb) this).field_h.length) {
-            var6 = ((tb) this).field_h[var5];
-            if (param0 >= var6.field_f) {
-                if (var6.field_b >= param0) {
-                    var7 = var6.a(param2 + -92, param1);
-                    if (0 == (var7 ^ -1)) {
-                        return -1;
+        bh var6 = null;
+        int var7 = 0;
+        int var8 = 0;
+        L0: {
+          var8 = CrazyCrystals.field_B;
+          if (((tb) this).field_h == null) {
+            break L0;
+          } else {
+            if (((tb) this).field_h.length == 0) {
+              break L0;
+            } else {
+              if (param0 < ((tb) this).field_h[0].field_f) {
+                break L0;
+              } else {
+                if (param0 <= ((tb) this).field_h[((tb) this).field_h.length + -1].field_b) {
+                  if (1 == ((tb) this).field_h.length) {
+                    return ((tb) this).field_h[0].a(-64, param1);
+                  } else {
+                    L1: {
+                      var4 = 0;
+                      var5 = 0;
+                      if (param2 == 51) {
+                        break L1;
+                      } else {
+                        int discarded$2 = ((tb) this).a(85, 75);
+                        break L1;
+                      }
                     }
-                    return var7 + var4;
+                    L2: while (true) {
+                      if (var5 >= ((tb) this).field_h.length) {
+                        return -1;
+                      } else {
+                        L3: {
+                          var6 = ((tb) this).field_h[var5];
+                          if (param0 < var6.field_f) {
+                            break L3;
+                          } else {
+                            if (var6.field_b < param0) {
+                              break L3;
+                            } else {
+                              var7 = var6.a(param2 + -92, param1);
+                              if (0 != (var7 ^ -1)) {
+                                return var7 + var4;
+                              } else {
+                                return -1;
+                              }
+                            }
+                          }
+                        }
+                        var4 = var4 + (var6.field_e.length + -1);
+                        var5++;
+                        continue L2;
+                      }
+                    }
+                  }
+                } else {
+                  return -1;
                 }
+              }
             }
-            var4 = var4 + (var6.field_e.length + -1);
-            var5++;
+          }
         }
         return -1;
     }
@@ -316,47 +346,45 @@ abstract class tb {
               }
             }
             L2: {
-              var3 = 0;
-              if (var1 != 0) {
-                if (-1 <= lb.field_l.field_c) {
-                  L3: {
-                    var3 = sn.field_a[lb.field_l.field_c];
-                    if (var3 == 2) {
-                      break L3;
-                    } else {
-                      if ((var3 ^ -1) == -6) {
-                        break L3;
+              L3: {
+                var3 = 0;
+                if (var1 == 0) {
+                  break L3;
+                } else {
+                  if (-1 < (lb.field_l.field_c ^ -1)) {
+                    break L3;
+                  } else {
+                    L4: {
+                      var3 = sn.field_a[lb.field_l.field_c];
+                      if (var3 == 2) {
+                        break L4;
                       } else {
-                        break L2;
+                        if ((var3 ^ -1) == -6) {
+                          break L4;
+                        } else {
+                          break L2;
+                        }
                       }
                     }
-                  }
-                  gn.f(false);
-                  break L2;
-                } else {
-                  if ((am.field_g ^ -1) == -3) {
-                    break L2;
-                  } else {
-                    gn.f(false);
-                    break L2;
-                  }
-                }
-              } else {
-                if (var2 == 0) {
-                  break L2;
-                } else {
-                  if (am.field_g == -3) {
-                    break L2;
-                  } else {
                     gn.f(false);
                     break L2;
                   }
                 }
               }
+              if (var2 == 0) {
+                break L2;
+              } else {
+                if ((am.field_g ^ -1) == -3) {
+                  break L2;
+                } else {
+                  gn.f(false);
+                  break L2;
+                }
+              }
             }
-            L4: {
+            L5: {
               if (0 != var3) {
-                break L4;
+                break L5;
               } else {
                 if (am.field_g == 2) {
                   var4 = lo.a((byte) -67) - wm.field_d;
@@ -364,24 +392,24 @@ abstract class tb {
                   if (0 >= var6) {
                     var3 = 2;
                     a.a(108, 5, true);
-                    break L4;
+                    break L5;
                   } else {
-                    break L4;
+                    break L5;
                   }
                 } else {
-                  break L4;
+                  break L5;
                 }
               }
             }
             return var3;
           } else {
-            L5: {
+            L6: {
               lb.field_l.f(0);
               if (!lb.field_l.a(true)) {
-                break L5;
+                break L6;
               } else {
                 var1 = 1;
-                break L5;
+                break L6;
               }
             }
             if ((pj.field_q ^ -1) != -14) {

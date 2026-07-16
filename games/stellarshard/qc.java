@@ -287,10 +287,10 @@ final class qc {
         int stackIn_87_0 = 0;
         String stackIn_87_1 = null;
         int stackIn_87_2 = 0;
-        int stackIn_104_0 = 0;
-        int stackIn_105_0 = 0;
         int stackIn_106_0 = 0;
-        int stackIn_106_1 = 0;
+        int stackIn_107_0 = 0;
+        int stackIn_108_0 = 0;
+        int stackIn_108_1 = 0;
         int stackOut_48_0 = 0;
         int stackOut_47_0 = 0;
         int stackOut_51_0 = 0;
@@ -311,11 +311,11 @@ final class qc {
         String[] stackOut_58_0 = null;
         int stackOut_58_1 = 0;
         String stackOut_58_2 = null;
-        int stackOut_103_0 = 0;
         int stackOut_105_0 = 0;
-        int stackOut_105_1 = 0;
-        int stackOut_104_0 = 0;
-        int stackOut_104_1 = 0;
+        int stackOut_107_0 = 0;
+        int stackOut_107_1 = 0;
+        int stackOut_106_0 = 0;
+        int stackOut_106_1 = 0;
         int stackOut_84_0 = 0;
         String stackOut_84_1 = null;
         int stackOut_86_0 = 0;
@@ -328,14 +328,14 @@ final class qc {
           var9 = stellarshard.field_B;
           qh.field_g = true;
           rb.field_s = param0;
-          if (rb.field_s == -1) {
+          if ((rb.field_s ^ -1) == -1) {
             var3 = nj.a(gg.field_d, pe.field_c, hc.field_m, (byte) -128, ii.field_G);
             var4 = 3 + var3;
             sj.field_J = new int[var4];
             stellarshard.field_L = new String[var4];
             var5 = 0;
             L1: while (true) {
-              if (var5 >= var4) {
+              if ((var5 ^ -1) <= (var4 ^ -1)) {
                 pk.field_j = new int[2];
                 var5 = 0;
                 L2: while (true) {
@@ -361,18 +361,18 @@ final class qc {
               }
             }
           } else {
-            if (-2 == rb.field_s) {
+            if (-2 == (rb.field_s ^ -1)) {
               var3 = nj.a(gg.field_d, pe.field_c, hc.field_m, (byte) -128, ii.field_G);
               var4 = 2 - -var3;
               stellarshard.field_L = new String[var4];
               sj.field_J = new int[var4];
               var5 = 0;
               L3: while (true) {
-                if (var4 <= var5) {
+                if ((var4 ^ -1) >= (var5 ^ -1)) {
                   pk.field_j = new int[1];
                   var5 = 0;
                   L4: while (true) {
-                    if (var5 >= var3) {
+                    if ((var5 ^ -1) <= (var3 ^ -1)) {
                       stellarshard.field_L[-2 + var4] = "";
                       stellarshard.field_L[var4 - 1] = td.field_a;
                       sj.field_J[var4 + -1] = 0;
@@ -419,7 +419,7 @@ final class qc {
                     var5 = 0;
                     L7: while (true) {
                       L8: {
-                        if (var3 <= var5) {
+                        if ((var3 ^ -1) >= (var5 ^ -1)) {
                           break L8;
                         } else {
                           if ("<%0>".equals((Object) (Object) hc.field_m[var5])) {
@@ -465,7 +465,7 @@ final class qc {
                         stellarshard.field_L = new String[var7];
                         var8 = 0;
                         L11: while (true) {
-                          if (var7 <= var8) {
+                          if ((var7 ^ -1) >= (var8 ^ -1)) {
                             sj.field_J[1] = 0;
                             stellarshard.field_L[1] = am.field_b;
                             pk.field_j = new int[2];
@@ -479,7 +479,7 @@ final class qc {
                             stellarshard.field_L[3] = wf.field_c;
                             var8 = 0;
                             L12: while (true) {
-                              if (var5 <= var8) {
+                              if ((var5 ^ -1) >= (var8 ^ -1)) {
                                 stellarshard.field_L[6 - -var5] = null;
                                 sj.field_J[6 + var5] = -2;
                                 var8 = 0;
@@ -495,7 +495,7 @@ final class qc {
                                       stackIn_65_1 = stackOut_63_1;
                                       stackIn_64_0 = stackOut_63_0;
                                       stackIn_64_1 = stackOut_63_1;
-                                      if (var8 >= o.field_g.length) {
+                                      if ((var8 ^ -1) <= (o.field_g.length ^ -1)) {
                                         stackOut_65_0 = (String[]) (Object) stackIn_65_0;
                                         stackOut_65_1 = stackIn_65_1;
                                         stackOut_65_2 = "";
@@ -575,11 +575,11 @@ final class qc {
                       sj.field_J = new int[var4];
                       var5 = 0;
                       L16: while (true) {
-                        if (var5 >= var4) {
+                        if ((var5 ^ -1) <= (var4 ^ -1)) {
                           pk.field_j = new int[2];
                           var5 = 0;
                           L17: while (true) {
-                            if (var5 >= var3) {
+                            if ((var5 ^ -1) <= (var3 ^ -1)) {
                               stellarshard.field_L[var4 + -3] = "";
                               stellarshard.field_L[var4 + -2] = ha.field_v;
                               sj.field_J[var4 - 2] = 0;
@@ -612,7 +612,7 @@ final class qc {
                         pk.field_j = new int[1];
                         var5 = 0;
                         L19: while (true) {
-                          if (var3 <= var5) {
+                          if ((var3 ^ -1) >= (var5 ^ -1)) {
                             stellarshard.field_L[var4 - 2] = "";
                             stellarshard.field_L[var4 + -1] = td.field_a;
                             sj.field_J[-1 + var4] = 0;
@@ -650,7 +650,7 @@ final class qc {
                       pk.field_j = new int[1];
                       var5 = 0;
                       L22: while (true) {
-                        if (var5 >= var3) {
+                        if ((var5 ^ -1) <= (var3 ^ -1)) {
                           stellarshard.field_L[var4 + -2] = "";
                           stellarshard.field_L[-1 + var4] = td.field_a;
                           sj.field_J[var4 + -1] = 0;
@@ -685,36 +685,40 @@ final class qc {
                 var10 = pd.field_g;
                 var5 = 0;
                 L25: while (true) {
-                  if (var5 >= var10.length) {
+                  if ((var5 ^ -1) <= (var10.length ^ -1)) {
                     var11 = fb.field_e;
                     var5 = 0;
                     L26: while (true) {
                       if (var5 >= var11.length) {
                         break L24;
                       } else {
-                        var13 = var11[var5];
-                        var7 = qe.a((byte) -40, var13, false);
-                        if (var7 > var3) {
-                          var3 = var7;
-                          var5++;
-                          continue L26;
-                        } else {
-                          var5++;
-                          continue L26;
+                        L27: {
+                          var13 = var11[var5];
+                          var7 = qe.a((byte) -40, var13, false);
+                          if (var7 > var3) {
+                            var3 = var7;
+                            break L27;
+                          } else {
+                            break L27;
+                          }
                         }
+                        var5++;
+                        continue L26;
                       }
                     }
                   } else {
-                    var12 = var10[var5];
-                    var7 = qe.a((byte) -33, var12, false);
-                    if (var7 > var3) {
-                      var3 = var7;
-                      var5++;
-                      continue L25;
-                    } else {
-                      var5++;
-                      continue L25;
+                    L28: {
+                      var12 = var10[var5];
+                      var7 = qe.a((byte) -33, var12, false);
+                      if (var7 > var3) {
+                        var3 = var7;
+                        break L28;
+                      } else {
+                        break L28;
+                      }
                     }
+                    var5++;
+                    continue L25;
                   }
                 }
               }
@@ -723,71 +727,73 @@ final class qc {
             od.field_r = -(var3 >> 1007842369) + s.field_b;
             fl.field_a = ua.field_i.field_i * (nh.field_h + nh.field_f << -1047165823);
             var4 = 0;
-            L27: while (true) {
-              if (var4 >= stellarshard.field_L.length) {
+            L29: while (true) {
+              if ((var4 ^ -1) <= (stellarshard.field_L.length ^ -1)) {
                 rg.field_F = -(fl.field_a >> -1909383359) + eh.field_g;
                 vl.field_o = new int[stellarshard.field_L.length][];
                 var4 = param2;
                 var5 = rg.field_F;
-                L28: while (true) {
+                L30: while (true) {
                   if (var4 >= stellarshard.field_L.length) {
-                    L29: {
+                    L31: {
                       if (rb.field_s != 2) {
                         ua.field_i.a(eb.a(eb.field_a, ni.field_e, -112), 0, param1, false);
-                        break L29;
+                        break L31;
                       } else {
                         ua.field_i.a(-1, -1, param1, false);
-                        break L29;
+                        break L31;
                       }
                     }
                     return;
                   } else {
-                    var6 = sj.field_J[var4];
-                    if (-1 >= (var6 ^ -1)) {
-                      var7 = qe.a((byte) -21, stellarshard.field_L[var4], true);
-                      var5 = var5 + nh.field_f;
-                      var8 = s.field_b - (var7 >> 649888929);
-                      vl.field_o[var4] = new int[4];
-                      vl.field_o[var4][0] = var8 - le.field_k;
-                      vl.field_o[var4][1] = var5;
-                      vl.field_o[var4][2] = var7 - -(le.field_k << -1219928895);
-                      vl.field_o[var4][3] = na.field_a - -(nh.field_h << 2147056673);
-                      var5 = var5 + (nh.field_f + ((nh.field_h << -2038768511) - -na.field_a));
-                      var4++;
-                      continue L28;
-                    } else {
-                      var5 = var5 + l.field_e;
-                      var4++;
-                      continue L28;
+                    L32: {
+                      var6 = sj.field_J[var4];
+                      if (-1 >= (var6 ^ -1)) {
+                        var7 = qe.a((byte) -21, stellarshard.field_L[var4], true);
+                        var5 = var5 + nh.field_f;
+                        var8 = s.field_b - (var7 >> 649888929);
+                        vl.field_o[var4] = new int[4];
+                        vl.field_o[var4][0] = var8 - le.field_k;
+                        vl.field_o[var4][1] = var5;
+                        vl.field_o[var4][2] = var7 - -(le.field_k << -1219928895);
+                        vl.field_o[var4][3] = na.field_a - -(nh.field_h << 2147056673);
+                        var5 = var5 + (nh.field_f + ((nh.field_h << -2038768511) - -na.field_a));
+                        break L32;
+                      } else {
+                        var5 = var5 + l.field_e;
+                        break L32;
+                      }
                     }
+                    var4++;
+                    continue L30;
                   }
                 }
               } else {
-                L30: {
-                  stackOut_103_0 = fl.field_a;
-                  stackIn_105_0 = stackOut_103_0;
-                  stackIn_104_0 = stackOut_103_0;
+                L33: {
+                  stackOut_105_0 = fl.field_a;
+                  stackIn_107_0 = stackOut_105_0;
+                  stackIn_106_0 = stackOut_105_0;
                   if (sj.field_J[var4] >= 0) {
-                    stackOut_105_0 = stackIn_105_0;
-                    stackOut_105_1 = na.field_a;
-                    stackIn_106_0 = stackOut_105_0;
-                    stackIn_106_1 = stackOut_105_1;
-                    break L30;
+                    stackOut_107_0 = stackIn_107_0;
+                    stackOut_107_1 = na.field_a;
+                    stackIn_108_0 = stackOut_107_0;
+                    stackIn_108_1 = stackOut_107_1;
+                    break L33;
                   } else {
-                    stackOut_104_0 = stackIn_104_0;
-                    stackOut_104_1 = l.field_e;
-                    stackIn_106_0 = stackOut_104_0;
-                    stackIn_106_1 = stackOut_104_1;
-                    break L30;
+                    stackOut_106_0 = stackIn_106_0;
+                    stackOut_106_1 = l.field_e;
+                    stackIn_108_0 = stackOut_106_0;
+                    stackIn_108_1 = stackOut_106_1;
+                    break L33;
                   }
                 }
-                fl.field_a = stackIn_106_0 + stackIn_106_1;
+                fl.field_a = stackIn_108_0 + stackIn_108_1;
                 var4++;
-                continue L27;
+                continue L29;
               }
             }
           } else {
-            L31: {
+            L34: {
               stackOut_84_0 = -39;
               stackOut_84_1 = stellarshard.field_L[var4];
               stackIn_86_0 = stackOut_84_0;
@@ -801,7 +807,7 @@ final class qc {
                 stackIn_87_0 = stackOut_86_0;
                 stackIn_87_1 = stackOut_86_1;
                 stackIn_87_2 = stackOut_86_2;
-                break L31;
+                break L34;
               } else {
                 stackOut_85_0 = stackIn_85_0;
                 stackOut_85_1 = (String) (Object) stackIn_85_1;
@@ -809,18 +815,20 @@ final class qc {
                 stackIn_87_0 = stackOut_85_0;
                 stackIn_87_1 = stackOut_85_1;
                 stackIn_87_2 = stackOut_85_2;
-                break L31;
+                break L34;
               }
             }
-            var5 = qe.a((byte) stackIn_87_0, stackIn_87_1, stackIn_87_2 != 0);
-            if (var5 > var3) {
-              var3 = var5;
-              var4++;
-              continue L23;
-            } else {
-              var4++;
-              continue L23;
+            L35: {
+              var5 = qe.a((byte) stackIn_87_0, stackIn_87_1, stackIn_87_2 != 0);
+              if (var5 <= var3) {
+                break L35;
+              } else {
+                var3 = var5;
+                break L35;
+              }
             }
+            var4++;
+            continue L23;
           }
         }
     }

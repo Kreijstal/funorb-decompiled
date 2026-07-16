@@ -60,16 +60,19 @@ final class rb extends wf {
               var6 = (Object) (Object) var5;
               synchronized (var6) {
                 L1: {
-                  var7 = var5.a((rb) this);
-                  if (var7 >= 0) {
-                    var5.field_g = var7;
-                    this.a(var5.field_c, var5);
-                    break L1;
-                  } else {
-                    var5.field_g = 0;
-                    this.a(var5);
-                    break L1;
+                  L2: {
+                    var7 = var5.a((rb) this);
+                    if (var7 >= 0) {
+                      var5.field_g = var7;
+                      this.a(var5.field_c, var5);
+                      break L2;
+                    } else {
+                      var5.field_g = 0;
+                      this.a(var5);
+                      break L2;
+                    }
                   }
+                  break L1;
                 }
               }
               if (param2 != 0) {
@@ -112,16 +115,19 @@ final class rb extends wf {
               var4 = (Object) (Object) var3;
               synchronized (var4) {
                 L1: {
-                  var5 = var3.a((rb) this);
-                  if (var5 >= 0) {
-                    var3.field_g = var5;
-                    this.a(var3.field_c, var3);
-                    break L1;
-                  } else {
-                    var3.field_g = 0;
-                    this.a(var3);
-                    break L1;
+                  L2: {
+                    var5 = var3.a((rb) this);
+                    if (var5 >= 0) {
+                      var3.field_g = var5;
+                      this.a(var3.field_c, var3);
+                      break L2;
+                    } else {
+                      var3.field_g = 0;
+                      this.a(var3);
+                      break L2;
+                    }
                   }
+                  break L1;
                 }
               }
               if (param0 != 0) {

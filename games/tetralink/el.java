@@ -1679,8 +1679,8 @@ final class el extends hl {
         int var7 = 0;
         int var8 = 0;
         oh var9 = null;
-        oh var10 = null;
-        oh var11 = null;
+        Object var10 = null;
+        Object var11 = null;
         Object var12 = null;
         int[] var13 = null;
         oh var14 = null;
@@ -1707,7 +1707,7 @@ final class el extends hl {
             break L0;
           } else {
             var14 = var9.d();
-            var10 = var14;
+            var10 = (Object) (Object) var14;
             var14.c();
             ra.g(0, 0, 5, 0);
             ra.g(0, 1, 3, 0);
@@ -1722,7 +1722,7 @@ final class el extends hl {
             break L1;
           } else {
             var15 = var9.d();
-            var11 = var15;
+            var11 = (Object) (Object) var15;
             var15.c();
             ra.g(11, 0, 5, 0);
             ra.g(13, 1, 3, 0);
@@ -1736,10 +1736,10 @@ final class el extends hl {
           var12 = null;
           el.a(113, (java.applet.Applet) null);
           ra.a(var19, var7, var8);
-          return new oh[]{null, null, null, var10, var9, var11, null, null, null};
+          return new oh[]{null, null, null, (oh) var10, var9, (oh) var11, null, null, null};
         } else {
           ra.a(var19, var7, var8);
-          return new oh[]{null, null, null, var10, var9, var11, null, null, null};
+          return new oh[]{null, null, null, (oh) var10, var9, (oh) var11, null, null, null};
         }
     }
 
@@ -1779,45 +1779,25 @@ final class el extends hl {
             Exception exception = null;
             java.net.URL var2 = null;
             Throwable decompiledCaughtException = null;
-            int statePc = 0;
-            Throwable caughtException = null;
-            stateLoop: while (true) {
-                switch (statePc) {
-                    case 0: {
-                        try {
-                            var2 = new java.net.URL(param1.getCodeBase(), "tosupport.ws");
-                            param1.getAppletContext().showDocument(ai.a(var2, (byte) -113, param1), "_top");
-                            statePc = 3;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_0) {
-                            caughtException = stateCaught_0;
-                            statePc = 2;
-                            continue stateLoop;
-                        }
-                    }
-                    case 2: {
-                        exception = (Exception) (Object) caughtException;
-                        exception.printStackTrace();
-                        statePc = 3;
-                        continue stateLoop;
-                    }
-                    case 3: {
-                        if (param0 != 16) {
-                            statePc = 5;
-                        } else {
-                            statePc = 4;
-                        }
-                        continue stateLoop;
-                    }
-                    case 4: {
-                        return;
-                    }
-                    case 5: {
-                        el.d(64, -26);
-                        return;
-                    }
-                    default: throw new IllegalStateException("invalid CFG state " + statePc);
-                }
+            try {
+              L0: {
+                var2 = new java.net.URL(param1.getCodeBase(), "tosupport.ws");
+                param1.getAppletContext().showDocument(ai.a(var2, (byte) -113, param1), "_top");
+                break L0;
+              }
+            } catch (java.lang.Exception decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              L1: {
+                exception = (Exception) (Object) decompiledCaughtException;
+                exception.printStackTrace();
+                break L1;
+              }
+            }
+            if (param0 != 16) {
+              el.d(64, -26);
+              return;
+            } else {
+              return;
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;

@@ -47,7 +47,6 @@ final class tl {
         int var25 = 0;
         int var26 = 0;
         Object var28 = null;
-        sm var28_ref = null;
         ml var29 = null;
         Object var30 = null;
         sm var30_ref = null;
@@ -132,8 +131,9 @@ final class tl {
                                     if (var25 >= var7) {
                                       break L7;
                                     } else {
+                                      int incrementValue$3 = var15;
                                       var15++;
-                                      var38[0][var15] = var29.k(4);
+                                      var38[0][incrementValue$3] = var29.k(4);
                                       var25++;
                                       continue L8;
                                     }
@@ -159,8 +159,9 @@ final class tl {
                                       if (var25 >= var7) {
                                         break L9;
                                       } else {
+                                        int incrementValue$4 = var16;
                                         var16++;
-                                        var38[1][var16] = var29.k(4);
+                                        var38[1][incrementValue$4] = var29.k(4);
                                         var25++;
                                         continue L10;
                                       }
@@ -179,8 +180,9 @@ final class tl {
                                   var25 = 0;
                                   L11: while (true) {
                                     if (var25 < var7) {
+                                      int incrementValue$5 = var17;
                                       var17++;
-                                      var38[2][var17] = var29.k(4);
+                                      var38[2][incrementValue$5] = var29.k(4);
                                       var25++;
                                       continue L11;
                                     } else {
@@ -231,18 +233,18 @@ final class tl {
                     break L13;
                   } else {
                     if (var3 != var30_ref.field_k) {
-                      var28_ref = (sm) (Object) ia.field_d.c(param0 + 31);
+                      var28 = (Object) (Object) (sm) (Object) ia.field_d.c(param0 + 31);
                       continue L12;
                     } else {
                       break L13;
                     }
                   }
                 }
-                if (var28_ref == null) {
+                if (var28 == null) {
                   lr.b((byte) -116);
                   return;
                 } else {
-                  var28_ref.c((byte) -109);
+                  ((sm) var28).c((byte) -109);
                   break L1;
                 }
               }
@@ -263,8 +265,9 @@ final class tl {
         int var6 = 0;
         var6 = Kickabout.field_G;
         if (!param1) {
+          int fieldTemp$4 = param0.field_c - 1;
           param0.field_c = param0.field_c - 1;
-          var2 = param0.field_c - 1;
+          var2 = fieldTemp$4;
           var3 = new StringBuilder();
           L0: while (true) {
             L1: {
@@ -283,7 +286,7 @@ final class tl {
                         break L2;
                       } else {
                         if (var4 != 41) {
-                          StringBuilder discarded$2 = var3.append(var4);
+                          StringBuilder discarded$5 = var3.append(var4);
                           continue L0;
                         } else {
                           break L2;

@@ -42,36 +42,36 @@ final class ic extends ka implements vo {
 
     ic(kn param0, fp param1) {
         super(param0, 200, 150);
-        String var3 = null;
+        Object var3 = null;
         ng var4 = null;
         L0: {
           var3 = null;
           if (jg.field_F == param1) {
-            var3 = mn.field_a;
+            var3 = (Object) (Object) mn.field_a;
             break L0;
           } else {
             if (ia.field_c != param1) {
               if (param1 != fh.field_Q) {
                 break L0;
               } else {
-                var3 = ha.field_k;
+                var3 = (Object) (Object) ha.field_k;
                 ((ic) this).field_C = ((ic) this).field_C + 30;
                 break L0;
               }
             } else {
               ((ic) this).field_C = ((ic) this).field_C + 10;
-              var3 = l.field_o;
+              var3 = (Object) (Object) l.field_o;
               if (!ke.a(false)) {
                 break L0;
               } else {
                 ((ic) this).field_C = ((ic) this).field_C + 20;
-                var3 = co.field_e;
+                var3 = (Object) (Object) co.field_e;
                 break L0;
               }
             }
           }
         }
-        var4 = new ng(var3, (fn) null);
+        var4 = new ng((String) var3, (fn) null);
         var4.field_z = 0;
         var4.field_E = ((ic) this).field_E;
         var4.field_C = 80;
@@ -87,10 +87,11 @@ final class ic extends ka implements vo {
         int var7 = 0;
         int var8 = 0;
         int var9_int = 0;
-        String var9 = null;
+        Object var9 = null;
         int var10 = 0;
         int var11_int = 0;
-        String var11 = null;
+        Object var11 = null;
+        String var11_ref = null;
         int var12 = 0;
         int var13 = 0;
         ak var15 = null;
@@ -359,7 +360,7 @@ final class ic extends ka implements vo {
                     if (!ib.field_b) {
                       break L12;
                     } else {
-                      var9 = "<col=A00000>" + pk.field_e + "</col>";
+                      var9 = (Object) (Object) ("<col=A00000>" + pk.field_e + "</col>");
                       var11 = var9;
                       var9 = var11;
                       var11 = var9;
@@ -374,15 +375,15 @@ final class ic extends ka implements vo {
                       break L0;
                     } else {
                       if (lc.field_t[var10]) {
-                        var11 = "<col=A00000>" + jk.field_e[var10] + "</col>";
-                        var9 = var11;
-                        var9 = var11;
+                        var11_ref = "<col=A00000>" + jk.field_e[var10] + "</col>";
+                        var9 = (Object) (Object) var11_ref;
+                        var9 = (Object) (Object) var11_ref;
                         if (var9 != null) {
-                          var9 = var9 + ", " + var11;
+                          var9 = (Object) (Object) (var9 + ", " + var11_ref);
                           var10++;
                           continue L13;
                         } else {
-                          var9 = var11;
+                          var9 = (Object) (Object) var11_ref;
                           var10++;
                           continue L13;
                         }
@@ -414,14 +415,14 @@ final class ic extends ka implements vo {
               }
               L15: {
                 var16 = stackIn_25_0;
-                var9 = var16;
-                var9 = var16;
-                var9 = var16;
+                var9 = (Object) (Object) var16;
+                var9 = (Object) (Object) var16;
+                var9 = (Object) (Object) var16;
                 var10 = nk.field_e.field_Db.c(var16) + nk.field_e.field_Db.a('.') * 3;
                 if (16 != (48 & rb.field_o)) {
                   break L15;
                 } else {
-                  var9 = var16 + ".";
+                  var9 = (Object) (Object) (var16 + ".");
                   break L15;
                 }
               }
@@ -431,7 +432,7 @@ final class ic extends ka implements vo {
                 if (-33 != (rb.field_o & 48 ^ -1)) {
                   break L16;
                 } else {
-                  var9 = var9 + "..";
+                  var9 = (Object) (Object) (var9 + "..");
                   break L16;
                 }
               }
@@ -439,11 +440,11 @@ final class ic extends ka implements vo {
                 if ((rb.field_o & 48) != 48) {
                   break L17;
                 } else {
-                  var9 = var9 + "...";
+                  var9 = (Object) (Object) (var9 + "...");
                   break L17;
                 }
               }
-              nk.field_e.field_cb = var9;
+              nk.field_e.field_cb = (String) var9;
               ep.field_a.field_cb = fa.field_f.toUpperCase();
               break L0;
             }

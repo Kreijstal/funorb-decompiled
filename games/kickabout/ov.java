@@ -18,8 +18,9 @@ final class ov implements Iterator {
         if (((ov) this).field_d.field_e[-1 + ((ov) this).field_f] == ((ov) this).field_e) {
           L0: while (true) {
             if (((ov) this).field_d.field_d > ((ov) this).field_f) {
+              int fieldTemp$1 = ((ov) this).field_f;
               ((ov) this).field_f = ((ov) this).field_f + 1;
-              if (((ov) this).field_d.field_e[((ov) this).field_f].field_d != ((ov) this).field_d.field_e[-1 + ((ov) this).field_f]) {
+              if (((ov) this).field_d.field_e[fieldTemp$1].field_d != ((ov) this).field_d.field_e[-1 + ((ov) this).field_f]) {
                 ((ov) this).field_e = ((ov) this).field_d.field_e[-1 + ((ov) this).field_f].field_d;
                 return true;
               } else {
@@ -131,8 +132,9 @@ final class ov implements Iterator {
         if (((ov) this).field_d.field_e[((ov) this).field_f - 1] == ((ov) this).field_e) {
           L0: while (true) {
             if (((ov) this).field_d.field_d > ((ov) this).field_f) {
+              int fieldTemp$2 = ((ov) this).field_f;
               ((ov) this).field_f = ((ov) this).field_f + 1;
-              var1 = ((ov) this).field_d.field_e[((ov) this).field_f].field_d;
+              var1 = ((ov) this).field_d.field_e[fieldTemp$2].field_d;
               if (var1 == ((ov) this).field_d.field_e[((ov) this).field_f + -1]) {
                 continue L0;
               } else {
@@ -167,25 +169,21 @@ final class ov implements Iterator {
     }
 
     final static boolean a(int param0, int param1, int param2) {
-        if (cc.field_e != param1) {
-          if (-103 == cc.field_e) {
+        if ((cc.field_e ^ -1) == param1) {
+            hq.b((byte) 124);
+            return true;
+        }
+        if (!(-103 != (cc.field_e ^ -1))) {
             dr.field_g.a(5075);
             return true;
-          } else {
-            if (null != dr.field_g) {
-              if (!dr.field_g.a(param0, param2, (byte) -101)) {
-                return false;
-              } else {
-                return true;
-              }
-            } else {
-              return false;
-            }
-          }
-        } else {
-          hq.b((byte) 124);
-          return true;
         }
+        if (null == dr.field_g) {
+            return false;
+        }
+        if (!dr.field_g.a(param0, param2, (byte) -101)) {
+            return false;
+        }
+        return true;
     }
 
     ov(ht param0) {

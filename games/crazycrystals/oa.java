@@ -488,8 +488,9 @@ final class oa {
                   }
                 }
               } else {
+                int fieldTemp$2 = ((oa) this).field_i - 1;
                 ((oa) this).field_i = ((oa) this).field_i - 1;
-                if (-1 <= (((oa) this).field_i - 1 ^ -1)) {
+                if (-1 <= (fieldTemp$2 ^ -1)) {
                   ((oa) this).field_i = ((oa) this).field_o;
                   if (jk.field_f < ((oa) this).field_l) {
                     ((oa) this).field_c = false;
@@ -530,8 +531,9 @@ final class oa {
                   return;
                 }
               } else {
+                int fieldTemp$3 = ((oa) this).field_i - 1;
                 ((oa) this).field_i = ((oa) this).field_i - 1;
-                if (-1 <= (((oa) this).field_i - 1 ^ -1)) {
+                if (-1 <= (fieldTemp$3 ^ -1)) {
                   ((oa) this).field_i = ((oa) this).field_o;
                   if (jk.field_f < ((oa) this).field_l) {
                     ((oa) this).field_c = false;

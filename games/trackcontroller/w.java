@@ -65,6 +65,7 @@ final class w extends wd implements m {
           var14.field_y = (t) (Object) new ic(fk.field_a, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true);
           ((w) this).a(false, var14);
           ((w) this).field_S = this.a(23879, me.field_k, (tg) this);
+          return;
         } else {
           if (param1 != te.field_b) {
             if (param1 == ej.field_e) {
@@ -78,6 +79,7 @@ final class w extends wd implements m {
               var12.field_y = (t) (Object) new ic(fk.field_a, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true);
               ((w) this).a(false, var12);
               ((w) this).field_S = this.a(23879, me.field_k, (tg) this);
+              return;
             } else {
               var10 = new al((String) var9, (tg) null);
               var10.field_m = 50;
@@ -87,6 +89,7 @@ final class w extends wd implements m {
               var10.field_y = (t) (Object) new ic(fk.field_a, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true);
               ((w) this).a(false, var10);
               ((w) this).field_S = this.a(23879, me.field_k, (tg) this);
+              return;
             }
           } else {
             var5 = fj.field_O;
@@ -102,6 +105,7 @@ final class w extends wd implements m {
               var8.field_y = (t) (Object) new ic(fk.field_a, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true);
               ((w) this).a(false, var8);
               ((w) this).field_S = this.a(23879, me.field_k, (tg) this);
+              return;
             } else {
               var6 = new al(var5, (tg) null);
               var6.field_m = 50;
@@ -111,6 +115,7 @@ final class w extends wd implements m {
               var6.field_y = (t) (Object) new ic(fk.field_a, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true);
               ((w) this).a(false, var6);
               ((w) this).field_S = this.a(23879, me.field_k, (tg) this);
+              return;
             }
           }
         }

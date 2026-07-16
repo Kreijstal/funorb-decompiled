@@ -70,7 +70,6 @@ final class on extends eg {
         int var4 = 0;
         nb var5 = null;
         nb var6 = null;
-        nb var6_ref = null;
         int var7 = 0;
         nb stackIn_10_0 = null;
         nb stackIn_11_0 = null;
@@ -93,20 +92,21 @@ final class on extends eg {
                 var6 = var5;
                 if (var5 != null) {
                   L1: {
-                    var6_ref = param2.field_w[var4];
+                    var6 = param2.field_w[var4];
                     stackOut_9_0 = (nb) var5;
                     stackIn_11_0 = stackOut_9_0;
                     stackIn_10_0 = stackOut_9_0;
-                    if (var6_ref != null) {
+                    if (var6 != null) {
                       stackOut_11_0 = (nb) (Object) stackIn_11_0;
-                      stackOut_11_1 = (nb) var6_ref;
+                      stackOut_11_1 = (nb) var6;
                       stackIn_12_0 = stackOut_11_0;
                       stackIn_12_1 = stackOut_11_1;
                       break L1;
                     } else {
-                      param2.field_w[var4] = new nb();
+                      nb dupTemp$1 = new nb();
+                      param2.field_w[var4] = dupTemp$1;
                       stackOut_10_0 = (nb) (Object) stackIn_10_0;
-                      stackOut_10_1 = new nb();
+                      stackOut_10_1 = (nb) dupTemp$1;
                       stackIn_12_0 = stackOut_10_0;
                       stackIn_12_1 = stackOut_10_1;
                       break L1;
@@ -136,8 +136,9 @@ final class on extends eg {
     public on() {
         ((on) this).field_w = new nb[6];
         ((on) this).field_y = new nb();
-        ((on) this).field_w[0] = new nb();
-        nb var1 = new nb();
+        nb dupTemp$0 = new nb();
+        ((on) this).field_w[0] = dupTemp$0;
+        nb var1 = dupTemp$0;
         var1.b(-1);
     }
 
@@ -845,11 +846,13 @@ final class on extends eg {
     final nb a(byte param0, int param1) {
         if (param0 >= -96) {
           on.d(-8);
-          ((on) this).field_w[param1] = new nb();
-          return new nb();
+          nb dupTemp$4 = new nb();
+          ((on) this).field_w[param1] = dupTemp$4;
+          return dupTemp$4;
         } else {
-          ((on) this).field_w[param1] = new nb();
-          return new nb();
+          nb dupTemp$5 = new nb();
+          ((on) this).field_w[param1] = dupTemp$5;
+          return dupTemp$5;
         }
     }
 

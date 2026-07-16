@@ -81,7 +81,7 @@ final class ap extends js {
             }
             var4 = 0;
             L2: while (true) {
-              if (var4 <= -10) {
+              if ((var4 ^ -1) <= -10) {
                 sk.a(72, 5, 4);
                 gw.field_f[0] = vn.a(param1, "", "fans/fan_01");
                 gw.field_f[1] = vn.a(param1, "", "fans/fan_02");
@@ -102,24 +102,26 @@ final class ap extends js {
                   }
                 }
               } else {
-                if (-8 == var4) {
-                  var5 = new int[]{1000, -1000, 45, 532};
-                  var6 = var5[0] * t.field_o[0] >> -1279450992;
-                  var7 = var5[0] * t.field_f[0] >> -1773267952;
-                  qo.field_l[var4] = var3[var4].b(var5[2], var5[3], var6, var5[1], var7);
-                  var4++;
-                  continue L2;
-                } else {
-                  qo.field_l[var4] = (eg) (Object) var3[var4].a(110, 131072, 1, 1, 1);
-                  var4++;
-                  continue L2;
+                L4: {
+                  if (-8 == (var4 ^ -1)) {
+                    var5 = new int[]{1000, -1000, 45, 532};
+                    var6 = var5[0] * t.field_o[0] >> -1279450992;
+                    var7 = var5[0] * t.field_f[0] >> -1773267952;
+                    qo.field_l[var4] = var3[var4].b(var5[2], var5[3], var6, var5[1], var7);
+                    break L4;
+                  } else {
+                    qo.field_l[var4] = (eg) (Object) var3[var4].a(110, 131072, 1, 1, 1);
+                    break L4;
+                  }
                 }
+                var4++;
+                continue L2;
               }
             }
           } else {
             iw.field_m[var3_int] = vn.a(param1, "", "Characters/" + var9[var3_int] + "_body");
             var4 = 0;
-            L4: while (true) {
+            L5: while (true) {
               if ((var4 ^ -1) <= -6) {
                 kb.field_B[var3_int] = o.a(107, new vn(new vn[2], 2));
                 var3_int++;
@@ -127,7 +129,7 @@ final class ap extends js {
               } else {
                 wj.field_v[var3_int][var4] = vn.a(param1, "", "Characters/" + var9[var3_int] + "_head_0" + (var4 - -1));
                 var4++;
-                continue L4;
+                continue L5;
               }
             }
           }
@@ -157,13 +159,13 @@ final class ap extends js {
                 if (!((ap) this).field_o.field_R[((ap) this).field_h].d(3511)) {
                   break L2;
                 } else {
-                  if (-1 < wt.field_x) {
+                  if (-1 < (wt.field_x ^ -1)) {
                     break L2;
                   } else {
                     if (us.field_j < 0) {
                       break L2;
                     } else {
-                      if (-641 <= wt.field_x) {
+                      if (-641 >= (wt.field_x ^ -1)) {
                         break L2;
                       } else {
                         if ((us.field_j ^ -1) <= -481) {
@@ -604,6 +606,7 @@ final class ap extends js {
             hv.a((hu) (Object) rq.field_E, -448);
             nc.a(((ap) this).field_o, (byte) -85, ((ap) this).field_h, ((ap) this).field_t);
             ((ap) this).field_u = false;
+            return;
           } else {
             var23[var17] = 0;
             var17++;
@@ -640,17 +643,26 @@ final class ap extends js {
     }
 
     final void c(byte param0) {
-        if (param0 != 80) {
+        if (param0 == 80) {
+          if (!((ap) this).field_u) {
             return;
-        }
-        if (((ap) this).field_u) {
-            if (((ap) this).field_t) {
-                // if_icmpeq L37
-            } else {
-                return;
+          } else {
+            L0: {
+              if (!((ap) this).field_t) {
+                break L0;
+              } else {
+                if (-1 == (((ap) this).field_o.field_u ^ -1)) {
+                  break L0;
+                } else {
+                  ((ap) this).field_r.a(150, param0 ^ 17789);
+                  return;
+                }
+              }
             }
-            ((ap) this).field_r.a(150, param0 ^ 17789);
             return;
+          }
+        } else {
+          return;
         }
     }
 
@@ -675,7 +687,7 @@ final class ap extends js {
 
     private final void a(int param0, int param1, int param2) {
         gt var5 = null;
-        String var6 = null;
+        Object var6 = null;
         gt var7 = null;
         var7 = ((ap) this).field_o.field_R[param2];
         var5 = ((ap) this).field_i.field_R[param2];
@@ -695,14 +707,14 @@ final class ap extends js {
                         break L2;
                       } else {
                         if (var5.field_s) {
-                          var6 = r.field_e;
+                          var6 = (Object) (Object) r.field_e;
                           break L0;
                         } else {
                           break L2;
                         }
                       }
                     }
-                    var6 = mr.field_F;
+                    var6 = (Object) (Object) mr.field_F;
                     break L0;
                   } else {
                     break L1;
@@ -714,7 +726,7 @@ final class ap extends js {
                   break L3;
                 } else {
                   if (var5.field_s) {
-                    var6 = nn.field_L;
+                    var6 = (Object) (Object) nn.field_L;
                     break L0;
                   } else {
                     break L3;
@@ -725,7 +737,7 @@ final class ap extends js {
                 break L0;
               } else {
                 if (var5.field_q) {
-                  var6 = wc.field_q;
+                  var6 = (Object) (Object) wc.field_q;
                   break L0;
                 } else {
                   break L0;
@@ -736,7 +748,7 @@ final class ap extends js {
               if (var6 == null) {
                 break L4;
               } else {
-                gv discarded$1 = gm.a(vo.a((byte) -18, var6, new String[1]), false, (byte) -108);
+                gv discarded$1 = gm.a(vo.a((byte) -18, (String) var6, new String[1]), false, (byte) -108);
                 break L4;
               }
             }
@@ -830,7 +842,7 @@ final class ap extends js {
     }
 
     final void a(int param0, boolean param1) {
-        uo var3_ref = null;
+        uo var3_ref_uo = null;
         la[] var3_ref_la__ = null;
         int var3 = 0;
         int var4 = 0;
@@ -853,10 +865,10 @@ final class ap extends js {
           }
         }
         if (!((ap) this).field_u) {
-          var3_ref = pb.field_C;
-          var4 = 90 + ((hu) (Object) var3_ref).a(bm.field_K) >> -162130559;
+          var3_ref_uo = pb.field_C;
+          var4 = 90 + ((hu) (Object) var3_ref_uo).a(bm.field_K) >> -162130559;
           on.a(320 - var4, 223, var4 - -var4, 34, 6, 65793, 128);
-          ((hu) (Object) var3_ref).d(bm.field_K, 320, 246, 16777215, -1);
+          ((hu) (Object) var3_ref_uo).d(bm.field_K, 320, 246, 16777215, -1);
           return;
         } else {
           L1: {
@@ -1060,7 +1072,7 @@ final class ap extends js {
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
-        ch var6_ref = null;
+        ch var6_ref_ch = null;
         int var6 = 0;
         int var7 = 0;
         int stackIn_2_0 = 0;
@@ -1197,14 +1209,14 @@ final class ap extends js {
                         }
                       }
                     } else {
-                      var6_ref = new ch();
-                      var6_ref.a((iw) (Object) param1, (byte) -79);
-                      if (0 != var6_ref.field_f) {
-                        ((ol) (Object) ((ap) this).field_r).field_q.a((gn) (Object) var6_ref, 3);
+                      var6_ref_ch = new ch();
+                      var6_ref_ch.a((iw) (Object) param1, (byte) -79);
+                      if (0 != var6_ref_ch.field_f) {
+                        ((ol) (Object) ((ap) this).field_r).field_q.a((gn) (Object) var6_ref_ch, 3);
                         var5++;
                         continue L7;
                       } else {
-                        ((ol) (Object) ((ap) this).field_r).field_bb.a((gn) (Object) var6_ref, 3);
+                        ((ol) (Object) ((ap) this).field_r).field_bb.a((gn) (Object) var6_ref_ch, 3);
                         var5++;
                         continue L7;
                       }

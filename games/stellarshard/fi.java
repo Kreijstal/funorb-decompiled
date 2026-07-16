@@ -205,7 +205,7 @@ final class fi {
         int stackOut_22_0 = 0;
         int stackOut_21_0 = 0;
         L0: {
-          int discarded$1 = ad.d(24);
+          int discarded$2 = ad.d(24);
           ((fi) this).field_f = ad.d(16);
           ((fi) this).field_c = ad.d(24);
           ((fi) this).field_b = new int[((fi) this).field_c];
@@ -272,8 +272,9 @@ final class fi {
                     var3_int++;
                     continue L5;
                   } else {
+                    int incrementValue$3 = var2;
                     var2++;
-                    ((fi) this).field_b[var2] = var3_int;
+                    ((fi) this).field_b[incrementValue$3] = var3_int;
                     var5++;
                     continue L6;
                   }

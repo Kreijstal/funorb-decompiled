@@ -64,10 +64,12 @@ final class da {
                       L4: while (true) {
                         if (var6_int >= var4) {
                           sp.a(true, var5);
-                          var3.field_n = new String[2][var5];
-                          var6 = new String[2][var5];
-                          var3.field_q = new int[2][var5 * 4];
-                          var7 = new int[2][var5 * 4];
+                          String[][] dupTemp$2 = new String[2][var5];
+                          var3.field_n = dupTemp$2;
+                          var6 = dupTemp$2;
+                          int[][] dupTemp$3 = new int[2][var5 * 4];
+                          var3.field_q = dupTemp$3;
+                          var7 = dupTemp$3;
                           var8 = jh.field_c;
                           var9 = 0;
                           var10 = 0;

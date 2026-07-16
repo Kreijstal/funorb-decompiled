@@ -49,46 +49,28 @@ final class ta {
 
     final static void b(int param0) {
         int var1 = 0;
-        int var2 = 0;
-        Object var3 = null;
-        L0: {
-          var2 = Bounce.field_N;
-          ej.field_c = null;
-          ng.field_b = false;
-          if (param0 > 86) {
-            break L0;
-          } else {
-            var3 = null;
+        int var2 = Bounce.field_N;
+        ej.field_c = null;
+        ng.field_b = false;
+        if (param0 <= 86) {
+            Object var3 = null;
             ta.a((byte) -73, (java.applet.Applet) null);
-            break L0;
-          }
         }
-        L1: {
-          if (fe.field_g) {
-            nk.field_a.n(1);
-            break L1;
-          } else {
+        if (!fe.field_g) {
             var1 = nb.field_d;
-            if (var1 < -1) {
-              if (-2 != var1) {
-                ej.field_c = jf.a(md.field_v, new String[1], (byte) -126);
-                ej.field_c = rk.a(true, new CharSequence[3]);
-                nk.field_a.a(true);
-                kb.b(808);
-                break L1;
-              } else {
-                ej.field_c = pg.field_d;
-                ej.field_c = rk.a(true, new CharSequence[3]);
-                nk.field_a.a(true);
-                kb.b(808);
-                break L1;
-              }
+            if ((var1 ^ -1) >= -1) {
             } else {
-              nk.field_a.a(true);
-              kb.b(808);
-              break L1;
+                if (-2 == (var1 ^ -1)) {
+                    ej.field_c = pg.field_d;
+                } else {
+                    ej.field_c = jf.a(md.field_v, new String[1], (byte) -126);
+                }
+                ej.field_c = rk.a(true, new CharSequence[3]);
             }
-          }
+            nk.field_a.a(true);
+            kb.b(808);
+        } else {
+            nk.field_a.n(1);
         }
     }
 
@@ -132,14 +114,14 @@ final class ta {
               if (var3 != 0) {
                 L2: {
                   var5 = var9.j(param0 ^ -21128);
-                  if (-1 < var5) {
+                  if (-1 < (var5 ^ -1)) {
                     break L2;
                   } else {
                     L3: {
-                      if (-1 == lj.field_a) {
+                      if (-1 == (lj.field_a ^ -1)) {
                         break L3;
                       } else {
-                        if (lj.field_a < var5) {
+                        if ((lj.field_a ^ -1) > (var5 ^ -1)) {
                           break L2;
                         } else {
                           break L3;
@@ -155,7 +137,10 @@ final class ta {
                       if (-2 != (var3 ^ -1)) {
                         var7 = (Object) (Object) wg.field_u;
                         synchronized (var7) {
-                          wg.field_u.a(var9, var17, (byte) 115);
+                          L5: {
+                            wg.field_u.a(var9, var17, (byte) 115);
+                            break L5;
+                          }
                         }
                         break L4;
                       } else {

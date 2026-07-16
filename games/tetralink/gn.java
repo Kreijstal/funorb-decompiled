@@ -16,33 +16,67 @@ class gn extends na implements nf {
     }
 
     final boolean a(int param0, na param1, int param2, int param3, int param4, int param5, int param6) {
-        int var10 = TetraLink.field_J;
-        tg var8 = new tg(((gn) this).field_J);
-        na var9 = (na) (Object) var8.a(true);
-        if (param0 != -19137) {
-            return false;
-        }
-        while (var9 != null) {
-            // ifeq L107
-            if (var9.c(param0 ^ -19140)) {
-                if (!(!var9.a(-19137, param1, param2, param3, param4, param5, param6))) {
-                    return true;
+        tg var8 = null;
+        na var9 = null;
+        int var10 = 0;
+        var10 = TetraLink.field_J;
+        var8 = new tg(((gn) this).field_J);
+        var9 = (na) (Object) var8.a(true);
+        if (param0 == -19137) {
+          L0: while (true) {
+            L1: {
+              if (var9 == null) {
+                break L1;
+              } else {
+                if (!var9.a((byte) 95)) {
+                  break L1;
+                } else {
+                  L2: {
+                    if (!var9.c(param0 ^ -19140)) {
+                      break L2;
+                    } else {
+                      if (var9.a(-19137, param1, param2, param3, param4, param5, param6)) {
+                        return true;
+                      } else {
+                        break L2;
+                      }
+                    }
+                  }
+                  var9 = (na) (Object) var8.b((byte) -58);
+                  continue L0;
                 }
+              }
             }
-            var9 = (na) (Object) var8.b((byte) -58);
+            return false;
+          }
+        } else {
+          return false;
         }
-        return false;
     }
 
     void a(na param0, int param1, int param2, boolean param3) {
-        int var7 = TetraLink.field_J;
+        tg var5 = null;
+        na var6 = null;
+        int var7 = 0;
+        var7 = TetraLink.field_J;
         super.a(param0, param1, param2, true);
-        tg var5 = new tg(((gn) this).field_J);
-        na var6 = (na) (Object) var5.a(param3);
-        while (var6 != null) {
-            // ifeq L88
-            var6.a(param0, ((gn) this).field_t + param1, param2 - -((gn) this).field_w, true);
-            var6 = (na) (Object) var5.b((byte) -58);
+        var5 = new tg(((gn) this).field_J);
+        var6 = (na) (Object) var5.a(param3);
+        L0: while (true) {
+          L1: {
+            if (var6 == null) {
+              break L1;
+            } else {
+              if (!var6.a((byte) 95)) {
+                break L1;
+              } else {
+                var6.a(param0, ((gn) this).field_t + param1, param2 - -((gn) this).field_w, true);
+                var6 = (na) (Object) var5.b((byte) -58);
+                continue L0;
+              }
+            }
+          }
+          return;
         }
     }
 
@@ -245,12 +279,14 @@ class gn extends na implements nf {
             param1 = ug.field_bb[var5];
             var6 = var5 << 1329856036;
             while (true) {
+                int incrementValue$0 = param1;
                 param1--;
-                if (0 == param1) {
+                if (0 == incrementValue$0) {
                     break;
                 }
+                int incrementValue$1 = var6;
                 var6++;
-                param2 = lg.field_ab[var6];
+                param2 = lg.field_ab[incrementValue$1];
                 param4[param3[param2]] = param4[param3[param2]] + 1;
                 lg.field_ab[param4[param3[param2]]] = param2;
             }
@@ -285,21 +321,41 @@ class gn extends na implements nf {
     }
 
     final boolean a(na param0, int param1, int param2, int param3, int param4, int param5, int param6) {
-        int var10 = TetraLink.field_J;
-        tg var12 = new tg(((gn) this).field_J);
-        if (param4 != -32738) {
-            Object var11 = null;
-            boolean discarded$0 = ((gn) this).b((na) null, 58);
+        na var9 = null;
+        int var10 = 0;
+        Object var11 = null;
+        tg var12 = null;
+        L0: {
+          var10 = TetraLink.field_J;
+          var12 = new tg(((gn) this).field_J);
+          if (param4 == -32738) {
+            break L0;
+          } else {
+            var11 = null;
+            boolean discarded$2 = ((gn) this).b((na) null, 58);
+            break L0;
+          }
         }
-        na var9 = (na) (Object) var12.a(true);
-        while (var9 != null) {
-            // ifeq L120
-            if (!(!var9.a(param0, param1 + ((gn) this).field_t, param2, param3 - -((gn) this).field_w, -32738, param5, param6))) {
-                return true;
+        var9 = (na) (Object) var12.a(true);
+        L1: while (true) {
+          L2: {
+            if (var9 == null) {
+              break L2;
+            } else {
+              if (!var9.a((byte) 95)) {
+                break L2;
+              } else {
+                if (var9.a(param0, param1 + ((gn) this).field_t, param2, param3 - -((gn) this).field_w, -32738, param5, param6)) {
+                  return true;
+                } else {
+                  var9 = (na) (Object) var12.b((byte) -58);
+                  continue L1;
+                }
+              }
             }
-            var9 = (na) (Object) var12.b((byte) -58);
+          }
+          return false;
         }
-        return false;
     }
 
     final StringBuilder a(Hashtable param0, StringBuilder param1, int param2, int param3) {
@@ -334,41 +390,97 @@ class gn extends na implements nf {
     }
 
     final void a(int param0, boolean param1, na param2, int param3, int param4, int param5) {
-        int var9 = TetraLink.field_J;
-        tg var7 = new tg(((gn) this).field_J);
-        if (param1) {
-            Object var10 = null;
+        tg var7 = null;
+        na var8 = null;
+        int var9 = 0;
+        Object var10 = null;
+        L0: {
+          var9 = TetraLink.field_J;
+          var7 = new tg(((gn) this).field_J);
+          if (!param1) {
+            break L0;
+          } else {
+            var10 = null;
             ((gn) this).a((na) null, 63, -119, false);
+            break L0;
+          }
         }
-        na var8 = (na) (Object) var7.a(true);
-        while (var8 != null) {
-            // ifeq L106
-            var8.a(param0, false, param2, param3 + ((gn) this).field_w, param4, param5 + ((gn) this).field_t);
-            var8 = (na) (Object) var7.b((byte) -58);
+        var8 = (na) (Object) var7.a(true);
+        L1: while (true) {
+          L2: {
+            if (var8 == null) {
+              break L2;
+            } else {
+              if (!var8.a((byte) 95)) {
+                break L2;
+              } else {
+                var8.a(param0, false, param2, param3 + ((gn) this).field_w, param4, param5 + ((gn) this).field_t);
+                var8 = (na) (Object) var7.b((byte) -58);
+                continue L1;
+              }
+            }
+          }
+          return;
         }
     }
 
     boolean a(int param0, char param1, int param2, na param3) {
-        int var7 = TetraLink.field_J;
-        if (param2 != 1) {
-            return false;
-        }
-        tg var5 = new tg(((gn) this).field_J);
-        na var8 = (na) (Object) var5.a(true);
-        while (var8 != null) {
-            // ifeq L93
-            if (var8.c(3)) {
-                if (!(!var8.a(param0, param1, 1, param3))) {
-                    return true;
+        tg var5 = null;
+        int var6 = 0;
+        int var7 = 0;
+        na var8 = null;
+        boolean stackIn_15_0 = false;
+        boolean stackOut_14_0 = false;
+        boolean stackOut_13_0 = false;
+        var7 = TetraLink.field_J;
+        if (param2 == 1) {
+          var5 = new tg(((gn) this).field_J);
+          var8 = (na) (Object) var5.a(true);
+          L0: while (true) {
+            L1: {
+              if (var8 == null) {
+                break L1;
+              } else {
+                if (!var8.a((byte) 95)) {
+                  break L1;
+                } else {
+                  L2: {
+                    if (!var8.c(3)) {
+                      break L2;
+                    } else {
+                      if (var8.a(param0, param1, 1, param3)) {
+                        return true;
+                      } else {
+                        break L2;
+                      }
+                    }
+                  }
+                  var8 = (na) (Object) var5.b((byte) -58);
+                  continue L0;
                 }
+              }
             }
-            var8 = (na) (Object) var5.b((byte) -58);
+            var6 = param0;
+            if (var6 == 80) {
+              L3: {
+                if (!sn.field_a[81]) {
+                  stackOut_14_0 = ((gn) this).b(param3, param2 ^ 114);
+                  stackIn_15_0 = stackOut_14_0;
+                  break L3;
+                } else {
+                  stackOut_13_0 = ((gn) this).d(param3, -99);
+                  stackIn_15_0 = stackOut_13_0;
+                  break L3;
+                }
+              }
+              return stackIn_15_0;
+            } else {
+              return false;
+            }
+          }
+        } else {
+          return false;
         }
-        int var6 = param0;
-        if (var6 != 80) {
-            return false;
-        }
-        return sn.field_a[81] ? ((gn) this).d(param3, -99) : ((gn) this).b(param3, param2 ^ 114);
     }
 
     static {

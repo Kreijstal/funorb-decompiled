@@ -144,8 +144,9 @@ final class nf {
                   }
                 }
               }
+              int incrementValue$1 = var5;
               var5++;
-              var4[var5] = (char)var7;
+              var4[incrementValue$1] = (char)var7;
               var6++;
               continue L0;
             } else {

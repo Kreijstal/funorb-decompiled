@@ -6,7 +6,7 @@ final class jp {
     static String field_b;
 
     final static ak a(int param0, int param1, int param2, int param3, int param4) {
-        ak var5 = null;
+        Object var5 = null;
         ak var5_ref = null;
         int var6 = 0;
         ak var7 = null;
@@ -38,15 +38,15 @@ final class jp {
           var5_ref = (ak) (Object) hd.field_d.g(32073);
           L1: while (true) {
             if (var5_ref != null) {
-              if (param0 != var5.field_g) {
+              if (param0 != var5_ref.field_g) {
                 var5_ref = (ak) (Object) hd.field_d.a(false);
                 continue L1;
               } else {
-                return var5;
+                return var5_ref;
               }
             } else {
               var8 = new ak();
-              var5 = var8;
+              var5_ref = var8;
               var8.field_j = param4;
               var8.field_h = param3;
               var8.field_g = param0;

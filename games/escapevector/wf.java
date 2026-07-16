@@ -93,7 +93,7 @@ final class wf {
             return var2;
         }
         var2 = 2;
-        if (65535 < param0) {
+        if (65535 < (param0 ^ -1)) {
             var2 += 16;
             param0 = param0 >> 16;
         }
@@ -101,7 +101,7 @@ final class wf {
             param0 = param0 >> 8;
             var2 += 8;
         }
-        if (!(15 <= param0)) {
+        if (!(15 >= (param0 ^ -1))) {
             param0 = param0 >> 4;
             var2 += 4;
         }

@@ -91,15 +91,15 @@ final class oj implements java.awt.event.KeyListener, java.awt.event.FocusListen
                 break L0;
               } else {
                 var2 = -1;
-                if (-1 >= wk.field_b) {
-                  if (-1 <= var2) {
+                if (-1 >= (wk.field_b ^ -1)) {
+                  if (-1 >= (var2 ^ -1)) {
                     wd.field_a[wk.field_b] = var2 ^ -1;
                     wk.field_b = 127 & wk.field_b - -1;
-                    if (wk.field_b != lk.field_a) {
+                    if (wk.field_b == lk.field_a) {
+                      wk.field_b = -1;
                       param0.consume();
                       return;
                     } else {
-                      wk.field_b = -1;
                       param0.consume();
                       return;
                     }
@@ -114,26 +114,28 @@ final class oj implements java.awt.event.KeyListener, java.awt.event.FocusListen
               }
             }
           }
-          if (-1 >= wk.field_b) {
-            if (-1 <= var2) {
-              wd.field_a[wk.field_b] = var2 ^ -1;
-              wk.field_b = 127 & wk.field_b - -1;
-              if (wk.field_b != lk.field_a) {
-                param0.consume();
-                return;
+          L1: {
+            if (-1 < (wk.field_b ^ -1)) {
+              break L1;
+            } else {
+              if (-1 >= (var2 ^ -1)) {
+                wd.field_a[wk.field_b] = var2 ^ -1;
+                wk.field_b = 127 & wk.field_b - -1;
+                if (wk.field_b == lk.field_a) {
+                  wk.field_b = -1;
+                  break L1;
+                } else {
+                  param0.consume();
+                  return;
+                }
               } else {
-                wk.field_b = -1;
                 param0.consume();
                 return;
               }
-            } else {
-              param0.consume();
-              return;
             }
-          } else {
-            param0.consume();
-            return;
           }
+          param0.consume();
+          return;
         } else {
           param0.consume();
           return;
@@ -157,7 +159,7 @@ final class oj implements java.awt.event.KeyListener, java.awt.event.FocusListen
                 } else {
                   wd.field_a[wk.field_b] = var2;
                   wk.field_b = 1 + wk.field_b & 127;
-                  if (lk.field_a == wk.field_b) {
+                  if ((lk.field_a ^ -1) == (wk.field_b ^ -1)) {
                     wk.field_b = -1;
                     break L0;
                   } else {
@@ -181,16 +183,16 @@ final class oj implements java.awt.event.KeyListener, java.awt.event.FocusListen
                       param0.consume();
                       return;
                     } else {
-                      if (var2 != -86) {
-                        if (-11 != var2) {
-                          return;
-                        } else {
-                          param0.consume();
-                          return;
-                        }
-                      } else {
+                      if ((var2 ^ -1) == -86) {
                         param0.consume();
                         return;
+                      } else {
+                        if (-11 == (var2 ^ -1)) {
+                          param0.consume();
+                          return;
+                        } else {
+                          return;
+                        }
                       }
                     }
                   }
@@ -213,16 +215,16 @@ final class oj implements java.awt.event.KeyListener, java.awt.event.FocusListen
                     param0.consume();
                     return;
                   } else {
-                    if (var2 != -86) {
-                      if (-11 != var2) {
-                        return;
-                      } else {
-                        param0.consume();
-                        return;
-                      }
-                    } else {
+                    if ((var2 ^ -1) == -86) {
                       param0.consume();
                       return;
+                    } else {
+                      if (-11 == (var2 ^ -1)) {
+                        param0.consume();
+                        return;
+                      } else {
+                        return;
+                      }
                     }
                   }
                 }
@@ -233,11 +235,11 @@ final class oj implements java.awt.event.KeyListener, java.awt.event.FocusListen
               param0.consume();
               return;
             } else {
-              if (var2 == -86) {
+              if ((var2 ^ -1) == -86) {
                 param0.consume();
                 return;
               } else {
-                if (-11 == var2) {
+                if (-11 == (var2 ^ -1)) {
                   param0.consume();
                   return;
                 } else {
@@ -246,9 +248,9 @@ final class oj implements java.awt.event.KeyListener, java.awt.event.FocusListen
               }
             }
           } else {
-            if (var2 < he.field_s.length) {
+            if ((var2 ^ -1) > (he.field_s.length ^ -1)) {
               var2 = he.field_s[var2];
-              if (-1 != (var2 & 128)) {
+              if (-1 != (var2 & 128 ^ -1)) {
                 L3: {
                   var2 = -1;
                   if (-1 < (wk.field_b ^ -1)) {
@@ -259,7 +261,7 @@ final class oj implements java.awt.event.KeyListener, java.awt.event.FocusListen
                     } else {
                       wd.field_a[wk.field_b] = var2;
                       wk.field_b = 1 + wk.field_b & 127;
-                      if (lk.field_a == wk.field_b) {
+                      if ((lk.field_a ^ -1) == (wk.field_b ^ -1)) {
                         wk.field_b = -1;
                         break L3;
                       } else {
@@ -279,11 +281,11 @@ final class oj implements java.awt.event.KeyListener, java.awt.event.FocusListen
                                 param0.consume();
                                 return;
                               } else {
-                                if (var2 == -86) {
+                                if ((var2 ^ -1) == -86) {
                                   param0.consume();
                                   return;
                                 } else {
-                                  if (-11 == var2) {
+                                  if (-11 == (var2 ^ -1)) {
                                     param0.consume();
                                     return;
                                   } else {
@@ -299,11 +301,11 @@ final class oj implements java.awt.event.KeyListener, java.awt.event.FocusListen
                           param0.consume();
                           return;
                         } else {
-                          if (var2 == -86) {
+                          if ((var2 ^ -1) == -86) {
                             param0.consume();
                             return;
                           } else {
-                            if (-11 == var2) {
+                            if (-11 == (var2 ^ -1)) {
                               param0.consume();
                               return;
                             } else {
@@ -331,11 +333,11 @@ final class oj implements java.awt.event.KeyListener, java.awt.event.FocusListen
                         param0.consume();
                         return;
                       } else {
-                        if (var2 == -86) {
+                        if ((var2 ^ -1) == -86) {
                           param0.consume();
                           return;
                         } else {
-                          if (-11 == var2) {
+                          if (-11 == (var2 ^ -1)) {
                             param0.consume();
                             return;
                           } else {
@@ -351,11 +353,11 @@ final class oj implements java.awt.event.KeyListener, java.awt.event.FocusListen
                   param0.consume();
                   return;
                 } else {
-                  if (var2 == -86) {
+                  if ((var2 ^ -1) == -86) {
                     param0.consume();
                     return;
                   } else {
-                    if (-11 == var2) {
+                    if (-11 == (var2 ^ -1)) {
                       param0.consume();
                       return;
                     } else {
@@ -365,7 +367,7 @@ final class oj implements java.awt.event.KeyListener, java.awt.event.FocusListen
                 }
               } else {
                 L6: {
-                  if (-1 > wk.field_b) {
+                  if (-1 < (wk.field_b ^ -1)) {
                     break L6;
                   } else {
                     if (var2 < 0) {
@@ -373,7 +375,7 @@ final class oj implements java.awt.event.KeyListener, java.awt.event.FocusListen
                     } else {
                       wd.field_a[wk.field_b] = var2;
                       wk.field_b = 1 + wk.field_b & 127;
-                      if (lk.field_a == wk.field_b) {
+                      if ((lk.field_a ^ -1) == (wk.field_b ^ -1)) {
                         wk.field_b = -1;
                         break L6;
                       } else {
@@ -397,11 +399,11 @@ final class oj implements java.awt.event.KeyListener, java.awt.event.FocusListen
                           param0.consume();
                           return;
                         } else {
-                          if (var2 == -86) {
+                          if ((var2 ^ -1) == -86) {
                             param0.consume();
                             return;
                           } else {
-                            if (-11 == var2) {
+                            if (-11 == (var2 ^ -1)) {
                               param0.consume();
                               return;
                             } else {
@@ -429,11 +431,11 @@ final class oj implements java.awt.event.KeyListener, java.awt.event.FocusListen
                         param0.consume();
                         return;
                       } else {
-                        if (var2 == -86) {
+                        if ((var2 ^ -1) == -86) {
                           param0.consume();
                           return;
                         } else {
-                          if (-11 == var2) {
+                          if (-11 == (var2 ^ -1)) {
                             param0.consume();
                             return;
                           } else {
@@ -449,11 +451,11 @@ final class oj implements java.awt.event.KeyListener, java.awt.event.FocusListen
                   param0.consume();
                   return;
                 } else {
-                  if (var2 == -86) {
+                  if ((var2 ^ -1) == -86) {
                     param0.consume();
                     return;
                   } else {
-                    if (-11 == var2) {
+                    if (-11 == (var2 ^ -1)) {
                       param0.consume();
                       return;
                     } else {
@@ -469,7 +471,7 @@ final class oj implements java.awt.event.KeyListener, java.awt.event.FocusListen
                   L9: {
                     wd.field_a[wk.field_b] = var2;
                     wk.field_b = 1 + wk.field_b & 127;
-                    if (lk.field_a == wk.field_b) {
+                    if ((lk.field_a ^ -1) == (wk.field_b ^ -1)) {
                       wk.field_b = -1;
                       break L9;
                     } else {
@@ -488,41 +490,41 @@ final class oj implements java.awt.event.KeyListener, java.awt.event.FocusListen
                         ve.field_a[qh.field_b] = (char)0;
                         qh.field_b = var3;
                         var3 = param0.getModifiers();
-                        if ((10 & var3) == 0) {
-                          if (var2 != -86) {
-                            if (-11 != var2) {
-                              return;
-                            } else {
-                              param0.consume();
-                              return;
-                            }
-                          } else {
-                            param0.consume();
-                            return;
-                          }
-                        } else {
+                        if ((10 & var3) != 0) {
                           param0.consume();
                           return;
+                        } else {
+                          if ((var2 ^ -1) == -86) {
+                            param0.consume();
+                            return;
+                          } else {
+                            if (-11 == (var2 ^ -1)) {
+                              param0.consume();
+                              return;
+                            } else {
+                              return;
+                            }
+                          }
                         }
                       }
                     }
                   }
                   var3 = param0.getModifiers();
-                  if ((10 & var3) == 0) {
-                    if (var2 != -86) {
-                      if (-11 != var2) {
-                        return;
-                      } else {
-                        param0.consume();
-                        return;
-                      }
-                    } else {
-                      param0.consume();
-                      return;
-                    }
-                  } else {
+                  if ((10 & var3) != 0) {
                     param0.consume();
                     return;
+                  } else {
+                    if ((var2 ^ -1) == -86) {
+                      param0.consume();
+                      return;
+                    } else {
+                      if (-11 == (var2 ^ -1)) {
+                        param0.consume();
+                        return;
+                      } else {
+                        return;
+                      }
+                    }
                   }
                 } else {
                   L11: {
@@ -541,21 +543,21 @@ final class oj implements java.awt.event.KeyListener, java.awt.event.FocusListen
                     }
                   }
                   var3 = param0.getModifiers();
-                  if ((10 & var3) == 0) {
-                    if (var2 != -86) {
-                      if (-11 != var2) {
-                        return;
-                      } else {
-                        param0.consume();
-                        return;
-                      }
-                    } else {
-                      param0.consume();
-                      return;
-                    }
-                  } else {
+                  if ((10 & var3) != 0) {
                     param0.consume();
                     return;
+                  } else {
+                    if ((var2 ^ -1) == -86) {
+                      param0.consume();
+                      return;
+                    } else {
+                      if (-11 == (var2 ^ -1)) {
+                        param0.consume();
+                        return;
+                      } else {
+                        return;
+                      }
+                    }
                   }
                 }
               } else {
@@ -575,21 +577,21 @@ final class oj implements java.awt.event.KeyListener, java.awt.event.FocusListen
                   }
                 }
                 var3 = param0.getModifiers();
-                if ((10 & var3) == 0) {
-                  if (var2 != -86) {
-                    if (-11 != var2) {
-                      return;
-                    } else {
-                      param0.consume();
-                      return;
-                    }
-                  } else {
-                    param0.consume();
-                    return;
-                  }
-                } else {
+                if ((10 & var3) != 0) {
                   param0.consume();
                   return;
+                } else {
+                  if ((var2 ^ -1) == -86) {
+                    param0.consume();
+                    return;
+                  } else {
+                    if (-11 == (var2 ^ -1)) {
+                      param0.consume();
+                      return;
+                    } else {
+                      return;
+                    }
+                  }
                 }
               }
             }

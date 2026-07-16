@@ -115,18 +115,22 @@ final class dn {
         if (!(-1 >= ((dn) this).field_m)) {
             var16 = var11 + param3;
             var17 = ja.field_b;
+            int incrementValue$1 = var8;
             var8++;
-            this.a(var17, var12, var10, var7, var9, var16, param5, ((dn) this).field_p, 0, 10551200, var8);
+            this.a(var17, var12, var10, var7, var9, var16, param5, ((dn) this).field_p, 0, 10551200, incrementValue$1);
+            int incrementValue$2 = var15;
             var15++;
-            var14[var15] = ((dn) this).field_p;
+            var14[incrementValue$2] = ((dn) this).field_p;
         }
         if (!(((dn) this).field_m >= ((dn) this).field_D + -1)) {
             var16 = -var11 + ((dn) this).field_k + param3;
             var17 = fj.field_kb;
+            int incrementValue$3 = var8;
             var8++;
-            this.a(var17, var12, var10, var7, var9, var16, param5, ((dn) this).field_u, 1, 10551200, var8);
+            this.a(var17, var12, var10, var7, var9, var16, param5, ((dn) this).field_u, 1, 10551200, incrementValue$3);
+            int incrementValue$4 = var15;
             var15++;
-            var14[var15] = ((dn) this).field_u;
+            var14[incrementValue$4] = ((dn) this).field_u;
         }
         return var14;
     }
@@ -370,8 +374,9 @@ final class dn {
               if ((var5 ^ -1) <= -1) {
                 if (var5 <= var3) {
                   if (var7 != null) {
+                    int incrementValue$1 = var5;
                     var5++;
-                    var4[var5] = var7;
+                    var4[incrementValue$1] = var7;
                     var6++;
                     continue L1;
                   } else {
@@ -512,7 +517,6 @@ final class dn {
     private final String[] j(int param0) {
         String[] var3 = null;
         String var3_ref = null;
-        String var3_ref2 = null;
         String[] var4 = null;
         oe var5 = null;
         oe var6 = null;
@@ -541,7 +545,7 @@ final class dn {
                     if (var6.field_Pb >= 0) {
                       if (1 != var6.field_Ub) {
                         if (var6.field_ec) {
-                          var3_ref2 = d.field_f[var5.m((byte) -84)];
+                          var3_ref = d.field_f[var5.m((byte) -84)];
                           break L1;
                         } else {
                           if (-2 != (var6.field_Q ^ -1)) {
@@ -553,7 +557,7 @@ final class dn {
                           }
                         }
                       } else {
-                        var3_ref2 = pn.field_qb[var5.m((byte) -84)];
+                        var3_ref = pn.field_qb[var5.m((byte) -84)];
                         break L1;
                       }
                     } else {
@@ -778,7 +782,7 @@ final class dn {
     private final tc[] b(boolean param0) {
         int var7 = 0;
         ed var8 = null;
-        ed var9_ref = null;
+        Object var9 = null;
         ed[] var10 = null;
         tc var11 = null;
         int var12 = EscapeVector.field_A;
@@ -799,11 +803,11 @@ final class dn {
         int var6 = 8;
         for (var7 = 0; var4 > var7; var7++) {
             var8 = var13[var7];
-            Object var9 = null;
+            var9 = null;
             if (!(var3 == null)) {
-                var9_ref = var3[var7];
+                var9 = (Object) (Object) var3[var7];
             }
-            var10 = new ed[]{var8, var9_ref};
+            var10 = new ed[]{var8, (ed) var9};
             var11 = new tc(var10, var6);
             var5[var7] = var11;
         }

@@ -54,42 +54,47 @@ final class uj {
             Object stackOut_2_0 = null;
             var8 = Bounce.field_N;
             try {
-              var9 = param1.getParameter("cookieprefix");
-              if (param0) {
-                var3 = var9 + "settings";
-                var4 = (String) ac.a(param1, "getcookies", -31185);
-                var5 = di.a(-116, ';', var4);
-                var6 = 0;
-                L0: while (true) {
-                  if (var6 >= var5.length) {
-                    break L0;
-                  } else {
-                    L1: {
-                      var7 = var5[var6].indexOf('=');
-                      if ((var7 ^ -1) > -1) {
-                        break L1;
-                      } else {
-                        if (!var5[var6].substring(0, var7).trim().equals((Object) (Object) var3)) {
-                          break L1;
+              L0: {
+                var9 = param1.getParameter("cookieprefix");
+                if (param0) {
+                  var3 = var9 + "settings";
+                  var4 = (String) ac.a(param1, "getcookies", -31185);
+                  var5 = di.a(-116, ';', var4);
+                  var6 = 0;
+                  L1: while (true) {
+                    if (var6 >= var5.length) {
+                      break L0;
+                    } else {
+                      L2: {
+                        var7 = var5[var6].indexOf('=');
+                        if ((var7 ^ -1) > -1) {
+                          break L2;
                         } else {
-                          stackOut_8_0 = var5[var6].substring(var7 + 1).trim();
-                          stackIn_9_0 = stackOut_8_0;
-                          return stackIn_9_0;
+                          if (!var5[var6].substring(0, var7).trim().equals((Object) (Object) var3)) {
+                            break L2;
+                          } else {
+                            stackOut_8_0 = var5[var6].substring(var7 + 1).trim();
+                            stackIn_9_0 = stackOut_8_0;
+                            return stackIn_9_0;
+                          }
                         }
                       }
+                      var6++;
+                      continue L1;
                     }
-                    var6++;
-                    continue L0;
                   }
+                } else {
+                  stackOut_2_0 = null;
+                  stackIn_3_0 = stackOut_2_0;
+                  return (String) (Object) stackIn_3_0;
                 }
-              } else {
-                stackOut_2_0 = null;
-                stackIn_3_0 = stackOut_2_0;
-                return (String) (Object) stackIn_3_0;
               }
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
-              var2 = decompiledCaughtException;
+              L3: {
+                var2 = decompiledCaughtException;
+                break L3;
+              }
             }
             if (jg.field_B == null) {
               return param1.getParameter("settings");

@@ -150,17 +150,25 @@ final class me extends hg {
     }
 
     final void a(int param0, boolean[] param1, byte param2) {
-        if (param2 != 48) {
-            return;
-        }
-        if (param1 != null) {
-            // if_icmpne L23
+        if (param2 == 48) {
+          L0: {
+            if (param1 == null) {
+              break L0;
+            } else {
+              if (((me) this).field_s != param1.length) {
+                break L0;
+              } else {
+                this.j(-128);
+                this.a(param0, true, param1);
+                return;
+              }
+            }
+          }
+          ((me) this).a(-6131, param0);
+          return;
         } else {
-            ((me) this).a(-6131, param0);
-            return;
+          return;
         }
-        this.j(-128);
-        this.a(param0, true, param1);
     }
 
     final int e(byte param0) {

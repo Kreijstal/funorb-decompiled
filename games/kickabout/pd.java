@@ -28,13 +28,32 @@ final class pd extends wj implements sv, vh {
     }
 
     private final void l(int param0) {
-        if (!cd.a(3)) {
-            // ifle L61
-            // if_icmpge L61
+        L0: {
+          L1: {
+            if (cd.a(3)) {
+              break L1;
+            } else {
+              if (((pd) this).field_N.field_q.length() <= 0) {
+                break L0;
+              } else {
+                if ((((pd) this).field_J.field_q.length() ^ -1) >= -1) {
+                  break L0;
+                } else {
+                  break L1;
+                }
+              }
+            }
+          }
+          ss.a(((pd) this).field_J.field_q, (byte) -118, ((pd) this).field_N.field_q);
+          break L0;
         }
-        ss.a(((pd) this).field_J.field_q, (byte) -118, ((pd) this).field_N.field_q);
-        if (param0 != 60) {
+        L2: {
+          if (param0 == 60) {
+            break L2;
+          } else {
             field_E = null;
+            break L2;
+          }
         }
     }
 
@@ -314,8 +333,7 @@ final class pd extends wj implements sv, vh {
                 break L6;
               }
             }
-            new wi(stackIn_18_3, (jv) null);
-            ((pd) this).field_F = stackIn_18_1;
+            ((pd) this).field_F = new wi(stackIn_18_3, (jv) null);
             if (!((pd) this).field_I) {
               break L5;
             } else {
@@ -399,11 +417,13 @@ final class pd extends wj implements sv, vh {
           }
         }
         L13: {
-          var12 = new cg(10, ((pd) this).field_g, -20 + ((pd) this).field_n, 25, (fd) (Object) ((pd) this).field_N, false, 80, 3, var7, 16777215, var8);
-          ((pd) this).a(-120, (fd) (Object) new cg(10, ((pd) this).field_g, -20 + ((pd) this).field_n, 25, (fd) (Object) ((pd) this).field_N, false, 80, 3, var7, 16777215, var8));
+          cg dupTemp$2 = new cg(10, ((pd) this).field_g, -20 + ((pd) this).field_n, 25, (fd) (Object) ((pd) this).field_N, false, 80, 3, var7, 16777215, var8);
+          var12 = dupTemp$2;
+          ((pd) this).a(-120, (fd) (Object) dupTemp$2);
           ((pd) this).field_g = ((pd) this).field_g + (((fd) (Object) var12).field_i - -5);
-          var13 = new cg(10, ((pd) this).field_g, -20 + ((pd) this).field_n, 25, (fd) (Object) ((pd) this).field_J, false, 80, 3, var7, 16777215, at.field_Ib);
-          ((pd) this).a(-55, (fd) (Object) new cg(10, ((pd) this).field_g, -20 + ((pd) this).field_n, 25, (fd) (Object) ((pd) this).field_J, false, 80, 3, var7, 16777215, at.field_Ib));
+          cg dupTemp$3 = new cg(10, ((pd) this).field_g, -20 + ((pd) this).field_n, 25, (fd) (Object) ((pd) this).field_J, false, 80, 3, var7, 16777215, at.field_Ib);
+          var13 = dupTemp$3;
+          ((pd) this).a(-55, (fd) (Object) dupTemp$3);
           ((pd) this).field_K.field_k = (jv) this;
           ((pd) this).field_g = ((pd) this).field_g + (((fd) (Object) var13).field_i + 5);
           if (((pd) this).field_L == null) {
@@ -509,9 +529,9 @@ final class pd extends wj implements sv, vh {
             Object var11 = null;
             pd.a((byte) -91, 14, (sm) null);
         }
-        for (var7 = 0; var7 > -5; var7++) {
+        for (var7 = 0; (var7 ^ -1) > -5; var7++) {
             var8 = (var7 & 1) != 0 ? am.field_h : hl.field_e;
-            var9 = -1 == (var7 & 1) ? hq.field_e : ub.field_G;
+            var9 = -1 == (var7 & 1 ^ -1) ? hq.field_e : ub.field_G;
             wf.a(-840618968, var2, var8[var5], go.a(var6, (byte) -56));
             wf.a(-840618968, var3, var9[var5], go.a(var6, (byte) -56));
             var6 = var6 + var4;

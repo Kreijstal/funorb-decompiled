@@ -32,8 +32,9 @@ class gh extends uc {
           L0: while (true) {
             if (lf.a((byte) -91)) {
               var1.g(8, 15514);
+              int fieldTemp$2 = var1.field_m + 1;
               var1.field_m = var1.field_m + 1;
-              var2 = var1.field_m + 1;
+              var2 = fieldTemp$2;
               ao.a(var1, -20);
               aa.field_f.f(var1.field_m + -var2, param0 ^ -9);
               continue L0;
@@ -45,8 +46,9 @@ class gh extends uc {
           L1: while (true) {
             if (lf.a((byte) -91)) {
               var1.g(8, 15514);
+              int fieldTemp$3 = var1.field_m + 1;
               var1.field_m = var1.field_m + 1;
-              var2 = var1.field_m + 1;
+              var2 = fieldTemp$3;
               ao.a(var1, -20);
               aa.field_f.f(var1.field_m + -var2, param0 ^ -9);
               continue L1;
@@ -76,105 +78,58 @@ class gh extends uc {
             Runtime var2_ref = null;
             Long var3 = null;
             Object var4 = null;
-            int statePc = 0;
-            Throwable caughtException = null;
-            stateLoop: while (true) {
-                switch (statePc) {
-                    case 0: {
-                        try {
-                            var1 = Runtime.class.getMethod("maxMemory", new Class[0]);
-                            if (var1 == null) {
-                                statePc = 8;
-                            } else {
-                                statePc = 1;
-                            }
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_0) {
-                            caughtException = stateCaught_0;
-                            statePc = 7;
-                            continue stateLoop;
-                        }
+            int decompiledRegionSelector0 = 0;
+            Throwable decompiledCaughtException = null;
+            try {
+              L0: {
+                L1: {
+                  var1 = Runtime.class.getMethod("maxMemory", new Class[0]);
+                  if (var1 == null) {
+                    break L1;
+                  } else {
+                    try {
+                      L2: {
+                        var2_ref = Runtime.getRuntime();
+                        var4 = null;
+                        var3 = (Long) var1.invoke((Object) (Object) var2_ref, (Object[]) null);
+                        ri.field_h = (int)(var3.longValue() / 1048576L) + 1;
+                        decompiledRegionSelector0 = 0;
+                        break L2;
+                      }
+                    } catch (java.lang.Throwable decompiledCaughtParameter0) {
+                      decompiledCaughtException = decompiledCaughtParameter0;
+                      L3: {
+                        var2 = decompiledCaughtException;
+                        decompiledRegionSelector0 = 1;
+                        break L3;
+                      }
                     }
-                    case 1: {
-                        try {
-                            var2_ref = Runtime.getRuntime();
-                            var4 = null;
-                            var3 = (Long) var1.invoke((Object) (Object) var2_ref, (Object[]) null);
-                            ri.field_h = (int)(var3.longValue() / 1048576L) + 1;
-                            statePc = 2;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_1) {
-                            caughtException = stateCaught_1;
-                            statePc = 5;
-                            continue stateLoop;
-                        }
-                    }
-                    case 2: {
-                        try {
-                            if (param0 != 90) {
-                                statePc = 4;
-                            } else {
-                                statePc = 3;
-                            }
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_2) {
-                            caughtException = stateCaught_2;
-                            statePc = 7;
-                            continue stateLoop;
-                        }
-                    }
-                    case 3: {
-                        try {
-                            return;
-                        } catch (Throwable stateCaught_3) {
-                            caughtException = stateCaught_3;
-                            statePc = 7;
-                            continue stateLoop;
-                        }
-                    }
-                    case 4: {
-                        try {
-                            gh.d(-108);
-                            return;
-                        } catch (Throwable stateCaught_4) {
-                            caughtException = stateCaught_4;
-                            statePc = 7;
-                            continue stateLoop;
-                        }
-                    }
-                    case 5: {
-                        try {
-                            var2 = caughtException;
-                            statePc = 8;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_5) {
-                            caughtException = stateCaught_5;
-                            statePc = 7;
-                            continue stateLoop;
-                        }
-                    }
-                    case 7: {
-                        var1_ref = (Exception) (Object) caughtException;
-                        statePc = 8;
-                        continue stateLoop;
-                    }
-                    case 8: {
-                        if (param0 == 90) {
-                            statePc = 10;
-                        } else {
-                            statePc = 9;
-                        }
-                        continue stateLoop;
-                    }
-                    case 9: {
+                    if (decompiledRegionSelector0 == 0) {
+                      if (param0 != 90) {
                         gh.d(-108);
                         return;
-                    }
-                    case 10: {
+                      } else {
                         return;
+                      }
+                    } else {
+                      break L1;
                     }
-                    default: throw new IllegalStateException("invalid CFG state " + statePc);
+                  }
                 }
+                break L0;
+              }
+            } catch (java.lang.Exception decompiledCaughtParameter1) {
+              decompiledCaughtException = decompiledCaughtParameter1;
+              L4: {
+                var1_ref = (Exception) (Object) decompiledCaughtException;
+                break L4;
+              }
+            }
+            if (param0 == 90) {
+              return;
+            } else {
+              gh.d(-108);
+              return;
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;

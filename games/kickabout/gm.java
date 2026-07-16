@@ -220,9 +220,9 @@ final class gm extends nl {
 
     private final void b(int param0, byte param1) {
         ((gm) this).field_W = param0;
-        // wide iinc 1 1700
+        param0 += 1700;
         if ((param0 ^ -1) <= -2049) {
-            // wide iinc 1 -2048
+            param0 -= 2048;
         }
         if (param1 <= 39) {
             ((gm) this).field_Y = false;
@@ -295,7 +295,7 @@ final class gm extends nl {
             }
           }
           L1: {
-            if (ih.field_c == 0) {
+            if ((ih.field_c ^ -1) == -1) {
               var2 = 74;
               break L1;
             } else {
@@ -321,7 +321,7 @@ final class gm extends nl {
                 L3: {
                   var5 = ad.a(-var3 + (((gm) this).field_M >> -1902342448), true, (((gm) this).field_w >> -1675534000) + -var4);
                   var6 = -var5 + 512 >> -784505885;
-                  if (var6 > -17) {
+                  if ((var6 ^ -1) > -17) {
                     var6 = 0;
                     break L3;
                   } else {
@@ -329,7 +329,7 @@ final class gm extends nl {
                   }
                 }
                 L4: {
-                  if (-37 >= var6) {
+                  if (-37 <= (var6 ^ -1)) {
                     break L4;
                   } else {
                     var6 = 36;
@@ -346,7 +346,7 @@ final class gm extends nl {
                   }
                 }
                 L6: {
-                  if (ih.field_c == 0) {
+                  if ((ih.field_c ^ -1) == -1) {
                     var6 -= 20;
                     break L6;
                   } else {
@@ -400,7 +400,7 @@ final class gm extends nl {
         int var9_int = 0;
         double var9 = 0.0;
         StringBuilder var10 = null;
-        StringBuilder var11_ref = null;
+        StringBuilder var11_ref_StringBuilder = null;
         double var11 = 0.0;
         int var12 = 0;
         int var13 = 0;
@@ -442,13 +442,13 @@ final class gm extends nl {
               StringBuilder discarded$13 = var10.append(", ");
               eh.a(((gm) this).field_v, 100, var10);
               StringBuilder discarded$14 = var10.append(41);
-              var11_ref = new StringBuilder("(");
-              eh.a(((gm) this).field_kb, 100, var11_ref);
-              StringBuilder discarded$15 = var11_ref.append(", ");
-              eh.a(((gm) this).field_bb, 100, var11_ref);
-              StringBuilder discarded$16 = var11_ref.append(", ");
-              eh.a(((gm) this).field_X, 100, var11_ref);
-              StringBuilder discarded$17 = var11_ref.append(41);
+              var11_ref_StringBuilder = new StringBuilder("(");
+              eh.a(((gm) this).field_kb, 100, var11_ref_StringBuilder);
+              StringBuilder discarded$15 = var11_ref_StringBuilder.append(", ");
+              eh.a(((gm) this).field_bb, 100, var11_ref_StringBuilder);
+              StringBuilder discarded$16 = var11_ref_StringBuilder.append(", ");
+              eh.a(((gm) this).field_X, 100, var11_ref_StringBuilder);
+              StringBuilder discarded$17 = var11_ref_StringBuilder.append(41);
               var12 = ((gm) this).field_N.b(0);
               var13 = ((gm) this).field_N.a(15);
               var14 = new ut(var12, 10 * var8_ref_String__.length + 5 + var13 - -20);
@@ -462,7 +462,7 @@ final class gm extends nl {
                   var16 += 2;
                   var15.a(var10.toString(), 20, var16, 16777215, -1);
                   var16 += 10;
-                  var15.a(var11_ref.toString(), 20, var16, 16777215, -1);
+                  var15.a(var11_ref_StringBuilder.toString(), 20, var16, 16777215, -1);
                   ta.e(125);
                   var17 = var14.field_o * hw.field_i >> -665044888;
                   var18 = hw.field_i * var14.field_v >> -1858077208;
@@ -843,7 +843,7 @@ final class gm extends nl {
           stackOut_9_0 = this;
           stackIn_11_0 = stackOut_9_0;
           stackIn_10_0 = stackOut_9_0;
-          if (-1 == (4 & param2)) {
+          if (-1 == (4 & param2 ^ -1)) {
             stackOut_11_0 = this;
             stackOut_11_1 = 0;
             stackIn_12_0 = stackOut_11_0;
@@ -862,7 +862,7 @@ final class gm extends nl {
             ((gm) this).field_V = stackIn_12_1 != 0;
             var4 = param1 ? 1 : 0;
             var5 = 0;
-            if (-6 == ((gm) this).field_u) {
+            if (-6 == (((gm) this).field_u ^ -1)) {
               break L5;
             } else {
               if (-7 == (((gm) this).field_u ^ -1)) {
@@ -888,7 +888,7 @@ final class gm extends nl {
             stackOut_18_0 = var6;
             stackIn_20_0 = stackOut_18_0;
             stackIn_19_0 = stackOut_18_0;
-            if ((((gm) this).field_G & 2) == 0) {
+            if ((((gm) this).field_G & 2 ^ -1) == -1) {
               stackOut_20_0 = stackIn_20_0;
               stackOut_20_1 = 0;
               stackIn_21_0 = stackOut_20_0;
@@ -940,17 +940,17 @@ final class gm extends nl {
           if (!ia.field_c) {
             break L10;
           } else {
-            // wide iinc 6 1024
+            var6 += 1024;
             if (var6 < 2048) {
               break L10;
             } else {
-              // wide iinc 6 -2048
+              var6 -= 2048;
               break L10;
             }
           }
         }
         L11: {
-          if (((gm) this).field_R == var6) {
+          if ((((gm) this).field_R ^ -1) == (var6 ^ -1)) {
             break L11;
           } else {
             L12: {
@@ -1139,7 +1139,7 @@ final class gm extends nl {
           }
         }
         L29: {
-          if (-7 == ((gm) this).field_u) {
+          if (-7 == (((gm) this).field_u ^ -1)) {
             L30: {
               var8 = 0.7;
               if (var4 != 0) {
@@ -1159,7 +1159,7 @@ final class gm extends nl {
           }
         }
         L31: {
-          if (-10 != ((gm) this).field_u) {
+          if (-10 != (((gm) this).field_u ^ -1)) {
             break L31;
           } else {
             var7 = 2;
@@ -1167,7 +1167,7 @@ final class gm extends nl {
           }
         }
         L32: {
-          if (((gm) this).field_u != -8) {
+          if ((((gm) this).field_u ^ -1) != -8) {
             ((gm) this).field_Y = false;
             break L32;
           } else {
@@ -1181,7 +1181,7 @@ final class gm extends nl {
                   L34: {
                     var10 = -1;
                     var11 = -1;
-                    if (-1 == ih.field_c) {
+                    if (-1 == (ih.field_c ^ -1)) {
                       var11 = 88;
                       var10 = 85;
                       break L34;
@@ -1333,7 +1333,7 @@ final class gm extends nl {
                     if (0 != ((gm) this).field_ob) {
                       break L47;
                     } else {
-                      if (-10 > ((gm) this).field_mb.field_b) {
+                      if (-10 > (((gm) this).field_mb.field_b ^ -1)) {
                         ((gm) this).field_mb.a(9, 98);
                         break L47;
                       } else {
@@ -1342,7 +1342,7 @@ final class gm extends nl {
                     }
                   }
                   L48: {
-                    if (-7 != ((gm) this).field_ob) {
+                    if (-7 != (((gm) this).field_ob ^ -1)) {
                       break L48;
                     } else {
                       if (30 < ((gm) this).field_L) {
@@ -1375,13 +1375,13 @@ final class gm extends nl {
           }
         }
         L49: {
-          if (((gm) this).field_u != -5) {
+          if ((((gm) this).field_u ^ -1) != -5) {
             break L49;
           } else {
             if (!((gm) this).field_N.c(((gm) this).field_y, -94)) {
               break L49;
             } else {
-              if (-1 == ((gm) this).field_L % 2) {
+              if (-1 == (((gm) this).field_L % 2 ^ -1)) {
                 fs.a(100, (gm) this, 109);
                 break L49;
               } else {
@@ -1395,7 +1395,7 @@ final class gm extends nl {
             break L50;
           } else {
             if (((gm) this).field_N.a((byte) 44, ((gm) this).field_y)) {
-              if (((gm) this).field_L % 2 != 0) {
+              if ((((gm) this).field_L % 2 ^ -1) != -1) {
                 break L50;
               } else {
                 fs.a(60, (gm) this, 104);
@@ -1420,38 +1420,80 @@ final class gm extends nl {
     }
 
     private final int f(byte param0) {
-        if (((gm) this).field_u != 13) {
-            if (-4 != ((gm) this).field_u) {
-                if (-11 != ((gm) this).field_u) {
-                    // if_icmpne L100
+        int var2 = 0;
+        int stackIn_20_0 = 0;
+        int stackOut_19_0 = 0;
+        int stackOut_18_0 = 0;
+        L0: {
+          L1: {
+            if (((gm) this).field_u == 13) {
+              break L1;
+            } else {
+              if (-4 == ((gm) this).field_u) {
+                break L1;
+              } else {
+                if (-11 == ((gm) this).field_u) {
+                  break L1;
+                } else {
+                  if (-13 != (((gm) this).field_u ^ -1)) {
+                    break L0;
+                  } else {
+                    break L1;
+                  }
                 }
+              }
             }
+          }
+          L2: {
+            if (((gm) this).field_s) {
+              break L2;
+            } else {
+              if (!((gm) this).field_N.a((byte) 44, ((gm) this).field_y)) {
+                break L2;
+              } else {
+                break L0;
+              }
+            }
+          }
+          return (uv.b(((gm) this).field_m >> 14934536, ((gm) this).field_k >> -210415384, (byte) 2) + 6144) % 8192 >> 1572721602;
         }
-        if (!((gm) this).field_s) {
-            // ifeq L67
+        var2 = -68 / ((param0 - -17) / 51);
+        if (-1 >= (((gm) this).field_j ^ -1)) {
+          if ((((gm) this).field_j ^ -1) < -1) {
+            if ((((gm) this).field_n ^ -1) == 0) {
+              return 1280;
+            } else {
+              if ((((gm) this).field_n ^ -1) == -2) {
+                return 1792;
+              } else {
+                return 1536;
+              }
+            }
+          } else {
+            L3: {
+              if ((((gm) this).field_n ^ -1) > -1) {
+                stackOut_19_0 = 1024;
+                stackIn_20_0 = stackOut_19_0;
+                break L3;
+              } else {
+                stackOut_18_0 = 0;
+                stackIn_20_0 = stackOut_18_0;
+                break L3;
+              }
+            }
+            return stackIn_20_0;
+          }
         } else {
-            return (uv.b(((gm) this).field_m >> 14934536, ((gm) this).field_k >> -210415384, (byte) 2) + 6144) % 8192 >> 1572721602;
-        }
-        int var2 = -68 / ((param0 - -17) / 51);
-        if (-1 < (((gm) this).field_j ^ -1)) {
-            if (((gm) this).field_n == 0) {
-                return 768;
+          if (((gm) this).field_n != 0) {
+            if (-2 == ((gm) this).field_n) {
+              return 256;
+            } else {
+              return 512;
             }
-            if (-2 != ((gm) this).field_n) {
-                return 512;
-            }
-            return 256;
+          } else {
+            return 768;
+          }
         }
-        if ((((gm) this).field_j ^ -1) >= -1) {
-            return (((gm) this).field_n ^ -1) <= -1 ? 0 : 1024;
-        }
-        if (!((((gm) this).field_n ^ -1) != 0)) {
-            return 1280;
-        }
-        if (!((((gm) this).field_n ^ -1) != -2)) {
-            return 1792;
-        }
-        return 1536;
     }
 
     final static void a(int param0, int param1, boolean param2, int param3, int param4, int param5, boolean param6, int param7, int param8, boolean param9, boolean param10, boolean param11, int param12, int param13) {

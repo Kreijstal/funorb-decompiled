@@ -186,8 +186,7 @@ final class kg extends la {
           }
         }
         L3: {
-          new javax.sound.sampled.AudioFormat(stackIn_14_3, stackIn_14_4, stackIn_14_5, true, false);
-          ((kg) this).field_y = stackIn_14_1;
+          ((kg) this).field_y = new javax.sound.sampled.AudioFormat(stackIn_14_3, stackIn_14_4, stackIn_14_5, true, false);
           stackOut_14_0 = this;
           stackOut_14_1 = 256;
           stackIn_16_0 = stackOut_14_0;

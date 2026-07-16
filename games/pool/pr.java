@@ -38,16 +38,25 @@ final class pr extends ma {
     }
 
     final static void a(int param0, java.applet.Applet param1) {
+        String var2 = null;
         CharSequence var3 = null;
-        if (param0 != -23989) {
-            return;
-        }
-        String var2 = param1.getParameter("username");
-        if (var2 != null) {
-            var3 = (CharSequence) (Object) var2;
-            // ifeq L38
+        if (param0 == -23989) {
+          L0: {
+            var2 = param1.getParameter("username");
+            if (var2 == null) {
+              break L0;
+            } else {
+              var3 = (CharSequence) (Object) var2;
+              if (0L == td.a((byte) 52, var3)) {
+                break L0;
+              } else {
+                return;
+              }
+            }
+          }
+          return;
         } else {
-            return;
+          return;
         }
     }
 
@@ -174,19 +183,19 @@ final class pr extends ma {
             int var7_int = 0;
             StringBuilder var7 = null;
             Exception var8 = null;
-            java.net.URL stackIn_47_0 = null;
+            java.net.URL stackIn_40_0 = null;
             Throwable decompiledCaughtException = null;
-            java.net.URL stackOut_46_0 = null;
+            java.net.URL stackOut_39_0 = null;
             var5 = param1.getFile();
             var6 = 0;
             L0: while (true) {
               L1: {
                 if (var5.regionMatches(var6, "/l=", 0, 3)) {
                   var7_int = var5.indexOf('/', var6 - -1);
-                  if (-1 < var7_int) {
+                  if (-1 < (var7_int ^ -1)) {
                     break L1;
                   } else {
-                    if (-1 <= param0) {
+                    if (-1 >= (param0 ^ -1)) {
                       var5 = var5.substring(0, var6) + var5.substring(var7_int);
                       continue L0;
                     } else {
@@ -217,11 +226,11 @@ final class pr extends ma {
                   if ((var7_int ^ -1) > -1) {
                     break L3;
                   } else {
-                    if (param2 != null) {
-                      var5 = var5.substring(0, var6) + var5.substring(var7_int);
+                    if (param2 == null) {
+                      var6 = var7_int;
                       continue L0;
                     } else {
-                      var6 = var7_int;
+                      var5 = var5.substring(0, var6) + var5.substring(var7_int);
                       continue L0;
                     }
                   }
@@ -245,11 +254,11 @@ final class pr extends ma {
                 if (var7_int < 0) {
                   break L4;
                 } else {
-                  if (param4 != null) {
-                    var5 = var5.substring(0, var6) + var5.substring(var7_int);
+                  if (param4 == null) {
+                    var6 = var7_int;
                     continue L0;
                   } else {
-                    var6 = var7_int;
+                    var5 = var5.substring(0, var6) + var5.substring(var7_int);
                     continue L0;
                   }
                 }
@@ -264,10 +273,10 @@ final class pr extends ma {
                 }
               }
               L7: {
-                StringBuilder discarded$11 = var7.append(var5.substring(0, var6));
+                StringBuilder discarded$9 = var7.append(var5.substring(0, var6));
                 if (-1 > (param0 ^ -1)) {
-                  StringBuilder discarded$12 = var7.append("/l=");
-                  StringBuilder discarded$13 = var7.append(Integer.toString(param0));
+                  StringBuilder discarded$10 = var7.append("/l=");
+                  StringBuilder discarded$11 = var7.append(Integer.toString(param0));
                   break L7;
                 } else {
                   break L7;
@@ -275,57 +284,52 @@ final class pr extends ma {
               }
               L8: {
                 if (param2 == null) {
-                  if (param4 == null) {
-                    break L8;
-                  } else {
-                    if (0 < param4.length()) {
-                      StringBuilder discarded$14 = var7.append("/s=");
-                      StringBuilder discarded$15 = var7.append(param4);
-                      break L8;
-                    } else {
-                      if (param4 == null) {
-                        break L8;
-                      } else {
-                        if (0 >= param4.length()) {
-                          break L8;
-                        } else {
-                          StringBuilder discarded$16 = var7.append("/s=");
-                          StringBuilder discarded$17 = var7.append(param4);
-                          break L8;
-                        }
-                      }
-                    }
-                  }
+                  break L8;
                 } else {
-                  if (param4 == null) {
+                  if ((param2.length() ^ -1) >= -1) {
                     break L8;
                   } else {
-                    if (0 >= param4.length()) {
-                      break L8;
-                    } else {
-                      StringBuilder discarded$18 = var7.append("/s=");
-                      StringBuilder discarded$19 = var7.append(param4);
-                      break L8;
-                    }
+                    StringBuilder discarded$12 = var7.append("/p=");
+                    StringBuilder discarded$13 = var7.append(param2);
+                    break L8;
                   }
                 }
               }
               L9: {
-                if (var6 < var5.length()) {
-                  StringBuilder discarded$20 = var7.append(var5.substring(var6, var5.length()));
+                if (param4 == null) {
                   break L9;
                 } else {
-                  StringBuilder discarded$21 = var7.append(47);
-                  break L9;
+                  if (0 >= param4.length()) {
+                    break L9;
+                  } else {
+                    StringBuilder discarded$14 = var7.append("/s=");
+                    StringBuilder discarded$15 = var7.append(param4);
+                    break L9;
+                  }
+                }
+              }
+              L10: {
+                if ((var6 ^ -1) > (var5.length() ^ -1)) {
+                  StringBuilder discarded$16 = var7.append(var5.substring(var6, var5.length()));
+                  break L10;
+                } else {
+                  StringBuilder discarded$17 = var7.append(47);
+                  break L10;
                 }
               }
               try {
-                stackOut_46_0 = new java.net.URL(param1, var7.toString());
-                stackIn_47_0 = stackOut_46_0;
-              } catch (java.lang.Exception decompiledCaughtParameter) {
-                decompiledCaughtException = decompiledCaughtParameter;
-                return stackIn_47_0;
+                L11: {
+                  stackOut_39_0 = new java.net.URL(param1, var7.toString());
+                  stackIn_40_0 = stackOut_39_0;
+                  break L11;
+                }
+              } catch (java.lang.Exception decompiledCaughtParameter0) {
+                decompiledCaughtException = decompiledCaughtParameter0;
+                var8 = (Exception) (Object) decompiledCaughtException;
+                var8.printStackTrace();
+                return param1;
               }
+              return stackIn_40_0;
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;

@@ -28,8 +28,9 @@ abstract class rl extends oh {
             }
           } else {
             var1.d(param0 ^ 8, 8);
+            int fieldTemp$2 = var1.field_f + 1;
             var1.field_f = var1.field_f + 1;
-            var2 = var1.field_f + 1;
+            var2 = fieldTemp$2;
             ke.a(var1, -9129);
             tp.field_f.c((byte) 47, var1.field_f - var2);
             continue L0;

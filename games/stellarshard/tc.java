@@ -30,8 +30,9 @@ final class tc extends id {
 
     final db a(byte param0, int param1) {
         int var3 = -43 % ((param0 - 73) / 41);
-        ((tc) this).field_x[param1] = new db();
-        return new db();
+        db dupTemp$0 = new db();
+        ((tc) this).field_x[param1] = dupTemp$0;
+        return dupTemp$0;
     }
 
     final static void a(kl param0, int param1, boolean param2) {
@@ -116,11 +117,11 @@ final class tc extends id {
           var2 = ll.field_b;
           ll.field_b = l.field_b;
           od.field_v.field_i = od.field_v.field_i + 1;
-          if (param0 == -52) {
+          if ((param0 ^ -1) == -52) {
             od.field_v.field_g = 2;
             break L1;
           } else {
-            if (-51 != param0) {
+            if (-51 != (param0 ^ -1)) {
               od.field_v.field_g = 1;
               break L1;
             } else {
@@ -162,8 +163,9 @@ final class tc extends id {
     public tc() {
         ((tc) this).field_x = new db[6];
         ((tc) this).field_t = new db();
-        ((tc) this).field_x[0] = new db();
-        db var1 = new db();
+        db dupTemp$0 = new db();
+        ((tc) this).field_x[0] = dupTemp$0;
+        db var1 = dupTemp$0;
         var1.a((byte) 62);
     }
 
@@ -359,9 +361,10 @@ final class tc extends id {
                     stackIn_7_0 = stackOut_5_0;
                     stackIn_6_0 = stackOut_5_0;
                     if (var7 == null) {
-                      param2.field_x[var5] = new db();
+                      db dupTemp$1 = new db();
+                      param2.field_x[var5] = dupTemp$1;
                       stackOut_7_0 = (db) (Object) stackIn_7_0;
-                      stackOut_7_1 = new db();
+                      stackOut_7_1 = (db) dupTemp$1;
                       stackIn_8_0 = stackOut_7_0;
                       stackIn_8_1 = stackOut_7_1;
                       break L2;

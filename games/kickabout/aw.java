@@ -34,25 +34,29 @@ final class aw extends i {
             rg stackOut_2_0 = null;
             try {
               L0: {
-                if (param0 == 3) {
-                  break L0;
-                } else {
-                  aw.h((byte) -117);
-                  break L0;
+                L1: {
+                  if (param0 == 3) {
+                    break L1;
+                  } else {
+                    aw.h((byte) -117);
+                    break L1;
+                  }
                 }
+                stackOut_2_0 = (rg) Class.forName("rh").newInstance();
+                stackIn_3_0 = stackOut_2_0;
+                break L0;
               }
-              stackOut_2_0 = (rg) Class.forName("rh").newInstance();
-              stackIn_3_0 = stackOut_2_0;
-            } catch (java.lang.Throwable decompiledCaughtParameter) {
-              decompiledCaughtException = decompiledCaughtParameter;
-              return stackIn_3_0;
+            } catch (java.lang.Throwable decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              var1 = decompiledCaughtException;
+              return null;
             }
+            return stackIn_3_0;
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
             throw new RuntimeException(decompiledCheckedException);
         }
-        return null;
     }
 
     final static kg a(int param0, int param1, sj param2, int param3) {

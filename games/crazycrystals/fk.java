@@ -28,7 +28,7 @@ final class fk extends lb {
     }
 
     final static ce a(boolean param0, String param1) {
-        String var2 = null;
+        Object var2 = null;
         ce var3 = null;
         String var4 = null;
         int var5 = 0;
@@ -38,15 +38,15 @@ final class fk extends lb {
         if (vl.field_d != null) {
           L0: {
             var6 = (CharSequence) (Object) param1;
-            var2 = fe.a(60136, var6);
+            var2 = (Object) (Object) fe.a(60136, var6);
             if (var2 == null) {
-              var2 = (String) (Object) var6;
+              var2 = (Object) (Object) var6;
               break L0;
             } else {
               break L0;
             }
           }
-          var3 = (ce) (Object) vl.field_d.a((long)var2.hashCode(), param0);
+          var3 = (ce) (Object) vl.field_d.a((long)((String) var2).hashCode(), param0);
           L1: while (true) {
             if (var3 != null) {
               L2: {
@@ -59,7 +59,7 @@ final class fk extends lb {
                   break L2;
                 }
               }
-              if (var4.equals((Object) (Object) var2)) {
+              if (var4.equals(var2)) {
                 return var3;
               } else {
                 var3 = (ce) (Object) vl.field_d.b(50);
@@ -77,8 +77,9 @@ final class fk extends lb {
     public fk() {
         ((fk) this).field_r = new pm[6];
         ((fk) this).field_w = new pm();
-        ((fk) this).field_r[0] = new pm();
-        pm var1 = new pm();
+        pm dupTemp$0 = new pm();
+        ((fk) this).field_r[0] = dupTemp$0;
+        pm var1 = dupTemp$0;
         var1.a(0);
     }
 
@@ -156,9 +157,10 @@ final class fk extends lb {
                       stackIn_9_0 = stackOut_7_0;
                       stackIn_8_0 = stackOut_7_0;
                       if (var6 == null) {
-                        param0.field_r[var4] = new pm();
+                        pm dupTemp$49 = new pm();
+                        param0.field_r[var4] = dupTemp$49;
                         stackOut_9_0 = (pm) (Object) stackIn_9_0;
-                        stackOut_9_1 = new pm();
+                        stackOut_9_1 = (pm) dupTemp$49;
                         stackIn_10_0 = stackOut_9_0;
                         stackIn_10_1 = stackOut_9_1;
                         break L2;
@@ -224,8 +226,9 @@ final class fk extends lb {
 
     final pm a(byte param0, int param1) {
         int var3 = 2 / ((param0 - -73) / 46);
-        ((fk) this).field_r[param1] = new pm();
-        return new pm();
+        pm dupTemp$0 = new pm();
+        ((fk) this).field_r[param1] = dupTemp$0;
+        return dupTemp$0;
     }
 
     public final void a(int param0, boolean param1, int param2, qm param3, boolean param4) {

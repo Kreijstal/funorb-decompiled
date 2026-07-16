@@ -21,7 +21,7 @@ final class na extends la {
             throw new RuntimeException();
           }
         } else {
-          return (byte[]) null;
+          return null;
         }
     }
 
@@ -503,7 +503,7 @@ final class na extends la {
         field_r = null;
         field_p = null;
         if (param0) {
-            field_q = (int[]) null;
+            field_q = null;
             field_q = null;
             return;
         }

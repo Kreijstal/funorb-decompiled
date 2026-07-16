@@ -196,7 +196,7 @@ class rg extends jk implements sh {
                 ((fm) (Object) stackIn_15_0).a(stackIn_15_1, stackIn_15_2, -89);
                 break L2;
               } else {
-                hc discarded$16 = var6.a(af.field_s, 95, (rm) this);
+                hc discarded$24 = var6.a(af.field_s, 95, (rm) this);
                 break L2;
               }
             } else {
@@ -206,7 +206,7 @@ class rg extends jk implements sh {
             }
           }
           L4: {
-            if (param1 == -4) {
+            if ((param1 ^ -1) == -4) {
               var6.a(7, wb.field_q, -82);
               break L4;
             } else {
@@ -214,11 +214,11 @@ class rg extends jk implements sh {
                 var6.a(8, kd.field_e, -116);
                 break L4;
               } else {
-                if (-7 != param1) {
+                if (-7 != (param1 ^ -1)) {
                   if (param1 != 9) {
                     break L4;
                   } else {
-                    hc discarded$17 = var6.a(bm.field_k, 66, (rm) this);
+                    hc discarded$25 = var6.a(bm.field_k, 66, (rm) this);
                     break L4;
                   }
                 } else {
@@ -246,18 +246,32 @@ class rg extends jk implements sh {
     }
 
     final void s(int param0) {
-        if (!((rg) this).field_K) {
-            return;
-        }
-        if (param0 != 2121792) {
-            field_wb = -29;
-        }
-        ((rg) this).field_K = false;
-        if (!((rg) this).field_nb) {
-            // ifeq L56
-            r.a((byte) -127);
+        if (((rg) this).field_K) {
+          L0: {
+            if (param0 == 2121792) {
+              break L0;
+            } else {
+              field_wb = -29;
+              break L0;
+            }
+          }
+          L1: {
+            ((rg) this).field_K = false;
+            if (((rg) this).field_nb) {
+              fd.a(true);
+              break L1;
+            } else {
+              if (!((rg) this).field_rb) {
+                break L1;
+              } else {
+                r.a((byte) -127);
+                break L1;
+              }
+            }
+          }
+          return;
         } else {
-            fd.a(true);
+          return;
         }
     }
 

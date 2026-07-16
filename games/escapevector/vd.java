@@ -196,59 +196,29 @@ final class vd {
     }
 
     private final BitSet a(byte param0, int param1, BitSet param2, int param3, int param4) {
-        int var6 = 0;
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
-        int var11 = 0;
-        int stackIn_9_0 = 0;
-        int stackOut_8_0 = 0;
-        int stackOut_7_0 = 0;
-        L0: {
-          var11 = EscapeVector.field_A;
-          if (param2 != null) {
-            break L0;
-          } else {
+        int var11 = EscapeVector.field_A;
+        if (param2 == null) {
             param2 = new BitSet(param3);
-            break L0;
-          }
         }
-        var6 = param0;
-        if (param1 <= -14) {
-          var7 = 0;
-          L1: while (true) {
-            if (-9 >= var7) {
-              return param2;
-            } else {
-              L2: {
-                var8 = 1 << var7;
-                if (-1 == (var6 & var8)) {
-                  stackOut_8_0 = 0;
-                  stackIn_9_0 = stackOut_8_0;
-                  break L2;
-                } else {
-                  stackOut_7_0 = 1;
-                  stackIn_9_0 = stackOut_7_0;
-                  break L2;
-                }
-              }
-              var9 = stackIn_9_0;
-              var10 = param4 - -var7;
-              if (var9 == 0) {
-                param2.clear(var10);
-                var7++;
-                continue L1;
-              } else {
+        int var6 = param0;
+        if (param1 > -14) {
+            return null;
+        }
+        for (var7 = 0; -9 < (var7 ^ -1); var7++) {
+            var8 = 1 << var7;
+            var9 = -1 != (var6 & var8 ^ -1) ? 1 : 0;
+            var10 = param4 - -var7;
+            if (var9 != 0) {
                 param2.set(var10);
-                var7++;
-                continue L1;
-              }
+            } else {
+                param2.clear(var10);
             }
-          }
-        } else {
-          return null;
         }
+        return param2;
     }
 
     private final byte[] a(int param0, int param1, BitSet param2) {
@@ -334,10 +304,10 @@ final class vd {
             ((vd) this).field_j = -38;
         }
         int var3 = param1.size();
-        if (-1 <= var3) {
+        if (-1 <= (var3 ^ -1)) {
             return -1;
         }
-        for (var4 = -1 + var3; -1 <= var4; var4--) {
+        for (var4 = -1 + var3; -1 >= (var4 ^ -1); var4--) {
             if (!(!param1.get(var4))) {
                 return var4;
             }
@@ -408,8 +378,9 @@ final class vd {
         }
         byte[] var5 = new byte[var4];
         int var6 = 0;
+        int incrementValue$0 = var6;
         var6++;
-        var5[var6] = (byte) 1;
+        var5[incrementValue$0] = (byte) 1;
         if (!(param1 == null)) {
             qg.a(param1, 0, var5, var6, param1.length);
             var6 = var6 + param1.length;

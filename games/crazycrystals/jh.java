@@ -986,76 +986,47 @@ final class jh {
     }
 
     final void f(int param0) {
-        L0: {
-          ((jh) this).field_j = 0;
-          ((jh) this).field_g = param0;
-          ((jh) this).field_a = 0;
-          if (((jh) this).field_k != 0) {
-            break L0;
-          } else {
-            if (pj.field_q == -99) {
-              L1: {
-                if (0 >= ((jh) this).field_c) {
-                  ((jh) this).field_c = ((jh) this).field_b;
-                  break L1;
-                } else {
-                  break L1;
+        ((jh) this).field_j = 0;
+        ((jh) this).field_g = param0;
+        ((jh) this).field_a = 0;
+        if (((jh) this).field_k == 0) {
+            if ((pj.field_q ^ -1) != -99) {
+                if (!(-1 != (((jh) this).field_k ^ -1))) {
+                    ((jh) this).field_j = pj.field_q;
                 }
-              }
-              ((jh) this).field_c = ((jh) this).field_c - 1;
-              ((jh) this).field_i = false;
-              break L0;
-            } else {
-              L2: {
-                if (-1 == ((jh) this).field_k) {
-                  ((jh) this).field_j = pj.field_q;
-                  break L2;
-                } else {
-                  break L2;
-                }
-              }
-              if (0 == ((jh) this).field_k) {
-                if (-100 == (pj.field_q ^ -1)) {
-                  ((jh) this).field_c = ((jh) this).field_c + 1;
-                  ((jh) this).field_i = false;
-                  if (((jh) this).field_c < ((jh) this).field_b) {
+                if (0 != ((jh) this).field_k) {
                     return;
-                  } else {
-                    ((jh) this).field_c = 0;
-                    return;
-                  }
-                } else {
-                  return;
                 }
-              } else {
+                if (-100 != (pj.field_q ^ -1)) {
+                    return;
+                }
+                ((jh) this).field_c = ((jh) this).field_c + 1;
+                ((jh) this).field_i = false;
+                if ((((jh) this).field_c ^ -1) > (((jh) this).field_b ^ -1)) {
+                    return;
+                }
+                ((jh) this).field_c = 0;
                 return;
-              }
             }
-          }
+            if (!(0 < ((jh) this).field_c)) {
+                ((jh) this).field_c = ((jh) this).field_b;
+            }
+            ((jh) this).field_c = ((jh) this).field_c - 1;
+            ((jh) this).field_i = false;
         }
-        L3: {
-          if (-1 == ((jh) this).field_k) {
+        if (!(-1 != (((jh) this).field_k ^ -1))) {
             ((jh) this).field_j = pj.field_q;
-            break L3;
-          } else {
-            break L3;
-          }
         }
         if (0 == ((jh) this).field_k) {
-          if (-100 == pj.field_q) {
+            if (-100 != (pj.field_q ^ -1)) {
+                return;
+            }
             ((jh) this).field_c = ((jh) this).field_c + 1;
             ((jh) this).field_i = false;
-            if (((jh) this).field_c < ((jh) this).field_b) {
-              return;
-            } else {
-              ((jh) this).field_c = 0;
-              return;
+            if ((((jh) this).field_c ^ -1) > (((jh) this).field_b ^ -1)) {
+                return;
             }
-          } else {
-            return;
-          }
-        } else {
-          return;
+            ((jh) this).field_c = 0;
         }
     }
 

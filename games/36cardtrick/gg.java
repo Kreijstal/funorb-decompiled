@@ -11,7 +11,7 @@ final class gg {
         field_b = null;
         field_c = null;
         if (param0) {
-            field_c = (String) null;
+            field_c = null;
         }
     }
 
@@ -19,7 +19,7 @@ final class gg {
         int var5 = 0;
         int var6 = 0;
         if (param3 != -16351) {
-          return (rj) null;
+          return null;
         } else {
           var5 = param2.a(param3 ^ -30526, param4);
           var6 = param2.a(var5, param0, (byte) 7);
@@ -29,10 +29,10 @@ final class gg {
 
     final static void a(int param0) {
         eh var1 = null;
-        var1 = (eh) ai.field_k.b(-114);
+        var1 = (eh) (Object) ai.field_k.b(-114);
         if (var1 != null) {
-          vj.a(((eh) var1).field_h, ((eh) var1).field_i, ((eh) var1).field_g);
-          vj.g(((eh) var1).field_k, ((eh) var1).field_n, ((eh) var1).field_m, ((eh) var1).field_j);
+          vj.a(var1.field_h, var1.field_i, var1.field_g);
+          vj.g(var1.field_k, var1.field_n, var1.field_m, var1.field_j);
           var1.field_h = null;
           lk.field_g.a((qb) (Object) var1, 27362);
           if (param0 != 14756) {
@@ -52,7 +52,7 @@ final class gg {
             try {
                 var2 = new java.net.URL(param0.getCodeBase(), "toserverlist.ws");
                 if (param1 != 7380) {
-                    field_b = (sc) null;
+                    field_b = null;
                 }
                 param0.getAppletContext().showDocument(fh.a(param0, var2, param1 + -7381), "_top");
             } catch (Exception exception) {

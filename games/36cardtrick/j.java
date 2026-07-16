@@ -15,29 +15,29 @@ final class j extends qg {
         }
         qd var5 = new qd(((j) this).field_D);
         if (param2 != -1) {
-            field_A = (String) null;
+            field_A = null;
         }
-        lk var6 = (lk) var5.c((byte) -13);
+        lk var6 = (lk) (Object) var5.c((byte) -13);
         while (var6 != null) {
             var6.a(((j) this).field_o + param0, param1 - -((j) this).field_i, -1, param3);
-            var6 = (lk) var5.a((byte) 108);
+            var6 = (lk) (Object) var5.a((byte) 108);
         }
     }
 
     final lk a(boolean param0) {
         int var4 = Main.field_T;
         qd var2 = new qd(((j) this).field_D);
-        qf var3 = (qf) var2.b((byte) -33);
+        qf var3 = (qf) (Object) var2.b((byte) -33);
         while (var3 != null) {
-            if (((qf) var3).field_E) {
+            if (var3.field_E) {
                 return var3.i(-1);
             }
-            var3 = (qf) var2.a(28869);
+            var3 = (qf) (Object) var2.a(28869);
         }
         if (!param0) {
             return null;
         }
-        field_A = (String) null;
+        field_A = null;
         return null;
     }
 
@@ -47,12 +47,12 @@ final class j extends qg {
         if (param0 != -2054) {
             ((j) this).l(102);
         }
-        qf var3 = (qf) var2.b((byte) -33);
+        qf var3 = (qf) (Object) var2.b((byte) -33);
         while (var3 != null) {
             if (!(!var3.a(true))) {
                 var3.c(105);
             }
-            var3 = (qf) var2.a(28869);
+            var3 = (qf) (Object) var2.a(28869);
         }
         ((j) this).field_y = (lk) (Object) ((j) this).d((byte) 61);
     }
@@ -66,7 +66,7 @@ final class j extends qg {
 
     public static void m(int param0) {
         if (param0 <= 37) {
-            field_F = (String) null;
+            field_F = null;
         }
         field_F = null;
         field_A = null;
@@ -88,13 +88,13 @@ final class j extends qg {
           }
         }
         var2 = new qd(((j) this).field_D);
-        var3 = (qf) var2.b((byte) -33);
+        var3 = (qf) (Object) var2.b((byte) -33);
         L1: while (true) {
           if (var3 != null) {
-            if (((qf) var3).field_E) {
+            if (var3.field_E) {
               return var3;
             } else {
-              var3 = (qf) var2.a(28869);
+              var3 = (qf) (Object) var2.a(28869);
               continue L1;
             }
           } else {
@@ -108,7 +108,7 @@ final class j extends qg {
             throw new IllegalArgumentException();
         }
         int var4 = 61 % ((41 - param1) / 33);
-        qf var3 = (qf) param0;
+        qf var3 = (qf) (Object) param0;
         ((j) this).field_D.a(-121, (qb) (Object) var3);
         var3.field_E = true;
         boolean discarded$0 = var3.a(115, (lk) this);
@@ -117,10 +117,10 @@ final class j extends qg {
     final void k(int param0) {
         int var5 = Main.field_T;
         qd var2 = new qd(((j) this).field_D);
-        qf var3 = (qf) var2.b((byte) -33);
+        qf var3 = (qf) (Object) var2.b((byte) -33);
         while (var3 != null) {
             var3.field_E = false;
-            var3 = (qf) var2.a(28869);
+            var3 = (qf) (Object) var2.a(28869);
         }
         ((j) this).field_y = null;
         int var4 = 14 % ((param0 - 55) / 61);
@@ -135,14 +135,14 @@ final class j extends qg {
         int var4 = Main.field_T;
         qd var2 = new qd(((j) this).field_D);
         if (!param0) {
-            field_E = (int[]) null;
+            field_E = null;
         }
-        qf var3 = (qf) var2.b((byte) -33);
+        qf var3 = (qf) (Object) var2.b((byte) -33);
         while (var3 != null) {
             if (!(!var3.o(928516712))) {
                 var3.c(120);
             }
-            var3 = (qf) var2.a(28869);
+            var3 = (qf) (Object) var2.a(28869);
         }
     }
 
@@ -152,7 +152,7 @@ final class j extends qg {
         gh.a(-1, 31888);
         jc.field_P = tj.field_F;
         if (param0 != -23687) {
-            field_A = (String) null;
+            field_A = null;
         }
         ei.field_d = tj.field_F;
     }

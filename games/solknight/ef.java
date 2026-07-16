@@ -124,9 +124,11 @@ final class ef {
                     var7++;
                     continue L0;
                   } else {
+                    int incrementValue$4 = var6;
                     var6++;
+                    int incrementValue$5 = var5;
                     var5++;
-                    var4[var6] = param1.field_v[var5];
+                    var4[incrementValue$4] = param1.field_v[incrementValue$5];
                     var8++;
                     continue L1;
                   }
@@ -155,9 +157,11 @@ final class ef {
                     var7++;
                     continue L2;
                   } else {
+                    int incrementValue$6 = var6;
                     var6++;
+                    int incrementValue$7 = var5;
                     var5++;
-                    var4[var6] = param1.field_v[var5];
+                    var4[incrementValue$6] = param1.field_v[incrementValue$7];
                     var8++;
                     continue L3;
                   }

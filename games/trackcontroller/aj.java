@@ -33,11 +33,11 @@ final class aj extends fc {
               if (param2.field_ib != null) {
                 break L0;
               } else {
-                // wide iinc 3 200
+                var3 += 200;
                 break L0;
               }
             } else {
-              // wide iinc 3 -200
+              var3 -= 200;
               break L0;
             }
           }
@@ -57,7 +57,7 @@ final class aj extends fc {
               return stackIn_19_0 != 0;
             } else {
               L2: {
-                // wide iinc 3 -200
+                var3 -= 200;
                 if (0 >= var3) {
                   stackOut_14_0 = 0;
                   stackIn_15_0 = stackOut_14_0;
@@ -72,7 +72,7 @@ final class aj extends fc {
             }
           } else {
             L3: {
-              // wide iinc 3 200
+              var3 += 200;
               if (0 >= var3) {
                 stackOut_9_0 = 0;
                 stackIn_10_0 = stackOut_9_0;
@@ -1161,8 +1161,9 @@ final class aj extends fc {
     }
 
     aj(int param0, int param1, int param2, int param3, int param4, int param5, int[] param6) {
+        int fieldTemp$0 = la.field_o;
         la.field_o = la.field_o + 1;
-        ((aj) this).field_q = la.field_o & 65535;
+        ((aj) this).field_q = fieldTemp$0 & 65535;
         ((aj) this).field_i = param5;
         ((aj) this).field_k = param3;
         ((aj) this).field_l = param4;

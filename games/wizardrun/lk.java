@@ -8,6 +8,7 @@ final class lk {
     public static void a(int param0) {
         field_b = null;
         if (param0 != -1) {
+            Object var2 = null;
             lk.a(47, (vd) null, 92, (fg) null, (String) null);
         }
     }

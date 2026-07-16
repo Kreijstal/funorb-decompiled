@@ -102,8 +102,8 @@ class lb implements wo, fi {
               }
               L3: {
                 var12 = ((lb) this).field_i;
-                if (-1 != var12) {
-                  if (-4 == var12) {
+                if (-1 != (var12 ^ -1)) {
+                  if (-4 == (var12 ^ -1)) {
                     break L3;
                   } else {
                     if (var12 == 1) {

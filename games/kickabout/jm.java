@@ -21,28 +21,34 @@ final class jm extends gn {
             og stackOut_2_0 = null;
             try {
               L0: {
-                if (param0 >= 49) {
-                  break L0;
-                } else {
-                  jm.a(93, true, 85);
-                  break L0;
+                L1: {
+                  if (param0 >= 49) {
+                    break L1;
+                  } else {
+                    jm.a(93, true, 85);
+                    break L1;
+                  }
                 }
+                var4 = Class.forName("pm");
+                var5 = (og) var4.newInstance();
+                var5.a(30, param1, param2, param3);
+                stackOut_2_0 = (og) var5;
+                stackIn_3_0 = stackOut_2_0;
+                break L0;
               }
-              var4 = Class.forName("pm");
-              var5 = (og) var4.newInstance();
-              var5.a(30, param1, param2, param3);
-              stackOut_2_0 = (og) var5;
-              stackIn_3_0 = stackOut_2_0;
-            } catch (java.lang.Throwable decompiledCaughtParameter) {
-              decompiledCaughtException = decompiledCaughtParameter;
-              return stackIn_3_0;
+            } catch (java.lang.Throwable decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              var4_ref = decompiledCaughtException;
+              var5_ref = new dh();
+              ((og) (Object) var5_ref).a(30, param1, param2, param3);
+              return (og) (Object) var5_ref;
             }
+            return stackIn_3_0;
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
             throw new RuntimeException(decompiledCheckedException);
         }
-        return null;
     }
 
     final static void b(int param0) {

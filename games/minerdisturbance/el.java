@@ -14,9 +14,8 @@ final class el {
           } else {
             if (aa.field_e != de.field_b) {
               if (param1 == -5629) {
-                if (-1 == param0) {
+                if (-1 != (param0 ^ -1)) {
                   L1: {
-                    mm.a(false, h.field_d, 2, param1 + 5630, true, 2);
                     if ((param0 ^ -1) == -2) {
                       mm.a(false, eg.field_p, 2, 1, true, 2);
                       break L1;
@@ -27,6 +26,7 @@ final class el {
                   return;
                 } else {
                   L2: {
+                    mm.a(false, h.field_d, 2, param1 + 5630, true, 2);
                     if ((param0 ^ -1) == -2) {
                       mm.a(false, eg.field_p, 2, 1, true, 2);
                       break L2;
@@ -38,8 +38,9 @@ final class el {
                 }
               } else {
                 el.a(53, -55);
-                if (-1 != (param0 ^ -1)) {
+                if (-1 == (param0 ^ -1)) {
                   L3: {
+                    mm.a(false, h.field_d, 2, param1 + 5630, true, 2);
                     if ((param0 ^ -1) == -2) {
                       mm.a(false, eg.field_p, 2, 1, true, 2);
                       break L3;
@@ -50,8 +51,7 @@ final class el {
                   return;
                 } else {
                   L4: {
-                    mm.a(false, h.field_d, 2, param1 + 5630, true, 2);
-                    if (param0 == -2) {
+                    if ((param0 ^ -1) == -2) {
                       mm.a(false, eg.field_p, 2, 1, true, 2);
                       break L4;
                     } else {

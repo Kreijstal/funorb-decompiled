@@ -52,16 +52,16 @@ final class de {
         L0: while (true) {
           var3 = param0.a(39, param1);
           L1: while (true) {
-            if (var3.field_c != -1) {
-              if (-2 != var3.field_c) {
+            if ((var3.field_c ^ -1) != -1) {
+              if (-2 != (var3.field_c ^ -1)) {
                 i.a((byte) 30, 100L);
                 continue L0;
               } else {
-                if (param2 < 117) {
-                  return;
-                } else {
+                if (param2 >= 117) {
                   param1.setVisible(false);
                   param1.dispose();
+                  return;
+                } else {
                   return;
                 }
               }

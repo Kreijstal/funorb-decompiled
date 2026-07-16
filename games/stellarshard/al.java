@@ -136,22 +136,30 @@ final class al {
           var3 = var7.length;
           L0: while (true) {
             if (var3 > var2) {
+              int incrementValue$40 = var2;
               var2++;
-              var5[var2] = 0;
+              var5[incrementValue$40] = 0;
+              int incrementValue$41 = var2;
               var2++;
-              var5[var2] = 0;
+              var5[incrementValue$41] = 0;
+              int incrementValue$42 = var2;
               var2++;
-              var5[var2] = 0;
+              var5[incrementValue$42] = 0;
+              int incrementValue$43 = var2;
               var2++;
-              var5[var2] = 0;
+              var5[incrementValue$43] = 0;
+              int incrementValue$44 = var2;
               var2++;
-              var5[var2] = 0;
+              var5[incrementValue$44] = 0;
+              int incrementValue$45 = var2;
               var2++;
-              var5[var2] = 0;
+              var5[incrementValue$45] = 0;
+              int incrementValue$46 = var2;
               var2++;
-              var5[var2] = 0;
+              var5[incrementValue$46] = 0;
+              int incrementValue$47 = var2;
               var2++;
-              var5[var2] = 0;
+              var5[incrementValue$47] = 0;
               continue L0;
             } else {
               return;
@@ -162,22 +170,30 @@ final class al {
           var3 = var7.length;
           L1: while (true) {
             if (var3 > var2) {
+              int incrementValue$48 = var2;
               var2++;
-              var5[var2] = 0;
+              var5[incrementValue$48] = 0;
+              int incrementValue$49 = var2;
               var2++;
-              var5[var2] = 0;
+              var5[incrementValue$49] = 0;
+              int incrementValue$50 = var2;
               var2++;
-              var5[var2] = 0;
+              var5[incrementValue$50] = 0;
+              int incrementValue$51 = var2;
               var2++;
-              var5[var2] = 0;
+              var5[incrementValue$51] = 0;
+              int incrementValue$52 = var2;
               var2++;
-              var5[var2] = 0;
+              var5[incrementValue$52] = 0;
+              int incrementValue$53 = var2;
               var2++;
-              var5[var2] = 0;
+              var5[incrementValue$53] = 0;
+              int incrementValue$54 = var2;
               var2++;
-              var5[var2] = 0;
+              var5[incrementValue$54] = 0;
+              int incrementValue$55 = var2;
               var2++;
-              var5[var2] = 0;
+              var5[incrementValue$55] = 0;
               continue L1;
             } else {
               return;

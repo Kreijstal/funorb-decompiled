@@ -94,8 +94,9 @@ final class qf {
                 var9 = (field_k - var3) * field_c[var5 - var3];
                 field_r[var2] = var0 + (var6 + ((field_g[2] - var6) * var9 >> 16) << 9) / field_k;
                 field_s[var2] = var1 + (var7 + ((field_l[2] - var7) * var9 >> 16) << 9) / field_k;
+                int incrementValue$9 = var2;
                 var2++;
-                field_n[var2] = var8 + ((field_d - var8) * var9 >> 16);
+                field_n[incrementValue$9] = var8 + ((field_d - var8) * var9 >> 16);
                 break L1;
               }
             }
@@ -105,15 +106,17 @@ final class qf {
               var9 = (field_k - var3) * field_c[var4 - var3];
               field_r[var2] = var0 + (var6 + ((field_g[1] - var6) * var9 >> 16) << 9) / field_k;
               field_s[var2] = var1 + (var7 + ((field_l[1] - var7) * var9 >> 16) << 9) / field_k;
+              int incrementValue$10 = var2;
               var2++;
-              field_n[var2] = var8 + ((field_t - var8) * var9 >> 16);
+              field_n[incrementValue$10] = var8 + ((field_t - var8) * var9 >> 16);
               break L0;
             }
           } else {
             field_r[var2] = field_e[0];
             field_s[var2] = field_v[0];
+            int incrementValue$11 = var2;
             var2++;
-            field_n[var2] = field_m;
+            field_n[incrementValue$11] = field_m;
             break L0;
           }
         }
@@ -129,8 +132,9 @@ final class qf {
                 var9 = (field_k - var4) * field_c[var3 - var4];
                 field_r[var2] = var0 + (var6 + ((field_g[0] - var6) * var9 >> 16) << 9) / field_k;
                 field_s[var2] = var1 + (var7 + ((field_l[0] - var7) * var9 >> 16) << 9) / field_k;
+                int incrementValue$12 = var2;
                 var2++;
-                field_n[var2] = var8 + ((field_m - var8) * var9 >> 16);
+                field_n[incrementValue$12] = var8 + ((field_m - var8) * var9 >> 16);
                 break L3;
               }
             }
@@ -140,15 +144,17 @@ final class qf {
               var9 = (field_k - var4) * field_c[var5 - var4];
               field_r[var2] = var0 + (var6 + ((field_g[2] - var6) * var9 >> 16) << 9) / field_k;
               field_s[var2] = var1 + (var7 + ((field_l[2] - var7) * var9 >> 16) << 9) / field_k;
+              int incrementValue$13 = var2;
               var2++;
-              field_n[var2] = var8 + ((field_d - var8) * var9 >> 16);
+              field_n[incrementValue$13] = var8 + ((field_d - var8) * var9 >> 16);
               break L2;
             }
           } else {
             field_r[var2] = field_e[1];
             field_s[var2] = field_v[1];
+            int incrementValue$14 = var2;
             var2++;
-            field_n[var2] = field_t;
+            field_n[incrementValue$14] = field_t;
             break L2;
           }
         }
@@ -164,8 +170,9 @@ final class qf {
                 var9 = (field_k - var5) * field_c[var4 - var5];
                 field_r[var2] = var0 + (var6 + ((field_g[1] - var6) * var9 >> 16) << 9) / field_k;
                 field_s[var2] = var1 + (var7 + ((field_l[1] - var7) * var9 >> 16) << 9) / field_k;
+                int incrementValue$15 = var2;
                 var2++;
-                field_n[var2] = var8 + ((field_t - var8) * var9 >> 16);
+                field_n[incrementValue$15] = var8 + ((field_t - var8) * var9 >> 16);
                 break L5;
               }
             }
@@ -175,15 +182,17 @@ final class qf {
               var9 = (field_k - var5) * field_c[var3 - var5];
               field_r[var2] = var0 + (var6 + ((field_g[0] - var6) * var9 >> 16) << 9) / field_k;
               field_s[var2] = var1 + (var7 + ((field_l[0] - var7) * var9 >> 16) << 9) / field_k;
+              int incrementValue$16 = var2;
               var2++;
-              field_n[var2] = var8 + ((field_m - var8) * var9 >> 16);
+              field_n[incrementValue$16] = var8 + ((field_m - var8) * var9 >> 16);
               break L4;
             }
           } else {
             field_r[var2] = field_e[2];
             field_s[var2] = field_v[2];
+            int incrementValue$17 = var2;
             var2++;
-            field_n[var2] = field_d;
+            field_n[incrementValue$17] = field_d;
             break L4;
           }
         }
@@ -475,24 +484,31 @@ final class qf {
         L0: while (true) {
           if (var12_int >= 3) {
             try {
-              qf.a(var11 != 0, false, 0);
-            } catch (java.lang.Exception decompiledCaughtParameter) {
-              decompiledCaughtException = decompiledCaughtParameter;
+              L1: {
+                qf.a(var11 != 0, false, 0);
+                break L1;
+              }
+            } catch (java.lang.Exception decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              L2: {
+                var12 = (Exception) (Object) decompiledCaughtException;
+                break L2;
+              }
             }
-            var12 = (Exception) (Object) decompiledCaughtException;
+            return;
           } else {
-            L1: {
+            L3: {
               var13 = param3[var12_int];
               var14 = param4[var12_int];
               var15 = param5[var12_int];
               if (var15 < field_k) {
                 field_e[var12_int] = -5000;
                 var11 = 1;
-                break L1;
+                break L3;
               } else {
                 field_e[var12_int] = var9 + (var13 << 9) / var15;
                 field_v[var12_int] = var10 + (var14 << 9) / var15;
-                break L1;
+                break L3;
               }
             }
             field_g[var12_int] = var13;

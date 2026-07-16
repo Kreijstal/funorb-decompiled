@@ -506,8 +506,9 @@ final class pl {
                 }
               }
             } else {
+              int fieldTemp$2 = ((pl) this).field_m - 1;
               ((pl) this).field_m = ((pl) this).field_m - 1;
-              if (-1 <= (((pl) this).field_m - 1 ^ -1)) {
+              if (-1 <= (fieldTemp$2 ^ -1)) {
                 if (param0 == 565) {
                   ((pl) this).field_m = ((pl) this).field_v;
                   if (ec.field_e < ((pl) this).field_s) {
@@ -555,8 +556,9 @@ final class pl {
               }
               return;
             } else {
+              int fieldTemp$3 = ((pl) this).field_m - 1;
               ((pl) this).field_m = ((pl) this).field_m - 1;
-              if (-1 <= (((pl) this).field_m - 1 ^ -1)) {
+              if (-1 <= (fieldTemp$3 ^ -1)) {
                 if (param0 == 565) {
                   ((pl) this).field_m = ((pl) this).field_v;
                   if (ec.field_e < ((pl) this).field_s) {

@@ -78,10 +78,10 @@ final class cj extends qf implements Cloneable {
                 break L1;
               } else {
                 L2: {
-                  if (param2 != -25) {
+                  if ((param2 ^ -1) != -25) {
                     break L2;
                   } else {
-                    if (-25 == param3) {
+                    if (-25 == (param3 ^ -1)) {
                       al.field_a.a(param1, param4 + -param3);
                       break L1;
                     } else {

@@ -335,7 +335,7 @@ final class wg extends od {
                     }
                   }
                   L16: {
-                    if (-99 == var5) {
+                    if (-99 == (var5 ^ -1)) {
                       ((wg) this).field_p[var4] = pf.b(((wg) this).field_p[var4], 16256) + var6;
                       break L16;
                     } else {
@@ -343,7 +343,7 @@ final class wg extends od {
                     }
                   }
                   L17: {
-                    if (-102 != var5) {
+                    if (-102 != (var5 ^ -1)) {
                       break L17;
                     } else {
                       ((wg) this).field_p[var4] = (var6 << 241843911) + (pf.b(127, ((wg) this).field_p[var4]) + 16384);
@@ -375,7 +375,7 @@ final class wg extends od {
                     }
                   }
                   L21: {
-                    if (-124 == var5) {
+                    if (-124 == (var5 ^ -1)) {
                       this.f(var4, -87);
                       break L21;
                     } else {
@@ -383,7 +383,7 @@ final class wg extends od {
                     }
                   }
                   L22: {
-                    if (-7 != var5) {
+                    if (-7 != (var5 ^ -1)) {
                       break L22;
                     } else {
                       var7 = ((wg) this).field_p[var4];
@@ -711,24 +711,40 @@ final class wg extends od {
     }
 
     final void a(byte param0, pl param1, boolean param2) {
-        int var6 = 0;
+        int var4 = 0;
         int var5 = 0;
-        int var4 = param1.field_t.field_k.length;
-        if (param0 != 2) {
-            return;
-        }
-        if (param2) {
-            // ifeq L120
-            var6 = var4 + (var4 + -param1.field_t.field_g);
-            var4 = var4 << 8;
-            var5 = (int)((long)((wg) this).field_v[param1.field_i] * (long)var6 >> 482854790);
-            // if_icmpgt L144
-            var5 = -var5 + -1 + (var4 + var4);
-            param1.field_v.b(true);
-        } else {
+        int var6 = 0;
+        var4 = param1.field_t.field_k.length;
+        if (param0 == 2) {
+          L0: {
+            L1: {
+              if (!param2) {
+                break L1;
+              } else {
+                if (!param1.field_t.field_i) {
+                  break L1;
+                } else {
+                  var6 = var4 + (var4 + -param1.field_t.field_g);
+                  var4 = var4 << 8;
+                  var5 = (int)((long)((wg) this).field_v[param1.field_i] * (long)var6 >> 482854790);
+                  if (var4 > var5) {
+                    break L0;
+                  } else {
+                    var5 = -var5 + -1 + (var4 + var4);
+                    param1.field_v.b(true);
+                    break L0;
+                  }
+                }
+              }
+            }
             var5 = (int)((long)((wg) this).field_v[param1.field_i] * (long)var4 >> 1672779590);
+            break L0;
+          }
+          param1.field_v.g(var5);
+          return;
+        } else {
+          return;
         }
-        param1.field_v.g(var5);
     }
 
     final synchronized int c() {
@@ -823,28 +839,65 @@ final class wg extends od {
     }
 
     private final void a(int param0, int param1) {
-        int var4 = CrazyCrystals.field_B;
-        pl var3 = (pl) (Object) ((wg) this).field_m.field_k.g(32073);
-        if (param0 != -33) {
+        pl var3 = null;
+        int var4 = 0;
+        L0: {
+          var4 = CrazyCrystals.field_B;
+          var3 = (pl) (Object) ((wg) this).field_m.field_k.g(32073);
+          if (param0 == -33) {
+            break L0;
+          } else {
             this.c(12, -19);
+            break L0;
+          }
         }
-        while (var3 != null) {
-            if (-1 >= (param1 ^ -1)) {
-                // if_icmpeq L64
-            } else {
-                if (var3.field_v != null) {
+        L1: while (true) {
+          if (var3 == null) {
+            return;
+          } else {
+            L2: {
+              L3: {
+                if (-1 < (param1 ^ -1)) {
+                  break L3;
+                } else {
+                  if (var3.field_i == param1) {
+                    break L3;
+                  } else {
+                    break L2;
+                  }
+                }
+              }
+              L4: {
+                if (var3.field_v == null) {
+                  break L4;
+                } else {
+                  L5: {
                     var3.field_v.d(id.field_m / 100);
-                    if (var3.field_v.e()) {
-                        ((wg) this).field_m.field_l.b((od) (Object) var3.field_v);
+                    if (!var3.field_v.e()) {
+                      break L5;
+                    } else {
+                      ((wg) this).field_m.field_l.b((od) (Object) var3.field_v);
+                      break L5;
                     }
-                    var3.d(12426);
+                  }
+                  var3.d(12426);
+                  break L4;
                 }
-                if (var3.field_l < 0) {
-                    ((wg) this).field_z[var3.field_i][var3.field_y] = null;
+              }
+              L6: {
+                if (var3.field_l >= 0) {
+                  break L6;
+                } else {
+                  ((wg) this).field_z[var3.field_i][var3.field_y] = null;
+                  break L6;
                 }
-                var3.a(false);
+              }
+              var3.a(false);
+              break L2;
             }
             var3 = (pl) (Object) ((wg) this).field_m.field_k.a(false);
+            continue L1;
+          }
         }
     }
 
@@ -1035,46 +1088,84 @@ final class wg extends od {
     }
 
     final synchronized boolean a(db param0, bn param1, rm param2, int param3, int param4) {
-        int[] var7_array = null;
+        int var6 = 0;
+        Object var7 = null;
+        dm var8 = null;
         int var9 = 0;
         dk var10 = null;
-        dk var10_ref = null;
-        int var11 = CrazyCrystals.field_B;
+        int var11 = 0;
+        var11 = CrazyCrystals.field_B;
         param2.b();
-        if (param3 != -128) {
-            return false;
-        }
-        int var6 = 1;
-        Object var7 = null;
-        if (-1 > (param4 ^ -1)) {
-            var7_array = new int[]{param4};
-        }
-        dm var8 = (dm) (Object) param2.field_f.a((byte) -93);
-        while (var8 != null) {
-            var9 = (int)var8.field_e;
-            var10 = (dk) (Object) ((wg) this).field_D.a((long)var9, 0);
-            if (var10 != null) {
-                // ifnull L194
-                // ifeq L191
+        if (param3 == -128) {
+          L0: {
+            var6 = 1;
+            var7 = null;
+            if (-1 <= (param4 ^ -1)) {
+              break L0;
             } else {
-                var10_ref = md.a(var9, 103, param0);
-                if (var10_ref == null) {
-                    var6 = 0;
-                } else {
-                    ((wg) this).field_D.a(-22072, (long)var9, (jb) (Object) var10_ref);
-                }
-                if (var10_ref != null) {
-                    if (!(var10_ref.a(true, param1, var7_array, var8.field_g))) {
-                        var6 = 0;
-                    }
-                }
+              var7 = (Object) (Object) new int[]{param4};
+              break L0;
             }
-            var8 = (dm) (Object) param2.field_f.a(88);
+          }
+          var8 = (dm) (Object) param2.field_f.a((byte) -93);
+          L1: while (true) {
+            if (var8 == null) {
+              L2: {
+                if (var6 != 0) {
+                  param2.a();
+                  break L2;
+                } else {
+                  break L2;
+                }
+              }
+              return var6 != 0;
+            } else {
+              L3: {
+                L4: {
+                  var9 = (int)var8.field_e;
+                  var10 = (dk) (Object) ((wg) this).field_D.a((long)var9, 0);
+                  if (var10 == null) {
+                    L5: {
+                      var10 = md.a(var9, 103, param0);
+                      if (var10 != null) {
+                        ((wg) this).field_D.a(-22072, (long)var9, (jb) (Object) var10);
+                        break L5;
+                      } else {
+                        var6 = 0;
+                        break L5;
+                      }
+                    }
+                    if (var10 == null) {
+                      break L3;
+                    } else {
+                      if (!var10.a(true, param1, (int[]) var7, var8.field_g)) {
+                        break L4;
+                      } else {
+                        break L3;
+                      }
+                    }
+                  } else {
+                    if (var10 == null) {
+                      break L3;
+                    } else {
+                      if (!var10.a(true, param1, (int[]) var7, var8.field_g)) {
+                        break L4;
+                      } else {
+                        break L3;
+                      }
+                    }
+                  }
+                }
+                var6 = 0;
+                break L3;
+              }
+              var8 = (dm) (Object) param2.field_f.a(88);
+              continue L1;
+            }
+          }
+        } else {
+          return false;
         }
-        if (!(var6 == 0)) {
-            param2.a();
-        }
-        return var6 != 0;
     }
 
     private final void a(int param0, boolean param1, int param2, int param3) {
@@ -1436,19 +1527,39 @@ final class wg extends od {
     }
 
     private final void f(int param0, int param1) {
-        int var5 = CrazyCrystals.field_B;
-        int var4 = -22 % ((param1 - 56) / 34);
-        pl var3 = (pl) (Object) ((wg) this).field_m.field_k.g(32073);
-        while (var3 != null) {
-            if (param0 >= 0) {
-                // if_icmpeq L56
-            } else {
-                if (var3.field_l < 0) {
-                    ((wg) this).field_z[var3.field_i][var3.field_y] = null;
-                    var3.field_l = 0;
+        pl var3 = null;
+        int var4 = 0;
+        int var5 = 0;
+        var5 = CrazyCrystals.field_B;
+        var4 = -22 % ((param1 - 56) / 34);
+        var3 = (pl) (Object) ((wg) this).field_m.field_k.g(32073);
+        L0: while (true) {
+          if (var3 == null) {
+            return;
+          } else {
+            L1: {
+              L2: {
+                if (param0 < 0) {
+                  break L2;
+                } else {
+                  if (var3.field_i == param0) {
+                    break L2;
+                  } else {
+                    break L1;
+                  }
                 }
+              }
+              if (var3.field_l >= 0) {
+                break L1;
+              } else {
+                ((wg) this).field_z[var3.field_i][var3.field_y] = null;
+                var3.field_l = 0;
+                break L1;
+              }
             }
             var3 = (pl) (Object) ((wg) this).field_m.field_k.a(false);
+            continue L0;
+          }
         }
     }
 

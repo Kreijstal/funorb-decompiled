@@ -335,15 +335,19 @@ final class jn extends fb {
             ln.field_Kb = stackIn_8_0 != 0;
             bk.field_n = param11;
             if (null == re.field_n.field_d) {
-              var15 = (IOException) (Object) decompiledCaughtException;
-              throw new RuntimeException(var15.toString());
+              return;
             } else {
               try {
-                tc.field_z = new lc(re.field_n.field_d, 64, 0);
-              } catch (java.io.IOException decompiledCaughtParameter) {
-                decompiledCaughtException = decompiledCaughtParameter;
-                return;
+                L3: {
+                  tc.field_z = new lc(re.field_n.field_d, 64, 0);
+                  break L3;
+                }
+              } catch (java.io.IOException decompiledCaughtParameter0) {
+                decompiledCaughtException = decompiledCaughtParameter0;
+                var15 = (IOException) (Object) decompiledCaughtException;
+                throw new RuntimeException(var15.toString());
               }
+              return;
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;

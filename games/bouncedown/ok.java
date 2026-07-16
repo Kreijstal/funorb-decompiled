@@ -132,13 +132,16 @@ final class ok {
         var5 = ((ok) this).field_d.read();
         if (-1 == var5) {
           ((ok) this).field_d.seek(0L);
+          return;
         } else {
           if (param1.equals((Object) (Object) "r")) {
             ((ok) this).field_d.seek(0L);
+            return;
           } else {
             ((ok) this).field_d.seek(0L);
             ((ok) this).field_d.write(var5);
             ((ok) this).field_d.seek(0L);
+            return;
           }
         }
     }
@@ -170,51 +173,55 @@ final class ok {
               }
             }
             if (ec.field_P.field_f != 0) {
-              wa.field_e = fa.a(73);
-              qe.field_k = fa.a(73);
+              long dupTemp$8 = fa.a(73);
+              wa.field_e = dupTemp$8;
+              qe.field_k = dupTemp$8;
               if ((ec.field_P.field_f ^ -1) == -2) {
                 try {
                   L1: {
-                    dh.field_a = new pc((java.net.Socket) ec.field_P.field_e, pj.field_c);
-                    var4 = jc.field_g;
-                    var5 = var4;
-                    hh.field_p.field_h = 0;
-                    if (!param0) {
-                      stackOut_12_0 = -1;
-                      stackIn_13_0 = stackOut_12_0;
-                      break L1;
-                    } else {
-                      stackOut_11_0 = -2;
-                      stackIn_13_0 = stackOut_11_0;
-                      break L1;
+                    L2: {
+                      dh.field_a = new pc((java.net.Socket) ec.field_P.field_e, pj.field_c);
+                      var4 = jc.field_g;
+                      var5 = var4;
+                      hh.field_p.field_h = 0;
+                      if (!param0) {
+                        stackOut_12_0 = -1;
+                        stackIn_13_0 = stackOut_12_0;
+                        break L2;
+                      } else {
+                        stackOut_11_0 = -2;
+                        stackIn_13_0 = stackOut_11_0;
+                        break L2;
+                      }
                     }
+                    ak.field_z = stackIn_13_0;
+                    i.field_f = stackIn_13_0;
+                    ck.field_b = stackIn_13_0;
+                    pj.field_a = ga.field_c;
+                    var5.field_h = 0;
+                    fj.a(fi.field_b, 6, cf.field_a, (wi) (Object) hh.field_p, of.field_c);
+                    jj.a(-1, true);
+                    break L1;
                   }
-                  ak.field_z = stackIn_13_0;
-                  i.field_f = stackIn_13_0;
-                  ck.field_b = stackIn_13_0;
-                  pj.field_a = ga.field_c;
-                  var5.field_h = 0;
-                  fj.a(fi.field_b, 6, cf.field_a, (wi) (Object) hh.field_p, of.field_c);
-                  jj.a(-1, true);
                 } catch (java.io.IOException decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
                   var2 = (IOException) (Object) decompiledCaughtException;
                   pj.field_a = ri.field_C;
                   ec.field_P = null;
                   if (param1 <= 117) {
-                    int discarded$6 = ok.d(70);
+                    int discarded$9 = ok.d(70);
                     return true;
                   } else {
                     return true;
                   }
                 }
-                L2: {
+                L3: {
                   ec.field_P = null;
                   if (param1 > 117) {
-                    break L2;
+                    break L3;
                   } else {
-                    int discarded$7 = ok.d(70);
-                    break L2;
+                    int discarded$10 = ok.d(70);
+                    break L3;
                   }
                 }
                 return true;
@@ -222,7 +229,7 @@ final class ok {
                 pj.field_a = ri.field_C;
                 ec.field_P = null;
                 if (param1 <= 117) {
-                  int discarded$8 = ok.d(70);
+                  int discarded$11 = ok.d(70);
                   return true;
                 } else {
                   return true;

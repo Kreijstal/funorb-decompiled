@@ -316,14 +316,27 @@ class wo extends ah {
 
     wo(int param0, int param1, int param2) {
         super(param0, param1, param2, 200704);
-        ((wo) this).field_Ab = false;
-        if (((wo) this).field_t != 2) {
-            if (4 != ((wo) this).field_t) {
-                // if_icmpne L53
+        L0: {
+          L1: {
+            ((wo) this).field_Ab = false;
+            if (((wo) this).field_t == 2) {
+              break L1;
+            } else {
+              if (4 == ((wo) this).field_t) {
+                break L1;
+              } else {
+                if ((((wo) this).field_t ^ -1) != -7) {
+                  break L0;
+                } else {
+                  break L1;
+                }
+              }
             }
+          }
+          ((wo) this).field_D = 143360;
+          ((wo) this).field_ub = 21;
+          break L0;
         }
-        ((wo) this).field_D = 143360;
-        ((wo) this).field_ub = 21;
     }
 
     public static void w(int param0) {

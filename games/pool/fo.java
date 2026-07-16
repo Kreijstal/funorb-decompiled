@@ -11,42 +11,85 @@ final class fo implements java.awt.event.KeyListener, java.awt.event.FocusListen
     public final synchronized void keyPressed(java.awt.event.KeyEvent param0) {
         int var2 = 0;
         int var3 = 0;
-        if (wn.field_a == null) {
-        } else {
-            ti.field_e = 0;
-            var2 = param0.getKeyCode();
-            if (-1 >= var2) {
-                // if_icmpge L51
-                var2 = el.field_H[var2];
-                // if_icmpeq L53
-                var2 = -1;
-            } else {
-                var2 = -1;
-            }
-            if (qq.field_xb >= 0) {
-                if (!(-1 < (var2 ^ -1))) {
-                    field_b[qq.field_xb] = var2;
-                    qq.field_xb = 1 + qq.field_xb & 127;
-                    if (qq.field_xb == jq.field_g) {
-                        qq.field_xb = -1;
+        L0: {
+          if (wn.field_a != null) {
+            L1: {
+              L2: {
+                ti.field_e = 0;
+                var2 = param0.getKeyCode();
+                if (-1 < (var2 ^ -1)) {
+                  break L2;
+                } else {
+                  if ((var2 ^ -1) <= (el.field_H.length ^ -1)) {
+                    break L2;
+                  } else {
+                    var2 = el.field_H[var2];
+                    if (-1 == (var2 & 128 ^ -1)) {
+                      break L1;
+                    } else {
+                      var2 = -1;
+                      break L1;
                     }
+                  }
                 }
+              }
+              var2 = -1;
+              break L1;
             }
-            if (0 <= var2) {
+            L3: {
+              if (qq.field_xb < 0) {
+                break L3;
+              } else {
+                if (-1 >= (var2 ^ -1)) {
+                  field_b[qq.field_xb] = var2;
+                  qq.field_xb = 1 + qq.field_xb & 127;
+                  if ((qq.field_xb ^ -1) != (jq.field_g ^ -1)) {
+                    break L3;
+                  } else {
+                    qq.field_xb = -1;
+                    break L3;
+                  }
+                } else {
+                  break L3;
+                }
+              }
+            }
+            L4: {
+              if (0 > var2) {
+                break L4;
+              } else {
                 var3 = op.field_h + 1 & 127;
-                if (var3 != bl.field_s) {
-                    ee.field_b[op.field_h] = var2;
-                    ek.field_c[op.field_h] = (char)0;
-                    op.field_h = var3;
+                if (var3 == bl.field_s) {
+                  break L4;
+                } else {
+                  ee.field_b[op.field_h] = var2;
+                  ek.field_c[op.field_h] = (char)0;
+                  op.field_h = var3;
+                  break L4;
                 }
+              }
             }
-            var3 = param0.getModifiers();
-            if ((10 & var3) == 0) {
-                if (-86 != (var2 ^ -1)) {
-                    // if_icmpne L187
+            L5: {
+              var3 = param0.getModifiers();
+              if ((10 & var3) != 0) {
+                break L5;
+              } else {
+                if (-86 == (var2 ^ -1)) {
+                  break L5;
+                } else {
+                  if ((var2 ^ -1) != -11) {
+                    break L0;
+                  } else {
+                    break L5;
+                  }
                 }
+              }
             }
             param0.consume();
+            break L0;
+          } else {
+            break L0;
+          }
         }
     }
 
@@ -133,24 +176,45 @@ final class fo implements java.awt.event.KeyListener, java.awt.event.FocusListen
 
     public final synchronized void keyReleased(java.awt.event.KeyEvent param0) {
         int var2 = 0;
-        if (null != wn.field_a) {
-            ti.field_e = 0;
-            var2 = param0.getKeyCode();
-            if (-1 >= (var2 ^ -1)) {
-                // if_icmple L44
-                var2 = el.field_H[var2] & -129;
-            } else {
-                var2 = -1;
-            }
-            if ((qq.field_xb ^ -1) <= -1) {
-                if (!(var2 < 0)) {
-                    field_b[qq.field_xb] = var2 ^ -1;
-                    qq.field_xb = 127 & 1 + qq.field_xb;
-                    if (qq.field_xb == jq.field_g) {
-                        qq.field_xb = -1;
-                    }
+        L0: {
+          if (null == wn.field_a) {
+            break L0;
+          } else {
+            L1: {
+              L2: {
+                ti.field_e = 0;
+                var2 = param0.getKeyCode();
+                if (-1 < (var2 ^ -1)) {
+                  break L2;
+                } else {
+                  if (el.field_H.length <= var2) {
+                    break L2;
+                  } else {
+                    var2 = el.field_H[var2] & -129;
+                    break L1;
+                  }
                 }
+              }
+              var2 = -1;
+              break L1;
             }
+            if ((qq.field_xb ^ -1) > -1) {
+              break L0;
+            } else {
+              if (var2 >= 0) {
+                field_b[qq.field_xb] = var2 ^ -1;
+                qq.field_xb = 127 & 1 + qq.field_xb;
+                if (qq.field_xb != jq.field_g) {
+                  break L0;
+                } else {
+                  qq.field_xb = -1;
+                  break L0;
+                }
+              } else {
+                break L0;
+              }
+            }
+          }
         }
         param0.consume();
     }
@@ -190,6 +254,7 @@ final class fo implements java.awt.event.KeyListener, java.awt.event.FocusListen
         var1 = 0;
         L0: while (true) {
           if (-257 >= (var1 ^ -1)) {
+            return;
           } else {
             var0 = var1;
             var2 = 0;

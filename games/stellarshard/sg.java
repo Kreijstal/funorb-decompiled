@@ -115,15 +115,19 @@ final class sg {
             }
             wd.field_a = param1;
             if (il.field_v.field_e == null) {
-              var15 = (IOException) (Object) decompiledCaughtException;
-              throw new RuntimeException(var15.toString());
+              return;
             } else {
               try {
-                e.field_a = new pc(il.field_v.field_e, 64, 0);
-              } catch (java.io.IOException decompiledCaughtParameter) {
-                decompiledCaughtException = decompiledCaughtParameter;
-                return;
+                L3: {
+                  e.field_a = new pc(il.field_v.field_e, 64, 0);
+                  break L3;
+                }
+              } catch (java.io.IOException decompiledCaughtParameter0) {
+                decompiledCaughtException = decompiledCaughtParameter0;
+                var15 = (IOException) (Object) decompiledCaughtException;
+                throw new RuntimeException(var15.toString());
               }
+              return;
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;

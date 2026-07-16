@@ -201,6 +201,10 @@ final class st extends iq {
         String stackIn_37_1 = null;
         qj stackIn_37_2 = null;
         int stackIn_37_3 = 0;
+        qj stackIn_57_0 = null;
+        qj stackIn_57_1 = null;
+        int stackIn_57_2 = 0;
+        int stackIn_57_3 = 0;
         qj stackIn_58_0 = null;
         qj stackIn_58_1 = null;
         int stackIn_58_2 = 0;
@@ -209,21 +213,21 @@ final class st extends iq {
         qj stackIn_59_1 = null;
         int stackIn_59_2 = 0;
         int stackIn_59_3 = 0;
-        qj stackIn_60_0 = null;
-        qj stackIn_60_1 = null;
-        int stackIn_60_2 = 0;
-        int stackIn_60_3 = 0;
-        int stackIn_60_4 = 0;
+        int stackIn_59_4 = 0;
+        hu stackIn_61_0 = null;
+        String stackIn_61_1 = null;
+        qj stackIn_61_2 = null;
         hu stackIn_62_0 = null;
         String stackIn_62_1 = null;
         qj stackIn_62_2 = null;
         hu stackIn_63_0 = null;
         String stackIn_63_1 = null;
         qj stackIn_63_2 = null;
-        hu stackIn_64_0 = null;
-        String stackIn_64_1 = null;
-        qj stackIn_64_2 = null;
-        int stackIn_64_3 = 0;
+        int stackIn_63_3 = 0;
+        qj stackIn_72_0 = null;
+        qj stackIn_72_1 = null;
+        int stackIn_72_2 = 0;
+        int stackIn_72_3 = 0;
         qj stackIn_73_0 = null;
         qj stackIn_73_1 = null;
         int stackIn_73_2 = 0;
@@ -232,44 +236,40 @@ final class st extends iq {
         qj stackIn_74_1 = null;
         int stackIn_74_2 = 0;
         int stackIn_74_3 = 0;
-        qj stackIn_75_0 = null;
-        qj stackIn_75_1 = null;
-        int stackIn_75_2 = 0;
-        int stackIn_75_3 = 0;
-        int stackIn_75_4 = 0;
+        int stackIn_74_4 = 0;
+        hu stackIn_76_0 = null;
+        String stackIn_76_1 = null;
+        qj stackIn_76_2 = null;
         hu stackIn_77_0 = null;
         String stackIn_77_1 = null;
         qj stackIn_77_2 = null;
         hu stackIn_78_0 = null;
         String stackIn_78_1 = null;
         qj stackIn_78_2 = null;
-        hu stackIn_79_0 = null;
-        String stackIn_79_1 = null;
-        qj stackIn_79_2 = null;
-        int stackIn_79_3 = 0;
-        qj stackIn_85_0 = null;
-        qj stackIn_85_1 = null;
-        int stackIn_85_2 = 0;
-        int stackIn_85_3 = 0;
-        qj stackIn_86_0 = null;
-        qj stackIn_86_1 = null;
-        int stackIn_86_2 = 0;
-        int stackIn_86_3 = 0;
+        int stackIn_78_3 = 0;
         qj stackIn_87_0 = null;
         qj stackIn_87_1 = null;
         int stackIn_87_2 = 0;
         int stackIn_87_3 = 0;
-        int stackIn_87_4 = 0;
-        hu stackIn_89_0 = null;
-        String stackIn_89_1 = null;
-        qj stackIn_89_2 = null;
-        hu stackIn_90_0 = null;
-        String stackIn_90_1 = null;
-        qj stackIn_90_2 = null;
+        qj stackIn_88_0 = null;
+        qj stackIn_88_1 = null;
+        int stackIn_88_2 = 0;
+        int stackIn_88_3 = 0;
+        qj stackIn_89_0 = null;
+        qj stackIn_89_1 = null;
+        int stackIn_89_2 = 0;
+        int stackIn_89_3 = 0;
+        int stackIn_89_4 = 0;
         hu stackIn_91_0 = null;
         String stackIn_91_1 = null;
         qj stackIn_91_2 = null;
-        int stackIn_91_3 = 0;
+        hu stackIn_92_0 = null;
+        String stackIn_92_1 = null;
+        qj stackIn_92_2 = null;
+        hu stackIn_93_0 = null;
+        String stackIn_93_1 = null;
+        qj stackIn_93_2 = null;
+        int stackIn_93_3 = 0;
         qj stackIn_100_0 = null;
         qj stackIn_100_1 = null;
         int stackIn_100_2 = 0;
@@ -293,29 +293,29 @@ final class st extends iq {
         String stackIn_106_1 = null;
         qj stackIn_106_2 = null;
         int stackIn_106_3 = 0;
+        qj stackIn_112_0 = null;
+        qj stackIn_112_1 = null;
+        int stackIn_112_2 = 0;
+        int stackIn_112_3 = 0;
+        qj stackIn_113_0 = null;
+        qj stackIn_113_1 = null;
+        int stackIn_113_2 = 0;
+        int stackIn_113_3 = 0;
         qj stackIn_114_0 = null;
         qj stackIn_114_1 = null;
         int stackIn_114_2 = 0;
         int stackIn_114_3 = 0;
-        qj stackIn_115_0 = null;
-        qj stackIn_115_1 = null;
-        int stackIn_115_2 = 0;
-        int stackIn_115_3 = 0;
-        qj stackIn_116_0 = null;
-        qj stackIn_116_1 = null;
-        int stackIn_116_2 = 0;
-        int stackIn_116_3 = 0;
-        int stackIn_116_4 = 0;
+        int stackIn_114_4 = 0;
+        hu stackIn_116_0 = null;
+        String stackIn_116_1 = null;
+        qj stackIn_116_2 = null;
+        hu stackIn_117_0 = null;
+        String stackIn_117_1 = null;
+        qj stackIn_117_2 = null;
         hu stackIn_118_0 = null;
         String stackIn_118_1 = null;
         qj stackIn_118_2 = null;
-        hu stackIn_119_0 = null;
-        String stackIn_119_1 = null;
-        qj stackIn_119_2 = null;
-        hu stackIn_120_0 = null;
-        String stackIn_120_1 = null;
-        qj stackIn_120_2 = null;
-        int stackIn_120_3 = 0;
+        int stackIn_118_3 = 0;
         qj stackOut_30_0 = null;
         qj stackOut_30_1 = null;
         int stackOut_30_2 = 0;
@@ -341,56 +341,56 @@ final class st extends iq {
         String stackOut_35_1 = null;
         qj stackOut_35_2 = null;
         int stackOut_35_3 = 0;
-        qj stackOut_57_0 = null;
-        qj stackOut_57_1 = null;
-        int stackOut_57_2 = 0;
-        int stackOut_57_3 = 0;
-        qj stackOut_59_0 = null;
-        qj stackOut_59_1 = null;
-        int stackOut_59_2 = 0;
-        int stackOut_59_3 = 0;
-        int stackOut_59_4 = 0;
+        qj stackOut_56_0 = null;
+        qj stackOut_56_1 = null;
+        int stackOut_56_2 = 0;
+        int stackOut_56_3 = 0;
         qj stackOut_58_0 = null;
         qj stackOut_58_1 = null;
         int stackOut_58_2 = 0;
         int stackOut_58_3 = 0;
         int stackOut_58_4 = 0;
-        hu stackOut_61_0 = null;
-        String stackOut_61_1 = null;
-        qj stackOut_61_2 = null;
-        hu stackOut_63_0 = null;
-        String stackOut_63_1 = null;
-        qj stackOut_63_2 = null;
-        int stackOut_63_3 = 0;
+        qj stackOut_57_0 = null;
+        qj stackOut_57_1 = null;
+        int stackOut_57_2 = 0;
+        int stackOut_57_3 = 0;
+        int stackOut_57_4 = 0;
+        hu stackOut_60_0 = null;
+        String stackOut_60_1 = null;
+        qj stackOut_60_2 = null;
         hu stackOut_62_0 = null;
         String stackOut_62_1 = null;
         qj stackOut_62_2 = null;
         int stackOut_62_3 = 0;
+        hu stackOut_61_0 = null;
+        String stackOut_61_1 = null;
+        qj stackOut_61_2 = null;
+        int stackOut_61_3 = 0;
+        qj stackOut_111_0 = null;
+        qj stackOut_111_1 = null;
+        int stackOut_111_2 = 0;
+        int stackOut_111_3 = 0;
         qj stackOut_113_0 = null;
         qj stackOut_113_1 = null;
         int stackOut_113_2 = 0;
         int stackOut_113_3 = 0;
-        qj stackOut_115_0 = null;
-        qj stackOut_115_1 = null;
-        int stackOut_115_2 = 0;
-        int stackOut_115_3 = 0;
-        int stackOut_115_4 = 0;
-        qj stackOut_114_0 = null;
-        qj stackOut_114_1 = null;
-        int stackOut_114_2 = 0;
-        int stackOut_114_3 = 0;
-        int stackOut_114_4 = 0;
+        int stackOut_113_4 = 0;
+        qj stackOut_112_0 = null;
+        qj stackOut_112_1 = null;
+        int stackOut_112_2 = 0;
+        int stackOut_112_3 = 0;
+        int stackOut_112_4 = 0;
+        hu stackOut_115_0 = null;
+        String stackOut_115_1 = null;
+        qj stackOut_115_2 = null;
         hu stackOut_117_0 = null;
         String stackOut_117_1 = null;
         qj stackOut_117_2 = null;
-        hu stackOut_119_0 = null;
-        String stackOut_119_1 = null;
-        qj stackOut_119_2 = null;
-        int stackOut_119_3 = 0;
-        hu stackOut_118_0 = null;
-        String stackOut_118_1 = null;
-        qj stackOut_118_2 = null;
-        int stackOut_118_3 = 0;
+        int stackOut_117_3 = 0;
+        hu stackOut_116_0 = null;
+        String stackOut_116_1 = null;
+        qj stackOut_116_2 = null;
+        int stackOut_116_3 = 0;
         qj stackOut_99_0 = null;
         qj stackOut_99_1 = null;
         int stackOut_99_2 = 0;
@@ -416,56 +416,56 @@ final class st extends iq {
         String stackOut_104_1 = null;
         qj stackOut_104_2 = null;
         int stackOut_104_3 = 0;
-        qj stackOut_84_0 = null;
-        qj stackOut_84_1 = null;
-        int stackOut_84_2 = 0;
-        int stackOut_84_3 = 0;
         qj stackOut_86_0 = null;
         qj stackOut_86_1 = null;
         int stackOut_86_2 = 0;
         int stackOut_86_3 = 0;
-        int stackOut_86_4 = 0;
-        qj stackOut_85_0 = null;
-        qj stackOut_85_1 = null;
-        int stackOut_85_2 = 0;
-        int stackOut_85_3 = 0;
-        int stackOut_85_4 = 0;
-        hu stackOut_88_0 = null;
-        String stackOut_88_1 = null;
-        qj stackOut_88_2 = null;
+        qj stackOut_88_0 = null;
+        qj stackOut_88_1 = null;
+        int stackOut_88_2 = 0;
+        int stackOut_88_3 = 0;
+        int stackOut_88_4 = 0;
+        qj stackOut_87_0 = null;
+        qj stackOut_87_1 = null;
+        int stackOut_87_2 = 0;
+        int stackOut_87_3 = 0;
+        int stackOut_87_4 = 0;
         hu stackOut_90_0 = null;
         String stackOut_90_1 = null;
         qj stackOut_90_2 = null;
-        int stackOut_90_3 = 0;
-        hu stackOut_89_0 = null;
-        String stackOut_89_1 = null;
-        qj stackOut_89_2 = null;
-        int stackOut_89_3 = 0;
-        qj stackOut_72_0 = null;
-        qj stackOut_72_1 = null;
-        int stackOut_72_2 = 0;
-        int stackOut_72_3 = 0;
-        qj stackOut_74_0 = null;
-        qj stackOut_74_1 = null;
-        int stackOut_74_2 = 0;
-        int stackOut_74_3 = 0;
-        int stackOut_74_4 = 0;
+        hu stackOut_92_0 = null;
+        String stackOut_92_1 = null;
+        qj stackOut_92_2 = null;
+        int stackOut_92_3 = 0;
+        hu stackOut_91_0 = null;
+        String stackOut_91_1 = null;
+        qj stackOut_91_2 = null;
+        int stackOut_91_3 = 0;
+        qj stackOut_71_0 = null;
+        qj stackOut_71_1 = null;
+        int stackOut_71_2 = 0;
+        int stackOut_71_3 = 0;
         qj stackOut_73_0 = null;
         qj stackOut_73_1 = null;
         int stackOut_73_2 = 0;
         int stackOut_73_3 = 0;
         int stackOut_73_4 = 0;
-        hu stackOut_76_0 = null;
-        String stackOut_76_1 = null;
-        qj stackOut_76_2 = null;
-        hu stackOut_78_0 = null;
-        String stackOut_78_1 = null;
-        qj stackOut_78_2 = null;
-        int stackOut_78_3 = 0;
+        qj stackOut_72_0 = null;
+        qj stackOut_72_1 = null;
+        int stackOut_72_2 = 0;
+        int stackOut_72_3 = 0;
+        int stackOut_72_4 = 0;
+        hu stackOut_75_0 = null;
+        String stackOut_75_1 = null;
+        qj stackOut_75_2 = null;
         hu stackOut_77_0 = null;
         String stackOut_77_1 = null;
         qj stackOut_77_2 = null;
         int stackOut_77_3 = 0;
+        hu stackOut_76_0 = null;
+        String stackOut_76_1 = null;
+        qj stackOut_76_2 = null;
+        int stackOut_76_3 = 0;
         L0: {
           var15 = Kickabout.field_G;
           if (param7 != 0) {
@@ -504,7 +504,9 @@ final class st extends iq {
                           if (((st) this).field_p == null) {
                             break L1;
                           } else {
-                            if (!((st) this).field_p.equals((Object) (Object) param6)) {
+                            if (((st) this).field_p.equals((Object) (Object) param6)) {
+                              return;
+                            } else {
                               ((st) this).field_i = param7;
                               ((st) this).field_h = false;
                               ((st) this).field_n = param2;
@@ -517,11 +519,9 @@ final class st extends iq {
                               var16 = var19;
                               var18 = var19;
                               var10 = Math.max(1, param1.a(param6, new int[1], var18));
-                              if (param5 < 89) {
-                                return;
-                              } else {
+                              if (param5 >= 89) {
                                 L2: {
-                                  if (((st) this).field_n != -4) {
+                                  if ((((st) this).field_n ^ -1) != -4) {
                                     break L2;
                                   } else {
                                     if (var10 != 1) {
@@ -534,7 +534,7 @@ final class st extends iq {
                                 }
                                 L3: {
                                   ((st) this).field_c = new qj[var10];
-                                  if (-1 != ((st) this).field_n) {
+                                  if (-1 != (((st) this).field_n ^ -1)) {
                                     if (((st) this).field_n == 1) {
                                       var11 = (((st) this).field_k + -(var10 * ((st) this).field_i) >> -137005791) + param1.field_G;
                                       break L3;
@@ -608,8 +608,7 @@ final class st extends iq {
                                       }
                                     }
                                     L7: {
-                                      new qj(stackIn_33_2, stackIn_33_3, stackIn_33_4);
-                                      var21 = stackIn_33_0;
+                                      var21 = new qj(stackIn_33_2, stackIn_33_3, stackIn_33_4);
                                       var21.field_b[0] = 0;
                                       if (var20 == null) {
                                         break L7;
@@ -657,9 +656,9 @@ final class st extends iq {
                                     continue L5;
                                   }
                                 }
+                              } else {
+                                return;
                               }
-                            } else {
-                              return;
                             }
                           }
                         }
@@ -684,7 +683,7 @@ final class st extends iq {
           var10 = Math.max(1, param1.a(param6, new int[1], var22));
           if (param5 >= 89) {
             L9: {
-              if (((st) this).field_n != -4) {
+              if ((((st) this).field_n ^ -1) != -4) {
                 break L9;
               } else {
                 if (var10 != 1) {
@@ -693,7 +692,7 @@ final class st extends iq {
                   L10: {
                     ((st) this).field_n = 1;
                     ((st) this).field_c = new qj[var10];
-                    if (-1 != ((st) this).field_n) {
+                    if (-1 != (((st) this).field_n ^ -1)) {
                       if (((st) this).field_n == 1) {
                         var11 = (((st) this).field_k + -(var10 * ((st) this).field_i) >> -137005791) + param1.field_G;
                         break L10;
@@ -728,85 +727,84 @@ final class st extends iq {
                     } else {
                       L13: {
                         var24 = var23[var12];
-                        stackOut_57_0 = null;
-                        stackOut_57_1 = null;
-                        stackOut_57_2 = -param1.field_G + var11;
-                        stackOut_57_3 = var11 + param1.field_p;
-                        stackIn_59_0 = stackOut_57_0;
-                        stackIn_59_1 = stackOut_57_1;
-                        stackIn_59_2 = stackOut_57_2;
-                        stackIn_59_3 = stackOut_57_3;
-                        stackIn_58_0 = stackOut_57_0;
-                        stackIn_58_1 = stackOut_57_1;
-                        stackIn_58_2 = stackOut_57_2;
-                        stackIn_58_3 = stackOut_57_3;
+                        stackOut_56_0 = null;
+                        stackOut_56_1 = null;
+                        stackOut_56_2 = -param1.field_G + var11;
+                        stackOut_56_3 = var11 + param1.field_p;
+                        stackIn_58_0 = stackOut_56_0;
+                        stackIn_58_1 = stackOut_56_1;
+                        stackIn_58_2 = stackOut_56_2;
+                        stackIn_58_3 = stackOut_56_3;
+                        stackIn_57_0 = stackOut_56_0;
+                        stackIn_57_1 = stackOut_56_1;
+                        stackIn_57_2 = stackOut_56_2;
+                        stackIn_57_3 = stackOut_56_3;
                         if (var24 == null) {
-                          stackOut_59_0 = null;
-                          stackOut_59_1 = null;
-                          stackOut_59_2 = stackIn_59_2;
-                          stackOut_59_3 = stackIn_59_3;
-                          stackOut_59_4 = 0;
-                          stackIn_60_0 = stackOut_59_0;
-                          stackIn_60_1 = stackOut_59_1;
-                          stackIn_60_2 = stackOut_59_2;
-                          stackIn_60_3 = stackOut_59_3;
-                          stackIn_60_4 = stackOut_59_4;
-                          break L13;
-                        } else {
                           stackOut_58_0 = null;
                           stackOut_58_1 = null;
                           stackOut_58_2 = stackIn_58_2;
                           stackOut_58_3 = stackIn_58_3;
-                          stackOut_58_4 = var24.length();
-                          stackIn_60_0 = stackOut_58_0;
-                          stackIn_60_1 = stackOut_58_1;
-                          stackIn_60_2 = stackOut_58_2;
-                          stackIn_60_3 = stackOut_58_3;
-                          stackIn_60_4 = stackOut_58_4;
+                          stackOut_58_4 = 0;
+                          stackIn_59_0 = stackOut_58_0;
+                          stackIn_59_1 = stackOut_58_1;
+                          stackIn_59_2 = stackOut_58_2;
+                          stackIn_59_3 = stackOut_58_3;
+                          stackIn_59_4 = stackOut_58_4;
+                          break L13;
+                        } else {
+                          stackOut_57_0 = null;
+                          stackOut_57_1 = null;
+                          stackOut_57_2 = stackIn_57_2;
+                          stackOut_57_3 = stackIn_57_3;
+                          stackOut_57_4 = var24.length();
+                          stackIn_59_0 = stackOut_57_0;
+                          stackIn_59_1 = stackOut_57_1;
+                          stackIn_59_2 = stackOut_57_2;
+                          stackIn_59_3 = stackOut_57_3;
+                          stackIn_59_4 = stackOut_57_4;
                           break L13;
                         }
                       }
                       L14: {
-                        new qj(stackIn_60_2, stackIn_60_3, stackIn_60_4);
-                        var25 = stackIn_60_0;
+                        var25 = new qj(stackIn_59_2, stackIn_59_3, stackIn_59_4);
                         var25.field_b[0] = 0;
                         if (var24 == null) {
                           break L14;
                         } else {
                           L15: {
                             var25.field_b[var24.length()] = param1.a(var24);
-                            stackOut_61_0 = (hu) param1;
-                            stackOut_61_1 = (String) var24;
-                            stackOut_61_2 = (qj) var25;
-                            stackIn_63_0 = stackOut_61_0;
-                            stackIn_63_1 = stackOut_61_1;
-                            stackIn_63_2 = stackOut_61_2;
-                            stackIn_62_0 = stackOut_61_0;
-                            stackIn_62_1 = stackOut_61_1;
-                            stackIn_62_2 = stackOut_61_2;
+                            stackOut_60_0 = (hu) param1;
+                            stackOut_60_1 = (String) var24;
+                            stackOut_60_2 = (qj) var25;
+                            stackIn_62_0 = stackOut_60_0;
+                            stackIn_62_1 = stackOut_60_1;
+                            stackIn_62_2 = stackOut_60_2;
+                            stackIn_61_0 = stackOut_60_0;
+                            stackIn_61_1 = stackOut_60_1;
+                            stackIn_61_2 = stackOut_60_2;
                             if ((param4 ^ -1) == -4) {
-                              stackOut_63_0 = (hu) (Object) stackIn_63_0;
-                              stackOut_63_1 = (String) (Object) stackIn_63_1;
-                              stackOut_63_2 = (qj) (Object) stackIn_63_2;
-                              stackOut_63_3 = ((st) this).a(param0, -61, param1.a(var24), var24);
-                              stackIn_64_0 = stackOut_63_0;
-                              stackIn_64_1 = stackOut_63_1;
-                              stackIn_64_2 = stackOut_63_2;
-                              stackIn_64_3 = stackOut_63_3;
-                              break L15;
-                            } else {
                               stackOut_62_0 = (hu) (Object) stackIn_62_0;
                               stackOut_62_1 = (String) (Object) stackIn_62_1;
                               stackOut_62_2 = (qj) (Object) stackIn_62_2;
-                              stackOut_62_3 = 0;
-                              stackIn_64_0 = stackOut_62_0;
-                              stackIn_64_1 = stackOut_62_1;
-                              stackIn_64_2 = stackOut_62_2;
-                              stackIn_64_3 = stackOut_62_3;
+                              stackOut_62_3 = ((st) this).a(param0, -61, param1.a(var24), var24);
+                              stackIn_63_0 = stackOut_62_0;
+                              stackIn_63_1 = stackOut_62_1;
+                              stackIn_63_2 = stackOut_62_2;
+                              stackIn_63_3 = stackOut_62_3;
+                              break L15;
+                            } else {
+                              stackOut_61_0 = (hu) (Object) stackIn_61_0;
+                              stackOut_61_1 = (String) (Object) stackIn_61_1;
+                              stackOut_61_2 = (qj) (Object) stackIn_61_2;
+                              stackOut_61_3 = 0;
+                              stackIn_63_0 = stackOut_61_0;
+                              stackIn_63_1 = stackOut_61_1;
+                              stackIn_63_2 = stackOut_61_2;
+                              stackIn_63_3 = stackOut_61_3;
                               break L15;
                             }
                           }
-                          is.a(stackIn_64_0, stackIn_64_1, stackIn_64_2, stackIn_64_3, -1942293368);
+                          is.a(stackIn_63_0, stackIn_63_1, stackIn_63_2, stackIn_63_3, -1942293368);
                           break L14;
                         }
                       }
@@ -821,105 +819,104 @@ final class st extends iq {
             }
             ((st) this).field_c = new qj[var10];
             if (-1 != (((st) this).field_n ^ -1)) {
-              if (((st) this).field_n != 1) {
-                if ((((st) this).field_n ^ -1) == -3) {
-                  var11 = -param1.field_p + ((st) this).field_k + -(var10 * ((st) this).field_i);
-                  var12 = 0;
-                  L16: while (true) {
-                    if (var10 > var12) {
-                      L17: {
-                        var38 = var23[var12];
+              if (((st) this).field_n == 1) {
+                var11 = (((st) this).field_k + -(var10 * ((st) this).field_i) >> -137005791) + param1.field_G;
+                var12 = 0;
+                L16: while (true) {
+                  if (var10 <= var12) {
+                    return;
+                  } else {
+                    L17: {
+                      var42 = var23[var12];
+                      stackOut_111_0 = null;
+                      stackOut_111_1 = null;
+                      stackOut_111_2 = -param1.field_G + var11;
+                      stackOut_111_3 = var11 + param1.field_p;
+                      stackIn_113_0 = stackOut_111_0;
+                      stackIn_113_1 = stackOut_111_1;
+                      stackIn_113_2 = stackOut_111_2;
+                      stackIn_113_3 = stackOut_111_3;
+                      stackIn_112_0 = stackOut_111_0;
+                      stackIn_112_1 = stackOut_111_1;
+                      stackIn_112_2 = stackOut_111_2;
+                      stackIn_112_3 = stackOut_111_3;
+                      if (var42 == null) {
                         stackOut_113_0 = null;
                         stackOut_113_1 = null;
-                        stackOut_113_2 = -param1.field_G + var11;
-                        stackOut_113_3 = var11 + param1.field_p;
-                        stackIn_115_0 = stackOut_113_0;
-                        stackIn_115_1 = stackOut_113_1;
-                        stackIn_115_2 = stackOut_113_2;
-                        stackIn_115_3 = stackOut_113_3;
+                        stackOut_113_2 = stackIn_113_2;
+                        stackOut_113_3 = stackIn_113_3;
+                        stackOut_113_4 = 0;
                         stackIn_114_0 = stackOut_113_0;
                         stackIn_114_1 = stackOut_113_1;
                         stackIn_114_2 = stackOut_113_2;
                         stackIn_114_3 = stackOut_113_3;
-                        if (var38 == null) {
-                          stackOut_115_0 = null;
-                          stackOut_115_1 = null;
-                          stackOut_115_2 = stackIn_115_2;
-                          stackOut_115_3 = stackIn_115_3;
-                          stackOut_115_4 = 0;
+                        stackIn_114_4 = stackOut_113_4;
+                        break L17;
+                      } else {
+                        stackOut_112_0 = null;
+                        stackOut_112_1 = null;
+                        stackOut_112_2 = stackIn_112_2;
+                        stackOut_112_3 = stackIn_112_3;
+                        stackOut_112_4 = var42.length();
+                        stackIn_114_0 = stackOut_112_0;
+                        stackIn_114_1 = stackOut_112_1;
+                        stackIn_114_2 = stackOut_112_2;
+                        stackIn_114_3 = stackOut_112_3;
+                        stackIn_114_4 = stackOut_112_4;
+                        break L17;
+                      }
+                    }
+                    L18: {
+                      var43 = new qj(stackIn_114_2, stackIn_114_3, stackIn_114_4);
+                      var43.field_b[0] = 0;
+                      if (var42 == null) {
+                        break L18;
+                      } else {
+                        L19: {
+                          var43.field_b[var42.length()] = param1.a(var42);
+                          stackOut_115_0 = (hu) param1;
+                          stackOut_115_1 = (String) var42;
+                          stackOut_115_2 = (qj) var43;
+                          stackIn_117_0 = stackOut_115_0;
+                          stackIn_117_1 = stackOut_115_1;
+                          stackIn_117_2 = stackOut_115_2;
                           stackIn_116_0 = stackOut_115_0;
                           stackIn_116_1 = stackOut_115_1;
                           stackIn_116_2 = stackOut_115_2;
-                          stackIn_116_3 = stackOut_115_3;
-                          stackIn_116_4 = stackOut_115_4;
-                          break L17;
-                        } else {
-                          stackOut_114_0 = null;
-                          stackOut_114_1 = null;
-                          stackOut_114_2 = stackIn_114_2;
-                          stackOut_114_3 = stackIn_114_3;
-                          stackOut_114_4 = var38.length();
-                          stackIn_116_0 = stackOut_114_0;
-                          stackIn_116_1 = stackOut_114_1;
-                          stackIn_116_2 = stackOut_114_2;
-                          stackIn_116_3 = stackOut_114_3;
-                          stackIn_116_4 = stackOut_114_4;
-                          break L17;
-                        }
-                      }
-                      L18: {
-                        new qj(stackIn_116_2, stackIn_116_3, stackIn_116_4);
-                        var39 = stackIn_116_0;
-                        var39.field_b[0] = 0;
-                        if (var38 == null) {
-                          break L18;
-                        } else {
-                          L19: {
-                            var39.field_b[var38.length()] = param1.a(var38);
-                            stackOut_117_0 = (hu) param1;
-                            stackOut_117_1 = (String) var38;
-                            stackOut_117_2 = (qj) var39;
-                            stackIn_119_0 = stackOut_117_0;
-                            stackIn_119_1 = stackOut_117_1;
-                            stackIn_119_2 = stackOut_117_2;
+                          if ((param4 ^ -1) == -4) {
+                            stackOut_117_0 = (hu) (Object) stackIn_117_0;
+                            stackOut_117_1 = (String) (Object) stackIn_117_1;
+                            stackOut_117_2 = (qj) (Object) stackIn_117_2;
+                            stackOut_117_3 = ((st) this).a(param0, -61, param1.a(var42), var42);
                             stackIn_118_0 = stackOut_117_0;
                             stackIn_118_1 = stackOut_117_1;
                             stackIn_118_2 = stackOut_117_2;
-                            if ((param4 ^ -1) == -4) {
-                              stackOut_119_0 = (hu) (Object) stackIn_119_0;
-                              stackOut_119_1 = (String) (Object) stackIn_119_1;
-                              stackOut_119_2 = (qj) (Object) stackIn_119_2;
-                              stackOut_119_3 = ((st) this).a(param0, -61, param1.a(var38), var38);
-                              stackIn_120_0 = stackOut_119_0;
-                              stackIn_120_1 = stackOut_119_1;
-                              stackIn_120_2 = stackOut_119_2;
-                              stackIn_120_3 = stackOut_119_3;
-                              break L19;
-                            } else {
-                              stackOut_118_0 = (hu) (Object) stackIn_118_0;
-                              stackOut_118_1 = (String) (Object) stackIn_118_1;
-                              stackOut_118_2 = (qj) (Object) stackIn_118_2;
-                              stackOut_118_3 = 0;
-                              stackIn_120_0 = stackOut_118_0;
-                              stackIn_120_1 = stackOut_118_1;
-                              stackIn_120_2 = stackOut_118_2;
-                              stackIn_120_3 = stackOut_118_3;
-                              break L19;
-                            }
+                            stackIn_118_3 = stackOut_117_3;
+                            break L19;
+                          } else {
+                            stackOut_116_0 = (hu) (Object) stackIn_116_0;
+                            stackOut_116_1 = (String) (Object) stackIn_116_1;
+                            stackOut_116_2 = (qj) (Object) stackIn_116_2;
+                            stackOut_116_3 = 0;
+                            stackIn_118_0 = stackOut_116_0;
+                            stackIn_118_1 = stackOut_116_1;
+                            stackIn_118_2 = stackOut_116_2;
+                            stackIn_118_3 = stackOut_116_3;
+                            break L19;
                           }
-                          is.a(stackIn_120_0, stackIn_120_1, stackIn_120_2, stackIn_120_3, -1942293368);
-                          break L18;
                         }
+                        is.a(stackIn_118_0, stackIn_118_1, stackIn_118_2, stackIn_118_3, -1942293368);
+                        break L18;
                       }
-                      var11 = var11 + param7;
-                      ((st) this).field_c[var12] = var39;
-                      var12++;
-                      continue L16;
-                    } else {
-                      return;
                     }
+                    var11 = var11 + param7;
+                    ((st) this).field_c[var12] = var43;
+                    var12++;
+                    continue L16;
                   }
-                } else {
+                }
+              } else {
+                if ((((st) this).field_n ^ -1) != -3) {
                   L20: {
                     var12 = (((st) this).field_k - var10 * ((st) this).field_i) / (1 + var10);
                     if (0 <= var12) {
@@ -977,8 +974,7 @@ final class st extends iq {
                         }
                       }
                       L23: {
-                        new qj(stackIn_102_2, stackIn_102_3, stackIn_102_4);
-                        var41 = stackIn_102_0;
+                        var41 = new qj(stackIn_102_2, stackIn_102_3, stackIn_102_4);
                         var41.field_b[0] = 0;
                         if (var40 == null) {
                           break L23;
@@ -1026,102 +1022,101 @@ final class st extends iq {
                       continue L21;
                     }
                   }
-                }
-              } else {
-                var11 = (((st) this).field_k + -(var10 * ((st) this).field_i) >> -137005791) + param1.field_G;
-                var12 = 0;
-                L25: while (true) {
-                  if (var10 <= var12) {
-                    return;
-                  } else {
-                    L26: {
-                      var42 = var23[var12];
-                      stackOut_84_0 = null;
-                      stackOut_84_1 = null;
-                      stackOut_84_2 = -param1.field_G + var11;
-                      stackOut_84_3 = var11 + param1.field_p;
-                      stackIn_86_0 = stackOut_84_0;
-                      stackIn_86_1 = stackOut_84_1;
-                      stackIn_86_2 = stackOut_84_2;
-                      stackIn_86_3 = stackOut_84_3;
-                      stackIn_85_0 = stackOut_84_0;
-                      stackIn_85_1 = stackOut_84_1;
-                      stackIn_85_2 = stackOut_84_2;
-                      stackIn_85_3 = stackOut_84_3;
-                      if (var42 == null) {
+                } else {
+                  var11 = -param1.field_p + ((st) this).field_k + -(var10 * ((st) this).field_i);
+                  var12 = 0;
+                  L25: while (true) {
+                    if (var10 > var12) {
+                      L26: {
+                        var38 = var23[var12];
                         stackOut_86_0 = null;
                         stackOut_86_1 = null;
-                        stackOut_86_2 = stackIn_86_2;
-                        stackOut_86_3 = stackIn_86_3;
-                        stackOut_86_4 = 0;
+                        stackOut_86_2 = -param1.field_G + var11;
+                        stackOut_86_3 = var11 + param1.field_p;
+                        stackIn_88_0 = stackOut_86_0;
+                        stackIn_88_1 = stackOut_86_1;
+                        stackIn_88_2 = stackOut_86_2;
+                        stackIn_88_3 = stackOut_86_3;
                         stackIn_87_0 = stackOut_86_0;
                         stackIn_87_1 = stackOut_86_1;
                         stackIn_87_2 = stackOut_86_2;
                         stackIn_87_3 = stackOut_86_3;
-                        stackIn_87_4 = stackOut_86_4;
-                        break L26;
-                      } else {
-                        stackOut_85_0 = null;
-                        stackOut_85_1 = null;
-                        stackOut_85_2 = stackIn_85_2;
-                        stackOut_85_3 = stackIn_85_3;
-                        stackOut_85_4 = var42.length();
-                        stackIn_87_0 = stackOut_85_0;
-                        stackIn_87_1 = stackOut_85_1;
-                        stackIn_87_2 = stackOut_85_2;
-                        stackIn_87_3 = stackOut_85_3;
-                        stackIn_87_4 = stackOut_85_4;
-                        break L26;
-                      }
-                    }
-                    L27: {
-                      new qj(stackIn_87_2, stackIn_87_3, stackIn_87_4);
-                      var43 = stackIn_87_0;
-                      var43.field_b[0] = 0;
-                      if (var42 == null) {
-                        break L27;
-                      } else {
-                        L28: {
-                          var43.field_b[var42.length()] = param1.a(var42);
-                          stackOut_88_0 = (hu) param1;
-                          stackOut_88_1 = (String) var42;
-                          stackOut_88_2 = (qj) var43;
-                          stackIn_90_0 = stackOut_88_0;
-                          stackIn_90_1 = stackOut_88_1;
-                          stackIn_90_2 = stackOut_88_2;
+                        if (var38 == null) {
+                          stackOut_88_0 = null;
+                          stackOut_88_1 = null;
+                          stackOut_88_2 = stackIn_88_2;
+                          stackOut_88_3 = stackIn_88_3;
+                          stackOut_88_4 = 0;
                           stackIn_89_0 = stackOut_88_0;
                           stackIn_89_1 = stackOut_88_1;
                           stackIn_89_2 = stackOut_88_2;
-                          if ((param4 ^ -1) == -4) {
-                            stackOut_90_0 = (hu) (Object) stackIn_90_0;
-                            stackOut_90_1 = (String) (Object) stackIn_90_1;
-                            stackOut_90_2 = (qj) (Object) stackIn_90_2;
-                            stackOut_90_3 = ((st) this).a(param0, -61, param1.a(var42), var42);
+                          stackIn_89_3 = stackOut_88_3;
+                          stackIn_89_4 = stackOut_88_4;
+                          break L26;
+                        } else {
+                          stackOut_87_0 = null;
+                          stackOut_87_1 = null;
+                          stackOut_87_2 = stackIn_87_2;
+                          stackOut_87_3 = stackIn_87_3;
+                          stackOut_87_4 = var38.length();
+                          stackIn_89_0 = stackOut_87_0;
+                          stackIn_89_1 = stackOut_87_1;
+                          stackIn_89_2 = stackOut_87_2;
+                          stackIn_89_3 = stackOut_87_3;
+                          stackIn_89_4 = stackOut_87_4;
+                          break L26;
+                        }
+                      }
+                      L27: {
+                        var39 = new qj(stackIn_89_2, stackIn_89_3, stackIn_89_4);
+                        var39.field_b[0] = 0;
+                        if (var38 == null) {
+                          break L27;
+                        } else {
+                          L28: {
+                            var39.field_b[var38.length()] = param1.a(var38);
+                            stackOut_90_0 = (hu) param1;
+                            stackOut_90_1 = (String) var38;
+                            stackOut_90_2 = (qj) var39;
+                            stackIn_92_0 = stackOut_90_0;
+                            stackIn_92_1 = stackOut_90_1;
+                            stackIn_92_2 = stackOut_90_2;
                             stackIn_91_0 = stackOut_90_0;
                             stackIn_91_1 = stackOut_90_1;
                             stackIn_91_2 = stackOut_90_2;
-                            stackIn_91_3 = stackOut_90_3;
-                            break L28;
-                          } else {
-                            stackOut_89_0 = (hu) (Object) stackIn_89_0;
-                            stackOut_89_1 = (String) (Object) stackIn_89_1;
-                            stackOut_89_2 = (qj) (Object) stackIn_89_2;
-                            stackOut_89_3 = 0;
-                            stackIn_91_0 = stackOut_89_0;
-                            stackIn_91_1 = stackOut_89_1;
-                            stackIn_91_2 = stackOut_89_2;
-                            stackIn_91_3 = stackOut_89_3;
-                            break L28;
+                            if ((param4 ^ -1) == -4) {
+                              stackOut_92_0 = (hu) (Object) stackIn_92_0;
+                              stackOut_92_1 = (String) (Object) stackIn_92_1;
+                              stackOut_92_2 = (qj) (Object) stackIn_92_2;
+                              stackOut_92_3 = ((st) this).a(param0, -61, param1.a(var38), var38);
+                              stackIn_93_0 = stackOut_92_0;
+                              stackIn_93_1 = stackOut_92_1;
+                              stackIn_93_2 = stackOut_92_2;
+                              stackIn_93_3 = stackOut_92_3;
+                              break L28;
+                            } else {
+                              stackOut_91_0 = (hu) (Object) stackIn_91_0;
+                              stackOut_91_1 = (String) (Object) stackIn_91_1;
+                              stackOut_91_2 = (qj) (Object) stackIn_91_2;
+                              stackOut_91_3 = 0;
+                              stackIn_93_0 = stackOut_91_0;
+                              stackIn_93_1 = stackOut_91_1;
+                              stackIn_93_2 = stackOut_91_2;
+                              stackIn_93_3 = stackOut_91_3;
+                              break L28;
+                            }
                           }
+                          is.a(stackIn_93_0, stackIn_93_1, stackIn_93_2, stackIn_93_3, -1942293368);
+                          break L27;
                         }
-                        is.a(stackIn_91_0, stackIn_91_1, stackIn_91_2, stackIn_91_3, -1942293368);
-                        break L27;
                       }
+                      var11 = var11 + param7;
+                      ((st) this).field_c[var12] = var39;
+                      var12++;
+                      continue L25;
+                    } else {
+                      return;
                     }
-                    var11 = var11 + param7;
-                    ((st) this).field_c[var12] = var43;
-                    var12++;
-                    continue L25;
                   }
                 }
               }
@@ -1132,85 +1127,84 @@ final class st extends iq {
                 if (var10 > var12) {
                   L30: {
                     var32 = var23[var12];
-                    stackOut_72_0 = null;
-                    stackOut_72_1 = null;
-                    stackOut_72_2 = -param1.field_G + var11;
-                    stackOut_72_3 = var11 + param1.field_p;
-                    stackIn_74_0 = stackOut_72_0;
-                    stackIn_74_1 = stackOut_72_1;
-                    stackIn_74_2 = stackOut_72_2;
-                    stackIn_74_3 = stackOut_72_3;
-                    stackIn_73_0 = stackOut_72_0;
-                    stackIn_73_1 = stackOut_72_1;
-                    stackIn_73_2 = stackOut_72_2;
-                    stackIn_73_3 = stackOut_72_3;
+                    stackOut_71_0 = null;
+                    stackOut_71_1 = null;
+                    stackOut_71_2 = -param1.field_G + var11;
+                    stackOut_71_3 = var11 + param1.field_p;
+                    stackIn_73_0 = stackOut_71_0;
+                    stackIn_73_1 = stackOut_71_1;
+                    stackIn_73_2 = stackOut_71_2;
+                    stackIn_73_3 = stackOut_71_3;
+                    stackIn_72_0 = stackOut_71_0;
+                    stackIn_72_1 = stackOut_71_1;
+                    stackIn_72_2 = stackOut_71_2;
+                    stackIn_72_3 = stackOut_71_3;
                     if (var32 == null) {
-                      stackOut_74_0 = null;
-                      stackOut_74_1 = null;
-                      stackOut_74_2 = stackIn_74_2;
-                      stackOut_74_3 = stackIn_74_3;
-                      stackOut_74_4 = 0;
-                      stackIn_75_0 = stackOut_74_0;
-                      stackIn_75_1 = stackOut_74_1;
-                      stackIn_75_2 = stackOut_74_2;
-                      stackIn_75_3 = stackOut_74_3;
-                      stackIn_75_4 = stackOut_74_4;
-                      break L30;
-                    } else {
                       stackOut_73_0 = null;
                       stackOut_73_1 = null;
                       stackOut_73_2 = stackIn_73_2;
                       stackOut_73_3 = stackIn_73_3;
-                      stackOut_73_4 = var32.length();
-                      stackIn_75_0 = stackOut_73_0;
-                      stackIn_75_1 = stackOut_73_1;
-                      stackIn_75_2 = stackOut_73_2;
-                      stackIn_75_3 = stackOut_73_3;
-                      stackIn_75_4 = stackOut_73_4;
+                      stackOut_73_4 = 0;
+                      stackIn_74_0 = stackOut_73_0;
+                      stackIn_74_1 = stackOut_73_1;
+                      stackIn_74_2 = stackOut_73_2;
+                      stackIn_74_3 = stackOut_73_3;
+                      stackIn_74_4 = stackOut_73_4;
+                      break L30;
+                    } else {
+                      stackOut_72_0 = null;
+                      stackOut_72_1 = null;
+                      stackOut_72_2 = stackIn_72_2;
+                      stackOut_72_3 = stackIn_72_3;
+                      stackOut_72_4 = var32.length();
+                      stackIn_74_0 = stackOut_72_0;
+                      stackIn_74_1 = stackOut_72_1;
+                      stackIn_74_2 = stackOut_72_2;
+                      stackIn_74_3 = stackOut_72_3;
+                      stackIn_74_4 = stackOut_72_4;
                       break L30;
                     }
                   }
                   L31: {
-                    new qj(stackIn_75_2, stackIn_75_3, stackIn_75_4);
-                    var33 = stackIn_75_0;
+                    var33 = new qj(stackIn_74_2, stackIn_74_3, stackIn_74_4);
                     var33.field_b[0] = 0;
                     if (var32 == null) {
                       break L31;
                     } else {
                       L32: {
                         var33.field_b[var32.length()] = param1.a(var32);
-                        stackOut_76_0 = (hu) param1;
-                        stackOut_76_1 = (String) var32;
-                        stackOut_76_2 = (qj) var33;
-                        stackIn_78_0 = stackOut_76_0;
-                        stackIn_78_1 = stackOut_76_1;
-                        stackIn_78_2 = stackOut_76_2;
-                        stackIn_77_0 = stackOut_76_0;
-                        stackIn_77_1 = stackOut_76_1;
-                        stackIn_77_2 = stackOut_76_2;
+                        stackOut_75_0 = (hu) param1;
+                        stackOut_75_1 = (String) var32;
+                        stackOut_75_2 = (qj) var33;
+                        stackIn_77_0 = stackOut_75_0;
+                        stackIn_77_1 = stackOut_75_1;
+                        stackIn_77_2 = stackOut_75_2;
+                        stackIn_76_0 = stackOut_75_0;
+                        stackIn_76_1 = stackOut_75_1;
+                        stackIn_76_2 = stackOut_75_2;
                         if ((param4 ^ -1) == -4) {
-                          stackOut_78_0 = (hu) (Object) stackIn_78_0;
-                          stackOut_78_1 = (String) (Object) stackIn_78_1;
-                          stackOut_78_2 = (qj) (Object) stackIn_78_2;
-                          stackOut_78_3 = ((st) this).a(param0, -61, param1.a(var32), var32);
-                          stackIn_79_0 = stackOut_78_0;
-                          stackIn_79_1 = stackOut_78_1;
-                          stackIn_79_2 = stackOut_78_2;
-                          stackIn_79_3 = stackOut_78_3;
-                          break L32;
-                        } else {
                           stackOut_77_0 = (hu) (Object) stackIn_77_0;
                           stackOut_77_1 = (String) (Object) stackIn_77_1;
                           stackOut_77_2 = (qj) (Object) stackIn_77_2;
-                          stackOut_77_3 = 0;
-                          stackIn_79_0 = stackOut_77_0;
-                          stackIn_79_1 = stackOut_77_1;
-                          stackIn_79_2 = stackOut_77_2;
-                          stackIn_79_3 = stackOut_77_3;
+                          stackOut_77_3 = ((st) this).a(param0, -61, param1.a(var32), var32);
+                          stackIn_78_0 = stackOut_77_0;
+                          stackIn_78_1 = stackOut_77_1;
+                          stackIn_78_2 = stackOut_77_2;
+                          stackIn_78_3 = stackOut_77_3;
+                          break L32;
+                        } else {
+                          stackOut_76_0 = (hu) (Object) stackIn_76_0;
+                          stackOut_76_1 = (String) (Object) stackIn_76_1;
+                          stackOut_76_2 = (qj) (Object) stackIn_76_2;
+                          stackOut_76_3 = 0;
+                          stackIn_78_0 = stackOut_76_0;
+                          stackIn_78_1 = stackOut_76_1;
+                          stackIn_78_2 = stackOut_76_2;
+                          stackIn_78_3 = stackOut_76_3;
                           break L32;
                         }
                       }
-                      is.a(stackIn_79_0, stackIn_79_1, stackIn_79_2, stackIn_79_3, -1942293368);
+                      is.a(stackIn_78_0, stackIn_78_1, stackIn_78_2, stackIn_78_3, -1942293368);
                       break L31;
                     }
                   }

@@ -45,7 +45,7 @@ final class fl {
         }
         L1: {
           var14 = 0;
-          if (mi.field_b > param2) {
+          if ((mi.field_b ^ -1) < (param2 ^ -1)) {
             var15 = -param2 + mi.field_b;
             var9 = var9 + var15;
             var14 = var14 + var15;
@@ -79,10 +79,10 @@ final class fl {
           }
         }
         L4: {
-          if (var12 >= -1) {
+          if ((var12 ^ -1) >= -1) {
             break L4;
           } else {
-            if (-1 < var11) {
+            if (-1 > (var11 ^ -1)) {
               param4 = -var11;
               L5: while (true) {
                 if (0 <= param4) {
@@ -97,37 +97,39 @@ final class fl {
                       param4++;
                       continue L5;
                     } else {
-                      var16 = var15 >> -85275064;
-                      var15 = var15 + var6;
-                      var17 = -var16 + 256;
-                      if (var16 >= 0) {
-                        var10++;
-                        var18 = param5.field_v[var10];
-                        if (-1 != (var18 ^ -1)) {
-                          if (255 >= var16) {
-                            var19 = mi.field_f[var9];
-                            var20 = (16711935 & var19) * var17 + var16 * (16711935 & var18) >> -1704501464 & 16711935;
-                            mi.field_f[var9] = fi.a(fi.a(var19, 65280) * var17 + fi.a(var18, 65280) * var16 >> 836634632, 65280) + var20;
-                            var9++;
-                            param2++;
-                            continue L6;
-                          } else {
-                            mi.field_f[var9] = var18;
-                            var9++;
-                            param2++;
-                            continue L6;
+                      L7: {
+                        var16 = var15 >> -85275064;
+                        var15 = var15 + var6;
+                        var17 = -var16 + 256;
+                        if (var16 >= 0) {
+                          L8: {
+                            int incrementValue$1 = var10;
+                            var10++;
+                            var18 = param5.field_v[incrementValue$1];
+                            if (-1 == (var18 ^ -1)) {
+                              break L8;
+                            } else {
+                              if (255 >= var16) {
+                                var19 = mi.field_f[var9];
+                                var20 = (16711935 & var19) * var17 + var16 * (16711935 & var18) >> -1704501464 & 16711935;
+                                mi.field_f[var9] = fi.a(fi.a(var19, 65280) * var17 + fi.a(var18, 65280) * var16 >> 836634632, 65280) + var20;
+                                break L8;
+                              } else {
+                                mi.field_f[var9] = var18;
+                                break L8;
+                              }
+                            }
                           }
+                          var9++;
+                          break L7;
                         } else {
                           var9++;
-                          param2++;
-                          continue L6;
+                          var10++;
+                          break L7;
                         }
-                      } else {
-                        var9++;
-                        var10++;
-                        param2++;
-                        continue L6;
                       }
+                      param2++;
+                      continue L6;
                     }
                   }
                 }
@@ -148,25 +150,27 @@ final class fl {
           if (param0 != 100) {
             break L0;
           } else {
-            if (-1 <= kk.field_e) {
+            if (-1 <= (kk.field_e ^ -1)) {
               break L0;
             } else {
+              int fieldTemp$3 = kk.field_e - 1;
               kk.field_e = kk.field_e - 1;
-              var2_ref_byte__ = ng.field_g[kk.field_e - 1];
+              var2_ref_byte__ = ng.field_g[fieldTemp$3];
               ng.field_g[kk.field_e] = null;
               return var2_ref_byte__;
             }
           }
         }
         L1: {
-          if (-5001 != param0) {
+          if (-5001 != (param0 ^ -1)) {
             break L1;
           } else {
             if (0 >= nf.field_V) {
               break L1;
             } else {
+              int fieldTemp$4 = nf.field_V - 1;
               nf.field_V = nf.field_V - 1;
-              var2_ref_byte__ = hc.field_e[nf.field_V - 1];
+              var2_ref_byte__ = hc.field_e[fieldTemp$4];
               hc.field_e[nf.field_V] = null;
               return var2_ref_byte__;
             }
@@ -186,8 +190,9 @@ final class fl {
             break L3;
           } else {
             if ((sf.field_c ^ -1) < -1) {
+              int fieldTemp$5 = sf.field_c - 1;
               sf.field_c = sf.field_c - 1;
-              var2_ref_byte__ = ef.field_d[sf.field_c - 1];
+              var2_ref_byte__ = ef.field_d[fieldTemp$5];
               ef.field_d[sf.field_c] = null;
               return var2_ref_byte__;
             } else {
@@ -201,23 +206,25 @@ final class fl {
           } else {
             var2 = 0;
             L5: while (true) {
-              if (var2 >= sf.field_i.length) {
+              if ((var2 ^ -1) <= (sf.field_i.length ^ -1)) {
                 break L4;
               } else {
-                if (sf.field_i[var2] == param0) {
-                  if (cl.field_l[var2] > 0) {
-                    cl.field_l[var2] = cl.field_l[var2] - 1;
-                    var3 = rg.field_d[var2][cl.field_l[var2] - 1];
-                    rg.field_d[var2][cl.field_l[var2]] = null;
-                    return var3;
+                L6: {
+                  if (sf.field_i[var2] != param0) {
+                    break L6;
                   } else {
-                    var2++;
-                    continue L5;
+                    if (cl.field_l[var2] <= 0) {
+                      break L6;
+                    } else {
+                      cl.field_l[var2] = cl.field_l[var2] - 1;
+                      var3 = rg.field_d[var2][cl.field_l[var2] - 1];
+                      rg.field_d[var2][cl.field_l[var2]] = null;
+                      return var3;
+                    }
                   }
-                } else {
-                  var2++;
-                  continue L5;
                 }
+                var2++;
+                continue L5;
               }
             }
           }
@@ -226,16 +233,15 @@ final class fl {
     }
 
     final static void b(byte param0) {
-        al var1_ref = null;
         if (param0 != 91) {
             byte[] discarded$0 = fl.a(112, -6);
         }
         al var1 = (al) (Object) uc.field_a.e((byte) 86);
         if (var1 == null) {
-            var1_ref = new al();
+            var1 = new al();
         }
-        var1_ref.a(mi.field_b, mi.field_k, mi.field_a, (byte) 86, mi.field_f, mi.field_e, mi.field_l, mi.field_d);
-        cj.field_a.a((gg) (Object) var1_ref, param0 + -7135);
+        var1.a(mi.field_b, mi.field_k, mi.field_a, (byte) 86, mi.field_f, mi.field_e, mi.field_l, mi.field_d);
+        cj.field_a.a((gg) (Object) var1, param0 + -7135);
     }
 
     public static void a(byte param0) {

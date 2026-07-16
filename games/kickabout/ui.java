@@ -82,15 +82,26 @@ final class ui extends vv {
     }
 
     final byte[] b(int param0) {
-        if (!((ui) this).field_p) {
-            // if_icmplt L34
-        } else {
-            throw new RuntimeException();
+        L0: {
+          if (((ui) this).field_p) {
+            break L0;
+          } else {
+            if (((ui) this).field_v.field_n < -((ui) this).field_x + ((ui) this).field_v.field_f.length) {
+              break L0;
+            } else {
+              L1: {
+                if (param0 == 12802) {
+                  break L1;
+                } else {
+                  v discarded$2 = ui.g(64);
+                  break L1;
+                }
+              }
+              return ((ui) this).field_v.field_f;
+            }
+          }
         }
-        if (param0 != 12802) {
-            v discarded$0 = ui.g(64);
-        }
-        return ((ui) this).field_v.field_f;
+        throw new RuntimeException();
     }
 
     ui() {

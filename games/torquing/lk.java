@@ -26,7 +26,7 @@ final class lk extends am {
         if (param2 != null) {
           L0: {
             var3 = param2.length();
-            if (var3 > -2) {
+            if ((var3 ^ -1) > -2) {
               break L0;
             } else {
               if (var3 <= 12) {
@@ -35,7 +35,7 @@ final class lk extends am {
                   if (var4 == null) {
                     break L1;
                   } else {
-                    if (-2 <= var4.length()) {
+                    if (-2 >= (var4.length() ^ -1)) {
                       L2: {
                         if (ra.a(var4.charAt(0), 252)) {
                           break L2;
@@ -44,7 +44,7 @@ final class lk extends am {
                             var5 = 0;
                             var6 = 0;
                             L3: while (true) {
-                              if (var6 >= param2.length()) {
+                              if ((var6 ^ -1) <= (param2.length() ^ -1)) {
                                 L4: {
                                   if (param1 > 16) {
                                     break L4;
@@ -69,17 +69,19 @@ final class lk extends am {
                                     break L5;
                                   }
                                 }
-                                if (-3 >= (var5 ^ -1)) {
-                                  if (!param0) {
-                                    return am.field_q;
+                                L6: {
+                                  if (-3 < (var5 ^ -1)) {
+                                    break L6;
                                   } else {
-                                    var6++;
-                                    continue L3;
+                                    if (param0) {
+                                      break L6;
+                                    } else {
+                                      return am.field_q;
+                                    }
                                   }
-                                } else {
-                                  var6++;
-                                  continue L3;
                                 }
+                                var6++;
+                                continue L3;
                               }
                             }
                           } else {
@@ -199,9 +201,9 @@ final class lk extends am {
         L0: {
           var5 = Torquing.field_u;
           var4 = param2;
-          if (var4 != -1) {
+          if ((var4 ^ -1) != -1) {
             if (1 != var4) {
-              if (-3 != var4) {
+              if (-3 != (var4 ^ -1)) {
                 break L0;
               } else {
                 ((lk) this).field_w = param0.i(param1 ^ 7059);

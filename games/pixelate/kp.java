@@ -42,7 +42,7 @@ final class kp extends lm {
               ((kp) this).field_u = new int[var4];
               var5 = 0;
               L1: while (true) {
-                if (var4 <= var5) {
+                if ((var4 ^ -1) >= (var5 ^ -1)) {
                   break L0;
                 } else {
                   ((kp) this).field_u[var5] = param2.a((byte) -115);
@@ -51,39 +51,41 @@ final class kp extends lm {
                 }
               }
             } else {
-              if (param0 == -4) {
+              if ((param0 ^ -1) == -4) {
                 var4 = param2.f(255);
                 ((kp) this).field_B = new int[var4][];
                 ((kp) this).field_x = new int[var4];
                 var5 = 0;
                 L2: while (true) {
-                  if (var5 >= var4) {
+                  if ((var5 ^ -1) <= (var4 ^ -1)) {
                     break L0;
                   } else {
-                    var6 = param2.a((byte) 52);
-                    var7 = go.a(var6, -52);
-                    if (var7 != null) {
-                      ((kp) this).field_x[var5] = var6;
-                      ((kp) this).field_B[var5] = new int[var7.field_e];
-                      var8 = 0;
-                      L3: while (true) {
-                        if (var7.field_e > var8) {
-                          ((kp) this).field_B[var5][var8] = param2.a((byte) -118);
-                          var8++;
-                          continue L3;
-                        } else {
-                          var5++;
-                          continue L2;
+                    L3: {
+                      var6 = param2.a((byte) 52);
+                      var7 = go.a(var6, -52);
+                      if (var7 == null) {
+                        break L3;
+                      } else {
+                        ((kp) this).field_x[var5] = var6;
+                        ((kp) this).field_B[var5] = new int[var7.field_e];
+                        var8 = 0;
+                        L4: while (true) {
+                          if ((var7.field_e ^ -1) >= (var8 ^ -1)) {
+                            break L3;
+                          } else {
+                            ((kp) this).field_B[var5][var8] = param2.a((byte) -118);
+                            var8++;
+                            continue L4;
+                          }
                         }
                       }
-                    } else {
-                      var5++;
-                      continue L2;
                     }
+                    var5++;
+                    continue L2;
                   }
                 }
               } else {
-                if (-5 != param0) {
+                if (-5 != (param0 ^ -1)) {
                   break L0;
                 } else {
                   break L0;

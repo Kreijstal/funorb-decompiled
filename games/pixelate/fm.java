@@ -101,110 +101,56 @@ final class fm {
         int var3_int = 0;
         int var4 = 0;
         Object var5 = null;
-        int statePc = 0;
-        Throwable caughtException = null;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    var4 = Pixelate.field_H ? 1 : 0;
-                    if (param0.field_w == null) {
-                        statePc = 2;
-                    } else {
-                        statePc = 3;
-                    }
-                    continue stateLoop;
+        Throwable decompiledCaughtException = null;
+        var4 = Pixelate.field_H ? 1 : 0;
+        if (param0.field_w == null) {
+          return;
+        } else {
+          var3_int = 0;
+          L0: while (true) {
+            L1: {
+              if (50 <= var3_int) {
+                break L1;
+              } else {
+                if (null == param0.field_w.peekEvent()) {
+                  break L1;
+                } else {
+                  vg.a(1L, (byte) 23);
+                  var3_int++;
+                  continue L0;
                 }
-                case 2: {
-                    return;
-                }
-                case 3: {
-                    var3_int = 0;
-                    statePc = 4;
-                    continue stateLoop;
-                }
-                case 4: {
-                    if (50 <= var3_int) {
-                        statePc = 7;
-                    } else {
-                        statePc = 5;
-                    }
-                    continue stateLoop;
-                }
-                case 5: {
-                    if (null == param0.field_w.peekEvent()) {
-                        statePc = 7;
-                    } else {
-                        statePc = 6;
-                    }
-                    continue stateLoop;
-                }
-                case 6: {
-                    vg.a(1L, (byte) 23);
-                    var3_int++;
-                    statePc = 4;
-                    continue stateLoop;
-                }
-                case 7: {
-                    try {
-                        if (param1 == null) {
-                            statePc = 9;
-                        } else {
-                            statePc = 8;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_7) {
-                        caughtException = stateCaught_7;
-                        statePc = 12;
-                        continue stateLoop;
-                    }
-                }
-                case 8: {
-                    try {
-                        param0.field_w.postEvent((java.awt.AWTEvent) (Object) new java.awt.event.ActionEvent(param1, 1001, "dummy"));
-                        statePc = 9;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_8) {
-                        caughtException = stateCaught_8;
-                        statePc = 12;
-                        continue stateLoop;
-                    }
-                }
-                case 9: {
-                    try {
-                        if (param2 == -52) {
-                            statePc = 13;
-                        } else {
-                            statePc = 10;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_9) {
-                        caughtException = stateCaught_9;
-                        statePc = 12;
-                        continue stateLoop;
-                    }
-                }
-                case 10: {
-                    try {
-                        var5 = null;
-                        boolean discarded$1 = fm.a((byte) 28, (CharSequence) null);
-                        statePc = 13;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_10) {
-                        caughtException = stateCaught_10;
-                        statePc = 12;
-                        continue stateLoop;
-                    }
-                }
-                case 12: {
-                    var3 = (Exception) (Object) caughtException;
-                    statePc = 13;
-                    continue stateLoop;
-                }
-                case 13: {
-                    return;
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
+              }
             }
+            try {
+              L2: {
+                L3: {
+                  if (param1 == null) {
+                    break L3;
+                  } else {
+                    param0.field_w.postEvent((java.awt.AWTEvent) (Object) new java.awt.event.ActionEvent(param1, 1001, "dummy"));
+                    break L3;
+                  }
+                }
+                L4: {
+                  if (param2 == -52) {
+                    break L4;
+                  } else {
+                    var5 = null;
+                    boolean discarded$1 = fm.a((byte) 28, (CharSequence) null);
+                    break L4;
+                  }
+                }
+                break L2;
+              }
+            } catch (java.lang.Exception decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              L5: {
+                var3 = (Exception) (Object) decompiledCaughtException;
+                break L5;
+              }
+            }
+            return;
+          }
         }
     }
 
@@ -661,7 +607,6 @@ final class fm {
 
     private final synchronized byte[] a(int param0, int[] param1, int param2, int param3) {
         Object var5 = null;
-        byte[] var5_array = null;
         byte[] var7 = null;
         L0: {
           if (param0 == -1) {
@@ -704,7 +649,7 @@ final class fm {
                 break L3;
               } else {
                 var7 = tg.a(false, false, ((fm) this).field_k[param3][param2]);
-                var5_array = var7;
+                var5 = (Object) (Object) var7;
                 if (var7 != null) {
                   break L3;
                 } else {
@@ -713,7 +658,7 @@ final class fm {
               }
             }
             L4: {
-              if (var5_array == null) {
+              if (var5 == null) {
                 break L4;
               } else {
                 if (((fm) this).field_e == 1) {
@@ -734,7 +679,7 @@ final class fm {
                 }
               }
             }
-            return var5_array;
+            return (byte[]) var5;
           }
         } else {
           return null;
@@ -848,6 +793,7 @@ final class fm {
               }
               ((fm) this).field_i = stackIn_6_1 != 0;
               ((fm) this).field_e = param2;
+              return;
             } else {
               break L0;
             }

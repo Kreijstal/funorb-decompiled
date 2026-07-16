@@ -415,6 +415,7 @@ final class cj {
                             field_g = new boolean[var5];
                             break L4;
                           }
+                          return;
                         } else {
                           var7 = ((cj) this).field_j[var6];
                           var8 = 0;
@@ -423,8 +424,9 @@ final class cj {
                               var6++;
                               continue L3;
                             } else {
+                              int incrementValue$2 = var5;
                               var5++;
-                              ((cj) this).field_e[var5] = ag.d(var4);
+                              ((cj) this).field_e[incrementValue$2] = ag.d(var4);
                               var8++;
                               continue L6;
                             }
@@ -440,8 +442,9 @@ final class cj {
                 } else {
                   L7: {
                     ((cj) this).field_a[var4] = ag.d(3) + 1;
-                    ((cj) this).field_l[var4] = ag.d(2);
-                    var5 = ag.d(2);
+                    int dupTemp$3 = ag.d(2);
+                    ((cj) this).field_l[var4] = dupTemp$3;
+                    var5 = dupTemp$3;
                     if (var5 == 0) {
                       break L7;
                     } else {
@@ -519,8 +522,9 @@ final class cj {
             for (var12 = 0; var12 < var8; var12++) {
                 var13 = ((cj) this).field_f[var7][var11 & var10];
                 var11 = var11 >>> var9;
+                int incrementValue$0 = var5;
                 var5++;
-                field_h[var5] = var13 >= 0 ? ag.field_Q[var13].b() : 0;
+                field_h[incrementValue$0] = var13 >= 0 ? ag.field_Q[var13].b() : 0;
             }
         }
         return true;

@@ -26,7 +26,8 @@ final class wc extends q {
             var2 = 0;
             L1: while (true) {
               if (var2 >= kb.field_b) {
-                oc.field_b[param1.a((byte) -72)] = oc.field_b[param1.a((byte) -72)] + 1;
+                int dupTemp$4 = param1.a((byte) -72);
+                oc.field_b[dupTemp$4] = oc.field_b[dupTemp$4] + 1;
                 var2 = 0;
                 var3 = 0;
                 L2: while (true) {
@@ -40,8 +41,9 @@ final class wc extends q {
                       }
                     }
                     kb.field_b = var2;
+                    int fieldTemp$5 = kb.field_b;
                     kb.field_b = kb.field_b + 1;
-                    hi.field_j[kb.field_b] = param1;
+                    hi.field_j[fieldTemp$5] = param1;
                     return;
                   } else {
                     L4: {
@@ -58,15 +60,17 @@ final class wc extends q {
                         break L4;
                       }
                     }
+                    int incrementValue$6 = var2;
                     var2++;
-                    hi.field_j[var2] = hi.field_j[var3];
+                    hi.field_j[incrementValue$6] = hi.field_j[var3];
                     var3++;
                     continue L2;
                   }
                 }
               } else {
                 if (hi.field_j[var2].field_f == param1.field_f) {
-                  oc.field_b[hi.field_j[var2].a((byte) -72)] = oc.field_b[hi.field_j[var2].a((byte) -72)] + 1;
+                  int dupTemp$7 = hi.field_j[var2].a((byte) -72);
+                  oc.field_b[dupTemp$7] = oc.field_b[dupTemp$7] + 1;
                   var2++;
                   continue L1;
                 } else {
@@ -134,8 +138,9 @@ final class wc extends q {
         ((wc) this).field_p = param2;
         ((wc) this).field_j = param5;
         ((wc) this).field_o = param4;
+        int fieldTemp$0 = cq.field_u;
         cq.field_u = cq.field_u + 1;
-        ((wc) this).field_q = 65535 & cq.field_u;
+        ((wc) this).field_q = 65535 & fieldTemp$0;
         ((wc) this).field_n = param0;
     }
 

@@ -109,6 +109,7 @@ final class jd {
           if (var2 >= 10) {
             ((jd) this).field_a = param0.e(-102);
             ((jd) this).field_c = param0.e(-65);
+            return;
           } else {
             var3 = param0.d((byte) -54);
             if (var3 != 0) {

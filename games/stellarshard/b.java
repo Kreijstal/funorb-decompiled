@@ -96,33 +96,39 @@ final class b extends id {
             Throwable decompiledCaughtException = null;
             try {
               L0: {
-                var8 = param4.getParameter("cookiehost");
-                var7 = var8;
-                var7 = var8;
-                var9 = param3 + "=" + param0 + "; version=1; path=/; domain=" + var8;
-                var7 = var9;
-                var7 = var9;
-                if (param2 < 0L) {
-                  var7 = var9 + "; Discard;";
-                  break L0;
-                } else {
-                  var7 = var9 + "; Expires=" + od.a(10, param2 * 1000L + ih.a((byte) -98)) + "; Max-Age=" + param2;
-                  break L0;
+                L1: {
+                  var8 = param4.getParameter("cookiehost");
+                  var7 = var8;
+                  var7 = var8;
+                  var9 = param3 + "=" + param0 + "; version=1; path=/; domain=" + var8;
+                  var7 = var9;
+                  var7 = var9;
+                  if (param2 < 0L) {
+                    var7 = var9 + "; Discard;";
+                    break L1;
+                  } else {
+                    var7 = var9 + "; Expires=" + od.a(10, param2 * 1000L + ih.a((byte) -98)) + "; Max-Age=" + param2;
+                    break L1;
+                  }
                 }
-              }
-              L1: {
-                if (param1 == 38) {
-                  break L1;
-                } else {
-                  b.a(58, 43);
-                  break L1;
+                L2: {
+                  if (param1 == 38) {
+                    break L2;
+                  } else {
+                    b.a(58, 43);
+                    break L2;
+                  }
                 }
+                sh.a(-13847, "document.cookie=\"" + var7 + "\"", param4);
+                break L0;
               }
-              sh.a(-13847, "document.cookie=\"" + var7 + "\"", param4);
-            } catch (java.lang.Throwable decompiledCaughtParameter) {
-              decompiledCaughtException = decompiledCaughtParameter;
+            } catch (java.lang.Throwable decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              L3: {
+                var6 = decompiledCaughtException;
+                break L3;
+              }
             }
-            var6 = decompiledCaughtException;
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
@@ -135,9 +141,9 @@ final class b extends id {
     }
 
     final static void a(int param0, int param1) {
-        if (param0 != -1) {
+        if ((param0 ^ -1) != -1) {
           L0: {
-            if (-2 == param0) {
+            if (-2 == (param0 ^ -1)) {
               e.field_e = 1;
               stellarshard.field_U[6] = stellarshard.field_U[6] + 1;
               break L0;
@@ -146,10 +152,8 @@ final class b extends id {
             }
           }
           if (2 != param0) {
-            if (3 == param0) {
+            if (3 != param0) {
               L1: {
-                e.field_e = 3;
-                stellarshard.field_U[7] = stellarshard.field_U[7] + 1;
                 if ((param0 ^ -1) == -5) {
                   e.field_e = 4;
                   stellarshard.field_U[14] = stellarshard.field_U[14] + 1;
@@ -185,6 +189,8 @@ final class b extends id {
               return;
             } else {
               L5: {
+                e.field_e = 3;
+                stellarshard.field_U[7] = stellarshard.field_U[7] + 1;
                 if ((param0 ^ -1) == -5) {
                   e.field_e = 4;
                   stellarshard.field_U[14] = stellarshard.field_U[14] + 1;
@@ -221,10 +227,8 @@ final class b extends id {
             }
           } else {
             e.field_e = 2;
-            if (3 == param0) {
+            if (3 != param0) {
               L9: {
-                e.field_e = 3;
-                stellarshard.field_U[7] = stellarshard.field_U[7] + 1;
                 if ((param0 ^ -1) == -5) {
                   e.field_e = 4;
                   stellarshard.field_U[14] = stellarshard.field_U[14] + 1;
@@ -260,6 +264,8 @@ final class b extends id {
               return;
             } else {
               L13: {
+                e.field_e = 3;
+                stellarshard.field_U[7] = stellarshard.field_U[7] + 1;
                 if ((param0 ^ -1) == -5) {
                   e.field_e = 4;
                   stellarshard.field_U[14] = stellarshard.field_U[14] + 1;
@@ -299,7 +305,7 @@ final class b extends id {
           L17: {
             e.field_e = 0;
             stellarshard.field_U[2] = stellarshard.field_U[2] + 1;
-            if (-2 == param0) {
+            if (-2 == (param0 ^ -1)) {
               e.field_e = 1;
               stellarshard.field_U[6] = stellarshard.field_U[6] + 1;
               break L17;
@@ -309,8 +315,10 @@ final class b extends id {
           }
           if (2 == param0) {
             e.field_e = 2;
-            if (3 != param0) {
+            if (3 == param0) {
               L18: {
+                e.field_e = 3;
+                stellarshard.field_U[7] = stellarshard.field_U[7] + 1;
                 if ((param0 ^ -1) == -5) {
                   e.field_e = 4;
                   stellarshard.field_U[14] = stellarshard.field_U[14] + 1;
@@ -346,8 +354,6 @@ final class b extends id {
               return;
             } else {
               L22: {
-                e.field_e = 3;
-                stellarshard.field_U[7] = stellarshard.field_U[7] + 1;
                 if ((param0 ^ -1) == -5) {
                   e.field_e = 4;
                   stellarshard.field_U[14] = stellarshard.field_U[14] + 1;
@@ -373,7 +379,7 @@ final class b extends id {
                 }
               }
               L25: {
-                if (-8 == param0) {
+                if (-8 == (param0 ^ -1)) {
                   e.field_e = 7;
                   break L25;
                 } else {
@@ -383,10 +389,8 @@ final class b extends id {
               return;
             }
           } else {
-            if (3 == param0) {
+            if (3 != param0) {
               L26: {
-                e.field_e = 3;
-                stellarshard.field_U[7] = stellarshard.field_U[7] + 1;
                 if ((param0 ^ -1) == -5) {
                   e.field_e = 4;
                   stellarshard.field_U[14] = stellarshard.field_U[14] + 1;
@@ -412,7 +416,7 @@ final class b extends id {
                 }
               }
               L29: {
-                if (-8 == param0) {
+                if (-8 == (param0 ^ -1)) {
                   e.field_e = 7;
                   break L29;
                 } else {
@@ -422,6 +426,8 @@ final class b extends id {
               return;
             } else {
               L30: {
+                e.field_e = 3;
+                stellarshard.field_U[7] = stellarshard.field_U[7] + 1;
                 if ((param0 ^ -1) == -5) {
                   e.field_e = 4;
                   stellarshard.field_U[14] = stellarshard.field_U[14] + 1;

@@ -288,8 +288,9 @@ final class we {
                 ((we) this).field_b = 0;
                 break L0;
               } else {
+                int fieldTemp$2 = ((we) this).field_b;
                 ((we) this).field_b = ((we) this).field_b + 1;
-                ((we) this).field_h[((we) this).field_b] = (byte) 0;
+                ((we) this).field_h[fieldTemp$2] = (byte) 0;
                 continue L1;
               }
             }
@@ -328,8 +329,9 @@ final class we {
               }
             }
           } else {
+            int fieldTemp$3 = ((we) this).field_b;
             ((we) this).field_b = ((we) this).field_b + 1;
-            ((we) this).field_h[((we) this).field_b] = (byte) 0;
+            ((we) this).field_h[fieldTemp$3] = (byte) 0;
             continue L2;
           }
         }

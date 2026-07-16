@@ -385,7 +385,7 @@ final class ue extends gn {
                     var8 = stackIn_38_0[stackIn_38_1];
                     var9 = 0;
                     var10 = 0;
-                    if (-100 > var7) {
+                    if (-100 > (var7 ^ -1)) {
                       var9 = 1;
                       var7 = 99;
                       break L12;
@@ -394,7 +394,7 @@ final class ue extends gn {
                     }
                   }
                   L13: {
-                    if (-100 >= var8) {
+                    if (-100 <= (var8 ^ -1)) {
                       break L13;
                     } else {
                       var10 = 1;

@@ -189,8 +189,9 @@ final class rf {
                 var24 = (var26 & 1069563840) + (var25 & 4177920);
                 var26 = (var26 & -1073692672) + (var25 & 12582912);
                 var26 = (var26 | var26 >>> 1) & 1077952512;
+                int incrementValue$1 = var15;
                 var15++;
-                ra.field_b[var15] = (var24 | var26 - (var26 >>> 8)) >>> 6;
+                ra.field_b[incrementValue$1] = (var24 | var26 - (var26 >>> 8)) >>> 6;
                 var16 = var16 + var17;
                 var17 = var17 + param3;
                 var18++;
@@ -392,7 +393,7 @@ final class rf {
                   } else {
                     var27 = var27 - var22;
                     var26 = var26 - var27;
-                    // wide iinc 25 -640
+                    var25 -= 640;
                     rf.b(var28, var26, var14, var16, var23, var4, var24, var5, var6, var7, param3, var25, param0, param1);
                     var28--;
                     continue L10;
@@ -402,7 +403,7 @@ final class rf {
                 rf.a(var28, var26, var14, var16, var23, var4, var24, var5, var6, var7, param3, var25, param0, param1);
                 var26 = var26 + var27;
                 var27 = var27 + var22;
-                // wide iinc 25 640
+                var25 += 640;
                 var28++;
                 continue L9;
               }
@@ -476,8 +477,9 @@ final class rf {
                   var24 = (var26 & 1069563840) + (var25 & 4177920);
                   var26 = (var26 & -1073692672) + (var25 & 12582912);
                   var26 = (var26 | var26 >>> 1) & 1077952512;
+                  int incrementValue$1 = var15;
                   var15++;
-                  ra.field_b[var15] = (var24 | var26 - (var26 >>> 8)) >>> 6;
+                  ra.field_b[incrementValue$1] = (var24 | var26 - (var26 >>> 8)) >>> 6;
                   var16 = var16 + var17;
                   var17 = var17 + param3;
                   var18++;

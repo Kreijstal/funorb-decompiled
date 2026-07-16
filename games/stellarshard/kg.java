@@ -14,21 +14,20 @@ final class kg extends dg {
 
     final static void d(boolean param0) {
         ma var1 = null;
-        ma var1_ref = null;
         if (param0) {
           return;
         } else {
           L0: {
             var1 = (ma) (Object) mb.field_b.c((byte) -111);
             if (var1 == null) {
-              var1_ref = new ma();
+              var1 = new ma();
               break L0;
             } else {
               break L0;
             }
           }
-          var1_ref.a(543992579, ti.field_f, ti.field_b, ti.field_e, ti.field_a, ti.field_c, ti.field_i, ti.field_l);
-          dd.field_g.b(-105, (gg) (Object) var1_ref);
+          var1.a(543992579, ti.field_f, ti.field_b, ti.field_e, ti.field_a, ti.field_c, ti.field_i, ti.field_l);
+          dd.field_g.b(-105, (gg) (Object) var1);
           return;
         }
     }

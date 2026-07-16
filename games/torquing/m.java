@@ -40,41 +40,74 @@ final class m {
     }
 
     final void a(byte param0) {
-        if (null != dg.field_i) {
-            return;
-        }
-        if (!(-1 > (wp.field_w ^ -1))) {
-            ((m) this).field_i = false;
-        }
-        if (!((m) this).field_i) {
-            if (((m) this).field_x > wk.field_d) {
-                aq.field_d = (((m) this).field_x - wk.field_d) / 2;
+        Object var3 = null;
+        if (null == dg.field_i) {
+          L0: {
+            if (-1 <= (wp.field_w ^ -1)) {
+              ((m) this).field_i = false;
+              break L0;
             } else {
-                if (!(-1 <= (((m) this).field_x ^ -1))) {
-                    aq.field_d = 0;
+              break L0;
+            }
+          }
+          if (((m) this).field_i) {
+            L1: {
+              if (param0 <= -2) {
+                break L1;
+              } else {
+                var3 = null;
+                m.a(112, (java.applet.Applet) null, -10, (String[]) null, -70, 40);
+                break L1;
+              }
+            }
+            int fieldTemp$2 = ((m) this).field_o - 1;
+            ((m) this).field_o = ((m) this).field_o - 1;
+            if ((fieldTemp$2 ^ -1) >= -1) {
+              ((m) this).field_o = ((m) this).field_m;
+              if (df.field_u >= ((m) this).field_d) {
+                this.a(true);
+                return;
+              } else {
+                ((m) this).field_i = false;
+                return;
+              }
+            } else {
+              return;
+            }
+          } else {
+            L2: {
+              if (((m) this).field_x <= wk.field_d) {
+                if (-1 > (((m) this).field_x ^ -1)) {
+                  aq.field_d = 0;
+                  break L2;
+                } else {
+                  break L2;
                 }
+              } else {
+                aq.field_d = (((m) this).field_x - wk.field_d) / 2;
+                break L2;
+              }
             }
-            if (wk.field_d == ((m) this).field_f) {
-                // if_icmpne L98
-            } else {
-                ((m) this).field_p.a(((m) this).field_e, -6714, ((m) this).field_f);
+            L3: {
+              L4: {
+                if (wk.field_d != ((m) this).field_f) {
+                  break L4;
+                } else {
+                  if (ul.field_a != ((m) this).field_e) {
+                    break L4;
+                  } else {
+                    break L3;
+                  }
+                }
+              }
+              ((m) this).field_p.a(((m) this).field_e, -6714, ((m) this).field_f);
+              break L3;
             }
             return;
+          }
+        } else {
+          return;
         }
-        if (param0 > -2) {
-            Object var3 = null;
-            m.a(112, (java.applet.Applet) null, -10, (String[]) null, -70, 40);
-        }
-        ((m) this).field_o = ((m) this).field_o - 1;
-        if ((((m) this).field_o - 1 ^ -1) < -1) {
-            return;
-        }
-        ((m) this).field_o = ((m) this).field_m;
-        if (df.field_u < ((m) this).field_d) {
-            ((m) this).field_i = false;
-            return;
-        }
-        this.a(true);
     }
 
     final boolean c(byte param0) {
@@ -188,47 +221,93 @@ final class m {
     }
 
     private final void a(boolean param0) {
+        int var2 = 0;
+        int var3 = 0;
         int var4 = 0;
-        int var5 = Torquing.field_u;
-        if (!param0) {
+        int var5 = 0;
+        L0: {
+          var5 = Torquing.field_u;
+          if (param0) {
+            break L0;
+          } else {
             ((m) this).field_m = 118;
+            break L0;
+          }
         }
-        int var2 = ((m) this).field_x;
-        int var3 = ((m) this).field_v;
-        if (!(((m) this).c((byte) -19))) {
-            ((m) this).field_i = false;
-            return;
-        }
-        if (var3 > ((m) this).field_k) {
-            var3 = ((m) this).field_k;
+        var2 = ((m) this).field_x;
+        var3 = ((m) this).field_v;
+        if (!((m) this).c((byte) -19)) {
+          ((m) this).field_i = false;
+          return;
         } else {
-            if (((m) this).field_g > var3) {
+          L1: {
+            if (var3 <= ((m) this).field_k) {
+              if (((m) this).field_g <= var3) {
+                break L1;
+              } else {
                 var3 = ((m) this).field_g;
-            }
-        }
-        if (var2 <= ((m) this).field_a) {
-            // if_icmpge L105
-            var2 = ((m) this).field_h;
-        } else {
-            var2 = ((m) this).field_a;
-        }
-        if (0.0f < ((m) this).field_j) {
-            var4 = (int)(0.5f + ((m) this).field_j * (float)var3);
-            if (var2 < var4) {
-                var3 = (int)((float)var2 / ((m) this).field_j);
+                break L1;
+              }
             } else {
-                if (var2 > var4) {
-                    var2 = var4;
-                }
+              var3 = ((m) this).field_k;
+              break L1;
             }
-        }
-        if (wk.field_d == var2) {
-            // if_icmpne L172
-        } else {
+          }
+          L2: {
+            if (var2 > ((m) this).field_a) {
+              var2 = ((m) this).field_a;
+              break L2;
+            } else {
+              if (var2 >= ((m) this).field_h) {
+                break L2;
+              } else {
+                var2 = ((m) this).field_h;
+                break L2;
+              }
+            }
+          }
+          L3: {
+            if (0.0f >= ((m) this).field_j) {
+              break L3;
+            } else {
+              var4 = (int)(0.5f + ((m) this).field_j * (float)var3);
+              if (var2 >= var4) {
+                if (var2 <= var4) {
+                  break L3;
+                } else {
+                  var2 = var4;
+                  break L3;
+                }
+              } else {
+                var3 = (int)((float)var2 / ((m) this).field_j);
+                break L3;
+              }
+            }
+          }
+          L4: {
+            L5: {
+              if (wk.field_d != var2) {
+                break L5;
+              } else {
+                if (var3 != ul.field_a) {
+                  break L5;
+                } else {
+                  break L4;
+                }
+              }
+            }
             ((m) this).field_p.a(var3, -6714, var2);
-        }
-        if (!(((m) this).field_x <= 0)) {
-            aq.field_d = (((m) this).field_x + -wk.field_d) / 2;
+            break L4;
+          }
+          L6: {
+            if (((m) this).field_x > 0) {
+              aq.field_d = (((m) this).field_x + -wk.field_d) / 2;
+              break L6;
+            } else {
+              break L6;
+            }
+          }
+          return;
         }
     }
 

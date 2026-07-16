@@ -43,7 +43,7 @@ final class ia {
 
     public static void a(int param0) {
         if (param0 != -12765) {
-          field_f = (int[]) null;
+          field_f = null;
           field_c = null;
           field_f = null;
           field_d = null;
@@ -62,12 +62,10 @@ final class ia {
         int var2 = 0;
         if (param1 == 2) {
           var2 = 0;
-          if (-1 >= param0) {
-            if (-65537 >= param0) {
+          if (-1 >= (param0 ^ -1)) {
+            if (-65537 < (param0 ^ -1)) {
               L0: {
-                param0 = param0 >>> 16;
-                var2 += 16;
-                if (-257 > param0) {
+                if (-257 < (param0 ^ -1)) {
                   break L0;
                 } else {
                   param0 = param0 >>> 8;
@@ -105,6 +103,8 @@ final class ia {
               return var2 - -param0;
             } else {
               L4: {
+                param0 = param0 >>> 16;
+                var2 += 16;
                 if (-257 < (param0 ^ -1)) {
                   break L4;
                 } else {
@@ -146,7 +146,7 @@ final class ia {
             L8: {
               param0 = param0 >>> 16;
               var2 += 16;
-              if (-257 > param0) {
+              if (-257 < (param0 ^ -1)) {
                 break L8;
               } else {
                 param0 = param0 >>> 8;

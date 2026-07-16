@@ -168,19 +168,26 @@ final class de {
                   L2: {
                     if ((ej.field_j.field_v ^ -1) < -1) {
                       try {
-                        jd.field_c.a(ej.field_j.field_t, (byte) 70, ej.field_j.field_v, 0);
-                        nf.field_Q = rl.a((byte) -111);
-                      } catch (java.io.IOException decompiledCaughtParameter) {
-                        decompiledCaughtException = decompiledCaughtParameter;
+                        L3: {
+                          jd.field_c.a(ej.field_j.field_t, (byte) 70, ej.field_j.field_v, 0);
+                          nf.field_Q = rl.a((byte) -111);
+                          break L3;
+                        }
+                      } catch (java.io.IOException decompiledCaughtParameter0) {
+                        decompiledCaughtException = decompiledCaughtParameter0;
+                        L4: {
+                          var2 = (IOException) (Object) decompiledCaughtException;
+                          dn.c(-74);
+                          break L4;
+                        }
                       }
-                      var2 = (IOException) (Object) decompiledCaughtException;
-                      dn.c(-74);
+                      ej.field_j.field_v = 0;
                       break L2;
                     } else {
                       break L2;
                     }
                   }
-                  ej.field_j.field_v = 0;
+                  return;
                 }
               }
               ej.field_j.field_v = 0;

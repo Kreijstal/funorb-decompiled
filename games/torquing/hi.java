@@ -16,42 +16,42 @@ final class hi {
 
     final int a(byte param0) {
         if (param0 == -72) {
-          if (!((hi) this).field_i) {
+          if (((hi) this).field_i) {
+            return 2;
+          } else {
             if (2 == ((hi) this).field_f) {
-              if (((hi) this).field_d >= -1) {
+              if ((((hi) this).field_d ^ -1) < -1) {
+                return 2;
+              } else {
                 if ((((hi) this).field_g ^ -1L) == (ke.field_b ^ -1L)) {
                   return 1;
                 } else {
-                  if (-3 == cn.field_b) {
+                  if (-3 != (cn.field_b ^ -1)) {
+                    return 0;
+                  } else {
                     if (bi.a((byte) 83, ((hi) this).field_e)) {
                       return 1;
                     } else {
                       return 0;
                     }
-                  } else {
-                    return 0;
                   }
                 }
-              } else {
-                return 2;
               }
             } else {
               if ((((hi) this).field_g ^ -1L) == (ke.field_b ^ -1L)) {
                 return 1;
               } else {
-                if (-3 == (cn.field_b ^ -1)) {
-                  if (!bi.a((byte) 83, ((hi) this).field_e)) {
-                    return 0;
-                  } else {
-                    return 1;
-                  }
-                } else {
+                if (-3 != (cn.field_b ^ -1)) {
                   return 0;
+                } else {
+                  if (bi.a((byte) 83, ((hi) this).field_e)) {
+                    return 1;
+                  } else {
+                    return 0;
+                  }
                 }
               }
             }
-          } else {
-            return 2;
           }
         } else {
           ((hi) this).field_g = 0L;
@@ -61,14 +61,14 @@ final class hi {
                 if ((((hi) this).field_g ^ -1L) == (ke.field_b ^ -1L)) {
                   return 1;
                 } else {
-                  if (-3 == (cn.field_b ^ -1)) {
-                    if (!bi.a((byte) 83, ((hi) this).field_e)) {
-                      return 0;
-                    } else {
-                      return 1;
-                    }
-                  } else {
+                  if (-3 != (cn.field_b ^ -1)) {
                     return 0;
+                  } else {
+                    if (bi.a((byte) 83, ((hi) this).field_e)) {
+                      return 1;
+                    } else {
+                      return 0;
+                    }
                   }
                 }
               } else {
@@ -78,14 +78,14 @@ final class hi {
               if ((((hi) this).field_g ^ -1L) == (ke.field_b ^ -1L)) {
                 return 1;
               } else {
-                if (-3 == (cn.field_b ^ -1)) {
-                  if (!bi.a((byte) 83, ((hi) this).field_e)) {
-                    return 0;
-                  } else {
-                    return 1;
-                  }
-                } else {
+                if (-3 != (cn.field_b ^ -1)) {
                   return 0;
+                } else {
+                  if (bi.a((byte) 83, ((hi) this).field_e)) {
+                    return 1;
+                  } else {
+                    return 0;
+                  }
                 }
               }
             }

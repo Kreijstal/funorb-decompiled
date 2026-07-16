@@ -46,12 +46,10 @@ final class wm implements Iterable {
         int var3 = 0;
         var2 = 41 / ((-39 - param1) / 56);
         var3 = 0;
-        if (-1 >= param0) {
-          if (param0 <= -65537) {
+        if (-1 >= (param0 ^ -1)) {
+          if ((param0 ^ -1) > -65537) {
             L0: {
-              param0 = param0 >>> 16;
-              var3 += 16;
-              if (-257 > param0) {
+              if (-257 < (param0 ^ -1)) {
                 break L0;
               } else {
                 param0 = param0 >>> 8;
@@ -78,7 +76,7 @@ final class wm implements Iterable {
               }
             }
             L3: {
-              if (param0 <= -2) {
+              if ((param0 ^ -1) <= -2) {
                 var3++;
                 param0 = param0 >>> 1;
                 break L3;
@@ -89,7 +87,9 @@ final class wm implements Iterable {
             return var3 - -param0;
           } else {
             L4: {
-              if (-257 > param0) {
+              param0 = param0 >>> 16;
+              var3 += 16;
+              if (-257 < (param0 ^ -1)) {
                 break L4;
               } else {
                 param0 = param0 >>> 8;
@@ -130,7 +130,7 @@ final class wm implements Iterable {
           L8: {
             param0 = param0 >>> 16;
             var3 += 16;
-            if (-257 > param0) {
+            if (-257 < (param0 ^ -1)) {
               break L8;
             } else {
               param0 = param0 >>> 8;

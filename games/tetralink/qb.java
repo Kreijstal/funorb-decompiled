@@ -65,97 +65,35 @@ final class qb extends gn implements dm {
         Object var1 = null;
         Throwable var2 = null;
         int stackIn_4_0 = 0;
-        int stackOut_2_0 = 0;
+        Throwable decompiledCaughtException = null;
         int stackOut_3_0 = 0;
-        int statePc = 0;
-        Throwable caughtException = null;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    var1 = (Object) (Object) kd.field_g;
-                    // monitorenter kd.field_g
-                    statePc = 1;
-                    continue stateLoop;
-                }
-                case 1: {
-                    try {
-                        ho.field_X = kf.field_c;
-                        ea.field_a = ea.field_a + 1;
-                        aa.field_Nb = nl.field_d;
-                        a.field_a = va.field_y;
-                        qd.field_T = tl.field_M;
-                        if (!param0) {
-                            statePc = 3;
-                        } else {
-                            statePc = 2;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_1) {
-                        caughtException = stateCaught_1;
-                        statePc = 6;
-                        continue stateLoop;
-                    }
-                }
-                case 2: {
-                    try {
-                        stackOut_2_0 = 1;
-                        stackIn_4_0 = stackOut_2_0;
-                        statePc = 4;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_2) {
-                        caughtException = stateCaught_2;
-                        statePc = 6;
-                        continue stateLoop;
-                    }
-                }
-                case 3: {
-                    try {
-                        stackOut_3_0 = 0;
-                        stackIn_4_0 = stackOut_3_0;
-                        statePc = 4;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_3) {
-                        caughtException = stateCaught_3;
-                        statePc = 6;
-                        continue stateLoop;
-                    }
-                }
-                case 4: {
-                    try {
-                        tl.field_M = stackIn_4_0 != 0;
-                        tm.field_t = tg.field_f;
-                        ci.field_B = qc.field_Z;
-                        li.field_o = qm.field_c;
-                        tg.field_f = 0;
-                        // monitorexit var1
-                        statePc = 8;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_4) {
-                        caughtException = stateCaught_4;
-                        statePc = 6;
-                        continue stateLoop;
-                    }
-                }
-                case 6: {
-                    try {
-                        var2 = caughtException;
-                        // monitorexit var1
-                        statePc = 7;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_6) {
-                        caughtException = stateCaught_6;
-                        statePc = 6;
-                        continue stateLoop;
-                    }
-                }
-                case 7: {
-                    throw (RuntimeException) (Object) var2;
-                }
-                case 8: {
-                    return;
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
+        int stackOut_2_0 = 0;
+        var1 = (Object) (Object) kd.field_g;
+        synchronized (var1) {
+          L0: {
+            L1: {
+              ho.field_X = kf.field_c;
+              ea.field_a = ea.field_a + 1;
+              aa.field_Nb = nl.field_d;
+              a.field_a = va.field_y;
+              qd.field_T = tl.field_M;
+              if (!param0) {
+                stackOut_3_0 = 0;
+                stackIn_4_0 = stackOut_3_0;
+                break L1;
+              } else {
+                stackOut_2_0 = 1;
+                stackIn_4_0 = stackOut_2_0;
+                break L1;
+              }
             }
+            tl.field_M = stackIn_4_0 != 0;
+            tm.field_t = tg.field_f;
+            ci.field_B = qc.field_Z;
+            li.field_o = qm.field_c;
+            tg.field_f = 0;
+            break L0;
+          }
         }
     }
 

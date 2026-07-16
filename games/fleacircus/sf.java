@@ -12,8 +12,9 @@ final class sf extends jf {
         ((sf) this).field_l = param0.a(((sf) this).field_l, -108);
         ((sf) this).field_k = param0.b(((sf) this).field_k, 14698);
         if (((sf) this).field_m == ((sf) this).field_j) {
-          ((sf) this).field_j = param0.a(((sf) this).field_m, 18308);
-          ((sf) this).field_m = param0.a(((sf) this).field_m, 18308);
+          int dupTemp$2 = param0.a(((sf) this).field_m, 18308);
+          ((sf) this).field_j = dupTemp$2;
+          ((sf) this).field_m = dupTemp$2;
           return (sf) this;
         } else {
           L0: {

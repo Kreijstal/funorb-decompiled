@@ -55,25 +55,31 @@ final class eb {
                         var8++;
                         continue L0;
                       } else {
+                        int incrementValue$6 = var5;
                         var5++;
+                        int incrementValue$7 = var4;
                         var4++;
-                        var7[var5] = var7[var5] + rf.b(20, var6[var4], param0, 0);
+                        var7[incrementValue$6] = var7[incrementValue$6] + rf.b(20, var6[incrementValue$7], param0, 0);
                         var9++;
                         continue L3;
                       }
                     }
                   } else {
+                    int incrementValue$8 = var5;
                     var5++;
+                    int incrementValue$9 = var4;
                     var4++;
-                    var7[var5] = var7[var5] + rf.b(20, var6[var4], param0, 1);
+                    var7[incrementValue$8] = var7[incrementValue$8] + rf.b(20, var6[incrementValue$9], param0, 1);
                     var9++;
                     continue L2;
                   }
                 }
               } else {
+                int incrementValue$10 = var5;
                 var5++;
+                int incrementValue$11 = var4;
                 var4++;
-                var7[var5] = var7[var5] + rf.b(20, var6[var4], param0, 2);
+                var7[incrementValue$10] = var7[incrementValue$10] + rf.b(20, var6[incrementValue$11], param0, 2);
                 var9++;
                 continue L1;
               }

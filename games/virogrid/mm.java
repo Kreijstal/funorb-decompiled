@@ -36,12 +36,13 @@ final class mm {
           if (param0 <= -1) {
             break L0;
           } else {
-            int discarded$1 = ((mm) this).a(-121);
+            int discarded$4 = ((mm) this).a(-121);
             break L0;
           }
         }
+        int fieldTemp$5 = ((mm) this).field_f + 1;
         ((mm) this).field_f = ((mm) this).field_f + 1;
-        ((mm) this).field_h = ((mm) this).field_h + (((mm) this).field_f + 1);
+        ((mm) this).field_h = ((mm) this).field_h + fieldTemp$5;
         var2 = 0;
         L1: while (true) {
           if (var2 >= 256) {
@@ -68,10 +69,12 @@ final class mm {
               }
             }
             ((mm) this).field_e = ((mm) this).field_e + ((mm) this).field_c[128 + var2 & 255];
-            var4 = ((mm) this).field_e + (((mm) this).field_c[rb.a(255, var3 >> -389921758)] + ((mm) this).field_h);
-            ((mm) this).field_c[var2] = ((mm) this).field_e + (((mm) this).field_c[rb.a(255, var3 >> -389921758)] + ((mm) this).field_h);
-            ((mm) this).field_h = ((mm) this).field_c[rb.a(var4, 261354) >> 1878912712 >> -2016404862] - -var3;
-            ((mm) this).field_g[var2] = ((mm) this).field_c[rb.a(var4, 261354) >> 1878912712 >> -2016404862] - -var3;
+            int dupTemp$6 = ((mm) this).field_e + (((mm) this).field_c[rb.a(255, var3 >> -389921758)] + ((mm) this).field_h);
+            var4 = dupTemp$6;
+            ((mm) this).field_c[var2] = dupTemp$6;
+            int dupTemp$7 = ((mm) this).field_c[rb.a(var4, 261354) >> 1878912712 >> -2016404862] - -var3;
+            ((mm) this).field_h = dupTemp$7;
+            ((mm) this).field_g[var2] = dupTemp$7;
             var2++;
             continue L1;
           }
@@ -101,8 +104,9 @@ final class mm {
         if (param0 != 5180) {
             return -32;
         }
+        int fieldTemp$0 = ((mm) this).field_a - 1;
         ((mm) this).field_a = ((mm) this).field_a - 1;
-        return ((mm) this).field_g[((mm) this).field_a - 1];
+        return ((mm) this).field_g[fieldTemp$0];
     }
 
     final static char a(int param0, byte param1) {

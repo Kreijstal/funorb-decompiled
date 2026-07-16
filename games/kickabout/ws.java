@@ -10,14 +10,29 @@ final class ws {
     static int field_e;
 
     final static void a(byte param0) {
-        if (param0 > -10) {
+        L0: {
+          if (param0 <= -10) {
+            break L0;
+          } else {
             field_b = null;
+            break L0;
+          }
         }
-        if ((vj.field_c ^ -1) != -11) {
-            // ifeq L39
-        } else {
-            uc.g((byte) -54);
-            vj.field_c = 11;
+        L1: {
+          L2: {
+            if ((vj.field_c ^ -1) == -11) {
+              break L2;
+            } else {
+              if (!vr.d(1)) {
+                break L2;
+              } else {
+                break L1;
+              }
+            }
+          }
+          uc.g((byte) -54);
+          vj.field_c = 11;
+          break L1;
         }
         m.field_h = true;
     }

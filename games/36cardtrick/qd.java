@@ -14,9 +14,9 @@ final class qd {
             ((qd) this).field_d = null;
             return null;
         }
-        ((qd) this).field_d = ((qb) var2).field_d;
+        ((qd) this).field_d = var2.field_d;
         if (param0 != -33) {
-            return (qb) null;
+            return null;
         }
         return var2;
     }
@@ -36,14 +36,14 @@ final class qd {
             var3 = param1;
         }
         if (param0 != 25755) {
-            qb var4 = (qb) null;
+            Object var4 = null;
             qb discarded$0 = ((qd) this).a((byte) 72, (qb) null);
         }
         if (!(((qd) this).field_e.field_a != var3)) {
             ((qd) this).field_d = null;
             return null;
         }
-        ((qd) this).field_d = ((qb) var3).field_d;
+        ((qd) this).field_d = var3.field_d;
         return var3;
     }
 
@@ -58,7 +58,7 @@ final class qd {
             ((qd) this).field_d = null;
             return null;
         }
-        ((qd) this).field_d = ((qb) var3).field_a;
+        ((qd) this).field_d = var3.field_a;
         int var4 = 95 / ((param0 - -78) / 33);
         return var3;
     }
@@ -71,7 +71,7 @@ final class qd {
         L0: {
           var6 = Main.field_T;
           var3 = 0;
-          var4 = ((CharSequence) param2).length();
+          var4 = param2.length();
           if (param0 <= -54) {
             break L0;
           } else {
@@ -84,7 +84,7 @@ final class qd {
           if (var5 >= var4) {
             return var3;
           } else {
-            if (param1 == ((CharSequence) param2).charAt(var5)) {
+            if (param1 == param2.charAt(var5)) {
               var3++;
               var5++;
               continue L1;
@@ -102,9 +102,9 @@ final class qd {
             ((qd) this).field_d = null;
             return null;
         }
-        ((qd) this).field_d = ((qb) var2).field_a;
+        ((qd) this).field_d = var2.field_a;
         if (param0 < 55) {
-            return (qb) null;
+            return null;
         }
         return var2;
     }
@@ -116,22 +116,22 @@ final class qd {
             return null;
         }
         if (param0 != -13) {
-            ((qd) this).field_e = (bk) null;
+            ((qd) this).field_e = null;
         }
-        ((qd) this).field_d = ((qb) var2).field_a;
+        ((qd) this).field_d = var2.field_a;
         return var2;
     }
 
     final qb a(int param0) {
         qb var2 = ((qd) this).field_d;
         if (param0 != 28869) {
-            return (qb) null;
+            return null;
         }
         if (!(((qd) this).field_e.field_a != var2)) {
             ((qd) this).field_d = null;
             return null;
         }
-        ((qd) this).field_d = ((qb) var2).field_d;
+        ((qd) this).field_d = var2.field_d;
         return var2;
     }
 

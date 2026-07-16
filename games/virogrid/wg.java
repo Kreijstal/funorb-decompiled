@@ -126,11 +126,16 @@ final class wg {
             tn.field_i = param13;
             if (qc.field_f.field_o != null) {
               try {
-                gh.field_Ib = new nh(qc.field_f.field_o, 64, 0);
-              } catch (java.io.IOException decompiledCaughtParameter) {
-                decompiledCaughtException = decompiledCaughtParameter;
-                return;
+                L3: {
+                  gh.field_Ib = new nh(qc.field_f.field_o, 64, 0);
+                  break L3;
+                }
+              } catch (java.io.IOException decompiledCaughtParameter0) {
+                decompiledCaughtException = decompiledCaughtParameter0;
+                var15 = (IOException) (Object) decompiledCaughtException;
+                throw new RuntimeException(var15.toString());
               }
+              return;
             } else {
               return;
             }

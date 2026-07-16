@@ -18,15 +18,29 @@ final class bh extends lh {
     int[] field_p;
 
     final static void a(boolean param0, java.applet.Applet param1) {
-        if (param0) {
+        String var2 = null;
+        CharSequence var3 = null;
+        L0: {
+          if (!param0) {
+            break L0;
+          } else {
             field_q = null;
+            break L0;
+          }
         }
-        String var2 = param1.getParameter("username");
-        if (var2 != null) {
-            CharSequence var3 = (CharSequence) (Object) var2;
-            // ifne L45
+        L1: {
+          var2 = param1.getParameter("username");
+          if (var2 == null) {
+            break L1;
+          } else {
+            var3 = (CharSequence) (Object) var2;
+            if (uj.a(var3, (byte) -95) != 0L) {
+              return;
+            } else {
+              break L1;
+            }
+          }
         }
-        return;
     }
 
     final static boolean a(byte param0, boolean param1, CharSequence param2) {
@@ -124,8 +138,9 @@ final class bh extends lh {
     bh(int param0, int param1, int param2, int param3, int param4, int param5, int[] param6) {
         ((bh) this).field_j = param2;
         ((bh) this).field_i = param1;
+        int fieldTemp$0 = pg.field_e;
         pg.field_e = pg.field_e + 1;
-        ((bh) this).field_s = 65535 & pg.field_e;
+        ((bh) this).field_s = 65535 & fieldTemp$0;
         ((bh) this).field_v = param4;
         ((bh) this).field_m = param5;
         ((bh) this).field_p = param6;

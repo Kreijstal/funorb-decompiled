@@ -18,34 +18,39 @@ abstract class ah {
             var7 = Bounce.field_N;
             if (param0 == -3058) {
               try {
-                var3 = (String) ac.a(param1, "getcookies", -31185);
-                var4 = di.a(-122, ';', var3);
-                var5 = 0;
-                L0: while (true) {
-                  if (var4.length <= var5) {
-                    break L0;
-                  } else {
-                    L1: {
-                      var6 = var4[var5].indexOf('=');
-                      if (-1 < (var6 ^ -1)) {
-                        break L1;
-                      } else {
-                        if (!var4[var5].substring(0, var6).trim().equals((Object) (Object) param2)) {
-                          break L1;
+                L0: {
+                  var3 = (String) ac.a(param1, "getcookies", -31185);
+                  var4 = di.a(-122, ';', var3);
+                  var5 = 0;
+                  L1: while (true) {
+                    if (var4.length <= var5) {
+                      break L0;
+                    } else {
+                      L2: {
+                        var6 = var4[var5].indexOf('=');
+                        if (-1 < (var6 ^ -1)) {
+                          break L2;
                         } else {
-                          stackOut_6_0 = var4[var5].substring(1 + var6).trim();
-                          stackIn_7_0 = stackOut_6_0;
-                          return stackIn_7_0;
+                          if (!var4[var5].substring(0, var6).trim().equals((Object) (Object) param2)) {
+                            break L2;
+                          } else {
+                            stackOut_6_0 = var4[var5].substring(1 + var6).trim();
+                            stackIn_7_0 = stackOut_6_0;
+                            return stackIn_7_0;
+                          }
                         }
                       }
+                      var5++;
+                      continue L1;
                     }
-                    var5++;
-                    continue L0;
                   }
                 }
               } catch (java.lang.Throwable decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
-                var3_ref = decompiledCaughtException;
+                L3: {
+                  var3_ref = decompiledCaughtException;
+                  break L3;
+                }
               }
               return null;
             } else {

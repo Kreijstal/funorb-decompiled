@@ -30,7 +30,7 @@ final class ki extends ek {
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
-        lk var9 = null;
+        Object var9 = null;
         int stackIn_11_0 = 0;
         int stackIn_15_0 = 0;
         int stackIn_19_0 = 0;
@@ -55,14 +55,14 @@ final class ki extends ek {
         int stackOut_31_0 = 0;
         int stackOut_30_0 = 0;
         L0: {
-          if (!((lk) param1).field_j) {
+          if (!param1.field_j) {
             if (param1.d(121)) {
               L1: {
                 var6 = 1;
                 if (!(param1 instanceof hl)) {
                   break L1;
                 } else {
-                  param4 = param4 & ((hl) param1).field_B;
+                  param4 = param4 & ((hl) (Object) param1).field_B;
                   break L1;
                 }
               }
@@ -86,7 +86,7 @@ final class ki extends ek {
               var7 = stackIn_11_0;
               if (param2 == 11447) {
                 L3: {
-                  ge.a(((lk) param1).field_h, ((ki) this).field_r, var7, ((lk) param1).field_o + param0, (-((ki) this).field_r[0].field_k + ((lk) param1).field_q >> 728070049) + param3 + ((lk) param1).field_i, (byte) -10);
+                  ge.a(param1.field_h, ((ki) this).field_r, var7, param1.field_o + param0, (-((ki) this).field_r[0].field_k + param1.field_q >> 728070049) + param3 + param1.field_i, (byte) -10);
                   if (param4) {
                     stackOut_18_0 = 16777215;
                     stackIn_19_0 = stackOut_18_0;
@@ -98,13 +98,13 @@ final class ki extends ek {
                   }
                 }
                 var8 = stackIn_19_0;
-                int discarded$4 = ((ki) this).field_c.a(((lk) param1).field_r, ((lk) param1).field_o + param0, -2 + (param3 - -((lk) param1).field_i), ((lk) param1).field_h, ((lk) param1).field_q, var8, -1, 1, 1, ((ki) this).field_c.field_s);
+                int discarded$4 = ((ki) this).field_c.a(param1.field_r, param1.field_o + param0, -2 + (param3 - -param1.field_i), param1.field_h, param1.field_q, var8, -1, 1, 1, ((ki) this).field_c.field_s);
                 return;
               } else {
                 L4: {
-                  var9 = (lk) null;
+                  var9 = null;
                   ((ki) this).a(103, (lk) null, -110, -12, false);
-                  ge.a(((lk) param1).field_h, ((ki) this).field_r, var7, ((lk) param1).field_o + param0, (-((ki) this).field_r[0].field_k + ((lk) param1).field_q >> 728070049) + param3 + ((lk) param1).field_i, (byte) -10);
+                  ge.a(param1.field_h, ((ki) this).field_r, var7, param1.field_o + param0, (-((ki) this).field_r[0].field_k + param1.field_q >> 728070049) + param3 + param1.field_i, (byte) -10);
                   if (param4) {
                     stackOut_14_0 = 16777215;
                     stackIn_15_0 = stackOut_14_0;
@@ -116,7 +116,7 @@ final class ki extends ek {
                   }
                 }
                 var8 = stackIn_15_0;
-                int discarded$5 = ((ki) this).field_c.a(((lk) param1).field_r, ((lk) param1).field_o + param0, -2 + (param3 - -((lk) param1).field_i), ((lk) param1).field_h, ((lk) param1).field_q, var8, -1, 1, 1, ((ki) this).field_c.field_s);
+                int discarded$5 = ((ki) this).field_c.a(param1.field_r, param1.field_o + param0, -2 + (param3 - -param1.field_i), param1.field_h, param1.field_q, var8, -1, 1, 1, ((ki) this).field_c.field_s);
                 return;
               }
             } else {
@@ -135,7 +135,7 @@ final class ki extends ek {
           if (!(param1 instanceof hl)) {
             break L5;
           } else {
-            param4 = param4 & ((hl) param1).field_B;
+            param4 = param4 & ((hl) (Object) param1).field_B;
             break L5;
           }
         }
@@ -159,9 +159,9 @@ final class ki extends ek {
         var7 = stackIn_28_0;
         if (param2 != 11447) {
           L7: {
-            var9 = (lk) null;
+            var9 = null;
             ((ki) this).a(103, (lk) null, -110, -12, false);
-            ge.a(((lk) param1).field_h, ((ki) this).field_r, var7, ((lk) param1).field_o + param0, (-((ki) this).field_r[0].field_k + ((lk) param1).field_q >> 728070049) + param3 + ((lk) param1).field_i, (byte) -10);
+            ge.a(param1.field_h, ((ki) this).field_r, var7, param1.field_o + param0, (-((ki) this).field_r[0].field_k + param1.field_q >> 728070049) + param3 + param1.field_i, (byte) -10);
             if (param4) {
               stackOut_35_0 = 16777215;
               stackIn_36_0 = stackOut_35_0;
@@ -173,11 +173,11 @@ final class ki extends ek {
             }
           }
           var8 = stackIn_36_0;
-          int discarded$6 = ((ki) this).field_c.a(((lk) param1).field_r, ((lk) param1).field_o + param0, -2 + (param3 - -((lk) param1).field_i), ((lk) param1).field_h, ((lk) param1).field_q, var8, -1, 1, 1, ((ki) this).field_c.field_s);
+          int discarded$6 = ((ki) this).field_c.a(param1.field_r, param1.field_o + param0, -2 + (param3 - -param1.field_i), param1.field_h, param1.field_q, var8, -1, 1, 1, ((ki) this).field_c.field_s);
           return;
         } else {
           L8: {
-            ge.a(((lk) param1).field_h, ((ki) this).field_r, var7, ((lk) param1).field_o + param0, (-((ki) this).field_r[0].field_k + ((lk) param1).field_q >> 728070049) + param3 + ((lk) param1).field_i, (byte) -10);
+            ge.a(param1.field_h, ((ki) this).field_r, var7, param1.field_o + param0, (-((ki) this).field_r[0].field_k + param1.field_q >> 728070049) + param3 + param1.field_i, (byte) -10);
             if (param4) {
               stackOut_31_0 = 16777215;
               stackIn_32_0 = stackOut_31_0;
@@ -189,7 +189,7 @@ final class ki extends ek {
             }
           }
           var8 = stackIn_32_0;
-          int discarded$7 = ((ki) this).field_c.a(((lk) param1).field_r, ((lk) param1).field_o + param0, -2 + (param3 - -((lk) param1).field_i), ((lk) param1).field_h, ((lk) param1).field_q, var8, -1, 1, 1, ((ki) this).field_c.field_s);
+          int discarded$7 = ((ki) this).field_c.a(param1.field_r, param1.field_o + param0, -2 + (param3 - -param1.field_i), param1.field_h, param1.field_q, var8, -1, 1, 1, ((ki) this).field_c.field_s);
           return;
         }
     }

@@ -48,7 +48,7 @@ final class lc implements Iterator {
                   }
                   L1: {
                     var5 = null;
-                    if (fs.field_b != 0) {
+                    if ((fs.field_b ^ -1) != -1) {
                       break L1;
                     } else {
                       var5 = lh.a(param1, 100, var4);
@@ -64,7 +64,7 @@ final class lc implements Iterator {
                     }
                   }
                   L3: {
-                    if (fs.field_b == -3) {
+                    if ((fs.field_b ^ -1) == -3) {
                       var5 = il.a(var4, param1, (byte) 126);
                       break L3;
                     } else {
@@ -72,21 +72,21 @@ final class lc implements Iterator {
                     }
                   }
                   L4: {
-                    if (-4 != fs.field_b) {
+                    if (-4 != (fs.field_b ^ -1)) {
                       break L4;
                     } else {
                       var5 = rn.a(var4, 2, param1, var4);
                       break L4;
                     }
                   }
-                  if (var5 == null) {
+                  if (var5 != null) {
+                    var6 = null;
+                    wi.a((String) null, var4, 0, 2, var5, -115);
                     k.field_m = null;
                     fs.field_b = -1;
                     var3 = 91 % ((-21 - param0) / 44);
                     return;
                   } else {
-                    var6 = null;
-                    wi.a((String) null, var4, 0, 2, var5, -115);
                     k.field_m = null;
                     fs.field_b = -1;
                     var3 = 91 % ((-21 - param0) / 44);

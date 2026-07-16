@@ -13,11 +13,11 @@ final class ts {
             field_b = null;
         }
         if (param1 == param2) {
-            if (-4 == param0) {
+            if (-4 == (param0 ^ -1)) {
                 var4 = 448;
             }
         }
-        if (-1 == param2) {
+        if (-1 == (param2 ^ -1)) {
             var4 = -var4 + 896;
         }
         return var4;
@@ -35,8 +35,8 @@ final class ts {
         }
         int var3 = on.field_g >> 1265419425;
         int var4 = on.field_f >> 1762085089;
-        for (var5 = 0; var5 > -3; var5++) {
-            for (var6 = 0; -901 > var6; var6++) {
+        for (var5 = 0; (var5 ^ -1) > -3; var5++) {
+            for (var6 = 0; -901 < (var6 ^ -1); var6++) {
                 var7 = param0 + (2048 * var5 + var6);
                 var8 = 54 * we.a(var7, false) >> -1477556656;
                 var9 = ei.a(var7, (byte) -23) * -54 >> -567063696;

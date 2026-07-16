@@ -38,30 +38,65 @@ final class me extends fc {
 
     final static void a(int param0, int param1) {
         try {
-            if (r.field_i != null) {
-                // iflt L30
-                // if_acmpne L22
-            } else {
-                ra.field_C.field_k = 0;
-                return;
-            }
-            if (param0 != -1) {
-                return;
-            }
-            if (ra.field_C.field_k == 0) {
-                if (qg.a(false) > qh.field_f + 10000L) {
-                    ra.field_C.c(param1, param0 + 8);
+            IOException iOException = null;
+            Throwable decompiledCaughtException = null;
+            L0: {
+              if (r.field_i == null) {
+                break L0;
+              } else {
+                L1: {
+                  if (param1 < 0) {
+                    break L1;
+                  } else {
+                    if (jc.field_a != ka.field_b) {
+                      break L0;
+                    } else {
+                      break L1;
+                    }
+                  }
                 }
-            }
-            if (0 < ra.field_C.field_k) {
-                try {
-                    r.field_i.a(param0 + -124, ra.field_C.field_j, ra.field_C.field_k, 0);
-                    qh.field_f = qg.a(false);
-                } catch (IOException iOException) {
-                    lj.a((byte) 118);
+                if (param0 == -1) {
+                  L2: {
+                    if (ra.field_C.field_k != 0) {
+                      break L2;
+                    } else {
+                      if (qg.a(false) <= qh.field_f + 10000L) {
+                        break L2;
+                      } else {
+                        ra.field_C.c(param1, param0 + 8);
+                        break L2;
+                      }
+                    }
+                  }
+                  L3: {
+                    if (0 >= ra.field_C.field_k) {
+                      break L3;
+                    } else {
+                      try {
+                        L4: {
+                          r.field_i.a(param0 + -124, ra.field_C.field_j, ra.field_C.field_k, 0);
+                          qh.field_f = qg.a(false);
+                          break L4;
+                        }
+                      } catch (java.io.IOException decompiledCaughtParameter0) {
+                        decompiledCaughtException = decompiledCaughtParameter0;
+                        L5: {
+                          iOException = (IOException) (Object) decompiledCaughtException;
+                          lj.a((byte) 118);
+                          break L5;
+                        }
+                      }
+                      ra.field_C.field_k = 0;
+                      break L3;
+                    }
+                  }
+                  return;
+                } else {
+                  return;
                 }
-                ra.field_C.field_k = 0;
+              }
             }
+            ra.field_C.field_k = 0;
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
@@ -104,8 +139,8 @@ final class me extends fc {
         String var8 = null;
         int var9 = 0;
         int var10 = 0;
-        String var10_ref = null;
-        String var11_ref = null;
+        String var10_ref_String = null;
+        String var11_ref_String = null;
         int var11 = 0;
         int var12 = 0;
         int var13 = 0;
@@ -132,11 +167,11 @@ final class me extends fc {
         L0: {
           var13 = TrackController.field_F ? 1 : 0;
           var14 = param3.b(-108);
-          var11_ref = var14;
-          var11_ref = var14;
+          var11_ref_String = var14;
+          var11_ref_String = var14;
           var8 = param6.b(-117);
-          var11_ref = var8;
-          var11_ref = var8;
+          var11_ref_String = var8;
+          var11_ref_String = var8;
           if (null != r.field_i) {
             break L0;
           } else {
@@ -224,15 +259,15 @@ final class me extends fc {
                   ra.field_C.a(18, (byte) -92);
                   ra.field_C.field_k = ra.field_C.field_k + 2;
                   var10 = ra.field_C.field_k;
-                  var11_ref = bg.a(gd.b((byte) 77), -22004);
-                  if (var11_ref != null) {
+                  var11_ref_String = bg.a(gd.b((byte) 77), -22004);
+                  if (var11_ref_String != null) {
                     break L6;
                   } else {
-                    var11_ref = "";
+                    var11_ref_String = "";
                     break L6;
                   }
                 }
-                ra.field_C.a((byte) -57, var11_ref);
+                ra.field_C.a((byte) -57, var11_ref_String);
                 ee.a(sc.field_d, (be) (Object) ra.field_C, fj.field_N, 0, ui.field_p);
                 ra.field_C.c(-var10 + ra.field_C.field_k, (byte) -96);
                 break L2;
@@ -258,7 +293,7 @@ final class me extends fc {
                 if (var9 < 100) {
                   break L8;
                 } else {
-                  if (-106 <= var9) {
+                  if (-106 <= (var9 ^ -1)) {
                     ca.field_a = new String[var9 + -100];
                     jc.field_a = kl.field_a;
                     break L7;
@@ -267,7 +302,7 @@ final class me extends fc {
                   }
                 }
               }
-              if (-249 == var9) {
+              if (-249 == (var9 ^ -1)) {
                 ob.a(209, gd.b((byte) 77));
                 fi.field_t = gh.field_c;
                 lj.a((byte) 125);
@@ -327,9 +362,9 @@ final class me extends fc {
             } else {
               L12: {
                 if (255 == uk.field_c) {
-                  var10_ref = ne.field_a.d(19016);
-                  if (var10_ref != null) {
-                    dh.a(-19136, var10_ref, gd.b((byte) 77));
+                  var10_ref_String = ne.field_a.d(19016);
+                  if (var10_ref_String != null) {
+                    dh.a(-19136, var10_ref_String, gd.b((byte) 77));
                     break L12;
                   } else {
                     break L12;

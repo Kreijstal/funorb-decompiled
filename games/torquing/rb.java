@@ -45,151 +45,57 @@ class rb extends lg {
             String var9 = null;
             Object stackIn_3_0 = null;
             String stackIn_9_0 = null;
-            Object stackOut_2_0 = null;
+            Throwable decompiledCaughtException = null;
             String stackOut_8_0 = null;
-            int statePc = 0;
-            Throwable caughtException = null;
-            stateLoop: while (true) {
-                switch (statePc) {
-                    case 0: {
-                        var8 = Torquing.field_u;
-                        statePc = 1;
-                        continue stateLoop;
-                    }
-                    case 1: {
-                        try {
-                            var9 = param1.getParameter("cookieprefix");
-                            var3 = var9 + "settings";
-                            var4 = (String) hp.a(param1, (byte) -85, "getcookies");
-                            var5 = kc.a(';', var4, 0);
-                            if (param0 <= -102) {
-                                statePc = 4;
-                            } else {
-                                statePc = 2;
-                            }
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_1) {
-                            caughtException = stateCaught_1;
-                            statePc = 12;
-                            continue stateLoop;
-                        }
-                    }
-                    case 2: {
-                        try {
-                            stackOut_2_0 = null;
-                            stackIn_3_0 = stackOut_2_0;
-                            statePc = 3;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_2) {
-                            caughtException = stateCaught_2;
-                            statePc = 12;
-                            continue stateLoop;
-                        }
-                    }
-                    case 3: {
-                        return (String) (Object) stackIn_3_0;
-                    }
-                    case 4: {
-                        try {
-                            var6 = 0;
-                            statePc = 5;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_4) {
-                            caughtException = stateCaught_4;
-                            statePc = 12;
-                            continue stateLoop;
-                        }
-                    }
-                    case 5: {
-                        try {
-                            if (var5.length <= var6) {
-                                statePc = 13;
-                            } else {
-                                statePc = 6;
-                            }
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_5) {
-                            caughtException = stateCaught_5;
-                            statePc = 12;
-                            continue stateLoop;
-                        }
-                    }
-                    case 6: {
-                        try {
-                            var7 = var5[var6].indexOf('=');
-                            if ((var7 ^ -1) > -1) {
-                                statePc = 10;
-                            } else {
-                                statePc = 7;
-                            }
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_6) {
-                            caughtException = stateCaught_6;
-                            statePc = 12;
-                            continue stateLoop;
-                        }
-                    }
-                    case 7: {
-                        try {
-                            if (!var5[var6].substring(0, var7).trim().equals((Object) (Object) var3)) {
-                                statePc = 10;
-                            } else {
-                                statePc = 8;
-                            }
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_7) {
-                            caughtException = stateCaught_7;
-                            statePc = 12;
-                            continue stateLoop;
-                        }
-                    }
-                    case 8: {
-                        try {
+            Object stackOut_2_0 = null;
+            var8 = Torquing.field_u;
+            try {
+              L0: {
+                var9 = param1.getParameter("cookieprefix");
+                var3 = var9 + "settings";
+                var4 = (String) hp.a(param1, (byte) -85, "getcookies");
+                var5 = kc.a(';', var4, 0);
+                if (param0 <= -102) {
+                  var6 = 0;
+                  L1: while (true) {
+                    if (var5.length <= var6) {
+                      break L0;
+                    } else {
+                      L2: {
+                        var7 = var5[var6].indexOf('=');
+                        if ((var7 ^ -1) > -1) {
+                          break L2;
+                        } else {
+                          if (!var5[var6].substring(0, var7).trim().equals((Object) (Object) var3)) {
+                            break L2;
+                          } else {
                             stackOut_8_0 = var5[var6].substring(1 + var7).trim();
                             stackIn_9_0 = stackOut_8_0;
-                            statePc = 9;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_8) {
-                            caughtException = stateCaught_8;
-                            statePc = 12;
-                            continue stateLoop;
+                            return stackIn_9_0;
+                          }
                         }
+                      }
+                      var6++;
+                      continue L1;
                     }
-                    case 9: {
-                        return stackIn_9_0;
-                    }
-                    case 10: {
-                        try {
-                            var6++;
-                            statePc = 5;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_10) {
-                            caughtException = stateCaught_10;
-                            statePc = 12;
-                            continue stateLoop;
-                        }
-                    }
-                    case 12: {
-                        var2 = caughtException;
-                        statePc = 13;
-                        continue stateLoop;
-                    }
-                    case 13: {
-                        if (null != rd.field_t) {
-                            statePc = 15;
-                        } else {
-                            statePc = 16;
-                        }
-                        continue stateLoop;
-                    }
-                    case 15: {
-                        return rd.field_t;
-                    }
-                    case 16: {
-                        return param1.getParameter("settings");
-                    }
-                    default: throw new IllegalStateException("invalid CFG state " + statePc);
+                  }
+                } else {
+                  stackOut_2_0 = null;
+                  stackIn_3_0 = stackOut_2_0;
+                  return (String) (Object) stackIn_3_0;
                 }
+              }
+            } catch (java.lang.Throwable decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              L3: {
+                var2 = decompiledCaughtException;
+                break L3;
+              }
+            }
+            if (null != rd.field_t) {
+              return rd.field_t;
+            } else {
+              return param1.getParameter("settings");
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -286,23 +192,54 @@ class rb extends lg {
     }
 
     final void a(int param0, byte param1, String param2) {
+        String[] var4 = null;
         int var5 = 0;
-        int var6 = Torquing.field_u;
-        if (((rb) this).field_E != null) {
-            // if_icmpgt L86
-        }
-        String[] var8 = new String[param0 + 1];
-        String[] var4 = var8;
-        if (!(((rb) this).field_E == null)) {
-            for (var5 = 0; ((rb) this).field_E.length > var5; var5++) {
-                var8[var5] = ((rb) this).field_E[var5];
+        int var6 = 0;
+        Object var7 = null;
+        String[] var8 = null;
+        L0: {
+          L1: {
+            var6 = Torquing.field_u;
+            if (((rb) this).field_E == null) {
+              break L1;
+            } else {
+              if (((rb) this).field_E.length > param0) {
+                break L0;
+              } else {
+                break L1;
+              }
             }
+          }
+          L2: {
+            var8 = new String[param0 + 1];
+            var4 = var8;
+            if (((rb) this).field_E != null) {
+              var5 = 0;
+              L3: while (true) {
+                if (((rb) this).field_E.length <= var5) {
+                  break L2;
+                } else {
+                  var8[var5] = ((rb) this).field_E[var5];
+                  var5++;
+                  continue L3;
+                }
+              }
+            } else {
+              break L2;
+            }
+          }
+          ((rb) this).field_E = var4;
+          break L0;
         }
-        ((rb) this).field_E = var4;
-        ((rb) this).field_E[param0] = param2;
-        if (param1 >= -73) {
-            Object var7 = null;
-            boolean discarded$0 = ((rb) this).a((gm) null, false);
+        L4: {
+          ((rb) this).field_E[param0] = param2;
+          if (param1 < -73) {
+            break L4;
+          } else {
+            var7 = null;
+            boolean discarded$2 = ((rb) this).a((gm) null, false);
+            break L4;
+          }
         }
     }
 
@@ -332,7 +269,7 @@ class rb extends lg {
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
-        tb var11 = null;
+        Object var11 = null;
         int var12 = 0;
         kp var13 = null;
         int var14 = 0;
@@ -403,13 +340,13 @@ class rb extends lg {
                   var15 = stackIn_12_0;
                   var16 = new tb(var8, var14, var13.field_c, -var14 + var15, Math.max(var3.a(false), -var13.field_c + var13.field_a));
                   if (var11 != null) {
-                    var11.field_k = var16;
+                    ((tb) var11).field_k = var16;
                     break L4;
                   } else {
                     break L4;
                   }
                 }
-                var11 = var16;
+                var11 = (Object) (Object) var16;
                 ((rb) this).field_D.a((byte) 54, (q) (Object) var16);
                 var12++;
                 continue L1;
@@ -420,15 +357,14 @@ class rb extends lg {
     }
 
     final static ga a(Throwable param0, String param1) {
-        ga var2_ref = null;
         ga var2 = null;
         if (!(param0 instanceof ga)) {
             var2 = new ga(param0, param1);
         } else {
-            var2_ref = (ga) (Object) param0;
-            var2_ref.field_b = var2_ref.field_b + 32 + param1;
+            var2 = (ga) (Object) param0;
+            var2.field_b = var2.field_b + 32 + param1;
         }
-        return var2_ref;
+        return var2;
     }
 
     final void a(int param0, int param1, int param2, int param3) {

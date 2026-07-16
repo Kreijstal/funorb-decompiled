@@ -24,9 +24,9 @@ final class ih {
     final static int a(String param0, byte param1, int param2, boolean param3, ke param4, ke param5, int param6) {
         String var8 = null;
         int var9 = 0;
-        String var9_ref = null;
+        String var9_ref_String = null;
         int var10 = 0;
-        String var11_ref = null;
+        String var11_ref_String = null;
         int var11 = 0;
         int var12 = 0;
         String var13 = null;
@@ -165,15 +165,15 @@ final class ih {
                   ej.field_j.a(18, false);
                   ej.field_j.field_v = ej.field_j.field_v + 2;
                   var10 = ej.field_j.field_v;
-                  var11_ref = eq.a(hk.d(79), (byte) 112);
-                  if (var11_ref == null) {
-                    var11_ref = "";
+                  var11_ref_String = eq.a(hk.d(79), (byte) 112);
+                  if (var11_ref_String == null) {
+                    var11_ref_String = "";
                     break L6;
                   } else {
                     break L6;
                   }
                 }
-                ej.field_j.a(-9946, var11_ref);
+                ej.field_j.a(-9946, var11_ref_String);
                 ad.a((byte) 93, rb.field_l, bc.field_b, ei.field_q, (ge) (Object) ej.field_j);
                 ej.field_j.c(-var10 + ej.field_j.field_v, (byte) -92);
                 break L2;
@@ -290,9 +290,9 @@ final class ih {
                     we.field_e = false;
                     return uq.field_c;
                   } else {
-                    var9_ref = kn.field_e.m(110);
-                    if (var9_ref != null) {
-                      fg.a(hk.d(86), -128, var9_ref);
+                    var9_ref_String = kn.field_e.m(110);
+                    if (var9_ref_String != null) {
+                      fg.a(hk.d(86), -128, var9_ref_String);
                       dn.c(55);
                       we.field_e = false;
                       return uq.field_c;
@@ -446,9 +446,9 @@ final class ih {
                         we.field_e = false;
                         return uq.field_c;
                       } else {
-                        var9_ref = kn.field_e.m(110);
-                        if (var9_ref != null) {
-                          fg.a(hk.d(86), -128, var9_ref);
+                        var9_ref_String = kn.field_e.m(110);
+                        if (var9_ref_String != null) {
+                          fg.a(hk.d(86), -128, var9_ref_String);
                           dn.c(55);
                           we.field_e = false;
                           return uq.field_c;
@@ -507,9 +507,9 @@ final class ih {
                           ke.field_g = kn.field_e.j(-122);
                           break L26;
                         } else {
-                          var9_ref = kn.field_e.m(110);
-                          if (var9_ref != null) {
-                            fg.a(hk.d(86), -128, var9_ref);
+                          var9_ref_String = kn.field_e.m(110);
+                          if (var9_ref_String != null) {
+                            fg.a(hk.d(86), -128, var9_ref_String);
                             break L26;
                           } else {
                             break L26;
@@ -649,9 +649,9 @@ final class ih {
                     we.field_e = false;
                     return uq.field_c;
                   } else {
-                    var9_ref = kn.field_e.m(110);
-                    if (var9_ref != null) {
-                      fg.a(hk.d(86), -128, var9_ref);
+                    var9_ref_String = kn.field_e.m(110);
+                    if (var9_ref_String != null) {
+                      fg.a(hk.d(86), -128, var9_ref_String);
                       dn.c(55);
                       we.field_e = false;
                       return uq.field_c;
@@ -728,9 +728,9 @@ final class ih {
                             ke.field_g = kn.field_e.j(-122);
                             break L40;
                           } else {
-                            var9_ref = kn.field_e.m(110);
-                            if (var9_ref != null) {
-                              fg.a(hk.d(86), -128, var9_ref);
+                            var9_ref_String = kn.field_e.m(110);
+                            if (var9_ref_String != null) {
+                              fg.a(hk.d(86), -128, var9_ref_String);
                               break L40;
                             } else {
                               break L40;
@@ -791,9 +791,9 @@ final class ih {
                           ke.field_g = kn.field_e.j(-122);
                           break L45;
                         } else {
-                          var9_ref = kn.field_e.m(110);
-                          if (var9_ref != null) {
-                            fg.a(hk.d(86), -128, var9_ref);
+                          var9_ref_String = kn.field_e.m(110);
+                          if (var9_ref_String != null) {
+                            fg.a(hk.d(86), -128, var9_ref_String);
                             break L45;
                           } else {
                             break L45;
@@ -898,9 +898,9 @@ final class ih {
             } else {
               if (wf.a((byte) 39)) {
                 if (uq.field_c == 255) {
-                  var9_ref = kn.field_e.m(110);
-                  if (var9_ref != null) {
-                    fg.a(hk.d(86), -128, var9_ref);
+                  var9_ref_String = kn.field_e.m(110);
+                  if (var9_ref_String != null) {
+                    fg.a(hk.d(86), -128, var9_ref_String);
                     dn.c(55);
                     we.field_e = false;
                     return uq.field_c;
@@ -965,9 +965,9 @@ final class ih {
                           ke.field_g = kn.field_e.j(-122);
                           break L53;
                         } else {
-                          var9_ref = kn.field_e.m(110);
-                          if (var9_ref != null) {
-                            fg.a(hk.d(86), -128, var9_ref);
+                          var9_ref_String = kn.field_e.m(110);
+                          if (var9_ref_String != null) {
+                            fg.a(hk.d(86), -128, var9_ref_String);
                             break L53;
                           } else {
                             break L53;
@@ -1039,9 +1039,9 @@ final class ih {
                         ke.field_g = kn.field_e.j(-122);
                         break L58;
                       } else {
-                        var9_ref = kn.field_e.m(110);
-                        if (var9_ref != null) {
-                          fg.a(hk.d(86), -128, var9_ref);
+                        var9_ref_String = kn.field_e.m(110);
+                        if (var9_ref_String != null) {
+                          fg.a(hk.d(86), -128, var9_ref_String);
                           break L58;
                         } else {
                           break L58;

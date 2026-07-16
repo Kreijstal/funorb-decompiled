@@ -372,8 +372,8 @@ class ic implements t, dl {
           if (!((ic) this).field_a) {
             L1: {
               var12 = ((ic) this).field_l;
-              if (var12 != -1) {
-                if (-3 != var12) {
+              if ((var12 ^ -1) != -1) {
+                if (-3 != (var12 ^ -1)) {
                   L2: {
                     if (var12 == 3) {
                       break L2;

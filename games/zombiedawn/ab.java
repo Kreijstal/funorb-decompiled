@@ -228,26 +228,49 @@ final class ab extends ln {
     }
 
     final int a(int param0, long param1) {
-        int var5 = ZombieDawn.field_J;
-        if (param0 > -76) {
-            ((ab) this).a(false);
-        }
-        if ((((ab) this).field_h ^ -1L) > (((ab) this).field_f ^ -1L)) {
-            ((ab) this).field_g = ((ab) this).field_g + (-((ab) this).field_h + ((ab) this).field_f);
-            ((ab) this).field_h = ((ab) this).field_h + (-((ab) this).field_h + ((ab) this).field_f);
-            ((ab) this).field_f = ((ab) this).field_f + param1;
-            return 1;
-        }
         int var4 = 0;
-        do {
-            ((ab) this).field_f = ((ab) this).field_f + param1;
-            var4++;
-            // if_icmple L132
-        } while ((((ab) this).field_f ^ -1L) > (((ab) this).field_h ^ -1L));
-        if (!(((ab) this).field_h <= ((ab) this).field_f)) {
-            ((ab) this).field_f = ((ab) this).field_h;
+        int var5 = 0;
+        L0: {
+          var5 = ZombieDawn.field_J;
+          if (param0 <= -76) {
+            break L0;
+          } else {
+            ((ab) this).a(false);
+            break L0;
+          }
         }
-        return var4;
+        if ((((ab) this).field_h ^ -1L) <= (((ab) this).field_f ^ -1L)) {
+          var4 = 0;
+          L1: while (true) {
+            L2: {
+              ((ab) this).field_f = ((ab) this).field_f + param1;
+              var4++;
+              if (10 <= var4) {
+                break L2;
+              } else {
+                if ((((ab) this).field_f ^ -1L) > (((ab) this).field_h ^ -1L)) {
+                  continue L1;
+                } else {
+                  break L2;
+                }
+              }
+            }
+            L3: {
+              if (((ab) this).field_h > ((ab) this).field_f) {
+                ((ab) this).field_f = ((ab) this).field_h;
+                break L3;
+              } else {
+                break L3;
+              }
+            }
+            return var4;
+          }
+        } else {
+          ((ab) this).field_g = ((ab) this).field_g + (-((ab) this).field_h + ((ab) this).field_f);
+          ((ab) this).field_h = ((ab) this).field_h + (-((ab) this).field_h + ((ab) this).field_f);
+          ((ab) this).field_f = ((ab) this).field_f + param1;
+          return 1;
+        }
     }
 
     final static vn[] a(int param0, byte param1, int param2, int param3, int param4) {

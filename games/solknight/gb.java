@@ -20,8 +20,9 @@ class gb extends gg {
 
     final void c(int param0, int param1) {
         int var3 = 16 % ((-52 - param0) / 49);
+        int fieldTemp$0 = ((gb) this).field_m;
         ((gb) this).field_m = ((gb) this).field_m + 1;
-        ((gb) this).field_l[((gb) this).field_m] = (byte)param1;
+        ((gb) this).field_l[fieldTemp$0] = (byte)param1;
     }
 
     final int e(boolean param0) {
@@ -85,23 +86,30 @@ class gb extends gg {
     }
 
     private final void a(int param0, long param1) {
+        int fieldTemp$0 = ((gb) this).field_m;
         ((gb) this).field_m = ((gb) this).field_m + 1;
-        ((gb) this).field_l[((gb) this).field_m] = (byte)(int)(param1 >> -524918224);
+        ((gb) this).field_l[fieldTemp$0] = (byte)(int)(param1 >> -524918224);
+        int fieldTemp$1 = ((gb) this).field_m;
         ((gb) this).field_m = ((gb) this).field_m + 1;
-        ((gb) this).field_l[((gb) this).field_m] = (byte)(int)(param1 >> 1986540712);
+        ((gb) this).field_l[fieldTemp$1] = (byte)(int)(param1 >> 1986540712);
+        int fieldTemp$2 = ((gb) this).field_m;
         ((gb) this).field_m = ((gb) this).field_m + 1;
-        ((gb) this).field_l[((gb) this).field_m] = (byte)(int)(param1 >> -1572448416);
+        ((gb) this).field_l[fieldTemp$2] = (byte)(int)(param1 >> -1572448416);
         if (param0 != -37) {
             return;
         }
+        int fieldTemp$3 = ((gb) this).field_m;
         ((gb) this).field_m = ((gb) this).field_m + 1;
-        ((gb) this).field_l[((gb) this).field_m] = (byte)(int)(param1 >> 73216600);
+        ((gb) this).field_l[fieldTemp$3] = (byte)(int)(param1 >> 73216600);
+        int fieldTemp$4 = ((gb) this).field_m;
         ((gb) this).field_m = ((gb) this).field_m + 1;
-        ((gb) this).field_l[((gb) this).field_m] = (byte)(int)(param1 >> -1076860400);
+        ((gb) this).field_l[fieldTemp$4] = (byte)(int)(param1 >> -1076860400);
+        int fieldTemp$5 = ((gb) this).field_m;
         ((gb) this).field_m = ((gb) this).field_m + 1;
-        ((gb) this).field_l[((gb) this).field_m] = (byte)(int)(param1 >> -654249592);
+        ((gb) this).field_l[fieldTemp$5] = (byte)(int)(param1 >> -654249592);
+        int fieldTemp$6 = ((gb) this).field_m;
         ((gb) this).field_m = ((gb) this).field_m + 1;
-        ((gb) this).field_l[((gb) this).field_m] = (byte)(int)param1;
+        ((gb) this).field_l[fieldTemp$6] = (byte)(int)param1;
     }
 
     final void a(int param0, String param1) {
@@ -193,8 +201,9 @@ class gb extends gg {
         int var5 = 0;
         int var6 = SolKnight.field_L ? 1 : 0;
         for (var5 = param1; param1 - -param0 > var5; var5++) {
+            int fieldTemp$0 = ((gb) this).field_m;
             ((gb) this).field_m = ((gb) this).field_m + 1;
-            param3[var5] = ((gb) this).field_l[((gb) this).field_m];
+            param3[var5] = ((gb) this).field_l[fieldTemp$0];
         }
         if (param2 >= -109) {
             this.a(-27, 8L);
@@ -226,8 +235,9 @@ class gb extends gg {
             field_j = 4;
         }
         while (param1 > ((gb) this).field_m) {
+            int fieldTemp$0 = ((gb) this).field_m;
             ((gb) this).field_m = ((gb) this).field_m + 1;
-            ((gb) this).field_l[((gb) this).field_m] = (byte) 0;
+            ((gb) this).field_l[fieldTemp$0] = (byte) 0;
         }
     }
 
@@ -247,8 +257,9 @@ class gb extends gg {
             field_h = null;
         }
         for (var5 = param3; var5 < param3 - -param1; var5++) {
+            int fieldTemp$0 = ((gb) this).field_m;
             ((gb) this).field_m = ((gb) this).field_m + 1;
-            ((gb) this).field_l[((gb) this).field_m] = param2[var5];
+            ((gb) this).field_l[fieldTemp$0] = param2[var5];
         }
     }
 
@@ -256,8 +267,9 @@ class gb extends gg {
         if (param0 != 255) {
             ((gb) this).a((byte) 56, -16);
         }
+        int fieldTemp$0 = ((gb) this).field_m;
         ((gb) this).field_m = ((gb) this).field_m + 1;
-        return 255 & ((gb) this).field_l[((gb) this).field_m];
+        return 255 & ((gb) this).field_l[fieldTemp$0];
     }
 
     final boolean k(int param0) {
@@ -274,8 +286,9 @@ class gb extends gg {
         if (param0 != -14) {
             return (byte) -103;
         }
+        int fieldTemp$0 = ((gb) this).field_m;
         ((gb) this).field_m = ((gb) this).field_m + 1;
-        return ((gb) this).field_l[((gb) this).field_m];
+        return ((gb) this).field_l[fieldTemp$0];
     }
 
     final String g(int param0) {
@@ -290,25 +303,29 @@ class gb extends gg {
     }
 
     final void a(boolean param0, int param1) {
+        int fieldTemp$0 = ((gb) this).field_m;
         ((gb) this).field_m = ((gb) this).field_m + 1;
-        ((gb) this).field_l[((gb) this).field_m] = (byte)(param1 >> 98792136);
+        ((gb) this).field_l[fieldTemp$0] = (byte)(param1 >> 98792136);
         if (!param0) {
             return;
         }
+        int fieldTemp$1 = ((gb) this).field_m;
         ((gb) this).field_m = ((gb) this).field_m + 1;
-        ((gb) this).field_l[((gb) this).field_m] = (byte)param1;
+        ((gb) this).field_l[fieldTemp$1] = (byte)param1;
     }
 
     final String d(boolean param0) {
+        int fieldTemp$0 = ((gb) this).field_m;
         ((gb) this).field_m = ((gb) this).field_m + 1;
-        int var2 = ((gb) this).field_l[((gb) this).field_m];
+        int var2 = ((gb) this).field_l[fieldTemp$0];
         if (0 != var2) {
             throw new IllegalStateException("");
         }
         int var3 = ((gb) this).field_m;
         while (true) {
+            int fieldTemp$1 = ((gb) this).field_m;
             ((gb) this).field_m = ((gb) this).field_m + 1;
-            if (-1 == (((gb) this).field_l[((gb) this).field_m] ^ -1)) {
+            if (-1 == (((gb) this).field_l[fieldTemp$1] ^ -1)) {
                 break;
             }
         }
@@ -324,16 +341,18 @@ class gb extends gg {
 
     final int c(byte param0) {
         int var4 = SolKnight.field_L ? 1 : 0;
+        int fieldTemp$0 = ((gb) this).field_m;
         ((gb) this).field_m = ((gb) this).field_m + 1;
-        int var2 = ((gb) this).field_l[((gb) this).field_m];
+        int var2 = ((gb) this).field_l[fieldTemp$0];
         if (param0 != 120) {
             return -115;
         }
         int var3 = 0;
         while (var2 < 0) {
             var3 = (var2 & 127 | var3) << -2064068153;
+            int fieldTemp$1 = ((gb) this).field_m;
             ((gb) this).field_m = ((gb) this).field_m + 1;
-            var2 = ((gb) this).field_l[((gb) this).field_m];
+            var2 = ((gb) this).field_l[fieldTemp$1];
         }
         return var3 | var2;
     }
@@ -355,8 +374,9 @@ class gb extends gg {
             var8 = -1640531527;
             var9 = 32;
             while (true) {
+                int incrementValue$0 = var9;
                 var9--;
-                if (-1 <= (var9 ^ -1)) {
+                if (-1 <= (incrementValue$0 ^ -1)) {
                     break;
                 }
                 var5 = var5 + (var6 + (var6 >>> 1884979013 ^ var6 << -1752101500) ^ var7 + param1[var7 & 3]);
@@ -391,12 +411,14 @@ class gb extends gg {
         if (param0 != -1955895016) {
             return;
         }
+        int fieldTemp$0 = ((gb) this).field_m;
         ((gb) this).field_m = ((gb) this).field_m + 1;
-        ((gb) this).field_l[((gb) this).field_m] = (byte) 0;
+        ((gb) this).field_l[fieldTemp$0] = (byte) 0;
         CharSequence var4 = (CharSequence) (Object) param1;
         ((gb) this).field_m = ((gb) this).field_m + ue.a(((gb) this).field_m, var4, param1.length(), 352, ((gb) this).field_l, 0);
+        int fieldTemp$1 = ((gb) this).field_m;
         ((gb) this).field_m = ((gb) this).field_m + 1;
-        ((gb) this).field_l[((gb) this).field_m] = (byte) 0;
+        ((gb) this).field_l[fieldTemp$1] = (byte) 0;
     }
 
     final static boolean a(char param0, int param1) {
@@ -454,25 +476,33 @@ class gb extends gg {
     }
 
     final void a(long param0, byte param1) {
+        int fieldTemp$0 = ((gb) this).field_m;
         ((gb) this).field_m = ((gb) this).field_m + 1;
-        ((gb) this).field_l[((gb) this).field_m] = (byte)(int)(param0 >> 1051615416);
+        ((gb) this).field_l[fieldTemp$0] = (byte)(int)(param0 >> 1051615416);
+        int fieldTemp$1 = ((gb) this).field_m;
         ((gb) this).field_m = ((gb) this).field_m + 1;
-        ((gb) this).field_l[((gb) this).field_m] = (byte)(int)(param0 >> -1091926544);
+        ((gb) this).field_l[fieldTemp$1] = (byte)(int)(param0 >> -1091926544);
+        int fieldTemp$2 = ((gb) this).field_m;
         ((gb) this).field_m = ((gb) this).field_m + 1;
-        ((gb) this).field_l[((gb) this).field_m] = (byte)(int)(param0 >> -324552152);
+        ((gb) this).field_l[fieldTemp$2] = (byte)(int)(param0 >> -324552152);
+        int fieldTemp$3 = ((gb) this).field_m;
         ((gb) this).field_m = ((gb) this).field_m + 1;
-        ((gb) this).field_l[((gb) this).field_m] = (byte)(int)(param0 >> 1185922144);
+        ((gb) this).field_l[fieldTemp$3] = (byte)(int)(param0 >> 1185922144);
+        int fieldTemp$4 = ((gb) this).field_m;
         ((gb) this).field_m = ((gb) this).field_m + 1;
-        ((gb) this).field_l[((gb) this).field_m] = (byte)(int)(param0 >> -163415656);
+        ((gb) this).field_l[fieldTemp$4] = (byte)(int)(param0 >> -163415656);
         if (param1 <= 16) {
-            boolean discarded$0 = gb.a('$', -122);
+            boolean discarded$5 = gb.a('$', -122);
         }
+        int fieldTemp$6 = ((gb) this).field_m;
         ((gb) this).field_m = ((gb) this).field_m + 1;
-        ((gb) this).field_l[((gb) this).field_m] = (byte)(int)(param0 >> 432517392);
+        ((gb) this).field_l[fieldTemp$6] = (byte)(int)(param0 >> 432517392);
+        int fieldTemp$7 = ((gb) this).field_m;
         ((gb) this).field_m = ((gb) this).field_m + 1;
-        ((gb) this).field_l[((gb) this).field_m] = (byte)(int)(param0 >> -110421176);
+        ((gb) this).field_l[fieldTemp$7] = (byte)(int)(param0 >> -110421176);
+        int fieldTemp$8 = ((gb) this).field_m;
         ((gb) this).field_m = ((gb) this).field_m + 1;
-        ((gb) this).field_l[((gb) this).field_m] = (byte)(int)param0;
+        ((gb) this).field_l[fieldTemp$8] = (byte)(int)param0;
     }
 
     final int b(boolean param0) {
@@ -484,18 +514,23 @@ class gb extends gg {
     }
 
     final void a(long param0, int param1) {
+        int fieldTemp$0 = ((gb) this).field_m;
         ((gb) this).field_m = ((gb) this).field_m + 1;
-        ((gb) this).field_l[((gb) this).field_m] = (byte)(int)(param0 >> 59769888);
+        ((gb) this).field_l[fieldTemp$0] = (byte)(int)(param0 >> 59769888);
+        int fieldTemp$1 = ((gb) this).field_m;
         ((gb) this).field_m = ((gb) this).field_m + 1;
-        ((gb) this).field_l[((gb) this).field_m] = (byte)(int)(param0 >> -1955895016);
+        ((gb) this).field_l[fieldTemp$1] = (byte)(int)(param0 >> -1955895016);
+        int fieldTemp$2 = ((gb) this).field_m;
         ((gb) this).field_m = ((gb) this).field_m + 1;
-        ((gb) this).field_l[((gb) this).field_m] = (byte)(int)(param0 >> 291434832);
+        ((gb) this).field_l[fieldTemp$2] = (byte)(int)(param0 >> 291434832);
+        int fieldTemp$3 = ((gb) this).field_m;
         ((gb) this).field_m = ((gb) this).field_m + 1;
-        ((gb) this).field_l[((gb) this).field_m] = (byte)(int)(param0 >> -1541109560);
+        ((gb) this).field_l[fieldTemp$3] = (byte)(int)(param0 >> -1541109560);
+        int fieldTemp$4 = ((gb) this).field_m;
         ((gb) this).field_m = ((gb) this).field_m + 1;
-        ((gb) this).field_l[((gb) this).field_m] = (byte)(int)param0;
+        ((gb) this).field_l[fieldTemp$4] = (byte)(int)param0;
         if (param1 != 25576) {
-            boolean discarded$0 = ((gb) this).k(-66);
+            boolean discarded$5 = ((gb) this).k(-66);
         }
     }
 
@@ -524,8 +559,9 @@ class gb extends gg {
         }
         int var2 = ((gb) this).field_m;
         while (true) {
+            int fieldTemp$0 = ((gb) this).field_m;
             ((gb) this).field_m = ((gb) this).field_m + 1;
-            if (((gb) this).field_l[((gb) this).field_m] == 0) {
+            if (((gb) this).field_l[fieldTemp$0] == 0) {
                 break;
             }
         }
@@ -537,14 +573,18 @@ class gb extends gg {
     }
 
     final void b(int param0, boolean param1) {
+        int fieldTemp$0 = ((gb) this).field_m;
         ((gb) this).field_m = ((gb) this).field_m + 1;
-        ((gb) this).field_l[((gb) this).field_m] = (byte)(param0 >> -1075421320);
+        ((gb) this).field_l[fieldTemp$0] = (byte)(param0 >> -1075421320);
+        int fieldTemp$1 = ((gb) this).field_m;
         ((gb) this).field_m = ((gb) this).field_m + 1;
-        ((gb) this).field_l[((gb) this).field_m] = (byte)(param0 >> 1425944624);
+        ((gb) this).field_l[fieldTemp$1] = (byte)(param0 >> 1425944624);
+        int fieldTemp$2 = ((gb) this).field_m;
         ((gb) this).field_m = ((gb) this).field_m + 1;
-        ((gb) this).field_l[((gb) this).field_m] = (byte)(param0 >> -1485137016);
+        ((gb) this).field_l[fieldTemp$2] = (byte)(param0 >> -1485137016);
+        int fieldTemp$3 = ((gb) this).field_m;
         ((gb) this).field_m = ((gb) this).field_m + 1;
-        ((gb) this).field_l[((gb) this).field_m] = (byte)param0;
+        ((gb) this).field_l[fieldTemp$3] = (byte)param0;
         if (param1) {
             ((gb) this).field_m = 84;
         }
@@ -557,8 +597,9 @@ class gb extends gg {
         }
         CharSequence var4 = (CharSequence) (Object) param0;
         ((gb) this).field_m = ((gb) this).field_m + ue.a(((gb) this).field_m, var4, param0.length(), 352, ((gb) this).field_l, param1);
+        int fieldTemp$0 = ((gb) this).field_m;
         ((gb) this).field_m = ((gb) this).field_m + 1;
-        ((gb) this).field_l[((gb) this).field_m] = (byte) 0;
+        ((gb) this).field_l[fieldTemp$0] = (byte) 0;
     }
 
     final void b(int param0, int param1) {
@@ -626,8 +667,9 @@ class gb extends gg {
             var11 = -1640531527;
             var12 = 32;
             while (true) {
+                int incrementValue$0 = var12;
                 var12--;
-                if ((var12 ^ -1) >= -1) {
+                if ((incrementValue$0 ^ -1) >= -1) {
                     break;
                 }
                 var9 = var9 - ((var8 >>> -256341883 ^ var8 << 1640343396) - -var8 ^ var10 + param0[(6680 & var10) >>> 955889419]);
@@ -664,12 +706,15 @@ class gb extends gg {
         if (param1 != 2132504424) {
             ((gb) this).field_m = 1;
         }
+        int fieldTemp$0 = ((gb) this).field_m;
         ((gb) this).field_m = ((gb) this).field_m + 1;
-        ((gb) this).field_l[((gb) this).field_m] = (byte)(param0 >> 1488527344);
+        ((gb) this).field_l[fieldTemp$0] = (byte)(param0 >> 1488527344);
+        int fieldTemp$1 = ((gb) this).field_m;
         ((gb) this).field_m = ((gb) this).field_m + 1;
-        ((gb) this).field_l[((gb) this).field_m] = (byte)(param0 >> 2132504424);
+        ((gb) this).field_l[fieldTemp$1] = (byte)(param0 >> 2132504424);
+        int fieldTemp$2 = ((gb) this).field_m;
         ((gb) this).field_m = ((gb) this).field_m + 1;
-        ((gb) this).field_l[((gb) this).field_m] = (byte)param0;
+        ((gb) this).field_l[fieldTemp$2] = (byte)param0;
     }
 
     gb(int param0) {

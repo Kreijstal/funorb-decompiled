@@ -206,12 +206,18 @@ final class tk {
                 }
               }
               try {
-                stackOut_36_0 = new java.net.URL(param0, var7.toString());
-                stackIn_37_0 = stackOut_36_0;
-              } catch (java.lang.Exception decompiledCaughtParameter) {
-                decompiledCaughtException = decompiledCaughtParameter;
-                return stackIn_37_0;
+                L9: {
+                  stackOut_36_0 = new java.net.URL(param0, var7.toString());
+                  stackIn_37_0 = stackOut_36_0;
+                  break L9;
+                }
+              } catch (java.lang.Exception decompiledCaughtParameter0) {
+                decompiledCaughtException = decompiledCaughtParameter0;
+                var9 = (Exception) (Object) decompiledCaughtException;
+                var9.printStackTrace();
+                return param0;
               }
+              return stackIn_37_0;
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;

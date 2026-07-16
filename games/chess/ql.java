@@ -32,8 +32,9 @@ final class ql {
                 if (wm.field_q <= 0) {
                   break L0;
                 } else {
+                  int fieldTemp$6 = wm.field_q - 1;
                   wm.field_q = wm.field_q - 1;
-                  var2_ref_byte__ = di.field_Ib[wm.field_q - 1];
+                  var2_ref_byte__ = di.field_Ib[fieldTemp$6];
                   di.field_Ib[wm.field_q] = null;
                   return var2_ref_byte__;
                 }
@@ -46,8 +47,9 @@ final class ql {
                 if (hn.field_t <= 0) {
                   break L1;
                 } else {
+                  int fieldTemp$7 = hn.field_t - 1;
                   hn.field_t = hn.field_t - 1;
-                  var2_ref_byte__ = cg.field_b[hn.field_t - 1];
+                  var2_ref_byte__ = cg.field_b[fieldTemp$7];
                   cg.field_b[hn.field_t] = null;
                   return var2_ref_byte__;
                 }
@@ -91,8 +93,9 @@ final class ql {
               return new byte[param1];
             }
           } else {
+            int fieldTemp$8 = g.field_h - 1;
             g.field_h = g.field_h - 1;
-            var2_ref_byte__ = hk.field_K[g.field_h - 1];
+            var2_ref_byte__ = hk.field_K[fieldTemp$8];
             hk.field_K[g.field_h] = null;
             return var2_ref_byte__;
           }
@@ -139,8 +142,9 @@ final class ql {
                     return new byte[param1];
                   }
                 } else {
+                  int fieldTemp$9 = hn.field_t - 1;
                   hn.field_t = hn.field_t - 1;
-                  var2_ref_byte__ = cg.field_b[hn.field_t - 1];
+                  var2_ref_byte__ = cg.field_b[fieldTemp$9];
                   cg.field_b[hn.field_t] = null;
                   return var2_ref_byte__;
                 }
@@ -184,8 +188,9 @@ final class ql {
                 }
               }
             } else {
+              int fieldTemp$10 = wm.field_q - 1;
               wm.field_q = wm.field_q - 1;
-              var2_ref_byte__ = di.field_Ib[wm.field_q - 1];
+              var2_ref_byte__ = di.field_Ib[fieldTemp$10];
               di.field_Ib[wm.field_q] = null;
               return var2_ref_byte__;
             }
@@ -197,8 +202,9 @@ final class ql {
                 if (hn.field_t <= 0) {
                   break L8;
                 } else {
+                  int fieldTemp$11 = hn.field_t - 1;
                   hn.field_t = hn.field_t - 1;
-                  var2_ref_byte__ = cg.field_b[hn.field_t - 1];
+                  var2_ref_byte__ = cg.field_b[fieldTemp$11];
                   cg.field_b[hn.field_t] = null;
                   return var2_ref_byte__;
                 }
@@ -279,7 +285,7 @@ final class ql {
               }
             }
             L2: {
-              if (param1 <= -5) {
+              if ((param1 ^ -1) <= -5) {
                 var2 += 2;
                 param1 = param1 >>> 2;
                 break L2;
@@ -287,10 +293,9 @@ final class ql {
                 break L2;
               }
             }
-            if (param0 >= -109) {
+            if (param0 < -109) {
               L3: {
-                int discarded$3 = ql.a(99, -61);
-                if (-2 > param1) {
+                if (-2 < (param1 ^ -1)) {
                   break L3;
                 } else {
                   var2++;
@@ -301,6 +306,7 @@ final class ql {
               return param1 + var2;
             } else {
               L4: {
+                int discarded$3 = ql.a(99, -61);
                 if (-2 < (param1 ^ -1)) {
                   break L4;
                 } else {
@@ -333,7 +339,7 @@ final class ql {
               }
             }
             L7: {
-              if (param1 <= -5) {
+              if ((param1 ^ -1) <= -5) {
                 var2 += 2;
                 param1 = param1 >>> 2;
                 break L7;
@@ -341,10 +347,9 @@ final class ql {
                 break L7;
               }
             }
-            if (param0 >= -109) {
+            if (param0 < -109) {
               L8: {
-                int discarded$4 = ql.a(99, -61);
-                if (-2 > param1) {
+                if (-2 < (param1 ^ -1)) {
                   break L8;
                 } else {
                   var2++;
@@ -355,6 +360,7 @@ final class ql {
               return param1 + var2;
             } else {
               L9: {
+                int discarded$4 = ql.a(99, -61);
                 if (-2 < (param1 ^ -1)) {
                   break L9;
                 } else {
@@ -388,7 +394,7 @@ final class ql {
             }
           }
           L12: {
-            if (param1 <= -5) {
+            if ((param1 ^ -1) <= -5) {
               var2 += 2;
               param1 = param1 >>> 2;
               break L12;
@@ -396,10 +402,9 @@ final class ql {
               break L12;
             }
           }
-          if (param0 >= -109) {
+          if (param0 < -109) {
             L13: {
-              int discarded$5 = ql.a(99, -61);
-              if (-2 > param1) {
+              if (-2 < (param1 ^ -1)) {
                 break L13;
               } else {
                 var2++;
@@ -410,6 +415,7 @@ final class ql {
             return param1 + var2;
           } else {
             L14: {
+              int discarded$5 = ql.a(99, -61);
               if (-2 < (param1 ^ -1)) {
                 break L14;
               } else {

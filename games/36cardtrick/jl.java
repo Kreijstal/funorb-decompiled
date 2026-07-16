@@ -19,7 +19,7 @@ final class jl extends ff {
 
     final void a(int param0, pb param1) {
         if (param0 != -1) {
-            field_e = (bk) null;
+            field_e = null;
         }
         param1.a(744825352, ((jl) this).field_f);
         param1.b(((jl) this).field_d, 15045);
@@ -39,7 +39,7 @@ final class jl extends ff {
 
     final fe a(byte param0) {
         if (param0 != -24) {
-            ((jl) this).field_d = (String) null;
+            ((jl) this).field_d = null;
         }
         return tf.field_o;
     }
@@ -54,7 +54,7 @@ final class jl extends ff {
         var8 = Main.field_T;
         if (param1 != null) {
           L0: {
-            var3 = ((CharSequence) param1).length();
+            var3 = param1.length();
             if (1 > var3) {
               break L0;
             } else {
@@ -85,7 +85,7 @@ final class jl extends ff {
                             }
                             var6 = 0;
                             L4: while (true) {
-                              if (var6 >= ((CharSequence) param1).length()) {
+                              if (var6 >= param1.length()) {
                                 if (0 < var5) {
                                   return kl.field_P;
                                 } else {
@@ -93,7 +93,7 @@ final class jl extends ff {
                                 }
                               } else {
                                 L5: {
-                                  var7 = ((CharSequence) param1).charAt(var6);
+                                  var7 = param1.charAt(var6);
                                   if (!tg.a((byte) -63, (char) var7)) {
                                     var5 = 0;
                                     break L5;

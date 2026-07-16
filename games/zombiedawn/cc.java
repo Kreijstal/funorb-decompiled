@@ -48,154 +48,67 @@ final class cc {
             int var4 = 0;
             int var5 = 0;
             byte[] var6 = null;
-            int statePc = 0;
-            Throwable caughtException = null;
-            stateLoop: while (true) {
-                switch (statePc) {
-                    case 0: {
-                        var5 = ZombieDawn.field_J;
-                        if (param1 == 10) {
-                            statePc = 2;
+            Throwable decompiledCaughtException = null;
+            L0: {
+              var5 = ZombieDawn.field_J;
+              if (param1 == 10) {
+                break L0;
+              } else {
+                field_b = null;
+                break L0;
+              }
+            }
+            L1: {
+              var6 = new byte[24];
+              var2 = var6;
+              if (null != ce.field_t) {
+                try {
+                  L2: {
+                    ce.field_t.a(param1 ^ 10, 0L);
+                    ce.field_t.a(85, var6);
+                    var3_int = 0;
+                    L3: while (true) {
+                      L4: {
+                        if (var3_int >= 24) {
+                          break L4;
                         } else {
-                            statePc = 1;
-                        }
-                        continue stateLoop;
-                    }
-                    case 1: {
-                        field_b = null;
-                        statePc = 2;
-                        continue stateLoop;
-                    }
-                    case 2: {
-                        var6 = new byte[24];
-                        var2 = var6;
-                        if (null != ce.field_t) {
-                            statePc = 4;
-                        } else {
-                            statePc = 3;
-                        }
-                        continue stateLoop;
-                    }
-                    case 3: {
-                        param0.a(var2, 24, 0, -27843);
-                        statePc = 16;
-                        continue stateLoop;
-                    }
-                    case 4: {
-                        try {
-                            ce.field_t.a(param1 ^ 10, 0L);
-                            ce.field_t.a(85, var6);
-                            var3_int = 0;
-                            statePc = 5;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_4) {
-                            caughtException = stateCaught_4;
-                            statePc = 12;
-                            continue stateLoop;
-                        }
-                    }
-                    case 5: {
-                        try {
-                            if (var3_int >= 24) {
-                                statePc = 9;
-                            } else {
-                                statePc = 6;
-                            }
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_5) {
-                            caughtException = stateCaught_5;
-                            statePc = 12;
-                            continue stateLoop;
-                        }
-                    }
-                    case 6: {
-                        try {
-                            if (var2[var3_int] == 0) {
-                                statePc = 8;
-                            } else {
-                                statePc = 7;
-                            }
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_6) {
-                            caughtException = stateCaught_6;
-                            statePc = 12;
-                            continue stateLoop;
-                        }
-                    }
-                    case 7: {
-                        try {
-                            statePc = 9;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_7) {
-                            caughtException = stateCaught_7;
-                            statePc = 12;
-                            continue stateLoop;
-                        }
-                    }
-                    case 8: {
-                        try {
+                          if (var2[var3_int] == 0) {
                             var3_int++;
-                            statePc = 5;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_8) {
-                            caughtException = stateCaught_8;
-                            statePc = 12;
-                            continue stateLoop;
+                            continue L3;
+                          } else {
+                            break L4;
+                          }
                         }
+                      }
+                      if (var3_int < 24) {
+                        break L2;
+                      } else {
+                        throw new IOException();
+                      }
                     }
-                    case 9: {
-                        try {
-                            if (var3_int < 24) {
-                                statePc = 15;
-                            } else {
-                                statePc = 10;
-                            }
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_9) {
-                            caughtException = stateCaught_9;
-                            statePc = 12;
-                            continue stateLoop;
-                        }
-                    }
-                    case 10: {
-                        try {
-                            throw new IOException();
-                        } catch (Throwable stateCaught_10) {
-                            caughtException = stateCaught_10;
-                            statePc = 12;
-                            continue stateLoop;
-                        }
-                    }
-                    case 12: {
-                        var3 = (Exception) (Object) caughtException;
-                        var4 = 0;
-                        statePc = 13;
-                        continue stateLoop;
-                    }
-                    case 13: {
-                        if (var4 >= 24) {
-                            statePc = 15;
-                        } else {
-                            statePc = 14;
-                        }
-                        continue stateLoop;
-                    }
-                    case 14: {
+                  }
+                } catch (java.lang.Exception decompiledCaughtParameter0) {
+                  decompiledCaughtException = decompiledCaughtParameter0;
+                  L5: {
+                    var3 = (Exception) (Object) decompiledCaughtException;
+                    var4 = 0;
+                    L6: while (true) {
+                      if (var4 >= 24) {
+                        break L5;
+                      } else {
                         var2[var4] = (byte)-1;
                         var4++;
-                        statePc = 13;
-                        continue stateLoop;
+                        continue L6;
+                      }
                     }
-                    case 15: {
-                        param0.a(var2, 24, 0, -27843);
-                        statePc = 16;
-                        continue stateLoop;
-                    }
-                    case 16: {
-                        return;
-                    }
-                    default: throw new IllegalStateException("invalid CFG state " + statePc);
+                  }
                 }
+                param0.a(var2, 24, 0, -27843);
+                break L1;
+              } else {
+                param0.a(var2, 24, 0, -27843);
+                break L1;
+              }
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -331,8 +244,9 @@ final class cc {
         int stackOut_35_0 = 0;
         L0: {
           var5 = ZombieDawn.field_J;
+          int fieldTemp$1 = ((cc) this).field_j + 1;
           ((cc) this).field_j = ((cc) this).field_j + 1;
-          if (50 == ((cc) this).field_j + 1) {
+          if (50 == fieldTemp$1) {
             ((cc) this).field_j = 0;
             break L0;
           } else {
@@ -420,7 +334,7 @@ final class cc {
                 }
               } else {
                 if (((cc) this).field_n >= 4) {
-                  if (((cc) this).field_n <= -7) {
+                  if ((((cc) this).field_n ^ -1) <= -7) {
                     if (((cc) this).field_n >= 8) {
                       if (8 == ((cc) this).field_n) {
                         L7: {
@@ -432,7 +346,7 @@ final class cc {
                             break L7;
                           }
                         }
-                        if (((cc) this).field_o > var4) {
+                        if ((((cc) this).field_o ^ -1) < (var4 ^ -1)) {
                           ((cc) this).field_o = ((cc) this).field_o - 2;
                           if (var4 > ((cc) this).field_o) {
                             ((cc) this).field_o = var4;
@@ -453,7 +367,7 @@ final class cc {
                     }
                   } else {
                     ((cc) this).field_n = ((cc) this).field_n + 1;
-                    if (-6 == ((cc) this).field_n) {
+                    if (-6 == (((cc) this).field_n ^ -1)) {
                       ((cc) this).field_e = 2;
                       break L2;
                     } else {
@@ -509,14 +423,12 @@ final class cc {
     }
 
     final void a(byte param0) {
-        vn var3_ref = null;
         int var2 = 0;
         vn var3 = null;
         int var4 = 0;
         vn stackIn_8_0 = null;
         vn stackOut_7_0 = null;
         vn stackOut_6_0 = null;
-        var3_ref = null;
         var4 = ZombieDawn.field_J;
         if ((((cc) this).field_o ^ -1) >= -1) {
           return;
@@ -542,7 +454,7 @@ final class cc {
             }
           }
           L2: {
-            var3_ref = stackIn_8_0;
+            var3 = stackIn_8_0;
             so.a(nf.field_d, var2 + -5, -((cc) this).field_o + nh.field_P + 5);
             ni.field_b[((cc) this).field_e].b(var2, nh.field_P + -((cc) this).field_o);
             if (2 == ((cc) this).field_e) {
@@ -556,16 +468,16 @@ final class cc {
               }
               L4: {
                 if (!((cc) this).field_g) {
-                  var3_ref.b(8 + var2, 24 + -((cc) this).field_o + nh.field_P);
+                  var3.b(8 + var2, 24 + -((cc) this).field_o + nh.field_P);
                   break L4;
                 } else {
-                  var3_ref.d(var2 - -7, nh.field_P - (((cc) this).field_o + -24));
+                  var3.d(var2 - -7, nh.field_P - (((cc) this).field_o + -24));
                   break L4;
                 }
               }
               L5: {
                 if (((cc) this).field_d) {
-                  var3_ref.b(var2 + 8, nh.field_P - ((cc) this).field_o + 24, 96 - -ae.field_c[((cc) this).field_j]);
+                  var3.b(var2 + 8, nh.field_P - ((cc) this).field_o + 24, 96 - -ae.field_c[((cc) this).field_j]);
                   break L5;
                 } else {
                   break L5;
@@ -575,10 +487,10 @@ final class cc {
               break L2;
             } else {
               if (!((cc) this).field_g) {
-                var3_ref.e(var2 + 8, nh.field_P + -56, ((cc) this).field_o * 3);
+                var3.e(var2 + 8, nh.field_P + -56, ((cc) this).field_o * 3);
                 break L2;
               } else {
-                var3_ref.d(7 + var2, ((cc) this).field_o);
+                var3.d(7 + var2, ((cc) this).field_o);
                 break L2;
               }
             }

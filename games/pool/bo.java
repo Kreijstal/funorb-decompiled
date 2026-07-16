@@ -378,186 +378,65 @@ final class bo {
         Object var1 = null;
         Throwable var2 = null;
         Object var3 = null;
-        int statePc = 0;
-        Throwable caughtException = null;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    var1 = (Object) (Object) wp.field_g;
-                    // monitorenter wp.field_g
-                    statePc = 1;
-                    continue stateLoop;
-                }
-                case 1: {
-                    try {
-                        cd.field_b = ho.field_v;
-                        qk.field_g = qk.field_g + 1;
-                        wn.field_i = we.field_l;
-                        gg.field_f = wn.field_k;
-                        re.field_c = m.field_d;
-                        m.field_d = false;
-                        ne.field_s = kj.field_c;
-                        lq.field_W = pq.field_f;
-                        ua.field_o = ne.field_o;
-                        kj.field_c = 0;
-                        // monitorexit var1
-                        statePc = 5;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_1) {
-                        caughtException = stateCaught_1;
-                        statePc = 3;
-                        continue stateLoop;
-                    }
-                }
-                case 3: {
-                    try {
-                        var2 = caughtException;
-                        // monitorexit var1
-                        statePc = 4;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_3) {
-                        caughtException = stateCaught_3;
-                        statePc = 3;
-                        continue stateLoop;
-                    }
-                }
-                case 4: {
-                    throw (RuntimeException) (Object) var2;
-                }
-                case 5: {
-                    if (param0 < 86) {
-                        statePc = 7;
-                    } else {
-                        statePc = 6;
-                    }
-                    continue stateLoop;
-                }
-                case 6: {
-                    return;
-                }
-                case 7: {
-                    var3 = null;
-                    bo.a(94, 67, (byte) 67, -120, -99, 36, -121, (byte) 15, 19, (int[]) null, (byte) 9);
-                    return;
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
-            }
+        Throwable decompiledCaughtException = null;
+        var1 = (Object) (Object) wp.field_g;
+        synchronized (var1) {
+          L0: {
+            cd.field_b = ho.field_v;
+            qk.field_g = qk.field_g + 1;
+            wn.field_i = we.field_l;
+            gg.field_f = wn.field_k;
+            re.field_c = m.field_d;
+            m.field_d = false;
+            ne.field_s = kj.field_c;
+            lq.field_W = pq.field_f;
+            ua.field_o = ne.field_o;
+            kj.field_c = 0;
+            break L0;
+          }
+        }
+        if (param0 < 86) {
+          var3 = null;
+          bo.a(94, 67, (byte) 67, -120, -99, 36, -121, (byte) 15, 19, (int[]) null, (byte) 9);
+          return;
+        } else {
+          return;
         }
     }
 
     final static boolean a(int param0, byte param1) {
-        int stackIn_5_0 = 0;
-        int stackIn_11_0 = 0;
-        int stackIn_24_0 = 0;
-        int stackIn_30_0 = 0;
-        int stackIn_37_0 = 0;
-        int stackOut_29_0 = 0;
-        int stackOut_28_0 = 0;
-        int stackOut_36_0 = 0;
-        int stackOut_35_0 = 0;
-        int stackOut_23_0 = 0;
-        int stackOut_22_0 = 0;
-        int stackOut_10_0 = 0;
-        int stackOut_9_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_3_0 = 0;
-        if (param1 == 43) {
-          if (-1 <= param0) {
-            if (param0 < 1582) {
-              L0: {
-                if (0 != param0 % 4) {
-                  stackOut_29_0 = 0;
-                  stackIn_30_0 = stackOut_29_0;
-                  break L0;
-                } else {
-                  stackOut_28_0 = 1;
-                  stackIn_30_0 = stackOut_28_0;
-                  break L0;
-                }
-              }
-              return stackIn_30_0 != 0;
-            } else {
-              if (param0 % 4 == 0) {
-                if (param0 % 100 != 0) {
-                  return true;
-                } else {
-                  L1: {
-                    if (param0 % 400 != 0) {
-                      stackOut_36_0 = 0;
-                      stackIn_37_0 = stackOut_36_0;
-                      break L1;
-                    } else {
-                      stackOut_35_0 = 1;
-                      stackIn_37_0 = stackOut_35_0;
-                      break L1;
-                    }
-                  }
-                  return stackIn_37_0 != 0;
-                }
-              } else {
+        if (param1 != 43) {
+            field_a = null;
+            if (-1 < (param0 ^ -1)) {
+                return -1 == ((param0 - -1) % 4 ^ -1) ? true : false;
+            }
+            if (!(param0 >= 1582)) {
+                return 0 == param0 % 4 ? true : false;
+            }
+            if ((param0 % 4 ^ -1) != -1) {
                 return false;
-              }
             }
-          } else {
-            L2: {
-              if (-1 != ((param0 - -1) % 4 ^ -1)) {
-                stackOut_23_0 = 0;
-                stackIn_24_0 = stackOut_23_0;
-                break L2;
-              } else {
-                stackOut_22_0 = 1;
-                stackIn_24_0 = stackOut_22_0;
-                break L2;
-              }
+            if ((param0 % 100 ^ -1) != -1) {
+                return true;
             }
-            return stackIn_24_0 != 0;
-          }
-        } else {
-          field_a = null;
-          if (-1 >= param0) {
-            if (param0 < 1582) {
-              L3: {
-                if (0 != param0 % 4) {
-                  stackOut_10_0 = 0;
-                  stackIn_11_0 = stackOut_10_0;
-                  break L3;
-                } else {
-                  stackOut_9_0 = 1;
-                  stackIn_11_0 = stackOut_9_0;
-                  break L3;
-                }
-              }
-              return stackIn_11_0 != 0;
-            } else {
-              if (param0 % 4 == 0) {
-                if (param0 % 100 == 0) {
-                  if (param0 % 400 == -1) {
-                    return true;
-                  } else {
-                    return false;
-                  }
-                } else {
-                  return true;
-                }
-              } else {
-                return false;
-              }
+            if ((param0 % 400 ^ -1) == -1) {
+                return true;
             }
-          } else {
-            L4: {
-              if (-1 != (param0 - -1) % 4) {
-                stackOut_4_0 = 0;
-                stackIn_5_0 = stackOut_4_0;
-                break L4;
-              } else {
-                stackOut_3_0 = 1;
-                stackIn_5_0 = stackOut_3_0;
-                break L4;
-              }
-            }
-            return stackIn_5_0 != 0;
-          }
+            return false;
         }
+        if (-1 < (param0 ^ -1)) {
+            return -1 == ((param0 - -1) % 4 ^ -1) ? true : false;
+        }
+        if (!(param0 >= 1582)) {
+            return 0 == param0 % 4 ? true : false;
+        }
+        if ((param0 % 4 ^ -1) != -1) {
+            return false;
+        }
+        if ((param0 % 100 ^ -1) != -1) {
+            return true;
+        }
+        return (param0 % 400 ^ -1) == -1 ? true : false;
     }
 
     final static void a(int param0) {

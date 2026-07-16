@@ -11,10 +11,10 @@ abstract class te {
         kc var6 = new kc(param0, param0);
         kc var3 = var6;
         if (param1 >= -123) {
-            return (kc) null;
+            return null;
         }
-        for (var4 = 0; var4 < ((kc) var3).field_r.length; var4++) {
-            ((kc) var6).field_r[var4] = param2;
+        for (var4 = 0; var4 < var3.field_r.length; var4++) {
+            var6.field_r[var4] = param2;
         }
         return var3;
     }
@@ -30,7 +30,7 @@ abstract class te {
 
     final static boolean a(boolean param0, String param1) {
         if (param0) {
-            String var3 = (String) null;
+            Object var3 = null;
             boolean discarded$0 = te.a(false, (String) null);
         }
         if (param1 != null) {
@@ -67,7 +67,7 @@ abstract class te {
               var4 = 0;
               var5 = 0;
               var6 = 0;
-              var7 = ((CharSequence) param2).length();
+              var7 = param2.length();
               var8 = 0;
               L1: while (true) {
                 if (var7 <= var8) {
@@ -78,7 +78,7 @@ abstract class te {
                   }
                 } else {
                   L2: {
-                    var9 = ((CharSequence) param2).charAt(var8);
+                    var9 = param2.charAt(var8);
                     if (var8 != 0) {
                       break L2;
                     } else {

@@ -35,22 +35,42 @@ class hn extends gm implements cj {
     }
 
     final boolean a(int param0, boolean param1, int param2, int param3, gm param4, int param5, int param6) {
-        int var10 = Torquing.field_u;
-        re var8 = new re(((hn) this).field_y);
-        if (param1) {
-            return true;
-        }
-        gm var9 = (gm) (Object) var8.a((byte) 124);
-        while (var9 != null) {
-            // ifeq L98
-            if (var9.g(2)) {
-                if (!(!var9.a(param0, false, param2, param3, param4, param5, param6))) {
-                    return true;
+        re var8 = null;
+        gm var9 = null;
+        int var10 = 0;
+        var10 = Torquing.field_u;
+        var8 = new re(((hn) this).field_y);
+        if (!param1) {
+          var9 = (gm) (Object) var8.a((byte) 124);
+          L0: while (true) {
+            L1: {
+              if (var9 == null) {
+                break L1;
+              } else {
+                if (!var9.e(17)) {
+                  break L1;
+                } else {
+                  L2: {
+                    if (!var9.g(2)) {
+                      break L2;
+                    } else {
+                      if (var9.a(param0, false, param2, param3, param4, param5, param6)) {
+                        return true;
+                      } else {
+                        break L2;
+                      }
+                    }
+                  }
+                  var9 = (gm) (Object) var8.b(true);
+                  continue L0;
                 }
+              }
             }
-            var9 = (gm) (Object) var8.b(true);
+            return false;
+          }
+        } else {
+          return true;
         }
-        return false;
     }
 
     void a(int param0, byte param1, int param2, int param3) {
@@ -92,16 +112,35 @@ class hn extends gm implements cj {
     }
 
     final void a(int param0, int param1, int param2, byte param3, gm param4, int param5) {
-        int var9 = Torquing.field_u;
-        re var7 = new re(((hn) this).field_y);
-        if (param3 <= 109) {
+        re var7 = null;
+        gm var8 = null;
+        int var9 = 0;
+        L0: {
+          var9 = Torquing.field_u;
+          var7 = new re(((hn) this).field_y);
+          if (param3 > 109) {
+            break L0;
+          } else {
             ((hn) this).field_y = null;
+            break L0;
+          }
         }
-        gm var8 = (gm) (Object) var7.a((byte) 110);
-        while (var8 != null) {
-            // ifeq L101
-            var8.a(((hn) this).field_k + param0, ((hn) this).field_w + param1, param2, (byte) 116, param4, param5);
-            var8 = (gm) (Object) var7.b(true);
+        var8 = (gm) (Object) var7.a((byte) 110);
+        L1: while (true) {
+          L2: {
+            if (var8 == null) {
+              break L2;
+            } else {
+              if (!var8.e(17)) {
+                break L2;
+              } else {
+                var8.a(((hn) this).field_k + param0, ((hn) this).field_w + param1, param2, (byte) 116, param4, param5);
+                var8 = (gm) (Object) var7.b(true);
+                continue L1;
+              }
+            }
+          }
+          return;
         }
     }
 
@@ -224,15 +263,30 @@ class hn extends gm implements cj {
     }
 
     void a(int param0, gm param1, int param2, int param3) {
-        int var8 = Torquing.field_u;
+        re var5 = null;
+        int var6 = 0;
+        gm var7 = null;
+        int var8 = 0;
+        var8 = Torquing.field_u;
         super.a(-123, param1, param2, param3);
-        int var6 = -74 % ((param0 - -28) / 43);
-        re var5 = new re(((hn) this).field_y);
-        gm var7 = (gm) (Object) var5.a((byte) 29);
-        while (var7 != null) {
-            // ifeq L102
-            var7.a(113, param1, ((hn) this).field_k + param2, ((hn) this).field_w + param3);
-            var7 = (gm) (Object) var5.b(true);
+        var6 = -74 % ((param0 - -28) / 43);
+        var5 = new re(((hn) this).field_y);
+        var7 = (gm) (Object) var5.a((byte) 29);
+        L0: while (true) {
+          L1: {
+            if (var7 == null) {
+              break L1;
+            } else {
+              if (!var7.e(17)) {
+                break L1;
+              } else {
+                var7.a(113, param1, ((hn) this).field_k + param2, ((hn) this).field_w + param3);
+                var7 = (gm) (Object) var5.b(true);
+                continue L0;
+              }
+            }
+          }
+          return;
         }
     }
 
@@ -285,20 +339,39 @@ class hn extends gm implements cj {
     }
 
     final boolean a(int param0, int param1, int param2, int param3, int param4, gm param5, byte param6) {
-        int var10 = Torquing.field_u;
-        re var8 = new re(((hn) this).field_y);
-        if (param6 <= 5) {
+        re var8 = null;
+        gm var9 = null;
+        int var10 = 0;
+        L0: {
+          var10 = Torquing.field_u;
+          var8 = new re(((hn) this).field_y);
+          if (param6 > 5) {
+            break L0;
+          } else {
             hn.f((byte) 79);
+            break L0;
+          }
         }
-        gm var9 = (gm) (Object) var8.a((byte) 122);
-        while (var9 != null) {
-            // ifeq L107
-            if (!(!var9.a(param0, param1 + ((hn) this).field_w, ((hn) this).field_k + param2, param3, param4, param5, (byte) 58))) {
-                return true;
+        var9 = (gm) (Object) var8.a((byte) 122);
+        L1: while (true) {
+          L2: {
+            if (var9 == null) {
+              break L2;
+            } else {
+              if (!var9.e(17)) {
+                break L2;
+              } else {
+                if (var9.a(param0, param1 + ((hn) this).field_w, ((hn) this).field_k + param2, param3, param4, param5, (byte) 58)) {
+                  return true;
+                } else {
+                  var9 = (gm) (Object) var8.b(true);
+                  continue L1;
+                }
+              }
             }
-            var9 = (gm) (Object) var8.b(true);
+          }
+          return false;
         }
-        return false;
     }
 
     final boolean a(gm param0, boolean param1) {
@@ -326,24 +399,60 @@ class hn extends gm implements cj {
     }
 
     boolean a(int param0, gm param1, char param2, int param3) {
-        int var8 = Torquing.field_u;
-        int var5 = -43 % ((param3 - -33) / 57);
-        re var6 = new re(((hn) this).field_y);
-        gm var9 = (gm) (Object) var6.a((byte) 125);
-        while (var9 != null) {
-            // ifeq L96
-            if (var9.g(2)) {
-                if (var9.a(param0, param1, param2, 41)) {
-                    return true;
+        int var5 = 0;
+        re var6 = null;
+        int var7 = 0;
+        int var8 = 0;
+        gm var9 = null;
+        boolean stackIn_11_0 = false;
+        boolean stackOut_10_0 = false;
+        boolean stackOut_9_0 = false;
+        var8 = Torquing.field_u;
+        var5 = -43 % ((param3 - -33) / 57);
+        var6 = new re(((hn) this).field_y);
+        var9 = (gm) (Object) var6.a((byte) 125);
+        L0: while (true) {
+          L1: {
+            if (var9 == null) {
+              break L1;
+            } else {
+              if (!var9.e(17)) {
+                break L1;
+              } else {
+                L2: {
+                  if (!var9.g(2)) {
+                    break L2;
+                  } else {
+                    if (!var9.a(param0, param1, param2, 41)) {
+                      break L2;
+                    } else {
+                      return true;
+                    }
+                  }
                 }
+                var9 = (gm) (Object) var6.b(true);
+                continue L0;
+              }
             }
-            var9 = (gm) (Object) var6.b(true);
+          }
+          var7 = param0;
+          if (-81 != (var7 ^ -1)) {
+            return false;
+          } else {
+            L3: {
+              if (i.field_P[81]) {
+                stackOut_10_0 = ((hn) this).a((byte) -125, param1);
+                stackIn_11_0 = stackOut_10_0;
+                break L3;
+              } else {
+                stackOut_9_0 = ((hn) this).b(param1, -9928);
+                stackIn_11_0 = stackOut_9_0;
+                break L3;
+              }
+            }
+            return stackIn_11_0;
+          }
         }
-        int var7 = param0;
-        if (-81 == (var7 ^ -1)) {
-            return !i.field_P[81] ? ((hn) this).b(param1, -9928) : ((hn) this).a((byte) -125, param1);
-        }
-        return false;
     }
 
     static {

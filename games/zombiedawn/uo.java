@@ -40,8 +40,9 @@ final class uo {
         if (param0 < 13) {
             int discarded$0 = ((uo) this).a(32);
         }
+        int fieldTemp$1 = ((uo) this).field_e - 1;
         ((uo) this).field_e = ((uo) this).field_e - 1;
-        return ((uo) this).field_i[((uo) this).field_e - 1];
+        return ((uo) this).field_i[fieldTemp$1];
     }
 
     private final void a(boolean param0) {
@@ -54,21 +55,22 @@ final class uo {
           if (param0) {
             break L0;
           } else {
-            int discarded$1 = ((uo) this).a(-79);
+            int discarded$4 = ((uo) this).a(-79);
             break L0;
           }
         }
+        int fieldTemp$5 = ((uo) this).field_g + 1;
         ((uo) this).field_g = ((uo) this).field_g + 1;
-        ((uo) this).field_b = ((uo) this).field_b + (((uo) this).field_g + 1);
+        ((uo) this).field_b = ((uo) this).field_b + fieldTemp$5;
         var2 = 0;
         L1: while (true) {
-          if (-257 >= var2) {
+          if (-257 >= (var2 ^ -1)) {
             return;
           } else {
             L2: {
               var3 = ((uo) this).field_f[var2];
-              if (-1 == (var2 & 2)) {
-                if ((1 & var2) == 0) {
+              if (-1 == (var2 & 2 ^ -1)) {
+                if ((1 & var2 ^ -1) == -1) {
                   ((uo) this).field_c = ((uo) this).field_c ^ ((uo) this).field_c << -1029001043;
                   break L2;
                 } else {
@@ -86,10 +88,12 @@ final class uo {
               }
             }
             ((uo) this).field_c = ((uo) this).field_c + ((uo) this).field_f[var2 + 128 & 255];
-            var4 = ((uo) this).field_f[eg.a(var3 >> 609051650, 255)] + ((uo) this).field_c + ((uo) this).field_b;
-            ((uo) this).field_f[var2] = ((uo) this).field_f[eg.a(var3 >> 609051650, 255)] + ((uo) this).field_c + ((uo) this).field_b;
-            ((uo) this).field_b = ((uo) this).field_f[eg.a(1020, var4 >> 699667336) >> -1828099326] + var3;
-            ((uo) this).field_i[var2] = ((uo) this).field_f[eg.a(1020, var4 >> 699667336) >> -1828099326] + var3;
+            int dupTemp$6 = ((uo) this).field_f[eg.a(var3 >> 609051650, 255)] + ((uo) this).field_c + ((uo) this).field_b;
+            var4 = dupTemp$6;
+            ((uo) this).field_f[var2] = dupTemp$6;
+            int dupTemp$7 = ((uo) this).field_f[eg.a(1020, var4 >> 699667336) >> -1828099326] + var3;
+            ((uo) this).field_b = dupTemp$7;
+            ((uo) this).field_i[var2] = dupTemp$7;
             var2++;
             continue L1;
           }

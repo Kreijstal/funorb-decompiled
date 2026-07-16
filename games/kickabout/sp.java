@@ -344,17 +344,17 @@ final class sp extends im {
         }
         L1: {
           L2: {
-            if (-3 < param3) {
+            if (-3 < (param3 ^ -1)) {
               break L2;
             } else {
-              if (param3 > param2) {
+              if ((param3 ^ -1) < (param2 ^ -1)) {
                 break L2;
               } else {
                 if (vi.a(param3, 127, da.field_k, param0)) {
                   break L2;
                 } else {
                   L3: {
-                    if (-1 == param0[3]) {
+                    if (-1 == (param0[3] ^ -1)) {
                       break L3;
                     } else {
                       if ((param0[3] ^ -1) != -2) {
@@ -461,6 +461,7 @@ final class sp extends im {
             var8 = 0;
             L3: while (true) {
               if (var8 >= ((sp) this).field_Ib.length) {
+                return;
               } else {
                 L4: {
                   var9 = pa.field_g[((sp) this).field_Sb.field_h[var8]];

@@ -33,45 +33,56 @@ final class ej extends mc {
         int var3 = 0;
         int var4 = 0;
         String var5 = null;
-        String var6 = null;
-        CharSequence var7 = null;
+        Object var6 = null;
+        Object var7 = null;
+        CharSequence var8 = null;
         var3 = -22 / ((-38 - param2) / 57);
-        if (lf.field_b != null) {
+        if (lf.field_b == null) {
+          return;
+        } else {
           var4 = lf.field_b.a(param0, (byte) 58);
           if (-1 != (var4 ^ -1)) {
-            if ((var4 ^ -1) == -3) {
-              if (null != lf.field_b.field_jb) {
+            if ((var4 ^ -1) != -3) {
+              ke.field_c = -1;
+              lf.field_b = null;
+              return;
+            } else {
+              if (null == lf.field_b.field_jb) {
+                ke.field_c = -1;
+                lf.field_b = null;
+                return;
+              } else {
                 if (!lf.field_b.field_jb.equals((Object) (Object) "")) {
                   L0: {
                     if (lf.field_b.field_jb.charAt(0) == 91) {
                       var5 = lf.field_b.field_jb;
                       break L0;
                     } else {
-                      var7 = (CharSequence) (Object) lf.field_b.field_jb;
-                      var5 = cc.a(var7, (byte) 124);
+                      var8 = (CharSequence) (Object) lf.field_b.field_jb;
+                      var5 = cc.a(var8, (byte) 124);
                       break L0;
                     }
                   }
                   L1: {
                     var6 = null;
-                    if (ke.field_c != -1) {
+                    if ((ke.field_c ^ -1) != -1) {
                       break L1;
                     } else {
-                      var6 = qf.a((byte) 122, var5, param1);
+                      var6 = (Object) (Object) qf.a((byte) 122, var5, param1);
                       break L1;
                     }
                   }
                   L2: {
-                    if (-2 != ke.field_c) {
+                    if (-2 != (ke.field_c ^ -1)) {
                       break L2;
                     } else {
-                      var6 = ma.a(false, var5, param1);
+                      var6 = (Object) (Object) ma.a(false, var5, param1);
                       break L2;
                     }
                   }
                   L3: {
                     if ((ke.field_c ^ -1) == -3) {
-                      var6 = li.a(param1, var5, 2);
+                      var6 = (Object) (Object) li.a(param1, var5, 2);
                       break L3;
                     } else {
                       break L3;
@@ -79,18 +90,19 @@ final class ej extends mc {
                   }
                   L4: {
                     if ((ke.field_c ^ -1) == -4) {
-                      var6 = aa.a(var5, param1, 2, var5);
+                      var6 = (Object) (Object) aa.a(var5, param1, 2, var5);
                       break L4;
                     } else {
                       break L4;
                     }
                   }
-                  if (var6 != null) {
-                    fi.a(0, 0, var5, 2, var6, (String) null);
+                  if (var6 == null) {
                     ke.field_c = -1;
                     lf.field_b = null;
                     return;
                   } else {
+                    var7 = null;
+                    fi.a(0, 0, var5, 2, (String) var6, (String) null);
                     ke.field_c = -1;
                     lf.field_b = null;
                     return;
@@ -100,21 +112,11 @@ final class ej extends mc {
                   lf.field_b = null;
                   return;
                 }
-              } else {
-                ke.field_c = -1;
-                lf.field_b = null;
-                return;
               }
-            } else {
-              ke.field_c = -1;
-              lf.field_b = null;
-              return;
             }
           } else {
             return;
           }
-        } else {
-          return;
         }
     }
 

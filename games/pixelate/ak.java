@@ -609,7 +609,6 @@ class ak extends tp {
         int var12 = 0;
         int var13 = 0;
         Object var14 = null;
-        ak var14_ref = null;
         int var15 = 0;
         Object stackIn_25_0 = null;
         Object stackIn_26_0 = null;
@@ -841,13 +840,13 @@ class ak extends tp {
         L12: {
           ((ak) this).field_W = stackIn_39_1 != 0;
           if (null != ((ak) this).field_L) {
-            var14_ref = (ak) (Object) ((ak) this).field_L.g(1504642273);
+            var14 = (Object) (Object) (ak) (Object) ((ak) this).field_L.g(1504642273);
             L13: while (true) {
-              if (var14_ref == null) {
+              if (var14 == null) {
                 break L12;
               } else {
-                var14_ref.a(var14_ref.field_K, var14_ref.field_tb, param2, var14_ref.field_nb, var14_ref.field_gb, -123);
-                var14_ref = (ak) (Object) var14_ref.field_L.j(0);
+                ((ak) var14).a(((ak) var14).field_K, ((ak) var14).field_tb, param2, ((ak) var14).field_nb, ((ak) var14).field_gb, -123);
+                var14 = (Object) (Object) (ak) (Object) ((ak) var14).field_L.j(0);
                 continue L13;
               }
             }
@@ -856,7 +855,7 @@ class ak extends tp {
           }
         }
         L14: {
-          if (!var14_ref.field_R) {
+          if (!((ak) var14).field_R) {
             break L14;
           } else {
             bm.field_q = true;
@@ -873,16 +872,16 @@ class ak extends tp {
         }
         L16: {
           t.f(var9, var10, var11, var12);
-          if (var14_ref.field_J == 0) {
+          if (((ak) var14).field_J == 0) {
             break L16;
           } else {
-            if (!var14_ref.field_vb) {
+            if (!((ak) var14).field_vb) {
               break L16;
             } else {
               L17: {
-                ((ak) this).field_D = -var14_ref.field_ub + (uf.field_d - param1);
-                ((ak) this).field_S = bg.field_k - var14_ref.field_Ab + -param4;
-                if ((var14_ref.field_D ^ -1) <= -1) {
+                ((ak) this).field_D = -((ak) var14).field_ub + (uf.field_d - param1);
+                ((ak) this).field_S = bg.field_k - ((ak) var14).field_Ab + -param4;
+                if ((((ak) var14).field_D ^ -1) <= -1) {
                   break L17;
                 } else {
                   ((ak) this).field_D = 0;
@@ -890,7 +889,7 @@ class ak extends tp {
                 }
               }
               L18: {
-                if (0 > var14_ref.field_S) {
+                if (0 > ((ak) var14).field_S) {
                   ((ak) this).field_S = 0;
                   break L18;
                 } else {
@@ -898,8 +897,8 @@ class ak extends tp {
                 }
               }
               L19: {
-                if (var14_ref.field_D > param0 + -var14_ref.field_K) {
-                  ((ak) this).field_D = -var14_ref.field_K + param0;
+                if (((ak) var14).field_D > param0 + -((ak) var14).field_K) {
+                  ((ak) this).field_D = -((ak) var14).field_K + param0;
                   break L19;
                 } else {
                   break L19;
@@ -908,15 +907,15 @@ class ak extends tp {
               L20: {
                 ((ak) this).field_G = 0;
                 ((ak) this).field_wb = 0;
-                ((ak) this).field_tb = param1 - -var14_ref.field_D;
-                if (var14_ref.field_S > -var14_ref.field_nb + param3) {
-                  ((ak) this).field_S = param3 - var14_ref.field_nb;
+                ((ak) this).field_tb = param1 - -((ak) var14).field_D;
+                if (((ak) var14).field_S > -((ak) var14).field_nb + param3) {
+                  ((ak) this).field_S = param3 - ((ak) var14).field_nb;
                   break L20;
                 } else {
                   break L20;
                 }
               }
-              ((ak) this).field_gb = param4 + var14_ref.field_S;
+              ((ak) this).field_gb = param4 + ((ak) var14).field_S;
               break L16;
             }
           }
@@ -978,7 +977,7 @@ class ak extends tp {
               }
             }
             L3: {
-              if (param1.field_C != 0) {
+              if ((param1.field_C ^ -1) != -1) {
                 ((ak) this).field_C = param1.field_C;
                 break L3;
               } else {
@@ -1130,7 +1129,7 @@ class ak extends tp {
               }
             }
             L22: {
-              if (param1.field_O <= -1) {
+              if ((param1.field_O ^ -1) <= -1) {
                 ((ak) this).field_O = param1.field_O;
                 break L22;
               } else {
@@ -1138,7 +1137,7 @@ class ak extends tp {
               }
             }
             L23: {
-              if (-1 == param1.field_mb) {
+              if (-1 == (param1.field_mb ^ -1)) {
                 break L23;
               } else {
                 ((ak) this).field_mb = param1.field_mb;

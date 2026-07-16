@@ -59,26 +59,31 @@ final class s {
             Object stackIn_2_0 = null;
             cb stackIn_4_0 = null;
             Throwable decompiledCaughtException = null;
-            Object stackOut_1_0 = null;
             cb stackOut_3_0 = null;
+            Object stackOut_1_0 = null;
             try {
-              if (param0 == -110) {
-                return (cb) (Object) stackIn_2_0;
-              } else {
-                stackOut_1_0 = null;
-                stackIn_2_0 = stackOut_1_0;
+              L0: {
+                if (param0 == -110) {
+                  stackOut_3_0 = (cb) Class.forName("hb").newInstance();
+                  stackIn_4_0 = stackOut_3_0;
+                  break L0;
+                } else {
+                  stackOut_1_0 = null;
+                  stackIn_2_0 = stackOut_1_0;
+                  return (cb) (Object) stackIn_2_0;
+                }
               }
-            } catch (java.lang.Throwable decompiledCaughtParameter) {
-              decompiledCaughtException = decompiledCaughtParameter;
-              stackOut_3_0 = (cb) Class.forName("hb").newInstance();
-              stackIn_4_0 = stackOut_3_0;
+            } catch (java.lang.Throwable decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              var1 = decompiledCaughtException;
+              return null;
             }
+            return stackIn_4_0;
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
             throw new RuntimeException(decompiledCheckedException);
         }
-        return null;
     }
 
     static {

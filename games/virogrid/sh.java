@@ -103,146 +103,58 @@ class sh extends mb implements ta {
             int var8 = 0;
             String var9 = null;
             String stackIn_8_0 = null;
+            Throwable decompiledCaughtException = null;
             String stackOut_7_0 = null;
-            int statePc = 0;
-            Throwable caughtException = null;
-            stateLoop: while (true) {
-                switch (statePc) {
-                    case 0: {
-                        var8 = Virogrid.field_F ? 1 : 0;
-                        statePc = 1;
-                        continue stateLoop;
-                    }
-                    case 1: {
-                        try {
-                            var9 = param1.getParameter("cookieprefix");
-                            var3 = var9 + "settings";
-                            var4 = (String) q.b("getcookies", 6168, param1);
-                            var5 = ql.a(var4, (byte) -123, ';');
-                            if (param0 < 0) {
-                                statePc = 3;
-                            } else {
-                                statePc = 2;
-                            }
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_1) {
-                            caughtException = stateCaught_1;
-                            statePc = 11;
-                            continue stateLoop;
-                        }
-                    }
-                    case 2: {
-                        try {
-                            field_tb = null;
-                            statePc = 3;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_2) {
-                            caughtException = stateCaught_2;
-                            statePc = 11;
-                            continue stateLoop;
-                        }
-                    }
-                    case 3: {
-                        try {
-                            var6 = 0;
-                            statePc = 4;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_3) {
-                            caughtException = stateCaught_3;
-                            statePc = 11;
-                            continue stateLoop;
-                        }
-                    }
-                    case 4: {
-                        try {
-                            if (var6 >= var5.length) {
-                                statePc = 12;
-                            } else {
-                                statePc = 5;
-                            }
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_4) {
-                            caughtException = stateCaught_4;
-                            statePc = 11;
-                            continue stateLoop;
-                        }
-                    }
-                    case 5: {
-                        try {
-                            var7 = var5[var6].indexOf('=');
-                            if (var7 < 0) {
-                                statePc = 9;
-                            } else {
-                                statePc = 6;
-                            }
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_5) {
-                            caughtException = stateCaught_5;
-                            statePc = 11;
-                            continue stateLoop;
-                        }
-                    }
-                    case 6: {
-                        try {
-                            if (!var5[var6].substring(0, var7).trim().equals((Object) (Object) var3)) {
-                                statePc = 9;
-                            } else {
-                                statePc = 7;
-                            }
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_6) {
-                            caughtException = stateCaught_6;
-                            statePc = 11;
-                            continue stateLoop;
-                        }
-                    }
-                    case 7: {
-                        try {
-                            stackOut_7_0 = var5[var6].substring(var7 + 1).trim();
-                            stackIn_8_0 = stackOut_7_0;
-                            statePc = 8;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_7) {
-                            caughtException = stateCaught_7;
-                            statePc = 11;
-                            continue stateLoop;
-                        }
-                    }
-                    case 8: {
-                        return stackIn_8_0;
-                    }
-                    case 9: {
-                        try {
-                            var6++;
-                            statePc = 4;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_9) {
-                            caughtException = stateCaught_9;
-                            statePc = 11;
-                            continue stateLoop;
-                        }
-                    }
-                    case 11: {
-                        var2 = caughtException;
-                        statePc = 12;
-                        continue stateLoop;
-                    }
-                    case 12: {
-                        if (null == rh.field_a) {
-                            statePc = 14;
-                        } else {
-                            statePc = 13;
-                        }
-                        continue stateLoop;
-                    }
-                    case 13: {
-                        return rh.field_a;
-                    }
-                    case 14: {
-                        return param1.getParameter("settings");
-                    }
-                    default: throw new IllegalStateException("invalid CFG state " + statePc);
+            var8 = Virogrid.field_F ? 1 : 0;
+            try {
+              L0: {
+                L1: {
+                  var9 = param1.getParameter("cookieprefix");
+                  var3 = var9 + "settings";
+                  var4 = (String) q.b("getcookies", 6168, param1);
+                  var5 = ql.a(var4, (byte) -123, ';');
+                  if (param0 < 0) {
+                    break L1;
+                  } else {
+                    field_tb = null;
+                    break L1;
+                  }
                 }
+                var6 = 0;
+                L2: while (true) {
+                  if (var6 >= var5.length) {
+                    break L0;
+                  } else {
+                    L3: {
+                      var7 = var5[var6].indexOf('=');
+                      if (var7 < 0) {
+                        break L3;
+                      } else {
+                        if (!var5[var6].substring(0, var7).trim().equals((Object) (Object) var3)) {
+                          break L3;
+                        } else {
+                          stackOut_7_0 = var5[var6].substring(var7 + 1).trim();
+                          stackIn_8_0 = stackOut_7_0;
+                          return stackIn_8_0;
+                        }
+                      }
+                    }
+                    var6++;
+                    continue L2;
+                  }
+                }
+              }
+            } catch (java.lang.Throwable decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              L4: {
+                var2 = decompiledCaughtException;
+                break L4;
+              }
+            }
+            if (null == rh.field_a) {
+              return param1.getParameter("settings");
+            } else {
+              return rh.field_a;
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;

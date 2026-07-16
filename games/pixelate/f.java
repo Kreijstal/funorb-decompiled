@@ -197,6 +197,7 @@ final class f implements eb {
           if (field_f.length <= var0) {
             field_j = "Playing";
             field_n = true;
+            return;
           } else {
             var1 = var0 % 256;
             var2 = -var1 + 255;

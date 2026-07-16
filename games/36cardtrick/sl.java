@@ -43,7 +43,7 @@ final class sl {
           }
         } else {
           L2: {
-            field_c = (String) null;
+            field_c = null;
             qd.field_c = param1 >> -1884794366 & 3;
             if (2 < ia.field_a) {
               ia.field_a = 2;

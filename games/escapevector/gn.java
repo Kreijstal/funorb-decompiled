@@ -305,184 +305,242 @@ final class gn {
     final void a(byte param0, int param1, int[] param2) {
         int var4 = 0;
         de var5 = null;
-        if (param2 != null) {
+        cc var5_ref = null;
+        if (param2 == null) {
+          return;
+        } else {
           if (4 != param2.length) {
             return;
           } else {
-            if (param1 > -1) {
+            if ((param1 ^ -1) > -1) {
               return;
             } else {
               var4 = je.a(false, ((gn) this).field_j);
-              if (var4 > param1) {
-                if (-1 != ((gn) this).field_d) {
-                  L0: {
-                    if (null != ((gn) this).field_h) {
-                      break L0;
-                    } else {
-                      ((gn) this).field_h = new cn();
-                      break L0;
-                    }
-                  }
-                  if (0 != ((gn) this).field_d) {
-                    L1: {
-                      if (1 == ((gn) this).field_d) {
-                        var5 = new de(param1);
-                        ((gn) this).field_h.a(param0 + -12313, (hg) (Object) var5);
-                        break L1;
-                      } else {
-                        break L1;
+              if ((var4 ^ -1) < (param1 ^ -1)) {
+                if (-1 != (((gn) this).field_d ^ -1)) {
+                  if (null != ((gn) this).field_h) {
+                    if (0 != ((gn) this).field_d) {
+                      L0: {
+                        if (1 == ((gn) this).field_d) {
+                          var5 = new de(param1);
+                          ((gn) this).field_h.a(param0 + -12313, (hg) (Object) var5);
+                          break L0;
+                        } else {
+                          break L0;
+                        }
                       }
-                    }
-                    if (param0 != -15) {
-                      boolean discarded$7 = ((gn) this).a(-9, -123);
-                      return;
+                      if (param0 != -15) {
+                        boolean discarded$10 = ((gn) this).a(-9, -123);
+                        return;
+                      } else {
+                        return;
+                      }
                     } else {
-                      return;
+                      ((gn) this).field_n = 1 + param1;
+                      if ((((gn) this).field_n ^ -1) > (var4 ^ -1)) {
+                        L1: {
+                          var5_ref = new cc(((gn) this).field_j, param1, param2[0], param2[1], param2[2], param2[3]);
+                          ((gn) this).field_h.a(-12328, (hg) (Object) var5_ref);
+                          this.d(87);
+                          if (1 == ((gn) this).field_d) {
+                            var5 = new de(param1);
+                            ((gn) this).field_h.a(param0 + -12313, (hg) (Object) var5);
+                            break L1;
+                          } else {
+                            break L1;
+                          }
+                        }
+                        if (param0 != -15) {
+                          boolean discarded$11 = ((gn) this).a(-9, -123);
+                          return;
+                        } else {
+                          return;
+                        }
+                      } else {
+                        ((gn) this).field_n = var4 + -1;
+                        L2: {
+                          var5_ref = new cc(((gn) this).field_j, param1, param2[0], param2[1], param2[2], param2[3]);
+                          ((gn) this).field_h.a(-12328, (hg) (Object) var5_ref);
+                          this.d(87);
+                          if (1 == ((gn) this).field_d) {
+                            var5 = new de(param1);
+                            ((gn) this).field_h.a(param0 + -12313, (hg) (Object) var5);
+                            break L2;
+                          } else {
+                            break L2;
+                          }
+                        }
+                        if (param0 != -15) {
+                          boolean discarded$12 = ((gn) this).a(-9, -123);
+                          return;
+                        } else {
+                          return;
+                        }
+                      }
                     }
                   } else {
-                    ((gn) this).field_n = 1 + param1;
-                    if (((gn) this).field_n < var4) {
-                      L2: {
-                        var5 = (de) (Object) new cc(((gn) this).field_j, param1, param2[0], param2[1], param2[2], param2[3]);
-                        ((gn) this).field_h.a(-12328, (hg) (Object) var5);
-                        this.d(87);
+                    ((gn) this).field_h = new cn();
+                    if (0 != ((gn) this).field_d) {
+                      L3: {
                         if (1 == ((gn) this).field_d) {
                           var5 = new de(param1);
                           ((gn) this).field_h.a(param0 + -12313, (hg) (Object) var5);
-                          break L2;
+                          break L3;
                         } else {
-                          break L2;
+                          break L3;
                         }
                       }
-                      if (param0 == -15) {
+                      if (param0 != -15) {
+                        boolean discarded$13 = ((gn) this).a(-9, -123);
                         return;
                       } else {
-                        boolean discarded$8 = ((gn) this).a(-9, -123);
                         return;
                       }
                     } else {
-                      ((gn) this).field_n = var4 + -1;
-                      L3: {
-                        var5 = (de) (Object) new cc(((gn) this).field_j, param1, param2[0], param2[1], param2[2], param2[3]);
-                        ((gn) this).field_h.a(-12328, (hg) (Object) var5);
-                        this.d(87);
-                        if (1 == ((gn) this).field_d) {
-                          var5 = new de(param1);
-                          ((gn) this).field_h.a(param0 + -12313, (hg) (Object) var5);
-                          break L3;
-                        } else {
-                          break L3;
+                      ((gn) this).field_n = 1 + param1;
+                      if ((((gn) this).field_n ^ -1) > (var4 ^ -1)) {
+                        L4: {
+                          var5_ref = new cc(((gn) this).field_j, param1, param2[0], param2[1], param2[2], param2[3]);
+                          ((gn) this).field_h.a(-12328, (hg) (Object) var5_ref);
+                          this.d(87);
+                          if (1 == ((gn) this).field_d) {
+                            var5 = new de(param1);
+                            ((gn) this).field_h.a(param0 + -12313, (hg) (Object) var5);
+                            break L4;
+                          } else {
+                            break L4;
+                          }
                         }
-                      }
-                      if (param0 == -15) {
-                        return;
+                        if (param0 != -15) {
+                          boolean discarded$14 = ((gn) this).a(-9, -123);
+                          return;
+                        } else {
+                          return;
+                        }
                       } else {
-                        boolean discarded$9 = ((gn) this).a(-9, -123);
-                        return;
+                        ((gn) this).field_n = var4 + -1;
+                        L5: {
+                          var5_ref = new cc(((gn) this).field_j, param1, param2[0], param2[1], param2[2], param2[3]);
+                          ((gn) this).field_h.a(-12328, (hg) (Object) var5_ref);
+                          this.d(87);
+                          if (1 == ((gn) this).field_d) {
+                            var5 = new de(param1);
+                            ((gn) this).field_h.a(param0 + -12313, (hg) (Object) var5);
+                            break L5;
+                          } else {
+                            break L5;
+                          }
+                        }
+                        if (param0 != -15) {
+                          boolean discarded$15 = ((gn) this).a(-9, -123);
+                          return;
+                        } else {
+                          return;
+                        }
                       }
                     }
                   }
                 } else {
-                  if (this.a(true, param1)) {
+                  if (!this.a(true, param1)) {
+                    return;
+                  } else {
                     if (null == ((gn) this).field_h) {
                       ((gn) this).field_h = new cn();
                       if (0 == ((gn) this).field_d) {
                         ((gn) this).field_n = 1 + param1;
-                        if (((gn) this).field_n < var4) {
-                          L4: {
-                            var5 = (de) (Object) new cc(((gn) this).field_j, param1, param2[0], param2[1], param2[2], param2[3]);
-                            ((gn) this).field_h.a(-12328, (hg) (Object) var5);
+                        if ((((gn) this).field_n ^ -1) > (var4 ^ -1)) {
+                          L6: {
+                            var5_ref = new cc(((gn) this).field_j, param1, param2[0], param2[1], param2[2], param2[3]);
+                            ((gn) this).field_h.a(-12328, (hg) (Object) var5_ref);
                             this.d(87);
                             if (1 == ((gn) this).field_d) {
                               var5 = new de(param1);
                               ((gn) this).field_h.a(param0 + -12313, (hg) (Object) var5);
-                              break L4;
+                              break L6;
                             } else {
-                              break L4;
+                              break L6;
                             }
                           }
-                          if (param0 == -15) {
+                          if (param0 != -15) {
+                            boolean discarded$16 = ((gn) this).a(-9, -123);
                             return;
                           } else {
-                            boolean discarded$10 = ((gn) this).a(-9, -123);
                             return;
                           }
                         } else {
                           ((gn) this).field_n = var4 + -1;
-                          L5: {
-                            var5 = (de) (Object) new cc(((gn) this).field_j, param1, param2[0], param2[1], param2[2], param2[3]);
-                            ((gn) this).field_h.a(-12328, (hg) (Object) var5);
+                          L7: {
+                            var5_ref = new cc(((gn) this).field_j, param1, param2[0], param2[1], param2[2], param2[3]);
+                            ((gn) this).field_h.a(-12328, (hg) (Object) var5_ref);
                             this.d(87);
                             if (1 == ((gn) this).field_d) {
                               var5 = new de(param1);
                               ((gn) this).field_h.a(param0 + -12313, (hg) (Object) var5);
-                              break L5;
+                              break L7;
                             } else {
-                              break L5;
+                              break L7;
                             }
                           }
-                          if (param0 == -15) {
+                          if (param0 != -15) {
+                            boolean discarded$17 = ((gn) this).a(-9, -123);
                             return;
                           } else {
-                            boolean discarded$11 = ((gn) this).a(-9, -123);
                             return;
                           }
                         }
                       } else {
-                        L6: {
+                        L8: {
                           if (1 == ((gn) this).field_d) {
                             var5 = new de(param1);
                             ((gn) this).field_h.a(param0 + -12313, (hg) (Object) var5);
-                            break L6;
+                            break L8;
                           } else {
-                            break L6;
+                            break L8;
                           }
                         }
-                        if (param0 == -15) {
+                        if (param0 != -15) {
+                          boolean discarded$18 = ((gn) this).a(-9, -123);
                           return;
                         } else {
-                          boolean discarded$12 = ((gn) this).a(-9, -123);
                           return;
                         }
                       }
                     } else {
-                      L7: {
+                      L9: {
                         if (0 != ((gn) this).field_d) {
-                          break L7;
+                          break L9;
                         } else {
                           ((gn) this).field_n = 1 + param1;
-                          if (((gn) this).field_n < var4) {
-                            var5 = (de) (Object) new cc(((gn) this).field_j, param1, param2[0], param2[1], param2[2], param2[3]);
-                            ((gn) this).field_h.a(-12328, (hg) (Object) var5);
+                          if ((((gn) this).field_n ^ -1) > (var4 ^ -1)) {
+                            var5_ref = new cc(((gn) this).field_j, param1, param2[0], param2[1], param2[2], param2[3]);
+                            ((gn) this).field_h.a(-12328, (hg) (Object) var5_ref);
                             this.d(87);
-                            break L7;
+                            break L9;
                           } else {
                             ((gn) this).field_n = var4 + -1;
-                            var5 = (de) (Object) new cc(((gn) this).field_j, param1, param2[0], param2[1], param2[2], param2[3]);
-                            ((gn) this).field_h.a(-12328, (hg) (Object) var5);
+                            var5_ref = new cc(((gn) this).field_j, param1, param2[0], param2[1], param2[2], param2[3]);
+                            ((gn) this).field_h.a(-12328, (hg) (Object) var5_ref);
                             this.d(87);
-                            break L7;
+                            break L9;
                           }
                         }
                       }
-                      L8: {
+                      L10: {
                         if (1 == ((gn) this).field_d) {
                           var5 = new de(param1);
                           ((gn) this).field_h.a(param0 + -12313, (hg) (Object) var5);
-                          break L8;
+                          break L10;
                         } else {
-                          break L8;
+                          break L10;
                         }
                       }
-                      if (param0 == -15) {
+                      if (param0 != -15) {
+                        boolean discarded$19 = ((gn) this).a(-9, -123);
                         return;
                       } else {
-                        boolean discarded$13 = ((gn) this).a(-9, -123);
                         return;
                       }
                     }
-                  } else {
-                    return;
                   }
                 }
               } else {
@@ -490,8 +548,6 @@ final class gn {
               }
             }
           }
-        } else {
-          return;
         }
     }
 

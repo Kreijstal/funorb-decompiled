@@ -92,22 +92,46 @@ class fd extends fi implements ja {
     }
 
     final boolean a(int param0, fi param1, int param2, int param3, int param4, int param5, int param6) {
-        int var10 = Virogrid.field_F ? 1 : 0;
-        ma var8 = new ma(((fd) this).field_z);
-        if (param5 != 0) {
-            boolean discarded$0 = ((fd) this).f(false);
+        ma var8 = null;
+        fi var9 = null;
+        int var10 = 0;
+        L0: {
+          var10 = Virogrid.field_F ? 1 : 0;
+          var8 = new ma(((fd) this).field_z);
+          if (param5 == 0) {
+            break L0;
+          } else {
+            boolean discarded$2 = ((fd) this).f(false);
+            break L0;
+          }
         }
-        fi var9 = (fi) (Object) var8.c(param5 ^ 12677);
-        while (var9 != null) {
-            // ifeq L109
-            if (var9.f(true)) {
-                if (!(!var9.a(param0, param1, param2, param3, param4, 0, param6))) {
-                    return true;
+        var9 = (fi) (Object) var8.c(param5 ^ 12677);
+        L1: while (true) {
+          L2: {
+            if (var9 == null) {
+              break L2;
+            } else {
+              if (!var9.b(false)) {
+                break L2;
+              } else {
+                L3: {
+                  if (!var9.f(true)) {
+                    break L3;
+                  } else {
+                    if (var9.a(param0, param1, param2, param3, param4, 0, param6)) {
+                      return true;
+                    } else {
+                      break L3;
+                    }
+                  }
                 }
+                var9 = (fi) (Object) var8.b(41);
+                continue L1;
+              }
             }
-            var9 = (fi) (Object) var8.b(41);
+          }
+          return false;
         }
-        return false;
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {
@@ -178,24 +202,60 @@ class fd extends fi implements ja {
     }
 
     boolean a(fi param0, char param1, int param2, int param3) {
-        int var8 = Virogrid.field_F ? 1 : 0;
-        ma var10 = new ma(((fd) this).field_z);
-        fi var9 = (fi) (Object) var10.c(12677);
-        while (var9 != null) {
-            // ifeq L87
-            if (var9.f(true)) {
-                if (!(!var9.a(param0, param1, param2, -122))) {
-                    return true;
+        int var6 = 0;
+        int var7 = 0;
+        int var8 = 0;
+        fi var9 = null;
+        ma var10 = null;
+        boolean stackIn_12_0 = false;
+        boolean stackOut_11_0 = false;
+        boolean stackOut_10_0 = false;
+        var8 = Virogrid.field_F ? 1 : 0;
+        var10 = new ma(((fd) this).field_z);
+        var9 = (fi) (Object) var10.c(12677);
+        L0: while (true) {
+          L1: {
+            if (var9 == null) {
+              break L1;
+            } else {
+              if (!var9.b(false)) {
+                break L1;
+              } else {
+                L2: {
+                  if (!var9.f(true)) {
+                    break L2;
+                  } else {
+                    if (var9.a(param0, param1, param2, -122)) {
+                      return true;
+                    } else {
+                      break L2;
+                    }
+                  }
                 }
+                var9 = (fi) (Object) var10.b(41);
+                continue L0;
+              }
             }
-            var9 = (fi) (Object) var10.b(41);
+          }
+          var6 = 48 % ((-75 - param3) / 36);
+          var7 = param2;
+          if ((var7 ^ -1) != -81) {
+            return false;
+          } else {
+            L3: {
+              if (dc.field_Y[81]) {
+                stackOut_11_0 = ((fd) this).b(2, param0);
+                stackIn_12_0 = stackOut_11_0;
+                break L3;
+              } else {
+                stackOut_10_0 = ((fd) this).a(-16234, param0);
+                stackIn_12_0 = stackOut_10_0;
+                break L3;
+              }
+            }
+            return stackIn_12_0;
+          }
         }
-        int var6 = 48 % ((-75 - param3) / 36);
-        int var7 = param2;
-        if ((var7 ^ -1) == -81) {
-            return !dc.field_Y[81] ? ((fd) this).a(-16234, param0) : ((fd) this).b(2, param0);
-        }
-        return false;
     }
 
     final boolean a(fi param0, int param1) {
@@ -285,20 +345,39 @@ class fd extends fi implements ja {
     }
 
     final boolean a(fi param0, int param1, boolean param2, int param3, int param4, int param5, int param6) {
-        int var10 = Virogrid.field_F ? 1 : 0;
-        ma var8 = new ma(((fd) this).field_z);
-        if (param2) {
+        ma var8 = null;
+        fi var9 = null;
+        int var10 = 0;
+        L0: {
+          var10 = Virogrid.field_F ? 1 : 0;
+          var8 = new ma(((fd) this).field_z);
+          if (!param2) {
+            break L0;
+          } else {
             this.d((byte) -71);
+            break L0;
+          }
         }
-        fi var9 = (fi) (Object) var8.c(12677);
-        while (var9 != null) {
-            // ifeq L108
-            if (!(!var9.a(param0, param1, false, ((fd) this).field_l + param3, param4, param5 - -((fd) this).field_u, param6))) {
-                return true;
+        var9 = (fi) (Object) var8.c(12677);
+        L1: while (true) {
+          L2: {
+            if (var9 == null) {
+              break L2;
+            } else {
+              if (!var9.b(false)) {
+                break L2;
+              } else {
+                if (var9.a(param0, param1, false, ((fd) this).field_l + param3, param4, param5 - -((fd) this).field_u, param6)) {
+                  return true;
+                } else {
+                  var9 = (fi) (Object) var8.b(41);
+                  continue L1;
+                }
+              }
             }
-            var9 = (fi) (Object) var8.b(41);
+          }
+          return false;
         }
-        return false;
     }
 
     final void c(int param0) {
@@ -363,31 +442,69 @@ class fd extends fi implements ja {
     }
 
     void a(int param0, int param1, fi param2, int param3) {
-        int var7 = Virogrid.field_F ? 1 : 0;
-        super.a(param0, 114, param2, param3);
-        ma var5 = new ma(((fd) this).field_z);
-        if (param1 < 113) {
+        ma var5 = null;
+        fi var6 = null;
+        int var7 = 0;
+        L0: {
+          var7 = Virogrid.field_F ? 1 : 0;
+          super.a(param0, 114, param2, param3);
+          var5 = new ma(((fd) this).field_z);
+          if (param1 >= 113) {
+            break L0;
+          } else {
             field_C = 3;
+            break L0;
+          }
         }
-        fi var6 = (fi) (Object) var5.c(12677);
-        while (var6 != null) {
-            // ifeq L104
-            var6.a(param0 + ((fd) this).field_l, 124, param2, ((fd) this).field_u + param3);
-            var6 = (fi) (Object) var5.b(41);
+        var6 = (fi) (Object) var5.c(12677);
+        L1: while (true) {
+          L2: {
+            if (var6 == null) {
+              break L2;
+            } else {
+              if (!var6.b(false)) {
+                break L2;
+              } else {
+                var6.a(param0 + ((fd) this).field_l, 124, param2, ((fd) this).field_u + param3);
+                var6 = (fi) (Object) var5.b(41);
+                continue L1;
+              }
+            }
+          }
+          return;
         }
     }
 
     final void a(int param0, int param1, int param2, fi param3, int param4, int param5) {
-        int var9 = Virogrid.field_F ? 1 : 0;
-        ma var7 = new ma(((fd) this).field_z);
-        fi var8 = (fi) (Object) var7.c(12677);
-        while (var8 != null) {
-            // ifeq L85
-            var8.a(param0, param1, param2 - -((fd) this).field_l, param3, ((fd) this).field_u + param4, 104);
-            var8 = (fi) (Object) var7.b(41);
-        }
-        if (param5 < 73) {
-            field_A = null;
+        ma var7 = null;
+        fi var8 = null;
+        int var9 = 0;
+        var9 = Virogrid.field_F ? 1 : 0;
+        var7 = new ma(((fd) this).field_z);
+        var8 = (fi) (Object) var7.c(12677);
+        L0: while (true) {
+          L1: {
+            if (var8 == null) {
+              break L1;
+            } else {
+              if (!var8.b(false)) {
+                break L1;
+              } else {
+                var8.a(param0, param1, param2 - -((fd) this).field_l, param3, ((fd) this).field_u + param4, 104);
+                var8 = (fi) (Object) var7.b(41);
+                continue L0;
+              }
+            }
+          }
+          L2: {
+            if (param5 >= 73) {
+              break L2;
+            } else {
+              field_A = null;
+              break L2;
+            }
+          }
+          return;
         }
     }
 

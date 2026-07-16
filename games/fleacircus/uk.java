@@ -107,33 +107,39 @@ final class uk {
             Throwable decompiledCaughtException = null;
             try {
               L0: {
-                var8 = param3.getParameter("cookiehost");
-                var7 = var8;
-                var7 = var8;
-                var9 = param4 + "=" + param0 + "; version=1; path=/; domain=" + var8;
-                var7 = var9;
-                var7 = var9;
-                if (param2 == 0) {
-                  break L0;
-                } else {
-                  field_a = null;
-                  break L0;
+                L1: {
+                  var8 = param3.getParameter("cookiehost");
+                  var7 = var8;
+                  var7 = var8;
+                  var9 = param4 + "=" + param0 + "; version=1; path=/; domain=" + var8;
+                  var7 = var9;
+                  var7 = var9;
+                  if (param2 == 0) {
+                    break L1;
+                  } else {
+                    field_a = null;
+                    break L1;
+                  }
                 }
-              }
-              L1: {
-                if (-1L >= (param1 ^ -1L)) {
-                  var7 = var9 + "; Expires=" + wd.a((byte) -61, param1 * 1000L + lj.a((byte) -95)) + "; Max-Age=" + param1;
-                  break L1;
-                } else {
-                  var7 = var9 + "; Discard;";
-                  break L1;
+                L2: {
+                  if (-1L >= (param1 ^ -1L)) {
+                    var7 = var9 + "; Expires=" + wd.a((byte) -61, param1 * 1000L + lj.a((byte) -95)) + "; Max-Age=" + param1;
+                    break L2;
+                  } else {
+                    var7 = var9 + "; Discard;";
+                    break L2;
+                  }
                 }
+                eb.a("document.cookie=\"" + var7 + "\"", -28924, param3);
+                break L0;
               }
-              eb.a("document.cookie=\"" + var7 + "\"", -28924, param3);
-            } catch (java.lang.Throwable decompiledCaughtParameter) {
-              decompiledCaughtException = decompiledCaughtParameter;
+            } catch (java.lang.Throwable decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              L3: {
+                var6 = decompiledCaughtException;
+                break L3;
+              }
             }
-            var6 = decompiledCaughtException;
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {

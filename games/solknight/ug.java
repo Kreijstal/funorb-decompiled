@@ -33,14 +33,16 @@ abstract class ug {
         o[] var6 = null;
         var6 = new o[9];
         var5 = var6;
-        var6[6] = ib.a(param2, true, param4);
-        var5[3] = ib.a(param2, true, param4);
-        var5[2] = ib.a(param2, true, param4);
-        var5[1] = ib.a(param2, true, param4);
-        var5[0] = ib.a(param2, true, param4);
-        var6[8] = ib.a(param2, true, param3);
-        var5[7] = ib.a(param2, true, param3);
-        var5[5] = ib.a(param2, true, param3);
+        o dupTemp$4 = ib.a(param2, true, param4);
+        var6[6] = dupTemp$4;
+        var5[3] = dupTemp$4;
+        var5[2] = dupTemp$4;
+        var5[1] = dupTemp$4;
+        var5[0] = dupTemp$4;
+        o dupTemp$5 = ib.a(param2, true, param3);
+        var6[8] = dupTemp$5;
+        var5[7] = dupTemp$5;
+        var5[5] = dupTemp$5;
         if (param1 == -8591) {
           if (-1 != (param0 ^ -1)) {
             var6[4] = ib.a(64, true, param0);

@@ -265,46 +265,26 @@ final class db {
     }
 
     final boolean c(int param0) {
-        int stackIn_7_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_5_0 = 0;
-        if (param0 == -97) {
-          if (((db) this).field_c == -1) {
-            if (-85 != ((db) this).field_h) {
-              if (((db) this).field_h == 83) {
+        if (param0 != -97) {
+            boolean discarded$6 = ((db) this).f((byte) -87);
+            if ((((db) this).field_c ^ -1) != -1) {
                 return true;
-              } else {
-                return false;
-              }
-            } else {
-              return true;
             }
-          } else {
-            return true;
-          }
-        } else {
-          boolean discarded$8 = ((db) this).f((byte) -87);
-          if (((db) this).field_c == -1) {
-            if (-85 == ((db) this).field_h) {
-              return true;
-            } else {
-              L0: {
-                if (((db) this).field_h != 83) {
-                  stackOut_6_0 = 0;
-                  stackIn_7_0 = stackOut_6_0;
-                  break L0;
-                } else {
-                  stackOut_5_0 = 1;
-                  stackIn_7_0 = stackOut_5_0;
-                  break L0;
-                }
-              }
-              return stackIn_7_0 != 0;
+            if (-85 == (((db) this).field_h ^ -1)) {
+                return true;
             }
-          } else {
-            return true;
-          }
+            return ((db) this).field_h == 83 ? true : false;
         }
+        if ((((db) this).field_c ^ -1) != -1) {
+            return true;
+        }
+        if (-85 == (((db) this).field_h ^ -1)) {
+            return true;
+        }
+        if (((db) this).field_h == 83) {
+            return true;
+        }
+        return false;
     }
 
     final void a(byte param0, int param1) {
@@ -833,40 +813,46 @@ final class db {
     }
 
     final boolean b(byte param0) {
-        int stackIn_5_0 = 0;
-        int stackIn_11_0 = 0;
-        int stackOut_9_0 = 0;
+        int stackIn_6_0 = 0;
+        int stackIn_12_0 = 0;
+        int stackOut_10_0 = 0;
+        int stackOut_11_0 = 0;
+        int stackOut_5_0 = 0;
         int stackOut_4_0 = 0;
-        int stackOut_3_0 = 0;
         if (param0 == -108) {
-          if (-3 != ((db) this).field_c) {
-            if ((((db) this).field_h ^ -1) == -97) {
-              return true;
+          L0: {
+            if (-3 == (((db) this).field_c ^ -1)) {
+              stackOut_10_0 = 1;
+              stackIn_12_0 = stackOut_10_0;
+              break L0;
             } else {
-              return false;
-            }
-          } else {
-            stackOut_9_0 = 1;
-            stackIn_11_0 = stackOut_9_0;
-            return stackIn_11_0 != 0;
-          }
-        } else {
-          ((db) this).field_i = -104;
-          if (-3 == (((db) this).field_c ^ -1)) {
-            return true;
-          } else {
-            L0: {
-              if (((db) this).field_h != -97) {
-                stackOut_4_0 = 0;
-                stackIn_5_0 = stackOut_4_0;
+              if ((((db) this).field_h ^ -1) != -97) {
+                stackOut_11_0 = 0;
+                stackIn_12_0 = stackOut_11_0;
                 break L0;
               } else {
-                stackOut_3_0 = 1;
-                stackIn_5_0 = stackOut_3_0;
-                break L0;
+                return true;
               }
             }
-            return stackIn_5_0 != 0;
+          }
+          return stackIn_12_0 != 0;
+        } else {
+          ((db) this).field_i = -104;
+          if (-3 != (((db) this).field_c ^ -1)) {
+            L1: {
+              if ((((db) this).field_h ^ -1) != -97) {
+                stackOut_5_0 = 0;
+                stackIn_6_0 = stackOut_5_0;
+                break L1;
+              } else {
+                stackOut_4_0 = 1;
+                stackIn_6_0 = stackOut_4_0;
+                break L1;
+              }
+            }
+            return stackIn_6_0 != 0;
+          } else {
+            return true;
           }
         }
     }

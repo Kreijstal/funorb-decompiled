@@ -133,7 +133,8 @@ final class ln {
             var2 = 0;
             L1: while (true) {
               if (var2 >= qh.field_K) {
-                hf.field_D[param0.b(-6761)] = hf.field_D[param0.b(-6761)] + 1;
+                int dupTemp$4 = param0.b(-6761);
+                hf.field_D[dupTemp$4] = hf.field_D[dupTemp$4] + 1;
                 var2 = 0;
                 var3 = 0;
                 L2: while (true) {
@@ -147,8 +148,9 @@ final class ln {
                       }
                     }
                     qh.field_K = var2;
+                    int fieldTemp$5 = qh.field_K;
                     qh.field_K = qh.field_K + 1;
-                    el.field_s[qh.field_K] = param0;
+                    el.field_s[fieldTemp$5] = param0;
                     return;
                   } else {
                     L4: {
@@ -165,15 +167,17 @@ final class ln {
                         break L4;
                       }
                     }
+                    int incrementValue$6 = var2;
                     var2++;
-                    el.field_s[var2] = el.field_s[var3];
+                    el.field_s[incrementValue$6] = el.field_s[var3];
                     var3++;
                     continue L2;
                   }
                 }
               } else {
                 if (param0.field_n == el.field_s[var2].field_n) {
-                  hf.field_D[el.field_s[var2].b(-6761)] = hf.field_D[el.field_s[var2].b(-6761)] + 1;
+                  int dupTemp$7 = el.field_s[var2].b(-6761);
+                  hf.field_D[dupTemp$7] = hf.field_D[dupTemp$7] + 1;
                   var2++;
                   continue L1;
                 } else {
@@ -235,122 +239,136 @@ final class ln {
             var6 = 0;
             L0: while (true) {
               if (var6 >= var19.field_n) {
-                var7_ref4 = decompiledCaughtException;
-                var19.field_l[var6] = -5;
-                var6++;
+                l.field_c.a((l) (Object) var19, (byte) -84);
+                return;
               } else {
                 try {
                   L1: {
                     L2: {
-                      var7_int = param3.g(11132);
-                      if (0 == var7_int) {
-                        break L2;
-                      } else {
-                        if (var7_int == 1) {
-                          break L2;
+                      L3: {
+                        var7_int = param3.g(11132);
+                        if (0 == var7_int) {
+                          break L3;
                         } else {
-                          if (var7_int != 2) {
-                            L3: {
-                              if (var7_int == 3) {
-                                break L3;
-                              } else {
-                                if ((var7_int ^ -1) == -5) {
-                                  break L3;
-                                } else {
-                                  var6++;
-                                  break L1;
-                                }
-                              }
-                            }
-                            var21 = param3.h(-117);
-                            var22 = param3.h(-117);
-                            var10 = param3.g(11132);
-                            var11 = new String[var10];
-                            var12_int = 0;
-                            L4: while (true) {
-                              if (var12_int >= var10) {
-                                L5: {
-                                  var25 = new byte[var10][];
-                                  var24 = var25;
-                                  var23 = var24;
-                                  var20 = var23;
-                                  var12 = var20;
-                                  if ((var7_int ^ -1) == -4) {
-                                    var13_int = 0;
-                                    L6: while (true) {
-                                      if (var10 <= var13_int) {
-                                        break L5;
-                                      } else {
-                                        var14 = param3.d((byte) 124);
-                                        var12[var13_int] = new byte[var14];
-                                        param3.a(0, var14, true, var25[var13_int]);
-                                        var13_int++;
-                                        continue L6;
-                                      }
-                                    }
-                                  } else {
-                                    break L5;
-                                  }
-                                }
-                                var19.field_g[var6] = var7_int;
-                                var13 = new Class[var10];
-                                var18 = 0;
-                                var14 = var18;
-                                L7: while (true) {
-                                  if (var18 >= var10) {
-                                    var19.field_r[var6] = param2.a(cj.a(-109, var21), var13, true, var22);
-                                    var19.field_j[var6] = var25;
-                                    break L1;
-                                  } else {
-                                    var13[var18] = cj.a(-99, var11[var18]);
-                                    var18++;
-                                    continue L7;
-                                  }
-                                }
-                              } else {
-                                var11[var12_int] = param3.h(-117);
-                                var12_int++;
-                                continue L4;
-                              }
-                            }
+                          if (var7_int == 1) {
+                            break L3;
                           } else {
-                            break L2;
+                            if (var7_int != 2) {
+                              L4: {
+                                if (var7_int == 3) {
+                                  break L4;
+                                } else {
+                                  if ((var7_int ^ -1) == -5) {
+                                    break L4;
+                                  } else {
+                                    var6++;
+                                    break L2;
+                                  }
+                                }
+                              }
+                              var21 = param3.h(-117);
+                              var22 = param3.h(-117);
+                              var10 = param3.g(11132);
+                              var11 = new String[var10];
+                              var12_int = 0;
+                              L5: while (true) {
+                                if (var12_int >= var10) {
+                                  L6: {
+                                    var25 = new byte[var10][];
+                                    var24 = var25;
+                                    var23 = var24;
+                                    var20 = var23;
+                                    var12 = var20;
+                                    if ((var7_int ^ -1) == -4) {
+                                      var13_int = 0;
+                                      L7: while (true) {
+                                        if (var10 <= var13_int) {
+                                          break L6;
+                                        } else {
+                                          var14 = param3.d((byte) 124);
+                                          var12[var13_int] = new byte[var14];
+                                          param3.a(0, var14, true, var25[var13_int]);
+                                          var13_int++;
+                                          continue L7;
+                                        }
+                                      }
+                                    } else {
+                                      break L6;
+                                    }
+                                  }
+                                  var19.field_g[var6] = var7_int;
+                                  var13 = new Class[var10];
+                                  var18 = 0;
+                                  var14 = var18;
+                                  L8: while (true) {
+                                    if (var18 >= var10) {
+                                      var19.field_r[var6] = param2.a(cj.a(-109, var21), var13, true, var22);
+                                      var19.field_j[var6] = var25;
+                                      var6++;
+                                      break L2;
+                                    } else {
+                                      var13[var18] = cj.a(-99, var11[var18]);
+                                      var18++;
+                                      continue L8;
+                                    }
+                                  }
+                                } else {
+                                  var11[var12_int] = param3.h(-117);
+                                  var12_int++;
+                                  continue L5;
+                                }
+                              }
+                            } else {
+                              break L3;
+                            }
                           }
                         }
                       }
-                    }
-                    L8: {
-                      var16 = param3.h(-122);
-                      var8 = var16;
-                      var17 = param3.h(-118);
-                      var9 = var17;
-                      var10 = 0;
-                      if (1 != var7_int) {
-                        break L8;
-                      } else {
-                        var10 = param3.d((byte) 95);
-                        break L8;
+                      L9: {
+                        var16 = param3.h(-122);
+                        var8 = var16;
+                        var17 = param3.h(-118);
+                        var9 = var17;
+                        var10 = 0;
+                        if (1 != var7_int) {
+                          break L9;
+                        } else {
+                          var10 = param3.d((byte) 95);
+                          break L9;
+                        }
                       }
+                      var19.field_g[var6] = var7_int;
+                      var19.field_u[var6] = var10;
+                      var19.field_q[var6] = param2.a(cj.a(71, var16), var17, true);
+                      var6++;
+                      break L2;
                     }
-                    var19.field_g[var6] = var7_int;
-                    var19.field_u[var6] = var10;
-                    var19.field_q[var6] = param2.a(cj.a(71, var16), var17, true);
-                    var6++;
                     break L1;
                   }
-                } catch (java.lang.ClassNotFoundException decompiledCaughtParameter) {
-                  decompiledCaughtException = decompiledCaughtParameter;
-                  var6++;
-                } catch (java.lang.Exception decompiledCaughtParameter) {
-                  decompiledCaughtException = decompiledCaughtParameter;
-                  var7_ref2 = (NullPointerException) (Object) decompiledCaughtException;
-                  var19.field_l[var6] = -3;
-                  var6++;
-                } catch (java.lang.Throwable decompiledCaughtParameter) {
-                  decompiledCaughtException = decompiledCaughtParameter;
-                  var7_ref3 = (Exception) (Object) decompiledCaughtException;
-                  var19.field_l[var6] = -4;
-                  var6++;
+                } catch (java.lang.ClassNotFoundException decompiledCaughtParameter0) {
+                  decompiledCaughtException = decompiledCaughtParameter0;
+                  L10: {
+                    var7 = (ClassNotFoundException) (Object) decompiledCaughtException;
+                    var19.field_l[var6] = -1;
+                    var6++;
+                    break L10;
+                  }
+                } catch (java.lang.Exception decompiledCaughtParameter3) {
+                  decompiledCaughtException = decompiledCaughtParameter3;
+                  L13: {
+                    var7_ref3 = (Exception) (Object) decompiledCaughtException;
+                    var19.field_l[var6] = -4;
+                    var6++;
+                    break L13;
+                  }
+                } catch (java.lang.Throwable decompiledCaughtParameter4) {
+                  decompiledCaughtException = decompiledCaughtParameter4;
+                  L14: {
+                    var7_ref4 = decompiledCaughtException;
+                    var19.field_l[var6] = -5;
+                    var6++;
+                    break L14;
+                  }
                 }
                 continue L0;
               }
@@ -363,7 +381,7 @@ final class ln {
     }
 
     final l a(int param0) {
-        l var2_ref = null;
+        l var2_ref_l = null;
         int var2 = 0;
         int var3 = 0;
         l var4 = null;
@@ -373,9 +391,9 @@ final class ln {
             break L0;
           } else {
             if (((ln) this).field_e != ((ln) this).field_b[((ln) this).field_h + -1]) {
-              var2_ref = ((ln) this).field_e;
-              ((ln) this).field_e = var2_ref.field_f;
-              return var2_ref;
+              var2_ref_l = ((ln) this).field_e;
+              ((ln) this).field_e = var2_ref_l.field_f;
+              return var2_ref_l;
             } else {
               break L0;
             }
@@ -386,12 +404,13 @@ final class ln {
             var2 = 49 / ((-32 - param0) / 46);
             return null;
           } else {
+            int fieldTemp$7 = ((ln) this).field_h;
             ((ln) this).field_h = ((ln) this).field_h + 1;
-            var4 = ((ln) this).field_b[((ln) this).field_h].field_f;
-            var2_ref = var4;
+            var4 = ((ln) this).field_b[fieldTemp$7].field_f;
+            var2_ref_l = var4;
             if (var4 != ((ln) this).field_b[-1 + ((ln) this).field_h]) {
-              ((ln) this).field_e = var2_ref.field_f;
-              return var2_ref;
+              ((ln) this).field_e = var2_ref_l.field_f;
+              return var2_ref_l;
             } else {
               continue L1;
             }
@@ -431,8 +450,9 @@ final class ln {
         ((ln) this).field_b = new l[param0];
         ((ln) this).field_f = param0;
         for (var2 = 0; var2 < param0; var2++) {
-            var3 = new l();
-            ((ln) this).field_b[var2] = new l();
+            l dupTemp$0 = new l();
+            var3 = dupTemp$0;
+            ((ln) this).field_b[var2] = dupTemp$0;
             var3.field_a = var3;
             var3.field_f = var3;
         }

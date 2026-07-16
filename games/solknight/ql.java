@@ -157,8 +157,9 @@ final class ql extends af {
         if (param0 > -37) {
             return null;
         }
-        ((ql) this).field_t[param1] = new bf();
-        return new bf();
+        bf dupTemp$0 = new bf();
+        ((ql) this).field_t[param1] = dupTemp$0;
+        return dupTemp$0;
     }
 
     private final void a(ql param0, boolean param1, int param2) {
@@ -197,9 +198,10 @@ final class ql extends af {
                     stackIn_7_0 = stackOut_5_0;
                     stackIn_6_0 = stackOut_5_0;
                     if (var6 == null) {
-                      param0.field_t[var4] = new bf();
+                      bf dupTemp$73 = new bf();
+                      param0.field_t[var4] = dupTemp$73;
                       stackOut_7_0 = (bf) (Object) stackIn_7_0;
-                      stackOut_7_1 = new bf();
+                      stackOut_7_1 = (bf) dupTemp$73;
                       stackIn_8_0 = stackOut_7_0;
                       stackIn_8_1 = stackOut_7_1;
                       break L2;
@@ -276,8 +278,9 @@ final class ql extends af {
     public ql() {
         ((ql) this).field_t = new bf[6];
         ((ql) this).field_w = new bf();
-        ((ql) this).field_t[0] = new bf();
-        bf var1 = new bf();
+        bf dupTemp$0 = new bf();
+        ((ql) this).field_t[0] = dupTemp$0;
+        bf var1 = dupTemp$0;
         var1.a(36);
     }
 

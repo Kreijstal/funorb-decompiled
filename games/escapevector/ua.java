@@ -86,7 +86,7 @@ final class ua {
     }
 
     final static String a(int param0, int param1, CharSequence[] param2, int param3) {
-        CharSequence var4_ref = null;
+        CharSequence var4_ref_CharSequence = null;
         int var4 = 0;
         int var5 = 0;
         int var6_int = 0;
@@ -102,8 +102,8 @@ final class ua {
         } else {
           if (1 == param1) {
             var10 = param2[param0];
-            var4_ref = var10;
-            if (var4_ref == null) {
+            var4_ref_CharSequence = var10;
+            if (var4_ref_CharSequence == null) {
               return "null";
             } else {
               return ((Object) (Object) var10).toString();

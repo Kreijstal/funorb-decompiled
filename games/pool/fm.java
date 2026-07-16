@@ -555,7 +555,6 @@ abstract class fm extends ei implements lj {
         int var4 = 0;
         ei var5 = null;
         ei var6 = null;
-        ei var6_ref = null;
         int var7 = 0;
         var7 = Pool.field_O;
         if (null == ((fm) this).field_L) {
@@ -583,9 +582,9 @@ abstract class fm extends ei implements lj {
                   L2: while (true) {
                     if (var4 < ((fm) this).field_L.length) {
                       L3: {
-                        var6_ref = ((fm) this).field_L[var4];
-                        if (var6_ref != null) {
-                          if (!var6_ref.a(param1, (byte) -112)) {
+                        var6 = ((fm) this).field_L[var4];
+                        if (var6 != null) {
+                          if (!var6.a(param1, (byte) -112)) {
                             break L3;
                           } else {
                             return true;

@@ -34,8 +34,9 @@ final class td {
 
     final int a(int param0) {
         if (((td) this).field_k >= ((td) this).field_e) {
+            int fieldTemp$0 = ((td) this).field_h;
             ((td) this).field_h = ((td) this).field_h + 1;
-            ((td) this).field_a = ((td) this).field_d[((td) this).field_h] << 15;
+            ((td) this).field_a = ((td) this).field_d[fieldTemp$0] << 15;
             if (((td) this).field_h >= ((td) this).field_f) {
                 ((td) this).field_h = ((td) this).field_f - 1;
             }

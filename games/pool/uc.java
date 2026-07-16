@@ -60,14 +60,13 @@ final class uc {
     }
 
     final static void a(byte param0) {
-        tn var1_ref = null;
         tn var1 = (tn) (Object) cb.field_e.b(-1);
         int var2 = 34 % ((-56 - param0) / 50);
         if (var1 == null) {
-            var1_ref = new tn();
+            var1 = new tn();
         }
-        var1_ref.a(qh.field_l, qh.field_f, qh.field_b, qh.field_g, -95, qh.field_j, qh.field_d, qh.field_c);
-        nf.field_S.b((byte) 83, (ma) (Object) var1_ref);
+        var1.a(qh.field_l, qh.field_f, qh.field_b, qh.field_g, -95, qh.field_j, qh.field_d, qh.field_c);
+        nf.field_S.b((byte) 83, (ma) (Object) var1);
     }
 
     final static double[][] a(boolean param0, double[][][] param1) {
@@ -85,8 +84,9 @@ final class uc {
         int var4 = 0;
         for (var5 = 0; param1.length > var5; var5++) {
             for (var6 = 0; var6 < param1[var5].length; var6++) {
+                int incrementValue$0 = var4;
                 var4++;
-                var3[var4] = param1[var5][var6];
+                var3[incrementValue$0] = param1[var5][var6];
             }
         }
         return var3;

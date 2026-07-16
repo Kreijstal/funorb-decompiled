@@ -42,26 +42,49 @@ final class dk extends rj {
     }
 
     final int a(long param0, boolean param1) {
-        int var5 = SolKnight.field_L ? 1 : 0;
-        if (!param1) {
-            field_l = null;
-        }
-        if ((((dk) this).field_f ^ -1L) > (((dk) this).field_g ^ -1L)) {
-            ((dk) this).field_j = ((dk) this).field_j + (((dk) this).field_g - ((dk) this).field_f);
-            ((dk) this).field_f = ((dk) this).field_f + (((dk) this).field_g - ((dk) this).field_f);
-            ((dk) this).field_g = ((dk) this).field_g + param0;
-            return 1;
-        }
         int var4 = 0;
-        do {
-            var4++;
-            ((dk) this).field_g = ((dk) this).field_g + param0;
-            // if_icmpge L133
-        } while ((((dk) this).field_f ^ -1L) < (((dk) this).field_g ^ -1L));
-        if (((dk) this).field_g < ((dk) this).field_f) {
-            ((dk) this).field_g = ((dk) this).field_f;
+        int var5 = 0;
+        L0: {
+          var5 = SolKnight.field_L ? 1 : 0;
+          if (param1) {
+            break L0;
+          } else {
+            field_l = null;
+            break L0;
+          }
         }
-        return var4;
+        if ((((dk) this).field_f ^ -1L) <= (((dk) this).field_g ^ -1L)) {
+          var4 = 0;
+          L1: while (true) {
+            L2: {
+              var4++;
+              ((dk) this).field_g = ((dk) this).field_g + param0;
+              if (-11 >= (var4 ^ -1)) {
+                break L2;
+              } else {
+                if ((((dk) this).field_f ^ -1L) < (((dk) this).field_g ^ -1L)) {
+                  continue L1;
+                } else {
+                  break L2;
+                }
+              }
+            }
+            L3: {
+              if (((dk) this).field_g >= ((dk) this).field_f) {
+                break L3;
+              } else {
+                ((dk) this).field_g = ((dk) this).field_f;
+                break L3;
+              }
+            }
+            return var4;
+          }
+        } else {
+          ((dk) this).field_j = ((dk) this).field_j + (((dk) this).field_g - ((dk) this).field_f);
+          ((dk) this).field_f = ((dk) this).field_f + (((dk) this).field_g - ((dk) this).field_f);
+          ((dk) this).field_g = ((dk) this).field_g + param0;
+          return 1;
+        }
     }
 
     private final long d(int param0) {

@@ -21,15 +21,11 @@ final class k extends vf {
         int var13 = 0;
         v var14 = null;
         v var28 = null;
-        v var28_ref = null;
         v var31 = null;
         v var32 = null;
-        v var32_ref = null;
         v var35 = null;
         v var36 = null;
-        v var36_ref = null;
         v var39 = null;
-        v var39_ref = null;
         int stackIn_3_0 = 0;
         int stackIn_6_0 = 0;
         int stackIn_21_0 = 0;
@@ -151,8 +147,8 @@ final class k extends vf {
                   }
                 }
                 var36 = ((k) this).field_s[var8];
-                var39_ref = var36;
-                var39_ref = var36;
+                var39 = var36;
+                var39 = var36;
                 var11 = (-var36.field_j + param3.field_i) / 2 + (param4 + param3.field_k);
                 var12 = (-var36.field_d + param3.field_n) / 2 + (param2 - -param3.field_j);
                 var13 = param3.field_k + (param4 + param3.field_i / 2);
@@ -197,21 +193,21 @@ final class k extends vf {
                     break L9;
                   }
                 }
-                var32_ref = ((k) this).field_s[var8];
-                var35 = var32_ref;
-                var36_ref = var35;
-                var39_ref = var36_ref;
-                var35 = var32_ref;
-                var11 = (-var32_ref.field_j + param3.field_i) / 2 + (param4 + param3.field_k);
-                var12 = (-var32_ref.field_d + param3.field_n) / 2 + (param2 - -param3.field_j);
+                var32 = ((k) this).field_s[var8];
+                var35 = var32;
+                var36 = var35;
+                var39 = var36;
+                var35 = var32;
+                var11 = (-var32.field_j + param3.field_i) / 2 + (param4 + param3.field_k);
+                var12 = (-var32.field_d + param3.field_n) / 2 + (param2 - -param3.field_j);
                 var13 = param3.field_k + (param4 + param3.field_i / 2);
                 if (param0 == 16777215) {
-                  var32_ref.a(var11, var12);
+                  var32.a(var11, var12);
                   ((k) this).field_m.a(((k) this).b(12307, param3), var13, param2, var9, -1);
                   return;
                 } else {
                   int discarded$7 = k.a(-100, -115);
-                  var32_ref.a(var11, var12);
+                  var32.a(var11, var12);
                   ((k) this).field_m.a(((k) this).b(12307, param3), var13, param2, var9, -1);
                   return;
                 }
@@ -247,21 +243,21 @@ final class k extends vf {
                   break L12;
                 }
               }
-              var28_ref = ((k) this).field_s[var8];
-              var31 = var28_ref;
+              var28 = ((k) this).field_s[var8];
+              var31 = var28;
               var32 = var31;
               var35 = var32;
-              var31 = var28_ref;
-              var11 = (-var28_ref.field_j + param3.field_i) / 2 + (param4 + param3.field_k);
-              var12 = (-var28_ref.field_d + param3.field_n) / 2 + (param2 - -param3.field_j);
+              var31 = var28;
+              var11 = (-var28.field_j + param3.field_i) / 2 + (param4 + param3.field_k);
+              var12 = (-var28.field_d + param3.field_n) / 2 + (param2 - -param3.field_j);
               var13 = param3.field_k + (param4 + param3.field_i / 2);
               if (param0 == 16777215) {
-                var28_ref.a(var11, var12);
+                var28.a(var11, var12);
                 ((k) this).field_m.a(((k) this).b(12307, param3), var13, param2, var9, -1);
                 return;
               } else {
                 int discarded$8 = k.a(-100, -115);
-                var28_ref.a(var11, var12);
+                var28.a(var11, var12);
                 ((k) this).field_m.a(((k) this).b(12307, param3), var13, param2, var9, -1);
                 return;
               }
@@ -335,7 +331,7 @@ final class k extends vf {
           if (param0 == 51) {
             tf.field_c.field_e = 2;
             tf.field_c.field_h = tf.field_c.field_h + 1;
-            if (tf.field_c.field_h > -3) {
+            if ((tf.field_c.field_h ^ -1) > -3) {
               L0: {
                 if (2 > tf.field_c.field_h) {
                   break L0;
@@ -367,7 +363,7 @@ final class k extends vf {
                     }
                   }
                 }
-                if (-5 > tf.field_c.field_h) {
+                if (-5 < (tf.field_c.field_h ^ -1)) {
                   return -1;
                 } else {
                   return 1;
@@ -378,7 +374,7 @@ final class k extends vf {
             if (-51 == (param0 ^ -1)) {
               tf.field_c.field_e = 5;
               tf.field_c.field_h = tf.field_c.field_h + 1;
-              if (tf.field_c.field_h > -3) {
+              if ((tf.field_c.field_h ^ -1) > -3) {
                 L2: {
                   if (2 > tf.field_c.field_h) {
                     break L2;
@@ -410,7 +406,7 @@ final class k extends vf {
                       }
                     }
                   }
-                  if (-5 > tf.field_c.field_h) {
+                  if (-5 < (tf.field_c.field_h ^ -1)) {
                     return -1;
                   } else {
                     return 1;
@@ -420,7 +416,7 @@ final class k extends vf {
             } else {
               tf.field_c.field_e = 1;
               tf.field_c.field_h = tf.field_c.field_h + 1;
-              if (tf.field_c.field_h > -3) {
+              if ((tf.field_c.field_h ^ -1) > -3) {
                 L4: {
                   if (2 > tf.field_c.field_h) {
                     break L4;
@@ -452,7 +448,7 @@ final class k extends vf {
                       }
                     }
                   }
-                  if (-5 > tf.field_c.field_h) {
+                  if (-5 < (tf.field_c.field_h ^ -1)) {
                     return -1;
                   } else {
                     return 1;
@@ -483,13 +479,13 @@ final class k extends vf {
             }
           }
           tf.field_c.field_h = tf.field_c.field_h + 1;
-          if (tf.field_c.field_h <= -3) {
+          if ((tf.field_c.field_h ^ -1) <= -3) {
             if (param0 == 51) {
               return 2;
             } else {
               if (2 <= tf.field_c.field_h) {
                 if (50 != param0) {
-                  if (-5 > tf.field_c.field_h) {
+                  if (-5 < (tf.field_c.field_h ^ -1)) {
                     return -1;
                   } else {
                     return 1;
@@ -498,10 +494,10 @@ final class k extends vf {
                   return 5;
                 }
               } else {
-                if (-5 >= tf.field_c.field_h) {
-                  return 1;
-                } else {
+                if (-5 < (tf.field_c.field_h ^ -1)) {
                   return -1;
+                } else {
+                  return 1;
                 }
               }
             }
@@ -517,10 +513,10 @@ final class k extends vf {
                 }
               }
             }
-            if (-5 <= tf.field_c.field_h) {
-              return 1;
-            } else {
+            if (-5 < (tf.field_c.field_h ^ -1)) {
               return -1;
+            } else {
+              return 1;
             }
           }
         }

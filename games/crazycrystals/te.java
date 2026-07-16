@@ -7,11 +7,39 @@ abstract class te {
     static un field_a;
 
     final static boolean a(byte param0, boolean param1) {
-        // ifnonnull L25
-        vj.field_b = gf.field_b.a(fe.field_j, false, df.field_a);
-        // goto L25
-        // ifne L36
-        return false;
+        L0: {
+          if (vj.field_b != null) {
+            break L0;
+          } else {
+            vj.field_b = gf.field_b.a(fe.field_j, false, df.field_a);
+            break L0;
+          }
+        }
+        if (vj.field_b.field_a != 0) {
+          L1: {
+            if (param0 == -19) {
+              break L1;
+            } else {
+              field_a = null;
+              break L1;
+            }
+          }
+          L2: {
+            long dupTemp$2 = lo.a((byte) -29);
+            mp.field_p = dupTemp$2;
+            wg.field_y = dupTemp$2;
+            if ((vj.field_b.field_a ^ -1) != -2) {
+              break L2;
+            } else {
+              break L2;
+            }
+          }
+          gj.field_k = tp.field_c;
+          vj.field_b = null;
+          return true;
+        } else {
+          return false;
+        }
     }
 
     abstract void b(int param0);

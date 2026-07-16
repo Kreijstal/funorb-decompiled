@@ -1829,14 +1829,15 @@ final class ti {
     }
 
     private final void a(ue param0, int param1) {
-        ue var3 = null;
+        Object var3 = null;
+        ue var3_ref = null;
         L0: {
           var3 = null;
           if (null != param0.field_j) {
-            var3 = ((ti) this).a(param1 + -48, param0.field_j);
+            var3_ref = ((ti) this).a(param1 + -48, param0.field_j);
             break L0;
           } else {
-            var3 = this.a(param0.field_e, (byte) 1);
+            var3_ref = this.a(param0.field_e, (byte) 1);
             break L0;
           }
         }
@@ -1844,7 +1845,7 @@ final class ti {
           return;
         } else {
           L1: {
-            if (var3 == null) {
+            if (var3_ref == null) {
               ((ti) this).field_e.a((gn) (Object) param0, 3);
               break L1;
             } else {
@@ -1906,185 +1907,68 @@ final class ti {
         int var7_int = 0;
         ue var7 = null;
         Throwable var8 = null;
-        int statePc = 0;
-        Throwable caughtException = null;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    var3 = param0.field_n + param1;
-                    ((ti) this).field_e = new tf();
-                    ((ti) this).field_a = 2;
-                    statePc = 1;
-                    continue stateLoop;
-                }
-                case 1: {
-                    if (var3 - ((ti) this).field_a > param0.field_n) {
-                        statePc = 3;
+        int decompiledRegionSelector0 = 0;
+        Throwable decompiledCaughtException = null;
+        var3 = param0.field_n + param1;
+        ((ti) this).field_e = new tf();
+        ((ti) this).field_a = 2;
+        L0: while (true) {
+          if (var3 - ((ti) this).field_a > param0.field_n) {
+            var4 = (int)param0.h(119, ((ti) this).field_a);
+            var5 = param0.field_n - -var4;
+            try {
+              L1: {
+                var6 = param0.h((byte) -107);
+                if (255 == var6) {
+                  L2: {
+                    var7_int = param0.h((byte) -127);
+                    if (var7_int == 0) {
+                      ((ti) this).field_a = param0.h((byte) -112);
+                      break L2;
                     } else {
-                        statePc = 2;
+                      break L2;
                     }
-                    continue stateLoop;
-                }
-                case 2: {
-                }
-                case 3: {
-                    var4 = (int)param0.h(119, ((ti) this).field_a);
-                    var5 = param0.field_n - -var4;
-                    statePc = 4;
-                    continue stateLoop;
-                }
-                case 4: {
-                    try {
-                        var6 = param0.h((byte) -107);
-                        if (255 == var6) {
-                            statePc = 6;
-                        } else {
-                            statePc = 5;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_4) {
-                        caughtException = stateCaught_4;
-                        statePc = 18;
-                        continue stateLoop;
-                    }
-                }
-                case 5: {
-                    try {
-                        statePc = 10;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_5) {
-                        caughtException = stateCaught_5;
-                        statePc = 18;
-                        continue stateLoop;
-                    }
-                }
-                case 6: {
-                    try {
-                        var7_int = param0.h((byte) -127);
-                        if (var7_int == 0) {
-                            statePc = 8;
-                        } else {
-                            statePc = 7;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_6) {
-                        caughtException = stateCaught_6;
-                        statePc = 18;
-                        continue stateLoop;
-                    }
-                }
-                case 7: {
-                    try {
-                        statePc = 9;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_7) {
-                        caughtException = stateCaught_7;
-                        statePc = 18;
-                        continue stateLoop;
-                    }
-                }
-                case 8: {
-                    try {
-                        ((ti) this).field_a = param0.h((byte) -112);
-                        statePc = 9;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_8) {
-                        caughtException = stateCaught_8;
-                        statePc = 18;
-                        continue stateLoop;
-                    }
-                }
-                case 9: {
-                    param0.field_n = var5;
-                    statePc = 1;
-                    continue stateLoop;
-                }
-                case 10: {
-                    try {
-                        var7 = new ue();
-                        if (var6 == 0) {
-                            statePc = 13;
-                        } else {
-                            statePc = 11;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_10) {
-                        caughtException = stateCaught_10;
-                        statePc = 18;
-                        continue stateLoop;
-                    }
-                }
-                case 11: {
-                    try {
-                        if (1 != var6) {
-                            statePc = 14;
-                        } else {
-                            statePc = 12;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_11) {
-                        caughtException = stateCaught_11;
-                        statePc = 18;
-                        continue stateLoop;
-                    }
-                }
-                case 12: {
-                    try {
+                  }
+                  param0.field_n = var5;
+                  decompiledRegionSelector0 = 0;
+                  break L1;
+                } else {
+                  L3: {
+                    var7 = new ue();
+                    if (var6 == 0) {
+                      var7.field_e = param0.h((byte) -127);
+                      break L3;
+                    } else {
+                      if (1 != var6) {
+                        break L3;
+                      } else {
                         var7.field_j = param0.a(47);
-                        statePc = 14;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_12) {
-                        caughtException = stateCaught_12;
-                        statePc = 18;
-                        continue stateLoop;
+                        break L3;
+                      }
                     }
+                  }
+                  var7.field_i = param0.field_n;
+                  var7.field_h = -var7.field_i + var5;
+                  this.a(var7, 8);
+                  decompiledRegionSelector0 = 1;
+                  break L1;
                 }
-                case 13: {
-                    try {
-                        var7.field_e = param0.h((byte) -127);
-                        statePc = 14;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_13) {
-                        caughtException = stateCaught_13;
-                        statePc = 18;
-                        continue stateLoop;
-                    }
-                }
-                case 14: {
-                    try {
-                        var7.field_i = param0.field_n;
-                        var7.field_h = -var7.field_i + var5;
-                        this.a(var7, 8);
-                        statePc = 15;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_14) {
-                        caughtException = stateCaught_14;
-                        statePc = 18;
-                        continue stateLoop;
-                    }
-                }
-                case 15: {
-                    param0.field_n = var5;
-                    statePc = 1;
-                    continue stateLoop;
-                }
-                case 18: {
-                    try {
-                        var8 = caughtException;
-                        statePc = 19;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_18) {
-                        caughtException = stateCaught_18;
-                        statePc = 18;
-                        continue stateLoop;
-                    }
-                }
-                case 19: {
-                    param0.field_n = var5;
-                    throw (RuntimeException) (Object) var8;
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
+              }
+            } catch (java.lang.Throwable decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              var8 = decompiledCaughtException;
+              param0.field_n = var5;
+              throw ti.<RuntimeException>$cfr$sneakyThrow(var8);
             }
+            if (decompiledRegionSelector0 == 0) {
+              continue L0;
+            } else {
+              param0.field_n = var5;
+              continue L0;
+            }
+          } else {
+            return;
+          }
         }
     }
 
@@ -2110,5 +1994,10 @@ final class ti {
         field_d[7] = -639322645;
         field_d[9] = -1547064516;
         field_d[4] = -1406004672;
+    }
+
+    @SuppressWarnings("unchecked")
+    private static <T extends Throwable> RuntimeException $cfr$sneakyThrow(Throwable throwable) throws T {
+        throw (T) throwable;
     }
 }

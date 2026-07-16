@@ -100,19 +100,19 @@ final class jf {
     }
 
     jf(int param0) {
-        int var2 = param0;
-        if (var2 != 0) {
-            // if_icmpeq L67
-            // if_icmpeq L120
-            // if_icmpne L208
+        int var2 = 0;
+        var2 = param0;
+        if (var2 == 0) {
+          ((jf) this).field_h = false;
+          ((jf) this).field_k = false;
+          ((jf) this).field_g = false;
+          ((jf) this).field_f = 0;
+          ((jf) this).field_m = false;
+          ((jf) this).field_e = -1;
+          ((jf) this).field_d = true;
+          return;
         } else {
-            ((jf) this).field_h = false;
-            ((jf) this).field_k = false;
-            ((jf) this).field_g = false;
-            ((jf) this).field_f = 0;
-            ((jf) this).field_m = false;
-            ((jf) this).field_e = -1;
-            ((jf) this).field_d = true;
+          if (var2 == 1) {
             ((jf) this).field_e = -1;
             ((jf) this).field_g = false;
             ((jf) this).field_f = 0;
@@ -123,24 +123,39 @@ final class jf {
             ((jf) this).field_m = true;
             ((jf) this).field_i = 1;
             ((jf) this).field_d = true;
-            ((jf) this).field_f = 0;
-            ((jf) this).field_e = -1;
-            ((jf) this).field_g = true;
-            ((jf) this).field_m = false;
-            ((jf) this).field_h = false;
-            ((jf) this).field_k = false;
-            ((jf) this).field_d = true;
+            return;
+          } else {
+            if ((var2 ^ -1) == -3) {
+              ((jf) this).field_f = 0;
+              ((jf) this).field_e = -1;
+              ((jf) this).field_g = true;
+              ((jf) this).field_m = false;
+              ((jf) this).field_h = false;
+              ((jf) this).field_k = false;
+              ((jf) this).field_d = true;
+              return;
+            } else {
+              L0: {
+                if (var2 != 3) {
+                  break L0;
+                } else {
+                  ((jf) this).field_c = 50;
+                  ((jf) this).field_k = true;
+                  ((jf) this).field_h = false;
+                  ((jf) this).field_f = 0;
+                  ((jf) this).field_a = 20;
+                  ((jf) this).field_g = true;
+                  ((jf) this).field_m = false;
+                  ((jf) this).field_d = true;
+                  ((jf) this).field_e = -1;
+                  ((jf) this).field_i = 1;
+                  break L0;
+                }
+              }
+              return;
+            }
+          }
         }
-        ((jf) this).field_c = 50;
-        ((jf) this).field_k = true;
-        ((jf) this).field_h = false;
-        ((jf) this).field_f = 0;
-        ((jf) this).field_a = 20;
-        ((jf) this).field_g = true;
-        ((jf) this).field_m = false;
-        ((jf) this).field_d = true;
-        ((jf) this).field_e = -1;
-        ((jf) this).field_i = 1;
     }
 
     static {

@@ -37,7 +37,7 @@ final class vh {
           var11 = param0.field_j;
           var12 = -var11 + bi.field_f;
           var13 = 0;
-          if (param4 >= bi.field_l) {
+          if ((param4 ^ -1) <= (bi.field_l ^ -1)) {
             break L0;
           } else {
             var14 = bi.field_l + -param4;
@@ -49,7 +49,7 @@ final class vh {
           }
         }
         L1: {
-          if (bi.field_d >= var10 + param4) {
+          if ((bi.field_d ^ -1) <= (var10 + param4 ^ -1)) {
             break L1;
           } else {
             var10 = var10 - (param4 + (var10 + -bi.field_d));
@@ -57,7 +57,7 @@ final class vh {
           }
         }
         L2: {
-          if (bi.field_g <= param3) {
+          if ((bi.field_g ^ -1) >= (param3 ^ -1)) {
             break L2;
           } else {
             var14 = bi.field_g - param3;
@@ -98,49 +98,51 @@ final class vh {
             if ((var10 ^ -1) < -1) {
               param4 = -var10;
               L6: while (true) {
-                if (param4 <= -1) {
+                if ((param4 ^ -1) <= -1) {
                   return;
                 } else {
                   var14 = var7;
                   param3 = -var11;
                   L7: while (true) {
-                    if (-1 <= param3) {
+                    if (-1 >= (param3 ^ -1)) {
                       var8 = var8 + var12;
                       var9 = var9 + var13;
                       param4++;
                       continue L6;
                     } else {
-                      var15 = var14 >> 534418600;
-                      var16 = -var15 + 256;
-                      var14 = var14 + var6;
-                      if ((var15 ^ -1) > -1) {
-                        var9++;
-                        var8++;
-                        param3++;
-                        continue L7;
-                      } else {
-                        var9++;
-                        var17 = param0.field_l[param0.field_k[var9] & 255];
-                        if (0 != var17) {
-                          if ((var15 ^ -1) >= -256) {
-                            var18 = bi.field_c[var8];
-                            var19 = 16711935 & (16711935 & var17) * var15 + var16 * (var18 & 16711935) >> -1379809112;
-                            bi.field_c[var8] = (eg.a(eg.a(var17, 65280) * var15 + var16 * eg.a(65280, var18), 16711732) >> -1099542808) + var19;
-                            var8++;
-                            param3++;
-                            continue L7;
-                          } else {
-                            bi.field_c[var8] = var17;
-                            var8++;
-                            param3++;
-                            continue L7;
-                          }
-                        } else {
+                      L8: {
+                        var15 = var14 >> 534418600;
+                        var16 = -var15 + 256;
+                        var14 = var14 + var6;
+                        if ((var15 ^ -1) > -1) {
+                          var9++;
                           var8++;
-                          param3++;
-                          continue L7;
+                          break L8;
+                        } else {
+                          L9: {
+                            int incrementValue$1 = var9;
+                            var9++;
+                            var17 = param0.field_l[param0.field_k[incrementValue$1] & 255];
+                            if (0 == var17) {
+                              break L9;
+                            } else {
+                              if ((var15 ^ -1) >= -256) {
+                                var18 = bi.field_c[var8];
+                                var19 = 16711935 & (16711935 & var17) * var15 + var16 * (var18 & 16711935) >> -1379809112;
+                                bi.field_c[var8] = (eg.a(eg.a(var17, 65280) * var15 + var16 * eg.a(65280, var18), 16711732) >> -1099542808) + var19;
+                                break L9;
+                              } else {
+                                bi.field_c[var8] = var17;
+                                break L9;
+                              }
+                            }
+                          }
+                          var8++;
+                          break L8;
                         }
                       }
+                      param3++;
+                      continue L7;
                     }
                   }
                 }

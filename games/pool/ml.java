@@ -165,8 +165,9 @@ final class ml {
                         param2++;
                         continue L7;
                       } else {
+                        int incrementValue$1 = var9;
                         var9++;
-                        var17 = param4.field_D[var9];
+                        var17 = param4.field_D[incrementValue$1];
                         if (0 != var17) {
                           if (-256 <= (var15 ^ -1)) {
                             var18 = qh.field_d[var8];

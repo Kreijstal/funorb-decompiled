@@ -13,7 +13,7 @@ final class ff {
         int var6_int = 0;
         StringBuilder var6 = null;
         int var7 = 0;
-        String var7_ref = null;
+        String var7_ref_String = null;
         int var8 = 0;
         String var9 = null;
         int var10 = 0;
@@ -39,8 +39,8 @@ final class ff {
                   }
                 }
               }
-              var7_ref = param2.substring(2 + var6_int, var5);
-              if (!ip.a((byte) -109, (CharSequence) (Object) var7_ref)) {
+              var7_ref_String = param2.substring(2 + var6_int, var5);
+              if (!ip.a((byte) -109, (CharSequence) (Object) var7_ref_String)) {
                 continue L0;
               } else {
                 if (var3 <= var5) {
@@ -48,7 +48,7 @@ final class ff {
                 } else {
                   if (param2.charAt(var5) == 62) {
                     var5++;
-                    var8 = kc.a((byte) -94, (CharSequence) (Object) var7_ref);
+                    var8 = kc.a((byte) -94, (CharSequence) (Object) var7_ref_String);
                     var4 = var4 + (-var5 - -var6_int + args[var8].length());
                     continue L0;
                   } else {

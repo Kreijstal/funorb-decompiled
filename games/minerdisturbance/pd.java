@@ -41,7 +41,7 @@ final class pd {
             dj.a();
             eh.d();
             oj.o(-1236579128);
-            if (var5 > -257) {
+            if ((var5 ^ -1) > -257) {
               eh.b(0, 0, eh.field_g, eh.field_c, 0, 256 + -var5);
               break L2;
             } else {
@@ -50,7 +50,7 @@ final class pd {
           }
           L3: {
             tk.b(true);
-            if (-151 <= mn.field_x) {
+            if (-151 >= (mn.field_x ^ -1)) {
               bl.field_x.f(15 + var3, 10 + var4, var5);
               break L3;
             } else {
@@ -60,10 +60,10 @@ final class pd {
           }
           L4: {
             var6 = mn.field_x + -125;
-            if (var6 >= -1) {
+            if ((var6 ^ -1) >= -1) {
               break L4;
             } else {
-              if (-51 <= var6) {
+              if (-51 >= (var6 ^ -1)) {
                 break L4;
               } else {
                 if (var6 >= 20) {
@@ -117,26 +117,51 @@ final class pd {
 
     final void a(sb param0, boolean param1, byte[] param2) {
         try {
-            if (param0.field_u[param0.field_o] == 31) {
-                // if_icmpne L45
-            } else {
-                throw new RuntimeException("");
+            Exception exception = null;
+            Object var5 = null;
+            Throwable decompiledCaughtException = null;
+            L0: {
+              if (param0.field_u[param0.field_o] != 31) {
+                break L0;
+              } else {
+                if (param0.field_u[1 + param0.field_o] != -117) {
+                  break L0;
+                } else {
+                  L1: {
+                    if (null != ((pd) this).field_c) {
+                      break L1;
+                    } else {
+                      ((pd) this).field_c = new java.util.zip.Inflater(true);
+                      break L1;
+                    }
+                  }
+                  try {
+                    L2: {
+                      ((pd) this).field_c.setInput(param0.field_u, param0.field_o + 10, param0.field_u.length + (-18 + -param0.field_o));
+                      int discarded$4 = ((pd) this).field_c.inflate(param2);
+                      break L2;
+                    }
+                  } catch (java.lang.Exception decompiledCaughtParameter0) {
+                    decompiledCaughtException = decompiledCaughtParameter0;
+                    exception = (Exception) (Object) decompiledCaughtException;
+                    ((pd) this).field_c.reset();
+                    throw new RuntimeException("");
+                  }
+                  L3: {
+                    if (param1) {
+                      break L3;
+                    } else {
+                      var5 = null;
+                      boolean discarded$5 = pd.a((CharSequence) null, -19, false, (byte) -63);
+                      break L3;
+                    }
+                  }
+                  ((pd) this).field_c.reset();
+                  return;
+                }
+              }
             }
-            if (null == ((pd) this).field_c) {
-                ((pd) this).field_c = new java.util.zip.Inflater(true);
-            }
-            try {
-                ((pd) this).field_c.setInput(param0.field_u, param0.field_o + 10, param0.field_u.length + (-18 + -param0.field_o));
-                int discarded$0 = ((pd) this).field_c.inflate(param2);
-            } catch (Exception exception) {
-                ((pd) this).field_c.reset();
-                throw new RuntimeException("");
-            }
-            if (!param1) {
-                Object var5 = null;
-                boolean discarded$1 = pd.a((CharSequence) null, -19, false, (byte) -63);
-            }
-            ((pd) this).field_c.reset();
+            throw new RuntimeException("");
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {

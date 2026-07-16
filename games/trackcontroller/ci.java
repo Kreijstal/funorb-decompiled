@@ -116,8 +116,9 @@ final class ci {
                         var19++;
                         continue L6;
                       } else {
+                        int incrementValue$1 = var17;
                         var17++;
-                        ll.field_i[var17] = var13;
+                        ll.field_i[incrementValue$1] = var13;
                         var20++;
                         continue L7;
                       }

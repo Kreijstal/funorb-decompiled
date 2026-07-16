@@ -178,8 +178,9 @@ final class dk {
                   return null;
                 }
               } else {
+                int fieldTemp$2 = ((dk) this).field_d;
                 ((dk) this).field_d = ((dk) this).field_d + 1;
-                var4 = ((dk) this).field_b[((dk) this).field_d].field_p;
+                var4 = ((dk) this).field_b[fieldTemp$2].field_p;
                 var9 = var4;
                 if (var4 != ((dk) this).field_b[-1 + ((dk) this).field_d]) {
                   ((dk) this).field_c = var9.field_p;
@@ -204,8 +205,9 @@ final class dk {
                 return null;
               }
             } else {
+              int fieldTemp$3 = ((dk) this).field_d;
               ((dk) this).field_d = ((dk) this).field_d + 1;
-              var4 = ((dk) this).field_b[((dk) this).field_d].field_p;
+              var4 = ((dk) this).field_b[fieldTemp$3].field_p;
               var5 = var4;
               if (var4 != ((dk) this).field_b[-1 + ((dk) this).field_d]) {
                 ((dk) this).field_c = var5.field_p;
@@ -313,13 +315,15 @@ final class dk {
         var2 = 0;
         L0: while (true) {
           if (param0 > var2) {
-            var3 = new l();
-            ((dk) this).field_b[var2] = new l();
+            l dupTemp$2 = new l();
+            var3 = dupTemp$2;
+            ((dk) this).field_b[var2] = dupTemp$2;
             var3.field_m = var3;
             var3.field_p = var3;
             var2++;
             continue L0;
           } else {
+            return;
           }
         }
     }

@@ -435,32 +435,36 @@ final class fn {
         String stackOut_4_0 = null;
         try {
           L0: {
-            if (param1 == 10241) {
-              break L0;
-            } else {
-              field_a = null;
-              break L0;
+            L1: {
+              if (param1 == 10241) {
+                break L1;
+              } else {
+                field_a = null;
+                break L1;
+              }
             }
-          }
-          L1: {
-            var3_int = param0.b(true);
-            if (param2 >= var3_int) {
-              break L1;
-            } else {
-              var3_int = param2;
-              break L1;
+            L2: {
+              var3_int = param0.b(true);
+              if (param2 >= var3_int) {
+                break L2;
+              } else {
+                var3_int = param2;
+                break L2;
+              }
             }
+            var4 = new byte[var3_int];
+            param0.field_m = param0.field_m + mn.field_q.a(var4, true, 0, param0.field_m, var3_int, param0.field_g);
+            var5 = qi.a(var3_int, 0, var4, (byte) -94);
+            stackOut_4_0 = (String) var5;
+            stackIn_5_0 = stackOut_4_0;
+            break L0;
           }
-          var4 = new byte[var3_int];
-          param0.field_m = param0.field_m + mn.field_q.a(var4, true, 0, param0.field_m, var3_int, param0.field_g);
-          var5 = qi.a(var3_int, 0, var4, (byte) -94);
-          stackOut_4_0 = (String) var5;
-          stackIn_5_0 = stackOut_4_0;
-        } catch (java.lang.Exception decompiledCaughtParameter) {
-          decompiledCaughtException = decompiledCaughtParameter;
-          return stackIn_5_0;
+        } catch (java.lang.Exception decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3 = (Exception) (Object) decompiledCaughtException;
+          return "Cabbage";
         }
-        return null;
+        return stackIn_5_0;
     }
 
     final static boolean a(char param0, byte param1) {

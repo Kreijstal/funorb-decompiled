@@ -164,8 +164,9 @@ final class rf extends pc {
           if (var9 >= var8) {
             L3: {
               if (var8 > var7) {
+                int incrementValue$3 = var6;
                 var6++;
-                args[var6] = param4.substring(var7, var8).trim();
+                args[incrementValue$3] = param4.substring(var7, var8).trim();
                 break L3;
               } else {
                 break L3;
@@ -189,8 +190,9 @@ final class rf extends pc {
               var11 = param4.substring(var7, var9 + 1).trim();
               var12 = param1.a(var11);
               if (param2 <= var12) {
+                int incrementValue$4 = var6;
                 var6++;
-                args[var6] = var11;
+                args[incrementValue$4] = var11;
                 var7 = var9 + 1;
                 break L4;
               } else {
@@ -199,8 +201,9 @@ final class rf extends pc {
             }
             if (var10 == 62) {
               if (param4.regionMatches(var9 - 3, "<br>", 0, 4)) {
+                int incrementValue$5 = var6;
                 var6++;
-                args[var6] = param4.substring(var7, -3 + var9).trim();
+                args[incrementValue$5] = param4.substring(var7, -3 + var9).trim();
                 var7 = var9 + 1;
                 var9++;
                 continue L2;

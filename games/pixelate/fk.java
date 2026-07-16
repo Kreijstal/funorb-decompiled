@@ -79,14 +79,14 @@ final class fk extends de {
                 }
               }
               L4: {
-                if (ke.field_a != -98) {
+                if ((ke.field_a ^ -1) != -98) {
                   break L4;
                 } else {
                   L5: {
-                    if (-1 > ((fk) this).field_g.field_j) {
+                    if (-1 < (((fk) this).field_g.field_j ^ -1)) {
                       break L5;
                     } else {
-                      if (((fk) this).field_g.field_j < var3) {
+                      if ((((fk) this).field_g.field_j ^ -1) > (var3 ^ -1)) {
                         ((fk) this).field_g.a(false, ((fk) this).field_g.field_j - -1);
                         break L4;
                       } else {
@@ -198,10 +198,10 @@ final class fk extends de {
           L0: {
             L1: {
               L2: {
-                if (param1 != -1) {
+                if ((param1 ^ -1) != -1) {
                   break L2;
                 } else {
-                  if (-1 == ((fk) this).field_r) {
+                  if (-1 == (((fk) this).field_r ^ -1)) {
                     break L1;
                   } else {
                     break L2;
@@ -212,7 +212,7 @@ final class fk extends de {
                 if (2 != param1) {
                   break L3;
                 } else {
-                  if (((fk) this).field_r == -1 + ln.field_m.length) {
+                  if ((((fk) this).field_r ^ -1) == (-1 + ln.field_m.length ^ -1)) {
                     break L1;
                   } else {
                     break L3;

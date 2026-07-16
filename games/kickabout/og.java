@@ -18,7 +18,7 @@ abstract class og {
         int var6 = 0;
         ut var6_ref_ut = null;
         int var7 = 0;
-        ut var7_ref = null;
+        ut var7_ref_ut = null;
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
@@ -73,11 +73,11 @@ abstract class og {
                     break L4;
                   } else {
                     var13 = param1[var6];
-                    var7_ref = var13;
+                    var7_ref_ut = var13;
                     var8 = el.a(29430, 10, var12[var6] + (896 - var13.field_o >> 724538049));
                     var9 = el.a(29430, 10, 60 - ((var13.field_v >> 1805808033) + -var14[var6]));
                     var13.c(var8 + param2, var9 + param3);
-                    var7_ref.c(var8 + param2, -var13.field_v + -var9 + (1344 + param3));
+                    var7_ref_ut.c(var8 + param2, -var13.field_v + -var9 + (1344 + param3));
                     var6++;
                     if (0 == 0) {
                       continue L3;

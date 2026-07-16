@@ -66,7 +66,6 @@ final class cg extends gn {
         String var28 = null;
         wi var29 = null;
         tf var30 = null;
-        tf var30_ref = null;
         String var31 = null;
         wi var32 = null;
         tf var33 = null;
@@ -125,9 +124,9 @@ final class cg extends gn {
             break L2;
           } else {
             var29 = eg.field_n;
-            var30_ref = h.field_V[0];
+            var30 = h.field_V[0];
             var31 = vd.field_b;
-            var29.field_b.a(0, 11, var30_ref, var31);
+            var29.field_b.a(0, 11, var30, var31);
             var32 = eg.field_n;
             var33 = h.field_V[1];
             var34 = ge.field_e;

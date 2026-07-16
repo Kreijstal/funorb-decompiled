@@ -79,8 +79,9 @@ final class wb extends pi {
         ((wb) this).field_v = param0;
         ((wb) this).field_o = param3;
         ((wb) this).field_u = param2;
+        int fieldTemp$0 = nf.field_c;
         nf.field_c = nf.field_c + 1;
-        ((wb) this).field_w = 65535 & nf.field_c;
+        ((wb) this).field_w = 65535 & fieldTemp$0;
         ((wb) this).field_t = param4;
         ((wb) this).field_s = param1;
         ((wb) this).field_n = param5;

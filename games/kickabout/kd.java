@@ -28,40 +28,45 @@ final class kd extends be {
             int stackOut_5_0 = 0;
             try {
               L0: {
-                var6 = fj.a(false, param0);
-                if (param1) {
-                  break L0;
+                L1: {
+                  var6 = fj.a(false, param0);
+                  if (param1) {
+                    break L1;
+                  } else {
+                    ((kd) this).b(5);
+                    break L1;
+                  }
+                }
+                var7 = new q(var6);
+                var5 = jh.a(var7, 1422);
+                if (!var7.a(6)) {
+                  throw new fi(var7.a((byte) 114).field_f);
                 } else {
-                  ((kd) this).b(5);
+                  ((kd) this).a(-98, (Object) (Object) var5.a(param1, ((kd) this).field_t));
+                  stackOut_5_0 = 1;
+                  stackIn_6_0 = stackOut_5_0;
                   break L0;
                 }
               }
-              var7 = new q(var6);
-              var5 = jh.a(var7, 1422);
-              if (!var7.a(6)) {
-                throw new fi(var7.a((byte) 114).field_f);
-              } else {
-                ((kd) this).a(-98, (Object) (Object) var5.a(param1, ((kd) this).field_t));
-                stackOut_5_0 = 1;
-                stackIn_6_0 = stackOut_5_0;
-              }
-            } catch (fi decompiledCaughtParameter) {
-              decompiledCaughtException = decompiledCaughtParameter;
-              return stackIn_6_0 != 0;
-            } catch (dw decompiledCaughtParameter) {
-              decompiledCaughtException = decompiledCaughtParameter;
+            } catch (fi decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
               var3 = (fi) (Object) decompiledCaughtException;
               param0 = "<col=55ff55>" + param0.substring(0, var3.field_f) + "</col>" + param0.substring(var3.field_f);
               var4 = (hd) (Object) ((kd) this).field_g.field_Ab.field_jb.d(-9033);
               var4.field_E = ((kd) this).field_a + param0;
               return false;
+            } catch (dw decompiledCaughtParameter1) {
+              decompiledCaughtException = decompiledCaughtParameter1;
+              var3_ref = (dw) (Object) decompiledCaughtException;
+              ((kd) this).a(var3_ref.field_c, (byte) 94);
+              return false;
             }
+            return stackIn_6_0 != 0;
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
             throw new RuntimeException(decompiledCheckedException);
         }
-        return false;
     }
 
     final static boolean a(char param0, byte param1) {
@@ -238,8 +243,9 @@ final class kd extends be {
           if (var11 == null) {
             return var8;
           } else {
+            int incrementValue$1 = var9;
             var9++;
-            var8[var9] = var11.field_s;
+            var8[incrementValue$1] = var11.field_s;
             var11 = (tm) (Object) var15.b(0);
             continue L6;
           }
@@ -252,8 +258,9 @@ final class kd extends be {
         int var4 = 0;
         tm var5 = (tm) (Object) param0.g(24009);
         while (var5 != null) {
+            int incrementValue$0 = var4;
             var4++;
-            ((kd) this).field_t[var4] = var5;
+            ((kd) this).field_t[incrementValue$0] = var5;
             var5 = (tm) (Object) param0.c(33);
         }
         ((kd) this).a("# <col=ffaaff>FunOrbConsole (loaded " + ((kd) this).field_t.length + " methods at " + new Date() + ")</col>", (byte) 94);
@@ -816,40 +823,66 @@ final class kd extends be {
     }
 
     final static void a(int param0, qb param1, boolean param2, String param3) {
+        int var5 = 0;
+        int var6 = 0;
         uv var7 = null;
         String var8 = null;
+        uv var9 = null;
         String var10 = null;
         uv var11 = null;
         String var12 = null;
-        uv var9 = null;
-        el.a((hd) (Object) param1, false, sp.field_Jb, -1, (String) null, (int[]) null, 0L, (String) null, param1.h((byte) 77));
-        if (param1.field_Cb) {
-            if (param1.field_Mb != 2) {
-                // if_icmple L50
-            } else {
-                var7 = wi.field_v;
-                var8 = vo.a((byte) -18, ej.field_Ab, new String[1]);
-                var7.field_j.a(0, 10, var8);
+        uv var13 = null;
+        L0: {
+          el.a((hd) (Object) param1, false, sp.field_Jb, -1, (String) null, (int[]) null, 0L, (String) null, param1.h((byte) 77));
+          if (!param1.field_Cb) {
+            break L0;
+          } else {
+            L1: {
+              if (param1.field_Mb == 2) {
+                break L1;
+              } else {
+                if (2 <= tk.field_Ib) {
+                  break L1;
+                } else {
+                  break L0;
+                }
+              }
             }
+            var7 = wi.field_v;
+            var8 = vo.a((byte) -18, ej.field_Ab, new String[1]);
+            var7.field_j.a(0, 10, var8);
+            break L0;
+          }
         }
-        wi.field_v.d(param0 + -14);
-        if (param2) {
-            if (wi.field_v.field_c == jm.field_h) {
-                var9 = wi.field_v;
-                var10 = vo.a((byte) -18, cl.field_h, new String[1]);
-                var9.field_j.a(0, 16, var10);
+        L2: {
+          wi.field_v.d(param0 + -14);
+          if (!param2) {
+            break L2;
+          } else {
+            if (wi.field_v.field_c != jm.field_h) {
+              var11 = wi.field_v;
+              var12 = vo.a((byte) -18, br.field_a, new String[1]);
+              var11.field_j.a(param0 + -15, 15, var12);
+              break L2;
             } else {
-                var11 = wi.field_v;
-                var12 = vo.a((byte) -18, br.field_a, new String[1]);
-                var11.field_j.a(param0 + -15, 15, var12);
+              var9 = wi.field_v;
+              var10 = vo.a((byte) -18, cl.field_h, new String[1]);
+              var9.field_j.a(0, 16, var10);
+              break L2;
             }
+          }
         }
-        uv var13 = wi.field_v;
-        int var5 = sm.field_q;
-        if (param0 != 15) {
+        L3: {
+          var13 = wi.field_v;
+          var5 = sm.field_q;
+          if (param0 == 15) {
+            break L3;
+          } else {
             field_x = null;
+            break L3;
+          }
         }
-        int var6 = vc.field_y;
+        var6 = vc.field_y;
         var13.field_j.a(0, 0, var5, var6, 0);
     }
 
@@ -864,7 +897,7 @@ final class kd extends be {
 
     final static kg[] a(int param0, int param1, boolean param2, boolean param3, int param4, int param5) {
         kg[] var6 = null;
-        kg var7_ref = null;
+        kg var7_ref_kg = null;
         int var7 = 0;
         int var8 = 0;
         tf var9 = null;
@@ -882,13 +915,13 @@ final class kd extends be {
         var16 = new kg[6];
         var6 = var16;
         if (!vi.field_n) {
-          var7_ref = pj.a(param2, -87, new tf(), 0);
+          var7_ref_kg = pj.a(param2, -87, new tf(), 0);
           var8 = 0;
           L0: while (true) {
             if (var16.length <= var8) {
               return var6;
             } else {
-              var16[var8] = var7_ref;
+              var16[var8] = var7_ref_kg;
               var8++;
               continue L0;
             }

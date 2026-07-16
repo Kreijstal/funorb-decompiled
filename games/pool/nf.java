@@ -42,19 +42,16 @@ final class nf extends ch implements jb, tb, jn {
     }
 
     final boolean a(char param0, int param1, boolean param2, ei param3) {
-        if (super.a(param0, param1, param2, param3)) {
-          return true;
-        } else {
-          if (param1 == -99) {
-            return ((nf) this).a(param3, 3);
-          } else {
-            if (-100 != param1) {
-              return false;
-            } else {
-              return ((nf) this).b(param3, 0);
-            }
-          }
+        if (!(!super.a(param0, param1, param2, param3))) {
+            return true;
         }
+        if (!((param1 ^ -1) != -99)) {
+            return ((nf) this).a(param3, 3);
+        }
+        if (-100 != (param1 ^ -1)) {
+            return false;
+        }
+        return ((nf) this).b(param3, 0);
     }
 
     final static void a(int param0, boolean param1, int param2) {
@@ -392,12 +389,14 @@ final class nf extends ch implements jb, tb, jn {
         ((nf) this).field_U.field_z = (fp) (Object) new ng();
         ((nf) this).field_Y.field_z = (fp) (Object) new pd();
         ((nf) this).field_bb.field_z = (fp) (Object) new om(10000536);
-        ((nf) this).field_O.field_z = (fp) (Object) new om(10000536);
-        ((nf) this).field_cb.field_z = (fp) (Object) new om(10000536);
+        om dupTemp$0 = new om(10000536);
+        ((nf) this).field_O.field_z = (fp) (Object) dupTemp$0;
+        ((nf) this).field_cb.field_z = (fp) (Object) dupTemp$0;
         ((nf) this).field_ab.field_z = (fp) (Object) new om(10000536);
         ((nf) this).field_W.field_z = (fp) (Object) new j();
-        ((nf) this).field_R.field_z = (fp) (Object) new sm(10000536);
-        ((nf) this).field_X.field_z = (fp) (Object) new sm(10000536);
+        sm dupTemp$1 = new sm(10000536);
+        ((nf) this).field_R.field_z = (fp) (Object) dupTemp$1;
+        ((nf) this).field_X.field_z = (fp) (Object) dupTemp$1;
         String var2 = nr.a(new String[2], -1, lh.field_d);
         int var3 = 20;
         var3 = var3 + this.a((byte) 44, (ei) (Object) ((nf) this).field_cb, var3, 170, ng.field_x);
@@ -469,59 +468,29 @@ final class nf extends ch implements jb, tb, jn {
     private final boolean h(int param0) {
         NumberFormatException numberFormatException = null;
         int var2 = 0;
-        int statePc = 0;
-        Throwable caughtException = null;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    if (this.k(3)) {
-                        statePc = 2;
-                    } else {
-                        statePc = 1;
-                    }
-                    continue stateLoop;
-                }
-                case 1: {
-                    return false;
-                }
-                case 2: {
-                    var2 = -1;
-                    statePc = 3;
-                    continue stateLoop;
-                }
-                case 3: {
-                    try {
-                        var2 = Integer.parseInt(((nf) this).field_ab.field_m);
-                        statePc = 6;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_3) {
-                        caughtException = stateCaught_3;
-                        statePc = 5;
-                        continue stateLoop;
-                    }
-                }
-                case 5: {
-                    numberFormatException = (NumberFormatException) (Object) caughtException;
-                    statePc = 6;
-                    continue stateLoop;
-                }
-                case 6: {
-                    if (param0 < 94) {
-                        statePc = 8;
-                    } else {
-                        statePc = 7;
-                    }
-                    continue stateLoop;
-                }
-                case 7: {
-                    return vb.a(((nf) this).field_W.field_G, ((nf) this).field_X.field_m, (byte) 114, (nf) this, var2, ((nf) this).field_cb.field_m, ((nf) this).field_bb.field_m);
-                }
-                case 8: {
-                    vh discarded$2 = nf.g((byte) -63);
-                    return vb.a(((nf) this).field_W.field_G, ((nf) this).field_X.field_m, (byte) 114, (nf) this, var2, ((nf) this).field_cb.field_m, ((nf) this).field_bb.field_m);
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
+        Throwable decompiledCaughtException = null;
+        if (this.k(3)) {
+          var2 = -1;
+          try {
+            L0: {
+              var2 = Integer.parseInt(((nf) this).field_ab.field_m);
+              break L0;
             }
+          } catch (java.lang.Exception decompiledCaughtParameter0) {
+            decompiledCaughtException = decompiledCaughtParameter0;
+            L1: {
+              numberFormatException = (NumberFormatException) (Object) decompiledCaughtException;
+              break L1;
+            }
+          }
+          if (param0 < 94) {
+            vh discarded$2 = nf.g((byte) -63);
+            return vb.a(((nf) this).field_W.field_G, ((nf) this).field_X.field_m, (byte) 114, (nf) this, var2, ((nf) this).field_cb.field_m, ((nf) this).field_bb.field_m);
+          } else {
+            return vb.a(((nf) this).field_W.field_G, ((nf) this).field_X.field_m, (byte) 114, (nf) this, var2, ((nf) this).field_cb.field_m, ((nf) this).field_bb.field_m);
+          }
+        } else {
+          return false;
         }
     }
 

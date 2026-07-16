@@ -200,13 +200,13 @@ class nl extends mo {
               if (!((nl) this).field_N.a((byte) 44, ((nl) this).field_y)) {
                 break L5;
               } else {
-                if (((nl) this).field_G == -1) {
+                if ((((nl) this).field_G ^ -1) == -1) {
                   break L5;
                 } else {
                   L6: {
                     L7: {
                       ((nl) this).a(((nl) this).field_G, param0 ^ 26212);
-                      if (-1 == ((nl) this).field_n) {
+                      if (-1 == (((nl) this).field_n ^ -1)) {
                         break L7;
                       } else {
                         if (-1 != (((nl) this).field_j ^ -1)) {
@@ -284,10 +284,10 @@ class nl extends mo {
           } else {
             L13: {
               L14: {
-                if (((nl) this).field_n == 0) {
+                if ((((nl) this).field_n ^ -1) == -1) {
                   break L14;
                 } else {
-                  if (((nl) this).field_j != 0) {
+                  if ((((nl) this).field_j ^ -1) != -1) {
                     stackOut_38_0 = ((nl) this).field_g;
                     stackIn_39_0 = stackOut_38_0;
                     break L13;
@@ -349,7 +349,7 @@ class nl extends mo {
           stackOut_48_0 = var7;
           stackIn_50_0 = stackOut_48_0;
           stackIn_49_0 = stackOut_48_0;
-          if (-12 != ((nl) this).field_u) {
+          if (-12 != (((nl) this).field_u ^ -1)) {
             stackOut_50_0 = stackIn_50_0;
             stackOut_50_1 = 0;
             stackIn_51_0 = stackOut_50_0;
@@ -368,7 +368,7 @@ class nl extends mo {
           stackOut_51_0 = var7;
           stackIn_53_0 = stackOut_51_0;
           stackIn_52_0 = stackOut_51_0;
-          if (-15 != ((nl) this).field_u) {
+          if (-15 != (((nl) this).field_u ^ -1)) {
             stackOut_53_0 = stackIn_53_0;
             stackOut_53_1 = 0;
             stackIn_54_0 = stackOut_53_0;
@@ -1177,30 +1177,30 @@ class nl extends mo {
             } else {
               if (((nl) this).field_u != 3) {
                 if (4 != ((nl) this).field_u) {
-                  if (-6 == ((nl) this).field_u) {
+                  if (-6 == (((nl) this).field_u ^ -1)) {
                     return "ACTION_DIVE";
                   } else {
-                    if (-7 != ((nl) this).field_u) {
+                    if (-7 != (((nl) this).field_u ^ -1)) {
                       if (((nl) this).field_u != 7) {
                         if (((nl) this).field_u != 8) {
                           if ((((nl) this).field_u ^ -1) != -10) {
                             if ((((nl) this).field_u ^ -1) == -11) {
                               return "ACTION_TACKLE_STAND";
                             } else {
-                              if (((nl) this).field_u == -12) {
+                              if ((((nl) this).field_u ^ -1) == -12) {
                                 return "ACTION_RUN_HOME";
                               } else {
                                 if (param0) {
-                                  if (-13 == ((nl) this).field_u) {
+                                  if (-13 == (((nl) this).field_u ^ -1)) {
                                     return "ACTION_TACKLE_SUCCESS";
                                   } else {
                                     if (-14 == (((nl) this).field_u ^ -1)) {
                                       return "ACTION_HEADER";
                                     } else {
-                                      if (14 == ((nl) this).field_u) {
-                                        return "ACTION_KEEPER_SHUFFLE";
-                                      } else {
+                                      if (14 != ((nl) this).field_u) {
                                         return "Invalid(" + ((nl) this).field_u + ")";
+                                      } else {
+                                        return "ACTION_KEEPER_SHUFFLE";
                                       }
                                     }
                                   }

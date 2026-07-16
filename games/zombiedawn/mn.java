@@ -150,7 +150,7 @@ final class mn extends le {
                   if (null == ((mn) this).field_r) {
                     break L2;
                   } else {
-                    if (-1 == ((mn) this).field_k) {
+                    if (-1 == (((mn) this).field_k ^ -1)) {
                       ((mn) this).field_r.f(0, -1, 0);
                       break L2;
                     } else {
@@ -192,7 +192,7 @@ final class mn extends le {
                 }
               }
             } else {
-              if (((mn) this).field_o >= -51) {
+              if ((((mn) this).field_o ^ -1) >= -51) {
                 ((mn) this).field_l = 2;
                 break L1;
               } else {
@@ -214,9 +214,9 @@ final class mn extends le {
               break L6;
             }
           }
-          if (((mn) this).field_h + -50 >= ((mn) this).field_o) {
+          if ((((mn) this).field_h + -50 ^ -1) <= (((mn) this).field_o ^ -1)) {
             L7: {
-              if (((mn) this).field_k == 0) {
+              if ((((mn) this).field_k ^ -1) == -1) {
                 this.d((byte) -116);
                 break L7;
               } else {
@@ -237,7 +237,7 @@ final class mn extends le {
         int var5_int = 0;
         wk var5 = null;
         int var6 = 0;
-        ek var6_ref = null;
+        ek var6_ref_ek = null;
         le var7 = null;
         int var8 = 0;
         int var9 = 0;
@@ -370,9 +370,9 @@ final class mn extends le {
                     var5_int = 0;
                     L13: while (true) {
                       if (2 > var5_int) {
-                        var6_ref = ip.a(var4 * 24, 24 * var3, 100, true);
-                        ((mn) this).field_n.a((nb) (Object) var6_ref, (byte) -116);
-                        dj.field_e.field_R.a((le) (Object) var6_ref, -122);
+                        var6_ref_ek = ip.a(var4 * 24, 24 * var3, 100, true);
+                        ((mn) this).field_n.a((nb) (Object) var6_ref_ek, (byte) -116);
+                        dj.field_e.field_R.a((le) (Object) var6_ref_ek, -122);
                         var5_int++;
                         continue L13;
                       } else {

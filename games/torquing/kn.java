@@ -102,7 +102,7 @@ abstract class kn {
                       um.a(var10, param3, var11, var33, var34, false);
                       var10 = var33;
                       var11 = var34;
-                      // wide iinc 24 128
+                      var24 += 128;
                       continue L0;
                     }
                   }
@@ -140,7 +140,7 @@ abstract class kn {
                     um.a(var10, param3, var11, var33, var34, false);
                     var10 = var33;
                     var11 = var34;
-                    // wide iinc 24 128
+                    var24 += 128;
                     continue L1;
                   }
                 }
@@ -178,7 +178,7 @@ abstract class kn {
                   um.a(var10, param3, var11, var33, var34, false);
                   var10 = var33;
                   var11 = var34;
-                  // wide iinc 24 128
+                  var24 += 128;
                   continue L2;
                 }
               }
@@ -216,7 +216,7 @@ abstract class kn {
                 um.a(var10, param3, var11, var33, var34, false);
                 var10 = var33;
                 var11 = var34;
-                // wide iinc 24 128
+                var24 += 128;
                 continue L3;
               }
             }

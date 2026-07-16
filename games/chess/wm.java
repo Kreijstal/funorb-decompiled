@@ -1,6 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
+import java.lang.String;
+
 abstract class wm {
     static int[] field_b;
     static String[] field_n;
@@ -40,10 +42,8 @@ abstract class wm {
         ci var17 = null;
         int var18 = 0;
         Object var19_ref = null;
-        km var19_ref_km = null;
         int var19 = 0;
         Object var20 = null;
-        String var20_ref = null;
         int var21 = 0;
         ci var23 = null;
         ci var24 = null;
@@ -170,8 +170,7 @@ abstract class wm {
           }
         }
         L2: {
-          new ci(stackIn_6_2, (ci) (Object) stackIn_6_3, ((String) (Object) stackIn_6_4).toUpperCase());
-          wj.field_g = (ci) (Object) stackIn_6_0;
+          wj.field_g = new ci(stackIn_6_2, stackIn_6_3, ((String) (Object) stackIn_6_4).toUpperCase());
           rb.field_c = new ci(0L, (ci) null);
           rb.field_c.a((byte) 127, he.field_Hb);
           rb.field_c.a((byte) 124, oh.field_a);
@@ -318,10 +317,10 @@ abstract class wm {
                           break L15;
                         } else {
                           if (pj.field_e[var17_int] != null) {
-                            var19_ref_km = pj.field_e[var17_int][var18];
+                            var19_ref = (Object) (Object) pj.field_e[var17_int][var18];
                             break L15;
                           } else {
-                            var19_ref_km = null;
+                            var19_ref = null;
                             break L15;
                           }
                         }
@@ -332,10 +331,10 @@ abstract class wm {
                           break L16;
                         } else {
                           if (null != ln.field_qc[var17_int]) {
-                            var20_ref = ln.field_qc[var17_int][var18];
+                            var20 = (Object) (Object) ln.field_qc[var17_int][var18];
                             break L16;
                           } else {
-                            var20_ref = null;
+                            var20 = null;
                             break L16;
                           }
                         }

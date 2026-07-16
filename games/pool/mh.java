@@ -67,7 +67,7 @@ class mh extends fe {
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
-        qa var11 = null;
+        Object var11 = null;
         int var12 = 0;
         vj var13 = null;
         int var14 = 0;
@@ -136,14 +136,14 @@ class mh extends fe {
                   var15 = stackIn_12_0;
                   var16 = new qa(var8, var14, var13.field_e, var15 - var14, Math.max(var4.a(-10492), var13.field_i - var13.field_e));
                   if (var11 != null) {
-                    var11.field_l = var16;
+                    ((qa) var11).field_l = var16;
                     break L4;
                   } else {
                     break L4;
                   }
                 }
                 ((mh) this).field_O.b((byte) 82, (ma) (Object) var16);
-                var11 = var16;
+                var11 = (Object) (Object) var16;
                 var12++;
                 continue L1;
               }
@@ -239,19 +239,44 @@ class mh extends fe {
     }
 
     final void a(byte param0, String param1, int param2) {
+        int var4 = 0;
+        String[] var5 = null;
         int var6 = 0;
-        int var7 = Pool.field_O;
-        int var4 = -75 % ((param0 - -66) / 49);
-        if (null != ((mh) this).field_N) {
-            // if_icmpgt L95
-        }
-        String[] var5 = new String[1 + param2];
-        if (!(((mh) this).field_N == null)) {
-            for (var6 = 0; var6 < ((mh) this).field_N.length; var6++) {
-                var5[var6] = ((mh) this).field_N[var6];
+        int var7 = 0;
+        L0: {
+          L1: {
+            var7 = Pool.field_O;
+            var4 = -75 % ((param0 - -66) / 49);
+            if (null == ((mh) this).field_N) {
+              break L1;
+            } else {
+              if (((mh) this).field_N.length > param2) {
+                break L0;
+              } else {
+                break L1;
+              }
             }
+          }
+          L2: {
+            var5 = new String[1 + param2];
+            if (((mh) this).field_N != null) {
+              var6 = 0;
+              L3: while (true) {
+                if (var6 >= ((mh) this).field_N.length) {
+                  break L2;
+                } else {
+                  var5[var6] = ((mh) this).field_N[var6];
+                  var6++;
+                  continue L3;
+                }
+              }
+            } else {
+              break L2;
+            }
+          }
+          ((mh) this).field_N = var5;
+          break L0;
         }
-        ((mh) this).field_N = var5;
         ((mh) this).field_N[param2] = param1;
     }
 

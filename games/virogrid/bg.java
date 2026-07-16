@@ -227,8 +227,7 @@ final class bg extends km {
                 stackIn_7_5 = stackOut_5_5;
                 break L3;
               }
-              new en(stackIn_7_3, stackIn_7_4, stackIn_7_5);
-              ((bg) this).field_Jb = stackIn_7_1;
+              ((bg) this).field_Jb = new en(stackIn_7_3, stackIn_7_4, stackIn_7_5);
               ((bg) this).field_Gb.a(0, (km) (Object) ((bg) this).field_Jb);
               break L1;
             }
@@ -509,10 +508,10 @@ final class bg extends km {
         if (param0) {
             bg.g(-40);
         }
-        if (!(((bg) this).field_Nb == 1)) {
+        if (!((((bg) this).field_Nb ^ -1) == 1)) {
             return false;
         }
-        if (-14 == um.field_Gb) {
+        if (-14 == (um.field_Gb ^ -1)) {
             ((bg) this).field_Nb = -1;
             return true;
         }

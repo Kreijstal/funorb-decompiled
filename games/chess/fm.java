@@ -152,7 +152,7 @@ final class fm extends kn {
             var4.field_N = 0;
             var4.field_V = 0;
             var5 = (ci) (Object) param0.field_I.a((byte) -102);
-            ci var5_ref = var5;
+            var5 = var5;
         }
         param0.field_N = 0;
         param0.field_vb = 0;

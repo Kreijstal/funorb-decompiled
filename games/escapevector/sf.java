@@ -199,10 +199,10 @@ final class sf {
         int stackOut_16_0 = 0;
         var6 = EscapeVector.field_A;
         var2 = param0.length();
-        if (-1 == var2) {
+        if (-1 == (var2 ^ -1)) {
           return mf.field_d;
         } else {
-          if (-65 < var2) {
+          if (-65 > (var2 ^ -1)) {
             return d.field_c;
           } else {
             if (34 == param0.charAt(0)) {
@@ -211,38 +211,40 @@ final class sf {
                 var4 = 1;
                 L0: while (true) {
                   if (var4 < var2 - 1) {
-                    var5 = param0.charAt(var4);
-                    if (var5 == 92) {
-                      L1: {
-                        if (var3 != 0) {
-                          stackOut_17_0 = 0;
-                          stackIn_18_0 = stackOut_17_0;
-                          break L1;
-                        } else {
-                          stackOut_16_0 = 1;
-                          stackIn_18_0 = stackOut_16_0;
-                          break L1;
-                        }
-                      }
-                      var3 = stackIn_18_0;
-                      var4++;
-                      continue L0;
-                    } else {
-                      L2: {
-                        if (34 != var5) {
-                          break L2;
-                        } else {
-                          if (var3 == 0) {
-                            return wh.field_p;
+                    L1: {
+                      var5 = param0.charAt(var4);
+                      if (var5 == 92) {
+                        L2: {
+                          if (var3 != 0) {
+                            stackOut_17_0 = 0;
+                            stackIn_18_0 = stackOut_17_0;
+                            break L2;
                           } else {
+                            stackOut_16_0 = 1;
+                            stackIn_18_0 = stackOut_16_0;
                             break L2;
                           }
                         }
+                        var3 = stackIn_18_0;
+                        break L1;
+                      } else {
+                        L3: {
+                          if (34 != var5) {
+                            break L3;
+                          } else {
+                            if (var3 == 0) {
+                              return wh.field_p;
+                            } else {
+                              break L3;
+                            }
+                          }
+                        }
+                        var3 = 0;
+                        break L1;
                       }
-                      var3 = 0;
-                      var4++;
-                      continue L0;
                     }
+                    var4++;
+                    continue L0;
                   } else {
                     return null;
                   }
@@ -254,37 +256,39 @@ final class sf {
               if (param1 == 119) {
                 var3 = 0;
                 var4 = 0;
-                L3: while (true) {
+                L4: while (true) {
                   if (var4 < var2) {
-                    var5 = param0.charAt(var4);
-                    if (var5 == 46) {
-                      L4: {
-                        if (var4 == 0) {
-                          break L4;
-                        } else {
-                          if (var2 + -1 == var4) {
-                            break L4;
+                    L5: {
+                      var5 = param0.charAt(var4);
+                      if (var5 == 46) {
+                        L6: {
+                          if ((var4 ^ -1) == -1) {
+                            break L6;
                           } else {
-                            if (var3 == 0) {
-                              var3 = 1;
-                              var4++;
-                              continue L3;
+                            if ((var2 + -1 ^ -1) == (var4 ^ -1)) {
+                              break L6;
                             } else {
-                              break L4;
+                              if (var3 == 0) {
+                                var3 = 1;
+                                break L5;
+                              } else {
+                                break L6;
+                              }
                             }
                           }
                         }
-                      }
-                      return wh.field_p;
-                    } else {
-                      if (en.field_g.indexOf(var5) == -1) {
                         return wh.field_p;
                       } else {
-                        var3 = 0;
-                        var4++;
-                        continue L3;
+                        if (en.field_g.indexOf(var5) == -1) {
+                          return wh.field_p;
+                        } else {
+                          var3 = 0;
+                          break L5;
+                        }
                       }
                     }
+                    var4++;
+                    continue L4;
                   } else {
                     return null;
                   }

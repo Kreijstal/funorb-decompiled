@@ -69,8 +69,9 @@ abstract class jj extends db {
         if (((jj) this).field_U > 0) {
           var3 = ((jj) this).field_O;
           var4 = ((jj) this).field_W;
+          int fieldTemp$1 = ((jj) this).field_Q + 1;
           ((jj) this).field_Q = ((jj) this).field_Q + 1;
-          if (((jj) this).field_Q + 1 < ((jj) this).field_U) {
+          if (fieldTemp$1 < ((jj) this).field_U) {
             var5 = (((jj) this).field_U * 2 + -((jj) this).field_Q) * ((jj) this).field_Q;
             var6 = ((jj) this).field_U * ((jj) this).field_U;
             var3 = (((jj) this).field_O + -((jj) this).field_T) * var5 / var6 + ((jj) this).field_T;
@@ -128,7 +129,7 @@ abstract class jj extends db {
                   var7 = 0;
                   var8 = 57 + param0;
                   L2: while (true) {
-                    if (var7 >= var4) {
+                    if ((var7 ^ -1) <= (var4 ^ -1)) {
                       return;
                     } else {
                       var9 = (var6 + -var5) * var7 / var4 + var5;
@@ -151,8 +152,12 @@ abstract class jj extends db {
                 }
               }
             } else {
-              if (var8 >= gb.field_b) {
-                if (var8 < gb.field_i) {
+              if ((var8 ^ -1) > (gb.field_b ^ -1)) {
+                var8++;
+                var7++;
+                continue L0;
+              } else {
+                if ((var8 ^ -1) > (gb.field_i ^ -1)) {
                   L3: {
                     var9 = (-var5 + var6) * var7 / var4 + var5;
                     var10 = 0;
@@ -164,59 +169,61 @@ abstract class jj extends db {
                         if (20 < var10) {
                           break L3;
                         } else {
-                          var12 = (20 + -var10) * (20 + -var10) + (20 + -var7) * (20 - var7);
-                          if (-463 <= var12) {
-                            if (-421 > var12) {
-                              break L3;
+                          L5: {
+                            var12 = (20 + -var10) * (20 + -var10) + (20 + -var7) * (20 - var7);
+                            if (-463 <= (var12 ^ -1)) {
+                              if (-421 < (var12 ^ -1)) {
+                                break L3;
+                              } else {
+                                var13 = var9 * (462 - var12) / 42;
+                                var13 = var13 | (var13 << -1899106384 | var13 << 450895624);
+                                gb.field_a[var8 * gb.field_d + param1 - -var10] = var13;
+                                break L5;
+                              }
                             } else {
-                              var13 = var9 * (462 - var12) / 42;
-                              var13 = var13 | (var13 << -1899106384 | var13 << 450895624);
-                              gb.field_a[var8 * gb.field_d + param1 - -var10] = var13;
-                              var10++;
-                              continue L4;
+                              break L5;
                             }
-                          } else {
-                            var10++;
-                            continue L4;
                           }
+                          var10++;
+                          continue L4;
                         }
                       }
                     }
                   }
-                  L5: {
+                  L6: {
                     if (-21 > (var7 ^ -1)) {
-                      break L5;
+                      break L6;
                     } else {
                       var12 = var11;
                       var11 -= 21;
                       var13 = 0;
-                      L6: while (true) {
-                        L7: {
+                      L7: while (true) {
+                        L8: {
                           if ((var13 ^ -1) < -21) {
-                            break L7;
+                            break L8;
                           } else {
                             var14 = var13 * var13 + (-var7 + 20) * (-var7 + 20);
                             if (var14 > 462) {
-                              break L7;
+                              break L8;
                             } else {
                               if (420 > var14) {
                                 var12 = 1 + var11;
                                 var13++;
                                 var11++;
-                                continue L6;
+                                continue L7;
                               } else {
                                 var15 = var9 * (-var14 + 462) / 42;
                                 var15 = var15 | (var15 << -1666281584 | var15 << 1139222856);
                                 gb.field_a[var8 * gb.field_d + param1 - -var11] = var15;
                                 var13++;
                                 var11++;
-                                continue L6;
+                                continue L7;
                               }
                             }
                           }
                         }
                         var11 = var12;
-                        break L5;
+                        break L6;
                       }
                     }
                   }
@@ -230,10 +237,6 @@ abstract class jj extends db {
                   var7++;
                   continue L0;
                 }
-              } else {
-                var8++;
-                var7++;
-                continue L0;
               }
             }
           }

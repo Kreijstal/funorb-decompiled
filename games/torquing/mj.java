@@ -79,10 +79,10 @@ final class mj {
               } else {
                 L6: {
                   var8 = param0[var5] << var6 & 255 | (param0[1 + var5] & 255) >>> 8 + -var6;
-                  if (var8 > -1) {
+                  if ((var8 ^ -1) > -1) {
                     break L6;
                   } else {
-                    if (-257 > var8) {
+                    if (-257 < (var8 ^ -1)) {
                       L7: {
                         ((mj) this).field_h[((mj) this).field_e] = (byte)gm.a((int) ((mj) this).field_h[((mj) this).field_e], var8 >>> var7);
                         ((mj) this).field_b = ((mj) this).field_b + (-var7 + 8);
@@ -136,8 +136,9 @@ final class mj {
                 ((mj) this).field_e = 0;
                 break L0;
               } else {
+                int fieldTemp$2 = ((mj) this).field_e;
                 ((mj) this).field_e = ((mj) this).field_e + 1;
-                ((mj) this).field_h[((mj) this).field_e] = (byte) 0;
+                ((mj) this).field_h[fieldTemp$2] = (byte) 0;
                 continue L1;
               }
             }
@@ -170,8 +171,9 @@ final class mj {
               }
             }
           } else {
+            int fieldTemp$3 = ((mj) this).field_e;
             ((mj) this).field_e = ((mj) this).field_e + 1;
-            ((mj) this).field_h[((mj) this).field_e] = (byte) 0;
+            ((mj) this).field_h[fieldTemp$3] = (byte) 0;
             continue L2;
           }
         }
@@ -218,7 +220,7 @@ final class mj {
                   } else {
                     var3 = 0;
                     L5: while (true) {
-                      if (var3 <= -9) {
+                      if ((var3 ^ -1) <= -9) {
                         var3 = 0;
                         L6: while (true) {
                           if ((var3 ^ -1) <= -9) {
@@ -266,7 +268,7 @@ final class mj {
                         var4 = 0;
                         var5 = 56;
                         L10: while (true) {
-                          if (-9 <= var4) {
+                          if (-9 >= (var4 ^ -1)) {
                             var3++;
                             continue L5;
                           } else {

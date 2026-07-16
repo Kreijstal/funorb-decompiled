@@ -15,14 +15,16 @@ final class lc extends pi {
     final static ea[] a(int param0, int param1, int param2, int param3, byte param4) {
         ea[] var7 = new ea[9];
         ea[] var5 = var7;
-        var7[6] = hb.a(param1, 32768, param2);
-        var5[3] = hb.a(param1, 32768, param2);
-        var5[2] = hb.a(param1, 32768, param2);
-        var5[1] = hb.a(param1, 32768, param2);
-        var5[0] = hb.a(param1, 32768, param2);
-        var7[8] = hb.a(param1, 32768, param3);
-        var5[7] = hb.a(param1, 32768, param3);
-        var5[5] = hb.a(param1, 32768, param3);
+        ea dupTemp$0 = hb.a(param1, 32768, param2);
+        var7[6] = dupTemp$0;
+        var5[3] = dupTemp$0;
+        var5[2] = dupTemp$0;
+        var5[1] = dupTemp$0;
+        var5[0] = dupTemp$0;
+        ea dupTemp$1 = hb.a(param1, 32768, param3);
+        var7[8] = dupTemp$1;
+        var5[7] = dupTemp$1;
+        var5[5] = dupTemp$1;
         int var6 = -81 % ((param4 - 40) / 61);
         if (!(param0 == 0)) {
             var7[4] = hb.a(64, 32768, param0);

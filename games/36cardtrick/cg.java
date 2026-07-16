@@ -115,7 +115,7 @@ abstract class cg extends k implements pi {
             return stackIn_11_0 != 0;
           }
         } else {
-          ((cg) this).field_g = (hf) null;
+          ((cg) this).field_g = null;
           if (null == ((cg) this).field_g.field_r) {
             return true;
           } else {
@@ -137,7 +137,7 @@ abstract class cg extends k implements pi {
 
     final sg e(int param0) {
         if (param0 != 14) {
-          field_i = (kc) null;
+          field_i = null;
           return ((cg) this).a(((cg) this).field_g.field_r, -103);
         } else {
           return ((cg) this).a(((cg) this).field_g.field_r, -103);
@@ -165,7 +165,7 @@ abstract class cg extends k implements pi {
           }
         }
         if (!param0) {
-          return (aj) null;
+          return null;
         } else {
           return aj.field_a;
         }
@@ -186,7 +186,7 @@ abstract class cg extends k implements pi {
 
     final String d(int param0) {
         if (param0 != -5777) {
-            return (String) null;
+            return null;
         }
         return ((cg) this).a(((cg) this).field_g.field_r, false);
     }

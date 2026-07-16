@@ -116,21 +116,36 @@ class ki extends rc implements oh {
     }
 
     final boolean a(int param0, int param1, boolean param2, int param3, int param4, int param5, rc param6) {
-        int var10 = SolKnight.field_L ? 1 : 0;
-        ck var8 = new ck(((ki) this).field_B);
-        rc var9 = (rc) (Object) var8.a((byte) 125);
-        while (var9 != null) {
-            // ifeq L92
-            if (var9.a(param0, param1 - -((ki) this).field_m, false, param3, param4, param5 - -((ki) this).field_j, param6)) {
-                return true;
+        ck var8 = null;
+        rc var9 = null;
+        int var10 = 0;
+        var10 = SolKnight.field_L ? 1 : 0;
+        var8 = new ck(((ki) this).field_B);
+        var9 = (rc) (Object) var8.a((byte) 125);
+        L0: while (true) {
+          L1: {
+            if (var9 == null) {
+              break L1;
+            } else {
+              if (!var9.a(false)) {
+                break L1;
+              } else {
+                if (!var9.a(param0, param1 - -((ki) this).field_m, false, param3, param4, param5 - -((ki) this).field_j, param6)) {
+                  var9 = (rc) (Object) var8.c(122);
+                  continue L0;
+                } else {
+                  return true;
+                }
+              }
             }
-            var9 = (rc) (Object) var8.c(122);
-        }
-        if (param2) {
-            rc discarded$0 = ((ki) this).d((byte) 97);
+          }
+          if (!param2) {
             return false;
+          } else {
+            rc discarded$2 = ((ki) this).d((byte) 97);
+            return false;
+          }
         }
-        return false;
     }
 
     final boolean b(boolean param0) {
@@ -177,24 +192,59 @@ class ki extends rc implements oh {
     }
 
     boolean a(char param0, byte param1, int param2, rc param3) {
-        int var7 = SolKnight.field_L ? 1 : 0;
-        ck var9 = new ck(((ki) this).field_B);
-        rc var8 = (rc) (Object) var9.a((byte) 77);
-        while (var8 != null) {
-            // ifeq L87
-            if (var8.b(true)) {
-                if (!(!var8.a(param0, (byte) 88, param2, param3))) {
-                    return true;
+        int var6 = 0;
+        int var7 = 0;
+        rc var8 = null;
+        ck var9 = null;
+        boolean stackIn_13_0 = false;
+        boolean stackOut_12_0 = false;
+        boolean stackOut_11_0 = false;
+        var7 = SolKnight.field_L ? 1 : 0;
+        var9 = new ck(((ki) this).field_B);
+        var8 = (rc) (Object) var9.a((byte) 77);
+        L0: while (true) {
+          L1: {
+            if (var8 == null) {
+              break L1;
+            } else {
+              if (!var8.a(false)) {
+                break L1;
+              } else {
+                L2: {
+                  if (!var8.b(true)) {
+                    break L2;
+                  } else {
+                    if (var8.a(param0, (byte) 88, param2, param3)) {
+                      return true;
+                    } else {
+                      break L2;
+                    }
+                  }
                 }
+                var8 = (rc) (Object) var9.c(115);
+                continue L0;
+              }
             }
-            var8 = (rc) (Object) var9.c(115);
+          }
+          var6 = param2;
+          if (80 == var6) {
+            L3: {
+              if (fh.field_d[81]) {
+                stackOut_12_0 = ((ki) this).a((byte) -105, param3);
+                stackIn_13_0 = stackOut_12_0;
+                break L3;
+              } else {
+                stackOut_11_0 = ((ki) this).b(112, param3);
+                stackIn_13_0 = stackOut_11_0;
+                break L3;
+              }
+            }
+            return stackIn_13_0;
+          } else {
+            var6 = 9 / ((param1 - 31) / 56);
+            return false;
+          }
         }
-        int var6 = param2;
-        if (!(80 != var6)) {
-            return !fh.field_d[81] ? ((ki) this).b(112, param3) : ((ki) this).a((byte) -105, param3);
-        }
-        var6 = 9 / ((param1 - 31) / 56);
-        return false;
     }
 
     final StringBuilder a(int param0, Hashtable param1, StringBuilder param2, int param3) {
@@ -210,36 +260,75 @@ class ki extends rc implements oh {
     }
 
     final void a(int param0, int param1, rc param2, int param3, int param4, int param5) {
-        int var9 = SolKnight.field_L ? 1 : 0;
-        ck var7 = new ck(((ki) this).field_B);
-        if (param1 != 0) {
+        ck var7 = null;
+        rc var8 = null;
+        int var9 = 0;
+        L0: {
+          var9 = SolKnight.field_L ? 1 : 0;
+          var7 = new ck(((ki) this).field_B);
+          if (param1 == 0) {
+            break L0;
+          } else {
             field_A = null;
+            break L0;
+          }
         }
-        rc var8 = (rc) (Object) var7.a((byte) 93);
-        while (var8 != null) {
-            // ifeq L101
-            var8.a(param0, param1 + 0, param2, ((ki) this).field_j + param3, param4, ((ki) this).field_m + param5);
-            var8 = (rc) (Object) var7.c(param1 ^ 127);
+        var8 = (rc) (Object) var7.a((byte) 93);
+        L1: while (true) {
+          L2: {
+            if (var8 == null) {
+              break L2;
+            } else {
+              if (!var8.a(false)) {
+                break L2;
+              } else {
+                var8.a(param0, param1 + 0, param2, ((ki) this).field_j + param3, param4, ((ki) this).field_m + param5);
+                var8 = (rc) (Object) var7.c(param1 ^ 127);
+                continue L1;
+              }
+            }
+          }
+          return;
         }
     }
 
     final boolean a(int param0, rc param1, int param2, int param3, int param4, int param5, byte param6) {
-        int var10 = SolKnight.field_L ? 1 : 0;
-        ck var8 = new ck(((ki) this).field_B);
-        rc var9 = (rc) (Object) var8.a((byte) 98);
-        while (var9 != null) {
-            // ifeq L89
-            if (var9.b(true)) {
-                if (var9.a(param0, param1, param2, param3, param4, param5, (byte) 50)) {
-                    return true;
+        ck var8 = null;
+        rc var9 = null;
+        int var10 = 0;
+        var10 = SolKnight.field_L ? 1 : 0;
+        var8 = new ck(((ki) this).field_B);
+        var9 = (rc) (Object) var8.a((byte) 98);
+        L0: while (true) {
+          L1: {
+            if (var9 == null) {
+              break L1;
+            } else {
+              if (!var9.a(false)) {
+                break L1;
+              } else {
+                L2: {
+                  if (!var9.b(true)) {
+                    break L2;
+                  } else {
+                    if (!var9.a(param0, param1, param2, param3, param4, param5, (byte) 50)) {
+                      break L2;
+                    } else {
+                      return true;
+                    }
+                  }
                 }
+                var9 = (rc) (Object) var8.c(118);
+                continue L0;
+              }
             }
-            var9 = (rc) (Object) var8.c(118);
-        }
-        if (param6 <= 33) {
+          }
+          if (param6 > 33) {
             return false;
+          } else {
+            return false;
+          }
         }
-        return false;
     }
 
     final String c(byte param0) {
@@ -328,14 +417,28 @@ class ki extends rc implements oh {
     }
 
     void a(int param0, int param1, int param2, rc param3) {
-        int var7 = SolKnight.field_L ? 1 : 0;
+        ck var5 = null;
+        rc var6 = null;
+        int var7 = 0;
+        var7 = SolKnight.field_L ? 1 : 0;
         super.a(param0, param1, param2, param3);
-        ck var5 = new ck(((ki) this).field_B);
-        rc var6 = (rc) (Object) var5.a((byte) 117);
-        while (var6 != null) {
-            // ifeq L93
-            var6.a(param0 + ((ki) this).field_m, 18874, param2 + ((ki) this).field_j, param3);
-            var6 = (rc) (Object) var5.c(param1 ^ 18880);
+        var5 = new ck(((ki) this).field_B);
+        var6 = (rc) (Object) var5.a((byte) 117);
+        L0: while (true) {
+          L1: {
+            if (var6 == null) {
+              break L1;
+            } else {
+              if (!var6.a(false)) {
+                break L1;
+              } else {
+                var6.a(param0 + ((ki) this).field_m, 18874, param2 + ((ki) this).field_j, param3);
+                var6 = (rc) (Object) var5.c(param1 ^ 18880);
+                continue L0;
+              }
+            }
+          }
+          return;
         }
     }
 

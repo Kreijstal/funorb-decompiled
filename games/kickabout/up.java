@@ -291,13 +291,13 @@ final class up implements lv {
           }
           var5 = 0;
           L1: while (true) {
-            if (var13.length <= var5) {
+            if ((var13.length ^ -1) >= (var5 ^ -1)) {
               return false;
             } else {
               L2: {
                 var6 = var13[var5];
                 var7 = pa.field_g[var6];
-                if (param1 != 0) {
+                if ((param1 ^ -1) != -1) {
                   break L2;
                 } else {
                   if (var7.e(true)) {
@@ -363,7 +363,7 @@ final class up implements lv {
                 }
               }
               L8: {
-                if (param1 != -7) {
+                if ((param1 ^ -1) != -7) {
                   break L8;
                 } else {
                   if (var7.f(false)) {
@@ -374,7 +374,7 @@ final class up implements lv {
                 }
               }
               L9: {
-                if (-8 != param1) {
+                if (-8 != (param1 ^ -1)) {
                   break L9;
                 } else {
                   if (!var7.e(70)) {
@@ -395,17 +395,19 @@ final class up implements lv {
                   }
                 }
               }
-              if (-10 == (param1 ^ -1)) {
-                if (var7.l(114)) {
-                  return true;
+              L11: {
+                if (-10 != (param1 ^ -1)) {
+                  break L11;
                 } else {
-                  var5++;
-                  continue L1;
+                  if (var7.l(114)) {
+                    return true;
+                  } else {
+                    break L11;
+                  }
                 }
-              } else {
-                var5++;
-                continue L1;
               }
+              var5++;
+              continue L1;
             }
           }
         }
@@ -630,26 +632,44 @@ final class up implements lv {
     }
 
     final boolean b(boolean param0, byte param1) {
+        int[] var3 = null;
         int var4 = 0;
         int var5 = 0;
-        int var6 = Kickabout.field_G;
-        if (param1 > -101) {
+        int var6 = 0;
+        int[] var7 = null;
+        L0: {
+          var6 = Kickabout.field_G;
+          if (param1 <= -101) {
+            break L0;
+          } else {
             ((up) this).field_r = -124;
+            break L0;
+          }
         }
-        if (!(param0)) {
-            return false;
-        }
-        int[] var7 = ((up) this).field_h;
-        int[] var3 = var7;
-        for (var4 = 0; var7.length > var4; var4++) {
-            var5 = var7[var4];
-            if (!pa.field_g[var5].c(115)) {
-                // ifeq L89
+        if (!param0) {
+          return false;
+        } else {
+          var7 = ((up) this).field_h;
+          var3 = var7;
+          var4 = 0;
+          L1: while (true) {
+            if (var7.length <= var4) {
+              return false;
+            } else {
+              var5 = var7[var4];
+              if (pa.field_g[var5].c(115)) {
                 return true;
+              } else {
+                if (!pa.field_g[var5].k(-21636)) {
+                  var4++;
+                  continue L1;
+                } else {
+                  return true;
+                }
+              }
             }
-            return true;
+          }
         }
-        return false;
     }
 
     final String d(int param0) {
@@ -859,26 +879,44 @@ final class up implements lv {
     }
 
     final boolean b(boolean param0, boolean param1) {
+        int[] var3 = null;
         int var4 = 0;
         int var5 = 0;
-        int var6 = Kickabout.field_G;
-        if (param0) {
-            int discarded$0 = ((up) this).h(13);
+        int var6 = 0;
+        int[] var7 = null;
+        L0: {
+          var6 = Kickabout.field_G;
+          if (!param0) {
+            break L0;
+          } else {
+            int discarded$2 = ((up) this).h(13);
+            break L0;
+          }
         }
-        if (!(param1)) {
-            return true;
-        }
-        int[] var7 = ((up) this).field_h;
-        int[] var3 = var7;
-        for (var4 = 0; var7.length > var4; var4++) {
-            var5 = var7[var4];
-            if (!pa.field_g[var5].b(param0)) {
-                // ifeq L87
+        if (!param1) {
+          return true;
+        } else {
+          var7 = ((up) this).field_h;
+          var3 = var7;
+          var4 = 0;
+          L1: while (true) {
+            if (var7.length <= var4) {
+              return true;
+            } else {
+              var5 = var7[var4];
+              if (pa.field_g[var5].b(param0)) {
                 return false;
+              } else {
+                if (!pa.field_g[var5].k(-21636)) {
+                  var4++;
+                  continue L1;
+                } else {
+                  return false;
+                }
+              }
             }
-            return false;
+          }
         }
-        return true;
     }
 
     final int h(int param0) {
@@ -910,8 +948,8 @@ final class up implements lv {
         }
         int var4 = 0;
         var4 += 50;
-        var4 = var4 + (60 - -(!param1 ? 0 : ((up) this).field_r < -101 ? 23 : 15));
-        var4 = var4 + ((-1 < ((up) this).field_h.length ? (!((up) this).f(13467) ? 0 : 12) + 6 : 0) + ((up) this).field_h.length * 18);
+        var4 = var4 + (60 - -(!param1 ? 0 : (((up) this).field_r ^ -1) < -101 ? 23 : 15));
+        var4 = var4 + ((-1 > (((up) this).field_h.length ^ -1) ? (!((up) this).f(13467) ? 0 : 12) + 6 : 0) + ((up) this).field_h.length * 18);
         var4 = var4 + (param0 ? 20 : 0);
         if (param2 < 75) {
             return -16;
@@ -1049,13 +1087,6 @@ final class up implements lv {
         int[] stackIn_21_0 = null;
         int stackIn_21_1 = 0;
         int stackIn_21_2 = 0;
-        int stackIn_28_0 = 0;
-        int stackIn_28_1 = 0;
-        Object stackIn_28_2 = null;
-        int stackIn_28_3 = 0;
-        int stackIn_28_4 = 0;
-        Object stackIn_28_5 = null;
-        int stackIn_28_6 = 0;
         int stackIn_29_0 = 0;
         int stackIn_29_1 = 0;
         Object stackIn_29_2 = null;
@@ -1070,12 +1101,14 @@ final class up implements lv {
         int stackIn_30_4 = 0;
         Object stackIn_30_5 = null;
         int stackIn_30_6 = 0;
-        int stackIn_30_7 = 0;
         int stackIn_31_0 = 0;
         int stackIn_31_1 = 0;
         Object stackIn_31_2 = null;
         int stackIn_31_3 = 0;
         int stackIn_31_4 = 0;
+        Object stackIn_31_5 = null;
+        int stackIn_31_6 = 0;
+        int stackIn_31_7 = 0;
         int stackIn_32_0 = 0;
         int stackIn_32_1 = 0;
         Object stackIn_32_2 = null;
@@ -1091,10 +1124,15 @@ final class up implements lv {
         Object stackIn_34_2 = null;
         int stackIn_34_3 = 0;
         int stackIn_34_4 = 0;
-        int stackIn_34_5 = 0;
-        int stackIn_41_0 = 0;
-        int stackIn_49_0 = 0;
-        int stackIn_56_0 = 0;
+        int stackIn_35_0 = 0;
+        int stackIn_35_1 = 0;
+        Object stackIn_35_2 = null;
+        int stackIn_35_3 = 0;
+        int stackIn_35_4 = 0;
+        int stackIn_35_5 = 0;
+        int stackIn_42_0 = 0;
+        int stackIn_50_0 = 0;
+        int stackIn_57_0 = 0;
         int stackOut_6_0 = 0;
         int stackOut_5_0 = 0;
         int[] stackOut_7_0 = null;
@@ -1134,13 +1172,21 @@ final class up implements lv {
         int[] stackOut_19_0 = null;
         int stackOut_19_1 = 0;
         int stackOut_19_2 = 0;
-        int stackOut_27_0 = 0;
-        int stackOut_27_1 = 0;
-        Object stackOut_27_2 = null;
-        int stackOut_27_3 = 0;
-        int stackOut_27_4 = 0;
-        Object stackOut_27_5 = null;
-        int stackOut_27_6 = 0;
+        int stackOut_28_0 = 0;
+        int stackOut_28_1 = 0;
+        Object stackOut_28_2 = null;
+        int stackOut_28_3 = 0;
+        int stackOut_28_4 = 0;
+        Object stackOut_28_5 = null;
+        int stackOut_28_6 = 0;
+        int stackOut_30_0 = 0;
+        int stackOut_30_1 = 0;
+        Object stackOut_30_2 = null;
+        int stackOut_30_3 = 0;
+        int stackOut_30_4 = 0;
+        Object stackOut_30_5 = null;
+        int stackOut_30_6 = 0;
+        int stackOut_30_7 = 0;
         int stackOut_29_0 = 0;
         int stackOut_29_1 = 0;
         Object stackOut_29_2 = null;
@@ -1149,19 +1195,6 @@ final class up implements lv {
         Object stackOut_29_5 = null;
         int stackOut_29_6 = 0;
         int stackOut_29_7 = 0;
-        int stackOut_28_0 = 0;
-        int stackOut_28_1 = 0;
-        Object stackOut_28_2 = null;
-        int stackOut_28_3 = 0;
-        int stackOut_28_4 = 0;
-        Object stackOut_28_5 = null;
-        int stackOut_28_6 = 0;
-        int stackOut_28_7 = 0;
-        int stackOut_30_0 = 0;
-        int stackOut_30_1 = 0;
-        Object stackOut_30_2 = null;
-        int stackOut_30_3 = 0;
-        int stackOut_30_4 = 0;
         int stackOut_31_0 = 0;
         int stackOut_31_1 = 0;
         Object stackOut_31_2 = null;
@@ -1172,29 +1205,34 @@ final class up implements lv {
         Object stackOut_32_2 = null;
         int stackOut_32_3 = 0;
         int stackOut_32_4 = 0;
-        int stackOut_32_5 = 0;
         int stackOut_33_0 = 0;
         int stackOut_33_1 = 0;
         Object stackOut_33_2 = null;
         int stackOut_33_3 = 0;
         int stackOut_33_4 = 0;
         int stackOut_33_5 = 0;
+        int stackOut_34_0 = 0;
+        int stackOut_34_1 = 0;
+        Object stackOut_34_2 = null;
+        int stackOut_34_3 = 0;
+        int stackOut_34_4 = 0;
+        int stackOut_34_5 = 0;
+        int stackOut_41_0 = 0;
         int stackOut_40_0 = 0;
-        int stackOut_39_0 = 0;
+        int stackOut_49_0 = 0;
         int stackOut_48_0 = 0;
-        int stackOut_47_0 = 0;
-        int stackOut_45_0 = 0;
-        int stackOut_43_0 = 0;
+        int stackOut_46_0 = 0;
+        int stackOut_44_0 = 0;
+        int stackOut_56_0 = 0;
         int stackOut_55_0 = 0;
         int stackOut_54_0 = 0;
         int stackOut_53_0 = 0;
-        int stackOut_52_0 = 0;
         L0: {
           var22 = Kickabout.field_G;
-          if (((up) this).field_n != -101) {
+          if ((((up) this).field_n ^ -1) != -101) {
             break L0;
           } else {
-            if (-101 != ((up) this).field_o) {
+            if (-101 != (((up) this).field_o ^ -1)) {
               break L0;
             } else {
               if (((up) this).field_g != 100) {
@@ -1360,28 +1398,46 @@ final class up implements lv {
         L7: while (true) {
           if (-5 >= (var16_int ^ -1)) {
             L8: {
-              stackOut_27_0 = param4;
-              stackOut_27_1 = 0;
-              stackOut_27_2 = this;
-              stackOut_27_3 = param3;
-              stackOut_27_4 = param5;
-              stackOut_27_5 = this;
-              stackOut_27_6 = -107;
-              stackIn_29_0 = stackOut_27_0;
-              stackIn_29_1 = stackOut_27_1;
-              stackIn_29_2 = stackOut_27_2;
-              stackIn_29_3 = stackOut_27_3;
-              stackIn_29_4 = stackOut_27_4;
-              stackIn_29_5 = stackOut_27_5;
-              stackIn_29_6 = stackOut_27_6;
-              stackIn_28_0 = stackOut_27_0;
-              stackIn_28_1 = stackOut_27_1;
-              stackIn_28_2 = stackOut_27_2;
-              stackIn_28_3 = stackOut_27_3;
-              stackIn_28_4 = stackOut_27_4;
-              stackIn_28_5 = stackOut_27_5;
-              stackIn_28_6 = stackOut_27_6;
+              stackOut_28_0 = param4;
+              stackOut_28_1 = 0;
+              stackOut_28_2 = this;
+              stackOut_28_3 = param3;
+              stackOut_28_4 = param5;
+              stackOut_28_5 = this;
+              stackOut_28_6 = -107;
+              stackIn_30_0 = stackOut_28_0;
+              stackIn_30_1 = stackOut_28_1;
+              stackIn_30_2 = stackOut_28_2;
+              stackIn_30_3 = stackOut_28_3;
+              stackIn_30_4 = stackOut_28_4;
+              stackIn_30_5 = stackOut_28_5;
+              stackIn_30_6 = stackOut_28_6;
+              stackIn_29_0 = stackOut_28_0;
+              stackIn_29_1 = stackOut_28_1;
+              stackIn_29_2 = stackOut_28_2;
+              stackIn_29_3 = stackOut_28_3;
+              stackIn_29_4 = stackOut_28_4;
+              stackIn_29_5 = stackOut_28_5;
+              stackIn_29_6 = stackOut_28_6;
               if (((up) this).f(13467)) {
+                stackOut_30_0 = stackIn_30_0;
+                stackOut_30_1 = stackIn_30_1;
+                stackOut_30_2 = this;
+                stackOut_30_3 = stackIn_30_3;
+                stackOut_30_4 = stackIn_30_4;
+                stackOut_30_5 = this;
+                stackOut_30_6 = stackIn_30_6;
+                stackOut_30_7 = 0;
+                stackIn_31_0 = stackOut_30_0;
+                stackIn_31_1 = stackOut_30_1;
+                stackIn_31_2 = stackOut_30_2;
+                stackIn_31_3 = stackOut_30_3;
+                stackIn_31_4 = stackOut_30_4;
+                stackIn_31_5 = stackOut_30_5;
+                stackIn_31_6 = stackOut_30_6;
+                stackIn_31_7 = stackOut_30_7;
+                break L8;
+              } else {
                 stackOut_29_0 = stackIn_29_0;
                 stackOut_29_1 = stackIn_29_1;
                 stackOut_29_2 = this;
@@ -1389,106 +1445,88 @@ final class up implements lv {
                 stackOut_29_4 = stackIn_29_4;
                 stackOut_29_5 = this;
                 stackOut_29_6 = stackIn_29_6;
-                stackOut_29_7 = 0;
-                stackIn_30_0 = stackOut_29_0;
-                stackIn_30_1 = stackOut_29_1;
-                stackIn_30_2 = stackOut_29_2;
-                stackIn_30_3 = stackOut_29_3;
-                stackIn_30_4 = stackOut_29_4;
-                stackIn_30_5 = stackOut_29_5;
-                stackIn_30_6 = stackOut_29_6;
-                stackIn_30_7 = stackOut_29_7;
-                break L8;
-              } else {
-                stackOut_28_0 = stackIn_28_0;
-                stackOut_28_1 = stackIn_28_1;
-                stackOut_28_2 = this;
-                stackOut_28_3 = stackIn_28_3;
-                stackOut_28_4 = stackIn_28_4;
-                stackOut_28_5 = this;
-                stackOut_28_6 = stackIn_28_6;
-                stackOut_28_7 = 1;
-                stackIn_30_0 = stackOut_28_0;
-                stackIn_30_1 = stackOut_28_1;
-                stackIn_30_2 = stackOut_28_2;
-                stackIn_30_3 = stackOut_28_3;
-                stackIn_30_4 = stackOut_28_4;
-                stackIn_30_5 = stackOut_28_5;
-                stackIn_30_6 = stackOut_28_6;
-                stackIn_30_7 = stackOut_28_7;
+                stackOut_29_7 = 1;
+                stackIn_31_0 = stackOut_29_0;
+                stackIn_31_1 = stackOut_29_1;
+                stackIn_31_2 = stackOut_29_2;
+                stackIn_31_3 = stackOut_29_3;
+                stackIn_31_4 = stackOut_29_4;
+                stackIn_31_5 = stackOut_29_5;
+                stackIn_31_6 = stackOut_29_6;
+                stackIn_31_7 = stackOut_29_7;
                 break L8;
               }
             }
             L9: {
               L10: {
-                stackOut_30_0 = stackIn_30_0;
-                stackOut_30_1 = stackIn_30_1;
-                stackOut_30_2 = this;
-                stackOut_30_3 = stackIn_30_3;
-                stackOut_30_4 = stackIn_30_4;
-                stackIn_33_0 = stackOut_30_0;
-                stackIn_33_1 = stackOut_30_1;
-                stackIn_33_2 = stackOut_30_2;
-                stackIn_33_3 = stackOut_30_3;
-                stackIn_33_4 = stackOut_30_4;
-                stackIn_31_0 = stackOut_30_0;
-                stackIn_31_1 = stackOut_30_1;
-                stackIn_31_2 = stackOut_30_2;
-                stackIn_31_3 = stackOut_30_3;
-                stackIn_31_4 = stackOut_30_4;
-                if (((up) this).c((byte) stackIn_30_6, stackIn_30_7 == 0)) {
+                stackOut_31_0 = stackIn_31_0;
+                stackOut_31_1 = stackIn_31_1;
+                stackOut_31_2 = this;
+                stackOut_31_3 = stackIn_31_3;
+                stackOut_31_4 = stackIn_31_4;
+                stackIn_34_0 = stackOut_31_0;
+                stackIn_34_1 = stackOut_31_1;
+                stackIn_34_2 = stackOut_31_2;
+                stackIn_34_3 = stackOut_31_3;
+                stackIn_34_4 = stackOut_31_4;
+                stackIn_32_0 = stackOut_31_0;
+                stackIn_32_1 = stackOut_31_1;
+                stackIn_32_2 = stackOut_31_2;
+                stackIn_32_3 = stackOut_31_3;
+                stackIn_32_4 = stackOut_31_4;
+                if (((up) this).c((byte) stackIn_31_6, stackIn_31_7 == 0)) {
                   break L10;
                 } else {
-                  stackOut_31_0 = stackIn_31_0;
-                  stackOut_31_1 = stackIn_31_1;
-                  stackOut_31_2 = this;
-                  stackOut_31_3 = stackIn_31_3;
-                  stackOut_31_4 = stackIn_31_4;
-                  stackIn_33_0 = stackOut_31_0;
-                  stackIn_33_1 = stackOut_31_1;
-                  stackIn_33_2 = stackOut_31_2;
-                  stackIn_33_3 = stackOut_31_3;
-                  stackIn_33_4 = stackOut_31_4;
-                  stackIn_32_0 = stackOut_31_0;
-                  stackIn_32_1 = stackOut_31_1;
-                  stackIn_32_2 = stackOut_31_2;
-                  stackIn_32_3 = stackOut_31_3;
-                  stackIn_32_4 = stackOut_31_4;
+                  stackOut_32_0 = stackIn_32_0;
+                  stackOut_32_1 = stackIn_32_1;
+                  stackOut_32_2 = this;
+                  stackOut_32_3 = stackIn_32_3;
+                  stackOut_32_4 = stackIn_32_4;
+                  stackIn_34_0 = stackOut_32_0;
+                  stackIn_34_1 = stackOut_32_1;
+                  stackIn_34_2 = stackOut_32_2;
+                  stackIn_34_3 = stackOut_32_3;
+                  stackIn_34_4 = stackOut_32_4;
+                  stackIn_33_0 = stackOut_32_0;
+                  stackIn_33_1 = stackOut_32_1;
+                  stackIn_33_2 = stackOut_32_2;
+                  stackIn_33_3 = stackOut_32_3;
+                  stackIn_33_4 = stackOut_32_4;
                   if (!wn.a((byte) -121)) {
                     break L10;
                   } else {
-                    stackOut_32_0 = stackIn_32_0;
-                    stackOut_32_1 = stackIn_32_1;
-                    stackOut_32_2 = this;
-                    stackOut_32_3 = stackIn_32_3;
-                    stackOut_32_4 = stackIn_32_4;
-                    stackOut_32_5 = 1;
-                    stackIn_34_0 = stackOut_32_0;
-                    stackIn_34_1 = stackOut_32_1;
-                    stackIn_34_2 = stackOut_32_2;
-                    stackIn_34_3 = stackOut_32_3;
-                    stackIn_34_4 = stackOut_32_4;
-                    stackIn_34_5 = stackOut_32_5;
+                    stackOut_33_0 = stackIn_33_0;
+                    stackOut_33_1 = stackIn_33_1;
+                    stackOut_33_2 = this;
+                    stackOut_33_3 = stackIn_33_3;
+                    stackOut_33_4 = stackIn_33_4;
+                    stackOut_33_5 = 1;
+                    stackIn_35_0 = stackOut_33_0;
+                    stackIn_35_1 = stackOut_33_1;
+                    stackIn_35_2 = stackOut_33_2;
+                    stackIn_35_3 = stackOut_33_3;
+                    stackIn_35_4 = stackOut_33_4;
+                    stackIn_35_5 = stackOut_33_5;
                     break L9;
                   }
                 }
               }
-              stackOut_33_0 = stackIn_33_0;
-              stackOut_33_1 = stackIn_33_1;
-              stackOut_33_2 = this;
-              stackOut_33_3 = stackIn_33_3;
-              stackOut_33_4 = stackIn_33_4;
-              stackOut_33_5 = 0;
-              stackIn_34_0 = stackOut_33_0;
-              stackIn_34_1 = stackOut_33_1;
-              stackIn_34_2 = stackOut_33_2;
-              stackIn_34_3 = stackOut_33_3;
-              stackIn_34_4 = stackOut_33_4;
-              stackIn_34_5 = stackOut_33_5;
+              stackOut_34_0 = stackIn_34_0;
+              stackOut_34_1 = stackIn_34_1;
+              stackOut_34_2 = this;
+              stackOut_34_3 = stackIn_34_3;
+              stackOut_34_4 = stackIn_34_4;
+              stackOut_34_5 = 0;
+              stackIn_35_0 = stackOut_34_0;
+              stackIn_35_1 = stackOut_34_1;
+              stackIn_35_2 = stackOut_34_2;
+              stackIn_35_3 = stackOut_34_3;
+              stackIn_35_4 = stackOut_34_4;
+              stackIn_35_5 = stackOut_34_5;
               break L9;
             }
             L11: {
-              var16 = kj.a(stackIn_34_0, stackIn_34_1, (up) this, stackIn_34_3, stackIn_34_4, stackIn_34_5 != 0);
+              var16 = kj.a(stackIn_35_0, stackIn_35_1, (up) this, stackIn_35_3, stackIn_35_4, stackIn_35_5 != 0);
               if (var16 == null) {
                 jr.a(param1 + 24, -103, -19 + (param6 - -50));
                 break L11;
@@ -1504,16 +1542,16 @@ final class up implements lv {
             L12: while (true) {
               L13: {
                 if (param7) {
-                  stackOut_40_0 = 4;
-                  stackIn_41_0 = stackOut_40_0;
+                  stackOut_41_0 = 4;
+                  stackIn_42_0 = stackOut_41_0;
                   break L13;
                 } else {
-                  stackOut_39_0 = 3;
-                  stackIn_41_0 = stackOut_39_0;
+                  stackOut_40_0 = 3;
+                  stackIn_42_0 = stackOut_40_0;
                   break L13;
                 }
               }
-              if (stackIn_41_0 <= var17_int) {
+              if (stackIn_42_0 <= var17_int) {
                 L14: {
                   param6 = param6 + var28[1];
                   if (var11 != 0) {
@@ -1561,70 +1599,72 @@ final class up implements lv {
                 return;
               } else {
                 L18: {
-                  if (var17_int != -1) {
-                    if (-2 != var17_int) {
+                  if ((var17_int ^ -1) != -1) {
+                    if (-2 != (var17_int ^ -1)) {
                       if (2 == var17_int) {
-                        stackOut_48_0 = ((up) this).field_o;
-                        stackIn_49_0 = stackOut_48_0;
+                        stackOut_49_0 = ((up) this).field_o;
+                        stackIn_50_0 = stackOut_49_0;
                         break L18;
                       } else {
-                        stackOut_47_0 = ((up) this).field_r;
-                        stackIn_49_0 = stackOut_47_0;
+                        stackOut_48_0 = ((up) this).field_r;
+                        stackIn_50_0 = stackOut_48_0;
                         break L18;
                       }
                     } else {
-                      stackOut_45_0 = ((up) this).field_g;
-                      stackIn_49_0 = stackOut_45_0;
+                      stackOut_46_0 = ((up) this).field_g;
+                      stackIn_50_0 = stackOut_46_0;
                       break L18;
                     }
                   } else {
-                    stackOut_43_0 = ((up) this).field_n;
-                    stackIn_49_0 = stackOut_43_0;
+                    stackOut_44_0 = ((up) this).field_n;
+                    stackIn_50_0 = stackOut_44_0;
                     break L18;
                   }
                 }
                 L19: {
-                  var18 = stackIn_49_0;
+                  var18 = stackIn_50_0;
                   if (0 == var17_int) {
-                    stackOut_55_0 = ((up) this).c(true, oi.b(-89));
-                    stackIn_56_0 = stackOut_55_0;
+                    stackOut_56_0 = ((up) this).c(true, oi.b(-89));
+                    stackIn_57_0 = stackOut_56_0;
                     break L19;
                   } else {
                     if (-2 == (var17_int ^ -1)) {
-                      stackOut_54_0 = ((up) this).a(5205, oi.b(-120));
-                      stackIn_56_0 = stackOut_54_0;
+                      stackOut_55_0 = ((up) this).a(5205, oi.b(-120));
+                      stackIn_57_0 = stackOut_55_0;
                       break L19;
                     } else {
                       if ((var17_int ^ -1) == -3) {
-                        stackOut_53_0 = ((up) this).b((byte) -118, oi.b(-110));
-                        stackIn_56_0 = stackOut_53_0;
+                        stackOut_54_0 = ((up) this).b((byte) -118, oi.b(-110));
+                        stackIn_57_0 = stackOut_54_0;
                         break L19;
                       } else {
-                        stackOut_52_0 = 0;
-                        stackIn_56_0 = stackOut_52_0;
+                        stackOut_53_0 = 0;
+                        stackIn_57_0 = stackOut_53_0;
                         break L19;
                       }
                     }
                   }
                 }
-                var19 = stackIn_56_0;
+                var19 = stackIn_57_0;
                 eo.a(param1 - -(-100 + var13 >> -563110783), 9 + (param6 - -(16 * var17_int)), var18, var17_int, true, var19);
                 var17_int++;
                 continue L12;
               }
             }
           } else {
-            if (var28[var16_int] != 0) {
-              on.a(param1, var15, var13, var28[var16_int] - -1, var25[var14], var10[var14]);
-              on.e(param1, var15, var13, var28[var16_int] - -1, 65793);
-              var15 = var15 + var28[var16_int];
-              var14 = var14 ^ 1;
-              var16_int++;
-              continue L7;
-            } else {
-              var16_int++;
-              continue L7;
+            L20: {
+              if (var28[var16_int] != 0) {
+                on.a(param1, var15, var13, var28[var16_int] - -1, var25[var14], var10[var14]);
+                on.e(param1, var15, var13, var28[var16_int] - -1, 65793);
+                var15 = var15 + var28[var16_int];
+                var14 = var14 ^ 1;
+                break L20;
+              } else {
+                break L20;
+              }
             }
+            var16_int++;
+            continue L7;
           }
         }
     }

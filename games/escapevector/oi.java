@@ -180,15 +180,15 @@ final class oi extends bj implements qn, qb {
         if (!(!super.a(param0, param1, param2, 78))) {
             return true;
         }
-        if (-99 == param2) {
+        if (-99 == (param2 ^ -1)) {
             return ((oi) this).a((byte) 22, param0);
         }
         if (param3 <= 0) {
             field_L = null;
-            if (-100 == param2) {
-                return ((oi) this).a(param0, true);
+            if (-100 != (param2 ^ -1)) {
+                return false;
             }
-            return false;
+            return ((oi) this).a(param0, true);
         }
         if (!(-100 != (param2 ^ -1))) {
             return ((oi) this).a(param0, true);

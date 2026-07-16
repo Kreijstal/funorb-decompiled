@@ -36,7 +36,7 @@ final class bb extends ki implements pi, ka {
         int var6_int = 0;
         StringBuilder var6 = null;
         int var7 = 0;
-        String var7_ref = null;
+        String var7_ref_String = null;
         int var8 = 0;
         String var9 = null;
         int var10 = 0;
@@ -116,8 +116,8 @@ final class bb extends ki implements pi, ka {
                   }
                 }
               }
-              var7_ref = param0.substring(var6_int - -2, var5);
-              if (!ec.a(30418, (CharSequence) (Object) var7_ref)) {
+              var7_ref_String = param0.substring(var6_int - -2, var5);
+              if (!ec.a(30418, (CharSequence) (Object) var7_ref_String)) {
                 continue L1;
               } else {
                 if (var5 >= var3) {
@@ -125,7 +125,7 @@ final class bb extends ki implements pi, ka {
                 } else {
                   if (param0.charAt(var5) == 62) {
                     var5++;
-                    var8 = il.a((CharSequence) (Object) var7_ref, param2 ^ -6041);
+                    var8 = il.a((CharSequence) (Object) var7_ref_String, param2 ^ -6041);
                     var4 = var4 + (-var5 + var6_int + param1[var8].length());
                     continue L1;
                   } else {
@@ -307,8 +307,7 @@ final class bb extends ki implements pi, ka {
                 break L6;
               }
             }
-            new pj(stackIn_18_3, (dg) null);
-            ((bb) this).field_D = stackIn_18_1;
+            ((bb) this).field_D = new pj(stackIn_18_3, (dg) null);
             if (!((bb) this).field_J) {
               break L5;
             } else {
@@ -392,11 +391,13 @@ final class bb extends ki implements pi, ka {
           }
         }
         L13: {
-          var12 = new ke(10, ((bb) this).field_j, ((bb) this).field_t - 20, 25, (rc) (Object) ((bb) this).field_O, false, 80, 3, var7, 16777215, var8);
-          ((bb) this).a((rc) (Object) new ke(10, ((bb) this).field_j, ((bb) this).field_t - 20, 25, (rc) (Object) ((bb) this).field_O, false, 80, 3, var7, 16777215, var8), 5411);
+          ke dupTemp$2 = new ke(10, ((bb) this).field_j, ((bb) this).field_t - 20, 25, (rc) (Object) ((bb) this).field_O, false, 80, 3, var7, 16777215, var8);
+          var12 = dupTemp$2;
+          ((bb) this).a((rc) (Object) dupTemp$2, 5411);
           ((bb) this).field_j = ((bb) this).field_j + (((rc) (Object) var12).field_x + 5);
-          var13 = new ke(10, ((bb) this).field_j, ((bb) this).field_t + -20, 25, (rc) (Object) ((bb) this).field_L, false, 80, 3, var7, 16777215, ld.field_O);
-          ((bb) this).a((rc) (Object) new ke(10, ((bb) this).field_j, ((bb) this).field_t + -20, 25, (rc) (Object) ((bb) this).field_L, false, 80, 3, var7, 16777215, ld.field_O), 5411);
+          ke dupTemp$3 = new ke(10, ((bb) this).field_j, ((bb) this).field_t + -20, 25, (rc) (Object) ((bb) this).field_L, false, 80, 3, var7, 16777215, ld.field_O);
+          var13 = dupTemp$3;
+          ((bb) this).a((rc) (Object) dupTemp$3, 5411);
           ((bb) this).field_N.field_n = (dg) this;
           ((bb) this).field_j = ((bb) this).field_j + (5 + ((rc) (Object) var13).field_x);
           if (((bb) this).field_M == null) {
@@ -589,13 +590,32 @@ final class bb extends ki implements pi, ka {
     }
 
     private final void k(int param0) {
-        if (!ji.a(-19688)) {
-            // if_icmpge L65
-            // if_icmpge L65
+        L0: {
+          L1: {
+            if (ji.a(-19688)) {
+              break L1;
+            } else {
+              if (0 >= ((bb) this).field_O.field_i.length()) {
+                break L0;
+              } else {
+                if ((((bb) this).field_L.field_i.length() ^ -1) >= -1) {
+                  break L0;
+                } else {
+                  break L1;
+                }
+              }
+            }
+          }
+          hg.a(8192, ((bb) this).field_O.field_i, ((bb) this).field_L.field_i);
+          break L0;
         }
-        hg.a(8192, ((bb) this).field_O.field_i, ((bb) this).field_L.field_i);
-        if (param0 != -1525) {
+        L2: {
+          if (param0 == -1525) {
+            break L2;
+          } else {
             ((bb) this).field_J = true;
+            break L2;
+          }
         }
     }
 

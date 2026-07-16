@@ -172,21 +172,40 @@ final class kp {
 
     final int a(byte param0, int param1) {
         int var3 = 0;
-        int var4 = Torquing.field_u;
-        if (((kp) this).field_b != null) {
-            // ifeq L23
-        } else {
-            return 0;
-        }
-        for (var3 = 1; var3 < ((kp) this).field_b.length; var3++) {
-            if (param1 < ((kp) this).field_b[var3] + ((kp) this).field_b[var3 - 1] >> -1836734143) {
-                return var3 + -1;
+        int var4 = 0;
+        L0: {
+          var4 = Torquing.field_u;
+          if (((kp) this).field_b == null) {
+            break L0;
+          } else {
+            if (((kp) this).field_b.length == 0) {
+              break L0;
+            } else {
+              var3 = 1;
+              L1: while (true) {
+                if (var3 >= ((kp) this).field_b.length) {
+                  L2: {
+                    if (param0 == -64) {
+                      break L2;
+                    } else {
+                      int discarded$2 = ((kp) this).a((byte) 25, -123);
+                      break L2;
+                    }
+                  }
+                  return ((kp) this).field_b.length + -1;
+                } else {
+                  if (param1 >= ((kp) this).field_b[var3] + ((kp) this).field_b[var3 - 1] >> -1836734143) {
+                    var3++;
+                    continue L1;
+                  } else {
+                    return var3 + -1;
+                  }
+                }
+              }
             }
+          }
         }
-        if (param0 != -64) {
-            int discarded$0 = ((kp) this).a((byte) 25, -123);
-        }
-        return ((kp) this).field_b.length + -1;
+        return 0;
     }
 
     final static String a(byte param0, long param1) {

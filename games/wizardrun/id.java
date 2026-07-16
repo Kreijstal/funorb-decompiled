@@ -93,110 +93,68 @@ final class id {
             IOException iOException = null;
             Object var3 = null;
             Throwable decompiledCaughtException = null;
-            int statePc = 0;
-            Throwable caughtException = null;
-            stateLoop: while (true) {
-                switch (statePc) {
-                    case 0: {
-                        if (jc.field_H == null) {
-                            statePc = 4;
-                        } else {
-                            statePc = 1;
-                        }
-                        continue stateLoop;
+            L0: {
+              if (jc.field_H == null) {
+                break L0;
+              } else {
+                L1: {
+                  if (0 > param1) {
+                    break L1;
+                  } else {
+                    if (wh.field_j == hi.field_l) {
+                      break L1;
+                    } else {
+                      break L0;
                     }
-                    case 1: {
-                        if (0 > param1) {
-                            statePc = 5;
-                        } else {
-                            statePc = 2;
-                        }
-                        continue stateLoop;
-                    }
-                    case 2: {
-                        if (wh.field_j == hi.field_l) {
-                            statePc = 5;
-                        } else {
-                            statePc = 4;
-                        }
-                        continue stateLoop;
-                    }
-                    case 4: {
-                        n.field_b.field_m = 0;
-                        return;
-                    }
-                    case 5: {
-                        if (-1 != n.field_b.field_m) {
-                            statePc = 9;
-                        } else {
-                            statePc = 6;
-                        }
-                        continue stateLoop;
-                    }
-                    case 6: {
-                        if (hi.field_k - -10000L < d.a((byte) 44)) {
-                            statePc = 8;
-                        } else {
-                            statePc = 9;
-                        }
-                        continue stateLoop;
-                    }
-                    case 8: {
-                        n.field_b.c((byte) 65, param1);
-                        statePc = 9;
-                        continue stateLoop;
-                    }
-                    case 9: {
-                        if (-1 >= n.field_b.field_m) {
-                            statePc = 14;
-                        } else {
-                            statePc = 10;
-                        }
-                        continue stateLoop;
-                    }
-                    case 10: {
-                        try {
-                            jc.field_H.a(n.field_b.field_m, n.field_b.field_k, 1, 0);
-                            hi.field_k = d.a((byte) 29);
-                            statePc = 13;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_10) {
-                            caughtException = stateCaught_10;
-                            statePc = 12;
-                            continue stateLoop;
-                        }
-                    }
-                    case 12: {
-                        iOException = (IOException) (Object) caughtException;
-                        ql.a(param0 ^ 17);
-                        statePc = 13;
-                        continue stateLoop;
-                    }
-                    case 13: {
-                        n.field_b.field_m = 0;
-                        statePc = 14;
-                        continue stateLoop;
-                    }
-                    case 14: {
-                        if (param0 == -67) {
-                            statePc = 16;
-                        } else {
-                            statePc = 15;
-                        }
-                        continue stateLoop;
-                    }
-                    case 15: {
-                        var3 = null;
-                        boolean discarded$3 = id.a((String) null, (String) null, -41);
-                        statePc = 16;
-                        continue stateLoop;
-                    }
-                    case 16: {
-                        return;
-                    }
-                    default: throw new IllegalStateException("invalid CFG state " + statePc);
+                  }
                 }
+                L2: {
+                  if (-1 != n.field_b.field_m) {
+                    break L2;
+                  } else {
+                    if (hi.field_k - -10000L < d.a((byte) 44)) {
+                      n.field_b.c((byte) 65, param1);
+                      break L2;
+                    } else {
+                      break L2;
+                    }
+                  }
+                }
+                L3: {
+                  if (-1 >= n.field_b.field_m) {
+                    break L3;
+                  } else {
+                    try {
+                      L4: {
+                        jc.field_H.a(n.field_b.field_m, n.field_b.field_k, 1, 0);
+                        hi.field_k = d.a((byte) 29);
+                        break L4;
+                      }
+                    } catch (java.io.IOException decompiledCaughtParameter0) {
+                      decompiledCaughtException = decompiledCaughtParameter0;
+                      L5: {
+                        iOException = (IOException) (Object) decompiledCaughtException;
+                        ql.a(param0 ^ 17);
+                        break L5;
+                      }
+                    }
+                    n.field_b.field_m = 0;
+                    break L3;
+                  }
+                }
+                L6: {
+                  if (param0 == -67) {
+                    break L6;
+                  } else {
+                    var3 = null;
+                    boolean discarded$2 = id.a((String) null, (String) null, -41);
+                    break L6;
+                  }
+                }
+                return;
+              }
             }
+            n.field_b.field_m = 0;
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {

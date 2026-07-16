@@ -62,32 +62,33 @@ final class wm {
                 var12 = 0;
                 var7 = var12;
                 L3: while (true) {
-                  if (var12 >= var3) {
+                  if ((var12 ^ -1) <= (var3 ^ -1)) {
                     break L1;
                   } else {
-                    var8 = 32768 + var20[var12] >> 1456988656;
-                    if (-128 > var8) {
-                      param1[var12] = (byte)-128;
-                      var12++;
-                      continue L3;
-                    } else {
-                      if (-128 > (var8 ^ -1)) {
-                        param1[var12] = (byte)127;
-                        var12++;
-                        continue L3;
+                    L4: {
+                      var8 = 32768 + var20[var12] >> 1456988656;
+                      if (-128 > var8) {
+                        param1[var12] = (byte)-128;
+                        break L4;
                       } else {
-                        param1[var12] = (byte)var8;
-                        var12++;
-                        continue L3;
+                        if (-128 > (var8 ^ -1)) {
+                          param1[var12] = (byte)127;
+                          break L4;
+                        } else {
+                          param1[var12] = (byte)var8;
+                          break L4;
+                        }
                       }
                     }
+                    var12++;
+                    continue L3;
                   }
                 }
               } else {
                 var8 = param1[var7];
                 var19 = ((wm) this).field_a[var6];
                 var10 = 0;
-                L4: while (true) {
+                L5: while (true) {
                   if (-15 >= (var10 ^ -1)) {
                     var6 = var6 + ((wm) this).field_h;
                     var10 = var6 / ((wm) this).field_b;
@@ -98,7 +99,7 @@ final class wm {
                   } else {
                     var4[var5 + var10] = var4[var5 + var10] + var8 * var19[var10];
                     var10++;
-                    continue L4;
+                    continue L5;
                   }
                 }
               }
@@ -161,6 +162,7 @@ final class wm {
           var4 = 0;
           L0: while (true) {
             if (var4 >= param0) {
+              return;
             } else {
               L1: {
                 var5 = ((wm) this).field_a[var4];
@@ -214,6 +216,7 @@ final class wm {
             }
           }
         } else {
+          return;
         }
     }
 

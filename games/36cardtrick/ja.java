@@ -43,7 +43,6 @@ final class ja {
 
     final vd a(int param0, int param1) {
         vd var3 = null;
-        vd var3_ref = null;
         byte[] var4 = null;
         var3 = (vd) ((ja) this).field_f.a((long)param0, -1);
         if (var3 != null) {
@@ -59,21 +58,21 @@ final class ja {
             }
           }
           L1: {
-            var3_ref = new vd();
+            var3 = new vd();
             if (var4 != null) {
-              var3_ref.a((byte) 48, new pb(var4));
+              var3.a((byte) 48, new pb(var4));
               break L1;
             } else {
               break L1;
             }
           }
           if (-32769 >= (param0 ^ -1)) {
-            var3_ref.c((byte) -43);
-            ((ja) this).field_f.a(param1 ^ -32889, (Object) (Object) var3_ref, (long)param0);
-            return var3_ref;
+            var3.c((byte) -43);
+            ((ja) this).field_f.a(param1 ^ -32889, (Object) (Object) var3, (long)param0);
+            return var3;
           } else {
-            ((ja) this).field_f.a(param1 ^ -32889, (Object) (Object) var3_ref, (long)param0);
-            return var3_ref;
+            ((ja) this).field_f.a(param1 ^ -32889, (Object) (Object) var3, (long)param0);
+            return var3;
           }
         }
     }

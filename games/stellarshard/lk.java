@@ -74,9 +74,9 @@ abstract class lk extends ic implements ec {
     }
 
     final static java.net.URL a(java.applet.Applet param0, java.net.URL param1, int param2) {
-        String var3 = null;
+        Object var3 = null;
         int var4 = 0;
-        String var5 = null;
+        Object var5 = null;
         var4 = -100 % ((param2 - -13) / 56);
         var3 = null;
         var5 = null;
@@ -89,15 +89,15 @@ abstract class lk extends ic implements ec {
                 if (oc.field_a.equals((Object) (Object) param0.getParameter("session"))) {
                   break L0;
                 } else {
-                  var5 = oc.field_a;
+                  var5 = (Object) (Object) oc.field_a;
                   break L0;
                 }
               }
             }
-            return tg.a(param1, -1, var3, var5, 30403);
+            return tg.a(param1, -1, (String) var3, (String) var5, 30403);
           } else {
             L1: {
-              var3 = l.field_g;
+              var3 = (Object) (Object) l.field_g;
               var5 = var3;
               var5 = var3;
               if (oc.field_a == null) {
@@ -106,12 +106,12 @@ abstract class lk extends ic implements ec {
                 if (oc.field_a.equals((Object) (Object) param0.getParameter("session"))) {
                   break L1;
                 } else {
-                  var5 = oc.field_a;
+                  var5 = (Object) (Object) oc.field_a;
                   break L1;
                 }
               }
             }
-            return tg.a(param1, -1, var3, var5, 30403);
+            return tg.a(param1, -1, (String) var3, (String) var5, 30403);
           }
         } else {
           L2: {
@@ -121,12 +121,12 @@ abstract class lk extends ic implements ec {
               if (oc.field_a.equals((Object) (Object) param0.getParameter("session"))) {
                 break L2;
               } else {
-                var5 = oc.field_a;
+                var5 = (Object) (Object) oc.field_a;
                 break L2;
               }
             }
           }
-          return tg.a(param1, -1, var3, var5, 30403);
+          return tg.a(param1, -1, (String) var3, (String) var5, 30403);
         }
     }
 

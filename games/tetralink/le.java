@@ -24,7 +24,7 @@ final class le extends hl {
         String var11 = null;
         String var12 = null;
         int var13 = 0;
-        oh var14 = null;
+        Object var14 = null;
         int var15 = 0;
         jb var17 = null;
         jb var18 = null;
@@ -46,6 +46,7 @@ final class le extends hl {
           if (var13 >= ((le) this).field_Kb) {
             ((le) this).field_Mb = ((le) this).field_Mb + (10 + ab.field_R.field_t);
             this.e(144, 12);
+            return;
           } else {
             L1: {
               if (((le) this).field_Wb[var13] <= 0) {
@@ -68,10 +69,10 @@ final class le extends hl {
                   }
                 }
               }
-              var14 = ab.field_R;
+              var14 = (Object) (Object) ab.field_R;
               break L2;
             }
-            ((le) this).field_Qb[var13] = new nh(0L, param2, (hl) null, param3, var14, param6[var13]);
+            ((le) this).field_Qb[var13] = new nh(0L, param2, (hl) null, param3, (oh) var14, param6[var13]);
             ((le) this).a((byte) 97, (hl) (Object) ((le) this).field_Qb[var13]);
             var15 = var17.b(param6[var13]);
             if (((le) this).field_Mb < var15) {

@@ -156,7 +156,7 @@ class se extends fb {
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
-        re var10 = null;
+        Object var10 = null;
         int var11 = 0;
         fj var12 = null;
         int var13 = 0;
@@ -227,14 +227,14 @@ class se extends fb {
                     var14 = stackIn_14_0;
                     var15 = new re(var7, var13, var12.field_d, var14 - var13, Math.max(var3.a((byte) 118), var12.field_e + -var12.field_d));
                     if (var10 != null) {
-                      var10.field_q = var15;
+                      ((re) var10).field_q = var15;
                       break L4;
                     } else {
                       break L4;
                     }
                   }
                   ((se) this).field_O.a((o) (Object) var15, (byte) -124);
-                  var10 = var15;
+                  var10 = (Object) (Object) var15;
                   var11++;
                   continue L1;
                 }
@@ -247,22 +247,52 @@ class se extends fb {
     }
 
     final void a(int param0, int param1, String param2) {
+        String[] var4 = null;
         int var5 = 0;
-        int var6 = Chess.field_G;
-        if (null != ((se) this).field_Q) {
-            // if_icmplt L85
-        }
-        String[] var7 = new String[1 + param1];
-        String[] var4 = var7;
-        if (null != ((se) this).field_Q) {
-            for (var5 = 0; var5 < ((se) this).field_Q.length; var5++) {
-                var7[var5] = ((se) this).field_Q[var5];
+        int var6 = 0;
+        String[] var7 = null;
+        L0: {
+          L1: {
+            var6 = Chess.field_G;
+            if (null == ((se) this).field_Q) {
+              break L1;
+            } else {
+              if (param1 < ((se) this).field_Q.length) {
+                break L0;
+              } else {
+                break L1;
+              }
             }
+          }
+          L2: {
+            var7 = new String[1 + param1];
+            var4 = var7;
+            if (null == ((se) this).field_Q) {
+              break L2;
+            } else {
+              var5 = 0;
+              L3: while (true) {
+                if (var5 >= ((se) this).field_Q.length) {
+                  break L2;
+                } else {
+                  var7[var5] = ((se) this).field_Q[var5];
+                  var5++;
+                  continue L3;
+                }
+              }
+            }
+          }
+          ((se) this).field_Q = var4;
+          break L0;
         }
-        ((se) this).field_Q = var4;
-        ((se) this).field_Q[param1] = param2;
-        if (param0 != -23750) {
+        L4: {
+          ((se) this).field_Q[param1] = param2;
+          if (param0 == -23750) {
+            break L4;
+          } else {
             field_U = null;
+            break L4;
+          }
         }
     }
 

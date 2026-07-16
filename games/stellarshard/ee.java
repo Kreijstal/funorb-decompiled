@@ -86,8 +86,9 @@ final class ee {
             if ((db.field_g ^ -1) >= -1) {
               break L1;
             } else {
+              int fieldTemp$6 = db.field_g - 1;
               db.field_g = db.field_g - 1;
-              var2_ref_byte__ = ck.field_ib[db.field_g - 1];
+              var2_ref_byte__ = ck.field_ib[fieldTemp$6];
               ck.field_ib[db.field_g] = null;
               return var2_ref_byte__;
             }
@@ -98,8 +99,9 @@ final class ee {
             break L2;
           } else {
             if ((ja.field_q ^ -1) < -1) {
+              int fieldTemp$7 = ja.field_q - 1;
               ja.field_q = ja.field_q - 1;
-              var2_ref_byte__ = ei.field_H[ja.field_q - 1];
+              var2_ref_byte__ = ei.field_H[fieldTemp$7];
               ei.field_H[ja.field_q] = null;
               return var2_ref_byte__;
             } else {
@@ -114,8 +116,9 @@ final class ee {
             if ((u.field_p ^ -1) >= -1) {
               break L3;
             } else {
+              int fieldTemp$8 = u.field_p - 1;
               u.field_p = u.field_p - 1;
-              var2_ref_byte__ = mh.field_j[u.field_p - 1];
+              var2_ref_byte__ = mh.field_j[fieldTemp$8];
               mh.field_j[u.field_p] = null;
               return var2_ref_byte__;
             }

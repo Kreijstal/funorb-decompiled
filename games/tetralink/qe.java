@@ -20,8 +20,9 @@ final class qe implements java.awt.event.KeyListener, java.awt.event.FocusListen
         tb.field_j.b(param2, false);
         tb.field_j.a(ki.field_c, jg.field_c, -25035);
         nd.field_Lb.f(18, (byte) -92);
+        int fieldTemp$0 = nd.field_Lb.field_t + 1;
         nd.field_Lb.field_t = nd.field_Lb.field_t + 1;
-        int var4 = nd.field_Lb.field_t + 1;
+        int var4 = fieldTemp$0;
         nd.field_Lb.a(param1, param1 + 128, tb.field_j.field_u, tb.field_j.field_t);
         nd.field_Lb.b(-var4 + nd.field_Lb.field_t, -2);
     }
@@ -63,9 +64,9 @@ final class qe implements java.awt.event.KeyListener, java.awt.event.FocusListen
         if (vi.field_a != null) {
           wk.field_c = 0;
           var2 = param0.getKeyCode();
-          if (-1 >= var2) {
+          if (-1 >= (var2 ^ -1)) {
             L0: {
-              if (ci.field_y.length > var2) {
+              if ((ci.field_y.length ^ -1) < (var2 ^ -1)) {
                 var2 = ci.field_y[var2];
                 if ((128 & var2) != 0) {
                   var2 = -1;
@@ -82,7 +83,7 @@ final class qe implements java.awt.event.KeyListener, java.awt.event.FocusListen
               if (-1 >= (var2 ^ -1)) {
                 ah.field_g[mh.field_b] = var2;
                 mh.field_b = mh.field_b + 1 & 127;
-                if (s.field_d == mh.field_b) {
+                if ((s.field_d ^ -1) == (mh.field_b ^ -1)) {
                   mh.field_b = -1;
                   if (var2 >= 0) {
                     var3 = 127 & eh.field_n - -1;
@@ -212,16 +213,16 @@ final class qe implements java.awt.event.KeyListener, java.awt.event.FocusListen
                       param0.consume();
                       return;
                     } else {
-                      if ((var2 ^ -1) != -86) {
-                        if (10 == var2) {
-                          param0.consume();
-                          return;
-                        } else {
-                          return;
-                        }
-                      } else {
+                      if ((var2 ^ -1) == -86) {
                         param0.consume();
                         return;
+                      } else {
+                        if (10 != var2) {
+                          return;
+                        } else {
+                          param0.consume();
+                          return;
+                        }
                       }
                     }
                   }
@@ -231,16 +232,16 @@ final class qe implements java.awt.event.KeyListener, java.awt.event.FocusListen
                     param0.consume();
                     return;
                   } else {
-                    if ((var2 ^ -1) != -86) {
-                      if (10 == var2) {
-                        param0.consume();
-                        return;
-                      } else {
-                        return;
-                      }
-                    } else {
+                    if ((var2 ^ -1) == -86) {
                       param0.consume();
                       return;
+                    } else {
+                      if (10 != var2) {
+                        return;
+                      } else {
+                        param0.consume();
+                        return;
+                      }
                     }
                   }
                 }
@@ -250,61 +251,61 @@ final class qe implements java.awt.event.KeyListener, java.awt.event.FocusListen
                 var3 = 127 & eh.field_n - -1;
                 if (var3 == dh.field_m) {
                   var3 = param0.getModifiers();
-                  if (0 == (10 & var3)) {
-                    if ((var2 ^ -1) != -86) {
-                      if (10 == var2) {
-                        param0.consume();
-                        return;
-                      } else {
-                        return;
-                      }
-                    } else {
-                      param0.consume();
-                      return;
-                    }
-                  } else {
+                  if (0 != (10 & var3)) {
                     param0.consume();
                     return;
+                  } else {
+                    if ((var2 ^ -1) == -86) {
+                      param0.consume();
+                      return;
+                    } else {
+                      if (10 != var2) {
+                        return;
+                      } else {
+                        param0.consume();
+                        return;
+                      }
+                    }
                   }
                 } else {
                   af.field_e[eh.field_n] = var2;
                   fm.field_c[eh.field_n] = (char)0;
                   eh.field_n = var3;
                   var3 = param0.getModifiers();
-                  if (0 == (10 & var3)) {
-                    if ((var2 ^ -1) != -86) {
-                      if (10 == var2) {
-                        param0.consume();
-                        return;
-                      } else {
-                        return;
-                      }
-                    } else {
-                      param0.consume();
-                      return;
-                    }
-                  } else {
+                  if (0 != (10 & var3)) {
                     param0.consume();
                     return;
+                  } else {
+                    if ((var2 ^ -1) == -86) {
+                      param0.consume();
+                      return;
+                    } else {
+                      if (10 != var2) {
+                        return;
+                      } else {
+                        param0.consume();
+                        return;
+                      }
+                    }
                   }
                 }
               } else {
                 var3 = param0.getModifiers();
-                if (0 == (10 & var3)) {
-                  if ((var2 ^ -1) != -86) {
-                    if (10 == var2) {
-                      param0.consume();
-                      return;
-                    } else {
-                      return;
-                    }
-                  } else {
-                    param0.consume();
-                    return;
-                  }
-                } else {
+                if (0 != (10 & var3)) {
                   param0.consume();
                   return;
+                } else {
+                  if ((var2 ^ -1) == -86) {
+                    param0.consume();
+                    return;
+                  } else {
+                    if (10 != var2) {
+                      return;
+                    } else {
+                      param0.consume();
+                      return;
+                    }
+                  }
                 }
               }
             }
@@ -314,12 +315,12 @@ final class qe implements java.awt.event.KeyListener, java.awt.event.FocusListen
               if (mh.field_b < 0) {
                 break L3;
               } else {
-                if (-1 > var2) {
+                if (-1 < (var2 ^ -1)) {
                   break L3;
                 } else {
                   ah.field_g[mh.field_b] = var2;
                   mh.field_b = mh.field_b + 1 & 127;
-                  if (s.field_d == mh.field_b) {
+                  if ((s.field_d ^ -1) == (mh.field_b ^ -1)) {
                     mh.field_b = -1;
                     break L3;
                   } else {
@@ -366,21 +367,21 @@ final class qe implements java.awt.event.KeyListener, java.awt.event.FocusListen
               var3 = 127 & eh.field_n - -1;
               if (var3 == dh.field_m) {
                 var3 = param0.getModifiers();
-                if (0 == (10 & var3)) {
-                  if ((var2 ^ -1) != -86) {
-                    if (10 == var2) {
-                      param0.consume();
-                      return;
-                    } else {
-                      return;
-                    }
-                  } else {
-                    param0.consume();
-                    return;
-                  }
-                } else {
+                if (0 != (10 & var3)) {
                   param0.consume();
                   return;
+                } else {
+                  if ((var2 ^ -1) == -86) {
+                    param0.consume();
+                    return;
+                  } else {
+                    if (10 != var2) {
+                      return;
+                    } else {
+                      param0.consume();
+                      return;
+                    }
+                  }
                 }
               } else {
                 L6: {
@@ -441,7 +442,7 @@ final class qe implements java.awt.event.KeyListener, java.awt.event.FocusListen
           L0: {
             wk.field_c = 0;
             var2 = param0.getKeyCode();
-            if (-1 < var2) {
+            if (-1 < (var2 ^ -1)) {
               var2 = -1;
               break L0;
             } else {
@@ -451,20 +452,20 @@ final class qe implements java.awt.event.KeyListener, java.awt.event.FocusListen
               } else {
                 var2 = -1;
                 if (0 <= mh.field_b) {
-                  if (-1 > var2) {
-                    param0.consume();
-                    return;
-                  } else {
+                  if (-1 >= (var2 ^ -1)) {
                     L1: {
                       ah.field_g[mh.field_b] = var2 ^ -1;
                       mh.field_b = 127 & mh.field_b - -1;
-                      if (s.field_d == mh.field_b) {
+                      if ((s.field_d ^ -1) == (mh.field_b ^ -1)) {
                         mh.field_b = -1;
                         break L1;
                       } else {
                         break L1;
                       }
                     }
+                    param0.consume();
+                    return;
+                  } else {
                     param0.consume();
                     return;
                   }
@@ -475,26 +476,27 @@ final class qe implements java.awt.event.KeyListener, java.awt.event.FocusListen
               }
             }
           }
-          if (0 <= mh.field_b) {
-            if (-1 >= (var2 ^ -1)) {
-              ah.field_g[mh.field_b] = var2 ^ -1;
-              mh.field_b = 127 & mh.field_b - -1;
-              if (s.field_d != mh.field_b) {
-                param0.consume();
-                return;
-              } else {
-                mh.field_b = -1;
-                param0.consume();
-                return;
-              }
+          L2: {
+            if (0 > mh.field_b) {
+              break L2;
             } else {
-              param0.consume();
-              return;
+              if (-1 < (var2 ^ -1)) {
+                break L2;
+              } else {
+                ah.field_g[mh.field_b] = var2 ^ -1;
+                mh.field_b = 127 & mh.field_b - -1;
+                if ((s.field_d ^ -1) == (mh.field_b ^ -1)) {
+                  mh.field_b = -1;
+                  break L2;
+                } else {
+                  param0.consume();
+                  return;
+                }
+              }
             }
-          } else {
-            param0.consume();
-            return;
           }
+          param0.consume();
+          return;
         } else {
           param0.consume();
           return;

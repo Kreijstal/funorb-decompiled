@@ -102,8 +102,9 @@ abstract class fj extends vg {
           field_eb = null;
           if (null != ((fj) this).field_Z) {
             if (((fj) this).field_Z == t.field_a) {
+              int fieldTemp$4 = ((fj) this).field_ab + 1;
               ((fj) this).field_ab = ((fj) this).field_ab + 1;
-              if (((fj) this).field_gb != ((fj) this).field_ab + 1) {
+              if (((fj) this).field_gb != fieldTemp$4) {
                 ((fj) this).field_cb.field_F = -((((fj) this).field_ab << -742266840) / ((fj) this).field_gb) + 256;
                 return super.j(-13907);
               } else {
@@ -115,8 +116,9 @@ abstract class fj extends vg {
               }
             } else {
               if (ff.field_b == ((fj) this).field_Z) {
+                int fieldTemp$5 = ((fj) this).field_ab + 1;
                 ((fj) this).field_ab = ((fj) this).field_ab + 1;
-                if (((fj) this).field_ab + 1 == ((fj) this).field_db) {
+                if (fieldTemp$5 == ((fj) this).field_db) {
                   ((fj) this).field_Z = null;
                   ((fj) this).field_cb.field_F = 256;
                   return super.j(-13907);
@@ -134,8 +136,9 @@ abstract class fj extends vg {
         } else {
           if (null != ((fj) this).field_Z) {
             if (((fj) this).field_Z == t.field_a) {
+              int fieldTemp$6 = ((fj) this).field_ab + 1;
               ((fj) this).field_ab = ((fj) this).field_ab + 1;
-              if (((fj) this).field_gb != ((fj) this).field_ab + 1) {
+              if (((fj) this).field_gb != fieldTemp$6) {
                 ((fj) this).field_cb.field_F = -((((fj) this).field_ab << -742266840) / ((fj) this).field_gb) + 256;
                 return super.j(-13907);
               } else {
@@ -147,8 +150,9 @@ abstract class fj extends vg {
               }
             } else {
               if (ff.field_b == ((fj) this).field_Z) {
+                int fieldTemp$7 = ((fj) this).field_ab + 1;
                 ((fj) this).field_ab = ((fj) this).field_ab + 1;
-                if (((fj) this).field_ab + 1 == ((fj) this).field_db) {
+                if (fieldTemp$7 == ((fj) this).field_db) {
                   ((fj) this).field_Z = null;
                   ((fj) this).field_cb.field_F = 256;
                   return super.j(-13907);

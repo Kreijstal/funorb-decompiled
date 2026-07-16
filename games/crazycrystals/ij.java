@@ -120,6 +120,7 @@ class ij extends jb {
         L0: while (true) {
           if ((var2 ^ -1) <= -257) {
             field_h = false;
+            return;
           } else {
             var0 = (long)var2;
             var3 = 0;

@@ -80,6 +80,7 @@ final class di extends gg {
         var2 = 0;
         L0: while (true) {
           if (var2 >= 256) {
+            return;
           } else {
             var0 = (long)var2;
             var3 = 0;

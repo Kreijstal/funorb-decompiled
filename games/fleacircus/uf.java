@@ -83,7 +83,7 @@ final class uf {
         int var3 = 0;
         byte[] var4 = null;
         byte[] var5 = null;
-        java.math.BigInteger var7_ref = null;
+        java.math.BigInteger var7_ref_java_math_BigInteger = null;
         int var7 = 0;
         int var8 = 0;
         ni var10 = null;
@@ -139,8 +139,8 @@ final class uf {
                     break L3;
                   } else {
                     var12 = new java.math.BigInteger(var16);
-                    var7_ref = var12.modPow(((uf) this).field_d, ((uf) this).field_i);
-                    var5 = var7_ref.toByteArray();
+                    var7_ref_java_math_BigInteger = var12.modPow(((uf) this).field_d, ((uf) this).field_i);
+                    var5 = var7_ref_java_math_BigInteger.toByteArray();
                     break L2;
                   }
                 }
@@ -173,28 +173,41 @@ final class uf {
     }
 
     final cg a(int param0, boolean param1, ah param2, ah param3, int param4) {
-        if (((uf) this).field_c == null) {
-            throw new RuntimeException();
-        }
-        if (param4 >= 0) {
-            // if_icmple L33
+        int var6 = 0;
+        int var7 = 0;
+        cg var9 = null;
+        byte[] var11 = null;
+        if (((uf) this).field_c != null) {
+          L0: {
+            if (param4 < 0) {
+              break L0;
+            } else {
+              if (((uf) this).field_g.length <= param4) {
+                break L0;
+              } else {
+                if (null != ((uf) this).field_g[param4]) {
+                  return ((uf) this).field_g[param4];
+                } else {
+                  ((uf) this).field_c.field_i = 72 * param4 - -6;
+                  var6 = ((uf) this).field_c.c((byte) 127);
+                  var7 = ((uf) this).field_c.c((byte) -28);
+                  var11 = new byte[64];
+                  if (param0 == 28742) {
+                    ((uf) this).field_c.b(var11, 0, -64, 64);
+                    var9 = new cg(param4, param2, param3, ((uf) this).field_m, ((uf) this).field_a, var6, var11, var7, param1);
+                    ((uf) this).field_g[param4] = var9;
+                    return var9;
+                  } else {
+                    return null;
+                  }
+                }
+              }
+            }
+          }
+          throw new RuntimeException();
         } else {
-            throw new RuntimeException();
+          throw new RuntimeException();
         }
-        if (!(null == ((uf) this).field_g[param4])) {
-            return ((uf) this).field_g[param4];
-        }
-        ((uf) this).field_c.field_i = 72 * param4 - -6;
-        int var6 = ((uf) this).field_c.c((byte) 127);
-        int var7 = ((uf) this).field_c.c((byte) -28);
-        byte[] var11 = new byte[64];
-        if (param0 != 28742) {
-            return null;
-        }
-        ((uf) this).field_c.b(var11, 0, -64, 64);
-        cg var9 = new cg(param4, param2, param3, ((uf) this).field_m, ((uf) this).field_a, var6, var11, var7, param1);
-        ((uf) this).field_g[param4] = var9;
-        return var9;
     }
 
     uf(w param0, af param1) {

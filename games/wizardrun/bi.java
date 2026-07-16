@@ -38,17 +38,24 @@ final class bi {
             }
             try {
               L3: {
-                if (param2 != null) {
-                  param0.field_a.postEvent((java.awt.AWTEvent) (Object) new java.awt.event.ActionEvent(param2, 1001, "dummy"));
-                  break L3;
-                } else {
-                  break L3;
+                L4: {
+                  if (param2 != null) {
+                    param0.field_a.postEvent((java.awt.AWTEvent) (Object) new java.awt.event.ActionEvent(param2, 1001, "dummy"));
+                    break L4;
+                  } else {
+                    break L4;
+                  }
                 }
+                break L3;
               }
-            } catch (java.lang.Exception decompiledCaughtParameter) {
-              decompiledCaughtException = decompiledCaughtParameter;
+            } catch (java.lang.Exception decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              L5: {
+                var3 = (Exception) (Object) decompiledCaughtException;
+                break L5;
+              }
             }
-            var3 = (Exception) (Object) decompiledCaughtException;
+            return;
           }
         } else {
           return;
@@ -56,69 +63,37 @@ final class bi {
     }
 
     final static String a(int param0, int param1, byte[] param2, boolean param3) {
-        char[] var4 = null;
-        int var5 = 0;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
-        int var9 = 0;
-        Object var10 = null;
-        char[] var11 = null;
-        char[] var12 = null;
-        char[] var13 = null;
-        var9 = wizardrun.field_H;
-        var13 = new char[param1];
-        var12 = var13;
-        var11 = var12;
-        var4 = var11;
-        var5 = 0;
-        var6 = 0;
-        L0: while (true) {
-          if (var6 >= param1) {
-            L1: {
-              if (!param3) {
-                break L1;
-              } else {
-                var10 = null;
-                String discarded$1 = bi.a(11, 78, (byte[]) null, true);
-                break L1;
-              }
-            }
-            return new String(var13, 0, var5);
-          } else {
+        int var9 = wizardrun.field_H;
+        char[] var13 = new char[param1];
+        char[] var12 = var13;
+        char[] var11 = var12;
+        char[] var4 = var11;
+        int var5 = 0;
+        for (var6 = 0; var6 < param1; var6++) {
             var7 = 255 & param2[var6 + param0];
             if (0 != var7) {
-              L2: {
-                if (-129 < var7) {
-                  break L2;
-                } else {
-                  if (-161 > var7) {
-                    L3: {
-                      var8 = ki.field_G[var7 + -128];
-                      if (var8 == 0) {
-                        var8 = 63;
-                        break L3;
-                      } else {
-                        break L3;
-                      }
+                if (-129 >= (var7 ^ -1)) {
+                    if (!(-161 >= (var7 ^ -1))) {
+                        var8 = ki.field_G[var7 + -128];
+                        if (!(var8 != 0)) {
+                            var8 = 63;
+                        }
+                        var7 = var8;
                     }
-                    var7 = var8;
-                    break L2;
-                  } else {
-                    break L2;
-                  }
                 }
-              }
-              var5++;
-              var11[var5] = (char)var7;
-              var6++;
-              continue L0;
-            } else {
-              var6++;
-              continue L0;
+                int incrementValue$0 = var5;
+                var5++;
+                var11[incrementValue$0] = (char)var7;
             }
-          }
         }
+        if (param3) {
+            Object var10 = null;
+            String discarded$1 = bi.a(11, 78, (byte[]) null, true);
+        }
+        return new String(var13, 0, var5);
     }
 
     final static int a(byte[] param0, int param1, int param2) {

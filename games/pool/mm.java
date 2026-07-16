@@ -186,22 +186,34 @@ final class mm {
     }
 
     final static ie a(int param0, String param1) {
-        if (param1 != null) {
-            // ifeq L14
-        } else {
-            return hl.field_a;
+        int var2 = 0;
+        String var3 = null;
+        String var4 = null;
+        ie var5 = null;
+        L0: {
+          if (param1 == null) {
+            break L0;
+          } else {
+            if (param1.length() == 0) {
+              break L0;
+            } else {
+              var2 = param1.indexOf('@');
+              if (param0 == var2) {
+                return uj.field_e;
+              } else {
+                var3 = param1.substring(0, var2);
+                var4 = param1.substring(var2 - -1);
+                var5 = vl.a(7, var3);
+                if (var5 == null) {
+                  return jj.a(102, var4);
+                } else {
+                  return var5;
+                }
+              }
+            }
+          }
         }
-        int var2 = param1.indexOf('@');
-        if (!(param0 != var2)) {
-            return uj.field_e;
-        }
-        String var3 = param1.substring(0, var2);
-        String var4 = param1.substring(var2 - -1);
-        ie var5 = vl.a(7, var3);
-        if (var5 != null) {
-            return var5;
-        }
-        return jj.a(102, var4);
+        return hl.field_a;
     }
 
     final void a(int param0, mm param1) {

@@ -93,7 +93,6 @@ final class kw {
 
     final static void a(int param0, int param1) {
         hn var2 = null;
-        hn var2_ref = null;
         int var3 = 0;
         hn var4 = null;
         hn var5 = null;
@@ -102,15 +101,15 @@ final class kw {
         if (param0 < 104) {
           field_i = -30;
           L0: while (true) {
-            if (var2_ref == null) {
+            if (var2 == null) {
               var5 = new hn(5, new int[1]);
-              var2_ref = var5;
+              var2 = var5;
               ii.a(var5, 118);
               return;
             } else {
               L1: {
-                if (5 == var2_ref.field_i) {
-                  var2_ref.c((byte) -109);
+                if (5 == var2.field_i) {
+                  var2.c((byte) -109);
                   break L1;
                 } else {
                   break L1;
@@ -124,7 +123,7 @@ final class kw {
           L2: while (true) {
             if (var2 == null) {
               var4 = new hn(5, new int[1]);
-              var2_ref = var4;
+              var2 = var4;
               ii.a(var4, 118);
               return;
             } else {

@@ -37,7 +37,7 @@ final class di {
             if (param2 == 17259) {
               break L2;
             } else {
-              field_d = (rf) null;
+              field_d = null;
               break L2;
             }
           }
@@ -107,18 +107,32 @@ final class di {
 
     final int a(int param0, int param1) {
         int var3 = 0;
-        int var4 = Main.field_T;
-        if (((di) this).field_a != null) {
-            // if_icmpeq L24
-        } else {
-            return 0;
-        }
-        for (var3 = param0; var3 < ((di) this).field_a.length; var3++) {
-            if (!(param1 >= ((di) this).field_a[var3] + ((di) this).field_a[var3 - 1] >> -3679423)) {
-                return -1 + var3;
+        int var4 = 0;
+        L0: {
+          var4 = Main.field_T;
+          if (((di) this).field_a == null) {
+            break L0;
+          } else {
+            if (0 == ((di) this).field_a.length) {
+              break L0;
+            } else {
+              var3 = param0;
+              L1: while (true) {
+                if (var3 >= ((di) this).field_a.length) {
+                  return -1 + ((di) this).field_a.length;
+                } else {
+                  if (param1 < ((di) this).field_a[var3] + ((di) this).field_a[var3 - 1] >> -3679423) {
+                    return -1 + var3;
+                  } else {
+                    var3++;
+                    continue L1;
+                  }
+                }
+              }
             }
+          }
         }
-        return -1 + ((di) this).field_a.length;
+        return 0;
     }
 
     final static void a(wb param0, int param1, int param2, int param3, int param4, int param5) {
@@ -131,15 +145,15 @@ final class di {
         int var12 = 0;
         int var13 = 0;
         L0: {
-          var6 = ((wb) param0).field_f;
+          var6 = param0.field_f;
           var7 = 0;
           var8 = 65536 / var6;
-          param2 = param2 + ((wb) param0).field_h;
-          param5 = param5 + ((wb) param0).field_c;
-          var7 = var7 + ((wb) param0).field_c * var8;
+          param2 = param2 + param0.field_h;
+          param5 = param5 + param0.field_c;
+          var7 = var7 + param0.field_c * var8;
           var9 = 0;
-          var6 = ((wb) param0).field_b;
-          var10 = ((wb) param0).field_g;
+          var6 = param0.field_b;
+          var10 = param0.field_g;
           if (param2 >= vj.field_f) {
             break L0;
           } else {
@@ -163,7 +177,7 @@ final class di {
             var11 = -param5 + vj.field_h;
             var7 = var7 + var8 * var11;
             param5 = vj.field_h;
-            var9 = var9 + ((wb) param0).field_g * var11;
+            var9 = var9 + param0.field_g * var11;
             var6 = var6 - var11;
             break L2;
           } else {
@@ -180,13 +194,13 @@ final class di {
         }
         L4: {
           var11 = -var10 + vj.field_l;
-          var12 = -var10 + ((wb) param0).field_g;
+          var12 = -var10 + param0.field_g;
           var13 = param5 * vj.field_l + param2;
-          q.a(vj.field_j, (byte) 122, param3, var13, var6, var10, var8, var7, ((wb) param0).field_i, var9, var11, var12, param1);
+          q.a(vj.field_j, (byte) 122, param3, var13, var6, var10, var8, var7, param0.field_i, var9, var11, var12, param1);
           if (param4 == 13449) {
             break L4;
           } else {
-            field_d = (rf) null;
+            field_d = null;
             break L4;
           }
         }
@@ -199,7 +213,7 @@ final class di {
         ti.field_e = new fh();
         vb.field_h.c((lk) (Object) ti.field_e, (byte) 57);
         if (param0 != 1) {
-            wb var2 = (wb) null;
+            Object var2 = null;
             di.a((wb) null, -23, -72, 49, -91, 49);
         }
     }
@@ -250,7 +264,7 @@ final class di {
 
     final static boolean a(byte param0, w param1) {
         if (param0 >= -49) {
-            wb var3 = (wb) null;
+            Object var3 = null;
             di.a((wb) null, -19, -90, -105, -40, -114);
         }
         return 1 == param1.g(1, -1) ? true : false;

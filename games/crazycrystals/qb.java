@@ -1,6 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
+import java.lang.String;
+
 abstract class qb {
     static int field_a;
     static dl field_b;
@@ -12,7 +14,7 @@ abstract class qb {
         String var3 = null;
         int var4_int = 0;
         String var4 = null;
-        String var5 = null;
+        Object var5 = null;
         int var5_int = 0;
         int var6 = 0;
         int var7 = 0;
@@ -546,15 +548,15 @@ abstract class qb {
                       }
                       tb.a(stackIn_102_0, stackIn_102_1 != 0, stackIn_102_2, 488, sh.field_l);
                       var4 = uh.field_o;
-                      var5 = (String) (Object) li.field_a;
+                      var5 = (Object) (Object) li.field_a;
                       L23: while (true) {
                         L24: {
                           L25: {
                             L26: {
-                              if (null == ((nj) (Object) var5).field_n) {
+                              if (null == ((nj) var5).field_n) {
                                 break L26;
                               } else {
-                                var5 = (String) (Object) ((nj) (Object) var5).field_n;
+                                var5 = (Object) (Object) ((nj) var5).field_n;
                                 if (var11 != 0) {
                                   break L25;
                                 } else {
@@ -1120,13 +1122,13 @@ abstract class qb {
                 if (-20 != (uo.field_o ^ -1)) {
                   break L62;
                 } else {
-                  var5 = ci.a(new String[3], fb.field_e, 3);
+                  var5 = (Object) (Object) ci.a(new String[3], fb.field_e, 3);
                   break L62;
                 }
               }
               L63: {
                 if (39 == uo.field_o) {
-                  var5 = ci.a(new String[3], fb.field_e, 3);
+                  var5 = (Object) (Object) ci.a(new String[3], fb.field_e, 3);
                   break L63;
                 } else {
                   break L63;
@@ -1136,13 +1138,13 @@ abstract class qb {
                 if (uo.field_o != 59) {
                   break L64;
                 } else {
-                  var5 = ci.a(new String[2], of.field_G, 3);
+                  var5 = (Object) (Object) ci.a(new String[2], of.field_G, 3);
                   break L64;
                 }
               }
               L65: {
                 if (69 == uo.field_o) {
-                  var5 = jn.field_n;
+                  var5 = (Object) (Object) jn.field_n;
                   break L65;
                 } else {
                   break L65;
@@ -1151,7 +1153,7 @@ abstract class qb {
               if (var5 == null) {
                 break L45;
               } else {
-                int discarded$5 = go.field_l.a(var5, 486, 54, 148, 114, 16760896, -1, 1, 1, 20);
+                int discarded$5 = go.field_l.a((String) var5, 486, 54, 148, 114, 16760896, -1, 1, 1, 20);
                 break L45;
               }
             } else {

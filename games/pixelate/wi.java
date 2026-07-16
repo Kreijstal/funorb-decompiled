@@ -315,64 +315,64 @@ final class wi {
         var5 = Pixelate.field_H ? 1 : 0;
         if (param0 == 0) {
           bg.a(((wi) this).field_l, param1, param2 ^ -31541);
-          if (param2 != 7490) {
-            boolean discarded$7 = this.a(67, true, 49);
+          if (param2 == 7490) {
             return true;
           } else {
+            boolean discarded$7 = this.a(67, true, 49);
             return true;
           }
         } else {
-          if (-2 == param0) {
+          if (-2 == (param0 ^ -1)) {
             pe.a(7, param1, ((wi) this).field_l);
-            if (param2 != 7490) {
-              boolean discarded$8 = this.a(67, true, 49);
+            if (param2 == 7490) {
               return true;
             } else {
+              boolean discarded$8 = this.a(67, true, 49);
               return true;
             }
           } else {
-            if (-3 == param0) {
+            if (-3 == (param0 ^ -1)) {
               wi.b(param1, param2 ^ -7903, ((wi) this).field_m);
-              if (param2 != 7490) {
-                boolean discarded$9 = this.a(67, true, 49);
+              if (param2 == 7490) {
                 return true;
               } else {
+                boolean discarded$9 = this.a(67, true, 49);
                 return true;
               }
             } else {
               if ((param0 ^ -1) == -4) {
                 qg.a(((wi) this).field_m, param1, false);
-                if (param2 == 7490) {
+                if (param2 != 7490) {
+                  boolean discarded$10 = this.a(67, true, 49);
                   return true;
                 } else {
-                  boolean discarded$10 = this.a(67, true, 49);
                   return true;
                 }
               } else {
                 if ((param0 ^ -1) == -11) {
                   qj.a(false, ((wi) this).field_m, param1);
-                  if (param2 == 7490) {
+                  if (param2 != 7490) {
+                    boolean discarded$11 = this.a(67, true, 49);
                     return true;
                   } else {
-                    boolean discarded$11 = this.a(67, true, 49);
                     return true;
                   }
                 } else {
                   if ((param0 ^ -1) == -16) {
                     df.a(param2 ^ 7489, ((wi) this).field_m, param1);
-                    if (param2 != 7490) {
-                      boolean discarded$12 = this.a(67, true, 49);
+                    if (param2 == 7490) {
                       return true;
                     } else {
+                      boolean discarded$12 = this.a(67, true, 49);
                       return true;
                     }
                   } else {
                     if ((param0 ^ -1) == -17) {
                       df.a(3, 0, param1);
-                      if (param2 != 7490) {
-                        boolean discarded$13 = this.a(67, true, 49);
+                      if (param2 == 7490) {
                         return true;
                       } else {
+                        boolean discarded$13 = this.a(67, true, 49);
                         return true;
                       }
                     } else {
@@ -661,11 +661,11 @@ final class wi {
           } else {
             L0: {
               ((wi) this).field_k = param1.field_j;
-              if (-1 != param1.field_j) {
+              if (-1 != (param1.field_j ^ -1)) {
                 break L0;
               } else {
                 L1: {
-                  if (-1 == io.field_e) {
+                  if (-1 == (io.field_e ^ -1)) {
                     ((wi) this).field_b.a(gd.field_j, (byte) -31, 12);
                     break L1;
                   } else {
@@ -679,7 +679,9 @@ final class wi {
             if (1 == param1.field_j) {
               if (0 != gh.field_v) {
                 ((wi) this).field_b.a(ec.field_n, (byte) -106, 13);
-                if (2 == param1.field_j) {
+                if (2 != param1.field_j) {
+                  return;
+                } else {
                   if (0 != ib.field_e) {
                     ((wi) this).field_b.a(sf.field_a, (byte) -62, 13);
                     return;
@@ -688,13 +690,13 @@ final class wi {
                     ((wi) this).field_b.a(sf.field_a, (byte) -62, 13);
                     return;
                   }
-                } else {
-                  return;
                 }
               } else {
                 ((wi) this).field_b.a(m.field_l, (byte) -97, 12);
                 ((wi) this).field_b.a(ec.field_n, (byte) -106, 13);
-                if (2 == param1.field_j) {
+                if (2 != param1.field_j) {
+                  return;
+                } else {
                   if (0 != ib.field_e) {
                     ((wi) this).field_b.a(sf.field_a, (byte) -62, 13);
                     return;
@@ -703,12 +705,12 @@ final class wi {
                     ((wi) this).field_b.a(sf.field_a, (byte) -62, 13);
                     return;
                   }
-                } else {
-                  return;
                 }
               }
             } else {
-              if (2 == param1.field_j) {
+              if (2 != param1.field_j) {
+                return;
+              } else {
                 if (0 != ib.field_e) {
                   ((wi) this).field_b.a(sf.field_a, (byte) -62, 13);
                   return;
@@ -717,8 +719,6 @@ final class wi {
                   ((wi) this).field_b.a(sf.field_a, (byte) -62, 13);
                   return;
                 }
-              } else {
-                return;
               }
             }
           }
@@ -729,11 +729,11 @@ final class wi {
           } else {
             L2: {
               ((wi) this).field_k = param1.field_j;
-              if (-1 != param1.field_j) {
+              if (-1 != (param1.field_j ^ -1)) {
                 break L2;
               } else {
                 L3: {
-                  if (-1 == io.field_e) {
+                  if (-1 == (io.field_e ^ -1)) {
                     ((wi) this).field_b.a(gd.field_j, (byte) -31, 12);
                     break L3;
                   } else {
@@ -747,7 +747,9 @@ final class wi {
             if (1 == param1.field_j) {
               if (0 != gh.field_v) {
                 ((wi) this).field_b.a(ec.field_n, (byte) -106, 13);
-                if (2 == param1.field_j) {
+                if (2 != param1.field_j) {
+                  return;
+                } else {
                   if (0 != ib.field_e) {
                     ((wi) this).field_b.a(sf.field_a, (byte) -62, 13);
                     return;
@@ -756,13 +758,13 @@ final class wi {
                     ((wi) this).field_b.a(sf.field_a, (byte) -62, 13);
                     return;
                   }
-                } else {
-                  return;
                 }
               } else {
                 ((wi) this).field_b.a(m.field_l, (byte) -97, 12);
                 ((wi) this).field_b.a(ec.field_n, (byte) -106, 13);
-                if (2 == param1.field_j) {
+                if (2 != param1.field_j) {
+                  return;
+                } else {
                   if (0 != ib.field_e) {
                     ((wi) this).field_b.a(sf.field_a, (byte) -62, 13);
                     return;
@@ -771,12 +773,12 @@ final class wi {
                     ((wi) this).field_b.a(sf.field_a, (byte) -62, 13);
                     return;
                   }
-                } else {
-                  return;
                 }
               }
             } else {
-              if (2 == param1.field_j) {
+              if (2 != param1.field_j) {
+                return;
+              } else {
                 if (0 != ib.field_e) {
                   ((wi) this).field_b.a(sf.field_a, (byte) -62, 13);
                   return;
@@ -785,8 +787,6 @@ final class wi {
                   ((wi) this).field_b.a(sf.field_a, (byte) -62, 13);
                   return;
                 }
-              } else {
-                return;
               }
             }
           }

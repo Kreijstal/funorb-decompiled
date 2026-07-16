@@ -7,80 +7,65 @@ class bd extends ij {
     static volatile long field_m;
 
     final static void a(byte param0, boolean param1) {
-        int var2 = 0;
         int var3 = 0;
-        L0: {
-          uo.field_o = uo.field_o + 1;
-          var2 = rc.field_a.size();
-          if (jo.field_o != -2) {
-            break L0;
-          } else {
-            if (-1 != mo.field_l) {
-              var3 = ke.field_b[jo.field_o] + 1;
-              if (var2 > var3) {
-                var2 = var3;
-                break L0;
-              } else {
-                if (var2 > uo.field_o) {
-                  fl.field_g = fp.field_a;
-                  sb.field_F = b.field_a;
-                  sm.field_e = we.field_h;
-                  nh.field_F = je.field_j;
-                  ll.a(-105, true, param1);
-                  ue.field_c = true;
-                  return;
-                } else {
-                  uh.field_n = true;
-                  if (param0 != 35) {
+        uo.field_o = uo.field_o + 1;
+        int var2 = rc.field_a.size();
+        if ((jo.field_o ^ -1) == -2) {
+            if (-1 == (mo.field_l ^ -1)) {
+                var2 = 15;
+                if (!(var2 <= uo.field_o)) {
+                    fl.field_g = fp.field_a;
+                    sb.field_F = b.field_a;
+                    sm.field_e = we.field_h;
+                    nh.field_F = je.field_j;
+                    ll.a(-105, true, param1);
+                    ue.field_c = true;
                     return;
-                  } else {
-                    go.field_i = true;
-                    uo.field_o = uo.field_o - 1;
-                    return;
-                  }
                 }
-              }
-            } else {
-              var2 = 15;
-              if (var2 > uo.field_o) {
-                fl.field_g = fp.field_a;
-                sb.field_F = b.field_a;
-                sm.field_e = we.field_h;
-                nh.field_F = je.field_j;
-                ll.a(-105, true, param1);
-                ue.field_c = true;
-                return;
-              } else {
                 uh.field_n = true;
                 if (param0 != 35) {
-                  return;
-                } else {
-                  go.field_i = true;
-                  uo.field_o = uo.field_o - 1;
-                  return;
+                    return;
                 }
-              }
+                go.field_i = true;
+                uo.field_o = uo.field_o - 1;
+                return;
             }
-          }
+            var3 = ke.field_b[jo.field_o] + 1;
+            if (var2 <= var3) {
+                if (!(var2 <= uo.field_o)) {
+                    fl.field_g = fp.field_a;
+                    sb.field_F = b.field_a;
+                    sm.field_e = we.field_h;
+                    nh.field_F = je.field_j;
+                    ll.a(-105, true, param1);
+                    ue.field_c = true;
+                    return;
+                }
+                uh.field_n = true;
+                if (param0 != 35) {
+                    return;
+                }
+                go.field_i = true;
+                uo.field_o = uo.field_o - 1;
+                return;
+            }
+            var2 = var3;
         }
-        if (var2 > uo.field_o) {
-          fl.field_g = fp.field_a;
-          sb.field_F = b.field_a;
-          sm.field_e = we.field_h;
-          nh.field_F = je.field_j;
-          ll.a(-105, true, param1);
-          ue.field_c = true;
-          return;
-        } else {
-          uh.field_n = true;
-          if (param0 != 35) {
+        if (!(var2 <= uo.field_o)) {
+            fl.field_g = fp.field_a;
+            sb.field_F = b.field_a;
+            sm.field_e = we.field_h;
+            nh.field_F = je.field_j;
+            ll.a(-105, true, param1);
+            ue.field_c = true;
             return;
-          } else {
-            go.field_i = true;
-            uo.field_o = uo.field_o - 1;
-            return;
-          }
         }
+        uh.field_n = true;
+        if (param0 != 35) {
+            return;
+        }
+        go.field_i = true;
+        uo.field_o = uo.field_o - 1;
     }
 
     public static void e(int param0) {

@@ -35,7 +35,7 @@ final class eg extends in {
     final static void a(int param0, int param1, boolean param2) {
         gh var3 = null;
         dj var4 = null;
-        String var5_ref = null;
+        String var5_ref_String = null;
         int var5 = 0;
         int var6 = 0;
         var3 = gk.a((byte) -100, param0, param2);
@@ -47,8 +47,8 @@ final class eg extends in {
             } else {
               md.field_e.a(false, (byte) -99);
               var4 = md.field_e;
-              var5_ref = hm.field_a;
-              var4.field_a.a(1, var5_ref, 5);
+              var5_ref_String = hm.field_a;
+              var4.field_a.a(1, var5_ref_String, 5);
               var4 = md.field_e;
               var5 = ii.field_b;
               var6 = a.field_y;
@@ -65,8 +65,8 @@ final class eg extends in {
             } else {
               md.field_e.a(false, (byte) -99);
               var4 = md.field_e;
-              var5_ref = hm.field_a;
-              var4.field_a.a(1, var5_ref, 5);
+              var5_ref_String = hm.field_a;
+              var4.field_a.a(1, var5_ref_String, 5);
               var4 = md.field_e;
               var5 = ii.field_b;
               var6 = a.field_y;
@@ -903,43 +903,26 @@ final class eg extends in {
             gd var6 = null;
             wf var6_ref = null;
             wf stackIn_2_0 = null;
+            Throwable decompiledCaughtException = null;
             wf stackOut_1_0 = null;
-            int statePc = 0;
-            Throwable caughtException = null;
-            stateLoop: while (true) {
-                switch (statePc) {
-                    case 0: {
-                        var4 = -32 % ((param3 - -6) / 37);
-                        statePc = 1;
-                        continue stateLoop;
-                    }
-                    case 1: {
-                        try {
-                            var5_ref = Class.forName("n");
-                            var6_ref = (wf) var5_ref.newInstance();
-                            var6_ref.a(param2, param1, (byte) -56, param0);
-                            stackOut_1_0 = (wf) var6_ref;
-                            stackIn_2_0 = stackOut_1_0;
-                            statePc = 2;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_1) {
-                            caughtException = stateCaught_1;
-                            statePc = 3;
-                            continue stateLoop;
-                        }
-                    }
-                    case 2: {
-                        return stackIn_2_0;
-                    }
-                    case 3: {
-                        var5 = caughtException;
-                        var6 = new gd();
-                        ((wf) (Object) var6).a(param2, param1, (byte) -66, param0);
-                        return (wf) (Object) var6;
-                    }
-                    default: throw new IllegalStateException("invalid CFG state " + statePc);
-                }
+            var4 = -32 % ((param3 - -6) / 37);
+            try {
+              L0: {
+                var5_ref = Class.forName("n");
+                var6_ref = (wf) var5_ref.newInstance();
+                var6_ref.a(param2, param1, (byte) -56, param0);
+                stackOut_1_0 = (wf) var6_ref;
+                stackIn_2_0 = stackOut_1_0;
+                break L0;
+              }
+            } catch (java.lang.Throwable decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              var5 = decompiledCaughtException;
+              var6 = new gd();
+              ((wf) (Object) var6).a(param2, param1, (byte) -66, param0);
+              return (wf) (Object) var6;
             }
+            return stackIn_2_0;
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {

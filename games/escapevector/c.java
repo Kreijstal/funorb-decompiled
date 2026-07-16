@@ -23,8 +23,9 @@ final class c extends n {
             if (param2 <= var5) {
               return;
             } else {
+              int fieldTemp$2 = ((c) this).field_m;
               ((c) this).field_m = ((c) this).field_m + 1;
-              param0[param3 + var5] = (byte)(((c) this).field_g[((c) this).field_m] + -((c) this).field_s.a(1736563940));
+              param0[param3 + var5] = (byte)(((c) this).field_g[fieldTemp$2] + -((c) this).field_s.a(1736563940));
               var5++;
               continue L0;
             }
@@ -76,8 +77,9 @@ final class c extends n {
         if (!param1) {
           return;
         } else {
+          int fieldTemp$2 = ((c) this).field_m;
           ((c) this).field_m = ((c) this).field_m + 1;
-          ((c) this).field_g[((c) this).field_m] = (byte)(((c) this).field_s.a(1736563940) + param0);
+          ((c) this).field_g[fieldTemp$2] = (byte)(((c) this).field_s.a(1736563940) + param0);
           return;
         }
     }
@@ -98,8 +100,9 @@ final class c extends n {
             }
           } else {
             var1.a(8, true);
+            int fieldTemp$2 = var1.field_m + 1;
             var1.field_m = var1.field_m + 1;
-            var2 = var1.field_m + 1;
+            var2 = fieldTemp$2;
             mf.a(param0 ^ -25858, var1);
             om.field_c.e(82, var1.field_m + -var2);
             continue L0;
@@ -121,11 +124,13 @@ final class c extends n {
     final int k(int param0) {
         if (param0 != 8) {
           field_u = false;
+          int fieldTemp$4 = ((c) this).field_m;
           ((c) this).field_m = ((c) this).field_m + 1;
-          return 255 & ((c) this).field_g[((c) this).field_m] + -((c) this).field_s.a(1736563940);
+          return 255 & ((c) this).field_g[fieldTemp$4] + -((c) this).field_s.a(1736563940);
         } else {
+          int fieldTemp$5 = ((c) this).field_m;
           ((c) this).field_m = ((c) this).field_m + 1;
-          return 255 & ((c) this).field_g[((c) this).field_m] + -((c) this).field_s.a(1736563940);
+          return 255 & ((c) this).field_g[fieldTemp$5] + -((c) this).field_s.a(1736563940);
         }
     }
 
@@ -136,8 +141,9 @@ final class c extends n {
         ((c) this).field_r = ((c) this).field_r + param0;
         int var5 = 0;
         while (var4 < param0) {
+            int incrementValue$0 = var3;
             var3++;
-            var5 = var5 + ((((c) this).field_g[var3] & ol.field_ab[var4]) << -var4 + param0);
+            var5 = var5 + ((((c) this).field_g[incrementValue$0] & ol.field_ab[var4]) << -var4 + param0);
             param0 = param0 - var4;
             var4 = 8;
         }

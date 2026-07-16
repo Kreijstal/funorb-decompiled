@@ -170,38 +170,65 @@ abstract class ne {
     }
 
     final int a(int param0, int param1, byte param2) {
+        int var4 = 0;
         int var5 = 0;
         pi var6 = null;
         int var7 = 0;
-        int var8 = fleas.field_A ? 1 : 0;
-        if (null != ((ne) this).field_c) {
-            // ifeq L37
-            // if_icmpgt L37
-        } else {
-            return -1;
-        }
-        if (!(((ne) this).field_c[-1 + ((ne) this).field_c.length].field_c >= param1)) {
-            return -1;
-        }
-        if ((((ne) this).field_c.length ^ -1) == -2) {
-            return ((ne) this).field_c[0].a(6759, param0);
-        }
-        int var4 = 0;
-        if (param2 >= -104) {
-            return -97;
-        }
-        for (var5 = 0; var5 < ((ne) this).field_c.length; var5++) {
-            var6 = ((ne) this).field_c[var5];
-            if (var6.field_a <= param1) {
-                if (param1 <= var6.field_c) {
-                    var7 = var6.a(6759, param0);
-                    if ((var7 ^ -1) == 0) {
-                        return -1;
+        int var8 = 0;
+        L0: {
+          var8 = fleas.field_A ? 1 : 0;
+          if (null == ((ne) this).field_c) {
+            break L0;
+          } else {
+            if (((ne) this).field_c.length == 0) {
+              break L0;
+            } else {
+              if (((ne) this).field_c[0].field_a > param1) {
+                break L0;
+              } else {
+                if (((ne) this).field_c[-1 + ((ne) this).field_c.length].field_c < param1) {
+                  return -1;
+                } else {
+                  if ((((ne) this).field_c.length ^ -1) != -2) {
+                    var4 = 0;
+                    if (param2 < -104) {
+                      var5 = 0;
+                      L1: while (true) {
+                        if (var5 >= ((ne) this).field_c.length) {
+                          return -1;
+                        } else {
+                          L2: {
+                            var6 = ((ne) this).field_c[var5];
+                            if (var6.field_a > param1) {
+                              break L2;
+                            } else {
+                              if (param1 > var6.field_c) {
+                                break L2;
+                              } else {
+                                var7 = var6.a(6759, param0);
+                                if ((var7 ^ -1) != 0) {
+                                  return var4 - -var7;
+                                } else {
+                                  return -1;
+                                }
+                              }
+                            }
+                          }
+                          var4 = var4 + (-1 + var6.field_d.length);
+                          var5++;
+                          continue L1;
+                        }
+                      }
+                    } else {
+                      return -97;
                     }
-                    return var4 - -var7;
+                  } else {
+                    return ((ne) this).field_c[0].a(6759, param0);
+                  }
                 }
+              }
             }
-            var4 = var4 + (-1 + var6.field_d.length);
+          }
         }
         return -1;
     }

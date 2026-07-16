@@ -18,7 +18,7 @@ final class t {
         field_f = null;
         field_j = null;
         if (param0 != 0) {
-            field_j = (ek) null;
+            field_j = null;
             field_e = null;
             return;
         }
@@ -99,7 +99,7 @@ final class t {
             return;
         }
         ri.field_c = rd.field_j.c(false);
-        CharSequence var2 = (CharSequence) ri.field_c;
+        CharSequence var2 = (CharSequence) (Object) ri.field_c;
         aa.field_fb = ff.a((byte) 116, var2);
     }
 

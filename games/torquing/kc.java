@@ -104,7 +104,7 @@ final class kc extends am {
                 var3 = 1;
                 L2: while (true) {
                   L3: {
-                    if (((kc) this).field_s.length - 1 <= var3) {
+                    if ((((kc) this).field_s.length - 1 ^ -1) >= (var3 ^ -1)) {
                       break L3;
                     } else {
                       if (((kc) this).field_s[var3][0] <= var4) {
@@ -164,10 +164,10 @@ final class kc extends am {
                   var3 = 1;
                   L7: while (true) {
                     L8: {
-                      if (((kc) this).field_s.length - 1 <= var3) {
+                      if ((((kc) this).field_s.length - 1 ^ -1) >= (var3 ^ -1)) {
                         break L8;
                       } else {
-                        if (var4 < ((kc) this).field_s[var3][0]) {
+                        if ((var4 ^ -1) > (((kc) this).field_s[var3][0] ^ -1)) {
                           break L8;
                         } else {
                           var3++;
@@ -182,7 +182,7 @@ final class kc extends am {
                       var8 = 4096 - de.field_d[(var7 & 8167) >> -2145922011] >> 631575329;
                       var9 = -var8 + 4096;
                       var10 = var24[1] * var9 - -(var8 * var35[1]) >> -629174964;
-                      if (32767 > var10) {
+                      if (32767 > (var10 ^ -1)) {
                         break L9;
                       } else {
                         var10 = -32767;
@@ -190,7 +190,7 @@ final class kc extends am {
                       }
                     }
                     L10: {
-                      if (-32769 > var10) {
+                      if (-32769 < (var10 ^ -1)) {
                         break L10;
                       } else {
                         var10 = 32767;
@@ -213,10 +213,10 @@ final class kc extends am {
                   var3 = 1;
                   L12: while (true) {
                     L13: {
-                      if (var3 >= -1 + ((kc) this).field_s.length) {
+                      if ((var3 ^ -1) <= (-1 + ((kc) this).field_s.length ^ -1)) {
                         break L13;
                       } else {
-                        if (((kc) this).field_s[var3][0] > var4) {
+                        if ((((kc) this).field_s[var3][0] ^ -1) < (var4 ^ -1)) {
                           break L13;
                         } else {
                           var3++;
@@ -278,10 +278,10 @@ final class kc extends am {
             var5 = ((kc) this).b(0, 0, param1);
             for (var6 = 0; var6 < ci.field_c; var6++) {
                 var4 = var5[var6] >> 177150276;
-                if (-1 < var4) {
+                if (-1 < (var4 ^ -1)) {
                     var4 = 0;
                 }
-                if (!(-257 >= var4)) {
+                if (!(-257 <= (var4 ^ -1))) {
                     var4 = 256;
                 }
                 var8[var6] = ((kc) this).field_t[var4];
@@ -331,8 +331,9 @@ final class kc extends am {
         for (var7 = 0; var7 < var3; var7++) {
             for (var8 = var6; param1.charAt(var8) != param0; var8++) {
             }
+            int incrementValue$0 = var5;
             var5++;
-            var4[var5] = param1.substring(var6, var8);
+            var4[incrementValue$0] = param1.substring(var6, var8);
             var6 = var8 - -1;
         }
         var4[var3] = param1.substring(var6);

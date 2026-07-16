@@ -327,8 +327,7 @@ final class ci extends lc implements gl, rc {
                 break L6;
               }
             }
-            new wd(stackIn_17_3, (sk) null);
-            ((ci) this).field_K = stackIn_17_1;
+            ((ci) this).field_K = new wd(stackIn_17_3, (sk) null);
             if (!((ci) this).field_C) {
               break L5;
             } else {
@@ -407,11 +406,13 @@ final class ci extends lc implements gl, rc {
           }
         }
         L13: {
-          var12 = new hb(10, ((ci) this).field_i, ((ci) this).field_k + -20, 25, (lk) (Object) ((ci) this).field_I, false, 80, 3, var7, 16777215, var8);
-          ((ci) this).b((lk) (Object) new hb(10, ((ci) this).field_i, ((ci) this).field_k + -20, 25, (lk) (Object) ((ci) this).field_I, false, 80, 3, var7, 16777215, var8), true);
+          hb dupTemp$2 = new hb(10, ((ci) this).field_i, ((ci) this).field_k + -20, 25, (lk) (Object) ((ci) this).field_I, false, 80, 3, var7, 16777215, var8);
+          var12 = dupTemp$2;
+          ((ci) this).b((lk) (Object) dupTemp$2, true);
           ((ci) this).field_i = ((ci) this).field_i + (5 + ((lk) (Object) var12).field_m);
-          var13 = new hb(10, ((ci) this).field_i, -20 + ((ci) this).field_k, 25, (lk) (Object) ((ci) this).field_z, false, 80, 3, var7, 16777215, ae.field_d);
-          ((ci) this).b((lk) (Object) new hb(10, ((ci) this).field_i, -20 + ((ci) this).field_k, 25, (lk) (Object) ((ci) this).field_z, false, 80, 3, var7, 16777215, ae.field_d), true);
+          hb dupTemp$3 = new hb(10, ((ci) this).field_i, -20 + ((ci) this).field_k, 25, (lk) (Object) ((ci) this).field_z, false, 80, 3, var7, 16777215, ae.field_d);
+          var13 = dupTemp$3;
+          ((ci) this).b((lk) (Object) dupTemp$3, true);
           ((ci) this).field_D.field_n = (sk) this;
           ((ci) this).field_i = ((ci) this).field_i + (5 + ((lk) (Object) var13).field_m);
           if (((ci) this).field_H == null) {

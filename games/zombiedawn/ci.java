@@ -39,22 +39,41 @@ final class ci {
 
     final void a(byte[] param0, de param1, int param2) {
         try {
-            if (param1.field_h[param1.field_j] == 31) {
-                // if_icmpne L45
-            } else {
-                throw new RuntimeException("");
+            Exception exception = null;
+            Throwable decompiledCaughtException = null;
+            L0: {
+              if (param1.field_h[param1.field_j] != 31) {
+                break L0;
+              } else {
+                if (param1.field_h[1 + param1.field_j] != -117) {
+                  break L0;
+                } else {
+                  L1: {
+                    if (null != ((ci) this).field_e) {
+                      break L1;
+                    } else {
+                      ((ci) this).field_e = new java.util.zip.Inflater(true);
+                      break L1;
+                    }
+                  }
+                  try {
+                    L2: {
+                      ((ci) this).field_e.setInput(param1.field_h, param1.field_j - -10, param1.field_h.length + param2 + -param1.field_j + -10);
+                      int discarded$2 = ((ci) this).field_e.inflate(param0);
+                      break L2;
+                    }
+                  } catch (java.lang.Exception decompiledCaughtParameter0) {
+                    decompiledCaughtException = decompiledCaughtParameter0;
+                    exception = (Exception) (Object) decompiledCaughtException;
+                    ((ci) this).field_e.reset();
+                    throw new RuntimeException("");
+                  }
+                  ((ci) this).field_e.reset();
+                  return;
+                }
+              }
             }
-            if (null == ((ci) this).field_e) {
-                ((ci) this).field_e = new java.util.zip.Inflater(true);
-            }
-            try {
-                ((ci) this).field_e.setInput(param1.field_h, param1.field_j - -10, param1.field_h.length + param2 + -param1.field_j + -10);
-                int discarded$0 = ((ci) this).field_e.inflate(param0);
-            } catch (Exception exception) {
-                ((ci) this).field_e.reset();
-                throw new RuntimeException("");
-            }
-            ((ci) this).field_e.reset();
+            throw new RuntimeException("");
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
@@ -80,6 +99,7 @@ final class ci {
         var1 = 0;
         L0: while (true) {
           if (256 <= var1) {
+            return;
           } else {
             var0 = var1;
             var2 = 0;

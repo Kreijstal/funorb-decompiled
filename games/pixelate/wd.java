@@ -19,8 +19,8 @@ final class wd {
         if (param0 <= 102) {
             return 73;
         }
-        while (-2 > param1) {
-            if (-1 != (param1 & 1)) {
+        while (-2 > (param1 ^ -1)) {
+            if (-1 != (param1 & 1 ^ -1)) {
                 var3 = var3 * param2;
             }
             param2 = param2 * param2;
@@ -33,18 +33,31 @@ final class wd {
     }
 
     final void a(byte param0, int param1) {
-        if ((param1 ^ -1) <= -1) {
-            // if_icmpgt L18
-        } else {
-            throw new ArrayIndexOutOfBoundsException(param1);
+        L0: {
+          if ((param1 ^ -1) > -1) {
+            break L0;
+          } else {
+            if (param1 > ((wd) this).field_a) {
+              break L0;
+            } else {
+              if (param0 == -84) {
+                L1: {
+                  if (((wd) this).field_a == param1) {
+                    break L1;
+                  } else {
+                    qb.a(((wd) this).field_j, 1 + param1, ((wd) this).field_j, param1, -param1 + ((wd) this).field_a);
+                    break L1;
+                  }
+                }
+                ((wd) this).field_a = ((wd) this).field_a - 1;
+                return;
+              } else {
+                return;
+              }
+            }
+          }
         }
-        if (param0 != -84) {
-            return;
-        }
-        if (((wd) this).field_a != param1) {
-            qb.a(((wd) this).field_j, 1 + param1, ((wd) this).field_j, param1, -param1 + ((wd) this).field_a);
-        }
-        ((wd) this).field_a = ((wd) this).field_a - 1;
+        throw new ArrayIndexOutOfBoundsException(param1);
     }
 
     private final void a(int param0, byte param1, int param2) {
@@ -103,10 +116,12 @@ final class wd {
                 continue L1;
               } else {
                 if (param0[param5] == 16711935) {
+                  int incrementValue$2 = param6;
                   param6++;
-                  var10 = param9[param6] & 255;
+                  var10 = param9[incrementValue$2] & 255;
+                  int incrementValue$3 = param5;
                   param5++;
-                  param0[param5] = bq.a(cm.a(var10 * cm.a(param2, 16711935) >> 2001675816, 16711935), cm.a(16711802, var10 * cm.a(param2, 65280)) >> -369981912);
+                  param0[incrementValue$3] = bq.a(cm.a(var10 * cm.a(param2, 16711935) >> 2001675816, 16711935), cm.a(16711802, var10 * cm.a(param2, 65280)) >> -369981912);
                   continue L2;
                 } else {
                   param6++;
@@ -130,7 +145,7 @@ final class wd {
             var4.field_nb = 0;
             var4.field_S = 0;
             var5 = (ak) (Object) param0.field_L.f(1504642273);
-            ak var5_ref = var5;
+            var5 = var5;
         }
         param0.field_wb = 0;
         if (param1) {

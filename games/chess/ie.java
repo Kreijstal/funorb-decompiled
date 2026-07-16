@@ -112,20 +112,20 @@ final class ie {
     }
 
     final static void a(boolean param0, byte param1, int param2) {
-        dh var4_ref = null;
-        String var5_ref = null;
+        dh var4_ref_dh = null;
+        String var5_ref_String = null;
         int var5 = 0;
         int var6 = 0;
         ve var3 = ca.a(param0, param2, -128);
         if (!(var3 == null)) {
             pi.field_d.a(0, false);
-            var4_ref = pi.field_d;
-            var5_ref = ef.field_m;
-            var4_ref.field_b.a((byte) -12, var5_ref, 5);
-            var4_ref = pi.field_d;
+            var4_ref_dh = pi.field_d;
+            var5_ref_String = ef.field_m;
+            var4_ref_dh.field_b.a((byte) -12, var5_ref_String, 5);
+            var4_ref_dh = pi.field_d;
             var5 = re.field_m;
             var6 = ag.field_f;
-            var4_ref.field_b.a(true, var5, 0, var6, 0);
+            var4_ref_dh.field_b.a(true, var5, 0, var6, 0);
         }
         int var4 = 89 / ((param1 - -25) / 46);
         vc.a((byte) 68, param0, param2);

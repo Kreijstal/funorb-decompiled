@@ -72,8 +72,8 @@ final class ch extends gn {
               StringBuilder discarded$12 = var3.append(" cross");
               break L0;
             } else {
-              if (((ch) this).field_t != -4) {
-                if (-2 != ((ch) this).field_t) {
+              if ((((ch) this).field_t ^ -1) != -4) {
+                if (-2 != (((ch) this).field_t ^ -1)) {
                   StringBuilder discarded$13 = var3.append(" invalid_goaltype/" + ((ch) this).field_t);
                   break L0;
                 } else {

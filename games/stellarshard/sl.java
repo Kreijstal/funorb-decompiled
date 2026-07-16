@@ -60,155 +60,84 @@ final class sl {
         byte[] var16 = null;
         byte[] var17 = null;
         byte[] var18 = null;
-        int statePc = 0;
-        Throwable caughtException = null;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    var10 = new ka(param1);
-                    var3 = var10.f(4);
-                    if (param0 < -57) {
-                        statePc = 2;
-                    } else {
-                        statePc = 1;
-                    }
-                    continue stateLoop;
+        Throwable decompiledCaughtException = null;
+        L0: {
+          var10 = new ka(param1);
+          var3 = var10.f(4);
+          if (param0 < -57) {
+            break L0;
+          } else {
+            var9 = null;
+            sl.a((String) null, 44, (byte) -44, (String[]) null);
+            break L0;
+          }
+        }
+        L1: {
+          var4 = var10.b(false);
+          if (-1 < (var4 ^ -1)) {
+            break L1;
+          } else {
+            L2: {
+              if (0 == of.field_B) {
+                break L2;
+              } else {
+                if (var4 <= of.field_B) {
+                  break L2;
+                } else {
+                  break L1;
                 }
-                case 1: {
-                    var9 = null;
-                    sl.a((String) null, 44, (byte) -44, (String[]) null);
-                    statePc = 2;
-                    continue stateLoop;
-                }
-                case 2: {
-                    var4 = var10.b(false);
-                    if (-1 < (var4 ^ -1)) {
-                        statePc = 6;
-                    } else {
-                        statePc = 3;
-                    }
-                    continue stateLoop;
-                }
-                case 3: {
-                    if (0 == of.field_B) {
-                        statePc = 7;
-                    } else {
-                        statePc = 4;
-                    }
-                    continue stateLoop;
-                }
-                case 4: {
-                    if (var4 <= of.field_B) {
-                        statePc = 7;
-                    } else {
-                        statePc = 6;
-                    }
-                    continue stateLoop;
-                }
-                case 6: {
-                    throw new RuntimeException();
-                }
-                case 7: {
-                    if (var3 != 0) {
-                        statePc = 9;
-                    } else {
-                        statePc = 8;
-                    }
-                    continue stateLoop;
-                }
-                case 8: {
-                    var17 = new byte[var4];
-                    var15 = var17;
-                    var13 = var15;
-                    var11 = var13;
-                    var5_ref_byte__ = var11;
-                    var10.a(0, (byte) -118, var4, var17);
-                    return var5_ref_byte__;
-                }
-                case 9: {
-                    var5 = var10.b(false);
-                    if (var5 < 0) {
-                        statePc = 13;
-                    } else {
-                        statePc = 10;
-                    }
-                    continue stateLoop;
-                }
-                case 10: {
+              }
+            }
+            if (var3 != 0) {
+              L3: {
+                var5 = var10.b(false);
+                if (var5 < 0) {
+                  break L3;
+                } else {
+                  L4: {
                     if (-1 == (of.field_B ^ -1)) {
-                        statePc = 14;
+                      break L4;
                     } else {
-                        statePc = 11;
+                      if (of.field_B >= var5) {
+                        break L4;
+                      } else {
+                        break L3;
+                      }
                     }
-                    continue stateLoop;
-                }
-                case 11: {
-                    if (of.field_B >= var5) {
-                        statePc = 14;
-                    } else {
-                        statePc = 13;
-                    }
-                    continue stateLoop;
-                }
-                case 13: {
-                    throw new RuntimeException();
-                }
-                case 14: {
-                    var18 = new byte[var5];
-                    var16 = var18;
-                    var14 = var16;
-                    var12 = var14;
-                    var6 = var12;
-                    if (-2 == (var3 ^ -1)) {
-                        statePc = 20;
-                    } else {
-                        statePc = 15;
-                    }
-                    continue stateLoop;
-                }
-                case 15: {
-                    var7 = (Object) (Object) field_e;
-                    // monitorenter field_e
-                    statePc = 16;
-                    continue stateLoop;
-                }
-                case 16: {
-                    try {
-                        field_e.a(-1, var18, var10);
-                        // monitorexit var7
-                        statePc = 21;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_16) {
-                        caughtException = stateCaught_16;
-                        statePc = 18;
-                        continue stateLoop;
-                    }
-                }
-                case 18: {
-                    try {
-                        var8 = caughtException;
-                        // monitorexit var7
-                        statePc = 19;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_18) {
-                        caughtException = stateCaught_18;
-                        statePc = 18;
-                        continue stateLoop;
-                    }
-                }
-                case 19: {
-                    throw (RuntimeException) (Object) var8;
-                }
-                case 20: {
+                  }
+                  var18 = new byte[var5];
+                  var16 = var18;
+                  var14 = var16;
+                  var12 = var14;
+                  var6 = var12;
+                  if (-2 == (var3 ^ -1)) {
                     int discarded$1 = j.a(var18, var5, param1, var4, 9);
                     return var6;
-                }
-                case 21: {
+                  } else {
+                    var7 = (Object) (Object) field_e;
+                    synchronized (var7) {
+                      L5: {
+                        field_e.a(-1, var18, var10);
+                        break L5;
+                      }
+                    }
                     return var6;
+                  }
                 }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
+              }
+              throw new RuntimeException();
+            } else {
+              var17 = new byte[var4];
+              var15 = var17;
+              var13 = var15;
+              var11 = var13;
+              var5_ref_byte__ = var11;
+              var10.a(0, (byte) -118, var4, var17);
+              return var5_ref_byte__;
             }
+          }
         }
+        throw new RuntimeException();
     }
 
     final static void a(String param0, int param1, byte param2, String[] param3) {
@@ -260,25 +189,45 @@ final class sl {
 
     private final void a(int param0, byte[] param1, ka param2) {
         try {
-            if (-32 == (param2.field_r[param2.field_k] ^ -1)) {
-                // if_icmpne L49
-            } else {
-                throw new RuntimeException("");
+            Exception exception = null;
+            Throwable decompiledCaughtException = null;
+            L0: {
+              if (-32 != (param2.field_r[param2.field_k] ^ -1)) {
+                break L0;
+              } else {
+                if ((param2.field_r[param2.field_k - -1] ^ -1) != 116) {
+                  break L0;
+                } else {
+                  L1: {
+                    if (((sl) this).field_f == null) {
+                      ((sl) this).field_f = new java.util.zip.Inflater(true);
+                      break L1;
+                    } else {
+                      break L1;
+                    }
+                  }
+                  try {
+                    L2: {
+                      ((sl) this).field_f.setInput(param2.field_r, param2.field_k - -10, -10 - param2.field_k - (8 - param2.field_r.length));
+                      if (param0 == -1) {
+                        int discarded$2 = ((sl) this).field_f.inflate(param1);
+                        break L2;
+                      } else {
+                        return;
+                      }
+                    }
+                  } catch (java.lang.Exception decompiledCaughtParameter0) {
+                    decompiledCaughtException = decompiledCaughtParameter0;
+                    exception = (Exception) (Object) decompiledCaughtException;
+                    ((sl) this).field_f.reset();
+                    throw new RuntimeException("");
+                  }
+                  ((sl) this).field_f.reset();
+                  return;
+                }
+              }
             }
-            if (!(((sl) this).field_f != null)) {
-                ((sl) this).field_f = new java.util.zip.Inflater(true);
-            }
-            ((sl) this).field_f.setInput(param2.field_r, param2.field_k - -10, -10 - param2.field_k - (8 - param2.field_r.length));
-            if (param0 != -1) {
-                return;
-            }
-            try {
-                int discarded$0 = ((sl) this).field_f.inflate(param1);
-            } catch (Exception exception) {
-                ((sl) this).field_f.reset();
-                throw new RuntimeException("");
-            }
-            ((sl) this).field_f.reset();
+            throw new RuntimeException("");
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {

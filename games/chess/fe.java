@@ -125,7 +125,6 @@ final class fe {
     }
 
     private final lm a(int[] param0, byte param1, int param2, int param3) {
-        hi var9_ref = null;
         int var5 = param2 ^ ((536875007 & param3) << 2048493348 | param3 >>> 533276620);
         var5 = var5 | param3 << 1367696464;
         long var6 = (long)var5 ^ 4294967296L;
@@ -143,19 +142,19 @@ final class fe {
         }
         hi var9 = (hi) (Object) ((fe) this).field_b.a(-115, var6);
         if (!(var9 != null)) {
-            var9_ref = hi.a(((fe) this).field_f, param3, param2);
-            if (var9_ref == null) {
+            var9 = hi.a(((fe) this).field_f, param3, param2);
+            if (var9 == null) {
                 return null;
             }
-            ((fe) this).field_b.a(param1 ^ -97, var6, (o) (Object) var9_ref);
+            ((fe) this).field_b.a(param1 ^ -97, var6, (o) (Object) var9);
         }
-        lm var8_ref = var9_ref.a(param0);
-        if (var8_ref == null) {
+        var8 = var9.a(param0);
+        if (var8 == null) {
             return null;
         }
-        var9_ref.c(param1 + -2205);
-        ((fe) this).field_c.a(param1 ^ -111, var6, (o) (Object) var8_ref);
-        return var8_ref;
+        var9.c(param1 + -2205);
+        ((fe) this).field_c.a(param1 ^ -111, var6, (o) (Object) var8);
+        return var8;
     }
 
     private final lm a(int[] param0, String param1, int param2, String param3) {
@@ -195,12 +194,12 @@ final class fe {
             return null;
         }
         lm var10 = var9.a();
-        lm var8_ref = var10;
-        ((fe) this).field_c.a(29, var6, (o) (Object) var8_ref);
+        var8 = var10;
+        ((fe) this).field_c.a(29, var6, (o) (Object) var8);
         if (param3 != null) {
             param3[0] = param3[0] - var10.field_m.length;
         }
-        return var8_ref;
+        return var8;
     }
 
     final static void a(long param0, int param1) {

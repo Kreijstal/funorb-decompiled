@@ -110,7 +110,7 @@ final class vg extends hd {
         long var2 = 0L;
         int var4 = 0;
         int var6 = 0;
-        jm var6_ref = null;
+        jm var6_ref_jm = null;
         int var7 = 0;
         byte[] var8 = null;
         jm var9 = null;
@@ -150,8 +150,8 @@ final class vg extends hd {
                 var6 = 0;
                 L3: while (true) {
                   if (var6 >= var18.length) {
-                    var6_ref = new jm((long)var4 + var2, or.field_d.field_n, var19);
-                    am.field_g.a((gn) (Object) var6_ref, 3);
+                    var6_ref_jm = new jm((long)var4 + var2, or.field_d.field_n, var19);
+                    am.field_g.a((gn) (Object) var6_ref_jm, 3);
                     or.field_d.field_n = 0;
                     break L2;
                   } else {
@@ -254,8 +254,9 @@ final class vg extends hd {
             }
         }
         StringBuilder discarded$0 = ((vg) this).field_Ub.append(param0.substring(0, var3));
-        ((vg) this).field_Fb = ((vg) this).field_Ub.length();
-        ((vg) this).field_Mb = ((vg) this).field_Ub.length();
+        int dupTemp$1 = ((vg) this).field_Ub.length();
+        ((vg) this).field_Fb = dupTemp$1;
+        ((vg) this).field_Mb = dupTemp$1;
         ((vg) this).field_Lb.field_E = ((vg) this).field_Ub.toString();
     }
 
@@ -290,16 +291,31 @@ final class vg extends hd {
     }
 
     private final int d(int param0, int param1) {
-        int var6 = Kickabout.field_G;
-        int var3 = param1;
+        int var3 = 0;
         int var4 = 0;
-        int var5 = ((vg) this).field_Ub.length();
-        while (var4 < param0) {
-            // if_icmple L60
-            var3++;
-            var4 = var4 + ((vg) this).field_Lb.field_X.a(((vg) this).field_Ub.charAt(var3));
+        int var5 = 0;
+        int var6 = 0;
+        var6 = Kickabout.field_G;
+        var3 = param1;
+        var4 = 0;
+        var5 = ((vg) this).field_Ub.length();
+        L0: while (true) {
+          L1: {
+            if (var4 >= param0) {
+              break L1;
+            } else {
+              if (var5 <= var3) {
+                break L1;
+              } else {
+                int incrementValue$2 = var3;
+                var3++;
+                var4 = var4 + ((vg) this).field_Lb.field_X.a(((vg) this).field_Ub.charAt(incrementValue$2));
+                continue L0;
+              }
+            }
+          }
+          return var3;
         }
-        return var3;
     }
 
     final boolean a(int param0, char param1, int param2) {
@@ -519,17 +535,33 @@ final class vg extends hd {
     }
 
     private final int i(int param0) {
+        int var2 = 0;
+        int var3 = 0;
         int var4 = 0;
-        int var5 = Kickabout.field_G;
-        int var2 = ((vg) this).field_Ub.length();
-        int var3 = 112 / ((param0 - 27) / 50);
-        if (((vg) this).field_Mb == var2) {
-            return ((vg) this).field_Mb;
+        int var5 = 0;
+        var5 = Kickabout.field_G;
+        var2 = ((vg) this).field_Ub.length();
+        var3 = 112 / ((param0 - 27) / 50);
+        if (((vg) this).field_Mb != var2) {
+          var4 = ((vg) this).field_Mb - -1;
+          L0: while (true) {
+            L1: {
+              if (var4 >= var2) {
+                break L1;
+              } else {
+                if (pi.a(-41, ((vg) this).field_Ub.charAt(-1 + var4))) {
+                  break L1;
+                } else {
+                  var4++;
+                  continue L0;
+                }
+              }
+            }
+            return var4;
+          }
+        } else {
+          return ((vg) this).field_Mb;
         }
-        for (var4 = ((vg) this).field_Mb - -1; var4 < var2; var4++) {
-            // ifne L76
-        }
-        return var4;
     }
 
     final void f(int param0, int param1) {
@@ -567,17 +599,36 @@ final class vg extends hd {
 
     private final int h(int param0) {
         int var2 = 0;
-        int var3 = Kickabout.field_G;
-        if (param0 != 26864) {
+        int var3 = 0;
+        L0: {
+          var3 = Kickabout.field_G;
+          if (param0 == 26864) {
+            break L0;
+          } else {
             this.l(11);
+            break L0;
+          }
         }
-        if (((vg) this).field_Mb == 0) {
-            return ((vg) this).field_Mb;
+        if (((vg) this).field_Mb != 0) {
+          var2 = ((vg) this).field_Mb - 1;
+          L1: while (true) {
+            L2: {
+              if ((var2 ^ -1) >= -1) {
+                break L2;
+              } else {
+                if (pi.a(-41, ((vg) this).field_Ub.charAt(-1 + var2))) {
+                  break L2;
+                } else {
+                  var2--;
+                  continue L1;
+                }
+              }
+            }
+            return var2;
+          }
+        } else {
+          return ((vg) this).field_Mb;
         }
-        for (var2 = ((vg) this).field_Mb - 1; (var2 ^ -1) < -1; var2--) {
-            // ifne L70
-        }
-        return var2;
     }
 
     private final void a(String param0, int param1) {
@@ -611,23 +662,43 @@ final class vg extends hd {
     }
 
     final void a(int param0, byte param1, int param2) {
-        int var5 = Kickabout.field_G;
-        int var4 = ((vg) this).field_Ub.length();
-        if (-1 >= (param0 ^ -1)) {
-            // if_icmpge L35
-            param0 = var4;
-        } else {
+        int var4 = 0;
+        int var5 = 0;
+        L0: {
+          var5 = Kickabout.field_G;
+          var4 = ((vg) this).field_Ub.length();
+          if (-1 < (param0 ^ -1)) {
             param0 = 0;
-        }
-        if (param1 >= -83) {
-            this.c(false);
-        }
-        if (param2 < 0) {
-            param2 = 0;
-        } else {
-            if (!(var4 >= param2)) {
-                param2 = var4;
+            break L0;
+          } else {
+            if (var4 >= param0) {
+              break L0;
+            } else {
+              param0 = var4;
+              break L0;
             }
+          }
+        }
+        L1: {
+          if (param1 < -83) {
+            break L1;
+          } else {
+            this.c(false);
+            break L1;
+          }
+        }
+        L2: {
+          if (param2 >= 0) {
+            if (var4 < param2) {
+              param2 = var4;
+              break L2;
+            } else {
+              break L2;
+            }
+          } else {
+            param2 = 0;
+            break L2;
+          }
         }
         ((vg) this).field_Mb = param0;
         ((vg) this).field_Fb = param2;
@@ -649,259 +720,157 @@ final class vg extends hd {
             Object stackIn_14_0 = null;
             int stackIn_14_1 = 0;
             int stackIn_28_0 = 0;
+            Throwable decompiledCaughtException = null;
             Object stackOut_11_0 = null;
-            Object stackOut_12_0 = null;
-            int stackOut_12_1 = 0;
             Object stackOut_13_0 = null;
             int stackOut_13_1 = 0;
-            int stackOut_26_0 = 0;
+            Object stackOut_12_0 = null;
+            int stackOut_12_1 = 0;
             int stackOut_27_0 = 0;
-            int statePc = 0;
-            Throwable caughtException = null;
-            stateLoop: while (true) {
-                switch (statePc) {
-                    case 0: {
-                        var6 = Kickabout.field_G;
-                        var2 = this.d(el.field_A + -((vg) this).field_F - ((vg) this).field_Lb.field_D, param0 ^ param0);
-                        if (((vg) this).field_sb == 1) {
-                            statePc = 11;
-                        } else {
-                            statePc = 1;
-                        }
-                        continue stateLoop;
-                    }
-                    case 1: {
-                        if (1 != nl.field_p) {
-                            statePc = 4;
-                        } else {
-                            statePc = 2;
-                        }
-                        continue stateLoop;
-                    }
-                    case 2: {
-                        if (((vg) this).field_Jb) {
-                            statePc = 5;
-                        } else {
-                            statePc = 4;
-                        }
-                        continue stateLoop;
-                    }
-                    case 4: {
-                        ((vg) this).field_Jb = false;
-                        statePc = 20;
-                        continue stateLoop;
-                    }
-                    case 5: {
-                        if (!((vg) this).field_Hb) {
-                            statePc = 10;
-                        } else {
-                            statePc = 6;
-                        }
-                        continue stateLoop;
-                    }
-                    case 6: {
-                        if (var2 >= ((vg) this).field_Tb) {
-                            statePc = 10;
-                        } else {
-                            statePc = 7;
-                        }
-                        continue stateLoop;
-                    }
-                    case 7: {
-                        if (((vg) this).field_Fb < var2) {
-                            statePc = 9;
-                        } else {
-                            statePc = 10;
-                        }
-                        continue stateLoop;
-                    }
-                    case 9: {
-                        var2 = ((vg) this).field_Tb;
-                        statePc = 10;
-                        continue stateLoop;
-                    }
-                    case 10: {
-                        ((vg) this).field_Mb = var2;
-                        statePc = 20;
-                        continue stateLoop;
-                    }
-                    case 11: {
-                        this.a(var2, (byte) -112);
-                        ((vg) this).field_Jb = true;
-                        var3_long = nj.a(-69);
-                        stackOut_11_0 = this;
-                        stackIn_13_0 = stackOut_11_0;
-                        stackIn_12_0 = stackOut_11_0;
-                        if (var3_long + -((vg) this).field_Sb >= 250L) {
-                            statePc = 13;
-                        } else {
-                            statePc = 12;
-                        }
-                        continue stateLoop;
-                    }
-                    case 12: {
-                        stackOut_12_0 = this;
-                        stackOut_12_1 = 1;
-                        stackIn_14_0 = stackOut_12_0;
-                        stackIn_14_1 = stackOut_12_1;
-                        statePc = 14;
-                        continue stateLoop;
-                    }
-                    case 13: {
-                        stackOut_13_0 = this;
-                        stackOut_13_1 = 0;
-                        stackIn_14_0 = stackOut_13_0;
-                        stackIn_14_1 = stackOut_13_1;
-                        statePc = 14;
-                        continue stateLoop;
-                    }
-                    case 14: {
-                        ((vg) this).field_Hb = stackIn_14_1 != 0;
-                        if (!((vg) this).field_Hb) {
-                            statePc = 19;
-                        } else {
-                            statePc = 15;
-                        }
-                        continue stateLoop;
-                    }
-                    case 15: {
-                        ((vg) this).field_Fb = this.h(26864);
-                        ((vg) this).field_Mb = this.i(-26);
-                        if (((vg) this).field_Mb <= 0) {
-                            statePc = 18;
-                        } else {
-                            statePc = 16;
-                        }
-                        continue stateLoop;
-                    }
-                    case 16: {
-                        if (32 != ((vg) this).field_Ub.charAt(((vg) this).field_Mb - 1)) {
-                            statePc = 18;
-                        } else {
-                            statePc = 17;
-                        }
-                        continue stateLoop;
-                    }
-                    case 17: {
-                        ((vg) this).field_Mb = ((vg) this).field_Mb - 1;
-                        statePc = 18;
-                        continue stateLoop;
-                    }
-                    case 18: {
-                        ((vg) this).field_Tb = ((vg) this).field_Mb;
-                        statePc = 19;
-                        continue stateLoop;
-                    }
-                    case 19: {
-                        ((vg) this).field_Sb = var3_long;
-                        statePc = 20;
-                        continue stateLoop;
-                    }
-                    case 20: {
-                        if (!((vg) this).field_wb) {
-                            statePc = 22;
-                        } else {
-                            statePc = 23;
-                        }
-                        continue stateLoop;
-                    }
-                    case 22: {
-                        ((vg) this).field_Fb = ((vg) this).field_Ub.length();
-                        ((vg) this).field_Mb = ((vg) this).field_Ub.length();
-                        statePc = 23;
-                        continue stateLoop;
-                    }
-                    case 23: {
-                        ((vg) this).field_yb.field_s = ((vg) this).field_Lb.field_X.a(((vg) this).field_Ub.toString().substring(0, ((vg) this).field_Mb));
-                        if (((vg) this).field_Fb != ((vg) this).field_Mb) {
-                            statePc = 25;
-                        } else {
-                            statePc = 24;
-                        }
-                        continue stateLoop;
-                    }
-                    case 24: {
-                        ((vg) this).field_Nb.a(true, 0, ((vg) this).field_yb.field_s, 2, ((vg) this).field_Ab);
-                        statePc = 29;
-                        continue stateLoop;
-                    }
-                    case 25: {
-                        var3 = ((vg) this).field_Lb.field_s + ((vg) this).field_Lb.field_X.a(((vg) this).field_Ub.toString().substring(0, ((vg) this).field_Fb));
-                        if (var3 < ((vg) this).field_yb.field_s) {
-                            statePc = 27;
-                        } else {
-                            statePc = 26;
-                        }
-                        continue stateLoop;
-                    }
-                    case 26: {
-                        stackOut_26_0 = ((vg) this).field_yb.field_s;
-                        stackIn_28_0 = stackOut_26_0;
-                        statePc = 28;
-                        continue stateLoop;
-                    }
-                    case 27: {
-                        stackOut_27_0 = var3;
-                        stackIn_28_0 = stackOut_27_0;
-                        statePc = 28;
-                        continue stateLoop;
-                    }
-                    case 28: {
-                        var4_int = stackIn_28_0;
-                        var5 = Math.abs(-((vg) this).field_yb.field_s + var3);
-                        ((vg) this).field_Nb.a(true, var5, var4_int + ((vg) this).field_Lb.field_D, 2, ((vg) this).field_Ab);
-                        statePc = 29;
-                        continue stateLoop;
-                    }
-                    case 29: {
-                        if (((vg) this).field_Gb == null) {
-                            statePc = 37;
-                        } else {
-                            statePc = 30;
-                        }
-                        continue stateLoop;
-                    }
-                    case 30: {
-                        if (((vg) this).field_Gb.field_a != 0) {
-                            statePc = 32;
-                        } else {
-                            statePc = 37;
-                        }
-                        continue stateLoop;
-                    }
-                    case 32: {
-                        var7 = (java.awt.datatransfer.Transferable) ((vg) this).field_Gb.field_b;
-                        statePc = 33;
-                        continue stateLoop;
-                    }
-                    case 33: {
-                        try {
-                            var8 = (String) var7.getTransferData(java.awt.datatransfer.DataFlavor.stringFlavor);
-                            this.l(32);
-                            this.a(var8, -41);
-                            statePc = 36;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_33) {
-                            caughtException = stateCaught_33;
-                            statePc = 35;
-                            continue stateLoop;
-                        }
-                    }
-                    case 35: {
-                        var4 = (Exception) (Object) caughtException;
-                        statePc = 36;
-                        continue stateLoop;
-                    }
-                    case 36: {
-                        ((vg) this).field_Gb = null;
-                        statePc = 37;
-                        continue stateLoop;
-                    }
-                    case 37: {
-                        return;
-                    }
-                    default: throw new IllegalStateException("invalid CFG state " + statePc);
+            int stackOut_26_0 = 0;
+            L0: {
+              var6 = Kickabout.field_G;
+              var2 = this.d(el.field_A + -((vg) this).field_F - ((vg) this).field_Lb.field_D, param0 ^ param0);
+              if (((vg) this).field_sb == 1) {
+                L1: {
+                  this.a(var2, (byte) -112);
+                  ((vg) this).field_Jb = true;
+                  var3_long = nj.a(-69);
+                  stackOut_11_0 = this;
+                  stackIn_13_0 = stackOut_11_0;
+                  stackIn_12_0 = stackOut_11_0;
+                  if (var3_long + -((vg) this).field_Sb >= 250L) {
+                    stackOut_13_0 = this;
+                    stackOut_13_1 = 0;
+                    stackIn_14_0 = stackOut_13_0;
+                    stackIn_14_1 = stackOut_13_1;
+                    break L1;
+                  } else {
+                    stackOut_12_0 = this;
+                    stackOut_12_1 = 1;
+                    stackIn_14_0 = stackOut_12_0;
+                    stackIn_14_1 = stackOut_12_1;
+                    break L1;
+                  }
                 }
+                L2: {
+                  ((vg) this).field_Hb = stackIn_14_1 != 0;
+                  if (!((vg) this).field_Hb) {
+                    break L2;
+                  } else {
+                    L3: {
+                      ((vg) this).field_Fb = this.h(26864);
+                      ((vg) this).field_Mb = this.i(-26);
+                      if (((vg) this).field_Mb <= 0) {
+                        break L3;
+                      } else {
+                        if (32 != ((vg) this).field_Ub.charAt(((vg) this).field_Mb - 1)) {
+                          break L3;
+                        } else {
+                          ((vg) this).field_Mb = ((vg) this).field_Mb - 1;
+                          break L3;
+                        }
+                      }
+                    }
+                    ((vg) this).field_Tb = ((vg) this).field_Mb;
+                    break L2;
+                  }
+                }
+                ((vg) this).field_Sb = var3_long;
+                break L0;
+              } else {
+                L4: {
+                  if (1 != nl.field_p) {
+                    break L4;
+                  } else {
+                    if (((vg) this).field_Jb) {
+                      L5: {
+                        if (!((vg) this).field_Hb) {
+                          break L5;
+                        } else {
+                          if (var2 >= ((vg) this).field_Tb) {
+                            break L5;
+                          } else {
+                            if (((vg) this).field_Fb < var2) {
+                              var2 = ((vg) this).field_Tb;
+                              break L5;
+                            } else {
+                              break L5;
+                            }
+                          }
+                        }
+                      }
+                      ((vg) this).field_Mb = var2;
+                      break L0;
+                    } else {
+                      break L4;
+                    }
+                  }
+                }
+                ((vg) this).field_Jb = false;
+                break L0;
+              }
+            }
+            L6: {
+              if (!((vg) this).field_wb) {
+                int dupTemp$1 = ((vg) this).field_Ub.length();
+                ((vg) this).field_Fb = dupTemp$1;
+                ((vg) this).field_Mb = dupTemp$1;
+                break L6;
+              } else {
+                break L6;
+              }
+            }
+            L7: {
+              ((vg) this).field_yb.field_s = ((vg) this).field_Lb.field_X.a(((vg) this).field_Ub.toString().substring(0, ((vg) this).field_Mb));
+              if (((vg) this).field_Fb != ((vg) this).field_Mb) {
+                L8: {
+                  var3 = ((vg) this).field_Lb.field_s + ((vg) this).field_Lb.field_X.a(((vg) this).field_Ub.toString().substring(0, ((vg) this).field_Fb));
+                  if (var3 < ((vg) this).field_yb.field_s) {
+                    stackOut_27_0 = var3;
+                    stackIn_28_0 = stackOut_27_0;
+                    break L8;
+                  } else {
+                    stackOut_26_0 = ((vg) this).field_yb.field_s;
+                    stackIn_28_0 = stackOut_26_0;
+                    break L8;
+                  }
+                }
+                var4_int = stackIn_28_0;
+                var5 = Math.abs(-((vg) this).field_yb.field_s + var3);
+                ((vg) this).field_Nb.a(true, var5, var4_int + ((vg) this).field_Lb.field_D, 2, ((vg) this).field_Ab);
+                break L7;
+              } else {
+                ((vg) this).field_Nb.a(true, 0, ((vg) this).field_yb.field_s, 2, ((vg) this).field_Ab);
+                break L7;
+              }
+            }
+            L9: {
+              if (((vg) this).field_Gb == null) {
+                break L9;
+              } else {
+                if (((vg) this).field_Gb.field_a != 0) {
+                  var7 = (java.awt.datatransfer.Transferable) ((vg) this).field_Gb.field_b;
+                  try {
+                    L10: {
+                      var8 = (String) var7.getTransferData(java.awt.datatransfer.DataFlavor.stringFlavor);
+                      this.l(32);
+                      this.a(var8, -41);
+                      break L10;
+                    }
+                  } catch (java.lang.Exception decompiledCaughtParameter0) {
+                    decompiledCaughtException = decompiledCaughtParameter0;
+                    L11: {
+                      var4 = (Exception) (Object) decompiledCaughtException;
+                      break L11;
+                    }
+                  }
+                  ((vg) this).field_Gb = null;
+                  break L9;
+                } else {
+                  break L9;
+                }
+              }
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;

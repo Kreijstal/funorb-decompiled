@@ -206,9 +206,11 @@ final class le {
               continue L0;
             } else {
               ((le) this).field_e = new kl(var3);
+              return;
             }
           } else {
             ((le) this).field_e = new kl(var3);
+            return;
           }
         }
     }

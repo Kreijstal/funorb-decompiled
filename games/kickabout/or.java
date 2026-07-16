@@ -78,7 +78,7 @@ final class or {
             field_a = null;
         }
         int var18 = (1 << var30.field_I) * hw.field_i >> -588611928;
-        int var19 = param2 == -2 ? 13369344 : -3 != ih.field_c ? 65793 : 16777215;
+        int var19 = (param2 ^ -1) == -2 ? 13369344 : -3 != (ih.field_c ^ -1) ? 65793 : 16777215;
         int var20 = 24;
         int var21 = 24;
         if (!((10 & var30.field_G) != 0)) {

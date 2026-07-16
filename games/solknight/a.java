@@ -108,24 +108,28 @@ abstract class a extends wf implements pi {
         String stackOut_2_0 = null;
         try {
           L0: {
-            var3_int = param0.c(param2);
-            if (var3_int <= param1) {
-              break L0;
-            } else {
-              var3_int = param1;
-              break L0;
+            L1: {
+              var3_int = param0.c(param2);
+              if (var3_int <= param1) {
+                break L1;
+              } else {
+                var3_int = param1;
+                break L1;
+              }
             }
+            var4 = new byte[var3_int];
+            param0.field_m = param0.field_m + v.field_g.a(0, param0.field_m, 4, var4, var3_int, param0.field_l);
+            var5 = vd.a(var4, 0, var3_int, 160);
+            stackOut_2_0 = (String) var5;
+            stackIn_3_0 = stackOut_2_0;
+            break L0;
           }
-          var4 = new byte[var3_int];
-          param0.field_m = param0.field_m + v.field_g.a(0, param0.field_m, 4, var4, var3_int, param0.field_l);
-          var5 = vd.a(var4, 0, var3_int, 160);
-          stackOut_2_0 = (String) var5;
-          stackIn_3_0 = stackOut_2_0;
-        } catch (java.lang.Exception decompiledCaughtParameter) {
-          decompiledCaughtException = decompiledCaughtParameter;
-          return stackIn_3_0;
+        } catch (java.lang.Exception decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3 = (Exception) (Object) decompiledCaughtException;
+          return "Cabbage";
         }
-        return null;
+        return stackIn_3_0;
     }
 
     public final void a(vg param0, boolean param1) {

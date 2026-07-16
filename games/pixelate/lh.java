@@ -186,8 +186,9 @@ final class lh {
         if (param0 != 256) {
             ((lh) this).field_f = -113;
         }
+        int fieldTemp$0 = ((lh) this).field_e - 1;
         ((lh) this).field_e = ((lh) this).field_e - 1;
-        return ((lh) this).field_h[((lh) this).field_e - 1];
+        return ((lh) this).field_h[fieldTemp$0];
     }
 
     private final void a(boolean param0) {
@@ -197,8 +198,9 @@ final class lh {
         int var5 = 0;
         L0: {
           var5 = Pixelate.field_H ? 1 : 0;
+          int fieldTemp$3 = ((lh) this).field_d + 1;
           ((lh) this).field_d = ((lh) this).field_d + 1;
-          ((lh) this).field_i = ((lh) this).field_i + (((lh) this).field_d + 1);
+          ((lh) this).field_i = ((lh) this).field_i + fieldTemp$3;
           var2 = 0;
           if (!param0) {
             break L0;
@@ -232,10 +234,12 @@ final class lh {
               }
             }
             ((lh) this).field_f = ((lh) this).field_f + ((lh) this).field_c[255 & var2 + 128];
-            var4 = ((lh) this).field_i + ((lh) this).field_f + ((lh) this).field_c[cm.a(255, var3 >> 1480786466)];
-            ((lh) this).field_c[var2] = ((lh) this).field_i + ((lh) this).field_f + ((lh) this).field_c[cm.a(255, var3 >> 1480786466)];
-            ((lh) this).field_i = ((lh) this).field_c[cm.a(255, var4 >> 1153342376 >> -743386238)] + var3;
-            ((lh) this).field_h[var2] = ((lh) this).field_c[cm.a(255, var4 >> 1153342376 >> -743386238)] + var3;
+            int dupTemp$4 = ((lh) this).field_i + ((lh) this).field_f + ((lh) this).field_c[cm.a(255, var3 >> 1480786466)];
+            var4 = dupTemp$4;
+            ((lh) this).field_c[var2] = dupTemp$4;
+            int dupTemp$5 = ((lh) this).field_c[cm.a(255, var4 >> 1153342376 >> -743386238)] + var3;
+            ((lh) this).field_i = dupTemp$5;
+            ((lh) this).field_h[var2] = dupTemp$5;
             var2++;
             continue L1;
           }

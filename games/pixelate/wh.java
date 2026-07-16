@@ -387,14 +387,31 @@ final class wh extends de {
     }
 
     final void a(byte param0, boolean param1, int param2) {
-        if (param0 > -116) {
+        tf var4 = null;
+        L0: {
+          if (param0 <= -116) {
+            break L0;
+          } else {
             field_q = null;
+            break L0;
+          }
         }
-        tf var4 = oc.field_N;
-        if (!jg.a((byte) 117)) {
-            // if_icmpne L45
+        L1: {
+          L2: {
+            var4 = oc.field_N;
+            if (jg.a((byte) 117)) {
+              break L2;
+            } else {
+              if ((param2 ^ -1) != -2) {
+                break L1;
+              } else {
+                break L2;
+              }
+            }
+          }
+          var4 = oc.field_S;
+          break L1;
         }
-        var4 = oc.field_S;
         super.a((byte) 35, var4, param1, param2);
     }
 

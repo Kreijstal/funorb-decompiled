@@ -261,8 +261,9 @@ abstract class wl extends tb {
           ((wl) this).i(-92);
           if (((wl) this).field_X != null) {
             if (hj.field_d == ((wl) this).field_X) {
+              int fieldTemp$4 = ((wl) this).field_U + 1;
               ((wl) this).field_U = ((wl) this).field_U + 1;
-              if (((wl) this).field_V == ((wl) this).field_U + 1) {
+              if (((wl) this).field_V == fieldTemp$4) {
                 ((wl) this).field_X = fj.field_i;
                 ((wl) this).a(((wl) this).field_S, 12 - -((wl) this).field_Y.field_p, (byte) -97, ((wl) this).field_Z + 12 + ((wl) this).field_Y.field_t);
                 ((wl) this).field_Q.field_A = 0;
@@ -274,8 +275,9 @@ abstract class wl extends tb {
               }
             } else {
               if (cj.field_b == ((wl) this).field_X) {
+                int fieldTemp$5 = ((wl) this).field_U + 1;
                 ((wl) this).field_U = ((wl) this).field_U + 1;
-                if (((wl) this).field_bb == ((wl) this).field_U + 1) {
+                if (((wl) this).field_bb == fieldTemp$5) {
                   ((wl) this).field_Q.field_A = 256;
                   ((wl) this).field_X = null;
                   return super.d(true);
@@ -293,8 +295,9 @@ abstract class wl extends tb {
         } else {
           if (((wl) this).field_X != null) {
             if (hj.field_d == ((wl) this).field_X) {
+              int fieldTemp$6 = ((wl) this).field_U + 1;
               ((wl) this).field_U = ((wl) this).field_U + 1;
-              if (((wl) this).field_V == ((wl) this).field_U + 1) {
+              if (((wl) this).field_V == fieldTemp$6) {
                 ((wl) this).field_X = fj.field_i;
                 ((wl) this).a(((wl) this).field_S, 12 - -((wl) this).field_Y.field_p, (byte) -97, ((wl) this).field_Z + 12 + ((wl) this).field_Y.field_t);
                 ((wl) this).field_Q.field_A = 0;
@@ -306,8 +309,9 @@ abstract class wl extends tb {
               }
             } else {
               if (cj.field_b == ((wl) this).field_X) {
+                int fieldTemp$7 = ((wl) this).field_U + 1;
                 ((wl) this).field_U = ((wl) this).field_U + 1;
-                if (((wl) this).field_bb == ((wl) this).field_U + 1) {
+                if (((wl) this).field_bb == fieldTemp$7) {
                   ((wl) this).field_Q.field_A = 256;
                   ((wl) this).field_X = null;
                   return super.d(true);

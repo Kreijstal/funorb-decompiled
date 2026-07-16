@@ -120,8 +120,9 @@ class rg extends ma {
           if (var9 >= var8) {
             L2: {
               if (var8 > var7) {
+                int incrementValue$8 = var6;
                 var6++;
-                param1[var6] = param2.substring(var7, var8).trim();
+                param1[incrementValue$8] = param2.substring(var7, var8).trim();
                 break L2;
               } else {
                 break L2;
@@ -148,15 +149,17 @@ class rg extends ma {
                 break L3;
               } else {
                 var7 = var9 - -1;
+                int incrementValue$9 = var6;
                 var6++;
-                param1[var6] = var11;
+                param1[incrementValue$9] = var11;
                 break L3;
               }
             }
             if (62 == var10) {
               if (param2.regionMatches(-3 + var9, "<br>", 0, 4)) {
+                int incrementValue$10 = var6;
                 var6++;
-                param1[var6] = param2.substring(var7, -3 + var9).trim();
+                param1[incrementValue$10] = param2.substring(var7, -3 + var9).trim();
                 var7 = var9 - -1;
                 var9++;
                 continue L1;

@@ -10,20 +10,32 @@ final class dd {
     static jm field_b;
 
     final static boolean a(String param0, boolean param1) {
-        if (!qc.field_h) {
-            return false;
-        }
-        if (sd.field_e == 2) {
-            // if_acmpeq L44
-            CharSequence var3 = (CharSequence) (Object) param0;
-            // ifeq L44
+        CharSequence var3 = null;
+        if (qc.field_h) {
+          L0: {
+            if (sd.field_e != 2) {
+              break L0;
+            } else {
+              if (null == d.field_Gb) {
+                break L0;
+              } else {
+                var3 = (CharSequence) (Object) param0;
+                if (!d.field_Gb.equals((Object) (Object) c.a(var3, true))) {
+                  break L0;
+                } else {
+                  if (!param1) {
+                    return true;
+                  } else {
+                    return true;
+                  }
+                }
+              }
+            }
+          }
+          return false;
         } else {
-            return false;
+          return false;
         }
-        if (param1) {
-            return true;
-        }
-        return true;
     }
 
     final static mg[] a(byte param0) {

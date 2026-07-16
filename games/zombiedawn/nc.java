@@ -59,8 +59,9 @@ final class nc extends le {
         int var4 = 0;
         var4 = ZombieDawn.field_J;
         if (!((nc) this).c(116)) {
+          int fieldTemp$1 = ((nc) this).field_s;
           ((nc) this).field_s = ((nc) this).field_s + 1;
-          if (((nc) this).field_s > 10) {
+          if (fieldTemp$1 > 10) {
             ((nc) this).field_s = 0;
             var2 = (fb) (Object) dj.field_e.field_R.b((byte) 26);
             L0: while (true) {
@@ -80,7 +81,7 @@ final class nc extends le {
                 ((nc) this).field_i = ((nc) this).field_i + 7;
                 if (!param0) {
                   if (256 >= ((nc) this).field_i) {
-                    if (((nc) this).field_n <= -751) {
+                    if ((((nc) this).field_n ^ -1) <= -751) {
                       L2: {
                         ((nc) this).field_l = ((nc) this).field_l - ((nc) this).field_h;
                         if ((((nc) this).field_l ^ -1) >= -257) {
@@ -101,7 +102,7 @@ final class nc extends le {
                       return;
                     } else {
                       L4: {
-                        if (-257 > ((nc) this).field_l) {
+                        if (-257 < (((nc) this).field_l ^ -1)) {
                           ((nc) this).field_l = ((nc) this).field_l + ((nc) this).field_h;
                           break L4;
                         } else {
@@ -130,12 +131,12 @@ final class nc extends le {
                   } else {
                     L7: {
                       ((nc) this).field_i = 0;
-                      if (((nc) this).field_n <= -751) {
+                      if ((((nc) this).field_n ^ -1) <= -751) {
                         ((nc) this).field_l = ((nc) this).field_l - ((nc) this).field_h;
                         break L7;
                       } else {
                         L8: {
-                          if (-257 > ((nc) this).field_l) {
+                          if (-257 < (((nc) this).field_l ^ -1)) {
                             ((nc) this).field_l = ((nc) this).field_l + ((nc) this).field_h;
                             break L8;
                           } else {
@@ -173,7 +174,7 @@ final class nc extends le {
             ((nc) this).field_i = ((nc) this).field_i + 7;
             if (!param0) {
               if (256 >= ((nc) this).field_i) {
-                if (((nc) this).field_n <= -751) {
+                if ((((nc) this).field_n ^ -1) <= -751) {
                   ((nc) this).field_l = ((nc) this).field_l - ((nc) this).field_h;
                   if ((((nc) this).field_l ^ -1) >= -257) {
                     if (0 <= ((nc) this).field_l) {
@@ -184,16 +185,16 @@ final class nc extends le {
                     }
                   } else {
                     ((nc) this).field_l = 256;
-                    if (0 <= ((nc) this).field_l) {
+                    if (0 > ((nc) this).field_l) {
+                      ((nc) this).field_l = 0;
                       return;
                     } else {
-                      ((nc) this).field_l = 0;
                       return;
                     }
                   }
                 } else {
                   L11: {
-                    if (-257 > ((nc) this).field_l) {
+                    if (-257 < (((nc) this).field_l ^ -1)) {
                       ((nc) this).field_l = ((nc) this).field_l + ((nc) this).field_h;
                       break L11;
                     } else {
@@ -202,10 +203,10 @@ final class nc extends le {
                   }
                   ((nc) this).field_n = ((nc) this).field_n + 1;
                   if ((((nc) this).field_l ^ -1) >= -257) {
-                    if (0 > ((nc) this).field_l) {
-                      ((nc) this).field_l = 0;
+                    if (0 <= ((nc) this).field_l) {
                       return;
                     } else {
+                      ((nc) this).field_l = 0;
                       return;
                     }
                   } else {
@@ -224,12 +225,12 @@ final class nc extends le {
               } else {
                 L13: {
                   ((nc) this).field_i = 0;
-                  if (((nc) this).field_n <= -751) {
+                  if ((((nc) this).field_n ^ -1) <= -751) {
                     ((nc) this).field_l = ((nc) this).field_l - ((nc) this).field_h;
                     break L13;
                   } else {
                     L14: {
-                      if (-257 > ((nc) this).field_l) {
+                      if (-257 < (((nc) this).field_l ^ -1)) {
                         ((nc) this).field_l = ((nc) this).field_l + ((nc) this).field_h;
                         break L14;
                       } else {
@@ -241,10 +242,10 @@ final class nc extends le {
                   }
                 }
                 if ((((nc) this).field_l ^ -1) >= -257) {
-                  if (0 > ((nc) this).field_l) {
-                    ((nc) this).field_l = 0;
+                  if (0 <= ((nc) this).field_l) {
                     return;
                   } else {
+                    ((nc) this).field_l = 0;
                     return;
                   }
                 } else {

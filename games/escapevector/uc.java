@@ -13,6 +13,7 @@ final class uc {
 
     final static int a(int param0, ih param1) {
         if (param0 != -1) {
+            Object var3 = null;
             int discarded$0 = uc.a(88, (ih) null);
             return param1.field_r;
         }
@@ -47,14 +48,15 @@ final class uc {
         var10 = var8;
         var7_ref = var10;
         if (param2 != 1) {
-          boolean discarded$2 = ((uc) this).a(20);
+          boolean discarded$6 = ((uc) this).a(20);
           var10.field_i = param5;
           var10.field_d = param4;
           var10.field_h = param1;
           var10.field_c = param3;
           var10.field_b = param0;
+          int fieldTemp$7 = ((uc) this).field_f;
           ((uc) this).field_f = ((uc) this).field_f + 1;
-          ((uc) this).field_c[((uc) this).field_f] = var8;
+          ((uc) this).field_c[fieldTemp$7] = var8;
           return;
         } else {
           var10.field_i = param5;
@@ -62,8 +64,9 @@ final class uc {
           var10.field_h = param1;
           var10.field_c = param3;
           var10.field_b = param0;
+          int fieldTemp$8 = ((uc) this).field_f;
           ((uc) this).field_f = ((uc) this).field_f + 1;
-          ((uc) this).field_c[((uc) this).field_f] = var8;
+          ((uc) this).field_c[fieldTemp$8] = var8;
           return;
         }
     }
@@ -194,10 +197,12 @@ final class uc {
     }
 
     final void a(String param0, byte param1, String param2, mf param3) {
+        Object var6 = null;
         this.a(-1, param3, 1, param0, param2, (String) null);
         if (param1 <= -114) {
           return;
         } else {
+          var6 = null;
           this.a(-32, (mf) null, 21, (String) null, (String) null, (String) null);
           return;
         }

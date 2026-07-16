@@ -232,20 +232,20 @@ abstract class eh extends ga implements jf {
         int var4 = ZombieDawn.field_J;
         int var3 = param0.field_kb + -param1.field_kb;
         if (oo.field_T == param0.field_ib) {
-            // wide iinc 3 -200
+            var3 -= 200;
         } else {
             if (!(null != param0.field_ib)) {
-                // wide iinc 3 200
+                var3 += 200;
             }
         }
         if (param2 != 20) {
             return false;
         }
         if (oo.field_T == param1.field_ib) {
-            // wide iinc 3 200
+            var3 += 200;
         } else {
             if (!(null != param1.field_ib)) {
-                // wide iinc 3 -200
+                var3 -= 200;
             }
         }
         return 0 < var3 ? true : false;

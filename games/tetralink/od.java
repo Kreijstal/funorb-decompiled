@@ -17,21 +17,26 @@ final class od extends hn {
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
         Throwable decompiledCaughtException = null;
-        int stackOut_1_0 = 0;
         int stackOut_3_0 = 0;
+        int stackOut_1_0 = 0;
         try {
-          if (param0 > 61) {
-            return stackIn_2_0;
-          } else {
-            stackOut_1_0 = 115;
-            stackIn_2_0 = stackOut_1_0;
+          L0: {
+            if (param0 > 61) {
+              stackOut_3_0 = Integer.parseInt(((od) this).field_V.field_A);
+              stackIn_4_0 = stackOut_3_0;
+              break L0;
+            } else {
+              stackOut_1_0 = 115;
+              stackIn_2_0 = stackOut_1_0;
+              return stackIn_2_0;
+            }
           }
-        } catch (java.lang.Exception decompiledCaughtParameter) {
-          decompiledCaughtException = decompiledCaughtParameter;
-          stackOut_3_0 = Integer.parseInt(((od) this).field_V.field_A);
-          stackIn_4_0 = stackOut_3_0;
+        } catch (java.lang.Exception decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2 = (NumberFormatException) (Object) decompiledCaughtException;
+          return -1;
         }
-        return 0;
+        return stackIn_4_0;
     }
 
     private od(kg param0, boolean param1) {
@@ -113,13 +118,17 @@ final class od extends hn {
           }
         }
         try {
-          stackOut_2_0 = Integer.parseInt(((od) this).field_R.field_A);
-          stackIn_3_0 = stackOut_2_0;
-        } catch (java.lang.Exception decompiledCaughtParameter) {
-          decompiledCaughtException = decompiledCaughtParameter;
-          return stackIn_3_0;
+          L1: {
+            stackOut_2_0 = Integer.parseInt(((od) this).field_R.field_A);
+            stackIn_3_0 = stackOut_2_0;
+            break L1;
+          }
+        } catch (java.lang.Exception decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2 = (NumberFormatException) (Object) decompiledCaughtException;
+          return -1;
         }
-        return 0;
+        return stackIn_3_0;
     }
 
     final void a(int param0, qh param1) {
@@ -136,16 +145,20 @@ final class od extends hn {
         int stackOut_2_0 = 0;
         if (!param0) {
           try {
-            stackOut_2_0 = Integer.parseInt(((od) this).field_W.field_A) - 1;
-            stackIn_3_0 = stackOut_2_0;
-          } catch (java.lang.Exception decompiledCaughtParameter) {
-            decompiledCaughtException = decompiledCaughtParameter;
-            return stackIn_3_0;
+            L0: {
+              stackOut_2_0 = Integer.parseInt(((od) this).field_W.field_A) - 1;
+              stackIn_3_0 = stackOut_2_0;
+              break L0;
+            }
+          } catch (java.lang.Exception decompiledCaughtParameter0) {
+            decompiledCaughtException = decompiledCaughtParameter0;
+            var2 = (NumberFormatException) (Object) decompiledCaughtException;
+            return -1;
           }
+          return stackIn_3_0;
         } else {
           return -14;
         }
-        return 0;
     }
 
     final boolean h(int param0) {
@@ -205,9 +218,9 @@ final class od extends hn {
     final static int a(byte param0, String param1, hb param2, int param3, int param4, boolean param5, hb param6) {
         String var8 = null;
         int var9 = 0;
-        String var9_ref = null;
+        String var9_ref_String = null;
         int var10 = 0;
-        String var11_ref = null;
+        String var11_ref_String = null;
         int var11 = 0;
         int var12 = 0;
         int var13 = 0;
@@ -334,15 +347,15 @@ final class od extends hn {
                   nd.field_Lb.a(18, false);
                   nd.field_Lb.field_t = nd.field_Lb.field_t + 2;
                   var10 = nd.field_Lb.field_t;
-                  var11_ref = dd.a(lk.q(13), (byte) 99);
-                  if (var11_ref == null) {
-                    var11_ref = "";
+                  var11_ref_String = dd.a(lk.q(13), (byte) 99);
+                  if (var11_ref_String == null) {
+                    var11_ref_String = "";
                     break L7;
                   } else {
                     break L7;
                   }
                 }
-                nd.field_Lb.a(var11_ref, 0);
+                nd.field_Lb.a(var11_ref_String, 0);
                 ae.a(ki.field_c, (bh) (Object) nd.field_Lb, tb.field_j, jg.field_c, 123);
                 nd.field_Lb.a((byte) 59, -var10 + nd.field_Lb.field_t);
                 break L3;
@@ -438,9 +451,9 @@ final class od extends hn {
             } else {
               L13: {
                 if (255 == ua.field_c) {
-                  var9_ref = kb.field_q.i(param0 + -208);
-                  if (var9_ref != null) {
-                    qi.a(var9_ref, -7011, lk.q(13));
+                  var9_ref_String = kb.field_q.i(param0 + -208);
+                  if (var9_ref_String != null) {
+                    qi.a(var9_ref_String, -7011, lk.q(13));
                     break L13;
                   } else {
                     break L13;

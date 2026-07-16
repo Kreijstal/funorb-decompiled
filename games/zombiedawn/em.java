@@ -1315,10 +1315,12 @@ final class em extends eh implements hh {
         ((em) this).field_T = true;
         ((em) this).field_E = 32768;
         ((em) this).field_B = new ga[6];
-        ((em) this).field_F = new ij(param0, param1, param7, param8, (io) null, (sk) null, (ga) (Object) new an(0, 0, param7, param8, param6, (sk) null), false, false);
-        ((em) this).field_B[0] = (ga) (Object) new ij(param0, param1, param7, param8, (io) null, (sk) null, (ga) (Object) new an(0, 0, param7, param8, param6, (sk) null), false, false);
-        ((em) this).field_I = new an(param0, param1, param7, param8, param5, (sk) null);
-        ((em) this).field_B[1] = (ga) (Object) new an(param0, param1, param7, param8, param5, (sk) null);
+        ij dupTemp$0 = new ij(param0, param1, param7, param8, (io) null, (sk) null, (ga) (Object) new an(0, 0, param7, param8, param6, (sk) null), false, false);
+        ((em) this).field_F = dupTemp$0;
+        ((em) this).field_B[0] = (ga) (Object) dupTemp$0;
+        an dupTemp$1 = new an(param0, param1, param7, param8, param5, (sk) null);
+        ((em) this).field_I = dupTemp$1;
+        ((em) this).field_B[1] = (ga) (Object) dupTemp$1;
         ((em) this).field_O = param9;
         ((em) this).field_X = param11 ? true : false;
         ((em) this).field_Q = param12 ? true : false;

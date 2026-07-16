@@ -1295,33 +1295,94 @@ class uk {
     }
 
     private final void a(int param0, int param1, boolean param2) {
+        int var4 = 0;
+        int var5 = 0;
         int var6 = 0;
         int var7 = 0;
-        int var5 = 0;
-        if (param0 != -1) {
+        boolean[] stackIn_10_0 = null;
+        int stackIn_10_1 = 0;
+        boolean[] stackIn_11_0 = null;
+        int stackIn_11_1 = 0;
+        boolean[] stackIn_12_0 = null;
+        int stackIn_12_1 = 0;
+        int stackIn_12_2 = 0;
+        boolean[] stackOut_9_0 = null;
+        int stackOut_9_1 = 0;
+        boolean[] stackOut_11_0 = null;
+        int stackOut_11_1 = 0;
+        int stackOut_11_2 = 0;
+        boolean[] stackOut_10_0 = null;
+        int stackOut_10_1 = 0;
+        int stackOut_10_2 = 0;
+        L0: {
+          if (param0 == -1) {
+            break L0;
+          } else {
             this.a(94, -75, 79, -71);
+            break L0;
+          }
         }
-        int var4 = ((uk) this).field_m;
-        if (var4 >= 0) {
-            if (-65 < (var4 ^ -1)) {
-                // if_icmpgt L58
-                // if_icmple L58
+        var4 = ((uk) this).field_m;
+        if (var4 < 0) {
+          return;
+        } else {
+          L1: {
+            if (-65 >= (var4 ^ -1)) {
+              break L1;
             } else {
-                return;
+              if ((param1 ^ -1) > -1) {
+                break L1;
+              } else {
+                if ((param1 ^ -1) <= -65) {
+                  break L1;
+                } else {
+                  L2: {
+                    if (!param2) {
+                      ((uk) this).field_d[param1] = true;
+                      break L2;
+                    } else {
+                      L3: {
+                        var5 = 16773120 & ((uk) this).field_f[var4];
+                        var6 = ((uk) this).field_f[param1];
+                        ((uk) this).field_f[param1] = ((uk) this).field_f[var4];
+                        ((uk) this).field_f[var4] = 0;
+                        var7 = ((uk) this).e(var5, param0 + 105) ? 1 : 0;
+                        ((uk) this).field_f[var4] = ((uk) this).field_f[param1];
+                        ((uk) this).field_f[param1] = var6;
+                        stackOut_9_0 = ((uk) this).field_d;
+                        stackOut_9_1 = param1;
+                        stackIn_11_0 = stackOut_9_0;
+                        stackIn_11_1 = stackOut_9_1;
+                        stackIn_10_0 = stackOut_9_0;
+                        stackIn_10_1 = stackOut_9_1;
+                        if (var7 != 0) {
+                          stackOut_11_0 = (boolean[]) (Object) stackIn_11_0;
+                          stackOut_11_1 = stackIn_11_1;
+                          stackOut_11_2 = 0;
+                          stackIn_12_0 = stackOut_11_0;
+                          stackIn_12_1 = stackOut_11_1;
+                          stackIn_12_2 = stackOut_11_2;
+                          break L3;
+                        } else {
+                          stackOut_10_0 = (boolean[]) (Object) stackIn_10_0;
+                          stackOut_10_1 = stackIn_10_1;
+                          stackOut_10_2 = 1;
+                          stackIn_12_0 = stackOut_10_0;
+                          stackIn_12_1 = stackOut_10_1;
+                          stackIn_12_2 = stackOut_10_2;
+                          break L3;
+                        }
+                      }
+                      stackIn_12_0[stackIn_12_1] = stackIn_12_2 != 0;
+                      break L2;
+                    }
+                  }
+                  return;
+                }
+              }
             }
-            if (param2) {
-                var5 = 16773120 & ((uk) this).field_f[var4];
-                var6 = ((uk) this).field_f[param1];
-                ((uk) this).field_f[param1] = ((uk) this).field_f[var4];
-                ((uk) this).field_f[var4] = 0;
-                var7 = ((uk) this).e(var5, param0 + 105) ? 1 : 0;
-                ((uk) this).field_f[var4] = ((uk) this).field_f[param1];
-                ((uk) this).field_f[param1] = var6;
-                ((uk) this).field_d[param1] = var7 == 0 ? true : false;
-            } else {
-                ((uk) this).field_d[param1] = true;
-            }
-            return;
+          }
+          return;
         }
     }
 
@@ -1495,19 +1556,33 @@ class uk {
     }
 
     final int a(byte param0) {
-        int var3 = Chess.field_G;
-        if (param0 >= -89) {
-            return -120;
-        }
         int var2 = 0;
-        if (((uk) this).field_h.length == 0) {
+        int var3 = 0;
+        var3 = Chess.field_G;
+        if (param0 < -89) {
+          var2 = 0;
+          if (((uk) this).field_h.length != 0) {
+            L0: while (true) {
+              L1: {
+                if (var2 >= ((uk) this).field_h.length) {
+                  break L1;
+                } else {
+                  if (null == ((uk) this).field_h[var2]) {
+                    break L1;
+                  } else {
+                    var2++;
+                    continue L0;
+                  }
+                }
+              }
+              return var2;
+            }
+          } else {
             return -1;
+          }
+        } else {
+          return -120;
         }
-        while ((var2 ^ -1) > (((uk) this).field_h.length ^ -1)) {
-            // if_acmpeq L54
-            var2++;
-        }
-        return var2;
     }
 
     final boolean a(byte param0, int param1) {

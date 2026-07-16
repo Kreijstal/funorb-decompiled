@@ -128,8 +128,9 @@ final class ua {
                       var16 = 256 - var15;
                       var14 = var14 + var6;
                       if (0 <= var15) {
+                        int incrementValue$1 = var9;
                         var9++;
-                        var17 = param2.field_z[var9];
+                        var17 = param2.field_z[incrementValue$1];
                         if (0 != var17) {
                           if ((var15 ^ -1) < -256) {
                             ti.field_a[var8] = var17;

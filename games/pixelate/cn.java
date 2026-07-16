@@ -8,9 +8,9 @@ final class cn {
     final static int a(String param0, int param1, int param2, boolean param3, sc param4, int param5, sc param6) {
         String var8 = null;
         int var9 = 0;
-        String var9_ref = null;
+        String var9_ref_String = null;
         int var10 = 0;
-        String var11_ref = null;
+        String var11_ref_String = null;
         int var11 = 0;
         int var12 = 0;
         int var13 = 0;
@@ -49,9 +49,9 @@ final class cn {
         L0: {
           var13 = Pixelate.field_H ? 1 : 0;
           var14 = param6.a(-30491);
-          var11_ref = var14;
+          var11_ref_String = var14;
           var8 = param4.a(-30491);
-          var11_ref = var8;
+          var11_ref_String = var8;
           if (null == sh.field_e) {
             if (wb.a(0, false)) {
               break L0;
@@ -99,15 +99,15 @@ final class cn {
                   aa.field_f.e(160, 18);
                   aa.field_f.field_m = aa.field_f.field_m + 2;
                   var10 = aa.field_f.field_m;
-                  var11_ref = ln.a(ao.a(13867), (byte) -85);
-                  if (var11_ref != null) {
+                  var11_ref_String = ln.a(ao.a(13867), (byte) -85);
+                  if (var11_ref_String != null) {
                     break L5;
                   } else {
-                    var11_ref = "";
+                    var11_ref_String = "";
                     break L5;
                   }
                 }
-                aa.field_f.b((byte) -41, var11_ref);
+                aa.field_f.b((byte) -41, var11_ref_String);
                 wh.a(ag.field_m, (we) (Object) aa.field_f, tp.field_t, uk.field_v, 12556);
                 aa.field_f.c(7519, aa.field_f.field_m - var10);
                 break L3;
@@ -261,9 +261,9 @@ final class cn {
             if (in.e(-18481)) {
               L13: {
                 if (-256 == (mn.field_e ^ -1)) {
-                  var9_ref = vi.field_o.e((byte) 40);
-                  if (var9_ref != null) {
-                    rd.a(var9_ref, 126, ao.a(13867));
+                  var9_ref_String = vi.field_o.e((byte) 40);
+                  if (var9_ref_String != null) {
+                    rd.a(var9_ref_String, 126, ao.a(13867));
                     break L13;
                   } else {
                     break L13;
@@ -758,15 +758,15 @@ final class cn {
             }
             var4 = (lc) (Object) rg.field_c.f(1504642273);
         }
-        lc var4_ref = new lc();
+        var4 = new lc();
         if (param3 > -16) {
             lc discarded$0 = cn.a(59, -14, -85, -23);
         }
-        var4_ref.field_k = param0;
-        var4_ref.field_s = param2;
-        rg.field_c.a(22125, (fa) (Object) var4_ref);
-        em.a((byte) -7, var4_ref, param1);
-        return var4_ref;
+        var4.field_k = param0;
+        var4.field_s = param2;
+        rg.field_c.a(22125, (fa) (Object) var4);
+        em.a((byte) -7, var4, param1);
+        return var4;
     }
 
     static {

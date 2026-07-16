@@ -1,6 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
+import java.lang.String;
+
 final class vn extends ue {
     static int field_f;
     private m field_t;
@@ -32,7 +34,6 @@ final class vn extends ue {
         int var9 = 0;
         int var10 = 0;
         dl var11 = null;
-        dl var11_ref = null;
         int var12 = 0;
         String var13 = null;
         int var14 = 0;
@@ -257,14 +258,14 @@ final class vn extends ue {
                       if (var10 == 0) {
                         break L11;
                       } else {
-                        var11_ref = d.field_c[var5];
+                        var11 = d.field_c[var5];
                         break L11;
                       }
                     }
                     L12: {
                       var8 = 256;
                       var9 = ((vn) this).field_h;
-                      var11_ref.a(var8, var9);
+                      var11.a(var8, var9);
                       if (var10 == 0) {
                         if (-1 != (16 & 1 << var5 ^ -1)) {
                           stackOut_68_0 = 1;
@@ -520,13 +521,13 @@ final class vn extends ue {
                         }
                         L28: {
                           if ((1 << var10 & var6) != 0) {
-                            var11_ref = cn.field_c[var10];
+                            var11 = cn.field_c[var10];
                             break L28;
                           } else {
                             break L28;
                           }
                         }
-                        var11_ref.a(var8, var9);
+                        var11.a(var8, var9);
                         break L24;
                       }
                     }
@@ -547,16 +548,16 @@ final class vn extends ue {
                       if (0 == (var6 & 1 << var10)) {
                         break L30;
                       } else {
-                        var11_ref = d.field_c[var10];
+                        var11 = d.field_c[var10];
                         break L30;
                       }
                     }
                     if (((vn) this).field_o != var10) {
-                      var11_ref.d(var8 + -2, -2 + var9, 36, 36);
+                      var11.d(var8 + -2, -2 + var9, 36, 36);
                       var5 = var10;
                       break L24;
                     } else {
-                      var11_ref.d(var8 - 4, -4 + var9, 40, 40);
+                      var11.d(var8 - 4, -4 + var9, 40, 40);
                       break L24;
                     }
                   }
@@ -636,7 +637,7 @@ final class vn extends ue {
             break L2;
           }
         }
-        if (((vn) this).field_b.field_c != -3) {
+        if ((((vn) this).field_b.field_c ^ -1) != -3) {
           return false;
         } else {
           if (((vn) this).field_b.a(true)) {
@@ -645,10 +646,10 @@ final class vn extends ue {
                 if (!((vn) this).field_n) {
                   break L4;
                 } else {
-                  if (-1 != mo.field_l) {
+                  if (-1 != (mo.field_l ^ -1)) {
                     break L4;
                   } else {
-                    if (dk.field_h < uo.field_o) {
+                    if ((dk.field_h ^ -1) > (uo.field_o ^ -1)) {
                       ((vn) this).field_r = true;
                       break L3;
                     } else {
@@ -720,7 +721,7 @@ final class vn extends ue {
         L1: {
           var2 += 65;
           ((vn) this).field_h = var2;
-          // wide iinc 2 145
+          var2 += 145;
           if (rc.a(-77)) {
             ((vn) this).field_e = var2;
             var2 += 25;

@@ -138,8 +138,9 @@ final class qi extends sr {
                   param3[var6] = var11;
                   var12 = param4[var10];
                   param4[var10] = param4[var6];
+                  int incrementValue$1 = var6;
                   var6++;
-                  param4[var6] = var12;
+                  param4[incrementValue$1] = var12;
                   var10++;
                   continue L3;
                 } else {

@@ -60,144 +60,53 @@ final class ck extends r {
             int var6 = 0;
             int var7 = 0;
             String stackIn_9_0 = null;
+            Throwable decompiledCaughtException = null;
             String stackOut_8_0 = null;
-            int statePc = 0;
-            Throwable caughtException = null;
-            stateLoop: while (true) {
-                switch (statePc) {
-                    case 0: {
-                        var7 = fleas.field_A ? 1 : 0;
-                        statePc = 1;
-                        continue stateLoop;
-                    }
-                    case 1: {
-                        try {
-                            var3 = (String) eb.a("getcookies", param2, -250);
-                            var4 = m.a(';', 121, var3);
-                            if (param0 == -5174) {
-                                statePc = 3;
-                            } else {
-                                statePc = 2;
-                            }
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_1) {
-                            caughtException = stateCaught_1;
-                            statePc = 12;
-                            continue stateLoop;
-                        }
-                    }
-                    case 2: {
-                        try {
-                            ck.c((byte) 90);
-                            statePc = 3;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_2) {
-                            caughtException = stateCaught_2;
-                            statePc = 12;
-                            continue stateLoop;
-                        }
-                    }
-                    case 3: {
-                        try {
-                            var5 = 0;
-                            statePc = 4;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_3) {
-                            caughtException = stateCaught_3;
-                            statePc = 12;
-                            continue stateLoop;
-                        }
-                    }
-                    case 4: {
-                        try {
-                            if (var5 >= var4.length) {
-                                statePc = 13;
-                            } else {
-                                statePc = 5;
-                            }
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_4) {
-                            caughtException = stateCaught_4;
-                            statePc = 12;
-                            continue stateLoop;
-                        }
-                    }
-                    case 5: {
-                        try {
-                            var6 = var4[var5].indexOf('=');
-                            if (0 > var6) {
-                                statePc = 10;
-                            } else {
-                                statePc = 6;
-                            }
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_5) {
-                            caughtException = stateCaught_5;
-                            statePc = 12;
-                            continue stateLoop;
-                        }
-                    }
-                    case 6: {
-                        try {
-                            if (var4[var5].substring(0, var6).trim().equals((Object) (Object) param1)) {
-                                statePc = 8;
-                            } else {
-                                statePc = 7;
-                            }
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_6) {
-                            caughtException = stateCaught_6;
-                            statePc = 12;
-                            continue stateLoop;
-                        }
-                    }
-                    case 7: {
-                        try {
-                            statePc = 10;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_7) {
-                            caughtException = stateCaught_7;
-                            statePc = 12;
-                            continue stateLoop;
-                        }
-                    }
-                    case 8: {
-                        try {
-                            stackOut_8_0 = var4[var5].substring(1 + var6).trim();
-                            stackIn_9_0 = stackOut_8_0;
-                            statePc = 9;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_8) {
-                            caughtException = stateCaught_8;
-                            statePc = 12;
-                            continue stateLoop;
-                        }
-                    }
-                    case 9: {
-                        return stackIn_9_0;
-                    }
-                    case 10: {
-                        try {
-                            var5++;
-                            statePc = 4;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_10) {
-                            caughtException = stateCaught_10;
-                            statePc = 12;
-                            continue stateLoop;
-                        }
-                    }
-                    case 12: {
-                        var3_ref = caughtException;
-                        statePc = 13;
-                        continue stateLoop;
-                    }
-                    case 13: {
-                        return null;
-                    }
-                    default: throw new IllegalStateException("invalid CFG state " + statePc);
+            var7 = fleas.field_A ? 1 : 0;
+            try {
+              L0: {
+                L1: {
+                  var3 = (String) eb.a("getcookies", param2, -250);
+                  var4 = m.a(';', 121, var3);
+                  if (param0 == -5174) {
+                    break L1;
+                  } else {
+                    ck.c((byte) 90);
+                    break L1;
+                  }
                 }
+                var5 = 0;
+                L2: while (true) {
+                  if (var5 >= var4.length) {
+                    break L0;
+                  } else {
+                    L3: {
+                      var6 = var4[var5].indexOf('=');
+                      if (0 > var6) {
+                        break L3;
+                      } else {
+                        if (var4[var5].substring(0, var6).trim().equals((Object) (Object) param1)) {
+                          stackOut_8_0 = var4[var5].substring(1 + var6).trim();
+                          stackIn_9_0 = stackOut_8_0;
+                          return stackIn_9_0;
+                        } else {
+                          break L3;
+                        }
+                      }
+                    }
+                    var5++;
+                    continue L2;
+                  }
+                }
+              }
+            } catch (java.lang.Throwable decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              L4: {
+                var3_ref = decompiledCaughtException;
+                break L4;
+              }
             }
+            return null;
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {

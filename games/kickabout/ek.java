@@ -334,16 +334,28 @@ final class ek extends i {
 
     final void a(int param0, int param1) {
         int var3 = 0;
-        if (param0 < 60) {
-            return;
-        }
-        if (-1 == (param1 ^ -1)) {
-            // if_acmpeq L55
-            var3 = ((ek) this).field_H.field_yb;
-            ge.a(var3, ((ek) this).field_I, (byte) 123, ((ek) this).field_F);
-            wh discarded$0 = sp.c(50, -110);
-        } else {
+        if (param0 >= 60) {
+          L0: {
+            L1: {
+              if (-1 != (param1 ^ -1)) {
+                break L1;
+              } else {
+                if (null == ((ek) this).field_H) {
+                  break L1;
+                } else {
+                  var3 = ((ek) this).field_H.field_yb;
+                  ge.a(var3, ((ek) this).field_I, (byte) 123, ((ek) this).field_F);
+                  wh discarded$2 = sp.c(50, -110);
+                  break L0;
+                }
+              }
+            }
             ii.a((byte) -120);
+            break L0;
+          }
+          return;
+        } else {
+          return;
         }
     }
 

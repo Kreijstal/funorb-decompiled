@@ -227,7 +227,7 @@ final class fh extends ch implements pn, vo {
     }
 
     final static im a(String param0, int param1) {
-        String var2 = null;
+        Object var2 = null;
         int var3 = 0;
         im var4 = null;
         String var5 = null;
@@ -239,15 +239,15 @@ final class fh extends ch implements pn, vo {
           L0: {
             var3 = -109 % ((13 - param1) / 46);
             var7 = (CharSequence) (Object) param0;
-            var2 = dh.a(var7, (byte) 118);
+            var2 = (Object) (Object) dh.a(var7, (byte) 118);
             if (var2 != null) {
               break L0;
             } else {
-              var2 = (String) (Object) var7;
+              var2 = (Object) (Object) var7;
               break L0;
             }
           }
-          var4 = (im) (Object) hq.field_q.a(-11434, (long)var2.hashCode());
+          var4 = (im) (Object) hq.field_q.a(-11434, (long)((String) var2).hashCode());
           L1: while (true) {
             if (var4 != null) {
               L2: {
@@ -260,7 +260,7 @@ final class fh extends ch implements pn, vo {
                   break L2;
                 }
               }
-              if (var5.equals((Object) (Object) var2)) {
+              if (var5.equals(var2)) {
                 return var4;
               } else {
                 var4 = (im) (Object) hq.field_q.b((byte) 47);
@@ -276,32 +276,26 @@ final class fh extends ch implements pn, vo {
     }
 
     final boolean a(int param0, int param1, ng param2, char param3) {
-        if (super.a(param0, param1 ^ 0, param2, param3)) {
-          return true;
-        } else {
-          if (param1 == 3) {
-            if (-99 == param0) {
-              return ((fh) this).a(0, param2);
-            } else {
-              if ((param0 ^ -1) == -100) {
-                return ((fh) this).b(10, param2);
-              } else {
-                return false;
-              }
-            }
-          } else {
-            field_K = null;
-            if (-99 == (param0 ^ -1)) {
-              return ((fh) this).a(0, param2);
-            } else {
-              if (param0 == -100) {
-                return ((fh) this).b(10, param2);
-              } else {
-                return false;
-              }
-            }
-          }
+        if (!(!super.a(param0, param1 ^ 0, param2, param3))) {
+            return true;
         }
+        if (param1 != 3) {
+            field_K = null;
+            if (!(-99 != (param0 ^ -1))) {
+                return ((fh) this).a(0, param2);
+            }
+            if ((param0 ^ -1) == -100) {
+                return ((fh) this).b(10, param2);
+            }
+            return false;
+        }
+        if (!(-99 != (param0 ^ -1))) {
+            return ((fh) this).a(0, param2);
+        }
+        if ((param0 ^ -1) == -100) {
+            return ((fh) this).b(10, param2);
+        }
+        return false;
     }
 
     static {

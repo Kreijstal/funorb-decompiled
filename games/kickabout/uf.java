@@ -27,6 +27,7 @@ final class uf {
     }
 
     final static boolean c(int param0) {
+        Object var2 = null;
         if (param0 == 608) {
           if ((hl.field_d ^ -1) <= -21) {
             if (hh.b((byte) 97)) {
@@ -46,6 +47,7 @@ final class uf {
             return true;
           }
         } else {
+          var2 = null;
           uf.a((ut[][]) null, (sj) null, (int[]) null, true, (byte[]) null, (kg[]) null, (sj) null, 32, (String[][]) null, (String[][]) null, (sj) null, (byte[]) null, (String[]) null, 71, (String[]) null, (ut[][]) null, (int[]) null, -120, 61, (String[]) null);
           if ((hl.field_d ^ -1) <= -21) {
             if (hh.b((byte) 97)) {

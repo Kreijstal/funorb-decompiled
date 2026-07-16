@@ -168,12 +168,18 @@ final class mj extends pi {
                     }
                   }
                   try {
-                    stackOut_42_0 = new java.net.URL(param4, var7.toString());
-                    stackIn_43_0 = stackOut_42_0;
-                  } catch (java.lang.Exception decompiledCaughtParameter) {
-                    decompiledCaughtException = decompiledCaughtParameter;
-                    return stackIn_43_0;
+                    L11: {
+                      stackOut_42_0 = new java.net.URL(param4, var7.toString());
+                      stackIn_43_0 = stackOut_42_0;
+                      break L11;
+                    }
+                  } catch (java.lang.Exception decompiledCaughtParameter0) {
+                    decompiledCaughtException = decompiledCaughtParameter0;
+                    var8 = (Exception) (Object) decompiledCaughtException;
+                    var8.printStackTrace();
+                    return param4;
                   }
+                  return stackIn_43_0;
                 }
                 var6 = var7_int;
                 continue L0;

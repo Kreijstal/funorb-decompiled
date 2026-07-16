@@ -54,8 +54,9 @@ final class ni extends vc {
                 if (((ni) this).field_hb != null) {
                   break L0;
                 } else {
-                  ((ni) this).field_hb = nb.a(((ni) this).field_db, 100, ((ni) this).field_ab.l(), ((ni) this).field_ab.n());
-                  kf discarded$5 = mn.a(-24296, nb.a(((ni) this).field_db, 100, ((ni) this).field_ab.l(), ((ni) this).field_ab.n()));
+                  nb dupTemp$9 = nb.a(((ni) this).field_db, 100, ((ni) this).field_ab.l(), ((ni) this).field_ab.n());
+                  ((ni) this).field_hb = dupTemp$9;
+                  kf discarded$10 = mn.a(-24296, dupTemp$9);
                   ((ni) this).field_ab = null;
                   break L0;
                 }
@@ -69,8 +70,9 @@ final class ni extends vc {
                     if (((ni) this).field_hb != null) {
                       break L0;
                     } else {
-                      ((ni) this).field_hb = nb.a(((ni) this).field_db, 100, ((ni) this).field_ab.l(), ((ni) this).field_ab.n());
-                      kf discarded$6 = mn.a(-24296, nb.a(((ni) this).field_db, 100, ((ni) this).field_ab.l(), ((ni) this).field_ab.n()));
+                      nb dupTemp$11 = nb.a(((ni) this).field_db, 100, ((ni) this).field_ab.l(), ((ni) this).field_ab.n());
+                      ((ni) this).field_hb = dupTemp$11;
+                      kf discarded$12 = mn.a(-24296, dupTemp$11);
                       ((ni) this).field_ab = null;
                       break L0;
                     }
@@ -87,8 +89,9 @@ final class ni extends vc {
                   if (((ni) this).field_hb != null) {
                     break L0;
                   } else {
-                    ((ni) this).field_hb = nb.a(((ni) this).field_db, 100, ((ni) this).field_ab.l(), ((ni) this).field_ab.n());
-                    kf discarded$7 = mn.a(-24296, nb.a(((ni) this).field_db, 100, ((ni) this).field_ab.l(), ((ni) this).field_ab.n()));
+                    nb dupTemp$13 = nb.a(((ni) this).field_db, 100, ((ni) this).field_ab.l(), ((ni) this).field_ab.n());
+                    ((ni) this).field_hb = dupTemp$13;
+                    kf discarded$14 = mn.a(-24296, dupTemp$13);
                     ((ni) this).field_ab = null;
                     break L0;
                   }
@@ -105,8 +108,9 @@ final class ni extends vc {
                 if (((ni) this).field_hb != null) {
                   break L0;
                 } else {
-                  ((ni) this).field_hb = nb.a(((ni) this).field_db, 100, ((ni) this).field_ab.l(), ((ni) this).field_ab.n());
-                  kf discarded$8 = mn.a(-24296, nb.a(((ni) this).field_db, 100, ((ni) this).field_ab.l(), ((ni) this).field_ab.n()));
+                  nb dupTemp$15 = nb.a(((ni) this).field_db, 100, ((ni) this).field_ab.l(), ((ni) this).field_ab.n());
+                  ((ni) this).field_hb = dupTemp$15;
+                  kf discarded$16 = mn.a(-24296, dupTemp$15);
                   ((ni) this).field_ab = null;
                   break L0;
                 }
@@ -210,7 +214,7 @@ final class ni extends vc {
                             }
                           }
                           fq.a(stackIn_48_0, stackIn_48_1, stackIn_48_2, false);
-                          le discarded$9 = lg.field_s.a(true, (byte) 106, (java.awt.Component) (Object) vj.a((byte) -113));
+                          le discarded$17 = lg.field_s.a(true, (byte) 106, (java.awt.Component) (Object) vj.a((byte) -113));
                           break L1;
                         }
                       }
@@ -1068,40 +1072,41 @@ final class ni extends vc {
           var6 = param0;
           if (var6 != 5) {
             if (2 == var6) {
-              kf discarded$7 = kp.a(100, ((ni) this).field_X, param3, param1);
+              kf discarded$8 = kp.a(100, ((ni) this).field_X, param3, param1);
               break L0;
             } else {
               if (var6 != 3) {
                 if (0 == var6) {
-                  kf discarded$8 = kp.a(100, ((ni) this).field_fb, param3, param1);
+                  kf discarded$9 = kp.a(100, ((ni) this).field_fb, param3, param1);
                   break L0;
                 } else {
-                  if (-2 != var6) {
-                    if (-5 == var6) {
-                      ((ni) this).field_ab = nb.a(((ni) this).field_Y, 100, param1, param3);
-                      kf discarded$9 = mn.a(-24296, nb.a(((ni) this).field_Y, 100, param1, param3));
+                  if (-2 != (var6 ^ -1)) {
+                    if (-5 == (var6 ^ -1)) {
+                      nb dupTemp$10 = nb.a(((ni) this).field_Y, 100, param1, param3);
+                      ((ni) this).field_ab = dupTemp$10;
+                      kf discarded$11 = mn.a(-24296, dupTemp$10);
                       break L0;
                     } else {
                       if ((var6 ^ -1) != -7) {
                         super.a(param0, param1, (byte) -104, param3);
                         break L0;
                       } else {
-                        kf discarded$10 = kp.a(100, ((ni) this).field_cb, param3, param1);
+                        kf discarded$12 = kp.a(100, ((ni) this).field_cb, param3, param1);
                         break L0;
                       }
                     }
                   } else {
-                    kf discarded$11 = kp.a(100, ((ni) this).field_W, param3, param1);
+                    kf discarded$13 = kp.a(100, ((ni) this).field_W, param3, param1);
                     break L0;
                   }
                 }
               } else {
-                kf discarded$12 = kp.a(100, ((ni) this).field_Q, param3, param1);
+                kf discarded$14 = kp.a(100, ((ni) this).field_Q, param3, param1);
                 break L0;
               }
             }
           } else {
-            kf discarded$13 = kp.a(100, ((ni) this).field_V, param3, param1);
+            kf discarded$15 = kp.a(100, ((ni) this).field_V, param3, param1);
             break L0;
           }
         }
@@ -1125,7 +1130,7 @@ final class ni extends vc {
         int var14_int = 0;
         eg[][] var14 = null;
         int var15 = 0;
-        eg var15_ref = null;
+        eg var15_ref_eg = null;
         int var16 = 0;
         int var18 = 0;
         int var19 = 0;
@@ -1235,11 +1240,16 @@ final class ni extends vc {
                               L5: while (true) {
                                 if (oo.field_I <= var2) {
                                   bf.field_k = var11;
-                                  ((ni) this).field_jb = new so(4 * (af.field_e - ch.field_G));
-                                  ((ni) this).field_bb = new so(new so[1]);
-                                  ((ni) this).field_U = new so(4 * (af.field_e + -ch.field_G));
-                                  ((ni) this).field_gb = new so(4 * (-fc.field_c + pf.field_k) + (rg.field_u - rb.field_a) * 2);
-                                  ((ni) this).field_R = new so(new so[2]);
+                                  so dupTemp$9 = new so(4 * (af.field_e - ch.field_G));
+                                  ((ni) this).field_jb = dupTemp$9;
+                                  so dupTemp$10 = new so(new so[1]);
+                                  ((ni) this).field_bb = dupTemp$10;
+                                  so dupTemp$11 = new so(4 * (af.field_e + -ch.field_G));
+                                  ((ni) this).field_U = dupTemp$11;
+                                  so dupTemp$12 = new so(4 * (-fc.field_c + pf.field_k) + (rg.field_u - rb.field_a) * 2);
+                                  ((ni) this).field_gb = dupTemp$12;
+                                  so dupTemp$13 = new so(new so[2]);
+                                  ((ni) this).field_R = dupTemp$13;
                                   var12 = new so(new so[2]);
                                   var13 = new so(new so[2]);
                                   var14 = new eg[af.field_e + -ch.field_G][2];
@@ -1332,11 +1342,13 @@ final class ni extends vc {
                                         }
                                       }
                                     } else {
-                                      var14[var2 - ch.field_G][0] = hq.b((byte) 125);
-                                      var15_ref = hq.b((byte) 125);
-                                      var14[-ch.field_G + var2][1] = hq.b((byte) 127);
-                                      var28 = hq.b((byte) 127);
-                                      ej.a(0, var15_ref, 0, false, -((ni) this).field_M[var2][2], 0, 0, 1, var28, ((ni) this).field_O[var2]);
+                                      eg dupTemp$14 = hq.b((byte) 125);
+                                      var14[var2 - ch.field_G][0] = dupTemp$14;
+                                      var15_ref_eg = dupTemp$14;
+                                      eg dupTemp$15 = hq.b((byte) 127);
+                                      var14[-ch.field_G + var2][1] = dupTemp$15;
+                                      var28 = dupTemp$15;
+                                      ej.a(0, var15_ref_eg, 0, false, -((ni) this).field_M[var2][2], 0, 0, 1, var28, ((ni) this).field_O[var2]);
                                       var2++;
                                       continue L6;
                                     }
@@ -1414,8 +1426,9 @@ final class ni extends vc {
                             var2++;
                             continue L3;
                           } else {
+                            int incrementValue$16 = var12_int;
                             var12_int++;
-                            th.field_l[var12_int] = new p((nc) (Object) ((ni) this).a(0, var25[var15]), new int[3]);
+                            th.field_l[incrementValue$16] = new p((nc) (Object) ((ni) this).a(0, var25[var15]), new int[3]);
                             var15++;
                             continue L13;
                           }
@@ -1433,8 +1446,9 @@ final class ni extends vc {
                         var2++;
                         continue L2;
                       } else {
+                        int incrementValue$17 = var12_int;
                         var12_int++;
-                        th.field_l[var12_int] = new p((nc) (Object) ((ni) this).a(108, var23[var15]), new int[3]);
+                        th.field_l[incrementValue$17] = new p((nc) (Object) ((ni) this).a(108, var23[var15]), new int[3]);
                         var15++;
                         continue L14;
                       }
@@ -1589,41 +1603,52 @@ final class ni extends vc {
         ((ni) this).field_O = new eg[11];
         var3 = 0;
         kj.field_b = var3;
+        int incrementValue$27 = var3;
         var3++;
-        ((ni) this).field_O[var3] = eg.a(param0, "", "new_classic_table/floor_texture");
+        ((ni) this).field_O[incrementValue$27] = eg.a(param0, "", "new_classic_table/floor_texture");
         eh.field_t = var3;
         tj.field_fb = var3;
+        int incrementValue$28 = var3;
         var3++;
-        ((ni) this).field_O[var3] = eg.a(param0, "", "new_classic_table/floor_shadow");
+        ((ni) this).field_O[incrementValue$28] = eg.a(param0, "", "new_classic_table/floor_shadow");
         nd.field_m = var3;
         qr.field_d = var3;
+        int incrementValue$29 = var3;
         var3++;
-        ((ni) this).field_O[var3] = eg.a(param0, "", "new_classic_table/class_leg");
+        ((ni) this).field_O[incrementValue$29] = eg.a(param0, "", "new_classic_table/class_leg");
         fc.field_c = var3;
         dp.field_l = var3;
+        int incrementValue$30 = var3;
         var3++;
-        ((ni) this).field_O[var3] = eg.a(param0, "", "new_classic_table/class_hole_a");
+        ((ni) this).field_O[incrementValue$30] = eg.a(param0, "", "new_classic_table/class_hole_a");
         pf.field_k = var3;
         rb.field_a = var3;
+        int incrementValue$31 = var3;
         var3++;
-        ((ni) this).field_O[var3] = eg.a(param0, "", "new_classic_table/class_hole_b");
+        ((ni) this).field_O[incrementValue$31] = eg.a(param0, "", "new_classic_table/class_hole_b");
         ch.field_G = var3;
         rg.field_u = var3;
+        int incrementValue$32 = var3;
         var3++;
-        ((ni) this).field_O[var3] = eg.a(param0, "", "new_classic_table/class_corner");
+        ((ni) this).field_O[incrementValue$32] = eg.a(param0, "", "new_classic_table/class_corner");
+        int incrementValue$33 = var3;
         var3++;
-        ((ni) this).field_O[var3] = eg.a(param0, "", "new_classic_table/class_side_a");
+        ((ni) this).field_O[incrementValue$33] = eg.a(param0, "", "new_classic_table/class_side_a");
+        int incrementValue$34 = var3;
         var3++;
-        ((ni) this).field_O[var3] = eg.a(param0, "", "new_classic_table/class_side_b");
+        ((ni) this).field_O[incrementValue$34] = eg.a(param0, "", "new_classic_table/class_side_b");
         if (param1 < -43) {
+          int incrementValue$35 = var3;
           var3++;
-          ((ni) this).field_O[var3] = eg.a(param0, "", "new_classic_table/class_side_c");
+          ((ni) this).field_O[incrementValue$35] = eg.a(param0, "", "new_classic_table/class_side_c");
           af.field_e = var3;
           uk.field_l = var3;
+          int incrementValue$36 = var3;
           var3++;
-          ((ni) this).field_O[var3] = eg.a(param0, "", "new_classic_table/classic_top_a");
+          ((ni) this).field_O[incrementValue$36] = eg.a(param0, "", "new_classic_table/classic_top_a");
+          int incrementValue$37 = var3;
           var3++;
-          ((ni) this).field_O[var3] = eg.a(param0, "", "new_classic_table/classic_top_b");
+          ((ni) this).field_O[incrementValue$37] = eg.a(param0, "", "new_classic_table/classic_top_b");
           oo.field_I = var3;
           ((ni) this).field_A = new jk();
           ((ni) this).field_A.a(eg.a(param0, "", "cues/classic_cue"), (byte) -121);
@@ -1696,7 +1721,7 @@ final class ni extends vc {
                                   var20[2] = 0 + var66[2];
                                   var20[1] = 0 + var66[1];
                                   var20[0] = var66[0] + 0;
-                                  int[] discarded$5 = dq.a((byte) -123, var69);
+                                  int[] discarded$38 = dq.a((byte) -123, var69);
                                   var19[2] = new eg(var32, false, false, false, false);
                                   var34[2].a(var69);
                                   var70 = mj.a(-31121);
@@ -1707,7 +1732,7 @@ final class ni extends vc {
                                   var20[0] = var66[0] - 0;
                                   var20[1] = -(var66[1] + 0);
                                   var20[2] = 0 + var66[2];
-                                  int[] discarded$6 = dq.a((byte) -122, var70);
+                                  int[] discarded$39 = dq.a((byte) -122, var70);
                                   var19[3] = new eg(var36, false, false, false, false);
                                   var34[3].a(var70);
                                   ((ni) this).field_O[var4] = new eg(var40, 4);
@@ -1753,7 +1778,7 @@ final class ni extends vc {
                               var20[1] = 0 + var61[1];
                               var20[0] = var61[0] - 0;
                               var20[2] = var61[2] - 0;
-                              int[] discarded$7 = dq.a((byte) 45, var64);
+                              int[] discarded$40 = dq.a((byte) 45, var64);
                               var19[2] = new eg(var23, false, false, false, false);
                               var25[2].a(var64);
                               var65 = mj.a(-31121);
@@ -1764,7 +1789,7 @@ final class ni extends vc {
                               var20[2] = 0 + var61[2];
                               var20[1] = -(var61[1] + 0);
                               var20[0] = var61[0] + 0;
-                              int[] discarded$8 = dq.a((byte) 75, var65);
+                              int[] discarded$41 = dq.a((byte) 75, var65);
                               var19[3] = new eg(var27, false, false, false, false);
                               var25[3].a(var65);
                               ((ni) this).field_O[var4] = new eg(var31, 4);
@@ -1779,7 +1804,7 @@ final class ni extends vc {
                         }
                       }
                     } else {
-                      eg discarded$9 = cq.a(var11, 59, var13, ((ni) this).field_O[var4], var12);
+                      eg discarded$42 = cq.a(var11, 59, var13, ((ni) this).field_O[var4], var12);
                       var4++;
                       continue L2;
                     }

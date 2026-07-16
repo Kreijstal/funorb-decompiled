@@ -24,7 +24,7 @@ final class qd {
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
-        StringBuilder var9_ref = null;
+        StringBuilder var9_ref_StringBuilder = null;
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
@@ -48,12 +48,12 @@ final class qd {
               } else {
                 L1: {
                   if (param1 < -37) {
-                    var9_ref = new StringBuilder(var7);
+                    var9_ref_StringBuilder = new StringBuilder(var7);
                     var10 = 0;
                     break L1;
                   } else {
                     field_i = null;
-                    var9_ref = new StringBuilder(var7);
+                    var9_ref_StringBuilder = new StringBuilder(var7);
                     var10 = 0;
                     break L1;
                   }
@@ -61,12 +61,12 @@ final class qd {
                 L2: while (true) {
                   var11 = param0.indexOf(param3, var10);
                   if (var11 < 0) {
-                    StringBuilder discarded$9 = var9_ref.append(param0.substring(var10));
-                    return var9_ref.toString();
+                    StringBuilder discarded$9 = var9_ref_StringBuilder.append(param0.substring(var10));
+                    return var9_ref_StringBuilder.toString();
                   } else {
-                    StringBuilder discarded$10 = var9_ref.append(param0.substring(var10, var11));
+                    StringBuilder discarded$10 = var9_ref_StringBuilder.append(param0.substring(var10, var11));
                     var10 = var5 + var11;
-                    StringBuilder discarded$11 = var9_ref.append(param2);
+                    StringBuilder discarded$11 = var9_ref_StringBuilder.append(param2);
                     continue L2;
                   }
                 }
@@ -74,33 +74,33 @@ final class qd {
             }
           } else {
             if (param1 < -37) {
-              var9_ref = new StringBuilder(var7);
+              var9_ref_StringBuilder = new StringBuilder(var7);
               var10 = 0;
               L3: while (true) {
                 var11 = param0.indexOf(param3, var10);
                 if (var11 < 0) {
-                  StringBuilder discarded$12 = var9_ref.append(param0.substring(var10));
-                  return var9_ref.toString();
+                  StringBuilder discarded$12 = var9_ref_StringBuilder.append(param0.substring(var10));
+                  return var9_ref_StringBuilder.toString();
                 } else {
-                  StringBuilder discarded$13 = var9_ref.append(param0.substring(var10, var11));
+                  StringBuilder discarded$13 = var9_ref_StringBuilder.append(param0.substring(var10, var11));
                   var10 = var5 + var11;
-                  StringBuilder discarded$14 = var9_ref.append(param2);
+                  StringBuilder discarded$14 = var9_ref_StringBuilder.append(param2);
                   continue L3;
                 }
               }
             } else {
               field_i = null;
-              var9_ref = new StringBuilder(var7);
+              var9_ref_StringBuilder = new StringBuilder(var7);
               var10 = 0;
               L4: while (true) {
                 var11 = param0.indexOf(param3, var10);
                 if (var11 < 0) {
-                  StringBuilder discarded$15 = var9_ref.append(param0.substring(var10));
-                  return var9_ref.toString();
+                  StringBuilder discarded$15 = var9_ref_StringBuilder.append(param0.substring(var10));
+                  return var9_ref_StringBuilder.toString();
                 } else {
-                  StringBuilder discarded$16 = var9_ref.append(param0.substring(var10, var11));
+                  StringBuilder discarded$16 = var9_ref_StringBuilder.append(param0.substring(var10, var11));
                   var10 = var5 + var11;
-                  StringBuilder discarded$17 = var9_ref.append(param2);
+                  StringBuilder discarded$17 = var9_ref_StringBuilder.append(param2);
                   continue L4;
                 }
               }

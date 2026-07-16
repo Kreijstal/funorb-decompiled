@@ -25,8 +25,9 @@ final class mj {
 
     final void b(int param0) {
         ((mj) this).field_f.a(12804, false);
+        int fieldTemp$2 = ((mj) this).field_d;
         ((mj) this).field_d = ((mj) this).field_d + 1;
-        if (((mj) this).field_d == 60) {
+        if (fieldTemp$2 == 60) {
           ((mj) this).field_a[0] = ok.a(ea.field_b, -100, 300) + 300;
           ((mj) this).field_a[1] = 0;
           if (param0 != 300) {

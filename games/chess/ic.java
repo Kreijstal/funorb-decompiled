@@ -20,8 +20,8 @@ final class ic {
         var2 = of.field_g;
         of.field_g = lg.field_f;
         var3 = 30 / ((73 - param0) / 38);
-        if (param1 != -52) {
-          if (param1 != -51) {
+        if ((param1 ^ -1) != -52) {
+          if ((param1 ^ -1) != -51) {
             L0: {
               qh.field_c.field_c = 1;
               qh.field_c.field_g = qh.field_c.field_g + 1;
@@ -29,7 +29,7 @@ final class ic {
               if (-3 < (qh.field_c.field_g ^ -1)) {
                 break L0;
               } else {
-                if (param1 != -52) {
+                if ((param1 ^ -1) != -52) {
                   break L0;
                 } else {
                   return 2;
@@ -43,14 +43,14 @@ final class ic {
                 return -1;
               }
             } else {
-              if (-51 != param1) {
+              if (-51 == (param1 ^ -1)) {
+                return 5;
+              } else {
                 if ((qh.field_c.field_g ^ -1) <= -5) {
                   return 1;
                 } else {
                   return -1;
                 }
-              } else {
-                return 5;
               }
             }
           } else {
@@ -58,10 +58,10 @@ final class ic {
               qh.field_c.field_c = 5;
               qh.field_c.field_g = qh.field_c.field_g + 1;
               lg.field_f = var2;
-              if (-3 > qh.field_c.field_g) {
+              if (-3 < (qh.field_c.field_g ^ -1)) {
                 break L1;
               } else {
-                if (param1 != -52) {
+                if ((param1 ^ -1) != -52) {
                   break L1;
                 } else {
                   return 2;
@@ -75,14 +75,14 @@ final class ic {
                 return -1;
               }
             } else {
-              if (-51 != param1) {
+              if (-51 == (param1 ^ -1)) {
+                return 5;
+              } else {
                 if ((qh.field_c.field_g ^ -1) <= -5) {
                   return 1;
                 } else {
                   return -1;
                 }
-              } else {
-                return 5;
               }
             }
           }
@@ -90,8 +90,10 @@ final class ic {
           qh.field_c.field_c = 2;
           qh.field_c.field_g = qh.field_c.field_g + 1;
           lg.field_f = var2;
-          if (-3 <= qh.field_c.field_g) {
-            if (param1 != -52) {
+          if (-3 >= (qh.field_c.field_g ^ -1)) {
+            if ((param1 ^ -1) == -52) {
+              return 2;
+            } else {
               if (qh.field_c.field_g < 2) {
                 if ((qh.field_c.field_g ^ -1) <= -5) {
                   return 1;
@@ -99,18 +101,16 @@ final class ic {
                   return -1;
                 }
               } else {
-                if (-51 != param1) {
+                if (-51 == (param1 ^ -1)) {
+                  return 5;
+                } else {
                   if ((qh.field_c.field_g ^ -1) <= -5) {
                     return 1;
                   } else {
                     return -1;
                   }
-                } else {
-                  return 5;
                 }
               }
-            } else {
-              return 2;
             }
           } else {
             if (qh.field_c.field_g < 2) {
@@ -120,14 +120,14 @@ final class ic {
                 return -1;
               }
             } else {
-              if (-51 != (param1 ^ -1)) {
+              if (-51 == (param1 ^ -1)) {
+                return 5;
+              } else {
                 if ((qh.field_c.field_g ^ -1) <= -5) {
                   return 1;
                 } else {
                   return -1;
                 }
-              } else {
-                return 5;
               }
             }
           }

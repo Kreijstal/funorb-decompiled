@@ -190,8 +190,9 @@ final class ti {
         int var4 = 0;
         int var5 = 0;
         var5 = wizardrun.field_H;
+        int fieldTemp$3 = ((ti) this).field_c + 1;
         ((ti) this).field_c = ((ti) this).field_c + 1;
-        ((ti) this).field_d = ((ti) this).field_d + (((ti) this).field_c + 1);
+        ((ti) this).field_d = ((ti) this).field_d + fieldTemp$3;
         if (param0 >= 116) {
           var2 = 0;
           L0: while (true) {
@@ -219,10 +220,12 @@ final class ti {
                 }
               }
               ((ti) this).field_e = ((ti) this).field_e + ((ti) this).field_b[128 + var2 & 255];
-              var4 = ((ti) this).field_d + (((ti) this).field_e + ((ti) this).field_b[kl.b(255, var3 >> -831166590)]);
-              ((ti) this).field_b[var2] = ((ti) this).field_d + (((ti) this).field_e + ((ti) this).field_b[kl.b(255, var3 >> -831166590)]);
-              ((ti) this).field_d = ((ti) this).field_b[kl.b(261240, var4) >> 2135610216 >> 800863586] + var3;
-              ((ti) this).field_f[var2] = ((ti) this).field_b[kl.b(261240, var4) >> 2135610216 >> 800863586] + var3;
+              int dupTemp$4 = ((ti) this).field_d + (((ti) this).field_e + ((ti) this).field_b[kl.b(255, var3 >> -831166590)]);
+              var4 = dupTemp$4;
+              ((ti) this).field_b[var2] = dupTemp$4;
+              int dupTemp$5 = ((ti) this).field_b[kl.b(261240, var4) >> 2135610216 >> 800863586] + var3;
+              ((ti) this).field_d = dupTemp$5;
+              ((ti) this).field_f[var2] = dupTemp$5;
               var2++;
               continue L0;
             }
@@ -247,8 +250,9 @@ final class ti {
         if (param0 <= 58) {
             this.b(13);
         }
+        int fieldTemp$0 = ((ti) this).field_g - 1;
         ((ti) this).field_g = ((ti) this).field_g - 1;
-        return ((ti) this).field_f[((ti) this).field_g - 1];
+        return ((ti) this).field_f[fieldTemp$0];
     }
 
     final static gb a(int param0, String param1, kl param2, String param3, kl param4) {

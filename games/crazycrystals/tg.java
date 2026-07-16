@@ -31,7 +31,8 @@ final class tg {
         int var18 = 0;
         int var19 = 0;
         int var20 = 0;
-        hm var21 = null;
+        Object var21 = null;
+        hm var21_ref = null;
         int var22 = 0;
         int var23 = 0;
         int var24 = 0;
@@ -211,7 +212,7 @@ final class tg {
                   break L8;
                 }
                 L10: {
-                  var21 = stackIn_39_0;
+                  var21_ref = stackIn_39_0;
                   var22 = dn.field_a[var15];
                   var23 = qk.field_E[var15];
                   var24 = dn.field_a[var16];
@@ -225,8 +226,8 @@ final class tg {
                       L11: {
                         var28 = var66[var18];
                         var29 = var67[var18];
-                        if (var21 != null) {
-                          stackOut_48_0 = var21.field_b;
+                        if (var21_ref != null) {
+                          stackOut_48_0 = var21_ref.field_b;
                           stackIn_49_0 = stackOut_48_0;
                           break L11;
                         } else {
@@ -255,8 +256,8 @@ final class tg {
                   var31 = var67[var18];
                   var32 = var67[var19];
                   var33 = var67[var20];
-                  if (var21 != null) {
-                    stackOut_44_0 = var21.field_b;
+                  if (var21_ref != null) {
+                    stackOut_44_0 = var21_ref.field_b;
                     stackIn_45_0 = stackOut_44_0;
                     break L12;
                   } else {

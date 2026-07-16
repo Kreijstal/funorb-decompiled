@@ -152,8 +152,8 @@ final class il {
         int var7 = 0;
         int var8 = 0;
         km var9 = null;
-        km var10 = null;
-        km var11 = null;
+        Object var10 = null;
+        Object var11 = null;
         int[] var12 = null;
         km var13 = null;
         km var14 = null;
@@ -176,7 +176,7 @@ final class il {
           var10 = null;
           if (param3) {
             var13 = var9.c();
-            var10 = var13;
+            var10 = (Object) (Object) var13;
             var13.e();
             wb.a(0, 0, 5, 0);
             wb.a(0, 1, 3, 0);
@@ -194,7 +194,7 @@ final class il {
             break L1;
           } else {
             var14 = var9.c();
-            var11 = var14;
+            var11 = (Object) (Object) var14;
             var14.e();
             wb.a(11, 0, 5, 0);
             wb.a(13, 1, 3, 0);
@@ -205,7 +205,7 @@ final class il {
           }
         }
         wb.a(var18, var7, var8);
-        return new km[]{null, null, null, var10, var9, var11, null, null, null};
+        return new km[]{null, null, null, (km) var10, var9, (km) var11, null, null, null};
     }
 
     static {

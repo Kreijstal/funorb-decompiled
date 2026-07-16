@@ -208,20 +208,20 @@ final class nm {
                     int discarded$8 = param1.h((byte) -126);
                     break L1;
                   } else {
-                    if (-7 != param0) {
-                      if (-8 != param0) {
+                    if (-7 != (param0 ^ -1)) {
+                      if (-8 != (param0 ^ -1)) {
                         if (param0 != 8) {
-                          if (param0 == -10) {
+                          if ((param0 ^ -1) == -10) {
                             int discarded$9 = param1.h((byte) -106);
                             break L1;
                           } else {
-                            if (-11 != param0) {
+                            if (-11 != (param0 ^ -1)) {
                               if (11 == param0) {
                                 int discarded$10 = param1.h((byte) -118);
                                 break L1;
                               } else {
                                 if (param0 != 12) {
-                                  if (-14 == param0) {
+                                  if (-14 == (param0 ^ -1)) {
                                     var4 = param1.a((byte) 81);
                                     ((nm) this).field_n = new int[var4][];
                                     var5 = 0;
@@ -229,31 +229,33 @@ final class nm {
                                       if (var5 >= var4) {
                                         break L1;
                                       } else {
-                                        var6 = param1.h((byte) -108);
-                                        if ((var6 ^ -1) < -1) {
-                                          ((nm) this).field_n[var5] = new int[var6];
-                                          ((nm) this).field_n[var5][0] = param1.i(-95);
-                                          var7 = 1;
-                                          L4: while (true) {
-                                            if (var6 > var7) {
-                                              ((nm) this).field_n[var5][var7] = param1.a((byte) 81);
-                                              var7++;
-                                              continue L4;
-                                            } else {
-                                              var5++;
-                                              continue L3;
+                                        L4: {
+                                          var6 = param1.h((byte) -108);
+                                          if ((var6 ^ -1) >= -1) {
+                                            break L4;
+                                          } else {
+                                            ((nm) this).field_n[var5] = new int[var6];
+                                            ((nm) this).field_n[var5][0] = param1.i(-95);
+                                            var7 = 1;
+                                            L5: while (true) {
+                                              if ((var6 ^ -1) >= (var7 ^ -1)) {
+                                                break L4;
+                                              } else {
+                                                ((nm) this).field_n[var5][var7] = param1.a((byte) 81);
+                                                var7++;
+                                                continue L5;
+                                              }
                                             }
                                           }
-                                        } else {
-                                          var5++;
-                                          continue L3;
                                         }
+                                        var5++;
+                                        continue L3;
                                       }
                                     }
                                   } else {
-                                    if (param0 != -15) {
-                                      if (-16 != param0) {
-                                        if (-17 != param0) {
+                                    if ((param0 ^ -1) != -15) {
+                                      if (-16 != (param0 ^ -1)) {
+                                        if (-17 != (param0 ^ -1)) {
                                           if (18 == param0) {
                                             break L1;
                                           } else {
@@ -273,22 +275,22 @@ final class nm {
                                 } else {
                                   var4 = param1.h((byte) -117);
                                   var5 = 0;
-                                  L5: while (true) {
-                                    if (var4 <= var5) {
+                                  L6: while (true) {
+                                    if ((var4 ^ -1) >= (var5 ^ -1)) {
                                       var5 = 0;
-                                      L6: while (true) {
-                                        if (var4 <= var5) {
+                                      L7: while (true) {
+                                        if ((var4 ^ -1) >= (var5 ^ -1)) {
                                           break L1;
                                         } else {
                                           int discarded$11 = param1.a((byte) 81);
                                           var5++;
-                                          continue L6;
+                                          continue L7;
                                         }
                                       }
                                     } else {
                                       int discarded$12 = param1.a((byte) 81);
                                       var5++;
-                                      continue L5;
+                                      continue L6;
                                     }
                                   }
                                 }
@@ -318,32 +320,32 @@ final class nm {
               var4 = param1.a((byte) 81);
               ((nm) this).field_c = new int[var4];
               var5 = 0;
-              L7: while (true) {
-                if (var4 <= var5) {
+              L8: while (true) {
+                if ((var4 ^ -1) >= (var5 ^ -1)) {
                   ((nm) this).field_e = new int[var4];
                   var5 = 0;
-                  L8: while (true) {
-                    if (var4 <= var5) {
+                  L9: while (true) {
+                    if ((var4 ^ -1) >= (var5 ^ -1)) {
                       var5 = 0;
-                      L9: while (true) {
+                      L10: while (true) {
                         if (var4 <= var5) {
                           break L1;
                         } else {
                           ((nm) this).field_e[var5] = (param1.a((byte) 81) << -735689136) - -((nm) this).field_e[var5];
                           var5++;
-                          continue L9;
+                          continue L10;
                         }
                       }
                     } else {
                       ((nm) this).field_e[var5] = param1.a((byte) 81);
                       var5++;
-                      continue L8;
+                      continue L9;
                     }
                   }
                 } else {
                   ((nm) this).field_c[var5] = param1.a((byte) 81);
                   var5++;
-                  continue L7;
+                  continue L8;
                 }
               }
             }
@@ -422,6 +424,7 @@ final class nm {
             var7 = 0;
             L2: while (true) {
               if (((nm) this).field_c.length <= var7) {
+                return;
               } else {
                 if (((nm) this).field_c[var7] > var6) {
                   var6 = ((nm) this).field_c[var7];
@@ -456,9 +459,10 @@ final class nm {
         field_b = new int[89];
         var0 = 0;
         L0: while (true) {
-          if (var0 >= field_i.length) {
+          if ((var0 ^ -1) <= (field_i.length ^ -1)) {
             field_l = 0;
             field_a = "All players have left <%0>'s game.";
+            return;
           } else {
             L1: {
               if (-1 != (var0 ^ -1)) {
@@ -473,17 +477,17 @@ final class nm {
                           field_i[var0] = 20;
                           break L1;
                         } else {
-                          if (-7 == var0) {
+                          if (-7 == (var0 ^ -1)) {
                             field_i[var0] = 30;
                             break L1;
                           } else {
                             if (var0 != 7) {
-                              if (-9 == var0) {
+                              if (-9 == (var0 ^ -1)) {
                                 field_i[var0] = 30;
                                 break L1;
                               } else {
                                 if (var0 != 9) {
-                                  if (var0 != -11) {
+                                  if ((var0 ^ -1) != -11) {
                                     if (var0 == 11) {
                                       field_i[var0] = 30;
                                       break L1;
@@ -492,25 +496,25 @@ final class nm {
                                         field_i[var0] = 30;
                                         break L1;
                                       } else {
-                                        if (-14 != var0) {
-                                          if (var0 == -15) {
+                                        if (-14 != (var0 ^ -1)) {
+                                          if ((var0 ^ -1) == -15) {
                                             field_i[var0] = 30;
                                             break L1;
                                           } else {
                                             if (15 != var0) {
-                                              if (-17 != var0) {
+                                              if (-17 != (var0 ^ -1)) {
                                                 if ((var0 ^ -1) != -18) {
                                                   if (18 != var0) {
                                                     if (19 == var0) {
                                                       field_i[var0] = 30;
                                                       break L1;
                                                     } else {
-                                                      if (var0 == -21) {
+                                                      if ((var0 ^ -1) == -21) {
                                                         field_i[var0] = 30;
                                                         break L1;
                                                       } else {
                                                         if (21 != var0) {
-                                                          if (-23 != var0) {
+                                                          if (-23 != (var0 ^ -1)) {
                                                             if (23 == var0) {
                                                               field_i[var0] = 30;
                                                               break L1;
@@ -526,7 +530,7 @@ final class nm {
                                                                         field_i[var0] = 80;
                                                                         break L1;
                                                                       } else {
-                                                                        if (-30 == var0) {
+                                                                        if (-30 == (var0 ^ -1)) {
                                                                           field_i[var0] = 80;
                                                                           break L1;
                                                                         } else {
@@ -534,7 +538,7 @@ final class nm {
                                                                             field_i[var0] = 100;
                                                                             break L1;
                                                                           } else {
-                                                                            if (-32 != var0) {
+                                                                            if (-32 != (var0 ^ -1)) {
                                                                               if ((var0 ^ -1) != -33) {
                                                                                 if ((var0 ^ -1) != -34) {
                                                                                   if (34 == var0) {
@@ -549,17 +553,17 @@ final class nm {
                                                                                         if (37 != var0) {
                                                                                           if (38 != var0) {
                                                                                             if (39 != var0) {
-                                                                                              if (var0 != -41) {
-                                                                                                if (-42 == var0) {
+                                                                                              if ((var0 ^ -1) != -41) {
+                                                                                                if (-42 == (var0 ^ -1)) {
                                                                                                   field_i[var0] = 64;
                                                                                                   break L1;
                                                                                                 } else {
-                                                                                                  if (var0 == -43) {
+                                                                                                  if ((var0 ^ -1) == -43) {
                                                                                                     field_i[var0] = 64;
                                                                                                     break L1;
                                                                                                   } else {
                                                                                                     if (var0 != 43) {
-                                                                                                      if (-45 != var0) {
+                                                                                                      if (-45 != (var0 ^ -1)) {
                                                                                                         if ((var0 ^ -1) == -46) {
                                                                                                           field_i[var0] = 256;
                                                                                                           break L1;
@@ -613,8 +617,8 @@ final class nm {
                                                                                                                                                             field_i[var0] = 256;
                                                                                                                                                             break L1;
                                                                                                                                                           } else {
-                                                                                                                                                            if (-72 != var0) {
-                                                                                                                                                              if (-73 == var0) {
+                                                                                                                                                            if (-72 != (var0 ^ -1)) {
+                                                                                                                                                              if (-73 == (var0 ^ -1)) {
                                                                                                                                                                 field_i[var0] = 256;
                                                                                                                                                                 break L1;
                                                                                                                                                               } else {
@@ -643,8 +647,8 @@ final class nm {
                                                                                                                                                                                   break L1;
                                                                                                                                                                                 } else {
                                                                                                                                                                                   if (82 != var0) {
-                                                                                                                                                                                    if (var0 != -84) {
-                                                                                                                                                                                      if (-85 == var0) {
+                                                                                                                                                                                    if ((var0 ^ -1) != -84) {
+                                                                                                                                                                                      if (-85 == (var0 ^ -1)) {
                                                                                                                                                                                         field_i[var0] = 70;
                                                                                                                                                                                         break L1;
                                                                                                                                                                                       } else {
@@ -652,7 +656,7 @@ final class nm {
                                                                                                                                                                                           field_i[var0] = 70;
                                                                                                                                                                                           break L1;
                                                                                                                                                                                         } else {
-                                                                                                                                                                                          if (var0 == -87) {
+                                                                                                                                                                                          if ((var0 ^ -1) == -87) {
                                                                                                                                                                                             field_i[var0] = 64;
                                                                                                                                                                                             break L1;
                                                                                                                                                                                           } else {
@@ -660,7 +664,7 @@ final class nm {
                                                                                                                                                                                               field_i[var0] = 64;
                                                                                                                                                                                               break L1;
                                                                                                                                                                                             } else {
-                                                                                                                                                                                              if (-89 == var0) {
+                                                                                                                                                                                              if (-89 == (var0 ^ -1)) {
                                                                                                                                                                                                 field_i[var0] = 64;
                                                                                                                                                                                                 break L1;
                                                                                                                                                                                               } else {

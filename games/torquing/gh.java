@@ -19,13 +19,12 @@ final class gh {
 
     final p a(int param0, int param1) {
         p var3 = null;
-        p var3_ref = null;
         byte[] var4 = null;
         p var5 = null;
         p var10 = null;
         var3 = (p) ((gh) this).field_c.a(param1 + -32891, (long)param0);
         if (param1 == 32767) {
-          if (var3_ref == null) {
+          if (var3 == null) {
             L0: {
               if ((param0 ^ -1) <= -32769) {
                 var4 = ((gh) this).field_e.a(1, 100, param0 & 32767);
@@ -57,7 +56,7 @@ final class gh {
               }
             }
           } else {
-            return var3_ref;
+            return var3;
           }
         } else {
           ((gh) this).field_e = null;
@@ -72,16 +71,16 @@ final class gh {
               }
             }
             var5 = new p();
-            var3_ref = var5;
+            var3 = var5;
             if (var4 != null) {
-              var3_ref.a(new fj(var4), (byte) 38);
+              var3.a(new fj(var4), (byte) 38);
               if (32768 > param0) {
                 ((gh) this).field_c.a((long)param0, (Object) (Object) var5, (byte) 116);
-                return var3_ref;
+                return var3;
               } else {
                 var5.d((byte) -91);
                 ((gh) this).field_c.a((long)param0, (Object) (Object) var5, (byte) 116);
-                return var3_ref;
+                return var3;
               }
             } else {
               if (32768 <= param0) {

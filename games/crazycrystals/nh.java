@@ -233,34 +233,55 @@ final class nh extends og implements vd {
     }
 
     final void a(String[] param0, int param1) {
+        int var3 = 0;
         int var4_int = 0;
+        ok var4 = null;
         int var5 = 0;
-        int var6 = CrazyCrystals.field_B;
-        ((nh) this).field_v.a(param1 ^ 22800);
-        if (param0 != null) {
-            // ifeq L29
-        } else {
-            ((nh) this).field_B = null;
-            return;
+        int var6 = 0;
+        L0: {
+          var6 = CrazyCrystals.field_B;
+          ((nh) this).field_v.a(param1 ^ 22800);
+          if (param0 == null) {
+            break L0;
+          } else {
+            if (param0.length == 0) {
+              break L0;
+            } else {
+              var3 = param0.length;
+              ((nh) this).field_B = new String[var3];
+              var4_int = 0;
+              L1: while (true) {
+                if (var4_int >= var3) {
+                  var4 = new ok(ai.field_h, 0, 1);
+                  ((nh) this).field_D = new pc[var3 - -1];
+                  var5 = param1;
+                  L2: while (true) {
+                    if (var3 <= var5) {
+                      ((nh) this).field_D[var3] = new pc(qo.field_p, (bi) this);
+                      ((nh) this).field_D[var3].field_i = (wo) (Object) var4;
+                      ((nh) this).field_D[var3].a(15, 0, 20 - -((1 + var3) * 16), 100, (byte) -52);
+                      ((nh) this).b((qm) (Object) ((nh) this).field_D[var3], param1 + -118);
+                      return;
+                    } else {
+                      ((nh) this).field_D[var5] = new pc(((nh) this).field_B[var5], (bi) this);
+                      ((nh) this).field_D[var5].field_i = (wo) (Object) var4;
+                      ((nh) this).field_D[var5].field_t = fg.field_l;
+                      ((nh) this).field_D[var5].a(15, 0, 16 * var5 + 20, 80, (byte) -52);
+                      ((nh) this).b((qm) (Object) ((nh) this).field_D[var5], param1 + 60);
+                      var5++;
+                      continue L2;
+                    }
+                  }
+                } else {
+                  ((nh) this).field_B[var4_int] = gd.a((byte) 127, (CharSequence) (Object) param0[var4_int]).replace(' ', ' ');
+                  var4_int++;
+                  continue L1;
+                }
+              }
+            }
+          }
         }
-        int var3 = param0.length;
-        ((nh) this).field_B = new String[var3];
-        for (var4_int = 0; var4_int < var3; var4_int++) {
-            ((nh) this).field_B[var4_int] = gd.a((byte) 127, (CharSequence) (Object) param0[var4_int]).replace(' ', ' ');
-        }
-        ok var4 = new ok(ai.field_h, 0, 1);
-        ((nh) this).field_D = new pc[var3 - -1];
-        for (var5 = param1; var3 > var5; var5++) {
-            ((nh) this).field_D[var5] = new pc(((nh) this).field_B[var5], (bi) this);
-            ((nh) this).field_D[var5].field_i = (wo) (Object) var4;
-            ((nh) this).field_D[var5].field_t = fg.field_l;
-            ((nh) this).field_D[var5].a(15, 0, 16 * var5 + 20, 80, (byte) -52);
-            ((nh) this).b((qm) (Object) ((nh) this).field_D[var5], param1 + 60);
-        }
-        ((nh) this).field_D[var3] = new pc(qo.field_p, (bi) this);
-        ((nh) this).field_D[var3].field_i = (wo) (Object) var4;
-        ((nh) this).field_D[var3].a(15, 0, 20 - -((1 + var3) * 16), 100, (byte) -52);
-        ((nh) this).b((qm) (Object) ((nh) this).field_D[var3], param1 + -118);
+        ((nh) this).field_B = null;
     }
 
     static {

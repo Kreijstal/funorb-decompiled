@@ -112,7 +112,7 @@ final class sd {
         field_a = null;
         field_c = null;
         if (param0 <= 21) {
-            field_a = (qk) null;
+            field_a = null;
             field_b = null;
             return;
         }

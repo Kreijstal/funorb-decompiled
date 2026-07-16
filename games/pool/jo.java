@@ -1152,8 +1152,8 @@ class jo extends ob {
         int var5 = 0;
         var5 = Pool.field_O;
         var4 = ((jo) this).field_h[param2];
-        if (var4 != -55) {
-          if (-56 != var4) {
+        if ((var4 ^ -1) != -55) {
+          if (-56 != (var4 ^ -1)) {
             if (56 != var4) {
               if (var4 != 57) {
                 if (58 != var4) {
@@ -1221,17 +1221,17 @@ class jo extends ob {
               } else {
                 if (((jo) this).field_B.b((byte) 56)) {
                   ac.a(param0 ^ -16726, true, true, nn.field_b[3].field_b);
-                  if (param0 == -16470) {
-                    return;
-                  } else {
-                    jo.g(-10, -105);
-                    return;
-                  }
-                } else {
                   if (param0 != -16470) {
                     jo.g(-10, -105);
                     return;
                   } else {
+                    return;
+                  }
+                } else {
+                  if (param0 == -16470) {
+                    return;
+                  } else {
+                    jo.g(-10, -105);
                     return;
                   }
                 }
@@ -1239,17 +1239,17 @@ class jo extends ob {
             } else {
               if (((jo) this).field_B.b((byte) 54)) {
                 ac.a(param0 ^ -16726, true, true, nn.field_b[2].field_b);
-                if (param0 != -16470) {
-                  jo.g(-10, -105);
+                if (param0 == -16470) {
                   return;
                 } else {
+                  jo.g(-10, -105);
                   return;
                 }
               } else {
-                if (param0 != -16470) {
-                  jo.g(-10, -105);
+                if (param0 == -16470) {
                   return;
                 } else {
+                  jo.g(-10, -105);
                   return;
                 }
               }
@@ -1257,17 +1257,17 @@ class jo extends ob {
           } else {
             if (((jo) this).field_B.b((byte) 115)) {
               ac.a(256, true, true, nn.field_b[1].field_b);
-              if (param0 != -16470) {
-                jo.g(-10, -105);
+              if (param0 == -16470) {
                 return;
               } else {
+                jo.g(-10, -105);
                 return;
               }
             } else {
-              if (param0 != -16470) {
-                jo.g(-10, -105);
+              if (param0 == -16470) {
                 return;
               } else {
+                jo.g(-10, -105);
                 return;
               }
             }
@@ -1275,17 +1275,17 @@ class jo extends ob {
         } else {
           if (((jo) this).field_B.b((byte) 54)) {
             ac.a(param0 ^ -16726, true, true, nn.field_b[0].field_b);
-            if (param0 != -16470) {
-              jo.g(-10, -105);
+            if (param0 == -16470) {
               return;
             } else {
+              jo.g(-10, -105);
               return;
             }
           } else {
-            if (param0 != -16470) {
-              jo.g(-10, -105);
+            if (param0 == -16470) {
               return;
             } else {
+              jo.g(-10, -105);
               return;
             }
           }

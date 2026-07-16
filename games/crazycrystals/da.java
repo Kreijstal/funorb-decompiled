@@ -21,95 +21,43 @@ final class da extends ue {
     private int field_j;
 
     private final void c(int param0) {
-        int var2 = 0;
-        if (((da) this).field_r == 1) {
-          L0: {
-            var2 = ((da) this).field_s + 1;
-            if (mo.field_l == 0) {
-              if (((da) this).field_e < var2) {
-                break L0;
-              } else {
-                if (-21 <= ((da) this).field_e) {
-                  break L0;
-                } else {
-                  ((da) this).field_e = var2 + -1;
-                  break L0;
+        if (((da) this).field_r != 1) {
+            return;
+        }
+        int var2 = ((da) this).field_s + 1;
+        if (mo.field_l == 0) {
+            if ((((da) this).field_e ^ -1) <= (var2 ^ -1)) {
+                if (!((((da) this).field_g ^ -1) >= (((da) this).field_e ^ -1))) {
+                    ((da) this).field_e = var2 + -1;
                 }
-              }
-            } else {
-              if (((da) this).field_e < var2) {
-                break L0;
-              } else {
-                if (-21 >= ((da) this).field_e) {
-                  break L0;
-                } else {
-                  ((da) this).field_e = var2 + -1;
-                  break L0;
-                }
-              }
             }
-          }
-          L1: {
-            if (var2 <= -23) {
-              if (((da) this).field_e < var2) {
-                break L1;
-              } else {
-                if (-41 <= ((da) this).field_e) {
-                  break L1;
-                } else {
-                  ((da) this).field_e = var2 + -1;
-                  break L1;
-                }
-              }
-            } else {
-              if (((da) this).field_e < var2) {
-                break L1;
-              } else {
-                if (-41 <= ((da) this).field_e) {
-                  break L1;
-                } else {
-                  ((da) this).field_e = var2 + -1;
-                  break L1;
-                }
-              }
+            if (((da) this).field_g + 1 > var2) {
+                var2 = 1 + ((da) this).field_g;
             }
-          }
-          L2: {
-            if (param0 <= -19) {
-              break L2;
-            } else {
-              int discarded$1 = this.c((byte) -122);
-              break L2;
+        }
+        if ((((da) this).field_e ^ -1) <= (var2 ^ -1)) {
+            if (-21 < (((da) this).field_e ^ -1)) {
+                ((da) this).field_e = var2 + -1;
             }
-          }
-          L3: {
-            if (var2 >= 42) {
-              if (var2 > ((da) this).field_e) {
-                break L3;
-              } else {
-                if (60 <= ((da) this).field_e) {
-                  break L3;
-                } else {
-                  ((da) this).field_e = -1 + var2;
-                  break L3;
-                }
-              }
-            } else {
-              if (var2 > ((da) this).field_e) {
-                break L3;
-              } else {
-                if (60 <= ((da) this).field_e) {
-                  break L3;
-                } else {
-                  ((da) this).field_e = -1 + var2;
-                  break L3;
-                }
-              }
+        }
+        if ((var2 ^ -1) > -23) {
+            var2 = 22;
+        }
+        if ((((da) this).field_e ^ -1) <= (var2 ^ -1)) {
+            if (-41 < (((da) this).field_e ^ -1)) {
+                ((da) this).field_e = var2 + -1;
             }
-          }
-          return;
-        } else {
-          return;
+        }
+        if (param0 > -19) {
+            int discarded$0 = this.c((byte) -122);
+        }
+        if (var2 < 42) {
+            var2 = 42;
+        }
+        if (var2 <= ((da) this).field_e) {
+            if (60 > ((da) this).field_e) {
+                ((da) this).field_e = -1 + var2;
+            }
         }
     }
 
@@ -136,20 +84,30 @@ final class da extends ue {
     }
 
     private final boolean f(int param0, int param1) {
-        if (!(param0 >= ((da) this).field_s)) {
-            return true;
-        }
-        if (param1 <= 1) {
-            return false;
-        }
-        if (((da) this).field_r == 1) {
-            if (-21 != (param0 ^ -1)) {
-                // if_icmpne L46
-                return true;
+        if (param0 < ((da) this).field_s) {
+          return true;
+        } else {
+          if (param1 > 1) {
+            L0: {
+              if (((da) this).field_r != 1) {
+                break L0;
+              } else {
+                if (-21 == (param0 ^ -1)) {
+                  return true;
+                } else {
+                  if (40 != param0) {
+                    break L0;
+                  } else {
+                    return true;
+                  }
+                }
+              }
             }
-            return true;
+            return false;
+          } else {
+            return false;
+          }
         }
-        return false;
     }
 
     da(re param0, int param1, int param2, int param3) {
@@ -292,7 +250,7 @@ final class da extends ue {
         f[][] var3 = null;
         String var3_ref = null;
         double var4 = 0.0;
-        String var4_ref = null;
+        String var4_ref_String = null;
         int var5 = 0;
         String var6 = null;
         String var7 = null;
@@ -418,7 +376,7 @@ final class da extends ue {
                     }
                   }
                   var5 = 16760896;
-                  var4_ref = vl.field_c;
+                  var4_ref_String = vl.field_c;
                   break L6;
                 } else {
                   L8: {
@@ -431,15 +389,15 @@ final class da extends ue {
                       break L8;
                     }
                   }
-                  var4_ref = me.field_d + "<br>" + vo.field_a + "<br>" + bh.field_a;
-                  var3_ref = var4_ref;
-                  var3_ref = var4_ref;
+                  var4_ref_String = me.field_d + "<br>" + vo.field_a + "<br>" + bh.field_a;
+                  var3_ref = var4_ref_String;
+                  var3_ref = var4_ref_String;
                   break L6;
                 }
               }
               L9: {
                 if (rc.a(-106)) {
-                  var3_ref = var3_ref + "<br><br>" + var4_ref;
+                  var3_ref = var3_ref + "<br><br>" + var4_ref_String;
                   break L9;
                 } else {
                   break L9;
@@ -748,7 +706,7 @@ final class da extends ue {
                 if ((var5 ^ -1) > -1) {
                   break L4;
                 } else {
-                  if (((da) this).field_g > param0) {
+                  if ((((da) this).field_g ^ -1) < (param0 ^ -1)) {
                     if (param0 < var4) {
                       break L4;
                     } else {
@@ -760,7 +718,7 @@ final class da extends ue {
                   }
                 }
               }
-              if (var4 >= 1 + ((da) this).field_g) {
+              if ((var4 ^ -1) <= (1 + ((da) this).field_g ^ -1)) {
                 break L3;
               } else {
                 var4 = 1 + ((da) this).field_g;
@@ -813,7 +771,7 @@ final class da extends ue {
             }
           }
           L8: {
-            if (-43 < var4) {
+            if (-43 < (var4 ^ -1)) {
               var4 = 42;
               break L8;
             } else {
@@ -822,11 +780,11 @@ final class da extends ue {
           }
           L9: {
             var5 = 60 + -var4;
-            if (-1 > var5) {
+            if (-1 < (var5 ^ -1)) {
               break L9;
             } else {
               if ((param0 ^ -1) > -61) {
-                if (param0 < var4) {
+                if ((param0 ^ -1) > (var4 ^ -1)) {
                   break L9;
                 } else {
                   return -1000;
@@ -1830,7 +1788,7 @@ final class da extends ue {
                 var3 = 1 + ((da) this).field_g;
             }
         }
-        if (var3 <= param0) {
+        if ((var3 ^ -1) >= (param0 ^ -1)) {
             if (20 > param0) {
                 return true;
             }
@@ -1846,14 +1804,14 @@ final class da extends ue {
         if (!(42 <= var3)) {
             var3 = 42;
         }
-        if (var3 <= param0) {
-            if (-61 < param0) {
+        if ((var3 ^ -1) >= (param0 ^ -1)) {
+            if (-61 < (param0 ^ -1)) {
                 return true;
             }
         }
         if (60 > ((da) this).field_i) {
-            if (-61 <= param0) {
-                if (param0 >= ((da) this).field_m) {
+            if (-61 >= (param0 ^ -1)) {
+                if ((param0 ^ -1) <= (((da) this).field_m ^ -1)) {
                     return false;
                 }
                 return true;
@@ -1904,63 +1862,61 @@ final class da extends ue {
             }
           }
           L3: {
-            if (var2 <= -23) {
-              if (((da) this).field_e < var2) {
-                break L3;
-              } else {
-                if (-41 >= ((da) this).field_e) {
-                  break L3;
-                } else {
-                  ((da) this).field_e = 40;
-                  break L3;
-                }
-              }
+            if ((var2 ^ -1) <= -23) {
+              break L3;
             } else {
-              if (((da) this).field_e < var2) {
-                break L3;
-              } else {
-                if (-41 <= ((da) this).field_e) {
-                  break L3;
-                } else {
-                  ((da) this).field_e = 40;
-                  break L3;
-                }
-              }
+              var2 = 22;
+              break L3;
             }
           }
           L4: {
-            var3 = 91 / ((-10 - param0) / 48);
-            if (-43 < (var2 ^ -1)) {
-              var2 = 42;
+            if ((((da) this).field_e ^ -1) > (var2 ^ -1)) {
               break L4;
             } else {
-              break L4;
+              if (-41 >= (((da) this).field_e ^ -1)) {
+                break L4;
+              } else {
+                ((da) this).field_e = 40;
+                break L4;
+              }
             }
           }
           L5: {
-            if ((((da) this).field_i ^ -1) > -61) {
-              if (var2 > ((da) this).field_e) {
-                break L5;
-              } else {
-                if (((da) this).field_e >= ((da) this).field_m) {
-                  break L5;
-                } else {
-                  ((da) this).field_e = -1 + var2;
-                  break L5;
-                }
-              }
+            var3 = 91 / ((-10 - param0) / 48);
+            if (-43 < (var2 ^ -1)) {
+              var2 = 42;
+              break L5;
             } else {
-              if (((da) this).field_e < var2) {
-                break L5;
-              } else {
-                if (((da) this).field_e >= 60) {
-                  break L5;
+              break L5;
+            }
+          }
+          L6: {
+            L7: {
+              if ((((da) this).field_i ^ -1) > -61) {
+                if ((var2 ^ -1) < (((da) this).field_e ^ -1)) {
+                  break L7;
                 } else {
-                  ((da) this).field_e = 60;
-                  break L5;
+                  if ((((da) this).field_e ^ -1) <= (((da) this).field_m ^ -1)) {
+                    break L7;
+                  } else {
+                    ((da) this).field_e = -1 + var2;
+                    break L6;
+                  }
+                }
+              } else {
+                if ((((da) this).field_e ^ -1) > (var2 ^ -1)) {
+                  break L6;
+                } else {
+                  if (((da) this).field_e >= 60) {
+                    break L7;
+                  } else {
+                    ((da) this).field_e = 60;
+                    break L6;
+                  }
                 }
               }
             }
+            break L6;
           }
           return;
         } else {
@@ -1973,7 +1929,6 @@ final class da extends ue {
         String var4 = null;
         String var6 = null;
         String var7 = null;
-        String var7_ref = null;
         int var8 = 0;
         Vector var9 = null;
         kb var10 = null;
@@ -2126,7 +2081,7 @@ final class da extends ue {
               } else {
                 L11: {
                   if (var3 == 0) {
-                    var7_ref = md.field_t[0];
+                    var7 = md.field_t[0];
                     break L11;
                   } else {
                     break L11;
@@ -2134,7 +2089,7 @@ final class da extends ue {
                 }
                 L12: {
                   if ((var3 ^ -1) == -21) {
-                    var7_ref = md.field_t[1];
+                    var7 = md.field_t[1];
                     break L12;
                   } else {
                     break L12;
@@ -2144,19 +2099,19 @@ final class da extends ue {
                   if (var3 != 40) {
                     break L13;
                   } else {
-                    var7_ref = md.field_t[2];
+                    var7 = md.field_t[2];
                     break L13;
                   }
                 }
                 if (var3 != 60) {
                   break L10;
                 } else {
-                  var7_ref = md.field_t[3];
+                  var7 = md.field_t[3];
                   break L10;
                 }
               }
             }
-            ((da) this).field_d[var3] = (ik) (Object) new an(-go.field_l.a(var12) + 410, this.b(var3, -15), var6 + var4, 0, var7_ref);
+            ((da) this).field_d[var3] = (ik) (Object) new an(-go.field_l.a(var12) + 410, this.b(var3, -15), var6 + var4, 0, var7);
             var3++;
             continue L4;
           }
@@ -2323,15 +2278,28 @@ final class da extends ue {
     }
 
     private final void e(int param0) {
-        int var2 = this.c((byte) -99);
-        if (-7 >= (((da) this).field_j ^ -1)) {
-            // if_icmpge L43
-            ((da) this).field_j = var2;
-        } else {
+        int var2 = 0;
+        L0: {
+          var2 = this.c((byte) -99);
+          if (-7 < (((da) this).field_j ^ -1)) {
             ((da) this).field_j = 6;
+            break L0;
+          } else {
+            if (var2 >= ((da) this).field_j) {
+              break L0;
+            } else {
+              ((da) this).field_j = var2;
+              break L0;
+            }
+          }
         }
-        if (param0 != 17832) {
+        L1: {
+          if (param0 == 17832) {
+            break L1;
+          } else {
             ((da) this).a(true);
+            break L1;
+          }
         }
     }
 

@@ -32,6 +32,7 @@ final class nf extends ld implements ka {
           var14.field_w = (j) (Object) new af(jh.field_g, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true);
           ((nf) this).a(var14, 5411);
           ((nf) this).field_T = this.a(38, (dg) this, le.field_a);
+          return;
         } else {
           if (param1 == ne.field_i) {
             var9 = ak.field_c;
@@ -47,6 +48,7 @@ final class nf extends ld implements ka {
               var12.field_w = (j) (Object) new af(jh.field_g, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true);
               ((nf) this).a(var12, 5411);
               ((nf) this).field_T = this.a(38, (dg) this, le.field_a);
+              return;
             } else {
               var10 = new rc(var9, (dg) null);
               var10.field_j = 50;
@@ -56,6 +58,7 @@ final class nf extends ld implements ka {
               var10.field_w = (j) (Object) new af(jh.field_g, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true);
               ((nf) this).a(var10, 5411);
               ((nf) this).field_T = this.a(38, (dg) this, le.field_a);
+              return;
             }
           } else {
             if (pc.field_c == param1) {
@@ -69,6 +72,7 @@ final class nf extends ld implements ka {
               var8.field_w = (j) (Object) new af(jh.field_g, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true);
               ((nf) this).a(var8, 5411);
               ((nf) this).field_T = this.a(38, (dg) this, le.field_a);
+              return;
             } else {
               var6 = new rc((String) var5, (dg) null);
               var6.field_j = 50;
@@ -78,6 +82,7 @@ final class nf extends ld implements ka {
               var6.field_w = (j) (Object) new af(jh.field_g, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true);
               ((nf) this).a(var6, 5411);
               ((nf) this).field_T = this.a(38, (dg) this, le.field_a);
+              return;
             }
           }
         }

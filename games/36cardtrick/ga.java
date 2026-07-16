@@ -11,14 +11,14 @@ final class ga implements Runnable {
     final static void a(boolean param0, int param1) {
         sd.field_c.a(0, (byte) -124, 0);
         if (param1 < 35) {
-            field_b = (ha[]) null;
+            field_b = null;
         }
     }
 
     public static void b(boolean param0) {
         field_b = null;
         if (!param0) {
-            byte[] var2 = (byte[]) null;
+            Object var2 = null;
             oh discarded$0 = ga.a(-5, (wb[]) null, (byte[]) null);
         }
     }
@@ -67,7 +67,7 @@ final class ga implements Runnable {
 
     final static void a(boolean param0) {
         if (!param0) {
-            field_b = (ha[]) null;
+            field_b = null;
         }
         if (gj.field_a == null) {
             return;
@@ -98,7 +98,7 @@ final class ga implements Runnable {
                 Main.a((Object) null, ((ga) this).field_a, (byte) 109);
             }
         } catch (Exception exception) {
-            String var5 = (String) null;
+            Object var5 = null;
             k.a((Throwable) (Object) exception, (byte) -96, (String) null);
         } finally {
             ((ga) this).field_c = false;

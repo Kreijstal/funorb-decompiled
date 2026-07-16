@@ -7,71 +7,47 @@ final class s {
     static o field_a;
 
     final static String a(int param0, CharSequence[] param1, int param2, int param3) {
-        CharSequence var4_ref = null;
-        int var4 = 0;
-        int var5 = 0;
+        CharSequence var10 = null;
+        CharSequence var4_ref_CharSequence = null;
         int var6_int = 0;
-        StringBuilder var6 = null;
         CharSequence var7_ref_CharSequence = null;
         int var7 = 0;
         CharSequence var8 = null;
-        int var9 = 0;
-        CharSequence var10 = null;
-        var9 = wizardrun.field_H;
-        if (param3 <= -60) {
-          if (param0 == -1) {
-            return "";
-          } else {
-            if (-2 != param0) {
-              var4 = param0 + param2;
-              var5 = 0;
-              var6_int = param2;
-              L0: while (true) {
-                if (var4 <= var6_int) {
-                  var6 = new StringBuilder(var5);
-                  var7 = param2;
-                  L1: while (true) {
-                    if (var7 >= var4) {
-                      return var6.toString();
-                    } else {
-                      var8 = param1[var7];
-                      if (var8 == null) {
-                        StringBuilder discarded$2 = var6.append("null");
-                        var7++;
-                        continue L1;
-                      } else {
-                        StringBuilder discarded$3 = var6.append(var8);
-                        var7++;
-                        continue L1;
-                      }
-                    }
-                  }
-                } else {
-                  var7_ref_CharSequence = param1[var6_int];
-                  if (var7_ref_CharSequence == null) {
-                    var5 += 4;
-                    var6_int++;
-                    continue L0;
-                  } else {
-                    var5 = var5 + var7_ref_CharSequence.length();
-                    var6_int++;
-                    continue L0;
-                  }
-                }
-              }
-            } else {
-              var10 = param1[param2];
-              var4_ref = var10;
-              if (var4_ref == null) {
-                return "null";
-              } else {
-                return ((Object) (Object) var10).toString();
-              }
-            }
-          }
-        } else {
-          return null;
+        int var9 = wizardrun.field_H;
+        if (param3 > -60) {
+            return null;
         }
+        if (!((param0 ^ -1) != -1)) {
+            return "";
+        }
+        if (-2 == (param0 ^ -1)) {
+            var10 = param1[param2];
+            var4_ref_CharSequence = var10;
+            if (!(var4_ref_CharSequence != null)) {
+                return "null";
+            }
+            return ((Object) (Object) var10).toString();
+        }
+        int var4 = param0 + param2;
+        int var5 = 0;
+        for (var6_int = param2; var4 > var6_int; var6_int++) {
+            var7_ref_CharSequence = param1[var6_int];
+            if (var7_ref_CharSequence != null) {
+                var5 = var5 + var7_ref_CharSequence.length();
+            } else {
+                var5 += 4;
+            }
+        }
+        StringBuilder var6 = new StringBuilder(var5);
+        for (var7 = param2; (var7 ^ -1) > (var4 ^ -1); var7++) {
+            var8 = param1[var7];
+            if (var8 != null) {
+                StringBuilder discarded$1 = var6.append(var8);
+            } else {
+                StringBuilder discarded$2 = var6.append("null");
+            }
+        }
+        return var6.toString();
     }
 
     public static void a(int param0) {

@@ -34,11 +34,12 @@ final class uh {
             ((uh) this).field_a = 111;
         }
         while (true) {
-            var2 = ((uh) this).field_g.a(true);
-            if ((((uh) this).field_g.a(true) ^ -1) == 0) {
+            int dupTemp$0 = ((uh) this).field_g.a(true);
+            var2 = dupTemp$0;
+            if ((dupTemp$0 ^ -1) == 0) {
                 break;
             }
-            boolean discarded$0 = ((uh) this).a(0, var2);
+            boolean discarded$1 = ((uh) this).a(0, var2);
         }
     }
 
@@ -375,8 +376,9 @@ final class uh {
           var3 = Pixelate.field_H ? 1 : 0;
           ((uh) this).field_f.b((byte) -113);
           if (param0 > (((uh) this).field_p ^ -1)) {
+            int fieldTemp$5 = ((uh) this).field_p + 1;
             ((uh) this).field_p = ((uh) this).field_p + 1;
-            if (8 <= ((uh) this).field_p + 1) {
+            if (8 <= fieldTemp$5) {
               ((uh) this).field_p = 0;
               break L0;
             } else {
@@ -399,8 +401,9 @@ final class uh {
             }
           }
           if (!((uh) this).field_l) {
+            int fieldTemp$6 = ((uh) this).field_e + 1;
             ((uh) this).field_e = ((uh) this).field_e + 1;
-            if (((uh) this).field_e + 1 < 0) {
+            if (fieldTemp$6 < 0) {
               return;
             } else {
               L2: {
@@ -438,7 +441,7 @@ final class uh {
                         break L5;
                       }
                     }
-                    boolean discarded$2 = ((uh) this).a(0, 5);
+                    boolean discarded$7 = ((uh) this).a(0, 5);
                     break L4;
                   }
                 } else {
@@ -451,11 +454,12 @@ final class uh {
                     }
                   }
                   L7: while (true) {
-                    var2 = ((uh) this).field_g.a(((uh) this).field_e, (byte) -106);
-                    if (-1 == ((uh) this).field_g.a(((uh) this).field_e, (byte) -106)) {
+                    int dupTemp$8 = ((uh) this).field_g.a(((uh) this).field_e, (byte) -106);
+                    var2 = dupTemp$8;
+                    if (-1 == dupTemp$8) {
                       break L4;
                     } else {
-                      boolean discarded$3 = ((uh) this).a(param0 ^ -1, var2);
+                      boolean discarded$9 = ((uh) this).a(param0 ^ -1, var2);
                       continue L7;
                     }
                   }
@@ -501,7 +505,7 @@ final class uh {
         }
         L1: {
           var3 = 0;
-          if (-6 == param1) {
+          if (-6 == (param1 ^ -1)) {
             L2: {
               if (!((uh) this).field_k.a(param1, ((uh) this).field_j, param0 + 92, ((uh) this).field_e)) {
                 stackOut_31_0 = 0;
@@ -530,7 +534,7 @@ final class uh {
               break L1;
             }
           } else {
-            if (-5 == param1) {
+            if (-5 == (param1 ^ -1)) {
               if (-1 != (((uh) this).field_p ^ -1)) {
                 return false;
               } else {
@@ -559,10 +563,10 @@ final class uh {
                       } else {
                         if (1 != param1) {
                           L4: {
-                            if (-7 == param1) {
+                            if (-7 == (param1 ^ -1)) {
                               break L4;
                             } else {
-                              if (-8 == param1) {
+                              if (-8 == (param1 ^ -1)) {
                                 break L4;
                               } else {
                                 break L1;

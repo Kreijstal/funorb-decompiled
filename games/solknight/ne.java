@@ -30,7 +30,7 @@ final class ne {
         int var3 = 0;
         byte[] var4 = null;
         byte[] var5 = null;
-        java.math.BigInteger var7_ref = null;
+        java.math.BigInteger var7_ref_java_math_BigInteger = null;
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
@@ -77,8 +77,8 @@ final class ne {
                 } else {
                   if (((ne) this).field_e != null) {
                     var13 = new java.math.BigInteger(var17);
-                    var7_ref = var13.modPow(((ne) this).field_c, ((ne) this).field_e);
-                    var5 = var7_ref.toByteArray();
+                    var7_ref_java_math_BigInteger = var13.modPow(((ne) this).field_c, ((ne) this).field_e);
+                    var5 = var7_ref_java_math_BigInteger.toByteArray();
                     break L1;
                   } else {
                     break L2;
@@ -114,28 +114,41 @@ final class ne {
     }
 
     final lg a(int param0, bi param1, boolean param2, bi param3, int param4) {
-        if (((ne) this).field_b == null) {
-            throw new RuntimeException();
-        }
-        if (param4 >= 0) {
-            // if_icmpge L33
+        int var6 = 0;
+        int var7 = 0;
+        lg var9 = null;
+        byte[] var11 = null;
+        if (((ne) this).field_b != null) {
+          L0: {
+            if (param4 < 0) {
+              break L0;
+            } else {
+              if (param4 >= ((ne) this).field_k.length) {
+                break L0;
+              } else {
+                if (param0 == -65) {
+                  if (null == ((ne) this).field_k[param4]) {
+                    ((ne) this).field_b.field_m = param4 * 72 + 6;
+                    var6 = ((ne) this).field_b.e(true);
+                    var7 = ((ne) this).field_b.e(true);
+                    var11 = new byte[64];
+                    ((ne) this).field_b.a(64, 0, -127, var11);
+                    var9 = new lg(param4, param1, param3, ((ne) this).field_h, ((ne) this).field_l, var6, var11, var7, param2);
+                    ((ne) this).field_k[param4] = var9;
+                    return var9;
+                  } else {
+                    return ((ne) this).field_k[param4];
+                  }
+                } else {
+                  return null;
+                }
+              }
+            }
+          }
+          throw new RuntimeException();
         } else {
-            throw new RuntimeException();
+          throw new RuntimeException();
         }
-        if (param0 != -65) {
-            return null;
-        }
-        if (null != ((ne) this).field_k[param4]) {
-            return ((ne) this).field_k[param4];
-        }
-        ((ne) this).field_b.field_m = param4 * 72 + 6;
-        int var6 = ((ne) this).field_b.e(true);
-        int var7 = ((ne) this).field_b.e(true);
-        byte[] var11 = new byte[64];
-        ((ne) this).field_b.a(64, 0, -127, var11);
-        lg var9 = new lg(param4, param1, param3, ((ne) this).field_h, ((ne) this).field_l, var6, var11, var7, param2);
-        ((ne) this).field_k[param4] = var9;
-        return var9;
     }
 
     final void a(int param0) {

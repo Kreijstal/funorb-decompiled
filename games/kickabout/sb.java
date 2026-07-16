@@ -22,7 +22,7 @@ final class sb {
     final static void a(boolean param0, boolean param1, int param2) {
         gg var3 = null;
         uv var4 = null;
-        String var5_ref = null;
+        String var5_ref_String = null;
         int var5 = 0;
         int var6 = 0;
         var3 = se.a(param0, 2, param2);
@@ -33,8 +33,8 @@ final class sb {
             if (var3 != null) {
               wi.field_v.a(false, 0);
               var4 = wi.field_v;
-              var5_ref = qt.field_k;
-              var4.field_j.a(0, 5, var5_ref);
+              var5_ref_String = qt.field_k;
+              var4.field_j.a(0, 5, var5_ref_String);
               var4 = wi.field_v;
               var5 = sm.field_q;
               var6 = vc.field_y;
@@ -126,11 +126,13 @@ final class sb {
     final char b(int param0) {
         if (param0 >= -50) {
           ((sb) this).field_c = -38;
+          int fieldTemp$4 = ((sb) this).field_c;
           ((sb) this).field_c = ((sb) this).field_c + 1;
-          return ((sb) this).field_f.charAt(((sb) this).field_c);
+          return ((sb) this).field_f.charAt(fieldTemp$4);
         } else {
+          int fieldTemp$5 = ((sb) this).field_c;
           ((sb) this).field_c = ((sb) this).field_c + 1;
-          return ((sb) this).field_f.charAt(((sb) this).field_c);
+          return ((sb) this).field_f.charAt(fieldTemp$5);
         }
     }
 

@@ -33,8 +33,9 @@ final class oq extends ge {
             ((oq) this).a(33, -53, (byte[]) null, -26);
         }
         for (var5 = 0; var5 < param3; var5++) {
+            int fieldTemp$0 = ((oq) this).field_v;
             ((oq) this).field_v = ((oq) this).field_v + 1;
-            param2[var5 + param0] = (byte)(((oq) this).field_t[((oq) this).field_v] + -((oq) this).field_A.a((byte) 7));
+            param2[var5 + param0] = (byte)(((oq) this).field_t[fieldTemp$0] + -((oq) this).field_A.a((byte) 7));
         }
     }
 
@@ -47,8 +48,9 @@ final class oq extends ge {
             Object var4 = null;
             ((oq) this).a(-89, -96, (byte[]) null, 98);
         }
+        int fieldTemp$0 = ((oq) this).field_v;
         ((oq) this).field_v = ((oq) this).field_v + 1;
-        ((oq) this).field_t[((oq) this).field_v] = (byte)(((oq) this).field_A.a((byte) 7) + param1);
+        ((oq) this).field_t[fieldTemp$0] = (byte)(((oq) this).field_A.a((byte) 7) + param1);
     }
 
     final static void n(int param0) {
@@ -66,8 +68,9 @@ final class oq extends ge {
 
     final int q(int param0) {
         int var2 = -125 % ((14 - param0) / 47);
+        int fieldTemp$0 = ((oq) this).field_v;
         ((oq) this).field_v = ((oq) this).field_v + 1;
-        return 255 & ((oq) this).field_t[((oq) this).field_v] + -((oq) this).field_A.a((byte) 7);
+        return 255 & ((oq) this).field_t[fieldTemp$0] + -((oq) this).field_A.a((byte) 7);
     }
 
     final int e(int param0, int param1) {
@@ -76,8 +79,9 @@ final class oq extends ge {
         ((oq) this).field_y = ((oq) this).field_y + param0;
         int var5 = 0;
         while (param0 > var4) {
+            int incrementValue$0 = var3;
             var3++;
-            var5 = var5 + ((co.field_ab[var4] & ((oq) this).field_t[var3]) << -var4 + param0);
+            var5 = var5 + ((co.field_ab[var4] & ((oq) this).field_t[incrementValue$0]) << -var4 + param0);
             param0 = param0 - var4;
             var4 = 8;
         }

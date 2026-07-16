@@ -69,7 +69,7 @@ final class pl {
           var26 = TrackController.field_F ? 1 : 0;
           var27 = ne.field_a;
           var2 = var27.h(16383);
-          if (-1 == var2) {
+          if (-1 == (var2 ^ -1)) {
             var3 = var27.d((byte) -48);
             var4 = (ti) (Object) ea.field_s.b(2);
             L1: while (true) {
@@ -100,13 +100,16 @@ final class pl {
                     var8_int = 1;
                     L4: while (true) {
                       if (var5 <= var8_int) {
-                        var4.field_m = new String[3][var6];
-                        var8 = new String[3][var6];
+                        String[][] dupTemp$6 = new String[3][var6];
+                        var4.field_m = dupTemp$6;
+                        var8 = dupTemp$6;
                         var9 = new String[3][var6];
-                        var4.field_q = new long[3][var6];
-                        var10 = new long[3][var6];
-                        var4.field_n = new int[3][var6 * var7];
-                        var11 = new int[3][var6 * var7];
+                        long[][] dupTemp$7 = new long[3][var6];
+                        var4.field_q = dupTemp$7;
+                        var10 = dupTemp$7;
+                        int[][] dupTemp$8 = new int[3][var6 * var7];
+                        var4.field_n = dupTemp$8;
+                        var11 = dupTemp$8;
                         var12 = 0;
                         var13 = 0;
                         var14 = 0;
@@ -119,7 +122,7 @@ final class pl {
                         } else {
                           var19 = 0;
                           L5: while (true) {
-                            if (var18 <= var19) {
+                            if ((var18 ^ -1) >= (var19 ^ -1)) {
                               break L3;
                             } else {
                               L6: {
@@ -137,8 +140,9 @@ final class pl {
                                     if (var7 <= var25) {
                                       break L6;
                                     } else {
+                                      int incrementValue$9 = var15;
                                       var15++;
-                                      var11[0][var15] = var27.e((byte) 113);
+                                      var11[0][incrementValue$9] = var27.e((byte) 113);
                                       var25++;
                                       continue L7;
                                     }
@@ -161,11 +165,12 @@ final class pl {
                                     var27.field_k = var24;
                                     var25 = 0;
                                     L9: while (true) {
-                                      if (var25 >= var7) {
+                                      if ((var25 ^ -1) <= (var7 ^ -1)) {
                                         break L8;
                                       } else {
+                                        int incrementValue$10 = var16;
                                         var16++;
-                                        var11[1][var16] = var27.e((byte) 113);
+                                        var11[1][incrementValue$10] = var27.e((byte) 113);
                                         var25++;
                                         continue L9;
                                       }
@@ -173,49 +178,53 @@ final class pl {
                                   }
                                 }
                               }
-                              if (var14 < var6) {
-                                if (!cb.field_c[var20].field_i) {
-                                  cb.field_c[var20].field_i = true;
-                                  var8[2][var14] = var21;
-                                  var9[2][var14] = cb.field_c[var20].field_f;
-                                  var10[2][var14] = var22;
-                                  var14++;
-                                  var27.field_k = var24;
-                                  var25 = 0;
-                                  L10: while (true) {
-                                    if (var7 > var25) {
-                                      var17++;
-                                      var11[2][var17] = var27.e((byte) 113);
-                                      var25++;
-                                      continue L10;
-                                    } else {
-                                      var19++;
-                                      continue L5;
+                              L10: {
+                                if ((var14 ^ -1) <= (var6 ^ -1)) {
+                                  break L10;
+                                } else {
+                                  if (cb.field_c[var20].field_i) {
+                                    break L10;
+                                  } else {
+                                    cb.field_c[var20].field_i = true;
+                                    var8[2][var14] = var21;
+                                    var9[2][var14] = cb.field_c[var20].field_f;
+                                    var10[2][var14] = var22;
+                                    var14++;
+                                    var27.field_k = var24;
+                                    var25 = 0;
+                                    L11: while (true) {
+                                      if (var7 <= var25) {
+                                        break L10;
+                                      } else {
+                                        int incrementValue$11 = var17;
+                                        var17++;
+                                        var11[2][incrementValue$11] = var27.e((byte) 113);
+                                        var25++;
+                                        continue L11;
+                                      }
                                     }
                                   }
-                                } else {
-                                  var19++;
-                                  continue L5;
                                 }
-                              } else {
-                                var19++;
-                                continue L5;
                               }
+                              var19++;
+                              continue L5;
                             }
                           }
                         }
                       } else {
-                        cb.field_c[var8_int].field_h = var27.g(0);
-                        cb.field_c[var8_int].field_i = false;
-                        if (var27.h(param0 + 19953) == 1) {
-                          cb.field_c[var8_int].field_f = var27.g(param0 ^ -3570);
-                          var8_int++;
-                          continue L4;
-                        } else {
-                          cb.field_c[var8_int].field_f = null;
-                          var8_int++;
-                          continue L4;
+                        L12: {
+                          cb.field_c[var8_int].field_h = var27.g(0);
+                          cb.field_c[var8_int].field_i = false;
+                          if (var27.h(param0 + 19953) == 1) {
+                            cb.field_c[var8_int].field_f = var27.g(param0 ^ -3570);
+                            break L12;
+                          } else {
+                            cb.field_c[var8_int].field_f = null;
+                            break L12;
+                          }
                         }
+                        var8_int++;
+                        continue L4;
                       }
                     }
                   } else {
@@ -228,7 +237,7 @@ final class pl {
               }
             }
           } else {
-            if (-2 != var2) {
+            if (-2 != (var2 ^ -1)) {
               hb.a((Throwable) null, param0 + 3570, "HS1: " + jc.b(116));
               lj.a((byte) 118);
               break L0;
@@ -236,16 +245,16 @@ final class pl {
               var3 = var27.d((byte) -127);
               var4_long = var27.f((byte) 108);
               var6_ref_aj = (aj) (Object) ub.field_e.b(2);
-              L11: while (true) {
-                L12: {
+              L13: while (true) {
+                L14: {
                   if (var6_ref_aj == null) {
-                    break L12;
+                    break L14;
                   } else {
-                    if (var6_ref_aj.field_q != var3) {
+                    if ((var6_ref_aj.field_q ^ -1) != (var3 ^ -1)) {
                       var6_ref_aj = (aj) (Object) ub.field_e.a(param0 ^ -3580);
-                      continue L11;
+                      continue L13;
                     } else {
-                      break L12;
+                      break L14;
                     }
                   }
                 }
@@ -261,12 +270,12 @@ final class pl {
             }
           }
         }
-        L13: {
+        L15: {
           if (param0 == -3570) {
-            break L13;
+            break L15;
           } else {
             field_a = null;
-            break L13;
+            break L15;
           }
         }
     }
@@ -282,12 +291,14 @@ final class pl {
             param3 = rf.field_a[var5];
             var6 = var5 << 1240830180;
             while (true) {
+                int incrementValue$0 = param3;
                 param3--;
-                if (-1 == (param3 ^ -1)) {
+                if (-1 == (incrementValue$0 ^ -1)) {
                     break;
                 }
+                int incrementValue$1 = var6;
                 var6++;
-                param2 = gk.field_b[var6];
+                param2 = gk.field_b[incrementValue$1];
                 param0[param4[param2]] = param0[param4[param2]] + 1;
                 gk.field_b[param0[param4[param2]]] = param2;
             }

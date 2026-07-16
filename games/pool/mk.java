@@ -37,9 +37,7 @@ final class mk {
         int var33_int = 0;
         String var34 = null;
         int var34_int = 0;
-        String var34_ref = null;
         Object var35 = null;
-        String var35_ref = null;
         int var36 = 0;
         int var37_int = 0;
         StringBuilder var37 = null;
@@ -281,8 +279,7 @@ final class mk {
                   }
                 }
                 L5: {
-                  new vh(stackIn_11_3, stackIn_11_4);
-                  stackIn_11_0.field_Sb = stackIn_11_1;
+                  stackIn_11_0.field_Sb = new vh(stackIn_11_3, stackIn_11_4);
                   var12.a(94, var12.field_Sb);
                   var12.field_Ub = new vh[dr.field_c];
                   var12.field_Ec = new vh(0L, (vh) null);
@@ -369,8 +366,7 @@ final class mk {
                         break L10;
                       }
                     }
-                    new vh(stackIn_31_3, stackIn_31_4);
-                    stackIn_31_0.field_dc = stackIn_31_1;
+                    stackIn_31_0.field_dc = new vh(stackIn_31_3, stackIn_31_4);
                     var12.a(53, var12.field_dc);
                     var12.field_dc.field_Fb = 2;
                     var12.field_jc = new vh(0L, ge.field_s);
@@ -862,14 +858,14 @@ final class mk {
                       } else {
                         L44: {
                           if (var12.field_ac != 1) {
-                            var34_ref = pn.field_i[var12.field_ac];
+                            var34 = pn.field_i[var12.field_ac];
                             break L44;
                           } else {
                             var34 = th.field_e;
                             break L44;
                           }
                         }
-                        kk.field_B = ic.field_b + " - " + var34_ref;
+                        kk.field_B = ic.field_b + " - " + var34;
                         break L43;
                       }
                     }
@@ -994,10 +990,10 @@ final class mk {
                           break L55;
                         } else {
                           if (null != ir.field_p[var34_int]) {
-                            var35_ref = ir.field_p[var34_int][255 & var12.field_tc[var34_int]];
+                            var35 = (Object) (Object) ir.field_p[var34_int][255 & var12.field_tc[var34_int]];
                             break L55;
                           } else {
-                            var35_ref = null;
+                            var35 = null;
                             break L55;
                           }
                         }

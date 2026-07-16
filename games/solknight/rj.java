@@ -30,7 +30,7 @@ abstract class rj {
 
     final static aa a(String param0, byte param1, String param2, boolean param3) {
         long var4 = 0L;
-        String var6 = null;
+        Object var6 = null;
         CharSequence var7 = null;
         CharSequence var8 = null;
         var4 = 0L;
@@ -43,11 +43,11 @@ abstract class rj {
               var4 = ti.a(var7, (byte) 44);
               break L0;
             } else {
-              var6 = param0;
+              var6 = (Object) (Object) param0;
               break L0;
             }
           }
-          return pb.a(param3, param2, var4, 0, var6);
+          return pb.a(param3, param2, var4, 0, (String) var6);
         } else {
           L1: {
             if ((param0.indexOf('@') ^ -1) == 0) {
@@ -55,11 +55,11 @@ abstract class rj {
               var4 = ti.a(var8, (byte) 44);
               break L1;
             } else {
-              var6 = param0;
+              var6 = (Object) (Object) param0;
               break L1;
             }
           }
-          return pb.a(param3, param2, var4, 0, var6);
+          return pb.a(param3, param2, var4, 0, (String) var6);
         }
     }
 

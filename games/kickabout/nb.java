@@ -71,15 +71,14 @@ final class nb {
     }
 
     final static bs a(Throwable param0, String param1) {
-        bs var2_ref = null;
         bs var2 = null;
         if (param0 instanceof bs) {
             var2 = (bs) (Object) param0;
             var2.field_d = var2.field_d + 32 + param1;
         } else {
-            var2_ref = new bs(param0, param1);
+            var2 = new bs(param0, param1);
         }
-        return var2_ref;
+        return var2;
     }
 
     nb(int param0, int param1, String param2) {

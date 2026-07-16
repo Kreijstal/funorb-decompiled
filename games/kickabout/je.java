@@ -100,7 +100,7 @@ final class je extends gn {
             }
             L5: {
               if (ks.field_e != 7) {
-                if (ks.field_e == -9) {
+                if ((ks.field_e ^ -1) == -9) {
                   if (!sl.field_Eb) {
                     if (sl.field_Eb) {
                       break L5;
@@ -119,7 +119,7 @@ final class je extends gn {
                     return 10;
                   }
                 } else {
-                  if (-10 == ks.field_e) {
+                  if (-10 == (ks.field_e ^ -1)) {
                     if (sl.field_Eb) {
                       return 12;
                     } else {
@@ -129,7 +129,7 @@ final class je extends gn {
                     if (10 != ks.field_e) {
                       if (ks.field_e != 11) {
                         if ((ks.field_e ^ -1) == -13) {
-                          if (et.field_d.field_V.field_m != 0) {
+                          if ((et.field_d.field_V.field_m ^ -1) != -1) {
                             break L5;
                           } else {
                             return 16;
@@ -149,10 +149,10 @@ final class je extends gn {
                                 if (et.field_d.field_u == 3) {
                                   return 19;
                                 } else {
-                                  if (et.field_d.field_u != -5) {
+                                  if ((et.field_d.field_u ^ -1) != -5) {
                                     break L5;
                                   } else {
-                                    if (-1 >= field_m) {
+                                    if (-1 <= (field_m ^ -1)) {
                                       break L5;
                                     } else {
                                       return 20;
@@ -200,10 +200,10 @@ final class je extends gn {
             return -1;
           }
         } else {
-          if (mh.field_k.a(true) < -478) {
+          if ((mh.field_k.a(true) ^ -1) < -478) {
             return 1;
           } else {
-            if (-1 < mh.field_k.field_C) {
+            if (-1 > (mh.field_k.field_C ^ -1)) {
               return 2;
             } else {
               return 3;
@@ -255,6 +255,7 @@ final class je extends gn {
                         var4 = 0;
                         L4: while (true) {
                           if (((je) this).field_j <= var4) {
+                            return;
                           } else {
                             var5 = 0;
                             L5: while (true) {

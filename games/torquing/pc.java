@@ -432,8 +432,12 @@ class pc implements el, fe {
               if (2 == var12) {
                 var11 = -((pc) this).field_m.field_t + var10;
                 var12 = ((pc) this).field_f;
-                if (-1 != var12) {
-                  if (-4 != var12) {
+                if (-1 == (var12 ^ -1)) {
+                  ((pc) this).field_m.b(((pc) this).c((byte) 65, param1), this.a(param4, param2, 2, param1), var11 + this.a((byte) 88, param1, param5, param6), param3, param7);
+                  r.a(127);
+                  return;
+                } else {
+                  if (-4 != (var12 ^ -1)) {
                     if (var12 != 1) {
                       if (var12 != 2) {
                         r.a(127);
@@ -453,18 +457,18 @@ class pc implements el, fe {
                     r.a(127);
                     return;
                   }
-                } else {
-                  ((pc) this).field_m.b(((pc) this).c((byte) 65, param1), this.a(param4, param2, 2, param1), var11 + this.a((byte) 88, param1, param5, param6), param3, param7);
-                  r.a(127);
-                  return;
                 }
               } else {
                 if (3 != var12) {
                   if (-2 != (var12 ^ -1)) {
                     var11 = ((pc) this).field_m.field_x + (-((pc) this).field_m.field_t + (var10 - ((pc) this).field_m.field_x) >> 854791457);
                     var12 = ((pc) this).field_f;
-                    if (-1 != var12) {
-                      if (-4 != var12) {
+                    if (-1 == (var12 ^ -1)) {
+                      ((pc) this).field_m.b(((pc) this).c((byte) 65, param1), this.a(param4, param2, 2, param1), var11 + this.a((byte) 88, param1, param5, param6), param3, param7);
+                      r.a(127);
+                      return;
+                    } else {
+                      if (-4 != (var12 ^ -1)) {
                         if (var12 != 1) {
                           if (var12 == 2) {
                             ((pc) this).field_m.a(((pc) this).c((byte) 65, param1), this.a(param4, param2, 2, param1) - -var9, this.a((byte) 72, param1, param5, param6) + var11, param3, param7);
@@ -484,22 +488,22 @@ class pc implements el, fe {
                         r.a(127);
                         return;
                       }
-                    } else {
-                      ((pc) this).field_m.b(((pc) this).c((byte) 65, param1), this.a(param4, param2, 2, param1), var11 + this.a((byte) 88, param1, param5, param6), param3, param7);
-                      r.a(127);
-                      return;
                     }
                   } else {
                     var11 = ((pc) this).field_m.field_x + (-((pc) this).field_m.field_t + (var10 - ((pc) this).field_m.field_x) >> 854791457);
                     var12 = ((pc) this).field_f;
-                    if (-1 != var12) {
-                      if (-4 != var12) {
+                    if (-1 == (var12 ^ -1)) {
+                      ((pc) this).field_m.b(((pc) this).c((byte) 65, param1), this.a(param4, param2, 2, param1), var11 + this.a((byte) 88, param1, param5, param6), param3, param7);
+                      r.a(127);
+                      return;
+                    } else {
+                      if (-4 != (var12 ^ -1)) {
                         if (var12 != 1) {
-                          if (var12 == 2) {
-                            ((pc) this).field_m.a(((pc) this).c((byte) 65, param1), this.a(param4, param2, 2, param1) - -var9, this.a((byte) 72, param1, param5, param6) + var11, param3, param7);
+                          if (var12 != 2) {
                             r.a(127);
                             return;
                           } else {
+                            ((pc) this).field_m.a(((pc) this).c((byte) 65, param1), this.a(param4, param2, 2, param1) - -var9, this.a((byte) 72, param1, param5, param6) + var11, param3, param7);
                             r.a(127);
                             return;
                           }
@@ -513,23 +517,23 @@ class pc implements el, fe {
                         r.a(127);
                         return;
                       }
-                    } else {
-                      ((pc) this).field_m.b(((pc) this).c((byte) 65, param1), this.a(param4, param2, 2, param1), var11 + this.a((byte) 88, param1, param5, param6), param3, param7);
-                      r.a(127);
-                      return;
                     }
                   }
                 } else {
                   var11 = ((pc) this).field_m.field_x + (-((pc) this).field_m.field_t + (var10 - ((pc) this).field_m.field_x) >> 854791457);
                   var12 = ((pc) this).field_f;
-                  if (-1 != var12) {
-                    if (-4 != var12) {
+                  if (-1 == (var12 ^ -1)) {
+                    ((pc) this).field_m.b(((pc) this).c((byte) 65, param1), this.a(param4, param2, 2, param1), var11 + this.a((byte) 88, param1, param5, param6), param3, param7);
+                    r.a(127);
+                    return;
+                  } else {
+                    if (-4 != (var12 ^ -1)) {
                       if (var12 != 1) {
-                        if (var12 == 2) {
-                          ((pc) this).field_m.a(((pc) this).c((byte) 65, param1), this.a(param4, param2, 2, param1) - -var9, this.a((byte) 72, param1, param5, param6) + var11, param3, param7);
+                        if (var12 != 2) {
                           r.a(127);
                           return;
                         } else {
+                          ((pc) this).field_m.a(((pc) this).c((byte) 65, param1), this.a(param4, param2, 2, param1) - -var9, this.a((byte) 72, param1, param5, param6) + var11, param3, param7);
                           r.a(127);
                           return;
                         }
@@ -543,41 +547,39 @@ class pc implements el, fe {
                       r.a(127);
                       return;
                     }
-                  } else {
-                    ((pc) this).field_m.b(((pc) this).c((byte) 65, param1), this.a(param4, param2, 2, param1), var11 + this.a((byte) 88, param1, param5, param6), param3, param7);
-                    r.a(127);
-                    return;
                   }
                 }
               }
             } else {
               L0: {
-                var11 = ((pc) this).field_m.field_x;
-                var12 = ((pc) this).field_f;
-                if (-1 == var12) {
-                  break L0;
-                } else {
-                  if (-4 != var12) {
-                    if (var12 != 1) {
-                      if (var12 == 2) {
-                        ((pc) this).field_m.a(((pc) this).c((byte) 65, param1), this.a(param4, param2, 2, param1) - -var9, this.a((byte) 72, param1, param5, param6) + var11, param3, param7);
-                        r.a(127);
-                        return;
+                L1: {
+                  var11 = ((pc) this).field_m.field_x;
+                  var12 = ((pc) this).field_f;
+                  if (-1 == (var12 ^ -1)) {
+                    break L1;
+                  } else {
+                    if (-4 != (var12 ^ -1)) {
+                      if (var12 != 1) {
+                        if (var12 != 2) {
+                          break L0;
+                        } else {
+                          ((pc) this).field_m.a(((pc) this).c((byte) 65, param1), this.a(param4, param2, 2, param1) - -var9, this.a((byte) 72, param1, param5, param6) + var11, param3, param7);
+                          r.a(127);
+                          return;
+                        }
                       } else {
+                        ((pc) this).field_m.c(((pc) this).c((byte) 65, param1), (var9 >> 438785953) + this.a(param4, param2, 2, param1), this.a((byte) 113, param1, param5, param6) - -var11, param3, param7);
                         r.a(127);
                         return;
                       }
                     } else {
-                      ((pc) this).field_m.c(((pc) this).c((byte) 65, param1), (var9 >> 438785953) + this.a(param4, param2, 2, param1), this.a((byte) 113, param1, param5, param6) - -var11, param3, param7);
-                      r.a(127);
-                      return;
+                      break L1;
                     }
-                  } else {
-                    break L0;
                   }
                 }
+                ((pc) this).field_m.b(((pc) this).c((byte) 65, param1), this.a(param4, param2, 2, param1), var11 + this.a((byte) 88, param1, param5, param6), param3, param7);
+                break L0;
               }
-              ((pc) this).field_m.b(((pc) this).c((byte) 65, param1), this.a(param4, param2, 2, param1), var11 + this.a((byte) 88, param1, param5, param6), param3, param7);
               r.a(127);
               return;
             }
@@ -587,118 +589,120 @@ class pc implements el, fe {
             return;
           }
         } else {
-          var9 = ((pc) this).b(param1, -1);
-          var10 = this.c(param1, 8557);
-          if (!((pc) this).field_l) {
-            var12 = ((pc) this).field_g;
-            if (-1 != var12) {
-              if (2 != var12) {
-                L1: {
-                  if (3 == var12) {
-                    break L1;
-                  } else {
-                    if (-2 == var12) {
-                      break L1;
+          L2: {
+            var9 = ((pc) this).b(param1, -1);
+            var10 = this.c(param1, 8557);
+            if (!((pc) this).field_l) {
+              var12 = ((pc) this).field_g;
+              if (-1 != (var12 ^ -1)) {
+                if (2 == var12) {
+                  L3: {
+                    L4: {
+                      var11 = -((pc) this).field_m.field_t + var10;
+                      var12 = ((pc) this).field_f;
+                      if (-1 == (var12 ^ -1)) {
+                        break L4;
+                      } else {
+                        if (-4 != (var12 ^ -1)) {
+                          if (var12 != 1) {
+                            if (var12 != 2) {
+                              break L3;
+                            } else {
+                              ((pc) this).field_m.a(((pc) this).c((byte) 65, param1), this.a(param4, param2, 2, param1) - -var9, this.a((byte) 72, param1, param5, param6) + var11, param3, param7);
+                              break L3;
+                            }
+                          } else {
+                            ((pc) this).field_m.c(((pc) this).c((byte) 65, param1), (var9 >> 438785953) + this.a(param4, param2, 2, param1), this.a((byte) 113, param1, param5, param6) - -var11, param3, param7);
+                            break L3;
+                          }
+                        } else {
+                          break L4;
+                        }
+                      }
+                    }
+                    ((pc) this).field_m.b(((pc) this).c((byte) 65, param1), this.a(param4, param2, 2, param1), var11 + this.a((byte) 88, param1, param5, param6), param3, param7);
+                    break L3;
+                  }
+                  r.a(127);
+                  return;
+                } else {
+                  L5: {
+                    if (3 == var12) {
+                      break L5;
                     } else {
-                      break L1;
+                      if (-2 == (var12 ^ -1)) {
+                        break L5;
+                      } else {
+                        break L5;
+                      }
                     }
                   }
-                }
-                var11 = ((pc) this).field_m.field_x + (-((pc) this).field_m.field_t + (var10 - ((pc) this).field_m.field_x) >> 854791457);
-                var12 = ((pc) this).field_f;
-                if (-1 != var12) {
-                  if (-4 != var12) {
-                    if (var12 != 1) {
-                      if (var12 == 2) {
-                        ((pc) this).field_m.a(((pc) this).c((byte) 65, param1), this.a(param4, param2, 2, param1) - -var9, this.a((byte) 72, param1, param5, param6) + var11, param3, param7);
-                        r.a(127);
-                        return;
-                      } else {
-                        r.a(127);
-                        return;
-                      }
-                    } else {
-                      ((pc) this).field_m.c(((pc) this).c((byte) 65, param1), (var9 >> 438785953) + this.a(param4, param2, 2, param1), this.a((byte) 113, param1, param5, param6) - -var11, param3, param7);
-                      r.a(127);
-                      return;
-                    }
-                  } else {
+                  var11 = ((pc) this).field_m.field_x + (-((pc) this).field_m.field_t + (var10 - ((pc) this).field_m.field_x) >> 854791457);
+                  var12 = ((pc) this).field_f;
+                  if (-1 == (var12 ^ -1)) {
                     ((pc) this).field_m.b(((pc) this).c((byte) 65, param1), this.a(param4, param2, 2, param1), var11 + this.a((byte) 88, param1, param5, param6), param3, param7);
                     r.a(127);
                     return;
+                  } else {
+                    if (-4 != (var12 ^ -1)) {
+                      if (var12 != 1) {
+                        if (var12 != 2) {
+                          break L2;
+                        } else {
+                          ((pc) this).field_m.a(((pc) this).c((byte) 65, param1), this.a(param4, param2, 2, param1) - -var9, this.a((byte) 72, param1, param5, param6) + var11, param3, param7);
+                          r.a(127);
+                          return;
+                        }
+                      } else {
+                        ((pc) this).field_m.c(((pc) this).c((byte) 65, param1), (var9 >> 438785953) + this.a(param4, param2, 2, param1), this.a((byte) 113, param1, param5, param6) - -var11, param3, param7);
+                        r.a(127);
+                        return;
+                      }
+                    } else {
+                      ((pc) this).field_m.b(((pc) this).c((byte) 65, param1), this.a(param4, param2, 2, param1), var11 + this.a((byte) 88, param1, param5, param6), param3, param7);
+                      r.a(127);
+                      return;
+                    }
                   }
-                } else {
-                  ((pc) this).field_m.b(((pc) this).c((byte) 65, param1), this.a(param4, param2, 2, param1), var11 + this.a((byte) 88, param1, param5, param6), param3, param7);
-                  r.a(127);
-                  return;
                 }
               } else {
-                L2: {
-                  L3: {
-                    var11 = -((pc) this).field_m.field_t + var10;
+                L6: {
+                  L7: {
+                    var11 = ((pc) this).field_m.field_x;
                     var12 = ((pc) this).field_f;
-                    if (-1 == var12) {
-                      break L3;
+                    if (-1 == (var12 ^ -1)) {
+                      break L7;
                     } else {
-                      if (-4 != var12) {
+                      if (-4 != (var12 ^ -1)) {
                         if (var12 != 1) {
                           if (var12 != 2) {
-                            break L2;
+                            break L6;
                           } else {
                             ((pc) this).field_m.a(((pc) this).c((byte) 65, param1), this.a(param4, param2, 2, param1) - -var9, this.a((byte) 72, param1, param5, param6) + var11, param3, param7);
-                            break L2;
+                            break L6;
                           }
                         } else {
                           ((pc) this).field_m.c(((pc) this).c((byte) 65, param1), (var9 >> 438785953) + this.a(param4, param2, 2, param1), this.a((byte) 113, param1, param5, param6) - -var11, param3, param7);
-                          break L2;
+                          break L6;
                         }
                       } else {
-                        break L3;
+                        break L7;
                       }
                     }
                   }
                   ((pc) this).field_m.b(((pc) this).c((byte) 65, param1), this.a(param4, param2, 2, param1), var11 + this.a((byte) 88, param1, param5, param6), param3, param7);
-                  break L2;
+                  break L6;
                 }
                 r.a(127);
                 return;
               }
             } else {
-              L4: {
-                L5: {
-                  var11 = ((pc) this).field_m.field_x;
-                  var12 = ((pc) this).field_f;
-                  if (-1 == var12) {
-                    break L5;
-                  } else {
-                    if (-4 != var12) {
-                      if (var12 != 1) {
-                        if (var12 != 2) {
-                          break L4;
-                        } else {
-                          ((pc) this).field_m.a(((pc) this).c((byte) 65, param1), this.a(param4, param2, 2, param1) - -var9, this.a((byte) 72, param1, param5, param6) + var11, param3, param7);
-                          break L4;
-                        }
-                      } else {
-                        ((pc) this).field_m.c(((pc) this).c((byte) 65, param1), (var9 >> 438785953) + this.a(param4, param2, 2, param1), this.a((byte) 113, param1, param5, param6) - -var11, param3, param7);
-                        break L4;
-                      }
-                    } else {
-                      break L5;
-                    }
-                  }
-                }
-                ((pc) this).field_m.b(((pc) this).c((byte) 65, param1), this.a(param4, param2, 2, param1), var11 + this.a((byte) 88, param1, param5, param6), param3, param7);
-                break L4;
-              }
-              r.a(127);
-              return;
+              int discarded$3 = ((pc) this).field_m.a(((pc) this).c((byte) 65, param1), this.a(param4, param2, 2, param1), this.a((byte) 78, param1, param5, param6), var9, var10, param3, param7, ((pc) this).field_f, ((pc) this).field_g, ((pc) this).field_a);
+              break L2;
             }
-          } else {
-            int discarded$3 = ((pc) this).field_m.a(((pc) this).c((byte) 65, param1), this.a(param4, param2, 2, param1), this.a((byte) 78, param1, param5, param6), var9, var10, param3, param7, ((pc) this).field_f, ((pc) this).field_g, ((pc) this).field_a);
-            r.a(127);
-            return;
           }
+          r.a(127);
+          return;
         }
     }
 
@@ -718,70 +722,49 @@ class pc implements el, fe {
     final static void b(boolean param0) {
         try {
             Exception var1 = null;
-            int statePc = 0;
-            Throwable caughtException = null;
-            stateLoop: while (true) {
-                switch (statePc) {
-                    case 0: {
-                        if (jl.field_W == null) {
-                            statePc = 6;
-                        } else {
-                            statePc = 1;
-                        }
-                        continue stateLoop;
-                    }
-                    case 1: {
-                        try {
-                            jl.field_W.a(false, 0L);
-                            jl.field_W.a(-1, 24, kj.field_d.field_n, kj.field_d.field_j);
-                            statePc = 2;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_1) {
-                            caughtException = stateCaught_1;
-                            statePc = 5;
-                            continue stateLoop;
-                        }
-                    }
-                    case 2: {
-                        kj.field_d.field_n = kj.field_d.field_n + 24;
-                        if (!param0) {
-                            statePc = 4;
-                        } else {
-                            statePc = 3;
-                        }
-                        continue stateLoop;
-                    }
-                    case 3: {
-                        field_n = null;
-                        statePc = 4;
-                        continue stateLoop;
-                    }
-                    case 4: {
-                        return;
-                    }
-                    case 5: {
-                        var1 = (Exception) (Object) caughtException;
-                        statePc = 6;
-                        continue stateLoop;
-                    }
-                    case 6: {
-                        kj.field_d.field_n = kj.field_d.field_n + 24;
-                        if (param0) {
-                            statePc = 8;
-                        } else {
-                            statePc = 7;
-                        }
-                        continue stateLoop;
-                    }
-                    case 7: {
-                        return;
-                    }
-                    case 8: {
-                        field_n = null;
-                        return;
-                    }
-                    default: throw new IllegalStateException("invalid CFG state " + statePc);
+            int decompiledRegionSelector0 = 0;
+            Throwable decompiledCaughtException = null;
+            L0: {
+              if (jl.field_W == null) {
+                break L0;
+              } else {
+                try {
+                  L1: {
+                    jl.field_W.a(false, 0L);
+                    jl.field_W.a(-1, 24, kj.field_d.field_n, kj.field_d.field_j);
+                    decompiledRegionSelector0 = 0;
+                    break L1;
+                  }
+                } catch (java.lang.Exception decompiledCaughtParameter0) {
+                  decompiledCaughtException = decompiledCaughtParameter0;
+                  L2: {
+                    var1 = (Exception) (Object) decompiledCaughtException;
+                    decompiledRegionSelector0 = 1;
+                    break L2;
+                  }
                 }
+                if (decompiledRegionSelector0 == 0) {
+                  L3: {
+                    kj.field_d.field_n = kj.field_d.field_n + 24;
+                    if (!param0) {
+                      break L3;
+                    } else {
+                      field_n = null;
+                      break L3;
+                    }
+                  }
+                  return;
+                } else {
+                  break L0;
+                }
+              }
+            }
+            kj.field_d.field_n = kj.field_d.field_n + 24;
+            if (param0) {
+              field_n = null;
+              return;
+            } else {
+              return;
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -1011,7 +994,7 @@ class pc implements el, fe {
               return;
             }
           } else {
-            if (var6 == -3) {
+            if ((var6 ^ -1) == -3) {
               var5 = -((pc) this).field_m.field_t + var4;
               if (!param0) {
                 var6 = ((pc) this).field_f;
@@ -1056,7 +1039,7 @@ class pc implements el, fe {
                 return;
               }
             } else {
-              if (-4 != var6) {
+              if (-4 != (var6 ^ -1)) {
                 if (var6 == 1) {
                   var5 = (-((pc) this).field_m.field_t + var4 - ((pc) this).field_m.field_x >> -426569503) + ((pc) this).field_m.field_x;
                   if (!param0) {
@@ -1135,10 +1118,10 @@ class pc implements el, fe {
                         }
                       }
                     } else {
-                      if (!(param1.field_u instanceof cm)) {
+                      if (param1.field_u instanceof cm) {
+                        ((cm) (Object) param1.field_u).a(((pc) this).c((byte) 65, param1), (byte) -123, ((pc) this).field_m, var5, 0);
                         return;
                       } else {
-                        ((cm) (Object) param1.field_u).a(((pc) this).c((byte) 65, param1), (byte) -123, ((pc) this).field_m, var5, 0);
                         return;
                       }
                     }
@@ -1150,40 +1133,40 @@ class pc implements el, fe {
                 var5 = (-((pc) this).field_m.field_t + var4 - ((pc) this).field_m.field_x >> -426569503) + ((pc) this).field_m.field_x;
                 if (!param0) {
                   var6 = ((pc) this).field_f;
-                  if (-1 != var6) {
-                    if (-4 != var6) {
+                  if (-1 != (var6 ^ -1)) {
+                    if (-4 != (var6 ^ -1)) {
                       if (1 != var6) {
                         if (2 == var6) {
-                          if (param1.field_u instanceof cm) {
-                            ((cm) (Object) param1.field_u).a(var5, -22746, ((pc) this).field_m, ((pc) this).c((byte) 65, param1), var3);
+                          if (!(param1.field_u instanceof cm)) {
                             return;
                           } else {
+                            ((cm) (Object) param1.field_u).a(var5, -22746, ((pc) this).field_m, ((pc) this).c((byte) 65, param1), var3);
                             return;
                           }
                         } else {
                           return;
                         }
                       } else {
-                        if (!(param1.field_u instanceof cm)) {
+                        if (param1.field_u instanceof cm) {
+                          ((cm) (Object) param1.field_u).a(var3 >> -682572543, 0, ((pc) this).field_m, var5, ((pc) this).c((byte) 65, param1));
                           return;
                         } else {
-                          ((cm) (Object) param1.field_u).a(var3 >> -682572543, 0, ((pc) this).field_m, var5, ((pc) this).c((byte) 65, param1));
                           return;
                         }
                       }
                     } else {
-                      if (!(param1.field_u instanceof cm)) {
+                      if (param1.field_u instanceof cm) {
+                        ((cm) (Object) param1.field_u).a(((pc) this).c((byte) 65, param1), (byte) -123, ((pc) this).field_m, var5, 0);
                         return;
                       } else {
-                        ((cm) (Object) param1.field_u).a(((pc) this).c((byte) 65, param1), (byte) -123, ((pc) this).field_m, var5, 0);
                         return;
                       }
                     }
                   } else {
-                    if (!(param1.field_u instanceof cm)) {
+                    if (param1.field_u instanceof cm) {
+                      ((cm) (Object) param1.field_u).a(((pc) this).c((byte) 65, param1), (byte) -123, ((pc) this).field_m, var5, 0);
                       return;
                     } else {
-                      ((cm) (Object) param1.field_u).a(((pc) this).c((byte) 65, param1), (byte) -123, ((pc) this).field_m, var5, 0);
                       return;
                     }
                   }
@@ -1202,12 +1185,12 @@ class pc implements el, fe {
               var5 = ((pc) this).field_m.field_x;
               break L0;
             } else {
-              if (var6 == -3) {
+              if ((var6 ^ -1) == -3) {
                 var5 = -((pc) this).field_m.field_t + var4;
                 break L0;
               } else {
                 L1: {
-                  if (-4 == var6) {
+                  if (-4 == (var6 ^ -1)) {
                     break L1;
                   } else {
                     if (var6 == 1) {
@@ -1225,24 +1208,24 @@ class pc implements el, fe {
           if (!param0) {
             L2: {
               var6 = ((pc) this).field_f;
-              if (-1 != var6) {
-                if (-4 != var6) {
+              if (-1 != (var6 ^ -1)) {
+                if (-4 != (var6 ^ -1)) {
                   if (1 != var6) {
                     if (2 == var6) {
-                      if (param1.field_u instanceof cm) {
-                        ((cm) (Object) param1.field_u).a(var5, -22746, ((pc) this).field_m, ((pc) this).c((byte) 65, param1), var3);
+                      if (!(param1.field_u instanceof cm)) {
                         return;
                       } else {
+                        ((cm) (Object) param1.field_u).a(var5, -22746, ((pc) this).field_m, ((pc) this).c((byte) 65, param1), var3);
                         return;
                       }
                     } else {
                       return;
                     }
                   } else {
-                    if (!(param1.field_u instanceof cm)) {
+                    if (param1.field_u instanceof cm) {
+                      ((cm) (Object) param1.field_u).a(var3 >> -682572543, 0, ((pc) this).field_m, var5, ((pc) this).c((byte) 65, param1));
                       return;
                     } else {
-                      ((cm) (Object) param1.field_u).a(var3 >> -682572543, 0, ((pc) this).field_m, var5, ((pc) this).c((byte) 65, param1));
                       return;
                     }
                   }
@@ -1253,10 +1236,10 @@ class pc implements el, fe {
                 break L2;
               }
             }
-            if (!(param1.field_u instanceof cm)) {
+            if (param1.field_u instanceof cm) {
+              ((cm) (Object) param1.field_u).a(((pc) this).c((byte) 65, param1), (byte) -123, ((pc) this).field_m, var5, 0);
               return;
             } else {
-              ((cm) (Object) param1.field_u).a(((pc) this).c((byte) 65, param1), (byte) -123, ((pc) this).field_m, var5, 0);
               return;
             }
           } else {

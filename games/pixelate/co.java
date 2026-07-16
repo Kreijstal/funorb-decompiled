@@ -507,8 +507,9 @@ final class co {
             }
           }
           if (((co) this).field_c) {
+            int fieldTemp$1 = ((co) this).field_m - 1;
             ((co) this).field_m = ((co) this).field_m - 1;
-            if (((co) this).field_m - 1 <= 0) {
+            if (fieldTemp$1 <= 0) {
               ((co) this).field_m = ((co) this).field_o;
               if (ri.field_h < ((co) this).field_j) {
                 ((co) this).field_c = false;

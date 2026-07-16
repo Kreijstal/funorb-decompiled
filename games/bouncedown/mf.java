@@ -35,19 +35,22 @@ final class mf {
         String stackOut_3_0 = null;
         try {
           L0: {
-            var3_int = param2.f(param1 ^ -2706);
-            if (param0 < var3_int) {
-              var3_int = param0;
-              break L0;
-            } else {
-              break L0;
+            L1: {
+              var3_int = param2.f(param1 ^ -2706);
+              if (param0 < var3_int) {
+                var3_int = param0;
+                break L1;
+              } else {
+                break L1;
+              }
             }
+            var4 = new byte[var3_int];
+            param2.field_h = param2.field_h + pa.field_d.a(var4, param2.field_h, 0, param2.field_i, param1 ^ param1, var3_int);
+            var5 = lh.a(0, -3789, var3_int, var4);
+            stackOut_3_0 = (String) var5;
+            stackIn_4_0 = stackOut_3_0;
+            break L0;
           }
-          var4 = new byte[var3_int];
-          param2.field_h = param2.field_h + pa.field_d.a(var4, param2.field_h, 0, param2.field_i, param1 ^ param1, var3_int);
-          var5 = lh.a(0, -3789, var3_int, var4);
-          stackOut_3_0 = (String) var5;
-          stackIn_4_0 = stackOut_3_0;
         } catch (java.lang.Exception decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = (Exception) (Object) decompiledCaughtException;

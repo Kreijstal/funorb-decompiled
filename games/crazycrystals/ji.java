@@ -152,6 +152,7 @@ final class ji extends pn {
         var4 = 0;
         L0: while (true) {
           if ((var4 ^ -1) <= -193) {
+            return;
           } else {
             ((ji) this).field_v[var4] = param1 * 5461 + 32768;
             ((ji) this).field_o[var4] = param2 * 5461 + 32768;

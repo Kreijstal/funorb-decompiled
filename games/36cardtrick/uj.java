@@ -109,10 +109,11 @@ final class uj {
           if (var2 >= 10) {
             ((uj) this).field_b = param0.d((byte) 72);
             ((uj) this).field_c = param0.d((byte) 72);
+            return;
           } else {
             var3 = param0.f(36);
             if (var3 != 0) {
-              ((pb) param0).field_i = ((pb) param0).field_i - 1;
+              param0.field_i = param0.field_i - 1;
               ((uj) this).field_a[var2] = new hd();
               ((uj) this).field_a[var2].a(param0);
               var2++;

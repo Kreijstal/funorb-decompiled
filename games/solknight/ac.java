@@ -13,13 +13,12 @@ final class ac {
 
     final static void a(byte param0) {
         int var2_int = 0;
-        String var2 = null;
+        Object var2 = null;
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
         o var6 = null;
         o var7 = null;
-        o var7_ref = null;
         o var8 = null;
         var4 = SolKnight.field_L ? 1 : 0;
         mi.g(243, 197, 369, 143, 16777215);
@@ -53,17 +52,17 @@ final class ac {
           }
           L2: {
             if (ti.field_e < uc.field_e) {
-              var7_ref = jb.field_d[vb.field_g];
-              if (var7_ref == null) {
+              var7 = jb.field_d[vb.field_g];
+              if (var7 == null) {
                 break L2;
               } else {
-                var2_int = (var7_ref.field_q - -60) * ti.field_e / uc.field_e;
+                var2_int = (var7.field_q - -60) * ti.field_e / uc.field_e;
                 var3 = -30 + var2_int;
                 if (!fh.field_g) {
-                  fl.a(var3 * -256 / 30, 256 * (-var3 + var7_ref.field_q) / 30, 245, 51, 199, var7_ref);
+                  fl.a(var3 * -256 / 30, 256 * (-var3 + var7.field_q) / 30, 245, 51, 199, var7);
                   break L2;
                 } else {
-                  fl.a(256 * (var7_ref.field_q + -var3) / 30, -256 * var3 / 30, 245, -128, 199, var7_ref);
+                  fl.a(256 * (var7.field_q + -var3) / 30, -256 * var3 / 30, 245, -128, 199, var7);
                   break L2;
                 }
               }
@@ -100,11 +99,11 @@ final class ac {
                       }
                     }
                     if (var2 != null) {
-                      var2 = var2 + ", " + var5;
+                      var2 = (Object) (Object) (var2 + ", " + var5);
                       var5++;
                       continue L4;
                     } else {
-                      var2 = Integer.toString(var5);
+                      var2 = (Object) (Object) Integer.toString(var5);
                       var5++;
                       continue L4;
                     }
@@ -158,11 +157,11 @@ final class ac {
                 var2 += 8;
                 param0 = param0 >> 8;
             }
-            if (-16 > param0) {
+            if (-16 > (param0 ^ -1)) {
                 param0 = param0 >> 4;
                 var2 += 4;
             }
-            if (-4 < param0) {
+            if (-4 > (param0 ^ -1)) {
                 param0 = param0 >> 2;
                 var2 += 2;
             }

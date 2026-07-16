@@ -6763,7 +6763,7 @@ final class ea extends ib {
         int var5 = 0;
         java.net.URISyntaxException var6 = null;
         Object[] var6_array = null;
-        hf var7 = null;
+        Object var7 = null;
         Object[] var8 = null;
         Object[] var8_array = null;
         int var9 = 0;
@@ -6773,655 +6773,279 @@ final class ea extends ib {
         IOException var12_ref = null;
         java.net.Socket var12_ref2 = null;
         int var13 = 0;
-        int stackIn_10_0 = 0;
+        int stackIn_8_0 = 0;
+        java.net.ProxySelector stackIn_10_0 = null;
+        java.net.URI stackIn_10_1 = null;
+        java.net.URI stackIn_10_2 = null;
+        StringBuilder stackIn_10_3 = null;
         java.net.ProxySelector stackIn_12_0 = null;
         java.net.URI stackIn_12_1 = null;
         java.net.URI stackIn_12_2 = null;
         StringBuilder stackIn_12_3 = null;
+        java.net.ProxySelector stackIn_13_0 = null;
+        java.net.URI stackIn_13_1 = null;
+        java.net.URI stackIn_13_2 = null;
+        StringBuilder stackIn_13_3 = null;
+        String stackIn_13_4 = null;
         java.net.ProxySelector stackIn_14_0 = null;
         java.net.URI stackIn_14_1 = null;
         java.net.URI stackIn_14_2 = null;
         StringBuilder stackIn_14_3 = null;
-        java.net.ProxySelector stackIn_15_0 = null;
-        java.net.URI stackIn_15_1 = null;
-        java.net.URI stackIn_15_2 = null;
-        StringBuilder stackIn_15_3 = null;
-        String stackIn_15_4 = null;
+        java.net.ProxySelector stackIn_16_0 = null;
+        java.net.URI stackIn_16_1 = null;
+        java.net.URI stackIn_16_2 = null;
+        StringBuilder stackIn_16_3 = null;
         java.net.ProxySelector stackIn_17_0 = null;
         java.net.URI stackIn_17_1 = null;
         java.net.URI stackIn_17_2 = null;
         StringBuilder stackIn_17_3 = null;
-        java.net.ProxySelector stackIn_19_0 = null;
-        java.net.URI stackIn_19_1 = null;
-        java.net.URI stackIn_19_2 = null;
-        StringBuilder stackIn_19_3 = null;
-        java.net.ProxySelector stackIn_20_0 = null;
-        java.net.URI stackIn_20_1 = null;
-        java.net.URI stackIn_20_2 = null;
-        StringBuilder stackIn_20_3 = null;
-        String stackIn_20_4 = null;
-        java.net.Socket stackIn_23_0 = null;
-        Object stackIn_26_0 = null;
+        String stackIn_17_4 = null;
+        java.net.Socket stackIn_20_0 = null;
+        Object stackIn_23_0 = null;
+        java.net.Socket stackIn_29_0 = null;
         java.net.Socket stackIn_33_0 = null;
-        java.net.Socket stackIn_37_0 = null;
-        java.net.Socket stackIn_46_0 = null;
+        java.net.Socket stackIn_42_0 = null;
+        int decompiledRegionSelector0 = 0;
+        Throwable decompiledCaughtException = null;
         int stackOut_7_0 = 0;
-        int stackOut_9_0 = 0;
-        java.net.ProxySelector stackOut_11_0 = null;
-        java.net.URI stackOut_11_1 = null;
-        java.net.URI stackOut_11_2 = null;
-        StringBuilder stackOut_11_3 = null;
+        int stackOut_5_0 = 0;
+        java.net.ProxySelector stackOut_9_0 = null;
+        java.net.URI stackOut_9_1 = null;
+        java.net.URI stackOut_9_2 = null;
+        StringBuilder stackOut_9_3 = null;
         java.net.ProxySelector stackOut_12_0 = null;
         java.net.URI stackOut_12_1 = null;
         java.net.URI stackOut_12_2 = null;
         StringBuilder stackOut_12_3 = null;
         String stackOut_12_4 = null;
+        java.net.ProxySelector stackOut_10_0 = null;
+        java.net.URI stackOut_10_1 = null;
+        java.net.URI stackOut_10_2 = null;
+        StringBuilder stackOut_10_3 = null;
+        String stackOut_10_4 = null;
+        java.net.ProxySelector stackOut_13_0 = null;
+        java.net.URI stackOut_13_1 = null;
+        java.net.URI stackOut_13_2 = null;
+        StringBuilder stackOut_13_3 = null;
+        java.net.ProxySelector stackOut_16_0 = null;
+        java.net.URI stackOut_16_1 = null;
+        java.net.URI stackOut_16_2 = null;
+        StringBuilder stackOut_16_3 = null;
+        String stackOut_16_4 = null;
         java.net.ProxySelector stackOut_14_0 = null;
         java.net.URI stackOut_14_1 = null;
         java.net.URI stackOut_14_2 = null;
         StringBuilder stackOut_14_3 = null;
         String stackOut_14_4 = null;
-        java.net.ProxySelector stackOut_16_0 = null;
-        java.net.URI stackOut_16_1 = null;
-        java.net.URI stackOut_16_2 = null;
-        StringBuilder stackOut_16_3 = null;
-        java.net.ProxySelector stackOut_17_0 = null;
-        java.net.URI stackOut_17_1 = null;
-        java.net.URI stackOut_17_2 = null;
-        StringBuilder stackOut_17_3 = null;
-        String stackOut_17_4 = null;
-        java.net.ProxySelector stackOut_19_0 = null;
-        java.net.URI stackOut_19_1 = null;
-        java.net.URI stackOut_19_2 = null;
-        StringBuilder stackOut_19_3 = null;
-        String stackOut_19_4 = null;
-        java.net.Socket stackOut_22_0 = null;
-        Object stackOut_25_0 = null;
+        java.net.Socket stackOut_19_0 = null;
+        java.net.Socket stackOut_28_0 = null;
         java.net.Socket stackOut_32_0 = null;
-        java.net.Socket stackOut_36_0 = null;
-        java.net.Socket stackOut_45_0 = null;
-        int statePc = 0;
-        Object caughtException = null;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    var13 = wizardrun.field_H;
-                    statePc = 1;
-                    continue stateLoop;
-                }
-                case 1: {
-                    try {
-                        var2_int = Boolean.parseBoolean(System.getProperty("java.net.useSystemProxies")) ? 1 : 0;
-                        statePc = 2;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_1) {
-                        caughtException = stateCaught_1;
-                        statePc = 47;
-                        continue stateLoop;
-                    }
-                }
-                case 2: {
-                    try {
-                        if (var2_int != 0) {
-                            statePc = 6;
-                        } else {
-                            statePc = 3;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_2) {
-                        caughtException = stateCaught_2;
-                        statePc = (stateCaught_2 instanceof java.net.URISyntaxException ? 5 : 47);
-                        continue stateLoop;
-                    }
-                }
-                case 3: {
-                    try {
-                        String discarded$2 = System.setProperty("java.net.useSystemProxies", "true");
-                        statePc = 4;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_3) {
-                        caughtException = stateCaught_3;
-                        statePc = (stateCaught_3 instanceof java.net.URISyntaxException ? 5 : 47);
-                        continue stateLoop;
-                    }
-                }
-                case 4: {
-                    try {
-                        statePc = 6;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_4) {
-                        caughtException = stateCaught_4;
-                        statePc = 47;
-                        continue stateLoop;
-                    }
-                }
-                case 5: {
-                    try {
-                        if (caughtException instanceof RuntimeException) throw (RuntimeException) caughtException;
-                        if (caughtException instanceof Error) throw (Error) caughtException;
-                        throw (IOException) (Object) caughtException;
-                    } catch (Throwable stateCaught_5) {
-                        caughtException = stateCaught_5;
-                        statePc = 47;
-                        continue stateLoop;
-                    }
-                }
-                case 6: {
-                    try {
-                        if (443 != ((ea) this).field_c) {
-                            statePc = 9;
-                        } else {
-                            statePc = 7;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_6) {
-                        caughtException = stateCaught_6;
-                        statePc = (stateCaught_6 instanceof java.net.URISyntaxException ? 8 : 47);
-                        continue stateLoop;
-                    }
-                }
-                case 7: {
-                    try {
-                        stackOut_7_0 = 1;
-                        stackIn_10_0 = stackOut_7_0;
-                        statePc = 10;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_7) {
-                        caughtException = stateCaught_7;
-                        statePc = (stateCaught_7 instanceof java.net.URISyntaxException ? 8 : 47);
-                        continue stateLoop;
-                    }
-                }
-                case 8: {
-                    try {
-                        if (caughtException instanceof RuntimeException) throw (RuntimeException) caughtException;
-                        if (caughtException instanceof Error) throw (Error) caughtException;
-                        throw (IOException) (Object) caughtException;
-                    } catch (Throwable stateCaught_8) {
-                        caughtException = stateCaught_8;
-                        statePc = 47;
-                        continue stateLoop;
-                    }
-                }
-                case 9: {
-                    try {
-                        stackOut_9_0 = 0;
-                        stackIn_10_0 = stackOut_9_0;
-                        statePc = 10;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_9) {
-                        caughtException = stateCaught_9;
-                        statePc = 47;
-                        continue stateLoop;
-                    }
-                }
-                case 10: {
-                    try {
-                        var5 = stackIn_10_0;
-                        statePc = 11;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_10) {
-                        caughtException = stateCaught_10;
-                        statePc = 47;
-                        continue stateLoop;
-                    }
-                }
-                case 11: {
-                    try {
-                        stackOut_11_0 = ((ea) this).field_g;
-                        stackOut_11_1 = null;
-                        stackOut_11_2 = null;
-                        stackOut_11_3 = new StringBuilder();
-                        stackIn_14_0 = stackOut_11_0;
-                        stackIn_14_1 = stackOut_11_1;
-                        stackIn_14_2 = stackOut_11_2;
-                        stackIn_14_3 = stackOut_11_3;
-                        stackIn_12_0 = stackOut_11_0;
-                        stackIn_12_1 = stackOut_11_1;
-                        stackIn_12_2 = stackOut_11_2;
-                        stackIn_12_3 = stackOut_11_3;
-                        if (var5 == 0) {
-                            statePc = 14;
-                        } else {
-                            statePc = 12;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_11) {
-                        caughtException = stateCaught_11;
-                        statePc = (stateCaught_11 instanceof java.net.URISyntaxException ? 22 : 47);
-                        continue stateLoop;
-                    }
-                }
-                case 12: {
-                    try {
-                        stackOut_12_0 = (java.net.ProxySelector) (Object) stackIn_12_0;
-                        stackOut_12_1 = null;
-                        stackOut_12_2 = null;
-                        stackOut_12_3 = (StringBuilder) (Object) stackIn_12_3;
-                        stackOut_12_4 = "https";
-                        stackIn_15_0 = stackOut_12_0;
-                        stackIn_15_1 = stackOut_12_1;
-                        stackIn_15_2 = stackOut_12_2;
-                        stackIn_15_3 = stackOut_12_3;
-                        stackIn_15_4 = stackOut_12_4;
-                        statePc = 15;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_12) {
-                        caughtException = stateCaught_12;
-                        statePc = (stateCaught_12 instanceof java.net.URISyntaxException ? 22 : 47);
-                        continue stateLoop;
-                    }
-                }
-                case 14: {
-                    try {
-                        stackOut_14_0 = (java.net.ProxySelector) (Object) stackIn_14_0;
-                        stackOut_14_1 = null;
-                        stackOut_14_2 = null;
-                        stackOut_14_3 = (StringBuilder) (Object) stackIn_14_3;
-                        stackOut_14_4 = "http";
-                        stackIn_15_0 = stackOut_14_0;
-                        stackIn_15_1 = stackOut_14_1;
-                        stackIn_15_2 = stackOut_14_2;
-                        stackIn_15_3 = stackOut_14_3;
-                        stackIn_15_4 = stackOut_14_4;
-                        statePc = 15;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_14) {
-                        caughtException = stateCaught_14;
-                        statePc = (stateCaught_14 instanceof java.net.URISyntaxException ? 22 : 47);
-                        continue stateLoop;
-                    }
-                }
-                case 15: {
-                    try {
-                        new java.net.URI(stackIn_15_4 + "://" + ((ea) this).field_a);
-                        var3 = ((java.net.ProxySelector) (Object) stackIn_15_0).select(stackIn_15_1);
-                        statePc = 16;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_15) {
-                        caughtException = stateCaught_15;
-                        statePc = (stateCaught_15 instanceof java.net.URISyntaxException ? 22 : 47);
-                        continue stateLoop;
-                    }
-                }
-                case 16: {
-                    try {
-                        stackOut_16_0 = ((ea) this).field_g;
-                        stackOut_16_1 = null;
-                        stackOut_16_2 = null;
-                        stackOut_16_3 = new StringBuilder();
-                        stackIn_19_0 = stackOut_16_0;
-                        stackIn_19_1 = stackOut_16_1;
-                        stackIn_19_2 = stackOut_16_2;
-                        stackIn_19_3 = stackOut_16_3;
-                        stackIn_17_0 = stackOut_16_0;
-                        stackIn_17_1 = stackOut_16_1;
-                        stackIn_17_2 = stackOut_16_2;
-                        stackIn_17_3 = stackOut_16_3;
-                        if (var5 != 0) {
-                            statePc = 19;
-                        } else {
-                            statePc = 17;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_16) {
-                        caughtException = stateCaught_16;
-                        statePc = (stateCaught_16 instanceof java.net.URISyntaxException ? 18 : 47);
-                        continue stateLoop;
-                    }
-                }
-                case 17: {
-                    try {
-                        stackOut_17_0 = (java.net.ProxySelector) (Object) stackIn_17_0;
-                        stackOut_17_1 = null;
-                        stackOut_17_2 = null;
-                        stackOut_17_3 = (StringBuilder) (Object) stackIn_17_3;
-                        stackOut_17_4 = "https";
-                        stackIn_20_0 = stackOut_17_0;
-                        stackIn_20_1 = stackOut_17_1;
-                        stackIn_20_2 = stackOut_17_2;
-                        stackIn_20_3 = stackOut_17_3;
-                        stackIn_20_4 = stackOut_17_4;
-                        statePc = 20;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_17) {
-                        caughtException = stateCaught_17;
-                        statePc = (stateCaught_17 instanceof java.net.URISyntaxException ? 18 : 47);
-                        continue stateLoop;
-                    }
-                }
-                case 18: {
-                    try {
-                        if (caughtException instanceof RuntimeException) throw (RuntimeException) caughtException;
-                        if (caughtException instanceof Error) throw (Error) caughtException;
-                        throw (IOException) (Object) caughtException;
-                    } catch (Throwable stateCaught_18) {
-                        caughtException = stateCaught_18;
-                        statePc = (stateCaught_18 instanceof java.net.URISyntaxException ? 22 : 47);
-                        continue stateLoop;
-                    }
-                }
-                case 19: {
-                    try {
-                        stackOut_19_0 = (java.net.ProxySelector) (Object) stackIn_19_0;
-                        stackOut_19_1 = null;
-                        stackOut_19_2 = null;
-                        stackOut_19_3 = (StringBuilder) (Object) stackIn_19_3;
-                        stackOut_19_4 = "http";
-                        stackIn_20_0 = stackOut_19_0;
-                        stackIn_20_1 = stackOut_19_1;
-                        stackIn_20_2 = stackOut_19_2;
-                        stackIn_20_3 = stackOut_19_3;
-                        stackIn_20_4 = stackOut_19_4;
-                        statePc = 20;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_19) {
-                        caughtException = stateCaught_19;
-                        statePc = (stateCaught_19 instanceof java.net.URISyntaxException ? 22 : 47);
-                        continue stateLoop;
-                    }
-                }
-                case 20: {
-                    try {
-                        new java.net.URI(stackIn_20_4 + "://" + ((ea) this).field_a);
-                        var4 = ((java.net.ProxySelector) (Object) stackIn_20_0).select(stackIn_20_1);
-                        statePc = 21;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_20) {
-                        caughtException = stateCaught_20;
-                        statePc = (stateCaught_20 instanceof java.net.URISyntaxException ? 22 : 47);
-                        continue stateLoop;
-                    }
-                }
-                case 21: {
-                    try {
-                        statePc = 24;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_21) {
-                        caughtException = stateCaught_21;
-                        statePc = 47;
-                        continue stateLoop;
-                    }
-                }
-                case 22: {
-                    try {
-                        var6 = (java.net.URISyntaxException) (Object) caughtException;
-                        stackOut_22_0 = ((ea) this).a(-14394);
-                        stackIn_23_0 = stackOut_22_0;
-                        statePc = 23;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_22) {
-                        caughtException = stateCaught_22;
-                        statePc = 47;
-                        continue stateLoop;
-                    }
-                }
-                case 23: {
-                    return stackIn_23_0;
-                }
-                case 24: {
-                    try {
-                        if (param0 == -128) {
-                            statePc = 28;
-                        } else {
-                            statePc = 25;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_24) {
-                        caughtException = stateCaught_24;
-                        statePc = (stateCaught_24 instanceof RuntimeException ? 47 : 27);
-                        continue stateLoop;
-                    }
-                }
-                case 25: {
-                    try {
-                        stackOut_25_0 = null;
-                        stackIn_26_0 = stackOut_25_0;
-                        statePc = 26;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_25) {
-                        caughtException = stateCaught_25;
-                        statePc = (stateCaught_25 instanceof RuntimeException ? 47 : 27);
-                        continue stateLoop;
-                    }
-                }
-                case 26: {
-                    try {
-                        return (java.net.Socket) (Object) stackIn_26_0;
-                    } catch (Throwable stateCaught_26) {
-                        caughtException = stateCaught_26;
-                        statePc = 27;
-                        continue stateLoop;
-                    }
-                }
-                case 27: {
-                    if (caughtException instanceof RuntimeException) throw (RuntimeException) caughtException;
-                    if (caughtException instanceof Error) throw (Error) caughtException;
-                    throw (IOException) (Object) caughtException;
-                }
-                case 28: {
-                    try {
-                        boolean discarded$3 = var3.addAll((Collection) (Object) var4);
-                        var6_array = var3.toArray();
-                        var7 = null;
-                        var8_array = var6_array;
-                        var9 = 0;
-                        statePc = 29;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_28) {
-                        caughtException = stateCaught_28;
-                        statePc = 47;
-                        continue stateLoop;
-                    }
-                }
-                case 29: {
-                    try {
-                        if ((var9 ^ -1) <= (var8_array.length ^ -1)) {
-                            statePc = 42;
-                        } else {
-                            statePc = 30;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_29) {
-                        caughtException = stateCaught_29;
-                        statePc = 47;
-                        continue stateLoop;
-                    }
-                }
-                case 30: {
-                    try {
-                        var10 = var8_array[var9];
-                        var11 = (java.net.Proxy) var10;
-                        statePc = 31;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_30) {
-                        caughtException = stateCaught_30;
-                        statePc = 47;
-                        continue stateLoop;
-                    }
-                }
-                case 31: {
-                    try {
-                        var12_ref2 = this.a(param0 + 133, var11);
-                        statePc = 32;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_31) {
-                        caughtException = stateCaught_31;
-                        statePc = (stateCaught_31 instanceof hf ? 39 : (stateCaught_31 instanceof IOException ? 40 : 47));
-                        continue stateLoop;
-                    }
-                }
-                case 32: {
-                    try {
-                        stackOut_32_0 = (java.net.Socket) var12_ref2;
-                        stackIn_46_0 = stackOut_32_0;
-                        stackIn_33_0 = stackOut_32_0;
-                        if (var13 != 0) {
-                            statePc = 46;
-                        } else {
-                            statePc = 33;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_32) {
-                        caughtException = stateCaught_32;
-                        statePc = (stateCaught_32 instanceof hf ? 39 : (stateCaught_32 instanceof IOException ? 40 : (stateCaught_32 instanceof java.net.URISyntaxException ? 35 : 47)));
-                        continue stateLoop;
-                    }
-                }
-                case 33: {
-                    try {
-                        if (stackIn_33_0 == null) {
-                            statePc = 38;
-                        } else {
-                            statePc = 34;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_33) {
-                        caughtException = stateCaught_33;
-                        statePc = (stateCaught_33 instanceof hf ? 39 : (stateCaught_33 instanceof IOException ? 40 : (stateCaught_33 instanceof java.net.URISyntaxException ? 35 : 47)));
-                        continue stateLoop;
-                    }
-                }
-                case 34: {
-                    try {
-                        statePc = 36;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_34) {
-                        caughtException = stateCaught_34;
-                        statePc = (stateCaught_34 instanceof hf ? 39 : (stateCaught_34 instanceof IOException ? 40 : 47));
-                        continue stateLoop;
-                    }
-                }
-                case 35: {
-                    try {
-                        if (caughtException instanceof RuntimeException) throw (RuntimeException) caughtException;
-                        if (caughtException instanceof Error) throw (Error) caughtException;
-                        throw (IOException) (Object) caughtException;
-                    } catch (Throwable stateCaught_35) {
-                        caughtException = stateCaught_35;
-                        statePc = (stateCaught_35 instanceof hf ? 39 : (stateCaught_35 instanceof IOException ? 40 : 47));
-                        continue stateLoop;
-                    }
-                }
-                case 36: {
-                    try {
-                        stackOut_36_0 = (java.net.Socket) var12_ref2;
-                        stackIn_37_0 = stackOut_36_0;
-                        statePc = 37;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_36) {
-                        caughtException = stateCaught_36;
-                        statePc = (stateCaught_36 instanceof hf ? 39 : (stateCaught_36 instanceof IOException ? 40 : 47));
-                        continue stateLoop;
-                    }
-                }
-                case 37: {
-                    return stackIn_37_0;
-                }
-                case 38: {
-                    try {
-                        statePc = 41;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_38) {
-                        caughtException = stateCaught_38;
-                        statePc = 47;
-                        continue stateLoop;
-                    }
-                }
-                case 39: {
-                    try {
-                        var12 = (hf) (Object) caughtException;
-                        var7 = var12;
-                        statePc = 41;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_39) {
-                        caughtException = stateCaught_39;
-                        statePc = 47;
-                        continue stateLoop;
-                    }
-                }
-                case 40: {
-                    try {
-                        var12_ref = (IOException) (Object) caughtException;
-                        statePc = 41;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_40) {
-                        caughtException = stateCaught_40;
-                        statePc = 47;
-                        continue stateLoop;
-                    }
-                }
-                case 41: {
-                    try {
-                        var9++;
-                        if (var13 == 0) {
-                            statePc = 29;
-                        } else {
-                            statePc = 42;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_41) {
-                        caughtException = stateCaught_41;
-                        statePc = 47;
-                        continue stateLoop;
-                    }
-                }
-                case 42: {
-                    try {
-                        if (var7 == null) {
-                            statePc = 45;
-                        } else {
-                            statePc = 43;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_42) {
-                        caughtException = stateCaught_42;
-                        statePc = (stateCaught_42 instanceof java.net.URISyntaxException ? 44 : 47);
-                        continue stateLoop;
-                    }
-                }
-                case 43: {
-                    try {
-                        throw var7;
-                    } catch (Throwable stateCaught_43) {
-                        caughtException = stateCaught_43;
-                        statePc = (stateCaught_43 instanceof java.net.URISyntaxException ? 44 : 47);
-                        continue stateLoop;
-                    }
-                }
-                case 44: {
-                    try {
-                        if (caughtException instanceof RuntimeException) throw (RuntimeException) caughtException;
-                        if (caughtException instanceof Error) throw (Error) caughtException;
-                        throw (IOException) (Object) caughtException;
-                    } catch (Throwable stateCaught_44) {
-                        caughtException = stateCaught_44;
-                        statePc = 47;
-                        continue stateLoop;
-                    }
-                }
-                case 45: {
-                    try {
-                        stackOut_45_0 = ((ea) this).a(-14394);
-                        stackIn_46_0 = stackOut_45_0;
-                        statePc = 46;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_45) {
-                        caughtException = stateCaught_45;
-                        statePc = 47;
-                        continue stateLoop;
-                    }
-                }
-                case 46: {
-                    return stackIn_46_0;
-                }
-                case 47: {
-                    var2 = (RuntimeException) (Object) caughtException;
-                    throw bd.a((Throwable) (Object) var2, "ea.A(" + param0 + 41);
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
+        java.net.Socket stackOut_41_0 = null;
+        Object stackOut_22_0 = null;
+        var13 = wizardrun.field_H;
+        try {
+          L0: {
+            L1: {
+              var2_int = Boolean.parseBoolean(System.getProperty("java.net.useSystemProxies")) ? 1 : 0;
+              if (var2_int != 0) {
+                break L1;
+              } else {
+                String discarded$2 = System.setProperty("java.net.useSystemProxies", "true");
+                break L1;
+              }
             }
+            L2: {
+              if (443 != ((ea) this).field_c) {
+                stackOut_7_0 = 0;
+                stackIn_8_0 = stackOut_7_0;
+                break L2;
+              } else {
+                stackOut_5_0 = 1;
+                stackIn_8_0 = stackOut_5_0;
+                break L2;
+              }
+            }
+            var5 = stackIn_8_0;
+            try {
+              L3: {
+                L4: {
+                  stackOut_9_0 = ((ea) this).field_g;
+                  stackOut_9_1 = null;
+                  stackOut_9_2 = null;
+                  stackOut_9_3 = new StringBuilder();
+                  stackIn_12_0 = stackOut_9_0;
+                  stackIn_12_1 = stackOut_9_1;
+                  stackIn_12_2 = stackOut_9_2;
+                  stackIn_12_3 = stackOut_9_3;
+                  stackIn_10_0 = stackOut_9_0;
+                  stackIn_10_1 = stackOut_9_1;
+                  stackIn_10_2 = stackOut_9_2;
+                  stackIn_10_3 = stackOut_9_3;
+                  if (var5 == 0) {
+                    stackOut_12_0 = (java.net.ProxySelector) (Object) stackIn_12_0;
+                    stackOut_12_1 = null;
+                    stackOut_12_2 = null;
+                    stackOut_12_3 = (StringBuilder) (Object) stackIn_12_3;
+                    stackOut_12_4 = "http";
+                    stackIn_13_0 = stackOut_12_0;
+                    stackIn_13_1 = stackOut_12_1;
+                    stackIn_13_2 = stackOut_12_2;
+                    stackIn_13_3 = stackOut_12_3;
+                    stackIn_13_4 = stackOut_12_4;
+                    break L4;
+                  } else {
+                    stackOut_10_0 = (java.net.ProxySelector) (Object) stackIn_10_0;
+                    stackOut_10_1 = null;
+                    stackOut_10_2 = null;
+                    stackOut_10_3 = (StringBuilder) (Object) stackIn_10_3;
+                    stackOut_10_4 = "https";
+                    stackIn_13_0 = stackOut_10_0;
+                    stackIn_13_1 = stackOut_10_1;
+                    stackIn_13_2 = stackOut_10_2;
+                    stackIn_13_3 = stackOut_10_3;
+                    stackIn_13_4 = stackOut_10_4;
+                    break L4;
+                  }
+                }
+                L5: {
+                  var3 = ((java.net.ProxySelector) (Object) stackIn_13_0).select(new java.net.URI(stackIn_13_4 + "://" + ((ea) this).field_a));
+                  stackOut_13_0 = ((ea) this).field_g;
+                  stackOut_13_1 = null;
+                  stackOut_13_2 = null;
+                  stackOut_13_3 = new StringBuilder();
+                  stackIn_16_0 = stackOut_13_0;
+                  stackIn_16_1 = stackOut_13_1;
+                  stackIn_16_2 = stackOut_13_2;
+                  stackIn_16_3 = stackOut_13_3;
+                  stackIn_14_0 = stackOut_13_0;
+                  stackIn_14_1 = stackOut_13_1;
+                  stackIn_14_2 = stackOut_13_2;
+                  stackIn_14_3 = stackOut_13_3;
+                  if (var5 != 0) {
+                    stackOut_16_0 = (java.net.ProxySelector) (Object) stackIn_16_0;
+                    stackOut_16_1 = null;
+                    stackOut_16_2 = null;
+                    stackOut_16_3 = (StringBuilder) (Object) stackIn_16_3;
+                    stackOut_16_4 = "http";
+                    stackIn_17_0 = stackOut_16_0;
+                    stackIn_17_1 = stackOut_16_1;
+                    stackIn_17_2 = stackOut_16_2;
+                    stackIn_17_3 = stackOut_16_3;
+                    stackIn_17_4 = stackOut_16_4;
+                    break L5;
+                  } else {
+                    stackOut_14_0 = (java.net.ProxySelector) (Object) stackIn_14_0;
+                    stackOut_14_1 = null;
+                    stackOut_14_2 = null;
+                    stackOut_14_3 = (StringBuilder) (Object) stackIn_14_3;
+                    stackOut_14_4 = "https";
+                    stackIn_17_0 = stackOut_14_0;
+                    stackIn_17_1 = stackOut_14_1;
+                    stackIn_17_2 = stackOut_14_2;
+                    stackIn_17_3 = stackOut_14_3;
+                    stackIn_17_4 = stackOut_14_4;
+                    break L5;
+                  }
+                }
+                var4 = ((java.net.ProxySelector) (Object) stackIn_17_0).select(new java.net.URI(stackIn_17_4 + "://" + ((ea) this).field_a));
+                break L3;
+              }
+            } catch (java.lang.Exception decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              var6 = (java.net.URISyntaxException) (Object) decompiledCaughtException;
+              stackOut_19_0 = ((ea) this).a(-14394);
+              stackIn_20_0 = stackOut_19_0;
+              return stackIn_20_0;
+            }
+            if (param0 == -128) {
+              boolean discarded$3 = var3.addAll((Collection) (Object) var4);
+              var6_array = var3.toArray();
+              var7 = null;
+              var8_array = var6_array;
+              var9 = 0;
+              L6: while (true) {
+                L7: {
+                  L8: {
+                    if ((var9 ^ -1) <= (var8_array.length ^ -1)) {
+                      break L8;
+                    } else {
+                      var10 = var8_array[var9];
+                      var11 = (java.net.Proxy) var10;
+                      try {
+                        L9: {
+                          var12_ref2 = this.a(param0 + 133, var11);
+                          stackOut_28_0 = (java.net.Socket) var12_ref2;
+                          stackIn_42_0 = stackOut_28_0;
+                          stackIn_29_0 = stackOut_28_0;
+                          if (var13 != 0) {
+                            decompiledRegionSelector0 = 0;
+                            break L9;
+                          } else {
+                            if (stackIn_29_0 == null) {
+                              decompiledRegionSelector0 = 2;
+                              break L9;
+                            } else {
+                              stackOut_32_0 = (java.net.Socket) var12_ref2;
+                              stackIn_33_0 = stackOut_32_0;
+                              decompiledRegionSelector0 = 1;
+                              break L9;
+                            }
+                          }
+                        }
+                      } catch (java.io.IOException decompiledCaughtParameter2) {
+                        decompiledCaughtException = decompiledCaughtParameter2;
+                        L11: {
+                          var12_ref = (IOException) (Object) decompiledCaughtException;
+                          decompiledRegionSelector0 = 2;
+                          break L11;
+                        }
+                      } catch (java.lang.Exception decompiledCaughtParameter1) {
+                        decompiledCaughtException = decompiledCaughtParameter1;
+                        L10: {
+                          var12 = (hf) (Object) decompiledCaughtException;
+                          var7 = (Object) (Object) var12;
+                          decompiledRegionSelector0 = 2;
+                          break L10;
+                        }
+                      }
+                      if (decompiledRegionSelector0 == 0) {
+                        break L7;
+                      } else {
+                        if (decompiledRegionSelector0 == 1) {
+                          return stackIn_33_0;
+                        } else {
+                          var9++;
+                          if (var13 == 0) {
+                            continue L6;
+                          } else {
+                            break L8;
+                          }
+                        }
+                      }
+                    }
+                  }
+                  if (var7 == null) {
+                    stackOut_41_0 = ((ea) this).a(-14394);
+                    stackIn_42_0 = stackOut_41_0;
+                    break L7;
+                  } else {
+                    throw ea.<RuntimeException>$cfr$sneakyThrow((Throwable) var7);
+                  }
+                }
+                break L0;
+              }
+            } else {
+              stackOut_22_0 = null;
+              stackIn_23_0 = stackOut_22_0;
+              return (java.net.Socket) (Object) stackIn_23_0;
+            }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter3) {
+          decompiledCaughtException = decompiledCaughtParameter3;
+          var2 = (RuntimeException) (Object) decompiledCaughtException;
+          throw bd.a((Throwable) (Object) var2, "ea.A(" + param0 + 41);
         }
+        return stackIn_42_0;
     }
 
     final static void c(int param0) {
@@ -7437,10 +7061,10 @@ final class ea extends ib {
 
     private final java.net.Socket a(int param0, java.net.Proxy param1) throws IOException {
         RuntimeException var3 = null;
-        Object var3_ref = null;
+        java.net.SocketAddress var3_ref = null;
         Object var4 = null;
         java.net.InetSocketAddress var4_ref = null;
-        java.net.Socket var5 = null;
+        Object var5 = null;
         Exception var6 = null;
         Class var6_ref = null;
         java.lang.reflect.Method var7 = null;
@@ -7451,391 +7075,140 @@ final class ea extends ib {
         String var12 = null;
         String var13 = null;
         java.net.Socket stackIn_2_0 = null;
-        Object stackIn_10_0 = null;
-        java.net.Socket stackIn_22_0 = null;
-        java.net.Socket stackIn_25_0 = null;
-        Object stackIn_27_0 = null;
+        Object stackIn_9_0 = null;
+        java.net.Socket stackIn_20_0 = null;
+        Object stackIn_23_0 = null;
+        Object stackIn_25_0 = null;
+        RuntimeException stackIn_27_0 = null;
+        StringBuilder stackIn_27_1 = null;
+        RuntimeException stackIn_29_0 = null;
+        StringBuilder stackIn_29_1 = null;
         RuntimeException stackIn_30_0 = null;
         StringBuilder stackIn_30_1 = null;
-        RuntimeException stackIn_32_0 = null;
-        StringBuilder stackIn_32_1 = null;
-        RuntimeException stackIn_33_0 = null;
-        StringBuilder stackIn_33_1 = null;
-        String stackIn_33_2 = null;
+        String stackIn_30_2 = null;
+        Throwable decompiledCaughtException = null;
+        Object stackOut_24_0 = null;
+        Object stackOut_22_0 = null;
+        java.net.Socket stackOut_19_0 = null;
+        Object stackOut_8_0 = null;
         java.net.Socket stackOut_1_0 = null;
-        Object stackOut_9_0 = null;
-        java.net.Socket stackOut_21_0 = null;
-        java.net.Socket stackOut_24_0 = null;
-        Object stackOut_26_0 = null;
+        RuntimeException stackOut_26_0 = null;
+        StringBuilder stackOut_26_1 = null;
         RuntimeException stackOut_29_0 = null;
         StringBuilder stackOut_29_1 = null;
-        RuntimeException stackOut_30_0 = null;
-        StringBuilder stackOut_30_1 = null;
-        String stackOut_30_2 = null;
-        RuntimeException stackOut_32_0 = null;
-        StringBuilder stackOut_32_1 = null;
-        String stackOut_32_2 = null;
-        int statePc = 0;
-        Object caughtException = null;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    try {
-                        if (param1.type() != java.net.Proxy.Type.DIRECT) {
-                            statePc = 4;
-                        } else {
-                            statePc = 1;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_0) {
-                        caughtException = stateCaught_0;
-                        statePc = (stateCaught_0 instanceof RuntimeException ? 28 : 3);
-                        continue stateLoop;
-                    }
+        String stackOut_29_2 = null;
+        RuntimeException stackOut_27_0 = null;
+        StringBuilder stackOut_27_1 = null;
+        String stackOut_27_2 = null;
+        try {
+          L0: {
+            if (param1.type() != java.net.Proxy.Type.DIRECT) {
+              L1: {
+                if (param0 == 5) {
+                  break L1;
+                } else {
+                  ((ea) this).field_g = null;
+                  break L1;
                 }
-                case 1: {
-                    try {
-                        stackOut_1_0 = ((ea) this).a(-14394);
-                        stackIn_2_0 = stackOut_1_0;
-                        statePc = 2;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_1) {
-                        caughtException = stateCaught_1;
-                        statePc = (stateCaught_1 instanceof RuntimeException ? 28 : 3);
-                        continue stateLoop;
-                    }
-                }
-                case 2: {
-                    try {
-                        return stackIn_2_0;
-                    } catch (Throwable stateCaught_2) {
-                        caughtException = stateCaught_2;
-                        statePc = 3;
-                        continue stateLoop;
-                    }
-                }
-                case 3: {
-                    if (caughtException instanceof RuntimeException) throw (RuntimeException) caughtException;
-                    if (caughtException instanceof Error) throw (Error) caughtException;
-                    throw (IOException) (Object) caughtException;
-                }
-                case 4: {
-                    try {
-                        if (param0 == 5) {
-                            statePc = 8;
-                        } else {
-                            statePc = 5;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_4) {
-                        caughtException = stateCaught_4;
-                        statePc = (stateCaught_4 instanceof RuntimeException ? 28 : 7);
-                        continue stateLoop;
-                    }
-                }
-                case 5: {
-                    try {
-                        ((ea) this).field_g = null;
-                        statePc = 6;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_5) {
-                        caughtException = stateCaught_5;
-                        statePc = (stateCaught_5 instanceof RuntimeException ? 28 : 7);
-                        continue stateLoop;
-                    }
-                }
-                case 6: {
-                    try {
-                        statePc = 8;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_6) {
-                        caughtException = stateCaught_6;
-                        statePc = 28;
-                        continue stateLoop;
-                    }
-                }
-                case 7: {
-                    try {
-                        if (caughtException instanceof RuntimeException) throw (RuntimeException) caughtException;
-                        if (caughtException instanceof Error) throw (Error) caughtException;
-                        throw (IOException) (Object) caughtException;
-                    } catch (Throwable stateCaught_7) {
-                        caughtException = stateCaught_7;
-                        statePc = 28;
-                        continue stateLoop;
-                    }
-                }
-                case 8: {
-                    try {
-                        var3_ref = param1.address();
-                        if (var3_ref instanceof java.net.InetSocketAddress) {
-                            statePc = 11;
-                        } else {
-                            statePc = 9;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_8) {
-                        caughtException = stateCaught_8;
-                        statePc = 28;
-                        continue stateLoop;
-                    }
-                }
-                case 9: {
-                    try {
-                        stackOut_9_0 = null;
-                        stackIn_10_0 = stackOut_9_0;
-                        statePc = 10;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_9) {
-                        caughtException = stateCaught_9;
-                        statePc = 28;
-                        continue stateLoop;
-                    }
-                }
-                case 10: {
-                    return (java.net.Socket) (Object) stackIn_10_0;
-                }
-                case 11: {
-                    try {
-                        var4_ref = (java.net.InetSocketAddress) (Object) var3_ref;
-                        if (param1.type() != java.net.Proxy.Type.HTTP) {
-                            statePc = 23;
-                        } else {
-                            statePc = 12;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_11) {
-                        caughtException = stateCaught_11;
-                        statePc = 28;
-                        continue stateLoop;
-                    }
-                }
-                case 12: {
-                    try {
-                        var5 = null;
-                        statePc = 13;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_12) {
-                        caughtException = stateCaught_12;
-                        statePc = 28;
-                        continue stateLoop;
-                    }
-                }
-                case 13: {
-                    try {
+              }
+              var3_ref = param1.address();
+              if ((Object) var3_ref instanceof java.net.InetSocketAddress) {
+                var4_ref = (java.net.InetSocketAddress) (Object) var3_ref;
+                if (param1.type() != java.net.Proxy.Type.HTTP) {
+                  if (param1.type() != java.net.Proxy.Type.SOCKS) {
+                    stackOut_24_0 = null;
+                    stackIn_25_0 = stackOut_24_0;
+                    break L0;
+                  } else {
+                    var5 = (Object) (Object) new java.net.Socket(param1);
+                    ((java.net.Socket) var5).connect((java.net.SocketAddress) (Object) new java.net.InetSocketAddress(((ea) this).field_a, ((ea) this).field_c));
+                    stackOut_22_0 = var5;
+                    stackIn_23_0 = stackOut_22_0;
+                    return (java.net.Socket) (Object) stackIn_23_0;
+                  }
+                } else {
+                  var5 = null;
+                  try {
+                    L2: {
+                      L3: {
                         var6_ref = Class.forName("sun.net.www.protocol.http.AuthenticationInfo");
                         var7 = var6_ref.getDeclaredMethod("getProxyAuth", new Class[2]);
                         var7.setAccessible(true);
                         var8 = var7.invoke((Object) null, new Object[2]);
-                        statePc = 14;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_13) {
-                        caughtException = stateCaught_13;
-                        statePc = (stateCaught_13 instanceof Exception ? 20 : 28);
-                        continue stateLoop;
-                    }
-                }
-                case 14: {
-                    try {
                         if (null != var8) {
-                            statePc = 17;
+                          var9 = var6_ref.getDeclaredMethod("supportsPreemptiveAuthorization", new Class[0]);
+                          var9.setAccessible(true);
+                          if (!((Boolean) var9.invoke(var8, new Object[0])).booleanValue()) {
+                            break L3;
+                          } else {
+                            var10 = var6_ref.getDeclaredMethod("getHeaderName", new Class[0]);
+                            var10.setAccessible(true);
+                            var11 = var6_ref.getDeclaredMethod("getHeaderValue", new Class[2]);
+                            var11.setAccessible(true);
+                            var12 = (String) var10.invoke(var8, new Object[0]);
+                            var13 = (String) var11.invoke(var8, new Object[2]);
+                            var5 = (Object) (Object) (var12 + ": " + var13);
+                            break L3;
+                          }
                         } else {
-                            statePc = 15;
+                          break L3;
                         }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_14) {
-                        caughtException = stateCaught_14;
-                        statePc = (stateCaught_14 instanceof Exception ? 20 : 28);
-                        continue stateLoop;
+                      }
+                      break L2;
                     }
-                }
-                case 15: {
-                    try {
-                        statePc = 19;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_15) {
-                        caughtException = stateCaught_15;
-                        statePc = (stateCaught_15 instanceof Exception ? 20 : 28);
-                        continue stateLoop;
+                  } catch (java.lang.Exception decompiledCaughtParameter0) {
+                    decompiledCaughtException = decompiledCaughtParameter0;
+                    L4: {
+                      var6 = (Exception) (Object) decompiledCaughtException;
+                      break L4;
                     }
+                  }
+                  stackOut_19_0 = this.a((byte) 112, var4_ref.getPort(), var4_ref.getHostName(), (String) var5);
+                  stackIn_20_0 = stackOut_19_0;
+                  return stackIn_20_0;
                 }
-                case 17: {
-                    try {
-                        var9 = var6_ref.getDeclaredMethod("supportsPreemptiveAuthorization", new Class[0]);
-                        var9.setAccessible(true);
-                        if (!((Boolean) var9.invoke(var8, new Object[0])).booleanValue()) {
-                            statePc = 19;
-                        } else {
-                            statePc = 18;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_17) {
-                        caughtException = stateCaught_17;
-                        statePc = (stateCaught_17 instanceof Exception ? 20 : 28);
-                        continue stateLoop;
-                    }
-                }
-                case 18: {
-                    try {
-                        var10 = var6_ref.getDeclaredMethod("getHeaderName", new Class[0]);
-                        var10.setAccessible(true);
-                        var11 = var6_ref.getDeclaredMethod("getHeaderValue", new Class[2]);
-                        var11.setAccessible(true);
-                        var12 = (String) var10.invoke(var8, new Object[0]);
-                        var13 = (String) var11.invoke(var8, new Object[2]);
-                        var5 = (java.net.Socket) (Object) (var12 + ": " + var13);
-                        statePc = 19;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_18) {
-                        caughtException = stateCaught_18;
-                        statePc = (stateCaught_18 instanceof Exception ? 20 : 28);
-                        continue stateLoop;
-                    }
-                }
-                case 19: {
-                    try {
-                        statePc = 21;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_19) {
-                        caughtException = stateCaught_19;
-                        statePc = 28;
-                        continue stateLoop;
-                    }
-                }
-                case 20: {
-                    try {
-                        var6 = (Exception) (Object) caughtException;
-                        statePc = 21;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_20) {
-                        caughtException = stateCaught_20;
-                        statePc = 28;
-                        continue stateLoop;
-                    }
-                }
-                case 21: {
-                    try {
-                        stackOut_21_0 = this.a((byte) 112, var4_ref.getPort(), var4_ref.getHostName(), (String) (Object) var5);
-                        stackIn_22_0 = stackOut_21_0;
-                        statePc = 22;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_21) {
-                        caughtException = stateCaught_21;
-                        statePc = 28;
-                        continue stateLoop;
-                    }
-                }
-                case 22: {
-                    return stackIn_22_0;
-                }
-                case 23: {
-                    try {
-                        if (param1.type() != java.net.Proxy.Type.SOCKS) {
-                            statePc = 26;
-                        } else {
-                            statePc = 24;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_23) {
-                        caughtException = stateCaught_23;
-                        statePc = 28;
-                        continue stateLoop;
-                    }
-                }
-                case 24: {
-                    try {
-                        var5 = new java.net.Socket(param1);
-                        var5.connect((java.net.SocketAddress) (Object) new java.net.InetSocketAddress(((ea) this).field_a, ((ea) this).field_c));
-                        stackOut_24_0 = (java.net.Socket) var5;
-                        stackIn_25_0 = stackOut_24_0;
-                        statePc = 25;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_24) {
-                        caughtException = stateCaught_24;
-                        statePc = 28;
-                        continue stateLoop;
-                    }
-                }
-                case 25: {
-                    return stackIn_25_0;
-                }
-                case 26: {
-                    try {
-                        stackOut_26_0 = null;
-                        stackIn_27_0 = stackOut_26_0;
-                        statePc = 27;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_26) {
-                        caughtException = stateCaught_26;
-                        statePc = 28;
-                        continue stateLoop;
-                    }
-                }
-                case 27: {
-                    return (java.net.Socket) (Object) stackIn_27_0;
-                }
-                case 28: {
-                    var3 = (RuntimeException) (Object) caughtException;
-                    statePc = 29;
-                    continue stateLoop;
-                }
-                case 29: {
-                    try {
-                        stackOut_29_0 = (RuntimeException) var3;
-                        stackOut_29_1 = new StringBuilder().append("ea.I(").append(param0).append(44);
-                        stackIn_32_0 = stackOut_29_0;
-                        stackIn_32_1 = stackOut_29_1;
-                        stackIn_30_0 = stackOut_29_0;
-                        stackIn_30_1 = stackOut_29_1;
-                        if (param1 == null) {
-                            statePc = 32;
-                        } else {
-                            statePc = 30;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_29) {
-                        caughtException = stateCaught_29;
-                        statePc = 31;
-                        continue stateLoop;
-                    }
-                }
-                case 30: {
-                    try {
-                        stackOut_30_0 = (RuntimeException) (Object) stackIn_30_0;
-                        stackOut_30_1 = (StringBuilder) (Object) stackIn_30_1;
-                        stackOut_30_2 = "{...}";
-                        stackIn_33_0 = stackOut_30_0;
-                        stackIn_33_1 = stackOut_30_1;
-                        stackIn_33_2 = stackOut_30_2;
-                        statePc = 33;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_30) {
-                        caughtException = stateCaught_30;
-                        statePc = 31;
-                        continue stateLoop;
-                    }
-                }
-                case 31: {
-                    if (caughtException instanceof RuntimeException) throw (RuntimeException) caughtException;
-                    if (caughtException instanceof Error) throw (Error) caughtException;
-                    throw (IOException) (Object) caughtException;
-                }
-                case 32: {
-                    stackOut_32_0 = (RuntimeException) (Object) stackIn_32_0;
-                    stackOut_32_1 = (StringBuilder) (Object) stackIn_32_1;
-                    stackOut_32_2 = "null";
-                    stackIn_33_0 = stackOut_32_0;
-                    stackIn_33_1 = stackOut_32_1;
-                    stackIn_33_2 = stackOut_32_2;
-                    statePc = 33;
-                    continue stateLoop;
-                }
-                case 33: {
-                    throw bd.a((Throwable) (Object) stackIn_33_0, stackIn_33_2 + 41);
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
+              } else {
+                stackOut_8_0 = null;
+                stackIn_9_0 = stackOut_8_0;
+                return (java.net.Socket) (Object) stackIn_9_0;
+              }
+            } else {
+              stackOut_1_0 = ((ea) this).a(-14394);
+              stackIn_2_0 = stackOut_1_0;
+              return stackIn_2_0;
             }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
+          decompiledCaughtException = decompiledCaughtParameter1;
+          L5: {
+            var3 = (RuntimeException) (Object) decompiledCaughtException;
+            stackOut_26_0 = (RuntimeException) var3;
+            stackOut_26_1 = new StringBuilder().append("ea.I(").append(param0).append(44);
+            stackIn_29_0 = stackOut_26_0;
+            stackIn_29_1 = stackOut_26_1;
+            stackIn_27_0 = stackOut_26_0;
+            stackIn_27_1 = stackOut_26_1;
+            if (param1 == null) {
+              stackOut_29_0 = (RuntimeException) (Object) stackIn_29_0;
+              stackOut_29_1 = (StringBuilder) (Object) stackIn_29_1;
+              stackOut_29_2 = "null";
+              stackIn_30_0 = stackOut_29_0;
+              stackIn_30_1 = stackOut_29_1;
+              stackIn_30_2 = stackOut_29_2;
+              break L5;
+            } else {
+              stackOut_27_0 = (RuntimeException) (Object) stackIn_27_0;
+              stackOut_27_1 = (StringBuilder) (Object) stackIn_27_1;
+              stackOut_27_2 = "{...}";
+              stackIn_30_0 = stackOut_27_0;
+              stackIn_30_1 = stackOut_27_1;
+              stackIn_30_2 = stackOut_27_2;
+              break L5;
+            }
+          }
+          throw bd.a((Throwable) (Object) stackIn_30_0, stackIn_30_2 + 41);
         }
+        return (java.net.Socket) (Object) stackIn_25_0;
     }
 
     private final java.net.Socket a(byte param0, int param1, String param2, String param3) throws IOException {
@@ -7848,733 +7221,204 @@ final class ea extends ib {
         String var10 = null;
         int var11 = 0;
         int var12 = 0;
-        String stackIn_20_0 = null;
-        java.net.Socket stackIn_26_0 = null;
-        String stackIn_29_0 = null;
-        int stackIn_37_0 = 0;
-        Object stackIn_50_0 = null;
-        RuntimeException stackIn_53_0 = null;
-        StringBuilder stackIn_53_1 = null;
-        RuntimeException stackIn_55_0 = null;
-        StringBuilder stackIn_55_1 = null;
-        RuntimeException stackIn_56_0 = null;
-        StringBuilder stackIn_56_1 = null;
-        String stackIn_56_2 = null;
-        RuntimeException stackIn_57_0 = null;
-        StringBuilder stackIn_57_1 = null;
-        RuntimeException stackIn_59_0 = null;
-        StringBuilder stackIn_59_1 = null;
-        RuntimeException stackIn_60_0 = null;
-        StringBuilder stackIn_60_1 = null;
-        String stackIn_60_2 = null;
-        String stackOut_19_0 = null;
-        java.net.Socket stackOut_25_0 = null;
-        String stackOut_28_0 = null;
-        int stackOut_36_0 = 0;
-        Object stackOut_49_0 = null;
-        RuntimeException stackOut_52_0 = null;
-        StringBuilder stackOut_52_1 = null;
-        RuntimeException stackOut_53_0 = null;
-        StringBuilder stackOut_53_1 = null;
-        String stackOut_53_2 = null;
-        RuntimeException stackOut_55_0 = null;
-        StringBuilder stackOut_55_1 = null;
-        String stackOut_55_2 = null;
-        RuntimeException stackOut_56_0 = null;
-        StringBuilder stackOut_56_1 = null;
-        RuntimeException stackOut_57_0 = null;
-        StringBuilder stackOut_57_1 = null;
-        String stackOut_57_2 = null;
-        RuntimeException stackOut_59_0 = null;
-        StringBuilder stackOut_59_1 = null;
-        String stackOut_59_2 = null;
-        int statePc = 0;
-        Object caughtException = null;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    var12 = wizardrun.field_H;
-                    statePc = 1;
-                    continue stateLoop;
+        java.net.Socket stackIn_20_0 = null;
+        Object stackIn_41_0 = null;
+        RuntimeException stackIn_43_0 = null;
+        StringBuilder stackIn_43_1 = null;
+        RuntimeException stackIn_45_0 = null;
+        StringBuilder stackIn_45_1 = null;
+        RuntimeException stackIn_46_0 = null;
+        StringBuilder stackIn_46_1 = null;
+        String stackIn_46_2 = null;
+        RuntimeException stackIn_47_0 = null;
+        StringBuilder stackIn_47_1 = null;
+        RuntimeException stackIn_49_0 = null;
+        StringBuilder stackIn_49_1 = null;
+        RuntimeException stackIn_50_0 = null;
+        StringBuilder stackIn_50_1 = null;
+        String stackIn_50_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        java.net.Socket stackOut_19_0 = null;
+        Object stackOut_40_0 = null;
+        RuntimeException stackOut_42_0 = null;
+        StringBuilder stackOut_42_1 = null;
+        RuntimeException stackOut_45_0 = null;
+        StringBuilder stackOut_45_1 = null;
+        String stackOut_45_2 = null;
+        RuntimeException stackOut_43_0 = null;
+        StringBuilder stackOut_43_1 = null;
+        String stackOut_43_2 = null;
+        RuntimeException stackOut_46_0 = null;
+        StringBuilder stackOut_46_1 = null;
+        RuntimeException stackOut_49_0 = null;
+        StringBuilder stackOut_49_1 = null;
+        String stackOut_49_2 = null;
+        RuntimeException stackOut_47_0 = null;
+        StringBuilder stackOut_47_1 = null;
+        String stackOut_47_2 = null;
+        var12 = wizardrun.field_H;
+        try {
+          L0: {
+            L1: {
+              L2: {
+                var5_ref = new java.net.Socket(param2, param1);
+                var5_ref.setSoTimeout(10000);
+                var6 = var5_ref.getOutputStream();
+                if (param3 == null) {
+                  break L2;
+                } else {
+                  var6.write(("CONNECT " + ((ea) this).field_a + ":" + ((ea) this).field_c + " HTTP/1.0\n" + param3 + "\n\n").getBytes(java.nio.charset.Charset.forName("ISO-8859-1")));
+                  if (var12 == 0) {
+                    break L1;
+                  } else {
+                    break L2;
+                  }
                 }
-                case 1: {
-                    try {
-                        var5_ref = new java.net.Socket(param2, param1);
-                        var5_ref.setSoTimeout(10000);
-                        var6 = var5_ref.getOutputStream();
-                        statePc = 2;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_1) {
-                        caughtException = stateCaught_1;
-                        statePc = 51;
-                        continue stateLoop;
-                    }
-                }
-                case 2: {
-                    try {
-                        if (param3 == null) {
-                            statePc = 6;
-                        } else {
-                            statePc = 3;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_2) {
-                        caughtException = stateCaught_2;
-                        statePc = 5;
-                        continue stateLoop;
-                    }
-                }
-                case 3: {
-                    try {
-                        var6.write(("CONNECT " + ((ea) this).field_a + ":" + ((ea) this).field_c + " HTTP/1.0\n" + param3 + "\n\n").getBytes(java.nio.charset.Charset.forName("ISO-8859-1")));
-                        if (var12 == 0) {
-                            statePc = 9;
-                        } else {
-                            statePc = 4;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_3) {
-                        caughtException = stateCaught_3;
-                        statePc = 8;
-                        continue stateLoop;
-                    }
-                }
-                case 4: {
-                    try {
-                        statePc = 6;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_4) {
-                        caughtException = stateCaught_4;
-                        statePc = 8;
-                        continue stateLoop;
-                    }
-                }
-                case 5: {
-                    try {
-                        if (caughtException instanceof RuntimeException) throw (RuntimeException) caughtException;
-                        if (caughtException instanceof Error) throw (Error) caughtException;
-                        throw (IOException) (Object) caughtException;
-                    } catch (Throwable stateCaught_5) {
-                        caughtException = stateCaught_5;
-                        statePc = 8;
-                        continue stateLoop;
-                    }
-                }
-                case 6: {
-                    try {
-                        var6.write(("CONNECT " + ((ea) this).field_a + ":" + ((ea) this).field_c + " HTTP/1.0\n\n").getBytes(java.nio.charset.Charset.forName("ISO-8859-1")));
-                        statePc = 7;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_6) {
-                        caughtException = stateCaught_6;
-                        statePc = 8;
-                        continue stateLoop;
-                    }
-                }
-                case 7: {
-                    try {
-                        statePc = 9;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_7) {
-                        caughtException = stateCaught_7;
-                        statePc = 51;
-                        continue stateLoop;
-                    }
-                }
-                case 8: {
-                    try {
-                        if (caughtException instanceof RuntimeException) throw (RuntimeException) caughtException;
-                        if (caughtException instanceof Error) throw (Error) caughtException;
-                        throw (IOException) (Object) caughtException;
-                    } catch (Throwable stateCaught_8) {
-                        caughtException = stateCaught_8;
-                        statePc = 51;
-                        continue stateLoop;
-                    }
-                }
-                case 9: {
-                    try {
-                        var6.flush();
-                        var7 = new BufferedReader((Reader) (Object) new InputStreamReader(var5_ref.getInputStream()));
-                        statePc = 10;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_9) {
-                        caughtException = stateCaught_9;
-                        statePc = 51;
-                        continue stateLoop;
-                    }
-                }
-                case 10: {
-                    try {
-                        if (param0 == 112) {
-                            statePc = 14;
-                        } else {
-                            statePc = 11;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_10) {
-                        caughtException = stateCaught_10;
-                        statePc = 13;
-                        continue stateLoop;
-                    }
-                }
-                case 11: {
-                    try {
-                        field_e = null;
-                        statePc = 12;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_11) {
-                        caughtException = stateCaught_11;
-                        statePc = 13;
-                        continue stateLoop;
-                    }
-                }
-                case 12: {
-                    try {
-                        statePc = 14;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_12) {
-                        caughtException = stateCaught_12;
-                        statePc = 51;
-                        continue stateLoop;
-                    }
-                }
-                case 13: {
-                    try {
-                        if (caughtException instanceof RuntimeException) throw (RuntimeException) caughtException;
-                        if (caughtException instanceof Error) throw (Error) caughtException;
-                        throw (IOException) (Object) caughtException;
-                    } catch (Throwable stateCaught_13) {
-                        caughtException = stateCaught_13;
-                        statePc = 51;
-                        continue stateLoop;
-                    }
-                }
-                case 14: {
-                    try {
-                        var8 = var7.readLine();
-                        statePc = 15;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_14) {
-                        caughtException = stateCaught_14;
-                        statePc = 51;
-                        continue stateLoop;
-                    }
-                }
-                case 15: {
-                    try {
-                        if (null == var8) {
-                            statePc = 49;
-                        } else {
-                            statePc = 16;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_15) {
-                        caughtException = stateCaught_15;
-                        statePc = 18;
-                        continue stateLoop;
-                    }
-                }
-                case 16: {
-                    try {
-                        if (var8.startsWith("HTTP/1.0 200")) {
-                            statePc = 25;
-                        } else {
-                            statePc = 17;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_16) {
-                        caughtException = stateCaught_16;
-                        statePc = 22;
-                        continue stateLoop;
-                    }
-                }
-                case 17: {
-                    try {
-                        statePc = 19;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_17) {
-                        caughtException = stateCaught_17;
-                        statePc = 22;
-                        continue stateLoop;
-                    }
-                }
-                case 18: {
-                    try {
-                        if (caughtException instanceof RuntimeException) throw (RuntimeException) caughtException;
-                        if (caughtException instanceof Error) throw (Error) caughtException;
-                        throw (IOException) (Object) caughtException;
-                    } catch (Throwable stateCaught_18) {
-                        caughtException = stateCaught_18;
-                        statePc = 22;
-                        continue stateLoop;
-                    }
-                }
-                case 19: {
-                    try {
-                        stackOut_19_0 = (String) var8;
-                        stackIn_20_0 = stackOut_19_0;
-                        statePc = 20;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_19) {
-                        caughtException = stateCaught_19;
-                        statePc = 22;
-                        continue stateLoop;
-                    }
-                }
-                case 20: {
-                    try {
-                        if (((String) (Object) stackIn_20_0).startsWith("HTTP/1.1 200")) {
-                            statePc = 25;
-                        } else {
-                            statePc = 21;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_20) {
-                        caughtException = stateCaught_20;
-                        statePc = 24;
-                        continue stateLoop;
-                    }
-                }
-                case 21: {
-                    try {
-                        statePc = 23;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_21) {
-                        caughtException = stateCaught_21;
-                        statePc = 24;
-                        continue stateLoop;
-                    }
-                }
-                case 22: {
-                    try {
-                        if (caughtException instanceof RuntimeException) throw (RuntimeException) caughtException;
-                        if (caughtException instanceof Error) throw (Error) caughtException;
-                        throw (IOException) (Object) caughtException;
-                    } catch (Throwable stateCaught_22) {
-                        caughtException = stateCaught_22;
-                        statePc = 24;
-                        continue stateLoop;
-                    }
-                }
-                case 23: {
-                    try {
-                        statePc = 27;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_23) {
-                        caughtException = stateCaught_23;
-                        statePc = 24;
-                        continue stateLoop;
-                    }
-                }
-                case 24: {
-                    try {
-                        if (caughtException instanceof RuntimeException) throw (RuntimeException) caughtException;
-                        if (caughtException instanceof Error) throw (Error) caughtException;
-                        throw (IOException) (Object) caughtException;
-                    } catch (Throwable stateCaught_24) {
-                        caughtException = stateCaught_24;
-                        statePc = 51;
-                        continue stateLoop;
-                    }
-                }
-                case 25: {
-                    try {
-                        stackOut_25_0 = (java.net.Socket) var5_ref;
-                        stackIn_26_0 = stackOut_25_0;
-                        statePc = 26;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_25) {
-                        caughtException = stateCaught_25;
-                        statePc = 51;
-                        continue stateLoop;
-                    }
-                }
-                case 26: {
-                    return stackIn_26_0;
-                }
-                case 27: {
-                    try {
-                        if (var8.startsWith("HTTP/1.0 407")) {
-                            statePc = 34;
-                        } else {
-                            statePc = 28;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_27) {
-                        caughtException = stateCaught_27;
-                        statePc = 51;
-                        continue stateLoop;
-                    }
-                }
-                case 28: {
-                    try {
-                        stackOut_28_0 = (String) var8;
-                        stackIn_29_0 = stackOut_28_0;
-                        statePc = 29;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_28) {
-                        caughtException = stateCaught_28;
-                        statePc = 51;
-                        continue stateLoop;
-                    }
-                }
-                case 29: {
-                    try {
-                        if (((String) (Object) stackIn_29_0).startsWith("HTTP/1.1 407")) {
-                            statePc = 34;
-                        } else {
-                            statePc = 30;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_29) {
-                        caughtException = stateCaught_29;
-                        statePc = 33;
-                        continue stateLoop;
-                    }
-                }
-                case 30: {
-                    try {
-                        statePc = 32;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_30) {
-                        caughtException = stateCaught_30;
-                        statePc = 33;
-                        continue stateLoop;
-                    }
-                }
-                case 32: {
-                    try {
-                        statePc = 49;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_32) {
-                        caughtException = stateCaught_32;
-                        statePc = 33;
-                        continue stateLoop;
-                    }
-                }
-                case 33: {
-                    try {
-                        if (caughtException instanceof RuntimeException) throw (RuntimeException) caughtException;
-                        if (caughtException instanceof Error) throw (Error) caughtException;
-                        throw (IOException) (Object) caughtException;
-                    } catch (Throwable stateCaught_33) {
-                        caughtException = stateCaught_33;
-                        statePc = 51;
-                        continue stateLoop;
-                    }
-                }
-                case 34: {
-                    try {
-                        var9 = 0;
-                        var10 = "proxy-authenticate: ";
-                        var8 = var7.readLine();
-                        statePc = 35;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_34) {
-                        caughtException = stateCaught_34;
-                        statePc = 51;
-                        continue stateLoop;
-                    }
-                }
-                case 35: {
-                    try {
-                        if (var8 == null) {
-                            statePc = 48;
-                        } else {
-                            statePc = 36;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_35) {
-                        caughtException = stateCaught_35;
-                        statePc = 51;
-                        continue stateLoop;
-                    }
-                }
-                case 36: {
-                    try {
-                        stackOut_36_0 = var9;
-                        stackIn_37_0 = stackOut_36_0;
-                        statePc = 37;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_36) {
-                        caughtException = stateCaught_36;
-                        statePc = 51;
-                        continue stateLoop;
-                    }
-                }
-                case 37: {
-                    try {
-                        if ((stackIn_37_0 ^ -1) <= -51) {
-                            statePc = 48;
-                        } else {
-                            statePc = 38;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_37) {
-                        caughtException = stateCaught_37;
-                        statePc = 40;
-                        continue stateLoop;
-                    }
-                }
-                case 38: {
-                    try {
-                        if (!var8.toLowerCase().startsWith(var10)) {
-                            statePc = 47;
-                        } else {
-                            statePc = 39;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_38) {
-                        caughtException = stateCaught_38;
-                        statePc = 40;
-                        continue stateLoop;
-                    }
-                }
-                case 39: {
-                    try {
-                        statePc = 41;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_39) {
-                        caughtException = stateCaught_39;
-                        statePc = 51;
-                        continue stateLoop;
-                    }
-                }
-                case 40: {
-                    try {
-                        if (caughtException instanceof RuntimeException) throw (RuntimeException) caughtException;
-                        if (caughtException instanceof Error) throw (Error) caughtException;
-                        throw (IOException) (Object) caughtException;
-                    } catch (Throwable stateCaught_40) {
-                        caughtException = stateCaught_40;
-                        statePc = 51;
-                        continue stateLoop;
-                    }
-                }
-                case 41: {
-                    try {
-                        var8 = var8.substring(var10.length()).trim();
-                        var11 = var8.indexOf(' ');
-                        statePc = 42;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_41) {
-                        caughtException = stateCaught_41;
-                        statePc = 51;
-                        continue stateLoop;
-                    }
-                }
-                case 42: {
-                    try {
-                        if (0 != (var11 ^ -1)) {
-                            statePc = 45;
-                        } else {
-                            statePc = 43;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_42) {
-                        caughtException = stateCaught_42;
-                        statePc = 44;
-                        continue stateLoop;
-                    }
-                }
-                case 43: {
-                    try {
-                        statePc = 46;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_43) {
-                        caughtException = stateCaught_43;
-                        statePc = 44;
-                        continue stateLoop;
-                    }
-                }
-                case 44: {
-                    try {
-                        if (caughtException instanceof RuntimeException) throw (RuntimeException) caughtException;
-                        if (caughtException instanceof Error) throw (Error) caughtException;
-                        throw (IOException) (Object) caughtException;
-                    } catch (Throwable stateCaught_44) {
-                        caughtException = stateCaught_44;
-                        statePc = 51;
-                        continue stateLoop;
-                    }
-                }
-                case 45: {
-                    try {
-                        var8 = var8.substring(0, var11);
-                        statePc = 46;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_45) {
-                        caughtException = stateCaught_45;
-                        statePc = 51;
-                        continue stateLoop;
-                    }
-                }
-                case 46: {
-                    try {
-                        throw new hf(var8);
-                    } catch (Throwable stateCaught_46) {
-                        caughtException = stateCaught_46;
-                        statePc = 51;
-                        continue stateLoop;
-                    }
-                }
-                case 47: {
-                    try {
-                        var8 = var7.readLine();
-                        var9++;
-                        if (var12 == 0) {
-                            statePc = 35;
-                        } else {
-                            statePc = 48;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_47) {
-                        caughtException = stateCaught_47;
-                        statePc = 51;
-                        continue stateLoop;
-                    }
-                }
-                case 48: {
-                    try {
-                        throw new hf("");
-                    } catch (Throwable stateCaught_48) {
-                        caughtException = stateCaught_48;
-                        statePc = 51;
-                        continue stateLoop;
-                    }
-                }
-                case 49: {
-                    try {
-                        var6.close();
-                        var7.close();
-                        var5_ref.close();
-                        stackOut_49_0 = null;
-                        stackIn_50_0 = stackOut_49_0;
-                        statePc = 50;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_49) {
-                        caughtException = stateCaught_49;
-                        statePc = 51;
-                        continue stateLoop;
-                    }
-                }
-                case 50: {
-                    return (java.net.Socket) (Object) stackIn_50_0;
-                }
-                case 51: {
-                    var5 = (RuntimeException) (Object) caughtException;
-                    statePc = 52;
-                    continue stateLoop;
-                }
-                case 52: {
-                    try {
-                        stackOut_52_0 = (RuntimeException) var5;
-                        stackOut_52_1 = new StringBuilder().append("ea.E(").append(param0).append(44).append(param1).append(44);
-                        stackIn_55_0 = stackOut_52_0;
-                        stackIn_55_1 = stackOut_52_1;
-                        stackIn_53_0 = stackOut_52_0;
-                        stackIn_53_1 = stackOut_52_1;
-                        if (param2 == null) {
-                            statePc = 55;
-                        } else {
-                            statePc = 53;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_52) {
-                        caughtException = stateCaught_52;
-                        statePc = 54;
-                        continue stateLoop;
-                    }
-                }
-                case 53: {
-                    try {
-                        stackOut_53_0 = (RuntimeException) (Object) stackIn_53_0;
-                        stackOut_53_1 = (StringBuilder) (Object) stackIn_53_1;
-                        stackOut_53_2 = "{...}";
-                        stackIn_56_0 = stackOut_53_0;
-                        stackIn_56_1 = stackOut_53_1;
-                        stackIn_56_2 = stackOut_53_2;
-                        statePc = 56;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_53) {
-                        caughtException = stateCaught_53;
-                        statePc = 54;
-                        continue stateLoop;
-                    }
-                }
-                case 54: {
-                    if (caughtException instanceof RuntimeException) throw (RuntimeException) caughtException;
-                    if (caughtException instanceof Error) throw (Error) caughtException;
-                    throw (IOException) (Object) caughtException;
-                }
-                case 55: {
-                    stackOut_55_0 = (RuntimeException) (Object) stackIn_55_0;
-                    stackOut_55_1 = (StringBuilder) (Object) stackIn_55_1;
-                    stackOut_55_2 = "null";
-                    stackIn_56_0 = stackOut_55_0;
-                    stackIn_56_1 = stackOut_55_1;
-                    stackIn_56_2 = stackOut_55_2;
-                    statePc = 56;
-                    continue stateLoop;
-                }
-                case 56: {
-                    try {
-                        stackOut_56_0 = (RuntimeException) (Object) stackIn_56_0;
-                        stackOut_56_1 = ((StringBuilder) (Object) stackIn_56_1).append(stackIn_56_2).append(44);
-                        stackIn_59_0 = stackOut_56_0;
-                        stackIn_59_1 = stackOut_56_1;
-                        stackIn_57_0 = stackOut_56_0;
-                        stackIn_57_1 = stackOut_56_1;
-                        if (param3 == null) {
-                            statePc = 59;
-                        } else {
-                            statePc = 57;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_56) {
-                        caughtException = stateCaught_56;
-                        statePc = 58;
-                        continue stateLoop;
-                    }
-                }
-                case 57: {
-                    try {
-                        stackOut_57_0 = (RuntimeException) (Object) stackIn_57_0;
-                        stackOut_57_1 = (StringBuilder) (Object) stackIn_57_1;
-                        stackOut_57_2 = "{...}";
-                        stackIn_60_0 = stackOut_57_0;
-                        stackIn_60_1 = stackOut_57_1;
-                        stackIn_60_2 = stackOut_57_2;
-                        statePc = 60;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_57) {
-                        caughtException = stateCaught_57;
-                        statePc = 58;
-                        continue stateLoop;
-                    }
-                }
-                case 58: {
-                    if (caughtException instanceof RuntimeException) throw (RuntimeException) caughtException;
-                    if (caughtException instanceof Error) throw (Error) caughtException;
-                    throw (IOException) (Object) caughtException;
-                }
-                case 59: {
-                    stackOut_59_0 = (RuntimeException) (Object) stackIn_59_0;
-                    stackOut_59_1 = (StringBuilder) (Object) stackIn_59_1;
-                    stackOut_59_2 = "null";
-                    stackIn_60_0 = stackOut_59_0;
-                    stackIn_60_1 = stackOut_59_1;
-                    stackIn_60_2 = stackOut_59_2;
-                    statePc = 60;
-                    continue stateLoop;
-                }
-                case 60: {
-                    throw bd.a((Throwable) (Object) stackIn_60_0, stackIn_60_2 + 41);
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
+              }
+              var6.write(("CONNECT " + ((ea) this).field_a + ":" + ((ea) this).field_c + " HTTP/1.0\n\n").getBytes(java.nio.charset.Charset.forName("ISO-8859-1")));
+              break L1;
             }
+            L3: {
+              var6.flush();
+              var7 = new BufferedReader((Reader) (Object) new InputStreamReader(var5_ref.getInputStream()));
+              if (param0 == 112) {
+                break L3;
+              } else {
+                field_e = null;
+                break L3;
+              }
+            }
+            L4: {
+              var8 = var7.readLine();
+              if (null == var8) {
+                break L4;
+              } else {
+                L5: {
+                  if (var8.startsWith("HTTP/1.0 200")) {
+                    break L5;
+                  } else {
+                    if (var8.startsWith("HTTP/1.1 200")) {
+                      break L5;
+                    } else {
+                      L6: {
+                        if (var8.startsWith("HTTP/1.0 407")) {
+                          break L6;
+                        } else {
+                          if (var8.startsWith("HTTP/1.1 407")) {
+                            break L6;
+                          } else {
+                            break L4;
+                          }
+                        }
+                      }
+                      var9 = 0;
+                      var10 = "proxy-authenticate: ";
+                      var8 = var7.readLine();
+                      L7: while (true) {
+                        L8: {
+                          if (var8 == null) {
+                            break L8;
+                          } else {
+                            if ((var9 ^ -1) <= -51) {
+                              break L8;
+                            } else {
+                              if (!var8.toLowerCase().startsWith(var10)) {
+                                var8 = var7.readLine();
+                                var9++;
+                                if (var12 == 0) {
+                                  continue L7;
+                                } else {
+                                  break L8;
+                                }
+                              } else {
+                                L9: {
+                                  var8 = var8.substring(var10.length()).trim();
+                                  var11 = var8.indexOf(' ');
+                                  if (0 != (var11 ^ -1)) {
+                                    var8 = var8.substring(0, var11);
+                                    break L9;
+                                  } else {
+                                    break L9;
+                                  }
+                                }
+                                throw new hf(var8);
+                              }
+                            }
+                          }
+                        }
+                        throw new hf("");
+                      }
+                    }
+                  }
+                }
+                stackOut_19_0 = (java.net.Socket) var5_ref;
+                stackIn_20_0 = stackOut_19_0;
+                return stackIn_20_0;
+              }
+            }
+            var6.close();
+            var7.close();
+            var5_ref.close();
+            stackOut_40_0 = null;
+            stackIn_41_0 = stackOut_40_0;
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L10: {
+            var5 = decompiledCaughtException;
+            stackOut_42_0 = (RuntimeException) var5;
+            stackOut_42_1 = new StringBuilder().append("ea.E(").append(param0).append(44).append(param1).append(44);
+            stackIn_45_0 = stackOut_42_0;
+            stackIn_45_1 = stackOut_42_1;
+            stackIn_43_0 = stackOut_42_0;
+            stackIn_43_1 = stackOut_42_1;
+            if (param2 == null) {
+              stackOut_45_0 = (RuntimeException) (Object) stackIn_45_0;
+              stackOut_45_1 = (StringBuilder) (Object) stackIn_45_1;
+              stackOut_45_2 = "null";
+              stackIn_46_0 = stackOut_45_0;
+              stackIn_46_1 = stackOut_45_1;
+              stackIn_46_2 = stackOut_45_2;
+              break L10;
+            } else {
+              stackOut_43_0 = (RuntimeException) (Object) stackIn_43_0;
+              stackOut_43_1 = (StringBuilder) (Object) stackIn_43_1;
+              stackOut_43_2 = "{...}";
+              stackIn_46_0 = stackOut_43_0;
+              stackIn_46_1 = stackOut_43_1;
+              stackIn_46_2 = stackOut_43_2;
+              break L10;
+            }
+          }
+          L11: {
+            stackOut_46_0 = (RuntimeException) (Object) stackIn_46_0;
+            stackOut_46_1 = ((StringBuilder) (Object) stackIn_46_1).append(stackIn_46_2).append(44);
+            stackIn_49_0 = stackOut_46_0;
+            stackIn_49_1 = stackOut_46_1;
+            stackIn_47_0 = stackOut_46_0;
+            stackIn_47_1 = stackOut_46_1;
+            if (param3 == null) {
+              stackOut_49_0 = (RuntimeException) (Object) stackIn_49_0;
+              stackOut_49_1 = (StringBuilder) (Object) stackIn_49_1;
+              stackOut_49_2 = "null";
+              stackIn_50_0 = stackOut_49_0;
+              stackIn_50_1 = stackOut_49_1;
+              stackIn_50_2 = stackOut_49_2;
+              break L11;
+            } else {
+              stackOut_47_0 = (RuntimeException) (Object) stackIn_47_0;
+              stackOut_47_1 = (StringBuilder) (Object) stackIn_47_1;
+              stackOut_47_2 = "{...}";
+              stackIn_50_0 = stackOut_47_0;
+              stackIn_50_1 = stackOut_47_1;
+              stackIn_50_2 = stackOut_47_2;
+              break L11;
+            }
+          }
+          throw bd.a((Throwable) (Object) stackIn_50_0, stackIn_50_2 + 41);
         }
+        return (java.net.Socket) (Object) stackIn_41_0;
     }
 
     ea() {
@@ -8591,5 +7435,10 @@ final class ea extends ib {
 
     private static void $cfr$clinit() {
         field_f = new bh(1, 2, 2, 0);
+    }
+
+    @SuppressWarnings("unchecked")
+    private static <T extends Throwable> RuntimeException $cfr$sneakyThrow(Throwable throwable) throws T {
+        throw (T) throwable;
     }
 }

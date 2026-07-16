@@ -53,14 +53,16 @@ final class mg extends va {
 
     final int m(int param0) {
         int var2 = -128 % ((param0 - -9) / 54);
+        int fieldTemp$0 = ((mg) this).field_m;
         ((mg) this).field_m = ((mg) this).field_m + 1;
-        return 255 & ((mg) this).field_k[((mg) this).field_m] - ((mg) this).field_r.b((byte) 73);
+        return 255 & ((mg) this).field_k[fieldTemp$0] - ((mg) this).field_r.b((byte) 73);
     }
 
     final void c(byte param0, int param1) {
         int var3 = -41 / ((-1 - param0) / 44);
+        int fieldTemp$0 = ((mg) this).field_m;
         ((mg) this).field_m = ((mg) this).field_m + 1;
-        ((mg) this).field_k[((mg) this).field_m] = (byte)(((mg) this).field_r.b((byte) 60) + param1);
+        ((mg) this).field_k[fieldTemp$0] = (byte)(((mg) this).field_r.b((byte) 60) + param1);
     }
 
     final void l(int param0) {
@@ -78,8 +80,9 @@ final class mg extends va {
         int var5 = 0;
         int var6 = wizardrun.field_H;
         for (var5 = param2; var5 < param1; var5++) {
+            int fieldTemp$0 = ((mg) this).field_m;
             ((mg) this).field_m = ((mg) this).field_m + 1;
-            param3[var5 + param0] = (byte)(((mg) this).field_k[((mg) this).field_m] + -((mg) this).field_r.b((byte) 125));
+            param3[var5 + param0] = (byte)(((mg) this).field_k[fieldTemp$0] + -((mg) this).field_r.b((byte) 125));
         }
     }
 
@@ -100,8 +103,9 @@ final class mg extends va {
         int var5 = 0;
         ((mg) this).field_p = ((mg) this).field_p + param0;
         while (param0 > var4) {
+            int incrementValue$0 = var3;
             var3++;
-            var5 = var5 + ((((mg) this).field_k[var3] & lj.field_b[var4]) << param0 - var4);
+            var5 = var5 + ((((mg) this).field_k[incrementValue$0] & lj.field_b[var4]) << param0 - var4);
             param0 = param0 - var4;
             var4 = 8;
         }

@@ -15,7 +15,7 @@ abstract class kh {
         field_c = null;
         field_f = null;
         if (param0 != 192) {
-            field_f = (char[]) null;
+            field_f = null;
         }
     }
 

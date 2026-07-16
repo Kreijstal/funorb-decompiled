@@ -24,8 +24,9 @@ final class vi {
 
     final int a(int param0) {
         if (((vi) this).field_b >= ((vi) this).field_a) {
+            int fieldTemp$0 = ((vi) this).field_c;
             ((vi) this).field_c = ((vi) this).field_c + 1;
-            ((vi) this).field_d = ((vi) this).field_j[((vi) this).field_c] << 15;
+            ((vi) this).field_d = ((vi) this).field_j[fieldTemp$0] << 15;
             if (((vi) this).field_c >= ((vi) this).field_k) {
                 ((vi) this).field_c = ((vi) this).field_k - 1;
             }

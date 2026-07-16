@@ -17,7 +17,7 @@ final class fe {
         int var7 = 0;
         var7 = Main.field_T;
         var2 = 0L;
-        var4 = ((CharSequence) param0).length();
+        var4 = param0.length();
         var5 = 0;
         L0: while (true) {
           L1: {
@@ -27,7 +27,7 @@ final class fe {
               L2: {
                 L3: {
                   var2 = var2 * 37L;
-                  var6 = ((CharSequence) param0).charAt(var5);
+                  var6 = param0.charAt(var5);
                   if (65 > var6) {
                     break L3;
                   } else {
@@ -155,17 +155,24 @@ final class fe {
                   break L2;
                 } else {
                   try {
-                    cb.field_j.a(0, (byte) -89, na.field_r.field_i, na.field_r.field_g);
-                    ua.field_E = id.a(125);
-                  } catch (java.io.IOException decompiledCaughtParameter) {
-                    decompiledCaughtException = decompiledCaughtParameter;
+                    L3: {
+                      cb.field_j.a(0, (byte) -89, na.field_r.field_i, na.field_r.field_g);
+                      ua.field_E = id.a(125);
+                      break L3;
+                    }
+                  } catch (java.io.IOException decompiledCaughtParameter0) {
+                    decompiledCaughtException = decompiledCaughtParameter0;
+                    L4: {
+                      var2 = (IOException) (Object) decompiledCaughtException;
+                      mc.a((byte) -126);
+                      break L4;
+                    }
                   }
-                  var2 = (IOException) (Object) decompiledCaughtException;
-                  mc.a((byte) -126);
+                  na.field_r.field_i = 0;
                   break L2;
                 }
               }
-              na.field_r.field_i = 0;
+              return;
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;

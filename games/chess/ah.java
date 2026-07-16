@@ -173,16 +173,16 @@ final class ah extends ub {
               if (((ah) this).field_j) {
                 break L1;
               } else {
-                if (param0 != ((ah) this).field_l) {
+                if ((param0 ^ -1) != (((ah) this).field_l ^ -1)) {
                   break L1;
                 } else {
-                  if (param4 != ((ah) this).field_m) {
+                  if ((param4 ^ -1) != (((ah) this).field_m ^ -1)) {
                     break L1;
                   } else {
                     if (param3 != ((ah) this).field_n) {
                       break L1;
                     } else {
-                      if (param2 != ((ah) this).field_f) {
+                      if ((param2 ^ -1) != (((ah) this).field_f ^ -1)) {
                         break L1;
                       } else {
                         if (param6 != ((ah) this).field_o) {
@@ -220,7 +220,7 @@ final class ah extends ub {
             if (((ah) this).field_m != 3) {
               break L2;
             } else {
-              if (-2 != var10) {
+              if (-2 != (var10 ^ -1)) {
                 break L2;
               } else {
                 ((ah) this).field_m = 1;
@@ -233,7 +233,7 @@ final class ah extends ub {
               var11 = param7.field_C;
               break L3;
             } else {
-              if (-2 != ((ah) this).field_m) {
+              if (-2 != (((ah) this).field_m ^ -1)) {
                 if (-3 != (((ah) this).field_m ^ -1)) {
                   L4: {
                     var12 = (((ah) this).field_f - var10 * ((ah) this).field_n) / (1 + var10);
@@ -261,7 +261,7 @@ final class ah extends ub {
           if (param1 >= 107) {
             var12 = 0;
             L5: while (true) {
-              if (var12 >= var10) {
+              if ((var12 ^ -1) <= (var10 ^ -1)) {
                 return;
               } else {
                 L6: {
@@ -305,8 +305,7 @@ final class ah extends ub {
                   }
                 }
                 L7: {
-                  new fj(stackIn_34_2, stackIn_34_3, stackIn_34_4);
-                  var14 = (fj) (Object) stackIn_34_0;
+                  var14 = new fj(stackIn_34_2, stackIn_34_3, stackIn_34_4);
                   var14.field_i[0] = 0;
                   if (var13 == null) {
                     break L7;
@@ -330,7 +329,7 @@ final class ah extends ub {
                         break L8;
                       }
                     }
-                    me.a((String) (Object) stackIn_38_0, stackIn_38_1, var14, param7, (byte) 79);
+                    me.a(stackIn_38_0, stackIn_38_1, var14, param7, (byte) 79);
                     break L7;
                   }
                 }

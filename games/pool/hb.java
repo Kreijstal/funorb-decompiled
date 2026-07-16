@@ -64,8 +64,9 @@ final class hb implements Iterator {
             if (((hb) this).field_h.field_h <= ((hb) this).field_o) {
                 return null;
             }
+            int fieldTemp$0 = ((hb) this).field_o;
             ((hb) this).field_o = ((hb) this).field_o + 1;
-            var1 = ((hb) this).field_h.field_k[((hb) this).field_o].field_d;
+            var1 = ((hb) this).field_h.field_k[fieldTemp$0].field_d;
         } while (((hb) this).field_h.field_k[((hb) this).field_o - 1] == var1);
         ((hb) this).field_m = var1.field_d;
         ((hb) this).field_i = var1;
@@ -97,7 +98,6 @@ final class hb implements Iterator {
         String var28 = null;
         kn var29 = null;
         dd var30 = null;
-        dd var30_ref = null;
         String var31 = null;
         kn var32 = null;
         dd var33 = null;
@@ -160,9 +160,9 @@ final class hb implements Iterator {
         L2: {
           if (param2 == 2) {
             var29 = vl.field_m;
-            var30_ref = sg.field_M[0];
+            var30 = sg.field_M[0];
             var31 = kp.field_c;
-            var29.field_n.a(11, (byte) -122, var30_ref, var31);
+            var29.field_n.a(11, (byte) -122, var30, var31);
             var32 = vl.field_m;
             var33 = sg.field_M[1];
             var34 = rm.field_a;
@@ -217,8 +217,9 @@ final class hb implements Iterator {
             if (((hb) this).field_o >= ((hb) this).field_h.field_h) {
               return false;
             } else {
+              int fieldTemp$8 = ((hb) this).field_o;
               ((hb) this).field_o = ((hb) this).field_o + 1;
-              if (((hb) this).field_h.field_k[((hb) this).field_o].field_d != ((hb) this).field_h.field_k[((hb) this).field_o - 1]) {
+              if (((hb) this).field_h.field_k[fieldTemp$8].field_d != ((hb) this).field_h.field_k[((hb) this).field_o - 1]) {
                 ((hb) this).field_m = ((hb) this).field_h.field_k[-1 + ((hb) this).field_o].field_d;
                 return true;
               } else {
@@ -261,6 +262,7 @@ final class hb implements Iterator {
             field_s = -1;
             field_p = "Instructions";
             field_e = -1;
+            return;
           } else {
             var0 = (long)var2;
             var3 = 0;

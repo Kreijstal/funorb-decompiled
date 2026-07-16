@@ -218,8 +218,9 @@ abstract class ie extends ng implements j {
                         }
                       } else {
                         gn.field_A[var11] = gn.field_A[var8];
+                        int incrementValue$1 = var8;
                         var8++;
-                        gn.field_A[var8] = var12;
+                        gn.field_A[incrementValue$1] = var12;
                         if (var9 > var13) {
                           var9 = var13;
                           var11++;

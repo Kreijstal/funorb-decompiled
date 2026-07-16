@@ -297,93 +297,67 @@ final class de implements java.awt.event.KeyListener, java.awt.event.FocusListen
                 if ((var2 ^ -1) > -1) {
                   break L2;
                 } else {
-                  if (fb.field_Q.length <= var2) {
+                  if ((fb.field_Q.length ^ -1) >= (var2 ^ -1)) {
                     break L2;
                   } else {
                     var2 = fb.field_Q[var2];
-                    if ((128 & var2) == -1) {
-                      if (-1 < (rc.field_d ^ -1)) {
-                        break L1;
-                      } else {
-                        if ((var2 ^ -1) > -1) {
-                          break L1;
-                        } else {
-                          mp.field_j[rc.field_d] = var2;
-                          rc.field_d = 127 & 1 + rc.field_d;
-                          if (rc.field_d != tv.field_i) {
-                            break L1;
-                          } else {
-                            rc.field_d = -1;
-                            break L1;
-                          }
-                        }
-                      }
+                    if ((128 & var2 ^ -1) == -1) {
+                      break L1;
                     } else {
-                      if (-1 > rc.field_d) {
-                        break L1;
-                      } else {
-                        if ((var2 ^ -1) > -1) {
-                          break L1;
-                        } else {
-                          mp.field_j[rc.field_d] = var2;
-                          rc.field_d = 127 & 1 + rc.field_d;
-                          if (rc.field_d != tv.field_i) {
-                            break L1;
-                          } else {
-                            rc.field_d = -1;
-                            break L1;
-                          }
-                        }
-                      }
+                      var2 = -1;
+                      break L1;
                     }
                   }
                 }
               }
               var2 = -1;
+              break L1;
+            }
+            L3: {
               if (-1 < (rc.field_d ^ -1)) {
-                break L1;
+                break L3;
               } else {
                 if ((var2 ^ -1) > -1) {
-                  break L1;
+                  break L3;
                 } else {
                   mp.field_j[rc.field_d] = var2;
                   rc.field_d = 127 & 1 + rc.field_d;
-                  if (rc.field_d != tv.field_i) {
-                    break L1;
+                  if ((rc.field_d ^ -1) != (tv.field_i ^ -1)) {
+                    break L3;
                   } else {
                     rc.field_d = -1;
-                    break L1;
+                    break L3;
                   }
                 }
               }
             }
-            L3: {
+            L4: {
               if (var2 < 0) {
-                break L3;
+                break L4;
               } else {
                 var3 = 127 & du.field_j + 1;
                 if (var3 == wl.field_n) {
-                  break L3;
+                  break L4;
                 } else {
                   bt.field_a[du.field_j] = var2;
                   up.field_a[du.field_j] = (char)0;
                   du.field_j = var3;
-                  break L3;
+                  break L4;
                 }
               }
             }
-            L4: {
+            L5: {
               var3 = param0.getModifiers();
               if (-1 != (var3 & 10 ^ -1)) {
-                break L4;
+                break L5;
               } else {
-                if (var2 == -86) {
-                  break L4;
+                if ((var2 ^ -1) == -86) {
+                  break L5;
                 } else {
-                  if (-11 != var2) {
+                  if (-11 != (var2 ^ -1)) {
                     break L0;
                   } else {
-                    break L4;
+                    break L5;
                   }
                 }
               }

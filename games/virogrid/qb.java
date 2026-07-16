@@ -777,8 +777,9 @@ final class qb extends ll {
                                           break L6;
                                         }
                                       }
-                                      ((qb) this).field_L[var1] = new pg();
-                                      var16 = new pg();
+                                      pg dupTemp$1 = new pg();
+                                      ((qb) this).field_L[var1] = dupTemp$1;
+                                      var16 = dupTemp$1;
                                       var16.field_b = var11;
                                       var16.field_d = var12;
                                       var16.field_f = var13;
@@ -960,8 +961,9 @@ final class qb extends ll {
                 break L2;
               } else {
                 L4: {
-                  ((qb) this).field_N[var28] = var2.a((byte) 110);
-                  var29 = var2.a((byte) 110);
+                  byte dupTemp$1 = var2.a((byte) 110);
+                  ((qb) this).field_N[var28] = dupTemp$1;
+                  var29 = dupTemp$1;
                   if (var29 != 0) {
                     break L4;
                   } else {
@@ -1533,11 +1535,8 @@ final class qb extends ll {
         int var14 = 0;
         int var15 = 0;
         s var16 = null;
-        s var16_ref = null;
         s var17 = null;
-        s var17_ref = null;
         s var18 = null;
-        s var18_ref = null;
         int[] var22 = null;
         var6 = (qb) (Object) param0;
         var6.e();
@@ -1642,11 +1641,11 @@ final class qb extends ll {
                           var15 = 0;
                           L6: while (true) {
                             if (var15 < var9) {
-                              var16_ref = var6.field_n[var15];
+                              var16 = var6.field_n[var15];
                               if (var13 == var22[var15]) {
                                 if (var14 == var6.field_l[var15]) {
                                   if (var12 == var6.field_o[var15]) {
-                                    if (var16_ref.field_e != 0) {
+                                    if (var16.field_e != 0) {
                                       L7: {
                                         if (((qb) this).field_g != null) {
                                           break L7;
@@ -1668,8 +1667,9 @@ final class qb extends ll {
                                         if (var17 != null) {
                                           break L9;
                                         } else {
-                                          ((qb) this).field_g[var10] = new s(var11);
-                                          var17_ref = new s(var11);
+                                          s dupTemp$2 = new s(var11);
+                                          ((qb) this).field_g[var10] = dupTemp$2;
+                                          var17 = dupTemp$2;
                                           break L9;
                                         }
                                       }
@@ -1678,19 +1678,20 @@ final class qb extends ll {
                                         if (var18 != null) {
                                           break L10;
                                         } else {
-                                          var6.field_g[var15] = new s(var16_ref);
-                                          var18_ref = new s(var16_ref);
+                                          s dupTemp$3 = new s(var16);
+                                          var6.field_g[var15] = dupTemp$3;
+                                          var18 = dupTemp$3;
                                           break L10;
                                         }
                                       }
-                                      var17_ref.field_j = var17_ref.field_j + var16_ref.field_j;
-                                      var17_ref.field_d = var17_ref.field_d + var16_ref.field_d;
-                                      var17_ref.field_i = var17_ref.field_i + var16_ref.field_i;
-                                      var17_ref.field_e = var17_ref.field_e + var16_ref.field_e;
-                                      var18_ref.field_j = var18_ref.field_j + var11.field_j;
-                                      var18_ref.field_d = var18_ref.field_d + var11.field_d;
-                                      var18_ref.field_i = var18_ref.field_i + var11.field_i;
-                                      var18_ref.field_e = var18_ref.field_e + var11.field_e;
+                                      var17.field_j = var17.field_j + var16.field_j;
+                                      var17.field_d = var17.field_d + var16.field_d;
+                                      var17.field_i = var17.field_i + var16.field_i;
+                                      var17.field_e = var17.field_e + var16.field_e;
+                                      var18.field_j = var18.field_j + var11.field_j;
+                                      var18.field_d = var18.field_d + var11.field_d;
+                                      var18.field_i = var18.field_i + var11.field_i;
+                                      var18.field_e = var18.field_e + var11.field_e;
                                       var7++;
                                       field_K[var10] = field_u;
                                       field_H[var15] = field_u;
@@ -1843,15 +1844,25 @@ final class qb extends ll {
     }
 
     private qb(byte[] param0) {
-        ((qb) this).field_z = 0;
-        ((qb) this).field_t = 0;
-        ((qb) this).field_J = 0;
-        ((qb) this).field_T = false;
-        if (param0[param0.length - 1] == -1) {
-            // if_icmpne L52
-            this.a(param0);
-        } else {
-            this.b(param0);
+        L0: {
+          L1: {
+            ((qb) this).field_z = 0;
+            ((qb) this).field_t = 0;
+            ((qb) this).field_J = 0;
+            ((qb) this).field_T = false;
+            if (param0[param0.length - 1] != -1) {
+              break L1;
+            } else {
+              if (param0[param0.length - 2] != -1) {
+                break L1;
+              } else {
+                this.a(param0);
+                break L0;
+              }
+            }
+          }
+          this.b(param0);
+          break L0;
         }
     }
 

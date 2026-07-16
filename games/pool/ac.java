@@ -13,86 +13,33 @@ final class ac extends tm {
     final static void a(int param0, boolean param1, boolean param2, cg param3) {
         Object var4 = null;
         Throwable var5 = null;
-        int statePc = 0;
-        Throwable caughtException = null;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    if (ij.field_u == param3) {
-                        statePc = 8;
-                    } else {
-                        statePc = 1;
-                    }
-                    continue stateLoop;
-                }
-                case 1: {
-                    var4 = (Object) (Object) tl.field_N;
-                    // monitorenter tl.field_N
-                    statePc = 2;
-                    continue stateLoop;
-                }
-                case 2: {
-                    try {
-                        tl.field_N.a((byte) -121, -1, 256);
-                        ij.field_u = param3;
-                        tl.field_N.a(param3, param1, (byte) -14, param2);
-                        // monitorexit var4
-                        statePc = 3;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_2) {
-                        caughtException = stateCaught_2;
-                        statePc = 6;
-                        continue stateLoop;
-                    }
-                }
-                case 3: {
-                    if (param0 == 256) {
-                        statePc = 5;
-                    } else {
-                        statePc = 4;
-                    }
-                    continue stateLoop;
-                }
-                case 4: {
-                    field_p = null;
-                    statePc = 5;
-                    continue stateLoop;
-                }
-                case 5: {
-                    return;
-                }
-                case 6: {
-                    try {
-                        var5 = caughtException;
-                        // monitorexit var4
-                        statePc = 7;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_6) {
-                        caughtException = stateCaught_6;
-                        statePc = 6;
-                        continue stateLoop;
-                    }
-                }
-                case 7: {
-                    throw (RuntimeException) (Object) var5;
-                }
-                case 8: {
-                    if (param0 != 256) {
-                        statePc = 10;
-                    } else {
-                        statePc = 9;
-                    }
-                    continue stateLoop;
-                }
-                case 9: {
-                    return;
-                }
-                case 10: {
-                    field_p = null;
-                    return;
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
+        Throwable decompiledCaughtException = null;
+        if (ij.field_u == param3) {
+          if (param0 != 256) {
+            field_p = null;
+            return;
+          } else {
+            return;
+          }
+        } else {
+          var4 = (Object) (Object) tl.field_N;
+          synchronized (var4) {
+            L0: {
+              tl.field_N.a((byte) -121, -1, 256);
+              ij.field_u = param3;
+              tl.field_N.a(param3, param1, (byte) -14, param2);
+              break L0;
             }
+          }
+          L1: {
+            if (param0 == 256) {
+              break L1;
+            } else {
+              field_p = null;
+              break L1;
+            }
+          }
+          return;
         }
     }
 
@@ -105,46 +52,53 @@ final class ac extends tm {
           var5 = null;
           ((ac) this).a(-117, (di) null);
           var3 = param0;
-          if (var3 != 0) {
+          if ((var3 ^ -1) == -1) {
+            return 13421772;
+          } else {
             if (1 != var3) {
               if (var3 != 2) {
                 if (var3 != 3) {
                   if (-5 != (var3 ^ -1)) {
-                    if (5 != var3) {
+                    if (5 == var3) {
+                      return this.c(91, 0);
+                    } else {
                       if (6 != var3) {
                         if (7 != var3) {
-                          if (var3 != 8) {
+                          if (var3 == 8) {
+                            return 3355443;
+                          } else {
                             if (-10 != (var3 ^ -1)) {
-                              if (10 != var3) {
-                                if (var3 != 11) {
-                                  if (var3 != -13) {
-                                    if (13 != var3) {
-                                      if (-15 != var3) {
-                                        if ((var3 ^ -1) == -16) {
-                                          return this.c(101, 1);
+                              L0: {
+                                if (10 == var3) {
+                                  break L0;
+                                } else {
+                                  if (var3 == 11) {
+                                    break L0;
+                                  } else {
+                                    if ((var3 ^ -1) == -13) {
+                                      break L0;
+                                    } else {
+                                      if (13 != var3) {
+                                        if (-15 == (var3 ^ -1)) {
+                                          break L0;
                                         } else {
-                                          return 16711935;
+                                          if ((var3 ^ -1) != -16) {
+                                            return 16711935;
+                                          } else {
+                                            return this.c(101, 1);
+                                          }
                                         }
                                       } else {
                                         return this.c(101, 1);
                                       }
-                                    } else {
-                                      return this.c(101, 1);
                                     }
-                                  } else {
-                                    return this.c(101, 1);
                                   }
-                                } else {
-                                  return this.c(101, 1);
                                 }
-                              } else {
-                                return this.c(101, 1);
                               }
+                              return this.c(101, 1);
                             } else {
                               return this.c(101, 1);
                             }
-                          } else {
-                            return 3355443;
                           }
                         } else {
                           return this.c(91, 0);
@@ -152,8 +106,6 @@ final class ac extends tm {
                       } else {
                         return this.c(91, 0);
                       }
-                    } else {
-                      return this.c(91, 0);
                     }
                   } else {
                     return this.c(91, 0);
@@ -167,64 +119,70 @@ final class ac extends tm {
             } else {
               return this.c(91, 0);
             }
-          } else {
-            return 13421772;
           }
         } else {
           var3 = param0;
-          if (var3 != 0) {
+          if ((var3 ^ -1) == -1) {
+            return 13421772;
+          } else {
             if (1 != var3) {
               if (var3 != 2) {
                 if (var3 != 3) {
-                  if (-5 != (var3 ^ -1)) {
-                    if (5 != var3) {
-                      if (6 != var3) {
-                        if (7 != var3) {
-                          if (var3 != 8) {
-                            if (-10 != (var3 ^ -1)) {
-                              if (10 != var3) {
-                                if (var3 != 11) {
-                                  if (var3 != -13) {
-                                    if (13 != var3) {
-                                      if (-15 != var3) {
-                                        if ((var3 ^ -1) != -16) {
-                                          return 16711935;
+                  L1: {
+                    if (-5 == (var3 ^ -1)) {
+                      break L1;
+                    } else {
+                      if (5 == var3) {
+                        break L1;
+                      } else {
+                        if (6 != var3) {
+                          if (7 != var3) {
+                            if (var3 == 8) {
+                              return 3355443;
+                            } else {
+                              if (-10 != (var3 ^ -1)) {
+                                L2: {
+                                  if (10 == var3) {
+                                    break L2;
+                                  } else {
+                                    if (var3 == 11) {
+                                      break L2;
+                                    } else {
+                                      if ((var3 ^ -1) == -13) {
+                                        break L2;
+                                      } else {
+                                        if (13 != var3) {
+                                          if (-15 == (var3 ^ -1)) {
+                                            break L2;
+                                          } else {
+                                            if ((var3 ^ -1) != -16) {
+                                              return 16711935;
+                                            } else {
+                                              return this.c(101, 1);
+                                            }
+                                          }
                                         } else {
                                           return this.c(101, 1);
                                         }
-                                      } else {
-                                        return this.c(101, 1);
                                       }
-                                    } else {
-                                      return this.c(101, 1);
                                     }
-                                  } else {
-                                    return this.c(101, 1);
                                   }
-                                } else {
-                                  return this.c(101, 1);
                                 }
+                                return this.c(101, 1);
                               } else {
                                 return this.c(101, 1);
                               }
-                            } else {
-                              return this.c(101, 1);
                             }
                           } else {
-                            return 3355443;
+                            return this.c(91, 0);
                           }
                         } else {
                           return this.c(91, 0);
                         }
-                      } else {
-                        return this.c(91, 0);
                       }
-                    } else {
-                      return this.c(91, 0);
                     }
-                  } else {
-                    return this.c(91, 0);
                   }
+                  return this.c(91, 0);
                 } else {
                   return this.c(91, 0);
                 }
@@ -234,8 +192,6 @@ final class ac extends tm {
             } else {
               return this.c(91, 0);
             }
-          } else {
-            return 13421772;
           }
         }
     }
@@ -320,23 +276,24 @@ final class ac extends tm {
         if (((ac) this).field_a == null) {
           ((ac) this).field_a = new eg[16];
           ((ac) this).field_a[0] = ((ac) this).g(-930305852);
-          ((ac) this).field_a[15] = eg.a(param0, "", "balls/ball_killer_red");
-          ((ac) this).field_a[14] = eg.a(param0, "", "balls/ball_killer_red");
-          ((ac) this).field_a[13] = eg.a(param0, "", "balls/ball_killer_red");
-          ((ac) this).field_a[12] = eg.a(param0, "", "balls/ball_killer_red");
-          ((ac) this).field_a[11] = eg.a(param0, "", "balls/ball_killer_red");
-          ((ac) this).field_a[10] = eg.a(param0, "", "balls/ball_killer_red");
-          ((ac) this).field_a[9] = eg.a(param0, "", "balls/ball_killer_red");
-          ((ac) this).field_a[7] = eg.a(param0, "", "balls/ball_killer_red");
-          ((ac) this).field_a[6] = eg.a(param0, "", "balls/ball_killer_red");
-          ((ac) this).field_a[5] = eg.a(param0, "", "balls/ball_killer_red");
-          ((ac) this).field_a[4] = eg.a(param0, "", "balls/ball_killer_red");
-          ((ac) this).field_a[3] = eg.a(param0, "", "balls/ball_killer_red");
-          ((ac) this).field_a[2] = eg.a(param0, "", "balls/ball_killer_red");
-          ((ac) this).field_a[1] = eg.a(param0, "", "balls/ball_killer_red");
+          eg dupTemp$2 = eg.a(param0, "", "balls/ball_killer_red");
+          ((ac) this).field_a[15] = dupTemp$2;
+          ((ac) this).field_a[14] = dupTemp$2;
+          ((ac) this).field_a[13] = dupTemp$2;
+          ((ac) this).field_a[12] = dupTemp$2;
+          ((ac) this).field_a[11] = dupTemp$2;
+          ((ac) this).field_a[10] = dupTemp$2;
+          ((ac) this).field_a[9] = dupTemp$2;
+          ((ac) this).field_a[7] = dupTemp$2;
+          ((ac) this).field_a[6] = dupTemp$2;
+          ((ac) this).field_a[5] = dupTemp$2;
+          ((ac) this).field_a[4] = dupTemp$2;
+          ((ac) this).field_a[3] = dupTemp$2;
+          ((ac) this).field_a[2] = dupTemp$2;
+          ((ac) this).field_a[1] = dupTemp$2;
           ((ac) this).field_a[8] = eg.a(param0, "", "balls/ball_killer_black");
           if (param1 != 117) {
-            boolean discarded$1 = ((ac) this).c(40);
+            boolean discarded$3 = ((ac) this).c(40);
             ((ac) this).field_a[1].a(8, 8, 8, 4);
             ((ac) this).field_a[8].a(8, 8, 8, 4);
             li.a(((ac) this).field_a[1], 0);

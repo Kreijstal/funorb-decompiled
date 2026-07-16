@@ -96,19 +96,25 @@ abstract class hk extends pb {
             String var4 = null;
             Throwable decompiledCaughtException = null;
             try {
-              var2_int = -109 / ((59 - param0) / 33);
-              var3 = param1.getCodeBase();
-              var4 = gh.a(param1, var3, (byte) 67).getFile();
-              Object discarded$6 = hi.a(-3729, "updatelinks", param1, new Object[2]);
-              Object discarded$7 = hi.a(-3729, "updatelinks", param1, new Object[2]);
-              Object discarded$8 = hi.a(-3729, "updatelinks", param1, new Object[2]);
-              Object discarded$9 = hi.a(-3729, "updatelinks", param1, new Object[2]);
-              Object discarded$10 = hi.a(-3729, "updatelinks", param1, new Object[2]);
-              Object discarded$11 = hi.a(-3729, "updatelinks", param1, new Object[2]);
-            } catch (java.lang.Throwable decompiledCaughtParameter) {
-              decompiledCaughtException = decompiledCaughtParameter;
+              L0: {
+                var2_int = -109 / ((59 - param0) / 33);
+                var3 = param1.getCodeBase();
+                var4 = gh.a(param1, var3, (byte) 67).getFile();
+                Object discarded$6 = hi.a(-3729, "updatelinks", param1, new Object[2]);
+                Object discarded$7 = hi.a(-3729, "updatelinks", param1, new Object[2]);
+                Object discarded$8 = hi.a(-3729, "updatelinks", param1, new Object[2]);
+                Object discarded$9 = hi.a(-3729, "updatelinks", param1, new Object[2]);
+                Object discarded$10 = hi.a(-3729, "updatelinks", param1, new Object[2]);
+                Object discarded$11 = hi.a(-3729, "updatelinks", param1, new Object[2]);
+                break L0;
+              }
+            } catch (java.lang.Throwable decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              L1: {
+                var2 = decompiledCaughtException;
+                break L1;
+              }
             }
-            var2 = decompiledCaughtException;
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {

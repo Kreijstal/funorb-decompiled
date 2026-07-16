@@ -14,52 +14,75 @@ class dg extends hl {
 
     final void b(int param0, int param1, int param2, int param3) {
         int var5 = -42 % ((param0 - -14) / 33);
-        ((dg) this).a(((ne) ((dg) this).field_v).a(-2, (lk) this), param3, param1, param2, true);
+        ((dg) this).a(((ne) (Object) ((dg) this).field_v).a(-2, (lk) this), param3, param1, param2, true);
     }
 
     boolean a(int param0, lk param1) {
         if (param0 <= 71) {
-            ((dg) this).field_L = (bk) null;
+            ((dg) this).field_L = null;
             return false;
         }
         return false;
     }
 
     final void a(int param0, boolean param1, int param2, int param3) {
-        this.a(param0, param1, param2, param3);
+        super.a(param0, param1, param2, param3);
         int var5 = param3 - ((dg) this).field_o;
         int var6 = -((dg) this).field_i + param0;
         fk var7 = this.b(var6, (byte) 108, var5);
         if (var7 != null) {
             if (((dg) this).field_k != null) {
-                ((cl) ((dg) this).field_k).a(param2, ((fk) var7).field_g, (byte) 26, (dg) this);
+                ((cl) (Object) ((dg) this).field_k).a(param2, var7.field_g, (byte) 26, (dg) this);
             }
         }
     }
 
     final void a(String param0, byte param1, int param2) {
-        String[] var7 = null;
         String[] var4_ref_String__ = null;
+        int var4 = 0;
         int var5 = 0;
-        int var6 = Main.field_T;
-        if (((dg) this).field_K != null) {
-            // if_icmple L24
-        } else {
+        int var6 = 0;
+        String[] var7 = null;
+        L0: {
+          L1: {
+            var6 = Main.field_T;
+            if (((dg) this).field_K == null) {
+              break L1;
+            } else {
+              if (((dg) this).field_K.length <= param2) {
+                break L1;
+              } else {
+                break L0;
+              }
+            }
+          }
+          L2: {
             var7 = new String[1 + param2];
             var4_ref_String__ = var7;
-            if (!(((dg) this).field_K == null)) {
-                for (var5 = 0; var5 < ((dg) this).field_K.length; var5++) {
-                    var7[var5] = ((dg) this).field_K[var5];
+            if (((dg) this).field_K != null) {
+              var5 = 0;
+              L3: while (true) {
+                if (var5 >= ((dg) this).field_K.length) {
+                  break L2;
+                } else {
+                  var7[var5] = ((dg) this).field_K[var5];
+                  var5++;
+                  continue L3;
                 }
+              }
+            } else {
+              break L2;
             }
-            ((dg) this).field_K = (String[]) var4_ref_String__;
+          }
+          ((dg) this).field_K = var4_ref_String__;
+          break L0;
         }
         ((dg) this).field_K[param2] = param0;
-        int var4 = 117 % ((param1 - -22) / 38);
+        var4 = 117 % ((param1 - -22) / 38);
     }
 
     final void a(int param0, int param1, int param2, int param3, boolean param4) {
-        this.a(param0, param1, param2, param3, param4);
+        super.a(param0, param1, param2, param3, param4);
         ((dg) this).e((byte) 5);
     }
 
@@ -83,18 +106,18 @@ class dg extends hl {
     void a(int param0, int param1, int param2, int param3) {
         int var7 = 0;
         int var8 = 0;
-        this.a(param0, param1, param2, param3);
+        super.a(param0, param1, param2, param3);
         if (param3 != 0) {
             return;
         }
-        ne var5 = (ne) ((dg) this).field_v;
+        ne var5 = (ne) (Object) ((dg) this).field_v;
         fk var6 = ((dg) this).field_M;
         if (var6 != null) {
-            var7 = ((ne) var5).a(param0, (byte) 90, (lk) this);
-            var8 = ((ne) var5).a((lk) this, -1815612287, param1);
+            var7 = var5.a(param0, (byte) 90, (lk) this);
+            var8 = var5.a((lk) this, -1815612287, param1);
             do {
-                na.a(var8 + (((fk) var6).field_n + -2), 51, ((fk) var6).field_j + 2, 2 + ((fk) var6).field_k, -2 + (var7 + ((fk) var6).field_i));
-                var6 = ((fk) var6).field_m;
+                na.a(var8 + (var6.field_n + -2), 51, var6.field_j + 2, 2 + var6.field_k, -2 + (var7 + var6.field_i));
+                var6 = var6.field_m;
             } while (var6 != null);
         }
     }
@@ -108,7 +131,7 @@ class dg extends hl {
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
-        fk var10 = null;
+        Object var10 = null;
         int var11 = 0;
         di var12 = null;
         int var13 = 0;
@@ -126,8 +149,8 @@ class dg extends hl {
         ((dg) this).field_L = new bk();
         if (param0 == 5) {
           var2 = 0;
-          var3 = (ne) ((dg) this).field_v;
-          var4 = ((ne) var3).a((byte) -104, (lk) this);
+          var3 = (ne) (Object) ((dg) this).field_v;
+          var4 = var3.a((byte) -104, (lk) this);
           L0: while (true) {
             var5 = ((dg) this).field_r.indexOf("<hotspot=", var2);
             if (0 != (var5 ^ -1)) {
@@ -144,9 +167,9 @@ class dg extends hl {
                   continue L0;
                 } else {
                   L2: {
-                    var12 = ((mj) var4).field_d[var11];
+                    var12 = var4.field_d[var11];
                     if (var8 != var11) {
-                      stackOut_9_0 = ((di) var12).field_a[0];
+                      stackOut_9_0 = var12.field_a[0];
                       stackIn_10_0 = stackOut_9_0;
                       break L2;
                     } else {
@@ -163,7 +186,7 @@ class dg extends hl {
                         stackIn_15_0 = stackOut_14_0;
                         break L3;
                       } else {
-                        stackOut_13_0 = ((di) var12).field_a[((di) var12).field_a.length + -1];
+                        stackOut_13_0 = var12.field_a[var12.field_a.length + -1];
                         stackIn_15_0 = stackOut_13_0;
                         break L3;
                       }
@@ -175,15 +198,15 @@ class dg extends hl {
                   }
                   L4: {
                     var14 = stackIn_15_0;
-                    var15 = new fk(var7, var13, ((di) var12).field_b, var14 + -var13, Math.max(((ne) var3).a(param0 + -6), -((di) var12).field_b + ((di) var12).field_c));
+                    var15 = new fk(var7, var13, var12.field_b, var14 + -var13, Math.max(var3.a(param0 + -6), -var12.field_b + var12.field_c));
                     if (var10 != null) {
-                      var10.field_m = (fk) var15;
+                      ((fk) var10).field_m = var15;
                       break L4;
                     } else {
                       break L4;
                     }
                   }
-                  var10 = var15;
+                  var10 = (Object) (Object) var15;
                   ((dg) this).field_L.a((qb) (Object) var15, 27362);
                   var11++;
                   continue L1;
@@ -204,7 +227,7 @@ class dg extends hl {
         int var6 = 0;
         L0: {
           var6 = Main.field_T;
-          var4 = (fk) ((dg) this).field_L.a((byte) 74);
+          var4 = (fk) (Object) ((dg) this).field_L.a((byte) 74);
           if (param1 > 97) {
             break L0;
           } else {
@@ -217,20 +240,20 @@ class dg extends hl {
             var5 = var4;
             L2: while (true) {
               if (var5 == null) {
-                var4 = (fk) ((dg) this).field_L.b((byte) -122);
+                var4 = (fk) (Object) ((dg) this).field_L.b((byte) -122);
                 continue L1;
               } else {
                 L3: {
-                  if (param2 < ((fk) var5).field_i) {
+                  if (param2 < var5.field_i) {
                     break L3;
                   } else {
-                    if (param0 < ((fk) var5).field_n) {
+                    if (param0 < var5.field_n) {
                       break L3;
                     } else {
-                      if (((fk) var5).field_j + ((fk) var5).field_i <= param2) {
+                      if (var5.field_j + var5.field_i <= param2) {
                         break L3;
                       } else {
-                        if (param0 <= ((fk) var5).field_n + ((fk) var5).field_k) {
+                        if (param0 <= var5.field_n + var5.field_k) {
                           return var4;
                         } else {
                           break L3;
@@ -239,7 +262,7 @@ class dg extends hl {
                     }
                   }
                 }
-                var5 = ((fk) var5).field_m;
+                var5 = var5.field_m;
                 continue L2;
               }
             }
@@ -258,7 +281,7 @@ class dg extends hl {
     void a(int param0, int param1, lk param2, int param3) {
         int var5 = 0;
         int var6 = 0;
-        this.a(param0, param1, param2, param3);
+        super.a(param0, param1, param2, param3);
         ((dg) this).field_M = null;
         if (!(!((dg) this).field_j)) {
             var5 = -param1 + eg.field_b + -((dg) this).field_o;
@@ -269,7 +292,7 @@ class dg extends hl {
 
     String b(byte param0) {
         if (param0 != -79) {
-            return (String) null;
+            return null;
         }
         if (null == ((dg) this).field_M) {
             return null;

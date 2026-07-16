@@ -32,10 +32,16 @@ final class bi extends ai {
             Throwable var2 = null;
             Throwable decompiledCaughtException = null;
             try {
-              Object discarded$1 = ac.a(true, new Object[1], vi.b(param0 ^ param0), "resizing");
+              L0: {
+                Object discarded$1 = ac.a(true, new Object[1], vi.b(param0 ^ param0), "resizing");
+                break L0;
+              }
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
-              var2 = decompiledCaughtException;
+              L1: {
+                var2 = decompiledCaughtException;
+                break L1;
+              }
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -198,8 +204,11 @@ final class bi extends ai {
                   }
                 }
                 try {
-                  stackOut_44_0 = new java.net.URL(param0, var7.toString());
-                  stackIn_45_0 = stackOut_44_0;
+                  L9: {
+                    stackOut_44_0 = new java.net.URL(param0, var7.toString());
+                    stackIn_45_0 = stackOut_44_0;
+                    break L9;
+                  }
                 } catch (java.lang.Exception decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
                   var8 = (Exception) (Object) decompiledCaughtException;

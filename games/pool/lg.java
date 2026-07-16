@@ -56,10 +56,11 @@ final class lg extends am {
                       stackIn_8_0 = stackOut_7_0;
                       stackIn_8_1 = stackOut_7_1;
                       if (var6 == null) {
-                        param1.field_u[var4] = new pf();
+                        pf dupTemp$73 = new pf();
+                        param1.field_u[var4] = dupTemp$73;
                         stackOut_9_0 = (pf) (Object) stackIn_9_0;
                         stackOut_9_1 = stackIn_9_1;
-                        stackOut_9_2 = new pf();
+                        stackOut_9_2 = (pf) dupTemp$73;
                         stackIn_10_0 = stackOut_9_0;
                         stackIn_10_1 = stackOut_9_1;
                         stackIn_10_2 = stackOut_9_2;
@@ -94,8 +95,9 @@ final class lg extends am {
     public lg() {
         ((lg) this).field_u = new pf[6];
         ((lg) this).field_t = new pf();
-        ((lg) this).field_u[0] = new pf();
-        pf var1 = new pf();
+        pf dupTemp$0 = new pf();
+        ((lg) this).field_u[0] = dupTemp$0;
+        pf var1 = dupTemp$0;
         var1.a(-51);
     }
 
@@ -144,8 +146,9 @@ final class lg extends am {
             Object var4 = null;
             ((lg) this).a((dd) null, -125);
         }
-        ((lg) this).field_u[param0] = new pf();
-        return new pf();
+        pf dupTemp$0 = new pf();
+        ((lg) this).field_u[param0] = dupTemp$0;
+        return dupTemp$0;
     }
 
     public static void a(boolean param0) {

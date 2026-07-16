@@ -38,10 +38,10 @@ final class vd {
                   if (-1 >= (ua.field_i.field_f ^ -1)) {
                     L4: {
                       var3 = pk.field_j[ua.field_i.field_f];
-                      if (var3 == -3) {
+                      if ((var3 ^ -1) == -3) {
                         break L4;
                       } else {
-                        if (var3 == -6) {
+                        if ((var3 ^ -1) == -6) {
                           break L4;
                         } else {
                           break L2;
@@ -67,10 +67,10 @@ final class vd {
               }
             }
             L5: {
-              if (-1 != var3) {
+              if (-1 != (var3 ^ -1)) {
                 break L5;
               } else {
-                if (-3 != rb.field_s) {
+                if (-3 != (rb.field_s ^ -1)) {
                   break L5;
                 } else {
                   var4 = ih.a((byte) -98) - jj.field_p;
@@ -155,14 +155,16 @@ final class vd {
             var2 = 0;
             L2: while (true) {
               if (gi.field_g <= var2) {
-                cg.field_d[param0.a((byte) 90)] = cg.field_d[param0.a((byte) 90)] + 1;
+                int dupTemp$4 = param0.a((byte) 90);
+                cg.field_d[dupTemp$4] = cg.field_d[dupTemp$4] + 1;
                 var2 = 0;
                 var3 = 0;
                 L3: while (true) {
                   if (var3 >= gi.field_g) {
                     gi.field_g = var2;
+                    int fieldTemp$5 = gi.field_g;
                     gi.field_g = gi.field_g + 1;
-                    ai.field_d[gi.field_g] = param0;
+                    ai.field_d[fieldTemp$5] = param0;
                     return;
                   } else {
                     L4: {
@@ -179,15 +181,17 @@ final class vd {
                         break L4;
                       }
                     }
+                    int incrementValue$6 = var2;
                     var2++;
-                    ai.field_d[var2] = ai.field_d[var3];
+                    ai.field_d[incrementValue$6] = ai.field_d[var3];
                     var3++;
                     continue L3;
                   }
                 }
               } else {
                 if (ai.field_d[var2].field_p == param0.field_p) {
-                  cg.field_d[ai.field_d[var2].a((byte) 95)] = cg.field_d[ai.field_d[var2].a((byte) 95)] + 1;
+                  int dupTemp$7 = ai.field_d[var2].a((byte) 95);
+                  cg.field_d[dupTemp$7] = cg.field_d[dupTemp$7] + 1;
                   var2++;
                   continue L2;
                 } else {

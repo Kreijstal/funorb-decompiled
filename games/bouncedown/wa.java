@@ -22,21 +22,20 @@ final class wa {
 
     final static void a(boolean param0) {
         n var1 = null;
-        n var1_ref = null;
         if (!param0) {
           return;
         } else {
           L0: {
             var1 = (n) (Object) k.field_B.e((byte) 123);
             if (var1 == null) {
-              var1_ref = new n();
+              var1 = new n();
               break L0;
             } else {
               break L0;
             }
           }
-          var1_ref.a(na.field_b, -94, na.field_k, na.field_f, na.field_g, na.field_e, na.field_i, na.field_d);
-          qb.field_g.a(1, (ai) (Object) var1_ref);
+          var1.a(na.field_b, -94, na.field_k, na.field_f, na.field_g, na.field_e, na.field_i, na.field_d);
+          qb.field_g.a(1, (ai) (Object) var1);
           return;
         }
     }

@@ -73,7 +73,7 @@ final class sd extends am {
                     break L3;
                   } else {
                     L4: {
-                      // wide iinc 7 -2048
+                      var7 -= 2048;
                       if (-1 >= (var7 ^ -1)) {
                         break L4;
                       } else {

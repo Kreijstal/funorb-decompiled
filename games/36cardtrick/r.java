@@ -15,90 +15,100 @@ class r extends ek {
         var3 = Main.field_T;
         if (param0 == -219) {
           var2 = param1;
-          if (-33 != var2) {
-            if (-161 != var2) {
+          if (-33 != (var2 ^ -1)) {
+            if (-161 != (var2 ^ -1)) {
               if ((var2 ^ -1) != -96) {
                 if (var2 != 45) {
                   if (var2 != 91) {
                     if ((var2 ^ -1) != -94) {
-                      if (var2 != -36) {
-                        if (-225 != var2) {
+                      if ((var2 ^ -1) != -36) {
+                        if (-225 != (var2 ^ -1)) {
                           if ((var2 ^ -1) != -226) {
                             if (var2 != 226) {
-                              if (var2 != -229) {
-                                if (-228 != var2) {
-                                  if (-193 != var2) {
+                              if ((var2 ^ -1) != -229) {
+                                if (-228 != (var2 ^ -1)) {
+                                  if (-193 != (var2 ^ -1)) {
                                     if (193 != var2) {
                                       if (var2 != 194) {
-                                        if (-197 != var2) {
-                                          if (-196 != var2) {
+                                        if (-197 != (var2 ^ -1)) {
+                                          if (-196 != (var2 ^ -1)) {
                                             if (var2 != 232) {
                                               if (233 != var2) {
-                                                if (-235 != var2) {
+                                                if (-235 != (var2 ^ -1)) {
                                                   if (var2 != 235) {
                                                     if (var2 != 200) {
-                                                      if (201 != var2) {
+                                                      if (201 == var2) {
+                                                        return 'e';
+                                                      } else {
                                                         if ((var2 ^ -1) != -203) {
                                                           if ((var2 ^ -1) != -204) {
                                                             if ((var2 ^ -1) != -238) {
                                                               if (var2 != 238) {
                                                                 if (239 != var2) {
                                                                   if (var2 != 205) {
-                                                                    if (-207 != var2) {
+                                                                    if (-207 != (var2 ^ -1)) {
                                                                       if (var2 != 207) {
-                                                                        if (-243 != var2) {
+                                                                        if (-243 != (var2 ^ -1)) {
                                                                           if (243 != var2) {
                                                                             if (var2 != 244) {
                                                                               if (var2 != 246) {
                                                                                 if (245 != var2) {
                                                                                   if (210 != var2) {
                                                                                     if (211 != var2) {
-                                                                                      if ((var2 ^ -1) != -213) {
-                                                                                        if (var2 != -215) {
+                                                                                      if ((var2 ^ -1) == -213) {
+                                                                                        return 'o';
+                                                                                      } else {
+                                                                                        if ((var2 ^ -1) != -215) {
                                                                                           if (var2 != 213) {
-                                                                                            if (-250 != var2) {
+                                                                                            if (-250 != (var2 ^ -1)) {
                                                                                               if (var2 != 250) {
                                                                                                 if (251 != var2) {
                                                                                                   if (252 != var2) {
                                                                                                     if (var2 != 217) {
                                                                                                       if (-219 != (var2 ^ -1)) {
-                                                                                                        if (var2 != -220) {
-                                                                                                          if (var2 != 220) {
-                                                                                                            if (231 != var2) {
-                                                                                                              if (-200 != var2) {
-                                                                                                                if (var2 != 255) {
-                                                                                                                  if (376 != var2) {
-                                                                                                                    if (var2 != 241) {
-                                                                                                                      if ((var2 ^ -1) != -210) {
-                                                                                                                        if ((var2 ^ -1) != -224) {
-                                                                                                                          return Character.toLowerCase(param1);
-                                                                                                                        } else {
-                                                                                                                          return 'b';
-                                                                                                                        }
+                                                                                                        L0: {
+                                                                                                          if ((var2 ^ -1) == -220) {
+                                                                                                            break L0;
+                                                                                                          } else {
+                                                                                                            if (var2 == 220) {
+                                                                                                              break L0;
+                                                                                                            } else {
+                                                                                                              L1: {
+                                                                                                                if (231 == var2) {
+                                                                                                                  break L1;
+                                                                                                                } else {
+                                                                                                                  if (-200 == (var2 ^ -1)) {
+                                                                                                                    break L1;
+                                                                                                                  } else {
+                                                                                                                    if (var2 != 255) {
+                                                                                                                      if (376 == var2) {
+                                                                                                                        return 'y';
                                                                                                                       } else {
-                                                                                                                        return 'n';
+                                                                                                                        if (var2 != 241) {
+                                                                                                                          if ((var2 ^ -1) == -210) {
+                                                                                                                            return 'n';
+                                                                                                                          } else {
+                                                                                                                            if ((var2 ^ -1) != -224) {
+                                                                                                                              return Character.toLowerCase(param1);
+                                                                                                                            } else {
+                                                                                                                              return 'b';
+                                                                                                                            }
+                                                                                                                          }
+                                                                                                                        } else {
+                                                                                                                          return 'n';
+                                                                                                                        }
                                                                                                                       }
                                                                                                                     } else {
-                                                                                                                      return 'n';
+                                                                                                                      return 'y';
                                                                                                                     }
-                                                                                                                  } else {
-                                                                                                                    return 'y';
                                                                                                                   }
-                                                                                                                } else {
-                                                                                                                  return 'y';
                                                                                                                 }
-                                                                                                              } else {
-                                                                                                                return 'c';
                                                                                                               }
-                                                                                                            } else {
                                                                                                               return 'c';
                                                                                                             }
-                                                                                                          } else {
-                                                                                                            return 'u';
                                                                                                           }
-                                                                                                        } else {
-                                                                                                          return 'u';
                                                                                                         }
+                                                                                                        return 'u';
                                                                                                       } else {
                                                                                                         return 'u';
                                                                                                       }
@@ -123,8 +133,6 @@ class r extends ek {
                                                                                         } else {
                                                                                           return 'o';
                                                                                         }
-                                                                                      } else {
-                                                                                        return 'o';
                                                                                       }
                                                                                     } else {
                                                                                       return 'o';
@@ -171,8 +179,6 @@ class r extends ek {
                                                         } else {
                                                           return 'e';
                                                         }
-                                                      } else {
-                                                        return 'e';
                                                       }
                                                     } else {
                                                       return 'e';
@@ -246,76 +252,28 @@ class r extends ek {
     }
 
     r(ee param0, int param1) {
-        super(param0, 4, 2, 2, 2, param1, -1, 0, 1, ((ee) param0).field_s, -1, 2147483647, false);
+        super(param0, 4, 2, 2, 2, param1, -1, 0, 1, param0.field_s, -1, 2147483647, false);
     }
 
     final static void b(byte param0) {
         Object var1 = null;
         Throwable var2 = null;
-        int statePc = 0;
-        Throwable caughtException = null;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    if (param0 == 123) {
-                        statePc = 2;
-                    } else {
-                        statePc = 1;
-                    }
-                    continue stateLoop;
-                }
-                case 1: {
-                    return;
-                }
-                case 2: {
-                    if (sj.field_d == null) {
-                        statePc = 8;
-                    } else {
-                        statePc = 3;
-                    }
-                    continue stateLoop;
-                }
-                case 3: {
-                    var1 = (Object) (Object) sj.field_d;
-                    // monitorenter sj.field_d
-                    statePc = 4;
-                    continue stateLoop;
-                }
-                case 4: {
-                    try {
-                        sj.field_d = null;
-                        // monitorexit var1
-                        statePc = 5;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_4) {
-                        caughtException = stateCaught_4;
-                        statePc = 6;
-                        continue stateLoop;
-                    }
-                }
-                case 5: {
-                    return;
-                }
-                case 6: {
-                    try {
-                        var2 = caughtException;
-                        // monitorexit var1
-                        statePc = 7;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_6) {
-                        caughtException = stateCaught_6;
-                        statePc = 6;
-                        continue stateLoop;
-                    }
-                }
-                case 7: {
-                    throw (RuntimeException) (Object) var2;
-                }
-                case 8: {
-                    return;
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
+        Throwable decompiledCaughtException = null;
+        if (param0 == 123) {
+          if (sj.field_d == null) {
+            return;
+          } else {
+            var1 = (Object) (Object) sj.field_d;
+            synchronized (var1) {
+              L0: {
+                sj.field_d = null;
+                break L0;
+              }
             }
+            return;
+          }
+        } else {
+          return;
         }
     }
 
@@ -383,11 +341,11 @@ class r extends ek {
 
     public final void a(int param0, lk param1, int param2, int param3, boolean param4) {
         if (param4) {
-          kl.b(((lk) param1).field_q, param3 + ((lk) param1).field_i, param0 - -((lk) param1).field_o, 48, ((lk) param1).field_h);
-          this.a(param0, param1, param2, param3, param4);
+          kl.b(param1.field_q, param3 + param1.field_i, param0 - -param1.field_o, 48, param1.field_h);
+          super.a(param0, param1, param2, param3, param4);
           return;
         } else {
-          this.a(param0, param1, param2, param3, param4);
+          super.a(param0, param1, param2, param3, param4);
           return;
         }
     }

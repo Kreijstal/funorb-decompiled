@@ -163,28 +163,56 @@ final class nq {
     }
 
     final static boolean a(char param0, byte param1) {
-        if (param0 >= 32) {
-            if (!(param0 > 126)) {
-                return true;
+        L0: {
+          if (param0 < 32) {
+            break L0;
+          } else {
+            if (param0 <= 126) {
+              return true;
+            } else {
+              break L0;
             }
+          }
         }
-        if (160 <= param0) {
-            if (!(param0 > 255)) {
-                return true;
+        L1: {
+          if (160 > param0) {
+            break L1;
+          } else {
+            if (param0 <= 255) {
+              return true;
+            } else {
+              break L1;
             }
+          }
         }
-        if (param0 != 8364) {
-            // if_icmpeq L76
-            // if_icmpeq L76
-            // if_icmpeq L76
-            // if_icmpeq L76
-        } else {
-            return true;
+        L2: {
+          if (param0 == 8364) {
+            break L2;
+          } else {
+            if (param0 == 338) {
+              break L2;
+            } else {
+              if (8212 == param0) {
+                break L2;
+              } else {
+                if (param0 == 339) {
+                  break L2;
+                } else {
+                  if (param0 == 376) {
+                    break L2;
+                  } else {
+                    if (param1 == -125) {
+                      return false;
+                    } else {
+                      return true;
+                    }
+                  }
+                }
+              }
+            }
+          }
         }
-        if (param1 != -125) {
-            return true;
-        }
-        return false;
+        return true;
     }
 
     private final void a(String param0, int param1, byte param2, int param3) {

@@ -47,6 +47,7 @@ final class ad extends gg {
 
     final static ad a(pf param0, int param1, int param2) {
         try {
+            ad var4_ref = null;
             if (!ad.a(param0)) {
                 boolean discarded$0 = param0.b(0, param1, param2);
                 return null;
@@ -55,13 +56,13 @@ final class ad extends gg {
             if (var3 == null) {
                 return null;
             }
-            ad var4 = null;
+            Object var4 = null;
             try {
-                var4 = new ad(var3);
+                var4_ref = new ad(var3);
             } catch (IOException iOException) {
                 iOException.printStackTrace();
             }
-            return var4;
+            return var4_ref;
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
@@ -313,7 +314,6 @@ final class ad extends gg {
         int var16 = 0;
         int var17_int = 0;
         Object var17 = null;
-        float[] var17_array = null;
         int var18_int = 0;
         float[] var18 = null;
         int var19 = 0;
@@ -829,7 +829,7 @@ final class ad extends gg {
                   var50 = var54;
                   var46 = var50;
                   var40 = var46;
-                  var17_array = var40;
+                  var17 = (Object) (Object) var40;
                   if (((ad) this).field_z) {
                     break L36;
                   } else {
@@ -887,7 +887,7 @@ final class ad extends gg {
               }
             }
             ((ad) this).field_z = stackIn_111_1 != 0;
-            return var17_array;
+            return (float[]) var17;
           } else {
             var42 = field_w[var14.field_a[var17_int]];
             var55 = field_r;
@@ -900,6 +900,7 @@ final class ad extends gg {
 
     final static ad a(pf param0, String param1, String param2) {
         try {
+            ad var4_ref = null;
             if (!ad.a(param0)) {
                 boolean discarded$0 = param0.b(param1, param2, (byte) 42);
                 return null;
@@ -908,13 +909,13 @@ final class ad extends gg {
             if (var3 == null) {
                 return null;
             }
-            ad var4 = null;
+            Object var4 = null;
             try {
-                var4 = new ad(var3);
+                var4_ref = new ad(var3);
             } catch (IOException iOException) {
                 iOException.printStackTrace();
             }
-            return var4;
+            return var4_ref;
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
@@ -1024,8 +1025,9 @@ final class ad extends gg {
                       break L3;
                     }
                   }
+                  int incrementValue$1 = var2;
                   var2++;
-                  var1[var2] = (byte)(var7 - 128);
+                  var1[incrementValue$1] = (byte)(var7 - 128);
                   var6++;
                   continue L2;
                 } else {
@@ -1162,8 +1164,9 @@ final class ad extends gg {
                         break L8;
                       }
                     }
+                    int incrementValue$1 = var3;
                     var3++;
-                    ((ad) this).field_O[var3] = (byte)(var6 - 128);
+                    ((ad) this).field_O[incrementValue$1] = (byte)(var6 - 128);
                     var5++;
                     continue L6;
                   }

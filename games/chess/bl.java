@@ -75,8 +75,9 @@ final class bl implements Iterable {
         ((bl) this).field_e = new o[param0];
         ((bl) this).field_f = param0;
         for (var2 = 0; param0 > var2; var2++) {
-            var3 = new o();
-            ((bl) this).field_e[var2] = new o();
+            o dupTemp$0 = new o();
+            var3 = dupTemp$0;
+            ((bl) this).field_e[var2] = dupTemp$0;
             var3.field_c = var3;
             var3.field_h = var3;
         }

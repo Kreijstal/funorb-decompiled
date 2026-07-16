@@ -39,44 +39,24 @@ final class ar {
             Throwable throwable = null;
             Object var3 = null;
             Throwable decompiledCaughtException = null;
-            int statePc = 0;
-            Throwable caughtException = null;
-            stateLoop: while (true) {
-                switch (statePc) {
-                    case 0: {
-                        try {
-                            Object discarded$3 = mm.a(new Object[1], so.a(-120), "resizing", 25449);
-                            statePc = 3;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_0) {
-                            caughtException = stateCaught_0;
-                            statePc = 2;
-                            continue stateLoop;
-                        }
-                    }
-                    case 2: {
-                        throwable = caughtException;
-                        statePc = 3;
-                        continue stateLoop;
-                    }
-                    case 3: {
-                        if (param0 != 500) {
-                            statePc = 5;
-                        } else {
-                            statePc = 4;
-                        }
-                        continue stateLoop;
-                    }
-                    case 4: {
-                        return;
-                    }
-                    case 5: {
-                        var3 = null;
-                        ar.a(70, (String) null);
-                        return;
-                    }
-                    default: throw new IllegalStateException("invalid CFG state " + statePc);
-                }
+            try {
+              L0: {
+                Object discarded$2 = mm.a(new Object[1], so.a(-120), "resizing", 25449);
+                break L0;
+              }
+            } catch (java.lang.Throwable decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              L1: {
+                throwable = decompiledCaughtException;
+                break L1;
+              }
+            }
+            if (param0 != 500) {
+              var3 = null;
+              ar.a(70, (String) null);
+              return;
+            } else {
+              return;
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;

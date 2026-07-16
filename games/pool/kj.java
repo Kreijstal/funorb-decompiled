@@ -79,7 +79,8 @@ final class kj {
         int var18 = 0;
         int var19 = 0;
         int var20 = 0;
-        nj var21 = null;
+        Object var21 = null;
+        nj var21_ref = null;
         int var22 = 0;
         int var23 = 0;
         int var24 = 0;
@@ -257,7 +258,7 @@ final class kj {
                   break L8;
                 }
                 L10: {
-                  var21 = stackIn_38_0;
+                  var21_ref = stackIn_38_0;
                   var22 = ch.field_M[var15];
                   var23 = li.field_h[var15];
                   var24 = ch.field_M[var16];
@@ -273,12 +274,12 @@ final class kj {
                       L11: {
                         var28 = var65[var18];
                         var29 = var66[var18];
-                        if (var21 == null) {
+                        if (var21_ref == null) {
                           stackOut_42_0 = 8355711;
                           stackIn_43_0 = stackOut_42_0;
                           break L11;
                         } else {
-                          stackOut_41_0 = var21.field_a;
+                          stackOut_41_0 = var21_ref.field_a;
                           stackIn_43_0 = stackOut_41_0;
                           break L11;
                         }
@@ -301,8 +302,8 @@ final class kj {
                   var31 = var66[var18];
                   var32 = var66[var19];
                   var33 = var66[var20];
-                  if (var21 != null) {
-                    stackOut_46_0 = var21.field_a;
+                  if (var21_ref != null) {
+                    stackOut_46_0 = var21_ref.field_a;
                     stackIn_47_0 = stackOut_46_0;
                     break L12;
                   } else {
@@ -395,7 +396,7 @@ final class kj {
         int var4 = 0;
         L0: {
           var4 = Pool.field_O;
-          if (((kj) this).field_n == param1.field_n) {
+          if ((((kj) this).field_n ^ -1) == (param1.field_n ^ -1)) {
             break L0;
           } else {
             L1: {
@@ -417,19 +418,19 @@ final class kj {
         }
         if (param0 == 255) {
           L2: {
-            if (((kj) this).field_h != param1.field_h) {
+            if ((((kj) this).field_h ^ -1) != (param1.field_h ^ -1)) {
               L3: {
                 var3 = -((kj) this).field_h + param1.field_h;
-                if (var3 < -1025) {
-                  // wide iinc 3 -2048
+                if ((var3 ^ -1) < -1025) {
+                  var3 -= 2048;
                   break L3;
                 } else {
                   break L3;
                 }
               }
               L4: {
-                if (1023 > var3) {
-                  // wide iinc 3 2048
+                if (1023 < (var3 ^ -1)) {
+                  var3 += 2048;
                   break L4;
                 } else {
                   break L4;
@@ -458,7 +459,7 @@ final class kj {
             }
           }
           L7: {
-            if (((kj) this).field_k != param1.field_k) {
+            if ((((kj) this).field_k ^ -1) != (param1.field_k ^ -1)) {
               L8: {
                 var3 = param1.field_k - ((kj) this).field_k;
                 if (var3 >= 8) {
@@ -500,7 +501,7 @@ final class kj {
             }
           }
           L11: {
-            if (((kj) this).field_e == param1.field_e) {
+            if ((((kj) this).field_e ^ -1) == (param1.field_e ^ -1)) {
               break L11;
             } else {
               L12: {

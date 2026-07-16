@@ -52,8 +52,9 @@ final class ib {
             if (((ib) this).field_e >= ((ib) this).field_d) {
                 return null;
             }
+            int fieldTemp$0 = ((ib) this).field_e;
             ((ib) this).field_e = ((ib) this).field_e + 1;
-            var2 = ((ib) this).field_c[((ib) this).field_e].field_b;
+            var2 = ((ib) this).field_c[fieldTemp$0].field_b;
         } while (((ib) this).field_c[-1 + ((ib) this).field_e] == var2);
         ((ib) this).field_b = var2.field_b;
         return var2;
@@ -193,8 +194,9 @@ final class ib {
         ((ib) this).field_d = param0;
         ((ib) this).field_c = new hg[param0];
         for (var2 = 0; param0 > var2; var2++) {
-            var3 = new hg();
-            ((ib) this).field_c[var2] = new hg();
+            hg dupTemp$0 = new hg();
+            var3 = dupTemp$0;
+            ((ib) this).field_c[var2] = dupTemp$0;
             var3.field_d = var3;
             var3.field_b = var3;
         }

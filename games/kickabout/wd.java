@@ -42,7 +42,7 @@ final class wd extends gn {
           var19 = iw.field_h;
           var9 = var19;
           var3 = var9;
-          if (-1 != rm.field_C) {
+          if (-1 != (rm.field_C ^ -1)) {
             if ((rm.field_C ^ -1) == -2) {
               var4 = 0;
               L0: while (true) {
@@ -63,7 +63,7 @@ final class wd extends gn {
           } else {
             var4 = 0;
             L1: while (true) {
-              if (-31 > var4) {
+              if (-31 < (var4 ^ -1)) {
                 var20 = var9[p.a((byte) -24, var19.length)];
                 var6 = p.a((byte) -24, 896 - (var20.field_o >> 301229921));
                 var7 = p.a((byte) -24, 1344 + -(var20.field_v >> 1310203777));
@@ -80,11 +80,11 @@ final class wd extends gn {
           var14 = iw.field_h;
           var9 = var14;
           var3 = var9;
-          if (-1 != rm.field_C) {
+          if (-1 != (rm.field_C ^ -1)) {
             if ((rm.field_C ^ -1) == -2) {
               var4 = 0;
               L2: while (true) {
-                if (var4 > -16) {
+                if ((var4 ^ -1) > -16) {
                   var18 = var9[p.a((byte) -24, var14.length)];
                   var6 = p.a((byte) -24, 896 + -(var18.field_o >> -124023839));
                   var7 = p.a((byte) -24, 1344 - (var18.field_v >> 743273921));
@@ -101,7 +101,7 @@ final class wd extends gn {
           } else {
             var4 = 0;
             L3: while (true) {
-              if (-31 > var4) {
+              if (-31 < (var4 ^ -1)) {
                 var15 = var9[p.a((byte) -24, var14.length)];
                 var6 = p.a((byte) -24, 896 - (var15.field_o >> 301229921));
                 var7 = p.a((byte) -24, 1344 + -(var15.field_v >> 1310203777));

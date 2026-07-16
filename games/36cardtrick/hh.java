@@ -18,7 +18,7 @@ final class hh extends qb {
         String var1 = null;
         if (param0 != 23) {
           L0: {
-            field_g = (sc) null;
+            field_g = null;
             var1 = "";
             if (null != i.field_a) {
               var1 = i.field_a.d((byte) -99);

@@ -219,16 +219,15 @@ final class ip extends sp {
     }
 
     final static ek a(int param0, int param1, int param2, boolean param3) {
-        ek var4_ref = null;
         ek var4 = (ek) (Object) td.field_c.f(32);
         if (!param3) {
             return null;
         }
         if (var4 == null) {
-            var4_ref = new ek();
+            var4 = new ek();
         }
-        var4_ref.a(param1, param0, param2, 2011722288);
-        return var4_ref;
+        var4.a(param1, param0, param2, 2011722288);
+        return var4;
     }
 
     private final void a(lf param0, int param1, int param2) {
@@ -430,25 +429,44 @@ final class ip extends sp {
     }
 
     final void a(int[] param0, int param1, int param2) {
-        int var5 = 0;
         int var4 = 0;
-        int var7 = ZombieDawn.field_J;
+        int var5 = 0;
+        lf var6 = null;
+        int var7 = 0;
+        var7 = ZombieDawn.field_J;
         ((ip) this).field_m.a(param0, param1, param2);
-        lf var6 = (lf) (Object) ((ip) this).field_s.b((byte) 26);
-        while (var6 != null) {
-            if (!(((ip) this).field_n.b(30296, var6))) {
+        var6 = (lf) (Object) ((ip) this).field_s.b((byte) 26);
+        L0: while (true) {
+          if (var6 == null) {
+            return;
+          } else {
+            L1: {
+              if (!((ip) this).field_n.b(30296, var6)) {
                 var5 = param2;
                 var4 = param1;
-                while (var6.field_r < var5) {
+                L2: while (true) {
+                  if (var6.field_r >= var5) {
+                    this.a(param0, var6, var4, (byte) 0, var5, var4 + var5);
+                    var6.field_r = var6.field_r - var5;
+                    break L1;
+                  } else {
                     this.a(param0, var6, var4, (byte) 0, var6.field_r, var5 + var4);
                     var5 = var5 - var6.field_r;
                     var4 = var4 + var6.field_r;
-                    // ifne L175
+                    if (((ip) this).field_n.a(-32464, var4, var6, param0, var5)) {
+                      break L1;
+                    } else {
+                      continue L2;
+                    }
+                  }
                 }
-                this.a(param0, var6, var4, (byte) 0, var5, var4 + var5);
-                var6.field_r = var6.field_r - var5;
+              } else {
+                break L1;
+              }
             }
             var6 = (lf) (Object) ((ip) this).field_s.a(false);
+            continue L0;
+          }
         }
     }
 

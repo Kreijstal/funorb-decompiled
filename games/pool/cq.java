@@ -51,44 +51,93 @@ final class cq {
 
     final static int a(int param0, int param1, byte param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
         int var10 = 0;
-        if (!(-1 != (param8 ^ -1))) {
-            return -1;
-        }
-        int var11 = lh.a(param8, (byte) -75, (long)(param0 + ((param1 << -490510896) + -param3)));
-        int var12 = lh.a(param8, (byte) -81, (long)(-param3 + (-(param1 << 412671888) + param0)));
-        if (0 < var11) {
-            if (-param6 + 65536 >= var11) {
-                if (var12 <= var11) {
-                } else {
+        int var11 = 0;
+        int var12 = 0;
+        if (-1 == (param8 ^ -1)) {
+          return -1;
+        } else {
+          L0: {
+            var11 = lh.a(param8, (byte) -75, (long)(param0 + ((param1 << -490510896) + -param3)));
+            var12 = lh.a(param8, (byte) -81, (long)(-param3 + (-(param1 << 412671888) + param0)));
+            if (0 >= var11) {
+              break L0;
+            } else {
+              if (-param6 + 65536 < var11) {
+                break L0;
+              } else {
+                if (var12 > var11) {
+                  L1: {
                     var10 = param5 - -aj.a(var11, false, param4);
-                    if (param7 >= param9) {
-                        // if_icmplt L140
-                        // if_icmpgt L140
+                    if (param7 < param9) {
+                      if (param7 > var10) {
+                        break L0;
+                      } else {
+                        if (var10 > param9) {
+                          break L0;
+                        } else {
+                          break L1;
+                        }
+                      }
                     } else {
-                        // if_icmpgt L140
-                        // if_icmpgt L140
+                      if (var10 < param9) {
+                        break L0;
+                      } else {
+                        if (var10 > param7) {
+                          break L0;
+                        } else {
+                          break L1;
+                        }
+                      }
                     }
-                    return param6 + var11;
-                }
-            }
-        }
-        if (-1 > (var12 ^ -1)) {
-            if (65536 + -param6 >= var12) {
-                var10 = param5 - -aj.a(var12, false, param4);
-                if (param7 < param9) {
-                    // if_icmplt L220
-                    // if_icmplt L220
+                  }
+                  return param6 + var11;
                 } else {
-                    // if_icmplt L220
-                    // if_icmplt L220
+                  break L0;
+                }
+              }
+            }
+          }
+          L2: {
+            if (-1 <= (var12 ^ -1)) {
+              break L2;
+            } else {
+              if (65536 + -param6 < var12) {
+                break L2;
+              } else {
+                L3: {
+                  var10 = param5 - -aj.a(var12, false, param4);
+                  if (param7 >= param9) {
+                    if (var10 < param9) {
+                      break L2;
+                    } else {
+                      if (param7 < var10) {
+                        break L2;
+                      } else {
+                        break L3;
+                      }
+                    }
+                  } else {
+                    if (var10 < param7) {
+                      break L2;
+                    } else {
+                      if (param9 < var10) {
+                        break L2;
+                      } else {
+                        break L3;
+                      }
+                    }
+                  }
                 }
                 return var12 + param6;
+              }
             }
-        }
-        if (param2 > -61) {
+          }
+          if (param2 <= -61) {
+            return -1;
+          } else {
             return -43;
+          }
         }
-        return -1;
     }
 
     final static void a(int param0) {
@@ -105,8 +154,9 @@ final class cq {
         so.field_g[0].field_d.b((byte) -110, (ma) (Object) new bk(om.field_t, 1, 6, so.field_g[0].field_d));
         so.field_g[0].field_d.b((byte) -74, (ma) (Object) new bk(vj.field_f, 1, -1, so.field_g[0].field_d));
         so.field_g[0].a(false);
-        so.field_g[1] = new hq(fc.field_e, 2, 0);
-        so.field_g[0].field_j = new hq(fc.field_e, 2, 0);
+        hq dupTemp$1 = new hq(fc.field_e, 2, 0);
+        so.field_g[1] = dupTemp$1;
+        so.field_g[0].field_j = dupTemp$1;
         if (param0 == 4313) {
           so.field_g[1].field_d.b((byte) -59, (ma) (Object) new bk(qq.field_yb, 40, 13, 128));
           so.field_g[1].field_d.b((byte) -43, (ma) (Object) new bk(dr.field_e, 1, 8, 0));

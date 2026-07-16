@@ -55,8 +55,9 @@ final class md extends ng {
               }
               return var5;
             } else {
+              int incrementValue$2 = var3;
               var3++;
-              var5 = var5 + ((((md) this).field_h[var3] & kd.field_j[var4]) << param1 - var4);
+              var5 = var5 + ((((md) this).field_h[incrementValue$2] & kd.field_j[var4]) << param1 - var4);
               param1 = param1 - var4;
               var4 = 8;
               continue L0;
@@ -80,8 +81,9 @@ final class md extends ng {
               }
               return var5;
             } else {
+              int incrementValue$3 = var3;
               var3++;
-              var5 = var5 + ((((md) this).field_h[var3] & kd.field_j[var4]) << param1 - var4);
+              var5 = var5 + ((((md) this).field_h[incrementValue$3] & kd.field_j[var4]) << param1 - var4);
               param1 = param1 - var4;
               var4 = 8;
               continue L2;
@@ -91,8 +93,9 @@ final class md extends ng {
     }
 
     final void d(int param0, int param1) {
+        int fieldTemp$0 = ((md) this).field_f;
         ((md) this).field_f = ((md) this).field_f + 1;
-        ((md) this).field_h[((md) this).field_f] = (byte)(((md) this).field_r.a(false) + param1);
+        ((md) this).field_h[fieldTemp$0] = (byte)(((md) this).field_r.a(false) + param1);
         if (param0 != 8) {
             field_q = -127;
         }
@@ -106,37 +109,70 @@ final class md extends ng {
     }
 
     final static f[][] a(int param0, boolean param1, int param2, int param3, f[][] param4) {
+        f[][] var5 = null;
         int var6 = 0;
         int var7 = 0;
-        int var8 = CrazyCrystals.field_B;
-        f[][] var9 = new f[param0 * 2 + param4.length][2 * param2 + param4[0].length];
-        f[][] var5 = var9;
-        for (var6 = 0; var9.length > var6; var6++) {
-            for (var7 = 0; var9[0].length > var7; var7++) {
-                if (var7 >= param2) {
-                    // if_icmpge L120
-                    // if_icmplt L120
-                    // if_icmpge L120
-                    var9[var6][var7] = (f) param4[-param0 + var6][-param2 + var7].clone();
-                } else {
-                    var9[var6][var7] = (f) param4[0][0].clone();
+        int var8 = 0;
+        f[][] var9 = null;
+        var8 = CrazyCrystals.field_B;
+        var9 = new f[param0 * 2 + param4.length][2 * param2 + param4[0].length];
+        var5 = var9;
+        var6 = 0;
+        L0: while (true) {
+          if (var9.length <= var6) {
+            var7 = 116 % ((param3 - 8) / 32);
+            return var5;
+          } else {
+            var7 = 0;
+            L1: while (true) {
+              if (var9[0].length <= var7) {
+                var6++;
+                continue L0;
+              } else {
+                L2: {
+                  L3: {
+                    if (var7 < param2) {
+                      break L3;
+                    } else {
+                      if (var7 >= param4[0].length + param2) {
+                        break L3;
+                      } else {
+                        if (var6 < param0) {
+                          break L3;
+                        } else {
+                          if (var6 >= param4.length + param0) {
+                            break L3;
+                          } else {
+                            var9[var6][var7] = (f) param4[-param0 + var6][-param2 + var7].clone();
+                            break L2;
+                          }
+                        }
+                      }
+                    }
+                  }
+                  var9[var6][var7] = (f) param4[0][0].clone();
+                  break L2;
                 }
                 var9[var6][var7].a(393989, var6, var7, var9);
                 var9[var6][var7].b(true, param1);
+                var7++;
+                continue L1;
+              }
             }
+          }
         }
-        var7 = 116 % ((param3 - 8) / 32);
-        return var5;
     }
 
     final int e(boolean param0) {
         if (!param0) {
             int discarded$0 = ((md) this).e(false);
+            int fieldTemp$1 = ((md) this).field_f;
             ((md) this).field_f = ((md) this).field_f + 1;
-            return 255 & ((md) this).field_h[((md) this).field_f] - ((md) this).field_r.a(!param0 ? true : false);
+            return 255 & ((md) this).field_h[fieldTemp$1] - ((md) this).field_r.a(!param0 ? true : false);
         }
+        int fieldTemp$2 = ((md) this).field_f;
         ((md) this).field_f = ((md) this).field_f + 1;
-        return 255 & ((md) this).field_h[((md) this).field_f] - ((md) this).field_r.a(!param0 ? true : false);
+        return 255 & ((md) this).field_h[fieldTemp$2] - ((md) this).field_r.a(!param0 ? true : false);
     }
 
     final void b(int param0, int param1, int param2, byte[] param3) {
@@ -145,14 +181,16 @@ final class md extends ng {
         if (param2 != 29712) {
             field_t = null;
             for (var5 = 0; var5 < param0; var5++) {
+                int fieldTemp$0 = ((md) this).field_f;
                 ((md) this).field_f = ((md) this).field_f + 1;
-                param3[var5 + param1] = (byte)(((md) this).field_h[((md) this).field_f] + -((md) this).field_r.a(false));
+                param3[var5 + param1] = (byte)(((md) this).field_h[fieldTemp$0] + -((md) this).field_r.a(false));
             }
             return;
         }
         for (var5 = 0; var5 < param0; var5++) {
+            int fieldTemp$1 = ((md) this).field_f;
             ((md) this).field_f = ((md) this).field_f + 1;
-            param3[var5 + param1] = (byte)(((md) this).field_h[((md) this).field_f] + -((md) this).field_r.a(false));
+            param3[var5 + param1] = (byte)(((md) this).field_h[fieldTemp$1] + -((md) this).field_r.a(false));
         }
     }
 

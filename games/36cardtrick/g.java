@@ -18,10 +18,10 @@ class g extends lk implements u {
             }
         }
         qd var5 = new qd(((g) this).field_z);
-        lk var6 = (lk) var5.c((byte) -13);
+        lk var6 = (lk) (Object) var5.c((byte) -13);
         while (var6 != null) {
             var6.a(param0 - -((g) this).field_o, ((g) this).field_i + param1, -1, param3);
-            var6 = (lk) var5.a((byte) 101);
+            var6 = (lk) (Object) var5.a((byte) 101);
         }
     }
 
@@ -33,7 +33,7 @@ class g extends lk implements u {
     }
 
     final void a(int param0, int param1, int param2, int param3, boolean param4) {
-        this.a(param0, param1, param2, param3, param4);
+        super.a(param0, param1, param2, param3, param4);
         this.h(1);
     }
 
@@ -47,17 +47,17 @@ class g extends lk implements u {
           if (param0 == -1) {
             break L0;
           } else {
-            ((g) this).field_z = (bk) null;
+            ((g) this).field_z = null;
             break L0;
           }
         }
-        var3 = (lk) var2.b((byte) -33);
+        var3 = (lk) (Object) var2.b((byte) -33);
         L1: while (true) {
           if (var3 != null) {
             if (var3.d(param0 ^ -122)) {
               return var3;
             } else {
-              var3 = (lk) var2.a(28869);
+              var3 = (lk) (Object) var2.a(28869);
               continue L1;
             }
           } else {
@@ -69,29 +69,48 @@ class g extends lk implements u {
     final void b(lk param0, byte param1) {
         ((g) this).field_z.a((qb) (Object) param0, param1 ^ 27284);
         if (param1 != 118) {
-            field_y = (int[][]) (int[][]) null;
+            field_y = null;
         }
     }
 
     final boolean d(int param0) {
         if (param0 < 44) {
-            field_C = (kc[]) null;
+            field_C = null;
         }
         return null != ((g) this).i(-1) ? true : false;
     }
 
     void a(int param0, int param1, lk param2, int param3) {
-        int var7 = Main.field_T;
-        this.a(param0, param1, param2, param3 ^ 0);
-        qd var5 = new qd(((g) this).field_z);
-        if (param3 != 3) {
-            int discarded$0 = ((g) this).f(-85);
+        qd var5 = null;
+        lk var6 = null;
+        int var7 = 0;
+        L0: {
+          var7 = Main.field_T;
+          super.a(param0, param1, param2, param3 ^ 0);
+          var5 = new qd(((g) this).field_z);
+          if (param3 == 3) {
+            break L0;
+          } else {
+            int discarded$2 = ((g) this).f(-85);
+            break L0;
+          }
         }
-        lk var6 = (lk) var5.b((byte) -33);
-        while (var6 != null) {
-            // ifeq L110
-            var6.a(((g) this).field_i + param0, param1 + ((g) this).field_o, param2, param3 + 0);
-            var6 = (lk) var5.a(28869);
+        var6 = (lk) (Object) var5.b((byte) -33);
+        L1: while (true) {
+          L2: {
+            if (var6 == null) {
+              break L2;
+            } else {
+              if (!var6.b(55)) {
+                break L2;
+              } else {
+                var6.a(((g) this).field_i + param0, param1 + ((g) this).field_o, param2, param3 + 0);
+                var6 = (lk) (Object) var5.a(28869);
+                continue L1;
+              }
+            }
+          }
+          return;
         }
     }
 
@@ -99,21 +118,21 @@ class g extends lk implements u {
         int var5 = Main.field_T;
         qd var3 = new qd(((g) this).field_z);
         if (param0 <= 71) {
-            ((g) this).field_z = (bk) null;
+            ((g) this).field_z = null;
         }
-        lk var4 = (lk) var3.b((byte) -33);
+        lk var4 = (lk) (Object) var3.b((byte) -33);
         while (var4 != null) {
             if (!(!var4.a(90, param1))) {
                 return true;
             }
-            var4 = (lk) var3.a(28869);
+            var4 = (lk) (Object) var3.a(28869);
         }
         return false;
     }
 
     public static void b(boolean param0) {
         field_C = null;
-        field_y = (int[][]) null;
+        field_y = null;
         field_B = null;
         if (!param0) {
             g.b(true);
@@ -126,10 +145,10 @@ class g extends lk implements u {
         if (param0 != 1) {
             ((g) this).a(43, -101, -28, -27, false);
         }
-        lk var3 = (lk) var2.b((byte) -33);
+        lk var3 = (lk) (Object) var2.b((byte) -33);
         while (var3 != null) {
             var3.g(param0 ^ 26946);
-            var3 = (lk) var2.a(param0 ^ 28868);
+            var3 = (lk) (Object) var2.a(param0 ^ 28868);
         }
     }
 
@@ -140,28 +159,47 @@ class g extends lk implements u {
         if (param1 >= -46) {
             int discarded$0 = ((g) this).f(-89);
         }
-        lk var6 = (lk) var5.b((byte) -33);
+        lk var6 = (lk) (Object) var5.b((byte) -33);
         while (var6 != null) {
             StringBuilder discarded$1 = param2.append(10);
             for (var7 = 0; param3 >= var7; var7++) {
                 StringBuilder discarded$2 = param2.append(32);
             }
             StringBuilder discarded$3 = var6.a(param0, false, 1 + param3, param2);
-            var6 = (lk) var5.a(28869);
+            var6 = (lk) (Object) var5.a(28869);
         }
     }
 
     final void a(boolean param0, lk param1, int param2, int param3, int param4, int param5) {
-        int var9 = Main.field_T;
-        qd var7 = new qd(((g) this).field_z);
-        if (param0) {
-            ((g) this).field_z = (bk) null;
+        qd var7 = null;
+        lk var8 = null;
+        int var9 = 0;
+        L0: {
+          var9 = Main.field_T;
+          var7 = new qd(((g) this).field_z);
+          if (!param0) {
+            break L0;
+          } else {
+            ((g) this).field_z = null;
+            break L0;
+          }
         }
-        lk var8 = (lk) var7.b((byte) -33);
-        while (var8 != null) {
-            // ifeq L100
-            var8.a(param0, param1, param2, ((g) this).field_o + param3, ((g) this).field_i + param4, param5);
-            var8 = (lk) var7.a(28869);
+        var8 = (lk) (Object) var7.b((byte) -33);
+        L1: while (true) {
+          L2: {
+            if (var8 == null) {
+              break L2;
+            } else {
+              if (!var8.b(-100)) {
+                break L2;
+              } else {
+                var8.a(param0, param1, param2, ((g) this).field_o + param3, ((g) this).field_i + param4, param5);
+                var8 = (lk) (Object) var7.a(28869);
+                continue L1;
+              }
+            }
+          }
+          return;
         }
     }
 
@@ -173,94 +211,154 @@ class g extends lk implements u {
             return false;
         }
         if (param1 != -28) {
-            field_y = (int[][]) (int[][]) null;
+            field_y = null;
         }
         qd var8 = new qd(((g) this).field_z);
-        lk var4 = (lk) var8.b((byte) -33);
+        lk var4 = (lk) (Object) var8.b((byte) -33);
         while (var4 != null) {
             if (!(!var4.d(param1 + 142))) {
                 var5 = new qd(((g) this).field_z);
                 qb discarded$0 = var5.a(25755, (qb) (Object) var4);
-                var6 = (lk) var5.a(28869);
+                var6 = (lk) (Object) var5.a(28869);
                 while (var6 != null) {
                     if (!(!var6.a(89, param0))) {
                         return true;
                     }
-                    var6 = (lk) var5.a(28869);
+                    var6 = (lk) (Object) var5.a(28869);
                 }
             }
-            var4 = (lk) var8.a(28869);
+            var4 = (lk) (Object) var8.a(28869);
         }
         return false;
     }
 
     final boolean a(int param0, int param1, int param2, int param3, int param4, int param5, lk param6) {
-        int var10 = Main.field_T;
-        if (param5 != -1) {
+        qd var8 = null;
+        lk var9 = null;
+        int var10 = 0;
+        L0: {
+          var10 = Main.field_T;
+          if (param5 == -1) {
+            break L0;
+          } else {
             field_A = 26;
+            break L0;
+          }
         }
-        qd var8 = new qd(((g) this).field_z);
-        lk var9 = (lk) var8.b((byte) -33);
-        while (var9 != null) {
-            // ifeq L114
-            if (var9.d(param5 + 70)) {
-                if (var9.a(param0, param1, param2, param3, param4, param5 ^ 0, param6)) {
-                    return true;
+        var8 = new qd(((g) this).field_z);
+        var9 = (lk) (Object) var8.b((byte) -33);
+        L1: while (true) {
+          L2: {
+            if (var9 == null) {
+              break L2;
+            } else {
+              if (!var9.b(103)) {
+                break L2;
+              } else {
+                L3: {
+                  if (!var9.d(param5 + 70)) {
+                    break L3;
+                  } else {
+                    if (!var9.a(param0, param1, param2, param3, param4, param5 ^ 0, param6)) {
+                      break L3;
+                    } else {
+                      return true;
+                    }
+                  }
                 }
+                var9 = (lk) (Object) var8.a(param5 ^ -28870);
+                continue L1;
+              }
             }
-            var9 = (lk) var8.a(param5 ^ -28870);
+          }
+          return false;
         }
-        return false;
     }
 
     final boolean b(int param0, lk param1) {
-        qd var5_ref = null;
+        qd var5_ref_qd = null;
         lk var6 = null;
         int var7 = Main.field_T;
         if (((g) this).field_z.a(2220)) {
             return false;
         }
         qd var3 = new qd(((g) this).field_z);
-        lk var4 = (lk) var3.c((byte) -13);
+        lk var4 = (lk) (Object) var3.c((byte) -13);
         while (var4 != null) {
             if (var4.d(72)) {
-                var5_ref = new qd(((g) this).field_z);
-                qb discarded$0 = var5_ref.a((byte) -8, (qb) (Object) var4);
-                var6 = (lk) var5_ref.a((byte) 79);
+                var5_ref_qd = new qd(((g) this).field_z);
+                qb discarded$0 = var5_ref_qd.a((byte) -8, (qb) (Object) var4);
+                var6 = (lk) (Object) var5_ref_qd.a((byte) 79);
                 while (var6 != null) {
                     if (var6.a(97, param1)) {
                         return true;
                     }
-                    var6 = (lk) var5_ref.a((byte) 99);
+                    var6 = (lk) (Object) var5_ref_qd.a((byte) 99);
                 }
             }
-            var4 = (lk) var3.a((byte) 80);
+            var4 = (lk) (Object) var3.a((byte) 80);
         }
         int var5 = 15 % ((param0 - 29) / 60);
         return false;
     }
 
     boolean a(char param0, byte param1, int param2, lk param3) {
-        int var7 = Main.field_T;
-        if (param1 > -99) {
-            return false;
-        }
-        qd var5 = new qd(((g) this).field_z);
-        lk var8 = (lk) var5.b((byte) -33);
-        while (var8 != null) {
-            // ifeq L95
-            if (var8.d(109)) {
-                if (var8.a(param0, (byte) -123, param2, param3)) {
-                    return true;
+        qd var5 = null;
+        int var6 = 0;
+        int var7 = 0;
+        lk var8 = null;
+        boolean stackIn_14_0 = false;
+        boolean stackOut_13_0 = false;
+        boolean stackOut_12_0 = false;
+        var7 = Main.field_T;
+        if (param1 <= -99) {
+          var5 = new qd(((g) this).field_z);
+          var8 = (lk) (Object) var5.b((byte) -33);
+          L0: while (true) {
+            L1: {
+              if (var8 == null) {
+                break L1;
+              } else {
+                if (!var8.b(111)) {
+                  break L1;
+                } else {
+                  L2: {
+                    if (!var8.d(109)) {
+                      break L2;
+                    } else {
+                      if (!var8.a(param0, (byte) -123, param2, param3)) {
+                        break L2;
+                      } else {
+                        return true;
+                      }
+                    }
+                  }
+                  var8 = (lk) (Object) var5.a(28869);
+                  continue L0;
                 }
+              }
             }
-            var8 = (lk) var5.a(28869);
+            var6 = param2;
+            if ((var6 ^ -1) == -81) {
+              L3: {
+                if (!ge.field_c[81]) {
+                  stackOut_13_0 = ((g) this).a(param3, (byte) -28);
+                  stackIn_14_0 = stackOut_13_0;
+                  break L3;
+                } else {
+                  stackOut_12_0 = ((g) this).b(-85, param3);
+                  stackIn_14_0 = stackOut_12_0;
+                  break L3;
+                }
+              }
+              return stackIn_14_0;
+            } else {
+              return false;
+            }
+          }
+        } else {
+          return false;
         }
-        int var6 = param2;
-        if ((var6 ^ -1) != -81) {
-            return false;
-        }
-        return ge.field_c[81] ? ((g) this).b(-85, param3) : ((g) this).a(param3, (byte) -28);
     }
 
     final String b(byte param0) {
@@ -270,7 +368,7 @@ class g extends lk implements u {
         int var5 = 0;
         var5 = Main.field_T;
         var2 = new qd(((g) this).field_z);
-        var3 = (lk) var2.b((byte) -33);
+        var3 = (lk) (Object) var2.b((byte) -33);
         if (param0 == -79) {
           L0: while (true) {
             if (var3 != null) {
@@ -278,7 +376,7 @@ class g extends lk implements u {
               if (var4 != null) {
                 return var4;
               } else {
-                var3 = (lk) var2.a(28869);
+                var3 = (lk) (Object) var2.a(28869);
                 continue L0;
               }
             } else {
@@ -286,7 +384,7 @@ class g extends lk implements u {
             }
           }
         } else {
-          return (String) null;
+          return null;
         }
     }
 
@@ -323,21 +421,41 @@ class g extends lk implements u {
     }
 
     final boolean a(int param0, int param1, int param2, int param3, lk param4, int param5, int param6) {
-        int var10 = Main.field_T;
-        if (param3 > -14) {
-            lk var11 = (lk) null;
-            boolean discarded$0 = ((g) this).a(95, -63, -9, 109, -30, 36, (lk) null);
+        lk var9 = null;
+        int var10 = 0;
+        Object var11 = null;
+        qd var12 = null;
+        L0: {
+          var10 = Main.field_T;
+          if (param3 <= -14) {
+            break L0;
+          } else {
+            var11 = null;
+            boolean discarded$2 = ((g) this).a(95, -63, -9, 109, -30, 36, (lk) null);
+            break L0;
+          }
         }
-        qd var12 = new qd(((g) this).field_z);
-        lk var9 = (lk) var12.b((byte) -33);
-        while (var9 != null) {
-            // ifeq L126
-            if (var9.a(((g) this).field_o + param0, ((g) this).field_i + param1, param2, -24, param4, param5, param6)) {
-                return true;
+        var12 = new qd(((g) this).field_z);
+        var9 = (lk) (Object) var12.b((byte) -33);
+        L1: while (true) {
+          L2: {
+            if (var9 == null) {
+              break L2;
+            } else {
+              if (!var9.b(24)) {
+                break L2;
+              } else {
+                if (!var9.a(((g) this).field_o + param0, ((g) this).field_i + param1, param2, -24, param4, param5, param6)) {
+                  var9 = (lk) (Object) var12.a(28869);
+                  continue L1;
+                } else {
+                  return true;
+                }
+              }
             }
-            var9 = (lk) var12.a(28869);
+          }
+          return false;
         }
-        return false;
     }
 
     g(int param0, int param1, int param2, int param3, ci param4) {
@@ -354,7 +472,7 @@ class g extends lk implements u {
     }
 
     final static boolean j(int param0) {
-        String var2 = null;
+        Object var2 = null;
         int stackIn_6_0 = 0;
         int stackOut_4_0 = 0;
         int stackOut_5_0 = 0;
@@ -362,7 +480,7 @@ class g extends lk implements u {
           if (param0 == 7) {
             break L0;
           } else {
-            var2 = (String) null;
+            var2 = null;
             boolean discarded$2 = g.a((String) null, (String) null, 67);
             break L0;
           }
@@ -396,13 +514,13 @@ class g extends lk implements u {
         }
         int var2 = 0;
         qd var3 = new qd(((g) this).field_z);
-        lk var4 = (lk) var3.b((byte) -33);
+        lk var4 = (lk) (Object) var3.b((byte) -33);
         while (var4 != null) {
             var5 = var4.f(param0 ^ 0);
             if (var2 < var5) {
                 var2 = var5;
             }
-            var4 = (lk) var3.a(28869);
+            var4 = (lk) (Object) var3.a(28869);
         }
         return var2;
     }
@@ -410,13 +528,13 @@ class g extends lk implements u {
     final void c(byte param0) {
         int var4 = Main.field_T;
         qd var2 = new qd(((g) this).field_z);
-        lk var3 = (lk) var2.b((byte) -33);
+        lk var3 = (lk) (Object) var2.b((byte) -33);
         if (param0 < 27) {
             g.a(-76);
         }
         while (var3 != null) {
             var3.c((byte) 105);
-            var3 = (lk) var2.a(28869);
+            var3 = (lk) (Object) var2.a(28869);
         }
     }
 

@@ -938,8 +938,9 @@ final class fd extends kk {
           L0: while (true) {
             if (va.g((byte) -120)) {
               var1.b(false, 8);
+              int fieldTemp$2 = var1.field_v + 1;
               var1.field_v = var1.field_v + 1;
-              var2 = var1.field_v + 1;
+              var2 = fieldTemp$2;
               wn.a(var1, 1);
               ej.field_j.b(var1.field_v + -var2, true);
               continue L0;

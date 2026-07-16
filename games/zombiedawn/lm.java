@@ -14,11 +14,13 @@ final class lm extends fb {
             return;
           } else {
             ((lm) this).field_H = ((lm) this).field_H - 3;
+            int fieldTemp$4 = ((lm) this).field_F + 1;
             ((lm) this).field_F = ((lm) this).field_F + 1;
-            if (((lm) this).field_F + 1 > ((lm) this).field_G) {
+            if (fieldTemp$4 > ((lm) this).field_G) {
               ((lm) this).field_F = 0;
+              int fieldTemp$5 = ((lm) this).field_E + 1;
               ((lm) this).field_E = ((lm) this).field_E + 1;
-              if (((lm) this).field_E + 1 >= ob.field_c.length) {
+              if (fieldTemp$5 >= ob.field_c.length) {
                 ((lm) this).field_E = 0;
                 return;
               } else {

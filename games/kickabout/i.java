@@ -1537,10 +1537,10 @@ class i extends jb {
             if ((((i) this).field_y ^ -1) == -14) {
               return 46;
             } else {
-              if (((i) this).field_y == -15) {
+              if ((((i) this).field_y ^ -1) == -15) {
                 return 46;
               } else {
-                if (-16 != ((i) this).field_y) {
+                if (-16 != (((i) this).field_y ^ -1)) {
                   if (((i) this).field_y != 16) {
                     if (17 != ((i) this).field_y) {
                       if (((i) this).field_y == 8) {
@@ -1554,8 +1554,8 @@ class i extends jb {
                               } else {
                                 if (!param0) {
                                   if (19 != ((i) this).field_y) {
-                                    if (((i) this).field_y != -21) {
-                                      if (-22 == ((i) this).field_y) {
+                                    if ((((i) this).field_y ^ -1) != -21) {
+                                      if (-22 == (((i) this).field_y ^ -1)) {
                                         return 46;
                                       } else {
                                         if (-24 == (((i) this).field_y ^ -1)) {
@@ -1567,18 +1567,18 @@ class i extends jb {
                                             if (27 == ((i) this).field_y) {
                                               return 46;
                                             } else {
-                                              if (-30 != ((i) this).field_y) {
-                                                if (-31 == ((i) this).field_y) {
+                                              if (-30 != (((i) this).field_y ^ -1)) {
+                                                if (-31 == (((i) this).field_y ^ -1)) {
                                                   return 46;
                                                 } else {
                                                   if ((((i) this).field_y ^ -1) == -35) {
                                                     return 46;
                                                   } else {
                                                     if (((i) this).field_y != 37) {
-                                                      if ((((i) this).field_y ^ -1) == -33) {
-                                                        return 46;
-                                                      } else {
+                                                      if ((((i) this).field_y ^ -1) != -33) {
                                                         return 53;
+                                                      } else {
+                                                        return 46;
                                                       }
                                                     } else {
                                                       return 46;
@@ -1601,8 +1601,8 @@ class i extends jb {
                                 } else {
                                   ((i) this).field_C = 17;
                                   if (19 != ((i) this).field_y) {
-                                    if (((i) this).field_y != -21) {
-                                      if (-22 == ((i) this).field_y) {
+                                    if ((((i) this).field_y ^ -1) != -21) {
+                                      if (-22 == (((i) this).field_y ^ -1)) {
                                         return 46;
                                       } else {
                                         if (-24 == (((i) this).field_y ^ -1)) {
@@ -1614,18 +1614,18 @@ class i extends jb {
                                             if (27 == ((i) this).field_y) {
                                               return 46;
                                             } else {
-                                              if (-30 != ((i) this).field_y) {
-                                                if (-31 == ((i) this).field_y) {
+                                              if (-30 != (((i) this).field_y ^ -1)) {
+                                                if (-31 == (((i) this).field_y ^ -1)) {
                                                   return 46;
                                                 } else {
                                                   if ((((i) this).field_y ^ -1) == -35) {
                                                     return 46;
                                                   } else {
                                                     if (((i) this).field_y != 37) {
-                                                      if ((((i) this).field_y ^ -1) == -33) {
-                                                        return 46;
-                                                      } else {
+                                                      if ((((i) this).field_y ^ -1) != -33) {
                                                         return 53;
+                                                      } else {
+                                                        return 46;
                                                       }
                                                     } else {
                                                       return 46;

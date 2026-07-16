@@ -128,7 +128,7 @@ final class aj {
     final void a(int param0, int param1, int param2, int param3, int param4, int param5) {
         vj.e(param2, param0, param1, param5, param3);
         if (param4 != 0) {
-            ee var8 = (ee) null;
+            Object var8 = null;
             ((aj) this).a(-29, (ee) null);
         }
     }
@@ -170,7 +170,7 @@ final class aj {
     final void a(int param0, ee param1) {
         int var7_int = 0;
         int var15 = Main.field_T;
-        ek var3 = new ek(param1, 2, 2, 2236962, 1, 1, 1, ((ee) param1).field_x + ((ee) param1).field_s + 2);
+        ek var3 = new ek(param1, 2, 2, 2236962, 1, 1, 1, param1.field_x + param1.field_s + 2);
         ((aj) this).field_h = (ci) (Object) var3;
         var3.field_h = 16777215;
         nd var4 = new nd();
@@ -192,15 +192,15 @@ final class aj {
         kc[] var5 = new kc[9];
         si var16 = new si(32, 32);
         si var6 = var16;
-        for (var7_int = 0; ((si) var6).field_r.length > var7_int; var7_int++) {
-            ((si) var16).field_r[var7_int] = 1077952576;
+        for (var7_int = 0; var6.field_r.length > var7_int; var7_int++) {
+            var16.field_r[var7_int] = 1077952576;
         }
         var5[4] = (kc) (Object) var6;
         oc discarded$3 = var4.a((byte) -1, 4).a(true, (byte) -74).a(var5, true);
         oc discarded$4 = var4.a((byte) -1, 5).a(wf.a(0, 1, 0, 0, 65793), true).a(true, (byte) -104).c(-1, (byte) 73);
         ((aj) this).field_i = (ci) (Object) var4;
-        var6 = (si) (Object) new nd(var4, true);
-        ((nd) (Object) var6).field_i = 0;
+        nd var6_ref = new nd(var4, true);
+        var6_ref.field_i = 0;
         nd var7 = new nd(var4, true);
         var7.field_i = 0;
         var7.a(we.a(102, 8947848), -120);
@@ -251,7 +251,7 @@ final class aj {
         int var4 = 0;
         int var5 = Main.field_T;
         if (param0 != 92) {
-            return (String) null;
+            return null;
         }
         String var1 = "(" + ni.field_d + " " + hc.field_f + " " + sb.field_a + ") " + pd.field_l;
         if (al.field_a <= 0) {
@@ -261,13 +261,13 @@ final class aj {
                 var1 = var1 + 32;
                 var3 = 255 & rd.field_j.field_g[var2];
                 var4 = var3 >> 1535326116;
-                if (-11 >= var4) {
+                if (-11 >= (var4 ^ -1)) {
                     var4 += 55;
                 } else {
                     var4 += 48;
                 }
                 var3 = var3 & 15;
-                if (-11 > var3) {
+                if (-11 < (var3 ^ -1)) {
                     var3 += 48;
                 } else {
                     var3 += 55;
@@ -285,7 +285,7 @@ final class aj {
 
     final void a(int param0, byte param1, String param2, int param3) {
         if (param1 != -53) {
-            ee var6 = (ee) null;
+            Object var6 = null;
             ((aj) this).a(-126, (ee) null);
         }
         if (!((aj) this).field_b) {

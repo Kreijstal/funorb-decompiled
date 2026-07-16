@@ -114,191 +114,56 @@ abstract class ci {
         Throwable var3 = null;
         int var4 = 0;
         Object var5 = null;
-        int statePc = 0;
-        Throwable caughtException = null;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    var4 = stellarshard.field_B;
-                    var1 = (Object) (Object) pk.field_e;
-                    // monitorenter pk.field_e
-                    statePc = 1;
-                    continue stateLoop;
-                }
-                case 1: {
-                    try {
-                        if (param0 > 30) {
-                            statePc = 3;
-                        } else {
-                            statePc = 2;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_1) {
-                        caughtException = stateCaught_1;
-                        statePc = 14;
-                        continue stateLoop;
-                    }
-                }
-                case 2: {
-                    try {
-                        var5 = null;
-                        String discarded$2 = ci.a((String) null, 'ￛ', (String) null, -48);
-                        statePc = 3;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_2) {
-                        caughtException = stateCaught_2;
-                        statePc = 14;
-                        continue stateLoop;
-                    }
-                }
-                case 3: {
-                    try {
-                        ce.field_e = ce.field_e + 1;
-                        di.field_a = q.field_c;
-                        if (-1 >= se.field_H) {
-                            statePc = 8;
-                        } else {
-                            statePc = 4;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_3) {
-                        caughtException = stateCaught_3;
-                        statePc = 14;
-                        continue stateLoop;
-                    }
-                }
-                case 4: {
-                    try {
-                        var2 = 0;
-                        statePc = 5;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_4) {
-                        caughtException = stateCaught_4;
-                        statePc = 14;
-                        continue stateLoop;
-                    }
-                }
-                case 5: {
-                    try {
-                        if (-113 <= var2) {
-                            statePc = 7;
-                        } else {
-                            statePc = 6;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_5) {
-                        caughtException = stateCaught_5;
-                        statePc = 14;
-                        continue stateLoop;
-                    }
-                }
-                case 6: {
-                    try {
-                        si.field_jb[var2] = false;
-                        var2++;
-                        statePc = 5;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_6) {
-                        caughtException = stateCaught_6;
-                        statePc = 14;
-                        continue stateLoop;
-                    }
-                }
-                case 7: {
-                    try {
-                        se.field_H = vd.field_e;
-                        statePc = 12;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_7) {
-                        caughtException = stateCaught_7;
-                        statePc = 14;
-                        continue stateLoop;
-                    }
-                }
-                case 8: {
-                    try {
-                        if (se.field_H == vd.field_e) {
-                            statePc = 12;
-                        } else {
-                            statePc = 9;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_8) {
-                        caughtException = stateCaught_8;
-                        statePc = 14;
-                        continue stateLoop;
-                    }
-                }
-                case 9: {
-                    try {
-                        var2 = ob.field_c[vd.field_e];
-                        vd.field_e = 1 + vd.field_e & 127;
-                        if (-1 < (var2 ^ -1)) {
-                            statePc = 11;
-                        } else {
-                            statePc = 10;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_9) {
-                        caughtException = stateCaught_9;
-                        statePc = 14;
-                        continue stateLoop;
-                    }
-                }
-                case 10: {
-                    try {
-                        si.field_jb[var2] = true;
-                        statePc = 8;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_10) {
-                        caughtException = stateCaught_10;
-                        statePc = 14;
-                        continue stateLoop;
-                    }
-                }
-                case 11: {
-                    try {
-                        si.field_jb[var2 ^ -1] = false;
-                        statePc = 8;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_11) {
-                        caughtException = stateCaught_11;
-                        statePc = 14;
-                        continue stateLoop;
-                    }
-                }
-                case 12: {
-                    try {
-                        q.field_c = l.field_h;
-                        // monitorexit var1
-                        statePc = 16;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_12) {
-                        caughtException = stateCaught_12;
-                        statePc = 14;
-                        continue stateLoop;
-                    }
-                }
-                case 14: {
-                    try {
-                        var3 = caughtException;
-                        // monitorexit var1
-                        statePc = 15;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_14) {
-                        caughtException = stateCaught_14;
-                        statePc = 14;
-                        continue stateLoop;
-                    }
-                }
-                case 15: {
-                    throw (RuntimeException) (Object) var3;
-                }
-                case 16: {
-                    return;
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
+        Throwable decompiledCaughtException = null;
+        var4 = stellarshard.field_B;
+        var1 = (Object) (Object) pk.field_e;
+        synchronized (var1) {
+          L0: {
+            L1: {
+              if (param0 > 30) {
+                break L1;
+              } else {
+                var5 = null;
+                String discarded$2 = ci.a((String) null, 'ￛ', (String) null, -48);
+                break L1;
+              }
             }
+            L2: {
+              ce.field_e = ce.field_e + 1;
+              di.field_a = q.field_c;
+              if (-1 >= (se.field_H ^ -1)) {
+                L3: while (true) {
+                  if ((se.field_H ^ -1) == (vd.field_e ^ -1)) {
+                    break L2;
+                  } else {
+                    var2 = ob.field_c[vd.field_e];
+                    vd.field_e = 1 + vd.field_e & 127;
+                    if (-1 < (var2 ^ -1)) {
+                      si.field_jb[var2 ^ -1] = false;
+                      continue L3;
+                    } else {
+                      si.field_jb[var2] = true;
+                      continue L3;
+                    }
+                  }
+                }
+              } else {
+                var2 = 0;
+                L4: while (true) {
+                  if (-113 >= (var2 ^ -1)) {
+                    se.field_H = vd.field_e;
+                    break L2;
+                  } else {
+                    si.field_jb[var2] = false;
+                    var2++;
+                    continue L4;
+                  }
+                }
+              }
+            }
+            q.field_c = l.field_h;
+            break L0;
+          }
         }
     }
 

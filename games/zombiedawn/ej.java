@@ -53,30 +53,78 @@ final class ej {
     }
 
     final boolean a(boolean param0, int param1, int param2, boolean param3) {
-        int var5 = param2 / 24;
-        int var6 = param1 / 24;
-        if ((var5 ^ -1) <= -1) {
-            // if_icmpgt L59
-            // if_icmple L59
-            // if_icmpge L59
-        } else {
-            return false;
-        }
-        int var7 = param2 % 24;
-        if (param0) {
-            int discarded$0 = ((ej) this).c(126, 21, -100);
-        }
-        int var8 = 1;
-        if (!(!param3)) {
-            if (var7 > 8) {
-                var8 = (byte)(var8 | 4);
+        int var5 = 0;
+        int var6 = 0;
+        int var7 = 0;
+        int var8 = 0;
+        int var9 = 0;
+        int stackIn_18_0 = 0;
+        int stackOut_17_0 = 0;
+        int stackOut_16_0 = 0;
+        L0: {
+          var5 = param2 / 24;
+          var6 = param1 / 24;
+          if ((var5 ^ -1) > -1) {
+            break L0;
+          } else {
+            if ((var6 ^ -1) > -1) {
+              break L0;
+            } else {
+              if (((ej) this).field_A.field_r <= var6) {
+                break L0;
+              } else {
+                if ((((ej) this).field_A.field_k ^ -1) >= (var5 ^ -1)) {
+                  break L0;
+                } else {
+                  L1: {
+                    var7 = param2 % 24;
+                    if (!param0) {
+                      break L1;
+                    } else {
+                      int discarded$2 = ((ej) this).c(126, 21, -100);
+                      break L1;
+                    }
+                  }
+                  L2: {
+                    var8 = 1;
+                    if (param3) {
+                      L3: {
+                        if (var7 <= 8) {
+                          break L3;
+                        } else {
+                          var8 = (byte)(var8 | 4);
+                          break L3;
+                        }
+                      }
+                      if ((var7 ^ -1) > -17) {
+                        var8 = (byte)(var8 | 2);
+                        break L2;
+                      } else {
+                        break L2;
+                      }
+                    } else {
+                      break L2;
+                    }
+                  }
+                  L4: {
+                    var9 = (byte)(7 & ((ej) this).field_A.field_p[var6][var5]);
+                    if ((var8 & var9 ^ -1) != (var8 ^ -1)) {
+                      stackOut_17_0 = 0;
+                      stackIn_18_0 = stackOut_17_0;
+                      break L4;
+                    } else {
+                      stackOut_16_0 = 1;
+                      stackIn_18_0 = stackOut_16_0;
+                      break L4;
+                    }
+                  }
+                  return stackIn_18_0 != 0;
+                }
+              }
             }
-            if (!((var7 ^ -1) <= -17)) {
-                var8 = (byte)(var8 | 2);
-            }
+          }
         }
-        int var9 = (byte)(7 & ((ej) this).field_A.field_p[var6][var5]);
-        return (var8 & var9 ^ -1) == (var8 ^ -1) ? true : false;
+        return false;
     }
 
     public static void b(byte param0) {
@@ -90,6 +138,7 @@ final class ej {
     private final void b(int param0) {
         ((ej) this).field_u = 24 * ((ej) this).field_A.field_k;
         if (param0 != -1) {
+            Object var3 = null;
             this.a(49, (wk) null);
         }
         ((ej) this).field_p = ((ej) this).field_A.field_r * 24;
@@ -107,7 +156,6 @@ final class ej {
         vn var12_ref_vn = null;
         vn var13 = null;
         int var13_int = 0;
-        vn var13_ref = null;
         int var14 = 0;
         L0: {
           var14 = ZombieDawn.field_J;
@@ -305,8 +353,8 @@ final class ej {
                                       break L14;
                                     } else {
                                       var12_ref_vn = tm.field_h[var11];
-                                      var13_ref = var12_ref_vn;
-                                      var13_ref = var12_ref_vn;
+                                      var13 = var12_ref_vn;
+                                      var13 = var12_ref_vn;
                                       if (-1 <= (var10 & 268435456 ^ -1)) {
                                         if ((134217728 & var10) <= 0) {
                                           var12_ref_vn.b(var5, var6);
@@ -445,13 +493,16 @@ final class ej {
                       var8_int = 1;
                       L4: while (true) {
                         if ((var5 ^ -1) >= (var8_int ^ -1)) {
-                          var4.field_m = new String[3][var6];
-                          var8 = new String[3][var6];
+                          String[][] dupTemp$6 = new String[3][var6];
+                          var4.field_m = dupTemp$6;
+                          var8 = dupTemp$6;
                           var9 = new String[3][var6];
-                          var4.field_i = new long[3][var6];
-                          var10 = new long[3][var6];
-                          var4.field_k = new int[3][var7 * var6];
-                          var11 = new int[3][var7 * var6];
+                          long[][] dupTemp$7 = new long[3][var6];
+                          var4.field_i = dupTemp$7;
+                          var10 = dupTemp$7;
+                          int[][] dupTemp$8 = new int[3][var7 * var6];
+                          var4.field_k = dupTemp$8;
+                          var11 = dupTemp$8;
                           var12 = 0;
                           var13 = 0;
                           var14 = 0;
@@ -482,8 +533,9 @@ final class ej {
                                       if ((var25 ^ -1) <= (var7 ^ -1)) {
                                         break L6;
                                       } else {
+                                        int incrementValue$9 = var15;
                                         var15++;
-                                        var11[0][var15] = var27.c(126);
+                                        var11[0][incrementValue$9] = var27.c(126);
                                         var25++;
                                         continue L7;
                                       }
@@ -507,8 +559,9 @@ final class ej {
                                         if ((var7 ^ -1) >= (var25 ^ -1)) {
                                           break L8;
                                         } else {
+                                          int incrementValue$10 = var16;
                                           var16++;
-                                          var11[1][var16] = var27.c(-43);
+                                          var11[1][incrementValue$10] = var27.c(-43);
                                           var25++;
                                           continue L9;
                                         }
@@ -534,8 +587,9 @@ final class ej {
                                         if (var25 >= var7) {
                                           break L10;
                                         } else {
+                                          int incrementValue$11 = var17;
                                           var17++;
-                                          var11[2][var17] = var27.c(-89);
+                                          var11[2][incrementValue$11] = var27.c(-89);
                                           var25++;
                                           continue L11;
                                         }
@@ -641,8 +695,9 @@ final class ej {
                       var2++;
                       continue L1;
                     } else {
-                      ((ej) this).field_E[var2][var3] = this.a((byte) -128, ((ej) this).field_C[var2], ((ej) this).field_C[var3]);
-                      ((ej) this).field_E[var3][var2] = this.a((byte) -128, ((ej) this).field_C[var2], ((ej) this).field_C[var3]);
+                      int dupTemp$2 = this.a((byte) -128, ((ej) this).field_C[var2], ((ej) this).field_C[var3]);
+                      ((ej) this).field_E[var2][var3] = dupTemp$2;
+                      ((ej) this).field_E[var3][var2] = dupTemp$2;
                       var3++;
                       continue L2;
                     }
@@ -753,8 +808,9 @@ final class ej {
                         var2++;
                         continue L10;
                       } else {
-                        ((ej) this).field_E[var2][var3] = this.a((byte) -128, ((ej) this).field_C[var2], ((ej) this).field_C[var3]);
-                        ((ej) this).field_E[var3][var2] = this.a((byte) -128, ((ej) this).field_C[var2], ((ej) this).field_C[var3]);
+                        int dupTemp$3 = this.a((byte) -128, ((ej) this).field_C[var2], ((ej) this).field_C[var3]);
+                        ((ej) this).field_E[var2][var3] = dupTemp$3;
+                        ((ej) this).field_E[var3][var2] = dupTemp$3;
                         var3++;
                         continue L11;
                       }
@@ -988,9 +1044,10 @@ final class ej {
         int var16 = 0;
         int var17 = 0;
         Object var18 = null;
-        oo var19 = null;
+        Object var19 = null;
+        oo var20 = null;
         L0: {
-          var18 = null;
+          var19 = null;
           var17 = ZombieDawn.field_J;
           ((ej) this).field_r = 1;
           ((ej) this).field_n = 1;
@@ -1056,6 +1113,7 @@ final class ej {
           if (param0 == -19795) {
             break L6;
           } else {
+            var18 = null;
             int discarded$1 = this.a((byte) 93, (kk) null, (kk) null);
             break L6;
           }
@@ -1153,8 +1211,8 @@ final class ej {
                           if (!(var15 instanceof oo)) {
                             break L16;
                           } else {
-                            var19 = (oo) (Object) var15;
-                            var19.a(param1, (byte) 65);
+                            var20 = (oo) (Object) var15;
+                            var20.a(param1, (byte) 65);
                             break L16;
                           }
                         }

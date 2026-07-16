@@ -185,11 +185,11 @@ final class o {
             return 58;
         }
         if (((o) this).field_a.d(param0 ^ -3772)) {
-            if (((o) this).field_a.field_d == -1) {
+            if ((((o) this).field_a.field_d ^ -1) == -1) {
                 this.c(1);
                 return 3;
             }
-            if (-2 == ((o) this).field_a.field_d) {
+            if (-2 == (((o) this).field_a.field_d ^ -1)) {
                 return 1;
             }
         }
@@ -423,7 +423,7 @@ final class o {
         if (-509 >= (param1 ^ -1)) {
             if ((param1 ^ -1) > -636) {
                 if (299 <= param0) {
-                    if (param0 > -387) {
+                    if ((param0 ^ -1) > -387) {
                         return 0;
                     }
                 }
@@ -431,7 +431,7 @@ final class o {
         }
         if (508 <= param1) {
             if (param1 < 635) {
-                if (-391 <= param0) {
+                if (-391 >= (param0 ^ -1)) {
                     if (!((param0 ^ -1) <= -476)) {
                         return 1;
                     }
@@ -521,7 +521,7 @@ final class o {
                           }
                         } else {
                           ((o) this).field_c = ((o) this).field_c + 1;
-                          if (((o) this).field_c >= var3) {
+                          if ((((o) this).field_c ^ -1) <= (var3 ^ -1)) {
                             ((o) this).field_c = ((o) this).field_c - var3;
                             break L7;
                           } else {
@@ -547,13 +547,13 @@ final class o {
                 if (nl.field_r != null) {
                   L9: {
                     var4 = 0;
-                    if (ci.field_d == -1) {
+                    if ((ci.field_d ^ -1) == -1) {
                       break L9;
                     } else {
                       if (257 >= hp.field_D) {
                         break L9;
                       } else {
-                        if (-291 > hp.field_D) {
+                        if (-291 < (hp.field_D ^ -1)) {
                           L10: {
                             if (nc.field_j <= 9) {
                               break L10;
@@ -595,9 +595,9 @@ final class o {
                       if (hp.field_D <= 257) {
                         break L8;
                       } else {
-                        if (hp.field_D > -291) {
+                        if ((hp.field_D ^ -1) > -291) {
                           L11: {
-                            if (-10 >= ha.field_b) {
+                            if (-10 <= (ha.field_b ^ -1)) {
                               break L11;
                             } else {
                               if ((ha.field_b ^ -1) > -83) {

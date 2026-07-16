@@ -95,12 +95,12 @@ final class qm extends km {
     }
 
     final boolean g(byte param0) {
-        if (((qm) this).field_Jb.field_nb != -1) {
+        if ((((qm) this).field_Jb.field_nb ^ -1) != -1) {
             ((qm) this).field_Ib = 20;
             return true;
         }
         if (((qm) this).field_Jb.field_w != 0) {
-            if (-1 < ((qm) this).field_Ib) {
+            if (-1 > (((qm) this).field_Ib ^ -1)) {
                 ((qm) this).field_Ib = ((qm) this).field_Ib - 1;
             }
             if (0 == ((qm) this).field_Ib) {
@@ -140,14 +140,14 @@ final class qm extends km {
     final static void a(int param0, boolean param1, byte param2) {
         int var3 = 0;
         p var4 = null;
-        gh var5 = null;
+        Object var5 = null;
         gh var6 = null;
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
-        String var13_ref = null;
+        String var13_ref_String = null;
         int var13 = 0;
         int var14 = 0;
         int var15 = 0;
@@ -393,7 +393,7 @@ final class qm extends km {
                 if (var7 == 0) {
                   break L12;
                 } else {
-                  lg.field_a.field_Lb.a(2, (km) (Object) var6, (km) (Object) var5, (byte) 109);
+                  lg.field_a.field_Lb.a(2, (km) (Object) var6, (km) var5, (byte) 109);
                   break L12;
                 }
               }
@@ -427,8 +427,8 @@ final class qm extends km {
                 } else {
                   ai.a(-1, lg.field_a.field_Ib, (int[]) null, var6.field_Hb, 0L, var6.field_Ob, -1, (km) (Object) var6, 104);
                   var16 = md.field_e;
-                  var13_ref = a.field_A;
-                  var16.field_a.a(1, var13_ref, 7);
+                  var13_ref_String = a.field_A;
+                  var16.field_a.a(1, var13_ref_String, 7);
                   var17 = md.field_e;
                   var13 = ii.field_b;
                   var14 = a.field_y;
@@ -436,7 +436,7 @@ final class qm extends km {
                   break L15;
                 }
               }
-              var5 = var6;
+              var5 = (Object) (Object) var6;
               var6 = (gh) (Object) var4.a(16213);
               continue L4;
             }

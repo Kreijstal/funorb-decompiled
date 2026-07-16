@@ -66,7 +66,7 @@ final class lg {
     final static void a(int param0, byte param1) {
         int var2 = 0;
         int var3 = 0;
-        qh var5_ref = null;
+        qh var5_ref_qh = null;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
@@ -88,10 +88,10 @@ final class lg {
               continue L0;
             } else {
               var8 = dj.field_e.a(20, (byte) 120, 70, 354, 890);
-              var5_ref = new qh();
-              var5_ref.a(0, (le) (Object) new kk(var8.a(true), 450));
-              var5_ref.a(0, (le) (Object) new kk(384, 206));
-              var8.a(var5_ref, true);
+              var5_ref_qh = new qh();
+              var5_ref_qh.a(0, (le) (Object) new kk(var8.a(true), 450));
+              var5_ref_qh.a(0, (le) (Object) new kk(384, 206));
+              var8.a(var5_ref_qh, true);
               var2++;
               continue L0;
             }
@@ -554,8 +554,9 @@ final class lg {
             }
           }
           if (((lg) this).field_c) {
+            int fieldTemp$1 = ((lg) this).field_n - 1;
             ((lg) this).field_n = ((lg) this).field_n - 1;
-            if (0 < ((lg) this).field_n - 1) {
+            if (0 < fieldTemp$1) {
               return;
             } else {
               ((lg) this).field_n = ((lg) this).field_l;

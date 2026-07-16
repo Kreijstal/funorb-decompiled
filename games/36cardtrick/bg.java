@@ -11,7 +11,7 @@ final class bg extends af implements qh {
     final void f(byte param0) {
         this.a(nc.a(248, 0, pa.field_N), true, (byte) 117);
         if (param0 != -42) {
-            java.awt.Canvas var3 = (java.awt.Canvas) null;
+            Object var3 = null;
             bg.a((java.awt.Canvas) null, (byte) 92);
         }
     }
@@ -38,13 +38,13 @@ final class bg extends af implements qh {
         L0: {
           var6 = Main.field_T;
           ((bg) this).field_sb = true;
-          if (((nk) param0).field_b) {
+          if (param0.field_b) {
             var4 = bk.field_e;
             break L0;
           } else {
-            if (null == ((nk) param0).field_c) {
-              var4 = ((nk) param0).field_d;
-              if ((((nk) param0).field_g ^ -1) == -249) {
+            if (null == param0.field_c) {
+              var4 = param0.field_d;
+              if ((param0.field_g ^ -1) == -249) {
                 if (param1) {
                   L1: {
                     ((bg) this).field_ub = true;
@@ -53,12 +53,12 @@ final class bg extends af implements qh {
                     if (param2 == 117) {
                       break L1;
                     } else {
-                      field_tb = (qj) null;
+                      field_tb = null;
                       break L1;
                     }
                   }
-                  if (((nk) param0).field_b) {
-                    if (((nk) param0).field_e) {
+                  if (param0.field_b) {
+                    if (param0.field_e) {
                       ((bg) this).c((lk) (Object) new qe((bg) this), (byte) 33);
                       return;
                     } else {
@@ -69,7 +69,7 @@ final class bg extends af implements qh {
                   } else {
                     L2: {
                       if (!((bg) this).field_ub) {
-                        if ((((nk) param0).field_g ^ -1) != -6) {
+                        if ((param0.field_g ^ -1) != -6) {
                           var5.a(uc.field_r, -1, param2 ^ -121);
                           break L2;
                         } else {
@@ -82,8 +82,8 @@ final class bg extends af implements qh {
                         break L2;
                       }
                     }
-                    if (3 != ((nk) param0).field_g) {
-                      if (-7 == (((nk) param0).field_g ^ -1)) {
+                    if (3 != param0.field_g) {
+                      if (-7 == (param0.field_g ^ -1)) {
                         var5.a(jh.field_a, 9, -14);
                         ((bg) this).c((lk) (Object) var5, (byte) 92);
                         return;
@@ -106,12 +106,12 @@ final class bg extends af implements qh {
                     if (param2 == 117) {
                       break L3;
                     } else {
-                      field_tb = (qj) null;
+                      field_tb = null;
                       break L3;
                     }
                   }
-                  if (((nk) param0).field_b) {
-                    if (((nk) param0).field_e) {
+                  if (param0.field_b) {
+                    if (param0.field_e) {
                       ((bg) this).c((lk) (Object) new qe((bg) this), (byte) 33);
                       return;
                     } else {
@@ -121,10 +121,10 @@ final class bg extends af implements qh {
                     }
                   } else {
                     if (!((bg) this).field_ub) {
-                      if ((((nk) param0).field_g ^ -1) != -6) {
+                      if ((param0.field_g ^ -1) != -6) {
                         var5.a(uc.field_r, -1, param2 ^ -121);
-                        if (3 != ((nk) param0).field_g) {
-                          if (-7 == (((nk) param0).field_g ^ -1)) {
+                        if (3 != param0.field_g) {
+                          if (-7 == (param0.field_g ^ -1)) {
                             var5.a(jh.field_a, 9, -14);
                             ((bg) this).c((lk) (Object) var5, (byte) 92);
                             return;
@@ -140,8 +140,8 @@ final class bg extends af implements qh {
                       } else {
                         var5.a(na.field_p, 11, -14);
                         var5.a(pg.field_f, 17, -14);
-                        if (3 != ((nk) param0).field_g) {
-                          if (-7 == (((nk) param0).field_g ^ -1)) {
+                        if (3 != param0.field_g) {
+                          if (-7 == (param0.field_g ^ -1)) {
                             var5.a(jh.field_a, 9, -14);
                             ((bg) this).c((lk) (Object) var5, (byte) 92);
                             return;
@@ -157,8 +157,8 @@ final class bg extends af implements qh {
                       }
                     } else {
                       hl discarded$19 = var5.a((pl) this, true, bj.field_b);
-                      if (3 != ((nk) param0).field_g) {
-                        if (-7 == (((nk) param0).field_g ^ -1)) {
+                      if (3 != param0.field_g) {
+                        if (-7 == (param0.field_g ^ -1)) {
                           var5.a(jh.field_a, 9, -14);
                           ((bg) this).c((lk) (Object) var5, (byte) 92);
                           return;
@@ -177,8 +177,8 @@ final class bg extends af implements qh {
               } else {
                 var5 = new ui((af) this, vd.field_p, var4);
                 if (param2 == 117) {
-                  if (((nk) param0).field_b) {
-                    if (((nk) param0).field_e) {
+                  if (param0.field_b) {
+                    if (param0.field_e) {
                       ((bg) this).c((lk) (Object) new qe((bg) this), (byte) 33);
                       return;
                     } else {
@@ -188,10 +188,10 @@ final class bg extends af implements qh {
                     }
                   } else {
                     if (!((bg) this).field_ub) {
-                      if ((((nk) param0).field_g ^ -1) != -6) {
+                      if ((param0.field_g ^ -1) != -6) {
                         var5.a(uc.field_r, -1, param2 ^ -121);
-                        if (3 != ((nk) param0).field_g) {
-                          if (-7 == (((nk) param0).field_g ^ -1)) {
+                        if (3 != param0.field_g) {
+                          if (-7 == (param0.field_g ^ -1)) {
                             var5.a(jh.field_a, 9, -14);
                             ((bg) this).c((lk) (Object) var5, (byte) 92);
                             return;
@@ -207,8 +207,8 @@ final class bg extends af implements qh {
                       } else {
                         var5.a(na.field_p, 11, -14);
                         var5.a(pg.field_f, 17, -14);
-                        if (3 != ((nk) param0).field_g) {
-                          if (-7 == (((nk) param0).field_g ^ -1)) {
+                        if (3 != param0.field_g) {
+                          if (-7 == (param0.field_g ^ -1)) {
                             var5.a(jh.field_a, 9, -14);
                             ((bg) this).c((lk) (Object) var5, (byte) 92);
                             return;
@@ -224,8 +224,8 @@ final class bg extends af implements qh {
                       }
                     } else {
                       hl discarded$21 = var5.a((pl) this, true, bj.field_b);
-                      if (3 != ((nk) param0).field_g) {
-                        if (-7 == (((nk) param0).field_g ^ -1)) {
+                      if (3 != param0.field_g) {
+                        if (-7 == (param0.field_g ^ -1)) {
                           var5.a(jh.field_a, 9, -14);
                           ((bg) this).c((lk) (Object) var5, (byte) 92);
                           return;
@@ -241,9 +241,9 @@ final class bg extends af implements qh {
                     }
                   }
                 } else {
-                  field_tb = (qj) null;
-                  if (((nk) param0).field_b) {
-                    if (((nk) param0).field_e) {
+                  field_tb = null;
+                  if (param0.field_b) {
+                    if (param0.field_e) {
                       ((bg) this).c((lk) (Object) new qe((bg) this), (byte) 33);
                       return;
                     } else {
@@ -254,7 +254,7 @@ final class bg extends af implements qh {
                   } else {
                     L4: {
                       if (!((bg) this).field_ub) {
-                        if ((((nk) param0).field_g ^ -1) != -6) {
+                        if ((param0.field_g ^ -1) != -6) {
                           var5.a(uc.field_r, -1, param2 ^ -121);
                           break L4;
                         } else {
@@ -267,8 +267,8 @@ final class bg extends af implements qh {
                         break L4;
                       }
                     }
-                    if (3 != ((nk) param0).field_g) {
-                      if (-7 == (((nk) param0).field_g ^ -1)) {
+                    if (3 != param0.field_g) {
+                      if (-7 == (param0.field_g ^ -1)) {
                         var5.a(jh.field_a, 9, -14);
                         ((bg) this).c((lk) (Object) var5, (byte) 92);
                         return;
@@ -289,8 +289,8 @@ final class bg extends af implements qh {
               if (null == ((bg) this).field_vb) {
                 var5 = new ui((af) this, vd.field_p, var4);
                 if (param2 == 117) {
-                  if (((nk) param0).field_b) {
-                    if (((nk) param0).field_e) {
+                  if (param0.field_b) {
+                    if (param0.field_e) {
                       ((bg) this).c((lk) (Object) new qe((bg) this), (byte) 33);
                       return;
                     } else {
@@ -300,10 +300,10 @@ final class bg extends af implements qh {
                     }
                   } else {
                     if (!((bg) this).field_ub) {
-                      if ((((nk) param0).field_g ^ -1) != -6) {
+                      if ((param0.field_g ^ -1) != -6) {
                         var5.a(uc.field_r, -1, param2 ^ -121);
-                        if (3 != ((nk) param0).field_g) {
-                          if (-7 == (((nk) param0).field_g ^ -1)) {
+                        if (3 != param0.field_g) {
+                          if (-7 == (param0.field_g ^ -1)) {
                             var5.a(jh.field_a, 9, -14);
                             ((bg) this).c((lk) (Object) var5, (byte) 92);
                             return;
@@ -319,8 +319,8 @@ final class bg extends af implements qh {
                       } else {
                         var5.a(na.field_p, 11, -14);
                         var5.a(pg.field_f, 17, -14);
-                        if (3 != ((nk) param0).field_g) {
-                          if (-7 == (((nk) param0).field_g ^ -1)) {
+                        if (3 != param0.field_g) {
+                          if (-7 == (param0.field_g ^ -1)) {
                             var5.a(jh.field_a, 9, -14);
                             ((bg) this).c((lk) (Object) var5, (byte) 92);
                             return;
@@ -336,8 +336,8 @@ final class bg extends af implements qh {
                       }
                     } else {
                       hl discarded$25 = var5.a((pl) this, true, bj.field_b);
-                      if (3 != ((nk) param0).field_g) {
-                        if (-7 == (((nk) param0).field_g ^ -1)) {
+                      if (3 != param0.field_g) {
+                        if (-7 == (param0.field_g ^ -1)) {
                           var5.a(jh.field_a, 9, -14);
                           ((bg) this).c((lk) (Object) var5, (byte) 92);
                           return;
@@ -353,9 +353,9 @@ final class bg extends af implements qh {
                     }
                   }
                 } else {
-                  field_tb = (qj) null;
-                  if (((nk) param0).field_b) {
-                    if (((nk) param0).field_e) {
+                  field_tb = null;
+                  if (param0.field_b) {
+                    if (param0.field_e) {
                       ((bg) this).c((lk) (Object) new qe((bg) this), (byte) 33);
                       return;
                     } else {
@@ -366,7 +366,7 @@ final class bg extends af implements qh {
                   } else {
                     L5: {
                       if (!((bg) this).field_ub) {
-                        if ((((nk) param0).field_g ^ -1) != -6) {
+                        if ((param0.field_g ^ -1) != -6) {
                           var5.a(uc.field_r, -1, param2 ^ -121);
                           break L5;
                         } else {
@@ -379,8 +379,8 @@ final class bg extends af implements qh {
                         break L5;
                       }
                     }
-                    if (3 != ((nk) param0).field_g) {
-                      if (-7 == (((nk) param0).field_g ^ -1)) {
+                    if (3 != param0.field_g) {
+                      if (-7 == (param0.field_g ^ -1)) {
                         var5.a(jh.field_a, 9, -14);
                         ((bg) this).c((lk) (Object) var5, (byte) 92);
                         return;
@@ -404,8 +404,8 @@ final class bg extends af implements qh {
         }
         var5 = new ui((af) this, vd.field_p, var4);
         if (param2 == 117) {
-          if (((nk) param0).field_b) {
-            if (((nk) param0).field_e) {
+          if (param0.field_b) {
+            if (param0.field_e) {
               ((bg) this).c((lk) (Object) new qe((bg) this), (byte) 33);
               return;
             } else {
@@ -415,10 +415,10 @@ final class bg extends af implements qh {
             }
           } else {
             if (!((bg) this).field_ub) {
-              if ((((nk) param0).field_g ^ -1) != -6) {
+              if ((param0.field_g ^ -1) != -6) {
                 var5.a(uc.field_r, -1, param2 ^ -121);
-                if (3 != ((nk) param0).field_g) {
-                  if (-7 == (((nk) param0).field_g ^ -1)) {
+                if (3 != param0.field_g) {
+                  if (-7 == (param0.field_g ^ -1)) {
                     var5.a(jh.field_a, 9, -14);
                     ((bg) this).c((lk) (Object) var5, (byte) 92);
                     return;
@@ -434,8 +434,8 @@ final class bg extends af implements qh {
               } else {
                 var5.a(na.field_p, 11, -14);
                 var5.a(pg.field_f, 17, -14);
-                if (3 != ((nk) param0).field_g) {
-                  if (-7 == (((nk) param0).field_g ^ -1)) {
+                if (3 != param0.field_g) {
+                  if (-7 == (param0.field_g ^ -1)) {
                     var5.a(jh.field_a, 9, -14);
                     ((bg) this).c((lk) (Object) var5, (byte) 92);
                     return;
@@ -451,8 +451,8 @@ final class bg extends af implements qh {
               }
             } else {
               hl discarded$29 = var5.a((pl) this, true, bj.field_b);
-              if (3 != ((nk) param0).field_g) {
-                if (-7 == (((nk) param0).field_g ^ -1)) {
+              if (3 != param0.field_g) {
+                if (-7 == (param0.field_g ^ -1)) {
                   var5.a(jh.field_a, 9, -14);
                   ((bg) this).c((lk) (Object) var5, (byte) 92);
                   return;
@@ -468,9 +468,9 @@ final class bg extends af implements qh {
             }
           }
         } else {
-          field_tb = (qj) null;
-          if (((nk) param0).field_b) {
-            if (((nk) param0).field_e) {
+          field_tb = null;
+          if (param0.field_b) {
+            if (param0.field_e) {
               ((bg) this).c((lk) (Object) new qe((bg) this), (byte) 33);
               return;
             } else {
@@ -480,10 +480,10 @@ final class bg extends af implements qh {
             }
           } else {
             if (!((bg) this).field_ub) {
-              if ((((nk) param0).field_g ^ -1) != -6) {
+              if ((param0.field_g ^ -1) != -6) {
                 var5.a(uc.field_r, -1, param2 ^ -121);
-                if (3 != ((nk) param0).field_g) {
-                  if (-7 == (((nk) param0).field_g ^ -1)) {
+                if (3 != param0.field_g) {
+                  if (-7 == (param0.field_g ^ -1)) {
                     var5.a(jh.field_a, 9, -14);
                     ((bg) this).c((lk) (Object) var5, (byte) 92);
                     return;
@@ -499,8 +499,8 @@ final class bg extends af implements qh {
               } else {
                 var5.a(na.field_p, 11, -14);
                 var5.a(pg.field_f, 17, -14);
-                if (3 != ((nk) param0).field_g) {
-                  if (-7 == (((nk) param0).field_g ^ -1)) {
+                if (3 != param0.field_g) {
+                  if (-7 == (param0.field_g ^ -1)) {
                     var5.a(jh.field_a, 9, -14);
                     ((bg) this).c((lk) (Object) var5, (byte) 92);
                     return;
@@ -516,8 +516,8 @@ final class bg extends af implements qh {
               }
             } else {
               hl discarded$31 = var5.a((pl) this, true, bj.field_b);
-              if (3 != ((nk) param0).field_g) {
-                if (-7 == (((nk) param0).field_g ^ -1)) {
+              if (3 != param0.field_g) {
+                if (-7 == (param0.field_g ^ -1)) {
                   var5.a(jh.field_a, 9, -14);
                   ((bg) this).c((lk) (Object) var5, (byte) 92);
                   return;
@@ -567,16 +567,16 @@ final class bg extends af implements qh {
             if (!((bg) this).field_sb) {
               var2 = qd.b(-86);
               if (var2 == null) {
-                return this.a(true);
+                return super.a(true);
               } else {
                 this.a(var2, false, (byte) 117);
-                return this.a(true);
+                return super.a(true);
               }
             } else {
-              return this.a(true);
+              return super.a(true);
             }
           } else {
-            return this.a(true);
+            return super.a(true);
           }
         } else {
           ((bg) this).field_ub = true;
@@ -584,16 +584,16 @@ final class bg extends af implements qh {
             if (!((bg) this).field_sb) {
               var2 = qd.b(-86);
               if (var2 == null) {
-                return this.a(true);
+                return super.a(true);
               } else {
                 this.a(var2, false, (byte) 117);
-                return this.a(true);
+                return super.a(true);
               }
             } else {
-              return this.a(true);
+              return super.a(true);
             }
           } else {
-            return this.a(true);
+            return super.a(true);
           }
         }
     }

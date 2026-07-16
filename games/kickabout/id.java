@@ -15,8 +15,9 @@ final class id extends qv {
         if (param1 != -12085) {
             return null;
         }
-        ((id) this).field_w[param0] = new hf();
-        return new hf();
+        hf dupTemp$0 = new hf();
+        ((id) this).field_w[param0] = dupTemp$0;
+        return dupTemp$0;
     }
 
     private final void a(id param0, boolean param1, int param2) {
@@ -58,9 +59,10 @@ final class id extends qv {
                     stackIn_6_0 = stackOut_4_0;
                     stackIn_5_0 = stackOut_4_0;
                     if (var6 == null) {
-                      param0.field_w[var4] = new hf();
+                      hf dupTemp$49 = new hf();
+                      param0.field_w[var4] = dupTemp$49;
                       stackOut_6_0 = (hf) (Object) stackIn_6_0;
-                      stackOut_6_1 = new hf();
+                      stackOut_6_1 = (hf) dupTemp$49;
                       stackIn_7_0 = stackOut_6_0;
                       stackIn_7_1 = stackOut_6_1;
                       break L2;
@@ -321,8 +323,9 @@ final class id extends qv {
     public id() {
         ((id) this).field_w = new hf[6];
         ((id) this).field_x = new hf();
-        ((id) this).field_w[0] = new hf();
-        hf var1 = new hf();
+        hf dupTemp$0 = new hf();
+        ((id) this).field_w[0] = dupTemp$0;
+        hf var1 = dupTemp$0;
         var1.a(-13136);
     }
 

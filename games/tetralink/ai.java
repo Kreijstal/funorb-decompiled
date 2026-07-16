@@ -16,101 +16,104 @@ final class ai {
 
     final static ah a(boolean param0, int param1, boolean param2, int param3, byte param4, boolean param5) {
         try {
-            sk var6 = null;
-            IOException var6_ref = null;
-            sk var7 = null;
+            Object var6 = null;
+            Object var7 = null;
             bo var8 = null;
             ah stackIn_16_0 = null;
             Throwable decompiledCaughtException = null;
             ah stackOut_15_0 = null;
             try {
               L0: {
-                var6 = null;
-                var7 = null;
-                if (ug.field_ab.field_g != null) {
-                  ch.field_r = new p(ug.field_ab.field_g, 5200, 0);
-                  ug.field_ab.field_g = null;
-                  var6 = new sk(255, ch.field_r, new p(ug.field_ab.field_b, 12000, 0), 2097152);
-                  break L0;
-                } else {
-                  break L0;
-                }
-              }
-              L1: {
-                if (param4 >= 18) {
-                  break L1;
-                } else {
-                  field_c = null;
-                  break L1;
-                }
-              }
-              L2: {
-                if (ch.field_r == null) {
-                  break L2;
-                } else {
-                  L3: {
-                    if (ok.field_b == null) {
-                      ok.field_b = new p[ug.field_ab.field_m.length];
-                      break L3;
-                    } else {
-                      break L3;
-                    }
+                L1: {
+                  var6 = null;
+                  var7 = null;
+                  if (ug.field_ab.field_g != null) {
+                    ch.field_r = new p(ug.field_ab.field_g, 5200, 0);
+                    ug.field_ab.field_g = null;
+                    var6 = (Object) (Object) new sk(255, ch.field_r, new p(ug.field_ab.field_b, 12000, 0), 2097152);
+                    break L1;
+                  } else {
+                    break L1;
                   }
-                  L4: {
-                    if (null == ok.field_b[param1]) {
-                      ok.field_b[param1] = new p(ug.field_ab.field_m[param1], 12000, 0);
-                      ug.field_ab.field_m[param1] = null;
-                      break L4;
-                    } else {
-                      break L4;
-                    }
+                }
+                L2: {
+                  if (param4 >= 18) {
+                    break L2;
+                  } else {
+                    field_c = null;
+                    break L2;
                   }
-                  var7 = new sk(param1, ch.field_r, ok.field_b[param1], 2097152);
-                  break L2;
                 }
-              }
-              L5: {
-                var8 = mb.field_u.a(param1, 80, var7, var6, param2);
-                if (!param0) {
-                  break L5;
-                } else {
-                  var8.d(5127);
-                  break L5;
+                L3: {
+                  if (ch.field_r == null) {
+                    break L3;
+                  } else {
+                    L4: {
+                      if (ok.field_b == null) {
+                        ok.field_b = new p[ug.field_ab.field_m.length];
+                        break L4;
+                      } else {
+                        break L4;
+                      }
+                    }
+                    L5: {
+                      if (null == ok.field_b[param1]) {
+                        ok.field_b[param1] = new p(ug.field_ab.field_m[param1], 12000, 0);
+                        ug.field_ab.field_m[param1] = null;
+                        break L5;
+                      } else {
+                        break L5;
+                      }
+                    }
+                    var7 = (Object) (Object) new sk(param1, ch.field_r, ok.field_b[param1], 2097152);
+                    break L3;
+                  }
                 }
+                L6: {
+                  var8 = mb.field_u.a(param1, 80, (sk) var7, (sk) var6, param2);
+                  if (!param0) {
+                    break L6;
+                  } else {
+                    var8.d(5127);
+                    break L6;
+                  }
+                }
+                stackOut_15_0 = new ah((hk) (Object) var8, param5, param3);
+                stackIn_16_0 = stackOut_15_0;
+                break L0;
               }
-              stackOut_15_0 = new ah((hk) (Object) var8, param5, param3);
-              stackIn_16_0 = stackOut_15_0;
-            } catch (java.io.IOException decompiledCaughtParameter) {
-              decompiledCaughtException = decompiledCaughtParameter;
-              return stackIn_16_0;
+            } catch (java.io.IOException decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              var6 = (Object) (Object) decompiledCaughtException;
+              throw new RuntimeException(((IOException) var6).toString());
             }
+            return stackIn_16_0;
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
             throw new RuntimeException(decompiledCheckedException);
         }
-        return null;
     }
 
     final static java.net.URL a(java.net.URL param0, byte param1, java.applet.Applet param2) {
-        String var3 = null;
+        Object var3 = null;
         if (param1 >= -101) {
             ai.a(125);
         }
-        String var4 = null;
+        Object var4 = null;
         if (bm.field_s != null) {
             if (!bm.field_s.equals((Object) (Object) param2.getParameter("settings"))) {
-                var3 = bm.field_s;
+                var3 = (Object) (Object) bm.field_s;
                 var4 = var3;
                 var4 = var3;
             }
         }
         if (ke.field_g != null) {
             if (!(ke.field_g.equals((Object) (Object) param2.getParameter("session")))) {
-                var4 = ke.field_g;
+                var4 = (Object) (Object) ke.field_g;
             }
         }
-        return of.a(var3, param0, -1, -103, var4);
+        return of.a((String) var3, param0, -1, -103, (String) var4);
     }
 
     public static void a(int param0) {

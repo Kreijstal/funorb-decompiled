@@ -221,8 +221,7 @@ final class ui extends ch implements pe, tb {
                 break L6;
               }
             }
-            new fe(stackIn_18_3, (cc) null);
-            ((ui) this).field_X = stackIn_18_1;
+            ((ui) this).field_X = new fe(stackIn_18_3, (cc) null);
             if (!((ui) this).field_Y) {
               break L5;
             } else {
@@ -306,11 +305,13 @@ final class ui extends ch implements pe, tb {
           }
         }
         L13: {
-          var11 = new n(10, ((ui) this).field_D, -20 + ((ui) this).field_l, 25, (ei) (Object) ((ui) this).field_R, false, 80, 3, var7, 16777215, var8);
-          ((ui) this).a(true, (ei) (Object) new n(10, ((ui) this).field_D, -20 + ((ui) this).field_l, 25, (ei) (Object) ((ui) this).field_R, false, 80, 3, var7, 16777215, var8));
+          n dupTemp$2 = new n(10, ((ui) this).field_D, -20 + ((ui) this).field_l, 25, (ei) (Object) ((ui) this).field_R, false, 80, 3, var7, 16777215, var8);
+          var11 = dupTemp$2;
+          ((ui) this).a(true, (ei) (Object) dupTemp$2);
           ((ui) this).field_D = ((ui) this).field_D + (((ei) (Object) var11).field_y + 5);
-          var12 = new n(10, ((ui) this).field_D, -20 + ((ui) this).field_l, 25, (ei) (Object) ((ui) this).field_Q, false, 80, 3, var7, 16777215, to.field_n);
-          ((ui) this).a(true, (ei) (Object) new n(10, ((ui) this).field_D, -20 + ((ui) this).field_l, 25, (ei) (Object) ((ui) this).field_Q, false, 80, 3, var7, 16777215, to.field_n));
+          n dupTemp$3 = new n(10, ((ui) this).field_D, -20 + ((ui) this).field_l, 25, (ei) (Object) ((ui) this).field_Q, false, 80, 3, var7, 16777215, to.field_n);
+          var12 = dupTemp$3;
+          ((ui) this).a(true, (ei) (Object) dupTemp$3);
           ((ui) this).field_D = ((ui) this).field_D + (5 + ((ei) (Object) var12).field_y);
           ((ui) this).field_S.field_t = (cc) this;
           if (((ui) this).field_W == null) {
@@ -394,10 +395,10 @@ final class ui extends ch implements pe, tb {
         if (super.a(param0, param1, param2, param3)) {
             return true;
         }
-        if (-99 == param1) {
+        if (-99 == (param1 ^ -1)) {
             return ((ui) this).a(param3, 3);
         }
-        if (-100 == param1) {
+        if (-100 == (param1 ^ -1)) {
             return ((ui) this).b(param3, 0);
         }
         return false;
@@ -427,15 +428,34 @@ final class ui extends ch implements pe, tb {
     }
 
     private final void i(int param0) {
-        if (!td.a(true)) {
-            // ifle L58
-            // if_icmplt L39
-        } else {
-            ui.a((byte) 34, ((ui) this).field_R.field_m, ((ui) this).field_Q.field_m);
+        Object var3 = null;
+        L0: {
+          L1: {
+            if (td.a(true)) {
+              break L1;
+            } else {
+              if (((ui) this).field_R.field_m.length() <= 0) {
+                break L0;
+              } else {
+                if ((((ui) this).field_Q.field_m.length() ^ -1) < -1) {
+                  break L1;
+                } else {
+                  break L0;
+                }
+              }
+            }
+          }
+          ui.a((byte) 34, ((ui) this).field_R.field_m, ((ui) this).field_Q.field_m);
+          break L0;
         }
-        if (param0 != -1) {
-            Object var3 = null;
-            boolean discarded$0 = ((ui) this).a('8', -107, true, (ei) null);
+        L2: {
+          if (param0 == -1) {
+            break L2;
+          } else {
+            var3 = null;
+            boolean discarded$2 = ((ui) this).a('8', -107, true, (ei) null);
+            break L2;
+          }
         }
     }
 
@@ -455,20 +475,39 @@ final class ui extends ch implements pe, tb {
     }
 
     final static void a(String param0, int param1, int param2, boolean param3, int param4) {
-        int var7 = Pool.field_O;
-        aa var5 = new aa(ne.field_r);
-        lk var6 = (lk) (Object) var5.b((byte) -92);
-        while (var6 != null) {
-            if (var6.field_x != param0) {
-                // ifne L64
-            } else {
-                return;
+        aa var5 = null;
+        lk var6 = null;
+        int var7 = 0;
+        var7 = Pool.field_O;
+        var5 = new aa(ne.field_r);
+        var6 = (lk) (Object) var5.b((byte) -92);
+        L0: while (true) {
+          if (var6 == null) {
+            L1: {
+              n.a(8, param0, param1, param3, param4);
+              if (param2 == -6) {
+                break L1;
+              } else {
+                field_ab = null;
+                break L1;
+              }
             }
-            var6 = (lk) (Object) var5.b(-84);
-        }
-        n.a(8, param0, param1, param3, param4);
-        if (param2 != -6) {
-            field_ab = null;
+            return;
+          } else {
+            L2: {
+              if (var6.field_x == param0) {
+                break L2;
+              } else {
+                if (var6.field_x.equals((Object) (Object) param0)) {
+                  break L2;
+                } else {
+                  var6 = (lk) (Object) var5.b(-84);
+                  continue L0;
+                }
+              }
+            }
+            return;
+          }
         }
     }
 

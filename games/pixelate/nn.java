@@ -256,26 +256,32 @@ final class nn {
             Throwable decompiledCaughtException = null;
             try {
               L0: {
-                var9 = param0.getParameter("cookiehost");
-                var7 = var9;
-                var7 = var9;
-                var8 = 46 % ((18 - param1) / 49);
-                var10 = param3 + "=" + param2 + "; version=1; path=/; domain=" + var9;
-                var7 = var10;
-                var7 = var10;
-                if ((param4 ^ -1L) <= -1L) {
-                  var7 = var10 + "; Expires=" + po.a(10, param4 * 1000L + hm.a(64)) + "; Max-Age=" + param4;
-                  break L0;
-                } else {
-                  var7 = var10 + "; Discard;";
-                  break L0;
+                L1: {
+                  var9 = param0.getParameter("cookiehost");
+                  var7 = var9;
+                  var7 = var9;
+                  var8 = 46 % ((18 - param1) / 49);
+                  var10 = param3 + "=" + param2 + "; version=1; path=/; domain=" + var9;
+                  var7 = var10;
+                  var7 = var10;
+                  if ((param4 ^ -1L) <= -1L) {
+                    var7 = var10 + "; Expires=" + po.a(10, param4 * 1000L + hm.a(64)) + "; Max-Age=" + param4;
+                    break L1;
+                  } else {
+                    var7 = var10 + "; Discard;";
+                    break L1;
+                  }
                 }
+                cq.a(param0, (byte) -115, "document.cookie=\"" + var7 + "\"");
+                break L0;
               }
-              cq.a(param0, (byte) -115, "document.cookie=\"" + var7 + "\"");
-            } catch (java.lang.Throwable decompiledCaughtParameter) {
-              decompiledCaughtException = decompiledCaughtParameter;
+            } catch (java.lang.Throwable decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              L2: {
+                var6 = decompiledCaughtException;
+                break L2;
+              }
             }
-            var6 = decompiledCaughtException;
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {

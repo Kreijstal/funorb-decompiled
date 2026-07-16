@@ -57,8 +57,9 @@ final class hp extends jb {
     hp(int param0, int param1, int param2, int param3, int param4, int param5, int[] param6) {
         ((hp) this).field_l = param2;
         ((hp) this).field_p = param6;
+        int fieldTemp$0 = fq.field_D;
         fq.field_D = fq.field_D + 1;
-        ((hp) this).field_n = fq.field_D & 65535;
+        ((hp) this).field_n = fieldTemp$0 & 65535;
         ((hp) this).field_f = param3;
         ((hp) this).field_o = param4;
         ((hp) this).field_h = param5;

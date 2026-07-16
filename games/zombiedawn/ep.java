@@ -15,13 +15,13 @@ final class ep extends le {
         int var1 = 0;
         int var2 = ZombieDawn.field_J;
         wo.field_yb.a(true);
-        for (var1 = 0; var1 > -33; var1++) {
+        for (var1 = 0; (var1 ^ -1) > -33; var1++) {
             ji.field_c[var1] = 0L;
         }
         if (param0 != -50) {
             return;
         }
-        for (var1 = 0; -33 > var1; var1++) {
+        for (var1 = 0; -33 < (var1 ^ -1); var1++) {
             ZombieDawn.field_E[var1] = 0L;
         }
         fc.field_Ob = 0;

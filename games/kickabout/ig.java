@@ -46,7 +46,7 @@ final class ig {
           } else {
             var3 = 1;
             L1: while (true) {
-              if (var3 >= wm.field_s) {
+              if ((var3 ^ -1) <= (wm.field_s ^ -1)) {
                 break L0;
               } else {
                 nn.field_C.c(qj.field_e + param0, 18 + bi.field_i + var2);
@@ -79,7 +79,7 @@ final class ig {
                 var4 = Math.abs(dc.field_d);
                 var3 = 0;
                 L5: while (true) {
-                  if (-1 <= var4) {
+                  if (-1 <= (var4 ^ -1)) {
                     L6: {
                       if (dc.field_d < 0) {
                         un.field_d.a(vl.field_b, qj.field_e + (140 + -(var3 * field_a[0].field_q) + param0), bi.field_i - (-35 + 2 * (-wm.field_s + 18)), 16729156, -1);
@@ -94,7 +94,7 @@ final class ig {
                     break L3;
                   } else {
                     L7: {
-                      if (-1 > dc.field_d) {
+                      if (-1 < (dc.field_d ^ -1)) {
                         wk.field_d[var4 % 10].c(param0 + -(wk.field_d[0].field_q * var3) + (140 + qj.field_e), -36 - (-(2 * wm.field_s) - (24 + bi.field_i)));
                         break L7;
                       } else {

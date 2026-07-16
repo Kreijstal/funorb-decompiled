@@ -77,53 +77,53 @@ final class vk extends am {
         int var10 = 0;
         int var11 = 0;
         int[] var12 = null;
-        int stackIn_14_0 = 0;
-        int stackIn_17_0 = 0;
-        int stackIn_20_0 = 0;
-        int stackIn_23_0 = 0;
-        int stackIn_26_0 = 0;
-        int stackIn_29_0 = 0;
-        int stackIn_32_0 = 0;
-        int stackIn_35_0 = 0;
+        int stackIn_12_0 = 0;
+        int stackIn_15_0 = 0;
+        int stackIn_18_0 = 0;
+        int stackIn_21_0 = 0;
+        int stackIn_24_0 = 0;
+        int stackIn_27_0 = 0;
+        int stackIn_30_0 = 0;
+        int stackIn_33_0 = 0;
+        int[] stackIn_34_0 = null;
+        int stackIn_34_1 = 0;
+        int[] stackIn_35_0 = null;
+        int stackIn_35_1 = 0;
         int[] stackIn_36_0 = null;
         int stackIn_36_1 = 0;
         int[] stackIn_37_0 = null;
         int stackIn_37_1 = 0;
         int[] stackIn_38_0 = null;
         int stackIn_38_1 = 0;
-        int[] stackIn_39_0 = null;
-        int stackIn_39_1 = 0;
-        int[] stackIn_40_0 = null;
-        int stackIn_40_1 = 0;
-        int stackIn_40_2 = 0;
+        int stackIn_38_2 = 0;
+        int stackOut_11_0 = 0;
+        int stackOut_10_0 = 0;
+        int stackOut_14_0 = 0;
         int stackOut_13_0 = 0;
-        int stackOut_12_0 = 0;
+        int stackOut_17_0 = 0;
         int stackOut_16_0 = 0;
-        int stackOut_15_0 = 0;
+        int stackOut_20_0 = 0;
         int stackOut_19_0 = 0;
-        int stackOut_18_0 = 0;
+        int stackOut_23_0 = 0;
         int stackOut_22_0 = 0;
-        int stackOut_21_0 = 0;
+        int stackOut_26_0 = 0;
         int stackOut_25_0 = 0;
-        int stackOut_24_0 = 0;
+        int stackOut_29_0 = 0;
         int stackOut_28_0 = 0;
-        int stackOut_27_0 = 0;
+        int stackOut_32_0 = 0;
         int stackOut_31_0 = 0;
-        int stackOut_30_0 = 0;
-        int stackOut_34_0 = 0;
-        int stackOut_33_0 = 0;
+        int[] stackOut_33_0 = null;
+        int stackOut_33_1 = 0;
+        int[] stackOut_34_0 = null;
+        int stackOut_34_1 = 0;
+        int[] stackOut_37_0 = null;
+        int stackOut_37_1 = 0;
+        int stackOut_37_2 = 0;
         int[] stackOut_35_0 = null;
         int stackOut_35_1 = 0;
         int[] stackOut_36_0 = null;
         int stackOut_36_1 = 0;
-        int[] stackOut_39_0 = null;
-        int stackOut_39_1 = 0;
-        int stackOut_39_2 = 0;
-        int[] stackOut_37_0 = null;
-        int stackOut_37_1 = 0;
-        int[] stackOut_38_0 = null;
-        int stackOut_38_1 = 0;
-        int stackOut_38_2 = 0;
+        int stackOut_36_2 = 0;
         var11 = Torquing.field_u;
         var12 = ((vk) this).field_l.a(param1, 25657);
         var3 = var12;
@@ -131,167 +131,167 @@ final class vk extends am {
           var4 = -2048 + dp.field_a[param1];
           var5 = 0;
           L0: while (true) {
-            if (ci.field_c > var5) {
+            if ((ci.field_c ^ -1) < (var5 ^ -1)) {
               L1: {
                 var6 = q.field_b[var5] + -2048;
                 var7 = var6 - -((vk) this).field_u;
                 if (var7 < -2048) {
-                  stackOut_13_0 = var7 - -4096;
-                  stackIn_14_0 = stackOut_13_0;
+                  stackOut_11_0 = var7 - -4096;
+                  stackIn_12_0 = stackOut_11_0;
                   break L1;
                 } else {
-                  stackOut_12_0 = var7;
-                  stackIn_14_0 = stackOut_12_0;
+                  stackOut_10_0 = var7;
+                  stackIn_12_0 = stackOut_10_0;
                   break L1;
                 }
               }
               L2: {
-                var7 = stackIn_14_0;
+                var7 = stackIn_12_0;
                 if (-2049 <= (var7 ^ -1)) {
-                  stackOut_16_0 = var7;
-                  stackIn_17_0 = stackOut_16_0;
+                  stackOut_14_0 = var7;
+                  stackIn_15_0 = stackOut_14_0;
                   break L2;
                 } else {
-                  stackOut_15_0 = var7 - 4096;
-                  stackIn_17_0 = stackOut_15_0;
+                  stackOut_13_0 = var7 - 4096;
+                  stackIn_15_0 = stackOut_13_0;
                   break L2;
                 }
               }
               L3: {
-                var7 = stackIn_17_0;
+                var7 = stackIn_15_0;
                 var8 = var4 - -((vk) this).field_y;
                 if ((var8 ^ -1) > 2047) {
-                  stackOut_19_0 = 4096 + var8;
-                  stackIn_20_0 = stackOut_19_0;
+                  stackOut_17_0 = 4096 + var8;
+                  stackIn_18_0 = stackOut_17_0;
                   break L3;
                 } else {
-                  stackOut_18_0 = var8;
-                  stackIn_20_0 = stackOut_18_0;
+                  stackOut_16_0 = var8;
+                  stackIn_18_0 = stackOut_16_0;
                   break L3;
                 }
               }
               L4: {
-                var8 = stackIn_20_0;
+                var8 = stackIn_18_0;
                 if (var8 <= 2048) {
-                  stackOut_22_0 = var8;
-                  stackIn_23_0 = stackOut_22_0;
+                  stackOut_20_0 = var8;
+                  stackIn_21_0 = stackOut_20_0;
                   break L4;
                 } else {
-                  stackOut_21_0 = var8 - 4096;
-                  stackIn_23_0 = stackOut_21_0;
+                  stackOut_19_0 = var8 - 4096;
+                  stackIn_21_0 = stackOut_19_0;
                   break L4;
                 }
               }
               L5: {
-                var8 = stackIn_23_0;
+                var8 = stackIn_21_0;
                 var9 = var6 + ((vk) this).field_v;
                 if (var9 >= -2048) {
-                  stackOut_25_0 = var9;
-                  stackIn_26_0 = stackOut_25_0;
+                  stackOut_23_0 = var9;
+                  stackIn_24_0 = stackOut_23_0;
                   break L5;
                 } else {
-                  stackOut_24_0 = 4096 + var9;
-                  stackIn_26_0 = stackOut_24_0;
+                  stackOut_22_0 = 4096 + var9;
+                  stackIn_24_0 = stackOut_22_0;
                   break L5;
                 }
               }
               L6: {
-                var9 = stackIn_26_0;
+                var9 = stackIn_24_0;
                 if ((var9 ^ -1) >= -2049) {
-                  stackOut_28_0 = var9;
-                  stackIn_29_0 = stackOut_28_0;
+                  stackOut_26_0 = var9;
+                  stackIn_27_0 = stackOut_26_0;
                   break L6;
                 } else {
-                  stackOut_27_0 = -4096 + var9;
-                  stackIn_29_0 = stackOut_27_0;
+                  stackOut_25_0 = -4096 + var9;
+                  stackIn_27_0 = stackOut_25_0;
                   break L6;
                 }
               }
               L7: {
-                var9 = stackIn_29_0;
+                var9 = stackIn_27_0;
                 var10 = var4 - -((vk) this).field_t;
-                if (var10 > 2047) {
-                  stackOut_31_0 = 4096 + var10;
-                  stackIn_32_0 = stackOut_31_0;
+                if ((var10 ^ -1) > 2047) {
+                  stackOut_29_0 = 4096 + var10;
+                  stackIn_30_0 = stackOut_29_0;
                   break L7;
                 } else {
-                  stackOut_30_0 = var10;
-                  stackIn_32_0 = stackOut_30_0;
+                  stackOut_28_0 = var10;
+                  stackIn_30_0 = stackOut_28_0;
                   break L7;
                 }
               }
               L8: {
-                var10 = stackIn_32_0;
-                if (-2049 < var10) {
-                  stackOut_34_0 = -4096 + var10;
-                  stackIn_35_0 = stackOut_34_0;
+                var10 = stackIn_30_0;
+                if (-2049 > (var10 ^ -1)) {
+                  stackOut_32_0 = -4096 + var10;
+                  stackIn_33_0 = stackOut_32_0;
                   break L8;
                 } else {
-                  stackOut_33_0 = var10;
-                  stackIn_35_0 = stackOut_33_0;
+                  stackOut_31_0 = var10;
+                  stackIn_33_0 = stackOut_31_0;
                   break L8;
                 }
               }
               L9: {
                 L10: {
-                  var10 = stackIn_35_0;
-                  stackOut_35_0 = (int[]) var12;
-                  stackOut_35_1 = var5;
-                  stackIn_38_0 = stackOut_35_0;
-                  stackIn_38_1 = stackOut_35_1;
-                  stackIn_36_0 = stackOut_35_0;
-                  stackIn_36_1 = stackOut_35_1;
+                  var10 = stackIn_33_0;
+                  stackOut_33_0 = (int[]) var12;
+                  stackOut_33_1 = var5;
+                  stackIn_36_0 = stackOut_33_0;
+                  stackIn_36_1 = stackOut_33_1;
+                  stackIn_34_0 = stackOut_33_0;
+                  stackIn_34_1 = stackOut_33_1;
                   if (this.d(var7, 2016089164, var8)) {
                     break L10;
                   } else {
-                    stackOut_36_0 = (int[]) (Object) stackIn_36_0;
-                    stackOut_36_1 = stackIn_36_1;
-                    stackIn_39_0 = stackOut_36_0;
-                    stackIn_39_1 = stackOut_36_1;
-                    stackIn_37_0 = stackOut_36_0;
-                    stackIn_37_1 = stackOut_36_1;
+                    stackOut_34_0 = (int[]) (Object) stackIn_34_0;
+                    stackOut_34_1 = stackIn_34_1;
+                    stackIn_37_0 = stackOut_34_0;
+                    stackIn_37_1 = stackOut_34_1;
+                    stackIn_35_0 = stackOut_34_0;
+                    stackIn_35_1 = stackOut_34_1;
                     if (!this.a(var9, var10, (byte) 107)) {
-                      stackOut_39_0 = (int[]) (Object) stackIn_39_0;
-                      stackOut_39_1 = stackIn_39_1;
-                      stackOut_39_2 = 0;
-                      stackIn_40_0 = stackOut_39_0;
-                      stackIn_40_1 = stackOut_39_1;
-                      stackIn_40_2 = stackOut_39_2;
-                      break L9;
-                    } else {
                       stackOut_37_0 = (int[]) (Object) stackIn_37_0;
                       stackOut_37_1 = stackIn_37_1;
+                      stackOut_37_2 = 0;
                       stackIn_38_0 = stackOut_37_0;
                       stackIn_38_1 = stackOut_37_1;
+                      stackIn_38_2 = stackOut_37_2;
+                      break L9;
+                    } else {
+                      stackOut_35_0 = (int[]) (Object) stackIn_35_0;
+                      stackOut_35_1 = stackIn_35_1;
+                      stackIn_36_0 = stackOut_35_0;
+                      stackIn_36_1 = stackOut_35_1;
                       break L10;
                     }
                   }
                 }
-                stackOut_38_0 = (int[]) (Object) stackIn_38_0;
-                stackOut_38_1 = stackIn_38_1;
-                stackOut_38_2 = 4096;
-                stackIn_40_0 = stackOut_38_0;
-                stackIn_40_1 = stackOut_38_1;
-                stackIn_40_2 = stackOut_38_2;
+                stackOut_36_0 = (int[]) (Object) stackIn_36_0;
+                stackOut_36_1 = stackIn_36_1;
+                stackOut_36_2 = 4096;
+                stackIn_38_0 = stackOut_36_0;
+                stackIn_38_1 = stackOut_36_1;
+                stackIn_38_2 = stackOut_36_2;
                 break L9;
               }
-              stackIn_40_0[stackIn_40_1] = stackIn_40_2;
+              stackIn_38_0[stackIn_38_1] = stackIn_38_2;
               var5++;
               continue L0;
             } else {
-              if (param0 < 86) {
-                int[] discarded$2 = ((vk) this).a((byte) 37, 0);
+              if (param0 >= 86) {
                 return var3;
               } else {
+                int[] discarded$2 = ((vk) this).a((byte) 37, 0);
                 return var3;
               }
             }
           }
         } else {
-          if (param0 < 86) {
-            int[] discarded$3 = ((vk) this).a((byte) 37, 0);
+          if (param0 >= 86) {
             return var3;
           } else {
+            int[] discarded$3 = ((vk) this).a((byte) 37, 0);
             return var3;
           }
         }

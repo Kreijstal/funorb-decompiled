@@ -341,8 +341,9 @@ final class di {
                           if (var9 == 0L) {
                             break L7;
                           } else {
+                            int incrementValue$1 = param4;
                             param4--;
-                            if (0 == param4) {
+                            if (0 == incrementValue$1) {
                               break L7;
                             } else {
                               var9 = var9 * (long)param5;
@@ -541,7 +542,6 @@ final class di {
 
     private final synchronized byte[] a(int[] param0, int param1, int param2, int param3) {
         Object var5 = null;
-        byte[] var5_array = null;
         byte[] var7 = null;
         if (this.c(param1 ^ 21916, param2, param3)) {
           L0: {
@@ -580,7 +580,7 @@ final class di {
             L3: {
               if (((di) this).field_c[param3][param2] != null) {
                 var7 = or.a(((di) this).field_c[param3][param2], param1 ^ 19261, false);
-                var5_array = var7;
+                var5 = (Object) (Object) var7;
                 if (var7 != null) {
                   break L3;
                 } else {
@@ -591,10 +591,10 @@ final class di {
               }
             }
             L4: {
-              if (var5_array == null) {
+              if (var5 == null) {
                 break L4;
               } else {
-                if (((di) this).field_k != -2) {
+                if ((((di) this).field_k ^ -1) != -2) {
                   if ((((di) this).field_k ^ -1) != -3) {
                     break L4;
                   } else {
@@ -603,7 +603,7 @@ final class di {
                   }
                 } else {
                   ((di) this).field_c[param3][param2] = null;
-                  if (-2 != ((di) this).field_f.field_z[param3]) {
+                  if (-2 != (((di) this).field_f.field_z[param3] ^ -1)) {
                     break L4;
                   } else {
                     ((di) this).field_c[param3] = null;
@@ -612,7 +612,7 @@ final class di {
                 }
               }
             }
-            return var5_array;
+            return (byte[]) var5;
           } else {
             throw new RuntimeException("");
           }
@@ -764,6 +764,7 @@ final class di {
               ((di) this).field_i = stackIn_6_1 != 0;
               ((di) this).field_k = param2;
               ((di) this).field_d = param0;
+              return;
             } else {
               break L0;
             }

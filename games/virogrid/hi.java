@@ -216,7 +216,7 @@ final class hi {
         int stackOut_22_0 = 0;
         int stackOut_21_0 = 0;
         L0: {
-          int discarded$1 = gj.a(24);
+          int discarded$2 = gj.a(24);
           ((hi) this).field_b = gj.a(16);
           ((hi) this).field_d = gj.a(24);
           ((hi) this).field_a = new int[((hi) this).field_d];
@@ -283,8 +283,9 @@ final class hi {
                     var3_int++;
                     continue L5;
                   } else {
+                    int incrementValue$3 = var2;
                     var2++;
-                    ((hi) this).field_a[var2] = var3_int;
+                    ((hi) this).field_a[incrementValue$3] = var3_int;
                     var5++;
                     continue L6;
                   }

@@ -25,17 +25,36 @@ class tb extends an {
 
     private final int b(boolean param0) {
         int var2 = 0;
-        int var3 = ZombieDawn.field_J;
-        if (((tb) this).field_N == 0) {
-            return ((tb) this).field_N;
+        int var3 = 0;
+        var3 = ZombieDawn.field_J;
+        if (((tb) this).field_N != 0) {
+          L0: {
+            if (param0) {
+              break L0;
+            } else {
+              field_K = null;
+              break L0;
+            }
+          }
+          var2 = ((tb) this).field_N - 1;
+          L1: while (true) {
+            L2: {
+              if ((var2 ^ -1) >= -1) {
+                break L2;
+              } else {
+                if (32 == ((tb) this).field_o.charAt(var2 - 1)) {
+                  break L2;
+                } else {
+                  var2--;
+                  continue L1;
+                }
+              }
+            }
+            return var2;
+          }
+        } else {
+          return ((tb) this).field_N;
         }
-        if (!param0) {
-            field_K = null;
-        }
-        for (var2 = ((tb) this).field_N - 1; (var2 ^ -1) < -1; var2--) {
-            // if_icmpeq L66
-        }
-        return var2;
     }
 
     private final void g(byte param0) {
@@ -64,8 +83,9 @@ class tb extends an {
                 ((tb) this).field_o = ((tb) this).field_o.substring(0, ((tb) this).field_O);
             }
         }
-        ((tb) this).field_H = ((tb) this).field_o.length();
-        ((tb) this).field_N = ((tb) this).field_o.length();
+        int dupTemp$0 = ((tb) this).field_o.length();
+        ((tb) this).field_H = dupTemp$0;
+        ((tb) this).field_N = dupTemp$0;
         if (param0) {
             return;
         }
@@ -142,20 +162,39 @@ class tb extends an {
     }
 
     private final int f(byte param0) {
-        int var4 = ZombieDawn.field_J;
-        int var2 = ((tb) this).field_o.length();
-        if (var2 == ((tb) this).field_N) {
-            return ((tb) this).field_N;
+        int var2 = 0;
+        int var3 = 0;
+        int var4 = 0;
+        var4 = ZombieDawn.field_J;
+        var2 = ((tb) this).field_o.length();
+        if (var2 != ((tb) this).field_N) {
+          L0: {
+            var3 = ((tb) this).field_N - -1;
+            if (param0 == 7) {
+              break L0;
+            } else {
+              ((tb) this).field_F = false;
+              break L0;
+            }
+          }
+          L1: while (true) {
+            L2: {
+              if (var3 >= var2) {
+                break L2;
+              } else {
+                if (-33 == (((tb) this).field_o.charAt(var3 - 1) ^ -1)) {
+                  break L2;
+                } else {
+                  var3++;
+                  continue L1;
+                }
+              }
+            }
+            return var3;
+          }
+        } else {
+          return ((tb) this).field_N;
         }
-        int var3 = ((tb) this).field_N - -1;
-        if (param0 != 7) {
-            ((tb) this).field_F = false;
-        }
-        while (var3 < var2) {
-            // if_icmpeq L75
-            var3++;
-        }
-        return var3;
     }
 
     final void a(int param0, int param1, int param2, int param3) {
@@ -248,38 +287,21 @@ class tb extends an {
             int var2 = 0;
             Exception var3 = null;
             String var3_ref = null;
-            int statePc = 0;
-            Throwable caughtException = null;
-            stateLoop: while (true) {
-                switch (statePc) {
-                    case 0: {
-                        var2 = -11 % ((-30 - param0) / 58);
-                        statePc = 1;
-                        continue stateLoop;
-                    }
-                    case 1: {
-                        try {
-                            var3_ref = (String) java.awt.Toolkit.getDefaultToolkit().getSystemClipboard().getContents((Object) null).getTransferData(java.awt.datatransfer.DataFlavor.stringFlavor);
-                            this.h(127);
-                            this.a(var3_ref, (byte) -37);
-                            statePc = 4;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_1) {
-                            caughtException = stateCaught_1;
-                            statePc = 3;
-                            continue stateLoop;
-                        }
-                    }
-                    case 3: {
-                        var3 = (Exception) (Object) caughtException;
-                        statePc = 4;
-                        continue stateLoop;
-                    }
-                    case 4: {
-                        return;
-                    }
-                    default: throw new IllegalStateException("invalid CFG state " + statePc);
-                }
+            Throwable decompiledCaughtException = null;
+            var2 = -11 % ((-30 - param0) / 58);
+            try {
+              L0: {
+                var3_ref = (String) java.awt.Toolkit.getDefaultToolkit().getSystemClipboard().getContents((Object) null).getTransferData(java.awt.datatransfer.DataFlavor.stringFlavor);
+                this.h(127);
+                this.a(var3_ref, (byte) -37);
+                break L0;
+              }
+            } catch (java.lang.Exception decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              L1: {
+                var3 = (Exception) (Object) decompiledCaughtException;
+                break L1;
+              }
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -612,7 +634,7 @@ class tb extends an {
                       if (-1 == ((tb) this).field_O) {
                         break L3;
                       } else {
-                        if (((tb) this).field_o.length() < ((tb) this).field_O) {
+                        if ((((tb) this).field_o.length() ^ -1) > (((tb) this).field_O ^ -1)) {
                           break L3;
                         } else {
                           break L2;
@@ -620,15 +642,16 @@ class tb extends an {
                       }
                     }
                     L4: {
-                      if (((tb) this).field_N < ((tb) this).field_o.length()) {
+                      if ((((tb) this).field_N ^ -1) > (((tb) this).field_o.length() ^ -1)) {
                         ((tb) this).field_o = ((tb) this).field_o.substring(0, ((tb) this).field_N) + param3 + ((tb) this).field_o.substring(((tb) this).field_N, ((tb) this).field_o.length());
                         ((tb) this).field_N = ((tb) this).field_N + 1;
                         ((tb) this).field_H = ((tb) this).field_N;
                         break L4;
                       } else {
                         ((tb) this).field_o = ((tb) this).field_o + param3;
-                        ((tb) this).field_N = ((tb) this).field_o.length();
-                        ((tb) this).field_H = ((tb) this).field_o.length();
+                        int dupTemp$1 = ((tb) this).field_o.length();
+                        ((tb) this).field_N = dupTemp$1;
+                        ((tb) this).field_H = dupTemp$1;
                         break L4;
                       }
                     }
@@ -672,8 +695,8 @@ class tb extends an {
                       }
                     } else {
                       if (param1 != 97) {
-                        if (param1 != -103) {
-                          if (-104 == param1) {
+                        if ((param1 ^ -1) != -103) {
+                          if (-104 == (param1 ^ -1)) {
                             this.a(((tb) this).field_o.length(), 81);
                             return true;
                           } else {
@@ -722,7 +745,7 @@ class tb extends an {
                           return true;
                         }
                       } else {
-                        if (((tb) this).field_N < ((tb) this).field_o.length()) {
+                        if ((((tb) this).field_N ^ -1) > (((tb) this).field_o.length() ^ -1)) {
                           L9: {
                             stackOut_24_0 = this;
                             stackIn_26_0 = stackOut_24_0;
@@ -757,7 +780,7 @@ class tb extends an {
                     this.h(-96);
                     return true;
                   } else {
-                    if (((tb) this).field_N < ((tb) this).field_o.length()) {
+                    if ((((tb) this).field_N ^ -1) > (((tb) this).field_o.length() ^ -1)) {
                       ((tb) this).field_H = ((tb) this).field_N - -1;
                       this.h(-82);
                       return true;

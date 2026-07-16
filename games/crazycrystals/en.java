@@ -242,8 +242,9 @@ abstract class en extends ab {
         } else {
             var2 = ((en) this).field_H;
             var3 = ((en) this).field_G;
+            int fieldTemp$0 = ((en) this).field_J + 1;
             ((en) this).field_J = ((en) this).field_J + 1;
-            if (((en) this).field_J + 1 >= ((en) this).field_P) {
+            if (fieldTemp$0 >= ((en) this).field_P) {
                 ((en) this).field_P = 0;
                 ((en) this).k(param0 ^ 34);
             } else {

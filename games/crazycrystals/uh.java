@@ -49,8 +49,9 @@ final class uh extends fa {
               return new String(var15, 0, var5);
             } else {
               L1: {
+                int incrementValue$8 = var6;
                 var6++;
-                var8 = param0[var6] & 255;
+                var8 = param0[incrementValue$8] & 255;
                 if (-129 < (var8 ^ -1)) {
                   if (-1 != (var8 ^ -1)) {
                     var9 = var8;
@@ -72,8 +73,9 @@ final class uh extends fa {
                           if ((192 & param0[var6]) != 128) {
                             break L2;
                           } else {
+                            int incrementValue$9 = var6;
                             var6++;
-                            var9 = param0[var6] & 63 | (var8 & 31) << 1013441158;
+                            var9 = param0[incrementValue$9] & 63 | (var8 & 31) << 1013441158;
                             if (128 > var9) {
                               var9 = 65533;
                               break L1;
@@ -95,9 +97,11 @@ final class uh extends fa {
                               break L3;
                             } else {
                               if ((192 & param0[var6 + 1]) == 128) {
+                                int incrementValue$10 = var6;
                                 var6++;
+                                int incrementValue$11 = var6;
                                 var6++;
-                                var9 = param0[var6] << 730108486 & 4032 | var8 << 1647473388 & 61440 | 63 & param0[var6];
+                                var9 = param0[incrementValue$10] << 730108486 & 4032 | var8 << 1647473388 & 61440 | 63 & param0[incrementValue$11];
                                 if (-2049 >= (var9 ^ -1)) {
                                   break L1;
                                 } else {
@@ -126,10 +130,13 @@ final class uh extends fa {
                                 } else {
                                   if ((param0[var6 - -2] & 192) == 128) {
                                     L5: {
+                                      int incrementValue$12 = var6;
                                       var6++;
+                                      int incrementValue$13 = var6;
                                       var6++;
+                                      int incrementValue$14 = var6;
                                       var6++;
-                                      var9 = 1835008 & var8 << 2080498002 | (param0[var6] & 63) << -335295220 | (param0[var6] & 63) << -395589018 | param0[var6] & 63;
+                                      var9 = 1835008 & var8 << 2080498002 | (param0[incrementValue$12] & 63) << -335295220 | (param0[incrementValue$13] & 63) << -395589018 | param0[incrementValue$14] & 63;
                                       if (65536 > var9) {
                                         break L5;
                                       } else {
@@ -161,8 +168,9 @@ final class uh extends fa {
                   }
                 }
               }
+              int incrementValue$15 = var5;
               var5++;
-              var11[var5] = (char)var9;
+              var11[incrementValue$15] = (char)var9;
               continue L0;
             }
           }

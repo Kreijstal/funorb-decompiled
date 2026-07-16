@@ -378,10 +378,8 @@ final class tm extends l {
         km var17 = null;
         int var18 = 0;
         Object var19_ref = null;
-        mg var19_ref_mg = null;
         int var19 = 0;
         Object var20 = null;
-        String var20_ref = null;
         int var21 = 0;
         km var23 = null;
         km var24 = null;
@@ -513,8 +511,7 @@ final class tm extends l {
             }
           }
           L2: {
-            new km(stackIn_7_2, stackIn_7_3, ((String) (Object) stackIn_7_4).toUpperCase());
-            dc.field_R = stackIn_7_0;
+            dc.field_R = new km(stackIn_7_2, stackIn_7_3, ((String) (Object) stackIn_7_4).toUpperCase());
             hg.field_p = new km(0L, (km) null);
             hg.field_p.a(0, ng.field_Z);
             hg.field_p.a(0, nk.field_I);
@@ -661,10 +658,10 @@ final class tm extends l {
                             break L15;
                           } else {
                             if (null != sf.field_J[var17_int]) {
-                              var19_ref_mg = sf.field_J[var17_int][var18];
+                              var19_ref = (Object) (Object) sf.field_J[var17_int][var18];
                               break L15;
                             } else {
-                              var19_ref_mg = null;
+                              var19_ref = null;
                               break L15;
                             }
                           }
@@ -675,11 +672,11 @@ final class tm extends l {
                               var20 = null;
                               break L16;
                             } else {
-                              var20_ref = uf.field_d[var17_int][var18];
+                              var20 = (Object) (Object) uf.field_d[var17_int][var18];
                               break L16;
                             }
                           } else {
-                            var20_ref = null;
+                            var20 = null;
                             break L16;
                           }
                         }

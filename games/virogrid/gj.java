@@ -57,7 +57,6 @@ final class gj extends l {
         int var16 = 0;
         int var17_int = 0;
         Object var17 = null;
-        float[] var17_array = null;
         int var18_int = 0;
         float[] var18 = null;
         int var19 = 0;
@@ -573,7 +572,7 @@ final class gj extends l {
                   var50 = var54;
                   var46 = var50;
                   var40 = var46;
-                  var17_array = var40;
+                  var17 = (Object) (Object) var40;
                   if (((gj) this).field_M) {
                     break L36;
                   } else {
@@ -631,7 +630,7 @@ final class gj extends l {
               }
             }
             ((gj) this).field_M = stackIn_111_1 != 0;
-            return var17_array;
+            return (float[]) var17;
           } else {
             var42 = field_v[var14.field_a[var17_int]];
             var55 = field_r;
@@ -929,8 +928,9 @@ final class gj extends l {
                       break L3;
                     }
                   }
+                  int incrementValue$1 = var2;
                   var2++;
-                  var1[var2] = (byte)(var7 - 128);
+                  var1[incrementValue$1] = (byte)(var7 - 128);
                   var6++;
                   continue L2;
                 } else {
@@ -948,6 +948,7 @@ final class gj extends l {
 
     final static gj a(eh param0, String param1, String param2) {
         try {
+            gj var4_ref = null;
             if (!gj.a(param0)) {
                 boolean discarded$0 = param0.a(param1, param2, -1126362654);
                 return null;
@@ -956,13 +957,13 @@ final class gj extends l {
             if (var3 == null) {
                 return null;
             }
-            gj var4 = null;
+            Object var4 = null;
             try {
-                var4 = new gj(var3);
+                var4_ref = new gj(var3);
             } catch (IOException iOException) {
                 iOException.printStackTrace();
             }
-            return var4;
+            return var4_ref;
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
@@ -1070,8 +1071,9 @@ final class gj extends l {
                         break L8;
                       }
                     }
+                    int incrementValue$1 = var3;
                     var3++;
-                    ((gj) this).field_F[var3] = (byte)(var6 - 128);
+                    ((gj) this).field_F[incrementValue$1] = (byte)(var6 - 128);
                     var5++;
                     continue L6;
                   }
@@ -1135,6 +1137,7 @@ final class gj extends l {
 
     final static gj a(eh param0, int param1, int param2) {
         try {
+            gj var4_ref = null;
             if (!gj.a(param0)) {
                 boolean discarded$0 = param0.a(param1, (byte) 127, param2);
                 return null;
@@ -1143,13 +1146,13 @@ final class gj extends l {
             if (var3 == null) {
                 return null;
             }
-            gj var4 = null;
+            Object var4 = null;
             try {
-                var4 = new gj(var3);
+                var4_ref = new gj(var3);
             } catch (IOException iOException) {
                 iOException.printStackTrace();
             }
-            return var4;
+            return var4_ref;
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {

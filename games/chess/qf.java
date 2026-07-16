@@ -38,7 +38,6 @@ final class qf {
         dh var49 = null;
         String var50 = null;
         km var51 = null;
-        km var51_ref = null;
         dh var52 = null;
         String var53 = null;
         km var54 = null;
@@ -49,7 +48,6 @@ final class qf {
         dh var59 = null;
         String var60 = null;
         km var61 = null;
-        km var61_ref = null;
         dh var62 = null;
         String var63 = null;
         km var64 = null;
@@ -59,7 +57,6 @@ final class qf {
         dh var68 = null;
         String var69 = null;
         km var70 = null;
-        km var70_ref = null;
         dh var71 = null;
         String var72 = null;
         km var73 = null;
@@ -129,11 +126,11 @@ final class qf {
           L2: {
             if (-3 == (param0 ^ -1)) {
               var49 = pi.field_d;
-              var51_ref = el.field_z[0];
-              var70 = var51_ref;
-              var70 = var51_ref;
+              var51 = el.field_z[0];
+              var70 = var51;
+              var70 = var51;
               var50 = fg.field_a;
-              var49.field_b.a((byte) -110, var50, var51_ref, 11);
+              var49.field_b.a((byte) -110, var50, var51, 11);
               var52 = pi.field_d;
               var54 = el.field_z[1];
               var70 = var54;
@@ -164,11 +161,11 @@ final class qf {
               break L3;
             } else {
               var59 = pi.field_d;
-              var61_ref = el.field_z[0];
-              var70 = var61_ref;
-              var70 = var61_ref;
+              var61 = el.field_z[0];
+              var70 = var61;
+              var70 = var61;
               var60 = th.field_e;
-              var59.field_b.a((byte) -110, var60, var61_ref, 11);
+              var59.field_b.a((byte) -110, var60, var61, 11);
               var62 = pi.field_d;
               var64 = el.field_z[1];
               var70 = var64;
@@ -187,9 +184,9 @@ final class qf {
           L4: {
             if (-3 == (param0 ^ -1)) {
               var68 = pi.field_d;
-              var70_ref = el.field_z[0];
+              var70 = el.field_z[0];
               var69 = fg.field_a;
-              var68.field_b.a((byte) -110, var69, var70_ref, 11);
+              var68.field_b.a((byte) -110, var69, var70, 11);
               var71 = pi.field_d;
               var73 = el.field_z[1];
               var72 = va.field_b;

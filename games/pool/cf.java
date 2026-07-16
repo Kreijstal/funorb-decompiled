@@ -126,24 +126,27 @@ final class cf {
                         var6 = dn.a(var4_ref_int__, (byte) 10, ta.a(new int[4], 18));
                         var7 = dn.a(var4_ref_int__, (byte) 7, ta.a(new int[4], param0 ^ 70));
                         var11.field_i = var5;
-                        hp.field_b = ii.a(2, var11);
-                        var14 = ii.a(2, var11);
+                        dd dupTemp$36 = ii.a(2, var11);
+                        hp.field_b = dupTemp$36;
+                        var14 = dupTemp$36;
                         var8 = var14;
                         var8.field_B = 0;
                         var8.field_w = var14.field_z;
                         var8.field_y = var14.field_A;
                         var8.field_G = 0;
                         var11.field_i = var6;
-                        eh.field_y = ii.a(2, var11);
-                        var15 = ii.a(2, var11);
+                        dd dupTemp$37 = ii.a(2, var11);
+                        eh.field_y = dupTemp$37;
+                        var15 = dupTemp$37;
                         var8 = var15;
                         var8.field_w = var15.field_z;
                         var8.field_y = var15.field_A;
                         var8.field_G = 0;
                         var8.field_B = 0;
                         var11.field_i = var7;
-                        gj.field_T = ii.a(param0 + 2, var11);
-                        var16 = ii.a(param0 + 2, var11);
+                        dd dupTemp$38 = ii.a(param0 + 2, var11);
+                        gj.field_T = dupTemp$38;
+                        var16 = dupTemp$38;
                         var8 = var16;
                         var8.field_G = 0;
                         var8.field_B = 0;
@@ -151,24 +154,27 @@ final class cf {
                         var8.field_y = var16.field_A;
                         var11.a();
                         var11.field_i = var5;
-                        bf.field_h = ii.a(2, var11);
-                        var17 = ii.a(2, var11);
+                        dd dupTemp$39 = ii.a(2, var11);
+                        bf.field_h = dupTemp$39;
+                        var17 = dupTemp$39;
                         var8 = var17;
                         var8.field_G = 0;
                         var8.field_w = var17.field_z;
                         var8.field_y = var17.field_A;
                         var8.field_B = 0;
                         var11.field_i = var6;
-                        wf.field_a = ii.a(2, var11);
-                        var18 = ii.a(2, var11);
+                        dd dupTemp$40 = ii.a(2, var11);
+                        wf.field_a = dupTemp$40;
+                        var18 = dupTemp$40;
                         var8 = var18;
                         var8.field_w = var18.field_z;
                         var8.field_G = param0;
                         var8.field_y = var18.field_A;
                         var8.field_B = 0;
                         var11.field_i = var7;
-                        ag.field_b = ii.a(2, var11);
-                        var19 = ii.a(2, var11);
+                        dd dupTemp$41 = ii.a(2, var11);
+                        ag.field_b = dupTemp$41;
+                        var19 = dupTemp$41;
                         var8 = var19;
                         var8.field_y = var19.field_A;
                         var8.field_B = 0;
@@ -176,24 +182,33 @@ final class cf {
                         var8.field_w = var19.field_z;
                         var2 = 0;
                         var3 = ep.a(106, param1, "titles", "");
+                        int incrementValue$42 = var2;
                         var2++;
-                        mq.field_a = var3[var2];
+                        mq.field_a = var3[incrementValue$42];
+                        int incrementValue$43 = var2;
                         var2++;
-                        ao.field_Pb = var3[var2];
+                        ao.field_Pb = var3[incrementValue$43];
+                        int incrementValue$44 = var2;
                         var2++;
-                        em.field_M = var3[var2];
+                        em.field_M = var3[incrementValue$44];
+                        int incrementValue$45 = var2;
                         var2++;
-                        df.field_i = var3[var2];
+                        df.field_i = var3[incrementValue$45];
+                        int incrementValue$46 = var2;
                         var2++;
-                        db.field_Wb = var3[var2];
+                        db.field_Wb = var3[incrementValue$46];
+                        int incrementValue$47 = var2;
                         var2++;
-                        im.field_Lb = var3[var2];
+                        im.field_Lb = var3[incrementValue$47];
+                        int incrementValue$48 = var2;
                         var2++;
-                        lk.field_w = var3[var2];
+                        lk.field_w = var3[incrementValue$48];
+                        int incrementValue$49 = var2;
                         var2++;
-                        mc.field_k = var3[var2];
+                        mc.field_k = var3[incrementValue$49];
+                        int incrementValue$50 = var2;
                         var2++;
-                        lq.field_Q = var3[var2];
+                        lq.field_Q = var3[incrementValue$50];
                         il.field_f = pf.a("", (byte) 84, "side_power_bar", param1);
                         v.field_c = pf.a("", (byte) 94, "side_power_bar_fill", param1);
                         bq.field_n = pf.a("", (byte) 102, "top_bar_inner", param1);
@@ -212,14 +227,14 @@ final class cf {
                         dr.field_d.c(2 + var2, jh.field_e.field_A + -dr.field_d.field_A >> -259199039);
                         sh.field_P.b(15100);
                         wp.field_a = pf.a("", (byte) 60, "slider", param1);
-                        dd discarded$6 = pf.a("", (byte) 35, "flash_foul", param1);
-                        dd discarded$7 = pf.a("", (byte) 91, "hud_hbar_inner", param1);
+                        dd discarded$51 = pf.a("", (byte) 35, "flash_foul", param1);
+                        dd discarded$52 = pf.a("", (byte) 91, "hud_hbar_inner", param1);
                         gg.field_b = gn.a(aj.a(0, "", param1, "hud_hbar_frame"), (byte) -29);
                         id.field_a = gn.a(aj.a(0, "", param1, "hud_vbar_frame"), (byte) -29);
                         eq.field_Q = aj.a(0, "", param1, "top_bar_frame");
                         iq.field_d = pf.a("", (byte) 73, "icon_break", param1);
                         il.field_a = pf.a("", (byte) 73, "icon_ball_in_hand", param1);
-                        dd discarded$8 = pf.a("", (byte) 98, "icon_extra_shot", param1);
+                        dd discarded$53 = pf.a("", (byte) 98, "icon_extra_shot", param1);
                         gd.field_e = pf.a("", (byte) 101, "icon_extra_visit", param1);
                         oo.field_D = pf.a("", (byte) 90, "icon_snookered", param1);
                         sb.field_c = new dd[4];
@@ -285,7 +300,6 @@ final class cf {
     }
 
     private final jg a(int[] param0, int param1, int param2, int param3) {
-        gm var9_ref = null;
         int var5 = (param2 >>> -1053435508 | (param2 & -1610608641) << -851484508) ^ param3;
         var5 = var5 | param2 << 1103719952;
         long var6 = 4294967296L ^ (long)var5;
@@ -301,19 +315,19 @@ final class cf {
         int var10 = -125 % ((param1 - 64) / 36);
         gm var9 = (gm) (Object) ((cf) this).field_e.a(false, var6);
         if (var9 == null) {
-            var9_ref = gm.a(((cf) this).field_d, param2, param3);
-            if (var9_ref == null) {
+            var9 = gm.a(((cf) this).field_d, param2, param3);
+            if (var9 == null) {
                 return null;
             }
-            ((cf) this).field_e.a((byte) -128, (ma) (Object) var9_ref, var6);
+            ((cf) this).field_e.a((byte) -128, (ma) (Object) var9, var6);
         }
-        jg var8_ref = var9_ref.a(param0);
-        if (var8_ref == null) {
+        var8 = var9.a(param0);
+        if (var8 == null) {
             return null;
         }
-        var9_ref.a((byte) -117);
-        ((cf) this).field_f.a((byte) -128, (ma) (Object) var8_ref, var6);
-        return var8_ref;
+        var9.a((byte) -117);
+        ((cf) this).field_f.a((byte) -128, (ma) (Object) var8, var6);
+        return var8;
     }
 
     private final jg a(boolean param0, int param1, int param2, int[] param3) {
@@ -337,12 +351,12 @@ final class cf {
             return null;
         }
         jg var10 = var9.b();
-        jg var8_ref = var10;
-        ((cf) this).field_f.a((byte) -126, (ma) (Object) var8_ref, var6);
+        var8 = var10;
+        ((cf) this).field_f.a((byte) -126, (ma) (Object) var8, var6);
         if (param3 != null) {
             param3[0] = param3[0] - var10.field_n.length;
         }
-        return var8_ref;
+        return var8;
     }
 
     final jg a(String param0, boolean param1, String param2) {

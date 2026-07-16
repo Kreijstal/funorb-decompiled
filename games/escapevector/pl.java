@@ -67,6 +67,7 @@ final class pl extends ld {
             field_i = "Type your password again to make sure it's correct";
             field_k = new String[]{"fuel", "crate", "turret", "magnet", "repeller", "tnt", "laser_left", "laser_right", "barrier", "powerup_shield", "powerup_triple_shot", "powerup_thrust", "powerup_one_rockbuster", "powerup_five_rockbusters"};
             field_p = "Simulator objectives";
+            return;
           } else {
             var0 = (long)var2;
             var3 = 0;

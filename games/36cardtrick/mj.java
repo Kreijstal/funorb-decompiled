@@ -19,10 +19,10 @@ abstract class mj {
         di[] var3 = var7;
         for (var4 = 0; var7.length > var4; var4++) {
             var5 = var7[var4];
-            if (((di) var5).field_a.length > param1) {
-                return ((di) var5).field_a[param1];
+            if (var5.field_a.length > param1) {
+                return var5.field_a[param1];
             }
-            param1 = param1 - (-1 + ((di) var5).field_a.length);
+            param1 = param1 - (-1 + var5.field_a.length);
         }
         return 0;
     }
@@ -107,38 +107,69 @@ abstract class mj {
     }
 
     final int a(int param0, int param1, int param2) {
+        int var4 = 0;
         int var5 = 0;
         di var6 = null;
         int var7 = 0;
-        int var8 = Main.field_T;
-        if (null != ((mj) this).field_d) {
-            // if_icmpeq L40
-            // if_icmplt L40
-        } else {
-            return -1;
-        }
-        if (param0 > ((mj) this).field_d[((mj) this).field_d.length + -1].field_c) {
-            return -1;
-        }
-        if (!(((mj) this).field_d.length != 1)) {
-            return ((mj) this).field_d[0].a(1, param1);
-        }
-        if (param2 > -26) {
-            int discarded$0 = mj.a(42, 19, true, true);
-        }
-        int var4 = 0;
-        for (var5 = 0; ((mj) this).field_d.length > var5; var5++) {
-            var6 = ((mj) this).field_d[var5];
-            if (((di) var6).field_b <= param0) {
-                if (param0 <= ((di) var6).field_c) {
-                    var7 = var6.a(1, param1);
-                    if (-1 == var7) {
-                        return -1;
+        int var8 = 0;
+        L0: {
+          var8 = Main.field_T;
+          if (null == ((mj) this).field_d) {
+            break L0;
+          } else {
+            if (-1 == (((mj) this).field_d.length ^ -1)) {
+              break L0;
+            } else {
+              if (param0 < ((mj) this).field_d[0].field_b) {
+                break L0;
+              } else {
+                if (param0 <= ((mj) this).field_d[((mj) this).field_d.length + -1].field_c) {
+                  if (((mj) this).field_d.length == 1) {
+                    return ((mj) this).field_d[0].a(1, param1);
+                  } else {
+                    L1: {
+                      if (param2 <= -26) {
+                        break L1;
+                      } else {
+                        int discarded$2 = mj.a(42, 19, true, true);
+                        break L1;
+                      }
                     }
-                    return var4 - -var7;
+                    var4 = 0;
+                    var5 = 0;
+                    L2: while (true) {
+                      if (((mj) this).field_d.length <= var5) {
+                        return -1;
+                      } else {
+                        L3: {
+                          var6 = ((mj) this).field_d[var5];
+                          if (var6.field_b > param0) {
+                            break L3;
+                          } else {
+                            if (param0 > var6.field_c) {
+                              break L3;
+                            } else {
+                              var7 = var6.a(1, param1);
+                              if (-1 != var7) {
+                                return var4 - -var7;
+                              } else {
+                                return -1;
+                              }
+                            }
+                          }
+                        }
+                        var4 = var4 + (-1 + var6.field_a.length);
+                        var5++;
+                        continue L2;
+                      }
+                    }
+                  }
+                } else {
+                  return -1;
                 }
+              }
             }
-            var4 = var4 + (-1 + ((di) var6).field_a.length);
+          }
         }
         return -1;
     }
@@ -160,7 +191,7 @@ abstract class mj {
           if (param0 == 0) {
             break L0;
           } else {
-            ((mj) this).field_d = (di[]) null;
+            ((mj) this).field_d = null;
             break L0;
           }
         }
@@ -203,7 +234,7 @@ abstract class mj {
               if (param3 == -53) {
                 break L1;
               } else {
-                field_c = (String[]) null;
+                field_c = null;
                 break L1;
               }
             }
@@ -256,13 +287,13 @@ abstract class mj {
         int var5 = Main.field_T;
         for (var3 = 0; ((mj) this).field_d.length > var3; var3++) {
             var4 = ((mj) this).field_d[var3];
-            if (!(param1 >= ((di) var4).field_a.length)) {
+            if (!(param1 >= var4.field_a.length)) {
                 return var3;
             }
-            param1 = param1 - (((di) var4).field_a.length + -1);
+            param1 = param1 - (var4.field_a.length + -1);
         }
         if (param0 != -13453) {
-            field_a = (String) null;
+            field_a = null;
         }
         return ((mj) this).field_d.length;
     }

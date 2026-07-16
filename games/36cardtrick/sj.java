@@ -20,7 +20,7 @@ final class sj {
         }
         int var3 = -2147483648 + -(int)(4294967296L % (long)param1);
         if (param0 != 10999) {
-            field_a = (bk) null;
+            field_a = null;
         }
         do {
             var4 = param2.nextInt();
@@ -105,7 +105,7 @@ final class sj {
             } else {
               var3_long = -jl.field_c + id.a(87);
               var2 = (int)((10999L + -var3_long) / 1000L);
-              if (var2 > -1) {
+              if ((var2 ^ -1) > -1) {
                 var2 = 0;
                 break L0;
               } else {
@@ -115,16 +115,16 @@ final class sj {
           }
           var3 = 0;
           L1: while (true) {
-            if (var3 >= me.field_a.length) {
+            if ((var3 ^ -1) <= (me.field_a.length ^ -1)) {
               return;
             } else {
               L2: {
                 var4 = wd.field_d[var3];
-                if (-1 > var4) {
+                if (-1 < (var4 ^ -1)) {
                   var5 = af.field_jb;
                   break L2;
                 } else {
-                  if (var4 == cg.field_e.field_k) {
+                  if ((var4 ^ -1) == (cg.field_e.field_k ^ -1)) {
                     var5 = ca.field_b;
                     break L2;
                   } else {
@@ -142,7 +142,7 @@ final class sj {
                     break L3;
                   } else {
                     L4: {
-                      if (tf.field_p.length <= ia.field_d.length) {
+                      if ((tf.field_p.length ^ -1) >= (ia.field_d.length ^ -1)) {
                         stackOut_17_0 = ia.field_d.length;
                         stackIn_18_0 = stackOut_17_0;
                         break L4;
@@ -154,7 +154,7 @@ final class sj {
                     }
                     L5: {
                       var7 = stackIn_18_0;
-                      if (gl.field_G.length > da.field_c.length) {
+                      if ((gl.field_G.length ^ -1) < (da.field_c.length ^ -1)) {
                         stackOut_20_0 = gl.field_G.length;
                         stackIn_21_0 = stackOut_20_0;
                         break L5;
@@ -181,7 +181,7 @@ final class sj {
                               break L7;
                             }
                           }
-                          var6 = (String) (Object) stackIn_27_0;
+                          var6 = stackIn_27_0;
                           break L6;
                         } else {
                           break L6;
@@ -203,7 +203,7 @@ final class sj {
                             break L8;
                           }
                         }
-                        var6 = (String) (Object) stackIn_34_0;
+                        var6 = stackIn_34_0;
                         break L3;
                       } else {
                         break L3;
@@ -244,7 +244,7 @@ final class sj {
                 if (-1 >= (var4 ^ -1)) {
                   L12: {
                     var1 = var1 + e.field_i;
-                    if (cg.field_e.field_k == var4) {
+                    if ((cg.field_e.field_k ^ -1) == (var4 ^ -1)) {
                       stackOut_44_0 = ie.field_m;
                       stackIn_45_0 = stackOut_44_0;
                       break L12;
@@ -255,7 +255,7 @@ final class sj {
                     }
                   }
                   L13: {
-                    var9 = (vg) (Object) stackIn_45_0;
+                    var9 = stackIn_45_0;
                     if (var9 != null) {
                       var9.a((byte) -122, var1, tl.field_b + (a.field_o << 1452217473), var8 - tc.field_b, var7 - -(tc.field_b << -1063980095));
                       break L13;
@@ -269,17 +269,19 @@ final class sj {
                   break L11;
                 }
               }
-              if ((var4 ^ -1) <= -1) {
-                c.field_u.b(var6, var8, var1 - -field_c, var5, -1);
-                var1 = var1 + (a.field_o - (-e.field_i + -tl.field_b));
-                var3++;
-                continue L1;
-              } else {
-                mb.field_a.b(var6, var8, mg.field_q + var1, var5, -1);
-                var1 = var1 + sa.field_d;
-                var3++;
-                continue L1;
+              L14: {
+                if ((var4 ^ -1) <= -1) {
+                  c.field_u.b(var6, var8, var1 - -field_c, var5, -1);
+                  var1 = var1 + (a.field_o - (-e.field_i + -tl.field_b));
+                  break L14;
+                } else {
+                  mb.field_a.b(var6, var8, mg.field_q + var1, var5, -1);
+                  var1 = var1 + sa.field_d;
+                  break L14;
+                }
               }
+              var3++;
+              continue L1;
             }
           }
         } else {
@@ -301,7 +303,7 @@ final class sj {
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
-        byte[] var6 = null;
+        Object var6 = null;
         var5 = Main.field_T;
         var2 = param0.length();
         if (var2 != 0) {
@@ -312,7 +314,7 @@ final class sj {
             L0: while (true) {
               if (var3 >= var2) {
                 if (param1 != 8) {
-                  var6 = (byte[]) null;
+                  var6 = null;
                   Object discarded$1 = sj.a(true, 21, (byte[]) null);
                   return null;
                 } else {
@@ -366,7 +368,7 @@ final class sj {
           if (param0 > 23) {
             break L0;
           } else {
-            field_a = (bk) null;
+            field_a = null;
             break L0;
           }
         }
@@ -374,10 +376,10 @@ final class sj {
           jc.field_P = gg.field_b;
           if (255 != param3) {
             L2: {
-              if (-101 < param3) {
+              if (-101 < (param3 ^ -1)) {
                 break L2;
               } else {
-                if (-106 >= param3) {
+                if (-106 <= (param3 ^ -1)) {
                   mh.field_a = pf.a(-109, param2);
                   break L1;
                 } else {

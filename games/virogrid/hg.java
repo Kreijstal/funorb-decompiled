@@ -10,8 +10,9 @@ final class hg extends jc {
     static km field_p;
 
     final void g(int param0, int param1) {
+        int fieldTemp$2 = ((hg) this).field_l;
         ((hg) this).field_l = ((hg) this).field_l + 1;
-        ((hg) this).field_g[((hg) this).field_l] = (byte)(param0 + ((hg) this).field_s.a(5180));
+        ((hg) this).field_g[fieldTemp$2] = (byte)(param0 + ((hg) this).field_s.a(5180));
         if (param1 == 8) {
           return;
         } else {
@@ -68,8 +69,9 @@ final class hg extends jc {
               }
               return var5;
             } else {
+              int incrementValue$2 = var3;
               var3++;
-              var5 = var5 + ((lh.field_b[var4] & ((hg) this).field_g[var3]) << -var4 + param1);
+              var5 = var5 + ((lh.field_b[var4] & ((hg) this).field_g[incrementValue$2]) << -var4 + param1);
               param1 = param1 - var4;
               var4 = 8;
               continue L0;
@@ -90,8 +92,9 @@ final class hg extends jc {
               }
               return var5;
             } else {
+              int incrementValue$3 = var3;
               var3++;
-              var5 = var5 + ((lh.field_b[var4] & ((hg) this).field_g[var3]) << -var4 + param1);
+              var5 = var5 + ((lh.field_b[var4] & ((hg) this).field_g[incrementValue$3]) << -var4 + param1);
               param1 = param1 - var4;
               var4 = 8;
               continue L2;
@@ -118,14 +121,15 @@ final class hg extends jc {
         L0: while (true) {
           if (param3 <= var5) {
             if (param0 > -103) {
-              int discarded$2 = ((hg) this).c((byte) 114, 127);
+              int discarded$4 = ((hg) this).c((byte) 114, 127);
               return;
             } else {
               return;
             }
           } else {
+            int fieldTemp$5 = ((hg) this).field_l;
             ((hg) this).field_l = ((hg) this).field_l + 1;
-            param2[var5 + param1] = (byte)(((hg) this).field_g[((hg) this).field_l] + -((hg) this).field_s.a(5180));
+            param2[var5 + param1] = (byte)(((hg) this).field_g[fieldTemp$5] + -((hg) this).field_s.a(5180));
             var5++;
             continue L0;
           }
@@ -136,8 +140,9 @@ final class hg extends jc {
         if (param0) {
           return -55;
         } else {
+          int fieldTemp$2 = ((hg) this).field_l;
           ((hg) this).field_l = ((hg) this).field_l + 1;
-          return ((hg) this).field_g[((hg) this).field_l] + -((hg) this).field_s.a(5180) & 255;
+          return ((hg) this).field_g[fieldTemp$2] + -((hg) this).field_s.a(5180) & 255;
         }
     }
 

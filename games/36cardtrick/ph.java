@@ -24,7 +24,7 @@ final class ph {
         if (param0 <= -26) {
           var7 = ((ph) this).field_e[(int)(param1 & (long)(-1 + ((ph) this).field_c))];
           var4 = var7;
-          ((ph) this).field_b = ((he) var7).field_h;
+          ((ph) this).field_b = var7.field_h;
           L0: while (true) {
             if (var4 != ((ph) this).field_b) {
               if ((param1 ^ -1L) == (((ph) this).field_b.field_j ^ -1L)) {
@@ -44,7 +44,7 @@ final class ph {
           int discarded$1 = ph.a(22, 12);
           var8 = ((ph) this).field_e[(int)(param1 & (long)(-1 + ((ph) this).field_c))];
           var4 = var8;
-          ((ph) this).field_b = ((he) var8).field_h;
+          ((ph) this).field_b = var8.field_h;
           L1: while (true) {
             if (var4 != ((ph) this).field_b) {
               if ((param1 ^ -1L) == (((ph) this).field_b.field_j ^ -1L)) {
@@ -122,7 +122,7 @@ final class ph {
             return null;
           }
         } else {
-          return (he) null;
+          return null;
         }
     }
 
@@ -132,10 +132,11 @@ final class ph {
         ((ph) this).field_c = param0;
         ((ph) this).field_e = new he[param0];
         for (var2 = 0; param0 > var2; var2++) {
-            var3 = new he();
-            ((ph) this).field_e[var2] = new he();
-            var3.field_h = (he) var3;
-            var3.field_i = (he) var3;
+            he dupTemp$0 = new he();
+            var3 = dupTemp$0;
+            ((ph) this).field_e[var2] = dupTemp$0;
+            var3.field_h = var3;
+            var3.field_i = var3;
         }
     }
 
@@ -226,7 +227,7 @@ final class ph {
     final void a(he param0, long param1, int param2) {
         he var5 = null;
         L0: {
-          if (((he) param0).field_i != null) {
+          if (param0.field_i != null) {
             param0.d(12);
             break L0;
           } else {
@@ -235,16 +236,16 @@ final class ph {
         }
         var5 = ((ph) this).field_e[(int)(param1 & (long)(((ph) this).field_c - 1))];
         param0.field_h = var5;
-        param0.field_i = ((he) var5).field_i;
-        ((he) param0).field_i.field_h = param0;
+        param0.field_i = var5.field_i;
+        param0.field_i.field_h = param0;
         if (param2 != 6144) {
-          field_a = (String) null;
+          field_a = null;
           param0.field_j = param1;
-          ((he) param0).field_h.field_i = param0;
+          param0.field_h.field_i = param0;
           return;
         } else {
           param0.field_j = param1;
-          ((he) param0).field_h.field_i = param0;
+          param0.field_h.field_i = param0;
           return;
         }
     }

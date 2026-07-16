@@ -14,7 +14,7 @@ final class bh extends te implements java.awt.event.MouseWheelListener {
     final void a(java.awt.Component param0, boolean param1) {
         param0.removeMouseWheelListener((java.awt.event.MouseWheelListener) this);
         if (!param1) {
-            java.awt.event.MouseWheelEvent var4 = (java.awt.event.MouseWheelEvent) null;
+            Object var4 = null;
             ((bh) this).mouseWheelMoved((java.awt.event.MouseWheelEvent) null);
         }
     }

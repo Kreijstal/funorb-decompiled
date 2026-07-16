@@ -52,20 +52,20 @@ final class po {
           L0: {
             if (param2.field_zb != bh.field_h) {
               if (null == param2.field_zb) {
-                // wide iinc 3 200
+                var3 += 200;
                 break L0;
               } else {
                 break L0;
               }
             } else {
-              // wide iinc 3 -200
+              var3 -= 200;
               break L0;
             }
           }
           if (bh.field_h != param0.field_zb) {
             if (null == param0.field_zb) {
               L1: {
-                // wide iinc 3 -200
+                var3 -= 200;
                 if (var3 <= 0) {
                   stackOut_19_0 = 0;
                   stackIn_20_0 = stackOut_19_0;
@@ -93,7 +93,7 @@ final class po {
             }
           } else {
             L3: {
-              // wide iinc 3 200
+              var3 += 200;
               if (var3 <= 0) {
                 stackOut_10_0 = 0;
                 stackIn_11_0 = stackOut_10_0;
@@ -118,11 +118,11 @@ final class po {
           if (24 == param0.field_c) {
             return 440;
           } else {
-            if (param0.field_c != -26) {
+            if ((param0.field_c ^ -1) != -26) {
               if (param0.field_c == 16) {
                 return 680;
               } else {
-                if (-19 == param0.field_c) {
+                if (-19 == (param0.field_c ^ -1)) {
                   return 680;
                 } else {
                   if ((param0.field_c ^ -1) != 4) {
@@ -131,22 +131,22 @@ final class po {
                         if (20 == param0.field_c) {
                           return 680;
                         } else {
-                          if (param0.field_c == -22) {
+                          if ((param0.field_c ^ -1) == -22) {
                             return 680;
                           } else {
-                            if (-23 == param0.field_c) {
+                            if (-23 == (param0.field_c ^ -1)) {
                               return 680;
                             } else {
-                              if (0 != param0.field_c) {
+                              if (0 != (param0.field_c ^ -1)) {
                                 if (-3 != param0.field_c) {
-                                  if (1 != param0.field_c) {
-                                    if ((param0.field_c ^ -1) == -27) {
-                                      return 0;
-                                    } else {
-                                      return 423;
-                                    }
-                                  } else {
+                                  if (1 == (param0.field_c ^ -1)) {
                                     return 0;
+                                  } else {
+                                    if ((param0.field_c ^ -1) != -27) {
+                                      return 423;
+                                    } else {
+                                      return 0;
+                                    }
                                   }
                                 } else {
                                   return 0;

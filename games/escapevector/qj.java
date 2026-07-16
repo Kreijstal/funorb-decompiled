@@ -85,8 +85,9 @@ final class qj {
                             }
                           }
                         } else {
+                          int incrementValue$3 = var12;
                           var12++;
-                          em.field_i[var12] = var14 * 65793;
+                          em.field_i[incrementValue$3] = var14 * 65793;
                           var15++;
                           continue L5;
                         }
@@ -132,10 +133,12 @@ final class qj {
                           var17 = 0;
                           L8: while (true) {
                             if (param4.field_s > var17) {
+                              int incrementValue$4 = var13;
                               var13++;
-                              var18 = param4.field_B[var13];
+                              var18 = param4.field_B[incrementValue$4];
+                              int incrementValue$5 = var14;
                               var14++;
-                              em.field_i[var14] = var18 - ae.a(4144959, var18 >> -1276284702);
+                              em.field_i[incrementValue$5] = var18 - ae.a(4144959, var18 >> -1276284702);
                               var17++;
                               continue L8;
                             } else {

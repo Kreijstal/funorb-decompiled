@@ -25,12 +25,14 @@ final class rk extends bc {
             param4 = u.field_v[var6];
             var7 = var6 << -1433527420;
             while (true) {
+                int incrementValue$0 = param4;
                 param4--;
-                if (param4 == 0) {
+                if (incrementValue$0 == 0) {
                     break;
                 }
+                int incrementValue$1 = var7;
                 var7++;
-                param2 = mn.field_bb[var7];
+                param2 = mn.field_bb[incrementValue$1];
                 param1[param0[param2]] = param1[param0[param2]] + 1;
                 mn.field_bb[param1[param0[param2]]] = param2;
             }

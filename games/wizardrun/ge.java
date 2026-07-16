@@ -141,7 +141,7 @@ abstract class ge {
         var3 = wizardrun.field_H;
         if (param0 == 0) {
           if (!((ge) this).field_m) {
-            if (-99 == vk.field_r) {
+            if (-99 == (vk.field_r ^ -1)) {
               if ((((ge) this).field_a ^ -1) < -1) {
                 ((ge) this).field_a = ((ge) this).field_a - 1;
                 ((ge) this).field_g = true;
@@ -153,44 +153,7 @@ abstract class ge {
                 return;
               }
             } else {
-              if (-100 == vk.field_r) {
-                ((ge) this).field_a = ((ge) this).field_a + 1;
-                if (((ge) this).field_a < ((ge) this).field_e) {
-                  ((ge) this).field_g = true;
-                  return;
-                } else {
-                  ((ge) this).field_a = 0;
-                  ((ge) this).field_g = true;
-                  return;
-                }
-              } else {
-                if (-1 >= (((ge) this).field_a ^ -1)) {
-                  this.a(((ge) this).field_a, (byte) 81);
-                  return;
-                } else {
-                  return;
-                }
-              }
-            }
-          } else {
-            return;
-          }
-        } else {
-          this.a(123, (byte) -33);
-          if (!((ge) this).field_m) {
-            if (-99 == vk.field_r) {
-              if ((((ge) this).field_a ^ -1) < -1) {
-                ((ge) this).field_a = ((ge) this).field_a - 1;
-                ((ge) this).field_g = true;
-                return;
-              } else {
-                ((ge) this).field_a = ((ge) this).field_e;
-                ((ge) this).field_a = ((ge) this).field_a - 1;
-                ((ge) this).field_g = true;
-                return;
-              }
-            } else {
-              if (-100 == vk.field_r) {
+              if (-100 == (vk.field_r ^ -1)) {
                 ((ge) this).field_a = ((ge) this).field_a + 1;
                 if (((ge) this).field_a < ((ge) this).field_e) {
                   ((ge) this).field_g = true;
@@ -205,6 +168,43 @@ abstract class ge {
                   return;
                 } else {
                   this.a(((ge) this).field_a, (byte) 81);
+                  return;
+                }
+              }
+            }
+          } else {
+            return;
+          }
+        } else {
+          this.a(123, (byte) -33);
+          if (!((ge) this).field_m) {
+            if (-99 == (vk.field_r ^ -1)) {
+              if ((((ge) this).field_a ^ -1) < -1) {
+                ((ge) this).field_a = ((ge) this).field_a - 1;
+                ((ge) this).field_g = true;
+                return;
+              } else {
+                ((ge) this).field_a = ((ge) this).field_e;
+                ((ge) this).field_a = ((ge) this).field_a - 1;
+                ((ge) this).field_g = true;
+                return;
+              }
+            } else {
+              if (-100 == (vk.field_r ^ -1)) {
+                ((ge) this).field_a = ((ge) this).field_a + 1;
+                if (((ge) this).field_a < ((ge) this).field_e) {
+                  ((ge) this).field_g = true;
+                  return;
+                } else {
+                  ((ge) this).field_a = 0;
+                  ((ge) this).field_g = true;
+                  return;
+                }
+              } else {
+                if (-1 >= (((ge) this).field_a ^ -1)) {
+                  this.a(((ge) this).field_a, (byte) 81);
+                  return;
+                } else {
                   return;
                 }
               }

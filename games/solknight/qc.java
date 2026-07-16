@@ -94,8 +94,9 @@ final class qc extends gg {
         ((qc) this).field_p = param1;
         ((qc) this).field_j = param3;
         ((qc) this).field_k = param2;
+        int fieldTemp$0 = l.field_c;
         l.field_c = l.field_c + 1;
-        ((qc) this).field_u = l.field_c & 65535;
+        ((qc) this).field_u = fieldTemp$0 & 65535;
         ((qc) this).field_m = param0;
         ((qc) this).field_t = param4;
     }

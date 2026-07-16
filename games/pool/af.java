@@ -41,12 +41,12 @@ final class af extends sq {
               } else {
                 L3: {
                   var4 = ((af) this).b(param0, 30554);
-                  if (param2.field_z == 0) {
+                  if ((param2.field_z ^ -1) == 0) {
                     L4: {
                       if (var4 == 0) {
                         break L4;
                       } else {
-                        if (-2 != var4) {
+                        if (-2 != (var4 ^ -1)) {
                           stackOut_12_0 = 0;
                           stackIn_13_0 = stackOut_12_0;
                           break L3;
@@ -232,14 +232,16 @@ final class af extends sq {
         if (param1 != 64) {
             af.a(-37, true);
         }
-        var6[6] = ad.a(param3, param4, 7);
-        var5[3] = ad.a(param3, param4, 7);
-        var5[2] = ad.a(param3, param4, 7);
-        var5[1] = ad.a(param3, param4, 7);
-        var5[0] = ad.a(param3, param4, 7);
-        var6[8] = ad.a(param2, param4, 7);
-        var5[7] = ad.a(param2, param4, 7);
-        var5[5] = ad.a(param2, param4, 7);
+        dd dupTemp$0 = ad.a(param3, param4, 7);
+        var6[6] = dupTemp$0;
+        var5[3] = dupTemp$0;
+        var5[2] = dupTemp$0;
+        var5[1] = dupTemp$0;
+        var5[0] = dupTemp$0;
+        dd dupTemp$1 = ad.a(param2, param4, 7);
+        var6[8] = dupTemp$1;
+        var5[7] = dupTemp$1;
+        var5[5] = dupTemp$1;
         if (!(param0 == 0)) {
             var6[4] = ad.a(param0, 64, 7);
         }
@@ -256,7 +258,7 @@ final class af extends sq {
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
-        aa var6_ref = null;
+        aa var6_ref_aa = null;
         int var7 = 0;
         cr var7_ref_cr = null;
         int var8 = 0;
@@ -268,15 +270,15 @@ final class af extends sq {
         int var12 = 0;
         qe var13 = null;
         qe var14 = null;
-        int stackIn_94_0 = 0;
-        int stackIn_95_0 = 0;
-        int stackIn_96_0 = 0;
-        int stackIn_96_1 = 0;
-        int stackOut_93_0 = 0;
-        int stackOut_95_0 = 0;
-        int stackOut_95_1 = 0;
-        int stackOut_94_0 = 0;
-        int stackOut_94_1 = 0;
+        int stackIn_91_0 = 0;
+        int stackIn_92_0 = 0;
+        int stackIn_93_0 = 0;
+        int stackIn_93_1 = 0;
+        int stackOut_90_0 = 0;
+        int stackOut_92_0 = 0;
+        int stackOut_92_1 = 0;
+        int stackOut_91_0 = 0;
+        int stackOut_91_1 = 0;
         var12 = Pool.field_O;
         var13 = ((af) this).field_d.j(76);
         var14 = var13;
@@ -338,7 +340,7 @@ final class af extends sq {
                 var8 = 0;
                 L3: while (true) {
                   if (var8 >= ((af) this).field_d.field_l.length) {
-                    if (this.t(-91) <= var5) {
+                    if ((this.t(-91) ^ -1) >= (var5 ^ -1)) {
                       if (var7 < this.d((byte) 87)) {
                         L4: {
                           if (-1 != (var7 ^ -1)) {
@@ -353,97 +355,101 @@ final class af extends sq {
                         var4 = var4 | this.e((byte) 91);
                         break L2;
                       } else {
-                        if (var6 >= this.p(89)) {
+                        if ((var6 ^ -1) <= (this.p(89) ^ -1)) {
                           break L2;
                         } else {
-                          if (var6 != 0) {
-                            var14.a(16, -14, new int[0]);
-                            var14.field_t = true;
-                            var4 = var4 | this.g((byte) -46);
-                            break L2;
-                          } else {
-                            var14.a(15, -14, new int[0]);
-                            var14.field_t = true;
-                            var4 = var4 | this.g((byte) -46);
-                            break L2;
+                          L5: {
+                            if (var6 != 0) {
+                              var14.a(16, -14, new int[0]);
+                              break L5;
+                            } else {
+                              var14.a(15, -14, new int[0]);
+                              break L5;
+                            }
                           }
+                          var14.field_t = true;
+                          var4 = var4 | this.g((byte) -46);
+                          break L2;
                         }
                       }
                     } else {
-                      if (0 == var5) {
-                        var14.a(12, -14, new int[0]);
-                        var14.field_t = true;
-                        var4 = var4 | this.s(0);
-                        break L2;
-                      } else {
-                        var14.a(6, -14, new int[0]);
-                        var14.field_t = true;
-                        var4 = var4 | this.s(0);
-                        break L2;
-                      }
-                    }
-                  } else {
-                    if (0 < ((af) this).field_d.field_l[var8].field_c) {
-                      L5: {
-                        var5++;
-                        var9_int = ((af) this).b(var8, 30554);
-                        if (var9_int != var3) {
-                          break L5;
+                      L6: {
+                        if (0 == var5) {
+                          var14.a(12, -14, new int[0]);
+                          break L6;
                         } else {
-                          var6++;
-                          break L5;
-                        }
-                      }
-                      if (var9_int != 0) {
-                        if (var9_int != 1) {
-                          var8++;
-                          continue L3;
-                        } else {
-                          var7++;
-                          var8++;
-                          continue L3;
-                        }
-                      } else {
-                        var7++;
-                        var8++;
-                        continue L3;
-                      }
-                    } else {
-                      var8++;
-                      continue L3;
-                    }
-                  }
-                }
-              } else {
-                L6: {
-                  var5 = var14.field_m.a(45);
-                  if (0 != var4) {
-                    break L6;
-                  } else {
-                    if (-2 != var5) {
-                      break L6;
-                    } else {
-                      if (8 != ((cr) (Object) var14.field_m.c((byte) -25)).field_n) {
-                        break L6;
-                      } else {
-                        if (-3 == var3) {
-                          return ag.field_e;
-                        } else {
+                          var14.a(6, -14, new int[0]);
                           break L6;
                         }
                       }
+                      var14.field_t = true;
+                      var4 = var4 | this.s(0);
+                      break L2;
+                    }
+                  } else {
+                    L7: {
+                      if (0 < ((af) this).field_d.field_l[var8].field_c) {
+                        L8: {
+                          var5++;
+                          var9_int = ((af) this).b(var8, 30554);
+                          if ((var9_int ^ -1) != (var3 ^ -1)) {
+                            break L8;
+                          } else {
+                            var6++;
+                            break L8;
+                          }
+                        }
+                        L9: {
+                          if (var9_int == 0) {
+                            break L9;
+                          } else {
+                            if (var9_int == 1) {
+                              break L9;
+                            } else {
+                              break L7;
+                            }
+                          }
+                        }
+                        var7++;
+                        break L7;
+                      } else {
+                        break L7;
+                      }
+                    }
+                    var8++;
+                    continue L3;
+                  }
+                }
+              } else {
+                L10: {
+                  var5 = var14.field_m.a(45);
+                  if (0 != var4) {
+                    break L10;
+                  } else {
+                    if (-2 != (var5 ^ -1)) {
+                      break L10;
+                    } else {
+                      if (8 != ((cr) (Object) var14.field_m.c((byte) -25)).field_n) {
+                        break L10;
+                      } else {
+                        if (-3 == (var3 ^ -1)) {
+                          return ag.field_e;
+                        } else {
+                          break L10;
+                        }
+                      }
                     }
                   }
                 }
-                var6_ref = new aa(var14.field_m);
-                var7_ref_cr = (cr) (Object) var6_ref.b((byte) -92);
-                L7: while (true) {
+                var6_ref_aa = new aa(var14.field_m);
+                var7_ref_cr = (cr) (Object) var6_ref_aa.b((byte) -92);
+                L11: while (true) {
                   if (var7_ref_cr == null) {
                     break L2;
                   } else {
                     if (var7_ref_cr.field_n != 8) {
-                      var7_ref_cr = (cr) (Object) var6_ref.b(-97);
-                      continue L7;
+                      var7_ref_cr = (cr) (Object) var6_ref_aa.b(-97);
+                      continue L11;
                     } else {
                       var14.a(5, -14, new int[1]);
                       return hm.field_e;
@@ -452,160 +458,160 @@ final class af extends sq {
                 }
               }
             }
-            L8: {
+            L12: {
               var5 = -52 % ((param0 - -37) / 60);
               if (!var14.field_t) {
-                break L8;
+                break L12;
               } else {
                 if (0 == (nr.field_Y & var4)) {
                   if (((af) this).a((1 + ((af) this).field_d.field_A) % ((af) this).field_d.field_n, -119)) {
                     var14.a(11, -14, new int[0]);
                     var4 = this.f((byte) -30);
-                    break L8;
+                    break L12;
                   } else {
-                    break L8;
+                    break L12;
                   }
                 } else {
-                  break L8;
+                  break L12;
                 }
               }
             }
-            L9: {
+            L13: {
               if (var14.field_m.c(0)) {
-                break L9;
+                break L13;
               } else {
                 var6 = 0;
                 var7 = 0;
                 var8 = ((cr) (Object) var14.field_m.c((byte) 109)).field_n;
                 var9 = new aa(var14.field_m);
                 var10_ref_cr = (cr) (Object) var9.b((byte) -92);
-                L10: while (true) {
+                L14: while (true) {
                   if (var10_ref_cr == null) {
-                    L11: {
-                      if (var4 != 0) {
-                        break L11;
+                    L15: {
+                      if ((var4 ^ -1) != -1) {
+                        break L15;
                       } else {
                         if ((var3 ^ -1) == 0) {
-                          if (-1 >= var7) {
-                            L12: {
+                          if (-1 <= (var7 ^ -1)) {
+                            L16: {
                               ((af) this).a((int) ((af) this).b(var8, 30554), -1, var14.field_L);
-                              stackOut_93_0 = var4;
-                              stackIn_95_0 = stackOut_93_0;
-                              stackIn_94_0 = stackOut_93_0;
+                              stackOut_90_0 = var4;
+                              stackIn_92_0 = stackOut_90_0;
+                              stackIn_91_0 = stackOut_90_0;
                               if (this.r(9)) {
-                                stackOut_95_0 = stackIn_95_0;
-                                stackOut_95_1 = nd.field_j;
-                                stackIn_96_0 = stackOut_95_0;
-                                stackIn_96_1 = stackOut_95_1;
-                                break L12;
+                                stackOut_92_0 = stackIn_92_0;
+                                stackOut_92_1 = nd.field_j;
+                                stackIn_93_0 = stackOut_92_0;
+                                stackIn_93_1 = stackOut_92_1;
+                                break L16;
                               } else {
-                                stackOut_94_0 = stackIn_94_0;
-                                stackOut_94_1 = 0;
-                                stackIn_96_0 = stackOut_94_0;
-                                stackIn_96_1 = stackOut_94_1;
-                                break L12;
+                                stackOut_91_0 = stackIn_91_0;
+                                stackOut_91_1 = 0;
+                                stackIn_93_0 = stackOut_91_0;
+                                stackIn_93_1 = stackOut_91_1;
+                                break L16;
                               }
                             }
-                            var4 = stackIn_96_0 | stackIn_96_1;
+                            var4 = stackIn_93_0 | stackIn_93_1;
                             var4 = var4 | i.field_m;
-                            break L9;
+                            break L13;
                           } else {
-                            L13: {
+                            L17: {
                               var10 = this.v(-13243);
                               var11 = 3 & var10;
-                              if (var11 != 0) {
+                              if ((var11 ^ -1) != -1) {
                                 if ((var11 ^ -1) != -2) {
-                                  break L13;
+                                  break L17;
                                 } else {
                                   var4 = var4 | (oa.field_b | i.field_m);
-                                  break L13;
+                                  break L17;
                                 }
                               } else {
                                 var4 = var4 | i.field_m;
                                 ((af) this).a((int) ((af) this).b(var8, 30554), -1, var14.field_L);
-                                break L13;
+                                break L17;
                               }
                             }
-                            L14: {
+                            L18: {
                               if ((8 & var10 ^ -1) != -9) {
-                                break L14;
+                                break L18;
                               } else {
                                 var4 = var4 | nd.field_j;
-                                break L14;
+                                break L18;
                               }
                             }
                             return var4;
                           }
                         } else {
-                          break L11;
+                          break L15;
                         }
                       }
                     }
                     if ((var7 ^ -1) >= -1) {
-                      if (-1 != var4) {
-                        break L9;
+                      if (-1 != (var4 ^ -1)) {
+                        break L13;
                       } else {
                         if (0 < var6) {
                           var4 = var4 | nd.field_j;
-                          break L9;
+                          break L13;
                         } else {
-                          break L9;
+                          break L13;
                         }
                       }
                     } else {
                       var14.a(4, -14, new int[1]);
                       var14.field_t = true;
                       var4 = var4 | this.c((byte) 116);
-                      break L9;
+                      break L13;
                     }
                   } else {
-                    L15: {
+                    L19: {
                       if (0 == (var10_ref_cr.field_n & 7)) {
-                        break L15;
+                        break L19;
                       } else {
                         if (var3 != -1) {
                           if (((af) this).b(var10_ref_cr.field_n, 30554) == var3) {
                             var14.field_w = (byte)(var14.field_w + 1);
                             var6++;
-                            break L15;
+                            break L19;
                           } else {
                             var14.field_w = (byte)(var14.field_w - 1);
                             var7++;
-                            break L15;
+                            break L19;
                           }
                         } else {
                           if (this.a(var8, var10_ref_cr.field_n, (byte) 35)) {
                             var14.field_w = (byte)(var14.field_w + 1);
                             var6++;
-                            break L15;
+                            break L19;
                           } else {
                             var7++;
                             var14.field_w = (byte)(var14.field_w + 1);
-                            break L15;
+                            break L19;
                           }
                         }
                       }
                     }
                     var10_ref_cr = (cr) (Object) var9.b(-108);
-                    continue L10;
+                    continue L14;
                   }
                 }
               }
             }
-            L16: {
+            L20: {
               if (!((af) this).field_d.a(false, (byte) 69, var14)) {
                 if (!((af) this).a(var14.field_L % ((af) this).field_d.field_n, -57)) {
-                  break L16;
+                  break L20;
                 } else {
                   var14.field_w = (byte)(var14.field_w - 1);
-                  break L16;
+                  break L20;
                 }
               } else {
                 if (((af) this).a((1 + var14.field_L) % ((af) this).field_d.field_n, -122)) {
                   var14.field_w = (byte)(var14.field_w + 1);
-                  break L16;
+                  break L20;
                 } else {
-                  break L16;
+                  break L20;
                 }
               }
             }
@@ -626,15 +632,40 @@ final class af extends sq {
     }
 
     private final boolean a(int param0, int param1, byte param2) {
-        if (param2 <= 25) {
+        int stackIn_9_0 = 0;
+        int stackOut_8_0 = 0;
+        int stackOut_7_0 = 0;
+        L0: {
+          if (param2 > 25) {
+            break L0;
+          } else {
             ((af) this).field_g = null;
+            break L0;
+          }
         }
-        if ((param0 & 7) != 0) {
-            // ifeq L34
-        } else {
-            return false;
+        L1: {
+          if ((param0 & 7) == 0) {
+            break L1;
+          } else {
+            if ((param1 & 7) == 0) {
+              break L1;
+            } else {
+              L2: {
+                if (((af) this).b(param0, 30554) != ((af) this).b(param1, 30554)) {
+                  stackOut_8_0 = 0;
+                  stackIn_9_0 = stackOut_8_0;
+                  break L2;
+                } else {
+                  stackOut_7_0 = 1;
+                  stackIn_9_0 = stackOut_7_0;
+                  break L2;
+                }
+              }
+              return stackIn_9_0 != 0;
+            }
+          }
         }
-        return ((af) this).b(param0, 30554) == ((af) this).b(param1, 30554) ? true : false;
+        return false;
     }
 
     final int b(byte param0, int param1) {
@@ -837,12 +868,12 @@ final class af extends sq {
         if (0 == param0) {
           return (byte) -1;
         } else {
-          if (param0 != -9) {
+          if ((param0 ^ -1) != -9) {
             L1: {
               if (0 > param0) {
                 break L1;
               } else {
-                if (-17 >= param0) {
+                if (-17 <= (param0 ^ -1)) {
                   return (byte)((param0 & 9) >> -1674602461);
                 } else {
                   break L1;
@@ -875,11 +906,11 @@ final class af extends sq {
         if (var4 == -1) {
           return 9;
         } else {
-          if (var4 == -1) {
+          if ((var4 ^ -1) == -1) {
             return 10;
           } else {
             if (var4 != 1) {
-              if (-3 != var4) {
+              if (-3 != (var4 ^ -1)) {
                 return -1;
               } else {
                 return 12;
@@ -1330,15 +1361,33 @@ final class af extends sq {
     }
 
     final int a(int param0) {
-        int var2 = ((af) this).f(22533, ((af) this).field_d.field_A);
-        if (param0 != -1) {
+        int var2 = 0;
+        L0: {
+          var2 = ((af) this).f(22533, ((af) this).field_d.field_A);
+          if (param0 == -1) {
+            break L0;
+          } else {
             field_h = null;
+            break L0;
+          }
         }
-        if (var2 != 0) {
-            // if_icmpne L61
-        }
-        if (!(!this.d(85884769, var2))) {
+        L1: {
+          L2: {
+            if (var2 == 0) {
+              break L2;
+            } else {
+              if (-2 != (var2 ^ -1)) {
+                break L1;
+              } else {
+                break L2;
+              }
+            }
+          }
+          if (this.d(85884769, var2)) {
             return 2;
+          } else {
+            break L1;
+          }
         }
         return var2;
     }

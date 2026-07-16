@@ -245,7 +245,7 @@ final class vg extends eh {
               var7 = param0;
               var8 = 0;
               L1: while (true) {
-                if (var8 >= var7.length) {
+                if ((var8 ^ -1) <= (var7.length ^ -1)) {
                   return var19;
                 } else {
                   L2: {
@@ -280,7 +280,7 @@ final class vg extends eh {
                     }
                   }
                   L4: {
-                    if (var13 > -1) {
+                    if ((var13 ^ -1) > -1) {
                       var11 = var11 - var13;
                       var15 = var15 + var13;
                       var13 = 0;
@@ -290,7 +290,7 @@ final class vg extends eh {
                     }
                   }
                   L5: {
-                    if (-1 <= var12) {
+                    if (-1 >= (var12 ^ -1)) {
                       break L5;
                     } else {
                       var14 = var14 + var12;
@@ -300,7 +300,7 @@ final class vg extends eh {
                     }
                   }
                   L6: {
-                    if (-var10 + var9.field_c < var14) {
+                    if ((-var10 + var9.field_c ^ -1) > (var14 ^ -1)) {
                       var14 = -var10 + var9.field_c;
                       break L6;
                     } else {
@@ -316,7 +316,7 @@ final class vg extends eh {
                     }
                   }
                   L8: {
-                    if (var14 > var19.field_c - var12) {
+                    if ((var14 ^ -1) < (var19.field_c - var12 ^ -1)) {
                       var14 = -var12 + var19.field_c;
                       break L8;
                     } else {
@@ -331,55 +331,58 @@ final class vg extends eh {
                       break L9;
                     }
                   }
-                  if ((var14 ^ -1) < -1) {
-                    if (var15 > 0) {
-                      oc.a((byte) 0, 0, var12 + var19.field_c * var13, var19.field_l, var15, -var14 + var9.field_c, -var14 + var19.field_c, var14, var11 * var9.field_c - -var10, var9.field_l);
-                      var8++;
-                      continue L1;
+                  L10: {
+                    if ((var14 ^ -1) >= -1) {
+                      break L10;
                     } else {
-                      var8++;
-                      continue L1;
+                      if (var15 > 0) {
+                        oc.a((byte) 0, 0, var12 + var19.field_c * var13, var19.field_l, var15, -var14 + var9.field_c, -var14 + var19.field_c, var14, var11 * var9.field_c - -var10, var9.field_l);
+                        break L10;
+                      } else {
+                        break L10;
+                      }
                     }
-                  } else {
-                    var8++;
-                    continue L1;
                   }
+                  var8++;
+                  continue L1;
                 }
               }
             } else {
-              L10: {
+              L11: {
                 var8_ref_sm = var17[var7_int];
                 if (var8_ref_sm.field_g + var8_ref_sm.field_d <= var5) {
-                  break L10;
-                } else {
-                  var5 = var8_ref_sm.field_g - -var8_ref_sm.field_d;
-                  break L10;
-                }
-              }
-              L11: {
-                if (var3 < var8_ref_sm.field_a - -var8_ref_sm.field_c) {
-                  var3 = var8_ref_sm.field_a - -var8_ref_sm.field_c;
                   break L11;
                 } else {
+                  var5 = var8_ref_sm.field_g - -var8_ref_sm.field_d;
                   break L11;
                 }
               }
               L12: {
-                if (var4 > var8_ref_sm.field_g) {
-                  var4 = var8_ref_sm.field_g;
+                if (var3 < var8_ref_sm.field_a - -var8_ref_sm.field_c) {
+                  var3 = var8_ref_sm.field_a - -var8_ref_sm.field_c;
                   break L12;
                 } else {
                   break L12;
                 }
               }
-              if (var8_ref_sm.field_a < var2) {
-                var2 = var8_ref_sm.field_a;
-                var7_int++;
-                continue L0;
-              } else {
-                var7_int++;
-                continue L0;
+              L13: {
+                if ((var4 ^ -1) < (var8_ref_sm.field_g ^ -1)) {
+                  var4 = var8_ref_sm.field_g;
+                  break L13;
+                } else {
+                  break L13;
+                }
               }
+              L14: {
+                if ((var8_ref_sm.field_a ^ -1) <= (var2 ^ -1)) {
+                  break L14;
+                } else {
+                  var2 = var8_ref_sm.field_a;
+                  break L14;
+                }
+              }
+              var7_int++;
+              continue L0;
             }
           }
         } else {

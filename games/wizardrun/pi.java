@@ -14,7 +14,8 @@ final class pi {
         int var18 = 0;
         int var19 = 0;
         int var20 = 0;
-        ca var21 = null;
+        Object var21 = null;
+        ca var21_ref = null;
         int var22 = 0;
         int var23 = 0;
         int var24 = 0;
@@ -194,7 +195,7 @@ final class pi {
                   break L8;
                 }
                 L10: {
-                  var21 = stackIn_37_0;
+                  var21_ref = stackIn_37_0;
                   var22 = nl.field_A[var15];
                   var23 = d.field_c[var15];
                   var24 = nl.field_A[var16];
@@ -208,8 +209,8 @@ final class pi {
                       L11: {
                         var28 = var66[var18];
                         var29 = var67[var18];
-                        if (var21 != null) {
-                          stackOut_46_0 = var21.field_b;
+                        if (var21_ref != null) {
+                          stackOut_46_0 = var21_ref.field_b;
                           stackIn_47_0 = stackOut_46_0;
                           break L11;
                         } else {
@@ -238,12 +239,12 @@ final class pi {
                   var31 = var67[var18];
                   var32 = var67[var19];
                   var33 = var67[var20];
-                  if (var21 == null) {
+                  if (var21_ref == null) {
                     stackOut_42_0 = 8355711;
                     stackIn_43_0 = stackOut_42_0;
                     break L12;
                   } else {
-                    stackOut_41_0 = var21.field_b;
+                    stackOut_41_0 = var21_ref.field_b;
                     stackIn_43_0 = stackOut_41_0;
                     break L12;
                   }

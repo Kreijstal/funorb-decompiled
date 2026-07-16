@@ -96,8 +96,9 @@ final class ij extends l {
                   param0[var7] = var12;
                   var13 = param4[var11];
                   param4[var11] = param4[var7];
+                  int incrementValue$1 = var7;
                   var7++;
-                  param4[var7] = var13;
+                  param4[incrementValue$1] = var13;
                   var11++;
                   continue L2;
                 } else {
@@ -323,8 +324,9 @@ final class ij extends l {
             var5 = var5 * param1;
             var5 = var5 & 16711680;
             var5 = (var6 | var5) >> -204613496;
+            int incrementValue$0 = var2;
             var2++;
-            df.field_d[var2] = var5;
+            df.field_d[incrementValue$0] = var5;
         }
     }
 

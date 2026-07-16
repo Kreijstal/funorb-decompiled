@@ -56,36 +56,38 @@ final class sd extends ch implements jb, tb {
                 }
               } else {
                 int discarded$11 = sd.a(true, 78);
-                if (-5 <= sq.field_c.field_e) {
+                if (-5 >= (sq.field_c.field_e ^ -1)) {
                   return 1;
                 } else {
                   return -1;
                 }
               }
             } else {
-              if (param1 != -51) {
+              if ((param1 ^ -1) == -51) {
+                return 5;
+              } else {
                 if (!param0) {
-                  if (-5 >= sq.field_c.field_e) {
+                  if (-5 >= (sq.field_c.field_e ^ -1)) {
                     return 1;
                   } else {
                     return -1;
                   }
                 } else {
                   int discarded$12 = sd.a(true, 78);
-                  if (-5 <= sq.field_c.field_e) {
+                  if (-5 >= (sq.field_c.field_e ^ -1)) {
                     return 1;
                   } else {
                     return -1;
                   }
                 }
-              } else {
-                return 5;
               }
             }
           } else {
-            if (param1 != -52) {
+            if ((param1 ^ -1) == -52) {
+              return 2;
+            } else {
               if (sq.field_c.field_e >= 2) {
-                if (param1 == -51) {
+                if ((param1 ^ -1) == -51) {
                   return 5;
                 } else {
                   if (param0) {
@@ -96,7 +98,7 @@ final class sd extends ch implements jb, tb {
                       return -1;
                     }
                   } else {
-                    if (-5 <= sq.field_c.field_e) {
+                    if (-5 >= (sq.field_c.field_e ^ -1)) {
                       return 1;
                     } else {
                       return -1;
@@ -112,15 +114,13 @@ final class sd extends ch implements jb, tb {
                   }
                 } else {
                   int discarded$14 = sd.a(true, 78);
-                  if (-5 <= sq.field_c.field_e) {
+                  if (-5 >= (sq.field_c.field_e ^ -1)) {
                     return 1;
                   } else {
                     return -1;
                   }
                 }
               }
-            } else {
-              return 2;
             }
           }
         } else {
@@ -131,21 +131,23 @@ final class sd extends ch implements jb, tb {
             if ((sq.field_c.field_e ^ -1) > -3) {
               if (sq.field_c.field_e < 2) {
                 if (!param0) {
-                  if (-5 <= sq.field_c.field_e) {
+                  if (-5 >= (sq.field_c.field_e ^ -1)) {
                     return 1;
                   } else {
                     return -1;
                   }
                 } else {
                   int discarded$15 = sd.a(true, 78);
-                  if (-5 >= sq.field_c.field_e) {
+                  if (-5 >= (sq.field_c.field_e ^ -1)) {
                     return 1;
                   } else {
                     return -1;
                   }
                 }
               } else {
-                if (param1 != -51) {
+                if ((param1 ^ -1) == -51) {
+                  return 5;
+                } else {
                   if (!param0) {
                     if (-5 >= (sq.field_c.field_e ^ -1)) {
                       return 1;
@@ -154,18 +156,18 @@ final class sd extends ch implements jb, tb {
                     }
                   } else {
                     int discarded$16 = sd.a(true, 78);
-                    if (-5 <= sq.field_c.field_e) {
+                    if (-5 >= (sq.field_c.field_e ^ -1)) {
                       return 1;
                     } else {
                       return -1;
                     }
                   }
-                } else {
-                  return 5;
                 }
               }
             } else {
-              if ((param1 ^ -1) != -52) {
+              if ((param1 ^ -1) == -52) {
+                return 2;
+              } else {
                 if (sq.field_c.field_e < 2) {
                   if (!param0) {
                     if (-5 >= (sq.field_c.field_e ^ -1)) {
@@ -175,14 +177,16 @@ final class sd extends ch implements jb, tb {
                     }
                   } else {
                     int discarded$17 = sd.a(true, 78);
-                    if (-5 <= sq.field_c.field_e) {
+                    if (-5 >= (sq.field_c.field_e ^ -1)) {
                       return 1;
                     } else {
                       return -1;
                     }
                   }
                 } else {
-                  if (param1 != -51) {
+                  if ((param1 ^ -1) == -51) {
+                    return 5;
+                  } else {
                     if (!param0) {
                       if (-5 >= (sq.field_c.field_e ^ -1)) {
                         return 1;
@@ -191,18 +195,14 @@ final class sd extends ch implements jb, tb {
                       }
                     } else {
                       int discarded$18 = sd.a(true, 78);
-                      if (-5 <= sq.field_c.field_e) {
+                      if (-5 >= (sq.field_c.field_e ^ -1)) {
                         return 1;
                       } else {
                         return -1;
                       }
                     }
-                  } else {
-                    return 5;
                   }
                 }
-              } else {
-                return 2;
               }
             }
           } else {
@@ -214,7 +214,7 @@ final class sd extends ch implements jb, tb {
                 return 2;
               } else {
                 if (sq.field_c.field_e >= 2) {
-                  if (param1 == -51) {
+                  if ((param1 ^ -1) == -51) {
                     return 5;
                   } else {
                     if (!param0) {
@@ -225,7 +225,7 @@ final class sd extends ch implements jb, tb {
                       }
                     } else {
                       int discarded$19 = sd.a(true, 78);
-                      if (-5 <= sq.field_c.field_e) {
+                      if (-5 >= (sq.field_c.field_e ^ -1)) {
                         return 1;
                       } else {
                         return -1;
@@ -254,7 +254,7 @@ final class sd extends ch implements jb, tb {
                 if (sq.field_c.field_e < 2) {
                   break L0;
                 } else {
-                  if (param1 == -51) {
+                  if ((param1 ^ -1) == -51) {
                     return 5;
                   } else {
                     break L0;
@@ -269,7 +269,7 @@ final class sd extends ch implements jb, tb {
                 }
               } else {
                 int discarded$21 = sd.a(true, 78);
-                if (-5 <= sq.field_c.field_e) {
+                if (-5 >= (sq.field_c.field_e ^ -1)) {
                   return 1;
                 } else {
                   return -1;

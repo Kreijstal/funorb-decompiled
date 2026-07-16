@@ -68,8 +68,8 @@ final class he extends km {
             if (param1 == 3) {
               return oi.a(new String[1], eg.field_p, 2);
             } else {
-              if (-5 != param1) {
-                if (-6 == param1) {
+              if (-5 != (param1 ^ -1)) {
+                if (-6 == (param1 ^ -1)) {
                   return oi.a(new String[1], mc.field_e, 2);
                 } else {
                   if (6 == param1) {
@@ -86,7 +86,7 @@ final class he extends km {
                             return oi.a(new String[1], bl.field_G, 2);
                           } else {
                             if (param2) {
-                              if (-14 == param1) {
+                              if (-14 == (param1 ^ -1)) {
                                 return oi.a(new String[1], lj.field_i, 2);
                               } else {
                                 return null;
@@ -94,7 +94,7 @@ final class he extends km {
                             } else {
                               var4 = null;
                               mg[] discarded$1 = he.a((mg[]) null, -22);
-                              if (-14 == param1) {
+                              if (-14 == (param1 ^ -1)) {
                                 return oi.a(new String[1], lj.field_i, 2);
                               } else {
                                 return null;
@@ -303,14 +303,16 @@ final class he extends km {
         mg[] var6 = null;
         var6 = new mg[9];
         var5 = var6;
-        var6[6] = eg.a(param1, (byte) 127, param4);
-        var5[3] = eg.a(param1, (byte) 127, param4);
-        var5[2] = eg.a(param1, (byte) 127, param4);
-        var5[1] = eg.a(param1, (byte) 127, param4);
-        var5[0] = eg.a(param1, (byte) 127, param4);
-        var6[8] = eg.a(param1, (byte) 45, param0);
-        var5[7] = eg.a(param1, (byte) 45, param0);
-        var5[5] = eg.a(param1, (byte) 45, param0);
+        mg dupTemp$4 = eg.a(param1, (byte) 127, param4);
+        var6[6] = dupTemp$4;
+        var5[3] = dupTemp$4;
+        var5[2] = dupTemp$4;
+        var5[1] = dupTemp$4;
+        var5[0] = dupTemp$4;
+        mg dupTemp$5 = eg.a(param1, (byte) 45, param0);
+        var6[8] = dupTemp$5;
+        var5[7] = dupTemp$5;
+        var5[5] = dupTemp$5;
         if (param3 != 89) {
           return null;
         } else {

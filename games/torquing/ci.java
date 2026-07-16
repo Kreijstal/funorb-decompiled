@@ -40,135 +40,82 @@ final class ci {
             IOException var2 = null;
             int var3 = 0;
             Throwable decompiledCaughtException = null;
-            int statePc = 0;
-            Throwable caughtException = null;
-            stateLoop: while (true) {
-                switch (statePc) {
-                    case 0: {
-                        var3 = Torquing.field_u;
-                        if (param0 == 0) {
-                            statePc = 2;
-                        } else {
-                            statePc = 1;
-                        }
-                        continue stateLoop;
-                    }
-                    case 1: {
-                        field_b = null;
-                        statePc = 2;
-                        continue stateLoop;
-                    }
-                    case 2: {
-                        if (null != nn.field_c) {
-                            statePc = 4;
-                        } else {
-                            statePc = 5;
-                        }
-                        continue stateLoop;
-                    }
-                    case 4: {
-                        nn.field_c.b((byte) -101);
-                        statePc = 5;
-                        continue stateLoop;
-                    }
-                    case 5: {
-                        if (null == gh.field_a) {
-                            statePc = 7;
-                        } else {
-                            statePc = 6;
-                        }
-                        continue stateLoop;
-                    }
-                    case 6: {
-                        gh.field_a.a((byte) -95);
-                        statePc = 7;
-                        continue stateLoop;
-                    }
-                    case 7: {
-                        if (null == jd.field_F) {
-                            statePc = 11;
-                        } else {
-                            statePc = 8;
-                        }
-                        continue stateLoop;
-                    }
-                    case 8: {
-                        try {
-                            jd.field_F.a(false);
-                            statePc = 11;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_8) {
-                            caughtException = stateCaught_8;
-                            statePc = 10;
-                            continue stateLoop;
-                        }
-                    }
-                    case 10: {
-                        iOException = (IOException) (Object) caughtException;
-                        statePc = 11;
-                        continue stateLoop;
-                    }
-                    case 11: {
-                        if (uj.field_b == null) {
-                            statePc = 20;
-                        } else {
-                            statePc = 12;
-                        }
-                        continue stateLoop;
-                    }
-                    case 12: {
-                        var1 = 0;
-                        statePc = 13;
-                        continue stateLoop;
-                    }
-                    case 13: {
-                        if (uj.field_b.length <= var1) {
-                            statePc = 20;
-                        } else {
-                            statePc = 14;
-                        }
-                        continue stateLoop;
-                    }
-                    case 14: {
-                        if (uj.field_b[var1] != null) {
-                            statePc = 17;
-                        } else {
-                            statePc = 15;
-                        }
-                        continue stateLoop;
-                    }
-                    case 15: {
-                        var1++;
-                        statePc = 13;
-                        continue stateLoop;
-                    }
-                    case 17: {
-                        try {
-                            uj.field_b[var1].a(false);
-                            statePc = 18;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_17) {
-                            caughtException = stateCaught_17;
-                            statePc = 19;
-                            continue stateLoop;
-                        }
-                    }
-                    case 18: {
-                        var1++;
-                        statePc = 13;
-                        continue stateLoop;
-                    }
-                    case 19: {
-                        var2 = (IOException) (Object) caughtException;
-                        var1++;
-                        statePc = 13;
-                        continue stateLoop;
-                    }
-                    case 20: {
-                        return;
-                    }
-                    default: throw new IllegalStateException("invalid CFG state " + statePc);
+            L0: {
+              var3 = Torquing.field_u;
+              if (param0 == 0) {
+                break L0;
+              } else {
+                field_b = null;
+                break L0;
+              }
+            }
+            L1: {
+              if (null != nn.field_c) {
+                nn.field_c.b((byte) -101);
+                break L1;
+              } else {
+                break L1;
+              }
+            }
+            L2: {
+              if (null == gh.field_a) {
+                break L2;
+              } else {
+                gh.field_a.a((byte) -95);
+                break L2;
+              }
+            }
+            L3: {
+              if (null == jd.field_F) {
+                break L3;
+              } else {
+                try {
+                  L4: {
+                    jd.field_F.a(false);
+                    break L4;
+                  }
+                } catch (java.io.IOException decompiledCaughtParameter0) {
+                  decompiledCaughtException = decompiledCaughtParameter0;
+                  L5: {
+                    iOException = (IOException) (Object) decompiledCaughtException;
+                    break L5;
+                  }
                 }
+                break L3;
+              }
+            }
+            L6: {
+              if (uj.field_b == null) {
+                break L6;
+              } else {
+                var1 = 0;
+                L7: while (true) {
+                  if (uj.field_b.length <= var1) {
+                    break L6;
+                  } else {
+                    if (uj.field_b[var1] != null) {
+                      try {
+                        L8: {
+                          uj.field_b[var1].a(false);
+                          var1++;
+                          break L8;
+                        }
+                      } catch (java.io.IOException decompiledCaughtParameter1) {
+                        decompiledCaughtException = decompiledCaughtParameter1;
+                        L9: {
+                          var2 = (IOException) (Object) decompiledCaughtException;
+                          var1++;
+                          break L9;
+                        }
+                      }
+                      continue L7;
+                    } else {
+                      var1++;
+                      continue L7;
+                    }
+                  }
+                }
+              }
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -244,6 +191,7 @@ final class ci {
         L0: while (true) {
           if (var2 >= 256) {
             field_d = "Waiting for extra data";
+            return;
           } else {
             var0 = (long)var2;
             var3 = 0;

@@ -29,7 +29,7 @@ final class jb extends pi {
         int var23 = 0;
         int var24 = 0;
         int var25 = 0;
-        String var25_ref = null;
+        Object var25_ref = null;
         int var26 = 0;
         int[] var27 = null;
         int[] var28 = null;
@@ -38,14 +38,14 @@ final class jb extends pi {
         int[] var34 = null;
         int[] var35 = null;
         int[] stackIn_3_0 = null;
-        int stackIn_27_0 = 0;
-        int stackIn_157_0 = 0;
+        int stackIn_23_0 = 0;
+        int stackIn_149_0 = 0;
         int[] stackOut_2_0 = null;
         int[] stackOut_1_0 = null;
-        int stackOut_26_0 = 0;
-        int stackOut_25_0 = 0;
-        int stackOut_156_0 = 0;
-        int stackOut_155_0 = 0;
+        int stackOut_22_0 = 0;
+        int stackOut_21_0 = 0;
+        int stackOut_148_0 = 0;
+        int stackOut_147_0 = 0;
         L0: {
           var26 = MinerDisturbance.field_ab;
           param3 = 640 + (-param3 + -640);
@@ -103,23 +103,23 @@ final class jb extends pi {
               }
               L4: {
                 if (-2 != (cm.field_o ^ -1)) {
-                  stackOut_26_0 = 0;
-                  stackIn_27_0 = stackOut_26_0;
+                  stackOut_22_0 = 0;
+                  stackIn_23_0 = stackOut_22_0;
                   break L4;
                 } else {
-                  stackOut_25_0 = 1;
-                  stackIn_27_0 = stackOut_25_0;
+                  stackOut_21_0 = 1;
+                  stackIn_23_0 = stackOut_21_0;
                   break L4;
                 }
               }
-              var16 = stackIn_27_0;
+              var16 = stackIn_23_0;
               var17 = 0;
               var18 = 0;
               L5: while (true) {
                 if (ld.field_A.length <= var18) {
                   L6: {
                     var18 = -var11 + 314;
-                    if (ah.field_e <= -1) {
+                    if ((ah.field_e ^ -1) <= -1) {
                       var15 = ah.field_e;
                       break L6;
                     } else {
@@ -128,7 +128,7 @@ final class jb extends pi {
                   }
                   L7: {
                     var19 = 105 + param3;
-                    if (0 != var15) {
+                    if (0 != (var15 ^ -1)) {
                       L8: {
                         ce.field_d.b(ld.field_A[var15], param3 + 320, var18, 0, -1);
                         var20 = ce.field_d.field_G + 3;
@@ -174,13 +174,13 @@ final class jb extends pi {
                                 break L11;
                               } else {
                                 L12: {
-                                  if (-4 == var15) {
+                                  if (-4 == (var15 ^ -1)) {
                                     break L12;
                                   } else {
                                     if (var15 == 1) {
                                       break L12;
                                     } else {
-                                      if (-1 == var15) {
+                                      if (-1 == (var15 ^ -1)) {
                                         break L12;
                                       } else {
                                         if (var15 == 2) {
@@ -192,7 +192,7 @@ final class jb extends pi {
                                     }
                                   }
                                 }
-                                var25_ref = oa.a((byte) -118, en.field_a[var15], new String[1]);
+                                var25_ref = (Object) (Object) oa.a((byte) -118, en.field_a[var15], new String[1]);
                                 break L11;
                               }
                             }
@@ -201,10 +201,10 @@ final class jb extends pi {
                                 break L13;
                               } else {
                                 L14: {
-                                  if (-15 == var15) {
+                                  if (-15 == (var15 ^ -1)) {
                                     break L14;
                                   } else {
-                                    if (-16 == var15) {
+                                    if (-16 == (var15 ^ -1)) {
                                       break L14;
                                     } else {
                                       if (16 == var15) {
@@ -223,13 +223,13 @@ final class jb extends pi {
                                     }
                                   }
                                 }
-                                var25_ref = oa.a((byte) -119, en.field_a[var15], new String[1]);
+                                var25_ref = (Object) (Object) oa.a((byte) -119, en.field_a[var15], new String[1]);
                                 break L13;
                               }
                             }
                             L15: {
                               if ((var15 ^ -1) == -5) {
-                                var25_ref = oa.a((byte) -73, en.field_a[var15], new String[1]);
+                                var25_ref = (Object) (Object) oa.a((byte) -73, en.field_a[var15], new String[1]);
                                 break L15;
                               } else {
                                 break L15;
@@ -239,13 +239,13 @@ final class jb extends pi {
                               if (5 != var15) {
                                 break L16;
                               } else {
-                                var25_ref = oa.a((byte) -95, en.field_a[var15], new String[1]);
+                                var25_ref = (Object) (Object) oa.a((byte) -95, en.field_a[var15], new String[1]);
                                 break L16;
                               }
                             }
                             L17: {
                               if (-7 == (var15 ^ -1)) {
-                                var25_ref = oa.a((byte) -84, en.field_a[var15], new String[1]);
+                                var25_ref = (Object) (Object) oa.a((byte) -84, en.field_a[var15], new String[1]);
                                 break L17;
                               } else {
                                 break L17;
@@ -253,7 +253,7 @@ final class jb extends pi {
                             }
                             L18: {
                               if (-8 == (var15 ^ -1)) {
-                                var25_ref = oa.a((byte) -77, en.field_a[var15], new String[1]);
+                                var25_ref = (Object) (Object) oa.a((byte) -77, en.field_a[var15], new String[1]);
                                 break L18;
                               } else {
                                 break L18;
@@ -271,7 +271,7 @@ final class jb extends pi {
                                   }
                                 }
                               }
-                              var25_ref = oa.a((byte) -121, en.field_a[var15], new String[1]);
+                              var25_ref = (Object) (Object) oa.a((byte) -121, en.field_a[var15], new String[1]);
                               break L19;
                             }
                             L21: {
@@ -279,7 +279,7 @@ final class jb extends pi {
                                 break L21;
                               } else {
                                 if ((var15 ^ -1) == -19) {
-                                  var25_ref = oa.a((byte) -113, en.field_a[var15], new String[1]);
+                                  var25_ref = (Object) (Object) oa.a((byte) -113, en.field_a[var15], new String[1]);
                                   break L21;
                                 } else {
                                   break L21;
@@ -288,7 +288,7 @@ final class jb extends pi {
                             }
                             L22: {
                               if ((var15 ^ -1) == -10) {
-                                var25_ref = oa.a((byte) -113, en.field_a[var15], new String[1]);
+                                var25_ref = (Object) (Object) oa.a((byte) -113, en.field_a[var15], new String[1]);
                                 break L22;
                               } else {
                                 break L22;
@@ -298,13 +298,13 @@ final class jb extends pi {
                               if ((var15 ^ -1) != -12) {
                                 break L23;
                               } else {
-                                var25_ref = oa.a((byte) -127, en.field_a[var15], new String[1]);
+                                var25_ref = (Object) (Object) oa.a((byte) -127, en.field_a[var15], new String[1]);
                                 break L23;
                               }
                             }
                             L24: {
                               if (var15 == 12) {
-                                var25_ref = oa.a((byte) -81, en.field_a[var15], new String[1]);
+                                var25_ref = (Object) (Object) oa.a((byte) -81, en.field_a[var15], new String[1]);
                                 break L24;
                               } else {
                                 break L24;
@@ -317,7 +317,7 @@ final class jb extends pi {
                                 if (var15 != 19) {
                                   break L25;
                                 } else {
-                                  var25_ref = oa.a((byte) -124, en.field_a[var15], new String[1]);
+                                  var25_ref = (Object) (Object) oa.a((byte) -124, en.field_a[var15], new String[1]);
                                   break L25;
                                 }
                               }
@@ -327,7 +327,7 @@ final class jb extends pi {
                                 break L26;
                               } else {
                                 if ((var15 ^ -1) == -22) {
-                                  var25_ref = oa.a((byte) -73, en.field_a[var15], new String[1]);
+                                  var25_ref = (Object) (Object) oa.a((byte) -73, en.field_a[var15], new String[1]);
                                   break L26;
                                 } else {
                                   break L26;
@@ -341,7 +341,7 @@ final class jb extends pi {
                                 if (24 != var15) {
                                   break L27;
                                 } else {
-                                  var25_ref = oa.a((byte) -107, en.field_a[var15], new String[1]);
+                                  var25_ref = (Object) (Object) oa.a((byte) -107, en.field_a[var15], new String[1]);
                                   break L27;
                                 }
                               }
@@ -351,7 +351,7 @@ final class jb extends pi {
                                 break L28;
                               } else {
                                 if (28 == var15) {
-                                  var25_ref = oa.a((byte) -124, en.field_a[var15], new String[1]);
+                                  var25_ref = (Object) (Object) oa.a((byte) -124, en.field_a[var15], new String[1]);
                                   break L28;
                                 } else {
                                   break L28;
@@ -363,7 +363,7 @@ final class jb extends pi {
                                 break L29;
                               } else {
                                 if (-28 == (var15 ^ -1)) {
-                                  var25_ref = oa.a((byte) -75, en.field_a[var15], new String[2]);
+                                  var25_ref = (Object) (Object) oa.a((byte) -75, en.field_a[var15], new String[2]);
                                   break L29;
                                 } else {
                                   break L29;
@@ -377,7 +377,7 @@ final class jb extends pi {
                                 if (-32 != (var15 ^ -1)) {
                                   break L30;
                                 } else {
-                                  var25_ref = oa.a((byte) -92, en.field_a[var15], new String[1]);
+                                  var25_ref = (Object) (Object) oa.a((byte) -92, en.field_a[var15], new String[1]);
                                   break L30;
                                 }
                               }
@@ -389,7 +389,7 @@ final class jb extends pi {
                                 if ((var15 ^ -1) != -27) {
                                   break L31;
                                 } else {
-                                  var25_ref = oa.a((byte) -83, en.field_a[var15], new String[1]);
+                                  var25_ref = (Object) (Object) oa.a((byte) -83, en.field_a[var15], new String[1]);
                                   break L31;
                                 }
                               }
@@ -398,12 +398,12 @@ final class jb extends pi {
                               if (33 != var15) {
                                 break L32;
                               } else {
-                                var25_ref = oa.a((byte) -121, en.field_a[var15], new String[1]);
+                                var25_ref = (Object) (Object) oa.a((byte) -121, en.field_a[var15], new String[1]);
                                 break L32;
                               }
                             }
                             if (var25_ref != null) {
-                              int discarded$3 = ce.field_d.a(var25_ref, 290 - -param3, -var20 + var24, 215, 480, 8947848, -1, 0, 0, var20);
+                              int discarded$3 = ce.field_d.a((String) var25_ref, 290 - -param3, -var20 + var24, 215, 480, 8947848, -1, 0, 0, var20);
                               break L9;
                             } else {
                               break L9;
@@ -415,7 +415,7 @@ final class jb extends pi {
                       }
                       var25 = 0;
                       L33: while (true) {
-                        if (pi.field_m[var15] <= var25) {
+                        if ((pi.field_m[var15] ^ -1) >= (var25 ^ -1)) {
                           ce.field_d.c(fn.field_q, -130 + (var19 - -505), var23 + (-ce.field_d.field_I - ce.field_d.field_E), 1, -1);
                           ce.field_d.b(Integer.toString(pi.field_i[var15]), -31 + (-130 + var19) - -505, var23, 1, -1);
                           break L7;
@@ -432,158 +432,157 @@ final class jb extends pi {
                   }
                   L34: {
                     if (0 > var15) {
-                      stackOut_156_0 = 0;
-                      stackIn_157_0 = stackOut_156_0;
+                      stackOut_148_0 = 0;
+                      stackIn_149_0 = stackOut_148_0;
                       break L34;
                     } else {
-                      stackOut_155_0 = 1;
-                      stackIn_157_0 = stackOut_155_0;
+                      stackOut_147_0 = 1;
+                      stackIn_149_0 = stackOut_147_0;
                       break L34;
                     }
                   }
-                  return stackIn_157_0 != 0;
+                  return stackIn_149_0 != 0;
                 } else {
                   L35: {
-                    if (nm.a(var18, var35, -827843803)) {
-                      nj.field_c[var18].c(var12, var13);
-                      break L35;
-                    } else {
-                      if (!param0) {
-                        if (!pi.field_k[var18]) {
-                          if (pj.field_a <= 0) {
-                            if (pi.field_e[var18]) {
-                              var18++;
-                              continue L5;
-                            } else {
-                              ha.field_c.c(var12, var13);
-                              break L35;
-                            }
-                          } else {
-                            ha.field_c.c(var12, var13);
-                            break L35;
-                          }
-                        } else {
-                          var18++;
-                          continue L5;
-                        }
-                      } else {
-                        var18++;
-                        continue L5;
-                      }
-                    }
-                  }
-                  L36: {
-                    if (nk.field_w < var12) {
-                      break L36;
-                    } else {
-                      if (var12 - -32 < nk.field_w) {
+                    L36: {
+                      if (nm.a(var18, var35, -827843803)) {
+                        nj.field_c[var18].c(var12, var13);
                         break L36;
                       } else {
-                        if (var13 > gb.field_e) {
-                          break L36;
+                        if (param0) {
+                          break L35;
                         } else {
-                          if (gb.field_e > 32 + var13) {
-                            break L36;
+                          if (pi.field_k[var18]) {
+                            break L35;
                           } else {
                             L37: {
-                              if (qh.field_c <= -1) {
+                              if (pj.field_a > 0) {
                                 break L37;
                               } else {
-                                te.field_d[0].f(var12 - 16, -8 + var13);
-                                if (-11 <= qh.field_c) {
-                                  break L37;
+                                if (pi.field_e[var18]) {
+                                  break L35;
                                 } else {
-                                  te.field_d[ph.field_c / 4 % 5].f(-16 + var12, -8 + var13);
                                   break L37;
                                 }
                               }
                             }
-                            var15 = var18;
+                            ha.field_c.c(var12, var13);
                             break L36;
                           }
                         }
                       }
                     }
-                  }
-                  L38: {
-                    if (ah.field_e == var18) {
-                      if ((qh.field_c ^ -1) <= -1) {
-                        if (qh.field_c >= 5) {
-                          te.field_d[qh.field_c].f(var12 - 16, -8 + var13);
+                    L38: {
+                      if ((nk.field_w ^ -1) > (var12 ^ -1)) {
+                        break L38;
+                      } else {
+                        if (var12 - -32 < nk.field_w) {
                           break L38;
                         } else {
-                          te.field_d[0].f(-16 + var12, var13 - 8);
-                          te.field_d[qh.field_c].f(var12 + -16, -8 + var13);
-                          break L38;
+                          if ((var13 ^ -1) < (gb.field_e ^ -1)) {
+                            break L38;
+                          } else {
+                            if (gb.field_e > 32 + var13) {
+                              break L38;
+                            } else {
+                              L39: {
+                                if ((qh.field_c ^ -1) <= -1) {
+                                  break L39;
+                                } else {
+                                  te.field_d[0].f(var12 - 16, -8 + var13);
+                                  if (-11 >= (qh.field_c ^ -1)) {
+                                    break L39;
+                                  } else {
+                                    te.field_d[ph.field_c / 4 % 5].f(-16 + var12, -8 + var13);
+                                    break L39;
+                                  }
+                                }
+                              }
+                              var15 = var18;
+                              break L38;
+                            }
+                          }
+                        }
+                      }
+                    }
+                    L40: {
+                      if ((ah.field_e ^ -1) == (var18 ^ -1)) {
+                        if ((qh.field_c ^ -1) <= -1) {
+                          if (qh.field_c >= 5) {
+                            te.field_d[qh.field_c].f(var12 - 16, -8 + var13);
+                            break L40;
+                          } else {
+                            te.field_d[0].f(-16 + var12, var13 - 8);
+                            te.field_d[qh.field_c].f(var12 + -16, -8 + var13);
+                            break L40;
+                          }
+                        } else {
+                          mb.field_d[4].f(var12 + -1, -4 + var13);
+                          break L40;
                         }
                       } else {
-                        mb.field_d[4].f(var12 + -1, -4 + var13);
-                        break L38;
+                        break L40;
                       }
-                    } else {
-                      break L38;
                     }
-                  }
-                  var14++;
-                  if (-10 != (var14 ^ -1)) {
-                    var12 += 40;
-                    var18++;
-                    continue L5;
-                  } else {
-                    L39: {
-                      var13 += 32;
-                      var12 = 145 - -param3;
-                      var17++;
-                      if (var9 == var17) {
-                        var12 = var12 + var10;
-                        break L39;
+                    var14++;
+                    if (-10 != (var14 ^ -1)) {
+                      var12 += 40;
+                      break L35;
+                    } else {
+                      L41: {
+                        var13 += 32;
+                        var12 = 145 - -param3;
+                        var17++;
+                        if (var9 == var17) {
+                          var12 = var12 + var10;
+                          break L41;
+                        } else {
+                          break L41;
+                        }
+                      }
+                      var14 = 0;
+                      if (!param2) {
+                        var13 += 5;
+                        break L35;
                       } else {
-                        break L39;
+                        break L35;
                       }
                     }
-                    var14 = 0;
-                    if (!param2) {
-                      var13 += 5;
-                      var18++;
-                      continue L5;
-                    } else {
-                      var18++;
-                      continue L5;
-                    }
                   }
+                  var18++;
+                  continue L5;
                 }
               }
             } else {
-              if (!nm.a(var9, var34, -827843803)) {
-                if (!param0) {
-                  if (!pi.field_k[var9]) {
-                    if (pi.field_e[var9]) {
-                      if (pj.field_a <= 0) {
-                        var9--;
-                        continue L1;
-                      } else {
-                        var8++;
-                        var9--;
-                        continue L1;
-                      }
-                    } else {
-                      var8++;
-                      var9--;
-                      continue L1;
-                    }
+              L42: {
+                L43: {
+                  if (nm.a(var9, var34, -827843803)) {
+                    break L43;
                   } else {
-                    var9--;
-                    continue L1;
+                    if (param0) {
+                      break L42;
+                    } else {
+                      if (pi.field_k[var9]) {
+                        break L42;
+                      } else {
+                        if (!pi.field_e[var9]) {
+                          break L43;
+                        } else {
+                          if (pj.field_a > 0) {
+                            break L43;
+                          } else {
+                            break L42;
+                          }
+                        }
+                      }
+                    }
                   }
-                } else {
-                  var9--;
-                  continue L1;
                 }
-              } else {
                 var8++;
-                var9--;
-                continue L1;
+                break L42;
               }
+              var9--;
+              continue L1;
             }
           }
         } else {

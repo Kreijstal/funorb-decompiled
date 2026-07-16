@@ -257,6 +257,7 @@ final class hk extends lh {
 
     final static hk a(rh param0, String param1, String param2) {
         try {
+            hk var4_ref = null;
             if (!hk.a(param0)) {
                 boolean discarded$0 = param0.a(param2, param1, -60);
                 return null;
@@ -265,13 +266,13 @@ final class hk extends lh {
             if (var3 == null) {
                 return null;
             }
-            hk var4 = null;
+            Object var4 = null;
             try {
-                var4 = new hk(var3);
+                var4_ref = new hk(var3);
             } catch (IOException iOException) {
                 iOException.printStackTrace();
             }
-            return var4;
+            return var4_ref;
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
@@ -281,6 +282,7 @@ final class hk extends lh {
 
     final static hk a(rh param0, int param1, int param2) {
         try {
+            hk var4_ref = null;
             if (!hk.a(param0)) {
                 boolean discarded$0 = param0.a((byte) -29, param1, param2);
                 return null;
@@ -289,13 +291,13 @@ final class hk extends lh {
             if (var3 == null) {
                 return null;
             }
-            hk var4 = null;
+            Object var4 = null;
             try {
-                var4 = new hk(var3);
+                var4_ref = new hk(var3);
             } catch (IOException iOException) {
                 iOException.printStackTrace();
             }
-            return var4;
+            return var4_ref;
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
@@ -419,8 +421,9 @@ final class hk extends lh {
                         break L8;
                       }
                     }
+                    int incrementValue$1 = var3;
                     var3++;
-                    ((hk) this).field_s[var3] = (byte)(var6 - 128);
+                    ((hk) this).field_s[incrementValue$1] = (byte)(var6 - 128);
                     var5++;
                     continue L6;
                   }
@@ -505,8 +508,9 @@ final class hk extends lh {
                       break L3;
                     }
                   }
+                  int incrementValue$1 = var2;
                   var2++;
-                  var1[var2] = (byte)(var7 - 128);
+                  var1[incrementValue$1] = (byte)(var7 - 128);
                   var6++;
                   continue L2;
                 } else {
@@ -581,7 +585,6 @@ final class hk extends lh {
         int var16 = 0;
         int var17_int = 0;
         Object var17 = null;
-        float[] var17_array = null;
         int var18_int = 0;
         float[] var18 = null;
         int var19 = 0;
@@ -1097,7 +1100,7 @@ final class hk extends lh {
                   var50 = var54;
                   var46 = var50;
                   var40 = var46;
-                  var17_array = var40;
+                  var17 = (Object) (Object) var40;
                   if (((hk) this).field_E) {
                     break L36;
                   } else {
@@ -1155,7 +1158,7 @@ final class hk extends lh {
               }
             }
             ((hk) this).field_E = stackIn_111_1 != 0;
-            return var17_array;
+            return (float[]) var17;
           } else {
             var42 = field_v[var14.field_c[var17_int]];
             var55 = field_P;

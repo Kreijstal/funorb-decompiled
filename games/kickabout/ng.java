@@ -16,7 +16,7 @@ final class ng {
 
     final static kg[] a(int param0, int param1, int param2, int param3, boolean param4, int param5) {
         kg[] var6 = null;
-        kg var7_ref = null;
+        kg var7_ref_kg = null;
         int var7 = 0;
         int var8_int = 0;
         tf var8 = null;
@@ -38,13 +38,13 @@ final class ng {
         var15 = new kg[6];
         var6 = var15;
         if (!vi.field_n) {
-          var7_ref = eo.a(bt.a(-126, param4, param3));
+          var7_ref_kg = eo.a(bt.a(-126, param4, param3));
           var8_int = 0;
           L0: while (true) {
             if (6 <= var8_int) {
               return var6;
             } else {
-              var15[var8_int] = var7_ref;
+              var15[var8_int] = var7_ref_kg;
               var8_int++;
               continue L0;
             }

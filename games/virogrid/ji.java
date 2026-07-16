@@ -127,25 +127,41 @@ final class ji {
     }
 
     ji(File param0, String param1, long param2) throws IOException {
-        if ((param2 ^ -1L) == 0L) {
+        int var5 = 0;
+        L0: {
+          if ((param2 ^ -1L) != 0L) {
+            break L0;
+          } else {
             param2 = 9223372036854775807L;
+            break L0;
+          }
         }
-        if (param2 < param0.length()) {
-            boolean discarded$0 = param0.delete();
+        L1: {
+          if (param2 >= param0.length()) {
+            break L1;
+          } else {
+            boolean discarded$2 = param0.delete();
+            break L1;
+          }
         }
         ((ji) this).field_h = new RandomAccessFile(param0, param1);
         ((ji) this).field_f = param2;
         ((ji) this).field_g = 0L;
-        int var5 = ((ji) this).field_h.read();
-        if (var5 != -1) {
-            // ifne L108
+        var5 = ((ji) this).field_h.read();
+        if (var5 == -1) {
+          ((ji) this).field_h.seek(0L);
+          return;
+        } else {
+          if (param1.equals((Object) (Object) "r")) {
+            ((ji) this).field_h.seek(0L);
+            return;
+          } else {
             ((ji) this).field_h.seek(0L);
             ((ji) this).field_h.write(var5);
-        } else {
             ((ji) this).field_h.seek(0L);
-            ((ji) this).field_h.seek(0L);
+            return;
+          }
         }
-        ((ji) this).field_h.seek(0L);
     }
 
     final static String a(int param0, CharSequence param1) {

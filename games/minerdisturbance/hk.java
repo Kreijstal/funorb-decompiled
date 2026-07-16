@@ -47,7 +47,6 @@ final class hk {
 
     final static boolean a(int param0) {
         Object var1 = null;
-        tm var1_ref = null;
         int var2 = 0;
         tm var3 = null;
         tm var4 = null;
@@ -71,16 +70,16 @@ final class hk {
                     break L1;
                   }
                 }
-                var1_ref = (tm) (Object) ok.field_b.b(96);
+                var1 = (Object) (Object) (tm) (Object) ok.field_b.b(96);
                 break L0;
               }
             }
             L2: {
-              if (var1_ref == null) {
+              if (var1 == null) {
                 break L2;
               } else {
                 if (var2 != 0) {
-                  var1_ref.a(false);
+                  ((tm) var1).a(false);
                   break L2;
                 } else {
                   if (fm.a((byte) 95)) {

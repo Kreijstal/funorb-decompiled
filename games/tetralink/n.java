@@ -95,34 +95,55 @@ final class n extends gn implements dm {
     }
 
     final void a(int param0, String[] param1) {
+        int var3 = 0;
         int var4_int = 0;
+        q var4 = null;
         int var5 = 0;
-        int var6 = TetraLink.field_J;
-        ((n) this).field_J.b(1);
-        if (param1 != null) {
-            // ifeq L25
-        } else {
-            ((n) this).field_V = null;
-            return;
+        int var6 = 0;
+        L0: {
+          var6 = TetraLink.field_J;
+          ((n) this).field_J.b(1);
+          if (param1 == null) {
+            break L0;
+          } else {
+            if (param1.length == 0) {
+              break L0;
+            } else {
+              var3 = param1.length;
+              ((n) this).field_V = new String[var3];
+              var4_int = 0;
+              L1: while (true) {
+                if (var4_int >= var3) {
+                  var4 = new q(od.field_S, param0, 1);
+                  ((n) this).field_T = new ae[var3 - -1];
+                  var5 = 0;
+                  L2: while (true) {
+                    if (var3 <= var5) {
+                      ((n) this).field_T[var3] = new ae(qc.field_ab, (dn) this);
+                      ((n) this).field_T[var3].field_H = (kg) (Object) var4;
+                      ((n) this).field_T[var3].a(15, 16 + var3 * 16 + 20, param0 + 73, 0, 100);
+                      ((n) this).c((na) (Object) ((n) this).field_T[var3], 10);
+                      return;
+                    } else {
+                      ((n) this).field_T[var5] = new ae(((n) this).field_V[var5], (dn) this);
+                      ((n) this).field_T[var5].field_H = (kg) (Object) var4;
+                      ((n) this).field_T[var5].field_C = rn.field_a;
+                      ((n) this).field_T[var5].a(15, 16 * var5 + 20, 80, 0, 80);
+                      ((n) this).c((na) (Object) ((n) this).field_T[var5], 10);
+                      var5++;
+                      continue L2;
+                    }
+                  }
+                } else {
+                  ((n) this).field_V[var4_int] = p.a((CharSequence) (Object) param1[var4_int], (byte) 43).replace(' ', ' ');
+                  var4_int++;
+                  continue L1;
+                }
+              }
+            }
+          }
         }
-        int var3 = param1.length;
-        ((n) this).field_V = new String[var3];
-        for (var4_int = 0; var4_int < var3; var4_int++) {
-            ((n) this).field_V[var4_int] = p.a((CharSequence) (Object) param1[var4_int], (byte) 43).replace(' ', ' ');
-        }
-        q var4 = new q(od.field_S, param0, 1);
-        ((n) this).field_T = new ae[var3 - -1];
-        for (var5 = 0; var3 > var5; var5++) {
-            ((n) this).field_T[var5] = new ae(((n) this).field_V[var5], (dn) this);
-            ((n) this).field_T[var5].field_H = (kg) (Object) var4;
-            ((n) this).field_T[var5].field_C = rn.field_a;
-            ((n) this).field_T[var5].a(15, 16 * var5 + 20, 80, 0, 80);
-            ((n) this).c((na) (Object) ((n) this).field_T[var5], 10);
-        }
-        ((n) this).field_T[var3] = new ae(qc.field_ab, (dn) this);
-        ((n) this).field_T[var3].field_H = (kg) (Object) var4;
-        ((n) this).field_T[var3].a(15, 16 + var3 * 16 + 20, param0 + 73, 0, 100);
-        ((n) this).c((na) (Object) ((n) this).field_T[var3], 10);
+        ((n) this).field_V = null;
     }
 
     final boolean a(int param0, char param1, int param2, na param3) {

@@ -72,8 +72,9 @@ final class ka extends l {
                       var13 = stackIn_24_0;
                       if (var7 < var13) {
                         lk.field_Tb[var11] = lk.field_Tb[var8];
+                        int incrementValue$1 = var8;
                         var8++;
-                        lk.field_Tb[var8] = var12;
+                        lk.field_Tb[incrementValue$1] = var12;
                         if (var13 < var9) {
                           var9 = var13;
                           var11++;

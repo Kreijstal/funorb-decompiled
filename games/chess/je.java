@@ -133,27 +133,22 @@ final class je extends vm {
     }
 
     final static boolean h(int param0) {
-        if (param0 == 30065) {
-          if (il.field_a <= -21) {
-            if (vd.p(-101)) {
-              if (-1 < gm.field_d) {
-                if (tb.a((byte) 61)) {
-                  return false;
-                } else {
-                  return true;
-                }
-              } else {
-                return false;
-              }
-            } else {
-              return true;
-            }
-          } else {
-            return true;
-          }
-        } else {
-          return false;
+        if (param0 != 30065) {
+            return false;
         }
+        if ((il.field_a ^ -1) > -21) {
+            return true;
+        }
+        if (!vd.p(-101)) {
+            return true;
+        }
+        if (-1 <= (gm.field_d ^ -1)) {
+            return false;
+        }
+        if (tb.a((byte) 61)) {
+            return false;
+        }
+        return true;
     }
 
     je(qn param0, qn param1, qn param2) {

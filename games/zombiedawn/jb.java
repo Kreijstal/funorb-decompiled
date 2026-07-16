@@ -1397,41 +1397,66 @@ final class jb implements io {
     }
 
     final static boolean a(byte param0, char param1) {
-        if (param0 != 27) {
-            jb.a(-97);
-            if (!(!Character.isISOControl(param1))) {
-                return false;
-            }
-            if (c.a(param1, 441)) {
-                return true;
-            }
-            if (param1 == 45) {
-                return true;
-            }
-            if (160 == param1) {
-                return true;
-            }
-            if (param1 != 32) {
-                // if_icmpeq L70
+        if (param0 == 27) {
+          if (Character.isISOControl(param1)) {
+            return false;
+          } else {
+            if (!c.a(param1, 441)) {
+              L0: {
+                if (param1 == 45) {
+                  break L0;
+                } else {
+                  if (160 == param1) {
+                    break L0;
+                  } else {
+                    if (param1 == 32) {
+                      break L0;
+                    } else {
+                      if (param1 == 95) {
+                        break L0;
+                      } else {
+                        return false;
+                      }
+                    }
+                  }
+                }
+              }
+              return true;
             } else {
-                return true;
+              return true;
             }
-            return false;
-        }
-        if (!(!Character.isISOControl(param1))) {
-            return false;
-        }
-        if (c.a(param1, 441)) {
-            return true;
-        }
-        if (param1 != 45) {
-            // if_icmpeq L129
-            // if_icmpeq L129
-            // if_icmpeq L129
+          }
         } else {
-            return true;
+          jb.a(-97);
+          if (Character.isISOControl(param1)) {
+            return false;
+          } else {
+            if (!c.a(param1, 441)) {
+              if (param1 != 45) {
+                if (160 != param1) {
+                  L1: {
+                    if (param1 == 32) {
+                      break L1;
+                    } else {
+                      if (param1 == 95) {
+                        break L1;
+                      } else {
+                        return false;
+                      }
+                    }
+                  }
+                  return true;
+                } else {
+                  return true;
+                }
+              } else {
+                return true;
+              }
+            } else {
+              return true;
+            }
+          }
         }
-        return false;
     }
 
     static {

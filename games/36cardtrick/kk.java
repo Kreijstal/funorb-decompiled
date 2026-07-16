@@ -8,7 +8,7 @@ final class kk {
     final static int a(int param0, int param1, int param2) {
         int var4 = Main.field_T;
         if (param1 < 113) {
-            byte[] var5 = (byte[]) null;
+            Object var5 = null;
             ef discarded$0 = kk.a((wb[]) null, (byte[]) null, -29, 88, 105);
         }
         int var3 = 0;
@@ -98,9 +98,9 @@ final class kk {
           L0: while (true) {
             if ((var11_int ^ -1) <= -257) {
               var11 = new ef(param1, var46, var47, var45, var44, var9, var48);
-              ((ef) var11).field_s = ((ef) var11).field_s - 1;
-              ((ef) var11).field_x = ((ef) var11).field_x - 1;
-              ((ef) var11).field_q = ((ef) var11).field_q - 1;
+              var11.field_s = var11.field_s - 1;
+              var11.field_x = var11.field_x - 1;
+              var11.field_q = var11.field_q - 1;
               return var11;
             } else {
               var5[var11_int] = -1 + param0[var11_int].field_h;
@@ -131,14 +131,16 @@ final class kk {
                           var20++;
                           continue L2;
                         } else {
+                          int incrementValue$153 = var18;
                           var18++;
-                          if (-1 == (var13[var18] ^ -1)) {
+                          if (-1 == (var13[incrementValue$153] ^ -1)) {
                             var19++;
                             var21++;
                             continue L3;
                           } else {
+                            int incrementValue$154 = var19;
                             var19++;
-                            var12[var19] = (byte) 1;
+                            var12[incrementValue$154] = (byte) 1;
                             var21++;
                             continue L3;
                           }
@@ -157,8 +159,9 @@ final class kk {
                       var20++;
                       continue L1;
                     } else {
+                      int incrementValue$155 = var18;
                       var18++;
-                      if (0 != var13[var18]) {
+                      if (0 != var13[incrementValue$155]) {
                         var22 = var12;
                         var23 = -var16 + var19;
                         var24 = var12;
@@ -226,7 +229,7 @@ final class kk {
                   var5 = il.field_a[var9];
                   var5.a(6, 6, param0 + 10328, 1, 6);
                   var5.a((byte) 124);
-                  var6 = new int[]{((mg) var5).field_f + ((mg) var5).field_e >> 837186561, ((mg) var5).field_u + ((mg) var5).field_s >> 1164429537, ((mg) var5).field_i + ((mg) var5).field_z >> -808614751};
+                  var6 = new int[]{var5.field_f + var5.field_e >> 837186561, var5.field_u + var5.field_s >> 1164429537, var5.field_i + var5.field_z >> -808614751};
                   sk.field_b[var9] = var6;
                   var5.a(false, -var6[0], -var6[1], -var6[2]);
                   var9++;

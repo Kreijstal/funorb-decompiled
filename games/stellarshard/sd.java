@@ -164,7 +164,7 @@ final class sd {
               }
             }
             L4: {
-              if (((sd) this).field_e != 3) {
+              if ((((sd) this).field_e ^ -1) != 3) {
                 break L4;
               } else {
                 var4 = td.field_e;
@@ -172,7 +172,7 @@ final class sd {
               }
             }
             L5: {
-              if (4 != ((sd) this).field_e) {
+              if (4 != (((sd) this).field_e ^ -1)) {
                 break L5;
               } else {
                 var4 = nl.field_f;
@@ -204,7 +204,7 @@ final class sd {
               }
             }
             L9: {
-              if (((sd) this).field_e != 8) {
+              if ((((sd) this).field_e ^ -1) != 8) {
                 break L9;
               } else {
                 var4 = te.field_b;
@@ -212,7 +212,7 @@ final class sd {
               }
             }
             L10: {
-              if (9 != ((sd) this).field_e) {
+              if (9 != (((sd) this).field_e ^ -1)) {
                 break L10;
               } else {
                 var4 = ha.field_x;

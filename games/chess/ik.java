@@ -24,20 +24,22 @@ final class ik implements Iterator {
 
     public final Object next() {
         int var2 = 0;
-        o var3 = null;
+        Object var3 = null;
+        o var3_ref = null;
         o var4 = null;
         var2 = Chess.field_G;
         if (((ik) this).field_j.field_e[((ik) this).field_h + -1] == ((ik) this).field_c) {
           L0: while (true) {
             if (((ik) this).field_j.field_f > ((ik) this).field_h) {
+              int fieldTemp$2 = ((ik) this).field_h;
               ((ik) this).field_h = ((ik) this).field_h + 1;
-              var3 = ((ik) this).field_j.field_e[((ik) this).field_h].field_h;
-              if (var3 == ((ik) this).field_j.field_e[-1 + ((ik) this).field_h]) {
+              var3_ref = ((ik) this).field_j.field_e[fieldTemp$2].field_h;
+              if (var3_ref == ((ik) this).field_j.field_e[-1 + ((ik) this).field_h]) {
                 continue L0;
               } else {
-                ((ik) this).field_d = var3;
-                ((ik) this).field_c = var3.field_h;
-                return (Object) (Object) var3;
+                ((ik) this).field_d = var3_ref;
+                ((ik) this).field_c = var3_ref.field_h;
+                return (Object) (Object) var3_ref;
               }
             } else {
               return null;
@@ -76,8 +78,9 @@ final class ik implements Iterator {
         if (((ik) this).field_j.field_e[-1 + ((ik) this).field_h] == ((ik) this).field_c) {
           L0: while (true) {
             if (((ik) this).field_j.field_f > ((ik) this).field_h) {
+              int fieldTemp$1 = ((ik) this).field_h;
               ((ik) this).field_h = ((ik) this).field_h + 1;
-              if (((ik) this).field_j.field_e[((ik) this).field_h].field_h == ((ik) this).field_j.field_e[-1 + ((ik) this).field_h]) {
+              if (((ik) this).field_j.field_e[fieldTemp$1].field_h == ((ik) this).field_j.field_e[-1 + ((ik) this).field_h]) {
                 ((ik) this).field_c = ((ik) this).field_j.field_e[-1 + ((ik) this).field_h];
                 continue L0;
               } else {

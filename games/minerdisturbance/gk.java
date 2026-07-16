@@ -50,28 +50,27 @@ class gk extends eg {
 
     final static lc a(int param0, int param1, int param2, int param3, int param4) {
         lc var5 = null;
-        lc var5_ref = null;
         int var6 = 0;
         int var7 = 0;
         var7 = MinerDisturbance.field_ab;
         var5 = (lc) (Object) sj.field_g.b(107);
         L0: while (true) {
           if (var5 != null) {
-            if (param2 != var5_ref.field_q) {
+            if (param2 != var5.field_q) {
               var5 = (lc) (Object) sj.field_g.b((byte) 56);
               continue L0;
             } else {
-              return var5_ref;
+              return var5;
             }
           } else {
-            var5_ref = new lc();
-            var5_ref.field_q = param2;
-            var5_ref.field_r = param4;
-            var5_ref.field_v = param1;
-            sj.field_g.a((byte) -94, (pi) (Object) var5_ref);
+            var5 = new lc();
+            var5.field_q = param2;
+            var5.field_r = param4;
+            var5.field_v = param1;
+            sj.field_g.a((byte) -94, (pi) (Object) var5);
             var6 = 51 / ((50 - param3) / 50);
-            lc.a((byte) 126, param0, var5_ref);
-            return var5_ref;
+            lc.a((byte) 126, param0, var5);
+            return var5;
           }
         }
     }

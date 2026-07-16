@@ -68,69 +68,28 @@ final class fc extends qk {
     final static void o(byte param0) {
         Object var1 = null;
         Throwable var2 = null;
-        int statePc = 0;
-        Throwable caughtException = null;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    if (null == ea.field_c) {
-                        statePc = 6;
-                    } else {
-                        statePc = 1;
-                    }
-                    continue stateLoop;
-                }
-                case 1: {
-                    var1 = (Object) (Object) ea.field_c;
-                    // monitorenter ea.field_c
-                    statePc = 2;
-                    continue stateLoop;
-                }
-                case 2: {
-                    try {
-                        ea.field_c = null;
-                        // monitorexit var1
-                        statePc = 6;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_2) {
-                        caughtException = stateCaught_2;
-                        statePc = 4;
-                        continue stateLoop;
-                    }
-                }
-                case 4: {
-                    try {
-                        var2 = caughtException;
-                        // monitorexit var1
-                        statePc = 5;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_4) {
-                        caughtException = stateCaught_4;
-                        statePc = 4;
-                        continue stateLoop;
-                    }
-                }
-                case 5: {
-                    throw (RuntimeException) (Object) var2;
-                }
-                case 6: {
-                    if (param0 < -72) {
-                        statePc = 8;
-                    } else {
-                        statePc = 7;
-                    }
-                    continue stateLoop;
-                }
-                case 7: {
-                    fc.o((byte) -40);
-                    statePc = 8;
-                    continue stateLoop;
-                }
-                case 8: {
-                    return;
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
+        Throwable decompiledCaughtException = null;
+        L0: {
+          if (null == ea.field_c) {
+            break L0;
+          } else {
+            var1 = (Object) (Object) ea.field_c;
+            synchronized (var1) {
+              L1: {
+                ea.field_c = null;
+                break L1;
+              }
             }
+            break L0;
+          }
+        }
+        L2: {
+          if (param0 < -72) {
+            break L2;
+          } else {
+            fc.o((byte) -40);
+            break L2;
+          }
         }
     }
 

@@ -643,8 +643,9 @@ final class l {
             ((l) this).field_h = -98;
         }
         ((l) this).field_l = param0;
-        ((l) this).field_m = ((l) this).field_b.a(param0, (byte) 101);
-        if ((((l) this).field_b.a(param0, (byte) 101) ^ -1) == 0) {
+        int dupTemp$0 = ((l) this).field_b.a(param0, (byte) 101);
+        ((l) this).field_m = dupTemp$0;
+        if ((dupTemp$0 ^ -1) == 0) {
             ((l) this).field_l = -1;
         }
     }

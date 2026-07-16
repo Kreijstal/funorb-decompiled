@@ -222,35 +222,66 @@ final class of extends vh {
     }
 
     final static void a(int param0, boolean param1, int param2) {
-        int var8 = 0;
-        if (!(!ne.field_r.c(0))) {
-            return;
-        }
-        dd var9 = ((lk) (Object) ne.field_r.c((byte) 104)).field_n;
-        if (var9 == null) {
-            return;
-        }
-        qh.a(kg.field_t);
-        int var4 = var9.field_A;
-        param2 = param2 - (var4 >> -208051647);
-        qh.c(param0, param2, param0 + 230, var4 + param2);
+        int var4 = 0;
         int var5 = 0;
-        aa var6 = new aa(ne.field_r);
-        if (param1) {
-            return;
-        }
-        lk var7 = (lk) (Object) var6.b((byte) -92);
-        while (var7 != null) {
-            // if_acmpeq L221
-            var5 = (int)((double)var7.field_p + 0.5);
-            for (var8 = 0; var8 < var7.field_l; var8++) {
-                // if_icmpge L206
-                var7.field_n.c(var5 + param0, param2);
-                var5 = var5 + (4 + var7.field_n.field_z);
+        aa var6 = null;
+        lk var7 = null;
+        int var8 = 0;
+        dd var9 = null;
+        if (ne.field_r.c(0)) {
+          return;
+        } else {
+          var9 = ((lk) (Object) ne.field_r.c((byte) 104)).field_n;
+          if (var9 != null) {
+            qh.a(kg.field_t);
+            var4 = var9.field_A;
+            param2 = param2 - (var4 >> -208051647);
+            qh.c(param0, param2, param0 + 230, var4 + param2);
+            var5 = 0;
+            var6 = new aa(ne.field_r);
+            if (!param1) {
+              var7 = (lk) (Object) var6.b((byte) -92);
+              L0: while (true) {
+                L1: {
+                  if (var7 == null) {
+                    break L1;
+                  } else {
+                    if (null == var7.field_n) {
+                      break L1;
+                    } else {
+                      var5 = (int)((double)var7.field_p + 0.5);
+                      var8 = 0;
+                      L2: while (true) {
+                        L3: {
+                          if (var8 >= var7.field_l) {
+                            break L3;
+                          } else {
+                            if (-231 >= (var5 ^ -1)) {
+                              break L3;
+                            } else {
+                              var7.field_n.c(var5 + param0, param2);
+                              var5 = var5 + (4 + var7.field_n.field_z);
+                              var8++;
+                              continue L2;
+                            }
+                          }
+                        }
+                        var7 = (lk) (Object) var6.b(-85);
+                        continue L0;
+                      }
+                    }
+                  }
+                }
+                qh.b(kg.field_t);
+                return;
+              }
+            } else {
+              return;
             }
-            var7 = (lk) (Object) var6.b(-85);
+          } else {
+            return;
+          }
         }
-        qh.b(kg.field_t);
     }
 
     static {

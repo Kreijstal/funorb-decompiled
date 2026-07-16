@@ -46,7 +46,7 @@ final class tc extends am {
         int stackOut_15_1 = 0;
         int stackOut_15_2 = 0;
         var7 = Kickabout.field_G;
-        if (-2 == param0) {
+        if (-2 == (param0 ^ -1)) {
           ((tc) this).field_r = param2.a(-118);
           if (!param1) {
             return;
@@ -56,7 +56,7 @@ final class tc extends am {
           }
         } else {
           L0: {
-            if (-3 == param0) {
+            if (-3 == (param0 ^ -1)) {
               var4 = param2.h((byte) -105);
               ((tc) this).field_o = new int[var4];
               ((tc) this).field_q = new char[var4];
@@ -213,7 +213,7 @@ final class tc extends am {
             if (ua.field_l == param0) {
               break L0;
             } else {
-              if (param0 > ua.field_l) {
+              if ((param0 ^ -1) < (ua.field_l ^ -1)) {
                 L1: {
                   var2 = (param0 - ua.field_l) / 10;
                   stackOut_69_0 = ua.field_l;
@@ -257,7 +257,7 @@ final class tc extends am {
                 }
                 L3: {
                   ua.field_l = stackIn_55_0 + stackIn_55_1;
-                  if (cf.field_Db - -dc.field_d == param0) {
+                  if ((cf.field_Db - -dc.field_d ^ -1) == (param0 ^ -1)) {
                     break L3;
                   } else {
                     dc.field_d = -cf.field_Db + param0;
@@ -266,14 +266,14 @@ final class tc extends am {
                 }
                 L4: {
                   if (-1 == (dc.field_d ^ -1)) {
-                    if (-2 >= wm.field_s) {
+                    if (-2 <= (wm.field_s ^ -1)) {
                       break L4;
                     } else {
                       wm.field_s = wm.field_s - 1;
                       break L4;
                     }
                   } else {
-                    if (wm.field_s > -19) {
+                    if ((wm.field_s ^ -1) > -19) {
                       wm.field_s = wm.field_s + 1;
                       break L4;
                     } else {
@@ -285,10 +285,10 @@ final class tc extends am {
                   if (wt.field_x <= qj.field_e) {
                     break L5;
                   } else {
-                    if (vo.field_cb.field_q + qj.field_e <= wt.field_x) {
+                    if ((vo.field_cb.field_q + qj.field_e ^ -1) >= (wt.field_x ^ -1)) {
                       break L5;
                     } else {
-                      if (bi.field_i >= us.field_j) {
+                      if ((bi.field_i ^ -1) <= (us.field_j ^ -1)) {
                         break L5;
                       } else {
                         if (nn.field_C.field_w * wm.field_s + (bi.field_i + vo.field_cb.field_w + du.field_i.field_w) <= us.field_j) {
@@ -305,17 +305,17 @@ final class tc extends am {
               }
             }
           }
-          if (cf.field_Db - -dc.field_d == param0) {
+          if ((cf.field_Db - -dc.field_d ^ -1) == (param0 ^ -1)) {
             if (-1 == (dc.field_d ^ -1)) {
               if (-2 <= (wm.field_s ^ -1)) {
                 L6: {
                   if (wt.field_x <= qj.field_e) {
                     break L6;
                   } else {
-                    if (vo.field_cb.field_q + qj.field_e <= wt.field_x) {
+                    if ((vo.field_cb.field_q + qj.field_e ^ -1) >= (wt.field_x ^ -1)) {
                       break L6;
                     } else {
-                      if (bi.field_i >= us.field_j) {
+                      if ((bi.field_i ^ -1) <= (us.field_j ^ -1)) {
                         break L6;
                       } else {
                         if (nn.field_C.field_w * wm.field_s + (bi.field_i + vo.field_cb.field_w + du.field_i.field_w) <= us.field_j) {
@@ -335,10 +335,10 @@ final class tc extends am {
                   if (wt.field_x <= qj.field_e) {
                     break L7;
                   } else {
-                    if (vo.field_cb.field_q + qj.field_e <= wt.field_x) {
+                    if ((vo.field_cb.field_q + qj.field_e ^ -1) >= (wt.field_x ^ -1)) {
                       break L7;
                     } else {
-                      if (bi.field_i >= us.field_j) {
+                      if ((bi.field_i ^ -1) <= (us.field_j ^ -1)) {
                         break L7;
                       } else {
                         if (nn.field_C.field_w * wm.field_s + (bi.field_i + vo.field_cb.field_w + du.field_i.field_w) <= us.field_j) {
@@ -360,10 +360,10 @@ final class tc extends am {
                   if (wt.field_x <= qj.field_e) {
                     break L8;
                   } else {
-                    if (vo.field_cb.field_q + qj.field_e <= wt.field_x) {
+                    if ((vo.field_cb.field_q + qj.field_e ^ -1) >= (wt.field_x ^ -1)) {
                       break L8;
                     } else {
-                      if (bi.field_i >= us.field_j) {
+                      if ((bi.field_i ^ -1) <= (us.field_j ^ -1)) {
                         break L8;
                       } else {
                         if (nn.field_C.field_w * wm.field_s + (bi.field_i + vo.field_cb.field_w + du.field_i.field_w) <= us.field_j) {
@@ -382,10 +382,10 @@ final class tc extends am {
                   if (wt.field_x <= qj.field_e) {
                     break L9;
                   } else {
-                    if (vo.field_cb.field_q + qj.field_e <= wt.field_x) {
+                    if ((vo.field_cb.field_q + qj.field_e ^ -1) >= (wt.field_x ^ -1)) {
                       break L9;
                     } else {
-                      if (bi.field_i >= us.field_j) {
+                      if ((bi.field_i ^ -1) <= (us.field_j ^ -1)) {
                         break L9;
                       } else {
                         if (nn.field_C.field_w * wm.field_s + (bi.field_i + vo.field_cb.field_w + du.field_i.field_w) <= us.field_j) {
@@ -413,10 +413,10 @@ final class tc extends am {
                     if (wt.field_x <= qj.field_e) {
                       break L11;
                     } else {
-                      if (vo.field_cb.field_q + qj.field_e <= wt.field_x) {
+                      if ((vo.field_cb.field_q + qj.field_e ^ -1) >= (wt.field_x ^ -1)) {
                         break L11;
                       } else {
-                        if (bi.field_i >= us.field_j) {
+                        if ((bi.field_i ^ -1) <= (us.field_j ^ -1)) {
                           break L11;
                         } else {
                           if (nn.field_C.field_w * wm.field_s + (bi.field_i + vo.field_cb.field_w + du.field_i.field_w) <= us.field_j) {
@@ -438,10 +438,10 @@ final class tc extends am {
                     if (wt.field_x <= qj.field_e) {
                       break L12;
                     } else {
-                      if (vo.field_cb.field_q + qj.field_e <= wt.field_x) {
+                      if ((vo.field_cb.field_q + qj.field_e ^ -1) >= (wt.field_x ^ -1)) {
                         break L12;
                       } else {
-                        if (bi.field_i >= us.field_j) {
+                        if ((bi.field_i ^ -1) <= (us.field_j ^ -1)) {
                           break L12;
                         } else {
                           if (nn.field_C.field_w * wm.field_s + (bi.field_i + vo.field_cb.field_w + du.field_i.field_w) <= us.field_j) {
@@ -461,9 +461,9 @@ final class tc extends am {
               }
             }
             if (wt.field_x > qj.field_e) {
-              if (vo.field_cb.field_q + qj.field_e > wt.field_x) {
+              if ((vo.field_cb.field_q + qj.field_e ^ -1) < (wt.field_x ^ -1)) {
                 L13: {
-                  if (bi.field_i >= us.field_j) {
+                  if ((bi.field_i ^ -1) <= (us.field_j ^ -1)) {
                     break L13;
                   } else {
                     if (nn.field_C.field_w * wm.field_s + (bi.field_i + vo.field_cb.field_w + du.field_i.field_w) <= us.field_j) {
@@ -486,7 +486,7 @@ final class tc extends am {
           field_s = false;
           if (ua.field_l != param0) {
             L14: {
-              if (param0 > ua.field_l) {
+              if ((param0 ^ -1) < (ua.field_l ^ -1)) {
                 L15: {
                   var2 = (param0 - ua.field_l) / 10;
                   stackOut_21_0 = ua.field_l;
@@ -532,18 +532,18 @@ final class tc extends am {
                 break L14;
               }
             }
-            if (cf.field_Db - -dc.field_d != param0) {
+            if ((cf.field_Db - -dc.field_d ^ -1) != (param0 ^ -1)) {
               L17: {
                 dc.field_d = -cf.field_Db + param0;
                 if (-1 == (dc.field_d ^ -1)) {
-                  if (-2 >= wm.field_s) {
+                  if (-2 <= (wm.field_s ^ -1)) {
                     break L17;
                   } else {
                     wm.field_s = wm.field_s - 1;
                     break L17;
                   }
                 } else {
-                  if (wm.field_s > -19) {
+                  if ((wm.field_s ^ -1) > -19) {
                     wm.field_s = wm.field_s + 1;
                     break L17;
                   } else {
@@ -555,10 +555,10 @@ final class tc extends am {
                 if (wt.field_x <= qj.field_e) {
                   break L18;
                 } else {
-                  if (vo.field_cb.field_q + qj.field_e <= wt.field_x) {
+                  if ((vo.field_cb.field_q + qj.field_e ^ -1) >= (wt.field_x ^ -1)) {
                     break L18;
                   } else {
-                    if (bi.field_i >= us.field_j) {
+                    if ((bi.field_i ^ -1) <= (us.field_j ^ -1)) {
                       break L18;
                     } else {
                       if (nn.field_C.field_w * wm.field_s + (bi.field_i + vo.field_cb.field_w + du.field_i.field_w) <= us.field_j) {
@@ -575,14 +575,14 @@ final class tc extends am {
             } else {
               L19: {
                 if (-1 == (dc.field_d ^ -1)) {
-                  if (-2 >= wm.field_s) {
+                  if (-2 <= (wm.field_s ^ -1)) {
                     break L19;
                   } else {
                     wm.field_s = wm.field_s - 1;
                     break L19;
                   }
                 } else {
-                  if (wm.field_s > -19) {
+                  if ((wm.field_s ^ -1) > -19) {
                     wm.field_s = wm.field_s + 1;
                     break L19;
                   } else {
@@ -594,10 +594,10 @@ final class tc extends am {
                 if (wt.field_x <= qj.field_e) {
                   break L20;
                 } else {
-                  if (vo.field_cb.field_q + qj.field_e <= wt.field_x) {
+                  if ((vo.field_cb.field_q + qj.field_e ^ -1) >= (wt.field_x ^ -1)) {
                     break L20;
                   } else {
-                    if (bi.field_i >= us.field_j) {
+                    if ((bi.field_i ^ -1) <= (us.field_j ^ -1)) {
                       break L20;
                     } else {
                       if (nn.field_C.field_w * wm.field_s + (bi.field_i + vo.field_cb.field_w + du.field_i.field_w) <= us.field_j) {
@@ -614,7 +614,7 @@ final class tc extends am {
             }
           } else {
             L21: {
-              if (cf.field_Db - -dc.field_d == param0) {
+              if ((cf.field_Db - -dc.field_d ^ -1) == (param0 ^ -1)) {
                 break L21;
               } else {
                 dc.field_d = -cf.field_Db + param0;
@@ -623,14 +623,14 @@ final class tc extends am {
             }
             L22: {
               if (-1 == (dc.field_d ^ -1)) {
-                if (-2 >= wm.field_s) {
+                if (-2 <= (wm.field_s ^ -1)) {
                   break L22;
                 } else {
                   wm.field_s = wm.field_s - 1;
                   break L22;
                 }
               } else {
-                if (wm.field_s > -19) {
+                if ((wm.field_s ^ -1) > -19) {
                   wm.field_s = wm.field_s + 1;
                   break L22;
                 } else {
@@ -642,10 +642,10 @@ final class tc extends am {
               if (wt.field_x <= qj.field_e) {
                 break L23;
               } else {
-                if (vo.field_cb.field_q + qj.field_e <= wt.field_x) {
+                if ((vo.field_cb.field_q + qj.field_e ^ -1) >= (wt.field_x ^ -1)) {
                   break L23;
                 } else {
-                  if (bi.field_i >= us.field_j) {
+                  if ((bi.field_i ^ -1) <= (us.field_j ^ -1)) {
                     break L23;
                   } else {
                     if (nn.field_C.field_w * wm.field_s + (bi.field_i + vo.field_cb.field_w + du.field_i.field_w) <= us.field_j) {

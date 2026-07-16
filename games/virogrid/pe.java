@@ -91,10 +91,12 @@ final class pe extends l {
                     L4: while (true) {
                       if (var4 <= var6_int) {
                         sb.a(var5, (byte) 46);
-                        var3.field_j = new String[2][var5];
-                        var6 = new String[2][var5];
-                        var3.field_t = new int[2][4 * var5];
-                        var7 = new int[2][4 * var5];
+                        String[][] dupTemp$2 = new String[2][var5];
+                        var3.field_j = dupTemp$2;
+                        var6 = dupTemp$2;
+                        int[][] dupTemp$3 = new int[2][4 * var5];
+                        var3.field_t = dupTemp$3;
+                        var7 = dupTemp$3;
                         var8 = ka.field_m;
                         var9 = 0;
                         var10 = 0;

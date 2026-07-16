@@ -72,112 +72,103 @@ final class cr implements gj {
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
-        int stackIn_27_0 = 0;
+        int stackIn_26_0 = 0;
+        int stackOut_24_0 = 0;
         int stackOut_25_0 = 0;
-        int stackOut_26_0 = 0;
         L0: {
           var12 = Kickabout.field_G;
           var7 = 43 / ((59 - param0) / 53);
           if (param3.field_m) {
-            stackOut_25_0 = 3249872;
-            stackIn_27_0 = stackOut_25_0;
+            stackOut_24_0 = 3249872;
+            stackIn_26_0 = stackOut_24_0;
             break L0;
           } else {
             if (!param3.b(45)) {
-              stackOut_26_0 = 2188450;
-              stackIn_27_0 = stackOut_26_0;
+              stackOut_25_0 = 2188450;
+              stackIn_26_0 = stackOut_25_0;
               break L0;
             } else {
-              var6 = 3249872;
-              int discarded$2 = ((cr) this).field_h.a("<u=" + Integer.toString(var6, 16) + ">" + param3.field_q + "</u>", param4 - -param3.field_t, param3.field_g + param2, param3.field_n, param3.field_i, var6, -1, ((cr) this).field_a, ((cr) this).field_i, ((cr) this).field_h.field_p + ((cr) this).field_h.field_G);
-              if (param3.b(93)) {
-                var8 = ((cr) this).field_h.a(param3.field_q);
-                var9 = ((cr) this).field_h.field_p + ((cr) this).field_h.field_G;
-                var10 = param4 - -param3.field_t;
-                var11 = param2 - -param3.field_g;
-                if (((cr) this).field_a == -3) {
-                  var10 = var10 + (-var8 + param3.field_n);
-                  if (-3 != (((cr) this).field_i ^ -1)) {
-                    if ((((cr) this).field_i ^ -1) != -2) {
+              L1: {
+                var6 = 3249872;
+                int discarded$2 = ((cr) this).field_h.a("<u=" + Integer.toString(var6, 16) + ">" + param3.field_q + "</u>", param4 - -param3.field_t, param3.field_g + param2, param3.field_n, param3.field_i, var6, -1, ((cr) this).field_a, ((cr) this).field_i, ((cr) this).field_h.field_p + ((cr) this).field_h.field_G);
+                if (param3.b(93)) {
+                  var8 = ((cr) this).field_h.a(param3.field_q);
+                  var9 = ((cr) this).field_h.field_p + ((cr) this).field_h.field_G;
+                  var10 = param4 - -param3.field_t;
+                  var11 = param2 - -param3.field_g;
+                  if ((((cr) this).field_a ^ -1) == -3) {
+                    var10 = var10 + (-var8 + param3.field_n);
+                    if (-3 == (((cr) this).field_i ^ -1)) {
+                      var11 = var11 + (-var9 + param3.field_i);
                       ob.b(2, var8 + 4, 2 + var11, var9, var10 + -2);
-                      return;
+                      break L1;
                     } else {
-                      var11 = var11 + (-var9 + param3.field_i >> 1461273505);
-                      ob.b(2, var8 + 4, 2 + var11, var9, var10 + -2);
-                      return;
+                      if ((((cr) this).field_i ^ -1) == -2) {
+                        var11 = var11 + (-var9 + param3.field_i >> 1461273505);
+                        ob.b(2, var8 + 4, 2 + var11, var9, var10 + -2);
+                        return;
+                      } else {
+                        ob.b(2, var8 + 4, 2 + var11, var9, var10 + -2);
+                        return;
+                      }
                     }
                   } else {
-                    var11 = var11 + (-var9 + param3.field_i);
-                    ob.b(2, var8 + 4, 2 + var11, var9, var10 + -2);
-                    return;
+                    if (((cr) this).field_a == 1) {
+                      var10 = var10 + (-var8 + param3.field_n >> -519513503);
+                      if (-3 == (((cr) this).field_i ^ -1)) {
+                        var11 = var11 + (-var9 + param3.field_i);
+                        ob.b(2, var8 + 4, 2 + var11, var9, var10 + -2);
+                        return;
+                      } else {
+                        if ((((cr) this).field_i ^ -1) == -2) {
+                          var11 = var11 + (-var9 + param3.field_i >> 1461273505);
+                          ob.b(2, var8 + 4, 2 + var11, var9, var10 + -2);
+                          return;
+                        } else {
+                          ob.b(2, var8 + 4, 2 + var11, var9, var10 + -2);
+                          return;
+                        }
+                      }
+                    } else {
+                      if (-3 == (((cr) this).field_i ^ -1)) {
+                        var11 = var11 + (-var9 + param3.field_i);
+                        ob.b(2, var8 + 4, 2 + var11, var9, var10 + -2);
+                        return;
+                      } else {
+                        if ((((cr) this).field_i ^ -1) == -2) {
+                          var11 = var11 + (-var9 + param3.field_i >> 1461273505);
+                          ob.b(2, var8 + 4, 2 + var11, var9, var10 + -2);
+                          return;
+                        } else {
+                          ob.b(2, var8 + 4, 2 + var11, var9, var10 + -2);
+                          return;
+                        }
+                      }
+                    }
                   }
                 } else {
-                  if (((cr) this).field_a == 1) {
-                    var10 = var10 + (-var8 + param3.field_n >> -519513503);
-                    if (-3 != (((cr) this).field_i ^ -1)) {
-                      if ((((cr) this).field_i ^ -1) != -2) {
-                        ob.b(2, var8 + 4, 2 + var11, var9, var10 + -2);
-                        return;
-                      } else {
-                        var11 = var11 + (-var9 + param3.field_i >> 1461273505);
-                        ob.b(2, var8 + 4, 2 + var11, var9, var10 + -2);
-                        return;
-                      }
-                    } else {
-                      var11 = var11 + (-var9 + param3.field_i);
-                      ob.b(2, var8 + 4, 2 + var11, var9, var10 + -2);
-                      return;
-                    }
-                  } else {
-                    if (-3 != ((cr) this).field_i) {
-                      if ((((cr) this).field_i ^ -1) != -2) {
-                        ob.b(2, var8 + 4, 2 + var11, var9, var10 + -2);
-                        return;
-                      } else {
-                        var11 = var11 + (-var9 + param3.field_i >> 1461273505);
-                        ob.b(2, var8 + 4, 2 + var11, var9, var10 + -2);
-                        return;
-                      }
-                    } else {
-                      var11 = var11 + (-var9 + param3.field_i);
-                      ob.b(2, var8 + 4, 2 + var11, var9, var10 + -2);
-                      return;
-                    }
-                  }
+                  break L1;
                 }
-              } else {
-                return;
               }
+              return;
             }
           }
         }
-        var6 = stackIn_27_0;
-        int discarded$3 = ((cr) this).field_h.a("<u=" + Integer.toString(var6, 16) + ">" + param3.field_q + "</u>", param4 - -param3.field_t, param3.field_g + param2, param3.field_n, param3.field_i, var6, -1, ((cr) this).field_a, ((cr) this).field_i, ((cr) this).field_h.field_p + ((cr) this).field_h.field_G);
-        if (param3.b(93)) {
-          var8 = ((cr) this).field_h.a(param3.field_q);
-          var9 = ((cr) this).field_h.field_p + ((cr) this).field_h.field_G;
-          var10 = param4 - -param3.field_t;
-          var11 = param2 - -param3.field_g;
-          if (((cr) this).field_a == -3) {
-            var10 = var10 + (-var8 + param3.field_n);
-            if (-3 != (((cr) this).field_i ^ -1)) {
-              if ((((cr) this).field_i ^ -1) == -2) {
-                var11 = var11 + (-var9 + param3.field_i >> 1461273505);
+        L2: {
+          var6 = stackIn_26_0;
+          int discarded$3 = ((cr) this).field_h.a("<u=" + Integer.toString(var6, 16) + ">" + param3.field_q + "</u>", param4 - -param3.field_t, param3.field_g + param2, param3.field_n, param3.field_i, var6, -1, ((cr) this).field_a, ((cr) this).field_i, ((cr) this).field_h.field_p + ((cr) this).field_h.field_G);
+          if (param3.b(93)) {
+            var8 = ((cr) this).field_h.a(param3.field_q);
+            var9 = ((cr) this).field_h.field_p + ((cr) this).field_h.field_G;
+            var10 = param4 - -param3.field_t;
+            var11 = param2 - -param3.field_g;
+            if ((((cr) this).field_a ^ -1) == -3) {
+              var10 = var10 + (-var8 + param3.field_n);
+              if (-3 == (((cr) this).field_i ^ -1)) {
+                var11 = var11 + (-var9 + param3.field_i);
                 ob.b(2, var8 + 4, 2 + var11, var9, var10 + -2);
-                return;
+                break L2;
               } else {
-                ob.b(2, var8 + 4, 2 + var11, var9, var10 + -2);
-                return;
-              }
-            } else {
-              var11 = var11 + (-var9 + param3.field_i);
-              ob.b(2, var8 + 4, 2 + var11, var9, var10 + -2);
-              return;
-            }
-          } else {
-            if (((cr) this).field_a == 1) {
-              var10 = var10 + (-var8 + param3.field_n >> -519513503);
-              if (-3 != (((cr) this).field_i ^ -1)) {
                 if ((((cr) this).field_i ^ -1) == -2) {
                   var11 = var11 + (-var9 + param3.field_i >> 1461273505);
                   ob.b(2, var8 + 4, 2 + var11, var9, var10 + -2);
@@ -186,30 +177,44 @@ final class cr implements gj {
                   ob.b(2, var8 + 4, 2 + var11, var9, var10 + -2);
                   return;
                 }
-              } else {
-                var11 = var11 + (-var9 + param3.field_i);
-                ob.b(2, var8 + 4, 2 + var11, var9, var10 + -2);
-                return;
               }
             } else {
-              if (-3 != ((cr) this).field_i) {
-                if ((((cr) this).field_i ^ -1) != -2) {
+              if (((cr) this).field_a == 1) {
+                var10 = var10 + (-var8 + param3.field_n >> -519513503);
+                if (-3 == (((cr) this).field_i ^ -1)) {
+                  var11 = var11 + (-var9 + param3.field_i);
                   ob.b(2, var8 + 4, 2 + var11, var9, var10 + -2);
                   return;
                 } else {
-                  var11 = var11 + (-var9 + param3.field_i >> 1461273505);
-                  ob.b(2, var8 + 4, 2 + var11, var9, var10 + -2);
-                  return;
+                  if ((((cr) this).field_i ^ -1) == -2) {
+                    var11 = var11 + (-var9 + param3.field_i >> 1461273505);
+                    ob.b(2, var8 + 4, 2 + var11, var9, var10 + -2);
+                    return;
+                  } else {
+                    ob.b(2, var8 + 4, 2 + var11, var9, var10 + -2);
+                    return;
+                  }
                 }
               } else {
-                var11 = var11 + (-var9 + param3.field_i);
-                ob.b(2, var8 + 4, 2 + var11, var9, var10 + -2);
-                return;
+                if (-3 == (((cr) this).field_i ^ -1)) {
+                  var11 = var11 + (-var9 + param3.field_i);
+                  ob.b(2, var8 + 4, 2 + var11, var9, var10 + -2);
+                  return;
+                } else {
+                  if ((((cr) this).field_i ^ -1) == -2) {
+                    var11 = var11 + (-var9 + param3.field_i >> 1461273505);
+                    ob.b(2, var8 + 4, 2 + var11, var9, var10 + -2);
+                    return;
+                  } else {
+                    ob.b(2, var8 + 4, 2 + var11, var9, var10 + -2);
+                    return;
+                  }
+                }
               }
             }
+          } else {
+            break L2;
           }
-        } else {
-          return;
         }
     }
 

@@ -33,33 +33,36 @@ public class kd {
         field_d = param2;
         field_a = param1;
         try {
-          field_e = System.getProperty("user.home");
-          if (field_e != null) {
-            field_e = field_e + "/";
-          } else {
-            field_b = true;
-            if (param0 <= -28) {
-              L0: {
-                if (null == field_e) {
-                  field_e = "~/";
-                  break L0;
-                } else {
-                  break L0;
-                }
-              }
-              return;
+          L0: {
+            field_e = System.getProperty("user.home");
+            if (field_e != null) {
+              field_e = field_e + "/";
+              break L0;
             } else {
-              L1: {
-                var4 = null;
-                File discarded$3 = kd.a((String) null, (String) null, true, -114);
-                if (null == field_e) {
-                  field_e = "~/";
-                  break L1;
-                } else {
-                  break L1;
+              field_b = true;
+              if (param0 <= -28) {
+                L1: {
+                  if (null == field_e) {
+                    field_e = "~/";
+                    break L1;
+                  } else {
+                    break L1;
+                  }
                 }
+                return;
+              } else {
+                L2: {
+                  var4 = null;
+                  File discarded$3 = kd.a((String) null, (String) null, true, -114);
+                  if (null == field_e) {
+                    field_e = "~/";
+                    break L2;
+                  } else {
+                    break L2;
+                  }
+                }
+                return;
               }
-              return;
             }
           }
         } catch (java.lang.Exception decompiledCaughtParameter0) {
@@ -67,24 +70,24 @@ public class kd {
           var3 = (Exception) (Object) decompiledCaughtException;
           field_b = true;
           if (param0 > -28) {
-            L2: {
+            L3: {
               var4 = null;
               File discarded$4 = kd.a((String) null, (String) null, true, -114);
               if (null == field_e) {
                 field_e = "~/";
-                break L2;
+                break L3;
               } else {
-                break L2;
+                break L3;
               }
             }
             return;
           } else {
-            L3: {
+            L4: {
               if (null == field_e) {
                 field_e = "~/";
-                break L3;
+                break L4;
               } else {
-                break L3;
+                break L4;
               }
             }
             return;
@@ -92,24 +95,24 @@ public class kd {
         }
         field_b = true;
         if (param0 > -28) {
-          L4: {
+          L5: {
             var4 = null;
             File discarded$5 = kd.a((String) null, (String) null, true, -114);
             if (null == field_e) {
               field_e = "~/";
-              break L4;
+              break L5;
             } else {
-              break L4;
+              break L5;
             }
           }
           return;
         } else {
-          L5: {
+          L6: {
             if (null == field_e) {
               field_e = "~/";
-              break L5;
+              break L6;
             } else {
-              break L5;
+              break L6;
             }
           }
           return;

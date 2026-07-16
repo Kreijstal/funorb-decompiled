@@ -38,30 +38,65 @@ final class c {
 
     final static void a(int param0, boolean param1) {
         try {
-            if (op.field_y != null) {
-                // iflt L30
-                // if_acmpne L22
-            } else {
-                or.field_d.field_n = 0;
-                return;
-            }
-            if (0 == or.field_d.field_n) {
-                if ((mp.field_i - -10000L ^ -1L) > (nj.a(86) ^ -1L)) {
-                    or.field_d.b(param0, (byte) 101);
+            IOException iOException = null;
+            Throwable decompiledCaughtException = null;
+            L0: {
+              if (op.field_y == null) {
+                break L0;
+              } else {
+                L1: {
+                  if (param0 < 0) {
+                    break L1;
+                  } else {
+                    if (un.field_c != jn.field_rb) {
+                      break L0;
+                    } else {
+                      break L1;
+                    }
+                  }
                 }
-            }
-            if (param1) {
-                return;
-            }
-            if (or.field_d.field_n > 0) {
-                try {
-                    op.field_y.a(or.field_d.field_n, (byte) -127, 0, or.field_d.field_f);
-                    mp.field_i = nj.a(-117);
-                } catch (IOException iOException) {
-                    lr.b((byte) -116);
+                L2: {
+                  if (0 != or.field_d.field_n) {
+                    break L2;
+                  } else {
+                    if ((mp.field_i - -10000L ^ -1L) <= (nj.a(86) ^ -1L)) {
+                      break L2;
+                    } else {
+                      or.field_d.b(param0, (byte) 101);
+                      break L2;
+                    }
+                  }
                 }
-                or.field_d.field_n = 0;
+                if (!param1) {
+                  L3: {
+                    if (or.field_d.field_n <= 0) {
+                      break L3;
+                    } else {
+                      try {
+                        L4: {
+                          op.field_y.a(or.field_d.field_n, (byte) -127, 0, or.field_d.field_f);
+                          mp.field_i = nj.a(-117);
+                          break L4;
+                        }
+                      } catch (java.io.IOException decompiledCaughtParameter0) {
+                        decompiledCaughtException = decompiledCaughtParameter0;
+                        L5: {
+                          iOException = (IOException) (Object) decompiledCaughtException;
+                          lr.b((byte) -116);
+                          break L5;
+                        }
+                      }
+                      or.field_d.field_n = 0;
+                      break L3;
+                    }
+                  }
+                  return;
+                } else {
+                  return;
+                }
+              }
             }
+            or.field_d.field_n = 0;
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {

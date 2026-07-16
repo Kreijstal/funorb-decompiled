@@ -1096,60 +1096,60 @@ final class dj {
     private final boolean a(int param0, int param1, int param2) {
         int var5 = 0;
         var5 = Virogrid.field_F ? 1 : 0;
-        if (-1 == param0) {
+        if (-1 == (param0 ^ -1)) {
           rj.a(param1, false, ((dj) this).field_i);
-          if (param2 != -3) {
-            return false;
-          } else {
+          if (param2 == -3) {
             return true;
+          } else {
+            return false;
           }
         } else {
-          if (-2 == param0) {
+          if (-2 == (param0 ^ -1)) {
             w.a((byte) 74, ((dj) this).field_i, param1);
-            if (param2 != -3) {
-              return false;
-            } else {
+            if (param2 == -3) {
               return true;
+            } else {
+              return false;
             }
           } else {
             if ((param0 ^ -1) == -3) {
               cm.a((byte) 20, ((dj) this).field_b, param1);
-              if (param2 != -3) {
-                return false;
-              } else {
+              if (param2 == -3) {
                 return true;
+              } else {
+                return false;
               }
             } else {
               if (param0 == 3) {
                 nn.a(((dj) this).field_b, param1, (byte) -115);
-                if (param2 != -3) {
-                  return false;
-                } else {
+                if (param2 == -3) {
                   return true;
+                } else {
+                  return false;
                 }
               } else {
                 if (param0 == 10) {
                   sb.a(((dj) this).field_b, param1, param2 ^ -14533);
-                  if (param2 != -3) {
-                    return false;
-                  } else {
+                  if (param2 == -3) {
                     return true;
+                  } else {
+                    return false;
                   }
                 } else {
-                  if (param0 == -16) {
+                  if ((param0 ^ -1) == -16) {
                     fm.a(((dj) this).field_b, 3, param1);
-                    if (param2 != -3) {
-                      return false;
-                    } else {
+                    if (param2 == -3) {
                       return true;
+                    } else {
+                      return false;
                     }
                   } else {
-                    if (-17 == param0) {
+                    if (-17 == (param0 ^ -1)) {
                       fm.a(0, param2 + 6, param1);
-                      if (param2 != -3) {
-                        return false;
-                      } else {
+                      if (param2 == -3) {
                         return true;
+                      } else {
+                        return false;
                       }
                     } else {
                       return false;

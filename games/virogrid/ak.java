@@ -22,7 +22,7 @@ final class ak {
             var5.field_kb = 0;
             var5.field_F = 0;
             var6 = (km) (Object) param1.field_W.a(param0 + -164);
-            km var6_ref = var6;
+            var6 = var6;
         }
         if (param0 != 16377) {
             Object var4 = null;

@@ -306,7 +306,7 @@ class bp extends hd {
 
     final void a(int param0) {
         int var2 = 0;
-        ji var2_ref = null;
+        ji var2_ref_ji = null;
         int var4 = 0;
         im var5 = null;
         int var5_int = 0;
@@ -335,8 +335,8 @@ class bp extends hd {
           if (!((bp) this).field_Cb.field_Eb.e((byte) -113)) {
             break L0;
           } else {
-            var2_ref = ((bp) this).field_Cb.field_Eb;
-            on.g(3 + ((hd) (Object) var2_ref).field_F, ((hd) (Object) var2_ref).field_T, ((hd) (Object) var2_ref).field_q - 6, ((hd) (Object) var2_ref).field_mb);
+            var2_ref_ji = ((bp) this).field_Cb.field_Eb;
+            on.g(3 + ((hd) (Object) var2_ref_ji).field_F, ((hd) (Object) var2_ref_ji).field_T, ((hd) (Object) var2_ref_ji).field_q - 6, ((hd) (Object) var2_ref_ji).field_mb);
             break L0;
           }
         }

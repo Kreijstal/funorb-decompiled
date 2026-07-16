@@ -155,8 +155,9 @@ final class pi extends wf {
                     if (((pi) this).field_u < var5) {
                       ((pi) this).field_u = var5 + var5 - 1 - ((pi) this).field_u;
                       ((pi) this).field_t = -((pi) this).field_t;
+                      int fieldTemp$5 = ((pi) this).field_o - 1;
                       ((pi) this).field_o = ((pi) this).field_o - 1;
-                      if (((pi) this).field_o - 1 != 0) {
+                      if (fieldTemp$5 != 0) {
                         break L7;
                       } else {
                         break L4;
@@ -171,14 +172,16 @@ final class pi extends wf {
                   if (((pi) this).field_u >= var6) {
                     ((pi) this).field_u = var6 + var6 - 1 - ((pi) this).field_u;
                     ((pi) this).field_t = -((pi) this).field_t;
+                    int fieldTemp$6 = ((pi) this).field_o - 1;
                     ((pi) this).field_o = ((pi) this).field_o - 1;
-                    if (((pi) this).field_o - 1 != 0) {
+                    if (fieldTemp$6 != 0) {
                       var9 = this.b(param0, var9, var5, param2, (int) var4.field_h[((pi) this).field_m]);
                       if (((pi) this).field_u < var5) {
                         ((pi) this).field_u = var5 + var5 - 1 - ((pi) this).field_u;
                         ((pi) this).field_t = -((pi) this).field_t;
+                        int fieldTemp$7 = ((pi) this).field_o - 1;
                         ((pi) this).field_o = ((pi) this).field_o - 1;
-                        if (((pi) this).field_o - 1 != 0) {
+                        if (fieldTemp$7 != 0) {
                           continue L8;
                         } else {
                           break L4;
@@ -197,7 +200,7 @@ final class pi extends wf {
             }
           }
           if (((pi) this).field_t < 0) {
-            int discarded$2 = this.b(param0, var9, 0, param2, 0);
+            int discarded$8 = this.b(param0, var9, 0, param2, 0);
             if (((pi) this).field_u < 0) {
               ((pi) this).field_u = -1;
               this.f();
@@ -208,7 +211,7 @@ final class pi extends wf {
             }
           } else {
             L9: {
-              int discarded$3 = this.a(param0, var9, var7, param2, 0);
+              int discarded$9 = this.a(param0, var9, var7, param2, 0);
               if (((pi) this).field_u < var7) {
                 break L9;
               } else {
@@ -410,8 +413,9 @@ final class pi extends wf {
                     if (((pi) this).field_u < var3) {
                       ((pi) this).field_u = var3 + var3 - 1 - ((pi) this).field_u;
                       ((pi) this).field_t = -((pi) this).field_t;
+                      int fieldTemp$3 = ((pi) this).field_o - 1;
                       ((pi) this).field_o = ((pi) this).field_o - 1;
-                      if (((pi) this).field_o - 1 != 0) {
+                      if (fieldTemp$3 != 0) {
                         break L7;
                       } else {
                         break L5;
@@ -425,13 +429,15 @@ final class pi extends wf {
                   if (((pi) this).field_u >= var4) {
                     ((pi) this).field_u = var4 + var4 - 1 - ((pi) this).field_u;
                     ((pi) this).field_t = -((pi) this).field_t;
+                    int fieldTemp$4 = ((pi) this).field_o - 1;
                     ((pi) this).field_o = ((pi) this).field_o - 1;
-                    if (((pi) this).field_o - 1 != 0) {
+                    if (fieldTemp$4 != 0) {
                       if (((pi) this).field_u < var3) {
                         ((pi) this).field_u = var3 + var3 - 1 - ((pi) this).field_u;
                         ((pi) this).field_t = -((pi) this).field_t;
+                        int fieldTemp$5 = ((pi) this).field_o - 1;
                         ((pi) this).field_o = ((pi) this).field_o - 1;
-                        if (((pi) this).field_o - 1 != 0) {
+                        if (fieldTemp$5 != 0) {
                           continue L8;
                         } else {
                           break L5;
@@ -563,8 +569,9 @@ final class pi extends wf {
                 param10.field_u = param4;
                 return param5;
               } else {
+                int incrementValue$4 = param5;
                 param5++;
-                param3[param5] = param3[param5] + (((param0 << 8) + (param2[param4 >> 8] - param0) * (param4 & 255)) * param6 >> 6);
+                param3[incrementValue$4] = param3[incrementValue$4] + (((param0 << 8) + (param2[param4 >> 8] - param0) * (param4 & 255)) * param6 >> 6);
                 param4 = param4 + param1;
                 continue L5;
               }
@@ -572,8 +579,9 @@ final class pi extends wf {
           } else {
             param1 = param4 >> 8;
             param0 = param2[param1 - 1];
+            int incrementValue$5 = param5;
             param5++;
-            param3[param5] = param3[param5] + (((param0 << 8) + (param2[param1] - param0) * (param4 & 255)) * param6 >> 6);
+            param3[incrementValue$5] = param3[incrementValue$5] + (((param0 << 8) + (param2[param1] - param0) * (param4 & 255)) * param6 >> 6);
             param4 = param4 + param11;
             continue L2;
           }
@@ -1115,10 +1123,12 @@ final class pi extends wf {
                 return param5 >> 1;
               } else {
                 param0 = (param1 << 8) + (param2[param4 >> 8] - param1) * (param4 & 255);
+                int incrementValue$4 = param5;
                 param5++;
-                param3[param5] = param3[param5] + (param0 * param6 >> 6);
+                param3[incrementValue$4] = param3[incrementValue$4] + (param0 * param6 >> 6);
+                int incrementValue$5 = param5;
                 param5++;
-                param3[param5] = param3[param5] + (param0 * param7 >> 6);
+                param3[incrementValue$5] = param3[incrementValue$5] + (param0 * param7 >> 6);
                 param4 = param4 + param12;
                 continue L5;
               }
@@ -1127,10 +1137,12 @@ final class pi extends wf {
             param1 = param4 >> 8;
             param0 = param2[param1 - 1];
             param0 = (param0 << 8) + (param2[param1] - param0) * (param4 & 255);
+            int incrementValue$6 = param5;
             param5++;
-            param3[param5] = param3[param5] + (param0 * param6 >> 6);
+            param3[incrementValue$6] = param3[incrementValue$6] + (param0 * param6 >> 6);
+            int incrementValue$7 = param5;
             param5++;
-            param3[param5] = param3[param5] + (param0 * param7 >> 6);
+            param3[incrementValue$7] = param3[incrementValue$7] + (param0 * param7 >> 6);
             param4 = param4 + param12;
             continue L2;
           }
@@ -1226,24 +1238,34 @@ final class pi extends wf {
         }
         param5 -= 3;
         while (param3 < param5) {
+            int incrementValue$0 = param3;
             param3++;
+            int incrementValue$1 = param2;
             param2++;
-            param1[param3] = param1[param3] + param0[param2] * param4;
+            param1[incrementValue$0] = param1[incrementValue$0] + param0[incrementValue$1] * param4;
+            int incrementValue$2 = param3;
             param3++;
+            int incrementValue$3 = param2;
             param2++;
-            param1[param3] = param1[param3] + param0[param2] * param4;
+            param1[incrementValue$2] = param1[incrementValue$2] + param0[incrementValue$3] * param4;
+            int incrementValue$4 = param3;
             param3++;
+            int incrementValue$5 = param2;
             param2++;
-            param1[param3] = param1[param3] + param0[param2] * param4;
+            param1[incrementValue$4] = param1[incrementValue$4] + param0[incrementValue$5] * param4;
+            int incrementValue$6 = param3;
             param3++;
+            int incrementValue$7 = param2;
             param2++;
-            param1[param3] = param1[param3] + param0[param2] * param4;
+            param1[incrementValue$6] = param1[incrementValue$6] + param0[incrementValue$7] * param4;
         }
         param5 += 3;
         while (param3 < param5) {
+            int incrementValue$8 = param3;
             param3++;
+            int incrementValue$9 = param2;
             param2++;
-            param1[param3] = param1[param3] + param0[param2] * param4;
+            param1[incrementValue$8] = param1[incrementValue$8] + param0[incrementValue$9] * param4;
         }
         param8.field_u = param2 << 8;
         return param3;
@@ -1274,40 +1296,55 @@ final class pi extends wf {
                 param10.field_u = param3 << 8;
                 return param4 >> 1;
               } else {
+                int incrementValue$15 = param3;
                 param3--;
-                param0 = param1[param3];
+                param0 = param1[incrementValue$15];
+                int incrementValue$16 = param4;
                 param4++;
-                param2[param4] = param2[param4] + param0 * param5;
+                param2[incrementValue$16] = param2[incrementValue$16] + param0 * param5;
+                int incrementValue$17 = param4;
                 param4++;
-                param2[param4] = param2[param4] + param0 * param6;
+                param2[incrementValue$17] = param2[incrementValue$17] + param0 * param6;
                 continue L2;
               }
             }
           } else {
+            int incrementValue$18 = param3;
             param3--;
-            param0 = param1[param3];
+            param0 = param1[incrementValue$18];
+            int incrementValue$19 = param4;
             param4++;
-            param2[param4] = param2[param4] + param0 * param5;
+            param2[incrementValue$19] = param2[incrementValue$19] + param0 * param5;
+            int incrementValue$20 = param4;
             param4++;
-            param2[param4] = param2[param4] + param0 * param6;
+            param2[incrementValue$20] = param2[incrementValue$20] + param0 * param6;
+            int incrementValue$21 = param3;
             param3--;
-            param0 = param1[param3];
+            param0 = param1[incrementValue$21];
+            int incrementValue$22 = param4;
             param4++;
-            param2[param4] = param2[param4] + param0 * param5;
+            param2[incrementValue$22] = param2[incrementValue$22] + param0 * param5;
+            int incrementValue$23 = param4;
             param4++;
-            param2[param4] = param2[param4] + param0 * param6;
+            param2[incrementValue$23] = param2[incrementValue$23] + param0 * param6;
+            int incrementValue$24 = param3;
             param3--;
-            param0 = param1[param3];
+            param0 = param1[incrementValue$24];
+            int incrementValue$25 = param4;
             param4++;
-            param2[param4] = param2[param4] + param0 * param5;
+            param2[incrementValue$25] = param2[incrementValue$25] + param0 * param5;
+            int incrementValue$26 = param4;
             param4++;
-            param2[param4] = param2[param4] + param0 * param6;
+            param2[incrementValue$26] = param2[incrementValue$26] + param0 * param6;
+            int incrementValue$27 = param3;
             param3--;
-            param0 = param1[param3];
+            param0 = param1[incrementValue$27];
+            int incrementValue$28 = param4;
             param4++;
-            param2[param4] = param2[param4] + param0 * param5;
+            param2[incrementValue$28] = param2[incrementValue$28] + param0 * param5;
+            int incrementValue$29 = param4;
             param4++;
-            param2[param4] = param2[param4] + param0 * param6;
+            param2[incrementValue$29] = param2[incrementValue$29] + param0 * param6;
             continue L1;
           }
         }
@@ -1343,49 +1380,64 @@ final class pi extends wf {
                 param12.field_u = param3 << 8;
                 return param4 >> 1;
               } else {
+                int incrementValue$15 = param3;
                 param3--;
-                param0 = param1[param3];
+                param0 = param1[incrementValue$15];
+                int incrementValue$16 = param4;
                 param4++;
-                param2[param4] = param2[param4] + param0 * param5;
+                param2[incrementValue$16] = param2[incrementValue$16] + param0 * param5;
                 param5 = param5 + param7;
+                int incrementValue$17 = param4;
                 param4++;
-                param2[param4] = param2[param4] + param0 * param6;
+                param2[incrementValue$17] = param2[incrementValue$17] + param0 * param6;
                 param6 = param6 + param8;
                 continue L2;
               }
             }
           } else {
+            int incrementValue$18 = param3;
             param3--;
-            param0 = param1[param3];
+            param0 = param1[incrementValue$18];
+            int incrementValue$19 = param4;
             param4++;
-            param2[param4] = param2[param4] + param0 * param5;
+            param2[incrementValue$19] = param2[incrementValue$19] + param0 * param5;
             param5 = param5 + param7;
+            int incrementValue$20 = param4;
             param4++;
-            param2[param4] = param2[param4] + param0 * param6;
+            param2[incrementValue$20] = param2[incrementValue$20] + param0 * param6;
             param6 = param6 + param8;
+            int incrementValue$21 = param3;
             param3--;
-            param0 = param1[param3];
+            param0 = param1[incrementValue$21];
+            int incrementValue$22 = param4;
             param4++;
-            param2[param4] = param2[param4] + param0 * param5;
+            param2[incrementValue$22] = param2[incrementValue$22] + param0 * param5;
             param5 = param5 + param7;
+            int incrementValue$23 = param4;
             param4++;
-            param2[param4] = param2[param4] + param0 * param6;
+            param2[incrementValue$23] = param2[incrementValue$23] + param0 * param6;
             param6 = param6 + param8;
+            int incrementValue$24 = param3;
             param3--;
-            param0 = param1[param3];
+            param0 = param1[incrementValue$24];
+            int incrementValue$25 = param4;
             param4++;
-            param2[param4] = param2[param4] + param0 * param5;
+            param2[incrementValue$25] = param2[incrementValue$25] + param0 * param5;
             param5 = param5 + param7;
+            int incrementValue$26 = param4;
             param4++;
-            param2[param4] = param2[param4] + param0 * param6;
+            param2[incrementValue$26] = param2[incrementValue$26] + param0 * param6;
             param6 = param6 + param8;
+            int incrementValue$27 = param3;
             param3--;
-            param0 = param1[param3];
+            param0 = param1[incrementValue$27];
+            int incrementValue$28 = param4;
             param4++;
-            param2[param4] = param2[param4] + param0 * param5;
+            param2[incrementValue$28] = param2[incrementValue$28] + param0 * param5;
             param5 = param5 + param7;
+            int incrementValue$29 = param4;
             param4++;
-            param2[param4] = param2[param4] + param0 * param6;
+            param2[incrementValue$29] = param2[incrementValue$29] + param0 * param6;
             param6 = param6 + param8;
             continue L1;
           }
@@ -1443,8 +1495,9 @@ final class pi extends wf {
                 return param5;
               } else {
                 param0 = param2[param4 >> 8];
+                int incrementValue$2 = param5;
                 param5++;
-                param3[param5] = param3[param5] + (((param0 << 8) + (param1 - param0) * (param4 & 255)) * param6 >> 6);
+                param3[incrementValue$2] = param3[incrementValue$2] + (((param0 << 8) + (param1 - param0) * (param4 & 255)) * param6 >> 6);
                 param6 = param6 + param7;
                 param4 = param4 + param12;
                 continue L5;
@@ -1453,8 +1506,9 @@ final class pi extends wf {
           } else {
             param1 = param4 >> 8;
             param0 = param2[param1];
+            int incrementValue$3 = param5;
             param5++;
-            param3[param5] = param3[param5] + (((param0 << 8) + (param2[param1 + 1] - param0) * (param4 & 255)) * param6 >> 6);
+            param3[incrementValue$3] = param3[incrementValue$3] + (((param0 << 8) + (param2[param1 + 1] - param0) * (param4 & 255)) * param6 >> 6);
             param6 = param6 + param7;
             param4 = param4 + param12;
             continue L2;
@@ -1513,11 +1567,13 @@ final class pi extends wf {
               } else {
                 param0 = param2[param4 >> 8];
                 param0 = (param0 << 8) + (param1 - param0) * (param4 & 255);
+                int incrementValue$4 = param5;
                 param5++;
-                param3[param5] = param3[param5] + (param0 * param6 >> 6);
+                param3[incrementValue$4] = param3[incrementValue$4] + (param0 * param6 >> 6);
                 param6 = param6 + param8;
+                int incrementValue$5 = param5;
                 param5++;
-                param3[param5] = param3[param5] + (param0 * param7 >> 6);
+                param3[incrementValue$5] = param3[incrementValue$5] + (param0 * param7 >> 6);
                 param7 = param7 + param9;
                 param4 = param4 + param14;
                 continue L5;
@@ -1527,11 +1583,13 @@ final class pi extends wf {
             param1 = param4 >> 8;
             param0 = param2[param1];
             param0 = (param0 << 8) + (param2[param1 + 1] - param0) * (param4 & 255);
+            int incrementValue$6 = param5;
             param5++;
-            param3[param5] = param3[param5] + (param0 * param6 >> 6);
+            param3[incrementValue$6] = param3[incrementValue$6] + (param0 * param6 >> 6);
             param6 = param6 + param8;
+            int incrementValue$7 = param5;
             param5++;
-            param3[param5] = param3[param5] + (param0 * param7 >> 6);
+            param3[incrementValue$7] = param3[incrementValue$7] + (param0 * param7 >> 6);
             param7 = param7 + param9;
             param4 = param4 + param14;
             continue L2;
@@ -1585,10 +1643,12 @@ final class pi extends wf {
               } else {
                 param0 = param2[param4 >> 8];
                 param0 = (param0 << 8) + (param1 - param0) * (param4 & 255);
+                int incrementValue$4 = param5;
                 param5++;
-                param3[param5] = param3[param5] + (param0 * param6 >> 6);
+                param3[incrementValue$4] = param3[incrementValue$4] + (param0 * param6 >> 6);
+                int incrementValue$5 = param5;
                 param5++;
-                param3[param5] = param3[param5] + (param0 * param7 >> 6);
+                param3[incrementValue$5] = param3[incrementValue$5] + (param0 * param7 >> 6);
                 param4 = param4 + param12;
                 continue L5;
               }
@@ -1597,10 +1657,12 @@ final class pi extends wf {
             param1 = param4 >> 8;
             param0 = param2[param1];
             param0 = (param0 << 8) + (param2[param1 + 1] - param0) * (param4 & 255);
+            int incrementValue$6 = param5;
             param5++;
-            param3[param5] = param3[param5] + (param0 * param6 >> 6);
+            param3[incrementValue$6] = param3[incrementValue$6] + (param0 * param6 >> 6);
+            int incrementValue$7 = param5;
             param5++;
-            param3[param5] = param3[param5] + (param0 * param7 >> 6);
+            param3[incrementValue$7] = param3[incrementValue$7] + (param0 * param7 >> 6);
             param4 = param4 + param12;
             continue L2;
           }
@@ -1659,40 +1721,55 @@ final class pi extends wf {
                 param10.field_u = param3 << 8;
                 return param4 >> 1;
               } else {
+                int incrementValue$15 = param3;
                 param3++;
-                param0 = param1[param3];
+                param0 = param1[incrementValue$15];
+                int incrementValue$16 = param4;
                 param4++;
-                param2[param4] = param2[param4] + param0 * param5;
+                param2[incrementValue$16] = param2[incrementValue$16] + param0 * param5;
+                int incrementValue$17 = param4;
                 param4++;
-                param2[param4] = param2[param4] + param0 * param6;
+                param2[incrementValue$17] = param2[incrementValue$17] + param0 * param6;
                 continue L2;
               }
             }
           } else {
+            int incrementValue$18 = param3;
             param3++;
-            param0 = param1[param3];
+            param0 = param1[incrementValue$18];
+            int incrementValue$19 = param4;
             param4++;
-            param2[param4] = param2[param4] + param0 * param5;
+            param2[incrementValue$19] = param2[incrementValue$19] + param0 * param5;
+            int incrementValue$20 = param4;
             param4++;
-            param2[param4] = param2[param4] + param0 * param6;
+            param2[incrementValue$20] = param2[incrementValue$20] + param0 * param6;
+            int incrementValue$21 = param3;
             param3++;
-            param0 = param1[param3];
+            param0 = param1[incrementValue$21];
+            int incrementValue$22 = param4;
             param4++;
-            param2[param4] = param2[param4] + param0 * param5;
+            param2[incrementValue$22] = param2[incrementValue$22] + param0 * param5;
+            int incrementValue$23 = param4;
             param4++;
-            param2[param4] = param2[param4] + param0 * param6;
+            param2[incrementValue$23] = param2[incrementValue$23] + param0 * param6;
+            int incrementValue$24 = param3;
             param3++;
-            param0 = param1[param3];
+            param0 = param1[incrementValue$24];
+            int incrementValue$25 = param4;
             param4++;
-            param2[param4] = param2[param4] + param0 * param5;
+            param2[incrementValue$25] = param2[incrementValue$25] + param0 * param5;
+            int incrementValue$26 = param4;
             param4++;
-            param2[param4] = param2[param4] + param0 * param6;
+            param2[incrementValue$26] = param2[incrementValue$26] + param0 * param6;
+            int incrementValue$27 = param3;
             param3++;
-            param0 = param1[param3];
+            param0 = param1[incrementValue$27];
+            int incrementValue$28 = param4;
             param4++;
-            param2[param4] = param2[param4] + param0 * param5;
+            param2[incrementValue$28] = param2[incrementValue$28] + param0 * param5;
+            int incrementValue$29 = param4;
             param4++;
-            param2[param4] = param2[param4] + param0 * param6;
+            param2[incrementValue$29] = param2[incrementValue$29] + param0 * param6;
             continue L1;
           }
         }
@@ -1723,24 +1800,34 @@ final class pi extends wf {
         }
         param5 -= 3;
         while (param3 < param5) {
+            int incrementValue$0 = param3;
             param3++;
+            int incrementValue$1 = param2;
             param2--;
-            param1[param3] = param1[param3] + param0[param2] * param4;
+            param1[incrementValue$0] = param1[incrementValue$0] + param0[incrementValue$1] * param4;
+            int incrementValue$2 = param3;
             param3++;
+            int incrementValue$3 = param2;
             param2--;
-            param1[param3] = param1[param3] + param0[param2] * param4;
+            param1[incrementValue$2] = param1[incrementValue$2] + param0[incrementValue$3] * param4;
+            int incrementValue$4 = param3;
             param3++;
+            int incrementValue$5 = param2;
             param2--;
-            param1[param3] = param1[param3] + param0[param2] * param4;
+            param1[incrementValue$4] = param1[incrementValue$4] + param0[incrementValue$5] * param4;
+            int incrementValue$6 = param3;
             param3++;
+            int incrementValue$7 = param2;
             param2--;
-            param1[param3] = param1[param3] + param0[param2] * param4;
+            param1[incrementValue$6] = param1[incrementValue$6] + param0[incrementValue$7] * param4;
         }
         param5 += 3;
         while (param3 < param5) {
+            int incrementValue$8 = param3;
             param3++;
+            int incrementValue$9 = param2;
             param2--;
-            param1[param3] = param1[param3] + param0[param2] * param4;
+            param1[incrementValue$8] = param1[incrementValue$8] + param0[incrementValue$9] * param4;
         }
         param8.field_u = param2 << 8;
         return param3;
@@ -1792,8 +1879,9 @@ final class pi extends wf {
                 return param5;
               } else {
                 param0 = param2[param4 >> 8];
+                int incrementValue$4 = param5;
                 param5++;
-                param3[param5] = param3[param5] + (((param0 << 8) + (param1 - param0) * (param4 & 255)) * param6 >> 6);
+                param3[incrementValue$4] = param3[incrementValue$4] + (((param0 << 8) + (param1 - param0) * (param4 & 255)) * param6 >> 6);
                 param4 = param4 + param11;
                 continue L5;
               }
@@ -1801,8 +1889,9 @@ final class pi extends wf {
           } else {
             param1 = param4 >> 8;
             param0 = param2[param1];
+            int incrementValue$5 = param5;
             param5++;
-            param3[param5] = param3[param5] + (((param0 << 8) + (param2[param1 + 1] - param0) * (param4 & 255)) * param6 >> 6);
+            param3[incrementValue$5] = param3[incrementValue$5] + (((param0 << 8) + (param2[param1 + 1] - param0) * (param4 & 255)) * param6 >> 6);
             param4 = param4 + param11;
             continue L2;
           }
@@ -1859,11 +1948,13 @@ final class pi extends wf {
                 return param5;
               } else {
                 param0 = (param1 << 8) + (param2[param4 >> 8] - param1) * (param4 & 255);
+                int incrementValue$4 = param5;
                 param5++;
-                param3[param5] = param3[param5] + (param0 * param6 >> 6);
+                param3[incrementValue$4] = param3[incrementValue$4] + (param0 * param6 >> 6);
                 param6 = param6 + param8;
+                int incrementValue$5 = param5;
                 param5++;
-                param3[param5] = param3[param5] + (param0 * param7 >> 6);
+                param3[incrementValue$5] = param3[incrementValue$5] + (param0 * param7 >> 6);
                 param7 = param7 + param9;
                 param4 = param4 + param14;
                 continue L5;
@@ -1873,11 +1964,13 @@ final class pi extends wf {
             param1 = param4 >> 8;
             param0 = param2[param1 - 1];
             param0 = (param0 << 8) + (param2[param1] - param0) * (param4 & 255);
+            int incrementValue$6 = param5;
             param5++;
-            param3[param5] = param3[param5] + (param0 * param6 >> 6);
+            param3[incrementValue$6] = param3[incrementValue$6] + (param0 * param6 >> 6);
             param6 = param6 + param8;
+            int incrementValue$7 = param5;
             param5++;
-            param3[param5] = param3[param5] + (param0 * param7 >> 6);
+            param3[incrementValue$7] = param3[incrementValue$7] + (param0 * param7 >> 6);
             param7 = param7 + param9;
             param4 = param4 + param14;
             continue L2;
@@ -1922,49 +2015,64 @@ final class pi extends wf {
                 param12.field_u = param3 << 8;
                 return param4 >> 1;
               } else {
+                int incrementValue$15 = param3;
                 param3++;
-                param0 = param1[param3];
+                param0 = param1[incrementValue$15];
+                int incrementValue$16 = param4;
                 param4++;
-                param2[param4] = param2[param4] + param0 * param5;
+                param2[incrementValue$16] = param2[incrementValue$16] + param0 * param5;
                 param5 = param5 + param7;
+                int incrementValue$17 = param4;
                 param4++;
-                param2[param4] = param2[param4] + param0 * param6;
+                param2[incrementValue$17] = param2[incrementValue$17] + param0 * param6;
                 param6 = param6 + param8;
                 continue L2;
               }
             }
           } else {
+            int incrementValue$18 = param3;
             param3++;
-            param0 = param1[param3];
+            param0 = param1[incrementValue$18];
+            int incrementValue$19 = param4;
             param4++;
-            param2[param4] = param2[param4] + param0 * param5;
+            param2[incrementValue$19] = param2[incrementValue$19] + param0 * param5;
             param5 = param5 + param7;
+            int incrementValue$20 = param4;
             param4++;
-            param2[param4] = param2[param4] + param0 * param6;
+            param2[incrementValue$20] = param2[incrementValue$20] + param0 * param6;
             param6 = param6 + param8;
+            int incrementValue$21 = param3;
             param3++;
-            param0 = param1[param3];
+            param0 = param1[incrementValue$21];
+            int incrementValue$22 = param4;
             param4++;
-            param2[param4] = param2[param4] + param0 * param5;
+            param2[incrementValue$22] = param2[incrementValue$22] + param0 * param5;
             param5 = param5 + param7;
+            int incrementValue$23 = param4;
             param4++;
-            param2[param4] = param2[param4] + param0 * param6;
+            param2[incrementValue$23] = param2[incrementValue$23] + param0 * param6;
             param6 = param6 + param8;
+            int incrementValue$24 = param3;
             param3++;
-            param0 = param1[param3];
+            param0 = param1[incrementValue$24];
+            int incrementValue$25 = param4;
             param4++;
-            param2[param4] = param2[param4] + param0 * param5;
+            param2[incrementValue$25] = param2[incrementValue$25] + param0 * param5;
             param5 = param5 + param7;
+            int incrementValue$26 = param4;
             param4++;
-            param2[param4] = param2[param4] + param0 * param6;
+            param2[incrementValue$26] = param2[incrementValue$26] + param0 * param6;
             param6 = param6 + param8;
+            int incrementValue$27 = param3;
             param3++;
-            param0 = param1[param3];
+            param0 = param1[incrementValue$27];
+            int incrementValue$28 = param4;
             param4++;
-            param2[param4] = param2[param4] + param0 * param5;
+            param2[incrementValue$28] = param2[incrementValue$28] + param0 * param5;
             param5 = param5 + param7;
+            int incrementValue$29 = param4;
             param4++;
-            param2[param4] = param2[param4] + param0 * param6;
+            param2[incrementValue$29] = param2[incrementValue$29] + param0 * param6;
             param6 = param6 + param8;
             continue L1;
           }
@@ -1997,29 +2105,39 @@ final class pi extends wf {
                 param9.field_u = param2 << 8;
                 return param3;
               } else {
+                int incrementValue$10 = param3;
                 param3++;
+                int incrementValue$11 = param2;
                 param2--;
-                param1[param3] = param1[param3] + param0[param2] * param4;
+                param1[incrementValue$10] = param1[incrementValue$10] + param0[incrementValue$11] * param4;
                 param4 = param4 + param5;
                 continue L2;
               }
             }
           } else {
+            int incrementValue$12 = param3;
             param3++;
+            int incrementValue$13 = param2;
             param2--;
-            param1[param3] = param1[param3] + param0[param2] * param4;
+            param1[incrementValue$12] = param1[incrementValue$12] + param0[incrementValue$13] * param4;
             param4 = param4 + param5;
+            int incrementValue$14 = param3;
             param3++;
+            int incrementValue$15 = param2;
             param2--;
-            param1[param3] = param1[param3] + param0[param2] * param4;
+            param1[incrementValue$14] = param1[incrementValue$14] + param0[incrementValue$15] * param4;
             param4 = param4 + param5;
+            int incrementValue$16 = param3;
             param3++;
+            int incrementValue$17 = param2;
             param2--;
-            param1[param3] = param1[param3] + param0[param2] * param4;
+            param1[incrementValue$16] = param1[incrementValue$16] + param0[incrementValue$17] * param4;
             param4 = param4 + param5;
+            int incrementValue$18 = param3;
             param3++;
+            int incrementValue$19 = param2;
             param2--;
-            param1[param3] = param1[param3] + param0[param2] * param4;
+            param1[incrementValue$18] = param1[incrementValue$18] + param0[incrementValue$19] * param4;
             param4 = param4 + param5;
             continue L1;
           }
@@ -2079,8 +2197,9 @@ final class pi extends wf {
                 param11.field_u = param4;
                 return param5;
               } else {
+                int incrementValue$2 = param5;
                 param5++;
-                param3[param5] = param3[param5] + (((param0 << 8) + (param2[param4 >> 8] - param0) * (param4 & 255)) * param6 >> 6);
+                param3[incrementValue$2] = param3[incrementValue$2] + (((param0 << 8) + (param2[param4 >> 8] - param0) * (param4 & 255)) * param6 >> 6);
                 param6 = param6 + param7;
                 param4 = param4 + param1;
                 continue L5;
@@ -2089,8 +2208,9 @@ final class pi extends wf {
           } else {
             param1 = param4 >> 8;
             param0 = param2[param1 - 1];
+            int incrementValue$3 = param5;
             param5++;
-            param3[param5] = param3[param5] + (((param0 << 8) + (param2[param1] - param0) * (param4 & 255)) * param6 >> 6);
+            param3[incrementValue$3] = param3[incrementValue$3] + (((param0 << 8) + (param2[param1] - param0) * (param4 & 255)) * param6 >> 6);
             param6 = param6 + param7;
             param4 = param4 + param12;
             continue L2;
@@ -2162,29 +2282,39 @@ final class pi extends wf {
                 param9.field_u = param2 << 8;
                 return param3;
               } else {
+                int incrementValue$10 = param3;
                 param3++;
+                int incrementValue$11 = param2;
                 param2++;
-                param1[param3] = param1[param3] + param0[param2] * param4;
+                param1[incrementValue$10] = param1[incrementValue$10] + param0[incrementValue$11] * param4;
                 param4 = param4 + param5;
                 continue L2;
               }
             }
           } else {
+            int incrementValue$12 = param3;
             param3++;
+            int incrementValue$13 = param2;
             param2++;
-            param1[param3] = param1[param3] + param0[param2] * param4;
+            param1[incrementValue$12] = param1[incrementValue$12] + param0[incrementValue$13] * param4;
             param4 = param4 + param5;
+            int incrementValue$14 = param3;
             param3++;
+            int incrementValue$15 = param2;
             param2++;
-            param1[param3] = param1[param3] + param0[param2] * param4;
+            param1[incrementValue$14] = param1[incrementValue$14] + param0[incrementValue$15] * param4;
             param4 = param4 + param5;
+            int incrementValue$16 = param3;
             param3++;
+            int incrementValue$17 = param2;
             param2++;
-            param1[param3] = param1[param3] + param0[param2] * param4;
+            param1[incrementValue$16] = param1[incrementValue$16] + param0[incrementValue$17] * param4;
             param4 = param4 + param5;
+            int incrementValue$18 = param3;
             param3++;
+            int incrementValue$19 = param2;
             param2++;
-            param1[param3] = param1[param3] + param0[param2] * param4;
+            param1[incrementValue$18] = param1[incrementValue$18] + param0[incrementValue$19] * param4;
             param4 = param4 + param5;
             continue L1;
           }

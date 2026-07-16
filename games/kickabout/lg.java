@@ -142,10 +142,10 @@ abstract class lg implements l {
         if (param1 != 24939) {
             return null;
         }
-        if (!(2 != param0)) {
+        if (!(2 != (param0 ^ -1))) {
             return (js) (Object) new kt();
         }
-        if (4 == param0) {
+        if (4 == (param0 ^ -1)) {
             return (js) (Object) new e();
         }
         if (!(0 <= param0)) {

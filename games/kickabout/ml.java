@@ -44,8 +44,9 @@ final class ml extends iw {
     }
 
     final void b(int param0, byte param1) {
+        int fieldTemp$0 = ((ml) this).field_n;
         ((ml) this).field_n = ((ml) this).field_n + 1;
-        ((ml) this).field_f[((ml) this).field_n] = (byte)(param0 + ((ml) this).field_p.b((byte) 100));
+        ((ml) this).field_f[fieldTemp$0] = (byte)(param0 + ((ml) this).field_p.b((byte) 100));
         int var3 = -46 % ((param1 - 13) / 59);
     }
 
@@ -57,8 +58,9 @@ final class ml extends iw {
         param2 = param2 & ti.field_b[param0];
         while (((ml) this).field_u < param0) {
             param0 = param0 - ((ml) this).field_u;
+            int fieldTemp$0 = ((ml) this).field_n;
             ((ml) this).field_n = ((ml) this).field_n + 1;
-            ((ml) this).field_f[((ml) this).field_n] = (byte)(((ml) this).field_f[((ml) this).field_n] + (param2 >>> param0));
+            ((ml) this).field_f[fieldTemp$0] = (byte)(((ml) this).field_f[fieldTemp$0] + (param2 >>> param0));
             ((ml) this).field_f[((ml) this).field_n] = (byte) 0;
             ((ml) this).field_u = 8;
         }
@@ -66,8 +68,9 @@ final class ml extends iw {
             ((ml) this).field_u = ((ml) this).field_u - param0;
             ((ml) this).field_f[((ml) this).field_n] = (byte)(((ml) this).field_f[((ml) this).field_n] + (param2 << ((ml) this).field_u));
         } else {
+            int fieldTemp$1 = ((ml) this).field_n;
             ((ml) this).field_n = ((ml) this).field_n + 1;
-            ((ml) this).field_f[((ml) this).field_n] = (byte)(((ml) this).field_f[((ml) this).field_n] + param2);
+            ((ml) this).field_f[fieldTemp$1] = (byte)(((ml) this).field_f[fieldTemp$1] + param2);
             ((ml) this).field_f[((ml) this).field_n] = (byte) 0;
             ((ml) this).field_u = 8;
         }
@@ -100,8 +103,9 @@ final class ml extends iw {
         int var5 = 0;
         int var6 = Kickabout.field_G;
         for (var5 = 0; var5 < param3; var5++) {
+            int fieldTemp$0 = ((ml) this).field_n;
             ((ml) this).field_n = ((ml) this).field_n + 1;
-            param2[param1 + var5] = (byte)(((ml) this).field_f[((ml) this).field_n] + -((ml) this).field_p.b((byte) 119));
+            param2[param1 + var5] = (byte)(((ml) this).field_f[fieldTemp$0] + -((ml) this).field_p.b((byte) 119));
         }
         if (param0 != -30) {
             ((ml) this).field_u = -126;
@@ -448,8 +452,9 @@ final class ml extends iw {
         if (param0 <= 90) {
             ((ml) this).l((byte) 22);
         }
+        int fieldTemp$0 = ((ml) this).field_n;
         ((ml) this).field_n = ((ml) this).field_n + 1;
-        return ((ml) this).field_f[((ml) this).field_n] + -((ml) this).field_p.b((byte) 126) & 255;
+        return ((ml) this).field_f[fieldTemp$0] + -((ml) this).field_p.b((byte) 126) & 255;
     }
 
     final int l(int param0, int param1) {
@@ -462,8 +467,9 @@ final class ml extends iw {
         }
         ((ml) this).field_o = ((ml) this).field_o + param0;
         while (param0 > var4) {
+            int incrementValue$0 = var3;
             var3++;
-            var5 = var5 + ((((ml) this).field_f[var3] & ti.field_b[var4]) << -var4 + param0);
+            var5 = var5 + ((((ml) this).field_f[incrementValue$0] & ti.field_b[var4]) << -var4 + param0);
             param0 = param0 - var4;
             var4 = 8;
         }

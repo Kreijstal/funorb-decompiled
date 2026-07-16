@@ -37,7 +37,7 @@ abstract class sr {
         int var12 = 0;
         int var13 = 0;
         int var15 = 0;
-        kg var15_ref = null;
+        kg var15_ref_kg = null;
         int var16_int = 0;
         ut var16 = null;
         int var17 = 0;
@@ -271,13 +271,13 @@ abstract class sr {
                 L16: while (true) {
                   if (var13 <= var15) {
                     ta.e(123);
-                    var15_ref = eo.a(var23);
+                    var15_ref_kg = eo.a(var23);
                     var16_int = 0;
                     L17: while (true) {
                       if ((var16_int ^ -1) <= -7) {
                         return var6;
                       } else {
-                        var6[var16_int] = var15_ref;
+                        var6[var16_int] = var15_ref_kg;
                         var16_int++;
                         continue L17;
                       }

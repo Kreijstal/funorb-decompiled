@@ -51,107 +51,55 @@ final class qh extends dl {
 
     final static int a(int param0, int param1) {
         int var2 = 0;
-        if (param1 == -1) {
-          return 0;
-        } else {
-          if (-1 < param1) {
-            L0: {
-              var2 = 1;
-              if ((param1 ^ -1) < -65536) {
-                var2 += 16;
-                param1 = param1 >> 16;
-                break L0;
-              } else {
-                break L0;
-              }
-            }
-            L1: {
-              if (255 < param1) {
-                var2 += 8;
-                param1 = param1 >> 8;
-                break L1;
-              } else {
-                break L1;
-              }
-            }
-            L2: {
-              if ((param1 ^ -1) < -16) {
-                param1 = param1 >> 4;
-                var2 += 4;
-                break L2;
-              } else {
-                break L2;
-              }
-            }
-            L3: {
-              if (3 < param1) {
-                param1 = param1 >> 2;
-                var2 += 2;
-                break L3;
-              } else {
-                break L3;
-              }
-            }
-            L4: {
-              if (-2 <= (param1 ^ -1)) {
-                break L4;
-              } else {
-                param1 = param1 >> 1;
-                var2++;
-                break L4;
-              }
-            }
-            return var2;
-          } else {
-            L5: {
-              var2 = 2;
-              if (-65536 > param1) {
-                param1 = param1 >> 16;
-                var2 += 16;
-                break L5;
-              } else {
-                break L5;
-              }
-            }
-            L6: {
-              if (param1 <= 255) {
-                break L6;
-              } else {
-                var2 += 8;
-                param1 = param1 >> 8;
-                break L6;
-              }
-            }
-            L7: {
-              if (15 <= param1) {
-                break L7;
-              } else {
-                param1 = param1 >> 4;
-                var2 += 4;
-                break L7;
-              }
-            }
-            L8: {
-              if ((param1 ^ -1) > param0) {
-                param1 = param1 >> 2;
-                var2 += 2;
-                break L8;
-              } else {
-                break L8;
-              }
-            }
-            L9: {
-              if (param1 >= -2) {
-                break L9;
-              } else {
-                var2++;
-                param1 = param1 >> 1;
-                break L9;
-              }
-            }
-            return var2;
-          }
+        if (!((param1 ^ -1) != -1)) {
+            return 0;
         }
+        if (-1 > (param1 ^ -1)) {
+            var2 = 1;
+            if (!((param1 ^ -1) >= -65536)) {
+                var2 += 16;
+                param1 = param1 >> 16;
+            }
+            if (!(255 >= param1)) {
+                var2 += 8;
+                param1 = param1 >> 8;
+            }
+            if (!((param1 ^ -1) >= -16)) {
+                param1 = param1 >> 4;
+                var2 += 4;
+            }
+            if (!(3 >= param1)) {
+                param1 = param1 >> 2;
+                var2 += 2;
+            }
+            if (-2 > (param1 ^ -1)) {
+                param1 = param1 >> 1;
+                var2++;
+            }
+            return var2;
+        }
+        var2 = 2;
+        if (!(-65536 <= param1)) {
+            param1 = param1 >> 16;
+            var2 += 16;
+        }
+        if ((param1 ^ -1) > 255) {
+            var2 += 8;
+            param1 = param1 >> 8;
+        }
+        if (15 < (param1 ^ -1)) {
+            param1 = param1 >> 4;
+            var2 += 4;
+        }
+        if (!((param1 ^ -1) <= param0)) {
+            param1 = param1 >> 2;
+            var2 += 2;
+        }
+        if (param1 < -2) {
+            var2++;
+            param1 = param1 >> 1;
+        }
+        return var2;
     }
 
     final byte[] g(int param0) {

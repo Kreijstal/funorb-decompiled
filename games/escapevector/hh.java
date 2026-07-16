@@ -12,8 +12,9 @@ final class hh extends nh {
         ((hh) this).field_h = param0.a(-128, ((hh) this).field_h);
         ((hh) this).field_j = param0.a(((hh) this).field_j, (byte) -87);
         if (((hh) this).field_k == ((hh) this).field_l) {
-          ((hh) this).field_l = param0.a(false, ((hh) this).field_k);
-          ((hh) this).field_k = param0.a(false, ((hh) this).field_k);
+          int dupTemp$2 = param0.a(false, ((hh) this).field_k);
+          ((hh) this).field_l = dupTemp$2;
+          ((hh) this).field_k = dupTemp$2;
           return (hh) this;
         } else {
           L0: {

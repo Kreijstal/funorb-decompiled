@@ -9,8 +9,8 @@ final class kk {
     static int field_e;
 
     final static java.net.URL a(int param0, java.net.URL param1, java.applet.Applet param2) {
-        String var3 = null;
-        String var4 = null;
+        Object var3 = null;
+        Object var4 = null;
         Object var5 = null;
         var3 = null;
         if (param0 >= 80) {
@@ -21,7 +21,7 @@ final class kk {
               if (td.field_i.equals((Object) (Object) param2.getParameter("settings"))) {
                 break L0;
               } else {
-                var3 = td.field_i;
+                var3 = (Object) (Object) td.field_i;
                 var4 = var3;
                 var4 = var3;
                 break L0;
@@ -31,13 +31,13 @@ final class kk {
           var4 = null;
           if (bf.field_i != null) {
             if (bf.field_i.equals((Object) (Object) param2.getParameter("session"))) {
-              return wg.a(var3, -7362, var4, -1, param1);
+              return wg.a((String) var3, -7362, (String) var4, -1, param1);
             } else {
-              var4 = bf.field_i;
-              return wg.a(var3, -7362, var4, -1, param1);
+              var4 = (Object) (Object) bf.field_i;
+              return wg.a((String) var3, -7362, (String) var4, -1, param1);
             }
           } else {
-            return wg.a(var3, -7362, var4, -1, param1);
+            return wg.a((String) var3, -7362, (String) var4, -1, param1);
           }
         } else {
           L1: {
@@ -49,18 +49,18 @@ final class kk {
               if (td.field_i.equals((Object) (Object) param2.getParameter("settings"))) {
                 break L1;
               } else {
-                var3 = td.field_i;
+                var3 = (Object) (Object) td.field_i;
                 break L1;
               }
             }
           }
           var4 = null;
           if (bf.field_i == null) {
-            return wg.a(var3, -7362, var4, -1, param1);
+            return wg.a((String) var3, -7362, (String) var4, -1, param1);
           } else {
             L2: {
               if (!bf.field_i.equals((Object) (Object) param2.getParameter("session"))) {
-                var4 = bf.field_i;
+                var4 = (Object) (Object) bf.field_i;
                 var3 = var4;
                 var4 = var3;
                 var3 = var4;
@@ -69,7 +69,7 @@ final class kk {
                 break L2;
               }
             }
-            return wg.a(var3, -7362, var4, -1, param1);
+            return wg.a((String) var3, -7362, (String) var4, -1, param1);
           }
         }
     }

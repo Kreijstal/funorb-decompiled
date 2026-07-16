@@ -642,42 +642,27 @@ final class eh {
     }
 
     final synchronized int a(int param0) {
+        int var4 = 0;
+        int var5 = Virogrid.field_F ? 1 : 0;
+        if (param0 != -2677) {
+            return -66;
+        }
+        if (!(((eh) this).c(0))) {
+            return 0;
+        }
         int var2 = 0;
         int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        var5 = Virogrid.field_F ? 1 : 0;
-        if (param0 == -2677) {
-          if (!((eh) this).c(0)) {
-            return 0;
-          } else {
-            var2 = 0;
-            var3 = 0;
-            var4 = 0;
-            L0: while (true) {
-              if (((eh) this).field_a.length <= var4) {
-                if (-1 == var2) {
-                  return 100;
-                } else {
-                  var4 = 100 * var3 / var2;
-                  return var4;
-                }
-              } else {
-                if (-1 > ((eh) this).field_c.field_n[var4]) {
-                  var2 += 100;
-                  var3 = var3 + ((eh) this).b((byte) 106, var4);
-                  var4++;
-                  continue L0;
-                } else {
-                  var4++;
-                  continue L0;
-                }
-              }
+        for (var4 = 0; (((eh) this).field_a.length ^ -1) < (var4 ^ -1); var4++) {
+            if (!(-1 <= (((eh) this).field_c.field_n[var4] ^ -1))) {
+                var2 += 100;
+                var3 = var3 + ((eh) this).b((byte) 106, var4);
             }
-          }
-        } else {
-          return -66;
         }
+        if (!(-1 != (var2 ^ -1))) {
+            return 100;
+        }
+        var4 = 100 * var3 / var2;
+        return var4;
     }
 
     public static void a(byte param0) {
@@ -751,10 +736,10 @@ final class eh {
             field_l = null;
         }
         un var8 = param1.a((byte) -125);
-        while (var8.field_a == -1) {
+        while ((var8.field_a ^ -1) == -1) {
             mm.a(-27, 10L);
         }
-        if (!(-3 != var8.field_a)) {
+        if (!(-3 != (var8.field_a ^ -1))) {
             return new ch[]{};
         }
         int[] var12 = (int[]) var8.field_f;
@@ -828,7 +813,6 @@ final class eh {
 
     private final synchronized byte[] a(int param0, int param1, int[] param2, int param3) {
         Object var5 = null;
-        byte[] var5_array = null;
         byte[] var7 = null;
         if (this.b(param3, param1, 0)) {
           L0: {
@@ -862,7 +846,7 @@ final class eh {
               L2: {
                 if (((eh) this).field_f[param1][param3] != null) {
                   var7 = gi.a(((eh) this).field_f[param1][param3], false, (byte) -126);
-                  var5_array = var7;
+                  var5 = (Object) (Object) var7;
                   if (var7 != null) {
                     break L2;
                   } else {
@@ -873,7 +857,7 @@ final class eh {
                 }
               }
               L3: {
-                if (var5_array != null) {
+                if (var5 != null) {
                   if (1 != ((eh) this).field_k) {
                     if (2 == ((eh) this).field_k) {
                       ((eh) this).field_f[param1] = null;
@@ -894,7 +878,7 @@ final class eh {
                   break L3;
                 }
               }
-              return var5_array;
+              return (byte[]) var5;
             } else {
               return null;
             }
@@ -961,6 +945,7 @@ final class eh {
               ((eh) this).field_b = stackIn_6_1 != 0;
               ((eh) this).field_k = param2;
               ((eh) this).field_i = param0;
+              return;
             } else {
               break L0;
             }

@@ -35,17 +35,24 @@ final class cb {
               }
               try {
                 L2: {
-                  if (param0 == null) {
-                    break L2;
-                  } else {
-                    param1.field_a.postEvent((java.awt.AWTEvent) (Object) new java.awt.event.ActionEvent(param0, 1001, "dummy"));
-                    break L2;
+                  L3: {
+                    if (param0 == null) {
+                      break L3;
+                    } else {
+                      param1.field_a.postEvent((java.awt.AWTEvent) (Object) new java.awt.event.ActionEvent(param0, 1001, "dummy"));
+                      break L3;
+                    }
                   }
+                  break L2;
                 }
-              } catch (java.lang.Exception decompiledCaughtParameter) {
-                decompiledCaughtException = decompiledCaughtParameter;
+              } catch (java.lang.Exception decompiledCaughtParameter0) {
+                decompiledCaughtException = decompiledCaughtParameter0;
+                L4: {
+                  var3 = (Exception) (Object) decompiledCaughtException;
+                  break L4;
+                }
               }
-              var3 = (Exception) (Object) decompiledCaughtException;
+              return;
             }
           } else {
             return;

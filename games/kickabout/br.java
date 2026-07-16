@@ -8,7 +8,6 @@ final class br {
     final static void a(byte param0, int param1) {
         String var2 = null;
         String var3 = null;
-        String var3_ref = null;
         String var4 = null;
         var2 = pb.field_G[35];
         var4 = var2;
@@ -18,9 +17,9 @@ final class br {
           L0: {
             field_b = null;
             if (th.field_a[param1]) {
-              var3_ref = ma.field_w;
-              var4 = var3_ref;
-              var4 = var3_ref;
+              var3 = ma.field_w;
+              var4 = var3;
+              var4 = var3;
               break L0;
             } else {
               break L0;
@@ -44,9 +43,9 @@ final class br {
         } else {
           L2: {
             if (th.field_a[param1]) {
-              var3_ref = ma.field_w;
-              var4 = var3_ref;
-              var4 = var3_ref;
+              var3 = ma.field_w;
+              var4 = var3;
+              var4 = var3;
               break L2;
             } else {
               break L2;

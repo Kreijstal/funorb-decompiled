@@ -21,7 +21,6 @@ final class tp {
 
     final int[] a(int param0, int param1) {
         ui var3 = null;
-        ui var3_ref = null;
         ui var4 = null;
         int var5 = 0;
         Object stackIn_4_0 = null;
@@ -62,23 +61,23 @@ final class tp {
                 L2: {
                   ((tp) this).field_b = true;
                   if (((tp) this).field_j < ((tp) this).field_k) {
-                    var3_ref = new ui(param0, ((tp) this).field_j);
+                    var3 = new ui(param0, ((tp) this).field_j);
                     ((tp) this).field_j = ((tp) this).field_j + 1;
                     break L2;
                   } else {
                     var4 = (ui) (Object) ((tp) this).field_d.c(-6938);
-                    var3_ref = new ui(param0, var4.field_j);
+                    var3 = new ui(param0, var4.field_j);
                     ((tp) this).field_c[var4.field_m] = null;
                     var4.f(0);
                     break L2;
                   }
                 }
-                ((tp) this).field_c[param0] = var3_ref;
+                ((tp) this).field_c[param0] = var3;
                 break L1;
               }
             }
-            ((tp) this).field_d.b((byte) 68, (q) (Object) var3_ref);
-            return ((tp) this).field_f[var3_ref.field_j];
+            ((tp) this).field_d.b((byte) 68, (q) (Object) var3);
+            return ((tp) this).field_f[var3.field_j];
           } else {
             L3: {
               stackOut_8_0 = this;
@@ -238,6 +237,7 @@ final class tp {
             var0 = var15;
             L1: while (true) {
               if (var15 > 10) {
+                return;
               } else {
                 var1 = var15 * 8 - 8;
                 field_m[var15] = vb.a(on.a(field_e[7][7 + var1], 255L), vb.a(on.a(65280L, field_e[6][var1 - -6]), vb.a(on.a(field_e[5][5 + var1], 16711680L), vb.a(on.a(4278190080L, field_e[4][4 + var1]), vb.a(on.a(field_e[3][3 + var1], 1095216660480L), vb.a(vb.a(on.a(field_e[0][var1], -72057594037927936L), on.a(71776119061217280L, field_e[1][1 + var1])), on.a(280375465082880L, field_e[2][var1 - -2])))))));
@@ -247,7 +247,7 @@ final class tp {
             }
           } else {
             L2: {
-              var1 = "ᠣ웨螸ŏ㚦틵祯酒悼鮎ꌌ笵ᷠퟂ⹋﹗ᕷ㟥鿰䫚壉⤊놠殅뵝ჴ쬾է䆋Ᵹ闘ﯮ籦���䞞쨭뼇굚茳挂ꩱ젙䧙守騦㊰햀뻍㑈ｺ遟⁨᪮둔錢擱猒䀈쏬���贽需켫皂혛떯橐䗳ワ㽕ꋪ斺⿀���﵍鉵ڊ닦ฟ拔ꢖ暈╙葲㥌幸㢌톥댡鰞䏇ﰄ写洍﫟縤㮫츑轎럫㲁铷뤓ⳓ쐃噄義⪻셓���鵬ㅴ겉ᓡᘺ椉炶탭챂颤⡜".charAt(var0 / 2);
+              var1 = "ᠣ웨螸ŏ㚦틵祯酒悼鮎ꌌ笵ᷠퟂ⹋﹗ᕷ㟥鿰䫚壉⤊놠殅뵝ჴ쬾է䆋Ᵹ闘ﯮ籦\udd17䞞쨭뼇굚茳挂ꩱ젙䧙守騦㊰햀뻍㑈ｺ遟⁨᪮둔錢擱猒䀈쏬\udba1贽需켫皂혛떯橐䗳ワ㽕ꋪ斺⿀\ude1c﵍鉵ڊ닦ฟ拔ꢖ暈╙葲㥌幸㢌톥댡鰞䏇ﰄ写洍﫟縤㮫츑轎럫㲁铷뤓ⳓ쐃噄義⪻셓\udc0b鵬ㅴ겉ᓡᘺ椉炶탭챂颤⡜".charAt(var0 / 2);
               if (0 != (var0 & 1)) {
                 stackOut_4_0 = (long)(255 & var1);
                 stackIn_5_0 = stackOut_4_0;

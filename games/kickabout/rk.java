@@ -50,13 +50,15 @@ final class rk {
         var14 = 0;
         L0: while (true) {
           if (var14 >= 4) {
+            return;
           } else {
             ((rk) this).field_c[var14] = new ut(54, 85);
             var15 = ((rk) this).field_c[var14];
             iw.a(-114, var15);
             var9.d(0, 0);
+            int incrementValue$6 = var7;
             var7++;
-            var6.a(var7 % 4, -2);
+            var6.a(incrementValue$6 % 4, -2);
             ta.e(123);
             var16 = var9.field_y.length;
             var17 = 0;

@@ -134,12 +134,12 @@ final class nm extends mn implements ng {
                     if (param1.field_a == 5) {
                       var13.a(kl.field_n, 5177, 11);
                       var13.a(pf.field_q, 5177, 17);
-                      if (param1.field_a != -4) {
-                        if (-7 == param1.field_a) {
-                          var13.a(pf.field_u, 5177, 9);
+                      if ((param1.field_a ^ -1) != -4) {
+                        if (-7 != (param1.field_a ^ -1)) {
                           ((nm) this).c((gm) (Object) var13, 33);
                           return;
                         } else {
+                          var13.a(pf.field_u, 5177, 9);
                           ((nm) this).c((gm) (Object) var13, 33);
                           return;
                         }
@@ -150,12 +150,12 @@ final class nm extends mn implements ng {
                       }
                     } else {
                       var13.a(qh.field_a, 5177, -1);
-                      if (param1.field_a != -4) {
-                        if (-7 == param1.field_a) {
-                          var13.a(pf.field_u, 5177, 9);
+                      if ((param1.field_a ^ -1) != -4) {
+                        if (-7 != (param1.field_a ^ -1)) {
                           ((nm) this).c((gm) (Object) var13, 33);
                           return;
                         } else {
+                          var13.a(pf.field_u, 5177, 9);
                           ((nm) this).c((gm) (Object) var13, 33);
                           return;
                         }
@@ -167,12 +167,12 @@ final class nm extends mn implements ng {
                     }
                   } else {
                     lg discarded$17 = var13.a(0, vd.field_d, (ca) this);
-                    if (param1.field_a != -4) {
-                      if (-7 == param1.field_a) {
-                        var13.a(pf.field_u, 5177, 9);
+                    if ((param1.field_a ^ -1) != -4) {
+                      if (-7 != (param1.field_a ^ -1)) {
                         ((nm) this).c((gm) (Object) var13, 33);
                         return;
                       } else {
+                        var13.a(pf.field_u, 5177, 9);
                         ((nm) this).c((gm) (Object) var13, 33);
                         return;
                       }
@@ -201,12 +201,12 @@ final class nm extends mn implements ng {
                       if (param1.field_a == 5) {
                         var12.a(kl.field_n, 5177, 11);
                         var12.a(pf.field_q, 5177, 17);
-                        if (param1.field_a != -4) {
-                          if (-7 == param1.field_a) {
-                            var12.a(pf.field_u, 5177, 9);
+                        if ((param1.field_a ^ -1) != -4) {
+                          if (-7 != (param1.field_a ^ -1)) {
                             ((nm) this).c((gm) (Object) var12, 33);
                             return;
                           } else {
+                            var12.a(pf.field_u, 5177, 9);
                             ((nm) this).c((gm) (Object) var12, 33);
                             return;
                           }
@@ -217,12 +217,12 @@ final class nm extends mn implements ng {
                         }
                       } else {
                         var12.a(qh.field_a, 5177, -1);
-                        if (param1.field_a != -4) {
-                          if (-7 == param1.field_a) {
-                            var12.a(pf.field_u, 5177, 9);
+                        if ((param1.field_a ^ -1) != -4) {
+                          if (-7 != (param1.field_a ^ -1)) {
                             ((nm) this).c((gm) (Object) var12, 33);
                             return;
                           } else {
+                            var12.a(pf.field_u, 5177, 9);
                             ((nm) this).c((gm) (Object) var12, 33);
                             return;
                           }
@@ -234,12 +234,12 @@ final class nm extends mn implements ng {
                       }
                     } else {
                       lg discarded$19 = var12.a(0, vd.field_d, (ca) this);
-                      if (param1.field_a != -4) {
-                        if (-7 == param1.field_a) {
-                          var12.a(pf.field_u, 5177, 9);
+                      if ((param1.field_a ^ -1) != -4) {
+                        if (-7 != (param1.field_a ^ -1)) {
                           ((nm) this).c((gm) (Object) var12, 33);
                           return;
                         } else {
+                          var12.a(pf.field_u, 5177, 9);
                           ((nm) this).c((gm) (Object) var12, 33);
                           return;
                         }
@@ -277,12 +277,12 @@ final class nm extends mn implements ng {
                         break L2;
                       }
                     }
-                    if (param1.field_a != -4) {
-                      if (-7 == param1.field_a) {
-                        var12.a(pf.field_u, 5177, 9);
+                    if ((param1.field_a ^ -1) != -4) {
+                      if (-7 != (param1.field_a ^ -1)) {
                         ((nm) this).c((gm) (Object) var12, 33);
                         return;
                       } else {
+                        var12.a(pf.field_u, 5177, 9);
                         ((nm) this).c((gm) (Object) var12, 33);
                         return;
                       }
@@ -339,12 +339,12 @@ final class nm extends mn implements ng {
                         break L4;
                       }
                     }
-                    if (param1.field_a != -4) {
-                      if (-7 == param1.field_a) {
-                        var10.a(pf.field_u, 5177, 9);
+                    if ((param1.field_a ^ -1) != -4) {
+                      if (-7 != (param1.field_a ^ -1)) {
                         ((nm) this).c((gm) (Object) var10, 33);
                         return;
                       } else {
+                        var10.a(pf.field_u, 5177, 9);
                         ((nm) this).c((gm) (Object) var10, 33);
                         return;
                       }
@@ -360,12 +360,12 @@ final class nm extends mn implements ng {
                 var5 = var8;
                 if (param2 < -102) {
                   if (param1.field_b) {
-                    if (param1.field_g) {
-                      ((nm) this).c((gm) (Object) new sc((nm) this), 33);
-                      return;
-                    } else {
+                    if (!param1.field_g) {
                       lg discarded$24 = var8.a(0, vd.field_d, (ca) this);
                       ((nm) this).c((gm) (Object) var8, 33);
+                      return;
+                    } else {
+                      ((nm) this).c((gm) (Object) new sc((nm) this), 33);
                       return;
                     }
                   } else {
@@ -373,12 +373,12 @@ final class nm extends mn implements ng {
                       if (param1.field_a == 5) {
                         var8.a(kl.field_n, 5177, 11);
                         var8.a(pf.field_q, 5177, 17);
-                        if (param1.field_a != -4) {
-                          if (-7 == param1.field_a) {
-                            var8.a(pf.field_u, 5177, 9);
+                        if ((param1.field_a ^ -1) != -4) {
+                          if (-7 != (param1.field_a ^ -1)) {
                             ((nm) this).c((gm) (Object) var8, 33);
                             return;
                           } else {
+                            var8.a(pf.field_u, 5177, 9);
                             ((nm) this).c((gm) (Object) var8, 33);
                             return;
                           }
@@ -389,12 +389,12 @@ final class nm extends mn implements ng {
                         }
                       } else {
                         var8.a(qh.field_a, 5177, -1);
-                        if (param1.field_a != -4) {
-                          if (-7 == param1.field_a) {
-                            var8.a(pf.field_u, 5177, 9);
+                        if ((param1.field_a ^ -1) != -4) {
+                          if (-7 != (param1.field_a ^ -1)) {
                             ((nm) this).c((gm) (Object) var8, 33);
                             return;
                           } else {
+                            var8.a(pf.field_u, 5177, 9);
                             ((nm) this).c((gm) (Object) var8, 33);
                             return;
                           }
@@ -406,12 +406,12 @@ final class nm extends mn implements ng {
                       }
                     } else {
                       lg discarded$25 = var8.a(0, vd.field_d, (ca) this);
-                      if (param1.field_a != -4) {
-                        if (-7 == param1.field_a) {
-                          var8.a(pf.field_u, 5177, 9);
+                      if ((param1.field_a ^ -1) != -4) {
+                        if (-7 != (param1.field_a ^ -1)) {
                           ((nm) this).c((gm) (Object) var8, 33);
                           return;
                         } else {
+                          var8.a(pf.field_u, 5177, 9);
                           ((nm) this).c((gm) (Object) var8, 33);
                           return;
                         }
@@ -449,12 +449,12 @@ final class nm extends mn implements ng {
                         break L5;
                       }
                     }
-                    if (param1.field_a != -4) {
-                      if (-7 == param1.field_a) {
-                        var8.a(pf.field_u, 5177, 9);
+                    if ((param1.field_a ^ -1) != -4) {
+                      if (-7 != (param1.field_a ^ -1)) {
                         ((nm) this).c((gm) (Object) var8, 33);
                         return;
                       } else {
+                        var8.a(pf.field_u, 5177, 9);
                         ((nm) this).c((gm) (Object) var8, 33);
                         return;
                       }
@@ -486,8 +486,8 @@ final class nm extends mn implements ng {
               if (param1.field_a == 5) {
                 var14.a(kl.field_n, 5177, 11);
                 var14.a(pf.field_q, 5177, 17);
-                if (param1.field_a != -4) {
-                  if (-7 != param1.field_a) {
+                if ((param1.field_a ^ -1) != -4) {
+                  if (-7 != (param1.field_a ^ -1)) {
                     ((nm) this).c((gm) (Object) var14, 33);
                     return;
                   } else {
@@ -502,8 +502,8 @@ final class nm extends mn implements ng {
                 }
               } else {
                 var14.a(qh.field_a, 5177, -1);
-                if (param1.field_a != -4) {
-                  if (-7 != param1.field_a) {
+                if ((param1.field_a ^ -1) != -4) {
+                  if (-7 != (param1.field_a ^ -1)) {
                     ((nm) this).c((gm) (Object) var14, 33);
                     return;
                   } else {
@@ -519,12 +519,12 @@ final class nm extends mn implements ng {
               }
             } else {
               lg discarded$29 = var14.a(0, vd.field_d, (ca) this);
-              if (param1.field_a != -4) {
-                if (-7 == param1.field_a) {
-                  var14.a(pf.field_u, 5177, 9);
+              if ((param1.field_a ^ -1) != -4) {
+                if (-7 != (param1.field_a ^ -1)) {
                   ((nm) this).c((gm) (Object) var14, 33);
                   return;
                 } else {
+                  var14.a(pf.field_u, 5177, 9);
                   ((nm) this).c((gm) (Object) var14, 33);
                   return;
                 }
@@ -538,12 +538,12 @@ final class nm extends mn implements ng {
         } else {
           ((nm) this).field_ib = null;
           if (param1.field_b) {
-            if (param1.field_g) {
-              ((nm) this).c((gm) (Object) new sc((nm) this), 33);
-              return;
-            } else {
+            if (!param1.field_g) {
               lg discarded$30 = var14.a(0, vd.field_d, (ca) this);
               ((nm) this).c((gm) (Object) var14, 33);
+              return;
+            } else {
+              ((nm) this).c((gm) (Object) new sc((nm) this), 33);
               return;
             }
           } else {
@@ -551,12 +551,12 @@ final class nm extends mn implements ng {
               if (param1.field_a == 5) {
                 var14.a(kl.field_n, 5177, 11);
                 var14.a(pf.field_q, 5177, 17);
-                if (param1.field_a != -4) {
-                  if (-7 == param1.field_a) {
-                    var14.a(pf.field_u, 5177, 9);
+                if ((param1.field_a ^ -1) != -4) {
+                  if (-7 != (param1.field_a ^ -1)) {
                     ((nm) this).c((gm) (Object) var14, 33);
                     return;
                   } else {
+                    var14.a(pf.field_u, 5177, 9);
                     ((nm) this).c((gm) (Object) var14, 33);
                     return;
                   }
@@ -567,12 +567,12 @@ final class nm extends mn implements ng {
                 }
               } else {
                 var14.a(qh.field_a, 5177, -1);
-                if (param1.field_a != -4) {
-                  if (-7 == param1.field_a) {
-                    var14.a(pf.field_u, 5177, 9);
+                if ((param1.field_a ^ -1) != -4) {
+                  if (-7 != (param1.field_a ^ -1)) {
                     ((nm) this).c((gm) (Object) var14, 33);
                     return;
                   } else {
+                    var14.a(pf.field_u, 5177, 9);
                     ((nm) this).c((gm) (Object) var14, 33);
                     return;
                   }
@@ -584,12 +584,12 @@ final class nm extends mn implements ng {
               }
             } else {
               lg discarded$31 = var14.a(0, vd.field_d, (ca) this);
-              if (param1.field_a != -4) {
-                if (-7 == param1.field_a) {
-                  var14.a(pf.field_u, 5177, 9);
+              if ((param1.field_a ^ -1) != -4) {
+                if (-7 != (param1.field_a ^ -1)) {
                   ((nm) this).c((gm) (Object) var14, 33);
                   return;
                 } else {
+                  var14.a(pf.field_u, 5177, 9);
                   ((nm) this).c((gm) (Object) var14, 33);
                   return;
                 }

@@ -10,13 +10,13 @@ final class vg {
     final void a(byte param0, int param1, int param2, int param3, int param4) {
         uk.a(((vg) this).field_b, (byte) -104, param2, param1, param4, param3);
         if (param0 > -69) {
-            vk var7 = (vk) null;
+            Object var7 = null;
             vg.a((vk) null, 11);
         }
     }
 
     vg(kc[] param0) {
-        ((vg) this).field_b = (kc[]) param0;
+        ((vg) this).field_b = param0;
     }
 
     public static void a(byte param0) {
@@ -33,17 +33,17 @@ final class vg {
         vk var5 = null;
         vk var6 = null;
         var4 = Main.field_T;
-        if (null == ((vk) param0).field_i) {
+        if (null == param0.field_i) {
           return;
         } else {
-          if ((((vk) param0).field_c ^ -1) != param1) {
+          if ((param0.field_c ^ -1) != param1) {
             var2 = 0;
             L0: while (true) {
               if (jh.field_c > var2) {
                 var6 = me.field_b[var2];
-                if ((((vk) var6).field_k ^ -1) == -3) {
-                  if (((vk) param0).field_c == ((vk) var6).field_c) {
-                    if (((vk) var6).field_h == ((vk) param0).field_h) {
+                if ((var6.field_k ^ -1) == -3) {
+                  if (param0.field_c == var6.field_c) {
+                    if (var6.field_h == param0.field_h) {
                       return;
                     } else {
                       var2++;
@@ -62,7 +62,7 @@ final class vg {
                 }
               } else {
                 L1: {
-                  if (null != ((vk) param0).field_a) {
+                  if (null != param0.field_a) {
                     break L1;
                   } else {
                     break L1;
@@ -73,13 +73,13 @@ final class vg {
               }
             }
           } else {
-            if (((vk) param0).field_h != 0) {
+            if (param0.field_h != 0) {
               var2 = 0;
               if (jh.field_c > var2) {
                 var5 = me.field_b[var2];
-                if ((((vk) var5).field_k ^ -1) == -3) {
-                  if (((vk) param0).field_c == ((vk) var5).field_c) {
-                    if (((vk) var5).field_h == ((vk) param0).field_h) {
+                if ((var5.field_k ^ -1) == -3) {
+                  if (param0.field_c == var5.field_c) {
+                    if (var5.field_h == param0.field_h) {
                       return;
                     } else {
                       L2: {
@@ -88,7 +88,7 @@ final class vg {
                         var2++;
                         var2++;
                         var2++;
-                        if (null != ((vk) param0).field_a) {
+                        if (null != param0.field_a) {
                           break L2;
                         } else {
                           break L2;
@@ -105,7 +105,7 @@ final class vg {
                       var2++;
                       var2++;
                       var2++;
-                      if (null != ((vk) param0).field_a) {
+                      if (null != param0.field_a) {
                         break L3;
                       } else {
                         break L3;
@@ -121,7 +121,7 @@ final class vg {
                     var2++;
                     var2++;
                     var2++;
-                    if (null != ((vk) param0).field_a) {
+                    if (null != param0.field_a) {
                       break L4;
                     } else {
                       break L4;
@@ -132,7 +132,7 @@ final class vg {
                 }
               } else {
                 L5: {
-                  if (null != ((vk) param0).field_a) {
+                  if (null != param0.field_a) {
                     break L5;
                   } else {
                     break L5;
@@ -143,7 +143,7 @@ final class vg {
               }
             } else {
               L6: {
-                if (null != ((vk) param0).field_a) {
+                if (null != param0.field_a) {
                   break L6;
                 } else {
                   break L6;

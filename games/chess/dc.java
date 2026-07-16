@@ -96,8 +96,9 @@ final class dc extends o {
                             break L4;
                           }
                         }
+                        int incrementValue$1 = var8;
                         var8++;
-                        vn.field_Ab[var8] = var12;
+                        vn.field_Ab[incrementValue$1] = var12;
                         var11++;
                         continue L2;
                       } else {

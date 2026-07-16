@@ -39,7 +39,6 @@ final class ma extends bg {
         int var16 = 0;
         rl var17 = null;
         int var17_int = 0;
-        rl var17_ref = null;
         int var18 = 0;
         int var19 = 0;
         int[] var20 = null;
@@ -107,13 +106,13 @@ final class ma extends bg {
                 L4: while (true) {
                   if (var17_int >= ck.field_b.length) {
                     var23[var16] = -2147483648;
-                    var17_ref = ck.field_b[var16];
+                    var17 = ck.field_b[var16];
                     g.a(var16, 100);
                     var18 = 0;
                     L5: while (true) {
                       if (-4 >= (var18 ^ -1)) {
-                        qm.a(var17_ref, bg.field_a, false, oe.field_Hb, (byte) 98, true, false);
-                        uk.a(var14, var17_ref, var12, var9, var8, var13, 20126, var7);
+                        qm.a(var17, bg.field_a, false, oe.field_Hb, (byte) 98, true, false);
+                        uk.a(var14, var17, var12, var9, var8, var13, 20126, var7);
                         var15++;
                         continue L3;
                       } else {
@@ -193,11 +192,11 @@ final class ma extends bg {
         } else {
           L1: {
             var5 = 3000;
-            if (-8 >= on.field_ob) {
+            if (-8 >= (on.field_ob ^ -1)) {
               var5 = 12000;
               break L1;
             } else {
-              if (-6 <= on.field_ob) {
+              if (-6 >= (on.field_ob ^ -1)) {
                 var5 = 9000;
                 break L1;
               } else {

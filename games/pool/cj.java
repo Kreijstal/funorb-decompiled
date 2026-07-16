@@ -180,56 +180,74 @@ final class cj extends vc {
           ((cj) this).field_O = new eg[22];
           var3 = 0;
           ml.field_j = var3;
+          int incrementValue$47 = var3;
           var3++;
-          ((cj) this).field_O[var3] = eg.a(param0, "", "tiki_table/tiki_extra_1");
+          ((cj) this).field_O[incrementValue$47] = eg.a(param0, "", "tiki_table/tiki_extra_1");
+          int incrementValue$48 = var3;
           var3++;
-          ((cj) this).field_O[var3] = eg.a(param0, "", "tiki_table/tiki_extra_2");
+          ((cj) this).field_O[incrementValue$48] = eg.a(param0, "", "tiki_table/tiki_extra_2");
+          int incrementValue$49 = var3;
           var3++;
-          ((cj) this).field_O[var3] = eg.a(param0, "", "tiki_table/tiki_extra_3");
+          ((cj) this).field_O[incrementValue$49] = eg.a(param0, "", "tiki_table/tiki_extra_3");
+          int incrementValue$50 = var3;
           var3++;
-          ((cj) this).field_O[var3] = eg.a(param0, "", "tiki_table/tiki_extra_4");
+          ((cj) this).field_O[incrementValue$50] = eg.a(param0, "", "tiki_table/tiki_extra_4");
           kp.field_f = var3;
           nf.field_T = var3;
+          int incrementValue$51 = var3;
           var3++;
-          ((cj) this).field_O[var3] = eg.a(param0, "", "tiki_table/tiki_totnew");
+          ((cj) this).field_O[incrementValue$51] = eg.a(param0, "", "tiki_table/tiki_totnew");
           hr.field_t = var3;
           mn.field_a = var3;
+          int incrementValue$52 = var3;
           var3++;
-          ((cj) this).field_O[var3] = eg.a(param0, "", "tiki_table/tiki_steps_extend");
+          ((cj) this).field_O[incrementValue$52] = eg.a(param0, "", "tiki_table/tiki_steps_extend");
           ec.field_c = var3;
           gk.field_ib = var3;
+          int incrementValue$53 = var3;
           var3++;
-          ((cj) this).field_O[var3] = eg.a(param0, "", "tiki_table/tiki_leg_a");
+          ((cj) this).field_O[incrementValue$53] = eg.a(param0, "", "tiki_table/tiki_leg_a");
+          int incrementValue$54 = var3;
           var3++;
-          ((cj) this).field_O[var3] = eg.a(param0, "", "tiki_table/tiki_leg_b");
+          ((cj) this).field_O[incrementValue$54] = eg.a(param0, "", "tiki_table/tiki_leg_b");
           qf.field_i = var3;
           im.field_Wb = var3;
+          int incrementValue$55 = var3;
           var3++;
-          ((cj) this).field_O[var3] = eg.a(param0, "", "tiki_table/tiki_block_a");
+          ((cj) this).field_O[incrementValue$55] = eg.a(param0, "", "tiki_table/tiki_block_a");
+          int incrementValue$56 = var3;
           var3++;
-          ((cj) this).field_O[var3] = eg.a(param0, "", "tiki_table/tiki_block_b");
+          ((cj) this).field_O[incrementValue$56] = eg.a(param0, "", "tiki_table/tiki_block_b");
+          int incrementValue$57 = var3;
           var3++;
-          ((cj) this).field_O[var3] = eg.a(param0, "", "tiki_table/tiki_block_c");
+          ((cj) this).field_O[incrementValue$57] = eg.a(param0, "", "tiki_table/tiki_block_c");
+          int incrementValue$58 = var3;
           var3++;
-          ((cj) this).field_O[var3] = eg.a(param0, "", "tiki_table/tiki_block_d");
+          ((cj) this).field_O[incrementValue$58] = eg.a(param0, "", "tiki_table/tiki_block_d");
+          int incrementValue$59 = var3;
           var3++;
-          ((cj) this).field_O[var3] = eg.a(param0, "", "tiki_table/tiki_block_e");
+          ((cj) this).field_O[incrementValue$59] = eg.a(param0, "", "tiki_table/tiki_block_e");
+          int incrementValue$60 = var3;
           var3++;
-          ((cj) this).field_O[var3] = eg.a(param0, "", "tiki_table/tiki_block_f");
+          ((cj) this).field_O[incrementValue$60] = eg.a(param0, "", "tiki_table/tiki_block_f");
           or.field_h = var3;
           vh.field_L = var3;
+          int incrementValue$61 = var3;
           var3++;
-          ((cj) this).field_O[var3] = eg.a(param0, "", "tiki_table/tiki_hole_a");
+          ((cj) this).field_O[incrementValue$61] = eg.a(param0, "", "tiki_table/tiki_hole_a");
           sg.field_S = var3;
           mm.field_i = var3;
+          int incrementValue$62 = var3;
           var3++;
-          ((cj) this).field_O[var3] = eg.a(param0, "", "tiki_table/tiki_hole_b");
+          ((cj) this).field_O[incrementValue$62] = eg.a(param0, "", "tiki_table/tiki_hole_b");
           nd.field_l = var3;
           nm.field_e = var3;
+          int incrementValue$63 = var3;
           var3++;
-          ((cj) this).field_O[var3] = eg.a(param0, "", "tiki_table/tiki_corner");
+          ((cj) this).field_O[incrementValue$63] = eg.a(param0, "", "tiki_table/tiki_corner");
+          int incrementValue$64 = var3;
           var3++;
-          ((cj) this).field_O[var3] = eg.a(param0, "", "tiki_table/tiki_side_a");
+          ((cj) this).field_O[incrementValue$64] = eg.a(param0, "", "tiki_table/tiki_side_a");
           if (param1 <= -43) {
             break L0;
           } else {
@@ -237,16 +255,20 @@ final class cj extends vc {
             break L0;
           }
         }
+        int incrementValue$65 = var3;
         var3++;
-        ((cj) this).field_O[var3] = eg.a(param0, "", "tiki_table/tiki_side_b");
+        ((cj) this).field_O[incrementValue$65] = eg.a(param0, "", "tiki_table/tiki_side_b");
+        int incrementValue$66 = var3;
         var3++;
-        ((cj) this).field_O[var3] = eg.a(param0, "", "tiki_table/tiki_side_c");
+        ((cj) this).field_O[incrementValue$66] = eg.a(param0, "", "tiki_table/tiki_side_c");
         ka.field_q = var3;
         ca.field_h = var3;
+        int incrementValue$67 = var3;
         var3++;
-        ((cj) this).field_O[var3] = eg.a(param0, "", "tiki_table/tiki_top_a");
+        ((cj) this).field_O[incrementValue$67] = eg.a(param0, "", "tiki_table/tiki_top_a");
+        int incrementValue$68 = var3;
         var3++;
-        ((cj) this).field_O[var3] = eg.a(param0, "", "tiki_table/tiki_top_b");
+        ((cj) this).field_O[incrementValue$68] = eg.a(param0, "", "tiki_table/tiki_top_b");
         om.field_x = var3;
         ((cj) this).field_A = new jk();
         ((cj) this).field_A.a(eg.a(param0, "", "cues/jungle_cue"), (byte) -115);
@@ -314,7 +336,7 @@ final class cj extends vc {
                             var20[0] = 0 + var38[0];
                             var20[2] = 0 + var38[2];
                             var20[1] = 0 + var38[1];
-                            int[] discarded$3 = dq.a((byte) -121, var41);
+                            int[] discarded$69 = dq.a((byte) -121, var41);
                             var19[2] = new eg(var17, false, false, false, false);
                             var19[2].a(var41);
                             var42 = mj.a(-31121);
@@ -325,7 +347,7 @@ final class cj extends vc {
                             var20[0] = 0 + var38[0];
                             var20[2] = 0 + var38[2];
                             var20[1] = -(var38[1] - 0);
-                            int[] discarded$4 = dq.a((byte) 50, var42);
+                            int[] discarded$70 = dq.a((byte) 50, var42);
                             var19[3] = new eg(var21, false, false, false, false);
                             var19[3].a(var42);
                             ((cj) this).field_O[var4] = new eg(var14, 4);
@@ -347,7 +369,7 @@ final class cj extends vc {
                     }
                   } else {
                     if (null != ((cj) this).field_O[var4]) {
-                      eg discarded$5 = cq.a(var11, 90, var13, ((cj) this).field_O[var4], var12);
+                      eg discarded$71 = cq.a(var11, 90, var13, ((cj) this).field_O[var4], var12);
                       var4++;
                       continue L3;
                     } else {
@@ -619,33 +641,38 @@ final class cj extends vc {
           var9 = ((cj) this).field_H;
           if ((var9 ^ -1) != -2) {
             if (var9 == 2) {
+              int fieldTemp$13 = kj.field_m - 150;
               kj.field_m = kj.field_m - 150;
-              this.a(ck.field_Y, kj.field_m - 150, (byte) 103, ((cj) this).field_O[var4], 0, hf.field_a);
+              this.a(ck.field_Y, fieldTemp$13, (byte) 103, ((cj) this).field_O[var4], 0, hf.field_a);
               break L2;
             } else {
               if (3 == var9) {
+                int fieldTemp$14 = kj.field_m - 170;
                 kj.field_m = kj.field_m - 170;
-                this.a(ck.field_Y, kj.field_m - 170, (byte) 124, ((cj) this).field_O[var2], 0, hf.field_a);
+                this.a(ck.field_Y, fieldTemp$14, (byte) 124, ((cj) this).field_O[var2], 0, hf.field_a);
                 break L2;
               } else {
                 if (4 != var9) {
-                  if (var9 != -6) {
+                  if ((var9 ^ -1) != -6) {
                     if (6 != var9) {
-                      if (-8 != var9) {
+                      if (-8 != (var9 ^ -1)) {
                         if (8 == var9) {
+                          int fieldTemp$15 = kj.field_m - 45;
                           kj.field_m = kj.field_m - 45;
-                          this.a(ck.field_Y, kj.field_m - 45, (byte) 111, ((cj) this).field_O[var4], 800, hf.field_a + 600);
+                          this.a(ck.field_Y, fieldTemp$15, (byte) 111, ((cj) this).field_O[var4], 800, hf.field_a + 600);
                           break L2;
                         } else {
-                          if (var9 == -10) {
+                          if ((var9 ^ -1) == -10) {
+                            int fieldTemp$16 = kj.field_m - 130;
                             kj.field_m = kj.field_m - 130;
-                            this.a(ck.field_Y, kj.field_m - 130, (byte) 110, ((cj) this).field_O[var3], 968, -700 + hf.field_a);
+                            this.a(ck.field_Y, fieldTemp$16, (byte) 110, ((cj) this).field_O[var3], 968, -700 + hf.field_a);
                             break L2;
                           } else {
-                            if (-11 != var9) {
+                            if (-11 != (var9 ^ -1)) {
                               if (var9 == 11) {
+                                int fieldTemp$17 = kj.field_m - 80;
                                 kj.field_m = kj.field_m - 80;
-                                this.a(ck.field_Y, kj.field_m - 80, (byte) 109, ((cj) this).field_O[var2], 0, hf.field_a);
+                                this.a(ck.field_Y, fieldTemp$17, (byte) 109, ((cj) this).field_O[var2], 0, hf.field_a);
                                 break L2;
                               } else {
                                 if (12 == var9) {
@@ -656,13 +683,15 @@ final class cj extends vc {
                                   break L2;
                                 } else {
                                   if (var9 == 13) {
+                                    int fieldTemp$18 = kj.field_m - 200;
                                     kj.field_m = kj.field_m - 200;
-                                    this.a(ck.field_Y, kj.field_m - 200, (byte) 125, ((cj) this).field_O[var4], 0, hf.field_a + -200);
+                                    this.a(ck.field_Y, fieldTemp$18, (byte) 125, ((cj) this).field_O[var4], 0, hf.field_a + -200);
                                     break L2;
                                   } else {
                                     if ((var9 ^ -1) == -15) {
+                                      int fieldTemp$19 = kj.field_m - 125;
                                       kj.field_m = kj.field_m - 125;
-                                      this.a(ck.field_Y, kj.field_m - 125, (byte) 98, ((cj) this).field_O[var6], 0, hf.field_a);
+                                      this.a(ck.field_Y, fieldTemp$19, (byte) 98, ((cj) this).field_O[var6], 0, hf.field_a);
                                       ((cj) this).field_l = mn.field_d;
                                       break L2;
                                     } else {
@@ -682,30 +711,35 @@ final class cj extends vc {
                                 }
                               }
                             } else {
+                              int fieldTemp$20 = kj.field_m - 170;
                               kj.field_m = kj.field_m - 170;
-                              this.a(ck.field_Y, kj.field_m - 170, (byte) 71, ((cj) this).field_O[var6], 0, hf.field_a + -700);
+                              this.a(ck.field_Y, fieldTemp$20, (byte) 71, ((cj) this).field_O[var6], 0, hf.field_a + -700);
                               break L2;
                             }
                           }
                         }
                       } else {
+                        int fieldTemp$21 = kj.field_m - 170;
                         kj.field_m = kj.field_m - 170;
-                        this.a(ck.field_Y, kj.field_m - 170, (byte) 80, ((cj) this).field_O[var6], 0, hf.field_a);
+                        this.a(ck.field_Y, fieldTemp$21, (byte) 80, ((cj) this).field_O[var6], 0, hf.field_a);
                         break L2;
                       }
                     } else {
+                      int fieldTemp$22 = kj.field_m - 170;
                       kj.field_m = kj.field_m - 170;
-                      this.a(ck.field_Y, kj.field_m - 170, (byte) 107, ((cj) this).field_O[var5], 0, hf.field_a);
+                      this.a(ck.field_Y, fieldTemp$22, (byte) 107, ((cj) this).field_O[var5], 0, hf.field_a);
                       break L2;
                     }
                   } else {
+                    int fieldTemp$23 = kj.field_m - 50;
                     kj.field_m = kj.field_m - 50;
-                    this.a(ck.field_Y, kj.field_m - 50, (byte) 108, ((cj) this).field_O[var3], 0, hf.field_a + -50);
+                    this.a(ck.field_Y, fieldTemp$23, (byte) 108, ((cj) this).field_O[var3], 0, hf.field_a + -50);
                     break L2;
                   }
                 } else {
+                  int fieldTemp$24 = kj.field_m - 100;
                   kj.field_m = kj.field_m - 100;
-                  this.a(ck.field_Y, kj.field_m - 100, (byte) 109, ((cj) this).field_O[var6], 0, hf.field_a - -500);
+                  this.a(ck.field_Y, fieldTemp$24, (byte) 109, ((cj) this).field_O[var6], 0, hf.field_a - -500);
                   break L2;
                 }
               }
@@ -720,7 +754,7 @@ final class cj extends vc {
             break L3;
           } else {
             var11 = null;
-            StringBuilder discarded$1 = cj.a('', -105, -71, (StringBuilder) null);
+            StringBuilder discarded$25 = cj.a('', -105, -71, (StringBuilder) null);
             break L3;
           }
         }
@@ -1359,7 +1393,7 @@ final class cj extends vc {
         }
         var3 = 2;
         L1: while (true) {
-          if (var3 >= mc.field_j.length) {
+          if ((var3 ^ -1) <= (mc.field_j.length ^ -1)) {
             return;
           } else {
             L2: {
@@ -1391,7 +1425,7 @@ final class cj extends vc {
               }
               var4 = ga.a(stackIn_11_0, true, ea.field_r);
               var6 = var4;
-              if (var6 == 0) {
+              if ((var6 ^ -1) == -1) {
                 mc.field_j[var3] = mn.a(-24296, nb.a(((cj) this).field_db, 100, param1, ga.a(128, true, ea.field_r)));
                 break L2;
               } else {
@@ -1402,14 +1436,14 @@ final class cj extends vc {
                   } else {
                     if (var6 != 3) {
                       if (4 != var6) {
-                        if (var6 == -6) {
+                        if ((var6 ^ -1) == -6) {
                           mc.field_j[var3] = mn.a(-24296, nb.a(((cj) this).field_Z, 100, param1, ga.a(128, true, ea.field_r)));
                           break L2;
                         } else {
-                          if (-7 != var6) {
+                          if (-7 != (var6 ^ -1)) {
                             if (var6 != 7) {
-                              if (-9 != var6) {
-                                if (-10 != var6) {
+                              if (-9 != (var6 ^ -1)) {
+                                if (-10 != (var6 ^ -1)) {
                                   if (-11 == (var6 ^ -1)) {
                                     mc.field_j[var3] = rq.a(126, nb.a(((cj) this).field_gb, 100, param1, ga.a(128, true, ea.field_r)));
                                     break L2;
@@ -1477,29 +1511,71 @@ final class cj extends vc {
     }
 
     final void a(boolean param0, mm param1) {
-        int var7 = Pool.field_O;
-        if (param1.field_m >= 0.0) {
-            // ifge L49
-            param1.field_m = 288.0;
-        } else {
+        double var3 = 0.0;
+        double var5 = 0.0;
+        int var7 = 0;
+        Object var8 = null;
+        double stackIn_13_0 = 0.0;
+        double stackOut_12_0 = 0.0;
+        double stackOut_11_0 = 0.0;
+        L0: {
+          var7 = Pool.field_O;
+          if (param1.field_m < 0.0) {
             param1.field_m = 0.0;
+            break L0;
+          } else {
+            if (288.0 >= param1.field_m) {
+              break L0;
+            } else {
+              param1.field_m = 288.0;
+              break L0;
+            }
+          }
         }
-        if (param1.field_f >= 0.0) {
-            // ifge L93
-            param1.field_f = 576.0;
-        } else {
+        L1: {
+          if (param1.field_f < 0.0) {
             param1.field_f = 0.0;
+            break L1;
+          } else {
+            if (576.0 >= param1.field_f) {
+              break L1;
+            } else {
+              param1.field_f = 576.0;
+              break L1;
+            }
+          }
         }
-        if (param0) {
-            Object var8 = null;
+        L2: {
+          if (!param0) {
+            break L2;
+          } else {
+            var8 = null;
             ((cj) this).a((al) null, 35);
+            break L2;
+          }
         }
-        double var3 = param1.d(8);
-        double var5 = (4194304L & pd.field_i ^ -1L) == -1L ? 2048.0 : 12000.0;
-        if (!(var3 <= var5)) {
+        L3: {
+          var3 = param1.d(8);
+          if ((4194304L & pd.field_i ^ -1L) != -1L) {
+            stackOut_12_0 = 12000.0;
+            stackIn_13_0 = stackOut_12_0;
+            break L3;
+          } else {
+            stackOut_11_0 = 2048.0;
+            stackIn_13_0 = stackOut_11_0;
+            break L3;
+          }
+        }
+        L4: {
+          var5 = stackIn_13_0;
+          if (var3 > var5) {
             param1.field_d = param1.field_f + var5 * (param1.field_d - param1.field_f) / var3;
             param1.field_h = param1.field_k + var5 * (param1.field_h - param1.field_k) / var3;
             param1.field_a = param1.field_m + (param1.field_a - param1.field_m) * var5 / var3;
+            break L4;
+          } else {
+            break L4;
+          }
         }
     }
 

@@ -211,7 +211,6 @@ final class je implements el {
 
     final static void a(byte param0, long[] param1) {
         ii var2 = null;
-        ii var2_ref = null;
         Object var3 = null;
         L0: {
           if (lc.field_z >= 1024) {
@@ -222,12 +221,12 @@ final class je implements el {
               if (var2 != null) {
                 break L1;
               } else {
-                var2_ref = new ii();
+                var2 = new ii();
                 break L1;
               }
             }
-            var2_ref.field_l = param1;
-            bd.field_s.a((byte) 54, (q) (Object) var2_ref);
+            var2.field_l = param1;
+            bd.field_s.a((byte) 54, (q) (Object) var2);
             lc.field_z = lc.field_z + 1;
             break L0;
           }

@@ -25,7 +25,7 @@ final class mq implements Runnable {
             var3.field_eb = 0;
             var3.field_E = 0;
             var4 = (vh) (Object) param0.field_T.f((byte) -5);
-            vh var4_ref = var4;
+            var4 = var4;
         }
         param0.field_Db = 0;
         param0.field_eb = 0;

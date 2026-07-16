@@ -47,11 +47,11 @@ final class wh extends am {
         L0: {
           var5 = Torquing.field_u;
           var4 = param2;
-          if (-1 == var4) {
+          if (-1 == (var4 ^ -1)) {
             ((wh) this).field_v = param0.i(param1 ^ 7059);
             break L0;
           } else {
-            if (-2 != var4) {
+            if (-2 != (var4 ^ -1)) {
               break L0;
             } else {
               L1: {
@@ -395,50 +395,31 @@ final class wh extends am {
     }
 
     final static void a(int param0, int param1, byte[] param2, int param3, int param4, int param5, int[] param6, byte param7, int param8, int param9, int param10, int[] param11) {
-        int var12 = 0;
-        int var13 = 0;
         int var14 = 0;
         int var15 = 0;
-        int var16 = 0;
-        L0: {
-          var16 = Torquing.field_u;
-          var12 = 256 + -param4;
-          var13 = -param3;
-          if (param7 == 29) {
-            break L0;
-          } else {
+        int var16 = Torquing.field_u;
+        int var12 = 256 + -param4;
+        int var13 = -param3;
+        if (param7 != 29) {
             wh.g((byte) -10);
-            break L0;
-          }
         }
-        L1: while (true) {
-          if (var13 <= -1) {
-            return;
-          } else {
-            var14 = -param10;
-            L2: while (true) {
-              if (-1 <= var14) {
-                param1 = param1 + param8;
-                param9 = param9 + param5;
-                var13++;
-                continue L1;
-              } else {
+        while ((var13 ^ -1) > -1) {
+            for (var14 = -param10; -1 < (var14 ^ -1); var14++) {
+                int incrementValue$0 = param1;
                 param1++;
-                param0 = param2[param1];
-                if (param0 == 0) {
-                  param9++;
-                  var14++;
-                  continue L2;
+                param0 = param2[incrementValue$0];
+                if ((param0 ^ -1) != -1) {
+                    var15 = param6[param9];
+                    int incrementValue$1 = param9;
+                    param9++;
+                    param6[incrementValue$1] = ie.a(16711680, var12 * ie.a(var15, 65280)) + ie.a(ie.a(16711935, var15) * var12, -16711936) >> -1611374008;
                 } else {
-                  var15 = param6[param9];
-                  param9++;
-                  param6[param9] = ie.a(16711680, var12 * ie.a(var15, 65280)) + ie.a(ie.a(16711935, var15) * var12, -16711936) >> -1611374008;
-                  var14++;
-                  continue L2;
+                    param9++;
                 }
-              }
             }
-          }
+            param1 = param1 + param8;
+            param9 = param9 + param5;
+            var13++;
         }
     }
 

@@ -71,7 +71,6 @@ final class di extends ci {
         int var4 = 0;
         int var5 = 0;
         String var6 = null;
-        String var6_ref = null;
         int var7 = 0;
         int var8 = 0;
         le var9 = null;
@@ -175,7 +174,7 @@ final class di extends ci {
                             break L7;
                           }
                         }
-                        var6_ref = (String) (Object) stackIn_22_0;
+                        var6 = stackIn_22_0;
                         break L6;
                       } else {
                         break L6;
@@ -209,7 +208,7 @@ final class di extends ci {
                           break L9;
                         }
                       }
-                      var6_ref = (String) (Object) stackIn_32_0;
+                      var6 = stackIn_32_0;
                       break L4;
                     } else {
                       break L4;
@@ -220,7 +219,7 @@ final class di extends ci {
             }
             L10: {
               if (1 == (var4 ^ -1)) {
-                var6_ref = Integer.toString(var2);
+                var6 = Integer.toString(var2);
                 break L10;
               } else {
                 break L10;
@@ -238,7 +237,7 @@ final class di extends ci {
               }
             }
             L12: {
-              var7 = kn.a(stackIn_39_0 != 0, false, var6_ref);
+              var7 = kn.a(stackIn_39_0 != 0, false, var6);
               var8 = -(var7 >> 48205569) + ob.field_C;
               if (0 <= var4) {
                 L13: {
@@ -253,7 +252,7 @@ final class di extends ci {
                   }
                 }
                 L14: {
-                  var9 = (le) (Object) stackIn_44_0;
+                  var9 = stackIn_44_0;
                   var1 = var1 + ek.field_b;
                   if (var9 == null) {
                     break L14;
@@ -269,12 +268,12 @@ final class di extends ci {
               }
             }
             if (var4 >= 0) {
-              ce.field_a.a(var6_ref, var8, var1 + rm.field_S, var5, -1);
+              ce.field_a.a(var6, var8, var1 + rm.field_S, var5, -1);
               var1 = var1 + (vh.field_c + kl.field_i - -ek.field_b);
               var3++;
               continue L1;
             } else {
-              vj.field_d.a(var6_ref, var8, var1 + b.field_d, var5, -1);
+              vj.field_d.a(var6, var8, var1 + b.field_d, var5, -1);
               var1 = var1 + fd.field_n;
               var3++;
               continue L1;
@@ -355,7 +354,7 @@ final class di extends ci {
                   break L4;
                 }
               }
-              ((tl) (Object) stackIn_8_0).field_gb = stackIn_8_1 != 0;
+              stackIn_8_0.field_gb = stackIn_8_1 != 0;
               var4_int++;
               continue L1;
             } else {
@@ -525,7 +524,7 @@ final class di extends ci {
         String var11 = null;
         String var12 = null;
         int var13 = 0;
-        km var14 = null;
+        Object var14 = null;
         int var15 = 0;
         lh var17 = null;
         lh var18 = null;
@@ -547,6 +546,7 @@ final class di extends ci {
           if (((di) this).field_Sb <= var13) {
             ((di) this).field_Ob = ((di) this).field_Ob + (10 + mc.field_b.field_v);
             this.a(12, (byte) -117);
+            return;
           } else {
             L1: {
               if (0 >= ((di) this).field_Lb[var13]) {
@@ -569,10 +569,10 @@ final class di extends ci {
                   }
                 }
               }
-              var14 = mc.field_b;
+              var14 = (Object) (Object) mc.field_b;
               break L2;
             }
-            ((di) this).field_Nb[var13] = new tl(0L, param2, (ci) null, param3, var14, param6[var13]);
+            ((di) this).field_Nb[var13] = new tl(0L, param2, (ci) null, param3, (km) var14, param6[var13]);
             ((di) this).a((byte) 127, (ci) (Object) ((di) this).field_Nb[var13]);
             var15 = var17.b(param6[var13]);
             if (((di) this).field_Ob < var15) {

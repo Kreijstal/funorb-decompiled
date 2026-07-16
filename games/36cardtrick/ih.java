@@ -34,8 +34,9 @@ final class ih {
 
     final int a(int param0) {
         if (((ih) this).field_a >= ((ih) this).field_i) {
+            int fieldTemp$0 = ((ih) this).field_j;
             ((ih) this).field_j = ((ih) this).field_j + 1;
-            ((ih) this).field_h = ((ih) this).field_f[((ih) this).field_j] << 15;
+            ((ih) this).field_h = ((ih) this).field_f[fieldTemp$0] << 15;
             if (((ih) this).field_j >= ((ih) this).field_d) {
                 ((ih) this).field_j = ((ih) this).field_d - 1;
             }

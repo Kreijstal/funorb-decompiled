@@ -68,8 +68,9 @@ final class nj {
               if (var7 >= var8) {
                 break L3;
               } else {
+                int incrementValue$3 = var6;
                 var6++;
-                param2[var6] = param4.substring(var7, var8).trim();
+                param2[incrementValue$3] = param4.substring(var7, var8).trim();
                 break L3;
               }
             }
@@ -92,8 +93,9 @@ final class nj {
               var12 = param1.b(var11);
               if (param0 <= var12) {
                 var7 = var9 + 1;
+                int incrementValue$4 = var6;
                 var6++;
-                param2[var6] = var11;
+                param2[incrementValue$4] = var11;
                 break L4;
               } else {
                 break L4;
@@ -101,8 +103,9 @@ final class nj {
             }
             if (var10 == 62) {
               if (param4.regionMatches(-3 + var9, "<br>", 0, 4)) {
+                int incrementValue$5 = var6;
                 var6++;
-                param2[var6] = param4.substring(var7, var9 + -3).trim();
+                param2[incrementValue$5] = param4.substring(var7, var9 + -3).trim();
                 var7 = 1 + var9;
                 var9++;
                 continue L2;
@@ -205,6 +208,7 @@ final class nj {
         L0: while (true) {
           if (-6 >= (var0 ^ -1)) {
             field_s = "As you are under 13, we won't save your email address on our systems. Your email address will still be used to log in, but you won't recieve any emails from Jagex. For more information, please check the relevant parts of our <%0><hotspot=0>Terms and Conditions</hotspot><%1> and <%0><hotspot=1>Privacy Policy</hotspot><%1>.";
+            return;
           } else {
             var1 = 0;
             L1: while (true) {

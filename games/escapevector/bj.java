@@ -149,43 +149,94 @@ class bj extends hm implements ba {
     }
 
     final boolean a(int param0, int param1, byte param2, int param3, int param4, hm param5, int param6) {
-        int var10 = EscapeVector.field_A;
-        if (param2 != 3) {
-            return false;
-        }
-        wf var8 = new wf(((bj) this).field_A);
-        hm var9 = (hm) (Object) var8.c(param2 ^ 12);
-        while (var9 != null) {
-            // ifeq L100
-            if (var9.a(((bj) this).field_j + param0, param1, (byte) 3, param3, ((bj) this).field_k + param4, param5, param6)) {
-                return true;
+        wf var8 = null;
+        hm var9 = null;
+        int var10 = 0;
+        var10 = EscapeVector.field_A;
+        if (param2 == 3) {
+          var8 = new wf(((bj) this).field_A);
+          var9 = (hm) (Object) var8.c(param2 ^ 12);
+          L0: while (true) {
+            L1: {
+              if (var9 == null) {
+                break L1;
+              } else {
+                if (!var9.b((byte) 48)) {
+                  break L1;
+                } else {
+                  if (!var9.a(((bj) this).field_j + param0, param1, (byte) 3, param3, ((bj) this).field_k + param4, param5, param6)) {
+                    var9 = (hm) (Object) var8.a(108);
+                    continue L0;
+                  } else {
+                    return true;
+                  }
+                }
+              }
             }
-            var9 = (hm) (Object) var8.a(108);
+            return false;
+          }
+        } else {
+          return false;
         }
-        return false;
     }
 
     boolean a(hm param0, char param1, int param2, int param3) {
-        int var7 = EscapeVector.field_A;
-        wf var5 = new wf(((bj) this).field_A);
-        hm var8 = (hm) (Object) var5.c(15);
-        if (param3 <= 0) {
-            return false;
-        }
-        while (var8 != null) {
-            // ifeq L91
-            if (var8.h(0)) {
-                if (var8.a(param0, param1, param2, 37)) {
-                    return true;
+        wf var5 = null;
+        int var6 = 0;
+        int var7 = 0;
+        hm var8 = null;
+        boolean stackIn_13_0 = false;
+        boolean stackOut_12_0 = false;
+        boolean stackOut_11_0 = false;
+        var7 = EscapeVector.field_A;
+        var5 = new wf(((bj) this).field_A);
+        var8 = (hm) (Object) var5.c(15);
+        if (param3 > 0) {
+          L0: while (true) {
+            L1: {
+              if (var8 == null) {
+                break L1;
+              } else {
+                if (!var8.b((byte) 48)) {
+                  break L1;
+                } else {
+                  L2: {
+                    if (!var8.h(0)) {
+                      break L2;
+                    } else {
+                      if (!var8.a(param0, param1, param2, 37)) {
+                        break L2;
+                      } else {
+                        return true;
+                      }
+                    }
+                  }
+                  var8 = (hm) (Object) var5.a(54);
+                  continue L0;
                 }
+              }
             }
-            var8 = (hm) (Object) var5.a(54);
+            var6 = param2;
+            if (80 == var6) {
+              L3: {
+                if (!ik.field_h[81]) {
+                  stackOut_12_0 = ((bj) this).a(param0, true);
+                  stackIn_13_0 = stackOut_12_0;
+                  break L3;
+                } else {
+                  stackOut_11_0 = ((bj) this).a((byte) 22, param0);
+                  stackIn_13_0 = stackOut_11_0;
+                  break L3;
+                }
+              }
+              return stackIn_13_0;
+            } else {
+              return false;
+            }
+          }
+        } else {
+          return false;
         }
-        int var6 = param2;
-        if (80 != var6) {
-            return false;
-        }
-        return ik.field_h[81] ? ((bj) this).a((byte) 22, param0) : ((bj) this).a(param0, true);
     }
 
     final void a(int param0, int param1, int param2, boolean param3, int param4) {
@@ -197,33 +248,71 @@ class bj extends hm implements ba {
     }
 
     final boolean b(int param0, int param1, byte param2, int param3, int param4, hm param5, int param6) {
-        int var10 = EscapeVector.field_A;
-        if (param2 >= -103) {
+        wf var8 = null;
+        hm var9 = null;
+        int var10 = 0;
+        L0: {
+          var10 = EscapeVector.field_A;
+          if (param2 < -103) {
+            break L0;
+          } else {
             field_B = null;
+            break L0;
+          }
         }
-        wf var8 = new wf(((bj) this).field_A);
-        hm var9 = (hm) (Object) var8.c(15);
-        while (var9 != null) {
-            // ifeq L110
-            if (var9.h(0)) {
-                if (!(!var9.b(param0, param1, (byte) -127, param3, param4, param5, param6))) {
-                    return true;
+        var8 = new wf(((bj) this).field_A);
+        var9 = (hm) (Object) var8.c(15);
+        L1: while (true) {
+          L2: {
+            if (var9 == null) {
+              break L2;
+            } else {
+              if (!var9.b((byte) 48)) {
+                break L2;
+              } else {
+                L3: {
+                  if (!var9.h(0)) {
+                    break L3;
+                  } else {
+                    if (var9.b(param0, param1, (byte) -127, param3, param4, param5, param6)) {
+                      return true;
+                    } else {
+                      break L3;
+                    }
+                  }
                 }
+                var9 = (hm) (Object) var8.a(102);
+                continue L1;
+              }
             }
-            var9 = (hm) (Object) var8.a(102);
+          }
+          return false;
         }
-        return false;
     }
 
     void a(int param0, int param1, int param2, hm param3) {
-        int var7 = EscapeVector.field_A;
+        wf var5 = null;
+        hm var6 = null;
+        int var7 = 0;
+        var7 = EscapeVector.field_A;
         super.a(param0, param1, param2, param3);
-        wf var5 = new wf(((bj) this).field_A);
-        hm var6 = (hm) (Object) var5.c(15);
-        while (var6 != null) {
-            // ifeq L92
-            var6.a(-14472, ((bj) this).field_j + param1, param2 - -((bj) this).field_k, param3);
-            var6 = (hm) (Object) var5.a(57);
+        var5 = new wf(((bj) this).field_A);
+        var6 = (hm) (Object) var5.c(15);
+        L0: while (true) {
+          L1: {
+            if (var6 == null) {
+              break L1;
+            } else {
+              if (!var6.b((byte) 48)) {
+                break L1;
+              } else {
+                var6.a(-14472, ((bj) this).field_j + param1, param2 - -((bj) this).field_k, param3);
+                var6 = (hm) (Object) var5.a(57);
+                continue L0;
+              }
+            }
+          }
+          return;
         }
     }
 
@@ -379,15 +468,30 @@ class bj extends hm implements ba {
     }
 
     final void a(int param0, int param1, int param2, int param3, hm param4, byte param5) {
-        int var9 = EscapeVector.field_A;
-        wf var7 = new wf(((bj) this).field_A);
-        hm var8_ref_hm = (hm) (Object) var7.c(15);
-        while (var8_ref_hm != null) {
-            // ifeq L84
-            var8_ref_hm.a(param0, ((bj) this).field_k + param1, param2, param3 + ((bj) this).field_j, param4, (byte) -113);
-            var8_ref_hm = (hm) (Object) var7.a(29);
+        wf var7 = null;
+        hm var8_ref_hm = null;
+        int var8 = 0;
+        int var9 = 0;
+        var9 = EscapeVector.field_A;
+        var7 = new wf(((bj) this).field_A);
+        var8_ref_hm = (hm) (Object) var7.c(15);
+        L0: while (true) {
+          L1: {
+            if (var8_ref_hm == null) {
+              break L1;
+            } else {
+              if (!var8_ref_hm.b((byte) 48)) {
+                break L1;
+              } else {
+                var8_ref_hm.a(param0, ((bj) this).field_k + param1, param2, param3 + ((bj) this).field_j, param4, (byte) -113);
+                var8_ref_hm = (hm) (Object) var7.a(29);
+                continue L0;
+              }
+            }
+          }
+          var8 = -114 % ((-39 - param5) / 45);
+          return;
         }
-        int var8 = -114 % ((-39 - param5) / 45);
     }
 
     final StringBuilder a(int param0, Hashtable param1, StringBuilder param2, int param3) {

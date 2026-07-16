@@ -216,7 +216,7 @@ final class p {
         int stackOut_22_0 = 0;
         int stackOut_21_0 = 0;
         L0: {
-          int discarded$1 = te.d(24);
+          int discarded$2 = te.d(24);
           ((p) this).field_b = te.d(16);
           ((p) this).field_d = te.d(24);
           ((p) this).field_f = new int[((p) this).field_d];
@@ -283,8 +283,9 @@ final class p {
                     var3_int++;
                     continue L5;
                   } else {
+                    int incrementValue$3 = var2;
                     var2++;
-                    ((p) this).field_f[var2] = var3_int;
+                    ((p) this).field_f[incrementValue$3] = var3_int;
                     var5++;
                     continue L6;
                   }

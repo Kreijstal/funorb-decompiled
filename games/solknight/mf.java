@@ -44,7 +44,6 @@ final class mf extends ej {
     final synchronized boolean a(int param0, rl param1, me param2, da param3, int param4) {
         int var6 = 0;
         Object var7 = null;
-        int[] var7_array = null;
         ee var8_ref_ee = null;
         int var8 = 0;
         int var9 = 0;
@@ -57,7 +56,7 @@ final class mf extends ej {
           var6 = 1;
           var7 = null;
           if (param0 > 0) {
-            var7_array = new int[]{param0};
+            var7 = (Object) (Object) new int[]{param0};
             break L0;
           } else {
             break L0;
@@ -84,7 +83,7 @@ final class mf extends ej {
                 var13 = oa.a(-1803587230, var9, param3);
                 if (var13 != null) {
                   ((mf) this).field_C.a((byte) 122, (gg) (Object) var13, (long)var9);
-                  if (var13.a(param2, var7_array, var8_ref_ee.field_k, -124)) {
+                  if (var13.a(param2, (int[]) var7, var8_ref_ee.field_k, -124)) {
                     break L3;
                   } else {
                     var6 = 0;
@@ -95,7 +94,7 @@ final class mf extends ej {
                   break L3;
                 }
               } else {
-                if (var12.a(param2, var7_array, var8_ref_ee.field_k, -124)) {
+                if (var12.a(param2, (int[]) var7, var8_ref_ee.field_k, -124)) {
                   break L3;
                 } else {
                   var6 = 0;
@@ -333,26 +332,59 @@ final class mf extends ej {
     }
 
     private final void a(int param0, byte param1) {
-        int var5 = SolKnight.field_L ? 1 : 0;
-        int var4 = 102 / ((param1 - 22) / 56);
-        hg var3 = (hg) (Object) ((mf) this).field_Q.field_m.a((byte) 51);
-        while (var3 != null) {
-            if (param0 >= 0) {
-                // if_icmpeq L55
-            } else {
-                if (null != var3.field_w) {
+        hg var3 = null;
+        int var4 = 0;
+        int var5 = 0;
+        var5 = SolKnight.field_L ? 1 : 0;
+        var4 = 102 / ((param1 - 22) / 56);
+        var3 = (hg) (Object) ((mf) this).field_Q.field_m.a((byte) 51);
+        L0: while (true) {
+          if (var3 == null) {
+            return;
+          } else {
+            L1: {
+              L2: {
+                if (param0 < 0) {
+                  break L2;
+                } else {
+                  if (param0 == var3.field_z) {
+                    break L2;
+                  } else {
+                    break L1;
+                  }
+                }
+              }
+              L3: {
+                if (null == var3.field_w) {
+                  break L3;
+                } else {
+                  L4: {
                     var3.field_w.e(gj.field_s / 100);
-                    if (!(!var3.field_w.h())) {
-                        ((mf) this).field_Q.field_r.a((ej) (Object) var3.field_w);
+                    if (var3.field_w.h()) {
+                      ((mf) this).field_Q.field_r.a((ej) (Object) var3.field_w);
+                      break L4;
+                    } else {
+                      break L4;
                     }
-                    var3.a((byte) 102);
+                  }
+                  var3.a((byte) 102);
+                  break L3;
                 }
-                if (!(-1 >= (var3.field_k ^ -1))) {
-                    ((mf) this).field_p[var3.field_z][var3.field_o] = null;
+              }
+              L5: {
+                if (-1 < (var3.field_k ^ -1)) {
+                  ((mf) this).field_p[var3.field_z][var3.field_o] = null;
+                  break L5;
+                } else {
+                  break L5;
                 }
-                var3.c(10);
+              }
+              var3.c(10);
+              break L1;
             }
             var3 = (hg) (Object) ((mf) this).field_Q.field_m.b(-18);
+            continue L0;
+          }
         }
     }
 
@@ -627,193 +659,51 @@ final class mf extends ej {
         int var2 = 0;
         Throwable var3 = null;
         int var4 = 0;
-        int statePc = 0;
-        Throwable caughtException = null;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    var4 = SolKnight.field_L ? 1 : 0;
-                    var1 = (Object) (Object) i.field_J;
-                    // monitorenter i.field_J
-                    statePc = 1;
-                    continue stateLoop;
-                }
-                case 1: {
-                    try {
-                        if (param0 == -11214) {
-                            statePc = 4;
-                        } else {
-                            statePc = 2;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_1) {
-                        caughtException = stateCaught_1;
-                        statePc = 15;
-                        continue stateLoop;
-                    }
-                }
-                case 2: {
-                    try {
-                        // monitorexit var1
-                        statePc = 3;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_2) {
-                        caughtException = stateCaught_2;
-                        statePc = 15;
-                        continue stateLoop;
-                    }
-                }
-                case 3: {
-                    return;
-                }
-                case 4: {
-                    try {
-                        pf.field_a = si.field_B;
-                        lf.field_c = lf.field_c + 1;
-                        if (0 <= fg.field_b) {
-                            statePc = 9;
-                        } else {
-                            statePc = 5;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_4) {
-                        caughtException = stateCaught_4;
-                        statePc = 15;
-                        continue stateLoop;
-                    }
-                }
-                case 5: {
-                    try {
-                        var2 = 0;
-                        statePc = 6;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_5) {
-                        caughtException = stateCaught_5;
-                        statePc = 15;
-                        continue stateLoop;
-                    }
-                }
-                case 6: {
-                    try {
-                        if (-113 >= (var2 ^ -1)) {
-                            statePc = 8;
-                        } else {
-                            statePc = 7;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_6) {
-                        caughtException = stateCaught_6;
-                        statePc = 15;
-                        continue stateLoop;
-                    }
-                }
-                case 7: {
-                    try {
-                        fh.field_d[var2] = false;
-                        var2++;
-                        statePc = 6;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_7) {
-                        caughtException = stateCaught_7;
-                        statePc = 15;
-                        continue stateLoop;
-                    }
-                }
-                case 8: {
-                    try {
-                        fg.field_b = qd.field_d;
-                        statePc = 13;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_8) {
-                        caughtException = stateCaught_8;
-                        statePc = 15;
-                        continue stateLoop;
-                    }
-                }
-                case 9: {
-                    try {
-                        if (qd.field_d == fg.field_b) {
-                            statePc = 13;
-                        } else {
-                            statePc = 10;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_9) {
-                        caughtException = stateCaught_9;
-                        statePc = 15;
-                        continue stateLoop;
-                    }
-                }
-                case 10: {
-                    try {
-                        var2 = ci.field_qb[qd.field_d];
-                        qd.field_d = 127 & qd.field_d + 1;
-                        if (-1 < (var2 ^ -1)) {
-                            statePc = 12;
-                        } else {
-                            statePc = 11;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_10) {
-                        caughtException = stateCaught_10;
-                        statePc = 15;
-                        continue stateLoop;
-                    }
-                }
-                case 11: {
-                    try {
-                        fh.field_d[var2] = true;
-                        statePc = 9;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_11) {
-                        caughtException = stateCaught_11;
-                        statePc = 15;
-                        continue stateLoop;
-                    }
-                }
-                case 12: {
-                    try {
+        Throwable decompiledCaughtException = null;
+        var4 = SolKnight.field_L ? 1 : 0;
+        var1 = (Object) (Object) i.field_J;
+        synchronized (var1) {
+          L0: {
+            if (param0 == -11214) {
+              L1: {
+                pf.field_a = si.field_B;
+                lf.field_c = lf.field_c + 1;
+                if (0 <= fg.field_b) {
+                  L2: while (true) {
+                    if (qd.field_d == fg.field_b) {
+                      break L1;
+                    } else {
+                      var2 = ci.field_qb[qd.field_d];
+                      qd.field_d = 127 & qd.field_d + 1;
+                      if (-1 < (var2 ^ -1)) {
                         fh.field_d[var2 ^ -1] = false;
-                        statePc = 9;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_12) {
-                        caughtException = stateCaught_12;
-                        statePc = 15;
-                        continue stateLoop;
+                        continue L2;
+                      } else {
+                        fh.field_d[var2] = true;
+                        continue L2;
+                      }
                     }
-                }
-                case 13: {
-                    try {
-                        si.field_B = rh.field_e;
-                        // monitorexit var1
-                        statePc = 17;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_13) {
-                        caughtException = stateCaught_13;
-                        statePc = 15;
-                        continue stateLoop;
+                  }
+                } else {
+                  var2 = 0;
+                  L3: while (true) {
+                    if (-113 >= (var2 ^ -1)) {
+                      fg.field_b = qd.field_d;
+                      break L1;
+                    } else {
+                      fh.field_d[var2] = false;
+                      var2++;
+                      continue L3;
                     }
+                  }
                 }
-                case 15: {
-                    try {
-                        var3 = caughtException;
-                        // monitorexit var1
-                        statePc = 16;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_15) {
-                        caughtException = stateCaught_15;
-                        statePc = 15;
-                        continue stateLoop;
-                    }
-                }
-                case 16: {
-                    throw (RuntimeException) (Object) var3;
-                }
-                case 17: {
-                    return;
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
+              }
+              si.field_B = rh.field_e;
+              break L0;
+            } else {
+              return;
             }
+          }
         }
     }
 
@@ -1467,21 +1357,41 @@ final class mf extends ej {
     }
 
     private final void f(int param0, int param1) {
-        int var4 = SolKnight.field_L ? 1 : 0;
-        if (param0 != -32471) {
-            return;
-        }
-        hg var3 = (hg) (Object) ((mf) this).field_Q.field_m.a((byte) 51);
-        while (var3 != null) {
-            if (-1 >= param1) {
-                // if_icmpeq L52
+        hg var3 = null;
+        int var4 = 0;
+        var4 = SolKnight.field_L ? 1 : 0;
+        if (param0 == -32471) {
+          var3 = (hg) (Object) ((mf) this).field_Q.field_m.a((byte) 51);
+          L0: while (true) {
+            if (var3 == null) {
+              return;
             } else {
-                if (-1 > var3.field_k) {
-                    ((mf) this).field_p[var3.field_z][var3.field_o] = null;
-                    var3.field_k = 0;
+              L1: {
+                L2: {
+                  if (-1 < (param1 ^ -1)) {
+                    break L2;
+                  } else {
+                    if ((param1 ^ -1) == (var3.field_z ^ -1)) {
+                      break L2;
+                    } else {
+                      break L1;
+                    }
+                  }
                 }
+                if (-1 >= (var3.field_k ^ -1)) {
+                  break L1;
+                } else {
+                  ((mf) this).field_p[var3.field_z][var3.field_o] = null;
+                  var3.field_k = 0;
+                  break L1;
+                }
+              }
+              var3 = (hg) (Object) ((mf) this).field_Q.field_m.b(-29);
+              continue L0;
             }
-            var3 = (hg) (Object) ((mf) this).field_Q.field_m.b(-29);
+          }
+        } else {
+          return;
         }
     }
 

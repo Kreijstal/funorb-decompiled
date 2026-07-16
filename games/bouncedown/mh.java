@@ -126,8 +126,9 @@ abstract class mh extends wk {
           ((mh) this).i((byte) 37);
           if (null != ((mh) this).field_V) {
             if (ub.field_b == ((mh) this).field_V) {
+              int fieldTemp$4 = ((mh) this).field_T + 1;
               ((mh) this).field_T = ((mh) this).field_T + 1;
-              if (((mh) this).field_T + 1 != ((mh) this).field_N) {
+              if (fieldTemp$4 != ((mh) this).field_N) {
                 ((mh) this).field_S.field_E = -((((mh) this).field_T << 1255572680) / ((mh) this).field_N) + 256;
                 return super.e((byte) 21);
               } else {
@@ -139,8 +140,9 @@ abstract class mh extends wk {
               }
             } else {
               if (vb.field_g == ((mh) this).field_V) {
+                int fieldTemp$5 = ((mh) this).field_T + 1;
                 ((mh) this).field_T = ((mh) this).field_T + 1;
-                if (((mh) this).field_T + 1 != ((mh) this).field_O) {
+                if (fieldTemp$5 != ((mh) this).field_O) {
                   ((mh) this).field_S.field_E = (((mh) this).field_T << -1488907000) / ((mh) this).field_O;
                   return super.e((byte) 21);
                 } else {
@@ -158,8 +160,9 @@ abstract class mh extends wk {
         } else {
           if (null != ((mh) this).field_V) {
             if (ub.field_b == ((mh) this).field_V) {
+              int fieldTemp$6 = ((mh) this).field_T + 1;
               ((mh) this).field_T = ((mh) this).field_T + 1;
-              if (((mh) this).field_T + 1 != ((mh) this).field_N) {
+              if (fieldTemp$6 != ((mh) this).field_N) {
                 ((mh) this).field_S.field_E = -((((mh) this).field_T << 1255572680) / ((mh) this).field_N) + 256;
                 return super.e((byte) 21);
               } else {
@@ -171,8 +174,9 @@ abstract class mh extends wk {
               }
             } else {
               if (vb.field_g == ((mh) this).field_V) {
+                int fieldTemp$7 = ((mh) this).field_T + 1;
                 ((mh) this).field_T = ((mh) this).field_T + 1;
-                if (((mh) this).field_T + 1 != ((mh) this).field_O) {
+                if (fieldTemp$7 != ((mh) this).field_O) {
                   ((mh) this).field_S.field_E = (((mh) this).field_T << -1488907000) / ((mh) this).field_O;
                   return super.e((byte) 21);
                 } else {

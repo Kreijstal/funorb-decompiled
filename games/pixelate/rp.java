@@ -148,9 +148,11 @@ final class rp implements java.awt.event.KeyListener, java.awt.event.FocusListen
                   var7++;
                   continue L0;
                 } else {
+                  int incrementValue$2 = var6;
                   var6++;
+                  int incrementValue$3 = var5;
                   var5++;
-                  var4[var6] = param1.field_G[var5];
+                  var4[incrementValue$2] = param1.field_G[incrementValue$3];
                   var8++;
                   continue L1;
                 }
@@ -219,9 +221,9 @@ final class rp implements java.awt.event.KeyListener, java.awt.event.FocusListen
           var2 = param0.getKeyCode();
           if (-1 >= (var2 ^ -1)) {
             L0: {
-              if (tn.field_j.length > var2) {
+              if ((tn.field_j.length ^ -1) < (var2 ^ -1)) {
                 var2 = tn.field_j[var2];
-                if ((128 & var2) != 0) {
+                if ((128 & var2 ^ -1) != -1) {
                   var2 = -1;
                   break L0;
                 } else {
@@ -248,7 +250,7 @@ final class rp implements java.awt.event.KeyListener, java.awt.event.FocusListen
                       break L2;
                     } else {
                       var3 = 127 & 1 + jd.field_s;
-                      if (qn.field_p != var3) {
+                      if ((qn.field_p ^ -1) != (var3 ^ -1)) {
                         gn.field_z[jd.field_s] = var2;
                         fm.field_d[jd.field_s] = (char)0;
                         jd.field_s = var3;
@@ -264,11 +266,11 @@ final class rp implements java.awt.event.KeyListener, java.awt.event.FocusListen
                       param0.consume();
                       break L3;
                     } else {
-                      if (-86 == var2) {
+                      if (-86 == (var2 ^ -1)) {
                         param0.consume();
                         break L3;
                       } else {
-                        if (-11 != var2) {
+                        if (-11 != (var2 ^ -1)) {
                           break L3;
                         } else {
                           param0.consume();
@@ -285,7 +287,7 @@ final class rp implements java.awt.event.KeyListener, java.awt.event.FocusListen
               }
             }
             if (0 <= ol.field_q) {
-              if (var2 <= -1) {
+              if ((var2 ^ -1) <= -1) {
                 qp.field_Q[ol.field_q] = var2;
                 ol.field_q = 127 & 1 + ol.field_q;
                 if (ol.field_q == wm.field_c) {
@@ -295,7 +297,7 @@ final class rp implements java.awt.event.KeyListener, java.awt.event.FocusListen
                       break L4;
                     } else {
                       var3 = 127 & 1 + jd.field_s;
-                      if (qn.field_p != var3) {
+                      if ((qn.field_p ^ -1) != (var3 ^ -1)) {
                         gn.field_z[jd.field_s] = var2;
                         fm.field_d[jd.field_s] = (char)0;
                         jd.field_s = var3;
@@ -306,11 +308,11 @@ final class rp implements java.awt.event.KeyListener, java.awt.event.FocusListen
                           param0.consume();
                           return;
                         } else {
-                          if (-86 == var2) {
+                          if (-86 == (var2 ^ -1)) {
                             param0.consume();
                             return;
                           } else {
-                            if (-11 != var2) {
+                            if (-11 != (var2 ^ -1)) {
                               return;
                             } else {
                               param0.consume();
@@ -326,11 +328,11 @@ final class rp implements java.awt.event.KeyListener, java.awt.event.FocusListen
                     param0.consume();
                     return;
                   } else {
-                    if (-86 == var2) {
+                    if (-86 == (var2 ^ -1)) {
                       param0.consume();
                       return;
                     } else {
-                      if (-11 != var2) {
+                      if (-11 != (var2 ^ -1)) {
                         return;
                       } else {
                         param0.consume();
@@ -344,7 +346,7 @@ final class rp implements java.awt.event.KeyListener, java.awt.event.FocusListen
                       break L5;
                     } else {
                       var3 = 127 & 1 + jd.field_s;
-                      if (qn.field_p != var3) {
+                      if ((qn.field_p ^ -1) != (var3 ^ -1)) {
                         gn.field_z[jd.field_s] = var2;
                         fm.field_d[jd.field_s] = (char)0;
                         jd.field_s = var3;
@@ -359,47 +361,47 @@ final class rp implements java.awt.event.KeyListener, java.awt.event.FocusListen
                     param0.consume();
                     return;
                   } else {
-                    if (-86 != var2) {
-                      if (-11 == var2) {
-                        param0.consume();
-                        return;
-                      } else {
-                        return;
-                      }
-                    } else {
+                    if (-86 == (var2 ^ -1)) {
                       param0.consume();
                       return;
+                    } else {
+                      if (-11 != (var2 ^ -1)) {
+                        return;
+                      } else {
+                        param0.consume();
+                        return;
+                      }
                     }
                   }
                 }
               } else {
                 L6: {
-                  if (-1 > var2) {
+                  if (-1 < (var2 ^ -1)) {
                     break L6;
                   } else {
                     var3 = 127 & 1 + jd.field_s;
-                    if (qn.field_p != var3) {
+                    if ((qn.field_p ^ -1) != (var3 ^ -1)) {
                       gn.field_z[jd.field_s] = var2;
                       fm.field_d[jd.field_s] = (char)0;
                       jd.field_s = var3;
                       break L6;
                     } else {
                       var3 = param0.getModifiers();
-                      if ((var3 & 10) == 0) {
-                        if (-86 != var2) {
-                          if (-11 == var2) {
-                            param0.consume();
-                            return;
-                          } else {
-                            return;
-                          }
-                        } else {
-                          param0.consume();
-                          return;
-                        }
-                      } else {
+                      if ((var3 & 10) != 0) {
                         param0.consume();
                         return;
+                      } else {
+                        if (-86 == (var2 ^ -1)) {
+                          param0.consume();
+                          return;
+                        } else {
+                          if (-11 != (var2 ^ -1)) {
+                            return;
+                          } else {
+                            param0.consume();
+                            return;
+                          }
+                        }
                       }
                     }
                   }
@@ -409,16 +411,16 @@ final class rp implements java.awt.event.KeyListener, java.awt.event.FocusListen
                   param0.consume();
                   return;
                 } else {
-                  if (-86 != var2) {
-                    if (-11 == var2) {
-                      param0.consume();
-                      return;
-                    } else {
-                      return;
-                    }
-                  } else {
+                  if (-86 == (var2 ^ -1)) {
                     param0.consume();
                     return;
+                  } else {
+                    if (-11 != (var2 ^ -1)) {
+                      return;
+                    } else {
+                      param0.consume();
+                      return;
+                    }
                   }
                 }
               }
@@ -428,48 +430,48 @@ final class rp implements java.awt.event.KeyListener, java.awt.event.FocusListen
                   break L7;
                 } else {
                   var3 = 127 & 1 + jd.field_s;
-                  if (qn.field_p != var3) {
+                  if ((qn.field_p ^ -1) != (var3 ^ -1)) {
                     gn.field_z[jd.field_s] = var2;
                     fm.field_d[jd.field_s] = (char)0;
                     jd.field_s = var3;
                     break L7;
                   } else {
                     var3 = param0.getModifiers();
-                    if ((var3 & 10) == 0) {
-                      if (-86 != var2) {
-                        if (-11 == var2) {
-                          param0.consume();
-                          return;
-                        } else {
-                          return;
-                        }
-                      } else {
-                        param0.consume();
-                        return;
-                      }
-                    } else {
+                    if ((var3 & 10) != 0) {
                       param0.consume();
                       return;
+                    } else {
+                      if (-86 == (var2 ^ -1)) {
+                        param0.consume();
+                        return;
+                      } else {
+                        if (-11 != (var2 ^ -1)) {
+                          return;
+                        } else {
+                          param0.consume();
+                          return;
+                        }
+                      }
                     }
                   }
                 }
               }
               var3 = param0.getModifiers();
-              if ((var3 & 10) == 0) {
-                if (-86 != var2) {
-                  if (-11 == var2) {
-                    param0.consume();
-                    return;
-                  } else {
-                    return;
-                  }
-                } else {
-                  param0.consume();
-                  return;
-                }
-              } else {
+              if ((var3 & 10) != 0) {
                 param0.consume();
                 return;
+              } else {
+                if (-86 == (var2 ^ -1)) {
+                  param0.consume();
+                  return;
+                } else {
+                  if (-11 != (var2 ^ -1)) {
+                    return;
+                  } else {
+                    param0.consume();
+                    return;
+                  }
+                }
               }
             }
           } else {
@@ -478,7 +480,7 @@ final class rp implements java.awt.event.KeyListener, java.awt.event.FocusListen
               if (0 > ol.field_q) {
                 break L8;
               } else {
-                if (var2 > -1) {
+                if ((var2 ^ -1) > -1) {
                   break L8;
                 } else {
                   qp.field_Q[ol.field_q] = var2;
@@ -488,11 +490,11 @@ final class rp implements java.awt.event.KeyListener, java.awt.event.FocusListen
                     break L8;
                   } else {
                     L9: {
-                      if (-1 > var2) {
+                      if (-1 < (var2 ^ -1)) {
                         break L9;
                       } else {
                         var3 = 127 & 1 + jd.field_s;
-                        if (qn.field_p != var3) {
+                        if ((qn.field_p ^ -1) != (var3 ^ -1)) {
                           gn.field_z[jd.field_s] = var2;
                           fm.field_d[jd.field_s] = (char)0;
                           jd.field_s = var3;
@@ -508,11 +510,11 @@ final class rp implements java.awt.event.KeyListener, java.awt.event.FocusListen
                         param0.consume();
                         break L10;
                       } else {
-                        if (-86 == var2) {
+                        if (-86 == (var2 ^ -1)) {
                           param0.consume();
                           break L10;
                         } else {
-                          if (-11 != var2) {
+                          if (-11 != (var2 ^ -1)) {
                             break L10;
                           } else {
                             param0.consume();
@@ -531,7 +533,7 @@ final class rp implements java.awt.event.KeyListener, java.awt.event.FocusListen
                 break L11;
               } else {
                 var3 = 127 & 1 + jd.field_s;
-                if (qn.field_p != var3) {
+                if ((qn.field_p ^ -1) != (var3 ^ -1)) {
                   gn.field_z[jd.field_s] = var2;
                   fm.field_d[jd.field_s] = (char)0;
                   jd.field_s = var3;
@@ -543,11 +545,11 @@ final class rp implements java.awt.event.KeyListener, java.awt.event.FocusListen
                       param0.consume();
                       break L12;
                     } else {
-                      if (-86 == var2) {
+                      if (-86 == (var2 ^ -1)) {
                         param0.consume();
                         break L12;
                       } else {
-                        if (-11 != var2) {
+                        if (-11 != (var2 ^ -1)) {
                           break L12;
                         } else {
                           param0.consume();
@@ -561,21 +563,21 @@ final class rp implements java.awt.event.KeyListener, java.awt.event.FocusListen
               }
             }
             var3 = param0.getModifiers();
-            if ((var3 & 10) == 0) {
-              if (-86 != var2) {
-                if (-11 == var2) {
-                  param0.consume();
-                  return;
-                } else {
-                  return;
-                }
-              } else {
-                param0.consume();
-                return;
-              }
-            } else {
+            if ((var3 & 10) != 0) {
               param0.consume();
               return;
+            } else {
+              if (-86 == (var2 ^ -1)) {
+                param0.consume();
+                return;
+              } else {
+                if (-11 != (var2 ^ -1)) {
+                  return;
+                } else {
+                  param0.consume();
+                  return;
+                }
+              }
             }
           }
         } else {

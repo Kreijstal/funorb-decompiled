@@ -17,7 +17,6 @@ final class ad {
 
     final th a(byte param0, int param1) {
         th var3 = null;
-        th var3_ref = null;
         byte[] var4 = null;
         th var5 = null;
         th var6 = null;
@@ -77,7 +76,7 @@ final class ad {
               }
             }
             var5 = new th();
-            var3_ref = var5;
+            var3 = var5;
             if (var4 == null) {
               L4: {
                 if (-32769 >= (param1 ^ -1)) {

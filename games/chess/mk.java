@@ -1,6 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
+import java.lang.String;
+
 final class mk {
     static ch field_e;
     static int field_c;
@@ -79,9 +81,7 @@ final class mk {
         int var33_int = 0;
         int var34_int = 0;
         String var34 = null;
-        String var34_ref = null;
         Object var35 = null;
-        String var35_ref = null;
         int var36 = 0;
         int var37_int = 0;
         StringBuilder var37 = null;
@@ -308,8 +308,7 @@ final class mk {
                   }
                 }
                 L5: {
-                  new ci(stackIn_11_3, (ci) (Object) stackIn_11_4);
-                  ((ln) (Object) stackIn_11_0).field_fc = (ci) (Object) stackIn_11_1;
+                  stackIn_11_0.field_fc = new ci(stackIn_11_3, stackIn_11_4);
                   var12.a((byte) 123, var12.field_fc);
                   var12.field_Ob = new ci[qa.field_e];
                   var12.field_kc = new ci(0L, (ci) null);
@@ -396,8 +395,7 @@ final class mk {
                         break L10;
                       }
                     }
-                    new ci(stackIn_30_3, (ci) (Object) stackIn_30_4);
-                    ((ln) (Object) stackIn_30_0).field_gc = (ci) (Object) stackIn_30_1;
+                    stackIn_30_0.field_gc = new ci(stackIn_30_3, stackIn_30_4);
                     var12.a((byte) 124, var12.field_gc);
                     var12.field_gc.field_fb = 2;
                     var12.field_Nb = new ci(0L, hg.field_f);
@@ -674,7 +672,7 @@ final class mk {
                             break L26;
                           }
                         }
-                        var51_ref = (km) (Object) stackIn_81_0[stackIn_81_1];
+                        var51_ref = stackIn_81_0[stackIn_81_1];
                         var12.field_Eb.field_jb = var51_ref;
                         var12.field_Eb.a(var34_int, var51_ref.field_v, -2147483648, var12.field_fc.field_pb, 0);
                         var34_int = var34_int + (qc.field_e + var51_ref.field_v);
@@ -714,7 +712,7 @@ final class mk {
                             break L29;
                           }
                         }
-                        var53_ref = (km) (Object) stackIn_88_0[stackIn_88_1];
+                        var53_ref = stackIn_88_0[stackIn_88_1];
                         var12.field_Wb.field_jb = var53_ref;
                         var12.field_Wb.a(var34_int, var53_ref.field_v, -2147483648, var12.field_fc.field_pb, 0);
                         var34_int = var34_int + (var53_ref.field_v - -qc.field_e);
@@ -890,7 +888,7 @@ final class mk {
                             var34 = lc.field_g;
                             break L44;
                           } else {
-                            var34_ref = gf.field_a[var12.field_ic];
+                            var34 = gf.field_a[var12.field_ic];
                             break L44;
                           }
                         }
@@ -913,7 +911,7 @@ final class mk {
                             break L46;
                           }
                         }
-                        pc.field_Mb = (String) (Object) stackIn_150_0;
+                        pc.field_Mb = stackIn_150_0;
                         break L45;
                       }
                     }
@@ -945,7 +943,7 @@ final class mk {
                           stackIn_158_0 = stackOut_157_0;
                           break L48;
                         }
-                        pc.field_Mb = (String) (Object) stackIn_158_0;
+                        pc.field_Mb = stackIn_158_0;
                         break L47;
                       }
                     }
@@ -964,7 +962,7 @@ final class mk {
                             break L51;
                           }
                         }
-                        pc.field_Mb = (String) (Object) stackIn_163_0;
+                        pc.field_Mb = stackIn_163_0;
                         break L50;
                       }
                     }
@@ -1019,10 +1017,10 @@ final class mk {
                           break L55;
                         } else {
                           if (in.field_f[var34_int] != null) {
-                            var35_ref = in.field_f[var34_int][var12.field_sc[var34_int] & 255];
+                            var35 = (Object) (Object) in.field_f[var34_int][var12.field_sc[var34_int] & 255];
                             break L55;
                           } else {
-                            var35_ref = null;
+                            var35 = null;
                             break L55;
                           }
                         }

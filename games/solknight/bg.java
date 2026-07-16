@@ -8,9 +8,11 @@ final class bg extends uf {
     static int[][] field_v;
 
     public static void f(int param0) {
+        Object var2 = null;
         field_t = null;
         field_w = null;
         if (param0 != -24631) {
+          var2 = null;
           boolean discarded$2 = bg.a((String) null, -7, (String) null);
           field_v = null;
           return;
@@ -34,6 +36,7 @@ final class bg extends uf {
     }
 
     final static boolean a(String param0, int param1, String param2) {
+        Object var4 = null;
         if (lc.a(0, param2)) {
           return false;
         } else {
@@ -48,6 +51,7 @@ final class bg extends uf {
                       return false;
                     } else {
                       if (param1 < 41) {
+                        var4 = null;
                         boolean discarded$2 = bg.a((String) null, 71, (String) null);
                         return true;
                       } else {

@@ -71,17 +71,24 @@ final class ak extends o {
             }
             try {
               L2: {
-                if (param2 == null) {
-                  break L2;
-                } else {
-                  param0.field_x.postEvent((java.awt.AWTEvent) (Object) new java.awt.event.ActionEvent(param2, 1001, "dummy"));
-                  break L2;
+                L3: {
+                  if (param2 == null) {
+                    break L3;
+                  } else {
+                    param0.field_x.postEvent((java.awt.AWTEvent) (Object) new java.awt.event.ActionEvent(param2, 1001, "dummy"));
+                    break L3;
+                  }
                 }
+                break L2;
               }
-            } catch (java.lang.Exception decompiledCaughtParameter) {
-              decompiledCaughtException = decompiledCaughtParameter;
+            } catch (java.lang.Exception decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              L4: {
+                var4 = (Exception) (Object) decompiledCaughtException;
+                break L4;
+              }
             }
-            var4 = (Exception) (Object) decompiledCaughtException;
+            return;
           }
         } else {
           return;
@@ -174,8 +181,9 @@ final class ak extends o {
     ak(int param0, int param1, int param2, int param3, int param4, int param5, int[] param6) {
         ((ak) this).field_w = param1;
         ((ak) this).field_p = param4;
+        int fieldTemp$0 = th.field_b;
         th.field_b = th.field_b + 1;
-        ((ak) this).field_s = th.field_b & 65535;
+        ((ak) this).field_s = fieldTemp$0 & 65535;
         ((ak) this).field_v = param2;
         ((ak) this).field_l = param5;
         ((ak) this).field_t = param0;

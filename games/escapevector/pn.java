@@ -193,110 +193,35 @@ class pn extends fj implements qb {
         Throwable var2 = null;
         int stackIn_5_0 = 0;
         int stackIn_7_0 = 0;
-        int stackOut_4_0 = 0;
+        Throwable decompiledCaughtException = null;
         int stackOut_6_0 = 0;
-        int statePc = 0;
-        Throwable caughtException = null;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    var1_ref = (Object) (Object) ck.field_v;
-                    // monitorenter ck.field_v
-                    statePc = 1;
-                    continue stateLoop;
-                }
-                case 1: {
-                    try {
-                        if (param0 < -66) {
-                            statePc = 3;
-                        } else {
-                            statePc = 2;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_1) {
-                        caughtException = stateCaught_1;
-                        statePc = 8;
-                        continue stateLoop;
-                    }
-                }
-                case 2: {
-                    try {
-                        field_nb = null;
-                        statePc = 3;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_2) {
-                        caughtException = stateCaught_2;
-                        statePc = 8;
-                        continue stateLoop;
-                    }
-                }
-                case 3: {
-                    try {
-                        if (ta.field_w != ve.field_l) {
-                            statePc = 6;
-                        } else {
-                            statePc = 4;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_3) {
-                        caughtException = stateCaught_3;
-                        statePc = 8;
-                        continue stateLoop;
-                    }
-                }
-                case 4: {
-                    try {
-                        // monitorexit var1_ref
-                        stackOut_4_0 = 0;
-                        stackIn_5_0 = stackOut_4_0;
-                        statePc = 5;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_4) {
-                        caughtException = stateCaught_4;
-                        statePc = 8;
-                        continue stateLoop;
-                    }
-                }
-                case 5: {
-                    return stackIn_5_0 != 0;
-                }
-                case 6: {
-                    try {
-                        nk.field_n = td.field_b[ve.field_l];
-                        jc.field_c = ek.field_a[ve.field_l];
-                        ve.field_l = 127 & 1 + ve.field_l;
-                        // monitorexit var1_ref
-                        stackOut_6_0 = 1;
-                        stackIn_7_0 = stackOut_6_0;
-                        statePc = 7;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_6) {
-                        caughtException = stateCaught_6;
-                        statePc = 8;
-                        continue stateLoop;
-                    }
-                }
-                case 7: {
-                    return stackIn_7_0 != 0;
-                }
-                case 8: {
-                    try {
-                        var2 = caughtException;
-                        // monitorexit var1_ref
-                        statePc = 9;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_8) {
-                        caughtException = stateCaught_8;
-                        statePc = 8;
-                        continue stateLoop;
-                    }
-                }
-                case 9: {
-                    throw (RuntimeException) (Object) var2;
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
+        int stackOut_4_0 = 0;
+        var1_ref = (Object) (Object) ck.field_v;
+        synchronized (var1_ref) {
+          L0: {
+            L1: {
+              if (param0 < -66) {
+                break L1;
+              } else {
+                field_nb = null;
+                break L1;
+              }
             }
+            if (ta.field_w != ve.field_l) {
+              nk.field_n = td.field_b[ve.field_l];
+              jc.field_c = ek.field_a[ve.field_l];
+              ve.field_l = 127 & 1 + ve.field_l;
+              stackOut_6_0 = 1;
+              stackIn_7_0 = stackOut_6_0;
+              break L0;
+            } else {
+              stackOut_4_0 = 0;
+              stackIn_5_0 = stackOut_4_0;
+              return stackIn_5_0 != 0;
+            }
+          }
         }
+        return stackIn_7_0 != 0;
     }
 
     final void r(int param0) {

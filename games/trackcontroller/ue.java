@@ -41,7 +41,7 @@ final class ue {
     }
 
     final static String a(int param0, CharSequence[] param1, byte param2, int param3) {
-        CharSequence var4_ref = null;
+        CharSequence var4_ref_CharSequence = null;
         int var4 = 0;
         int var5 = 0;
         int var6_int = 0;
@@ -96,8 +96,8 @@ final class ue {
             }
           } else {
             var10 = param1[param0];
-            var4_ref = var10;
-            if (var4_ref == null) {
+            var4_ref_CharSequence = var10;
+            if (var4_ref_CharSequence == null) {
               return "null";
             } else {
               return ((Object) (Object) var10).toString();
@@ -265,12 +265,18 @@ final class ue {
                 }
               }
               try {
-                stackOut_39_0 = new java.net.URL(param0, var7.toString());
-                stackIn_40_0 = stackOut_39_0;
-              } catch (java.lang.Exception decompiledCaughtParameter) {
-                decompiledCaughtException = decompiledCaughtParameter;
-                return stackIn_40_0;
+                L10: {
+                  stackOut_39_0 = new java.net.URL(param0, var7.toString());
+                  stackIn_40_0 = stackOut_39_0;
+                  break L10;
+                }
+              } catch (java.lang.Exception decompiledCaughtParameter0) {
+                decompiledCaughtException = decompiledCaughtParameter0;
+                var9 = (Exception) (Object) decompiledCaughtException;
+                var9.printStackTrace();
+                return param0;
               }
+              return stackIn_40_0;
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -364,23 +370,38 @@ final class ue {
     }
 
     final static boolean a(int param0, char param1) {
-        if (!(!Character.isISOControl(param1))) {
-            return false;
-        }
-        if (vl.a(param1, 18102)) {
-            return true;
-        }
-        if (param1 != 45) {
-            // if_icmpeq L53
-            // if_icmpeq L53
-            // if_icmpeq L53
+        if (Character.isISOControl(param1)) {
+          return false;
         } else {
+          if (!vl.a(param1, 18102)) {
+            L0: {
+              if (param1 == 45) {
+                break L0;
+              } else {
+                if (param1 == 160) {
+                  break L0;
+                } else {
+                  if (param1 == 32) {
+                    break L0;
+                  } else {
+                    if (param1 == 95) {
+                      break L0;
+                    } else {
+                      if (param0 == -16490) {
+                        return false;
+                      } else {
+                        return true;
+                      }
+                    }
+                  }
+                }
+              }
+            }
             return true;
-        }
-        if (param0 != -16490) {
+          } else {
             return true;
+          }
         }
-        return false;
     }
 
     final static void a(String param0, boolean param1) {

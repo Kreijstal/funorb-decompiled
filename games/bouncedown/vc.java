@@ -23,7 +23,7 @@ class vc extends wd {
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
-        ui var10 = null;
+        Object var10 = null;
         int var11 = 0;
         bh var12 = null;
         int var13 = 0;
@@ -91,13 +91,13 @@ class vc extends wd {
                   var14 = stackIn_13_0;
                   var15 = new ui(var7, var13, var12.field_f, var14 + -var13, Math.max(var3.a(57), -var12.field_f + var12.field_b));
                   if (var10 != null) {
-                    var10.field_n = var15;
+                    ((ui) var10).field_n = var15;
                     break L4;
                   } else {
                     break L4;
                   }
                 }
-                var10 = var15;
+                var10 = (Object) (Object) var15;
                 ((vc) this).field_C.a(1, (ai) (Object) var15);
                 var11++;
                 continue L1;

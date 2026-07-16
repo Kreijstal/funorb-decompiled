@@ -1,6 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
+import java.lang.String;
+
 final class vg {
     static int field_a;
     static int field_f;
@@ -34,10 +36,11 @@ final class vg {
         int var7 = 0;
         int var8 = 0;
         int var9_int = 0;
-        String var9 = null;
+        Object var9 = null;
         int var10 = 0;
         int var11_int = 0;
-        String var11 = null;
+        Object var11 = null;
+        String var11_ref = null;
         int var12 = 0;
         int var13 = 0;
         ci var15 = null;
@@ -208,7 +211,7 @@ final class vg {
                 }
               }
               L8: {
-                ((ci) (Object) stackIn_38_0).field_db = ((String) (Object) stackIn_38_1).toUpperCase();
+                stackIn_38_0.field_db = ((String) (Object) stackIn_38_1).toUpperCase();
                 stackOut_38_0 = ao.field_b;
                 stackIn_40_0 = stackOut_38_0;
                 stackIn_39_0 = stackOut_38_0;
@@ -227,7 +230,7 @@ final class vg {
                 }
               }
               L9: {
-                ((ci) (Object) stackIn_41_0).field_db = oc.a((String) (Object) stackIn_41_1, new String[1], (byte) -77);
+                stackIn_41_0.field_db = oc.a(stackIn_41_1, new String[1], (byte) -77);
                 sc.field_d.field_tb = true;
                 tn.field_j.field_db = jl.field_b;
                 pk.field_g = true;
@@ -276,7 +279,7 @@ final class vg {
                   L12: {
                     var9 = null;
                     if (d.field_Gb) {
-                      var9 = "<col=A00000>" + tm.field_h + "</col>";
+                      var9 = (Object) (Object) ("<col=A00000>" + tm.field_h + "</col>");
                       var11 = var9;
                       var9 = var11;
                       var11 = var9;
@@ -293,15 +296,15 @@ final class vg {
                       break L0;
                     } else {
                       if (bi.field_d[var10]) {
-                        var11 = "<col=A00000>" + td.field_n[var10] + "</col>";
-                        var9 = var11;
-                        var9 = var11;
+                        var11_ref = "<col=A00000>" + td.field_n[var10] + "</col>";
+                        var9 = (Object) (Object) var11_ref;
+                        var9 = (Object) (Object) var11_ref;
                         if (var9 == null) {
-                          var9 = var11;
+                          var9 = (Object) (Object) var11_ref;
                           var10++;
                           continue L13;
                         } else {
-                          var9 = var9 + ", " + var11;
+                          var9 = (Object) (Object) (var9 + ", " + var11_ref);
                           var10++;
                           continue L13;
                         }
@@ -330,13 +333,13 @@ final class vg {
                 }
               }
               L15: {
-                var16 = (String) (Object) stackIn_26_0;
-                var9 = var16;
-                var9 = var16;
-                var9 = var16;
+                var16 = stackIn_26_0;
+                var9 = (Object) (Object) var16;
+                var9 = (Object) (Object) var16;
+                var9 = (Object) (Object) var16;
                 var10 = tn.field_j.field_xb.b(var16) + 3 * tn.field_j.field_xb.a('.');
                 if (16 == (g.field_c & 48)) {
-                  var9 = var16 + ".";
+                  var9 = (Object) (Object) (var16 + ".");
                   break L15;
                 } else {
                   break L15;
@@ -348,19 +351,19 @@ final class vg {
                 if (32 != (48 & g.field_c)) {
                   break L16;
                 } else {
-                  var9 = var9 + "..";
+                  var9 = (Object) (Object) (var9 + "..");
                   break L16;
                 }
               }
               L17: {
                 if ((g.field_c & 48) == 48) {
-                  var9 = var9 + "...";
+                  var9 = (Object) (Object) (var9 + "...");
                   break L17;
                 } else {
                   break L17;
                 }
               }
-              tn.field_j.field_db = var9;
+              tn.field_j.field_db = (String) var9;
               aa.field_g.field_db = ue.field_b.toUpperCase();
               break L0;
             }

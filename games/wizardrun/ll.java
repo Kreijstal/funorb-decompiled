@@ -377,7 +377,7 @@ class ll implements bf, qe {
                     }
                     L4: {
                       var14 = stackIn_14_0;
-                      if ((var11 ^ -1) != (var12 ^ -1)) {
+                      if (var11 != var12) {
                         if (var13 == null) {
                           stackOut_18_0 = 0;
                           stackIn_19_0 = stackOut_18_0;

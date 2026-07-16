@@ -12,7 +12,6 @@ final class qc {
 
     final dj a(byte param0, int param1) {
         dj var3 = null;
-        dj var3_ref = null;
         byte[] var4 = null;
         var3 = (dj) ((qc) this).field_f.a((byte) -77, (long)param1);
         if (var3 == null) {
@@ -29,9 +28,9 @@ final class qc {
             return null;
           } else {
             L1: {
-              var3_ref = new dj();
+              var3 = new dj();
               if (var4 != null) {
-                var3_ref.a(new p(var4), true);
+                var3.a(new p(var4), true);
                 break L1;
               } else {
                 break L1;
@@ -39,14 +38,14 @@ final class qc {
             }
             L2: {
               if ((param1 ^ -1) <= -32769) {
-                var3_ref.f(32768);
+                var3.f(32768);
                 break L2;
               } else {
                 break L2;
               }
             }
-            ((qc) this).field_f.a((long)param1, param0 ^ 78, (Object) (Object) var3_ref);
-            return var3_ref;
+            ((qc) this).field_f.a((long)param1, param0 ^ 78, (Object) (Object) var3);
+            return var3;
           }
         } else {
           return var3;

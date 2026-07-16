@@ -226,15 +226,16 @@ class ui extends hc {
                       }
                     }
                     L4: {
-                      if (((ui) this).field_J < ((ui) this).field_s.length()) {
+                      if ((((ui) this).field_J ^ -1) > (((ui) this).field_s.length() ^ -1)) {
                         ((ui) this).field_s = ((ui) this).field_s.substring(0, ((ui) this).field_J) + param0 + ((ui) this).field_s.substring(((ui) this).field_J, ((ui) this).field_s.length());
                         ((ui) this).field_J = ((ui) this).field_J + 1;
                         ((ui) this).field_O = ((ui) this).field_J;
                         break L4;
                       } else {
                         ((ui) this).field_s = ((ui) this).field_s + param0;
-                        ((ui) this).field_J = ((ui) this).field_s.length();
-                        ((ui) this).field_O = ((ui) this).field_s.length();
+                        int dupTemp$1 = ((ui) this).field_s.length();
+                        ((ui) this).field_J = dupTemp$1;
+                        ((ui) this).field_O = dupTemp$1;
                         break L4;
                       }
                     }
@@ -285,8 +286,8 @@ class ui extends hc {
                         break L5;
                       }
                     } else {
-                      if (param3 == -98) {
-                        if (((ui) this).field_J >= ((ui) this).field_s.length()) {
+                      if ((param3 ^ -1) == -98) {
+                        if ((((ui) this).field_J ^ -1) <= (((ui) this).field_s.length() ^ -1)) {
                           break L5;
                         } else {
                           L7: {
@@ -318,7 +319,7 @@ class ui extends hc {
                           return true;
                         }
                       } else {
-                        if (-103 == param3) {
+                        if (-103 == (param3 ^ -1)) {
                           this.a(82, 0);
                           return true;
                         } else {
@@ -340,7 +341,7 @@ class ui extends hc {
                                 if (!qd.field_O[82]) {
                                   break L9;
                                 } else {
-                                  if (-67 != param3) {
+                                  if (-67 != (param3 ^ -1)) {
                                     break L9;
                                   } else {
                                     this.c((byte) 122);
@@ -351,7 +352,7 @@ class ui extends hc {
                               if (!qd.field_O[82]) {
                                 break L5;
                               } else {
-                                if (-68 != param3) {
+                                if (-68 != (param3 ^ -1)) {
                                   break L5;
                                 } else {
                                   this.a((byte) 115);
@@ -426,17 +427,32 @@ class ui extends hc {
 
     private final int m(int param0) {
         int var2 = 0;
-        int var3 = MinerDisturbance.field_ab;
-        if (((ui) this).field_J == 0) {
-            return ((ui) this).field_J;
+        int var3 = 0;
+        var3 = MinerDisturbance.field_ab;
+        if (((ui) this).field_J != 0) {
+          var2 = -1 + ((ui) this).field_J;
+          L0: while (true) {
+            L1: {
+              if ((var2 ^ -1) >= -1) {
+                break L1;
+              } else {
+                if (32 == ((ui) this).field_s.charAt(-1 + var2)) {
+                  break L1;
+                } else {
+                  var2--;
+                  continue L0;
+                }
+              }
+            }
+            if (param0 >= 36) {
+              return var2;
+            } else {
+              return 38;
+            }
+          }
+        } else {
+          return ((ui) this).field_J;
         }
-        for (var2 = -1 + ((ui) this).field_J; (var2 ^ -1) < -1; var2--) {
-            // if_icmpeq L51
-        }
-        if (param0 < 36) {
-            return 38;
-        }
-        return var2;
     }
 
     public static void q(int param0) {
@@ -460,8 +476,9 @@ class ui extends hc {
                 ((ui) this).field_s = ((ui) this).field_s.substring(0, ((ui) this).field_M);
             }
         }
-        ((ui) this).field_O = ((ui) this).field_s.length();
-        ((ui) this).field_J = ((ui) this).field_s.length();
+        int dupTemp$0 = ((ui) this).field_s.length();
+        ((ui) this).field_O = dupTemp$0;
+        ((ui) this).field_J = dupTemp$0;
         if (!(param0)) {
             ((ui) this).r(124);
         }
@@ -542,20 +559,26 @@ class ui extends hc {
             Throwable decompiledCaughtException = null;
             try {
               L0: {
-                var2 = (String) java.awt.Toolkit.getDefaultToolkit().getSystemClipboard().getContents((Object) null).getTransferData(java.awt.datatransfer.DataFlavor.stringFlavor);
-                this.d((byte) 101);
-                if (param0 >= 62) {
-                  break L0;
-                } else {
-                  ((ui) this).field_I = 10;
-                  break L0;
+                L1: {
+                  var2 = (String) java.awt.Toolkit.getDefaultToolkit().getSystemClipboard().getContents((Object) null).getTransferData(java.awt.datatransfer.DataFlavor.stringFlavor);
+                  this.d((byte) 101);
+                  if (param0 >= 62) {
+                    break L1;
+                  } else {
+                    ((ui) this).field_I = 10;
+                    break L1;
+                  }
                 }
+                this.a(var2, false);
+                break L0;
               }
-              this.a(var2, false);
-            } catch (java.lang.Exception decompiledCaughtParameter) {
-              decompiledCaughtException = decompiledCaughtParameter;
+            } catch (java.lang.Exception decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              L2: {
+                var2_ref = (Exception) (Object) decompiledCaughtException;
+                break L2;
+              }
             }
-            var2_ref = (Exception) (Object) decompiledCaughtException;
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
@@ -564,19 +587,39 @@ class ui extends hc {
     }
 
     private final int n(int param0) {
+        int var2 = 0;
         int var3 = 0;
-        int var4 = MinerDisturbance.field_ab;
-        int var2 = ((ui) this).field_s.length();
-        if (((ui) this).field_J == var2) {
-            return ((ui) this).field_J;
+        int var4 = 0;
+        var4 = MinerDisturbance.field_ab;
+        var2 = ((ui) this).field_s.length();
+        if (((ui) this).field_J != var2) {
+          L0: {
+            if (param0 == -127) {
+              break L0;
+            } else {
+              ((ui) this).field_R = false;
+              break L0;
+            }
+          }
+          var3 = ((ui) this).field_J - -1;
+          L1: while (true) {
+            L2: {
+              if (var3 >= var2) {
+                break L2;
+              } else {
+                if (32 == ((ui) this).field_s.charAt(-1 + var3)) {
+                  break L2;
+                } else {
+                  var3++;
+                  continue L1;
+                }
+              }
+            }
+            return var3;
+          }
+        } else {
+          return ((ui) this).field_J;
         }
-        if (param0 != -127) {
-            ((ui) this).field_R = false;
-        }
-        for (var3 = ((ui) this).field_J - -1; var3 < var2; var3++) {
-            // if_icmpeq L73
-        }
-        return var3;
     }
 
     static {

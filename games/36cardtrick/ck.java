@@ -15,7 +15,7 @@ final class ck extends qg {
     final void a(int param0, int param1, int param2, int param3) {
         int var5 = ((ck) this).field_o - -param0;
         int var6 = ((ck) this).field_i + param1;
-        this.a(param0, param1, -1, param3);
+        super.a(param0, param1, -1, param3);
         if (!(-1 == (param3 ^ -1))) {
             return;
         }
@@ -35,7 +35,7 @@ final class ck extends qg {
         field_F = null;
         field_I = null;
         if (param0 != 41) {
-            field_G = (String) null;
+            field_G = null;
             field_G = null;
             return;
         }

@@ -30,24 +30,28 @@ final class nd extends td implements m {
         }
         try {
           L1: {
-            var3_int = param1.l(-1);
-            if (param2 < var3_int) {
-              var3_int = param2;
-              break L1;
-            } else {
-              break L1;
+            L2: {
+              var3_int = param1.l(-1);
+              if (param2 < var3_int) {
+                var3_int = param2;
+                break L2;
+              } else {
+                break L2;
+              }
             }
+            var4 = new byte[var3_int];
+            param1.field_k = param1.field_k + nb.field_v.a(param1.field_j, param1.field_k, 0, 0, var3_int, var4);
+            var5 = ka.a(0, -129, var4, var3_int);
+            stackOut_5_0 = (String) var5;
+            stackIn_6_0 = stackOut_5_0;
+            break L1;
           }
-          var4 = new byte[var3_int];
-          param1.field_k = param1.field_k + nb.field_v.a(param1.field_j, param1.field_k, 0, 0, var3_int, var4);
-          var5 = ka.a(0, -129, var4, var3_int);
-          stackOut_5_0 = (String) var5;
-          stackIn_6_0 = stackOut_5_0;
-        } catch (java.lang.Exception decompiledCaughtParameter) {
-          decompiledCaughtException = decompiledCaughtParameter;
-          return stackIn_6_0;
+        } catch (java.lang.Exception decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3 = (Exception) (Object) decompiledCaughtException;
+          return "Cabbage";
         }
-        return null;
+        return stackIn_6_0;
     }
 
     final void a(int param0, int param1, int param2, int param3) {

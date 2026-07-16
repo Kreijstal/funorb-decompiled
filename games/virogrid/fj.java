@@ -7,46 +7,133 @@ final class fj {
     static p field_b;
 
     final static void a(byte param0, int param1, int param2) {
-        if (ke.field_r != null) {
-            // if_icmplt L17
-        } else {
-            ke.field_r = new int[2 * param2];
+        L0: {
+          L1: {
+            if (ke.field_r == null) {
+              break L1;
+            } else {
+              if (ke.field_r.length < param2) {
+                break L1;
+              } else {
+                break L0;
+              }
+            }
+          }
+          ke.field_r = new int[2 * param2];
+          break L0;
         }
-        if (null != wh.field_c) {
-            // if_icmple L54
+        L2: {
+          L3: {
+            if (null == wh.field_c) {
+              break L3;
+            } else {
+              if (param2 <= wh.field_c.length) {
+                break L2;
+              } else {
+                break L3;
+              }
+            }
+          }
+          wh.field_c = new int[2 * param2];
+          break L2;
         }
-        wh.field_c = new int[2 * param2];
-        if (null != vc.field_jb) {
-            // if_icmplt L72
-        } else {
-            vc.field_jb = new int[param2 * 2];
+        L4: {
+          L5: {
+            if (null == vc.field_jb) {
+              break L5;
+            } else {
+              if (vc.field_jb.length < param2) {
+                break L5;
+              } else {
+                break L4;
+              }
+            }
+          }
+          vc.field_jb = new int[param2 * 2];
+          break L4;
         }
-        if (tg.field_A != null) {
-            // if_icmpgt L97
-        } else {
-            tg.field_A = new int[param2 * 2];
+        L6: {
+          L7: {
+            if (tg.field_A == null) {
+              break L7;
+            } else {
+              if (param2 > tg.field_A.length) {
+                break L7;
+              } else {
+                break L6;
+              }
+            }
+          }
+          tg.field_A = new int[param2 * 2];
+          break L6;
         }
-        if (kf.field_j != null) {
-            // if_icmple L133
+        L8: {
+          L9: {
+            if (kf.field_j == null) {
+              break L9;
+            } else {
+              if (param2 <= kf.field_j.length) {
+                break L8;
+              } else {
+                break L9;
+              }
+            }
+          }
+          kf.field_j = new int[2 * param2];
+          break L8;
         }
-        kf.field_j = new int[2 * param2];
-        if (vl.field_i != null) {
-            // if_icmpgt L150
-        } else {
-            vl.field_i = new int[2 * param2];
+        L10: {
+          L11: {
+            if (vl.field_i == null) {
+              break L11;
+            } else {
+              if (param2 > vl.field_i.length) {
+                break L11;
+              } else {
+                break L10;
+              }
+            }
+          }
+          vl.field_i = new int[2 * param2];
+          break L10;
         }
-        if (param0 <= 116) {
+        L12: {
+          if (param0 > 116) {
+            break L12;
+          } else {
             field_c = null;
+            break L12;
+          }
         }
-        if (null != lk.field_Tb) {
-            // if_icmplt L194
-        } else {
-            lk.field_Tb = new int[2 * (param2 - -param1)];
+        L13: {
+          L14: {
+            if (null == lk.field_Tb) {
+              break L14;
+            } else {
+              if (lk.field_Tb.length < param1 + param2) {
+                break L14;
+              } else {
+                break L13;
+              }
+            }
+          }
+          lk.field_Tb = new int[2 * (param2 - -param1)];
+          break L13;
         }
-        if (null != jg.field_b) {
-            // if_icmpgt L223
-        } else {
-            jg.field_b = new boolean[param2 * 2];
+        L15: {
+          L16: {
+            if (null == jg.field_b) {
+              break L16;
+            } else {
+              if (param2 > jg.field_b.length) {
+                break L16;
+              } else {
+                break L15;
+              }
+            }
+          }
+          jg.field_b = new boolean[param2 * 2];
+          break L15;
         }
         dj.field_c = -2147483648;
         ka.field_m = 0;

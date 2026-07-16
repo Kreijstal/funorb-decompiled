@@ -163,25 +163,45 @@ final class eb implements java.awt.event.KeyListener, java.awt.event.FocusListen
 
     public final synchronized void keyReleased(java.awt.event.KeyEvent param0) {
         int var2 = 0;
-        if (null == pk.field_e) {
-        } else {
-            ce.field_e = 0;
-            var2 = param0.getKeyCode();
-            if (var2 >= 0) {
-                // if_icmple L44
-                var2 = hd.field_a[var2] & -129;
-            } else {
-                var2 = -1;
-            }
-            if (se.field_H >= 0) {
-                if (!(var2 < 0)) {
-                    ob.field_c[se.field_H] = var2 ^ -1;
-                    se.field_H = se.field_H - -1 & 127;
-                    if (!(vd.field_e != se.field_H)) {
-                        se.field_H = -1;
-                    }
+        L0: {
+          if (null != pk.field_e) {
+            L1: {
+              L2: {
+                ce.field_e = 0;
+                var2 = param0.getKeyCode();
+                if (var2 < 0) {
+                  break L2;
+                } else {
+                  if (hd.field_a.length <= var2) {
+                    break L2;
+                  } else {
+                    var2 = hd.field_a[var2] & -129;
+                    break L1;
+                  }
                 }
+              }
+              var2 = -1;
+              break L1;
             }
+            if (se.field_H < 0) {
+              break L0;
+            } else {
+              if (var2 >= 0) {
+                ob.field_c[se.field_H] = var2 ^ -1;
+                se.field_H = se.field_H - -1 & 127;
+                if (vd.field_e == se.field_H) {
+                  se.field_H = -1;
+                  break L0;
+                } else {
+                  break L0;
+                }
+              } else {
+                break L0;
+              }
+            }
+          } else {
+            break L0;
+          }
         }
         param0.consume();
     }

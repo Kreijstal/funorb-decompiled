@@ -108,13 +108,13 @@ final class qk extends rh {
     }
 
     final static Object a(byte[] param0, boolean param1, byte param2) {
-        pi var3_ref = null;
+        pi var3_ref_pi = null;
         int var3 = 0;
         if (param0 != null) {
           if (-137 > (param0.length ^ -1)) {
-            var3_ref = new pi();
-            ((fh) (Object) var3_ref).a(param0, 13673);
-            return (Object) (Object) var3_ref;
+            var3_ref_pi = new pi();
+            ((fh) (Object) var3_ref_pi).a(param0, 13673);
+            return (Object) (Object) var3_ref_pi;
           } else {
             var3 = 97 / ((72 - param2) / 37);
             if (!param1) {

@@ -177,8 +177,9 @@ final class ii implements Iterator {
         if (((ii) this).field_b == ((ii) this).field_c.field_c[((ii) this).field_d + -1]) {
           L0: while (true) {
             if (((ii) this).field_d < ((ii) this).field_c.field_e) {
+              int fieldTemp$1 = ((ii) this).field_d;
               ((ii) this).field_d = ((ii) this).field_d + 1;
-              if (((ii) this).field_c.field_c[((ii) this).field_d].field_b != ((ii) this).field_c.field_c[((ii) this).field_d + -1]) {
+              if (((ii) this).field_c.field_c[fieldTemp$1].field_b != ((ii) this).field_c.field_c[((ii) this).field_d + -1]) {
                 ((ii) this).field_b = ((ii) this).field_c.field_c[((ii) this).field_d - 1].field_b;
                 return true;
               } else {
@@ -201,8 +202,9 @@ final class ii implements Iterator {
         if (((ii) this).field_b == ((ii) this).field_c.field_c[-1 + ((ii) this).field_d]) {
           L0: while (true) {
             if (((ii) this).field_d < ((ii) this).field_c.field_e) {
+              int fieldTemp$2 = ((ii) this).field_d;
               ((ii) this).field_d = ((ii) this).field_d + 1;
-              var1 = ((ii) this).field_c.field_c[((ii) this).field_d].field_b;
+              var1 = ((ii) this).field_c.field_c[fieldTemp$2].field_b;
               if (var1 == ((ii) this).field_c.field_c[-1 + ((ii) this).field_d]) {
                 continue L0;
               } else {

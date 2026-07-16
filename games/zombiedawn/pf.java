@@ -115,8 +115,9 @@ final class pf {
         ((pf) this).field_i = new nb[param0];
         ((pf) this).field_a = param0;
         for (var2 = 0; var2 < param0; var2++) {
-            var3 = new nb();
-            ((pf) this).field_i[var2] = new nb();
+            nb dupTemp$0 = new nb();
+            var3 = dupTemp$0;
+            ((pf) this).field_i[var2] = dupTemp$0;
             var3.field_i = var3;
             var3.field_h = var3;
         }

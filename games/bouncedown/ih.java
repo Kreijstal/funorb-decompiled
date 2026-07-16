@@ -237,7 +237,7 @@ class ih extends fd {
               }
             }
             L9: {
-              if (param1.field_M != 0) {
+              if ((param1.field_M ^ -1) != -1) {
                 ((ih) this).field_M = param1.field_M;
                 break L9;
               } else {
@@ -269,7 +269,7 @@ class ih extends fd {
               }
             }
             L13: {
-              if (param1.field_B == 0) {
+              if ((param1.field_B ^ -1) == -1) {
                 break L13;
               } else {
                 ((ih) this).field_B = param1.field_B;
@@ -445,7 +445,7 @@ class ih extends fd {
               }
             }
             L35: {
-              if (param1.field_G > -1) {
+              if ((param1.field_G ^ -1) > -1) {
                 break L35;
               } else {
                 ((ih) this).field_G = param1.field_G;
@@ -453,14 +453,14 @@ class ih extends fd {
               }
             }
             L36: {
-              if (2147483647 != param1.field_O) {
+              if (2147483647 != (param1.field_O ^ -1)) {
                 ((ih) this).field_O = param1.field_O;
                 break L36;
               } else {
                 break L36;
               }
             }
-            if (param1.field_H == 0) {
+            if ((param1.field_H ^ -1) == -1) {
               break L0;
             } else {
               ((ih) this).field_H = param1.field_H;

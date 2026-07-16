@@ -22,11 +22,13 @@ final class ih extends ni {
     final int f(byte param0) {
         if (param0 != 47) {
           ((ih) this).m(-38);
+          int fieldTemp$4 = ((ih) this).field_i;
           ((ih) this).field_i = ((ih) this).field_i + 1;
-          return ((ih) this).field_k[((ih) this).field_i] - ((ih) this).field_n.a(995108848) & 255;
+          return ((ih) this).field_k[fieldTemp$4] - ((ih) this).field_n.a(995108848) & 255;
         } else {
+          int fieldTemp$5 = ((ih) this).field_i;
           ((ih) this).field_i = ((ih) this).field_i + 1;
-          return ((ih) this).field_k[((ih) this).field_i] - ((ih) this).field_n.a(995108848) & 255;
+          return ((ih) this).field_k[fieldTemp$5] - ((ih) this).field_n.a(995108848) & 255;
         }
     }
 
@@ -39,8 +41,9 @@ final class ih extends ni {
     }
 
     final void e(int param0, int param1) {
+        int fieldTemp$0 = ((ih) this).field_i;
         ((ih) this).field_i = ((ih) this).field_i + 1;
-        ((ih) this).field_k[((ih) this).field_i] = (byte)(((ih) this).field_n.a(995108848) + param1);
+        ((ih) this).field_k[fieldTemp$0] = (byte)(((ih) this).field_n.a(995108848) + param1);
         if (param0 != 8) {
             ((ih) this).field_n = null;
         }
@@ -70,8 +73,9 @@ final class ih extends ni {
               }
               return var5;
             } else {
+              int incrementValue$2 = var3;
               var3++;
-              var5 = var5 + ((ek.field_d[var4] & ((ih) this).field_k[var3]) << param0 - var4);
+              var5 = var5 + ((ek.field_d[var4] & ((ih) this).field_k[incrementValue$2]) << param0 - var4);
               param0 = param0 - var4;
               var4 = 8;
               continue L0;
@@ -95,8 +99,9 @@ final class ih extends ni {
               }
               return var5;
             } else {
+              int incrementValue$3 = var3;
               var3++;
-              var5 = var5 + ((ek.field_d[var4] & ((ih) this).field_k[var3]) << param0 - var4);
+              var5 = var5 + ((ek.field_d[var4] & ((ih) this).field_k[incrementValue$3]) << param0 - var4);
               param0 = param0 - var4;
               var4 = 8;
               continue L2;
@@ -133,8 +138,9 @@ final class ih extends ni {
             if (param1 <= var5) {
               return;
             } else {
+              int fieldTemp$2 = ((ih) this).field_i;
               ((ih) this).field_i = ((ih) this).field_i + 1;
-              param3[param2 + var5] = (byte)(((ih) this).field_k[((ih) this).field_i] + -((ih) this).field_n.a(995108848));
+              param3[param2 + var5] = (byte)(((ih) this).field_k[fieldTemp$2] + -((ih) this).field_n.a(995108848));
               var5++;
               continue L0;
             }
@@ -145,8 +151,9 @@ final class ih extends ni {
             if (param1 <= var5) {
               return;
             } else {
+              int fieldTemp$3 = ((ih) this).field_i;
               ((ih) this).field_i = ((ih) this).field_i + 1;
-              param3[param2 + var5] = (byte)(((ih) this).field_k[((ih) this).field_i] + -((ih) this).field_n.a(995108848));
+              param3[param2 + var5] = (byte)(((ih) this).field_k[fieldTemp$3] + -((ih) this).field_n.a(995108848));
               var5++;
               continue L1;
             }

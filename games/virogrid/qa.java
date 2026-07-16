@@ -26,7 +26,7 @@ final class qa implements be {
         var6.a(param5, 72);
         int var9 = param1;
         if (!(!param4)) {
-            // wide iinc 9 128
+            var9 += 128;
         }
         var6.a(var9, -95);
         var6.a(param2, param2.length, 0, (byte) 81);

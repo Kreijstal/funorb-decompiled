@@ -365,7 +365,6 @@ final class op extends wk implements ec {
 
     private final vm b(int param0, byte param1) {
         vm var3 = null;
-        vm var3_ref = null;
         byte[] var4 = null;
         var3 = (vm) (Object) ((op) this).field_l.a((long)param0, 4604);
         if (var3 != null) {
@@ -376,9 +375,9 @@ final class op extends wk implements ec {
             if (var4 == null) {
               return null;
             } else {
-              var3_ref = new vm(new fj(var4));
-              ((op) this).field_l.a((long)param0, (ta) (Object) var3_ref, 0);
-              return var3_ref;
+              var3 = new vm(new fj(var4));
+              ((op) this).field_l.a((long)param0, (ta) (Object) var3, 0);
+              return var3;
             }
           } else {
             field_k = -28;
@@ -386,9 +385,9 @@ final class op extends wk implements ec {
             if (var4 == null) {
               return null;
             } else {
-              var3_ref = new vm(new fj(var4));
-              ((op) this).field_l.a((long)param0, (ta) (Object) var3_ref, 0);
-              return var3_ref;
+              var3 = new vm(new fj(var4));
+              ((op) this).field_l.a((long)param0, (ta) (Object) var3, 0);
+              return var3;
             }
           }
         }
@@ -397,46 +396,24 @@ final class op extends wk implements ec {
     final static void a(long param0, int param1) {
         InterruptedException var3 = null;
         Object var4 = null;
-        int statePc = 0;
-        Throwable caughtException = null;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    try {
-                        Thread.sleep(param0);
-                        if (param1 >= 75) {
-                            statePc = 4;
-                        } else {
-                            statePc = 1;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_0) {
-                        caughtException = stateCaught_0;
-                        statePc = 3;
-                        continue stateLoop;
-                    }
-                }
-                case 1: {
-                    try {
-                        var4 = null;
-                        op.a((byte) -95, (fj) null, (java.math.BigInteger) null, (java.math.BigInteger) null, 124, (byte[]) null, -48);
-                        return;
-                    } catch (Throwable stateCaught_1) {
-                        caughtException = stateCaught_1;
-                        statePc = 3;
-                        continue stateLoop;
-                    }
-                }
-                case 3: {
-                    var3 = (InterruptedException) (Object) caughtException;
-                    statePc = 4;
-                    continue stateLoop;
-                }
-                case 4: {
-                    return;
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
+        Throwable decompiledCaughtException = null;
+        try {
+          L0: {
+            Thread.sleep(param0);
+            if (param1 >= 75) {
+              break L0;
+            } else {
+              var4 = null;
+              op.a((byte) -95, (fj) null, (java.math.BigInteger) null, (java.math.BigInteger) null, 124, (byte[]) null, -48);
+              return;
             }
+          }
+        } catch (java.lang.Exception decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L1: {
+            var3 = (InterruptedException) (Object) decompiledCaughtException;
+            break L1;
+          }
         }
     }
 

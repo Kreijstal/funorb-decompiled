@@ -10,32 +10,31 @@ final class nk extends fc {
 
     final static void b(boolean param0) {
         vg var1 = null;
-        vg var1_ref = null;
         var1 = (vg) (Object) gd.field_q.c((byte) -123);
         if (param0) {
           L0: {
             nk.d(-35);
-            if (var1_ref == null) {
-              var1_ref = new vg();
+            if (var1 == null) {
+              var1 = new vg();
               break L0;
             } else {
               break L0;
             }
           }
-          var1_ref.a(ll.field_g, ll.field_d, 11033, ll.field_i, ll.field_a, ll.field_e, ll.field_k, ll.field_b);
-          cj.field_j.a((byte) -97, (fc) (Object) var1_ref);
+          var1.a(ll.field_g, ll.field_d, 11033, ll.field_i, ll.field_a, ll.field_e, ll.field_k, ll.field_b);
+          cj.field_j.a((byte) -97, (fc) (Object) var1);
           return;
         } else {
           L1: {
             if (var1 == null) {
-              var1_ref = new vg();
+              var1 = new vg();
               break L1;
             } else {
               break L1;
             }
           }
-          var1_ref.a(ll.field_g, ll.field_d, 11033, ll.field_i, ll.field_a, ll.field_e, ll.field_k, ll.field_b);
-          cj.field_j.a((byte) -97, (fc) (Object) var1_ref);
+          var1.a(ll.field_g, ll.field_d, 11033, ll.field_i, ll.field_a, ll.field_e, ll.field_k, ll.field_b);
+          cj.field_j.a((byte) -97, (fc) (Object) var1);
           return;
         }
     }

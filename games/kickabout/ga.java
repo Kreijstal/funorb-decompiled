@@ -115,37 +115,43 @@ class ga extends wi {
             }
             try {
               L1: {
-                var2_ref = (String) java.awt.Toolkit.getDefaultToolkit().getSystemClipboard().getContents((Object) null).getTransferData(java.awt.datatransfer.DataFlavor.stringFlavor);
-                this.i(-126);
-                stackOut_2_0 = this;
-                stackOut_2_1 = (String) var2_ref;
-                stackIn_4_0 = stackOut_2_0;
-                stackIn_4_1 = stackOut_2_1;
-                stackIn_3_0 = stackOut_2_0;
-                stackIn_3_1 = stackOut_2_1;
-                if (param0) {
-                  stackOut_4_0 = this;
-                  stackOut_4_1 = (String) (Object) stackIn_4_1;
-                  stackOut_4_2 = 0;
-                  stackIn_5_0 = stackOut_4_0;
-                  stackIn_5_1 = stackOut_4_1;
-                  stackIn_5_2 = stackOut_4_2;
-                  break L1;
-                } else {
-                  stackOut_3_0 = this;
-                  stackOut_3_1 = (String) (Object) stackIn_3_1;
-                  stackOut_3_2 = 1;
-                  stackIn_5_0 = stackOut_3_0;
-                  stackIn_5_1 = stackOut_3_1;
-                  stackIn_5_2 = stackOut_3_2;
-                  break L1;
+                L2: {
+                  var2_ref = (String) java.awt.Toolkit.getDefaultToolkit().getSystemClipboard().getContents((Object) null).getTransferData(java.awt.datatransfer.DataFlavor.stringFlavor);
+                  this.i(-126);
+                  stackOut_2_0 = this;
+                  stackOut_2_1 = (String) var2_ref;
+                  stackIn_4_0 = stackOut_2_0;
+                  stackIn_4_1 = stackOut_2_1;
+                  stackIn_3_0 = stackOut_2_0;
+                  stackIn_3_1 = stackOut_2_1;
+                  if (param0) {
+                    stackOut_4_0 = this;
+                    stackOut_4_1 = (String) (Object) stackIn_4_1;
+                    stackOut_4_2 = 0;
+                    stackIn_5_0 = stackOut_4_0;
+                    stackIn_5_1 = stackOut_4_1;
+                    stackIn_5_2 = stackOut_4_2;
+                    break L2;
+                  } else {
+                    stackOut_3_0 = this;
+                    stackOut_3_1 = (String) (Object) stackIn_3_1;
+                    stackOut_3_2 = 1;
+                    stackIn_5_0 = stackOut_3_0;
+                    stackIn_5_1 = stackOut_3_1;
+                    stackIn_5_2 = stackOut_3_2;
+                    break L2;
+                  }
                 }
+                this.a(stackIn_5_1, stackIn_5_2 != 0);
+                break L1;
               }
-              this.a(stackIn_5_1, stackIn_5_2 != 0);
-            } catch (java.lang.Exception decompiledCaughtParameter) {
-              decompiledCaughtException = decompiledCaughtParameter;
+            } catch (java.lang.Exception decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              L3: {
+                var2 = (Exception) (Object) decompiledCaughtException;
+                break L3;
+              }
             }
-            var2 = (Exception) (Object) decompiledCaughtException;
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
@@ -173,8 +179,9 @@ class ga extends wi {
                 ((ga) this).field_q = ((ga) this).field_q.substring(0, ((ga) this).field_S);
             }
         }
-        ((ga) this).field_Q = ((ga) this).field_q.length();
-        ((ga) this).field_I = ((ga) this).field_q.length();
+        int dupTemp$0 = ((ga) this).field_q.length();
+        ((ga) this).field_Q = dupTemp$0;
+        ((ga) this).field_I = dupTemp$0;
         if (!param2) {
             ((ga) this).m((byte) -83);
         }
@@ -344,7 +351,7 @@ class ga extends wi {
               } else {
                 if (param0 <= 126) {
                   L2: {
-                    if (((ga) this).field_Q == ((ga) this).field_I) {
+                    if ((((ga) this).field_Q ^ -1) == (((ga) this).field_I ^ -1)) {
                       break L2;
                     } else {
                       this.i(-125);
@@ -356,7 +363,7 @@ class ga extends wi {
                       if (0 == (((ga) this).field_S ^ -1)) {
                         break L4;
                       } else {
-                        if (((ga) this).field_q.length() >= ((ga) this).field_S) {
+                        if ((((ga) this).field_q.length() ^ -1) <= (((ga) this).field_S ^ -1)) {
                           break L3;
                         } else {
                           break L4;
@@ -364,15 +371,16 @@ class ga extends wi {
                       }
                     }
                     L5: {
-                      if (((ga) this).field_I < ((ga) this).field_q.length()) {
+                      if ((((ga) this).field_I ^ -1) > (((ga) this).field_q.length() ^ -1)) {
                         ((ga) this).field_q = ((ga) this).field_q.substring(0, ((ga) this).field_I) + param0 + ((ga) this).field_q.substring(((ga) this).field_I, ((ga) this).field_q.length());
                         ((ga) this).field_I = ((ga) this).field_I + 1;
                         ((ga) this).field_Q = ((ga) this).field_I;
                         break L5;
                       } else {
                         ((ga) this).field_q = ((ga) this).field_q + param0;
-                        ((ga) this).field_I = ((ga) this).field_q.length();
-                        ((ga) this).field_Q = ((ga) this).field_q.length();
+                        int dupTemp$1 = ((ga) this).field_q.length();
+                        ((ga) this).field_I = dupTemp$1;
+                        ((ga) this).field_Q = dupTemp$1;
                         break L5;
                       }
                     }
@@ -391,8 +399,8 @@ class ga extends wi {
                   if (param3 != 13) {
                     if (96 != param3) {
                       if (param3 != 97) {
-                        if (param3 != -103) {
-                          if (-104 != param3) {
+                        if ((param3 ^ -1) != -103) {
+                          if (-104 != (param3 ^ -1)) {
                             if (84 != param3) {
                               L7: {
                                 if (!ne.field_G[82]) {
@@ -498,7 +506,7 @@ class ga extends wi {
                   }
                 } else {
                   if (((ga) this).field_I == ((ga) this).field_Q) {
-                    if (((ga) this).field_I < ((ga) this).field_q.length()) {
+                    if ((((ga) this).field_I ^ -1) > (((ga) this).field_q.length() ^ -1)) {
                       ((ga) this).field_Q = ((ga) this).field_I + 1;
                       this.i(-126);
                       return true;
@@ -534,17 +542,32 @@ class ga extends wi {
 
     private final int l(byte param0) {
         int var2 = 0;
-        int var3 = Kickabout.field_G;
-        if (!(0 != ((ga) this).field_I)) {
-            return ((ga) this).field_I;
+        int var3 = 0;
+        var3 = Kickabout.field_G;
+        if (0 == ((ga) this).field_I) {
+          return ((ga) this).field_I;
+        } else {
+          var2 = -1 + ((ga) this).field_I;
+          L0: while (true) {
+            L1: {
+              if (var2 <= 0) {
+                break L1;
+              } else {
+                if (((ga) this).field_q.charAt(var2 + -1) == 32) {
+                  break L1;
+                } else {
+                  var2--;
+                  continue L0;
+                }
+              }
+            }
+            if (param0 == -55) {
+              return var2;
+            } else {
+              return -81;
+            }
+          }
         }
-        for (var2 = -1 + ((ga) this).field_I; var2 > 0; var2--) {
-            // if_icmpeq L52
-        }
-        if (param0 != -55) {
-            return -81;
-        }
-        return var2;
     }
 
     private final void j(int param0) {
@@ -556,19 +579,35 @@ class ga extends wi {
     }
 
     private final int h(byte param0) {
+        int var2 = 0;
         int var3 = 0;
-        int var4 = Kickabout.field_G;
-        int var2 = ((ga) this).field_q.length();
-        if (!(((ga) this).field_I != var2)) {
-            return ((ga) this).field_I;
-        }
-        if (param0 <= 1) {
+        int var4 = 0;
+        var4 = Kickabout.field_G;
+        var2 = ((ga) this).field_q.length();
+        if (((ga) this).field_I == var2) {
+          return ((ga) this).field_I;
+        } else {
+          if (param0 > 1) {
+            var3 = ((ga) this).field_I + 1;
+            L0: while (true) {
+              L1: {
+                if (var3 >= var2) {
+                  break L1;
+                } else {
+                  if (-33 == (((ga) this).field_q.charAt(-1 + var3) ^ -1)) {
+                    break L1;
+                  } else {
+                    var3++;
+                    continue L0;
+                  }
+                }
+              }
+              return var3;
+            }
+          } else {
             return -65;
+          }
         }
-        for (var3 = ((ga) this).field_I + 1; var3 < var2; var3++) {
-            // if_icmpeq L72
-        }
-        return var3;
     }
 
     private final void a(String param0, boolean param1) {
@@ -671,13 +710,14 @@ class ga extends wi {
         L0: while (true) {
           if (field_O.length <= var0) {
             field_K = "Offline";
+            return;
           } else {
             L1: {
-              if (var0 == -1) {
+              if ((var0 ^ -1) == -1) {
                 field_O[var0] = false;
                 break L1;
               } else {
-                if (-2 == var0) {
+                if (-2 == (var0 ^ -1)) {
                   field_O[var0] = false;
                   break L1;
                 } else {
@@ -751,58 +791,58 @@ class ga extends wi {
                                                                         break L1;
                                                                       } else {
                                                                         if (var0 != 29) {
-                                                                          if (var0 != -31) {
+                                                                          if ((var0 ^ -1) != -31) {
                                                                             if (31 != var0) {
-                                                                              if (-33 != var0) {
+                                                                              if (-33 != (var0 ^ -1)) {
                                                                                 if (33 != var0) {
                                                                                   if (var0 != 34) {
-                                                                                    if (var0 != -36) {
-                                                                                      if (-37 != var0) {
+                                                                                    if ((var0 ^ -1) != -36) {
+                                                                                      if (-37 != (var0 ^ -1)) {
                                                                                         if (37 == var0) {
                                                                                           field_O[var0] = false;
                                                                                           break L1;
                                                                                         } else {
                                                                                           if (var0 != 38) {
-                                                                                            if (var0 != -40) {
-                                                                                              if (var0 == -41) {
+                                                                                            if ((var0 ^ -1) != -40) {
+                                                                                              if ((var0 ^ -1) == -41) {
                                                                                                 field_O[var0] = false;
                                                                                                 break L1;
                                                                                               } else {
-                                                                                                if (-42 == var0) {
+                                                                                                if (-42 == (var0 ^ -1)) {
                                                                                                   field_O[var0] = false;
                                                                                                   break L1;
                                                                                                 } else {
-                                                                                                  if (-43 != var0) {
+                                                                                                  if (-43 != (var0 ^ -1)) {
                                                                                                     if (43 == var0) {
                                                                                                       field_O[var0] = true;
                                                                                                       break L1;
                                                                                                     } else {
                                                                                                       if (44 != var0) {
-                                                                                                        if (var0 != -46) {
-                                                                                                          if (-47 != var0) {
+                                                                                                        if ((var0 ^ -1) != -46) {
+                                                                                                          if (-47 != (var0 ^ -1)) {
                                                                                                             if (var0 != 47) {
-                                                                                                              if (-49 == var0) {
+                                                                                                              if (-49 == (var0 ^ -1)) {
                                                                                                                 field_O[var0] = false;
                                                                                                                 break L1;
                                                                                                               } else {
-                                                                                                                if (-50 != var0) {
-                                                                                                                  if (var0 != -51) {
-                                                                                                                    if (-52 == var0) {
+                                                                                                                if (-50 != (var0 ^ -1)) {
+                                                                                                                  if ((var0 ^ -1) != -51) {
+                                                                                                                    if (-52 == (var0 ^ -1)) {
                                                                                                                       field_O[var0] = false;
                                                                                                                       break L1;
                                                                                                                     } else {
-                                                                                                                      if (var0 == -53) {
+                                                                                                                      if ((var0 ^ -1) == -53) {
                                                                                                                         field_O[var0] = false;
                                                                                                                         break L1;
                                                                                                                       } else {
                                                                                                                         if (53 != var0) {
-                                                                                                                          if (-55 != var0) {
+                                                                                                                          if (-55 != (var0 ^ -1)) {
                                                                                                                             if (-56 != (var0 ^ -1)) {
-                                                                                                                              if (var0 == -57) {
+                                                                                                                              if ((var0 ^ -1) == -57) {
                                                                                                                                 field_O[var0] = false;
                                                                                                                                 break L1;
                                                                                                                               } else {
-                                                                                                                                if (-58 != var0) {
+                                                                                                                                if (-58 != (var0 ^ -1)) {
                                                                                                                                   if ((var0 ^ -1) == -59) {
                                                                                                                                     field_O[var0] = false;
                                                                                                                                     break L1;
@@ -846,12 +886,12 @@ class ga extends wi {
                                                                                                                                                                   field_O[var0] = false;
                                                                                                                                                                   break L1;
                                                                                                                                                                 } else {
-                                                                                                                                                                  if (var0 != -75) {
+                                                                                                                                                                  if ((var0 ^ -1) != -75) {
                                                                                                                                                                     if (75 == var0) {
                                                                                                                                                                       field_O[var0] = false;
                                                                                                                                                                       break L1;
                                                                                                                                                                     } else {
-                                                                                                                                                                      if (-77 == var0) {
+                                                                                                                                                                      if (-77 == (var0 ^ -1)) {
                                                                                                                                                                         field_O[var0] = false;
                                                                                                                                                                         break L1;
                                                                                                                                                                       } else {
@@ -865,11 +905,11 @@ class ga extends wi {
                                                                                                                                                                               break L1;
                                                                                                                                                                             } else {
                                                                                                                                                                               if (80 != var0) {
-                                                                                                                                                                                if (-82 == var0) {
+                                                                                                                                                                                if (-82 == (var0 ^ -1)) {
                                                                                                                                                                                   field_O[var0] = false;
                                                                                                                                                                                   break L1;
                                                                                                                                                                                 } else {
-                                                                                                                                                                                  if (-83 != var0) {
+                                                                                                                                                                                  if (-83 != (var0 ^ -1)) {
                                                                                                                                                                                     if (83 == var0) {
                                                                                                                                                                                       field_O[var0] = false;
                                                                                                                                                                                       break L1;

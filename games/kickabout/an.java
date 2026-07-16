@@ -11,7 +11,6 @@ final class an {
 
     final bg a(int param0, int param1) {
         bg var3 = null;
-        bg var3_ref = null;
         byte[] var4 = null;
         int var5 = 0;
         var3 = (bg) ((an) this).field_e.a((long)param1, (byte) 43);
@@ -26,9 +25,9 @@ final class an {
             }
           }
           L1: {
-            var3_ref = new bg();
+            var3 = new bg();
             if (var4 != null) {
-              var3_ref.a((byte) 126, new iw(var4));
+              var3.a((byte) 126, new iw(var4));
               break L1;
             } else {
               break L1;
@@ -36,12 +35,12 @@ final class an {
           }
           var5 = 37 % ((param0 - 83) / 36);
           if (32768 <= param1) {
-            var3_ref.a(false);
-            ((an) this).field_e.a((long)param1, (Object) (Object) var3_ref, (byte) -116);
-            return var3_ref;
+            var3.a(false);
+            ((an) this).field_e.a((long)param1, (Object) (Object) var3, (byte) -116);
+            return var3;
           } else {
-            ((an) this).field_e.a((long)param1, (Object) (Object) var3_ref, (byte) -116);
-            return var3_ref;
+            ((an) this).field_e.a((long)param1, (Object) (Object) var3, (byte) -116);
+            return var3;
           }
         } else {
           return var3;

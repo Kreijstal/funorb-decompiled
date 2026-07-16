@@ -30,29 +30,64 @@ final class ac extends al {
     }
 
     final void b(int param0, int param1, int param2) {
-        if ((be.field_j ^ -1) >= -1) {
-            if (!((sh.field_a ^ -1) != 0)) {
-                param2 -= 80;
-                if (qg.field_a[2] < param0) {
-                    if (param0 < qg.field_a[2] + u.field_d[2]) {
-                        if ((to.field_c[2] ^ -1) > (param2 ^ -1)) {
-                            // if_icmpgt L133
+        L0: {
+          if ((be.field_j ^ -1) < -1) {
+            break L0;
+          } else {
+            if ((sh.field_a ^ -1) == 0) {
+              L1: {
+                L2: {
+                  param2 -= 80;
+                  if (qg.field_a[2] >= param0) {
+                    break L2;
+                  } else {
+                    if (param0 >= qg.field_a[2] + u.field_d[2]) {
+                      break L2;
+                    } else {
+                      if (to.field_c[2] >= param2) {
+                        break L2;
+                      } else {
+                        if (dd.field_a[2] + to.field_c[2] > param2) {
+                          break L1;
+                        } else {
+                          break L2;
                         }
+                      }
                     }
+                  }
                 }
-                if (param0 > qg.field_a[3]) {
-                    if (param0 < u.field_d[3] + qg.field_a[3]) {
-                        if ((to.field_c[3] ^ -1) > (param2 ^ -1)) {
-                            if (!(to.field_c[3] + dd.field_a[3] <= param2)) {
-                                this.a((byte) 0, 4);
-                            }
-                        }
+                if (param0 <= qg.field_a[3]) {
+                  break L0;
+                } else {
+                  if (param0 >= u.field_d[3] + qg.field_a[3]) {
+                    break L0;
+                  } else {
+                    if (to.field_c[3] >= param2) {
+                      break L0;
+                    } else {
+                      if (to.field_c[3] + dd.field_a[3] > param2) {
+                        break L1;
+                      } else {
+                        break L0;
+                      }
                     }
+                  }
                 }
+              }
+              this.a((byte) 0, 4);
+              break L0;
+            } else {
+              break L0;
             }
+          }
         }
-        if (param1 != 32526) {
+        L3: {
+          if (param1 == 32526) {
+            break L3;
+          } else {
             field_o = null;
+            break L3;
+          }
         }
     }
 
@@ -238,8 +273,9 @@ final class ac extends al {
           }
         }
         L1: {
+          int fieldTemp$2 = wm.field_e + 1;
           wm.field_e = wm.field_e + 1;
-          if (wm.field_e + 1 == 50) {
+          if (fieldTemp$2 == 50) {
             wm.field_e = 0;
             break L1;
           } else {
@@ -250,8 +286,9 @@ final class ac extends al {
         L2: while (true) {
           if (4 <= var3) {
             L3: {
+              int fieldTemp$3 = ti.field_b + 1;
               ti.field_b = ti.field_b + 1;
-              if (50 <= ti.field_b + 1) {
+              if (50 <= fieldTemp$3) {
                 ti.field_b = 0;
                 break L3;
               } else {
@@ -285,23 +322,21 @@ final class ac extends al {
               }
             }
             L6: {
-              if ((aa.field_a[var3] ^ -1) > -129) {
+              if (aa.field_a[var3] > -129) {
                 aa.field_a[var3] = 128;
                 break L6;
               } else {
                 break L6;
               }
             }
-            L7: {
-              if (-257 > (aa.field_a[var3] ^ -1)) {
-                aa.field_a[var3] = 256;
-                break L7;
-              } else {
-                break L7;
-              }
+            if (-257 < aa.field_a[var3]) {
+              aa.field_a[var3] = 256;
+              var3++;
+              continue L2;
+            } else {
+              var3++;
+              continue L2;
             }
-            var3++;
-            continue L2;
           }
         }
     }
@@ -317,8 +352,8 @@ final class ac extends al {
         this.a(!this.a(2, -1, 123) ? true : false, 0, 82, param1);
         this.a(!this.a(3, -1, 123) ? true : false, 1, 82, param1);
         if (1 == bn.field_i) {
-            if ((to.field_b[0] ^ -1) > -14) {
-                if (-1 == (to.field_b[1] ^ -1)) {
+            if (to.field_b[0] > -14) {
+                if (-1 == to.field_b[1]) {
                     int discarded$0 = bj.field_q.a(ch.field_c, qg.field_a[1] + (vh.field_b - 90), 170 + (to.field_c[1] + id.field_M), 240, 180, 16777215, 0, 1, 1, 0);
                 }
             }
@@ -342,7 +377,7 @@ final class ac extends al {
           var11 = var10;
           var6 = jb.field_a[param1 - -1];
           jb.field_a[0].e(qg.field_a[param1] + vh.field_b, 73 + to.field_c[param1] + (id.field_M + param3), 96);
-          if ((param1 ^ -1) != (bn.field_i ^ -1)) {
+          if (param1 != bn.field_i) {
             if (!param0) {
               var11.d(qg.field_a[param1] + vh.field_b, param3 + (id.field_M + to.field_c[param1]), 200);
               var6.d(qg.field_a[param1] + (vh.field_b - -2), 1 + (id.field_M - (-to.field_c[param1] - param3)), 140);

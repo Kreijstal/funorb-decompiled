@@ -26,9 +26,8 @@ final class fl {
     }
 
     final static fb a(byte param0, String param1) {
-        String var2 = null;
+        Object var2 = null;
         Object var3 = null;
-        fb var3_ref = null;
         String var4 = null;
         int var5 = 0;
         CharSequence var6 = null;
@@ -41,31 +40,31 @@ final class fl {
           if (param0 <= -124) {
             L0: {
               var8 = (CharSequence) (Object) param1;
-              var2 = ce.a(var8, 0);
+              var2 = (Object) (Object) ce.a(var8, 0);
               if (var2 != null) {
                 break L0;
               } else {
-                var2 = (String) (Object) var3_ref;
+                var2 = var3;
                 break L0;
               }
             }
-            var3_ref = (fb) (Object) tk.field_b.a((long)var2.hashCode(), 0);
+            var3 = (Object) (Object) (fb) (Object) tk.field_b.a((long)((String) var2).hashCode(), 0);
             L1: while (true) {
-              if (var3_ref != null) {
+              if (var3 != null) {
                 L2: {
-                  var9 = (CharSequence) (Object) var3_ref.field_ob;
+                  var9 = (CharSequence) (Object) ((fb) var3).field_ob;
                   var4 = ce.a(var9, 0);
                   if (var4 != null) {
                     break L2;
                   } else {
-                    var4 = var3_ref.field_ob;
+                    var4 = ((fb) var3).field_ob;
                     break L2;
                   }
                 }
-                if (var4.equals((Object) (Object) var2)) {
-                  return var3_ref;
+                if (var4.equals(var2)) {
+                  return (fb) var3;
                 } else {
-                  var3_ref = (fb) (Object) tk.field_b.b(0);
+                  var3 = (Object) (Object) (fb) (Object) tk.field_b.b(0);
                   continue L1;
                 }
               } else {
@@ -76,31 +75,31 @@ final class fl {
             L3: {
               field_b = null;
               var6 = (CharSequence) (Object) param1;
-              var2 = ce.a(var6, 0);
+              var2 = (Object) (Object) ce.a(var6, 0);
               if (var2 != null) {
                 break L3;
               } else {
-                var2 = (String) (Object) var6;
+                var2 = (Object) (Object) var6;
                 break L3;
               }
             }
-            var3_ref = (fb) (Object) tk.field_b.a((long)var2.hashCode(), 0);
+            var3 = (Object) (Object) (fb) (Object) tk.field_b.a((long)((String) var2).hashCode(), 0);
             L4: while (true) {
-              if (var3_ref != null) {
+              if (var3 != null) {
                 L5: {
-                  var7 = (CharSequence) (Object) var3_ref.field_ob;
+                  var7 = (CharSequence) (Object) ((fb) var3).field_ob;
                   var4 = ce.a(var7, 0);
                   if (var4 != null) {
                     break L5;
                   } else {
-                    var4 = var3_ref.field_ob;
+                    var4 = ((fb) var3).field_ob;
                     break L5;
                   }
                 }
-                if (var4.equals((Object) (Object) var2)) {
-                  return var3_ref;
+                if (var4.equals(var2)) {
+                  return (fb) var3;
                 } else {
-                  var3_ref = (fb) (Object) tk.field_b.b(0);
+                  var3 = (Object) (Object) (fb) (Object) tk.field_b.b(0);
                   continue L4;
                 }
               } else {

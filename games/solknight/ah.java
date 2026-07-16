@@ -155,17 +155,17 @@ final class ah {
           of.field_d.c(-var4 + var2, var3 - var4 - -k.field_c, 2 * var4, var4 * 2);
           if ((k.field_c ^ -1) < -11) {
             ad.field_b.a(rg.field_a, 320, 240, 16711680, -1);
-            if (param1 != 7) {
-              ah.b(true);
+            if (param1 == 7) {
               return;
             } else {
+              ah.b(true);
               return;
             }
           } else {
-            if (param1 != 7) {
-              ah.b(true);
+            if (param1 == 7) {
               return;
             } else {
+              ah.b(true);
               return;
             }
           }
@@ -206,7 +206,7 @@ final class ah {
             }
           }
           L8: {
-            if (kb.field_b != -3) {
+            if ((kb.field_b ^ -1) != -3) {
               break L8;
             } else {
               var4 = 8;
@@ -215,7 +215,7 @@ final class ah {
             }
           }
           L9: {
-            if (-4 == kb.field_b) {
+            if (-4 == (kb.field_b ^ -1)) {
               var5 = -((wb.field_b + 5) / 6) + 7;
               break L9;
             } else {
@@ -272,7 +272,7 @@ final class ah {
                         break L16;
                       }
                     }
-                    if (-41 <= wb.field_b) {
+                    if (-41 <= (wb.field_b ^ -1)) {
                       break L12;
                     } else {
                       L17: {
@@ -284,7 +284,7 @@ final class ah {
                           break L17;
                         }
                       }
-                      if (-6 >= wb.field_b % 10) {
+                      if (-6 <= (wb.field_b % 10 ^ -1)) {
                         break L12;
                       } else {
                         var5 = 5;
@@ -307,7 +307,7 @@ final class ah {
                       }
                     }
                     L20: {
-                      if (-51 <= wb.field_b) {
+                      if (-51 <= (wb.field_b ^ -1)) {
                         break L20;
                       } else {
                         var5 = 5;
@@ -315,7 +315,7 @@ final class ah {
                       }
                     }
                     L21: {
-                      if (wb.field_b < -76) {
+                      if ((wb.field_b ^ -1) < -76) {
                         var5 = 4;
                         break L21;
                       } else {
@@ -323,7 +323,7 @@ final class ah {
                       }
                     }
                     L22: {
-                      if (-101 >= wb.field_b) {
+                      if (-101 <= (wb.field_b ^ -1)) {
                         break L22;
                       } else {
                         var5 = 3;
@@ -331,7 +331,7 @@ final class ah {
                       }
                     }
                     L23: {
-                      if (-126 >= wb.field_b) {
+                      if (-126 <= (wb.field_b ^ -1)) {
                         break L23;
                       } else {
                         var5 = 2;
@@ -422,7 +422,7 @@ final class ah {
               }
             }
             L32: {
-              if (-41 <= wb.field_b) {
+              if (-41 <= (wb.field_b ^ -1)) {
                 break L32;
               } else {
                 L33: {
@@ -434,7 +434,7 @@ final class ah {
                     break L33;
                   }
                 }
-                if (-6 >= wb.field_b % 10) {
+                if (-6 <= (wb.field_b % 10 ^ -1)) {
                   break L32;
                 } else {
                   var5 = 5;
@@ -453,7 +453,7 @@ final class ah {
                 }
               }
               L35: {
-                if (-51 <= wb.field_b) {
+                if (-51 <= (wb.field_b ^ -1)) {
                   break L35;
                 } else {
                   var5 = 5;
@@ -461,7 +461,7 @@ final class ah {
                 }
               }
               L36: {
-                if (wb.field_b < -76) {
+                if ((wb.field_b ^ -1) < -76) {
                   var5 = 4;
                   break L36;
                 } else {
@@ -469,7 +469,7 @@ final class ah {
                 }
               }
               L37: {
-                if (-101 >= wb.field_b) {
+                if (-101 <= (wb.field_b ^ -1)) {
                   break L37;
                 } else {
                   var5 = 3;
@@ -477,7 +477,7 @@ final class ah {
                 }
               }
               L38: {
-                if (-126 >= wb.field_b) {
+                if (-126 <= (wb.field_b ^ -1)) {
                   break L38;
                 } else {
                   var5 = 2;
@@ -509,10 +509,10 @@ final class ah {
                 }
               }
               td.field_e[var4 + var5].a(128, -si.field_E + ci.field_sb, 119, jj.field_t, 320 + (-wd.field_c + rj.field_b));
-              if (param1 != 7) {
-                ah.b(true);
+              if (param1 == 7) {
                 return;
               } else {
+                ah.b(true);
                 return;
               }
             } else {
@@ -533,10 +533,10 @@ final class ah {
                 }
               }
               td.field_e[var4 + var5].a(128, -si.field_E + ci.field_sb, 119, jj.field_t, 320 + (-wd.field_c + rj.field_b));
-              if (param1 == 7) {
+              if (param1 != 7) {
+                ah.b(true);
                 return;
               } else {
-                ah.b(true);
                 return;
               }
             }
@@ -553,7 +553,7 @@ final class ah {
                   }
                 }
                 L46: {
-                  if (-51 <= wb.field_b) {
+                  if (-51 <= (wb.field_b ^ -1)) {
                     break L46;
                   } else {
                     var5 = 5;
@@ -561,7 +561,7 @@ final class ah {
                   }
                 }
                 L47: {
-                  if (wb.field_b < -76) {
+                  if ((wb.field_b ^ -1) < -76) {
                     var5 = 4;
                     break L47;
                   } else {
@@ -569,7 +569,7 @@ final class ah {
                   }
                 }
                 L48: {
-                  if (-101 >= wb.field_b) {
+                  if (-101 <= (wb.field_b ^ -1)) {
                     break L48;
                   } else {
                     var5 = 3;
@@ -577,7 +577,7 @@ final class ah {
                   }
                 }
                 L49: {
-                  if (-126 >= wb.field_b) {
+                  if (-126 <= (wb.field_b ^ -1)) {
                     break L49;
                   } else {
                     var5 = 2;
@@ -611,10 +611,10 @@ final class ah {
               }
             }
             td.field_e[var4 + var5].a(128, -si.field_E + ci.field_sb, 119, jj.field_t, 320 + (-wd.field_c + rj.field_b));
-            if (param1 == 7) {
+            if (param1 != 7) {
+              ah.b(true);
               return;
             } else {
-              ah.b(true);
               return;
             }
           }

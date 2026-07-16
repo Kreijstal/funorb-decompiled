@@ -74,11 +74,8 @@ final class ad {
         int var21 = 0;
         int var22 = 0;
         Object var23 = null;
-        int[] var23_array = null;
         Object var24 = null;
-        int[] var24_array = null;
         Object var25 = null;
-        int[] var25_array = null;
         int var26 = 0;
         byte[] var27_ref_byte__ = null;
         int var27 = 0;
@@ -208,9 +205,9 @@ final class ad {
                                                           var12 = 50;
                                                           var21 = param0.field_B[var11];
                                                           var22 = param0.field_g[var21];
-                                                          var23_array = param0.field_p[var21];
-                                                          var25_array = param0.field_j[var21];
-                                                          var24_array = param0.field_y[var21];
+                                                          var23 = (Object) (Object) param0.field_p[var21];
+                                                          var25 = (Object) (Object) param0.field_j[var21];
+                                                          var24 = (Object) (Object) param0.field_y[var21];
                                                           break L13;
                                                         }
                                                       }
@@ -218,13 +215,13 @@ final class ad {
                                                       var18 = var22;
                                                       var19 = ad.a(var18, param0);
                                                       L14: while (true) {
-                                                        if (var19 > var23_array[var18]) {
+                                                        if (var19 > ((int[]) var23)[var18]) {
                                                           var18++;
                                                           var20 = ad.a(param0);
                                                           var19 = var19 << 1 | var20;
                                                           continue L14;
                                                         } else {
-                                                          var13 = var25_array[var19 - var24_array[var18]];
+                                                          var13 = ((int[]) var25)[var19 - ((int[]) var24)[var18]];
                                                           L15: while (true) {
                                                             if (var13 != var10) {
                                                               L16: {
@@ -323,9 +320,9 @@ final class ad {
                                                                         var12 = 50;
                                                                         var21 = param0.field_B[var11];
                                                                         var22 = param0.field_g[var21];
-                                                                        var23_array = param0.field_p[var21];
-                                                                        var25_array = param0.field_j[var21];
-                                                                        var24_array = param0.field_y[var21];
+                                                                        var23 = (Object) (Object) param0.field_p[var21];
+                                                                        var25 = (Object) (Object) param0.field_j[var21];
+                                                                        var24 = (Object) (Object) param0.field_y[var21];
                                                                         break L24;
                                                                       }
                                                                     }
@@ -333,13 +330,13 @@ final class ad {
                                                                     var18 = var22;
                                                                     var19 = ad.a(var18, param0);
                                                                     L25: while (true) {
-                                                                      if (var19 > var23_array[var18]) {
+                                                                      if (var19 > ((int[]) var23)[var18]) {
                                                                         var18++;
                                                                         var20 = ad.a(param0);
                                                                         var19 = var19 << 1 | var20;
                                                                         continue L25;
                                                                       } else {
-                                                                        var13 = var25_array[var19 - var24_array[var18]];
+                                                                        var13 = ((int[]) var25)[var19 - ((int[]) var24)[var18]];
                                                                         continue L15;
                                                                       }
                                                                     }
@@ -373,9 +370,9 @@ final class ad {
                                                                     var12 = 50;
                                                                     var21 = param0.field_B[var11];
                                                                     var22 = param0.field_g[var21];
-                                                                    var23_array = param0.field_p[var21];
-                                                                    var25_array = param0.field_j[var21];
-                                                                    var24_array = param0.field_y[var21];
+                                                                    var23 = (Object) (Object) param0.field_p[var21];
+                                                                    var25 = (Object) (Object) param0.field_j[var21];
+                                                                    var24 = (Object) (Object) param0.field_y[var21];
                                                                     break L28;
                                                                   }
                                                                 }
@@ -383,13 +380,13 @@ final class ad {
                                                                 var18 = var22;
                                                                 var19 = ad.a(var18, param0);
                                                                 L29: while (true) {
-                                                                  if (var19 > var23_array[var18]) {
+                                                                  if (var19 > ((int[]) var23)[var18]) {
                                                                     var18++;
                                                                     var20 = ad.a(param0);
                                                                     var19 = var19 << 1 | var20;
                                                                     continue L29;
                                                                   } else {
-                                                                    var13 = var25_array[var19 - var24_array[var18]];
+                                                                    var13 = ((int[]) var25)[var19 - ((int[]) var24)[var18]];
                                                                     if (var13 == 0) {
                                                                       continue L26;
                                                                     } else {
@@ -745,21 +742,24 @@ final class ad {
         int stackOut_1_0 = 0;
         var5 = (Object) (Object) field_a;
         synchronized (var5) {
-          field_a.field_r = param2;
-          field_a.field_t = param4;
-          field_a.field_q = param0;
-          field_a.field_C = 0;
-          field_a.field_h = param1;
-          field_a.field_i = 0;
-          field_a.field_o = 0;
-          field_a.field_D = 0;
-          field_a.field_m = 0;
-          ad.b(field_a);
-          param1 = param1 - field_a.field_h;
-          field_a.field_r = null;
-          field_a.field_q = null;
-          stackOut_1_0 = param1;
-          stackIn_2_0 = stackOut_1_0;
+          L0: {
+            field_a.field_r = param2;
+            field_a.field_t = param4;
+            field_a.field_q = param0;
+            field_a.field_C = 0;
+            field_a.field_h = param1;
+            field_a.field_i = 0;
+            field_a.field_o = 0;
+            field_a.field_D = 0;
+            field_a.field_m = 0;
+            ad.b(field_a);
+            param1 = param1 - field_a.field_h;
+            field_a.field_r = null;
+            field_a.field_q = null;
+            stackOut_1_0 = param1;
+            stackIn_2_0 = stackOut_1_0;
+            break L0;
+          }
         }
         return stackIn_2_0;
     }

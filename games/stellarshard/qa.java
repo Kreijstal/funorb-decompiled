@@ -33,122 +33,78 @@ final class qa {
         int var16 = 0;
         int var17 = 0;
         Exception var18 = null;
-        int statePc = 0;
-        Throwable caughtException = null;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    field_s = param0;
-                    field_m = param1;
-                    field_r = param2;
-                    field_n = param9;
-                    field_g = param10;
-                    field_b = param11;
-                    var12 = cc.field_n;
-                    var13 = cc.field_p;
-                    var14 = 0;
-                    var15 = param3[param6];
-                    var16 = param4[param6];
-                    var17 = param5[param6];
-                    if (var17 < field_f) {
-                        statePc = 2;
-                    } else {
-                        statePc = 1;
-                    }
-                    continue stateLoop;
-                }
-                case 1: {
-                    field_q[0] = var12 + (var15 << 9) / var17;
-                    field_a[0] = var13 + (var16 << 9) / var17;
-                    statePc = 3;
-                    continue stateLoop;
-                }
-                case 2: {
-                    field_q[0] = -5000;
-                    var14 = 1;
-                    statePc = 3;
-                    continue stateLoop;
-                }
-                case 3: {
-                    field_c[0] = var15;
-                    field_k[0] = var16;
-                    field_u[0] = var17;
-                    var15 = param3[param7];
-                    var16 = param4[param7];
-                    var17 = param5[param7];
-                    if (var17 < field_f) {
-                        statePc = 5;
-                    } else {
-                        statePc = 4;
-                    }
-                    continue stateLoop;
-                }
-                case 4: {
-                    field_q[1] = var12 + (var15 << 9) / var17;
-                    field_a[1] = var13 + (var16 << 9) / var17;
-                    statePc = 6;
-                    continue stateLoop;
-                }
-                case 5: {
-                    field_q[1] = -5000;
-                    var14 = 1;
-                    statePc = 6;
-                    continue stateLoop;
-                }
-                case 6: {
-                    field_c[1] = var15;
-                    field_k[1] = var16;
-                    field_u[1] = var17;
-                    var15 = param3[param8];
-                    var16 = param4[param8];
-                    var17 = param5[param8];
-                    if (var17 < field_f) {
-                        statePc = 8;
-                    } else {
-                        statePc = 7;
-                    }
-                    continue stateLoop;
-                }
-                case 7: {
-                    field_q[2] = var12 + (var15 << 9) / var17;
-                    field_a[2] = var13 + (var16 << 9) / var17;
-                    statePc = 9;
-                    continue stateLoop;
-                }
-                case 8: {
-                    field_q[2] = -5000;
-                    var14 = 1;
-                    statePc = 9;
-                    continue stateLoop;
-                }
-                case 9: {
-                    field_c[2] = var15;
-                    field_k[2] = var16;
-                    field_u[2] = var17;
-                    statePc = 10;
-                    continue stateLoop;
-                }
-                case 10: {
-                    try {
-                        qa.a(var14 != 0, false, 0);
-                        statePc = 13;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_10) {
-                        caughtException = stateCaught_10;
-                        statePc = 12;
-                        continue stateLoop;
-                    }
-                }
-                case 12: {
-                    var18 = (Exception) (Object) caughtException;
-                    statePc = 13;
-                    continue stateLoop;
-                }
-                case 13: {
-                    return;
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
-            }
+        Throwable decompiledCaughtException = null;
+        L0: {
+          field_s = param0;
+          field_m = param1;
+          field_r = param2;
+          field_n = param9;
+          field_g = param10;
+          field_b = param11;
+          var12 = cc.field_n;
+          var13 = cc.field_p;
+          var14 = 0;
+          var15 = param3[param6];
+          var16 = param4[param6];
+          var17 = param5[param6];
+          if (var17 < field_f) {
+            field_q[0] = -5000;
+            var14 = 1;
+            break L0;
+          } else {
+            field_q[0] = var12 + (var15 << 9) / var17;
+            field_a[0] = var13 + (var16 << 9) / var17;
+            break L0;
+          }
+        }
+        L1: {
+          field_c[0] = var15;
+          field_k[0] = var16;
+          field_u[0] = var17;
+          var15 = param3[param7];
+          var16 = param4[param7];
+          var17 = param5[param7];
+          if (var17 < field_f) {
+            field_q[1] = -5000;
+            var14 = 1;
+            break L1;
+          } else {
+            field_q[1] = var12 + (var15 << 9) / var17;
+            field_a[1] = var13 + (var16 << 9) / var17;
+            break L1;
+          }
+        }
+        L2: {
+          field_c[1] = var15;
+          field_k[1] = var16;
+          field_u[1] = var17;
+          var15 = param3[param8];
+          var16 = param4[param8];
+          var17 = param5[param8];
+          if (var17 < field_f) {
+            field_q[2] = -5000;
+            var14 = 1;
+            break L2;
+          } else {
+            field_q[2] = var12 + (var15 << 9) / var17;
+            field_a[2] = var13 + (var16 << 9) / var17;
+            break L2;
+          }
+        }
+        field_c[2] = var15;
+        field_k[2] = var16;
+        field_u[2] = var17;
+        try {
+          L3: {
+            qa.a(var14 != 0, false, 0);
+            break L3;
+          }
+        } catch (java.lang.Exception decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L4: {
+            var18 = (Exception) (Object) decompiledCaughtException;
+            break L4;
+          }
         }
     }
 
@@ -286,8 +242,9 @@ final class qa {
                 var9 = (field_f - var3) * field_p[var5 - var3];
                 field_h[var2] = var0 + (var6 + ((field_c[2] - var6) * var9 >> 16) << 9) / field_f;
                 field_e[var2] = var1 + (var7 + ((field_k[2] - var7) * var9 >> 16) << 9) / field_f;
+                int incrementValue$9 = var2;
                 var2++;
-                field_d[var2] = var8 + ((field_b - var8) * var9 >> 16);
+                field_d[incrementValue$9] = var8 + ((field_b - var8) * var9 >> 16);
                 break L1;
               }
             }
@@ -297,15 +254,17 @@ final class qa {
               var9 = (field_f - var3) * field_p[var4 - var3];
               field_h[var2] = var0 + (var6 + ((field_c[1] - var6) * var9 >> 16) << 9) / field_f;
               field_e[var2] = var1 + (var7 + ((field_k[1] - var7) * var9 >> 16) << 9) / field_f;
+              int incrementValue$10 = var2;
               var2++;
-              field_d[var2] = var8 + ((field_g - var8) * var9 >> 16);
+              field_d[incrementValue$10] = var8 + ((field_g - var8) * var9 >> 16);
               break L0;
             }
           } else {
             field_h[var2] = field_q[0];
             field_e[var2] = field_a[0];
+            int incrementValue$11 = var2;
             var2++;
-            field_d[var2] = field_n;
+            field_d[incrementValue$11] = field_n;
             break L0;
           }
         }
@@ -321,8 +280,9 @@ final class qa {
                 var9 = (field_f - var4) * field_p[var3 - var4];
                 field_h[var2] = var0 + (var6 + ((field_c[0] - var6) * var9 >> 16) << 9) / field_f;
                 field_e[var2] = var1 + (var7 + ((field_k[0] - var7) * var9 >> 16) << 9) / field_f;
+                int incrementValue$12 = var2;
                 var2++;
-                field_d[var2] = var8 + ((field_n - var8) * var9 >> 16);
+                field_d[incrementValue$12] = var8 + ((field_n - var8) * var9 >> 16);
                 break L3;
               }
             }
@@ -332,15 +292,17 @@ final class qa {
               var9 = (field_f - var4) * field_p[var5 - var4];
               field_h[var2] = var0 + (var6 + ((field_c[2] - var6) * var9 >> 16) << 9) / field_f;
               field_e[var2] = var1 + (var7 + ((field_k[2] - var7) * var9 >> 16) << 9) / field_f;
+              int incrementValue$13 = var2;
               var2++;
-              field_d[var2] = var8 + ((field_b - var8) * var9 >> 16);
+              field_d[incrementValue$13] = var8 + ((field_b - var8) * var9 >> 16);
               break L2;
             }
           } else {
             field_h[var2] = field_q[1];
             field_e[var2] = field_a[1];
+            int incrementValue$14 = var2;
             var2++;
-            field_d[var2] = field_g;
+            field_d[incrementValue$14] = field_g;
             break L2;
           }
         }
@@ -356,8 +318,9 @@ final class qa {
                 var9 = (field_f - var5) * field_p[var4 - var5];
                 field_h[var2] = var0 + (var6 + ((field_c[1] - var6) * var9 >> 16) << 9) / field_f;
                 field_e[var2] = var1 + (var7 + ((field_k[1] - var7) * var9 >> 16) << 9) / field_f;
+                int incrementValue$15 = var2;
                 var2++;
-                field_d[var2] = var8 + ((field_g - var8) * var9 >> 16);
+                field_d[incrementValue$15] = var8 + ((field_g - var8) * var9 >> 16);
                 break L5;
               }
             }
@@ -367,15 +330,17 @@ final class qa {
               var9 = (field_f - var5) * field_p[var3 - var5];
               field_h[var2] = var0 + (var6 + ((field_c[0] - var6) * var9 >> 16) << 9) / field_f;
               field_e[var2] = var1 + (var7 + ((field_k[0] - var7) * var9 >> 16) << 9) / field_f;
+              int incrementValue$16 = var2;
               var2++;
-              field_d[var2] = var8 + ((field_n - var8) * var9 >> 16);
+              field_d[incrementValue$16] = var8 + ((field_n - var8) * var9 >> 16);
               break L4;
             }
           } else {
             field_h[var2] = field_q[2];
             field_e[var2] = field_a[2];
+            int incrementValue$17 = var2;
             var2++;
-            field_d[var2] = field_b;
+            field_d[incrementValue$17] = field_b;
             break L4;
           }
         }

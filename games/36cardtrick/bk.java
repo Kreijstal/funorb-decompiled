@@ -17,16 +17,16 @@ final class bk {
             ((bk) this).field_d = null;
             return null;
           } else {
-            ((bk) this).field_d = ((qb) var2).field_d;
+            ((bk) this).field_d = var2.field_d;
             return var2;
           }
         } else {
-          ((bk) this).field_d = (qb) null;
+          ((bk) this).field_d = null;
           if (var2 == ((bk) this).field_a) {
             ((bk) this).field_d = null;
             return null;
           } else {
-            ((bk) this).field_d = ((qb) var2).field_d;
+            ((bk) this).field_d = var2.field_d;
             return var2;
           }
         }
@@ -56,7 +56,7 @@ final class bk {
 
     final qb d(int param0) {
         qb var2 = null;
-        qb var3 = null;
+        Object var3 = null;
         var2 = ((bk) this).field_a.field_d;
         if (param0 < -58) {
           if (var2 == ((bk) this).field_a) {
@@ -66,7 +66,7 @@ final class bk {
             return var2;
           }
         } else {
-          var3 = (qb) null;
+          var3 = null;
           ((bk) this).a((qb) null, -66);
           if (var2 == ((bk) this).field_a) {
             return null;
@@ -85,9 +85,9 @@ final class bk {
           return null;
         } else {
           if (param0 > -91) {
-            return (qb) null;
+            return null;
           } else {
-            ((bk) this).field_d = ((qb) var2).field_d;
+            ((bk) this).field_d = var2.field_d;
             return var2;
           }
         }
@@ -112,7 +112,7 @@ final class bk {
         int stackOut_2_0 = 0;
         if (param0 != 2220) {
           L0: {
-            field_c = (String[]) null;
+            field_c = null;
             if (((bk) this).field_a != ((bk) this).field_a.field_d) {
               stackOut_7_0 = 0;
               stackIn_8_0 = stackOut_7_0;
@@ -151,7 +151,7 @@ final class bk {
             return var2;
           }
         } else {
-          field_f = (String) null;
+          field_f = null;
           var2 = ((bk) this).field_a.field_a;
           if (((bk) this).field_a == var2) {
             return null;
@@ -163,9 +163,9 @@ final class bk {
     }
 
     final void a(int param0, qb param1) {
-        String var4 = null;
+        Object var4 = null;
         L0: {
-          if (null != ((qb) param1).field_a) {
+          if (null != param1.field_a) {
             param1.c(109);
             break L0;
           } else {
@@ -174,16 +174,16 @@ final class bk {
         }
         param1.field_a = ((bk) this).field_a;
         if (param0 > -119) {
-          var4 = (String) null;
+          var4 = null;
           bk.a((java.applet.Applet) null, 44, (String) null, true);
           param1.field_d = ((bk) this).field_a.field_d;
-          ((qb) param1).field_a.field_d = param1;
-          ((qb) param1).field_d.field_a = param1;
+          param1.field_a.field_d = param1;
+          param1.field_d.field_a = param1;
           return;
         } else {
           param1.field_d = ((bk) this).field_a.field_d;
-          ((qb) param1).field_a.field_d = param1;
-          ((qb) param1).field_d.field_a = param1;
+          param1.field_a.field_d = param1;
+          param1.field_d.field_a = param1;
           return;
         }
     }
@@ -195,9 +195,9 @@ final class bk {
     }
 
     final void a(qb param0, int param1) {
-        String var4 = null;
+        Object var4 = null;
         L0: {
-          if (((qb) param0).field_a != null) {
+          if (param0.field_a != null) {
             param0.c(107);
             break L0;
           } else {
@@ -206,10 +206,10 @@ final class bk {
         }
         param0.field_a = ((bk) this).field_a.field_a;
         param0.field_d = ((bk) this).field_a;
-        ((qb) param0).field_a.field_d = param0;
-        ((qb) param0).field_d.field_a = param0;
+        param0.field_a.field_d = param0;
+        param0.field_d.field_a = param0;
         if (param1 != 27362) {
-          var4 = (String) null;
+          var4 = null;
           bk.a((java.applet.Applet) null, -120, (String) null, false);
           return;
         } else {
@@ -225,7 +225,7 @@ final class bk {
           var2 = ((bk) this).field_a.field_d;
           if (var2 == ((bk) this).field_a) {
             if (param0 != 29026) {
-              field_c = (String[]) null;
+              field_c = null;
               ((bk) this).field_d = null;
               return;
             } else {

@@ -219,7 +219,7 @@ final class aq {
                 }
               }
               L3: {
-                if (param1 > -2) {
+                if ((param1 ^ -1) > -2) {
                   break L3;
                 } else {
                   var2++;
@@ -263,7 +263,7 @@ final class aq {
                 }
               }
               L7: {
-                if (param1 > -2) {
+                if ((param1 ^ -1) > -2) {
                   break L7;
                 } else {
                   var2++;
@@ -308,7 +308,7 @@ final class aq {
               }
             }
             L11: {
-              if (param1 > -2) {
+              if ((param1 ^ -1) > -2) {
                 break L11;
               } else {
                 var2++;

@@ -43,9 +43,10 @@ final class hb extends e {
                       stackIn_9_0 = stackOut_7_0;
                       stackIn_8_0 = stackOut_7_0;
                       if (var6 == null) {
-                        param1.field_s[var4] = new te();
+                        te dupTemp$49 = new te();
+                        param1.field_s[var4] = dupTemp$49;
                         stackOut_9_0 = (te) (Object) stackIn_9_0;
-                        stackOut_9_1 = new te();
+                        stackOut_9_1 = (te) dupTemp$49;
                         stackIn_10_0 = stackOut_9_0;
                         stackIn_10_1 = stackOut_9_1;
                         break L2;
@@ -204,8 +205,9 @@ final class hb extends e {
     public hb() {
         ((hb) this).field_s = new te[6];
         ((hb) this).field_r = new te();
-        ((hb) this).field_s[0] = new te();
-        te var1 = new te();
+        te dupTemp$0 = new te();
+        ((hb) this).field_s[0] = dupTemp$0;
+        te var1 = dupTemp$0;
         var1.a(0);
     }
 
@@ -213,8 +215,9 @@ final class hb extends e {
         if (param1 != -17562) {
             return null;
         }
-        ((hb) this).field_s[param0] = new te();
-        return new te();
+        te dupTemp$0 = new te();
+        ((hb) this).field_s[param0] = dupTemp$0;
+        return dupTemp$0;
     }
 
     hb(hb param0, boolean param1) {

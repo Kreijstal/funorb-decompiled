@@ -1,6 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
+import java.lang.String;
+
 final class un {
     af field_B;
     qe field_t;
@@ -167,36 +169,65 @@ final class un {
             break L1;
           }
         }
-        ((eb) (Object) stackIn_9_1).field_N = stackIn_9_2;
-        ((eb) (Object) stackIn_9_0).field_H = stackIn_9_2;
+        stackIn_9_1.field_N = stackIn_9_2;
+        stackIn_9_0.field_H = stackIn_9_2;
         qh.field_b.d((byte) -124);
     }
 
     private final String e(int param0) {
+        Object var2 = null;
         boolean[] var3 = null;
         int var4 = 0;
         int var5 = 0;
-        int var6 = Chess.field_G;
-        if (param0 != 1) {
-            return null;
-        }
-        String var2 = null;
-        if (((un) this).field_b) {
-            // if_icmpeq L41
-        } else {
-            if (-1 != ((un) this).field_t.b(0)) {
-                var3 = ((un) this).field_t.field_d;
-                var4 = 0;
-                for (var5 = var3.length + -1; (var5 ^ -1) <= -1; var5--) {
-                    // ifne L98
-                    var4 = var4 != 0 | var3[var5] ? 1 : 0;
+        int var6 = 0;
+        var6 = Chess.field_G;
+        if (param0 == 1) {
+          L0: {
+            L1: {
+              var2 = null;
+              if (!((un) this).field_b) {
+                break L1;
+              } else {
+                if (((un) this).field_a == ((un) this).field_B.field_l) {
+                  break L1;
+                } else {
+                  break L0;
                 }
-                if (!(var4 != 0)) {
-                    var2 = ba.field_N;
-                }
+              }
             }
+            if (-1 == ((un) this).field_t.b(0)) {
+              break L0;
+            } else {
+              var3 = ((un) this).field_t.field_d;
+              var4 = 0;
+              var5 = var3.length + -1;
+              L2: while (true) {
+                L3: {
+                  if ((var5 ^ -1) > -1) {
+                    break L3;
+                  } else {
+                    if (var4 != 0) {
+                      break L3;
+                    } else {
+                      var4 = var4 != 0 | var3[var5] ? 1 : 0;
+                      var5--;
+                      continue L2;
+                    }
+                  }
+                }
+                if (var4 == 0) {
+                  var2 = (Object) (Object) ba.field_N;
+                  break L0;
+                } else {
+                  break L0;
+                }
+              }
+            }
+          }
+          return (String) var2;
+        } else {
+          return null;
         }
-        return var2;
     }
 
     private final void a(int param0, int param1, boolean param2) {
@@ -355,8 +386,8 @@ final class un {
               }
             }
             L3: {
-              stackIn_7_2[stackIn_7_3] = (String) (Object) stackIn_7_4;
-              var11 = oc.a((String) (Object) stackIn_7_0, (String[]) (Object) stackIn_7_1, (byte) -92);
+              stackIn_7_2[stackIn_7_3] = stackIn_7_4;
+              var11 = oc.a(stackIn_7_0, stackIn_7_1, (byte) -92);
               stackOut_7_0 = v.field_j;
               stackOut_7_1 = (String) var11;
               stackOut_7_2 = 370;
@@ -441,7 +472,7 @@ final class un {
                 break L4;
               }
             }
-            ((c) (Object) stackIn_13_0).b((String) (Object) stackIn_13_1, stackIn_13_2, stackIn_13_3, stackIn_13_4, stackIn_13_5);
+            ((c) (Object) stackIn_13_0).b(stackIn_13_1, stackIn_13_2, stackIn_13_3, stackIn_13_4, stackIn_13_5);
             break L1;
           }
         }
@@ -512,7 +543,7 @@ final class un {
               }
             }
             L3: {
-              ((af) (Object) stackIn_8_1).field_l = stackIn_8_2;
+              stackIn_8_1.field_l = stackIn_8_2;
               ((un) this).field_a = stackIn_8_2;
               stackOut_8_0 = this;
               stackIn_10_0 = stackOut_8_0;
@@ -559,7 +590,6 @@ final class un {
     }
 
     private final void d(byte param0) {
-        String var16_ref = null;
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -580,7 +610,7 @@ final class un {
         int var18_int = 0;
         String var18 = null;
         int var19 = 0;
-        c var19_ref = null;
+        c var19_ref_c = null;
         int var20 = 0;
         String var20_ref_String = null;
         int var21 = 0;
@@ -700,7 +730,6 @@ final class un {
         String stackOut_72_0 = null;
         int stackOut_84_0 = 0;
         int stackOut_83_0 = 0;
-        var16_ref = null;
         L0: {
           var24 = Chess.field_G;
           var2 = -(ja.field_g.field_j / 2) + (8 - -(ph.field_l.field_j / 2));
@@ -1008,14 +1037,14 @@ final class un {
                     break L10;
                   } else {
                     if (0 <= ((un) this).field_B.field_l) {
-                      var19_ref = v.field_k;
+                      var19_ref_c = v.field_k;
                       var20_ref_String = ((un) this).field_B.field_i[((un) this).field_B.field_l];
                       var30 = oc.a(rc.field_f, new String[1], (byte) -43);
                       var18 = var30;
                       var18 = var30;
                       wb.a(548, -jj.field_b.field_C + 150, 89, var16, 9, var13, 128);
                       wb.a(548, -jj.field_b.field_C + 150, 89, var16, 9, var13);
-                      int discarded$7 = ((lh) (Object) var19_ref).a(var30, 549, 150 - ((lh) (Object) var19_ref).field_C, 87, var16, var14, -1, var15, 1, 1, ((lh) (Object) var19_ref).field_C);
+                      int discarded$7 = ((lh) (Object) var19_ref_c).a(var30, 549, 150 - ((lh) (Object) var19_ref_c).field_C, 87, var16, var14, -1, var15, 1, 1, ((lh) (Object) var19_ref_c).field_C);
                       break L10;
                     } else {
                       break L10;
@@ -1048,7 +1077,7 @@ final class un {
                         break L20;
                       }
                     }
-                    var16_ref = (String) (Object) stackIn_74_0;
+                    var16_ref_String = stackIn_74_0;
                     var17_ref_String__ = new String[50];
                     var37 = new int[50];
                     var35 = var37;
@@ -1059,13 +1088,13 @@ final class un {
                     var19 = -1 + var37.length;
                     L21: while (true) {
                       if (var19 <= 0) {
-                        var19 = v.field_j.a(var16_ref, var38, var17_ref_String__);
+                        var19 = v.field_j.a(var16_ref_String, var38, var17_ref_String__);
                         var20 = -(var19 * v.field_j.field_C) + (-v.field_j.field_t + 474);
                         var21 = (int)(((double)var19 + 0.5) * (double)v.field_j.field_C);
                         var22 = v.field_j.field_C / 2 - 1;
                         wb.a(-var22 + 150, var20, var22 * 2 + 340, var21, var22, var13, 128);
                         wb.a(150 + -var22, var20, 340 - -(2 * var22), var21, var22, var13);
-                        int discarded$8 = v.field_j.a(var16_ref, 150, var20, 340, var21, var14, var13, var15 / 2 + 128, 1, 1, v.field_j.field_C);
+                        int discarded$8 = v.field_j.a(var16_ref_String, 150, var20, 340, var21, var14, var13, var15 / 2 + 128, 1, 1, v.field_j.field_C);
                         break L18;
                       } else {
                         var37[var19] = 340;
@@ -1373,7 +1402,7 @@ final class un {
           ((un) this).field_o = ((un) this).field_o ^ 1 << ((un) this).field_f;
           ((un) this).field_x = ((un) this).field_x ^ 1 << ((un) this).field_f;
           ((un) this).field_D = ((un) this).field_D - 1;
-          if (vg.field_a != -2) {
+          if ((vg.field_a ^ -1) != -2) {
             break L0;
           } else {
             L1: {
@@ -1392,7 +1421,7 @@ final class un {
           }
         }
         ((un) this).field_E = ((un) this).field_E - ((un) this).field_r;
-        if (-14 == vg.field_a) {
+        if (-14 == (vg.field_a ^ -1)) {
           L2: {
             if (((un) this).field_b) {
               if (!((un) this).field_B.field_d) {
@@ -1977,31 +2006,61 @@ final class un {
 
     private final void a(int param0, boolean param1, boolean param2) {
         int var4 = 0;
-        if (!param1) {
+        L0: {
+          if (param1) {
+            break L0;
+          } else {
             ((un) this).field_l = 49;
+            break L0;
+          }
         }
-        if (((un) this).field_b) {
-            if (((un) this).field_B.field_l != ((un) this).field_a) {
-            } else {
-                if (!param2) {
-                    if (((un) this).field_t.b(0) != -1) {
-                        if ((param0 ^ -1) == 0) {
-                        } else {
-                            if (!(5 != ((un) this).field_l)) {
-                                this.a(-76, 0, 255);
-                            }
-                            var4 = ((un) this).field_t.b(0);
-                            if ((-16773121 & ((un) this).field_t.field_f[var4] ^ -1) == -7) {
-                                if (Math.abs(var4 - param0) != -3) {
-                                    // if_icmpeq L143
-                                } else {
-                                    this.a(-96, 1, 254);
-                                }
-                            }
-                        }
+        L1: {
+          if (!((un) this).field_b) {
+            break L1;
+          } else {
+            if (((un) this).field_B.field_l == ((un) this).field_a) {
+              if (param2) {
+                break L1;
+              } else {
+                if (((un) this).field_t.b(0) == -1) {
+                  break L1;
+                } else {
+                  if ((param0 ^ -1) != 0) {
+                    L2: {
+                      if (5 == ((un) this).field_l) {
+                        this.a(-76, 0, 255);
+                        break L2;
+                      } else {
+                        break L2;
+                      }
                     }
+                    var4 = ((un) this).field_t.b(0);
+                    if ((-16773121 & ((un) this).field_t.field_f[var4] ^ -1) != -7) {
+                      break L1;
+                    } else {
+                      L3: {
+                        if (Math.abs(var4 - param0) == -3) {
+                          break L3;
+                        } else {
+                          if (-4 == Math.abs(-param0 + var4)) {
+                            break L3;
+                          } else {
+                            break L1;
+                          }
+                        }
+                      }
+                      this.a(-96, 1, 254);
+                      break L1;
+                    }
+                  } else {
+                    break L1;
+                  }
                 }
+              }
+            } else {
+              break L1;
             }
+          }
         }
     }
 
@@ -2504,8 +2563,7 @@ final class un {
           }
         }
         L6: {
-          new qe(stackIn_17_3 != 0);
-          ((un) this).field_t = (qe) (Object) stackIn_17_1;
+          ((un) this).field_t = new qe(stackIn_17_3 != 0);
           if (!((un) this).field_b) {
             ((un) this).field_B.a(0, 255, 0);
             ((un) this).field_v = p.field_j[((un) this).field_B.field_j];

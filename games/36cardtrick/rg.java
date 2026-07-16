@@ -24,7 +24,7 @@ final class rg implements Iterator {
             ((rg) this).field_b = null;
             var1 = null;
         } else {
-            ((rg) this).field_b = ((he) var1).field_h;
+            ((rg) this).field_b = var1.field_h;
         }
         ((rg) this).field_c = var1;
         return (Object) (Object) var1;

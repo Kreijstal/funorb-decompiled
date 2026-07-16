@@ -233,7 +233,7 @@ final class k extends nc {
 
     final static rg a(String param0, boolean param1, int param2, String param3) {
         long var4 = 0L;
-        String var6 = null;
+        Object var6 = null;
         CharSequence var7 = null;
         L0: {
           var4 = 0L;
@@ -243,15 +243,15 @@ final class k extends nc {
             var4 = nh.a(var7, -29667);
             break L0;
           } else {
-            var6 = param3;
+            var6 = (Object) (Object) param3;
             break L0;
           }
         }
         if (param2 >= -54) {
           k.a(-82, 96, 5, -81);
-          return ck.a(param0, var6, param1, var4, 96);
+          return ck.a(param0, (String) var6, param1, var4, 96);
         } else {
-          return ck.a(param0, var6, param1, var4, 96);
+          return ck.a(param0, (String) var6, param1, var4, 96);
         }
     }
 

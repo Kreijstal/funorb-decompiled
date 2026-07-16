@@ -183,6 +183,9 @@ final class oj extends om {
         Object stackOut_17_0 = null;
         int stackOut_17_1 = 0;
         int stackOut_17_2 = 0;
+        Object stackOut_15_0 = null;
+        int stackOut_15_1 = 0;
+        int stackOut_15_2 = 0;
         L0: {
           L1: {
             L2: {
@@ -204,7 +207,7 @@ final class oj extends om {
                 if (var6 != ((oj) this).field_r) {
                   break L3;
                 } else {
-                  if (((oj) this).field_j == var7) {
+                  if ((((oj) this).field_j ^ -1) == (var7 ^ -1)) {
                     break L0;
                   } else {
                     break L3;
@@ -238,7 +241,7 @@ final class oj extends om {
                   stackIn_11_1 = stackOut_7_1;
                   stackIn_8_0 = stackOut_7_0;
                   stackIn_8_1 = stackOut_7_1;
-                  if (Math.abs(var6) < -3) {
+                  if ((Math.abs(var6) ^ -1) < -3) {
                     stackOut_11_0 = this;
                     stackOut_11_1 = stackIn_11_1;
                     stackOut_11_2 = var6 >> -1687848639;
@@ -253,7 +256,7 @@ final class oj extends om {
                     stackIn_10_1 = stackOut_8_1;
                     stackIn_9_0 = stackOut_8_0;
                     stackIn_9_1 = stackOut_8_1;
-                    if (-1 >= var6) {
+                    if (-1 <= (var6 ^ -1)) {
                       stackOut_10_0 = this;
                       stackOut_10_1 = stackIn_10_1;
                       stackOut_10_2 = -1;
@@ -276,18 +279,18 @@ final class oj extends om {
                 break L4;
               }
             }
-            if (((oj) this).field_j == ((oj) this).field_F) {
+            if ((((oj) this).field_j ^ -1) == (((oj) this).field_F ^ -1)) {
               break L0;
             } else {
-              var6 = ((oj) this).field_F - ((oj) this).field_j;
-              stackOut_14_0 = this;
-              stackOut_14_1 = ((oj) this).field_j;
-              stackIn_16_0 = stackOut_14_0;
-              stackIn_16_1 = stackOut_14_1;
-              stackIn_15_0 = stackOut_14_0;
-              stackIn_15_1 = stackOut_14_1;
-              if (2 >= Math.abs(var6)) {
-                L6: {
+              L6: {
+                var6 = ((oj) this).field_F - ((oj) this).field_j;
+                stackOut_14_0 = this;
+                stackOut_14_1 = ((oj) this).field_j;
+                stackIn_16_0 = stackOut_14_0;
+                stackIn_16_1 = stackOut_14_1;
+                stackIn_15_0 = stackOut_14_0;
+                stackIn_15_1 = stackOut_14_1;
+                if (2 >= Math.abs(var6)) {
                   stackOut_16_0 = this;
                   stackOut_16_1 = stackIn_16_1;
                   stackIn_18_0 = stackOut_16_0;
@@ -311,13 +314,18 @@ final class oj extends om {
                     stackIn_19_2 = stackOut_17_2;
                     break L6;
                   }
+                } else {
+                  stackOut_15_0 = this;
+                  stackOut_15_1 = stackIn_15_1;
+                  stackOut_15_2 = var6 >> -379201183;
+                  stackIn_19_0 = stackOut_15_0;
+                  stackIn_19_1 = stackOut_15_1;
+                  stackIn_19_2 = stackOut_15_2;
+                  break L6;
                 }
-                ((oj) this).field_j = stackIn_19_1 + stackIn_19_2;
-                break L0;
-              } else {
-                ((oj) this).field_j = stackIn_15_1 + (var6 >> -379201183);
-                break L0;
               }
+              ((oj) this).field_j = stackIn_19_1 + stackIn_19_2;
+              break L0;
             }
           }
         }
@@ -335,28 +343,34 @@ final class oj extends om {
             bc stackOut_2_0 = null;
             try {
               L0: {
-                var4 = Class.forName("hg");
-                if (param1 == 6641) {
-                  break L0;
-                } else {
-                  oj.f((byte) -17);
-                  break L0;
+                L1: {
+                  var4 = Class.forName("hg");
+                  if (param1 == 6641) {
+                    break L1;
+                  } else {
+                    oj.f((byte) -17);
+                    break L1;
+                  }
                 }
+                var5 = (bc) var4.newInstance();
+                var5.a(param1 ^ 6529, param0, param2, param3);
+                stackOut_2_0 = (bc) var5;
+                stackIn_3_0 = stackOut_2_0;
+                break L0;
               }
-              var5 = (bc) var4.newInstance();
-              var5.a(param1 ^ 6529, param0, param2, param3);
-              stackOut_2_0 = (bc) var5;
-              stackIn_3_0 = stackOut_2_0;
-            } catch (java.lang.Throwable decompiledCaughtParameter) {
-              decompiledCaughtException = decompiledCaughtParameter;
-              return stackIn_3_0;
+            } catch (java.lang.Throwable decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              var4_ref = decompiledCaughtException;
+              var5_ref = new tk();
+              ((bc) (Object) var5_ref).a(113, param0, param2, param3);
+              return (bc) (Object) var5_ref;
             }
+            return stackIn_3_0;
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
             throw new RuntimeException(decompiledCheckedException);
         }
-        return null;
     }
 
     public static void f(byte param0) {

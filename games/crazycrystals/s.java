@@ -108,25 +108,29 @@ final class s extends ke {
         String stackOut_2_0 = null;
         try {
           L0: {
-            var4 = 36 % ((param1 - 40) / 56);
-            var3_int = param0.c(false);
-            if (param2 >= var3_int) {
-              break L0;
-            } else {
-              var3_int = param2;
-              break L0;
+            L1: {
+              var4 = 36 % ((param1 - 40) / 56);
+              var3_int = param0.c(false);
+              if (param2 >= var3_int) {
+                break L1;
+              } else {
+                var3_int = param2;
+                break L1;
+              }
             }
+            var5 = new byte[var3_int];
+            param0.field_f = param0.field_f + dm.field_f.a(param0.field_h, 0, -1, var3_int, param0.field_f, var5);
+            var6 = gd.a((byte) 61, var5, 0, var3_int);
+            stackOut_2_0 = (String) var6;
+            stackIn_3_0 = stackOut_2_0;
+            break L0;
           }
-          var5 = new byte[var3_int];
-          param0.field_f = param0.field_f + dm.field_f.a(param0.field_h, 0, -1, var3_int, param0.field_f, var5);
-          var6 = gd.a((byte) 61, var5, 0, var3_int);
-          stackOut_2_0 = (String) var6;
-          stackIn_3_0 = stackOut_2_0;
-        } catch (java.lang.Exception decompiledCaughtParameter) {
-          decompiledCaughtException = decompiledCaughtParameter;
-          return stackIn_3_0;
+        } catch (java.lang.Exception decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3 = (Exception) (Object) decompiledCaughtException;
+          return "Cabbage";
         }
-        return null;
+        return stackIn_3_0;
     }
 
     final long a(boolean param0) {

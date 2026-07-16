@@ -61,7 +61,7 @@ final class gf {
                 if ((od.field_j.field_g ^ -1) > -3) {
                   break L0;
                 } else {
-                  if (param1 != -52) {
+                  if ((param1 ^ -1) != -52) {
                     break L0;
                   } else {
                     return 2;
@@ -78,7 +78,7 @@ final class gf {
                 if (param1 == 50) {
                   return 5;
                 } else {
-                  if (-5 > od.field_j.field_g) {
+                  if (-5 < (od.field_j.field_g ^ -1)) {
                     return -1;
                   } else {
                     return 1;
@@ -91,7 +91,7 @@ final class gf {
                 if ((od.field_j.field_g ^ -1) > -3) {
                   break L1;
                 } else {
-                  if (param1 != -52) {
+                  if ((param1 ^ -1) != -52) {
                     break L1;
                   } else {
                     return 2;
@@ -108,7 +108,7 @@ final class gf {
                 if (param1 == 50) {
                   return 5;
                 } else {
-                  if (-5 > od.field_j.field_g) {
+                  if (-5 < (od.field_j.field_g ^ -1)) {
                     return -1;
                   } else {
                     return 1;
@@ -122,7 +122,7 @@ final class gf {
               if ((od.field_j.field_g ^ -1) > -3) {
                 break L2;
               } else {
-                if (param1 != -52) {
+                if ((param1 ^ -1) != -52) {
                   break L2;
                 } else {
                   return 2;
@@ -139,7 +139,7 @@ final class gf {
               if (param1 == 50) {
                 return 5;
               } else {
-                if (-5 > od.field_j.field_g) {
+                if (-5 < (od.field_j.field_g ^ -1)) {
                   return -1;
                 } else {
                   return 1;
@@ -154,8 +154,10 @@ final class gf {
           if (param1 != 51) {
             if ((param1 ^ -1) != -51) {
               od.field_j.field_d = 1;
-              if (od.field_j.field_g <= -3) {
-                if (param1 != -52) {
+              if ((od.field_j.field_g ^ -1) <= -3) {
+                if ((param1 ^ -1) == -52) {
+                  return 2;
+                } else {
                   L3: {
                     if (od.field_j.field_g < 2) {
                       break L3;
@@ -167,13 +169,11 @@ final class gf {
                       }
                     }
                   }
-                  if (-5 <= od.field_j.field_g) {
-                    return 1;
-                  } else {
+                  if (-5 < (od.field_j.field_g ^ -1)) {
                     return -1;
+                  } else {
+                    return 1;
                   }
-                } else {
-                  return 2;
                 }
               } else {
                 L4: {
@@ -187,7 +187,7 @@ final class gf {
                     }
                   }
                 }
-                if (-5 > od.field_j.field_g) {
+                if (-5 < (od.field_j.field_g ^ -1)) {
                   return -1;
                 } else {
                   return 1;
@@ -195,8 +195,10 @@ final class gf {
               }
             } else {
               od.field_j.field_d = 5;
-              if (od.field_j.field_g <= -3) {
-                if (param1 != -52) {
+              if ((od.field_j.field_g ^ -1) <= -3) {
+                if ((param1 ^ -1) == -52) {
+                  return 2;
+                } else {
                   L5: {
                     if (od.field_j.field_g < 2) {
                       break L5;
@@ -208,13 +210,11 @@ final class gf {
                       }
                     }
                   }
-                  if (-5 <= od.field_j.field_g) {
-                    return 1;
-                  } else {
+                  if (-5 < (od.field_j.field_g ^ -1)) {
                     return -1;
+                  } else {
+                    return 1;
                   }
-                } else {
-                  return 2;
                 }
               } else {
                 L6: {
@@ -228,17 +228,19 @@ final class gf {
                     }
                   }
                 }
-                if (-5 <= od.field_j.field_g) {
-                  return 1;
-                } else {
+                if (-5 < (od.field_j.field_g ^ -1)) {
                   return -1;
+                } else {
+                  return 1;
                 }
               }
             }
           } else {
             od.field_j.field_d = 2;
-            if (od.field_j.field_g <= -3) {
-              if (param1 != -52) {
+            if ((od.field_j.field_g ^ -1) <= -3) {
+              if ((param1 ^ -1) == -52) {
+                return 2;
+              } else {
                 L7: {
                   if (od.field_j.field_g < 2) {
                     break L7;
@@ -250,13 +252,11 @@ final class gf {
                     }
                   }
                 }
-                if (-5 <= od.field_j.field_g) {
-                  return 1;
-                } else {
+                if (-5 < (od.field_j.field_g ^ -1)) {
                   return -1;
+                } else {
+                  return 1;
                 }
-              } else {
-                return 2;
               }
             } else {
               L8: {
@@ -270,10 +270,10 @@ final class gf {
                   }
                 }
               }
-              if (-5 <= od.field_j.field_g) {
-                return 1;
-              } else {
+              if (-5 < (od.field_j.field_g ^ -1)) {
                 return -1;
+              } else {
+                return 1;
               }
             }
           }
@@ -354,7 +354,7 @@ final class gf {
     }
 
     final static tg a(String param0, byte param1) {
-        String var2 = null;
+        Object var2 = null;
         tg var3 = null;
         int var4_int = 0;
         String var4 = null;
@@ -365,15 +365,15 @@ final class gf {
         if (null != ml.field_a) {
           L0: {
             var6 = (CharSequence) (Object) param0;
-            var2 = sf.a(-104, var6);
+            var2 = (Object) (Object) sf.a(-104, var6);
             if (var2 == null) {
-              var2 = (String) (Object) var6;
+              var2 = (Object) (Object) var6;
               break L0;
             } else {
               break L0;
             }
           }
-          var3 = (tg) (Object) ml.field_a.a(-82, (long)var2.hashCode());
+          var3 = (tg) (Object) ml.field_a.a(-82, (long)((String) var2).hashCode());
           L1: while (true) {
             if (var3 != null) {
               L2: {
@@ -386,7 +386,7 @@ final class gf {
                   break L2;
                 }
               }
-              if (!var4.equals((Object) (Object) var2)) {
+              if (!var4.equals(var2)) {
                 var3 = (tg) (Object) ml.field_a.a((byte) -36);
                 continue L1;
               } else {

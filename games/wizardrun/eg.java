@@ -36,20 +36,19 @@ final class eg extends qh {
         int var5 = 0;
         int var6 = 0;
         Object var7 = null;
-        eg var7_ref = null;
         int var8 = 0;
-        Object stackIn_82_0 = null;
-        Object stackIn_83_0 = null;
-        Object stackIn_84_0 = null;
-        int stackIn_84_1 = 0;
-        int stackIn_89_0 = 0;
-        eg stackOut_81_0 = null;
-        Object stackOut_83_0 = null;
-        int stackOut_83_1 = 0;
-        Object stackOut_82_0 = null;
-        int stackOut_82_1 = 0;
-        int stackOut_88_0 = 0;
-        int stackOut_87_0 = 0;
+        Object stackIn_89_0 = null;
+        Object stackIn_90_0 = null;
+        Object stackIn_91_0 = null;
+        int stackIn_91_1 = 0;
+        int stackIn_96_0 = 0;
+        Object stackOut_88_0 = null;
+        Object stackOut_90_0 = null;
+        int stackOut_90_1 = 0;
+        Object stackOut_89_0 = null;
+        int stackOut_89_1 = 0;
+        int stackOut_95_0 = 0;
+        int stackOut_94_0 = 0;
         var8 = wizardrun.field_H;
         ((eg) this).field_h = ((eg) this).field_m;
         if (param1 == 120) {
@@ -198,7 +197,7 @@ final class eg extends qh {
                         }
                         var6 = 0;
                         L14: while (true) {
-                          if ((var6 ^ -1) <= (var5 ^ -1)) {
+                          if (var6 >= var5) {
                             ra.a(2);
                             break L6;
                           } else {
@@ -208,154 +207,165 @@ final class eg extends qh {
                                 break L15;
                               } else {
                                 ii.field_e[od.field_k].a(param1 + 9027, 21, new ob(((eg) this).field_i));
-                                var7_ref = ii.field_e[od.field_k];
+                                var7 = (Object) (Object) ii.field_e[od.field_k];
                                 od.field_k = od.field_k + 1;
                                 break L15;
                               }
                             }
                             L16: {
-                              var7_ref.a(9147, 21, ((eg) this).field_i);
-                              var7_ref.field_f.a(param1 + -246, ((eg) this).field_f);
-                              var7_ref.field_f.field_b = var7_ref.field_f.field_b + (int)(Math.sin(6.28 * (double)var6 / (double)var5) * 64.0);
-                              var7_ref.field_f.field_a = var7_ref.field_f.field_a + (int)(64.0 * Math.cos((double)var6 * 6.28 / (double)var5));
-                              var7_ref.field_e = 0;
-                              var7_ref.field_o = var4;
-                              stackOut_81_0 = (eg) var7_ref;
-                              stackIn_83_0 = (Object) (Object) stackOut_81_0;
-                              stackIn_82_0 = (Object) (Object) stackOut_81_0;
+                              ((eg) var7).a(9147, 21, ((eg) this).field_i);
+                              ((eg) var7).field_f.a(param1 + -246, ((eg) this).field_f);
+                              ((eg) var7).field_f.field_b = ((eg) var7).field_f.field_b + (int)(Math.sin(6.28 * (double)var6 / (double)var5) * 64.0);
+                              ((eg) var7).field_f.field_a = ((eg) var7).field_f.field_a + (int)(64.0 * Math.cos((double)var6 * 6.28 / (double)var5));
+                              ((eg) var7).field_e = 0;
+                              ((eg) var7).field_o = var4;
+                              stackOut_88_0 = var7;
+                              stackIn_90_0 = stackOut_88_0;
+                              stackIn_89_0 = stackOut_88_0;
                               if (var5 / 2 <= var6) {
-                                stackOut_83_0 = stackIn_83_0;
-                                stackOut_83_1 = 1;
-                                stackIn_84_0 = stackOut_83_0;
-                                stackIn_84_1 = stackOut_83_1;
+                                stackOut_90_0 = stackIn_90_0;
+                                stackOut_90_1 = 1;
+                                stackIn_91_0 = stackOut_90_0;
+                                stackIn_91_1 = stackOut_90_1;
                                 break L16;
                               } else {
-                                stackOut_82_0 = stackIn_82_0;
-                                stackOut_82_1 = -1;
-                                stackIn_84_0 = stackOut_82_0;
-                                stackIn_84_1 = stackOut_82_1;
+                                stackOut_89_0 = stackIn_89_0;
+                                stackOut_89_1 = -1;
+                                stackIn_91_0 = stackOut_89_0;
+                                stackIn_91_1 = stackOut_89_1;
                                 break L16;
                               }
                             }
-                            ((eg) (Object) stackIn_84_0).field_h = stackIn_84_1;
+                            ((eg) (Object) stackIn_91_0).field_h = stackIn_91_1;
                             var6++;
                             continue L14;
                           }
                         }
                       } else {
-                        L17: {
-                          if (!param2.field_d[var4]) {
-                            break L17;
-                          } else {
-                            param2.field_d[var4] = false;
-                            break L17;
-                          }
+                        if (param2.field_d[var4]) {
+                          param2.field_d[var4] = false;
+                          var4++;
+                          continue L8;
+                        } else {
+                          var4++;
+                          continue L8;
                         }
-                        var4++;
-                        continue L8;
                       }
                     }
                   } else {
-                    L18: {
-                      if (null != ii.field_e[var4]) {
-                        if (ii.field_e[var4].field_B <= 2) {
-                          break L18;
-                        } else {
-                          if (21 == ii.field_e[var4].field_B) {
-                            break L18;
+                    if (null != ii.field_e[var4]) {
+                      if (ii.field_e[var4].field_B > 2) {
+                        if (21 != ii.field_e[var4].field_B) {
+                          if (-21 != (ii.field_e[var4].field_B ^ -1)) {
+                            ii.field_e[var4].field_p = 0;
+                            var4++;
+                            continue L7;
                           } else {
-                            if (-21 != (ii.field_e[var4].field_B ^ -1)) {
-                              ii.field_e[var4].field_p = 0;
-                              break L18;
-                            } else {
-                              break L18;
-                            }
+                            var4++;
+                            continue L7;
                           }
+                        } else {
+                          var4++;
+                          continue L7;
                         }
                       } else {
-                        break L18;
+                        var4++;
+                        continue L7;
                       }
+                    } else {
+                      var4++;
+                      continue L7;
                     }
-                    var4++;
-                    continue L7;
                   }
                 }
               } else {
-                L19: {
+                L17: {
                   if ((((eg) this).field_B ^ -1) == -9) {
-                    break L19;
+                    break L17;
                   } else {
                     if ((((eg) this).field_B ^ -1) != -37) {
-                      L20: {
+                      L18: {
                         ((eg) this).field_o = 0;
                         if ((((eg) this).field_d ^ -1) == -33) {
                           ((eg) this).field_o = 0;
+                          break L18;
+                        } else {
+                          break L18;
+                        }
+                      }
+                      L19: {
+                        if ((((eg) this).field_d ^ -1) != -49) {
+                          break L19;
+                        } else {
+                          ((eg) this).field_o = 1;
+                          break L19;
+                        }
+                      }
+                      L20: {
+                        if (64 != ((eg) this).field_d) {
                           break L20;
                         } else {
+                          ((eg) this).field_o = 2;
                           break L20;
                         }
                       }
                       L21: {
-                        if ((((eg) this).field_d ^ -1) != -49) {
+                        if (80 != ((eg) this).field_d) {
                           break L21;
                         } else {
-                          ((eg) this).field_o = 1;
+                          ((eg) this).field_o = 3;
                           break L21;
                         }
                       }
                       L22: {
-                        if (64 != ((eg) this).field_d) {
+                        if (-97 != (((eg) this).field_d ^ -1)) {
                           break L22;
                         } else {
-                          ((eg) this).field_o = 2;
+                          ((eg) this).field_o = 5;
                           break L22;
                         }
                       }
                       L23: {
-                        if (80 != ((eg) this).field_d) {
-                          break L23;
-                        } else {
-                          ((eg) this).field_o = 3;
-                          break L23;
-                        }
-                      }
-                      L24: {
-                        if (-97 != (((eg) this).field_d ^ -1)) {
-                          break L24;
-                        } else {
-                          ((eg) this).field_o = 5;
-                          break L24;
-                        }
-                      }
-                      L25: {
                         if (1 >= qh.field_l) {
-                          break L25;
-                        } else {
-                          if (-6 >= (((eg) this).field_o ^ -1)) {
-                            break L25;
+                          ((eg) this).field_B = 21;
+                          if (3 < qh.field_l) {
+                            if (5 <= ((eg) this).field_o) {
+                              break L23;
+                            } else {
+                              ((eg) this).field_o = ((eg) this).field_o + 1;
+                              break L23;
+                            }
                           } else {
-                            ((eg) this).field_o = ((eg) this).field_o + 1;
-                            break L25;
+                            ((eg) this).field_B = 21;
+                            if (3 >= qh.field_l) {
+                              break L23;
+                            } else {
+                              if (5 <= ((eg) this).field_o) {
+                                break L23;
+                              } else {
+                                ((eg) this).field_o = ((eg) this).field_o + 1;
+                                break L23;
+                              }
+                            }
                           }
-                        }
-                      }
-                      L26: {
-                        ((eg) this).field_B = 21;
-                        if (3 >= qh.field_l) {
-                          break L26;
                         } else {
-                          if (5 <= ((eg) this).field_o) {
-                            break L26;
+                          ((eg) this).field_B = 21;
+                          if (3 >= qh.field_l) {
+                            break L23;
                           } else {
-                            ((eg) this).field_o = ((eg) this).field_o + 1;
-                            break L26;
+                            if (5 <= ((eg) this).field_o) {
+                              break L23;
+                            } else {
+                              ((eg) this).field_o = ((eg) this).field_o + 1;
+                              break L23;
+                            }
                           }
                         }
                       }
                       ((eg) this).field_d = 32;
                       break L6;
                     } else {
-                      break L19;
+                      break L17;
                     }
                   }
                 }
@@ -363,18 +373,18 @@ final class eg extends qh {
                 break L6;
               }
             }
-            L27: {
+            L24: {
               if (pk.field_s) {
-                stackOut_88_0 = 0;
-                stackIn_89_0 = stackOut_88_0;
-                break L27;
+                stackOut_95_0 = 0;
+                stackIn_96_0 = stackOut_95_0;
+                break L24;
               } else {
-                stackOut_87_0 = 1;
-                stackIn_89_0 = stackOut_87_0;
-                break L27;
+                stackOut_94_0 = 1;
+                stackIn_96_0 = stackOut_94_0;
+                break L24;
               }
             }
-            if (stackIn_89_0 != 1) {
+            if (stackIn_96_0 != 1) {
               tl.field_a.a(si.field_j[6], 100, 256 * ee.field_p / 100);
               break L3;
             } else {
@@ -1737,8 +1747,9 @@ final class eg extends qh {
         }
         L3: {
           var5 = 64 % ((param1 - 58) / 56);
+          int fieldTemp$1 = ((eg) this).field_z;
           ((eg) this).field_z = ((eg) this).field_z - 1;
-          if (0 < ((eg) this).field_z) {
+          if (0 < fieldTemp$1) {
             break L3;
           } else {
             L4: {
@@ -1871,17 +1882,18 @@ final class eg extends qh {
         }
         if (0 == ii.field_e[0].field_s) {
             if (((eg) this).field_q != null) {
-                // ifnull L155
-                var4 = new ob();
-                var2 = var4;
-                var3 = new ob();
-                var2.field_b = ((eg) this).field_y;
-                var4.field_a = ((eg) this).field_A;
-                var3.field_b = ii.field_e[0].field_y;
-                var3.field_a = ii.field_e[0].field_A;
-                // ifeq L155
-                ii.field_e[0].field_s = 1;
-            } else {
+                if (ii.field_e[0].field_q != null) {
+                    var4 = new ob();
+                    var2 = var4;
+                    var3 = new ob();
+                    var2.field_b = ((eg) this).field_y;
+                    var4.field_a = ((eg) this).field_A;
+                    var3.field_b = ii.field_e[0].field_y;
+                    var3.field_a = ii.field_e[0].field_A;
+                    if (j.a(((eg) this).field_q, var2.field_b, var4.field_a, ii.field_e[0].field_q, var3.field_b, var3.field_a)) {
+                        ii.field_e[0].field_s = 1;
+                    }
+                }
             }
         }
     }
@@ -1913,11 +1925,11 @@ final class eg extends qh {
                         return;
                       } else {
                         if (((eg) this).field_B != 12) {
-                          if (-15 == (((eg) this).field_B ^ -1)) {
+                          if (-15 == ((eg) this).field_B) {
                             tl.field_a.a(nl.field_q[14], 100, ee.field_p * 256 / 100);
                             return;
                           } else {
-                            if (-14 != (((eg) this).field_B ^ -1)) {
+                            if (-14 != ((eg) this).field_B) {
                               if (((eg) this).field_B != 15) {
                                 if ((((eg) this).field_B ^ -1) == -17) {
                                   tl.field_a.a(nl.field_q[19], 100, ee.field_p * 256 / 100);
@@ -2376,8 +2388,9 @@ final class eg extends qh {
                 if (0 != var3) {
                   L8: {
                     ((eg) this).field_w = ((eg) this).field_w - 1;
+                    int fieldTemp$43 = ((eg) this).field_z;
                     ((eg) this).field_z = ((eg) this).field_z - 1;
-                    if (0 > ((eg) this).field_z) {
+                    if (0 > fieldTemp$43) {
                       ((eg) this).field_z = 5;
                       ((eg) this).field_n = ((eg) this).field_n + 1;
                       if (-4 <= (((eg) this).field_n ^ -1)) {
@@ -3117,8 +3130,9 @@ final class eg extends qh {
                                             }
                                           }
                                           ((eg) this).field_z = 0;
+                                          int fieldTemp$44 = ((eg) this).field_w;
                                           ((eg) this).field_w = ((eg) this).field_w + 1;
-                                          if (((eg) this).field_w <= 50) {
+                                          if (fieldTemp$44 <= 50) {
                                             break L56;
                                           } else {
                                             L59: {
@@ -3269,8 +3283,9 @@ final class eg extends qh {
                                                   L69: {
                                                     if (((eg) this).field_x == 1) {
                                                       ((eg) this).field_n = 19;
+                                                      int fieldTemp$45 = ((eg) this).field_w;
                                                       ((eg) this).field_w = ((eg) this).field_w + 1;
-                                                      if (((eg) this).field_w <= 5) {
+                                                      if (fieldTemp$45 <= 5) {
                                                         break L69;
                                                       } else {
                                                         ((eg) this).field_e = 70;
@@ -3347,8 +3362,9 @@ final class eg extends qh {
                                                 } else {
                                                   L74: {
                                                     ((eg) this).field_o = 7;
+                                                    int fieldTemp$46 = ((eg) this).field_z;
                                                     ((eg) this).field_z = ((eg) this).field_z - 1;
-                                                    if (-1 > (((eg) this).field_z ^ -1)) {
+                                                    if (-1 > (fieldTemp$46 ^ -1)) {
                                                       break L74;
                                                     } else {
                                                       ((eg) this).field_n = ((eg) this).field_n + 1;
@@ -3410,8 +3426,9 @@ final class eg extends qh {
                                                         break L77;
                                                       } else {
                                                         this.a(15, (byte) -9, param1, false);
+                                                        int fieldTemp$47 = ((eg) this).field_w;
                                                         ((eg) this).field_w = ((eg) this).field_w + 1;
-                                                        if (-101 > (((eg) this).field_w ^ -1)) {
+                                                        if (-101 > (fieldTemp$47 ^ -1)) {
                                                           ((eg) this).field_x = 1;
                                                           ((eg) this).field_z = 0;
                                                           ((eg) this).field_w = 0;
@@ -3485,8 +3502,9 @@ final class eg extends qh {
                                                             }
                                                           }
                                                           this.a(false, 2, 10, (byte) -105, param1);
+                                                          int fieldTemp$48 = ((eg) this).field_w;
                                                           ((eg) this).field_w = ((eg) this).field_w + 1;
-                                                          if (-201 > (((eg) this).field_w ^ -1)) {
+                                                          if (-201 > (fieldTemp$48 ^ -1)) {
                                                             L82: {
                                                               ((eg) this).field_x = 1;
                                                               ((eg) this).field_w = 0;
@@ -3545,8 +3563,9 @@ final class eg extends qh {
                                                           break L84;
                                                         } else {
                                                           ((eg) this).field_n = 19;
+                                                          int fieldTemp$49 = ((eg) this).field_w;
                                                           ((eg) this).field_w = ((eg) this).field_w + 1;
-                                                          if (((eg) this).field_w > 25) {
+                                                          if (fieldTemp$49 > 25) {
                                                             ((eg) this).field_e = 70;
                                                             ((eg) this).field_x = 2;
                                                             ((eg) this).field_w = 0;
@@ -3631,8 +3650,9 @@ final class eg extends qh {
                                                       if (-251 < (w.field_b ^ -1)) {
                                                         L89: {
                                                           ((eg) this).field_x = 0;
+                                                          int fieldTemp$50 = ((eg) this).field_z;
                                                           ((eg) this).field_z = ((eg) this).field_z - 1;
-                                                          if (-1 > (((eg) this).field_z ^ -1)) {
+                                                          if (-1 > (fieldTemp$50 ^ -1)) {
                                                             break L89;
                                                           } else {
                                                             ((eg) this).field_n = ((eg) this).field_n + 1;
@@ -3674,8 +3694,9 @@ final class eg extends qh {
                                                               }
                                                             }
                                                             this.a(true, 1, 25, (byte) -94, param1);
+                                                            int fieldTemp$51 = ((eg) this).field_w;
                                                             ((eg) this).field_w = ((eg) this).field_w + 1;
-                                                            if (-201 <= (((eg) this).field_w ^ -1)) {
+                                                            if (-201 <= (fieldTemp$51 ^ -1)) {
                                                               break L91;
                                                             } else {
                                                               L93: {
@@ -3710,8 +3731,9 @@ final class eg extends qh {
                                                             break L94;
                                                           } else {
                                                             ((eg) this).field_n = 19;
+                                                            int fieldTemp$52 = ((eg) this).field_w;
                                                             ((eg) this).field_w = ((eg) this).field_w + 1;
-                                                            if (25 < ((eg) this).field_w) {
+                                                            if (25 < fieldTemp$52) {
                                                               ((eg) this).field_e = 70;
                                                               ((eg) this).field_x = 2;
                                                               ((eg) this).field_w = 0;
@@ -3806,8 +3828,9 @@ final class eg extends qh {
                                                                 }
                                                               }
                                                               ((eg) this).field_n = 35;
+                                                              int fieldTemp$53 = ((eg) this).field_z;
                                                               ((eg) this).field_z = ((eg) this).field_z + 1;
-                                                              if ((((eg) this).field_z ^ -1) >= -11) {
+                                                              if ((fieldTemp$53 ^ -1) >= -11) {
                                                                 break L100;
                                                               } else {
                                                                 ((eg) this).field_n = 34;
@@ -4057,8 +4080,9 @@ final class eg extends qh {
                                                                                           }
                                                                                         }
                                                                                         this.a(false, 2, 20, (byte) -78, param1);
+                                                                                        int fieldTemp$54 = ((eg) this).field_w;
                                                                                         ((eg) this).field_w = ((eg) this).field_w + 1;
-                                                                                        if (200 >= ((eg) this).field_w) {
+                                                                                        if (200 >= fieldTemp$54) {
                                                                                           break L119;
                                                                                         } else {
                                                                                           L121: {
@@ -4116,8 +4140,9 @@ final class eg extends qh {
                                                                                     L123: {
                                                                                       if (-2 == (((eg) this).field_x ^ -1)) {
                                                                                         L124: {
+                                                                                          int fieldTemp$55 = ((eg) this).field_w;
                                                                                           ((eg) this).field_w = ((eg) this).field_w + 1;
-                                                                                          if (-26 <= (((eg) this).field_w ^ -1)) {
+                                                                                          if (-26 <= (fieldTemp$55 ^ -1)) {
                                                                                             break L124;
                                                                                           } else {
                                                                                             ((eg) this).field_e = 70;
@@ -4220,8 +4245,9 @@ final class eg extends qh {
                                                                                             }
                                                                                           }
                                                                                           this.a(false, 2, 20, (byte) -92, param1);
+                                                                                          int fieldTemp$56 = ((eg) this).field_w;
                                                                                           ((eg) this).field_w = ((eg) this).field_w + 1;
-                                                                                          if (200 < ((eg) this).field_w) {
+                                                                                          if (200 < fieldTemp$56) {
                                                                                             ((eg) this).field_w = 0;
                                                                                             ((eg) this).field_z = 0;
                                                                                             ((eg) this).field_x = 3;
@@ -4239,8 +4265,9 @@ final class eg extends qh {
                                                                                             ((eg) this).field_n = ((eg) this).field_n - 4;
                                                                                             this.a(20, (byte) 116, param1, false);
                                                                                             ((eg) this).field_n = ((eg) this).field_n + 4;
+                                                                                            int fieldTemp$57 = ((eg) this).field_w;
                                                                                             ((eg) this).field_w = ((eg) this).field_w + 1;
-                                                                                            if (-301 <= (((eg) this).field_w ^ -1)) {
+                                                                                            if (-301 <= (fieldTemp$57 ^ -1)) {
                                                                                               break L132;
                                                                                             } else {
                                                                                               if (1 != ((eg) this).b(param1, param0 ^ 121)) {
@@ -4398,8 +4425,9 @@ final class eg extends qh {
                                                                                                             break L142;
                                                                                                           }
                                                                                                         }
+                                                                                                        int fieldTemp$58 = ((eg) this).field_w;
                                                                                                         ((eg) this).field_w = ((eg) this).field_w + 1;
-                                                                                                        if (-201 <= (((eg) this).field_w ^ -1)) {
+                                                                                                        if (-201 <= (fieldTemp$58 ^ -1)) {
                                                                                                           break L141;
                                                                                                         } else {
                                                                                                           L143: {
@@ -4430,8 +4458,9 @@ final class eg extends qh {
                                                                                                     L144: {
                                                                                                       if ((((eg) this).field_x ^ -1) == -2) {
                                                                                                         ((eg) this).field_n = 19;
+                                                                                                        int fieldTemp$59 = ((eg) this).field_w;
                                                                                                         ((eg) this).field_w = ((eg) this).field_w + 1;
-                                                                                                        if (80 < ((eg) this).field_w) {
+                                                                                                        if (80 < fieldTemp$59) {
                                                                                                           ((eg) this).field_e = 85;
                                                                                                           ((eg) this).field_x = 2;
                                                                                                           ((eg) this).field_w = 0;
@@ -4516,8 +4545,9 @@ final class eg extends qh {
                                                                                                                 }
                                                                                                               }
                                                                                                               L149: {
+                                                                                                                int fieldTemp$60 = ((eg) this).field_w;
                                                                                                                 ((eg) this).field_w = ((eg) this).field_w + 1;
-                                                                                                                if ((((eg) this).field_w ^ -1) >= -51) {
+                                                                                                                if ((fieldTemp$60 ^ -1) >= -51) {
                                                                                                                   break L149;
                                                                                                                 } else {
                                                                                                                   ((eg) this).field_k = 1;
@@ -4613,8 +4643,9 @@ final class eg extends qh {
                                                                                                             L157: {
                                                                                                               ((eg) this).field_w = ((eg) this).field_w + 1;
                                                                                                               ((eg) this).field_d = 80;
+                                                                                                              int fieldTemp$61 = ((eg) this).field_z;
                                                                                                               ((eg) this).field_z = ((eg) this).field_z - 1;
-                                                                                                              if (0 > ((eg) this).field_z) {
+                                                                                                              if (0 > fieldTemp$61) {
                                                                                                                 ((eg) this).field_z = 10;
                                                                                                                 ((eg) this).field_n = ((eg) this).field_n + 1;
                                                                                                                 if ((((eg) this).field_n ^ -1) >= -4) {
@@ -4714,8 +4745,9 @@ final class eg extends qh {
                                                                                                                   break L165;
                                                                                                                 }
                                                                                                               }
+                                                                                                              int fieldTemp$62 = ((eg) this).field_w;
                                                                                                               ((eg) this).field_w = ((eg) this).field_w + 1;
-                                                                                                              if (10 >= ((eg) this).field_w) {
+                                                                                                              if (10 >= fieldTemp$62) {
                                                                                                                 break L163;
                                                                                                               } else {
                                                                                                                 L166: {
@@ -4883,8 +4915,9 @@ final class eg extends qh {
                                                                                                           if (-8 == (ql.field_c ^ -1)) {
                                                                                                             if (w.field_b < 250) {
                                                                                                               L175: {
+                                                                                                                int fieldTemp$63 = ((eg) this).field_z;
                                                                                                                 ((eg) this).field_z = ((eg) this).field_z - 1;
-                                                                                                                if (0 >= ((eg) this).field_z) {
+                                                                                                                if (0 >= fieldTemp$63) {
                                                                                                                   L176: {
                                                                                                                     ((eg) this).field_n = ((eg) this).field_n + 1;
                                                                                                                     if (-2 <= (((eg) this).field_n ^ -1)) {
@@ -5048,8 +5081,9 @@ final class eg extends qh {
                                                                                                                 }
                                                                                                                 L187: {
                                                                                                                   this.a(var4, (byte) -82, param1, true);
+                                                                                                                  int fieldTemp$64 = ((eg) this).field_w;
                                                                                                                   ((eg) this).field_w = ((eg) this).field_w + 1;
-                                                                                                                  if (-26 <= (((eg) this).field_w ^ -1)) {
+                                                                                                                  if (-26 <= (fieldTemp$64 ^ -1)) {
                                                                                                                     break L187;
                                                                                                                   } else {
                                                                                                                     if (((eg) this).b(param1, -4) != 1) {
@@ -5142,8 +5176,9 @@ final class eg extends qh {
                                                                                                               }
                                                                                                             }
                                                                                                             this.a(false, 2, 20, (byte) -122, param1);
+                                                                                                            int fieldTemp$65 = ((eg) this).field_w;
                                                                                                             ((eg) this).field_w = ((eg) this).field_w + 1;
-                                                                                                            if (200 < ((eg) this).field_w) {
+                                                                                                            if (200 < fieldTemp$65) {
                                                                                                               ((eg) this).field_x = 3;
                                                                                                               ((eg) this).field_z = 0;
                                                                                                               ((eg) this).field_w = 0;
@@ -5160,8 +5195,9 @@ final class eg extends qh {
                                                                                                               this.a(10, (byte) -13, param1, false);
                                                                                                               this.a(10, (byte) 118, param1, false);
                                                                                                               ((eg) this).field_n = ((eg) this).field_n + 4;
+                                                                                                              int fieldTemp$66 = ((eg) this).field_w;
                                                                                                               ((eg) this).field_w = ((eg) this).field_w + 1;
-                                                                                                              if (-301 <= (((eg) this).field_w ^ -1)) {
+                                                                                                              if (-301 <= (fieldTemp$66 ^ -1)) {
                                                                                                                 break L193;
                                                                                                               } else {
                                                                                                                 if (((eg) this).b(param1, -4) != 1) {
@@ -5215,8 +5251,9 @@ final class eg extends qh {
                                                                                                             }
                                                                                                           }
                                                                                                           this.a(false, 1, 25, (byte) -90, param1);
+                                                                                                          int fieldTemp$67 = ((eg) this).field_w;
                                                                                                           ((eg) this).field_w = ((eg) this).field_w + 1;
-                                                                                                          if (200 < ((eg) this).field_w) {
+                                                                                                          if (200 < fieldTemp$67) {
                                                                                                             L196: {
                                                                                                               stackOut_1039_0 = this;
                                                                                                               stackIn_1041_0 = stackOut_1039_0;
@@ -5249,8 +5286,9 @@ final class eg extends qh {
                                                                                                       L197: {
                                                                                                         if ((((eg) this).field_x ^ -1) == -2) {
                                                                                                           ((eg) this).field_n = 19;
+                                                                                                          int fieldTemp$68 = ((eg) this).field_w;
                                                                                                           ((eg) this).field_w = ((eg) this).field_w + 1;
-                                                                                                          if (-21 > (((eg) this).field_w ^ -1)) {
+                                                                                                          if (-21 > (fieldTemp$68 ^ -1)) {
                                                                                                             ((eg) this).field_w = 0;
                                                                                                             ((eg) this).field_e = 70;
                                                                                                             ((eg) this).field_x = 2;
@@ -5573,8 +5611,9 @@ final class eg extends qh {
                                                                                     } else {
                                                                                       L219: {
                                                                                         ((eg) this).field_o = 7;
+                                                                                        int fieldTemp$69 = ((eg) this).field_z;
                                                                                         ((eg) this).field_z = ((eg) this).field_z - 1;
-                                                                                        if ((((eg) this).field_z ^ -1) < -1) {
+                                                                                        if ((fieldTemp$69 ^ -1) < -1) {
                                                                                           break L219;
                                                                                         } else {
                                                                                           L220: {
@@ -5625,8 +5664,9 @@ final class eg extends qh {
                                                                                         }
                                                                                       }
                                                                                       this.a(false, 2, 20, (byte) -88, param1);
+                                                                                      int fieldTemp$70 = ((eg) this).field_w;
                                                                                       ((eg) this).field_w = ((eg) this).field_w + 1;
-                                                                                      if ((((eg) this).field_w ^ -1) < -201) {
+                                                                                      if ((fieldTemp$70 ^ -1) < -201) {
                                                                                         L224: {
                                                                                           stackOut_801_0 = this;
                                                                                           stackIn_803_0 = stackOut_801_0;
@@ -5667,8 +5707,9 @@ final class eg extends qh {
                                                                                       break L225;
                                                                                     } else {
                                                                                       L226: {
+                                                                                        int fieldTemp$71 = ((eg) this).field_w;
                                                                                         ((eg) this).field_w = ((eg) this).field_w + 1;
-                                                                                        if ((((eg) this).field_w ^ -1) >= -26) {
+                                                                                        if ((fieldTemp$71 ^ -1) >= -26) {
                                                                                           break L226;
                                                                                         } else {
                                                                                           ((eg) this).field_x = 2;
@@ -5828,8 +5869,9 @@ final class eg extends qh {
                                                                             if (w.field_b < 250) {
                                                                               L234: {
                                                                                 ((eg) this).field_o = 7;
+                                                                                int fieldTemp$72 = ((eg) this).field_z;
                                                                                 ((eg) this).field_z = ((eg) this).field_z - 1;
-                                                                                if (-1 > (((eg) this).field_z ^ -1)) {
+                                                                                if (-1 > (fieldTemp$72 ^ -1)) {
                                                                                   break L234;
                                                                                 } else {
                                                                                   L235: {
@@ -5942,8 +5984,9 @@ final class eg extends qh {
                                                                                   break L244;
                                                                                 } else {
                                                                                   L245: {
+                                                                                    int fieldTemp$73 = ((eg) this).field_w;
                                                                                     ((eg) this).field_w = ((eg) this).field_w + 1;
-                                                                                    if (-6 <= (((eg) this).field_w ^ -1)) {
+                                                                                    if (-6 <= (fieldTemp$73 ^ -1)) {
                                                                                       break L245;
                                                                                     } else {
                                                                                       ((eg) this).field_e = 70;
@@ -6122,8 +6165,9 @@ final class eg extends qh {
                                                                           }
                                                                         }
                                                                         this.a(false, 1, 20, (byte) -67, param1);
+                                                                        int fieldTemp$74 = ((eg) this).field_w;
                                                                         ((eg) this).field_w = ((eg) this).field_w + 1;
-                                                                        if (200 >= ((eg) this).field_w) {
+                                                                        if (200 >= fieldTemp$74) {
                                                                           break L255;
                                                                         } else {
                                                                           L257: {
@@ -6156,8 +6200,9 @@ final class eg extends qh {
                                                                     L258: {
                                                                       if (1 == ((eg) this).field_x) {
                                                                         ((eg) this).field_n = 19;
+                                                                        int fieldTemp$75 = ((eg) this).field_w;
                                                                         ((eg) this).field_w = ((eg) this).field_w + 1;
-                                                                        if ((((eg) this).field_w ^ -1) >= -41) {
+                                                                        if ((fieldTemp$75 ^ -1) >= -41) {
                                                                           break L258;
                                                                         } else {
                                                                           ((eg) this).field_w = 0;
@@ -6229,8 +6274,9 @@ final class eg extends qh {
                                                                             break L262;
                                                                           }
                                                                         }
+                                                                        int fieldTemp$76 = ((eg) this).field_w;
                                                                         ((eg) this).field_w = ((eg) this).field_w + 1;
-                                                                        if (25 >= ((eg) this).field_w) {
+                                                                        if (25 >= fieldTemp$76) {
                                                                           break L261;
                                                                         } else {
                                                                           ((eg) this).field_x = 2;
@@ -6290,8 +6336,9 @@ final class eg extends qh {
                                                         }
                                                       }
                                                       this.a(false, 1, 20, (byte) -66, param1);
+                                                      int fieldTemp$77 = ((eg) this).field_w;
                                                       ((eg) this).field_w = ((eg) this).field_w + 1;
-                                                      if (-201 > (((eg) this).field_w ^ -1)) {
+                                                      if (-201 > (fieldTemp$77 ^ -1)) {
                                                         L267: {
                                                           ((eg) this).field_w = 0;
                                                           ((eg) this).field_x = 1;
@@ -6324,8 +6371,9 @@ final class eg extends qh {
                                                       break L268;
                                                     } else {
                                                       L269: {
+                                                        int fieldTemp$78 = ((eg) this).field_w;
                                                         ((eg) this).field_w = ((eg) this).field_w + 1;
-                                                        if ((((eg) this).field_w ^ -1) >= -26) {
+                                                        if ((fieldTemp$78 ^ -1) >= -26) {
                                                           break L269;
                                                         } else {
                                                           ((eg) this).field_w = 0;
@@ -6396,8 +6444,9 @@ final class eg extends qh {
                                                   }
                                                 }
                                                 this.a(false, 2, 20, (byte) -76, param1);
+                                                int fieldTemp$79 = ((eg) this).field_w;
                                                 ((eg) this).field_w = ((eg) this).field_w + 1;
-                                                if (200 >= ((eg) this).field_w) {
+                                                if (200 >= fieldTemp$79) {
                                                   break L272;
                                                 } else {
                                                   ((eg) this).field_x = 1;
@@ -6417,8 +6466,9 @@ final class eg extends qh {
                                                 break L274;
                                               } else {
                                                 L275: {
+                                                  int fieldTemp$80 = ((eg) this).field_w;
                                                   ((eg) this).field_w = ((eg) this).field_w + 1;
-                                                  if (-26 > (((eg) this).field_w ^ -1)) {
+                                                  if (-26 > (fieldTemp$80 ^ -1)) {
                                                     ((eg) this).field_w = 0;
                                                     ((eg) this).field_e = 70;
                                                     ((eg) this).field_x = 2;
@@ -6541,8 +6591,9 @@ final class eg extends qh {
                                           }
                                         }
                                         this.a(false, 0, var4, (byte) -68, param1);
+                                        int fieldTemp$81 = ((eg) this).field_w;
                                         ((eg) this).field_w = ((eg) this).field_w + 1;
-                                        if ((((eg) this).field_w ^ -1) >= -101) {
+                                        if ((fieldTemp$81 ^ -1) >= -101) {
                                           break L281;
                                         } else {
                                           ((eg) this).field_x = 1;
@@ -6564,8 +6615,9 @@ final class eg extends qh {
                                     L283: {
                                       if (1 == ((eg) this).field_x) {
                                         L284: {
+                                          int fieldTemp$82 = ((eg) this).field_w;
                                           ((eg) this).field_w = ((eg) this).field_w + 1;
-                                          if (((eg) this).field_w <= 25) {
+                                          if (fieldTemp$82 <= 25) {
                                             break L284;
                                           } else {
                                             ((eg) this).field_x = 2;
@@ -6674,8 +6726,9 @@ final class eg extends qh {
                                           break L291;
                                         }
                                       }
+                                      int fieldTemp$83 = ((eg) this).field_w;
                                       ((eg) this).field_w = ((eg) this).field_w + 1;
-                                      if (((eg) this).field_w > 25) {
+                                      if (fieldTemp$83 > 25) {
                                         ((eg) this).field_x = 2;
                                         ((eg) this).field_e = 85;
                                         ((eg) this).field_w = 0;
@@ -6793,8 +6846,9 @@ final class eg extends qh {
                           if (pg.field_q) {
                             break L294;
                           } else {
+                            int fieldTemp$84 = ((eg) this).field_w;
                             ((eg) this).field_w = ((eg) this).field_w + 1;
-                            if ((((eg) this).field_w ^ -1) >= -251) {
+                            if ((fieldTemp$84 ^ -1) >= -251) {
                               break L294;
                             } else {
                               if (ql.field_c != 0) {
@@ -6813,8 +6867,9 @@ final class eg extends qh {
                       L298: {
                         if ((((eg) this).field_x ^ -1) == -2) {
                           ((eg) this).field_n = 19;
+                          int fieldTemp$85 = ((eg) this).field_w;
                           ((eg) this).field_w = ((eg) this).field_w + 1;
-                          if (25 < ((eg) this).field_w) {
+                          if (25 < fieldTemp$85) {
                             ((eg) this).field_x = 2;
                             ((eg) this).field_w = 0;
                             ((eg) this).field_e = 80;
@@ -6904,7 +6959,7 @@ final class eg extends qh {
         int[][] var15 = var17;
         int[][] var7 = var15;
         var7[0] = var5[0].field_k;
-        for (var8 = 1; (var8 ^ -1) > (var19.length ^ -1); var8++) {
+        for (var8 = 1; var8 < var19.length; var8++) {
             var7[var8] = (int[]) var19[0].clone();
         }
         var8 = var5[0].field_l[0];
@@ -6913,7 +6968,7 @@ final class eg extends qh {
         var19[3][var8] = 4767999;
         for (var9 = 0; (var9 ^ -1) > -4; var9++) {
             var10_ref_db__ = var6[var9];
-            for (var11_int = 0; (var11_int ^ -1) > (var10_ref_db__.length ^ -1); var11_int++) {
+            for (var11_int = 0; var11_int < var10_ref_db__.length; var11_int++) {
                 var10_ref_db__[var11_int] = eb.a(var5[var9], (byte) -105, var19[var11_int]);
             }
         }
@@ -7164,12 +7219,12 @@ final class eg extends qh {
                   break L3;
                 }
               }
-              if (-7 != (((eg) this).field_B ^ -1)) {
+              if (-7 != ((eg) this).field_B) {
                 break L2;
               } else {
                 L4: {
                   ((eg) this).field_n = 22;
-                  if (-16 <= (((eg) this).field_z ^ -1)) {
+                  if (-16 >= ((eg) this).field_z) {
                     break L4;
                   } else {
                     ((eg) this).field_n = 23;
@@ -7200,12 +7255,8 @@ final class eg extends qh {
                     if (!pk.field_s) {
                       break L6;
                     } else {
-                      if (param2) {
-                        break L6;
-                      } else {
-                        this.c(1);
-                        break L6;
-                      }
+                      this.c(1);
+                      break L6;
                     }
                   } else {
                     if (!pk.field_s) {
@@ -7238,39 +7289,73 @@ final class eg extends qh {
     }
 
     private final void a(boolean param0, int param1, int param2, tg param3) {
-        if (param1 != 22) {
-            Object var6 = null;
+        Object var6 = null;
+        L0: {
+          if (param1 == 22) {
+            break L0;
+          } else {
+            var6 = null;
             ((eg) this).a(81, 113, (ob) null);
+            break L0;
+          }
         }
-        ((eg) this).a(1, si.field_j, param3, 1, param2, 1, tl.field_a, pk.field_s, (byte) -37);
-        if (!(((eg) this).field_e > 0)) {
+        L1: {
+          ((eg) this).a(1, si.field_j, param3, 1, param2, 1, tl.field_a, pk.field_s, (byte) -37);
+          if (((eg) this).field_e <= 0) {
             ((eg) this).field_x = 3;
             ((eg) this).field_z = 0;
+            break L1;
+          } else {
+            break L1;
+          }
         }
-        ((eg) this).field_n = 20;
-        if (!(6 != ((eg) this).field_B)) {
+        L2: {
+          ((eg) this).field_n = 20;
+          if (6 == ((eg) this).field_B) {
             ((eg) this).field_n = 22;
+            break L2;
+          } else {
+            break L2;
+          }
         }
-        if ((((eg) this).field_s ^ -1) < -1) {
-            if (param0) {
-            } else {
+        L3: {
+          if ((((eg) this).field_s ^ -1) >= -1) {
+            break L3;
+          } else {
+            if (!param0) {
+              L4: {
                 ((eg) this).field_s = ((eg) this).field_s - 1;
                 ((eg) this).field_p = ((eg) this).field_p - 1;
-                if (-1 <= (((eg) this).field_p ^ -1)) {
-                    // ifeq L172
-                    // ifne L172
-                    this.c(false);
+                if (-1 > (((eg) this).field_p ^ -1)) {
+                  if (!pk.field_s) {
+                    break L4;
+                  } else {
+                    this.c(1);
+                    break L4;
+                  }
                 } else {
-                    if (pk.field_s) {
-                        if (!param0) {
-                            this.c(1);
-                        }
+                  if (!pk.field_s) {
+                    break L4;
+                  } else {
+                    if (param0) {
+                      break L4;
+                    } else {
+                      this.c(false);
+                      break L4;
                     }
+                  }
                 }
-                if (!((((eg) this).field_p ^ -1) < -1)) {
-                    ((eg) this).field_e = 60;
-                }
+              }
+              if ((((eg) this).field_p ^ -1) >= -1) {
+                ((eg) this).field_e = 60;
+                break L3;
+              } else {
+                break L3;
+              }
+            } else {
+              break L3;
             }
+          }
         }
     }
 

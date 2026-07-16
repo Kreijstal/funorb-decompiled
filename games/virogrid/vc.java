@@ -156,82 +156,30 @@ final class vc extends dc {
     final static void h(byte param0) {
         Object var1 = null;
         Throwable var2 = null;
-        int statePc = 0;
-        Throwable caughtException = null;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    var1 = (Object) (Object) pm.field_l;
-                    // monitorenter pm.field_l
-                    statePc = 1;
-                    continue stateLoop;
-                }
-                case 1: {
-                    try {
-                        j.field_e = hc.field_d;
-                        ng.field_Q = ng.field_Q + 1;
-                        nl.field_u = ka.field_i;
-                        hk.field_Jb = sm.field_a;
-                        if (param0 <= -30) {
-                            statePc = 3;
-                        } else {
-                            statePc = 2;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_1) {
-                        caughtException = stateCaught_1;
-                        statePc = 5;
-                        continue stateLoop;
-                    }
-                }
-                case 2: {
-                    try {
-                        field_eb = null;
-                        statePc = 3;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_2) {
-                        caughtException = stateCaught_2;
-                        statePc = 5;
-                        continue stateLoop;
-                    }
-                }
-                case 3: {
-                    try {
-                        w.field_J = wg.field_a;
-                        wg.field_a = false;
-                        oi.field_g = we.field_g;
-                        ii.field_b = ei.field_f;
-                        a.field_y = hk.field_Mb;
-                        we.field_g = 0;
-                        // monitorexit var1
-                        statePc = 7;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_3) {
-                        caughtException = stateCaught_3;
-                        statePc = 5;
-                        continue stateLoop;
-                    }
-                }
-                case 5: {
-                    try {
-                        var2 = caughtException;
-                        // monitorexit var1
-                        statePc = 6;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_5) {
-                        caughtException = stateCaught_5;
-                        statePc = 5;
-                        continue stateLoop;
-                    }
-                }
-                case 6: {
-                    throw (RuntimeException) (Object) var2;
-                }
-                case 7: {
-                    return;
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
+        Throwable decompiledCaughtException = null;
+        var1 = (Object) (Object) pm.field_l;
+        synchronized (var1) {
+          L0: {
+            L1: {
+              j.field_e = hc.field_d;
+              ng.field_Q = ng.field_Q + 1;
+              nl.field_u = ka.field_i;
+              hk.field_Jb = sm.field_a;
+              if (param0 <= -30) {
+                break L1;
+              } else {
+                field_eb = null;
+                break L1;
+              }
             }
+            w.field_J = wg.field_a;
+            wg.field_a = false;
+            oi.field_g = we.field_g;
+            ii.field_b = ei.field_f;
+            a.field_y = hk.field_Mb;
+            we.field_g = 0;
+            break L0;
+          }
         }
     }
 

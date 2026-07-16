@@ -21,21 +21,40 @@ final class ld {
     static int[] field_p;
 
     final int b(int param0) {
-        if (!((ld) this).field_d) {
-            // if_icmpne L30
-            // if_icmpgt L28
-        } else {
-            return 2;
-        }
-        if (!((gb.field_t ^ -1L) != (((ld) this).field_m ^ -1L))) {
-            return 1;
-        }
-        if (param0 == field_g) {
-            if (ah.a(((ld) this).field_i, 76)) {
-                return 1;
+        L0: {
+          if (((ld) this).field_d) {
+            break L0;
+          } else {
+            L1: {
+              if (2 != ((ld) this).field_k) {
+                break L1;
+              } else {
+                if (-1 > (((ld) this).field_h ^ -1)) {
+                  break L0;
+                } else {
+                  break L1;
+                }
+              }
             }
+            if ((gb.field_t ^ -1L) == (((ld) this).field_m ^ -1L)) {
+              return 1;
+            } else {
+              L2: {
+                if (param0 != field_g) {
+                  break L2;
+                } else {
+                  if (!ah.a(((ld) this).field_i, 76)) {
+                    break L2;
+                  } else {
+                    return 1;
+                  }
+                }
+              }
+              return 0;
+            }
+          }
         }
-        return 0;
+        return 2;
     }
 
     final static void a(String param0, String param1, int param2) {

@@ -85,7 +85,6 @@ final class d {
         int var4 = 0;
         int var5 = 0;
         String var6 = null;
-        String var6_ref = null;
         int var7 = 0;
         int var8 = 0;
         mf var9 = null;
@@ -129,7 +128,7 @@ final class d {
           } else {
             var3_long = pd.a(-22826) - ge.field_f;
             var2 = (int)((10999L + -var3_long) / 1000L);
-            if (var2 > -1) {
+            if ((var2 ^ -1) > -1) {
               var2 = 0;
               break L0;
             } else {
@@ -139,7 +138,7 @@ final class d {
         }
         var3 = 0;
         L1: while (true) {
-          if (var3 >= cj.field_h.length) {
+          if ((var3 ^ -1) <= (cj.field_h.length ^ -1)) {
             L2: {
               if (!param0) {
                 break L2;
@@ -152,8 +151,8 @@ final class d {
           } else {
             L3: {
               var4 = hd.field_s[var3];
-              if (-1 <= var4) {
-                if (var4 != i.field_W.field_d) {
+              if (-1 >= (var4 ^ -1)) {
+                if ((var4 ^ -1) != (i.field_W.field_d ^ -1)) {
                   var5 = dl.field_f;
                   break L3;
                 } else {
@@ -172,7 +171,7 @@ final class d {
               } else {
                 if (-2 == (var2 ^ -1)) {
                   L5: {
-                    if (dl.field_h.length <= pn.field_R.length) {
+                    if ((dl.field_h.length ^ -1) >= (pn.field_R.length ^ -1)) {
                       stackOut_16_0 = pn.field_R.length;
                       stackIn_17_0 = stackOut_16_0;
                       break L5;
@@ -201,13 +200,13 @@ final class d {
                             break L7;
                           }
                         }
-                        var6_ref = stackIn_22_0;
+                        var6 = stackIn_22_0;
                         break L6;
                       }
                     }
                   }
                   L8: {
-                    if (bp.field_a.length > hl.field_b.length) {
+                    if ((bp.field_a.length ^ -1) < (hl.field_b.length ^ -1)) {
                       stackOut_25_0 = bp.field_a.length;
                       stackIn_26_0 = stackOut_25_0;
                       break L8;
@@ -221,9 +220,9 @@ final class d {
                   if (var3 < var7 + 7) {
                     break L4;
                   } else {
-                    if (var7 + (7 + var8) > var3) {
+                    if ((var7 + (7 + var8) ^ -1) < (var3 ^ -1)) {
                       L9: {
-                        if (hl.field_b.length > -var7 + -7 + var3) {
+                        if ((hl.field_b.length ^ -1) < (-var7 + -7 + var3 ^ -1)) {
                           stackOut_31_0 = hl.field_b[var3 - 7 + -var7];
                           stackIn_32_0 = stackOut_31_0;
                           break L9;
@@ -233,7 +232,7 @@ final class d {
                           break L9;
                         }
                       }
-                      var6_ref = stackIn_32_0;
+                      var6 = stackIn_32_0;
                       break L4;
                     } else {
                       break L4;
@@ -246,14 +245,14 @@ final class d {
             }
             L10: {
               if (1 == (var4 ^ -1)) {
-                var6_ref = Integer.toString(var2);
+                var6 = Integer.toString(var2);
                 break L10;
               } else {
                 break L10;
               }
             }
             L11: {
-              stackOut_36_0 = (String) var6_ref;
+              stackOut_36_0 = (String) var6;
               stackOut_36_1 = 1;
               stackIn_38_0 = stackOut_36_0;
               stackIn_38_1 = stackOut_36_1;
@@ -308,17 +307,19 @@ final class d {
                 break L12;
               }
             }
-            if (0 <= var4) {
-              q.field_H.c(var6_ref, var8, var1 - -el.field_n, var5, -1);
-              var1 = var1 + (qh.field_f + (fe.field_H + cn.field_h));
-              var3++;
-              continue L1;
-            } else {
-              ZombieDawn.field_K.c(var6_ref, var8, var1 - -mh.field_F, var5, -1);
-              var1 = var1 + vl.field_r;
-              var3++;
-              continue L1;
+            L15: {
+              if (0 <= var4) {
+                q.field_H.c(var6, var8, var1 - -el.field_n, var5, -1);
+                var1 = var1 + (qh.field_f + (fe.field_H + cn.field_h));
+                break L15;
+              } else {
+                ZombieDawn.field_K.c(var6, var8, var1 - -mh.field_F, var5, -1);
+                var1 = var1 + vl.field_r;
+                break L15;
+              }
             }
+            var3++;
+            continue L1;
           }
         }
     }

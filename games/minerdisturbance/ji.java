@@ -12,8 +12,9 @@ final class ji extends gg {
         ((ji) this).field_r = param0.a(true, ((ji) this).field_r);
         ((ji) this).field_s = param0.b(((ji) this).field_s, (byte) 80);
         if (((ji) this).field_q == ((ji) this).field_o) {
-          ((ji) this).field_o = param0.a(((ji) this).field_q, (byte) -124);
-          ((ji) this).field_q = param0.a(((ji) this).field_q, (byte) -124);
+          int dupTemp$2 = param0.a(((ji) this).field_q, (byte) -124);
+          ((ji) this).field_o = dupTemp$2;
+          ((ji) this).field_q = dupTemp$2;
           return (ji) this;
         } else {
           L0: {

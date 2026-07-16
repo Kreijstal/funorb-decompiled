@@ -109,6 +109,7 @@ final class qf {
           if (var2 >= 10) {
             ((qf) this).field_a = param0.d((byte) -66);
             ((qf) this).field_c = param0.d((byte) -69);
+            return;
           } else {
             var3 = param0.e(false);
             if (var3 != 0) {

@@ -47,16 +47,15 @@ final class bp {
     }
 
     final static void a(byte param0) {
-        bg var1_ref = null;
         bg var1 = (bg) (Object) rf.field_t.b((byte) -77);
         if (param0 >= -42) {
             bp.a(false);
         }
         if (var1 == null) {
-            var1_ref = new bg();
+            var1 = new bg();
         }
-        var1_ref.a(ph.field_e, ph.field_c, ph.field_h, ph.field_d, ph.field_j, ph.field_a, ph.field_k, 17830);
-        bf.field_a.a((byte) 54, (q) (Object) var1_ref);
+        var1.a(ph.field_e, ph.field_c, ph.field_h, ph.field_d, ph.field_j, ph.field_a, ph.field_k, 17830);
+        bf.field_a.a((byte) 54, (q) (Object) var1);
     }
 
     static {

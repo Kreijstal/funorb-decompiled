@@ -193,9 +193,11 @@ final class p {
         int var4 = 0;
         var4 = Virogrid.field_F ? 1 : 0;
         var3 = 1;
-        if (param2 < -95) {
+        if (param2 >= -95) {
+          return 81;
+        } else {
           L0: while (true) {
-            if (param0 >= -2) {
+            if ((param0 ^ -1) >= -2) {
               if (param0 == 1) {
                 return var3 * param1;
               } else {
@@ -203,7 +205,7 @@ final class p {
               }
             } else {
               L1: {
-                if (-1 == (param0 & 1)) {
+                if (-1 == (param0 & 1 ^ -1)) {
                   break L1;
                 } else {
                   var3 = var3 * param1;
@@ -215,8 +217,6 @@ final class p {
               continue L0;
             }
           }
-        } else {
-          return 81;
         }
     }
 

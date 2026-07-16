@@ -21,7 +21,7 @@ final class d {
           if (pg.field_e) {
             break L0;
           } else {
-            if (gb.field_j == 0) {
+            if ((gb.field_j ^ -1) == 0) {
               break L0;
             } else {
               ie.a(gb.field_j, ad.field_m, 57);
@@ -30,7 +30,7 @@ final class d {
           }
         }
         L1: {
-          if (-1 >= cb.field_a) {
+          if (-1 <= (cb.field_a ^ -1)) {
             break L1;
           } else {
             if (-2 > (ob.field_j ^ -1)) {
@@ -78,8 +78,8 @@ final class d {
           }
         }
         L5: {
-          if (-1 > fg.field_a) {
-            if (-501 <= fg.field_a) {
+          if (-1 > (fg.field_a ^ -1)) {
+            if (-501 >= (fg.field_a ^ -1)) {
               L6: {
                 if (-2 != (bi.field_h ^ -1)) {
                   break L6;
@@ -117,7 +117,7 @@ final class d {
         L8: {
           var2 = 30 + ug.field_g.b(bb.a(wk.field_a, new String[1], -63));
           var3 = 30 + ug.field_g.b(bb.a(nb.field_b, new String[1], -63));
-          if (var2 >= var3) {
+          if ((var2 ^ -1) <= (var3 ^ -1)) {
             break L8;
           } else {
             var2 = var3;
@@ -158,7 +158,7 @@ final class d {
         var5 = var5 + (ug.field_g.b(field_a) - -1);
         var6 = 0;
         L12: while (true) {
-          if (uf.field_p <= var6) {
+          if ((uf.field_p ^ -1) >= (var6 ^ -1)) {
             L13: {
               if (param1 == -48) {
                 break L13;
@@ -175,7 +175,7 @@ final class d {
                   if (-51 >= (lk.field_b ^ -1)) {
                     break L15;
                   } else {
-                    if (lk.field_e == 0) {
+                    if ((lk.field_e ^ -1) == -1) {
                       ad.field_b.a(ac.field_a, 320, 33, 16777215, 1);
                       break L15;
                     } else {

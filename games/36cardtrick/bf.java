@@ -17,7 +17,7 @@ final class bf {
     final static void a(boolean param0, byte param1) {
         ej.a(true, (byte) 55, param0);
         if (param1 != -8) {
-            byte[] var3 = (byte[]) null;
+            Object var3 = null;
             byte[] discarded$0 = bf.a(116, (byte[]) null);
         }
     }

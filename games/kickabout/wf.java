@@ -351,10 +351,10 @@ final class wf extends qt {
           if (la.a(100)) {
             var3 = 320;
             if (param0 != 1) {
-              if (param0 == -1) {
+              if ((param0 ^ -1) == -1) {
                 return 24 + (var3 - ((((wf) this).field_i[1].field_d + ((wf) this).field_i[0].field_d >> 1782894721) - ((wf) this).field_i[1].field_d * 2));
               } else {
-                if (-3 == param0) {
+                if (-3 == (param0 ^ -1)) {
                   return 600;
                 } else {
                   break L0;
@@ -435,11 +435,11 @@ final class wf extends qt {
                     var7 = new ut[2][4][2];
                     var8 = 0;
                     L3: while (true) {
-                      if (var8 <= -17) {
+                      if ((var8 ^ -1) <= -17) {
                         return var7;
                       } else {
                         L4: {
-                          if (-1 != (8 & var8)) {
+                          if (-1 != (8 & var8 ^ -1)) {
                             stackOut_13_0 = 0;
                             stackIn_14_0 = stackOut_13_0;
                             break L4;
@@ -560,7 +560,7 @@ final class wf extends qt {
         }
         while (var3 != null) {
             if (!(var3.field_a != param0.field_a)) {
-                vc var3_ref = param0;
+                var3 = param0;
             }
             var3 = (vc) (Object) ((wf) this).field_T.c(param1 ^ 673);
         }
@@ -660,9 +660,9 @@ final class wf extends qt {
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
-        jr var9_ref = null;
+        jr var9_ref_jr = null;
         int var9 = 0;
-        jr var10_ref = null;
+        jr var10_ref_jr = null;
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
@@ -699,26 +699,26 @@ final class wf extends qt {
                 break L0;
               } else {
                 L2: {
-                  if (var7 >= param3) {
+                  if ((var7 ^ -1) <= (param3 ^ -1)) {
                     L3: {
                       if (var7 == 0) {
-                        var10_ref = new jr(nc.field_b);
-                        var10_ref.field_X = (hu) (Object) pb.field_C;
-                        var10_ref.field_mb = 50;
-                        var10_ref.field_y = 16777215;
-                        var17.a((gn) (Object) var10_ref, 3);
+                        var10_ref_jr = new jr(nc.field_b);
+                        var10_ref_jr.field_X = (hu) (Object) pb.field_C;
+                        var10_ref_jr.field_mb = 50;
+                        var10_ref_jr.field_y = 16777215;
+                        var17.a((gn) (Object) var10_ref_jr, 3);
                         var8++;
                         break L3;
                       } else {
                         break L3;
                       }
                     }
-                    var10_ref = new jr(var18, gk.field_f);
-                    var10_ref.field_y = 16777215;
-                    var10_ref.field_mb = 50;
-                    var10_ref.field_X = (hu) (Object) pb.field_C;
+                    var10_ref_jr = new jr(var18, gk.field_f);
+                    var10_ref_jr.field_y = 16777215;
+                    var10_ref_jr.field_mb = 50;
+                    var10_ref_jr.field_X = (hu) (Object) pb.field_C;
                     var8++;
-                    var17.a((gn) (Object) var10_ref, 3);
+                    var17.a((gn) (Object) var10_ref_jr, 3);
                     break L2;
                   } else {
                     break L2;
@@ -733,12 +733,12 @@ final class wf extends qt {
         }
         L4: {
           if ((var7 ^ -1) < -1) {
-            var9_ref = new jr(ko.field_k);
-            var9_ref.field_mb = 50;
-            var9_ref.field_y = 16777215;
-            var9_ref.field_X = (hu) (Object) pb.field_C;
+            var9_ref_jr = new jr(ko.field_k);
+            var9_ref_jr.field_mb = 50;
+            var9_ref_jr.field_y = 16777215;
+            var9_ref_jr.field_X = (hu) (Object) pb.field_C;
             var8++;
-            var17.a((gn) (Object) var9_ref, 3);
+            var17.a((gn) (Object) var9_ref_jr, 3);
             break L4;
           } else {
             break L4;
@@ -774,7 +774,7 @@ final class wf extends qt {
             }
             L9: {
               var10 = -var6 - (param3 - -var8 - param2);
-              if (-1 >= param3) {
+              if (-1 >= (param3 ^ -1)) {
                 break L9;
               } else {
                 var10 = -var6 + param2;
@@ -782,7 +782,7 @@ final class wf extends qt {
               }
             }
             L10: {
-              if (-6 >= var10) {
+              if (-6 <= (var10 ^ -1)) {
                 break L10;
               } else {
                 var10 = 5;
@@ -801,7 +801,7 @@ final class wf extends qt {
             var11 = var9;
             var12 = 0;
             L12: while (true) {
-              if (var11 <= var12) {
+              if ((var11 ^ -1) >= (var12 ^ -1)) {
                 var12_ref_jr = (jr) (Object) var17.g(24009);
                 L13: while (true) {
                   if (var12_ref_jr == null) {
@@ -876,12 +876,12 @@ final class wf extends qt {
                 break L17;
               }
             }
-            var10_ref = new jr(ui.field_w[var9], gk.field_f);
-            var10_ref.field_mb = 50;
-            var10_ref.field_X = (hu) (Object) pb.field_C;
-            var10_ref.field_y = 16777215;
+            var10_ref_jr = new jr(ui.field_w[var9], gk.field_f);
+            var10_ref_jr.field_mb = 50;
+            var10_ref_jr.field_X = (hu) (Object) pb.field_C;
+            var10_ref_jr.field_y = 16777215;
             var6++;
-            var17.a((gn) (Object) var10_ref, 3);
+            var17.a((gn) (Object) var10_ref_jr, 3);
             var9++;
             continue L6;
           }

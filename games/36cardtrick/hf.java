@@ -18,7 +18,7 @@ class hf extends hl {
             this.b(true);
         }
         if (!(!(((hf) this).field_k instanceof pi))) {
-            ((pi) ((hf) this).field_k).a((hf) this, 12891);
+            ((pi) (Object) ((hf) this).field_k).a((hf) this, 12891);
         }
     }
 
@@ -26,48 +26,28 @@ class hf extends hl {
         try {
             String var2 = null;
             Exception var2_ref = null;
-            int statePc = 0;
-            Throwable caughtException = null;
-            stateLoop: while (true) {
-                switch (statePc) {
-                    case 0: {
-                        try {
-                            var2 = (String) java.awt.Toolkit.getDefaultToolkit().getSystemClipboard().getContents((Object) null).getTransferData(java.awt.datatransfer.DataFlavor.stringFlavor);
-                            this.f((byte) -56);
-                            this.a(var2, (byte) 127);
-                            if (!param0) {
-                                statePc = 4;
-                            } else {
-                                statePc = 1;
-                            }
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_0) {
-                            caughtException = stateCaught_0;
-                            statePc = 3;
-                            continue stateLoop;
-                        }
-                    }
-                    case 1: {
-                        try {
-                            this.b(true);
-                            statePc = 4;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_1) {
-                            caughtException = stateCaught_1;
-                            statePc = 3;
-                            continue stateLoop;
-                        }
-                    }
-                    case 3: {
-                        var2_ref = (Exception) (Object) caughtException;
-                        statePc = 4;
-                        continue stateLoop;
-                    }
-                    case 4: {
-                        return;
-                    }
-                    default: throw new IllegalStateException("invalid CFG state " + statePc);
+            Throwable decompiledCaughtException = null;
+            try {
+              L0: {
+                L1: {
+                  var2 = (String) java.awt.Toolkit.getDefaultToolkit().getSystemClipboard().getContents((Object) null).getTransferData(java.awt.datatransfer.DataFlavor.stringFlavor);
+                  this.f((byte) -56);
+                  this.a(var2, (byte) 127);
+                  if (!param0) {
+                    break L1;
+                  } else {
+                    this.b(true);
+                    break L1;
+                  }
                 }
+                break L0;
+              }
+            } catch (java.lang.Exception decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              L2: {
+                var2_ref = (Exception) (Object) decompiledCaughtException;
+                break L2;
+              }
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -82,7 +62,7 @@ class hf extends hl {
         int var13 = 0;
         int var14 = 0;
         int var15 = 0;
-        CharSequence var16 = null;
+        Object var16 = null;
         var15 = Main.field_T;
         var11 = -param1;
         L0: while (true) {
@@ -91,8 +71,8 @@ class hf extends hl {
               if (param10 >= 124) {
                 break L1;
               } else {
-                var16 = (CharSequence) null;
-                String discarded$1 = hf.a((CharSequence) null, (byte) 65);
+                var16 = null;
+                String discarded$123 = hf.a((CharSequence) null, (byte) 65);
                 break L1;
               }
             }
@@ -106,8 +86,9 @@ class hf extends hl {
                 var11++;
                 continue L0;
               } else {
+                int incrementValue$124 = param5;
                 param5++;
-                param3 = param4[param5] & 255;
+                param3 = param4[incrementValue$124] & 255;
                 if (param3 == 0) {
                   param6++;
                   var12++;
@@ -115,8 +96,9 @@ class hf extends hl {
                 } else {
                   var13 = param9[param6];
                   var14 = 256 + -param3;
+                  int incrementValue$125 = param6;
                   param6++;
-                  param9[param6] = bc.a(-16711936, bc.a(param2, 16711935) * param3 - -(bc.a(16711935, var13) * var14)) - -bc.a(var14 * bc.a(var13, 65280) + param3 * bc.a(param2, 65280), 16711680) >> -1261866520;
+                  param9[incrementValue$125] = bc.a(-16711936, bc.a(param2, 16711935) * param3 - -(bc.a(16711935, var13) * var14)) - -bc.a(var14 * bc.a(var13, 65280) + param3 * bc.a(param2, 65280), 16711680) >> -1261866520;
                   var12++;
                   continue L2;
                 }
@@ -172,14 +154,14 @@ class hf extends hl {
         int var8_int = 0;
         long var8 = 0L;
         if (param3 >= -14) {
-            lk var10 = (lk) null;
+            Object var10 = null;
             boolean discarded$0 = ((hf) this).a('k', (byte) 63, -72, (lk) null);
         }
-        if (this.a(param0, param1, param2, -83, param4, param5, param6)) {
+        if (super.a(param0, param1, param2, -83, param4, param5, param6)) {
             if (!(((hf) this).field_v instanceof ne)) {
                 return false;
             }
-            var8_int = ((ne) ((hf) this).field_v).a(eg.field_b, param1, -10989, param0, (lk) this, ij.field_e);
+            var8_int = ((ne) (Object) ((hf) this).field_v).a(eg.field_b, param1, -10989, param0, (lk) this, ij.field_e);
             this.a(-1 != var8_int ? var8_int : 0, 72);
             var8 = id.a(117);
             ((hf) this).field_G = 250L > var8 - ((hf) this).field_O ? true : false;
@@ -213,8 +195,9 @@ class hf extends hl {
                 ((hf) this).field_r = ((hf) this).field_r.substring(0, ((hf) this).field_K);
             }
         }
-        ((hf) this).field_F = ((hf) this).field_r.length();
-        ((hf) this).field_N = ((hf) this).field_r.length();
+        int dupTemp$0 = ((hf) this).field_r.length();
+        ((hf) this).field_F = dupTemp$0;
+        ((hf) this).field_N = dupTemp$0;
         if (!(param2)) {
             ((hf) this).k(64);
         }
@@ -250,7 +233,7 @@ class hf extends hl {
               } else {
                 if (param0 <= 126) {
                   L1: {
-                    if (((hf) this).field_N == ((hf) this).field_F) {
+                    if ((((hf) this).field_N ^ -1) == (((hf) this).field_F ^ -1)) {
                       break L1;
                     } else {
                       this.f((byte) -56);
@@ -270,15 +253,16 @@ class hf extends hl {
                       }
                     }
                     L4: {
-                      if (((hf) this).field_N < ((hf) this).field_r.length()) {
+                      if ((((hf) this).field_N ^ -1) > (((hf) this).field_r.length() ^ -1)) {
                         ((hf) this).field_r = ((hf) this).field_r.substring(0, ((hf) this).field_N) + param0 + ((hf) this).field_r.substring(((hf) this).field_N, ((hf) this).field_r.length());
                         ((hf) this).field_N = ((hf) this).field_N + 1;
                         ((hf) this).field_F = ((hf) this).field_N;
                         break L4;
                       } else {
                         ((hf) this).field_r = ((hf) this).field_r + param0;
-                        ((hf) this).field_N = ((hf) this).field_r.length();
-                        ((hf) this).field_F = ((hf) this).field_r.length();
+                        int dupTemp$1 = ((hf) this).field_r.length();
+                        ((hf) this).field_N = dupTemp$1;
+                        ((hf) this).field_F = dupTemp$1;
                         break L4;
                       }
                     }
@@ -320,10 +304,10 @@ class hf extends hl {
                     return true;
                   }
                 } else {
-                  if (param2 != -14) {
-                    if (-97 != param2) {
-                      if (-98 == param2) {
-                        if (((hf) this).field_N >= ((hf) this).field_r.length()) {
+                  if ((param2 ^ -1) != -14) {
+                    if (-97 != (param2 ^ -1)) {
+                      if (-98 == (param2 ^ -1)) {
+                        if ((((hf) this).field_N ^ -1) <= (((hf) this).field_r.length() ^ -1)) {
                           break L5;
                         } else {
                           L6: {
@@ -349,11 +333,11 @@ class hf extends hl {
                         }
                       } else {
                         if (param2 != 102) {
-                          if (-104 == param2) {
+                          if (-104 == (param2 ^ -1)) {
                             this.a(((hf) this).field_r.length(), 72);
                             return true;
                           } else {
-                            if (param2 == -85) {
+                            if ((param2 ^ -1) == -85) {
                               this.i(17091);
                               return true;
                             } else {
@@ -361,7 +345,7 @@ class hf extends hl {
                                 if (!ge.field_c[82]) {
                                   break L7;
                                 } else {
-                                  if (-66 == param2) {
+                                  if (-66 == (param2 ^ -1)) {
                                     this.l(11514);
                                     return true;
                                   } else {
@@ -472,12 +456,12 @@ class hf extends hl {
         if (param3 != 3) {
             ((hf) this).field_L = -18;
         }
-        this.a(param0, param1, param2, param3 + 0);
+        super.a(param0, param1, param2, param3 + 0);
         this.e((byte) -120);
         if (!((((hf) this).field_x ^ -1) != -2)) {
             if (!(!(((hf) this).field_v instanceof ne))) {
-                var7 = (ne) ((hf) this).field_v;
-                var6 = ((ne) var7).a(eg.field_b, param0, -10989, param1, (lk) this, ij.field_e);
+                var7 = (ne) (Object) ((hf) this).field_v;
+                var6 = var7.a(eg.field_b, param0, -10989, param1, (lk) this, ij.field_e);
                 if (-1 != var6) {
                     if (((hf) this).field_G) {
                         if (((hf) this).field_L > var6) {
@@ -495,37 +479,67 @@ class hf extends hl {
 
     final static String a(CharSequence param0, byte param1) {
         if (param1 != 36) {
-            return (String) null;
+            return null;
         }
         return ha.a(param0, param1 ^ -30737, false);
     }
 
     private final int m(int param0) {
         int var2 = 0;
-        int var3 = Main.field_T;
-        if (-1 == (((hf) this).field_N ^ -1)) {
-            return ((hf) this).field_N;
+        int var3 = 0;
+        var3 = Main.field_T;
+        if (-1 != (((hf) this).field_N ^ -1)) {
+          var2 = ((hf) this).field_N + param0;
+          L0: while (true) {
+            L1: {
+              if (0 >= var2) {
+                break L1;
+              } else {
+                if (((hf) this).field_r.charAt(var2 - 1) == 32) {
+                  break L1;
+                } else {
+                  var2--;
+                  continue L0;
+                }
+              }
+            }
+            return var2;
+          }
+        } else {
+          return ((hf) this).field_N;
         }
-        for (var2 = ((hf) this).field_N + param0; 0 < var2; var2--) {
-            // if_icmpeq L52
-        }
-        return var2;
     }
 
     private final int j(int param0) {
+        int var2 = 0;
         int var3 = 0;
-        int var4 = Main.field_T;
-        if (param0 >= -96) {
-            return -15;
-        }
-        int var2 = ((hf) this).field_r.length();
-        if (!(var2 != ((hf) this).field_N)) {
+        int var4 = 0;
+        var4 = Main.field_T;
+        if (param0 < -96) {
+          var2 = ((hf) this).field_r.length();
+          if (var2 == ((hf) this).field_N) {
             return ((hf) this).field_N;
+          } else {
+            var3 = ((hf) this).field_N + 1;
+            L0: while (true) {
+              L1: {
+                if (var3 >= var2) {
+                  break L1;
+                } else {
+                  if (((hf) this).field_r.charAt(var3 + -1) == 32) {
+                    break L1;
+                  } else {
+                    var3++;
+                    continue L0;
+                  }
+                }
+              }
+              return var3;
+            }
+          }
+        } else {
+          return -15;
         }
-        for (var3 = ((hf) this).field_N + 1; var3 < var2; var3++) {
-            // if_icmpeq L71
-        }
-        return var3;
     }
 
     private final String h(int param0) {
@@ -542,13 +556,13 @@ class hf extends hl {
             if (!(0 != param3)) {
                 ((hf) this).field_v.a(param0, (lk) this, 11447, param1, ((hf) this).field_B);
                 if (!(!(((hf) this).field_v instanceof ne))) {
-                    var8 = (ne) ((hf) this).field_v;
+                    var8 = (ne) (Object) ((hf) this).field_v;
                     if (!(((hf) this).field_F == ((hf) this).field_N)) {
-                        ((ne) var8).a((lk) this, (byte) 67, param1, param0, ((hf) this).field_N, ((hf) this).field_F);
+                        var8.a((lk) this, (byte) 67, param1, param0, ((hf) this).field_N, ((hf) this).field_F);
                     }
                     var6 = id.a(62);
                     if (((-((hf) this).field_M + var6) % 1000L ^ -1L) > -501L) {
-                        ((ne) var8).a(param0, ((hf) this).field_N, param1, (byte) 55, (lk) this);
+                        var8.a(param0, ((hf) this).field_N, param1, (byte) 55, (lk) this);
                     }
                 }
             }
@@ -572,11 +586,11 @@ class hf extends hl {
             return;
           } else {
             if (param0 <= -74) {
-              var9 = (ne) ((hf) this).field_v;
-              var3 = ((ne) var9).a((byte) -96, (lk) this);
+              var9 = (ne) (Object) ((hf) this).field_v;
+              var3 = var9.a((byte) -96, (lk) this);
               var4 = var3.b((byte) -5);
-              var5 = ((ne) var9).a((lk) this, 0);
-              var6 = ((ne) var9).a(-1) >> -573259903;
+              var5 = var9.a((lk) this, 0);
+              var6 = var9.a(-1) >> -573259903;
               if (var5 - var6 <= var4) {
                 L0: {
                   var7 = ((hf) this).field_l + var3.a(true, ((hf) this).field_N);
@@ -627,7 +641,7 @@ class hf extends hl {
             return;
         }
         if (((hf) this).field_k instanceof pi) {
-            ((pi) ((hf) this).field_k).a(-1, (hf) this);
+            ((pi) (Object) ((hf) this).field_k).a(-1, (hf) this);
         }
     }
 
@@ -658,7 +672,7 @@ class hf extends hl {
     public static void o(int param0) {
         field_H = null;
         if (param0 != -31141) {
-            CharSequence var2 = (CharSequence) null;
+            Object var2 = null;
             String discarded$0 = hf.a((CharSequence) null, (byte) 102);
         }
     }

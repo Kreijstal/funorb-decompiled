@@ -20,12 +20,12 @@ final class ei extends vf {
 
     final byte[] a(byte param0) {
         byte[] var2 = null;
-        byte[] var3 = null;
+        Object var3 = null;
         byte[] var4 = null;
         var4 = new byte[((ei) this).field_c.capacity()];
         var2 = var4;
         if (param0 != 25) {
-          var3 = (byte[]) null;
+          var3 = null;
           ((ei) this).a((byte[]) null, (byte) -86);
           java.nio.Buffer discarded$8 = ((ei) this).field_c.position(0);
           java.nio.ByteBuffer discarded$9 = ((ei) this).field_c.get(var4);
@@ -61,23 +61,23 @@ final class ei extends vf {
     final static void a(int param0, uh param1, int param2) {
         w var3 = null;
         if (param0 >= -40) {
-          field_d = (sc) null;
+          field_d = null;
           var3 = na.field_r;
           var3.h(param2, 0);
           var3.b(-9469, 5);
           var3.b(-9469, 0);
-          var3.e(((uh) param1).field_g, 26040);
-          var3.b(-9469, ((uh) param1).field_k);
-          var3.b(-9469, ((uh) param1).field_h);
+          var3.e(param1.field_g, 26040);
+          var3.b(-9469, param1.field_k);
+          var3.b(-9469, param1.field_h);
           return;
         } else {
           var3 = na.field_r;
           var3.h(param2, 0);
           var3.b(-9469, 5);
           var3.b(-9469, 0);
-          var3.e(((uh) param1).field_g, 26040);
-          var3.b(-9469, ((uh) param1).field_k);
-          var3.b(-9469, ((uh) param1).field_h);
+          var3.e(param1.field_g, 26040);
+          var3.b(-9469, param1.field_k);
+          var3.b(-9469, param1.field_h);
           return;
         }
     }

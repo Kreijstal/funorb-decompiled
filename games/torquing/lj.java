@@ -45,49 +45,14 @@ final class lj implements Iterable {
         Object var2 = null;
         int var3 = 0;
         Throwable var4 = null;
-        int statePc = 0;
-        Throwable caughtException = null;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    var2 = (Object) (Object) Torquing.field_v;
-                    // monitorenter Torquing.field_v
-                    statePc = 1;
-                    continue stateLoop;
-                }
-                case 1: {
-                    try {
-                        var3 = 127 / ((17 - param1) / 41);
-                        Torquing.field_v.field_r.a((lf) (Object) param0);
-                        // monitorexit var2
-                        statePc = 5;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_1) {
-                        caughtException = stateCaught_1;
-                        statePc = 3;
-                        continue stateLoop;
-                    }
-                }
-                case 3: {
-                    try {
-                        var4 = caughtException;
-                        // monitorexit var2
-                        statePc = 4;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_3) {
-                        caughtException = stateCaught_3;
-                        statePc = 3;
-                        continue stateLoop;
-                    }
-                }
-                case 4: {
-                    throw (RuntimeException) (Object) var4;
-                }
-                case 5: {
-                    return;
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
-            }
+        Throwable decompiledCaughtException = null;
+        var2 = (Object) (Object) Torquing.field_v;
+        synchronized (var2) {
+          L0: {
+            var3 = 127 / ((17 - param1) / 41);
+            Torquing.field_v.field_r.a((lf) (Object) param0);
+            break L0;
+          }
         }
     }
 

@@ -63,14 +63,19 @@ final class kg {
                     }
                   }
                   try {
-                    ((kg) this).field_d.setInput(param1.field_l, 10 + param1.field_m, -param1.field_m + (-10 + (-8 + param1.field_l.length)));
-                    int discarded$2 = ((kg) this).field_d.inflate(param2);
-                  } catch (java.lang.Exception decompiledCaughtParameter) {
-                    decompiledCaughtException = decompiledCaughtParameter;
+                    L3: {
+                      ((kg) this).field_d.setInput(param1.field_l, 10 + param1.field_m, -param1.field_m + (-10 + (-8 + param1.field_l.length)));
+                      int discarded$2 = ((kg) this).field_d.inflate(param2);
+                      break L3;
+                    }
+                  } catch (java.lang.Exception decompiledCaughtParameter0) {
+                    decompiledCaughtException = decompiledCaughtParameter0;
+                    exception = (Exception) (Object) decompiledCaughtException;
+                    ((kg) this).field_d.reset();
+                    throw new RuntimeException("");
                   }
-                  exception = (Exception) (Object) decompiledCaughtException;
                   ((kg) this).field_d.reset();
-                  throw new RuntimeException("");
+                  return;
                 } else {
                   break L0;
                 }

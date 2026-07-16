@@ -54,31 +54,34 @@ final class ga {
 
     final void a(byte param0, boolean param1) {
         if (param0 <= -124) {
-          if (!param1) {
-            if (((ga) this).field_c < -1) {
-              ((ga) this).field_c = ((ga) this).field_c - ap.field_c;
-              if (-1 <= ((ga) this).field_c) {
-                return;
-              } else {
-                ((ga) this).field_c = 0;
-                return;
-              }
-            } else {
-              return;
-            }
-          } else {
-            if (((ga) this).field_c < sh.field_f) {
-              ((ga) this).field_c = ((ga) this).field_c + ap.field_a;
-              if (sh.field_f < ((ga) this).field_c) {
-                ((ga) this).field_c = sh.field_f;
-                return;
+          L0: {
+            if (!param1) {
+              if ((((ga) this).field_c ^ -1) < -1) {
+                ((ga) this).field_c = ((ga) this).field_c - ap.field_c;
+                if (-1 < (((ga) this).field_c ^ -1)) {
+                  ((ga) this).field_c = 0;
+                  break L0;
+                } else {
+                  return;
+                }
               } else {
                 return;
               }
             } else {
-              return;
+              if (((ga) this).field_c < sh.field_f) {
+                ((ga) this).field_c = ((ga) this).field_c + ap.field_a;
+                if (sh.field_f >= ((ga) this).field_c) {
+                  break L0;
+                } else {
+                  ((ga) this).field_c = sh.field_f;
+                  return;
+                }
+              } else {
+                return;
+              }
             }
           }
+          return;
         } else {
           return;
         }

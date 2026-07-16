@@ -35,7 +35,7 @@ final class lb {
         a[] var4 = null;
         int var5 = 0;
         int var6 = 0;
-        a var6_ref = null;
+        a var6_ref_a = null;
         int var7 = 0;
         a[] var8 = null;
         a[] var9 = null;
@@ -60,15 +60,15 @@ final class lb {
                   var5++;
                   continue L0;
                 } else {
-                  var6_ref = new a();
+                  var6_ref_a = new a();
                   int discarded$12 = param1.f(7, 24);
                   int discarded$13 = param1.f(7, 24);
-                  var6_ref.field_d = param1.f(7, 24);
+                  var6_ref_a.field_d = param1.f(7, 24);
                   int discarded$14 = param1.f(7, 9);
                   int discarded$15 = param1.f(7, 12);
                   int discarded$16 = param1.f(7, 12);
                   int discarded$17 = param1.f(7, 12);
-                  var4[var5] = var6_ref;
+                  var4[var5] = var6_ref_a;
                   var5++;
                   var5++;
                   continue L0;
@@ -95,15 +95,15 @@ final class lb {
                     var4[var5] = var8[var6];
                     break L2;
                   } else {
-                    var6_ref = new a();
+                    var6_ref_a = new a();
                     int discarded$18 = param1.f(7, 24);
                     int discarded$19 = param1.f(7, 24);
-                    var6_ref.field_d = param1.f(7, 24);
+                    var6_ref_a.field_d = param1.f(7, 24);
                     int discarded$20 = param1.f(7, 9);
                     int discarded$21 = param1.f(7, 12);
                     int discarded$22 = param1.f(7, 12);
                     int discarded$23 = param1.f(7, 12);
-                    var4[var5] = var6_ref;
+                    var4[var5] = var6_ref_a;
                     var5++;
                     break L2;
                   }

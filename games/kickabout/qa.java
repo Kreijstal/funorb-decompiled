@@ -226,7 +226,6 @@ final class qa extends dj {
         int var2 = 0;
         gm var2_ref_gm = null;
         Object var3 = null;
-        byte[] var3_array = null;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
@@ -247,30 +246,30 @@ final class qa extends dj {
               if (var2_ref_gm.field_C > 0) {
                 var5 = Math.min(-1 + kj.field_b.length, 210 * var2_ref_gm.field_C / var2_ref_gm.a((byte) -99));
                 var4 = 72;
-                var3_array = kj.field_b[var5];
+                var3 = (Object) (Object) kj.field_b[var5];
                 break L1;
               } else {
                 if (-1 > (mn.field_b[var1] ^ -1)) {
                   var4 = qi.field_n[-1 + mn.field_b[var1]];
-                  var3_array = ac.field_a[mn.field_b[var1] - 1];
+                  var3 = (Object) (Object) ac.field_a[mn.field_b[var1] - 1];
                   break L1;
                 } else {
                   break L1;
                 }
               }
             }
-            if (var3_array != null) {
+            if (var3 != null) {
               var5 = ug.a(0, var2_ref_gm.field_kb >> 725111984);
               var6 = lf.a((byte) -114, var2_ref_gm.field_bb >> 491129232);
               if (hw.field_i == 256) {
                 var7 = var4 >> 260263585;
-                eo.a(var3_array, -var7 + var5, -var7 + var6, var4);
+                eo.a((byte[]) var3, -var7 + var5, -var7 + var6, var4);
                 var1++;
                 continue L0;
               } else {
                 var7 = hw.field_i * var4 >> -39051064;
                 var8 = var7 >> 1021409345;
-                eo.a(var3_array, -var8 + var5, -var8 + var6, var4, var7);
+                eo.a((byte[]) var3, -var8 + var5, -var8 + var6, var4, var7);
                 var1++;
                 continue L0;
               }

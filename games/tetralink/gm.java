@@ -43,7 +43,7 @@ final class gm {
         int var11 = 0;
         le[] var12 = null;
         int var13 = 0;
-        qa var14_ref = null;
+        qa var14_ref_qa = null;
         int var14 = 0;
         int var15 = 0;
         int var16 = 0;
@@ -110,10 +110,10 @@ final class gm {
                 if (var13 >= param2.field_z.length) {
                   break L2;
                 } else {
-                  var14_ref = n.field_U.a(param2.field_z[var13], true);
-                  var8[var13] = var14_ref.field_y;
+                  var14_ref_qa = n.field_U.a(param2.field_z[var13], true);
+                  var8[var13] = var14_ref_qa.field_y;
                   var9[var13] = param2.field_D[var13];
-                  var12[var13] = gm.a(-128, param1, var14_ref, param3, param4);
+                  var12[var13] = gm.a(-128, param1, var14_ref_qa, param3, param4);
                   var13++;
                   continue L3;
                 }

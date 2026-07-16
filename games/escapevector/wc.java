@@ -1051,22 +1051,28 @@ final class wc {
     }
 
     final boolean f(int param0) {
-        int stackIn_9_0 = 0;
-        int stackOut_7_0 = 0;
+        int stackIn_11_0 = 0;
+        int stackOut_9_0 = 0;
+        int stackOut_10_0 = 0;
         if (param0 == 23518) {
-          if (((wc) this).field_g != -2) {
-            if (-98 != ((wc) this).field_c) {
-              if (((wc) this).field_c != 84) {
-                if ((((wc) this).field_c ^ -1) == -84) {
-                  return true;
+          if ((((wc) this).field_g ^ -1) != -2) {
+            if (-98 != (((wc) this).field_c ^ -1)) {
+              L0: {
+                if (((wc) this).field_c == 84) {
+                  stackOut_9_0 = 1;
+                  stackIn_11_0 = stackOut_9_0;
+                  break L0;
                 } else {
-                  return false;
+                  if ((((wc) this).field_c ^ -1) != -84) {
+                    stackOut_10_0 = 0;
+                    stackIn_11_0 = stackOut_10_0;
+                    break L0;
+                  } else {
+                    return true;
+                  }
                 }
-              } else {
-                stackOut_7_0 = 1;
-                stackIn_9_0 = stackOut_7_0;
-                return stackIn_9_0 != 0;
               }
+              return stackIn_11_0 != 0;
             } else {
               return true;
             }

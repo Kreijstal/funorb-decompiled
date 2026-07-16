@@ -56,114 +56,115 @@ final class vb {
         int stackOut_7_0 = 0;
         int stackOut_6_0 = 0;
         L0: {
-          L1: {
-            var6 = Kickabout.field_G;
-            if (-1 == rm.field_C) {
-              break L1;
+          var6 = Kickabout.field_G;
+          if (-1 == (rm.field_C ^ -1)) {
+            bv.field_l = null;
+            break L0;
+          } else {
+            if (!vi.field_n) {
+              bv.field_l = null;
+              break L0;
             } else {
-              if (!vi.field_n) {
-                break L1;
-              } else {
-                if (-2 != rm.field_C) {
-                  if (-3 != rm.field_C) {
-                    if ((rm.field_C ^ -1) != -4) {
-                      break L0;
-                    } else {
-                      break L1;
-                    }
+              if (-2 != (rm.field_C ^ -1)) {
+                if (-3 != (rm.field_C ^ -1)) {
+                  if ((rm.field_C ^ -1) != -4) {
+                    break L0;
                   } else {
-                    bv.field_l = new rk[34];
-                    var1 = 0;
-                    var2 = 0;
-                    L2: while (true) {
-                      if (-18 <= var2) {
-                        var1 = 0;
-                        var2 = 17;
-                        L3: while (true) {
-                          if ((var2 ^ -1) <= -35) {
-                            break L0;
-                          } else {
-                            if (p.a((byte) -24, 3) != 0) {
+                    bv.field_l = null;
+                    break L0;
+                  }
+                } else {
+                  bv.field_l = new rk[34];
+                  var1 = 0;
+                  var2 = 0;
+                  L1: while (true) {
+                    if (-18 >= (var2 ^ -1)) {
+                      var1 = 0;
+                      var2 = 17;
+                      L2: while (true) {
+                        if ((var2 ^ -1) <= -35) {
+                          break L0;
+                        } else {
+                          L3: {
+                            if (p.a((byte) -24, 3) == 0) {
+                              break L3;
+                            } else {
                               var3 = 1424;
                               var4 = p.a((byte) -24, 5);
                               var5 = p.a((byte) -24, 100);
                               bv.field_l[var2] = new rk(var1 - -var4, var3 - -var5, 4);
-                              var1 += 54;
-                              var2++;
-                              continue L3;
-                            } else {
-                              var1 += 54;
-                              var2++;
-                              continue L3;
+                              break L3;
                             }
                           }
+                          var1 += 54;
+                          var2++;
+                          continue L2;
                         }
-                      } else {
-                        if (p.a((byte) -24, 3) != 0) {
+                      }
+                    } else {
+                      L4: {
+                        if ((p.a((byte) -24, 3) ^ -1) != -1) {
                           var3 = -170;
                           var4 = p.a((byte) -24, 5);
                           var5 = p.a((byte) -24, 100);
                           bv.field_l[var2] = new rk(var4 + var1, var5 + var3, 0);
-                          var1 += 54;
-                          var2++;
-                          continue L2;
+                          break L4;
                         } else {
-                          var1 += 54;
-                          var2++;
-                          continue L2;
+                          break L4;
                         }
                       }
+                      var1 += 54;
+                      var2++;
+                      continue L1;
                     }
                   }
-                } else {
-                  bv.field_l = new rk[30];
-                  var1 = 0;
-                  L4: while (true) {
-                    if (var1 >= bv.field_l.length) {
-                      break L0;
-                    } else {
-                      L5: {
-                        if (ih.field_c != 2) {
-                          stackOut_7_0 = -60;
-                          stackIn_8_0 = stackOut_7_0;
-                          break L5;
-                        } else {
-                          stackOut_6_0 = -120;
-                          stackIn_8_0 = stackOut_6_0;
-                          break L5;
-                        }
+                }
+              } else {
+                bv.field_l = new rk[30];
+                var1 = 0;
+                L5: while (true) {
+                  if ((var1 ^ -1) <= (bv.field_l.length ^ -1)) {
+                    break L0;
+                  } else {
+                    L6: {
+                      if (ih.field_c != 2) {
+                        stackOut_7_0 = -60;
+                        stackIn_8_0 = stackOut_7_0;
+                        break L6;
+                      } else {
+                        stackOut_6_0 = -120;
+                        stackIn_8_0 = stackOut_6_0;
+                        break L6;
                       }
-                      L6: {
-                        var2 = stackIn_8_0;
-                        var2 = el.a(29430, 15, var2);
-                        var3 = 20 + var1 * 45;
-                        var4 = 6;
-                        if (0 == p.a((byte) -24, 2)) {
-                          var4 = 2;
-                          var2 = 896 + -var2;
-                          break L6;
-                        } else {
-                          break L6;
-                        }
-                      }
-                      bv.field_l[var1] = new rk(var2, var3, var4);
-                      var1++;
-                      continue L4;
                     }
+                    L7: {
+                      var2 = stackIn_8_0;
+                      var2 = el.a(29430, 15, var2);
+                      var3 = 20 + var1 * 45;
+                      var4 = 6;
+                      if (0 == p.a((byte) -24, 2)) {
+                        var4 = 2;
+                        var2 = 896 + -var2;
+                        break L7;
+                      } else {
+                        break L7;
+                      }
+                    }
+                    bv.field_l[var1] = new rk(var2, var3, var4);
+                    var1++;
+                    continue L5;
                   }
                 }
               }
             }
           }
-          bv.field_l = null;
-          break L0;
         }
-        L7: {
+        L8: {
           if (param0) {
-            break L7;
+            break L8;
           } else {
             boolean discarded$1 = vb.b(-46);
-            break L7;
+            break L8;
           }
         }
     }

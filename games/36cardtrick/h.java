@@ -49,7 +49,7 @@ final class h extends hl {
         int var4 = sj.field_b.get(5);
         int var5 = sj.field_b.get(2);
         if (param0 > -8) {
-            return (String) null;
+            return null;
         }
         int var6 = sj.field_b.get(1);
         int var7 = sj.field_b.get(11);
@@ -69,12 +69,12 @@ final class h extends hl {
         bi.field_d = bi.field_d - 1;
         if (bi.field_d == 0) {
             bi.field_d = 200;
-            var1 = (gi) aj.field_s.a((byte) 74);
+            var1 = (gi) (Object) aj.field_s.a((byte) 74);
             while (var1 != null) {
-                if (!((gi) var1).field_i.b(125)) {
+                if (!var1.field_i.b(125)) {
                     var1.c(84);
                 }
-                var1 = (gi) aj.field_s.b((byte) -92);
+                var1 = (gi) (Object) aj.field_s.b((byte) -92);
             }
         }
     }
@@ -112,19 +112,21 @@ final class h extends hl {
     final static kc[] b(int param0, int param1, int param2, int param3, int param4) {
         kc[] var6 = new kc[9];
         kc[] var5 = var6;
-        var6[6] = te.a(param0, -127, param1);
-        var5[3] = te.a(param0, -127, param1);
-        var5[2] = te.a(param0, -127, param1);
-        var5[1] = te.a(param0, -127, param1);
-        var5[0] = te.a(param0, -127, param1);
-        var6[8] = te.a(param0, -126, param4);
-        var5[7] = te.a(param0, -126, param4);
-        var5[5] = te.a(param0, -126, param4);
+        kc dupTemp$0 = te.a(param0, -127, param1);
+        var6[6] = dupTemp$0;
+        var5[3] = dupTemp$0;
+        var5[2] = dupTemp$0;
+        var5[1] = dupTemp$0;
+        var5[0] = dupTemp$0;
+        kc dupTemp$1 = te.a(param0, -126, param4);
+        var6[8] = dupTemp$1;
+        var5[7] = dupTemp$1;
+        var5[5] = dupTemp$1;
         if (-1 != (param3 ^ -1)) {
             var6[4] = te.a(64, -126, param3);
         }
         if (param2 != 15762) {
-            return (kc[]) null;
+            return null;
         }
         return var5;
     }
@@ -138,7 +140,7 @@ final class h extends hl {
         int var13 = 0;
         int var14 = 0;
         var14 = Main.field_T;
-        if (!this.a(param0, param1, param2, -96, param4, param5, param6)) {
+        if (!super.a(param0, param1, param2, -96, param4, param5, param6)) {
           if (param3 <= -14) {
             return false;
           } else {
@@ -207,7 +209,7 @@ final class h extends hl {
     public static void a(int param0) {
         field_E = null;
         if (param0 != -26526) {
-            field_I = (fe) null;
+            field_I = null;
         }
         field_I = null;
     }

@@ -11,24 +11,24 @@ final class nf implements java.awt.event.KeyListener, java.awt.event.FocusListen
           L0: {
             ak.field_y = 0;
             var2 = param0.getKeyCode();
-            if (-1 < var2) {
+            if (-1 < (var2 ^ -1)) {
               var2 = -1;
               break L0;
             } else {
-              if (mb.field_o.length > var2) {
+              if ((mb.field_o.length ^ -1) < (var2 ^ -1)) {
                 var2 = -129 & mb.field_o[var2];
                 break L0;
               } else {
                 var2 = -1;
                 if (db.field_R >= 0) {
-                  if (-1 <= var2) {
+                  if (-1 >= (var2 ^ -1)) {
                     di.field_b[db.field_R] = var2 ^ -1;
                     db.field_R = 127 & 1 + db.field_R;
-                    if (db.field_R != rj.field_g) {
+                    if (db.field_R == rj.field_g) {
+                      db.field_R = -1;
                       param0.consume();
                       return;
                     } else {
-                      db.field_R = -1;
                       param0.consume();
                       return;
                     }
@@ -43,26 +43,28 @@ final class nf implements java.awt.event.KeyListener, java.awt.event.FocusListen
               }
             }
           }
-          if (db.field_R >= 0) {
-            if (-1 >= (var2 ^ -1)) {
-              di.field_b[db.field_R] = var2 ^ -1;
-              db.field_R = 127 & 1 + db.field_R;
-              if (db.field_R != rj.field_g) {
-                param0.consume();
-                return;
+          L1: {
+            if (db.field_R < 0) {
+              break L1;
+            } else {
+              if (-1 >= (var2 ^ -1)) {
+                di.field_b[db.field_R] = var2 ^ -1;
+                db.field_R = 127 & 1 + db.field_R;
+                if (db.field_R == rj.field_g) {
+                  db.field_R = -1;
+                  break L1;
+                } else {
+                  param0.consume();
+                  return;
+                }
               } else {
-                db.field_R = -1;
                 param0.consume();
                 return;
               }
-            } else {
-              param0.consume();
-              return;
             }
-          } else {
-            param0.consume();
-            return;
           }
+          param0.consume();
+          return;
         } else {
           param0.consume();
           return;
@@ -116,19 +118,19 @@ final class nf implements java.awt.event.KeyListener, java.awt.event.FocusListen
           ak.field_y = 0;
           var2 = param0.getKeyCode();
           if (0 <= var2) {
-            if (mb.field_o.length > var2) {
+            if ((mb.field_o.length ^ -1) < (var2 ^ -1)) {
               var2 = mb.field_o[var2];
               if (-1 != (var2 & 128 ^ -1)) {
                 var2 = -1;
                 if (db.field_R >= 0) {
-                  if (var2 <= -1) {
+                  if ((var2 ^ -1) <= -1) {
                     di.field_b[db.field_R] = var2;
                     db.field_R = 127 & db.field_R - -1;
                     if (rj.field_g == db.field_R) {
                       db.field_R = -1;
                       if (0 <= var2) {
                         var3 = Bounce.field_F - -1 & 127;
-                        if (var3 == oh.field_a) {
+                        if ((var3 ^ -1) == (oh.field_a ^ -1)) {
                           var3 = param0.getModifiers();
                           if (-1 != (10 & var3 ^ -1)) {
                             param0.consume();
@@ -190,7 +192,7 @@ final class nf implements java.awt.event.KeyListener, java.awt.event.FocusListen
                     } else {
                       if (0 <= var2) {
                         var3 = Bounce.field_F - -1 & 127;
-                        if (var3 == oh.field_a) {
+                        if ((var3 ^ -1) == (oh.field_a ^ -1)) {
                           var3 = param0.getModifiers();
                           if (-1 != (10 & var3 ^ -1)) {
                             param0.consume();
@@ -253,7 +255,7 @@ final class nf implements java.awt.event.KeyListener, java.awt.event.FocusListen
                   } else {
                     if (0 <= var2) {
                       var3 = Bounce.field_F - -1 & 127;
-                      if (var3 == oh.field_a) {
+                      if ((var3 ^ -1) == (oh.field_a ^ -1)) {
                         var3 = param0.getModifiers();
                         if (-1 != (10 & var3 ^ -1)) {
                           param0.consume();
@@ -295,7 +297,7 @@ final class nf implements java.awt.event.KeyListener, java.awt.event.FocusListen
                       }
                     } else {
                       var3 = param0.getModifiers();
-                      if (-1 != (10 & var3)) {
+                      if (-1 != (10 & var3 ^ -1)) {
                         param0.consume();
                         return;
                       } else {
@@ -316,7 +318,7 @@ final class nf implements java.awt.event.KeyListener, java.awt.event.FocusListen
                 } else {
                   if (0 <= var2) {
                     var3 = Bounce.field_F - -1 & 127;
-                    if (var3 == oh.field_a) {
+                    if ((var3 ^ -1) == (oh.field_a ^ -1)) {
                       var3 = param0.getModifiers();
                       if (-1 != (10 & var3 ^ -1)) {
                         param0.consume();
@@ -393,7 +395,7 @@ final class nf implements java.awt.event.KeyListener, java.awt.event.FocusListen
                         L1: {
                           if (0 <= var2) {
                             var3 = Bounce.field_F - -1 & 127;
-                            if (var3 == oh.field_a) {
+                            if ((var3 ^ -1) == (oh.field_a ^ -1)) {
                               break L1;
                             } else {
                               pf.field_A[Bounce.field_F] = var2;
@@ -410,16 +412,16 @@ final class nf implements java.awt.event.KeyListener, java.awt.event.FocusListen
                           param0.consume();
                           return;
                         } else {
-                          if (85 != var2) {
-                            if (var2 != 10) {
-                              return;
-                            } else {
-                              param0.consume();
-                              return;
-                            }
-                          } else {
+                          if (85 == var2) {
                             param0.consume();
                             return;
+                          } else {
+                            if (var2 == 10) {
+                              param0.consume();
+                              return;
+                            } else {
+                              return;
+                            }
                           }
                         }
                       }
@@ -428,7 +430,7 @@ final class nf implements java.awt.event.KeyListener, java.awt.event.FocusListen
                 }
                 if (0 <= var2) {
                   var3 = Bounce.field_F - -1 & 127;
-                  if (var3 == oh.field_a) {
+                  if ((var3 ^ -1) == (oh.field_a ^ -1)) {
                     var3 = param0.getModifiers();
                     if (-1 != (10 & var3 ^ -1)) {
                       param0.consume();
@@ -474,16 +476,16 @@ final class nf implements java.awt.event.KeyListener, java.awt.event.FocusListen
                     param0.consume();
                     return;
                   } else {
-                    if (85 != var2) {
-                      if (var2 != 10) {
-                        return;
-                      } else {
-                        param0.consume();
-                        return;
-                      }
-                    } else {
+                    if (85 == var2) {
                       param0.consume();
                       return;
+                    } else {
+                      if (var2 == 10) {
+                        param0.consume();
+                        return;
+                      } else {
+                        return;
+                      }
                     }
                   }
                 }
@@ -508,28 +510,28 @@ final class nf implements java.awt.event.KeyListener, java.awt.event.FocusListen
                 L3: {
                   if (0 <= var2) {
                     var3 = Bounce.field_F - -1 & 127;
-                    if (var3 == oh.field_a) {
+                    if ((var3 ^ -1) == (oh.field_a ^ -1)) {
                       break L3;
                     } else {
                       pf.field_A[Bounce.field_F] = var2;
                       fk.field_b[Bounce.field_F] = (char)0;
                       Bounce.field_F = var3;
                       var3 = param0.getModifiers();
-                      if (-1 == (10 & var3 ^ -1)) {
-                        if (85 != var2) {
-                          if (var2 != 10) {
-                            return;
-                          } else {
-                            param0.consume();
-                            return;
-                          }
-                        } else {
-                          param0.consume();
-                          return;
-                        }
-                      } else {
+                      if (-1 != (10 & var3 ^ -1)) {
                         param0.consume();
                         return;
+                      } else {
+                        if (85 == var2) {
+                          param0.consume();
+                          return;
+                        } else {
+                          if (var2 == 10) {
+                            param0.consume();
+                            return;
+                          } else {
+                            return;
+                          }
+                        }
                       }
                     }
                   } else {
@@ -537,27 +539,27 @@ final class nf implements java.awt.event.KeyListener, java.awt.event.FocusListen
                   }
                 }
                 var3 = param0.getModifiers();
-                if (-1 == (10 & var3 ^ -1)) {
-                  if (85 != var2) {
-                    if (var2 != 10) {
-                      return;
-                    } else {
-                      param0.consume();
-                      return;
-                    }
-                  } else {
-                    param0.consume();
-                    return;
-                  }
-                } else {
+                if (-1 != (10 & var3 ^ -1)) {
                   param0.consume();
                   return;
+                } else {
+                  if (85 == var2) {
+                    param0.consume();
+                    return;
+                  } else {
+                    if (var2 == 10) {
+                      param0.consume();
+                      return;
+                    } else {
+                      return;
+                    }
+                  }
                 }
               } else {
                 L4: {
                   if (0 <= var2) {
                     var3 = Bounce.field_F - -1 & 127;
-                    if (var3 == oh.field_a) {
+                    if ((var3 ^ -1) == (oh.field_a ^ -1)) {
                       break L4;
                     } else {
                       pf.field_A[Bounce.field_F] = var2;
@@ -570,21 +572,21 @@ final class nf implements java.awt.event.KeyListener, java.awt.event.FocusListen
                   }
                 }
                 var3 = param0.getModifiers();
-                if (-1 == (10 & var3 ^ -1)) {
-                  if (85 != var2) {
-                    if (var2 != 10) {
-                      return;
-                    } else {
-                      param0.consume();
-                      return;
-                    }
-                  } else {
-                    param0.consume();
-                    return;
-                  }
-                } else {
+                if (-1 != (10 & var3 ^ -1)) {
                   param0.consume();
                   return;
+                } else {
+                  if (85 == var2) {
+                    param0.consume();
+                    return;
+                  } else {
+                    if (var2 == 10) {
+                      param0.consume();
+                      return;
+                    } else {
+                      return;
+                    }
+                  }
                 }
               }
             }
@@ -611,7 +613,7 @@ final class nf implements java.awt.event.KeyListener, java.awt.event.FocusListen
             L6: {
               if (0 <= var2) {
                 var3 = Bounce.field_F - -1 & 127;
-                if (var3 == oh.field_a) {
+                if ((var3 ^ -1) == (oh.field_a ^ -1)) {
                   break L6;
                 } else {
                   pf.field_A[Bounce.field_F] = var2;
@@ -624,21 +626,21 @@ final class nf implements java.awt.event.KeyListener, java.awt.event.FocusListen
               }
             }
             var3 = param0.getModifiers();
-            if (-1 == (10 & var3 ^ -1)) {
-              if (85 != var2) {
-                if (var2 != 10) {
-                  return;
-                } else {
-                  param0.consume();
-                  return;
-                }
-              } else {
-                param0.consume();
-                return;
-              }
-            } else {
+            if (-1 != (10 & var3 ^ -1)) {
               param0.consume();
               return;
+            } else {
+              if (85 == var2) {
+                param0.consume();
+                return;
+              } else {
+                if (var2 == 10) {
+                  param0.consume();
+                  return;
+                } else {
+                  return;
+                }
+              }
             }
           }
         } else {

@@ -202,49 +202,49 @@ final class so {
         qg.a(var13, 0, param0, var12, 24, var11, (byte) 56);
         var15 = 0;
         L1: while (true) {
-          if (-25 >= var15) {
+          if (-25 >= (var15 ^ -1)) {
             return;
           } else {
-            if (0 <= var13[var15]) {
-              if (-1 <= var13[1 + var15]) {
-                if (!hk.a(101, var11[var15 - -1], var11[var15], var12[var15 - -1], var13[1 + var15], var13[var15], var12[var15])) {
-                  L2: {
-                    var18 = null;
-                    byte discarded$1 = ic.a(var12, var15, var11, (int[]) null, var13, 4);
-                    if (-1 != var13[var15]) {
-                      break L2;
-                    } else {
-                      var13[var15] = 1;
-                      break L2;
-                    }
-                  }
-                  L3: {
-                    if (-1 != var13[var15 - -1]) {
-                      break L3;
-                    } else {
-                      var13[1 + var15] = 1;
-                      break L3;
-                    }
-                  }
-                  var11[var15] = (var11[var15] << 639546601) / var13[var15] + fb.field_q;
-                  var12[var15] = (var12[var15] << -894735287) / var13[var15] + fb.field_d;
-                  var11[var15 - -1] = (var11[1 + var15] << 312625769) / var13[1 + var15] + fb.field_q;
-                  var12[1 + var15] = (var12[var15 + 1] << -278504919) / var13[var15 - -1] + fb.field_d;
-                  qh.d(var11[var15], var12[var15], var11[var15 - -1], var12[var15 - -1], var14[var15 >> 911549729]);
-                  var15 += 2;
-                  continue L1;
-                } else {
-                  var15 += 2;
-                  continue L1;
-                }
+            L2: {
+              if (0 > var13[var15]) {
+                break L2;
               } else {
-                var15 += 2;
-                continue L1;
+                if (-1 >= (var13[1 + var15] ^ -1)) {
+                  if (hk.a(101, var11[var15 - -1], var11[var15], var12[var15 - -1], var13[1 + var15], var13[var15], var12[var15])) {
+                    break L2;
+                  } else {
+                    L3: {
+                      var18 = null;
+                      byte discarded$1 = ic.a(var12, var15, var11, (int[]) null, var13, 4);
+                      if (-1 != (var13[var15] ^ -1)) {
+                        break L3;
+                      } else {
+                        var13[var15] = 1;
+                        break L3;
+                      }
+                    }
+                    L4: {
+                      if (-1 != (var13[var15 - -1] ^ -1)) {
+                        break L4;
+                      } else {
+                        var13[1 + var15] = 1;
+                        break L4;
+                      }
+                    }
+                    var11[var15] = (var11[var15] << 639546601) / var13[var15] + fb.field_q;
+                    var12[var15] = (var12[var15] << -894735287) / var13[var15] + fb.field_d;
+                    var11[var15 - -1] = (var11[1 + var15] << 312625769) / var13[1 + var15] + fb.field_q;
+                    var12[1 + var15] = (var12[var15 + 1] << -278504919) / var13[var15 - -1] + fb.field_d;
+                    qh.d(var11[var15], var12[var15], var11[var15 - -1], var12[var15 - -1], var14[var15 >> 911549729]);
+                    break L2;
+                  }
+                } else {
+                  break L2;
+                }
               }
-            } else {
-              var15 += 2;
-              continue L1;
             }
+            var15 += 2;
+            continue L1;
           }
         }
     }
@@ -317,8 +317,9 @@ final class so {
         }
         if (!(((so) this).field_i == null)) {
             param0[param1] = ((so) this).field_d;
+            int incrementValue$0 = param1;
             param1++;
-            param3[param1] = ((so) this).field_a;
+            param3[incrementValue$0] = ((so) this).field_a;
         }
         if (!(null == ((so) this).field_b)) {
             for (var5 = 0; var5 < ((so) this).field_b.length; var5++) {
@@ -349,8 +350,9 @@ final class so {
         int var6 = Pool.field_O;
         if (null != ((so) this).field_i) {
             param1[param2] = ((so) this).field_d;
+            int incrementValue$0 = param2;
             param2++;
-            param3[param2] = ((so) this).field_i;
+            param3[incrementValue$0] = ((so) this).field_i;
         }
         if (((so) this).field_b != null) {
             for (var5 = 0; var5 < ((so) this).field_b.length; var5++) {
@@ -431,8 +433,9 @@ final class so {
         int var4 = 0;
         pm var5 = (pm) (Object) param1.c((byte) -94);
         while (var5 != null) {
+            int incrementValue$0 = var4;
             var4++;
-            ((so) this).field_b[var4] = var5.field_n;
+            ((so) this).field_b[incrementValue$0] = var5.field_n;
             var5 = (pm) (Object) param1.f((byte) -5);
         }
     }

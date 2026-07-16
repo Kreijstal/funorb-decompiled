@@ -106,8 +106,9 @@ final class kc {
             if (((kc) this).field_b <= ((kc) this).field_a) {
                 return null;
             }
+            int fieldTemp$0 = ((kc) this).field_a;
             ((kc) this).field_a = ((kc) this).field_a + 1;
-            var2 = ((kc) this).field_d[((kc) this).field_a].field_d;
+            var2 = ((kc) this).field_d[fieldTemp$0].field_d;
         } while (((kc) this).field_d[((kc) this).field_a + -1] == var2);
         ((kc) this).field_e = var2.field_d;
         return var2;
@@ -179,8 +180,9 @@ final class kc {
         ((kc) this).field_d = new gn[param0];
         ((kc) this).field_b = param0;
         for (var2 = 0; var2 < param0; var2++) {
-            var3 = new gn();
-            ((kc) this).field_d[var2] = new gn();
+            gn dupTemp$0 = new gn();
+            var3 = dupTemp$0;
+            ((kc) this).field_d[var2] = dupTemp$0;
             var3.field_b = var3;
             var3.field_d = var3;
         }

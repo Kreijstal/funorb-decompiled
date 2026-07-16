@@ -28,37 +28,37 @@ final class de extends f implements Cloneable {
 
     final void a(int param0, int param1, int param2, boolean param3, int param4, int param5) {
         int var7 = 0;
-        if (param2 != -25) {
+        if ((param2 ^ -1) != -25) {
           kj.field_a[((de) this).field_i].b(param5, param4, 2 * param2, param0 * 2);
-          if (null == ((de) this).field_j) {
-            var7 = 8 / ((-70 - param1) / 33);
-            return;
-          } else {
+          if (null != ((de) this).field_j) {
             ((de) this).field_j.a(param0, param5, param2, param4, true);
             qc.field_f[((de) this).field_i].b(param5, param4, 2 * param2, 2 * param0);
             var7 = 8 / ((-70 - param1) / 33);
             return;
+          } else {
+            var7 = 8 / ((-70 - param1) / 33);
+            return;
           }
         } else {
-          if (-25 == param0) {
+          if (-25 == (param0 ^ -1)) {
             kj.field_a[((de) this).field_i].c(param5, param4);
-            if (null != ((de) this).field_j) {
-              ((de) this).field_j.a(param0, param5, param2, param4, true);
-              qc.field_f[((de) this).field_i].a(param5, param4);
-              var7 = 8 / ((-70 - param1) / 33);
-              return;
-            } else {
-              var7 = 8 / ((-70 - param1) / 33);
-              return;
-            }
-          } else {
-            kj.field_a[((de) this).field_i].b(param5, param4, 2 * param2, param0 * 2);
             if (null == ((de) this).field_j) {
               var7 = 8 / ((-70 - param1) / 33);
               return;
             } else {
               ((de) this).field_j.a(param0, param5, param2, param4, true);
+              qc.field_f[((de) this).field_i].a(param5, param4);
+              var7 = 8 / ((-70 - param1) / 33);
+              return;
+            }
+          } else {
+            kj.field_a[((de) this).field_i].b(param5, param4, 2 * param2, param0 * 2);
+            if (null != ((de) this).field_j) {
+              ((de) this).field_j.a(param0, param5, param2, param4, true);
               qc.field_f[((de) this).field_i].b(param5, param4, 2 * param2, 2 * param0);
+              var7 = 8 / ((-70 - param1) / 33);
+              return;
+            } else {
               var7 = 8 / ((-70 - param1) / 33);
               return;
             }

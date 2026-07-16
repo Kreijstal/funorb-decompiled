@@ -216,7 +216,7 @@ final class ho {
         int stackOut_22_0 = 0;
         int stackOut_21_0 = 0;
         L0: {
-          int discarded$1 = tg.e(24);
+          int discarded$2 = tg.e(24);
           ((ho) this).field_b = tg.e(16);
           ((ho) this).field_a = tg.e(24);
           ((ho) this).field_e = new int[((ho) this).field_a];
@@ -283,8 +283,9 @@ final class ho {
                     var3_int++;
                     continue L5;
                   } else {
+                    int incrementValue$3 = var2;
                     var2++;
-                    ((ho) this).field_e[var2] = var3_int;
+                    ((ho) this).field_e[incrementValue$3] = var3_int;
                     var5++;
                     continue L6;
                   }

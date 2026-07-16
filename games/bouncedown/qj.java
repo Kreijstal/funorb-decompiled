@@ -33,8 +33,11 @@ final class qj {
                   }
                   var4 = 61 / ((param2 - -40) / 55);
                   try {
-                    ((qj) this).field_b.setInput(param0.field_i, param0.field_h - -10, -10 + (-param0.field_h - 8) + param0.field_i.length);
-                    int discarded$2 = ((qj) this).field_b.inflate(param1);
+                    L2: {
+                      ((qj) this).field_b.setInput(param0.field_i, param0.field_h - -10, -10 + (-param0.field_h - 8) + param0.field_i.length);
+                      int discarded$2 = ((qj) this).field_b.inflate(param1);
+                      break L2;
+                    }
                   } catch (java.lang.Exception decompiledCaughtParameter0) {
                     decompiledCaughtException = decompiledCaughtParameter0;
                     exception = (Exception) (Object) decompiledCaughtException;

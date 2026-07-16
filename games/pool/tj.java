@@ -21,8 +21,9 @@ abstract class tj extends oe {
         if (((tj) this).field_db > 0) {
             var2 = ((tj) this).field_bb;
             var3 = ((tj) this).field_X;
+            int fieldTemp$0 = ((tj) this).field_Z + 1;
             ((tj) this).field_Z = ((tj) this).field_Z + 1;
-            if (((tj) this).field_Z + 1 >= ((tj) this).field_db) {
+            if (fieldTemp$0 >= ((tj) this).field_db) {
                 ((tj) this).field_db = 0;
                 ((tj) this).j(50);
             } else {
@@ -298,90 +299,92 @@ abstract class tj extends oe {
                 }
               }
             } else {
-              if (var8 >= qh.field_c) {
-                if (var8 < qh.field_g) {
-                  L3: {
-                    var9 = var7 * (var6 - var5) / var4 + var5;
-                    var10 = 0;
-                    var11 = ((tj) this).field_l;
-                    if ((var7 ^ -1) >= -21) {
-                      L4: while (true) {
-                        if ((var10 ^ -1) < -21) {
-                          break L3;
-                        } else {
-                          var12 = (20 - var10) * (20 + -var10) + (20 + -var7) * (20 - var7);
-                          if (var12 <= 462) {
-                            if ((var12 ^ -1) > -421) {
-                              break L3;
-                            } else {
-                              var13 = var9 * (-var12 + 462) / 42;
-                              var13 = var13 | (var13 << 614533872 | var13 << -1346209688);
-                              qh.field_d[var10 + qh.field_l * var8 + param0] = var13;
-                              var10++;
-                              continue L4;
-                            }
-                          } else {
-                            var10++;
-                            continue L4;
-                          }
-                        }
-                      }
-                    } else {
-                      break L3;
-                    }
-                  }
-                  L5: {
-                    if (var7 >= -21) {
-                      var12 = var11;
-                      var11 -= 21;
-                      var13 = 0;
-                      L6: while (true) {
-                        L7: {
-                          if (-21 < var13) {
-                            break L7;
-                          } else {
-                            var14 = var13 * var13 + (-var7 + 20) * (-var7 + 20);
-                            if (462 >= var14) {
-                              if (var14 < 420) {
-                                var12 = var11 + 1;
-                                var13++;
-                                var11++;
-                                continue L6;
-                              } else {
-                                var15 = var9 * (-var14 + 462) / 42;
-                                var15 = var15 | (var15 << -2141675960 | var15 << -1200251056);
-                                qh.field_d[param0 + (qh.field_l * var8 - -var11)] = var15;
-                                var13++;
-                                var11++;
-                                continue L6;
-                              }
-                            } else {
-                              break L7;
-                            }
-                          }
-                        }
-                        var11 = var12;
-                        break L5;
-                      }
-                    } else {
-                      break L5;
-                    }
-                  }
-                  var9 = var9 | (var9 << -2102659160 | var9 << 748833968);
-                  qh.f(var10 + param0, var8, -var10 + var11, var9);
-                  var7++;
-                  var8++;
-                  continue L0;
+              L3: {
+                if ((var8 ^ -1) > (qh.field_c ^ -1)) {
+                  break L3;
                 } else {
-                  var7++;
-                  var8++;
-                  continue L0;
+                  if ((var8 ^ -1) > (qh.field_g ^ -1)) {
+                    L4: {
+                      var9 = var7 * (var6 - var5) / var4 + var5;
+                      var10 = 0;
+                      var11 = ((tj) this).field_l;
+                      if ((var7 ^ -1) >= -21) {
+                        L5: while (true) {
+                          if ((var10 ^ -1) < -21) {
+                            break L4;
+                          } else {
+                            L6: {
+                              var12 = (20 - var10) * (20 + -var10) + (20 + -var7) * (20 - var7);
+                              if (var12 > 462) {
+                                break L6;
+                              } else {
+                                if ((var12 ^ -1) > -421) {
+                                  break L4;
+                                } else {
+                                  var13 = var9 * (-var12 + 462) / 42;
+                                  var13 = var13 | (var13 << 614533872 | var13 << -1346209688);
+                                  qh.field_d[var10 + qh.field_l * var8 + param0] = var13;
+                                  break L6;
+                                }
+                              }
+                            }
+                            var10++;
+                            continue L5;
+                          }
+                        }
+                      } else {
+                        break L4;
+                      }
+                    }
+                    L7: {
+                      if ((var7 ^ -1) >= -21) {
+                        var12 = var11;
+                        var11 -= 21;
+                        var13 = 0;
+                        L8: while (true) {
+                          L9: {
+                            if (-21 > (var13 ^ -1)) {
+                              break L9;
+                            } else {
+                              var14 = var13 * var13 + (-var7 + 20) * (-var7 + 20);
+                              if (462 >= var14) {
+                                L10: {
+                                  if (var14 < 420) {
+                                    var12 = var11 + 1;
+                                    break L10;
+                                  } else {
+                                    var15 = var9 * (-var14 + 462) / 42;
+                                    var15 = var15 | (var15 << -2141675960 | var15 << -1200251056);
+                                    qh.field_d[param0 + (qh.field_l * var8 - -var11)] = var15;
+                                    break L10;
+                                  }
+                                }
+                                var13++;
+                                var11++;
+                                continue L8;
+                              } else {
+                                break L9;
+                              }
+                            }
+                          }
+                          var11 = var12;
+                          break L7;
+                        }
+                      } else {
+                        break L7;
+                      }
+                    }
+                    var9 = var9 | (var9 << -2102659160 | var9 << 748833968);
+                    qh.f(var10 + param0, var8, -var10 + var11, var9);
+                    break L3;
+                  } else {
+                    break L3;
+                  }
                 }
-              } else {
-                var7++;
-                var8++;
-                continue L0;
               }
+              var7++;
+              var8++;
+              continue L0;
             }
           }
         } else {

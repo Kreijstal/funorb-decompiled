@@ -93,75 +93,41 @@ final class rd extends am {
             Runtime var3_ref = null;
             Long var4 = null;
             Object var5 = null;
-            int statePc = 0;
-            Throwable caughtException = null;
-            stateLoop: while (true) {
-                switch (statePc) {
-                    case 0: {
-                        var1 = 81 % ((param0 - -46) / 61);
-                        statePc = 1;
-                        continue stateLoop;
+            Throwable decompiledCaughtException = null;
+            var1 = 81 % ((param0 - -46) / 61);
+            try {
+              L0: {
+                L1: {
+                  var2_ref = Runtime.class.getMethod("maxMemory", new Class[0]);
+                  if (var2_ref == null) {
+                    break L1;
+                  } else {
+                    try {
+                      L2: {
+                        var3_ref = Runtime.getRuntime();
+                        var5 = null;
+                        var4 = (Long) var2_ref.invoke((Object) (Object) var3_ref, (Object[]) null);
+                        df.field_u = 1 + (int)(var4.longValue() / 1048576L);
+                        break L2;
+                      }
+                    } catch (java.lang.Throwable decompiledCaughtParameter0) {
+                      decompiledCaughtException = decompiledCaughtParameter0;
+                      L3: {
+                        var3 = decompiledCaughtException;
+                        break L3;
+                      }
                     }
-                    case 1: {
-                        try {
-                            var2_ref = Runtime.class.getMethod("maxMemory", new Class[0]);
-                            if (var2_ref == null) {
-                                statePc = 7;
-                            } else {
-                                statePc = 2;
-                            }
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_1) {
-                            caughtException = stateCaught_1;
-                            statePc = 6;
-                            continue stateLoop;
-                        }
-                    }
-                    case 2: {
-                        try {
-                            var3_ref = Runtime.getRuntime();
-                            var5 = null;
-                            var4 = (Long) var2_ref.invoke((Object) (Object) var3_ref, (Object[]) null);
-                            df.field_u = 1 + (int)(var4.longValue() / 1048576L);
-                            statePc = 3;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_2) {
-                            caughtException = stateCaught_2;
-                            statePc = 4;
-                            continue stateLoop;
-                        }
-                    }
-                    case 3: {
-                        try {
-                            statePc = 7;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_3) {
-                            caughtException = stateCaught_3;
-                            statePc = 6;
-                            continue stateLoop;
-                        }
-                    }
-                    case 4: {
-                        try {
-                            var3 = caughtException;
-                            statePc = 7;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_4) {
-                            caughtException = stateCaught_4;
-                            statePc = 6;
-                            continue stateLoop;
-                        }
-                    }
-                    case 6: {
-                        var2 = (Exception) (Object) caughtException;
-                        statePc = 7;
-                        continue stateLoop;
-                    }
-                    case 7: {
-                        return;
-                    }
-                    default: throw new IllegalStateException("invalid CFG state " + statePc);
+                    break L1;
+                  }
                 }
+                break L0;
+              }
+            } catch (java.lang.Exception decompiledCaughtParameter1) {
+              decompiledCaughtException = decompiledCaughtParameter1;
+              L4: {
+                var2 = (Exception) (Object) decompiledCaughtException;
+                break L4;
+              }
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -177,12 +143,12 @@ final class rd extends am {
           var5 = Torquing.field_u;
           var4 = param2;
           if (var4 != 0) {
-            if (var4 != -2) {
+            if ((var4 ^ -1) != -2) {
               if (2 == var4) {
                 ((rd) this).field_u = param0.i((byte) -101);
                 break L0;
               } else {
-                if (-4 != var4) {
+                if (-4 != (var4 ^ -1)) {
                   if (var4 == 4) {
                     ((rd) this).field_B = param0.i(param1 + 7053);
                     break L0;

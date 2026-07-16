@@ -127,23 +127,36 @@ class wi extends fd {
     }
 
     boolean a(fd param0, int param1) {
-        if (((wi) this).field_y) {
-            // ifeq L17
-        } else {
-            return false;
-        }
-        if (param1 != 0) {
-            return true;
-        }
-        param0.g(84);
-        ((wi) this).field_D = true;
-        if (((wi) this).field_k != null) {
-            if (!(((wi) this).field_k instanceof ab)) {
+        L0: {
+          if (!((wi) this).field_y) {
+            break L0;
+          } else {
+            if (!((wi) this).field_w) {
+              break L0;
+            } else {
+              if (param1 == 0) {
+                L1: {
+                  param0.g(84);
+                  ((wi) this).field_D = true;
+                  if (((wi) this).field_k == null) {
+                    break L1;
+                  } else {
+                    if (((wi) this).field_k instanceof ab) {
+                      ((ab) (Object) ((wi) this).field_k).a(((wi) this).field_D, (fd) this, param1 ^ -9307);
+                      break L1;
+                    } else {
+                      return true;
+                    }
+                  }
+                }
                 return true;
+              } else {
+                return true;
+              }
             }
-            ((ab) (Object) ((wi) this).field_k).a(((wi) this).field_D, (fd) this, param1 ^ -9307);
+          }
         }
-        return true;
+        return false;
     }
 
     final static StringBuilder a(int param0, int[] param1) {

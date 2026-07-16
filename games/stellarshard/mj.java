@@ -330,12 +330,14 @@ final class mj extends g implements md, oi, rf {
         ((mj) this).field_I.field_u = (uk) (Object) new b();
         ((mj) this).field_J.field_u = (uk) (Object) new ll();
         ((mj) this).field_N.field_u = (uk) (Object) new vg(10000536);
-        ((mj) this).field_K.field_u = (uk) (Object) new vg(10000536);
-        ((mj) this).field_H.field_u = (uk) (Object) new vg(10000536);
+        vg dupTemp$0 = new vg(10000536);
+        ((mj) this).field_K.field_u = (uk) (Object) dupTemp$0;
+        ((mj) this).field_H.field_u = (uk) (Object) dupTemp$0;
         ((mj) this).field_C.field_u = (uk) (Object) new vg(10000536);
         ((mj) this).field_D.field_u = (uk) (Object) new kf();
-        ((mj) this).field_B.field_u = (uk) (Object) new il(10000536);
-        ((mj) this).field_G.field_u = (uk) (Object) new il(10000536);
+        il dupTemp$1 = new il(10000536);
+        ((mj) this).field_B.field_u = (uk) (Object) dupTemp$1;
+        ((mj) this).field_G.field_u = (uk) (Object) dupTemp$1;
         String var2 = h.a(hk.field_v, 0, new String[2]);
         int var3 = 20;
         var3 = var3 + this.a(-31909, t.field_b, (rj) (Object) ((mj) this).field_H, var3, 170);
@@ -386,60 +388,30 @@ final class mj extends g implements md, oi, rf {
         NumberFormatException numberFormatException = null;
         int var2 = 0;
         Object var4 = null;
-        int statePc = 0;
-        Throwable caughtException = null;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    if (this.h(40)) {
-                        statePc = 2;
-                    } else {
-                        statePc = 1;
-                    }
-                    continue stateLoop;
-                }
-                case 1: {
-                    return false;
-                }
-                case 2: {
-                    var2 = -1;
-                    statePc = 3;
-                    continue stateLoop;
-                }
-                case 3: {
-                    try {
-                        var2 = Integer.parseInt(((mj) this).field_C.field_m);
-                        statePc = 6;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_3) {
-                        caughtException = stateCaught_3;
-                        statePc = 5;
-                        continue stateLoop;
-                    }
-                }
-                case 5: {
-                    numberFormatException = (NumberFormatException) (Object) caughtException;
-                    statePc = 6;
-                    continue stateLoop;
-                }
-                case 6: {
-                    if (param0 != 5255) {
-                        statePc = 8;
-                    } else {
-                        statePc = 7;
-                    }
-                    continue stateLoop;
-                }
-                case 7: {
-                    return wd.a(var2, ((mj) this).field_D.field_z, 5, ((mj) this).field_H.field_m, ((mj) this).field_G.field_m, ((mj) this).field_N.field_m, (mj) this);
-                }
-                case 8: {
-                    var4 = null;
-                    ((mj) this).a(-3, false, -41, (rj) null);
-                    return wd.a(var2, ((mj) this).field_D.field_z, 5, ((mj) this).field_H.field_m, ((mj) this).field_G.field_m, ((mj) this).field_N.field_m, (mj) this);
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
+        Throwable decompiledCaughtException = null;
+        if (this.h(40)) {
+          var2 = -1;
+          try {
+            L0: {
+              var2 = Integer.parseInt(((mj) this).field_C.field_m);
+              break L0;
             }
+          } catch (java.lang.Exception decompiledCaughtParameter0) {
+            decompiledCaughtException = decompiledCaughtParameter0;
+            L1: {
+              numberFormatException = (NumberFormatException) (Object) decompiledCaughtException;
+              break L1;
+            }
+          }
+          if (param0 != 5255) {
+            var4 = null;
+            ((mj) this).a(-3, false, -41, (rj) null);
+            return wd.a(var2, ((mj) this).field_D.field_z, 5, ((mj) this).field_H.field_m, ((mj) this).field_G.field_m, ((mj) this).field_N.field_m, (mj) this);
+          } else {
+            return wd.a(var2, ((mj) this).field_D.field_z, 5, ((mj) this).field_H.field_m, ((mj) this).field_G.field_m, ((mj) this).field_N.field_m, (mj) this);
+          }
+        } else {
+          return false;
         }
     }
 

@@ -45,8 +45,9 @@ final class v {
                 if (var7 >= var8) {
                   break L2;
                 } else {
+                  int incrementValue$3 = var6;
                   var6++;
-                  param4[var6] = param1.substring(var7, var8).trim();
+                  param4[incrementValue$3] = param1.substring(var7, var8).trim();
                   break L2;
                 }
               }
@@ -69,8 +70,9 @@ final class v {
                 var12 = param0.a(var11);
                 if (var12 >= param3) {
                   var7 = 1 + var9;
+                  int incrementValue$4 = var6;
                   var6++;
-                  param4[var6] = var11;
+                  param4[incrementValue$4] = var11;
                   break L3;
                 } else {
                   break L3;
@@ -78,8 +80,9 @@ final class v {
               }
               if (62 == var10) {
                 if (param1.regionMatches(var9 - 3, "<br>", 0, 4)) {
+                  int incrementValue$5 = var6;
                   var6++;
-                  param4[var6] = param1.substring(var7, -3 + var9).trim();
+                  param4[incrementValue$5] = param1.substring(var7, -3 + var9).trim();
                   var7 = var9 - -1;
                   var9++;
                   continue L1;

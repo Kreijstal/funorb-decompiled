@@ -65,8 +65,9 @@ final class qm {
                   ((qm) this).field_o = 0;
                   break L0;
                 } else {
+                  int fieldTemp$2 = ((qm) this).field_o;
                   ((qm) this).field_o = ((qm) this).field_o + 1;
-                  ((qm) this).field_k[((qm) this).field_o] = (byte) 0;
+                  ((qm) this).field_k[fieldTemp$2] = (byte) 0;
                   continue L1;
                 }
               }
@@ -97,8 +98,9 @@ final class qm {
                 }
               }
             } else {
+              int fieldTemp$3 = ((qm) this).field_o;
               ((qm) this).field_o = ((qm) this).field_o + 1;
-              ((qm) this).field_k[((qm) this).field_o] = (byte) 0;
+              ((qm) this).field_k[fieldTemp$3] = (byte) 0;
               continue L2;
             }
           }
@@ -143,7 +145,7 @@ final class qm {
               if ((var2 ^ -1) <= -9) {
                 var2 = 1;
                 L2: while (true) {
-                  if (var2 < -11) {
+                  if ((var2 ^ -1) < -11) {
                     L3: {
                       if (param0 < -61) {
                         break L3;
@@ -165,7 +167,7 @@ final class qm {
                   } else {
                     var3 = 0;
                     L5: while (true) {
-                      if (-9 <= var3) {
+                      if (-9 >= (var3 ^ -1)) {
                         var3 = 0;
                         L6: while (true) {
                           if (8 <= var3) {

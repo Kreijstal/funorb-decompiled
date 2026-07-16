@@ -86,7 +86,7 @@ final class ab extends gf implements ta {
               return ql.field_k;
             } else {
               if (!ch.a(param1, (byte) -73)) {
-                if (-101 < sg.field_j) {
+                if (-101 < (sg.field_j ^ -1)) {
                   if (-201 < (sg.field_j ^ -1)) {
                     if (!fm.a(param1, param0 ^ -1369854407)) {
                       var8 = gk.field_g;
@@ -96,11 +96,11 @@ final class ab extends gf implements ta {
                       var8.a(0, param0 ^ -25);
                       var8.a(param1, (byte) -112);
                       var8.b(var8.field_l + -var4, param0 + -74);
-                      if (param0 == 73) {
-                        return null;
-                      } else {
+                      if (param0 != 73) {
                         var5 = null;
                         String discarded$2 = ab.a((byte) -58, (String) null, 66);
+                        return null;
+                      } else {
                         return null;
                       }
                     } else {
@@ -110,8 +110,10 @@ final class ab extends gf implements ta {
                     return qi.field_a;
                   }
                 } else {
-                  if (bn.field_d > 0) {
-                    if (-201 > sg.field_j) {
+                  if (bn.field_d <= 0) {
+                    return qi.field_a;
+                  } else {
+                    if (-201 < (sg.field_j ^ -1)) {
                       if (!fm.a(param1, param0 ^ -1369854407)) {
                         var7 = gk.field_g;
                         var7.g(param2, 8);
@@ -120,11 +122,11 @@ final class ab extends gf implements ta {
                         var7.a(0, param0 ^ -25);
                         var7.a(param1, (byte) -112);
                         var7.b(var7.field_l + -var4, param0 + -74);
-                        if (param0 == 73) {
-                          return null;
-                        } else {
+                        if (param0 != 73) {
                           var5 = null;
                           String discarded$3 = ab.a((byte) -58, (String) null, 66);
+                          return null;
+                        } else {
                           return null;
                         }
                       } else {
@@ -133,8 +135,6 @@ final class ab extends gf implements ta {
                     } else {
                       return qi.field_a;
                     }
-                  } else {
-                    return qi.field_a;
                   }
                 }
               } else {

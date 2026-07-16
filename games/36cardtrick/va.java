@@ -28,29 +28,29 @@ final class va implements Iterable {
     }
 
     final void a(int param0, he param1) {
-        if (null == ((he) param1).field_i) {
+        if (null == param1.field_i) {
           param1.field_h = ((va) this).field_a;
           param1.field_i = ((va) this).field_a.field_i;
-          ((he) param1).field_i.field_h = param1;
+          param1.field_i.field_h = param1;
           if (param0 > -66) {
-            ((va) this).field_a = (he) null;
-            ((he) param1).field_h.field_i = param1;
+            ((va) this).field_a = null;
+            param1.field_h.field_i = param1;
             return;
           } else {
-            ((he) param1).field_h.field_i = param1;
+            param1.field_h.field_i = param1;
             return;
           }
         } else {
           param1.d(12);
           param1.field_h = ((va) this).field_a;
           param1.field_i = ((va) this).field_a.field_i;
-          ((he) param1).field_i.field_h = param1;
+          param1.field_i.field_h = param1;
           if (param0 <= -66) {
-            ((he) param1).field_h.field_i = param1;
+            param1.field_h.field_i = param1;
             return;
           } else {
-            ((va) this).field_a = (he) null;
-            ((he) param1).field_h.field_i = param1;
+            ((va) this).field_a = null;
+            param1.field_h.field_i = param1;
             return;
           }
         }

@@ -32,8 +32,9 @@ final class qa extends ma {
           if (var6.length <= var5) {
             var4_int = 0;
             L1: while (true) {
-              var4_int = oe.a(param1, var4_int, param2, param0, param3 + 0);
-              if ((oe.a(param1, var4_int, param2, param0, param3 + 0) ^ -1) == 0) {
+              int dupTemp$2 = oe.a(param1, var4_int, param2, param0, param3 + 0);
+              var4_int = dupTemp$2;
+              if ((dupTemp$2 ^ -1) == 0) {
                 var7 = param2;
                 var4 = var7;
                 var8 = param3;

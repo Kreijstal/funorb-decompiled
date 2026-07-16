@@ -532,7 +532,7 @@ class hd extends iv {
 
     final static boolean a(boolean param0, int param1, int param2) {
         int var3 = 0;
-        String var4_ref = null;
+        String var4_ref_String = null;
         int var4 = 0;
         int var5 = 0;
         String var7 = null;
@@ -610,8 +610,8 @@ class hd extends iv {
             } else {
               L5: {
                 if (-1 > (cq.field_m.length() ^ -1)) {
-                  var4_ref = cq.field_m.toString();
-                  if (tb.a(var4_ref, -125)) {
+                  var4_ref_String = cq.field_m.toString();
+                  if (tb.a(var4_ref_String, -125)) {
                     var13 = null;
                     var12 = null;
                     wi.a((String) null, (String) null, 0, 2, ng.field_i, -125);
@@ -641,7 +641,7 @@ class hd extends iv {
                         break L7;
                       }
                     }
-                    gp.a(-1, 82, ov.field_b, param1, at.field_Kb, var4_ref);
+                    gp.a(-1, 82, ov.field_b, param1, at.field_Kb, var4_ref_String);
                     break L5;
                   }
                 } else {
@@ -793,7 +793,6 @@ class hd extends iv {
         int var11 = 0;
         int var12 = 0;
         Object var13 = null;
-        hd var13_ref = null;
         int var14 = 0;
         Object stackIn_25_0 = null;
         Object stackIn_26_0 = null;
@@ -1026,20 +1025,20 @@ class hd extends iv {
           if (null == ((hd) this).field_jb) {
             break L12;
           } else {
-            var13_ref = (hd) (Object) ((hd) this).field_jb.d(param1 ^ 9032);
+            var13 = (Object) (Object) (hd) (Object) ((hd) this).field_jb.d(param1 ^ 9032);
             L13: while (true) {
-              if (var13_ref == null) {
+              if (var13 == null) {
                 break L12;
               } else {
-                var13_ref.a(var13_ref.field_F, param1 ^ 0, param2, var13_ref.field_mb, var13_ref.field_T, var13_ref.field_q);
-                var13_ref = (hd) (Object) var13_ref.field_jb.e(33);
+                ((hd) var13).a(((hd) var13).field_F, param1 ^ 0, param2, ((hd) var13).field_mb, ((hd) var13).field_T, ((hd) var13).field_q);
+                var13 = (Object) (Object) (hd) (Object) ((hd) var13).field_jb.e(33);
                 continue L13;
               }
             }
           }
         }
         L14: {
-          if (!var13_ref.field_Q) {
+          if (!((hd) var13).field_Q) {
             break L14;
           } else {
             bd.field_D = true;
@@ -1056,16 +1055,16 @@ class hd extends iv {
         }
         L16: {
           on.e(var8, var9, var10, var11);
-          if (var13_ref.field_qb == 0) {
+          if (((hd) var13).field_qb == 0) {
             break L16;
           } else {
-            if (!var13_ref.field_Y) {
+            if (!((hd) var13).field_Y) {
               break L16;
             } else {
               L17: {
-                ((hd) this).field_J = -param4 + -var13_ref.field_M + n.field_m;
-                ((hd) this).field_s = -param0 + (-var13_ref.field_bb + el.field_A);
-                if (var13_ref.field_s < 0) {
+                ((hd) this).field_J = -param4 + -((hd) var13).field_M + n.field_m;
+                ((hd) this).field_s = -param0 + (-((hd) var13).field_bb + el.field_A);
+                if (((hd) var13).field_s < 0) {
                   ((hd) this).field_s = 0;
                   break L17;
                 } else {
@@ -1073,15 +1072,15 @@ class hd extends iv {
                 }
               }
               L18: {
-                if ((var13_ref.field_s ^ -1) < (-var13_ref.field_q + param5 ^ -1)) {
-                  ((hd) this).field_s = -var13_ref.field_q + param5;
+                if ((((hd) var13).field_s ^ -1) < (-((hd) var13).field_q + param5 ^ -1)) {
+                  ((hd) this).field_s = -((hd) var13).field_q + param5;
                   break L18;
                 } else {
                   break L18;
                 }
               }
               L19: {
-                if (0 <= var13_ref.field_J) {
+                if (0 <= ((hd) var13).field_J) {
                   break L19;
                 } else {
                   ((hd) this).field_J = 0;
@@ -1091,15 +1090,15 @@ class hd extends iv {
               L20: {
                 ((hd) this).field_v = 0;
                 ((hd) this).field_fb = 0;
-                ((hd) this).field_F = param0 - -var13_ref.field_s;
-                if (param3 - var13_ref.field_mb >= var13_ref.field_J) {
+                ((hd) this).field_F = param0 - -((hd) var13).field_s;
+                if (param3 - ((hd) var13).field_mb >= ((hd) var13).field_J) {
                   break L20;
                 } else {
-                  ((hd) this).field_J = -var13_ref.field_mb + param3;
+                  ((hd) this).field_J = -((hd) var13).field_mb + param3;
                   break L20;
                 }
               }
-              ((hd) this).field_T = param4 - -var13_ref.field_J;
+              ((hd) this).field_T = param4 - -((hd) var13).field_J;
               break L16;
             }
           }
@@ -1528,21 +1527,20 @@ class hd extends iv {
     }
 
     final void a(int param0, hd param1) {
-        nw var3_ref = null;
-        hd var4_ref = null;
+        nw var3_ref_nw = null;
         Object var4 = null;
         int var5 = Kickabout.field_G;
         if (((hd) this).field_jb != null) {
-            var3_ref = new nw(((hd) this).field_jb);
-            var4_ref = (hd) (Object) var3_ref.a((byte) 54);
-            while (var4_ref != null) {
-                var4_ref.a(103, param1);
-                var4_ref = (hd) (Object) var3_ref.a(0);
+            var3_ref_nw = new nw(((hd) this).field_jb);
+            var4 = (Object) (Object) (hd) (Object) var3_ref_nw.a((byte) 54);
+            while (var4 != null) {
+                ((hd) var4).a(103, param1);
+                var4 = (Object) (Object) (hd) (Object) var3_ref_nw.a(0);
             }
         }
         ((hd) this).field_wb = (Object) (Object) param1 == this ? true : false;
-        if (!(!var4_ref.field_db)) {
-            ((hd) this).field_I = var4_ref.field_wb;
+        if (!(!((hd) var4).field_db)) {
+            ((hd) this).field_I = ((hd) var4).field_wb;
         }
         int var3 = -75 % ((39 - param0) / 48);
     }

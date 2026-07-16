@@ -171,15 +171,15 @@ final class qn extends am {
                 ((qn) this).field_w = param0.i((byte) -101);
                 break L0;
               } else {
-                if (var4 == -3) {
+                if ((var4 ^ -1) == -3) {
                   ((qn) this).field_C = param0.i(7088);
                   break L0;
                 } else {
-                  if (var4 == -4) {
+                  if ((var4 ^ -1) == -4) {
                     ((qn) this).field_D = param0.i(param1 ^ 7059);
                     break L0;
                   } else {
-                    if (-5 == var4) {
+                    if (-5 == (var4 ^ -1)) {
                       ((qn) this).field_u = param0.i(7088);
                       break L0;
                     } else {
@@ -188,7 +188,7 @@ final class qn extends am {
                           ((qn) this).field_t = param0.i(7088);
                           break L0;
                         } else {
-                          if (-8 != var4) {
+                          if (-8 != (var4 ^ -1)) {
                             break L0;
                           } else {
                             ((qn) this).field_x = param0.i(7088);
@@ -334,15 +334,15 @@ final class qn extends am {
                                 var6 = 0;
                                 var8 = (((qn) this).field_y * var5 >> 94299052) + q.field_b[var4];
                                 L10: while (true) {
-                                  if (-1 >= var8) {
+                                  if (-1 >= (var8 ^ -1)) {
                                     L11: while (true) {
-                                      if (-4097 >= var8) {
+                                      if (-4097 <= (var8 ^ -1)) {
                                         L12: while (true) {
                                           L13: {
                                             if (((qn) this).field_s <= var6) {
                                               break L13;
                                             } else {
-                                              if (((qn) this).field_z[var11][var6] <= var8) {
+                                              if ((((qn) this).field_z[var11][var6] ^ -1) >= (var8 ^ -1)) {
                                                 var6++;
                                                 continue L12;
                                               } else {
@@ -351,32 +351,34 @@ final class qn extends am {
                                             }
                                           }
                                           L14: {
-                                            var10 = -1 + var6;
-                                            var13 = ((qn) this).field_z[var11][var10];
-                                            var14 = ((qn) this).field_z[var11][var6];
-                                            if (var13 + ((qn) this).field_A >= var8) {
-                                              break L14;
-                                            } else {
-                                              if (-((qn) this).field_A + var14 <= var8) {
-                                                break L14;
+                                            L15: {
+                                              var10 = -1 + var6;
+                                              var13 = ((qn) this).field_z[var11][var10];
+                                              var14 = ((qn) this).field_z[var11][var6];
+                                              if ((var13 + ((qn) this).field_A ^ -1) <= (var8 ^ -1)) {
+                                                break L15;
                                               } else {
-                                                var3[var4] = ((qn) this).field_H[var11][var10];
-                                                var4++;
-                                                continue L8;
+                                                if (-((qn) this).field_A + var14 <= var8) {
+                                                  break L15;
+                                                } else {
+                                                  var3[var4] = ((qn) this).field_H[var11][var10];
+                                                  break L14;
+                                                }
                                               }
                                             }
+                                            var21[var4] = 0;
+                                            break L14;
                                           }
-                                          var21[var4] = 0;
                                           var4++;
                                           continue L8;
                                         }
                                       } else {
-                                        // wide iinc 8 -4096
+                                        var8 -= 4096;
                                         continue L11;
                                       }
                                     }
                                   } else {
-                                    // wide iinc 8 4096
+                                    var8 += 4096;
                                     continue L10;
                                   }
                                 }
@@ -391,12 +393,12 @@ final class qn extends am {
                       break L1;
                     }
                   } else {
-                    // wide iinc 9 -4096
+                    var9 -= 4096;
                     continue L3;
                   }
                 }
               } else {
-                // wide iinc 9 4096
+                var9 += 4096;
                 continue L2;
               }
             }

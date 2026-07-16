@@ -19,7 +19,7 @@ final class rk extends jc {
             try {
                 var2 = new java.net.URL(param0.getCodeBase(), "tosupport.ws");
                 if (param1 > -81) {
-                    java.applet.Applet var3 = (java.applet.Applet) null;
+                    Object var3 = null;
                     rk.a((java.applet.Applet) null, (byte) 125);
                 }
                 param0.getAppletContext().showDocument(fh.a(param0, var2, -1), "_top");
@@ -34,7 +34,7 @@ final class rk extends jc {
     }
 
     final void b(int param0, byte param1, int param2) {
-        this.b(param0, param1, param2);
+        super.b(param0, param1, param2);
         vd.field_p.a(((rk) this).field_bb, param0 + (((rk) this).field_h >> -291920831), param2 - -103, 16777215, -1);
         if (((rk) this).field_db != null) {
             vj.d(20 + param0, -7 + param2 - -120, 260, 8421504);

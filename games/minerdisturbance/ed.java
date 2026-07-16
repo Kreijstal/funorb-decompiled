@@ -102,122 +102,64 @@ final class ed {
             IOException var3 = null;
             ld var4 = null;
             int stackIn_9_0 = 0;
-            int stackOut_7_0 = 0;
+            Throwable decompiledCaughtException = null;
             int stackOut_8_0 = 0;
-            int statePc = 0;
-            Throwable caughtException = null;
-            stateLoop: while (true) {
-                switch (statePc) {
-                    case 0: {
-                        if (dk.field_b == null) {
-                            statePc = 2;
-                        } else {
-                            statePc = 3;
-                        }
-                        continue stateLoop;
+            int stackOut_7_0 = 0;
+            L0: {
+              if (dk.field_b == null) {
+                dk.field_b = mm.field_b.a(wf.field_U, jc.field_E, (byte) 73);
+                break L0;
+              } else {
+                break L0;
+              }
+            }
+            var2 = -97 % ((-24 - param1) / 56);
+            if (-1 != (dk.field_b.field_c ^ -1)) {
+              long dupTemp$2 = sf.a((byte) -121);
+              ck.field_d = dupTemp$2;
+              sk.field_c = dupTemp$2;
+              if (dk.field_b.field_c != 1) {
+                qd.field_Q = dk.field_c;
+                dk.field_b = null;
+                return true;
+              } else {
+                try {
+                  L1: {
+                    L2: {
+                      ci.field_i = new ll((java.net.Socket) dk.field_b.field_a, mm.field_b);
+                      var4 = kj.field_a;
+                      sn.field_c.field_o = 0;
+                      var4.field_o = 0;
+                      if (!param0) {
+                        stackOut_8_0 = -1;
+                        stackIn_9_0 = stackOut_8_0;
+                        break L2;
+                      } else {
+                        stackOut_7_0 = -2;
+                        stackIn_9_0 = stackOut_7_0;
+                        break L2;
+                      }
                     }
-                    case 2: {
-                        dk.field_b = mm.field_b.a(wf.field_U, jc.field_E, (byte) 73);
-                        statePc = 3;
-                        continue stateLoop;
-                    }
-                    case 3: {
-                        var2 = -97 % ((-24 - param1) / 56);
-                        if (-1 != (dk.field_b.field_c ^ -1)) {
-                            statePc = 5;
-                        } else {
-                            statePc = 4;
-                        }
-                        continue stateLoop;
-                    }
-                    case 4: {
-                        return false;
-                    }
-                    case 5: {
-                        ck.field_d = sf.a((byte) -121);
-                        sk.field_c = sf.a((byte) -121);
-                        if (dk.field_b.field_c != 1) {
-                            statePc = 12;
-                        } else {
-                            statePc = 6;
-                        }
-                        continue stateLoop;
-                    }
-                    case 6: {
-                        try {
-                            ci.field_i = new ll((java.net.Socket) dk.field_b.field_a, mm.field_b);
-                            var4 = kj.field_a;
-                            sn.field_c.field_o = 0;
-                            var4.field_o = 0;
-                            if (!param0) {
-                                statePc = 8;
-                            } else {
-                                statePc = 7;
-                            }
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_6) {
-                            caughtException = stateCaught_6;
-                            statePc = 11;
-                            continue stateLoop;
-                        }
-                    }
-                    case 7: {
-                        try {
-                            stackOut_7_0 = -2;
-                            stackIn_9_0 = stackOut_7_0;
-                            statePc = 9;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_7) {
-                            caughtException = stateCaught_7;
-                            statePc = 11;
-                            continue stateLoop;
-                        }
-                    }
-                    case 8: {
-                        try {
-                            stackOut_8_0 = -1;
-                            stackIn_9_0 = stackOut_8_0;
-                            statePc = 9;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_8) {
-                            caughtException = stateCaught_8;
-                            statePc = 11;
-                            continue stateLoop;
-                        }
-                    }
-                    case 9: {
-                        try {
-                            lc.field_s = stackIn_9_0;
-                            rd.field_a = stackIn_9_0;
-                            ud.field_a = stackIn_9_0;
-                            qd.field_Q = cm.field_p;
-                            le.a(cm.field_q, (sb) (Object) sn.field_c, sj.field_c, ii.field_a, -80);
-                            bk.a((byte) 124, -1);
-                            statePc = 10;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_9) {
-                            caughtException = stateCaught_9;
-                            statePc = 11;
-                            continue stateLoop;
-                        }
-                    }
-                    case 10: {
-                        dk.field_b = null;
-                        return true;
-                    }
-                    case 11: {
-                        var3 = (IOException) (Object) caughtException;
-                        qd.field_Q = dk.field_c;
-                        dk.field_b = null;
-                        return true;
-                    }
-                    case 12: {
-                        qd.field_Q = dk.field_c;
-                        dk.field_b = null;
-                        return true;
-                    }
-                    default: throw new IllegalStateException("invalid CFG state " + statePc);
+                    lc.field_s = stackIn_9_0;
+                    rd.field_a = stackIn_9_0;
+                    ud.field_a = stackIn_9_0;
+                    qd.field_Q = cm.field_p;
+                    le.a(cm.field_q, (sb) (Object) sn.field_c, sj.field_c, ii.field_a, -80);
+                    bk.a((byte) 124, -1);
+                    break L1;
+                  }
+                } catch (java.io.IOException decompiledCaughtParameter0) {
+                  decompiledCaughtException = decompiledCaughtParameter0;
+                  var3 = (IOException) (Object) decompiledCaughtException;
+                  qd.field_Q = dk.field_c;
+                  dk.field_b = null;
+                  return true;
                 }
+                dk.field_b = null;
+                return true;
+              }
+            } else {
+              return false;
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;

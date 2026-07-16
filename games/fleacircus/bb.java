@@ -124,28 +124,31 @@ class bb extends qa {
 
     void a(int param0, int param1, qa param2, byte param3) {
         if (param3 <= -85) {
-          super.a(param0, param1, param2, (byte) -94);
-          if (-1 != ((bb) this).field_v) {
-            if (((bb) this).field_v != kc.field_f) {
-              if (!((bb) this).b(param0, param1, 0, ag.field_f, kc.field_b)) {
-                ((bb) this).a((byte) 5, param2, param1, ag.field_f, kc.field_b, param0);
-                return;
-              } else {
-                if (-1 == kc.field_f) {
-                  ((bb) this).a(kc.field_b + -param0, 84, -param1 + ag.field_f, ((bb) this).field_v);
+          L0: {
+            super.a(param0, param1, param2, (byte) -94);
+            if (-1 == (((bb) this).field_v ^ -1)) {
+              break L0;
+            } else {
+              if (((bb) this).field_v != kc.field_f) {
+                if (!((bb) this).b(param0, param1, 0, ag.field_f, kc.field_b)) {
                   ((bb) this).a((byte) 5, param2, param1, ag.field_f, kc.field_b, param0);
                   return;
                 } else {
-                  ((bb) this).a((byte) 5, param2, param1, ag.field_f, kc.field_b, param0);
-                  return;
+                  if (-1 == (kc.field_f ^ -1)) {
+                    ((bb) this).a(kc.field_b + -param0, 84, -param1 + ag.field_f, ((bb) this).field_v);
+                    ((bb) this).a((byte) 5, param2, param1, ag.field_f, kc.field_b, param0);
+                    break L0;
+                  } else {
+                    ((bb) this).a((byte) 5, param2, param1, ag.field_f, kc.field_b, param0);
+                    return;
+                  }
                 }
+              } else {
+                return;
               }
-            } else {
-              return;
             }
-          } else {
-            return;
           }
+          return;
         } else {
           return;
         }

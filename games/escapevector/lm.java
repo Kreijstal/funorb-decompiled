@@ -21,70 +21,49 @@ final class lm {
     final static void a(byte param0) {
         try {
             Exception var1 = null;
-            int statePc = 0;
-            Throwable caughtException = null;
-            stateLoop: while (true) {
-                switch (statePc) {
-                    case 0: {
-                        if (bd.field_h == null) {
-                            statePc = 6;
-                        } else {
-                            statePc = 1;
-                        }
-                        continue stateLoop;
-                    }
-                    case 1: {
-                        try {
-                            bd.field_h.a(0, 0L);
-                            bd.field_h.a(true, om.field_g.field_m, om.field_g.field_g, 24);
-                            statePc = 2;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_1) {
-                            caughtException = stateCaught_1;
-                            statePc = 5;
-                            continue stateLoop;
-                        }
-                    }
-                    case 2: {
-                        om.field_g.field_m = om.field_g.field_m + 24;
-                        if (param0 <= -44) {
-                            statePc = 4;
-                        } else {
-                            statePc = 3;
-                        }
-                        continue stateLoop;
-                    }
-                    case 3: {
-                        lm.a((byte) -105);
-                        statePc = 4;
-                        continue stateLoop;
-                    }
-                    case 4: {
-                        return;
-                    }
-                    case 5: {
-                        var1 = (Exception) (Object) caughtException;
-                        statePc = 6;
-                        continue stateLoop;
-                    }
-                    case 6: {
-                        om.field_g.field_m = om.field_g.field_m + 24;
-                        if (param0 > -44) {
-                            statePc = 8;
-                        } else {
-                            statePc = 7;
-                        }
-                        continue stateLoop;
-                    }
-                    case 7: {
-                        return;
-                    }
-                    case 8: {
-                        lm.a((byte) -105);
-                        return;
-                    }
-                    default: throw new IllegalStateException("invalid CFG state " + statePc);
+            int decompiledRegionSelector0 = 0;
+            Throwable decompiledCaughtException = null;
+            L0: {
+              if (bd.field_h == null) {
+                break L0;
+              } else {
+                try {
+                  L1: {
+                    bd.field_h.a(0, 0L);
+                    bd.field_h.a(true, om.field_g.field_m, om.field_g.field_g, 24);
+                    decompiledRegionSelector0 = 0;
+                    break L1;
+                  }
+                } catch (java.lang.Exception decompiledCaughtParameter0) {
+                  decompiledCaughtException = decompiledCaughtParameter0;
+                  L2: {
+                    var1 = (Exception) (Object) decompiledCaughtException;
+                    decompiledRegionSelector0 = 1;
+                    break L2;
+                  }
                 }
+                if (decompiledRegionSelector0 == 0) {
+                  L3: {
+                    om.field_g.field_m = om.field_g.field_m + 24;
+                    if (param0 <= -44) {
+                      break L3;
+                    } else {
+                      lm.a((byte) -105);
+                      break L3;
+                    }
+                  }
+                  return;
+                } else {
+                  break L0;
+                }
+              }
+            }
+            om.field_g.field_m = om.field_g.field_m + 24;
+            if (param0 > -44) {
+              lm.a((byte) -105);
+              return;
+            } else {
+              return;
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;

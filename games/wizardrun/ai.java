@@ -38,8 +38,9 @@ final class ai extends wl {
         ((ai) this).field_o = param1;
         ((ai) this).field_m = param4;
         ((ai) this).field_q = param6;
+        int fieldTemp$0 = dg.field_c;
         dg.field_c = dg.field_c + 1;
-        ((ai) this).field_i = dg.field_c & 65535;
+        ((ai) this).field_i = fieldTemp$0 & 65535;
         ((ai) this).field_k = param2;
         ((ai) this).field_p = param5;
         ((ai) this).field_t = param0;

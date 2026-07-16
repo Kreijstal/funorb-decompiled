@@ -160,6 +160,7 @@ class pi {
                 field_k[23] = true;
                 field_k[32] = true;
                 field_j[25] = true;
+                return;
               } else {
                 field_e[var1] = true;
                 var1++;

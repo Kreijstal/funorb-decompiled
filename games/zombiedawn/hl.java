@@ -29,8 +29,9 @@ final class hl implements Iterator {
         if (((hl) this).field_a.field_c[-1 + ((hl) this).field_i] == ((hl) this).field_e) {
           L0: while (true) {
             if (((hl) this).field_i < ((hl) this).field_a.field_f) {
+              int fieldTemp$2 = ((hl) this).field_i;
               ((hl) this).field_i = ((hl) this).field_i + 1;
-              var1 = ((hl) this).field_a.field_c[((hl) this).field_i].field_b;
+              var1 = ((hl) this).field_a.field_c[fieldTemp$2].field_b;
               if (((hl) this).field_a.field_c[-1 + ((hl) this).field_i] != var1) {
                 ((hl) this).field_e = var1.field_b;
                 ((hl) this).field_c = var1;
@@ -69,25 +70,31 @@ final class hl implements Iterator {
             Throwable decompiledCaughtException = null;
             try {
               L0: {
-                var4 = param0.getCodeBase();
-                var3 = rc.a(-1, param0, var4).getFile();
-                Object discarded$6 = qe.a(new Object[2], "updatelinks", 29674, param0);
-                Object discarded$7 = qe.a(new Object[2], "updatelinks", param1 ^ 29675, param0);
-                Object discarded$8 = qe.a(new Object[2], "updatelinks", 29674, param0);
-                Object discarded$9 = qe.a(new Object[2], "updatelinks", 29674, param0);
-                if (param1 == 1) {
-                  break L0;
-                } else {
-                  field_h = null;
-                  break L0;
+                L1: {
+                  var4 = param0.getCodeBase();
+                  var3 = rc.a(-1, param0, var4).getFile();
+                  Object discarded$6 = qe.a(new Object[2], "updatelinks", 29674, param0);
+                  Object discarded$7 = qe.a(new Object[2], "updatelinks", param1 ^ 29675, param0);
+                  Object discarded$8 = qe.a(new Object[2], "updatelinks", 29674, param0);
+                  Object discarded$9 = qe.a(new Object[2], "updatelinks", 29674, param0);
+                  if (param1 == 1) {
+                    break L1;
+                  } else {
+                    field_h = null;
+                    break L1;
+                  }
                 }
+                Object discarded$10 = qe.a(new Object[2], "updatelinks", 29674, param0);
+                Object discarded$11 = qe.a(new Object[2], "updatelinks", 29674, param0);
+                break L0;
               }
-              Object discarded$10 = qe.a(new Object[2], "updatelinks", 29674, param0);
-              Object discarded$11 = qe.a(new Object[2], "updatelinks", 29674, param0);
-            } catch (java.lang.Throwable decompiledCaughtParameter) {
-              decompiledCaughtException = decompiledCaughtParameter;
+            } catch (java.lang.Throwable decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              L2: {
+                var2 = decompiledCaughtException;
+                break L2;
+              }
             }
-            var2 = decompiledCaughtException;
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
@@ -106,173 +113,70 @@ final class hl implements Iterator {
             int var7 = 0;
             int stackIn_10_0 = 0;
             int stackIn_17_0 = 0;
+            Throwable decompiledCaughtException = null;
             int stackOut_9_0 = 0;
-            int stackOut_15_0 = 0;
             int stackOut_16_0 = 0;
-            int statePc = 0;
-            Throwable caughtException = null;
-            stateLoop: while (true) {
-                switch (statePc) {
-                    case 0: {
-                        var7 = ZombieDawn.field_J;
-                        if (!nm.field_a) {
-                            statePc = 2;
+            int stackOut_15_0 = 0;
+            var7 = ZombieDawn.field_J;
+            if (!nm.field_a) {
+              try {
+                L0: {
+                  L1: {
+                    var2 = "tuhstatbut";
+                    var3 = (String) qe.a(param1, "getcookies", -109);
+                    if (param0 < -111) {
+                      break L1;
+                    } else {
+                      field_g = null;
+                      break L1;
+                    }
+                  }
+                  var4 = de.a(';', var3, -125);
+                  var5 = 0;
+                  L2: while (true) {
+                    if (var4.length <= var5) {
+                      break L0;
+                    } else {
+                      L3: {
+                        var6 = var4[var5].indexOf('=');
+                        if ((var6 ^ -1) > -1) {
+                          break L3;
                         } else {
-                            statePc = 1;
-                        }
-                        continue stateLoop;
-                    }
-                    case 1: {
-                        return true;
-                    }
-                    case 2: {
-                        try {
-                            var2 = "tuhstatbut";
-                            var3 = (String) qe.a(param1, "getcookies", -109);
-                            if (param0 < -111) {
-                                statePc = 4;
-                            } else {
-                                statePc = 3;
-                            }
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_2) {
-                            caughtException = stateCaught_2;
-                            statePc = 13;
-                            continue stateLoop;
-                        }
-                    }
-                    case 3: {
-                        try {
-                            field_g = null;
-                            statePc = 4;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_3) {
-                            caughtException = stateCaught_3;
-                            statePc = 13;
-                            continue stateLoop;
-                        }
-                    }
-                    case 4: {
-                        try {
-                            var4 = de.a(';', var3, -125);
-                            var5 = 0;
-                            statePc = 5;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_4) {
-                            caughtException = stateCaught_4;
-                            statePc = 13;
-                            continue stateLoop;
-                        }
-                    }
-                    case 5: {
-                        try {
-                            if (var4.length <= var5) {
-                                statePc = 14;
-                            } else {
-                                statePc = 6;
-                            }
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_5) {
-                            caughtException = stateCaught_5;
-                            statePc = 13;
-                            continue stateLoop;
-                        }
-                    }
-                    case 6: {
-                        try {
-                            var6 = var4[var5].indexOf('=');
-                            if ((var6 ^ -1) > -1) {
-                                statePc = 11;
-                            } else {
-                                statePc = 7;
-                            }
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_6) {
-                            caughtException = stateCaught_6;
-                            statePc = 13;
-                            continue stateLoop;
-                        }
-                    }
-                    case 7: {
-                        try {
-                            if (var4[var5].substring(0, var6).trim().equals((Object) (Object) var2)) {
-                                statePc = 9;
-                            } else {
-                                statePc = 8;
-                            }
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_7) {
-                            caughtException = stateCaught_7;
-                            statePc = 13;
-                            continue stateLoop;
-                        }
-                    }
-                    case 8: {
-                        try {
-                            statePc = 11;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_8) {
-                            caughtException = stateCaught_8;
-                            statePc = 13;
-                            continue stateLoop;
-                        }
-                    }
-                    case 9: {
-                        try {
+                          if (var4[var5].substring(0, var6).trim().equals((Object) (Object) var2)) {
                             stackOut_9_0 = 1;
                             stackIn_10_0 = stackOut_9_0;
-                            statePc = 10;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_9) {
-                            caughtException = stateCaught_9;
-                            statePc = 13;
-                            continue stateLoop;
+                            return stackIn_10_0 != 0;
+                          } else {
+                            break L3;
+                          }
                         }
+                      }
+                      var5++;
+                      continue L2;
                     }
-                    case 10: {
-                        return stackIn_10_0 != 0;
-                    }
-                    case 11: {
-                        try {
-                            var5++;
-                            statePc = 5;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_11) {
-                            caughtException = stateCaught_11;
-                            statePc = 13;
-                            continue stateLoop;
-                        }
-                    }
-                    case 13: {
-                        var2_ref = caughtException;
-                        statePc = 14;
-                        continue stateLoop;
-                    }
-                    case 14: {
-                        if (null == param1.getParameter("tuhstatbut")) {
-                            statePc = 16;
-                        } else {
-                            statePc = 15;
-                        }
-                        continue stateLoop;
-                    }
-                    case 15: {
-                        stackOut_15_0 = 1;
-                        stackIn_17_0 = stackOut_15_0;
-                        statePc = 17;
-                        continue stateLoop;
-                    }
-                    case 16: {
-                        stackOut_16_0 = 0;
-                        stackIn_17_0 = stackOut_16_0;
-                        statePc = 17;
-                        continue stateLoop;
-                    }
-                    case 17: {
-                        return stackIn_17_0 != 0;
-                    }
-                    default: throw new IllegalStateException("invalid CFG state " + statePc);
+                  }
                 }
+              } catch (java.lang.Throwable decompiledCaughtParameter0) {
+                decompiledCaughtException = decompiledCaughtParameter0;
+                L4: {
+                  var2_ref = decompiledCaughtException;
+                  break L4;
+                }
+              }
+              L5: {
+                if (null == param1.getParameter("tuhstatbut")) {
+                  stackOut_16_0 = 0;
+                  stackIn_17_0 = stackOut_16_0;
+                  break L5;
+                } else {
+                  stackOut_15_0 = 1;
+                  stackIn_17_0 = stackOut_15_0;
+                  break L5;
+                }
+              }
+              return stackIn_17_0 != 0;
+            } else {
+              return true;
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -287,8 +191,9 @@ final class hl implements Iterator {
         if (((hl) this).field_e == ((hl) this).field_a.field_c[((hl) this).field_i - 1]) {
           L0: while (true) {
             if (((hl) this).field_a.field_f > ((hl) this).field_i) {
+              int fieldTemp$1 = ((hl) this).field_i;
               ((hl) this).field_i = ((hl) this).field_i + 1;
-              if (((hl) this).field_a.field_c[((hl) this).field_i].field_b == ((hl) this).field_a.field_c[-1 + ((hl) this).field_i]) {
+              if (((hl) this).field_a.field_c[fieldTemp$1].field_b == ((hl) this).field_a.field_c[-1 + ((hl) this).field_i]) {
                 ((hl) this).field_e = ((hl) this).field_a.field_c[((hl) this).field_i + -1];
                 continue L0;
               } else {

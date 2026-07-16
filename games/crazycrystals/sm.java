@@ -45,10 +45,10 @@ final class sm extends l {
         if (param2 != null) {
           L0: {
             var3 = param2.length();
-            if (var3 > -2) {
+            if ((var3 ^ -1) > -2) {
               break L0;
             } else {
-              if (-13 >= var3) {
+              if (-13 <= (var3 ^ -1)) {
                 L1: {
                   var4 = fe.a(60136, param2);
                   if (var4 == null) {
@@ -63,7 +63,7 @@ final class sm extends l {
                             var5 = 0;
                             var6 = 0;
                             L3: while (true) {
-                              if (var6 >= param2.length()) {
+                              if ((var6 ^ -1) <= (param2.length() ^ -1)) {
                                 var6 = 35 % ((param0 - 35) / 59);
                                 if (var5 > 0) {
                                   return on.field_a;
@@ -81,17 +81,19 @@ final class sm extends l {
                                     break L4;
                                   }
                                 }
-                                if (2 <= var5) {
-                                  if (!param1) {
-                                    return fe.field_e;
+                                L5: {
+                                  if (2 > var5) {
+                                    break L5;
                                   } else {
-                                    var6++;
-                                    continue L3;
+                                    if (!param1) {
+                                      return fe.field_e;
+                                    } else {
+                                      break L5;
+                                    }
                                   }
-                                } else {
-                                  var6++;
-                                  continue L3;
                                 }
+                                var6++;
+                                continue L3;
                               }
                             }
                           } else {

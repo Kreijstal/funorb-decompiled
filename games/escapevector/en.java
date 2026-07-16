@@ -384,8 +384,8 @@ final class en {
     final static int b(int param0, int param1, int param2) {
         int var4 = EscapeVector.field_A;
         int var3 = 1;
-        while (param0 < -2) {
-            if (!(-1 == (1 & param0))) {
+        while ((param0 ^ -1) < -2) {
+            if (!(-1 == (1 & param0 ^ -1))) {
                 var3 = var3 * param1;
             }
             param1 = param1 * param1;
@@ -401,36 +401,72 @@ final class en {
     }
 
     final boolean a(byte param0, int param1, int param2, int param3) {
-        int var5 = !aj.b(-116) ? 1 : 0;
-        if (var5 != 0) {
-            if (!((en) this).field_h) {
-                if (((en) this).field_c) {
-                    ((en) this).b((byte) 118);
-                }
+        int var5 = 0;
+        int[] var6 = null;
+        int[] var7 = null;
+        int[] var8 = null;
+        int stackIn_3_0 = 0;
+        int stackOut_2_0 = 0;
+        int stackOut_1_0 = 0;
+        L0: {
+          if (aj.b(-116)) {
+            stackOut_2_0 = 0;
+            stackIn_3_0 = stackOut_2_0;
+            break L0;
+          } else {
+            stackOut_1_0 = 1;
+            stackIn_3_0 = stackOut_1_0;
+            break L0;
+          }
+        }
+        L1: {
+          var5 = stackIn_3_0;
+          if (var5 == 0) {
+            break L1;
+          } else {
+            if (((en) this).field_h) {
+              break L1;
+            } else {
+              if (!((en) this).field_c) {
+                break L1;
+              } else {
+                ((en) this).b((byte) 118);
+                break L1;
+              }
             }
+          }
         }
-        if (((en) this).a(param2, (byte) -128, 1)) {
+        if (!((en) this).a(param2, (byte) -128, 1)) {
+          if (this.a(param3, param2, param0 + -54)) {
+            this.a((byte) -47, 1, param2);
+            this.a((byte) -47, 0, param2);
+            nk.b(param2, -128);
+            if (param0 == 54) {
+              L2: {
+                var8 = pl.d(126);
+                var7 = var8;
+                var6 = var7;
+                if (var6 == null) {
+                  break L2;
+                } else {
+                  if (4 != var8.length) {
+                    break L2;
+                  } else {
+                    ((en) this).field_f.a(-12328, (hg) (Object) new qd(param2, param1, var8[0], var8[1], var8[2], var8[3]));
+                    return true;
+                  }
+                }
+              }
+              return false;
+            } else {
+              return true;
+            }
+          } else {
             return false;
-        }
-        if (!this.a(param3, param2, param0 + -54)) {
-            return false;
-        }
-        this.a((byte) -47, 1, param2);
-        this.a((byte) -47, 0, param2);
-        nk.b(param2, -128);
-        if (param0 != 54) {
-            return true;
-        }
-        int[] var8 = pl.d(126);
-        int[] var7 = var8;
-        int[] var6 = var7;
-        if (var6 != null) {
-            // if_icmpne L132
+          }
         } else {
-            return false;
+          return false;
         }
-        ((en) this).field_f.a(-12328, (hg) (Object) new qd(param2, param1, var8[0], var8[1], var8[2], var8[3]));
-        return true;
     }
 
     final void d(byte param0, int param1, int param2) {
@@ -742,7 +778,6 @@ final class en {
         int var4 = 0;
         int var5 = 0;
         String var6 = null;
-        String var6_ref = null;
         int var7 = 0;
         int var8 = 0;
         fd var9 = null;
@@ -802,7 +837,7 @@ final class en {
             L2: {
               var4 = jj.field_a[var3];
               if ((var4 ^ -1) <= -1) {
-                if (var4 != cb.field_c.field_h) {
+                if ((var4 ^ -1) != (cb.field_c.field_h ^ -1)) {
                   var5 = gd.field_X;
                   break L2;
                 } else {
@@ -833,7 +868,7 @@ final class en {
                   }
                   L5: {
                     var7 = stackIn_18_0;
-                    if (tb.field_G.length > nn.field_i.length) {
+                    if ((tb.field_G.length ^ -1) < (nn.field_i.length ^ -1)) {
                       stackOut_20_0 = tb.field_G.length;
                       stackIn_21_0 = stackOut_20_0;
                       break L5;
@@ -862,7 +897,7 @@ final class en {
                             break L7;
                           }
                         }
-                        var6_ref = stackIn_26_0;
+                        var6 = stackIn_26_0;
                         break L6;
                       }
                     }
@@ -870,7 +905,7 @@ final class en {
                   if (var7 + 7 > var3) {
                     break L3;
                   } else {
-                    if (var3 >= var7 + 7 - -var8) {
+                    if ((var3 ^ -1) <= (var7 + 7 - -var8 ^ -1)) {
                       break L3;
                     } else {
                       L8: {
@@ -884,7 +919,7 @@ final class en {
                           break L8;
                         }
                       }
-                      var6_ref = stackIn_32_0;
+                      var6 = stackIn_32_0;
                       break L3;
                     }
                   }
@@ -894,21 +929,21 @@ final class en {
               }
             }
             L9: {
-              if (1 != var4) {
+              if (1 != (var4 ^ -1)) {
                 break L9;
               } else {
-                var6_ref = Integer.toString(var2);
+                var6 = Integer.toString(var2);
                 break L9;
               }
             }
             L10: {
               stackOut_35_0 = param0 ^ 94;
-              stackOut_35_1 = (String) var6_ref;
+              stackOut_35_1 = (String) var6;
               stackIn_37_0 = stackOut_35_0;
               stackIn_37_1 = stackOut_35_1;
               stackIn_36_0 = stackOut_35_0;
               stackIn_36_1 = stackOut_35_1;
-              if (-1 > var4) {
+              if (-1 < (var4 ^ -1)) {
                 stackOut_37_0 = stackIn_37_0;
                 stackOut_37_1 = (String) (Object) stackIn_37_1;
                 stackOut_37_2 = 0;
@@ -932,7 +967,7 @@ final class en {
               if (var4 >= 0) {
                 L12: {
                   var1 = var1 + hn.field_s;
-                  if (var4 != cb.field_c.field_h) {
+                  if ((var4 ^ -1) != (cb.field_c.field_h ^ -1)) {
                     stackOut_42_0 = of.field_g;
                     stackIn_43_0 = stackOut_42_0;
                     break L12;
@@ -957,17 +992,19 @@ final class en {
                 break L11;
               }
             }
-            if (0 <= var4) {
-              pb.field_e.a(var6_ref, var8, var1 - -he.field_x, var5, -1);
-              var1 = var1 + (ok.field_a + (hn.field_s + field_k));
-              var3++;
-              continue L1;
-            } else {
-              nb.field_a.a(var6_ref, var8, var1 - -vk.field_t, var5, -1);
-              var1 = var1 + je.field_b;
-              var3++;
-              continue L1;
+            L14: {
+              if (0 <= var4) {
+                pb.field_e.a(var6, var8, var1 - -he.field_x, var5, -1);
+                var1 = var1 + (ok.field_a + (hn.field_s + field_k));
+                break L14;
+              } else {
+                nb.field_a.a(var6, var8, var1 - -vk.field_t, var5, -1);
+                var1 = var1 + je.field_b;
+                break L14;
+              }
             }
+            var3++;
+            continue L1;
           }
         }
     }
@@ -983,29 +1020,47 @@ final class en {
     }
 
     final boolean a(int param0, byte param1, int param2) {
-        if (!(this.e(127, param2))) {
-            return false;
-        }
-        int[] var7 = this.c(param2, (byte) -14);
-        int[] var4 = var7;
-        if (!(var7 != null)) {
-            return false;
-        }
-        int var5 = param0 / 32;
-        if (param1 > -124) {
-            field_d = null;
-        }
-        var7 = var4;
-        if (0 <= var5) {
-            // if_icmple L81
+        int[] var4 = null;
+        int var5 = 0;
+        int var6 = 0;
+        int[] var7 = null;
+        if (!this.e(127, param2)) {
+          return false;
         } else {
+          var7 = this.c(param2, (byte) -14);
+          var4 = var7;
+          if (var7 == null) {
             return false;
-        }
-        int var6 = param0 % 32;
-        if (var6 < 0) {
+          } else {
+            L0: {
+              var5 = param0 / 32;
+              if (param1 <= -124) {
+                break L0;
+              } else {
+                field_d = null;
+                break L0;
+              }
+            }
+            L1: {
+              var7 = var4;
+              if (0 > var5) {
+                break L1;
+              } else {
+                if (var7.length <= var5) {
+                  break L1;
+                } else {
+                  var6 = param0 % 32;
+                  if (var6 >= 0) {
+                    return this.a(1, var5, var7, var6);
+                  } else {
+                    return false;
+                  }
+                }
+              }
+            }
             return false;
+          }
         }
-        return this.a(1, var5, var7, var6);
     }
 
     final void d(int param0) {

@@ -73,78 +73,90 @@ class ai {
         Throwable decompiledCaughtException = null;
         try {
           L0: {
-            var10 = ch.field_h.getGraphics();
-            var6 = -107 / ((param2 - 63) / 50);
-            if (pa.field_a != null) {
-              break L0;
-            } else {
-              pa.field_a = new java.awt.Font("Helvetica", 1, 13);
-              break L0;
+            L1: {
+              var10 = ch.field_h.getGraphics();
+              var6 = -107 / ((param2 - 63) / 50);
+              if (pa.field_a != null) {
+                break L1;
+              } else {
+                pa.field_a = new java.awt.Font("Helvetica", 1, 13);
+                break L1;
+              }
             }
-          }
-          L1: {
-            if (param0) {
-              var10.setColor(java.awt.Color.black);
-              var10.fillRect(0, 0, kj.field_i, jc.field_i);
-              break L1;
-            } else {
-              break L1;
+            L2: {
+              if (param0) {
+                var10.setColor(java.awt.Color.black);
+                var10.fillRect(0, 0, kj.field_i, jc.field_i);
+                break L2;
+              } else {
+                break L2;
+              }
             }
-          }
-          L2: {
-            if (param1 != null) {
-              break L2;
-            } else {
-              param1 = new java.awt.Color(140, 17, 17);
-              break L2;
-            }
-          }
-          try {
             L3: {
-              if (nb.field_b == null) {
-                nb.field_b = ch.field_h.createImage(304, 34);
+              if (param1 != null) {
                 break L3;
               } else {
+                param1 = new java.awt.Color(140, 17, 17);
                 break L3;
               }
             }
-            var11 = nb.field_b.getGraphics();
-            var11.setColor(param1);
-            var11.drawRect(0, 0, 303, 33);
-            var11.fillRect(2, 2, param4 * 3, 30);
-            var11.setColor(java.awt.Color.black);
-            var11.drawRect(1, 1, 301, 31);
-            var11.fillRect(3 * param4 + 2, 2, -(param4 * 3) + 300, 30);
-            var11.setFont(pa.field_a);
-            var11.setColor(java.awt.Color.white);
-            var11.drawString(param3, (-(param3.length() * 6) + 304) / 2, 22);
-            boolean discarded$1 = var10.drawImage(nb.field_b, -152 + kj.field_i / 2, jc.field_i / 2 - 18, (java.awt.image.ImageObserver) null);
-          } catch (java.lang.Exception decompiledCaughtParameter0) {
-            decompiledCaughtException = decompiledCaughtParameter0;
-            var7 = (Exception) (Object) decompiledCaughtException;
-            var8 = -152 + kj.field_i / 2;
-            var9 = jc.field_i / 2 - 18;
-            var10.setColor(param1);
-            var10.drawRect(var8, var9, 303, 33);
-            var10.fillRect(2 + var8, 2 + var9, 3 * param4, 30);
-            var10.setColor(java.awt.Color.black);
-            var10.drawRect(1 + var8, var9 + 1, 301, 31);
-            var10.fillRect(2 + (var8 - -(3 * param4)), var9 + 2, 300 - param4 * 3, 30);
-            var10.setFont(pa.field_a);
-            var10.setColor(java.awt.Color.white);
-            var10.drawString(param3, var8 - -((304 - param3.length() * 6) / 2), 22 + var9);
-          }
-          if (eb.field_D == null) {
-          } else {
-            var10.setFont(pa.field_a);
-            var10.setColor(java.awt.Color.white);
-            var10.drawString(eb.field_D, kj.field_i / 2 + -(6 * eb.field_D.length() / 2), -26 + jc.field_i / 2);
-            return;
+            try {
+              L4: {
+                L5: {
+                  if (nb.field_b == null) {
+                    nb.field_b = ch.field_h.createImage(304, 34);
+                    break L5;
+                  } else {
+                    break L5;
+                  }
+                }
+                var11 = nb.field_b.getGraphics();
+                var11.setColor(param1);
+                var11.drawRect(0, 0, 303, 33);
+                var11.fillRect(2, 2, param4 * 3, 30);
+                var11.setColor(java.awt.Color.black);
+                var11.drawRect(1, 1, 301, 31);
+                var11.fillRect(3 * param4 + 2, 2, -(param4 * 3) + 300, 30);
+                var11.setFont(pa.field_a);
+                var11.setColor(java.awt.Color.white);
+                var11.drawString(param3, (-(param3.length() * 6) + 304) / 2, 22);
+                boolean discarded$1 = var10.drawImage(nb.field_b, -152 + kj.field_i / 2, jc.field_i / 2 - 18, (java.awt.image.ImageObserver) null);
+                break L4;
+              }
+            } catch (java.lang.Exception decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              L6: {
+                var7 = (Exception) (Object) decompiledCaughtException;
+                var8 = -152 + kj.field_i / 2;
+                var9 = jc.field_i / 2 - 18;
+                var10.setColor(param1);
+                var10.drawRect(var8, var9, 303, 33);
+                var10.fillRect(2 + var8, 2 + var9, 3 * param4, 30);
+                var10.setColor(java.awt.Color.black);
+                var10.drawRect(1 + var8, var9 + 1, 301, 31);
+                var10.fillRect(2 + (var8 - -(3 * param4)), var9 + 2, 300 - param4 * 3, 30);
+                var10.setFont(pa.field_a);
+                var10.setColor(java.awt.Color.white);
+                var10.drawString(param3, var8 - -((304 - param3.length() * 6) / 2), 22 + var9);
+                break L6;
+              }
+            }
+            if (eb.field_D == null) {
+              break L0;
+            } else {
+              var10.setFont(pa.field_a);
+              var10.setColor(java.awt.Color.white);
+              var10.drawString(eb.field_D, kj.field_i / 2 + -(6 * eb.field_D.length() / 2), -26 + jc.field_i / 2);
+              return;
+            }
           }
         } catch (java.lang.Exception decompiledCaughtParameter1) {
           decompiledCaughtException = decompiledCaughtParameter1;
-          var5 = (Exception) (Object) decompiledCaughtException;
-          ch.field_h.repaint();
+          L7: {
+            var5 = (Exception) (Object) decompiledCaughtException;
+            ch.field_h.repaint();
+            break L7;
+          }
         }
     }
 

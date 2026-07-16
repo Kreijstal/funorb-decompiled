@@ -99,7 +99,7 @@ final class mi extends nm {
                   }
                 }
                 L2: {
-                  ((vl) (Object) stackIn_19_0).a((byte) stackIn_19_1, (qd) (Object) stackIn_19_2, stackIn_19_3 != 0);
+                  ((vl) (Object) stackIn_19_0).a((byte) stackIn_19_1, stackIn_19_2, stackIn_19_3 != 0);
                   if (0 > param2.field_q.field_p[param2.field_C]) {
                     param2.field_j.f(-1);
                     break L2;
@@ -239,7 +239,7 @@ final class mi extends nm {
                           break L4;
                         }
                       }
-                      ((vl) (Object) stackIn_14_0).a((byte) stackIn_14_1, (qd) (Object) stackIn_14_2, stackIn_14_3 != 0);
+                      ((vl) (Object) stackIn_14_0).a((byte) stackIn_14_1, stackIn_14_2, stackIn_14_3 != 0);
                       param0.field_j.b(var9, var11.j());
                       break L3;
                     }

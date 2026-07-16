@@ -309,8 +309,9 @@ final class ej {
             for (var12 = 0; var12 < var8; var12++) {
                 var13 = ((ej) this).field_a[var7][var11 & var10];
                 var11 = var11 >>> var9;
+                int incrementValue$0 = var5;
                 var5++;
-                field_i[var5] = var13 >= 0 ? bl.field_K[var13].b() : 0;
+                field_i[incrementValue$0] = var13 >= 0 ? bl.field_K[var13].b() : 0;
             }
         }
         return true;
@@ -384,6 +385,7 @@ final class ej {
                             field_b = new boolean[var5];
                             break L4;
                           }
+                          return;
                         } else {
                           var7 = ((ej) this).field_f[var6];
                           var8 = 0;
@@ -392,8 +394,9 @@ final class ej {
                               var6++;
                               continue L3;
                             } else {
+                              int incrementValue$2 = var5;
                               var5++;
-                              ((ej) this).field_c[var5] = bl.a(var4);
+                              ((ej) this).field_c[incrementValue$2] = bl.a(var4);
                               var8++;
                               continue L6;
                             }
@@ -409,8 +412,9 @@ final class ej {
                 } else {
                   L7: {
                     ((ej) this).field_l[var4] = bl.a(3) + 1;
-                    ((ej) this).field_j[var4] = bl.a(2);
-                    var5 = bl.a(2);
+                    int dupTemp$3 = bl.a(2);
+                    ((ej) this).field_j[var4] = dupTemp$3;
+                    var5 = dupTemp$3;
                     if (var5 == 0) {
                       break L7;
                     } else {

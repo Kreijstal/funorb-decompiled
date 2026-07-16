@@ -70,6 +70,7 @@ final class vj {
                       }
                     }
                   } else {
+                    return;
                   }
                 }
               } else {

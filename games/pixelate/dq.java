@@ -8,23 +8,19 @@ final class dq {
     static String[][] field_b;
 
     final static boolean a(int param0, int param1, int param2, int param3) {
-        if (-1 >= (param1 ^ -1)) {
-          if (param1 >= -12) {
-            if (param2 <= param0) {
-              if (bo.a((byte) -57, param3, param1) < param0) {
-                return false;
-              } else {
-                return true;
-              }
-            } else {
-              return false;
-            }
-          } else {
+        if (-1 < (param1 ^ -1)) {
             return false;
-          }
-        } else {
-          return false;
         }
+        if ((param1 ^ -1) < -12) {
+            return false;
+        }
+        if (param2 < (param0 ^ -1)) {
+            return false;
+        }
+        if ((bo.a((byte) -57, param3, param1) ^ -1) > (param0 ^ -1)) {
+            return false;
+        }
+        return true;
     }
 
     public final String toString() {

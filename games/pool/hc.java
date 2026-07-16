@@ -69,8 +69,9 @@ final class hc {
                       var7++;
                       continue L2;
                     } else {
+                      int incrementValue$3 = var6;
                       var6++;
-                      var10.field_b[var6] = nd.a(109, var13[var7], hp.a(var10.field_d, (byte) 32));
+                      var10.field_b[incrementValue$3] = nd.a(109, var13[var7], hp.a(var10.field_d, (byte) 32));
                       var7++;
                       continue L2;
                     }
@@ -113,8 +114,9 @@ final class hc {
                       var7++;
                       break L6;
                     } else {
+                      int incrementValue$4 = var6;
                       var6++;
-                      var10.field_b[var6] = nd.a(109, var12[var7], hp.a(var10.field_d, (byte) 32));
+                      var10.field_b[incrementValue$4] = nd.a(109, var12[var7], hp.a(var10.field_d, (byte) 32));
                       var7++;
                       break L6;
                     }
@@ -146,8 +148,9 @@ final class hc {
                         var7++;
                         break L9;
                       } else {
+                        int incrementValue$5 = var6;
                         var6++;
-                        var10.field_b[var6] = nd.a(109, var11[var7], hp.a(var10.field_d, (byte) 32));
+                        var10.field_b[incrementValue$5] = nd.a(109, var11[var7], hp.a(var10.field_d, (byte) 32));
                         var7++;
                         break L9;
                       }

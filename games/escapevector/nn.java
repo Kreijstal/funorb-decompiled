@@ -148,8 +148,9 @@ final class nn {
         ((nn) this).field_f = new fl[param0];
         ((nn) this).field_d = param0;
         for (var2 = 0; var2 < param0; var2++) {
-            var3 = new fl();
-            ((nn) this).field_f[var2] = new fl();
+            fl dupTemp$0 = new fl();
+            var3 = dupTemp$0;
+            ((nn) this).field_f[var2] = dupTemp$0;
             var3.field_j = var3;
             var3.field_i = var3;
         }

@@ -135,7 +135,8 @@ final class ml {
             L1: while (true) {
               if (qf.field_c <= var2) {
                 L2: {
-                  pj.field_f[param1.b(2)] = pj.field_f[param1.b(2)] + 1;
+                  int dupTemp$4 = param1.b(2);
+                  pj.field_f[dupTemp$4] = pj.field_f[dupTemp$4] + 1;
                   var2 = 0;
                   if (param0 > 3) {
                     break L2;
@@ -148,8 +149,9 @@ final class ml {
                 L3: while (true) {
                   if (var3 >= qf.field_c) {
                     qf.field_c = var2;
+                    int fieldTemp$5 = qf.field_c;
                     qf.field_c = qf.field_c + 1;
-                    ik.field_i[qf.field_c] = param1;
+                    ik.field_i[fieldTemp$5] = param1;
                     return;
                   } else {
                     L4: {
@@ -166,15 +168,17 @@ final class ml {
                         }
                       }
                     }
+                    int incrementValue$6 = var2;
                     var2++;
-                    ik.field_i[var2] = ik.field_i[var3];
+                    ik.field_i[incrementValue$6] = ik.field_i[var3];
                     var3++;
                     continue L3;
                   }
                 }
               } else {
                 if (param1.field_k == ik.field_i[var2].field_k) {
-                  pj.field_f[ik.field_i[var2].b(2)] = pj.field_f[ik.field_i[var2].b(2)] + 1;
+                  int dupTemp$7 = ik.field_i[var2].b(2);
+                  pj.field_f[dupTemp$7] = pj.field_f[dupTemp$7] + 1;
                   var2++;
                   continue L1;
                 } else {
@@ -246,39 +250,60 @@ final class ml {
     }
 
     final static void a(String param0, ln param1, byte param2, boolean param3) {
+        int var5 = 0;
+        int var6 = 0;
+        int var7 = 0;
         dh var9 = null;
         String var10 = null;
+        dh var11 = null;
         String var12 = null;
         dh var13 = null;
         String var14 = null;
-        dh var11 = null;
-        ja.a(0L, (String) null, (byte) -103, ci.field_zb, -1, (ci) (Object) param1, (int[]) null, param1.g((byte) -82), (String) null);
-        if (param1.field_Vb) {
-            if ((param1.field_Mb ^ -1) != -3) {
-                // if_icmple L54
-            } else {
-                var9 = pi.field_d;
-                var10 = oc.a(sl.field_h, new String[1], (byte) -43);
-                var9.field_b.a((byte) -12, var10, 10);
+        dh var15 = null;
+        L0: {
+          ja.a(0L, (String) null, (byte) -103, ci.field_zb, -1, (ci) (Object) param1, (int[]) null, param1.g((byte) -82), (String) null);
+          if (!param1.field_Vb) {
+            break L0;
+          } else {
+            L1: {
+              if ((param1.field_Mb ^ -1) == -3) {
+                break L1;
+              } else {
+                if (2 <= sk.field_t) {
+                  break L1;
+                } else {
+                  break L0;
+                }
+              }
             }
+            var9 = pi.field_d;
+            var10 = oc.a(sl.field_h, new String[1], (byte) -43);
+            var9.field_b.a((byte) -12, var10, 10);
+            break L0;
+          }
         }
-        pi.field_d.b((byte) -97);
-        if (!param3) {
-        } else {
-            if (cn.field_g != pi.field_d.field_d) {
-                var11 = pi.field_d;
-                var12 = oc.a(tm.field_b, new String[1], (byte) -71);
-                var11.field_b.a((byte) -12, var12, 15);
+        L2: {
+          pi.field_d.b((byte) -97);
+          if (param3) {
+            if (cn.field_g == pi.field_d.field_d) {
+              var13 = pi.field_d;
+              var14 = oc.a(qc.field_c, new String[1], (byte) -54);
+              var13.field_b.a((byte) -12, var14, 16);
+              break L2;
             } else {
-                var13 = pi.field_d;
-                var14 = oc.a(qc.field_c, new String[1], (byte) -54);
-                var13.field_b.a((byte) -12, var14, 16);
+              var11 = pi.field_d;
+              var12 = oc.a(tm.field_b, new String[1], (byte) -71);
+              var11.field_b.a((byte) -12, var12, 15);
+              break L2;
             }
+          } else {
+            break L2;
+          }
         }
-        int var5 = -10 / ((34 - param2) / 47);
-        dh var15 = pi.field_d;
-        int var6 = re.field_m;
-        int var7 = ag.field_f;
+        var5 = -10 / ((34 - param2) / 47);
+        var15 = pi.field_d;
+        var6 = re.field_m;
+        var7 = ag.field_f;
         var15.field_b.a(true, var6, 0, var7, 0);
     }
 

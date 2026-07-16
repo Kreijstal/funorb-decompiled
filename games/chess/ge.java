@@ -578,15 +578,15 @@ final class ge extends k implements mj {
             var4 = (pg) (Object) nd.field_h.a((byte) -111);
         }
         pg var6 = new pg();
-        pg var4_ref = var6;
+        var4 = var6;
         var6.field_u = param3;
         if (!param0) {
             return null;
         }
-        var4_ref.field_q = param2;
-        nd.field_h.a((o) (Object) var4_ref, (byte) 102);
-        tm.a(false, var4_ref, param1);
-        return var4_ref;
+        var4.field_q = param2;
+        nd.field_h.a((o) (Object) var4, (byte) 102);
+        tm.a(false, var4, param1);
+        return var4;
     }
 
     private final fb a(String param0, rg param1, int param2) {
@@ -633,6 +633,7 @@ final class ge extends k implements mj {
           var14.field_n = (jm) (Object) new hl(rc.field_a, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true);
           ((ge) this).b(var14, 95);
           ((ge) this).field_gb = this.a(sj.field_m, (rg) this, 30);
+          return;
         } else {
           if (kh.field_k == param1) {
             ((ge) this).field_C = ((ge) this).field_C + 10;
@@ -648,6 +649,7 @@ final class ge extends k implements mj {
               var12.field_n = (jm) (Object) new hl(rc.field_a, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true);
               ((ge) this).b(var12, 95);
               ((ge) this).field_gb = this.a(sj.field_m, (rg) this, 30);
+              return;
             } else {
               var10 = new mf(var9, (rg) null);
               var10.field_C = 80;
@@ -657,6 +659,7 @@ final class ge extends k implements mj {
               var10.field_n = (jm) (Object) new hl(rc.field_a, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true);
               ((ge) this).b(var10, 95);
               ((ge) this).field_gb = this.a(sj.field_m, (rg) this, 30);
+              return;
             }
           } else {
             if (cm.field_t == param1) {
@@ -670,6 +673,7 @@ final class ge extends k implements mj {
               var8.field_n = (jm) (Object) new hl(rc.field_a, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true);
               ((ge) this).b(var8, 95);
               ((ge) this).field_gb = this.a(sj.field_m, (rg) this, 30);
+              return;
             } else {
               var6 = new mf((String) var5, (rg) null);
               var6.field_C = 80;
@@ -679,6 +683,7 @@ final class ge extends k implements mj {
               var6.field_n = (jm) (Object) new hl(rc.field_a, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true);
               ((ge) this).b(var6, 95);
               ((ge) this).field_gb = this.a(sj.field_m, (rg) this, 30);
+              return;
             }
           }
         }

@@ -9,33 +9,27 @@ final class sn extends kn implements java.awt.image.ImageProducer, java.awt.imag
     static int field_i;
 
     final void a(java.awt.Component param0, byte param1, int param2, int param3) {
-        try {
-            ((sn) this).field_d = new int[1 + param3 * param2];
-            ((sn) this).field_a = param2;
-            ((sn) this).field_g = param3;
-            ((sn) this).field_j = (java.awt.image.ColorModel) (Object) new java.awt.image.DirectColorModel(32, 16711680, 65280, 255);
-            ((sn) this).field_c = param0.createImage((java.awt.image.ImageProducer) this);
-            this.b(0);
-            boolean discarded$5 = param0.prepareImage(((sn) this).field_c, (java.awt.image.ImageObserver) this);
-            this.b(param1 ^ 24);
-            if (param1 != 24) {
-              ((sn) this).field_j = null;
-              boolean discarded$6 = param0.prepareImage(((sn) this).field_c, (java.awt.image.ImageObserver) this);
-              this.b(0);
-              boolean discarded$7 = param0.prepareImage(((sn) this).field_c, (java.awt.image.ImageObserver) this);
-              ((sn) this).a(-104);
-              return;
-            } else {
-              boolean discarded$8 = param0.prepareImage(((sn) this).field_c, (java.awt.image.ImageObserver) this);
-              this.b(0);
-              boolean discarded$9 = param0.prepareImage(((sn) this).field_c, (java.awt.image.ImageObserver) this);
-              ((sn) this).a(-104);
-              return;
-            }
-        } catch (RuntimeException | Error decompiledUncheckedException) {
-            throw decompiledUncheckedException;
-        } catch (Throwable decompiledCheckedException) {
-            throw new RuntimeException(decompiledCheckedException);
+        ((sn) this).field_d = new int[1 + param3 * param2];
+        ((sn) this).field_a = param2;
+        ((sn) this).field_g = param3;
+        ((sn) this).field_j = (java.awt.image.ColorModel) (Object) new java.awt.image.DirectColorModel(32, 16711680, 65280, 255);
+        ((sn) this).field_c = param0.createImage((java.awt.image.ImageProducer) this);
+        this.b(0);
+        boolean discarded$5 = param0.prepareImage(((sn) this).field_c, (java.awt.image.ImageObserver) this);
+        this.b(param1 ^ 24);
+        if (param1 != 24) {
+          ((sn) this).field_j = null;
+          boolean discarded$6 = param0.prepareImage(((sn) this).field_c, (java.awt.image.ImageObserver) this);
+          this.b(0);
+          boolean discarded$7 = param0.prepareImage(((sn) this).field_c, (java.awt.image.ImageObserver) this);
+          ((sn) this).a(-104);
+          return;
+        } else {
+          boolean discarded$8 = param0.prepareImage(((sn) this).field_c, (java.awt.image.ImageObserver) this);
+          this.b(0);
+          boolean discarded$9 = param0.prepareImage(((sn) this).field_c, (java.awt.image.ImageObserver) this);
+          ((sn) this).a(-104);
+          return;
         }
     }
 

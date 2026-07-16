@@ -9,7 +9,7 @@ final class dl extends qb {
 
     final static void a(int param0, kc param1) {
         ji.a(true);
-        vj.a(((kc) param1).field_r, ((kc) param1).field_l, ((kc) param1).field_k);
+        vj.a(param1.field_r, param1.field_l, param1.field_k);
         int var2 = -40 % ((param0 - 27) / 52);
     }
 
@@ -27,7 +27,7 @@ final class dl extends qb {
     public static void a(int param0) {
         field_j = null;
         if (param0 != 8996) {
-            kc var2 = (kc) null;
+            Object var2 = null;
             dl.a(51, (kc) null);
         }
     }

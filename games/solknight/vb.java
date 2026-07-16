@@ -18,9 +18,9 @@ final class vb extends il {
     final static int a(int param0, int param1, boolean param2, String param3, mb param4, mb param5, int param6) {
         String var8 = null;
         int var9 = 0;
-        String var9_ref = null;
+        String var9_ref_String = null;
         int var10 = 0;
-        String var11_ref = null;
+        String var11_ref_String = null;
         int var11 = 0;
         int var12 = 0;
         int var13 = 0;
@@ -68,8 +68,8 @@ final class vb extends il {
         }
         L1: {
           var8 = param4.a(param6 + 21819);
-          var11_ref = var8;
-          var11_ref = var8;
+          var11_ref_String = var8;
+          var11_ref_String = var8;
           if (lf.field_d != null) {
             break L1;
           } else {
@@ -111,15 +111,15 @@ final class vb extends il {
                   id.field_c.c(-112, 18);
                   id.field_c.field_m = id.field_c.field_m + 2;
                   var10 = id.field_c.field_m;
-                  var11_ref = hh.a(false, ia.g(-79));
-                  if (var11_ref != null) {
+                  var11_ref_String = hh.a(false, ia.g(-79));
+                  if (var11_ref_String != null) {
                     break L5;
                   } else {
-                    var11_ref = "";
+                    var11_ref_String = "";
                     break L5;
                   }
                 }
-                id.field_c.a(var11_ref, 0);
+                id.field_c.a(var11_ref_String, 0);
                 al.a(ic.field_z, (gb) (Object) id.field_c, (byte) 76, nc.field_d, qa.field_p);
                 id.field_c.a(id.field_c.field_m + -var10, true);
                 break L3;
@@ -205,7 +205,7 @@ final class vb extends il {
                 if (100 > var9) {
                   break L9;
                 } else {
-                  if (var9 >= -106) {
+                  if ((var9 ^ -1) >= -106) {
                     ef.field_e = ta.field_e;
                     ke.field_O = new String[var9 + -100];
                     break L8;
@@ -214,7 +214,7 @@ final class vb extends il {
                   }
                 }
               }
-              if (-249 == var9) {
+              if (-249 == (var9 ^ -1)) {
                 wb.a(ia.g(-103), (byte) -79);
                 md.field_v = fi.field_j;
                 je.a(false);
@@ -252,7 +252,7 @@ final class vb extends il {
                 var11 = ke.field_O.length;
                 var12 = 0;
                 L11: while (true) {
-                  if (var11 <= var12) {
+                  if ((var11 ^ -1) >= (var12 ^ -1)) {
                     je.a(false);
                     je.field_c = false;
                     return 100 - -var11;
@@ -276,11 +276,11 @@ final class vb extends il {
                   md.field_v = te.field_N.h(15);
                   break L13;
                 } else {
-                  var9_ref = te.field_N.g(86);
-                  if (var9_ref == null) {
+                  var9_ref_String = te.field_N.g(86);
+                  if (var9_ref_String == null) {
                     break L13;
                   } else {
-                    kl.a(ia.g(param6 + 21721), var9_ref, 13536);
+                    kl.a(ia.g(param6 + 21721), var9_ref_String, 13536);
                     break L13;
                   }
                 }

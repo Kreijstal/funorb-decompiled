@@ -81,9 +81,9 @@ abstract class ei extends hp {
     }
 
     final void a(int param0, int param1, int param2, int param3) {
-        if (((ei) this).field_I != -1) {
+        if ((((ei) this).field_I ^ -1) != -1) {
           if (((ei) this).field_I >= 256) {
-            if (-1 != param1) {
+            if (-1 != (param1 ^ -1)) {
               return;
             } else {
               ((ei) this).a(param2 + ((ei) this).field_k, ((ei) this).field_j + param0, (byte) -123);
@@ -93,8 +93,7 @@ abstract class ei extends hp {
           } else {
             if (null != f.field_e) {
               if (f.field_e.field_w >= ((ei) this).field_i) {
-                if (f.field_e.field_t < ((ei) this).field_n) {
-                  f.field_e = new vn(((ei) this).field_i, ((ei) this).field_n);
+                if (f.field_e.field_t >= ((ei) this).field_n) {
                   ki.a((byte) -86, f.field_e);
                   bi.d();
                   ((ei) this).a(param3, 0, (byte) -121);
@@ -103,6 +102,7 @@ abstract class ei extends hp {
                   f.field_e.e(((ei) this).field_k + param2, ((ei) this).field_j + param0, ((ei) this).field_I);
                   return;
                 } else {
+                  f.field_e = new vn(((ei) this).field_i, ((ei) this).field_n);
                   ki.a((byte) -86, f.field_e);
                   bi.d();
                   ((ei) this).a(param3, 0, (byte) -121);
@@ -169,7 +169,7 @@ abstract class ei extends hp {
             }
           }
           L1: {
-            if (ma.field_r != sm.field_a) {
+            if ((ma.field_r ^ -1) != (sm.field_a ^ -1)) {
               vj.field_o = vj.field_o - 40;
               if (0 >= vj.field_o) {
                 vj.field_o = 0;
@@ -181,15 +181,15 @@ abstract class ei extends hp {
                   if (!nm.field_b) {
                     break L2;
                   } else {
-                    if (-1 != sm.field_a) {
+                    if (-1 != (sm.field_a ^ -1)) {
                       break L2;
                     } else {
                       L3: {
                         L4: {
-                          if (-2 != vk.field_c) {
+                          if (-2 != (vk.field_c ^ -1)) {
                             break L4;
                           } else {
-                            if (vf.field_f == -1) {
+                            if ((vf.field_f ^ -1) == -1) {
                               break L3;
                             } else {
                               break L4;
@@ -200,7 +200,7 @@ abstract class ei extends hp {
                           if (vk.field_c != 5) {
                             break L5;
                           } else {
-                            if (vf.field_f == -1) {
+                            if ((vf.field_f ^ -1) == -1) {
                               break L3;
                             } else {
                               break L5;
@@ -208,10 +208,10 @@ abstract class ei extends hp {
                           }
                         }
                         L6: {
-                          if (-6 != vk.field_c) {
+                          if (-6 != (vk.field_c ^ -1)) {
                             break L6;
                           } else {
-                            if (-2 == vf.field_f) {
+                            if (-2 == (vf.field_f ^ -1)) {
                               break L3;
                             } else {
                               break L6;
@@ -222,7 +222,7 @@ abstract class ei extends hp {
                           if (5 != vk.field_c) {
                             break L7;
                           } else {
-                            if (vf.field_f == -3) {
+                            if ((vf.field_f ^ -1) == -3) {
                               break L3;
                             } else {
                               break L7;
@@ -232,7 +232,7 @@ abstract class ei extends hp {
                         if (vk.field_c != 5) {
                           break L2;
                         } else {
-                          if (-5 != vf.field_f) {
+                          if (-5 != (vf.field_f ^ -1)) {
                             break L2;
                           } else {
                             break L3;
@@ -247,7 +247,7 @@ abstract class ei extends hp {
               }
             } else {
               if (nm.field_b) {
-                if (-401 > vj.field_o) {
+                if (-401 < (vj.field_o ^ -1)) {
                   vj.field_o = vj.field_o + 40;
                   if (400 >= vj.field_o) {
                     break L1;
@@ -294,32 +294,32 @@ abstract class ei extends hp {
                   if (!nm.field_b) {
                     break L9;
                   } else {
-                    if (-1 != sm.field_a) {
+                    if (-1 != (sm.field_a ^ -1)) {
                       break L9;
                     } else {
                       L10: {
-                        if (-2 != vk.field_c) {
+                        if (-2 != (vk.field_c ^ -1)) {
                           if (vk.field_c != 5) {
-                            if (-6 != vk.field_c) {
+                            if (-6 != (vk.field_c ^ -1)) {
                               if (5 != vk.field_c) {
                                 if (vk.field_c != 5) {
                                   break L9;
                                 } else {
-                                  if (-5 != vf.field_f) {
+                                  if (-5 != (vf.field_f ^ -1)) {
                                     break L9;
                                   } else {
                                     return true;
                                   }
                                 }
                               } else {
-                                if (vf.field_f == -3) {
+                                if ((vf.field_f ^ -1) == -3) {
                                   break L10;
                                 } else {
                                   L11: {
                                     if (vk.field_c != 5) {
                                       break L11;
                                     } else {
-                                      if (-5 != vf.field_f) {
+                                      if (-5 != (vf.field_f ^ -1)) {
                                         break L11;
                                       } else {
                                         return true;
@@ -330,7 +330,7 @@ abstract class ei extends hp {
                                 }
                               }
                             } else {
-                              if (-2 == vf.field_f) {
+                              if (-2 == (vf.field_f ^ -1)) {
                                 break L10;
                               } else {
                                 L12: {
@@ -338,7 +338,7 @@ abstract class ei extends hp {
                                     if (5 != vk.field_c) {
                                       break L13;
                                     } else {
-                                      if (vf.field_f == -3) {
+                                      if ((vf.field_f ^ -1) == -3) {
                                         break L12;
                                       } else {
                                         break L13;
@@ -349,7 +349,7 @@ abstract class ei extends hp {
                                     if (vk.field_c != 5) {
                                       break L14;
                                     } else {
-                                      if (-5 != vf.field_f) {
+                                      if (-5 != (vf.field_f ^ -1)) {
                                         break L14;
                                       } else {
                                         break L12;
@@ -362,12 +362,12 @@ abstract class ei extends hp {
                               }
                             }
                           } else {
-                            if (vf.field_f == -1) {
+                            if ((vf.field_f ^ -1) == -1) {
                               break L10;
                             } else {
                               L15: {
                                 L16: {
-                                  if (-6 != vk.field_c) {
+                                  if (-6 != (vk.field_c ^ -1)) {
                                     break L16;
                                   } else {
                                     if (-2 == (vf.field_f ^ -1)) {
@@ -381,7 +381,7 @@ abstract class ei extends hp {
                                   if (5 != vk.field_c) {
                                     break L17;
                                   } else {
-                                    if (vf.field_f == -3) {
+                                    if ((vf.field_f ^ -1) == -3) {
                                       break L15;
                                     } else {
                                       break L17;
@@ -392,7 +392,7 @@ abstract class ei extends hp {
                                   if (vk.field_c != 5) {
                                     break L18;
                                   } else {
-                                    if (-5 != vf.field_f) {
+                                    if (-5 != (vf.field_f ^ -1)) {
                                       break L18;
                                     } else {
                                       break L15;
@@ -405,7 +405,7 @@ abstract class ei extends hp {
                             }
                           }
                         } else {
-                          if (vf.field_f == -1) {
+                          if ((vf.field_f ^ -1) == -1) {
                             break L10;
                           } else {
                             L19: {
@@ -413,7 +413,7 @@ abstract class ei extends hp {
                                 if (vk.field_c != 5) {
                                   break L20;
                                 } else {
-                                  if (vf.field_f == -1) {
+                                  if ((vf.field_f ^ -1) == -1) {
                                     break L19;
                                   } else {
                                     break L20;
@@ -421,10 +421,10 @@ abstract class ei extends hp {
                                 }
                               }
                               L21: {
-                                if (-6 != vk.field_c) {
+                                if (-6 != (vk.field_c ^ -1)) {
                                   break L21;
                                 } else {
-                                  if (-2 == vf.field_f) {
+                                  if (-2 == (vf.field_f ^ -1)) {
                                     break L19;
                                   } else {
                                     break L21;
@@ -435,7 +435,7 @@ abstract class ei extends hp {
                                 if (5 != vk.field_c) {
                                   break L22;
                                 } else {
-                                  if (vf.field_f == -3) {
+                                  if ((vf.field_f ^ -1) == -3) {
                                     break L19;
                                   } else {
                                     break L22;
@@ -446,7 +446,7 @@ abstract class ei extends hp {
                                 if (vk.field_c != 5) {
                                   break L23;
                                 } else {
-                                  if (-5 != vf.field_f) {
+                                  if (-5 != (vf.field_f ^ -1)) {
                                     break L23;
                                   } else {
                                     break L19;
@@ -468,11 +468,11 @@ abstract class ei extends hp {
             }
           }
           if (nm.field_b) {
-            if (-1 == sm.field_a) {
+            if (-1 == (sm.field_a ^ -1)) {
               L24: {
-                if (-2 != vk.field_c) {
+                if (-2 != (vk.field_c ^ -1)) {
                   if (vk.field_c != 5) {
-                    if (-6 != vk.field_c) {
+                    if (-6 != (vk.field_c ^ -1)) {
                       if (5 != vk.field_c) {
                         L25: {
                           if (vk.field_c != 5) {
@@ -487,14 +487,14 @@ abstract class ei extends hp {
                         }
                         return false;
                       } else {
-                        if (vf.field_f == -3) {
+                        if ((vf.field_f ^ -1) == -3) {
                           break L24;
                         } else {
                           L26: {
                             if (vk.field_c != 5) {
                               break L26;
                             } else {
-                              if (-5 != vf.field_f) {
+                              if (-5 != (vf.field_f ^ -1)) {
                                 break L26;
                               } else {
                                 return true;
@@ -522,14 +522,14 @@ abstract class ei extends hp {
                           }
                           return false;
                         } else {
-                          if (vf.field_f == -3) {
+                          if ((vf.field_f ^ -1) == -3) {
                             return true;
                           } else {
                             L28: {
                               if (vk.field_c != 5) {
                                 break L28;
                               } else {
-                                if (-5 != vf.field_f) {
+                                if (-5 != (vf.field_f ^ -1)) {
                                   break L28;
                                 } else {
                                   return true;
@@ -542,17 +542,17 @@ abstract class ei extends hp {
                       }
                     }
                   } else {
-                    if (vf.field_f == -1) {
+                    if ((vf.field_f ^ -1) == -1) {
                       break L24;
                     } else {
                       L29: {
-                        if (-6 != vk.field_c) {
+                        if (-6 != (vk.field_c ^ -1)) {
                           if (5 != vk.field_c) {
                             L30: {
                               if (vk.field_c != 5) {
                                 break L30;
                               } else {
-                                if (-5 != vf.field_f) {
+                                if (-5 != (vf.field_f ^ -1)) {
                                   break L30;
                                 } else {
                                   return true;
@@ -561,14 +561,14 @@ abstract class ei extends hp {
                             }
                             return false;
                           } else {
-                            if (vf.field_f == -3) {
+                            if ((vf.field_f ^ -1) == -3) {
                               break L29;
                             } else {
                               L31: {
                                 if (vk.field_c != 5) {
                                   break L31;
                                 } else {
-                                  if (-5 != vf.field_f) {
+                                  if (-5 != (vf.field_f ^ -1)) {
                                     break L31;
                                   } else {
                                     return true;
@@ -596,14 +596,14 @@ abstract class ei extends hp {
                               }
                               return false;
                             } else {
-                              if (vf.field_f == -3) {
+                              if ((vf.field_f ^ -1) == -3) {
                                 return true;
                               } else {
                                 L33: {
                                   if (vk.field_c != 5) {
                                     break L33;
                                   } else {
-                                    if (-5 != vf.field_f) {
+                                    if (-5 != (vf.field_f ^ -1)) {
                                       break L33;
                                     } else {
                                       return true;
@@ -620,7 +620,7 @@ abstract class ei extends hp {
                     }
                   }
                 } else {
-                  if (vf.field_f == -1) {
+                  if ((vf.field_f ^ -1) == -1) {
                     break L24;
                   } else {
                     L34: {
@@ -628,7 +628,7 @@ abstract class ei extends hp {
                         if (vk.field_c != 5) {
                           break L35;
                         } else {
-                          if (vf.field_f == -1) {
+                          if ((vf.field_f ^ -1) == -1) {
                             break L34;
                           } else {
                             break L35;
@@ -636,10 +636,10 @@ abstract class ei extends hp {
                         }
                       }
                       L36: {
-                        if (-6 != vk.field_c) {
+                        if (-6 != (vk.field_c ^ -1)) {
                           break L36;
                         } else {
-                          if (-2 == vf.field_f) {
+                          if (-2 == (vf.field_f ^ -1)) {
                             break L34;
                           } else {
                             break L36;
@@ -650,7 +650,7 @@ abstract class ei extends hp {
                         if (5 != vk.field_c) {
                           break L37;
                         } else {
-                          if (vf.field_f == -3) {
+                          if ((vf.field_f ^ -1) == -3) {
                             break L34;
                           } else {
                             break L37;
@@ -661,7 +661,7 @@ abstract class ei extends hp {
                         if (vk.field_c != 5) {
                           break L38;
                         } else {
-                          if (-5 != vf.field_f) {
+                          if (-5 != (vf.field_f ^ -1)) {
                             break L38;
                           } else {
                             return true;
@@ -691,7 +691,7 @@ abstract class ei extends hp {
             }
           }
           L40: {
-            if (ma.field_r != sm.field_a) {
+            if ((ma.field_r ^ -1) != (sm.field_a ^ -1)) {
               vj.field_o = vj.field_o - 40;
               if (0 >= vj.field_o) {
                 vj.field_o = 0;
@@ -699,72 +699,78 @@ abstract class ei extends hp {
                 jd.field_c = rc.field_w;
                 break L40;
               } else {
-                if (nm.field_b) {
-                  if (-1 == sm.field_a) {
-                    L41: {
-                      if (-2 != vk.field_c) {
-                        break L41;
-                      } else {
-                        if (vf.field_f != -1) {
+                L41: {
+                  if (!nm.field_b) {
+                    break L41;
+                  } else {
+                    if (-1 != (sm.field_a ^ -1)) {
+                      break L41;
+                    } else {
+                      L42: {
+                        L43: {
+                          if (-2 != (vk.field_c ^ -1)) {
+                            break L43;
+                          } else {
+                            if ((vf.field_f ^ -1) == -1) {
+                              break L42;
+                            } else {
+                              break L43;
+                            }
+                          }
+                        }
+                        L44: {
+                          if (vk.field_c != 5) {
+                            break L44;
+                          } else {
+                            if ((vf.field_f ^ -1) == -1) {
+                              break L42;
+                            } else {
+                              break L44;
+                            }
+                          }
+                        }
+                        L45: {
+                          if (-6 != (vk.field_c ^ -1)) {
+                            break L45;
+                          } else {
+                            if (-2 == (vf.field_f ^ -1)) {
+                              break L42;
+                            } else {
+                              break L45;
+                            }
+                          }
+                        }
+                        L46: {
+                          if (5 != vk.field_c) {
+                            break L46;
+                          } else {
+                            if ((vf.field_f ^ -1) == -3) {
+                              break L42;
+                            } else {
+                              break L46;
+                            }
+                          }
+                        }
+                        if (vk.field_c != 5) {
                           break L41;
                         } else {
-                          return true;
+                          if (-5 != (vf.field_f ^ -1)) {
+                            break L41;
+                          } else {
+                            return true;
+                          }
                         }
                       }
+                      return true;
                     }
-                    L42: {
-                      if (vk.field_c != 5) {
-                        break L42;
-                      } else {
-                        if (vf.field_f != -1) {
-                          break L42;
-                        } else {
-                          return true;
-                        }
-                      }
-                    }
-                    L43: {
-                      if (-6 != vk.field_c) {
-                        break L43;
-                      } else {
-                        if (-2 != vf.field_f) {
-                          break L43;
-                        } else {
-                          return true;
-                        }
-                      }
-                    }
-                    L44: {
-                      if (5 != vk.field_c) {
-                        break L44;
-                      } else {
-                        if (vf.field_f != -3) {
-                          break L44;
-                        } else {
-                          return true;
-                        }
-                      }
-                    }
-                    if (vk.field_c == 5) {
-                      if (-5 == vf.field_f) {
-                        return true;
-                      } else {
-                        return false;
-                      }
-                    } else {
-                      return false;
-                    }
-                  } else {
-                    return false;
                   }
-                } else {
-                  return false;
                 }
+                return false;
               }
             } else {
-              L45: {
+              L47: {
                 if (!nm.field_b) {
-                  break L45;
+                  break L47;
                 } else {
                   if (-401 < (vj.field_o ^ -1)) {
                     vj.field_o = vj.field_o + 40;
@@ -775,7 +781,7 @@ abstract class ei extends hp {
                       break L40;
                     }
                   } else {
-                    break L45;
+                    break L47;
                   }
                 }
               }
@@ -796,67 +802,112 @@ abstract class ei extends hp {
               }
             }
           }
-          if (nm.field_b) {
-            if (-1 == sm.field_a) {
-              if (-2 != vk.field_c) {
-                if (vk.field_c != 5) {
-                  L46: {
-                    if (-6 != vk.field_c) {
-                      if (5 != vk.field_c) {
-                        L47: {
+          L48: {
+            if (!nm.field_b) {
+              break L48;
+            } else {
+              if (-1 != (sm.field_a ^ -1)) {
+                break L48;
+              } else {
+                L49: {
+                  if (-2 != (vk.field_c ^ -1)) {
+                    if (vk.field_c != 5) {
+                      if (-6 != (vk.field_c ^ -1)) {
+                        if (5 != vk.field_c) {
                           if (vk.field_c != 5) {
-                            break L47;
+                            break L48;
                           } else {
                             if (-5 != (vf.field_f ^ -1)) {
-                              break L47;
+                              break L48;
                             } else {
                               return true;
                             }
                           }
-                        }
-                        return false;
-                      } else {
-                        if (vf.field_f == -3) {
-                          break L46;
                         } else {
-                          L48: {
-                            if (vk.field_c != 5) {
-                              break L48;
-                            } else {
-                              if (-5 != vf.field_f) {
-                                break L48;
-                              } else {
-                                return true;
-                              }
-                            }
-                          }
-                          return false;
-                        }
-                      }
-                    } else {
-                      if (-2 == vf.field_f) {
-                        break L46;
-                      } else {
-                        L49: {
-                          L50: {
-                            if (5 != vk.field_c) {
-                              break L50;
-                            } else {
-                              if (vf.field_f == -3) {
-                                break L49;
-                              } else {
+                          if ((vf.field_f ^ -1) == -3) {
+                            break L49;
+                          } else {
+                            L50: {
+                              if (vk.field_c != 5) {
                                 break L50;
+                              } else {
+                                if (-5 != (vf.field_f ^ -1)) {
+                                  break L50;
+                                } else {
+                                  return true;
+                                }
+                              }
+                            }
+                            return false;
+                          }
+                        }
+                      } else {
+                        if (-2 == (vf.field_f ^ -1)) {
+                          break L49;
+                        } else {
+                          L51: {
+                            L52: {
+                              if (5 != vk.field_c) {
+                                break L52;
+                              } else {
+                                if ((vf.field_f ^ -1) == -3) {
+                                  break L51;
+                                } else {
+                                  break L52;
+                                }
+                              }
+                            }
+                            L53: {
+                              if (vk.field_c != 5) {
+                                break L53;
+                              } else {
+                                if (-5 != (vf.field_f ^ -1)) {
+                                  break L53;
+                                } else {
+                                  break L51;
+                                }
+                              }
+                            }
+                            return false;
+                          }
+                          return true;
+                        }
+                      }
+                    } else {
+                      if ((vf.field_f ^ -1) == -1) {
+                        break L49;
+                      } else {
+                        L54: {
+                          L55: {
+                            if (-6 != (vk.field_c ^ -1)) {
+                              break L55;
+                            } else {
+                              if (-2 == (vf.field_f ^ -1)) {
+                                break L54;
+                              } else {
+                                break L55;
                               }
                             }
                           }
-                          L51: {
-                            if (vk.field_c != 5) {
-                              break L51;
+                          L56: {
+                            if (5 != vk.field_c) {
+                              break L56;
                             } else {
-                              if (-5 != vf.field_f) {
-                                break L51;
+                              if ((vf.field_f ^ -1) == -3) {
+                                break L54;
                               } else {
-                                break L49;
+                                break L56;
+                              }
+                            }
+                          }
+                          L57: {
+                            if (vk.field_c != 5) {
+                              break L57;
+                            } else {
+                              if (-5 != (vf.field_f ^ -1)) {
+                                break L57;
+                              } else {
+                                break L54;
                               }
                             }
                           }
@@ -864,100 +915,67 @@ abstract class ei extends hp {
                         }
                         return true;
                       }
-                    }
-                  }
-                  return true;
-                } else {
-                  if (vf.field_f != -1) {
-                    L52: {
-                      if (-6 != vk.field_c) {
-                        break L52;
-                      } else {
-                        if (-2 != (vf.field_f ^ -1)) {
-                          break L52;
-                        } else {
-                          return true;
-                        }
-                      }
-                    }
-                    L53: {
-                      if (5 != vk.field_c) {
-                        break L53;
-                      } else {
-                        if (vf.field_f != -3) {
-                          break L53;
-                        } else {
-                          return true;
-                        }
-                      }
-                    }
-                    if (vk.field_c == 5) {
-                      if (-5 == vf.field_f) {
-                        return true;
-                      } else {
-                        return false;
-                      }
-                    } else {
-                      return false;
                     }
                   } else {
-                    return true;
-                  }
-                }
-              } else {
-                if (vf.field_f != -1) {
-                  L54: {
-                    if (vk.field_c != 5) {
-                      break L54;
+                    if ((vf.field_f ^ -1) == -1) {
+                      break L49;
                     } else {
-                      if (vf.field_f != -1) {
-                        break L54;
-                      } else {
-                        return true;
+                      L58: {
+                        L59: {
+                          if (vk.field_c != 5) {
+                            break L59;
+                          } else {
+                            if ((vf.field_f ^ -1) == -1) {
+                              break L58;
+                            } else {
+                              break L59;
+                            }
+                          }
+                        }
+                        L60: {
+                          if (-6 != (vk.field_c ^ -1)) {
+                            break L60;
+                          } else {
+                            if (-2 == (vf.field_f ^ -1)) {
+                              break L58;
+                            } else {
+                              break L60;
+                            }
+                          }
+                        }
+                        L61: {
+                          if (5 != vk.field_c) {
+                            break L61;
+                          } else {
+                            if ((vf.field_f ^ -1) == -3) {
+                              break L58;
+                            } else {
+                              break L61;
+                            }
+                          }
+                        }
+                        L62: {
+                          if (vk.field_c != 5) {
+                            break L62;
+                          } else {
+                            if (-5 != (vf.field_f ^ -1)) {
+                              break L62;
+                            } else {
+                              break L58;
+                            }
+                          }
+                        }
+                        return false;
                       }
-                    }
-                  }
-                  L55: {
-                    if (-6 != vk.field_c) {
-                      break L55;
-                    } else {
-                      if (-2 != vf.field_f) {
-                        break L55;
-                      } else {
-                        return true;
-                      }
-                    }
-                  }
-                  L56: {
-                    if (5 != vk.field_c) {
-                      break L56;
-                    } else {
-                      if (vf.field_f != -3) {
-                        break L56;
-                      } else {
-                        return true;
-                      }
-                    }
-                  }
-                  if (vk.field_c == 5) {
-                    if (-5 != vf.field_f) {
-                      return false;
-                    } else {
                       return true;
                     }
-                  } else {
-                    return false;
                   }
-                } else {
-                  return true;
                 }
+                return true;
               }
-            } else {
-              return false;
             }
-          } else {
-            return false;
           }
+          return false;
         }
     }
 

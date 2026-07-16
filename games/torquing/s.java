@@ -72,29 +72,29 @@ final class s extends am {
                 if (var5 >= ((s) this).field_v.length) {
                   break L0;
                 } else {
-                  var6 = ((s) this).field_v[var5];
-                  var7 = var6.field_a;
-                  var8 = var6.field_c;
-                  if (-1 < var7) {
-                    if (-1 >= (var8 ^ -1)) {
-                      var6.a(var4, var3, (byte) 106);
-                      var5++;
-                      continue L1;
+                  L2: {
+                    var6 = ((s) this).field_v[var5];
+                    var7 = var6.field_a;
+                    var8 = var6.field_c;
+                    if (-1 < (var7 ^ -1)) {
+                      if (-1 < (var8 ^ -1)) {
+                        break L2;
+                      } else {
+                        var6.a(var4, var3, (byte) 106);
+                        break L2;
+                      }
                     } else {
-                      var5++;
-                      continue L1;
-                    }
-                  } else {
-                    if (-1 <= var8) {
-                      var6.a(var3, var4, -105);
-                      var5++;
-                      continue L1;
-                    } else {
-                      var6.a((byte) 60, var4, var3);
-                      var5++;
-                      continue L1;
+                      if (-1 >= (var8 ^ -1)) {
+                        var6.a(var3, var4, -105);
+                        break L2;
+                      } else {
+                        var6.a((byte) 60, var4, var3);
+                        break L2;
+                      }
                     }
                   }
+                  var5++;
+                  continue L1;
                 }
               }
             }
@@ -110,15 +110,15 @@ final class s extends am {
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
+        Object stackIn_19_0 = null;
         Object stackIn_20_0 = null;
         Object stackIn_21_0 = null;
-        Object stackIn_22_0 = null;
-        int stackIn_22_1 = 0;
-        Object stackOut_19_0 = null;
-        Object stackOut_21_0 = null;
-        int stackOut_21_1 = 0;
+        int stackIn_21_1 = 0;
+        Object stackOut_18_0 = null;
         Object stackOut_20_0 = null;
         int stackOut_20_1 = 0;
+        Object stackOut_19_0 = null;
+        int stackOut_19_1 = 0;
         L0: {
           var7 = Torquing.field_u;
           if (param1 == 35) {
@@ -129,27 +129,27 @@ final class s extends am {
           }
         }
         L1: {
-          if (param2 != 0) {
+          if ((param2 ^ -1) != -1) {
             if (1 == param2) {
               L2: {
-                stackOut_19_0 = this;
-                stackIn_21_0 = stackOut_19_0;
-                stackIn_20_0 = stackOut_19_0;
+                stackOut_18_0 = this;
+                stackIn_20_0 = stackOut_18_0;
+                stackIn_19_0 = stackOut_18_0;
                 if (1 != param0.i((byte) -101)) {
-                  stackOut_21_0 = this;
-                  stackOut_21_1 = 0;
-                  stackIn_22_0 = stackOut_21_0;
-                  stackIn_22_1 = stackOut_21_1;
+                  stackOut_20_0 = this;
+                  stackOut_20_1 = 0;
+                  stackIn_21_0 = stackOut_20_0;
+                  stackIn_21_1 = stackOut_20_1;
                   break L2;
                 } else {
-                  stackOut_20_0 = this;
-                  stackOut_20_1 = 1;
-                  stackIn_22_0 = stackOut_20_0;
-                  stackIn_22_1 = stackOut_20_1;
+                  stackOut_19_0 = this;
+                  stackOut_19_1 = 1;
+                  stackIn_21_0 = stackOut_19_0;
+                  stackIn_21_1 = stackOut_19_1;
                   break L2;
                 }
               }
-              ((s) this).field_p = stackIn_22_1 != 0;
+              ((s) this).field_p = stackIn_21_1 != 0;
               break L1;
             } else {
               break L1;
@@ -158,37 +158,36 @@ final class s extends am {
             ((s) this).field_v = new kj[param0.i((byte) -101)];
             var4 = 0;
             L3: while (true) {
-              if (var4 >= ((s) this).field_v.length) {
+              if ((var4 ^ -1) <= (((s) this).field_v.length ^ -1)) {
                 break L1;
               } else {
-                var5 = param0.i((byte) -101);
-                var6 = var5;
-                if (0 == var6) {
-                  ((s) this).field_v[var4] = (kj) (Object) tl.a(param0, (byte) -51);
-                  var4++;
-                  continue L3;
-                } else {
-                  if (var6 != -2) {
-                    if (-3 == var6) {
-                      ((s) this).field_v[var4] = (kj) (Object) c.a(i.c(param1, 40), param0);
-                      var4++;
-                      continue L3;
-                    } else {
-                      if (var6 == 3) {
-                        ((s) this).field_v[var4] = (kj) (Object) bi.a(param0, (byte) 13);
-                        var4++;
-                        continue L3;
-                      } else {
-                        var4++;
-                        continue L3;
-                      }
-                    }
+                L4: {
+                  var5 = param0.i((byte) -101);
+                  var6 = var5;
+                  if (0 == var6) {
+                    ((s) this).field_v[var4] = (kj) (Object) tl.a(param0, (byte) -51);
+                    break L4;
                   } else {
-                    ((s) this).field_v[var4] = (kj) (Object) wa.a(false, param0);
-                    var4++;
-                    continue L3;
+                    if ((var6 ^ -1) != -2) {
+                      if (-3 == (var6 ^ -1)) {
+                        ((s) this).field_v[var4] = (kj) (Object) c.a(i.c(param1, 40), param0);
+                        break L4;
+                      } else {
+                        if (var6 != 3) {
+                          break L4;
+                        } else {
+                          ((s) this).field_v[var4] = (kj) (Object) bi.a(param0, (byte) 13);
+                          break L4;
+                        }
+                      }
+                    } else {
+                      ((s) this).field_v[var4] = (kj) (Object) wa.a(false, param0);
+                      break L4;
+                    }
                   }
                 }
+                var4++;
+                continue L3;
               }
             }
           }

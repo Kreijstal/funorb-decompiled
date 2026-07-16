@@ -47,7 +47,7 @@ final class hk extends i {
             if (!jd.f(-1)) {
               break L1;
             } else {
-              if (param0.field_m.field_h.length < -1) {
+              if ((param0.field_m.field_h.length ^ -1) < -1) {
                 stackOut_3_0 = "<br><br>" + mp.field_n;
                 stackIn_4_0 = stackOut_3_0;
                 break L0;
@@ -62,25 +62,29 @@ final class hk extends i {
         }
         var5 = stackIn_4_0;
         var3 = var5;
-        if (-20 == param1) {
+        if (-20 == (param1 ^ -1)) {
           ((hk) this).field_N = param0.field_i;
           ((hk) this).field_v = vo.a((byte) -18, ((hk) this).field_v, new String[2]);
           ((hk) this).field_J = 52;
           ((hk) this).a(((hk) this).field_v, ((hk) this).field_t, ((hk) this).field_D, -90, ((hk) this).field_u);
+          return;
         } else {
           if (param1 == 32) {
             ((hk) this).field_N = param0.field_t;
             ((hk) this).field_v = vo.a((byte) -18, ((hk) this).field_v, new String[2]);
             ((hk) this).field_J = 66;
             ((hk) this).a(((hk) this).field_v, ((hk) this).field_t, ((hk) this).field_D, -90, ((hk) this).field_u);
+            return;
           } else {
             if (-38 != (param1 ^ -1)) {
               ((hk) this).a(((hk) this).field_v, ((hk) this).field_t, ((hk) this).field_D, -90, ((hk) this).field_u);
+              return;
             } else {
               ((hk) this).field_N = param0.field_t;
               ((hk) this).field_v = vo.a((byte) -18, ((hk) this).field_v, new String[3]);
               ((hk) this).field_J = 66;
               ((hk) this).a(((hk) this).field_v, ((hk) this).field_t, ((hk) this).field_D, -90, ((hk) this).field_u);
+              return;
             }
           }
         }

@@ -33,66 +33,36 @@ final class jc {
         try {
             java.net.MalformedURLException var4 = null;
             Object var5 = null;
-            int statePc = 0;
-            Throwable caughtException = null;
-            stateLoop: while (true) {
-                switch (statePc) {
-                    case 0: {
-                        if (!sj.field_w.startsWith("win")) {
-                            statePc = 3;
-                        } else {
-                            statePc = 1;
-                        }
-                        continue stateLoop;
-                    }
-                    case 1: {
-                        if (!ll.a(param2, param0 ^ -10570)) {
-                            statePc = 3;
-                        } else {
-                            statePc = 2;
-                        }
-                        continue stateLoop;
-                    }
-                    case 2: {
-                        return;
-                    }
-                    case 3: {
-                        try {
-                            param1.getAppletContext().showDocument(new java.net.URL(param2), "_blank");
-                            if (param0 == -10553) {
-                                statePc = 7;
-                            } else {
-                                statePc = 4;
-                            }
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_3) {
-                            caughtException = stateCaught_3;
-                            statePc = 6;
-                            continue stateLoop;
-                        }
-                    }
-                    case 4: {
-                        try {
-                            var5 = null;
-                            String[] discarded$2 = jc.a(113, (String) null, 'h');
-                            return;
-                        } catch (Throwable stateCaught_4) {
-                            caughtException = stateCaught_4;
-                            statePc = 6;
-                            continue stateLoop;
-                        }
-                    }
-                    case 6: {
-                        var4 = (java.net.MalformedURLException) (Object) caughtException;
-                        tc.a((Throwable) null, "MGR1: " + param2, -8555);
-                        statePc = 7;
-                        continue stateLoop;
-                    }
-                    case 7: {
-                        return;
-                    }
-                    default: throw new IllegalStateException("invalid CFG state " + statePc);
+            Throwable decompiledCaughtException = null;
+            L0: {
+              if (!sj.field_w.startsWith("win")) {
+                break L0;
+              } else {
+                if (!ll.a(param2, param0 ^ -10570)) {
+                  break L0;
+                } else {
+                  return;
                 }
+              }
+            }
+            try {
+              L1: {
+                param1.getAppletContext().showDocument(new java.net.URL(param2), "_blank");
+                if (param0 == -10553) {
+                  break L1;
+                } else {
+                  var5 = null;
+                  String[] discarded$2 = jc.a(113, (String) null, 'h');
+                  return;
+                }
+              }
+            } catch (java.net.MalformedURLException decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              L2: {
+                var4 = (java.net.MalformedURLException) (Object) decompiledCaughtException;
+                tc.a((Throwable) null, "MGR1: " + param2, -8555);
+                break L2;
+              }
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -139,8 +109,9 @@ final class jc {
               var8 = var6;
               L1: while (true) {
                 if (param2 == param1.charAt(var8)) {
+                  int incrementValue$2 = var5;
                   var5++;
-                  var4[var5] = param1.substring(var6, var8);
+                  var4[incrementValue$2] = param1.substring(var6, var8);
                   var6 = 1 + var8;
                   var7++;
                   continue L0;
@@ -162,8 +133,9 @@ final class jc {
               var8 = var6;
               L3: while (true) {
                 if (param2 == param1.charAt(var8)) {
+                  int incrementValue$3 = var5;
                   var5++;
-                  var4[var5] = param1.substring(var6, var8);
+                  var4[incrementValue$3] = param1.substring(var6, var8);
                   var6 = 1 + var8;
                   var7++;
                   continue L2;

@@ -78,7 +78,7 @@ final class bm extends nf {
         int stackOut_38_2 = 0;
         L0: {
           var15 = MinerDisturbance.field_ab;
-          if (param6 != 0) {
+          if ((param6 ^ -1) != -1) {
             break L0;
           } else {
             param6 = param2.field_G;
@@ -96,7 +96,7 @@ final class bm extends nf {
               if (((bm) this).field_t) {
                 break L1;
               } else {
-                if (((bm) this).field_l != param7) {
+                if ((((bm) this).field_l ^ -1) != (param7 ^ -1)) {
                   break L1;
                 } else {
                   if (param0 != ((bm) this).field_j) {
@@ -105,7 +105,7 @@ final class bm extends nf {
                     if (((bm) this).field_i != param6) {
                       break L1;
                     } else {
-                      if (((bm) this).field_p != param1) {
+                      if ((((bm) this).field_p ^ -1) != (param1 ^ -1)) {
                         break L1;
                       } else {
                         if (((bm) this).field_s != param4) {
@@ -148,10 +148,10 @@ final class bm extends nf {
             var16 = new String[param2.a(param3, param4) + 1];
             var17 = var16;
             var10 = Math.max(1, param2.a(param3, new int[1], var17));
-            if (((bm) this).field_j != -4) {
+            if ((((bm) this).field_j ^ -1) != -4) {
               break L3;
             } else {
-              if (-2 == var10) {
+              if (-2 == (var10 ^ -1)) {
                 ((bm) this).field_j = 1;
                 break L3;
               } else {
@@ -235,8 +235,7 @@ final class bm extends nf {
                 }
               }
               L8: {
-                new mg(stackIn_36_2, stackIn_36_3, stackIn_36_4);
-                var14 = stackIn_36_0;
+                var14 = new mg(stackIn_36_2, stackIn_36_3, stackIn_36_4);
                 var14.field_d[0] = 0;
                 if (var13 == null) {
                   break L8;

@@ -24,30 +24,67 @@ final class nm {
     }
 
     final static int a(int param0, byte param1) {
-        if (param1 != 78) {
-            field_a = null;
-        }
         int var2 = 0;
-        if (param0 <= -1) {
-            // if_icmpgt L40
+        L0: {
+          if (param1 == 78) {
+            break L0;
+          } else {
+            field_a = null;
+            break L0;
+          }
         }
-        var2 += 16;
-        param0 = param0 >>> 16;
-        if (!(param0 < 256)) {
+        L1: {
+          L2: {
+            var2 = 0;
+            if ((param0 ^ -1) > -1) {
+              break L2;
+            } else {
+              if (-65537 < (param0 ^ -1)) {
+                break L1;
+              } else {
+                break L2;
+              }
+            }
+          }
+          var2 += 16;
+          param0 = param0 >>> 16;
+          break L1;
+        }
+        L3: {
+          if (param0 >= 256) {
             param0 = param0 >>> 8;
             var2 += 8;
+            break L3;
+          } else {
+            break L3;
+          }
         }
-        if (16 <= param0) {
+        L4: {
+          if (16 > param0) {
+            break L4;
+          } else {
             var2 += 4;
             param0 = param0 >>> 4;
+            break L4;
+          }
         }
-        if (4 <= param0) {
+        L5: {
+          if (4 > param0) {
+            break L5;
+          } else {
             var2 += 2;
             param0 = param0 >>> 2;
+            break L5;
+          }
         }
-        if (!(param0 < 1)) {
+        L6: {
+          if (param0 >= 1) {
             var2++;
             param0 = param0 >>> 1;
+            break L6;
+          } else {
+            break L6;
+          }
         }
         return var2 + param0;
     }

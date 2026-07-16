@@ -74,9 +74,9 @@ final class pg {
             if (param0 == -3) {
               var3 = 0;
               if (var1 != 0) {
-                if (-1 <= ll.field_k.field_e) {
+                if (-1 >= (ll.field_k.field_e ^ -1)) {
                   var3 = sh.field_f[ll.field_k.field_e];
-                  if (-3 == var3) {
+                  if (-3 == (var3 ^ -1)) {
                     oc.a((byte) -43);
                     if (var3 == 0) {
                       if ((ck.field_a ^ -1) == -3) {
@@ -146,7 +146,7 @@ final class pg {
                   }
                 } else {
                   if (var2 != 0) {
-                    if (-3 != ck.field_a) {
+                    if (-3 != (ck.field_a ^ -1)) {
                       oc.a((byte) -16);
                       if (var3 == 0) {
                         if ((ck.field_a ^ -1) == -3) {
@@ -215,16 +215,14 @@ final class pg {
                 }
               } else {
                 if (var2 != 0) {
-                  if (-3 != ck.field_a) {
+                  if (-3 != (ck.field_a ^ -1)) {
                     oc.a((byte) -16);
                     if (var3 == 0) {
-                      if ((ck.field_a ^ -1) != -3) {
-                        return var3;
-                      } else {
+                      if ((ck.field_a ^ -1) == -3) {
                         L8: {
                           var4 = -va.field_o + nj.a(param0 ^ -51);
                           var6 = (int)((-var4 + 10999L) / 1000L);
-                          if (var6 < -1) {
+                          if ((var6 ^ -1) < -1) {
                             break L8;
                           } else {
                             ba.a(true, 6, 5);
@@ -233,15 +231,15 @@ final class pg {
                           }
                         }
                         return var3;
+                      } else {
+                        return var3;
                       }
                     } else {
                       return var3;
                     }
                   } else {
                     if (var3 == 0) {
-                      if ((ck.field_a ^ -1) != -3) {
-                        return var3;
-                      } else {
+                      if ((ck.field_a ^ -1) == -3) {
                         L9: {
                           var4 = -va.field_o + nj.a(param0 ^ -51);
                           var6 = (int)((-var4 + 10999L) / 1000L);
@@ -254,17 +252,19 @@ final class pg {
                           }
                         }
                         return var3;
+                      } else {
+                        return var3;
                       }
                     } else {
                       return var3;
                     }
                   }
                 } else {
-                  if (var3 == 0) {
-                    if ((ck.field_a ^ -1) != -3) {
-                      return var3;
+                  L10: {
+                    if (var3 != 0) {
+                      break L10;
                     } else {
-                      L10: {
+                      if ((ck.field_a ^ -1) == -3) {
                         var4 = -va.field_o + nj.a(param0 ^ -51);
                         var6 = (int)((-var4 + 10999L) / 1000L);
                         if ((var6 ^ -1) < -1) {
@@ -274,12 +274,12 @@ final class pg {
                           var3 = 2;
                           break L10;
                         }
+                      } else {
+                        return var3;
                       }
-                      return var3;
                     }
-                  } else {
-                    return var3;
                   }
+                  return var3;
                 }
               }
             } else {
@@ -306,14 +306,14 @@ final class pg {
     }
 
     final static String[] a(boolean param0, int param1) {
-        if (-2 != param1) {
+        if (-2 != (param1 ^ -1)) {
           if (param1 == 9) {
             return rd.field_e;
           } else {
             if (10 == param1) {
               return rd.field_e;
             } else {
-              if (-9 == param1) {
+              if (-9 == (param1 ^ -1)) {
                 return ow.field_d;
               } else {
                 if ((param1 ^ -1) != -12) {
@@ -339,8 +339,8 @@ final class pg {
                                 if (23 == param1) {
                                   return vq.field_i;
                                 } else {
-                                  if (param1 != -30) {
-                                    if (-35 == param1) {
+                                  if ((param1 ^ -1) != -30) {
+                                    if (-35 == (param1 ^ -1)) {
                                       return fs.field_a;
                                     } else {
                                       if (param1 != 30) {
@@ -366,8 +366,8 @@ final class pg {
                                 if (23 == param1) {
                                   return vq.field_i;
                                 } else {
-                                  if (param1 != -30) {
-                                    if (-35 == param1) {
+                                  if ((param1 ^ -1) != -30) {
+                                    if (-35 == (param1 ^ -1)) {
                                       return fs.field_a;
                                     } else {
                                       if (param1 != 30) {

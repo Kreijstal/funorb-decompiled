@@ -39,9 +39,7 @@ final class gh {
         char[] var11 = null;
         char[] var12 = null;
         var9 = Chess.field_G;
-        if (param2 != -161) {
-          return null;
-        } else {
+        if (param2 == -161) {
           var12 = new char[param3];
           var11 = var12;
           var10 = var11;
@@ -53,9 +51,13 @@ final class gh {
               return new String(var12, 0, var5);
             } else {
               var7 = param0[param1 + var6] & 255;
-              if (-1 != var7) {
+              if (-1 == (var7 ^ -1)) {
+                var6++;
+                var6++;
+                continue L0;
+              } else {
                 L1: {
-                  if (-129 > var7) {
+                  if (-129 < (var7 ^ -1)) {
                     break L1;
                   } else {
                     if (-161 < (var7 ^ -1)) {
@@ -75,18 +77,17 @@ final class gh {
                     }
                   }
                 }
+                int incrementValue$31 = var5;
                 var5++;
-                var10[var5] = (char)var7;
-                var6++;
-                var6++;
-                continue L0;
-              } else {
+                var10[incrementValue$31] = (char)var7;
                 var6++;
                 var6++;
                 continue L0;
               }
             }
           }
+        } else {
+          return null;
         }
     }
 

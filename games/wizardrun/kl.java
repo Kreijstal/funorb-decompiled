@@ -515,7 +515,6 @@ final class kl {
 
     private final synchronized byte[] a(int param0, int param1, int[] param2, int param3) {
         Object var5 = null;
-        byte[] var5_array = null;
         byte[] var7 = null;
         L0: {
           if (param0 == 1) {
@@ -556,7 +555,7 @@ final class kl {
                 break L3;
               } else {
                 var7 = bh.a((byte) 115, ((kl) this).field_c[param3][param1], false);
-                var5_array = var7;
+                var5 = (Object) (Object) var7;
                 if (var7 != null) {
                   break L3;
                 } else {
@@ -565,7 +564,7 @@ final class kl {
               }
             }
             L4: {
-              if (var5_array != null) {
+              if (var5 != null) {
                 if (1 == ((kl) this).field_f) {
                   ((kl) this).field_c[param3][param1] = null;
                   if ((((kl) this).field_d.field_t[param3] ^ -1) == -2) {
@@ -586,7 +585,7 @@ final class kl {
                 break L4;
               }
             }
-            return var5_array;
+            return (byte[]) var5;
           } else {
             throw new RuntimeException("");
           }
@@ -652,22 +651,34 @@ final class kl {
     }
 
     private final synchronized boolean a(int param0, int param1) {
-        if (!((kl) this).b(17820)) {
-            return false;
-        }
-        if (-1 >= (param0 ^ -1)) {
-            // if_icmpge L46
-            // ifeq L46
-        } else {
-            if (!v.field_a) {
-                return false;
+        if (((kl) this).b(17820)) {
+          L0: {
+            if (-1 < (param0 ^ -1)) {
+              break L0;
+            } else {
+              if (param0 >= ((kl) this).field_d.field_t.length) {
+                break L0;
+              } else {
+                if (((kl) this).field_d.field_t[param0] == 0) {
+                  break L0;
+                } else {
+                  if (param1 == 6447) {
+                    return true;
+                  } else {
+                    return false;
+                  }
+                }
+              }
             }
+          }
+          if (v.field_a) {
             throw new IllegalArgumentException(Integer.toString(param0));
-        }
-        if (param1 != 6447) {
+          } else {
             return false;
+          }
+        } else {
+          return false;
         }
-        return true;
     }
 
     final int a(int param0, String param1) {
@@ -953,6 +964,7 @@ final class kl {
               }
               ((kl) this).field_a = stackIn_6_1 != 0;
               ((kl) this).field_f = param2;
+              return;
             } else {
               break L0;
             }

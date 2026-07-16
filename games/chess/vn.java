@@ -1,6 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
+import java.lang.String;
+
 class vn extends bj implements mj {
     static jc field_vb;
     static String field_Eb;
@@ -176,14 +178,14 @@ class vn extends bj implements mj {
             if (param0 == 5) {
               var6.a(11, 29, vi.field_a);
               var6.a(17, 62, sn.field_b);
-              if (-4 != param0) {
-                if (-5 != param0) {
+              if (-4 != (param0 ^ -1)) {
+                if (-5 != (param0 ^ -1)) {
                   if (param0 != 6) {
-                    if (param0 == 9) {
-                      fb discarded$3 = var6.a((byte) -114, (rg) this, rn.field_c);
+                    if (param0 != 9) {
                       ((vn) this).c((mf) (Object) var6, 70);
                       return;
                     } else {
+                      fb discarded$3 = var6.a((byte) -114, (rg) this, rn.field_c);
                       ((vn) this).c((mf) (Object) var6, 70);
                       return;
                     }
@@ -237,21 +239,21 @@ class vn extends bj implements mj {
                       break L2;
                     }
                   }
-                  ((e) (Object) stackIn_14_0).a(stackIn_14_1, stackIn_14_2, (String) (Object) stackIn_14_3);
+                  ((e) (Object) stackIn_14_0).a(stackIn_14_1, stackIn_14_2, stackIn_14_3);
                   break L1;
                 } else {
                   fb discarded$4 = var6.a((byte) -114, (rg) this, hl.field_f);
                   break L1;
                 }
               }
-              if (-4 != param0) {
-                if (-5 != param0) {
+              if (-4 != (param0 ^ -1)) {
+                if (-5 != (param0 ^ -1)) {
                   if (param0 != 6) {
-                    if (param0 == 9) {
-                      fb discarded$5 = var6.a((byte) -114, (rg) this, rn.field_c);
+                    if (param0 != 9) {
                       ((vn) this).c((mf) (Object) var6, 70);
                       return;
                     } else {
+                      fb discarded$5 = var6.a((byte) -114, (rg) this, rn.field_c);
                       ((vn) this).c((mf) (Object) var6, 70);
                       return;
                     }

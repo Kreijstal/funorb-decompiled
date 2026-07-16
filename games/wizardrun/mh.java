@@ -187,12 +187,12 @@ class mh extends gf implements qd {
             }
         }
         if (2 <= ii.field_f.field_k) {
-            if (!(param1 != -52)) {
+            if (!((param1 ^ -1) != -52)) {
                 return 2;
             }
         }
         if (2 <= ii.field_f.field_k) {
-            if (-51 == param1) {
+            if (-51 == (param1 ^ -1)) {
                 return 5;
             }
         }
@@ -335,18 +335,32 @@ class mh extends gf implements qd {
     }
 
     final void l(int param0) {
-        if (param0 != -27697) {
+        L0: {
+          if (param0 == -27697) {
+            break L0;
+          } else {
             field_sb = null;
+            break L0;
+          }
         }
-        if (!(((mh) this).field_H)) {
-            return;
-        }
-        ((mh) this).field_H = false;
-        if (!((mh) this).field_rb) {
-            // ifeq L67
-            me.a(param0 ^ -27704);
+        if (!((mh) this).field_H) {
+          return;
         } else {
-            uk.a(19702);
+          L1: {
+            ((mh) this).field_H = false;
+            if (((mh) this).field_rb) {
+              uk.a(19702);
+              break L1;
+            } else {
+              if (!((mh) this).field_nb) {
+                break L1;
+              } else {
+                me.a(param0 ^ -27704);
+                break L1;
+              }
+            }
+          }
+          return;
         }
     }
 

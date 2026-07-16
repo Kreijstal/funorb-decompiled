@@ -17,8 +17,9 @@ final class bc {
             if (hk.field_Hb <= 0) {
               break L0;
             } else {
+              int fieldTemp$6 = hk.field_Hb - 1;
               hk.field_Hb = hk.field_Hb - 1;
-              var2_ref_byte__ = k.field_b[hk.field_Hb - 1];
+              var2_ref_byte__ = k.field_b[fieldTemp$6];
               k.field_b[hk.field_Hb] = null;
               return var2_ref_byte__;
             }
@@ -29,8 +30,9 @@ final class bc {
             break L1;
           } else {
             if (-1 > (te.field_i ^ -1)) {
+              int fieldTemp$7 = te.field_i - 1;
               te.field_i = te.field_i - 1;
-              var2_ref_byte__ = sm.field_b[te.field_i - 1];
+              var2_ref_byte__ = sm.field_b[fieldTemp$7];
               sm.field_b[te.field_i] = null;
               return var2_ref_byte__;
             } else {
@@ -43,8 +45,9 @@ final class bc {
             break L2;
           } else {
             if (nm.field_b > 0) {
+              int fieldTemp$8 = nm.field_b - 1;
               nm.field_b = nm.field_b - 1;
-              var2_ref_byte__ = bj.field_k[nm.field_b - 1];
+              var2_ref_byte__ = bj.field_k[fieldTemp$8];
               bj.field_k[nm.field_b] = null;
               return var2_ref_byte__;
             } else {

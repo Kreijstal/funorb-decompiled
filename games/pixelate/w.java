@@ -23,25 +23,44 @@ final class w extends uc {
             Object var4 = null;
             this.a((w) null, true, true);
         }
-        ((w) this).field_r[param0] = new lf();
-        return new lf();
+        lf dupTemp$0 = new lf();
+        ((w) this).field_r[param0] = dupTemp$0;
+        return dupTemp$0;
     }
 
     final static void a(byte param0, eq param1) {
-        int var3 = Pixelate.field_H ? 1 : 0;
+        eq var2 = null;
+        int var3 = 0;
+        var3 = Pixelate.field_H ? 1 : 0;
         param1.c(2779);
-        if (param0 != -48) {
+        if (param0 == -48) {
+          var2 = (eq) (Object) nk.field_a.c(1504642273);
+          L0: while (true) {
+            L1: {
+              if (var2 == null) {
+                break L1;
+              } else {
+                if (!var2.a((byte) 110, param1)) {
+                  break L1;
+                } else {
+                  var2 = (eq) (Object) nk.field_a.f(1504642273);
+                  continue L0;
+                }
+              }
+            }
+            L2: {
+              if (var2 == null) {
+                nk.field_a.a(22125, (fa) (Object) param1);
+                break L2;
+              } else {
+                jj.a((byte) -4, (fa) (Object) var2, (fa) (Object) param1);
+                break L2;
+              }
+            }
             return;
-        }
-        eq var2 = (eq) (Object) nk.field_a.c(1504642273);
-        while (var2 != null) {
-            // ifeq L59
-            var2 = (eq) (Object) nk.field_a.f(1504642273);
-        }
-        if (var2 != null) {
-            jj.a((byte) -4, (fa) (Object) var2, (fa) (Object) param1);
+          }
         } else {
-            nk.field_a.a(22125, (fa) (Object) param1);
+          return;
         }
     }
 
@@ -58,8 +77,9 @@ final class w extends uc {
     public w() {
         ((w) this).field_r = new lf[6];
         ((w) this).field_x = new lf();
-        ((w) this).field_r[0] = new lf();
-        lf var1 = new lf();
+        lf dupTemp$0 = new lf();
+        ((w) this).field_r[0] = dupTemp$0;
+        lf var1 = dupTemp$0;
         var1.a(true);
     }
 
@@ -348,9 +368,10 @@ final class w extends uc {
                     stackIn_9_0 = stackOut_7_0;
                     stackIn_8_0 = stackOut_7_0;
                     if (var6 == null) {
-                      param0.field_r[var4] = new lf();
+                      lf dupTemp$49 = new lf();
+                      param0.field_r[var4] = dupTemp$49;
                       stackOut_9_0 = (lf) (Object) stackIn_9_0;
-                      stackOut_9_1 = new lf();
+                      stackOut_9_1 = (lf) dupTemp$49;
                       stackIn_10_0 = stackOut_9_0;
                       stackIn_10_1 = stackOut_9_1;
                       break L3;

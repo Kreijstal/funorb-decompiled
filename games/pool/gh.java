@@ -242,9 +242,9 @@ final class gh extends vc {
                 }
               }
             } else {
-              if (var6 == -4) {
+              if ((var6 ^ -1) == -4) {
                 var6 = ga.a(2, true, ea.field_r);
-                if (var6 != 0) {
+                if ((var6 ^ -1) != -1) {
                   if ((var6 ^ -1) == -2) {
                     kf discarded$14 = kp.a(100, hj.field_j, param3, param1);
                     break L0;
@@ -256,7 +256,7 @@ final class gh extends vc {
                   break L0;
                 }
               } else {
-                if (-8 == var6) {
+                if (-8 == (var6 ^ -1)) {
                   kf discarded$16 = kp.a(100, pq.field_L, param3, param1);
                   break L0;
                 } else {
@@ -264,11 +264,11 @@ final class gh extends vc {
                     kf discarded$17 = kp.a(100, li.field_l, param3, param1);
                     break L0;
                   } else {
-                    if (var6 == -7) {
+                    if ((var6 ^ -1) == -7) {
                       kf discarded$18 = kp.a(100, to.field_l, param3, param1);
                       break L0;
                     } else {
-                      if (-5 == var6) {
+                      if (-5 == (var6 ^ -1)) {
                         kf discarded$19 = kp.a(100, bh.field_a, param3, param1);
                         break L0;
                       } else {
@@ -977,43 +977,56 @@ final class gh extends vc {
         ((gh) this).field_O = new eg[13];
         var3 = 0;
         om.field_w = var3;
+        int incrementValue$14 = var3;
         var3++;
-        ((gh) this).field_O[var3] = eg.a(param0, "", "space_table/asteroid");
+        ((gh) this).field_O[incrementValue$14] = eg.a(param0, "", "space_table/asteroid");
         np.field_d = var3;
+        int incrementValue$15 = var3;
         var3++;
-        ((gh) this).field_O[var3] = eg.a(param0, "", "space_table/space_shuttle");
+        ((gh) this).field_O[incrementValue$15] = eg.a(param0, "", "space_table/space_shuttle");
         da.field_b = var3;
+        int incrementValue$16 = var3;
         var3++;
-        ((gh) this).field_O[var3] = eg.a(param0, "", "space_table/space_door_a");
+        ((gh) this).field_O[incrementValue$16] = eg.a(param0, "", "space_table/space_door_a");
         lg.field_x = var3;
+        int incrementValue$17 = var3;
         var3++;
-        ((gh) this).field_O[var3] = eg.a(param0, "", "space_table/space_door_b");
+        ((gh) this).field_O[incrementValue$17] = eg.a(param0, "", "space_table/space_door_b");
         ph.field_e = var3;
+        int incrementValue$18 = var3;
         var3++;
-        ((gh) this).field_O[var3] = eg.a(param0, "", "space_table/space_table_post");
+        ((gh) this).field_O[incrementValue$18] = eg.a(param0, "", "space_table/space_table_post");
         nr.field_eb = var3;
+        int incrementValue$19 = var3;
         var3++;
-        ((gh) this).field_O[var3] = eg.a(param0, "", "space_table/space_hole_a");
+        ((gh) this).field_O[incrementValue$19] = eg.a(param0, "", "space_table/space_hole_a");
         qe.field_J = var3;
         vp.field_f = var3;
+        int incrementValue$20 = var3;
         var3++;
-        ((gh) this).field_O[var3] = eg.a(param0, "", "space_table/space_hole_b");
+        ((gh) this).field_O[incrementValue$20] = eg.a(param0, "", "space_table/space_hole_b");
         vn.field_f = var3;
         up.field_l = var3;
+        int incrementValue$21 = var3;
         var3++;
-        ((gh) this).field_O[var3] = eg.a(param0, "", "space_table/space_corner");
+        ((gh) this).field_O[incrementValue$21] = eg.a(param0, "", "space_table/space_corner");
+        int incrementValue$22 = var3;
         var3++;
-        ((gh) this).field_O[var3] = eg.a(param0, "", "space_table/space_side_a");
+        ((gh) this).field_O[incrementValue$22] = eg.a(param0, "", "space_table/space_side_a");
+        int incrementValue$23 = var3;
         var3++;
-        ((gh) this).field_O[var3] = eg.a(param0, "", "space_table/space_side_b");
+        ((gh) this).field_O[incrementValue$23] = eg.a(param0, "", "space_table/space_side_b");
+        int incrementValue$24 = var3;
         var3++;
-        ((gh) this).field_O[var3] = eg.a(param0, "", "space_table/space_side_c");
+        ((gh) this).field_O[incrementValue$24] = eg.a(param0, "", "space_table/space_side_c");
         to.field_o = var3;
         rk.field_d = var3;
+        int incrementValue$25 = var3;
         var3++;
-        ((gh) this).field_O[var3] = eg.a(param0, "", "space_table/space_top_a");
+        ((gh) this).field_O[incrementValue$25] = eg.a(param0, "", "space_table/space_top_a");
+        int incrementValue$26 = var3;
         var3++;
-        ((gh) this).field_O[var3] = eg.a(param0, "", "space_table/space_top_b");
+        ((gh) this).field_O[incrementValue$26] = eg.a(param0, "", "space_table/space_top_b");
         pc.field_b = var3;
         ((gh) this).field_A = new jk();
         ((gh) this).field_A.a(eg.a(param0, "", "cues/space_cue"), (byte) -115);
@@ -1077,7 +1090,7 @@ final class gh extends vc {
                       }
                     }
                   } else {
-                    eg discarded$1 = cq.a(var11, 70, var13, ((gh) this).field_O[var4], var12);
+                    eg discarded$27 = cq.a(var11, 70, var13, ((gh) this).field_O[var4], var12);
                     var4++;
                     continue L2;
                   }
@@ -1166,10 +1179,14 @@ final class gh extends vc {
         int var8 = 0;
         int var11 = Pool.field_O;
         int var3 = 0;
-        wb.field_c = new so((vp.field_f - nr.field_eb) * 4 + 2 * (-qe.field_J + up.field_l));
-        ff.field_d = new so(4 * (-rk.field_d + pc.field_b));
-        tq.field_o = new so(4 * (-vn.field_f + to.field_o));
-        ij.field_o = hc.a(((gh) this).field_O[ph.field_e], ((gh) this).field_M[ph.field_e], (byte) 101);
+        so dupTemp$0 = new so((vp.field_f - nr.field_eb) * 4 + 2 * (-qe.field_J + up.field_l));
+        wb.field_c = dupTemp$0;
+        so dupTemp$1 = new so(4 * (-rk.field_d + pc.field_b));
+        ff.field_d = dupTemp$1;
+        so dupTemp$2 = new so(4 * (-vn.field_f + to.field_o));
+        tq.field_o = dupTemp$2;
+        so dupTemp$3 = hc.a(((gh) this).field_O[ph.field_e], ((gh) this).field_M[ph.field_e], (byte) 101);
+        ij.field_o = dupTemp$3;
         lq.field_R = new so(new so[4]);
         var3 = 0;
         for (var2 = nr.field_eb; var2 < vp.field_f; var2++) {
@@ -1297,13 +1314,13 @@ final class gh extends vc {
                 if (var1 == 0) {
                   break L3;
                 } else {
-                  if (n.field_W.field_h <= -1) {
+                  if ((n.field_W.field_h ^ -1) <= -1) {
                     L4: {
                       var3 = mb.field_c[n.field_W.field_h];
                       if (2 == var3) {
                         break L4;
                       } else {
-                        if (var3 != -6) {
+                        if ((var3 ^ -1) != -6) {
                           break L2;
                         } else {
                           break L4;
@@ -1320,7 +1337,7 @@ final class gh extends vc {
               if (var2 == 0) {
                 break L2;
               } else {
-                if (-3 != oa.field_h) {
+                if (-3 != (oa.field_h ^ -1)) {
                   gr.g(116);
                   break L2;
                 } else {
@@ -1348,7 +1365,7 @@ final class gh extends vc {
               }
             }
             L6: {
-              if (param0 != var3) {
+              if (param0 != (var3 ^ -1)) {
                 break L6;
               } else {
                 if ((oa.field_h ^ -1) != -3) {

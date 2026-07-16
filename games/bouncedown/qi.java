@@ -55,9 +55,10 @@ final class qi extends jd {
                     stackIn_8_0 = stackOut_6_0;
                     stackIn_7_0 = stackOut_6_0;
                     if (var6 == null) {
-                      param2.field_q[var4] = new kg();
+                      kg dupTemp$37 = new kg();
+                      param2.field_q[var4] = dupTemp$37;
                       stackOut_8_0 = (kg) (Object) stackIn_8_0;
-                      stackOut_8_1 = new kg();
+                      stackOut_8_1 = (kg) dupTemp$37;
                       stackIn_9_0 = stackOut_8_0;
                       stackIn_9_1 = stackOut_8_1;
                       break L3;
@@ -90,8 +91,9 @@ final class qi extends jd {
     public qi() {
         ((qi) this).field_q = new kg[6];
         ((qi) this).field_t = new kg();
-        ((qi) this).field_q[0] = new kg();
-        kg var1 = new kg();
+        kg dupTemp$0 = new kg();
+        ((qi) this).field_q[0] = dupTemp$0;
+        kg var1 = dupTemp$0;
         var1.a(-29776);
     }
 
@@ -226,8 +228,9 @@ final class qi extends jd {
             Object var4 = null;
             boolean discarded$0 = qi.a((gk) null, (gk) null, (byte) -12, (gk) null);
         }
-        ((qi) this).field_q[param1] = new kg();
-        return new kg();
+        kg dupTemp$1 = new kg();
+        ((qi) this).field_q[param1] = dupTemp$1;
+        return dupTemp$1;
     }
 
     final static void a(java.awt.Canvas param0, int param1, int param2, int param3) {
@@ -564,8 +567,9 @@ final class qi extends jd {
                                         break L19;
                                       } else {
                                         L20: {
-                                          var9[var12] = var16.k(99);
-                                          var13 = var16.k(99);
+                                          byte dupTemp$2 = var16.k(99);
+                                          var9[var12] = dupTemp$2;
+                                          var13 = dupTemp$2;
                                           stackOut_35_0 = var10;
                                           stackIn_37_0 = stackOut_35_0;
                                           stackIn_36_0 = stackOut_35_0;
@@ -649,8 +653,9 @@ final class qi extends jd {
                                         break L27;
                                       } else {
                                         L28: {
-                                          var9[var12 - -(var13 * var5)] = var16.k(-81);
-                                          var14 = var16.k(-81);
+                                          byte dupTemp$3 = var16.k(-81);
+                                          var9[var12 - -(var13 * var5)] = dupTemp$3;
+                                          var14 = dupTemp$3;
                                           stackOut_52_0 = var10;
                                           stackIn_54_0 = stackOut_52_0;
                                           stackIn_53_0 = stackOut_52_0;

@@ -15,7 +15,7 @@ final class ui extends g implements qh {
     private int field_D;
 
     final void a(int param0, int param1, int param2, int param3) {
-        this.a(param0, param1, param2, param3);
+        super.a(param0, param1, param2, param3);
         int discarded$0 = ((ui) this).field_J.a(((ui) this).field_L, ((ui) this).field_o + param0 + 14, 10 + param1 + ((ui) this).field_i, ((ui) this).field_h - 28, ((ui) this).field_q, 16777215, -1, 0, 0, ((ui) this).field_J.field_s);
     }
 
@@ -33,7 +33,7 @@ final class ui extends g implements qh {
     }
 
     public static void l(int param0) {
-        field_H = (byte[][][]) null;
+        field_H = null;
         if (param0 != -22742) {
             ui.l(108);
         }
@@ -48,135 +48,82 @@ final class ui extends g implements qh {
             IOException var2 = null;
             int var3 = 0;
             Throwable decompiledCaughtException = null;
-            int statePc = 0;
-            Throwable caughtException = null;
-            stateLoop: while (true) {
-                switch (statePc) {
-                    case 0: {
-                        var3 = Main.field_T;
-                        if (dg.field_H != null) {
-                            statePc = 2;
-                        } else {
-                            statePc = 3;
-                        }
-                        continue stateLoop;
-                    }
-                    case 2: {
-                        dg.field_H.a(82);
-                        statePc = 3;
-                        continue stateLoop;
-                    }
-                    case 3: {
-                        if (param0 < -49) {
-                            statePc = 5;
-                        } else {
-                            statePc = 4;
-                        }
-                        continue stateLoop;
-                    }
-                    case 4: {
-                        ui.l(-66);
-                        statePc = 5;
-                        continue stateLoop;
-                    }
-                    case 5: {
-                        if (null != sc.field_b) {
-                            statePc = 7;
-                        } else {
-                            statePc = 8;
-                        }
-                        continue stateLoop;
-                    }
-                    case 7: {
-                        sc.field_b.b(124);
-                        statePc = 8;
-                        continue stateLoop;
-                    }
-                    case 8: {
-                        if (ni.field_c != null) {
-                            statePc = 10;
-                        } else {
-                            statePc = 13;
-                        }
-                        continue stateLoop;
-                    }
-                    case 10: {
-                        try {
-                            ni.field_c.a((byte) -120);
-                            statePc = 13;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_10) {
-                            caughtException = stateCaught_10;
-                            statePc = 12;
-                            continue stateLoop;
-                        }
-                    }
-                    case 12: {
-                        iOException = (IOException) (Object) caughtException;
-                        statePc = 13;
-                        continue stateLoop;
-                    }
-                    case 13: {
-                        if (null == rk.field_Z) {
-                            statePc = 21;
-                        } else {
-                            statePc = 14;
-                        }
-                        continue stateLoop;
-                    }
-                    case 14: {
-                        var1 = 0;
-                        statePc = 15;
-                        continue stateLoop;
-                    }
-                    case 15: {
-                        if (var1 >= rk.field_Z.length) {
-                            statePc = 21;
-                        } else {
-                            statePc = 16;
-                        }
-                        continue stateLoop;
-                    }
-                    case 16: {
-                        if (rk.field_Z[var1] != null) {
-                            statePc = 18;
-                        } else {
-                            statePc = 17;
-                        }
-                        continue stateLoop;
-                    }
-                    case 17: {
-                        var1++;
-                        statePc = 15;
-                        continue stateLoop;
-                    }
-                    case 18: {
-                        try {
-                            rk.field_Z[var1].a((byte) -86);
-                            statePc = 19;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_18) {
-                            caughtException = stateCaught_18;
-                            statePc = 20;
-                            continue stateLoop;
-                        }
-                    }
-                    case 19: {
-                        var1++;
-                        statePc = 15;
-                        continue stateLoop;
-                    }
-                    case 20: {
-                        var2 = (IOException) (Object) caughtException;
-                        var1++;
-                        statePc = 15;
-                        continue stateLoop;
-                    }
-                    case 21: {
-                        return;
-                    }
-                    default: throw new IllegalStateException("invalid CFG state " + statePc);
+            L0: {
+              var3 = Main.field_T;
+              if (dg.field_H != null) {
+                dg.field_H.a(82);
+                break L0;
+              } else {
+                break L0;
+              }
+            }
+            L1: {
+              if (param0 < -49) {
+                break L1;
+              } else {
+                ui.l(-66);
+                break L1;
+              }
+            }
+            L2: {
+              if (null != sc.field_b) {
+                sc.field_b.b(124);
+                break L2;
+              } else {
+                break L2;
+              }
+            }
+            L3: {
+              if (ni.field_c != null) {
+                try {
+                  L4: {
+                    ni.field_c.a((byte) -120);
+                    break L4;
+                  }
+                } catch (java.io.IOException decompiledCaughtParameter0) {
+                  decompiledCaughtException = decompiledCaughtParameter0;
+                  L5: {
+                    iOException = (IOException) (Object) decompiledCaughtException;
+                    break L5;
+                  }
                 }
+                break L3;
+              } else {
+                break L3;
+              }
+            }
+            L6: {
+              if (null == rk.field_Z) {
+                break L6;
+              } else {
+                var1 = 0;
+                L7: while (true) {
+                  if (var1 >= rk.field_Z.length) {
+                    break L6;
+                  } else {
+                    if (rk.field_Z[var1] != null) {
+                      try {
+                        L8: {
+                          rk.field_Z[var1].a((byte) -86);
+                          var1++;
+                          break L8;
+                        }
+                      } catch (java.io.IOException decompiledCaughtParameter1) {
+                        decompiledCaughtException = decompiledCaughtParameter1;
+                        L9: {
+                          var2 = (IOException) (Object) decompiledCaughtException;
+                          var1++;
+                          break L9;
+                        }
+                      }
+                      continue L7;
+                    } else {
+                      var1++;
+                      continue L7;
+                    }
+                  }
+                }
+              }
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -211,14 +158,14 @@ final class ui extends g implements qh {
             var7[var5] = ((ui) this).field_I[var5];
             var4[var5] = ((ui) this).field_G[var5];
         }
-        ((ui) this).field_I = (hl[]) var3;
+        ((ui) this).field_I = var3;
         ((ui) this).field_D = param0;
         ((ui) this).field_G = var4;
     }
 
     final void a(String param0, int param1, int param2) {
         if (param2 != -14) {
-            String var5 = (String) null;
+            Object var5 = null;
             hl discarded$0 = ((ui) this).a((pl) null, true, (String) null);
         }
         int var4 = ((ui) this).field_D;

@@ -29,6 +29,7 @@ final class vg extends rg implements qd {
           var14.field_w = (bf) (Object) new ll(e.field_b, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true);
           ((vg) this).a(var14, (byte) 117);
           ((vg) this).field_V = this.a(23813, (ce) this, wizardrun.field_F);
+          return;
         } else {
           if (param1 != cf.field_f) {
             if (qa.field_r == param1) {
@@ -42,6 +43,7 @@ final class vg extends rg implements qd {
               var12.field_w = (bf) (Object) new ll(e.field_b, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true);
               ((vg) this).a(var12, (byte) 117);
               ((vg) this).field_V = this.a(23813, (ce) this, wizardrun.field_F);
+              return;
             } else {
               var10 = new ub((String) var9, (ce) null);
               var10.field_l = 50;
@@ -51,6 +53,7 @@ final class vg extends rg implements qd {
               var10.field_w = (bf) (Object) new ll(e.field_b, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true);
               ((vg) this).a(var10, (byte) 117);
               ((vg) this).field_V = this.a(23813, (ce) this, wizardrun.field_F);
+              return;
             }
           } else {
             ((vg) this).field_n = ((vg) this).field_n + 10;
@@ -66,6 +69,7 @@ final class vg extends rg implements qd {
               var8.field_w = (bf) (Object) new ll(e.field_b, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true);
               ((vg) this).a(var8, (byte) 117);
               ((vg) this).field_V = this.a(23813, (ce) this, wizardrun.field_F);
+              return;
             } else {
               var6 = new ub(var5, (ce) null);
               var6.field_l = 50;
@@ -75,6 +79,7 @@ final class vg extends rg implements qd {
               var6.field_w = (bf) (Object) new ll(e.field_b, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true);
               ((vg) this).a(var6, (byte) 117);
               ((vg) this).field_V = this.a(23813, (ce) this, wizardrun.field_F);
+              return;
             }
           }
         }

@@ -117,16 +117,31 @@ class ma extends mf implements ra {
     }
 
     final void a(int param0, mf param1, int param2, int param3, int param4, int param5) {
-        int var9 = Chess.field_G;
-        qj var7 = new qj(((ma) this).field_I);
-        if (param4 != 0) {
+        qj var7 = null;
+        mf var8 = null;
+        int var9 = 0;
+        var9 = Chess.field_G;
+        var7 = new qj(((ma) this).field_I);
+        if (param4 == 0) {
+          var8 = (mf) (Object) var7.c(-20229);
+          L0: while (true) {
+            L1: {
+              if (var8 == null) {
+                break L1;
+              } else {
+                if (!var8.b(20478)) {
+                  break L1;
+                } else {
+                  var8.a(param0, param1, ((ma) this).field_u + param2, param3, 0, ((ma) this).field_r + param5);
+                  var8 = (mf) (Object) var7.b(param4 + 8922);
+                  continue L0;
+                }
+              }
+            }
             return;
-        }
-        mf var8 = (mf) (Object) var7.c(-20229);
-        while (var8 != null) {
-            // ifeq L95
-            var8.a(param0, param1, ((ma) this).field_u + param2, param3, 0, ((ma) this).field_r + param5);
-            var8 = (mf) (Object) var7.b(param4 + 8922);
+          }
+        } else {
+          return;
         }
     }
 
@@ -142,17 +157,32 @@ class ma extends mf implements ra {
     }
 
     void a(int param0, int param1, mf param2, int param3) {
-        int var7 = Chess.field_G;
+        qj var5 = null;
+        mf var6 = null;
+        int var7 = 0;
+        var7 = Chess.field_G;
         super.a(param0, -89, param2, param3);
-        qj var5 = new qj(((ma) this).field_I);
-        mf var6 = (mf) (Object) var5.c(-20229);
-        if (param1 >= -6) {
+        var5 = new qj(((ma) this).field_I);
+        var6 = (mf) (Object) var5.c(-20229);
+        if (param1 < -6) {
+          L0: while (true) {
+            L1: {
+              if (var6 == null) {
+                break L1;
+              } else {
+                if (!var6.b(20478)) {
+                  break L1;
+                } else {
+                  var6.a(((ma) this).field_u + param0, -54, param2, param3 + ((ma) this).field_r);
+                  var6 = (mf) (Object) var5.b(8922);
+                  continue L0;
+                }
+              }
+            }
             return;
-        }
-        while (var6 != null) {
-            // ifeq L101
-            var6.a(((ma) this).field_u + param0, -54, param2, param3 + ((ma) this).field_r);
-            var6 = (mf) (Object) var5.b(8922);
+          }
+        } else {
+          return;
         }
     }
 
@@ -286,23 +316,43 @@ class ma extends mf implements ra {
     }
 
     final boolean a(int param0, int param1, int param2, mf param3, int param4, int param5, int param6) {
-        int var10 = Chess.field_G;
-        qj var8 = new qj(((ma) this).field_I);
-        mf var9 = (mf) (Object) var8.c(-20229);
-        while (var9 != null) {
-            // ifeq L95
-            if (var9.d((byte) -67)) {
-                if (var9.a(73, param1, param2, param3, param4, param5, param6)) {
-                    return true;
+        qj var8 = null;
+        mf var9 = null;
+        int var10 = 0;
+        var10 = Chess.field_G;
+        var8 = new qj(((ma) this).field_I);
+        var9 = (mf) (Object) var8.c(-20229);
+        L0: while (true) {
+          L1: {
+            if (var9 == null) {
+              break L1;
+            } else {
+              if (!var9.b(20478)) {
+                break L1;
+              } else {
+                L2: {
+                  if (!var9.d((byte) -67)) {
+                    break L2;
+                  } else {
+                    if (!var9.a(73, param1, param2, param3, param4, param5, param6)) {
+                      break L2;
+                    } else {
+                      return true;
+                    }
+                  }
                 }
+                var9 = (mf) (Object) var8.b(8922);
+                continue L0;
+              }
             }
-            var9 = (mf) (Object) var8.b(8922);
-        }
-        if (param0 <= 59) {
+          }
+          if (param0 > 59) {
+            return false;
+          } else {
             field_D = false;
             return false;
+          }
         }
-        return false;
     }
 
     public static void f(byte param0) {
@@ -351,44 +401,95 @@ class ma extends mf implements ra {
     }
 
     final boolean a(int param0, int param1, int param2, byte param3, mf param4, int param5, int param6) {
-        int var10 = Chess.field_G;
-        qj var8 = new qj(((ma) this).field_I);
-        mf var9 = (mf) (Object) var8.c(-20229);
-        while (var9 != null) {
-            // ifeq L98
-            if (!(!var9.a(param0, param1, param2, (byte) 88, param4, param5 - -((ma) this).field_r, ((ma) this).field_u + param6))) {
-                return true;
+        qj var8 = null;
+        mf var9 = null;
+        int var10 = 0;
+        var10 = Chess.field_G;
+        var8 = new qj(((ma) this).field_I);
+        var9 = (mf) (Object) var8.c(-20229);
+        L0: while (true) {
+          L1: {
+            if (var9 == null) {
+              break L1;
+            } else {
+              if (!var9.b(20478)) {
+                break L1;
+              } else {
+                if (var9.a(param0, param1, param2, (byte) 88, param4, param5 - -((ma) this).field_r, ((ma) this).field_u + param6)) {
+                  return true;
+                } else {
+                  var9 = (mf) (Object) var8.b(8922);
+                  continue L0;
+                }
+              }
             }
-            var9 = (mf) (Object) var8.b(8922);
-        }
-        if (param3 != 88) {
+          }
+          if (param3 == 88) {
+            return false;
+          } else {
             field_F = null;
             return false;
+          }
         }
-        return false;
     }
 
     boolean a(char param0, int param1, int param2, mf param3) {
-        int var7 = Chess.field_G;
-        qj var5 = new qj(((ma) this).field_I);
-        mf var8 = (mf) (Object) var5.c(-20229);
-        while (var8 != null) {
-            // ifeq L93
-            if (var8.d((byte) -67)) {
-                if (!(!var8.a(param0, param1, -1, param3))) {
-                    return true;
+        qj var5 = null;
+        int var6 = 0;
+        int var7 = 0;
+        mf var8 = null;
+        boolean stackIn_14_0 = false;
+        boolean stackOut_13_0 = false;
+        boolean stackOut_12_0 = false;
+        var7 = Chess.field_G;
+        var5 = new qj(((ma) this).field_I);
+        var8 = (mf) (Object) var5.c(-20229);
+        L0: while (true) {
+          L1: {
+            if (var8 == null) {
+              break L1;
+            } else {
+              if (!var8.b(param2 + 20479)) {
+                break L1;
+              } else {
+                L2: {
+                  if (!var8.d((byte) -67)) {
+                    break L2;
+                  } else {
+                    if (var8.a(param0, param1, -1, param3)) {
+                      return true;
+                    } else {
+                      break L2;
+                    }
+                  }
                 }
+                var8 = (mf) (Object) var5.b(8922);
+                continue L0;
+              }
             }
-            var8 = (mf) (Object) var5.b(8922);
-        }
-        if (param2 != -1) {
+          }
+          if (param2 == -1) {
+            var6 = param1;
+            if (80 != var6) {
+              return false;
+            } else {
+              L3: {
+                if (!ok.field_Jb[81]) {
+                  stackOut_13_0 = ((ma) this).a(param3, (byte) -73);
+                  stackIn_14_0 = stackOut_13_0;
+                  break L3;
+                } else {
+                  stackOut_12_0 = ((ma) this).a(param3, 27964);
+                  stackIn_14_0 = stackOut_12_0;
+                  break L3;
+                }
+              }
+              return stackIn_14_0;
+            }
+          } else {
             return true;
+          }
         }
-        int var6 = param1;
-        if (80 == var6) {
-            return ok.field_Jb[81] ? ((ma) this).a(param3, 27964) : ((ma) this).a(param3, (byte) -73);
-        }
-        return false;
     }
 
     static {

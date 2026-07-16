@@ -82,8 +82,9 @@ final class de {
                             break L3;
                           }
                         }
+                        int incrementValue$1 = var8;
                         var8++;
-                        fj.field_b[var8] = var12;
+                        fj.field_b[incrementValue$1] = var12;
                         var11++;
                         continue L1;
                       }

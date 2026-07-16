@@ -236,9 +236,11 @@ final class eq {
               continue L0;
             } else {
               ((eq) this).field_e = new ht(var3);
+              return;
             }
           } else {
             ((eq) this).field_e = new ht(var3);
+            return;
           }
         }
     }

@@ -187,8 +187,9 @@ final class cm extends pi {
               return;
             } else {
               var1.d((byte) -51, 8);
+              int fieldTemp$2 = var1.field_o + 1;
               var1.field_o = var1.field_o + 1;
-              var2 = var1.field_o + 1;
+              var2 = fieldTemp$2;
               pj.a((byte) 119, var1);
               sn.field_c.g(-1, var1.field_o + -var2);
               continue L0;

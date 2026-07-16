@@ -99,8 +99,9 @@ final class k {
         field_c = new byte[32896];
         for (var1 = 0; (var1 ^ -1) > -257; var1++) {
             for (var2 = 0; var2 <= var1; var2++) {
+                int incrementValue$0 = var0;
                 var0++;
-                field_c[var0] = (byte)(int)(255.0 / Math.sqrt((double)((float)(var2 * var2 + var1 * var1 + 65535) / 65535.0f)));
+                field_c[incrementValue$0] = (byte)(int)(255.0 / Math.sqrt((double)((float)(var2 * var2 + var1 * var1 + 65535) / 65535.0f)));
             }
         }
         field_f = "If you do nothing the game will revert to normal view in <%0> seconds.";

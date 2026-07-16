@@ -68,11 +68,9 @@ final class fl extends k {
     final synchronized boolean a(kl param0, int param1, ue param2, ji param3, int param4) {
         int var6 = 0;
         Object var7 = null;
-        int[] var7_array = null;
         pb var8 = null;
         int var9 = 0;
         h var10 = null;
-        h var10_ref = null;
         int var11 = 0;
         L0: {
           var11 = wizardrun.field_H;
@@ -80,7 +78,7 @@ final class fl extends k {
           var6 = 1;
           var7 = null;
           if (param1 > (param4 ^ -1)) {
-            var7_array = new int[]{param4};
+            var7 = (Object) (Object) new int[]{param4};
             break L0;
           } else {
             break L0;
@@ -106,17 +104,17 @@ final class fl extends k {
                 if (var10 != null) {
                   break L4;
                 } else {
-                  var10_ref = ld.a(param1 + 82, var9, param0);
-                  if (var10_ref == null) {
+                  var10 = ld.a(param1 + 82, var9, param0);
+                  if (var10 == null) {
                     var6 = 0;
                     break L3;
                   } else {
-                    ((fl) this).field_G.a((wl) (Object) var10_ref, -9, (long)var9);
+                    ((fl) this).field_G.a((wl) (Object) var10, -9, (long)var9);
                     break L4;
                   }
                 }
               }
-              if (!var10_ref.a(var8.field_j, param2, -75, var7_array)) {
+              if (!var10.a(var8.field_j, param2, -75, (int[]) var7)) {
                 var6 = 0;
                 break L3;
               } else {
@@ -955,21 +953,45 @@ final class fl extends k {
     }
 
     private final void g(int param0, int param1) {
-        int var4 = wizardrun.field_H;
-        vk var3 = (vk) (Object) ((fl) this).field_A.field_p.b((byte) 110);
-        while (var3 != null) {
-            if (-1 >= (param0 ^ -1)) {
-                // if_icmpeq L50
-            } else {
-                if ((var3.field_j ^ -1) > -1) {
-                    ((fl) this).field_S[var3.field_F][var3.field_k] = null;
-                    var3.field_j = 0;
+        vk var3 = null;
+        int var4 = 0;
+        var4 = wizardrun.field_H;
+        var3 = (vk) (Object) ((fl) this).field_A.field_p.b((byte) 110);
+        L0: while (true) {
+          if (var3 == null) {
+            L1: {
+              if (param1 == -1) {
+                break L1;
+              } else {
+                ((fl) this).field_y = null;
+                break L1;
+              }
+            }
+            return;
+          } else {
+            L2: {
+              L3: {
+                if (-1 < (param0 ^ -1)) {
+                  break L3;
+                } else {
+                  if ((param0 ^ -1) == (var3.field_F ^ -1)) {
+                    break L3;
+                  } else {
+                    break L2;
+                  }
                 }
+              }
+              if ((var3.field_j ^ -1) <= -1) {
+                break L2;
+              } else {
+                ((fl) this).field_S[var3.field_F][var3.field_k] = null;
+                var3.field_j = 0;
+                break L2;
+              }
             }
             var3 = (vk) (Object) ((fl) this).field_A.field_p.d(param1 ^ -8193);
-        }
-        if (param1 != -1) {
-            ((fl) this).field_y = null;
+            continue L0;
+          }
         }
     }
 
@@ -1531,28 +1553,61 @@ final class fl extends k {
     }
 
     private final void d(int param0, int param1) {
-        int var4 = wizardrun.field_H;
-        if (param0 != 0) {
-            return;
-        }
-        vk var3 = (vk) (Object) ((fl) this).field_A.field_p.b((byte) 92);
-        while (var3 != null) {
-            if ((param1 ^ -1) <= -1) {
-                // if_icmpeq L55
+        vk var3 = null;
+        int var4 = 0;
+        var4 = wizardrun.field_H;
+        if (param0 == 0) {
+          var3 = (vk) (Object) ((fl) this).field_A.field_p.b((byte) 92);
+          L0: while (true) {
+            if (var3 == null) {
+              return;
             } else {
-                if (!(var3.field_w == null)) {
-                    var3.field_w.f(c.field_l / 100);
-                    if (!(!var3.field_w.i())) {
+              L1: {
+                L2: {
+                  if ((param1 ^ -1) > -1) {
+                    break L2;
+                  } else {
+                    if ((var3.field_F ^ -1) == (param1 ^ -1)) {
+                      break L2;
+                    } else {
+                      break L1;
+                    }
+                  }
+                }
+                L3: {
+                  if (var3.field_w != null) {
+                    L4: {
+                      var3.field_w.f(c.field_l / 100);
+                      if (var3.field_w.i()) {
                         ((fl) this).field_A.field_o.a((k) (Object) var3.field_w);
+                        break L4;
+                      } else {
+                        break L4;
+                      }
                     }
                     var3.a(0);
+                    break L3;
+                  } else {
+                    break L3;
+                  }
                 }
-                if (var3.field_j < 0) {
+                L5: {
+                  if (var3.field_j >= 0) {
+                    break L5;
+                  } else {
                     ((fl) this).field_S[var3.field_F][var3.field_k] = null;
+                    break L5;
+                  }
                 }
                 var3.a(false);
+                break L1;
+              }
+              var3 = (vk) (Object) ((fl) this).field_A.field_p.d(8192);
+              continue L0;
             }
-            var3 = (vk) (Object) ((fl) this).field_A.field_p.d(8192);
+          }
+        } else {
+          return;
         }
     }
 

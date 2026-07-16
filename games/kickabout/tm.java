@@ -255,6 +255,7 @@ abstract class tm extends am {
               }
             }
             ((tm) this).field_s = var8.toString();
+            return;
           } else {
             StringBuilder discarded$244 = var7.append(dr.a(-120, ((tm) this).field_p[var5]));
             if (((tm) this).field_p.length + -1 <= var5) {

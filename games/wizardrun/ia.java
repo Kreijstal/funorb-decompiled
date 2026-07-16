@@ -45,14 +45,16 @@ final class ia extends md {
             var2 = param0;
             L1: while (true) {
               if (var2 >= ca.field_e) {
-                hj.field_b[param1.a((byte) 102)] = hj.field_b[param1.a((byte) 102)] + 1;
+                int dupTemp$4 = param1.a((byte) 102);
+                hj.field_b[dupTemp$4] = hj.field_b[dupTemp$4] + 1;
                 var2 = 0;
                 var3 = 0;
                 L2: while (true) {
                   if (ca.field_e <= var3) {
                     ca.field_e = var2;
+                    int fieldTemp$5 = ca.field_e;
                     ca.field_e = ca.field_e + 1;
-                    mi.field_B[ca.field_e] = param1;
+                    mi.field_B[fieldTemp$5] = param1;
                     return;
                   } else {
                     L3: {
@@ -69,15 +71,17 @@ final class ia extends md {
                         }
                       }
                     }
+                    int incrementValue$6 = var2;
                     var2++;
-                    mi.field_B[var2] = mi.field_B[var3];
+                    mi.field_B[incrementValue$6] = mi.field_B[var3];
                     var3++;
                     continue L2;
                   }
                 }
               } else {
                 if (param1.field_i == mi.field_B[var2].field_i) {
-                  hj.field_b[mi.field_B[var2].a((byte) 102)] = hj.field_b[mi.field_B[var2].a((byte) 102)] + 1;
+                  int dupTemp$7 = mi.field_B[var2].a((byte) 102);
+                  hj.field_b[dupTemp$7] = hj.field_b[dupTemp$7] + 1;
                   var2++;
                   continue L1;
                 } else {
@@ -119,26 +123,48 @@ final class ia extends md {
 
     final int a(long param0, boolean param1) {
         int var4 = 0;
-        int var5 = wizardrun.field_H;
-        if (!param1) {
+        int var5 = 0;
+        L0: {
+          var5 = wizardrun.field_H;
+          if (param1) {
+            break L0;
+          } else {
             ((ia) this).field_l = -1;
+            break L0;
+          }
         }
-        if ((((ia) this).field_h ^ -1L) >= (((ia) this).field_m ^ -1L)) {
-            var4 = 0;
-            do {
-                ((ia) this).field_h = ((ia) this).field_h + param0;
-                var4++;
-                // if_icmpge L81
-            } while ((((ia) this).field_h ^ -1L) > (((ia) this).field_m ^ -1L));
-            if (((ia) this).field_h < ((ia) this).field_m) {
+        if ((((ia) this).field_h ^ -1L) < (((ia) this).field_m ^ -1L)) {
+          ((ia) this).field_g = ((ia) this).field_g + (((ia) this).field_h + -((ia) this).field_m);
+          ((ia) this).field_m = ((ia) this).field_m + (-((ia) this).field_m + ((ia) this).field_h);
+          ((ia) this).field_h = ((ia) this).field_h + param0;
+          return 1;
+        } else {
+          var4 = 0;
+          L1: while (true) {
+            L2: {
+              ((ia) this).field_h = ((ia) this).field_h + param0;
+              var4++;
+              if (var4 >= 10) {
+                break L2;
+              } else {
+                if ((((ia) this).field_h ^ -1L) > (((ia) this).field_m ^ -1L)) {
+                  continue L1;
+                } else {
+                  break L2;
+                }
+              }
+            }
+            L3: {
+              if (((ia) this).field_h >= ((ia) this).field_m) {
+                break L3;
+              } else {
                 ((ia) this).field_h = ((ia) this).field_m;
+                break L3;
+              }
             }
             return var4;
+          }
         }
-        ((ia) this).field_g = ((ia) this).field_g + (((ia) this).field_h + -((ia) this).field_m);
-        ((ia) this).field_m = ((ia) this).field_m + (-((ia) this).field_m + ((ia) this).field_h);
-        ((ia) this).field_h = ((ia) this).field_h + param0;
-        return 1;
     }
 
     private final long a(boolean param0) {

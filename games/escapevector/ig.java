@@ -318,28 +318,31 @@ final class ig {
         int var3 = je.a(false, ((ig) this).field_a);
         ((ig) this).field_p = var3;
         if (!(var2 != 0)) {
+            int fieldTemp$0 = ((ig) this).field_p;
             ((ig) this).field_p = ((ig) this).field_p + 1;
-            ((ig) this).field_s = ((ig) this).field_p;
+            ((ig) this).field_s = fieldTemp$0;
         }
         if (var2 == 0) {
+            int fieldTemp$1 = ((ig) this).field_p;
             ((ig) this).field_p = ((ig) this).field_p + 1;
-            ((ig) this).field_f = ((ig) this).field_p;
+            ((ig) this).field_f = fieldTemp$1;
         }
         if (!(!aj.b(-118))) {
+            int fieldTemp$2 = ((ig) this).field_p;
             ((ig) this).field_p = ((ig) this).field_p + 1;
-            ((ig) this).field_n = ((ig) this).field_p;
+            ((ig) this).field_n = fieldTemp$2;
         }
         if (param0 != -30234) {
             Object var4 = null;
             this.a((dk[]) null, 116);
         }
+        int fieldTemp$3 = ((ig) this).field_p;
         ((ig) this).field_p = ((ig) this).field_p + 1;
-        ((ig) this).field_e = ((ig) this).field_p;
+        ((ig) this).field_e = fieldTemp$3;
     }
 
     private final void a(byte param0) {
         int var18 = 0;
-        dk var19_ref = null;
         int var20 = 0;
         int var21 = 0;
         int var22 = EscapeVector.field_A;
@@ -364,13 +367,13 @@ final class ig {
         int var16 = di.field_d.field_h;
         dk[] var17 = ((ig) this).field_j;
         for (var18 = 0; var17.length > var18; var18++) {
-            var19_ref = var17[var18];
-            var20 = var19_ref.field_c;
+            var19 = var17[var18];
+            var20 = var19.field_c;
             if (var20 < 0) {
                 var20 = ((ig) this).field_s;
             }
             var21 = var16 == var20 ? 1 : 0;
-            var19_ref.a(-16383, var21 != 0);
+            var19.a(-16383, var21 != 0);
         }
     }
 
@@ -455,164 +458,61 @@ final class ig {
         int var9 = 0;
         Throwable var10 = null;
         int var11 = 0;
-        int statePc = 0;
-        Throwable caughtException = null;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    var11 = EscapeVector.field_A;
-                    if (param0 == 6620) {
-                        statePc = 2;
-                    } else {
-                        statePc = 1;
-                    }
-                    continue stateLoop;
-                }
-                case 1: {
-                    ig.h(-11);
-                    statePc = 2;
-                    continue stateLoop;
-                }
-                case 2: {
-                    if (di.field_d.field_e) {
-                        statePc = 4;
-                    } else {
-                        statePc = 16;
-                    }
-                    continue stateLoop;
-                }
-                case 4: {
-                    var2 = (Object) (Object) rk.field_e;
-                    // monitorenter rk.field_e
-                    statePc = 5;
-                    continue stateLoop;
-                }
-                case 5: {
-                    try {
-                        var3 = 1536 * qm.field_c / 64;
-                        var4 = 100;
-                        var5 = di.field_d.field_h;
-                        this.a(((ig) this).field_j, var3, var4, 3);
-                        this.a(((ig) this).field_q, var3, var4, 3);
-                        var4 = 102;
-                        if (((ig) this).field_d == null) {
-                            statePc = 12;
-                        } else {
-                            statePc = 6;
+        Throwable decompiledCaughtException = null;
+        L0: {
+          var11 = EscapeVector.field_A;
+          if (param0 == 6620) {
+            break L0;
+          } else {
+            ig.h(-11);
+            break L0;
+          }
+        }
+        L1: {
+          if (di.field_d.field_e) {
+            var2 = (Object) (Object) rk.field_e;
+            synchronized (var2) {
+              L2: {
+                L3: {
+                  var3 = 1536 * qm.field_c / 64;
+                  var4 = 100;
+                  var5 = di.field_d.field_h;
+                  this.a(((ig) this).field_j, var3, var4, 3);
+                  this.a(((ig) this).field_q, var3, var4, 3);
+                  var4 = 102;
+                  if (((ig) this).field_d == null) {
+                    break L3;
+                  } else {
+                    var6 = ((ig) this).field_d;
+                    var7 = 0;
+                    L4: while (true) {
+                      if (var6.length <= var7) {
+                        break L3;
+                      } else {
+                        L5: {
+                          var8 = var6[var7];
+                          if (var8.field_d == var5) {
+                            var9 = var8.field_f.field_h * 16384 / 640;
+                            rk.field_e.a(oa.field_w, var4, var3, var9);
+                            break L5;
+                          } else {
+                            break L5;
+                          }
                         }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_5) {
-                        caughtException = stateCaught_5;
-                        statePc = 14;
-                        continue stateLoop;
-                    }
-                }
-                case 6: {
-                    try {
-                        var6 = ((ig) this).field_d;
-                        var7 = 0;
-                        statePc = 7;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_6) {
-                        caughtException = stateCaught_6;
-                        statePc = 14;
-                        continue stateLoop;
-                    }
-                }
-                case 7: {
-                    try {
-                        if (var6.length <= var7) {
-                            statePc = 12;
-                        } else {
-                            statePc = 8;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_7) {
-                        caughtException = stateCaught_7;
-                        statePc = 14;
-                        continue stateLoop;
-                    }
-                }
-                case 8: {
-                    try {
-                        var8 = var6[var7];
-                        if (var8.field_d == var5) {
-                            statePc = 10;
-                        } else {
-                            statePc = 9;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_8) {
-                        caughtException = stateCaught_8;
-                        statePc = 14;
-                        continue stateLoop;
-                    }
-                }
-                case 9: {
-                    try {
-                        statePc = 11;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_9) {
-                        caughtException = stateCaught_9;
-                        statePc = 14;
-                        continue stateLoop;
-                    }
-                }
-                case 10: {
-                    try {
-                        var9 = var8.field_f.field_h * 16384 / 640;
-                        rk.field_e.a(oa.field_w, var4, var3, var9);
-                        statePc = 11;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_10) {
-                        caughtException = stateCaught_10;
-                        statePc = 14;
-                        continue stateLoop;
-                    }
-                }
-                case 11: {
-                    try {
                         var7++;
-                        statePc = 7;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_11) {
-                        caughtException = stateCaught_11;
-                        statePc = 14;
-                        continue stateLoop;
+                        continue L4;
+                      }
                     }
+                  }
                 }
-                case 12: {
-                    try {
-                        this.a(((ig) this).field_b, var3, var4, 3);
-                        // monitorexit var2
-                        statePc = 16;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_12) {
-                        caughtException = stateCaught_12;
-                        statePc = 14;
-                        continue stateLoop;
-                    }
-                }
-                case 14: {
-                    try {
-                        var10 = caughtException;
-                        // monitorexit var2
-                        statePc = 15;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_14) {
-                        caughtException = stateCaught_14;
-                        statePc = 14;
-                        continue stateLoop;
-                    }
-                }
-                case 15: {
-                    throw (RuntimeException) (Object) var10;
-                }
-                case 16: {
-                    return;
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
+                this.a(((ig) this).field_b, var3, var4, 3);
+                break L2;
+              }
             }
+            break L1;
+          } else {
+            break L1;
+          }
         }
     }
 
@@ -782,7 +682,7 @@ final class ig {
             L2: {
               L3: {
                 var6.a(100);
-                if (-97 == nk.field_n) {
+                if (-97 == (nk.field_n ^ -1)) {
                   break L3;
                 } else {
                   if (nk.field_n == 98) {
@@ -793,10 +693,10 @@ final class ig {
                 }
               }
               L4: {
-                if (((ig) this).field_e != var3) {
+                if ((((ig) this).field_e ^ -1) != (var3 ^ -1)) {
                   break L4;
                 } else {
-                  if (-1 <= ((ig) this).field_n) {
+                  if (-1 >= (((ig) this).field_n ^ -1)) {
                     var6.a(false, ((ig) this).field_n);
                     break L2;
                   } else {
@@ -804,11 +704,11 @@ final class ig {
                   }
                 }
               }
-              if (var3 == ((ig) this).field_e) {
+              if ((var3 ^ -1) == (((ig) this).field_e ^ -1)) {
                 var6.a(false, var4 - 1);
                 break L2;
               } else {
-                if (((ig) this).field_n != var3) {
+                if ((((ig) this).field_n ^ -1) != (var3 ^ -1)) {
                   L5: {
                     if ((var3 ^ -1) >= -1) {
                       break L5;
@@ -825,7 +725,7 @@ final class ig {
                     if (0 != var3) {
                       break L6;
                     } else {
-                      if (((ig) this).field_s <= -1) {
+                      if ((((ig) this).field_s ^ -1) <= -1) {
                         var6.a(false, ((ig) this).field_s);
                         break L2;
                       } else {
@@ -845,9 +745,9 @@ final class ig {
                       }
                     }
                   }
-                  if (-1 != var3) {
+                  if (-1 != (var3 ^ -1)) {
                     L8: {
-                      if (var3 != ((ig) this).field_s) {
+                      if ((var3 ^ -1) != (((ig) this).field_s ^ -1)) {
                         break L8;
                       } else {
                         if ((((ig) this).field_f ^ -1) <= -1) {
@@ -900,7 +800,7 @@ final class ig {
                   if ((var3 ^ -1) > -1) {
                     break L11;
                   } else {
-                    if (var3 >= var4 - 1) {
+                    if ((var3 ^ -1) <= (var4 - 1 ^ -1)) {
                       break L11;
                     } else {
                       var6.a(false, var3 + 1);
@@ -909,7 +809,7 @@ final class ig {
                   }
                 }
                 L12: {
-                  if (var4 + -1 != var3) {
+                  if ((var4 + -1 ^ -1) != (var3 ^ -1)) {
                     break L12;
                   } else {
                     if (-1 < (((ig) this).field_n ^ -1)) {
@@ -920,16 +820,16 @@ final class ig {
                     }
                   }
                 }
-                if (var3 != var4 - 1) {
+                if ((var3 ^ -1) != (var4 - 1 ^ -1)) {
                   if (((ig) this).field_n == var3) {
                     var6.a(false, ((ig) this).field_e);
                     break L9;
                   } else {
                     L13: {
-                      if (var3 != ((ig) this).field_e) {
+                      if ((var3 ^ -1) != (((ig) this).field_e ^ -1)) {
                         break L13;
                       } else {
-                        if (((ig) this).field_f <= -1) {
+                        if ((((ig) this).field_f ^ -1) <= -1) {
                           var6.a(false, ((ig) this).field_f);
                           break L9;
                         } else {
@@ -938,10 +838,10 @@ final class ig {
                       }
                     }
                     L14: {
-                      if (var3 != ((ig) this).field_e) {
+                      if ((var3 ^ -1) != (((ig) this).field_e ^ -1)) {
                         break L14;
                       } else {
-                        if (-1 <= ((ig) this).field_s) {
+                        if (-1 >= (((ig) this).field_s ^ -1)) {
                           var6.a(false, ((ig) this).field_s);
                           break L9;
                         } else {
@@ -949,7 +849,7 @@ final class ig {
                         }
                       }
                     }
-                    if (((ig) this).field_e == var3) {
+                    if ((((ig) this).field_e ^ -1) == (var3 ^ -1)) {
                       var6.a(false, 0);
                       break L9;
                     } else {
@@ -965,7 +865,7 @@ final class ig {
                           }
                         }
                       }
-                      if (((ig) this).field_f != var3) {
+                      if ((((ig) this).field_f ^ -1) != (var3 ^ -1)) {
                         var6.a(false, h.a(((ig) this).field_a, (byte) 121));
                         break L9;
                       } else {
@@ -1001,18 +901,18 @@ final class ig {
         if (param1 != -59) {
             this.f(27);
         }
-        String var4 = null;
+        Object var4 = null;
         if (!(param2)) {
             var6 = eh.field_f;
             if (!(!aj.b(-97))) {
-                var4 = var6 + "<br>" + jf.field_O + " " + fk.field_c;
+                var4 = (Object) (Object) (var6 + "<br>" + jf.field_O + " " + fk.field_c);
             }
         }
         if (var4 != null) {
-            var5 = 8 - -fh.field_g.b(var4, 387, 20);
+            var5 = 8 - -fh.field_g.b((String) var4, 387, 20);
             em.e(7, 426 + (-var5 - 1), 393, 3162160);
             em.a(7, -var5 + 426, 393, var5, 0);
-            int discarded$0 = fh.field_g.a(var4, 10, 128, 387, 294, 6340704, -1, 1, 2, 20);
+            int discarded$0 = fh.field_g.a((String) var4, 10, 128, 387, 294, 6340704, -1, 1, 2, 20);
         }
     }
 
@@ -1206,7 +1106,7 @@ final class ig {
 
     private final void a(dk[] param0, int param1, int param2, int param3) {
         int var5 = 0;
-        dk var6 = null;
+        Object var6 = null;
         dk[] var7 = null;
         int var8 = 0;
         dk var9 = null;
@@ -1229,7 +1129,7 @@ final class ig {
           L1: while (true) {
             if (var7.length <= var8) {
               if (var6 != null) {
-                this.a(oa.field_w, 2, var6, param1, param2);
+                this.a(oa.field_w, 2, (dk) var6, param1, param2);
                 return;
               } else {
                 return;
@@ -1238,7 +1138,7 @@ final class ig {
               var9 = var7[var8];
               var10 = var9.field_c;
               if (var5 == var10) {
-                var6 = var9;
+                var6 = (Object) (Object) var9;
                 var8++;
                 continue L1;
               } else {

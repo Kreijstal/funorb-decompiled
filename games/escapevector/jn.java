@@ -68,6 +68,7 @@ final class jn {
                       }
                     }
                   } else {
+                    return;
                   }
                 }
               } else {

@@ -247,8 +247,9 @@ abstract class ki extends pn {
             break L0;
           } else {
             if (((ki) this).field_U == j.field_h) {
+              int fieldTemp$38 = ((ki) this).field_cb + 1;
               ((ki) this).field_cb = ((ki) this).field_cb + 1;
-              if (((ki) this).field_Z != ((ki) this).field_cb + 1) {
+              if (((ki) this).field_Z != fieldTemp$38) {
                 ((ki) this).field_Y.field_H = -((((ki) this).field_cb << -937865176) / ((ki) this).field_Z) + 256;
                 break L0;
               } else {
@@ -262,8 +263,9 @@ abstract class ki extends pn {
               if (dn.field_I != ((ki) this).field_U) {
                 break L0;
               } else {
+                int fieldTemp$39 = ((ki) this).field_cb + 1;
                 ((ki) this).field_cb = ((ki) this).field_cb + 1;
-                if (((ki) this).field_T == ((ki) this).field_cb + 1) {
+                if (((ki) this).field_T == fieldTemp$39) {
                   ((ki) this).field_Y.field_H = 256;
                   ((ki) this).field_U = null;
                   break L0;

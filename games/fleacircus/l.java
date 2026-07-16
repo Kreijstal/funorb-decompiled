@@ -225,8 +225,9 @@ final class l {
                                                 break L22;
                                               } else {
                                                 L23: {
-                                                  var9[var5 * var13 + var12] = var16.i(-107);
-                                                  var14 = var16.i(-107);
+                                                  byte dupTemp$2 = var16.i(-107);
+                                                  var9[var5 * var13 + var12] = dupTemp$2;
+                                                  var14 = dupTemp$2;
                                                   stackOut_38_0 = var10;
                                                   stackIn_40_0 = stackOut_38_0;
                                                   stackIn_39_0 = stackOut_38_0;
@@ -296,8 +297,9 @@ final class l {
                                     break L13;
                                   } else {
                                     L27: {
-                                      var9[var12] = var16.i(df.a((int) param1, 31));
-                                      var13 = var16.i(df.a((int) param1, 31));
+                                      byte dupTemp$3 = var16.i(df.a((int) param1, 31));
+                                      var9[var12] = dupTemp$3;
+                                      var13 = dupTemp$3;
                                       stackOut_51_0 = var10;
                                       stackIn_53_0 = stackOut_51_0;
                                       stackIn_52_0 = stackOut_51_0;

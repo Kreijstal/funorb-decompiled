@@ -1132,7 +1132,7 @@ final class n {
         int var3 = 0;
         byte[] var4 = null;
         byte[] var5 = null;
-        java.math.BigInteger var7_ref = null;
+        java.math.BigInteger var7_ref_java_math_BigInteger = null;
         int var7 = 0;
         int var8 = 0;
         iw var10 = null;
@@ -1178,8 +1178,8 @@ final class n {
                 } else {
                   if (((n) this).field_l != null) {
                     var12 = new java.math.BigInteger(var18);
-                    var7_ref = var12.modPow(((n) this).field_b, ((n) this).field_l);
-                    var5 = var7_ref.toByteArray();
+                    var7_ref_java_math_BigInteger = var12.modPow(((n) this).field_b, ((n) this).field_l);
+                    var5 = var7_ref_java_math_BigInteger.toByteArray();
                     break L1;
                   } else {
                     var19 = var4;

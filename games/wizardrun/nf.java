@@ -729,7 +729,6 @@ final class nf {
         int var4 = 0;
         int var5 = 0;
         String var6 = null;
-        String var6_ref = null;
         int var7 = 0;
         int var8 = 0;
         qj var9 = null;
@@ -856,7 +855,7 @@ final class nf {
                               break L7;
                             }
                           }
-                          var6_ref = stackIn_25_0;
+                          var6 = stackIn_25_0;
                           break L6;
                         } else {
                           break L6;
@@ -878,7 +877,7 @@ final class nf {
                             break L8;
                           }
                         }
-                        var6_ref = stackIn_32_0;
+                        var6 = stackIn_32_0;
                         break L3;
                       } else {
                         break L3;
@@ -889,7 +888,7 @@ final class nf {
               }
               L9: {
                 if (var4 == -2) {
-                  var6_ref = Integer.toString(var2);
+                  var6 = Integer.toString(var2);
                   break L9;
                 } else {
                   break L9;
@@ -907,7 +906,7 @@ final class nf {
                 }
               }
               L11: {
-                var7 = sf.a(stackIn_39_0 != 0, 110, var6_ref);
+                var7 = sf.a(stackIn_39_0 != 0, 110, var6);
                 var8 = id.field_c - (var7 >> -846997311);
                 if (var4 < 0) {
                   break L11;
@@ -939,11 +938,11 @@ final class nf {
               }
               L14: {
                 if (0 > var4) {
-                  le.field_j.c(var6_ref, var8, var1 - -lc.field_a, var5, -1);
+                  le.field_j.c(var6, var8, var1 - -lc.field_a, var5, -1);
                   var1 = var1 + si.field_f;
                   break L14;
                 } else {
-                  uf.field_c.c(var6_ref, var8, var1 - -ki.field_I, var5, -1);
+                  uf.field_c.c(var6, var8, var1 - -ki.field_I, var5, -1);
                   var1 = var1 + (ec.field_c + na.field_e + e.field_d);
                   var3++;
                   break L14;
@@ -1026,7 +1025,7 @@ final class nf {
                             break L21;
                           }
                         }
-                        var6_ref = stackIn_71_0;
+                        var6 = stackIn_71_0;
                         break L20;
                       } else {
                         break L20;
@@ -1048,7 +1047,7 @@ final class nf {
                           break L22;
                         }
                       }
-                      var6_ref = stackIn_78_0;
+                      var6 = stackIn_78_0;
                       break L17;
                     } else {
                       break L17;
@@ -1059,7 +1058,7 @@ final class nf {
             }
             L23: {
               if (var4 == -2) {
-                var6_ref = Integer.toString(var2);
+                var6 = Integer.toString(var2);
                 break L23;
               } else {
                 break L23;
@@ -1077,7 +1076,7 @@ final class nf {
               }
             }
             L25: {
-              var7 = sf.a(stackIn_85_0 != 0, 110, var6_ref);
+              var7 = sf.a(stackIn_85_0 != 0, 110, var6);
               var8 = id.field_c - (var7 >> -846997311);
               if (var4 < 0) {
                 break L25;
@@ -1109,11 +1108,11 @@ final class nf {
             }
             L28: {
               if (0 > var4) {
-                le.field_j.c(var6_ref, var8, var1 - -lc.field_a, var5, -1);
+                le.field_j.c(var6, var8, var1 - -lc.field_a, var5, -1);
                 var1 = var1 + si.field_f;
                 break L28;
               } else {
-                uf.field_c.c(var6_ref, var8, var1 - -ki.field_I, var5, -1);
+                uf.field_c.c(var6, var8, var1 - -ki.field_I, var5, -1);
                 var1 = var1 + (ec.field_c + na.field_e + e.field_d);
                 var3++;
                 break L28;

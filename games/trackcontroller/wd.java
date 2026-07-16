@@ -23,8 +23,9 @@ abstract class wd extends hl {
         } else {
             var2 = ((wd) this).field_M;
             var3 = ((wd) this).field_L;
+            int fieldTemp$0 = ((wd) this).field_Q + 1;
             ((wd) this).field_Q = ((wd) this).field_Q + 1;
-            if (((wd) this).field_N > ((wd) this).field_Q + 1) {
+            if (((wd) this).field_N > fieldTemp$0) {
                 var4 = (((wd) this).field_N * 2 + -((wd) this).field_Q) * ((wd) this).field_Q;
                 var5 = ((wd) this).field_N * ((wd) this).field_N;
                 var2 = ((wd) this).field_P + var4 * (-((wd) this).field_P + ((wd) this).field_M) / var5;
@@ -130,7 +131,7 @@ abstract class wd extends hl {
         var7 = 0;
         var8 = param2;
         L0: while (true) {
-          if (var7 >= var4) {
+          if ((var7 ^ -1) <= (var4 ^ -1)) {
             L1: {
               var4 = 22;
               if (param1 == 20) {
@@ -178,90 +179,92 @@ abstract class wd extends hl {
               }
             }
           } else {
-            if (ll.field_b <= var8) {
-              if (ll.field_g > var8) {
-                L4: {
-                  var9 = var5 - -((-var5 + var6) * var7 / var4);
-                  var10 = 0;
-                  var11 = ((wd) this).field_x;
-                  if (-21 > (var7 ^ -1)) {
-                    break L4;
-                  } else {
-                    L5: while (true) {
-                      if (var10 > 20) {
-                        break L4;
-                      } else {
-                        var12 = (-var10 + 20) * (-var10 + 20) + (20 - var7) * (20 + -var7);
-                        if (-463 <= (var12 ^ -1)) {
-                          if (var12 < 420) {
-                            break L4;
-                          } else {
-                            var13 = (462 - var12) * var9 / 42;
-                            var13 = var13 | (var13 << -830627736 | var13 << 951180592);
-                            ll.field_i[param0 + (var8 * ll.field_d - -var10)] = var13;
-                            var10++;
-                            continue L5;
-                          }
-                        } else {
-                          var10++;
-                          continue L5;
-                        }
-                      }
-                    }
-                  }
-                }
-                L6: {
-                  if (var7 <= 20) {
-                    var12 = var11;
-                    var11 -= 21;
-                    var13 = 0;
-                    L7: while (true) {
-                      L8: {
-                        if ((var13 ^ -1) < -21) {
-                          break L8;
-                        } else {
-                          var14 = var13 * var13 + (-var7 + 20) * (20 + -var7);
-                          if (-463 <= var14) {
-                            if (-421 > var14) {
-                              var12 = var11 + 1;
-                              var13++;
-                              var11++;
-                              continue L7;
-                            } else {
-                              var15 = var9 * (-var14 + 462) / 42;
-                              var15 = var15 | (var15 << -856429744 | var15 << -1851687672);
-                              ll.field_i[param0 + var8 * ll.field_d - -var11] = var15;
-                              var13++;
-                              var11++;
-                              continue L7;
-                            }
-                          } else {
-                            break L8;
-                          }
-                        }
-                      }
-                      var11 = var12;
-                      break L6;
-                    }
-                  } else {
-                    break L6;
-                  }
-                }
-                var9 = var9 | (var9 << -1539662704 | var9 << 599800904);
-                ll.a(param0 + var10, var8, var11 - var10, var9);
-                var7++;
-                var8++;
-                continue L0;
+            L4: {
+              if ((ll.field_b ^ -1) < (var8 ^ -1)) {
+                break L4;
               } else {
-                var7++;
-                var8++;
-                continue L0;
+                if (ll.field_g <= var8) {
+                  break L4;
+                } else {
+                  L5: {
+                    var9 = var5 - -((-var5 + var6) * var7 / var4);
+                    var10 = 0;
+                    var11 = ((wd) this).field_x;
+                    if (-21 > (var7 ^ -1)) {
+                      break L5;
+                    } else {
+                      L6: while (true) {
+                        if (var10 > 20) {
+                          break L5;
+                        } else {
+                          L7: {
+                            var12 = (-var10 + 20) * (-var10 + 20) + (20 - var7) * (20 + -var7);
+                            if (-463 <= (var12 ^ -1)) {
+                              if (var12 < 420) {
+                                break L5;
+                              } else {
+                                var13 = (462 - var12) * var9 / 42;
+                                var13 = var13 | (var13 << -830627736 | var13 << 951180592);
+                                ll.field_i[param0 + (var8 * ll.field_d - -var10)] = var13;
+                                break L7;
+                              }
+                            } else {
+                              break L7;
+                            }
+                          }
+                          var10++;
+                          continue L6;
+                        }
+                      }
+                    }
+                  }
+                  L8: {
+                    if (var7 <= 20) {
+                      var12 = var11;
+                      var11 -= 21;
+                      var13 = 0;
+                      L9: while (true) {
+                        L10: {
+                          if ((var13 ^ -1) < -21) {
+                            break L10;
+                          } else {
+                            var14 = var13 * var13 + (-var7 + 20) * (20 + -var7);
+                            if (-463 <= (var14 ^ -1)) {
+                              L11: {
+                                if (-421 < (var14 ^ -1)) {
+                                  var12 = var11 + 1;
+                                  break L11;
+                                } else {
+                                  var15 = var9 * (-var14 + 462) / 42;
+                                  var15 = var15 | (var15 << -856429744 | var15 << -1851687672);
+                                  ll.field_i[param0 + var8 * ll.field_d - -var11] = var15;
+                                  break L11;
+                                }
+                              }
+                              var13++;
+                              var11++;
+                              continue L9;
+                            } else {
+                              break L10;
+                            }
+                          }
+                        }
+                        var11 = var12;
+                        break L8;
+                      }
+                    } else {
+                      break L8;
+                    }
+                  }
+                  var9 = var9 | (var9 << -1539662704 | var9 << 599800904);
+                  ll.a(param0 + var10, var8, var11 - var10, var9);
+                  break L4;
+                }
               }
-            } else {
-              var7++;
-              var8++;
-              continue L0;
             }
+            var7++;
+            var8++;
+            continue L0;
           }
         }
     }

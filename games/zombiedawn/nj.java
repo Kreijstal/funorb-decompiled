@@ -34,15 +34,15 @@ final class nj extends pn implements hh {
         int var6 = 0;
         var5 = -59 % ((-83 - param0) / 32);
         var6 = param1;
-        if (var6 != -100) {
-          if (-99 != var6) {
-            return super.a(-127, param1, param2, param3);
-          } else {
-            boolean discarded$4 = ((nj) this).field_T.a((byte) 116, (ga) this);
+        if ((var6 ^ -1) != -100) {
+          if (-99 == (var6 ^ -1)) {
+            boolean discarded$2 = ((nj) this).field_T.a((byte) 116, (ga) this);
             return true;
+          } else {
+            return super.a(-127, param1, param2, param3);
           }
         } else {
-          boolean discarded$5 = ((nj) this).field_W.a((byte) 115, (ga) this);
+          boolean discarded$3 = ((nj) this).field_W.a((byte) 115, (ga) this);
           return true;
         }
     }

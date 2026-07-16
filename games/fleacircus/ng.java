@@ -32,7 +32,6 @@ final class ng {
         int var5 = 0;
         long var6 = 0L;
         sf var8 = null;
-        sf var8_ref = null;
         qf var11 = null;
         sf var12 = null;
         qf var13 = null;
@@ -50,13 +49,13 @@ final class ng {
                 var13 = qf.a(((ng) this).field_d, param1, param0);
                 if (var13 != null) {
                   var14 = var13.b();
-                  var8_ref = var14;
-                  ((ng) this).field_f.a((lh) (Object) var8_ref, true, var6);
+                  var8 = var14;
+                  ((ng) this).field_f.a((lh) (Object) var8, true, var6);
                   if (param2 != null) {
                     param2[0] = param2[0] - var14.field_l.length;
-                    return var8_ref;
+                    return var8;
                   } else {
-                    return var8_ref;
+                    return var8;
                   }
                 } else {
                   return null;
@@ -68,13 +67,13 @@ final class ng {
               var11 = qf.a(((ng) this).field_d, param1, param0);
               if (var11 != null) {
                 var12 = var11.b();
-                var8_ref = var12;
-                ((ng) this).field_f.a((lh) (Object) var8_ref, true, var6);
+                var8 = var12;
+                ((ng) this).field_f.a((lh) (Object) var8, true, var6);
                 if (param2 != null) {
                   param2[0] = param2[0] - var12.field_l.length;
-                  return var8_ref;
+                  return var8;
                 } else {
-                  return var8_ref;
+                  return var8;
                 }
               } else {
                 return null;
@@ -124,9 +123,7 @@ final class ng {
         int var5 = 0;
         long var6 = 0L;
         sf var8 = null;
-        sf var8_ref = null;
         hk var9 = null;
-        hk var9_ref = null;
         var5 = ((-1879044097 & param0) << -1326494716 | param0 >>> 1964415948) ^ param1;
         var5 = var5 | param0 << -1572942736;
         var6 = (long)var5 ^ 4294967296L;
@@ -138,9 +135,9 @@ final class ng {
                 L0: {
                   var9 = (hk) (Object) ((ng) this).field_e.a(var6, -1110);
                   if (var9 == null) {
-                    var9_ref = hk.a(((ng) this).field_b, param0, param1);
-                    if (var9_ref != null) {
-                      ((ng) this).field_e.a((lh) (Object) var9_ref, true, var6);
+                    var9 = hk.a(((ng) this).field_b, param0, param1);
+                    if (var9 != null) {
+                      ((ng) this).field_e.a((lh) (Object) var9, true, var6);
                       break L0;
                     } else {
                       return null;
@@ -149,22 +146,22 @@ final class ng {
                     break L0;
                   }
                 }
-                var8_ref = var9_ref.a(param3);
-                if (var8_ref == null) {
+                var8 = var9.a(param3);
+                if (var8 == null) {
                   return null;
                 } else {
-                  var9_ref.c(-1);
-                  ((ng) this).field_f.a((lh) (Object) var8_ref, true, var6);
-                  return var8_ref;
+                  var9.c(-1);
+                  ((ng) this).field_f.a((lh) (Object) var8, true, var6);
+                  return var8;
                 }
               } else {
                 L1: {
                   field_c = 19;
                   var9 = (hk) (Object) ((ng) this).field_e.a(var6, -1110);
                   if (var9 == null) {
-                    var9_ref = hk.a(((ng) this).field_b, param0, param1);
-                    if (var9_ref != null) {
-                      ((ng) this).field_e.a((lh) (Object) var9_ref, true, var6);
+                    var9 = hk.a(((ng) this).field_b, param0, param1);
+                    if (var9 != null) {
+                      ((ng) this).field_e.a((lh) (Object) var9, true, var6);
                       break L1;
                     } else {
                       return null;
@@ -173,13 +170,13 @@ final class ng {
                     break L1;
                   }
                 }
-                var8_ref = var9_ref.a(param3);
-                if (var8_ref == null) {
+                var8 = var9.a(param3);
+                if (var8 == null) {
                   return null;
                 } else {
-                  var9_ref.c(-1);
-                  ((ng) this).field_f.a((lh) (Object) var8_ref, true, var6);
-                  return var8_ref;
+                  var9.c(-1);
+                  ((ng) this).field_f.a((lh) (Object) var8, true, var6);
+                  return var8;
                 }
               }
             } else {
@@ -190,9 +187,9 @@ final class ng {
               L2: {
                 var9 = (hk) (Object) ((ng) this).field_e.a(var6, -1110);
                 if (var9 == null) {
-                  var9_ref = hk.a(((ng) this).field_b, param0, param1);
-                  if (var9_ref != null) {
-                    ((ng) this).field_e.a((lh) (Object) var9_ref, true, var6);
+                  var9 = hk.a(((ng) this).field_b, param0, param1);
+                  if (var9 != null) {
+                    ((ng) this).field_e.a((lh) (Object) var9, true, var6);
                     break L2;
                   } else {
                     return null;
@@ -201,22 +198,22 @@ final class ng {
                   break L2;
                 }
               }
-              var8_ref = var9_ref.a(param3);
-              if (var8_ref == null) {
+              var8 = var9.a(param3);
+              if (var8 == null) {
                 return null;
               } else {
-                var9_ref.c(-1);
-                ((ng) this).field_f.a((lh) (Object) var8_ref, true, var6);
-                return var8_ref;
+                var9.c(-1);
+                ((ng) this).field_f.a((lh) (Object) var8, true, var6);
+                return var8;
               }
             } else {
               L3: {
                 field_c = 19;
                 var9 = (hk) (Object) ((ng) this).field_e.a(var6, -1110);
                 if (var9 == null) {
-                  var9_ref = hk.a(((ng) this).field_b, param0, param1);
-                  if (var9_ref != null) {
-                    ((ng) this).field_e.a((lh) (Object) var9_ref, true, var6);
+                  var9 = hk.a(((ng) this).field_b, param0, param1);
+                  if (var9 != null) {
+                    ((ng) this).field_e.a((lh) (Object) var9, true, var6);
                     break L3;
                   } else {
                     return null;
@@ -225,13 +222,13 @@ final class ng {
                   break L3;
                 }
               }
-              var8_ref = var9_ref.a(param3);
-              if (var8_ref == null) {
+              var8 = var9.a(param3);
+              if (var8 == null) {
                 return null;
               } else {
-                var9_ref.c(-1);
-                ((ng) this).field_f.a((lh) (Object) var8_ref, true, var6);
-                return var8_ref;
+                var9.c(-1);
+                ((ng) this).field_f.a((lh) (Object) var8, true, var6);
+                return var8;
               }
             }
           }

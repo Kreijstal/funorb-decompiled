@@ -1,6 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
+import java.lang.String;
+
 final class vk extends og implements ho, vd {
     static String field_D;
     private pc field_G;
@@ -145,7 +147,7 @@ final class vk extends og implements ho, vd {
     final static void j(int param0) {
         int var1 = 0;
         re var2 = null;
-        m var3 = null;
+        Object var3 = null;
         int var4 = 0;
         int var5 = 0;
         Object var6 = null;
@@ -213,8 +215,9 @@ final class vk extends og implements ho, vd {
                   break L4;
                 } else {
                   wd.a(-111, 65535, uo.field_o + -1, dk.field_h, var1, 70, 0);
-                  var3 = new m(var2, 8, cp.field_h, 0, 70, true);
-                  a.field_b = (ue) (Object) new m(var2, 8, cp.field_h, 0, 70, true);
+                  m dupTemp$2 = new m(var2, 8, cp.field_h, 0, 70, true);
+                  var3 = (Object) (Object) dupTemp$2;
+                  a.field_b = (ue) (Object) dupTemp$2;
                   break L4;
                 }
               }
@@ -226,8 +229,9 @@ final class vk extends og implements ho, vd {
                 break L3;
               } else {
                 wd.a(-77, 65534, -1 + uo.field_o, dk.field_h, var1, 25, 1);
-                var3 = new m(var2, 9, fq.field_G, 1, 25, true);
-                a.field_b = (ue) (Object) new m(var2, 9, fq.field_G, 1, 25, true);
+                m dupTemp$3 = new m(var2, 9, fq.field_G, 1, 25, true);
+                var3 = (Object) (Object) dupTemp$3;
+                a.field_b = (ue) (Object) dupTemp$3;
                 break L3;
               }
             }
@@ -246,14 +250,14 @@ final class vk extends og implements ho, vd {
                 if (uo.field_o > ke.field_b[jo.field_o]) {
                   break L6;
                 } else {
-                  a.field_b = (ue) (Object) new nc(var3, var2);
+                  a.field_b = (ue) (Object) new nc((m) var3, var2);
                   break L5;
                 }
               }
             }
           }
           if (0 != pc.field_y) {
-            a.field_b = (ue) (Object) new vn(var3, var2, true);
+            a.field_b = (ue) (Object) new vn((m) var3, var2, true);
             break L5;
           } else {
             if (mo.field_l != 0) {
@@ -445,8 +449,7 @@ final class vk extends og implements ho, vd {
                 break L6;
               }
             }
-            new pc(stackIn_17_3, (bi) null);
-            ((vk) this).field_G = stackIn_17_1;
+            ((vk) this).field_G = new pc(stackIn_17_3, (bi) null);
             if (!((vk) this).field_C) {
               break L5;
             } else {
@@ -525,11 +528,13 @@ final class vk extends og implements ho, vd {
           }
         }
         L13: {
-          var12 = new ei(10, ((vk) this).field_j, -20 + ((vk) this).field_g, 25, (qm) (Object) ((vk) this).field_J, false, 80, 3, var7, 16777215, var8);
-          ((vk) this).b((qm) (Object) new ei(10, ((vk) this).field_j, -20 + ((vk) this).field_g, 25, (qm) (Object) ((vk) this).field_J, false, 80, 3, var7, 16777215, var8), 16);
+          ei dupTemp$2 = new ei(10, ((vk) this).field_j, -20 + ((vk) this).field_g, 25, (qm) (Object) ((vk) this).field_J, false, 80, 3, var7, 16777215, var8);
+          var12 = dupTemp$2;
+          ((vk) this).b((qm) (Object) dupTemp$2, 16);
           ((vk) this).field_j = ((vk) this).field_j + (((qm) (Object) var12).field_f + 5);
-          var13 = new ei(10, ((vk) this).field_j, -20 + ((vk) this).field_g, 25, (qm) (Object) ((vk) this).field_z, false, 80, 3, var7, 16777215, fh.field_h);
-          ((vk) this).b((qm) (Object) new ei(10, ((vk) this).field_j, -20 + ((vk) this).field_g, 25, (qm) (Object) ((vk) this).field_z, false, 80, 3, var7, 16777215, fh.field_h), -127);
+          ei dupTemp$3 = new ei(10, ((vk) this).field_j, -20 + ((vk) this).field_g, 25, (qm) (Object) ((vk) this).field_z, false, 80, 3, var7, 16777215, fh.field_h);
+          var13 = dupTemp$3;
+          ((vk) this).b((qm) (Object) dupTemp$3, -127);
           ((vk) this).field_M.field_l = (bi) this;
           ((vk) this).field_j = ((vk) this).field_j + (5 + ((qm) (Object) var13).field_f);
           if (((vk) this).field_H == null) {

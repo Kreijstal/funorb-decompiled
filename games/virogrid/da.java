@@ -26,7 +26,7 @@ final class da extends l {
     }
 
     final static cj a(int param0, int param1, int param2, int param3) {
-        cj var4 = null;
+        Object var4 = null;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
@@ -119,7 +119,7 @@ final class da extends l {
                   }
                 }
                 uf.field_i = stackIn_44_0 != 0;
-                return var4;
+                return (cj) var4;
               } else {
                 var9_ref_cj = el.field_s[var8];
                 if (null != var9_ref_cj.field_t) {
@@ -127,7 +127,7 @@ final class da extends l {
                   var9_ref_cj.field_t.a(param2, param3, var9_ref_cj.field_t.c((byte) 81), (byte) -44, var7);
                   var7 = var7 + param3;
                   if (var9_ref_cj.field_t.field_nb != 0) {
-                    var4 = var9_ref_cj;
+                    var4 = (Object) (Object) var9_ref_cj;
                     var8++;
                     continue L2;
                   } else {

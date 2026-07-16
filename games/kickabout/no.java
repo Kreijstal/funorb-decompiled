@@ -102,24 +102,55 @@ final class no extends i {
     }
 
     final static void a(String[] args, int param1, String param2, int param3) {
+        int var5 = 0;
         String[] var7 = null;
-        int var5 = Kickabout.field_G;
-        mj.field_a = cr.field_d;
-        if (param3 != -1) {
-            int discarded$0 = no.b(-9, -128);
+        int stackIn_6_0 = 0;
+        int stackOut_5_0 = 0;
+        int stackOut_4_0 = 0;
+        L0: {
+          var5 = Kickabout.field_G;
+          mj.field_a = cr.field_d;
+          if (param3 == -1) {
+            break L0;
+          } else {
+            int discarded$2 = no.b(-9, -128);
+            break L0;
+          }
         }
-        if (255 == param1) {
-            u.field_h = mf.a(-14 < (tn.field_b ^ -1) ? true : false, param3 ^ -42);
-            pp.a(param3 ^ -18268, (String[]) null);
-        } else {
-            if ((param1 ^ -1) <= -101) {
-                // if_icmplt L108
-                var7 = args;
-                pp.a(18267, var7);
-                u.field_h = wt.a(-117, args);
-            } else {
-                u.field_h = wb.a(-124, param2, param1);
+        L1: {
+          if (255 != param1) {
+            L2: {
+              if ((param1 ^ -1) > -101) {
+                break L2;
+              } else {
+                if (105 < param1) {
+                  break L2;
+                } else {
+                  var7 = args;
+                  pp.a(18267, var7);
+                  u.field_h = wt.a(-117, args);
+                  break L1;
+                }
+              }
             }
+            u.field_h = wb.a(-124, param2, param1);
+            break L1;
+          } else {
+            L3: {
+              if (-14 >= (tn.field_b ^ -1)) {
+                stackOut_5_0 = 0;
+                stackIn_6_0 = stackOut_5_0;
+                break L3;
+              } else {
+                stackOut_4_0 = 1;
+                stackIn_6_0 = stackOut_4_0;
+                break L3;
+              }
+            }
+            u.field_h = mf.a(stackIn_6_0 != 0, param3 ^ -42);
+            pp.a(param3 ^ -18268, (String[]) null);
+            break L1;
+          }
         }
     }
 

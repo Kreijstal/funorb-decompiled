@@ -109,420 +109,273 @@ abstract class ab extends dh {
         Object stackIn_7_0 = null;
         Object stackIn_8_0 = null;
         int stackIn_8_1 = 0;
+        Throwable decompiledCaughtException = null;
         Object stackOut_3_0 = null;
         Object stackOut_4_0 = null;
+        Object stackOut_7_0 = null;
+        int stackOut_7_1 = 0;
         Object stackOut_5_0 = null;
         Object stackOut_6_0 = null;
         int stackOut_6_1 = 0;
-        Object stackOut_7_0 = null;
-        int stackOut_7_1 = 0;
-        int statePc = 0;
-        Throwable caughtException = null;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    try {
-                        if (!((ab) this).c(76)) {
-                            statePc = 2;
-                        } else {
-                            statePc = 1;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_0) {
-                        caughtException = stateCaught_0;
-                        statePc = 23;
-                        continue stateLoop;
-                    }
-                }
-                case 1: {
-                    try {
-                        statePc = 3;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_1) {
-                        caughtException = stateCaught_1;
-                        statePc = 23;
-                        continue stateLoop;
-                    }
-                }
-                case 2: {
-                    return;
-                }
-                case 3: {
-                    try {
-                        ((ab) this).field_x = ((ab) this).getCodeBase().getHost();
-                        var11 = ((ab) this).field_x.toLowerCase();
-                        stackOut_3_0 = this;
-                        stackIn_6_0 = stackOut_3_0;
-                        stackIn_4_0 = stackOut_3_0;
-                        if (var11.equals((Object) (Object) "jagex.com")) {
-                            statePc = 6;
-                        } else {
-                            statePc = 4;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_3) {
-                        caughtException = stateCaught_3;
-                        statePc = 23;
-                        continue stateLoop;
-                    }
-                }
-                case 4: {
-                    try {
-                        stackOut_4_0 = this;
-                        stackIn_7_0 = stackOut_4_0;
-                        stackIn_5_0 = stackOut_4_0;
-                        if (!var11.endsWith(".jagex.com")) {
-                            statePc = 7;
-                        } else {
-                            statePc = 5;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_4) {
-                        caughtException = stateCaught_4;
-                        statePc = 23;
-                        continue stateLoop;
-                    }
-                }
-                case 5: {
-                    try {
-                        stackOut_5_0 = this;
-                        stackIn_6_0 = stackOut_5_0;
-                        statePc = 6;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_5) {
-                        caughtException = stateCaught_5;
-                        statePc = 23;
-                        continue stateLoop;
-                    }
-                }
-                case 6: {
-                    try {
-                        stackOut_6_0 = this;
-                        stackOut_6_1 = 1;
-                        stackIn_8_0 = stackOut_6_0;
-                        stackIn_8_1 = stackOut_6_1;
-                        statePc = 8;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_6) {
-                        caughtException = stateCaught_6;
-                        statePc = 23;
-                        continue stateLoop;
-                    }
-                }
-                case 7: {
-                    try {
-                        stackOut_7_0 = this;
-                        stackOut_7_1 = 0;
-                        stackIn_8_0 = stackOut_7_0;
-                        stackIn_8_1 = stackOut_7_1;
-                        statePc = 8;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_7) {
-                        caughtException = stateCaught_7;
-                        statePc = 23;
-                        continue stateLoop;
-                    }
-                }
-                case 8: {
-                    try {
-                        ((ab) this).field_o = stackIn_8_1 != 0;
-                        ((ab) this).field_y = Integer.parseInt(((ab) this).getParameter("gameport1"));
-                        ((ab) this).field_m = Integer.parseInt(((ab) this).getParameter("gameport2"));
-                        var7 = ((ab) this).getParameter("servernum");
-                        if (var7 != null) {
-                            statePc = 10;
-                        } else {
-                            statePc = 9;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_8) {
-                        caughtException = stateCaught_8;
-                        statePc = 23;
-                        continue stateLoop;
-                    }
-                }
-                case 9: {
-                    try {
-                        statePc = 11;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_9) {
-                        caughtException = stateCaught_9;
-                        statePc = 23;
-                        continue stateLoop;
-                    }
-                }
-                case 10: {
-                    try {
-                        ((ab) this).field_z = Integer.parseInt(var7);
-                        statePc = 11;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_10) {
-                        caughtException = stateCaught_10;
-                        statePc = 23;
-                        continue stateLoop;
-                    }
-                }
-                case 11: {
-                    try {
-                        ((ab) this).field_C = Integer.parseInt(((ab) this).getParameter("gamecrc"));
-                        ((ab) this).field_w = Long.parseLong(((ab) this).getParameter("instanceid"));
-                        ((ab) this).field_n = ((ab) this).getParameter("member").equals((Object) (Object) "yes");
-                        var8 = ((ab) this).getParameter("lang");
-                        if (var8 != null) {
-                            statePc = 13;
-                        } else {
-                            statePc = 12;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_11) {
-                        caughtException = stateCaught_11;
-                        statePc = 23;
-                        continue stateLoop;
-                    }
-                }
-                case 12: {
-                    try {
-                        statePc = 14;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_12) {
-                        caughtException = stateCaught_12;
-                        statePc = 23;
-                        continue stateLoop;
-                    }
-                }
-                case 13: {
-                    try {
-                        ((ab) this).field_v = Integer.parseInt(var8);
-                        statePc = 14;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_13) {
-                        caughtException = stateCaught_13;
-                        statePc = 23;
-                        continue stateLoop;
-                    }
-                }
-                case 14: {
-                    try {
-                        if (((ab) this).field_v >= 5) {
-                            statePc = 16;
-                        } else {
-                            statePc = 15;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_14) {
-                        caughtException = stateCaught_14;
-                        statePc = 23;
-                        continue stateLoop;
-                    }
-                }
-                case 15: {
-                    try {
-                        statePc = 17;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_15) {
-                        caughtException = stateCaught_15;
-                        statePc = 23;
-                        continue stateLoop;
-                    }
-                }
-                case 16: {
-                    try {
-                        ((ab) this).field_v = 0;
-                        statePc = 17;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_16) {
-                        caughtException = stateCaught_16;
-                        statePc = 23;
-                        continue stateLoop;
-                    }
-                }
-                case 17: {
-                    try {
-                        var9 = ((ab) this).getParameter("affid");
-                        if (var9 != null) {
-                            statePc = 19;
-                        } else {
-                            statePc = 18;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_17) {
-                        caughtException = stateCaught_17;
-                        statePc = 23;
-                        continue stateLoop;
-                    }
-                }
-                case 18: {
-                    try {
-                        statePc = 20;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_18) {
-                        caughtException = stateCaught_18;
-                        statePc = 23;
-                        continue stateLoop;
-                    }
-                }
-                case 19: {
-                    try {
-                        ((ab) this).field_r = Integer.parseInt(var9);
-                        statePc = 20;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_19) {
-                        caughtException = stateCaught_19;
-                        statePc = 23;
-                        continue stateLoop;
-                    }
-                }
-                case 20: {
-                    try {
-                        ml.field_g = Boolean.valueOf(((ab) this).getParameter("simplemode")).booleanValue();
-                        ((ab) this).a((byte) 80, param4, param1, 32, param0, param2, ((ab) this).field_C);
-                        if (param3 == -14) {
-                            statePc = 24;
-                        } else {
-                            statePc = 21;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_20) {
-                        caughtException = stateCaught_20;
-                        statePc = 23;
-                        continue stateLoop;
-                    }
-                }
-                case 21: {
-                    try {
-                        this.k(107);
-                        statePc = 24;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_21) {
-                        caughtException = stateCaught_21;
-                        statePc = 23;
-                        continue stateLoop;
-                    }
-                }
-                case 23: {
-                    var6 = (Exception) (Object) caughtException;
-                    var10 = null;
-                    hi.a((Throwable) (Object) var6, (String) null, 1);
-                    ((ab) this).a("crash", param3 ^ 13);
-                    statePc = 24;
-                    continue stateLoop;
-                }
-                case 24: {
-                    return;
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
-            }
-        }
-    }
-
-    final static da a(int param0, int param1, int param2, boolean param3, boolean param4, boolean param5) {
         try {
-            bi var6 = null;
-            IOException var6_ref = null;
-            bi var7 = null;
-            lg var8 = null;
-            da stackIn_16_0 = null;
-            Throwable decompiledCaughtException = null;
-            da stackOut_15_0 = null;
-            try {
-              L0: {
-                var6 = null;
-                var7 = null;
-                if (null == n.field_a.field_c) {
-                  break L0;
-                } else {
-                  hc.field_c = new hb(n.field_a.field_c, 5200, 0);
-                  n.field_a.field_c = null;
-                  var6 = new bi(255, hc.field_c, new hb(n.field_a.field_s, 12000, 0), 2097152);
-                  break L0;
-                }
-              }
+          L0: {
+            if (!((ab) this).c(76)) {
+              return;
+            } else {
               L1: {
-                if (hc.field_c != null) {
-                  L2: {
-                    if (null != tk.field_p) {
-                      break L2;
+                L2: {
+                  ((ab) this).field_x = ((ab) this).getCodeBase().getHost();
+                  var11 = ((ab) this).field_x.toLowerCase();
+                  stackOut_3_0 = this;
+                  stackIn_6_0 = stackOut_3_0;
+                  stackIn_4_0 = stackOut_3_0;
+                  if (var11.equals((Object) (Object) "jagex.com")) {
+                    break L2;
+                  } else {
+                    stackOut_4_0 = this;
+                    stackIn_7_0 = stackOut_4_0;
+                    stackIn_5_0 = stackOut_4_0;
+                    if (!var11.endsWith(".jagex.com")) {
+                      stackOut_7_0 = this;
+                      stackOut_7_1 = 0;
+                      stackIn_8_0 = stackOut_7_0;
+                      stackIn_8_1 = stackOut_7_1;
+                      break L1;
                     } else {
-                      tk.field_p = new hb[n.field_a.field_v.length];
+                      stackOut_5_0 = this;
+                      stackIn_6_0 = stackOut_5_0;
                       break L2;
                     }
                   }
-                  L3: {
-                    if (tk.field_p[param1] == null) {
-                      tk.field_p[param1] = new hb(n.field_a.field_v[param1], 12000, 0);
-                      n.field_a.field_v[param1] = null;
-                      break L3;
-                    } else {
-                      break L3;
-                    }
-                  }
-                  var7 = new bi(param1, hc.field_c, tk.field_p[param1], 2097152);
-                  break L1;
+                }
+                stackOut_6_0 = this;
+                stackOut_6_1 = 1;
+                stackIn_8_0 = stackOut_6_0;
+                stackIn_8_1 = stackOut_6_1;
+                break L1;
+              }
+              L3: {
+                ((ab) this).field_o = stackIn_8_1 != 0;
+                ((ab) this).field_y = Integer.parseInt(((ab) this).getParameter("gameport1"));
+                ((ab) this).field_m = Integer.parseInt(((ab) this).getParameter("gameport2"));
+                var7 = ((ab) this).getParameter("servernum");
+                if (var7 != null) {
+                  ((ab) this).field_z = Integer.parseInt(var7);
+                  break L3;
                 } else {
-                  break L1;
+                  break L3;
                 }
               }
               L4: {
-                var8 = d.field_b.a(-65, var7, param3, var6, param1);
-                if (param5) {
-                  var8.a((byte) 0);
+                ((ab) this).field_C = Integer.parseInt(((ab) this).getParameter("gamecrc"));
+                ((ab) this).field_w = Long.parseLong(((ab) this).getParameter("instanceid"));
+                ((ab) this).field_n = ((ab) this).getParameter("member").equals((Object) (Object) "yes");
+                var8 = ((ab) this).getParameter("lang");
+                if (var8 != null) {
+                  ((ab) this).field_v = Integer.parseInt(var8);
                   break L4;
                 } else {
                   break L4;
                 }
               }
               L5: {
-                if (param0 == 2097152) {
+                if (((ab) this).field_v >= 5) {
+                  ((ab) this).field_v = 0;
                   break L5;
                 } else {
-                  field_A = null;
                   break L5;
                 }
               }
-              stackOut_15_0 = new da((wd) (Object) var8, param4, param2);
-              stackIn_16_0 = stackOut_15_0;
-            } catch (java.io.IOException decompiledCaughtParameter) {
-              decompiledCaughtException = decompiledCaughtParameter;
-              return stackIn_16_0;
+              L6: {
+                var9 = ((ab) this).getParameter("affid");
+                if (var9 != null) {
+                  ((ab) this).field_r = Integer.parseInt(var9);
+                  break L6;
+                } else {
+                  break L6;
+                }
+              }
+              L7: {
+                ml.field_g = Boolean.valueOf(((ab) this).getParameter("simplemode")).booleanValue();
+                ((ab) this).a((byte) 80, param4, param1, 32, param0, param2, ((ab) this).field_C);
+                if (param3 == -14) {
+                  break L7;
+                } else {
+                  this.k(107);
+                  break L7;
+                }
+              }
+              break L0;
             }
+          }
+        } catch (java.lang.Exception decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L8: {
+            var6 = (Exception) (Object) decompiledCaughtException;
+            var10 = null;
+            hi.a((Throwable) (Object) var6, (String) null, 1);
+            ((ab) this).a("crash", param3 ^ 13);
+            break L8;
+          }
+        }
+    }
+
+    final static da a(int param0, int param1, int param2, boolean param3, boolean param4, boolean param5) {
+        try {
+            Object var6 = null;
+            Object var7 = null;
+            lg var8 = null;
+            da stackIn_16_0 = null;
+            Throwable decompiledCaughtException = null;
+            da stackOut_15_0 = null;
+            try {
+              L0: {
+                L1: {
+                  var6 = null;
+                  var7 = null;
+                  if (null == n.field_a.field_c) {
+                    break L1;
+                  } else {
+                    hc.field_c = new hb(n.field_a.field_c, 5200, 0);
+                    n.field_a.field_c = null;
+                    var6 = (Object) (Object) new bi(255, hc.field_c, new hb(n.field_a.field_s, 12000, 0), 2097152);
+                    break L1;
+                  }
+                }
+                L2: {
+                  if (hc.field_c != null) {
+                    L3: {
+                      if (null != tk.field_p) {
+                        break L3;
+                      } else {
+                        tk.field_p = new hb[n.field_a.field_v.length];
+                        break L3;
+                      }
+                    }
+                    L4: {
+                      if (tk.field_p[param1] == null) {
+                        tk.field_p[param1] = new hb(n.field_a.field_v[param1], 12000, 0);
+                        n.field_a.field_v[param1] = null;
+                        break L4;
+                      } else {
+                        break L4;
+                      }
+                    }
+                    var7 = (Object) (Object) new bi(param1, hc.field_c, tk.field_p[param1], 2097152);
+                    break L2;
+                  } else {
+                    break L2;
+                  }
+                }
+                L5: {
+                  var8 = d.field_b.a(-65, (bi) var7, param3, (bi) var6, param1);
+                  if (param5) {
+                    var8.a((byte) 0);
+                    break L5;
+                  } else {
+                    break L5;
+                  }
+                }
+                L6: {
+                  if (param0 == 2097152) {
+                    break L6;
+                  } else {
+                    field_A = null;
+                    break L6;
+                  }
+                }
+                stackOut_15_0 = new da((wd) (Object) var8, param4, param2);
+                stackIn_16_0 = stackOut_15_0;
+                break L0;
+              }
+            } catch (java.io.IOException decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              var6 = (Object) (Object) decompiledCaughtException;
+              throw new RuntimeException(((IOException) var6).toString());
+            }
+            return stackIn_16_0;
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
             throw new RuntimeException(decompiledCheckedException);
         }
-        return null;
     }
 
     final int g(int param0) {
-        if (param0 != 0) {
-            return -59;
+        int var2 = 0;
+        if (param0 == 0) {
+          L0: {
+            L1: {
+              var2 = this.j(-1);
+              if (var2 == 0) {
+                break L1;
+              } else {
+                if ((var2 ^ -1) != -2) {
+                  break L0;
+                } else {
+                  break L1;
+                }
+              }
+            }
+            L2: {
+              if (ef.field_c[1]) {
+                gh.a(2, 9543);
+                break L2;
+              } else {
+                break L2;
+              }
+            }
+            L3: {
+              if (!ef.field_c[2]) {
+                break L3;
+              } else {
+                jg.a(3, (byte) -100);
+                break L3;
+              }
+            }
+            L4: {
+              if (!ef.field_c[3]) {
+                break L4;
+              } else {
+                hi.a(4, -5887);
+                break L4;
+              }
+            }
+            L5: {
+              if (ef.field_c[4]) {
+                ik.a(5, 18897);
+                break L5;
+              } else {
+                break L5;
+              }
+            }
+            L6: {
+              if (!ef.field_c[5]) {
+                break L6;
+              } else {
+                ci.a((byte) -77, 6);
+                break L6;
+              }
+            }
+            L7: {
+              if (ef.field_c[6]) {
+                db.b(36951, 7);
+                break L7;
+              } else {
+                break L7;
+              }
+            }
+            if (ef.field_c[8]) {
+              ff.a((byte) -89);
+              break L0;
+            } else {
+              break L0;
+            }
+          }
+          return var2;
+        } else {
+          return -59;
         }
-        int var2 = this.j(-1);
-        if (var2 != 0) {
-            // if_icmpne L154
-        }
-        if (!(!ef.field_c[1])) {
-            gh.a(2, 9543);
-        }
-        if (ef.field_c[2]) {
-            jg.a(3, (byte) -100);
-        }
-        if (ef.field_c[3]) {
-            hi.a(4, -5887);
-        }
-        if (!(!ef.field_c[4])) {
-            ik.a(5, 18897);
-        }
-        if (ef.field_c[5]) {
-            ci.a((byte) -77, 6);
-        }
-        if (!(!ef.field_c[6])) {
-            db.b(36951, 7);
-        }
-        if (!(!ef.field_c[8])) {
-            ff.a((byte) -89);
-        }
-        return var2;
     }
 
     final void d(boolean param0) {
@@ -552,13 +405,13 @@ abstract class ab extends dh {
                 return;
               } else {
                 L1: {
-                  if (var2 != -2) {
-                    if (-3 != var2) {
-                      if (var2 == -4) {
+                  if ((var2 ^ -1) != -2) {
+                    if (-3 != (var2 ^ -1)) {
+                      if ((var2 ^ -1) == -4) {
                         db.f(0);
                         break L1;
                       } else {
-                        if (-5 == var2) {
+                        if (-5 == (var2 ^ -1)) {
                           oa.c(1811357826);
                           break L1;
                         } else {
@@ -572,12 +425,12 @@ abstract class ab extends dh {
                                   af.a(wh.field_c, (gb) (Object) te.field_N, (byte) -110, te.field_O);
                                   break L1;
                                 } else {
-                                  if (var2 == -17) {
+                                  if ((var2 ^ -1) == -17) {
                                     ki.a(-106);
                                     break L1;
                                   } else {
                                     L2: {
-                                      if (-12 == var2) {
+                                      if (-12 == (var2 ^ -1)) {
                                         break L2;
                                       } else {
                                         if (12 == var2) {
@@ -699,455 +552,243 @@ abstract class ab extends dh {
             Boolean var11 = null;
             gb var12 = null;
             Throwable decompiledCaughtException = null;
-            int statePc = 0;
-            Throwable caughtException = null;
-            stateLoop: while (true) {
-                switch (statePc) {
-                    case 0: {
-                        var8 = SolKnight.field_L ? 1 : 0;
-                        var4 = ig.a(vd.field_b, cl.field_n, false, param0);
-                        if (-1 == var4) {
-                            statePc = 2;
-                        } else {
-                            statePc = 3;
-                        }
-                        continue stateLoop;
+            var8 = SolKnight.field_L ? 1 : 0;
+            var4 = ig.a(vd.field_b, cl.field_n, false, param0);
+            if (-1 == (var4 ^ -1)) {
+              throw new IllegalStateException();
+            } else {
+              L0: {
+                if (-2 == (var4 ^ -1)) {
+                  L1: {
+                    var5_int = si.a(ua.h(0), ih.a(true), -120);
+                    if (0 != (var5_int ^ -1)) {
+                      fb.a(12239, ke.field_O, var5_int, md.field_v);
+                      ke.field_O = null;
+                      md.field_v = null;
+                      break L1;
+                    } else {
+                      break L1;
                     }
-                    case 2: {
-                        throw new IllegalStateException();
-                    }
-                    case 3: {
-                        if (-2 == var4) {
-                            statePc = 5;
-                        } else {
-                            statePc = 11;
-                        }
-                        continue stateLoop;
-                    }
-                    case 5: {
-                        var5_int = si.a(ua.h(0), ih.a(true), -120);
-                        if (0 != (var5_int ^ -1)) {
-                            statePc = 7;
-                        } else {
-                            statePc = 8;
-                        }
-                        continue stateLoop;
-                    }
-                    case 7: {
-                        fb.a(12239, ke.field_O, var5_int, md.field_v);
-                        ke.field_O = null;
-                        md.field_v = null;
-                        statePc = 8;
-                        continue stateLoop;
-                    }
-                    case 8: {
-                        var11 = sf.d(-123);
-                        if (var11 != null) {
-                            statePc = 10;
-                        } else {
-                            statePc = 11;
-                        }
-                        continue stateLoop;
-                    }
-                    case 10: {
-                        qc.a(var11.booleanValue(), -128);
-                        statePc = 11;
-                        continue stateLoop;
-                    }
-                    case 11: {
-                        if (2 != var4) {
-                            statePc = 15;
-                        } else {
-                            statePc = 12;
-                        }
-                        continue stateLoop;
-                    }
-                    case 12: {
-                        var5_int = gl.a(fi.a((byte) 84), 140, rg.a(0), ta.a((byte) -23), ((ab) this).field_r, sg.b(-1), lc.b(false));
-                        if (-1 != var5_int) {
-                            statePc = 14;
-                        } else {
-                            statePc = 15;
-                        }
-                        continue stateLoop;
-                    }
-                    case 14: {
-                        ff.a(var5_int, -114, ke.field_O, md.field_v);
-                        ke.field_O = null;
-                        md.field_v = null;
-                        statePc = 15;
-                        continue stateLoop;
-                    }
-                    case 15: {
-                        if (-4 != (var4 ^ -1)) {
-                            statePc = 25;
-                        } else {
-                            statePc = 16;
-                        }
-                        continue stateLoop;
-                    }
-                    case 16: {
-                        if (bf.field_e == -1) {
-                            statePc = 19;
-                        } else {
-                            statePc = 17;
-                        }
-                        continue stateLoop;
-                    }
-                    case 17: {
-                        if (bf.field_e == 0) {
-                            statePc = 19;
-                        } else {
-                            statePc = 18;
-                        }
-                        continue stateLoop;
-                    }
-                    case 18: {
+                  }
+                  var11 = sf.d(-123);
+                  if (var11 != null) {
+                    qc.a(var11.booleanValue(), -128);
+                    break L0;
+                  } else {
+                    break L0;
+                  }
+                } else {
+                  break L0;
+                }
+              }
+              L2: {
+                if (2 != var4) {
+                  break L2;
+                } else {
+                  var5_int = gl.a(fi.a((byte) 84), 140, rg.a(0), ta.a((byte) -23), ((ab) this).field_r, sg.b(-1), lc.b(false));
+                  if (-1 != var5_int) {
+                    ff.a(var5_int, -114, ke.field_O, md.field_v);
+                    ke.field_O = null;
+                    md.field_v = null;
+                    break L2;
+                  } else {
+                    break L2;
+                  }
+                }
+              }
+              L3: {
+                if (-4 != (var4 ^ -1)) {
+                  break L3;
+                } else {
+                  L4: {
+                    if (bf.field_e == -1) {
+                      break L4;
+                    } else {
+                      if ((bf.field_e ^ -1) == -1) {
+                        break L4;
+                      } else {
                         bf.field_e = -1;
                         ti.a((byte) -126);
-                        statePc = 19;
-                        continue stateLoop;
+                        break L4;
+                      }
                     }
-                    case 19: {
-                        if (!param1) {
-                            statePc = 21;
-                        } else {
-                            statePc = 20;
-                        }
-                        continue stateLoop;
-                    }
-                    case 20: {
-                        ee.field_i = false;
-                        statePc = 25;
-                        continue stateLoop;
-                    }
-                    case 21: {
-                        var5_int = fc.a(rg.a(0), ((ab) this).field_r, false, ((ab) this).field_o, fi.a((byte) 84), 0);
-                        if (-1 == var5_int) {
-                            statePc = 25;
-                        } else {
-                            statePc = 22;
-                        }
-                        continue stateLoop;
-                    }
-                    case 22: {
-                        if (0 != var5_int) {
-                            statePc = 24;
-                        } else {
-                            statePc = 23;
-                        }
-                        continue stateLoop;
-                    }
-                    case 23: {
+                  }
+                  if (!param1) {
+                    var5_int = fc.a(rg.a(0), ((ab) this).field_r, false, ((ab) this).field_o, fi.a((byte) 84), 0);
+                    if (-1 == var5_int) {
+                      break L3;
+                    } else {
+                      if (0 != var5_int) {
+                        dd.a((byte) 83, md.field_v, var5_int);
+                        md.field_v = null;
+                        break L3;
+                      } else {
                         d.field_c = kc.field_P;
                         ee.f(0);
                         lh.field_l = false;
                         fj.field_i = 10;
-                        statePc = 25;
-                        continue stateLoop;
+                        break L3;
+                      }
                     }
-                    case 24: {
-                        dd.a((byte) 83, md.field_v, var5_int);
-                        md.field_v = null;
-                        statePc = 25;
-                        continue stateLoop;
-                    }
-                    case 25: {
-                        if (-5 == var4) {
-                            statePc = 27;
-                        } else {
-                            statePc = 30;
-                        }
-                        continue stateLoop;
-                    }
-                    case 27: {
-                        if (!cl.field_m) {
-                            statePc = 29;
-                        } else {
-                            statePc = 28;
-                        }
-                        continue stateLoop;
-                    }
-                    case 28: {
-                        gd.a(-1, ia.g(84));
-                        statePc = 30;
-                        continue stateLoop;
-                    }
-                    case 29: {
-                        fj.field_i = 10;
-                        lh.field_l = true;
-                        statePc = 30;
-                        continue stateLoop;
-                    }
-                    case 30: {
-                        if (-6 != var4) {
-                            statePc = 32;
-                        } else {
-                            statePc = 31;
-                        }
-                        continue stateLoop;
-                    }
-                    case 31: {
-                        he.a(-1, ia.g(-16));
-                        statePc = 32;
-                        continue stateLoop;
-                    }
-                    case 32: {
-                        if (6 == var4) {
-                            statePc = 34;
-                        } else {
-                            statePc = 36;
-                        }
-                        continue stateLoop;
-                    }
-                    case 34: {
-                        if (!kk.field_c) {
-                            statePc = 36;
-                        } else {
-                            statePc = 35;
-                        }
-                        continue stateLoop;
-                    }
-                    case 35: {
-                        fj.field_i = 10;
-                        statePc = 36;
-                        continue stateLoop;
-                    }
-                    case 36: {
-                        if ((var4 ^ -1) != -8) {
-                            statePc = 38;
-                        } else {
-                            statePc = 37;
-                        }
-                        continue stateLoop;
-                    }
-                    case 37: {
-                        pl.a(ia.g(-41), -15071);
-                        statePc = 38;
-                        continue stateLoop;
-                    }
-                    case 38: {
-                        if ((var4 ^ -1) != -9) {
-                            statePc = 40;
-                        } else {
-                            statePc = 39;
-                        }
-                        continue stateLoop;
-                    }
-                    case 39: {
-                        gd.a(-1, ia.g(-48));
-                        statePc = 40;
-                        continue stateLoop;
-                    }
-                    case 40: {
-                        if ((var4 ^ -1) == -10) {
-                            statePc = 42;
-                        } else {
-                            statePc = 43;
-                        }
-                        continue stateLoop;
-                    }
-                    case 42: {
-                        ki.a(ia.g(-92), -1);
-                        statePc = 43;
-                        continue stateLoop;
-                    }
-                    case 43: {
-                        if (var4 != 10) {
-                            statePc = 45;
-                        } else {
-                            statePc = 44;
-                        }
-                        continue stateLoop;
-                    }
-                    case 44: {
-                        id.field_c.e(17, -2147483648);
-                        statePc = 45;
-                        continue stateLoop;
-                    }
-                    case 45: {
-                        if (param2 > 69) {
-                            statePc = 47;
-                        } else {
-                            statePc = 46;
-                        }
-                        continue stateLoop;
-                    }
-                    case 46: {
-                        return 57;
-                    }
-                    case 47: {
-                        if (11 != var4) {
-                            statePc = 49;
-                        } else {
-                            statePc = 48;
-                        }
-                        continue stateLoop;
-                    }
-                    case 48: {
-                        di.a(ia.g(-84), 63);
-                        statePc = 49;
-                        continue stateLoop;
-                    }
-                    case 49: {
-                        if (var4 != 12) {
-                            statePc = 51;
-                        } else {
-                            statePc = 50;
-                        }
-                        continue stateLoop;
-                    }
-                    case 50: {
-                        kj.a(ia.g(-20), 117, te.d((byte) 18));
-                        statePc = 51;
-                        continue stateLoop;
-                    }
-                    case 51: {
-                        if (-14 == (var4 ^ -1)) {
-                            statePc = 53;
-                        } else {
-                            statePc = 62;
-                        }
-                        continue stateLoop;
-                    }
-                    case 53: {
-                        try {
-                            if (null != wi.field_j) {
-                                statePc = 55;
-                            } else {
-                                statePc = 54;
-                            }
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_53) {
-                            caughtException = stateCaught_53;
-                            statePc = 61;
-                            continue stateLoop;
-                        }
-                    }
-                    case 54: {
-                        try {
+                  } else {
+                    ee.field_i = false;
+                    break L3;
+                  }
+                }
+              }
+              L5: {
+                if (-5 == (var4 ^ -1)) {
+                  if (!cl.field_m) {
+                    fj.field_i = 10;
+                    lh.field_l = true;
+                    break L5;
+                  } else {
+                    gd.a(-1, ia.g(84));
+                    break L5;
+                  }
+                } else {
+                  break L5;
+                }
+              }
+              L6: {
+                if (-6 != (var4 ^ -1)) {
+                  break L6;
+                } else {
+                  he.a(-1, ia.g(-16));
+                  break L6;
+                }
+              }
+              L7: {
+                if (6 == var4) {
+                  if (!kk.field_c) {
+                    break L7;
+                  } else {
+                    fj.field_i = 10;
+                    break L7;
+                  }
+                } else {
+                  break L7;
+                }
+              }
+              L8: {
+                if ((var4 ^ -1) != -8) {
+                  break L8;
+                } else {
+                  pl.a(ia.g(-41), -15071);
+                  break L8;
+                }
+              }
+              L9: {
+                if ((var4 ^ -1) != -9) {
+                  break L9;
+                } else {
+                  gd.a(-1, ia.g(-48));
+                  break L9;
+                }
+              }
+              L10: {
+                if ((var4 ^ -1) == -10) {
+                  ki.a(ia.g(-92), -1);
+                  break L10;
+                } else {
+                  break L10;
+                }
+              }
+              L11: {
+                if (var4 != 10) {
+                  break L11;
+                } else {
+                  id.field_c.e(17, -2147483648);
+                  break L11;
+                }
+              }
+              if (param2 > 69) {
+                L12: {
+                  if (11 != var4) {
+                    break L12;
+                  } else {
+                    di.a(ia.g(-84), 63);
+                    break L12;
+                  }
+                }
+                L13: {
+                  if (var4 != 12) {
+                    break L13;
+                  } else {
+                    kj.a(ia.g(-20), 117, te.d((byte) 18));
+                    break L13;
+                  }
+                }
+                L14: {
+                  if (-14 == (var4 ^ -1)) {
+                    try {
+                      L15: {
+                        L16: {
+                          if (null != wi.field_j) {
+                            break L16;
+                          } else {
                             wi.field_j = new na(wh.field_c, new java.net.URL(((ab) this).getCodeBase(), "countrylist.ws"), 5000);
-                            statePc = 55;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_54) {
-                            caughtException = stateCaught_54;
-                            statePc = 61;
-                            continue stateLoop;
+                            break L16;
+                          }
                         }
-                    }
-                    case 55: {
-                        try {
-                            if (!wi.field_j.a((byte) -106)) {
-                                statePc = 62;
-                            } else {
-                                statePc = 56;
+                        L17: {
+                          if (!wi.field_j.a((byte) -106)) {
+                            break L17;
+                          } else {
+                            L18: {
+                              var12 = wi.field_j.a(true);
+                              if (var12 != null) {
+                                var7 = vd.a(var12.field_l, 0, var12.field_m, 160);
+                                dh.a(var7, false);
+                                break L18;
+                              } else {
+                                var9 = null;
+                                dh.a((String) null, false);
+                                break L18;
+                              }
                             }
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_55) {
-                            caughtException = stateCaught_55;
-                            statePc = 61;
-                            continue stateLoop;
-                        }
-                    }
-                    case 56: {
-                        try {
-                            var12 = wi.field_j.a(true);
-                            if (var12 != null) {
-                                statePc = 58;
-                            } else {
-                                statePc = 57;
-                            }
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_56) {
-                            caughtException = stateCaught_56;
-                            statePc = 61;
-                            continue stateLoop;
-                        }
-                    }
-                    case 57: {
-                        try {
-                            var9 = null;
-                            dh.a((String) null, false);
-                            statePc = 59;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_57) {
-                            caughtException = stateCaught_57;
-                            statePc = 61;
-                            continue stateLoop;
-                        }
-                    }
-                    case 58: {
-                        try {
-                            var7 = vd.a(var12.field_l, 0, var12.field_m, 160);
-                            dh.a(var7, false);
-                            statePc = 59;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_58) {
-                            caughtException = stateCaught_58;
-                            statePc = 61;
-                            continue stateLoop;
-                        }
-                    }
-                    case 59: {
-                        try {
                             wi.field_j = null;
-                            statePc = 62;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_59) {
-                            caughtException = stateCaught_59;
-                            statePc = 61;
-                            continue stateLoop;
+                            break L17;
+                          }
                         }
-                    }
-                    case 61: {
-                        var5 = (Exception) (Object) caughtException;
+                        break L15;
+                      }
+                    } catch (java.lang.Exception decompiledCaughtParameter0) {
+                      decompiledCaughtException = decompiledCaughtParameter0;
+                      L19: {
+                        var5 = (Exception) (Object) decompiledCaughtException;
                         hi.a((Throwable) (Object) var5, "S1", 1);
                         var10 = null;
                         dh.a((String) null, false);
                         wi.field_j = null;
-                        statePc = 62;
-                        continue stateLoop;
+                        break L19;
+                      }
                     }
-                    case 62: {
-                        if (15 == var4) {
-                            statePc = 64;
-                        } else {
-                            statePc = 65;
-                        }
-                        continue stateLoop;
-                    }
-                    case 64: {
-                        fj.field_i = 10;
-                        statePc = 65;
-                        continue stateLoop;
-                    }
-                    case 65: {
-                        if ((var4 ^ -1) != -17) {
-                            statePc = 67;
-                        } else {
-                            statePc = 66;
-                        }
-                        continue stateLoop;
-                    }
-                    case 66: {
-                        return 1;
-                    }
-                    case 67: {
-                        if ((var4 ^ -1) != -18) {
-                            statePc = 69;
-                        } else {
-                            statePc = 68;
-                        }
-                        continue stateLoop;
-                    }
-                    case 68: {
-                        return 2;
-                    }
-                    case 69: {
-                        return 0;
-                    }
-                    default: throw new IllegalStateException("invalid CFG state " + statePc);
+                    break L14;
+                  } else {
+                    break L14;
+                  }
                 }
+                L20: {
+                  if (15 == var4) {
+                    fj.field_i = 10;
+                    break L20;
+                  } else {
+                    break L20;
+                  }
+                }
+                if ((var4 ^ -1) != -17) {
+                  if ((var4 ^ -1) != -18) {
+                    return 0;
+                  } else {
+                    return 2;
+                  }
+                } else {
+                  return 1;
+                }
+              } else {
+                return 57;
+              }
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -1282,83 +923,88 @@ abstract class ab extends dh {
 
     final void a(int param0, boolean param1) {
         int var3 = 0;
+        java.awt.Dimension var4 = null;
         int var5 = 0;
-        int stackIn_24_0 = 0;
-        int stackIn_100_0 = 0;
+        java.awt.Container var6 = null;
+        int stackIn_23_0 = 0;
         int stackIn_101_0 = 0;
-        int stackIn_101_1 = 0;
         int stackIn_102_0 = 0;
         int stackIn_102_1 = 0;
         int stackIn_103_0 = 0;
         int stackIn_103_1 = 0;
-        int stackIn_103_2 = 0;
-        int stackIn_137_0 = 0;
-        int stackOut_23_0 = 0;
+        int stackIn_104_0 = 0;
+        int stackIn_104_1 = 0;
+        int stackIn_104_2 = 0;
+        int stackIn_138_0 = 0;
         int stackOut_22_0 = 0;
-        int stackOut_99_0 = 0;
-        int stackOut_98_0 = 0;
+        int stackOut_21_0 = 0;
         int stackOut_100_0 = 0;
-        int stackOut_100_1 = 0;
+        int stackOut_99_0 = 0;
+        int stackOut_101_0 = 0;
+        int stackOut_101_1 = 0;
+        int stackOut_103_0 = 0;
+        int stackOut_103_1 = 0;
+        int stackOut_103_2 = 0;
         int stackOut_102_0 = 0;
         int stackOut_102_1 = 0;
         int stackOut_102_2 = 0;
-        int stackOut_101_0 = 0;
-        int stackOut_101_1 = 0;
-        int stackOut_101_2 = 0;
+        int stackOut_137_0 = 0;
         int stackOut_136_0 = 0;
-        int stackOut_135_0 = 0;
         L0: {
           var5 = SolKnight.field_L ? 1 : 0;
           if (null == fc.field_l) {
-            mf.f(-11214);
-            jh.b(param0 ^ -405);
-            if (bl.a((byte) -81)) {
-              break L0;
-            } else {
-              if (11 == fj.field_i) {
-                break L0;
+            break L0;
+          } else {
+            L1: {
+              if (null != dj.field_k) {
+                break L1;
               } else {
-                lj.e(false);
-                break L0;
+                var6 = qh.a((byte) 60);
+                var4 = var6.getSize();
+                fc.field_l.a(var4.height, var4.width, param0 ^ 25192);
+                break L1;
               }
             }
-          } else {
-            mf.f(-11214);
-            jh.b(param0 ^ -405);
-            if (bl.a((byte) -81)) {
-              break L0;
-            } else {
-              if (11 == fj.field_i) {
-                break L0;
-              } else {
-                lj.e(false);
-                break L0;
-              }
-            }
-          }
-        }
-        L1: {
-          if (null != ah.field_d) {
-            cl.field_n = ah.field_d.a(9408);
-            break L1;
-          } else {
-            break L1;
+            fc.field_l.a(param0 ^ -3);
+            break L0;
           }
         }
         L2: {
+          mf.f(-11214);
+          jh.b(param0 ^ -405);
+          if (bl.a((byte) -81)) {
+            break L2;
+          } else {
+            if (11 == fj.field_i) {
+              break L2;
+            } else {
+              lj.e(false);
+              break L2;
+            }
+          }
+        }
+        L3: {
+          if (null != ah.field_d) {
+            cl.field_n = ah.field_d.a(9408);
+            break L3;
+          } else {
+            break L3;
+          }
+        }
+        L4: {
           if (wf.c((byte) -63)) {
-            L3: {
+            L5: {
               var3 = 1200 * l.a((byte) 99);
               if (((ab) this).field_B) {
-                break L3;
+                break L5;
               } else {
                 if (var3 >= wk.b(param0 ^ -3)) {
-                  break L2;
+                  break L4;
                 } else {
                   if (de.a(-122) <= var3) {
-                    break L2;
+                    break L4;
                   } else {
-                    break L3;
+                    break L5;
                   }
                 }
               }
@@ -1370,196 +1016,203 @@ abstract class ab extends dh {
             pk.d(true);
             ee.field_i = true;
             kj.field_I = 15000L + je.a(1);
-            break L2;
+            break L4;
           } else {
-            break L2;
+            break L4;
           }
         }
-        L4: {
-          L5: {
+        L6: {
+          L7: {
             if (bf.field_e == -1) {
-              break L5;
+              break L7;
             } else {
               if (bf.field_e != 0) {
-                break L4;
+                break L6;
               } else {
-                break L5;
+                break L7;
               }
             }
           }
-          L6: {
+          L8: {
             if (bf.field_e != -1) {
-              stackOut_23_0 = 0;
-              stackIn_24_0 = stackOut_23_0;
-              break L6;
+              stackOut_22_0 = 0;
+              stackIn_23_0 = stackOut_22_0;
+              break L8;
             } else {
-              stackOut_22_0 = 1;
-              stackIn_24_0 = stackOut_22_0;
-              break L6;
+              stackOut_21_0 = 1;
+              stackIn_23_0 = stackOut_21_0;
+              break L8;
             }
           }
-          var3 = stackIn_24_0;
-          bf.field_e = ke.a((byte) 107);
-          if (var3 != 0) {
-            if (0 == bf.field_e) {
-              break L4;
+          L9: {
+            var3 = stackIn_23_0;
+            bf.field_e = ke.a((byte) 107);
+            if (var3 == 0) {
+              break L9;
             } else {
-              if (bf.field_e == -1) {
-                break L4;
+              if (0 == bf.field_e) {
+                if (11 != fj.field_i) {
+                  break L9;
+                } else {
+                  if (!qc.a(param0 + 37)) {
+                    ee.f(0);
+                    break L9;
+                  } else {
+                    break L9;
+                  }
+                }
               } else {
-                kj.field_I = 15000L + je.a(1);
-                break L4;
+                break L9;
               }
             }
+          }
+          if (0 == (bf.field_e ^ -1)) {
+            break L6;
           } else {
-            if (0 == bf.field_e) {
-              break L4;
+            if ((bf.field_e ^ -1) == -1) {
+              break L6;
             } else {
-              if (bf.field_e == -1) {
-                break L4;
-              } else {
-                kj.field_I = 15000L + je.a(1);
-                break L4;
-              }
+              kj.field_I = 15000L + je.a(1);
+              break L6;
             }
           }
         }
-        L7: {
-          if (0 == bf.field_e) {
-            break L7;
+        L10: {
+          if (0 == (bf.field_e ^ -1)) {
+            break L10;
           } else {
-            if (bf.field_e != 0) {
+            if ((bf.field_e ^ -1) != -1) {
               if (kj.field_R < 10) {
-                if (bf.field_e == -4) {
+                if ((bf.field_e ^ -1) == -4) {
                   ((ab) this).a("js5crc", -1);
-                  break L7;
+                  break L10;
                 } else {
-                  if (-5 == bf.field_e) {
+                  if (-5 == (bf.field_e ^ -1)) {
                     ((ab) this).a("js5io", param0 ^ 2);
-                    break L7;
+                    break L10;
                   } else {
                     if (bf.field_e == 2) {
                       ((ab) this).a("js5connect_full", -1);
-                      break L7;
+                      break L10;
                     } else {
                       if (-6 != (bf.field_e ^ -1)) {
                         ((ab) this).a("js5connect", -1);
-                        break L7;
+                        break L10;
                       } else {
                         ((ab) this).a("outofdate", -1);
-                        break L7;
+                        break L10;
                       }
                     }
                   }
                 }
               } else {
                 if (10 <= fj.field_i) {
-                  L8: {
+                  L11: {
                     sf.b(false);
                     if (bf.field_e != 3) {
                       if (bf.field_e != 4) {
                         if ((bf.field_e ^ -1) != -3) {
                           if (5 == bf.field_e) {
                             dd.a((byte) -115, jl.field_c, 5);
-                            break L8;
+                            break L11;
                           } else {
                             dd.a((byte) 57, cd.field_c, 256);
-                            break L8;
+                            break L11;
                           }
                         } else {
                           dd.a((byte) 51, eb.field_c, 256);
-                          break L8;
+                          break L11;
                         }
                       } else {
                         dd.a((byte) 89, el.field_m, 256);
-                        break L8;
+                        break L11;
                       }
                     } else {
                       dd.a((byte) 115, bl.field_m, 256);
-                      break L8;
+                      break L11;
                     }
                   }
                   ee.field_i = true;
-                  break L7;
-                } else {
-                  break L7;
-                }
-              }
-            } else {
-              break L7;
-            }
-          }
-        }
-        L9: {
-          L10: {
-            L11: {
-              if ((bf.field_e ^ -1) == 0) {
-                break L11;
-              } else {
-                if (0 != bf.field_e) {
                   break L10;
                 } else {
-                  break L11;
+                  break L10;
                 }
               }
-            }
-            if (!qc.a(34)) {
-              break L9;
             } else {
               break L10;
             }
           }
+        }
+        L12: {
+          L13: {
+            L14: {
+              if ((bf.field_e ^ -1) == 0) {
+                break L14;
+              } else {
+                if (0 != bf.field_e) {
+                  break L13;
+                } else {
+                  break L14;
+                }
+              }
+            }
+            if (!qc.a(34)) {
+              break L12;
+            } else {
+              break L13;
+            }
+          }
           if ((kj.field_I ^ -1L) < (je.a(1) ^ -1L)) {
-            break L9;
+            break L12;
           } else {
             ee.field_i = false;
             if ((bf.field_e ^ -1) == 0) {
-              break L9;
+              break L12;
             } else {
-              if (bf.field_e == 0) {
-                break L9;
+              if ((bf.field_e ^ -1) == -1) {
+                break L12;
               } else {
                 bf.field_e = -1;
                 ti.a((byte) 77);
-                break L9;
+                break L12;
               }
             }
           }
         }
-        L12: {
-          if (bf.field_e != 0) {
-            break L12;
+        L15: {
+          if ((bf.field_e ^ -1) != -1) {
+            break L15;
           } else {
             if (qc.a(34)) {
-              break L12;
+              break L15;
             } else {
               ib.field_o = false;
-              break L12;
+              break L15;
             }
           }
         }
-        L13: {
+        L16: {
           if (kj.field_R != 0) {
-            break L13;
+            break L16;
           } else {
             if (!tk.c(false)) {
-              break L13;
+              break L16;
             } else {
               kj.field_R = 1;
-              break L13;
+              break L16;
             }
           }
         }
-        L14: {
+        L17: {
           if (-2 != (kj.field_R ^ -1)) {
-            break L14;
+            break L17;
           } else {
-            L15: {
-              if (vd.field_b != 0) {
+            L18: {
+              if ((vd.field_b ^ -1) != -1) {
                 af.field_c = r.a(og.field_c, 82);
-                break L15;
+                break L18;
               } else {
-                break L15;
+                break L18;
               }
             }
             lh.field_o = pj.a(vd.field_c, (byte) -30, 1, false, true);
@@ -1568,123 +1221,123 @@ abstract class ab extends dh {
             pl.field_d = lh.field_o;
             ai.field_b = wk.field_c;
             kj.field_R = 2;
-            break L14;
+            break L17;
           }
         }
-        L16: {
+        L19: {
           if (kj.field_R == 2) {
-            L17: {
+            L20: {
               if (af.field_c != null) {
                 if (af.field_c.c((byte) -121)) {
                   if (!af.field_c.b(param0 + -95, "")) {
                     af.field_c = null;
-                    break L17;
+                    break L20;
                   } else {
                     if (af.field_c.a(2, "")) {
                       lj.a(26708, af.field_c);
                       af.field_c = null;
                       mh.a(8192);
-                      break L17;
+                      break L20;
                     } else {
-                      break L17;
+                      break L20;
                     }
                   }
                 } else {
-                  break L17;
+                  break L20;
                 }
               } else {
-                break L17;
+                break L20;
               }
             }
             if (null != af.field_c) {
-              break L16;
+              break L19;
             } else {
               kj.field_R = 3;
-              break L16;
+              break L19;
             }
           } else {
-            break L16;
+            break L19;
           }
         }
-        L18: {
+        L21: {
           if (3 != kj.field_R) {
-            break L18;
+            break L21;
           } else {
             if (!pj.a(wk.field_c, -16925, lh.field_o, jk.field_ub)) {
-              break L18;
+              break L21;
             } else {
               if (td.a(-3, jk.field_ub)) {
-                L19: {
-                  L20: {
+                L22: {
+                  L23: {
                     cb.b(32);
                     kg.a(-15617);
                     pe.field_m = te.field_J;
                     kk.field_c = false;
                     d.a(wk.field_c, cl.field_m, (byte) -110, jk.field_ub, lh.field_o);
                     if (bl.field_p) {
-                      break L20;
+                      break L23;
                     } else {
                       if (null == s.field_hb) {
-                        break L19;
+                        break L22;
                       } else {
-                        break L20;
+                        break L23;
                       }
                     }
                   }
-                  L21: {
+                  L24: {
                     if (bl.field_p) {
-                      stackOut_99_0 = 0;
-                      stackIn_100_0 = stackOut_99_0;
-                      break L21;
+                      stackOut_100_0 = 0;
+                      stackIn_101_0 = stackOut_100_0;
+                      break L24;
                     } else {
-                      stackOut_98_0 = 1;
-                      stackIn_100_0 = stackOut_98_0;
-                      break L21;
+                      stackOut_99_0 = 1;
+                      stackIn_101_0 = stackOut_99_0;
+                      break L24;
                     }
                   }
-                  L22: {
-                    stackOut_100_0 = stackIn_100_0;
-                    stackOut_100_1 = param0 + 17075;
-                    stackIn_102_0 = stackOut_100_0;
-                    stackIn_102_1 = stackOut_100_1;
-                    stackIn_101_0 = stackOut_100_0;
-                    stackIn_101_1 = stackOut_100_1;
+                  L25: {
+                    stackOut_101_0 = stackIn_101_0;
+                    stackOut_101_1 = param0 + 17075;
+                    stackIn_103_0 = stackOut_101_0;
+                    stackIn_103_1 = stackOut_101_1;
+                    stackIn_102_0 = stackOut_101_0;
+                    stackIn_102_1 = stackOut_101_1;
                     if (bl.field_p) {
+                      stackOut_103_0 = stackIn_103_0;
+                      stackOut_103_1 = stackIn_103_1;
+                      stackOut_103_2 = 0;
+                      stackIn_104_0 = stackOut_103_0;
+                      stackIn_104_1 = stackOut_103_1;
+                      stackIn_104_2 = stackOut_103_2;
+                      break L25;
+                    } else {
                       stackOut_102_0 = stackIn_102_0;
                       stackOut_102_1 = stackIn_102_1;
-                      stackOut_102_2 = 0;
-                      stackIn_103_0 = stackOut_102_0;
-                      stackIn_103_1 = stackOut_102_1;
-                      stackIn_103_2 = stackOut_102_2;
-                      break L22;
-                    } else {
-                      stackOut_101_0 = stackIn_101_0;
-                      stackOut_101_1 = stackIn_101_1;
-                      stackOut_101_2 = 1;
-                      stackIn_103_0 = stackOut_101_0;
-                      stackIn_103_1 = stackOut_101_1;
-                      stackIn_103_2 = stackOut_101_2;
-                      break L22;
+                      stackOut_102_2 = 1;
+                      stackIn_104_0 = stackOut_102_0;
+                      stackIn_104_1 = stackOut_102_1;
+                      stackIn_104_2 = stackOut_102_2;
+                      break L25;
                     }
                   }
-                  hf.a(stackIn_103_0 != 0, stackIn_103_1, stackIn_103_2 != 0, s.field_hb);
-                  break L19;
+                  hf.a(stackIn_104_0 != 0, stackIn_104_1, stackIn_104_2 != 0, s.field_hb);
+                  break L22;
                 }
-                L23: {
+                L26: {
                   if (ml.field_g) {
                     qk.f(4);
-                    break L23;
+                    break L26;
                   } else {
-                    break L23;
+                    break L26;
                   }
                 }
-                L24: {
+                L27: {
                   if (ce.field_c == null) {
                     ce.field_c = rh.a(0);
                     qh.field_c = jk.i((byte) 123);
-                    break L24;
+                    break L27;
                   } else {
-                    break L24;
+                    break L27;
                   }
                 }
                 r.a(jk.field_ub, qh.field_c, param0 ^ -4, ce.field_c);
@@ -1694,130 +1347,130 @@ abstract class ab extends dh {
                 de.a((java.applet.Applet) this, param0 + 3);
                 mh.a(8192);
                 kj.field_R = 10;
-                break L18;
+                break L21;
               } else {
-                break L18;
+                break L21;
               }
             }
-          }
-        }
-        L25: {
-          if (param0 == -3) {
-            break L25;
-          } else {
-            ((ab) this).field_z = 90;
-            break L25;
-          }
-        }
-        L26: {
-          if (10 == kj.field_R) {
-            L27: {
-              if (vd.field_b != 0) {
-                wc.field_b = r.a(bl.field_k, 117);
-                break L27;
-              } else {
-                break L27;
-              }
-            }
-            kj.field_R = 11;
-            break L26;
-          } else {
-            break L26;
           }
         }
         L28: {
-          if (kj.field_R != 11) {
+          if (param0 == -3) {
             break L28;
           } else {
-            L29: {
-              if (null == wc.field_b) {
-                break L29;
+            ((ab) this).field_z = 90;
+            break L28;
+          }
+        }
+        L29: {
+          if (10 == kj.field_R) {
+            L30: {
+              if (vd.field_b != 0) {
+                wc.field_b = r.a(bl.field_k, 117);
+                break L30;
               } else {
-                L30: {
+                break L30;
+              }
+            }
+            kj.field_R = 11;
+            break L29;
+          } else {
+            break L29;
+          }
+        }
+        L31: {
+          if (kj.field_R != 11) {
+            break L31;
+          } else {
+            L32: {
+              if (null == wc.field_b) {
+                break L32;
+              } else {
+                L33: {
                   if (!wc.field_b.c((byte) -121)) {
-                    break L30;
+                    break L33;
                   } else {
                     if (!wc.field_b.b(true)) {
-                      break L30;
+                      break L33;
                     } else {
-                      break L29;
+                      break L32;
                     }
                   }
                 }
                 a.a((byte) 102, ve.a(uf.field_r, wa.field_a, wc.field_b, (byte) -94), 0.0f);
-                break L28;
+                break L31;
               }
             }
             pd.field_c = true;
             kj.field_R = 12;
-            break L28;
-          }
-        }
-        L31: {
-          if (12 == kj.field_R) {
-            if (!pd.field_c) {
-              kj.field_R = 13;
-              break L31;
-            } else {
-              break L31;
-            }
-          } else {
             break L31;
           }
         }
-        L32: {
-          if (-14 == (kj.field_R ^ -1)) {
-            L33: {
-              var3 = 1;
-              if (null == ng.field_a) {
-                break L33;
-              } else {
-                L34: {
-                  if (!ng.field_a.a((byte) 125)) {
-                    stackOut_136_0 = 0;
-                    stackIn_137_0 = stackOut_136_0;
-                    break L34;
-                  } else {
-                    stackOut_135_0 = 1;
-                    stackIn_137_0 = stackOut_135_0;
-                    break L34;
-                  }
-                }
-                var3 = stackIn_137_0;
-                a.a((byte) 102, ng.field_a.field_a, ng.field_a.field_c);
-                break L33;
-              }
-            }
-            if (var3 == 0) {
-              break L32;
+        L34: {
+          if (12 == kj.field_R) {
+            if (!pd.field_c) {
+              kj.field_R = 13;
+              break L34;
             } else {
-              kj.field_R = 20;
-              break L32;
+              break L34;
             }
           } else {
-            break L32;
+            break L34;
           }
         }
         L35: {
-          if (param1) {
+          if (-14 == (kj.field_R ^ -1)) {
+            L36: {
+              var3 = 1;
+              if (null == ng.field_a) {
+                break L36;
+              } else {
+                L37: {
+                  if (!ng.field_a.a((byte) 125)) {
+                    stackOut_137_0 = 0;
+                    stackIn_138_0 = stackOut_137_0;
+                    break L37;
+                  } else {
+                    stackOut_136_0 = 1;
+                    stackIn_138_0 = stackOut_136_0;
+                    break L37;
+                  }
+                }
+                var3 = stackIn_138_0;
+                a.a((byte) 102, ng.field_a.field_a, ng.field_a.field_c);
+                break L36;
+              }
+            }
+            if (var3 == 0) {
+              break L35;
+            } else {
+              kj.field_R = 20;
+              break L35;
+            }
+          } else {
             break L35;
+          }
+        }
+        L38: {
+          if (param1) {
+            break L38;
           } else {
             if (!jd.field_p) {
-              break L35;
+              break L38;
             } else {
               nc.a((byte) 86, dc.field_q);
               ((ab) this).a(true);
               th.a((byte) -69, dc.field_q);
-              break L35;
+              break L38;
             }
           }
         }
-        L36: {
+        L39: {
           if (ef.field_c[8]) {
             wd.b(param0 + 11);
-            break L36;
+            break L39;
           } else {
-            break L36;
+            break L39;
           }
         }
     }
@@ -1919,37 +1572,60 @@ abstract class ab extends dh {
     }
 
     private final int j(int param0) {
-        if (!(!((ab) this).field_c)) {
-            return -1;
-        }
-        if (!qc.a(param0 + 35)) {
-            return -1;
-        }
-        if (!(!ee.field_i)) {
-            return -1;
-        }
-        int var2 = fc.a(rg.a(0), ((ab) this).field_r, true, ((ab) this).field_o, fi.a((byte) 84), 0);
-        if (0 == (var2 ^ -1)) {
-            return -1;
-        }
-        if (var2 != param0) {
-            // if_icmpeq L80
+        int var2 = 0;
+        if (((ab) this).field_c) {
+          return -1;
         } else {
-            if (11 == fj.field_i) {
-                if (!(-1 != bf.field_e)) {
-                    ee.f(0);
+          if (qc.a(param0 + 35)) {
+            if (ee.field_i) {
+              return -1;
+            } else {
+              var2 = fc.a(rg.a(0), ((ab) this).field_r, true, ((ab) this).field_o, fi.a((byte) 84), 0);
+              if (0 != (var2 ^ -1)) {
+                L0: {
+                  if ((var2 ^ -1) == param0) {
+                    break L0;
+                  } else {
+                    if (var2 == 1) {
+                      break L0;
+                    } else {
+                      L1: {
+                        if (rh.field_f) {
+                          break L1;
+                        } else {
+                          ((ab) this).a("reconnect", -1);
+                          break L1;
+                        }
+                      }
+                      sf.b(false);
+                      dd.a((byte) 8, md.field_v, var2);
+                      ee.field_i = true;
+                      kj.field_I = je.a(param0 ^ -2) + 15000L;
+                      return var2;
+                    }
+                  }
                 }
+                L2: {
+                  if (11 != fj.field_i) {
+                    break L2;
+                  } else {
+                    if (-1 == (bf.field_e ^ -1)) {
+                      ee.f(0);
+                      break L2;
+                    } else {
+                      break L2;
+                    }
+                  }
+                }
+                return var2;
+              } else {
+                return -1;
+              }
             }
-            return var2;
+          } else {
+            return -1;
+          }
         }
-        if (!rh.field_f) {
-            ((ab) this).a("reconnect", -1);
-        }
-        sf.b(false);
-        dd.a((byte) 8, md.field_v, var2);
-        ee.field_i = true;
-        kj.field_I = je.a(param0 ^ -2) + 15000L;
-        return var2;
     }
 
     protected ab() {

@@ -97,8 +97,9 @@ final class q {
           L0: while (true) {
             if (lg.c(-1)) {
               var1.c(8, 7);
+              int fieldTemp$2 = var1.field_k + 1;
               var1.field_k = var1.field_k + 1;
-              var2 = var1.field_k + 1;
+              var2 = fieldTemp$2;
               rc.a(78, var1);
               ra.field_C.a(param0, -var2 + var1.field_k);
               continue L0;
@@ -110,8 +111,9 @@ final class q {
           L1: while (true) {
             if (lg.c(-1)) {
               var1.c(8, 7);
+              int fieldTemp$3 = var1.field_k + 1;
               var1.field_k = var1.field_k + 1;
-              var2 = var1.field_k + 1;
+              var2 = fieldTemp$3;
               rc.a(78, var1);
               ra.field_C.a(param0, -var2 + var1.field_k);
               continue L1;

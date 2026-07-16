@@ -577,19 +577,31 @@ final class mf extends hd {
     }
 
     final void c(boolean param0) {
-        if (!la.a(100)) {
-            // if_acmpeq L19
-        } else {
-            return;
-        }
-        or.field_d.b(81, (byte) 84);
-        or.field_d.field_n = or.field_d.field_n + 2;
-        int var2 = or.field_d.field_n;
-        or.field_d.a(106, 1);
-        ((mf) this).field_Bb.a(1, (iw) (Object) or.field_d);
-        or.field_d.d(-var2 + or.field_d.field_n, 62);
-        if (!param0) {
-            field_Gb = 97;
+        int var2 = 0;
+        L0: {
+          if (la.a(100)) {
+            break L0;
+          } else {
+            if (null == ((mf) this).field_Bb) {
+              break L0;
+            } else {
+              L1: {
+                or.field_d.b(81, (byte) 84);
+                or.field_d.field_n = or.field_d.field_n + 2;
+                var2 = or.field_d.field_n;
+                or.field_d.a(106, 1);
+                ((mf) this).field_Bb.a(1, (iw) (Object) or.field_d);
+                or.field_d.d(-var2 + or.field_d.field_n, 62);
+                if (param0) {
+                  break L1;
+                } else {
+                  field_Gb = 97;
+                  break L1;
+                }
+              }
+              return;
+            }
+          }
         }
     }
 
@@ -606,7 +618,7 @@ final class mf extends hd {
     }
 
     final static String a(int param0, CharSequence[] param1, int param2, int param3) {
-        CharSequence var4_ref = null;
+        CharSequence var4_ref_CharSequence = null;
         int var4 = 0;
         int var5 = 0;
         int var6_int = 0;
@@ -621,8 +633,8 @@ final class mf extends hd {
         if (0 != param0) {
           if (-2 == (param0 ^ -1)) {
             var11 = param1[param3];
-            var4_ref = var11;
-            if (var4_ref == null) {
+            var4_ref_CharSequence = var11;
+            if (var4_ref_CharSequence == null) {
               return "null";
             } else {
               return ((Object) (Object) var11).toString();
@@ -680,19 +692,35 @@ final class mf extends hd {
     }
 
     final static void b(int param0) {
+        int var1 = 0;
         int var2 = 0;
-        int var3 = Kickabout.field_G;
+        int var3 = 0;
+        var3 = Kickabout.field_G;
         pt.a(640, -22914, 0, 480, 390);
-        int var1 = -e.field_j + 480;
-        if (param0 > -99) {
+        var1 = -e.field_j + 480;
+        if (param0 <= -99) {
+          var2 = 0;
+          L0: while (true) {
+            L1: {
+              if (var2 >= bk.field_c.length) {
+                break L1;
+              } else {
+                if (null == bk.field_c[var2]) {
+                  break L1;
+                } else {
+                  bk.field_c[var2].a(-65, var1);
+                  var1 -= 18;
+                  var2++;
+                  continue L0;
+                }
+              }
+            }
+            ta.e(127);
             return;
+          }
+        } else {
+          return;
         }
-        for (var2 = 0; var2 < bk.field_c.length; var2++) {
-            // if_acmpeq L75
-            bk.field_c[var2].a(-65, var1);
-            var1 -= 18;
-        }
-        ta.e(127);
     }
 
     mf(gr param0) {
@@ -903,7 +931,6 @@ final class mf extends hd {
         int var3 = 0;
         int var4_int = 0;
         Object var4 = null;
-        kq var4_ref = null;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
@@ -921,10 +948,10 @@ final class mf extends hd {
             L1: while (true) {
               if (-10 >= (var6 ^ -1)) {
                 L2: {
-                  if (var4_ref == null) {
+                  if (var4 == null) {
                     break L2;
                   } else {
-                    var4_ref.h((byte) -118);
+                    ((kq) var4).h((byte) -118);
                     break L2;
                   }
                 }
@@ -932,7 +959,7 @@ final class mf extends hd {
                 return;
               } else {
                 if (0 != ((mf) this).field_Eb[var6].field_qb) {
-                  var4_ref = ((mf) this).field_Eb[var6];
+                  var4 = (Object) (Object) ((mf) this).field_Eb[var6];
                   var6++;
                   continue L1;
                 } else {

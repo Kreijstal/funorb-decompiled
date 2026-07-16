@@ -48,8 +48,9 @@ final class qa extends ll {
         if (param0 != 0) {
             qa.c(23);
         }
-        ((qa) this).field_t[param1] = new la();
-        return new la();
+        la dupTemp$0 = new la();
+        ((qa) this).field_t[param1] = dupTemp$0;
+        return dupTemp$0;
     }
 
     public static void b(int param0) {
@@ -74,8 +75,9 @@ final class qa extends ll {
     public qa() {
         ((qa) this).field_t = new la[6];
         ((qa) this).field_p = new la();
-        ((qa) this).field_t[0] = new la();
-        la var1 = new la();
+        la dupTemp$0 = new la();
+        ((qa) this).field_t[0] = dupTemp$0;
+        la var1 = dupTemp$0;
         var1.a(0);
     }
 
@@ -154,9 +156,10 @@ final class qa extends ll {
                     stackIn_8_0 = stackOut_6_0;
                     stackIn_7_0 = stackOut_6_0;
                     if (var6 == null) {
-                      param2.field_t[var4] = new la();
+                      la dupTemp$1 = new la();
+                      param2.field_t[var4] = dupTemp$1;
                       stackOut_8_0 = (la) (Object) stackIn_8_0;
-                      stackOut_8_1 = new la();
+                      stackOut_8_1 = (la) dupTemp$1;
                       stackIn_9_0 = stackOut_8_0;
                       stackIn_9_1 = stackOut_8_1;
                       break L2;

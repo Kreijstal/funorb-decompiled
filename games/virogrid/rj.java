@@ -141,18 +141,24 @@ final class rj implements ol {
             Throwable decompiledCaughtException = null;
             try {
               L0: {
-                Object discarded$1 = q.a(mb.g((byte) 6), -8582, new Object[1], "resizing");
-                if (param1 < -65) {
-                  break L0;
-                } else {
-                  field_d = null;
-                  break L0;
+                L1: {
+                  Object discarded$1 = q.a(mb.g((byte) 6), -8582, new Object[1], "resizing");
+                  if (param1 < -65) {
+                    break L1;
+                  } else {
+                    field_d = null;
+                    break L1;
+                  }
                 }
+                break L0;
               }
-            } catch (java.lang.Throwable decompiledCaughtParameter) {
-              decompiledCaughtException = decompiledCaughtParameter;
+            } catch (java.lang.Throwable decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              L2: {
+                var2 = decompiledCaughtException;
+                break L2;
+              }
             }
-            var2 = decompiledCaughtException;
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {

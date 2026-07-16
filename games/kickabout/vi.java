@@ -271,25 +271,43 @@ final class vi extends mc {
     }
 
     final int a(int param0, long param1) {
+        int var4 = 0;
         int var5 = 0;
-        int var6 = Kickabout.field_G;
-        int var4 = 78 % ((param0 - 45) / 63);
-        if (((vi) this).field_p >= ((vi) this).field_v) {
-            var5 = 0;
-            do {
-                ((vi) this).field_v = ((vi) this).field_v + param1;
-                var5++;
-                // if_icmpge L74
-            } while ((((vi) this).field_v ^ -1L) > (((vi) this).field_p ^ -1L));
-            if ((((vi) this).field_p ^ -1L) < (((vi) this).field_v ^ -1L)) {
+        int var6 = 0;
+        var6 = Kickabout.field_G;
+        var4 = 78 % ((param0 - 45) / 63);
+        if (((vi) this).field_p < ((vi) this).field_v) {
+          ((vi) this).field_u = ((vi) this).field_u + (((vi) this).field_v - ((vi) this).field_p);
+          ((vi) this).field_p = ((vi) this).field_p + (-((vi) this).field_p + ((vi) this).field_v);
+          ((vi) this).field_v = ((vi) this).field_v + param1;
+          return 1;
+        } else {
+          var5 = 0;
+          L0: while (true) {
+            L1: {
+              ((vi) this).field_v = ((vi) this).field_v + param1;
+              var5++;
+              if (-11 >= (var5 ^ -1)) {
+                break L1;
+              } else {
+                if ((((vi) this).field_v ^ -1L) > (((vi) this).field_p ^ -1L)) {
+                  continue L0;
+                } else {
+                  break L1;
+                }
+              }
+            }
+            L2: {
+              if ((((vi) this).field_p ^ -1L) >= (((vi) this).field_v ^ -1L)) {
+                break L2;
+              } else {
                 ((vi) this).field_v = ((vi) this).field_p;
+                break L2;
+              }
             }
             return var5;
+          }
         }
-        ((vi) this).field_u = ((vi) this).field_u + (((vi) this).field_v - ((vi) this).field_p);
-        ((vi) this).field_p = ((vi) this).field_p + (-((vi) this).field_p + ((vi) this).field_v);
-        ((vi) this).field_v = ((vi) this).field_v + param1;
-        return 1;
     }
 
     vi() {

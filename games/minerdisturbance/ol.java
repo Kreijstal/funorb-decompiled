@@ -113,7 +113,7 @@ final class ol {
           if (0 >= param0) {
             L0: {
               var2 = 2;
-              if (65535 > param0) {
+              if (65535 < (param0 ^ -1)) {
                 param0 = param0 >> 16;
                 var2 += 16;
                 break L0;
@@ -148,9 +148,8 @@ final class ol {
                 break L3;
               }
             }
-            if (param1 != 8) {
+            if (param1 == 8) {
               L4: {
-                field_c = null;
                 if ((param0 ^ -1) > 1) {
                   var2++;
                   param0 = param0 >> 1;
@@ -162,6 +161,7 @@ final class ol {
               return var2;
             } else {
               L5: {
+                field_c = null;
                 if ((param0 ^ -1) > 1) {
                   var2++;
                   param0 = param0 >> 1;
@@ -184,7 +184,7 @@ final class ol {
               }
             }
             L7: {
-              if (-256 <= param0) {
+              if (-256 <= (param0 ^ -1)) {
                 break L7;
               } else {
                 var2 += 8;
@@ -193,7 +193,7 @@ final class ol {
               }
             }
             L8: {
-              if (-16 < param0) {
+              if (-16 > (param0 ^ -1)) {
                 var2 += 4;
                 param0 = param0 >> 4;
                 break L8;
@@ -211,7 +211,7 @@ final class ol {
               }
             }
             L10: {
-              if (param0 < -2) {
+              if ((param0 ^ -1) < -2) {
                 var2++;
                 param0 = param0 >> 1;
                 break L10;

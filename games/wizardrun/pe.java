@@ -152,37 +152,91 @@ class pe extends ub implements bg {
     }
 
     boolean a(char param0, int param1, byte param2, ub param3) {
-        int var7 = wizardrun.field_H;
-        pf var8 = new pf(((pe) this).field_A);
-        ub var9 = (ub) (Object) var8.a((byte) 31);
-        if (param2 > -96) {
+        int var6 = 0;
+        int var7 = 0;
+        pf var8 = null;
+        ub var9 = null;
+        boolean stackIn_13_0 = false;
+        boolean stackOut_12_0 = false;
+        boolean stackOut_11_0 = false;
+        L0: {
+          var7 = wizardrun.field_H;
+          var8 = new pf(((pe) this).field_A);
+          var9 = (ub) (Object) var8.a((byte) 31);
+          if (param2 <= -96) {
+            break L0;
+          } else {
             field_z = null;
+            break L0;
+          }
         }
-        while (var9 != null) {
-            // ifeq L105
-            if (var9.d((byte) 53)) {
-                if (!(!var9.a(param0, param1, (byte) -126, param3))) {
-                    return true;
+        L1: while (true) {
+          L2: {
+            if (var9 == null) {
+              break L2;
+            } else {
+              if (!var9.c((byte) 72)) {
+                break L2;
+              } else {
+                L3: {
+                  if (!var9.d((byte) 53)) {
+                    break L3;
+                  } else {
+                    if (var9.a(param0, param1, (byte) -126, param3)) {
+                      return true;
+                    } else {
+                      break L3;
+                    }
+                  }
                 }
+                var9 = (ub) (Object) var8.b(35);
+                continue L1;
+              }
             }
-            var9 = (ub) (Object) var8.b(35);
+          }
+          var6 = param1;
+          if (var6 != 80) {
+            return false;
+          } else {
+            L4: {
+              if (!hi.field_p[81]) {
+                stackOut_12_0 = ((pe) this).b(param3, 1);
+                stackIn_13_0 = stackOut_12_0;
+                break L4;
+              } else {
+                stackOut_11_0 = ((pe) this).a((byte) -117, param3);
+                stackIn_13_0 = stackOut_11_0;
+                break L4;
+              }
+            }
+            return stackIn_13_0;
+          }
         }
-        int var6 = param1;
-        if (var6 == 80) {
-            return hi.field_p[81] ? ((pe) this).a((byte) -117, param3) : ((pe) this).b(param3, 1);
-        }
-        return false;
     }
 
     void a(int param0, int param1, int param2, ub param3) {
-        int var7 = wizardrun.field_H;
+        pf var5 = null;
+        ub var6 = null;
+        int var7 = 0;
+        var7 = wizardrun.field_H;
         super.a(param0, param1, param2, param3);
-        pf var5 = new pf(((pe) this).field_A);
-        ub var6 = (ub) (Object) var5.a((byte) 31);
-        while (var6 != null) {
-            // ifeq L90
-            var6.a(10000536, ((pe) this).field_l + param1, ((pe) this).field_o + param2, param3);
-            var6 = (ub) (Object) var5.b(35);
+        var5 = new pf(((pe) this).field_A);
+        var6 = (ub) (Object) var5.a((byte) 31);
+        L0: while (true) {
+          L1: {
+            if (var6 == null) {
+              break L1;
+            } else {
+              if (!var6.c((byte) -50)) {
+                break L1;
+              } else {
+                var6.a(10000536, ((pe) this).field_l + param1, ((pe) this).field_o + param2, param3);
+                var6 = (ub) (Object) var5.b(35);
+                continue L0;
+              }
+            }
+          }
+          return;
         }
     }
 
@@ -230,18 +284,33 @@ class pe extends ub implements bg {
     }
 
     final boolean a(int param0, byte param1, int param2, int param3, int param4, int param5, ub param6) {
-        int var11 = wizardrun.field_H;
-        pf var8 = new pf(((pe) this).field_A);
-        int var9 = 18 % ((param1 - 12) / 36);
-        ub var10 = (ub) (Object) var8.a((byte) 31);
-        while (var10 != null) {
-            // ifeq L107
-            if (!(!var10.a(((pe) this).field_o + param0, (byte) 83, param2, ((pe) this).field_l + param3, param4, param5, param6))) {
-                return true;
+        pf var8 = null;
+        int var9 = 0;
+        ub var10 = null;
+        int var11 = 0;
+        var11 = wizardrun.field_H;
+        var8 = new pf(((pe) this).field_A);
+        var9 = 18 % ((param1 - 12) / 36);
+        var10 = (ub) (Object) var8.a((byte) 31);
+        L0: while (true) {
+          L1: {
+            if (var10 == null) {
+              break L1;
+            } else {
+              if (!var10.c((byte) -76)) {
+                break L1;
+              } else {
+                if (var10.a(((pe) this).field_o + param0, (byte) 83, param2, ((pe) this).field_l + param3, param4, param5, param6)) {
+                  return true;
+                } else {
+                  var10 = (ub) (Object) var8.b(35);
+                  continue L0;
+                }
+              }
             }
-            var10 = (ub) (Object) var8.b(35);
+          }
+          return false;
         }
-        return false;
     }
 
     final String c(boolean param0) {
@@ -272,16 +341,35 @@ class pe extends ub implements bg {
     }
 
     final void a(int param0, int param1, int param2, int param3, ub param4, int param5) {
-        int var9 = wizardrun.field_H;
-        pf var7 = new pf(((pe) this).field_A);
-        if (param5 != 0) {
+        pf var7 = null;
+        ub var8 = null;
+        int var9 = 0;
+        L0: {
+          var9 = wizardrun.field_H;
+          var7 = new pf(((pe) this).field_A);
+          if (param5 == 0) {
+            break L0;
+          } else {
             ((pe) this).field_A = null;
+            break L0;
+          }
         }
-        ub var8 = (ub) (Object) var7.a((byte) 31);
-        while (var8 != null) {
-            // ifeq L102
-            var8.a(((pe) this).field_o + param0, param1, ((pe) this).field_l + param2, param3, param4, param5 ^ 0);
-            var8 = (ub) (Object) var7.b(35);
+        var8 = (ub) (Object) var7.a((byte) 31);
+        L1: while (true) {
+          L2: {
+            if (var8 == null) {
+              break L2;
+            } else {
+              if (!var8.c((byte) 110)) {
+                break L2;
+              } else {
+                var8.a(((pe) this).field_o + param0, param1, ((pe) this).field_l + param2, param3, param4, param5 ^ 0);
+                var8 = (ub) (Object) var7.b(35);
+                continue L1;
+              }
+            }
+          }
+          return;
         }
     }
 
@@ -329,24 +417,45 @@ class pe extends ub implements bg {
     }
 
     final boolean a(ub param0, int param1, int param2, int param3, int param4, int param5, int param6) {
-        int var10 = wizardrun.field_H;
-        pf var12 = new pf(((pe) this).field_A);
-        ub var9 = (ub) (Object) var12.a((byte) 31);
-        while (var9 != null) {
-            // ifeq L93
-            if (var9.d((byte) 53)) {
-                if (var9.a(param0, -23023, param2, param3, param4, param5, param6)) {
-                    return true;
+        ub var9 = null;
+        int var10 = 0;
+        Object var11 = null;
+        pf var12 = null;
+        var10 = wizardrun.field_H;
+        var12 = new pf(((pe) this).field_A);
+        var9 = (ub) (Object) var12.a((byte) 31);
+        L0: while (true) {
+          L1: {
+            if (var9 == null) {
+              break L1;
+            } else {
+              if (!var9.c((byte) -109)) {
+                break L1;
+              } else {
+                L2: {
+                  if (!var9.d((byte) 53)) {
+                    break L2;
+                  } else {
+                    if (!var9.a(param0, -23023, param2, param3, param4, param5, param6)) {
+                      break L2;
+                    } else {
+                      return true;
+                    }
+                  }
                 }
+                var9 = (ub) (Object) var12.b(35);
+                continue L0;
+              }
             }
-            var9 = (ub) (Object) var12.b(35);
-        }
-        if (param1 != -23023) {
-            Object var11 = null;
-            StringBuilder discarded$0 = ((pe) this).a((Hashtable) null, (byte) 115, 4, (StringBuilder) null);
+          }
+          if (param1 == -23023) {
             return false;
+          } else {
+            var11 = null;
+            StringBuilder discarded$2 = ((pe) this).a((Hashtable) null, (byte) 115, 4, (StringBuilder) null);
+            return false;
+          }
         }
-        return false;
     }
 
     final boolean a(ub param0, int param1) {

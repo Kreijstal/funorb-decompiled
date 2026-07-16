@@ -61,6 +61,7 @@ final class ec {
             field_e = 64;
             field_d = new gj();
             field_c = new ta();
+            return;
           } else {
             var3 = var2 / 192;
             var4 = -(192 * var3) + var2;

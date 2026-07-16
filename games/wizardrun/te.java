@@ -26,12 +26,14 @@ final class te extends wl {
             param4 = id.field_b[var5];
             var6 = var5 << 976761508;
             while (true) {
+                int incrementValue$0 = param4;
                 param4--;
-                if (-1 == (param4 ^ -1)) {
+                if (-1 == (incrementValue$0 ^ -1)) {
                     break;
                 }
+                int incrementValue$1 = var6;
                 var6++;
-                param3 = cb.field_e[var6];
+                param3 = cb.field_e[incrementValue$1];
                 param2[param1[param3]] = param2[param1[param3]] + 1;
                 cb.field_e[param2[param1[param3]]] = param3;
             }

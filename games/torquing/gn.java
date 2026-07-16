@@ -186,8 +186,9 @@ final class gn {
         int var5 = 0;
         var5 = Torquing.field_u;
         if (!param0) {
+          int fieldTemp$6 = ((gn) this).field_e + 1;
           ((gn) this).field_e = ((gn) this).field_e + 1;
-          ((gn) this).field_j = ((gn) this).field_j + (((gn) this).field_e + 1);
+          ((gn) this).field_j = ((gn) this).field_j + fieldTemp$6;
           var2 = 0;
           L0: while (true) {
             if (256 <= var2) {
@@ -214,18 +215,21 @@ final class gn {
                 }
               }
               ((gn) this).field_g = ((gn) this).field_g + ((gn) this).field_a[var2 + 128 & 255];
-              var4 = ((gn) this).field_j + ((gn) this).field_a[ie.a(var3 >> 144255010, 255)] - -((gn) this).field_g;
-              ((gn) this).field_a[var2] = ((gn) this).field_j + ((gn) this).field_a[ie.a(var3 >> 144255010, 255)] - -((gn) this).field_g;
-              ((gn) this).field_j = ((gn) this).field_a[ie.a(var4 >> -547083736 >> 1921220194, 255)] + var3;
-              ((gn) this).field_k[var2] = ((gn) this).field_a[ie.a(var4 >> -547083736 >> 1921220194, 255)] + var3;
+              int dupTemp$7 = ((gn) this).field_j + ((gn) this).field_a[ie.a(var3 >> 144255010, 255)] - -((gn) this).field_g;
+              var4 = dupTemp$7;
+              ((gn) this).field_a[var2] = dupTemp$7;
+              int dupTemp$8 = ((gn) this).field_a[ie.a(var4 >> -547083736 >> 1921220194, 255)] + var3;
+              ((gn) this).field_j = dupTemp$8;
+              ((gn) this).field_k[var2] = dupTemp$8;
               var2++;
               continue L0;
             }
           }
         } else {
           this.a(104);
+          int fieldTemp$9 = ((gn) this).field_e + 1;
           ((gn) this).field_e = ((gn) this).field_e + 1;
-          ((gn) this).field_j = ((gn) this).field_j + (((gn) this).field_e + 1);
+          ((gn) this).field_j = ((gn) this).field_j + fieldTemp$9;
           var2 = 0;
           L2: while (true) {
             if (256 <= var2) {
@@ -252,10 +256,12 @@ final class gn {
                 }
               }
               ((gn) this).field_g = ((gn) this).field_g + ((gn) this).field_a[var2 + 128 & 255];
-              var4 = ((gn) this).field_j + ((gn) this).field_a[ie.a(var3 >> 144255010, 255)] - -((gn) this).field_g;
-              ((gn) this).field_a[var2] = ((gn) this).field_j + ((gn) this).field_a[ie.a(var3 >> 144255010, 255)] - -((gn) this).field_g;
-              ((gn) this).field_j = ((gn) this).field_a[ie.a(var4 >> -547083736 >> 1921220194, 255)] + var3;
-              ((gn) this).field_k[var2] = ((gn) this).field_a[ie.a(var4 >> -547083736 >> 1921220194, 255)] + var3;
+              int dupTemp$10 = ((gn) this).field_j + ((gn) this).field_a[ie.a(var3 >> 144255010, 255)] - -((gn) this).field_g;
+              var4 = dupTemp$10;
+              ((gn) this).field_a[var2] = dupTemp$10;
+              int dupTemp$11 = ((gn) this).field_a[ie.a(var4 >> -547083736 >> 1921220194, 255)] + var3;
+              ((gn) this).field_j = dupTemp$11;
+              ((gn) this).field_k[var2] = dupTemp$11;
               var2++;
               continue L2;
             }
@@ -268,22 +274,26 @@ final class gn {
           if (((gn) this).field_c == 0) {
             this.a(false);
             ((gn) this).field_c = 256;
+            int fieldTemp$4 = ((gn) this).field_c - 1;
             ((gn) this).field_c = ((gn) this).field_c - 1;
-            return ((gn) this).field_k[((gn) this).field_c - 1];
+            return ((gn) this).field_k[fieldTemp$4];
           } else {
+            int fieldTemp$5 = ((gn) this).field_c - 1;
             ((gn) this).field_c = ((gn) this).field_c - 1;
-            return ((gn) this).field_k[((gn) this).field_c - 1];
+            return ((gn) this).field_k[fieldTemp$5];
           }
         } else {
           ((gn) this).field_k = null;
           if (((gn) this).field_c != 0) {
+            int fieldTemp$6 = ((gn) this).field_c - 1;
             ((gn) this).field_c = ((gn) this).field_c - 1;
-            return ((gn) this).field_k[((gn) this).field_c - 1];
+            return ((gn) this).field_k[fieldTemp$6];
           } else {
             this.a(false);
             ((gn) this).field_c = 256;
+            int fieldTemp$7 = ((gn) this).field_c - 1;
             ((gn) this).field_c = ((gn) this).field_c - 1;
-            return ((gn) this).field_k[((gn) this).field_c - 1];
+            return ((gn) this).field_k[fieldTemp$7];
           }
         }
     }

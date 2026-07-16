@@ -135,9 +135,11 @@ final class v {
               continue L0;
             } else {
               ((v) this).field_f = new bl(var3);
+              return;
             }
           } else {
             ((v) this).field_f = new bl(var3);
+            return;
           }
         }
     }
@@ -169,15 +171,15 @@ final class v {
         int stackIn_4_0 = 0;
         int stackIn_5_0 = 0;
         int stackIn_5_1 = 0;
-        int stackIn_15_0 = 0;
-        int stackIn_16_0 = 0;
-        int stackIn_17_0 = 0;
-        int stackIn_17_1 = 0;
-        int stackOut_14_0 = 0;
-        int stackOut_16_0 = 0;
-        int stackOut_16_1 = 0;
-        int stackOut_15_0 = 0;
-        int stackOut_15_1 = 0;
+        int stackIn_19_0 = 0;
+        int stackIn_20_0 = 0;
+        int stackIn_21_0 = 0;
+        int stackIn_21_1 = 0;
+        int stackOut_18_0 = 0;
+        int stackOut_20_0 = 0;
+        int stackOut_20_1 = 0;
+        int stackOut_19_0 = 0;
+        int stackOut_19_1 = 0;
         int stackOut_2_0 = 0;
         int stackOut_4_0 = 0;
         int stackOut_4_1 = 0;
@@ -186,68 +188,68 @@ final class v {
         var5 = Chess.field_G;
         vl.field_A = kn.field_D;
         if (param0 == 31689) {
-          if (-256 != param1) {
-            if (100 <= param1) {
-              if (param1 <= 105) {
+          if (-256 == (param1 ^ -1)) {
+            L0: {
+              stackOut_18_0 = param0 ^ 13172;
+              stackIn_20_0 = stackOut_18_0;
+              stackIn_19_0 = stackOut_18_0;
+              if (-14 >= (cn.field_f ^ -1)) {
+                stackOut_20_0 = stackIn_20_0;
+                stackOut_20_1 = 0;
+                stackIn_21_0 = stackOut_20_0;
+                stackIn_21_1 = stackOut_20_1;
+                break L0;
+              } else {
+                stackOut_19_0 = stackIn_19_0;
+                stackOut_19_1 = 1;
+                stackIn_21_0 = stackOut_19_0;
+                stackIn_21_1 = stackOut_19_1;
+                break L0;
+              }
+            }
+            kf.field_j = cf.b(stackIn_21_0, stackIn_21_1 != 0);
+            var6 = null;
+            jc.a((byte) 98, (String[]) null);
+            return;
+          } else {
+            if (100 > param1) {
+              kf.field_j = sc.a(param2, param1, (byte) 113);
+              return;
+            } else {
+              if (param1 > 105) {
+                kf.field_j = sc.a(param2, param1, (byte) 113);
+                return;
+              } else {
                 var8 = param3;
                 jc.a((byte) 111, var8);
                 kf.field_j = a.a(param3, -101);
                 return;
-              } else {
-                kf.field_j = sc.a(param2, param1, (byte) 113);
-                return;
-              }
-            } else {
-              kf.field_j = sc.a(param2, param1, (byte) 113);
-              return;
-            }
-          } else {
-            L0: {
-              stackOut_14_0 = param0 ^ 13172;
-              stackIn_16_0 = stackOut_14_0;
-              stackIn_15_0 = stackOut_14_0;
-              if (-14 <= cn.field_f) {
-                stackOut_16_0 = stackIn_16_0;
-                stackOut_16_1 = 0;
-                stackIn_17_0 = stackOut_16_0;
-                stackIn_17_1 = stackOut_16_1;
-                break L0;
-              } else {
-                stackOut_15_0 = stackIn_15_0;
-                stackOut_15_1 = 1;
-                stackIn_17_0 = stackOut_15_0;
-                stackIn_17_1 = stackOut_15_1;
-                break L0;
               }
             }
-            kf.field_j = cf.b(stackIn_17_0, stackIn_17_1 != 0);
-            var6 = null;
-            jc.a((byte) 98, (String[]) null);
-            return;
           }
         } else {
           field_e = null;
-          if (-256 != param1) {
-            if (100 <= param1) {
-              if (param1 <= 105) {
+          if (-256 != (param1 ^ -1)) {
+            if (100 > param1) {
+              kf.field_j = sc.a(param2, param1, (byte) 113);
+              return;
+            } else {
+              if (param1 > 105) {
+                kf.field_j = sc.a(param2, param1, (byte) 113);
+                return;
+              } else {
                 var7 = param3;
                 jc.a((byte) 111, var7);
                 kf.field_j = a.a(param3, -101);
                 return;
-              } else {
-                kf.field_j = sc.a(param2, param1, (byte) 113);
-                return;
               }
-            } else {
-              kf.field_j = sc.a(param2, param1, (byte) 113);
-              return;
             }
           } else {
             L1: {
               stackOut_2_0 = param0 ^ 13172;
               stackIn_4_0 = stackOut_2_0;
               stackIn_3_0 = stackOut_2_0;
-              if (-14 <= cn.field_f) {
+              if (-14 >= (cn.field_f ^ -1)) {
                 stackOut_4_0 = stackIn_4_0;
                 stackOut_4_1 = 0;
                 stackIn_5_0 = stackOut_4_0;

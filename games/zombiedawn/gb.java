@@ -182,7 +182,7 @@ final class gb extends fb {
                               break L2;
                             } else {
                               var5 = (var4.field_h + ((gb) this).field_y) % 1572864;
-                              if (var4.field_h > var5) {
+                              if ((var4.field_h ^ -1) < (var5 ^ -1)) {
                                 ((gb) this).field_y = var4.field_h + (-var5 + ((gb) this).field_y);
                                 break L2;
                               } else {
@@ -247,12 +247,12 @@ final class gb extends fb {
             break L4;
           } else {
             var7 = null;
-            oi discarded$2 = gb.a((String) null, 58, (dj) null, (String) null, (dj) null);
+            oi discarded$3 = gb.a((String) null, 58, (dj) null, (String) null, (dj) null);
             break L4;
           }
         }
         L5: {
-          if (((gb) this).field_E <= -121) {
+          if ((((gb) this).field_E ^ -1) <= -121) {
             ((gb) this).field_E = 0;
             break L5;
           } else {
@@ -260,8 +260,9 @@ final class gb extends fb {
           }
         }
         L6: {
+          int fieldTemp$4 = ((gb) this).field_D;
           ((gb) this).field_D = ((gb) this).field_D + 1;
-          if (-6 < ((gb) this).field_D) {
+          if (-6 > (fieldTemp$4 ^ -1)) {
             ((gb) this).field_D = 0;
             var8 = (kd) (Object) ((gb) this).a((byte) -74, 36, 2);
             L7: while (true) {
@@ -274,7 +275,7 @@ final class gb extends fb {
                   } else {
                     if (dj.field_e.field_Q.b(-4149, ((gb) this).field_t)) {
                       L9: {
-                        fn discarded$3 = kh.a(9, false);
+                        fn discarded$5 = kh.a(9, false);
                         ck.a(((gb) this).field_t, 6836);
                         if (dj.field_e.field_q != 4) {
                           break L9;
@@ -297,7 +298,7 @@ final class gb extends fb {
                             if (cm.field_c != var8) {
                               break L9;
                             } else {
-                              if (((gb) this).field_t != 0) {
+                              if ((((gb) this).field_t ^ -1) != -1) {
                                 break L9;
                               } else {
                                 if (!var8.x(124)) {

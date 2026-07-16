@@ -68,7 +68,7 @@ final class ii {
     final static void a(int param0, int param1, boolean param2) {
         int var3 = 0;
         String var4 = null;
-        String var5 = null;
+        Object var5 = null;
         Object var6 = null;
         CharSequence var7 = null;
         if (param0 == -31668) {
@@ -97,23 +97,23 @@ final class ii {
                         L3: {
                           var5 = null;
                           if (ne.field_m == 0) {
-                            var5 = va.a(var4, param1, 51);
+                            var5 = (Object) (Object) va.a(var4, param1, 51);
                             break L3;
                           } else {
                             break L3;
                           }
                         }
                         L4: {
-                          if (-2 == ne.field_m) {
-                            var5 = ul.a((byte) 83, var4, param1);
+                          if (-2 == (ne.field_m ^ -1)) {
+                            var5 = (Object) (Object) ul.a((byte) 83, var4, param1);
                             break L4;
                           } else {
                             break L4;
                           }
                         }
                         L5: {
-                          if (-3 == ne.field_m) {
-                            var5 = jd.a(param1, var4, param0 ^ -31666);
+                          if (-3 == (ne.field_m ^ -1)) {
+                            var5 = (Object) (Object) jd.a(param1, var4, param0 ^ -31666);
                             break L5;
                           } else {
                             break L5;
@@ -121,7 +121,7 @@ final class ii {
                         }
                         L6: {
                           if (-4 == (ne.field_m ^ -1)) {
-                            var5 = ae.a(-3266, var4, var4, param1);
+                            var5 = (Object) (Object) ae.a(-3266, var4, var4, param1);
                             break L6;
                           } else {
                             break L6;
@@ -129,17 +129,15 @@ final class ii {
                         }
                         if (var5 != null) {
                           var6 = null;
-                          jh.a(0, var5, (String) null, 2, var4, true);
-                          ne.field_m = -1;
-                          sm.field_C = null;
-                          break L0;
+                          jh.a(0, (String) var5, (String) null, 2, var4, true);
+                          break L1;
                         } else {
-                          ne.field_m = -1;
-                          sm.field_C = null;
-                          break L0;
+                          break L1;
                         }
                       } else {
-                        break L1;
+                        ne.field_m = -1;
+                        sm.field_C = null;
+                        break L0;
                       }
                     }
                   }

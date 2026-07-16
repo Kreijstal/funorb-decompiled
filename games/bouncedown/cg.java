@@ -12,13 +12,16 @@ final class cg {
         int stackOut_3_0 = 0;
         int stackOut_1_0 = 0;
         try {
-          if (param0 == 1) {
-            stackOut_3_0 = 1;
-            stackIn_4_0 = stackOut_3_0;
-          } else {
-            stackOut_1_0 = 0;
-            stackIn_2_0 = stackOut_1_0;
-            return stackIn_2_0 != 0;
+          L0: {
+            if (param0 == 1) {
+              stackOut_3_0 = 1;
+              stackIn_4_0 = stackOut_3_0;
+              break L0;
+            } else {
+              stackOut_1_0 = 0;
+              stackIn_2_0 = stackOut_1_0;
+              return stackIn_2_0 != 0;
+            }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -114,7 +114,7 @@ abstract class ub extends wj {
     }
 
     final static void a(int param0, byte param1) {
-        hn var2 = null;
+        Object var2 = null;
         hn var2_ref = null;
         int var3 = 0;
         hn var4 = null;
@@ -147,7 +147,7 @@ abstract class ub extends wj {
           L2: while (true) {
             if (var2_ref == null) {
               var5 = new hn(4, new int[1]);
-              var2 = var5;
+              var2_ref = var5;
               ii.a(var5, 102);
               return;
             } else {
@@ -241,76 +241,31 @@ abstract class ub extends wj {
     }
 
     boolean k(int param0) {
-        int var2 = 0;
-        int var3 = 0;
-        int stackIn_10_0 = 0;
-        int stackIn_22_0 = 0;
-        int stackOut_21_0 = 0;
-        int stackOut_20_0 = 0;
-        int stackOut_9_0 = 0;
-        int stackOut_8_0 = 0;
-        var2 = this.b(true);
-        var3 = -((ub) this).field_F + var2;
-        if (var3 >= -1) {
-          L0: {
-            if (param0 > var3) {
-              ((ub) this).field_F = ((ub) this).field_F + (1 + (var3 - 16)) / 16;
-              break L0;
-            } else {
-              break L0;
-            }
-          }
-          if (0 == ((ub) this).field_F) {
-            if (-1 != (var2 ^ -1)) {
-              return false;
-            } else {
-              L1: {
-                if (((ub) this).field_C) {
-                  stackOut_21_0 = 0;
-                  stackIn_22_0 = stackOut_21_0;
-                  break L1;
-                } else {
-                  stackOut_20_0 = 1;
-                  stackIn_22_0 = stackOut_20_0;
-                  break L1;
-                }
-              }
-              return stackIn_22_0 != 0;
-            }
-          } else {
-            return false;
-          }
-        } else {
-          L2: {
+        int var2 = this.b(true);
+        int var3 = -((ub) this).field_F + var2;
+        if ((var3 ^ -1) < -1) {
             ((ub) this).field_F = ((ub) this).field_F + (var3 + 8 - 1) / 8;
-            if (param0 > var3) {
-              ((ub) this).field_F = ((ub) this).field_F + (1 + (var3 - 16)) / 16;
-              break L2;
-            } else {
-              break L2;
+            if (!(param0 >= (var3 ^ -1))) {
+                ((ub) this).field_F = ((ub) this).field_F + (1 + (var3 - 16)) / 16;
             }
-          }
-          if (0 == ((ub) this).field_F) {
-            if (-1 != var2) {
-              return false;
-            } else {
-              L3: {
-                if (((ub) this).field_C) {
-                  stackOut_9_0 = 0;
-                  stackIn_10_0 = stackOut_9_0;
-                  break L3;
-                } else {
-                  stackOut_8_0 = 1;
-                  stackIn_10_0 = stackOut_8_0;
-                  break L3;
-                }
-              }
-              return stackIn_10_0 != 0;
+            if (0 != ((ub) this).field_F) {
+                return false;
             }
-          } else {
-            return false;
-          }
+            if (-1 != (var2 ^ -1)) {
+                return false;
+            }
+            return !((ub) this).field_C ? true : false;
         }
+        if (!(param0 >= (var3 ^ -1))) {
+            ((ub) this).field_F = ((ub) this).field_F + (1 + (var3 - 16)) / 16;
+        }
+        if (0 != ((ub) this).field_F) {
+            return false;
+        }
+        if (-1 != (var2 ^ -1)) {
+            return false;
+        }
+        return !((ub) this).field_C ? true : false;
     }
 
     ub(se param0, int param1, int param2) {

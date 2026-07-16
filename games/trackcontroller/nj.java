@@ -95,22 +95,30 @@ final class nj {
         int var2 = 0;
         int var3 = var5.length;
         while (var3 > var2) {
+            int incrementValue$0 = var2;
             var2++;
-            var5[var2] = 0;
+            var5[incrementValue$0] = 0;
+            int incrementValue$1 = var2;
             var2++;
-            var5[var2] = 0;
+            var5[incrementValue$1] = 0;
+            int incrementValue$2 = var2;
             var2++;
-            var5[var2] = 0;
+            var5[incrementValue$2] = 0;
+            int incrementValue$3 = var2;
             var2++;
-            var5[var2] = 0;
+            var5[incrementValue$3] = 0;
+            int incrementValue$4 = var2;
             var2++;
-            var5[var2] = 0;
+            var5[incrementValue$4] = 0;
+            int incrementValue$5 = var2;
             var2++;
-            var5[var2] = 0;
+            var5[incrementValue$5] = 0;
+            int incrementValue$6 = var2;
             var2++;
-            var5[var2] = 0;
+            var5[incrementValue$6] = 0;
+            int incrementValue$7 = var2;
             var2++;
-            var5[var2] = 0;
+            var5[incrementValue$7] = 0;
         }
         if (param0 != 125) {
             field_d = null;
@@ -137,14 +145,16 @@ final class nj {
                     break L2;
                   }
                 }
-                rk.field_T[param0.a((byte) -94)] = rk.field_T[param0.a((byte) -94)] + 1;
+                int dupTemp$4 = param0.a((byte) -94);
+                rk.field_T[dupTemp$4] = rk.field_T[dupTemp$4] + 1;
                 var2 = 0;
                 var3 = 0;
                 L3: while (true) {
                   if (var3 >= rk.field_ab) {
                     rk.field_ab = var2;
+                    int fieldTemp$5 = rk.field_ab;
                     rk.field_ab = rk.field_ab + 1;
-                    rl.field_C[rk.field_ab] = param0;
+                    rl.field_C[fieldTemp$5] = param0;
                     return;
                   } else {
                     L4: {
@@ -161,15 +171,17 @@ final class nj {
                         break L4;
                       }
                     }
+                    int incrementValue$6 = var2;
                     var2++;
-                    rl.field_C[var2] = rl.field_C[var3];
+                    rl.field_C[incrementValue$6] = rl.field_C[var3];
                     var3++;
                     continue L3;
                   }
                 }
               } else {
                 if (rl.field_C[var2].field_e == param0.field_e) {
-                  rk.field_T[rl.field_C[var2].a((byte) -111)] = rk.field_T[rl.field_C[var2].a((byte) -111)] + 1;
+                  int dupTemp$7 = rl.field_C[var2].a((byte) -111);
+                  rk.field_T[dupTemp$7] = rk.field_T[dupTemp$7] + 1;
                   var2++;
                   continue L1;
                 } else {

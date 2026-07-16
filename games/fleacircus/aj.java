@@ -153,17 +153,24 @@ final class aj extends pa {
             }
             try {
               L3: {
-                if (param1 != null) {
-                  param2.field_a.postEvent((java.awt.AWTEvent) (Object) new java.awt.event.ActionEvent(param1, 1001, "dummy"));
-                  break L3;
-                } else {
-                  break L3;
+                L4: {
+                  if (param1 != null) {
+                    param2.field_a.postEvent((java.awt.AWTEvent) (Object) new java.awt.event.ActionEvent(param1, 1001, "dummy"));
+                    break L4;
+                  } else {
+                    break L4;
+                  }
                 }
+                break L3;
               }
-            } catch (java.lang.Exception decompiledCaughtParameter) {
-              decompiledCaughtException = decompiledCaughtParameter;
+            } catch (java.lang.Exception decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              L5: {
+                var3 = (Exception) (Object) decompiledCaughtException;
+                break L5;
+              }
             }
-            var3 = (Exception) (Object) decompiledCaughtException;
+            return;
           }
         }
     }
@@ -171,70 +178,30 @@ final class aj extends pa {
     final static void g(int param0) {
         Object var1 = null;
         Throwable var2 = null;
-        int statePc = 0;
-        Throwable caughtException = null;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    var1 = (Object) (Object) sg.field_i;
-                    // monitorenter sg.field_i
-                    statePc = 1;
-                    continue stateLoop;
-                }
-                case 1: {
-                    try {
-                        kc.field_f = lk.field_J;
-                        m.field_a = m.field_a + 1;
-                        ag.field_f = gd.field_a;
-                        kc.field_b = vf.field_p;
-                        pl.field_c = ag.field_a;
-                        ag.field_a = false;
-                        jk.field_r = vk.field_O;
-                        pb.field_d = fb.field_b;
-                        ob.field_e = th.field_s;
-                        vk.field_O = 0;
-                        // monitorexit var1
-                        statePc = 5;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_1) {
-                        caughtException = stateCaught_1;
-                        statePc = 3;
-                        continue stateLoop;
-                    }
-                }
-                case 3: {
-                    try {
-                        var2 = caughtException;
-                        // monitorexit var1
-                        statePc = 4;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_3) {
-                        caughtException = stateCaught_3;
-                        statePc = 3;
-                        continue stateLoop;
-                    }
-                }
-                case 4: {
-                    throw (RuntimeException) (Object) var2;
-                }
-                case 5: {
-                    if (param0 == 28003) {
-                        statePc = 7;
-                    } else {
-                        statePc = 6;
-                    }
-                    continue stateLoop;
-                }
-                case 6: {
-                    field_x = null;
-                    statePc = 7;
-                    continue stateLoop;
-                }
-                case 7: {
-                    return;
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
-            }
+        Throwable decompiledCaughtException = null;
+        var1 = (Object) (Object) sg.field_i;
+        synchronized (var1) {
+          L0: {
+            kc.field_f = lk.field_J;
+            m.field_a = m.field_a + 1;
+            ag.field_f = gd.field_a;
+            kc.field_b = vf.field_p;
+            pl.field_c = ag.field_a;
+            ag.field_a = false;
+            jk.field_r = vk.field_O;
+            pb.field_d = fb.field_b;
+            ob.field_e = th.field_s;
+            vk.field_O = 0;
+            break L0;
+          }
+        }
+        L1: {
+          if (param0 == 28003) {
+            break L1;
+          } else {
+            field_x = null;
+            break L1;
+          }
         }
     }
 
@@ -254,7 +221,7 @@ final class aj extends pa {
     }
 
     final static String a(CharSequence[] param0, int param1, byte param2, int param3) {
-        CharSequence var4_ref = null;
+        CharSequence var4_ref_CharSequence = null;
         int var4 = 0;
         int var5 = 0;
         int var6_int = 0;
@@ -268,8 +235,8 @@ final class aj extends pa {
         if (-1 != (param3 ^ -1)) {
           if (1 == param3) {
             var10 = param0[param1];
-            var4_ref = var10;
-            if (var4_ref != null) {
+            var4_ref_CharSequence = var10;
+            if (var4_ref_CharSequence != null) {
               return ((Object) (Object) var10).toString();
             } else {
               return "null";

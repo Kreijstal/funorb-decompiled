@@ -9,7 +9,7 @@ abstract class pe {
     public static void a(byte param0) {
         field_b = null;
         if (param0 >= -37) {
-            field_a = (int[]) null;
+            field_a = null;
             field_a = null;
             return;
         }

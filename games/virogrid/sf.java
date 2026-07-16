@@ -77,8 +77,9 @@ final class sf extends fd implements ta {
           if (var8 <= var9) {
             L2: {
               if (var7 < var8) {
+                int incrementValue$3 = var6;
                 var6++;
-                param4[var6] = param1.substring(var7, var8).trim();
+                param4[incrementValue$3] = param1.substring(var7, var8).trim();
                 break L2;
               } else {
                 break L2;
@@ -112,16 +113,18 @@ final class sf extends fd implements ta {
               if (var12 < param3) {
                 break L4;
               } else {
+                int incrementValue$4 = var6;
                 var6++;
-                param4[var6] = var11;
+                param4[incrementValue$4] = var11;
                 var7 = var9 - -1;
                 break L4;
               }
             }
             if (var10 == 62) {
               if (param1.regionMatches(-3 + var9, "<br>", 0, 4)) {
+                int incrementValue$5 = var6;
                 var6++;
-                param4[var6] = param1.substring(var7, -3 + var9).trim();
+                param4[incrementValue$5] = param1.substring(var7, -3 + var9).trim();
                 var7 = 1 + var9;
                 var9++;
                 continue L1;
@@ -191,48 +194,28 @@ final class sf extends fd implements ta {
         try {
             java.net.URL var2 = null;
             Exception var2_ref = null;
-            int statePc = 0;
-            Throwable caughtException = null;
-            stateLoop: while (true) {
-                switch (statePc) {
-                    case 0: {
-                        try {
-                            var2 = new java.net.URL(param1.getCodeBase(), "toserverlist.ws");
-                            param1.getAppletContext().showDocument(og.a(-1, param1, var2), "_top");
-                            if (param0) {
-                                statePc = 4;
-                            } else {
-                                statePc = 1;
-                            }
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_0) {
-                            caughtException = stateCaught_0;
-                            statePc = 3;
-                            continue stateLoop;
-                        }
-                    }
-                    case 1: {
-                        try {
-                            field_M = -0.07399320021683413;
-                            statePc = 4;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_1) {
-                            caughtException = stateCaught_1;
-                            statePc = 3;
-                            continue stateLoop;
-                        }
-                    }
-                    case 3: {
-                        var2_ref = (Exception) (Object) caughtException;
-                        var2_ref.printStackTrace();
-                        statePc = 4;
-                        continue stateLoop;
-                    }
-                    case 4: {
-                        return;
-                    }
-                    default: throw new IllegalStateException("invalid CFG state " + statePc);
+            Throwable decompiledCaughtException = null;
+            try {
+              L0: {
+                L1: {
+                  var2 = new java.net.URL(param1.getCodeBase(), "toserverlist.ws");
+                  param1.getAppletContext().showDocument(og.a(-1, param1, var2), "_top");
+                  if (param0) {
+                    break L1;
+                  } else {
+                    field_M = -0.07399320021683413;
+                    break L1;
+                  }
                 }
+                break L0;
+              }
+            } catch (java.lang.Exception decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              L2: {
+                var2_ref = (Exception) (Object) decompiledCaughtException;
+                var2_ref.printStackTrace();
+                break L2;
+              }
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;

@@ -109,6 +109,7 @@ final class ha {
           if (var2 >= 10) {
             ((ha) this).field_a = param0.c((byte) -7);
             ((ha) this).field_c = param0.c((byte) -7);
+            return;
           } else {
             var3 = param0.h(255);
             if (var3 != 0) {

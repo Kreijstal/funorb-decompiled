@@ -88,7 +88,7 @@ abstract class oh extends pb {
 
     final static mg a(boolean param0, String param1, boolean param2, String param3) {
         long var4 = 0L;
-        String var6 = null;
+        Object var6 = null;
         CharSequence var7 = null;
         L0: {
           var4 = 0L;
@@ -98,15 +98,15 @@ abstract class oh extends pb {
             var4 = ck.a((byte) -119, var7);
             break L0;
           } else {
-            var6 = param3;
+            var6 = (Object) (Object) param3;
             break L0;
           }
         }
         if (param2) {
           field_e = -111;
-          return rn.a(0, param0, var4, param1, var6);
+          return rn.a(0, param0, var4, param1, (String) var6);
         } else {
-          return rn.a(0, param0, var4, param1, var6);
+          return rn.a(0, param0, var4, param1, (String) var6);
         }
     }
 

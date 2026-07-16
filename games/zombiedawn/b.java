@@ -18,7 +18,7 @@ final class b extends le {
         long var2_long = 0L;
         int var4 = 0;
         int var6 = 0;
-        bg var6_ref = null;
+        bg var6_ref_bg = null;
         int var7 = 0;
         byte[] var8 = null;
         int var10 = 0;
@@ -97,8 +97,8 @@ final class b extends le {
                   var6 = 0;
                   L1: while (true) {
                     if (var70.length <= var6) {
-                      var6_ref = new bg((long)var4 + var2_long, dp.field_e.field_j, var71);
-                      dj.field_m.a(0, (le) (Object) var6_ref);
+                      var6_ref_bg = new bg((long)var4 + var2_long, dp.field_e.field_j, var71);
+                      dj.field_m.a(0, (le) (Object) var6_ref_bg);
                       dp.field_e.field_j = 0;
                       break L0;
                     } else {
@@ -152,8 +152,8 @@ final class b extends le {
                   var6 = 0;
                   L5: while (true) {
                     if (var72.length <= var6) {
-                      var6_ref = new bg((long)var4 + var2_long, dp.field_e.field_j, var73);
-                      dj.field_m.a(0, (le) (Object) var6_ref);
+                      var6_ref_bg = new bg((long)var4 + var2_long, dp.field_e.field_j, var73);
+                      dj.field_m.a(0, (le) (Object) var6_ref_bg);
                       dp.field_e.field_j = 0;
                       break L4;
                     } else {
@@ -209,8 +209,8 @@ final class b extends le {
                 var6 = 0;
                 L9: while (true) {
                   if (var64.length <= var6) {
-                    var6_ref = new bg((long)var4 + var2_long, dp.field_e.field_j, var65);
-                    dj.field_m.a(0, (le) (Object) var6_ref);
+                    var6_ref_bg = new bg((long)var4 + var2_long, dp.field_e.field_j, var65);
+                    dj.field_m.a(0, (le) (Object) var6_ref_bg);
                     dp.field_e.field_j = 0;
                     break L8;
                   } else {

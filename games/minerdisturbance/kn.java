@@ -11,26 +11,66 @@ class kn extends fe implements rk {
     ta field_G;
 
     boolean a(char param0, fe param1, byte param2, int param3) {
-        int var7 = MinerDisturbance.field_ab;
-        hh var9 = new hh(((kn) this).field_G);
-        fe var8 = (fe) (Object) var9.d(param2 + -19785);
-        while (var8 != null) {
-            // ifeq L92
-            if (var8.k(param2 + -5)) {
-                if (var8.a(param0, param1, (byte) -79, param3)) {
-                    return true;
+        int var6 = 0;
+        int var7 = 0;
+        fe var8 = null;
+        hh var9 = null;
+        boolean stackIn_13_0 = false;
+        boolean stackOut_12_0 = false;
+        boolean stackOut_11_0 = false;
+        var7 = MinerDisturbance.field_ab;
+        var9 = new hh(((kn) this).field_G);
+        var8 = (fe) (Object) var9.d(param2 + -19785);
+        L0: while (true) {
+          L1: {
+            if (var8 == null) {
+              break L1;
+            } else {
+              if (!var8.c(123)) {
+                break L1;
+              } else {
+                L2: {
+                  if (!var8.k(param2 + -5)) {
+                    break L2;
+                  } else {
+                    if (!var8.a(param0, param1, (byte) -79, param3)) {
+                      break L2;
+                    } else {
+                      return true;
+                    }
+                  }
                 }
+                var8 = (fe) (Object) var9.a(12537);
+                continue L0;
+              }
             }
-            var8 = (fe) (Object) var9.a(12537);
+          }
+          L3: {
+            if (param2 == -79) {
+              break L3;
+            } else {
+              ((kn) this).field_G = null;
+              break L3;
+            }
+          }
+          var6 = param3;
+          if ((var6 ^ -1) != -81) {
+            return false;
+          } else {
+            L4: {
+              if (qd.field_O[81]) {
+                stackOut_12_0 = ((kn) this).b(param1, param2 ^ -79);
+                stackIn_13_0 = stackOut_12_0;
+                break L4;
+              } else {
+                stackOut_11_0 = ((kn) this).a(param1, (byte) 12);
+                stackIn_13_0 = stackOut_11_0;
+                break L4;
+              }
+            }
+            return stackIn_13_0;
+          }
         }
-        if (param2 != -79) {
-            ((kn) this).field_G = null;
-        }
-        int var6 = param3;
-        if ((var6 ^ -1) == -81) {
-            return !qd.field_O[81] ? ((kn) this).a(param1, (byte) 12) : ((kn) this).b(param1, param2 ^ -79);
-        }
-        return false;
     }
 
     final static String a(int param0) {
@@ -87,16 +127,35 @@ class kn extends fe implements rk {
     }
 
     final void a(int param0, int param1, int param2, int param3, fe param4, int param5) {
-        int var9 = MinerDisturbance.field_ab;
-        hh var7 = new hh(((kn) this).field_G);
-        fe var8 = (fe) (Object) var7.d(-19864);
-        while (var8 != null) {
-            // ifeq L92
-            var8.a(param0 + ((kn) this).field_u, param1, param2, param3 - -((kn) this).field_t, param4, param5 + 0);
-            var8 = (fe) (Object) var7.a(12537);
-        }
-        if (param5 != 0) {
-            field_D = null;
+        hh var7 = null;
+        fe var8 = null;
+        int var9 = 0;
+        var9 = MinerDisturbance.field_ab;
+        var7 = new hh(((kn) this).field_G);
+        var8 = (fe) (Object) var7.d(-19864);
+        L0: while (true) {
+          L1: {
+            if (var8 == null) {
+              break L1;
+            } else {
+              if (!var8.c(param5 + 127)) {
+                break L1;
+              } else {
+                var8.a(param0 + ((kn) this).field_u, param1, param2, param3 - -((kn) this).field_t, param4, param5 + 0);
+                var8 = (fe) (Object) var7.a(12537);
+                continue L0;
+              }
+            }
+          }
+          L2: {
+            if (param5 == 0) {
+              break L2;
+            } else {
+              field_D = null;
+              break L2;
+            }
+          }
+          return;
         }
     }
 
@@ -146,17 +205,32 @@ class kn extends fe implements rk {
     }
 
     void a(int param0, int param1, byte param2, fe param3) {
-        int var7 = MinerDisturbance.field_ab;
+        hh var5 = null;
+        fe var6 = null;
+        int var7 = 0;
+        var7 = MinerDisturbance.field_ab;
         super.a(param0, param1, (byte) 110, param3);
-        if (param2 <= 49) {
+        if (param2 > 49) {
+          var5 = new hh(((kn) this).field_G);
+          var6 = (fe) (Object) var5.d(-19864);
+          L0: while (true) {
+            L1: {
+              if (var6 == null) {
+                break L1;
+              } else {
+                if (!var6.c(123)) {
+                  break L1;
+                } else {
+                  var6.a(((kn) this).field_t + param0, ((kn) this).field_u + param1, (byte) 90, param3);
+                  var6 = (fe) (Object) var5.a(12537);
+                  continue L0;
+                }
+              }
+            }
             return;
-        }
-        hh var5 = new hh(((kn) this).field_G);
-        fe var6 = (fe) (Object) var5.d(-19864);
-        while (var6 != null) {
-            // ifeq L100
-            var6.a(((kn) this).field_t + param0, ((kn) this).field_u + param1, (byte) 90, param3);
-            var6 = (fe) (Object) var5.a(12537);
+          }
+        } else {
+          return;
         }
     }
 
@@ -257,23 +331,43 @@ class kn extends fe implements rk {
     }
 
     final boolean a(int param0, int param1, int param2, int param3, byte param4, fe param5, int param6) {
-        int var10 = MinerDisturbance.field_ab;
-        hh var8 = new hh(((kn) this).field_G);
-        fe var9 = (fe) (Object) var8.d(-19864);
-        while (var9 != null) {
-            // ifeq L93
-            if (var9.k(35)) {
-                if (var9.a(param0, param1, param2, param3, (byte) -100, param5, param6)) {
-                    return true;
+        hh var8 = null;
+        fe var9 = null;
+        int var10 = 0;
+        var10 = MinerDisturbance.field_ab;
+        var8 = new hh(((kn) this).field_G);
+        var9 = (fe) (Object) var8.d(-19864);
+        L0: while (true) {
+          L1: {
+            if (var9 == null) {
+              break L1;
+            } else {
+              if (!var9.c(126)) {
+                break L1;
+              } else {
+                L2: {
+                  if (!var9.k(35)) {
+                    break L2;
+                  } else {
+                    if (!var9.a(param0, param1, param2, param3, (byte) -100, param5, param6)) {
+                      break L2;
+                    } else {
+                      return true;
+                    }
+                  }
                 }
+                var9 = (fe) (Object) var8.a(12537);
+                continue L0;
+              }
             }
-            var9 = (fe) (Object) var8.a(12537);
-        }
-        if (param4 > -53) {
+          }
+          if (param4 <= -53) {
+            return false;
+          } else {
             ((kn) this).field_G = null;
             return false;
+          }
         }
-        return false;
     }
 
     final void g(int param0) {
@@ -304,21 +398,36 @@ class kn extends fe implements rk {
     }
 
     final boolean a(int param0, int param1, int param2, int param3, int param4, fe param5, int param6) {
-        int var10 = MinerDisturbance.field_ab;
-        hh var8 = new hh(((kn) this).field_G);
-        fe var9 = (fe) (Object) var8.d(-19864);
-        while (var9 != null) {
-            // ifeq L96
-            if (var9.a(param0, param1 - -((kn) this).field_t, 0, param3, param4, param5, ((kn) this).field_u + param6)) {
-                return true;
+        hh var8 = null;
+        fe var9 = null;
+        int var10 = 0;
+        var10 = MinerDisturbance.field_ab;
+        var8 = new hh(((kn) this).field_G);
+        var9 = (fe) (Object) var8.d(-19864);
+        L0: while (true) {
+          L1: {
+            if (var9 == null) {
+              break L1;
+            } else {
+              if (!var9.c(param2 + 124)) {
+                break L1;
+              } else {
+                if (!var9.a(param0, param1 - -((kn) this).field_t, 0, param3, param4, param5, ((kn) this).field_u + param6)) {
+                  var9 = (fe) (Object) var8.a(12537);
+                  continue L0;
+                } else {
+                  return true;
+                }
+              }
             }
-            var9 = (fe) (Object) var8.a(12537);
-        }
-        if (param2 != 0) {
+          }
+          if (param2 == 0) {
+            return false;
+          } else {
             field_D = null;
             return false;
+          }
         }
-        return false;
     }
 
     final static String a(String param0, byte param1, java.applet.Applet param2) {
@@ -330,144 +439,53 @@ class kn extends fe implements rk {
             int var6 = 0;
             int var7 = 0;
             String stackIn_9_0 = null;
+            Throwable decompiledCaughtException = null;
             String stackOut_8_0 = null;
-            int statePc = 0;
-            Throwable caughtException = null;
-            stateLoop: while (true) {
-                switch (statePc) {
-                    case 0: {
-                        var7 = MinerDisturbance.field_ab;
-                        statePc = 1;
-                        continue stateLoop;
-                    }
-                    case 1: {
-                        try {
-                            var3 = (String) lk.a((byte) 18, "getcookies", param2);
-                            var4 = h.a(';', true, var3);
-                            if (param1 == 114) {
-                                statePc = 3;
-                            } else {
-                                statePc = 2;
-                            }
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_1) {
-                            caughtException = stateCaught_1;
-                            statePc = 12;
-                            continue stateLoop;
-                        }
-                    }
-                    case 2: {
-                        try {
-                            field_D = null;
-                            statePc = 3;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_2) {
-                            caughtException = stateCaught_2;
-                            statePc = 12;
-                            continue stateLoop;
-                        }
-                    }
-                    case 3: {
-                        try {
-                            var5 = 0;
-                            statePc = 4;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_3) {
-                            caughtException = stateCaught_3;
-                            statePc = 12;
-                            continue stateLoop;
-                        }
-                    }
-                    case 4: {
-                        try {
-                            if (var5 >= var4.length) {
-                                statePc = 13;
-                            } else {
-                                statePc = 5;
-                            }
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_4) {
-                            caughtException = stateCaught_4;
-                            statePc = 12;
-                            continue stateLoop;
-                        }
-                    }
-                    case 5: {
-                        try {
-                            var6 = var4[var5].indexOf('=');
-                            if (0 > var6) {
-                                statePc = 10;
-                            } else {
-                                statePc = 6;
-                            }
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_5) {
-                            caughtException = stateCaught_5;
-                            statePc = 12;
-                            continue stateLoop;
-                        }
-                    }
-                    case 6: {
-                        try {
-                            if (var4[var5].substring(0, var6).trim().equals((Object) (Object) param0)) {
-                                statePc = 8;
-                            } else {
-                                statePc = 7;
-                            }
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_6) {
-                            caughtException = stateCaught_6;
-                            statePc = 12;
-                            continue stateLoop;
-                        }
-                    }
-                    case 7: {
-                        try {
-                            statePc = 10;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_7) {
-                            caughtException = stateCaught_7;
-                            statePc = 12;
-                            continue stateLoop;
-                        }
-                    }
-                    case 8: {
-                        try {
-                            stackOut_8_0 = var4[var5].substring(1 + var6).trim();
-                            stackIn_9_0 = stackOut_8_0;
-                            statePc = 9;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_8) {
-                            caughtException = stateCaught_8;
-                            statePc = 12;
-                            continue stateLoop;
-                        }
-                    }
-                    case 9: {
-                        return stackIn_9_0;
-                    }
-                    case 10: {
-                        try {
-                            var5++;
-                            statePc = 4;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_10) {
-                            caughtException = stateCaught_10;
-                            statePc = 12;
-                            continue stateLoop;
-                        }
-                    }
-                    case 12: {
-                        var3_ref = caughtException;
-                        statePc = 13;
-                        continue stateLoop;
-                    }
-                    case 13: {
-                        return null;
-                    }
-                    default: throw new IllegalStateException("invalid CFG state " + statePc);
+            var7 = MinerDisturbance.field_ab;
+            try {
+              L0: {
+                L1: {
+                  var3 = (String) lk.a((byte) 18, "getcookies", param2);
+                  var4 = h.a(';', true, var3);
+                  if (param1 == 114) {
+                    break L1;
+                  } else {
+                    field_D = null;
+                    break L1;
+                  }
                 }
+                var5 = 0;
+                L2: while (true) {
+                  if (var5 >= var4.length) {
+                    break L0;
+                  } else {
+                    L3: {
+                      var6 = var4[var5].indexOf('=');
+                      if (0 > var6) {
+                        break L3;
+                      } else {
+                        if (var4[var5].substring(0, var6).trim().equals((Object) (Object) param0)) {
+                          stackOut_8_0 = var4[var5].substring(1 + var6).trim();
+                          stackIn_9_0 = stackOut_8_0;
+                          return stackIn_9_0;
+                        } else {
+                          break L3;
+                        }
+                      }
+                    }
+                    var5++;
+                    continue L2;
+                  }
+                }
+              }
+            } catch (java.lang.Throwable decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              L4: {
+                var3_ref = decompiledCaughtException;
+                break L4;
+              }
             }
+            return null;
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {

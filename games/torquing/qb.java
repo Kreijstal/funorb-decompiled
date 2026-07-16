@@ -216,7 +216,7 @@ final class qb {
         int stackOut_22_0 = 0;
         int stackOut_21_0 = 0;
         L0: {
-          int discarded$1 = ho.c(24);
+          int discarded$2 = ho.c(24);
           ((qb) this).field_d = ho.c(16);
           ((qb) this).field_a = ho.c(24);
           ((qb) this).field_e = new int[((qb) this).field_a];
@@ -283,8 +283,9 @@ final class qb {
                     var3_int++;
                     continue L5;
                   } else {
+                    int incrementValue$3 = var2;
                     var2++;
-                    ((qb) this).field_e[var2] = var3_int;
+                    ((qb) this).field_e[incrementValue$3] = var3_int;
                     var5++;
                     continue L6;
                   }

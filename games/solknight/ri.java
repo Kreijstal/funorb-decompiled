@@ -158,8 +158,9 @@ final class ri implements j {
                             break L3;
                           }
                         }
+                        int incrementValue$1 = var8;
                         var8++;
-                        pd.field_e[var8] = var12;
+                        pd.field_e[incrementValue$1] = var12;
                         var11++;
                         continue L1;
                       } else {

@@ -133,25 +133,41 @@ final class ri {
     }
 
     ri(File param0, String param1, long param2) throws IOException {
-        if (-1L == param2) {
+        int var5 = 0;
+        L0: {
+          if (-1L != param2) {
+            break L0;
+          } else {
             param2 = 9223372036854775807L;
+            break L0;
+          }
         }
-        if ((param2 ^ -1L) > (param0.length() ^ -1L)) {
-            boolean discarded$0 = param0.delete();
+        L1: {
+          if ((param2 ^ -1L) <= (param0.length() ^ -1L)) {
+            break L1;
+          } else {
+            boolean discarded$2 = param0.delete();
+            break L1;
+          }
         }
         ((ri) this).field_c = new RandomAccessFile(param0, param1);
         ((ri) this).field_e = param2;
         ((ri) this).field_d = 0L;
-        int var5 = ((ri) this).field_c.read();
-        if ((var5 ^ -1) != 0) {
-            // ifne L115
+        var5 = ((ri) this).field_c.read();
+        if ((var5 ^ -1) == 0) {
+          ((ri) this).field_c.seek(0L);
+          return;
+        } else {
+          if (param1.equals((Object) (Object) "r")) {
+            ((ri) this).field_c.seek(0L);
+            return;
+          } else {
             ((ri) this).field_c.seek(0L);
             ((ri) this).field_c.write(var5);
-        } else {
             ((ri) this).field_c.seek(0L);
-            ((ri) this).field_c.seek(0L);
+            return;
+          }
         }
-        ((ri) this).field_c.seek(0L);
     }
 
     final static void a(nj param0, int param1, byte param2) {

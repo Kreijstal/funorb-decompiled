@@ -22,8 +22,9 @@ final class jj {
               return;
             } else {
               var1.f(8, -65);
+              int fieldTemp$2 = var1.field_l + 1;
               var1.field_l = var1.field_l + 1;
-              var2 = var1.field_l + 1;
+              var2 = fieldTemp$2;
               de.a(var1, (byte) 67);
               qn.field_U.a(var1.field_l + -var2, -1);
               continue L0;
@@ -36,8 +37,9 @@ final class jj {
               return;
             } else {
               var1.f(8, -65);
+              int fieldTemp$3 = var1.field_l + 1;
               var1.field_l = var1.field_l + 1;
-              var2 = var1.field_l + 1;
+              var2 = fieldTemp$3;
               de.a(var1, (byte) 67);
               qn.field_U.a(var1.field_l + -var2, -1);
               continue L1;

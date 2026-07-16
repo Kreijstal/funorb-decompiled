@@ -25,8 +25,9 @@ final class ln extends hd {
                 var11++;
                 continue L0;
               } else {
+                int incrementValue$66 = param3;
                 param3++;
-                var13 = param1[param3];
+                var13 = param1[incrementValue$66];
                 if (var13 == 0) {
                   param4++;
                   var12++;
@@ -34,8 +35,9 @@ final class ln extends hd {
                 } else {
                   var13 = param2[var13 & 255];
                   var14 = param0[param4];
+                  int incrementValue$67 = param4;
                   param4++;
-                  param0[param4] = ((var13 & 16711935) * param9 + (var14 & 16711935) * var10 & -16711936) + ((var13 & 65280) * param9 + (var14 & 65280) * var10 & 16711680) >> 8;
+                  param0[incrementValue$67] = ((var13 & 16711935) * param9 + (var14 & 16711935) * var10 & -16711936) + ((var13 & 65280) * param9 + (var14 & 65280) * var10 & 16711680) >> 8;
                   var12++;
                   continue L1;
                 }
@@ -292,21 +294,24 @@ final class ln extends hd {
                 param10++;
                 continue L0;
               } else {
+                int incrementValue$211 = param2;
                 param2++;
-                param0 = param1[param2];
+                param0 = param1[incrementValue$211];
                 param4--;
                 if (param0 == 0) {
                   param3++;
                   continue L2;
                 } else {
                   if (param0 != -1) {
+                    int incrementValue$212 = param3;
                     param3++;
-                    param5[param3] = param6[param0 & 255];
+                    param5[incrementValue$212] = param6[param0 & 255];
                     continue L2;
                   } else {
                     L3: {
+                      int incrementValue$213 = param2;
                       param2++;
-                      param0 = param1[param2] & 255;
+                      param0 = param1[incrementValue$213] & 255;
                       param4--;
                       param0 = param0 + param0;
                       if (param0 <= param4) {
@@ -335,23 +340,33 @@ final class ln extends hd {
         param5 = -(param5 & 3);
         for (var10 = -param6; var10 < 0; var10++) {
             for (var11 = var9; var11 < 0; var11++) {
+                int incrementValue$0 = param4;
                 param4++;
+                int incrementValue$1 = param3;
                 param3++;
-                param0[param4] = param2[param1[param3] & 255];
+                param0[incrementValue$0] = param2[param1[incrementValue$1] & 255];
+                int incrementValue$2 = param4;
                 param4++;
+                int incrementValue$3 = param3;
                 param3++;
-                param0[param4] = param2[param1[param3] & 255];
+                param0[incrementValue$2] = param2[param1[incrementValue$3] & 255];
+                int incrementValue$4 = param4;
                 param4++;
+                int incrementValue$5 = param3;
                 param3++;
-                param0[param4] = param2[param1[param3] & 255];
+                param0[incrementValue$4] = param2[param1[incrementValue$5] & 255];
+                int incrementValue$6 = param4;
                 param4++;
+                int incrementValue$7 = param3;
                 param3++;
-                param0[param4] = param2[param1[param3] & 255];
+                param0[incrementValue$6] = param2[param1[incrementValue$7] & 255];
             }
             for (var11 = param5; var11 < 0; var11++) {
+                int incrementValue$8 = param4;
                 param4++;
+                int incrementValue$9 = param3;
                 param3++;
-                param0[param4] = param2[param1[param3] & 255];
+                param0[incrementValue$8] = param2[param1[incrementValue$9] & 255];
             }
             param4 = param4 + param7;
             param3 = param3 + param8;
@@ -510,15 +525,17 @@ final class ln extends hd {
                     var11++;
                     continue L0;
                   } else {
+                    int incrementValue$10 = param4;
                     param4++;
-                    param3 = param1[param4];
+                    param3 = param1[incrementValue$10];
                     if (param3 == 0) {
                       param5++;
                       var12++;
                       continue L2;
                     } else {
+                      int incrementValue$11 = param5;
                       param5++;
-                      param0[param5] = param2[param3 & 255];
+                      param0[incrementValue$11] = param2[param3 & 255];
                       var12++;
                       continue L2;
                     }
@@ -526,50 +543,58 @@ final class ln extends hd {
                 }
               } else {
                 L3: {
+                  int incrementValue$12 = param4;
                   param4++;
-                  param3 = param1[param4];
+                  param3 = param1[incrementValue$12];
                   if (param3 == 0) {
                     param5++;
                     break L3;
                   } else {
+                    int incrementValue$13 = param5;
                     param5++;
-                    param0[param5] = param2[param3 & 255];
+                    param0[incrementValue$13] = param2[param3 & 255];
                     break L3;
                   }
                 }
                 L4: {
+                  int incrementValue$14 = param4;
                   param4++;
-                  param3 = param1[param4];
+                  param3 = param1[incrementValue$14];
                   if (param3 == 0) {
                     param5++;
                     break L4;
                   } else {
+                    int incrementValue$15 = param5;
                     param5++;
-                    param0[param5] = param2[param3 & 255];
+                    param0[incrementValue$15] = param2[param3 & 255];
                     break L4;
                   }
                 }
                 L5: {
+                  int incrementValue$16 = param4;
                   param4++;
-                  param3 = param1[param4];
+                  param3 = param1[incrementValue$16];
                   if (param3 == 0) {
                     param5++;
                     break L5;
                   } else {
+                    int incrementValue$17 = param5;
                     param5++;
-                    param0[param5] = param2[param3 & 255];
+                    param0[incrementValue$17] = param2[param3 & 255];
                     break L5;
                   }
                 }
+                int incrementValue$18 = param4;
                 param4++;
-                param3 = param1[param4];
+                param3 = param1[incrementValue$18];
                 if (param3 == 0) {
                   param5++;
                   var12++;
                   continue L1;
                 } else {
+                  int incrementValue$19 = param5;
                   param5++;
-                  param0[param5] = param2[param3 & 255];
+                  param0[incrementValue$19] = param2[param3 & 255];
                   var12++;
                   continue L1;
                 }

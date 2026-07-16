@@ -42,9 +42,9 @@ final class bg extends le {
     final static int a(int param0, int param1, ji param2, String param3, ji param4, int param5, boolean param6) {
         String var8 = null;
         int var9 = 0;
-        String var9_ref = null;
+        String var9_ref_String = null;
         int var10 = 0;
-        String var11_ref = null;
+        String var11_ref_String = null;
         int var11 = 0;
         int var12 = 0;
         int var13 = 0;
@@ -82,11 +82,11 @@ final class bg extends le {
         String stackOut_19_2 = null;
         var13 = ZombieDawn.field_J;
         var14 = param2.a(-1);
-        var11_ref = var14;
-        var11_ref = var14;
+        var11_ref_String = var14;
+        var11_ref_String = var14;
         var8 = param4.a(param0 ^ -106);
-        var11_ref = var8;
-        var11_ref = var8;
+        var11_ref_String = var8;
+        var11_ref_String = var8;
         if (param0 == 105) {
           L0: {
             if (sn.field_c != null) {
@@ -190,15 +190,15 @@ final class bg extends le {
                     dp.field_e.i(18, 125);
                     dp.field_e.field_j = dp.field_e.field_j + 2;
                     var10 = dp.field_e.field_j;
-                    var11_ref = ff.a(hc.a(0), (byte) -128);
-                    if (var11_ref != null) {
+                    var11_ref_String = ff.a(hc.a(0), (byte) -128);
+                    if (var11_ref_String != null) {
                       break L6;
                     } else {
-                      var11_ref = "";
+                      var11_ref_String = "";
                       break L6;
                     }
                   }
-                  dp.field_e.a(param0 + 23, var11_ref);
+                  dp.field_e.a(param0 + 23, var11_ref_String);
                   ab.a(dh.field_e, pm.field_c, (byte) -109, (de) (Object) dp.field_e, pj.field_p);
                   dp.field_e.g(57, -var10 + dp.field_e.field_j);
                   break L2;
@@ -297,11 +297,11 @@ final class bg extends le {
                     sc.field_d = fj.field_g.a(true);
                     break L12;
                   } else {
-                    var9_ref = fj.field_g.h(-1);
-                    if (var9_ref == null) {
+                    var9_ref_String = fj.field_g.h(-1);
+                    if (var9_ref_String == null) {
                       break L12;
                     } else {
-                      qg.a(165, hc.a(0), var9_ref);
+                      qg.a(165, hc.a(0), var9_ref_String);
                       break L12;
                     }
                   }

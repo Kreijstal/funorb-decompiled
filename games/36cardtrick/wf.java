@@ -6,7 +6,7 @@ final class wf {
 
     final static byte[] a(String param0, int param1) {
         if (param1 != -19073) {
-            field_a = (String) null;
+            field_a = null;
             return sd.field_a.a((byte) 7, param0, "");
         }
         return sd.field_a.a((byte) 7, param0, "");
@@ -15,25 +15,25 @@ final class wf {
     final static void a(int param0, int param1) {
         gi var2 = null;
         int var3 = 0;
-        java.applet.Applet var4 = null;
+        Object var4 = null;
         var3 = Main.field_T;
         mf.field_i = param0;
-        var2 = (gi) aj.field_s.a((byte) 74);
+        var2 = (gi) (Object) aj.field_s.a((byte) 74);
         if (param1 >= -9) {
-          var4 = (java.applet.Applet) null;
+          var4 = null;
           wf.a((byte) -32, (java.applet.Applet) null);
           L0: while (true) {
             if (var2 != null) {
               L1: {
-                if (((gi) var2).field_i.b(-115)) {
-                  ((gi) var2).field_h.f(mf.field_i * ((gi) var2).field_j / 80);
+                if (var2.field_i.b(-115)) {
+                  var2.field_h.f(mf.field_i * var2.field_j / 80);
                   break L1;
                 } else {
                   var2.c(103);
                   break L1;
                 }
               }
-              var2 = (gi) aj.field_s.b((byte) -111);
+              var2 = (gi) (Object) aj.field_s.b((byte) -111);
               continue L0;
             } else {
               return;
@@ -43,15 +43,15 @@ final class wf {
           L2: while (true) {
             if (var2 != null) {
               L3: {
-                if (((gi) var2).field_i.b(-115)) {
-                  ((gi) var2).field_h.f(mf.field_i * ((gi) var2).field_j / 80);
+                if (var2.field_i.b(-115)) {
+                  var2.field_h.f(mf.field_i * var2.field_j / 80);
                   break L3;
                 } else {
                   var2.c(103);
                   break L3;
                 }
               }
-              var2 = (gi) aj.field_s.b((byte) -111);
+              var2 = (gi) (Object) aj.field_s.b((byte) -111);
               continue L2;
             } else {
               return;
@@ -64,13 +64,13 @@ final class wf {
         String var2 = null;
         String var3 = null;
         long var4 = 0L;
-        String var6 = null;
+        Object var6 = null;
         rc.field_m = true;
         var2 = "tuhstatbut";
         var3 = "rvnadlm";
         var4 = -1L;
         if (param0 > -81) {
-          var6 = (String) null;
+          var6 = null;
           byte[] discarded$2 = wf.a((String) null, -37);
           uh.a(var4, 100, var2, var3, param1);
           return;

@@ -126,8 +126,9 @@ final class ui {
               param0.field_U = null;
               var10 = param3;
               var10.field_U = null;
+              byte fieldTemp$1 = param7.field_K;
               param0.field_K = param7.field_K;
-              param3.field_K = param7.field_K;
+              param3.field_K = fieldTemp$1;
               break L0;
             } else {
               L1: {

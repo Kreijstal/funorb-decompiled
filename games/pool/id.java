@@ -32,28 +32,34 @@ abstract class id {
             iq stackOut_2_0 = null;
             try {
               L0: {
-                var4 = Class.forName("vo");
-                var5 = (iq) var4.newInstance();
-                if (param2 < -41) {
-                  break L0;
-                } else {
-                  field_c = null;
-                  break L0;
+                L1: {
+                  var4 = Class.forName("vo");
+                  var5 = (iq) var4.newInstance();
+                  if (param2 < -41) {
+                    break L1;
+                  } else {
+                    field_c = null;
+                    break L1;
+                  }
                 }
+                var5.a(param1, param0, -6980, param3);
+                stackOut_2_0 = (iq) var5;
+                stackIn_3_0 = stackOut_2_0;
+                break L0;
               }
-              var5.a(param1, param0, -6980, param3);
-              stackOut_2_0 = (iq) var5;
-              stackIn_3_0 = stackOut_2_0;
-            } catch (java.lang.Throwable decompiledCaughtParameter) {
-              decompiledCaughtException = decompiledCaughtParameter;
-              return stackIn_3_0;
+            } catch (java.lang.Throwable decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              var4_ref = decompiledCaughtException;
+              var5_ref = new jf();
+              ((iq) (Object) var5_ref).a(param1, param0, -6980, param3);
+              return (iq) (Object) var5_ref;
             }
+            return stackIn_3_0;
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
             throw new RuntimeException(decompiledCheckedException);
         }
-        return null;
     }
 
     final static void a(int param0, boolean param1) {
@@ -142,13 +148,16 @@ abstract class id {
                     var8_int = 1;
                     L5: while (true) {
                       if (var5 <= var8_int) {
-                        var4.field_m = new String[3][var6];
-                        var8 = new String[3][var6];
+                        String[][] dupTemp$6 = new String[3][var6];
+                        var4.field_m = dupTemp$6;
+                        var8 = dupTemp$6;
                         var9 = new String[3][var6];
-                        var4.field_q = new long[3][var6];
-                        var10 = new long[3][var6];
-                        var4.field_z = new int[3][var6 * var7];
-                        var11 = new int[3][var6 * var7];
+                        long[][] dupTemp$7 = new long[3][var6];
+                        var4.field_q = dupTemp$7;
+                        var10 = dupTemp$7;
+                        int[][] dupTemp$8 = new int[3][var6 * var7];
+                        var4.field_z = dupTemp$8;
+                        var11 = dupTemp$8;
                         var12 = 0;
                         var13 = 0;
                         var14 = 0;
@@ -179,8 +188,9 @@ abstract class id {
                                     if (var25 >= var7) {
                                       break L7;
                                     } else {
+                                      int incrementValue$9 = var15;
                                       var15++;
-                                      var11[0][var15] = var27.b(true);
+                                      var11[0][incrementValue$9] = var27.b(true);
                                       var25++;
                                       continue L8;
                                     }
@@ -202,8 +212,9 @@ abstract class id {
                                       if (var7 <= var25) {
                                         break L9;
                                       } else {
+                                        int incrementValue$10 = var16;
                                         var16++;
-                                        var11[1][var16] = var27.b(true);
+                                        var11[1][incrementValue$10] = var27.b(true);
                                         var25++;
                                         continue L10;
                                       }
@@ -224,8 +235,9 @@ abstract class id {
                                   var25 = 0;
                                   L11: while (true) {
                                     if (var7 > var25) {
+                                      int incrementValue$11 = var17;
                                       var17++;
-                                      var11[2][var17] = var27.b(true);
+                                      var11[2][incrementValue$11] = var27.b(true);
                                       var25++;
                                       continue L11;
                                     } else {
@@ -309,179 +321,56 @@ abstract class id {
         Throwable var3 = null;
         int var4 = 0;
         Object var5 = null;
-        int statePc = 0;
-        Throwable caughtException = null;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    var4 = Pool.field_O;
-                    if (param0 == 127) {
-                        statePc = 2;
+        Throwable decompiledCaughtException = null;
+        L0: {
+          var4 = Pool.field_O;
+          if (param0 == 127) {
+            break L0;
+          } else {
+            var5 = null;
+            vh discarded$3 = id.a(61, -54, 2, 71, 91, -21, -24, 76, 60, (lr) null, -98, -116, 30);
+            break L0;
+          }
+        }
+        var1 = (Object) (Object) wn.field_a;
+        synchronized (var1) {
+          L1: {
+            L2: {
+              bl.field_s = ja.field_c;
+              ti.field_e = ti.field_e + 1;
+              if (0 <= qq.field_xb) {
+                L3: while (true) {
+                  if (jq.field_g == qq.field_xb) {
+                    break L2;
+                  } else {
+                    var2 = fo.field_b[jq.field_g];
+                    jq.field_g = 127 & 1 + jq.field_g;
+                    if (0 > var2) {
+                      vj.field_c[var2 ^ -1] = false;
+                      continue L3;
                     } else {
-                        statePc = 1;
+                      vj.field_c[var2] = true;
+                      continue L3;
                     }
-                    continue stateLoop;
+                  }
                 }
-                case 1: {
-                    var5 = null;
-                    vh discarded$3 = id.a(61, -54, 2, 71, 91, -21, -24, 76, 60, (lr) null, -98, -116, 30);
-                    statePc = 2;
-                    continue stateLoop;
+              } else {
+                var2 = 0;
+                L4: while (true) {
+                  if ((var2 ^ -1) <= -113) {
+                    qq.field_xb = jq.field_g;
+                    break L2;
+                  } else {
+                    vj.field_c[var2] = false;
+                    var2++;
+                    continue L4;
+                  }
                 }
-                case 2: {
-                    var1 = (Object) (Object) wn.field_a;
-                    // monitorenter wn.field_a
-                    statePc = 3;
-                    continue stateLoop;
-                }
-                case 3: {
-                    try {
-                        bl.field_s = ja.field_c;
-                        ti.field_e = ti.field_e + 1;
-                        if (0 <= qq.field_xb) {
-                            statePc = 8;
-                        } else {
-                            statePc = 4;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_3) {
-                        caughtException = stateCaught_3;
-                        statePc = 14;
-                        continue stateLoop;
-                    }
-                }
-                case 4: {
-                    try {
-                        var2 = 0;
-                        statePc = 5;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_4) {
-                        caughtException = stateCaught_4;
-                        statePc = 14;
-                        continue stateLoop;
-                    }
-                }
-                case 5: {
-                    try {
-                        if ((var2 ^ -1) <= -113) {
-                            statePc = 7;
-                        } else {
-                            statePc = 6;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_5) {
-                        caughtException = stateCaught_5;
-                        statePc = 14;
-                        continue stateLoop;
-                    }
-                }
-                case 6: {
-                    try {
-                        vj.field_c[var2] = false;
-                        var2++;
-                        statePc = 5;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_6) {
-                        caughtException = stateCaught_6;
-                        statePc = 14;
-                        continue stateLoop;
-                    }
-                }
-                case 7: {
-                    try {
-                        qq.field_xb = jq.field_g;
-                        statePc = 12;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_7) {
-                        caughtException = stateCaught_7;
-                        statePc = 14;
-                        continue stateLoop;
-                    }
-                }
-                case 8: {
-                    try {
-                        if (jq.field_g == qq.field_xb) {
-                            statePc = 12;
-                        } else {
-                            statePc = 9;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_8) {
-                        caughtException = stateCaught_8;
-                        statePc = 14;
-                        continue stateLoop;
-                    }
-                }
-                case 9: {
-                    try {
-                        var2 = fo.field_b[jq.field_g];
-                        jq.field_g = 127 & 1 + jq.field_g;
-                        if (0 > var2) {
-                            statePc = 11;
-                        } else {
-                            statePc = 10;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_9) {
-                        caughtException = stateCaught_9;
-                        statePc = 14;
-                        continue stateLoop;
-                    }
-                }
-                case 10: {
-                    try {
-                        vj.field_c[var2] = true;
-                        statePc = 8;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_10) {
-                        caughtException = stateCaught_10;
-                        statePc = 14;
-                        continue stateLoop;
-                    }
-                }
-                case 11: {
-                    try {
-                        vj.field_c[var2 ^ -1] = false;
-                        statePc = 8;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_11) {
-                        caughtException = stateCaught_11;
-                        statePc = 14;
-                        continue stateLoop;
-                    }
-                }
-                case 12: {
-                    try {
-                        ja.field_c = op.field_h;
-                        // monitorexit var1
-                        statePc = 16;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_12) {
-                        caughtException = stateCaught_12;
-                        statePc = 14;
-                        continue stateLoop;
-                    }
-                }
-                case 14: {
-                    try {
-                        var3 = caughtException;
-                        // monitorexit var1
-                        statePc = 15;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_14) {
-                        caughtException = stateCaught_14;
-                        statePc = 14;
-                        continue stateLoop;
-                    }
-                }
-                case 15: {
-                    throw (RuntimeException) (Object) var3;
-                }
-                case 16: {
-                    return;
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
+              }
             }
+            ja.field_c = op.field_h;
+            break L1;
+          }
         }
     }
 

@@ -125,27 +125,22 @@ final class kf extends ah {
     }
 
     final static int a(int param0, int param1, int param2) {
-        if (-1 == (param1 ^ -1)) {
-          return param2;
-        } else {
-          if (param1 == 1) {
+        if (!(-1 != (param1 ^ -1))) {
             return param2;
-          } else {
-            if (param1 == -3) {
-              return 100 * param2;
-            } else {
-              if (param0 > 5) {
-                if (-4 == param1) {
-                  return param2 * 100;
-                } else {
-                  return param2;
-                }
-              } else {
-                return 107;
-              }
-            }
-          }
         }
+        if (!(param1 != 1)) {
+            return param2;
+        }
+        if (!((param1 ^ -1) != -3)) {
+            return 100 * param2;
+        }
+        if (param0 <= 5) {
+            return 107;
+        }
+        if (-4 == (param1 ^ -1)) {
+            return param2 * 100;
+        }
+        return param2;
     }
 
     final static om a(byte param0, int param1) {

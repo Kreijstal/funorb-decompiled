@@ -10,7 +10,7 @@ final class nc {
         q var3 = null;
         var3 = new q();
         if (param1 != 40) {
-          field_b = (String) null;
+          field_b = null;
           ((tl) (Object) var3).field_d = param2;
           ((tl) (Object) var3).field_c = param0;
           return (tl) (Object) var3;
@@ -26,7 +26,7 @@ final class nc {
         var3.field_g = param0;
         var3.field_d = param2;
         if (param1 != 0) {
-            return (nk) null;
+            return null;
         }
         return var3;
     }
@@ -45,8 +45,8 @@ final class nc {
           } else {
             var3 = 0;
             L0: while (true) {
-              if (((CharSequence) param1).length() > var3) {
-                if (!fd.a(true, ((CharSequence) param1).charAt(var3))) {
+              if (param1.length() > var3) {
+                if (!fd.a(true, param1.charAt(var3))) {
                   return false;
                 } else {
                   var3++;
@@ -63,9 +63,9 @@ final class nc {
     }
 
     public static void a(int param0) {
-        String var2 = null;
+        Object var2 = null;
         if (param0 != 0) {
-          var2 = (String) null;
+          var2 = null;
           nk discarded$2 = nc.a(14, -121, (String) null);
           field_a = null;
           field_c = null;

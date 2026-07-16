@@ -14,28 +14,45 @@ final class ni {
     private ke field_b;
 
     final bo a(int param0, int param1, sk param2, sk param3, boolean param4) {
-        if (null == ((ni) this).field_d) {
-            throw new RuntimeException();
-        }
-        if (0 <= param0) {
-            // if_icmpge L33
+        int var6 = 0;
+        int var7 = 0;
+        bo var9 = null;
+        byte[] var11 = null;
+        if (null != ((ni) this).field_d) {
+          L0: {
+            if (0 > param0) {
+              break L0;
+            } else {
+              if (param0 >= ((ni) this).field_f.length) {
+                break L0;
+              } else {
+                if (((ni) this).field_f[param0] != null) {
+                  return ((ni) this).field_f[param0];
+                } else {
+                  L1: {
+                    ((ni) this).field_d.field_t = param0 * 72 - -6;
+                    var6 = ((ni) this).field_d.f(12);
+                    var7 = ((ni) this).field_d.f(126);
+                    var11 = new byte[64];
+                    if (param1 >= 10) {
+                      break L1;
+                    } else {
+                      ((ni) this).field_g = null;
+                      break L1;
+                    }
+                  }
+                  ((ni) this).field_d.b(64, 0, var11, -54);
+                  var9 = new bo(param0, param2, param3, ((ni) this).field_a, ((ni) this).field_b, var6, var11, var7, param4);
+                  ((ni) this).field_f[param0] = var9;
+                  return var9;
+                }
+              }
+            }
+          }
+          throw new RuntimeException();
         } else {
-            throw new RuntimeException();
+          throw new RuntimeException();
         }
-        if (!(((ni) this).field_f[param0] == null)) {
-            return ((ni) this).field_f[param0];
-        }
-        ((ni) this).field_d.field_t = param0 * 72 - -6;
-        int var6 = ((ni) this).field_d.f(12);
-        int var7 = ((ni) this).field_d.f(126);
-        byte[] var11 = new byte[64];
-        if (param1 < 10) {
-            ((ni) this).field_g = null;
-        }
-        ((ni) this).field_d.b(64, 0, var11, -54);
-        bo var9 = new bo(param0, param2, param3, ((ni) this).field_a, ((ni) this).field_b, var6, var11, var7, param4);
-        ((ni) this).field_f[param0] = var9;
-        return var9;
     }
 
     ni(th param0, ke param1) {
@@ -46,7 +63,7 @@ final class ni {
         int var3 = 0;
         byte[] var4 = null;
         byte[] var5 = null;
-        java.math.BigInteger var7_ref = null;
+        java.math.BigInteger var7_ref_java_math_BigInteger = null;
         int var7 = 0;
         int var8 = 0;
         bh var10 = null;
@@ -100,8 +117,8 @@ final class ni {
                     break L3;
                   } else {
                     var12 = new java.math.BigInteger(var16);
-                    var7_ref = var12.modPow(((ni) this).field_e, ((ni) this).field_j);
-                    var5 = var7_ref.toByteArray();
+                    var7_ref_java_math_BigInteger = var12.modPow(((ni) this).field_e, ((ni) this).field_j);
+                    var5 = var7_ref_java_math_BigInteger.toByteArray();
                     break L2;
                   }
                 }

@@ -49,7 +49,6 @@ final class ee extends gg {
         int var4 = 0;
         int var5 = 0;
         String var6 = null;
-        String var6_ref = null;
         int var7 = 0;
         int var8 = 0;
         hi var9 = null;
@@ -105,7 +104,7 @@ final class ee extends gg {
         }
         var3 = 0;
         L2: while (true) {
-          if (var3 >= vc.field_d.length) {
+          if ((var3 ^ -1) <= (vc.field_d.length ^ -1)) {
             return;
           } else {
             L3: {
@@ -130,7 +129,7 @@ final class ee extends gg {
               } else {
                 if (-2 == (var2 ^ -1)) {
                   L5: {
-                    if (ak.field_b.length >= i.field_I.length) {
+                    if ((ak.field_b.length ^ -1) <= (i.field_I.length ^ -1)) {
                       stackOut_19_0 = ak.field_b.length;
                       stackIn_20_0 = stackOut_19_0;
                       break L5;
@@ -142,7 +141,7 @@ final class ee extends gg {
                   }
                   L6: {
                     var7 = stackIn_20_0;
-                    if (qc.field_h.length < qa.field_o.length) {
+                    if ((qc.field_h.length ^ -1) > (qa.field_o.length ^ -1)) {
                       stackOut_22_0 = qa.field_o.length;
                       stackIn_23_0 = stackOut_22_0;
                       break L6;
@@ -157,7 +156,7 @@ final class ee extends gg {
                     if ((var3 ^ -1) > -7) {
                       break L7;
                     } else {
-                      if (6 - -var7 <= var3) {
+                      if ((6 - -var7 ^ -1) >= (var3 ^ -1)) {
                         break L7;
                       } else {
                         L8: {
@@ -171,7 +170,7 @@ final class ee extends gg {
                             break L8;
                           }
                         }
-                        var6_ref = stackIn_28_0;
+                        var6 = stackIn_28_0;
                         break L7;
                       }
                     }
@@ -179,9 +178,9 @@ final class ee extends gg {
                   if (var7 + 7 > var3) {
                     break L4;
                   } else {
-                    if (var3 < 7 - (-var7 - var8)) {
+                    if ((var3 ^ -1) > (7 - (-var7 - var8) ^ -1)) {
                       L9: {
-                        if (qc.field_h.length > -var7 + -7 + var3) {
+                        if ((qc.field_h.length ^ -1) < (-var7 + -7 + var3 ^ -1)) {
                           stackOut_34_0 = qc.field_h[-var7 + var3 - 7];
                           stackIn_35_0 = stackOut_34_0;
                           break L9;
@@ -191,7 +190,7 @@ final class ee extends gg {
                           break L9;
                         }
                       }
-                      var6_ref = stackIn_35_0;
+                      var6 = stackIn_35_0;
                       break L4;
                     } else {
                       break L4;
@@ -204,17 +203,17 @@ final class ee extends gg {
             }
             L10: {
               if (var4 == -2) {
-                var6_ref = Integer.toString(var2);
+                var6 = Integer.toString(var2);
                 break L10;
               } else {
                 break L10;
               }
             }
             L11: {
-              stackOut_39_0 = (String) var6_ref;
+              stackOut_39_0 = (String) var6;
               stackIn_41_0 = stackOut_39_0;
               stackIn_40_0 = stackOut_39_0;
-              if (-1 < var4) {
+              if (-1 < (var4 ^ -1)) {
                 stackOut_41_0 = (String) (Object) stackIn_41_0;
                 stackOut_41_1 = 0;
                 stackIn_42_0 = stackOut_41_0;
@@ -231,10 +230,10 @@ final class ee extends gg {
             L12: {
               var7 = fa.a(stackIn_42_0, stackIn_42_1 != 0, (byte) 99);
               var8 = sb.field_d + -(var7 >> -1098640767);
-              if (-1 <= var4) {
+              if (-1 >= (var4 ^ -1)) {
                 L13: {
                   var1 = var1 + vg.field_N;
-                  if (bc.field_K.field_f != var4) {
+                  if ((bc.field_K.field_f ^ -1) != (var4 ^ -1)) {
                     stackOut_46_0 = kb.field_d;
                     stackIn_47_0 = stackOut_46_0;
                     break L13;
@@ -259,17 +258,19 @@ final class ee extends gg {
                 break L12;
               }
             }
-            if ((var4 ^ -1) > -1) {
-              ke.field_H.c(var6_ref, var8, var1 + ha.field_g, var5, -1);
-              var1 = var1 + uc.field_i;
-              var3++;
-              continue L2;
-            } else {
-              kb.field_f.c(var6_ref, var8, var1 - -ph.field_k, var5, -1);
-              var1 = var1 + (we.field_c + (vg.field_N + g.field_l));
-              var3++;
-              continue L2;
+            L15: {
+              if ((var4 ^ -1) > -1) {
+                ke.field_H.c(var6, var8, var1 + ha.field_g, var5, -1);
+                var1 = var1 + uc.field_i;
+                break L15;
+              } else {
+                kb.field_f.c(var6, var8, var1 - -ph.field_k, var5, -1);
+                var1 = var1 + (we.field_c + (vg.field_N + g.field_l));
+                break L15;
+              }
             }
+            var3++;
+            continue L2;
           }
         }
     }
@@ -299,7 +300,6 @@ final class ee extends gg {
         int var16 = 0;
         uh var17 = null;
         int var17_int = 0;
-        uh var17_ref = null;
         int var18 = 0;
         int var19 = 0;
         int[] var20 = null;
@@ -367,13 +367,13 @@ final class ee extends gg {
                 L4: while (true) {
                   if (var17_int >= wk.field_d.length) {
                     var2[var16] = -2147483648;
-                    var17_ref = wk.field_d[var16];
+                    var17 = wk.field_d[var16];
                     jh.a((byte) 126, var16);
                     var18 = 0;
                     L5: while (true) {
                       if (var18 >= 3) {
-                        mb.a(var17_ref, false, aj.field_m, qf.field_e, true, false, 5);
-                        bi.a((byte) 77, var12, var14, var9, var17_ref, var13, var8, var7);
+                        mb.a(var17, false, aj.field_m, qf.field_e, true, false, 5);
+                        bi.a((byte) 77, var12, var14, var9, var17, var13, var8, var7);
                         var15++;
                         continue L3;
                       } else {

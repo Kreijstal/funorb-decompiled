@@ -11,74 +11,76 @@ final class j extends ai {
 
     final static gk a(boolean param0, byte param1, boolean param2, int param3, boolean param4, int param5) {
         try {
-            vh var6 = null;
-            IOException var6_ref = null;
-            vh var7 = null;
+            Object var6 = null;
+            Object var7 = null;
             ce var8 = null;
             gk stackIn_16_0 = null;
             Throwable decompiledCaughtException = null;
             gk stackOut_15_0 = null;
             try {
               L0: {
-                var6 = null;
-                if (param1 < -94) {
-                  break L0;
-                } else {
-                  field_j = null;
-                  break L0;
-                }
-              }
-              L1: {
-                var7 = null;
-                if (null != vc.field_G.field_j) {
-                  jg.field_C = new jf(vc.field_G.field_j, 5200, 0);
-                  vc.field_G.field_j = null;
-                  var6 = new vh(255, jg.field_C, new jf(vc.field_G.field_m, 12000, 0), 2097152);
-                  break L1;
-                } else {
-                  break L1;
-                }
-              }
-              L2: {
-                if (null == jg.field_C) {
-                  break L2;
-                } else {
-                  L3: {
-                    if (pd.field_a == null) {
-                      pd.field_a = new jf[vc.field_G.field_u.length];
-                      break L3;
-                    } else {
-                      break L3;
-                    }
+                L1: {
+                  var6 = null;
+                  if (param1 < -94) {
+                    break L1;
+                  } else {
+                    field_j = null;
+                    break L1;
                   }
-                  L4: {
-                    if (pd.field_a[param3] != null) {
-                      break L4;
-                    } else {
-                      pd.field_a[param3] = new jf(vc.field_G.field_u[param3], 12000, 0);
-                      vc.field_G.field_u[param3] = null;
-                      break L4;
-                    }
+                }
+                L2: {
+                  var7 = null;
+                  if (null != vc.field_G.field_j) {
+                    jg.field_C = new jf(vc.field_G.field_j, 5200, 0);
+                    vc.field_G.field_j = null;
+                    var6 = (Object) (Object) new vh(255, jg.field_C, new jf(vc.field_G.field_m, 12000, 0), 2097152);
+                    break L2;
+                  } else {
+                    break L2;
                   }
-                  var7 = new vh(param3, jg.field_C, pd.field_a[param3], 2097152);
-                  break L2;
                 }
-              }
-              L5: {
-                var8 = ih.field_Q.a(param2, var7, var6, param3, -18023);
-                if (param0) {
-                  var8.b((byte) -124);
-                  break L5;
-                } else {
-                  break L5;
+                L3: {
+                  if (null == jg.field_C) {
+                    break L3;
+                  } else {
+                    L4: {
+                      if (pd.field_a == null) {
+                        pd.field_a = new jf[vc.field_G.field_u.length];
+                        break L4;
+                      } else {
+                        break L4;
+                      }
+                    }
+                    L5: {
+                      if (pd.field_a[param3] != null) {
+                        break L5;
+                      } else {
+                        pd.field_a[param3] = new jf(vc.field_G.field_u[param3], 12000, 0);
+                        vc.field_G.field_u[param3] = null;
+                        break L5;
+                      }
+                    }
+                    var7 = (Object) (Object) new vh(param3, jg.field_C, pd.field_a[param3], 2097152);
+                    break L3;
+                  }
                 }
+                L6: {
+                  var8 = ih.field_Q.a(param2, (vh) var7, (vh) var6, param3, -18023);
+                  if (param0) {
+                    var8.b((byte) -124);
+                    break L6;
+                  } else {
+                    break L6;
+                  }
+                }
+                stackOut_15_0 = new gk((td) (Object) var8, param4, param5);
+                stackIn_16_0 = stackOut_15_0;
+                break L0;
               }
-              stackOut_15_0 = new gk((td) (Object) var8, param4, param5);
-              stackIn_16_0 = stackOut_15_0;
             } catch (java.io.IOException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
-              var6_ref = (IOException) (Object) decompiledCaughtException;
-              throw new RuntimeException(var6_ref.toString());
+              var6 = (Object) (Object) decompiledCaughtException;
+              throw new RuntimeException(((IOException) var6).toString());
             }
             return stackIn_16_0;
         } catch (RuntimeException | Error decompiledUncheckedException) {

@@ -204,8 +204,9 @@ final class tf {
                                           break L18;
                                         } else {
                                           L19: {
-                                            var9[var12] = var16.f((byte) 80);
-                                            var13 = var16.f((byte) 80);
+                                            byte dupTemp$2 = var16.f((byte) 80);
+                                            var9[var12] = dupTemp$2;
+                                            var13 = dupTemp$2;
                                             stackOut_34_0 = var10;
                                             stackIn_36_0 = stackOut_34_0;
                                             stackIn_35_0 = stackOut_34_0;
@@ -287,8 +288,9 @@ final class tf {
                                           break L26;
                                         } else {
                                           L27: {
-                                            var9[var5 * var13 + var12] = var16.f((byte) 61);
-                                            var14 = var16.f((byte) 61);
+                                            byte dupTemp$3 = var16.f((byte) 61);
+                                            var9[var5 * var13 + var12] = dupTemp$3;
+                                            var14 = dupTemp$3;
                                             stackOut_51_0 = var10;
                                             stackIn_53_0 = stackOut_51_0;
                                             stackIn_52_0 = stackOut_51_0;

@@ -44,7 +44,7 @@ class lk extends qb {
             }
           } else {
             L1: {
-              if (-1 == eg.field_f) {
+              if (-1 == (eg.field_f ^ -1)) {
                 break L1;
               } else {
                 if (var5 == 0) {
@@ -56,7 +56,7 @@ class lk extends qb {
               }
             }
             L2: {
-              if (-1 == dl.field_h) {
+              if (-1 == (dl.field_h ^ -1)) {
                 break L2;
               } else {
                 if (((lk) this).a(param1, param2, ag.field_a, param0 + 77, (lk) this, dl.field_h, jc.field_N)) {
@@ -72,26 +72,29 @@ class lk extends qb {
                 }
               }
             }
-            if (k.field_c != 0) {
+            if ((k.field_c ^ -1) != -1) {
               break L0;
             } else {
-              if (sa.field_c != 0) {
-                ((lk) this).a(false, (lk) this, eg.field_b, param1, param2, ij.field_e);
-                var6 = sh.field_i;
-                if (var6 == null) {
-                  break L0;
-                } else {
-                  L3: {
-                    if (((qi) var6).field_k instanceof wa) {
-                      ((wa) ((qi) var6).field_k).a((wc) null, 15254, var6);
-                      break L3;
-                    } else {
-                      break L3;
+              if ((sa.field_c ^ -1) != -1) {
+                L3: {
+                  ((lk) this).a(false, (lk) this, eg.field_b, param1, param2, ij.field_e);
+                  var6 = sh.field_i;
+                  if (var6 == null) {
+                    break L3;
+                  } else {
+                    L4: {
+                      if (var6.field_k instanceof wa) {
+                        ((wa) (Object) var6.field_k).a((wc) null, 15254, var6);
+                        break L4;
+                      } else {
+                        break L4;
+                      }
                     }
+                    sh.field_i = null;
+                    break L3;
                   }
-                  sh.field_i = null;
-                  break L0;
                 }
+                break L0;
               } else {
                 break L0;
               }
@@ -109,7 +112,7 @@ class lk extends qb {
 
     boolean d(int param0) {
         if (param0 < 44) {
-            field_g = (bk) null;
+            field_g = null;
             return false;
         }
         return false;
@@ -193,7 +196,7 @@ class lk extends qb {
             ((lk) this).field_j = var5 != 0 ? true : false;
             if (null != ((lk) this).field_k) {
                 if (((lk) this).field_k instanceof qc) {
-                    ((qc) ((lk) this).field_k).a(18686, var5 != 0, (lk) this);
+                    ((qc) (Object) ((lk) this).field_k).a(18686, var5 != 0, (lk) this);
                 }
             }
         }
@@ -216,7 +219,7 @@ class lk extends qb {
 
     final boolean a(char param0, int param1, int param2) {
         if (param1 != 34) {
-            ((lk) this).field_v = (ci) null;
+            ((lk) this).field_v = null;
         }
         if (((lk) this).d(83)) {
             if (!(!((lk) this).a(param0, (byte) -112, param2, (lk) this))) {
@@ -392,9 +395,9 @@ class lk extends qb {
         ((lk) this).field_k = param2;
         ((lk) this).field_v = param1;
         if (((lk) this).field_v instanceof ne) {
-            var4 = (ne) ((lk) this).field_v;
-            ((lk) this).field_h = ((ne) var4).a((lk) this, (byte) 59);
-            ((lk) this).field_q = ((ne) var4).a(-2, (lk) this);
+            var4 = (ne) (Object) ((lk) this).field_v;
+            ((lk) this).field_h = var4.a((lk) this, (byte) 59);
+            ((lk) this).field_q = var4.a(-2, (lk) this);
         }
     }
 

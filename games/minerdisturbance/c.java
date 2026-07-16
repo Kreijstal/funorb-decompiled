@@ -40,15 +40,17 @@ final class c {
                 if (null == ce.field_a.b(108)) {
                   break L2;
                 } else {
+                  int fieldTemp$21 = tf.field_a + 1;
                   tf.field_a = tf.field_a + 1;
-                  if (tf.field_a + 1 != 370) {
+                  if (fieldTemp$21 != 370) {
                     break L2;
                   } else {
                     L3: {
                       tf.field_a = 0;
-                      pi discarded$6 = ce.field_a.e(63854);
+                      pi discarded$22 = ce.field_a.e(63854);
+                      int fieldTemp$23 = ph.field_c;
                       ph.field_c = ph.field_c + 1;
-                      if (0 != (ph.field_c & 3)) {
+                      if (0 != (fieldTemp$23 & 3)) {
                         break L3;
                       } else {
                         L4: {
@@ -89,8 +91,9 @@ final class c {
                 }
               }
               L5: {
+                int fieldTemp$24 = ph.field_c;
                 ph.field_c = ph.field_c + 1;
-                if (0 != (ph.field_c & 3)) {
+                if (0 != (fieldTemp$24 & 3)) {
                   break L5;
                 } else {
                   if (0 > ah.field_e) {
@@ -152,19 +155,21 @@ final class c {
                 if (null == ce.field_a.b(108)) {
                   break L7;
                 } else {
+                  int fieldTemp$25 = tf.field_a + 1;
                   tf.field_a = tf.field_a + 1;
-                  if (tf.field_a + 1 != 370) {
+                  if (fieldTemp$25 != 370) {
                     break L7;
                   } else {
                     tf.field_a = 0;
-                    pi discarded$7 = ce.field_a.e(63854);
+                    pi discarded$26 = ce.field_a.e(63854);
                     break L7;
                   }
                 }
               }
               L8: {
+                int fieldTemp$27 = ph.field_c;
                 ph.field_c = ph.field_c + 1;
-                if (0 != (ph.field_c & 3)) {
+                if (0 != (fieldTemp$27 & 3)) {
                   break L8;
                 } else {
                   L9: {
@@ -208,15 +213,17 @@ final class c {
                 if (null == ce.field_a.b(108)) {
                   break L10;
                 } else {
+                  int fieldTemp$28 = tf.field_a + 1;
                   tf.field_a = tf.field_a + 1;
-                  if (tf.field_a + 1 != 370) {
+                  if (fieldTemp$28 != 370) {
                     break L10;
                   } else {
                     L11: {
                       tf.field_a = 0;
-                      pi discarded$8 = ce.field_a.e(63854);
+                      pi discarded$29 = ce.field_a.e(63854);
+                      int fieldTemp$30 = ph.field_c;
                       ph.field_c = ph.field_c + 1;
-                      if (0 != (ph.field_c & 3)) {
+                      if (0 != (fieldTemp$30 & 3)) {
                         break L11;
                       } else {
                         L12: {
@@ -256,8 +263,9 @@ final class c {
                   }
                 }
               }
+              int fieldTemp$31 = ph.field_c;
               ph.field_c = ph.field_c + 1;
-              if (0 == (ph.field_c & 3)) {
+              if (0 == (fieldTemp$31 & 3)) {
                 if (0 > ah.field_e) {
                   qh.field_c = qh.field_c + 1;
                   if ((ah.field_e ^ -1) > -1) {
@@ -320,19 +328,21 @@ final class c {
                 if (null == ce.field_a.b(108)) {
                   break L15;
                 } else {
+                  int fieldTemp$32 = tf.field_a + 1;
                   tf.field_a = tf.field_a + 1;
-                  if (tf.field_a + 1 != 370) {
+                  if (fieldTemp$32 != 370) {
                     break L15;
                   } else {
                     tf.field_a = 0;
-                    pi discarded$9 = ce.field_a.e(63854);
+                    pi discarded$33 = ce.field_a.e(63854);
                     break L15;
                   }
                 }
               }
               L16: {
+                int fieldTemp$34 = ph.field_c;
                 ph.field_c = ph.field_c + 1;
-                if (0 != (ph.field_c & 3)) {
+                if (0 != (fieldTemp$34 & 3)) {
                   break L16;
                 } else {
                   L17: {
@@ -399,15 +409,17 @@ final class c {
               if (null == ce.field_a.b(108)) {
                 break L19;
               } else {
+                int fieldTemp$35 = tf.field_a + 1;
                 tf.field_a = tf.field_a + 1;
-                if (tf.field_a + 1 != 370) {
+                if (fieldTemp$35 != 370) {
                   break L19;
                 } else {
                   L20: {
                     tf.field_a = 0;
-                    pi discarded$10 = ce.field_a.e(63854);
+                    pi discarded$36 = ce.field_a.e(63854);
+                    int fieldTemp$37 = ph.field_c;
                     ph.field_c = ph.field_c + 1;
-                    if (0 != (ph.field_c & 3)) {
+                    if (0 != (fieldTemp$37 & 3)) {
                       break L20;
                     } else {
                       L21: {
@@ -448,8 +460,9 @@ final class c {
               }
             }
             L22: {
+              int fieldTemp$38 = ph.field_c;
               ph.field_c = ph.field_c + 1;
-              if (0 != (ph.field_c & 3)) {
+              if (0 != (fieldTemp$38 & 3)) {
                 break L22;
               } else {
                 if (0 > ah.field_e) {
@@ -511,19 +524,21 @@ final class c {
               if (null == ce.field_a.b(108)) {
                 break L24;
               } else {
+                int fieldTemp$39 = tf.field_a + 1;
                 tf.field_a = tf.field_a + 1;
-                if (tf.field_a + 1 != 370) {
+                if (fieldTemp$39 != 370) {
                   break L24;
                 } else {
                   tf.field_a = 0;
-                  pi discarded$11 = ce.field_a.e(63854);
+                  pi discarded$40 = ce.field_a.e(63854);
                   break L24;
                 }
               }
             }
             L25: {
+              int fieldTemp$41 = ph.field_c;
               ph.field_c = ph.field_c + 1;
-              if (0 != (ph.field_c & 3)) {
+              if (0 != (fieldTemp$41 & 3)) {
                 break L25;
               } else {
                 L26: {

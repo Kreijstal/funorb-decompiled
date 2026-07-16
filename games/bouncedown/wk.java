@@ -71,14 +71,14 @@ abstract class wk extends ri {
         var7 = 0;
         var8 = param0;
         L1: while (true) {
-          if (var7 >= var4) {
+          if ((var7 ^ -1) <= (var4 ^ -1)) {
             var5 = 194;
             var4 = 22;
             var6 = 169;
             var7 = 0;
             var8 = param0 - -35;
             L2: while (true) {
-              if (var7 >= var4) {
+              if ((var7 ^ -1) <= (var4 ^ -1)) {
                 fd.field_m.a(((wk) this).field_k + (param2 + -90), 10 + param0);
                 gk.a(param2 - -5, 1, ij.field_c, param0 - -35, -10 + ((wk) this).field_k);
                 gk.a(param2, 1, de.field_d, -22 + (param0 + ((wk) this).field_m), ((wk) this).field_k);
@@ -88,7 +88,7 @@ abstract class wk extends ri {
                 var7 = 0;
                 var8 = param0 - -57;
                 L3: while (true) {
-                  if (var4 <= var7) {
+                  if ((var4 ^ -1) >= (var7 ^ -1)) {
                     return;
                   } else {
                     var9 = (-var5 + var6) * var7 / var4 + var5;
@@ -111,90 +111,92 @@ abstract class wk extends ri {
               }
             }
           } else {
-            if (var8 >= na.field_i) {
-              if (var8 < na.field_f) {
-                L4: {
-                  var9 = var7 * (var6 - var5) / var4 + var5;
-                  var10 = 0;
-                  var11 = ((wk) this).field_k;
-                  if (20 < var7) {
-                    break L4;
-                  } else {
-                    L5: while (true) {
-                      if ((var10 ^ -1) < -21) {
-                        break L4;
-                      } else {
-                        var12 = (20 - var7) * (-var7 + 20) - -((-var10 + 20) * (20 - var10));
-                        if (462 >= var12) {
-                          if (420 <= var12) {
-                            var13 = (-var12 + 462) * var9 / 42;
-                            var13 = var13 | (var13 << -1566923480 | var13 << 19501328);
-                            na.field_d[var10 + (na.field_e * var8 + param2)] = var13;
-                            var10++;
-                            continue L5;
-                          } else {
-                            break L4;
-                          }
-                        } else {
-                          var10++;
-                          continue L5;
-                        }
-                      }
-                    }
-                  }
-                }
-                L6: {
-                  if (var7 > 20) {
-                    break L6;
-                  } else {
-                    var12 = var11;
-                    var11 -= 21;
-                    var13 = 0;
-                    L7: while (true) {
-                      L8: {
-                        if (20 < var13) {
-                          break L8;
-                        } else {
-                          var14 = (-var7 + 20) * (-var7 + 20) + var13 * var13;
-                          if (var14 >= -463) {
-                            if (-421 <= var14) {
-                              var15 = (462 + -var14) * var9 / 42;
-                              var15 = var15 | (var15 << 955032712 | var15 << -580817584);
-                              na.field_d[param2 + na.field_e * var8 - -var11] = var15;
-                              var13++;
-                              var11++;
-                              continue L7;
-                            } else {
-                              var12 = 1 + var11;
-                              var13++;
-                              var11++;
-                              continue L7;
-                            }
-                          } else {
-                            break L8;
-                          }
-                        }
-                      }
-                      var11 = var12;
-                      break L6;
-                    }
-                  }
-                }
-                var9 = var9 | (var9 << -1057784816 | var9 << -1588613016);
-                na.a(var10 + param2, var8, -var10 + var11, var9);
-                var7++;
-                var8++;
-                continue L1;
+            L4: {
+              if ((var8 ^ -1) > (na.field_i ^ -1)) {
+                break L4;
               } else {
-                var7++;
-                var8++;
-                continue L1;
+                if (var8 < na.field_f) {
+                  L5: {
+                    var9 = var7 * (var6 - var5) / var4 + var5;
+                    var10 = 0;
+                    var11 = ((wk) this).field_k;
+                    if (20 < var7) {
+                      break L5;
+                    } else {
+                      L6: while (true) {
+                        if ((var10 ^ -1) < -21) {
+                          break L5;
+                        } else {
+                          L7: {
+                            var12 = (20 - var7) * (-var7 + 20) - -((-var10 + 20) * (20 - var10));
+                            if (462 < var12) {
+                              break L7;
+                            } else {
+                              if (420 <= var12) {
+                                var13 = (-var12 + 462) * var9 / 42;
+                                var13 = var13 | (var13 << -1566923480 | var13 << 19501328);
+                                na.field_d[var10 + (na.field_e * var8 + param2)] = var13;
+                                break L7;
+                              } else {
+                                break L5;
+                              }
+                            }
+                          }
+                          var10++;
+                          continue L6;
+                        }
+                      }
+                    }
+                  }
+                  L8: {
+                    if (var7 > 20) {
+                      break L8;
+                    } else {
+                      var12 = var11;
+                      var11 -= 21;
+                      var13 = 0;
+                      L9: while (true) {
+                        L10: {
+                          if (20 < var13) {
+                            break L10;
+                          } else {
+                            var14 = (-var7 + 20) * (-var7 + 20) + var13 * var13;
+                            if ((var14 ^ -1) >= -463) {
+                              L11: {
+                                if (-421 >= (var14 ^ -1)) {
+                                  var15 = (462 + -var14) * var9 / 42;
+                                  var15 = var15 | (var15 << 955032712 | var15 << -580817584);
+                                  na.field_d[param2 + na.field_e * var8 - -var11] = var15;
+                                  break L11;
+                                } else {
+                                  var12 = 1 + var11;
+                                  break L11;
+                                }
+                              }
+                              var13++;
+                              var11++;
+                              continue L9;
+                            } else {
+                              break L10;
+                            }
+                          }
+                        }
+                        var11 = var12;
+                        break L8;
+                      }
+                    }
+                  }
+                  var9 = var9 | (var9 << -1057784816 | var9 << -1588613016);
+                  na.a(var10 + param2, var8, -var10 + var11, var9);
+                  break L4;
+                } else {
+                  break L4;
+                }
               }
-            } else {
-              var7++;
-              var8++;
-              continue L1;
             }
+            var7++;
+            var8++;
+            continue L1;
           }
         }
     }
@@ -210,8 +212,9 @@ abstract class wk extends ri {
         if (0 < ((wk) this).field_M) {
             var2 = ((wk) this).field_L;
             var3 = ((wk) this).field_F;
+            int fieldTemp$0 = ((wk) this).field_K + 1;
             ((wk) this).field_K = ((wk) this).field_K + 1;
-            if (((wk) this).field_M > ((wk) this).field_K + 1) {
+            if (((wk) this).field_M > fieldTemp$0) {
                 var4 = ((wk) this).field_K * (((wk) this).field_M * 2 + -((wk) this).field_K);
                 var5 = ((wk) this).field_M * ((wk) this).field_M;
                 var3 = ((wk) this).field_J - -((((wk) this).field_F + -((wk) this).field_J) * var4 / var5);

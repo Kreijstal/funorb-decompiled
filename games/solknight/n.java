@@ -25,8 +25,9 @@ final class n implements Iterator {
         if (((n) this).field_f == ((n) this).field_e.field_b[-1 + ((n) this).field_g]) {
           L0: while (true) {
             if (((n) this).field_g < ((n) this).field_e.field_e) {
+              int fieldTemp$1 = ((n) this).field_g;
               ((n) this).field_g = ((n) this).field_g + 1;
-              if (((n) this).field_e.field_b[((n) this).field_g].field_d == ((n) this).field_e.field_b[((n) this).field_g - 1]) {
+              if (((n) this).field_e.field_b[fieldTemp$1].field_d == ((n) this).field_e.field_b[((n) this).field_g - 1]) {
                 ((n) this).field_f = ((n) this).field_e.field_b[((n) this).field_g - 1];
                 continue L0;
               } else {
@@ -70,8 +71,9 @@ final class n implements Iterator {
         if (((n) this).field_f == ((n) this).field_e.field_b[((n) this).field_g - 1]) {
           L0: while (true) {
             if (((n) this).field_e.field_e > ((n) this).field_g) {
+              int fieldTemp$2 = ((n) this).field_g;
               ((n) this).field_g = ((n) this).field_g + 1;
-              var1 = ((n) this).field_e.field_b[((n) this).field_g].field_d;
+              var1 = ((n) this).field_e.field_b[fieldTemp$2].field_d;
               if (((n) this).field_e.field_b[((n) this).field_g + -1] == var1) {
                 continue L0;
               } else {

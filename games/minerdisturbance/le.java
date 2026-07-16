@@ -31,11 +31,17 @@ final class le implements uj {
               }
             }
             try {
-              Object discarded$1 = lk.a("resizing", bm.c(-117), 16715, new Object[1]);
-            } catch (java.lang.Throwable decompiledCaughtParameter) {
-              decompiledCaughtException = decompiledCaughtParameter;
+              L1: {
+                Object discarded$1 = lk.a("resizing", bm.c(-117), 16715, new Object[1]);
+                break L1;
+              }
+            } catch (java.lang.Throwable decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              L2: {
+                var2 = decompiledCaughtException;
+                break L2;
+              }
             }
-            var2 = decompiledCaughtException;
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {

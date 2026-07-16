@@ -46,135 +46,82 @@ final class bm extends mc {
             IOException var2 = null;
             int var3 = 0;
             Throwable decompiledCaughtException = null;
-            int statePc = 0;
-            Throwable caughtException = null;
-            stateLoop: while (true) {
-                switch (statePc) {
-                    case 0: {
-                        var3 = TetraLink.field_J;
-                        if (null == vh.field_e) {
-                            statePc = 2;
-                        } else {
-                            statePc = 1;
-                        }
-                        continue stateLoop;
-                    }
-                    case 1: {
-                        vh.field_e.a((byte) 80);
-                        statePc = 2;
-                        continue stateLoop;
-                    }
-                    case 2: {
-                        if (null != qc.field_X) {
-                            statePc = 4;
-                        } else {
-                            statePc = 5;
-                        }
-                        continue stateLoop;
-                    }
-                    case 4: {
-                        qc.field_X.b(-23641);
-                        statePc = 5;
-                        continue stateLoop;
-                    }
-                    case 5: {
-                        if (null == ch.field_r) {
-                            statePc = 9;
-                        } else {
-                            statePc = 6;
-                        }
-                        continue stateLoop;
-                    }
-                    case 6: {
-                        try {
-                            ch.field_r.a(param0 ^ 25675);
-                            statePc = 9;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_6) {
-                            caughtException = stateCaught_6;
-                            statePc = 8;
-                            continue stateLoop;
-                        }
-                    }
-                    case 8: {
-                        iOException = (IOException) (Object) caughtException;
-                        statePc = 9;
-                        continue stateLoop;
-                    }
-                    case 9: {
-                        if (param0 == -25676) {
-                            statePc = 11;
-                        } else {
-                            statePc = 10;
-                        }
-                        continue stateLoop;
-                    }
-                    case 10: {
-                        field_s = null;
-                        statePc = 11;
-                        continue stateLoop;
-                    }
-                    case 11: {
-                        if (null != ok.field_b) {
-                            statePc = 13;
-                        } else {
-                            statePc = 20;
-                        }
-                        continue stateLoop;
-                    }
-                    case 13: {
-                        var1 = 0;
-                        statePc = 14;
-                        continue stateLoop;
-                    }
-                    case 14: {
-                        if (var1 >= ok.field_b.length) {
-                            statePc = 20;
-                        } else {
-                            statePc = 15;
-                        }
-                        continue stateLoop;
-                    }
-                    case 15: {
-                        if (ok.field_b[var1] != null) {
-                            statePc = 17;
-                        } else {
-                            statePc = 16;
-                        }
-                        continue stateLoop;
-                    }
-                    case 16: {
-                        var1++;
-                        statePc = 14;
-                        continue stateLoop;
-                    }
-                    case 17: {
-                        try {
-                            ok.field_b[var1].a(-1);
-                            statePc = 18;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_17) {
-                            caughtException = stateCaught_17;
-                            statePc = 19;
-                            continue stateLoop;
-                        }
-                    }
-                    case 18: {
-                        var1++;
-                        statePc = 14;
-                        continue stateLoop;
-                    }
-                    case 19: {
-                        var2 = (IOException) (Object) caughtException;
-                        var1++;
-                        statePc = 14;
-                        continue stateLoop;
-                    }
-                    case 20: {
-                        return;
-                    }
-                    default: throw new IllegalStateException("invalid CFG state " + statePc);
+            L0: {
+              var3 = TetraLink.field_J;
+              if (null == vh.field_e) {
+                break L0;
+              } else {
+                vh.field_e.a((byte) 80);
+                break L0;
+              }
+            }
+            L1: {
+              if (null != qc.field_X) {
+                qc.field_X.b(-23641);
+                break L1;
+              } else {
+                break L1;
+              }
+            }
+            L2: {
+              if (null == ch.field_r) {
+                break L2;
+              } else {
+                try {
+                  L3: {
+                    ch.field_r.a(param0 ^ 25675);
+                    break L3;
+                  }
+                } catch (java.io.IOException decompiledCaughtParameter0) {
+                  decompiledCaughtException = decompiledCaughtParameter0;
+                  L4: {
+                    iOException = (IOException) (Object) decompiledCaughtException;
+                    break L4;
+                  }
                 }
+                break L2;
+              }
+            }
+            L5: {
+              if (param0 == -25676) {
+                break L5;
+              } else {
+                field_s = null;
+                break L5;
+              }
+            }
+            L6: {
+              if (null != ok.field_b) {
+                var1 = 0;
+                L7: while (true) {
+                  if (var1 >= ok.field_b.length) {
+                    break L6;
+                  } else {
+                    if (ok.field_b[var1] != null) {
+                      try {
+                        L8: {
+                          ok.field_b[var1].a(-1);
+                          var1++;
+                          break L8;
+                        }
+                      } catch (java.io.IOException decompiledCaughtParameter1) {
+                        decompiledCaughtException = decompiledCaughtParameter1;
+                        L9: {
+                          var2 = (IOException) (Object) decompiledCaughtException;
+                          var1++;
+                          break L9;
+                        }
+                      }
+                      continue L7;
+                    } else {
+                      var1++;
+                      continue L7;
+                    }
+                  }
+                }
+              } else {
+                break L6;
+              }
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;

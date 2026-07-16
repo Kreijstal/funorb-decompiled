@@ -7,43 +7,34 @@ abstract class ba {
     static String field_b;
 
     final static String a(String param0, int param1, byte param2) {
-        if (-4 == (param1 ^ -1)) {
-          return nm.field_c;
-        } else {
-          if (param2 == 83) {
-            if (param1 != -7) {
-              if (-8 == param1) {
-                return hg.field_o;
-              } else {
-                if ((param1 ^ -1) != -9) {
-                  if (param1 == 9) {
-                    return wc.field_e;
-                  } else {
-                    if ((param1 ^ -1) == -11) {
-                      return se.field_a;
-                    } else {
-                      if (11 != param1) {
-                        if (param1 != 14) {
-                          return null;
-                        } else {
-                          return oi.a(new String[1], oe.field_d, param2 ^ 81);
-                        }
-                      } else {
-                        return qd.field_g;
-                      }
-                    }
-                  }
-                } else {
-                  return ti.field_c;
-                }
-              }
-            } else {
-              return na.field_Eb;
-            }
-          } else {
-            return null;
-          }
+        if (!(-4 != (param1 ^ -1))) {
+            return nm.field_c;
         }
+        if (param2 != 83) {
+            return null;
+        }
+        if ((param1 ^ -1) == -7) {
+            return na.field_Eb;
+        }
+        if (!(-8 != (param1 ^ -1))) {
+            return hg.field_o;
+        }
+        if ((param1 ^ -1) == -9) {
+            return ti.field_c;
+        }
+        if (!(param1 != 9)) {
+            return wc.field_e;
+        }
+        if (!((param1 ^ -1) != -11)) {
+            return se.field_a;
+        }
+        if (11 == param1) {
+            return qd.field_g;
+        }
+        if (param1 != 14) {
+            return null;
+        }
+        return oi.a(new String[1], oe.field_d, param2 ^ 81);
     }
 
     abstract int a(int param0, int param1);

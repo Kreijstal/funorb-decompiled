@@ -22,30 +22,51 @@ final class ju extends lb {
     }
 
     final static void a(int param0, int param1, int param2, ut[] param3, int param4) {
-        int var10 = Kickabout.field_G;
-        if (param3 != null) {
-            // if_icmple L20
-        } else {
-            return;
+        int var5 = 0;
+        int var6 = 0;
+        int var7 = 0;
+        int var8 = 0;
+        int var9 = 0;
+        int var10 = 0;
+        L0: {
+          var10 = Kickabout.field_G;
+          if (param3 == null) {
+            break L0;
+          } else {
+            if (-1 <= (param4 ^ -1)) {
+              break L0;
+            } else {
+              L1: {
+                var5 = param3[0].field_o;
+                var6 = param3[2].field_o;
+                if (param1 < -120) {
+                  break L1;
+                } else {
+                  field_W = null;
+                  break L1;
+                }
+              }
+              var7 = param3[1].field_o;
+              param3[0].c(param0, param2);
+              param3[2].c(param4 + param0 - var6, param2);
+              on.a(vi.field_q);
+              on.h(var5 + param0, param2, -var6 + param4 + param0, param3[1].field_v + param2);
+              var8 = param0 - -var5;
+              var9 = param4 + (param0 + -var6);
+              param0 = var8;
+              L2: while (true) {
+                if (var9 <= param0) {
+                  on.b(vi.field_q);
+                  return;
+                } else {
+                  param3[1].c(param0, param2);
+                  param0 = param0 + var7;
+                  continue L2;
+                }
+              }
+            }
+          }
         }
-        int var5 = param3[0].field_o;
-        int var6 = param3[2].field_o;
-        if (param1 >= -120) {
-            field_W = null;
-        }
-        int var7 = param3[1].field_o;
-        param3[0].c(param0, param2);
-        param3[2].c(param4 + param0 - var6, param2);
-        on.a(vi.field_q);
-        on.h(var5 + param0, param2, -var6 + param4 + param0, param3[1].field_v + param2);
-        int var8 = param0 - -var5;
-        int var9 = param4 + (param0 + -var6);
-        param0 = var8;
-        while (var9 > param0) {
-            param3[1].c(param0, param2);
-            param0 = param0 + var7;
-        }
-        on.b(vi.field_q);
     }
 
     final void a(byte param0, fd param1, int param2, int param3) {
@@ -251,6 +272,7 @@ final class ju extends lb {
             L1: while (true) {
               if (var0 > 10) {
                 field_P = "Log in";
+                return;
               } else {
                 var1 = -8 + 8 * var0;
                 field_V[var0] = sd.a(mg.a(255L, field_W[7][var1 - -7]), sd.a(mg.a(65280L, field_W[6][var1 + 6]), sd.a(sd.a(mg.a(4278190080L, field_W[4][4 + var1]), sd.a(sd.a(mg.a(field_W[2][var1 - -2], 280375465082880L), sd.a(mg.a(71776119061217280L, field_W[1][1 + var1]), mg.a(field_W[0][var1], -72057594037927936L))), mg.a(1095216660480L, field_W[3][var1 + 3]))), mg.a(field_W[5][var1 + 5], 16711680L))));
@@ -260,7 +282,7 @@ final class ju extends lb {
             }
           } else {
             L2: {
-              var1 = "ᠣ웨螸ŏ㚦틵祯酒悼鮎ꌌ笵ᷠퟂ⹋﹗ᕷ㟥鿰䫚壉⤊놠殅뵝ჴ쬾է䆋Ᵹ闘ﯮ籦���䞞쨭뼇굚茳挂ꩱ젙䧙守騦㊰햀뻍㑈ｺ遟⁨᪮둔錢擱猒䀈쏬���贽需켫皂혛떯橐䗳ワ㽕ꋪ斺⿀���﵍鉵ڊ닦ฟ拔ꢖ暈╙葲㥌幸㢌톥댡鰞䏇ﰄ写洍﫟縤㮫츑轎럫㲁铷뤓ⳓ쐃噄義⪻셓���鵬ㅴ겉ᓡᘺ椉炶탭챂颤⡜".charAt(var0 / 2);
+              var1 = "ᠣ웨螸ŏ㚦틵祯酒悼鮎ꌌ笵ᷠퟂ⹋﹗ᕷ㟥鿰䫚壉⤊놠殅뵝ჴ쬾է䆋Ᵹ闘ﯮ籦\udd17䞞쨭뼇굚茳挂ꩱ젙䧙守騦㊰햀뻍㑈ｺ遟⁨᪮둔錢擱猒䀈쏬\udba1贽需켫皂혛떯橐䗳ワ㽕ꋪ斺⿀\ude1c﵍鉵ڊ닦ฟ拔ꢖ暈╙葲㥌幸㢌톥댡鰞䏇ﰄ写洍﫟縤㮫츑轎럫㲁铷뤓ⳓ쐃噄義⪻셓\udc0b鵬ㅴ겉ᓡᘺ椉炶탭챂颤⡜".charAt(var0 / 2);
               if ((var0 & 1) != 0) {
                 stackOut_4_0 = (long)(255 & var1);
                 stackIn_5_0 = stackOut_4_0;

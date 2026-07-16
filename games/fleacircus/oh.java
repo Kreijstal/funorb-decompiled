@@ -58,8 +58,9 @@ abstract class oh extends jj {
         var3 = fleas.field_A ? 1 : 0;
         if (null != ((oh) this).field_fb) {
           if (((oh) this).field_fb == rk.field_w) {
+            int fieldTemp$2 = ((oh) this).field_eb + 1;
             ((oh) this).field_eb = ((oh) this).field_eb + 1;
-            if (((oh) this).field_eb + 1 != ((oh) this).field_ab) {
+            if (fieldTemp$2 != ((oh) this).field_ab) {
               ((oh) this).field_hb.field_F = -((((oh) this).field_eb << -2050684568) / ((oh) this).field_ab) + 256;
               var2 = -59 / ((38 - param0) / 49);
               return super.a(-57);
@@ -73,8 +74,9 @@ abstract class oh extends jj {
             }
           } else {
             if (((oh) this).field_fb == fl.field_e) {
+              int fieldTemp$3 = ((oh) this).field_eb + 1;
               ((oh) this).field_eb = ((oh) this).field_eb + 1;
-              if (((oh) this).field_cb != ((oh) this).field_eb + 1) {
+              if (((oh) this).field_cb != fieldTemp$3) {
                 ((oh) this).field_hb.field_F = (((oh) this).field_eb << 825741992) / ((oh) this).field_cb;
                 var2 = -59 / ((38 - param0) / 49);
                 return super.a(-57);
@@ -287,50 +289,34 @@ abstract class oh extends jj {
     }
 
     boolean a(int param0, int param1, qa param2, char param3) {
-        if (super.a(param0 + 0, param1, param2, param3)) {
-          return true;
-        } else {
-          if (param0 == -2) {
-            if (null != ((oh) this).field_hb) {
-              L0: {
-                if (param1 == -99) {
-                  boolean discarded$8 = ((oh) this).field_hb.a(param2, -61);
-                  break L0;
-                } else {
-                  break L0;
-                }
-              }
-              if (-100 != param1) {
-                return false;
-              } else {
-                boolean discarded$9 = ((oh) this).field_hb.a(param2, -70);
-                return false;
-              }
-            } else {
-              return false;
-            }
-          } else {
-            ((oh) this).l(118);
-            if (null != ((oh) this).field_hb) {
-              L1: {
-                if (param1 == -99) {
-                  boolean discarded$10 = ((oh) this).field_hb.a(param2, -61);
-                  break L1;
-                } else {
-                  break L1;
-                }
-              }
-              if (-100 != param1) {
-                return false;
-              } else {
-                boolean discarded$11 = ((oh) this).field_hb.a(param2, -70);
-                return false;
-              }
-            } else {
-              return false;
-            }
-          }
+        if (!(!super.a(param0 + 0, param1, param2, param3))) {
+            return true;
         }
+        if (param0 != -2) {
+            ((oh) this).l(118);
+            if (null == ((oh) this).field_hb) {
+                return false;
+            }
+            if (!((param1 ^ -1) != -99)) {
+                boolean discarded$0 = ((oh) this).field_hb.a(param2, -61);
+            }
+            if (-100 != (param1 ^ -1)) {
+                return false;
+            }
+            boolean discarded$1 = ((oh) this).field_hb.a(param2, -70);
+            return false;
+        }
+        if (null == ((oh) this).field_hb) {
+            return false;
+        }
+        if (!((param1 ^ -1) != -99)) {
+            boolean discarded$2 = ((oh) this).field_hb.a(param2, -61);
+        }
+        if (-100 != (param1 ^ -1)) {
+            return false;
+        }
+        boolean discarded$3 = ((oh) this).field_hb.a(param2, -70);
+        return false;
     }
 
     static {

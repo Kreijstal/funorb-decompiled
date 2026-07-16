@@ -22,7 +22,8 @@ final class eh {
         int var18 = 0;
         int var19 = 0;
         int var20 = 0;
-        a var21 = null;
+        Object var21 = null;
+        a var21_ref = null;
         int var22 = 0;
         int var23 = 0;
         int var24 = 0;
@@ -204,7 +205,7 @@ final class eh {
                   break L8;
                 }
                 L10: {
-                  var21 = stackIn_38_0;
+                  var21_ref = stackIn_38_0;
                   var22 = ca.field_c[var15];
                   var23 = kg.field_g[var15];
                   var24 = ca.field_c[var16];
@@ -220,8 +221,8 @@ final class eh {
                       L11: {
                         var28 = var67[var18];
                         var29 = var68[var18];
-                        if (var21 != null) {
-                          stackOut_42_0 = var21.field_d;
+                        if (var21_ref != null) {
+                          stackOut_42_0 = var21_ref.field_d;
                           stackIn_43_0 = stackOut_42_0;
                           break L11;
                         } else {
@@ -248,8 +249,8 @@ final class eh {
                   var31 = var68[var18];
                   var32 = var68[var19];
                   var33 = var68[var20];
-                  if (var21 != null) {
-                    stackOut_46_0 = var21.field_d;
+                  if (var21_ref != null) {
+                    stackOut_46_0 = var21_ref.field_d;
                     stackIn_47_0 = stackOut_46_0;
                     break L12;
                   } else {
@@ -396,11 +397,12 @@ final class eh {
         field_d = new long[11];
         var0 = 0;
         L0: while (true) {
-          if (var0 <= -257) {
+          if ((var0 ^ -1) <= -257) {
             field_d[0] = 0L;
             var0 = 1;
             L1: while (true) {
               if (10 < var0) {
+                return;
               } else {
                 var1 = var0 * 8 - 8;
                 field_d[var0] = hf.a(tk.a(255L, field_a[7][7 + var1]), hf.a(tk.a(field_a[6][6 + var1], 65280L), hf.a(tk.a(field_a[5][5 + var1], 16711680L), hf.a(hf.a(hf.a(hf.a(tk.a(field_a[1][var1 - -1], 71776119061217280L), tk.a(-72057594037927936L, field_a[0][var1])), tk.a(280375465082880L, field_a[2][var1 - -2])), tk.a(1095216660480L, field_a[3][3 + var1])), tk.a(field_a[4][var1 - -4], 4278190080L)))));
@@ -410,8 +412,8 @@ final class eh {
             }
           } else {
             L2: {
-              var1 = "ᠣ웨螸ŏ㚦틵祯酒悼鮎ꌌ笵ᷠퟂ⹋﹗ᕷ㟥鿰䫚壉⤊놠殅뵝ჴ쬾է䆋Ᵹ闘ﯮ籦���䞞쨭뼇굚茳挂ꩱ젙䧙守騦㊰햀뻍㑈ｺ遟⁨᪮둔錢擱猒䀈쏬���贽需켫皂혛떯橐䗳ワ㽕ꋪ斺⿀���﵍鉵ڊ닦ฟ拔ꢖ暈╙葲㥌幸㢌톥댡鰞䏇ﰄ写洍﫟縤㮫츑轎럫㲁铷뤓ⳓ쐃噄義⪻셓���鵬ㅴ겉ᓡᘺ椉炶탭챂颤⡜".charAt(var0 / 2);
-              if (-1 != (var0 & 1)) {
+              var1 = "ᠣ웨螸ŏ㚦틵祯酒悼鮎ꌌ笵ᷠퟂ⹋﹗ᕷ㟥鿰䫚壉⤊놠殅뵝ჴ쬾է䆋Ᵹ闘ﯮ籦\udd17䞞쨭뼇굚茳挂ꩱ젙䧙守騦㊰햀뻍㑈ｺ遟⁨᪮둔錢擱猒䀈쏬\udba1贽需켫皂혛떯橐䗳ワ㽕ꋪ斺⿀\ude1c﵍鉵ڊ닦ฟ拔ꢖ暈╙葲㥌幸㢌톥댡鰞䏇ﰄ写洍﫟縤㮫츑轎럫㲁铷뤓ⳓ쐃噄義⪻셓\udc0b鵬ㅴ겉ᓡᘺ椉炶탭챂颤⡜".charAt(var0 / 2);
+              if (-1 != (var0 & 1 ^ -1)) {
                 stackOut_4_0 = (long)(255 & var1);
                 stackIn_5_0 = stackOut_4_0;
                 break L2;

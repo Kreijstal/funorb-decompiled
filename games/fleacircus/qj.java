@@ -45,12 +45,14 @@ final class qj extends dk {
             param0 = ed.field_c[var5];
             var6 = var5 << -1266174492;
             while (true) {
+                int incrementValue$0 = param0;
                 param0--;
-                if (0 == param0) {
+                if (0 == incrementValue$0) {
                     break;
                 }
+                int incrementValue$1 = var6;
                 var6++;
-                param1 = pk.field_J[var6];
+                param1 = pk.field_J[incrementValue$1];
                 param3[param2[param1]] = param3[param2[param1]] + 1;
                 pk.field_J[param3[param2[param1]]] = param1;
             }

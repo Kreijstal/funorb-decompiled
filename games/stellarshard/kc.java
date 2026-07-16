@@ -15,14 +15,13 @@ final class kc {
     }
 
     final static void a(int param0) {
-        String var2 = null;
+        Object var2 = null;
         int var2_int = 0;
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
         pb var6 = null;
         pb var7 = null;
-        pb var7_ref = null;
         pb var8 = null;
         var4 = stellarshard.field_B;
         ti.b(243, 197, 369, 143, 16777215);
@@ -49,17 +48,17 @@ final class kc {
               if (cj.field_c <= ha.field_w) {
                 break L1;
               } else {
-                var7_ref = ed.field_a[tc.field_w];
-                if (var7_ref == null) {
+                var7 = ed.field_a[tc.field_w];
+                if (var7 == null) {
                   break L1;
                 } else {
-                  var2_int = (var7_ref.field_w - -60) * ha.field_w / cj.field_c;
+                  var2_int = (var7.field_w - -60) * ha.field_w / cj.field_c;
                   var3 = -30 + var2_int;
                   if (!nj.field_g) {
-                    ua.a((-var3 + var7_ref.field_w) * 256 / 30, -256 * var3 / 30, var7_ref, 0, 245, 199);
+                    ua.a((-var3 + var7.field_w) * 256 / 30, -256 * var3 / 30, var7, 0, 245, 199);
                     break L1;
                   } else {
-                    ua.a(var3 * -256 / 30, 256 * (-var3 + var7_ref.field_w) / 30, var7_ref, 0, 245, 199);
+                    ua.a(var3 * -256 / 30, 256 * (-var3 + var7.field_w) / 30, var7, 0, 245, 199);
                     break L1;
                   }
                 }
@@ -94,11 +93,11 @@ final class kc {
                         }
                       }
                       if (var2 == null) {
-                        var2 = Integer.toString(var5);
+                        var2 = (Object) (Object) Integer.toString(var5);
                         var5++;
                         continue L3;
                       } else {
-                        var2 = var2 + ", " + var5;
+                        var2 = (Object) (Object) (var2 + ", " + var5);
                         var5++;
                         continue L3;
                       }

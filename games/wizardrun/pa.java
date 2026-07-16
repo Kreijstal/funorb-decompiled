@@ -83,6 +83,7 @@ final class pa {
         L0: while (true) {
           if ((var2 ^ -1) <= -257) {
             field_e = new oi();
+            return;
           } else {
             var0 = (long)var2;
             var3 = 0;

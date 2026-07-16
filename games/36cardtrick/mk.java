@@ -27,18 +27,22 @@ final class mk extends cg {
               }
             }
             try {
-              stackOut_2_0 = (te) Class.forName("bh").newInstance();
-              stackIn_3_0 = stackOut_2_0;
-            } catch (java.lang.Throwable decompiledCaughtParameter) {
-              decompiledCaughtException = decompiledCaughtParameter;
-              return (te) (Object) stackIn_3_0;
+              L1: {
+                stackOut_2_0 = (te) Class.forName("bh").newInstance();
+                stackIn_3_0 = stackOut_2_0;
+                break L1;
+              }
+            } catch (java.lang.Throwable decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              var1 = decompiledCaughtException;
+              return null;
             }
+            return stackIn_3_0;
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
             throw new RuntimeException(decompiledCheckedException);
         }
-        return null;
     }
 
     public static void b(byte param0) {
@@ -81,7 +85,7 @@ final class mk extends cg {
                       return ll.field_g;
                     }
                   } else {
-                    ((mk) this).field_l = (hf) null;
+                    ((mk) this).field_l = null;
                     if (var6.length() > 0) {
                       if (gi.a(var5, -123, var6)) {
                         return qi.field_F;
@@ -152,7 +156,7 @@ final class mk extends cg {
             return pe.field_b;
           }
         } else {
-          ((mk) this).field_l = (hf) null;
+          ((mk) this).field_l = null;
           var3 = ((mk) this).field_l.field_r.toLowerCase();
           var4 = param0.toLowerCase();
           if (var4.length() != 0) {
@@ -210,7 +214,7 @@ final class mk extends cg {
             return false;
           }
         } else {
-          ((mk) this).field_j = (hf) null;
+          ((mk) this).field_j = null;
           var3 = ((mk) this).field_j.field_r.toLowerCase();
           var4 = param0.toLowerCase();
           if (-1 > var3.length()) {

@@ -45,10 +45,10 @@ final class ik extends kn implements be, sh, f {
         if (param2 != 12278) {
             ((ik) this).field_V = null;
         }
-        if (-1 == param3) {
+        if (-1 == (param3 ^ -1)) {
             qd.a(5, "terms.ws");
         } else {
-            if (-2 == param3) {
+            if (-2 == (param3 ^ -1)) {
                 qd.a(5, "privacy.ws");
             } else {
                 if (!((param3 ^ -1) != -3)) {
@@ -66,14 +66,26 @@ final class ik extends kn implements be, sh, f {
     }
 
     public final void a(int param0, byte param1, hc param2, int param3, int param4) {
-        if (param1 != 6) {
+        L0: {
+          if (param1 == 6) {
+            break L0;
+          } else {
             field_N = null;
+            break L0;
+          }
         }
-        if (((ik) this).field_R != param2) {
-            // if_acmpne L49
-            boolean discarded$0 = this.o(-1);
-        } else {
+        L1: {
+          if (((ik) this).field_R == param2) {
             hk.c(-118);
+            break L1;
+          } else {
+            if (((ik) this).field_K != param2) {
+              break L1;
+            } else {
+              boolean discarded$2 = this.o(-1);
+              break L1;
+            }
+          }
         }
     }
 
@@ -132,10 +144,10 @@ final class ik extends kn implements be, sh, f {
         if (!(!super.a(param0, param1, param2, param3))) {
             return true;
         }
-        if (!(-99 != param3)) {
+        if (!(-99 != (param3 ^ -1))) {
             return ((ik) this).b(param1, param2 ^ -79);
         }
-        if (-100 == param3) {
+        if (-100 == (param3 ^ -1)) {
             return ((ik) this).a(param1, (byte) 12);
         }
         return false;
@@ -191,12 +203,14 @@ final class ik extends kn implements be, sh, f {
         ((ik) this).field_K.field_A = (ad) (Object) new wi();
         ((ik) this).field_R.field_A = (ad) (Object) new nc();
         ((ik) this).field_I.field_A = (ad) (Object) new gk(10000536);
-        ((ik) this).field_M.field_A = (ad) (Object) new gk(10000536);
-        ((ik) this).field_P.field_A = (ad) (Object) new gk(10000536);
+        gk dupTemp$0 = new gk(10000536);
+        ((ik) this).field_M.field_A = (ad) (Object) dupTemp$0;
+        ((ik) this).field_P.field_A = (ad) (Object) dupTemp$0;
         ((ik) this).field_Q.field_A = (ad) (Object) new gk(10000536);
         ((ik) this).field_V.field_A = (ad) (Object) new qh();
-        ((ik) this).field_O.field_A = (ad) (Object) new mn(10000536);
-        ((ik) this).field_J.field_A = (ad) (Object) new mn(10000536);
+        mn dupTemp$1 = new mn(10000536);
+        ((ik) this).field_O.field_A = (ad) (Object) dupTemp$1;
+        ((ik) this).field_J.field_A = (ad) (Object) dupTemp$1;
         String var2 = oa.a((byte) -120, eb.field_g, new String[2]);
         int var3 = 20;
         var3 = var3 + this.a(170, var3, id.field_i, (fe) (Object) ((ik) this).field_P, -2791);
@@ -291,7 +305,6 @@ final class ik extends kn implements be, sh, f {
         int var4 = 0;
         int var5 = 0;
         String var6 = null;
-        String var6_ref = null;
         int var7 = 0;
         int var8 = 0;
         ac var9 = null;
@@ -353,7 +366,7 @@ final class ik extends kn implements be, sh, f {
             L3: {
               var4 = mf.field_m[var3];
               if (0 <= var4) {
-                if (var4 == pn.field_a.field_e) {
+                if ((var4 ^ -1) == (pn.field_a.field_e ^ -1)) {
                   var5 = fg.field_b;
                   break L3;
                 } else {
@@ -367,14 +380,14 @@ final class ik extends kn implements be, sh, f {
             }
             L4: {
               var6 = ne.field_K[var3];
-              if (ti.field_M != -3) {
+              if ((ti.field_M ^ -1) != -3) {
                 break L4;
               } else {
-                if (-2 != var2) {
+                if (-2 != (var2 ^ -1)) {
                   break L4;
                 } else {
                   L5: {
-                    if (oe.field_g.length >= ce.field_c.length) {
+                    if ((oe.field_g.length ^ -1) <= (ce.field_c.length ^ -1)) {
                       stackOut_15_0 = oe.field_g.length;
                       stackIn_16_0 = stackOut_15_0;
                       break L5;
@@ -401,7 +414,7 @@ final class ik extends kn implements be, sh, f {
                             break L7;
                           }
                         }
-                        var6_ref = stackIn_22_0;
+                        var6 = stackIn_22_0;
                         break L6;
                       } else {
                         break L6;
@@ -409,7 +422,7 @@ final class ik extends kn implements be, sh, f {
                     }
                   }
                   L8: {
-                    if (field_N.length <= om.field_f.length) {
+                    if ((field_N.length ^ -1) >= (om.field_f.length ^ -1)) {
                       stackOut_25_0 = om.field_f.length;
                       stackIn_26_0 = stackOut_25_0;
                       break L8;
@@ -420,7 +433,7 @@ final class ik extends kn implements be, sh, f {
                     }
                   }
                   var8 = stackIn_26_0;
-                  if (var3 < var7 + 7) {
+                  if ((var3 ^ -1) > (var7 + 7 ^ -1)) {
                     break L4;
                   } else {
                     if (var3 < 7 - (-var7 - var8)) {
@@ -435,7 +448,7 @@ final class ik extends kn implements be, sh, f {
                           break L9;
                         }
                       }
-                      var6_ref = stackIn_32_0;
+                      var6 = stackIn_32_0;
                       break L4;
                     } else {
                       break L4;
@@ -448,12 +461,12 @@ final class ik extends kn implements be, sh, f {
               if (1 != (var4 ^ -1)) {
                 break L10;
               } else {
-                var6_ref = Integer.toString(var2);
+                var6 = Integer.toString(var2);
                 break L10;
               }
             }
             L11: {
-              stackOut_35_0 = (String) var6_ref;
+              stackOut_35_0 = (String) var6;
               stackIn_37_0 = stackOut_35_0;
               stackIn_36_0 = stackOut_35_0;
               if (0 > var4) {
@@ -501,17 +514,19 @@ final class ik extends kn implements be, sh, f {
                 break L12;
               }
             }
-            if ((var4 ^ -1) <= -1) {
-              ta.field_b.a(var6_ref, var8, nm.field_e + var1, var5, -1);
-              var1 = var1 + (hi.field_z + (sn.field_d - -nk.field_u));
-              var3++;
-              continue L1;
-            } else {
-              gh.field_b.a(var6_ref, var8, var1 - -he.field_a, var5, -1);
-              var1 = var1 + vd.field_z;
-              var3++;
-              continue L1;
+            L15: {
+              if ((var4 ^ -1) <= -1) {
+                ta.field_b.a(var6, var8, nm.field_e + var1, var5, -1);
+                var1 = var1 + (hi.field_z + (sn.field_d - -nk.field_u));
+                break L15;
+              } else {
+                gh.field_b.a(var6, var8, var1 - -he.field_a, var5, -1);
+                var1 = var1 + vd.field_z;
+                break L15;
+              }
             }
+            var3++;
+            continue L1;
           }
         }
     }

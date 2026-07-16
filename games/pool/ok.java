@@ -21,69 +21,114 @@ abstract class ok extends tj {
     }
 
     void d(ei param0, int param1) {
-        if (param1 != 30) {
+        L0: {
+          if (param1 == 30) {
+            break L0;
+          } else {
             ((ok) this).field_ib = null;
+            break L0;
+          }
         }
-        ((ok) this).field_lb = param0;
-        if (db.field_Ub != ((ok) this).field_gb) {
-            // if_acmpeq L99
-            ((ok) this).field_gb = dj.field_c;
-            ((ok) this).field_hb = 0;
-        } else {
+        L1: {
+          ((ok) this).field_lb = param0;
+          if (db.field_Ub == ((ok) this).field_gb) {
             ((ok) this).a((byte) -77, ((ok) this).field_lb.field_y + (12 - -((ok) this).field_jb), 12 - -((ok) this).field_lb.field_l, ((ok) this).field_nb);
             ((ok) this).field_hb = 0;
+            break L1;
+          } else {
+            if (dj.field_c == ((ok) this).field_gb) {
+              break L1;
+            } else {
+              ((ok) this).field_gb = dj.field_c;
+              ((ok) this).field_hb = 0;
+              break L1;
+            }
+          }
         }
     }
 
     final static void a(int param0, pq param1, pq param2, byte param3) {
-        if (0 > param0) {
+        long var4 = 0L;
+        int var6 = 0;
+        int var7 = 0;
+        long var8 = 0L;
+        long var10 = 0L;
+        long var12 = 0L;
+        long var14 = 0L;
+        long var16 = 0L;
+        int var18 = 0;
+        L0: {
+          if (0 <= param0) {
+            break L0;
+          } else {
             param0 = 0;
+            break L0;
+          }
         }
         param1.a(param0, 127);
         param2.a(param0, 122);
-        long var4 = param1.e(-14770) - -param2.e(-14770);
-        int var6 = param2.field_g + -param1.field_g;
-        int var7 = param2.field_k + -param1.field_k;
-        long var8 = rj.a((long)var6, (byte) -48, (long)var6) + rj.a((long)var7, (byte) -48, (long)var7);
-        if (!(-1L >= (var8 ^ -1L))) {
-            throw new IllegalStateException("dnorm2_32 overflow " + var8);
-        }
-        long var10 = bm.a(-128, var8 >> -487518000);
-        if ((var10 ^ -1L) <= 2147483647L) {
-            // iflt L185
+        var4 = param1.e(-14770) - -param2.e(-14770);
+        var6 = param2.field_g + -param1.field_g;
+        var7 = param2.field_k + -param1.field_k;
+        var8 = rj.a((long)var6, (byte) -48, (long)var6) + rj.a((long)var7, (byte) -48, (long)var7);
+        if (-1L < (var8 ^ -1L)) {
+          throw new IllegalStateException("dnorm2_32 overflow " + var8);
         } else {
-            throw new IllegalStateException("dnorm_16 overflow");
-        }
-        var6 = lh.a((int)var10, (byte) -83, (long)var6);
-        var7 = lh.a((int)var10, (byte) -112, (long)var7);
-        long var12 = rj.a((long)param1.field_I, (byte) -48, (long)var6) - -rj.a((long)param1.field_t, (byte) -48, (long)var7) >> -1518204592;
-        long var14 = rj.a((long)param2.field_I, (byte) -48, (long)var6) + rj.a((long)param2.field_t, (byte) -48, (long)var7) >> 1030857168;
-        param1.field_I = (int)((long)param1.field_I - od.a((long)var6, var12, false));
-        param1.field_t = (int)((long)param1.field_t - od.a((long)var7, var12, false));
-        param2.field_I = (int)((long)param2.field_I - od.a((long)var6, var14, false));
-        param2.field_t = (int)((long)param2.field_t - od.a((long)var7, var14, false));
-        param1.field_I = (int)((long)param1.field_I + (od.a((long)(tl.field_K * var6), var14, false) >> -922408120));
-        param1.field_t = (int)((long)param1.field_t + (od.a((long)(tl.field_K * var7), var14, false) >> -912857656));
-        param2.field_I = (int)((long)param2.field_I + (od.a((long)(tl.field_K * var6), var12, false) >> -733421624));
-        param2.field_t = (int)((long)param2.field_t + (od.a((long)(tl.field_K * var7), var12, false) >> 862675464));
-        param1.field_b = ca.field_l * param1.field_b >> 1969602184;
-        param1.field_K = ca.field_l * param1.field_K >> 1996056360;
-        param1.field_n = ca.field_l * param1.field_n >> -645723960;
-        param2.field_b = param2.field_b * ca.field_l >> -1338128088;
-        param2.field_K = param2.field_K * ca.field_l >> -1168436184;
-        param2.field_n = param2.field_n * ca.field_l >> 94132808;
-        param1.field_v = 1;
-        param2.field_v = 1;
-        int var18 = -53 / ((param3 - 62) / 39);
-        long var16 = param1.e(-14770) + param2.e(-14770);
-        if (!(wm.field_ac.length <= or.field_l)) {
-            wm.field_ac[or.field_l][0] = param1.field_g + param2.field_g >> 134135105;
-            wm.field_ac[or.field_l][1] = param2.field_k + param1.field_k >> -111052767;
-            wm.field_ac[or.field_l][2] = -524288;
-        }
-        if (or.field_l < wd.field_Qb.length) {
-            or.field_l = or.field_l + 1;
-            wd.field_Qb[or.field_l] = (int)(-var16 + var4);
+          L1: {
+            var10 = bm.a(-128, var8 >> -487518000);
+            if ((var10 ^ -1L) > 2147483647L) {
+              break L1;
+            } else {
+              if ((var10 ^ -1L) < -2147483648L) {
+                break L1;
+              } else {
+                L2: {
+                  var6 = lh.a((int)var10, (byte) -83, (long)var6);
+                  var7 = lh.a((int)var10, (byte) -112, (long)var7);
+                  var12 = rj.a((long)param1.field_I, (byte) -48, (long)var6) - -rj.a((long)param1.field_t, (byte) -48, (long)var7) >> -1518204592;
+                  var14 = rj.a((long)param2.field_I, (byte) -48, (long)var6) + rj.a((long)param2.field_t, (byte) -48, (long)var7) >> 1030857168;
+                  param1.field_I = (int)((long)param1.field_I - od.a((long)var6, var12, false));
+                  param1.field_t = (int)((long)param1.field_t - od.a((long)var7, var12, false));
+                  param2.field_I = (int)((long)param2.field_I - od.a((long)var6, var14, false));
+                  param2.field_t = (int)((long)param2.field_t - od.a((long)var7, var14, false));
+                  param1.field_I = (int)((long)param1.field_I + (od.a((long)(tl.field_K * var6), var14, false) >> -922408120));
+                  param1.field_t = (int)((long)param1.field_t + (od.a((long)(tl.field_K * var7), var14, false) >> -912857656));
+                  param2.field_I = (int)((long)param2.field_I + (od.a((long)(tl.field_K * var6), var12, false) >> -733421624));
+                  param2.field_t = (int)((long)param2.field_t + (od.a((long)(tl.field_K * var7), var12, false) >> 862675464));
+                  param1.field_b = ca.field_l * param1.field_b >> 1969602184;
+                  param1.field_K = ca.field_l * param1.field_K >> 1996056360;
+                  param1.field_n = ca.field_l * param1.field_n >> -645723960;
+                  param2.field_b = param2.field_b * ca.field_l >> -1338128088;
+                  param2.field_K = param2.field_K * ca.field_l >> -1168436184;
+                  param2.field_n = param2.field_n * ca.field_l >> 94132808;
+                  param1.field_v = 1;
+                  param2.field_v = 1;
+                  var18 = -53 / ((param3 - 62) / 39);
+                  var16 = param1.e(-14770) + param2.e(-14770);
+                  if (wm.field_ac.length > or.field_l) {
+                    wm.field_ac[or.field_l][0] = param1.field_g + param2.field_g >> 134135105;
+                    wm.field_ac[or.field_l][1] = param2.field_k + param1.field_k >> -111052767;
+                    wm.field_ac[or.field_l][2] = -524288;
+                    break L2;
+                  } else {
+                    break L2;
+                  }
+                }
+                L3: {
+                  if (or.field_l >= wd.field_Qb.length) {
+                    break L3;
+                  } else {
+                    int fieldTemp$2 = or.field_l;
+                    or.field_l = or.field_l + 1;
+                    wd.field_Qb[fieldTemp$2] = (int)(-var16 + var4);
+                    break L3;
+                  }
+                }
+                return;
+              }
+            }
+          }
+          throw new IllegalStateException("dnorm_16 overflow");
         }
     }
 
@@ -131,8 +176,9 @@ abstract class ok extends tj {
             break L0;
           } else {
             if (((ok) this).field_gb == dj.field_c) {
+              int fieldTemp$38 = ((ok) this).field_hb + 1;
               ((ok) this).field_hb = ((ok) this).field_hb + 1;
-              if (((ok) this).field_kb != ((ok) this).field_hb + 1) {
+              if (((ok) this).field_kb != fieldTemp$38) {
                 ((ok) this).field_ib.field_T = 256 + -((((ok) this).field_hb << 1928657704) / ((ok) this).field_kb);
                 break L0;
               } else {
@@ -146,8 +192,9 @@ abstract class ok extends tj {
               if (((ok) this).field_gb != tm.field_h) {
                 break L0;
               } else {
+                int fieldTemp$39 = ((ok) this).field_hb + 1;
                 ((ok) this).field_hb = ((ok) this).field_hb + 1;
-                if (((ok) this).field_qb == ((ok) this).field_hb + 1) {
+                if (((ok) this).field_qb == fieldTemp$39) {
                   ((ok) this).field_ib.field_T = 256;
                   ((ok) this).field_gb = null;
                   break L0;
@@ -191,7 +238,7 @@ abstract class ok extends tj {
 
     final static dd j(byte param0) {
         int var1 = 0;
-        lp var3 = null;
+        Object var3 = null;
         int[] var5 = null;
         int var5_int = 0;
         int var6 = 0;
@@ -229,7 +276,7 @@ abstract class ok extends tj {
             var6 = 0;
             L2: while (true) {
               if (var6 >= var1) {
-                var3 = new lp(vd.field_c, tq.field_r, el.field_I[0], ih.field_d[0], pd.field_a[0], rc.field_f[0], var22);
+                var3 = (Object) (Object) new lp(vd.field_c, tq.field_r, el.field_I[0], ih.field_d[0], pd.field_a[0], rc.field_f[0], var22);
                 break L1;
               } else {
                 var5[var6] = md.a(rb.b(-16777216, var21[var6] << 1832039992), ma.field_h[rb.b(255, (int) var19[var6])]);
@@ -244,7 +291,7 @@ abstract class ok extends tj {
             var5_int = 0;
             L3: while (true) {
               if (var1 <= var5_int) {
-                var3 = (lp) (Object) new dd(vd.field_c, tq.field_r, el.field_I[0], ih.field_d[0], pd.field_a[0], rc.field_f[0], var20);
+                var3 = (Object) (Object) new dd(vd.field_c, tq.field_r, el.field_I[0], ih.field_d[0], pd.field_a[0], rc.field_f[0], var20);
                 break L1;
               } else {
                 var9[var5_int] = ma.field_h[rb.b((int) var19[var5_int], 255)];
@@ -255,7 +302,7 @@ abstract class ok extends tj {
           }
         }
         sh.h(-1);
-        return (dd) (Object) var3;
+        return (dd) var3;
     }
 
     ok(lq param0, ei param1, int param2, int param3, int param4) {

@@ -34,16 +34,20 @@ final class fb extends cj {
         int stackOut_2_0 = 0;
         if (param0 > 79) {
           try {
-            stackOut_2_0 = Integer.parseInt(((fb) this).field_L.field_q);
-            stackIn_3_0 = stackOut_2_0;
-          } catch (java.lang.Exception decompiledCaughtParameter) {
-            decompiledCaughtException = decompiledCaughtParameter;
-            return stackIn_3_0;
+            L0: {
+              stackOut_2_0 = Integer.parseInt(((fb) this).field_L.field_q);
+              stackIn_3_0 = stackOut_2_0;
+              break L0;
+            }
+          } catch (java.lang.Exception decompiledCaughtParameter0) {
+            decompiledCaughtException = decompiledCaughtParameter0;
+            var2 = (NumberFormatException) (Object) decompiledCaughtException;
+            return -1;
           }
+          return stackIn_3_0;
         } else {
           return 33;
         }
-        return 0;
     }
 
     final boolean b(boolean param0) {
@@ -116,20 +120,24 @@ final class fb extends cj {
         int stackOut_2_0 = 0;
         try {
           L0: {
-            if (param0 == 48) {
-              break L0;
-            } else {
-              ((fb) this).a(-35, -39, 1, -65);
-              break L0;
+            L1: {
+              if (param0 == 48) {
+                break L1;
+              } else {
+                ((fb) this).a(-35, -39, 1, -65);
+                break L1;
+              }
             }
+            stackOut_2_0 = -1 + Integer.parseInt(((fb) this).field_K.field_q);
+            stackIn_3_0 = stackOut_2_0;
+            break L0;
           }
-          stackOut_2_0 = -1 + Integer.parseInt(((fb) this).field_K.field_q);
-          stackIn_3_0 = stackOut_2_0;
-        } catch (java.lang.Exception decompiledCaughtParameter) {
-          decompiledCaughtException = decompiledCaughtParameter;
-          return stackIn_3_0;
+        } catch (java.lang.Exception decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2 = (NumberFormatException) (Object) decompiledCaughtException;
+          return -1;
         }
-        return 0;
+        return stackIn_3_0;
     }
 
     private fb(gj param0, boolean param1) {
@@ -165,20 +173,24 @@ final class fb extends cj {
         int stackOut_2_0 = 0;
         try {
           L0: {
-            if (param0 == -1) {
-              break L0;
-            } else {
-              fb.a(-65, false);
-              break L0;
+            L1: {
+              if (param0 == -1) {
+                break L1;
+              } else {
+                fb.a(-65, false);
+                break L1;
+              }
             }
+            stackOut_2_0 = Integer.parseInt(((fb) this).field_P.field_q);
+            stackIn_3_0 = stackOut_2_0;
+            break L0;
           }
-          stackOut_2_0 = Integer.parseInt(((fb) this).field_P.field_q);
-          stackIn_3_0 = stackOut_2_0;
-        } catch (java.lang.Exception decompiledCaughtParameter) {
-          decompiledCaughtException = decompiledCaughtParameter;
-          return stackIn_3_0;
+        } catch (java.lang.Exception decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2 = (NumberFormatException) (Object) decompiledCaughtException;
+          return -1;
         }
-        return 0;
+        return stackIn_3_0;
     }
 
     fb(gj param0, boolean param1, int param2, int param3, int param4, int param5) {

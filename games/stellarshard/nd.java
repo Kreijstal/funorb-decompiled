@@ -43,7 +43,7 @@ final class nd extends ig {
           var8 = param5 + param1;
           var9 = -param5 + param3;
           var10 = param5 + param3;
-          if (ti.field_e <= var9) {
+          if ((ti.field_e ^ -1) >= (var9 ^ -1)) {
             break L1;
           } else {
             var9 = ti.field_e;
@@ -86,112 +86,114 @@ final class nd extends ig {
           } else {
             var17 = var9;
             L6: while (true) {
-              if (var17 >= var10) {
+              if ((var17 ^ -1) <= (var10 ^ -1)) {
                 var16++;
                 continue L5;
               } else {
-                var13 = var17 + -param3;
-                var14 = -param1 + var16;
-                var15 = var14 * var14 + var13 * var13;
-                if (var15 < var6) {
-                  L7: {
-                    if (-1 != var15) {
-                      break L7;
-                    } else {
-                      var15 = 1;
-                      break L7;
+                L7: {
+                  var13 = var17 + -param3;
+                  var14 = -param1 + var16;
+                  var15 = var14 * var14 + var13 * var13;
+                  if (var15 >= var6) {
+                    break L7;
+                  } else {
+                    L8: {
+                      if (-1 != (var15 ^ -1)) {
+                        break L8;
+                      } else {
+                        var15 = 1;
+                        break L8;
+                      }
                     }
-                  }
-                  L8: {
-                    var12 = ti.field_i * var16 + var17;
-                    if (-1 > param0) {
+                    L9: {
+                      var12 = ti.field_i * var16 + var17;
+                      if (-1 < (param0 ^ -1)) {
+                        var28 = var27;
+                        var18 = -param0 + 256 - (-param0 + 256) * var15 / var6;
+                        break L9;
+                      } else {
+                        var18 = 256 + (param0 * var15 / var6 + -param0);
+                        break L9;
+                      }
+                    }
+                    L10: {
                       var28 = var27;
-                      var18 = -param0 + 256 - (-param0 + 256) * var15 / var6;
-                      break L8;
-                    } else {
-                      var18 = 256 + (param0 * var15 / var6 + -param0);
-                      break L8;
-                    }
-                  }
-                  L9: {
-                    var28 = var27;
-                    var19 = var28[var12];
-                    var20 = var19 >> 936421040 & 255;
-                    var21 = 255 & var19 >> -1408045752;
-                    var22 = 255 & var19;
-                    if (0 < var18) {
-                      if (var18 < 256) {
-                        L10: {
-                          var23 = var18;
-                          if (var23 > (param2 & 16711680) >> -1981368688) {
-                            var23 = 255 & param2 >> 983477680;
+                      var19 = var28[var12];
+                      var20 = var19 >> 936421040 & 255;
+                      var21 = 255 & var19 >> -1408045752;
+                      var22 = 255 & var19;
+                      if (0 < var18) {
+                        if (var18 < 256) {
+                          L11: {
+                            var23 = var18;
+                            if ((var23 ^ -1) < ((param2 & 16711680) >> -1981368688 ^ -1)) {
+                              var23 = 255 & param2 >> 983477680;
+                              break L11;
+                            } else {
+                              break L11;
+                            }
+                          }
+                          L12: {
+                            if (var20 < var23) {
+                              var20 = var20 + (((16711680 & param2) >> 65821168) - var23);
+                              break L12;
+                            } else {
+                              var20 = (16711680 & param2) >> 604543088;
+                              break L12;
+                            }
+                          }
+                          L13: {
+                            var23 = var18;
+                            if (var23 <= (255 & param2 >> 213272872)) {
+                              break L13;
+                            } else {
+                              var23 = 255 & param2 >> -548883000;
+                              break L13;
+                            }
+                          }
+                          L14: {
+                            if ((var21 ^ -1) <= (var23 ^ -1)) {
+                              var21 = (65280 & param2) >> -1043324760;
+                              break L14;
+                            } else {
+                              var21 = var21 + (-var23 + (param2 >> -945904056 & 255));
+                              break L14;
+                            }
+                          }
+                          L15: {
+                            var23 = var18;
+                            if ((var23 ^ -1) < (param2 & 255 ^ -1)) {
+                              var23 = param2 & 255;
+                              break L15;
+                            } else {
+                              break L15;
+                            }
+                          }
+                          if (var22 < var23) {
+                            var22 = var22 + (-var23 + (param2 & 255));
                             break L10;
                           } else {
+                            var22 = 255 & param2;
                             break L10;
                           }
-                        }
-                        L11: {
-                          if (var20 < var23) {
-                            var20 = var20 + (((16711680 & param2) >> 65821168) - var23);
-                            break L11;
-                          } else {
-                            var20 = (16711680 & param2) >> 604543088;
-                            break L11;
-                          }
-                        }
-                        L12: {
-                          var23 = var18;
-                          if (var23 <= (255 & param2 >> 213272872)) {
-                            break L12;
-                          } else {
-                            var23 = 255 & param2 >> -548883000;
-                            break L12;
-                          }
-                        }
-                        L13: {
-                          if (var21 >= var23) {
-                            var21 = (65280 & param2) >> -1043324760;
-                            break L13;
-                          } else {
-                            var21 = var21 + (-var23 + (param2 >> -945904056 & 255));
-                            break L13;
-                          }
-                        }
-                        L14: {
-                          var23 = var18;
-                          if (var23 > (param2 & 255)) {
-                            var23 = param2 & 255;
-                            break L14;
-                          } else {
-                            break L14;
-                          }
-                        }
-                        if (var22 < var23) {
-                          var22 = var22 + (-var23 + (param2 & 255));
-                          break L9;
                         } else {
-                          var22 = 255 & param2;
-                          break L9;
+                          var11[var12] = vf.b(vf.b(var21 << -223308248, var20 << 1690415472), var22);
+                          var17++;
+                          continue L6;
                         }
                       } else {
-                        var11[var12] = vf.b(vf.b(var21 << -223308248, var20 << 1690415472), var22);
-                        var17++;
-                        continue L6;
+                        var21 = 255 & param2 >> 60185896;
+                        var22 = 255 & param2;
+                        var20 = (param2 & 16711680) >> 701134032;
+                        break L10;
                       }
-                    } else {
-                      var21 = 255 & param2 >> 60185896;
-                      var22 = 255 & param2;
-                      var20 = (param2 & 16711680) >> 701134032;
-                      break L9;
                     }
+                    var11[var12] = vf.b(vf.b(var21 << -223308248, var20 << 1690415472), var22);
+                    break L7;
                   }
-                  var11[var12] = vf.b(vf.b(var21 << -223308248, var20 << 1690415472), var22);
-                  var17++;
-                  continue L6;
-                } else {
-                  var17++;
-                  continue L6;
                 }
+                var17++;
+                continue L6;
               }
             }
           }

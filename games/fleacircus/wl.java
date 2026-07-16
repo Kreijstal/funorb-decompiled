@@ -382,6 +382,7 @@ final class wl {
                             field_c = new boolean[var5];
                             break L4;
                           }
+                          return;
                         } else {
                           var7 = ((wl) this).field_l[var6];
                           var8 = 0;
@@ -390,8 +391,9 @@ final class wl {
                               var6++;
                               continue L3;
                             } else {
+                              int incrementValue$2 = var5;
                               var5++;
-                              ((wl) this).field_g[var5] = hk.e(var4);
+                              ((wl) this).field_g[incrementValue$2] = hk.e(var4);
                               var8++;
                               continue L6;
                             }
@@ -407,8 +409,9 @@ final class wl {
                 } else {
                   L7: {
                     ((wl) this).field_e[var4] = hk.e(3) + 1;
-                    ((wl) this).field_h[var4] = hk.e(2);
-                    var5 = hk.e(2);
+                    int dupTemp$3 = hk.e(2);
+                    ((wl) this).field_h[var4] = dupTemp$3;
+                    var5 = dupTemp$3;
                     if (var5 == 0) {
                       break L7;
                     } else {
@@ -486,8 +489,9 @@ final class wl {
             for (var12 = 0; var12 < var8; var12++) {
                 var13 = ((wl) this).field_d[var7][var11 & var10];
                 var11 = var11 >>> var9;
+                int incrementValue$0 = var5;
                 var5++;
-                field_k[var5] = var13 >= 0 ? hk.field_G[var13].a() : 0;
+                field_k[incrementValue$0] = var13 >= 0 ? hk.field_G[var13].a() : 0;
             }
         }
         return true;

@@ -30,16 +30,16 @@ final class ta {
     private gf field_n;
 
     private final void e(boolean param0) {
-        String var2 = null;
+        Object var2 = null;
         if (null != ((ta) this).field_f) {
-            var2 = hg.field_a;
+            var2 = (Object) (Object) hg.field_a;
         }
         if (!param0) {
             boolean discarded$0 = ((ta) this).j(48);
         }
         en var3 = ce.field_f;
         if (!(!var3.field_c)) {
-            var2 = cc.field_l;
+            var2 = (Object) (Object) cc.field_l;
         }
         if (!(var2 != null)) {
             return;
@@ -49,7 +49,7 @@ final class ta {
         int var6 = -var5 + ((ta) this).field_q + -3 - -var4.field_r;
         int var7 = 320;
         int var8 = 10551200;
-        var4.c(var2, var7, var6, var8, -1);
+        var4.c((String) var2, var7, var6, var8, -1);
     }
 
     private final void g(byte param0) {
@@ -515,8 +515,9 @@ final class ta {
                   }
                 }
                 if (var10.length > var6) {
+                  int incrementValue$1 = var6;
                   var6++;
-                  var10[var6] = var5;
+                  var10[incrementValue$1] = var5;
                   var5++;
                   continue L1;
                 } else {
@@ -565,7 +566,7 @@ final class ta {
             if (param1 == 8) {
               break L1;
             } else {
-              int discarded$1 = ((ta) this).c(46);
+              int discarded$3 = ((ta) this).c(46);
               break L1;
             }
           }
@@ -576,8 +577,9 @@ final class ta {
             if (((ta) this).field_h <= 0) {
               break L2;
             } else {
+              int incrementValue$4 = param0;
               param0++;
-              ((ta) this).field_c = param0;
+              ((ta) this).field_c = incrementValue$4;
               var7 = ((ta) this).field_o.field_j + -(ah.field_j.field_A / 2);
               ((ta) this).field_i[var4] = new dk(var5, ((ta) this).field_c, of.field_a);
               ((ta) this).field_i[var4].b((byte) 127, var7, var6);
@@ -589,8 +591,9 @@ final class ta {
           }
           L3: {
             if (((ta) this).field_y - 1 > ((ta) this).field_h) {
+              int incrementValue$5 = param0;
               param0++;
-              ((ta) this).field_e = param0;
+              ((ta) this).field_e = incrementValue$5;
               var7 = ((ta) this).field_o.field_j + (((ta) this).field_o.field_g - ah.field_j.field_A / 2);
               ((ta) this).field_i[var4] = new dk(var5, ((ta) this).field_e, ah.field_j);
               ((ta) this).field_i[var4].b((byte) 122, var7, var6);
@@ -659,22 +662,27 @@ final class ta {
         int var3 = 0;
         var3 = qe.a(((ta) this).field_t, var3, true, ((ta) this).field_x[((ta) this).field_h]);
         if (param1 <= ((ta) this).field_j) {
+            int incrementValue$0 = var3;
             var3++;
-            ((ta) this).field_t[var3] = ((ta) this).field_j;
+            ((ta) this).field_t[incrementValue$0] = ((ta) this).field_j;
         }
         if (!(((ta) this).field_v < 0)) {
+            int incrementValue$1 = var3;
             var3++;
-            ((ta) this).field_t[var3] = ((ta) this).field_v;
+            ((ta) this).field_t[incrementValue$1] = ((ta) this).field_v;
         }
+        int incrementValue$2 = var3;
         var3++;
-        ((ta) this).field_t[var3] = ((ta) this).field_d;
+        ((ta) this).field_t[incrementValue$2] = ((ta) this).field_d;
         if (!(-1 < (((ta) this).field_c ^ -1))) {
+            int incrementValue$3 = var3;
             var3++;
-            ((ta) this).field_t[var3] = ((ta) this).field_c;
+            ((ta) this).field_t[incrementValue$3] = ((ta) this).field_c;
         }
         if (!(0 > ((ta) this).field_e)) {
+            int incrementValue$4 = var3;
             var3++;
-            ((ta) this).field_t[var3] = ((ta) this).field_e;
+            ((ta) this).field_t[incrementValue$4] = ((ta) this).field_e;
         }
     }
 
@@ -1156,8 +1164,9 @@ final class ta {
             var5 = ((ta) this).field_u[var4];
             ((ta) this).field_x[var4] = new int[var5];
             for (var6 = 0; var6 < var5; var6++) {
+                int incrementValue$0 = var3;
                 var3++;
-                var7 = var2[var3];
+                var7 = var2[incrementValue$0];
                 ((ta) this).field_x[var4][var6] = var7;
             }
         }

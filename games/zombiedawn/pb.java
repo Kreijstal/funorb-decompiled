@@ -49,8 +49,9 @@ final class pb extends le {
         if (param0 != -113) {
             pb.a(-27, 54, -37, 57, -33);
         }
+        int fieldTemp$0 = ((pb) this).field_n;
         ((pb) this).field_n = ((pb) this).field_n + 1;
-        if (((pb) this).field_n <= 1) {
+        if (fieldTemp$0 <= 1) {
             return;
         }
         ((pb) this).field_n = 0;
@@ -61,8 +62,9 @@ final class pb extends le {
         if (((pb) this).field_p < ((pb) this).field_l) {
             ((pb) this).field_p = ((pb) this).field_p + 1;
         }
+        int fieldTemp$1 = ((pb) this).field_o + 1;
         ((pb) this).field_o = ((pb) this).field_o + 1;
-        if ((((pb) this).field_o + 1 ^ -1) <= -9) {
+        if ((fieldTemp$1 ^ -1) <= -9) {
             this.d(152);
         }
     }
@@ -71,82 +73,47 @@ final class pb extends le {
         InterruptedException var3 = null;
         Throwable decompiledCaughtException = null;
         try {
-          if (param1 > 28) {
-            Thread.sleep(param0);
-          } else {
-            return;
+          L0: {
+            if (param1 > 28) {
+              Thread.sleep(param0);
+              break L0;
+            } else {
+              return;
+            }
           }
-        } catch (java.lang.Exception decompiledCaughtParameter) {
-          decompiledCaughtException = decompiledCaughtParameter;
+        } catch (java.lang.Exception decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L1: {
+            var3 = (InterruptedException) (Object) decompiledCaughtException;
+            break L1;
+          }
         }
-        var3 = (InterruptedException) (Object) decompiledCaughtException;
     }
 
     final static void d(byte param0) {
         Object var1 = null;
         Throwable var2 = null;
-        int statePc = 0;
-        Throwable caughtException = null;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    if (param0 <= -70) {
-                        statePc = 2;
-                    } else {
-                        statePc = 1;
-                    }
-                    continue stateLoop;
-                }
-                case 1: {
-                    return;
-                }
-                case 2: {
-                    var1 = (Object) (Object) ng.field_b;
-                    // monitorenter ng.field_b
-                    statePc = 3;
-                    continue stateLoop;
-                }
-                case 3: {
-                    try {
-                        kc.field_R = le.field_c;
-                        wc.field_Ob = wc.field_Ob + 1;
-                        ha.field_b = lf.field_m;
-                        ei.field_K = vg.field_c;
-                        ll.field_a = kg.field_l;
-                        kg.field_l = false;
-                        ci.field_d = nb.field_j;
-                        nc.field_j = ep.field_m;
-                        hp.field_D = pf.field_c;
-                        nb.field_j = 0;
-                        // monitorexit var1
-                        statePc = 7;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_3) {
-                        caughtException = stateCaught_3;
-                        statePc = 5;
-                        continue stateLoop;
-                    }
-                }
-                case 5: {
-                    try {
-                        var2 = caughtException;
-                        // monitorexit var1
-                        statePc = 6;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_5) {
-                        caughtException = stateCaught_5;
-                        statePc = 5;
-                        continue stateLoop;
-                    }
-                }
-                case 6: {
-                    throw (RuntimeException) (Object) var2;
-                }
-                case 7: {
-                    return;
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
+        Throwable decompiledCaughtException = null;
+        if (param0 <= -70) {
+          var1 = (Object) (Object) ng.field_b;
+          synchronized (var1) {
+            L0: {
+              kc.field_R = le.field_c;
+              wc.field_Ob = wc.field_Ob + 1;
+              ha.field_b = lf.field_m;
+              ei.field_K = vg.field_c;
+              ll.field_a = kg.field_l;
+              kg.field_l = false;
+              ci.field_d = nb.field_j;
+              nc.field_j = ep.field_m;
+              hp.field_D = pf.field_c;
+              nb.field_j = 0;
+              break L0;
             }
+          }
+          return;
+        } else {
+          return;
         }
     }
 

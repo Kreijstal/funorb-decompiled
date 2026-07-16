@@ -90,8 +90,9 @@ final class kf extends bg {
         int var2 = 0;
         L0: {
           super.a(param0);
+          int fieldTemp$1 = ((kf) this).field_s + 1;
           ((kf) this).field_s = ((kf) this).field_s + 1;
-          if (200 <= ((kf) this).field_s + 1) {
+          if (200 <= fieldTemp$1) {
             ((kf) this).field_s = 0;
             ((kf) this).field_t = ((kf) this).field_m * 2 / 3;
             break L0;

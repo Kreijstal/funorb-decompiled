@@ -46,7 +46,7 @@ final class nd extends ek {
           if (param1 <= -118) {
             break L0;
           } else {
-            ((nd) this).field_q = (oc[]) null;
+            ((nd) this).field_q = null;
             break L0;
           }
         }
@@ -56,7 +56,7 @@ final class nd extends ek {
           } else {
             var5 = var3[var4];
             if (var5 != null) {
-              var5.field_f = (kc[]) param0;
+              var5.field_f = param0;
               var4++;
               continue L1;
             } else {
@@ -69,11 +69,12 @@ final class nd extends ek {
 
     final oc a(byte param0, int param1) {
         if (param0 != -1) {
-            lk var4 = (lk) null;
+            Object var4 = null;
             ((nd) this).a(8, (lk) null, 72, -15, true);
         }
-        ((nd) this).field_q[param1] = new oc();
-        return new oc();
+        oc dupTemp$0 = new oc();
+        ((nd) this).field_q[param1] = dupTemp$0;
+        return dupTemp$0;
     }
 
     final void a(boolean param0, int param1, kc[] param2) {
@@ -84,7 +85,7 @@ final class nd extends ek {
         if (!param0) {
             return;
         }
-        ((nd) this).field_q[param1].field_f = (kc[]) param2;
+        ((nd) this).field_q[param1].field_f = param2;
     }
 
     private final void a(boolean param0, boolean param1, nd param2) {
@@ -108,11 +109,11 @@ final class nd extends ek {
         int stackOut_7_1 = 0;
         oc stackOut_7_2 = null;
         var7 = Main.field_T;
-        this.a((ek) (Object) param2, (byte) -80);
+        super.a((ek) (Object) param2, (byte) -80);
         if (!param1) {
           L0: {
             if (!param0) {
-              og.a((Object[]) (Object) ((nd) this).field_q, 0, (Object[]) (Object) ((nd) param2).field_q, 0, 6);
+              og.a((Object[]) (Object) ((nd) this).field_q, 0, (Object[]) (Object) param2.field_q, 0, 6);
               break L0;
             } else {
               var4 = 0;
@@ -122,12 +123,12 @@ final class nd extends ek {
                 } else {
                   var5 = ((nd) this).field_q[var4];
                   if (var5 == null) {
-                    ((nd) param2).field_q[var4] = null;
+                    param2.field_q[var4] = null;
                     var4++;
                     continue L1;
                   } else {
                     L2: {
-                      var6 = ((nd) param2).field_q[var4];
+                      var6 = param2.field_q[var4];
                       stackOut_6_0 = (oc) var5;
                       stackOut_6_1 = -59;
                       stackIn_8_0 = stackOut_6_0;
@@ -135,10 +136,11 @@ final class nd extends ek {
                       stackIn_7_0 = stackOut_6_0;
                       stackIn_7_1 = stackOut_6_1;
                       if (var6 == null) {
-                        ((nd) param2).field_q[var4] = new oc();
+                        oc dupTemp$49 = new oc();
+                        param2.field_q[var4] = dupTemp$49;
                         stackOut_8_0 = (oc) (Object) stackIn_8_0;
                         stackOut_8_1 = stackIn_8_1;
-                        stackOut_8_2 = new oc();
+                        stackOut_8_2 = (oc) dupTemp$49;
                         stackIn_9_0 = stackOut_8_0;
                         stackIn_9_1 = stackOut_8_1;
                         stackIn_9_2 = stackOut_8_2;
@@ -153,7 +155,7 @@ final class nd extends ek {
                         break L2;
                       }
                     }
-                    ((oc) (Object) stackIn_9_0).a(stackIn_9_1, (oc) (Object) stackIn_9_2);
+                    ((oc) (Object) stackIn_9_0).a(stackIn_9_1, stackIn_9_2);
                     var4++;
                     continue L1;
                   }
@@ -170,8 +172,9 @@ final class nd extends ek {
     public nd() {
         ((nd) this).field_q = new oc[6];
         ((nd) this).field_p = new oc();
-        ((nd) this).field_q[0] = new oc();
-        oc var1 = new oc();
+        oc dupTemp$0 = new oc();
+        ((nd) this).field_q[0] = dupTemp$0;
+        oc var1 = dupTemp$0;
         var1.a((byte) 44);
     }
 
@@ -203,10 +206,10 @@ final class nd extends ek {
           }
         }
         L1: {
-          var10 = (hl) (hl) stackIn_3_0;
-          ek.a(((lk) param1).field_i + param3, ((lk) param1).field_h + ((lk) param1).field_o + param0, param0 - -((lk) param1).field_o, (byte) 43, ((lk) param1).field_q + (((lk) param1).field_i + param3));
+          var10 = (hl) (Object) stackIn_3_0;
+          ek.a(param1.field_i + param3, param1.field_h + param1.field_o + param0, param0 - -param1.field_o, (byte) 43, param1.field_q + (param1.field_i + param3));
           if (var10 != null) {
-            param4 = param4 & ((hl) var10).field_B;
+            param4 = param4 & var10.field_B;
             break L1;
           } else {
             break L1;
@@ -221,7 +224,7 @@ final class nd extends ek {
               break L2;
             } else {
               L3: {
-                if (((hl) var10).field_D) {
+                if (var10.field_D) {
                   var11 = ((nd) this).field_q[1];
                   if (var11 != null) {
                     var11.a(param3, param1, param0, (nd) this, ((nd) this).field_p, (byte) -105);
@@ -233,10 +236,10 @@ final class nd extends ek {
                   break L3;
                 }
               }
-              if (((hl) var10).field_j) {
+              if (var10.field_j) {
                 L4: {
                   var12 = ((nd) this).field_q[3];
-                  if (((hl) var10).field_x == 0) {
+                  if (var10.field_x == 0) {
                     break L4;
                   } else {
                     if (var12 == null) {

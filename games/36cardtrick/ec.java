@@ -55,31 +55,49 @@ final class ec extends gk {
 
     final int a(long param0, boolean param1) {
         int var4 = 0;
-        int var5 = Main.field_T;
-        if (param1) {
-            return 92;
-        }
-        if (((ec) this).field_n >= ((ec) this).field_g) {
+        int var5 = 0;
+        var5 = Main.field_T;
+        if (!param1) {
+          if (((ec) this).field_n < ((ec) this).field_g) {
+            ((ec) this).field_h = ((ec) this).field_h + (((ec) this).field_g - ((ec) this).field_n);
+            ((ec) this).field_n = ((ec) this).field_n + (((ec) this).field_g - ((ec) this).field_n);
+            ((ec) this).field_g = ((ec) this).field_g + param0;
+            return 1;
+          } else {
             var4 = 0;
-            do {
+            L0: while (true) {
+              L1: {
                 ((ec) this).field_g = ((ec) this).field_g + param0;
                 var4++;
-                // if_icmple L69
-            } while ((((ec) this).field_g ^ -1L) > (((ec) this).field_n ^ -1L));
-            if ((((ec) this).field_n ^ -1L) < (((ec) this).field_g ^ -1L)) {
-                ((ec) this).field_g = ((ec) this).field_n;
+                if ((var4 ^ -1) <= -11) {
+                  break L1;
+                } else {
+                  if ((((ec) this).field_g ^ -1L) > (((ec) this).field_n ^ -1L)) {
+                    continue L0;
+                  } else {
+                    break L1;
+                  }
+                }
+              }
+              L2: {
+                if ((((ec) this).field_n ^ -1L) >= (((ec) this).field_g ^ -1L)) {
+                  break L2;
+                } else {
+                  ((ec) this).field_g = ((ec) this).field_n;
+                  break L2;
+                }
+              }
+              return var4;
             }
-            return var4;
+          }
+        } else {
+          return 92;
         }
-        ((ec) this).field_h = ((ec) this).field_h + (((ec) this).field_g - ((ec) this).field_n);
-        ((ec) this).field_n = ((ec) this).field_n + (((ec) this).field_g - ((ec) this).field_n);
-        ((ec) this).field_g = ((ec) this).field_g + param0;
-        return 1;
     }
 
     final static ic a(String param0, qk param1, boolean param2, String param3, qk param4) {
         if (param2) {
-            return (ic) null;
+            return null;
         }
         int var5 = param4.a(18659, param0);
         int var6 = param4.a(var5, param3, (byte) 7);

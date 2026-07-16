@@ -46,50 +46,27 @@ final class gd {
     }
 
     final static void a(int param0, int param1, int param2, int param3) {
-        int var4 = 0;
-        L0: {
-          var4 = 115 / ((-39 - param0) / 47);
-          if (param2 != 0) {
-            if ((param2 ^ -1) != -2) {
-              break L0;
-            } else {
-              if (q.field_b == param1) {
-                break L0;
-              } else {
-                q.field_b = param1;
+        int var4 = 115 / ((-39 - param0) / 47);
+        if ((param2 ^ -1) == -1) {
+            if (!(param1 == ng.field_a)) {
                 wj.field_z = true;
+                ng.field_a = param1;
                 ca.a(3, param3);
-                break L0;
-              }
             }
-          } else {
-            if ((param2 ^ -1) != -2) {
-              break L0;
-            } else {
-              if (q.field_b == param1) {
-                break L0;
-              } else {
-                q.field_b = param1;
-                wj.field_z = true;
-                ca.a(3, param3);
-                break L0;
-              }
-            }
-          }
         }
-        L1: {
-          if (-3 != param2) {
-            break L1;
-          } else {
-            if (fc.field_a != param1) {
-              wj.field_z = true;
-              fc.field_a = param1;
-              ca.a(3, param3);
-              break L1;
-            } else {
-              break L1;
+        if ((param2 ^ -1) == -2) {
+            if ((q.field_b ^ -1) != (param1 ^ -1)) {
+                q.field_b = param1;
+                wj.field_z = true;
+                ca.a(3, param3);
             }
-          }
+        }
+        if (-3 == (param2 ^ -1)) {
+            if (!(fc.field_a == param1)) {
+                wj.field_z = true;
+                fc.field_a = param1;
+                ca.a(3, param3);
+            }
         }
     }
 
@@ -119,46 +96,76 @@ final class gd {
     }
 
     private final void a(byte param0, bc param1, long param2) {
-        iu var5_ref = null;
         iu var5 = (iu) (Object) bm.field_L[param1.field_j].a(true, (long)param1.field_g);
         if (var5 == null) {
-            var5_ref = new iu(param1, vs.a(-1090519040, param2));
-            bm.field_L[param1.field_j].a((gn) (Object) var5_ref, -116, (long)param1.field_g);
+            var5 = new iu(param1, vs.a(-1090519040, param2));
+            bm.field_L[param1.field_j].a((gn) (Object) var5, -116, (long)param1.field_g);
             mt.field_f[param1.field_j] = mt.field_f[param1.field_j] + 1;
         } else {
-            var5_ref.field_g = param1;
-            var5_ref.field_f = vs.a(-1090519040, param2);
+            var5.field_g = param1;
+            var5.field_f = vs.a(-1090519040, param2);
         }
         int var6 = 2 / ((44 - param0) / 51);
     }
 
     final void a(int param0, int param1, int param2) {
+        int var4 = 0;
         int var5 = 0;
         iu var6 = null;
         int var7 = 0;
-        int var8 = Kickabout.field_G;
-        if (param2 > -83) {
-            return;
-        }
-        int var4 = vs.a(-1090519040, nj.a(85));
-        for (var5 = 0; var5 < 7; var5++) {
-            var6 = (iu) (Object) bm.field_L[var5].b(0);
-            while (var6 != null) {
-                var7 = 5;
-                if (param1 <= var6.field_g.field_g) {
-                    // if_icmple L111
-                }
-                if (256 <= mt.field_f[var5]) {
-                    var7 = 0;
+        int var8 = 0;
+        var8 = Kickabout.field_G;
+        if (param2 <= -83) {
+          var4 = vs.a(-1090519040, nj.a(85));
+          var5 = 0;
+          L0: while (true) {
+            if (var5 >= 7) {
+              return;
+            } else {
+              var6 = (iu) (Object) bm.field_L[var5].b(0);
+              L1: while (true) {
+                if (var6 == null) {
+                  var5++;
+                  continue L0;
                 } else {
-                    var7 = 2;
+                  L2: {
+                    L3: {
+                      var7 = 5;
+                      if (param1 > var6.field_g.field_g) {
+                        break L3;
+                      } else {
+                        if (var6.field_g.field_g <= param0) {
+                          break L2;
+                        } else {
+                          break L3;
+                        }
+                      }
+                    }
+                    if (256 > mt.field_f[var5]) {
+                      var7 = 2;
+                      break L2;
+                    } else {
+                      var7 = 0;
+                      break L2;
+                    }
+                  }
+                  L4: {
+                    if (-var6.field_f + var4 < var7) {
+                      break L4;
+                    } else {
+                      var6.c((byte) -109);
+                      mt.field_f[var5] = mt.field_f[var5] - 1;
+                      break L4;
+                    }
+                  }
+                  var6 = (iu) (Object) bm.field_L[var5].a(-1);
+                  continue L1;
                 }
-                if (-var6.field_f + var4 >= var7) {
-                    var6.c((byte) -109);
-                    mt.field_f[var5] = mt.field_f[var5] - 1;
-                }
-                var6 = (iu) (Object) bm.field_L[var5].a(-1);
+              }
             }
+          }
+        } else {
+          return;
         }
     }
 

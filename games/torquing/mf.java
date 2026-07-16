@@ -160,8 +160,8 @@ final class mf extends am {
         if (0 == var2) {
             throw new IllegalArgumentException("" + Integer.toString(var2, 16));
         }
-        if (var2 <= -129) {
-            if (-161 > var2) {
+        if ((var2 ^ -1) <= -129) {
+            if (-161 < (var2 ^ -1)) {
                 var3 = ef.field_c[var2 + -128];
                 if (!(var3 != 0)) {
                     var3 = 63;

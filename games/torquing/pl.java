@@ -45,12 +45,28 @@ final class pl extends am {
     }
 
     final static void b(int param0, int param1) {
-        if (vc.field_a != null) {
-            // if_icmpge L26
+        L0: {
+          L1: {
+            if (vc.field_a == null) {
+              break L1;
+            } else {
+              if (vc.field_a.length >= param0) {
+                break L0;
+              } else {
+                break L1;
+              }
+            }
+          }
+          vc.field_a = new int[param0];
+          break L0;
         }
-        vc.field_a = new int[param0];
-        if (param1 < 27) {
+        L2: {
+          if (param1 >= 27) {
+            break L2;
+          } else {
             pl.c(25);
+            break L2;
+          }
         }
     }
 

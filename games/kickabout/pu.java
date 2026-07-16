@@ -192,8 +192,7 @@ final class pu extends hd implements lv {
         }
         L3: {
           stackIn_7_3[stackIn_7_4] = stackIn_7_5;
-          new vn(stackIn_7_2, 2);
-          var8 = stackIn_7_0;
+          var8 = new vn(stackIn_7_2, 2);
           var10 = -10 % ((param3 - -49) / 51);
           var9 = (short)param5;
           var11 = (short)param6;
@@ -363,8 +362,9 @@ final class pu extends hd implements lv {
         gl.field_a.g(-1207444472, param1);
         gl.field_a.a(bb.field_Nb, hn.field_h, 38);
         or.field_d.b(18, (byte) -83);
+        int fieldTemp$0 = or.field_d.field_n + 1;
         or.field_d.field_n = or.field_d.field_n + 1;
-        int var4 = or.field_d.field_n + 1;
+        int var4 = fieldTemp$0;
         or.field_d.a(0, gl.field_a.field_n, 1991220144, gl.field_a.field_f);
         or.field_d.c(62, -var4 + or.field_d.field_n);
         int var5 = 83 % ((40 - param0) / 43);

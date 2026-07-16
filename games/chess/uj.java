@@ -56,19 +56,19 @@ final class uj extends o {
                                               if (196 == var2) {
                                                 break L2;
                                               } else {
-                                                if (var2 != -196) {
+                                                if ((var2 ^ -1) != -196) {
                                                   L3: {
                                                     if (232 == var2) {
                                                       break L3;
                                                     } else {
-                                                      if (-234 == var2) {
+                                                      if (-234 == (var2 ^ -1)) {
                                                         break L3;
                                                       } else {
                                                         if (234 != var2) {
                                                           if (235 == var2) {
                                                             break L3;
                                                           } else {
-                                                            if (-201 != var2) {
+                                                            if (-201 != (var2 ^ -1)) {
                                                               if (var2 == 201) {
                                                                 break L3;
                                                               } else {
@@ -80,18 +80,18 @@ final class uj extends o {
                                                                       if (237 == var2) {
                                                                         break L4;
                                                                       } else {
-                                                                        if (-239 != var2) {
+                                                                        if (-239 != (var2 ^ -1)) {
                                                                           if (239 != var2) {
-                                                                            if (var2 != -206) {
+                                                                            if ((var2 ^ -1) != -206) {
                                                                               if (206 != var2) {
-                                                                                if (-208 != var2) {
-                                                                                  if (var2 != -243) {
+                                                                                if (-208 != (var2 ^ -1)) {
+                                                                                  if ((var2 ^ -1) != -243) {
                                                                                     L5: {
                                                                                       if (var2 == 243) {
                                                                                         break L5;
                                                                                       } else {
                                                                                         if (var2 != 244) {
-                                                                                          if (-247 != var2) {
+                                                                                          if (-247 != (var2 ^ -1)) {
                                                                                             if (var2 == 245) {
                                                                                               break L5;
                                                                                             } else {
@@ -105,7 +105,7 @@ final class uj extends o {
                                                                                                     if (var2 == 214) {
                                                                                                       break L5;
                                                                                                     } else {
-                                                                                                      if (var2 != -214) {
+                                                                                                      if ((var2 ^ -1) != -214) {
                                                                                                         L6: {
                                                                                                           if (249 == var2) {
                                                                                                             break L6;
@@ -113,20 +113,20 @@ final class uj extends o {
                                                                                                             if (var2 == 250) {
                                                                                                               break L6;
                                                                                                             } else {
-                                                                                                              if (-252 != var2) {
+                                                                                                              if (-252 != (var2 ^ -1)) {
                                                                                                                 if (-253 != (var2 ^ -1)) {
                                                                                                                   if ((var2 ^ -1) != -218) {
                                                                                                                     if (218 != var2) {
                                                                                                                       if (var2 != 219) {
                                                                                                                         if (var2 != 220) {
                                                                                                                           if (231 != var2) {
-                                                                                                                            if (-200 != var2) {
+                                                                                                                            if (-200 != (var2 ^ -1)) {
                                                                                                                               if (255 == var2) {
                                                                                                                                 return 'y';
                                                                                                                               } else {
                                                                                                                                 if (var2 != 376) {
                                                                                                                                   L7: {
-                                                                                                                                    if (-242 == var2) {
+                                                                                                                                    if (-242 == (var2 ^ -1)) {
                                                                                                                                       break L7;
                                                                                                                                     } else {
                                                                                                                                       if ((var2 ^ -1) == -210) {
@@ -276,15 +276,15 @@ final class uj extends o {
           L8: {
             var2 = param0;
             if ((var2 ^ -1) != -33) {
-              if (var2 != -161) {
+              if ((var2 ^ -1) != -161) {
                 if ((var2 ^ -1) != -96) {
                   if ((var2 ^ -1) != -46) {
-                    if (var2 != -92) {
+                    if ((var2 ^ -1) != -92) {
                       L9: {
                         if (93 != var2) {
                           if (35 != var2) {
                             if (224 != var2) {
-                              if (var2 != -226) {
+                              if ((var2 ^ -1) != -226) {
                                 L10: {
                                   if (var2 == 226) {
                                     break L10;
@@ -301,19 +301,19 @@ final class uj extends o {
                                               if (196 == var2) {
                                                 break L10;
                                               } else {
-                                                if (var2 != -196) {
+                                                if ((var2 ^ -1) != -196) {
                                                   L11: {
                                                     if (232 == var2) {
                                                       break L11;
                                                     } else {
-                                                      if (-234 == var2) {
+                                                      if (-234 == (var2 ^ -1)) {
                                                         break L11;
                                                       } else {
                                                         if (234 != var2) {
                                                           if (235 == var2) {
                                                             break L11;
                                                           } else {
-                                                            if (-201 != var2) {
+                                                            if (-201 != (var2 ^ -1)) {
                                                               if (var2 == 201) {
                                                                 break L11;
                                                               } else {
@@ -325,18 +325,18 @@ final class uj extends o {
                                                                       if (237 == var2) {
                                                                         break L12;
                                                                       } else {
-                                                                        if (-239 != var2) {
+                                                                        if (-239 != (var2 ^ -1)) {
                                                                           if (239 != var2) {
-                                                                            if (var2 != -206) {
+                                                                            if ((var2 ^ -1) != -206) {
                                                                               if (206 != var2) {
-                                                                                if (-208 != var2) {
+                                                                                if (-208 != (var2 ^ -1)) {
                                                                                   L13: {
-                                                                                    if (var2 != -243) {
+                                                                                    if ((var2 ^ -1) != -243) {
                                                                                       if (var2 == 243) {
                                                                                         break L13;
                                                                                       } else {
                                                                                         if (var2 != 244) {
-                                                                                          if (-247 != var2) {
+                                                                                          if (-247 != (var2 ^ -1)) {
                                                                                             if (var2 == 245) {
                                                                                               break L13;
                                                                                             } else {
@@ -350,7 +350,7 @@ final class uj extends o {
                                                                                                     if (var2 == 214) {
                                                                                                       break L13;
                                                                                                     } else {
-                                                                                                      if (var2 != -214) {
+                                                                                                      if ((var2 ^ -1) != -214) {
                                                                                                         L14: {
                                                                                                           if (249 == var2) {
                                                                                                             break L14;
@@ -358,20 +358,20 @@ final class uj extends o {
                                                                                                             if (var2 == 250) {
                                                                                                               break L14;
                                                                                                             } else {
-                                                                                                              if (-252 != var2) {
+                                                                                                              if (-252 != (var2 ^ -1)) {
                                                                                                                 if (-253 != (var2 ^ -1)) {
                                                                                                                   if ((var2 ^ -1) != -218) {
                                                                                                                     if (218 != var2) {
                                                                                                                       if (var2 != 219) {
                                                                                                                         if (var2 != 220) {
                                                                                                                           if (231 != var2) {
-                                                                                                                            if (-200 != var2) {
+                                                                                                                            if (-200 != (var2 ^ -1)) {
                                                                                                                               if (255 == var2) {
                                                                                                                                 return 'y';
                                                                                                                               } else {
                                                                                                                                 if (var2 != 376) {
                                                                                                                                   L15: {
-                                                                                                                                    if (-242 == var2) {
+                                                                                                                                    if (-242 == (var2 ^ -1)) {
                                                                                                                                       break L15;
                                                                                                                                     } else {
                                                                                                                                       if ((var2 ^ -1) == -210) {

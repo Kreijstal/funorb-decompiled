@@ -82,6 +82,7 @@ final class ph {
         var2 = 0;
         L0: while (true) {
           if ((var2 ^ -1) <= -257) {
+            return;
           } else {
             var0 = (long)var2;
             var3 = 0;

@@ -499,7 +499,6 @@ final class bj {
 
     private final synchronized byte[] a(int[] param0, int param1, int param2, int param3) {
         Object var5 = null;
-        byte[] var5_array = null;
         Object var7 = null;
         byte[] var8 = null;
         if (this.b(param2, param1, 0)) {
@@ -544,7 +543,7 @@ final class bj {
                 break L3;
               } else {
                 var8 = sc.a(false, true, ((bj) this).field_b[param1][param2]);
-                var5_array = var8;
+                var5 = (Object) (Object) var8;
                 if (var8 != null) {
                   break L3;
                 } else {
@@ -553,7 +552,7 @@ final class bj {
               }
             }
             L4: {
-              if (var5_array == null) {
+              if (var5 == null) {
                 break L4;
               } else {
                 if (((bj) this).field_j == 1) {
@@ -574,7 +573,7 @@ final class bj {
                 }
               }
             }
-            return var5_array;
+            return (byte[]) var5;
           }
         } else {
           return null;
@@ -788,6 +787,7 @@ final class bj {
               ((bj) this).field_d = stackIn_6_1 != 0;
               ((bj) this).field_g = param0;
               ((bj) this).field_j = param2;
+              return;
             } else {
               break L0;
             }

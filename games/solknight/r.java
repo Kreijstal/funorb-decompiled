@@ -36,8 +36,9 @@ final class r {
         int var5 = 0;
         L0: {
           var5 = SolKnight.field_L ? 1 : 0;
+          int fieldTemp$3 = ((r) this).field_a + 1;
           ((r) this).field_a = ((r) this).field_a + 1;
-          ((r) this).field_j = ((r) this).field_j + (((r) this).field_a + 1);
+          ((r) this).field_j = ((r) this).field_j + fieldTemp$3;
           if (param0 == 12009) {
             break L0;
           } else {
@@ -47,7 +48,7 @@ final class r {
         }
         var2 = 0;
         L1: while (true) {
-          if (-257 >= var2) {
+          if (-257 >= (var2 ^ -1)) {
             return;
           } else {
             L2: {
@@ -61,7 +62,7 @@ final class r {
                   break L2;
                 }
               } else {
-                if (-1 == (1 & var2)) {
+                if (-1 == (1 & var2 ^ -1)) {
                   ((r) this).field_c = ((r) this).field_c ^ ((r) this).field_c << -543514227;
                   break L2;
                 } else {
@@ -71,10 +72,12 @@ final class r {
               }
             }
             ((r) this).field_c = ((r) this).field_c + ((r) this).field_h[var2 + 128 & 255];
-            var4 = ((r) this).field_j + ((r) this).field_c + ((r) this).field_h[fi.a(1020, var3) >> 249695458];
-            ((r) this).field_h[var2] = ((r) this).field_j + ((r) this).field_c + ((r) this).field_h[fi.a(1020, var3) >> 249695458];
-            ((r) this).field_j = ((r) this).field_h[fi.a(var4 >> 1038198280, 1020) >> -146635614] + var3;
-            ((r) this).field_f[var2] = ((r) this).field_h[fi.a(var4 >> 1038198280, 1020) >> -146635614] + var3;
+            int dupTemp$4 = ((r) this).field_j + ((r) this).field_c + ((r) this).field_h[fi.a(1020, var3) >> 249695458];
+            var4 = dupTemp$4;
+            ((r) this).field_h[var2] = dupTemp$4;
+            int dupTemp$5 = ((r) this).field_h[fi.a(var4 >> 1038198280, 1020) >> -146635614] + var3;
+            ((r) this).field_j = dupTemp$5;
+            ((r) this).field_f[var2] = dupTemp$5;
             var2++;
             continue L1;
           }
@@ -87,8 +90,9 @@ final class r {
             this.a(12009);
             ((r) this).field_k = 256;
         }
+        int fieldTemp$0 = ((r) this).field_k - 1;
         ((r) this).field_k = ((r) this).field_k - 1;
-        return ((r) this).field_f[((r) this).field_k - 1];
+        return ((r) this).field_f[fieldTemp$0];
     }
 
     r(int[] param0) {

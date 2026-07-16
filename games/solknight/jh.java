@@ -54,8 +54,8 @@ final class jh {
     final static byte[] a(byte[] param0, int param1) {
         int var3 = 0;
         int var4 = 0;
-        byte[] var5_ref_byte__ = null;
         int var5 = 0;
+        byte[] var5_ref_byte__ = null;
         byte[] var6 = null;
         Object var7 = null;
         Throwable var8 = null;
@@ -68,154 +68,83 @@ final class jh {
         byte[] var15 = null;
         byte[] var16 = null;
         byte[] var17 = null;
-        int statePc = 0;
-        Throwable caughtException = null;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    var9 = new gb(param0);
-                    if (param1 == 6) {
-                        statePc = 2;
-                    } else {
-                        statePc = 1;
-                    }
-                    continue stateLoop;
-                }
-                case 1: {
-                    field_b = null;
-                    statePc = 2;
-                    continue stateLoop;
-                }
-                case 2: {
-                    var3 = var9.j(param1 + 249);
-                    var4 = var9.e(true);
-                    if (-1 < (var4 ^ -1)) {
-                        statePc = 6;
-                    } else {
-                        statePc = 3;
-                    }
-                    continue stateLoop;
-                }
-                case 3: {
-                    if (0 == jb.field_f) {
-                        statePc = 7;
-                    } else {
-                        statePc = 4;
-                    }
-                    continue stateLoop;
-                }
-                case 4: {
-                    if (var4 <= jb.field_f) {
-                        statePc = 7;
-                    } else {
-                        statePc = 6;
-                    }
-                    continue stateLoop;
-                }
-                case 6: {
-                    throw new RuntimeException();
-                }
-                case 7: {
-                    if (var3 != 0) {
-                        statePc = 9;
-                    } else {
-                        statePc = 8;
-                    }
-                    continue stateLoop;
-                }
-                case 8: {
-                    var16 = new byte[var4];
-                    var14 = var16;
-                    var12 = var14;
-                    var10 = var12;
-                    var5_ref_byte__ = var10;
-                    var9.a(var4, 0, -123, var16);
-                    return var5_ref_byte__;
-                }
-                case 9: {
-                    var5 = var9.e(true);
-                    if (-1 < var5) {
-                        statePc = 13;
-                    } else {
-                        statePc = 10;
-                    }
-                    continue stateLoop;
-                }
-                case 10: {
-                    if (-1 == jb.field_f) {
-                        statePc = 14;
-                    } else {
-                        statePc = 11;
-                    }
-                    continue stateLoop;
-                }
-                case 11: {
-                    if (jb.field_f < var5) {
-                        statePc = 13;
-                    } else {
-                        statePc = 14;
-                    }
-                    continue stateLoop;
-                }
-                case 13: {
-                    throw new RuntimeException();
-                }
-                case 14: {
-                    var17 = new byte[var5];
-                    var15 = var17;
-                    var13 = var15;
-                    var11 = var13;
-                    var6 = var11;
-                    if (-2 != (var3 ^ -1)) {
-                        statePc = 16;
-                    } else {
-                        statePc = 15;
-                    }
-                    continue stateLoop;
-                }
-                case 15: {
-                    int discarded$3 = gi.a(var17, var5, param0, var4, 9);
-                    return var6;
-                }
-                case 16: {
-                    var7 = (Object) (Object) g.field_k;
-                    // monitorenter g.field_k
-                    statePc = 17;
-                    continue stateLoop;
-                }
-                case 17: {
-                    try {
-                        g.field_k.a((byte) 97, var9, var17);
-                        // monitorexit var7
-                        statePc = 18;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_17) {
-                        caughtException = stateCaught_17;
-                        statePc = 19;
-                        continue stateLoop;
-                    }
-                }
-                case 18: {
-                    return var6;
-                }
-                case 19: {
-                    try {
-                        var8 = caughtException;
-                        // monitorexit var7
-                        statePc = 20;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_19) {
-                        caughtException = stateCaught_19;
-                        statePc = 19;
-                        continue stateLoop;
-                    }
-                }
-                case 20: {
-                    throw (RuntimeException) (Object) var8;
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
-            }
+        Throwable decompiledCaughtException = null;
+        L0: {
+          var9 = new gb(param0);
+          if (param1 == 6) {
+            break L0;
+          } else {
+            field_b = null;
+            break L0;
+          }
         }
+        L1: {
+          var3 = var9.j(param1 + 249);
+          var4 = var9.e(true);
+          if (-1 < (var4 ^ -1)) {
+            break L1;
+          } else {
+            L2: {
+              if (0 == jb.field_f) {
+                break L2;
+              } else {
+                if (var4 <= jb.field_f) {
+                  break L2;
+                } else {
+                  break L1;
+                }
+              }
+            }
+            if (var3 != 0) {
+              L3: {
+                var5 = var9.e(true);
+                if (-1 < (var5 ^ -1)) {
+                  break L3;
+                } else {
+                  L4: {
+                    if (-1 == (jb.field_f ^ -1)) {
+                      break L4;
+                    } else {
+                      if ((jb.field_f ^ -1) > (var5 ^ -1)) {
+                        break L3;
+                      } else {
+                        break L4;
+                      }
+                    }
+                  }
+                  var17 = new byte[var5];
+                  var15 = var17;
+                  var13 = var15;
+                  var11 = var13;
+                  var6 = var11;
+                  if (-2 != (var3 ^ -1)) {
+                    var7 = (Object) (Object) g.field_k;
+                    synchronized (var7) {
+                      L5: {
+                        g.field_k.a((byte) 97, var9, var17);
+                        break L5;
+                      }
+                    }
+                    return var6;
+                  } else {
+                    int discarded$1 = gi.a(var17, var5, param0, var4, 9);
+                    return var6;
+                  }
+                }
+              }
+              throw new RuntimeException();
+            } else {
+              var16 = new byte[var4];
+              var14 = var16;
+              var12 = var14;
+              var10 = var12;
+              var5_ref_byte__ = var10;
+              var9.a(var4, 0, -123, var16);
+              return var5_ref_byte__;
+            }
+          }
+        }
+        throw new RuntimeException();
     }
 
     final ec a(byte param0) {
@@ -344,82 +273,30 @@ final class jh {
     final static void b(int param0) {
         Object var1 = null;
         Throwable var2 = null;
-        int statePc = 0;
-        Throwable caughtException = null;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    var1 = (Object) (Object) ee.field_j;
-                    // monitorenter ee.field_j
-                    statePc = 1;
-                    continue stateLoop;
-                }
-                case 1: {
-                    try {
-                        wb.field_c = u.field_d;
-                        if (param0 == 406) {
-                            statePc = 3;
-                        } else {
-                            statePc = 2;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_1) {
-                        caughtException = stateCaught_1;
-                        statePc = 5;
-                        continue stateLoop;
-                    }
-                }
-                case 2: {
-                    try {
-                        field_g = null;
-                        statePc = 3;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_2) {
-                        caughtException = stateCaught_2;
-                        statePc = 5;
-                        continue stateLoop;
-                    }
-                }
-                case 3: {
-                    try {
-                        cf.field_e = cf.field_e + 1;
-                        gb.field_j = le.field_f;
-                        ad.field_m = c.field_J;
-                        ne.field_d = pe.field_n;
-                        pe.field_n = false;
-                        hg.field_F = SolKnight.field_G;
-                        db.field_o = ug.field_a;
-                        s.field_gb = wd.field_d;
-                        SolKnight.field_G = 0;
-                        // monitorexit var1
-                        statePc = 7;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_3) {
-                        caughtException = stateCaught_3;
-                        statePc = 5;
-                        continue stateLoop;
-                    }
-                }
-                case 5: {
-                    try {
-                        var2 = caughtException;
-                        // monitorexit var1
-                        statePc = 6;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_5) {
-                        caughtException = stateCaught_5;
-                        statePc = 5;
-                        continue stateLoop;
-                    }
-                }
-                case 6: {
-                    throw (RuntimeException) (Object) var2;
-                }
-                case 7: {
-                    return;
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
+        Throwable decompiledCaughtException = null;
+        var1 = (Object) (Object) ee.field_j;
+        synchronized (var1) {
+          L0: {
+            L1: {
+              wb.field_c = u.field_d;
+              if (param0 == 406) {
+                break L1;
+              } else {
+                field_g = null;
+                break L1;
+              }
             }
+            cf.field_e = cf.field_e + 1;
+            gb.field_j = le.field_f;
+            ad.field_m = c.field_J;
+            ne.field_d = pe.field_n;
+            pe.field_n = false;
+            hg.field_F = SolKnight.field_G;
+            db.field_o = ug.field_a;
+            s.field_gb = wd.field_d;
+            SolKnight.field_G = 0;
+            break L0;
+          }
         }
     }
 
@@ -435,8 +312,9 @@ final class jh {
         ((jh) this).field_d = new ec[param0];
         ((jh) this).field_a = param0;
         for (var2 = 0; var2 < param0; var2++) {
-            var3 = new ec();
-            ((jh) this).field_d[var2] = new ec();
+            ec dupTemp$0 = new ec();
+            var3 = dupTemp$0;
+            ((jh) this).field_d[var2] = dupTemp$0;
             var3.field_i = var3;
             var3.field_k = var3;
         }
@@ -457,7 +335,7 @@ final class jh {
               var2 = var3 * var3 * 8192 / 1100;
               var4 = 1;
               var5 = 0;
-              if (-2 != param1) {
+              if (-2 != (param1 ^ -1)) {
                 break L0;
               } else {
                 var5 = 1;
@@ -473,7 +351,7 @@ final class jh {
               }
             }
             L2: {
-              if (-5 == param1) {
+              if (-5 == (param1 ^ -1)) {
                 var4 = 1;
                 var5 = 1;
                 break L2;
@@ -482,7 +360,7 @@ final class jh {
               }
             }
             L3: {
-              if (param1 == -6) {
+              if ((param1 ^ -1) == -6) {
                 var5 = 1;
                 var4 = -1;
                 break L3;
@@ -501,7 +379,7 @@ final class jh {
             }
             L5: {
               L6: {
-                if (-8 == param1) {
+                if (-8 == (param1 ^ -1)) {
                   break L6;
                 } else {
                   if (-9 == (param1 ^ -1)) {
@@ -562,12 +440,12 @@ final class jh {
             qf.field_e = pk.a(var2 * var4, false, var5 * var2);
             return;
           } else {
-            if (var3 > -106) {
+            if ((var3 ^ -1) > -106) {
               L12: {
                 var2 = (-40960 + var3 * 16384) / 220;
                 var4 = 1;
                 var5 = 0;
-                if (-2 != param1) {
+                if (-2 != (param1 ^ -1)) {
                   break L12;
                 } else {
                   var5 = 1;
@@ -583,7 +461,7 @@ final class jh {
                 }
               }
               L14: {
-                if (-5 == param1) {
+                if (-5 == (param1 ^ -1)) {
                   var4 = 1;
                   var5 = 1;
                   break L14;
@@ -592,7 +470,7 @@ final class jh {
                 }
               }
               L15: {
-                if (param1 == -6) {
+                if ((param1 ^ -1) == -6) {
                   var5 = 1;
                   var4 = -1;
                   break L15;
@@ -611,7 +489,7 @@ final class jh {
               }
               L17: {
                 L18: {
-                  if (-8 == param1) {
+                  if (-8 == (param1 ^ -1)) {
                     break L18;
                   } else {
                     if (-9 == (param1 ^ -1)) {
@@ -672,13 +550,13 @@ final class jh {
               qf.field_e = pk.a(var2 * var4, false, var5 * var2);
               return;
             } else {
-              if (-121 > var3) {
+              if (-121 < (var3 ^ -1)) {
                 L24: {
                   var3 = 120 - var3;
                   var2 = -(8192 * (var3 * var3) / 3300) + 8192;
                   var4 = 1;
                   var5 = 0;
-                  if (-2 != param1) {
+                  if (-2 != (param1 ^ -1)) {
                     break L24;
                   } else {
                     var5 = 1;
@@ -694,7 +572,7 @@ final class jh {
                   }
                 }
                 L26: {
-                  if (-5 == param1) {
+                  if (-5 == (param1 ^ -1)) {
                     var4 = 1;
                     var5 = 1;
                     break L26;
@@ -703,7 +581,7 @@ final class jh {
                   }
                 }
                 L27: {
-                  if (param1 == -6) {
+                  if ((param1 ^ -1) == -6) {
                     var5 = 1;
                     var4 = -1;
                     break L27;
@@ -720,7 +598,7 @@ final class jh {
                     break L28;
                   }
                 }
-                if (-8 != param1) {
+                if (-8 != (param1 ^ -1)) {
                   if (-9 != (param1 ^ -1)) {
                     L29: {
                       if (11 == param1) {
@@ -872,7 +750,7 @@ final class jh {
                 L44: {
                   var4 = 1;
                   var5 = 0;
-                  if (-2 != param1) {
+                  if (-2 != (param1 ^ -1)) {
                     break L44;
                   } else {
                     var5 = 1;
@@ -888,7 +766,7 @@ final class jh {
                   }
                 }
                 L46: {
-                  if (-5 == param1) {
+                  if (-5 == (param1 ^ -1)) {
                     var4 = 1;
                     var5 = 1;
                     break L46;
@@ -897,7 +775,7 @@ final class jh {
                   }
                 }
                 L47: {
-                  if (param1 == -6) {
+                  if ((param1 ^ -1) == -6) {
                     var5 = 1;
                     var4 = -1;
                     break L47;
@@ -914,7 +792,7 @@ final class jh {
                     break L48;
                   }
                 }
-                if (-8 != param1) {
+                if (-8 != (param1 ^ -1)) {
                   if (-9 != (param1 ^ -1)) {
                     L49: {
                       if (11 == param1) {

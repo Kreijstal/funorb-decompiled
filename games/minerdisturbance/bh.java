@@ -121,44 +121,15 @@ final class bh extends wf implements sh {
     final static boolean a(sb param0, int param1) {
         int var2 = 0;
         int var3 = 0;
-        int stackIn_4_0 = 0;
-        int stackIn_8_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_3_0 = 0;
-        int stackOut_2_0 = 0;
         if (param1 != -29320) {
-          L0: {
             field_db = null;
             var2 = param0.d((byte) -54);
-            if (-2 == var2) {
-              stackOut_7_0 = 1;
-              stackIn_8_0 = stackOut_7_0;
-              break L0;
-            } else {
-              stackOut_6_0 = 0;
-              stackIn_8_0 = stackOut_6_0;
-              break L0;
-            }
-          }
-          var3 = stackIn_8_0;
-          return var3 != 0;
-        } else {
-          L1: {
-            var2 = param0.d((byte) -54);
-            if (-2 == var2) {
-              stackOut_3_0 = 1;
-              stackIn_4_0 = stackOut_3_0;
-              break L1;
-            } else {
-              stackOut_2_0 = 0;
-              stackIn_4_0 = stackOut_2_0;
-              break L1;
-            }
-          }
-          var3 = stackIn_4_0;
-          return var3 != 0;
+            var3 = -2 != (var2 ^ -1) ? 0 : 1;
+            return var3 != 0;
         }
+        var2 = param0.d((byte) -54);
+        var3 = -2 != (var2 ^ -1) ? 0 : 1;
+        return var3 != 0;
     }
 
     bh(hm param0, r param1) {
@@ -184,6 +155,7 @@ final class bh extends wf implements sh {
           var14.field_A = (ad) (Object) new eg(sl.field_q, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true);
           ((bh) this).a(-1, var14);
           ((bh) this).field_eb = this.a(ed.field_f, (byte) 62, (rm) this);
+          return;
         } else {
           if (od.field_k != param1) {
             if (param1 == ge.field_a) {
@@ -197,6 +169,7 @@ final class bh extends wf implements sh {
               var12.field_A = (ad) (Object) new eg(sl.field_q, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true);
               ((bh) this).a(-1, var12);
               ((bh) this).field_eb = this.a(ed.field_f, (byte) 62, (rm) this);
+              return;
             } else {
               var10 = new fe((String) var9, (rm) null);
               var10.field_u = 0;
@@ -206,6 +179,7 @@ final class bh extends wf implements sh {
               var10.field_A = (ad) (Object) new eg(sl.field_q, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true);
               ((bh) this).a(-1, var10);
               ((bh) this).field_eb = this.a(ed.field_f, (byte) 62, (rm) this);
+              return;
             }
           } else {
             var5 = ri.field_f;
@@ -221,6 +195,7 @@ final class bh extends wf implements sh {
               var8.field_A = (ad) (Object) new eg(sl.field_q, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true);
               ((bh) this).a(-1, var8);
               ((bh) this).field_eb = this.a(ed.field_f, (byte) 62, (rm) this);
+              return;
             } else {
               var6 = new fe(var5, (rm) null);
               var6.field_u = 0;
@@ -230,6 +205,7 @@ final class bh extends wf implements sh {
               var6.field_A = (ad) (Object) new eg(sl.field_q, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true);
               ((bh) this).a(-1, var6);
               ((bh) this).field_eb = this.a(ed.field_f, (byte) 62, (rm) this);
+              return;
             }
           }
         }

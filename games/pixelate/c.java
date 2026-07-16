@@ -24,20 +24,26 @@ class c extends qm {
             Throwable decompiledCaughtException = null;
             try {
               L0: {
-                var2 = (String) java.awt.Toolkit.getDefaultToolkit().getSystemClipboard().getContents((Object) null).getTransferData(java.awt.datatransfer.DataFlavor.stringFlavor);
-                this.l(121);
-                if (param0) {
-                  break L0;
-                } else {
-                  field_X = 86;
-                  break L0;
+                L1: {
+                  var2 = (String) java.awt.Toolkit.getDefaultToolkit().getSystemClipboard().getContents((Object) null).getTransferData(java.awt.datatransfer.DataFlavor.stringFlavor);
+                  this.l(121);
+                  if (param0) {
+                    break L1;
+                  } else {
+                    field_X = 86;
+                    break L1;
+                  }
                 }
+                this.a(var2, 32240);
+                break L0;
               }
-              this.a(var2, 32240);
-            } catch (java.lang.Exception decompiledCaughtParameter) {
-              decompiledCaughtException = decompiledCaughtParameter;
+            } catch (java.lang.Exception decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              L2: {
+                var2_ref = (Exception) (Object) decompiledCaughtException;
+                break L2;
+              }
             }
-            var2_ref = (Exception) (Object) decompiledCaughtException;
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
@@ -46,19 +52,39 @@ class c extends qm {
     }
 
     private final int k(int param0) {
+        int var2 = 0;
         int var3 = 0;
-        int var4 = Pixelate.field_H ? 1 : 0;
-        if (param0 != -5782) {
+        int var4 = 0;
+        L0: {
+          var4 = Pixelate.field_H ? 1 : 0;
+          if (param0 == -5782) {
+            break L0;
+          } else {
             field_O = null;
+            break L0;
+          }
         }
-        int var2 = ((c) this).field_q.length();
-        if (var2 == ((c) this).field_ab) {
-            return ((c) this).field_ab;
+        var2 = ((c) this).field_q.length();
+        if (var2 != ((c) this).field_ab) {
+          var3 = ((c) this).field_ab + 1;
+          L1: while (true) {
+            L2: {
+              if (var3 >= var2) {
+                break L2;
+              } else {
+                if (32 == ((c) this).field_q.charAt(var3 + -1)) {
+                  break L2;
+                } else {
+                  var3++;
+                  continue L1;
+                }
+              }
+            }
+            return var3;
+          }
+        } else {
+          return ((c) this).field_ab;
         }
-        for (var3 = ((c) this).field_ab + 1; var3 < var2; var3++) {
-            // if_icmpeq L76
-        }
-        return var3;
     }
 
     c(String param0, fn param1, int param2) {
@@ -178,7 +204,7 @@ class c extends qm {
               } else {
                 if (param3 <= 126) {
                   L2: {
-                    if (((c) this).field_S == ((c) this).field_ab) {
+                    if ((((c) this).field_S ^ -1) == (((c) this).field_ab ^ -1)) {
                       break L2;
                     } else {
                       this.l(-114);
@@ -190,7 +216,7 @@ class c extends qm {
                       if ((((c) this).field_N ^ -1) == 0) {
                         break L4;
                       } else {
-                        if (((c) this).field_q.length() < ((c) this).field_N) {
+                        if ((((c) this).field_q.length() ^ -1) > (((c) this).field_N ^ -1)) {
                           break L4;
                         } else {
                           break L3;
@@ -198,15 +224,16 @@ class c extends qm {
                       }
                     }
                     L5: {
-                      if (((c) this).field_ab < ((c) this).field_q.length()) {
+                      if ((((c) this).field_ab ^ -1) > (((c) this).field_q.length() ^ -1)) {
                         ((c) this).field_q = ((c) this).field_q.substring(0, ((c) this).field_ab) + param3 + ((c) this).field_q.substring(((c) this).field_ab, ((c) this).field_q.length());
                         ((c) this).field_ab = ((c) this).field_ab + 1;
                         ((c) this).field_S = ((c) this).field_ab;
                         break L5;
                       } else {
                         ((c) this).field_q = ((c) this).field_q + param3;
-                        ((c) this).field_ab = ((c) this).field_q.length();
-                        ((c) this).field_S = ((c) this).field_q.length();
+                        int dupTemp$1 = ((c) this).field_q.length();
+                        ((c) this).field_ab = dupTemp$1;
+                        ((c) this).field_S = dupTemp$1;
                         break L5;
                       }
                     }
@@ -220,7 +247,7 @@ class c extends qm {
               }
             }
             L6: {
-              if (-86 == param0) {
+              if (-86 == (param0 ^ -1)) {
                 if (((c) this).field_ab != ((c) this).field_S) {
                   this.l(-14);
                   return true;
@@ -234,11 +261,11 @@ class c extends qm {
                   }
                 }
               } else {
-                if (-102 != param0) {
+                if (-102 != (param0 ^ -1)) {
                   if ((param0 ^ -1) != -14) {
                     if (param0 != 96) {
                       if (97 == param0) {
-                        if (((c) this).field_ab >= ((c) this).field_q.length()) {
+                        if ((((c) this).field_ab ^ -1) <= (((c) this).field_q.length() ^ -1)) {
                           break L6;
                         } else {
                           L7: {
@@ -344,7 +371,7 @@ class c extends qm {
                     return true;
                   }
                 } else {
-                  if (((c) this).field_ab == ((c) this).field_S) {
+                  if ((((c) this).field_ab ^ -1) == (((c) this).field_S ^ -1)) {
                     if (((c) this).field_ab < ((c) this).field_q.length()) {
                       ((c) this).field_S = 1 + ((c) this).field_ab;
                       this.l(18);
@@ -537,8 +564,9 @@ class c extends qm {
                 ((c) this).field_q = ((c) this).field_q.substring(0, ((c) this).field_N);
             }
         }
-        ((c) this).field_S = ((c) this).field_q.length();
-        ((c) this).field_ab = ((c) this).field_q.length();
+        int dupTemp$0 = ((c) this).field_q.length();
+        ((c) this).field_S = dupTemp$0;
+        ((c) this).field_ab = dupTemp$0;
         if (param1 != 87) {
             c.o(97);
         }
@@ -573,17 +601,36 @@ class c extends qm {
 
     private final int c(boolean param0) {
         int var2 = 0;
-        int var3 = Pixelate.field_H ? 1 : 0;
-        if (((c) this).field_ab == -1) {
-            return ((c) this).field_ab;
+        int var3 = 0;
+        var3 = Pixelate.field_H ? 1 : 0;
+        if ((((c) this).field_ab ^ -1) != -1) {
+          var2 = -1 + ((c) this).field_ab;
+          L0: while (true) {
+            L1: {
+              if (-1 <= (var2 ^ -1)) {
+                break L1;
+              } else {
+                if (((c) this).field_q.charAt(var2 - 1) == 32) {
+                  break L1;
+                } else {
+                  var2--;
+                  continue L0;
+                }
+              }
+            }
+            L2: {
+              if (!param0) {
+                break L2;
+              } else {
+                ((c) this).field_N = -56;
+                break L2;
+              }
+            }
+            return var2;
+          }
+        } else {
+          return ((c) this).field_ab;
         }
-        for (var2 = -1 + ((c) this).field_ab; -1 < var2; var2--) {
-            // if_icmpeq L50
-        }
-        if (param0) {
-            ((c) this).field_N = -56;
-        }
-        return var2;
     }
 
     static {

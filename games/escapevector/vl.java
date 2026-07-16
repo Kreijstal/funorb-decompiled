@@ -52,53 +52,121 @@ final class vl {
     }
 
     final static void b(int param0, int param1) {
+        int var2 = 0;
+        ed[] var3 = null;
+        ed[] var4 = null;
         int var5 = 0;
         ed var6 = null;
         int var7 = 0;
         ed[] var8 = null;
         ed var9 = null;
-        int var10 = EscapeVector.field_A;
-        int var2 = param1 == 4 ? 1 : 0;
-        if (!(hb.field_b != null)) {
-            return;
+        int var10 = 0;
+        int stackIn_3_0 = 0;
+        int stackOut_2_0 = 0;
+        int stackOut_1_0 = 0;
+        L0: {
+          var10 = EscapeVector.field_A;
+          if (param1 != 4) {
+            stackOut_2_0 = 0;
+            stackIn_3_0 = stackOut_2_0;
+            break L0;
+          } else {
+            stackOut_1_0 = 1;
+            stackIn_3_0 = stackOut_1_0;
+            break L0;
+          }
         }
-        if (!(null != qi.field_M)) {
-            return;
-        }
-        if (param1 >= 0) {
-            // if_icmpge L50
+        var2 = stackIn_3_0;
+        if (hb.field_b == null) {
+          return;
         } else {
-            param1 = 0;
-        }
-        if (-6 != param1) {
-            // if_icmpne L71
-        }
-        param1 = 0;
-        ed[] var3 = hb.field_b[param1];
-        if (!(var2 == 0)) {
-            var3 = v.field_a;
-        }
-        if (param0 != 1) {
-            vl.a(98);
-        }
-        ed[] var4 = qi.field_M[param1];
-        for (var5 = 0; 3 > var5; var5++) {
-            if (!(var3 != null)) {
-                param1 = 0;
-                var3 = hb.field_b[param1];
-                var4 = qi.field_M[param1];
+          if (null == qi.field_M) {
+            return;
+          } else {
+            L1: {
+              L2: {
+                if (param1 < 0) {
+                  break L2;
+                } else {
+                  if (-8 >= (param1 ^ -1)) {
+                    break L2;
+                  } else {
+                    break L1;
+                  }
+                }
+              }
+              param1 = 0;
+              break L1;
             }
-            var6 = var3[var5];
-            var7 = var5 + 14;
-            var8 = mb.field_f;
-            if (var2 != 0) {
-                var8 = ob.field_b;
+            L3: {
+              L4: {
+                if (-6 == (param1 ^ -1)) {
+                  break L4;
+                } else {
+                  if ((param1 ^ -1) != -7) {
+                    break L3;
+                  } else {
+                    break L4;
+                  }
+                }
+              }
+              param1 = 0;
+              break L3;
             }
-            var8[var7] = var6;
-            var9 = var4[var5];
-            jm.field_K[var7] = var9;
+            L5: {
+              var3 = hb.field_b[param1];
+              if (var2 != 0) {
+                var3 = v.field_a;
+                break L5;
+              } else {
+                break L5;
+              }
+            }
+            L6: {
+              if (param0 == 1) {
+                break L6;
+              } else {
+                vl.a(98);
+                break L6;
+              }
+            }
+            var4 = qi.field_M[param1];
+            var5 = 0;
+            L7: while (true) {
+              if (3 <= var5) {
+                fl.a(-1, param1);
+                return;
+              } else {
+                L8: {
+                  if (var3 == null) {
+                    param1 = 0;
+                    var3 = hb.field_b[param1];
+                    var4 = qi.field_M[param1];
+                    break L8;
+                  } else {
+                    break L8;
+                  }
+                }
+                L9: {
+                  var6 = var3[var5];
+                  var7 = var5 + 14;
+                  var8 = mb.field_f;
+                  if (var2 == 0) {
+                    break L9;
+                  } else {
+                    var8 = ob.field_b;
+                    break L9;
+                  }
+                }
+                var8[var7] = var6;
+                var9 = var4[var5];
+                jm.field_K[var7] = var9;
+                var5++;
+                continue L7;
+              }
+            }
+          }
         }
-        fl.a(-1, param1);
     }
 
     final int a(byte param0, int param1) {

@@ -21,22 +21,22 @@ final class ke {
         var5 = Pool.field_O;
         wd.field_Lb = td.field_f;
         if (param3 == -16) {
-          if (param1 != -256) {
-            if (param1 >= 100) {
-              if ((param1 ^ -1) < -106) {
-                sf.field_B = gg.a(param1, true, param0);
-                return;
-              } else {
-                sf.field_B = jo.a(param2, 57);
-                return;
-              }
-            } else {
+          if ((param1 ^ -1) != -256) {
+            if (param1 < 100) {
               sf.field_B = gg.a(param1, true, param0);
               return;
+            } else {
+              if ((param1 ^ -1) >= -106) {
+                sf.field_B = jo.a(param2, 57);
+                return;
+              } else {
+                sf.field_B = gg.a(param1, true, param0);
+                return;
+              }
             }
           } else {
             L0: {
-              if (-14 <= j.field_b) {
+              if (-14 >= (j.field_b ^ -1)) {
                 stackOut_15_0 = 0;
                 stackIn_16_0 = stackOut_15_0;
                 break L0;
@@ -51,22 +51,22 @@ final class ke {
           }
         } else {
           ke.a(-100);
-          if (param1 != -256) {
-            if (param1 >= 100) {
-              if ((param1 ^ -1) < -106) {
-                sf.field_B = gg.a(param1, true, param0);
-                return;
-              } else {
-                sf.field_B = jo.a(param2, 57);
-                return;
-              }
-            } else {
+          if ((param1 ^ -1) != -256) {
+            if (param1 < 100) {
               sf.field_B = gg.a(param1, true, param0);
               return;
+            } else {
+              if ((param1 ^ -1) >= -106) {
+                sf.field_B = jo.a(param2, 57);
+                return;
+              } else {
+                sf.field_B = gg.a(param1, true, param0);
+                return;
+              }
             }
           } else {
             L1: {
-              if (-14 <= j.field_b) {
+              if (-14 >= (j.field_b ^ -1)) {
                 stackOut_4_0 = 0;
                 stackIn_5_0 = stackOut_4_0;
                 break L1;
@@ -85,83 +85,46 @@ final class ke {
     final static void a(int param0) {
         try {
             Exception var1 = null;
-            int statePc = 0;
-            Throwable caughtException = null;
-            stateLoop: while (true) {
-                switch (statePc) {
-                    case 0: {
-                        if (nl.field_c != null) {
-                            statePc = 4;
-                        } else {
-                            statePc = 1;
-                        }
-                        continue stateLoop;
-                    }
-                    case 1: {
-                        kn.field_e.field_v = kn.field_e.field_v + 24;
-                        if (param0 == 100) {
-                            statePc = 3;
-                        } else {
-                            statePc = 2;
-                        }
-                        continue stateLoop;
-                    }
-                    case 2: {
-                        field_f = null;
-                        statePc = 3;
-                        continue stateLoop;
-                    }
-                    case 3: {
-                        return;
-                    }
-                    case 4: {
-                        try {
-                            nl.field_c.a(param0 ^ 100, 0L);
-                            nl.field_c.a(24, kn.field_e.field_t, kn.field_e.field_v, -1);
-                            statePc = 5;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_4) {
-                            caughtException = stateCaught_4;
-                            statePc = 8;
-                            continue stateLoop;
-                        }
-                    }
-                    case 5: {
-                        kn.field_e.field_v = kn.field_e.field_v + 24;
-                        if (param0 == 100) {
-                            statePc = 7;
-                        } else {
-                            statePc = 6;
-                        }
-                        continue stateLoop;
-                    }
-                    case 6: {
-                        field_f = null;
-                        statePc = 7;
-                        continue stateLoop;
-                    }
-                    case 7: {
-                        return;
-                    }
-                    case 8: {
-                        var1 = (Exception) (Object) caughtException;
-                        kn.field_e.field_v = kn.field_e.field_v + 24;
-                        if (param0 != 100) {
-                            statePc = 10;
-                        } else {
-                            statePc = 9;
-                        }
-                        continue stateLoop;
-                    }
-                    case 9: {
-                        return;
-                    }
-                    case 10: {
-                        field_f = null;
-                        return;
-                    }
-                    default: throw new IllegalStateException("invalid CFG state " + statePc);
+            Throwable decompiledCaughtException = null;
+            if (nl.field_c != null) {
+              try {
+                L0: {
+                  nl.field_c.a(param0 ^ 100, 0L);
+                  nl.field_c.a(24, kn.field_e.field_t, kn.field_e.field_v, -1);
+                  break L0;
                 }
+              } catch (java.lang.Exception decompiledCaughtParameter0) {
+                decompiledCaughtException = decompiledCaughtParameter0;
+                var1 = (Exception) (Object) decompiledCaughtException;
+                kn.field_e.field_v = kn.field_e.field_v + 24;
+                if (param0 != 100) {
+                  field_f = null;
+                  return;
+                } else {
+                  return;
+                }
+              }
+              L1: {
+                kn.field_e.field_v = kn.field_e.field_v + 24;
+                if (param0 == 100) {
+                  break L1;
+                } else {
+                  field_f = null;
+                  break L1;
+                }
+              }
+              return;
+            } else {
+              L2: {
+                kn.field_e.field_v = kn.field_e.field_v + 24;
+                if (param0 == 100) {
+                  break L2;
+                } else {
+                  field_f = null;
+                  break L2;
+                }
+              }
+              return;
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;

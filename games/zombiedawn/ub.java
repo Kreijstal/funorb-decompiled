@@ -591,7 +591,7 @@ final class ub {
     final void c(int param0, int param1) {
         L0: {
           if (((ub) this).field_i) {
-            if (((ub) this).field_n >= ((ub) this).field_r) {
+            if ((((ub) this).field_n ^ -1) <= (((ub) this).field_r ^ -1)) {
               if (((ub) this).field_r < ((ub) this).field_n) {
                 ((ub) this).field_n = ((ub) this).field_r;
                 break L0;
@@ -642,63 +642,57 @@ final class ub {
         }
         L3: {
           if (((ub) this).field_a <= param1) {
-            if (((ub) this).field_a >= -1) {
-              break L3;
-            } else {
-              if (-551 < ((ub) this).field_a) {
-                break L3;
-              } else {
-                if ((((ub) this).field_a % 50 ^ -1) != -50) {
-                  break L3;
-                } else {
-                  ((ub) this).field_p = 2.0f;
-                  fn discarded$2 = kh.a(47, false);
-                  break L3;
-                }
-              }
-            }
+            break L3;
           } else {
-            if (((ub) this).field_a >= -1) {
+            if (((ub) this).field_a % 1500 == 49) {
+              ((ub) this).field_p = 2.0f;
               break L3;
             } else {
-              if (-551 < ((ub) this).field_a) {
-                break L3;
-              } else {
-                if ((((ub) this).field_a % 50 ^ -1) != -50) {
-                  break L3;
-                } else {
-                  ((ub) this).field_p = 2.0f;
-                  fn discarded$3 = kh.a(47, false);
-                  break L3;
-                }
-              }
+              break L3;
             }
           }
         }
         L4: {
-          if (!((ub) this).field_c) {
+          if ((((ub) this).field_a ^ -1) >= -1) {
             break L4;
           } else {
-            if (1.0f < ((ub) this).field_p) {
-              this.a(0);
+            if (-551 > (((ub) this).field_a ^ -1)) {
               break L4;
             } else {
-              if (-50 != (((ub) this).field_a % 50 ^ -1)) {
+              if ((((ub) this).field_a % 50 ^ -1) != -50) {
                 break L4;
               } else {
-                this.a(0);
+                ((ub) this).field_p = 2.0f;
+                fn discarded$1 = kh.a(47, false);
                 break L4;
               }
             }
           }
         }
         L5: {
+          if (!((ub) this).field_c) {
+            break L5;
+          } else {
+            if (1.0f < ((ub) this).field_p) {
+              this.a(0);
+              break L5;
+            } else {
+              if (-50 != (((ub) this).field_a % 50 ^ -1)) {
+                break L5;
+              } else {
+                this.a(0);
+                break L5;
+              }
+            }
+          }
+        }
+        L6: {
           if (param0 != ((ub) this).field_m) {
             this.d(3, param0);
             ((ub) this).field_m = param0;
-            break L5;
+            break L6;
           } else {
-            break L5;
+            break L6;
           }
         }
         cn.field_f.b(124);

@@ -166,13 +166,20 @@ final class il extends cn {
                   L3: while (true) {
                     if (var27 >= ((il) this).field_Q) {
                       try {
-                        this.a((var20 & var16) != 0, false, 0L, (int) ((il) this).field_A, ((il) this).field_A << 1);
-                      } catch (java.lang.Exception decompiledCaughtParameter) {
-                        decompiledCaughtException = decompiledCaughtParameter;
+                        L4: {
+                          this.a((var20 & var16) != 0, false, 0L, (int) ((il) this).field_A, ((il) this).field_A << 1);
+                          break L4;
+                        }
+                      } catch (java.lang.Exception decompiledCaughtParameter0) {
+                        decompiledCaughtException = decompiledCaughtParameter0;
+                        L5: {
+                          var21 = (Exception) (Object) decompiledCaughtException;
+                          break L5;
+                        }
                       }
-                      var21 = (Exception) (Object) decompiledCaughtException;
+                      return;
                     } else {
-                      L4: {
+                      L6: {
                         var22 = ((il) this).field_u[var27];
                         var23 = ((il) this).field_l[var27];
                         var24 = ((il) this).field_X[var27];
@@ -188,11 +195,11 @@ final class il extends cn {
                         if (var24 < 50) {
                           field_j[var27] = -5000;
                           var20 = 1;
-                          break L4;
+                          break L6;
                         } else {
                           field_j[var27] = var18 + (var22 << 9) / var24;
                           field_O[var27] = var19 + (var23 << 9) / var24;
-                          break L4;
+                          break L6;
                         }
                       }
                       if (var17 != 0) {
@@ -581,8 +588,9 @@ final class il extends cn {
                       return;
                     } else {
                       L29: {
+                        int incrementValue$7 = var12;
                         var12++;
-                        this.a(var14[var12]);
+                        this.a(var14[incrementValue$7]);
                         if (var12 != var13) {
                           break L29;
                         } else {
@@ -616,8 +624,9 @@ final class il extends cn {
                           break L31;
                         } else {
                           L32: {
+                            int incrementValue$8 = var12;
                             var12++;
-                            this.a(var14[var12]);
+                            this.a(var14[incrementValue$8]);
                             if (var12 != var13) {
                               break L32;
                             } else {
@@ -651,8 +660,9 @@ final class il extends cn {
                             break L34;
                           } else {
                             L35: {
+                              int incrementValue$9 = var12;
                               var12++;
-                              this.a(var14[var12]);
+                              this.a(var14[incrementValue$9]);
                               if (var12 != var13) {
                                 break L35;
                               } else {
@@ -686,8 +696,9 @@ final class il extends cn {
                               break L37;
                             } else {
                               L38: {
+                                int incrementValue$10 = var12;
                                 var12++;
-                                this.a(var14[var12]);
+                                this.a(var14[incrementValue$10]);
                                 if (var12 != var13) {
                                   break L38;
                                 } else {
@@ -810,8 +821,9 @@ final class il extends cn {
                         }
                       } else {
                         field_U[var7] = (field_g[var9] + field_g[var10] + field_g[var11]) / 3;
+                        int incrementValue$11 = var7;
                         var7++;
-                        field_G[var7] = var8;
+                        field_G[incrementValue$11] = var8;
                         var8++;
                         continue L3;
                       }
@@ -828,8 +840,9 @@ final class il extends cn {
                     if (!this.a(eh.field_n + fk.field_j, wm.field_F + fk.field_k, field_O[var9], field_O[var10], field_O[var11], var12, var13, var14_int)) {
                       break L43;
                     } else {
+                      int fieldTemp$12 = w.field_K;
                       w.field_K = w.field_K + 1;
-                      bc.field_b[w.field_K] = param2;
+                      bc.field_b[fieldTemp$12] = param2;
                       param1 = false;
                       break L43;
                     }
@@ -901,8 +914,9 @@ final class il extends cn {
                     }
                   } else {
                     field_U[var7] = (field_g[var9] + field_g[var10] + field_g[var11]) / 3;
+                    int incrementValue$13 = var7;
                     var7++;
-                    field_G[var7] = var8;
+                    field_G[incrementValue$13] = var8;
                     var8++;
                     continue L3;
                   }
@@ -1238,11 +1252,17 @@ final class il extends cn {
         Exception var1 = null;
         Throwable decompiledCaughtException = null;
         try {
-          this.b();
-        } catch (java.lang.Exception decompiledCaughtParameter) {
-          decompiledCaughtException = decompiledCaughtParameter;
+          L0: {
+            this.b();
+            break L0;
+          }
+        } catch (java.lang.Exception decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L1: {
+            var1 = (Exception) (Object) decompiledCaughtException;
+            break L1;
+          }
         }
-        var1 = (Exception) (Object) decompiledCaughtException;
     }
 
     private final void d(int param0) {
@@ -1295,8 +1315,9 @@ final class il extends cn {
                 var14 = (50 - var8) * fk.field_a[var10 - var8];
                 field_s[var4] = var2 + (var11 + ((field_w[var7] - var11) * var14 >> 16) << 9) / 50;
                 field_f[var4] = var3 + (var12 + ((field_H[var7] - var12) * var14 >> 16) << 9) / 50;
+                int incrementValue$9 = var4;
                 var4++;
-                field_h[var4] = var13 + (((((il) this).field_R[param0] & 65535) - var13) * var14 >> 16);
+                field_h[incrementValue$9] = var13 + (((((il) this).field_R[param0] & 65535) - var13) * var14 >> 16);
                 break L2;
               }
             }
@@ -1306,15 +1327,17 @@ final class il extends cn {
               var14 = (50 - var8) * fk.field_a[var9 - var8];
               field_s[var4] = var2 + (var11 + ((field_w[var6] - var11) * var14 >> 16) << 9) / 50;
               field_f[var4] = var3 + (var12 + ((field_H[var6] - var12) * var14 >> 16) << 9) / 50;
+              int incrementValue$10 = var4;
               var4++;
-              field_h[var4] = var13 + (((((il) this).field_E[param0] & 65535) - var13) * var14 >> 16);
+              field_h[incrementValue$10] = var13 + (((((il) this).field_E[param0] & 65535) - var13) * var14 >> 16);
               break L1;
             }
           } else {
             field_s[var4] = field_j[var5];
             field_f[var4] = field_O[var5];
+            int incrementValue$11 = var4;
             var4++;
-            field_h[var4] = ((il) this).field_Z[param0] & 65535;
+            field_h[incrementValue$11] = ((il) this).field_Z[param0] & 65535;
             break L1;
           }
         }
@@ -1330,8 +1353,9 @@ final class il extends cn {
                 var14 = (50 - var9) * fk.field_a[var8 - var9];
                 field_s[var4] = var2 + (var11 + ((field_w[var5] - var11) * var14 >> 16) << 9) / 50;
                 field_f[var4] = var3 + (var12 + ((field_H[var5] - var12) * var14 >> 16) << 9) / 50;
+                int incrementValue$12 = var4;
                 var4++;
-                field_h[var4] = var13 + (((((il) this).field_Z[param0] & 65535) - var13) * var14 >> 16);
+                field_h[incrementValue$12] = var13 + (((((il) this).field_Z[param0] & 65535) - var13) * var14 >> 16);
                 break L4;
               }
             }
@@ -1341,15 +1365,17 @@ final class il extends cn {
               var14 = (50 - var9) * fk.field_a[var10 - var9];
               field_s[var4] = var2 + (var11 + ((field_w[var7] - var11) * var14 >> 16) << 9) / 50;
               field_f[var4] = var3 + (var12 + ((field_H[var7] - var12) * var14 >> 16) << 9) / 50;
+              int incrementValue$13 = var4;
               var4++;
-              field_h[var4] = var13 + (((((il) this).field_R[param0] & 65535) - var13) * var14 >> 16);
+              field_h[incrementValue$13] = var13 + (((((il) this).field_R[param0] & 65535) - var13) * var14 >> 16);
               break L3;
             }
           } else {
             field_s[var4] = field_j[var6];
             field_f[var4] = field_O[var6];
+            int incrementValue$14 = var4;
             var4++;
-            field_h[var4] = ((il) this).field_E[param0] & 65535;
+            field_h[incrementValue$14] = ((il) this).field_E[param0] & 65535;
             break L3;
           }
         }
@@ -1365,8 +1391,9 @@ final class il extends cn {
                 var14 = (50 - var10) * fk.field_a[var9 - var10];
                 field_s[var4] = var2 + (var11 + ((field_w[var6] - var11) * var14 >> 16) << 9) / 50;
                 field_f[var4] = var3 + (var12 + ((field_H[var6] - var12) * var14 >> 16) << 9) / 50;
+                int incrementValue$15 = var4;
                 var4++;
-                field_h[var4] = var13 + (((((il) this).field_E[param0] & 65535) - var13) * var14 >> 16);
+                field_h[incrementValue$15] = var13 + (((((il) this).field_E[param0] & 65535) - var13) * var14 >> 16);
                 break L6;
               }
             }
@@ -1376,15 +1403,17 @@ final class il extends cn {
               var14 = (50 - var10) * fk.field_a[var8 - var10];
               field_s[var4] = var2 + (var11 + ((field_w[var5] - var11) * var14 >> 16) << 9) / 50;
               field_f[var4] = var3 + (var12 + ((field_H[var5] - var12) * var14 >> 16) << 9) / 50;
+              int incrementValue$16 = var4;
               var4++;
-              field_h[var4] = var13 + (((((il) this).field_Z[param0] & 65535) - var13) * var14 >> 16);
+              field_h[incrementValue$16] = var13 + (((((il) this).field_Z[param0] & 65535) - var13) * var14 >> 16);
               break L5;
             }
           } else {
             field_s[var4] = field_j[var7];
             field_f[var4] = field_O[var7];
+            int incrementValue$17 = var4;
             var4++;
-            field_h[var4] = ((il) this).field_R[param0] & 65535;
+            field_h[incrementValue$17] = ((il) this).field_R[param0] & 65535;
             break L5;
           }
         }
@@ -1960,8 +1989,9 @@ final class il extends cn {
                                 ((il) this).field_q[var10] = param0.field_M[var11] & 65535;
                                 ((il) this).field_t[var10] = param0.field_q[var11] & 65535;
                                 ((il) this).field_V[var10] = param0.field_A[var11] & 65535;
+                                int incrementValue$1 = var10;
                                 var10++;
-                                var9_ref_int__[var11] = var10;
+                                var9_ref_int__[var11] = incrementValue$1;
                                 var11++;
                                 continue L6;
                               }
@@ -2006,6 +2036,7 @@ final class il extends cn {
         var9 = var16;
         L9: while (true) {
           if (var16 >= ((il) this).field_F) {
+            return;
           } else {
             L10: {
               if (param0.field_s != null) {

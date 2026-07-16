@@ -15,7 +15,7 @@ final class wc extends qg {
         ca.field_a = param2;
         ug.field_h = param0;
         if (param1 != -16923) {
-            field_B = (ag) null;
+            field_B = null;
         }
     }
 
@@ -27,7 +27,7 @@ final class wc extends qg {
     public static void i(int param0) {
         field_B = null;
         if (param0 != -21693) {
-            field_A = (bj) null;
+            field_A = null;
             field_A = null;
             return;
         }
@@ -36,20 +36,20 @@ final class wc extends qg {
 
     final void a(boolean param0, lk param1, int param2, int param3, int param4, int param5) {
         qi var7 = null;
-        this.a(param0, param1, param2, param3, param4, param5);
+        super.a(param0, param1, param2, param3, param4, param5);
         var7 = sh.field_i;
         if (var7 != null) {
           if (((wc) this).a(-77, param3, param5, param2, param4)) {
             if (!(((wc) this).field_k instanceof wa)) {
-              if (((qi) var7).field_k instanceof wa) {
-                ((wa) ((qi) var7).field_k).a((wc) this, 15254, var7);
+              if (var7.field_k instanceof wa) {
+                ((wa) (Object) var7.field_k).a((wc) this, 15254, var7);
                 sh.field_i = null;
                 return;
               } else {
                 return;
               }
             } else {
-              ((wa) ((wc) this).field_k).a((wc) this, 15254, var7);
+              ((wa) (Object) ((wc) this).field_k).a((wc) this, 15254, var7);
               sh.field_i = null;
               return;
             }

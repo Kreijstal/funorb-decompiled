@@ -23,7 +23,7 @@ final class vm {
     final void a(vf param0, int param1) {
         float var3 = 0.0f;
         int var4 = 0;
-        hm var4_ref = null;
+        hm var4_ref_hm = null;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
@@ -91,9 +91,9 @@ final class vm {
               if (((vm) this).field_c == 0.0f) {
                 break L4;
               } else {
-                var4_ref = new hm();
-                var4_ref.a(66, 0, 0, 1, (int)((vm) this).field_c);
-                ((vm) this).field_e.a(param1 ^ 9, var4_ref);
+                var4_ref_hm = new hm();
+                var4_ref_hm.a(66, 0, 0, 1, (int)((vm) this).field_c);
+                ((vm) this).field_e.a(param1 ^ 9, var4_ref_hm);
                 ((vm) this).field_e.a(ek.field_b, -96);
                 var5 = 0;
                 L5: while (true) {
@@ -305,7 +305,7 @@ final class vm {
         var2 = -82 % ((param0 - 62) / 60);
         var3 = 0;
         L0: while (true) {
-          if (((vm) this).field_h.field_b.length <= var3) {
+          if ((((vm) this).field_h.field_b.length ^ -1) >= (var3 ^ -1)) {
             return;
           } else {
             var14 = ((vm) this).field_h.field_b[var3].field_d;
@@ -317,10 +317,10 @@ final class vm {
             var4 = 0;
             L1: while (true) {
               L2: {
-                if (var4 >= var14.length) {
+                if ((var4 ^ -1) <= (var14.length ^ -1)) {
                   break L2;
                 } else {
-                  if (var4 >= var15.length) {
+                  if ((var4 ^ -1) <= (var15.length ^ -1)) {
                     break L2;
                   } else {
                     var5[var4] = var15[var4];
@@ -330,7 +330,7 @@ final class vm {
                 }
               }
               L3: {
-                if (-5 >= var4) {
+                if (-5 >= (var4 ^ -1)) {
                   break L3;
                 } else {
                   var14[4] = 0;
@@ -346,7 +346,7 @@ final class vm {
                 }
               }
               L5: {
-                if (-11 > var4) {
+                if (-11 < (var4 ^ -1)) {
                   var14[10] = 0;
                   break L5;
                 } else {
@@ -354,7 +354,7 @@ final class vm {
                 }
               }
               L6: {
-                if (-4 < var4) {
+                if (-4 < (var4 ^ -1)) {
                   var14[3] = 65536;
                   break L6;
                 } else {
@@ -370,7 +370,7 @@ final class vm {
                 }
               }
               L8: {
-                if (-8 > var4) {
+                if (-8 < (var4 ^ -1)) {
                   var14[7] = 65536;
                   break L8;
                 } else {
@@ -393,14 +393,16 @@ final class vm {
                   break L10;
                 }
               }
-              if (var4 < 5) {
-                var14[5] = 0;
-                var3++;
-                continue L0;
-              } else {
-                var3++;
-                continue L0;
+              L11: {
+                if (var4 >= 5) {
+                  break L11;
+                } else {
+                  var14[5] = 0;
+                  break L11;
+                }
               }
+              var3++;
+              continue L0;
             }
           }
         }

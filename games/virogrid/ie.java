@@ -223,36 +223,63 @@ abstract class ie {
     }
 
     final int a(byte param0, int param1, int param2) {
+        int var4 = 0;
         int var5 = 0;
+        int var6 = 0;
         ri var7 = null;
         int var8 = 0;
-        int var9 = Virogrid.field_F ? 1 : 0;
-        if (((ie) this).field_d != null) {
-            // if_icmpeq L39
-            // if_icmplt L39
-        } else {
-            return -1;
-        }
-        if (((ie) this).field_d[-1 + ((ie) this).field_d.length].field_b < param1) {
-            return -1;
-        }
-        if (-2 == (((ie) this).field_d.length ^ -1)) {
-            return ((ie) this).field_d[0].a((byte) 89, param2);
-        }
-        int var4 = 0;
-        int var6 = -97 / ((-46 - param0) / 56);
-        for (var5 = 0; var5 < ((ie) this).field_d.length; var5++) {
-            var7 = ((ie) this).field_d[var5];
-            if (var7.field_c <= param1) {
-                if (!(param1 > var7.field_b)) {
-                    var8 = var7.a((byte) 119, param2);
-                    if (!(0 != (var8 ^ -1))) {
+        int var9 = 0;
+        L0: {
+          var9 = Virogrid.field_F ? 1 : 0;
+          if (((ie) this).field_d == null) {
+            break L0;
+          } else {
+            if (-1 == (((ie) this).field_d.length ^ -1)) {
+              break L0;
+            } else {
+              if (param1 < ((ie) this).field_d[0].field_c) {
+                break L0;
+              } else {
+                if (((ie) this).field_d[-1 + ((ie) this).field_d.length].field_b >= param1) {
+                  if (-2 != (((ie) this).field_d.length ^ -1)) {
+                    var4 = 0;
+                    var6 = -97 / ((-46 - param0) / 56);
+                    var5 = 0;
+                    L1: while (true) {
+                      if (var5 >= ((ie) this).field_d.length) {
                         return -1;
+                      } else {
+                        L2: {
+                          var7 = ((ie) this).field_d[var5];
+                          if (var7.field_c > param1) {
+                            break L2;
+                          } else {
+                            if (param1 <= var7.field_b) {
+                              var8 = var7.a((byte) 119, param2);
+                              if (0 == (var8 ^ -1)) {
+                                return -1;
+                              } else {
+                                return var8 + var4;
+                              }
+                            } else {
+                              break L2;
+                            }
+                          }
+                        }
+                        var4 = var4 + (-1 + var7.field_d.length);
+                        var5++;
+                        continue L1;
+                      }
                     }
-                    return var8 + var4;
+                  } else {
+                    return ((ie) this).field_d[0].a((byte) 89, param2);
+                  }
+                } else {
+                  return -1;
                 }
+              }
             }
-            var4 = var4 + (-1 + var7.field_d.length);
+          }
         }
         return -1;
     }

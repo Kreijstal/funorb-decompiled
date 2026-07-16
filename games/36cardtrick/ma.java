@@ -31,7 +31,7 @@ final class ma {
                   if (param8 < -12) {
                     break L2;
                   } else {
-                    field_d = (String[]) null;
+                    field_d = null;
                     break L2;
                   }
                 }
@@ -122,11 +122,11 @@ final class ma {
             var13 = var11_ref_kc__[var12];
             var14 = 0;
             L10: while (true) {
-              if (((kc) var13).field_r.length <= var14) {
+              if (var13.field_r.length <= var14) {
                 var12++;
                 continue L0;
               } else {
-                ((kc) var13).field_r[var14] = param2;
+                var13.field_r[var14] = param2;
                 var14++;
                 continue L10;
               }
@@ -157,15 +157,14 @@ final class ma {
     }
 
     final static ac a(Throwable param0, String param1) {
-        ac var2_ref = null;
         ac var2 = null;
         if (!(param0 instanceof ac)) {
             var2 = new ac(param0, param1);
         } else {
-            var2_ref = (ac) param0;
-            var2_ref.field_a = var2_ref.field_a + 32 + param1;
+            var2 = (ac) (Object) param0;
+            var2.field_a = var2.field_a + 32 + param1;
         }
-        return var2_ref;
+        return var2;
     }
 
     public static void a(int param0) {

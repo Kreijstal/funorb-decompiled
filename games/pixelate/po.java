@@ -19,9 +19,7 @@ final class po {
         int var5 = 0;
         long var6 = 0L;
         sp var8 = null;
-        sp var8_ref = null;
         qd var9 = null;
-        qd var9_ref = null;
         var5 = param2 ^ (param3 << 208937348 & param0 | param3 >>> 644995372);
         var5 = var5 | param3 << -1014726256;
         var6 = (long)var5 ^ 4294967296L;
@@ -34,22 +32,22 @@ final class po {
                 if (var9 != null) {
                   break L0;
                 } else {
-                  var9_ref = qd.a(((po) this).field_i, param3, param2);
-                  if (var9_ref != null) {
-                    ((po) this).field_g.a(var6, param0 ^ 65420, (fa) (Object) var9_ref);
+                  var9 = qd.a(((po) this).field_i, param3, param2);
+                  if (var9 != null) {
+                    ((po) this).field_g.a(var6, param0 ^ 65420, (fa) (Object) var9);
                     break L0;
                   } else {
                     return null;
                   }
                 }
               }
-              var8_ref = var9_ref.a(param1);
-              if (var8_ref == null) {
+              var8 = var9.a(param1);
+              if (var8 == null) {
                 return null;
               } else {
-                var9_ref.c(2779);
-                ((po) this).field_h.a(var6, param0 ^ 65423, (fa) (Object) var8_ref);
-                return var8_ref;
+                var9.c(2779);
+                ((po) this).field_h.a(var6, param0 ^ 65423, (fa) (Object) var8);
+                return var8;
               }
             } else {
               return null;
@@ -60,22 +58,22 @@ final class po {
               if (var9 != null) {
                 break L1;
               } else {
-                var9_ref = qd.a(((po) this).field_i, param3, param2);
-                if (var9_ref != null) {
-                  ((po) this).field_g.a(var6, param0 ^ 65420, (fa) (Object) var9_ref);
+                var9 = qd.a(((po) this).field_i, param3, param2);
+                if (var9 != null) {
+                  ((po) this).field_g.a(var6, param0 ^ 65420, (fa) (Object) var9);
                   break L1;
                 } else {
                   return null;
                 }
               }
             }
-            var8_ref = var9_ref.a(param1);
-            if (var8_ref == null) {
+            var8 = var9.a(param1);
+            if (var8 == null) {
               return null;
             } else {
-              var9_ref.c(2779);
-              ((po) this).field_h.a(var6, param0 ^ 65423, (fa) (Object) var8_ref);
-              return var8_ref;
+              var9.c(2779);
+              ((po) this).field_h.a(var6, param0 ^ 65423, (fa) (Object) var8);
+              return var8;
             }
           }
         } else {
@@ -106,7 +104,6 @@ final class po {
         int var5 = 0;
         long var6 = 0L;
         sp var8 = null;
-        sp var8_ref = null;
         np var9 = null;
         sp var10 = null;
         np var11 = null;
@@ -131,8 +128,8 @@ final class po {
                 } else {
                   L0: {
                     var24 = var23.b();
-                    var8_ref = var24;
-                    ((po) this).field_h.a(var6, param0 ^ 127, (fa) (Object) var8_ref);
+                    var8 = var24;
+                    ((po) this).field_h.a(var6, param0 ^ 127, (fa) (Object) var8);
                     if (param2 != null) {
                       param2[0] = param2[0] - var24.field_n.length;
                       break L0;
@@ -140,7 +137,7 @@ final class po {
                       break L0;
                     }
                   }
-                  return var8_ref;
+                  return var8;
                 }
               } else {
                 return null;
@@ -152,8 +149,8 @@ final class po {
               } else {
                 L1: {
                   var24 = var23.b();
-                  var8_ref = var24;
-                  ((po) this).field_h.a(var6, param0 ^ 127, (fa) (Object) var8_ref);
+                  var8 = var24;
+                  ((po) this).field_h.a(var6, param0 ^ 127, (fa) (Object) var8);
                   if (param2 != null) {
                     param2[0] = param2[0] - var24.field_n.length;
                     break L1;
@@ -161,7 +158,7 @@ final class po {
                     break L1;
                   }
                 }
-                return var8_ref;
+                return var8;
               }
             }
           }
@@ -181,8 +178,8 @@ final class po {
                 } else {
                   L2: {
                     var21 = var20.b();
-                    var8_ref = var21;
-                    ((po) this).field_h.a(var6, param0 ^ 127, (fa) (Object) var8_ref);
+                    var8 = var21;
+                    ((po) this).field_h.a(var6, param0 ^ 127, (fa) (Object) var8);
                     if (param2 != null) {
                       param2[0] = param2[0] - var21.field_n.length;
                       break L2;
@@ -190,7 +187,7 @@ final class po {
                       break L2;
                     }
                   }
-                  return var8_ref;
+                  return var8;
                 }
               } else {
                 return null;
@@ -204,8 +201,8 @@ final class po {
                 L3: {
                   var12 = var11.b();
                   var10 = var12;
-                  var8_ref = var12;
-                  ((po) this).field_h.a(var6, param0 ^ 127, (fa) (Object) var8_ref);
+                  var8 = var12;
+                  ((po) this).field_h.a(var6, param0 ^ 127, (fa) (Object) var8);
                   if (param2 != null) {
                     param2[0] = param2[0] - var12.field_n.length;
                     break L3;
@@ -213,7 +210,7 @@ final class po {
                     break L3;
                   }
                 }
-                return var8_ref;
+                return var8;
               }
             }
           }

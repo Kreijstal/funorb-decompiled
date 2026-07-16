@@ -105,10 +105,10 @@ final class ue {
                 var14 += 2;
                 var12 = var12 + var14;
                 var10 = var10 + var13;
-                if (var12 > -1) {
+                if ((var12 ^ -1) > -1) {
                   break L3;
                 } else {
-                  if (-2 > var11) {
+                  if (-2 < (var11 ^ -1)) {
                     break L3;
                   } else {
                     var11--;
@@ -131,7 +131,7 @@ final class ue {
                     break L4;
                   } else {
                     if (qk.field_p >= var15) {
-                      if (var8 <= var9) {
+                      if ((var8 ^ -1) >= (var9 ^ -1)) {
                         L5: {
                           var17 = ln.a(qg.field_z, kn.field_e, param1 + var7, param0 ^ -15853);
                           var18 = ln.a(qg.field_z, kn.field_e, -var7 + param1, 118);
@@ -165,7 +165,7 @@ final class ue {
                             break L6;
                           }
                         }
-                        if (var15 >= j.field_q) {
+                        if ((var15 ^ -1) <= (j.field_q ^ -1)) {
                           var41 = qd.field_a[var15];
                           di.a(var19, (byte) -93, param3, var41, var21);
                           di.a(var21, (byte) 107, param6, var41, var20);
@@ -181,79 +181,82 @@ final class ue {
                   }
                 }
               }
-              var15 = param2 - var7;
-              var16 = var7 + param2;
-              if (var16 < j.field_q) {
-                continue L2;
-              } else {
-                if (qk.field_p >= var15) {
-                  var17 = var9 + param1;
-                  var18 = param1 - var9;
-                  if (kn.field_e > var17) {
-                    continue L2;
-                  } else {
-                    if (qg.field_z < var18) {
-                      continue L2;
+              L7: {
+                var15 = param2 - var7;
+                var16 = var7 + param2;
+                if ((var16 ^ -1) > (j.field_q ^ -1)) {
+                  break L7;
+                } else {
+                  if ((qk.field_p ^ -1) <= (var15 ^ -1)) {
+                    var17 = var9 + param1;
+                    var18 = param1 - var9;
+                    if (kn.field_e > var17) {
+                      break L7;
                     } else {
-                      var17 = ln.a(qg.field_z, kn.field_e, var17, 94);
-                      var18 = ln.a(qg.field_z, kn.field_e, var18, 118);
-                      if (var7 < var8) {
-                        L7: {
-                          if (var7 <= var11) {
-                            stackOut_40_0 = var11;
-                            stackIn_41_0 = stackOut_40_0;
-                            break L7;
-                          } else {
-                            stackOut_39_0 = vc.field_a[var7];
-                            stackIn_41_0 = stackOut_39_0;
-                            break L7;
-                          }
-                        }
-                        L8: {
-                          var19 = stackIn_41_0;
-                          var20 = ln.a(qg.field_z, kn.field_e, param1 + var19, 100);
-                          var21 = ln.a(qg.field_z, kn.field_e, param1 - var19, 81);
-                          if (var16 <= qk.field_p) {
-                            var42 = qd.field_a[var16];
-                            di.a(var18, (byte) -103, param3, var42, var21);
-                            di.a(var21, (byte) -115, param6, var42, var20);
-                            di.a(var20, (byte) -116, param3, var42, var17);
-                            break L8;
-                          } else {
-                            break L8;
-                          }
-                        }
-                        if (j.field_q > var15) {
-                          continue L2;
-                        } else {
-                          var43 = qd.field_a[var15];
-                          di.a(var18, (byte) 4, param3, var43, var21);
-                          di.a(var21, (byte) -5, param6, var43, var20);
-                          di.a(var20, (byte) -95, param3, var43, var17);
-                          continue L2;
-                        }
+                      if (qg.field_z < var18) {
+                        break L7;
                       } else {
-                        L9: {
-                          if (qk.field_p < var16) {
-                            break L9;
-                          } else {
-                            di.a(var18, (byte) 51, param3, qd.field_a[var16], var17);
-                            break L9;
+                        var17 = ln.a(qg.field_z, kn.field_e, var17, 94);
+                        var18 = ln.a(qg.field_z, kn.field_e, var18, 118);
+                        if (var7 < var8) {
+                          L8: {
+                            if ((var7 ^ -1) >= (var11 ^ -1)) {
+                              stackOut_40_0 = var11;
+                              stackIn_41_0 = stackOut_40_0;
+                              break L8;
+                            } else {
+                              stackOut_39_0 = vc.field_a[var7];
+                              stackIn_41_0 = stackOut_39_0;
+                              break L8;
+                            }
                           }
-                        }
-                        if (j.field_q > var15) {
-                          continue L2;
+                          L9: {
+                            var19 = stackIn_41_0;
+                            var20 = ln.a(qg.field_z, kn.field_e, param1 + var19, 100);
+                            var21 = ln.a(qg.field_z, kn.field_e, param1 - var19, 81);
+                            if ((var16 ^ -1) >= (qk.field_p ^ -1)) {
+                              var42 = qd.field_a[var16];
+                              di.a(var18, (byte) -103, param3, var42, var21);
+                              di.a(var21, (byte) -115, param6, var42, var20);
+                              di.a(var20, (byte) -116, param3, var42, var17);
+                              break L9;
+                            } else {
+                              break L9;
+                            }
+                          }
+                          if (j.field_q > var15) {
+                            break L7;
+                          } else {
+                            var43 = qd.field_a[var15];
+                            di.a(var18, (byte) 4, param3, var43, var21);
+                            di.a(var21, (byte) -5, param6, var43, var20);
+                            di.a(var20, (byte) -95, param3, var43, var17);
+                            break L7;
+                          }
                         } else {
-                          di.a(var18, (byte) 71, param3, qd.field_a[var15], var17);
-                          continue L2;
+                          L10: {
+                            if ((qk.field_p ^ -1) > (var16 ^ -1)) {
+                              break L10;
+                            } else {
+                              di.a(var18, (byte) 51, param3, qd.field_a[var16], var17);
+                              break L10;
+                            }
+                          }
+                          if (j.field_q > var15) {
+                            break L7;
+                          } else {
+                            di.a(var18, (byte) 71, param3, qd.field_a[var15], var17);
+                            continue L2;
+                          }
                         }
                       }
                     }
+                  } else {
+                    continue L2;
                   }
-                } else {
-                  continue L2;
                 }
               }
+              continue L2;
             }
           }
         } else {

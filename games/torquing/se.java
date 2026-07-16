@@ -15,8 +15,9 @@ final class se extends pc {
     public se() {
         ((se) this).field_q = new v[6];
         ((se) this).field_r = new v();
-        ((se) this).field_q[0] = new v();
-        v var1 = new v();
+        v dupTemp$0 = new v();
+        ((se) this).field_q[0] = dupTemp$0;
+        v var1 = dupTemp$0;
         var1.b((byte) -99);
     }
 
@@ -245,7 +246,7 @@ final class se extends pc {
           if (param1 == 6) {
             break L0;
           } else {
-            v discarded$2 = ((se) this).a(57, -12);
+            v discarded$3 = ((se) this).a(57, -12);
             break L0;
           }
         }
@@ -270,10 +271,11 @@ final class se extends pc {
                     stackIn_8_0 = stackOut_7_0;
                     stackIn_8_1 = stackOut_7_1;
                     if (var6 == null) {
-                      param0.field_q[var4] = new v();
+                      v dupTemp$4 = new v();
+                      param0.field_q[var4] = dupTemp$4;
                       stackOut_9_0 = (v) (Object) stackIn_9_0;
                       stackOut_9_1 = stackIn_9_1;
-                      stackOut_9_2 = new v();
+                      stackOut_9_2 = (v) dupTemp$4;
                       stackIn_10_0 = stackOut_9_0;
                       stackIn_10_1 = stackOut_9_1;
                       stackIn_10_2 = stackOut_9_2;
@@ -307,8 +309,9 @@ final class se extends pc {
             Object var4 = null;
             this.a((se) null, 7, true);
         }
-        ((se) this).field_q[param0] = new v();
-        return new v();
+        v dupTemp$0 = new v();
+        ((se) this).field_q[param0] = dupTemp$0;
+        return dupTemp$0;
     }
 
     static {

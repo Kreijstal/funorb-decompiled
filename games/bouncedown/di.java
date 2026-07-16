@@ -82,8 +82,9 @@ final class di implements Iterator {
             var8 = var6;
             L1: while (true) {
               if (param1 == param2.charAt(var8)) {
+                int incrementValue$2 = var5;
                 var5++;
-                var4[var5] = param2.substring(var6, var8);
+                var4[incrementValue$2] = param2.substring(var6, var8);
                 var6 = 1 + var8;
                 var7++;
                 continue L0;

@@ -188,12 +188,12 @@ final class vj extends al {
             return -21;
         }
         if (po.w(13296)) {
-            if (-1 != param1) {
+            if (-1 != (param1 ^ -1)) {
                 return ((vj) this).c(param1, 6) - -100;
             }
             return 350 + ((vj) this).c(param1, 6);
         }
-        if (-3 > param1) {
+        if (-3 < (param1 ^ -1)) {
             return jb.field_a[1].field_w + (vh.field_b - -30);
         }
         return 180 + ((vj) this).c(param1, 6);

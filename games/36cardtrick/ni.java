@@ -14,7 +14,7 @@ final class ni {
         field_e = null;
         field_c = null;
         if (param0 != -35) {
-          field_f = (Boolean) null;
+          field_f = null;
           field_f = null;
           field_b = null;
           return;

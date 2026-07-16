@@ -80,168 +80,173 @@ final class tb {
         var8 = TetraLink.field_J;
         if (param1 == -5) {
           L0: {
-            if (param0 == -2) {
-              var4 = param2.e(param1 + 132);
-              ((tb) this).field_l = new int[var4];
-              var5 = 0;
-              L1: while (true) {
-                if (var5 >= var4) {
-                  ((tb) this).field_f = new int[var4];
-                  var5 = 0;
-                  L2: while (true) {
-                    if (var5 >= var4) {
-                      var5 = 0;
-                      L3: while (true) {
-                        if (var5 >= var4) {
-                          break L0;
-                        } else {
-                          ((tb) this).field_f[var5] = (param2.e(127) << -1383875824) + ((tb) this).field_f[var5];
-                          var5++;
-                          continue L3;
+            L1: {
+              if ((param0 ^ -1) == -2) {
+                var4 = param2.e(param1 + 132);
+                ((tb) this).field_l = new int[var4];
+                var5 = 0;
+                L2: while (true) {
+                  if (var5 >= var4) {
+                    ((tb) this).field_f = new int[var4];
+                    var5 = 0;
+                    L3: while (true) {
+                      if (var5 >= var4) {
+                        var5 = 0;
+                        L4: while (true) {
+                          if (var5 >= var4) {
+                            break L1;
+                          } else {
+                            ((tb) this).field_f[var5] = (param2.e(127) << -1383875824) + ((tb) this).field_f[var5];
+                            var5++;
+                            continue L4;
+                          }
                         }
+                      } else {
+                        ((tb) this).field_f[var5] = param2.e(127);
+                        var5++;
+                        continue L3;
                       }
-                    } else {
-                      ((tb) this).field_f[var5] = param2.e(127);
-                      var5++;
-                      continue L2;
                     }
+                  } else {
+                    ((tb) this).field_l[var5] = param2.e(127);
+                    var5++;
+                    continue L2;
                   }
-                } else {
-                  ((tb) this).field_l[var5] = param2.e(127);
-                  var5++;
-                  continue L1;
                 }
-              }
-            } else {
-              if (-3 == param0) {
-                ((tb) this).field_k = param2.e(127);
-                break L0;
               } else {
-                if ((param0 ^ -1) == -4) {
-                  var4 = param2.d((byte) -99);
-                  ((tb) this).field_c = new int[var4 + 1];
-                  var5 = 0;
-                  L4: while (true) {
-                    if (var4 <= var5) {
-                      ((tb) this).field_c[var4] = 9999999;
+                if (-3 == (param0 ^ -1)) {
+                  ((tb) this).field_k = param2.e(127);
+                  break L0;
+                } else {
+                  if ((param0 ^ -1) == -4) {
+                    var4 = param2.d((byte) -99);
+                    ((tb) this).field_c = new int[var4 + 1];
+                    var5 = 0;
+                    L5: while (true) {
+                      if (var4 <= var5) {
+                        ((tb) this).field_c[var4] = 9999999;
+                        break L0;
+                      } else {
+                        ((tb) this).field_c[var5] = param2.d((byte) -99);
+                        var5++;
+                        continue L5;
+                      }
+                    }
+                  } else {
+                    if ((param0 ^ -1) == -6) {
+                      int discarded$8 = param2.d((byte) -99);
                       break L0;
                     } else {
-                      ((tb) this).field_c[var5] = param2.d((byte) -99);
-                      var5++;
-                      continue L4;
-                    }
-                  }
-                } else {
-                  if ((param0 ^ -1) == -6) {
-                    int discarded$8 = param2.d((byte) -99);
-                    break L0;
-                  } else {
-                    if ((param0 ^ -1) != -7) {
-                      if (param0 != 7) {
-                        if (8 != param0) {
-                          if (param0 == -10) {
-                            int discarded$9 = param2.d((byte) -99);
-                            break L0;
-                          } else {
-                            if (param0 != 10) {
-                              if (-12 != param0) {
-                                if (12 != param0) {
-                                  if (13 == param0) {
-                                    var4 = param2.e(127);
-                                    ((tb) this).field_a = new int[var4][];
-                                    var5 = 0;
-                                    L5: while (true) {
-                                      if (var4 <= var5) {
-                                        break L0;
-                                      } else {
-                                        var6 = param2.d((byte) -99);
-                                        if (var6 > 0) {
-                                          ((tb) this).field_a[var5] = new int[var6];
-                                          ((tb) this).field_a[var5][0] = param2.d(-1);
-                                          var7 = 1;
-                                          L6: while (true) {
-                                            if (var6 > var7) {
-                                              ((tb) this).field_a[var5][var7] = param2.e(127);
-                                              var7++;
-                                              continue L6;
+                      if ((param0 ^ -1) != -7) {
+                        if (param0 != 7) {
+                          if (8 != param0) {
+                            if ((param0 ^ -1) == -10) {
+                              int discarded$9 = param2.d((byte) -99);
+                              break L0;
+                            } else {
+                              if (param0 != 10) {
+                                if (-12 != (param0 ^ -1)) {
+                                  if (12 != param0) {
+                                    if (13 == param0) {
+                                      var4 = param2.e(127);
+                                      ((tb) this).field_a = new int[var4][];
+                                      var5 = 0;
+                                      L6: while (true) {
+                                        if ((var4 ^ -1) >= (var5 ^ -1)) {
+                                          break L1;
+                                        } else {
+                                          L7: {
+                                            var6 = param2.d((byte) -99);
+                                            if (var6 > 0) {
+                                              ((tb) this).field_a[var5] = new int[var6];
+                                              ((tb) this).field_a[var5][0] = param2.d(-1);
+                                              var7 = 1;
+                                              L8: while (true) {
+                                                if ((var6 ^ -1) >= (var7 ^ -1)) {
+                                                  break L7;
+                                                } else {
+                                                  ((tb) this).field_a[var5][var7] = param2.e(127);
+                                                  var7++;
+                                                  continue L8;
+                                                }
+                                              }
                                             } else {
-                                              var5++;
-                                              continue L5;
+                                              break L7;
+                                            }
+                                          }
+                                          var5++;
+                                          continue L6;
+                                        }
+                                      }
+                                    } else {
+                                      if (param0 == 14) {
+                                        break L1;
+                                      } else {
+                                        if (-16 != (param0 ^ -1)) {
+                                          if (16 == param0) {
+                                            break L1;
+                                          } else {
+                                            if ((param0 ^ -1) == -19) {
+                                              break L1;
+                                            } else {
+                                              break L0;
                                             }
                                           }
                                         } else {
-                                          var5++;
-                                          continue L5;
+                                          break L0;
                                         }
                                       }
                                     }
                                   } else {
-                                    if (param0 == 14) {
-                                      break L0;
-                                    } else {
-                                      if (-16 != (param0 ^ -1)) {
-                                        if (16 == param0) {
-                                          break L0;
-                                        } else {
-                                          if ((param0 ^ -1) == -19) {
-                                            break L0;
+                                    var4 = param2.d((byte) -99);
+                                    var5 = 0;
+                                    L9: while (true) {
+                                      if (var5 >= var4) {
+                                        var5 = 0;
+                                        L10: while (true) {
+                                          if (var5 >= var4) {
+                                            break L1;
                                           } else {
-                                            break L0;
+                                            int discarded$10 = param2.e(param1 ^ -124);
+                                            var5++;
+                                            continue L10;
                                           }
                                         }
                                       } else {
-                                        break L0;
+                                        int discarded$11 = param2.e(127);
+                                        var5++;
+                                        continue L9;
                                       }
                                     }
                                   }
                                 } else {
-                                  var4 = param2.d((byte) -99);
-                                  var5 = 0;
-                                  L7: while (true) {
-                                    if (var5 >= var4) {
-                                      var5 = 0;
-                                      L8: while (true) {
-                                        if (var5 >= var4) {
-                                          break L0;
-                                        } else {
-                                          int discarded$10 = param2.e(param1 ^ -124);
-                                          var5++;
-                                          continue L8;
-                                        }
-                                      }
-                                    } else {
-                                      int discarded$11 = param2.e(127);
-                                      var5++;
-                                      continue L7;
-                                    }
-                                  }
+                                  int discarded$12 = param2.d((byte) -99);
+                                  break L0;
                                 }
                               } else {
-                                int discarded$12 = param2.d((byte) -99);
+                                int discarded$13 = param2.d((byte) -99);
                                 break L0;
                               }
-                            } else {
-                              int discarded$13 = param2.d((byte) -99);
-                              break L0;
                             }
+                          } else {
+                            ((tb) this).field_b = param2.d((byte) -99);
+                            ((tb) this).field_i = false;
+                            break L0;
                           }
                         } else {
-                          ((tb) this).field_b = param2.d((byte) -99);
-                          ((tb) this).field_i = false;
+                          int discarded$14 = param2.e(127);
                           break L0;
                         }
                       } else {
-                        int discarded$14 = param2.e(127);
+                        int discarded$15 = param2.e(127);
                         break L0;
                       }
-                    } else {
-                      int discarded$15 = param2.e(127);
-                      break L0;
                     }
                   }
                 }
               }
             }
+            break L0;
           }
           return;
         } else {
@@ -330,6 +335,7 @@ final class tb {
             var7 = 0;
             L2: while (true) {
               if (((tb) this).field_l.length <= var7) {
+                return;
               } else {
                 if (var6 < ((tb) this).field_l[var7]) {
                   var6 = ((tb) this).field_l[var7];

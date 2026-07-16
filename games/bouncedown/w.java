@@ -22,16 +22,19 @@ final class w {
             ef stackOut_3_0 = null;
             Object stackOut_1_0 = null;
             try {
-              var4 = Class.forName("gb");
-              var5 = (ef) var4.newInstance();
-              if (param3 == 41) {
-                var5.a(param0, (byte) -102, param1, param2);
-                stackOut_3_0 = (ef) var5;
-                stackIn_4_0 = stackOut_3_0;
-              } else {
-                stackOut_1_0 = null;
-                stackIn_2_0 = stackOut_1_0;
-                return (ef) (Object) stackIn_2_0;
+              L0: {
+                var4 = Class.forName("gb");
+                var5 = (ef) var4.newInstance();
+                if (param3 == 41) {
+                  var5.a(param0, (byte) -102, param1, param2);
+                  stackOut_3_0 = (ef) var5;
+                  stackIn_4_0 = stackOut_3_0;
+                  break L0;
+                } else {
+                  stackOut_1_0 = null;
+                  stackIn_2_0 = stackOut_1_0;
+                  return (ef) (Object) stackIn_2_0;
+                }
               }
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;

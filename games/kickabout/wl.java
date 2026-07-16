@@ -192,14 +192,13 @@ final class wl extends mo {
         int var7 = 0;
         int var8 = 0;
         up var9 = null;
-        up var9_ref = null;
         int var10 = 0;
         int var11 = 0;
         Object var12 = null;
         up var13 = null;
-        up stackIn_22_0 = null;
-        Object stackOut_21_0 = null;
-        up stackOut_20_0 = null;
+        up stackIn_21_0 = null;
+        Object stackOut_20_0 = null;
+        up stackOut_19_0 = null;
         L0: {
           var11 = Kickabout.field_G;
           var6 = ((wl) this).field_k[param4].field_p;
@@ -219,26 +218,26 @@ final class wl extends mo {
             if (1 != (param0 ^ -1)) {
               var7 = 3 & param0;
               var8 = (param0 >> -721346462) + -1;
-              if (((wl) this).field_m[var6][var7] == param4) {
+              if ((((wl) this).field_m[var6][var7] ^ -1) == (param4 ^ -1)) {
                 if (0 < (var8 ^ -1)) {
                   return;
                 } else {
                   if (9 > var8) {
                     L2: {
-                      if (var8 == 0) {
-                        stackOut_21_0 = null;
-                        stackIn_22_0 = (up) (Object) stackOut_21_0;
+                      if ((var8 ^ -1) == 0) {
+                        stackOut_20_0 = null;
+                        stackIn_21_0 = (up) (Object) stackOut_20_0;
                         break L2;
                       } else {
-                        stackOut_20_0 = param2.field_i[var8];
-                        stackIn_22_0 = stackOut_20_0;
+                        stackOut_19_0 = param2.field_i[var8];
+                        stackIn_21_0 = stackOut_19_0;
                         break L2;
                       }
                     }
                     L3: {
-                      var13 = stackIn_22_0;
+                      var13 = stackIn_21_0;
                       var9 = var13;
-                      if (0 == var8) {
+                      if (0 == (var8 ^ -1)) {
                         break L3;
                       } else {
                         if (!((wl) this).field_l) {
@@ -252,7 +251,7 @@ final class wl extends mo {
                             }
                           }
                         } else {
-                          var9_ref = param3[var8];
+                          var9 = param3[var8];
                           break L3;
                         }
                       }
@@ -265,23 +264,24 @@ final class wl extends mo {
                         var10 = 0;
                         L5: while (true) {
                           if (-5 >= (var10 ^ -1)) {
-                            ((wl) this).field_i[var6][var7].a((byte) -90, var9_ref);
+                            ((wl) this).field_i[var6][var7].a((byte) -90, var9);
                             break L4;
                           } else {
-                            if (((wl) this).field_m[var6][var10] == param4) {
-                              if (((wl) this).field_j[var6][var10] == var8) {
-                                ((wl) this).field_j[var6][var10] = ((wl) this).field_j[var6][var7];
-                                ((wl) this).field_i[var6][var10].a((byte) -101, ((wl) this).field_i[var6][var7]);
-                                var10++;
-                                continue L5;
+                            L6: {
+                              if ((((wl) this).field_m[var6][var10] ^ -1) != (param4 ^ -1)) {
+                                break L6;
                               } else {
-                                var10++;
-                                continue L5;
+                                if ((((wl) this).field_j[var6][var10] ^ -1) != (var8 ^ -1)) {
+                                  break L6;
+                                } else {
+                                  ((wl) this).field_j[var6][var10] = ((wl) this).field_j[var6][var7];
+                                  ((wl) this).field_i[var6][var10].a((byte) -101, ((wl) this).field_i[var6][var7]);
+                                  break L6;
+                                }
                               }
-                            } else {
-                              var10++;
-                              continue L5;
                             }
+                            var10++;
+                            continue L5;
                           }
                         }
                       }
@@ -299,23 +299,25 @@ final class wl extends mo {
             } else {
               if (!((wl) this).a(false, param4)) {
                 var7 = 0;
-                L6: while (true) {
+                L7: while (true) {
                   if (4 <= var7) {
                     break L1;
                   } else {
-                    if (((wl) this).field_m[var6][var7] == param4) {
-                      if ((((wl) this).field_j[var6][var7] ^ -1) == 0) {
-                        ((wl) this).a(param2, param3, (byte) -78, var7, param4);
-                        ((wl) this).field_h = ((wl) this).field_h & (1 << param4 ^ -1);
-                        break L1;
+                    L8: {
+                      if ((((wl) this).field_m[var6][var7] ^ -1) != (param4 ^ -1)) {
+                        break L8;
                       } else {
-                        var7++;
-                        continue L6;
+                        if ((((wl) this).field_j[var6][var7] ^ -1) == 0) {
+                          ((wl) this).a(param2, param3, (byte) -78, var7, param4);
+                          ((wl) this).field_h = ((wl) this).field_h & (1 << param4 ^ -1);
+                          break L1;
+                        } else {
+                          break L8;
+                        }
                       }
-                    } else {
-                      var7++;
-                      continue L6;
                     }
+                    var7++;
+                    continue L7;
                   }
                 }
               } else {

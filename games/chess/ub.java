@@ -214,38 +214,69 @@ abstract class ub {
     }
 
     final int a(int param0, int param1, int param2) {
+        int var4 = 0;
         int var5 = 0;
         fj var6 = null;
         int var7 = 0;
-        int var8 = Chess.field_G;
-        if (((ub) this).field_a != null) {
-            // if_icmpeq L39
-            // if_icmplt L39
-        } else {
-            return -1;
-        }
-        if (!(((ub) this).field_a[((ub) this).field_a.length + -1].field_e >= param0)) {
-            return -1;
-        }
-        if (((ub) this).field_a.length == 1) {
-            return ((ub) this).field_a[0].a(param2, -1);
-        }
-        if (param1 <= 3) {
-            ub.b((byte) 76);
-        }
-        int var4 = 0;
-        for (var5 = 0; var5 < ((ub) this).field_a.length; var5++) {
-            var6 = ((ub) this).field_a[var5];
-            if (param0 >= var6.field_d) {
-                if (!(var6.field_e < param0)) {
-                    var7 = var6.a(param2, -1);
-                    if (!(var7 != -1)) {
-                        return -1;
+        int var8 = 0;
+        L0: {
+          var8 = Chess.field_G;
+          if (((ub) this).field_a == null) {
+            break L0;
+          } else {
+            if (-1 == (((ub) this).field_a.length ^ -1)) {
+              break L0;
+            } else {
+              if (param0 < ((ub) this).field_a[0].field_d) {
+                break L0;
+              } else {
+                if (((ub) this).field_a[((ub) this).field_a.length + -1].field_e < param0) {
+                  return -1;
+                } else {
+                  if (((ub) this).field_a.length != 1) {
+                    L1: {
+                      if (param1 > 3) {
+                        break L1;
+                      } else {
+                        ub.b((byte) 76);
+                        break L1;
+                      }
                     }
-                    return var7 + var4;
+                    var4 = 0;
+                    var5 = 0;
+                    L2: while (true) {
+                      if (var5 >= ((ub) this).field_a.length) {
+                        return -1;
+                      } else {
+                        L3: {
+                          var6 = ((ub) this).field_a[var5];
+                          if (param0 < var6.field_d) {
+                            break L3;
+                          } else {
+                            if (var6.field_e >= param0) {
+                              var7 = var6.a(param2, -1);
+                              if (var7 == -1) {
+                                return -1;
+                              } else {
+                                return var7 + var4;
+                              }
+                            } else {
+                              break L3;
+                            }
+                          }
+                        }
+                        var4 = var4 + (-1 + var6.field_i.length);
+                        var5++;
+                        continue L2;
+                      }
+                    }
+                  } else {
+                    return ((ub) this).field_a[0].a(param2, -1);
+                  }
                 }
+              }
             }
-            var4 = var4 + (-1 + var6.field_i.length);
+          }
         }
         return -1;
     }

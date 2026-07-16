@@ -431,8 +431,9 @@ final class np extends hd {
         var2 = Kickabout.field_G;
         if (param0 == -1) {
           if (we.field_c == eq.field_a) {
+            int fieldTemp$6 = vo.field_bb;
             vo.field_bb = vo.field_bb + 1;
-            if ((vo.field_bb ^ -1) <= -17) {
+            if ((fieldTemp$6 ^ -1) <= -17) {
               if (!sq.field_G) {
                 pq.g((byte) 66);
                 eq.field_a = vu.field_Hb;
@@ -478,8 +479,9 @@ final class np extends hd {
               }
             } else {
               if (bn.field_A == eq.field_a) {
+                int fieldTemp$7 = vo.field_bb;
                 vo.field_bb = vo.field_bb - 1;
-                if (vo.field_bb > 0) {
+                if (fieldTemp$7 > 0) {
                   return;
                 } else {
                   eq.field_a = eq.field_j;

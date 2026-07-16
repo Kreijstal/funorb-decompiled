@@ -154,8 +154,9 @@ abstract class jc extends fe implements rk {
             if (var8 <= var9) {
               L2: {
                 if (var7 < var8) {
+                  int incrementValue$3 = var6;
                   var6++;
-                  param2[var6] = param4.substring(var7, var8).trim();
+                  param2[incrementValue$3] = param4.substring(var7, var8).trim();
                   break L2;
                 } else {
                   break L2;
@@ -182,15 +183,17 @@ abstract class jc extends fe implements rk {
                   break L3;
                 } else {
                   var7 = 1 + var9;
+                  int incrementValue$4 = var6;
                   var6++;
-                  param2[var6] = var11;
+                  param2[incrementValue$4] = var11;
                   break L3;
                 }
               }
               if (62 == var10) {
                 if (param4.regionMatches(var9 + -3, "<br>", 0, 4)) {
+                  int incrementValue$5 = var6;
                   var6++;
-                  param2[var6] = param4.substring(var7, -3 + var9).trim();
+                  param2[incrementValue$5] = param4.substring(var7, -3 + var9).trim();
                   var7 = 1 + var9;
                   var9++;
                   continue L1;
@@ -450,8 +453,9 @@ abstract class jc extends fe implements rk {
                         }
                       } else {
                         an.field_a[var12] = an.field_a[var8];
+                        int incrementValue$1 = var8;
                         var8++;
-                        an.field_a[var8] = var13;
+                        an.field_a[incrementValue$1] = var13;
                         if (var14 < var9) {
                           var9 = var14;
                           var12++;

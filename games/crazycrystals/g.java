@@ -21,36 +21,19 @@ final class g {
     final static void a(byte param0, long param1) {
         int var3 = 0;
         InterruptedException var4 = null;
-        int statePc = 0;
-        Throwable caughtException = null;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    var3 = -60 % ((64 - param0) / 39);
-                    statePc = 1;
-                    continue stateLoop;
-                }
-                case 1: {
-                    try {
-                        Thread.sleep(param1);
-                        statePc = 4;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_1) {
-                        caughtException = stateCaught_1;
-                        statePc = 3;
-                        continue stateLoop;
-                    }
-                }
-                case 3: {
-                    var4 = (InterruptedException) (Object) caughtException;
-                    statePc = 4;
-                    continue stateLoop;
-                }
-                case 4: {
-                    return;
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
-            }
+        Throwable decompiledCaughtException = null;
+        var3 = -60 % ((64 - param0) / 39);
+        try {
+          L0: {
+            Thread.sleep(param1);
+            break L0;
+          }
+        } catch (java.lang.Exception decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L1: {
+            var4 = (InterruptedException) (Object) decompiledCaughtException;
+            break L1;
+          }
         }
     }
 

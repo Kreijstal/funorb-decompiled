@@ -19,8 +19,9 @@ final class sh implements Iterator {
         if (((sh) this).field_g.field_e[-1 + ((sh) this).field_b] == ((sh) this).field_a) {
           L0: while (true) {
             if (((sh) this).field_b < ((sh) this).field_g.field_a) {
+              int fieldTemp$2 = ((sh) this).field_b;
               ((sh) this).field_b = ((sh) this).field_b + 1;
-              var1 = ((sh) this).field_g.field_e[((sh) this).field_b].field_a;
+              var1 = ((sh) this).field_g.field_e[fieldTemp$2].field_a;
               if (((sh) this).field_g.field_e[((sh) this).field_b - 1] == var1) {
                 continue L0;
               } else {
@@ -64,8 +65,9 @@ final class sh implements Iterator {
         if (((sh) this).field_a == ((sh) this).field_g.field_e[((sh) this).field_b + -1]) {
           L0: while (true) {
             if (((sh) this).field_b < ((sh) this).field_g.field_a) {
+              int fieldTemp$1 = ((sh) this).field_b;
               ((sh) this).field_b = ((sh) this).field_b + 1;
-              if (((sh) this).field_g.field_e[((sh) this).field_b].field_a != ((sh) this).field_g.field_e[((sh) this).field_b - 1]) {
+              if (((sh) this).field_g.field_e[fieldTemp$1].field_a != ((sh) this).field_g.field_e[((sh) this).field_b - 1]) {
                 ((sh) this).field_a = ((sh) this).field_g.field_e[-1 + ((sh) this).field_b].field_a;
                 return true;
               } else {

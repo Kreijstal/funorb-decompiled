@@ -1528,7 +1528,6 @@ final class pk extends wf {
     final synchronized boolean a(byte param0, i param1, gk param2, be param3, int param4) {
         int var6 = 0;
         Object var7 = null;
-        int[] var7_array = null;
         kj var8 = null;
         int var9 = 0;
         int var11 = 0;
@@ -1542,7 +1541,7 @@ final class pk extends wf {
           if (param4 <= 0) {
             break L0;
           } else {
-            var7_array = new int[]{param4};
+            var7 = (Object) (Object) new int[]{param4};
             break L0;
           }
         }
@@ -1568,7 +1567,7 @@ final class pk extends wf {
                     var13 = fj.a(param2, 0, var9);
                     if (var13 != null) {
                       ((pk) this).field_u.a((long)var9, 46, (ai) (Object) var13);
-                      if (!var13.a((byte) 112, var8.field_h, var7_array, param1)) {
+                      if (!var13.a((byte) 112, var8.field_h, (int[]) var7, param1)) {
                         break L4;
                       } else {
                         break L3;
@@ -1578,7 +1577,7 @@ final class pk extends wf {
                       break L3;
                     }
                   } else {
-                    if (!var12.a((byte) 112, var8.field_h, var7_array, param1)) {
+                    if (!var12.a((byte) 112, var8.field_h, (int[]) var7, param1)) {
                       break L4;
                     } else {
                       break L3;

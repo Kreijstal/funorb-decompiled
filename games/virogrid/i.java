@@ -205,27 +205,65 @@ final class i extends in {
     }
 
     private final void a(int param0, byte param1) {
-        int var4 = Virogrid.field_F ? 1 : 0;
-        if (param1 != 2) {
+        wn var3 = null;
+        int var4 = 0;
+        L0: {
+          var4 = Virogrid.field_F ? 1 : 0;
+          if (param1 == 2) {
+            break L0;
+          } else {
             this.c(46, (byte) -89);
+            break L0;
+          }
         }
-        wn var3 = (wn) (Object) ((i) this).field_L.field_k.a((byte) -41);
-        while (var3 != null) {
-            if ((param0 ^ -1) <= -1) {
-                // if_icmpne L175
-            }
-            if (null != var3.field_p) {
-                var3.field_p.g(ua.field_p / 100);
-                if (!(!var3.field_p.i())) {
-                    ((i) this).field_L.field_n.a((in) (Object) var3.field_p);
+        var3 = (wn) (Object) ((i) this).field_L.field_k.a((byte) -41);
+        L1: while (true) {
+          if (var3 == null) {
+            return;
+          } else {
+            L2: {
+              L3: {
+                if ((param0 ^ -1) > -1) {
+                  break L3;
+                } else {
+                  if ((param0 ^ -1) != (var3.field_h ^ -1)) {
+                    break L2;
+                  } else {
+                    break L3;
+                  }
                 }
-                var3.c(-11382);
+              }
+              L4: {
+                if (null == var3.field_p) {
+                  break L4;
+                } else {
+                  L5: {
+                    var3.field_p.g(ua.field_p / 100);
+                    if (var3.field_p.i()) {
+                      ((i) this).field_L.field_n.a((in) (Object) var3.field_p);
+                      break L5;
+                    } else {
+                      break L5;
+                    }
+                  }
+                  var3.c(-11382);
+                  break L4;
+                }
+              }
+              L6: {
+                if (-1 < (var3.field_o ^ -1)) {
+                  ((i) this).field_K[var3.field_h][var3.field_l] = null;
+                  break L6;
+                } else {
+                  break L6;
+                }
+              }
+              var3.a(false);
+              break L2;
             }
-            if (!(-1 >= (var3.field_o ^ -1))) {
-                ((i) this).field_K[var3.field_h][var3.field_l] = null;
-            }
-            var3.a(false);
             var3 = (wn) (Object) ((i) this).field_L.field_k.a(16213);
+            continue L1;
+          }
         }
     }
 
@@ -279,12 +317,12 @@ final class i extends in {
         if (param3 >= -11) {
             return null;
         }
-        dh var4_ref = new dh();
-        var4_ref.field_i = param0;
-        var4_ref.field_g = param2;
-        bl.field_D.a((l) (Object) var4_ref, (byte) -108);
-        gl.a(var4_ref, (byte) 89, param1);
-        return var4_ref;
+        var4 = new dh();
+        var4.field_i = param0;
+        var4.field_g = param2;
+        bl.field_D.a((l) (Object) var4, (byte) -108);
+        gl.a(var4, (byte) 89, param1);
+        return var4;
     }
 
     final synchronized boolean d(int param0) {
@@ -605,20 +643,45 @@ final class i extends in {
     }
 
     private final void d(int param0, int param1) {
-        int var4 = Virogrid.field_F ? 1 : 0;
-        if (param1 != 1123) {
+        wn var3 = null;
+        int var4 = 0;
+        L0: {
+          var4 = Virogrid.field_F ? 1 : 0;
+          if (param1 == 1123) {
+            break L0;
+          } else {
             this.a(-12, (byte) -112, -115);
+            break L0;
+          }
         }
-        wn var3 = (wn) (Object) ((i) this).field_L.field_k.a((byte) -62);
-        while (var3 != null) {
-            if (-1 >= (param0 ^ -1)) {
-                // if_icmpne L108
-            }
-            if (!(-1 >= (var3.field_o ^ -1))) {
+        var3 = (wn) (Object) ((i) this).field_L.field_k.a((byte) -62);
+        L1: while (true) {
+          if (var3 == null) {
+            return;
+          } else {
+            L2: {
+              L3: {
+                if (-1 < (param0 ^ -1)) {
+                  break L3;
+                } else {
+                  if (var3.field_h != param0) {
+                    break L2;
+                  } else {
+                    break L3;
+                  }
+                }
+              }
+              if (-1 < (var3.field_o ^ -1)) {
                 ((i) this).field_K[var3.field_h][var3.field_l] = null;
                 var3.field_o = 0;
+                break L2;
+              } else {
+                break L2;
+              }
             }
             var3 = (wn) (Object) ((i) this).field_L.field_k.a(16213);
+            continue L1;
+          }
         }
     }
 
@@ -883,7 +946,6 @@ final class i extends in {
     final synchronized boolean a(eh param0, int param1, jg param2, sc param3, int param4) {
         int var6 = 0;
         Object var7 = null;
-        int[] var7_array = null;
         sg var8 = null;
         int var9 = 0;
         int var11 = 0;
@@ -895,7 +957,7 @@ final class i extends in {
           var6 = 1;
           var7 = null;
           if (param4 < param1) {
-            var7_array = new int[]{param1};
+            var7 = (Object) (Object) new int[]{param1};
             break L0;
           } else {
             break L0;
@@ -924,7 +986,7 @@ final class i extends in {
                   break L3;
                 } else {
                   ((i) this).field_o.a((l) (Object) var13, (byte) 16, (long)var9);
-                  if (var13.a(param2, var8.field_h, (byte) 112, var7_array)) {
+                  if (var13.a(param2, var8.field_h, (byte) 112, (int[]) var7)) {
                     break L3;
                   } else {
                     var6 = 0;
@@ -932,7 +994,7 @@ final class i extends in {
                   }
                 }
               } else {
-                if (var12.a(param2, var8.field_h, (byte) 112, var7_array)) {
+                if (var12.a(param2, var8.field_h, (byte) 112, (int[]) var7)) {
                   break L3;
                 } else {
                   var6 = 0;

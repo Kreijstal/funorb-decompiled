@@ -14,10 +14,10 @@ final class al {
         if (-1 < (param0 ^ -1)) {
             return -1;
         }
-        if (param0 == -2) {
+        if ((param0 ^ -1) == -2) {
             return 1;
         }
-        if (!(-1 != param0)) {
+        if (!(-1 != (param0 ^ -1))) {
             return 0;
         }
         if (!(param0 != 2)) {
@@ -97,6 +97,7 @@ final class al {
         L0: while (true) {
           if (var1 >= 256) {
             field_c = "If you do nothing the game will revert to normal view in <%0> seconds.";
+            return;
           } else {
             var0 = var1;
             var2 = 0;

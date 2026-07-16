@@ -468,15 +468,18 @@ final class ek extends ji {
             kf stackOut_2_0 = null;
             try {
               L0: {
-                if (param0 == 0) {
-                  break L0;
-                } else {
-                  kf discarded$2 = ek.c(25);
-                  break L0;
+                L1: {
+                  if (param0 == 0) {
+                    break L1;
+                  } else {
+                    kf discarded$2 = ek.c(25);
+                    break L1;
+                  }
                 }
+                stackOut_2_0 = (kf) Class.forName("af").newInstance();
+                stackIn_3_0 = stackOut_2_0;
+                break L0;
               }
-              stackOut_2_0 = (kf) Class.forName("af").newInstance();
-              stackIn_3_0 = stackOut_2_0;
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var1 = decompiledCaughtException;

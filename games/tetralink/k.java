@@ -44,7 +44,7 @@ final class k {
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
-        StringBuilder var9_ref = null;
+        StringBuilder var9_ref_StringBuilder = null;
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
@@ -66,18 +66,18 @@ final class k {
                 var9 = var9 + var5;
                 continue L0;
               } else {
-                var9_ref = new StringBuilder(var7);
+                var9_ref_StringBuilder = new StringBuilder(var7);
                 if (param1) {
                   field_d = null;
                   var10 = 0;
                   L1: while (true) {
                     var11 = param3.indexOf(param2, var10);
                     if ((var11 ^ -1) > -1) {
-                      StringBuilder discarded$12 = var9_ref.append(param3.substring(var10));
-                      return var9_ref.toString();
+                      StringBuilder discarded$12 = var9_ref_StringBuilder.append(param3.substring(var10));
+                      return var9_ref_StringBuilder.toString();
                     } else {
-                      StringBuilder discarded$13 = var9_ref.append(param3.substring(var10, var11));
-                      StringBuilder discarded$14 = var9_ref.append(param0);
+                      StringBuilder discarded$13 = var9_ref_StringBuilder.append(param3.substring(var10, var11));
+                      StringBuilder discarded$14 = var9_ref_StringBuilder.append(param0);
                       var10 = var11 - -var5;
                       continue L1;
                     }
@@ -87,11 +87,11 @@ final class k {
                   L2: while (true) {
                     var11 = param3.indexOf(param2, var10);
                     if ((var11 ^ -1) > -1) {
-                      StringBuilder discarded$15 = var9_ref.append(param3.substring(var10));
-                      return var9_ref.toString();
+                      StringBuilder discarded$15 = var9_ref_StringBuilder.append(param3.substring(var10));
+                      return var9_ref_StringBuilder.toString();
                     } else {
-                      StringBuilder discarded$16 = var9_ref.append(param3.substring(var10, var11));
-                      StringBuilder discarded$17 = var9_ref.append(param0);
+                      StringBuilder discarded$16 = var9_ref_StringBuilder.append(param3.substring(var10, var11));
+                      StringBuilder discarded$17 = var9_ref_StringBuilder.append(param0);
                       var10 = var11 - -var5;
                       continue L2;
                     }
@@ -100,18 +100,18 @@ final class k {
               }
             }
           } else {
-            var9_ref = new StringBuilder(var7);
+            var9_ref_StringBuilder = new StringBuilder(var7);
             if (param1) {
               field_d = null;
               var10 = 0;
               L3: while (true) {
                 var11 = param3.indexOf(param2, var10);
                 if ((var11 ^ -1) > -1) {
-                  StringBuilder discarded$18 = var9_ref.append(param3.substring(var10));
-                  return var9_ref.toString();
+                  StringBuilder discarded$18 = var9_ref_StringBuilder.append(param3.substring(var10));
+                  return var9_ref_StringBuilder.toString();
                 } else {
-                  StringBuilder discarded$19 = var9_ref.append(param3.substring(var10, var11));
-                  StringBuilder discarded$20 = var9_ref.append(param0);
+                  StringBuilder discarded$19 = var9_ref_StringBuilder.append(param3.substring(var10, var11));
+                  StringBuilder discarded$20 = var9_ref_StringBuilder.append(param0);
                   var10 = var11 - -var5;
                   continue L3;
                 }
@@ -121,11 +121,11 @@ final class k {
               L4: while (true) {
                 var11 = param3.indexOf(param2, var10);
                 if ((var11 ^ -1) > -1) {
-                  StringBuilder discarded$21 = var9_ref.append(param3.substring(var10));
-                  return var9_ref.toString();
+                  StringBuilder discarded$21 = var9_ref_StringBuilder.append(param3.substring(var10));
+                  return var9_ref_StringBuilder.toString();
                 } else {
-                  StringBuilder discarded$22 = var9_ref.append(param3.substring(var10, var11));
-                  StringBuilder discarded$23 = var9_ref.append(param0);
+                  StringBuilder discarded$22 = var9_ref_StringBuilder.append(param3.substring(var10, var11));
+                  StringBuilder discarded$23 = var9_ref_StringBuilder.append(param0);
                   var10 = var11 - -var5;
                   continue L4;
                 }

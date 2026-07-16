@@ -181,13 +181,16 @@ final class il extends gf {
                     var8_int = 1;
                     L7: while (true) {
                       if (var8_int >= var5) {
-                        var4_ref_bm.field_p = new String[3][var6_int];
-                        var8 = new String[3][var6_int];
+                        String[][] dupTemp$6 = new String[3][var6_int];
+                        var4_ref_bm.field_p = dupTemp$6;
+                        var8 = dupTemp$6;
                         var9 = new String[3][var6_int];
-                        var4_ref_bm.field_m = new long[3][var6_int];
-                        var10 = new long[3][var6_int];
-                        var4_ref_bm.field_n = new int[3][var6_int * var7];
-                        var11 = new int[3][var6_int * var7];
+                        long[][] dupTemp$7 = new long[3][var6_int];
+                        var4_ref_bm.field_m = dupTemp$7;
+                        var10 = dupTemp$7;
+                        int[][] dupTemp$8 = new int[3][var6_int * var7];
+                        var4_ref_bm.field_n = dupTemp$8;
+                        var11 = dupTemp$8;
                         var12 = 0;
                         var13 = 0;
                         var14 = 0;
@@ -216,8 +219,9 @@ final class il extends gf {
                                     if (var25 >= var7) {
                                       break L9;
                                     } else {
+                                      int incrementValue$9 = var15;
                                       var15++;
-                                      var11[0][var15] = var27.c((byte) -33);
+                                      var11[0][incrementValue$9] = var27.c((byte) -33);
                                       var25++;
                                       continue L10;
                                     }
@@ -243,8 +247,9 @@ final class il extends gf {
                                       if (var7 <= var25) {
                                         break L11;
                                       } else {
+                                        int incrementValue$10 = var16;
                                         var16++;
-                                        var11[1][var16] = var27.c((byte) -76);
+                                        var11[1][incrementValue$10] = var27.c((byte) -76);
                                         var25++;
                                         continue L12;
                                       }
@@ -263,8 +268,9 @@ final class il extends gf {
                                   var25 = 0;
                                   L13: while (true) {
                                     if (var7 > var25) {
+                                      int incrementValue$11 = var17;
                                       var17++;
-                                      var11[2][var17] = var27.c((byte) -55);
+                                      var11[2][incrementValue$11] = var27.c((byte) -55);
                                       var25++;
                                       continue L13;
                                     } else {
@@ -315,25 +321,52 @@ final class il extends gf {
 
     final cd a(int param0, String param1) {
         dn var3 = null;
-        CharSequence var4 = (CharSequence) (Object) param1;
-        if (!(va.a(-21369, var4))) {
-            return so.field_u;
-        }
-        if (param0 <= 62) {
-            return null;
-        }
-        if (param1.equals((Object) (Object) ((il) this).field_r)) {
+        CharSequence var4 = null;
+        cd stackIn_15_0 = null;
+        cd stackOut_14_0 = null;
+        cd stackOut_13_0 = null;
+        var4 = (CharSequence) (Object) param1;
+        if (!va.a(-21369, var4)) {
+          return so.field_u;
         } else {
-            var3 = he.a(1, param1);
-            if (var3 != null) {
-                // if_acmpne L73
-            } else {
+          if (param0 > 62) {
+            L0: {
+              if (!param1.equals((Object) (Object) ((il) this).field_r)) {
+                L1: {
+                  var3 = he.a(1, param1);
+                  if (var3 == null) {
+                    break L1;
+                  } else {
+                    if (null != var3.field_e) {
+                      break L1;
+                    } else {
+                      ((il) this).field_n = var3.field_b;
+                      ((il) this).field_r = param1;
+                      break L0;
+                    }
+                  }
+                }
                 return gn.field_h;
+              } else {
+                break L0;
+              }
             }
-            ((il) this).field_n = var3.field_b;
-            ((il) this).field_r = param1;
+            L2: {
+              if (((il) this).field_n) {
+                stackOut_14_0 = so.field_s;
+                stackIn_15_0 = stackOut_14_0;
+                break L2;
+              } else {
+                stackOut_13_0 = so.field_u;
+                stackIn_15_0 = stackOut_13_0;
+                break L2;
+              }
+            }
+            return stackIn_15_0;
+          } else {
+            return null;
+          }
         }
-        return !((il) this).field_n ? so.field_u : so.field_s;
     }
 
     static {

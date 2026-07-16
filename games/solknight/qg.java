@@ -52,15 +52,17 @@ final class qg {
             var2 = 0;
             L1: while (true) {
               if (var2 >= al.field_p) {
-                SolKnight.field_K[param0.a(1910696752)] = SolKnight.field_K[param0.a(1910696752)] + 1;
+                int dupTemp$4 = param0.a(1910696752);
+                SolKnight.field_K[dupTemp$4] = SolKnight.field_K[dupTemp$4] + 1;
                 var2 = 0;
                 var3 = 0;
                 L2: while (true) {
                   if (var3 >= al.field_p) {
                     var4 = -52 / ((param1 - -2) / 59);
                     al.field_p = var2;
+                    int fieldTemp$5 = al.field_p;
                     al.field_p = al.field_p + 1;
-                    kc.field_K[al.field_p] = param0;
+                    kc.field_K[fieldTemp$5] = param0;
                     return;
                   } else {
                     L3: {
@@ -77,15 +79,17 @@ final class qg {
                         break L3;
                       }
                     }
+                    int incrementValue$6 = var2;
                     var2++;
-                    kc.field_K[var2] = kc.field_K[var3];
+                    kc.field_K[incrementValue$6] = kc.field_K[var3];
                     var3++;
                     continue L2;
                   }
                 }
               } else {
                 if (kc.field_K[var2].field_i == param0.field_i) {
-                  SolKnight.field_K[kc.field_K[var2].a(1910696752)] = SolKnight.field_K[kc.field_K[var2].a(1910696752)] + 1;
+                  int dupTemp$7 = kc.field_K[var2].a(1910696752);
+                  SolKnight.field_K[dupTemp$7] = SolKnight.field_K[dupTemp$7] + 1;
                   var2++;
                   continue L1;
                 } else {

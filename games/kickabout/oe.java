@@ -306,7 +306,7 @@ final class oe extends mo {
         L0: {
           var5 = Kickabout.field_G;
           if (0 != param2) {
-            if (-2 != param2) {
+            if (-2 != (param2 ^ -1)) {
               if (2 == param2) {
                 ((oe) this).field_o = ((oe) this).field_o ^ 1 << param0;
                 break L0;
@@ -331,7 +331,7 @@ final class oe extends mo {
           } else {
             if (-2 == (((oe) this).field_k[param0] ^ -1)) {
               ((oe) this).field_k[param0] = -1;
-              ((oe) this).field_o = ((oe) this).field_o & 1 << param0;
+              ((oe) this).field_o = ((oe) this).field_o & (1 << param0 ^ -1);
               break L0;
             } else {
               if (!((oe) this).a((byte) 61, param0)) {

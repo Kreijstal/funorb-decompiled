@@ -1229,28 +1229,65 @@ final class nb extends wh {
     }
 
     private final void a(int param0, boolean param1) {
-        int var4 = TrackController.field_F ? 1 : 0;
-        ha var3 = (ha) (Object) ((nb) this).field_G.field_q.b(2);
-        while (var3 != null) {
-            if (0 <= param0) {
-                // if_icmpeq L47
-            } else {
-                if (!(null == var3.field_l)) {
+        ha var3 = null;
+        int var4 = 0;
+        var4 = TrackController.field_F ? 1 : 0;
+        var3 = (ha) (Object) ((nb) this).field_G.field_q.b(2);
+        L0: while (true) {
+          if (var3 == null) {
+            L1: {
+              if (param1) {
+                break L1;
+              } else {
+                this.a(-59, -83, 120, 85);
+                break L1;
+              }
+            }
+            return;
+          } else {
+            L2: {
+              L3: {
+                if (0 > param0) {
+                  break L3;
+                } else {
+                  if ((param0 ^ -1) == (var3.field_D ^ -1)) {
+                    break L3;
+                  } else {
+                    break L2;
+                  }
+                }
+              }
+              L4: {
+                if (null != var3.field_l) {
+                  L5: {
                     var3.field_l.h(oa.field_h / 100);
-                    if (!(!var3.field_l.i())) {
-                        ((nb) this).field_G.field_o.a((wh) (Object) var3.field_l);
+                    if (var3.field_l.i()) {
+                      ((nb) this).field_G.field_o.a((wh) (Object) var3.field_l);
+                      break L5;
+                    } else {
+                      break L5;
                     }
-                    var3.e(83);
+                  }
+                  var3.e(83);
+                  break L4;
+                } else {
+                  break L4;
                 }
-                if (-1 < (var3.field_v ^ -1)) {
-                    ((nb) this).field_L[var3.field_D][var3.field_i] = null;
+              }
+              L6: {
+                if (-1 >= (var3.field_v ^ -1)) {
+                  break L6;
+                } else {
+                  ((nb) this).field_L[var3.field_D][var3.field_i] = null;
+                  break L6;
                 }
-                var3.a(-36);
+              }
+              var3.a(-36);
+              break L2;
             }
             var3 = (ha) (Object) ((nb) this).field_G.field_q.a(10);
-        }
-        if (!param1) {
-            this.a(-59, -83, 120, 85);
+            continue L0;
+          }
         }
     }
 
@@ -1509,60 +1546,116 @@ final class nb extends wh {
     }
 
     final synchronized boolean a(kk param0, byte param1, int param2, jc param3, wb param4) {
-        int[] var7_array = null;
+        int var6 = 0;
+        Object var7 = null;
+        wl var8 = null;
         int var9 = 0;
+        int var11 = 0;
         mh var12 = null;
         mh var13 = null;
-        int var11 = TrackController.field_F ? 1 : 0;
-        param4.a();
-        if (param1 != -27) {
+        L0: {
+          var11 = TrackController.field_F ? 1 : 0;
+          param4.a();
+          if (param1 == -27) {
+            break L0;
+          } else {
             field_v = null;
+            break L0;
+          }
         }
-        int var6 = 1;
-        Object var7 = null;
-        if (!(param2 <= 0)) {
-            var7_array = new int[]{param2};
+        L1: {
+          var6 = 1;
+          var7 = null;
+          if (param2 > 0) {
+            var7 = (Object) (Object) new int[]{param2};
+            break L1;
+          } else {
+            break L1;
+          }
         }
-        wl var8 = (wl) (Object) param4.field_i.b(-35);
-        while (var8 != null) {
-            var9 = (int)var8.field_b;
-            var12 = (mh) (Object) ((nb) this).field_r.a(8434, (long)var9);
-            if (var12 != null) {
-                // ifeq L189
-            } else {
-                var13 = kf.a(-97, param0, var9);
-                if (var13 == null) {
-                    var6 = 0;
-                } else {
+        var8 = (wl) (Object) param4.field_i.b(-35);
+        L2: while (true) {
+          if (var8 == null) {
+            L3: {
+              if (var6 == 0) {
+                break L3;
+              } else {
+                param4.b();
+                break L3;
+              }
+            }
+            return var6 != 0;
+          } else {
+            L4: {
+              L5: {
+                var9 = (int)var8.field_b;
+                var12 = (mh) (Object) ((nb) this).field_r.a(8434, (long)var9);
+                if (var12 == null) {
+                  var13 = kf.a(-97, param0, var9);
+                  if (var13 != null) {
                     ((nb) this).field_r.a(false, (long)var9, (fc) (Object) var13);
-                    if (!(var13.a(var8.field_k, var7_array, (byte) -61, param3))) {
-                        var6 = 0;
+                    if (!var13.a(var8.field_k, (int[]) var7, (byte) -61, param3)) {
+                      break L5;
+                    } else {
+                      break L4;
                     }
+                  } else {
+                    var6 = 0;
+                    break L4;
+                  }
+                } else {
+                  if (!var12.a(var8.field_k, (int[]) var7, (byte) -61, param3)) {
+                    break L5;
+                  } else {
+                    break L4;
+                  }
                 }
+              }
+              var6 = 0;
+              break L4;
             }
             var8 = (wl) (Object) param4.field_i.a((byte) 91);
+            continue L2;
+          }
         }
-        if (var6 != 0) {
-            param4.b();
-        }
-        return var6 != 0;
     }
 
     private final void f(int param0, int param1) {
-        int var4 = TrackController.field_F ? 1 : 0;
-        if (param1 < 82) {
-            return;
-        }
-        ha var3 = (ha) (Object) ((nb) this).field_G.field_q.b(2);
-        while (var3 != null) {
-            if ((param0 ^ -1) <= -1) {
-                // if_icmpne L94
+        ha var3 = null;
+        int var4 = 0;
+        var4 = TrackController.field_F ? 1 : 0;
+        if (param1 >= 82) {
+          var3 = (ha) (Object) ((nb) this).field_G.field_q.b(2);
+          L0: while (true) {
+            if (var3 == null) {
+              return;
+            } else {
+              L1: {
+                L2: {
+                  if ((param0 ^ -1) > -1) {
+                    break L2;
+                  } else {
+                    if (var3.field_D != param0) {
+                      break L1;
+                    } else {
+                      break L2;
+                    }
+                  }
+                }
+                if (-1 < (var3.field_v ^ -1)) {
+                  ((nb) this).field_L[var3.field_D][var3.field_i] = null;
+                  var3.field_v = 0;
+                  break L1;
+                } else {
+                  break L1;
+                }
+              }
+              var3 = (ha) (Object) ((nb) this).field_G.field_q.a(10);
+              continue L0;
             }
-            if (!(-1 >= (var3.field_v ^ -1))) {
-                ((nb) this).field_L[var3.field_D][var3.field_i] = null;
-                var3.field_v = 0;
-            }
-            var3 = (ha) (Object) ((nb) this).field_G.field_q.a(10);
+          }
+        } else {
+          return;
         }
     }
 

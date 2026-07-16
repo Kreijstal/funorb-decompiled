@@ -110,7 +110,7 @@ final class oj {
         int var4 = 0;
         byte[] var5 = null;
         byte[] var6 = null;
-        java.math.BigInteger var8_ref = null;
+        java.math.BigInteger var8_ref_java_math_BigInteger = null;
         int var8 = 0;
         int var9 = 0;
         byte[] var11 = null;
@@ -154,8 +154,8 @@ final class oj {
                     break L2;
                   } else {
                     var12 = new java.math.BigInteger(var16);
-                    var8_ref = var12.modPow(((oj) this).field_e, ((oj) this).field_b);
-                    var6 = var8_ref.toByteArray();
+                    var8_ref_java_math_BigInteger = var12.modPow(((oj) this).field_e, ((oj) this).field_b);
+                    var6 = var8_ref_java_math_BigInteger.toByteArray();
                     break L1;
                   }
                 }

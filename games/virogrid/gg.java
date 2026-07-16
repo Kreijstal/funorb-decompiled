@@ -15,29 +15,46 @@ abstract class gg extends fd {
     static ao field_K;
 
     final void a(byte param0, int param1, int param2, int param3) {
-        if (0 == ((gg) this).field_H) {
-            return;
-        }
-        if (256 <= ((gg) this).field_H) {
-            if (!(0 == param3)) {
-                return;
+        if (0 != ((gg) this).field_H) {
+          if (256 > ((gg) this).field_H) {
+            L0: {
+              L1: {
+                if (b.field_Eb == null) {
+                  break L1;
+                } else {
+                  if (b.field_Eb.field_w < ((gg) this).field_g) {
+                    break L1;
+                  } else {
+                    if (b.field_Eb.field_p < ((gg) this).field_m) {
+                      break L1;
+                    } else {
+                      break L0;
+                    }
+                  }
+                }
+              }
+              b.field_Eb = new mg(((gg) this).field_g, ((gg) this).field_m);
+              break L0;
             }
-            ((gg) this).b(param2 + ((gg) this).field_u, 40, param1 + ((gg) this).field_l);
-            super.a((byte) 37, param1, param2, param3);
+            kb.a(b.field_Eb, 16865);
+            df.c();
+            ((gg) this).b(0, 23, 0);
+            super.a(param0, -param1 + -((gg) this).field_l, -param2 + -((gg) this).field_u, param3);
+            ai.a(true);
+            b.field_Eb.a(param1 - -((gg) this).field_l, ((gg) this).field_u + param2, ((gg) this).field_H);
             return;
-        }
-        if (b.field_Eb != null) {
-            // if_icmplt L93
-            // if_icmplt L93
+          } else {
+            if (0 != param3) {
+              return;
+            } else {
+              ((gg) this).b(param2 + ((gg) this).field_u, 40, param1 + ((gg) this).field_l);
+              super.a((byte) 37, param1, param2, param3);
+              return;
+            }
+          }
         } else {
-            b.field_Eb = new mg(((gg) this).field_g, ((gg) this).field_m);
+          return;
         }
-        kb.a(b.field_Eb, 16865);
-        df.c();
-        ((gg) this).b(0, 23, 0);
-        super.a(param0, -param1 + -((gg) this).field_l, -param2 + -((gg) this).field_u, param3);
-        ai.a(true);
-        b.field_Eb.a(param1 - -((gg) this).field_l, ((gg) this).field_u + param2, ((gg) this).field_H);
     }
 
     boolean a(byte param0) {

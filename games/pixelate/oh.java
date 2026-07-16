@@ -46,8 +46,9 @@ final class oh {
                 var7 = var7 & -var13 >> 1193059231;
                 var14 = (var11 + var13 + -1 >> -517084765) + var12;
                 var13 += 24;
-                var7 = bq.a(var7, var10 >>> var13);
-                param2[var12] = (byte)bq.a(var7, var10 >>> var13);
+                int dupTemp$1 = bq.a(var7, var10 >>> var13);
+                var7 = dupTemp$1;
+                param2[var12] = (byte)dupTemp$1;
                 if (var14 <= var12) {
                   break L2;
                 } else {
@@ -106,15 +107,15 @@ final class oh {
 
     final static void a(boolean param0, int param1, int param2) {
         wi var4 = null;
-        String var5_ref = null;
+        String var5_ref_String = null;
         int var5 = 0;
         int var6 = 0;
         im var3 = pc.a(param2, param0, (byte) 113);
         if (var3 != null) {
             eg.field_n.b(false, (byte) -98);
             var4 = eg.field_n;
-            var5_ref = op.field_q;
-            var4.field_b.a(var5_ref, (byte) -68, 5);
+            var5_ref_String = op.field_q;
+            var4.field_b.a(var5_ref_String, (byte) -68, 5);
             var4 = eg.field_n;
             var5 = uo.field_a;
             var6 = ji.field_c;
@@ -154,6 +155,7 @@ final class oh {
         var5 = 0;
         L0: while (true) {
           if (var5 >= var2) {
+            return;
           } else {
             var6 = param0[var5];
             if (var6 != 0) {
@@ -335,8 +337,9 @@ final class oh {
                 if (((oh) this).field_c[var7] >= 0) {
                   break L3;
                 } else {
+                  int incrementValue$8 = param3;
                   param3++;
-                  param5[param3] = (byte)(var10 ^ -1);
+                  param5[incrementValue$8] = (byte)(var10 ^ -1);
                   if (param1 <= param3) {
                     break L2;
                   } else {
@@ -359,8 +362,9 @@ final class oh {
                 if (((oh) this).field_c[var7] >= 0) {
                   break L5;
                 } else {
+                  int incrementValue$9 = param3;
                   param3++;
-                  param5[param3] = (byte)(var10 ^ -1);
+                  param5[incrementValue$9] = (byte)(var10 ^ -1);
                   if (param3 < param1) {
                     var7 = 0;
                     break L5;
@@ -383,8 +387,9 @@ final class oh {
                 if (((oh) this).field_c[var7] >= 0) {
                   break L7;
                 } else {
+                  int incrementValue$10 = param3;
                   param3++;
-                  param5[param3] = (byte)var10;
+                  param5[incrementValue$10] = (byte)var10;
                   if (param3 >= param1) {
                     break L2;
                   } else {
@@ -407,8 +412,9 @@ final class oh {
                 if (((oh) this).field_c[var7] >= 0) {
                   break L9;
                 } else {
+                  int incrementValue$11 = param3;
                   param3++;
-                  param5[param3] = (byte)(var10 ^ -1);
+                  param5[incrementValue$11] = (byte)(var10 ^ -1);
                   if (param1 > param3) {
                     var7 = 0;
                     break L9;
@@ -429,8 +435,9 @@ final class oh {
               L11: {
                 var10 = ((oh) this).field_c[var7];
                 if (0 > ((oh) this).field_c[var7]) {
+                  int incrementValue$12 = param3;
                   param3++;
-                  param5[param3] = (byte)(var10 ^ -1);
+                  param5[incrementValue$12] = (byte)(var10 ^ -1);
                   if (param1 <= param3) {
                     break L2;
                   } else {
@@ -455,8 +462,9 @@ final class oh {
                 if (((oh) this).field_c[var7] >= 0) {
                   break L13;
                 } else {
+                  int incrementValue$13 = param3;
                   param3++;
-                  param5[param3] = (byte)(var10 ^ -1);
+                  param5[incrementValue$13] = (byte)(var10 ^ -1);
                   if (param1 > param3) {
                     var7 = 0;
                     break L13;
@@ -479,8 +487,9 @@ final class oh {
                 if (-1 >= (((oh) this).field_c[var7] ^ -1)) {
                   break L15;
                 } else {
+                  int incrementValue$14 = param3;
                   param3++;
-                  param5[param3] = (byte)(var10 ^ -1);
+                  param5[incrementValue$14] = (byte)(var10 ^ -1);
                   if (param1 > param3) {
                     var7 = 0;
                     break L15;
@@ -500,8 +509,9 @@ final class oh {
               }
               var10 = ((oh) this).field_c[var7];
               if (0 > ((oh) this).field_c[var7]) {
+                int incrementValue$15 = param3;
                 param3++;
-                param5[param3] = (byte)(var10 ^ -1);
+                param5[incrementValue$15] = (byte)(var10 ^ -1);
                 if (param1 > param3) {
                   var7 = 0;
                   var8++;

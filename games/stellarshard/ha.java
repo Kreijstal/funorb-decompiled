@@ -18,11 +18,13 @@ final class ha extends ka {
     final int h(byte param0) {
         if (param0 != -9) {
           field_x = null;
+          int fieldTemp$4 = ((ha) this).field_k;
           ((ha) this).field_k = ((ha) this).field_k + 1;
-          return 255 & ((ha) this).field_r[((ha) this).field_k] + -((ha) this).field_u.a(-609392408);
+          return 255 & ((ha) this).field_r[fieldTemp$4] + -((ha) this).field_u.a(-609392408);
         } else {
+          int fieldTemp$5 = ((ha) this).field_k;
           ((ha) this).field_k = ((ha) this).field_k + 1;
-          return 255 & ((ha) this).field_r[((ha) this).field_k] + -((ha) this).field_u.a(-609392408);
+          return 255 & ((ha) this).field_r[fieldTemp$5] + -((ha) this).field_u.a(-609392408);
         }
     }
 
@@ -37,8 +39,9 @@ final class ha extends ka {
             if (param3 <= var5) {
               return;
             } else {
+              int fieldTemp$2 = ((ha) this).field_k;
               ((ha) this).field_k = ((ha) this).field_k + 1;
-              param0[param2 + var5] = (byte)(((ha) this).field_r[((ha) this).field_k] + -((ha) this).field_u.a(-609392408));
+              param0[param2 + var5] = (byte)(((ha) this).field_r[fieldTemp$2] + -((ha) this).field_u.a(-609392408));
               var5++;
               continue L0;
             }
@@ -49,8 +52,9 @@ final class ha extends ka {
             if (param3 <= var5) {
               return;
             } else {
+              int fieldTemp$3 = ((ha) this).field_k;
               ((ha) this).field_k = ((ha) this).field_k + 1;
-              param0[param2 + var5] = (byte)(((ha) this).field_r[((ha) this).field_k] + -((ha) this).field_u.a(-609392408));
+              param0[param2 + var5] = (byte)(((ha) this).field_r[fieldTemp$3] + -((ha) this).field_u.a(-609392408));
               var5++;
               continue L1;
             }
@@ -59,8 +63,9 @@ final class ha extends ka {
     }
 
     final void f(int param0, int param1) {
+        int fieldTemp$0 = ((ha) this).field_k;
         ((ha) this).field_k = ((ha) this).field_k + 1;
-        ((ha) this).field_r[((ha) this).field_k] = (byte)(((ha) this).field_u.a(param1 + -609393358) + param0);
+        ((ha) this).field_r[fieldTemp$0] = (byte)(((ha) this).field_u.a(param1 + -609393358) + param0);
         if (param1 != 950) {
             ((ha) this).f(-75, 25);
         }
@@ -131,8 +136,9 @@ final class ha extends ka {
         ((ha) this).field_s = ((ha) this).field_s + param0;
         int var5 = 0;
         while (param0 > var4) {
+            int incrementValue$0 = var3;
             var3++;
-            var5 = var5 + ((hd.field_d[var4] & ((ha) this).field_r[var3]) << -var4 + param0);
+            var5 = var5 + ((hd.field_d[var4] & ((ha) this).field_r[incrementValue$0]) << -var4 + param0);
             param0 = param0 - var4;
             var4 = 8;
         }

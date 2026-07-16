@@ -198,8 +198,9 @@ final class nf {
         int var5 = 0;
         L0: {
           var5 = TrackController.field_F ? 1 : 0;
+          int fieldTemp$3 = ((nf) this).field_b + 1;
           ((nf) this).field_b = ((nf) this).field_b + 1;
-          ((nf) this).field_j = ((nf) this).field_j + (((nf) this).field_b + 1);
+          ((nf) this).field_j = ((nf) this).field_j + fieldTemp$3;
           if (param0 == 35) {
             break L0;
           } else {
@@ -233,10 +234,12 @@ final class nf {
               }
             }
             ((nf) this).field_c = ((nf) this).field_c + ((nf) this).field_d[var2 - -128 & 255];
-            var4 = ((nf) this).field_j + (((nf) this).field_d[tc.a(1020, var3) >> 445898626] - -((nf) this).field_c);
-            ((nf) this).field_d[var2] = ((nf) this).field_j + (((nf) this).field_d[tc.a(1020, var3) >> 445898626] - -((nf) this).field_c);
-            ((nf) this).field_j = var3 + ((nf) this).field_d[tc.a(var4, 261211) >> -1807985880 >> -253428158];
-            ((nf) this).field_i[var2] = var3 + ((nf) this).field_d[tc.a(var4, 261211) >> -1807985880 >> -253428158];
+            int dupTemp$4 = ((nf) this).field_j + (((nf) this).field_d[tc.a(1020, var3) >> 445898626] - -((nf) this).field_c);
+            var4 = dupTemp$4;
+            ((nf) this).field_d[var2] = dupTemp$4;
+            int dupTemp$5 = var3 + ((nf) this).field_d[tc.a(var4, 261211) >> -1807985880 >> -253428158];
+            ((nf) this).field_j = dupTemp$5;
+            ((nf) this).field_i[var2] = dupTemp$5;
             var2++;
             continue L1;
           }
@@ -251,8 +254,9 @@ final class nf {
         if (param0 <= 124) {
             this.a((byte) 58);
         }
+        int fieldTemp$0 = ((nf) this).field_a - 1;
         ((nf) this).field_a = ((nf) this).field_a - 1;
-        return ((nf) this).field_i[((nf) this).field_a - 1];
+        return ((nf) this).field_i[fieldTemp$0];
     }
 
     nf(int[] param0) {

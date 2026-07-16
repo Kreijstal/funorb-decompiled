@@ -366,6 +366,7 @@ class id extends fb {
             var5 = var10;
             L3: while (true) {
               if (var10 >= var18.length) {
+                return;
               } else {
                 var6 = var18[var10];
                 if (((id) this).field_F == var6) {
@@ -393,7 +394,7 @@ class id extends fb {
     }
 
     void g(int param0) {
-        fb var2_ref = null;
+        fb var2_ref_fb = null;
         int var2 = 0;
         int var3 = 0;
         fb var4 = null;
@@ -473,14 +474,14 @@ class id extends fb {
               break L5;
             } else {
               ((id) this).field_E = ((id) this).field_z;
-              var2_ref = ((id) this).a((byte) -74, 50, 1);
+              var2_ref_fb = ((id) this).a((byte) -74, 50, 1);
               L6: while (true) {
-                if (var2_ref == null) {
+                if (var2_ref_fb == null) {
                   break L5;
                 } else {
                   L7: {
-                    if (var2_ref.field_z == ((id) this).field_z) {
-                      if (((id) this).a(var2_ref, 1654152400) >= 2500) {
+                    if (var2_ref_fb.field_z == ((id) this).field_z) {
+                      if (((id) this).a(var2_ref_fb, 1654152400) >= 2500) {
                         break L7;
                       } else {
                         var3 = ((id) this).field_z;
@@ -511,7 +512,7 @@ class id extends fb {
                       break L7;
                     }
                   }
-                  var2_ref = ((id) this).e((byte) 32);
+                  var2_ref_fb = ((id) this).e((byte) 32);
                   continue L6;
                 }
               }

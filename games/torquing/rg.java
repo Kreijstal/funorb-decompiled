@@ -258,8 +258,9 @@ final class rg extends am {
                   }
                 }
                 if (var25 != ci.field_c) {
+                  int incrementValue$2 = var13;
                   var13++;
-                  var46 = var19[var13];
+                  var46 = var19[incrementValue$2];
                   var26 = var46;
                   var26[2] = var24 + var22;
                   var46[0] = var8;
@@ -274,8 +275,9 @@ final class rg extends am {
                   } else {
                     L16: {
                       var10 = 1;
+                      int incrementValue$3 = var13;
                       var13++;
-                      var44 = var19[var13];
+                      var44 = var19[incrementValue$3];
                       var26 = var44;
                       var44[1] = var25;
                       var44[0] = var8;
@@ -528,7 +530,8 @@ final class rg extends am {
                               continue L6;
                             }
                           } else {
-                            var18[ie.a(-1 + (param1 + param5) - var20, jh.field_A)] = var8 * var20 / var13;
+                            int dupTemp$5 = ie.a(-1 + (param1 + param5) - var20, jh.field_A);
+                            var18[dupTemp$5] = var8 * var20 / var13;
                             var18[ie.a(jh.field_A, var20 + param1)] = var8 * var20 / var13;
                             var20++;
                             continue L7;
@@ -544,7 +547,8 @@ final class rg extends am {
                                 break L8;
                               } else {
                                 var22 = var8 * var21 / var13;
-                                var18[ie.a(jh.field_A, -1 + param1 - (-param5 + var21))] = var20 * var22 >> -899229972;
+                                int dupTemp$6 = ie.a(jh.field_A, -1 + param1 - (-param5 + var21));
+                                var18[dupTemp$6] = var20 * var22 >> -899229972;
                                 var18[ie.a(jh.field_A, var21 + param1)] = var20 * var22 >> -899229972;
                                 var21++;
                                 continue L9;
@@ -626,7 +630,8 @@ final class rg extends am {
                               break L12;
                             } else {
                               var21 = var8 * var20 / var13;
-                              var18[ie.a(param1 + (param5 + -var20 + -1), jh.field_A)] = var21 * var19 >> -1924533044;
+                              int dupTemp$7 = ie.a(param1 + (param5 + -var20 + -1), jh.field_A);
+                              var18[dupTemp$7] = var21 * var19 >> -1924533044;
                               var18[ie.a(jh.field_A, param1 - -var20)] = var21 * var19 >> -1924533044;
                               var20++;
                               continue L13;
@@ -760,21 +765,21 @@ final class rg extends am {
         if (param1 == 35) {
           L0: {
             var4 = param2;
-            if (var4 != 0) {
+            if ((var4 ^ -1) != -1) {
               if (var4 == 1) {
                 ((rg) this).field_y = param0.i(param1 + 7053);
                 break L0;
               } else {
-                if (var4 == -3) {
+                if ((var4 ^ -1) == -3) {
                   ((rg) this).field_t = param0.i(7088);
                   break L0;
                 } else {
-                  if (var4 == -4) {
+                  if ((var4 ^ -1) == -4) {
                     ((rg) this).field_A = param0.i(param1 + 7053);
                     break L0;
                   } else {
-                    if (-5 != var4) {
-                      if (-6 != var4) {
+                    if (-5 != (var4 ^ -1)) {
+                      if (-6 != (var4 ^ -1)) {
                         if (-7 != (var4 ^ -1)) {
                           if ((var4 ^ -1) == -8) {
                             ((rg) this).field_z = param0.i(7088);
@@ -838,7 +843,8 @@ final class rg extends am {
         int var18 = 0;
         int var19 = 0;
         int var20 = 0;
-        jb var21 = null;
+        Object var21 = null;
+        jb var21_ref = null;
         int var22 = 0;
         int var23 = 0;
         int var24 = 0;
@@ -932,7 +938,7 @@ final class rg extends am {
         var65 = tm.field_e;
         var13 = 0;
         L2: while (true) {
-          if (param2.field_C <= var13) {
+          if ((param2.field_C ^ -1) >= (var13 ^ -1)) {
             L3: {
               if (param4 >= 120) {
                 break L3;
@@ -952,7 +958,7 @@ final class rg extends am {
                   var15 = param2.field_G[var14];
                   var16 = param2.field_r[var14];
                   var17 = param2.field_I[var14];
-                  if (param2.field_O[var14] < m.field_c.length) {
+                  if ((param2.field_O[var14] ^ -1) > (m.field_c.length ^ -1)) {
                     stackOut_24_0 = param2.field_O[var14];
                     stackIn_25_0 = stackOut_24_0;
                     break L5;
@@ -964,7 +970,7 @@ final class rg extends am {
                 }
                 L6: {
                   var18 = stackIn_25_0;
-                  if (m.field_c.length > param2.field_J[var14]) {
+                  if ((m.field_c.length ^ -1) < (param2.field_J[var14] ^ -1)) {
                     stackOut_27_0 = param2.field_J[var14];
                     stackIn_28_0 = stackOut_27_0;
                     break L6;
@@ -976,7 +982,7 @@ final class rg extends am {
                 }
                 L7: {
                   var19 = stackIn_28_0;
-                  if (m.field_c.length <= param2.field_F[var14]) {
+                  if ((m.field_c.length ^ -1) >= (param2.field_F[var14] ^ -1)) {
                     stackOut_30_0 = -1;
                     stackIn_31_0 = stackOut_30_0;
                     break L7;
@@ -995,7 +1001,7 @@ final class rg extends am {
                       if (param2.field_c == null) {
                         break L9;
                       } else {
-                        if (param2.field_c.length <= var14) {
+                        if ((param2.field_c.length ^ -1) >= (var14 ^ -1)) {
                           break L9;
                         } else {
                           if (param2.field_c[var14] == -1) {
@@ -1018,102 +1024,104 @@ final class rg extends am {
                   break L8;
                 }
                 L10: {
-                  var21 = stackIn_38_0;
-                  var22 = kh.field_m[var15];
-                  var23 = u.field_w[var15];
-                  var24 = kh.field_m[var16];
-                  var25 = u.field_w[var16];
-                  var26 = kh.field_m[var17];
-                  var27 = u.field_w[var17];
-                  if (var18 != var19) {
-                    break L10;
-                  } else {
-                    if (var20 == var19) {
-                      L11: {
-                        var28 = var66[var18];
-                        var29 = var67[var18];
-                        if (var21 != null) {
-                          stackOut_47_0 = var21.field_a;
-                          stackIn_48_0 = stackOut_47_0;
-                          break L11;
-                        } else {
-                          stackOut_46_0 = 8355711;
-                          stackIn_48_0 = stackOut_46_0;
-                          break L11;
-                        }
-                      }
-                      var30 = stackIn_48_0;
-                      var31 = 16711935 & var30;
-                      var32 = 65280 & var30;
-                      var33 = (var28 * var31 & -16711919) >>> -814340792 | (var32 * var28 & 16711700) >>> 804606824;
-                      var33 = var33 + var29 * 65793;
-                      te.a(var22, 8355711 & var33 >> 928757921, -87, var23, var24, var27, var25, var26);
-                      var44++;
-                      continue L4;
+                  L11: {
+                    var21_ref = stackIn_38_0;
+                    var22 = kh.field_m[var15];
+                    var23 = u.field_w[var15];
+                    var24 = kh.field_m[var16];
+                    var25 = u.field_w[var16];
+                    var26 = kh.field_m[var17];
+                    var27 = u.field_w[var17];
+                    if ((var18 ^ -1) != (var19 ^ -1)) {
+                      break L11;
                     } else {
-                      break L10;
+                      if ((var20 ^ -1) == (var19 ^ -1)) {
+                        L12: {
+                          var28 = var66[var18];
+                          var29 = var67[var18];
+                          if (var21_ref != null) {
+                            stackOut_47_0 = var21_ref.field_a;
+                            stackIn_48_0 = stackOut_47_0;
+                            break L12;
+                          } else {
+                            stackOut_46_0 = 8355711;
+                            stackIn_48_0 = stackOut_46_0;
+                            break L12;
+                          }
+                        }
+                        var30 = stackIn_48_0;
+                        var31 = 16711935 & var30;
+                        var32 = 65280 & var30;
+                        var33 = (var28 * var31 & -16711919) >>> -814340792 | (var32 * var28 & 16711700) >>> 804606824;
+                        var33 = var33 + var29 * 65793;
+                        te.a(var22, 8355711 & var33 >> 928757921, -87, var23, var24, var27, var25, var26);
+                        break L10;
+                      } else {
+                        break L11;
+                      }
                     }
                   }
-                }
-                L12: {
-                  var28 = var66[var18];
-                  var29 = var66[var19];
-                  var30 = var66[var20];
-                  var31 = var67[var18];
-                  var32 = var67[var19];
-                  var33 = var67[var20];
-                  if (var21 == null) {
-                    stackOut_43_0 = 8355711;
-                    stackIn_44_0 = stackOut_43_0;
-                    break L12;
-                  } else {
-                    stackOut_42_0 = var21.field_a;
-                    stackIn_44_0 = stackOut_42_0;
-                    break L12;
+                  L13: {
+                    var28 = var66[var18];
+                    var29 = var66[var19];
+                    var30 = var66[var20];
+                    var31 = var67[var18];
+                    var32 = var67[var19];
+                    var33 = var67[var20];
+                    if (var21_ref == null) {
+                      stackOut_43_0 = 8355711;
+                      stackIn_44_0 = stackOut_43_0;
+                      break L13;
+                    } else {
+                      stackOut_42_0 = var21_ref.field_a;
+                      stackIn_44_0 = stackOut_42_0;
+                      break L13;
+                    }
                   }
+                  var34 = stackIn_44_0;
+                  var35 = var34 & 16711935;
+                  var36 = 65280 & var34;
+                  var37 = (var28 * var36 & 16711735) >>> -885846072 | var28 * var35 >>> -339776440 & -738262785;
+                  var38 = var35 * var29 >>> 286747240 & -922812161 | (16711930 & var29 * var36) >>> -1163295256;
+                  var39 = var36 * var30 >>> -157501784 & -1828651264 | var35 * var30 >>> -1438992824 & 2080309503;
+                  var37 = var37 + var31 * 65793;
+                  var38 = var38 + var32 * 65793;
+                  var39 = var39 + 65793 * var33;
+                  th.a(var22, var39 >> 1882419920, (65465 & var38) >> -1860588792, 255 & var37, var38 >> 1532656368, var37 >> -756973392, var39 & 255, var23, 255 & var38, (var37 & 65328) >> 2050881256, -25, var24, var39 >> 1339075144 & 255, var25, var26, var27);
+                  break L10;
                 }
-                var34 = stackIn_44_0;
-                var35 = var34 & 16711935;
-                var36 = 65280 & var34;
-                var37 = (var28 * var36 & 16711735) >>> -885846072 | var28 * var35 >>> -339776440 & -738262785;
-                var38 = var35 * var29 >>> 286747240 & -922812161 | (16711930 & var29 * var36) >>> -1163295256;
-                var39 = var36 * var30 >>> -157501784 & -1828651264 | var35 * var30 >>> -1438992824 & 2080309503;
-                var37 = var37 + var31 * 65793;
-                var38 = var38 + var32 * 65793;
-                var39 = var39 + 65793 * var33;
-                th.a(var22, var39 >> 1882419920, (65465 & var38) >> -1860588792, 255 & var37, var38 >> 1532656368, var37 >> -756973392, var39 & 255, var23, 255 & var38, (var37 & 65328) >> 2050881256, -25, var24, var39 >> 1339075144 & 255, var25, var26, var27);
                 var44++;
                 continue L4;
               }
             }
           } else {
-            L13: {
+            L14: {
               var14 = var63[var13] * param7 + (var64[var13] * param0 - -(param3 * var65[var13])) >> 2080601480;
-              if (-1 < var14) {
+              if (-1 < (var14 ^ -1)) {
                 var14 = -var14;
-                break L13;
+                break L14;
               } else {
-                break L13;
+                break L14;
               }
             }
-            L14: {
-              if (-1 > var14) {
+            L15: {
+              if (-1 < (var14 ^ -1)) {
                 stackOut_13_0 = 128;
                 stackIn_14_0 = stackOut_13_0;
-                break L14;
+                break L15;
               } else {
                 if ((var14 ^ -1) <= -129) {
                   stackOut_12_0 = 256;
                   stackIn_14_0 = stackOut_12_0;
-                  break L14;
+                  break L15;
                 } else {
                   stackOut_11_0 = var14 + 128;
                   stackIn_14_0 = stackOut_11_0;
-                  break L14;
+                  break L15;
                 }
               }
             }
-            L15: {
+            L16: {
               var14 = stackIn_14_0;
               var15 = param1 * var65[var13] + param5 * var63[var13] + var64[var13] * param6 >> -1256029688;
               stackOut_14_0 = id.field_c;
@@ -1124,13 +1132,13 @@ final class rg extends am {
                 stackOut_16_1 = var15;
                 stackIn_17_0 = stackOut_16_0;
                 stackIn_17_1 = stackOut_16_1;
-                break L15;
+                break L16;
               } else {
                 stackOut_15_0 = (int[]) (Object) stackIn_15_0;
                 stackOut_15_1 = -var15;
                 stackIn_17_0 = stackOut_15_0;
                 stackIn_17_1 = stackOut_15_1;
-                break L15;
+                break L16;
               }
             }
             var15 = stackIn_17_0[stackIn_17_1];

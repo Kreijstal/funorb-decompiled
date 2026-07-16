@@ -21,7 +21,6 @@ final class ej {
 
     final aj a(int param0, int param1) {
         aj var3 = null;
-        aj var3_ref = null;
         byte[] var4 = null;
         var3 = (aj) ((ej) this).field_e.a((byte) -92, (long)param1);
         if (var3 == null) {
@@ -34,25 +33,25 @@ final class ej {
               break L0;
             }
           }
-          var3_ref = new aj();
+          var3 = new aj();
           if (var4 == null) {
             if (param1 >= param0) {
-              var3_ref.h(0);
-              ((ej) this).field_e.a((Object) (Object) var3_ref, (byte) -122, (long)param1);
-              return var3_ref;
+              var3.h(0);
+              ((ej) this).field_e.a((Object) (Object) var3, (byte) -122, (long)param1);
+              return var3;
             } else {
-              ((ej) this).field_e.a((Object) (Object) var3_ref, (byte) -122, (long)param1);
-              return var3_ref;
+              ((ej) this).field_e.a((Object) (Object) var3, (byte) -122, (long)param1);
+              return var3;
             }
           } else {
-            var3_ref.a(new ni(var4), 4);
+            var3.a(new ni(var4), 4);
             if (param1 < param0) {
-              ((ej) this).field_e.a((Object) (Object) var3_ref, (byte) -122, (long)param1);
-              return var3_ref;
+              ((ej) this).field_e.a((Object) (Object) var3, (byte) -122, (long)param1);
+              return var3;
             } else {
-              var3_ref.h(0);
-              ((ej) this).field_e.a((Object) (Object) var3_ref, (byte) -122, (long)param1);
-              return var3_ref;
+              var3.h(0);
+              ((ej) this).field_e.a((Object) (Object) var3, (byte) -122, (long)param1);
+              return var3;
             }
           }
         } else {

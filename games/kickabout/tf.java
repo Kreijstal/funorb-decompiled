@@ -183,8 +183,9 @@ final class tf {
             if (((tf) this).field_c == var4) {
               return var2;
             } else {
+              int incrementValue$4 = var3;
               var3++;
-              var6[var3] = var4;
+              var6[incrementValue$4] = var4;
               var4 = var4.field_d;
               continue L0;
             }
@@ -199,8 +200,9 @@ final class tf {
             if (((tf) this).field_c == var4) {
               return var2;
             } else {
+              int incrementValue$5 = var3;
               var3++;
-              var6[var3] = var4;
+              var6[incrementValue$5] = var4;
               var4 = var4.field_d;
               continue L1;
             }

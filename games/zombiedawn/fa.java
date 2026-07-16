@@ -67,56 +67,62 @@ class fa extends nb {
         var4 = var10;
         var5 = 0;
         var6 = 0;
-        if (param3 < -58) {
-          if (param1 > var6) {
-            var7 = param0[param2 - -var6] & 255;
-            if (-1 != var7) {
-              if (-129 <= var7) {
-                if (var7 >= 160) {
-                  var5++;
-                  var10[var5] = (char)var7;
-                  var6++;
-                  var6++;
-                  var6++;
-                  return new String(var14, 0, var5);
-                } else {
-                  L0: {
-                    var8 = fj.field_h[-128 + var7];
-                    if (var8 == 0) {
-                      var8 = 63;
-                      break L0;
-                    } else {
-                      break L0;
-                    }
-                  }
-                  var7 = var8;
-                  var5++;
-                  var10[var5] = (char)var7;
-                  var6++;
-                  var6++;
-                  var6++;
-                  return new String(var14, 0, var5);
-                }
-              } else {
-                var5++;
-                var10[var5] = (char)var7;
-                var6++;
-                var6++;
-                var6++;
-                return new String(var14, 0, var5);
-              }
-            } else {
-              var6++;
-              var6++;
-              var6++;
-              var6++;
-              return new String(var14, 0, var5);
-            }
-          } else {
-            return new String(var14, 0, var5);
-          }
-        } else {
+        if (param3 >= -58) {
           return null;
+        } else {
+          L0: {
+            if (param1 <= var6) {
+              break L0;
+            } else {
+              L1: {
+                var7 = param0[param2 - -var6] & 255;
+                if (-1 == (var7 ^ -1)) {
+                  var6++;
+                  break L1;
+                } else {
+                  if (-129 >= (var7 ^ -1)) {
+                    if (var7 < 160) {
+                      L2: {
+                        var8 = fj.field_h[-128 + var7];
+                        if (var8 == 0) {
+                          var8 = 63;
+                          break L2;
+                        } else {
+                          break L2;
+                        }
+                      }
+                      var7 = var8;
+                      int incrementValue$3 = var5;
+                      var5++;
+                      var10[incrementValue$3] = (char)var7;
+                      break L1;
+                    } else {
+                      int incrementValue$4 = var5;
+                      var5++;
+                      var10[incrementValue$4] = (char)var7;
+                      var6++;
+                      var6++;
+                      var6++;
+                      return new String(var14, 0, var5);
+                    }
+                  } else {
+                    int incrementValue$5 = var5;
+                    var5++;
+                    var10[incrementValue$5] = (char)var7;
+                    var6++;
+                    var6++;
+                    var6++;
+                    return new String(var14, 0, var5);
+                  }
+                }
+              }
+              var6++;
+              var6++;
+              var6++;
+              break L0;
+            }
+          }
+          return new String(var14, 0, var5);
         }
     }
 

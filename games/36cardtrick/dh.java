@@ -27,7 +27,7 @@ final class dh extends qb {
         if (!param0) {
           if (!param3) {
             if (param1 > -86) {
-              return (String) null;
+              return null;
             } else {
               L0: {
                 if (param2) {
@@ -42,7 +42,7 @@ final class dh extends qb {
           } else {
             var4 += 2;
             if (param1 > -86) {
-              return (String) null;
+              return null;
             } else {
               L1: {
                 if (param2) {
@@ -60,7 +60,7 @@ final class dh extends qb {
           if (param3) {
             var4 += 2;
             if (param1 > -86) {
-              return (String) null;
+              return null;
             } else {
               L2: {
                 if (param2) {
@@ -74,7 +74,7 @@ final class dh extends qb {
             }
           } else {
             if (param1 > -86) {
-              return (String) null;
+              return null;
             } else {
               L3: {
                 if (param2) {

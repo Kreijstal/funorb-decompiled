@@ -41,8 +41,9 @@ final class ii extends wi {
     }
 
     final void a(boolean param0, int param1) {
+        int fieldTemp$0 = ((ii) this).field_h;
         ((ii) this).field_h = ((ii) this).field_h + 1;
-        ((ii) this).field_i[((ii) this).field_h] = (byte)(param1 + ((ii) this).field_o.b((byte) 123));
+        ((ii) this).field_i[fieldTemp$0] = (byte)(param1 + ((ii) this).field_o.b((byte) 123));
         if (param0) {
             return;
         }
@@ -70,8 +71,9 @@ final class ii extends wi {
         if (param0 <= 1) {
             return -119;
         }
+        int fieldTemp$0 = ((ii) this).field_h;
         ((ii) this).field_h = ((ii) this).field_h + 1;
-        return ((ii) this).field_i[((ii) this).field_h] + -((ii) this).field_o.b((byte) 123) & 255;
+        return ((ii) this).field_i[fieldTemp$0] + -((ii) this).field_o.b((byte) 123) & 255;
     }
 
     ii(int param0) {
@@ -83,15 +85,14 @@ final class ii extends wi {
     }
 
     final static ga a(Throwable param0, String param1) {
-        ga var2_ref = null;
         ga var2 = null;
         if (!(param0 instanceof ga)) {
             var2 = new ga(param0, param1);
         } else {
-            var2_ref = (ga) (Object) param0;
-            var2_ref.field_a = var2_ref.field_a + 32 + param1;
+            var2 = (ga) (Object) param0;
+            var2.field_a = var2.field_a + 32 + param1;
         }
-        return var2_ref;
+        return var2;
     }
 
     final void a(int param0, int param1, int param2, byte[] param3) {
@@ -104,8 +105,9 @@ final class ii extends wi {
         } else {
           L0: while (true) {
             if (var5 < param0) {
+              int fieldTemp$5 = ((ii) this).field_h;
               ((ii) this).field_h = ((ii) this).field_h + 1;
-              param3[var5 - -param2] = (byte)(((ii) this).field_i[((ii) this).field_h] + -((ii) this).field_o.b((byte) 123));
+              param3[var5 - -param2] = (byte)(((ii) this).field_i[fieldTemp$5] + -((ii) this).field_o.b((byte) 123));
               var5++;
               continue L0;
             } else {
@@ -122,8 +124,9 @@ final class ii extends wi {
         ((ii) this).field_m = ((ii) this).field_m + param1;
         int var5 = 0;
         while (var4 < param1) {
+            int incrementValue$0 = var3;
             var3++;
-            var5 = var5 + ((((ii) this).field_i[var3] & nh.field_N[var4]) << -var4 + param1);
+            var5 = var5 + ((((ii) this).field_i[incrementValue$0] & nh.field_N[var4]) << -var4 + param1);
             param1 = param1 - var4;
             var4 = 8;
         }

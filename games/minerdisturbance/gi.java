@@ -21,21 +21,21 @@ final class gi implements java.awt.event.KeyListener, java.awt.event.FocusListen
                 break L0;
               } else {
                 var2 = -1;
-                if (cg.field_H <= -1) {
-                  if (-1 > var2) {
-                    param0.consume();
-                    return;
-                  } else {
+                if ((cg.field_H ^ -1) <= -1) {
+                  if (-1 >= (var2 ^ -1)) {
                     L1: {
                       ib.field_b[cg.field_H] = var2 ^ -1;
                       cg.field_H = 127 & 1 + cg.field_H;
-                      if (dm.field_b == cg.field_H) {
+                      if ((dm.field_b ^ -1) == (cg.field_H ^ -1)) {
                         cg.field_H = -1;
                         break L1;
                       } else {
                         break L1;
                       }
                     }
+                    param0.consume();
+                    return;
+                  } else {
                     param0.consume();
                     return;
                   }
@@ -46,26 +46,27 @@ final class gi implements java.awt.event.KeyListener, java.awt.event.FocusListen
               }
             }
           }
-          if (cg.field_H <= -1) {
-            if (-1 <= var2) {
-              ib.field_b[cg.field_H] = var2 ^ -1;
-              cg.field_H = 127 & 1 + cg.field_H;
-              if (dm.field_b != cg.field_H) {
-                param0.consume();
-                return;
-              } else {
-                cg.field_H = -1;
-                param0.consume();
-                return;
-              }
+          L2: {
+            if ((cg.field_H ^ -1) > -1) {
+              break L2;
             } else {
-              param0.consume();
-              return;
+              if (-1 < (var2 ^ -1)) {
+                break L2;
+              } else {
+                ib.field_b[cg.field_H] = var2 ^ -1;
+                cg.field_H = 127 & 1 + cg.field_H;
+                if ((dm.field_b ^ -1) == (cg.field_H ^ -1)) {
+                  cg.field_H = -1;
+                  break L2;
+                } else {
+                  param0.consume();
+                  return;
+                }
+              }
             }
-          } else {
-            param0.consume();
-            return;
           }
+          param0.consume();
+          return;
         } else {
           param0.consume();
           return;
@@ -172,8 +173,8 @@ final class gi implements java.awt.event.KeyListener, java.awt.event.FocusListen
         if (null != di.field_O) {
           hb.field_b = 0;
           var2 = param0.getKeyCode();
-          if (var2 <= -1) {
-            if (d.field_d.length > var2) {
+          if ((var2 ^ -1) <= -1) {
+            if ((d.field_d.length ^ -1) < (var2 ^ -1)) {
               var2 = d.field_d[var2];
               if ((128 & var2) != 0) {
                 L0: {
@@ -186,14 +187,14 @@ final class gi implements java.awt.event.KeyListener, java.awt.event.FocusListen
                     } else {
                       ib.field_b[cg.field_H] = var2;
                       cg.field_H = 127 & cg.field_H - -1;
-                      if (cg.field_H != dm.field_b) {
+                      if ((cg.field_H ^ -1) != (dm.field_b ^ -1)) {
                         break L0;
                       } else {
                         L1: {
                           cg.field_H = -1;
                           if (0 <= var2) {
                             var3 = qf.field_n - -1 & 127;
-                            if (var3 == dn.field_w) {
+                            if ((var3 ^ -1) == (dn.field_w ^ -1)) {
                               break L1;
                             } else {
                               jk.field_ib[qf.field_n] = var2;
@@ -228,7 +229,7 @@ final class gi implements java.awt.event.KeyListener, java.awt.event.FocusListen
                 }
                 if (0 <= var2) {
                   var3 = qf.field_n - -1 & 127;
-                  if (var3 == dn.field_w) {
+                  if ((var3 ^ -1) == (dn.field_w ^ -1)) {
                     var3 = param0.getModifiers();
                     if (0 != (10 & var3)) {
                       param0.consume();
@@ -297,7 +298,7 @@ final class gi implements java.awt.event.KeyListener, java.awt.event.FocusListen
                     } else {
                       ib.field_b[cg.field_H] = var2;
                       cg.field_H = 127 & cg.field_H - -1;
-                      if (cg.field_H != dm.field_b) {
+                      if ((cg.field_H ^ -1) != (dm.field_b ^ -1)) {
                         break L2;
                       } else {
                         cg.field_H = -1;
@@ -308,7 +309,7 @@ final class gi implements java.awt.event.KeyListener, java.awt.event.FocusListen
                 }
                 if (0 <= var2) {
                   var3 = qf.field_n - -1 & 127;
-                  if (var3 == dn.field_w) {
+                  if ((var3 ^ -1) == (dn.field_w ^ -1)) {
                     var3 = param0.getModifiers();
                     if (0 != (10 & var3)) {
                       param0.consume();
@@ -379,14 +380,14 @@ final class gi implements java.awt.event.KeyListener, java.awt.event.FocusListen
                   } else {
                     ib.field_b[cg.field_H] = var2;
                     cg.field_H = 127 & cg.field_H - -1;
-                    if (cg.field_H != dm.field_b) {
+                    if ((cg.field_H ^ -1) != (dm.field_b ^ -1)) {
                       break L3;
                     } else {
                       L4: {
                         cg.field_H = -1;
                         if (0 <= var2) {
                           var3 = qf.field_n - -1 & 127;
-                          if (var3 == dn.field_w) {
+                          if ((var3 ^ -1) == (dn.field_w ^ -1)) {
                             break L4;
                           } else {
                             jk.field_ib[qf.field_n] = var2;
@@ -399,21 +400,21 @@ final class gi implements java.awt.event.KeyListener, java.awt.event.FocusListen
                         }
                       }
                       var3 = param0.getModifiers();
-                      if (0 == (10 & var3)) {
-                        if (var2 != 85) {
-                          if ((var2 ^ -1) != -11) {
-                            return;
-                          } else {
-                            param0.consume();
-                            return;
-                          }
-                        } else {
-                          param0.consume();
-                          return;
-                        }
-                      } else {
+                      if (0 != (10 & var3)) {
                         param0.consume();
                         return;
+                      } else {
+                        if (var2 == 85) {
+                          param0.consume();
+                          return;
+                        } else {
+                          if ((var2 ^ -1) == -11) {
+                            param0.consume();
+                            return;
+                          } else {
+                            return;
+                          }
+                        }
                       }
                     }
                   }
@@ -421,7 +422,7 @@ final class gi implements java.awt.event.KeyListener, java.awt.event.FocusListen
               }
               if (0 <= var2) {
                 var3 = qf.field_n - -1 & 127;
-                if (var3 == dn.field_w) {
+                if ((var3 ^ -1) == (dn.field_w ^ -1)) {
                   var3 = param0.getModifiers();
                   if (0 != (10 & var3)) {
                     param0.consume();
@@ -467,16 +468,16 @@ final class gi implements java.awt.event.KeyListener, java.awt.event.FocusListen
                   param0.consume();
                   return;
                 } else {
-                  if (var2 != 85) {
-                    if ((var2 ^ -1) != -11) {
-                      return;
-                    } else {
-                      param0.consume();
-                      return;
-                    }
-                  } else {
+                  if (var2 == 85) {
                     param0.consume();
                     return;
+                  } else {
+                    if ((var2 ^ -1) == -11) {
+                      param0.consume();
+                      return;
+                    } else {
+                      return;
+                    }
                   }
                 }
               }
@@ -487,19 +488,19 @@ final class gi implements java.awt.event.KeyListener, java.awt.event.FocusListen
               if (0 > cg.field_H) {
                 break L5;
               } else {
-                if (-1 > var2) {
+                if (-1 < (var2 ^ -1)) {
                   break L5;
                 } else {
                   ib.field_b[cg.field_H] = var2;
                   cg.field_H = 127 & cg.field_H - -1;
-                  if (cg.field_H != dm.field_b) {
+                  if ((cg.field_H ^ -1) != (dm.field_b ^ -1)) {
                     break L5;
                   } else {
                     L6: {
                       cg.field_H = -1;
                       if (0 <= var2) {
                         var3 = qf.field_n - -1 & 127;
-                        if (var3 == dn.field_w) {
+                        if ((var3 ^ -1) == (dn.field_w ^ -1)) {
                           break L6;
                         } else {
                           jk.field_ib[qf.field_n] = var2;
@@ -512,21 +513,21 @@ final class gi implements java.awt.event.KeyListener, java.awt.event.FocusListen
                       }
                     }
                     var3 = param0.getModifiers();
-                    if (0 == (10 & var3)) {
-                      if (var2 != 85) {
-                        if ((var2 ^ -1) != -11) {
-                          return;
-                        } else {
-                          param0.consume();
-                          return;
-                        }
-                      } else {
-                        param0.consume();
-                        return;
-                      }
-                    } else {
+                    if (0 != (10 & var3)) {
                       param0.consume();
                       return;
+                    } else {
+                      if (var2 == 85) {
+                        param0.consume();
+                        return;
+                      } else {
+                        if ((var2 ^ -1) == -11) {
+                          param0.consume();
+                          return;
+                        } else {
+                          return;
+                        }
+                      }
                     }
                   }
                 }
@@ -534,63 +535,63 @@ final class gi implements java.awt.event.KeyListener, java.awt.event.FocusListen
             }
             if (0 <= var2) {
               var3 = qf.field_n - -1 & 127;
-              if (var3 == dn.field_w) {
+              if ((var3 ^ -1) == (dn.field_w ^ -1)) {
                 var3 = param0.getModifiers();
-                if (0 == (10 & var3)) {
-                  if (var2 != 85) {
+                if (0 != (10 & var3)) {
+                  param0.consume();
+                  return;
+                } else {
+                  if (var2 == 85) {
+                    param0.consume();
+                    return;
+                  } else {
                     if ((var2 ^ -1) == -11) {
                       param0.consume();
                       return;
                     } else {
                       return;
                     }
-                  } else {
-                    param0.consume();
-                    return;
                   }
-                } else {
-                  param0.consume();
-                  return;
                 }
               } else {
                 jk.field_ib[qf.field_n] = var2;
                 hj.field_n[qf.field_n] = (char)0;
                 qf.field_n = var3;
                 var3 = param0.getModifiers();
-                if (0 == (10 & var3)) {
-                  if (var2 != 85) {
-                    if ((var2 ^ -1) != -11) {
-                      return;
-                    } else {
-                      param0.consume();
-                      return;
-                    }
-                  } else {
-                    param0.consume();
-                    return;
-                  }
-                } else {
+                if (0 != (10 & var3)) {
                   param0.consume();
                   return;
+                } else {
+                  if (var2 == 85) {
+                    param0.consume();
+                    return;
+                  } else {
+                    if ((var2 ^ -1) == -11) {
+                      param0.consume();
+                      return;
+                    } else {
+                      return;
+                    }
+                  }
                 }
               }
             } else {
               var3 = param0.getModifiers();
-              if (0 == (10 & var3)) {
-                if (var2 != 85) {
-                  if ((var2 ^ -1) != -11) {
-                    return;
-                  } else {
-                    param0.consume();
-                    return;
-                  }
-                } else {
-                  param0.consume();
-                  return;
-                }
-              } else {
+              if (0 != (10 & var3)) {
                 param0.consume();
                 return;
+              } else {
+                if (var2 == 85) {
+                  param0.consume();
+                  return;
+                } else {
+                  if ((var2 ^ -1) == -11) {
+                    param0.consume();
+                    return;
+                  } else {
+                    return;
+                  }
+                }
               }
             }
           }

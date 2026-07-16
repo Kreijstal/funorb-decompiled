@@ -17,7 +17,7 @@ final class vc extends IOException {
         int var4 = 0;
         int var5 = 0;
         if (param2 != 0) {
-          return (kc[]) null;
+          return null;
         } else {
           var4 = param3.a(param2 ^ 18659, param1);
           var5 = param3.a(var4, param0, (byte) 7);

@@ -170,21 +170,24 @@ final class u {
         int stackOut_36_2 = 0;
         L0: {
           var3 = ZombieDawn.field_J;
+          int fieldTemp$6 = ((u) this).field_g;
           ((u) this).field_g = ((u) this).field_g + 1;
-          if (30 > ((u) this).field_g) {
+          if (30 > fieldTemp$6) {
             break L0;
           } else {
             ((u) this).field_g = 0;
+            int fieldTemp$7 = ((u) this).field_n + 1;
             ((u) this).field_n = ((u) this).field_n + 1;
-            if (-4 > (((u) this).field_n + 1 ^ -1)) {
+            if (-4 > (fieldTemp$7 ^ -1)) {
               ((u) this).field_n = 0;
               break L0;
             } else {
               if (param0 == ((u) this).field_b) {
                 ((u) this).field_n = 0;
                 if (((u) this).field_k) {
+                  int fieldTemp$8 = ((u) this).field_m;
                   ((u) this).field_m = ((u) this).field_m - 1;
-                  if (0 < ((u) this).field_m) {
+                  if (0 < fieldTemp$8) {
                     if (!this.a(param0 + -93)) {
                       L1: {
                         stackOut_25_0 = this;
@@ -263,8 +266,9 @@ final class u {
                   if (!((u) this).field_k) {
                     break L3;
                   } else {
+                    int fieldTemp$9 = ((u) this).field_m;
                     ((u) this).field_m = ((u) this).field_m - 1;
-                    if (0 < ((u) this).field_m) {
+                    if (0 < fieldTemp$9) {
                       break L3;
                     } else {
                       ((u) this).field_k = false;
@@ -312,8 +316,9 @@ final class u {
         }
         if (param0 != ((u) this).field_b) {
           if (((u) this).field_k) {
+            int fieldTemp$10 = ((u) this).field_m;
             ((u) this).field_m = ((u) this).field_m - 1;
-            if (0 < ((u) this).field_m) {
+            if (0 < fieldTemp$10) {
               if (this.a(param0 + -93)) {
                 ((u) this).field_k = true;
                 ((u) this).field_m = pb.a(so.field_a, 20, 1);
@@ -390,8 +395,9 @@ final class u {
         } else {
           ((u) this).field_n = 0;
           if (((u) this).field_k) {
+            int fieldTemp$11 = ((u) this).field_m;
             ((u) this).field_m = ((u) this).field_m - 1;
-            if (0 < ((u) this).field_m) {
+            if (0 < fieldTemp$11) {
               if (!this.a(param0 + -93)) {
                 L7: {
                   stackOut_44_0 = this;
@@ -568,17 +574,21 @@ final class u {
           if ((((u) this).field_b ^ -1) == -2) {
             ((u) this).field_l = 90 - -pb.a(so.field_a, 50, 1) << 2098122564;
             this.a((byte) 95);
+            return;
           } else {
             if (((u) this).field_b != 0) {
               this.a((byte) 95);
+              return;
             } else {
               ((u) this).field_l = pb.a(so.field_a, 20, 1) + 87 << 1212405604;
               this.a((byte) 95);
+              return;
             }
           }
         } else {
           ((u) this).field_l = pb.a(so.field_a, 77, 1) + 130 << -1042802492;
           this.a((byte) 95);
+          return;
         }
     }
 

@@ -87,8 +87,9 @@ final class sb {
         ((sb) this).field_d = param0;
         ((sb) this).field_f = new ah[param0];
         for (var2 = 0; param0 > var2; var2++) {
-            var3 = new ah();
-            ((sb) this).field_f[var2] = new ah();
+            ah dupTemp$0 = new ah();
+            var3 = dupTemp$0;
+            ((sb) this).field_f[var2] = dupTemp$0;
             var3.field_m = var3;
             var3.field_l = var3;
         }

@@ -14,20 +14,20 @@ final class ed implements Iterable {
         qb var5 = null;
         qb var6 = null;
         qb var7 = null;
-        if (null == ((qb) param2).field_a) {
+        if (null == param2.field_a) {
           var7 = ((ed) this).field_b[(int)(param1 & (long)(-1 + ((ed) this).field_a))];
           var5 = var7;
           param2.field_d = var5;
-          param2.field_a = ((qb) var7).field_a;
+          param2.field_a = var7.field_a;
           if (param0 >= -94) {
-            ((ed) this).field_d = (qb) null;
-            ((qb) param2).field_a.field_d = param2;
-            ((qb) param2).field_d.field_a = param2;
+            ((ed) this).field_d = null;
+            param2.field_a.field_d = param2;
+            param2.field_d.field_a = param2;
             param2.field_e = param1;
             return;
           } else {
-            ((qb) param2).field_a.field_d = param2;
-            ((qb) param2).field_d.field_a = param2;
+            param2.field_a.field_d = param2;
+            param2.field_d.field_a = param2;
             param2.field_e = param1;
             return;
           }
@@ -36,16 +36,16 @@ final class ed implements Iterable {
           var6 = ((ed) this).field_b[(int)(param1 & (long)(-1 + ((ed) this).field_a))];
           var5 = var6;
           param2.field_d = var5;
-          param2.field_a = ((qb) var6).field_a;
+          param2.field_a = var6.field_a;
           if (param0 < -94) {
-            ((qb) param2).field_a.field_d = param2;
-            ((qb) param2).field_d.field_a = param2;
+            param2.field_a.field_d = param2;
+            param2.field_d.field_a = param2;
             param2.field_e = param1;
             return;
           } else {
-            ((ed) this).field_d = (qb) null;
-            ((qb) param2).field_a.field_d = param2;
-            ((qb) param2).field_d.field_a = param2;
+            ((ed) this).field_d = null;
+            param2.field_a.field_d = param2;
+            param2.field_d.field_a = param2;
             param2.field_e = param1;
             return;
           }
@@ -64,7 +64,7 @@ final class ed implements Iterable {
         var7 = Main.field_T;
         var4 = -24 / ((21 - param0) / 48);
         var5 = ((ed) this).field_b[(int)((long)(-1 + ((ed) this).field_a) & param1)];
-        ((ed) this).field_d = ((qb) var5).field_d;
+        ((ed) this).field_d = var5.field_d;
         L0: while (true) {
           if (var5 != ((ed) this).field_d) {
             if (((ed) this).field_d.field_e == param1) {

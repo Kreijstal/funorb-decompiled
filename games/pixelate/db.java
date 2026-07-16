@@ -41,7 +41,7 @@ class db extends qm {
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
-        ni var10 = null;
+        Object var10 = null;
         int var11 = 0;
         mn var12 = null;
         int var13 = 0;
@@ -117,14 +117,14 @@ class db extends qm {
                   var14 = stackIn_15_0;
                   var15 = new ni(var7, var13, var12.field_b, -var13 + var14, Math.max(var3.a(param0 ^ -1832), -var12.field_b + var12.field_d));
                   if (var10 != null) {
-                    var10.field_l = var15;
+                    ((ni) var10).field_l = var15;
                     break L5;
                   } else {
                     break L5;
                   }
                 }
                 ((db) this).field_Q.a(22125, (fa) (Object) var15);
-                var10 = var15;
+                var10 = (Object) (Object) var15;
                 var11++;
                 continue L2;
               }
@@ -136,25 +136,52 @@ class db extends qm {
     }
 
     final void a(String param0, int param1, int param2) {
-        String[] var7 = null;
         String[] var4 = null;
         int var5 = 0;
-        int var6 = Pixelate.field_H ? 1 : 0;
-        if (((db) this).field_O != null) {
-            // if_icmple L24
-        } else {
+        int var6 = 0;
+        String[] var7 = null;
+        L0: {
+          L1: {
+            var6 = Pixelate.field_H ? 1 : 0;
+            if (((db) this).field_O == null) {
+              break L1;
+            } else {
+              if (((db) this).field_O.length <= param2) {
+                break L1;
+              } else {
+                break L0;
+              }
+            }
+          }
+          L2: {
             var7 = new String[param2 + 1];
             var4 = var7;
-            if (!(null == ((db) this).field_O)) {
-                for (var5 = 0; ((db) this).field_O.length > var5; var5++) {
-                    var7[var5] = ((db) this).field_O[var5];
+            if (null != ((db) this).field_O) {
+              var5 = 0;
+              L3: while (true) {
+                if (((db) this).field_O.length <= var5) {
+                  break L2;
+                } else {
+                  var7[var5] = ((db) this).field_O[var5];
+                  var5++;
+                  continue L3;
                 }
+              }
+            } else {
+              break L2;
             }
-            ((db) this).field_O = var4;
+          }
+          ((db) this).field_O = var4;
+          break L0;
         }
-        ((db) this).field_O[param2] = param0;
-        if (param1 != 0) {
-            ni discarded$0 = this.b(70, 115, -84);
+        L4: {
+          ((db) this).field_O[param2] = param0;
+          if (param1 == 0) {
+            break L4;
+          } else {
+            ni discarded$2 = this.b(70, 115, -84);
+            break L4;
+          }
         }
     }
 
@@ -181,67 +208,25 @@ class db extends qm {
     final static void a(byte param0) {
         Object var1 = null;
         Throwable var2 = null;
-        int statePc = 0;
-        Throwable caughtException = null;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    if (param0 == -94) {
-                        statePc = 2;
-                    } else {
-                        statePc = 1;
-                    }
-                    continue stateLoop;
+        Throwable decompiledCaughtException = null;
+        if (param0 == -94) {
+          L0: {
+            if (null == fj.field_c) {
+              break L0;
+            } else {
+              var1 = (Object) (Object) fj.field_c;
+              synchronized (var1) {
+                L1: {
+                  fj.field_c = null;
+                  break L1;
                 }
-                case 1: {
-                    return;
-                }
-                case 2: {
-                    if (null == fj.field_c) {
-                        statePc = 8;
-                    } else {
-                        statePc = 3;
-                    }
-                    continue stateLoop;
-                }
-                case 3: {
-                    var1 = (Object) (Object) fj.field_c;
-                    // monitorenter fj.field_c
-                    statePc = 4;
-                    continue stateLoop;
-                }
-                case 4: {
-                    try {
-                        fj.field_c = null;
-                        // monitorexit var1
-                        statePc = 8;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_4) {
-                        caughtException = stateCaught_4;
-                        statePc = 6;
-                        continue stateLoop;
-                    }
-                }
-                case 6: {
-                    try {
-                        var2 = caughtException;
-                        // monitorexit var1
-                        statePc = 7;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_6) {
-                        caughtException = stateCaught_6;
-                        statePc = 6;
-                        continue stateLoop;
-                    }
-                }
-                case 7: {
-                    throw (RuntimeException) (Object) var2;
-                }
-                case 8: {
-                    return;
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
+              }
+              break L0;
             }
+          }
+          return;
+        } else {
+          return;
         }
     }
 
@@ -396,15 +381,26 @@ class db extends qm {
     }
 
     final static void a(boolean param0, byte[] param1) {
-        if (param1 != null) {
-            // if_icmpne L14
-        } else {
-            return;
+        L0: {
+          if (param1 == null) {
+            break L0;
+          } else {
+            if (param1.length != 8) {
+              break L0;
+            } else {
+              L1: {
+                if (!param0) {
+                  break L1;
+                } else {
+                  field_T = null;
+                  break L1;
+                }
+              }
+              jo.field_h = jo.field_h | ((255L & (long)param1[1]) << -191922872 | (16711680L & (long)param1[2] << 1761872464 | ((long)param1[4] << -1323342112 & 1095216660480L | ((255L & (long)param1[5]) << 1996161768 | ((long)param1[6] << 247172144 & 71776119061217280L | (long)param1[7] << -144576392 & -72057594037927936L)) | (255L & (long)param1[3]) << 1861726552)) | (long)param1[0] << 1571270848 & 255L);
+              return;
+            }
+          }
         }
-        if (param0) {
-            field_T = null;
-        }
-        jo.field_h = jo.field_h | ((255L & (long)param1[1]) << -191922872 | (16711680L & (long)param1[2] << 1761872464 | ((long)param1[4] << -1323342112 & 1095216660480L | ((255L & (long)param1[5]) << 1996161768 | ((long)param1[6] << 247172144 & 71776119061217280L | (long)param1[7] << -144576392 & -72057594037927936L)) | (255L & (long)param1[3]) << 1861726552)) | (long)param1[0] << 1571270848 & 255L);
     }
 
     void a(int param0, int param1, int param2, ng param3) {

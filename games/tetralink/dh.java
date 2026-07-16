@@ -371,8 +371,9 @@ final class dh implements m {
         bc var1 = nd.field_Lb;
         while (jl.a(false)) {
             var1.f(8, (byte) -92);
+            int fieldTemp$0 = var1.field_t + 1;
             var1.field_t = var1.field_t + 1;
-            var2 = var1.field_t + 1;
+            var2 = fieldTemp$0;
             md.a((byte) -93, var1);
             nd.field_Lb.b(-var2 + var1.field_t, -2);
         }

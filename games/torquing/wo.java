@@ -127,13 +127,15 @@ final class wo implements Iterator {
         int[] var7 = null;
         int var8 = 0;
         var8 = Torquing.field_u;
+        int incrementValue$4 = param5;
         param5++;
-        di.a(param0, (byte) -118, param1, qd.field_a[param5], param3);
+        di.a(param0, (byte) -118, param1, qd.field_a[incrementValue$4], param3);
         if (!param4) {
           return;
         } else {
+          int incrementValue$5 = param2;
           param2--;
-          di.a(param0, (byte) -122, param1, qd.field_a[param2], param3);
+          di.a(param0, (byte) -122, param1, qd.field_a[incrementValue$5], param3);
           var6 = param5;
           L0: while (true) {
             if (param2 < var6) {

@@ -119,8 +119,9 @@ final class te extends java.awt.Canvas {
             var8 = var6;
             L1: while (true) {
               if (param1 == param0.charAt(var8)) {
+                int incrementValue$2 = var5;
                 var5++;
-                var4[var5] = param0.substring(var6, var8);
+                var4[incrementValue$2] = param0.substring(var6, var8);
                 var6 = var8 - -1;
                 var7++;
                 continue L0;

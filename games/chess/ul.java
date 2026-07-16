@@ -17,138 +17,59 @@ public class ul {
 
     public static void a(int param0, String param1, int param2) {
         Exception var3 = null;
-        int statePc = 0;
-        Throwable caughtException = null;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    if (param0 == 21747) {
-                        statePc = 2;
-                    } else {
-                        statePc = 1;
-                    }
-                    continue stateLoop;
-                }
-                case 1: {
-                    field_c = -58;
-                    statePc = 2;
-                    continue stateLoop;
-                }
-                case 2: {
-                    field_a = param1;
-                    field_c = param2;
-                    statePc = 3;
-                    continue stateLoop;
-                }
-                case 3: {
-                    try {
-                        field_d = System.getProperty("user.home");
-                        if (field_d != null) {
-                            statePc = 8;
-                        } else {
-                            statePc = 4;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_3) {
-                        caughtException = stateCaught_3;
-                        statePc = 13;
-                        continue stateLoop;
-                    }
-                }
-                case 4: {
-                    try {
-                        if (null == field_d) {
-                            statePc = 6;
-                        } else {
-                            statePc = 5;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_4) {
-                        caughtException = stateCaught_4;
-                        statePc = 13;
-                        continue stateLoop;
-                    }
-                }
-                case 5: {
-                    try {
-                        statePc = 7;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_5) {
-                        caughtException = stateCaught_5;
-                        statePc = 13;
-                        continue stateLoop;
-                    }
-                }
-                case 6: {
-                    try {
-                        field_d = "~/";
-                        statePc = 7;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_6) {
-                        caughtException = stateCaught_6;
-                        statePc = 13;
-                        continue stateLoop;
-                    }
-                }
-                case 7: {
-                    try {
-                        field_b = true;
-                        return;
-                    } catch (Throwable stateCaught_7) {
-                        caughtException = stateCaught_7;
-                        statePc = 13;
-                        continue stateLoop;
-                    }
-                }
-                case 8: {
-                    try {
-                        field_d = field_d + "/";
-                        statePc = 9;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_8) {
-                        caughtException = stateCaught_8;
-                        statePc = 13;
-                        continue stateLoop;
-                    }
-                }
-                case 9: {
-                    if (null == field_d) {
-                        statePc = 11;
-                    } else {
-                        statePc = 12;
-                    }
-                    continue stateLoop;
-                }
-                case 11: {
-                    field_d = "~/";
-                    statePc = 12;
-                    continue stateLoop;
-                }
-                case 12: {
-                    field_b = true;
-                    return;
-                }
-                case 13: {
-                    var3 = (Exception) (Object) caughtException;
-                    if (null == field_d) {
-                        statePc = 15;
-                    } else {
-                        statePc = 16;
-                    }
-                    continue stateLoop;
-                }
-                case 15: {
-                    field_d = "~/";
-                    statePc = 16;
-                    continue stateLoop;
-                }
-                case 16: {
-                    field_b = true;
-                    return;
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
-            }
+        Throwable decompiledCaughtException = null;
+        L0: {
+          if (param0 == 21747) {
+            break L0;
+          } else {
+            field_c = -58;
+            break L0;
+          }
         }
+        field_a = param1;
+        field_c = param2;
+        try {
+          L1: {
+            field_d = System.getProperty("user.home");
+            if (field_d != null) {
+              field_d = field_d + "/";
+              break L1;
+            } else {
+              L2: {
+                if (null == field_d) {
+                  field_d = "~/";
+                  break L2;
+                } else {
+                  break L2;
+                }
+              }
+              field_b = true;
+              return;
+            }
+          }
+        } catch (java.lang.Exception decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L3: {
+            var3 = (Exception) (Object) decompiledCaughtException;
+            if (null == field_d) {
+              field_d = "~/";
+              break L3;
+            } else {
+              break L3;
+            }
+          }
+          field_b = true;
+          return;
+        }
+        L4: {
+          if (null == field_d) {
+            field_d = "~/";
+            break L4;
+          } else {
+            break L4;
+          }
+        }
+        field_b = true;
     }
 
     public static File a(byte param0, String param1) {

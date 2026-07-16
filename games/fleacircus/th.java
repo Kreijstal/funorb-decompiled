@@ -399,7 +399,7 @@ final class th extends sh {
           }
           L6: {
             var6 = stackIn_31_0;
-            if (-257 < ((th) this).field_A) {
+            if (-257 < (((th) this).field_A ^ -1)) {
               L7: {
                 if (((th) this).field_F != null) {
                   break L7;
@@ -411,7 +411,7 @@ final class th extends sh {
                   }
                 }
               }
-              if (-257 != var4) {
+              if (-257 != (var4 ^ -1)) {
                 if ((var5 ^ -1) == -257) {
                   ((th) this).field_o.b(param0, param1, param2);
                   break L6;
@@ -421,7 +421,7 @@ final class th extends sh {
                       if (((th) this).field_q == null) {
                         break L9;
                       } else {
-                        if (var6 <= ((th) this).field_q.length) {
+                        if ((var6 ^ -1) >= (((th) this).field_q.length ^ -1)) {
                           dm.a(((th) this).field_q, 0, var6);
                           dm.a(((th) this).field_p, 0, var6);
                           break L8;
@@ -451,7 +451,7 @@ final class th extends sh {
                   var7 = stackIn_47_0;
                   var8 = 0;
                   L11: while (true) {
-                    if (var8 >= var6) {
+                    if ((var8 ^ -1) <= (var6 ^ -1)) {
                       break L6;
                     } else {
                       param0[var8 + var7] = param0[var8 + var7] + (var4 * ((th) this).field_q[var8] + ((th) this).field_p[var8] * var5 >> 1604844392);
@@ -472,7 +472,7 @@ final class th extends sh {
             if (((th) this).field_y == null) {
               break L12;
             } else {
-              if (((th) this).field_A != 0) {
+              if ((((th) this).field_A ^ -1) != -1) {
                 L13: {
                   L14: {
                     if (null == ((th) this).field_q) {
@@ -508,7 +508,7 @@ final class th extends sh {
                 var9 = -var8 + ((th) this).field_x;
                 var10 = 0;
                 L16: while (true) {
-                  if (var6 <= var10) {
+                  if ((var6 ^ -1) >= (var10 ^ -1)) {
                     break L12;
                   } else {
                     param0[var7 - -var10] = param0[var10 + var7] * var9 - -(((th) this).field_q[var10] * var8) >> 1513585096;

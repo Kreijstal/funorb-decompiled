@@ -253,8 +253,9 @@ final class jg extends am {
                           }
                         } else {
                           lp.field_g[var11] = lp.field_g[var8];
+                          int incrementValue$1 = var8;
                           var8++;
-                          lp.field_g[var8] = var12;
+                          lp.field_g[incrementValue$1] = var12;
                           if (var9 > var13) {
                             var9 = var13;
                             var11++;

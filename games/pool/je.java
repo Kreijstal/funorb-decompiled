@@ -106,7 +106,7 @@ final class je {
         var8 = param4;
         if (param2) {
           L0: {
-            // wide iinc 8 128
+            var8 += 128;
             var6.a(var8, param5);
             var6.a(param3, (byte) 0, 0, param3.length);
             stackOut_5_0 = (oq) var6;

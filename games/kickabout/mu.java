@@ -227,8 +227,9 @@ abstract class mu extends cm {
         if (param0 == -1) {
           if (((mu) this).field_X != null) {
             if (rv.field_e == ((mu) this).field_X) {
+              int fieldTemp$4 = ((mu) this).field_T + 1;
               ((mu) this).field_T = ((mu) this).field_T + 1;
-              if (((mu) this).field_W == ((mu) this).field_T + 1) {
+              if (((mu) this).field_W == fieldTemp$4) {
                 ((mu) this).field_X = bf.field_m;
                 ((mu) this).a((byte) -104, ((mu) this).field_U, ((mu) this).field_R + (12 + ((mu) this).field_V.field_i), 12 + ((mu) this).field_V.field_n);
                 ((mu) this).field_ab.field_F = 0;
@@ -240,8 +241,9 @@ abstract class mu extends cm {
               }
             } else {
               if (((mu) this).field_X == wn.field_b) {
+                int fieldTemp$5 = ((mu) this).field_T + 1;
                 ((mu) this).field_T = ((mu) this).field_T + 1;
-                if (((mu) this).field_T + 1 == ((mu) this).field_Z) {
+                if (fieldTemp$5 == ((mu) this).field_Z) {
                   ((mu) this).field_X = null;
                   ((mu) this).field_ab.field_F = 256;
                   return super.k(param0 + 0);
@@ -260,8 +262,9 @@ abstract class mu extends cm {
           ((mu) this).field_W = -80;
           if (((mu) this).field_X != null) {
             if (rv.field_e == ((mu) this).field_X) {
+              int fieldTemp$6 = ((mu) this).field_T + 1;
               ((mu) this).field_T = ((mu) this).field_T + 1;
-              if (((mu) this).field_W == ((mu) this).field_T + 1) {
+              if (((mu) this).field_W == fieldTemp$6) {
                 ((mu) this).field_X = bf.field_m;
                 ((mu) this).a((byte) -104, ((mu) this).field_U, ((mu) this).field_R + (12 + ((mu) this).field_V.field_i), 12 + ((mu) this).field_V.field_n);
                 ((mu) this).field_ab.field_F = 0;
@@ -273,8 +276,9 @@ abstract class mu extends cm {
               }
             } else {
               if (((mu) this).field_X == wn.field_b) {
+                int fieldTemp$7 = ((mu) this).field_T + 1;
                 ((mu) this).field_T = ((mu) this).field_T + 1;
-                if (((mu) this).field_T + 1 == ((mu) this).field_Z) {
+                if (fieldTemp$7 == ((mu) this).field_Z) {
                   ((mu) this).field_X = null;
                   ((mu) this).field_ab.field_F = 256;
                   return super.k(param0 + 0);

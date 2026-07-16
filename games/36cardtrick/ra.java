@@ -11,7 +11,7 @@ final class ra {
     final static void a(int param0, vg param1, byte param2, int param3) {
         dh.field_k = param0;
         if (param2 != -106) {
-            field_b = (cc) null;
+            field_b = null;
             ij.field_f = param1;
             eg.field_d = param3;
             return;

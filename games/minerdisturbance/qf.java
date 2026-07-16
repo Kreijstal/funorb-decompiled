@@ -104,8 +104,9 @@ final class qf extends pi {
                     var14 = var14 + var6;
                     var16 = 256 - var15;
                     if (var15 >= 0) {
+                      int incrementValue$1 = var9;
                       var9++;
-                      var17 = param2.field_n[255 & param2.field_m[var9]];
+                      var17 = param2.field_n[255 & param2.field_m[incrementValue$1]];
                       if (0 != var17) {
                         if (var15 > 255) {
                           eh.field_f[var8] = var17;

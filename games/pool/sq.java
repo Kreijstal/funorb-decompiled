@@ -213,10 +213,10 @@ abstract class sq {
           pa.field_I = td.field_f;
           if ((param2 ^ -1) != -256) {
             L2: {
-              if (param2 > -101) {
+              if ((param2 ^ -1) > -101) {
                 break L2;
               } else {
-                if (-106 >= param2) {
+                if (-106 <= (param2 ^ -1)) {
                   var4 = args;
                   gf.a(92, var4);
                   uf.field_gb = jo.a(args, 57);

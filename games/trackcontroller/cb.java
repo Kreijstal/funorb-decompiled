@@ -90,30 +90,47 @@ final class cb implements java.awt.event.MouseListener, java.awt.event.MouseMoti
     }
 
     final static void a(int param0, byte param1, int param2, int param3, qj[] param4, int param5) {
-        int var11 = TrackController.field_F ? 1 : 0;
-        if (param4 != null) {
-            // ifle L17
-        } else {
-            return;
+        int var6 = 0;
+        int var7 = 0;
+        int var8 = 0;
+        int var9 = 0;
+        int var10 = 0;
+        int var11 = 0;
+        L0: {
+          var11 = TrackController.field_F ? 1 : 0;
+          if (param4 == null) {
+            break L0;
+          } else {
+            if (param3 <= 0) {
+              break L0;
+            } else {
+              if (param1 < -101) {
+                var6 = param4[0].field_s;
+                var7 = param4[2].field_s;
+                var8 = param4[1].field_s;
+                param4[0].e(param5, param0, param2);
+                param4[2].e(-var7 + (param3 + param5), param0, param2);
+                ll.a(kk.field_g);
+                ll.b(param5 - -var6, param0, -var7 + param5 - -param3, param4[1].field_v + param0);
+                var9 = param5 - -var6;
+                var10 = param5 + (param3 - var7);
+                param5 = var9;
+                L1: while (true) {
+                  if (param5 >= var10) {
+                    ll.b(kk.field_g);
+                    return;
+                  } else {
+                    param4[1].e(param5, param0, param2);
+                    param5 = param5 + var8;
+                    continue L1;
+                  }
+                }
+              } else {
+                return;
+              }
+            }
+          }
         }
-        if (param1 >= -101) {
-            return;
-        }
-        int var6 = param4[0].field_s;
-        int var7 = param4[2].field_s;
-        int var8 = param4[1].field_s;
-        param4[0].e(param5, param0, param2);
-        param4[2].e(-var7 + (param3 + param5), param0, param2);
-        ll.a(kk.field_g);
-        ll.b(param5 - -var6, param0, -var7 + param5 - -param3, param4[1].field_v + param0);
-        int var9 = param5 - -var6;
-        int var10 = param5 + (param3 - var7);
-        param5 = var9;
-        while (param5 < var10) {
-            param4[1].e(param5, param0, param2);
-            param5 = param5 + var8;
-        }
-        ll.b(kk.field_g);
     }
 
     public final synchronized void mouseEntered(java.awt.event.MouseEvent param0) {
@@ -186,7 +203,7 @@ final class cb implements java.awt.event.MouseListener, java.awt.event.MouseMoti
           var2 = -37 / ((-10 - param0) / 56);
           var10 = ne.field_a;
           var3 = var10.h(16383);
-          if (var3 == -1) {
+          if ((var3 ^ -1) == -1) {
             var9 = (r) (Object) ne.field_b.b(2);
             if (var9 == null) {
               lj.a((byte) 113);
@@ -213,7 +230,7 @@ final class cb implements java.awt.event.MouseListener, java.awt.event.MouseMoti
               }
             }
           } else {
-            if (-2 == var3) {
+            if (-2 == (var3 ^ -1)) {
               var4 = var10.e((byte) 113);
               var5_ref_ei = (ei) (Object) fj.field_H.b(2);
               L2: while (true) {
@@ -221,7 +238,7 @@ final class cb implements java.awt.event.MouseListener, java.awt.event.MouseMoti
                   if (var5_ref_ei == null) {
                     break L3;
                   } else {
-                    if (var4 != var5_ref_ei.field_n) {
+                    if ((var4 ^ -1) != (var5_ref_ei.field_n ^ -1)) {
                       var5_ref_ei = (ei) (Object) fj.field_H.a(10);
                       continue L2;
                     } else {

@@ -7,105 +7,39 @@ final class u {
 
     final static boolean a(int param0) {
         RuntimeException var1 = null;
-        int stackIn_8_0 = 0;
-        int stackOut_5_0 = 0;
-        int stackOut_7_0 = 0;
-        int statePc = 0;
-        Throwable caughtException = null;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    try {
-                        if (param0 >= 72) {
-                            statePc = 4;
-                        } else {
-                            statePc = 1;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_0) {
-                        caughtException = stateCaught_0;
-                        statePc = 9;
-                        continue stateLoop;
-                    }
-                }
-                case 1: {
-                    try {
-                        u.a(-96, 16, 11, false, (int[]) null, (int[]) null, (int[]) null, (int[]) null, -65, (int[]) null, (int[]) null, -114, 112, (int[]) null, (byte[]) null, (int[]) null, (int[]) null, 52, (int[]) null, -56, (int[]) null, (eg) null, 52, (int[]) null);
-                        statePc = 2;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_1) {
-                        caughtException = stateCaught_1;
-                        statePc = 9;
-                        continue stateLoop;
-                    }
-                }
-                case 2: {
-                    try {
-                        statePc = 4;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_2) {
-                        caughtException = stateCaught_2;
-                        statePc = 9;
-                        continue stateLoop;
-                    }
-                }
-                case 4: {
-                    try {
-                        if (-251 <= (im.field_fc ^ -1)) {
-                            statePc = 7;
-                        } else {
-                            statePc = 5;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_4) {
-                        caughtException = stateCaught_4;
-                        statePc = 6;
-                        continue stateLoop;
-                    }
-                }
-                case 5: {
-                    try {
-                        stackOut_5_0 = 1;
-                        stackIn_8_0 = stackOut_5_0;
-                        statePc = 8;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_5) {
-                        caughtException = stateCaught_5;
-                        statePc = 6;
-                        continue stateLoop;
-                    }
-                }
-                case 6: {
-                    try {
-                        throw (RuntimeException) (Object) caughtException;
-                    } catch (Throwable stateCaught_6) {
-                        caughtException = stateCaught_6;
-                        statePc = 9;
-                        continue stateLoop;
-                    }
-                }
-                case 7: {
-                    try {
-                        stackOut_7_0 = 0;
-                        stackIn_8_0 = stackOut_7_0;
-                        statePc = 8;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_7) {
-                        caughtException = stateCaught_7;
-                        statePc = 9;
-                        continue stateLoop;
-                    }
-                }
-                case 8: {
-                    return stackIn_8_0 != 0;
-                }
-                case 9: {
-                    var1 = (RuntimeException) (Object) caughtException;
-                    throw wm.a((Throwable) (Object) var1, "u.C(" + param0 + 41);
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
+        int stackIn_7_0 = 0;
+        RuntimeException decompiledCaughtException = null;
+        int stackOut_6_0 = 0;
+        int stackOut_4_0 = 0;
+        try {
+          L0: {
+            L1: {
+              if (param0 >= 72) {
+                break L1;
+              } else {
+                u.a(-96, 16, 11, false, (int[]) null, (int[]) null, (int[]) null, (int[]) null, -65, (int[]) null, (int[]) null, -114, 112, (int[]) null, (byte[]) null, (int[]) null, (int[]) null, 52, (int[]) null, -56, (int[]) null, (eg) null, 52, (int[]) null);
+                break L1;
+              }
             }
+            L2: {
+              if (-251 <= (im.field_fc ^ -1)) {
+                stackOut_6_0 = 0;
+                stackIn_7_0 = stackOut_6_0;
+                break L2;
+              } else {
+                stackOut_4_0 = 1;
+                stackIn_7_0 = stackOut_4_0;
+                break L2;
+              }
+            }
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1 = decompiledCaughtException;
+          throw wm.a((Throwable) (Object) var1, "u.C(" + param0 + 41);
         }
+        return stackIn_7_0 != 0;
     }
 
     final static void a(int param0, int param1, int param2, boolean param3, int[] param4, int[] param5, int[] param6, int[] param7, int param8, int[] param9, int[] param10, int param11, int param12, int[] param13, byte[] param14, int[] param15, int[] param16, int param17, int[] param18, int param19, int[] param20, eg param21, int param22, int[] param23) {
@@ -216,7 +150,7 @@ final class u {
           if (param3) {
             break L5;
           } else {
-            vh discarded$1 = u.a((byte) 100, -4, 66, true, 88);
+            vh discarded$46 = u.a((byte) 100, -4, 66, true, 88);
             break L5;
           }
         }
@@ -535,9 +469,10 @@ final class u {
                                     L39: {
                                       var34 = var24[var39];
                                       if ((var34 ^ -1) > -1) {
+                                        int incrementValue$47 = var55;
                                         var55++;
-                                        var34 = var55;
-                                        var24[var39] = var55;
+                                        var34 = incrementValue$47;
+                                        var24[var39] = incrementValue$47;
                                         qp.field_Yb[var34] = var42;
                                         sa.field_r[var34] = var43;
                                         ro.field_d[var34] = var44;
@@ -561,9 +496,10 @@ final class u {
                                       if (-1 >= (var34 ^ -1)) {
                                         break L41;
                                       } else {
+                                        int incrementValue$48 = var56;
                                         var56++;
-                                        var34 = var56;
-                                        var25[var39] = var56;
+                                        var34 = incrementValue$48;
+                                        var25[var39] = incrementValue$48;
                                         eh.field_w[var34] = var42;
                                         mj.field_a[var34] = var43;
                                         sa.field_w[var34] = var44;
@@ -589,8 +525,9 @@ final class u {
                                         var63 = -var51 + var52;
                                         var59 = (-(var51 * var45) + var52 * var42) / var63;
                                         var60 = (-(var51 * var46) + var52 * var43) / var63;
+                                        int incrementValue$49 = var55;
                                         var55++;
-                                        var34 = var55;
+                                        var34 = incrementValue$49;
                                         var61 = (-(var47 * var51) + var44 * var52) / var63;
                                         var62 = (-(var51 * var36) + var52 * var35) / var63;
                                         qp.field_Yb[var34] = var59;
@@ -599,8 +536,9 @@ final class u {
                                         var26[var57 + 0] = var34;
                                         var26[var57 + 8] = var62;
                                         var57++;
+                                        int incrementValue$50 = var56;
                                         var56++;
-                                        var34 = var56;
+                                        var34 = incrementValue$50;
                                         eh.field_w[var34] = var59;
                                         mj.field_a[var34] = var60;
                                         sa.field_w[var34] = var61;
@@ -623,9 +561,10 @@ final class u {
                                       if (var34 >= 0) {
                                         break L44;
                                       } else {
+                                        int incrementValue$51 = var55;
                                         var55++;
-                                        var34 = var55;
-                                        var24[var40] = var55;
+                                        var34 = incrementValue$51;
+                                        var24[var40] = incrementValue$51;
                                         qp.field_Yb[var34] = var45;
                                         sa.field_r[var34] = var46;
                                         ro.field_d[var34] = var47;
@@ -645,9 +584,10 @@ final class u {
                                     L46: {
                                       var34 = var25[var40];
                                       if ((var34 ^ -1) > -1) {
+                                        int incrementValue$52 = var56;
                                         var56++;
-                                        var34 = var56;
-                                        var25[var40] = var56;
+                                        var34 = incrementValue$52;
+                                        var25[var40] = incrementValue$52;
                                         eh.field_w[var34] = var45;
                                         mj.field_a[var34] = var46;
                                         sa.field_w[var34] = var47;
@@ -673,8 +613,9 @@ final class u {
                                         var63 = -var52 + var53;
                                         var61 = (-(var52 * var50) + var53 * var47) / var63;
                                         var60 = (-(var49 * var52) + var53 * var46) / var63;
+                                        int incrementValue$53 = var55;
                                         var55++;
-                                        var34 = var55;
+                                        var34 = incrementValue$53;
                                         var62 = (var53 * var36 + -(var52 * var37)) / var63;
                                         var59 = (var53 * var45 + -(var48 * var52)) / var63;
                                         qp.field_Yb[var34] = var59;
@@ -682,8 +623,9 @@ final class u {
                                         ro.field_d[var34] = var61;
                                         var26[0 + var57] = var34;
                                         var26[var57 + 8] = var62;
+                                        int incrementValue$54 = var56;
                                         var56++;
-                                        var34 = var56;
+                                        var34 = incrementValue$54;
                                         var57++;
                                         eh.field_w[var34] = var59;
                                         mj.field_a[var34] = var60;
@@ -707,9 +649,10 @@ final class u {
                                       if (0 <= var34) {
                                         break L49;
                                       } else {
+                                        int incrementValue$55 = var55;
                                         var55++;
-                                        var34 = var55;
-                                        var24[var41] = var55;
+                                        var34 = incrementValue$55;
+                                        var24[var41] = incrementValue$55;
                                         qp.field_Yb[var34] = var48;
                                         sa.field_r[var34] = var49;
                                         ro.field_d[var34] = var50;
@@ -729,9 +672,10 @@ final class u {
                                     L51: {
                                       var34 = var25[var41];
                                       if (0 > var34) {
+                                        int incrementValue$56 = var56;
                                         var56++;
-                                        var34 = var56;
-                                        var25[var41] = var56;
+                                        var34 = incrementValue$56;
+                                        var25[var41] = incrementValue$56;
                                         eh.field_w[var34] = var48;
                                         mj.field_a[var34] = var49;
                                         sa.field_w[var34] = var50;
@@ -754,8 +698,9 @@ final class u {
                                       var63 = var51 - var53;
                                       var59 = (-(var42 * var53) + var48 * var51) / var63;
                                       var61 = (-(var44 * var53) + var50 * var51) / var63;
+                                      int incrementValue$57 = var55;
                                       var55++;
-                                      var34 = var55;
+                                      var34 = incrementValue$57;
                                       var62 = (var37 * var51 - var53 * var35) / var63;
                                       var60 = (-(var53 * var43) + var51 * var49) / var63;
                                       qp.field_Yb[var34] = var59;
@@ -764,8 +709,9 @@ final class u {
                                       var26[0 + var57] = var34;
                                       var26[8 - -var57] = var62;
                                       var57++;
+                                      int incrementValue$58 = var56;
                                       var56++;
-                                      var34 = var56;
+                                      var34 = incrementValue$58;
                                       eh.field_w[var34] = var59;
                                       mj.field_a[var34] = var60;
                                       sa.field_w[var34] = var61;
@@ -837,8 +783,9 @@ final class u {
                                   }
                                 }
                                 L56: {
+                                  int incrementValue$59 = var33;
                                   var33++;
-                                  var27[var33] = var38;
+                                  var27[incrementValue$59] = var38;
                                   if (4 != var57) {
                                     break L56;
                                   } else {
@@ -868,8 +815,9 @@ final class u {
                                         break L57;
                                       }
                                     }
+                                    int incrementValue$60 = var33;
                                     var33++;
-                                    var27[var33] = var38;
+                                    var27[incrementValue$60] = var38;
                                     var30++;
                                     break L56;
                                   }
@@ -934,8 +882,9 @@ final class u {
                                   }
                                 }
                                 L62: {
+                                  int incrementValue$61 = var33;
                                   var33++;
-                                  var28[var33] = var38;
+                                  var28[incrementValue$61] = var38;
                                   if (-5 == (var58 ^ -1)) {
                                     L63: {
                                       wn.field_d[var33] = var26[6];
@@ -963,8 +912,9 @@ final class u {
                                         break L63;
                                       }
                                     }
+                                    int incrementValue$62 = var33;
                                     var33++;
-                                    var28[var33] = var38;
+                                    var28[incrementValue$62] = var38;
                                     var32++;
                                     break L62;
                                   } else {
@@ -980,13 +930,15 @@ final class u {
                               }
                             }
                             L65: {
+                              int fieldTemp$63 = eq.field_R;
                               eq.field_R = eq.field_R + 1;
-                              var33 = eq.field_R;
+                              var33 = fieldTemp$63;
                               var34 = var25[var39];
                               if (var34 < 0) {
+                                int fieldTemp$64 = de.field_a;
                                 de.field_a = de.field_a + 1;
-                                var34 = de.field_a;
-                                var25[var39] = de.field_a;
+                                var34 = fieldTemp$64;
+                                var25[var39] = fieldTemp$64;
                                 eh.field_w[var34] = var42;
                                 mj.field_a[var34] = var43;
                                 sa.field_w[var34] = var44;
@@ -999,9 +951,10 @@ final class u {
                               wn.field_d[var33] = var34;
                               var34 = var25[var40];
                               if ((var34 ^ -1) > -1) {
+                                int fieldTemp$65 = de.field_a;
                                 de.field_a = de.field_a + 1;
-                                var34 = de.field_a;
-                                var25[var40] = de.field_a;
+                                var34 = fieldTemp$65;
+                                var25[var40] = fieldTemp$65;
                                 eh.field_w[var34] = var45;
                                 mj.field_a[var34] = var46;
                                 sa.field_w[var34] = var47;
@@ -1016,9 +969,10 @@ final class u {
                               if (0 <= var34) {
                                 break L67;
                               } else {
+                                int fieldTemp$66 = de.field_a;
                                 de.field_a = de.field_a + 1;
-                                var34 = de.field_a;
-                                var25[var41] = de.field_a;
+                                var34 = fieldTemp$66;
+                                var25[var41] = fieldTemp$66;
                                 eh.field_w[var34] = var48;
                                 mj.field_a[var34] = var49;
                                 sa.field_w[var34] = var50;
@@ -1045,13 +999,15 @@ final class u {
                           }
                         }
                         L69: {
+                          int fieldTemp$67 = uf.field_W;
                           uf.field_W = uf.field_W + 1;
-                          var33 = uf.field_W;
+                          var33 = fieldTemp$67;
                           var34 = var24[var39];
                           if (var34 < 0) {
+                            int fieldTemp$68 = nk.field_a;
                             nk.field_a = nk.field_a + 1;
-                            var34 = nk.field_a;
-                            var24[var39] = nk.field_a;
+                            var34 = fieldTemp$68;
+                            var24[var39] = fieldTemp$68;
                             qp.field_Yb[var34] = var42;
                             sa.field_r[var34] = var43;
                             ro.field_d[var34] = var44;
@@ -1064,9 +1020,10 @@ final class u {
                           hi.field_k[var33] = var34;
                           var34 = var24[var40];
                           if (var34 < 0) {
+                            int fieldTemp$69 = nk.field_a;
                             nk.field_a = nk.field_a + 1;
-                            var34 = nk.field_a;
-                            var24[var40] = nk.field_a;
+                            var34 = fieldTemp$69;
+                            var24[var40] = fieldTemp$69;
                             qp.field_Yb[var34] = var45;
                             sa.field_r[var34] = var46;
                             ro.field_d[var34] = var47;
@@ -1079,9 +1036,10 @@ final class u {
                           vn.field_h[var33] = var34;
                           var34 = var24[var41];
                           if (0 > var34) {
+                            int fieldTemp$70 = nk.field_a;
                             nk.field_a = nk.field_a + 1;
-                            var34 = nk.field_a;
-                            var24[var41] = nk.field_a;
+                            var34 = fieldTemp$70;
+                            var24[var41] = fieldTemp$70;
                             qp.field_Yb[var34] = var48;
                             sa.field_r[var34] = var49;
                             ro.field_d[var34] = var50;
@@ -1134,8 +1092,9 @@ final class u {
                       } else {
                         L76: {
                           L77: {
+                            byte[] fieldTemp$71 = param21.field_o;
                             kp.field_h.field_o = param21.field_o;
-                            gn.field_e.field_o = param21.field_o;
+                            gn.field_e.field_o = fieldTemp$71;
                             if (null == gn.field_e.field_p) {
                               break L77;
                             } else {
@@ -1187,9 +1146,10 @@ final class u {
                                           var33 = param21.field_p[var38];
                                           var34 = var24[var33];
                                           if (var34 < 0) {
+                                            int fieldTemp$72 = nk.field_a;
                                             nk.field_a = nk.field_a + 1;
-                                            var34 = nk.field_a;
-                                            var24[var33] = nk.field_a;
+                                            var34 = fieldTemp$72;
+                                            var24[var33] = fieldTemp$72;
                                             qp.field_Yb[var34] = param6[var33];
                                             sa.field_r[var34] = param13[var33];
                                             ro.field_d[var34] = param10[var33];
@@ -1202,9 +1162,10 @@ final class u {
                                           gn.field_e.field_p[var38] = (short)var34;
                                           var34 = var25[var33];
                                           if ((var34 ^ -1) > -1) {
+                                            int fieldTemp$73 = de.field_a;
                                             de.field_a = de.field_a + 1;
-                                            var34 = de.field_a;
-                                            var25[var33] = de.field_a;
+                                            var34 = fieldTemp$73;
+                                            var25[var33] = fieldTemp$73;
                                             eh.field_w[var34] = param6[var33];
                                             mj.field_a[var34] = param13[var33];
                                             sa.field_w[var34] = param10[var33];
@@ -1218,9 +1179,10 @@ final class u {
                                           var33 = param21.field_H[var38];
                                           var34 = var24[var33];
                                           if ((var34 ^ -1) > -1) {
+                                            int fieldTemp$74 = nk.field_a;
                                             nk.field_a = nk.field_a + 1;
-                                            var34 = nk.field_a;
-                                            var24[var33] = nk.field_a;
+                                            var34 = fieldTemp$74;
+                                            var24[var33] = fieldTemp$74;
                                             qp.field_Yb[var34] = param6[var33];
                                             sa.field_r[var34] = param13[var33];
                                             ro.field_d[var34] = param10[var33];
@@ -1233,9 +1195,10 @@ final class u {
                                           gn.field_e.field_H[var38] = (short)var34;
                                           var34 = var25[var33];
                                           if ((var34 ^ -1) > -1) {
+                                            int fieldTemp$75 = de.field_a;
                                             de.field_a = de.field_a + 1;
-                                            var34 = de.field_a;
-                                            var25[var33] = de.field_a;
+                                            var34 = fieldTemp$75;
+                                            var25[var33] = fieldTemp$75;
                                             eh.field_w[var34] = param6[var33];
                                             mj.field_a[var34] = param13[var33];
                                             sa.field_w[var34] = param10[var33];
@@ -1249,9 +1212,10 @@ final class u {
                                           var33 = param21.field_C[var38];
                                           var34 = var24[var33];
                                           if ((var34 ^ -1) > -1) {
+                                            int fieldTemp$76 = nk.field_a;
                                             nk.field_a = nk.field_a + 1;
-                                            var34 = nk.field_a;
-                                            var24[var33] = nk.field_a;
+                                            var34 = fieldTemp$76;
+                                            var24[var33] = fieldTemp$76;
                                             qp.field_Yb[var34] = param6[var33];
                                             sa.field_r[var34] = param13[var33];
                                             ro.field_d[var34] = param10[var33];
@@ -1266,9 +1230,10 @@ final class u {
                                           if (-1 >= (var34 ^ -1)) {
                                             break L90;
                                           } else {
+                                            int fieldTemp$77 = de.field_a;
                                             de.field_a = de.field_a + 1;
-                                            var34 = de.field_a;
-                                            var25[var33] = de.field_a;
+                                            var34 = fieldTemp$77;
+                                            var25[var33] = fieldTemp$77;
                                             eh.field_w[var34] = param6[var33];
                                             mj.field_a[var34] = param13[var33];
                                             sa.field_w[var34] = param10[var33];
@@ -1300,22 +1265,30 @@ final class u {
                                 }
                               }
                             }
+                            short[] fieldTemp$78 = param21.field_E;
                             kp.field_h.field_E = param21.field_E;
-                            gn.field_e.field_E = param21.field_E;
+                            gn.field_e.field_E = fieldTemp$78;
+                            short[] fieldTemp$79 = param21.field_T;
                             kp.field_h.field_T = param21.field_T;
-                            gn.field_e.field_T = param21.field_T;
+                            gn.field_e.field_T = fieldTemp$79;
+                            byte[] fieldTemp$80 = param21.field_F;
                             kp.field_h.field_F = param21.field_F;
-                            gn.field_e.field_F = param21.field_F;
+                            gn.field_e.field_F = fieldTemp$80;
+                            byte[] fieldTemp$81 = param21.field_j;
                             kp.field_h.field_j = param21.field_j;
-                            gn.field_e.field_j = param21.field_j;
+                            gn.field_e.field_j = fieldTemp$81;
+                            byte[] fieldTemp$82 = param21.field_R;
                             kp.field_h.field_R = param21.field_R;
-                            gn.field_e.field_R = param21.field_R;
+                            gn.field_e.field_R = fieldTemp$82;
+                            byte[] fieldTemp$83 = param21.field_i;
                             kp.field_h.field_i = param21.field_i;
-                            gn.field_e.field_i = param21.field_i;
+                            gn.field_e.field_i = fieldTemp$83;
+                            byte[] fieldTemp$84 = param21.field_z;
                             kp.field_h.field_z = param21.field_z;
-                            gn.field_e.field_z = param21.field_z;
+                            gn.field_e.field_z = fieldTemp$84;
+                            short[] fieldTemp$85 = param21.field_h;
                             kp.field_h.field_h = param21.field_h;
-                            gn.field_e.field_h = param21.field_h;
+                            gn.field_e.field_h = fieldTemp$85;
                             break L81;
                           }
                           if (var65 == 0) {
@@ -1374,9 +1347,10 @@ final class u {
                             if ((var34 ^ -1) <= -1) {
                               break L96;
                             } else {
+                              int fieldTemp$86 = nk.field_a;
                               nk.field_a = nk.field_a + 1;
-                              var34 = nk.field_a;
-                              var24[var33] = nk.field_a;
+                              var34 = fieldTemp$86;
+                              var24[var33] = fieldTemp$86;
                               qp.field_Yb[var34] = param6[var33];
                               sa.field_r[var34] = param13[var33];
                               ro.field_d[var34] = param10[var33];
@@ -1387,9 +1361,10 @@ final class u {
                             ve.field_w[var38] = var34;
                             var34 = var25[var33];
                             if (var34 < 0) {
+                              int fieldTemp$87 = de.field_a;
                               de.field_a = de.field_a + 1;
-                              var34 = de.field_a;
-                              var25[var33] = de.field_a;
+                              var34 = fieldTemp$87;
+                              var25[var33] = fieldTemp$87;
                               eh.field_w[var34] = param6[var33];
                               mj.field_a[var34] = param13[var33];
                               sa.field_w[var34] = param10[var33];
@@ -1405,9 +1380,10 @@ final class u {
                             if (-1 >= (var34 ^ -1)) {
                               break L98;
                             } else {
+                              int fieldTemp$88 = nk.field_a;
                               nk.field_a = nk.field_a + 1;
-                              var34 = nk.field_a;
-                              var24[var33] = nk.field_a;
+                              var34 = fieldTemp$88;
+                              var24[var33] = fieldTemp$88;
                               qp.field_Yb[var34] = param6[var33];
                               sa.field_r[var34] = param13[var33];
                               ro.field_d[var34] = param10[var33];
@@ -1420,9 +1396,10 @@ final class u {
                             if ((var34 ^ -1) <= -1) {
                               break L99;
                             } else {
+                              int fieldTemp$89 = de.field_a;
                               de.field_a = de.field_a + 1;
-                              var34 = de.field_a;
-                              var25[var33] = de.field_a;
+                              var34 = fieldTemp$89;
+                              var25[var33] = fieldTemp$89;
                               eh.field_w[var34] = param6[var33];
                               mj.field_a[var34] = param13[var33];
                               sa.field_w[var34] = param10[var33];
@@ -1436,9 +1413,10 @@ final class u {
                             if (0 <= var34) {
                               break L100;
                             } else {
+                              int fieldTemp$90 = nk.field_a;
                               nk.field_a = nk.field_a + 1;
-                              var34 = nk.field_a;
-                              var24[var33] = nk.field_a;
+                              var34 = fieldTemp$90;
+                              var24[var33] = fieldTemp$90;
                               qp.field_Yb[var34] = param6[var33];
                               sa.field_r[var34] = param13[var33];
                               ro.field_d[var34] = param10[var33];
@@ -1451,9 +1429,10 @@ final class u {
                             if ((var34 ^ -1) <= -1) {
                               break L101;
                             } else {
+                              int fieldTemp$91 = de.field_a;
                               de.field_a = de.field_a + 1;
-                              var34 = de.field_a;
-                              var25[var33] = de.field_a;
+                              var34 = fieldTemp$91;
+                              var25[var33] = fieldTemp$91;
                               eh.field_w[var34] = param6[var33];
                               mj.field_a[var34] = param13[var33];
                               sa.field_w[var34] = param10[var33];
@@ -1484,260 +1463,102 @@ final class u {
         dd var5 = null;
         RuntimeException var5_ref = null;
         vh var6 = null;
-        dd stackIn_8_0 = null;
+        dd stackIn_7_0 = null;
+        vh stackIn_8_0 = null;
         vh stackIn_10_0 = null;
+        vh stackIn_11_0 = null;
+        dd stackIn_11_1 = null;
         vh stackIn_12_0 = null;
-        vh stackIn_13_0 = null;
-        dd stackIn_13_1 = null;
         vh stackIn_14_0 = null;
+        vh stackIn_15_0 = null;
+        dd stackIn_15_1 = null;
         vh stackIn_16_0 = null;
-        vh stackIn_17_0 = null;
-        dd stackIn_17_1 = null;
-        vh stackIn_18_0 = null;
-        dd stackOut_5_0 = null;
-        dd stackOut_7_0 = null;
-        vh stackOut_9_0 = null;
+        RuntimeException decompiledCaughtException = null;
+        dd stackOut_6_0 = null;
+        dd stackOut_4_0 = null;
+        vh stackOut_7_0 = null;
         vh stackOut_10_0 = null;
         dd stackOut_10_1 = null;
-        vh stackOut_12_0 = null;
-        dd stackOut_12_1 = null;
-        vh stackOut_13_0 = null;
+        vh stackOut_8_0 = null;
+        dd stackOut_8_1 = null;
+        vh stackOut_11_0 = null;
         vh stackOut_14_0 = null;
         dd stackOut_14_1 = null;
-        vh stackOut_16_0 = null;
-        dd stackOut_16_1 = null;
-        vh stackOut_17_0 = null;
-        int statePc = 0;
-        Throwable caughtException = null;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    try {
-                        if (param0 > 53) {
-                            statePc = 4;
-                        } else {
-                            statePc = 1;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_0) {
-                        caughtException = stateCaught_0;
-                        statePc = 19;
-                        continue stateLoop;
-                    }
-                }
-                case 1: {
-                    try {
-                        u.a(-58, -76, -84, false, (int[]) null, (int[]) null, (int[]) null, (int[]) null, -35, (int[]) null, (int[]) null, -23, 17, (int[]) null, (byte[]) null, (int[]) null, (int[]) null, -54, (int[]) null, 18, (int[]) null, (eg) null, 89, (int[]) null);
-                        statePc = 2;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_1) {
-                        caughtException = stateCaught_1;
-                        statePc = 19;
-                        continue stateLoop;
-                    }
-                }
-                case 2: {
-                    try {
-                        statePc = 4;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_2) {
-                        caughtException = stateCaught_2;
-                        statePc = 19;
-                        continue stateLoop;
-                    }
-                }
-                case 4: {
-                    try {
-                        if (param3) {
-                            statePc = 7;
-                        } else {
-                            statePc = 5;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_4) {
-                        caughtException = stateCaught_4;
-                        statePc = 6;
-                        continue stateLoop;
-                    }
-                }
-                case 5: {
-                    try {
-                        stackOut_5_0 = hp.field_b;
-                        stackIn_8_0 = stackOut_5_0;
-                        statePc = 8;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_5) {
-                        caughtException = stateCaught_5;
-                        statePc = 6;
-                        continue stateLoop;
-                    }
-                }
-                case 6: {
-                    try {
-                        throw (RuntimeException) (Object) caughtException;
-                    } catch (Throwable stateCaught_6) {
-                        caughtException = stateCaught_6;
-                        statePc = 19;
-                        continue stateLoop;
-                    }
-                }
-                case 7: {
-                    try {
-                        stackOut_7_0 = bf.field_h;
-                        stackIn_8_0 = stackOut_7_0;
-                        statePc = 8;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_7) {
-                        caughtException = stateCaught_7;
-                        statePc = 19;
-                        continue stateLoop;
-                    }
-                }
-                case 8: {
-                    try {
-                        var5 = stackIn_8_0;
-                        var6 = new vh((long)param4, (vh) null, param1, param2, var5.field_z, var5.field_A, (String) null);
-                        statePc = 9;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_8) {
-                        caughtException = stateCaught_8;
-                        statePc = 19;
-                        continue stateLoop;
-                    }
-                }
-                case 9: {
-                    try {
-                        var6.field_hb = var5;
-                        stackOut_9_0 = (vh) var6;
-                        stackIn_12_0 = stackOut_9_0;
-                        stackIn_10_0 = stackOut_9_0;
-                        if (!param3) {
-                            statePc = 12;
-                        } else {
-                            statePc = 10;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_9) {
-                        caughtException = stateCaught_9;
-                        statePc = 11;
-                        continue stateLoop;
-                    }
-                }
-                case 10: {
-                    try {
-                        stackOut_10_0 = (vh) (Object) stackIn_10_0;
-                        stackOut_10_1 = ag.field_b;
-                        stackIn_13_0 = stackOut_10_0;
-                        stackIn_13_1 = stackOut_10_1;
-                        statePc = 13;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_10) {
-                        caughtException = stateCaught_10;
-                        statePc = 11;
-                        continue stateLoop;
-                    }
-                }
-                case 11: {
-                    try {
-                        throw (RuntimeException) (Object) caughtException;
-                    } catch (Throwable stateCaught_11) {
-                        caughtException = stateCaught_11;
-                        statePc = 19;
-                        continue stateLoop;
-                    }
-                }
-                case 12: {
-                    try {
-                        stackOut_12_0 = (vh) (Object) stackIn_12_0;
-                        stackOut_12_1 = gj.field_T;
-                        stackIn_13_0 = stackOut_12_0;
-                        stackIn_13_1 = stackOut_12_1;
-                        statePc = 13;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_12) {
-                        caughtException = stateCaught_12;
-                        statePc = 19;
-                        continue stateLoop;
-                    }
-                }
-                case 13: {
-                    try {
-                        stackIn_13_0.field_ab = stackIn_13_1;
-                        stackOut_13_0 = (vh) var6;
-                        stackIn_16_0 = stackOut_13_0;
-                        stackIn_14_0 = stackOut_13_0;
-                        if (param3) {
-                            statePc = 16;
-                        } else {
-                            statePc = 14;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_13) {
-                        caughtException = stateCaught_13;
-                        statePc = 15;
-                        continue stateLoop;
-                    }
-                }
-                case 14: {
-                    try {
-                        stackOut_14_0 = (vh) (Object) stackIn_14_0;
-                        stackOut_14_1 = eh.field_y;
-                        stackIn_17_0 = stackOut_14_0;
-                        stackIn_17_1 = stackOut_14_1;
-                        statePc = 17;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_14) {
-                        caughtException = stateCaught_14;
-                        statePc = 15;
-                        continue stateLoop;
-                    }
-                }
-                case 15: {
-                    try {
-                        throw (RuntimeException) (Object) caughtException;
-                    } catch (Throwable stateCaught_15) {
-                        caughtException = stateCaught_15;
-                        statePc = 19;
-                        continue stateLoop;
-                    }
-                }
-                case 16: {
-                    try {
-                        stackOut_16_0 = (vh) (Object) stackIn_16_0;
-                        stackOut_16_1 = wf.field_a;
-                        stackIn_17_0 = stackOut_16_0;
-                        stackIn_17_1 = stackOut_16_1;
-                        statePc = 17;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_16) {
-                        caughtException = stateCaught_16;
-                        statePc = 19;
-                        continue stateLoop;
-                    }
-                }
-                case 17: {
-                    try {
-                        stackIn_17_0.field_yb = stackIn_17_1;
-                        stackOut_17_0 = (vh) var6;
-                        stackIn_18_0 = stackOut_17_0;
-                        statePc = 18;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_17) {
-                        caughtException = stateCaught_17;
-                        statePc = 19;
-                        continue stateLoop;
-                    }
-                }
-                case 18: {
-                    return stackIn_18_0;
-                }
-                case 19: {
-                    var5_ref = (RuntimeException) (Object) caughtException;
-                    throw wm.a((Throwable) (Object) var5_ref, "u.A(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 41);
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
+        vh stackOut_12_0 = null;
+        dd stackOut_12_1 = null;
+        vh stackOut_15_0 = null;
+        try {
+          L0: {
+            L1: {
+              if (param0 > 53) {
+                break L1;
+              } else {
+                u.a(-58, -76, -84, false, (int[]) null, (int[]) null, (int[]) null, (int[]) null, -35, (int[]) null, (int[]) null, -23, 17, (int[]) null, (byte[]) null, (int[]) null, (int[]) null, -54, (int[]) null, 18, (int[]) null, (eg) null, 89, (int[]) null);
+                break L1;
+              }
             }
+            L2: {
+              if (param3) {
+                stackOut_6_0 = bf.field_h;
+                stackIn_7_0 = stackOut_6_0;
+                break L2;
+              } else {
+                stackOut_4_0 = hp.field_b;
+                stackIn_7_0 = stackOut_4_0;
+                break L2;
+              }
+            }
+            L3: {
+              var5 = stackIn_7_0;
+              var6 = new vh((long)param4, (vh) null, param1, param2, var5.field_z, var5.field_A, (String) null);
+              var6.field_hb = var5;
+              stackOut_7_0 = (vh) var6;
+              stackIn_10_0 = stackOut_7_0;
+              stackIn_8_0 = stackOut_7_0;
+              if (!param3) {
+                stackOut_10_0 = (vh) (Object) stackIn_10_0;
+                stackOut_10_1 = gj.field_T;
+                stackIn_11_0 = stackOut_10_0;
+                stackIn_11_1 = stackOut_10_1;
+                break L3;
+              } else {
+                stackOut_8_0 = (vh) (Object) stackIn_8_0;
+                stackOut_8_1 = ag.field_b;
+                stackIn_11_0 = stackOut_8_0;
+                stackIn_11_1 = stackOut_8_1;
+                break L3;
+              }
+            }
+            L4: {
+              stackIn_11_0.field_ab = stackIn_11_1;
+              stackOut_11_0 = (vh) var6;
+              stackIn_14_0 = stackOut_11_0;
+              stackIn_12_0 = stackOut_11_0;
+              if (param3) {
+                stackOut_14_0 = (vh) (Object) stackIn_14_0;
+                stackOut_14_1 = wf.field_a;
+                stackIn_15_0 = stackOut_14_0;
+                stackIn_15_1 = stackOut_14_1;
+                break L4;
+              } else {
+                stackOut_12_0 = (vh) (Object) stackIn_12_0;
+                stackOut_12_1 = eh.field_y;
+                stackIn_15_0 = stackOut_12_0;
+                stackIn_15_1 = stackOut_12_1;
+                break L4;
+              }
+            }
+            stackIn_15_0.field_yb = stackIn_15_1;
+            stackOut_15_0 = (vh) var6;
+            stackIn_16_0 = stackOut_15_0;
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var5_ref = decompiledCaughtException;
+          throw wm.a((Throwable) (Object) var5_ref, "u.A(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 41);
         }
+        return stackIn_16_0;
     }
 
     static {

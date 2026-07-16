@@ -1,6 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
+import java.lang.String;
+
 final class wf extends ma implements ha, mj {
     private String field_V;
     static km field_Q;
@@ -211,8 +213,7 @@ final class wf extends ma implements ha, mj {
                 break L6;
               }
             }
-            new fb((String) (Object) stackIn_18_3, (rg) null);
-            ((wf) this).field_O = (fb) (Object) stackIn_18_1;
+            ((wf) this).field_O = new fb(stackIn_18_3, (rg) null);
             if (!((wf) this).field_Y) {
               break L5;
             } else {
@@ -296,11 +297,13 @@ final class wf extends ma implements ha, mj {
           }
         }
         L13: {
-          var12 = new kg(10, ((wf) this).field_r, ((wf) this).field_y - 20, 25, (mf) (Object) ((wf) this).field_N, false, 80, 3, var7, 16777215, var8);
-          ((wf) this).b((mf) (Object) new kg(10, ((wf) this).field_r, ((wf) this).field_y - 20, 25, (mf) (Object) ((wf) this).field_N, false, 80, 3, var7, 16777215, var8), 95);
+          kg dupTemp$2 = new kg(10, ((wf) this).field_r, ((wf) this).field_y - 20, 25, (mf) (Object) ((wf) this).field_N, false, 80, 3, var7, 16777215, var8);
+          var12 = dupTemp$2;
+          ((wf) this).b((mf) (Object) dupTemp$2, 95);
           ((wf) this).field_r = ((wf) this).field_r + (((mf) (Object) var12).field_C - -5);
-          var13 = new kg(10, ((wf) this).field_r, ((wf) this).field_y - 20, 25, (mf) (Object) ((wf) this).field_U, false, 80, 3, var7, 16777215, di.field_Qb);
-          ((wf) this).b((mf) (Object) new kg(10, ((wf) this).field_r, ((wf) this).field_y - 20, 25, (mf) (Object) ((wf) this).field_U, false, 80, 3, var7, 16777215, di.field_Qb), 95);
+          kg dupTemp$3 = new kg(10, ((wf) this).field_r, ((wf) this).field_y - 20, 25, (mf) (Object) ((wf) this).field_U, false, 80, 3, var7, 16777215, di.field_Qb);
+          var13 = dupTemp$3;
+          ((wf) this).b((mf) (Object) dupTemp$3, 95);
           ((wf) this).field_r = ((wf) this).field_r + (5 + ((mf) (Object) var13).field_C);
           ((wf) this).field_M.field_p = (rg) this;
           if (null == ((wf) this).field_L) {
@@ -414,12 +417,27 @@ final class wf extends ma implements ha, mj {
     }
 
     private final void h(byte param0) {
-        if (!dc.a(124)) {
-            // if_icmple L61
-            // if_icmpge L61
+        int var2 = 0;
+        L0: {
+          L1: {
+            if (dc.a(124)) {
+              break L1;
+            } else {
+              if (-1 <= ((wf) this).field_N.field_v.length()) {
+                break L0;
+              } else {
+                if (-1 >= ((wf) this).field_U.field_v.length()) {
+                  break L0;
+                } else {
+                  break L1;
+                }
+              }
+            }
+          }
+          cb.a(82, ((wf) this).field_U.field_v, ((wf) this).field_N.field_v);
+          break L0;
         }
-        cb.a(82, ((wf) this).field_U.field_v, ((wf) this).field_N.field_v);
-        int var2 = 39 % ((-30 - param0) / 52);
+        var2 = 39 % ((-30 - param0) / 52);
     }
 
     public final void a(fb param0, int param1, int param2, int param3, int param4) {
@@ -557,47 +575,45 @@ final class wf extends ma implements ha, mj {
               }
             }
             L3: {
-              var3 = 0;
-              if (var1 != 0) {
-                if (-1 <= ol.field_R.field_h) {
-                  L4: {
-                    var3 = fi.field_c[ol.field_R.field_h];
-                    if ((var3 ^ -1) == -3) {
-                      break L4;
-                    } else {
-                      if (var3 != 5) {
-                        break L3;
+              L4: {
+                var3 = 0;
+                if (var1 == 0) {
+                  break L4;
+                } else {
+                  if (-1 < (ol.field_R.field_h ^ -1)) {
+                    break L4;
+                  } else {
+                    L5: {
+                      var3 = fi.field_c[ol.field_R.field_h];
+                      if ((var3 ^ -1) == -3) {
+                        break L5;
                       } else {
-                        break L4;
+                        if (var3 != 5) {
+                          break L3;
+                        } else {
+                          break L5;
+                        }
                       }
                     }
-                  }
-                  mh.b(13);
-                  break L3;
-                } else {
-                  if ((gm.field_f ^ -1) == -3) {
-                    break L3;
-                  } else {
-                    mh.b(13);
-                    break L3;
-                  }
-                }
-              } else {
-                if (var2 == 0) {
-                  break L3;
-                } else {
-                  if (gm.field_f == -3) {
-                    break L3;
-                  } else {
                     mh.b(13);
                     break L3;
                   }
                 }
               }
+              if (var2 == 0) {
+                break L3;
+              } else {
+                if ((gm.field_f ^ -1) == -3) {
+                  break L3;
+                } else {
+                  mh.b(13);
+                  break L3;
+                }
+              }
             }
-            L5: {
+            L6: {
               if (0 != var3) {
-                break L5;
+                break L6;
               } else {
                 if (gm.field_f == 2) {
                   var4 = -jg.field_M + ud.a(2);
@@ -605,24 +621,24 @@ final class wf extends ma implements ha, mj {
                   if (0 >= var6) {
                     qh.a(false, true, 5);
                     var3 = 2;
-                    break L5;
+                    break L6;
                   } else {
-                    break L5;
+                    break L6;
                   }
                 } else {
-                  break L5;
+                  break L6;
                 }
               }
             }
             return var3;
           } else {
-            L6: {
+            L7: {
               ol.field_R.c((byte) -42);
               if (ol.field_R.d((byte) 101)) {
                 var1 = 1;
-                break L6;
+                break L7;
               } else {
-                break L6;
+                break L7;
               }
             }
             if (13 == vg.field_a) {

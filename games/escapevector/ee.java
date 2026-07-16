@@ -17,11 +17,11 @@ final class ee {
           var6 = EscapeVector.field_A;
           var2 = 0;
           var3 = kb.field_d;
-          if (-6 < var3) {
+          if (-6 < (var3 ^ -1)) {
             var2 = 8192 * var3 * var3 / 1100;
             break L0;
           } else {
-            if (-106 <= var3) {
+            if (-106 >= (var3 ^ -1)) {
               if (var3 >= 120) {
                 break L0;
               } else {
@@ -63,9 +63,7 @@ final class ee {
                     break L4;
                   }
                 }
-                if (param1 < 46) {
-                  return;
-                } else {
+                if (param1 >= 46) {
                   L5: {
                     if (6 == param0) {
                       var4 = 1;
@@ -137,6 +135,8 @@ final class ee {
                   }
                   ka.field_c = tj.a((byte) 82, var2 * var5, var2 * var4);
                   return;
+                } else {
+                  return;
                 }
               }
             } else {
@@ -188,10 +188,8 @@ final class ee {
                   }
                 }
                 if (param0 != 7) {
-                  if (8 == param0) {
+                  if (8 != param0) {
                     L18: {
-                      var4 = -1;
-                      var5 = -1;
                       if ((param0 ^ -1) == -12) {
                         var4 = -1;
                         break L18;
@@ -239,6 +237,8 @@ final class ee {
                     return;
                   } else {
                     L23: {
+                      var4 = -1;
+                      var5 = -1;
                       if ((param0 ^ -1) == -12) {
                         var4 = -1;
                         break L23;
@@ -377,9 +377,7 @@ final class ee {
             break L36;
           }
         }
-        if (param1 < 46) {
-          return;
-        } else {
+        if (param1 >= 46) {
           L37: {
             if (6 == param0) {
               var4 = 1;
@@ -450,6 +448,8 @@ final class ee {
             }
           }
           ka.field_c = tj.a((byte) 82, var2 * var5, var2 * var4);
+          return;
+        } else {
           return;
         }
     }

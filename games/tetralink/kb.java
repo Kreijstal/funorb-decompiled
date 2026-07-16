@@ -65,8 +65,8 @@ final class kb extends mc {
         var3 = param0;
         if (var3 != 32) {
           if (-161 != (var3 ^ -1)) {
-            if (var3 != -96) {
-              if (-46 != var3) {
+            if ((var3 ^ -1) != -96) {
+              if (-46 != (var3 ^ -1)) {
                 if (var3 != 91) {
                   if (93 != var3) {
                     if ((var3 ^ -1) != -36) {
@@ -78,24 +78,28 @@ final class kb extends mc {
                                 if (192 != var3) {
                                   if (193 != var3) {
                                     if (-195 != (var3 ^ -1)) {
-                                      if (var3 != -197) {
-                                        if (-196 != var3) {
+                                      if ((var3 ^ -1) != -197) {
+                                        if (-196 == (var3 ^ -1)) {
+                                          return 'a';
+                                        } else {
                                           if (232 != var3) {
                                             if ((var3 ^ -1) != -234) {
                                               if (var3 != 234) {
                                                 if ((var3 ^ -1) != -236) {
                                                   if (200 != var3) {
                                                     if (201 != var3) {
-                                                      if (var3 != -203) {
-                                                        if (203 != var3) {
+                                                      if ((var3 ^ -1) != -203) {
+                                                        if (203 == var3) {
+                                                          return 'e';
+                                                        } else {
                                                           if (var3 != 237) {
-                                                            if (-239 != var3) {
+                                                            if (-239 != (var3 ^ -1)) {
                                                               if (239 != var3) {
                                                                 if (205 != var3) {
                                                                   if (var3 != 206) {
                                                                     if (207 != var3) {
-                                                                      if (-243 != var3) {
-                                                                        if (-244 != var3) {
+                                                                      if (-243 != (var3 ^ -1)) {
+                                                                        if (-244 != (var3 ^ -1)) {
                                                                           if (-245 != (var3 ^ -1)) {
                                                                             if (var3 != 246) {
                                                                               if (245 != var3) {
@@ -105,48 +109,51 @@ final class kb extends mc {
                                                                                       if (-215 != (var3 ^ -1)) {
                                                                                         if (213 != var3) {
                                                                                           if (249 != var3) {
-                                                                                            if (var3 != -251) {
-                                                                                              if (-252 != var3) {
-                                                                                                if (-253 != var3) {
+                                                                                            if ((var3 ^ -1) != -251) {
+                                                                                              if (-252 != (var3 ^ -1)) {
+                                                                                                if (-253 != (var3 ^ -1)) {
                                                                                                   if (var3 != 217) {
-                                                                                                    if (-219 != var3) {
-                                                                                                      if (-220 != (var3 ^ -1)) {
-                                                                                                        if (var3 != 220) {
-                                                                                                          if (var3 != 231) {
-                                                                                                            if (199 != var3) {
-                                                                                                              if (255 != var3) {
-                                                                                                                if (var3 != -377) {
-                                                                                                                  if (var3 != 241) {
-                                                                                                                    if (-210 != var3) {
-                                                                                                                      if (var3 != 223) {
-                                                                                                                        return Character.toLowerCase(param0);
+                                                                                                    if (-219 != (var3 ^ -1)) {
+                                                                                                      L0: {
+                                                                                                        if (-220 == (var3 ^ -1)) {
+                                                                                                          break L0;
+                                                                                                        } else {
+                                                                                                          if (var3 == 220) {
+                                                                                                            break L0;
+                                                                                                          } else {
+                                                                                                            if (var3 == 231) {
+                                                                                                              return 'c';
+                                                                                                            } else {
+                                                                                                              if (199 != var3) {
+                                                                                                                if (255 == var3) {
+                                                                                                                  return 'y';
+                                                                                                                } else {
+                                                                                                                  if ((var3 ^ -1) != -377) {
+                                                                                                                    if (var3 != 241) {
+                                                                                                                      if (-210 == (var3 ^ -1)) {
+                                                                                                                        return 'n';
                                                                                                                       } else {
-                                                                                                                        return 'b';
+                                                                                                                        if (var3 == 223) {
+                                                                                                                          return 'b';
+                                                                                                                        } else {
+                                                                                                                          return Character.toLowerCase(param0);
+                                                                                                                        }
                                                                                                                       }
                                                                                                                     } else {
                                                                                                                       return 'n';
                                                                                                                     }
                                                                                                                   } else {
-                                                                                                                    return 'n';
+                                                                                                                    return 'y';
                                                                                                                   }
-                                                                                                                } else {
-                                                                                                                  return 'y';
                                                                                                                 }
                                                                                                               } else {
-                                                                                                                return 'y';
+                                                                                                                return 'c';
                                                                                                               }
-                                                                                                            } else {
-                                                                                                              return 'c';
                                                                                                             }
-                                                                                                          } else {
-                                                                                                            return 'c';
                                                                                                           }
-                                                                                                        } else {
-                                                                                                          return 'u';
                                                                                                         }
-                                                                                                      } else {
-                                                                                                        return 'u';
                                                                                                       }
+                                                                                                      return 'u';
                                                                                                     } else {
                                                                                                       return 'u';
                                                                                                     }
@@ -213,8 +220,6 @@ final class kb extends mc {
                                                           } else {
                                                             return 'i';
                                                           }
-                                                        } else {
-                                                          return 'e';
                                                         }
                                                       } else {
                                                         return 'e';
@@ -237,8 +242,6 @@ final class kb extends mc {
                                           } else {
                                             return 'e';
                                           }
-                                        } else {
-                                          return 'a';
                                         }
                                       } else {
                                         return 'a';

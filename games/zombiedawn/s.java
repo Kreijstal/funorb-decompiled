@@ -57,11 +57,16 @@ final class s extends le {
             lg.field_u = param0;
             if (null != jm.field_B.field_b) {
               try {
-                ce.field_t = new sf(jm.field_B.field_b, 64, 0);
-              } catch (java.io.IOException decompiledCaughtParameter) {
-                decompiledCaughtException = decompiledCaughtParameter;
-                return;
+                L2: {
+                  ce.field_t = new sf(jm.field_B.field_b, 64, 0);
+                  break L2;
+                }
+              } catch (java.io.IOException decompiledCaughtParameter0) {
+                decompiledCaughtException = decompiledCaughtParameter0;
+                var16 = (IOException) (Object) decompiledCaughtException;
+                throw new RuntimeException(var16.toString());
               }
+              return;
             } else {
               return;
             }
@@ -236,8 +241,9 @@ final class s extends le {
                       }
                     }
                     qb.a(false, var4 * wc.field_Rb >> 1938762664);
+                    int fieldTemp$3 = wi.field_e;
                     wi.field_e = wi.field_e - 1;
-                    if (0 >= wi.field_e) {
+                    if (0 >= fieldTemp$3) {
                       qj.field_f = kh.a(63, false);
                       wi.field_e = 20;
                       break L1;
@@ -455,8 +461,9 @@ final class s extends le {
                       }
                     }
                     qb.a(false, var4 * wc.field_Rb >> 1938762664);
+                    int fieldTemp$4 = wi.field_e;
                     wi.field_e = wi.field_e - 1;
-                    if (0 >= wi.field_e) {
+                    if (0 >= fieldTemp$4) {
                       qj.field_f = kh.a(63, false);
                       wi.field_e = 20;
                       break L13;
@@ -683,8 +690,9 @@ final class s extends le {
                     }
                   }
                   qb.a(false, var4 * wc.field_Rb >> 1938762664);
+                  int fieldTemp$5 = wi.field_e;
                   wi.field_e = wi.field_e - 1;
-                  if (0 >= wi.field_e) {
+                  if (0 >= fieldTemp$5) {
                     qj.field_f = kh.a(63, false);
                     wi.field_e = 20;
                     break L26;
@@ -773,7 +781,7 @@ final class s extends le {
         int var6_int = 0;
         StringBuilder var6 = null;
         int var7 = 0;
-        String var7_ref = null;
+        String var7_ref_String = null;
         int var8 = 0;
         String var9 = null;
         int var10 = 0;
@@ -799,8 +807,8 @@ final class s extends le {
                   }
                 }
               }
-              var7_ref = param1.substring(var6_int - -2, var5);
-              if (sj.a((byte) 126, (CharSequence) (Object) var7_ref)) {
+              var7_ref_String = param1.substring(var6_int - -2, var5);
+              if (sj.a((byte) 126, (CharSequence) (Object) var7_ref_String)) {
                 if (var5 >= var3) {
                   continue L0;
                 } else {
@@ -808,7 +816,7 @@ final class s extends le {
                     continue L0;
                   } else {
                     var5++;
-                    var8 = ra.a((CharSequence) (Object) var7_ref, 122);
+                    var8 = ra.a((CharSequence) (Object) var7_ref_String, 122);
                     var4 = var4 + (param2[var8].length() + (-var5 + var6_int));
                     continue L0;
                   }

@@ -42,139 +42,45 @@ final class la extends l {
     final static void a(int param0, int param1, boolean param2, sc param3) {
         Object var4 = null;
         Throwable var5 = null;
-        int statePc = 0;
-        Throwable caughtException = null;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    if (null == wc.field_f) {
-                        statePc = 2;
+        Throwable decompiledCaughtException = null;
+        L0: {
+          if (null == wc.field_f) {
+            break L0;
+          } else {
+            wl.a(1048576, param0 + -10509, param1, param3, param2);
+            break L0;
+          }
+        }
+        if (param0 == -1) {
+          if (vg.field_B != null) {
+            var4 = (Object) (Object) ae.field_g;
+            synchronized (var4) {
+              L1: {
+                vg.field_B.a(param1, true, -1);
+                if (param3 != qi.field_b) {
+                  L2: {
+                    vg.field_B.c(false);
+                    ae.field_g.h();
+                    qi.field_b = param3;
+                    if (null == qi.field_b) {
+                      break L2;
                     } else {
-                        statePc = 1;
+                      vg.field_B.a(param2, 37, qi.field_b);
+                      break L2;
                     }
-                    continue stateLoop;
+                  }
+                  break L1;
+                } else {
+                  return;
                 }
-                case 1: {
-                    wl.a(1048576, param0 + -10509, param1, param3, param2);
-                    statePc = 2;
-                    continue stateLoop;
-                }
-                case 2: {
-                    if (param0 == -1) {
-                        statePc = 4;
-                    } else {
-                        statePc = 3;
-                    }
-                    continue stateLoop;
-                }
-                case 3: {
-                    return;
-                }
-                case 4: {
-                    if (vg.field_B != null) {
-                        statePc = 6;
-                    } else {
-                        statePc = 5;
-                    }
-                    continue stateLoop;
-                }
-                case 5: {
-                    return;
-                }
-                case 6: {
-                    var4 = (Object) (Object) ae.field_g;
-                    // monitorenter ae.field_g
-                    statePc = 7;
-                    continue stateLoop;
-                }
-                case 7: {
-                    try {
-                        vg.field_B.a(param1, true, -1);
-                        if (param3 != qi.field_b) {
-                            statePc = 10;
-                        } else {
-                            statePc = 8;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_7) {
-                        caughtException = stateCaught_7;
-                        statePc = 14;
-                        continue stateLoop;
-                    }
-                }
-                case 8: {
-                    try {
-                        // monitorexit var4
-                        statePc = 9;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_8) {
-                        caughtException = stateCaught_8;
-                        statePc = 14;
-                        continue stateLoop;
-                    }
-                }
-                case 9: {
-                    return;
-                }
-                case 10: {
-                    try {
-                        vg.field_B.c(false);
-                        ae.field_g.h();
-                        qi.field_b = param3;
-                        if (null == qi.field_b) {
-                            statePc = 12;
-                        } else {
-                            statePc = 11;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_10) {
-                        caughtException = stateCaught_10;
-                        statePc = 14;
-                        continue stateLoop;
-                    }
-                }
-                case 11: {
-                    try {
-                        vg.field_B.a(param2, 37, qi.field_b);
-                        statePc = 12;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_11) {
-                        caughtException = stateCaught_11;
-                        statePc = 14;
-                        continue stateLoop;
-                    }
-                }
-                case 12: {
-                    try {
-                        // monitorexit var4
-                        statePc = 13;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_12) {
-                        caughtException = stateCaught_12;
-                        statePc = 14;
-                        continue stateLoop;
-                    }
-                }
-                case 13: {
-                    return;
-                }
-                case 14: {
-                    try {
-                        var5 = caughtException;
-                        // monitorexit var4
-                        statePc = 15;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_14) {
-                        caughtException = stateCaught_14;
-                        statePc = 14;
-                        continue stateLoop;
-                    }
-                }
-                case 15: {
-                    throw (RuntimeException) (Object) var5;
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
+              }
             }
+            return;
+          } else {
+            return;
+          }
+        } else {
+          return;
         }
     }
 

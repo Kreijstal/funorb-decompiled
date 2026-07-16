@@ -28,25 +28,25 @@ final class ak extends gn {
                   if (-13 == (param0.field_c ^ -1)) {
                     break L0;
                   } else {
-                    if (param0.field_c == -2) {
+                    if ((param0.field_c ^ -1) == -2) {
                       break L0;
                     } else {
                       if (2 == param0.field_c) {
                         break L0;
                       } else {
-                        if (-4 == param0.field_c) {
+                        if (-4 == (param0.field_c ^ -1)) {
                           break L0;
                         } else {
                           if (4 == param0.field_c) {
                             break L0;
                           } else {
-                            if (-6 == param0.field_c) {
+                            if (-6 == (param0.field_c ^ -1)) {
                               break L0;
                             } else {
                               if (6 == param0.field_c) {
                                 break L0;
                               } else {
-                                if (-9 == param0.field_c) {
+                                if (-9 == (param0.field_c ^ -1)) {
                                   break L0;
                                 } else {
                                   if (18 == param0.field_c) {
@@ -58,15 +58,18 @@ final class ak extends gn {
                                       if (param0.field_c == 26) {
                                         break L0;
                                       } else {
-                                        if (-1 == param0.field_c) {
-                                          if (ja.field_O) {
-                                            return dt.b((byte) -75);
+                                        L1: {
+                                          if (-1 != param0.field_c) {
+                                            break L1;
                                           } else {
-                                            return 0;
+                                            if (!ja.field_O) {
+                                              break L1;
+                                            } else {
+                                              return dt.b((byte) -75);
+                                            }
                                           }
-                                        } else {
-                                          return 0;
                                         }
+                                        return 0;
                                       }
                                     }
                                   }
@@ -89,46 +92,49 @@ final class ak extends gn {
             if (17 != param0.field_c) {
               if (13 != param0.field_c) {
                 if (-13 != (param0.field_c ^ -1)) {
-                  L1: {
-                    if (param0.field_c == -2) {
-                      break L1;
+                  L2: {
+                    if ((param0.field_c ^ -1) == -2) {
+                      break L2;
                     } else {
                       if (2 == param0.field_c) {
-                        break L1;
+                        break L2;
                       } else {
-                        if (-4 == param0.field_c) {
-                          break L1;
+                        if (-4 == (param0.field_c ^ -1)) {
+                          break L2;
                         } else {
                           if (4 == param0.field_c) {
-                            break L1;
+                            break L2;
                           } else {
-                            if (-6 == param0.field_c) {
-                              break L1;
+                            if (-6 == (param0.field_c ^ -1)) {
+                              break L2;
                             } else {
                               if (6 == param0.field_c) {
-                                break L1;
+                                break L2;
                               } else {
-                                if (-9 == param0.field_c) {
-                                  break L1;
+                                if (-9 == (param0.field_c ^ -1)) {
+                                  break L2;
                                 } else {
                                   if (18 == param0.field_c) {
-                                    break L1;
+                                    break L2;
                                   } else {
                                     if ((param0.field_c ^ -1) == 4) {
-                                      break L1;
+                                      break L2;
                                     } else {
                                       if (param0.field_c == 26) {
-                                        break L1;
+                                        break L2;
                                       } else {
-                                        if (-1 == param0.field_c) {
-                                          if (ja.field_O) {
-                                            return dt.b((byte) -75);
+                                        L3: {
+                                          if (-1 != param0.field_c) {
+                                            break L3;
                                           } else {
-                                            return 0;
+                                            if (!ja.field_O) {
+                                              break L3;
+                                            } else {
+                                              return dt.b((byte) -75);
+                                            }
                                           }
-                                        } else {
-                                          return 0;
                                         }
+                                        return 0;
                                       }
                                     }
                                   }

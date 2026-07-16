@@ -45,11 +45,11 @@ final class vl extends em {
         }
         L1: {
           if (param0.field_nb == bd.field_j) {
-            // wide iinc 3 -200
+            var3 -= 200;
             break L1;
           } else {
             if (param0.field_nb == null) {
-              // wide iinc 3 200
+              var3 += 200;
               break L1;
             } else {
               break L1;
@@ -57,9 +57,10 @@ final class vl extends em {
           }
         }
         if (bd.field_j != param1.field_nb) {
-          if (null != param1.field_nb) {
+          if (null == param1.field_nb) {
             L2: {
-              if (-1 >= var3) {
+              var3 -= 200;
+              if (-1 <= (var3 ^ -1)) {
                 stackOut_19_0 = 0;
                 stackIn_20_0 = stackOut_19_0;
                 break L2;
@@ -72,8 +73,7 @@ final class vl extends em {
             return stackIn_20_0 != 0;
           } else {
             L3: {
-              // wide iinc 3 -200
-              if (-1 <= var3) {
+              if (-1 <= (var3 ^ -1)) {
                 stackOut_15_0 = 0;
                 stackIn_16_0 = stackOut_15_0;
                 break L3;
@@ -87,8 +87,8 @@ final class vl extends em {
           }
         } else {
           L4: {
-            // wide iinc 3 200
-            if (-1 <= var3) {
+            var3 += 200;
+            if (-1 <= (var3 ^ -1)) {
               stackOut_10_0 = 0;
               stackIn_11_0 = stackOut_10_0;
               break L4;

@@ -78,35 +78,52 @@ final class bo {
     }
 
     final gl a(pb param0, byte param1, int param2, pb param3, boolean param4) {
-        if (null == ((bo) this).field_h) {
-            throw new RuntimeException();
-        }
-        if (param2 >= 0) {
-            // if_icmpge L32
+        int var6 = 0;
+        int var7 = 0;
+        gl var9 = null;
+        byte[] var11 = null;
+        if (null != ((bo) this).field_h) {
+          L0: {
+            if (param2 < 0) {
+              break L0;
+            } else {
+              if (param2 >= ((bo) this).field_f.length) {
+                break L0;
+              } else {
+                if (((bo) this).field_f[param2] != null) {
+                  return ((bo) this).field_f[param2];
+                } else {
+                  L1: {
+                    ((bo) this).field_h.field_n = param2 * 72 - -6;
+                    var6 = ((bo) this).field_h.c((byte) -127);
+                    var7 = ((bo) this).field_h.c((byte) -49);
+                    var11 = new byte[64];
+                    ((bo) this).field_h.a(48, 64, var11, 0);
+                    var9 = new gl(param2, param0, param3, ((bo) this).field_g, ((bo) this).field_c, var6, var11, var7, param4);
+                    ((bo) this).field_f[param2] = var9;
+                    if (param1 == 101) {
+                      break L1;
+                    } else {
+                      field_k = -42;
+                      break L1;
+                    }
+                  }
+                  return var9;
+                }
+              }
+            }
+          }
+          throw new RuntimeException();
         } else {
-            throw new RuntimeException();
+          throw new RuntimeException();
         }
-        if (!(((bo) this).field_f[param2] == null)) {
-            return ((bo) this).field_f[param2];
-        }
-        ((bo) this).field_h.field_n = param2 * 72 - -6;
-        int var6 = ((bo) this).field_h.c((byte) -127);
-        int var7 = ((bo) this).field_h.c((byte) -49);
-        byte[] var11 = new byte[64];
-        ((bo) this).field_h.a(48, 64, var11, 0);
-        gl var9 = new gl(param2, param0, param3, ((bo) this).field_g, ((bo) this).field_c, var6, var11, var7, param4);
-        ((bo) this).field_f[param2] = var9;
-        if (param1 != 101) {
-            field_k = -42;
-        }
-        return var9;
     }
 
     final boolean a(byte param0) {
         int var3 = 0;
         byte[] var4 = null;
         byte[] var5 = null;
-        java.math.BigInteger var7_ref = null;
+        java.math.BigInteger var7_ref_java_math_BigInteger = null;
         int var7 = 0;
         int var8 = 0;
         fj var10 = null;
@@ -160,8 +177,8 @@ final class bo {
                     break L3;
                   } else {
                     var12 = new java.math.BigInteger(var16);
-                    var7_ref = var12.modPow(((bo) this).field_j, ((bo) this).field_a);
-                    var5 = var7_ref.toByteArray();
+                    var7_ref_java_math_BigInteger = var12.modPow(((bo) this).field_j, ((bo) this).field_a);
+                    var5 = var7_ref_java_math_BigInteger.toByteArray();
                     break L2;
                   }
                 }

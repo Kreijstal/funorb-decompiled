@@ -48,24 +48,24 @@ final class rj implements uj {
                 cm.field_r = 0;
                 return;
               } else {
-                if (-3 != var2) {
-                  if (-2 != var2) {
+                if (-3 != (var2 ^ -1)) {
+                  if (-2 != (var2 ^ -1)) {
                     if ((var2 ^ -1) != -12) {
                       if (var2 != 7) {
                         if ((var2 ^ -1) != -11) {
-                          if (3 != var2) {
-                            if (12 != var2) {
-                              cm.field_r = 0;
-                              return;
-                            } else {
-                              ne.a(4, -90);
-                              cm.field_r = 0;
-                              return;
-                            }
-                          } else {
+                          if (3 == var2) {
                             ne.a(4, -90);
                             cm.field_r = 0;
                             return;
+                          } else {
+                            if (12 == var2) {
+                              ne.a(4, -90);
+                              cm.field_r = 0;
+                              return;
+                            } else {
+                              cm.field_r = 0;
+                              return;
+                            }
                           }
                         } else {
                           ke.field_V = false;

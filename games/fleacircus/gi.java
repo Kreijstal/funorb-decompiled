@@ -145,8 +145,9 @@ abstract class gi {
                         }
                       } else {
                         mh.field_y[var11] = mh.field_y[var8];
+                        int incrementValue$1 = var8;
                         var8++;
-                        mh.field_y[var8] = var12;
+                        mh.field_y[incrementValue$1] = var12;
                         if (var9 > var13) {
                           var9 = var13;
                           var11++;

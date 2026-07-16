@@ -28,47 +28,108 @@ class ch extends ng implements j {
     }
 
     boolean a(int param0, int param1, ng param2, char param3) {
-        int var7 = Pixelate.field_H ? 1 : 0;
-        nm var9 = new nm(((ch) this).field_F);
-        ng var8 = (ng) (Object) var9.d(0);
-        while (var8 != null) {
-            // ifeq L84
-            if (var8.b(true)) {
-                if (var8.a(param0, param1 + 0, param2, param3)) {
-                    return true;
+        int var6 = 0;
+        int var7 = 0;
+        ng var8 = null;
+        nm var9 = null;
+        boolean stackIn_12_0 = false;
+        boolean stackOut_11_0 = false;
+        boolean stackOut_10_0 = false;
+        var7 = Pixelate.field_H ? 1 : 0;
+        var9 = new nm(((ch) this).field_F);
+        var8 = (ng) (Object) var9.d(0);
+        L0: while (true) {
+          L1: {
+            if (var8 == null) {
+              break L1;
+            } else {
+              if (!var8.b(0)) {
+                break L1;
+              } else {
+                L2: {
+                  if (!var8.b(true)) {
+                    break L2;
+                  } else {
+                    if (!var8.a(param0, param1 + 0, param2, param3)) {
+                      break L2;
+                    } else {
+                      return true;
+                    }
+                  }
                 }
+                var8 = (ng) (Object) var9.a((byte) -104);
+                continue L0;
+              }
             }
-            var8 = (ng) (Object) var9.a((byte) -104);
+          }
+          var6 = param0;
+          if (80 == var6) {
+            L3: {
+              if (!bc.field_m[81]) {
+                stackOut_11_0 = ((ch) this).b(10, param2);
+                stackIn_12_0 = stackOut_11_0;
+                break L3;
+              } else {
+                stackOut_10_0 = ((ch) this).a(0, param2);
+                stackIn_12_0 = stackOut_10_0;
+                break L3;
+              }
+            }
+            return stackIn_12_0;
+          } else {
+            if (param1 == 3) {
+              return false;
+            } else {
+              field_H = null;
+              return false;
+            }
+          }
         }
-        int var6 = param0;
-        if (!(80 != var6)) {
-            return bc.field_m[81] ? ((ch) this).a(0, param2) : ((ch) this).b(10, param2);
-        }
-        if (param1 != 3) {
-            field_H = null;
-            return false;
-        }
-        return false;
     }
 
     final boolean a(int param0, byte param1, int param2, int param3, int param4, int param5, ng param6) {
-        int var10 = Pixelate.field_H ? 1 : 0;
-        if (param1 <= 61) {
-            Object var11 = null;
+        ng var9 = null;
+        int var10 = 0;
+        Object var11 = null;
+        nm var12 = null;
+        L0: {
+          var10 = Pixelate.field_H ? 1 : 0;
+          if (param1 > 61) {
+            break L0;
+          } else {
+            var11 = null;
             this.a(95, (Hashtable) null, -28, (StringBuilder) null);
+            break L0;
+          }
         }
-        nm var12 = new nm(((ch) this).field_F);
-        ng var9 = (ng) (Object) var12.d(0);
-        while (var9 != null) {
-            // ifeq L120
-            if (var9.b(true)) {
-                if (!(!var9.a(param0, (byte) 112, param2, param3, param4, param5, param6))) {
-                    return true;
+        var12 = new nm(((ch) this).field_F);
+        var9 = (ng) (Object) var12.d(0);
+        L1: while (true) {
+          L2: {
+            if (var9 == null) {
+              break L2;
+            } else {
+              if (!var9.b(0)) {
+                break L2;
+              } else {
+                L3: {
+                  if (!var9.b(true)) {
+                    break L3;
+                  } else {
+                    if (var9.a(param0, (byte) 112, param2, param3, param4, param5, param6)) {
+                      return true;
+                    } else {
+                      break L3;
+                    }
+                  }
                 }
+                var9 = (ng) (Object) var12.a((byte) -104);
+                continue L1;
+              }
             }
-            var9 = (ng) (Object) var12.a((byte) -104);
+          }
+          return false;
         }
-        return false;
     }
 
     final boolean a(int param0, ng param1) {
@@ -98,14 +159,28 @@ class ch extends ng implements j {
     }
 
     void a(int param0, int param1, int param2, ng param3) {
-        int var7 = Pixelate.field_H ? 1 : 0;
+        nm var5 = null;
+        ng var6 = null;
+        int var7 = 0;
+        var7 = Pixelate.field_H ? 1 : 0;
         super.a(param0, param1, param2, param3);
-        nm var5 = new nm(((ch) this).field_F);
-        ng var6 = (ng) (Object) var5.d(0);
-        while (var6 != null) {
-            // ifeq L92
-            var6.a(40, param1 - -((ch) this).field_p, param2 + ((ch) this).field_z, param3);
-            var6 = (ng) (Object) var5.a((byte) -104);
+        var5 = new nm(((ch) this).field_F);
+        var6 = (ng) (Object) var5.d(0);
+        L0: while (true) {
+          L1: {
+            if (var6 == null) {
+              break L1;
+            } else {
+              if (!var6.b(param0 + -40)) {
+                break L1;
+              } else {
+                var6.a(40, param1 - -((ch) this).field_p, param2 + ((ch) this).field_z, param3);
+                var6 = (ng) (Object) var5.a((byte) -104);
+                continue L0;
+              }
+            }
+          }
+          return;
         }
     }
 
@@ -162,21 +237,41 @@ class ch extends ng implements j {
     }
 
     final boolean a(byte param0, ng param1, int param2, int param3, int param4, int param5, int param6) {
-        int var10 = Pixelate.field_H ? 1 : 0;
-        nm var12 = new nm(((ch) this).field_F);
-        if (param0 != -58) {
-            Object var11 = null;
+        ng var9 = null;
+        int var10 = 0;
+        Object var11 = null;
+        nm var12 = null;
+        L0: {
+          var10 = Pixelate.field_H ? 1 : 0;
+          var12 = new nm(((ch) this).field_F);
+          if (param0 == -58) {
+            break L0;
+          } else {
+            var11 = null;
             this.a(-76, (Hashtable) null, 78, (StringBuilder) null);
+            break L0;
+          }
         }
-        ng var9 = (ng) (Object) var12.d(0);
-        while (var9 != null) {
-            // ifeq L121
-            if (!(!var9.a((byte) -58, param1, param2, ((ch) this).field_p + param3, param4, ((ch) this).field_z + param5, param6))) {
-                return true;
+        var9 = (ng) (Object) var12.d(0);
+        L1: while (true) {
+          L2: {
+            if (var9 == null) {
+              break L2;
+            } else {
+              if (!var9.b(0)) {
+                break L2;
+              } else {
+                if (var9.a((byte) -58, param1, param2, ((ch) this).field_p + param3, param4, ((ch) this).field_z + param5, param6)) {
+                  return true;
+                } else {
+                  var9 = (ng) (Object) var12.a((byte) -104);
+                  continue L1;
+                }
+              }
             }
-            var9 = (ng) (Object) var12.a((byte) -104);
+          }
+          return false;
         }
-        return false;
     }
 
     final boolean b(boolean param0) {
@@ -222,13 +317,27 @@ class ch extends ng implements j {
     }
 
     final void a(int param0, int param1, ng param2, int param3, int param4, int param5) {
-        int var9 = Pixelate.field_H ? 1 : 0;
-        nm var7 = new nm(((ch) this).field_F);
-        ng var8 = (ng) (Object) var7.d(param3);
-        while (var8 != null) {
-            // ifeq L84
-            var8.a(param0, param1 - -((ch) this).field_z, param2, 0, param4 - -((ch) this).field_p, param5);
-            var8 = (ng) (Object) var7.a((byte) -104);
+        nm var7 = null;
+        ng var8 = null;
+        int var9 = 0;
+        var9 = Pixelate.field_H ? 1 : 0;
+        var7 = new nm(((ch) this).field_F);
+        var8 = (ng) (Object) var7.d(param3);
+        L0: while (true) {
+          L1: {
+            if (var8 == null) {
+              break L1;
+            } else {
+              if (!var8.b(0)) {
+                break L1;
+              } else {
+                var8.a(param0, param1 - -((ch) this).field_z, param2, 0, param4 - -((ch) this).field_p, param5);
+                var8 = (ng) (Object) var7.a((byte) -104);
+                continue L0;
+              }
+            }
+          }
+          return;
         }
     }
 

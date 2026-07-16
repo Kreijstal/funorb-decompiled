@@ -96,8 +96,8 @@ final class gl {
                           continue L4;
                         } else {
                           L6: {
-                            if (var4 != -1) {
-                              if (-3 != var4) {
+                            if ((var4 ^ -1) != -1) {
+                              if (-3 != (var4 ^ -1)) {
                                 var7 = var6 * 896 / (-1 + var5);
                                 break L6;
                               } else {

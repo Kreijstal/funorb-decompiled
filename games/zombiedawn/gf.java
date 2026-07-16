@@ -18,47 +18,50 @@ final class gf {
         var8 = ZombieDawn.field_J;
         if (ic.field_T == df.field_j) {
           L0: {
-            var2 = 26 % ((-18 - param1) / 33);
-            var3 = pd.a(-22826);
-            if (jh.field_h == -1) {
-              break L0;
-            } else {
-              if (-1 <= l.field_e) {
-                break L0;
+            L1: {
+              var2 = 26 % ((-18 - param1) / 33);
+              var3 = pd.a(-22826);
+              if ((jh.field_h ^ -1) == -1) {
+                break L1;
               } else {
-                var5_ref_bg = (bg) (Object) ui.field_f.b((byte) 26);
-                if (var5_ref_bg == null) {
-                  break L0;
+                if (-1 >= (l.field_e ^ -1)) {
+                  break L1;
                 } else {
-                  if (var5_ref_bg.field_h < var3) {
-                    var5_ref_bg.b(-27598);
-                    jd.field_b = var5_ref_bg.field_m.length;
-                    fj.field_g.field_j = 0;
-                    var6_int = 0;
-                    L1: while (true) {
-                      if (var6_int >= jd.field_b) {
-                        em.field_U = wb.field_t;
-                        wb.field_t = e.field_P;
-                        e.field_P = l.field_d;
-                        l.field_d = var5_ref_bg.field_j;
-                        return true;
-                      } else {
-                        fj.field_g.field_h[var6_int] = var5_ref_bg.field_m[var6_int];
-                        var6_int++;
-                        continue L1;
-                      }
-                    }
-                  } else {
+                  var5_ref_bg = (bg) (Object) ui.field_f.b((byte) 26);
+                  if (var5_ref_bg == null) {
                     break L0;
+                  } else {
+                    if (var5_ref_bg.field_h < var3) {
+                      var5_ref_bg.b(-27598);
+                      jd.field_b = var5_ref_bg.field_m.length;
+                      fj.field_g.field_j = 0;
+                      var6_int = 0;
+                      L2: while (true) {
+                        if ((var6_int ^ -1) <= (jd.field_b ^ -1)) {
+                          em.field_U = wb.field_t;
+                          wb.field_t = e.field_P;
+                          e.field_P = l.field_d;
+                          l.field_d = var5_ref_bg.field_j;
+                          return true;
+                        } else {
+                          fj.field_g.field_h[var6_int] = var5_ref_bg.field_m[var6_int];
+                          var6_int++;
+                          continue L2;
+                        }
+                      }
+                    } else {
+                      break L0;
+                    }
                   }
                 }
               }
             }
+            break L0;
           }
-          L2: while (true) {
-            L3: {
+          L3: while (true) {
+            L4: {
               if (0 <= l.field_e) {
-                break L3;
+                break L4;
               } else {
                 fj.field_g.field_j = 0;
                 if (!ck.a((byte) -117, 1)) {
@@ -67,7 +70,7 @@ final class gf {
                   l.field_e = fj.field_g.i((byte) 126);
                   fj.field_g.field_j = 0;
                   jd.field_b = param0[l.field_e];
-                  break L3;
+                  break L4;
                 }
               }
             }
@@ -75,31 +78,31 @@ final class gf {
               return false;
             } else {
               if (0 != jh.field_h) {
-                L4: {
+                L5: {
                   var5 = jh.field_h;
                   if (ca.field_a != 0.0) {
                     var5 = (int)((double)var5 + p.field_b.nextGaussian() * ca.field_a);
                     if (var5 < 0) {
                       var5 = 0;
-                      break L4;
+                      break L5;
                     } else {
-                      break L4;
+                      break L5;
                     }
                   } else {
-                    break L4;
+                    break L5;
                   }
                 }
                 var6 = new bg((long)var5 + var3, l.field_e, new byte[jd.field_b]);
                 var7 = 0;
-                L5: while (true) {
+                L6: while (true) {
                   if (jd.field_b <= var7) {
                     ui.field_f.a(0, (le) (Object) var6);
                     l.field_e = -1;
-                    continue L2;
+                    continue L3;
                   } else {
                     var6.field_m[var7] = fj.field_g.field_h[var7];
                     var7++;
-                    continue L5;
+                    continue L6;
                   }
                 }
               } else {
@@ -155,7 +158,7 @@ final class gf {
 
     final static int a(int param0, int param1) {
         int var2 = 0;
-        if (param0 == 0) {
+        if ((param0 ^ -1) == -1) {
             return 0;
         }
         if (param0 > 0) {

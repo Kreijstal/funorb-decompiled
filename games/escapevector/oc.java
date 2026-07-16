@@ -239,153 +239,68 @@ final class oc extends fl {
         Exception var9_ref = null;
         int var10 = 0;
         te stackIn_8_0 = null;
-        te stackOut_6_0 = null;
+        Throwable decompiledCaughtException = null;
         te stackOut_7_0 = null;
-        int statePc = 0;
-        Throwable caughtException = null;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    var10 = EscapeVector.field_A;
-                    var7 = -param5 + param4;
-                    statePc = 1;
-                    continue stateLoop;
-                }
-                case 1: {
-                    if (-param2 >= var7) {
-                        statePc = 3;
-                    } else {
-                        statePc = 2;
-                    }
-                    continue stateLoop;
-                }
-                case 2: {
-                    var7 = var7 - ma.field_a.field_n;
-                    statePc = 1;
-                    continue stateLoop;
-                }
-                case 3: {
-                    if (param1 == -641) {
-                        statePc = 5;
-                    } else {
-                        statePc = 4;
-                    }
-                    continue stateLoop;
-                }
-                case 4: {
-                    this.e(-1, -98);
-                    statePc = 5;
-                    continue stateLoop;
-                }
-                case 5: {
-                    var7 = var7 + ma.field_a.field_n;
-                    if (((oc) this).field_q) {
-                        statePc = 7;
-                    } else {
-                        statePc = 6;
-                    }
-                    continue stateLoop;
-                }
-                case 6: {
-                    stackOut_6_0 = rl.field_k;
-                    stackIn_8_0 = stackOut_6_0;
-                    statePc = 8;
-                    continue stateLoop;
-                }
-                case 7: {
-                    stackOut_7_0 = gi.field_c;
-                    stackIn_8_0 = stackOut_7_0;
-                    statePc = 8;
-                    continue stateLoop;
-                }
-                case 8: {
-                    var8 = stackIn_8_0;
-                    statePc = 9;
-                    continue stateLoop;
-                }
-                case 9: {
-                    try {
-                        var9 = this.e((byte) 96);
-                        statePc = 10;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_9) {
-                        caughtException = stateCaught_9;
-                        statePc = 16;
-                        continue stateLoop;
-                    }
-                }
-                case 10: {
-                    try {
-                        if (-641 >= (var7 ^ -1)) {
-                            statePc = 17;
-                        } else {
-                            statePc = 11;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_10) {
-                        caughtException = stateCaught_10;
-                        statePc = 16;
-                        continue stateLoop;
-                    }
-                }
-                case 11: {
-                    try {
-                        var8.a(var7, param0 + -param3);
-                        if (var9 != null) {
-                            statePc = 13;
-                        } else {
-                            statePc = 12;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_11) {
-                        caughtException = stateCaught_11;
-                        statePc = 16;
-                        continue stateLoop;
-                    }
-                }
-                case 12: {
-                    try {
-                        statePc = 14;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_12) {
-                        caughtException = stateCaught_12;
-                        statePc = 16;
-                        continue stateLoop;
-                    }
-                }
-                case 13: {
-                    try {
-                        var9.a(var7, -param3 + param0);
-                        statePc = 14;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_13) {
-                        caughtException = stateCaught_13;
-                        statePc = 16;
-                        continue stateLoop;
-                    }
-                }
-                case 14: {
-                    try {
-                        var7 = var7 + ma.field_a.field_n;
-                        statePc = 10;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_14) {
-                        caughtException = stateCaught_14;
-                        statePc = 16;
-                        continue stateLoop;
-                    }
-                }
-                case 16: {
-                    var9_ref = (Exception) (Object) caughtException;
-                    System.out.println("Error");
-                    statePc = 17;
-                    continue stateLoop;
-                }
-                case 17: {
-                    return;
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
+        te stackOut_6_0 = null;
+        var10 = EscapeVector.field_A;
+        var7 = -param5 + param4;
+        L0: while (true) {
+          if (-param2 >= var7) {
+            L1: {
+              if (param1 == -641) {
+                break L1;
+              } else {
+                this.e(-1, -98);
+                break L1;
+              }
             }
+            L2: {
+              var7 = var7 + ma.field_a.field_n;
+              if (((oc) this).field_q) {
+                stackOut_7_0 = gi.field_c;
+                stackIn_8_0 = stackOut_7_0;
+                break L2;
+              } else {
+                stackOut_6_0 = rl.field_k;
+                stackIn_8_0 = stackOut_6_0;
+                break L2;
+              }
+            }
+            var8 = stackIn_8_0;
+            try {
+              L3: {
+                var9 = this.e((byte) 96);
+                L4: while (true) {
+                  if (-641 >= (var7 ^ -1)) {
+                    break L3;
+                  } else {
+                    L5: {
+                      var8.a(var7, param0 + -param3);
+                      if (var9 != null) {
+                        var9.a(var7, -param3 + param0);
+                        break L5;
+                      } else {
+                        break L5;
+                      }
+                    }
+                    var7 = var7 + ma.field_a.field_n;
+                    continue L4;
+                  }
+                }
+              }
+            } catch (java.lang.Exception decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              L6: {
+                var9_ref = (Exception) (Object) decompiledCaughtException;
+                System.out.println("Error");
+                break L6;
+              }
+            }
+            return;
+          } else {
+            var7 = var7 - ma.field_a.field_n;
+            continue L0;
+          }
         }
     }
 
@@ -958,6 +873,7 @@ final class oc extends fl {
                 L2: while (true) {
                   if (((oc) this).field_F <= var10) {
                     pl.field_n.a(param3, 100, ma.field_a.b(131072 * (param0.field_x + param0.field_s), var5, 96, var6), ma.field_a.c(var5, 112));
+                    return;
                   } else {
                     ((oc) this).field_y[var10] = -262144 + (int)(Math.random() * 524289.0);
                     ((oc) this).field_C[var10] = -262144 + (int)(524289.0 * Math.random());

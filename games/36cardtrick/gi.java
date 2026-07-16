@@ -9,7 +9,7 @@ final class gi extends qb {
 
     public static void a(int param0) {
         if (param0 != 1159353185) {
-            field_g = (String) null;
+            field_g = null;
         }
         field_g = null;
     }
@@ -42,7 +42,7 @@ final class gi extends qb {
             param1 = param1 + param5;
         }
         if (param3 != 8355711) {
-            field_g = (String) null;
+            field_g = null;
         }
     }
 
@@ -99,7 +99,7 @@ final class gi extends qb {
         int var2 = param1.length();
         char[] var3 = new char[var2];
         if (param0 <= 89) {
-            return (String) null;
+            return null;
         }
         for (var4 = 0; var4 < var2; var4++) {
             var3[-var4 + var2 - 1] = param1.charAt(var4);
@@ -121,7 +121,7 @@ final class gi extends qb {
           if (param9 == 0) {
             break L0;
           } else {
-            field_g = (String) null;
+            field_g = null;
             break L0;
           }
         }

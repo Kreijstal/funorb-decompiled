@@ -216,7 +216,7 @@ final class uf {
         int stackOut_22_0 = 0;
         int stackOut_21_0 = 0;
         L0: {
-          int discarded$1 = hi.d(24);
+          int discarded$2 = hi.d(24);
           ((uf) this).field_c = hi.d(16);
           ((uf) this).field_b = hi.d(24);
           ((uf) this).field_f = new int[((uf) this).field_b];
@@ -283,8 +283,9 @@ final class uf {
                     var3_int++;
                     continue L5;
                   } else {
+                    int incrementValue$3 = var2;
                     var2++;
-                    ((uf) this).field_f[var2] = var3_int;
+                    ((uf) this).field_f[incrementValue$3] = var3_int;
                     var5++;
                     continue L6;
                   }

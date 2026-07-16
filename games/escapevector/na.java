@@ -819,21 +819,39 @@ final class na {
     }
 
     private final int a(boolean param0, int param1, int param2, int param3) {
-        if ((param2 ^ -1) <= -1) {
-            // if_icmple L18
-        } else {
-            return param1;
-        }
-        int var5 = 1 << param2;
-        int var6 = var5 ^ -1;
-        if (param3 != 0) {
-            ((na) this).field_n = null;
-        }
-        int var7 = param1 & var6;
-        if (param0) {
-            param1 = var7 | var5;
-        } else {
-            param1 = var7;
+        int var5 = 0;
+        int var6 = 0;
+        int var7 = 0;
+        L0: {
+          if ((param2 ^ -1) > -1) {
+            break L0;
+          } else {
+            if (((na) this).field_h <= param2) {
+              break L0;
+            } else {
+              L1: {
+                var5 = 1 << param2;
+                var6 = var5 ^ -1;
+                if (param3 == 0) {
+                  break L1;
+                } else {
+                  ((na) this).field_n = null;
+                  break L1;
+                }
+              }
+              L2: {
+                var7 = param1 & var6;
+                if (!param0) {
+                  param1 = var7;
+                  break L2;
+                } else {
+                  param1 = var7 | var5;
+                  break L2;
+                }
+              }
+              return param1;
+            }
+          }
         }
         return param1;
     }
@@ -884,8 +902,9 @@ final class na {
             return;
           } else {
             L2: {
+              int incrementValue$8 = var5;
               var5++;
-              if (0 == param0[var5]) {
+              if (0 == param0[incrementValue$8]) {
                 param2[var5 + -1] = 0;
                 break L2;
               } else {
@@ -893,8 +912,9 @@ final class na {
               }
             }
             L3: {
+              int incrementValue$9 = var5;
               var5++;
-              if (-1 == (param0[var5] ^ -1)) {
+              if (-1 == (param0[incrementValue$9] ^ -1)) {
                 param2[var5 + -1] = 0;
                 break L3;
               } else {
@@ -902,8 +922,9 @@ final class na {
               }
             }
             L4: {
+              int incrementValue$10 = var5;
               var5++;
-              if (param0[var5] == 0) {
+              if (param0[incrementValue$10] == 0) {
                 param2[-1 + var5] = 0;
                 break L4;
               } else {
@@ -911,8 +932,9 @@ final class na {
               }
             }
             L5: {
+              int incrementValue$11 = var5;
               var5++;
-              if (param0[var5] != 0) {
+              if (param0[incrementValue$11] != 0) {
                 break L5;
               } else {
                 param2[var5 + -1] = 0;
@@ -920,8 +942,9 @@ final class na {
               }
             }
             L6: {
+              int incrementValue$12 = var5;
               var5++;
-              if (param0[var5] != 0) {
+              if (param0[incrementValue$12] != 0) {
                 break L6;
               } else {
                 param2[var5 - 1] = 0;
@@ -929,8 +952,9 @@ final class na {
               }
             }
             L7: {
+              int incrementValue$13 = var5;
               var5++;
-              if (0 != param0[var5]) {
+              if (0 != param0[incrementValue$13]) {
                 break L7;
               } else {
                 param2[var5 + -1] = 0;
@@ -938,16 +962,18 @@ final class na {
               }
             }
             L8: {
+              int incrementValue$14 = var5;
               var5++;
-              if (param0[var5] == 0) {
+              if (param0[incrementValue$14] == 0) {
                 param2[-1 + var5] = 0;
                 break L8;
               } else {
                 break L8;
               }
             }
+            int incrementValue$15 = var5;
             var5++;
-            if (0 == param0[var5]) {
+            if (0 == param0[incrementValue$15]) {
               param2[-1 + var5] = 0;
               var6++;
               continue L1;

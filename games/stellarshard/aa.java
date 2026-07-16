@@ -7,13 +7,23 @@ final class aa {
     static pb field_b;
 
     final static void a(java.applet.Applet param0, int param1) {
-        int var3 = 73 / ((59 - param1) / 59);
-        String var2 = param0.getParameter("username");
-        if (var2 != null) {
-            CharSequence var4 = (CharSequence) (Object) var2;
-            // ifne L50
+        String var2 = null;
+        int var3 = 0;
+        CharSequence var4 = null;
+        L0: {
+          var3 = 73 / ((59 - param1) / 59);
+          var2 = param0.getParameter("username");
+          if (var2 == null) {
+            break L0;
+          } else {
+            var4 = (CharSequence) (Object) var2;
+            if (-1L != (nd.a(var4, (byte) -35) ^ -1L)) {
+              return;
+            } else {
+              break L0;
+            }
+          }
         }
-        return;
     }
 
     public static void a(byte param0) {
@@ -49,6 +59,7 @@ final class aa {
         var2 = 0;
         L0: while (true) {
           if (256 <= var2) {
+            return;
           } else {
             var0 = (long)var2;
             var3 = 0;

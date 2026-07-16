@@ -77,48 +77,50 @@ final class ok {
         var6 = stellarshard.field_B;
         var2 = param0.length();
         if (var2 != 0) {
-          if (-65 > var2) {
+          if (-65 > (var2 ^ -1)) {
             return bg.field_a;
           } else {
             if (param0.charAt(0) == 34) {
-              if (-35 != param0.charAt(-1 + var2)) {
+              if (-35 != (param0.charAt(-1 + var2) ^ -1)) {
                 return h.field_a;
               } else {
                 var3 = 0;
                 var4 = 1;
                 L0: while (true) {
-                  if (var4 < var2 - 1) {
-                    var5 = param0.charAt(var4);
-                    if (var5 != 92) {
-                      if (var5 != 34) {
-                        var3 = 0;
-                        var4++;
-                        continue L0;
-                      } else {
-                        if (var3 == 0) {
-                          return h.field_a;
-                        } else {
+                  if ((var4 ^ -1) > (var2 - 1 ^ -1)) {
+                    L1: {
+                      var5 = param0.charAt(var4);
+                      if (var5 != 92) {
+                        if (var5 != 34) {
                           var3 = 0;
-                          var4++;
-                          continue L0;
-                        }
-                      }
-                    } else {
-                      L1: {
-                        if (var3 != 0) {
-                          stackOut_16_0 = 0;
-                          stackIn_17_0 = stackOut_16_0;
                           break L1;
                         } else {
-                          stackOut_15_0 = 1;
-                          stackIn_17_0 = stackOut_15_0;
-                          break L1;
+                          if (var3 == 0) {
+                            return h.field_a;
+                          } else {
+                            var3 = 0;
+                            var4++;
+                            continue L0;
+                          }
                         }
+                      } else {
+                        L2: {
+                          if (var3 != 0) {
+                            stackOut_16_0 = 0;
+                            stackIn_17_0 = stackOut_16_0;
+                            break L2;
+                          } else {
+                            stackOut_15_0 = 1;
+                            stackIn_17_0 = stackOut_15_0;
+                            break L2;
+                          }
+                        }
+                        var3 = stackIn_17_0;
+                        break L1;
                       }
-                      var3 = stackIn_17_0;
-                      var4++;
-                      continue L0;
                     }
+                    var4++;
+                    continue L0;
                   } else {
                     return null;
                   }
@@ -127,8 +129,8 @@ final class ok {
             } else {
               var3 = 0;
               var4 = 0;
-              L2: while (true) {
-                if (var4 >= var2) {
+              L3: while (true) {
+                if ((var4 ^ -1) <= (var2 ^ -1)) {
                   if (param1 != 1) {
                     field_a = null;
                     return null;
@@ -136,35 +138,37 @@ final class ok {
                     return null;
                   }
                 } else {
-                  var5 = param0.charAt(var4);
-                  if (var5 != 46) {
-                    if (-1 == vk.field_c.indexOf(var5)) {
-                      return h.field_a;
-                    } else {
-                      var3 = 0;
-                      var4++;
-                      continue L2;
-                    }
-                  } else {
-                    L3: {
-                      if (var4 == 0) {
-                        break L3;
+                  L4: {
+                    var5 = param0.charAt(var4);
+                    if (var5 != 46) {
+                      if (-1 == vk.field_c.indexOf(var5)) {
+                        return h.field_a;
                       } else {
-                        if (var4 == -1 + var2) {
-                          break L3;
+                        var3 = 0;
+                        break L4;
+                      }
+                    } else {
+                      L5: {
+                        if ((var4 ^ -1) == -1) {
+                          break L5;
                         } else {
-                          if (var3 == 0) {
-                            var3 = 1;
-                            var4++;
-                            continue L2;
+                          if (var4 == -1 + var2) {
+                            break L5;
                           } else {
-                            break L3;
+                            if (var3 == 0) {
+                              var3 = 1;
+                              break L4;
+                            } else {
+                              break L5;
+                            }
                           }
                         }
                       }
+                      return h.field_a;
                     }
-                    return h.field_a;
                   }
+                  var4++;
+                  continue L3;
                 }
               }
             }

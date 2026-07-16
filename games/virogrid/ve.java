@@ -78,13 +78,25 @@ final class ve extends qe {
     }
 
     final static void c(byte param0) {
-        if ((j.field_l ^ -1) != -11) {
-            // ifne L35
+        int var1 = 0;
+        L0: {
+          L1: {
+            if ((j.field_l ^ -1) == -11) {
+              break L1;
+            } else {
+              if (md.a(11265)) {
+                break L0;
+              } else {
+                break L1;
+              }
+            }
+          }
+          ii.b((byte) -107);
+          j.field_l = 11;
+          break L0;
         }
-        ii.b((byte) -107);
-        j.field_l = 11;
         j.field_g = true;
-        int var1 = 82 % ((18 - param0) / 59);
+        var1 = 82 % ((18 - param0) / 59);
     }
 
     final wl a(String param0, boolean param1) {

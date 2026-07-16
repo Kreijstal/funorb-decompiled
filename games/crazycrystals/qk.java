@@ -68,9 +68,8 @@ final class qk extends og implements fd, vd {
 
     final static db a(int param0, int param1, boolean param2, boolean param3, boolean param4, int param5) {
         try {
-            sp var6 = null;
-            IOException var6_ref = null;
-            sp var7 = null;
+            Object var6 = null;
+            Object var7 = null;
             int var8 = 0;
             ee var9 = null;
             db stackIn_14_0 = null;
@@ -78,64 +77,68 @@ final class qk extends og implements fd, vd {
             db stackOut_13_0 = null;
             try {
               L0: {
-                var6 = null;
-                if (cc.field_a.field_p == null) {
-                  break L0;
-                } else {
-                  fj.field_c = new qa(cc.field_a.field_p, 5200, 0);
-                  cc.field_a.field_p = null;
-                  var6 = new sp(255, fj.field_c, new qa(cc.field_a.field_g, 12000, 0), 2097152);
-                  break L0;
-                }
-              }
-              L1: {
-                var7 = null;
-                var8 = -47 % ((-23 - param1) / 46);
-                if (null != fj.field_c) {
-                  L2: {
-                    if (null != li.field_d) {
-                      break L2;
-                    } else {
-                      li.field_d = new qa[cc.field_a.field_n.length];
-                      break L2;
-                    }
+                L1: {
+                  var6 = null;
+                  if (cc.field_a.field_p == null) {
+                    break L1;
+                  } else {
+                    fj.field_c = new qa(cc.field_a.field_p, 5200, 0);
+                    cc.field_a.field_p = null;
+                    var6 = (Object) (Object) new sp(255, fj.field_c, new qa(cc.field_a.field_g, 12000, 0), 2097152);
+                    break L1;
                   }
-                  L3: {
-                    if (li.field_d[param0] == null) {
-                      li.field_d[param0] = new qa(cc.field_a.field_n[param0], 12000, 0);
-                      cc.field_a.field_n[param0] = null;
-                      break L3;
-                    } else {
-                      break L3;
+                }
+                L2: {
+                  var7 = null;
+                  var8 = -47 % ((-23 - param1) / 46);
+                  if (null != fj.field_c) {
+                    L3: {
+                      if (null != li.field_d) {
+                        break L3;
+                      } else {
+                        li.field_d = new qa[cc.field_a.field_n.length];
+                        break L3;
+                      }
                     }
+                    L4: {
+                      if (li.field_d[param0] == null) {
+                        li.field_d[param0] = new qa(cc.field_a.field_n[param0], 12000, 0);
+                        cc.field_a.field_n[param0] = null;
+                        break L4;
+                      } else {
+                        break L4;
+                      }
+                    }
+                    var7 = (Object) (Object) new sp(param0, fj.field_c, li.field_d[param0], 2097152);
+                    break L2;
+                  } else {
+                    break L2;
                   }
-                  var7 = new sp(param0, fj.field_c, li.field_d[param0], 2097152);
-                  break L1;
-                } else {
-                  break L1;
                 }
-              }
-              L4: {
-                var9 = ch.field_d.a(64, var6, param4, param0, var7);
-                if (param2) {
-                  var9.b((byte) 125);
-                  break L4;
-                } else {
-                  break L4;
+                L5: {
+                  var9 = ch.field_d.a(64, (sp) var6, param4, param0, (sp) var7);
+                  if (param2) {
+                    var9.b((byte) 125);
+                    break L5;
+                  } else {
+                    break L5;
+                  }
                 }
+                stackOut_13_0 = new db((lk) (Object) var9, param3, param5);
+                stackIn_14_0 = stackOut_13_0;
+                break L0;
               }
-              stackOut_13_0 = new db((lk) (Object) var9, param3, param5);
-              stackIn_14_0 = stackOut_13_0;
-            } catch (java.io.IOException decompiledCaughtParameter) {
-              decompiledCaughtException = decompiledCaughtParameter;
-              return stackIn_14_0;
+            } catch (java.io.IOException decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              var6 = (Object) (Object) decompiledCaughtException;
+              throw new RuntimeException(((IOException) var6).toString());
             }
+            return stackIn_14_0;
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
             throw new RuntimeException(decompiledCheckedException);
         }
-        return null;
     }
 
     private final int a(int param0, String param1, String param2, int param3, qm param4, int param5, int param6) {
@@ -159,13 +162,21 @@ final class qk extends og implements fd, vd {
     }
 
     public final void a(byte param0, int param1, int param2, int param3, pc param4) {
-        if (param4 != ((qk) this).field_C) {
-            // if_acmpne L35
-            this.i(-25);
-        } else {
+        int var6 = 0;
+        L0: {
+          if (param4 == ((qk) this).field_C) {
             gl.b(-108);
+            break L0;
+          } else {
+            if (((qk) this).field_B != param4) {
+              break L0;
+            } else {
+              this.i(-25);
+              break L0;
+            }
+          }
         }
-        int var6 = 79 % ((83 - param0) / 36);
+        var6 = 79 % ((83 - param0) / 36);
     }
 
     final boolean a(int param0, int param1, qm param2, char param3) {

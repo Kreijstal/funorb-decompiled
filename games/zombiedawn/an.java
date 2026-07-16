@@ -229,17 +229,24 @@ class an extends ga {
             }
             try {
               L2: {
-                if (param2 == null) {
-                  break L2;
-                } else {
-                  param1.field_x.postEvent((java.awt.AWTEvent) (Object) new java.awt.event.ActionEvent(param2, 1001, "dummy"));
-                  break L2;
+                L3: {
+                  if (param2 == null) {
+                    break L3;
+                  } else {
+                    param1.field_x.postEvent((java.awt.AWTEvent) (Object) new java.awt.event.ActionEvent(param2, 1001, "dummy"));
+                    break L3;
+                  }
                 }
+                break L2;
               }
-            } catch (java.lang.Exception decompiledCaughtParameter) {
-              decompiledCaughtException = decompiledCaughtParameter;
+            } catch (java.lang.Exception decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              L4: {
+                var3 = (Exception) (Object) decompiledCaughtException;
+                break L4;
+              }
             }
-            var3 = (Exception) (Object) decompiledCaughtException;
+            return;
           }
         }
     }

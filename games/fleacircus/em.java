@@ -126,9 +126,11 @@ final class em extends IOException {
                     var7++;
                     continue L0;
                   } else {
+                    int incrementValue$2 = var6;
                     var6++;
+                    int incrementValue$3 = var5;
                     var5++;
-                    var4[var6] = param0.field_B[var5];
+                    var4[incrementValue$2] = param0.field_B[incrementValue$3];
                     var8++;
                     continue L1;
                   }

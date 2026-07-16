@@ -33,135 +33,72 @@ final class ai {
             jd var4 = null;
             jd var5 = null;
             int stackIn_11_0 = 0;
-            int stackOut_9_0 = 0;
+            Throwable decompiledCaughtException = null;
             int stackOut_10_0 = 0;
-            int statePc = 0;
-            Throwable caughtException = null;
-            stateLoop: while (true) {
-                switch (statePc) {
-                    case 0: {
-                        if (param1 == -37) {
-                            statePc = 2;
-                        } else {
-                            statePc = 1;
-                        }
-                        continue stateLoop;
+            int stackOut_9_0 = 0;
+            L0: {
+              if (param1 == -37) {
+                break L0;
+              } else {
+                boolean discarded$4 = ai.a(false, (byte) 48);
+                break L0;
+              }
+            }
+            L1: {
+              if (null != bk.field_a) {
+                break L1;
+              } else {
+                bk.field_a = qa.field_n.a(lc.field_l, ia.field_kb, param1 ^ 28119);
+                break L1;
+              }
+            }
+            if (0 == bk.field_a.field_c) {
+              return false;
+            } else {
+              long dupTemp$5 = je.a(1);
+              gf.field_Y = dupTemp$5;
+              md.field_y = dupTemp$5;
+              if (bk.field_a.field_c != 1) {
+                ef.field_e = wc.field_f;
+                bk.field_a = null;
+                return true;
+              } else {
+                try {
+                  L2: {
+                    L3: {
+                      lf.field_d = new ad((java.net.Socket) bk.field_a.field_e, qa.field_n);
+                      id.field_c.field_m = 0;
+                      var4 = te.field_N;
+                      var5 = var4;
+                      if (param0) {
+                        stackOut_10_0 = -2;
+                        stackIn_11_0 = stackOut_10_0;
+                        break L3;
+                      } else {
+                        stackOut_9_0 = -1;
+                        stackIn_11_0 = stackOut_9_0;
+                        break L3;
+                      }
                     }
-                    case 1: {
-                        boolean discarded$2 = ai.a(false, (byte) 48);
-                        statePc = 2;
-                        continue stateLoop;
-                    }
-                    case 2: {
-                        if (null != bk.field_a) {
-                            statePc = 4;
-                        } else {
-                            statePc = 3;
-                        }
-                        continue stateLoop;
-                    }
-                    case 3: {
-                        bk.field_a = qa.field_n.a(lc.field_l, ia.field_kb, param1 ^ 28119);
-                        statePc = 4;
-                        continue stateLoop;
-                    }
-                    case 4: {
-                        if (0 == bk.field_a.field_c) {
-                            statePc = 6;
-                        } else {
-                            statePc = 7;
-                        }
-                        continue stateLoop;
-                    }
-                    case 6: {
-                        return false;
-                    }
-                    case 7: {
-                        gf.field_Y = je.a(1);
-                        md.field_y = je.a(1);
-                        if (bk.field_a.field_c != 1) {
-                            statePc = 14;
-                        } else {
-                            statePc = 8;
-                        }
-                        continue stateLoop;
-                    }
-                    case 8: {
-                        try {
-                            lf.field_d = new ad((java.net.Socket) bk.field_a.field_e, qa.field_n);
-                            id.field_c.field_m = 0;
-                            var4 = te.field_N;
-                            var5 = var4;
-                            if (param0) {
-                                statePc = 10;
-                            } else {
-                                statePc = 9;
-                            }
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_8) {
-                            caughtException = stateCaught_8;
-                            statePc = 13;
-                            continue stateLoop;
-                        }
-                    }
-                    case 9: {
-                        try {
-                            stackOut_9_0 = -1;
-                            stackIn_11_0 = stackOut_9_0;
-                            statePc = 11;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_9) {
-                            caughtException = stateCaught_9;
-                            statePc = 13;
-                            continue stateLoop;
-                        }
-                    }
-                    case 10: {
-                        try {
-                            stackOut_10_0 = -2;
-                            stackIn_11_0 = stackOut_10_0;
-                            statePc = 11;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_10) {
-                            caughtException = stateCaught_10;
-                            statePc = 13;
-                            continue stateLoop;
-                        }
-                    }
-                    case 11: {
-                        try {
-                            nf.field_U = stackIn_11_0;
-                            kl.field_b = stackIn_11_0;
-                            jg.field_e = stackIn_11_0;
-                            var5.field_m = 0;
-                            ef.field_e = qc.field_i;
-                            si.a(jj.field_s, (byte) 22, jh.field_f, ci.field_jb, (gb) (Object) id.field_c);
-                            qf.a(param1 + 37, -1);
-                            statePc = 12;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_11) {
-                            caughtException = stateCaught_11;
-                            statePc = 13;
-                            continue stateLoop;
-                        }
-                    }
-                    case 12: {
-                        bk.field_a = null;
-                        return true;
-                    }
-                    case 13: {
-                        var2 = (IOException) (Object) caughtException;
-                        ef.field_e = wc.field_f;
-                        bk.field_a = null;
-                        return true;
-                    }
-                    case 14: {
-                        ef.field_e = wc.field_f;
-                        bk.field_a = null;
-                        return true;
-                    }
-                    default: throw new IllegalStateException("invalid CFG state " + statePc);
+                    nf.field_U = stackIn_11_0;
+                    kl.field_b = stackIn_11_0;
+                    jg.field_e = stackIn_11_0;
+                    var5.field_m = 0;
+                    ef.field_e = qc.field_i;
+                    si.a(jj.field_s, (byte) 22, jh.field_f, ci.field_jb, (gb) (Object) id.field_c);
+                    qf.a(param1 + 37, -1);
+                    break L2;
+                  }
+                } catch (java.io.IOException decompiledCaughtParameter0) {
+                  decompiledCaughtException = decompiledCaughtParameter0;
+                  var2 = (IOException) (Object) decompiledCaughtException;
+                  ef.field_e = wc.field_f;
+                  bk.field_a = null;
+                  return true;
                 }
+                bk.field_a = null;
+                return true;
+              }
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;

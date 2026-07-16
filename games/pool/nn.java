@@ -97,25 +97,31 @@ final class nn {
             }
             try {
               L1: {
-                var8 = param2.getParameter("cookiehost");
-                var7 = var8;
-                var7 = var8;
-                var9 = param4 + "=" + param3 + "; version=1; path=/; domain=" + var8;
-                var7 = var9;
-                var7 = var9;
-                if ((param0 ^ -1L) > -1L) {
-                  var7 = var9 + "; Discard;";
-                  break L1;
-                } else {
-                  var7 = var9 + "; Expires=" + hn.a(rl.a((byte) -120) - -(param0 * 1000L), false) + "; Max-Age=" + param0;
-                  break L1;
+                L2: {
+                  var8 = param2.getParameter("cookiehost");
+                  var7 = var8;
+                  var7 = var8;
+                  var9 = param4 + "=" + param3 + "; version=1; path=/; domain=" + var8;
+                  var7 = var9;
+                  var7 = var9;
+                  if ((param0 ^ -1L) > -1L) {
+                    var7 = var9 + "; Discard;";
+                    break L2;
+                  } else {
+                    var7 = var9 + "; Expires=" + hn.a(rl.a((byte) -120) - -(param0 * 1000L), false) + "; Max-Age=" + param0;
+                    break L2;
+                  }
                 }
+                mo.a("document.cookie=\"" + var7 + "\"", param2, (byte) 35);
+                break L1;
               }
-              mo.a("document.cookie=\"" + var7 + "\"", param2, (byte) 35);
-            } catch (java.lang.Throwable decompiledCaughtParameter) {
-              decompiledCaughtException = decompiledCaughtParameter;
+            } catch (java.lang.Throwable decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              L3: {
+                var6 = decompiledCaughtException;
+                break L3;
+              }
             }
-            var6 = decompiledCaughtException;
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
@@ -131,12 +137,17 @@ final class nn {
             id stackOut_2_0 = null;
             if (param0 == 96) {
               try {
-                stackOut_2_0 = (id) Class.forName("po").newInstance();
-                stackIn_3_0 = stackOut_2_0;
-              } catch (java.lang.Throwable decompiledCaughtParameter) {
-                decompiledCaughtException = decompiledCaughtParameter;
-                return stackIn_3_0;
+                L0: {
+                  stackOut_2_0 = (id) Class.forName("po").newInstance();
+                  stackIn_3_0 = stackOut_2_0;
+                  break L0;
+                }
+              } catch (java.lang.Throwable decompiledCaughtParameter0) {
+                decompiledCaughtException = decompiledCaughtParameter0;
+                var1 = decompiledCaughtException;
+                return null;
               }
+              return stackIn_3_0;
             } else {
               return null;
             }
@@ -145,7 +156,6 @@ final class nn {
         } catch (Throwable decompiledCheckedException) {
             throw new RuntimeException(decompiledCheckedException);
         }
-        return null;
     }
 
     static {

@@ -30,7 +30,7 @@ final class ro {
         int var3 = 0;
         nj[] var4 = null;
         int var5 = 0;
-        nj var6_ref = null;
+        nj var6_ref_nj = null;
         int var6 = 0;
         L0: {
           var2 = param1.e(8, 92);
@@ -55,15 +55,15 @@ final class ro {
                 var5++;
                 continue L1;
               } else {
-                var6_ref = new nj();
+                var6_ref_nj = new nj();
                 int discarded$126 = param1.e(24, 22);
                 int discarded$127 = param1.e(24, param0 + 38);
-                var6_ref.field_a = param1.e(24, 28);
+                var6_ref_nj.field_a = param1.e(24, 28);
                 int discarded$128 = param1.e(9, 44);
                 int discarded$129 = param1.e(12, 104);
                 int discarded$130 = param1.e(12, 125);
                 int discarded$131 = param1.e(12, 99);
-                var4[var5] = var6_ref;
+                var4[var5] = var6_ref_nj;
                 var5++;
                 continue L1;
               }
@@ -178,19 +178,36 @@ final class ro {
 
     final void a(ro param0, int param1) {
         int var3 = 0;
-        ((ro) this).field_i = param0.field_f + ((ro) this).field_f;
-        if (param1 != -16875) {
+        L0: {
+          ((ro) this).field_i = param0.field_f + ((ro) this).field_f;
+          if (param1 == -16875) {
+            break L0;
+          } else {
             ((ro) this).field_b = 105;
+            break L0;
+          }
         }
-        ((ro) this).field_k = param0.field_m + ((ro) this).field_m;
-        if (0 == ((ro) this).field_i) {
-            // if_icmpne L69
-        } else {
-            var3 = ke.a(false, ((ro) this).field_k * ((ro) this).field_k + ((ro) this).field_i * ((ro) this).field_i);
-            if (var3 != 0) {
-                ((ro) this).field_i = (((ro) this).field_i << 417255944) / var3;
-                ((ro) this).field_k = (((ro) this).field_k << -1025675032) / var3;
+        L1: {
+          L2: {
+            ((ro) this).field_k = param0.field_m + ((ro) this).field_m;
+            if (0 != ((ro) this).field_i) {
+              break L2;
+            } else {
+              if (-1 != (((ro) this).field_k ^ -1)) {
+                break L2;
+              } else {
+                break L1;
+              }
             }
+          }
+          var3 = ke.a(false, ((ro) this).field_k * ((ro) this).field_k + ((ro) this).field_i * ((ro) this).field_i);
+          if (var3 == 0) {
+            break L1;
+          } else {
+            ((ro) this).field_i = (((ro) this).field_i << 417255944) / var3;
+            ((ro) this).field_k = (((ro) this).field_k << -1025675032) / var3;
+            break L1;
+          }
         }
     }
 

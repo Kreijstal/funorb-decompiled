@@ -13,14 +13,14 @@ final class ij {
     static vg field_f;
 
     final static String a(byte param0) {
-        java.awt.Component var2 = null;
+        Object var2 = null;
         if (jc.field_P != hh.field_g) {
           if (hh.field_g == ei.field_d) {
             return dj.field_e;
           } else {
             if (wh.field_a.a(640)) {
               if (param0 <= 109) {
-                var2 = (java.awt.Component) null;
+                var2 = null;
                 kh discarded$2 = ij.a(-89, (java.awt.Component) null, 47, 123);
                 return ng.field_y;
               } else {
@@ -41,32 +41,39 @@ final class ij {
             Throwable var4_ref = null;
             kh var5 = null;
             jf var5_ref = null;
-            kh stackIn_2_0 = null;
+            Object stackIn_2_0 = null;
             kh stackIn_4_0 = null;
             Throwable decompiledCaughtException = null;
-            kh stackOut_1_0 = null;
             kh stackOut_3_0 = null;
+            Object stackOut_1_0 = null;
             try {
-              var4 = Class.forName("el");
-              if (param0 <= -49) {
-                return (kh) (Object) stackIn_2_0;
-              } else {
-                stackOut_1_0 = (kh) null;
-                stackIn_2_0 = stackOut_1_0;
+              L0: {
+                var4 = Class.forName("el");
+                if (param0 <= -49) {
+                  var5 = (kh) var4.newInstance();
+                  var5.a(param1, param2, (byte) 68, param3);
+                  stackOut_3_0 = (kh) var5;
+                  stackIn_4_0 = stackOut_3_0;
+                  break L0;
+                } else {
+                  stackOut_1_0 = null;
+                  stackIn_2_0 = stackOut_1_0;
+                  return (kh) (Object) stackIn_2_0;
+                }
               }
-            } catch (java.lang.Throwable decompiledCaughtParameter) {
-              decompiledCaughtException = decompiledCaughtParameter;
-              var5 = (kh) var4.newInstance();
-              var5.a(param1, param2, (byte) 68, param3);
-              stackOut_3_0 = (kh) var5;
-              stackIn_4_0 = stackOut_3_0;
+            } catch (java.lang.Throwable decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              var4_ref = decompiledCaughtException;
+              var5_ref = new jf();
+              ((kh) (Object) var5_ref).a(param1, param2, (byte) 68, param3);
+              return (kh) (Object) var5_ref;
             }
+            return stackIn_4_0;
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
             throw new RuntimeException(decompiledCheckedException);
         }
-        return null;
     }
 
     public static void a(int param0) {
@@ -94,9 +101,9 @@ final class ij {
         int var8 = 0;
         int var9 = 0;
         var9 = Main.field_T;
-        if (-1 != (3 & (((kc) param0).field_n | (((kc) param0).field_q | (((kc) param0).field_p | ((kc) param0).field_o))) ^ -1)) {
-          var2 = (3 & ((kc) param0).field_q) + ((kc) param0).field_p;
-          var3 = ((kc) param0).field_o + (3 & ((kc) param0).field_n);
+        if (-1 != (3 & (param0.field_n | (param0.field_q | (param0.field_p | param0.field_o))) ^ -1)) {
+          var2 = (3 & param0.field_q) + param0.field_p;
+          var3 = param0.field_o + (3 & param0.field_n);
           var2 = 4 - (3 & var2) + var2;
           if (param1 < 113) {
             return;
@@ -104,27 +111,29 @@ final class ij {
             var3 = var3 - (3 & var3) - -4;
             var4 = new int[var2 * var3];
             var5 = 0;
-            var6 = (3 & ((kc) param0).field_q) - -((((kc) param0).field_n & 3) * var2);
+            var6 = (3 & param0.field_q) - -((param0.field_n & 3) * var2);
             var7 = 0;
             L0: while (true) {
-              if (((kc) param0).field_o <= var7) {
-                ((kc) param0).field_n = ((kc) param0).field_n & -4;
+              if (param0.field_o <= var7) {
+                param0.field_n = param0.field_n & -4;
                 param0.field_p = var2;
                 param0.field_r = var4;
                 param0.field_o = var3;
-                ((kc) param0).field_q = ((kc) param0).field_q & -4;
+                param0.field_q = param0.field_q & -4;
                 return;
               } else {
                 var8 = 0;
                 L1: while (true) {
-                  if (((kc) param0).field_p <= var8) {
-                    var6 = var6 + (-((kc) param0).field_p + var2);
+                  if (param0.field_p <= var8) {
+                    var6 = var6 + (-param0.field_p + var2);
                     var7++;
                     continue L0;
                   } else {
+                    int incrementValue$2 = var6;
                     var6++;
+                    int incrementValue$3 = var5;
                     var5++;
-                    var4[var6] = ((kc) param0).field_r[var5];
+                    var4[incrementValue$2] = param0.field_r[incrementValue$3];
                     var8++;
                     continue L1;
                   }

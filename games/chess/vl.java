@@ -224,7 +224,7 @@ final class vl extends nm {
                   if (-2 + var7.field_a.length <= param4.field_E) {
                     break L10;
                   } else {
-                    if (param4.field_y <= (65280 & var7.field_a[2 + param4.field_E] << -1244566680)) {
+                    if ((param4.field_y ^ -1) >= (65280 & var7.field_a[2 + param4.field_E] << -1244566680 ^ -1)) {
                       break L10;
                     } else {
                       param4.field_E = param4.field_E + 2;
@@ -232,7 +232,7 @@ final class vl extends nm {
                     }
                   }
                 }
-                if (param4.field_E != -2 + var7.field_a.length) {
+                if ((param4.field_E ^ -1) != (-2 + var7.field_a.length ^ -1)) {
                   break L7;
                 } else {
                   if (-1 == (var7.field_a[1 + param4.field_E] ^ -1)) {
@@ -246,13 +246,13 @@ final class vl extends nm {
             }
           }
           L11: {
-            if (param4.field_J > -1) {
+            if ((param4.field_J ^ -1) > -1) {
               break L11;
             } else {
               if (var7.field_k == null) {
                 break L11;
               } else {
-                if (-1 == (((vl) this).field_Q[param4.field_n] & 1)) {
+                if (-1 == (((vl) this).field_Q[param4.field_n] & 1 ^ -1)) {
                   L12: {
                     if (0 > param4.field_A) {
                       break L12;
@@ -275,10 +275,10 @@ final class vl extends nm {
                   }
                   L14: while (true) {
                     L15: {
-                      if (param4.field_o >= -2 + var7.field_k.length) {
+                      if ((param4.field_o ^ -1) <= (-2 + var7.field_k.length ^ -1)) {
                         break L15;
                       } else {
-                        if (param4.field_J <= (65280 & var7.field_k[2 + param4.field_o] << 1620843720)) {
+                        if ((param4.field_J ^ -1) >= (65280 & var7.field_k[2 + param4.field_o] << 1620843720 ^ -1)) {
                           break L15;
                         } else {
                           param4.field_o = param4.field_o + 2;
@@ -286,7 +286,7 @@ final class vl extends nm {
                         }
                       }
                     }
-                    if (param4.field_o == var7.field_k.length + -2) {
+                    if ((param4.field_o ^ -1) == (var7.field_k.length + -2 ^ -1)) {
                       var8 = 1;
                       break L11;
                     } else {
@@ -511,7 +511,7 @@ final class vl extends nm {
                     break L4;
                   }
                 }
-                ((vl) this).a((byte) stackIn_18_1, (qd) (Object) stackIn_18_2, stackIn_18_3 != 0);
+                ((vl) this).a((byte) stackIn_18_1, stackIn_18_2, stackIn_18_3 != 0);
                 break L3;
               }
             }
@@ -603,27 +603,65 @@ final class vl extends nm {
     }
 
     private final void a(int param0, int param1) {
-        int var4 = Chess.field_G;
-        if (param1 >= -70) {
+        qd var3 = null;
+        int var4 = 0;
+        L0: {
+          var4 = Chess.field_G;
+          if (param1 < -70) {
+            break L0;
+          } else {
             ((vl) this).field_w = -126;
+            break L0;
+          }
         }
-        qd var3 = (qd) (Object) ((vl) this).field_B.field_x.g(-18110);
-        while (var3 != null) {
-            if (param0 >= 0) {
-                // if_icmpne L166
-            }
-            if (var3.field_j != null) {
-                var3.field_j.d(md.field_l / 100);
-                if (!(!var3.field_j.g())) {
-                    ((vl) this).field_B.field_p.a((nm) (Object) var3.field_j);
+        var3 = (qd) (Object) ((vl) this).field_B.field_x.g(-18110);
+        L1: while (true) {
+          if (var3 == null) {
+            return;
+          } else {
+            L2: {
+              L3: {
+                if (param0 < 0) {
+                  break L3;
+                } else {
+                  if (param0 != var3.field_n) {
+                    break L2;
+                  } else {
+                    break L3;
+                  }
                 }
-                var3.c((byte) 105);
+              }
+              L4: {
+                if (var3.field_j == null) {
+                  break L4;
+                } else {
+                  L5: {
+                    var3.field_j.d(md.field_l / 100);
+                    if (var3.field_j.g()) {
+                      ((vl) this).field_B.field_p.a((nm) (Object) var3.field_j);
+                      break L5;
+                    } else {
+                      break L5;
+                    }
+                  }
+                  var3.c((byte) 105);
+                  break L4;
+                }
+              }
+              L6: {
+                if (0 <= var3.field_J) {
+                  break L6;
+                } else {
+                  ((vl) this).field_u[var3.field_n][var3.field_C] = null;
+                  break L6;
+                }
+              }
+              var3.c(-2193);
+              break L2;
             }
-            if (0 > var3.field_J) {
-                ((vl) this).field_u[var3.field_n][var3.field_C] = null;
-            }
-            var3.c(-2193);
             var3 = (qd) (Object) ((vl) this).field_B.field_x.a((byte) -108);
+            continue L1;
+          }
         }
     }
 
@@ -731,7 +769,6 @@ final class vl extends nm {
     final synchronized boolean a(um param0, int param1, int param2, pf param3, fe param4) {
         int var6 = 0;
         Object var7 = null;
-        int[] var7_array = null;
         td var8 = null;
         int var9 = 0;
         int var11 = 0;
@@ -746,7 +783,7 @@ final class vl extends nm {
             if ((param2 ^ -1) >= -1) {
               break L0;
             } else {
-              var7_array = new int[]{param2};
+              var7 = (Object) (Object) new int[]{param2};
               break L0;
             }
           }
@@ -770,7 +807,7 @@ final class vl extends nm {
                   var13 = ij.a(-109, var9, param0);
                   if (var13 != null) {
                     ((vl) this).field_s.a(-128, (long)var9, (o) (Object) var13);
-                    if (var13.a(var7_array, param4, (byte) -73, var8.field_q)) {
+                    if (var13.a((int[]) var7, param4, (byte) -73, var8.field_q)) {
                       break L3;
                     } else {
                       var6 = 0;
@@ -781,7 +818,7 @@ final class vl extends nm {
                     break L3;
                   }
                 } else {
-                  if (var12.a(var7_array, param4, (byte) -73, var8.field_q)) {
+                  if (var12.a((int[]) var7, param4, (byte) -73, var8.field_q)) {
                     break L3;
                   } else {
                     var6 = 0;
@@ -902,21 +939,45 @@ final class vl extends nm {
     }
 
     private final void a(byte param0, int param1) {
-        int var4 = Chess.field_G;
-        qd var3 = (qd) (Object) ((vl) this).field_B.field_x.g(-18110);
-        if (param0 <= 86) {
+        qd var3 = null;
+        int var4 = 0;
+        L0: {
+          var4 = Chess.field_G;
+          var3 = (qd) (Object) ((vl) this).field_B.field_x.g(-18110);
+          if (param0 > 86) {
+            break L0;
+          } else {
             ((vl) this).field_E = null;
+            break L0;
+          }
         }
-        while (var3 != null) {
-            if (-1 >= param1) {
-                // if_icmpeq L62
-            } else {
-                if (-1 > var3.field_J) {
-                    ((vl) this).field_u[var3.field_n][var3.field_C] = null;
-                    var3.field_J = 0;
+        L1: while (true) {
+          if (var3 == null) {
+            return;
+          } else {
+            L2: {
+              L3: {
+                if (-1 < (param1 ^ -1)) {
+                  break L3;
+                } else {
+                  if (var3.field_n == param1) {
+                    break L3;
+                  } else {
+                    break L2;
+                  }
                 }
+              }
+              if (-1 >= (var3.field_J ^ -1)) {
+                break L2;
+              } else {
+                ((vl) this).field_u[var3.field_n][var3.field_C] = null;
+                var3.field_J = 0;
+                break L2;
+              }
             }
             var3 = (qd) (Object) ((vl) this).field_B.field_x.a((byte) -102);
+            continue L1;
+          }
         }
     }
 
@@ -1247,7 +1308,7 @@ final class vl extends nm {
                   }
                 }
                 L3: {
-                  if (-34 == var5) {
+                  if (-34 == (var5 ^ -1)) {
                     ((vl) this).field_P[var4] = ce.a(-128, ((vl) this).field_P[var4]) + var6;
                     break L3;
                   } else {
@@ -1255,7 +1316,7 @@ final class vl extends nm {
                   }
                 }
                 L4: {
-                  if (-6 == var5) {
+                  if (-6 == (var5 ^ -1)) {
                     ((vl) this).field_S[var4] = ce.a(-16257, ((vl) this).field_S[var4]) + (var6 << 1371005479);
                     break L4;
                   } else {
@@ -1354,7 +1415,7 @@ final class vl extends nm {
                   }
                 }
                 L15: {
-                  if (-99 != var5) {
+                  if (-99 != (var5 ^ -1)) {
                     break L15;
                   } else {
                     ((vl) this).field_x[var4] = var6 + ce.a(((vl) this).field_x[var4], 16256);
@@ -1362,7 +1423,7 @@ final class vl extends nm {
                   }
                 }
                 L16: {
-                  if (-102 != var5) {
+                  if (-102 != (var5 ^ -1)) {
                     break L16;
                   } else {
                     ((vl) this).field_x[var4] = (var6 << 24942951) + 16384 - -ce.a(((vl) this).field_x[var4], 127);
@@ -1444,10 +1505,10 @@ final class vl extends nm {
                   }
                 }
                 L25: {
-                  if (-82 != var5) {
+                  if (-82 != (var5 ^ -1)) {
                     break L25;
                   } else {
-                    if (-65 > var6) {
+                    if (-65 < (var6 ^ -1)) {
                       this.a(var4, false);
                       ((vl) this).field_Q[var4] = ce.a(((vl) this).field_Q[var4], -5);
                       break L25;
@@ -1693,7 +1754,7 @@ final class vl extends nm {
             }
           }
           L2: {
-            ((ln) (Object) stackIn_8_0).field_Yb = stackIn_8_1 != 0;
+            stackIn_8_0.field_Yb = stackIn_8_1 != 0;
             stackOut_8_0 = (ln) param1;
             stackIn_10_0 = stackOut_8_0;
             stackIn_9_0 = stackOut_8_0;
@@ -1712,7 +1773,7 @@ final class vl extends nm {
             }
           }
           L3: {
-            ((ln) (Object) stackIn_11_0).field_ac = stackIn_11_1 != 0;
+            stackIn_11_0.field_ac = stackIn_11_1 != 0;
             stackOut_11_0 = (ln) param1;
             stackIn_13_0 = stackOut_11_0;
             stackIn_12_0 = stackOut_11_0;
@@ -1731,7 +1792,7 @@ final class vl extends nm {
             }
           }
           L4: {
-            ((ln) (Object) stackIn_14_0).field_lc = stackIn_14_1 != 0;
+            stackIn_14_0.field_lc = stackIn_14_1 != 0;
             stackOut_14_0 = (ln) param1;
             stackIn_16_0 = stackOut_14_0;
             stackIn_15_0 = stackOut_14_0;
@@ -1750,7 +1811,7 @@ final class vl extends nm {
             }
           }
           L5: {
-            ((ln) (Object) stackIn_17_0).field_Vb = stackIn_17_1 != 0;
+            stackIn_17_0.field_Vb = stackIn_17_1 != 0;
             stackOut_17_0 = (ln) param1;
             stackIn_19_0 = stackOut_17_0;
             stackIn_18_0 = stackOut_17_0;
@@ -1770,7 +1831,7 @@ final class vl extends nm {
           }
           L6: {
             L7: {
-              ((ln) (Object) stackIn_20_0).field_Mb = stackIn_20_1;
+              stackIn_20_0.field_Mb = stackIn_20_1;
               stackOut_20_0 = (ln) param1;
               stackIn_23_0 = stackOut_20_0;
               stackIn_21_0 = stackOut_20_0;
@@ -1798,7 +1859,7 @@ final class vl extends nm {
             break L6;
           }
           L8: {
-            ((ln) (Object) stackIn_24_0).field_Pb = stackIn_24_1 != 0;
+            stackIn_24_0.field_Pb = stackIn_24_1 != 0;
             if (-1 == (var4 & 4 ^ -1)) {
               stackOut_26_0 = 0;
               stackIn_27_0 = stackOut_26_0;

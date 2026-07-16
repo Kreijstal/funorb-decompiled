@@ -28,7 +28,7 @@ final class tl extends ob {
                 break L2;
               } else {
                 if (((tl) this).field_B.field_h > 0) {
-                  if (-3 == ((tl) this).field_B.field_h) {
+                  if (-3 == (((tl) this).field_B.field_h ^ -1)) {
                     break L2;
                   } else {
                     ((tl) this).field_B.a(0, (byte) 1);
@@ -41,7 +41,7 @@ final class tl extends ob {
               }
             }
             L3: {
-              if (-98 == qi.field_a) {
+              if (-98 == (qi.field_a ^ -1)) {
                 if (((tl) this).field_B.field_h == 1) {
                   ((tl) this).field_B.a(0, (byte) 1);
                   break L3;
@@ -77,20 +77,21 @@ final class tl extends ob {
                 break L4;
               }
             }
-            if ((qi.field_a ^ -1) == -99) {
-              if (((tl) this).field_B.field_h == 2) {
-                ((tl) this).field_B.a(eo.field_Lb, (byte) 1);
-                ((tl) this).field_B.a(false);
-                break L1;
+            L6: {
+              if ((qi.field_a ^ -1) == -99) {
+                if (((tl) this).field_B.field_h == 2) {
+                  ((tl) this).field_B.a(eo.field_Lb, (byte) 1);
+                  break L6;
+                } else {
+                  ((tl) this).field_B.a(2, (byte) 1);
+                  break L6;
+                }
               } else {
-                ((tl) this).field_B.a(2, (byte) 1);
-                ((tl) this).field_B.a(false);
-                break L1;
+                break L6;
               }
-            } else {
-              ((tl) this).field_B.a(eo.field_Lb, (byte) 1);
-              break L1;
             }
+            ((tl) this).field_B.a(false);
+            break L1;
           } else {
             super.e(-34);
             break L1;
@@ -176,28 +177,56 @@ final class tl extends ob {
 
     final static int h(int param0) {
         int var1 = 0;
-        while (n.h(param0 + 119)) {
-            un.field_f.e(-15525);
-            // ifeq L2
-            var1 = 1;
-        }
-        un.field_f.a(un.a(-49, ua.field_o, lq.field_W), un.a(-49, gg.field_f, wn.field_i), -30);
-        if (un.field_f.b((byte) 99)) {
-            var1 = 1;
-        }
         int var2 = 0;
-        if (param0 != 8) {
-            tl.d(-51, true);
-        }
-        if (var1 != 0) {
-            if ((un.field_f.field_h ^ -1) <= -1) {
-                var2 = ui.field_V[un.field_f.field_h];
-                if ((var2 ^ -1) == -3) {
-                    ra.a((byte) -108);
-                }
+        var1 = 0;
+        L0: while (true) {
+          if (!n.h(param0 + 119)) {
+            L1: {
+              un.field_f.a(un.a(-49, ua.field_o, lq.field_W), un.a(-49, gg.field_f, wn.field_i), -30);
+              if (!un.field_f.b((byte) 99)) {
+                break L1;
+              } else {
+                var1 = 1;
+                break L1;
+              }
             }
+            L2: {
+              var2 = 0;
+              if (param0 == 8) {
+                break L2;
+              } else {
+                tl.d(-51, true);
+                break L2;
+              }
+            }
+            L3: {
+              if (var1 == 0) {
+                break L3;
+              } else {
+                if ((un.field_f.field_h ^ -1) > -1) {
+                  break L3;
+                } else {
+                  var2 = ui.field_V[un.field_f.field_h];
+                  if ((var2 ^ -1) != -3) {
+                    break L3;
+                  } else {
+                    ra.a((byte) -108);
+                    break L3;
+                  }
+                }
+              }
+            }
+            return var2;
+          } else {
+            un.field_f.e(-15525);
+            if (!un.field_f.b((byte) 119)) {
+              continue L0;
+            } else {
+              var1 = 1;
+              continue L0;
+            }
+          }
         }
-        return var2;
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, byte param10, int param11, int param12, int param13, int param14, int param15, int[] param16) {
@@ -675,7 +704,6 @@ final class tl extends ob {
     }
 
     final static void a(int param0, kh param1, int param2, boolean param3) {
-        String var8_ref2 = null;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
@@ -695,17 +723,16 @@ final class tl extends ob {
         int var17_int = 0;
         int var18 = 0;
         Object var18_ref = null;
-        String var18_ref_String = null;
         Object var19 = null;
-        String var19_ref = null;
-        String var20 = null;
-        String var21 = null;
-        String var22 = null;
+        Object var20 = null;
+        Object var21 = null;
+        Object var22 = null;
         int var22_int = 0;
         String var22_ref = null;
         int var23 = 0;
         int var24 = 0;
-        String var25 = null;
+        Object var25 = null;
+        String var25_ref = null;
         int var26 = 0;
         int var27 = 0;
         uo var28 = null;
@@ -916,7 +943,6 @@ final class tl extends ob {
         int stackOut_121_1 = 0;
         uo stackOut_120_0 = null;
         int stackOut_120_1 = 0;
-        var8_ref2 = null;
         L0: {
           var26 = Pool.field_O;
           if (param3) {
@@ -1335,9 +1361,9 @@ final class tl extends ob {
                                 break L31;
                               }
                             }
-                            var8_ref2 = stackIn_138_0;
-                            if (var8_ref2 != null) {
-                              kk.field_B = var8_ref2;
+                            var8_ref = stackIn_138_0;
+                            if (var8_ref != null) {
+                              kk.field_B = var8_ref;
                               break L30;
                             } else {
                               break L30;
@@ -1767,10 +1793,10 @@ final class tl extends ob {
                               break L56;
                             } else {
                               if (mj.field_c[var7] != null) {
-                                var18_ref_String = mj.field_c[var7][var9];
+                                var18_ref = (Object) (Object) mj.field_c[var7][var9];
                                 break L56;
                               } else {
-                                var18_ref_String = null;
+                                var18_ref = null;
                                 break L56;
                               }
                             }
@@ -1781,10 +1807,10 @@ final class tl extends ob {
                               break L57;
                             } else {
                               if (null != ir.field_p[var7]) {
-                                var19_ref = ir.field_p[var7][var9];
+                                var19 = (Object) (Object) ir.field_p[var7][var9];
                                 break L57;
                               } else {
-                                var19_ref = null;
+                                var19 = null;
                                 break L57;
                               }
                             }
@@ -1795,7 +1821,7 @@ final class tl extends ob {
                               break L58;
                             } else {
                               if (!((String) var19).equals(var18_ref)) {
-                                var20 = (String) var19;
+                                var20 = var19;
                                 break L58;
                               } else {
                                 break L58;
@@ -1805,7 +1831,7 @@ final class tl extends ob {
                           L59: {
                             var21 = null;
                             if (var13 != 0) {
-                              var21 = he.field_a;
+                              var21 = (Object) (Object) he.field_a;
                               var22 = var21;
                               var25 = var22;
                               var22 = var25;
@@ -1823,10 +1849,10 @@ final class tl extends ob {
                                   if (var11 != 0) {
                                     var22_int = -og.field_I + w.field_j[var7][var9];
                                     if ((var22_int ^ -1) == -2) {
-                                      var21 = kb.field_b;
+                                      var21 = (Object) (Object) kb.field_b;
                                       break L60;
                                     } else {
-                                      var21 = nr.a(new String[1], -1, cr.field_s);
+                                      var21 = (Object) (Object) nr.a(new String[1], -1, cr.field_s);
                                       break L60;
                                     }
                                   } else {
@@ -1836,17 +1862,17 @@ final class tl extends ob {
                                 L61: {
                                   if (var12 != 0) {
                                     var31 = nr.a(new String[2], -1, sm.field_E);
-                                    var22 = var31;
-                                    var25 = var22;
-                                    var22 = var25;
-                                    var21 = var22;
-                                    var25 = var31;
-                                    var22 = var25;
+                                    var22_ref = var31;
+                                    var25_ref = var22_ref;
+                                    var22_ref = var25_ref;
+                                    var21 = (Object) (Object) var22_ref;
+                                    var25_ref = var31;
+                                    var22_ref = var25_ref;
                                     if (var21 == null) {
-                                      var21 = var31;
+                                      var21 = (Object) (Object) var31;
                                       break L61;
                                     } else {
-                                      var21 = var21 + "<br>" + var31;
+                                      var21 = (Object) (Object) (var21 + "<br>" + var31);
                                       break L61;
                                     }
                                   } else {
@@ -1857,7 +1883,7 @@ final class tl extends ob {
                                   break L59;
                                 } else {
                                   L62: {
-                                    var22 = dk.field_a;
+                                    var22_ref = dk.field_a;
                                     if (0 >= var15) {
                                       break L62;
                                     } else {
@@ -1878,15 +1904,15 @@ final class tl extends ob {
                                     }
                                   }
                                   if (var21 != null) {
-                                    var21 = var21 + "<br>" + var22_ref;
+                                    var21 = (Object) (Object) (var21 + "<br>" + var22_ref);
                                     break L59;
                                   } else {
-                                    var21 = var22_ref;
+                                    var21 = (Object) (Object) var22_ref;
                                     break L59;
                                   }
                                 }
                               } else {
-                                var21 = lk.field_t;
+                                var21 = (Object) (Object) lk.field_t;
                                 break L59;
                               }
                             }
@@ -1901,12 +1927,12 @@ final class tl extends ob {
                                 L64: {
                                   var22_ref = null;
                                   if (ln.field_p) {
-                                    var22 = "</col>" + ab.field_h + "<col=A00000>";
-                                    var25 = var22;
-                                    var22 = var25;
-                                    var25 = var22;
-                                    var22 = var25;
-                                    var21 = var22;
+                                    var22_ref = "</col>" + ab.field_h + "<col=A00000>";
+                                    var25_ref = var22_ref;
+                                    var22_ref = var25_ref;
+                                    var25_ref = var22_ref;
+                                    var22_ref = var25_ref;
+                                    var21 = (Object) (Object) var22_ref;
                                     break L64;
                                   } else {
                                     break L64;
@@ -1917,27 +1943,27 @@ final class tl extends ob {
                                 L65: while (true) {
                                   if (var7 <= var24) {
                                     if (var23 != 0) {
-                                      var21 = bg.field_b + var22;
+                                      var21 = (Object) (Object) (bg.field_b + var22_ref);
                                       break L63;
                                     } else {
-                                      var21 = nr.a(new String[1], param2 ^ -1, ka.field_t);
+                                      var21 = (Object) (Object) nr.a(new String[1], param2 ^ -1, ka.field_t);
                                       break L63;
                                     }
                                   } else {
                                     if (gf.field_b[var24]) {
-                                      var25 = "</col>" + ck.field_R[var24] + "<col=A00000>";
-                                      var22 = var25;
-                                      var21 = var22;
-                                      var22 = var25;
-                                      if (var22 != null) {
+                                      var25_ref = "</col>" + ck.field_R[var24] + "<col=A00000>";
+                                      var22_ref = var25_ref;
+                                      var21 = (Object) (Object) var22_ref;
+                                      var22_ref = var25_ref;
+                                      if (var22_ref != null) {
                                         var23 = 1;
-                                        var22 = var22 + ", " + var25;
-                                        var21 = var22;
-                                        var21 = var22;
+                                        var22_ref = var22_ref + ", " + var25_ref;
+                                        var21 = (Object) (Object) var22_ref;
+                                        var21 = (Object) (Object) var22_ref;
                                         var24++;
                                         continue L65;
                                       } else {
-                                        var22 = var25;
+                                        var22_ref = var25_ref;
                                         var24++;
                                         continue L65;
                                       }
@@ -1955,10 +1981,10 @@ final class tl extends ob {
                               var32 = "<col=A00000>" + var21;
                               var33 = ug.a("<br>", "<br><col=A00000>", var32, -1);
                               if (var20 == null) {
-                                var20 = var33;
+                                var20 = (Object) (Object) var33;
                                 break L66;
                               } else {
-                                var20 = var20 + "<br>" + var33;
+                                var20 = (Object) (Object) (var20 + "<br>" + var33);
                                 break L66;
                               }
                             } else {
@@ -1966,7 +1992,7 @@ final class tl extends ob {
                             }
                           }
                           if (var20 != null) {
-                            kk.field_B = var20;
+                            kk.field_B = (String) var20;
                             break L55;
                           } else {
                             break L55;
@@ -2273,10 +2299,10 @@ final class tl extends ob {
         if (param0) {
             field_H = null;
         }
-        if (!(-1 != param1)) {
+        if (!(-1 != (param1 ^ -1))) {
             return 340 + ((tl) this).d(0, param1);
         }
-        if (!(-2 != param1)) {
+        if (!(-2 != (param1 ^ -1))) {
             return 130 + ((tl) this).d(0, param1);
         }
         return ((tl) this).d(0, param1) + 140;
@@ -2505,7 +2531,7 @@ final class tl extends ob {
           if (param1 == -7510) {
             break L0;
           } else {
-            int discarded$2 = tl.h(-13);
+            int discarded$3 = tl.h(-13);
             break L0;
           }
         }
@@ -2537,8 +2563,9 @@ final class tl extends ob {
                   }
                 }
               }
+              int incrementValue$4 = var5;
               var5++;
-              var9[var5] = (char)var7;
+              var9[incrementValue$4] = (char)var7;
               var6++;
               continue L1;
             } else {

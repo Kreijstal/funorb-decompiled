@@ -22,8 +22,9 @@ class ge extends ma {
             return;
         }
         for (var5 = param0; var5 < param0 - -param3; var5++) {
+            int fieldTemp$0 = ((ge) this).field_v;
             ((ge) this).field_v = ((ge) this).field_v + 1;
-            param2[var5] = ((ge) this).field_t[((ge) this).field_v];
+            param2[var5] = ((ge) this).field_t[fieldTemp$0];
         }
     }
 
@@ -41,8 +42,9 @@ class ge extends ma {
             field_n = null;
         }
         for (var5 = param2; var5 < param3 + param2; var5++) {
+            int fieldTemp$0 = ((ge) this).field_v;
             ((ge) this).field_v = ((ge) this).field_v + 1;
-            ((ge) this).field_t[((ge) this).field_v] = param0[var5];
+            ((ge) this).field_t[fieldTemp$0] = param0[var5];
         }
     }
 
@@ -94,51 +96,67 @@ class ge extends ma {
     }
 
     final void a(long param0, byte param1) {
+        int fieldTemp$0 = ((ge) this).field_v;
         ((ge) this).field_v = ((ge) this).field_v + 1;
-        ((ge) this).field_t[((ge) this).field_v] = (byte)(int)(param0 >> 445149112);
+        ((ge) this).field_t[fieldTemp$0] = (byte)(int)(param0 >> 445149112);
+        int fieldTemp$1 = ((ge) this).field_v;
         ((ge) this).field_v = ((ge) this).field_v + 1;
-        ((ge) this).field_t[((ge) this).field_v] = (byte)(int)(param0 >> 925271152);
+        ((ge) this).field_t[fieldTemp$1] = (byte)(int)(param0 >> 925271152);
         if (param1 >= -75) {
             return;
         }
+        int fieldTemp$2 = ((ge) this).field_v;
         ((ge) this).field_v = ((ge) this).field_v + 1;
-        ((ge) this).field_t[((ge) this).field_v] = (byte)(int)(param0 >> 1627194088);
+        ((ge) this).field_t[fieldTemp$2] = (byte)(int)(param0 >> 1627194088);
+        int fieldTemp$3 = ((ge) this).field_v;
         ((ge) this).field_v = ((ge) this).field_v + 1;
-        ((ge) this).field_t[((ge) this).field_v] = (byte)(int)(param0 >> 366413984);
+        ((ge) this).field_t[fieldTemp$3] = (byte)(int)(param0 >> 366413984);
+        int fieldTemp$4 = ((ge) this).field_v;
         ((ge) this).field_v = ((ge) this).field_v + 1;
-        ((ge) this).field_t[((ge) this).field_v] = (byte)(int)(param0 >> -1866229224);
+        ((ge) this).field_t[fieldTemp$4] = (byte)(int)(param0 >> -1866229224);
+        int fieldTemp$5 = ((ge) this).field_v;
         ((ge) this).field_v = ((ge) this).field_v + 1;
-        ((ge) this).field_t[((ge) this).field_v] = (byte)(int)(param0 >> -1589086768);
+        ((ge) this).field_t[fieldTemp$5] = (byte)(int)(param0 >> -1589086768);
+        int fieldTemp$6 = ((ge) this).field_v;
         ((ge) this).field_v = ((ge) this).field_v + 1;
-        ((ge) this).field_t[((ge) this).field_v] = (byte)(int)(param0 >> -2010928376);
+        ((ge) this).field_t[fieldTemp$6] = (byte)(int)(param0 >> -2010928376);
+        int fieldTemp$7 = ((ge) this).field_v;
         ((ge) this).field_v = ((ge) this).field_v + 1;
-        ((ge) this).field_t[((ge) this).field_v] = (byte)(int)param0;
+        ((ge) this).field_t[fieldTemp$7] = (byte)(int)param0;
     }
 
     private final void a(long param0, int param1) {
         int var4 = 122 % ((30 - param1) / 51);
+        int fieldTemp$0 = ((ge) this).field_v;
         ((ge) this).field_v = ((ge) this).field_v + 1;
-        ((ge) this).field_t[((ge) this).field_v] = (byte)(int)(param0 >> 1187552944);
+        ((ge) this).field_t[fieldTemp$0] = (byte)(int)(param0 >> 1187552944);
+        int fieldTemp$1 = ((ge) this).field_v;
         ((ge) this).field_v = ((ge) this).field_v + 1;
-        ((ge) this).field_t[((ge) this).field_v] = (byte)(int)(param0 >> -1535475096);
+        ((ge) this).field_t[fieldTemp$1] = (byte)(int)(param0 >> -1535475096);
+        int fieldTemp$2 = ((ge) this).field_v;
         ((ge) this).field_v = ((ge) this).field_v + 1;
-        ((ge) this).field_t[((ge) this).field_v] = (byte)(int)(param0 >> -1173962080);
+        ((ge) this).field_t[fieldTemp$2] = (byte)(int)(param0 >> -1173962080);
+        int fieldTemp$3 = ((ge) this).field_v;
         ((ge) this).field_v = ((ge) this).field_v + 1;
-        ((ge) this).field_t[((ge) this).field_v] = (byte)(int)(param0 >> 2079688408);
+        ((ge) this).field_t[fieldTemp$3] = (byte)(int)(param0 >> 2079688408);
+        int fieldTemp$4 = ((ge) this).field_v;
         ((ge) this).field_v = ((ge) this).field_v + 1;
-        ((ge) this).field_t[((ge) this).field_v] = (byte)(int)(param0 >> 1793009616);
+        ((ge) this).field_t[fieldTemp$4] = (byte)(int)(param0 >> 1793009616);
+        int fieldTemp$5 = ((ge) this).field_v;
         ((ge) this).field_v = ((ge) this).field_v + 1;
-        ((ge) this).field_t[((ge) this).field_v] = (byte)(int)(param0 >> -1077156344);
+        ((ge) this).field_t[fieldTemp$5] = (byte)(int)(param0 >> -1077156344);
+        int fieldTemp$6 = ((ge) this).field_v;
         ((ge) this).field_v = ((ge) this).field_v + 1;
-        ((ge) this).field_t[((ge) this).field_v] = (byte)(int)param0;
+        ((ge) this).field_t[fieldTemp$6] = (byte)(int)param0;
     }
 
     final int g(int param0) {
         if (param0 >= -59) {
             int discarded$0 = ((ge) this).g(-3);
         }
+        int fieldTemp$1 = ((ge) this).field_v;
         ((ge) this).field_v = ((ge) this).field_v + 1;
-        return 255 & ((ge) this).field_t[((ge) this).field_v];
+        return 255 & ((ge) this).field_t[fieldTemp$1];
     }
 
     final int c(byte param0) {
@@ -260,8 +278,9 @@ class ge extends ma {
             var8 = -1640531527;
             var9 = 32;
             while (true) {
+                int incrementValue$0 = var9;
                 var9--;
-                if ((var9 ^ -1) >= -1) {
+                if ((incrementValue$0 ^ -1) >= -1) {
                     break;
                 }
                 var5 = var5 + (var7 + param1[3 & var7] ^ var6 + (var6 >>> -1810491163 ^ var6 << -1461911068));
@@ -275,42 +294,51 @@ class ge extends ma {
     }
 
     final void b(int param0, int param1) {
+        int fieldTemp$0 = ((ge) this).field_v;
         ((ge) this).field_v = ((ge) this).field_v + 1;
-        ((ge) this).field_t[((ge) this).field_v] = (byte)(param0 >> 1606445616);
+        ((ge) this).field_t[fieldTemp$0] = (byte)(param0 >> 1606445616);
         if (param1 <= 37) {
             ((ge) this).field_v = 87;
         }
+        int fieldTemp$1 = ((ge) this).field_v;
         ((ge) this).field_v = ((ge) this).field_v + 1;
-        ((ge) this).field_t[((ge) this).field_v] = (byte)(param0 >> -528716216);
+        ((ge) this).field_t[fieldTemp$1] = (byte)(param0 >> -528716216);
+        int fieldTemp$2 = ((ge) this).field_v;
         ((ge) this).field_v = ((ge) this).field_v + 1;
-        ((ge) this).field_t[((ge) this).field_v] = (byte)param0;
+        ((ge) this).field_t[fieldTemp$2] = (byte)param0;
     }
 
     final int k(int param0) {
+        int fieldTemp$0 = ((ge) this).field_v;
         ((ge) this).field_v = ((ge) this).field_v + 1;
-        int var2 = ((ge) this).field_t[((ge) this).field_v];
+        int var2 = ((ge) this).field_t[fieldTemp$0];
         int var4 = 22 % ((param0 - 0) / 63);
         int var3 = 0;
         while (-1 < (var2 ^ -1)) {
             var3 = (var3 | var2 & 127) << -125198233;
+            int fieldTemp$1 = ((ge) this).field_v;
             ((ge) this).field_v = ((ge) this).field_v + 1;
-            var2 = ((ge) this).field_t[((ge) this).field_v];
+            var2 = ((ge) this).field_t[fieldTemp$1];
         }
         return var3 | var2;
     }
 
     final void a(boolean param0, int param1) {
+        int fieldTemp$0 = ((ge) this).field_v;
         ((ge) this).field_v = ((ge) this).field_v + 1;
-        ((ge) this).field_t[((ge) this).field_v] = (byte)(param1 >> 1786401048);
+        ((ge) this).field_t[fieldTemp$0] = (byte)(param1 >> 1786401048);
+        int fieldTemp$1 = ((ge) this).field_v;
         ((ge) this).field_v = ((ge) this).field_v + 1;
-        ((ge) this).field_t[((ge) this).field_v] = (byte)(param1 >> -375994736);
+        ((ge) this).field_t[fieldTemp$1] = (byte)(param1 >> -375994736);
         if (!param0) {
             return;
         }
+        int fieldTemp$2 = ((ge) this).field_v;
         ((ge) this).field_v = ((ge) this).field_v + 1;
-        ((ge) this).field_t[((ge) this).field_v] = (byte)(param1 >> -760051640);
+        ((ge) this).field_t[fieldTemp$2] = (byte)(param1 >> -760051640);
+        int fieldTemp$3 = ((ge) this).field_v;
         ((ge) this).field_v = ((ge) this).field_v + 1;
-        ((ge) this).field_t[((ge) this).field_v] = (byte)param1;
+        ((ge) this).field_t[fieldTemp$3] = (byte)param1;
     }
 
     public static void e(int param0) {
@@ -374,10 +402,12 @@ class ge extends ma {
     }
 
     final void a(byte param0, int param1) {
+        int fieldTemp$0 = ((ge) this).field_v;
         ((ge) this).field_v = ((ge) this).field_v + 1;
-        ((ge) this).field_t[((ge) this).field_v] = (byte)(param1 >> 421411976);
+        ((ge) this).field_t[fieldTemp$0] = (byte)(param1 >> 421411976);
+        int fieldTemp$1 = ((ge) this).field_v;
         ((ge) this).field_v = ((ge) this).field_v + 1;
-        ((ge) this).field_t[((ge) this).field_v] = (byte)param1;
+        ((ge) this).field_t[fieldTemp$1] = (byte)param1;
         if (param0 != -81) {
             Object var4 = null;
             ((ge) this).a(false, (String) null);
@@ -398,8 +428,9 @@ class ge extends ma {
             return;
         }
         while (param0 > ((ge) this).field_v) {
+            int fieldTemp$0 = ((ge) this).field_v;
             ((ge) this).field_v = ((ge) this).field_v + 1;
-            ((ge) this).field_t[((ge) this).field_v] = (byte) 0;
+            ((ge) this).field_t[fieldTemp$0] = (byte) 0;
         }
     }
 
@@ -421,10 +452,11 @@ class ge extends ma {
     }
 
     final void a(int param0, boolean param1) {
+        int fieldTemp$0 = ((ge) this).field_v;
         ((ge) this).field_v = ((ge) this).field_v + 1;
-        ((ge) this).field_t[((ge) this).field_v] = (byte)param0;
+        ((ge) this).field_t[fieldTemp$0] = (byte)param0;
         if (param1) {
-            int discarded$0 = ((ge) this).c(-68);
+            int discarded$1 = ((ge) this).c(-68);
         }
     }
 
@@ -446,8 +478,9 @@ class ge extends ma {
         }
         int var2 = ((ge) this).field_v;
         while (true) {
+            int fieldTemp$0 = ((ge) this).field_v;
             ((ge) this).field_v = ((ge) this).field_v + 1;
-            if (((ge) this).field_t[((ge) this).field_v] == 0) {
+            if (((ge) this).field_t[fieldTemp$0] == 0) {
                 break;
             }
         }
@@ -555,8 +588,9 @@ class ge extends ma {
     }
 
     final String a(int param0) {
+        int fieldTemp$0 = ((ge) this).field_v;
         ((ge) this).field_v = ((ge) this).field_v + 1;
-        int var2 = ((ge) this).field_t[((ge) this).field_v];
+        int var2 = ((ge) this).field_t[fieldTemp$0];
         if (0 != var2) {
             throw new IllegalStateException("");
         }
@@ -565,8 +599,9 @@ class ge extends ma {
         }
         int var3 = ((ge) this).field_v;
         while (true) {
+            int fieldTemp$1 = ((ge) this).field_v;
             ((ge) this).field_v = ((ge) this).field_v + 1;
-            if (((ge) this).field_t[((ge) this).field_v] == 0) {
+            if (((ge) this).field_t[fieldTemp$1] == 0) {
                 break;
             }
         }
@@ -582,31 +617,38 @@ class ge extends ma {
         if (0 <= var3) {
             throw new IllegalArgumentException("");
         }
+        int fieldTemp$0 = ((ge) this).field_v;
         ((ge) this).field_v = ((ge) this).field_v + 1;
-        ((ge) this).field_t[((ge) this).field_v] = (byte) 0;
+        ((ge) this).field_t[fieldTemp$0] = (byte) 0;
         CharSequence var4 = (CharSequence) (Object) param1;
         ((ge) this).field_v = ((ge) this).field_v + o.a(((ge) this).field_t, var4, -24984, param1.length(), 0, ((ge) this).field_v);
         if (param0) {
             ((ge) this).field_t = null;
         }
+        int fieldTemp$1 = ((ge) this).field_v;
         ((ge) this).field_v = ((ge) this).field_v + 1;
-        ((ge) this).field_t[((ge) this).field_v] = (byte) 0;
+        ((ge) this).field_t[fieldTemp$1] = (byte) 0;
     }
 
     final void b(long param0, int param1) {
+        int fieldTemp$0 = ((ge) this).field_v;
         ((ge) this).field_v = ((ge) this).field_v + 1;
-        ((ge) this).field_t[((ge) this).field_v] = (byte)(int)(param0 >> -1897199520);
+        ((ge) this).field_t[fieldTemp$0] = (byte)(int)(param0 >> -1897199520);
         if (param1 != 24136) {
-            int discarded$0 = ((ge) this).i(-128);
+            int discarded$1 = ((ge) this).i(-128);
         }
+        int fieldTemp$2 = ((ge) this).field_v;
         ((ge) this).field_v = ((ge) this).field_v + 1;
-        ((ge) this).field_t[((ge) this).field_v] = (byte)(int)(param0 >> 1246471832);
+        ((ge) this).field_t[fieldTemp$2] = (byte)(int)(param0 >> 1246471832);
+        int fieldTemp$3 = ((ge) this).field_v;
         ((ge) this).field_v = ((ge) this).field_v + 1;
-        ((ge) this).field_t[((ge) this).field_v] = (byte)(int)(param0 >> -1370318384);
+        ((ge) this).field_t[fieldTemp$3] = (byte)(int)(param0 >> -1370318384);
+        int fieldTemp$4 = ((ge) this).field_v;
         ((ge) this).field_v = ((ge) this).field_v + 1;
-        ((ge) this).field_t[((ge) this).field_v] = (byte)(int)(param0 >> 566256520);
+        ((ge) this).field_t[fieldTemp$4] = (byte)(int)(param0 >> 566256520);
+        int fieldTemp$5 = ((ge) this).field_v;
         ((ge) this).field_v = ((ge) this).field_v + 1;
-        ((ge) this).field_t[((ge) this).field_v] = (byte)(int)param0;
+        ((ge) this).field_t[fieldTemp$5] = (byte)(int)param0;
     }
 
     final int d(int param0) {
@@ -655,7 +697,7 @@ class ge extends ma {
     }
 
     final static String a(byte param0, pn param1) {
-        String var2 = null;
+        Object var2 = null;
         String var3 = null;
         int var4 = 0;
         Object var5 = null;
@@ -680,16 +722,16 @@ class ge extends ma {
               var3 = var6;
               var3 = var6;
               if (1 == param1.field_h) {
-                var2 = "<img=0>" + var6;
+                var2 = (Object) (Object) ("<img=0>" + var6);
                 break L2;
               } else {
                 break L2;
               }
             }
             if (-3 == (param1.field_h ^ -1)) {
-              var2 = "<img=1>" + var2;
-              var3 = var2;
-              var3 = var2;
+              var2 = (Object) (Object) ("<img=1>" + var2);
+              var3 = (String) var2;
+              var3 = (String) var2;
               break L1;
             } else {
               break L1;
@@ -779,8 +821,9 @@ class ge extends ma {
         }
         CharSequence var4 = (CharSequence) (Object) param1;
         ((ge) this).field_v = ((ge) this).field_v + o.a(((ge) this).field_t, var4, param0 + -15038, param1.length(), 0, ((ge) this).field_v);
+        int fieldTemp$0 = ((ge) this).field_v;
         ((ge) this).field_v = ((ge) this).field_v + 1;
-        ((ge) this).field_t[((ge) this).field_v] = (byte) 0;
+        ((ge) this).field_t[fieldTemp$0] = (byte) 0;
     }
 
     final void a(int param0, int param1, int[] param2, int param3) {
@@ -801,8 +844,9 @@ class ge extends ma {
             var12 = -1640531527;
             var13 = 32;
             while (true) {
+                int incrementValue$0 = var13;
                 var13--;
-                if (-1 <= (var13 ^ -1)) {
+                if (-1 <= (incrementValue$0 ^ -1)) {
                     break;
                 }
                 var10 = var10 - ((var9 << -814168444 ^ var9 >>> -2134175003) + var9 ^ var11 + param2[(var11 & 8044) >>> 1819825739]);
@@ -827,8 +871,9 @@ class ge extends ma {
         if (param0 != 105) {
             return (byte) -27;
         }
+        int fieldTemp$0 = ((ge) this).field_v;
         ((ge) this).field_v = ((ge) this).field_v + 1;
-        return ((ge) this).field_t[((ge) this).field_v];
+        return ((ge) this).field_t[fieldTemp$0];
     }
 
     static {

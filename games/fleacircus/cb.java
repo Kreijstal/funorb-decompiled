@@ -17,14 +17,16 @@ abstract class cb extends pa {
     final static dd[] a(int param0, int param1, int param2, int param3, int param4) {
         dd[] var6 = new dd[9];
         dd[] var5 = var6;
-        var6[6] = oh.c(102, param3, param0);
-        var5[3] = oh.c(102, param3, param0);
-        var5[2] = oh.c(102, param3, param0);
-        var5[1] = oh.c(102, param3, param0);
-        var5[param2] = oh.c(102, param3, param0);
-        var6[8] = oh.c(107, param1, param0);
-        var5[7] = oh.c(107, param1, param0);
-        var5[5] = oh.c(107, param1, param0);
+        dd dupTemp$0 = oh.c(102, param3, param0);
+        var6[6] = dupTemp$0;
+        var5[3] = dupTemp$0;
+        var5[2] = dupTemp$0;
+        var5[1] = dupTemp$0;
+        var5[param2] = dupTemp$0;
+        dd dupTemp$1 = oh.c(107, param1, param0);
+        var6[8] = dupTemp$1;
+        var5[7] = dupTemp$1;
+        var5[5] = dupTemp$1;
         if (!(param4 == 0)) {
             var5[4] = oh.c(df.a(param2, 122), param4, 64);
         }

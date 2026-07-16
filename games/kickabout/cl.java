@@ -62,6 +62,7 @@ final class cl {
         L0: while (true) {
           if ((var1 ^ -1) <= -257) {
             field_h = "Hide players in <%0>'s game";
+            return;
           } else {
             var0 = var1;
             var2 = 0;

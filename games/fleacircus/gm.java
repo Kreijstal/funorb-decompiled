@@ -14,60 +14,19 @@ final class gm extends hl {
         int var1 = 0;
         Object var2 = null;
         Throwable var3 = null;
-        int statePc = 0;
-        Throwable caughtException = null;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    var1 = 61 % ((7 - param0) / 35);
-                    if (sg.field_i != null) {
-                        statePc = 2;
-                    } else {
-                        statePc = 1;
-                    }
-                    continue stateLoop;
-                }
-                case 1: {
-                    return;
-                }
-                case 2: {
-                    var2 = (Object) (Object) sg.field_i;
-                    // monitorenter sg.field_i
-                    statePc = 3;
-                    continue stateLoop;
-                }
-                case 3: {
-                    try {
-                        sg.field_i = null;
-                        // monitorexit var2
-                        statePc = 4;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_3) {
-                        caughtException = stateCaught_3;
-                        statePc = 5;
-                        continue stateLoop;
-                    }
-                }
-                case 4: {
-                    return;
-                }
-                case 5: {
-                    try {
-                        var3 = caughtException;
-                        // monitorexit var2
-                        statePc = 6;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_5) {
-                        caughtException = stateCaught_5;
-                        statePc = 5;
-                        continue stateLoop;
-                    }
-                }
-                case 6: {
-                    throw (RuntimeException) (Object) var3;
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
+        Throwable decompiledCaughtException = null;
+        var1 = 61 % ((7 - param0) / 35);
+        if (sg.field_i != null) {
+          var2 = (Object) (Object) sg.field_i;
+          synchronized (var2) {
+            L0: {
+              sg.field_i = null;
+              break L0;
             }
+          }
+          return;
+        } else {
+          return;
         }
     }
 

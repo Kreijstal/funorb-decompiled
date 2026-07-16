@@ -126,14 +126,14 @@ final class jf extends iq implements java.awt.image.ImageProducer, java.awt.imag
             }
             var5 = (eh) (Object) wg.field_Lb.f((byte) -5);
         }
-        eh var5_ref = new eh();
-        var5_ref.field_A = param2;
+        var5 = new eh();
+        var5.field_A = param2;
         int var6 = -73 / ((param0 - 60) / 49);
-        var5_ref.field_r = param4;
-        var5_ref.field_v = param1;
-        wg.field_Lb.b((byte) -24, (ma) (Object) var5_ref);
-        ub.a(var5_ref, param3, (byte) -117);
-        return var5_ref;
+        var5.field_r = param4;
+        var5.field_v = param1;
+        wg.field_Lb.b((byte) -24, (ma) (Object) var5);
+        ub.a(var5, param3, (byte) -117);
+        return var5;
     }
 
     static {

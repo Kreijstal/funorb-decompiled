@@ -136,22 +136,30 @@ final class mg extends al {
             if (var3 <= var2) {
               return;
             } else {
+              int incrementValue$32 = var2;
               var2++;
-              var5[var2] = 0;
+              var5[incrementValue$32] = 0;
+              int incrementValue$33 = var2;
               var2++;
-              var5[var2] = 0;
+              var5[incrementValue$33] = 0;
+              int incrementValue$34 = var2;
               var2++;
-              var5[var2] = 0;
+              var5[incrementValue$34] = 0;
+              int incrementValue$35 = var2;
               var2++;
-              var5[var2] = 0;
+              var5[incrementValue$35] = 0;
+              int incrementValue$36 = var2;
               var2++;
-              var5[var2] = 0;
+              var5[incrementValue$36] = 0;
+              int incrementValue$37 = var2;
               var2++;
-              var5[var2] = 0;
+              var5[incrementValue$37] = 0;
+              int incrementValue$38 = var2;
               var2++;
-              var5[var2] = 0;
+              var5[incrementValue$38] = 0;
+              int incrementValue$39 = var2;
               var2++;
-              var5[var2] = 0;
+              var5[incrementValue$39] = 0;
               continue L0;
             }
           }
@@ -162,22 +170,30 @@ final class mg extends al {
             if (var3 <= var2) {
               return;
             } else {
+              int incrementValue$40 = var2;
               var2++;
-              var5[var2] = 0;
+              var5[incrementValue$40] = 0;
+              int incrementValue$41 = var2;
               var2++;
-              var5[var2] = 0;
+              var5[incrementValue$41] = 0;
+              int incrementValue$42 = var2;
               var2++;
-              var5[var2] = 0;
+              var5[incrementValue$42] = 0;
+              int incrementValue$43 = var2;
               var2++;
-              var5[var2] = 0;
+              var5[incrementValue$43] = 0;
+              int incrementValue$44 = var2;
               var2++;
-              var5[var2] = 0;
+              var5[incrementValue$44] = 0;
+              int incrementValue$45 = var2;
               var2++;
-              var5[var2] = 0;
+              var5[incrementValue$45] = 0;
+              int incrementValue$46 = var2;
               var2++;
-              var5[var2] = 0;
+              var5[incrementValue$46] = 0;
+              int incrementValue$47 = var2;
               var2++;
-              var5[var2] = 0;
+              var5[incrementValue$47] = 0;
               continue L1;
             }
           }

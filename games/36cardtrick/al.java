@@ -39,7 +39,7 @@ final class al {
             return;
           }
         } else {
-          field_b = (byte[][]) (byte[][]) null;
+          field_b = null;
           rk.field_ab = null;
           if (!ei.field_e) {
             var1 = qb.field_b;
@@ -71,13 +71,13 @@ final class al {
 
     public static void a(byte param0) {
         if (param0 > -22) {
-            field_c = (String) null;
             field_c = null;
-            field_b = (byte[][]) null;
+            field_c = null;
+            field_b = null;
             return;
         }
         field_c = null;
-        field_b = (byte[][]) null;
+        field_b = null;
     }
 
     static {

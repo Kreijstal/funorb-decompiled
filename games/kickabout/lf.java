@@ -71,6 +71,7 @@ final class lf {
                       }
                     }
                   } else {
+                    return;
                   }
                 }
               } else {

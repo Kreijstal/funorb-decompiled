@@ -216,7 +216,7 @@ final class pa {
         int stackOut_22_0 = 0;
         int stackOut_21_0 = 0;
         L0: {
-          int discarded$1 = ag.d(24);
+          int discarded$2 = ag.d(24);
           ((pa) this).field_a = ag.d(16);
           ((pa) this).field_d = ag.d(24);
           ((pa) this).field_b = new int[((pa) this).field_d];
@@ -283,8 +283,9 @@ final class pa {
                     var3_int++;
                     continue L5;
                   } else {
+                    int incrementValue$3 = var2;
                     var2++;
-                    ((pa) this).field_b[var2] = var3_int;
+                    ((pa) this).field_b[incrementValue$3] = var3_int;
                     var5++;
                     continue L6;
                   }

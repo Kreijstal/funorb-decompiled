@@ -108,7 +108,7 @@ final class jg extends bh implements mj {
             break L0;
           }
         }
-        ((fb) (Object) stackIn_3_0).field_H = stackIn_3_1 != 0;
+        stackIn_3_0.field_H = stackIn_3_1 != 0;
         if (param1 > -6) {
           jg.l(4);
           return;

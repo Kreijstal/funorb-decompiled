@@ -143,8 +143,9 @@ final class wk {
                             break L3;
                           }
                         }
+                        int incrementValue$1 = var8;
                         var8++;
-                        qd.field_c[var8] = var12;
+                        qd.field_c[incrementValue$1] = var12;
                         var11++;
                         continue L1;
                       } else {

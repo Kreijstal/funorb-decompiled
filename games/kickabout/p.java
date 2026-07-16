@@ -40,12 +40,12 @@ final class p {
                       break L1;
                     } else {
                       if (-8 != (ks.field_e ^ -1)) {
-                        if (-9 == ks.field_e) {
+                        if (-9 == (ks.field_e ^ -1)) {
                           et.field_d.field_x = new la[]{new la(10, 200, 860, 300), new la(348, 100, 648, 400), new la(10, 610, 860, 710), new la(258, 510, 558, 810), new la(10, 1000, 860, 1100), new la(298, 900, 748, 1200), new la(760, 200, 860, 710), new la(10, 610, 110, 1100)};
                           et.field_d.field_B = et.field_d.field_x;
                           break L1;
                         } else {
-                          if (-10 == ks.field_e) {
+                          if (-10 == (ks.field_e ^ -1)) {
                             et.field_d.field_x = new la[]{new la(0, 0, 896, 800)};
                             et.field_d.field_B = new la[]{new la(0, 0, 896, 1344)};
                             break L1;

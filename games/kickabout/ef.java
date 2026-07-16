@@ -39,13 +39,13 @@ final class ef extends am {
         int var3_int = 0;
         tf var3 = null;
         int var4 = 0;
-        iw var5_ref = null;
+        iw var5_ref_iw = null;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
         iw var9 = null;
         int var10 = 0;
-        je var11 = null;
+        Object var11 = null;
         je var12 = null;
         int var13 = 0;
         int[] var14 = null;
@@ -121,7 +121,7 @@ final class ef extends am {
                             var12 = (je) (Object) var3.c(33);
                             continue L4;
                           } else {
-                            var11 = var12;
+                            var11 = (Object) (Object) var12;
                             break L5;
                           }
                         }
@@ -129,14 +129,14 @@ final class ef extends am {
                       L6: {
                         if (var11 == null) {
                           var15 = new je(var10, gs.field_d.a(0, var10));
-                          var11 = var15;
+                          var11 = (Object) (Object) var15;
                           var3.a((gn) (Object) var15, 3);
                           break L6;
                         } else {
                           break L6;
                         }
                       }
-                      ((ef) this).field_q[var31[var7]] = new db(var32, var11);
+                      ((ef) this).field_q[var31[var7]] = new db(var32, (je) var11);
                       var7++;
                       continue L3;
                     }
@@ -145,9 +145,9 @@ final class ef extends am {
               }
             } else {
               var30 = ((ef) this).field_r[var16];
-              var5_ref = new iw(var30);
-              var5_ref.field_n = 1;
-              var6 = var5_ref.a((byte) 81);
+              var5_ref_iw = new iw(var30);
+              var5_ref_iw.field_n = 1;
+              var6 = var5_ref_iw.a((byte) 81);
               var2 = var2 != 0 & gs.field_d.b(var6, 119) ? 1 : 0;
               var16++;
               continue L2;

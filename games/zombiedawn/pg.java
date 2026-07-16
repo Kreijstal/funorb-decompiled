@@ -48,13 +48,13 @@ final class pg extends al {
                     break L1;
                   } else {
                     mo.field_a.b(640 + vh.field_b + -((pg) this).field_q, var3);
-                    // wide iinc 3 128
+                    var3 += 128;
                     continue L3;
                   }
                 }
               } else {
                 lo.field_i.b(vh.field_b - -((pg) this).field_q, var3);
-                // wide iinc 3 130
+                var3 += 130;
                 continue L2;
               }
             }
@@ -156,7 +156,7 @@ final class pg extends al {
                       }
                     }
                   }
-                  // wide iinc 7 140
+                  var7 += 140;
                   break L5;
                 }
                 if (var7 > ((pg) this).field_m) {
@@ -192,33 +192,39 @@ final class pg extends al {
             Throwable decompiledCaughtException = null;
             try {
               L0: {
-                if (param0) {
-                  break L0;
-                } else {
-                  pg.d(68);
-                  break L0;
+                L1: {
+                  if (param0) {
+                    break L1;
+                  } else {
+                    pg.d(68);
+                    break L1;
+                  }
                 }
-              }
-              L1: {
-                var8 = param1.getParameter("cookiehost");
-                var7 = var8;
-                var7 = var8;
-                var9 = param3 + "=" + param4 + "; version=1; path=/; domain=" + var8;
-                var7 = var9;
-                var7 = var9;
-                if (0L > param2) {
-                  var7 = var9 + "; Discard;";
-                  break L1;
-                } else {
-                  var7 = var9 + "; Expires=" + jb.a(2147483647, pd.a(-22826) + param2 * 1000L) + "; Max-Age=" + param2;
-                  break L1;
+                L2: {
+                  var8 = param1.getParameter("cookiehost");
+                  var7 = var8;
+                  var7 = var8;
+                  var9 = param3 + "=" + param4 + "; version=1; path=/; domain=" + var8;
+                  var7 = var9;
+                  var7 = var9;
+                  if (0L > param2) {
+                    var7 = var9 + "; Discard;";
+                    break L2;
+                  } else {
+                    var7 = var9 + "; Expires=" + jb.a(2147483647, pd.a(-22826) + param2 * 1000L) + "; Max-Age=" + param2;
+                    break L2;
+                  }
                 }
+                qe.a("document.cookie=\"" + var7 + "\"", param1, (byte) 125);
+                break L0;
               }
-              qe.a("document.cookie=\"" + var7 + "\"", param1, (byte) 125);
-            } catch (java.lang.Throwable decompiledCaughtParameter) {
-              decompiledCaughtException = decompiledCaughtParameter;
+            } catch (java.lang.Throwable decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              L3: {
+                var6 = decompiledCaughtException;
+                break L3;
+              }
             }
-            var6 = decompiledCaughtException;
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {

@@ -69,10 +69,12 @@ final class ep {
                       var9 = var4;
                       var10 = var5;
                       var11 = var6;
+                      int fieldTemp$24 = ef.field_g;
                       ef.field_g = ef.field_g + 1;
-                      qj.field_a[ef.field_g] = t.field_e;
+                      qj.field_a[fieldTemp$24] = t.field_e;
+                      int fieldTemp$25 = ef.field_g;
                       ef.field_g = ef.field_g + 1;
-                      qj.field_a[ef.field_g] = (-var9 + var11) * (-var8_int + t.field_e) / (var10 + -var8_int) + var9;
+                      qj.field_a[fieldTemp$25] = (-var9 + var11) * (-var8_int + t.field_e) / (var10 + -var8_int) + var9;
                       if (0 == 0) {
                         break L4;
                       } else {
@@ -91,17 +93,21 @@ final class ep {
                     var9 = var6;
                     var10 = var3;
                     var11 = var4;
+                    int fieldTemp$26 = ef.field_g;
                     ef.field_g = ef.field_g + 1;
-                    qj.field_a[ef.field_g] = t.field_e;
+                    qj.field_a[fieldTemp$26] = t.field_e;
+                    int fieldTemp$27 = ef.field_g;
                     ef.field_g = ef.field_g + 1;
-                    qj.field_a[ef.field_g] = (t.field_e - var8_int) * (-var9 + var11) / (var10 + -var8_int) + var9;
+                    qj.field_a[fieldTemp$27] = (t.field_e - var8_int) * (-var9 + var11) / (var10 + -var8_int) + var9;
                     break L6;
                   }
                 }
+                int fieldTemp$28 = ef.field_g;
                 ef.field_g = ef.field_g + 1;
-                qj.field_a[ef.field_g] = var5;
+                qj.field_a[fieldTemp$28] = var5;
+                int fieldTemp$29 = ef.field_g;
                 ef.field_g = ef.field_g + 1;
-                qj.field_a[ef.field_g] = var6;
+                qj.field_a[fieldTemp$29] = var6;
                 break L4;
               }
               var7_int += 2;
@@ -141,19 +147,23 @@ final class ep {
                             var10 = var6;
                             var11 = var3;
                             var12 = var4;
+                            int fieldTemp$30 = ef.field_g;
                             ef.field_g = ef.field_g + 1;
-                            qj.field_a[ef.field_g] = t.field_h;
+                            qj.field_a[fieldTemp$30] = t.field_h;
+                            int fieldTemp$31 = ef.field_g;
                             ef.field_g = ef.field_g + 1;
-                            qj.field_a[ef.field_g] = var10 + (t.field_h + -var9) * (-var10 + var12) / (var11 + -var9);
+                            qj.field_a[fieldTemp$31] = var10 + (t.field_h + -var9) * (-var10 + var12) / (var11 + -var9);
                             break L11;
                           } else {
                             break L11;
                           }
                         }
+                        int fieldTemp$32 = ef.field_g;
                         ef.field_g = ef.field_g + 1;
-                        qj.field_a[ef.field_g] = var5;
+                        qj.field_a[fieldTemp$32] = var5;
+                        int fieldTemp$33 = ef.field_g;
                         ef.field_g = ef.field_g + 1;
-                        qj.field_a[ef.field_g] = var6;
+                        qj.field_a[fieldTemp$33] = var6;
                         if (0 == 0) {
                           break L9;
                         } else {
@@ -166,10 +176,12 @@ final class ep {
                       var10 = var4;
                       var11 = var5;
                       var12 = var6;
+                      int fieldTemp$34 = ef.field_g;
                       ef.field_g = ef.field_g + 1;
-                      qj.field_a[ef.field_g] = t.field_h;
+                      qj.field_a[fieldTemp$34] = t.field_h;
+                      int fieldTemp$35 = ef.field_g;
                       ef.field_g = ef.field_g + 1;
-                      qj.field_a[ef.field_g] = (t.field_h + -var9) * (var12 - var10) / (var11 + -var9) + var10;
+                      qj.field_a[fieldTemp$35] = (t.field_h + -var9) * (var12 - var10) / (var11 + -var9) + var10;
                       break L9;
                     } else {
                       break L9;
@@ -214,17 +226,21 @@ final class ep {
                                 var10 = var6;
                                 var11 = var3;
                                 var12 = var4;
+                                int fieldTemp$36 = ef.field_g;
                                 ef.field_g = ef.field_g + 1;
-                                qj.field_a[ef.field_g] = var9 - -((-var9 + var11) * (t.field_f - var10) / (var12 + -var10));
+                                qj.field_a[fieldTemp$36] = var9 - -((-var9 + var11) * (t.field_f - var10) / (var12 + -var10));
+                                int fieldTemp$37 = ef.field_g;
                                 ef.field_g = ef.field_g + 1;
-                                qj.field_a[ef.field_g] = t.field_f;
+                                qj.field_a[fieldTemp$37] = t.field_f;
                                 break L16;
                               }
                             }
+                            int fieldTemp$38 = ef.field_g;
                             ef.field_g = ef.field_g + 1;
-                            qj.field_a[ef.field_g] = var5;
+                            qj.field_a[fieldTemp$38] = var5;
+                            int fieldTemp$39 = ef.field_g;
                             ef.field_g = ef.field_g + 1;
-                            qj.field_a[ef.field_g] = var6;
+                            qj.field_a[fieldTemp$39] = var6;
                             if (0 == 0) {
                               break L14;
                             } else {
@@ -237,10 +253,12 @@ final class ep {
                           var10 = var4;
                           var11 = var5;
                           var12 = var6;
+                          int fieldTemp$40 = ef.field_g;
                           ef.field_g = ef.field_g + 1;
-                          qj.field_a[ef.field_g] = var9 - -((t.field_f + -var10) * (var11 - var9) / (var12 + -var10));
+                          qj.field_a[fieldTemp$40] = var9 - -((t.field_f + -var10) * (var11 - var9) / (var12 + -var10));
+                          int fieldTemp$41 = ef.field_g;
                           ef.field_g = ef.field_g + 1;
-                          qj.field_a[ef.field_g] = t.field_f;
+                          qj.field_a[fieldTemp$41] = t.field_f;
                           break L14;
                         } else {
                           break L14;
@@ -283,19 +301,23 @@ final class ep {
                                     var10 = var6;
                                     var11 = var3;
                                     var12 = var4;
+                                    int fieldTemp$42 = ef.field_g;
                                     ef.field_g = ef.field_g + 1;
-                                    qj.field_a[ef.field_g] = (-var10 + t.field_a) * (var11 + -var9) / (-var10 + var12) + var9;
+                                    qj.field_a[fieldTemp$42] = (-var10 + t.field_a) * (var11 + -var9) / (-var10 + var12) + var9;
+                                    int fieldTemp$43 = ef.field_g;
                                     ef.field_g = ef.field_g + 1;
-                                    qj.field_a[ef.field_g] = t.field_a;
+                                    qj.field_a[fieldTemp$43] = t.field_a;
                                     break L21;
                                   } else {
                                     break L21;
                                   }
                                 }
+                                int fieldTemp$44 = ef.field_g;
                                 ef.field_g = ef.field_g + 1;
-                                qj.field_a[ef.field_g] = var5;
+                                qj.field_a[fieldTemp$44] = var5;
+                                int fieldTemp$45 = ef.field_g;
                                 ef.field_g = ef.field_g + 1;
-                                qj.field_a[ef.field_g] = var6;
+                                qj.field_a[fieldTemp$45] = var6;
                                 if (0 == 0) {
                                   break L19;
                                 } else {
@@ -310,10 +332,12 @@ final class ep {
                               var10 = var4;
                               var11 = var5;
                               var12 = var6;
+                              int fieldTemp$46 = ef.field_g;
                               ef.field_g = ef.field_g + 1;
-                              qj.field_a[ef.field_g] = var9 - -((var11 - var9) * (t.field_a - var10) / (var12 - var10));
+                              qj.field_a[fieldTemp$46] = var9 - -((var11 - var9) * (t.field_a - var10) / (var12 - var10));
+                              int fieldTemp$47 = ef.field_g;
                               ef.field_g = ef.field_g + 1;
-                              qj.field_a[ef.field_g] = t.field_a;
+                              qj.field_a[fieldTemp$47] = t.field_a;
                               break L19;
                             }
                           }
@@ -384,133 +408,79 @@ final class ep {
             IOException var2 = null;
             int var3 = 0;
             Throwable decompiledCaughtException = null;
-            int statePc = 0;
-            Throwable caughtException = null;
-            stateLoop: while (true) {
-                switch (statePc) {
-                    case 0: {
-                        var3 = Pixelate.field_H ? 1 : 0;
-                        if (pm.field_h == null) {
-                            statePc = 2;
-                        } else {
-                            statePc = 1;
-                        }
-                        continue stateLoop;
-                    }
-                    case 1: {
-                        pm.field_h.b((byte) 119);
-                        statePc = 2;
-                        continue stateLoop;
-                    }
-                    case 2: {
-                        if (param0 == -26721) {
-                            statePc = 4;
-                        } else {
-                            statePc = 3;
-                        }
-                        continue stateLoop;
-                    }
-                    case 3: {
-                        return;
-                    }
-                    case 4: {
-                        if (fh.field_J == null) {
-                            statePc = 6;
-                        } else {
-                            statePc = 5;
-                        }
-                        continue stateLoop;
-                    }
-                    case 5: {
-                        fh.field_J.a((byte) -92);
-                        statePc = 6;
-                        continue stateLoop;
-                    }
-                    case 6: {
-                        if (null != rj.field_G) {
-                            statePc = 8;
-                        } else {
-                            statePc = 11;
-                        }
-                        continue stateLoop;
-                    }
-                    case 8: {
-                        try {
-                            rj.field_G.a(true);
-                            statePc = 11;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_8) {
-                            caughtException = stateCaught_8;
-                            statePc = 10;
-                            continue stateLoop;
-                        }
-                    }
-                    case 10: {
-                        iOException = (IOException) (Object) caughtException;
-                        statePc = 11;
-                        continue stateLoop;
-                    }
-                    case 11: {
-                        if (ug.field_l != null) {
-                            statePc = 13;
-                        } else {
-                            statePc = 21;
-                        }
-                        continue stateLoop;
-                    }
-                    case 13: {
-                        var1 = 0;
-                        statePc = 14;
-                        continue stateLoop;
-                    }
-                    case 14: {
-                        if (ug.field_l.length <= var1) {
-                            statePc = 21;
-                        } else {
-                            statePc = 15;
-                        }
-                        continue stateLoop;
-                    }
-                    case 15: {
-                        if (null != ug.field_l[var1]) {
-                            statePc = 18;
-                        } else {
-                            statePc = 16;
-                        }
-                        continue stateLoop;
-                    }
-                    case 16: {
-                        var1++;
-                        statePc = 14;
-                        continue stateLoop;
-                    }
-                    case 18: {
-                        try {
-                            ug.field_l[var1].a(true);
-                            statePc = 19;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_18) {
-                            caughtException = stateCaught_18;
-                            statePc = 20;
-                            continue stateLoop;
-                        }
-                    }
-                    case 19: {
-                        var1++;
-                        statePc = 14;
-                        continue stateLoop;
-                    }
-                    case 20: {
-                        var2 = (IOException) (Object) caughtException;
-                        var1++;
-                        statePc = 14;
-                        continue stateLoop;
-                    }
-                    case 21: {
-                        return;
-                    }
-                    default: throw new IllegalStateException("invalid CFG state " + statePc);
+            L0: {
+              var3 = Pixelate.field_H ? 1 : 0;
+              if (pm.field_h == null) {
+                break L0;
+              } else {
+                pm.field_h.b((byte) 119);
+                break L0;
+              }
+            }
+            if (param0 == -26721) {
+              L1: {
+                if (fh.field_J == null) {
+                  break L1;
+                } else {
+                  fh.field_J.a((byte) -92);
+                  break L1;
                 }
+              }
+              L2: {
+                if (null != rj.field_G) {
+                  try {
+                    L3: {
+                      rj.field_G.a(true);
+                      break L3;
+                    }
+                  } catch (java.io.IOException decompiledCaughtParameter0) {
+                    decompiledCaughtException = decompiledCaughtParameter0;
+                    L4: {
+                      iOException = (IOException) (Object) decompiledCaughtException;
+                      break L4;
+                    }
+                  }
+                  break L2;
+                } else {
+                  break L2;
+                }
+              }
+              L5: {
+                if (ug.field_l != null) {
+                  var1 = 0;
+                  L6: while (true) {
+                    if (ug.field_l.length <= var1) {
+                      break L5;
+                    } else {
+                      if (null != ug.field_l[var1]) {
+                        try {
+                          L7: {
+                            ug.field_l[var1].a(true);
+                            var1++;
+                            break L7;
+                          }
+                        } catch (java.io.IOException decompiledCaughtParameter1) {
+                          decompiledCaughtException = decompiledCaughtParameter1;
+                          L8: {
+                            var2 = (IOException) (Object) decompiledCaughtException;
+                            var1++;
+                            break L8;
+                          }
+                        }
+                        continue L6;
+                      } else {
+                        var1++;
+                        continue L6;
+                      }
+                    }
+                  }
+                } else {
+                  break L5;
+                }
+              }
+              return;
+            } else {
+              return;
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;

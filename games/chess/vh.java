@@ -101,19 +101,26 @@ final class vh {
                 L3: {
                   if (-1 > (qn.field_U.field_l ^ -1)) {
                     try {
-                      lj.field_a.a(0, qn.field_U.field_l, (byte) -92, qn.field_U.field_o);
-                      ta.field_t = ud.a(2);
-                    } catch (java.io.IOException decompiledCaughtParameter) {
-                      decompiledCaughtException = decompiledCaughtParameter;
+                      L4: {
+                        lj.field_a.a(0, qn.field_U.field_l, (byte) -92, qn.field_U.field_o);
+                        ta.field_t = ud.a(2);
+                        break L4;
+                      }
+                    } catch (java.io.IOException decompiledCaughtParameter0) {
+                      decompiledCaughtException = decompiledCaughtParameter0;
+                      L5: {
+                        iOException = (IOException) (Object) decompiledCaughtException;
+                        si.d(65280);
+                        break L5;
+                      }
                     }
-                    iOException = (IOException) (Object) decompiledCaughtException;
-                    si.d(65280);
+                    qn.field_U.field_l = 0;
                     break L3;
                   } else {
                     break L3;
                   }
                 }
-                qn.field_U.field_l = 0;
+                return;
               }
             }
             qn.field_U.field_l = 0;

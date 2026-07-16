@@ -45,8 +45,8 @@ final class og {
     }
 
     private static void $cfr$clinit() {
-        int var0 = 0;
         int var1 = 0;
+        int var0 = 0;
         int var2 = 0;
         field_f = 640;
         field_i = "Mega Power: <%0>";
@@ -55,31 +55,17 @@ final class og {
         field_a = new wb(0);
         field_e = "FULL ACCESS";
         field_g = new int[256];
-        var1 = 0;
-        L0: while (true) {
-          if (var1 <= -257) {
-            field_h = new String[]{"January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"};
-          } else {
+        for (var1 = 0; (var1 ^ -1) > -257; var1++) {
             var0 = var1;
-            var2 = 0;
-            L1: while (true) {
-              if (-9 <= var2) {
-                field_g[var1] = var0;
-                var1++;
-                continue L0;
-              } else {
-                if ((1 & var0) == 1) {
-                  var0 = var0 >>> -640092223 ^ -306674912;
-                  var2++;
-                  continue L1;
+            for (var2 = 0; -9 < (var2 ^ -1); var2++) {
+                if ((1 & var0) != 1) {
+                    var0 = var0 >>> 1;
                 } else {
-                  var0 = var0 >>> 1;
-                  var2++;
-                  continue L1;
+                    var0 = var0 >>> -640092223 ^ -306674912;
                 }
-              }
             }
-          }
+            field_g[var1] = var0;
         }
+        field_h = new String[]{"January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"};
     }
 }

@@ -37,29 +37,35 @@ abstract class en extends na implements nf {
             wd stackOut_2_0 = null;
             try {
               L0: {
-                var4 = Class.forName("di");
-                if (param3 == -103) {
-                  break L0;
-                } else {
-                  var6 = null;
-                  wd discarded$2 = en.a(-5, (java.awt.Component) null, 72, (byte) -86);
-                  break L0;
+                L1: {
+                  var4 = Class.forName("di");
+                  if (param3 == -103) {
+                    break L1;
+                  } else {
+                    var6 = null;
+                    wd discarded$2 = en.a(-5, (java.awt.Component) null, 72, (byte) -86);
+                    break L1;
+                  }
                 }
+                var5 = (wd) var4.newInstance();
+                var5.a(param1, 42, param2, param0);
+                stackOut_2_0 = (wd) var5;
+                stackIn_3_0 = stackOut_2_0;
+                break L0;
               }
-              var5 = (wd) var4.newInstance();
-              var5.a(param1, 42, param2, param0);
-              stackOut_2_0 = (wd) var5;
-              stackIn_3_0 = stackOut_2_0;
-            } catch (java.lang.Throwable decompiledCaughtParameter) {
-              decompiledCaughtException = decompiledCaughtParameter;
-              return stackIn_3_0;
+            } catch (java.lang.Throwable decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              var4_ref = decompiledCaughtException;
+              var5_ref = new wm();
+              ((wd) (Object) var5_ref).a(param1, param3 ^ -77, param2, param0);
+              return (wd) (Object) var5_ref;
             }
+            return stackIn_3_0;
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
             throw new RuntimeException(decompiledCheckedException);
         }
-        return null;
     }
 
     public static void g(int param0) {

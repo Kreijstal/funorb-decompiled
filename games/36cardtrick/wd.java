@@ -13,7 +13,7 @@ final class wd {
         field_b = null;
         field_c = null;
         if (!param0) {
-          field_b = (vg) null;
+          field_b = null;
           field_a = null;
           field_e = null;
           return;
@@ -49,7 +49,7 @@ final class wd {
           if (param0 > 3) {
             break L2;
           } else {
-            field_e = (gd) null;
+            field_e = null;
             break L2;
           }
         }
@@ -730,7 +730,7 @@ final class wd {
             return;
           }
         } else {
-          field_e = (gd) null;
+          field_e = null;
           if (-11 != (cd.field_e ^ -1)) {
             if (c.b(true)) {
               sg.field_b = true;

@@ -78,8 +78,9 @@ final class tk {
                   return null;
                 }
               } else {
+                int fieldTemp$2 = ((tk) this).field_h;
                 ((tk) this).field_h = ((tk) this).field_h + 1;
-                var4 = ((tk) this).field_c[((tk) this).field_h].field_q;
+                var4 = ((tk) this).field_c[fieldTemp$2].field_q;
                 if (((tk) this).field_c[-1 + ((tk) this).field_h] != var4) {
                   ((tk) this).field_g = var4.field_q;
                   return var4;
@@ -103,8 +104,9 @@ final class tk {
                 return null;
               }
             } else {
+              int fieldTemp$3 = ((tk) this).field_h;
               ((tk) this).field_h = ((tk) this).field_h + 1;
-              var3 = ((tk) this).field_c[((tk) this).field_h].field_q;
+              var3 = ((tk) this).field_c[fieldTemp$3].field_q;
               if (((tk) this).field_c[-1 + ((tk) this).field_h] != var3) {
                 ((tk) this).field_g = var3.field_q;
                 return var3;
@@ -214,8 +216,9 @@ final class tk {
         ((tk) this).field_c = new rg[param0];
         ((tk) this).field_a = param0;
         for (var2 = 0; param0 > var2; var2++) {
-            var3 = new rg();
-            ((tk) this).field_c[var2] = new rg();
+            rg dupTemp$0 = new rg();
+            var3 = dupTemp$0;
+            ((tk) this).field_c[var2] = dupTemp$0;
             var3.field_n = var3;
             var3.field_q = var3;
         }

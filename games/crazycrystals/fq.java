@@ -177,7 +177,7 @@ final class fq extends ea implements Cloneable {
 
     final f b(f[][] param0, int param1, byte param2, int param3) {
         int var5 = 0;
-        mi var5_ref = null;
+        mi var5_ref_mi = null;
         mi var6 = null;
         int var7 = 0;
         int var8 = 0;
@@ -211,9 +211,9 @@ final class fq extends ea implements Cloneable {
             } else {
               if (((fq) this).field_F >= 180) {
                 L3: {
-                  var5_ref = this.g(param1, param3 + -1, param0, 98);
+                  var5_ref_mi = this.g(param1, param3 + -1, param0, 98);
                   var6 = this.g(param1, 1 + param3, param0, 109);
-                  if (var5_ref == null) {
+                  if (var5_ref_mi == null) {
                     break L3;
                   } else {
                     L4: {
@@ -228,7 +228,7 @@ final class fq extends ea implements Cloneable {
                       }
                     }
                     ((fq) this).d(17, 99, -9634);
-                    ((fq) this).field_H = var5_ref;
+                    ((fq) this).field_H = var5_ref_mi;
                     ((fq) this).field_H.field_C = (fq) this;
                     break L2;
                   }
@@ -533,7 +533,7 @@ final class fq extends ea implements Cloneable {
                   }
                 }
                 L6: {
-                  if (((fq) this).field_v == -88) {
+                  if ((((fq) this).field_v ^ -1) == -88) {
                     var5++;
                     break L6;
                   } else {
@@ -541,7 +541,7 @@ final class fq extends ea implements Cloneable {
                   }
                 }
                 ((fq) this).field_v = ((fq) this).field_v + 1;
-                if (-125 == ((fq) this).field_v) {
+                if (-125 == (((fq) this).field_v ^ -1)) {
                   ((fq) this).field_v = 0;
                   break L1;
                 } else {
@@ -655,7 +655,6 @@ final class fq extends ea implements Cloneable {
         int var3 = 0;
         int var4_int = 0;
         String var4 = null;
-        String var4_ref = null;
         String var5 = null;
         String var6 = null;
         int var7 = 0;
@@ -682,13 +681,13 @@ final class fq extends ea implements Cloneable {
                   var5 = p.field_h;
                   break L2;
                 } else {
-                  var4_ref = q.field_c[((fq) this).field_u];
+                  var4 = q.field_c[((fq) this).field_u];
                   var5 = fh.field_j;
                   break L2;
                 }
               } else {
                 if (2 != ((fq) this).field_u) {
-                  var4_ref = q.field_c[((fq) this).field_u];
+                  var4 = q.field_c[((fq) this).field_u];
                   var5 = pl.field_s;
                   var6 = en.field_F;
                   break L2;
@@ -734,200 +733,75 @@ final class fq extends ea implements Cloneable {
             IOException var3 = null;
             int stackIn_12_0 = 0;
             int stackIn_14_0 = 0;
+            int decompiledRegionSelector0 = 0;
+            Throwable decompiledCaughtException = null;
             int stackOut_11_0 = 0;
             int stackOut_13_0 = 0;
-            int statePc = 0;
-            Throwable caughtException = null;
-            stateLoop: while (true) {
-                switch (statePc) {
-                    case 0: {
-                        if (kd.field_n.field_f < param0) {
-                            statePc = 2;
+            if (kd.field_n.field_f < param0) {
+              if (oi.field_c == null) {
+                return false;
+              } else {
+                var2 = 43 / ((-3 - param1) / 34);
+                try {
+                  L0: {
+                    var3_int = oi.field_c.c(0);
+                    if ((var3_int ^ -1) >= -1) {
+                      L1: {
+                        if (0 > var3_int) {
+                          break L1;
                         } else {
-                            statePc = 1;
+                          if (30000L >= wd.d(-1322)) {
+                            decompiledRegionSelector0 = 0;
+                            break L0;
+                          } else {
+                            break L1;
+                          }
                         }
-                        continue stateLoop;
-                    }
-                    case 1: {
-                        return true;
-                    }
-                    case 2: {
-                        if (oi.field_c == null) {
-                            statePc = 4;
+                      }
+                      jj.a(4);
+                      decompiledRegionSelector0 = 1;
+                      break L0;
+                    } else {
+                      L2: {
+                        if (param0 + -kd.field_n.field_f >= var3_int) {
+                          break L2;
                         } else {
-                            statePc = 5;
+                          var3_int = -kd.field_n.field_f + param0;
+                          break L2;
                         }
-                        continue stateLoop;
-                    }
-                    case 4: {
-                        return false;
-                    }
-                    case 5: {
-                        var2 = 43 / ((-3 - param1) / 34);
-                        statePc = 6;
-                        continue stateLoop;
-                    }
-                    case 6: {
-                        try {
-                            var3_int = oi.field_c.c(0);
-                            if ((var3_int ^ -1) >= -1) {
-                                statePc = 15;
-                            } else {
-                                statePc = 7;
-                            }
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_6) {
-                            caughtException = stateCaught_6;
-                            statePc = 20;
-                            continue stateLoop;
-                        }
-                    }
-                    case 7: {
-                        try {
-                            if (param0 + -kd.field_n.field_f >= var3_int) {
-                                statePc = 9;
-                            } else {
-                                statePc = 8;
-                            }
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_7) {
-                            caughtException = stateCaught_7;
-                            statePc = 20;
-                            continue stateLoop;
-                        }
-                    }
-                    case 8: {
-                        try {
-                            var3_int = -kd.field_n.field_f + param0;
-                            statePc = 9;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_8) {
-                            caughtException = stateCaught_8;
-                            statePc = 20;
-                            continue stateLoop;
-                        }
-                    }
-                    case 9: {
-                        try {
-                            oi.field_c.a(kd.field_n.field_h, var3_int, 2034, kd.field_n.field_f);
-                            wg.field_y = lo.a((byte) -60);
-                            kd.field_n.field_f = kd.field_n.field_f + var3_int;
-                            if (param0 > kd.field_n.field_f) {
-                                statePc = 11;
-                            } else {
-                                statePc = 10;
-                            }
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_9) {
-                            caughtException = stateCaught_9;
-                            statePc = 20;
-                            continue stateLoop;
-                        }
-                    }
-                    case 10: {
-                        try {
-                            statePc = 13;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_10) {
-                            caughtException = stateCaught_10;
-                            statePc = 20;
-                            continue stateLoop;
-                        }
-                    }
-                    case 11: {
-                        try {
-                            stackOut_11_0 = 0;
-                            stackIn_12_0 = stackOut_11_0;
-                            statePc = 12;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_11) {
-                            caughtException = stateCaught_11;
-                            statePc = 20;
-                            continue stateLoop;
-                        }
-                    }
-                    case 12: {
+                      }
+                      oi.field_c.a(kd.field_n.field_h, var3_int, 2034, kd.field_n.field_f);
+                      wg.field_y = lo.a((byte) -60);
+                      kd.field_n.field_f = kd.field_n.field_f + var3_int;
+                      if (param0 > kd.field_n.field_f) {
+                        stackOut_11_0 = 0;
+                        stackIn_12_0 = stackOut_11_0;
                         return stackIn_12_0 != 0;
-                    }
-                    case 13: {
-                        try {
-                            kd.field_n.field_f = 0;
-                            stackOut_13_0 = 1;
-                            stackIn_14_0 = stackOut_13_0;
-                            statePc = 14;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_13) {
-                            caughtException = stateCaught_13;
-                            statePc = 20;
-                            continue stateLoop;
-                        }
-                    }
-                    case 14: {
+                      } else {
+                        kd.field_n.field_f = 0;
+                        stackOut_13_0 = 1;
+                        stackIn_14_0 = stackOut_13_0;
                         return stackIn_14_0 != 0;
+                      }
                     }
-                    case 15: {
-                        try {
-                            if (0 > var3_int) {
-                                statePc = 18;
-                            } else {
-                                statePc = 16;
-                            }
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_15) {
-                            caughtException = stateCaught_15;
-                            statePc = 20;
-                            continue stateLoop;
-                        }
-                    }
-                    case 16: {
-                        try {
-                            if (30000L >= wd.d(-1322)) {
-                                statePc = 19;
-                            } else {
-                                statePc = 17;
-                            }
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_16) {
-                            caughtException = stateCaught_16;
-                            statePc = 20;
-                            continue stateLoop;
-                        }
-                    }
-                    case 17: {
-                        try {
-                            statePc = 18;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_17) {
-                            caughtException = stateCaught_17;
-                            statePc = 20;
-                            continue stateLoop;
-                        }
-                    }
-                    case 18: {
-                        try {
-                            jj.a(4);
-                            statePc = 21;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_18) {
-                            caughtException = stateCaught_18;
-                            statePc = 20;
-                            continue stateLoop;
-                        }
-                    }
-                    case 19: {
-                        return false;
-                    }
-                    case 20: {
-                        var3 = (IOException) (Object) caughtException;
-                        jj.a(4);
-                        statePc = 21;
-                        continue stateLoop;
-                    }
-                    case 21: {
-                        return false;
-                    }
-                    default: throw new IllegalStateException("invalid CFG state " + statePc);
+                  }
+                } catch (java.io.IOException decompiledCaughtParameter0) {
+                  decompiledCaughtException = decompiledCaughtParameter0;
+                  L3: {
+                    var3 = (IOException) (Object) decompiledCaughtException;
+                    jj.a(4);
+                    decompiledRegionSelector0 = 1;
+                    break L3;
+                  }
                 }
+                if (decompiledRegionSelector0 == 0) {
+                  return false;
+                } else {
+                  return false;
+                }
+              }
+            } else {
+              return true;
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -970,16 +844,28 @@ final class fq extends ea implements Cloneable {
     }
 
     private final void e(byte param0) {
-        int var2 = -37 / ((param0 - -26) / 56);
-        if (null == ((fq) this).field_H) {
-        } else {
-            if ((Object) (Object) ((fq) this).field_H.field_z != this) {
-                // if_acmpne L66
-                ((fq) this).field_H.field_C = null;
-            } else {
+        int var2 = 0;
+        L0: {
+          var2 = -37 / ((param0 - -26) / 56);
+          if (null != ((fq) this).field_H) {
+            L1: {
+              if ((Object) (Object) ((fq) this).field_H.field_z == this) {
                 ((fq) this).field_H.field_z = null;
+                break L1;
+              } else {
+                if ((Object) (Object) ((fq) this).field_H.field_C != this) {
+                  break L1;
+                } else {
+                  ((fq) this).field_H.field_C = null;
+                  break L1;
+                }
+              }
             }
             ((fq) this).field_H = null;
+            break L0;
+          } else {
+            break L0;
+          }
         }
     }
 
@@ -1115,31 +1001,51 @@ final class fq extends ea implements Cloneable {
     }
 
     final boolean i(int param0) {
-        if (((fq) this).field_y) {
-            ((fq) this).field_B = ((fq) this).field_B - 1;
-            // ifge L149
-            return true;
-        }
-        if (!(((fq) this).field_w >= 4)) {
-            ((fq) this).field_F = ((fq) this).field_F + 1;
-        }
-        ((fq) this).field_B = ((fq) this).field_B + 1;
-        if (!(((fq) this).field_B < bp.field_c[((fq) this).field_w] << uc.field_c[((fq) this).field_w])) {
-            ((fq) this).field_B = fg.field_j[((fq) this).field_w] << uc.field_c[((fq) this).field_w];
-            if (((fq) this).field_B > -1) {
-                return true;
+        L0: {
+          if (!((fq) this).field_y) {
+            L1: {
+              if (((fq) this).field_w < 4) {
+                ((fq) this).field_F = ((fq) this).field_F + 1;
+                break L1;
+              } else {
+                break L1;
+              }
             }
-            if (-1 < ((fq) this).field_E) {
-                ((fq) this).field_E = ((fq) this).field_E - 1;
-                if (!(0 != ((fq) this).field_E)) {
+            ((fq) this).field_B = ((fq) this).field_B + 1;
+            if (((fq) this).field_B >= bp.field_c[((fq) this).field_w] << uc.field_c[((fq) this).field_w]) {
+              ((fq) this).field_B = fg.field_j[((fq) this).field_w] << uc.field_c[((fq) this).field_w];
+              if ((((fq) this).field_B ^ -1) <= -1) {
+                if (-1 <= (((fq) this).field_E ^ -1)) {
+                  break L0;
+                } else {
+                  ((fq) this).field_E = ((fq) this).field_E - 1;
+                  if (0 == ((fq) this).field_E) {
                     ((fq) this).field_y = true;
+                    break L0;
+                  } else {
+                    break L0;
+                  }
                 }
+              } else {
+                return true;
+              }
+            } else {
+              break L0;
             }
+          } else {
+            ((fq) this).field_B = ((fq) this).field_B - 1;
+            if (((fq) this).field_B >= 0) {
+              break L0;
+            } else {
+              return true;
+            }
+          }
         }
-        if (param0 != 12555) {
-            return false;
+        if (param0 == 12555) {
+          return false;
+        } else {
+          return false;
         }
-        return false;
     }
 
     final void a(f[][] param0, int param1, int param2, boolean param3) {
@@ -1157,17 +1063,16 @@ final class fq extends ea implements Cloneable {
     }
 
     final f a(mj param0, byte param1, boolean param2, f[][] param3) {
-        f var5_ref = null;
         if (param1 >= -74) {
             ((fq) this).f(115, -99, (f[][]) null, -6);
         }
         Object var5 = this;
         if (param2) {
             if (!(((fq) this).field_p < 2 * ((fq) this).field_m)) {
-                var5_ref = ((fq) this).a(param0.field_c, param0.field_b, (f) (Object) param0.field_a, 122, param3);
+                var5 = (Object) (Object) ((fq) this).a(param0.field_c, param0.field_b, (f) (Object) param0.field_a, 122, param3);
             }
         }
-        return (f) (Object) new ma(param0.b((byte) 84), var5_ref, param0);
+        return (f) (Object) new ma(param0.b((byte) 84), (f) var5, param0);
     }
 
     private final boolean a(int param0, int param1, int param2, int param3, f[][] param4) {
@@ -1185,8 +1090,8 @@ final class fq extends ea implements Cloneable {
         int stackOut_13_0 = 0;
         var7 = CrazyCrystals.field_B;
         var6 = param1;
-        if (-13 != var6) {
-          if (-15 != var6) {
+        if (-13 != (var6 ^ -1)) {
+          if (-15 != (var6 ^ -1)) {
             if (-14 == (var6 ^ -1)) {
               return this.a(param0 - -1, param3, (byte) 39, param4);
             } else {
@@ -1241,7 +1146,7 @@ final class fq extends ea implements Cloneable {
                 break L3;
               } else {
                 var8 = (qf) (Object) param4[param3 - 1][param0];
-                if ((var8.field_o | var8.field_s) != 0) {
+                if (((var8.field_o | var8.field_s) ^ -1) != -1) {
                   break L3;
                 } else {
                   stackOut_12_0 = 1;
@@ -1298,10 +1203,10 @@ final class fq extends ea implements Cloneable {
         L1: {
           L2: {
             var3 = ((fq) this).field_w;
-            if (-5 == var3) {
+            if (-5 == (var3 ^ -1)) {
               break L2;
             } else {
-              if (-6 != var3) {
+              if (-6 != (var3 ^ -1)) {
                 if (6 == var3) {
                   break L2;
                 } else {
@@ -1310,9 +1215,9 @@ final class fq extends ea implements Cloneable {
                   } else {
                     L3: {
                       if (9 != var3) {
-                        if (-11 != var3) {
+                        if (-11 != (var3 ^ -1)) {
                           if (var3 != 12) {
-                            if (-14 == var3) {
+                            if (-14 == (var3 ^ -1)) {
                               L4: {
                                 if (-29 == (((fq) this).field_B ^ -1)) {
                                   break L4;
@@ -1365,14 +1270,14 @@ final class fq extends ea implements Cloneable {
                                     }
                                   } else {
                                     if ((var3 ^ -1) == -18) {
-                                      if (-31 == ((fq) this).field_B) {
+                                      if (-31 == (((fq) this).field_B ^ -1)) {
                                         oj.field_E.a(128, ((fq) this).field_A * 12 - 9, 12 * ((fq) this).field_t, 60, (byte) -111);
                                         break L1;
                                       } else {
                                         if (36 != ((fq) this).field_B) {
                                           break L1;
                                         } else {
-                                          if (-98 == ((fq) this).field_E) {
+                                          if (-98 == (((fq) this).field_E ^ -1)) {
                                             c.field_q.a(128, -3 + ((fq) this).field_A * 12, ((fq) this).field_t * 12, 60, (byte) -111);
                                             break L1;
                                           } else {

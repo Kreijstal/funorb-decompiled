@@ -23,131 +23,50 @@ final class dd {
             int var8 = 0;
             String var9 = null;
             String stackIn_7_0 = null;
+            Throwable decompiledCaughtException = null;
             String stackOut_6_0 = null;
-            int statePc = 0;
-            Throwable caughtException = null;
-            stateLoop: while (true) {
-                switch (statePc) {
-                    case 0: {
-                        var8 = stellarshard.field_B;
-                        statePc = 1;
-                        continue stateLoop;
-                    }
-                    case 1: {
-                        try {
-                            var9 = param1.getParameter("cookieprefix");
-                            var3 = var9 + "settings";
-                            var4 = (String) sh.a("getcookies", param1, (byte) 78);
-                            var5 = qj.a(';', var4, 10287);
-                            var6 = param0;
-                            statePc = 2;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_1) {
-                            caughtException = stateCaught_1;
-                            statePc = 10;
-                            continue stateLoop;
-                        }
-                    }
-                    case 2: {
-                        try {
-                            if (var6 >= var5.length) {
-                                statePc = 11;
-                            } else {
-                                statePc = 3;
-                            }
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_2) {
-                            caughtException = stateCaught_2;
-                            statePc = 10;
-                            continue stateLoop;
-                        }
-                    }
-                    case 3: {
-                        try {
-                            var7 = var5[var6].indexOf('=');
-                            if (var7 < 0) {
-                                statePc = 8;
-                            } else {
-                                statePc = 4;
-                            }
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_3) {
-                            caughtException = stateCaught_3;
-                            statePc = 10;
-                            continue stateLoop;
-                        }
-                    }
-                    case 4: {
-                        try {
-                            if (var5[var6].substring(0, var7).trim().equals((Object) (Object) var3)) {
-                                statePc = 6;
-                            } else {
-                                statePc = 5;
-                            }
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_4) {
-                            caughtException = stateCaught_4;
-                            statePc = 10;
-                            continue stateLoop;
-                        }
-                    }
-                    case 5: {
-                        try {
-                            statePc = 8;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_5) {
-                            caughtException = stateCaught_5;
-                            statePc = 10;
-                            continue stateLoop;
-                        }
-                    }
-                    case 6: {
-                        try {
-                            stackOut_6_0 = var5[var6].substring(var7 - -1).trim();
-                            stackIn_7_0 = stackOut_6_0;
-                            statePc = 7;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_6) {
-                            caughtException = stateCaught_6;
-                            statePc = 10;
-                            continue stateLoop;
-                        }
-                    }
-                    case 7: {
-                        return stackIn_7_0;
-                    }
-                    case 8: {
-                        try {
-                            var6++;
-                            statePc = 2;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_8) {
-                            caughtException = stateCaught_8;
-                            statePc = 10;
-                            continue stateLoop;
-                        }
-                    }
-                    case 10: {
-                        var2 = caughtException;
-                        statePc = 11;
-                        continue stateLoop;
-                    }
-                    case 11: {
-                        if (null != l.field_g) {
-                            statePc = 13;
+            var8 = stellarshard.field_B;
+            try {
+              L0: {
+                var9 = param1.getParameter("cookieprefix");
+                var3 = var9 + "settings";
+                var4 = (String) sh.a("getcookies", param1, (byte) 78);
+                var5 = qj.a(';', var4, 10287);
+                var6 = param0;
+                L1: while (true) {
+                  if (var6 >= var5.length) {
+                    break L0;
+                  } else {
+                    L2: {
+                      var7 = var5[var6].indexOf('=');
+                      if (var7 < 0) {
+                        break L2;
+                      } else {
+                        if (var5[var6].substring(0, var7).trim().equals((Object) (Object) var3)) {
+                          stackOut_6_0 = var5[var6].substring(var7 - -1).trim();
+                          stackIn_7_0 = stackOut_6_0;
+                          return stackIn_7_0;
                         } else {
-                            statePc = 14;
+                          break L2;
                         }
-                        continue stateLoop;
+                      }
                     }
-                    case 13: {
-                        return l.field_g;
-                    }
-                    case 14: {
-                        return param1.getParameter("settings");
-                    }
-                    default: throw new IllegalStateException("invalid CFG state " + statePc);
+                    var6++;
+                    continue L1;
+                  }
                 }
+              }
+            } catch (java.lang.Throwable decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              L3: {
+                var2 = decompiledCaughtException;
+                break L3;
+              }
+            }
+            if (null != l.field_g) {
+              return l.field_g;
+            } else {
+              return param1.getParameter("settings");
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -226,67 +145,25 @@ final class dd {
     final static void a(int param0) {
         Object var1 = null;
         Throwable var2 = null;
-        int statePc = 0;
-        Throwable caughtException = null;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    if (param0 <= -48) {
-                        statePc = 2;
-                    } else {
-                        statePc = 1;
-                    }
-                    continue stateLoop;
+        Throwable decompiledCaughtException = null;
+        if (param0 <= -48) {
+          L0: {
+            if (pk.field_e != null) {
+              var1 = (Object) (Object) pk.field_e;
+              synchronized (var1) {
+                L1: {
+                  pk.field_e = null;
+                  break L1;
                 }
-                case 1: {
-                    return;
-                }
-                case 2: {
-                    if (pk.field_e != null) {
-                        statePc = 4;
-                    } else {
-                        statePc = 9;
-                    }
-                    continue stateLoop;
-                }
-                case 4: {
-                    var1 = (Object) (Object) pk.field_e;
-                    // monitorenter pk.field_e
-                    statePc = 5;
-                    continue stateLoop;
-                }
-                case 5: {
-                    try {
-                        pk.field_e = null;
-                        // monitorexit var1
-                        statePc = 9;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_5) {
-                        caughtException = stateCaught_5;
-                        statePc = 7;
-                        continue stateLoop;
-                    }
-                }
-                case 7: {
-                    try {
-                        var2 = caughtException;
-                        // monitorexit var1
-                        statePc = 8;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_7) {
-                        caughtException = stateCaught_7;
-                        statePc = 7;
-                        continue stateLoop;
-                    }
-                }
-                case 8: {
-                    throw (RuntimeException) (Object) var2;
-                }
-                case 9: {
-                    return;
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
+              }
+              break L0;
+            } else {
+              break L0;
             }
+          }
+          return;
+        } else {
+          return;
         }
     }
 
@@ -320,8 +197,9 @@ final class dd {
                 if (((dd) this).field_c[var7] >= 0) {
                   break L3;
                 } else {
+                  int incrementValue$8 = param2;
                   param2++;
-                  param3[param2] = (byte)(var10 ^ -1);
+                  param3[incrementValue$8] = (byte)(var10 ^ -1);
                   if (param4 <= param2) {
                     break L2;
                   } else {
@@ -344,8 +222,9 @@ final class dd {
                 if (((dd) this).field_c[var7] >= 0) {
                   break L5;
                 } else {
+                  int incrementValue$9 = param2;
                   param2++;
-                  param3[param2] = (byte)(var10 ^ -1);
+                  param3[incrementValue$9] = (byte)(var10 ^ -1);
                   if (param4 <= param2) {
                     break L2;
                   } else {
@@ -366,8 +245,9 @@ final class dd {
               L7: {
                 var10 = ((dd) this).field_c[var7];
                 if (((dd) this).field_c[var7] < 0) {
+                  int incrementValue$10 = param2;
                   param2++;
-                  param3[param2] = (byte)(var10 ^ -1);
+                  param3[incrementValue$10] = (byte)(var10 ^ -1);
                   if (param2 >= param4) {
                     break L2;
                   } else {
@@ -392,8 +272,9 @@ final class dd {
                 if (((dd) this).field_c[var7] >= 0) {
                   break L9;
                 } else {
+                  int incrementValue$11 = param2;
                   param2++;
-                  param3[param2] = (byte)(var10 ^ -1);
+                  param3[incrementValue$11] = (byte)(var10 ^ -1);
                   if (param2 < param4) {
                     var7 = 0;
                     break L9;
@@ -416,8 +297,9 @@ final class dd {
                 if (((dd) this).field_c[var7] >= 0) {
                   break L11;
                 } else {
+                  int incrementValue$12 = param2;
                   param2++;
-                  param3[param2] = (byte)(var10 ^ -1);
+                  param3[incrementValue$12] = (byte)(var10 ^ -1);
                   if (param4 > param2) {
                     var7 = 0;
                     break L11;
@@ -438,8 +320,9 @@ final class dd {
               L13: {
                 var10 = ((dd) this).field_c[var7];
                 if (0 > ((dd) this).field_c[var7]) {
+                  int incrementValue$13 = param2;
                   param2++;
-                  param3[param2] = (byte)(var10 ^ -1);
+                  param3[incrementValue$13] = (byte)(var10 ^ -1);
                   if (param2 >= param4) {
                     break L2;
                   } else {
@@ -462,8 +345,9 @@ final class dd {
               L15: {
                 var10 = ((dd) this).field_c[var7];
                 if (-1 < (((dd) this).field_c[var7] ^ -1)) {
+                  int incrementValue$14 = param2;
                   param2++;
-                  param3[param2] = (byte)(var10 ^ -1);
+                  param3[incrementValue$14] = (byte)(var10 ^ -1);
                   if (param2 < param4) {
                     var7 = 0;
                     break L15;
@@ -485,8 +369,9 @@ final class dd {
               }
               var10 = ((dd) this).field_c[var7];
               if (0 > ((dd) this).field_c[var7]) {
+                int incrementValue$15 = param2;
                 param2++;
-                param3[param2] = (byte)(var10 ^ -1);
+                param3[incrementValue$15] = (byte)(var10 ^ -1);
                 if (param4 > param2) {
                   var7 = 0;
                   var8++;

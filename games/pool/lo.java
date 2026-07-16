@@ -90,20 +90,26 @@ final class lo extends IOException {
               }
               if (var1 != null) {
                 try {
-                  var2_ref = Runtime.getRuntime();
-                  var4 = null;
-                  var3 = (Long) var1.invoke((Object) (Object) var2_ref, (Object[]) null);
-                  rf.field_d = 1 + (int)(var3.longValue() / 1048576L);
-                } catch (java.lang.Throwable decompiledCaughtParameter) {
-                  decompiledCaughtException = decompiledCaughtParameter;
+                  L1: {
+                    var2_ref = Runtime.getRuntime();
+                    var4 = null;
+                    var3 = (Long) var1.invoke((Object) (Object) var2_ref, (Object[]) null);
+                    rf.field_d = 1 + (int)(var3.longValue() / 1048576L);
+                    break L1;
+                  }
+                } catch (java.lang.Throwable decompiledCaughtParameter0) {
+                  decompiledCaughtException = decompiledCaughtParameter0;
+                  var2 = decompiledCaughtException;
                   return;
                 }
+                return;
               } else {
                 return;
               }
-            } catch (java.lang.Exception decompiledCaughtParameter) {
-              decompiledCaughtException = decompiledCaughtParameter;
-              var2 = decompiledCaughtException;
+            } catch (java.lang.Exception decompiledCaughtParameter1) {
+              decompiledCaughtException = decompiledCaughtParameter1;
+              var1_ref = (Exception) (Object) decompiledCaughtException;
+              return;
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;

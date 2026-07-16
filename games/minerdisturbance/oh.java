@@ -126,12 +126,17 @@ final class oh extends bl {
             oe stackOut_2_0 = null;
             if (param0 > 53) {
               try {
-                stackOut_2_0 = (oe) Class.forName("na").newInstance();
-                stackIn_3_0 = stackOut_2_0;
-              } catch (java.lang.Throwable decompiledCaughtParameter) {
-                decompiledCaughtException = decompiledCaughtParameter;
-                return stackIn_3_0;
+                L0: {
+                  stackOut_2_0 = (oe) Class.forName("na").newInstance();
+                  stackIn_3_0 = stackOut_2_0;
+                  break L0;
+                }
+              } catch (java.lang.Throwable decompiledCaughtParameter0) {
+                decompiledCaughtException = decompiledCaughtParameter0;
+                var1 = decompiledCaughtException;
+                return null;
               }
+              return stackIn_3_0;
             } else {
               return null;
             }
@@ -140,7 +145,6 @@ final class oh extends bl {
         } catch (Throwable decompiledCheckedException) {
             throw new RuntimeException(decompiledCheckedException);
         }
-        return null;
     }
 
     static {

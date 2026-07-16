@@ -17,8 +17,9 @@ final class hg {
         int var5 = 0;
         L0: {
           var5 = Main.field_T;
+          int fieldTemp$3 = ((hg) this).field_f + 1;
           ((hg) this).field_f = ((hg) this).field_f + 1;
-          ((hg) this).field_e = ((hg) this).field_e + (((hg) this).field_f + 1);
+          ((hg) this).field_e = ((hg) this).field_e + fieldTemp$3;
           if (param0 <= -76) {
             break L0;
           } else {
@@ -52,10 +53,12 @@ final class hg {
               }
             }
             ((hg) this).field_g = ((hg) this).field_g + ((hg) this).field_c[var2 - -128 & 255];
-            var4 = ((hg) this).field_g + (((hg) this).field_c[bc.a(var3 >> 1001785282, 255)] + ((hg) this).field_e);
-            ((hg) this).field_c[var2] = ((hg) this).field_g + (((hg) this).field_c[bc.a(var3 >> 1001785282, 255)] + ((hg) this).field_e);
-            ((hg) this).field_e = ((hg) this).field_c[bc.a(var4 >> -296385240 >> -1804145406, 255)] + var3;
-            ((hg) this).field_d[var2] = ((hg) this).field_c[bc.a(var4 >> -296385240 >> -1804145406, 255)] + var3;
+            int dupTemp$4 = ((hg) this).field_g + (((hg) this).field_c[bc.a(var3 >> 1001785282, 255)] + ((hg) this).field_e);
+            var4 = dupTemp$4;
+            ((hg) this).field_c[var2] = dupTemp$4;
+            int dupTemp$5 = ((hg) this).field_c[bc.a(var4 >> -296385240 >> -1804145406, 255)] + var3;
+            ((hg) this).field_e = dupTemp$5;
+            ((hg) this).field_d[var2] = dupTemp$5;
             var2++;
             continue L1;
           }
@@ -73,7 +76,7 @@ final class hg {
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
-        CharSequence var12 = null;
+        Object var12 = null;
         L0: {
           var11 = Main.field_T;
           var10 = -1640531527;
@@ -84,7 +87,7 @@ final class hg {
           if (!param0) {
             break L0;
           } else {
-            var12 = (CharSequence) null;
+            var12 = null;
             String discarded$1 = hg.a((CharSequence) null, (byte) 30);
             break L0;
           }
@@ -227,7 +230,7 @@ final class hg {
 
     final static lb a(String param0, byte param1) {
         if (param1 >= -43) {
-            return (lb) null;
+            return null;
         }
         if (wh.field_a.a(640)) {
             if (!(param0.equals((Object) (Object) wh.field_a.d(640)))) {
@@ -245,8 +248,9 @@ final class hg {
         if (param0 != -1427) {
             this.a(61);
         }
+        int fieldTemp$0 = ((hg) this).field_a - 1;
         ((hg) this).field_a = ((hg) this).field_a - 1;
-        return ((hg) this).field_d[((hg) this).field_a - 1];
+        return ((hg) this).field_d[fieldTemp$0];
     }
 
     final static String a(CharSequence param0, byte param1) {

@@ -430,7 +430,7 @@ final class fq extends qq implements tb {
                 }
               }
               s.field_c[sq.field_b].a(0, var4, param3);
-              if (sq.field_b == -22) {
+              if ((sq.field_b ^ -1) == -22) {
                 id.a(-83, param3);
                 break L0;
               } else {
@@ -440,64 +440,76 @@ final class fq extends qq implements tb {
               break L0;
             }
           }
-          if (-1 <= sq.field_b) {
+          if (-1 >= (sq.field_b ^ -1)) {
             if (s.field_c[sq.field_b].field_n) {
-              ac.a(256, false, true, ul.field_m);
-              if (sq.field_b != -2) {
-                if (sq.field_b != -4) {
-                  kf discarded$11 = vj.a((byte) -27, il.field_c[3]);
-                  return;
+              L2: {
+                ac.a(256, false, true, ul.field_m);
+                if (sq.field_b == -2) {
+                  break L2;
                 } else {
-                  return;
+                  if (sq.field_b == -4) {
+                    break L2;
+                  } else {
+                    kf discarded$11 = vj.a((byte) -27, il.field_c[3]);
+                    return;
+                  }
                 }
-              } else {
-                return;
               }
+              return;
             } else {
               if (-2 == sq.field_b) {
-                ac.a(256, false, true, ul.field_m);
-                if (sq.field_b != -2) {
-                  if (sq.field_b == -4) {
-                    return;
-                  } else {
-                    kf discarded$12 = vj.a((byte) -27, il.field_c[3]);
-                    return;
-                  }
-                } else {
-                  return;
-                }
-              } else {
-                if (4 == (sq.field_b ^ -1)) {
+                L3: {
                   ac.a(256, false, true, ul.field_m);
-                  if (sq.field_b != -2) {
-                    if (sq.field_b != -4) {
-                      kf discarded$13 = vj.a((byte) -27, il.field_c[3]);
-                      return;
+                  if (sq.field_b == -2) {
+                    break L3;
+                  } else {
+                    if (sq.field_b == -4) {
+                      break L3;
                     } else {
+                      kf discarded$12 = vj.a((byte) -27, il.field_c[3]);
                       return;
                     }
-                  } else {
-                    return;
                   }
+                }
+                return;
+              } else {
+                if (4 == (sq.field_b ^ -1)) {
+                  L4: {
+                    ac.a(256, false, true, ul.field_m);
+                    if (sq.field_b == -2) {
+                      break L4;
+                    } else {
+                      if (sq.field_b == -4) {
+                        break L4;
+                      } else {
+                        kf discarded$13 = vj.a((byte) -27, il.field_c[3]);
+                        return;
+                      }
+                    }
+                  }
+                  return;
                 } else {
                   if (sq.field_b == -4) {
-                    ac.a(256, false, true, ul.field_m);
+                    L5: {
+                      ac.a(256, false, true, ul.field_m);
+                      if (sq.field_b == -2) {
+                        break L5;
+                      } else {
+                        if (sq.field_b == -4) {
+                          break L5;
+                        } else {
+                          kf discarded$14 = vj.a((byte) -27, il.field_c[3]);
+                          return;
+                        }
+                      }
+                    }
+                    return;
+                  } else {
                     if (sq.field_b != -2) {
                       if (sq.field_b == -4) {
                         return;
                       } else {
-                        kf discarded$14 = vj.a((byte) -27, il.field_c[3]);
-                        return;
-                      }
-                    } else {
-                      return;
-                    }
-                  } else {
-                    if (sq.field_b != -2) {
-                      if (sq.field_b != -4) {
                         kf discarded$15 = vj.a((byte) -27, il.field_c[3]);
-                        return;
-                      } else {
                         return;
                       }
                     } else {
@@ -508,60 +520,63 @@ final class fq extends qq implements tb {
               }
             }
           } else {
-            if (-2 != sq.field_b) {
-              if (4 == (sq.field_b ^ -1)) {
-                ac.a(256, false, true, ul.field_m);
-                if (sq.field_b != -2) {
-                  if (sq.field_b != -4) {
-                    kf discarded$16 = vj.a((byte) -27, il.field_c[3]);
-                    return;
-                  } else {
-                    return;
-                  }
-                } else {
-                  return;
-                }
-              } else {
-                if (sq.field_b == -4) {
-                  ac.a(256, false, true, ul.field_m);
-                  if (sq.field_b != -2) {
-                    if (sq.field_b == -4) {
-                      return;
-                    } else {
-                      kf discarded$17 = vj.a((byte) -27, il.field_c[3]);
-                      return;
-                    }
-                  } else {
-                    return;
-                  }
-                } else {
-                  if (sq.field_b != -2) {
-                    if (sq.field_b == -4) {
-                      return;
-                    } else {
-                      kf discarded$18 = vj.a((byte) -27, il.field_c[3]);
-                      return;
-                    }
-                  } else {
-                    return;
-                  }
-                }
-              }
-            } else {
-              L2: {
+            if (-2 == sq.field_b) {
+              L6: {
                 ac.a(256, false, true, ul.field_m);
                 if (sq.field_b == -2) {
-                  break L2;
+                  break L6;
                 } else {
                   if (sq.field_b == -4) {
-                    break L2;
+                    break L6;
                   } else {
-                    kf discarded$19 = vj.a((byte) -27, il.field_c[3]);
-                    break L2;
+                    kf discarded$16 = vj.a((byte) -27, il.field_c[3]);
+                    break L6;
                   }
                 }
               }
               return;
+            } else {
+              if (4 == (sq.field_b ^ -1)) {
+                L7: {
+                  ac.a(256, false, true, ul.field_m);
+                  if (sq.field_b == -2) {
+                    break L7;
+                  } else {
+                    if (sq.field_b == -4) {
+                      break L7;
+                    } else {
+                      kf discarded$17 = vj.a((byte) -27, il.field_c[3]);
+                      return;
+                    }
+                  }
+                }
+                return;
+              } else {
+                if (sq.field_b == -4) {
+                  ac.a(256, false, true, ul.field_m);
+                  if (sq.field_b != -2) {
+                    if (sq.field_b != -4) {
+                      kf discarded$18 = vj.a((byte) -27, il.field_c[3]);
+                      return;
+                    } else {
+                      return;
+                    }
+                  } else {
+                    return;
+                  }
+                } else {
+                  if (sq.field_b != -2) {
+                    if (sq.field_b != -4) {
+                      kf discarded$19 = vj.a((byte) -27, il.field_c[3]);
+                      return;
+                    } else {
+                      return;
+                    }
+                  } else {
+                    return;
+                  }
+                }
+              }
             }
           }
         } else {

@@ -35,9 +35,9 @@ final class na extends jh {
     final static int a(da param0, String param1, int param2, da param3, int param4, boolean param5, int param6) {
         String var8 = null;
         int var9 = 0;
-        String var9_ref = null;
+        String var9_ref_String = null;
         int var10 = 0;
-        String var11_ref = null;
+        String var11_ref_String = null;
         int var11 = 0;
         int var12 = 0;
         int var13 = 0;
@@ -107,15 +107,15 @@ final class na extends jh {
                   wa.field_d.b(90, 18);
                   wa.field_d.field_n = wa.field_d.field_n + 2;
                   var10 = wa.field_d.field_n;
-                  var11_ref = rb.a(-108, ip.a(9));
-                  if (var11_ref == null) {
-                    var11_ref = "";
+                  var11_ref_String = rb.a(-108, ip.a(9));
+                  if (var11_ref_String == null) {
+                    var11_ref_String = "";
                     break L4;
                   } else {
                     break L4;
                   }
                 }
-                wa.field_d.b((byte) 4, var11_ref);
+                wa.field_d.b((byte) 4, var11_ref_String);
                 ok.a(jb.field_c, ua.field_a, (fj) (Object) wa.field_d, gk.field_b, -4);
                 wa.field_d.c(-var10 + wa.field_d.field_n, param2 + 400395746);
                 break L2;
@@ -267,11 +267,11 @@ final class na extends jh {
                   pl.field_u = kj.field_d.h((byte) 124);
                   break L13;
                 } else {
-                  var9_ref = kj.field_d.a(19);
-                  if (var9_ref == null) {
+                  var9_ref_String = kj.field_d.a(19);
+                  if (var9_ref_String == null) {
                     break L13;
                   } else {
-                    om.a((byte) 73, var9_ref, ip.a(9));
+                    om.a((byte) 73, var9_ref_String, ip.a(9));
                     break L13;
                   }
                 }

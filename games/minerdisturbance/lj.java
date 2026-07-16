@@ -13,15 +13,14 @@ final class lj extends pi {
     static int field_q;
 
     final static db a(Throwable param0, String param1) {
-        db var2_ref = null;
         db var2 = null;
         if (!(param0 instanceof db)) {
             var2 = new db(param0, param1);
         } else {
-            var2_ref = (db) (Object) param0;
-            var2_ref.field_a = var2_ref.field_a + 32 + param1;
+            var2 = (db) (Object) param0;
+            var2.field_a = var2.field_a + 32 + param1;
         }
-        return var2_ref;
+        return var2;
     }
 
     public static void a(byte param0) {

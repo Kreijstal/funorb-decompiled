@@ -18,7 +18,7 @@ final class wd extends jl {
         if (!(param1 != null)) {
             return;
         }
-        if (!(param1.length != 0)) {
+        if (!((param1.length ^ -1) != -1)) {
             return;
         }
         if (param0 != -95) {
@@ -30,10 +30,10 @@ final class wd extends jl {
             var8 = var10[var7];
             if (var8 != null) {
                 if (!(0 >= var8.length())) {
-                    if (param4 > -1) {
+                    if ((param4 ^ -1) > -1) {
                         ((wd) this).field_h.a(var8, ((wd) this).field_d, param2, param3, -1);
                     }
-                    if (-1 < param4) {
+                    if (-1 > (param4 ^ -1)) {
                         ((wd) this).field_h.b(var8, ((wd) this).field_d, param2, param3, -1);
                     }
                 }

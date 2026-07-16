@@ -16,7 +16,7 @@ final class ll {
             var4 = param2.getGraphics();
             gf.field_e.a(var4, param3, param0, (byte) 123);
             if (param1 != 115) {
-                java.awt.Canvas var5 = (java.awt.Canvas) null;
+                Object var5 = null;
                 ll.a(95, (byte) 7, (java.awt.Canvas) null, 48);
             }
             var4.dispose();

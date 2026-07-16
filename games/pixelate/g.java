@@ -657,7 +657,6 @@ final class g extends mg {
 
     final static ue a(int param0, byte param1, int param2, int param3, int param4) {
         ue var5 = null;
-        ue var5_ref = null;
         int var6 = 0;
         int var7 = 0;
         var7 = Pixelate.field_H ? 1 : 0;
@@ -665,20 +664,20 @@ final class g extends mg {
         var5 = (ue) (Object) f.field_c.c(1504642273);
         L0: while (true) {
           if (var5 != null) {
-            if (param4 != var5_ref.field_o) {
+            if (param4 != var5.field_o) {
               var5 = (ue) (Object) f.field_c.f(1504642273);
               continue L0;
             } else {
-              return var5_ref;
+              return var5;
             }
           } else {
-            var5_ref = new ue();
-            var5_ref.field_s = param2;
-            var5_ref.field_m = param3;
-            var5_ref.field_o = param4;
-            f.field_c.a(22125, (fa) (Object) var5_ref);
-            uj.a(param0, var5_ref, 65536);
-            return var5_ref;
+            var5 = new ue();
+            var5.field_s = param2;
+            var5.field_m = param3;
+            var5.field_o = param4;
+            f.field_c.a(22125, (fa) (Object) var5);
+            uj.a(param0, var5, 65536);
+            return var5;
           }
         }
     }

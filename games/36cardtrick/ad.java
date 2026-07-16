@@ -29,7 +29,7 @@ final class ad extends qb {
         field_i = null;
         field_j = null;
         if (param0 < 65) {
-          field_g = (int[]) null;
+          field_g = null;
           field_t = null;
           return;
         } else {
@@ -46,8 +46,9 @@ final class ad extends qb {
         ((ad) this).field_r = param0;
         ((ad) this).field_o = param6;
         ((ad) this).field_k = param2;
+        int fieldTemp$0 = bj.field_h;
         bj.field_h = bj.field_h + 1;
-        ((ad) this).field_p = 65535 & bj.field_h;
+        ((ad) this).field_p = 65535 & fieldTemp$0;
     }
 
     static {

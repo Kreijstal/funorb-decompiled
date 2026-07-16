@@ -109,6 +109,7 @@ final class kj {
           if (var2 >= 10) {
             ((kj) this).field_c = param0.f(1952);
             ((kj) this).field_b = param0.f(1952);
+            return;
           } else {
             var3 = param0.e(0);
             if (var3 != 0) {

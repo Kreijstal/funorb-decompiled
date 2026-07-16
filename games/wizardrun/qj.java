@@ -169,25 +169,29 @@ final class qj {
             ta stackOut_2_0 = null;
             try {
               L0: {
-                if (!param0) {
-                  break L0;
-                } else {
-                  ta discarded$2 = qj.a(true);
-                  break L0;
+                L1: {
+                  if (!param0) {
+                    break L1;
+                  } else {
+                    ta discarded$2 = qj.a(true);
+                    break L1;
+                  }
                 }
+                stackOut_2_0 = (ta) Class.forName("nd").newInstance();
+                stackIn_3_0 = stackOut_2_0;
+                break L0;
               }
-              stackOut_2_0 = (ta) Class.forName("nd").newInstance();
-              stackIn_3_0 = stackOut_2_0;
-            } catch (java.lang.Throwable decompiledCaughtParameter) {
-              decompiledCaughtException = decompiledCaughtParameter;
-              return stackIn_3_0;
+            } catch (java.lang.Throwable decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              var1 = decompiledCaughtException;
+              return null;
             }
+            return stackIn_3_0;
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
             throw new RuntimeException(decompiledCheckedException);
         }
-        return null;
     }
 
     qj(o[] param0) {

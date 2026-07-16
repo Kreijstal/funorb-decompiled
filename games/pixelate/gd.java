@@ -65,13 +65,13 @@ final class gd {
             field_h[var2] = bq.a(var3 << 563357840, 65280);
         }
         int var1 = 153;
-        for (var2 = var0; var1 + var0 > var2; var2++) {
+        for (var2 = var0; (var1 + var0 ^ -1) < (var2 ^ -1); var2++) {
             var3 = 255 * (-var0 + var2) / var1;
             field_h[var2] = bq.a(-cm.a(255, var3) + 255 << 1039657096, 16711680);
         }
-        for (var2 = var1 + var0; var2 > -616; var2++) {
+        for (var2 = var1 + var0; (var2 ^ -1) > -616; var2++) {
             var3 = 255 * (-var1 + var2 + -var0) / var1;
-            if (-256 < var3) {
+            if (-256 > (var3 ^ -1)) {
                 var3 = 255;
             }
             field_h[var2] = -(cm.a(255, var3) / 2) + 255 << -1053882384;
@@ -79,7 +79,7 @@ final class gd {
         for (var2 = 0; (var2 ^ -1) > -9; var2++) {
             field_b[var2] = 65793 * (var2 << -619879772);
         }
-        for (var2 = 0; field_c.length > var2; var2++) {
+        for (var2 = 0; (field_c.length ^ -1) < (var2 ^ -1); var2++) {
             field_c[var2] = (var2 << 979140168) / field_c.length * 65793;
         }
         field_j = "Only show lobby chat from my friends";

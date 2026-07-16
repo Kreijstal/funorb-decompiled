@@ -281,7 +281,7 @@ final class we implements j {
     }
 
     final static void a(boolean param0) {
-        o var1_ref = null;
+        o var1_ref_o = null;
         int var1 = 0;
         int var2 = 0;
         int var3 = 0;
@@ -637,16 +637,16 @@ final class we implements j {
               } else {
                 L14: {
                   r.field_d.d(231, 390);
-                  var1_ref = a.field_e;
+                  var1_ref_o = a.field_e;
                   if ((qh.field_b.field_f ^ -1) != -1) {
                     break L14;
                   } else {
-                    var1_ref = ke.field_K;
+                    var1_ref_o = ke.field_K;
                     break L14;
                   }
                 }
                 L15: {
-                  var1_ref.d(0, 0);
+                  var1_ref_o.d(0, 0);
                   stackOut_47_0 = 40;
                   stackOut_47_1 = wd.field_a;
                   stackIn_49_0 = stackOut_47_0;
@@ -680,10 +680,10 @@ final class we implements j {
                     r.field_d.a(232, 389, var2);
                     r.field_d.a(232, 391, var2);
                     r.field_d.a(230, 391, var2);
-                    var1_ref.a(1, 1, var2);
-                    var1_ref.a(-1, 1, var2);
-                    var1_ref.a(1, -1, var2);
-                    var1_ref.a(-1, -1, var2);
+                    var1_ref_o.a(1, 1, var2);
+                    var1_ref_o.a(-1, 1, var2);
+                    var1_ref_o.a(1, -1, var2);
+                    var1_ref_o.a(-1, -1, var2);
                     break L16;
                   }
                 }
@@ -860,22 +860,30 @@ final class we implements j {
             field_c = -27;
         }
         while ((var2 ^ -1) > (var3 ^ -1)) {
+            int incrementValue$0 = var2;
             var2++;
-            var1[var2] = 0;
+            var1[incrementValue$0] = 0;
+            int incrementValue$1 = var2;
             var2++;
-            var1[var2] = 0;
+            var1[incrementValue$1] = 0;
+            int incrementValue$2 = var2;
             var2++;
-            var1[var2] = 0;
+            var1[incrementValue$2] = 0;
+            int incrementValue$3 = var2;
             var2++;
-            var1[var2] = 0;
+            var1[incrementValue$3] = 0;
+            int incrementValue$4 = var2;
             var2++;
-            var1[var2] = 0;
+            var1[incrementValue$4] = 0;
+            int incrementValue$5 = var2;
             var2++;
-            var1[var2] = 0;
+            var1[incrementValue$5] = 0;
+            int incrementValue$6 = var2;
             var2++;
-            var1[var2] = 0;
+            var1[incrementValue$6] = 0;
+            int incrementValue$7 = var2;
             var2++;
-            var1[var2] = 0;
+            var1[incrementValue$7] = 0;
         }
     }
 

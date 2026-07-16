@@ -20,7 +20,6 @@ final class il {
 
     final qe a(int param0, boolean param1) {
         qe var3 = null;
-        qe var3_ref = null;
         byte[] var4 = null;
         qe var5 = null;
         qe var6 = null;
@@ -292,7 +291,7 @@ final class il {
               }
             }
             var5 = new qe();
-            var3_ref = var5;
+            var3 = var5;
             if (var4 != null) {
               L8: {
                 var5.a(false, new we(var4));

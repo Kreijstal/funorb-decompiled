@@ -27,30 +27,66 @@ final class ja implements m {
 
     final static int c(int param0, int param1) {
         int var2 = 0;
-        if (param1 >= 0) {
-            // if_icmple L15
-        } else {
-            param1 = param1 >>> 16;
-            var2 += 16;
+        L0: {
+          L1: {
+            var2 = 0;
+            if (param1 < 0) {
+              break L1;
+            } else {
+              if (65536 <= param1) {
+                break L1;
+              } else {
+                break L0;
+              }
+            }
+          }
+          param1 = param1 >>> 16;
+          var2 += 16;
+          break L0;
         }
-        if (!((param1 ^ -1) > -257)) {
+        L2: {
+          if ((param1 ^ -1) <= -257) {
             var2 += 8;
             param1 = param1 >>> 8;
+            break L2;
+          } else {
+            break L2;
+          }
         }
-        if (param1 >= 16) {
+        L3: {
+          if (param1 < 16) {
+            break L3;
+          } else {
             var2 += 4;
             param1 = param1 >>> 4;
+            break L3;
+          }
         }
-        if (param0 != -7422) {
-            boolean discarded$0 = ja.b(false, 94);
+        L4: {
+          if (param0 == -7422) {
+            break L4;
+          } else {
+            boolean discarded$2 = ja.b(false, 94);
+            break L4;
+          }
         }
-        if (!(4 > param1)) {
+        L5: {
+          if (4 <= param1) {
             param1 = param1 >>> 2;
             var2 += 2;
+            break L5;
+          } else {
+            break L5;
+          }
         }
-        if ((param1 ^ -1) <= -2) {
+        L6: {
+          if ((param1 ^ -1) > -2) {
+            break L6;
+          } else {
             param1 = param1 >>> 1;
             var2++;
+            break L6;
+          }
         }
         return var2 + param1;
     }
@@ -203,7 +239,7 @@ final class ja implements m {
               rd.a(var12.field_c, 0, var5, var6 * 128, -(128 * var6) + 16384);
               rd.a(var12.field_c, 128 * (-var6 + 128), var16, 0, 128 * var6);
               var7 = (3 * param1 + 17) * dh.field_e & 255;
-              if (-129 < var7) {
+              if (-129 < (var7 ^ -1)) {
                 var7 = var7 >> 2;
                 break L3;
               } else {
@@ -212,7 +248,7 @@ final class ja implements m {
             }
             var8 = 0;
             L4: while (true) {
-              if (-16385 <= var8) {
+              if (-16385 >= (var8 ^ -1)) {
                 return var5;
               } else {
                 var9 = var16[var8];

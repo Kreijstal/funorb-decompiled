@@ -88,34 +88,28 @@ final class i extends ha implements java.awt.image.ImageProducer, java.awt.image
     }
 
     final void a(int param0, java.awt.Component param1, int param2, byte param3) {
-        try {
-            ((i) this).field_i = param2;
-            ((i) this).field_a = param0;
-            ((i) this).field_e = new int[1 + param0 * param2];
-            ((i) this).field_o = (java.awt.image.ColorModel) (Object) new java.awt.image.DirectColorModel(32, 16711680, 65280, 255);
-            ((i) this).field_d = param1.createImage((java.awt.image.ImageProducer) this);
-            this.b(false);
-            boolean discarded$5 = param1.prepareImage(((i) this).field_d, (java.awt.image.ImageObserver) this);
-            if (param3 > -51) {
-              i.a(-29, true, false, false, true, 57, -40, true, -122, -23);
-              this.b(false);
-              boolean discarded$6 = param1.prepareImage(((i) this).field_d, (java.awt.image.ImageObserver) this);
-              this.b(false);
-              boolean discarded$7 = param1.prepareImage(((i) this).field_d, (java.awt.image.ImageObserver) this);
-              ((i) this).a(19692);
-              return;
-            } else {
-              this.b(false);
-              boolean discarded$8 = param1.prepareImage(((i) this).field_d, (java.awt.image.ImageObserver) this);
-              this.b(false);
-              boolean discarded$9 = param1.prepareImage(((i) this).field_d, (java.awt.image.ImageObserver) this);
-              ((i) this).a(19692);
-              return;
-            }
-        } catch (RuntimeException | Error decompiledUncheckedException) {
-            throw decompiledUncheckedException;
-        } catch (Throwable decompiledCheckedException) {
-            throw new RuntimeException(decompiledCheckedException);
+        ((i) this).field_i = param2;
+        ((i) this).field_a = param0;
+        ((i) this).field_e = new int[1 + param0 * param2];
+        ((i) this).field_o = (java.awt.image.ColorModel) (Object) new java.awt.image.DirectColorModel(32, 16711680, 65280, 255);
+        ((i) this).field_d = param1.createImage((java.awt.image.ImageProducer) this);
+        this.b(false);
+        boolean discarded$5 = param1.prepareImage(((i) this).field_d, (java.awt.image.ImageObserver) this);
+        if (param3 > -51) {
+          i.a(-29, true, false, false, true, 57, -40, true, -122, -23);
+          this.b(false);
+          boolean discarded$6 = param1.prepareImage(((i) this).field_d, (java.awt.image.ImageObserver) this);
+          this.b(false);
+          boolean discarded$7 = param1.prepareImage(((i) this).field_d, (java.awt.image.ImageObserver) this);
+          ((i) this).a(19692);
+          return;
+        } else {
+          this.b(false);
+          boolean discarded$8 = param1.prepareImage(((i) this).field_d, (java.awt.image.ImageObserver) this);
+          this.b(false);
+          boolean discarded$9 = param1.prepareImage(((i) this).field_d, (java.awt.image.ImageObserver) this);
+          ((i) this).a(19692);
+          return;
         }
     }
 

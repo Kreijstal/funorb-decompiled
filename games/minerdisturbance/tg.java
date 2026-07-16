@@ -1469,13 +1469,15 @@ final class tg {
         var2 = 0;
         L0: while (true) {
           if (param0 > var2) {
-            var3 = new pi();
-            ((tg) this).field_b[var2] = new pi();
+            pi dupTemp$2 = new pi();
+            var3 = dupTemp$2;
+            ((tg) this).field_b[var2] = dupTemp$2;
             var3.field_f = var3;
             var3.field_c = var3;
             var2++;
             continue L0;
           } else {
+            return;
           }
         }
     }
@@ -1497,8 +1499,9 @@ final class tg {
               ((tg) this).a(-99, -121L, (pi) null);
               L0: while (true) {
                 if (((tg) this).field_a > ((tg) this).field_h) {
+                  int fieldTemp$4 = ((tg) this).field_h;
                   ((tg) this).field_h = ((tg) this).field_h + 1;
-                  var5 = ((tg) this).field_b[((tg) this).field_h].field_f;
+                  var5 = ((tg) this).field_b[fieldTemp$4].field_f;
                   var23 = var5;
                   if (var5 == ((tg) this).field_b[((tg) this).field_h - 1]) {
                     continue L0;
@@ -1513,8 +1516,9 @@ final class tg {
             } else {
               L1: while (true) {
                 if (((tg) this).field_a > ((tg) this).field_h) {
+                  int fieldTemp$5 = ((tg) this).field_h;
                   ((tg) this).field_h = ((tg) this).field_h + 1;
-                  var5 = ((tg) this).field_b[((tg) this).field_h].field_f;
+                  var5 = ((tg) this).field_b[fieldTemp$5].field_f;
                   var19 = var5;
                   if (var5 == ((tg) this).field_b[((tg) this).field_h - 1]) {
                     continue L1;
@@ -1536,8 +1540,9 @@ final class tg {
           if (param0) {
             L2: while (true) {
               if (((tg) this).field_a > ((tg) this).field_h) {
+                int fieldTemp$6 = ((tg) this).field_h;
                 ((tg) this).field_h = ((tg) this).field_h + 1;
-                var5 = ((tg) this).field_b[((tg) this).field_h].field_f;
+                var5 = ((tg) this).field_b[fieldTemp$6].field_f;
                 var18 = var5;
                 if (var5 == ((tg) this).field_b[((tg) this).field_h - 1]) {
                   continue L2;
@@ -1554,8 +1559,9 @@ final class tg {
             ((tg) this).a(-99, -121L, (pi) null);
             L3: while (true) {
               if (((tg) this).field_a > ((tg) this).field_h) {
+                int fieldTemp$7 = ((tg) this).field_h;
                 ((tg) this).field_h = ((tg) this).field_h + 1;
-                var5 = ((tg) this).field_b[((tg) this).field_h].field_f;
+                var5 = ((tg) this).field_b[fieldTemp$7].field_f;
                 var6 = var5;
                 if (var5 == ((tg) this).field_b[((tg) this).field_h - 1]) {
                   continue L3;

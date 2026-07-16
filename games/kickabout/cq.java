@@ -108,10 +108,10 @@ final class cq extends gn {
         if (!((param0 ^ -1) != -8)) {
             return fv.field_a;
         }
-        if (param0 == -9) {
+        if ((param0 ^ -1) == -9) {
             return rc.field_e;
         }
-        if (!(-10 != param0)) {
+        if (!(-10 != (param0 ^ -1))) {
             return cv.field_g;
         }
         if (!(param0 != 10)) {

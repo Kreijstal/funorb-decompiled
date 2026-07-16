@@ -18,7 +18,7 @@ final class ng extends lk {
     int field_J;
 
     final void a(int param0, int param1, int param2, int param3, boolean param4) {
-        this.a(param0, param1, param2, param3, param4);
+        super.a(param0, param1, param2, param3, param4);
         this.b(!param4 ? true : false);
     }
 
@@ -71,7 +71,7 @@ final class ng extends lk {
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
-        lk var9 = null;
+        Object var9 = null;
         L0: {
           var8 = Main.field_T;
           var5 = param3 - -((ng) this).field_h;
@@ -80,7 +80,7 @@ final class ng extends lk {
           if (!param2) {
             break L0;
           } else {
-            var9 = (lk) null;
+            var9 = null;
             ((ng) this).a(-91, 67, (lk) null, -108);
             break L0;
           }
@@ -125,7 +125,7 @@ final class ng extends lk {
             return;
           } else {
             param0.d(var6, param1);
-            var6 = var6 + ((kc) param0).field_p;
+            var6 = var6 + param0.field_p;
             continue L1;
           }
         }
@@ -236,7 +236,7 @@ final class ng extends lk {
             }
           }
         } else {
-          return (kc) null;
+          return null;
         }
     }
 

@@ -27,8 +27,9 @@ final class df extends fj {
     }
 
     final void f(int param0, int param1) {
+        int fieldTemp$0 = ((df) this).field_n;
         ((df) this).field_n = ((df) this).field_n + 1;
-        ((df) this).field_j[((df) this).field_n] = (byte)(((df) this).field_t.b((byte) -103) + param1);
+        ((df) this).field_j[fieldTemp$0] = (byte)(((df) this).field_t.b((byte) -103) + param1);
         int var3 = -58 / ((param0 - 23) / 48);
     }
 
@@ -36,8 +37,9 @@ final class df extends fj {
         if (!param0) {
           return -70;
         } else {
+          int fieldTemp$2 = ((df) this).field_n;
           ((df) this).field_n = ((df) this).field_n + 1;
-          return 255 & ((df) this).field_j[((df) this).field_n] - ((df) this).field_t.b((byte) -103);
+          return 255 & ((df) this).field_j[fieldTemp$2] - ((df) this).field_t.b((byte) -103);
         }
     }
 
@@ -65,8 +67,9 @@ final class df extends fj {
         int var5 = 0;
         ((df) this).field_s = ((df) this).field_s + param0;
         while (var4 < param0) {
+            int incrementValue$0 = var3;
             var3++;
-            var5 = var5 + ((la.field_h[var4] & ((df) this).field_j[var3]) << param0 + -var4);
+            var5 = var5 + ((la.field_h[var4] & ((df) this).field_j[incrementValue$0]) << param0 + -var4);
             param0 = param0 - var4;
             var4 = 8;
         }
@@ -131,8 +134,9 @@ final class df extends fj {
             if (param3 <= var5) {
               return;
             } else {
+              int fieldTemp$2 = ((df) this).field_n;
               ((df) this).field_n = ((df) this).field_n + 1;
-              param2[var5 - -param0] = (byte)(((df) this).field_j[((df) this).field_n] + -((df) this).field_t.b((byte) -103));
+              param2[var5 - -param0] = (byte)(((df) this).field_j[fieldTemp$2] + -((df) this).field_t.b((byte) -103));
               var5++;
               continue L0;
             }
@@ -143,8 +147,9 @@ final class df extends fj {
             if (param3 <= var5) {
               return;
             } else {
+              int fieldTemp$3 = ((df) this).field_n;
               ((df) this).field_n = ((df) this).field_n + 1;
-              param2[var5 - -param0] = (byte)(((df) this).field_j[((df) this).field_n] + -((df) this).field_t.b((byte) -103));
+              param2[var5 - -param0] = (byte)(((df) this).field_j[fieldTemp$3] + -((df) this).field_t.b((byte) -103));
               var5++;
               continue L1;
             }
@@ -238,7 +243,7 @@ final class df extends fj {
             oh.a(var10, var11, var34, (byte) -128, var33, param7);
             var11 = var34;
             var10 = var33;
-            // wide iinc 24 128
+            var24 += 128;
             continue L2;
           } else {
             return;

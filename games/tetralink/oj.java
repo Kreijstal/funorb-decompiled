@@ -19,41 +19,64 @@ final class oj {
     }
 
     final static void a(el param0, byte param1, boolean param2, String param3) {
+        int var5 = 0;
+        int var6 = 0;
         pf var7 = null;
         String var8 = null;
+        pf var9 = null;
         String var10 = null;
         pf var11 = null;
         String var12 = null;
-        pf var9 = null;
-        gd.a((String) null, 255, (String) null, -1, ph.field_t, (int[]) null, 0L, (hl) (Object) param0, param0.j(-128));
-        if (param0.field_Kb) {
-            if (2 != param0.field_Zb) {
-                // if_icmpgt L91
+        pf var13 = null;
+        L0: {
+          gd.a((String) null, 255, (String) null, -1, ph.field_t, (int[]) null, 0L, (hl) (Object) param0, param0.j(-128));
+          if (!param0.field_Kb) {
+            break L0;
+          } else {
+            L1: {
+              if (2 == param0.field_Zb) {
+                break L1;
+              } else {
+                if (2 > dd.field_c) {
+                  break L0;
+                } else {
+                  break L1;
+                }
+              }
             }
             var7 = hd.field_s;
             var8 = sk.a(new String[1], md.field_y, 119);
             var7.field_j.a(var8, 1, 10);
+            break L0;
+          }
         }
-        hd.field_s.b((byte) 79);
-        if (!param2) {
-        } else {
-            if (nd.field_Nb == hd.field_s.field_c) {
-                var9 = hd.field_s;
-                var10 = sk.a(new String[1], wa.field_h, 127);
-                var9.field_j.a(var10, 1, 16);
+        L2: {
+          hd.field_s.b((byte) 79);
+          if (param2) {
+            if (nd.field_Nb != hd.field_s.field_c) {
+              var11 = hd.field_s;
+              var12 = sk.a(new String[1], vi.field_b, 120);
+              var11.field_j.a(var12, 1, 15);
+              break L2;
             } else {
-                var11 = hd.field_s;
-                var12 = sk.a(new String[1], vi.field_b, 120);
-                var11.field_j.a(var12, 1, 15);
+              var9 = hd.field_s;
+              var10 = sk.a(new String[1], wa.field_h, 127);
+              var9.field_j.a(var10, 1, 16);
+              break L2;
             }
+          } else {
+            break L2;
+          }
         }
-        pf var13 = hd.field_s;
-        if (param1 < 103) {
-            return;
+        var13 = hd.field_s;
+        if (param1 >= 103) {
+          var5 = ci.field_B;
+          var6 = li.field_o;
+          var13.field_j.a(0, var6, -117, 0, var5);
+          return;
+        } else {
+          return;
         }
-        int var5 = ci.field_B;
-        int var6 = li.field_o;
-        var13.field_j.a(0, var6, -117, 0, var5);
     }
 
     final static void a(int param0, int[] param1, byte param2, int param3, int[] param4) {
@@ -112,8 +135,9 @@ final class oj {
                   param4[var6] = var11;
                   var12 = param1[var10];
                   param1[var10] = param1[var6];
+                  int incrementValue$2 = var6;
                   var6++;
-                  param1[var6] = var12;
+                  param1[incrementValue$2] = var12;
                   var10++;
                   continue L2;
                 } else {
@@ -129,7 +153,7 @@ final class oj {
             break L3;
           } else {
             var14 = null;
-            boolean discarded$1 = oj.a(126, (String) null);
+            boolean discarded$3 = oj.a(126, (String) null);
             break L3;
           }
         }
@@ -140,8 +164,9 @@ final class oj {
             this.a(-27169);
             ((oj) this).field_e = 256;
         }
+        int fieldTemp$0 = ((oj) this).field_e - 1;
         ((oj) this).field_e = ((oj) this).field_e - 1;
-        return ((oj) this).field_d[((oj) this).field_e - 1];
+        return ((oj) this).field_d[fieldTemp$0];
     }
 
     final static void b(byte param0) {
@@ -202,10 +227,12 @@ final class oj {
                     L5: while (true) {
                       if (var6_int >= var4) {
                         ae.b(94, var5);
-                        var3.field_p = new String[2][var5];
-                        var6 = new String[2][var5];
-                        var3.field_y = new int[2][var5 * 4];
-                        var7 = new int[2][var5 * 4];
+                        String[][] dupTemp$2 = new String[2][var5];
+                        var3.field_p = dupTemp$2;
+                        var6 = dupTemp$2;
+                        int[][] dupTemp$3 = new int[2][var5 * 4];
+                        var3.field_y = dupTemp$3;
+                        var7 = dupTemp$3;
                         var8 = nd.field_Mb;
                         var9 = 0;
                         var10 = 0;
@@ -321,20 +348,21 @@ final class oj {
           if (param0 == -27169) {
             break L0;
           } else {
-            int discarded$1 = ((oj) this).c(54);
+            int discarded$4 = ((oj) this).c(54);
             break L0;
           }
         }
+        int fieldTemp$5 = ((oj) this).field_k + 1;
         ((oj) this).field_k = ((oj) this).field_k + 1;
-        ((oj) this).field_i = ((oj) this).field_i + (((oj) this).field_k + 1);
+        ((oj) this).field_i = ((oj) this).field_i + fieldTemp$5;
         var2 = 0;
         L1: while (true) {
-          if (var2 <= -257) {
+          if ((var2 ^ -1) <= -257) {
             return;
           } else {
             L2: {
               var3 = ((oj) this).field_g[var2];
-              if (-1 == (2 & var2)) {
+              if (-1 == (2 & var2 ^ -1)) {
                 if ((1 & var2) != 0) {
                   ((oj) this).field_b = ((oj) this).field_b ^ ((oj) this).field_b >>> 29190470;
                   break L2;
@@ -353,10 +381,12 @@ final class oj {
               }
             }
             ((oj) this).field_b = ((oj) this).field_b + ((oj) this).field_g[255 & var2 - -128];
-            var4 = ((oj) this).field_g[pl.a(1020, var3) >> -1842873086] - -((oj) this).field_b - -((oj) this).field_i;
-            ((oj) this).field_g[var2] = ((oj) this).field_g[pl.a(1020, var3) >> -1842873086] - -((oj) this).field_b - -((oj) this).field_i;
-            ((oj) this).field_i = ((oj) this).field_g[pl.a(var4 >> 1658904392 >> -1774207230, 255)] - -var3;
-            ((oj) this).field_d[var2] = ((oj) this).field_g[pl.a(var4 >> 1658904392 >> -1774207230, 255)] - -var3;
+            int dupTemp$6 = ((oj) this).field_g[pl.a(1020, var3) >> -1842873086] - -((oj) this).field_b - -((oj) this).field_i;
+            var4 = dupTemp$6;
+            ((oj) this).field_g[var2] = dupTemp$6;
+            int dupTemp$7 = ((oj) this).field_g[pl.a(var4 >> 1658904392 >> -1774207230, 255)] - -var3;
+            ((oj) this).field_i = dupTemp$7;
+            ((oj) this).field_d[var2] = dupTemp$7;
             var2++;
             continue L1;
           }

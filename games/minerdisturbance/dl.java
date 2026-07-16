@@ -34,32 +34,36 @@ final class dl {
         String stackOut_4_0 = null;
         try {
           L0: {
-            var3_int = param0.b(true);
-            if (var3_int <= param1) {
-              break L0;
-            } else {
-              var3_int = param1;
-              break L0;
+            L1: {
+              var3_int = param0.b(true);
+              if (var3_int <= param1) {
+                break L1;
+              } else {
+                var3_int = param1;
+                break L1;
+              }
             }
-          }
-          L1: {
-            var4 = new byte[var3_int];
-            param0.field_o = param0.field_o + hf.field_q.a(param0.field_o, 0, var3_int, param0.field_u, var4, 256);
-            var5 = ph.a((byte) 54, var3_int, var4, 0);
-            if (param2 == -27898) {
-              break L1;
-            } else {
-              int discarded$2 = dl.b(48);
-              break L1;
+            L2: {
+              var4 = new byte[var3_int];
+              param0.field_o = param0.field_o + hf.field_q.a(param0.field_o, 0, var3_int, param0.field_u, var4, 256);
+              var5 = ph.a((byte) 54, var3_int, var4, 0);
+              if (param2 == -27898) {
+                break L2;
+              } else {
+                int discarded$2 = dl.b(48);
+                break L2;
+              }
             }
+            stackOut_4_0 = (String) var5;
+            stackIn_5_0 = stackOut_4_0;
+            break L0;
           }
-          stackOut_4_0 = (String) var5;
-          stackIn_5_0 = stackOut_4_0;
-        } catch (java.lang.Exception decompiledCaughtParameter) {
-          decompiledCaughtException = decompiledCaughtParameter;
-          return stackIn_5_0;
+        } catch (java.lang.Exception decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3 = (Exception) (Object) decompiledCaughtException;
+          return "Cabbage";
         }
-        return null;
+        return stackIn_5_0;
     }
 
     final static vm a(bj param0, int param1, int param2, byte param3, bj param4) {
@@ -97,12 +101,12 @@ final class dl {
               }
               var3 = 0;
               if (var1 != 0) {
-                if (-1 <= pn.field_a.field_e) {
+                if (-1 >= (pn.field_a.field_e ^ -1)) {
                   var3 = wf.field_P[pn.field_a.field_e];
                   if ((var3 ^ -1) == -3) {
                     L2: {
                       om.a(-22126);
-                      if (var3 != 0) {
+                      if ((var3 ^ -1) != -1) {
                         break L2;
                       } else {
                         if ((ti.field_M ^ -1) == -3) {
@@ -125,7 +129,7 @@ final class dl {
                     if ((var3 ^ -1) == -6) {
                       L3: {
                         om.a(-22126);
-                        if (var3 != 0) {
+                        if ((var3 ^ -1) != -1) {
                           break L3;
                         } else {
                           if ((ti.field_M ^ -1) == -3) {
@@ -145,7 +149,7 @@ final class dl {
                       }
                       return var3;
                     } else {
-                      if (var3 == 0) {
+                      if ((var3 ^ -1) == -1) {
                         if ((ti.field_M ^ -1) == -3) {
                           L4: {
                             var4 = -tl.field_o + sf.a((byte) -57);
@@ -177,7 +181,7 @@ final class dl {
                         break L5;
                       } else {
                         L6: {
-                          if (var3 != 0) {
+                          if ((var3 ^ -1) != -1) {
                             break L6;
                           } else {
                             if ((ti.field_M ^ -1) == -3) {
@@ -199,7 +203,7 @@ final class dl {
                       }
                     }
                   }
-                  if (var3 == 0) {
+                  if ((var3 ^ -1) == -1) {
                     if ((ti.field_M ^ -1) == -3) {
                       L7: {
                         var4 = -tl.field_o + sf.a((byte) -57);
@@ -230,7 +234,7 @@ final class dl {
                       break L8;
                     } else {
                       L9: {
-                        if (var3 != 0) {
+                        if ((var3 ^ -1) != -1) {
                           break L9;
                         } else {
                           if ((ti.field_M ^ -1) == -3) {
@@ -253,13 +257,13 @@ final class dl {
                   }
                 }
                 L10: {
-                  if (var3 != 0) {
+                  if ((var3 ^ -1) != -1) {
                     break L10;
                   } else {
                     if ((ti.field_M ^ -1) == -3) {
                       var4 = -tl.field_o + sf.a((byte) -57);
                       var6 = (int)((10999L + -var4) / 1000L);
-                      if (-1 > var6) {
+                      if (-1 > (var6 ^ -1)) {
                         break L10;
                       } else {
                         var3 = 2;
@@ -309,7 +313,7 @@ final class dl {
               }
               var3 = 0;
               if (var1 != 0) {
-                if (-1 <= pn.field_a.field_e) {
+                if (-1 >= (pn.field_a.field_e ^ -1)) {
                   L14: {
                     var3 = wf.field_P[pn.field_a.field_e];
                     if ((var3 ^ -1) == -3) {
@@ -319,7 +323,7 @@ final class dl {
                       if ((var3 ^ -1) == -6) {
                         L15: {
                           om.a(-22126);
-                          if (var3 != 0) {
+                          if ((var3 ^ -1) != -1) {
                             break L15;
                           } else {
                             if ((ti.field_M ^ -1) == -3) {
@@ -343,11 +347,11 @@ final class dl {
                       }
                     }
                   }
-                  if (var3 == 0) {
-                    if ((ti.field_M ^ -1) != -3) {
-                      return var3;
+                  L16: {
+                    if ((var3 ^ -1) != -1) {
+                      break L16;
                     } else {
-                      L16: {
+                      if ((ti.field_M ^ -1) == -3) {
                         var4 = -tl.field_o + sf.a((byte) -57);
                         var6 = (int)((10999L + -var4) / 1000L);
                         if (-1 > (var6 ^ -1)) {
@@ -357,12 +361,12 @@ final class dl {
                           qd.a(-63, true, 5);
                           break L16;
                         }
+                      } else {
+                        return var3;
                       }
-                      return var3;
                     }
-                  } else {
-                    return var3;
                   }
+                  return var3;
                 } else {
                   L17: {
                     if (var2 == 0) {
@@ -377,7 +381,7 @@ final class dl {
                     }
                   }
                   L18: {
-                    if (var3 != 0) {
+                    if ((var3 ^ -1) != -1) {
                       break L18;
                     } else {
                       if ((ti.field_M ^ -1) == -3) {
@@ -411,7 +415,7 @@ final class dl {
                   }
                 }
                 L20: {
-                  if (var3 != 0) {
+                  if ((var3 ^ -1) != -1) {
                     break L20;
                   } else {
                     if ((ti.field_M ^ -1) == -3) {

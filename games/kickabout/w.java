@@ -60,7 +60,6 @@ final class w implements hc {
         int var33_int = 0;
         String var34 = null;
         int var34_int = 0;
-        String var34_ref = null;
         Object var35 = null;
         String var35_ref = null;
         int var36 = 0;
@@ -321,8 +320,7 @@ final class w implements hc {
                   }
                 }
                 L4: {
-                  new hd(stackIn_9_3, stackIn_9_4);
-                  stackIn_9_0.field_zb = stackIn_9_1;
+                  stackIn_9_0.field_zb = new hd(stackIn_9_3, stackIn_9_4);
                   var12.a((byte) -120, var12.field_zb);
                   var12.field_Sb = new hd[ss.field_j];
                   var12.field_Pb = new hd(0L, (hd) null);
@@ -409,8 +407,7 @@ final class w implements hc {
                         break L9;
                       }
                     }
-                    new hd(stackIn_30_3, stackIn_30_4);
-                    stackIn_30_0.field_Zb = stackIn_30_1;
+                    stackIn_30_0.field_Zb = new hd(stackIn_30_3, stackIn_30_4);
                     var12.a((byte) -104, var12.field_Zb);
                     var12.field_Zb.field_A = 2;
                     var12.field_fc = new hd(0L, mp.field_f);
@@ -956,14 +953,14 @@ final class w implements hc {
                       } else {
                         L46: {
                           if (1 != var12.field_Wb) {
-                            var34_ref = wj.field_w[var12.field_Wb];
+                            var34 = wj.field_w[var12.field_Wb];
                             break L46;
                           } else {
                             var34 = vj.field_f;
                             break L46;
                           }
                         }
-                        sn.field_e = dr.field_e + " - " + var34_ref;
+                        sn.field_e = dr.field_e + " - " + var34;
                         break L45;
                       }
                     }
@@ -1136,8 +1133,9 @@ final class w implements hc {
         int var4 = 0;
         lk var5 = (lk) (Object) var2.g(24009);
         while (var5 != null) {
+            int incrementValue$0 = var4;
             var4++;
-            var3[var4] = var5;
+            var3[incrementValue$0] = var5;
             var5 = (lk) (Object) var2.c(33);
         }
         ck.field_e = param0;

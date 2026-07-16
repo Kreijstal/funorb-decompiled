@@ -51,7 +51,8 @@ final class uk {
         int var18 = 0;
         int var19 = 0;
         int var20 = 0;
-        ui var21 = null;
+        Object var21 = null;
+        ui var21_ref = null;
         int var22 = 0;
         int var23 = 0;
         int var24 = 0;
@@ -224,7 +225,7 @@ final class uk {
                     break L7;
                   }
                   L9: {
-                    var21 = stackIn_39_0;
+                    var21_ref = stackIn_39_0;
                     var22 = on.field_g[var15];
                     var23 = ni.field_D[var15];
                     var24 = on.field_g[var16];
@@ -238,12 +239,12 @@ final class uk {
                         L10: {
                           var28 = var66[var18];
                           var29 = var67[var18];
-                          if (var21 == null) {
+                          if (var21_ref == null) {
                             stackOut_48_0 = 8355711;
                             stackIn_49_0 = stackOut_48_0;
                             break L10;
                           } else {
-                            stackOut_47_0 = var21.field_c;
+                            stackOut_47_0 = var21_ref.field_c;
                             stackIn_49_0 = stackOut_47_0;
                             break L10;
                           }
@@ -268,12 +269,12 @@ final class uk {
                     var31 = var67[var18];
                     var32 = var67[var19];
                     var33 = var67[var20];
-                    if (var21 == null) {
+                    if (var21_ref == null) {
                       stackOut_44_0 = 8355711;
                       stackIn_45_0 = stackOut_44_0;
                       break L11;
                     } else {
-                      stackOut_43_0 = var21.field_c;
+                      stackOut_43_0 = var21_ref.field_c;
                       stackIn_45_0 = stackOut_43_0;
                       break L11;
                     }

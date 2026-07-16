@@ -20,84 +20,87 @@ final class kg {
           var2 = km.b(-1);
           if (param1 == 21) {
             L0: {
-              if (wh.field_x == -1) {
+              if ((wh.field_x ^ -1) == -1) {
                 break L0;
               } else {
-                if (-1 > im.field_E) {
-                  var4_ref_ai = (ai) (Object) qe.field_c.b(param1 + -21);
-                  if (var4_ref_ai == null) {
-                    break L0;
-                  } else {
-                    if (var4_ref_ai.field_n >= var2) {
-                      break L0;
+                if (-1 < (im.field_E ^ -1)) {
+                  L1: {
+                    var4_ref_ai = (ai) (Object) qe.field_c.b(param1 + -21);
+                    if (var4_ref_ai == null) {
+                      break L1;
                     } else {
-                      var4_ref_ai.f(0);
-                      oo.field_a = var4_ref_ai.field_k.length;
-                      kj.field_d.field_n = 0;
-                      var5_int = 0;
-                      L1: while (true) {
-                        if (var5_int >= oo.field_a) {
-                          mm.field_d = eb.field_f;
-                          eb.field_f = wk.field_h;
-                          wk.field_h = fa.field_e;
-                          fa.field_e = var4_ref_ai.field_j;
-                          return true;
-                        } else {
-                          kj.field_d.field_j[var5_int] = var4_ref_ai.field_k[var5_int];
-                          var5_int++;
-                          continue L1;
+                      if (var4_ref_ai.field_n >= var2) {
+                        break L1;
+                      } else {
+                        var4_ref_ai.f(0);
+                        oo.field_a = var4_ref_ai.field_k.length;
+                        kj.field_d.field_n = 0;
+                        var5_int = 0;
+                        L2: while (true) {
+                          if (var5_int >= oo.field_a) {
+                            mm.field_d = eb.field_f;
+                            eb.field_f = wk.field_h;
+                            wk.field_h = fa.field_e;
+                            fa.field_e = var4_ref_ai.field_j;
+                            return true;
+                          } else {
+                            kj.field_d.field_j[var5_int] = var4_ref_ai.field_k[var5_int];
+                            var5_int++;
+                            continue L2;
+                          }
                         }
                       }
                     }
                   }
+                  break L0;
                 } else {
                   break L0;
                 }
               }
             }
-            L2: while (true) {
-              L3: {
+            L3: while (true) {
+              L4: {
                 if ((im.field_E ^ -1) <= -1) {
-                  break L3;
+                  break L4;
                 } else {
                   kj.field_d.field_n = 0;
                   if (no.a(1, param1 + -21)) {
                     im.field_E = kj.field_d.a(true);
                     kj.field_d.field_n = 0;
                     oo.field_a = param0[im.field_E];
-                    break L3;
+                    break L4;
                   } else {
                     return false;
                   }
                 }
               }
               if (ah.a(param1 ^ 23)) {
-                if (wh.field_x != 0) {
-                  L4: {
+                if ((wh.field_x ^ -1) != -1) {
+                  L5: {
                     var4 = wh.field_x;
                     if (0.0 == u.field_s) {
-                      break L4;
+                      break L5;
                     } else {
                       var4 = (int)((double)var4 + sa.field_d.nextGaussian() * u.field_s);
                       if (-1 < (var4 ^ -1)) {
                         var4 = 0;
-                        break L4;
+                        break L5;
                       } else {
-                        break L4;
+                        break L5;
                       }
                     }
                   }
                   var5 = new ai((long)var4 + var2, im.field_E, new byte[oo.field_a]);
                   var6 = 0;
-                  L5: while (true) {
-                    if (oo.field_a <= var6) {
+                  L6: while (true) {
+                    if ((oo.field_a ^ -1) >= (var6 ^ -1)) {
                       qe.field_c.a((byte) 54, (q) (Object) var5);
                       im.field_E = -1;
-                      continue L2;
+                      continue L3;
                     } else {
                       var5.field_k[var6] = kj.field_d.field_j[var6];
                       var6++;
-                      continue L5;
+                      continue L6;
                     }
                   }
                 } else {

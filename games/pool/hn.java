@@ -67,36 +67,45 @@ final class hn {
               var2 += 7;
               L1: while (true) {
                 if (var2 > var1) {
+                  int incrementValue$19 = var1;
                   var1++;
-                  qh.field_d[var1] = -1;
+                  qh.field_d[incrementValue$19] = -1;
                   continue L1;
                 } else {
                   return;
                 }
               }
             } else {
+              int incrementValue$20 = var1;
               var1++;
-              qh.field_d[var1] = -1;
+              qh.field_d[incrementValue$20] = -1;
+              int incrementValue$21 = var1;
               var1++;
-              qh.field_d[var1] = -1;
+              qh.field_d[incrementValue$21] = -1;
+              int incrementValue$22 = var1;
               var1++;
-              qh.field_d[var1] = -1;
+              qh.field_d[incrementValue$22] = -1;
+              int incrementValue$23 = var1;
               var1++;
-              qh.field_d[var1] = -1;
+              qh.field_d[incrementValue$23] = -1;
+              int incrementValue$24 = var1;
               var1++;
-              qh.field_d[var1] = -1;
+              qh.field_d[incrementValue$24] = -1;
+              int incrementValue$25 = var1;
               var1++;
-              qh.field_d[var1] = -1;
+              qh.field_d[incrementValue$25] = -1;
+              int incrementValue$26 = var1;
               var1++;
-              qh.field_d[var1] = -1;
+              qh.field_d[incrementValue$26] = -1;
+              int incrementValue$27 = var1;
               var1++;
-              qh.field_d[var1] = -1;
+              qh.field_d[incrementValue$27] = -1;
               continue L0;
             }
           }
         } else {
           var4 = null;
-          wl discarded$1 = hn.a((di) null, (String) null, (String) null, 35, (di) null);
+          wl discarded$28 = hn.a((di) null, (String) null, (String) null, 35, (di) null);
           var1 = 0;
           var2 = -7 + qh.field_l * qh.field_f;
           L2: while (true) {
@@ -104,30 +113,39 @@ final class hn {
               var2 += 7;
               L3: while (true) {
                 if (var2 > var1) {
+                  int incrementValue$29 = var1;
                   var1++;
-                  qh.field_d[var1] = -1;
+                  qh.field_d[incrementValue$29] = -1;
                   continue L3;
                 } else {
                   return;
                 }
               }
             } else {
+              int incrementValue$30 = var1;
               var1++;
-              qh.field_d[var1] = -1;
+              qh.field_d[incrementValue$30] = -1;
+              int incrementValue$31 = var1;
               var1++;
-              qh.field_d[var1] = -1;
+              qh.field_d[incrementValue$31] = -1;
+              int incrementValue$32 = var1;
               var1++;
-              qh.field_d[var1] = -1;
+              qh.field_d[incrementValue$32] = -1;
+              int incrementValue$33 = var1;
               var1++;
-              qh.field_d[var1] = -1;
+              qh.field_d[incrementValue$33] = -1;
+              int incrementValue$34 = var1;
               var1++;
-              qh.field_d[var1] = -1;
+              qh.field_d[incrementValue$34] = -1;
+              int incrementValue$35 = var1;
               var1++;
-              qh.field_d[var1] = -1;
+              qh.field_d[incrementValue$35] = -1;
+              int incrementValue$36 = var1;
               var1++;
-              qh.field_d[var1] = -1;
+              qh.field_d[incrementValue$36] = -1;
+              int incrementValue$37 = var1;
               var1++;
-              qh.field_d[var1] = -1;
+              qh.field_d[incrementValue$37] = -1;
               continue L2;
             }
           }

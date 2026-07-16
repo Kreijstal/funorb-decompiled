@@ -110,13 +110,13 @@ final class je {
           var3 = param0.field_jb - param1.field_jb;
           if (param0.field_gb != qa.field_r) {
             if (param0.field_gb == null) {
-              // wide iinc 3 200
+              var3 += 200;
               break L1;
             } else {
               break L1;
             }
           } else {
-            // wide iinc 3 -200
+            var3 -= 200;
             break L1;
           }
         }
@@ -136,7 +136,7 @@ final class je {
             return stackIn_20_0 != 0;
           } else {
             L3: {
-              // wide iinc 3 -200
+              var3 -= 200;
               if (0 >= var3) {
                 stackOut_15_0 = 0;
                 stackIn_16_0 = stackOut_15_0;
@@ -151,7 +151,7 @@ final class je {
           }
         } else {
           L4: {
-            // wide iinc 3 200
+            var3 += 200;
             if (0 >= var3) {
               stackOut_10_0 = 0;
               stackIn_11_0 = stackOut_10_0;

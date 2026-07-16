@@ -167,8 +167,9 @@ final class pp extends jb {
                               break L8;
                             } else {
                               L9: {
+                                int incrementValue$3 = var19;
                                 var19++;
-                                if (var14[var19] != 0) {
+                                if (var14[incrementValue$3] != 0) {
                                   var23 = var17 - -1;
                                   var24_int = 0;
                                   L10: while (true) {
@@ -241,12 +242,14 @@ final class pp extends jb {
                               } else {
                                 L16: {
                                   L17: {
+                                    int incrementValue$4 = var19;
                                     var19++;
-                                    if (-1 == (var14[var19] ^ -1)) {
+                                    if (-1 == (var14[incrementValue$4] ^ -1)) {
                                       break L17;
                                     } else {
+                                      int incrementValue$5 = var20;
                                       var20++;
-                                      var13[var20] = (byte) 1;
+                                      var13[incrementValue$5] = (byte) 1;
                                       if (0 == 0) {
                                         break L16;
                                       } else {

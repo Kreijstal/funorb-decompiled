@@ -306,15 +306,14 @@ abstract class sl {
     }
 
     final static nl a(Throwable param0, String param1) {
-        nl var2_ref = null;
         nl var2 = null;
         if (!(param0 instanceof nl)) {
             var2 = new nl(param0, param1);
         } else {
-            var2_ref = (nl) (Object) param0;
-            var2_ref.field_a = var2_ref.field_a + 32 + param1;
+            var2 = (nl) (Object) param0;
+            var2.field_a = var2.field_a + 32 + param1;
         }
-        return var2_ref;
+        return var2;
     }
 
     final void a(int param0, byte param1, int param2) {

@@ -200,18 +200,23 @@ abstract class f {
             Throwable decompiledCaughtException = null;
             Object stackOut_0_0 = null;
             try {
-              stackOut_0_0 = super.clone();
-              stackIn_1_0 = stackOut_0_0;
-            } catch (java.lang.CloneNotSupportedException decompiledCaughtParameter) {
-              decompiledCaughtException = decompiledCaughtParameter;
-              return stackIn_1_0;
+              L0: {
+                stackOut_0_0 = super.clone();
+                stackIn_1_0 = stackOut_0_0;
+                break L0;
+              }
+            } catch (java.lang.CloneNotSupportedException decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              var1 = (CloneNotSupportedException) (Object) decompiledCaughtException;
+              var1.printStackTrace();
+              return null;
             }
+            return stackIn_1_0;
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
             throw new RuntimeException(decompiledCheckedException);
         }
-        return null;
     }
 
     boolean b(byte param0) {
@@ -232,15 +237,27 @@ abstract class f {
     }
 
     final void a(int param0, boolean param1, int param2) {
-        if (((f) this).field_a >= param2) {
-            // if_icmpne L42
-            ((f) this).field_b = ((f) this).field_b | param0;
-        } else {
+        L0: {
+          if (((f) this).field_a < param2) {
             ((f) this).field_b = param0;
             ((f) this).field_a = param2;
+            break L0;
+          } else {
+            if (param2 != ((f) this).field_b) {
+              break L0;
+            } else {
+              ((f) this).field_b = ((f) this).field_b | param0;
+              break L0;
+            }
+          }
         }
-        if (!param1) {
-            Object discarded$0 = ((f) this).clone();
+        L1: {
+          if (param1) {
+            break L1;
+          } else {
+            Object discarded$2 = ((f) this).clone();
+            break L1;
+          }
         }
     }
 

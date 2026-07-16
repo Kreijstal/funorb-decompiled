@@ -17,8 +17,8 @@ final class qi implements Iterable {
         int[] var6 = null;
         int var7 = 0;
         int var8 = 0;
-        dd var10 = null;
-        dd var11 = null;
+        Object var10 = null;
+        Object var11 = null;
         int[] var12 = null;
         int[] var15 = null;
         int[] var16 = null;
@@ -49,7 +49,7 @@ final class qi implements Iterable {
               break L0;
             } else {
               var18 = var17.d();
-              var10 = var18;
+              var10 = (Object) (Object) var18;
               var18.e();
               qh.f(0, 0, 5, 0);
               qh.f(0, 1, 3, 0);
@@ -63,7 +63,7 @@ final class qi implements Iterable {
             var11 = null;
             if (param2) {
               var19 = var17.d();
-              var11 = var19;
+              var11 = (Object) (Object) var19;
               var19.e();
               qh.f(11, 0, 5, 0);
               qh.f(13, 1, 3, 0);
@@ -76,7 +76,7 @@ final class qi implements Iterable {
             }
           }
           qh.a(var24, var7, var8);
-          return new dd[]{null, null, null, var10, var17, var11, null, null, null};
+          return new dd[]{null, null, null, (dd) var10, var17, (dd) var11, null, null, null};
         } else {
           L2: {
             var8 = qh.field_f;
@@ -88,7 +88,7 @@ final class qi implements Iterable {
               break L2;
             } else {
               var22 = var21.d();
-              var10 = var22;
+              var10 = (Object) (Object) var22;
               var22.e();
               qh.f(0, 0, 5, 0);
               qh.f(0, 1, 3, 0);
@@ -102,7 +102,7 @@ final class qi implements Iterable {
             var11 = null;
             if (param2) {
               var23 = var21.d();
-              var11 = var23;
+              var11 = (Object) (Object) var23;
               var23.e();
               qh.f(11, 0, 5, 0);
               qh.f(13, 1, 3, 0);
@@ -115,7 +115,7 @@ final class qi implements Iterable {
             }
           }
           qh.a(var24, var7, var8);
-          return new dd[]{null, null, null, var10, var21, var11, null, null, null};
+          return new dd[]{null, null, null, (dd) var10, var21, (dd) var11, null, null, null};
         }
     }
 

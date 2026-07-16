@@ -209,15 +209,35 @@ final class h extends bj implements rj, qb {
     }
 
     private final void a(byte param0) {
-        if (param0 <= 88) {
-            Object var3 = null;
+        Object var3 = null;
+        L0: {
+          if (param0 > 88) {
+            break L0;
+          } else {
+            var3 = null;
             ((h) this).a(true, (ul) null);
+            break L0;
+          }
         }
-        if (!gm.b(8192)) {
-            // if_icmpge L81
-            // if_icmpge L81
+        L1: {
+          L2: {
+            if (gm.b(8192)) {
+              break L2;
+            } else {
+              if (((h) this).field_L.field_l.length() >= -1) {
+                break L1;
+              } else {
+                if (-1 >= ((h) this).field_J.field_l.length()) {
+                  break L1;
+                } else {
+                  break L2;
+                }
+              }
+            }
+          }
+          mi.a(0, ((h) this).field_J.field_l, ((h) this).field_L.field_l);
+          break L1;
         }
-        mi.a(0, ((h) this).field_J.field_l, ((h) this).field_L.field_l);
     }
 
     h(String param0, String param1, boolean param2, boolean param3, boolean param4) {
@@ -389,8 +409,7 @@ final class h extends bj implements rj, qb {
                 break L6;
               }
             }
-            new hc(stackIn_18_3, (wn) null);
-            ((h) this).field_I = stackIn_18_1;
+            ((h) this).field_I = new hc(stackIn_18_3, (wn) null);
             if (!((h) this).field_M) {
               break L5;
             } else {
@@ -474,11 +493,13 @@ final class h extends bj implements rj, qb {
           }
         }
         L13: {
-          var12 = new ki(10, ((h) this).field_j, -20 + ((h) this).field_g, 25, (hm) (Object) ((h) this).field_L, false, 80, 3, var7, 16777215, var8);
-          ((h) this).b((hm) (Object) new ki(10, ((h) this).field_j, -20 + ((h) this).field_g, 25, (hm) (Object) ((h) this).field_L, false, 80, 3, var7, 16777215, var8), false);
+          ki dupTemp$2 = new ki(10, ((h) this).field_j, -20 + ((h) this).field_g, 25, (hm) (Object) ((h) this).field_L, false, 80, 3, var7, 16777215, var8);
+          var12 = dupTemp$2;
+          ((h) this).b((hm) (Object) dupTemp$2, false);
           ((h) this).field_j = ((h) this).field_j + (((hm) (Object) var12).field_x + 5);
-          var13 = new ki(10, ((h) this).field_j, ((h) this).field_g + -20, 25, (hm) (Object) ((h) this).field_J, false, 80, 3, var7, 16777215, qc.field_vb);
-          ((h) this).b((hm) (Object) new ki(10, ((h) this).field_j, ((h) this).field_g + -20, 25, (hm) (Object) ((h) this).field_J, false, 80, 3, var7, 16777215, qc.field_vb), false);
+          ki dupTemp$3 = new ki(10, ((h) this).field_j, ((h) this).field_g + -20, 25, (hm) (Object) ((h) this).field_J, false, 80, 3, var7, 16777215, qc.field_vb);
+          var13 = dupTemp$3;
+          ((h) this).b((hm) (Object) dupTemp$3, false);
           ((h) this).field_j = ((h) this).field_j + (((hm) (Object) var13).field_x - -5);
           ((h) this).field_G.field_q = (wn) this;
           if (((h) this).field_N == null) {

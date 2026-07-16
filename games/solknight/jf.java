@@ -67,38 +67,65 @@ abstract class jf {
     }
 
     final int a(int param0, int param1, int param2) {
+        int var4 = 0;
         int var5 = 0;
         le var6 = null;
         int var7 = 0;
-        int var8 = SolKnight.field_L ? 1 : 0;
-        if (((jf) this).field_c != null) {
-            // if_icmpeq L37
-            // if_icmplt L37
-        } else {
-            return -1;
-        }
-        if (param1 > ((jf) this).field_c[((jf) this).field_c.length - 1].field_e) {
-            return -1;
-        }
-        if (1 == ((jf) this).field_c.length) {
-            return ((jf) this).field_c[0].a(param2, false);
-        }
-        if (param0 != -2592) {
-            return -51;
-        }
-        int var4 = 0;
-        for (var5 = 0; var5 < ((jf) this).field_c.length; var5++) {
-            var6 = ((jf) this).field_c[var5];
-            if (var6.field_g <= param1) {
-                if (!(var6.field_e < param1)) {
-                    var7 = var6.a(param2, false);
-                    if (var7 == -1) {
-                        return -1;
+        int var8 = 0;
+        L0: {
+          var8 = SolKnight.field_L ? 1 : 0;
+          if (((jf) this).field_c == null) {
+            break L0;
+          } else {
+            if (0 == ((jf) this).field_c.length) {
+              break L0;
+            } else {
+              if (param1 < ((jf) this).field_c[0].field_g) {
+                break L0;
+              } else {
+                if (param1 <= ((jf) this).field_c[((jf) this).field_c.length - 1].field_e) {
+                  if (1 != ((jf) this).field_c.length) {
+                    if (param0 == -2592) {
+                      var4 = 0;
+                      var5 = 0;
+                      L1: while (true) {
+                        if (var5 >= ((jf) this).field_c.length) {
+                          return -1;
+                        } else {
+                          L2: {
+                            var6 = ((jf) this).field_c[var5];
+                            if (var6.field_g > param1) {
+                              break L2;
+                            } else {
+                              if (var6.field_e >= param1) {
+                                var7 = var6.a(param2, false);
+                                if (var7 != -1) {
+                                  return var7 + var4;
+                                } else {
+                                  return -1;
+                                }
+                              } else {
+                                break L2;
+                              }
+                            }
+                          }
+                          var4 = var4 + (var6.field_c.length - 1);
+                          var5++;
+                          continue L1;
+                        }
+                      }
+                    } else {
+                      return -51;
                     }
-                    return var7 + var4;
+                  } else {
+                    return ((jf) this).field_c[0].a(param2, false);
+                  }
+                } else {
+                  return -1;
                 }
+              }
             }
-            var4 = var4 + (var6.field_c.length - 1);
+          }
         }
         return -1;
     }

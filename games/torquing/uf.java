@@ -102,8 +102,9 @@ final class uf {
                   }
                 }
                 L6: {
+                  int fieldTemp$1 = ((uf) this).field_f;
                   ((uf) this).field_f = ((uf) this).field_f + 1;
-                  ((uf) this).field_i[((uf) this).field_f] = new String[1];
+                  ((uf) this).field_i[fieldTemp$1] = new String[1];
                   if (((uf) this).field_u.length != ((uf) this).field_f) {
                     break L6;
                   } else {
@@ -156,7 +157,6 @@ final class uf {
         int var15 = 0;
         String[] var16 = null;
         t var17 = null;
-        t var17_ref = null;
         t var18 = null;
         t[] var19 = null;
         t var20 = null;
@@ -241,8 +241,8 @@ final class uf {
                                       }
                                     }
                                   }
-                                  var17_ref = var20;
-                                  boolean discarded$5 = ((uf) this).a(var17_ref, var10[var11], 250);
+                                  var17 = var20;
+                                  boolean discarded$5 = ((uf) this).a(var17, var10[var11], 250);
                                   var11++;
                                   continue L5;
                                 } else {
@@ -440,8 +440,9 @@ final class uf {
                     var11 = var8;
                     L4: while (true) {
                       if (var11 < var9) {
+                        int incrementValue$1 = var10;
                         var10++;
-                        if (((uf) this).field_e.field_l[var10] != 0) {
+                        if (((uf) this).field_e.field_l[incrementValue$1] != 0) {
                           var3 = var4 + var11;
                           var7++;
                           continue L1;
@@ -550,8 +551,9 @@ final class uf {
             L6: {
               ((uf) this).field_a[((uf) this).field_f] = param0;
               ((uf) this).field_i[((uf) this).field_f] = var7;
+              int fieldTemp$1 = ((uf) this).field_f;
               ((uf) this).field_f = ((uf) this).field_f + 1;
-              ((uf) this).field_h[((uf) this).field_f] = param1;
+              ((uf) this).field_h[fieldTemp$1] = param1;
               if (((uf) this).field_f == ((uf) this).field_u.length) {
                 var11 = new t[4 + ((uf) this).field_f];
                 dk.a((Object[]) (Object) ((uf) this).field_a, 0, (Object[]) (Object) var11, 0, ((uf) this).field_f);
@@ -597,30 +599,61 @@ final class uf {
         int var7 = 0;
         String[] var8 = null;
         int var9 = 0;
-        int var10 = Torquing.field_u;
-        if (ph.field_a > param0) {
-            // if_icmplt L47
-            // if_icmple L47
-            // if_icmpgt L47
-        } else {
-            return;
-        }
-        if (param1 >= -59) {
-            return;
-        }
-        for (var4 = 0; var4 < ((uf) this).field_f; var4++) {
-            var5 = ((uf) this).field_a[var4];
-            var6 = 0;
-            if (!(var5 == null)) {
-                var5.d(param0, ((uf) this).field_u[var4] + param2);
-                var6 = var5.field_s;
+        int var10 = 0;
+        L0: {
+          var10 = Torquing.field_u;
+          if (ph.field_a <= param0) {
+            break L0;
+          } else {
+            if (((uf) this).field_m + param0 < ph.field_k) {
+              break L0;
+            } else {
+              if (ph.field_h <= param2) {
+                break L0;
+              } else {
+                if (ph.field_c > param2 - -((uf) this).field_k) {
+                  break L0;
+                } else {
+                  if (param1 < -59) {
+                    var4 = 0;
+                    L1: while (true) {
+                      if (var4 >= ((uf) this).field_f) {
+                        return;
+                      } else {
+                        L2: {
+                          var5 = ((uf) this).field_a[var4];
+                          var6 = 0;
+                          if (var5 != null) {
+                            var5.d(param0, ((uf) this).field_u[var4] + param2);
+                            var6 = var5.field_s;
+                            break L2;
+                          } else {
+                            break L2;
+                          }
+                        }
+                        var7 = ((uf) this).field_u[var4] + (param2 + ((uf) this).field_b.field_x);
+                        var8 = ((uf) this).field_i[var4];
+                        var9 = 0;
+                        L3: while (true) {
+                          if (var9 >= var8.length) {
+                            var4++;
+                            continue L1;
+                          } else {
+                            ((uf) this).field_b.b(var8[var9], param0 + var6, var7, ((uf) this).field_j, -1);
+                            var7 = var7 + ((uf) this).field_s;
+                            var9++;
+                            continue L3;
+                          }
+                        }
+                      }
+                    }
+                  } else {
+                    return;
+                  }
+                }
+              }
             }
-            var7 = ((uf) this).field_u[var4] + (param2 + ((uf) this).field_b.field_x);
-            var8 = ((uf) this).field_i[var4];
-            for (var9 = 0; var9 < var8.length; var9++) {
-                ((uf) this).field_b.b(var8[var9], param0 + var6, var7, ((uf) this).field_j, -1);
-                var7 = var7 + ((uf) this).field_s;
-            }
+          }
         }
     }
 

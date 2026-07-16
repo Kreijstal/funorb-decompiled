@@ -65,155 +65,76 @@ final class sa {
             oq var4 = null;
             oq var5 = null;
             int stackIn_8_0 = 0;
-            int stackOut_6_0 = 0;
+            Throwable decompiledCaughtException = null;
             int stackOut_7_0 = 0;
-            int statePc = 0;
-            Throwable caughtException = null;
-            stateLoop: while (true) {
-                switch (statePc) {
-                    case 0: {
-                        if (ge.field_u != null) {
-                            statePc = 2;
-                        } else {
-                            statePc = 1;
-                        }
-                        continue stateLoop;
-                    }
-                    case 1: {
-                        ge.field_u = nd.field_a.a(mp.field_S, vj.field_d, 0);
-                        statePc = 2;
-                        continue stateLoop;
-                    }
-                    case 2: {
-                        if (ge.field_u.field_f != 0) {
-                            statePc = 4;
-                        } else {
-                            statePc = 3;
-                        }
-                        continue stateLoop;
-                    }
-                    case 3: {
-                        return false;
-                    }
-                    case 4: {
-                        nf.field_Q = rl.a((byte) -95);
-                        ob.field_v = rl.a((byte) -95);
-                        if ((ge.field_u.field_f ^ -1) != -2) {
-                            statePc = 17;
-                        } else {
-                            statePc = 5;
-                        }
-                        continue stateLoop;
-                    }
-                    case 5: {
-                        try {
-                            jd.field_c = new vb((java.net.Socket) ge.field_u.field_e, nd.field_a);
-                            var4 = kn.field_e;
-                            var5 = var4;
-                            ej.field_j.field_v = 0;
-                            var5.field_v = 0;
-                            if (!param1) {
-                                statePc = 7;
-                            } else {
-                                statePc = 6;
-                            }
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_5) {
-                            caughtException = stateCaught_5;
-                            statePc = 13;
-                            continue stateLoop;
-                        }
-                    }
-                    case 6: {
-                        try {
-                            stackOut_6_0 = -2;
-                            stackIn_8_0 = stackOut_6_0;
-                            statePc = 8;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_6) {
-                            caughtException = stateCaught_6;
-                            statePc = 13;
-                            continue stateLoop;
-                        }
-                    }
-                    case 7: {
-                        try {
-                            stackOut_7_0 = -1;
-                            stackIn_8_0 = stackOut_7_0;
-                            statePc = 8;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_7) {
-                            caughtException = stateCaught_7;
-                            statePc = 13;
-                            continue stateLoop;
-                        }
-                    }
-                    case 8: {
-                        try {
-                            hb.field_e = stackIn_8_0;
-                            vd.field_g = stackIn_8_0;
-                            ia.field_l = stackIn_8_0;
-                            tl.field_J = no.field_h;
-                            fm.a((ge) (Object) ej.field_j, true, kc.field_c, kh.field_uc, lf.field_b);
-                            de.a(-1, 0);
-                            statePc = 9;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_8) {
-                            caughtException = stateCaught_8;
-                            statePc = 13;
-                            continue stateLoop;
-                        }
-                    }
-                    case 9: {
-                        if (param0 != 65) {
-                            statePc = 11;
-                        } else {
-                            statePc = 10;
-                        }
-                        continue stateLoop;
-                    }
-                    case 10: {
-                        ge.field_u = null;
-                        return true;
-                    }
-                    case 11: {
-                        return false;
-                    }
-                    case 13: {
-                        var2 = (IOException) (Object) caughtException;
-                        tl.field_J = vk.field_V;
-                        if (param0 != 65) {
-                            statePc = 15;
-                        } else {
-                            statePc = 14;
-                        }
-                        continue stateLoop;
-                    }
-                    case 14: {
-                        ge.field_u = null;
-                        return true;
-                    }
-                    case 15: {
-                        return false;
-                    }
-                    case 17: {
-                        tl.field_J = vk.field_V;
-                        if (param0 != 65) {
-                            statePc = 19;
-                        } else {
-                            statePc = 18;
-                        }
-                        continue stateLoop;
-                    }
-                    case 18: {
-                        ge.field_u = null;
-                        return true;
-                    }
-                    case 19: {
-                        return false;
-                    }
-                    default: throw new IllegalStateException("invalid CFG state " + statePc);
+            int stackOut_6_0 = 0;
+            L0: {
+              if (ge.field_u != null) {
+                break L0;
+              } else {
+                ge.field_u = nd.field_a.a(mp.field_S, vj.field_d, 0);
+                break L0;
+              }
+            }
+            if (ge.field_u.field_f != 0) {
+              long dupTemp$1 = rl.a((byte) -95);
+              nf.field_Q = dupTemp$1;
+              ob.field_v = dupTemp$1;
+              if ((ge.field_u.field_f ^ -1) != -2) {
+                tl.field_J = vk.field_V;
+                if (param0 != 65) {
+                  return false;
+                } else {
+                  ge.field_u = null;
+                  return true;
                 }
+              } else {
+                try {
+                  L1: {
+                    L2: {
+                      jd.field_c = new vb((java.net.Socket) ge.field_u.field_e, nd.field_a);
+                      var4 = kn.field_e;
+                      var5 = var4;
+                      ej.field_j.field_v = 0;
+                      var5.field_v = 0;
+                      if (!param1) {
+                        stackOut_7_0 = -1;
+                        stackIn_8_0 = stackOut_7_0;
+                        break L2;
+                      } else {
+                        stackOut_6_0 = -2;
+                        stackIn_8_0 = stackOut_6_0;
+                        break L2;
+                      }
+                    }
+                    hb.field_e = stackIn_8_0;
+                    vd.field_g = stackIn_8_0;
+                    ia.field_l = stackIn_8_0;
+                    tl.field_J = no.field_h;
+                    fm.a((ge) (Object) ej.field_j, true, kc.field_c, kh.field_uc, lf.field_b);
+                    de.a(-1, 0);
+                    break L1;
+                  }
+                } catch (java.io.IOException decompiledCaughtParameter0) {
+                  decompiledCaughtException = decompiledCaughtParameter0;
+                  var2 = (IOException) (Object) decompiledCaughtException;
+                  tl.field_J = vk.field_V;
+                  if (param0 != 65) {
+                    return false;
+                  } else {
+                    ge.field_u = null;
+                    return true;
+                  }
+                }
+                if (param0 != 65) {
+                  return false;
+                } else {
+                  ge.field_u = null;
+                  return true;
+                }
+              }
+            } else {
+              return false;
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;

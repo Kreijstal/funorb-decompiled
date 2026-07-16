@@ -31,8 +31,9 @@ final class fq {
 
     final int a(int param0) {
         if (((fq) this).field_a >= ((fq) this).field_h) {
+            int fieldTemp$0 = ((fq) this).field_k;
             ((fq) this).field_k = ((fq) this).field_k + 1;
-            ((fq) this).field_d = ((fq) this).field_i[((fq) this).field_k] << 15;
+            ((fq) this).field_d = ((fq) this).field_i[fieldTemp$0] << 15;
             if (((fq) this).field_k >= ((fq) this).field_c) {
                 ((fq) this).field_k = ((fq) this).field_c - 1;
             }

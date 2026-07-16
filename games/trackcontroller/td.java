@@ -98,39 +98,78 @@ class td extends al implements je {
     }
 
     final boolean a(int param0, int param1, int param2, int param3, int param4, al param5, byte param6) {
-        int var10 = TrackController.field_F ? 1 : 0;
-        ue var8 = new ue(((td) this).field_B);
-        al var9 = (al) (Object) var8.d(81);
-        if (param6 != 127) {
-            return false;
-        }
-        while (var9 != null) {
-            // ifeq L106
-            if (var9.h(-85)) {
-                if (!(!var9.a(param0, param1, param2, param3, param4, param5, (byte) 127))) {
-                    return true;
+        ue var8 = null;
+        al var9 = null;
+        int var10 = 0;
+        var10 = TrackController.field_F ? 1 : 0;
+        var8 = new ue(((td) this).field_B);
+        var9 = (al) (Object) var8.d(81);
+        if (param6 == 127) {
+          L0: while (true) {
+            L1: {
+              if (var9 == null) {
+                break L1;
+              } else {
+                if (!var9.b(param6 + 10000409)) {
+                  break L1;
+                } else {
+                  L2: {
+                    if (!var9.h(-85)) {
+                      break L2;
+                    } else {
+                      if (var9.a(param0, param1, param2, param3, param4, param5, (byte) 127)) {
+                        return true;
+                      } else {
+                        break L2;
+                      }
+                    }
+                  }
+                  var9 = (al) (Object) var8.e(37);
+                  continue L0;
                 }
+              }
             }
-            var9 = (al) (Object) var8.e(37);
+            return false;
+          }
+        } else {
+          return false;
         }
-        return false;
     }
 
     final boolean a(al param0, int param1, int param2, int param3, int param4, int param5, int param6) {
-        int var10 = TrackController.field_F ? 1 : 0;
-        ue var8 = new ue(((td) this).field_B);
-        if (param4 != 0) {
+        ue var8 = null;
+        al var9 = null;
+        int var10 = 0;
+        L0: {
+          var10 = TrackController.field_F ? 1 : 0;
+          var8 = new ue(((td) this).field_B);
+          if (param4 == 0) {
+            break L0;
+          } else {
             ((td) this).field_B = null;
+            break L0;
+          }
         }
-        al var9 = (al) (Object) var8.d(-126);
-        while (var9 != null) {
-            // ifeq L109
-            if (var9.a(param0, param1, param2, param3, param4 ^ 0, param5 + ((td) this).field_p, ((td) this).field_m + param6)) {
-                return true;
+        var9 = (al) (Object) var8.d(-126);
+        L1: while (true) {
+          L2: {
+            if (var9 == null) {
+              break L2;
+            } else {
+              if (!var9.b(10000536)) {
+                break L2;
+              } else {
+                if (!var9.a(param0, param1, param2, param3, param4 ^ 0, param5 + ((td) this).field_p, ((td) this).field_m + param6)) {
+                  var9 = (al) (Object) var8.e(37);
+                  continue L1;
+                } else {
+                  return true;
+                }
+              }
             }
-            var9 = (al) (Object) var8.e(37);
+          }
+          return false;
         }
-        return false;
     }
 
     final int c(byte param0) {
@@ -210,16 +249,35 @@ class td extends al implements je {
     }
 
     final void a(al param0, boolean param1, int param2, int param3, int param4, int param5) {
-        int var9 = TrackController.field_F ? 1 : 0;
-        ue var7 = new ue(((td) this).field_B);
-        al var8 = (al) (Object) var7.d(127);
-        while (var8 != null) {
-            // ifeq L84
-            var8.a(param0, param1, param2, param3 + ((td) this).field_m, param4, param5 + ((td) this).field_p);
-            var8 = (al) (Object) var7.e(37);
-        }
-        if (param1) {
-            ((td) this).f(77);
+        ue var7 = null;
+        al var8 = null;
+        int var9 = 0;
+        var9 = TrackController.field_F ? 1 : 0;
+        var7 = new ue(((td) this).field_B);
+        var8 = (al) (Object) var7.d(127);
+        L0: while (true) {
+          L1: {
+            if (var8 == null) {
+              break L1;
+            } else {
+              if (!var8.b(10000536)) {
+                break L1;
+              } else {
+                var8.a(param0, param1, param2, param3 + ((td) this).field_m, param4, param5 + ((td) this).field_p);
+                var8 = (al) (Object) var7.e(37);
+                continue L0;
+              }
+            }
+          }
+          L2: {
+            if (!param1) {
+              break L2;
+            } else {
+              ((td) this).f(77);
+              break L2;
+            }
+          }
+          return;
         }
     }
 
@@ -237,24 +295,60 @@ class td extends al implements je {
     }
 
     boolean a(byte param0, char param1, al param2, int param3) {
-        int var8 = TrackController.field_F ? 1 : 0;
-        int var6 = -126 % ((17 - param0) / 51);
-        ue var5 = new ue(((td) this).field_B);
-        al var9 = (al) (Object) var5.d(125);
-        while (var9 != null) {
-            // ifeq L98
-            if (var9.h(-119)) {
-                if (var9.a((byte) 103, param1, param2, param3)) {
-                    return true;
+        ue var5 = null;
+        int var6 = 0;
+        int var7 = 0;
+        int var8 = 0;
+        al var9 = null;
+        boolean stackIn_12_0 = false;
+        boolean stackOut_11_0 = false;
+        boolean stackOut_10_0 = false;
+        var8 = TrackController.field_F ? 1 : 0;
+        var6 = -126 % ((17 - param0) / 51);
+        var5 = new ue(((td) this).field_B);
+        var9 = (al) (Object) var5.d(125);
+        L0: while (true) {
+          L1: {
+            if (var9 == null) {
+              break L1;
+            } else {
+              if (!var9.b(10000536)) {
+                break L1;
+              } else {
+                L2: {
+                  if (!var9.h(-119)) {
+                    break L2;
+                  } else {
+                    if (!var9.a((byte) 103, param1, param2, param3)) {
+                      break L2;
+                    } else {
+                      return true;
+                    }
+                  }
                 }
+                var9 = (al) (Object) var5.e(37);
+                continue L0;
+              }
             }
-            var9 = (al) (Object) var5.e(37);
-        }
-        int var7 = param3;
-        if (var7 != 80) {
+          }
+          var7 = param3;
+          if (var7 == 80) {
+            L3: {
+              if (!ni.field_m[81]) {
+                stackOut_11_0 = ((td) this).a(param2, true);
+                stackIn_12_0 = stackOut_11_0;
+                break L3;
+              } else {
+                stackOut_10_0 = ((td) this).a(param2, -27);
+                stackIn_12_0 = stackOut_10_0;
+                break L3;
+              }
+            }
+            return stackIn_12_0;
+          } else {
             return false;
+          }
         }
-        return ni.field_m[81] ? ((td) this).a(param2, -27) : ((td) this).a(param2, true);
     }
 
     private final void a(byte param0, int param1, Hashtable param2, StringBuilder param3) {
@@ -318,14 +412,28 @@ class td extends al implements je {
     }
 
     void a(int param0, int param1, byte param2, al param3) {
-        int var7 = TrackController.field_F ? 1 : 0;
+        ue var5 = null;
+        al var6 = null;
+        int var7 = 0;
+        var7 = TrackController.field_F ? 1 : 0;
         super.a(param0, param1, param2, param3);
-        ue var5 = new ue(((td) this).field_B);
-        al var6 = (al) (Object) var5.d(-66);
-        while (var6 != null) {
-            // ifeq L93
-            var6.a(param0 - -((td) this).field_m, ((td) this).field_p + param1, (byte) -124, param3);
-            var6 = (al) (Object) var5.e(param2 ^ -95);
+        var5 = new ue(((td) this).field_B);
+        var6 = (al) (Object) var5.d(-66);
+        L0: while (true) {
+          L1: {
+            if (var6 == null) {
+              break L1;
+            } else {
+              if (!var6.b(10000536)) {
+                break L1;
+              } else {
+                var6.a(param0 - -((td) this).field_m, ((td) this).field_p + param1, (byte) -124, param3);
+                var6 = (al) (Object) var5.e(param2 ^ -95);
+                continue L0;
+              }
+            }
+          }
+          return;
         }
     }
 

@@ -24,105 +24,48 @@ final class lc {
             Runtime var2_ref = null;
             Long var3 = null;
             Object var4 = null;
-            int statePc = 0;
-            Throwable caughtException = null;
-            stateLoop: while (true) {
-                switch (statePc) {
-                    case 0: {
-                        try {
-                            var1 = Runtime.class.getMethod("maxMemory", new Class[0]);
-                            if (var1 != null) {
-                                statePc = 2;
-                            } else {
-                                statePc = 1;
-                            }
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_0) {
-                            caughtException = stateCaught_0;
-                            statePc = 8;
-                            continue stateLoop;
-                        }
+            Throwable decompiledCaughtException = null;
+            try {
+              L0: {
+                L1: {
+                  var1 = Runtime.class.getMethod("maxMemory", new Class[0]);
+                  if (var1 != null) {
+                    try {
+                      L2: {
+                        var2_ref = Runtime.getRuntime();
+                        var4 = null;
+                        var3 = (Long) var1.invoke((Object) (Object) var2_ref, (Object[]) null);
+                        jk.field_f = (int)(var3.longValue() / 1048576L) - -1;
+                        break L2;
+                      }
+                    } catch (java.lang.Throwable decompiledCaughtParameter0) {
+                      decompiledCaughtException = decompiledCaughtParameter0;
+                      L3: {
+                        var2 = decompiledCaughtException;
+                        break L3;
+                      }
                     }
-                    case 1: {
-                        try {
-                            statePc = 5;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_1) {
-                            caughtException = stateCaught_1;
-                            statePc = 8;
-                            continue stateLoop;
-                        }
-                    }
-                    case 2: {
-                        try {
-                            var2_ref = Runtime.getRuntime();
-                            var4 = null;
-                            var3 = (Long) var1.invoke((Object) (Object) var2_ref, (Object[]) null);
-                            jk.field_f = (int)(var3.longValue() / 1048576L) - -1;
-                            statePc = 3;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_2) {
-                            caughtException = stateCaught_2;
-                            statePc = 4;
-                            continue stateLoop;
-                        }
-                    }
-                    case 3: {
-                        try {
-                            statePc = 5;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_3) {
-                            caughtException = stateCaught_3;
-                            statePc = 8;
-                            continue stateLoop;
-                        }
-                    }
-                    case 4: {
-                        try {
-                            var2 = caughtException;
-                            statePc = 5;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_4) {
-                            caughtException = stateCaught_4;
-                            statePc = 8;
-                            continue stateLoop;
-                        }
-                    }
-                    case 5: {
-                        try {
-                            if (param0 == 24536) {
-                                statePc = 9;
-                            } else {
-                                statePc = 6;
-                            }
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_5) {
-                            caughtException = stateCaught_5;
-                            statePc = 8;
-                            continue stateLoop;
-                        }
-                    }
-                    case 6: {
-                        try {
-                            field_e = 76;
-                            statePc = 9;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_6) {
-                            caughtException = stateCaught_6;
-                            statePc = 8;
-                            continue stateLoop;
-                        }
-                    }
-                    case 8: {
-                        var1_ref = (Exception) (Object) caughtException;
-                        statePc = 9;
-                        continue stateLoop;
-                    }
-                    case 9: {
-                        return;
-                    }
-                    default: throw new IllegalStateException("invalid CFG state " + statePc);
+                    break L1;
+                  } else {
+                    break L1;
+                  }
                 }
+                L4: {
+                  if (param0 == 24536) {
+                    break L4;
+                  } else {
+                    field_e = 76;
+                    break L4;
+                  }
+                }
+                break L0;
+              }
+            } catch (java.lang.Exception decompiledCaughtParameter1) {
+              decompiledCaughtException = decompiledCaughtParameter1;
+              L5: {
+                var1_ref = (Exception) (Object) decompiledCaughtException;
+                break L5;
+              }
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;

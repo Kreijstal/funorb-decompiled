@@ -107,8 +107,9 @@ final class nf extends gg {
         ((nf) this).field_q = param1;
         ((nf) this).field_t = param4;
         ((nf) this).field_s = param0;
+        int fieldTemp$0 = sa.field_i;
         sa.field_i = sa.field_i + 1;
-        ((nf) this).field_u = 65535 & sa.field_i;
+        ((nf) this).field_u = 65535 & fieldTemp$0;
         ((nf) this).field_p = param3;
     }
 

@@ -36,48 +36,95 @@ final class i {
     }
 
     private final void a(int param0) {
+        int var2 = 0;
+        int var3 = 0;
         int var4 = 0;
-        int var5 = TetraLink.field_J;
-        int var2 = ((i) this).field_l;
-        if (param0 > -54) {
-            Object var6 = null;
+        int var5 = 0;
+        Object var6 = null;
+        L0: {
+          var5 = TetraLink.field_J;
+          var2 = ((i) this).field_l;
+          if (param0 <= -54) {
+            break L0;
+          } else {
+            var6 = null;
             i.a(78, (eh) null, -43);
+            break L0;
+          }
         }
-        int var3 = ((i) this).field_s;
-        if (!(((i) this).d(0))) {
-            ((i) this).field_v = false;
-            return;
-        }
-        if (((i) this).field_q < var3) {
-            var3 = ((i) this).field_q;
+        var3 = ((i) this).field_s;
+        if (!((i) this).d(0)) {
+          ((i) this).field_v = false;
+          return;
         } else {
-            if (var3 < ((i) this).field_j) {
+          L1: {
+            if (((i) this).field_q >= var3) {
+              if (var3 >= ((i) this).field_j) {
+                break L1;
+              } else {
                 var3 = ((i) this).field_j;
-            }
-        }
-        if (var2 <= ((i) this).field_i) {
-            // if_icmpge L113
-            var2 = ((i) this).field_c;
-        } else {
-            var2 = ((i) this).field_i;
-        }
-        if (((i) this).field_k > 0.0f) {
-            var4 = (int)(0.5f + ((i) this).field_k * (float)var3);
-            if (var4 > var2) {
-                var3 = (int)((float)var2 / ((i) this).field_k);
+                break L1;
+              }
             } else {
-                if (var2 > var4) {
-                    var2 = var4;
-                }
+              var3 = ((i) this).field_q;
+              break L1;
             }
-        }
-        if (var2 == n.field_M) {
-            // if_icmpne L179
-        } else {
+          }
+          L2: {
+            if (var2 > ((i) this).field_i) {
+              var2 = ((i) this).field_i;
+              break L2;
+            } else {
+              if (var2 >= ((i) this).field_c) {
+                break L2;
+              } else {
+                var2 = ((i) this).field_c;
+                break L2;
+              }
+            }
+          }
+          L3: {
+            if (((i) this).field_k <= 0.0f) {
+              break L3;
+            } else {
+              var4 = (int)(0.5f + ((i) this).field_k * (float)var3);
+              if (var4 <= var2) {
+                if (var2 <= var4) {
+                  break L3;
+                } else {
+                  var2 = var4;
+                  break L3;
+                }
+              } else {
+                var3 = (int)((float)var2 / ((i) this).field_k);
+                break L3;
+              }
+            }
+          }
+          L4: {
+            L5: {
+              if (var2 != n.field_M) {
+                break L5;
+              } else {
+                if (var3 != d.field_h) {
+                  break L5;
+                } else {
+                  break L4;
+                }
+              }
+            }
             ((i) this).field_u.a(var3, -13325, var2);
-        }
-        if ((((i) this).field_l ^ -1) < -1) {
-            sa.field_g = (((i) this).field_l - n.field_M) / 2;
+            break L4;
+          }
+          L6: {
+            if ((((i) this).field_l ^ -1) >= -1) {
+              break L6;
+            } else {
+              sa.field_g = (((i) this).field_l - n.field_M) / 2;
+              break L6;
+            }
+          }
+          return;
         }
     }
 
@@ -239,8 +286,9 @@ final class i {
                                     var12++;
                                     break L8;
                                   } else {
+                                    int incrementValue$3 = var15;
                                     var15++;
-                                    var35[0][var15] = var27.f(-116);
+                                    var35[0][incrementValue$3] = var27.f(-116);
                                     var25++;
                                     continue L9;
                                   }
@@ -266,8 +314,9 @@ final class i {
                                     if (var7 <= var25) {
                                       break L10;
                                     } else {
+                                      int incrementValue$4 = var16;
                                       var16++;
-                                      var35[1][var16] = var27.f(param0 + 118);
+                                      var35[1][incrementValue$4] = var27.f(param0 + 118);
                                       var25++;
                                       continue L11;
                                     }
@@ -286,8 +335,9 @@ final class i {
                                 var25 = 0;
                                 L12: while (true) {
                                   if (var7 > var25) {
+                                    int incrementValue$5 = var17;
                                     var17++;
-                                    var35[2][var17] = var27.f(-111);
+                                    var35[2][incrementValue$5] = var27.f(-111);
                                     var25++;
                                     continue L12;
                                   } else {
@@ -346,13 +396,13 @@ final class i {
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
-        int stackIn_30_0 = 0;
-        int stackOut_29_0 = 0;
-        int stackOut_28_0 = 0;
+        int stackIn_28_0 = 0;
+        int stackOut_27_0 = 0;
+        int stackOut_26_0 = 0;
         var8 = TetraLink.field_J;
         if (param2 != null) {
           var3 = param2.length();
-          if (-2 < var3) {
+          if (-2 < (var3 ^ -1)) {
             return false;
           } else {
             if (var3 <= 12) {
@@ -361,7 +411,7 @@ final class i {
                 if (var4 == null) {
                   break L0;
                 } else {
-                  if (-2 > var4.length()) {
+                  if (-2 < (var4.length() ^ -1)) {
                     break L0;
                   } else {
                     L1: {
@@ -380,19 +430,19 @@ final class i {
                           var5 = 0;
                           var6 = 0;
                           L3: while (true) {
-                            if (var6 >= param2.length()) {
+                            if ((var6 ^ -1) <= (param2.length() ^ -1)) {
                               L4: {
                                 if (0 < var5) {
-                                  stackOut_29_0 = 0;
-                                  stackIn_30_0 = stackOut_29_0;
+                                  stackOut_27_0 = 0;
+                                  stackIn_28_0 = stackOut_27_0;
                                   break L4;
                                 } else {
-                                  stackOut_28_0 = 1;
-                                  stackIn_30_0 = stackOut_28_0;
+                                  stackOut_26_0 = 1;
+                                  stackIn_28_0 = stackOut_26_0;
                                   break L4;
                                 }
                               }
-                              return stackIn_30_0 != 0;
+                              return stackIn_28_0 != 0;
                             } else {
                               L5: {
                                 var7 = param2.charAt(var6);
@@ -404,17 +454,19 @@ final class i {
                                   break L5;
                                 }
                               }
-                              if (2 <= var5) {
-                                if (!param0) {
-                                  return false;
+                              L6: {
+                                if (2 > var5) {
+                                  break L6;
                                 } else {
-                                  var6++;
-                                  continue L3;
+                                  if (param0) {
+                                    break L6;
+                                  } else {
+                                    return false;
+                                  }
                                 }
-                              } else {
-                                var6++;
-                                continue L3;
                               }
+                              var6++;
+                              continue L3;
                             }
                           }
                         } else {
@@ -458,40 +510,72 @@ final class i {
     }
 
     final void b(int param0) {
-        if (hd.field_u != null) {
-            return;
-        }
-        if (!(0 < mb.field_C)) {
-            ((i) this).field_v = false;
-        }
-        if (param0 != 29768) {
-            i.c(38);
-        }
-        if (!((i) this).field_v) {
-            if (((i) this).field_l > n.field_M) {
-                sa.field_g = (-n.field_M + ((i) this).field_l) / 2;
+        if (hd.field_u == null) {
+          L0: {
+            if (0 >= mb.field_C) {
+              ((i) this).field_v = false;
+              break L0;
             } else {
-                if (!(-1 <= (((i) this).field_l ^ -1))) {
-                    sa.field_g = 0;
+              break L0;
+            }
+          }
+          L1: {
+            if (param0 == 29768) {
+              break L1;
+            } else {
+              i.c(38);
+              break L1;
+            }
+          }
+          if (((i) this).field_v) {
+            int fieldTemp$2 = ((i) this).field_p - 1;
+            ((i) this).field_p = ((i) this).field_p - 1;
+            if (fieldTemp$2 > 0) {
+              return;
+            } else {
+              ((i) this).field_p = ((i) this).field_b;
+              if (((i) this).field_h > ja.field_a) {
+                ((i) this).field_v = false;
+                return;
+              } else {
+                this.a(-84);
+                return;
+              }
+            }
+          } else {
+            L2: {
+              if (((i) this).field_l <= n.field_M) {
+                if (-1 > (((i) this).field_l ^ -1)) {
+                  sa.field_g = 0;
+                  break L2;
+                } else {
+                  break L2;
                 }
+              } else {
+                sa.field_g = (-n.field_M + ((i) this).field_l) / 2;
+                break L2;
+              }
             }
-            if (((i) this).field_g == n.field_M) {
-                // if_icmpne L111
-            } else {
-                ((i) this).field_u.a(((i) this).field_m, -13325, ((i) this).field_g);
+            L3: {
+              L4: {
+                if (((i) this).field_g != n.field_M) {
+                  break L4;
+                } else {
+                  if (((i) this).field_m != d.field_h) {
+                    break L4;
+                  } else {
+                    break L3;
+                  }
+                }
+              }
+              ((i) this).field_u.a(((i) this).field_m, -13325, ((i) this).field_g);
+              break L3;
             }
             return;
+          }
+        } else {
+          return;
         }
-        ((i) this).field_p = ((i) this).field_p - 1;
-        if (!(((i) this).field_p - 1 <= 0)) {
-            return;
-        }
-        ((i) this).field_p = ((i) this).field_b;
-        if (!(((i) this).field_h <= ja.field_a)) {
-            ((i) this).field_v = false;
-            return;
-        }
-        this.a(-84);
     }
 
     final kl b(boolean param0) {

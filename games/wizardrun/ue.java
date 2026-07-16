@@ -58,9 +58,7 @@ final class ue {
         int var5 = 0;
         long var6 = 0L;
         je var8 = null;
-        je var8_ref = null;
         nc var9 = null;
-        nc var9_ref = null;
         if (param1) {
           var5 = (param2 >>> -11488788 | 65522 & param2 << 1789938532) ^ param0;
           var5 = var5 | param2 << 1916234736;
@@ -74,22 +72,22 @@ final class ue {
                   if (var9 != null) {
                     break L0;
                   } else {
-                    var9_ref = nc.a(((ue) this).field_c, param2, param0);
-                    if (var9_ref != null) {
-                      ((ue) this).field_g.a((wl) (Object) var9_ref, -37, var6);
+                    var9 = nc.a(((ue) this).field_c, param2, param0);
+                    if (var9 != null) {
+                      ((ue) this).field_g.a((wl) (Object) var9, -37, var6);
                       break L0;
                     } else {
                       return null;
                     }
                   }
                 }
-                var8_ref = var9_ref.a(param3);
-                if (var8_ref == null) {
+                var8 = var9.a(param3);
+                if (var8 == null) {
                   return null;
                 } else {
-                  var9_ref.a(false);
-                  ((ue) this).field_a.a((wl) (Object) var8_ref, -41, var6);
-                  return var8_ref;
+                  var9.a(false);
+                  ((ue) this).field_a.a((wl) (Object) var8, -41, var6);
+                  return var8;
                 }
               } else {
                 return null;
@@ -100,22 +98,22 @@ final class ue {
                 if (var9 != null) {
                   break L1;
                 } else {
-                  var9_ref = nc.a(((ue) this).field_c, param2, param0);
-                  if (var9_ref != null) {
-                    ((ue) this).field_g.a((wl) (Object) var9_ref, -37, var6);
+                  var9 = nc.a(((ue) this).field_c, param2, param0);
+                  if (var9 != null) {
+                    ((ue) this).field_g.a((wl) (Object) var9, -37, var6);
                     break L1;
                   } else {
                     return null;
                   }
                 }
               }
-              var8_ref = var9_ref.a(param3);
-              if (var8_ref == null) {
+              var8 = var9.a(param3);
+              if (var8 == null) {
                 return null;
               } else {
-                var9_ref.a(false);
-                ((ue) this).field_a.a((wl) (Object) var8_ref, -41, var6);
-                return var8_ref;
+                var9.a(false);
+                ((ue) this).field_a.a((wl) (Object) var8, -41, var6);
+                return var8;
               }
             }
           } else {
@@ -130,7 +128,6 @@ final class ue {
         int var5 = 0;
         long var6 = 0L;
         je var8 = null;
-        je var8_ref = null;
         b var11 = null;
         je var12 = null;
         b var13 = null;
@@ -151,8 +148,8 @@ final class ue {
                 } else {
                   L0: {
                     var14 = var13.b();
-                    var8_ref = var14;
-                    ((ue) this).field_a.a((wl) (Object) var8_ref, param1 + 3139, var6);
+                    var8 = var14;
+                    ((ue) this).field_a.a((wl) (Object) var8, param1 + 3139, var6);
                     if (param0 != null) {
                       param0[0] = param0[0] - var14.field_k.length;
                       break L0;
@@ -160,7 +157,7 @@ final class ue {
                       break L0;
                     }
                   }
-                  return var8_ref;
+                  return var8;
                 }
               } else {
                 return null;
@@ -172,8 +169,8 @@ final class ue {
               } else {
                 L1: {
                   var12 = var11.b();
-                  var8_ref = var12;
-                  ((ue) this).field_a.a((wl) (Object) var8_ref, param1 + 3139, var6);
+                  var8 = var12;
+                  ((ue) this).field_a.a((wl) (Object) var8, param1 + 3139, var6);
                   if (param0 != null) {
                     param0[0] = param0[0] - var12.field_k.length;
                     break L1;
@@ -181,7 +178,7 @@ final class ue {
                     break L1;
                   }
                 }
-                return var8_ref;
+                return var8;
               }
             }
           }

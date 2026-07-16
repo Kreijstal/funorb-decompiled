@@ -14,7 +14,7 @@ final class ce extends java.awt.Canvas {
         int var5 = 0;
         Object var6 = null;
         if (param0 >= -125) {
-          var6 = (Object) null;
+          var6 = null;
           byte[] discarded$2 = ce.a(true, 19, (Object) null);
           var4 = param3.a(18659, param2);
           var5 = param3.a(var4, param1, (byte) 7);
@@ -29,8 +29,8 @@ final class ce extends java.awt.Canvas {
     final static void a(int param0) {
         cb var1 = null;
         w var2 = null;
-        qk var3 = null;
-        var1 = (cb) ha.field_d.a((byte) 74);
+        Object var3 = null;
+        var1 = (cb) (Object) ha.field_d.a((byte) 74);
         if (param0 == 0) {
           if (var1 == null) {
             mc.a((byte) -128);
@@ -45,7 +45,7 @@ final class ce extends java.awt.Canvas {
             return;
           }
         } else {
-          var3 = (qk) null;
+          var3 = null;
           kc discarded$13 = ce.a(-22, (String) null, (String) null, (qk) null);
           if (var1 == null) {
             mc.a((byte) -128);
@@ -68,34 +68,34 @@ final class ce extends java.awt.Canvas {
 
     final static void a(qb param0, int param1, qb param2) {
         if (param1 == 0) {
-          if (null != ((qb) param2).field_a) {
+          if (null != param2.field_a) {
             param2.c(112);
             param2.field_d = param0;
-            param2.field_a = ((qb) param0).field_a;
-            ((qb) param2).field_a.field_d = param2;
-            ((qb) param2).field_d.field_a = param2;
+            param2.field_a = param0.field_a;
+            param2.field_a.field_d = param2;
+            param2.field_d.field_a = param2;
             return;
           } else {
             param2.field_d = param0;
-            param2.field_a = ((qb) param0).field_a;
-            ((qb) param2).field_a.field_d = param2;
-            ((qb) param2).field_d.field_a = param2;
+            param2.field_a = param0.field_a;
+            param2.field_a.field_d = param2;
+            param2.field_d.field_a = param2;
             return;
           }
         } else {
           field_b = 70;
-          if (null == ((qb) param2).field_a) {
+          if (null == param2.field_a) {
             param2.field_d = param0;
-            param2.field_a = ((qb) param0).field_a;
-            ((qb) param2).field_a.field_d = param2;
-            ((qb) param2).field_d.field_a = param2;
+            param2.field_a = param0.field_a;
+            param2.field_a.field_d = param2;
+            param2.field_d.field_a = param2;
             return;
           } else {
             param2.c(112);
             param2.field_d = param0;
-            param2.field_a = ((qb) param0).field_a;
-            ((qb) param2).field_a.field_d = param2;
-            ((qb) param2).field_d.field_a = param2;
+            param2.field_a = param0.field_a;
+            param2.field_a.field_d = param2;
+            param2.field_d.field_a = param2;
             return;
           }
         }
@@ -114,7 +114,7 @@ final class ce extends java.awt.Canvas {
                 throw new IllegalArgumentException();
               }
             } else {
-              var3 = (byte[]) (byte[]) param2;
+              var3 = (byte[]) param2;
               if (!param0) {
                 return var3;
               } else {
@@ -135,7 +135,7 @@ final class ce extends java.awt.Canvas {
                 throw new IllegalArgumentException();
               }
             } else {
-              var3 = (byte[]) (byte[]) param2;
+              var3 = (byte[]) param2;
               if (!param0) {
                 return var3;
               } else {

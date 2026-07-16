@@ -82,16 +82,24 @@ class nk extends ik {
     }
 
     nk(int param0, int param1, String param2, int param3) {
-        ((nk) this).field_i = param2;
-        ((nk) this).field_a = param0;
-        ((nk) this).field_d = param1;
-        ((nk) this).field_b = go.field_l.a(param2);
-        if (-2 != (param3 ^ -1)) {
-            // if_icmpne L83
-            ((nk) this).field_a = ((nk) this).field_a - ((nk) this).field_b / 2;
-            ((nk) this).field_c = 20;
+        L0: {
+          ((nk) this).field_i = param2;
+          ((nk) this).field_a = param0;
+          ((nk) this).field_d = param1;
+          ((nk) this).field_b = go.field_l.a(param2);
+          if (-2 == (param3 ^ -1)) {
+            ((nk) this).field_a = ((nk) this).field_a - ((nk) this).field_b;
+            break L0;
+          } else {
+            if ((param3 ^ -1) != -3) {
+              break L0;
+            } else {
+              ((nk) this).field_a = ((nk) this).field_a - ((nk) this).field_b / 2;
+              ((nk) this).field_c = 20;
+              return;
+            }
+          }
         }
-        ((nk) this).field_a = ((nk) this).field_a - ((nk) this).field_b;
         ((nk) this).field_c = 20;
     }
 

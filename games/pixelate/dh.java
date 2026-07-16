@@ -192,8 +192,8 @@ final class dh {
                     }
                   }
                   var4 = var3 + -var2;
-                  if (-2 >= var4) {
-                    if (-13 >= var4) {
+                  if (-2 >= (var4 ^ -1)) {
+                    if (-13 <= (var4 ^ -1)) {
                       L3: {
                         var11 = new StringBuilder(var4);
                         var6 = var2;
@@ -228,17 +228,17 @@ final class dh {
                         }
                       }
                       if (param1 >= 24) {
-                        if (-1 == var11.length()) {
-                          return null;
-                        } else {
+                        if (-1 != (var11.length() ^ -1)) {
                           return var11.toString();
+                        } else {
+                          return null;
                         }
                       } else {
                         field_c = null;
-                        if (-1 == var11.length()) {
-                          return null;
-                        } else {
+                        if (-1 != (var11.length() ^ -1)) {
                           return var11.toString();
+                        } else {
+                          return null;
                         }
                       }
                     } else {
@@ -264,8 +264,8 @@ final class dh {
                   }
                 }
                 var4 = var3 + -var2;
-                if (-2 >= var4) {
-                  if (-13 >= var4) {
+                if (-2 >= (var4 ^ -1)) {
+                  if (-13 <= (var4 ^ -1)) {
                     L8: {
                       var10 = new StringBuilder(var4);
                       var6 = var2;
@@ -300,17 +300,17 @@ final class dh {
                       }
                     }
                     if (param1 >= 24) {
-                      if (-1 == var10.length()) {
-                        return null;
-                      } else {
+                      if (-1 != (var10.length() ^ -1)) {
                         return var10.toString();
+                      } else {
+                        return null;
                       }
                     } else {
                       field_c = null;
-                      if (-1 == var10.length()) {
-                        return null;
-                      } else {
+                      if (-1 != (var10.length() ^ -1)) {
                         return var10.toString();
+                      } else {
+                        return null;
                       }
                     }
                   } else {

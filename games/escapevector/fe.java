@@ -105,12 +105,12 @@ final class fe {
                       } else {
                         if ((bj.field_y ^ -1) > -291) {
                           var2 = 40 + (40 * vl.a(((fe) this).field_m << 849451940, -124) >> -81359344);
-                          if (var2 < -1) {
+                          if ((var2 ^ -1) < -1) {
                             L5: {
-                              if (-10 >= dh.field_d) {
+                              if (-10 <= (dh.field_d ^ -1)) {
                                 break L5;
                               } else {
-                                if (-83 < dh.field_d) {
+                                if (-83 < (dh.field_d ^ -1)) {
                                   ml.field_c.c(8, 256, var2);
                                   ml.field_c.c(10, 256, var2);
                                   ml.field_c.c(8, 258, var2);
@@ -121,7 +121,7 @@ final class fe {
                                 }
                               }
                             }
-                            if (-559 >= dh.field_d) {
+                            if (-559 <= (dh.field_d ^ -1)) {
                               break L4;
                             } else {
                               if ((dh.field_d ^ -1) <= -632) {
@@ -432,7 +432,7 @@ final class fe {
             this.a((wl) null, 9, 97, -25, 47, 28, (String) null, (int[]) null);
         }
         if (!(!((fe) this).field_a.b((byte) -18))) {
-            if (-1 == ((fe) this).field_a.field_h) {
+            if (-1 == (((fe) this).field_a.field_h ^ -1)) {
                 this.b(true);
                 return 3;
             }
@@ -440,7 +440,7 @@ final class fe {
                 return 1;
             }
         }
-        if (-14 == nk.field_n) {
+        if (-14 == (nk.field_n ^ -1)) {
             return 1;
         }
         return 0;
@@ -674,7 +674,7 @@ final class fe {
             return -1;
         }
         if (508 <= param0) {
-            if (-636 < param0) {
+            if (-636 < (param0 ^ -1)) {
                 if (param1 >= 299) {
                     if (!(386 <= param1)) {
                         return 0;
@@ -682,7 +682,7 @@ final class fe {
                 }
             }
         }
-        if (-509 <= param0) {
+        if (-509 >= (param0 ^ -1)) {
             if (635 > param0) {
                 if (-391 >= (param1 ^ -1)) {
                     if (!(param1 >= 475)) {

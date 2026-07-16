@@ -37,16 +37,23 @@ final class cf {
 
     final void a(long param0, ta param1, int param2) {
         ta var5 = null;
-        if (((cf) this).field_i == param2) {
+        L0: {
+          if (((cf) this).field_i != param2) {
+            ((cf) this).field_i = ((cf) this).field_i - 1;
+            break L0;
+          } else {
             var5 = ((cf) this).field_d.a(param2 ^ 7);
             var5.f(param2 + 0);
             var5.h(0);
-            // if_acmpne L89
-            var5 = ((cf) this).field_d.a(-45);
-            var5.f(0);
-            var5.h(param2 ^ 0);
-        } else {
-            ((cf) this).field_i = ((cf) this).field_i - 1;
+            if (((cf) this).field_b != var5) {
+              break L0;
+            } else {
+              var5 = ((cf) this).field_d.a(-45);
+              var5.f(0);
+              var5.h(param2 ^ 0);
+              break L0;
+            }
+          }
         }
         ((cf) this).field_h.a(false, param0, (q) (Object) param1);
         ((cf) this).field_d.a((byte) 122, param1);

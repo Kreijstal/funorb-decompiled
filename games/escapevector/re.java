@@ -14,86 +14,33 @@ class re extends k {
         Object var1 = null;
         Throwable var2 = null;
         Object var3 = null;
-        int statePc = 0;
-        Throwable caughtException = null;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    if (null == ck.field_v) {
-                        statePc = 8;
-                    } else {
-                        statePc = 1;
-                    }
-                    continue stateLoop;
-                }
-                case 1: {
-                    var1 = (Object) (Object) ck.field_v;
-                    // monitorenter ck.field_v
-                    statePc = 2;
-                    continue stateLoop;
-                }
-                case 2: {
-                    try {
-                        ck.field_v = null;
-                        // monitorexit var1
-                        statePc = 3;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_2) {
-                        caughtException = stateCaught_2;
-                        statePc = 6;
-                        continue stateLoop;
-                    }
-                }
-                case 3: {
-                    if (param0 == 2) {
-                        statePc = 5;
-                    } else {
-                        statePc = 4;
-                    }
-                    continue stateLoop;
-                }
-                case 4: {
-                    var3 = null;
-                    re.a(68, (tj) null);
-                    statePc = 5;
-                    continue stateLoop;
-                }
-                case 5: {
-                    return;
-                }
-                case 6: {
-                    try {
-                        var2 = caughtException;
-                        // monitorexit var1
-                        statePc = 7;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_6) {
-                        caughtException = stateCaught_6;
-                        statePc = 6;
-                        continue stateLoop;
-                    }
-                }
-                case 7: {
-                    throw (RuntimeException) (Object) var2;
-                }
-                case 8: {
-                    if (param0 != 2) {
-                        statePc = 10;
-                    } else {
-                        statePc = 9;
-                    }
-                    continue stateLoop;
-                }
-                case 9: {
-                    return;
-                }
-                case 10: {
-                    var3 = null;
-                    re.a(68, (tj) null);
-                    return;
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
+        Throwable decompiledCaughtException = null;
+        if (null == ck.field_v) {
+          if (param0 != 2) {
+            var3 = null;
+            re.a(68, (tj) null);
+            return;
+          } else {
+            return;
+          }
+        } else {
+          var1 = (Object) (Object) ck.field_v;
+          synchronized (var1) {
+            L0: {
+              ck.field_v = null;
+              break L0;
             }
+          }
+          L1: {
+            if (param0 == 2) {
+              break L1;
+            } else {
+              var3 = null;
+              re.a(68, (tj) null);
+              break L1;
+            }
+          }
+          return;
         }
     }
 

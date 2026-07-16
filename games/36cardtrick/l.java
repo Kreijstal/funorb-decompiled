@@ -9,13 +9,13 @@ final class l implements com.ms.directX.IEnumModesCallback {
     public final void callbackEnumModes(com.ms.directX.DDSurfaceDesc param0, com.ms.com.IUnknown param1) {
         if (null != field_c) {
             field_b = field_b + 1;
-            field_c[field_b] = ((com.ms.directX.DDSurfaceDesc) param0).width;
+            field_c[field_b] = param0.width;
             field_b = field_b + 1;
-            field_c[field_b] = ((com.ms.directX.DDSurfaceDesc) param0).height;
+            field_c[field_b] = param0.height;
             field_b = field_b + 1;
-            field_c[field_b] = ((com.ms.directX.DDSurfaceDesc) param0).rgbBitCount;
+            field_c[field_b] = param0.rgbBitCount;
             field_b = field_b + 1;
-            field_c[field_b] = ((com.ms.directX.DDSurfaceDesc) param0).refreshRate;
+            field_c[field_b] = param0.refreshRate;
         } else {
             field_b = field_b + 4;
         }
@@ -41,7 +41,7 @@ final class l implements com.ms.directX.IEnumModesCallback {
 
     final void a(int param0, int param1, int param2, int param3, int param4, java.awt.Frame param5) {
         param5.setVisible(true);
-        com.ms.awt.WComponentPeer var7 = (com.ms.awt.WComponentPeer) null;
+        com.ms.awt.WComponentPeer var7 = null;
         int var8 = var7.getHwnd();
         int discarded$0 = com.ms.win32.User32.SetWindowLong(var8, -16, -2147483648);
         int var9 = 99 % ((param0 - 57) / 53);

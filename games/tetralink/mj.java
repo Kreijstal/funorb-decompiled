@@ -48,24 +48,31 @@ final class mj {
         L0: while (true) {
           if (var12_int >= 3) {
             try {
-              mj.a(var11 != 0, false, 0);
-            } catch (java.lang.Exception decompiledCaughtParameter) {
-              decompiledCaughtException = decompiledCaughtParameter;
+              L1: {
+                mj.a(var11 != 0, false, 0);
+                break L1;
+              }
+            } catch (java.lang.Exception decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              L2: {
+                var12 = (Exception) (Object) decompiledCaughtException;
+                break L2;
+              }
             }
-            var12 = (Exception) (Object) decompiledCaughtException;
+            return;
           } else {
-            L1: {
+            L3: {
               var13 = param3[var12_int];
               var14 = param4[var12_int];
               var15 = param5[var12_int];
               if (var15 < field_v) {
                 field_h[var12_int] = -5000;
                 var11 = 1;
-                break L1;
+                break L3;
               } else {
                 field_h[var12_int] = var9 + (var13 << 9) / var15;
                 field_o[var12_int] = var10 + (var14 << 9) / var15;
-                break L1;
+                break L3;
               }
             }
             field_i[var12_int] = var13;
@@ -271,8 +278,9 @@ final class mj {
                 var9 = (field_v - var3) * field_l[var5 - var3];
                 field_n[var2] = var0 + (var6 + ((field_i[2] - var6) * var9 >> 16) << 9) / field_v;
                 field_b[var2] = var1 + (var7 + ((field_r[2] - var7) * var9 >> 16) << 9) / field_v;
+                int incrementValue$9 = var2;
                 var2++;
-                field_g[var2] = var8 + ((field_s - var8) * var9 >> 16);
+                field_g[incrementValue$9] = var8 + ((field_s - var8) * var9 >> 16);
                 break L1;
               }
             }
@@ -282,15 +290,17 @@ final class mj {
               var9 = (field_v - var3) * field_l[var4 - var3];
               field_n[var2] = var0 + (var6 + ((field_i[1] - var6) * var9 >> 16) << 9) / field_v;
               field_b[var2] = var1 + (var7 + ((field_r[1] - var7) * var9 >> 16) << 9) / field_v;
+              int incrementValue$10 = var2;
               var2++;
-              field_g[var2] = var8 + ((field_d - var8) * var9 >> 16);
+              field_g[incrementValue$10] = var8 + ((field_d - var8) * var9 >> 16);
               break L0;
             }
           } else {
             field_n[var2] = field_h[0];
             field_b[var2] = field_o[0];
+            int incrementValue$11 = var2;
             var2++;
-            field_g[var2] = field_f;
+            field_g[incrementValue$11] = field_f;
             break L0;
           }
         }
@@ -306,8 +316,9 @@ final class mj {
                 var9 = (field_v - var4) * field_l[var3 - var4];
                 field_n[var2] = var0 + (var6 + ((field_i[0] - var6) * var9 >> 16) << 9) / field_v;
                 field_b[var2] = var1 + (var7 + ((field_r[0] - var7) * var9 >> 16) << 9) / field_v;
+                int incrementValue$12 = var2;
                 var2++;
-                field_g[var2] = var8 + ((field_f - var8) * var9 >> 16);
+                field_g[incrementValue$12] = var8 + ((field_f - var8) * var9 >> 16);
                 break L3;
               }
             }
@@ -317,15 +328,17 @@ final class mj {
               var9 = (field_v - var4) * field_l[var5 - var4];
               field_n[var2] = var0 + (var6 + ((field_i[2] - var6) * var9 >> 16) << 9) / field_v;
               field_b[var2] = var1 + (var7 + ((field_r[2] - var7) * var9 >> 16) << 9) / field_v;
+              int incrementValue$13 = var2;
               var2++;
-              field_g[var2] = var8 + ((field_s - var8) * var9 >> 16);
+              field_g[incrementValue$13] = var8 + ((field_s - var8) * var9 >> 16);
               break L2;
             }
           } else {
             field_n[var2] = field_h[1];
             field_b[var2] = field_o[1];
+            int incrementValue$14 = var2;
             var2++;
-            field_g[var2] = field_d;
+            field_g[incrementValue$14] = field_d;
             break L2;
           }
         }
@@ -341,8 +354,9 @@ final class mj {
                 var9 = (field_v - var5) * field_l[var4 - var5];
                 field_n[var2] = var0 + (var6 + ((field_i[1] - var6) * var9 >> 16) << 9) / field_v;
                 field_b[var2] = var1 + (var7 + ((field_r[1] - var7) * var9 >> 16) << 9) / field_v;
+                int incrementValue$15 = var2;
                 var2++;
-                field_g[var2] = var8 + ((field_d - var8) * var9 >> 16);
+                field_g[incrementValue$15] = var8 + ((field_d - var8) * var9 >> 16);
                 break L5;
               }
             }
@@ -352,15 +366,17 @@ final class mj {
               var9 = (field_v - var5) * field_l[var3 - var5];
               field_n[var2] = var0 + (var6 + ((field_i[0] - var6) * var9 >> 16) << 9) / field_v;
               field_b[var2] = var1 + (var7 + ((field_r[0] - var7) * var9 >> 16) << 9) / field_v;
+              int incrementValue$16 = var2;
               var2++;
-              field_g[var2] = var8 + ((field_f - var8) * var9 >> 16);
+              field_g[incrementValue$16] = var8 + ((field_f - var8) * var9 >> 16);
               break L4;
             }
           } else {
             field_n[var2] = field_h[2];
             field_b[var2] = field_o[2];
+            int incrementValue$17 = var2;
             var2++;
-            field_g[var2] = field_s;
+            field_g[incrementValue$17] = field_s;
             break L4;
           }
         }

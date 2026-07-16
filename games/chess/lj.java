@@ -27,8 +27,8 @@ final class lj {
         int var2 = 0;
         L0: {
           var2 = Chess.field_G;
-          if (-1 <= an.field_e) {
-            if (-1 < aj.field_c) {
+          if (-1 <= (an.field_e ^ -1)) {
+            if (-1 > (aj.field_c ^ -1)) {
               aj.field_c = aj.field_c - 1;
               break L0;
             } else {
@@ -173,8 +173,9 @@ final class lj {
                     if (((lj) this).field_k <= var10) {
                       break L5;
                     } else {
-                      var8 = var8 + var17.h(-110);
-                      ((lj) this).field_q[var10] = var8 + var17.h(-110);
+                      int dupTemp$4 = var8 + var17.h(-110);
+                      var8 = dupTemp$4;
+                      ((lj) this).field_q[var10] = dupTemp$4;
                       if (((lj) this).field_q[var10] > var9) {
                         var9 = ((lj) this).field_q[var10];
                         var10++;
@@ -191,8 +192,9 @@ final class lj {
                     if (var10 >= ((lj) this).field_k) {
                       break L5;
                     } else {
-                      var8 = var8 + var17.f(674914976);
-                      ((lj) this).field_q[var10] = var8 + var17.f(674914976);
+                      int dupTemp$5 = var8 + var17.f(674914976);
+                      var8 = dupTemp$5;
+                      ((lj) this).field_q[var10] = dupTemp$5;
                       if (((lj) this).field_q[var10] > var9) {
                         var9 = ((lj) this).field_q[var10];
                         var10++;
@@ -321,9 +323,10 @@ final class lj {
                                     continue L20;
                                   }
                                 } else {
-                                  var8 = var8 + var17.h(-99);
-                                  ((lj) this).field_h[var11][var14] = var8 + var17.h(-99);
-                                  var15 = var8 + var17.h(-99);
+                                  int dupTemp$6 = var8 + var17.h(-99);
+                                  var8 = dupTemp$6;
+                                  ((lj) this).field_h[var11][var14] = dupTemp$6;
+                                  var15 = dupTemp$6;
                                   if (var15 > var13) {
                                     var13 = var15;
                                     var14++;
@@ -369,9 +372,10 @@ final class lj {
                                     continue L23;
                                   }
                                 } else {
-                                  var8 = var8 + var17.f(674914976);
-                                  ((lj) this).field_h[var11][var14] = var8 + var17.f(674914976);
-                                  var15 = var8 + var17.f(674914976);
+                                  int dupTemp$7 = var8 + var17.f(674914976);
+                                  var8 = dupTemp$7;
+                                  ((lj) this).field_h[var11][var14] = dupTemp$7;
+                                  var15 = dupTemp$7;
                                   if (var13 < var15) {
                                     var13 = var15;
                                     var14++;

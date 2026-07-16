@@ -333,7 +333,7 @@ abstract class oe extends ch {
 
     final void a(int param0, byte param1, int param2, int param3) {
         int var5 = 0;
-        if (-1 == ((oe) this).field_P) {
+        if (-1 == (((oe) this).field_P ^ -1)) {
           return;
         } else {
           if (256 > ((oe) this).field_P) {
@@ -345,7 +345,7 @@ abstract class oe extends ch {
                   if (ad.field_y.field_z < ((oe) this).field_l) {
                     break L1;
                   } else {
-                    if (((oe) this).field_y > ad.field_y.field_A) {
+                    if ((((oe) this).field_y ^ -1) < (ad.field_y.field_A ^ -1)) {
                       break L1;
                     } else {
                       break L0;
@@ -365,7 +365,7 @@ abstract class oe extends ch {
             var5 = 121 / ((param1 - -42) / 53);
             return;
           } else {
-            if (-1 != param0) {
+            if (-1 != (param0 ^ -1)) {
               return;
             } else {
               ((oe) this).a(param2 + ((oe) this).field_C, param3 + ((oe) this).field_D, 260);

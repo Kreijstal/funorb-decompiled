@@ -18,8 +18,9 @@ final class aq {
             this.a(256);
             ((aq) this).field_e = 256;
         }
+        int fieldTemp$0 = ((aq) this).field_e - 1;
         ((aq) this).field_e = ((aq) this).field_e - 1;
-        return ((aq) this).field_a[((aq) this).field_e - 1];
+        return ((aq) this).field_a[fieldTemp$0];
     }
 
     final static int a(int param0, int param1, ml param2) {
@@ -309,8 +310,9 @@ final class aq {
             break L0;
           }
         }
+        int fieldTemp$3 = ((aq) this).field_b + 1;
         ((aq) this).field_b = ((aq) this).field_b + 1;
-        ((aq) this).field_d = ((aq) this).field_d + (((aq) this).field_b + 1);
+        ((aq) this).field_d = ((aq) this).field_d + fieldTemp$3;
         var2 = 0;
         L1: while (true) {
           if (var2 >= 256) {
@@ -337,10 +339,12 @@ final class aq {
               }
             }
             ((aq) this).field_g = ((aq) this).field_g + ((aq) this).field_i[var2 + 128 & 255];
-            var4 = ((aq) this).field_d + ((aq) this).field_g + ((aq) this).field_i[qj.b(255, var3 >> 1148827426)];
-            ((aq) this).field_i[var2] = ((aq) this).field_d + ((aq) this).field_g + ((aq) this).field_i[qj.b(255, var3 >> 1148827426)];
-            ((aq) this).field_d = ((aq) this).field_i[qj.b(var4 >> -711104184 >> 1416578850, 255)] - -var3;
-            ((aq) this).field_a[var2] = ((aq) this).field_i[qj.b(var4 >> -711104184 >> 1416578850, 255)] - -var3;
+            int dupTemp$4 = ((aq) this).field_d + ((aq) this).field_g + ((aq) this).field_i[qj.b(255, var3 >> 1148827426)];
+            var4 = dupTemp$4;
+            ((aq) this).field_i[var2] = dupTemp$4;
+            int dupTemp$5 = ((aq) this).field_i[qj.b(var4 >> -711104184 >> 1416578850, 255)] - -var3;
+            ((aq) this).field_d = dupTemp$5;
+            ((aq) this).field_a[var2] = dupTemp$5;
             var2++;
             continue L1;
           }

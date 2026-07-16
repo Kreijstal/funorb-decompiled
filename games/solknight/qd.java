@@ -28,8 +28,9 @@ final class qd {
             } else {
               L0: while (true) {
                 if (((qd) this).field_i > ((qd) this).field_c) {
+                  int fieldTemp$2 = ((qd) this).field_c;
                   ((qd) this).field_c = ((qd) this).field_c + 1;
-                  var4 = ((qd) this).field_g[((qd) this).field_c].field_d;
+                  var4 = ((qd) this).field_g[fieldTemp$2].field_d;
                   var9 = var4;
                   if (var4 != ((qd) this).field_g[((qd) this).field_c + -1]) {
                     ((qd) this).field_h = var9.field_d;
@@ -45,8 +46,9 @@ final class qd {
           } else {
             L1: while (true) {
               if (((qd) this).field_i > ((qd) this).field_c) {
+                int fieldTemp$3 = ((qd) this).field_c;
                 ((qd) this).field_c = ((qd) this).field_c + 1;
-                var4 = ((qd) this).field_g[((qd) this).field_c].field_d;
+                var4 = ((qd) this).field_g[fieldTemp$3].field_d;
                 var5 = var4;
                 if (var4 != ((qd) this).field_g[((qd) this).field_c + -1]) {
                   ((qd) this).field_h = var5.field_d;
@@ -154,13 +156,15 @@ final class qd {
         var2 = 0;
         L0: while (true) {
           if (var2 < param0) {
-            var3 = new gg();
-            ((qd) this).field_g[var2] = new gg();
+            gg dupTemp$2 = new gg();
+            var3 = dupTemp$2;
+            ((qd) this).field_g[var2] = dupTemp$2;
             var3.field_a = var3;
             var3.field_d = var3;
             var2++;
             continue L0;
           } else {
+            return;
           }
         }
     }

@@ -152,8 +152,9 @@ final class od extends am {
                 if (ci.field_c <= var8) {
                   break L1;
                 } else {
+                  int incrementValue$1 = var4;
                   var4++;
-                  var9 = ((od) this).field_w[var4];
+                  var9 = ((od) this).field_w[incrementValue$1];
                   var7[var8] = ie.a(4080, var9 << -970631804);
                   var6[var8] = ie.a(4080, var9 >> 95010468);
                   var5[var8] = ie.a(var9 >> -577818644, 4080);

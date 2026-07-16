@@ -35,18 +35,18 @@ final class ag {
     }
 
     final static java.net.URL a(java.applet.Applet param0, java.net.URL param1, boolean param2) {
-        String var3 = null;
-        String var4 = null;
+        Object var3 = null;
+        Object var4 = null;
         Object var5 = null;
         L0: {
           var5 = null;
-          var3 = (String) var5;
+          var3 = var5;
           var4 = null;
           if (null == jg.field_B) {
             break L0;
           } else {
             if (!jg.field_B.equals((Object) (Object) param0.getParameter("settings"))) {
-              var3 = jg.field_B;
+              var3 = (Object) (Object) jg.field_B;
               var4 = var3;
               var4 = var3;
               break L0;
@@ -59,12 +59,12 @@ final class ag {
                     if (bl.field_b.equals((Object) (Object) param0.getParameter("session"))) {
                       break L1;
                     } else {
-                      var4 = bl.field_b;
+                      var4 = (Object) (Object) bl.field_b;
                       break L1;
                     }
                   }
                 }
-                return bi.a(param1, (byte) -107, -1, (String) var5, var4);
+                return bi.a(param1, (byte) -107, -1, (String) var5, (String) var4);
               } else {
                 L2: {
                   field_c = 112;
@@ -74,12 +74,12 @@ final class ag {
                     if (bl.field_b.equals((Object) (Object) param0.getParameter("session"))) {
                       break L2;
                     } else {
-                      var4 = bl.field_b;
+                      var4 = (Object) (Object) bl.field_b;
                       break L2;
                     }
                   }
                 }
-                return bi.a(param1, (byte) -107, -1, (String) var5, var4);
+                return bi.a(param1, (byte) -107, -1, (String) var5, (String) var4);
               }
             }
           }
@@ -93,12 +93,12 @@ final class ag {
               if (bl.field_b.equals((Object) (Object) param0.getParameter("session"))) {
                 break L3;
               } else {
-                var4 = bl.field_b;
+                var4 = (Object) (Object) bl.field_b;
                 break L3;
               }
             }
           }
-          return bi.a(param1, (byte) -107, -1, var3, var4);
+          return bi.a(param1, (byte) -107, -1, (String) var3, (String) var4);
         } else {
           L4: {
             if (null == bl.field_b) {
@@ -107,12 +107,12 @@ final class ag {
               if (bl.field_b.equals((Object) (Object) param0.getParameter("session"))) {
                 break L4;
               } else {
-                var4 = bl.field_b;
+                var4 = (Object) (Object) bl.field_b;
                 break L4;
               }
             }
           }
-          return bi.a(param1, (byte) -107, -1, var3, var4);
+          return bi.a(param1, (byte) -107, -1, (String) var3, (String) var4);
         }
     }
 

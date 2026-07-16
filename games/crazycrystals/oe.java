@@ -44,6 +44,7 @@ final class oe {
           if (256 <= var1) {
             field_d = new String[]{"fgtiles_brick", "fgtiles_hedge", "fgtiles_steel", "fgtiles_concrete"};
             field_c = new int[]{0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 8, 8, 0, 0, 0, 0, 0, 0, 4, 0};
+            return;
           } else {
             var0 = var1;
             var2 = 0;

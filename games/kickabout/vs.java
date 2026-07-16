@@ -164,8 +164,9 @@ final class vs {
             L3: while (true) {
               if (0 > var14) {
                 var15 = ((vs) this).field_h.field_y[var13];
+                int incrementValue$2 = var13;
                 var13++;
-                ((vs) this).field_h.field_y[var13] = hf.a(qj.b(var15, 16777215), qj.b(-1090519040, var15 >>> -1785521694));
+                ((vs) this).field_h.field_y[incrementValue$2] = hf.a(qj.b(var15, 16777215), qj.b(-1090519040, var15 >>> -1785521694));
                 var14++;
                 continue L3;
               } else {
@@ -174,8 +175,9 @@ final class vs {
             }
           } else {
             var15 = ((vs) this).field_h.field_y[var13];
+            int incrementValue$3 = var13;
             var13++;
-            ((vs) this).field_h.field_y[var13] = hf.a(qj.b(var15, -33554431) >>> 1419581057, qj.b(var15, 16777215));
+            ((vs) this).field_h.field_y[incrementValue$3] = hf.a(qj.b(var15, -33554431) >>> 1419581057, qj.b(var15, 16777215));
             var14++;
             continue L2;
           }

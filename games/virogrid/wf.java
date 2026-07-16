@@ -103,7 +103,7 @@ abstract class wf {
         int[] var10 = null;
         oj[] var11 = null;
         int var12 = 0;
-        u var13_ref = null;
+        u var13_ref_u = null;
         int var13 = 0;
         int var14 = 0;
         int var15 = 0;
@@ -179,10 +179,10 @@ abstract class wf {
                 if (param2.field_x.length <= var12) {
                   break L3;
                 } else {
-                  var13_ref = dm.field_v.a(param2.field_x[var12], (byte) 61);
-                  var8[var12] = var13_ref.field_v;
+                  var13_ref_u = dm.field_v.a(param2.field_x[var12], (byte) 61);
+                  var8[var12] = var13_ref_u.field_v;
                   var9[var12] = param2.field_p[var12];
-                  var11[var12] = wf.a(param0, param1, var13_ref, 49, param4);
+                  var11[var12] = wf.a(param0, param1, var13_ref_u, 49, param4);
                   var12++;
                   continue L4;
                 }
@@ -243,22 +243,28 @@ abstract class wf {
             java.net.URL var4 = null;
             Throwable decompiledCaughtException = null;
             try {
-              var4 = param0.getCodeBase();
-              var3 = og.a(-1, param0, var4).getFile();
-              if (param1 == 49) {
-                Object discarded$6 = q.a(param0, -8582, new Object[2], "updatelinks");
-                Object discarded$7 = q.a(param0, -8582, new Object[2], "updatelinks");
-                Object discarded$8 = q.a(param0, -8582, new Object[2], "updatelinks");
-                Object discarded$9 = q.a(param0, -8582, new Object[2], "updatelinks");
-                Object discarded$10 = q.a(param0, param1 + -8631, new Object[2], "updatelinks");
-                Object discarded$11 = q.a(param0, param1 + -8631, new Object[2], "updatelinks");
-              } else {
-                return;
+              L0: {
+                var4 = param0.getCodeBase();
+                var3 = og.a(-1, param0, var4).getFile();
+                if (param1 == 49) {
+                  Object discarded$6 = q.a(param0, -8582, new Object[2], "updatelinks");
+                  Object discarded$7 = q.a(param0, -8582, new Object[2], "updatelinks");
+                  Object discarded$8 = q.a(param0, -8582, new Object[2], "updatelinks");
+                  Object discarded$9 = q.a(param0, -8582, new Object[2], "updatelinks");
+                  Object discarded$10 = q.a(param0, param1 + -8631, new Object[2], "updatelinks");
+                  Object discarded$11 = q.a(param0, param1 + -8631, new Object[2], "updatelinks");
+                  break L0;
+                } else {
+                  return;
+                }
               }
-            } catch (java.lang.Throwable decompiledCaughtParameter) {
-              decompiledCaughtException = decompiledCaughtParameter;
+            } catch (java.lang.Throwable decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              L1: {
+                var2 = decompiledCaughtException;
+                break L1;
+              }
             }
-            var2 = decompiledCaughtException;
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {

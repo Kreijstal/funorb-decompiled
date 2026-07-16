@@ -657,13 +657,13 @@ final class rh {
         if (param0) {
           if (((rh) this).b((byte) -124)) {
             L0: {
-              if (param1 > -1) {
+              if ((param1 ^ -1) > -1) {
                 break L0;
               } else {
                 if (param1 >= ((rh) this).field_m.field_v.length) {
                   break L0;
                 } else {
-                  if (-1 != ((rh) this).field_m.field_v[param1]) {
+                  if (-1 != (((rh) this).field_m.field_v[param1] ^ -1)) {
                     return true;
                   } else {
                     break L0;
@@ -703,7 +703,6 @@ final class rh {
 
     private final synchronized byte[] a(int param0, boolean param1, int[] param2, int param3) {
         Object var5 = null;
-        byte[] var5_array = null;
         byte[] var7 = null;
         if (this.a(-63, param3, param0)) {
           var5 = null;
@@ -735,7 +734,7 @@ final class rh {
               L2: {
                 if (((rh) this).field_l[param3][param0] != null) {
                   var7 = jg.a(false, ((rh) this).field_l[param3][param0], false);
-                  var5_array = var7;
+                  var5 = (Object) (Object) var7;
                   if (var7 != null) {
                     break L2;
                   } else {
@@ -746,7 +745,7 @@ final class rh {
                 }
               }
               L3: {
-                if (var5_array == null) {
+                if (var5 == null) {
                   break L3;
                 } else {
                   if (-2 == (((rh) this).field_h ^ -1)) {
@@ -767,7 +766,7 @@ final class rh {
                   }
                 }
               }
-              return var5_array;
+              return (byte[]) var5;
             } else {
               throw new RuntimeException("");
             }
@@ -958,6 +957,7 @@ final class rh {
                 }
               }
               ((rh) this).field_d = stackIn_6_1 != 0;
+              return;
             } else {
               break L0;
             }

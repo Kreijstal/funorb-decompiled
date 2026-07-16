@@ -112,15 +112,22 @@ final class nb extends ig {
     }
 
     final int b(byte param0, int param1) {
-        if (param1 >= 0) {
-            // if_icmple L21
-        } else {
-            return -1;
+        L0: {
+          if (param1 < 0) {
+            break L0;
+          } else {
+            if (((nb) this).field_L.a(19692) <= param1) {
+              break L0;
+            } else {
+              if (param0 == 95) {
+                return ((nb) this).field_L.a((byte) -117, param1);
+              } else {
+                return -11;
+              }
+            }
+          }
         }
-        if (param0 != 95) {
-            return -11;
-        }
-        return ((nb) this).field_L.a((byte) -117, param1);
+        return -1;
     }
 
     final int d(boolean param0) {
@@ -162,6 +169,7 @@ final class nb extends ig {
         L0: while (true) {
           if (-257 >= (var1 ^ -1)) {
             field_O = "Flame cannon";
+            return;
           } else {
             var0 = var1;
             var2 = 0;

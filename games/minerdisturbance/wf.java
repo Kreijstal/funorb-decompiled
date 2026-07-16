@@ -271,8 +271,9 @@ abstract class wf extends cc {
         if ((((wf) this).field_O ^ -1) < -1) {
             var2 = ((wf) this).field_S;
             var3 = ((wf) this).field_X;
+            int fieldTemp$0 = ((wf) this).field_W + 1;
             ((wf) this).field_W = ((wf) this).field_W + 1;
-            if (((wf) this).field_O > ((wf) this).field_W + 1) {
+            if (((wf) this).field_O > fieldTemp$0) {
                 var4 = ((wf) this).field_W * (-((wf) this).field_W + ((wf) this).field_O * 2);
                 var5 = ((wf) this).field_O * ((wf) this).field_O;
                 var3 = var4 * (((wf) this).field_X - ((wf) this).field_T) / var5 + ((wf) this).field_T;

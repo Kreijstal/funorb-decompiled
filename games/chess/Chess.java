@@ -2,6 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 import java.util.*;
+import java.awt.Canvas;
 
 public final class Chess extends gb {
     private int[] field_H;
@@ -68,7 +69,7 @@ public final class Chess extends gb {
 
     final void b(byte param0) {
         int var2 = 0;
-        un var2_ref = null;
+        Object var2_ref = null;
         int var3 = 0;
         String[] var4_ref_String__ = null;
         int var4 = 0;
@@ -120,7 +121,7 @@ public final class Chess extends gb {
           }
         }
         L1: {
-          int discarded$2 = ea.h((byte) -16);
+          int discarded$4 = ea.h((byte) -16);
           fl.field_n = ib.a(true);
           la.b(-49);
           if (fk.field_q.d((byte) -125)) {
@@ -134,19 +135,21 @@ public final class Chess extends gb {
           if (ka.field_a.d((byte) -126)) {
             break L2;
           } else {
-            if (bc.field_b != ib.field_a) {
+            if ((bc.field_b ^ -1) != (ib.field_a ^ -1)) {
               L3: {
-                if (ib.field_a <= bc.field_b) {
+                if ((ib.field_a ^ -1) >= (bc.field_b ^ -1)) {
                   break L3;
                 } else {
+                  int fieldTemp$5 = bc.field_b + 2;
                   bc.field_b = bc.field_b + 2;
-                  rf.b(80, bc.field_b + 2);
+                  rf.b(80, fieldTemp$5);
                   break L3;
                 }
               }
               if (bc.field_b > ib.field_a) {
+                int fieldTemp$6 = bc.field_b - 2;
                 bc.field_b = bc.field_b - 2;
-                rf.b(80, bc.field_b - 2);
+                rf.b(80, fieldTemp$6);
                 break L2;
               } else {
                 break L2;
@@ -219,7 +222,7 @@ public final class Chess extends gb {
             if (je.h(30065)) {
               L9: {
                 if (vd.p(-77)) {
-                  boolean discarded$3 = this.b(19763, false);
+                  boolean discarded$7 = this.b(19763, false);
                   break L9;
                 } else {
                   break L9;
@@ -292,7 +295,7 @@ public final class Chess extends gb {
                       if (-2 == (var2 ^ -1)) {
                         break L14;
                       } else {
-                        if (var2 != -3) {
+                        if ((var2 ^ -1) != -3) {
                           break L13;
                         } else {
                           break L14;
@@ -307,7 +310,7 @@ public final class Chess extends gb {
                         break L15;
                       }
                     }
-                    if (-3 != var2) {
+                    if (-3 != (var2 ^ -1)) {
                       break L13;
                     } else {
                       dh.a(bh.i(81), true);
@@ -321,11 +324,11 @@ public final class Chess extends gb {
                 L16: {
                   if (0 == n.field_e) {
                     var2 = wf.c(true);
-                    if (var2 == -3) {
+                    if ((var2 ^ -1) == -3) {
                       b.a(true);
                       break L16;
                     } else {
-                      if (-4 != var2) {
+                      if (-4 != (var2 ^ -1)) {
                         if ((var2 ^ -1) == -5) {
                           a.field_d = true;
                           hj.a(0, -6, false);
@@ -397,10 +400,10 @@ public final class Chess extends gb {
                 L22: {
                   L23: {
                     var2 = ((Chess) this).l(0);
-                    if (var2 == -1) {
+                    if ((var2 ^ -1) == -1) {
                       break L23;
                     } else {
-                      if (-2 == var2) {
+                      if (-2 == (var2 ^ -1)) {
                         break L23;
                       } else {
                         break L22;
@@ -545,7 +548,7 @@ public final class Chess extends gb {
                       if (wg.field_B == 57) {
                         break L31;
                       } else {
-                        if (wg.field_B == -59) {
+                        if ((wg.field_B ^ -1) == -59) {
                           break L31;
                         } else {
                           if (59 == wg.field_B) {
@@ -585,13 +588,13 @@ public final class Chess extends gb {
                             L35: {
                               var2_ref = null;
                               if (hj.field_i) {
-                                var2_ref = oc.field_p;
+                                var2_ref = (Object) (Object) oc.field_p;
                                 break L35;
                               } else {
                                 if (!hl.field_h) {
                                   break L35;
                                 } else {
-                                  var2_ref = pd.field_Lb;
+                                  var2_ref = (Object) (Object) pd.field_Lb;
                                   break L35;
                                 }
                               }
@@ -605,7 +608,7 @@ public final class Chess extends gb {
                                     if (wg.field_B == 62) {
                                       L37: {
                                         var3 = tk.field_h.g(0);
-                                        var2_ref.field_B.a((byte) 93, var3);
+                                        ((un) var2_ref).field_B.a((byte) 93, var3);
                                         if (null != oc.field_p) {
                                           oc.field_p.field_B.field_f = var3;
                                           break L37;
@@ -613,11 +616,11 @@ public final class Chess extends gb {
                                           break L37;
                                         }
                                       }
-                                      var2_ref.i(-100);
+                                      ((un) var2_ref).i(-100);
                                       continue L19;
                                     } else {
                                       if (-64 == (wg.field_B ^ -1)) {
-                                        var2_ref.field_B.field_m = tk.field_h.i(-118);
+                                        ((un) var2_ref).field_B.field_m = tk.field_h.i(-118);
                                         if (oc.field_p == null) {
                                           continue L19;
                                         } else {
@@ -628,13 +631,13 @@ public final class Chess extends gb {
                                         if ((wg.field_B ^ -1) != -65) {
                                           if ((wg.field_B ^ -1) != -66) {
                                             if (66 == wg.field_B) {
-                                              var2_ref.field_A = tk.field_h.i(-88);
+                                              ((un) var2_ref).field_A = tk.field_h.i(-88);
                                               continue L19;
                                             } else {
                                               break L36;
                                             }
                                           } else {
-                                            var2_ref.field_B.field_c = tk.field_h.i(-100);
+                                            ((un) var2_ref).field_B.field_c = tk.field_h.i(-100);
                                             if (null == oc.field_p) {
                                               continue L19;
                                             } else {
@@ -643,7 +646,7 @@ public final class Chess extends gb {
                                             }
                                           }
                                         } else {
-                                          var2_ref.field_B.field_e = tk.field_h.i(-82);
+                                          ((un) var2_ref).field_B.field_e = tk.field_h.i(-82);
                                           continue L19;
                                         }
                                       }
@@ -652,9 +655,9 @@ public final class Chess extends gb {
                                     var3 = tk.field_h.c(true);
                                     var4 = tk.field_h.c(true);
                                     var5 = tk.field_h.g(0);
-                                    var2_ref.field_B.a(var3, var5, (uk) (Object) var2_ref.field_t, -65, var4);
-                                    eb.a(var5, var2_ref.field_t.field_f[var4] & -16773121, var2_ref.field_t.field_f[var3] & -16773121, 3);
-                                    var2_ref.b((byte) 26);
+                                    ((un) var2_ref).field_B.a(var3, var5, (uk) (Object) ((un) var2_ref).field_t, -65, var4);
+                                    eb.a(var5, ((un) var2_ref).field_t.field_f[var4] & -16773121, ((un) var2_ref).field_t.field_f[var3] & -16773121, 3);
+                                    ((un) var2_ref).b((byte) 26);
                                     continue L19;
                                   }
                                 } else {
@@ -662,43 +665,43 @@ public final class Chess extends gb {
                                     var3 = tk.field_h.f(674914976);
                                     var4 = tk.field_h.i(-101);
                                     var5 = tk.field_h.e((byte) -120);
-                                    var2_ref.field_B.a(var4, 255, var3);
-                                    if (var2_ref.field_B.field_k == var3) {
-                                      var2_ref.field_e = var5;
+                                    ((un) var2_ref).field_B.a(var4, 255, var3);
+                                    if (((un) var2_ref).field_B.field_k == var3) {
+                                      ((un) var2_ref).field_e = var5;
                                       break L38;
                                     } else {
-                                      var2_ref.field_v = var5;
+                                      ((un) var2_ref).field_v = var5;
                                       break L38;
                                     }
                                   }
                                   L39: {
-                                    if (var2_ref.field_e == 999) {
-                                      var2_ref.field_e = var5;
+                                    if ((((un) var2_ref).field_e ^ -1) == 999) {
+                                      ((un) var2_ref).field_e = var5;
                                       break L39;
                                     } else {
                                       break L39;
                                     }
                                   }
                                   L40: {
-                                    if (999 != var2_ref.field_v) {
+                                    if (999 != (((un) var2_ref).field_v ^ -1)) {
                                       break L40;
                                     } else {
-                                      var2_ref.field_v = var5;
+                                      ((un) var2_ref).field_v = var5;
                                       break L40;
                                     }
                                   }
                                   L41: {
-                                    if (var2_ref.field_c) {
+                                    if (((un) var2_ref).field_c) {
                                       break L41;
                                     } else {
-                                      var2_ref.field_e = var2_ref.field_e - 400;
-                                      var2_ref.field_c = true;
+                                      ((un) var2_ref).field_e = ((un) var2_ref).field_e - 400;
+                                      ((un) var2_ref).field_c = true;
                                       break L41;
                                     }
                                   }
-                                  if (!var2_ref.field_k) {
-                                    var2_ref.field_v = var2_ref.field_v - 400;
-                                    var2_ref.field_k = true;
+                                  if (!((un) var2_ref).field_k) {
+                                    ((un) var2_ref).field_v = ((un) var2_ref).field_v - 400;
+                                    ((un) var2_ref).field_k = true;
                                     continue L19;
                                   } else {
                                     continue L19;
@@ -715,7 +718,7 @@ public final class Chess extends gb {
                     L42: {
                       de.a(-31645);
                       var2 = tk.field_h.i(-81);
-                      if (-2 != tk.field_h.i(-111)) {
+                      if (-2 != (tk.field_h.i(-111) ^ -1)) {
                         stackOut_99_0 = 0;
                         stackIn_100_0 = stackOut_99_0;
                         break L42;
@@ -898,7 +901,7 @@ public final class Chess extends gb {
             break L0;
           }
         }
-        var6 = (Object) (Object) stackIn_3_0;
+        var6 = stackIn_3_0;
         var2 = var6;
         if (!je.h(30065)) {
           if (!qi.field_l) {
@@ -1047,8 +1050,8 @@ public final class Chess extends gb {
           j.field_v = bn.a(lg.field_b, "", "coin");
           jb.field_e = (dd) (Object) j.field_v.a(96, 1365, 5, -10, 5);
           var2 = qm.field_g;
-          if (var2 != -2) {
-            if (-1 != var2) {
+          if ((var2 ^ -1) != -2) {
+            if (-1 != (var2 ^ -1)) {
               break L0;
             } else {
               break L0;
@@ -1089,100 +1092,104 @@ public final class Chess extends gb {
                     break L4;
                   }
                 }
-                if (null != tf.field_l[var3]) {
-                  qe.field_u[var3] = (dd) (Object) tf.field_l[var3].a(96, 1365, 5, -10, 5);
-                  am.field_c[var3] = (dd) (Object) da.field_w[var3].a(96, 1365, 5, -10, 5);
-                  var3++;
-                  continue L3;
-                } else {
-                  var3++;
-                  continue L3;
+                L5: {
+                  if (null == tf.field_l[var3]) {
+                    break L5;
+                  } else {
+                    qe.field_u[var3] = (dd) (Object) tf.field_l[var3].a(96, 1365, 5, -10, 5);
+                    am.field_c[var3] = (dd) (Object) da.field_w[var3].a(96, 1365, 5, -10, 5);
+                    break L5;
+                  }
                 }
+                var3++;
+                continue L3;
               }
             }
           } else {
-            L5: {
+            L6: {
               if (0 == var3) {
-                break L5;
+                break L6;
               } else {
-                break L5;
+                break L6;
               }
             }
             var3 = 1;
-            L6: while (true) {
-              if (var3 >= var2) {
+            L7: while (true) {
+              if ((var3 ^ -1) <= (var2 ^ -1)) {
                 break L2;
               } else {
-                L7: {
+                L8: {
                   if ((var3 ^ -1) == -14) {
                     tf.field_l[var3] = new bn(new bn[1], 1);
                     tf.field_l[var3].c();
                     da.field_w[var3] = new bn(new bn[1], 1);
                     da.field_w[var3].c();
-                    break L7;
+                    break L8;
                   } else {
-                    break L7;
+                    break L8;
                   }
                 }
-                L8: {
+                L9: {
                   if (fc.field_e[var3] == null) {
-                    break L8;
+                    break L9;
                   } else {
                     this.a(2, "", fc.field_e[var3], true, var3, fc.field_d[var3]);
-                    break L8;
+                    break L9;
                   }
                 }
-                if (tf.field_l[var3] != null) {
-                  L9: {
-                    L10: {
-                      if (3 == var3) {
-                        break L10;
-                      } else {
-                        if (var3 == 4) {
-                          break L10;
+                L10: {
+                  if (tf.field_l[var3] != null) {
+                    L11: {
+                      L12: {
+                        if (3 == var3) {
+                          break L12;
                         } else {
-                          if ((var3 ^ -1) == -6) {
-                            break L10;
+                          if (var3 == 4) {
+                            break L12;
                           } else {
-                            if (6 != var3) {
-                              break L9;
+                            if ((var3 ^ -1) == -6) {
+                              break L12;
                             } else {
-                              break L10;
+                              if (6 != var3) {
+                                break L11;
+                              } else {
+                                break L12;
+                              }
                             }
                           }
                         }
                       }
-                    }
-                    var15 = tf.field_l[var3].field_j;
-                    var14 = var15;
-                    var13 = var14;
-                    var12 = var13;
-                    var9 = var12;
-                    var4_ref_short__ = var9;
-                    var5 = var15.length + -1;
-                    L11: while (true) {
-                      if ((var5 ^ -1) > -1) {
-                        break L9;
-                      } else {
-                        var4_ref_short__[var5] = (short)(16296 + -eh.a(28207, sk.field_n, 16));
-                        var5--;
-                        continue L11;
+                      var15 = tf.field_l[var3].field_j;
+                      var14 = var15;
+                      var13 = var14;
+                      var12 = var13;
+                      var9 = var12;
+                      var4_ref_short__ = var9;
+                      var5 = var15.length + -1;
+                      L13: while (true) {
+                        if ((var5 ^ -1) > -1) {
+                          break L11;
+                        } else {
+                          var4_ref_short__[var5] = (short)(16296 + -eh.a(28207, sk.field_n, 16));
+                          var5--;
+                          continue L13;
+                        }
                       }
                     }
+                    qe.field_u[var3] = (dd) (Object) tf.field_l[var3].a(96, 1365, 5, -10, 5);
+                    am.field_c[var3] = (dd) (Object) da.field_w[var3].a(96, 1365, 5, -10, 5);
+                    break L10;
+                  } else {
+                    break L10;
                   }
-                  qe.field_u[var3] = (dd) (Object) tf.field_l[var3].a(96, 1365, 5, -10, 5);
-                  am.field_c[var3] = (dd) (Object) da.field_w[var3].a(96, 1365, 5, -10, 5);
-                  var3++;
-                  continue L6;
-                } else {
-                  var3++;
-                  continue L6;
                 }
+                var3++;
+                continue L7;
               }
             }
           }
         }
-        L12: {
+        L14: {
           this.p(0);
           kl.field_k[0] = null;
           var3 = qm.field_g;
@@ -1193,13 +1200,13 @@ public final class Chess extends gb {
             kl.field_k[3] = bn.a(lg.field_b, "halloween_chess_foreground", "halloween_chess_pieces/white_bishop_halloween");
             kl.field_k[5] = bn.a(lg.field_b, "halloween_chess_foreground", "halloween_chess_pieces/white_queen_halloween");
             kl.field_k[6] = bn.a(lg.field_b, "halloween_chess_foreground", "halloween_chess_pieces/white_king_halloween");
-            break L12;
+            break L14;
           } else {
-            L13: {
+            L15: {
               if (-1 != (var3 ^ -1)) {
-                break L13;
+                break L15;
               } else {
-                break L13;
+                break L15;
               }
             }
             kl.field_k[1] = bn.a(lg.field_b, "", "white_pawn");
@@ -1208,21 +1215,21 @@ public final class Chess extends gb {
             kl.field_k[3] = bn.a(lg.field_b, "", "white_bishop");
             kl.field_k[5] = bn.a(lg.field_b, "", "white_queen");
             kl.field_k[6] = bn.a(lg.field_b, "", "white_king_gold_crown");
-            break L12;
+            break L14;
           }
         }
         se.field_N[0] = null;
         var3 = 1;
-        L14: while (true) {
+        L16: while (true) {
           if ((var3 ^ -1) < -7) {
-            L15: {
+            L17: {
               var3 = qm.field_g;
               if (-2 != (var3 ^ -1)) {
-                L16: {
+                L18: {
                   if (var3 == 0) {
-                    break L16;
+                    break L18;
                   } else {
-                    break L16;
+                    break L18;
                   }
                 }
                 kl.field_k[1] = bn.a(lg.field_b, "", "black_pawn2_lighter");
@@ -1231,7 +1238,7 @@ public final class Chess extends gb {
                 kl.field_k[3] = bn.a(lg.field_b, "", "black_bishop2_lighter");
                 kl.field_k[5] = bn.a(lg.field_b, "", "black_queen_lighter");
                 kl.field_k[6] = bn.a(lg.field_b, "", "black_king_red_crown2_lighter");
-                break L15;
+                break L17;
               } else {
                 kl.field_k[1] = bn.a(lg.field_b, "halloween_chess_foreground", "halloween_chess_pieces/black_pawn_halloween");
                 kl.field_k[4] = bn.a(lg.field_b, "halloween_chess_foreground", "halloween_chess_pieces/black_rook_halloween");
@@ -1239,7 +1246,7 @@ public final class Chess extends gb {
                 kl.field_k[3] = bn.a(lg.field_b, "halloween_chess_foreground", "halloween_chess_pieces/black_bishop_halloween");
                 kl.field_k[5] = bn.a(lg.field_b, "halloween_chess_foreground", "halloween_chess_pieces/black_queen_halloween");
                 kl.field_k[6] = bn.a(lg.field_b, "halloween_chess_foreground", "halloween_chess_pieces/black_king_halloween");
-                break L15;
+                break L17;
               }
             }
             var3 = -19 % ((26 - param0) / 45);
@@ -1247,13 +1254,13 @@ public final class Chess extends gb {
             var3 = t.field_P[qm.field_g];
             var4 = vn.field_sb[qm.field_g];
             var5 = 1;
-            L17: while (true) {
+            L19: while (true) {
               if (var5 > 6) {
                 var5 = -1 + kl.field_k.length;
-                L18: while (true) {
+                L20: while (true) {
                   if (0 > var5) {
                     var5 = n.field_b.length + -1;
-                    L19: while (true) {
+                    L21: while (true) {
                       if ((var5 ^ -1) > -1) {
                         jj.field_c[0] = null;
                         ig.field_f[0] = null;
@@ -1265,13 +1272,13 @@ public final class Chess extends gb {
                       } else {
                         n.field_b[var5] = null;
                         var5--;
-                        continue L19;
+                        continue L21;
                       }
                     }
                   } else {
                     kl.field_k[var5] = null;
                     var5--;
-                    continue L18;
+                    continue L20;
                   }
                 }
               } else {
@@ -1279,31 +1286,31 @@ public final class Chess extends gb {
                 n.field_b[var5] = new bn(new bn[1], 1);
                 var6 = n.field_b[var5].field_j;
                 var7_int = n.field_b[var5].field_j.length + -1;
-                L20: while (true) {
+                L22: while (true) {
                   if ((var7_int ^ -1) > -1) {
                     n.field_b[var5].a(((Chess) this).field_H);
                     ig.field_f[var5] = (dd) (Object) n.field_b[var5].a(var3, var4, 5, -10, 5);
                     dl.field_c[var5] = new bn(new bn[1], 1);
                     var11 = -1 + dl.field_c[var5].field_h;
                     var7_int = var11;
-                    L21: while (true) {
+                    L23: while (true) {
                       if ((var11 ^ -1) > -1) {
                         var7 = dl.field_c[var5].field_O;
                         dl.field_c[var5].field_O = dl.field_c[var5].field_P;
                         dl.field_c[var5].field_P = var7;
                         pj.field_c[var5] = (dd) (Object) dl.field_c[var5].a(var3 * 4, var4 / 4, 5, 10, 5);
                         var5++;
-                        continue L17;
+                        continue L19;
                       } else {
                         dl.field_c[var5].field_C[var11] = -dl.field_c[var5].field_C[var11];
                         var11--;
-                        continue L21;
+                        continue L23;
                       }
                     }
                   } else {
                     var6[var7_int] = (short)0;
                     var7_int--;
-                    continue L20;
+                    continue L22;
                   }
                 }
               }
@@ -1314,30 +1321,30 @@ public final class Chess extends gb {
             var10 = n.field_b[var3].field_j;
             var4_ref_short__ = n.field_b[var3].field_j;
             var5 = n.field_b[var3].field_j.length + -1;
-            L22: while (true) {
+            L24: while (true) {
               if (0 > var5) {
                 n.field_b[var3].a(((Chess) this).field_H);
                 jj.field_c[var3] = (dd) (Object) n.field_b[var3].a(t.field_P[qm.field_g], vn.field_sb[qm.field_g], 5, -10, 5);
                 dl.field_c[var3] = new bn(new bn[1], 1);
                 var5 = dl.field_c[var3].field_h - 1;
-                L23: while (true) {
+                L25: while (true) {
                   if ((var5 ^ -1) > -1) {
                     var5_ref_int__ = dl.field_c[var3].field_O;
                     dl.field_c[var3].field_O = dl.field_c[var3].field_P;
                     dl.field_c[var3].field_P = var5_ref_int__;
                     q.field_b[var3] = (dd) (Object) dl.field_c[var3].a(t.field_P[qm.field_g], vn.field_sb[qm.field_g], 5, 10, 5);
                     var3++;
-                    continue L14;
+                    continue L16;
                   } else {
                     dl.field_c[var3].field_C[var5] = -dl.field_c[var3].field_C[var5];
                     var5--;
-                    continue L23;
+                    continue L25;
                   }
                 }
               } else {
                 var10[var5] = (short)0;
                 var5--;
-                continue L22;
+                continue L24;
               }
             }
           }
@@ -1493,7 +1500,7 @@ public final class Chess extends gb {
               if (2 <= var8_int) {
                 var8_int = 0;
                 L2: while (true) {
-                  if (-2 > var8_int) {
+                  if (-2 > (var8_int ^ -1)) {
                     var10 = 0;
                     if (param0) {
                       L3: while (true) {
@@ -1507,7 +1514,7 @@ public final class Chess extends gb {
                         } else {
                           var11 = 0;
                           L4: while (true) {
-                            if (var11 <= -3) {
+                            if ((var11 ^ -1) <= -3) {
                               var10++;
                               continue L3;
                             } else {
@@ -1525,7 +1532,7 @@ public final class Chess extends gb {
                                   }
                                 }
                                 L7: {
-                                  if (-1 != var10) {
+                                  if (-1 != (var10 ^ -1)) {
                                     break L7;
                                   } else {
                                     if (-2 == (var11 ^ -1)) {
@@ -1537,10 +1544,10 @@ public final class Chess extends gb {
                                   }
                                 }
                                 L8: {
-                                  if (var10 != -2) {
+                                  if ((var10 ^ -1) != -2) {
                                     break L8;
                                   } else {
-                                    if (-1 == var11) {
+                                    if (-1 == (var11 ^ -1)) {
                                       var9 = 4525064;
                                       break L5;
                                     } else {
@@ -1553,7 +1560,10 @@ public final class Chess extends gb {
                               }
                               var12 = 0;
                               L9: while (true) {
-                                if (var12 < 2) {
+                                if (var12 >= 2) {
+                                  var11++;
+                                  continue L4;
+                                } else {
                                   var13 = 0;
                                   L10: while (true) {
                                     if (7 <= var13) {
@@ -1569,9 +1579,6 @@ public final class Chess extends gb {
                                       continue L10;
                                     }
                                   }
-                                } else {
-                                  var11++;
-                                  continue L4;
                                 }
                               }
                             }
@@ -1583,7 +1590,7 @@ public final class Chess extends gb {
                     }
                   } else {
                     L11: {
-                      if (-1 != var8_int) {
+                      if (-1 != (var8_int ^ -1)) {
                         var9 = 1;
                         break L11;
                       } else {
@@ -1647,7 +1654,7 @@ public final class Chess extends gb {
                 break L15;
               }
             }
-            var9_ref_dd__ = (dd[]) (Object) stackIn_5_0;
+            var9_ref_dd__ = stackIn_5_0;
             var10 = 1;
             L16: while (true) {
               if (7 <= var10) {
@@ -2939,10 +2946,10 @@ public final class Chess extends gb {
                   }
                 }
               } else {
-                if (-1 != ((Chess) this).field_F) {
-                  if (-2 != ((Chess) this).field_F) {
-                    if (((Chess) this).field_F != -3) {
-                      if (-4 != ((Chess) this).field_F) {
+                if (-1 != (((Chess) this).field_F ^ -1)) {
+                  if (-2 != (((Chess) this).field_F ^ -1)) {
+                    if ((((Chess) this).field_F ^ -1) != -3) {
+                      if (-4 != (((Chess) this).field_F ^ -1)) {
                         L2: {
                           if (-5 == (((Chess) this).field_F ^ -1)) {
                             mm.field_d = null;
@@ -3003,137 +3010,139 @@ public final class Chess extends gb {
                   ob.f(0);
                   return false;
                 } else {
-                  el.field_y[var3] = pf.a(li.field_g, "", "chess" + (1 + var3));
-                  if (null != el.field_y[var3]) {
-                    boolean discarded$5 = fk.field_q.a(pg.field_o, param0 ^ -19794, 0, el.field_y[var3], s.field_S);
-                    var3++;
-                    continue L3;
-                  } else {
-                    var3++;
-                    continue L3;
+                  L5: {
+                    el.field_y[var3] = pf.a(li.field_g, "", "chess" + (1 + var3));
+                    if (null != el.field_y[var3]) {
+                      boolean discarded$5 = fk.field_q.a(pg.field_o, param0 ^ -19794, 0, el.field_y[var3], s.field_S);
+                      break L5;
+                    } else {
+                      break L5;
+                    }
                   }
+                  var3++;
+                  continue L3;
                 }
               }
             }
           }
         } else {
-          L5: {
+          L6: {
             if (!lc.field_m.c((byte) 118)) {
-              break L5;
+              break L6;
             } else {
               if (!lc.field_m.b((byte) -40)) {
-                break L5;
+                break L6;
               } else {
-                L6: {
+                L7: {
                   if (!tk.field_g.c((byte) 127)) {
-                    break L6;
+                    break L7;
                   } else {
                     if (!tk.field_g.b((byte) -40)) {
-                      break L6;
+                      break L7;
                     } else {
-                      L7: {
+                      L8: {
                         if (!pg.field_o.c((byte) 126)) {
-                          break L7;
+                          break L8;
                         } else {
                           if (!pg.field_o.b((byte) -40)) {
-                            break L7;
+                            break L8;
                           } else {
-                            L8: {
+                            L9: {
                               if (!li.field_g.c((byte) 121)) {
-                                break L8;
+                                break L9;
                               } else {
                                 if (!li.field_g.b((byte) -40)) {
-                                  break L8;
+                                  break L9;
                                 } else {
-                                  L9: {
+                                  L10: {
                                     if (!mm.field_d.c((byte) 121)) {
-                                      break L9;
+                                      break L10;
                                     } else {
                                       if (!mm.field_d.b((byte) -40)) {
-                                        break L9;
+                                        break L10;
                                       } else {
-                                        L10: {
+                                        L11: {
                                           if (!wg.field_q.c((byte) 121)) {
-                                            break L10;
+                                            break L11;
                                           } else {
                                             if (!wg.field_q.b((byte) -40)) {
-                                              break L10;
+                                              break L11;
                                             } else {
-                                              L11: {
-                                                L12: {
+                                              L12: {
+                                                L13: {
                                                   if (!lg.field_b.c((byte) 122)) {
-                                                    break L12;
+                                                    break L13;
                                                   } else {
                                                     if (lg.field_b.b((byte) -40)) {
-                                                      break L11;
-                                                    } else {
                                                       break L12;
+                                                    } else {
+                                                      break L13;
                                                     }
                                                   }
                                                 }
                                                 nj.a(-20, ji.a(ve.field_Qb, "", hh.field_j, lg.field_b, (byte) 36), 56.0f);
-                                                break L11;
+                                                break L12;
                                               }
-                                              L13: {
+                                              L14: {
                                                 if (!bo.field_d.c((byte) 127)) {
-                                                  break L13;
+                                                  break L14;
                                                 } else {
                                                   if (!bo.field_d.b((byte) -40)) {
-                                                    break L13;
+                                                    break L14;
                                                   } else {
-                                                    L14: {
+                                                    L15: {
                                                       if (!hm.field_e.c((byte) 118)) {
-                                                        break L14;
+                                                        break L15;
                                                       } else {
                                                         if (hm.field_e.b("basic", 100)) {
-                                                          L15: {
+                                                          L16: {
                                                             if (!hm.field_e.c((byte) 122)) {
-                                                              break L15;
+                                                              break L16;
                                                             } else {
                                                               if (!hm.field_e.b("roman12", param0 + -19663)) {
-                                                                break L15;
+                                                                break L16;
                                                               } else {
-                                                                L16: {
+                                                                L17: {
                                                                   if (!f.field_b.c((byte) 123)) {
-                                                                    break L16;
+                                                                    break L17;
                                                                   } else {
                                                                     if (!f.field_b.b("roman12", param0 + -19663)) {
-                                                                      break L16;
+                                                                      break L17;
                                                                     } else {
-                                                                      L17: {
+                                                                      L18: {
                                                                         if (!hm.field_e.c((byte) 123)) {
-                                                                          break L17;
+                                                                          break L18;
                                                                         } else {
                                                                           if (!hm.field_e.b("kartika13", 100)) {
-                                                                            break L17;
+                                                                            break L18;
                                                                           } else {
-                                                                            L18: {
+                                                                            L19: {
                                                                               if (!f.field_b.c((byte) 127)) {
-                                                                                break L18;
+                                                                                break L19;
                                                                               } else {
                                                                                 if (!f.field_b.b("kartika13", 100)) {
-                                                                                  break L18;
+                                                                                  break L19;
                                                                                 } else {
-                                                                                  L19: {
+                                                                                  L20: {
                                                                                     if (!hm.field_e.c((byte) 118)) {
-                                                                                      break L19;
+                                                                                      break L20;
                                                                                     } else {
                                                                                       if (!hm.field_e.b("lobby", 100)) {
-                                                                                        break L19;
+                                                                                        break L20;
                                                                                       } else {
-                                                                                        L20: {
+                                                                                        L21: {
                                                                                           if (!f.field_b.c((byte) 118)) {
-                                                                                            break L20;
+                                                                                            break L21;
                                                                                           } else {
                                                                                             if (!f.field_b.b("lobby", 100)) {
-                                                                                              break L20;
+                                                                                              break L21;
                                                                                             } else {
-                                                                                              L21: {
+                                                                                              L22: {
                                                                                                 if (!ca.field_b.c((byte) 123)) {
-                                                                                                  break L21;
+                                                                                                  break L22;
                                                                                                 } else {
                                                                                                   if (!ca.field_b.b((byte) -40)) {
-                                                                                                    break L21;
+                                                                                                    break L22;
                                                                                                   } else {
                                                                                                     if (!param1) {
                                                                                                       return false;
@@ -3182,7 +3191,7 @@ public final class Chess extends gb {
                                                           nj.a(-20, ji.a(gb.field_o, "roman12", k.field_V, hm.field_e, (byte) 118), 11.0f);
                                                           return false;
                                                         } else {
-                                                          break L14;
+                                                          break L15;
                                                         }
                                                       }
                                                     }

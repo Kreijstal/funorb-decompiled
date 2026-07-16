@@ -121,28 +121,34 @@ final class tf {
             rc stackOut_2_0 = null;
             try {
               L0: {
-                var4 = Class.forName("qb");
-                if (param1) {
-                  break L0;
-                } else {
-                  field_b = null;
-                  break L0;
+                L1: {
+                  var4 = Class.forName("qb");
+                  if (param1) {
+                    break L1;
+                  } else {
+                    field_b = null;
+                    break L1;
+                  }
                 }
+                var5 = (rc) var4.newInstance();
+                var5.a(param0, -48, param3, param2);
+                stackOut_2_0 = (rc) var5;
+                stackIn_3_0 = stackOut_2_0;
+                break L0;
               }
-              var5 = (rc) var4.newInstance();
-              var5.a(param0, -48, param3, param2);
-              stackOut_2_0 = (rc) var5;
-              stackIn_3_0 = stackOut_2_0;
-            } catch (java.lang.Throwable decompiledCaughtParameter) {
-              decompiledCaughtException = decompiledCaughtParameter;
-              return stackIn_3_0;
+            } catch (java.lang.Throwable decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              var4_ref = decompiledCaughtException;
+              var5_ref = new ub();
+              ((rc) (Object) var5_ref).a(param0, -123, param3, param2);
+              return (rc) (Object) var5_ref;
             }
+            return stackIn_3_0;
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
             throw new RuntimeException(decompiledCheckedException);
         }
-        return null;
     }
 
     public static void a(int param0) {

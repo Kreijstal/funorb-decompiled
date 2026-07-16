@@ -144,18 +144,24 @@ final class vp extends hn implements ng {
             Throwable decompiledCaughtException = null;
             try {
               L0: {
-                Object discarded$1 = hp.a(ip.a(9), new Object[1], 28989, "resizing");
-                if (param1 < -57) {
-                  break L0;
-                } else {
-                  field_G = null;
-                  break L0;
+                L1: {
+                  Object discarded$1 = hp.a(ip.a(9), new Object[1], 28989, "resizing");
+                  if (param1 < -57) {
+                    break L1;
+                  } else {
+                    field_G = null;
+                    break L1;
+                  }
                 }
+                break L0;
               }
-            } catch (java.lang.Throwable decompiledCaughtParameter) {
-              decompiledCaughtException = decompiledCaughtParameter;
+            } catch (java.lang.Throwable decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              L2: {
+                var2 = decompiledCaughtException;
+                break L2;
+              }
             }
-            var2 = decompiledCaughtException;
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {

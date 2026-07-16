@@ -158,8 +158,9 @@ final class oa extends RuntimeException {
                                               break L7;
                                             } else {
                                               L10: {
-                                                var9[var12] = var16.e((byte) 105);
-                                                var13 = var16.e((byte) 105);
+                                                byte dupTemp$2 = var16.e((byte) 105);
+                                                var9[var12] = dupTemp$2;
+                                                var13 = dupTemp$2;
                                                 stackOut_47_0 = var10;
                                                 stackIn_49_0 = stackOut_47_0;
                                                 stackIn_48_0 = stackOut_47_0;
@@ -208,8 +209,9 @@ final class oa extends RuntimeException {
                                                   continue L12;
                                                 } else {
                                                   L14: {
-                                                    var9[var12 - -(var13 * var5)] = var16.e((byte) 105);
-                                                    var14 = var16.e((byte) 105);
+                                                    byte dupTemp$3 = var16.e((byte) 105);
+                                                    var9[var12 - -(var13 * var5)] = dupTemp$3;
+                                                    var14 = dupTemp$3;
                                                     stackOut_35_0 = var10;
                                                     stackIn_37_0 = stackOut_35_0;
                                                     stackIn_36_0 = stackOut_35_0;
@@ -324,14 +326,17 @@ final class oa extends RuntimeException {
             var2 = 0;
             L2: while (true) {
               if (aa.field_e <= var2) {
-                g.field_l[param1.b(14842)] = g.field_l[param1.b(14842)] + 1;
+                int dupTemp$5 = param1.b(14842);
+                g.field_l[dupTemp$5] = g.field_l[dupTemp$5] + 1;
                 var2 = 0;
                 var3 = 0;
                 L3: while (true) {
                   if (var3 >= aa.field_e) {
                     aa.field_e = var2;
+                    pn[] fieldTemp$6 = wb.field_e;
+                    int fieldTemp$7 = aa.field_e;
                     aa.field_e = aa.field_e + 1;
-                    wb.field_e[aa.field_e] = param1;
+                    fieldTemp$6[fieldTemp$7] = param1;
                     return;
                   } else {
                     L4: {
@@ -348,15 +353,17 @@ final class oa extends RuntimeException {
                         break L4;
                       }
                     }
+                    int incrementValue$8 = var2;
                     var2++;
-                    wb.field_e[var2] = wb.field_e[var3];
+                    wb.field_e[incrementValue$8] = wb.field_e[var3];
                     var3++;
                     continue L3;
                   }
                 }
               } else {
                 if (param1.field_p == wb.field_e[var2].field_p) {
-                  g.field_l[wb.field_e[var2].b(14842)] = g.field_l[wb.field_e[var2].b(14842)] + 1;
+                  int dupTemp$9 = wb.field_e[var2].b(14842);
+                  g.field_l[dupTemp$9] = g.field_l[dupTemp$9] + 1;
                   var2++;
                   continue L2;
                 } else {

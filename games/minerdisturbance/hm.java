@@ -9,24 +9,43 @@ final class hm extends jc {
     private ta field_K;
 
     final static void d(byte param0) {
-        int var2 = MinerDisturbance.field_ab;
-        if (param0 != 22) {
+        int var2 = 0;
+        L0: {
+          var2 = MinerDisturbance.field_ab;
+          if (param0 == 22) {
+            break L0;
+          } else {
             field_J = null;
+            break L0;
+          }
         }
-        if (!tk.b(127)) {
-            // if_acmpeq L127
-            if (!(!kf.field_d.field_b)) {
+        if (tk.b(127)) {
+          boolean discarded$12 = ll.field_a.a(true, ql.field_c, cl.field_T, 0);
+          ll.field_a.o(-256);
+          L1: while (true) {
+            if (!mm.b((byte) 118)) {
+              return;
+            } else {
+              boolean discarded$13 = ll.field_a.a((byte) -65, lj.field_t, ud.field_c);
+              continue L1;
+            }
+          }
+        } else {
+          if (null == kf.field_d) {
+            return;
+          } else {
+            L2: {
+              if (kf.field_d.field_b) {
                 ng.a((byte) 81);
                 ll.field_a.b(param0 ^ 23, (fe) (Object) new bh(ll.field_a, od.field_k));
+                break L2;
+              } else {
+                break L2;
+              }
             }
             return;
+          }
         }
-        boolean discarded$8 = ll.field_a.a(true, ql.field_c, cl.field_T, 0);
-        ll.field_a.o(-256);
-        while (mm.b((byte) 118)) {
-            boolean discarded$9 = ll.field_a.a((byte) -65, lj.field_t, ud.field_c);
-        }
-        return;
     }
 
     final void b(int param0, fe param1) {

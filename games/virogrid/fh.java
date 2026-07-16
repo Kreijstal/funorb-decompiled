@@ -31,14 +31,14 @@ final class fh {
         int var7 = 0;
         int var8 = 0;
         var8 = Virogrid.field_F ? 1 : 0;
-        if (kf.field_e > -1) {
+        if ((kf.field_e ^ -1) > -1) {
           return;
         } else {
           L0: {
             var3 = -135 + param2;
             var4 = param0 - 35;
             var5 = 256;
-            if (-76 <= kf.field_e) {
+            if (-76 >= (kf.field_e ^ -1)) {
               break L0;
             } else {
               var5 = (kf.field_e << -944889048) / 75;

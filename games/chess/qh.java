@@ -1,6 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
+import java.lang.String;
+
 final class qh {
     static eb field_b;
     static int[] field_e;
@@ -212,7 +214,7 @@ final class qh {
                                         break L10;
                                       }
                                     }
-                                    stackIn_82_0[stackIn_82_1] = (String) (Object) stackIn_82_2;
+                                    stackIn_82_0[stackIn_82_1] = stackIn_82_2;
                                     var8++;
                                     continue L9;
                                   }
@@ -243,7 +245,7 @@ final class qh {
                                     break L11;
                                   }
                                 }
-                                stackIn_76_0[stackIn_76_1] = (String) (Object) stackIn_76_2;
+                                stackIn_76_0[stackIn_76_1] = stackIn_76_2;
                                 var8++;
                                 continue L8;
                               }

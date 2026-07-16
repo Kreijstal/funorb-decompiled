@@ -149,38 +149,81 @@ final class qe {
     }
 
     private final int a(boolean param0, int param1, int param2) {
-        qj var12 = null;
-        qj var11 = null;
-        int var9 = 0;
-        qj var13 = null;
-        qj var14 = null;
-        int var10 = EscapeVector.field_A;
-        int var4 = ((qe) this).field_e.length;
+        int var4 = 0;
         int var5 = 0;
         Object var6 = null;
         Object var7 = null;
-        if (!param0) {
+        int var8 = 0;
+        int var9 = 0;
+        int var10 = 0;
+        qj var11 = null;
+        qj var12 = null;
+        qj var13 = null;
+        qj var14 = null;
+        int stackIn_10_0 = 0;
+        int stackOut_9_0 = 0;
+        int stackOut_8_0 = 0;
+        L0: {
+          var10 = EscapeVector.field_A;
+          var4 = ((qe) this).field_e.length;
+          var5 = 0;
+          var6 = null;
+          var7 = null;
+          if (param0) {
+            break L0;
+          } else {
             ((qe) this).field_b = 83;
+            break L0;
+          }
         }
-        int var8 = ((qe) this).field_i[param1];
-        while (0 < param2) {
-            // if_icmple L155
-            var12 = ((qe) this).field_e[var5 + 1];
-            var11 = ((qe) this).field_e[var5];
-            var9 = this.a(var11, var12, (byte) -128);
-            var13 = this.a(var12, true, param2, var11, var9);
-            param2 = param2 - var9;
-            em.d(var11.field_h, var11.field_b, var13.field_h, var13.field_b, var8);
-            // ifle L155
-            var5++;
+        var8 = ((qe) this).field_i[param1];
+        L1: while (true) {
+          L2: {
+            if (0 >= param2) {
+              break L2;
+            } else {
+              if (var4 <= 1 + var5) {
+                break L2;
+              } else {
+                var12 = ((qe) this).field_e[var5 + 1];
+                var11 = ((qe) this).field_e[var5];
+                var9 = this.a(var11, var12, (byte) -128);
+                var13 = this.a(var12, true, param2, var11, var9);
+                param2 = param2 - var9;
+                em.d(var11.field_h, var11.field_b, var13.field_h, var13.field_b, var8);
+                if (param2 <= 0) {
+                  break L2;
+                } else {
+                  var5++;
+                  continue L1;
+                }
+              }
+            }
+          }
+          L3: {
+            if ((param2 ^ -1) >= -1) {
+              stackOut_9_0 = 0;
+              stackIn_10_0 = stackOut_9_0;
+              break L3;
+            } else {
+              stackOut_8_0 = 1;
+              stackIn_10_0 = stackOut_8_0;
+              break L3;
+            }
+          }
+          L4: {
+            var9 = stackIn_10_0;
+            if (var9 == 0) {
+              break L4;
+            } else {
+              var14 = ((qe) this).field_e[var4 - 1];
+              em.a(-1 + var14.field_h, -1 + var14.field_b, 3, 3, var8);
+              break L4;
+            }
+          }
+          this.a(var9 != 0, (byte) -66);
+          return param2;
         }
-        var9 = (param2 ^ -1) < -1 ? 1 : 0;
-        if (var9 != 0) {
-            var14 = ((qe) this).field_e[var4 - 1];
-            em.a(-1 + var14.field_h, -1 + var14.field_b, 3, 3, var8);
-        }
-        this.a(var9 != 0, (byte) -66);
-        return param2;
     }
 
     private final qj a(qj param0, boolean param1, int param2, qj param3, int param4) {
@@ -229,61 +272,89 @@ final class qe {
     }
 
     final static int a(int param0) {
-        if (fc.field_a < 2) {
-            return 0;
-        }
-        if (ff.field_h == 0) {
-            if (!ii.field_a.b(0)) {
+        if (fc.field_a >= 2) {
+          L0: {
+            if (ff.field_h != 0) {
+              L1: {
+                if (null != nk.field_p) {
+                  if (nk.field_p.b(0)) {
+                    if (!nk.field_p.a("", (byte) -111)) {
+                      return 29;
+                    } else {
+                      if (!nk.field_p.a(0, "")) {
+                        return 29;
+                      } else {
+                        break L1;
+                      }
+                    }
+                  } else {
+                    return 14;
+                  }
+                } else {
+                  break L1;
+                }
+              }
+              if (!ii.field_a.b(0)) {
+                return 43;
+              } else {
+                if (ii.field_a.a(0, "commonui")) {
+                  if (!w.field_ab.b(0)) {
+                    return 71;
+                  } else {
+                    if (!w.field_ab.a(0, "commonui")) {
+                      return 80;
+                    } else {
+                      if (pl.field_j.b(0)) {
+                        if (!pl.field_j.a((byte) -119)) {
+                          return 86;
+                        } else {
+                          break L0;
+                        }
+                      } else {
+                        return 82;
+                      }
+                    }
+                  }
+                } else {
+                  return 57;
+                }
+              }
+            } else {
+              if (ii.field_a.b(0)) {
+                if (ii.field_a.a(0, "commonui")) {
+                  if (!w.field_ab.b(0)) {
+                    return 50;
+                  } else {
+                    if (!w.field_ab.a(0, "commonui")) {
+                      return 60;
+                    } else {
+                      if (pl.field_j.b(0)) {
+                        if (pl.field_j.a((byte) -119)) {
+                          break L0;
+                        } else {
+                          return 80;
+                        }
+                      } else {
+                        return 70;
+                      }
+                    }
+                  }
+                } else {
+                  return 40;
+                }
+              } else {
                 return 20;
+              }
             }
-            if (!ii.field_a.a(0, "commonui")) {
-                return 40;
-            }
-            if (!(w.field_ab.b(0))) {
-                return 50;
-            }
-            if (!(w.field_ab.a(0, "commonui"))) {
-                return 60;
-            }
-            if (!pl.field_j.b(0)) {
-                return 70;
-            }
-            // ifne L261
-            return 80;
-        }
-        if (!(null == nk.field_p)) {
-            if (!nk.field_p.b(0)) {
-                return 14;
-            }
-            if (!(nk.field_p.a("", (byte) -111))) {
-                return 29;
-            }
-            if (!(nk.field_p.a(0, ""))) {
-                return 29;
-            }
-        }
-        if (!(ii.field_a.b(0))) {
-            return 43;
-        }
-        if (!ii.field_a.a(0, "commonui")) {
-            return 57;
-        }
-        if (!(w.field_ab.b(0))) {
-            return 71;
-        }
-        if (!(w.field_ab.a(0, "commonui"))) {
-            return 80;
-        }
-        if (!pl.field_j.b(0)) {
-            return 82;
-        }
-        if (!(pl.field_j.a((byte) -119))) {
-            return 86;
-        }
-        if (param0 >= -8) {
+          }
+          if (param0 < -8) {
+            return 100;
+          } else {
             return -98;
+          }
+        } else {
+          return 0;
         }
-        return 100;
     }
 
     final boolean a(int param0, int param1, int param2) {

@@ -45,400 +45,177 @@ final class uk extends nf {
             int[] var7 = null;
             int[] var8 = null;
             int[] var9 = null;
-            int statePc = 0;
-            Throwable caughtException = null;
-            stateLoop: while (true) {
-                switch (statePc) {
-                    case 0: {
-                        var4 = CrazyCrystals.field_B;
-                        statePc = 1;
-                        continue stateLoop;
-                    }
-                    case 1: {
-                        try {
-                            if (param0 == -9762) {
-                                statePc = 3;
-                            } else {
-                                statePc = 2;
-                            }
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_1) {
-                            caughtException = stateCaught_1;
-                            statePc = 18;
-                            continue stateLoop;
+            Throwable decompiledCaughtException = null;
+            var4 = CrazyCrystals.field_B;
+            try {
+              L0: {
+                L1: {
+                  if (param0 == -9762) {
+                    break L1;
+                  } else {
+                    uk.c(-48);
+                    break L1;
+                  }
+                }
+                L2: {
+                  if (null != ol.field_z[0]) {
+                    break L2;
+                  } else {
+                    ol.field_z[0] = b.a(0, (InputStream) (Object) new ByteArrayInputStream(ba.field_k.a(7693, "tutorial.ccl", "")), qp.field_g);
+                    vp.a(125);
+                    break L2;
+                  }
+                }
+                L3: {
+                  if ((mo.field_l ^ -1) < -1) {
+                    if (null != ol.field_z[2]) {
+                      break L3;
+                    } else {
+                      L4: {
+                        if (pd.field_f == null) {
+                          pd.field_f = w.a(param0 + 9762, 0, 2, 5);
+                          break L4;
+                        } else {
+                          break L4;
                         }
-                    }
-                    case 2: {
-                        try {
-                            uk.c(-48);
-                            statePc = 3;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_2) {
-                            caughtException = stateCaught_2;
-                            statePc = 18;
-                            continue stateLoop;
-                        }
-                    }
-                    case 3: {
-                        try {
-                            if (null != ol.field_z[0]) {
-                                statePc = 5;
-                            } else {
-                                statePc = 4;
-                            }
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_3) {
-                            caughtException = stateCaught_3;
-                            statePc = 18;
-                            continue stateLoop;
-                        }
-                    }
-                    case 4: {
-                        try {
-                            ol.field_z[0] = b.a(0, (InputStream) (Object) new ByteArrayInputStream(ba.field_k.a(7693, "tutorial.ccl", "")), qp.field_g);
-                            vp.a(125);
-                            statePc = 5;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_4) {
-                            caughtException = stateCaught_4;
-                            statePc = 18;
-                            continue stateLoop;
-                        }
-                    }
-                    case 5: {
-                        try {
-                            if ((mo.field_l ^ -1) < -1) {
-                                statePc = 9;
-                            } else {
-                                statePc = 6;
-                            }
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_5) {
-                            caughtException = stateCaught_5;
-                            statePc = 18;
-                            continue stateLoop;
-                        }
-                    }
-                    case 6: {
-                        try {
-                            if (ol.field_z[1] == null) {
-                                statePc = 8;
-                            } else {
-                                statePc = 7;
-                            }
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_6) {
-                            caughtException = stateCaught_6;
-                            statePc = 18;
-                            continue stateLoop;
-                        }
-                    }
-                    case 7: {
-                        try {
-                            statePc = 16;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_7) {
-                            caughtException = stateCaught_7;
-                            statePc = 18;
-                            continue stateLoop;
-                        }
-                    }
-                    case 8: {
-                        try {
-                            ol.field_z[1] = b.a(0, (InputStream) (Object) new ByteArrayInputStream(ba.field_k.a(7693, "puzzle1p.ccl", "")), ro.field_r);
-                            vp.a(param0 ^ -9800);
-                            statePc = 16;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_8) {
-                            caughtException = stateCaught_8;
-                            statePc = 18;
-                            continue stateLoop;
-                        }
-                    }
-                    case 9: {
-                        try {
-                            if (null != ol.field_z[2]) {
-                                statePc = 16;
-                            } else {
-                                statePc = 10;
-                            }
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_9) {
-                            caughtException = stateCaught_9;
-                            statePc = 18;
-                            continue stateLoop;
-                        }
-                    }
-                    case 10: {
-                        try {
-                            if (pd.field_f == null) {
-                                statePc = 12;
-                            } else {
-                                statePc = 11;
-                            }
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_10) {
-                            caughtException = stateCaught_10;
-                            statePc = 18;
-                            continue stateLoop;
-                        }
-                    }
-                    case 11: {
-                        try {
-                            statePc = 13;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_11) {
-                            caughtException = stateCaught_11;
-                            statePc = 18;
-                            continue stateLoop;
-                        }
-                    }
-                    case 12: {
-                        try {
-                            pd.field_f = w.a(param0 + 9762, 0, 2, 5);
-                            statePc = 13;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_12) {
-                            caughtException = stateCaught_12;
-                            statePc = 18;
-                            continue stateLoop;
-                        }
-                    }
-                    case 13: {
-                        try {
-                            var9 = pd.field_f.field_j;
-                            var8 = var9;
-                            var7 = var8;
-                            var6 = var7;
-                            var5 = var6;
-                            var1_ref_int__ = var5;
-                            if (var1_ref_int__ != null) {
-                                statePc = 15;
-                            } else {
-                                statePc = 14;
-                            }
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_13) {
-                            caughtException = stateCaught_13;
-                            statePc = 18;
-                            continue stateLoop;
-                        }
-                    }
-                    case 14: {
+                      }
+                      var9 = pd.field_f.field_j;
+                      var8 = var9;
+                      var7 = var8;
+                      var6 = var7;
+                      var5 = var6;
+                      var1_ref_int__ = var5;
+                      if (var1_ref_int__ != null) {
+                        ol.field_z[1] = b.a(oe.a(param0, -9762), (InputStream) (Object) new ByteArrayInputStream(mg.field_g.a(false, var9, "puzzle1p.ccl", "")), ro.field_r);
+                        ol.field_z[2] = b.a(0, (InputStream) (Object) new ByteArrayInputStream(mg.field_g.a(false, var9, "puzzle2p.ccl", "")), pg.field_e);
+                        ol.field_z[3] = b.a(param0 + 9762, (InputStream) (Object) new ByteArrayInputStream(mg.field_g.a(false, var9, "puzzle3p.ccl", "")), qg.field_c);
+                        ol.field_z[4] = b.a(0, (InputStream) (Object) new ByteArrayInputStream(mg.field_g.a(false, var9, "arcade1p.ccl", "")), kk.field_k);
+                        pd.field_f = null;
+                        mg.field_g = null;
+                        vp.a(105);
+                        break L3;
+                      } else {
                         return;
+                      }
                     }
-                    case 15: {
-                        try {
-                            ol.field_z[1] = b.a(oe.a(param0, -9762), (InputStream) (Object) new ByteArrayInputStream(mg.field_g.a(false, var9, "puzzle1p.ccl", "")), ro.field_r);
-                            ol.field_z[2] = b.a(0, (InputStream) (Object) new ByteArrayInputStream(mg.field_g.a(false, var9, "puzzle2p.ccl", "")), pg.field_e);
-                            ol.field_z[3] = b.a(param0 + 9762, (InputStream) (Object) new ByteArrayInputStream(mg.field_g.a(false, var9, "puzzle3p.ccl", "")), qg.field_c);
-                            ol.field_z[4] = b.a(0, (InputStream) (Object) new ByteArrayInputStream(mg.field_g.a(false, var9, "arcade1p.ccl", "")), kk.field_k);
-                            pd.field_f = null;
-                            mg.field_g = null;
-                            vp.a(105);
-                            statePc = 16;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_15) {
-                            caughtException = stateCaught_15;
-                            statePc = 18;
-                            continue stateLoop;
-                        }
+                  } else {
+                    if (ol.field_z[1] == null) {
+                      ol.field_z[1] = b.a(0, (InputStream) (Object) new ByteArrayInputStream(ba.field_k.a(7693, "puzzle1p.ccl", "")), ro.field_r);
+                      vp.a(param0 ^ -9800);
+                      break L3;
+                    } else {
+                      break L3;
                     }
-                    case 16: {
-                        try {
-                            ba.field_k = null;
-                            statePc = 19;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_16) {
-                            caughtException = stateCaught_16;
-                            statePc = 18;
-                            continue stateLoop;
-                        }
-                    }
-                    case 18: {
-                        var1_ref_IOException = (IOException) (Object) caughtException;
-                        throw new RuntimeException(var1_ref_IOException.getMessage());
-                    }
-                    case 19: {
-                        if (jc.field_b) {
-                            statePc = 40;
-                        } else {
-                            statePc = 20;
-                        }
-                        continue stateLoop;
-                    }
-                    case 20: {
-                        if (!rc.a(-39)) {
-                            statePc = 22;
-                        } else {
-                            statePc = 40;
-                        }
-                        continue stateLoop;
-                    }
-                    case 22: {
-                        if (null == pc.field_u) {
-                            statePc = 24;
-                        } else {
-                            statePc = 27;
-                        }
-                        continue stateLoop;
-                    }
-                    case 24: {
-                        pc.field_u = new pp[5];
-                        var1 = 0;
-                        statePc = 25;
-                        continue stateLoop;
-                    }
-                    case 25: {
+                  }
+                }
+                ba.field_k = null;
+                break L0;
+              }
+            } catch (java.io.IOException decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              var1_ref_IOException = (IOException) (Object) decompiledCaughtException;
+              throw new RuntimeException(var1_ref_IOException.getMessage());
+            }
+            L5: {
+              if (jc.field_b) {
+                break L5;
+              } else {
+                if (!rc.a(-39)) {
+                  L6: {
+                    if (null == pc.field_u) {
+                      pc.field_u = new pp[5];
+                      var1 = 0;
+                      L7: while (true) {
                         if (var1 >= 5) {
-                            statePc = 27;
+                          break L6;
                         } else {
-                            statePc = 26;
+                          pc.field_u[var1] = ea.a(var1, 1, (byte) 65, 5);
+                          var1++;
+                          continue L7;
                         }
-                        continue stateLoop;
+                      }
+                    } else {
+                      break L6;
                     }
-                    case 26: {
-                        pc.field_u[var1] = ea.a(var1, 1, (byte) 65, 5);
-                        var1++;
-                        statePc = 25;
-                        continue stateLoop;
-                    }
-                    case 27: {
-                        var1 = 1;
-                        var2 = 0;
-                        statePc = 28;
-                        continue stateLoop;
-                    }
-                    case 28: {
-                        if ((var2 ^ -1) <= -6) {
-                            statePc = 38;
-                        } else {
-                            statePc = 29;
-                        }
-                        continue stateLoop;
-                    }
-                    case 29: {
-                        if (pc.field_u[var2] == null) {
-                            statePc = 35;
-                        } else {
-                            statePc = 30;
-                        }
-                        continue stateLoop;
-                    }
-                    case 30: {
-                        if (!pc.field_u[var2].field_h) {
-                            statePc = 35;
-                        } else {
-                            statePc = 31;
-                        }
-                        continue stateLoop;
-                    }
-                    case 31: {
-                        if (pc.field_u[var2].field_g[0] > ke.field_b[var2]) {
-                            statePc = 33;
-                        } else {
-                            statePc = 34;
-                        }
-                        continue stateLoop;
-                    }
-                    case 33: {
-                        var3 = pc.field_u[var2].field_g[0] + -ke.field_b[var2];
-                        ka.field_n = ka.field_n - var3;
-                        ei.field_F = ei.field_F - 2 * var3;
-                        sm.field_f = sm.field_f - var3 * 2;
-                        ke.field_b[var2] = pc.field_u[var2].field_g[0];
-                        statePc = 34;
-                        continue stateLoop;
-                    }
-                    case 34: {
-                        pc.field_u[var2] = null;
-                        statePc = 35;
-                        continue stateLoop;
-                    }
-                    case 35: {
-                        if (pc.field_u[var2] != null) {
-                            statePc = 37;
-                        } else {
-                            statePc = 36;
-                        }
-                        continue stateLoop;
-                    }
-                    case 36: {
-                        var2++;
-                        statePc = 28;
-                        continue stateLoop;
-                    }
-                    case 37: {
-                        var1 = 0;
-                        var2++;
-                        statePc = 28;
-                        continue stateLoop;
-                    }
-                    case 38: {
-                        if (var1 == 0) {
-                            statePc = 40;
-                        } else {
-                            statePc = 39;
-                        }
-                        continue stateLoop;
-                    }
-                    case 39: {
+                  }
+                  var1 = 1;
+                  var2 = 0;
+                  L8: while (true) {
+                    if ((var2 ^ -1) <= -6) {
+                      if (var1 == 0) {
+                        break L5;
+                      } else {
                         jc.field_b = true;
                         pc.field_u = null;
-                        statePc = 40;
-                        continue stateLoop;
-                    }
-                    case 40: {
-                        if (gh.field_y) {
-                            statePc = 47;
+                        break L5;
+                      }
+                    } else {
+                      L9: {
+                        if (pc.field_u[var2] == null) {
+                          break L9;
                         } else {
-                            statePc = 41;
+                          if (!pc.field_u[var2].field_h) {
+                            break L9;
+                          } else {
+                            L10: {
+                              if (pc.field_u[var2].field_g[0] > ke.field_b[var2]) {
+                                var3 = pc.field_u[var2].field_g[0] + -ke.field_b[var2];
+                                ka.field_n = ka.field_n - var3;
+                                ei.field_F = ei.field_F - 2 * var3;
+                                sm.field_f = sm.field_f - var3 * 2;
+                                ke.field_b[var2] = pc.field_u[var2].field_g[0];
+                                break L10;
+                              } else {
+                                break L10;
+                              }
+                            }
+                            pc.field_u[var2] = null;
+                            break L9;
+                          }
                         }
-                        continue stateLoop;
+                      }
+                      if (pc.field_u[var2] != null) {
+                        var1 = 0;
+                        var2++;
+                        continue L8;
+                      } else {
+                        var2++;
+                        continue L8;
+                      }
                     }
-                    case 41: {
-                        if (!rc.a(-63)) {
-                            statePc = 43;
-                        } else {
-                            statePc = 47;
-                        }
-                        continue stateLoop;
-                    }
-                    case 43: {
-                        if (null != eb.field_p) {
-                            statePc = 45;
-                        } else {
-                            statePc = 44;
-                        }
-                        continue stateLoop;
-                    }
-                    case 44: {
-                        eb.field_p = qa.a((byte) 121, 4);
-                        statePc = 45;
-                        continue stateLoop;
-                    }
-                    case 45: {
-                        if (!eb.field_p.field_k) {
-                            statePc = 47;
-                        } else {
-                            statePc = 46;
-                        }
-                        continue stateLoop;
-                    }
-                    case 46: {
-                        fk.field_s = eb.field_p.field_f;
-                        pc.field_y = pc.field_y & (fk.field_s ^ -1);
-                        gh.field_y = true;
-                        fk.field_s = fk.field_s + pc.field_y;
-                        eb.field_p = null;
-                        statePc = 47;
-                        continue stateLoop;
-                    }
-                    case 47: {
-                        return;
-                    }
-                    default: throw new IllegalStateException("invalid CFG state " + statePc);
+                  }
+                } else {
+                  break L5;
                 }
+              }
+            }
+            L11: {
+              if (gh.field_y) {
+                break L11;
+              } else {
+                if (!rc.a(-63)) {
+                  L12: {
+                    if (null != eb.field_p) {
+                      break L12;
+                    } else {
+                      eb.field_p = qa.a((byte) 121, 4);
+                      break L12;
+                    }
+                  }
+                  if (!eb.field_p.field_k) {
+                    break L11;
+                  } else {
+                    fk.field_s = eb.field_p.field_f;
+                    pc.field_y = pc.field_y & (fk.field_s ^ -1);
+                    gh.field_y = true;
+                    fk.field_s = fk.field_s + pc.field_y;
+                    eb.field_p = null;
+                    break L11;
+                  }
+                } else {
+                  break L11;
+                }
+              }
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;

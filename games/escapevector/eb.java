@@ -247,8 +247,9 @@ final class eb extends hc {
                                               break L23;
                                             } else {
                                               L24: {
-                                                var9[var12 + var5 * var13] = var17.a(false);
-                                                var14 = var17.a(false);
+                                                byte dupTemp$2 = var17.a(false);
+                                                var9[var12 + var5 * var13] = dupTemp$2;
+                                                var14 = dupTemp$2;
                                                 stackOut_40_0 = var10;
                                                 stackIn_42_0 = stackOut_40_0;
                                                 stackIn_41_0 = stackOut_40_0;
@@ -318,8 +319,9 @@ final class eb extends hc {
                                   break L14;
                                 } else {
                                   L28: {
-                                    var9[var12] = var17.a(false);
-                                    var13 = var17.a(false);
+                                    byte dupTemp$3 = var17.a(false);
+                                    var9[var12] = dupTemp$3;
+                                    var13 = dupTemp$3;
                                     stackOut_54_0 = var10;
                                     stackIn_56_0 = stackOut_54_0;
                                     stackIn_55_0 = stackOut_54_0;

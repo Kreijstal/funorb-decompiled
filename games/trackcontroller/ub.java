@@ -25,37 +25,31 @@ final class ub extends rc implements java.awt.image.ImageProducer, java.awt.imag
     }
 
     final void a(int param0, int param1, java.awt.Component param2, int param3) {
-        try {
-            Object var6 = null;
-            ((ub) this).field_b = new int[param3 * param0 + 1];
-            ((ub) this).field_c = param0;
-            ((ub) this).field_a = param3;
-            ((ub) this).field_f = (java.awt.image.ColorModel) (Object) new java.awt.image.DirectColorModel(32, 16711680, 65280, 255);
-            ((ub) this).field_d = param2.createImage((java.awt.image.ImageProducer) this);
-            this.b(81);
-            if (param1 > -37) {
-              var6 = null;
-              ((ub) this).a(114, (java.awt.Graphics) null, 91, 59);
-              boolean discarded$6 = param2.prepareImage(((ub) this).field_d, (java.awt.image.ImageObserver) this);
-              this.b(101);
-              boolean discarded$7 = param2.prepareImage(((ub) this).field_d, (java.awt.image.ImageObserver) this);
-              this.b(-64);
-              boolean discarded$8 = param2.prepareImage(((ub) this).field_d, (java.awt.image.ImageObserver) this);
-              ((ub) this).a(-91);
-              return;
-            } else {
-              boolean discarded$9 = param2.prepareImage(((ub) this).field_d, (java.awt.image.ImageObserver) this);
-              this.b(101);
-              boolean discarded$10 = param2.prepareImage(((ub) this).field_d, (java.awt.image.ImageObserver) this);
-              this.b(-64);
-              boolean discarded$11 = param2.prepareImage(((ub) this).field_d, (java.awt.image.ImageObserver) this);
-              ((ub) this).a(-91);
-              return;
-            }
-        } catch (RuntimeException | Error decompiledUncheckedException) {
-            throw decompiledUncheckedException;
-        } catch (Throwable decompiledCheckedException) {
-            throw new RuntimeException(decompiledCheckedException);
+        Object var6 = null;
+        ((ub) this).field_b = new int[param3 * param0 + 1];
+        ((ub) this).field_c = param0;
+        ((ub) this).field_a = param3;
+        ((ub) this).field_f = (java.awt.image.ColorModel) (Object) new java.awt.image.DirectColorModel(32, 16711680, 65280, 255);
+        ((ub) this).field_d = param2.createImage((java.awt.image.ImageProducer) this);
+        this.b(81);
+        if (param1 > -37) {
+          var6 = null;
+          ((ub) this).a(114, (java.awt.Graphics) null, 91, 59);
+          boolean discarded$6 = param2.prepareImage(((ub) this).field_d, (java.awt.image.ImageObserver) this);
+          this.b(101);
+          boolean discarded$7 = param2.prepareImage(((ub) this).field_d, (java.awt.image.ImageObserver) this);
+          this.b(-64);
+          boolean discarded$8 = param2.prepareImage(((ub) this).field_d, (java.awt.image.ImageObserver) this);
+          ((ub) this).a(-91);
+          return;
+        } else {
+          boolean discarded$9 = param2.prepareImage(((ub) this).field_d, (java.awt.image.ImageObserver) this);
+          this.b(101);
+          boolean discarded$10 = param2.prepareImage(((ub) this).field_d, (java.awt.image.ImageObserver) this);
+          this.b(-64);
+          boolean discarded$11 = param2.prepareImage(((ub) this).field_d, (java.awt.image.ImageObserver) this);
+          ((ub) this).a(-91);
+          return;
         }
     }
 

@@ -33,8 +33,9 @@ final class fo {
         double var6 = 0.0;
         int var8 = 0;
         L0: {
+          int fieldTemp$2 = ((fo) this).field_e + 1;
           ((fo) this).field_e = ((fo) this).field_e + 1;
-          if (((fo) this).field_e + 1 <= -401) {
+          if (fieldTemp$2 <= -401) {
             ((fo) this).field_e = 0;
             break L0;
           } else {
@@ -42,8 +43,9 @@ final class fo {
           }
         }
         L1: {
+          int fieldTemp$3 = ((fo) this).field_n + 1;
           ((fo) this).field_n = ((fo) this).field_n + 1;
-          if (param0 <= ((fo) this).field_n + 1) {
+          if (param0 <= fieldTemp$3) {
             ((fo) this).field_n = 0;
             break L1;
           } else {
@@ -153,6 +155,7 @@ final class fo {
                 ((fo) this).field_j[0] = new ki(((fo) this).field_r, ((fo) this).field_o, var9, var10);
                 ((fo) this).field_j[1] = new ki(((fo) this).field_r, ((fo) this).field_o, var9, (int)((double)var10 * 0.9));
                 ((fo) this).field_j[2] = new ki(((fo) this).field_r, ((fo) this).field_o, var9, (int)((double)var10 * 0.8));
+                return;
               } else {
                 var10_double = (double)var9 * 3.141592653589793 / 172.0;
                 ((fo) this).field_b[var9] = (int)((double)var8 * Math.sin(2.0 * var10_double));

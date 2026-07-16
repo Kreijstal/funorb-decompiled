@@ -74,8 +74,9 @@ final class dd {
         if (param0 > -113) {
             field_a = null;
         }
+        int fieldTemp$0 = ((dd) this).field_d + 1;
         ((dd) this).field_d = ((dd) this).field_d + 1;
-        return ((dd) this).field_d + 1 == ((dd) this).field_l.length ? true : false;
+        return fieldTemp$0 == ((dd) this).field_l.length ? true : false;
     }
 
     final static String[] a(String param0, byte param1, char param2) {
@@ -90,14 +91,15 @@ final class dd {
         for (var7 = 0; var3 > var7; var7++) {
             for (var8 = var6; param2 != param0.charAt(var8); var8++) {
             }
+            int incrementValue$0 = var5;
             var5++;
-            var4[var5] = param0.substring(var6, var8);
+            var4[incrementValue$0] = param0.substring(var6, var8);
             var6 = 1 + var8;
         }
         var4[var3] = param0.substring(var6);
         if (param1 > -28) {
             Object var10 = null;
-            String[] discarded$0 = dd.a((String) null, (byte) -32, 'k');
+            String[] discarded$1 = dd.a((String) null, (byte) -32, 'k');
         }
         return var4;
     }
@@ -204,6 +206,7 @@ final class dd {
           if (var2 >= 256) {
             field_m = "All players have left <%0>'s game.";
             field_f = "Type your password again to make sure it's correct";
+            return;
           } else {
             var0 = (long)var2;
             var3 = 0;

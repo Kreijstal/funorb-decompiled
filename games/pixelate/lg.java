@@ -20,13 +20,13 @@ final class lg {
         if (!(param2 != 8)) {
             return fb.field_Eb;
         }
-        if (!(-10 != param2)) {
+        if (!(-10 != (param2 ^ -1))) {
             return jb.field_c;
         }
         if (!(10 != param2)) {
             return c.field_O;
         }
-        if (!(-12 != param2)) {
+        if (!(-12 != (param2 ^ -1))) {
             return ve.field_Gb;
         }
         if (-15 == (param2 ^ -1)) {
@@ -197,21 +197,21 @@ final class lg {
             Object var5 = null;
             String discarded$0 = lg.a(-66, true, (CharSequence) null);
         }
-        String var3 = null;
-        String var4 = null;
+        Object var3 = null;
+        Object var4 = null;
         if (null != jp.field_c) {
             if (!jp.field_c.equals((Object) (Object) param1.getParameter("settings"))) {
-                var3 = jp.field_c;
+                var3 = (Object) (Object) jp.field_c;
                 var4 = var3;
                 var4 = var3;
             }
         }
         if (null != bh.field_n) {
             if (!(bh.field_n.equals((Object) (Object) param1.getParameter("session")))) {
-                var4 = bh.field_n;
+                var4 = (Object) (Object) bh.field_n;
             }
         }
-        return ub.a(-102, param2, var3, var4, -1);
+        return ub.a(-102, param2, (String) var3, (String) var4, -1);
     }
 
     static {

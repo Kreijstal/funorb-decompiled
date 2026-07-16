@@ -81,29 +81,30 @@ final class dd {
                   if (var12 >= var3) {
                     break L0;
                   } else {
-                    var8 = 32768 + var20[var12] >> 720567248;
-                    if (var8 <= 127) {
-                      if (-128 < var8) {
-                        param1[var12] = (byte)127;
-                        var12++;
-                        continue L2;
+                    L3: {
+                      var8 = 32768 + var20[var12] >> 720567248;
+                      if ((var8 ^ -1) <= 127) {
+                        if (-128 > (var8 ^ -1)) {
+                          param1[var12] = (byte)127;
+                          break L3;
+                        } else {
+                          param1[var12] = (byte)var8;
+                          break L3;
+                        }
                       } else {
-                        param1[var12] = (byte)var8;
-                        var12++;
-                        continue L2;
+                        param1[var12] = (byte)-128;
+                        break L3;
                       }
-                    } else {
-                      param1[var12] = (byte)-128;
-                      var12++;
-                      continue L2;
                     }
+                    var12++;
+                    continue L2;
                   }
                 }
               } else {
                 var8 = param1[var7];
                 var19 = ((dd) this).field_e[var6];
                 var10 = 0;
-                L3: while (true) {
+                L4: while (true) {
                   if (-15 >= (var10 ^ -1)) {
                     var6 = var6 + ((dd) this).field_f;
                     var10 = var6 / ((dd) this).field_i;
@@ -114,19 +115,19 @@ final class dd {
                   } else {
                     var4[var5 - -var10] = var4[var5 - -var10] + var8 * var19[var10];
                     var10++;
-                    continue L3;
+                    continue L4;
                   }
                 }
               }
             }
           }
         }
-        L4: {
+        L5: {
           if (param0 == -128) {
-            break L4;
+            break L5;
           } else {
             field_g = null;
-            break L4;
+            break L5;
           }
         }
         return param1;
@@ -152,6 +153,7 @@ final class dd {
           var4 = 0;
           L0: while (true) {
             if (var4 >= param0) {
+              return;
             } else {
               L1: {
                 var5 = ((dd) this).field_e[var4];
@@ -205,6 +207,7 @@ final class dd {
             }
           }
         } else {
+          return;
         }
     }
 
@@ -217,29 +220,36 @@ final class dd {
             Object stackIn_2_0 = null;
             vn stackIn_4_0 = null;
             Throwable decompiledCaughtException = null;
-            Object stackOut_1_0 = null;
             vn stackOut_3_0 = null;
+            Object stackOut_1_0 = null;
             try {
-              if (param2 == 125) {
-                return (vn) (Object) stackIn_2_0;
-              } else {
-                stackOut_1_0 = null;
-                stackIn_2_0 = stackOut_1_0;
+              L0: {
+                if (param2 == 125) {
+                  var4 = Class.forName("kd");
+                  var5 = (vn) var4.newInstance();
+                  var5.a(1018, param3, param0, param1);
+                  stackOut_3_0 = (vn) var5;
+                  stackIn_4_0 = stackOut_3_0;
+                  break L0;
+                } else {
+                  stackOut_1_0 = null;
+                  stackIn_2_0 = stackOut_1_0;
+                  return (vn) (Object) stackIn_2_0;
+                }
               }
-            } catch (java.lang.Throwable decompiledCaughtParameter) {
-              decompiledCaughtException = decompiledCaughtParameter;
-              var4 = Class.forName("kd");
-              var5 = (vn) var4.newInstance();
-              var5.a(1018, param3, param0, param1);
-              stackOut_3_0 = (vn) var5;
-              stackIn_4_0 = stackOut_3_0;
+            } catch (java.lang.Throwable decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              var4_ref = decompiledCaughtException;
+              var5_ref = new cg();
+              ((vn) (Object) var5_ref).a(1018, param3, param0, param1);
+              return (vn) (Object) var5_ref;
             }
+            return stackIn_4_0;
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
             throw new RuntimeException(decompiledCheckedException);
         }
-        return null;
     }
 
     final static int a(int param0, byte param1, int param2, int param3, int param4) {

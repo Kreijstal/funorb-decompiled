@@ -140,8 +140,9 @@ final class dj {
           }
           L1: while (true) {
             if (((dj) this).field_f > ((dj) this).field_i) {
+              int fieldTemp$3 = ((dj) this).field_i;
               ((dj) this).field_i = ((dj) this).field_i + 1;
-              var2 = ((dj) this).field_e[((dj) this).field_i].field_j;
+              var2 = ((dj) this).field_e[fieldTemp$3].field_j;
               if (((dj) this).field_e[-1 + ((dj) this).field_i] != var2) {
                 ((dj) this).field_b = var2.field_j;
                 return var2;
@@ -158,8 +159,9 @@ final class dj {
             if (((dj) this).field_e[((dj) this).field_i + -1] == ((dj) this).field_b) {
               L2: while (true) {
                 if (((dj) this).field_f > ((dj) this).field_i) {
+                  int fieldTemp$4 = ((dj) this).field_i;
                   ((dj) this).field_i = ((dj) this).field_i + 1;
-                  var2 = ((dj) this).field_e[((dj) this).field_i].field_j;
+                  var2 = ((dj) this).field_e[fieldTemp$4].field_j;
                   if (((dj) this).field_e[-1 + ((dj) this).field_i] != var2) {
                     ((dj) this).field_b = var2.field_j;
                     return var2;
@@ -178,8 +180,9 @@ final class dj {
           } else {
             L3: while (true) {
               if (((dj) this).field_f > ((dj) this).field_i) {
+                int fieldTemp$5 = ((dj) this).field_i;
                 ((dj) this).field_i = ((dj) this).field_i + 1;
-                var2 = ((dj) this).field_e[((dj) this).field_i].field_j;
+                var2 = ((dj) this).field_e[fieldTemp$5].field_j;
                 if (((dj) this).field_e[-1 + ((dj) this).field_i] != var2) {
                   ((dj) this).field_b = var2.field_j;
                   return var2;
@@ -203,13 +206,15 @@ final class dj {
         var2 = 0;
         L0: while (true) {
           if (param0 > var2) {
-            var3 = new mc();
-            ((dj) this).field_e[var2] = new mc();
+            mc dupTemp$2 = new mc();
+            var3 = dupTemp$2;
+            ((dj) this).field_e[var2] = dupTemp$2;
             var3.field_j = var3;
             var3.field_e = var3;
             var2++;
             continue L0;
           } else {
+            return;
           }
         }
     }

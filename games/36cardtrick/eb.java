@@ -19,7 +19,7 @@ final class eb {
         int var3 = 0;
         byte[] var4 = null;
         byte[] var5 = null;
-        java.math.BigInteger var7_ref = null;
+        java.math.BigInteger var7_ref_java_math_BigInteger = null;
         int var7 = 0;
         int var8 = 0;
         pb var10 = null;
@@ -52,7 +52,7 @@ final class eb {
               if (param0 == 2) {
                 break L1;
               } else {
-                ((eb) this).field_j = (gj) null;
+                ((eb) this).field_j = null;
                 break L1;
               }
             }
@@ -61,8 +61,8 @@ final class eb {
                 var10 = new pb(((eb) this).field_k.b(true));
                 var10.field_i = 5;
                 var3 = var10.f(56);
-                ((pb) var10).field_i = ((pb) var10).field_i + var3 * 72;
-                var16 = new byte[-((pb) var10).field_i + ((pb) var10).field_g.length];
+                var10.field_i = var10.field_i + var3 * 72;
+                var16 = new byte[-var10.field_i + var10.field_g.length];
                 var14 = var16;
                 var13 = var14;
                 var11 = var13;
@@ -75,8 +75,8 @@ final class eb {
                     break L3;
                   } else {
                     var12 = new java.math.BigInteger(var16);
-                    var7_ref = var12.modPow(((eb) this).field_a, ((eb) this).field_g);
-                    var5 = var7_ref.toByteArray();
+                    var7_ref_java_math_BigInteger = var12.modPow(((eb) this).field_a, ((eb) this).field_g);
+                    var5 = var7_ref_java_math_BigInteger.toByteArray();
                     break L2;
                   }
                 }
@@ -87,12 +87,12 @@ final class eb {
             if (var5.length != 65) {
               throw new RuntimeException();
             } else {
-              var17 = ti.a(5, ((pb) var10).field_g, ((pb) var10).field_i + -var16.length + -5, 0);
+              var17 = ti.a(5, var10.field_g, var10.field_i + -var16.length + -5, 0);
               var7 = 0;
               L4: while (true) {
                 if (var7 >= 64) {
                   ((eb) this).field_h = new uc[var3];
-                  ((eb) this).field_e = (pb) var10;
+                  ((eb) this).field_e = var10;
                   return true;
                 } else {
                   if (var5[1 + var7] == var17[var7]) {
@@ -109,25 +109,37 @@ final class eb {
     }
 
     final uc a(int param0, int param1, boolean param2, hc param3, hc param4) {
-        if (null == ((eb) this).field_e) {
-            throw new RuntimeException();
-        }
-        if (param0 >= 0) {
-            // if_icmpge L32
+        int var6 = 0;
+        int var7 = 0;
+        uc var9 = null;
+        byte[] var11 = null;
+        if (null != ((eb) this).field_e) {
+          L0: {
+            if (param0 < 0) {
+              break L0;
+            } else {
+              if (param0 >= ((eb) this).field_h.length) {
+                break L0;
+              } else {
+                if (null != ((eb) this).field_h[param0]) {
+                  return ((eb) this).field_h[param0];
+                } else {
+                  ((eb) this).field_e.field_i = param1 * param0 - -6;
+                  var6 = ((eb) this).field_e.e((byte) 127);
+                  var7 = ((eb) this).field_e.e((byte) 125);
+                  var11 = new byte[64];
+                  ((eb) this).field_e.a(63, var11, 0, 64);
+                  var9 = new uc(param0, param4, param3, ((eb) this).field_b, ((eb) this).field_j, var6, var11, var7, param2);
+                  ((eb) this).field_h[param0] = var9;
+                  return var9;
+                }
+              }
+            }
+          }
+          throw new RuntimeException();
         } else {
-            throw new RuntimeException();
+          throw new RuntimeException();
         }
-        if (!(null == ((eb) this).field_h[param0])) {
-            return ((eb) this).field_h[param0];
-        }
-        ((eb) this).field_e.field_i = param1 * param0 - -6;
-        int var6 = ((eb) this).field_e.e((byte) 127);
-        int var7 = ((eb) this).field_e.e((byte) 125);
-        byte[] var11 = new byte[64];
-        ((eb) this).field_e.a(63, var11, 0, 64);
-        uc var9 = new uc(param0, param4, param3, ((eb) this).field_b, ((eb) this).field_j, var6, var11, var7, param2);
-        ((eb) this).field_h[param0] = var9;
-        return var9;
     }
 
     final static nc a(int param0, String param1) {
@@ -197,7 +209,7 @@ final class eb {
         field_i = null;
         field_l = null;
         if (!param0) {
-            field_i = (int[]) null;
+            field_i = null;
         }
         field_c = null;
     }

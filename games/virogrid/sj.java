@@ -112,8 +112,9 @@ final class sj {
                     if (((sj) this).field_b <= var11) {
                       break L5;
                     } else {
-                      var8 = var8 + var18.c((byte) 66);
-                      ((sj) this).field_c[var11] = var8 + var18.c((byte) 66);
+                      int dupTemp$4 = var8 + var18.c((byte) 66);
+                      var8 = dupTemp$4;
+                      ((sj) this).field_c[var11] = dupTemp$4;
                       if (((sj) this).field_c[var11] > var9) {
                         var9 = ((sj) this).field_c[var11];
                         var11++;
@@ -130,8 +131,9 @@ final class sj {
                     if (var11 >= ((sj) this).field_b) {
                       break L5;
                     } else {
-                      var8 = var8 + var18.d(true);
-                      ((sj) this).field_c[var11] = var8 + var18.d(true);
+                      int dupTemp$5 = var8 + var18.d(true);
+                      var8 = dupTemp$5;
+                      ((sj) this).field_c[var11] = dupTemp$5;
                       if (((sj) this).field_c[var11] > var9) {
                         var9 = ((sj) this).field_c[var11];
                         var11++;
@@ -237,9 +239,10 @@ final class sj {
                                         continue L18;
                                       }
                                     } else {
-                                      var8 = var8 + var18.d(true);
-                                      ((sj) this).field_r[var12][var15] = var8 + var18.d(true);
-                                      var16 = var8 + var18.d(true);
+                                      int dupTemp$6 = var8 + var18.d(true);
+                                      var8 = dupTemp$6;
+                                      ((sj) this).field_r[var12][var15] = dupTemp$6;
+                                      var16 = dupTemp$6;
                                       if (var14 < var16) {
                                         var14 = var16;
                                         var15++;
@@ -285,9 +288,10 @@ final class sj {
                                         continue L21;
                                       }
                                     } else {
-                                      var8 = var8 + var18.c((byte) -84);
-                                      ((sj) this).field_r[var12][var15] = var8 + var18.c((byte) -84);
-                                      var16 = var8 + var18.c((byte) -84);
+                                      int dupTemp$7 = var8 + var18.c((byte) -84);
+                                      var8 = dupTemp$7;
+                                      ((sj) this).field_r[var12][var15] = dupTemp$7;
+                                      var16 = dupTemp$7;
                                       if (var16 > var14) {
                                         var14 = var16;
                                         var15++;

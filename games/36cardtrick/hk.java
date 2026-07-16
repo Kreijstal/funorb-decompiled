@@ -21,7 +21,7 @@ final class hk {
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
-        ha var7_ref = null;
+        ha var7_ref_ha = null;
         int var8 = 0;
         var8 = Main.field_T;
         var2 = param1.g(8, -1);
@@ -43,15 +43,15 @@ final class hk {
                 var5++;
                 continue L0;
               } else {
-                var7_ref = new ha();
+                var7_ref_ha = new ha();
                 int discarded$6 = param1.g(24, -1);
                 int discarded$7 = param1.g(24, -1);
-                var7_ref.field_b = param1.g(24, -1);
+                var7_ref_ha.field_b = param1.g(24, -1);
                 int discarded$8 = param1.g(9, -1);
                 int discarded$9 = param1.g(12, -1);
                 int discarded$10 = param1.g(12, -1);
                 int discarded$11 = param1.g(12, -1);
-                var4[var5] = var7_ref;
+                var4[var5] = var7_ref_ha;
                 var5++;
                 var5++;
                 continue L0;
@@ -64,7 +64,7 @@ final class hk {
     final static void a(byte param0, int param1, int param2) {
         gl.a(param2, jd.field_c[param1], ca.field_c[param1], 804);
         if (param0 <= 121) {
-            w var4 = (w) null;
+            Object var4 = null;
             ha[] discarded$0 = hk.a(-7, (w) null);
         }
     }

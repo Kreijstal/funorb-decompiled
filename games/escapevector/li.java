@@ -295,8 +295,9 @@ final class li {
         hg var6 = param0.a(false);
         while (var6 != null) {
             var7 = (tc) (Object) var6;
+            int incrementValue$0 = var5;
             var5++;
-            var4[var5] = var7;
+            var4[incrementValue$0] = var7;
             var6 = param0.b((byte) 70);
         }
         return var4;
@@ -713,12 +714,13 @@ final class li {
         hg var6 = param0.a(false);
         while (var6 != null) {
             var7 = (sj) (Object) var6;
+            int incrementValue$0 = var5;
             var5++;
-            var4[var5] = var7.field_g;
+            var4[incrementValue$0] = var7.field_g;
             var6 = param0.b((byte) 70);
         }
         if (param1 != 11125) {
-            int discarded$0 = this.a(54, -100, (byte) 126, 78, 66, 10, 81);
+            int discarded$1 = this.a(54, -100, (byte) 126, 78, 66, 10, 81);
         }
         return var4;
     }

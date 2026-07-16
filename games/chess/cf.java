@@ -49,7 +49,6 @@ final class cf extends ci {
         int var5 = 0;
         int var6 = 0;
         ci var7 = null;
-        ci var7_ref = null;
         int var7_int = 0;
         int var8 = 0;
         ci var8_ref_ci = null;
@@ -254,7 +253,7 @@ final class cf extends ci {
                   break L12;
                 } else {
                   var14 = hm.field_c[var6];
-                  var7_ref = var14;
+                  var7 = var14;
                   hm.field_c[var6].field_pb = 0;
                   var14.field_M = 0;
                   var8 = 0;

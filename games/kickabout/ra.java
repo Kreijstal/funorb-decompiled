@@ -293,25 +293,47 @@ final class ra extends dj {
     }
 
     final static int[] a(int param0, int param1, int param2, int param3, int param4) {
-        int var6 = Kickabout.field_G;
-        if (param3 != 0) {
+        int[] var5 = null;
+        int var6 = 0;
+        int[] var7 = null;
+        int[] var8 = null;
+        L0: {
+          var6 = Kickabout.field_G;
+          if (param3 == 0) {
+            break L0;
+          } else {
             field_L = null;
+            break L0;
+          }
         }
-        int[] var7 = new int[]{param0, param4};
-        int[] var8 = var7;
-        int[] var5 = var8;
-        if (-639 <= (param0 - -param2 ^ -1)) {
-            // if_icmple L82
-            var7[0] = 2;
-        } else {
+        L1: {
+          var7 = new int[]{param0, param4};
+          var8 = var7;
+          var5 = var8;
+          if (-639 > (param0 - -param2 ^ -1)) {
             var5[0] = -param2 + 638;
-        }
-        if (-479 > (param1 + param4 ^ -1)) {
-            var5[1] = 478 + -param1;
-        } else {
-            if (!(param4 >= 2)) {
-                var8[1] = 2;
+            break L1;
+          } else {
+            if ((param0 ^ -1) <= -3) {
+              break L1;
+            } else {
+              var7[0] = 2;
+              break L1;
             }
+          }
+        }
+        L2: {
+          if (-479 <= (param1 + param4 ^ -1)) {
+            if (param4 < 2) {
+              var8[1] = 2;
+              break L2;
+            } else {
+              break L2;
+            }
+          } else {
+            var5[1] = 478 + -param1;
+            break L2;
+          }
         }
         return var5;
     }
@@ -980,10 +1002,10 @@ final class ra extends dj {
         up var5 = null;
         int var6 = Kickabout.field_G;
         Random var8 = new Random();
-        for (var3 = 0; -10 < var3; var3++) {
+        for (var3 = 0; -10 < (var3 ^ -1); var3++) {
             ((ra) this).field_M[var3] = new up();
             var4 = 0;
-            if (!(-3 >= var3)) {
+            if (!(-3 <= (var3 ^ -1))) {
                 var4 = 3;
             }
             if (!(5 >= var3)) {

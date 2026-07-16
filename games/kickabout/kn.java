@@ -31,8 +31,9 @@ final class kn extends i {
             var3.field_J = var3.field_mb * (var1 / 5);
             var3.field_s = var1 % 5 * var3.field_q;
             ((kn) this).field_K.a((byte) -107, (hd) (Object) var3);
+            int incrementValue$0 = var1;
             var1++;
-            ((kn) this).field_I[var1] = var3;
+            ((kn) this).field_I[incrementValue$0] = var3;
             var2 = (oi) (Object) ok.field_a.c(33);
         }
         ((kn) this).field_K.a(true, 300, 100, 80, 200);
@@ -53,30 +54,53 @@ final class kn extends i {
     }
 
     final static int a(int param0, int param1, boolean param2, int param3) {
-        if (param1 <= 40) {
-            int discarded$0 = kn.a(-66, -60, false, 126);
+        L0: {
+          if (param1 > 40) {
+            break L0;
+          } else {
+            int discarded$2 = kn.a(-66, -60, false, 126);
+            break L0;
+          }
         }
-        if (param3 != 0) {
-            if ((param3 ^ -1) != -2) {
-                // ifne L66
+        L1: {
+          L2: {
+            if (param3 == 0) {
+              break L2;
+            } else {
+              if ((param3 ^ -1) == -2) {
+                break L2;
+              } else {
+                if (param2) {
+                  break L1;
+                } else {
+                  break L2;
+                }
+              }
             }
-        }
-        if (0 == param0) {
+          }
+          if (0 != param0) {
+            if ((param0 ^ -1) != -2) {
+              if (2 == param0) {
+                return 3;
+              } else {
+                break L1;
+              }
+            } else {
+              return 1;
+            }
+          } else {
             return 2;
+          }
         }
-        if ((param0 ^ -1) == -2) {
-            return 1;
-        }
-        if (!(2 != param0)) {
-            return 3;
-        }
-        if (!(param3 != 2)) {
-            return 4;
-        }
-        if (param3 != 3) {
+        if (param3 == 2) {
+          return 4;
+        } else {
+          if (param3 == 3) {
+            return 6;
+          } else {
             return 0;
+          }
         }
-        return 6;
     }
 
     final void a(byte param0, int param1, int param2) {

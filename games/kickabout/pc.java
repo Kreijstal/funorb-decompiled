@@ -12,13 +12,13 @@ final class pc {
         int var2 = 0;
         int var3 = 0;
         var3 = Kickabout.field_G;
-        if (param0 != 0) {
+        if ((param0 ^ -1) != -1) {
           if (param1 != -524289) {
             field_a = null;
             if (0 <= param0) {
-              if (param0 <= -32769) {
+              if ((param0 ^ -1) <= -32769) {
                 if (131072 <= param0) {
-                  if (param0 <= -33554433) {
+                  if ((param0 ^ -1) <= -33554433) {
                     if (param0 >= 536870912) {
                       var2 = 7;
                       param0 = param0 >> (var2 << 1755338273);
@@ -35,7 +35,7 @@ final class pc {
                       }
                     }
                   } else {
-                    if (-2097153 > param0) {
+                    if (-2097153 < (param0 ^ -1)) {
                       if ((param0 ^ -1) <= -524289) {
                         var2 = 2;
                         param0 = param0 >> (var2 << 1755338273);
@@ -61,7 +61,7 @@ final class pc {
                   return ko.field_f[-32768 + param0];
                 }
               } else {
-                if (-129 <= param0) {
+                if (-129 >= (param0 ^ -1)) {
                   if (param0 < 2048) {
                     if (-513 >= (param0 ^ -1)) {
                       var2 = 3;
@@ -85,20 +85,20 @@ final class pc {
                   }
                 } else {
                   if ((param0 ^ -1) > -9) {
-                    if (param0 < 2) {
-                      return 256;
-                    } else {
+                    if (param0 >= 2) {
                       var2 = 7;
                       param0 = param0 << (var2 << 182160129);
                       return ko.field_f[param0 - 32768] >> var2;
+                    } else {
+                      return 256;
                     }
                   } else {
-                    if (32 <= param0) {
-                      var2 = 5;
+                    if (32 > param0) {
+                      var2 = 6;
                       param0 = param0 << (var2 << 182160129);
                       return ko.field_f[param0 - 32768] >> var2;
                     } else {
-                      var2 = 6;
+                      var2 = 5;
                       param0 = param0 << (var2 << 182160129);
                       return ko.field_f[param0 - 32768] >> var2;
                     }
@@ -110,42 +110,42 @@ final class pc {
             }
           } else {
             if (0 <= param0) {
-              if (param0 <= -32769) {
+              if ((param0 ^ -1) <= -32769) {
                 if (131072 <= param0) {
-                  if (param0 <= -33554433) {
-                    if (param0 < 536870912) {
-                      if (134217728 <= param0) {
-                        var2 = 6;
-                        param0 = param0 >> (var2 << 1755338273);
-                        return ko.field_f[param0 + -32768] << var2;
-                      } else {
-                        var2 = 5;
-                        param0 = param0 >> (var2 << 1755338273);
-                        return ko.field_f[param0 + -32768] << var2;
-                      }
-                    } else {
+                  if ((param0 ^ -1) <= -33554433) {
+                    if (param0 >= 536870912) {
                       var2 = 7;
                       param0 = param0 >> (var2 << 1755338273);
                       return ko.field_f[param0 + -32768] << var2;
-                    }
-                  } else {
-                    if (-2097153 > param0) {
-                      if ((param0 ^ -1) > -524289) {
-                        var2 = 1;
+                    } else {
+                      if (134217728 > param0) {
+                        var2 = 5;
                         param0 = param0 >> (var2 << 1755338273);
                         return ko.field_f[param0 + -32768] << var2;
                       } else {
+                        var2 = 6;
+                        param0 = param0 >> (var2 << 1755338273);
+                        return ko.field_f[param0 + -32768] << var2;
+                      }
+                    }
+                  } else {
+                    if (-2097153 < (param0 ^ -1)) {
+                      if ((param0 ^ -1) <= -524289) {
                         var2 = 2;
+                        param0 = param0 >> (var2 << 1755338273);
+                        return ko.field_f[param0 + -32768] << var2;
+                      } else {
+                        var2 = 1;
                         param0 = param0 >> (var2 << 1755338273);
                         return ko.field_f[param0 + -32768] << var2;
                       }
                     } else {
-                      if (8388608 > param0) {
-                        var2 = 3;
+                      if (8388608 <= param0) {
+                        var2 = 4;
                         param0 = param0 >> (var2 << 1755338273);
                         return ko.field_f[param0 + -32768] << var2;
                       } else {
-                        var2 = 4;
+                        var2 = 3;
                         param0 = param0 >> (var2 << 1755338273);
                         return ko.field_f[param0 + -32768] << var2;
                       }
@@ -155,17 +155,34 @@ final class pc {
                   return ko.field_f[-32768 + param0];
                 }
               } else {
-                if (-129 > param0) {
-                  if ((param0 ^ -1) > -9) {
-                    if (param0 < 2) {
-                      return 256;
+                L0: {
+                  if (-129 >= (param0 ^ -1)) {
+                    if (param0 < 2048) {
+                      if (-513 >= (param0 ^ -1)) {
+                        var2 = 3;
+                        break L0;
+                      } else {
+                        var2 = 4;
+                        break L0;
+                      }
                     } else {
-                      var2 = 7;
-                      param0 = param0 << (var2 << 182160129);
-                      return ko.field_f[param0 - 32768] >> var2;
+                      if (param0 >= 8192) {
+                        var2 = 1;
+                        break L0;
+                      } else {
+                        var2 = 2;
+                        break L0;
+                      }
                     }
                   } else {
-                    L0: {
+                    if ((param0 ^ -1) > -9) {
+                      if (param0 >= 2) {
+                        var2 = 7;
+                        break L0;
+                      } else {
+                        return 256;
+                      }
+                    } else {
                       if (32 > param0) {
                         var2 = 6;
                         break L0;
@@ -174,32 +191,10 @@ final class pc {
                         break L0;
                       }
                     }
-                    param0 = param0 << (var2 << 182160129);
-                    return ko.field_f[param0 - 32768] >> var2;
                   }
-                } else {
-                  L1: {
-                    if (param0 < 2048) {
-                      if (-513 >= (param0 ^ -1)) {
-                        var2 = 3;
-                        break L1;
-                      } else {
-                        var2 = 4;
-                        break L1;
-                      }
-                    } else {
-                      if (param0 >= 8192) {
-                        var2 = 1;
-                        break L1;
-                      } else {
-                        var2 = 2;
-                        break L1;
-                      }
-                    }
-                  }
-                  param0 = param0 << (var2 << 182160129);
-                  return ko.field_f[param0 - 32768] >> var2;
                 }
+                param0 = param0 << (var2 << 182160129);
+                return ko.field_f[param0 - 32768] >> var2;
               }
             } else {
               throw new IllegalArgumentException("");

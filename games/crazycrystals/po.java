@@ -76,7 +76,7 @@ final class po extends tb {
               if (((po) this).field_m) {
                 break L1;
               } else {
-                if (param6 != ((po) this).field_k) {
+                if ((param6 ^ -1) != (((po) this).field_k ^ -1)) {
                   break L1;
                 } else {
                   if (((po) this).field_j != param3) {
@@ -85,10 +85,10 @@ final class po extends tb {
                     if (param7 != ((po) this).field_l) {
                       break L1;
                     } else {
-                      if (((po) this).field_i != param4) {
+                      if ((((po) this).field_i ^ -1) != (param4 ^ -1)) {
                         break L1;
                       } else {
-                        if (param5 != ((po) this).field_o) {
+                        if ((param5 ^ -1) != (((po) this).field_o ^ -1)) {
                           break L1;
                         } else {
                           if (((po) this).field_n == null) {
@@ -128,10 +128,10 @@ final class po extends tb {
             var16 = new String[param2.a(param1, param5) - -1];
             var17 = var16;
             var10 = Math.max(1, param2.a(param1, new int[1], var17));
-            if (-4 != ((po) this).field_j) {
+            if (-4 != (((po) this).field_j ^ -1)) {
               break L3;
             } else {
-              if (-2 != var10) {
+              if (-2 != (var10 ^ -1)) {
                 break L3;
               } else {
                 ((po) this).field_j = 1;
@@ -171,7 +171,7 @@ final class po extends tb {
           ((po) this).field_h = new bh[var10];
           var12 = 0;
           L6: while (true) {
-            if (var12 >= var10) {
+            if ((var12 ^ -1) <= (var10 ^ -1)) {
               return;
             } else {
               L7: {
@@ -215,8 +215,7 @@ final class po extends tb {
                 }
               }
               L8: {
-                new bh(stackIn_35_2, stackIn_35_3, stackIn_35_4);
-                var14 = stackIn_35_0;
+                var14 = new bh(stackIn_35_2, stackIn_35_3, stackIn_35_4);
                 var14.field_e[0] = 0;
                 if (var13 != null) {
                   L9: {

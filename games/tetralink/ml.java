@@ -68,8 +68,9 @@ abstract class ml extends nb {
           if (((ml) this).field_lb != null) {
             if (((ml) this).field_lb != i.field_a) {
               if (((ml) this).field_lb == ui.field_f) {
+                int fieldTemp$2 = ((ml) this).field_X + 1;
                 ((ml) this).field_X = ((ml) this).field_X + 1;
-                if (((ml) this).field_db == ((ml) this).field_X + 1) {
+                if (((ml) this).field_db == fieldTemp$2) {
                   ((ml) this).field_bb.field_N = 256;
                   ((ml) this).field_lb = null;
                   return super.l(-1);
@@ -81,8 +82,9 @@ abstract class ml extends nb {
                 return super.l(-1);
               }
             } else {
+              int fieldTemp$3 = ((ml) this).field_X + 1;
               ((ml) this).field_X = ((ml) this).field_X + 1;
-              if (((ml) this).field_Y == ((ml) this).field_X + 1) {
+              if (((ml) this).field_Y == fieldTemp$3) {
                 ((ml) this).field_lb = qk.field_d;
                 ((ml) this).a(true, ((ml) this).field_gb, 12 + ((ml) this).field_eb.field_F, ((ml) this).field_Z + (12 - -((ml) this).field_eb.field_u));
                 ((ml) this).field_X = 0;

@@ -23,10 +23,10 @@ final class pe extends hn implements wm, ng {
         if (super.a(param0, param1, param2, -117)) {
             return true;
         }
-        if (-99 == param0) {
+        if (-99 == (param0 ^ -1)) {
             return ((pe) this).a((byte) -94, param1);
         }
-        if (-100 != param0) {
+        if (-100 != (param0 ^ -1)) {
             return false;
         }
         return ((pe) this).b(param1, -9928);
@@ -209,8 +209,7 @@ final class pe extends hn implements wm, ng {
                 break L6;
               }
             }
-            new lg(stackIn_18_3, (ca) null);
-            ((pe) this).field_B = stackIn_18_1;
+            ((pe) this).field_B = new lg(stackIn_18_3, (ca) null);
             if (!((pe) this).field_I) {
               break L5;
             } else {
@@ -294,11 +293,13 @@ final class pe extends hn implements wm, ng {
           }
         }
         L13: {
-          var12 = new na(10, ((pe) this).field_k, ((pe) this).field_p + -20, 25, (gm) (Object) ((pe) this).field_C, false, 80, 3, var7, 16777215, var8);
-          ((pe) this).a((gm) (Object) new na(10, ((pe) this).field_k, ((pe) this).field_p + -20, 25, (gm) (Object) ((pe) this).field_C, false, 80, 3, var7, 16777215, var8), -6938);
+          na dupTemp$2 = new na(10, ((pe) this).field_k, ((pe) this).field_p + -20, 25, (gm) (Object) ((pe) this).field_C, false, 80, 3, var7, 16777215, var8);
+          var12 = dupTemp$2;
+          ((pe) this).a((gm) (Object) dupTemp$2, -6938);
           ((pe) this).field_k = ((pe) this).field_k + (((gm) (Object) var12).field_o + 5);
-          var13 = new na(10, ((pe) this).field_k, -20 + ((pe) this).field_p, 25, (gm) (Object) ((pe) this).field_L, false, 80, 3, var7, 16777215, hm.field_v);
-          ((pe) this).a((gm) (Object) new na(10, ((pe) this).field_k, -20 + ((pe) this).field_p, 25, (gm) (Object) ((pe) this).field_L, false, 80, 3, var7, 16777215, hm.field_v), -6938);
+          na dupTemp$3 = new na(10, ((pe) this).field_k, -20 + ((pe) this).field_p, 25, (gm) (Object) ((pe) this).field_L, false, 80, 3, var7, 16777215, hm.field_v);
+          var13 = dupTemp$3;
+          ((pe) this).a((gm) (Object) dupTemp$3, -6938);
           ((pe) this).field_K.field_t = (ca) this;
           ((pe) this).field_k = ((pe) this).field_k + (5 + ((gm) (Object) var13).field_o);
           if (((pe) this).field_D == null) {
@@ -496,13 +497,32 @@ final class pe extends hn implements wm, ng {
     }
 
     private final void a(byte param0) {
-        if (!vg.d(0)) {
-            // ifle L59
-            // if_icmpge L59
+        L0: {
+          L1: {
+            if (vg.d(0)) {
+              break L1;
+            } else {
+              if (((pe) this).field_C.field_m.length() <= 0) {
+                break L0;
+              } else {
+                if (0 >= ((pe) this).field_L.field_m.length()) {
+                  break L0;
+                } else {
+                  break L1;
+                }
+              }
+            }
+          }
+          sa.a(((pe) this).field_C.field_m, 122, ((pe) this).field_L.field_m);
+          break L0;
         }
-        sa.a(((pe) this).field_C.field_m, 122, ((pe) this).field_L.field_m);
-        if (param0 < 120) {
-            boolean discarded$0 = ((pe) this).a(99, (gm) null, 'ﾠ', 63);
+        L2: {
+          if (param0 >= 120) {
+            break L2;
+          } else {
+            boolean discarded$2 = ((pe) this).a(99, (gm) null, 'ﾠ', 63);
+            break L2;
+          }
         }
     }
 

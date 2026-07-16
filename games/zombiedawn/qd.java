@@ -134,6 +134,7 @@ final class qd {
             field_f[60] = 0;
             field_d = "Quit to website";
             field_b = new vk();
+            return;
           } else {
             L1: {
               stackOut_2_0 = (int[]) field_a;

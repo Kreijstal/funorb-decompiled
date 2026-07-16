@@ -134,8 +134,9 @@ final class dh extends ma {
                                       var12++;
                                       continue L8;
                                     } else {
+                                      int incrementValue$2 = var11;
                                       var11++;
-                                      ((dh) this).field_r[var11] = var8[var7[(var13 >> 1) + (var12 >> 1 << 6)] & 255];
+                                      ((dh) this).field_r[incrementValue$2] = var8[var7[(var13 >> 1) + (var12 >> 1 << 6)] & 255];
                                       var13++;
                                       continue L9;
                                     }
@@ -165,8 +166,9 @@ final class dh extends ma {
                                       var12++;
                                       continue L11;
                                     } else {
+                                      int incrementValue$3 = var11;
                                       var11++;
-                                      ((dh) this).field_r[var11] = var8[var7[(var13 << 1) + (var12 << 1 << 7)] & 255];
+                                      ((dh) this).field_r[incrementValue$3] = var8[var7[(var13 << 1) + (var12 << 1 << 7)] & 255];
                                       var13++;
                                       continue L12;
                                     }
@@ -299,6 +301,7 @@ final class dh extends ma {
                       int discarded$2 = param0.g(-62);
                       int discarded$3 = param0.g(-102);
                       ((dh) this).field_r = null;
+                      return;
                     } else {
                       ((dh) this).field_l[var3] = param0.b(true);
                       var3++;

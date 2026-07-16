@@ -89,71 +89,77 @@ final class vb extends fb {
     }
 
     final void g(int param0) {
-        if (param0 < 95) {
-            Object var3 = null;
+        Object var3 = null;
+        L0: {
+          if (param0 >= 95) {
+            break L0;
+          } else {
+            var3 = null;
             vb.a((byte) 55, (java.applet.Applet) null);
+            break L0;
+          }
         }
-        ((vb) this).field_F = ((vb) this).field_F + 1;
-        if (((vb) this).field_F > 17) {
+        L1: {
+          int fieldTemp$4 = ((vb) this).field_F;
+          ((vb) this).field_F = ((vb) this).field_F + 1;
+          if (fieldTemp$4 <= 17) {
+            break L1;
+          } else {
             ((vb) this).field_F = 0;
+            int fieldTemp$5 = ((vb) this).field_G + 1;
             ((vb) this).field_G = ((vb) this).field_G + 1;
-            if (2 <= ((vb) this).field_G + 1) {
-                ((vb) this).field_G = 0;
+            if (2 > fieldTemp$5) {
+              break L1;
+            } else {
+              ((vb) this).field_G = 0;
+              break L1;
             }
+          }
         }
-        ((vb) this).field_E = ((vb) this).field_E + ((vb) this).field_H;
-        if (-161 <= (((vb) this).field_E ^ -1)) {
-            // if_icmple L115
+        L2: {
+          L3: {
+            ((vb) this).field_E = ((vb) this).field_E + ((vb) this).field_H;
+            if (-161 > (((vb) this).field_E ^ -1)) {
+              break L3;
+            } else {
+              if ((((vb) this).field_E ^ -1) <= -81) {
+                break L2;
+              } else {
+                break L3;
+              }
+            }
+          }
+          ((vb) this).field_H = -((vb) this).field_H;
+          break L2;
         }
-        ((vb) this).field_H = -((vb) this).field_H;
     }
 
     final static void a(byte param0, java.applet.Applet param1) {
         try {
             java.net.URL var2 = null;
             Exception var2_ref = null;
-            int statePc = 0;
-            Throwable caughtException = null;
-            stateLoop: while (true) {
-                switch (statePc) {
-                    case 0: {
-                        try {
-                            var2 = new java.net.URL(param1.getCodeBase(), "tosupport.ws");
-                            param1.getAppletContext().showDocument(rc.a(-1, param1, var2), "_top");
-                            if (param0 == 50) {
-                                statePc = 4;
-                            } else {
-                                statePc = 1;
-                            }
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_0) {
-                            caughtException = stateCaught_0;
-                            statePc = 3;
-                            continue stateLoop;
-                        }
-                    }
-                    case 1: {
-                        try {
-                            field_I = 97;
-                            statePc = 4;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_1) {
-                            caughtException = stateCaught_1;
-                            statePc = 3;
-                            continue stateLoop;
-                        }
-                    }
-                    case 3: {
-                        var2_ref = (Exception) (Object) caughtException;
-                        var2_ref.printStackTrace();
-                        statePc = 4;
-                        continue stateLoop;
-                    }
-                    case 4: {
-                        return;
-                    }
-                    default: throw new IllegalStateException("invalid CFG state " + statePc);
+            Throwable decompiledCaughtException = null;
+            try {
+              L0: {
+                L1: {
+                  var2 = new java.net.URL(param1.getCodeBase(), "tosupport.ws");
+                  param1.getAppletContext().showDocument(rc.a(-1, param1, var2), "_top");
+                  if (param0 == 50) {
+                    break L1;
+                  } else {
+                    field_I = 97;
+                    break L1;
+                  }
                 }
+                break L0;
+              }
+            } catch (java.lang.Exception decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              L2: {
+                var2_ref = (Exception) (Object) decompiledCaughtException;
+                var2_ref.printStackTrace();
+                break L2;
+              }
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;

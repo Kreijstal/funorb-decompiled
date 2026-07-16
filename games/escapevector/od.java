@@ -122,9 +122,9 @@ final class od {
     final static int a(byte param0, boolean param1, String param2, sn param3, sn param4, int param5, int param6) {
         String var8 = null;
         int var9 = 0;
-        String var9_ref = null;
+        String var9_ref_String = null;
         int var10 = 0;
-        String var11_ref = null;
+        String var11_ref_String = null;
         int var11 = 0;
         int var12 = 0;
         int var13 = 0;
@@ -211,15 +211,15 @@ final class od {
                   om.field_c.f(18, param0 ^ 101);
                   om.field_c.field_m = om.field_c.field_m + 2;
                   var10 = om.field_c.field_m;
-                  var11_ref = tf.a(-1, oc.d((byte) -110));
-                  if (var11_ref == null) {
-                    var11_ref = "";
+                  var11_ref_String = tf.a(-1, oc.d((byte) -110));
+                  if (var11_ref_String == null) {
+                    var11_ref_String = "";
                     break L5;
                   } else {
                     break L5;
                   }
                 }
-                om.field_c.a(var11_ref, 105);
+                om.field_c.a(var11_ref_String, 105);
                 bn.a(param0 ^ -32, (n) (Object) om.field_c, qj.field_a, q.field_O, cf.field_c);
                 om.field_c.i(om.field_c.field_m + -var10, 32614);
                 break L3;
@@ -380,9 +380,9 @@ final class od {
                   ca.field_a = om.field_g.c(false);
                   break L13;
                 } else {
-                  var9_ref = om.field_g.d(param0 + -15176);
-                  if (var9_ref != null) {
-                    ag.a(var9_ref, (byte) 30, oc.d((byte) -83));
+                  var9_ref_String = om.field_g.d(param0 + -15176);
+                  if (var9_ref_String != null) {
+                    ag.a(var9_ref_String, (byte) 30, oc.d((byte) -83));
                     break L13;
                   } else {
                     break L13;

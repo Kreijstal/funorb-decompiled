@@ -22,8 +22,10 @@ final class vm extends ta {
         int discarded$61 = param0.i((byte) -101);
         int discarded$66 = param0.i((byte) -101);
         if (var2 == 1) {
+            return;
         }
         if (var2 == 2) {
+            return;
         }
         if (var2 == 3) {
         }

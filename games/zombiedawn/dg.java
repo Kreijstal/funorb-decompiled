@@ -13,76 +13,52 @@ final class dg extends IOException {
 
     final static boolean a(byte param0, int param1) {
         int var2 = 0;
-        int stackIn_25_0 = 0;
+        int stackIn_24_0 = 0;
         int stackIn_42_0 = 0;
         int stackIn_62_0 = 0;
-        int stackIn_69_0 = 0;
-        int stackIn_73_0 = 0;
-        int stackIn_77_0 = 0;
-        int stackIn_81_0 = 0;
-        int stackIn_85_0 = 0;
-        int stackIn_89_0 = 0;
-        int stackIn_93_0 = 0;
+        int stackIn_75_0 = 0;
+        int stackIn_86_0 = 0;
         int stackIn_101_0 = 0;
-        int stackIn_105_0 = 0;
-        int stackIn_109_0 = 0;
-        int stackIn_113_0 = 0;
-        int stackIn_117_0 = 0;
-        int stackIn_121_0 = 0;
-        int stackIn_130_0 = 0;
-        int stackIn_135_0 = 0;
-        int stackIn_146_0 = 0;
-        int stackIn_157_0 = 0;
-        int stackIn_170_0 = 0;
-        int stackIn_181_0 = 0;
-        int stackOut_180_0 = 0;
-        int stackOut_169_0 = 0;
-        int stackOut_168_0 = 0;
-        int stackOut_179_0 = 0;
-        int stackOut_156_0 = 0;
-        int stackOut_155_0 = 0;
-        int stackOut_145_0 = 0;
-        int stackOut_144_0 = 0;
-        int stackOut_133_0 = 0;
-        int stackOut_128_0 = 0;
-        int stackOut_119_0 = 0;
-        int stackOut_115_0 = 0;
+        int stackIn_112_0 = 0;
+        int stackIn_125_0 = 0;
+        int stackIn_136_0 = 0;
+        int stackOut_135_0 = 0;
+        int stackOut_124_0 = 0;
+        int stackOut_123_0 = 0;
         int stackOut_111_0 = 0;
-        int stackOut_107_0 = 0;
-        int stackOut_103_0 = 0;
+        int stackOut_100_0 = 0;
         int stackOut_99_0 = 0;
-        int stackOut_91_0 = 0;
-        int stackOut_87_0 = 0;
-        int stackOut_83_0 = 0;
-        int stackOut_79_0 = 0;
-        int stackOut_75_0 = 0;
-        int stackOut_71_0 = 0;
-        int stackOut_67_0 = 0;
+        int stackOut_110_0 = 0;
+        int stackOut_134_0 = 0;
+        int stackOut_85_0 = 0;
+        int stackOut_74_0 = 0;
+        int stackOut_73_0 = 0;
+        int stackOut_84_0 = 0;
         int stackOut_61_0 = 0;
         int stackOut_60_0 = 0;
         int stackOut_41_0 = 0;
         int stackOut_40_0 = 0;
-        int stackOut_24_0 = 0;
         int stackOut_23_0 = 0;
+        int stackOut_22_0 = 0;
         var2 = -126 % ((param0 - -41) / 46);
         if (!bo.field_p[82]) {
           if (!bo.field_p[86]) {
             if (16 > param1) {
               if (32 > param1) {
-                if (-49 < param1) {
-                  L0: {
-                    L1: {
-                      if (-65 < param1) {
+                L0: {
+                  L1: {
+                    if (-49 < (param1 ^ -1)) {
+                      if (-65 < (param1 ^ -1)) {
                         if (param1 == 80) {
                           break L1;
                         } else {
                           if (83 == param1) {
                             break L1;
                           } else {
-                            if (param1 == -85) {
+                            if ((param1 ^ -1) == -85) {
                               break L1;
                             } else {
-                              if (-86 == param1) {
+                              if (-86 == (param1 ^ -1)) {
                                 break L1;
                               } else {
                                 if (59 == param1) {
@@ -92,8 +68,8 @@ final class dg extends IOException {
                                     break L1;
                                   } else {
                                     if (28 != param1) {
-                                      stackOut_180_0 = 0;
-                                      stackIn_181_0 = stackOut_180_0;
+                                      stackOut_135_0 = 0;
+                                      stackIn_136_0 = stackOut_135_0;
                                       break L0;
                                     } else {
                                       return true;
@@ -105,7 +81,7 @@ final class dg extends IOException {
                           }
                         }
                       } else {
-                        if (-74 >= param1) {
+                        if (-74 <= (param1 ^ -1)) {
                           break L1;
                         } else {
                           L2: {
@@ -116,10 +92,10 @@ final class dg extends IOException {
                                 if (83 == param1) {
                                   break L3;
                                 } else {
-                                  if (param1 == -85) {
+                                  if ((param1 ^ -1) == -85) {
                                     break L3;
                                   } else {
-                                    if (-86 == param1) {
+                                    if (-86 == (param1 ^ -1)) {
                                       break L3;
                                     } else {
                                       if (59 == param1) {
@@ -129,8 +105,8 @@ final class dg extends IOException {
                                           break L3;
                                         } else {
                                           if (28 != param1) {
-                                            stackOut_169_0 = 0;
-                                            stackIn_170_0 = stackOut_169_0;
+                                            stackOut_124_0 = 0;
+                                            stackIn_125_0 = stackOut_124_0;
                                             break L2;
                                           } else {
                                             return true;
@@ -142,235 +118,126 @@ final class dg extends IOException {
                                 }
                               }
                             }
-                            stackOut_168_0 = 1;
-                            stackIn_170_0 = stackOut_168_0;
+                            stackOut_123_0 = 1;
+                            stackIn_125_0 = stackOut_123_0;
                             break L2;
                           }
-                          return stackIn_170_0 != 0;
+                          return stackIn_125_0 != 0;
                         }
                       }
-                    }
-                    stackOut_179_0 = 1;
-                    stackIn_181_0 = stackOut_179_0;
-                    break L0;
-                  }
-                  return stackIn_181_0 != 0;
-                } else {
-                  if (param1 < -59) {
-                    if (-65 > param1) {
-                      L4: {
-                        L5: {
-                          if (param1 == 80) {
-                            break L5;
-                          } else {
-                            if (83 == param1) {
-                              break L5;
-                            } else {
-                              if (param1 == -85) {
+                    } else {
+                      if ((param1 ^ -1) >= -59) {
+                        break L1;
+                      } else {
+                        L4: {
+                          L5: {
+                            if (-65 < (param1 ^ -1)) {
+                              if (param1 == 80) {
                                 break L5;
                               } else {
-                                if (-86 == param1) {
+                                if (83 == param1) {
                                   break L5;
                                 } else {
-                                  if (59 == param1) {
+                                  if ((param1 ^ -1) == -85) {
                                     break L5;
                                   } else {
-                                    if (74 == param1) {
+                                    if (-86 == (param1 ^ -1)) {
                                       break L5;
                                     } else {
-                                      if (28 != param1) {
-                                        stackOut_156_0 = 0;
-                                        stackIn_157_0 = stackOut_156_0;
-                                        break L4;
+                                      if (59 == param1) {
+                                        break L5;
                                       } else {
-                                        return true;
-                                      }
-                                    }
-                                  }
-                                }
-                              }
-                            }
-                          }
-                        }
-                        stackOut_155_0 = 1;
-                        stackIn_157_0 = stackOut_155_0;
-                        break L4;
-                      }
-                      return stackIn_157_0 != 0;
-                    } else {
-                      if (-74 < param1) {
-                        L6: {
-                          L7: {
-                            if (param1 == 80) {
-                              break L7;
-                            } else {
-                              if (83 == param1) {
-                                break L7;
-                              } else {
-                                if (param1 == -85) {
-                                  break L7;
-                                } else {
-                                  if (-86 == param1) {
-                                    break L7;
-                                  } else {
-                                    if (59 == param1) {
-                                      break L7;
-                                    } else {
-                                      if (74 == param1) {
-                                        break L7;
-                                      } else {
-                                        if (28 != param1) {
-                                          stackOut_145_0 = 0;
-                                          stackIn_146_0 = stackOut_145_0;
-                                          break L6;
+                                        if (74 == param1) {
+                                          break L5;
                                         } else {
-                                          return true;
+                                          if (28 != param1) {
+                                            stackOut_111_0 = 0;
+                                            stackIn_112_0 = stackOut_111_0;
+                                            break L4;
+                                          } else {
+                                            return true;
+                                          }
                                         }
                                       }
                                     }
                                   }
                                 }
                               }
+                            } else {
+                              if (-74 <= (param1 ^ -1)) {
+                                break L5;
+                              } else {
+                                L6: {
+                                  L7: {
+                                    if (param1 == 80) {
+                                      break L7;
+                                    } else {
+                                      if (83 == param1) {
+                                        break L7;
+                                      } else {
+                                        if ((param1 ^ -1) == -85) {
+                                          break L7;
+                                        } else {
+                                          if (-86 == (param1 ^ -1)) {
+                                            break L7;
+                                          } else {
+                                            if (59 == param1) {
+                                              break L7;
+                                            } else {
+                                              if (74 == param1) {
+                                                break L7;
+                                              } else {
+                                                if (28 != param1) {
+                                                  stackOut_100_0 = 0;
+                                                  stackIn_101_0 = stackOut_100_0;
+                                                  break L6;
+                                                } else {
+                                                  return true;
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                  stackOut_99_0 = 1;
+                                  stackIn_101_0 = stackOut_99_0;
+                                  break L6;
+                                }
+                                return stackIn_101_0 != 0;
+                              }
                             }
                           }
-                          stackOut_144_0 = 1;
-                          stackIn_146_0 = stackOut_144_0;
-                          break L6;
+                          stackOut_110_0 = 1;
+                          stackIn_112_0 = stackOut_110_0;
+                          break L4;
                         }
-                        return stackIn_146_0 != 0;
-                      } else {
-                        stackOut_133_0 = 1;
-                        stackIn_135_0 = stackOut_133_0;
-                        return stackIn_135_0 != 0;
+                        return stackIn_112_0 != 0;
                       }
                     }
-                  } else {
-                    stackOut_128_0 = 1;
-                    stackIn_130_0 = stackOut_128_0;
-                    return stackIn_130_0 != 0;
                   }
+                  stackOut_134_0 = 1;
+                  stackIn_136_0 = stackOut_134_0;
+                  break L0;
                 }
+                return stackIn_136_0 != 0;
               } else {
                 if (param1 > 43) {
-                  if (-49 < param1) {
-                    if (-65 < param1) {
-                      if (param1 != 80) {
-                        if (83 != param1) {
-                          if (param1 != -85) {
-                            if (-86 != param1) {
-                              if (59 != param1) {
-                                if (74 != param1) {
-                                  if (28 == param1) {
-                                    return true;
-                                  } else {
-                                    return false;
-                                  }
-                                } else {
-                                  stackOut_119_0 = 1;
-                                  stackIn_121_0 = stackOut_119_0;
-                                  return stackIn_121_0 != 0;
-                                }
-                              } else {
-                                stackOut_115_0 = 1;
-                                stackIn_117_0 = stackOut_115_0;
-                                return stackIn_117_0 != 0;
-                              }
-                            } else {
-                              stackOut_111_0 = 1;
-                              stackIn_113_0 = stackOut_111_0;
-                              return stackIn_113_0 != 0;
-                            }
-                          } else {
-                            stackOut_107_0 = 1;
-                            stackIn_109_0 = stackOut_107_0;
-                            return stackIn_109_0 != 0;
-                          }
-                        } else {
-                          stackOut_103_0 = 1;
-                          stackIn_105_0 = stackOut_103_0;
-                          return stackIn_105_0 != 0;
-                        }
-                      } else {
-                        stackOut_99_0 = 1;
-                        stackIn_101_0 = stackOut_99_0;
-                        return stackIn_101_0 != 0;
-                      }
-                    } else {
-                      if (-74 < param1) {
-                        if (param1 != 80) {
-                          if (83 != param1) {
-                            if (param1 != -85) {
-                              if (-86 != param1) {
-                                if (59 != param1) {
-                                  if (74 != param1) {
-                                    if (28 != param1) {
-                                      return false;
-                                    } else {
-                                      return true;
-                                    }
-                                  } else {
-                                    stackOut_91_0 = 1;
-                                    stackIn_93_0 = stackOut_91_0;
-                                    return stackIn_93_0 != 0;
-                                  }
-                                } else {
-                                  stackOut_87_0 = 1;
-                                  stackIn_89_0 = stackOut_87_0;
-                                  return stackIn_89_0 != 0;
-                                }
-                              } else {
-                                stackOut_83_0 = 1;
-                                stackIn_85_0 = stackOut_83_0;
-                                return stackIn_85_0 != 0;
-                              }
-                            } else {
-                              stackOut_79_0 = 1;
-                              stackIn_81_0 = stackOut_79_0;
-                              return stackIn_81_0 != 0;
-                            }
-                          } else {
-                            stackOut_75_0 = 1;
-                            stackIn_77_0 = stackOut_75_0;
-                            return stackIn_77_0 != 0;
-                          }
-                        } else {
-                          stackOut_71_0 = 1;
-                          stackIn_73_0 = stackOut_71_0;
-                          return stackIn_73_0 != 0;
-                        }
-                      } else {
-                        stackOut_67_0 = 1;
-                        stackIn_69_0 = stackOut_67_0;
-                        return stackIn_69_0 != 0;
-                      }
-                    }
-                  } else {
-                    if (param1 >= -59) {
-                      return true;
-                    } else {
-                      L8: {
-                        L9: {
-                          L10: {
-                            if (-65 > param1) {
-                              break L10;
-                            } else {
-                              if (-74 >= param1) {
-                                break L9;
-                              } else {
-                                break L10;
-                              }
-                            }
-                          }
+                  if (-49 < (param1 ^ -1)) {
+                    L8: {
+                      L9: {
+                        if (-65 < (param1 ^ -1)) {
                           if (param1 == 80) {
                             break L9;
                           } else {
                             if (83 == param1) {
                               break L9;
                             } else {
-                              if (param1 == -85) {
+                              if ((param1 ^ -1) == -85) {
                                 break L9;
                               } else {
-                                if (-86 == param1) {
+                                if (-86 == (param1 ^ -1)) {
                                   break L9;
                                 } else {
                                   if (59 == param1) {
@@ -380,11 +247,108 @@ final class dg extends IOException {
                                       break L9;
                                     } else {
                                       if (28 != param1) {
-                                        stackOut_61_0 = 0;
-                                        stackIn_62_0 = stackOut_61_0;
+                                        stackOut_85_0 = 0;
+                                        stackIn_86_0 = stackOut_85_0;
                                         break L8;
                                       } else {
-                                        break L9;
+                                        return true;
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        } else {
+                          if (-74 <= (param1 ^ -1)) {
+                            break L9;
+                          } else {
+                            L10: {
+                              L11: {
+                                if (param1 == 80) {
+                                  break L11;
+                                } else {
+                                  if (83 == param1) {
+                                    break L11;
+                                  } else {
+                                    if ((param1 ^ -1) == -85) {
+                                      break L11;
+                                    } else {
+                                      if (-86 == (param1 ^ -1)) {
+                                        break L11;
+                                      } else {
+                                        if (59 == param1) {
+                                          break L11;
+                                        } else {
+                                          if (74 == param1) {
+                                            break L11;
+                                          } else {
+                                            if (28 != param1) {
+                                              stackOut_74_0 = 0;
+                                              stackIn_75_0 = stackOut_74_0;
+                                              break L10;
+                                            } else {
+                                              return true;
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                              stackOut_73_0 = 1;
+                              stackIn_75_0 = stackOut_73_0;
+                              break L10;
+                            }
+                            return stackIn_75_0 != 0;
+                          }
+                        }
+                      }
+                      stackOut_84_0 = 1;
+                      stackIn_86_0 = stackOut_84_0;
+                      break L8;
+                    }
+                    return stackIn_86_0 != 0;
+                  } else {
+                    if ((param1 ^ -1) < -59) {
+                      L12: {
+                        L13: {
+                          L14: {
+                            if (-65 < (param1 ^ -1)) {
+                              break L14;
+                            } else {
+                              if (-74 <= (param1 ^ -1)) {
+                                break L13;
+                              } else {
+                                break L14;
+                              }
+                            }
+                          }
+                          if (param1 == 80) {
+                            break L13;
+                          } else {
+                            if (83 == param1) {
+                              break L13;
+                            } else {
+                              if ((param1 ^ -1) == -85) {
+                                break L13;
+                              } else {
+                                if (-86 == (param1 ^ -1)) {
+                                  break L13;
+                                } else {
+                                  if (59 == param1) {
+                                    break L13;
+                                  } else {
+                                    if (74 == param1) {
+                                      break L13;
+                                    } else {
+                                      if (28 != param1) {
+                                        stackOut_61_0 = 0;
+                                        stackIn_62_0 = stackOut_61_0;
+                                        break L12;
+                                      } else {
+                                        break L13;
                                       }
                                     }
                                   }
@@ -395,9 +359,11 @@ final class dg extends IOException {
                         }
                         stackOut_60_0 = 1;
                         stackIn_62_0 = stackOut_60_0;
-                        break L8;
+                        break L12;
                       }
                       return stackIn_62_0 != 0;
+                    } else {
+                      return true;
                     }
                   }
                 } else {
@@ -406,79 +372,17 @@ final class dg extends IOException {
               }
             } else {
               if (27 < param1) {
-                if (32 > param1) {
-                  L11: {
-                    L12: {
-                      L13: {
-                        if (-49 < param1) {
-                          break L13;
-                        } else {
-                          if (param1 >= -59) {
-                            break L12;
-                          } else {
-                            break L13;
-                          }
-                        }
-                      }
-                      L14: {
-                        if (-65 > param1) {
-                          break L14;
-                        } else {
-                          if (-74 >= param1) {
-                            break L12;
-                          } else {
-                            break L14;
-                          }
-                        }
-                      }
-                      if (param1 == 80) {
-                        break L12;
-                      } else {
-                        if (83 == param1) {
-                          break L12;
-                        } else {
-                          if (param1 == -85) {
-                            break L12;
-                          } else {
-                            if (-86 == param1) {
-                              break L12;
-                            } else {
-                              if (59 == param1) {
-                                break L12;
-                              } else {
-                                if (74 == param1) {
-                                  break L12;
-                                } else {
-                                  if (28 != param1) {
-                                    stackOut_41_0 = 0;
-                                    stackIn_42_0 = stackOut_41_0;
-                                    break L11;
-                                  } else {
-                                    break L12;
-                                  }
-                                }
-                              }
-                            }
-                          }
-                        }
-                      }
-                    }
-                    stackOut_40_0 = 1;
-                    stackIn_42_0 = stackOut_40_0;
-                    break L11;
-                  }
-                  return stackIn_42_0 != 0;
-                } else {
+                if (32 <= param1) {
                   L15: {
                     L16: {
                       if (param1 <= 43) {
                         break L16;
                       } else {
                         L17: {
-                          if (-49 < param1) {
+                          if (-49 < (param1 ^ -1)) {
                             break L17;
                           } else {
-                            if (param1 >= -59) {
+                            if ((param1 ^ -1) >= -59) {
                               break L16;
                             } else {
                               break L17;
@@ -486,10 +390,10 @@ final class dg extends IOException {
                           }
                         }
                         L18: {
-                          if (-65 > param1) {
+                          if (-65 < (param1 ^ -1)) {
                             break L18;
                           } else {
-                            if (-74 >= param1) {
+                            if (-74 <= (param1 ^ -1)) {
                               break L16;
                             } else {
                               break L18;
@@ -502,10 +406,10 @@ final class dg extends IOException {
                           if (83 == param1) {
                             break L16;
                           } else {
-                            if (param1 == -85) {
+                            if ((param1 ^ -1) == -85) {
                               break L16;
                             } else {
-                              if (-86 == param1) {
+                              if (-86 == (param1 ^ -1)) {
                                 break L16;
                               } else {
                                 if (59 == param1) {
@@ -515,8 +419,8 @@ final class dg extends IOException {
                                     break L16;
                                   } else {
                                     if (28 != param1) {
-                                      stackOut_24_0 = 0;
-                                      stackIn_25_0 = stackOut_24_0;
+                                      stackOut_41_0 = 0;
+                                      stackIn_42_0 = stackOut_41_0;
                                       break L15;
                                     } else {
                                       break L16;
@@ -529,11 +433,73 @@ final class dg extends IOException {
                         }
                       }
                     }
-                    stackOut_23_0 = 1;
-                    stackIn_25_0 = stackOut_23_0;
+                    stackOut_40_0 = 1;
+                    stackIn_42_0 = stackOut_40_0;
                     break L15;
                   }
-                  return stackIn_25_0 != 0;
+                  return stackIn_42_0 != 0;
+                } else {
+                  L19: {
+                    L20: {
+                      L21: {
+                        if (-49 < (param1 ^ -1)) {
+                          break L21;
+                        } else {
+                          if ((param1 ^ -1) >= -59) {
+                            break L20;
+                          } else {
+                            break L21;
+                          }
+                        }
+                      }
+                      L22: {
+                        if (-65 < (param1 ^ -1)) {
+                          break L22;
+                        } else {
+                          if (-74 <= (param1 ^ -1)) {
+                            break L20;
+                          } else {
+                            break L22;
+                          }
+                        }
+                      }
+                      if (param1 == 80) {
+                        break L20;
+                      } else {
+                        if (83 == param1) {
+                          break L20;
+                        } else {
+                          if ((param1 ^ -1) == -85) {
+                            break L20;
+                          } else {
+                            if (-86 == (param1 ^ -1)) {
+                              break L20;
+                            } else {
+                              if (59 == param1) {
+                                break L20;
+                              } else {
+                                if (74 == param1) {
+                                  break L20;
+                                } else {
+                                  if (28 != param1) {
+                                    stackOut_23_0 = 0;
+                                    stackIn_24_0 = stackOut_23_0;
+                                    break L19;
+                                  } else {
+                                    break L20;
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                    stackOut_22_0 = 1;
+                    stackIn_24_0 = stackOut_22_0;
+                    break L19;
+                  }
+                  return stackIn_24_0 != 0;
                 }
               } else {
                 return true;

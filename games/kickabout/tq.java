@@ -26,8 +26,8 @@ final class tq extends tm {
         int var7 = 0;
         int var8 = 0;
         ut var9 = null;
-        ut var10 = null;
-        ut var11 = null;
+        Object var10 = null;
+        Object var11 = null;
         int[] var12 = null;
         int[] var15 = null;
         int[] var16 = null;
@@ -55,7 +55,7 @@ final class tq extends tm {
             var11 = null;
             if (param4) {
               var17 = var9.b();
-              var10 = var17;
+              var10 = (Object) (Object) var17;
               var17.e();
               on.f(0, 0, 5, 0);
               on.f(0, 1, 3, 0);
@@ -70,7 +70,7 @@ final class tq extends tm {
           L1: {
             if (param1) {
               var18 = var9.b();
-              var11 = var18;
+              var11 = (Object) (Object) var18;
               var18.e();
               on.f(11, 0, 5, 0);
               on.f(13, 1, 3, 0);
@@ -83,7 +83,7 @@ final class tq extends tm {
             }
           }
           on.a(var22, var7, var8);
-          return new ut[]{null, null, null, var10, var9, var11, null, null, null};
+          return new ut[]{null, null, null, (ut) var10, var9, (ut) var11, null, null, null};
         } else {
           L2: {
             on.g(0, 0, 16, param0, param2, param3);
@@ -91,7 +91,7 @@ final class tq extends tm {
             var11 = null;
             if (param4) {
               var20 = var9.b();
-              var10 = var20;
+              var10 = (Object) (Object) var20;
               var20.e();
               on.f(0, 0, 5, 0);
               on.f(0, 1, 3, 0);
@@ -106,7 +106,7 @@ final class tq extends tm {
           L3: {
             if (param1) {
               var21 = var9.b();
-              var11 = var21;
+              var11 = (Object) (Object) var21;
               var21.e();
               on.f(11, 0, 5, 0);
               on.f(13, 1, 3, 0);
@@ -119,7 +119,7 @@ final class tq extends tm {
             }
           }
           on.a(var22, var7, var8);
-          return new ut[]{null, null, null, var10, var9, var11, null, null, null};
+          return new ut[]{null, null, null, (ut) var10, var9, (ut) var11, null, null, null};
         }
     }
 

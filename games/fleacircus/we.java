@@ -65,18 +65,17 @@ final class we {
 
     final static void a(int param0) {
         uh var1 = null;
-        uh var1_ref = null;
         L0: {
           var1 = (uh) (Object) fk.field_z.a((byte) -60);
           if (var1 == null) {
-            var1_ref = new uh();
+            var1 = new uh();
             break L0;
           } else {
             break L0;
           }
         }
-        var1_ref.a(3, gb.field_a, gb.field_l, gb.field_k, gb.field_h, gb.field_i, gb.field_b, gb.field_d);
-        fg.field_t.a(false, (lh) (Object) var1_ref);
+        var1.a(3, gb.field_a, gb.field_l, gb.field_k, gb.field_h, gb.field_i, gb.field_b, gb.field_d);
+        fg.field_t.a(false, (lh) (Object) var1);
         if (param0 >= -56) {
           field_c = 106;
           return;

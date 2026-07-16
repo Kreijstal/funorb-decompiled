@@ -17,8 +17,9 @@ abstract class wd {
           L0: while (true) {
             if (ec.e(param0 ^ 7697789)) {
               var1.e(8, -2147483648);
+              int fieldTemp$2 = var1.field_m + 1;
               var1.field_m = var1.field_m + 1;
-              var2 = var1.field_m + 1;
+              var2 = fieldTemp$2;
               db.a(var1, (byte) -115);
               id.field_c.b(1, -var2 + var1.field_m);
               continue L0;

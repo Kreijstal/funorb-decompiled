@@ -6,7 +6,7 @@ abstract class ah extends lm {
     static String field_u;
 
     final static aa a(byte param0, int param1, int param2, int param3) {
-        aa var4 = null;
+        Object var4 = null;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
@@ -106,7 +106,7 @@ abstract class ah extends lm {
                               }
                             }
                             qo.field_z = stackIn_98_0 != 0;
-                            return var4;
+                            return (aa) var4;
                           } else {
                             L5: {
                               l.field_p.a(-100, param1, true, param2 * 2 * param1);
@@ -121,7 +121,7 @@ abstract class ah extends lm {
                               }
                             }
                             qo.field_z = stackIn_94_0 != 0;
-                            return var4;
+                            return (aa) var4;
                           }
                         }
                       }
@@ -142,7 +142,7 @@ abstract class ah extends lm {
                         }
                       }
                       qo.field_z = stackIn_108_0 != 0;
-                      return var4;
+                      return (aa) var4;
                     } else {
                       L7: {
                         l.field_p.a(-100, param1, true, param2 * 2 * param1);
@@ -157,7 +157,7 @@ abstract class ah extends lm {
                         }
                       }
                       qo.field_z = stackIn_104_0 != 0;
-                      return var4;
+                      return (aa) var4;
                     }
                   } else {
                     L8: {
@@ -191,7 +191,7 @@ abstract class ah extends lm {
                             }
                           }
                           qo.field_z = stackIn_83_0 != 0;
-                          return var4;
+                          return (aa) var4;
                         } else {
                           L10: {
                             l.field_p.a(-100, param1, true, param2 * 2 * param1);
@@ -206,7 +206,7 @@ abstract class ah extends lm {
                             }
                           }
                           qo.field_z = stackIn_79_0 != 0;
-                          return var4;
+                          return (aa) var4;
                         }
                       } else {
                         L11: {
@@ -232,7 +232,7 @@ abstract class ah extends lm {
                           }
                         }
                         qo.field_z = stackIn_74_0 != 0;
-                        return var4;
+                        return (aa) var4;
                       }
                     } else {
                       var9 = -l.field_p.field_Fb.field_Z + -l.field_p.field_Fb.field_nb + l.field_p.field_Ib.field_nb;
@@ -251,7 +251,7 @@ abstract class ah extends lm {
                           }
                         }
                         qo.field_z = stackIn_66_0 != 0;
-                        return var4;
+                        return (aa) var4;
                       } else {
                         L14: {
                           l.field_p.a(-100, param1, true, param2 * 2 * param1);
@@ -266,7 +266,7 @@ abstract class ah extends lm {
                           }
                         }
                         qo.field_z = stackIn_62_0 != 0;
-                        return var4;
+                        return (aa) var4;
                       }
                     }
                   }
@@ -279,7 +279,7 @@ abstract class ah extends lm {
                       if (-1 == (var16.field_q.field_P ^ -1)) {
                         break L15;
                       } else {
-                        var4 = var16;
+                        var4 = (Object) (Object) var16;
                         break L15;
                       }
                     }
@@ -347,7 +347,7 @@ abstract class ah extends lm {
                       }
                     }
                     qo.field_z = stackIn_44_0 != 0;
-                    return var4;
+                    return (aa) var4;
                   } else {
                     L21: {
                       l.field_p.field_Fb.field_wb = -l.field_p.field_Fb.field_S + var9;
@@ -363,7 +363,7 @@ abstract class ah extends lm {
                       }
                     }
                     qo.field_z = stackIn_40_0 != 0;
-                    return var4;
+                    return (aa) var4;
                   }
                 } else {
                   var14 = de.field_e[var8];
@@ -374,7 +374,7 @@ abstract class ah extends lm {
                       if (-1 == (var14.field_q.field_P ^ -1)) {
                         break L22;
                       } else {
-                        var4 = var14;
+                        var4 = (Object) (Object) var14;
                         break L22;
                       }
                     }
@@ -465,43 +465,23 @@ abstract class ah extends lm {
         try {
             Throwable throwable = null;
             Throwable decompiledCaughtException = null;
-            int statePc = 0;
-            Throwable caughtException = null;
-            stateLoop: while (true) {
-                switch (statePc) {
-                    case 0: {
-                        try {
-                            Object discarded$3 = cq.a(ao.a(13867), (byte) -64, new Object[1], "resizing");
-                            statePc = 3;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_0) {
-                            caughtException = stateCaught_0;
-                            statePc = 2;
-                            continue stateLoop;
-                        }
-                    }
-                    case 2: {
-                        throwable = caughtException;
-                        statePc = 3;
-                        continue stateLoop;
-                    }
-                    case 3: {
-                        if (param1 <= 69) {
-                            statePc = 5;
-                        } else {
-                            statePc = 4;
-                        }
-                        continue stateLoop;
-                    }
-                    case 4: {
-                        return;
-                    }
-                    case 5: {
-                        field_u = null;
-                        return;
-                    }
-                    default: throw new IllegalStateException("invalid CFG state " + statePc);
-                }
+            try {
+              L0: {
+                Object discarded$2 = cq.a(ao.a(13867), (byte) -64, new Object[1], "resizing");
+                break L0;
+              }
+            } catch (java.lang.Throwable decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              L1: {
+                throwable = decompiledCaughtException;
+                break L1;
+              }
+            }
+            if (param1 <= 69) {
+              field_u = null;
+              return;
+            } else {
+              return;
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;

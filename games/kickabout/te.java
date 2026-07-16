@@ -45,14 +45,16 @@ final class te {
         if (param3) {
             return null;
         }
-        var6[6] = lh.a(param4, (byte) -96, param0);
-        var5[3] = lh.a(param4, (byte) -96, param0);
-        var5[2] = lh.a(param4, (byte) -96, param0);
-        var5[1] = lh.a(param4, (byte) -96, param0);
-        var5[0] = lh.a(param4, (byte) -96, param0);
-        var6[8] = lh.a(param2, (byte) -96, param0);
-        var5[7] = lh.a(param2, (byte) -96, param0);
-        var5[5] = lh.a(param2, (byte) -96, param0);
+        ut dupTemp$0 = lh.a(param4, (byte) -96, param0);
+        var6[6] = dupTemp$0;
+        var5[3] = dupTemp$0;
+        var5[2] = dupTemp$0;
+        var5[1] = dupTemp$0;
+        var5[0] = dupTemp$0;
+        ut dupTemp$1 = lh.a(param2, (byte) -96, param0);
+        var6[8] = dupTemp$1;
+        var5[7] = dupTemp$1;
+        var5[5] = dupTemp$1;
         if (!(param1 == 0)) {
             var6[4] = lh.a(param1, (byte) -96, 64);
         }
@@ -72,87 +74,47 @@ final class te {
         Object var13 = null;
         char[] var14 = null;
         char[] var15 = null;
-        int statePc = 0;
-        Throwable caughtException = null;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    var12 = Kickabout.field_G;
-                    var5 = param2.length;
-                    var6 = new String[var5];
-                    var15 = new char[var5];
-                    var14 = var15;
-                    var7 = var14;
-                    var8 = new bb[var5];
-                    var9 = 49;
-                    statePc = 1;
-                    continue stateLoop;
-                }
-                case 1: {
-                    try {
-                        var10_int = 0;
-                        statePc = 2;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_1) {
-                        caughtException = stateCaught_1;
-                        statePc = 5;
-                        continue stateLoop;
-                    }
-                }
-                case 2: {
-                    try {
-                        if (var10_int >= var5) {
-                            statePc = 6;
-                        } else {
-                            statePc = 3;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_2) {
-                        caughtException = stateCaught_2;
-                        statePc = 5;
-                        continue stateLoop;
-                    }
-                }
-                case 3: {
-                    try {
-                        var11 = lm.field_j.a(119, param2[var10_int]);
-                        var6[var10_int] = var11.g((byte) -79);
-                        var9 = (char)(var9 + 1);
-                        var7[var10_int] = (char)var9;
-                        var8[var10_int] = null;
-                        var10_int++;
-                        statePc = 2;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_3) {
-                        caughtException = stateCaught_3;
-                        statePc = 5;
-                        continue stateLoop;
-                    }
-                }
-                case 5: {
-                    var10 = (Exception) (Object) caughtException;
-                    return null;
-                }
-                case 6: {
-                    if (param0 < -91) {
-                        statePc = 8;
-                    } else {
-                        statePc = 7;
-                    }
-                    continue stateLoop;
-                }
-                case 7: {
-                    var13 = null;
-                    bb discarded$1 = te.a(-59, (hd) null, (int[]) null, (hd) null, (hd) null);
-                    statePc = 8;
-                    continue stateLoop;
-                }
-                case 8: {
-                    return new bb(0L, param1, param4, param3, var8, param2, var6, var15);
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
+        Throwable decompiledCaughtException = null;
+        var12 = Kickabout.field_G;
+        var5 = param2.length;
+        var6 = new String[var5];
+        var15 = new char[var5];
+        var14 = var15;
+        var7 = var14;
+        var8 = new bb[var5];
+        var9 = 49;
+        try {
+          L0: {
+            var10_int = 0;
+            L1: while (true) {
+              if (var10_int >= var5) {
+                break L0;
+              } else {
+                var11 = lm.field_j.a(119, param2[var10_int]);
+                var6[var10_int] = var11.g((byte) -79);
+                var9 = (char)(var9 + 1);
+                var7[var10_int] = (char)var9;
+                var8[var10_int] = null;
+                var10_int++;
+                continue L1;
+              }
             }
+          }
+        } catch (java.lang.Exception decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var10 = (Exception) (Object) decompiledCaughtException;
+          return null;
         }
+        L2: {
+          if (param0 < -91) {
+            break L2;
+          } else {
+            var13 = null;
+            bb discarded$1 = te.a(-59, (hd) null, (int[]) null, (hd) null, (hd) null);
+            break L2;
+          }
+        }
+        return new bb(0L, param1, param4, param3, var8, param2, var6, var15);
     }
 
     final static void a(int param0, byte param1, int param2, boolean param3, int param4, boolean param5, int param6, boolean param7, int param8, boolean param9, int param10, boolean param11) {

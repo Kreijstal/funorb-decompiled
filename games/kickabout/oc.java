@@ -13,7 +13,7 @@ final class oc {
 
     final static ut c(byte param0) {
         int var1 = 0;
-        ut var3 = null;
+        Object var3 = null;
         int var5 = 0;
         int[] var5_ref_int__ = null;
         int var6 = 0;
@@ -41,7 +41,7 @@ final class oc {
               var5 = 0;
               L1: while (true) {
                 if (var1 <= var5) {
-                  var3 = new ut(kw.field_i, ai.field_J, aq.field_f[0], fc.field_g[0], ku.field_c[0], lo.field_j[0], var21);
+                  var3 = (Object) (Object) new ut(kw.field_i, ai.field_J, aq.field_f[0], fc.field_g[0], ku.field_c[0], lo.field_j[0], var21);
                   break L0;
                 } else {
                   var9[var5] = lt.field_a[qj.b((int) var18[var5], 255)];
@@ -59,7 +59,7 @@ final class oc {
               var6 = 0;
               L2: while (true) {
                 if (var1 <= var6) {
-                  var3 = (ut) (Object) new ot(kw.field_i, ai.field_J, aq.field_f[0], fc.field_g[0], ku.field_c[0], lo.field_j[0], var20);
+                  var3 = (Object) (Object) new ot(kw.field_i, ai.field_J, aq.field_f[0], fc.field_g[0], ku.field_c[0], lo.field_j[0], var20);
                   break L0;
                 } else {
                   var5_ref_int__[var6] = hf.a(lt.field_a[qj.b((int) var18[var6], 255)], qj.b(-16777216, var19[var6] << 831319448));
@@ -70,7 +70,7 @@ final class oc {
             }
           }
           tk.h((byte) -111);
-          return var3;
+          return (ut) var3;
         }
     }
 

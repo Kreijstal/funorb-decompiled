@@ -267,8 +267,9 @@ final class ge extends jd {
                 } else {
                   L2: {
                     var7 = 0;
+                    int incrementValue$9 = var4;
                     var4++;
-                    if (param1.field_y[var4] != 0) {
+                    if (param1.field_y[incrementValue$9] != 0) {
                       var7 = (byte)(var7 | 1);
                       break L2;
                     } else {
@@ -276,8 +277,9 @@ final class ge extends jd {
                     }
                   }
                   L3: {
+                    int incrementValue$10 = var4;
                     var4++;
-                    if (0 == param1.field_y[var4]) {
+                    if (0 == param1.field_y[incrementValue$10]) {
                       break L3;
                     } else {
                       var7 = (byte)(var7 | 2);
@@ -285,8 +287,9 @@ final class ge extends jd {
                     }
                   }
                   L4: {
+                    int incrementValue$11 = var4;
                     var4++;
-                    if (param1.field_y[var4] != 0) {
+                    if (param1.field_y[incrementValue$11] != 0) {
                       var7 = (byte)(var7 | 4);
                       break L4;
                     } else {
@@ -294,8 +297,9 @@ final class ge extends jd {
                     }
                   }
                   L5: {
+                    int incrementValue$12 = var4;
                     var4++;
-                    if (param1.field_y[var4] != 0) {
+                    if (param1.field_y[incrementValue$12] != 0) {
                       var7 = (byte)(var7 | 8);
                       break L5;
                     } else {
@@ -303,8 +307,9 @@ final class ge extends jd {
                     }
                   }
                   L6: {
+                    int incrementValue$13 = var4;
                     var4++;
-                    if (param1.field_y[var4] != 0) {
+                    if (param1.field_y[incrementValue$13] != 0) {
                       var7 = (byte)(var7 | 16);
                       break L6;
                     } else {
@@ -312,8 +317,9 @@ final class ge extends jd {
                     }
                   }
                   L7: {
+                    int incrementValue$14 = var4;
                     var4++;
-                    if (param1.field_y[var4] != 0) {
+                    if (param1.field_y[incrementValue$14] != 0) {
                       var7 = (byte)(var7 | 32);
                       break L7;
                     } else {
@@ -321,8 +327,9 @@ final class ge extends jd {
                     }
                   }
                   L8: {
+                    int incrementValue$15 = var4;
                     var4++;
-                    if (param1.field_y[var4] == 0) {
+                    if (param1.field_y[incrementValue$15] == 0) {
                       break L8;
                     } else {
                       var7 = (byte)(var7 | 64);
@@ -330,16 +337,18 @@ final class ge extends jd {
                     }
                   }
                   L9: {
+                    int incrementValue$16 = var4;
                     var4++;
-                    if (param1.field_y[var4] != 0) {
+                    if (param1.field_y[incrementValue$16] != 0) {
                       var7 = (byte)(var7 | 128);
                       break L9;
                     } else {
                       break L9;
                     }
                   }
+                  int incrementValue$17 = var3;
                   var3++;
-                  var9[var3] = (byte)var7;
+                  var9[incrementValue$17] = (byte)var7;
                   var6 += 8;
                   continue L1;
                 }

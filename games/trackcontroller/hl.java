@@ -156,47 +156,17 @@ abstract class hl extends td {
     }
 
     final void a(int param0, int param1, int param2, int param3) {
-        if (((hl) this).field_G != -1) {
-          if (-257 <= ((hl) this).field_G) {
-            if (param0 != 0) {
-              return;
-            } else {
+        if ((((hl) this).field_G ^ -1) != -1) {
+          if (-257 >= (((hl) this).field_G ^ -1)) {
+            if ((param0 ^ -1) == -1) {
               ((hl) this).b(((hl) this).field_p + param1, param3 ^ 29233, param2 - -((hl) this).field_m);
               super.a(param0, param1, param2, 29221);
               return;
+            } else {
+              return;
             }
           } else {
-            if (gd.field_p != null) {
-              if (((hl) this).field_x <= gd.field_p.field_t) {
-                if (((hl) this).field_u <= gd.field_p.field_q) {
-                  mb.a((byte) -116, gd.field_p);
-                  ll.a();
-                  ((hl) this).b(0, 20, 0);
-                  super.a(param0, -param1 - ((hl) this).field_p, -param2 - ((hl) this).field_m, param3);
-                  ch.m(119);
-                  gd.field_p.d(param1 - -((hl) this).field_p, param2 - -((hl) this).field_m, ((hl) this).field_G);
-                  return;
-                } else {
-                  gd.field_p = new qj(((hl) this).field_x, ((hl) this).field_u);
-                  mb.a((byte) -116, gd.field_p);
-                  ll.a();
-                  ((hl) this).b(0, 20, 0);
-                  super.a(param0, -param1 - ((hl) this).field_p, -param2 - ((hl) this).field_m, param3);
-                  ch.m(119);
-                  gd.field_p.d(param1 - -((hl) this).field_p, param2 - -((hl) this).field_m, ((hl) this).field_G);
-                  return;
-                }
-              } else {
-                gd.field_p = new qj(((hl) this).field_x, ((hl) this).field_u);
-                mb.a((byte) -116, gd.field_p);
-                ll.a();
-                ((hl) this).b(0, 20, 0);
-                super.a(param0, -param1 - ((hl) this).field_p, -param2 - ((hl) this).field_m, param3);
-                ch.m(119);
-                gd.field_p.d(param1 - -((hl) this).field_p, param2 - -((hl) this).field_m, ((hl) this).field_G);
-                return;
-              }
-            } else {
+            if (gd.field_p == null) {
               gd.field_p = new qj(((hl) this).field_x, ((hl) this).field_u);
               mb.a((byte) -116, gd.field_p);
               ll.a();
@@ -205,6 +175,36 @@ abstract class hl extends td {
               ch.m(119);
               gd.field_p.d(param1 - -((hl) this).field_p, param2 - -((hl) this).field_m, ((hl) this).field_G);
               return;
+            } else {
+              if ((((hl) this).field_x ^ -1) < (gd.field_p.field_t ^ -1)) {
+                gd.field_p = new qj(((hl) this).field_x, ((hl) this).field_u);
+                mb.a((byte) -116, gd.field_p);
+                ll.a();
+                ((hl) this).b(0, 20, 0);
+                super.a(param0, -param1 - ((hl) this).field_p, -param2 - ((hl) this).field_m, param3);
+                ch.m(119);
+                gd.field_p.d(param1 - -((hl) this).field_p, param2 - -((hl) this).field_m, ((hl) this).field_G);
+                return;
+              } else {
+                if (((hl) this).field_u > gd.field_p.field_q) {
+                  gd.field_p = new qj(((hl) this).field_x, ((hl) this).field_u);
+                  mb.a((byte) -116, gd.field_p);
+                  ll.a();
+                  ((hl) this).b(0, 20, 0);
+                  super.a(param0, -param1 - ((hl) this).field_p, -param2 - ((hl) this).field_m, param3);
+                  ch.m(119);
+                  gd.field_p.d(param1 - -((hl) this).field_p, param2 - -((hl) this).field_m, ((hl) this).field_G);
+                  return;
+                } else {
+                  mb.a((byte) -116, gd.field_p);
+                  ll.a();
+                  ((hl) this).b(0, 20, 0);
+                  super.a(param0, -param1 - ((hl) this).field_p, -param2 - ((hl) this).field_m, param3);
+                  ch.m(119);
+                  gd.field_p.d(param1 - -((hl) this).field_p, param2 - -((hl) this).field_m, ((hl) this).field_G);
+                  return;
+                }
+              }
             }
           }
         } else {

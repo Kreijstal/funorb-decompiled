@@ -55,27 +55,31 @@ final class s {
         if (param2) {
           try {
             L0: {
-              var3_int = param0.c((byte) -115);
-              if (param1 < var3_int) {
-                var3_int = param1;
-                break L0;
-              } else {
-                break L0;
+              L1: {
+                var3_int = param0.c((byte) -115);
+                if (param1 < var3_int) {
+                  var3_int = param1;
+                  break L1;
+                } else {
+                  break L1;
+                }
               }
+              var4 = new byte[var3_int];
+              param0.field_v = param0.field_v + Pool.field_J.a((byte) 36, 0, param0.field_v, var4, param0.field_t, var3_int);
+              var5 = tl.a(var3_int, -7510, var4, 0);
+              stackOut_5_0 = (String) var5;
+              stackIn_6_0 = stackOut_5_0;
+              break L0;
             }
-            var4 = new byte[var3_int];
-            param0.field_v = param0.field_v + Pool.field_J.a((byte) 36, 0, param0.field_v, var4, param0.field_t, var3_int);
-            var5 = tl.a(var3_int, -7510, var4, 0);
-            stackOut_5_0 = (String) var5;
-            stackIn_6_0 = stackOut_5_0;
-          } catch (java.lang.Exception decompiledCaughtParameter) {
-            decompiledCaughtException = decompiledCaughtParameter;
-            return stackIn_6_0;
+          } catch (java.lang.Exception decompiledCaughtParameter0) {
+            decompiledCaughtException = decompiledCaughtParameter0;
+            var3 = (Exception) (Object) decompiledCaughtException;
+            return "Cabbage";
           }
+          return stackIn_6_0;
         } else {
           return null;
         }
-        return null;
     }
 
     final static dj[] a(byte param0, sj param1) {

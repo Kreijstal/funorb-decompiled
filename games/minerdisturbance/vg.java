@@ -216,7 +216,7 @@ final class vg {
         int stackOut_22_0 = 0;
         int stackOut_21_0 = 0;
         L0: {
-          int discarded$1 = b.f(24);
+          int discarded$2 = b.f(24);
           ((vg) this).field_f = b.f(16);
           ((vg) this).field_a = b.f(24);
           ((vg) this).field_e = new int[((vg) this).field_a];
@@ -283,8 +283,9 @@ final class vg {
                     var3_int++;
                     continue L5;
                   } else {
+                    int incrementValue$3 = var2;
                     var2++;
-                    ((vg) this).field_e[var2] = var3_int;
+                    ((vg) this).field_e[incrementValue$3] = var3_int;
                     var5++;
                     continue L6;
                   }

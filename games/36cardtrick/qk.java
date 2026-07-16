@@ -137,7 +137,7 @@ final class qk {
                       var25 = var35;
                       var9 = var25;
                       var26 = new pb(var49);
-                      var26.a(5, ((pb) var26).field_g.length, -115, param2);
+                      var26.a(5, var26.field_g.length, -115, param2);
                       break L4;
                     }
                   }
@@ -148,7 +148,7 @@ final class qk {
                   if (param0 >= 84) {
                     break L7;
                   } else {
-                    byte[] discarded$1 = ((qk) this).a(-69, ((byte[]) (byte[]) ((Object[]) (Object[]) ((qk) this).field_g[4])[0])[1], -74);
+                    byte[] discarded$1 = ((qk) this).a(-69, ((byte[]) ((Object[]) ((qk) this).field_g[4])[0])[1], -74);
                     break L7;
                   }
                 }
@@ -383,7 +383,7 @@ final class qk {
 
     final byte[] a(int param0, byte param1, int param2) {
         if (param1 != -115) {
-            return (byte[]) null;
+            return null;
         }
         return this.a((int[]) null, param2, (byte) 125, param0);
     }
@@ -428,10 +428,10 @@ final class qk {
             return false;
         }
         if (param0 != 4) {
-            boolean discarded$0 = ((qk) this).a(-13, ((int[]) (int[]) ((Object[]) (Object[]) ((qk) this).field_g[7])[0])[7]);
+            boolean discarded$0 = ((qk) this).a(-13, ((int[]) ((Object[]) ((qk) this).field_g[7])[0])[7]);
         }
         param1 = param1.toLowerCase();
-        CharSequence var4 = (CharSequence) param1;
+        CharSequence var4 = (CharSequence) (Object) param1;
         int var3 = ((qk) this).field_c.field_h.a((byte) -100, ta.a(109, var4));
         return ((qk) this).a(var3, 105);
     }
@@ -441,7 +441,7 @@ final class qk {
             return 0;
         }
         if (param0 != 60) {
-            String var4 = (String) null;
+            Object var4 = null;
             byte[] discarded$0 = ((qk) this).a((byte) 42, (String) null, (String) null);
         }
         if (null != ((qk) this).field_g[param1]) {
@@ -455,7 +455,7 @@ final class qk {
             return false;
         }
         param1 = param1.toLowerCase();
-        CharSequence var4 = (CharSequence) param1;
+        CharSequence var4 = (CharSequence) (Object) param1;
         int var3 = ((qk) this).field_c.field_h.a((byte) -100, ta.a(98, var4));
         if (param0 <= var3) {
             return true;
@@ -529,22 +529,22 @@ final class qk {
         }
         param0 = param0.toLowerCase();
         param1 = param1.toLowerCase();
-        CharSequence var6 = (CharSequence) param0;
+        CharSequence var6 = (CharSequence) (Object) param0;
         int var4 = ((qk) this).field_c.field_h.a((byte) -100, ta.a(param2 + -7, var6));
         if (!(this.b(var4, (byte) -112))) {
             return false;
         }
-        CharSequence var7 = (CharSequence) param1;
+        CharSequence var7 = (CharSequence) (Object) param1;
         int var5 = ((qk) this).field_c.field_p[var4].a((byte) -100, ta.a(90, var7));
         if (param2 != -44) {
-            ((qk) this).field_b = (Object[][]) (Object[][]) null;
+            ((qk) this).field_b = null;
         }
         return ((qk) this).b(27493, var4, var5);
     }
 
     final synchronized boolean b(int param0, int param1, int param2) {
         if (param0 != 27493) {
-            return ((boolean[]) (boolean[]) ((qk) this).field_g[3])[13];
+            return ((boolean[]) ((qk) this).field_g[3])[13];
         }
         if (!(this.a(param1, param0 + -27493, param2))) {
             return false;
@@ -569,7 +569,7 @@ final class qk {
             return -1;
         }
         param1 = param1.toLowerCase();
-        CharSequence var5 = (CharSequence) param1;
+        CharSequence var5 = (CharSequence) (Object) param1;
         int var4 = ((qk) this).field_c.field_p[param0].a((byte) -100, ta.a(param2 ^ 99, var5));
         if (!this.a(param0, 0, var4)) {
             return -1;
@@ -582,19 +582,19 @@ final class qk {
 
     final synchronized byte[] a(byte param0, String param1, String param2) {
         if (param0 != 7) {
-            return (byte[]) null;
+            return null;
         }
         if (!((qk) this).b(4)) {
             return null;
         }
         param2 = param2.toLowerCase();
         param1 = param1.toLowerCase();
-        CharSequence var6 = (CharSequence) param2;
+        CharSequence var6 = (CharSequence) (Object) param2;
         int var4 = ((qk) this).field_c.field_h.a((byte) -100, ta.a(param0 + -94, var6));
         if (!this.b(var4, (byte) -47)) {
             return null;
         }
-        CharSequence var7 = (CharSequence) param1;
+        CharSequence var7 = (CharSequence) (Object) param1;
         int var5 = ((qk) this).field_c.field_p[var4].a((byte) -100, ta.a(57, var7));
         return ((qk) this).a(var5, (byte) -115, var4);
     }
@@ -609,7 +609,7 @@ final class qk {
             ((qk) this).field_g = new Object[((qk) this).field_c.field_b];
         }
         if (param0 != 4) {
-            int discarded$0 = ((qk) this).a(((byte[]) (byte[]) ((Object[]) (Object[]) ((Object[]) (Object[]) ((qk) this).field_g[17])[6])[4])[1], -41);
+            int discarded$0 = ((qk) this).a(((byte[]) ((Object[]) ((Object[]) ((qk) this).field_g[17])[6])[4])[1], -41);
             return true;
         }
         return true;
@@ -648,7 +648,6 @@ final class qk {
 
     private final synchronized byte[] a(int[] param0, int param1, byte param2, int param3) {
         Object var5 = null;
-        byte[] var5_array = null;
         byte[] var7 = null;
         if (this.a(param1, 0, param3)) {
           if (param2 > 68) {
@@ -682,7 +681,7 @@ final class qk {
                   break L2;
                 } else {
                   var7 = ce.a(false, 0, ((qk) this).field_b[param1][param3]);
-                  var5_array = var7;
+                  var5 = (Object) (Object) var7;
                   if (var7 == null) {
                     throw new RuntimeException("");
                   } else {
@@ -691,7 +690,7 @@ final class qk {
                 }
               }
               L3: {
-                if (var5_array == null) {
+                if (var5 == null) {
                   break L3;
                 } else {
                   if ((((qk) this).field_f ^ -1) == -2) {
@@ -712,12 +711,12 @@ final class qk {
                   }
                 }
               }
-              return var5_array;
+              return (byte[]) var5;
             } else {
               throw new RuntimeException("");
             }
           } else {
-            return (byte[]) null;
+            return null;
           }
         } else {
           return null;
@@ -739,7 +738,7 @@ final class qk {
         if (param1 != 0) {
             field_i = (String) ((qk) this).field_g[5];
         }
-        CharSequence var4 = (CharSequence) param0;
+        CharSequence var4 = (CharSequence) (Object) param0;
         int var3 = ((qk) this).field_c.field_h.a((byte) -100, ta.a(-54, var4));
         return ((qk) this).a((byte) 60, var3);
     }
@@ -749,7 +748,7 @@ final class qk {
             return -1;
         }
         param1 = param1.toLowerCase();
-        CharSequence var4 = (CharSequence) param1;
+        CharSequence var4 = (CharSequence) (Object) param1;
         int var3 = ((qk) this).field_c.field_h.a((byte) -100, ta.a(-62, var4));
         if (param0 != 18659) {
             boolean discarded$0 = this.b(-2, (byte) 61);
@@ -806,6 +805,7 @@ final class qk {
               }
               ((qk) this).field_e = stackIn_6_1 != 0;
               ((qk) this).field_f = param2;
+              return;
             } else {
               break L0;
             }

@@ -48,195 +48,67 @@ final class ne {
         int stackIn_7_0 = 0;
         int stackIn_13_0 = 0;
         int stackIn_16_0 = 0;
-        int stackOut_2_0 = 0;
+        Throwable decompiledCaughtException = null;
         int stackOut_6_0 = 0;
-        int stackOut_12_0 = 0;
         int stackOut_15_0 = 0;
-        int statePc = 0;
-        Throwable caughtException = null;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    var4 = Virogrid.field_F ? 1 : 0;
-                    statePc = 1;
-                    continue stateLoop;
-                }
-                case 1: {
-                    try {
-                        if (pd.field_x.startsWith("win")) {
-                            statePc = 4;
-                        } else {
-                            statePc = 2;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_1) {
-                        caughtException = stateCaught_1;
-                        statePc = 17;
-                        continue stateLoop;
-                    }
-                }
-                case 2: {
-                    try {
-                        stackOut_2_0 = 0;
-                        stackIn_3_0 = stackOut_2_0;
-                        statePc = 3;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_2) {
-                        caughtException = stateCaught_2;
-                        statePc = 17;
-                        continue stateLoop;
-                    }
-                }
-                case 3: {
-                    return stackIn_3_0 != 0;
-                }
-                case 4: {
-                    try {
-                        if (param1.startsWith("http://")) {
-                            statePc = 8;
-                        } else {
-                            statePc = 5;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_4) {
-                        caughtException = stateCaught_4;
-                        statePc = 17;
-                        continue stateLoop;
-                    }
-                }
-                case 5: {
-                    try {
-                        if (param1.startsWith("https://")) {
-                            statePc = 8;
-                        } else {
-                            statePc = 6;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_5) {
-                        caughtException = stateCaught_5;
-                        statePc = 17;
-                        continue stateLoop;
-                    }
-                }
-                case 6: {
-                    try {
-                        stackOut_6_0 = 0;
-                        stackIn_7_0 = stackOut_6_0;
-                        statePc = 7;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_6) {
-                        caughtException = stateCaught_6;
-                        statePc = 17;
-                        continue stateLoop;
-                    }
-                }
-                case 7: {
+        int stackOut_12_0 = 0;
+        int stackOut_2_0 = 0;
+        var4 = Virogrid.field_F ? 1 : 0;
+        try {
+          L0: {
+            if (pd.field_x.startsWith("win")) {
+              L1: {
+                if (param1.startsWith("http://")) {
+                  break L1;
+                } else {
+                  if (param1.startsWith("https://")) {
+                    break L1;
+                  } else {
+                    stackOut_6_0 = 0;
+                    stackIn_7_0 = stackOut_6_0;
                     return stackIn_7_0 != 0;
+                  }
                 }
-                case 8: {
-                    try {
-                        var2 = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789?&=,.%+-_#:/*";
-                        var3 = 0;
-                        if (param0 == 10448) {
-                            statePc = 10;
-                        } else {
-                            statePc = 9;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_8) {
-                        caughtException = stateCaught_8;
-                        statePc = 17;
-                        continue stateLoop;
-                    }
+              }
+              L2: {
+                var2 = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789?&=,.%+-_#:/*";
+                var3 = 0;
+                if (param0 == 10448) {
+                  break L2;
+                } else {
+                  ne.a(true);
+                  break L2;
                 }
-                case 9: {
-                    try {
-                        ne.a(true);
-                        statePc = 10;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_9) {
-                        caughtException = stateCaught_9;
-                        statePc = 17;
-                        continue stateLoop;
-                    }
-                }
-                case 10: {
-                    try {
-                        if (var3 >= param1.length()) {
-                            statePc = 15;
-                        } else {
-                            statePc = 11;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_10) {
-                        caughtException = stateCaught_10;
-                        statePc = 17;
-                        continue stateLoop;
-                    }
-                }
-                case 11: {
-                    try {
-                        if ((var2.indexOf((int) param1.charAt(var3)) ^ -1) != 0) {
-                            statePc = 14;
-                        } else {
-                            statePc = 12;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_11) {
-                        caughtException = stateCaught_11;
-                        statePc = 17;
-                        continue stateLoop;
-                    }
-                }
-                case 12: {
-                    try {
-                        stackOut_12_0 = 0;
-                        stackIn_13_0 = stackOut_12_0;
-                        statePc = 13;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_12) {
-                        caughtException = stateCaught_12;
-                        statePc = 17;
-                        continue stateLoop;
-                    }
-                }
-                case 13: {
+              }
+              L3: while (true) {
+                if (var3 >= param1.length()) {
+                  Process discarded$2 = Runtime.getRuntime().exec("cmd /c start \"j\" \"" + param1 + "\"");
+                  stackOut_15_0 = 1;
+                  stackIn_16_0 = stackOut_15_0;
+                  break L0;
+                } else {
+                  if ((var2.indexOf((int) param1.charAt(var3)) ^ -1) != 0) {
+                    var3++;
+                    continue L3;
+                  } else {
+                    stackOut_12_0 = 0;
+                    stackIn_13_0 = stackOut_12_0;
                     return stackIn_13_0 != 0;
+                  }
                 }
-                case 14: {
-                    try {
-                        var3++;
-                        statePc = 10;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_14) {
-                        caughtException = stateCaught_14;
-                        statePc = 17;
-                        continue stateLoop;
-                    }
-                }
-                case 15: {
-                    try {
-                        Process discarded$2 = Runtime.getRuntime().exec("cmd /c start \"j\" \"" + param1 + "\"");
-                        stackOut_15_0 = 1;
-                        stackIn_16_0 = stackOut_15_0;
-                        statePc = 16;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_15) {
-                        caughtException = stateCaught_15;
-                        statePc = 17;
-                        continue stateLoop;
-                    }
-                }
-                case 16: {
-                    return stackIn_16_0 != 0;
-                }
-                case 17: {
-                    var2_ref = (Exception) (Object) caughtException;
-                    return false;
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
+              }
+            } else {
+              stackOut_2_0 = 0;
+              stackIn_3_0 = stackOut_2_0;
+              return stackIn_3_0 != 0;
             }
+          }
+        } catch (java.lang.Exception decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2_ref = (Exception) (Object) decompiledCaughtException;
+          return false;
         }
+        return stackIn_16_0 != 0;
     }
 
     final static String a(byte param0) {
@@ -264,7 +136,7 @@ final class ne {
         mg var11 = null;
         mg var12 = null;
         mg var13 = null;
-        mg var14 = null;
+        Object var14 = null;
         int[] var15 = null;
         mg var16 = null;
         int[] var17 = null;
@@ -306,7 +178,7 @@ final class ne {
           var14 = null;
           if ((param2 ^ -1) < -1) {
             var16 = new mg(16, 16);
-            var14 = var16;
+            var14 = (Object) (Object) var16;
             var16.b();
             df.b(0, 0, 16, 16, param2);
             break L1;
@@ -315,7 +187,7 @@ final class ne {
           }
         }
         df.a(var20, var7, var8);
-        return new mg[]{var10, var11, var10, var9, var14, var9, var12, var13, var12};
+        return new mg[]{var10, var11, var10, var9, (mg) var14, var9, var12, var13, var12};
     }
 
     final static void a(int param0) {

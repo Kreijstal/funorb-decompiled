@@ -20,13 +20,19 @@ final class qc {
             java.net.URL var3 = null;
             Throwable decompiledCaughtException = null;
             try {
-              var3 = new java.net.URL(param0.getCodeBase(), param2);
-              var3 = ag.a(param0, var3, false);
-              mg.a(true, param0, var3.toString(), true);
+              L0: {
+                var3 = new java.net.URL(param0.getCodeBase(), param2);
+                var3 = ag.a(param0, var3, false);
+                mg.a(true, param0, var3.toString(), true);
+                break L0;
+              }
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
-              exception = (Exception) (Object) decompiledCaughtException;
-              exception.printStackTrace();
+              L1: {
+                exception = (Exception) (Object) decompiledCaughtException;
+                exception.printStackTrace();
+                break L1;
+              }
             }
             if (param1 != 24) {
               qc.b(69);
@@ -47,8 +53,11 @@ final class qc {
             Throwable decompiledCaughtException = null;
             if (null != gf.field_g) {
               try {
-                gf.field_g.a((byte) 57, 0L);
-                gf.field_g.a(0, jc.field_g.field_i, 24, jc.field_g.field_h);
+                L0: {
+                  gf.field_g.a((byte) 57, 0L);
+                  gf.field_g.a(0, jc.field_g.field_i, 24, jc.field_g.field_h);
+                  break L0;
+                }
               } catch (java.lang.Exception decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 var1 = (Exception) (Object) decompiledCaughtException;
@@ -61,23 +70,23 @@ final class qc {
                   return;
                 }
               }
-              L0: {
-                if (param0 == -17184) {
-                  break L0;
-                } else {
-                  field_a = null;
-                  break L0;
-                }
-              }
-              jc.field_g.field_h = jc.field_g.field_h + 24;
-              return;
-            } else {
               L1: {
                 if (param0 == -17184) {
                   break L1;
                 } else {
                   field_a = null;
                   break L1;
+                }
+              }
+              jc.field_g.field_h = jc.field_g.field_h + 24;
+              return;
+            } else {
+              L2: {
+                if (param0 == -17184) {
+                  break L2;
+                } else {
+                  field_a = null;
+                  break L2;
                 }
               }
               jc.field_g.field_h = jc.field_g.field_h + 24;

@@ -148,6 +148,7 @@ final class r extends ff {
             kk.field_a = dp.a(((r) this).field_g, -27919, ((r) this).field_k, var6, ((r) this).field_j, ((r) this).field_h);
             jj.field_b = (int)Math.floor(-240.0 + (-((double)((r) this).field_k * ((r) this).field_l) + ((r) this).field_l * (double)((r) this).field_h * 0.5));
             ((r) this).field_c = (l) (Object) new hl((r) this);
+            return;
           } else {
             if ((ul.field_g ^ -1) != -4) {
               ((r) this).field_k = 13;
@@ -161,6 +162,7 @@ final class r extends ff {
               kk.field_a = dp.a(((r) this).field_g, -27919, ((r) this).field_k, var5, ((r) this).field_j, ((r) this).field_h);
               jj.field_b = (int)Math.floor(-240.0 + (-((double)((r) this).field_k * ((r) this).field_l) + ((r) this).field_l * (double)((r) this).field_h * 0.5));
               ((r) this).field_c = (l) (Object) new hl((r) this);
+              return;
             } else {
               var4 = new String[]{"        @@@ @@@ @  @ @@@ @@@         ", "         @  @   @@ @  @  @           ", "         @  @@@ @ @@  @  @@@         ", "         @  @   @  @  @  @           ", "         @  @@@ @  @  @  @@@         ", "                                     ", "@  @ @@@ @ @  @  @ @ @@@ @  @ @@@ @@@", "@@ @ @ @ @ @ @ @ @@@ @   @@ @  @  @  ", "@ @@ @ @ @ @ @ @ @ @ @@@ @ @@  @  @@@", "@  @ @ @  @  @@@ @ @ @   @  @  @  @  ", "@  @ @@@  @  @ @ @ @ @@@ @  @  @  @@@"};
               ((r) this).field_j = 3;
@@ -173,6 +175,7 @@ final class r extends ff {
               kk.field_a = dp.a(((r) this).field_g, -27919, ((r) this).field_k, var4, ((r) this).field_j, ((r) this).field_h);
               jj.field_b = (int)Math.floor(-240.0 + (-((double)((r) this).field_k * ((r) this).field_l) + ((r) this).field_l * (double)((r) this).field_h * 0.5));
               ((r) this).field_c = (l) (Object) new hl((r) this);
+              return;
             }
           }
         } else {
@@ -187,6 +190,7 @@ final class r extends ff {
           kk.field_a = dp.a(((r) this).field_g, -27919, ((r) this).field_k, var3, ((r) this).field_j, ((r) this).field_h);
           jj.field_b = (int)Math.floor(-240.0 + (-((double)((r) this).field_k * ((r) this).field_l) + ((r) this).field_l * (double)((r) this).field_h * 0.5));
           ((r) this).field_c = (l) (Object) new hl((r) this);
+          return;
         }
     }
 

@@ -212,135 +212,82 @@ final class pj extends cb {
             IOException var2 = null;
             int var3 = 0;
             Throwable decompiledCaughtException = null;
-            int statePc = 0;
-            Throwable caughtException = null;
-            stateLoop: while (true) {
-                switch (statePc) {
-                    case 0: {
-                        var3 = fleas.field_A ? 1 : 0;
-                        if (param0 == 60) {
-                            statePc = 2;
-                        } else {
-                            statePc = 1;
-                        }
-                        continue stateLoop;
-                    }
-                    case 1: {
-                        field_y = null;
-                        statePc = 2;
-                        continue stateLoop;
-                    }
-                    case 2: {
-                        if (td.field_k == null) {
-                            statePc = 4;
-                        } else {
-                            statePc = 3;
-                        }
-                        continue stateLoop;
-                    }
-                    case 3: {
-                        td.field_k.d(param0 + -14895);
-                        statePc = 4;
-                        continue stateLoop;
-                    }
-                    case 4: {
-                        if (null == vg.field_r) {
-                            statePc = 6;
-                        } else {
-                            statePc = 5;
-                        }
-                        continue stateLoop;
-                    }
-                    case 5: {
-                        vg.field_r.a(true);
-                        statePc = 6;
-                        continue stateLoop;
-                    }
-                    case 6: {
-                        if (rd.field_c == null) {
-                            statePc = 10;
-                        } else {
-                            statePc = 7;
-                        }
-                        continue stateLoop;
-                    }
-                    case 7: {
-                        try {
-                            rd.field_c.b((byte) -70);
-                            statePc = 10;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_7) {
-                            caughtException = stateCaught_7;
-                            statePc = 9;
-                            continue stateLoop;
-                        }
-                    }
-                    case 9: {
-                        iOException = (IOException) (Object) caughtException;
-                        statePc = 10;
-                        continue stateLoop;
-                    }
-                    case 10: {
-                        if (null != mc.field_c) {
-                            statePc = 12;
-                        } else {
-                            statePc = 19;
-                        }
-                        continue stateLoop;
-                    }
-                    case 12: {
-                        var1 = 0;
-                        statePc = 13;
-                        continue stateLoop;
-                    }
-                    case 13: {
-                        if (var1 >= mc.field_c.length) {
-                            statePc = 19;
-                        } else {
-                            statePc = 14;
-                        }
-                        continue stateLoop;
-                    }
-                    case 14: {
-                        if (mc.field_c[var1] != null) {
-                            statePc = 16;
-                        } else {
-                            statePc = 15;
-                        }
-                        continue stateLoop;
-                    }
-                    case 15: {
-                        var1++;
-                        statePc = 13;
-                        continue stateLoop;
-                    }
-                    case 16: {
-                        try {
-                            mc.field_c[var1].b((byte) -70);
-                            statePc = 17;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_16) {
-                            caughtException = stateCaught_16;
-                            statePc = 18;
-                            continue stateLoop;
-                        }
-                    }
-                    case 17: {
-                        var1++;
-                        statePc = 13;
-                        continue stateLoop;
-                    }
-                    case 18: {
-                        var2 = (IOException) (Object) caughtException;
-                        var1++;
-                        statePc = 13;
-                        continue stateLoop;
-                    }
-                    case 19: {
-                        return;
-                    }
-                    default: throw new IllegalStateException("invalid CFG state " + statePc);
+            L0: {
+              var3 = fleas.field_A ? 1 : 0;
+              if (param0 == 60) {
+                break L0;
+              } else {
+                field_y = null;
+                break L0;
+              }
+            }
+            L1: {
+              if (td.field_k == null) {
+                break L1;
+              } else {
+                td.field_k.d(param0 + -14895);
+                break L1;
+              }
+            }
+            L2: {
+              if (null == vg.field_r) {
+                break L2;
+              } else {
+                vg.field_r.a(true);
+                break L2;
+              }
+            }
+            L3: {
+              if (rd.field_c == null) {
+                break L3;
+              } else {
+                try {
+                  L4: {
+                    rd.field_c.b((byte) -70);
+                    break L4;
+                  }
+                } catch (java.io.IOException decompiledCaughtParameter0) {
+                  decompiledCaughtException = decompiledCaughtParameter0;
+                  L5: {
+                    iOException = (IOException) (Object) decompiledCaughtException;
+                    break L5;
+                  }
                 }
+                break L3;
+              }
+            }
+            L6: {
+              if (null != mc.field_c) {
+                var1 = 0;
+                L7: while (true) {
+                  if (var1 >= mc.field_c.length) {
+                    break L6;
+                  } else {
+                    if (mc.field_c[var1] != null) {
+                      try {
+                        L8: {
+                          mc.field_c[var1].b((byte) -70);
+                          var1++;
+                          break L8;
+                        }
+                      } catch (java.io.IOException decompiledCaughtParameter1) {
+                        decompiledCaughtException = decompiledCaughtParameter1;
+                        L9: {
+                          var2 = (IOException) (Object) decompiledCaughtException;
+                          var1++;
+                          break L9;
+                        }
+                      }
+                      continue L7;
+                    } else {
+                      var1++;
+                      continue L7;
+                    }
+                  }
+                }
+              } else {
+                break L6;
+              }
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;

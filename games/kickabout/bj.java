@@ -28,20 +28,46 @@ public class bj {
     }
 
     public static void a(String param0, byte param1, int param2) {
-        field_b = param2;
-        field_c = param0;
-        if (param1 != -99) {
+        Exception exception = null;
+        Throwable decompiledCaughtException = null;
+        L0: {
+          field_b = param2;
+          field_c = param0;
+          if (param1 == -99) {
+            break L0;
+          } else {
             field_b = -5;
+            break L0;
+          }
         }
         try {
-            field_a = System.getProperty("user.home");
-            // if_acmpeq L65
-            field_a = field_a + "/";
-        } catch (Exception exception) {
+          L1: {
+            L2: {
+              field_a = System.getProperty("user.home");
+              if (null == field_a) {
+                break L2;
+              } else {
+                field_a = field_a + "/";
+                break L2;
+              }
+            }
+            break L1;
+          }
+        } catch (java.lang.Exception decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L3: {
+            exception = (Exception) (Object) decompiledCaughtException;
+            break L3;
+          }
         }
-        field_e = true;
-        if (!(field_a != null)) {
+        L4: {
+          field_e = true;
+          if (field_a == null) {
             field_a = "~/";
+            break L4;
+          } else {
+            break L4;
+          }
         }
     }
 

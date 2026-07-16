@@ -20,7 +20,7 @@ final class ok {
 
     final static void a(int param0, String param1) {
         if (param0 != 564) {
-            field_a = (char[]) null;
+            field_a = null;
         }
     }
 

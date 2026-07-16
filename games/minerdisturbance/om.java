@@ -177,13 +177,15 @@ final class om {
         var2 = 0;
         L0: while (true) {
           if (param0 > var2) {
-            var3 = new al();
-            ((om) this).field_a[var2] = new al();
+            al dupTemp$2 = new al();
+            var3 = dupTemp$2;
+            ((om) this).field_a[var2] = dupTemp$2;
             var3.field_t = var3;
             var3.field_q = var3;
             var2++;
             continue L0;
           } else {
+            return;
           }
         }
     }

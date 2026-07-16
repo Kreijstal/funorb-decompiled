@@ -130,7 +130,7 @@ final class bn extends qt {
           io.field_e.b(0, param1);
           w.field_b.b(11570);
           var4 = -32 % ((38 - param0) / 60);
-          if (wh.field_w >= -1) {
+          if ((wh.field_w ^ -1) >= -1) {
             break L3;
           } else {
             wh.field_w = wh.field_w - 1;
@@ -139,7 +139,7 @@ final class bn extends qt {
         }
         L4: {
           var5 = je.field_k;
-          if (-21 <= sd.field_b - -un.field_d.a(gu.field_Jb)) {
+          if (-21 >= (sd.field_b - -un.field_d.a(gu.field_Jb) ^ -1)) {
             sd.field_b = sd.field_b - 1;
             break L4;
           } else {
@@ -150,7 +150,7 @@ final class bn extends qt {
         var6 = 0;
         var7 = 0;
         L5: while (true) {
-          if (var7 >= ha.field_H.length) {
+          if ((var7 ^ -1) <= (ha.field_H.length ^ -1)) {
             L6: {
               if (1 != np.field_Cb.field_sb) {
                 break L6;
@@ -170,8 +170,9 @@ final class bn extends qt {
                 if (!uv.field_f) {
                   break L8;
                 } else {
+                  int fieldTemp$3 = ri.field_t - 1;
                   ri.field_t = ri.field_t - 1;
-                  if ((ri.field_t - 1 ^ -1) >= -1) {
+                  if ((fieldTemp$3 ^ -1) >= -1) {
                     break L8;
                   } else {
                     stackOut_25_0 = 1;
@@ -198,7 +199,7 @@ final class bn extends qt {
                   if (mf.field_Gb != var7) {
                     break L10;
                   } else {
-                    if (je.field_k == var5) {
+                    if ((je.field_k ^ -1) == (var5 ^ -1)) {
                       break L9;
                     } else {
                       break L10;
@@ -226,10 +227,10 @@ final class bn extends qt {
                   if (jh.field_Hb.field_Db.field_J <= var3) {
                     break L13;
                   } else {
-                    if (((bn) this).field_D != 0) {
+                    if ((((bn) this).field_D ^ -1) != -1) {
                       break L13;
                     } else {
-                      wh discarded$2 = sp.c(59, 76);
+                      wh discarded$4 = sp.c(59, 76);
                       ((bn) this).field_D = 5;
                       break L13;
                     }
@@ -240,7 +241,7 @@ final class bn extends qt {
                     break L14;
                   } else {
                     if (0 == ((bn) this).field_D) {
-                      wh discarded$3 = sp.c(60, -118);
+                      wh discarded$5 = sp.c(60, -118);
                       ((bn) this).field_D = 5;
                       break L14;
                     } else {
@@ -250,31 +251,35 @@ final class bn extends qt {
                 }
                 return;
               } else {
-                if (ha.field_H[var7].field_gb) {
-                  qd.a((byte) -67, vo.a((byte) -18, fu.field_f, new String[1]));
-                  var7++;
-                  continue L12;
-                } else {
-                  var7++;
-                  continue L12;
+                L15: {
+                  if (ha.field_H[var7].field_gb) {
+                    qd.a((byte) -67, vo.a((byte) -18, fu.field_f, new String[1]));
+                    break L15;
+                  } else {
+                    break L15;
+                  }
                 }
+                var7++;
+                continue L12;
               }
             }
           } else {
-            if (-2 == (ha.field_H[var7].field_sb ^ -1)) {
-              nq.b(var7, 500);
-              je.field_k = var7;
-              mf.field_Gb = 0;
-              var5 = var7;
-              jh.field_Hb.field_Db.field_J = 0;
-              kj.a((byte) 80);
-              var6 = 1;
-              var7++;
-              continue L5;
-            } else {
-              var7++;
-              continue L5;
+            L16: {
+              if (-2 != (ha.field_H[var7].field_sb ^ -1)) {
+                break L16;
+              } else {
+                nq.b(var7, 500);
+                je.field_k = var7;
+                mf.field_Gb = 0;
+                var5 = var7;
+                jh.field_Hb.field_Db.field_J = 0;
+                kj.a((byte) 80);
+                var6 = 1;
+                break L16;
+              }
             }
+            var7++;
+            continue L5;
           }
         }
     }
@@ -376,9 +381,9 @@ final class bn extends qt {
             }
         }
         if (!la.a(100)) {
-            if (param0 == -85) {
+            if ((param0 ^ -1) == -85) {
                 var4 = w.field_b.j((byte) -16);
-                if (-1 < var4.length()) {
+                if (-1 > (var4.length() ^ -1)) {
                     sp.a(w.field_b.j((byte) -16), (byte) 74);
                     w.field_b.b("", -23174);
                     kj.a((byte) -115);
@@ -443,7 +448,7 @@ final class bn extends qt {
               ta.e(param0 ^ -122);
               on.a(20 + je.field_k * 50 + ((bn) this).field_j, 135, 48, 2, 0);
               on.a(20 + ((bn) this).field_j, 137, 348, 26, 0);
-              var3 = (ji) (Object) lh.field_C;
+              var3_ref = lh.field_C;
               if ((je.field_k ^ -1) >= -1) {
                 break L2;
               } else {

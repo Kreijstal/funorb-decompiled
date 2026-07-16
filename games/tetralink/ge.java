@@ -101,6 +101,7 @@ final class ge {
           if (var2 >= 10) {
             ((ge) this).field_c = param0.e(127);
             ((ge) this).field_b = param0.e(127);
+            return;
           } else {
             var3 = param0.d((byte) -99);
             if (var3 != 0) {

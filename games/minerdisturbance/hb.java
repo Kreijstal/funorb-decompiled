@@ -10,7 +10,6 @@ final class hb {
 
     final fc a(int param0, int param1) {
         fc var3 = null;
-        fc var3_ref = null;
         byte[] var4 = null;
         var3 = (fc) ((hb) this).field_c.a((long)param1, (byte) 95);
         if (var3 != null) {
@@ -26,9 +25,9 @@ final class hb {
             }
           }
           L1: {
-            var3_ref = new fc();
+            var3 = new fc();
             if (var4 != null) {
-              var3_ref.a(param0 + 7307, new sb(var4));
+              var3.a(param0 + 7307, new sb(var4));
               break L1;
             } else {
               break L1;
@@ -36,17 +35,17 @@ final class hb {
           }
           L2: {
             if (32768 <= param1) {
-              var3_ref.g(60);
+              var3.g(60);
               break L2;
             } else {
               break L2;
             }
           }
-          ((hb) this).field_c.a(6565, (long)param1, (Object) (Object) var3_ref);
+          ((hb) this).field_c.a(6565, (long)param1, (Object) (Object) var3);
           if (param0 != 25461) {
             return null;
           } else {
-            return var3_ref;
+            return var3;
           }
         }
     }

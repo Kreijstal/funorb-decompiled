@@ -37,9 +37,9 @@ final class mf extends qb {
             var11 = var2;
             break L0;
           } else {
-            var14 = (ac) param0;
-            param0 = ((ac) var14).field_b;
-            var2 = ((ac) var14).field_a + " | ";
+            var14 = (ac) (Object) param0;
+            param0 = var14.field_b;
+            var2 = var14.field_a + " | ";
             break L0;
           }
         }
@@ -52,7 +52,7 @@ final class mf extends qb {
         var2 = var11;
         var11 = var5;
         if (param1 != -3) {
-          return (String) null;
+          return null;
         } else {
           var6 = new BufferedReader((Reader) (Object) new StringReader(var5));
           var7 = var6.readLine();

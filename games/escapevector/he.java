@@ -17,11 +17,13 @@ final class he extends k {
     final ef a(int param0, byte param1) {
         if (param1 != -53) {
           ((he) this).field_t = null;
-          ((he) this).field_w[param0] = new ef();
-          return new ef();
+          ef dupTemp$4 = new ef();
+          ((he) this).field_w[param0] = dupTemp$4;
+          return dupTemp$4;
         } else {
-          ((he) this).field_w[param0] = new ef();
-          return new ef();
+          ef dupTemp$5 = new ef();
+          ((he) this).field_w[param0] = dupTemp$5;
+          return dupTemp$5;
         }
     }
 
@@ -721,8 +723,9 @@ final class he extends k {
     public he() {
         ((he) this).field_w = new ef[6];
         ((he) this).field_t = new ef();
-        ((he) this).field_w[0] = new ef();
-        ef var1 = new ef();
+        ef dupTemp$0 = new ef();
+        ((he) this).field_w[0] = dupTemp$0;
+        ef var1 = dupTemp$0;
         var1.a(true);
     }
 
@@ -778,10 +781,11 @@ final class he extends k {
                   stackIn_6_0 = stackOut_5_0;
                   stackIn_6_1 = stackOut_5_1;
                   if (var6 == null) {
-                    param2.field_w[var4] = new ef();
+                    ef dupTemp$1 = new ef();
+                    param2.field_w[var4] = dupTemp$1;
                     stackOut_7_0 = (ef) (Object) stackIn_7_0;
                     stackOut_7_1 = stackIn_7_1;
-                    stackOut_7_2 = new ef();
+                    stackOut_7_2 = (ef) dupTemp$1;
                     stackIn_8_0 = stackOut_7_0;
                     stackIn_8_1 = stackOut_7_1;
                     stackIn_8_2 = stackOut_7_2;

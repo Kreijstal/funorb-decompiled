@@ -15,11 +15,11 @@ final class fr extends ma {
 
     final static int a(int param0, int param1) {
         int var2 = 0;
-        if (-1 != param1) {
+        if (-1 != (param1 ^ -1)) {
           if (0 < param1) {
             L0: {
               var2 = 1;
-              if (-65536 >= param1) {
+              if (-65536 <= (param1 ^ -1)) {
                 break L0;
               } else {
                 param1 = param1 >> 16;
@@ -75,9 +75,8 @@ final class fr extends ma {
                 break L5;
               }
             }
-            if (param0 != 16) {
+            if (param0 == 16) {
               L6: {
-                fr.c((byte) -52);
                 if (-256 <= param1) {
                   break L6;
                 } else {
@@ -116,6 +115,7 @@ final class fr extends ma {
               return var2;
             } else {
               L10: {
+                fr.c((byte) -52);
                 if (-256 <= param1) {
                   break L10;
                 } else {

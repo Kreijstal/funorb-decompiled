@@ -79,13 +79,13 @@ final class bm extends gj implements da {
             }
             var5 = (ll) (Object) jj.field_S.b((byte) -105);
         }
-        ll var5_ref = new ll();
-        var5_ref.field_k = param4;
-        var5_ref.field_t = param2;
-        var5_ref.field_q = param3;
-        jj.field_S.a(param0, (lh) (Object) var5_ref);
-        ak.a(-14722, var5_ref, param1);
-        return var5_ref;
+        var5 = new ll();
+        var5.field_k = param4;
+        var5.field_t = param2;
+        var5.field_q = param3;
+        jj.field_S.a(param0, (lh) (Object) var5);
+        ak.a(-14722, var5, param1);
+        return var5;
     }
 
     final static int f(byte param0) {

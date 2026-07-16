@@ -282,8 +282,9 @@ final class fm {
                 ((fm) this).field_h = 0;
                 break L0;
               } else {
+                int fieldTemp$2 = ((fm) this).field_h;
                 ((fm) this).field_h = ((fm) this).field_h + 1;
-                ((fm) this).field_e[((fm) this).field_h] = (byte) 0;
+                ((fm) this).field_e[fieldTemp$2] = (byte) 0;
                 continue L1;
               }
             }
@@ -322,8 +323,9 @@ final class fm {
               }
             }
           } else {
+            int fieldTemp$3 = ((fm) this).field_h;
             ((fm) this).field_h = ((fm) this).field_h + 1;
-            ((fm) this).field_e[((fm) this).field_h] = (byte) 0;
+            ((fm) this).field_e[fieldTemp$3] = (byte) 0;
             continue L3;
           }
         }
@@ -384,7 +386,7 @@ final class fm {
                             ((fm) this).field_f[0] = uh.a(((fm) this).field_f[0], co.field_b[var2]);
                             var3 = 0;
                             L7: while (true) {
-                              if (-9 >= var3) {
+                              if (-9 >= (var3 ^ -1)) {
                                 var3 = 0;
                                 L8: while (true) {
                                   if (8 <= var3) {
@@ -402,7 +404,7 @@ final class fm {
                                 var4 = var8;
                                 var5 = 56;
                                 L9: while (true) {
-                                  if (-9 <= var8) {
+                                  if (-9 >= (var8 ^ -1)) {
                                     var3++;
                                     continue L7;
                                   } else {

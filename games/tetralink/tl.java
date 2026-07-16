@@ -38,19 +38,16 @@ final class tl extends gn implements ih, dm {
     }
 
     final boolean a(int param0, char param1, int param2, na param3) {
-        if (super.a(param0, param1, param2, param3)) {
-          return true;
-        } else {
-          if (param0 != -99) {
-            if (-100 != param0) {
-              return false;
-            } else {
-              return ((tl) this).b(param3, param2 ^ 117);
-            }
-          } else {
-            return ((tl) this).d(param3, param2 + 109);
-          }
+        if (!(!super.a(param0, param1, param2, param3))) {
+            return true;
         }
+        if ((param0 ^ -1) == -99) {
+            return ((tl) this).d(param3, param2 + 109);
+        }
+        if (-100 != (param0 ^ -1)) {
+            return false;
+        }
+        return ((tl) this).b(param3, param2 ^ 117);
     }
 
     final void a(int param0, int param1, int param2, int param3) {
@@ -152,14 +149,34 @@ final class tl extends gn implements ih, dm {
     }
 
     private final void a(boolean param0) {
-        if (!wd.b((byte) -101)) {
-            // if_icmpge L63
-            // if_icmple L63
+        Object var3 = null;
+        L0: {
+          L1: {
+            if (wd.b((byte) -101)) {
+              break L1;
+            } else {
+              if (0 >= ((tl) this).field_ab.field_A.length()) {
+                break L0;
+              } else {
+                if (-1 <= (((tl) this).field_S.field_A.length() ^ -1)) {
+                  break L0;
+                } else {
+                  break L1;
+                }
+              }
+            }
+          }
+          nl.a(((tl) this).field_S.field_A, 39, ((tl) this).field_ab.field_A);
+          break L0;
         }
-        nl.a(((tl) this).field_S.field_A, 39, ((tl) this).field_ab.field_A);
-        if (param0) {
-            Object var3 = null;
+        L2: {
+          if (!param0) {
+            break L2;
+          } else {
+            var3 = null;
             ((tl) this).a((byte) 76, (ae) null, 98, -102, 110);
+            break L2;
+          }
         }
     }
 
@@ -349,8 +366,7 @@ final class tl extends gn implements ih, dm {
                 break L6;
               }
             }
-            new ae(stackIn_18_3, (dn) null);
-            ((tl) this).field_cb = stackIn_18_1;
+            ((tl) this).field_cb = new ae(stackIn_18_3, (dn) null);
             if (!((tl) this).field_L) {
               break L5;
             } else {
@@ -434,11 +450,13 @@ final class tl extends gn implements ih, dm {
           }
         }
         L13: {
-          var12 = new rc(10, ((tl) this).field_w, -20 + ((tl) this).field_F, 25, (na) (Object) ((tl) this).field_ab, false, 80, 3, var7, 16777215, var8);
-          ((tl) this).c((na) (Object) new rc(10, ((tl) this).field_w, -20 + ((tl) this).field_F, 25, (na) (Object) ((tl) this).field_ab, false, 80, 3, var7, 16777215, var8), 10);
+          rc dupTemp$2 = new rc(10, ((tl) this).field_w, -20 + ((tl) this).field_F, 25, (na) (Object) ((tl) this).field_ab, false, 80, 3, var7, 16777215, var8);
+          var12 = dupTemp$2;
+          ((tl) this).c((na) (Object) dupTemp$2, 10);
           ((tl) this).field_w = ((tl) this).field_w + (((na) (Object) var12).field_u + 5);
-          var13 = new rc(10, ((tl) this).field_w, -20 + ((tl) this).field_F, 25, (na) (Object) ((tl) this).field_S, false, 80, 3, var7, 16777215, gj.field_a);
-          ((tl) this).c((na) (Object) new rc(10, ((tl) this).field_w, -20 + ((tl) this).field_F, 25, (na) (Object) ((tl) this).field_S, false, 80, 3, var7, 16777215, gj.field_a), 10);
+          rc dupTemp$3 = new rc(10, ((tl) this).field_w, -20 + ((tl) this).field_F, 25, (na) (Object) ((tl) this).field_S, false, 80, 3, var7, 16777215, gj.field_a);
+          var13 = dupTemp$3;
+          ((tl) this).c((na) (Object) dupTemp$3, 10);
           ((tl) this).field_w = ((tl) this).field_w + (((na) (Object) var13).field_u - -5);
           ((tl) this).field_U.field_s = (dn) this;
           if (null == ((tl) this).field_W) {

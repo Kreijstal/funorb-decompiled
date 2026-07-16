@@ -12,8 +12,8 @@ final class rl extends r {
         L0: while (true) {
           var3 = param1.a((byte) -39, param2);
           L1: while (true) {
-            if (((vi) var3).field_a != 0) {
-              if ((((vi) var3).field_a ^ -1) == -2) {
+            if (var3.field_a != 0) {
+              if ((var3.field_a ^ -1) == -2) {
                 param2.setVisible(param0);
                 param2.dispose();
                 return;
@@ -43,19 +43,19 @@ final class rl extends r {
 
     public static void c(byte param0) {
         if (param0 > -65) {
-            aa var2 = (aa) null;
+            Object var2 = null;
             boolean discarded$0 = rl.a((byte) -120, (aa) null, (aa) null);
         }
         field_t = null;
     }
 
     final static String a(CharSequence[] param0, int param1, int param2, boolean param3) {
-        CharSequence var4_ref = null;
+        CharSequence var4_ref_CharSequence = null;
         int var4 = 0;
         int var5 = 0;
         int var6_int = 0;
         StringBuilder var6 = null;
-        CharSequence var7_ref = null;
+        CharSequence var7_ref_CharSequence = null;
         int var7 = 0;
         CharSequence var8 = null;
         int var9 = 0;
@@ -95,13 +95,13 @@ final class rl extends r {
                   }
                 }
               } else {
-                var7_ref = param0[var6_int];
-                if (var7_ref == null) {
+                var7_ref_CharSequence = param0[var6_int];
+                if (var7_ref_CharSequence == null) {
                   var5 += 4;
                   var6_int++;
                   continue L1;
                 } else {
-                  var5 = var5 + ((CharSequence) var7_ref).length();
+                  var5 = var5 + var7_ref_CharSequence.length();
                   var6_int++;
                   continue L1;
                 }
@@ -109,8 +109,8 @@ final class rl extends r {
             }
           } else {
             var10 = param0[param1];
-            var4_ref = var10;
-            if (var4_ref == null) {
+            var4_ref_CharSequence = var10;
+            if (var4_ref_CharSequence == null) {
               return "null";
             } else {
               return ((Object) (Object) var10).toString();
@@ -122,30 +122,64 @@ final class rl extends r {
     }
 
     final static boolean a(byte param0, aa param1, aa param2) {
-        int var4 = Main.field_T;
-        int var3 = -((aa) param1).field_eb + ((aa) param2).field_eb;
-        if (param0 <= 123) {
+        int var3 = 0;
+        int var4 = 0;
+        int stackIn_13_0 = 0;
+        int stackOut_12_0 = 0;
+        int stackOut_11_0 = 0;
+        L0: {
+          var4 = Main.field_T;
+          var3 = -param1.field_eb + param2.field_eb;
+          if (param0 > 123) {
+            break L0;
+          } else {
             field_u = -23;
+            break L0;
+          }
         }
-        if (bc.field_b == ((aa) param2).field_cb) {
-            // wide iinc 3 -200
-        } else {
-            if (((aa) param2).field_cb == null) {
-                // wide iinc 3 200
+        L1: {
+          if (bc.field_b != param2.field_cb) {
+            if (param2.field_cb != null) {
+              break L1;
+            } else {
+              var3 += 200;
+              break L1;
             }
+          } else {
+            var3 -= 200;
+            break L1;
+          }
         }
-        if (bc.field_b != ((aa) param1).field_cb) {
-            // ifnonnull L118
-            // wide iinc 3 -200
-        } else {
-            // wide iinc 3 200
+        L2: {
+          if (bc.field_b == param1.field_cb) {
+            var3 += 200;
+            break L2;
+          } else {
+            if (param1.field_cb != null) {
+              break L2;
+            } else {
+              var3 -= 200;
+              break L2;
+            }
+          }
         }
-        return 0 < var3 ? true : false;
+        L3: {
+          if (0 >= var3) {
+            stackOut_12_0 = 0;
+            stackIn_13_0 = stackOut_12_0;
+            break L3;
+          } else {
+            stackOut_11_0 = 1;
+            stackIn_13_0 = stackOut_11_0;
+            break L3;
+          }
+        }
+        return stackIn_13_0 != 0;
     }
 
     final String b(int param0, lk param1) {
         int var3 = 64 % ((-48 - param0) / 42);
-        return vf.a(4, ((lk) param1).field_r.length(), '*');
+        return vf.a(4, param1.field_r.length(), '*');
     }
 
     final static void a(boolean param0) {

@@ -60,8 +60,9 @@ final class ff {
               if (((ff) this).field_a[var7] >= 0) {
                 break L2;
               } else {
+                int incrementValue$8 = param2;
                 param2++;
-                param5[param2] = (byte)(var10 ^ -1);
+                param5[incrementValue$8] = (byte)(var10 ^ -1);
                 if (param4 > param2) {
                   var7 = 0;
                   break L2;
@@ -82,8 +83,9 @@ final class ff {
             L4: {
               var10 = ((ff) this).field_a[var7];
               if (((ff) this).field_a[var7] < 0) {
+                int incrementValue$9 = param2;
                 param2++;
-                param5[param2] = (byte)(var10 ^ -1);
+                param5[incrementValue$9] = (byte)(var10 ^ -1);
                 if (param2 < param4) {
                   var7 = 0;
                   break L4;
@@ -108,8 +110,9 @@ final class ff {
               if (0 <= ((ff) this).field_a[var7]) {
                 break L6;
               } else {
+                int incrementValue$10 = param2;
                 param2++;
-                param5[param2] = (byte)(var10 ^ -1);
+                param5[incrementValue$10] = (byte)(var10 ^ -1);
                 if (param4 > param2) {
                   var7 = 0;
                   break L6;
@@ -130,8 +133,9 @@ final class ff {
             L8: {
               var10 = ((ff) this).field_a[var7];
               if (-1 < (((ff) this).field_a[var7] ^ -1)) {
+                int incrementValue$11 = param2;
                 param2++;
-                param5[param2] = (byte)var10;
+                param5[incrementValue$11] = (byte)var10;
                 if (param4 > param2) {
                   var7 = 0;
                   break L8;
@@ -154,8 +158,9 @@ final class ff {
             L10: {
               var10 = ((ff) this).field_a[var7];
               if (((ff) this).field_a[var7] < 0) {
+                int incrementValue$12 = param2;
                 param2++;
-                param5[param2] = (byte)(var10 ^ -1);
+                param5[incrementValue$12] = (byte)(var10 ^ -1);
                 if (param2 < param4) {
                   var7 = 0;
                   break L10;
@@ -180,8 +185,9 @@ final class ff {
               if (-1 >= (((ff) this).field_a[var7] ^ -1)) {
                 break L12;
               } else {
+                int incrementValue$13 = param2;
                 param2++;
-                param5[param2] = (byte)(var10 ^ -1);
+                param5[incrementValue$13] = (byte)(var10 ^ -1);
                 if (param4 > param2) {
                   var7 = 0;
                   break L12;
@@ -204,8 +210,9 @@ final class ff {
               if (((ff) this).field_a[var7] >= 0) {
                 break L14;
               } else {
+                int incrementValue$14 = param2;
                 param2++;
-                param5[param2] = (byte)var10;
+                param5[incrementValue$14] = (byte)var10;
                 if (param4 > param2) {
                   var7 = 0;
                   break L14;
@@ -225,8 +232,9 @@ final class ff {
             }
             var10 = ((ff) this).field_a[var7];
             if (0 > ((ff) this).field_a[var7]) {
+              int incrementValue$15 = param2;
               param2++;
-              param5[param2] = (byte)(var10 ^ -1);
+              param5[incrementValue$15] = (byte)(var10 ^ -1);
               if (param2 < param4) {
                 var7 = 0;
                 var8++;

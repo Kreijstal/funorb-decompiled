@@ -31,8 +31,9 @@ public final class TrackController extends ch {
           var3 = field_F ? 1 : 0;
           if (dd.field_o == param0) {
             L1: {
+              int fieldTemp$1 = na.field_b + 1;
               na.field_b = na.field_b + 1;
-              if (na.field_b + 1 >= 0) {
+              if (fieldTemp$1 >= 0) {
                 break L1;
               } else {
                 L2: {
@@ -1128,7 +1129,7 @@ public final class TrackController extends ch {
             byte[] var3_ref_byte__ = null;
             byte[] var4_ref_byte__ = null;
             int var4 = 0;
-            String var4_ref = null;
+            String var4_ref_String = null;
             ng[] var4_ref_ng__ = null;
             int var5 = 0;
             oh var5_ref_oh = null;
@@ -1137,7 +1138,7 @@ public final class TrackController extends ch {
             int var7_int = 0;
             qj[] var7 = null;
             int var8 = 0;
-            qj var8_ref = null;
+            qj var8_ref_qj = null;
             qj var9 = null;
             qj var10 = null;
             qj var11 = null;
@@ -1153,7 +1154,6 @@ public final class TrackController extends ch {
             qj var21 = null;
             qj[] var22 = null;
             qj var23 = null;
-            qj var23_ref = null;
             qj var24 = null;
             qj[] var25 = null;
             qj var26 = null;
@@ -1396,12 +1396,12 @@ public final class TrackController extends ch {
                                     break L15;
                                   }
                                 }
-                                var4_ref = stackIn_91_0;
-                                var22 = ib.a(10, var4_ref, sg.field_a, "man");
+                                var4_ref_String = stackIn_91_0;
+                                var22 = ib.a(10, var4_ref_String, sg.field_a, "man");
                                 da.field_p = new qj[64][4];
                                 pd.a((Object[]) (Object) var22, 0, (Object[]) (Object) da.field_p[0], 0, 4);
                                 pd.a((Object[]) (Object) var22, 4, (Object[]) (Object) da.field_p[32], 0, 4);
-                                j.field_b = ib.a(param0 ^ 473, var4_ref, sg.field_a, "man_face");
+                                j.field_b = ib.a(param0 ^ 473, var4_ref_String, sg.field_a, "man_face");
                                 hk.field_a = ib.a(10, "", sg.field_a, "smoke");
                                 kg.field_e = ib.a(10, "", sg.field_a, "tickbox");
                                 var25 = ib.a(10, "", sg.field_a, "titlebg");
@@ -1410,24 +1410,29 @@ public final class TrackController extends ch {
                                 var8 = 0;
                                 L16: while (true) {
                                   if ((var7.length ^ -1) >= (var8 ^ -1)) {
-                                    var8_ref = ab.a("", -15383, "titlegameach", sg.field_a);
-                                    al.field_z[var7.length] = new qj(var8_ref.field_s, var8_ref.field_v);
-                                    var26 = new qj(var8_ref.field_s, var8_ref.field_v);
+                                    var8_ref_qj = ab.a("", -15383, "titlegameach", sg.field_a);
+                                    qj dupTemp$6 = new qj(var8_ref_qj.field_s, var8_ref_qj.field_v);
+                                    al.field_z[var7.length] = dupTemp$6;
+                                    var26 = dupTemp$6;
                                     var26.a();
-                                    cl.a(var25, 0, var8_ref.field_v, 0, var8_ref.field_s, param0 ^ 471);
-                                    var8_ref.e(0, 0);
+                                    cl.a(var25, 0, var8_ref_qj.field_v, 0, var8_ref_qj.field_s, param0 ^ 471);
+                                    var8_ref_qj.e(0, 0);
                                     fd.field_d = ab.a("", -15383, "exhibit", sg.field_a);
                                     var8 = ba.field_b.field_G + 26;
-                                    ai.field_a = new qj(156, var8);
-                                    var27 = new qj(156, var8);
+                                    qj dupTemp$7 = new qj(156, var8);
+                                    ai.field_a = dupTemp$7;
+                                    var27 = dupTemp$7;
                                     var9 = var27;
-                                    al.field_t = new qj(156, var8);
-                                    var28 = new qj(156, var8);
+                                    qj dupTemp$8 = new qj(156, var8);
+                                    al.field_t = dupTemp$8;
+                                    var28 = dupTemp$8;
                                     var10 = var28;
-                                    bf.field_o = new qj(156, var8);
-                                    var11 = new qj(156, var8);
-                                    vl.field_K = new qj(156, var8);
-                                    var12 = new qj(156, var8);
+                                    qj dupTemp$9 = new qj(156, var8);
+                                    bf.field_o = dupTemp$9;
+                                    var11 = dupTemp$9;
+                                    qj dupTemp$10 = new qj(156, var8);
+                                    vl.field_K = dupTemp$10;
+                                    var12 = dupTemp$10;
                                     var13 = var9;
                                     var14 = var10;
                                     var12.field_r = 467;
@@ -1462,12 +1467,13 @@ public final class TrackController extends ch {
                                     qi.d(param0 + -407);
                                     return false;
                                   } else {
-                                    var23_ref = var7[var8];
-                                    al.field_z[var8] = new qj(var23_ref.field_s, var23_ref.field_v);
-                                    var24 = new qj(var23_ref.field_s, var23_ref.field_v);
+                                    var23 = var7[var8];
+                                    qj dupTemp$11 = new qj(var23.field_s, var23.field_v);
+                                    al.field_z[var8] = dupTemp$11;
+                                    var24 = dupTemp$11;
                                     var24.a();
-                                    cl.a(var25, 0, var23_ref.field_v, 0, var23_ref.field_s, 4);
-                                    var23_ref.e(0, 0);
+                                    cl.a(var25, 0, var23.field_v, 0, var23.field_s, 4);
+                                    var23.e(0, 0);
                                     var8++;
                                     continue L16;
                                   }

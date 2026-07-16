@@ -27,69 +27,28 @@ final class qd {
     final static void b(int param0) {
         Object var1 = null;
         Throwable var2 = null;
-        int statePc = 0;
-        Throwable caughtException = null;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    if (ef.field_b != null) {
-                        statePc = 2;
-                    } else {
-                        statePc = 7;
-                    }
-                    continue stateLoop;
-                }
-                case 2: {
-                    var1 = (Object) (Object) ef.field_b;
-                    // monitorenter ef.field_b
-                    statePc = 3;
-                    continue stateLoop;
-                }
-                case 3: {
-                    try {
-                        ef.field_b = null;
-                        // monitorexit var1
-                        statePc = 7;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_3) {
-                        caughtException = stateCaught_3;
-                        statePc = 5;
-                        continue stateLoop;
-                    }
-                }
-                case 5: {
-                    try {
-                        var2 = caughtException;
-                        // monitorexit var1
-                        statePc = 6;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_5) {
-                        caughtException = stateCaught_5;
-                        statePc = 5;
-                        continue stateLoop;
-                    }
-                }
-                case 6: {
-                    throw (RuntimeException) (Object) var2;
-                }
-                case 7: {
-                    if (param0 == 1) {
-                        statePc = 9;
-                    } else {
-                        statePc = 8;
-                    }
-                    continue stateLoop;
-                }
-                case 8: {
-                    qd.b(60);
-                    statePc = 9;
-                    continue stateLoop;
-                }
-                case 9: {
-                    return;
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
+        Throwable decompiledCaughtException = null;
+        L0: {
+          if (ef.field_b != null) {
+            var1 = (Object) (Object) ef.field_b;
+            synchronized (var1) {
+              L1: {
+                ef.field_b = null;
+                break L1;
+              }
             }
+            break L0;
+          } else {
+            break L0;
+          }
+        }
+        L2: {
+          if (param0 == 1) {
+            break L2;
+          } else {
+            qd.b(60);
+            break L2;
+          }
         }
     }
 

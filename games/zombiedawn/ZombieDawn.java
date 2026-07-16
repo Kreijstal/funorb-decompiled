@@ -44,8 +44,9 @@ public final class ZombieDawn extends m {
 
     public final void a(int param0) {
         al var2 = null;
+        tj var2_ref = null;
         int var3 = 0;
-        String var4_ref = null;
+        String var4_ref_String = null;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
@@ -128,10 +129,10 @@ public final class ZombieDawn extends m {
               }
               L6: {
                 ((ZombieDawn) this).field_F = true;
-                var2 = (al) (Object) sg.field_jb;
+                var2_ref = sg.field_jb;
                 var3 = 380;
-                var4_ref = jh.field_l;
-                var5 = ((rb) (Object) var2).b(var4_ref);
+                var4_ref_String = jh.field_l;
+                var5 = ((rb) (Object) var2_ref).b(var4_ref_String);
                 if (var3 > var5) {
                   var5 = var3 + 20;
                   break L6;
@@ -178,7 +179,7 @@ public final class ZombieDawn extends m {
                   bi.f(var8, var7, var11, var12);
                   pf.field_f.b(var11 + -pf.field_f.field_w, -pf.field_f.field_t + var12);
                   bi.f(var10, var9, var11, var12);
-                  ((rb) (Object) var2).a(var4_ref, bd.field_d, nh.field_G, 2, -1);
+                  ((rb) (Object) var2_ref).a(var4_ref_String, bd.field_d, nh.field_G, 2, -1);
                   var13 = (int)(oj.field_d.field_b * (float)var3 / 100.0f);
                   bi.b(var8 + -(var3 / 2), 10 + var7, var3, 12, 0);
                   bi.f(-(var3 / 2) + var8, var7 + 10, var8 + (-(var3 / 2) - -var13), var7 - -22);
@@ -275,21 +276,43 @@ public final class ZombieDawn extends m {
     }
 
     final void o(int param0) {
-        if (ke.field_c.field_d == 6) {
-            // ifne L40
-            ke.field_c = jj.c(3, 123);
-            ca.a(false, true, 3);
-        } else {
-            if (!((dp.field_h ^ -1) == -2147483648)) {
-                ca.a(true, true, dp.field_h);
+        L0: {
+          L1: {
+            if (ke.field_c.field_d != 6) {
+              break L1;
+            } else {
+              if (nk.a(8, kg.field_g)) {
+                break L1;
+              } else {
+                ke.field_c = jj.c(3, 123);
+                ca.a(false, true, 3);
+                break L0;
+              }
             }
+          }
+          if ((dp.field_h ^ -1) != -2147483648) {
+            ca.a(true, true, dp.field_h);
+            break L0;
+          } else {
+            break L0;
+          }
         }
-        if (param0 != 1235) {
+        L2: {
+          if (param0 == 1235) {
+            break L2;
+          } else {
             ((ZombieDawn) this).field_F = true;
+            break L2;
+          }
         }
-        bh.a(0);
-        if (!(0 >= be.field_j)) {
+        L3: {
+          bh.a(0);
+          if (0 < be.field_j) {
             oj.field_d.b(param0 + -1126, 1);
+            break L3;
+          } else {
+            break L3;
+          }
         }
     }
 
@@ -329,7 +352,7 @@ public final class ZombieDawn extends m {
             if (bd.field_e != te.field_eb) {
               break L1;
             } else {
-              if (kj.field_c == nh.field_P) {
+              if ((kj.field_c ^ -1) == (nh.field_P ^ -1)) {
                 break L0;
               } else {
                 break L1;
@@ -351,10 +374,10 @@ public final class ZombieDawn extends m {
               break L2;
             } else {
               L3: {
-                if (lf.field_h.field_w != bd.field_e) {
+                if ((lf.field_h.field_w ^ -1) != (bd.field_e ^ -1)) {
                   break L3;
                 } else {
-                  if (lf.field_h.field_t == nh.field_P) {
+                  if ((lf.field_h.field_t ^ -1) == (nh.field_P ^ -1)) {
                     break L2;
                   } else {
                     break L3;
@@ -408,7 +431,7 @@ public final class ZombieDawn extends m {
               break L8;
             } else {
               L9: {
-                if (sg.field_eb.field_d != -1) {
+                if ((sg.field_eb.field_d ^ -1) != -1) {
                   break L9;
                 } else {
                   sg.field_eb.a((byte) -115, param0);
@@ -416,7 +439,7 @@ public final class ZombieDawn extends m {
                 }
               }
               po.field_xb = po.field_xb + 1;
-              if (-33 == po.field_xb) {
+              if (-33 == (po.field_xb ^ -1)) {
                 L10: {
                   if (ke.field_c.field_d == 3) {
                     bd.field_m = null;

@@ -70,7 +70,6 @@ final class pf {
 
     private final synchronized byte[] a(int param0, int param1, byte param2, int[] param3) {
         Object var5 = null;
-        byte[] var5_array = null;
         int var6 = 0;
         byte[] var7 = null;
         if (this.c(param1, param0, -21293)) {
@@ -104,7 +103,7 @@ final class pf {
             L2: {
               if (null != ((pf) this).field_d[param1][param0]) {
                 var7 = tf.a(2, false, ((pf) this).field_d[param1][param0]);
-                var5_array = var7;
+                var5 = (Object) (Object) var7;
                 if (var7 != null) {
                   break L2;
                 } else {
@@ -116,7 +115,7 @@ final class pf {
             }
             L3: {
               var6 = -32 % ((param2 - -60) / 38);
-              if (var5_array == null) {
+              if (var5 == null) {
                 break L3;
               } else {
                 if ((((pf) this).field_g ^ -1) == -2) {
@@ -137,7 +136,7 @@ final class pf {
                 }
               }
             }
-            return var5_array;
+            return (byte[]) var5;
           }
         } else {
           return null;
@@ -359,46 +358,27 @@ final class pf {
     }
 
     final synchronized int b(byte param0) {
-        int var2 = 0;
-        int var3 = 0;
         int var4 = 0;
-        int var5 = 0;
-        var5 = stellarshard.field_B;
-        if (((pf) this).a((byte) -36)) {
-          L0: {
-            var2 = 0;
-            if (param0 == 1) {
-              break L0;
-            } else {
-              this.a((byte) 33, -59);
-              break L0;
-            }
-          }
-          var3 = 0;
-          var4 = 0;
-          L1: while (true) {
-            if (var4 >= ((pf) this).field_f.length) {
-              if (-1 == var2) {
-                return 100;
-              } else {
-                var4 = 100 * var3 / var2;
-                return var4;
-              }
-            } else {
-              if (((pf) this).field_h.field_p[var4] < -1) {
+        int var5 = stellarshard.field_B;
+        if (!((pf) this).a((byte) -36)) {
+            return 0;
+        }
+        int var2 = 0;
+        if (param0 != 1) {
+            this.a((byte) 33, -59);
+        }
+        int var3 = 0;
+        for (var4 = 0; var4 < ((pf) this).field_f.length; var4++) {
+            if (!((((pf) this).field_h.field_p[var4] ^ -1) >= -1)) {
                 var3 = var3 + ((pf) this).a(var4, param0 ^ 1);
                 var2 += 100;
-                var4++;
-                continue L1;
-              } else {
-                var4++;
-                continue L1;
-              }
             }
-          }
-        } else {
-          return 0;
         }
+        if (!(-1 != (var2 ^ -1))) {
+            return 100;
+        }
+        var4 = 100 * var3 / var2;
+        return var4;
     }
 
     final static void a(int param0, String param1) {
@@ -632,10 +612,10 @@ final class pf {
                       break L5;
                     } else {
                       L6: {
-                        if (param3[0] != -1) {
+                        if ((param3[0] ^ -1) != -1) {
                           break L6;
                         } else {
-                          if (-1 != param3[1]) {
+                          if (-1 != (param3[1] ^ -1)) {
                             break L6;
                           } else {
                             if (param3[2] != 0) {
@@ -678,7 +658,7 @@ final class pf {
                   }
                 }
                 L8: {
-                  if (var5 < -2) {
+                  if ((var5 ^ -1) < -2) {
                     var50 = var43;
                     if (2 != ((pf) this).field_g) {
                       var50 = var43;
@@ -703,15 +683,15 @@ final class pf {
                           var15 = var33;
                           var16 = 0;
                           L10: while (true) {
-                            if (var5 <= var16) {
+                            if ((var5 ^ -1) >= (var16 ^ -1)) {
                               var31.field_k = var11;
                               var16 = 0;
                               var17 = 0;
                               L11: while (true) {
-                                if (var12 <= var17) {
+                                if ((var12 ^ -1) >= (var17 ^ -1)) {
                                   var17 = 0;
                                   L12: while (true) {
-                                    if (var5 <= var17) {
+                                    if ((var5 ^ -1) >= (var17 ^ -1)) {
                                       break L8;
                                     } else {
                                       L13: {
@@ -723,21 +703,23 @@ final class pf {
                                           break L13;
                                         }
                                       }
-                                      if (-1 != (((pf) this).field_g ^ -1)) {
-                                        var7[var18] = (Object) (Object) var54[var17];
-                                        var17++;
-                                        continue L12;
-                                      } else {
-                                        var7[var18] = ch.a(136, false, var54[var17]);
-                                        var17++;
-                                        continue L12;
+                                      L14: {
+                                        if (-1 != (((pf) this).field_g ^ -1)) {
+                                          var7[var18] = (Object) (Object) var54[var17];
+                                          break L14;
+                                        } else {
+                                          var7[var18] = ch.a(136, false, var54[var17]);
+                                          break L14;
+                                        }
                                       }
+                                      var17++;
+                                      continue L12;
                                     }
                                   }
                                 } else {
                                   var18 = 0;
                                   var19 = 0;
-                                  L14: while (true) {
+                                  L15: while (true) {
                                     if (var19 >= var5) {
                                       var17++;
                                       continue L11;
@@ -747,7 +729,7 @@ final class pf {
                                       var14[var19] = var14[var19] + var18;
                                       var16 = var16 + var18;
                                       var19++;
-                                      continue L14;
+                                      continue L15;
                                     }
                                   }
                                 }
@@ -762,7 +744,7 @@ final class pf {
                         } else {
                           var16 = 0;
                           var17 = 0;
-                          L15: while (true) {
+                          L16: while (true) {
                             if (var17 >= var5) {
                               var15_int++;
                               continue L9;
@@ -770,7 +752,7 @@ final class pf {
                               var16 = var16 + var31.b(false);
                               var14[var17] = var14[var17] + var16;
                               var17++;
-                              continue L15;
+                              continue L16;
                             }
                           }
                         }
@@ -785,7 +767,7 @@ final class pf {
                       var29.field_k = var11;
                       var15_int = 0;
                       var16 = 0;
-                      L16: while (true) {
+                      L17: while (true) {
                         if (var12 <= var16) {
                           if (var14_int == 0) {
                             return true;
@@ -795,40 +777,40 @@ final class pf {
                             var29.field_k = var11;
                             var17 = 0;
                             var18 = 0;
-                            L17: while (true) {
+                            L18: while (true) {
                               if (var18 >= var12) {
                                 var7[var15_int] = (Object) (Object) var52;
                                 break L8;
                               } else {
                                 var19 = 0;
                                 var20 = 0;
-                                L18: while (true) {
-                                  if (var5 <= var20) {
+                                L19: while (true) {
+                                  if ((var5 ^ -1) >= (var20 ^ -1)) {
                                     var18++;
-                                    continue L17;
+                                    continue L18;
                                   } else {
-                                    L19: {
+                                    L20: {
                                       var19 = var19 + var29.b(false);
                                       if (var6 == null) {
                                         var21 = var20;
-                                        break L19;
+                                        break L20;
                                       } else {
                                         var21 = var48[var20];
-                                        break L19;
+                                        break L20;
                                       }
                                     }
-                                    L20: {
-                                      if (var21 != param2) {
-                                        break L20;
+                                    L21: {
+                                      if ((var21 ^ -1) != (param2 ^ -1)) {
+                                        break L21;
                                       } else {
                                         ri.a(var51, var17, var52, var14_int, var19);
                                         var14_int = var14_int + var19;
-                                        break L20;
+                                        break L21;
                                       }
                                     }
                                     var17 = var17 + var19;
                                     var20++;
-                                    continue L18;
+                                    continue L19;
                                   }
                                 }
                               }
@@ -837,46 +819,48 @@ final class pf {
                         } else {
                           var17 = 0;
                           var18 = 0;
-                          L21: while (true) {
+                          L22: while (true) {
                             if (var5 <= var18) {
                               var16++;
-                              continue L16;
+                              continue L17;
                             } else {
-                              L22: {
+                              L23: {
                                 var17 = var17 + var29.b(false);
                                 if (var6 != null) {
                                   var19 = var48[var18];
-                                  break L22;
+                                  break L23;
                                 } else {
                                   var19 = var18;
-                                  break L22;
+                                  break L23;
                                 }
                               }
-                              if (var19 == param2) {
-                                var14_int = var14_int + var17;
-                                var15_int = var19;
-                                var18++;
-                                continue L21;
-                              } else {
-                                var18++;
-                                continue L21;
+                              L24: {
+                                if ((var19 ^ -1) == (param2 ^ -1)) {
+                                  var14_int = var14_int + var17;
+                                  var15_int = var19;
+                                  break L24;
+                                } else {
+                                  break L24;
+                                }
                               }
+                              var18++;
+                              continue L22;
                             }
                           }
                         }
                       }
                     }
                   } else {
-                    L23: {
+                    L25: {
                       if (var6 != null) {
                         var11 = var48[0];
-                        break L23;
+                        break L25;
                       } else {
                         var11 = 0;
-                        break L23;
+                        break L25;
                       }
                     }
-                    if (-1 != ((pf) this).field_g) {
+                    if (-1 != (((pf) this).field_g ^ -1)) {
                       var7[var11] = (Object) (Object) var51;
                       break L8;
                     } else {
@@ -957,6 +941,7 @@ final class pf {
                 }
               }
               ((pf) this).field_a = stackIn_6_1 != 0;
+              return;
             } else {
               break L0;
             }

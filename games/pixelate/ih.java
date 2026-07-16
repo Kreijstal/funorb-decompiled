@@ -61,8 +61,9 @@ final class ih {
               break L0;
             } else {
               fq.field_o.c(-1);
+              int fieldTemp$2 = hn.field_d + 1;
               hn.field_d = hn.field_d + 1;
-              if (hn.field_d + 1 < ce.field_f) {
+              if (fieldTemp$2 < ce.field_f) {
                 L1: {
                   fo.field_t = hn.field_d + -128;
                   if (fo.field_t >= 0) {
@@ -148,8 +149,9 @@ final class ih {
           field_c = null;
           if (fq.field_o != null) {
             fq.field_o.c(-1);
+            int fieldTemp$3 = hn.field_d + 1;
             hn.field_d = hn.field_d + 1;
-            if (hn.field_d + 1 >= ce.field_f) {
+            if (fieldTemp$3 >= ce.field_f) {
               L6: {
                 rg.field_e = fq.field_o;
                 hn.field_d = 0;

@@ -36,11 +36,12 @@ final class cf extends hd {
         int stackOut_9_0 = 0;
         int stackOut_8_0 = 0;
         var7 = Kickabout.field_G;
+        int fieldTemp$4 = param1.field_c - 1;
         param1.field_c = param1.field_c - 1;
-        var2 = param1.field_c - 1;
+        var2 = fieldTemp$4;
         var3 = new StringBuilder();
         var4 = param1.b(-123);
-        StringBuilder discarded$3 = var3.append(var4);
+        StringBuilder discarded$5 = var3.append(var4);
         var5 = 0;
         L0: while (true) {
           if (param1.a((byte) 82)) {
@@ -64,7 +65,7 @@ final class cf extends hd {
           } else {
             var6 = param1.b(-51);
             if (var5 != 0) {
-              StringBuilder discarded$4 = var3.append(var6);
+              StringBuilder discarded$6 = var3.append(var6);
               var5 = 0;
               continue L0;
             } else {
@@ -73,7 +74,7 @@ final class cf extends hd {
                   var5 = 1;
                   break L2;
                 } else {
-                  StringBuilder discarded$5 = var3.append(var6);
+                  StringBuilder discarded$7 = var3.append(var6);
                   break L2;
                 }
               }

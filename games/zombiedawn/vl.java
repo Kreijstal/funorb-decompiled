@@ -138,19 +138,26 @@ final class vl implements io {
                   L2: {
                     if (0 < dp.field_e.field_j) {
                       try {
-                        sn.field_c.a(dp.field_e.field_j, true, 0, dp.field_e.field_h);
-                        hm.field_N = pd.a(-22826);
-                      } catch (java.io.IOException decompiledCaughtParameter) {
-                        decompiledCaughtException = decompiledCaughtParameter;
+                        L3: {
+                          sn.field_c.a(dp.field_e.field_j, true, 0, dp.field_e.field_h);
+                          hm.field_N = pd.a(-22826);
+                          break L3;
+                        }
+                      } catch (java.io.IOException decompiledCaughtParameter0) {
+                        decompiledCaughtException = decompiledCaughtParameter0;
+                        L4: {
+                          var2 = (IOException) (Object) decompiledCaughtException;
+                          p.a(1);
+                          break L4;
+                        }
                       }
-                      var2 = (IOException) (Object) decompiledCaughtException;
-                      p.a(1);
+                      dp.field_e.field_j = 0;
                       break L2;
                     } else {
                       break L2;
                     }
                   }
-                  dp.field_e.field_j = 0;
+                  return;
                 }
               }
               dp.field_e.field_j = 0;

@@ -37,7 +37,7 @@ final class kg {
         field_c = null;
         field_b = null;
         if (param0 < 83) {
-            field_c = (cc) null;
+            field_c = null;
             field_a = null;
             return;
         }

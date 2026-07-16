@@ -82,22 +82,49 @@ final class dl {
 
     final void a(boolean param0) {
         int var2 = 0;
-        if (!param0) {
-            Object var3 = null;
-            ie discarded$0 = dl.a(29, (String) null);
+        Object var3 = null;
+        L0: {
+          if (param0) {
+            break L0;
+          } else {
+            var3 = null;
+            ie discarded$2 = dl.a(29, (String) null);
+            break L0;
+          }
         }
-        if (((dl) this).field_c != null) {
-            // ifeq L115
-            System.out.print("{");
-            for (var2 = 0; var2 < ((dl) this).field_c.a((byte) 113); var2++) {
-                if (!(0 == var2)) {
-                    System.out.print(",");
+        L1: {
+          L2: {
+            if (((dl) this).field_c == null) {
+              break L2;
+            } else {
+              if (((dl) this).field_c.a((byte) 123) == 0) {
+                break L2;
+              } else {
+                System.out.print("{");
+                var2 = 0;
+                L3: while (true) {
+                  if (var2 >= ((dl) this).field_c.a((byte) 113)) {
+                    System.out.print("}");
+                    break L1;
+                  } else {
+                    L4: {
+                      if (0 != var2) {
+                        System.out.print(",");
+                        break L4;
+                      } else {
+                        break L4;
+                      }
+                    }
+                    System.out.print(Integer.toString(((dl) this).field_c.a(var2, 2229)));
+                    var2++;
+                    continue L3;
+                  }
                 }
-                System.out.print(Integer.toString(((dl) this).field_c.a(var2, 2229)));
+              }
             }
-            System.out.print("}");
-        } else {
-            System.out.print("empty");
+          }
+          System.out.print("empty");
+          break L1;
         }
     }
 
@@ -213,7 +240,7 @@ final class dl {
                 if (param1 < -36) {
                   break L1;
                 } else {
-                  int discarded$1 = ((dl) this).a((byte) -111);
+                  int discarded$2 = ((dl) this).a((byte) -111);
                   break L1;
                 }
               }
@@ -239,8 +266,9 @@ final class dl {
               return;
             } else {
               if (!param0[((dl) this).field_c.a(var5, 2229)].field_s) {
+                int incrementValue$3 = var4;
                 var4++;
-                var3.a(10499, ((dl) this).field_c.a(var5, 2229), var4);
+                var3.a(10499, ((dl) this).field_c.a(var5, 2229), incrementValue$3);
                 var5++;
                 continue L0;
               } else {

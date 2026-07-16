@@ -39,8 +39,9 @@ final class bc extends bh {
               }
               return var5;
             } else {
+              int incrementValue$2 = var3;
               var3++;
-              var5 = var5 + ((((bc) this).field_u[var3] & rf.field_a[var4]) << param0 + -var4);
+              var5 = var5 + ((((bc) this).field_u[incrementValue$2] & rf.field_a[var4]) << param0 + -var4);
               param0 = param0 - var4;
               var4 = 8;
               continue L0;
@@ -63,8 +64,9 @@ final class bc extends bh {
               }
               return var5;
             } else {
+              int incrementValue$3 = var3;
               var3++;
-              var5 = var5 + ((((bc) this).field_u[var3] & rf.field_a[var4]) << param0 + -var4);
+              var5 = var5 + ((((bc) this).field_u[incrementValue$3] & rf.field_a[var4]) << param0 + -var4);
               param0 = param0 - var4;
               var4 = 8;
               continue L2;
@@ -80,19 +82,22 @@ final class bc extends bh {
             return;
         }
         for (var5 = 0; var5 < param3; var5++) {
+            int fieldTemp$0 = ((bc) this).field_t;
             ((bc) this).field_t = ((bc) this).field_t + 1;
-            param1[param2 + var5] = (byte)(((bc) this).field_u[((bc) this).field_t] + -((bc) this).field_w.c(0));
+            param1[param2 + var5] = (byte)(((bc) this).field_u[fieldTemp$0] + -((bc) this).field_w.c(0));
         }
     }
 
     final int d(boolean param0) {
         if (param0) {
             ((bc) this).f(-44, (byte) -67);
+            int fieldTemp$0 = ((bc) this).field_t;
             ((bc) this).field_t = ((bc) this).field_t + 1;
-            return ((bc) this).field_u[((bc) this).field_t] - ((bc) this).field_w.c(0) & 255;
+            return ((bc) this).field_u[fieldTemp$0] - ((bc) this).field_w.c(0) & 255;
         }
+        int fieldTemp$1 = ((bc) this).field_t;
         ((bc) this).field_t = ((bc) this).field_t + 1;
-        return ((bc) this).field_u[((bc) this).field_t] - ((bc) this).field_w.c(0) & 255;
+        return ((bc) this).field_u[fieldTemp$1] - ((bc) this).field_w.c(0) & 255;
     }
 
     final void i(byte param0) {
@@ -130,12 +135,14 @@ final class bc extends bh {
     final void f(int param0, byte param1) {
         if (param1 != -92) {
             field_v = null;
+            int fieldTemp$0 = ((bc) this).field_t;
             ((bc) this).field_t = ((bc) this).field_t + 1;
-            ((bc) this).field_u[((bc) this).field_t] = (byte)(((bc) this).field_w.c(oj.a((int) param1, -92)) + param0);
+            ((bc) this).field_u[fieldTemp$0] = (byte)(((bc) this).field_w.c(oj.a((int) param1, -92)) + param0);
             return;
         }
+        int fieldTemp$1 = ((bc) this).field_t;
         ((bc) this).field_t = ((bc) this).field_t + 1;
-        ((bc) this).field_u[((bc) this).field_t] = (byte)(((bc) this).field_w.c(oj.a((int) param1, -92)) + param0);
+        ((bc) this).field_u[fieldTemp$1] = (byte)(((bc) this).field_w.c(oj.a((int) param1, -92)) + param0);
     }
 
     public static void j(int param0) {

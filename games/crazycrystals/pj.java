@@ -82,8 +82,9 @@ final class pj extends bo implements Cloneable {
                         }
                       } else {
                         wp.field_d[var11] = wp.field_d[var8];
+                        int incrementValue$1 = var8;
                         var8++;
-                        wp.field_d[var8] = var12;
+                        wp.field_d[incrementValue$1] = var12;
                         if (var9 > var13) {
                           var9 = var13;
                           var11++;
@@ -132,19 +133,41 @@ final class pj extends bo implements Cloneable {
 
     final void b(int param0, int param1, int param2, boolean param3, int param4, int param5) {
         int var7 = 0;
-        if ((((pj) this).field_u ^ -1) > -1) {
-        } else {
-            var7 = ((pj) this).field_t;
-            if (0 <= var7) {
-                // ifne L40
+        L0: {
+          if ((((pj) this).field_u ^ -1) <= -1) {
+            L1: {
+              L2: {
+                var7 = ((pj) this).field_t;
+                if (0 > var7) {
+                  break L2;
+                } else {
+                  if (jm.field_j) {
+                    break L1;
+                  } else {
+                    break L2;
+                  }
+                }
+              }
+              var7 = ((pj) this).field_s;
+              break L1;
             }
-            var7 = ((pj) this).field_s;
-            if (24 == param1) {
-                // if_icmpne L78
-                le.field_g[((pj) this).field_u][var7].a(param4, param5 + -param2);
-            } else {
-                le.field_g[((pj) this).field_u][var7].b(param4, param5 + -param2, param1 * 2, 3 * param2);
+            L3: {
+              if (24 != param1) {
+                break L3;
+              } else {
+                if ((param2 ^ -1) != -25) {
+                  break L3;
+                } else {
+                  le.field_g[((pj) this).field_u][var7].a(param4, param5 + -param2);
+                  break L0;
+                }
+              }
             }
+            le.field_g[((pj) this).field_u][var7].b(param4, param5 + -param2, param1 * 2, 3 * param2);
+            break L0;
+          } else {
+            break L0;
+          }
         }
         var7 = 74 / ((param0 - 74) / 41);
     }
@@ -188,13 +211,13 @@ final class pj extends bo implements Cloneable {
         if (!param0) {
             return;
         }
-        if (((pj) this).field_u <= -1) {
-            if (-5 > ((pj) this).field_u) {
+        if ((((pj) this).field_u ^ -1) <= -1) {
+            if (-5 < (((pj) this).field_u ^ -1)) {
                 if (!(((pj) this).field_s != 0)) {
                     var3 = le.field_g[((pj) this).field_u].length + -10;
                     var4 = (int)(3.0 * ((double)var3 * Math.random()));
                     if (-1 >= (var4 ^ -1)) {
-                        if (!(var4 >= var3)) {
+                        if (!((var4 ^ -1) <= (var3 ^ -1))) {
                             ((pj) this).field_t = 10 - -var4;
                         }
                     }

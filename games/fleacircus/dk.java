@@ -53,142 +53,75 @@ abstract class dk extends qa implements wg {
         try {
             IOException var2 = null;
             Throwable decompiledCaughtException = null;
-            int statePc = 0;
-            Throwable caughtException = null;
-            stateLoop: while (true) {
-                switch (statePc) {
-                    case 0: {
-                        if (sg.field_h == null) {
-                            statePc = 12;
-                        } else {
-                            statePc = 1;
-                        }
-                        continue stateLoop;
+            if (sg.field_h == null) {
+              ud.field_b.field_i = 0;
+              return;
+            } else {
+              L0: {
+                if (0 > param1) {
+                  if (ud.field_b.field_i == 0) {
+                    if (lj.a((byte) -116) <= jd.field_n + 10000L) {
+                      break L0;
+                    } else {
+                      ud.field_b.e(8, param1);
+                      break L0;
                     }
-                    case 1: {
-                        if (0 > param1) {
-                            statePc = 5;
-                        } else {
-                            statePc = 2;
-                        }
-                        continue stateLoop;
-                    }
-                    case 2: {
-                        if (ud.field_b.field_i != 0) {
-                            statePc = 14;
-                        } else {
-                            statePc = 3;
-                        }
-                        continue stateLoop;
-                    }
-                    case 3: {
-                        if (lj.a((byte) -116) <= jd.field_n + 10000L) {
-                            statePc = 14;
-                        } else {
-                            statePc = 4;
-                        }
-                        continue stateLoop;
-                    }
-                    case 4: {
+                  } else {
+                    if (ud.field_b.field_i != 0) {
+                      break L0;
+                    } else {
+                      if (lj.a((byte) -116) <= jd.field_n + 10000L) {
+                        break L0;
+                      } else {
                         ud.field_b.e(8, param1);
-                        statePc = 14;
-                        continue stateLoop;
+                        break L0;
+                      }
                     }
-                    case 5: {
-                        if (ud.field_b.field_i == 0) {
-                            statePc = 9;
-                        } else {
-                            statePc = 6;
-                        }
-                        continue stateLoop;
+                  }
+                } else {
+                  if (ud.field_b.field_i != 0) {
+                    break L0;
+                  } else {
+                    if (lj.a((byte) -116) <= jd.field_n + 10000L) {
+                      break L0;
+                    } else {
+                      ud.field_b.e(8, param1);
+                      break L0;
                     }
-                    case 6: {
-                        if (ud.field_b.field_i != 0) {
-                            statePc = 14;
-                        } else {
-                            statePc = 7;
-                        }
-                        continue stateLoop;
-                    }
-                    case 7: {
-                        if (lj.a((byte) -116) <= jd.field_n + 10000L) {
-                            statePc = 14;
-                        } else {
-                            statePc = 8;
-                        }
-                        continue stateLoop;
-                    }
-                    case 8: {
-                        ud.field_b.e(8, param1);
-                        statePc = 14;
-                        continue stateLoop;
-                    }
-                    case 9: {
-                        if (lj.a((byte) -116) <= jd.field_n + 10000L) {
-                            statePc = 14;
-                        } else {
-                            statePc = 10;
-                        }
-                        continue stateLoop;
-                    }
-                    case 10: {
-                        ud.field_b.e(8, param1);
-                        statePc = 14;
-                        continue stateLoop;
-                    }
-                    case 12: {
-                        ud.field_b.field_i = 0;
-                        return;
-                    }
-                    case 14: {
-                        if (-1 <= (ud.field_b.field_i ^ -1)) {
-                            statePc = 19;
-                        } else {
-                            statePc = 15;
-                        }
-                        continue stateLoop;
-                    }
-                    case 15: {
-                        try {
-                            sg.field_h.a((byte) -97, ud.field_b.field_i, 0, ud.field_b.field_k);
-                            jd.field_n = lj.a((byte) -82);
-                            statePc = 18;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_15) {
-                            caughtException = stateCaught_15;
-                            statePc = 17;
-                            continue stateLoop;
-                        }
-                    }
-                    case 17: {
-                        var2 = (IOException) (Object) caughtException;
-                        k.c(-28354);
-                        statePc = 18;
-                        continue stateLoop;
-                    }
-                    case 18: {
-                        ud.field_b.field_i = 0;
-                        statePc = 19;
-                        continue stateLoop;
-                    }
-                    case 19: {
-                        if (param0 == 41) {
-                            statePc = 21;
-                        } else {
-                            statePc = 20;
-                        }
-                        continue stateLoop;
-                    }
-                    case 20: {
-                        field_C = null;
-                        statePc = 21;
-                        continue stateLoop;
-                    }
-                    case 21: {
-                        return;
-                    }
-                    default: throw new IllegalStateException("invalid CFG state " + statePc);
+                  }
                 }
+              }
+              L1: {
+                if (-1 <= (ud.field_b.field_i ^ -1)) {
+                  break L1;
+                } else {
+                  try {
+                    L2: {
+                      sg.field_h.a((byte) -97, ud.field_b.field_i, 0, ud.field_b.field_k);
+                      jd.field_n = lj.a((byte) -82);
+                      break L2;
+                    }
+                  } catch (java.io.IOException decompiledCaughtParameter0) {
+                    decompiledCaughtException = decompiledCaughtParameter0;
+                    L3: {
+                      var2 = (IOException) (Object) decompiledCaughtException;
+                      k.c(-28354);
+                      break L3;
+                    }
+                  }
+                  ud.field_b.field_i = 0;
+                  break L1;
+                }
+              }
+              L4: {
+                if (param0 == 41) {
+                  break L4;
+                } else {
+                  field_C = null;
+                  break L4;
+                }
+              }
+              return;
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -254,29 +187,66 @@ abstract class dk extends qa implements wg {
 
     final static int a(int param0, byte param1) {
         int var2 = 0;
-        if (param1 != -57) {
+        L0: {
+          var2 = 0;
+          if (param1 == -57) {
+            break L0;
+          } else {
             field_D = null;
+            break L0;
+          }
         }
-        if (0 <= param0) {
-            // if_icmpgt L40
+        L1: {
+          L2: {
+            if (0 > param0) {
+              break L2;
+            } else {
+              if (65536 > param0) {
+                break L1;
+              } else {
+                break L2;
+              }
+            }
+          }
+          var2 += 16;
+          param0 = param0 >>> 16;
+          break L1;
         }
-        var2 += 16;
-        param0 = param0 >>> 16;
-        if (param0 >= 256) {
+        L3: {
+          if (param0 < 256) {
+            break L3;
+          } else {
             var2 += 8;
             param0 = param0 >>> 8;
+            break L3;
+          }
         }
-        if (16 <= param0) {
+        L4: {
+          if (16 > param0) {
+            break L4;
+          } else {
             var2 += 4;
             param0 = param0 >>> 4;
+            break L4;
+          }
         }
-        if (!((param0 ^ -1) > -5)) {
+        L5: {
+          if ((param0 ^ -1) <= -5) {
             param0 = param0 >>> 2;
             var2 += 2;
+            break L5;
+          } else {
+            break L5;
+          }
         }
-        if (!((param0 ^ -1) > -2)) {
+        L6: {
+          if ((param0 ^ -1) <= -2) {
             var2++;
             param0 = param0 >>> 1;
+            break L6;
+          } else {
+            break L6;
+          }
         }
         return var2 + param0;
     }

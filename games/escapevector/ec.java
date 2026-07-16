@@ -14,9 +14,7 @@ final class ec {
         int var5 = 0;
         long var6 = 0L;
         hh var8 = null;
-        hh var8_ref = null;
         in var9 = null;
-        in var9_ref = null;
         var5 = (param2 << 544295716 & 65522 | param2 >>> -380803412) ^ param3;
         if (param1 > 14) {
           var5 = var5 | param2 << -48065136;
@@ -32,22 +30,22 @@ final class ec {
                   if (var9 != null) {
                     break L0;
                   } else {
-                    var9_ref = in.a(((ec) this).field_e, param2, param3);
-                    if (var9_ref != null) {
-                      ((ec) this).field_b.a((hg) (Object) var9_ref, 10901, var6);
+                    var9 = in.a(((ec) this).field_e, param2, param3);
+                    if (var9 != null) {
+                      ((ec) this).field_b.a((hg) (Object) var9, 10901, var6);
                       break L0;
                     } else {
                       return null;
                     }
                   }
                 }
-                var8_ref = var9_ref.a(param0);
-                if (var8_ref == null) {
+                var8 = var9.a(param0);
+                if (var8 == null) {
                   return null;
                 } else {
-                  var9_ref.c((byte) -27);
-                  ((ec) this).field_g.a((hg) (Object) var8_ref, 10901, var6);
-                  return var8_ref;
+                  var9.c((byte) -27);
+                  ((ec) this).field_g.a((hg) (Object) var8, 10901, var6);
+                  return var8;
                 }
               } else {
                 return null;
@@ -58,22 +56,22 @@ final class ec {
                 if (var9 != null) {
                   break L1;
                 } else {
-                  var9_ref = in.a(((ec) this).field_e, param2, param3);
-                  if (var9_ref != null) {
-                    ((ec) this).field_b.a((hg) (Object) var9_ref, 10901, var6);
+                  var9 = in.a(((ec) this).field_e, param2, param3);
+                  if (var9 != null) {
+                    ((ec) this).field_b.a((hg) (Object) var9, 10901, var6);
                     break L1;
                   } else {
                     return null;
                   }
                 }
               }
-              var8_ref = var9_ref.a(param0);
-              if (var8_ref == null) {
+              var8 = var9.a(param0);
+              if (var8 == null) {
                 return null;
               } else {
-                var9_ref.c((byte) -27);
-                ((ec) this).field_g.a((hg) (Object) var8_ref, 10901, var6);
-                return var8_ref;
+                var9.c((byte) -27);
+                ((ec) this).field_g.a((hg) (Object) var8, 10901, var6);
+                return var8;
               }
             }
           }
@@ -93,7 +91,6 @@ final class ec {
         int var5 = 0;
         long var6 = 0L;
         hh var8 = null;
-        hh var8_ref = null;
         Object var10 = null;
         hh var11 = null;
         kj var12 = null;
@@ -118,8 +115,8 @@ final class ec {
                     var10 = null;
                     hh discarded$4 = this.a(-13, 124, (int[]) null, 13);
                     var16 = var15.a();
-                    var8_ref = var16;
-                    ((ec) this).field_g.a((hg) (Object) var8_ref, 10901, var6);
+                    var8 = var16;
+                    ((ec) this).field_g.a((hg) (Object) var8, 10901, var6);
                     if (param2 != null) {
                       param2[0] = param2[0] - var16.field_h.length;
                       break L0;
@@ -127,13 +124,13 @@ final class ec {
                       break L0;
                     }
                   }
-                  return var8_ref;
+                  return var8;
                 } else {
                   L1: {
                     var17 = var15.a();
                     var11 = var17;
-                    var8_ref = var17;
-                    ((ec) this).field_g.a((hg) (Object) var8_ref, 10901, var6);
+                    var8 = var17;
+                    ((ec) this).field_g.a((hg) (Object) var8, 10901, var6);
                     if (param2 != null) {
                       param2[0] = param2[0] - var17.field_h.length;
                       break L1;
@@ -141,7 +138,7 @@ final class ec {
                       break L1;
                     }
                   }
-                  return var8_ref;
+                  return var8;
                 }
               } else {
                 return null;
@@ -157,8 +154,8 @@ final class ec {
                   var10 = null;
                   hh discarded$5 = this.a(-13, 124, (int[]) null, 13);
                   var13 = var12.a();
-                  var8_ref = var13;
-                  ((ec) this).field_g.a((hg) (Object) var8_ref, 10901, var6);
+                  var8 = var13;
+                  ((ec) this).field_g.a((hg) (Object) var8, 10901, var6);
                   if (param2 != null) {
                     param2[0] = param2[0] - var13.field_h.length;
                     break L2;
@@ -166,12 +163,12 @@ final class ec {
                     break L2;
                   }
                 }
-                return var8_ref;
+                return var8;
               } else {
                 L3: {
                   var14 = var12.a();
-                  var8_ref = var14;
-                  ((ec) this).field_g.a((hg) (Object) var8_ref, 10901, var6);
+                  var8 = var14;
+                  ((ec) this).field_g.a((hg) (Object) var8, 10901, var6);
                   if (param2 != null) {
                     param2[0] = param2[0] - var14.field_h.length;
                     break L3;
@@ -179,7 +176,7 @@ final class ec {
                     break L3;
                   }
                 }
-                return var8_ref;
+                return var8;
               }
             } else {
               return null;

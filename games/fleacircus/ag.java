@@ -52,80 +52,83 @@ final class ag {
 
     final static rh a(boolean param0, int param1, boolean param2, int param3, boolean param4, int param5) {
         try {
-            ah var6 = null;
-            IOException var6_ref = null;
-            ah var7 = null;
+            Object var6 = null;
+            Object var7 = null;
             cg var8 = null;
             rh stackIn_15_0 = null;
             Throwable decompiledCaughtException = null;
             rh stackOut_14_0 = null;
             try {
               L0: {
-                var6 = null;
-                var7 = null;
-                if (null != mh.field_x.field_q) {
-                  rd.field_c = new k(mh.field_x.field_q, 5200, 0);
-                  mh.field_x.field_q = null;
-                  var6 = new ah(255, rd.field_c, new k(mh.field_x.field_t, 12000, 0), 2097152);
-                  break L0;
-                } else {
-                  break L0;
-                }
-              }
-              L1: {
-                if (rd.field_c == null) {
-                  break L1;
-                } else {
-                  L2: {
-                    if (mc.field_c != null) {
-                      break L2;
-                    } else {
-                      mc.field_c = new k[mh.field_x.field_l.length];
-                      break L2;
-                    }
+                L1: {
+                  var6 = null;
+                  var7 = null;
+                  if (null != mh.field_x.field_q) {
+                    rd.field_c = new k(mh.field_x.field_q, 5200, 0);
+                    mh.field_x.field_q = null;
+                    var6 = (Object) (Object) new ah(255, rd.field_c, new k(mh.field_x.field_t, 12000, 0), 2097152);
+                    break L1;
+                  } else {
+                    break L1;
                   }
-                  L3: {
-                    if (mc.field_c[param1] != null) {
-                      break L3;
-                    } else {
-                      mc.field_c[param1] = new k(mh.field_x.field_l[param1], 12000, 0);
-                      mh.field_x.field_l[param1] = null;
-                      break L3;
+                }
+                L2: {
+                  if (rd.field_c == null) {
+                    break L2;
+                  } else {
+                    L3: {
+                      if (mc.field_c != null) {
+                        break L3;
+                      } else {
+                        mc.field_c = new k[mh.field_x.field_l.length];
+                        break L3;
+                      }
                     }
+                    L4: {
+                      if (mc.field_c[param1] != null) {
+                        break L4;
+                      } else {
+                        mc.field_c[param1] = new k(mh.field_x.field_l[param1], 12000, 0);
+                        mh.field_x.field_l[param1] = null;
+                        break L4;
+                      }
+                    }
+                    var7 = (Object) (Object) new ah(param1, rd.field_c, mc.field_c[param1], 2097152);
+                    break L2;
                   }
-                  var7 = new ah(param1, rd.field_c, mc.field_c[param1], 2097152);
-                  break L1;
                 }
-              }
-              L4: {
-                if (param5 == 1) {
-                  break L4;
-                } else {
-                  ag.a(7);
-                  break L4;
+                L5: {
+                  if (param5 == 1) {
+                    break L5;
+                  } else {
+                    ag.a(7);
+                    break L5;
+                  }
                 }
-              }
-              L5: {
-                var8 = gf.field_e.a(28742, param2, var7, var6, param1);
-                if (param0) {
-                  var8.c(param5 + -78);
-                  break L5;
-                } else {
-                  break L5;
+                L6: {
+                  var8 = gf.field_e.a(28742, param2, (ah) var7, (ah) var6, param1);
+                  if (param0) {
+                    var8.c(param5 + -78);
+                    break L6;
+                  } else {
+                    break L6;
+                  }
                 }
+                stackOut_14_0 = new rh((gi) (Object) var8, param4, param3);
+                stackIn_15_0 = stackOut_14_0;
+                break L0;
               }
-              stackOut_14_0 = new rh((gi) (Object) var8, param4, param3);
-              stackIn_15_0 = stackOut_14_0;
-            } catch (java.io.IOException decompiledCaughtParameter) {
-              decompiledCaughtException = decompiledCaughtParameter;
-              return stackIn_15_0;
+            } catch (java.io.IOException decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              var6 = (Object) (Object) decompiledCaughtException;
+              throw new RuntimeException(((IOException) var6).toString());
             }
+            return stackIn_15_0;
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
             throw new RuntimeException(decompiledCheckedException);
         }
-        return null;
     }
 
     final Object a(byte param0, long param1) {

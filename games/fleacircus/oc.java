@@ -35,8 +35,9 @@ final class oc {
                 if (0 <= ((oc) this).field_a[var7]) {
                   break L2;
                 } else {
+                  int incrementValue$8 = param2;
                   param2++;
-                  param4[param2] = (byte)(var10 ^ -1);
+                  param4[incrementValue$8] = (byte)(var10 ^ -1);
                   if (param3 > param2) {
                     var7 = 0;
                     break L2;
@@ -59,8 +60,9 @@ final class oc {
                 if (0 <= ((oc) this).field_a[var7]) {
                   break L4;
                 } else {
+                  int incrementValue$9 = param2;
                   param2++;
-                  param4[param2] = (byte)(var10 ^ -1);
+                  param4[incrementValue$9] = (byte)(var10 ^ -1);
                   if (param3 > param2) {
                     var7 = 0;
                     break L4;
@@ -81,8 +83,9 @@ final class oc {
               L6: {
                 var10 = ((oc) this).field_a[var7];
                 if (((oc) this).field_a[var7] < 0) {
+                  int incrementValue$10 = param2;
                   param2++;
-                  param4[param2] = (byte)(var10 ^ -1);
+                  param4[incrementValue$10] = (byte)(var10 ^ -1);
                   if (param2 < param3) {
                     var7 = 0;
                     break L6;
@@ -107,8 +110,9 @@ final class oc {
                 if (0 <= ((oc) this).field_a[var7]) {
                   break L8;
                 } else {
+                  int incrementValue$11 = param2;
                   param2++;
-                  param4[param2] = (byte)(var10 ^ -1);
+                  param4[incrementValue$11] = (byte)(var10 ^ -1);
                   if (param2 < param3) {
                     var7 = 0;
                     break L8;
@@ -131,8 +135,9 @@ final class oc {
                 if (-1 <= ((oc) this).field_a[var7]) {
                   break L10;
                 } else {
+                  int incrementValue$12 = param2;
                   param2++;
-                  param4[param2] = (byte)var10;
+                  param4[incrementValue$12] = (byte)var10;
                   if (param3 > param2) {
                     var7 = 0;
                     break L10;
@@ -153,8 +158,9 @@ final class oc {
               L12: {
                 var10 = ((oc) this).field_a[var7];
                 if (((oc) this).field_a[var7] < 0) {
+                  int incrementValue$13 = param2;
                   param2++;
-                  param4[param2] = (byte)(var10 ^ -1);
+                  param4[incrementValue$13] = (byte)(var10 ^ -1);
                   if (param3 > param2) {
                     var7 = 0;
                     break L12;
@@ -179,8 +185,9 @@ final class oc {
                 if (-1 <= ((oc) this).field_a[var7]) {
                   break L14;
                 } else {
+                  int incrementValue$14 = param2;
                   param2++;
-                  param4[param2] = (byte)(var10 ^ -1);
+                  param4[incrementValue$14] = (byte)(var10 ^ -1);
                   if (param2 < param3) {
                     var7 = 0;
                     break L14;
@@ -204,8 +211,9 @@ final class oc {
                 var8++;
                 continue L0;
               } else {
+                int incrementValue$15 = param2;
                 param2++;
-                param4[param2] = (byte)(var10 ^ -1);
+                param4[incrementValue$15] = (byte)(var10 ^ -1);
                 if (param3 > param2) {
                   var7 = 0;
                   var8++;

@@ -226,50 +226,53 @@ class lc extends lk implements ik {
         int stackOut_2_0 = 0;
         var4 = Bounce.field_N;
         try {
-          if (si.field_a.startsWith("win")) {
-            L0: {
-              if (param1.startsWith("http://")) {
-                break L0;
-              } else {
-                if (param1.startsWith("https://")) {
+          L0: {
+            if (si.field_a.startsWith("win")) {
+              L1: {
+                if (param1.startsWith("http://")) {
+                  break L1;
+                } else {
+                  if (param1.startsWith("https://")) {
+                    break L1;
+                  } else {
+                    stackOut_6_0 = 0;
+                    stackIn_7_0 = stackOut_6_0;
+                    return stackIn_7_0 != 0;
+                  }
+                }
+              }
+              L2: {
+                var2 = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789?&=,.%+-_#:/*";
+                if (param0 == -29935) {
+                  break L2;
+                } else {
+                  field_x = null;
+                  break L2;
+                }
+              }
+              var3 = 0;
+              L3: while (true) {
+                if (param1.length() <= var3) {
+                  Process discarded$2 = Runtime.getRuntime().exec("cmd /c start \"j\" \"" + param1 + "\"");
+                  stackOut_17_0 = 1;
+                  stackIn_18_0 = stackOut_17_0;
                   break L0;
                 } else {
-                  stackOut_6_0 = 0;
-                  stackIn_7_0 = stackOut_6_0;
-                  return stackIn_7_0 != 0;
+                  if (0 == (var2.indexOf((int) param1.charAt(var3)) ^ -1)) {
+                    stackOut_14_0 = 0;
+                    stackIn_15_0 = stackOut_14_0;
+                    return stackIn_15_0 != 0;
+                  } else {
+                    var3++;
+                    continue L3;
+                  }
                 }
               }
+            } else {
+              stackOut_2_0 = 0;
+              stackIn_3_0 = stackOut_2_0;
+              return stackIn_3_0 != 0;
             }
-            L1: {
-              var2 = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789?&=,.%+-_#:/*";
-              if (param0 == -29935) {
-                break L1;
-              } else {
-                field_x = null;
-                break L1;
-              }
-            }
-            var3 = 0;
-            L2: while (true) {
-              if (param1.length() <= var3) {
-                Process discarded$2 = Runtime.getRuntime().exec("cmd /c start \"j\" \"" + param1 + "\"");
-                stackOut_17_0 = 1;
-                stackIn_18_0 = stackOut_17_0;
-              } else {
-                if (0 == (var2.indexOf((int) param1.charAt(var3)) ^ -1)) {
-                  stackOut_14_0 = 0;
-                  stackIn_15_0 = stackOut_14_0;
-                  return stackIn_15_0 != 0;
-                } else {
-                  var3++;
-                  continue L2;
-                }
-              }
-            }
-          } else {
-            stackOut_2_0 = 0;
-            stackIn_3_0 = stackOut_2_0;
-            return stackIn_3_0 != 0;
           }
         } catch (java.lang.Exception decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

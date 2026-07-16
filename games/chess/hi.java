@@ -117,6 +117,7 @@ final class hi extends o {
 
     final static hi a(um param0, String param1, String param2) {
         try {
+            hi var4_ref = null;
             if (!hi.a(param0)) {
                 boolean discarded$0 = param0.a(param1, param2, (byte) -78);
                 return null;
@@ -125,13 +126,13 @@ final class hi extends o {
             if (var3 == null) {
                 return null;
             }
-            hi var4 = null;
+            Object var4 = null;
             try {
-                var4 = new hi(var3);
+                var4_ref = new hi(var3);
             } catch (IOException iOException) {
                 iOException.printStackTrace();
             }
-            return var4;
+            return var4_ref;
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
@@ -251,8 +252,9 @@ final class hi extends o {
                         break L8;
                       }
                     }
+                    int incrementValue$1 = var3;
                     var3++;
-                    ((hi) this).field_j[var3] = (byte)(var6 - 128);
+                    ((hi) this).field_j[incrementValue$1] = (byte)(var6 - 128);
                     var5++;
                     continue L6;
                   }
@@ -283,7 +285,6 @@ final class hi extends o {
         int var16 = 0;
         int var17_int = 0;
         Object var17 = null;
-        float[] var17_array = null;
         int var18_int = 0;
         float[] var18 = null;
         int var19 = 0;
@@ -514,7 +515,7 @@ final class hi extends o {
                           }
                         }
                         L15: {
-                          var21 = (float[]) (Object) stackIn_40_0;
+                          var21 = stackIn_40_0;
                           if (var3 == 0) {
                             stackOut_42_0 = (float[]) field_B;
                             stackIn_43_0 = stackOut_42_0;
@@ -526,7 +527,7 @@ final class hi extends o {
                           }
                         }
                         L16: {
-                          var22 = (float[]) (Object) stackIn_43_0;
+                          var22 = stackIn_43_0;
                           if (var3 == 0) {
                             stackOut_45_0 = (float[]) field_w;
                             stackIn_46_0 = stackOut_45_0;
@@ -538,7 +539,7 @@ final class hi extends o {
                           }
                         }
                         L17: {
-                          var23 = (float[]) (Object) stackIn_46_0;
+                          var23 = stackIn_46_0;
                           if (var3 == 0) {
                             stackOut_48_0 = (int[]) field_H;
                             stackIn_49_0 = stackOut_48_0;
@@ -549,7 +550,7 @@ final class hi extends o {
                             break L17;
                           }
                         }
-                        var56 = (int[]) (Object) stackIn_49_0;
+                        var56 = stackIn_49_0;
                         var52 = var56;
                         var48 = var52;
                         var44 = var48;
@@ -799,7 +800,7 @@ final class hi extends o {
                   var50 = var54;
                   var46 = var50;
                   var40 = var46;
-                  var17_array = var40;
+                  var17 = (Object) (Object) var40;
                   if (((hi) this).field_M) {
                     break L36;
                   } else {
@@ -857,7 +858,7 @@ final class hi extends o {
               }
             }
             ((hi) this).field_M = stackIn_111_1 != 0;
-            return var17_array;
+            return (float[]) var17;
           } else {
             var42 = field_p[var14.field_b[var17_int]];
             var55 = field_O;
@@ -909,8 +910,9 @@ final class hi extends o {
                       break L3;
                     }
                   }
+                  int incrementValue$1 = var2;
                   var2++;
-                  var1[var2] = (byte)(var7 - 128);
+                  var1[incrementValue$1] = (byte)(var7 - 128);
                   var6++;
                   continue L2;
                 } else {
@@ -1144,6 +1146,7 @@ final class hi extends o {
 
     final static hi a(um param0, int param1, int param2) {
         try {
+            hi var4_ref = null;
             if (!hi.a(param0)) {
                 boolean discarded$0 = param0.a((byte) -109, param1, param2);
                 return null;
@@ -1152,13 +1155,13 @@ final class hi extends o {
             if (var3 == null) {
                 return null;
             }
-            hi var4 = null;
+            Object var4 = null;
             try {
-                var4 = new hi(var3);
+                var4_ref = new hi(var3);
             } catch (IOException iOException) {
                 iOException.printStackTrace();
             }
-            return var4;
+            return var4_ref;
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {

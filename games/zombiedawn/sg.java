@@ -78,26 +78,26 @@ class sg extends ki implements hh {
         Object stackIn_4_0 = null;
         Object stackIn_5_0 = null;
         int stackIn_5_1 = 0;
-        e stackIn_54_0 = null;
-        int stackIn_54_1 = 0;
-        e stackIn_55_0 = null;
-        int stackIn_55_1 = 0;
-        e stackIn_56_0 = null;
-        int stackIn_56_1 = 0;
-        String stackIn_56_2 = null;
+        e stackIn_46_0 = null;
+        int stackIn_46_1 = 0;
+        e stackIn_47_0 = null;
+        int stackIn_47_1 = 0;
+        e stackIn_48_0 = null;
+        int stackIn_48_1 = 0;
+        String stackIn_48_2 = null;
         Object stackOut_2_0 = null;
         Object stackOut_4_0 = null;
         int stackOut_4_1 = 0;
         Object stackOut_3_0 = null;
         int stackOut_3_1 = 0;
-        e stackOut_53_0 = null;
-        int stackOut_53_1 = 0;
-        e stackOut_55_0 = null;
-        int stackOut_55_1 = 0;
-        String stackOut_55_2 = null;
-        e stackOut_54_0 = null;
-        int stackOut_54_1 = 0;
-        String stackOut_54_2 = null;
+        e stackOut_45_0 = null;
+        int stackOut_45_1 = 0;
+        e stackOut_47_0 = null;
+        int stackOut_47_1 = 0;
+        String stackOut_47_2 = null;
+        e stackOut_46_0 = null;
+        int stackOut_46_1 = 0;
+        String stackOut_46_2 = null;
         var5 = ZombieDawn.field_J;
         if (!((sg) this).field_gb) {
           L0: {
@@ -123,34 +123,34 @@ class sg extends ki implements hh {
           ((sg) this).field_ob.c(param2 + -115, 4210752, 8405024);
           var6 = new e((sg) this, ((sg) this).field_nb, param0);
           var4 = var6;
-          if (param1 != -6) {
-            if (-257 != param1) {
+          if ((param1 ^ -1) != -6) {
+            if (-257 != (param1 ^ -1)) {
               L1: {
-                stackOut_53_0 = (e) var6;
-                stackOut_53_1 = 89;
-                stackIn_55_0 = stackOut_53_0;
-                stackIn_55_1 = stackOut_53_1;
-                stackIn_54_0 = stackOut_53_0;
-                stackIn_54_1 = stackOut_53_1;
+                stackOut_45_0 = (e) var6;
+                stackOut_45_1 = 89;
+                stackIn_47_0 = stackOut_45_0;
+                stackIn_47_1 = stackOut_45_1;
+                stackIn_46_0 = stackOut_45_0;
+                stackIn_46_1 = stackOut_45_1;
                 if (!((sg) this).field_lb) {
-                  stackOut_55_0 = (e) (Object) stackIn_55_0;
-                  stackOut_55_1 = stackIn_55_1;
-                  stackOut_55_2 = jk.field_g;
-                  stackIn_56_0 = stackOut_55_0;
-                  stackIn_56_1 = stackOut_55_1;
-                  stackIn_56_2 = stackOut_55_2;
+                  stackOut_47_0 = (e) (Object) stackIn_47_0;
+                  stackOut_47_1 = stackIn_47_1;
+                  stackOut_47_2 = jk.field_g;
+                  stackIn_48_0 = stackOut_47_0;
+                  stackIn_48_1 = stackOut_47_1;
+                  stackIn_48_2 = stackOut_47_2;
                   break L1;
                 } else {
-                  stackOut_54_0 = (e) (Object) stackIn_54_0;
-                  stackOut_54_1 = stackIn_54_1;
-                  stackOut_54_2 = el.field_i;
-                  stackIn_56_0 = stackOut_54_0;
-                  stackIn_56_1 = stackOut_54_1;
-                  stackIn_56_2 = stackOut_54_2;
+                  stackOut_46_0 = (e) (Object) stackIn_46_0;
+                  stackOut_46_1 = stackIn_46_1;
+                  stackOut_46_2 = el.field_i;
+                  stackIn_48_0 = stackOut_46_0;
+                  stackIn_48_1 = stackOut_46_1;
+                  stackIn_48_2 = stackOut_46_2;
                   break L1;
                 }
               }
-              ((e) (Object) stackIn_56_0).a((byte) stackIn_56_1, stackIn_56_2, -1);
+              ((e) (Object) stackIn_48_0).a((byte) stackIn_48_1, stackIn_48_2, -1);
               if (-4 == (param1 ^ -1)) {
                 var6.a((byte) 92, rf.field_b, 7);
                 ((sg) this).b(param2 + 3, (ga) (Object) var6);
@@ -204,7 +204,7 @@ class sg extends ki implements hh {
               }
             } else {
               an discarded$5 = var6.a(el.field_i, 115, (sk) this);
-              if (-4 == param1) {
+              if (-4 == (param1 ^ -1)) {
                 var6.a((byte) 92, rf.field_b, 7);
                 ((sg) this).b(param2 + 3, (ga) (Object) var6);
                 if (param2 == 17) {
@@ -217,20 +217,20 @@ class sg extends ki implements hh {
                 if (param1 == 4) {
                   var6.a((byte) 99, ti.field_f, 8);
                   ((sg) this).b(param2 + 3, (ga) (Object) var6);
-                  if (param2 != 17) {
-                    field_jb = null;
+                  if (param2 == 17) {
                     return;
                   } else {
+                    field_jb = null;
                     return;
                   }
                 } else {
                   if (6 == param1) {
                     var6.a((byte) 116, di.field_I, 9);
                     ((sg) this).b(param2 + 3, (ga) (Object) var6);
-                    if (param2 != 17) {
-                      field_jb = null;
+                    if (param2 == 17) {
                       return;
                     } else {
+                      field_jb = null;
                       return;
                     }
                   } else {
@@ -245,10 +245,10 @@ class sg extends ki implements hh {
                     } else {
                       an discarded$6 = var6.a(r.field_J, 113, (sk) this);
                       ((sg) this).b(param2 + 3, (ga) (Object) var6);
-                      if (param2 != 17) {
-                        field_jb = null;
+                      if (param2 == 17) {
                         return;
                       } else {
+                        field_jb = null;
                         return;
                       }
                     }
@@ -259,51 +259,51 @@ class sg extends ki implements hh {
           } else {
             var6.a((byte) 119, te.field_R, 11);
             var6.a((byte) 104, qd.field_d, 17);
-            if (-4 == param1) {
+            if (-4 == (param1 ^ -1)) {
               var6.a((byte) 92, rf.field_b, 7);
               ((sg) this).b(param2 + 3, (ga) (Object) var6);
-              if (param2 != 17) {
-                field_jb = null;
+              if (param2 == 17) {
                 return;
               } else {
+                field_jb = null;
                 return;
               }
             } else {
               if (param1 == 4) {
                 var6.a((byte) 99, ti.field_f, 8);
                 ((sg) this).b(param2 + 3, (ga) (Object) var6);
-                if (param2 != 17) {
-                  field_jb = null;
+                if (param2 == 17) {
                   return;
                 } else {
+                  field_jb = null;
                   return;
                 }
               } else {
                 if (6 == param1) {
                   var6.a((byte) 116, di.field_I, 9);
                   ((sg) this).b(param2 + 3, (ga) (Object) var6);
-                  if (param2 != 17) {
-                    field_jb = null;
+                  if (param2 == 17) {
                     return;
                   } else {
+                    field_jb = null;
                     return;
                   }
                 } else {
                   if (9 != param1) {
                     ((sg) this).b(param2 + 3, (ga) (Object) var6);
-                    if (param2 != 17) {
-                      field_jb = null;
+                    if (param2 == 17) {
                       return;
                     } else {
+                      field_jb = null;
                       return;
                     }
                   } else {
                     an discarded$7 = var6.a(r.field_J, 113, (sk) this);
                     ((sg) this).b(param2 + 3, (ga) (Object) var6);
-                    if (param2 != 17) {
-                      field_jb = null;
+                    if (param2 == 17) {
                       return;
                     } else {
+                      field_jb = null;
                       return;
                     }
                   }

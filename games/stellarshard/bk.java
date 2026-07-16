@@ -54,7 +54,6 @@ final class bk {
 
     final static hk a(int param0, int param1, int param2, int param3, int param4) {
         hk var5 = null;
-        hk var5_ref = null;
         int var6 = 0;
         var6 = stellarshard.field_B;
         var5 = (hk) (Object) id.field_g.b(param3 + -133);
@@ -63,13 +62,13 @@ final class bk {
             if (param3 != 17) {
               return null;
             } else {
-              var5_ref = new hk();
-              var5_ref.field_r = param2;
-              var5_ref.field_q = param1;
-              var5_ref.field_t = param4;
-              id.field_g.b(param3 ^ -69, (gg) (Object) var5_ref);
-              pd.a(param0, var5_ref, 31);
-              return var5_ref;
+              var5 = new hk();
+              var5.field_r = param2;
+              var5.field_q = param1;
+              var5.field_t = param4;
+              id.field_g.b(param3 ^ -69, (gg) (Object) var5);
+              pd.a(param0, var5, 31);
+              return var5;
             }
           } else {
             if (var5.field_t == param4) {

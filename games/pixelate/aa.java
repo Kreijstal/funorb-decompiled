@@ -80,15 +80,14 @@ final class aa {
     }
 
     final static qa a(Throwable param0, String param1) {
-        qa var2_ref = null;
         qa var2 = null;
         if (param0 instanceof qa) {
             var2 = (qa) (Object) param0;
             var2.field_d = var2.field_d + 32 + param1;
         } else {
-            var2_ref = new qa(param0, param1);
+            var2 = new qa(param0, param1);
         }
-        return var2_ref;
+        return var2;
     }
 
     aa(boolean param0) {

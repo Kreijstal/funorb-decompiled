@@ -221,20 +221,20 @@ abstract class vh extends gb {
                                       if (227 != var2) {
                                         if (var2 != 192) {
                                           if (193 != var2) {
-                                            if (-195 != var2) {
-                                              if (-197 == var2) {
+                                            if (-195 != (var2 ^ -1)) {
+                                              if (-197 == (var2 ^ -1)) {
                                                 break L2;
                                               } else {
-                                                if (var2 == -196) {
+                                                if ((var2 ^ -1) == -196) {
                                                   break L2;
                                                 } else {
                                                   L3: {
-                                                    if (-233 != var2) {
+                                                    if (-233 != (var2 ^ -1)) {
                                                       if (var2 != 233) {
-                                                        if (var2 == -235) {
+                                                        if ((var2 ^ -1) == -235) {
                                                           break L3;
                                                         } else {
-                                                          if (-236 != var2) {
+                                                          if (-236 != (var2 ^ -1)) {
                                                             if ((var2 ^ -1) != -201) {
                                                               if (201 != var2) {
                                                                 if (202 == var2) {
@@ -260,7 +260,7 @@ abstract class vh extends gb {
                                                                                         if (244 == var2) {
                                                                                           break L5;
                                                                                         } else {
-                                                                                          if (-247 != var2) {
+                                                                                          if (-247 != (var2 ^ -1)) {
                                                                                             if (var2 != 245) {
                                                                                               if (var2 == 210) {
                                                                                                 break L5;
@@ -268,19 +268,19 @@ abstract class vh extends gb {
                                                                                                 if (var2 == 211) {
                                                                                                   break L5;
                                                                                                 } else {
-                                                                                                  if (-213 == var2) {
+                                                                                                  if (-213 == (var2 ^ -1)) {
                                                                                                     break L5;
                                                                                                   } else {
                                                                                                     if (var2 != 214) {
                                                                                                       if (213 != var2) {
                                                                                                         L6: {
-                                                                                                          if (var2 == -250) {
+                                                                                                          if ((var2 ^ -1) == -250) {
                                                                                                             break L6;
                                                                                                           } else {
                                                                                                             if (250 == var2) {
                                                                                                               break L6;
                                                                                                             } else {
-                                                                                                              if (-252 == var2) {
+                                                                                                              if (-252 == (var2 ^ -1)) {
                                                                                                                 break L6;
                                                                                                               } else {
                                                                                                                 if ((var2 ^ -1) == -253) {
@@ -290,7 +290,7 @@ abstract class vh extends gb {
                                                                                                                     if (218 == var2) {
                                                                                                                       break L6;
                                                                                                                     } else {
-                                                                                                                      if (var2 != -220) {
+                                                                                                                      if ((var2 ^ -1) != -220) {
                                                                                                                         if (220 == var2) {
                                                                                                                           break L6;
                                                                                                                         } else {
@@ -298,7 +298,7 @@ abstract class vh extends gb {
                                                                                                                             if (var2 == 199) {
                                                                                                                               return 'c';
                                                                                                                             } else {
-                                                                                                                              if (-256 == var2) {
+                                                                                                                              if (-256 == (var2 ^ -1)) {
                                                                                                                                 return 'y';
                                                                                                                               } else {
                                                                                                                                 if (var2 != 376) {
@@ -449,8 +449,8 @@ abstract class vh extends gb {
         } else {
           var2 = param1;
           if (var2 != 32) {
-            if (-161 != var2) {
-              if (var2 != -96) {
+            if (-161 != (var2 ^ -1)) {
+              if ((var2 ^ -1) != -96) {
                 if ((var2 ^ -1) != -46) {
                   L7: {
                     if ((var2 ^ -1) != -92) {
@@ -464,18 +464,18 @@ abstract class vh extends gb {
                                     if (227 != var2) {
                                       if (var2 != 192) {
                                         if (193 != var2) {
-                                          if (-195 != var2) {
-                                            if (-197 != var2) {
-                                              if (var2 == -196) {
+                                          if (-195 != (var2 ^ -1)) {
+                                            if (-197 != (var2 ^ -1)) {
+                                              if ((var2 ^ -1) == -196) {
                                                 break L8;
                                               } else {
                                                 L9: {
-                                                  if (-233 != var2) {
+                                                  if (-233 != (var2 ^ -1)) {
                                                     if (var2 != 233) {
-                                                      if (var2 == -235) {
+                                                      if ((var2 ^ -1) == -235) {
                                                         break L9;
                                                       } else {
-                                                        if (-236 != var2) {
+                                                        if (-236 != (var2 ^ -1)) {
                                                           if ((var2 ^ -1) != -201) {
                                                             if (201 != var2) {
                                                               if (202 == var2) {
@@ -501,7 +501,7 @@ abstract class vh extends gb {
                                                                                       if (244 == var2) {
                                                                                         break L11;
                                                                                       } else {
-                                                                                        if (-247 != var2) {
+                                                                                        if (-247 != (var2 ^ -1)) {
                                                                                           if (var2 != 245) {
                                                                                             if (var2 == 210) {
                                                                                               break L11;
@@ -509,19 +509,19 @@ abstract class vh extends gb {
                                                                                               if (var2 == 211) {
                                                                                                 break L11;
                                                                                               } else {
-                                                                                                if (-213 == var2) {
+                                                                                                if (-213 == (var2 ^ -1)) {
                                                                                                   break L11;
                                                                                                 } else {
                                                                                                   if (var2 != 214) {
                                                                                                     if (213 != var2) {
                                                                                                       L12: {
-                                                                                                        if (var2 == -250) {
+                                                                                                        if ((var2 ^ -1) == -250) {
                                                                                                           break L12;
                                                                                                         } else {
                                                                                                           if (250 == var2) {
                                                                                                             break L12;
                                                                                                           } else {
-                                                                                                            if (-252 == var2) {
+                                                                                                            if (-252 == (var2 ^ -1)) {
                                                                                                               break L12;
                                                                                                             } else {
                                                                                                               if ((var2 ^ -1) == -253) {
@@ -531,7 +531,7 @@ abstract class vh extends gb {
                                                                                                                   if (218 == var2) {
                                                                                                                     break L12;
                                                                                                                   } else {
-                                                                                                                    if (var2 != -220) {
+                                                                                                                    if ((var2 ^ -1) != -220) {
                                                                                                                       if (220 == var2) {
                                                                                                                         break L12;
                                                                                                                       } else {
@@ -539,7 +539,7 @@ abstract class vh extends gb {
                                                                                                                           if (var2 == 199) {
                                                                                                                             return 'c';
                                                                                                                           } else {
-                                                                                                                            if (-256 == var2) {
+                                                                                                                            if (-256 == (var2 ^ -1)) {
                                                                                                                               return 'y';
                                                                                                                             } else {
                                                                                                                               if (var2 != 376) {

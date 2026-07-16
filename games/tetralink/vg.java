@@ -142,46 +142,90 @@ final class vg extends hl {
 
     final boolean h(int param0) {
         int var2 = 0;
-        if (!(-1 == (((vg) this).field_Qb ^ -1))) {
-            return false;
-        }
-        if (param0 != 0) {
-            field_Mb = null;
-        }
-        if (dg.field_e == 85) {
-            if (!(0 >= ((vg) this).field_Tb.length())) {
-                StringBuilder discarded$0 = lo.a(-26750, ((vg) this).field_Tb, ((vg) this).field_Tb.length() + -1, ' ');
-            }
-        }
-        if (-13 < (((vg) this).field_Tb.length() ^ -1)) {
-            var2 = Character.toLowerCase(tb.field_m);
-            if (var2 == 32) {
-                var2 = 95;
-            }
-            if (95 == var2) {
-                if (!(((vg) this).field_Tb.length() <= 0)) {
-                    StringBuilder discarded$1 = ((vg) this).field_Tb.append(var2);
-                }
-            }
-            if (!ac.a((byte) -105, (char) var2)) {
-                // ifeq L165
-            }
-            StringBuilder discarded$2 = ((vg) this).field_Tb.append(var2);
-        }
-        if (-85 != (dg.field_e ^ -1)) {
+        if (-1 != (((vg) this).field_Qb ^ -1)) {
+          return false;
         } else {
-            if (((vg) this).field_Tb.length() > 0) {
+          L0: {
+            if (param0 == 0) {
+              break L0;
+            } else {
+              field_Mb = null;
+              break L0;
+            }
+          }
+          L1: {
+            if (dg.field_e != 85) {
+              break L1;
+            } else {
+              if (0 < ((vg) this).field_Tb.length()) {
+                StringBuilder discarded$6 = lo.a(-26750, ((vg) this).field_Tb, ((vg) this).field_Tb.length() + -1, ' ');
+                break L1;
+              } else {
+                break L1;
+              }
+            }
+          }
+          L2: {
+            if (-13 >= (((vg) this).field_Tb.length() ^ -1)) {
+              break L2;
+            } else {
+              L3: {
+                var2 = Character.toLowerCase(tb.field_m);
+                if (var2 != 32) {
+                  break L3;
+                } else {
+                  var2 = 95;
+                  break L3;
+                }
+              }
+              L4: {
+                if (95 != var2) {
+                  break L4;
+                } else {
+                  if (((vg) this).field_Tb.length() > 0) {
+                    StringBuilder discarded$7 = ((vg) this).field_Tb.append(var2);
+                    break L4;
+                  } else {
+                    break L4;
+                  }
+                }
+              }
+              L5: {
+                if (ac.a((byte) -105, (char) var2)) {
+                  break L5;
+                } else {
+                  if (!fd.a((char) var2, (byte) 88)) {
+                    break L2;
+                  } else {
+                    break L5;
+                  }
+                }
+              }
+              StringBuilder discarded$8 = ((vg) this).field_Tb.append(var2);
+              break L2;
+            }
+          }
+          L6: {
+            if (-85 == (dg.field_e ^ -1)) {
+              if (((vg) this).field_Tb.length() <= 0) {
+                ((vg) this).field_Qb = 1;
+                break L6;
+              } else {
                 ((vg) this).field_jb = ((vg) this).field_Tb.toString();
                 ((vg) this).field_Qb = 2;
+                break L6;
+              }
             } else {
-                ((vg) this).field_Qb = 1;
+              break L6;
             }
-        }
-        if (dg.field_e != 13) {
+          }
+          if (dg.field_e == 13) {
+            ((vg) this).field_Qb = 1;
             return true;
+          } else {
+            return true;
+          }
         }
-        ((vg) this).field_Qb = 1;
-        return true;
     }
 
     vg(int param0, int param1, int param2, int param3, String param4, hl param5, hl param6, hl param7) {
@@ -337,9 +381,9 @@ final class vg extends hl {
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
-        String var5_ref = null;
+        Object var5_ref = null;
         int var6 = 0;
-        String var6_ref = null;
+        Object var6_ref = null;
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
@@ -429,7 +473,7 @@ final class vg extends hl {
                     L9: {
                       var5_ref = null;
                       if (ml.field_ab == 1) {
-                        var5_ref = qf.field_d;
+                        var5_ref = (Object) (Object) qf.field_d;
                         break L9;
                       } else {
                         break L9;
@@ -437,20 +481,20 @@ final class vg extends hl {
                     }
                     L10: {
                       if (ml.field_ab == 2) {
-                        var5_ref = ai.field_c;
+                        var5_ref = (Object) (Object) ai.field_c;
                         break L10;
                       } else {
                         break L10;
                       }
                     }
                     if (-1 == (wd.field_i ^ -1)) {
-                      go.field_g.b(var5_ref, -(int)a.field_d + 652, var2 - 2, 16777215, -1);
+                      go.field_g.b((String) var5_ref, -(int)a.field_d + 652, var2 - 2, 16777215, -1);
                       break L2;
                     } else {
                       L11: {
                         var6_ref = null;
                         if (1 == wk.field_u) {
-                          var6_ref = qf.field_d;
+                          var6_ref = (Object) (Object) qf.field_d;
                           break L11;
                         } else {
                           break L11;
@@ -458,14 +502,14 @@ final class vg extends hl {
                       }
                       L12: {
                         if (wk.field_u == 2) {
-                          var6_ref = ai.field_c;
+                          var6_ref = (Object) (Object) ai.field_c;
                           break L12;
                         } else {
                           break L12;
                         }
                       }
-                      go.field_g.c(var5_ref, -(int)a.field_d + 652, -2 + var2, 16777215, -1, -wd.field_i + 256);
-                      go.field_g.c(var6_ref, -(int)a.field_d + 652, var2 + -2, 16777215, -1, wd.field_i);
+                      go.field_g.c((String) var5_ref, -(int)a.field_d + 652, -2 + var2, 16777215, -1, -wd.field_i + 256);
+                      go.field_g.c((String) var6_ref, -(int)a.field_d + 652, var2 + -2, 16777215, -1, wd.field_i);
                       break L2;
                     }
                   } else {
@@ -484,10 +528,10 @@ final class vg extends hl {
           }
           L13: {
             L14: {
-              if (ml.field_ab == -3) {
+              if ((ml.field_ab ^ -1) == -3) {
                 break L14;
               } else {
-                if (-3 != wk.field_u) {
+                if (-3 != (wk.field_u ^ -1)) {
                   break L13;
                 } else {
                   break L14;
@@ -571,15 +615,17 @@ final class vg extends hl {
                 var8 = 0;
                 L23: while (true) {
                   if (-19 >= (var8 ^ -1)) {
-                    if (-257 != (var4 ^ -1)) {
-                      l.field_c[var5].a(12 + var7, -13 + var2, var4);
-                      var5++;
-                      continue L17;
-                    } else {
-                      l.field_c[var5].c(12 + var7, var2 - 13);
-                      var5++;
-                      continue L17;
+                    L24: {
+                      if (-257 != (var4 ^ -1)) {
+                        l.field_c[var5].a(12 + var7, -13 + var2, var4);
+                        break L24;
+                      } else {
+                        l.field_c[var5].c(12 + var7, var2 - 13);
+                        break L24;
+                      }
                     }
+                    var5++;
+                    continue L17;
                   } else {
                     ra.e(var8 / 2 + (var7 + 2), var2 - var8, 24, var6, var3);
                     ra.e(var8 / 2 + var7, -var8 + var2, 2, 16777215, var3);
@@ -624,6 +670,7 @@ final class vg extends hl {
               if (10 < var0) {
                 field_Mb = "Please log in to access this feature.";
                 field_Nb = "There are no valid types of game that match your preferences.";
+                return;
               } else {
                 var1 = 8 * var0 - 8;
                 field_Ob[var0] = mb.a(mb.a(pd.a(65280L, field_Ub[6][6 + var1]), mb.a(pd.a(16711680L, field_Ub[5][var1 - -5]), mb.a(mb.a(pd.a(field_Ub[3][3 + var1], 1095216660480L), mb.a(mb.a(pd.a(field_Ub[1][1 + var1], 71776119061217280L), pd.a(-72057594037927936L, field_Ub[0][var1])), pd.a(280375465082880L, field_Ub[2][2 + var1]))), pd.a(field_Ub[4][var1 - -4], 4278190080L)))), pd.a(field_Ub[7][var1 - -7], 255L));
@@ -633,7 +680,7 @@ final class vg extends hl {
             }
           } else {
             L2: {
-              var1 = "ᠣ웨螸ŏ㚦틵祯酒悼鮎ꌌ笵ᷠퟂ⹋﹗ᕷ㟥鿰䫚壉⤊놠殅뵝ჴ쬾է䆋Ᵹ闘ﯮ籦���䞞쨭뼇굚茳挂ꩱ젙䧙守騦㊰햀뻍㑈ｺ遟⁨᪮둔錢擱猒䀈쏬���贽需켫皂혛떯橐䗳ワ㽕ꋪ斺⿀���﵍鉵ڊ닦ฟ拔ꢖ暈╙葲㥌幸㢌톥댡鰞䏇ﰄ写洍﫟縤㮫츑轎럫㲁铷뤓ⳓ쐃噄義⪻셓���鵬ㅴ겉ᓡᘺ椉炶탭챂颤⡜".charAt(var0 / 2);
+              var1 = "ᠣ웨螸ŏ㚦틵祯酒悼鮎ꌌ笵ᷠퟂ⹋﹗ᕷ㟥鿰䫚壉⤊놠殅뵝ჴ쬾է䆋Ᵹ闘ﯮ籦\udd17䞞쨭뼇굚茳挂ꩱ젙䧙守騦㊰햀뻍㑈ｺ遟⁨᪮둔錢擱猒䀈쏬\udba1贽需켫皂혛떯橐䗳ワ㽕ꋪ斺⿀\ude1c﵍鉵ڊ닦ฟ拔ꢖ暈╙葲㥌幸㢌톥댡鰞䏇ﰄ写洍﫟縤㮫츑轎럫㲁铷뤓ⳓ쐃噄義⪻셓\udc0b鵬ㅴ겉ᓡᘺ椉炶탭챂颤⡜".charAt(var0 / 2);
               if (0 == (1 & var0)) {
                 stackOut_4_0 = (long)(var1 >>> -1709309208);
                 stackIn_5_0 = stackOut_4_0;

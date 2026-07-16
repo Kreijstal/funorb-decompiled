@@ -94,8 +94,9 @@ final class ig extends qb {
                       break L3;
                     }
                   }
+                  int incrementValue$1 = var2;
                   var2++;
-                  var1[var2] = (byte)(var7 - 128);
+                  var1[incrementValue$1] = (byte)(var7 - 128);
                   var6++;
                   continue L2;
                 } else {
@@ -201,8 +202,9 @@ final class ig extends qb {
                         break L8;
                       }
                     }
+                    int incrementValue$1 = var3;
                     var3++;
-                    ((ig) this).field_p[var3] = (byte)(var6 - 128);
+                    ((ig) this).field_p[incrementValue$1] = (byte)(var6 - 128);
                     var5++;
                     continue L6;
                   }
@@ -543,7 +545,6 @@ final class ig extends qb {
         int var16 = 0;
         int var17_int = 0;
         Object var17 = null;
-        float[] var17_array = null;
         int var18_int = 0;
         float[] var18 = null;
         int var19 = 0;
@@ -718,8 +719,8 @@ final class ig extends qb {
         }
         L8: {
           var14 = field_A[field_r[var2]];
-          var16 = ((ld) var14).field_d;
-          var17_int = ((ld) var14).field_c[var16];
+          var16 = var14.field_d;
+          var17_int = var14.field_c[var16];
           if (field_L[var17_int].b()) {
             stackOut_21_0 = 0;
             stackIn_22_0 = stackOut_21_0;
@@ -734,13 +735,13 @@ final class ig extends qb {
         var16 = var15;
         var17_int = 0;
         L9: while (true) {
-          if (var17_int >= ((ld) var14).field_b) {
+          if (var17_int >= var14.field_b) {
             L10: {
               if (var15 != 0) {
                 break L10;
               } else {
-                var17_int = ((ld) var14).field_d;
-                var18_int = ((ld) var14).field_c[var17_int];
+                var17_int = var14.field_d;
+                var18_int = var14.field_c[var17_int];
                 field_L[var18_int].a(field_o, var4 >> 1);
                 break L10;
               }
@@ -774,7 +775,7 @@ final class ig extends qb {
                           }
                         }
                         L15: {
-                          var21 = (float[]) (Object) stackIn_40_0;
+                          var21 = stackIn_40_0;
                           if (var3 == 0) {
                             stackOut_42_0 = (float[]) field_B;
                             stackIn_43_0 = stackOut_42_0;
@@ -786,7 +787,7 @@ final class ig extends qb {
                           }
                         }
                         L16: {
-                          var22 = (float[]) (Object) stackIn_43_0;
+                          var22 = stackIn_43_0;
                           if (var3 == 0) {
                             stackOut_45_0 = (float[]) field_y;
                             stackIn_46_0 = stackOut_45_0;
@@ -798,7 +799,7 @@ final class ig extends qb {
                           }
                         }
                         L17: {
-                          var23 = (float[]) (Object) stackIn_46_0;
+                          var23 = stackIn_46_0;
                           if (var3 == 0) {
                             stackOut_48_0 = (int[]) field_K;
                             stackIn_49_0 = stackOut_48_0;
@@ -809,7 +810,7 @@ final class ig extends qb {
                             break L17;
                           }
                         }
-                        var56 = (int[]) (Object) stackIn_49_0;
+                        var56 = stackIn_49_0;
                         var52 = var56;
                         var48 = var52;
                         var44 = var48;
@@ -1059,7 +1060,7 @@ final class ig extends qb {
                   var50 = var54;
                   var46 = var50;
                   var40 = var46;
-                  var17_array = var40;
+                  var17 = (Object) (Object) var40;
                   if (((ig) this).field_z) {
                     break L36;
                   } else {
@@ -1117,9 +1118,9 @@ final class ig extends qb {
               }
             }
             ((ig) this).field_z = stackIn_111_1 != 0;
-            return var17_array;
+            return (float[]) var17;
           } else {
-            var42 = field_t[((ld) var14).field_a[var17_int]];
+            var42 = field_t[var14.field_a[var17_int]];
             var55 = field_o;
             var42.a(var55, var4 >> 1, var16 != 0);
             var17_int++;
@@ -1130,6 +1131,7 @@ final class ig extends qb {
 
     final static ig a(qk param0, String param1, String param2) {
         try {
+            ig var4_ref = null;
             if (!ig.a(param0)) {
                 boolean discarded$0 = param0.a(param1, param2, (byte) -44);
                 return null;
@@ -1138,13 +1140,13 @@ final class ig extends qb {
             if (var3 == null) {
                 return null;
             }
-            ig var4 = null;
+            Object var4 = null;
             try {
-                var4 = new ig(var3);
+                var4_ref = new ig(var3);
             } catch (IOException iOException) {
                 iOException.printStackTrace();
             }
-            return var4;
+            return var4_ref;
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
@@ -1154,6 +1156,7 @@ final class ig extends qb {
 
     final static ig a(qk param0, int param1, int param2) {
         try {
+            ig var4_ref = null;
             if (!ig.a(param0)) {
                 boolean discarded$0 = param0.b(27493, param1, param2);
                 return null;
@@ -1162,13 +1165,13 @@ final class ig extends qb {
             if (var3 == null) {
                 return null;
             }
-            ig var4 = null;
+            Object var4 = null;
             try {
-                var4 = new ig(var3);
+                var4_ref = new ig(var3);
             } catch (IOException iOException) {
                 iOException.printStackTrace();
             }
-            return var4;
+            return var4_ref;
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {

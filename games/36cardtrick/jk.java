@@ -42,7 +42,7 @@ final class jk {
         field_b = null;
         field_d = null;
         if (param0 != -63) {
-            field_b = (td) null;
+            field_b = null;
             field_a = null;
             return;
         }

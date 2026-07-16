@@ -52,26 +52,54 @@ class tn extends hc {
     }
 
     final void a(int param0, int param1, String param2) {
-        String[] var8 = null;
         String[] var4 = null;
         int var5 = 0;
-        int var6 = MinerDisturbance.field_ab;
-        if (null != ((tn) this).field_L) {
-            // if_icmpge L25
-        } else {
+        int var6 = 0;
+        Object var7 = null;
+        String[] var8 = null;
+        L0: {
+          L1: {
+            var6 = MinerDisturbance.field_ab;
+            if (null == ((tn) this).field_L) {
+              break L1;
+            } else {
+              if (param1 >= ((tn) this).field_L.length) {
+                break L1;
+              } else {
+                break L0;
+              }
+            }
+          }
+          L2: {
             var8 = new String[1 + param1];
             var4 = var8;
-            if (null != ((tn) this).field_L) {
-                for (var5 = 0; ((tn) this).field_L.length > var5; var5++) {
-                    var8[var5] = ((tn) this).field_L[var5];
+            if (null == ((tn) this).field_L) {
+              break L2;
+            } else {
+              var5 = 0;
+              L3: while (true) {
+                if (((tn) this).field_L.length <= var5) {
+                  break L2;
+                } else {
+                  var8[var5] = ((tn) this).field_L[var5];
+                  var5++;
+                  continue L3;
                 }
+              }
             }
-            ((tn) this).field_L = var4;
+          }
+          ((tn) this).field_L = var4;
+          break L0;
         }
-        ((tn) this).field_L[param1] = param2;
-        if (param0 >= -9) {
-            Object var7 = null;
+        L4: {
+          ((tn) this).field_L[param1] = param2;
+          if (param0 < -9) {
+            break L4;
+          } else {
+            var7 = null;
             ((tn) this).a(-120, 41, (byte) -117, (fe) null);
+            break L4;
+          }
         }
     }
 
@@ -170,7 +198,7 @@ class tn extends hc {
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
-        lb var10 = null;
+        Object var10 = null;
         int var11 = 0;
         mg var12 = null;
         int var13 = 0;
@@ -240,11 +268,11 @@ class tn extends hc {
                   if (var10 == null) {
                     break L4;
                   } else {
-                    var10.field_v = var15;
+                    ((lb) var10).field_v = var15;
                     break L4;
                   }
                 }
-                var10 = var15;
+                var10 = (Object) (Object) var15;
                 ((tn) this).field_I.a((byte) 51, (pi) (Object) var15);
                 var11++;
                 continue L1;

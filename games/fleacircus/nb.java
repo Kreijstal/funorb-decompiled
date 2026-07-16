@@ -153,8 +153,9 @@ final class nb {
               if (var8 <= var7) {
                 break L2;
               } else {
+                int incrementValue$3 = var6;
                 var6++;
-                param3[var6] = param0.substring(var7, var8).trim();
+                param3[incrementValue$3] = param0.substring(var7, var8).trim();
                 break L2;
               }
             }
@@ -176,8 +177,9 @@ final class nb {
               var11 = param0.substring(var7, 1 + var9).trim();
               var12 = param2.b(var11);
               if (param1 <= var12) {
+                int incrementValue$4 = var6;
                 var6++;
-                param3[var6] = var11;
+                param3[incrementValue$4] = var11;
                 var7 = var9 - -1;
                 break L3;
               } else {
@@ -186,8 +188,9 @@ final class nb {
             }
             if (var10 == 62) {
               if (param0.regionMatches(-3 + var9, "<br>", 0, 4)) {
+                int incrementValue$5 = var6;
                 var6++;
-                param3[var6] = param0.substring(var7, -3 + var9).trim();
+                param3[incrementValue$5] = param0.substring(var7, -3 + var9).trim();
                 var7 = var9 + 1;
                 var9++;
                 continue L1;

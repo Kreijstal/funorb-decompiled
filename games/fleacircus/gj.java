@@ -74,16 +74,35 @@ class gj extends qa implements wg {
     }
 
     final void a(byte param0, qa param1, int param2, int param3, int param4, int param5) {
-        int var9 = fleas.field_A ? 1 : 0;
-        we var7 = new we(((gj) this).field_C);
-        qa var8 = (qa) (Object) var7.b(-128);
-        while (var8 != null) {
-            // ifeq L85
-            var8.a((byte) 5, param1, param2 + ((gj) this).field_y, param3, param4, ((gj) this).field_z + param5);
-            var8 = (qa) (Object) var7.c(-6144);
-        }
-        if (param0 != 5) {
-            field_B = null;
+        we var7 = null;
+        qa var8 = null;
+        int var9 = 0;
+        var9 = fleas.field_A ? 1 : 0;
+        var7 = new we(((gj) this).field_C);
+        var8 = (qa) (Object) var7.b(-128);
+        L0: while (true) {
+          L1: {
+            if (var8 == null) {
+              break L1;
+            } else {
+              if (!var8.b((byte) -54)) {
+                break L1;
+              } else {
+                var8.a((byte) 5, param1, param2 + ((gj) this).field_y, param3, param4, ((gj) this).field_z + param5);
+                var8 = (qa) (Object) var7.c(-6144);
+                continue L0;
+              }
+            }
+          }
+          L2: {
+            if (param0 == 5) {
+              break L2;
+            } else {
+              field_B = null;
+              break L2;
+            }
+          }
+          return;
         }
     }
 
@@ -95,20 +114,35 @@ class gj extends qa implements wg {
     }
 
     final boolean a(int param0, boolean param1, int param2, qa param3, int param4, int param5, int param6) {
-        int var10 = fleas.field_A ? 1 : 0;
-        if (!param1) {
-            return false;
-        }
-        we var8 = new we(((gj) this).field_C);
-        qa var9 = (qa) (Object) var8.b(-75);
-        while (var9 != null) {
-            // ifeq L99
-            if (var9.a(param0 + ((gj) this).field_z, true, param2, param3, param4, param5, param6 + ((gj) this).field_y)) {
-                return true;
+        we var8 = null;
+        qa var9 = null;
+        int var10 = 0;
+        var10 = fleas.field_A ? 1 : 0;
+        if (param1) {
+          var8 = new we(((gj) this).field_C);
+          var9 = (qa) (Object) var8.b(-75);
+          L0: while (true) {
+            L1: {
+              if (var9 == null) {
+                break L1;
+              } else {
+                if (!var9.b((byte) -54)) {
+                  break L1;
+                } else {
+                  if (!var9.a(param0 + ((gj) this).field_z, true, param2, param3, param4, param5, param6 + ((gj) this).field_y)) {
+                    var9 = (qa) (Object) var8.c(-6144);
+                    continue L0;
+                  } else {
+                    return true;
+                  }
+                }
+              }
             }
-            var9 = (qa) (Object) var8.c(-6144);
+            return false;
+          }
+        } else {
+          return false;
         }
-        return false;
     }
 
     final boolean a(int param0, qa param1) {
@@ -141,23 +175,43 @@ class gj extends qa implements wg {
     }
 
     final boolean a(int param0, qa param1, int param2, int param3, int param4, int param5, int param6) {
-        int var10 = fleas.field_A ? 1 : 0;
-        we var8 = new we(((gj) this).field_C);
-        qa var9 = (qa) (Object) var8.b(-62);
-        while (var9 != null) {
-            // ifeq L92
-            if (var9.e(1)) {
-                if (var9.a(param0, param1, param2, -31628, param4, param5, param6)) {
-                    return true;
+        we var8 = null;
+        qa var9 = null;
+        int var10 = 0;
+        var10 = fleas.field_A ? 1 : 0;
+        var8 = new we(((gj) this).field_C);
+        var9 = (qa) (Object) var8.b(-62);
+        L0: while (true) {
+          L1: {
+            if (var9 == null) {
+              break L1;
+            } else {
+              if (!var9.b((byte) -54)) {
+                break L1;
+              } else {
+                L2: {
+                  if (!var9.e(1)) {
+                    break L2;
+                  } else {
+                    if (!var9.a(param0, param1, param2, -31628, param4, param5, param6)) {
+                      break L2;
+                    } else {
+                      return true;
+                    }
+                  }
                 }
+                var9 = (qa) (Object) var8.c(-6144);
+                continue L0;
+              }
             }
-            var9 = (qa) (Object) var8.c(-6144);
-        }
-        if (param3 != -31628) {
+          }
+          if (param3 == -31628) {
+            return false;
+          } else {
             field_A = null;
             return false;
+          }
         }
-        return false;
     }
 
     public static void a(byte param0) {
@@ -196,26 +250,62 @@ class gj extends qa implements wg {
     }
 
     boolean a(int param0, int param1, qa param2, char param3) {
-        int var7 = fleas.field_A ? 1 : 0;
-        we var5 = new we(((gj) this).field_C);
-        qa var8 = (qa) (Object) var5.b(102);
-        while (var8 != null) {
-            // ifeq L88
-            if (var8.e(1)) {
-                if (var8.a(-2, param1, param2, param3)) {
-                    return true;
+        we var5 = null;
+        int var6 = 0;
+        int var7 = 0;
+        qa var8 = null;
+        boolean stackIn_13_0 = false;
+        boolean stackOut_12_0 = false;
+        boolean stackOut_11_0 = false;
+        var7 = fleas.field_A ? 1 : 0;
+        var5 = new we(((gj) this).field_C);
+        var8 = (qa) (Object) var5.b(102);
+        L0: while (true) {
+          L1: {
+            if (var8 == null) {
+              break L1;
+            } else {
+              if (!var8.b((byte) -54)) {
+                break L1;
+              } else {
+                L2: {
+                  if (!var8.e(1)) {
+                    break L2;
+                  } else {
+                    if (!var8.a(-2, param1, param2, param3)) {
+                      break L2;
+                    } else {
+                      return true;
+                    }
+                  }
                 }
+                var8 = (qa) (Object) var5.c(param0 + -6142);
+                continue L0;
+              }
             }
-            var8 = (qa) (Object) var5.c(param0 + -6142);
-        }
-        if (param0 != -2) {
+          }
+          if (param0 == -2) {
+            var6 = param1;
+            if (80 != var6) {
+              return false;
+            } else {
+              L3: {
+                if (!ei.field_H[81]) {
+                  stackOut_12_0 = ((gj) this).a(32, param2);
+                  stackIn_13_0 = stackOut_12_0;
+                  break L3;
+                } else {
+                  stackOut_11_0 = ((gj) this).b(param2, param0 ^ 28533);
+                  stackIn_13_0 = stackOut_11_0;
+                  break L3;
+                }
+              }
+              return stackIn_13_0;
+            }
+          } else {
             return false;
+          }
         }
-        int var6 = param1;
-        if (80 == var6) {
-            return ei.field_H[81] ? ((gj) this).b(param2, param0 ^ 28533) : ((gj) this).a(32, param2);
-        }
-        return false;
     }
 
     qa i(int param0) {
@@ -336,17 +426,36 @@ class gj extends qa implements wg {
     }
 
     void a(int param0, int param1, qa param2, byte param3) {
-        int var7 = fleas.field_A ? 1 : 0;
-        super.a(param0, param1, param2, (byte) -88);
-        we var5 = new we(((gj) this).field_C);
-        if (param3 > -85) {
+        we var5 = null;
+        qa var6 = null;
+        int var7 = 0;
+        L0: {
+          var7 = fleas.field_A ? 1 : 0;
+          super.a(param0, param1, param2, (byte) -88);
+          var5 = new we(((gj) this).field_C);
+          if (param3 <= -85) {
+            break L0;
+          } else {
             field_D = null;
+            break L0;
+          }
         }
-        qa var6 = (qa) (Object) var5.b(-67);
-        while (var6 != null) {
-            // ifeq L107
-            var6.a(((gj) this).field_z + param0, param1 + ((gj) this).field_y, param2, (byte) -123);
-            var6 = (qa) (Object) var5.c(-6144);
+        var6 = (qa) (Object) var5.b(-67);
+        L1: while (true) {
+          L2: {
+            if (var6 == null) {
+              break L2;
+            } else {
+              if (!var6.b((byte) -54)) {
+                break L2;
+              } else {
+                var6.a(((gj) this).field_z + param0, param1 + ((gj) this).field_y, param2, (byte) -123);
+                var6 = (qa) (Object) var5.c(-6144);
+                continue L1;
+              }
+            }
+          }
+          return;
         }
     }
 

@@ -118,85 +118,34 @@ final class vf implements java.awt.event.KeyListener, java.awt.event.FocusListen
     final static void a(int param0) {
         Object var1 = null;
         Throwable var2 = null;
-        int statePc = 0;
-        Throwable caughtException = null;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    if (uf.field_c != null) {
-                        statePc = 4;
-                    } else {
-                        statePc = 1;
-                    }
-                    continue stateLoop;
-                }
-                case 1: {
-                    if (param0 == -1) {
-                        statePc = 3;
-                    } else {
-                        statePc = 2;
-                    }
-                    continue stateLoop;
-                }
-                case 2: {
-                    vf.a((byte) -2);
-                    statePc = 3;
-                    continue stateLoop;
-                }
-                case 3: {
-                    return;
-                }
-                case 4: {
-                    var1 = (Object) (Object) uf.field_c;
-                    // monitorenter uf.field_c
-                    statePc = 5;
-                    continue stateLoop;
-                }
-                case 5: {
-                    try {
-                        uf.field_c = null;
-                        // monitorexit var1
-                        statePc = 6;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_5) {
-                        caughtException = stateCaught_5;
-                        statePc = 9;
-                        continue stateLoop;
-                    }
-                }
-                case 6: {
-                    if (param0 == -1) {
-                        statePc = 8;
-                    } else {
-                        statePc = 7;
-                    }
-                    continue stateLoop;
-                }
-                case 7: {
-                    vf.a((byte) -2);
-                    statePc = 8;
-                    continue stateLoop;
-                }
-                case 8: {
-                    return;
-                }
-                case 9: {
-                    try {
-                        var2 = caughtException;
-                        // monitorexit var1
-                        statePc = 10;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_9) {
-                        caughtException = stateCaught_9;
-                        statePc = 9;
-                        continue stateLoop;
-                    }
-                }
-                case 10: {
-                    throw (RuntimeException) (Object) var2;
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
+        Throwable decompiledCaughtException = null;
+        if (uf.field_c != null) {
+          var1 = (Object) (Object) uf.field_c;
+          synchronized (var1) {
+            L0: {
+              uf.field_c = null;
+              break L0;
             }
+          }
+          L1: {
+            if (param0 == -1) {
+              break L1;
+            } else {
+              vf.a((byte) -2);
+              break L1;
+            }
+          }
+          return;
+        } else {
+          L2: {
+            if (param0 == -1) {
+              break L2;
+            } else {
+              vf.a((byte) -2);
+              break L2;
+            }
+          }
+          return;
         }
     }
 
@@ -207,7 +156,7 @@ final class vf implements java.awt.event.KeyListener, java.awt.event.FocusListen
           jf.field_a = 0;
           var2 = param0.getKeyCode();
           if (-1 >= (var2 ^ -1)) {
-            if (rg.field_a.length > var2) {
+            if ((rg.field_a.length ^ -1) < (var2 ^ -1)) {
               L0: {
                 var2 = rg.field_a[var2];
                 if ((var2 & 128) == 0) {
@@ -227,11 +176,11 @@ final class vf implements java.awt.event.KeyListener, java.awt.event.FocusListen
                       var3 = ei.field_A + 1 & 127;
                       if (var3 == td.field_d) {
                         var3 = param0.getModifiers();
-                        if (-1 != (var3 & 10)) {
+                        if (-1 != (var3 & 10 ^ -1)) {
                           param0.consume();
                           return;
                         } else {
-                          if (-86 == var2) {
+                          if (-86 == (var2 ^ -1)) {
                             param0.consume();
                             return;
                           } else {
@@ -248,11 +197,11 @@ final class vf implements java.awt.event.KeyListener, java.awt.event.FocusListen
                         tp.field_i[ei.field_A] = (char)0;
                         ei.field_A = var3;
                         var3 = param0.getModifiers();
-                        if (-1 != (var3 & 10)) {
+                        if (-1 != (var3 & 10 ^ -1)) {
                           param0.consume();
                           return;
                         } else {
-                          if (-86 == var2) {
+                          if (-86 == (var2 ^ -1)) {
                             param0.consume();
                             return;
                           } else {
@@ -267,11 +216,11 @@ final class vf implements java.awt.event.KeyListener, java.awt.event.FocusListen
                       }
                     } else {
                       var3 = param0.getModifiers();
-                      if (-1 != (var3 & 10)) {
+                      if (-1 != (var3 & 10 ^ -1)) {
                         param0.consume();
                         return;
                       } else {
-                        if (-86 == var2) {
+                        if (-86 == (var2 ^ -1)) {
                           param0.consume();
                           return;
                         } else {
@@ -289,11 +238,11 @@ final class vf implements java.awt.event.KeyListener, java.awt.event.FocusListen
                       var3 = ei.field_A + 1 & 127;
                       if (var3 == td.field_d) {
                         var3 = param0.getModifiers();
-                        if (-1 != (var3 & 10)) {
+                        if (-1 != (var3 & 10 ^ -1)) {
                           param0.consume();
                           return;
                         } else {
-                          if (-86 == var2) {
+                          if (-86 == (var2 ^ -1)) {
                             param0.consume();
                             return;
                           } else {
@@ -310,11 +259,11 @@ final class vf implements java.awt.event.KeyListener, java.awt.event.FocusListen
                         tp.field_i[ei.field_A] = (char)0;
                         ei.field_A = var3;
                         var3 = param0.getModifiers();
-                        if (-1 != (var3 & 10)) {
+                        if (-1 != (var3 & 10 ^ -1)) {
                           param0.consume();
                           return;
                         } else {
-                          if (-86 == var2) {
+                          if (-86 == (var2 ^ -1)) {
                             param0.consume();
                             return;
                           } else {
@@ -329,11 +278,11 @@ final class vf implements java.awt.event.KeyListener, java.awt.event.FocusListen
                       }
                     } else {
                       var3 = param0.getModifiers();
-                      if (-1 != (var3 & 10)) {
+                      if (-1 != (var3 & 10 ^ -1)) {
                         param0.consume();
                         return;
                       } else {
-                        if (-86 == var2) {
+                        if (-86 == (var2 ^ -1)) {
                           param0.consume();
                           return;
                         } else {
@@ -352,11 +301,11 @@ final class vf implements java.awt.event.KeyListener, java.awt.event.FocusListen
                     var3 = ei.field_A + 1 & 127;
                     if (var3 == td.field_d) {
                       var3 = param0.getModifiers();
-                      if (-1 != (var3 & 10)) {
+                      if (-1 != (var3 & 10 ^ -1)) {
                         param0.consume();
                         return;
                       } else {
-                        if (-86 == var2) {
+                        if (-86 == (var2 ^ -1)) {
                           param0.consume();
                           return;
                         } else {
@@ -373,11 +322,11 @@ final class vf implements java.awt.event.KeyListener, java.awt.event.FocusListen
                       tp.field_i[ei.field_A] = (char)0;
                       ei.field_A = var3;
                       var3 = param0.getModifiers();
-                      if (-1 != (var3 & 10)) {
+                      if (-1 != (var3 & 10 ^ -1)) {
                         param0.consume();
                         return;
                       } else {
-                        if (-86 == var2) {
+                        if (-86 == (var2 ^ -1)) {
                           param0.consume();
                           return;
                         } else {
@@ -392,11 +341,11 @@ final class vf implements java.awt.event.KeyListener, java.awt.event.FocusListen
                     }
                   } else {
                     var3 = param0.getModifiers();
-                    if (-1 != (var3 & 10)) {
+                    if (-1 != (var3 & 10 ^ -1)) {
                       param0.consume();
                       return;
                     } else {
-                      if (-86 == var2) {
+                      if (-86 == (var2 ^ -1)) {
                         param0.consume();
                         return;
                       } else {
@@ -415,11 +364,11 @@ final class vf implements java.awt.event.KeyListener, java.awt.event.FocusListen
                   var3 = ei.field_A + 1 & 127;
                   if (var3 == td.field_d) {
                     var3 = param0.getModifiers();
-                    if (-1 != (var3 & 10)) {
+                    if (-1 != (var3 & 10 ^ -1)) {
                       param0.consume();
                       return;
                     } else {
-                      if (-86 == var2) {
+                      if (-86 == (var2 ^ -1)) {
                         param0.consume();
                         return;
                       } else {
@@ -436,11 +385,11 @@ final class vf implements java.awt.event.KeyListener, java.awt.event.FocusListen
                     tp.field_i[ei.field_A] = (char)0;
                     ei.field_A = var3;
                     var3 = param0.getModifiers();
-                    if (-1 != (var3 & 10)) {
+                    if (-1 != (var3 & 10 ^ -1)) {
                       param0.consume();
                       return;
                     } else {
-                      if (-86 == var2) {
+                      if (-86 == (var2 ^ -1)) {
                         param0.consume();
                         return;
                       } else {
@@ -455,20 +404,20 @@ final class vf implements java.awt.event.KeyListener, java.awt.event.FocusListen
                   }
                 } else {
                   var3 = param0.getModifiers();
-                  if (-1 != (var3 & 10)) {
+                  if (-1 != (var3 & 10 ^ -1)) {
                     param0.consume();
                     return;
                   } else {
-                    if (-86 != var2) {
-                      if (var2 != 10) {
-                        return;
-                      } else {
-                        param0.consume();
-                        return;
-                      }
-                    } else {
+                    if (-86 == (var2 ^ -1)) {
                       param0.consume();
                       return;
+                    } else {
+                      if (var2 == 10) {
+                        param0.consume();
+                        return;
+                      } else {
+                        return;
+                      }
                     }
                   }
                 }
@@ -494,20 +443,20 @@ final class vf implements java.awt.event.KeyListener, java.awt.event.FocusListen
                   var3 = ei.field_A + 1 & 127;
                   if (var3 == td.field_d) {
                     var3 = param0.getModifiers();
-                    if (-1 != (var3 & 10)) {
+                    if (-1 != (var3 & 10 ^ -1)) {
                       param0.consume();
                       return;
                     } else {
-                      if (-86 != var2) {
-                        if (var2 != 10) {
-                          return;
-                        } else {
-                          param0.consume();
-                          return;
-                        }
-                      } else {
+                      if (-86 == (var2 ^ -1)) {
                         param0.consume();
                         return;
+                      } else {
+                        if (var2 == 10) {
+                          param0.consume();
+                          return;
+                        } else {
+                          return;
+                        }
                       }
                     }
                   } else {
@@ -515,40 +464,40 @@ final class vf implements java.awt.event.KeyListener, java.awt.event.FocusListen
                     tp.field_i[ei.field_A] = (char)0;
                     ei.field_A = var3;
                     var3 = param0.getModifiers();
-                    if (-1 == (var3 & 10)) {
-                      if (-86 != var2) {
-                        if (var2 != 10) {
-                          return;
-                        } else {
-                          param0.consume();
-                          return;
-                        }
-                      } else {
-                        param0.consume();
-                        return;
-                      }
-                    } else {
+                    if (-1 != (var3 & 10 ^ -1)) {
                       param0.consume();
                       return;
+                    } else {
+                      if (-86 == (var2 ^ -1)) {
+                        param0.consume();
+                        return;
+                      } else {
+                        if (var2 == 10) {
+                          param0.consume();
+                          return;
+                        } else {
+                          return;
+                        }
+                      }
                     }
                   }
                 } else {
                   var3 = param0.getModifiers();
-                  if (-1 == (var3 & 10)) {
-                    if (-86 != var2) {
-                      if (var2 != 10) {
-                        return;
-                      } else {
-                        param0.consume();
-                        return;
-                      }
-                    } else {
-                      param0.consume();
-                      return;
-                    }
-                  } else {
+                  if (-1 != (var3 & 10 ^ -1)) {
                     param0.consume();
                     return;
+                  } else {
+                    if (-86 == (var2 ^ -1)) {
+                      param0.consume();
+                      return;
+                    } else {
+                      if (var2 == 10) {
+                        param0.consume();
+                        return;
+                      } else {
+                        return;
+                      }
+                    }
                   }
                 }
               } else {
@@ -568,21 +517,21 @@ final class vf implements java.awt.event.KeyListener, java.awt.event.FocusListen
                   }
                 }
                 var3 = param0.getModifiers();
-                if (-1 == (var3 & 10)) {
-                  if (-86 != var2) {
-                    if (var2 != 10) {
-                      return;
-                    } else {
-                      param0.consume();
-                      return;
-                    }
-                  } else {
-                    param0.consume();
-                    return;
-                  }
-                } else {
+                if (-1 != (var3 & 10 ^ -1)) {
                   param0.consume();
                   return;
+                } else {
+                  if (-86 == (var2 ^ -1)) {
+                    param0.consume();
+                    return;
+                  } else {
+                    if (var2 == 10) {
+                      param0.consume();
+                      return;
+                    } else {
+                      return;
+                    }
+                  }
                 }
               }
             }
@@ -622,21 +571,21 @@ final class vf implements java.awt.event.KeyListener, java.awt.event.FocusListen
               }
             }
             var3 = param0.getModifiers();
-            if (-1 == (var3 & 10)) {
-              if (-86 != var2) {
-                if (var2 != 10) {
-                  return;
-                } else {
-                  param0.consume();
-                  return;
-                }
-              } else {
-                param0.consume();
-                return;
-              }
-            } else {
+            if (-1 != (var3 & 10 ^ -1)) {
               param0.consume();
               return;
+            } else {
+              if (-86 == (var2 ^ -1)) {
+                param0.consume();
+                return;
+              } else {
+                if (var2 == 10) {
+                  param0.consume();
+                  return;
+                } else {
+                  return;
+                }
+              }
             }
           }
         } else {

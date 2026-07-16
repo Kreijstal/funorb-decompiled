@@ -62,8 +62,9 @@ final class ik extends hg {
         ((ik) this).field_k = param1;
         ((ik) this).field_q = param6;
         ((ik) this).field_j = param0;
+        int fieldTemp$0 = qh.field_m;
         qh.field_m = qh.field_m + 1;
-        ((ik) this).field_i = 65535 & qh.field_m;
+        ((ik) this).field_i = 65535 & fieldTemp$0;
     }
 
     static {

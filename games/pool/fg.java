@@ -241,9 +241,11 @@ final class fg {
               continue L0;
             } else {
               ((fg) this).field_g = new uk(var3);
+              return;
             }
           } else {
             ((fg) this).field_g = new uk(var3);
+            return;
           }
         }
     }

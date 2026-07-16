@@ -113,8 +113,9 @@ final class g {
                       if (((g) this).field_f <= var10) {
                         break L5;
                       } else {
-                        var8 = var8 + var17.a(-1640531527);
-                        ((g) this).field_n[var10] = var8 + var17.a(-1640531527);
+                        int dupTemp$4 = var8 + var17.a(-1640531527);
+                        var8 = dupTemp$4;
+                        ((g) this).field_n[var10] = dupTemp$4;
                         if (var9 < ((g) this).field_n[var10]) {
                           var9 = ((g) this).field_n[var10];
                           var10++;
@@ -131,8 +132,9 @@ final class g {
                       if (((g) this).field_f <= var10) {
                         break L5;
                       } else {
-                        var8 = var8 + var17.e(48);
-                        ((g) this).field_n[var10] = var8 + var17.e(48);
+                        int dupTemp$5 = var8 + var17.e(48);
+                        var8 = dupTemp$5;
+                        ((g) this).field_n[var10] = dupTemp$5;
                         if (((g) this).field_n[var10] > var9) {
                           var9 = ((g) this).field_n[var10];
                           var10++;
@@ -238,9 +240,10 @@ final class g {
                                           continue L18;
                                         }
                                       } else {
-                                        var8 = var8 + var17.a(-1640531527);
-                                        ((g) this).field_o[var11][var14] = var8 + var17.a(-1640531527);
-                                        var15 = var8 + var17.a(-1640531527);
+                                        int dupTemp$6 = var8 + var17.a(-1640531527);
+                                        var8 = dupTemp$6;
+                                        ((g) this).field_o[var11][var14] = dupTemp$6;
+                                        var15 = dupTemp$6;
                                         if (var13 < var15) {
                                           var13 = var15;
                                           var14++;
@@ -286,9 +289,10 @@ final class g {
                                           continue L21;
                                         }
                                       } else {
-                                        var8 = var8 + var17.e(87);
-                                        ((g) this).field_o[var11][var14] = var8 + var17.e(87);
-                                        var15 = var8 + var17.e(87);
+                                        int dupTemp$7 = var8 + var17.e(87);
+                                        var8 = dupTemp$7;
+                                        ((g) this).field_o[var11][var14] = dupTemp$7;
+                                        var15 = dupTemp$7;
                                         if (var15 > var13) {
                                           var13 = var15;
                                           var14++;

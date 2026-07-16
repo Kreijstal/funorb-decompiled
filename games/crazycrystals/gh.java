@@ -22,7 +22,6 @@ final class gh extends ea implements Cloneable {
     final sl a(f[][] param0, int param1, boolean param2, int param3, int param4, int param5) {
         sl var7 = null;
         f var8 = null;
-        f var8_ref = null;
         int var9 = 0;
         sl var10 = null;
         var9 = CrazyCrystals.field_B;
@@ -42,7 +41,7 @@ final class gh extends ea implements Cloneable {
               if (!(var8 instanceof pn)) {
                 break L1;
               } else {
-                var8_ref = ((pn) (Object) var8).field_l;
+                var8 = ((pn) (Object) var8).field_l;
                 continue L0;
               }
             }
@@ -52,7 +51,7 @@ final class gh extends ea implements Cloneable {
             L3: {
               if (!(var8 instanceof ro)) {
                 if (var8 instanceof pn) {
-                  var8_ref = ((pn) (Object) var8).field_l;
+                  var8 = ((pn) (Object) var8).field_l;
                   continue L2;
                 } else {
                   break L3;
@@ -98,7 +97,6 @@ final class gh extends ea implements Cloneable {
     final f a(f[][] param0, int param1, f param2, int param3, int param4) {
         f var6 = null;
         int var6_int = 0;
-        f var6_ref = null;
         int var7 = 0;
         int var8 = 0;
         L0: {
@@ -158,7 +156,7 @@ final class gh extends ea implements Cloneable {
             L4: {
               if (!(var6 instanceof ro)) {
                 if (var6 instanceof pn) {
-                  var6_ref = ((pn) (Object) var6).field_l;
+                  var6 = ((pn) (Object) var6).field_l;
                   continue L3;
                 } else {
                   break L4;
@@ -288,7 +286,8 @@ final class gh extends ea implements Cloneable {
 
     final static void j(int param0) {
         int var1 = 0;
-        nj var2 = null;
+        Object var2 = null;
+        nj var2_ref = null;
         int var3 = 0;
         dl var4 = null;
         String var5 = null;
@@ -308,7 +307,7 @@ final class gh extends ea implements Cloneable {
                   if (li.field_a.field_l != null) {
                     L2: {
                       var9 = li.field_a;
-                      var2 = var9;
+                      var2_ref = var9;
                       var1++;
                       if (300 > var9.field_f) {
                         var9.field_f = 300;
@@ -318,15 +317,15 @@ final class gh extends ea implements Cloneable {
                       }
                     }
                     L3: while (true) {
-                      if (null == var2.field_n) {
+                      if (null == var2_ref.field_n) {
                         if ((var1 ^ -1) < -4) {
-                          var2 = null;
+                          var2_ref = null;
                           break L0;
                         } else {
                           break L0;
                         }
                       } else {
-                        var2 = var2.field_n;
+                        var2_ref = var2_ref.field_n;
                         var1++;
                         continue L3;
                       }
@@ -336,7 +335,7 @@ final class gh extends ea implements Cloneable {
                   }
                 }
               }
-              var2 = null;
+              var2_ref = null;
               break L0;
             }
             var3 = 0;
@@ -351,23 +350,23 @@ final class gh extends ea implements Cloneable {
                     var5 = jm.field_e[var3];
                     var6 = ci.a(new String[1], wn.field_a, 3);
                     var7 = new nj(var4, var5, var6);
-                    if (var2 != null) {
+                    if (var2_ref != null) {
                       L6: {
-                        if (!var2.field_i) {
+                        if (!var2_ref.field_i) {
                           break L6;
                         } else {
                           var7.field_i = true;
                           break L6;
                         }
                       }
-                      var2.field_n = var7;
+                      var2_ref.field_n = var7;
                       break L5;
                     } else {
                       li.field_a = var7;
                       break L5;
                     }
                   }
-                  var2 = var7;
+                  var2_ref = var7;
                   var3++;
                   continue L4;
                 } else {
@@ -431,11 +430,11 @@ final class gh extends ea implements Cloneable {
     }
 
     final static java.net.URL a(java.applet.Applet param0, java.net.URL param1, byte param2) {
-        String var3 = null;
-        String var4 = null;
+        Object var3 = null;
+        Object var4 = null;
         if (null != to.field_f) {
             if (!(to.field_f.equals((Object) (Object) param0.getParameter("settings")))) {
-                var3 = to.field_f;
+                var3 = (Object) (Object) to.field_f;
                 var4 = var3;
                 var4 = var3;
             }
@@ -445,10 +444,10 @@ final class gh extends ea implements Cloneable {
         }
         if (hm.field_c != null) {
             if (!(hm.field_c.equals((Object) (Object) param0.getParameter("session")))) {
-                var4 = hm.field_c;
+                var4 = (Object) (Object) hm.field_c;
             }
         }
-        return rf.a(-1, var4, true, var3, param1);
+        return rf.a(-1, (String) var4, true, (String) var3, param1);
     }
 
     final void a(boolean param0, int param1, int param2, int param3, int param4, int param5) {
@@ -507,79 +506,34 @@ final class gh extends ea implements Cloneable {
     final static void a(String param0, int param1, int param2, int param3) {
         Object var4 = null;
         Throwable var5 = null;
-        int statePc = 0;
-        Throwable caughtException = null;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    rn.field_q = param0;
-                    if (param1 == 12) {
-                        statePc = 2;
-                    } else {
-                        statePc = 1;
-                    }
-                    continue stateLoop;
-                }
-                case 1: {
-                    field_B = -26;
-                    statePc = 2;
-                    continue stateLoop;
-                }
-                case 2: {
-                    lc.field_d = param3;
-                    var4 = (Object) (Object) gf.field_c;
-                    // monitorenter gf.field_c
-                    statePc = 3;
-                    continue stateLoop;
-                }
-                case 3: {
-                    try {
-                        fq.field_x.d(62);
-                        gf.field_c.a();
-                        // monitorexit var4
-                        statePc = 7;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_3) {
-                        caughtException = stateCaught_3;
-                        statePc = 5;
-                        continue stateLoop;
-                    }
-                }
-                case 5: {
-                    try {
-                        var5 = caughtException;
-                        // monitorexit var4
-                        statePc = 6;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_5) {
-                        caughtException = stateCaught_5;
-                        statePc = 5;
-                        continue stateLoop;
-                    }
-                }
-                case 6: {
-                    throw (RuntimeException) (Object) var5;
-                }
-                case 7: {
-                    om.field_x = null;
-                    if (param0 != null) {
-                        statePc = 9;
-                    } else {
-                        statePc = 10;
-                    }
-                    continue stateLoop;
-                }
-                case 9: {
-                    fq.field_x.e(-20562, param3 * param2 >> 1425808326);
-                    om.field_x = param0;
-                    statePc = 10;
-                    continue stateLoop;
-                }
-                case 10: {
-                    return;
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
-            }
+        Throwable decompiledCaughtException = null;
+        L0: {
+          rn.field_q = param0;
+          if (param1 == 12) {
+            break L0;
+          } else {
+            field_B = -26;
+            break L0;
+          }
+        }
+        lc.field_d = param3;
+        var4 = (Object) (Object) gf.field_c;
+        synchronized (var4) {
+          L1: {
+            fq.field_x.d(62);
+            gf.field_c.a();
+            break L1;
+          }
+        }
+        L2: {
+          om.field_x = null;
+          if (param0 != null) {
+            fq.field_x.e(-20562, param3 * param2 >> 1425808326);
+            om.field_x = param0;
+            break L2;
+          } else {
+            break L2;
+          }
         }
     }
 
@@ -742,7 +696,6 @@ final class gh extends ea implements Cloneable {
 
     final void b(int param0, int param1, int param2, f[][] param3) {
         f var5 = null;
-        f var5_ref = null;
         int var6 = 0;
         var6 = CrazyCrystals.field_B;
         var5 = param3[param1][param0];
@@ -756,7 +709,7 @@ final class gh extends ea implements Cloneable {
               if (!(var5 instanceof pn)) {
                 break L1;
               } else {
-                var5_ref = ((pn) (Object) var5).field_l;
+                var5 = ((pn) (Object) var5).field_l;
                 continue L0;
               }
             }

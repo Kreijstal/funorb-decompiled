@@ -73,15 +73,19 @@ final class qf extends eo {
             ac.field_b = param12;
             rd.field_a = param2;
             if (ca.field_c.field_j == null) {
-              var15 = (IOException) (Object) decompiledCaughtException;
-              throw new RuntimeException(var15.toString());
+              return;
             } else {
               try {
-                bd.field_h = new rg(ca.field_c.field_j, 64, 0);
-              } catch (java.io.IOException decompiledCaughtParameter) {
-                decompiledCaughtException = decompiledCaughtParameter;
-                return;
+                L3: {
+                  bd.field_h = new rg(ca.field_c.field_j, 64, 0);
+                  break L3;
+                }
+              } catch (java.io.IOException decompiledCaughtParameter0) {
+                decompiledCaughtException = decompiledCaughtParameter0;
+                var15 = (IOException) (Object) decompiledCaughtException;
+                throw new RuntimeException(var15.toString());
               }
+              return;
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;

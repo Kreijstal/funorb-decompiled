@@ -168,8 +168,9 @@ final class ob {
                               break L9;
                             } else {
                               L10: {
+                                int incrementValue$3 = var19;
                                 var19++;
-                                if ((var14[var19] ^ -1) == -1) {
+                                if ((var14[incrementValue$3] ^ -1) == -1) {
                                   break L10;
                                 } else {
                                   var23 = var17 + 1;
@@ -242,8 +243,9 @@ final class ob {
                               } else {
                                 L17: {
                                   L18: {
+                                    int incrementValue$4 = var19;
                                     var19++;
-                                    if ((var14[var19] ^ -1) != -1) {
+                                    if ((var14[incrementValue$4] ^ -1) != -1) {
                                       break L18;
                                     } else {
                                       var20++;
@@ -254,8 +256,9 @@ final class ob {
                                       }
                                     }
                                   }
+                                  int incrementValue$5 = var20;
                                   var20++;
-                                  var13[var20] = (byte) 1;
+                                  var13[incrementValue$5] = (byte) 1;
                                   break L17;
                                 }
                                 var22++;

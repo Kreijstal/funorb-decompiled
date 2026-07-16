@@ -10,7 +10,7 @@ final class ef {
 
     final static String a(String param0, String param1, byte param2, String param3) {
         String var4 = null;
-        StringBuilder var5 = null;
+        Object var5 = null;
         int var6 = 0;
         String[] var7 = null;
         int var8 = 0;
@@ -41,7 +41,7 @@ final class ef {
                 stackIn_37_0 = stackOut_36_0;
                 break L2;
               } else {
-                stackOut_35_0 = var5.toString();
+                stackOut_35_0 = ((StringBuilder) var5).toString();
                 stackIn_37_0 = stackOut_35_0;
                 break L2;
               }
@@ -81,11 +81,11 @@ final class ef {
                             }
                             L7: {
                               if (-36 != (var4.charAt(var12 - 1) ^ -1)) {
-                                StringBuilder discarded$9 = var5.append(param1.substring(var11, 1 + var12));
+                                StringBuilder discarded$9 = ((StringBuilder) var5).append(param1.substring(var11, 1 + var12));
                                 break L7;
                               } else {
-                                StringBuilder discarded$10 = var5.append(param1.substring(var11, -1 + var12));
-                                StringBuilder discarded$11 = var5.append(param1.charAt(var12));
+                                StringBuilder discarded$10 = ((StringBuilder) var5).append(param1.substring(var11, -1 + var12));
+                                StringBuilder discarded$11 = ((StringBuilder) var5).append(param1.charAt(var12));
                                 break L7;
                               }
                             }
@@ -98,7 +98,7 @@ final class ef {
                             break L8;
                           } else {
                             if (vq.a(var4.charAt(var12 - -var10), 22987)) {
-                              StringBuilder discarded$12 = var5.append(param1.substring(var11, var12 - -1));
+                              StringBuilder discarded$12 = ((StringBuilder) var5).append(param1.substring(var11, var12 - -1));
                               var11 = 1 + var12;
                               continue L4;
                             } else {
@@ -107,7 +107,7 @@ final class ef {
                           }
                         }
                         L9: {
-                          StringBuilder discarded$13 = var5.append(param1.substring(var11, var12));
+                          StringBuilder discarded$13 = ((StringBuilder) var5).append(param1.substring(var11, var12));
                           if (param3 != null) {
                             StringBuilder discarded$14 = var13.append(param3);
                             break L9;
@@ -115,7 +115,7 @@ final class ef {
                             break L9;
                           }
                         }
-                        StringBuilder discarded$15 = var5.append(param1.substring(var12, var12 + var10));
+                        StringBuilder discarded$15 = ((StringBuilder) var5).append(param1.substring(var12, var12 + var10));
                         var11 = var10 + var12;
                         if (param0 == null) {
                           continue L4;
@@ -126,14 +126,14 @@ final class ef {
                       } else {
                         L10: {
                           if (var11 != 0) {
-                            StringBuilder discarded$17 = var5.append(param1.substring(var11, param1.length()));
+                            StringBuilder discarded$17 = ((StringBuilder) var5).append(param1.substring(var11, param1.length()));
                             break L10;
                           } else {
-                            var5 = new StringBuilder(param1);
+                            var5 = (Object) (Object) new StringBuilder(param1);
                             break L10;
                           }
                         }
-                        param1 = var5.toString();
+                        param1 = ((StringBuilder) var5).toString();
                         var4 = param1.toLowerCase();
                         var8++;
                         continue L3;

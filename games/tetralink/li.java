@@ -436,17 +436,24 @@ final class li {
               }
               try {
                 L2: {
-                  if (param1 != null) {
-                    param0.field_p.postEvent((java.awt.AWTEvent) (Object) new java.awt.event.ActionEvent(param1, 1001, "dummy"));
-                    break L2;
-                  } else {
-                    break L2;
+                  L3: {
+                    if (param1 != null) {
+                      param0.field_p.postEvent((java.awt.AWTEvent) (Object) new java.awt.event.ActionEvent(param1, 1001, "dummy"));
+                      break L3;
+                    } else {
+                      break L3;
+                    }
                   }
+                  break L2;
                 }
-              } catch (java.lang.Exception decompiledCaughtParameter) {
-                decompiledCaughtException = decompiledCaughtParameter;
+              } catch (java.lang.Exception decompiledCaughtParameter0) {
+                decompiledCaughtException = decompiledCaughtParameter0;
+                L4: {
+                  var3 = (Exception) (Object) decompiledCaughtException;
+                  break L4;
+                }
               }
-              var3 = (Exception) (Object) decompiledCaughtException;
+              return;
             }
           }
         } else {
@@ -472,8 +479,9 @@ final class li {
                 ((li) this).field_e = 0;
                 break L0;
               } else {
+                int fieldTemp$2 = ((li) this).field_e;
                 ((li) this).field_e = ((li) this).field_e + 1;
-                ((li) this).field_n[((li) this).field_e] = (byte) 0;
+                ((li) this).field_n[fieldTemp$2] = (byte) 0;
                 continue L1;
               }
             }
@@ -512,8 +520,9 @@ final class li {
               }
             }
           } else {
+            int fieldTemp$3 = ((li) this).field_e;
             ((li) this).field_e = ((li) this).field_e + 1;
-            ((li) this).field_n[((li) this).field_e] = (byte) 0;
+            ((li) this).field_n[fieldTemp$3] = (byte) 0;
             continue L2;
           }
         }

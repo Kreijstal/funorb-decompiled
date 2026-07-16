@@ -47,8 +47,9 @@ final class dg {
             for (var12 = 0; var12 < var8; var12++) {
                 var13 = ((dg) this).field_k[var7][var11 & var10];
                 var11 = var11 >>> var9;
+                int incrementValue$0 = var5;
                 var5++;
-                field_l[var5] = var13 >= 0 ? hi.field_C[var13].a() : 0;
+                field_l[incrementValue$0] = var13 >= 0 ? hi.field_C[var13].a() : 0;
             }
         }
         return true;
@@ -454,6 +455,7 @@ final class dg {
                             field_d = new boolean[var5];
                             break L4;
                           }
+                          return;
                         } else {
                           var7 = ((dg) this).field_b[var6];
                           var8 = 0;
@@ -462,8 +464,9 @@ final class dg {
                               var6++;
                               continue L3;
                             } else {
+                              int incrementValue$2 = var5;
                               var5++;
-                              ((dg) this).field_h[var5] = hi.d(var4);
+                              ((dg) this).field_h[incrementValue$2] = hi.d(var4);
                               var8++;
                               continue L6;
                             }
@@ -479,8 +482,9 @@ final class dg {
                 } else {
                   L7: {
                     ((dg) this).field_g[var4] = hi.d(3) + 1;
-                    ((dg) this).field_a[var4] = hi.d(2);
-                    var5 = hi.d(2);
+                    int dupTemp$3 = hi.d(2);
+                    ((dg) this).field_a[var4] = dupTemp$3;
+                    var5 = dupTemp$3;
                     if (var5 == 0) {
                       break L7;
                     } else {

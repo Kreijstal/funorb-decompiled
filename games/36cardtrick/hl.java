@@ -26,7 +26,7 @@ class hl extends lk {
               if (!(((hl) this).field_k instanceof fi)) {
                 return true;
               } else {
-                ((fi) ((hl) this).field_k).a(param6, param0, param2, (hl) this, param5, param1, (byte) -124);
+                ((fi) (Object) ((hl) this).field_k).a(param6, param0, param2, (hl) this, param5, param1, (byte) -124);
                 return true;
               }
             } else {
@@ -44,7 +44,7 @@ class hl extends lk {
 
     final static boolean a(le param0, int param1) {
         if (param1 != -1) {
-            le var3 = (le) null;
+            Object var3 = null;
             boolean discarded$0 = hl.a((le) null, -15);
             return param0.b((byte) -127);
         }
@@ -64,7 +64,7 @@ class hl extends lk {
     }
 
     void a(int param0, int param1, lk param2, int param3) {
-        this.a(param0, param1, param2, param3);
+        super.a(param0, param1, param2, param3);
         if (((hl) this).field_x == 0) {
             return;
         }
@@ -90,7 +90,7 @@ class hl extends lk {
             ((hl) this).field_z = true;
             if (((hl) this).field_k != null) {
               if (((hl) this).field_k instanceof nj) {
-                ((nj) ((hl) this).field_k).a(62, ((hl) this).field_z, (lk) this);
+                ((nj) (Object) ((hl) this).field_k).a(62, ((hl) this).field_z, (lk) this);
                 if (param0 <= 71) {
                   ((hl) this).field_z = true;
                   return true;
@@ -134,7 +134,7 @@ class hl extends lk {
             ((hl) this).field_z = false;
             if (null != ((hl) this).field_k) {
               if (((hl) this).field_k instanceof nj) {
-                ((nj) ((hl) this).field_k).a(81, ((hl) this).field_z, (lk) this);
+                ((nj) (Object) ((hl) this).field_k).a(81, ((hl) this).field_z, (lk) this);
                 return;
               } else {
                 return;
@@ -157,7 +157,7 @@ class hl extends lk {
               ((hl) this).field_x = 0;
               return;
             } else {
-              ((fi) ((hl) this).field_k).a(param4, -32051, param5, (hl) this, param3, param2);
+              ((fi) (Object) ((hl) this).field_k).a(param4, -32051, param5, (hl) this, param3, param2);
               ((hl) this).field_x = 0;
               return;
             }
@@ -171,12 +171,12 @@ class hl extends lk {
     }
 
     boolean a(char param0, byte param1, int param2, lk param3) {
-        qk var6 = null;
+        Object var6 = null;
         if (((hl) this).d(123)) {
           if (-85 != (param2 ^ -1)) {
             if ((param2 ^ -1) != -84) {
               if (param1 >= -99) {
-                var6 = (qk) null;
+                var6 = null;
                 kc[] discarded$4 = hl.a((qk) null, -100, -63, -51);
                 return false;
               } else {
@@ -192,7 +192,7 @@ class hl extends lk {
           }
         } else {
           if (param1 >= -99) {
-            var6 = (qk) null;
+            var6 = null;
             kc[] discarded$5 = hl.a((qk) null, -100, -63, -51);
             return false;
           } else {
@@ -270,7 +270,7 @@ class hl extends lk {
             if (!(((hl) this).field_k instanceof qh)) {
               return;
             } else {
-              ((qh) ((hl) this).field_k).a(param0, 23, param2, (hl) this, param3);
+              ((qh) (Object) ((hl) this).field_k).a(param0, 23, param2, (hl) this, param3);
               return;
             }
           } else {

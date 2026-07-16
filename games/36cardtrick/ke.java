@@ -23,37 +23,40 @@ final class ke {
           if ((var15 ^ -1) <= -1) {
             return;
           } else {
+            int incrementValue$2 = param9;
             param9++;
-            if (param9 != param10) {
+            if ((incrementValue$2 ^ -1) != (param10 ^ -1)) {
               param2 = var13;
               var16 = -param7;
               L1: while (true) {
-                if (var16 <= -1) {
+                if ((var16 ^ -1) <= -1) {
                   var15++;
                   param6 = param6 + param1;
                   continue L0;
                 } else {
+                  int incrementValue$3 = param2;
                   param2++;
-                  if (param2 != param10) {
-                    var17 = param8[param6];
-                    if (param5 != var17) {
-                      param8[param6] = bc.a(param3 * bc.a(var17, 65280) >> 1542353864, 65280) + bc.a(bc.a(16711935, var17) * param3 >> 1595916328, 16711935) + param11;
-                      var16++;
-                      param6++;
-                      continue L1;
-                    } else {
-                      var16++;
-                      param6++;
-                      continue L1;
-                    }
-                  } else {
+                  if ((incrementValue$3 ^ -1) != (param10 ^ -1)) {
                     L2: {
-                      var17 = param12;
-                      if (-1 < var16 - -param12) {
-                        var17 = -var16;
+                      var17 = param8[param6];
+                      if ((param5 ^ -1) != (var17 ^ -1)) {
+                        param8[param6] = bc.a(param3 * bc.a(var17, 65280) >> 1542353864, 65280) + bc.a(bc.a(16711935, var17) * param3 >> 1595916328, 16711935) + param11;
                         break L2;
                       } else {
                         break L2;
+                      }
+                    }
+                    var16++;
+                    param6++;
+                    continue L1;
+                  } else {
+                    L3: {
+                      var17 = param12;
+                      if (-1 > (var16 - -param12 ^ -1)) {
+                        var17 = -var16;
+                        break L3;
+                      } else {
+                        break L3;
                       }
                     }
                     param6 = param6 + var17;
@@ -102,7 +105,7 @@ final class ke {
 
     public static void a(byte param0) {
         if (param0 > -6) {
-            field_c = (qa) null;
+            field_c = null;
         }
         field_b = null;
         field_c = null;
@@ -111,20 +114,20 @@ final class ke {
     final static void a(dh param0, int param1, int param2) {
         w var5 = na.field_r;
         var5.h(param1, 0);
-        ((w) var5).field_i = ((w) var5).field_i + 1;
-        int var4 = ((w) var5).field_i;
+        var5.field_i = var5.field_i + 1;
+        int var4 = var5.field_i;
         if (param2 != 21719) {
-            field_c = (qa) null;
+            field_c = null;
         }
         var5.b(param2 ^ -28716, 1);
-        var5.b(param2 ^ -28716, ((dh) param0).field_n);
-        var5.b(-9469, ((dh) param0).field_l);
-        var5.a(-246, ((dh) param0).field_j);
-        var5.a(-246, ((dh) param0).field_i);
-        var5.a(-246, ((dh) param0).field_p);
-        var5.a(-246, ((dh) param0).field_h);
+        var5.b(param2 ^ -28716, param0.field_n);
+        var5.b(-9469, param0.field_l);
+        var5.a(-246, param0.field_j);
+        var5.a(-246, param0.field_i);
+        var5.a(-246, param0.field_p);
+        var5.a(-246, param0.field_h);
         int discarded$0 = var5.b(var4, (byte) 5);
-        var5.f(-var4 + ((w) var5).field_i, param2 ^ 19366);
+        var5.f(-var4 + var5.field_i, param2 ^ 19366);
     }
 
     ke(int[] param0) {

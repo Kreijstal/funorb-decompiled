@@ -661,7 +661,7 @@ final class aa {
               }
             }
             L17: {
-              se.a(stackIn_52_0, (rk[]) (Object) stackIn_52_1, stackIn_52_2, stackIn_52_3, stackIn_52_4, stackIn_52_5, stackIn_52_6, stackIn_52_7, stackIn_52_8 | stackIn_52_9, da.field_y);
+              se.a(stackIn_52_0, stackIn_52_1, stackIn_52_2, stackIn_52_3, stackIn_52_4, stackIn_52_5, stackIn_52_6, stackIn_52_7, stackIn_52_8 | stackIn_52_9, da.field_y);
               stackOut_52_0 = 16711680;
               stackOut_52_1 = pg.field_v;
               stackOut_52_2 = 10 + (320 + var2);
@@ -802,7 +802,7 @@ final class aa {
                 break L18;
               }
             }
-            se.a(stackIn_58_0, (rk[]) (Object) stackIn_58_1, stackIn_58_2, stackIn_58_3, stackIn_58_4, stackIn_58_5, stackIn_58_6, stackIn_58_7, stackIn_58_8 | 3, da.field_y);
+            se.a(stackIn_58_0, stackIn_58_1, stackIn_58_2, stackIn_58_3, stackIn_58_4, stackIn_58_5, stackIn_58_6, stackIn_58_7, stackIn_58_8 | 3, da.field_y);
             break L13;
           }
         }
@@ -1146,14 +1146,13 @@ final class aa {
         int var6 = 0;
         int var7 = 0;
         String var8 = null;
-        String var8_ref = null;
-        String var9_ref = null;
+        String var9_ref_String = null;
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
-        wg var12_ref = null;
-        wg var13_ref = null;
+        wg var12_ref_wg = null;
+        wg var13_ref_wg = null;
         int var13 = 0;
         int var14 = 0;
         int stackIn_26_0 = 0;
@@ -1208,8 +1207,8 @@ final class aa {
           L3: {
             if (12 == var7) {
               var8 = da.field_C[tk.field_e];
-              var9_ref = var8;
-              var9_ref = var8;
+              var9_ref_String = var8;
+              var9_ref_String = var8;
               break L3;
             } else {
               break L3;
@@ -1219,19 +1218,19 @@ final class aa {
             if ((var7 ^ -1) == -27) {
               L5: {
                 if (-1 == (rn.field_b ^ -1)) {
-                  var9_ref = dm.field_a;
+                  var9_ref_String = dm.field_a;
                   break L5;
                 } else {
                   if (rn.field_b == 1) {
-                    var9_ref = sj.field_t;
+                    var9_ref_String = sj.field_t;
                     break L5;
                   } else {
-                    var9_ref = pk.field_h;
+                    var9_ref_String = pk.field_h;
                     break L5;
                   }
                 }
               }
-              var8_ref = var8 + var9_ref;
+              var8 = var8 + var9_ref_String;
               break L4;
             } else {
               break L4;
@@ -1251,7 +1250,7 @@ final class aa {
           L7: {
             var9 = stackIn_26_0;
             if ((((aa) this).field_h ^ -1) == (var7 ^ -1)) {
-              var8_ref = "{<col=b0b0b0>" + var8_ref + "</col>}";
+              var8 = "{<col=b0b0b0>" + var8 + "</col>}";
               break L7;
             } else {
               break L7;
@@ -1260,7 +1259,7 @@ final class aa {
           L8: {
             L9: {
               var10 = 2043695;
-              v.field_j.a(var8_ref, var6, v.field_j.field_C + param2, var9, var10);
+              v.field_j.a(var8, var6, v.field_j.field_C + param2, var9, var10);
               if ((var7 ^ -1) == -15) {
                 break L9;
               } else {
@@ -1295,11 +1294,11 @@ final class aa {
                 break L11;
               }
             }
-            var13_ref = (wg) (Object) stackIn_38_0;
-            var13_ref.field_i = var11;
-            var13_ref.field_k = param2 + 8;
-            var13_ref.field_x = var12;
-            var13_ref.a(110);
+            var13_ref_wg = stackIn_38_0;
+            var13_ref_wg.field_i = var11;
+            var13_ref_wg.field_k = param2 + 8;
+            var13_ref_wg.field_x = var12;
+            var13_ref_wg.a(110);
             break L8;
           }
           L12: {
@@ -1307,19 +1306,19 @@ final class aa {
               break L12;
             } else {
               var11 = 67 + var6;
-              var12_ref = nb.field_Fb;
-              if (var12_ref == null) {
+              var12_ref_wg = nb.field_Fb;
+              if (var12_ref_wg == null) {
                 break L12;
               } else {
-                var12_ref.field_i = var11;
-                var12_ref.field_k = param2 + 8;
-                var12_ref.a(-116);
+                var12_ref_wg.field_i = var11;
+                var12_ref_wg.field_k = param2 + 8;
+                var12_ref_wg.a(-116);
                 var13 = 0;
                 L13: while (true) {
                   if ((ok.field_Ib.length ^ -1) >= (var13 ^ -1)) {
                     break L12;
                   } else {
-                    ok.field_Ib[var13].field_i = var12_ref.field_i + 22 * var13;
+                    ok.field_Ib[var13].field_i = var12_ref_wg.field_i + 22 * var13;
                     ok.field_Ib[var13].field_k = v.field_j.field_q + (param2 - -6);
                     var13++;
                     continue L13;
@@ -1388,9 +1387,7 @@ final class aa {
 
     private final void b(int param0, boolean param1) {
         String var3 = null;
-        String var3_ref = null;
         String var4 = null;
-        String var4_ref = null;
         int var5 = 0;
         int var6_int = 0;
         rk var6 = null;
@@ -1447,8 +1444,8 @@ final class aa {
             var3 = pa.field_j[var5];
             break L2;
           } else {
-            var3_ref = wm.field_i;
-            var4_ref = sg.field_a;
+            var3 = wm.field_i;
+            var4 = sg.field_a;
             break L2;
           }
         }
@@ -2397,7 +2394,8 @@ final class aa {
         int[] var14 = null;
         int var14_int = 0;
         int var15 = 0;
-        String var15_ref = null;
+        Object var15_ref = null;
+        String var15_ref_String = null;
         int var16 = 0;
         int var17 = 0;
         int var18 = 0;
@@ -2516,15 +2514,15 @@ final class aa {
                       var15_ref = null;
                       if (var14_int != 0) {
                         me.field_c[var13].a(var10, var11);
-                        var15_ref = ca.field_d;
+                        var15_ref_String = ca.field_d;
                         break L10;
                       } else {
                         lj.field_n.a(var10, var11);
-                        var15_ref = hm.field_d;
+                        var15_ref_String = hm.field_d;
                         break L10;
                       }
                     }
-                    var20.a(var15_ref, var10, lj.field_n.field_h + var11 + var20.field_q, 1, -1);
+                    var20.a(var15_ref_String, var10, lj.field_n.field_h + var11 + var20.field_q, 1, -1);
                     var10 = var10 + (16 + lj.field_n.field_k + 20);
                     var16 = 460 + var5;
                     int discarded$1 = var20.a(ai.field_a[var13], var10, var11, -var10 + (-10 + var16), 480, 1, -1, 0, 0, var20.field_C);
@@ -2713,7 +2711,7 @@ final class aa {
         int[] var10 = null;
         int var10_int = 0;
         int var11 = 0;
-        String var11_ref = null;
+        String var11_ref_String = null;
         String[] var12_ref_String__ = null;
         int var12 = 0;
         int[] var13 = null;
@@ -2784,7 +2782,7 @@ final class aa {
                     var10_int = tk.field_e;
                     if (ce.field_b.field_l) {
                       if (null != ce.field_b.field_t) {
-                        var11_ref = um.field_h;
+                        var11_ref_String = um.field_h;
                         var12_ref_String__ = ce.field_b.field_t[var10_int];
                         var13 = ce.field_b.field_j[var10_int];
                         var14 = 140 + var31.field_C;
@@ -2805,7 +2803,7 @@ final class aa {
                             if (var16 != 0) {
                               break L3;
                             } else {
-                              if (var11_ref.length() == 0) {
+                              if (var11_ref_String.length() == 0) {
                                 L5: {
                                   var17 = 13732679;
                                   var31.a(ci.field_J, var8, var14, var17, -1);
@@ -2825,7 +2823,7 @@ final class aa {
                                   }
                                 }
                                 L6: {
-                                  var34 = (String) (Object) stackIn_41_0;
+                                  var34 = stackIn_41_0;
                                   var22 = var34;
                                   var22 = var34;
                                   var25 = var34;
@@ -2888,7 +2886,7 @@ final class aa {
                                   }
                                 }
                                 L10: {
-                                  var33 = (String) (Object) stackIn_30_0;
+                                  var33 = stackIn_30_0;
                                   var26 = var33;
                                   var26 = var33;
                                   var25 = var33;
@@ -2915,9 +2913,9 @@ final class aa {
                                 wb.a(-215 + var9, 1 - (-var14 - -20), 20, 1, 16);
                                 wb.a(var9 + -140, 1 - -var14 - 20, 20, 1, 16);
                                 wb.a(-90 + var9, -20 + (var14 + 1), 20, 1, 16);
-                                var11_ref = "";
-                                var22 = var11_ref;
-                                var22 = var11_ref;
+                                var11_ref_String = "";
+                                var22 = var11_ref_String;
+                                var22 = var11_ref_String;
                                 wb.a(var9 - 40, var14 + -19, 20, 1, 16);
                                 break L7;
                               } else {
@@ -2930,16 +2928,16 @@ final class aa {
                           }
                         }
                       } else {
-                        var11_ref = ii.field_O;
+                        var11_ref_String = ii.field_O;
                         break L3;
                       }
                     } else {
-                      var11_ref = m.field_c;
+                      var11_ref_String = m.field_c;
                       break L3;
                     }
                   }
                   var12 = 100 + var31.field_C + 140;
-                  var31.b(var11_ref, param1 + 330, var12, 1, -1);
+                  var31.b(var11_ref_String, param1 + 330, var12, 1, -1);
                   break L1;
                 }
               }
@@ -3009,7 +3007,8 @@ final class aa {
     }
 
     private final void a(int param0) {
-        km var2 = null;
+        Object var2 = null;
+        km var2_ref = null;
         qe var3 = null;
         int var4 = 0;
         int var5_int = 0;
@@ -3018,7 +3017,7 @@ final class aa {
         int var7 = 0;
         String[] var8 = null;
         int var9 = 0;
-        String var10_ref = null;
+        String var10_ref_String = null;
         int var10 = 0;
         String[] var11_ref_String__ = null;
         int var11 = 0;
@@ -3074,7 +3073,7 @@ final class aa {
             L2: {
               var5_int = var4;
               if ((var5_int ^ -1) == -1) {
-                var2 = jh.field_b;
+                var2_ref = jh.field_b;
                 break L2;
               } else {
                 if (var5_int != 1) {
@@ -3083,29 +3082,29 @@ final class aa {
                       break L3;
                     } else {
                       if (-3 != var5_int) {
-                        var2 = fa.field_e;
+                        var2_ref = fa.field_e;
                         break L2;
                       } else {
                         break L3;
                       }
                     }
                   }
-                  var2 = fa.field_e;
+                  var2_ref = fa.field_e;
                   break L2;
                 } else {
-                  var2 = vn.field_Bb;
+                  var2_ref = vn.field_Bb;
                   break L2;
                 }
               }
             }
             L4: {
               if (16 > nc.field_T) {
-                var2.d(0, 0);
+                var2_ref.d(0, 0);
                 wb.a(15, 16, 210, 2 * ec.c((byte) -63) + 435, 9, 13421772, 96);
                 break L4;
               } else {
                 this.b(param0 + -17792);
-                var2.b(0, 0, (-4096 + nc.field_T * 256) / 16);
+                var2_ref.b(0, 0, (-4096 + nc.field_T * 256) / 16);
                 break L4;
               }
             }
@@ -3172,17 +3171,17 @@ final class aa {
               }
             }
             var9 = v.field_j.field_t + v.field_j.field_C;
-            var10_ref = wc.field_F;
+            var10_ref_String = wc.field_F;
             var11_ref_String__ = new String[50];
             var20 = new int[50];
             var13 = 0;
             L10: while (true) {
               if (-51 >= (var13 ^ -1)) {
-                var13 = v.field_j.a(var10_ref, var20, var11_ref_String__);
+                var13 = v.field_j.a(var10_ref_String, var20, var11_ref_String__);
                 var14 = var13 * var9 - -(var9 / 2);
                 wb.a(331, 191, 218, 18 + var14, 9, 13421772, 96);
                 wb.a(335, 195, 210, var14 + 10, 9, 1, 170);
-                int discarded$3 = v.field_j.a(var10_ref, 340, 200, 200, var14, 16777215, 1, 1, 1, var9);
+                int discarded$3 = v.field_j.a(var10_ref_String, 340, 200, 200, var14, 16777215, 1, 1, 1, var9);
                 break L0;
               } else {
                 var20[var13] = 200;
@@ -3235,7 +3234,7 @@ final class aa {
           stackIn_51_1 = stackOut_49_1;
           break L12;
         }
-        ((eb) (Object) stackIn_51_0).field_C = stackIn_51_1 != 0;
+        stackIn_51_0.field_C = stackIn_51_1 != 0;
         qh.field_b.d((byte) -2);
     }
 

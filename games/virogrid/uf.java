@@ -157,7 +157,7 @@ final class uf {
                         L4: {
                           var6 = Math.abs(-param1 + param3);
                           var7 = Math.abs(param0 + -param4);
-                          if (var6 < -2) {
+                          if ((var6 ^ -1) < -2) {
                             break L4;
                           } else {
                             if (1 >= var7) {
@@ -169,7 +169,7 @@ final class uf {
                         }
                         L5: {
                           L6: {
-                            if (-3 != var6) {
+                            if (-3 != (var6 ^ -1)) {
                               break L6;
                             } else {
                               if (2 == var7) {

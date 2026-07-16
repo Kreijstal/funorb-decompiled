@@ -77,8 +77,9 @@ final class mc {
                 if (((mc) this).field_a[var7] >= 0) {
                   break L2;
                 } else {
+                  int incrementValue$17 = param0;
                   param0++;
-                  param3[param0] = (byte)(var10 ^ -1);
+                  param3[incrementValue$17] = (byte)(var10 ^ -1);
                   if (param4 > param0) {
                     var7 = 0;
                     break L2;
@@ -101,8 +102,9 @@ final class mc {
                 if (((mc) this).field_a[var7] >= 0) {
                   break L4;
                 } else {
+                  int incrementValue$18 = param0;
                   param0++;
-                  param3[param0] = (byte)(var10 ^ -1);
+                  param3[incrementValue$18] = (byte)(var10 ^ -1);
                   if (param4 > param0) {
                     var7 = 0;
                     break L4;
@@ -125,8 +127,9 @@ final class mc {
                 if (((mc) this).field_a[var7] >= 0) {
                   break L6;
                 } else {
+                  int incrementValue$19 = param0;
                   param0++;
-                  param3[param0] = (byte)(var10 ^ -1);
+                  param3[incrementValue$19] = (byte)(var10 ^ -1);
                   if (param4 > param0) {
                     var7 = 0;
                     break L6;
@@ -149,8 +152,9 @@ final class mc {
                 if (((mc) this).field_a[var7] >= 0) {
                   break L8;
                 } else {
+                  int incrementValue$20 = param0;
                   param0++;
-                  param3[param0] = (byte)(var10 ^ -1);
+                  param3[incrementValue$20] = (byte)(var10 ^ -1);
                   if (param0 < param4) {
                     var7 = 0;
                     break L8;
@@ -173,8 +177,9 @@ final class mc {
                 if (((mc) this).field_a[var7] >= 0) {
                   break L10;
                 } else {
+                  int incrementValue$21 = param0;
                   param0++;
-                  param3[param0] = (byte)(var10 ^ -1);
+                  param3[incrementValue$21] = (byte)(var10 ^ -1);
                   if (param0 < param4) {
                     var7 = 0;
                     break L10;
@@ -195,8 +200,9 @@ final class mc {
               L12: {
                 var10 = ((mc) this).field_a[var7];
                 if (((mc) this).field_a[var7] < 0) {
+                  int incrementValue$22 = param0;
                   param0++;
-                  param3[param0] = (byte)(var10 ^ -1);
+                  param3[incrementValue$22] = (byte)(var10 ^ -1);
                   if (param0 < param4) {
                     var7 = 0;
                     break L12;
@@ -222,8 +228,9 @@ final class mc {
                   if (((mc) this).field_a[var7] >= 0) {
                     break L15;
                   } else {
+                    int incrementValue$23 = param0;
                     param0++;
-                    param3[param0] = (byte)(var10 ^ -1);
+                    param3[incrementValue$23] = (byte)(var10 ^ -1);
                     if (param4 <= param0) {
                       break L14;
                     } else {
@@ -244,8 +251,9 @@ final class mc {
                 L17: {
                   var10 = ((mc) this).field_a[var7];
                   if (-1 < (((mc) this).field_a[var7] ^ -1)) {
+                    int incrementValue$24 = param0;
                     param0++;
-                    param3[param0] = (byte)(var10 ^ -1);
+                    param3[incrementValue$24] = (byte)(var10 ^ -1);
                     if (param4 <= param0) {
                       break L14;
                     } else {
@@ -263,7 +271,7 @@ final class mc {
             }
           } else {
             var12 = null;
-            int discarded$1 = ((mc) this).a(71, -42, -78, (byte[]) null, -81, (byte[]) null);
+            int discarded$25 = ((mc) this).a(71, -42, -78, (byte[]) null, -81, (byte[]) null);
             param4 = param4 + param0;
             var8 = param1;
             L18: while (true) {
@@ -282,8 +290,9 @@ final class mc {
                 if (((mc) this).field_a[var7] >= 0) {
                   break L20;
                 } else {
+                  int incrementValue$26 = param0;
                   param0++;
-                  param3[param0] = (byte)(var10 ^ -1);
+                  param3[incrementValue$26] = (byte)(var10 ^ -1);
                   if (param4 > param0) {
                     var7 = 0;
                     break L20;
@@ -306,8 +315,9 @@ final class mc {
                 if (((mc) this).field_a[var7] >= 0) {
                   break L22;
                 } else {
+                  int incrementValue$27 = param0;
                   param0++;
-                  param3[param0] = (byte)(var10 ^ -1);
+                  param3[incrementValue$27] = (byte)(var10 ^ -1);
                   if (param4 > param0) {
                     var7 = 0;
                     break L22;
@@ -331,8 +341,9 @@ final class mc {
                   if (((mc) this).field_a[var7] >= 0) {
                     break L25;
                   } else {
+                    int incrementValue$28 = param0;
                     param0++;
-                    param3[param0] = (byte)(var10 ^ -1);
+                    param3[incrementValue$28] = (byte)(var10 ^ -1);
                     if (param4 > param0) {
                       var7 = 0;
                       break L25;
@@ -355,8 +366,9 @@ final class mc {
                   if (((mc) this).field_a[var7] >= 0) {
                     break L27;
                   } else {
+                    int incrementValue$29 = param0;
                     param0++;
-                    param3[param0] = (byte)(var10 ^ -1);
+                    param3[incrementValue$29] = (byte)(var10 ^ -1);
                     if (param0 < param4) {
                       var7 = 0;
                       break L27;
@@ -379,8 +391,9 @@ final class mc {
                   if (((mc) this).field_a[var7] >= 0) {
                     break L29;
                   } else {
+                    int incrementValue$30 = param0;
                     param0++;
-                    param3[param0] = (byte)(var10 ^ -1);
+                    param3[incrementValue$30] = (byte)(var10 ^ -1);
                     if (param0 < param4) {
                       var7 = 0;
                       break L29;
@@ -401,8 +414,9 @@ final class mc {
                 L31: {
                   var10 = ((mc) this).field_a[var7];
                   if (((mc) this).field_a[var7] < 0) {
+                    int incrementValue$31 = param0;
                     param0++;
-                    param3[param0] = (byte)(var10 ^ -1);
+                    param3[incrementValue$31] = (byte)(var10 ^ -1);
                     if (param0 < param4) {
                       var7 = 0;
                       break L31;
@@ -427,8 +441,9 @@ final class mc {
                   if (((mc) this).field_a[var7] >= 0) {
                     break L33;
                   } else {
+                    int incrementValue$32 = param0;
                     param0++;
-                    param3[param0] = (byte)(var10 ^ -1);
+                    param3[incrementValue$32] = (byte)(var10 ^ -1);
                     if (param4 <= param0) {
                       break L24;
                     } else {
@@ -449,8 +464,9 @@ final class mc {
                 L35: {
                   var10 = ((mc) this).field_a[var7];
                   if (-1 < (((mc) this).field_a[var7] ^ -1)) {
+                    int incrementValue$33 = param0;
                     param0++;
-                    param3[param0] = (byte)(var10 ^ -1);
+                    param3[incrementValue$33] = (byte)(var10 ^ -1);
                     if (param4 <= param0) {
                       break L24;
                     } else {

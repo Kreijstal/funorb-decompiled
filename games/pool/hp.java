@@ -69,31 +69,63 @@ final class hp {
     }
 
     final static void a(int param0, boolean param1, int param2, int param3) {
-        if (!(fm.field_H)) {
-            return;
-        }
-        e.field_a.a(param1, false);
-        int var5 = -29 / ((param3 - -12) / 33);
-        int var4 = im.field_Ub.i(-1) ? 1 : 0;
-        if (ne.field_s != 0) {
-            if (!(var4 != 0)) {
+        int var4 = 0;
+        int var5 = 0;
+        int var6 = 0;
+        if (!fm.field_H) {
+          return;
+        } else {
+          L0: {
+            e.field_a.a(param1, false);
+            var5 = -29 / ((param3 - -12) / 33);
+            var4 = im.field_Ub.i(-1) ? 1 : 0;
+            if (ne.field_s == 0) {
+              break L0;
+            } else {
+              if (var4 == 0) {
                 param1 = false;
                 th.b(-1);
+                break L0;
+              } else {
+                break L0;
+              }
             }
-        }
-        if (param1) {
-            im.field_Ub.a((byte) 86, param2, param0);
-        }
-        if (var4 != 0) {
-            e.field_a.a(param1, false);
-        }
-        int var6 = im.field_Ub.g(-1) + im.field_Ub.field_sb;
-        if (-641 <= (var6 ^ -1)) {
-            // if_icmple L151
-            // ifle L151
-            gj.field_G = gj.field_G - 5;
-        } else {
-            gj.field_G = gj.field_G + 5;
+          }
+          L1: {
+            if (!param1) {
+              break L1;
+            } else {
+              im.field_Ub.a((byte) 86, param2, param0);
+              break L1;
+            }
+          }
+          L2: {
+            if (var4 == 0) {
+              break L2;
+            } else {
+              e.field_a.a(param1, false);
+              break L2;
+            }
+          }
+          L3: {
+            var6 = im.field_Ub.g(-1) + im.field_Ub.field_sb;
+            if (-641 > (var6 ^ -1)) {
+              gj.field_G = gj.field_G + 5;
+              break L3;
+            } else {
+              if (635 <= var6) {
+                break L3;
+              } else {
+                if (gj.field_G <= 0) {
+                  break L3;
+                } else {
+                  gj.field_G = gj.field_G - 5;
+                  break L3;
+                }
+              }
+            }
+          }
+          return;
         }
     }
 

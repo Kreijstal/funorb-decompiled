@@ -40,11 +40,11 @@ final class ai implements Iterable {
           if (0 != var5) {
             var7 = var4;
             var8 = var6 + -var5;
-            if (var8 != -1) {
+            if ((var8 ^ -1) != -1) {
               var9_int = 0;
               L0: while (true) {
                 var9_int = param0.indexOf(param1, var9_int);
-                if (-1 <= var9_int) {
+                if (-1 >= (var9_int ^ -1)) {
                   var7 = var7 + var8;
                   var9_int = var9_int + var5;
                   continue L0;

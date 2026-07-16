@@ -81,9 +81,11 @@ final class bd {
                     var7++;
                     continue L0;
                   } else {
+                    int incrementValue$2 = var6;
                     var6++;
+                    int incrementValue$3 = var5;
                     var5++;
-                    var4[var6] = param0.field_z[var5];
+                    var4[incrementValue$2] = param0.field_z[incrementValue$3];
                     var8++;
                     continue L1;
                   }
@@ -155,8 +157,9 @@ final class bd {
                 ((bd) this).field_g = 0;
                 break L1;
               } else {
+                int fieldTemp$2 = ((bd) this).field_g;
                 ((bd) this).field_g = ((bd) this).field_g + 1;
-                ((bd) this).field_k[((bd) this).field_g] = (byte) 0;
+                ((bd) this).field_k[fieldTemp$2] = (byte) 0;
                 continue L2;
               }
             }
@@ -187,8 +190,9 @@ final class bd {
               }
             }
           } else {
+            int fieldTemp$3 = ((bd) this).field_g;
             ((bd) this).field_g = ((bd) this).field_g + 1;
-            ((bd) this).field_k[((bd) this).field_g] = (byte) 0;
+            ((bd) this).field_k[fieldTemp$3] = (byte) 0;
             continue L3;
           }
         }

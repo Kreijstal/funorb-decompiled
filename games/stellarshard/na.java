@@ -32,8 +32,9 @@ final class na {
         int var5 = 0;
         L0: {
           var5 = stellarshard.field_B;
+          int fieldTemp$3 = ((na) this).field_c + 1;
           ((na) this).field_c = ((na) this).field_c + 1;
-          ((na) this).field_i = ((na) this).field_i + (((na) this).field_c + 1);
+          ((na) this).field_i = ((na) this).field_i + fieldTemp$3;
           var2 = 0;
           if (param0 >= 113) {
             break L0;
@@ -67,10 +68,12 @@ final class na {
               }
             }
             ((na) this).field_f = ((na) this).field_f + ((na) this).field_g[128 + var2 & 255];
-            var4 = ((na) this).field_f + ((na) this).field_g[sa.a(var3 >> 937937890, 255)] + ((na) this).field_i;
-            ((na) this).field_g[var2] = ((na) this).field_f + ((na) this).field_g[sa.a(var3 >> 937937890, 255)] + ((na) this).field_i;
-            ((na) this).field_i = var3 + ((na) this).field_g[sa.a(1020, var4 >> 415082504) >> -1184775454];
-            ((na) this).field_h[var2] = var3 + ((na) this).field_g[sa.a(1020, var4 >> 415082504) >> -1184775454];
+            int dupTemp$4 = ((na) this).field_f + ((na) this).field_g[sa.a(var3 >> 937937890, 255)] + ((na) this).field_i;
+            var4 = dupTemp$4;
+            ((na) this).field_g[var2] = dupTemp$4;
+            int dupTemp$5 = var3 + ((na) this).field_g[sa.a(1020, var4 >> 415082504) >> -1184775454];
+            ((na) this).field_i = dupTemp$5;
+            ((na) this).field_h[var2] = dupTemp$5;
             var2++;
             continue L1;
           }
@@ -240,80 +243,83 @@ final class na {
 
     final static pf a(int param0, int param1, int param2, boolean param3, boolean param4, boolean param5) {
         try {
-            gi var6 = null;
-            IOException var6_ref = null;
-            gi var7 = null;
+            Object var6 = null;
+            Object var7 = null;
             wc var8 = null;
             pf stackIn_16_0 = null;
             Throwable decompiledCaughtException = null;
             pf stackOut_15_0 = null;
             try {
               L0: {
-                var6 = null;
-                if (null != fa.field_p.field_f) {
-                  ma.field_s = new pc(fa.field_p.field_f, 5200, 0);
-                  fa.field_p.field_f = null;
-                  var6 = new gi(255, ma.field_s, new pc(fa.field_p.field_d, 12000, 0), 2097152);
-                  break L0;
-                } else {
-                  break L0;
-                }
-              }
-              L1: {
-                var7 = null;
-                if (null == ma.field_s) {
-                  break L1;
-                } else {
-                  L2: {
-                    if (df.field_d != null) {
-                      break L2;
-                    } else {
-                      df.field_d = new pc[fa.field_p.field_l.length];
-                      break L2;
-                    }
+                L1: {
+                  var6 = null;
+                  if (null != fa.field_p.field_f) {
+                    ma.field_s = new pc(fa.field_p.field_f, 5200, 0);
+                    fa.field_p.field_f = null;
+                    var6 = (Object) (Object) new gi(255, ma.field_s, new pc(fa.field_p.field_d, 12000, 0), 2097152);
+                    break L1;
+                  } else {
+                    break L1;
                   }
-                  L3: {
-                    if (null == df.field_d[param2]) {
-                      df.field_d[param2] = new pc(fa.field_p.field_l[param2], 12000, 0);
-                      fa.field_p.field_l[param2] = null;
-                      break L3;
-                    } else {
-                      break L3;
+                }
+                L2: {
+                  var7 = null;
+                  if (null == ma.field_s) {
+                    break L2;
+                  } else {
+                    L3: {
+                      if (df.field_d != null) {
+                        break L3;
+                      } else {
+                        df.field_d = new pc[fa.field_p.field_l.length];
+                        break L3;
+                      }
                     }
+                    L4: {
+                      if (null == df.field_d[param2]) {
+                        df.field_d[param2] = new pc(fa.field_p.field_l[param2], 12000, 0);
+                        fa.field_p.field_l[param2] = null;
+                        break L4;
+                      } else {
+                        break L4;
+                      }
+                    }
+                    var7 = (Object) (Object) new gi(param2, ma.field_s, df.field_d[param2], 2097152);
+                    break L2;
                   }
-                  var7 = new gi(param2, ma.field_s, df.field_d[param2], 2097152);
-                  break L1;
                 }
-              }
-              L4: {
-                if (param1 == 255) {
-                  break L4;
-                } else {
-                  field_e = null;
-                  break L4;
+                L5: {
+                  if (param1 == 255) {
+                    break L5;
+                  } else {
+                    field_e = null;
+                    break L5;
+                  }
                 }
-              }
-              L5: {
-                var8 = mc.field_c.a(64, var7, var6, param4, param2);
-                if (param3) {
-                  var8.d(2);
-                  break L5;
-                } else {
-                  break L5;
+                L6: {
+                  var8 = mc.field_c.a(64, (gi) var7, (gi) var6, param4, param2);
+                  if (param3) {
+                    var8.d(2);
+                    break L6;
+                  } else {
+                    break L6;
+                  }
                 }
+                stackOut_15_0 = new pf((wf) (Object) var8, param5, param0);
+                stackIn_16_0 = stackOut_15_0;
+                break L0;
               }
-              stackOut_15_0 = new pf((wf) (Object) var8, param5, param0);
-              stackIn_16_0 = stackOut_15_0;
-            } catch (java.io.IOException decompiledCaughtParameter) {
-              decompiledCaughtException = decompiledCaughtParameter;
-              return stackIn_16_0;
+            } catch (java.io.IOException decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              var6 = (Object) (Object) decompiledCaughtException;
+              throw new RuntimeException(((IOException) var6).toString());
             }
+            return stackIn_16_0;
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
             throw new RuntimeException(decompiledCheckedException);
         }
-        return null;
     }
 
     final int a(int param0) {
@@ -324,8 +330,9 @@ final class na {
             this.d(120);
             ((na) this).field_b = 256;
         }
+        int fieldTemp$0 = ((na) this).field_b - 1;
         ((na) this).field_b = ((na) this).field_b - 1;
-        return ((na) this).field_h[((na) this).field_b - 1];
+        return ((na) this).field_h[fieldTemp$0];
     }
 
     public static void b(int param0) {

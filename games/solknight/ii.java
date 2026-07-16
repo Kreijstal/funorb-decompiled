@@ -80,7 +80,7 @@ final class ii implements Iterable {
           }
         }
         L1: {
-          if (mi.field_k < param4 + param1) {
+          if ((mi.field_k ^ -1) > (param4 + param1 ^ -1)) {
             param4 = mi.field_k + -param1;
             break L1;
           } else {
@@ -88,7 +88,7 @@ final class ii implements Iterable {
           }
         }
         L2: {
-          if (mi.field_l > param2) {
+          if ((mi.field_l ^ -1) < (param2 ^ -1)) {
             param0 = param0 - (-param2 + mi.field_l);
             param2 = mi.field_l;
             break L2;
@@ -97,17 +97,17 @@ final class ii implements Iterable {
           }
         }
         L3: {
-          if (mi.field_e >= param2 + param0) {
+          if ((mi.field_e ^ -1) <= (param2 + param0 ^ -1)) {
             break L3;
           } else {
             param0 = -param2 + mi.field_e;
             break L3;
           }
         }
-        if (param4 >= -1) {
+        if ((param4 ^ -1) >= -1) {
           return;
         } else {
-          if (-1 >= param0) {
+          if (-1 <= (param0 ^ -1)) {
             return;
           } else {
             if (param5) {
@@ -125,35 +125,34 @@ final class ii implements Iterable {
                       param2++;
                       continue L4;
                     } else {
-                      var8 = mi.field_f[var6];
-                      if (param3 < (255 & var8 >> -1285462040)) {
-                        if ((16711680 & var8) >> -1806599120 <= (255 & var8 >> -246100408)) {
-                          L6: {
-                            var9 = ((16711680 & var8) >> -1993520561) - 60;
-                            if (255 < var9) {
-                              var9 = 255;
-                              break L6;
-                            } else {
-                              break L6;
-                            }
-                          }
-                          var10 = var8 & 65280;
-                          var10 = 65280 & (var10 >> -1582855103) - (var10 >> 632857093);
-                          var11 = var8 >> 1169275331 & 31;
-                          mi.field_f[var6] = qk.a(var11, qk.a(var10, var9 << 432109712));
-                          var6++;
-                          param1++;
-                          continue L5;
+                      L6: {
+                        var8 = mi.field_f[var6];
+                        if ((param3 ^ -1) <= (255 & var8 >> -1285462040 ^ -1)) {
+                          break L6;
                         } else {
-                          var6++;
-                          param1++;
-                          continue L5;
+                          if ((16711680 & var8) >> -1806599120 > (255 & var8 >> -246100408)) {
+                            break L6;
+                          } else {
+                            L7: {
+                              var9 = ((16711680 & var8) >> -1993520561) - 60;
+                              if (255 < var9) {
+                                var9 = 255;
+                                break L7;
+                              } else {
+                                break L7;
+                              }
+                            }
+                            var10 = var8 & 65280;
+                            var10 = 65280 & (var10 >> -1582855103) - (var10 >> 632857093);
+                            var11 = var8 >> 1169275331 & 31;
+                            mi.field_f[var6] = qk.a(var11, qk.a(var10, var9 << 432109712));
+                            break L6;
+                          }
                         }
-                      } else {
-                        var6++;
-                        param1++;
-                        continue L5;
                       }
+                      var6++;
+                      param1++;
+                      continue L5;
                     }
                   }
                 }

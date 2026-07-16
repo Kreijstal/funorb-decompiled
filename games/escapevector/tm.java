@@ -49,21 +49,21 @@ final class tm extends vg implements qb {
 
     tm(tb param0, fc param1) {
         super(param0, 200, 150);
-        String var3 = null;
+        Object var3 = null;
         hm var4 = null;
         L0: {
           var3 = null;
           if (ge.field_h == param1) {
-            var3 = tj.field_k;
+            var3 = (Object) (Object) tj.field_k;
             break L0;
           } else {
             if (param1 == ck.field_A) {
               ((tm) this).field_x = ((tm) this).field_x + 10;
-              var3 = ol.field_K;
+              var3 = (Object) (Object) ol.field_K;
               if (!tb.a(false)) {
                 break L0;
               } else {
-                var3 = e.field_b;
+                var3 = (Object) (Object) e.field_b;
                 ((tm) this).field_x = ((tm) this).field_x + 20;
                 break L0;
               }
@@ -71,14 +71,14 @@ final class tm extends vg implements qb {
               if (um.field_d != param1) {
                 break L0;
               } else {
-                var3 = eg.field_a;
+                var3 = (Object) (Object) eg.field_a;
                 ((tm) this).field_x = ((tm) this).field_x + 30;
                 break L0;
               }
             }
           }
         }
-        var4 = new hm(var3, (wn) null);
+        var4 = new hm((String) var3, (wn) null);
         var4.field_j = 50;
         var4.field_x = 80;
         var4.field_g = ((tm) this).field_g;
@@ -160,6 +160,7 @@ final class tm extends vg implements qb {
             var0 = var15;
             L1: while (true) {
               if (10 < var15) {
+                return;
               } else {
                 var1 = -8 + 8 * var15;
                 field_ab[var15] = ja.a(fn.a(field_db[7][7 + var1], 255L), ja.a(ja.a(fn.a(field_db[5][var1 + 5], 16711680L), ja.a(fn.a(4278190080L, field_db[4][4 + var1]), ja.a(ja.a(fn.a(field_db[2][2 + var1], 280375465082880L), ja.a(fn.a(field_db[1][var1 - -1], 71776119061217280L), fn.a(field_db[0][var1], -72057594037927936L))), fn.a(1095216660480L, field_db[3][3 + var1])))), fn.a(65280L, field_db[6][var1 + 6])));
@@ -169,7 +170,7 @@ final class tm extends vg implements qb {
             }
           } else {
             L2: {
-              var1 = "ᠣ웨螸ŏ㚦틵祯酒悼鮎ꌌ笵ᷠퟂ⹋﹗ᕷ㟥鿰䫚壉⤊놠殅뵝ჴ쬾է䆋Ᵹ闘ﯮ籦���䞞쨭뼇굚茳挂ꩱ젙䧙守騦㊰햀뻍㑈ｺ遟⁨᪮둔錢擱猒䀈쏬���贽需켫皂혛떯橐䗳ワ㽕ꋪ斺⿀���﵍鉵ڊ닦ฟ拔ꢖ暈╙葲㥌幸㢌톥댡鰞䏇ﰄ写洍﫟縤㮫츑轎럫㲁铷뤓ⳓ쐃噄義⪻셓���鵬ㅴ겉ᓡᘺ椉炶탭챂颤⡜".charAt(var0 / 2);
+              var1 = "ᠣ웨螸ŏ㚦틵祯酒悼鮎ꌌ笵ᷠퟂ⹋﹗ᕷ㟥鿰䫚壉⤊놠殅뵝ჴ쬾է䆋Ᵹ闘ﯮ籦\udd17䞞쨭뼇굚茳挂ꩱ젙䧙守騦㊰햀뻍㑈ｺ遟⁨᪮둔錢擱猒䀈쏬\udba1贽需켫皂혛떯橐䗳ワ㽕ꋪ斺⿀\ude1c﵍鉵ڊ닦ฟ拔ꢖ暈╙葲㥌幸㢌톥댡鰞䏇ﰄ写洍﫟縤㮫츑轎럫㲁铷뤓ⳓ쐃噄義⪻셓\udc0b鵬ㅴ겉ᓡᘺ椉炶탭챂颤⡜".charAt(var0 / 2);
               if (-1 != (var0 & 1 ^ -1)) {
                 stackOut_4_0 = (long)(255 & var1);
                 stackIn_5_0 = stackOut_4_0;

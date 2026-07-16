@@ -109,6 +109,7 @@ final class cc {
           if (var2 >= 10) {
             ((cc) this).field_c = param0.d((byte) -126);
             ((cc) this).field_a = param0.d((byte) -86);
+            return;
           } else {
             var3 = param0.h(16383);
             if (var3 != 0) {

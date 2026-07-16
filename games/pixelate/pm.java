@@ -44,7 +44,6 @@ final class pm {
         int var4 = 0;
         int var5 = 0;
         String var6 = null;
-        String var6_ref = null;
         int var7 = 0;
         int var8 = 0;
         sb var9 = null;
@@ -165,7 +164,7 @@ final class pm {
                               break L7;
                             }
                           }
-                          var6_ref = stackIn_26_0;
+                          var6 = stackIn_26_0;
                           break L6;
                         }
                       }
@@ -187,7 +186,7 @@ final class pm {
                             break L8;
                           }
                         }
-                        var6_ref = stackIn_32_0;
+                        var6 = stackIn_32_0;
                         break L3;
                       }
                     }
@@ -200,13 +199,13 @@ final class pm {
                 if (var4 != -2) {
                   break L9;
                 } else {
-                  var6_ref = Integer.toString(var2);
+                  var6 = Integer.toString(var2);
                   break L9;
                 }
               }
               L10: {
                 stackOut_35_0 = 3;
-                stackOut_35_1 = (String) var6_ref;
+                stackOut_35_1 = (String) var6;
                 stackIn_37_0 = stackOut_35_0;
                 stackIn_37_1 = stackOut_35_1;
                 stackIn_36_0 = stackOut_35_0;
@@ -261,12 +260,12 @@ final class pm {
                 }
               }
               if (var4 < 0) {
-                bg.field_j.a(var6_ref, var8, var1 + ii.field_i, var5, -1);
+                bg.field_j.a(var6, var8, var1 + ii.field_i, var5, -1);
                 var1 = var1 + hq.field_r;
                 var3++;
                 continue L1;
               } else {
-                ma.field_y.a(var6_ref, var8, var1 + ul.field_q, var5, -1);
+                ma.field_y.a(var6, var8, var1 + ul.field_q, var5, -1);
                 var1 = var1 + (gk.field_fb + (bd.field_c + ko.field_fb));
                 var3++;
                 continue L1;
@@ -573,13 +572,13 @@ final class pm {
         ((pm) this).field_a = new hd[((pm) this).field_m];
         ((pm) this).field_g = param5;
         ((pm) this).field_q = ((pm) this).field_c - -1;
-        if (-1 == param2) {
+        if (-1 == (param2 ^ -1)) {
             ((pm) this).field_d = bj.a(((pm) this).field_r, -121);
         }
         if (1 == param2) {
             ((pm) this).field_d = un.field_j.b(-3060);
         }
-        if (-3 == param2) {
+        if (-3 == (param2 ^ -1)) {
             var9 = new Random((long)((pm) this).field_c);
             ((pm) this).field_d = wo.a(((pm) this).field_r, cl.field_e[((pm) this).field_n], var9, (byte) 116);
             ((pm) this).field_d.field_e = 1000;

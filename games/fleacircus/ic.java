@@ -98,6 +98,7 @@ final class ic extends jj implements da {
             var11.field_p = (ch) (Object) new e(nb.field_c, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true);
             ((ic) this).a(var11, (byte) -102);
             ((ic) this).field_cb = this.a(-28732, ja.field_O, (kd) this);
+            return;
           } else {
             if (param1 == ge.field_c) {
               ((ic) this).field_j = ((ic) this).field_j + 30;
@@ -112,6 +113,7 @@ final class ic extends jj implements da {
               var10.field_p = (ch) (Object) new e(nb.field_c, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true);
               ((ic) this).a(var10, (byte) -102);
               ((ic) this).field_cb = this.a(-28732, ja.field_O, (kd) this);
+              return;
             } else {
               var8 = new qa((String) var7, (kd) null);
               var8.field_u = ((ic) this).field_u;
@@ -121,6 +123,7 @@ final class ic extends jj implements da {
               var8.field_p = (ch) (Object) new e(nb.field_c, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true);
               ((ic) this).a(var8, (byte) -102);
               ((ic) this).field_cb = this.a(-28732, ja.field_O, (kd) this);
+              return;
             }
           }
         } else {
@@ -133,6 +136,7 @@ final class ic extends jj implements da {
           var6.field_p = (ch) (Object) new e(nb.field_c, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true);
           ((ic) this).a(var6, (byte) -102);
           ((ic) this).field_cb = this.a(-28732, ja.field_O, (kd) this);
+          return;
         }
     }
 

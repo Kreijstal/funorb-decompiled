@@ -30,10 +30,10 @@ final class kb extends tm {
     final static int a(int param0, boolean param1) {
         int var2 = 0;
         if (!param1) {
-          if (-1 == param0) {
+          if (-1 == (param0 ^ -1)) {
             return 0;
           } else {
-            if (param0 < -1) {
+            if ((param0 ^ -1) < -1) {
               L0: {
                 var2 = 1;
                 if (65535 < param0) {
@@ -45,7 +45,7 @@ final class kb extends tm {
                 }
               }
               L1: {
-                if (-256 < param0) {
+                if (-256 > (param0 ^ -1)) {
                   var2 += 8;
                   param0 = param0 >> 8;
                   break L1;
@@ -84,7 +84,7 @@ final class kb extends tm {
             } else {
               L5: {
                 var2 = 2;
-                if (65535 >= param0) {
+                if (65535 >= (param0 ^ -1)) {
                   break L5;
                 } else {
                   param0 = param0 >> 16;
@@ -93,7 +93,7 @@ final class kb extends tm {
                 }
               }
               L6: {
-                if (255 <= param0) {
+                if (255 >= (param0 ^ -1)) {
                   break L6;
                 } else {
                   var2 += 8;
@@ -136,7 +136,7 @@ final class kb extends tm {
           if (-1 == (param0 ^ -1)) {
             return 0;
           } else {
-            if (param0 < -1) {
+            if ((param0 ^ -1) < -1) {
               L10: {
                 var2 = 1;
                 if (65535 < param0) {
@@ -148,7 +148,7 @@ final class kb extends tm {
                 }
               }
               L11: {
-                if (-256 < param0) {
+                if (-256 > (param0 ^ -1)) {
                   var2 += 8;
                   param0 = param0 >> 8;
                   break L11;
@@ -187,7 +187,7 @@ final class kb extends tm {
             } else {
               L15: {
                 var2 = 2;
-                if (65535 >= param0) {
+                if (65535 >= (param0 ^ -1)) {
                   break L15;
                 } else {
                   param0 = param0 >> 16;
@@ -196,7 +196,7 @@ final class kb extends tm {
                 }
               }
               L16: {
-                if (255 <= param0) {
+                if (255 >= (param0 ^ -1)) {
                   break L16;
                 } else {
                   var2 += 8;
@@ -223,7 +223,7 @@ final class kb extends tm {
                 }
               }
               L19: {
-                if (param0 <= 1) {
+                if ((param0 ^ -1) <= 1) {
                   break L19;
                 } else {
                   param0 = param0 >> 1;

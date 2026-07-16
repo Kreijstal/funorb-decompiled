@@ -52,8 +52,9 @@ final class mf extends tm {
     }
 
     final void a(int param0, di param1) {
-        ((mf) this).field_e = aj.a(param0 ^ param0, "", param1, "top_bar_balls_modern");
-        d.field_a = aj.a(param0 ^ param0, "", param1, "top_bar_balls_modern");
+        dd[] dupTemp$0 = aj.a(param0 ^ param0, "", param1, "top_bar_balls_modern");
+        ((mf) this).field_e = dupTemp$0;
+        d.field_a = dupTemp$0;
     }
 
     public static void i(int param0) {

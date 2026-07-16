@@ -101,8 +101,9 @@ class mh {
                 if (var8 <= var7) {
                   break L2;
                 } else {
+                  int incrementValue$3 = var6;
                   var6++;
-                  param4[var6] = param3.substring(var7, var8).trim();
+                  param4[incrementValue$3] = param3.substring(var7, var8).trim();
                   break L2;
                 }
               }
@@ -127,15 +128,17 @@ class mh {
                   break L3;
                 } else {
                   var7 = 1 + var9;
+                  int incrementValue$4 = var6;
                   var6++;
-                  param4[var6] = var11;
+                  param4[incrementValue$4] = var11;
                   break L3;
                 }
               }
               if (var10 == 62) {
                 if (param3.regionMatches(var9 - 3, "<br>", 0, 4)) {
+                  int incrementValue$5 = var6;
                   var6++;
-                  param4[var6] = param3.substring(var7, -3 + var9).trim();
+                  param4[incrementValue$5] = param3.substring(var7, -3 + var9).trim();
                   var7 = 1 + var9;
                   var9++;
                   continue L1;

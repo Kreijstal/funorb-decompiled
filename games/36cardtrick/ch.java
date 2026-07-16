@@ -79,7 +79,7 @@ abstract class ch {
     final na a(boolean param0, int param1, int param2, byte param3, int param4) {
         long var6 = ((long)param4 << -1640279264) + (long)param2;
         if (param1 != -1640279264) {
-            return (na) null;
+            return null;
         }
         na var8 = new na();
         var8.field_o = param0 ? true : false;

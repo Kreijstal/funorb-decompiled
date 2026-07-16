@@ -11,7 +11,7 @@ final class nh extends wk implements rc {
 
     nh(pf param0, lg param1) {
         super(param0, 200, 150);
-        String var3 = null;
+        Object var3 = null;
         String var5 = null;
         lk var6 = null;
         String var7 = null;
@@ -26,12 +26,12 @@ final class nh extends wk implements rc {
               if (param1 != jk.field_a) {
                 break L0;
               } else {
-                var3 = pe.field_g;
+                var3 = (Object) (Object) pe.field_g;
                 ((nh) this).field_m = ((nh) this).field_m + 30;
                 break L0;
               }
             }
-            var11 = new lk(var3, (sk) null);
+            var11 = new lk((String) var3, (sk) null);
             var11.field_k = ((nh) this).field_k;
             var11.field_r = 0;
             var11.field_m = 80;
@@ -39,15 +39,16 @@ final class nh extends wk implements rc {
             var11.field_j = (fc) (Object) new jd(qj.field_d, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true);
             ((nh) this).b(var11, true);
             ((nh) this).field_Q = this.a(-20017, (sk) this, uk.field_b);
+            return;
           } else {
             var7 = of.field_a;
-            var3 = var7;
-            var3 = var7;
+            var3 = (Object) (Object) var7;
+            var3 = (Object) (Object) var7;
             ((nh) this).field_m = ((nh) this).field_m + 10;
             if (ng.a(113)) {
               var9 = k.field_E;
-              var3 = var9;
-              var3 = var9;
+              var3 = (Object) (Object) var9;
+              var3 = (Object) (Object) var9;
               ((nh) this).field_m = ((nh) this).field_m + 20;
               var10 = new lk(var9, (sk) null);
               var10.field_k = ((nh) this).field_k;
@@ -57,6 +58,7 @@ final class nh extends wk implements rc {
               var10.field_j = (fc) (Object) new jd(qj.field_d, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true);
               ((nh) this).b(var10, true);
               ((nh) this).field_Q = this.a(-20017, (sk) this, uk.field_b);
+              return;
             } else {
               var8 = new lk(var7, (sk) null);
               var8.field_k = ((nh) this).field_k;
@@ -66,6 +68,7 @@ final class nh extends wk implements rc {
               var8.field_j = (fc) (Object) new jd(qj.field_d, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true);
               ((nh) this).b(var8, true);
               ((nh) this).field_Q = this.a(-20017, (sk) this, uk.field_b);
+              return;
             }
           }
         } else {
@@ -78,6 +81,7 @@ final class nh extends wk implements rc {
           var6.field_j = (fc) (Object) new jd(qj.field_d, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true);
           ((nh) this).b(var6, true);
           ((nh) this).field_Q = this.a(-20017, (sk) this, uk.field_b);
+          return;
         }
     }
 

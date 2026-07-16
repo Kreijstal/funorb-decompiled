@@ -19,11 +19,11 @@ abstract class ta extends jc {
     final static int a(int param0, CharSequence param1) {
         int var5 = 0;
         int var6 = Main.field_T;
-        int var2 = ((CharSequence) param1).length();
+        int var2 = param1.length();
         int var3 = 105 / ((param0 - 12) / 45);
         int var4 = 0;
         for (var5 = 0; var5 < var2; var5++) {
-            var4 = ec.a((byte) -123, ((CharSequence) param1).charAt(var5)) + (var4 << -1097858139) + -var4;
+            var4 = ec.a((byte) -123, param1.charAt(var5)) + (var4 << -1097858139) + -var4;
         }
         return var4;
     }
@@ -38,8 +38,9 @@ abstract class ta extends jc {
                 if (((ta) this).field_Y != jk.field_b) {
                   break L0;
                 } else {
+                  int fieldTemp$38 = ((ta) this).field_ab + 1;
                   ((ta) this).field_ab = ((ta) this).field_ab + 1;
-                  if (((ta) this).field_X == ((ta) this).field_ab + 1) {
+                  if (((ta) this).field_X == fieldTemp$38) {
                     ((ta) this).field_W.field_A = 256;
                     ((ta) this).field_Y = null;
                     break L0;
@@ -49,8 +50,9 @@ abstract class ta extends jc {
                   }
                 }
               } else {
+                int fieldTemp$39 = ((ta) this).field_ab + 1;
                 ((ta) this).field_ab = ((ta) this).field_ab + 1;
-                if (((ta) this).field_ab + 1 == ((ta) this).field_bb) {
+                if (fieldTemp$39 == ((ta) this).field_bb) {
                   ((ta) this).field_Y = aj.field_q;
                   ((ta) this).a((byte) -36, 12 + ((ta) this).field_db.field_h, ((ta) this).field_cb + 12 + ((ta) this).field_db.field_q, ((ta) this).field_gb);
                   ((ta) this).field_ab = 0;
@@ -65,7 +67,7 @@ abstract class ta extends jc {
               break L0;
             }
           }
-          return this.a(true);
+          return super.a(true);
         } else {
           return true;
         }
@@ -81,7 +83,7 @@ abstract class ta extends jc {
         if (param1 == null) {
             ((ta) this).field_W = new n();
         } else {
-            param1.a(((lk) param1).field_q, ((ta) this).field_cb + 6, ((lk) param1).field_h, 6, true);
+            param1.a(param1.field_q, ((ta) this).field_cb + 6, param1.field_h, 6, true);
             ((ta) this).field_W = new n(param1);
         }
         ((ta) this).b((lk) (Object) ((ta) this).field_W, (byte) 118);
@@ -93,15 +95,15 @@ abstract class ta extends jc {
         if (param0 != 928516712) {
             return true;
         }
-        return this.o(928516712);
+        return super.o(928516712);
     }
 
     boolean a(char param0, byte param1, int param2, lk param3) {
-        if (!(!this.a(param0, (byte) -114, param2, param3))) {
+        if (!(!super.a(param0, (byte) -114, param2, param3))) {
             return true;
         }
         if (param1 > -99) {
-            ((ta) this).field_W = (n) null;
+            ((ta) this).field_W = null;
         }
         if (null != ((ta) this).field_W) {
             if ((param2 ^ -1) == -99) {
@@ -146,7 +148,7 @@ abstract class ta extends jc {
     }
 
     ta(j param0, lk param1, int param2, int param3, int param4) {
-        super(param0, ((lk) param1).field_h + 12, ((lk) param1).field_q + (12 + param2));
+        super(param0, param1.field_h + 12, param1.field_q + (12 + param2));
         ((ta) this).field_X = param3;
         ((ta) this).field_bb = param3;
         ((ta) this).field_gb = param4;
@@ -163,7 +165,7 @@ abstract class ta extends jc {
             ((ta) this).field_Y = null;
             ((ta) this).field_W.field_A = 256;
         }
-        this.q(param0);
+        super.q(param0);
     }
 
     void c(lk param0, byte param1) {

@@ -47,16 +47,16 @@ final class ul {
         } else {
             var4 = ((ul) this).field_c.a((byte) 51, 1, param1 & 32767);
         }
-        dm var3_ref = new dm();
+        var3 = new dm();
         int var5 = 91 / ((-7 - param0) / 53);
         if (var4 != null) {
-            var3_ref.a(new de(var4), 0);
+            var3.a(new de(var4), 0);
         }
         if (!(param1 < 32768)) {
-            var3_ref.d((byte) -76);
+            var3.d((byte) -76);
         }
-        ((ul) this).field_a.a((long)param1, (Object) (Object) var3_ref, -16709);
-        return var3_ref;
+        ((ul) this).field_a.a((long)param1, (Object) (Object) var3, -16709);
+        return var3;
     }
 
     private ul() throws Throwable {

@@ -141,7 +141,7 @@ final class ee extends am {
               var10 = var3;
               var8 = 0;
               L2: while (true) {
-                if (var8 >= ci.field_c) {
+                if ((var8 ^ -1) <= (ci.field_c ^ -1)) {
                   break L1;
                 } else {
                   var10[var8] = var17[var8] - -var18[var8];
@@ -154,7 +154,7 @@ final class ee extends am {
                 var10 = var3;
                 var8 = 0;
                 L3: while (true) {
-                  if (var8 >= ci.field_c) {
+                  if ((var8 ^ -1) <= (ci.field_c ^ -1)) {
                     break L1;
                   } else {
                     var10[var8] = -var18[var8] + var17[var8];
@@ -180,7 +180,7 @@ final class ee extends am {
                     if ((var8 ^ -1) == -6) {
                       var8 = 0;
                       L5: while (true) {
-                        if (var8 >= ci.field_c) {
+                        if ((var8 ^ -1) <= (ci.field_c ^ -1)) {
                           break L1;
                         } else {
                           var3[var8] = 4096 - ((4096 + -var18[var8]) * (4096 + -var17[var8]) >> 391809580);
@@ -227,11 +227,11 @@ final class ee extends am {
                           }
                         }
                       } else {
-                        if (var8 != -8) {
+                        if ((var8 ^ -1) != -8) {
                           if (8 == var8) {
                             var8 = 0;
                             L8: while (true) {
-                              if (var8 >= ci.field_c) {
+                              if ((var8 ^ -1) <= (ci.field_c ^ -1)) {
                                 break L1;
                               } else {
                                 L9: {
@@ -269,7 +269,7 @@ final class ee extends am {
                             if (var8 == 9) {
                               var8 = 0;
                               L10: while (true) {
-                                if (var8 >= ci.field_c) {
+                                if ((var8 ^ -1) <= (ci.field_c ^ -1)) {
                                   break L1;
                                 } else {
                                   L11: {
@@ -281,7 +281,7 @@ final class ee extends am {
                                     stackIn_61_1 = stackOut_59_1;
                                     stackIn_60_0 = stackOut_59_0;
                                     stackIn_60_1 = stackOut_59_1;
-                                    if (var5 <= var4) {
+                                    if ((var5 ^ -1) >= (var4 ^ -1)) {
                                       stackOut_61_0 = (int[]) (Object) stackIn_61_0;
                                       stackOut_61_1 = stackIn_61_1;
                                       stackOut_61_2 = var5;
@@ -305,7 +305,7 @@ final class ee extends am {
                                 }
                               }
                             } else {
-                              if (-11 != var8) {
+                              if (-11 != (var8 ^ -1)) {
                                 if (11 != var8) {
                                   if ((var8 ^ -1) == -13) {
                                     var8 = 0;
@@ -338,7 +338,7 @@ final class ee extends am {
                                         stackIn_73_1 = stackOut_71_1;
                                         stackIn_72_0 = stackOut_71_0;
                                         stackIn_72_1 = stackOut_71_1;
-                                        if (var4 > var5) {
+                                        if ((var4 ^ -1) < (var5 ^ -1)) {
                                           stackOut_73_0 = (int[]) (Object) stackIn_73_0;
                                           stackOut_73_1 = stackIn_73_1;
                                           stackOut_73_2 = var4 + -var5;
@@ -365,7 +365,7 @@ final class ee extends am {
                               } else {
                                 var8 = 0;
                                 L15: while (true) {
-                                  if (ci.field_c <= var8) {
+                                  if ((ci.field_c ^ -1) >= (var8 ^ -1)) {
                                     break L1;
                                   } else {
                                     L16: {
@@ -506,22 +506,30 @@ final class ee extends am {
             var2.field_l = null;
             var4 = 0;
             while (var4 < 64) {
+                int incrementValue$0 = var4;
                 var4++;
-                var3[var4] = 0L;
+                var3[incrementValue$0] = 0L;
+                int incrementValue$1 = var4;
                 var4++;
-                var3[var4] = 0L;
+                var3[incrementValue$1] = 0L;
+                int incrementValue$2 = var4;
                 var4++;
-                var3[var4] = 0L;
+                var3[incrementValue$2] = 0L;
+                int incrementValue$3 = var4;
                 var4++;
-                var3[var4] = 0L;
+                var3[incrementValue$3] = 0L;
+                int incrementValue$4 = var4;
                 var4++;
-                var3[var4] = 0L;
+                var3[incrementValue$4] = 0L;
+                int incrementValue$5 = var4;
                 var4++;
-                var3[var4] = 0L;
+                var3[incrementValue$5] = 0L;
+                int incrementValue$6 = var4;
                 var4++;
-                var3[var4] = 0L;
+                var3[incrementValue$6] = 0L;
+                int incrementValue$7 = var4;
                 var4++;
-                var3[var4] = 0L;
+                var3[incrementValue$7] = 0L;
             }
             return var3;
         }
@@ -543,70 +551,29 @@ final class ee extends am {
         Object var1 = null;
         Throwable var2 = null;
         Object var3 = null;
-        int statePc = 0;
-        Throwable caughtException = null;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    if (ha.field_b == null) {
-                        statePc = 6;
-                    } else {
-                        statePc = 1;
-                    }
-                    continue stateLoop;
-                }
-                case 1: {
-                    var1 = (Object) (Object) ha.field_b;
-                    // monitorenter ha.field_b
-                    statePc = 2;
-                    continue stateLoop;
-                }
-                case 2: {
-                    try {
-                        ha.field_b = null;
-                        // monitorexit var1
-                        statePc = 6;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_2) {
-                        caughtException = stateCaught_2;
-                        statePc = 4;
-                        continue stateLoop;
-                    }
-                }
-                case 4: {
-                    try {
-                        var2 = caughtException;
-                        // monitorexit var1
-                        statePc = 5;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_4) {
-                        caughtException = stateCaught_4;
-                        statePc = 4;
-                        continue stateLoop;
-                    }
-                }
-                case 5: {
-                    throw (RuntimeException) (Object) var2;
-                }
-                case 6: {
-                    if (param0) {
-                        statePc = 8;
-                    } else {
-                        statePc = 7;
-                    }
-                    continue stateLoop;
-                }
-                case 7: {
-                    var3 = null;
-                    li discarded$2 = ee.a((byte[]) null, 74);
-                    statePc = 8;
-                    continue stateLoop;
-                }
-                case 8: {
-                    return;
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
+        Throwable decompiledCaughtException = null;
+        L0: {
+          if (ha.field_b == null) {
+            break L0;
+          } else {
+            var1 = (Object) (Object) ha.field_b;
+            synchronized (var1) {
+              L1: {
+                ha.field_b = null;
+                break L1;
+              }
             }
+            break L0;
+          }
+        }
+        L2: {
+          if (param0) {
+            break L2;
+          } else {
+            var3 = null;
+            li discarded$2 = ee.a((byte[]) null, 74);
+            break L2;
+          }
         }
     }
 
@@ -1017,7 +984,7 @@ final class ee extends am {
                     var59 = var52[2];
                     var21 = 0;
                     L3: while (true) {
-                      if (ci.field_c <= var21) {
+                      if ((ci.field_c ^ -1) >= (var21 ^ -1)) {
                         break L1;
                       } else {
                         L4: {
@@ -1082,7 +1049,7 @@ final class ee extends am {
                           stackIn_41_1 = stackOut_39_1;
                           stackIn_40_0 = stackOut_39_0;
                           stackIn_40_1 = stackOut_39_1;
-                          if (var9 != 0) {
+                          if ((var9 ^ -1) != -1) {
                             stackOut_41_0 = (int[]) (Object) stackIn_41_0;
                             stackOut_41_1 = stackIn_41_1;
                             stackOut_41_2 = (var59[var21] << 1221966348) / var9;
@@ -1230,7 +1197,7 @@ final class ee extends am {
                           }
                         }
                       } else {
-                        if (var21 == -8) {
+                        if ((var21 ^ -1) == -8) {
                           var12 = var51[0];
                           var13 = var51[1];
                           var14 = var51[2];
@@ -1343,7 +1310,7 @@ final class ee extends am {
                             var59 = var52[2];
                             var21 = 0;
                             L16: while (true) {
-                              if (var21 >= ci.field_c) {
+                              if ((var21 ^ -1) <= (ci.field_c ^ -1)) {
                                 break L1;
                               } else {
                                 L17: {
@@ -1434,7 +1401,7 @@ final class ee extends am {
                           } else {
                             if (var21 != 9) {
                               if (10 != var21) {
-                                if (-12 != var21) {
+                                if (-12 != (var21 ^ -1)) {
                                   if (-13 != (var21 ^ -1)) {
                                     break L1;
                                   } else {
@@ -1494,7 +1461,7 @@ final class ee extends am {
                                         stackIn_110_1 = stackOut_108_1;
                                         stackIn_109_0 = stackOut_108_0;
                                         stackIn_109_1 = stackOut_108_1;
-                                        if (var7 >= var4) {
+                                        if ((var7 ^ -1) <= (var4 ^ -1)) {
                                           stackOut_110_0 = (int[]) (Object) stackIn_110_0;
                                           stackOut_110_1 = stackIn_110_1;
                                           stackOut_110_2 = var7 - var4;
@@ -1582,7 +1549,7 @@ final class ee extends am {
                                 var59 = var52[2];
                                 var21 = 0;
                                 L25: while (true) {
-                                  if (var21 >= ci.field_c) {
+                                  if ((var21 ^ -1) <= (ci.field_c ^ -1)) {
                                     break L1;
                                   } else {
                                     L26: {
@@ -1686,7 +1653,7 @@ final class ee extends am {
                               var59 = var52[2];
                               var21 = 0;
                               L29: while (true) {
-                                if (ci.field_c <= var21) {
+                                if ((ci.field_c ^ -1) >= (var21 ^ -1)) {
                                   break L1;
                                 } else {
                                   L30: {
@@ -1702,7 +1669,7 @@ final class ee extends am {
                                     stackIn_86_1 = stackOut_84_1;
                                     stackIn_85_0 = stackOut_84_0;
                                     stackIn_85_1 = stackOut_84_1;
-                                    if (var7 > var4) {
+                                    if ((var7 ^ -1) < (var4 ^ -1)) {
                                       stackOut_86_0 = (int[]) (Object) stackIn_86_0;
                                       stackOut_86_1 = stackIn_86_1;
                                       stackOut_86_2 = var4;
@@ -1728,7 +1695,7 @@ final class ee extends am {
                                     stackIn_89_1 = stackOut_87_1;
                                     stackIn_88_0 = stackOut_87_0;
                                     stackIn_88_1 = stackOut_87_1;
-                                    if (var5 < var8) {
+                                    if ((var5 ^ -1) > (var8 ^ -1)) {
                                       stackOut_89_0 = (int[]) (Object) stackIn_89_0;
                                       stackOut_89_1 = stackIn_89_1;
                                       stackOut_89_2 = var5;
@@ -1754,7 +1721,7 @@ final class ee extends am {
                                     stackIn_92_1 = stackOut_90_1;
                                     stackIn_91_0 = stackOut_90_0;
                                     stackIn_91_1 = stackOut_90_1;
-                                    if (var6 < var9) {
+                                    if ((var6 ^ -1) > (var9 ^ -1)) {
                                       stackOut_92_0 = (int[]) (Object) stackIn_92_0;
                                       stackOut_92_1 = stackIn_92_1;
                                       stackOut_92_2 = var6;

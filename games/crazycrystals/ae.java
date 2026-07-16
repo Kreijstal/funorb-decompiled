@@ -36,19 +36,16 @@ final class ae extends og implements vd {
     }
 
     final boolean a(int param0, int param1, qm param2, char param3) {
-        if (super.a(param0, param1, param2, param3)) {
-          return true;
-        } else {
-          if (param0 != -99) {
-            if (-100 != param0) {
-              return false;
-            } else {
-              return ((ae) this).a(param2, -25911);
-            }
-          } else {
-            return ((ae) this).a((byte) -124, param2);
-          }
+        if (!(!super.a(param0, param1, param2, param3))) {
+            return true;
         }
+        if ((param0 ^ -1) == -99) {
+            return ((ae) this).a((byte) -124, param2);
+        }
+        if (-100 != (param0 ^ -1)) {
+            return false;
+        }
+        return ((ae) this).a(param2, -25911);
     }
 
     public static void a(int param0) {

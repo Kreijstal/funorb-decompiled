@@ -27,13 +27,13 @@ final class mb {
     final static void a(int param0, int param1, kc[] param2, boolean param3, int param4, int param5, kc[] param6, int param7, int param8, int param9, int param10, ee param11) {
         we.a(param5, param0, param0, param7, param2, param8, param10, param1, param9, param11, param6, param10, true, param3, param11);
         if (param4 != 9414) {
-            field_c = (int[]) null;
+            field_c = null;
         }
     }
 
     public static void a(int param0) {
         if (param0 != 1024) {
-          field_b = (String) null;
+          field_b = null;
           field_a = null;
           field_b = null;
           field_c = null;

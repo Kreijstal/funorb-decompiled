@@ -22,24 +22,29 @@ class ka extends gg {
     }
 
     final void b(int param0, int param1) {
+        int fieldTemp$0 = ((ka) this).field_k;
         ((ka) this).field_k = ((ka) this).field_k + 1;
-        ((ka) this).field_r[((ka) this).field_k] = (byte)(param1 >> -274395144);
+        ((ka) this).field_r[fieldTemp$0] = (byte)(param1 >> -274395144);
         if (param0 != 0) {
             return;
         }
+        int fieldTemp$1 = ((ka) this).field_k;
         ((ka) this).field_k = ((ka) this).field_k + 1;
-        ((ka) this).field_r[((ka) this).field_k] = (byte)(param1 >> 1862955024);
+        ((ka) this).field_r[fieldTemp$1] = (byte)(param1 >> 1862955024);
+        int fieldTemp$2 = ((ka) this).field_k;
         ((ka) this).field_k = ((ka) this).field_k + 1;
-        ((ka) this).field_r[((ka) this).field_k] = (byte)(param1 >> -935552856);
+        ((ka) this).field_r[fieldTemp$2] = (byte)(param1 >> -935552856);
+        int fieldTemp$3 = ((ka) this).field_k;
         ((ka) this).field_k = ((ka) this).field_k + 1;
-        ((ka) this).field_r[((ka) this).field_k] = (byte)param1;
+        ((ka) this).field_r[fieldTemp$3] = (byte)param1;
     }
 
     final void a(int param0, int param1) {
         int var4 = stellarshard.field_B;
         while (((ka) this).field_k < param0) {
+            int fieldTemp$0 = ((ka) this).field_k;
             ((ka) this).field_k = ((ka) this).field_k + 1;
-            ((ka) this).field_r[((ka) this).field_k] = (byte) 0;
+            ((ka) this).field_r[fieldTemp$0] = (byte) 0;
         }
         if (param1 != -18920) {
             field_q = 77;
@@ -48,8 +53,9 @@ class ka extends gg {
     }
 
     final String f(byte param0) {
+        int fieldTemp$0 = ((ka) this).field_k;
         ((ka) this).field_k = ((ka) this).field_k + 1;
-        int var2 = ((ka) this).field_r[((ka) this).field_k];
+        int var2 = ((ka) this).field_r[fieldTemp$0];
         if (!(-1 == (var2 ^ -1))) {
             throw new IllegalStateException("");
         }
@@ -58,8 +64,9 @@ class ka extends gg {
         }
         int var3 = ((ka) this).field_k;
         while (true) {
+            int fieldTemp$1 = ((ka) this).field_k;
             ((ka) this).field_k = ((ka) this).field_k + 1;
-            if (((ka) this).field_r[((ka) this).field_k] == 0) {
+            if (((ka) this).field_r[fieldTemp$1] == 0) {
                 break;
             }
         }
@@ -71,8 +78,9 @@ class ka extends gg {
     }
 
     final void a(boolean param0, int param1) {
+        int fieldTemp$0 = ((ka) this).field_k;
         ((ka) this).field_k = ((ka) this).field_k + 1;
-        ((ka) this).field_r[((ka) this).field_k] = (byte)param1;
+        ((ka) this).field_r[fieldTemp$0] = (byte)param1;
         if (param0) {
             field_p = 77;
         }
@@ -81,8 +89,9 @@ class ka extends gg {
     final String e(byte param0) {
         int var2 = ((ka) this).field_k;
         while (true) {
+            int fieldTemp$0 = ((ka) this).field_k;
             ((ka) this).field_k = ((ka) this).field_k + 1;
-            if (((ka) this).field_r[((ka) this).field_k] == 0) {
+            if (((ka) this).field_r[fieldTemp$0] == 0) {
                 break;
             }
         }
@@ -97,24 +106,31 @@ class ka extends gg {
     }
 
     final void a(int param0, long param1) {
+        int fieldTemp$0 = ((ka) this).field_k;
         ((ka) this).field_k = ((ka) this).field_k + 1;
-        ((ka) this).field_r[((ka) this).field_k] = (byte)(int)(param1 >> 368955104);
+        ((ka) this).field_r[fieldTemp$0] = (byte)(int)(param1 >> 368955104);
+        int fieldTemp$1 = ((ka) this).field_k;
         ((ka) this).field_k = ((ka) this).field_k + 1;
-        ((ka) this).field_r[((ka) this).field_k] = (byte)(int)(param1 >> 1944319256);
+        ((ka) this).field_r[fieldTemp$1] = (byte)(int)(param1 >> 1944319256);
+        int fieldTemp$2 = ((ka) this).field_k;
         ((ka) this).field_k = ((ka) this).field_k + 1;
-        ((ka) this).field_r[((ka) this).field_k] = (byte)(int)(param1 >> -804629296);
+        ((ka) this).field_r[fieldTemp$2] = (byte)(int)(param1 >> -804629296);
         if (param0 <= 9) {
             ((ka) this).field_r = null;
+            int fieldTemp$3 = ((ka) this).field_k;
             ((ka) this).field_k = ((ka) this).field_k + 1;
-            ((ka) this).field_r[((ka) this).field_k] = (byte)(int)(param1 >> 237753544);
+            ((ka) this).field_r[fieldTemp$3] = (byte)(int)(param1 >> 237753544);
+            int fieldTemp$4 = ((ka) this).field_k;
             ((ka) this).field_k = ((ka) this).field_k + 1;
-            ((ka) this).field_r[((ka) this).field_k] = (byte)(int)param1;
+            ((ka) this).field_r[fieldTemp$4] = (byte)(int)param1;
             return;
         }
+        int fieldTemp$5 = ((ka) this).field_k;
         ((ka) this).field_k = ((ka) this).field_k + 1;
-        ((ka) this).field_r[((ka) this).field_k] = (byte)(int)(param1 >> 237753544);
+        ((ka) this).field_r[fieldTemp$5] = (byte)(int)(param1 >> 237753544);
+        int fieldTemp$6 = ((ka) this).field_k;
         ((ka) this).field_k = ((ka) this).field_k + 1;
-        ((ka) this).field_r[((ka) this).field_k] = (byte)(int)param1;
+        ((ka) this).field_r[fieldTemp$6] = (byte)(int)param1;
     }
 
     final boolean a(boolean param0) {
@@ -131,22 +147,26 @@ class ka extends gg {
     }
 
     final void c(int param0, int param1) {
+        int fieldTemp$0 = ((ka) this).field_k;
         ((ka) this).field_k = ((ka) this).field_k + 1;
-        ((ka) this).field_r[((ka) this).field_k] = (byte)(param0 >> 1838063176);
+        ((ka) this).field_r[fieldTemp$0] = (byte)(param0 >> 1838063176);
         if (param1 > -110) {
             ((ka) this).field_k = 36;
+            int fieldTemp$1 = ((ka) this).field_k;
             ((ka) this).field_k = ((ka) this).field_k + 1;
-            ((ka) this).field_r[((ka) this).field_k] = (byte)param0;
+            ((ka) this).field_r[fieldTemp$1] = (byte)param0;
             return;
         }
+        int fieldTemp$2 = ((ka) this).field_k;
         ((ka) this).field_k = ((ka) this).field_k + 1;
-        ((ka) this).field_r[((ka) this).field_k] = (byte)param0;
+        ((ka) this).field_r[fieldTemp$2] = (byte)param0;
     }
 
     final byte g(int param0) {
         int var2 = 103 % ((param0 - 45) / 56);
+        int fieldTemp$0 = ((ka) this).field_k;
         ((ka) this).field_k = ((ka) this).field_k + 1;
-        return ((ka) this).field_r[((ka) this).field_k];
+        return ((ka) this).field_r[fieldTemp$0];
     }
 
     final String a(int param0) {
@@ -189,8 +209,9 @@ class ka extends gg {
             var12 = -1640531527;
             var13 = 32;
             while (true) {
+                int incrementValue$0 = var13;
                 var13--;
-                if (var13 <= 0) {
+                if (incrementValue$0 <= 0) {
                     break;
                 }
                 var10 = var10 - (var9 + (var9 >>> -2077916315 ^ var9 << 1297130020) ^ var11 + param1[(7205 & var11) >>> 2055919595]);
@@ -221,14 +242,14 @@ class ka extends gg {
     }
 
     final void a(byte param0, int param1) {
-        if (param1 <= -65) {
+        if ((param1 ^ -1) <= -65) {
             if (16384 <= param1) {
                 if (param0 < 3) {
                     return;
                 }
                 throw new IllegalArgumentException();
             }
-            if (16383 > param1) {
+            if (16383 < (param1 ^ -1)) {
                 if (param0 < 3) {
                     return;
                 }
@@ -266,8 +287,9 @@ class ka extends gg {
         }
         CharSequence var4 = (CharSequence) (Object) param0;
         ((ka) this).field_k = ((ka) this).field_k + qi.a(((ka) this).field_r, param1 + 9689, ((ka) this).field_k, 0, var4, param0.length());
+        int fieldTemp$0 = ((ka) this).field_k;
         ((ka) this).field_k = ((ka) this).field_k + 1;
-        ((ka) this).field_r[((ka) this).field_k] = (byte) 0;
+        ((ka) this).field_r[fieldTemp$0] = (byte) 0;
     }
 
     final void a(boolean param0, java.math.BigInteger param1, java.math.BigInteger param2) {
@@ -309,8 +331,9 @@ class ka extends gg {
             return;
         }
         for (var5 = param1; param1 - -param0 > var5; var5++) {
+            int fieldTemp$0 = ((ka) this).field_k;
             ((ka) this).field_k = ((ka) this).field_k + 1;
-            ((ka) this).field_r[((ka) this).field_k] = param3[var5];
+            ((ka) this).field_r[fieldTemp$0] = param3[var5];
         }
     }
 
@@ -321,25 +344,29 @@ class ka extends gg {
             Object var7 = null;
             ((ka) this).a(true, (String) null);
             for (var5 = param0; var5 < param2 + param0; var5++) {
+                int fieldTemp$0 = ((ka) this).field_k;
                 ((ka) this).field_k = ((ka) this).field_k + 1;
-                param3[var5] = ((ka) this).field_r[((ka) this).field_k];
+                param3[var5] = ((ka) this).field_r[fieldTemp$0];
             }
             return;
         }
         for (var5 = param0; var5 < param2 + param0; var5++) {
+            int fieldTemp$1 = ((ka) this).field_k;
             ((ka) this).field_k = ((ka) this).field_k + 1;
-            param3[var5] = ((ka) this).field_r[((ka) this).field_k];
+            param3[var5] = ((ka) this).field_r[fieldTemp$1];
         }
     }
 
     final int f(int param0) {
         if (param0 != 4) {
             ((ka) this).field_k = 119;
+            int fieldTemp$0 = ((ka) this).field_k;
             ((ka) this).field_k = ((ka) this).field_k + 1;
-            return 255 & ((ka) this).field_r[((ka) this).field_k];
+            return 255 & ((ka) this).field_r[fieldTemp$0];
         }
+        int fieldTemp$1 = ((ka) this).field_k;
         ((ka) this).field_k = ((ka) this).field_k + 1;
-        return 255 & ((ka) this).field_r[((ka) this).field_k];
+        return 255 & ((ka) this).field_r[fieldTemp$1];
     }
 
     final long d(int param0) {
@@ -355,12 +382,15 @@ class ka extends gg {
         if (param1 <= 118) {
             return;
         }
+        int fieldTemp$0 = ((ka) this).field_k;
         ((ka) this).field_k = ((ka) this).field_k + 1;
-        ((ka) this).field_r[((ka) this).field_k] = (byte)(param0 >> -377866992);
+        ((ka) this).field_r[fieldTemp$0] = (byte)(param0 >> -377866992);
+        int fieldTemp$1 = ((ka) this).field_k;
         ((ka) this).field_k = ((ka) this).field_k + 1;
-        ((ka) this).field_r[((ka) this).field_k] = (byte)(param0 >> -1782445016);
+        ((ka) this).field_r[fieldTemp$1] = (byte)(param0 >> -1782445016);
+        int fieldTemp$2 = ((ka) this).field_k;
         ((ka) this).field_k = ((ka) this).field_k + 1;
-        ((ka) this).field_r[((ka) this).field_k] = (byte)param0;
+        ((ka) this).field_r[fieldTemp$2] = (byte)param0;
     }
 
     final int d(byte param0) {
@@ -391,13 +421,15 @@ class ka extends gg {
         if ((var3 ^ -1) <= -1) {
             throw new IllegalArgumentException("");
         }
+        int fieldTemp$0 = ((ka) this).field_k;
         ((ka) this).field_k = ((ka) this).field_k + 1;
-        ((ka) this).field_r[((ka) this).field_k] = (byte) 0;
+        ((ka) this).field_r[fieldTemp$0] = (byte) 0;
         CharSequence var5 = (CharSequence) (Object) param1;
         ((ka) this).field_k = ((ka) this).field_k + qi.a(((ka) this).field_r, -53, ((ka) this).field_k, 0, var5, param1.length());
         int var4 = 89 % ((37 - param0) / 39);
+        int fieldTemp$1 = ((ka) this).field_k;
         ((ka) this).field_k = ((ka) this).field_k + 1;
-        ((ka) this).field_r[((ka) this).field_k] = (byte) 0;
+        ((ka) this).field_r[fieldTemp$1] = (byte) 0;
     }
 
     final void a(byte param0, int[] param1) {
@@ -424,8 +456,9 @@ class ka extends gg {
               var8 = -1640531527;
               var9 = 32;
               L1: while (true) {
+                int incrementValue$2 = var9;
                 var9--;
-                if ((var9 ^ -1) >= -1) {
+                if ((incrementValue$2 ^ -1) >= -1) {
                   ((ka) this).field_k = ((ka) this).field_k - 8;
                   ((ka) this).b(0, var5);
                   ((ka) this).b(0, var6);
@@ -453,8 +486,9 @@ class ka extends gg {
               var8 = -1640531527;
               var9 = 32;
               L3: while (true) {
+                int incrementValue$3 = var9;
                 var9--;
-                if ((var9 ^ -1) >= -1) {
+                if ((incrementValue$3 ^ -1) >= -1) {
                   ((ka) this).field_k = ((ka) this).field_k - 8;
                   ((ka) this).b(0, var5);
                   ((ka) this).b(0, var6);
@@ -593,23 +627,30 @@ class ka extends gg {
     }
 
     private final void b(int param0, long param1) {
+        int fieldTemp$0 = ((ka) this).field_k;
         ((ka) this).field_k = ((ka) this).field_k + 1;
-        ((ka) this).field_r[((ka) this).field_k] = (byte)(int)(param1 >> 1665079024);
+        ((ka) this).field_r[fieldTemp$0] = (byte)(int)(param1 >> 1665079024);
+        int fieldTemp$1 = ((ka) this).field_k;
         ((ka) this).field_k = ((ka) this).field_k + 1;
-        ((ka) this).field_r[((ka) this).field_k] = (byte)(int)(param1 >> -25460248);
+        ((ka) this).field_r[fieldTemp$1] = (byte)(int)(param1 >> -25460248);
         if (param0 != 8) {
             return;
         }
+        int fieldTemp$2 = ((ka) this).field_k;
         ((ka) this).field_k = ((ka) this).field_k + 1;
-        ((ka) this).field_r[((ka) this).field_k] = (byte)(int)(param1 >> 1710510432);
+        ((ka) this).field_r[fieldTemp$2] = (byte)(int)(param1 >> 1710510432);
+        int fieldTemp$3 = ((ka) this).field_k;
         ((ka) this).field_k = ((ka) this).field_k + 1;
-        ((ka) this).field_r[((ka) this).field_k] = (byte)(int)(param1 >> -1738731240);
+        ((ka) this).field_r[fieldTemp$3] = (byte)(int)(param1 >> -1738731240);
+        int fieldTemp$4 = ((ka) this).field_k;
         ((ka) this).field_k = ((ka) this).field_k + 1;
-        ((ka) this).field_r[((ka) this).field_k] = (byte)(int)(param1 >> -2006976624);
+        ((ka) this).field_r[fieldTemp$4] = (byte)(int)(param1 >> -2006976624);
+        int fieldTemp$5 = ((ka) this).field_k;
         ((ka) this).field_k = ((ka) this).field_k + 1;
-        ((ka) this).field_r[((ka) this).field_k] = (byte)(int)(param1 >> -1215580088);
+        ((ka) this).field_r[fieldTemp$5] = (byte)(int)(param1 >> -1215580088);
+        int fieldTemp$6 = ((ka) this).field_k;
         ((ka) this).field_k = ((ka) this).field_k + 1;
-        ((ka) this).field_r[((ka) this).field_k] = (byte)(int)param1;
+        ((ka) this).field_r[fieldTemp$6] = (byte)(int)param1;
     }
 
     ka(byte[] param0) {
@@ -618,25 +659,33 @@ class ka extends gg {
     }
 
     final void a(byte param0, long param1) {
+        int fieldTemp$0 = ((ka) this).field_k;
         ((ka) this).field_k = ((ka) this).field_k + 1;
-        ((ka) this).field_r[((ka) this).field_k] = (byte)(int)(param1 >> 915467640);
+        ((ka) this).field_r[fieldTemp$0] = (byte)(int)(param1 >> 915467640);
+        int fieldTemp$1 = ((ka) this).field_k;
         ((ka) this).field_k = ((ka) this).field_k + 1;
-        ((ka) this).field_r[((ka) this).field_k] = (byte)(int)(param1 >> -1677939344);
+        ((ka) this).field_r[fieldTemp$1] = (byte)(int)(param1 >> -1677939344);
+        int fieldTemp$2 = ((ka) this).field_k;
         ((ka) this).field_k = ((ka) this).field_k + 1;
-        ((ka) this).field_r[((ka) this).field_k] = (byte)(int)(param1 >> -106987672);
+        ((ka) this).field_r[fieldTemp$2] = (byte)(int)(param1 >> -106987672);
+        int fieldTemp$3 = ((ka) this).field_k;
         ((ka) this).field_k = ((ka) this).field_k + 1;
-        ((ka) this).field_r[((ka) this).field_k] = (byte)(int)(param1 >> 669430048);
+        ((ka) this).field_r[fieldTemp$3] = (byte)(int)(param1 >> 669430048);
+        int fieldTemp$4 = ((ka) this).field_k;
         ((ka) this).field_k = ((ka) this).field_k + 1;
-        ((ka) this).field_r[((ka) this).field_k] = (byte)(int)(param1 >> 1265997336);
+        ((ka) this).field_r[fieldTemp$4] = (byte)(int)(param1 >> 1265997336);
+        int fieldTemp$5 = ((ka) this).field_k;
         ((ka) this).field_k = ((ka) this).field_k + 1;
-        ((ka) this).field_r[((ka) this).field_k] = (byte)(int)(param1 >> 1205230352);
+        ((ka) this).field_r[fieldTemp$5] = (byte)(int)(param1 >> 1205230352);
         if (param0 < 116) {
             return;
         }
+        int fieldTemp$6 = ((ka) this).field_k;
         ((ka) this).field_k = ((ka) this).field_k + 1;
-        ((ka) this).field_r[((ka) this).field_k] = (byte)(int)(param1 >> 411852040);
+        ((ka) this).field_r[fieldTemp$6] = (byte)(int)(param1 >> 411852040);
+        int fieldTemp$7 = ((ka) this).field_k;
         ((ka) this).field_k = ((ka) this).field_k + 1;
-        ((ka) this).field_r[((ka) this).field_k] = (byte)(int)param1;
+        ((ka) this).field_r[fieldTemp$7] = (byte)(int)param1;
     }
 
     final void d(int param0, int param1) {

@@ -10,7 +10,7 @@ final class nf {
     final static void a(boolean param0, byte param1, boolean param2) {
         mb.a((String) null, param1 ^ -1026, param0, param2);
         if (param1 != -2) {
-            field_d = (de) null;
+            field_d = null;
         }
     }
 
@@ -18,7 +18,7 @@ final class nf {
         param0.b(-9469, 12);
         param0.e(17, 26040);
         if (param1) {
-          field_d = (de) null;
+          field_d = null;
           param0.e(param3, 26040);
           param0.e(param2, 26040);
           param0.b(-9469, param4);

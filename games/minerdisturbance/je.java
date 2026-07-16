@@ -934,8 +934,9 @@ final class je {
                     var4++;
                     continue L9;
                   } else {
+                    int incrementValue$1 = var3;
                     var3++;
-                    field_I[var5][var4].field_i = var3;
+                    field_I[var5][var4].field_i = incrementValue$1;
                     var5++;
                     continue L10;
                   }
@@ -1964,8 +1965,9 @@ final class je {
             for (var20 = 0; var20 < param11; var20++) {
                 param2 = var16 + var15 >> 8;
                 param1 = param0[param10];
+                int incrementValue$0 = param10;
                 param10++;
-                param0[param10] = ((param1 & 16711935) * param2 & -16711936 | (param1 & 65280) * param2 & 16711680) >> 8;
+                param0[incrementValue$0] = ((param1 & 16711935) * param2 & -16711936 | (param1 & 65280) * param2 & 16711680) >> 8;
                 var15 = var15 + var18;
                 var16 = var16 - var17;
             }
@@ -2034,8 +2036,9 @@ final class je {
                       }
                     }
                   } else {
+                    int incrementValue$2 = var4;
                     var4++;
-                    te.field_c[field_K[var4 % field_K.length]].c(var9, var3 + var8, var6, var7);
+                    te.field_c[field_K[incrementValue$2 % field_K.length]].c(var9, var3 + var8, var6, var7);
                     var9 = var9 + var6;
                     continue L1;
                   }
@@ -2046,8 +2049,9 @@ final class je {
                   if (var9 >= 640) {
                     return;
                   } else {
+                    int incrementValue$3 = var4;
                     var4++;
-                    nb.field_a[field_K[var4 % field_K.length]].c(var9, var3 + var8 * 2, (int)((double)var6 * 0.8), (int)((double)var7 * 0.8));
+                    nb.field_a[field_K[incrementValue$3 % field_K.length]].c(var9, var3 + var8 * 2, (int)((double)var6 * 0.8), (int)((double)var7 * 0.8));
                     var9 = var9 + te.field_c[0].field_x;
                     continue L5;
                   }
@@ -2063,13 +2067,13 @@ final class je {
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
-        ea var7 = null;
-        ea var7_ref = null;
+        Object var7 = null;
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
-        ea var12 = null;
+        Object var12 = null;
+        ea var12_ref = null;
         ea var13 = null;
         int stackIn_6_0 = 0;
         int stackIn_9_0 = 0;
@@ -2142,7 +2146,7 @@ final class je {
               var10 = rf.a(13) ? 1 : 0;
               if (var6 == 0) {
                 if (var5 == 0) {
-                  var7_ref = ag.field_a[-tb.field_c];
+                  var7 = (Object) (Object) ag.field_a[-tb.field_c];
                   break L4;
                 } else {
                   if (var10 == 0) {
@@ -2161,7 +2165,7 @@ final class je {
                       tb.field_c = 0;
                       break L5;
                     }
-                    var7_ref = rg.field_tb[tb.field_c];
+                    var7 = (Object) (Object) rg.field_tb[tb.field_c];
                     break L4;
                   } else {
                     L7: {
@@ -2179,18 +2183,18 @@ final class je {
                       tb.field_c = 0;
                       break L7;
                     }
-                    var7_ref = pc.field_f[tb.field_c];
+                    var7 = (Object) (Object) pc.field_f[tb.field_c];
                     break L4;
                   }
                 }
               } else {
                 if (ch.field_h == 5) {
-                  var7_ref = ob.field_w[tb.field_c];
-                  var12 = var7_ref;
+                  var7 = (Object) (Object) ob.field_w[tb.field_c];
+                  var12 = var7;
                   var7 = var12;
                   break L4;
                 } else {
-                  var7_ref = a.field_a[tb.field_c];
+                  var7 = (Object) (Object) a.field_a[tb.field_c];
                   break L4;
                 }
               }
@@ -2203,22 +2207,22 @@ final class je {
                       break L11;
                     } else {
                       if (var10 != 0) {
-                        var7.b(-113, var3 + param0 / 2 - 4 + 20, 4096, 7281, var4 + param1 / 2 - 4 + 20);
+                        ((ea) var7).b(-113, var3 + param0 / 2 - 4 + 20, 4096, 7281, var4 + param1 / 2 - 4 + 20);
                         break L10;
                       } else {
                         break L11;
                       }
                     }
                   }
-                  var7.h(var3 + param0 / 2 - 4, var4 + param1 / 2 - 4);
+                  ((ea) var7).h(var3 + param0 / 2 - 4, var4 + param1 / 2 - 4);
                   break L10;
                 }
                 L12: {
                   if (var9 == 0) {
                     break L12;
                   } else {
-                    var13 = var7.e();
-                    var7 = var13;
+                    var13 = ((ea) var7).e();
+                    var7 = (Object) (Object) var13;
                     var13.d(40, 40, 80);
                     var13.f(var3 + param0 / 2 - 4, var4 + param1 / 2 - 4);
                     if (ce.field_b % 20 >= 10) {
@@ -2256,28 +2260,28 @@ final class je {
                       break L14;
                     } else {
                       if (var10 != 0) {
-                        var7_ref.b(-127, var3 + param0 / 2 - 4 + 20, 4096, 23665, var4 + param1 / 2 - 4 + 20);
+                        ((ea) var7).b(-127, var3 + param0 / 2 - 4 + 20, 4096, 23665, var4 + param1 / 2 - 4 + 20);
                         break L13;
                       } else {
                         break L14;
                       }
                     }
                   }
-                  var7_ref.f(var3 + param0 / 2 - 4, var4 + param1 / 2 - 4);
+                  ((ea) var7).f(var3 + param0 / 2 - 4, var4 + param1 / 2 - 4);
                   break L13;
                 }
                 L15: {
                   if (var9 == 0) {
                     break L15;
                   } else {
-                    var12 = var7_ref.c();
-                    var7 = var12;
-                    var12.d(40, 40, 80);
-                    var12.f(var3 + param0 / 2 - 4, var4 + param1 / 2 - 4);
+                    var12_ref = ((ea) var7).c();
+                    var7 = (Object) (Object) var12_ref;
+                    var12_ref.d(40, 40, 80);
+                    var12_ref.f(var3 + param0 / 2 - 4, var4 + param1 / 2 - 4);
                     if (ce.field_b % 20 >= 10) {
                       break L15;
                     } else {
-                      var12.c(var3 + param0 / 2 - 4, var4 + param1 / 2 - 4, 160);
+                      var12_ref.c(var3 + param0 / 2 - 4, var4 + param1 / 2 - 4, 160);
                       break L15;
                     }
                   }
@@ -2333,7 +2337,7 @@ final class je {
             }
           }
         }
-        return var7;
+        return (ea) var7;
     }
 
     private final static void c(int param0, int param1) {
@@ -4701,8 +4705,9 @@ final class je {
                                   var9 = ll.a((byte) -73, 7) + 5;
                                   var10 = 0;
                                   L6: while (true) {
+                                    int incrementValue$1 = var9;
                                     var9--;
-                                    if (var9 < 0) {
+                                    if (incrementValue$1 < 0) {
                                       break L3;
                                     } else {
                                       L7: {
@@ -5220,7 +5225,7 @@ final class je {
         int var0 = 0;
         int var1 = 0;
         int var2 = 0;
-        ea var2_ref = null;
+        ea var2_ref_ea = null;
         int var3_int = 0;
         je var3 = null;
         int var4 = 0;
@@ -5431,9 +5436,9 @@ final class je {
           if (field_T != 0) {
             break L14;
           } else {
-            var2_ref = je.e();
-            var3_int = var2_ref.field_x / 32;
-            var4 = var2_ref.field_A / 32;
+            var2_ref_ea = je.e();
+            var3_int = var2_ref_ea.field_x / 32;
+            var4 = var2_ref_ea.field_A / 32;
             var5 = field_o;
             L15: while (true) {
               if (var5 >= field_o + var3_int) {

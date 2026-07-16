@@ -191,8 +191,8 @@ final class ev extends tm {
         int var3 = 0;
         int var4 = 0;
         field_B = new int[32];
-        for (var0 = 0; -17 < var0; var0++) {
-            for (var1 = 0; -3 > var1; var1++) {
+        for (var0 = 0; -17 < (var0 ^ -1); var0++) {
+            for (var1 = 0; -3 < (var1 ^ -1); var1++) {
                 var2 = var0 << -891779742;
                 var3 = 7;
                 var4 = 0 == var1 ? 10 : 50;

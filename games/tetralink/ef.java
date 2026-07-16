@@ -293,43 +293,34 @@ final class ef extends uh {
     }
 
     final static String a(byte param0, String param1, int param2) {
-        if (3 != param2) {
-          if (param2 != 6) {
-            if (param0 >= 54) {
-              if (param2 != 7) {
-                if (8 != param2) {
-                  if (-10 == param2) {
-                    return p.field_c;
-                  } else {
-                    if (-11 == param2) {
-                      return gd.field_ec;
-                    } else {
-                      if (11 != param2) {
-                        if (param2 != 14) {
-                          return null;
-                        } else {
-                          return sk.a(new String[1], bk.field_l, 127);
-                        }
-                      } else {
-                        return lf.field_a;
-                      }
-                    }
-                  }
-                } else {
-                  return fl.field_h;
-                }
-              } else {
-                return na.field_q;
-              }
-            } else {
-              return null;
-            }
-          } else {
-            return al.field_l;
-          }
-        } else {
-          return le.field_Lb;
+        if (3 == param2) {
+            return le.field_Lb;
         }
+        if (param2 == 6) {
+            return al.field_l;
+        }
+        if (param0 < 54) {
+            return null;
+        }
+        if (param2 == 7) {
+            return na.field_q;
+        }
+        if (8 == param2) {
+            return fl.field_h;
+        }
+        if (!(-10 != (param2 ^ -1))) {
+            return p.field_c;
+        }
+        if (!(-11 != (param2 ^ -1))) {
+            return gd.field_ec;
+        }
+        if (11 == param2) {
+            return lf.field_a;
+        }
+        if (param2 != 14) {
+            return null;
+        }
+        return sk.a(new String[1], bk.field_l, 127);
     }
 
     final int a(long param0, byte param1) {

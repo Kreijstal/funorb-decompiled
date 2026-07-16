@@ -21,36 +21,36 @@ final class i extends im implements ng {
 
     i(ln param0, hh param1) {
         super(param0, 200, 150);
-        String var3 = null;
+        Object var3 = null;
         gm var4 = null;
         L0: {
           var3 = null;
           if (ab.field_l == param1) {
-            var3 = ak.field_h;
+            var3 = (Object) (Object) ak.field_h;
             break L0;
           } else {
             if (bl.field_b == param1) {
               ((i) this).field_o = ((i) this).field_o + 10;
-              var3 = wj.field_j;
+              var3 = (Object) (Object) wj.field_j;
               if (!nh.a(-116)) {
                 break L0;
               } else {
                 ((i) this).field_o = ((i) this).field_o + 20;
-                var3 = jg.field_v;
+                var3 = (Object) (Object) jg.field_v;
                 break L0;
               }
             } else {
               if (param1 != ip.field_b) {
                 break L0;
               } else {
-                var3 = dn.field_c;
+                var3 = (Object) (Object) dn.field_c;
                 ((i) this).field_o = ((i) this).field_o + 30;
                 break L0;
               }
             }
           }
         }
-        var4 = new gm(var3, (ca) null);
+        var4 = new gm((String) var3, (ca) null);
         var4.field_o = 80;
         var4.field_w = 0;
         var4.field_p = ((i) this).field_p;
@@ -79,7 +79,6 @@ final class i extends im implements ng {
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
-        n var2_ref = null;
         int var9 = Torquing.field_u;
         if (param0 != 10758) {
             i.m(-52);
@@ -101,10 +100,10 @@ final class i extends im implements ng {
                 var3[511 + -var5] = (byte) var8;
                 var3[var6] = (byte) var8;
             }
-            var2_ref = new n(var11);
-            rj.field_v.a((long)param1, (ta) (Object) var2_ref, 0);
+            var2 = new n(var11);
+            rj.field_v.a((long)param1, (ta) (Object) var2, 0);
         }
-        return var2_ref.field_v;
+        return var2.field_v;
     }
 
     private final void b(boolean param0) {

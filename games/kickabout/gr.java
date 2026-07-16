@@ -492,8 +492,9 @@ final class gr {
                               }
                             }
                           } else {
+                            int incrementValue$3 = var2;
                             var2++;
-                            var28 = var1 + "   Log [" + var2 + "]\n";
+                            var28 = var1 + "   Log [" + incrementValue$3 + "]\n";
                             var1 = var28;
                             var1 = var28;
                             var1 = var28 + "   " + var4_ref_pt + "\n";
@@ -502,8 +503,9 @@ final class gr {
                           }
                         }
                       } else {
+                        int incrementValue$4 = var2;
                         var2++;
-                        var26 = var1 + "   Log [" + var2 + "]\n";
+                        var26 = var1 + "   Log [" + incrementValue$4 + "]\n";
                         var28 = var26;
                         var1 = var28;
                         var1 = var26;
@@ -515,8 +517,9 @@ final class gr {
                   } else {
                     L13: {
                       if (-1 == (var2 % 8 ^ -1)) {
+                        int incrementValue$5 = var3;
                         var3++;
-                        var1 = var1 + "\nShop Transaction [" + var3 + "] ";
+                        var1 = var1 + "\nShop Transaction [" + incrementValue$5 + "] ";
                         break L13;
                       } else {
                         break L13;
@@ -586,21 +589,44 @@ final class gr {
     }
 
     final boolean a(long param0, byte param1) {
-        int var5 = Kickabout.field_G;
-        if (param1 != -79) {
+        cq var4 = null;
+        int var5 = 0;
+        L0: {
+          var5 = Kickabout.field_G;
+          if (param1 == -79) {
+            break L0;
+          } else {
             ((gr) this).field_P = false;
+            break L0;
+          }
         }
-        cq var4 = (cq) (Object) ((gr) this).field_O.g(24009);
-        while (var4 != null) {
-            if (-1 != (var4.field_k ^ -1)) {
-                // if_icmpne L97
-            }
-            if (!((param0 ^ -1L) != (var4.field_i ^ -1L))) {
+        var4 = (cq) (Object) ((gr) this).field_O.g(24009);
+        L1: while (true) {
+          if (var4 == null) {
+            return false;
+          } else {
+            L2: {
+              L3: {
+                if (-1 == (var4.field_k ^ -1)) {
+                  break L3;
+                } else {
+                  if ((var4.field_k ^ -1) != -2) {
+                    break L2;
+                  } else {
+                    break L3;
+                  }
+                }
+              }
+              if ((param0 ^ -1L) == (var4.field_i ^ -1L)) {
                 return true;
+              } else {
+                break L2;
+              }
             }
             var4 = (cq) (Object) ((gr) this).field_O.c(33);
+            continue L1;
+          }
         }
-        return false;
     }
 
     private final void b(int param0) {
@@ -839,7 +865,7 @@ final class gr {
         int var6 = 0;
         boolean[] var6_ref_boolean__ = null;
         int var7 = 0;
-        up var7_ref = null;
+        up var7_ref_up = null;
         int var8 = 0;
         fn var9 = null;
         int var9_int = 0;
@@ -860,394 +886,397 @@ final class gr {
             if ((var4 ^ -1) > -11) {
               L1: {
                 if (var4 != 0) {
-                  if (1 == var4) {
-                    L2: {
-                      var5 = param0.field_g[0];
-                      if (-1 < (var5 ^ -1)) {
-                        break L2;
-                      } else {
-                        if (var5 >= 9) {
-                          break L2;
+                  L2: {
+                    if (1 == var4) {
+                      L3: {
+                        var5 = param0.field_g[0];
+                        if (-1 < (var5 ^ -1)) {
+                          break L3;
                         } else {
-                          if (((gr) this).field_i[var5].c(param2 + -2)) {
-                            throw new IllegalStateException("User tried to sell an empty player " + param0.toString());
+                          if (var5 >= 9) {
+                            break L3;
                           } else {
-                            if (!((gr) this).a((byte) -112, var5)) {
-                              ((gr) this).field_x = ((gr) this).field_x + dh.a(((gr) this).field_i[var5], true);
-                              ((gr) this).field_i[var5] = new up();
-                              break L1;
+                            if (((gr) this).field_i[var5].c(param2 + -2)) {
+                              throw new IllegalStateException("User tried to sell an empty player " + param0.toString());
                             } else {
-                              throw new IllegalStateException("User tried to sell a player in auction " + param0.toString());
+                              if (!((gr) this).a((byte) -112, var5)) {
+                                ((gr) this).field_x = ((gr) this).field_x + dh.a(((gr) this).field_i[var5], true);
+                                ((gr) this).field_i[var5] = new up();
+                                break L2;
+                              } else {
+                                throw new IllegalStateException("User tried to sell a player in auction " + param0.toString());
+                              }
                             }
                           }
                         }
                       }
-                    }
-                    throw new IllegalStateException("User tried to sell a player not in the TEAM " + param0.toString());
-                  } else {
-                    if (var4 != 2) {
-                      if (-4 != (var4 ^ -1)) {
-                        if ((var4 ^ -1) != -5) {
-                          if (var4 != -6) {
-                            if ((var4 ^ -1) != -7) {
-                              if (-8 == (var4 ^ -1)) {
-                                L3: {
-                                  var5 = param0.field_g[0];
-                                  var6 = param0.field_g[1];
-                                  if (var5 < 0) {
-                                    break L3;
-                                  } else {
-                                    if (var5 > 2) {
-                                      break L3;
-                                    } else {
-                                      L4: {
-                                        if (-1 < var6) {
-                                          break L4;
-                                        } else {
-                                          if (-4 >= var6) {
-                                            if (!((gr) this).field_a[var5][var6]) {
-                                              L5: {
-                                                if ((var6 ^ -1) >= -1) {
-                                                  break L5;
-                                                } else {
-                                                  if (((gr) this).field_a[var5][-1 + var6]) {
-                                                    break L5;
-                                                  } else {
-                                                    throw new IllegalStateException("User tried to buy a Pitch when they don't own the previous tier " + param0.toString());
-                                                  }
-                                                }
-                                              }
-                                              var7 = cm.field_M[var6];
-                                              if (var7 <= ((gr) this).field_x) {
-                                                ((gr) this).field_x = ((gr) this).field_x - var7;
-                                                ((gr) this).field_a[var5][var6] = true;
-                                                ((gr) this).field_o = var6;
-                                                ((gr) this).field_K = var5;
-                                                break L1;
-                                              } else {
-                                                throw new IllegalStateException("User bought a Pitch but could not afford it " + param0.toString());
-                                              }
-                                            } else {
-                                              throw new IllegalStateException("User tried to buy a Pitch they already own " + param0.toString());
-                                            }
-                                          } else {
-                                            break L4;
-                                          }
-                                        }
-                                      }
-                                      throw new IllegalStateException("User tried to buy a Tier that doesn't exist " + param0.toString());
-                                    }
-                                  }
-                                }
-                                throw new IllegalStateException("User tried to buy a Surface that doesn't exist " + param0.toString());
-                              } else {
-                                if (8 == var4) {
-                                  L6: {
+                      throw new IllegalStateException("User tried to sell a player not in the TEAM " + param0.toString());
+                    } else {
+                      if (var4 != 2) {
+                        if (-4 != (var4 ^ -1)) {
+                          if ((var4 ^ -1) != -5) {
+                            if ((var4 ^ -1) != -6) {
+                              if ((var4 ^ -1) != -7) {
+                                if (-8 == (var4 ^ -1)) {
+                                  L4: {
                                     var5 = param0.field_g[0];
                                     var6 = param0.field_g[1];
-                                    if (-1 < (var5 ^ -1)) {
-                                      break L6;
+                                    if (var5 < 0) {
+                                      break L4;
                                     } else {
-                                      if (2 >= var5) {
-                                        L7: {
+                                      if (var5 > 2) {
+                                        break L4;
+                                      } else {
+                                        L5: {
                                           if (-1 < (var6 ^ -1)) {
-                                            break L7;
+                                            break L5;
                                           } else {
-                                            if (3 >= var6) {
+                                            if (-4 <= (var6 ^ -1)) {
                                               if (!((gr) this).field_a[var5][var6]) {
-                                                throw new IllegalStateException("User tried to select a Pitch they don't own " + param0.toString());
+                                                L6: {
+                                                  if ((var6 ^ -1) >= -1) {
+                                                    break L6;
+                                                  } else {
+                                                    if (((gr) this).field_a[var5][-1 + var6]) {
+                                                      break L6;
+                                                    } else {
+                                                      throw new IllegalStateException("User tried to buy a Pitch when they don't own the previous tier " + param0.toString());
+                                                    }
+                                                  }
+                                                }
+                                                var7 = cm.field_M[var6];
+                                                if (var7 <= ((gr) this).field_x) {
+                                                  ((gr) this).field_x = ((gr) this).field_x - var7;
+                                                  ((gr) this).field_a[var5][var6] = true;
+                                                  ((gr) this).field_o = var6;
+                                                  ((gr) this).field_K = var5;
+                                                  break L1;
+                                                } else {
+                                                  throw new IllegalStateException("User bought a Pitch but could not afford it " + param0.toString());
+                                                }
                                               } else {
-                                                ((gr) this).field_K = var5;
-                                                ((gr) this).field_o = var6;
-                                                break L1;
+                                                throw new IllegalStateException("User tried to buy a Pitch they already own " + param0.toString());
                                               }
                                             } else {
-                                              break L7;
+                                              break L5;
                                             }
                                           }
                                         }
-                                        throw new IllegalStateException("User tried to select a Tier that doesn't exist " + param0.toString());
-                                      } else {
-                                        break L6;
+                                        throw new IllegalStateException("User tried to buy a Tier that doesn't exist " + param0.toString());
                                       }
                                     }
                                   }
-                                  throw new IllegalStateException("User tried to select a Surface that doesn't exist " + param0.toString());
+                                  throw new IllegalStateException("User tried to buy a Surface that doesn't exist " + param0.toString());
                                 } else {
-                                  if (var4 == -10) {
-                                    var22 = param0.field_g;
-                                    var6_ref_boolean__ = new boolean[9];
-                                    var7 = 0;
-                                    L8: while (true) {
-                                      if (-10 <= var7) {
-                                        var7 = 0;
-                                        L9: while (true) {
-                                          if ((var7 ^ -1) <= -10) {
-                                            var7 = 0;
-                                            L10: while (true) {
-                                              if (-10 >= (var7 ^ -1)) {
-                                                break L1;
+                                  if (8 == var4) {
+                                    L7: {
+                                      var5 = param0.field_g[0];
+                                      var6 = param0.field_g[1];
+                                      if (-1 < (var5 ^ -1)) {
+                                        break L7;
+                                      } else {
+                                        if (2 >= var5) {
+                                          L8: {
+                                            if (-1 < (var6 ^ -1)) {
+                                              break L8;
+                                            } else {
+                                              if (3 >= var6) {
+                                                if (!((gr) this).field_a[var5][var6]) {
+                                                  throw new IllegalStateException("User tried to select a Pitch they don't own " + param0.toString());
+                                                } else {
+                                                  ((gr) this).field_K = var5;
+                                                  ((gr) this).field_o = var6;
+                                                  break L1;
+                                                }
                                               } else {
-                                                ((gr) this).field_q[var7] = var22[var7];
+                                                break L8;
+                                              }
+                                            }
+                                          }
+                                          throw new IllegalStateException("User tried to select a Tier that doesn't exist " + param0.toString());
+                                        } else {
+                                          break L7;
+                                        }
+                                      }
+                                    }
+                                    throw new IllegalStateException("User tried to select a Surface that doesn't exist " + param0.toString());
+                                  } else {
+                                    if ((var4 ^ -1) == -10) {
+                                      var22 = param0.field_g;
+                                      var6_ref_boolean__ = new boolean[9];
+                                      var7 = 0;
+                                      L9: while (true) {
+                                        if (-10 >= (var7 ^ -1)) {
+                                          var7 = 0;
+                                          L10: while (true) {
+                                            if ((var7 ^ -1) <= -10) {
+                                              var7 = 0;
+                                              L11: while (true) {
+                                                if (-10 >= (var7 ^ -1)) {
+                                                  break L2;
+                                                } else {
+                                                  ((gr) this).field_q[var7] = var22[var7];
+                                                  var7++;
+                                                  continue L11;
+                                                }
+                                              }
+                                            } else {
+                                              if (!var6_ref_boolean__[var7]) {
+                                                throw new IllegalStateException("Invalid ordering. No slot allocated for player " + var7);
+                                              } else {
                                                 var7++;
                                                 continue L10;
                                               }
                                             }
-                                          } else {
-                                            if (!var6_ref_boolean__[var7]) {
-                                              throw new IllegalStateException("Invalid ordering. No slot allocated for player " + var7);
-                                            } else {
-                                              var7++;
-                                              continue L9;
-                                            }
                                           }
+                                        } else {
+                                          var6_ref_boolean__[var22[var7]] = true;
+                                          var7++;
+                                          continue L9;
                                         }
-                                      } else {
-                                        var6_ref_boolean__[var22[var7]] = true;
-                                        var7++;
-                                        continue L8;
                                       }
+                                    } else {
+                                      break L1;
                                     }
-                                  } else {
-                                    break L1;
                                   }
                                 }
+                              } else {
+                                L12: {
+                                  var5 = param0.field_g[0];
+                                  if (0 > var5) {
+                                    break L12;
+                                  } else {
+                                    if (var5 >= 32) {
+                                      break L12;
+                                    } else {
+                                      ((gr) this).field_R = var5;
+                                      break L1;
+                                    }
+                                  }
+                                }
+                                throw new IllegalStateException("User tried to select a Secondary Colour that doesn't exist " + param0.toString());
                               }
                             } else {
-                              L11: {
+                              L13: {
                                 var5 = param0.field_g[0];
-                                if (0 > var5) {
-                                  break L11;
+                                if (-1 < (var5 ^ -1)) {
+                                  break L13;
                                 } else {
-                                  if (var5 >= 32) {
-                                    break L11;
-                                  } else {
-                                    ((gr) this).field_R = var5;
+                                  if (32 > var5) {
+                                    ((gr) this).field_k = var5;
                                     break L1;
+                                  } else {
+                                    break L13;
                                   }
                                 }
                               }
-                              throw new IllegalStateException("User tried to select a Secondary Colour that doesn't exist " + param0.toString());
+                              throw new IllegalStateException("User tried to select a Primary Colour that doesn't exist " + param0.toString());
                             }
                           } else {
-                            L12: {
+                            L14: {
                               var5 = param0.field_g[0];
-                              if (-1 > var5) {
-                                break L12;
+                              if (var5 < 0) {
+                                break L14;
                               } else {
-                                if (32 > var5) {
-                                  ((gr) this).field_k = var5;
+                                if (var5 < je.field_g.length) {
+                                  ((gr) this).field_w = var5;
                                   break L1;
                                 } else {
-                                  break L12;
+                                  break L14;
                                 }
                               }
                             }
-                            throw new IllegalStateException("User tried to select a Primary Colour that doesn't exist " + param0.toString());
+                            throw new IllegalStateException("User tried to select a kit that doesn't exist " + param0.toString());
                           }
                         } else {
-                          L13: {
+                          L15: {
                             var5 = param0.field_g[0];
-                            if (var5 < 0) {
-                              break L13;
+                            var6 = param0.field_g[1];
+                            if (0 > var5) {
+                              break L15;
                             } else {
-                              if (var5 < je.field_g.length) {
-                                ((gr) this).field_w = var5;
-                                break L1;
+                              if ((var5 ^ -1) <= -10) {
+                                break L15;
                               } else {
-                                break L13;
-                              }
-                            }
-                          }
-                          throw new IllegalStateException("User tried to select a kit that doesn't exist " + param0.toString());
-                        }
-                      } else {
-                        L14: {
-                          var5 = param0.field_g[0];
-                          var6 = param0.field_g[1];
-                          if (0 > var5) {
-                            break L14;
-                          } else {
-                            if ((var5 ^ -1) <= -10) {
-                              break L14;
-                            } else {
-                              L15: {
-                                if (var6 < 0) {
-                                  break L15;
-                                } else {
-                                  if ((var6 ^ -1) >= -3) {
-                                    if (((gr) this).field_i[var5].c(-2)) {
-                                      throw new IllegalStateException("User tried to level up an empty player " + param0.toString());
-                                    } else {
-                                      if (-101 >= (((gr) this).field_i[var5].field_r ^ -1)) {
-                                        L16: {
-                                          if (var6 == 0) {
-                                            if (((gr) this).field_i[var5].field_n >= 100) {
-                                              throw new IllegalStateException("User tried to level up a POW which is max " + param0.toString());
-                                            } else {
-                                              ((gr) this).field_i[var5].field_n = ((gr) this).field_i[var5].field_n + 1;
-                                              break L16;
-                                            }
-                                          } else {
-                                            if (var6 == -2) {
-                                              if (((gr) this).field_i[var5].field_g >= 100) {
-                                                throw new IllegalStateException("User tried to level up a SPD which is max " + param0.toString());
+                                L16: {
+                                  if (var6 < 0) {
+                                    break L16;
+                                  } else {
+                                    if ((var6 ^ -1) >= -3) {
+                                      if (((gr) this).field_i[var5].c(-2)) {
+                                        throw new IllegalStateException("User tried to level up an empty player " + param0.toString());
+                                      } else {
+                                        if (-101 >= (((gr) this).field_i[var5].field_r ^ -1)) {
+                                          L17: {
+                                            if ((var6 ^ -1) == -1) {
+                                              if (((gr) this).field_i[var5].field_n >= 100) {
+                                                throw new IllegalStateException("User tried to level up a POW which is max " + param0.toString());
                                               } else {
-                                                ((gr) this).field_i[var5].field_g = ((gr) this).field_i[var5].field_g + 1;
-                                                break L16;
+                                                ((gr) this).field_i[var5].field_n = ((gr) this).field_i[var5].field_n + 1;
+                                                break L17;
                                               }
                                             } else {
-                                              if (-3 != var6) {
-                                                break L16;
-                                              } else {
-                                                if (((gr) this).field_i[var5].field_o < 100) {
-                                                  ((gr) this).field_i[var5].field_o = ((gr) this).field_i[var5].field_o + 1;
-                                                  break L16;
+                                              if ((var6 ^ -1) == -2) {
+                                                if (((gr) this).field_i[var5].field_g >= 100) {
+                                                  throw new IllegalStateException("User tried to level up a SPD which is max " + param0.toString());
                                                 } else {
-                                                  throw new IllegalStateException("User tried to level up a TCK which is max " + param0.toString());
+                                                  ((gr) this).field_i[var5].field_g = ((gr) this).field_i[var5].field_g + 1;
+                                                  break L17;
+                                                }
+                                              } else {
+                                                if (-3 != (var6 ^ -1)) {
+                                                  break L17;
+                                                } else {
+                                                  if (((gr) this).field_i[var5].field_o < 100) {
+                                                    ((gr) this).field_i[var5].field_o = ((gr) this).field_i[var5].field_o + 1;
+                                                    break L17;
+                                                  } else {
+                                                    throw new IllegalStateException("User tried to level up a TCK which is max " + param0.toString());
+                                                  }
                                                 }
                                               }
                                             }
                                           }
+                                          ((gr) this).field_i[var5].field_r = ((gr) this).field_i[var5].field_r - 100;
+                                          break L1;
+                                        } else {
+                                          throw new IllegalStateException("User tried to level up a player who doesn't have 100 exp " + param0.toString());
                                         }
-                                        ((gr) this).field_i[var5].field_r = ((gr) this).field_i[var5].field_r - 100;
-                                        break L1;
-                                      } else {
-                                        throw new IllegalStateException("User tried to level up a player who doesn't have 100 exp " + param0.toString());
                                       }
+                                    } else {
+                                      break L16;
                                     }
-                                  } else {
-                                    break L15;
                                   }
                                 }
+                                throw new IllegalStateException("User tried to level up an invalid stat " + param0.toString());
                               }
-                              throw new IllegalStateException("User tried to level up an invalid stat " + param0.toString());
                             }
                           }
+                          throw new IllegalStateException("User tried to level up a player from an invalid position " + param0.toString());
                         }
-                        throw new IllegalStateException("User tried to level up a player from an invalid position " + param0.toString());
-                      }
-                    } else {
-                      L17: {
-                        var5 = param0.field_g[0];
-                        var6 = param0.field_g[1];
-                        var7 = param0.field_g[2];
-                        var21 = ((gr) this).field_i[var5].field_h;
-                        if (var5 > -1) {
-                          break L17;
-                        } else {
-                          if (-10 > var5) {
-                            L18: {
-                              if (-1 < (var6 ^ -1)) {
-                                break L18;
-                              } else {
-                                if (var6 < var21.length) {
-                                  L19: {
-                                    if (var7 < 0) {
-                                      break L19;
-                                    } else {
-                                      if (111 > var7) {
-                                        L20: {
-                                          var9 = pa.field_g[var7];
-                                          var10 = pa.field_g[var21[var6]];
-                                          if ((var9.field_h ^ -1) != -74) {
-                                            break L20;
-                                          } else {
-                                            if (!il.b((byte) 115)) {
-                                              throw new IllegalStateException("User tried to use the Halloween Costume trinket when we haven't released it yet " + param0.toString());
-                                            } else {
-                                              break L20;
-                                            }
-                                          }
-                                        }
-                                        if (var9.field_k == var10.field_k) {
+                      } else {
+                        L18: {
+                          var5 = param0.field_g[0];
+                          var6 = param0.field_g[1];
+                          var7 = param0.field_g[2];
+                          var21 = ((gr) this).field_i[var5].field_h;
+                          if ((var5 ^ -1) > -1) {
+                            break L18;
+                          } else {
+                            if (-10 < (var5 ^ -1)) {
+                              L19: {
+                                if (-1 < (var6 ^ -1)) {
+                                  break L19;
+                                } else {
+                                  if ((var6 ^ -1) > (var21.length ^ -1)) {
+                                    L20: {
+                                      if (var7 < 0) {
+                                        break L20;
+                                      } else {
+                                        if (111 > var7) {
                                           L21: {
-                                            if (72 != var9.field_h) {
+                                            var9 = pa.field_g[var7];
+                                            var10 = pa.field_g[var21[var6]];
+                                            if ((var9.field_h ^ -1) != -74) {
                                               break L21;
                                             } else {
-                                              if (this.a(-2, 0)) {
-                                                break L21;
+                                              if (!il.b((byte) 115)) {
+                                                throw new IllegalStateException("User tried to use the Halloween Costume trinket when we haven't released it yet " + param0.toString());
                                               } else {
-                                                throw new IllegalStateException("User tried to attach Pumpkins trinket but they haven't unlocked the Halloween Achievement " + param0.toString());
+                                                break L21;
                                               }
                                             }
                                           }
-                                          if (((gr) this).field_x >= var9.field_e) {
-                                            ((gr) this).field_x = ((gr) this).field_x - var9.field_e;
-                                            var21[var6] = var7;
-                                            break L1;
+                                          if (var9.field_k == var10.field_k) {
+                                            L22: {
+                                              if (72 != var9.field_h) {
+                                                break L22;
+                                              } else {
+                                                if (this.a(-2, 0)) {
+                                                  break L22;
+                                                } else {
+                                                  throw new IllegalStateException("User tried to attach Pumpkins trinket but they haven't unlocked the Halloween Achievement " + param0.toString());
+                                                }
+                                              }
+                                            }
+                                            if ((((gr) this).field_x ^ -1) <= (var9.field_e ^ -1)) {
+                                              ((gr) this).field_x = ((gr) this).field_x - var9.field_e;
+                                              var21[var6] = var7;
+                                              break L1;
+                                            } else {
+                                              throw new IllegalStateException("User attached a trinket but could not afford it " + param0.toString());
+                                            }
                                           } else {
-                                            throw new IllegalStateException("User attached a trinket but could not afford it " + param0.toString());
+                                            throw new IllegalStateException("User tried to attach a trinket that is the wrong shape for the slot " + param0.toString());
                                           }
                                         } else {
-                                          throw new IllegalStateException("User tried to attach a trinket that is the wrong shape for the slot " + param0.toString());
+                                          break L20;
                                         }
-                                      } else {
-                                        break L19;
                                       }
                                     }
+                                    throw new IllegalStateException("User tried to attach an unknown trinket " + param0.toString());
+                                  } else {
+                                    break L19;
                                   }
-                                  throw new IllegalStateException("User tried to attach an unknown trinket " + param0.toString());
-                                } else {
-                                  break L18;
                                 }
                               }
+                              throw new IllegalStateException("User tried to attach a trinket to a slot in invalid position " + param0.toString());
+                            } else {
+                              break L18;
                             }
-                            throw new IllegalStateException("User tried to attach a trinket to a slot in invalid position " + param0.toString());
-                          } else {
-                            break L17;
                           }
                         }
+                        throw new IllegalStateException("User tried to attach a trinket to a player from an invalid position " + param0.toString());
                       }
-                      throw new IllegalStateException("User tried to attach a trinket to a player from an invalid position " + param0.toString());
                     }
                   }
+                  break L1;
                 } else {
-                  L22: {
+                  L23: {
                     var5 = -1 + param0.field_g[0];
                     var6 = param0.field_g[1];
                     if (var6 < 0) {
-                      break L22;
+                      break L23;
                     } else {
                       if (var6 >= 8) {
-                        break L22;
+                        break L23;
                       } else {
-                        L23: {
+                        L24: {
                           if (var5 < -1) {
-                            break L23;
+                            break L24;
                           } else {
                             if (var5 >= 7) {
-                              break L23;
+                              break L24;
                             } else {
-                              L24: {
+                              L25: {
                                 if (-1 != var5) {
-                                  L25: {
+                                  L26: {
                                     var13 = ha.a(((gr) this).field_e, var6, ((gr) this).field_N[var6 + (8 + var5 * 8)], -50, var5);
-                                    var7_ref = var13;
+                                    var7_ref_up = var13;
                                     var8 = 0;
                                     if (-1 == var5) {
-                                      break L25;
+                                      break L26;
                                     } else {
-                                      var8 = gp.a(var7_ref, -576054046);
-                                      break L25;
+                                      var8 = gp.a(var7_ref_up, -576054046);
+                                      break L26;
                                     }
                                   }
-                                  if (var8 <= ((gr) this).field_x) {
+                                  if ((var8 ^ -1) >= (((gr) this).field_x ^ -1)) {
                                     var9_int = 0;
                                     var14 = 0;
                                     var10_int = var14;
-                                    L26: while (true) {
+                                    L27: while (true) {
                                       if (9 <= var14) {
-                                        break L24;
+                                        break L25;
                                       } else {
                                         if (((gr) this).field_i[((gr) this).field_q[var14]].c(param2 ^ -2)) {
                                           ((gr) this).field_i[((gr) this).field_q[var14]].a((byte) -70, var13);
                                           ((gr) this).field_i[((gr) this).field_q[var14]].field_c = false;
                                           var9_int = 1;
-                                          break L24;
+                                          break L25;
                                         } else {
                                           var14++;
-                                          continue L26;
+                                          continue L27;
                                         }
                                       }
                                     }
@@ -1258,32 +1287,32 @@ final class gr {
                                   if (!param1) {
                                     throw new IllegalStateException("User tried to buy a MOD player when they are not a MOD" + param0.toString());
                                   } else {
-                                    L27: {
+                                    L28: {
                                       var12 = ha.a(((gr) this).field_e, var6, ((gr) this).field_N[var6 + (8 + var5 * 8)], -50, var5);
-                                      var7_ref = var12;
+                                      var7_ref_up = var12;
                                       var8 = 0;
                                       if (-1 == var5) {
-                                        break L27;
+                                        break L28;
                                       } else {
-                                        var8 = gp.a(var7_ref, -576054046);
-                                        break L27;
+                                        var8 = gp.a(var7_ref_up, -576054046);
+                                        break L28;
                                       }
                                     }
-                                    if (var8 <= ((gr) this).field_x) {
+                                    if ((var8 ^ -1) >= (((gr) this).field_x ^ -1)) {
                                       var9_int = 0;
                                       var10_int = 0;
-                                      L28: while (true) {
+                                      L29: while (true) {
                                         if (9 <= var10_int) {
-                                          break L24;
+                                          break L25;
                                         } else {
                                           if (((gr) this).field_i[((gr) this).field_q[var10_int]].c(param2 ^ -2)) {
                                             ((gr) this).field_i[((gr) this).field_q[var10_int]].a((byte) -70, var12);
                                             ((gr) this).field_i[((gr) this).field_q[var10_int]].field_c = false;
                                             var9_int = 1;
-                                            break L24;
+                                            break L25;
                                           } else {
                                             var10_int++;
-                                            continue L28;
+                                            continue L29;
                                           }
                                         }
                                       }
@@ -1345,28 +1374,28 @@ final class gr {
         int var11 = 0;
         int var12 = 0;
         int var13 = 0;
-        cq var13_ref = null;
-        pt var14_ref = null;
+        cq var13_ref_cq = null;
+        pt var14_ref_pt = null;
         int var14 = 0;
         int var15 = 0;
-        Object stackIn_53_0 = null;
         Object stackIn_54_0 = null;
         Object stackIn_55_0 = null;
-        int stackIn_55_1 = 0;
-        Object stackIn_59_0 = null;
+        Object stackIn_56_0 = null;
+        int stackIn_56_1 = 0;
         Object stackIn_60_0 = null;
         Object stackIn_61_0 = null;
-        int stackIn_61_1 = 0;
-        Object stackOut_52_0 = null;
+        Object stackIn_62_0 = null;
+        int stackIn_62_1 = 0;
+        Object stackOut_53_0 = null;
+        Object stackOut_55_0 = null;
+        int stackOut_55_1 = 0;
         Object stackOut_54_0 = null;
         int stackOut_54_1 = 0;
-        Object stackOut_53_0 = null;
-        int stackOut_53_1 = 0;
-        Object stackOut_58_0 = null;
+        Object stackOut_59_0 = null;
+        Object stackOut_61_0 = null;
+        int stackOut_61_1 = 0;
         Object stackOut_60_0 = null;
         int stackOut_60_1 = 0;
-        Object stackOut_59_0 = null;
-        int stackOut_59_1 = 0;
         L0: {
           var15 = Kickabout.field_G;
           ((gr) this).field_e = param1.i((byte) -124);
@@ -1396,7 +1425,7 @@ final class gr {
         var6 = param1.k(4);
         var7 = 0;
         L2: while (true) {
-          if (var7 >= ((gr) this).field_J.length) {
+          if ((var7 ^ -1) <= (((gr) this).field_J.length ^ -1)) {
             L3: {
               var7 = param1.h((byte) -113);
               if (-2 == ((3 & var7) >> 1629164609 ^ -1)) {
@@ -1439,7 +1468,7 @@ final class gr {
             var9 = 0;
             var10 = 0;
             L6: while (true) {
-              if (-4 >= var10) {
+              if (-4 >= (var10 ^ -1)) {
                 var8 = param1.h((byte) -105);
                 ((gr) this).field_K = var8 & 15;
                 ((gr) this).field_o = var8 >> 275999044 & 15;
@@ -1491,24 +1520,24 @@ final class gr {
                                     L13: {
                                       if (2 < param2) {
                                         L14: {
-                                          stackOut_52_0 = this;
-                                          stackIn_54_0 = stackOut_52_0;
-                                          stackIn_53_0 = stackOut_52_0;
+                                          stackOut_53_0 = this;
+                                          stackIn_55_0 = stackOut_53_0;
+                                          stackIn_54_0 = stackOut_53_0;
                                           if (param1.h((byte) -118) != 1) {
-                                            stackOut_54_0 = this;
-                                            stackOut_54_1 = 0;
-                                            stackIn_55_0 = stackOut_54_0;
-                                            stackIn_55_1 = stackOut_54_1;
+                                            stackOut_55_0 = this;
+                                            stackOut_55_1 = 0;
+                                            stackIn_56_0 = stackOut_55_0;
+                                            stackIn_56_1 = stackOut_55_1;
                                             break L14;
                                           } else {
-                                            stackOut_53_0 = this;
-                                            stackOut_53_1 = 1;
-                                            stackIn_55_0 = stackOut_53_0;
-                                            stackIn_55_1 = stackOut_53_1;
+                                            stackOut_54_0 = this;
+                                            stackOut_54_1 = 1;
+                                            stackIn_56_0 = stackOut_54_0;
+                                            stackIn_56_1 = stackOut_54_1;
                                             break L14;
                                           }
                                         }
-                                        ((gr) this).field_I = stackIn_55_1 != 0;
+                                        ((gr) this).field_I = stackIn_56_1 != 0;
                                         break L13;
                                       } else {
                                         break L13;
@@ -1517,24 +1546,24 @@ final class gr {
                                     L15: {
                                       if ((param2 ^ -1) < -4) {
                                         L16: {
-                                          stackOut_58_0 = this;
-                                          stackIn_60_0 = stackOut_58_0;
-                                          stackIn_59_0 = stackOut_58_0;
+                                          stackOut_59_0 = this;
+                                          stackIn_61_0 = stackOut_59_0;
+                                          stackIn_60_0 = stackOut_59_0;
                                           if (param1.h((byte) -124) != 1) {
-                                            stackOut_60_0 = this;
-                                            stackOut_60_1 = 0;
-                                            stackIn_61_0 = stackOut_60_0;
-                                            stackIn_61_1 = stackOut_60_1;
+                                            stackOut_61_0 = this;
+                                            stackOut_61_1 = 0;
+                                            stackIn_62_0 = stackOut_61_0;
+                                            stackIn_62_1 = stackOut_61_1;
                                             break L16;
                                           } else {
-                                            stackOut_59_0 = this;
-                                            stackOut_59_1 = 1;
-                                            stackIn_61_0 = stackOut_59_0;
-                                            stackIn_61_1 = stackOut_59_1;
+                                            stackOut_60_0 = this;
+                                            stackOut_60_1 = 1;
+                                            stackIn_62_0 = stackOut_60_0;
+                                            stackIn_62_1 = stackOut_60_1;
                                             break L16;
                                           }
                                         }
-                                        ((gr) this).field_P = stackIn_61_1 != 0;
+                                        ((gr) this).field_P = stackIn_62_1 != 0;
                                         ((gr) this).field_f = param1.k(4);
                                         break L15;
                                       } else {
@@ -1551,15 +1580,15 @@ final class gr {
                                   }
                                 }
                               } else {
-                                var14_ref = new pt(param1);
-                                ((gr) this).field_g.a((gn) (Object) var14_ref, 3);
+                                var14_ref_pt = new pt(param1);
+                                ((gr) this).field_g.a((gn) (Object) var14_ref_pt, 3);
                                 var13++;
                                 continue L10;
                               }
                             }
                           } else {
-                            var13_ref = new cq(param1);
-                            ((gr) this).field_O.a((gn) (Object) var13_ref, 3);
+                            var13_ref_cq = new cq(param1);
+                            ((gr) this).field_O.a((gn) (Object) var13_ref_cq, 3);
                             var12++;
                             continue L9;
                           }
@@ -1571,49 +1600,55 @@ final class gr {
                       }
                     }
                   } else {
-                    ((gr) this).field_i[var11] = new up();
-                    if ((1 & var10 >> var11) == 1) {
-                      ((gr) this).field_i[var11].a(33, param1);
-                      var11++;
-                      continue L7;
-                    } else {
-                      var11++;
-                      continue L7;
+                    L17: {
+                      ((gr) this).field_i[var11] = new up();
+                      if ((1 & var10 >> var11) == 1) {
+                        ((gr) this).field_i[var11].a(33, param1);
+                        break L17;
+                      } else {
+                        break L17;
+                      }
                     }
+                    var11++;
+                    continue L7;
                   }
                 }
               } else {
                 var11 = 0;
-                L17: while (true) {
+                L18: while (true) {
                   if (var11 >= 4) {
                     var10++;
                     continue L6;
                   } else {
-                    var12 = 1 & var8 >> var9;
-                    var9++;
-                    if (-2 != var12) {
-                      ((gr) this).field_a[var10][var11] = false;
-                      var11++;
-                      continue L17;
-                    } else {
-                      ((gr) this).field_a[var10][var11] = true;
-                      var11++;
-                      continue L17;
+                    L19: {
+                      var12 = 1 & var8 >> var9;
+                      var9++;
+                      if (-2 != (var12 ^ -1)) {
+                        ((gr) this).field_a[var10][var11] = false;
+                        break L19;
+                      } else {
+                        ((gr) this).field_a[var10][var11] = true;
+                        break L19;
+                      }
                     }
+                    var11++;
+                    continue L18;
                   }
                 }
               }
             }
           } else {
-            if ((1 & var6 >> var7 ^ -1) != -2) {
-              ((gr) this).field_J[var7] = false;
-              var7++;
-              continue L2;
-            } else {
-              ((gr) this).field_J[var7] = true;
-              var7++;
-              continue L2;
+            L20: {
+              if ((1 & var6 >> var7 ^ -1) != -2) {
+                ((gr) this).field_J[var7] = false;
+                break L20;
+              } else {
+                ((gr) this).field_J[var7] = true;
+                break L20;
+              }
             }
+            var7++;
+            continue L2;
           }
         }
     }
@@ -1664,6 +1699,7 @@ final class gr {
                 ((gr) this).field_L = true;
                 ((gr) this).field_D = 0;
                 ((gr) this).field_j = 0;
+                return;
               } else {
                 ((gr) this).field_q[var2] = var2;
                 var2++;

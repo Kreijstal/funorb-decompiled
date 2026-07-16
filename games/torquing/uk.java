@@ -166,8 +166,9 @@ final class uk {
         ((uk) this).field_c = new ta[param0];
         ((uk) this).field_e = param0;
         for (var2 = 0; param0 > var2; var2++) {
-            var3 = new ta();
-            ((uk) this).field_c[var2] = new ta();
+            ta dupTemp$0 = new ta();
+            var3 = dupTemp$0;
+            ((uk) this).field_c[var2] = dupTemp$0;
             var3.field_p = var3;
             var3.field_j = var3;
         }

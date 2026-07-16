@@ -19,9 +19,9 @@ abstract class wh {
     final static int a(int param0, boolean param1, int param2, boolean param3, String param4, uh param5, uh param6) {
         String var8 = null;
         int var9 = 0;
-        String var9_ref = null;
+        String var9_ref_String = null;
         int var10 = 0;
-        String var11_ref = null;
+        String var11_ref_String = null;
         int var11 = 0;
         int var12 = 0;
         int var13 = 0;
@@ -90,15 +90,15 @@ abstract class wh {
                   gk.field_g.a(18, 105);
                   gk.field_g.field_l = gk.field_g.field_l + 2;
                   var10 = gk.field_g.field_l;
-                  var11_ref = sh.b(-25, mb.g((byte) 41));
-                  if (var11_ref == null) {
-                    var11_ref = "";
+                  var11_ref_String = sh.b(-25, mb.g((byte) 41));
+                  if (var11_ref_String == null) {
+                    var11_ref_String = "";
                     break L4;
                   } else {
                     break L4;
                   }
                 }
-                gk.field_g.a(var11_ref, (byte) -75);
+                gk.field_g.a(var11_ref_String, (byte) -75);
                 nl.a(on.field_a, gg.field_D, (jc) (Object) gk.field_g, ch.field_i, 0);
                 gk.field_g.c(-var10 + gk.field_g.field_l, -3991);
                 break L2;
@@ -249,11 +249,11 @@ abstract class wh {
                   ld.field_g = sh.field_qb.h(-118);
                   break L13;
                 } else {
-                  var9_ref = sh.field_qb.f(123);
-                  if (var9_ref == null) {
+                  var9_ref_String = sh.field_qb.f(123);
+                  if (var9_ref_String == null) {
                     break L13;
                   } else {
-                    jd.a(-51, var9_ref, mb.g((byte) 37));
+                    jd.a(-51, var9_ref_String, mb.g((byte) 37));
                     break L13;
                   }
                 }
@@ -372,10 +372,10 @@ abstract class wh {
                     gb.a(-2, var4, var3 != 0, 0);
                     break L0;
                   } else {
-                    if (var3 != -4) {
-                      if (-6 != var3) {
-                        if (var3 == -9) {
-                          if (-11 != i.field_y) {
+                    if ((var3 ^ -1) != -4) {
+                      if (-6 != (var3 ^ -1)) {
+                        if ((var3 ^ -1) == -9) {
+                          if (-11 != (i.field_y ^ -1)) {
                             L3: {
                               L4: {
                                 pe discarded$12 = vm.a((byte) 30, ih.field_d);
@@ -414,20 +414,20 @@ abstract class wh {
                             break L0;
                           }
                         } else {
-                          if (-5 != var3) {
+                          if (-5 != (var3 ^ -1)) {
                             if ((var3 ^ -1) != -15) {
-                              if (var3 == -16) {
+                              if ((var3 ^ -1) == -16) {
                                 break L0;
                               } else {
                                 if (16 != var3) {
                                   if (var3 != 17) {
-                                    if (-29 == var3) {
+                                    if (-29 == (var3 ^ -1)) {
                                       break L0;
                                     } else {
-                                      if (-26 == var3) {
+                                      if (-26 == (var3 ^ -1)) {
                                         break L0;
                                       } else {
-                                        if (-27 != var3) {
+                                        if (-27 != (var3 ^ -1)) {
                                           if (var3 == 27) {
                                             break L0;
                                           } else {
@@ -461,7 +461,7 @@ abstract class wh {
                                                                 L7: {
                                                                   var3 = param1 ? 1 : 0;
                                                                   var4 = bd.field_e;
-                                                                  if (hm.field_c == 0) {
+                                                                  if ((hm.field_c ^ -1) == -1) {
                                                                     break L7;
                                                                   } else {
                                                                     if (2 == i.field_y) {
@@ -505,8 +505,8 @@ abstract class wh {
                                                           } else {
                                                             if (21 != var3) {
                                                               if ((var3 ^ -1) != -23) {
-                                                                if (var3 != -14) {
-                                                                  if (-24 != var3) {
+                                                                if ((var3 ^ -1) != -14) {
+                                                                  if (-24 != (var3 ^ -1)) {
                                                                     break L0;
                                                                   } else {
                                                                     L8: {
@@ -514,10 +514,10 @@ abstract class wh {
                                                                         pe discarded$13 = vm.a((byte) 30, ih.field_d);
                                                                         var3 = param1 ? 1 : 0;
                                                                         var4 = bd.field_e;
-                                                                        if (-1 == hm.field_c) {
+                                                                        if (-1 == (hm.field_c ^ -1)) {
                                                                           break L9;
                                                                         } else {
-                                                                          if (-3 == i.field_y) {
+                                                                          if (-3 == (i.field_y ^ -1)) {
                                                                             break L9;
                                                                           } else {
                                                                             if ((i.field_y ^ -1) == -4) {
@@ -662,7 +662,7 @@ abstract class wh {
                             pg.field_g = 0;
                             var3 = param1 ? 1 : 0;
                             var4 = bd.field_e;
-                            if (-1 == hm.field_c) {
+                            if (-1 == (hm.field_c ^ -1)) {
                               break L15;
                             } else {
                               if (i.field_y == 2) {
@@ -671,10 +671,10 @@ abstract class wh {
                                 if (3 == i.field_y) {
                                   break L15;
                                 } else {
-                                  if (-5 == hm.field_c) {
+                                  if (-5 == (hm.field_c ^ -1)) {
                                     break L15;
                                   } else {
-                                    if (-6 != hm.field_c) {
+                                    if (-6 != (hm.field_c ^ -1)) {
                                       break L14;
                                     } else {
                                       break L15;
@@ -696,16 +696,16 @@ abstract class wh {
                           pe discarded$17 = vm.a((byte) 30, ih.field_d);
                           var3 = param1 ? 1 : 0;
                           var4 = bd.field_e;
-                          if (hm.field_c == -1) {
+                          if ((hm.field_c ^ -1) == -1) {
                             break L17;
                           } else {
-                            if (i.field_y == -3) {
+                            if ((i.field_y ^ -1) == -3) {
                               break L17;
                             } else {
-                              if (-4 == i.field_y) {
+                              if (-4 == (i.field_y ^ -1)) {
                                 break L17;
                               } else {
-                                if (-5 == hm.field_c) {
+                                if (-5 == (hm.field_c ^ -1)) {
                                   break L17;
                                 } else {
                                   if (5 != hm.field_c) {
@@ -785,7 +785,7 @@ abstract class wh {
                 pe discarded$19 = vm.a((byte) 30, ih.field_d);
                 var3 = param1 ? 1 : 0;
                 var4 = bd.field_e;
-                if (hm.field_c == 0) {
+                if ((hm.field_c ^ -1) == -1) {
                   break L22;
                 } else {
                   if (i.field_y == 2) {

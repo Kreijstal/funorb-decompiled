@@ -181,15 +181,16 @@ final class wa {
           var8 = fleas.field_A ? 1 : 0;
           ((wa) this).field_c[((wa) this).field_a] = (byte)ne.a((int) ((wa) this).field_c[((wa) this).field_a], 128 >>> sc.a(7, ((wa) this).field_o));
           ((wa) this).field_a = ((wa) this).field_a + 1;
-          if (((wa) this).field_a < -33) {
+          if ((((wa) this).field_a ^ -1) < -33) {
             L1: while (true) {
-              if (-65 <= ((wa) this).field_a) {
+              if (-65 >= (((wa) this).field_a ^ -1)) {
                 this.a((byte) -115);
                 ((wa) this).field_a = 0;
                 break L0;
               } else {
+                int fieldTemp$2 = ((wa) this).field_a;
                 ((wa) this).field_a = ((wa) this).field_a + 1;
-                ((wa) this).field_c[((wa) this).field_a] = (byte) 0;
+                ((wa) this).field_c[fieldTemp$2] = (byte) 0;
                 continue L1;
               }
             }
@@ -230,8 +231,9 @@ final class wa {
               }
             }
           } else {
+            int fieldTemp$3 = ((wa) this).field_a;
             ((wa) this).field_a = ((wa) this).field_a + 1;
-            ((wa) this).field_c[((wa) this).field_a] = (byte) 0;
+            ((wa) this).field_c[fieldTemp$3] = (byte) 0;
             continue L3;
           }
         }

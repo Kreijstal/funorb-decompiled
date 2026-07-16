@@ -38,8 +38,9 @@ final class pa {
                 ((pa) this).field_j = 0;
                 break L0;
               } else {
+                int fieldTemp$2 = ((pa) this).field_j;
                 ((pa) this).field_j = ((pa) this).field_j + 1;
-                ((pa) this).field_l[((pa) this).field_j] = (byte) 0;
+                ((pa) this).field_l[fieldTemp$2] = (byte) 0;
                 continue L1;
               }
             }
@@ -74,8 +75,9 @@ final class pa {
               return;
             }
           } else {
+            int fieldTemp$3 = ((pa) this).field_j;
             ((pa) this).field_j = ((pa) this).field_j + 1;
-            ((pa) this).field_l[((pa) this).field_j] = (byte) 0;
+            ((pa) this).field_l[fieldTemp$3] = (byte) 0;
             continue L2;
           }
         }

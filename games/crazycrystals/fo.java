@@ -438,117 +438,50 @@ final class fo extends jb {
     }
 
     final static void a(int param0) {
-        rm var1_ref = null;
+        rm var1_ref_rm = null;
         int var1 = 0;
         Object var2 = null;
         Throwable var3 = null;
         int var4 = 0;
-        int statePc = 0;
-        Throwable caughtException = null;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    var4 = CrazyCrystals.field_B;
-                    if (null != om.field_x) {
-                        statePc = 2;
-                    } else {
-                        statePc = 10;
-                    }
-                    continue stateLoop;
+        Throwable decompiledCaughtException = null;
+        L0: {
+          var4 = CrazyCrystals.field_B;
+          if (null != om.field_x) {
+            var1_ref_rm = dc.a(true, om.field_x, (byte) 51);
+            if (var1_ref_rm != null) {
+              var2 = (Object) (Object) gf.field_c;
+              synchronized (var2) {
+                L1: {
+                  gf.field_c.a();
+                  fq.field_x.a(88, var1_ref_rm, true);
+                  break L1;
                 }
-                case 2: {
-                    var1_ref = dc.a(true, om.field_x, (byte) 51);
-                    if (var1_ref != null) {
-                        statePc = 4;
-                    } else {
-                        statePc = 10;
-                    }
-                    continue stateLoop;
-                }
-                case 4: {
-                    var2 = (Object) (Object) gf.field_c;
-                    // monitorenter gf.field_c
-                    statePc = 5;
-                    continue stateLoop;
-                }
-                case 5: {
-                    try {
-                        gf.field_c.a();
-                        fq.field_x.a(88, var1_ref, true);
-                        // monitorexit var2
-                        statePc = 9;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_5) {
-                        caughtException = stateCaught_5;
-                        statePc = 7;
-                        continue stateLoop;
-                    }
-                }
-                case 7: {
-                    try {
-                        var3 = caughtException;
-                        // monitorexit var2
-                        statePc = 8;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_7) {
-                        caughtException = stateCaught_7;
-                        statePc = 7;
-                        continue stateLoop;
-                    }
-                }
-                case 8: {
-                    throw (RuntimeException) (Object) var3;
-                }
-                case 9: {
-                    om.field_x = null;
-                    statePc = 10;
-                    continue stateLoop;
-                }
-                case 10: {
-                    if (null == dc.a(false, "menu", (byte) 19)) {
-                        statePc = 12;
-                    } else {
-                        statePc = 13;
-                    }
-                    continue stateLoop;
-                }
-                case 12: {
-                    return;
-                }
-                case 13: {
-                    var1 = param0;
-                    statePc = 14;
-                    continue stateLoop;
-                }
-                case 14: {
-                    if (hf.field_b.length > var1) {
-                        statePc = 16;
-                    } else {
-                        statePc = 15;
-                    }
-                    continue stateLoop;
-                }
-                case 15: {
-                    return;
-                }
-                case 16: {
-                    if (dc.a(false, hf.field_b[var1], (byte) -110) != null) {
-                        statePc = 18;
-                    } else {
-                        statePc = 17;
-                    }
-                    continue stateLoop;
-                }
-                case 17: {
-                    return;
-                }
-                case 18: {
-                    var1++;
-                    statePc = 14;
-                    continue stateLoop;
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
+              }
+              om.field_x = null;
+              break L0;
+            } else {
+              break L0;
             }
+          } else {
+            break L0;
+          }
+        }
+        if (null == dc.a(false, "menu", (byte) 19)) {
+          return;
+        } else {
+          var1 = param0;
+          L2: while (true) {
+            if (hf.field_b.length > var1) {
+              if (dc.a(false, hf.field_b[var1], (byte) -110) != null) {
+                var1++;
+                continue L2;
+              } else {
+                return;
+              }
+            } else {
+              return;
+            }
+          }
         }
     }
 

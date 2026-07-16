@@ -6,7 +6,7 @@ final class ej extends ta {
     static int field_kb;
 
     final void c(lk param0, byte param1) {
-        this.c(param0, (byte) 54);
+        super.c(param0, (byte) 54);
         if (param1 < 28) {
             field_jb = 54L;
         }
@@ -124,7 +124,7 @@ final class ej extends ta {
                     if (var7_int != 0) {
                       var11 = param2.a(param4, param5, param0, (byte) -30, param3);
                       L2: while (true) {
-                        if (((vi) var11).field_a != 0) {
+                        if (var11.field_a != 0) {
                           break L0;
                         } else {
                           wk.a((byte) -121, 10L);
@@ -181,7 +181,7 @@ final class ej extends ta {
             } else {
               var11 = param2.a(param4, param5, param0, (byte) -30, param3);
               L5: while (true) {
-                if (((vi) var11).field_a != 0) {
+                if (var11.field_a != 0) {
                   break L0;
                 } else {
                   wk.a((byte) -121, 10L);
@@ -190,9 +190,9 @@ final class ej extends ta {
               }
             }
           }
-          var7 = (java.awt.Frame) ((vi) var11).field_e;
+          var7 = (java.awt.Frame) var11.field_e;
           if (var7 != null) {
-            if (-3 == (((vi) var11).field_a ^ -1)) {
+            if (-3 == (var11.field_a ^ -1)) {
               rl.a(false, param2, var7);
               return null;
             } else {
@@ -219,7 +219,7 @@ final class ej extends ta {
         ja.field_a = param2;
         ca.a(kj.field_q, param3, 16777215);
         if (param0 > -112) {
-            String var5 = (String) null;
+            Object var5 = null;
             ej.a((byte) -128, (String) null, (String) null, false);
         }
     }

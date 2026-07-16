@@ -16,57 +16,32 @@ final class eh extends mc {
     static u field_p;
 
     final static void b(byte param0) {
-        int var1 = 0;
-        var1 = 6 % ((40 - param0) / 42);
-        if (th.field_g >= -1) {
-          if (te.field_P != pk.field_O.field_j) {
-            L0: {
-              ja.field_f = ja.field_f + (pk.field_O.field_j + -te.field_P);
-              te.field_P = pk.field_O.field_j;
-              if (-1 > th.field_g) {
+        int var1 = 6 % ((40 - param0) / 42);
+        if ((th.field_g ^ -1) < -1) {
+            th.field_g = th.field_g - 1;
+            if ((te.field_P ^ -1) == (pk.field_O.field_j ^ -1)) {
+                if (!(-1 <= (th.field_g ^ -1))) {
+                    lc.a((byte) -61);
+                }
+                return;
+            }
+            ja.field_f = ja.field_f + (pk.field_O.field_j + -te.field_P);
+            te.field_P = pk.field_O.field_j;
+            if (!(-1 <= (th.field_g ^ -1))) {
                 lc.a((byte) -61);
-                break L0;
-              } else {
-                break L0;
-              }
             }
             return;
-          } else {
-            L1: {
-              if (-1 < th.field_g) {
+        }
+        if ((te.field_P ^ -1) != (pk.field_O.field_j ^ -1)) {
+            ja.field_f = ja.field_f + (pk.field_O.field_j + -te.field_P);
+            te.field_P = pk.field_O.field_j;
+            if (!(-1 <= (th.field_g ^ -1))) {
                 lc.a((byte) -61);
-                break L1;
-              } else {
-                break L1;
-              }
             }
             return;
-          }
-        } else {
-          th.field_g = th.field_g - 1;
-          if (te.field_P == pk.field_O.field_j) {
-            L2: {
-              if (-1 < th.field_g) {
-                lc.a((byte) -61);
-                break L2;
-              } else {
-                break L2;
-              }
-            }
-            return;
-          } else {
-            L3: {
-              ja.field_f = ja.field_f + (pk.field_O.field_j + -te.field_P);
-              te.field_P = pk.field_O.field_j;
-              if (-1 > (th.field_g ^ -1)) {
-                lc.a((byte) -61);
-                break L3;
-              } else {
-                break L3;
-              }
-            }
-            return;
-          }
+        }
+        if (!(-1 <= (th.field_g ^ -1))) {
+            lc.a((byte) -61);
         }
     }
 

@@ -66,8 +66,9 @@ final class fc {
             if (((fc) this).field_b >= ((fc) this).field_c) {
                 return null;
             }
+            int fieldTemp$0 = ((fc) this).field_b;
             ((fc) this).field_b = ((fc) this).field_b + 1;
-            var3 = ((fc) this).field_e[((fc) this).field_b].field_b;
+            var3 = ((fc) this).field_e[fieldTemp$0].field_b;
         } while (((fc) this).field_e[((fc) this).field_b + -1] == var3);
         ((fc) this).field_a = var3.field_b;
         return var3;
@@ -80,8 +81,9 @@ final class fc {
         ((fc) this).field_e = new jb[param0];
         ((fc) this).field_c = param0;
         for (var2 = 0; var2 < param0; var2++) {
-            var3 = new jb();
-            ((fc) this).field_e[var2] = new jb();
+            jb dupTemp$0 = new jb();
+            var3 = dupTemp$0;
+            ((fc) this).field_e[var2] = dupTemp$0;
             var3.field_b = var3;
             var3.field_d = var3;
         }

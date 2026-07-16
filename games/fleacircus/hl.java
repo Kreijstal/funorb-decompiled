@@ -171,7 +171,7 @@ class hl extends lc {
               }
             }
             L3: {
-              if (param0.field_K == 0) {
+              if ((param0.field_K ^ -1) == -1) {
                 break L3;
               } else {
                 ((hl) this).field_K = param0.field_K;
@@ -179,7 +179,7 @@ class hl extends lc {
               }
             }
             L4: {
-              if (param0.field_H == 0) {
+              if ((param0.field_H ^ -1) == -1) {
                 break L4;
               } else {
                 ((hl) this).field_H = param0.field_H;
@@ -227,7 +227,7 @@ class hl extends lc {
               }
             }
             L10: {
-              if (param0.field_V != -1) {
+              if ((param0.field_V ^ -1) != -1) {
                 ((hl) this).field_V = param0.field_V;
                 break L10;
               } else {
@@ -235,7 +235,7 @@ class hl extends lc {
               }
             }
             L11: {
-              if (2147483647 != param0.field_N) {
+              if (2147483647 != (param0.field_N ^ -1)) {
                 ((hl) this).field_N = param0.field_N;
                 break L11;
               } else {
@@ -259,7 +259,7 @@ class hl extends lc {
               }
             }
             L14: {
-              if (param0.field_M != 0) {
+              if ((param0.field_M ^ -1) != -1) {
                 ((hl) this).field_M = param0.field_M;
                 break L14;
               } else {

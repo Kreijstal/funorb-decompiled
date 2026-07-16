@@ -14,7 +14,7 @@ final class w extends pb {
     final void b(int[] param0, int param1) {
         ((w) this).field_l = new hg(param0);
         if (param1 != 8) {
-            int[] var4 = (int[]) null;
+            Object var4 = null;
             ((w) this).b((int[]) null, 66);
         }
     }
@@ -25,26 +25,28 @@ final class w extends pb {
 
     final void f(boolean param0) {
         if (!param0) {
-            field_m = (String) null;
+            field_m = null;
         }
         ((w) this).field_o = ((w) this).field_i * 8;
     }
 
     final int g(byte param0) {
         int var2 = 118 % ((39 - param0) / 51);
+        int fieldTemp$0 = ((w) this).field_i;
         ((w) this).field_i = ((w) this).field_i + 1;
-        return ((w) this).field_g[((w) this).field_i] + -((w) this).field_l.b(-1427) & 255;
+        return ((w) this).field_g[fieldTemp$0] + -((w) this).field_l.b(-1427) & 255;
     }
 
     final void b(int param0, byte[] param1, int param2, int param3) {
         int var5 = 0;
         int var6 = Main.field_T;
         for (var5 = 0; var5 < param3; var5++) {
+            int fieldTemp$0 = ((w) this).field_i;
             ((w) this).field_i = ((w) this).field_i + 1;
-            param1[var5 - -param0] = (byte)(((w) this).field_g[((w) this).field_i] + -((w) this).field_l.b(-1427));
+            param1[var5 - -param0] = (byte)(((w) this).field_g[fieldTemp$0] + -((w) this).field_l.b(-1427));
         }
         if (param2 != 28040) {
-            ((w) this).field_l = (hg) null;
+            ((w) this).field_l = null;
         }
     }
 
@@ -417,8 +419,9 @@ final class w extends pb {
         if (param1 != 0) {
             return;
         }
+        int fieldTemp$0 = ((w) this).field_i;
         ((w) this).field_i = ((w) this).field_i + 1;
-        ((w) this).field_g[((w) this).field_i] = (byte)(param0 + ((w) this).field_l.b(-1427));
+        ((w) this).field_g[fieldTemp$0] = (byte)(param0 + ((w) this).field_l.b(-1427));
     }
 
     public static void h(int param0) {
@@ -442,8 +445,9 @@ final class w extends pb {
         ((w) this).field_o = ((w) this).field_o + param0;
         int var5 = 0;
         while (var4 < param0) {
+            int incrementValue$0 = var3;
             var3++;
-            var5 = var5 + ((((w) this).field_g[var3] & sg.field_g[var4]) << param0 - var4);
+            var5 = var5 + ((((w) this).field_g[incrementValue$0] & sg.field_g[var4]) << param0 - var4);
             param0 = param0 - var4;
             var4 = 8;
         }

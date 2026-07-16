@@ -46,95 +46,27 @@ final class n extends ud {
         Throwable var2 = null;
         int stackIn_4_0 = 0;
         int stackIn_6_0 = 0;
+        Throwable decompiledCaughtException = null;
         int stackOut_3_0 = 0;
         int stackOut_5_0 = 0;
-        int statePc = 0;
-        Throwable caughtException = null;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    var1 = (Object) (Object) wn.field_a;
-                    // monitorenter wn.field_a
-                    statePc = 1;
-                    continue stateLoop;
-                }
-                case 1: {
-                    try {
-                        if (ja.field_c == bl.field_s) {
-                            statePc = 3;
-                        } else {
-                            statePc = 2;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_1) {
-                        caughtException = stateCaught_1;
-                        statePc = 7;
-                        continue stateLoop;
-                    }
-                }
-                case 2: {
-                    try {
-                        statePc = 5;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_2) {
-                        caughtException = stateCaught_2;
-                        statePc = 7;
-                        continue stateLoop;
-                    }
-                }
-                case 3: {
-                    try {
-                        // monitorexit var1
-                        stackOut_3_0 = 0;
-                        stackIn_4_0 = stackOut_3_0;
-                        statePc = 4;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_3) {
-                        caughtException = stateCaught_3;
-                        statePc = 7;
-                        continue stateLoop;
-                    }
-                }
-                case 4: {
-                    return stackIn_4_0 != 0;
-                }
-                case 5: {
-                    try {
-                        qi.field_a = ee.field_b[bl.field_s];
-                        ml.field_b = ek.field_c[bl.field_s];
-                        bl.field_s = param0 & bl.field_s + 1;
-                        // monitorexit var1
-                        stackOut_5_0 = 1;
-                        stackIn_6_0 = stackOut_5_0;
-                        statePc = 6;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_5) {
-                        caughtException = stateCaught_5;
-                        statePc = 7;
-                        continue stateLoop;
-                    }
-                }
-                case 6: {
-                    return stackIn_6_0 != 0;
-                }
-                case 7: {
-                    try {
-                        var2 = caughtException;
-                        // monitorexit var1
-                        statePc = 8;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_7) {
-                        caughtException = stateCaught_7;
-                        statePc = 7;
-                        continue stateLoop;
-                    }
-                }
-                case 8: {
-                    throw (RuntimeException) (Object) var2;
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
+        var1 = (Object) (Object) wn.field_a;
+        synchronized (var1) {
+          L0: {
+            if (ja.field_c == bl.field_s) {
+              stackOut_3_0 = 0;
+              stackIn_4_0 = stackOut_3_0;
+              return stackIn_4_0 != 0;
+            } else {
+              qi.field_a = ee.field_b[bl.field_s];
+              ml.field_b = ek.field_c[bl.field_s];
+              bl.field_s = param0 & bl.field_s + 1;
+              stackOut_5_0 = 1;
+              stackIn_6_0 = stackOut_5_0;
+              break L0;
             }
+          }
         }
+        return stackIn_6_0 != 0;
     }
 
     final static double[] a(int param0, double[] param1) {
@@ -247,6 +179,7 @@ final class n extends ud {
             var0 = 1;
             L1: while (true) {
               if (var0 > 10) {
+                return;
               } else {
                 var1 = (-1 + var0) * 8;
                 field_Z[var0] = im.a(im.a(im.a(mj.a(16711680L, field_N[5][5 + var1]), im.a(im.a(im.a(im.a(mj.a(field_N[0][var1], -72057594037927936L), mj.a(field_N[1][1 + var1], 71776119061217280L)), mj.a(280375465082880L, field_N[2][var1 - -2])), mj.a(field_N[3][var1 - -3], 1095216660480L)), mj.a(4278190080L, field_N[4][4 + var1]))), mj.a(field_N[6][var1 - -6], 65280L)), mj.a(255L, field_N[7][var1 - -7]));
@@ -256,7 +189,7 @@ final class n extends ud {
             }
           } else {
             L2: {
-              var1 = "ᠣ웨螸ŏ㚦틵祯酒悼鮎ꌌ笵ᷠퟂ⹋﹗ᕷ㟥鿰䫚壉⤊놠殅뵝ჴ쬾է䆋Ᵹ闘ﯮ籦���䞞쨭뼇굚茳挂ꩱ젙䧙守騦㊰햀뻍㑈ｺ遟⁨᪮둔錢擱猒䀈쏬���贽需켫皂혛떯橐䗳ワ㽕ꋪ斺⿀���﵍鉵ڊ닦ฟ拔ꢖ暈╙葲㥌幸㢌톥댡鰞䏇ﰄ写洍﫟縤㮫츑轎럫㲁铷뤓ⳓ쐃噄義⪻셓���鵬ㅴ겉ᓡᘺ椉炶탭챂颤⡜".charAt(var0 / 2);
+              var1 = "ᠣ웨螸ŏ㚦틵祯酒悼鮎ꌌ笵ᷠퟂ⹋﹗ᕷ㟥鿰䫚壉⤊놠殅뵝ჴ쬾է䆋Ᵹ闘ﯮ籦\udd17䞞쨭뼇굚茳挂ꩱ젙䧙守騦㊰햀뻍㑈ｺ遟⁨᪮둔錢擱猒䀈쏬\udba1贽需켫皂혛떯橐䗳ワ㽕ꋪ斺⿀\ude1c﵍鉵ڊ닦ฟ拔ꢖ暈╙葲㥌幸㢌톥댡鰞䏇ﰄ写洍﫟縤㮫츑轎럫㲁铷뤓ⳓ쐃噄義⪻셓\udc0b鵬ㅴ겉ᓡᘺ椉炶탭챂颤⡜".charAt(var0 / 2);
               if (0 != (1 & var0)) {
                 stackOut_4_0 = (long)(255 & var1);
                 stackIn_5_0 = stackOut_4_0;

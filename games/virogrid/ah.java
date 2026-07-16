@@ -24,8 +24,8 @@ abstract class ah {
         L0: while (true) {
           var4 = param1.a(param2, false);
           L1: while (true) {
-            if (var4.field_a != -1) {
-              if (-2 == var4.field_a) {
+            if ((var4.field_a ^ -1) != -1) {
+              if (-2 == (var4.field_a ^ -1)) {
                 param2.setVisible(false);
                 param2.dispose();
                 return;

@@ -24,24 +24,48 @@ final class fj {
     int field_s;
 
     final int a(byte param0) {
-        if (!((fj) this).field_l) {
-            // if_icmpne L31
-            // if_icmplt L29
-        } else {
-            return 2;
-        }
-        if (oj.field_c == ((fj) this).field_r) {
-            return 1;
-        }
-        if (param0 != -63) {
-            int discarded$0 = ((fj) this).a((byte) -16);
-        }
-        if ((ji.field_Tb ^ -1) == -3) {
-            if (oj.a(1, ((fj) this).field_n)) {
-                return 1;
+        L0: {
+          if (((fj) this).field_l) {
+            break L0;
+          } else {
+            L1: {
+              if (-3 != (((fj) this).field_i ^ -1)) {
+                break L1;
+              } else {
+                if (0 < ((fj) this).field_k) {
+                  break L0;
+                } else {
+                  break L1;
+                }
+              }
             }
+            if (oj.field_c != ((fj) this).field_r) {
+              L2: {
+                if (param0 == -63) {
+                  break L2;
+                } else {
+                  int discarded$2 = ((fj) this).a((byte) -16);
+                  break L2;
+                }
+              }
+              L3: {
+                if ((ji.field_Tb ^ -1) != -3) {
+                  break L3;
+                } else {
+                  if (!oj.a(1, ((fj) this).field_n)) {
+                    break L3;
+                  } else {
+                    return 1;
+                  }
+                }
+              }
+              return 0;
+            } else {
+              return 1;
+            }
+          }
         }
-        return 0;
+        return 2;
     }
 
     public static void a(int param0) {

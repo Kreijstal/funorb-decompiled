@@ -451,7 +451,6 @@ final class bf extends hs {
     }
 
     final void a(int param0, boolean param1) {
-        up var6_ref = null;
         int var3 = 0;
         int var5 = 0;
         up var6 = null;
@@ -473,7 +472,6 @@ final class bf extends hs {
         int stackOut_33_0 = 0;
         int stackOut_43_0 = 0;
         int stackOut_42_0 = 0;
-        var6_ref = null;
         L0: {
           var10 = Kickabout.field_G;
           ((bf) this).field_q.b(0, param1);
@@ -554,8 +552,8 @@ final class bf extends hs {
                   }
                 }
                 L7: {
-                  var6_ref = stackIn_9_0;
-                  var11.a(((bf) this).field_r, ((bf) this).field_w, (byte) 125, ((bf) this).field_B, var6_ref);
+                  var6 = stackIn_9_0;
+                  var11.a(((bf) this).field_r, ((bf) this).field_w, (byte) 125, ((bf) this).field_B, var6);
                   if (((bf) this).field_a.field_e) {
                     break L7;
                   } else {
@@ -1388,6 +1386,7 @@ final class bf extends hs {
             var7 = 0;
             L3: while (true) {
               if (param0.field_I <= var7) {
+                return;
               } else {
                 if (((bf) this).field_h == param0.field_g[var7].field_p) {
                   if (var7 != param1) {

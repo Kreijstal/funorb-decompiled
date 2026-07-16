@@ -12,8 +12,9 @@ final class je extends kf {
         ((je) this).field_k = param0.a((byte) 47, ((je) this).field_k);
         ((je) this).field_m = param0.a(true, ((je) this).field_m);
         if (((je) this).field_n == ((je) this).field_l) {
-          ((je) this).field_l = param0.a((byte) 127, ((je) this).field_n);
-          ((je) this).field_n = param0.a((byte) 127, ((je) this).field_n);
+          int dupTemp$2 = param0.a((byte) 127, ((je) this).field_n);
+          ((je) this).field_l = dupTemp$2;
+          ((je) this).field_n = dupTemp$2;
           return (je) this;
         } else {
           L0: {

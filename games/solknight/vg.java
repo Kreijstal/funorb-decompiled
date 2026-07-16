@@ -264,8 +264,9 @@ class vg extends pj {
               ((vg) this).field_i = ((vg) this).field_i.substring(0, ((vg) this).field_Q);
               break L1;
             } else {
-              ((vg) this).field_O = ((vg) this).field_i.length();
-              ((vg) this).field_K = ((vg) this).field_i.length();
+              int dupTemp$4 = ((vg) this).field_i.length();
+              ((vg) this).field_O = dupTemp$4;
+              ((vg) this).field_K = dupTemp$4;
               if (param1) {
                 return;
               } else {
@@ -275,8 +276,9 @@ class vg extends pj {
             }
           }
         }
-        ((vg) this).field_O = ((vg) this).field_i.length();
-        ((vg) this).field_K = ((vg) this).field_i.length();
+        int dupTemp$5 = ((vg) this).field_i.length();
+        ((vg) this).field_O = dupTemp$5;
+        ((vg) this).field_K = dupTemp$5;
         if (!param1) {
           ((vg) this).j(30);
           return;
@@ -543,44 +545,46 @@ class vg extends pj {
 
     final boolean a(char param0, byte param1, int param2, rc param3) {
         int var5 = 0;
-        Object stackIn_27_0 = null;
-        Object stackIn_28_0 = null;
-        Object stackIn_29_0 = null;
-        int stackIn_29_1 = 0;
-        Object stackIn_52_0 = null;
-        Object stackIn_53_0 = null;
-        Object stackIn_54_0 = null;
-        int stackIn_54_1 = 0;
-        Object stackIn_78_0 = null;
-        Object stackIn_79_0 = null;
-        Object stackIn_80_0 = null;
-        int stackIn_80_1 = 0;
-        Object stackIn_111_0 = null;
-        Object stackIn_112_0 = null;
-        Object stackIn_113_0 = null;
-        int stackIn_113_1 = 0;
-        Object stackOut_110_0 = null;
-        Object stackOut_112_0 = null;
-        int stackOut_112_1 = 0;
-        Object stackOut_111_0 = null;
-        int stackOut_111_1 = 0;
-        Object stackOut_77_0 = null;
-        Object stackOut_79_0 = null;
-        int stackOut_79_1 = 0;
-        Object stackOut_78_0 = null;
-        int stackOut_78_1 = 0;
-        Object stackOut_51_0 = null;
-        Object stackOut_53_0 = null;
-        int stackOut_53_1 = 0;
-        Object stackOut_52_0 = null;
-        int stackOut_52_1 = 0;
-        Object stackOut_26_0 = null;
-        Object stackOut_28_0 = null;
-        int stackOut_28_1 = 0;
-        Object stackOut_27_0 = null;
-        int stackOut_27_1 = 0;
+        Object stackIn_24_0 = null;
+        Object stackIn_25_0 = null;
+        Object stackIn_26_0 = null;
+        int stackIn_26_1 = 0;
+        Object stackIn_45_0 = null;
+        Object stackIn_46_0 = null;
+        Object stackIn_47_0 = null;
+        int stackIn_47_1 = 0;
+        Object stackIn_68_0 = null;
+        Object stackIn_69_0 = null;
+        Object stackIn_70_0 = null;
+        int stackIn_70_1 = 0;
+        Object stackIn_99_0 = null;
+        Object stackIn_100_0 = null;
+        Object stackIn_101_0 = null;
+        int stackIn_101_1 = 0;
+        Object stackOut_98_0 = null;
+        Object stackOut_100_0 = null;
+        int stackOut_100_1 = 0;
+        Object stackOut_99_0 = null;
+        int stackOut_99_1 = 0;
+        Object stackOut_67_0 = null;
+        Object stackOut_69_0 = null;
+        int stackOut_69_1 = 0;
+        Object stackOut_68_0 = null;
+        int stackOut_68_1 = 0;
+        Object stackOut_44_0 = null;
+        Object stackOut_46_0 = null;
+        int stackOut_46_1 = 0;
+        Object stackOut_45_0 = null;
+        int stackOut_45_1 = 0;
+        Object stackOut_23_0 = null;
+        Object stackOut_25_0 = null;
+        int stackOut_25_1 = 0;
+        Object stackOut_24_0 = null;
+        int stackOut_24_1 = 0;
         ((vg) this).field_V = je.a(1);
-        if (60 != param0) {
+        if (60 == param0) {
+          return false;
+        } else {
           if (param0 != 62) {
             if (param0 < 32) {
               L0: {
@@ -592,31 +596,40 @@ class vg extends pj {
                           break L0;
                         } else {
                           L1: {
-                            stackOut_110_0 = this;
-                            stackIn_112_0 = stackOut_110_0;
-                            stackIn_111_0 = stackOut_110_0;
+                            stackOut_98_0 = this;
+                            stackIn_100_0 = stackOut_98_0;
+                            stackIn_99_0 = stackOut_98_0;
                             if (!fh.field_d[82]) {
-                              stackOut_112_0 = this;
-                              stackOut_112_1 = ((vg) this).field_K - 1;
-                              stackIn_113_0 = stackOut_112_0;
-                              stackIn_113_1 = stackOut_112_1;
+                              stackOut_100_0 = this;
+                              stackOut_100_1 = ((vg) this).field_K - 1;
+                              stackIn_101_0 = stackOut_100_0;
+                              stackIn_101_1 = stackOut_100_1;
                               break L1;
                             } else {
-                              stackOut_111_0 = this;
-                              stackOut_111_1 = this.n(117);
-                              stackIn_113_0 = stackOut_111_0;
-                              stackIn_113_1 = stackOut_111_1;
+                              stackOut_99_0 = this;
+                              stackOut_99_1 = this.n(117);
+                              stackIn_101_0 = stackOut_99_0;
+                              stackIn_101_1 = stackOut_99_1;
                               break L1;
                             }
                           }
-                          this.b(stackIn_113_1, -6331);
+                          this.b(stackIn_101_1, -6331);
                           return true;
                         }
                       } else {
                         if (-98 != (param2 ^ -1)) {
-                          if (param2 != -103) {
-                            if (103 != param2) {
-                              if (-85 != param2) {
+                          if ((param2 ^ -1) == -103) {
+                            this.b(0, -6331);
+                            return true;
+                          } else {
+                            if (103 == param2) {
+                              this.b(((vg) this).field_i.length(), -6331);
+                              return true;
+                            } else {
+                              if (-85 == (param2 ^ -1)) {
+                                this.c(true);
+                                return true;
+                              } else {
                                 if (!fh.field_d[82]) {
                                   L2: {
                                     if (!fh.field_d[82]) {
@@ -641,7 +654,10 @@ class vg extends pj {
                                     }
                                   }
                                 } else {
-                                  if (-66 != (param2 ^ -1)) {
+                                  if (-66 == (param2 ^ -1)) {
+                                    this.m(108);
+                                    return true;
+                                  } else {
                                     if (fh.field_d[82]) {
                                       if (param2 == 66) {
                                         this.o(-1);
@@ -678,44 +694,32 @@ class vg extends pj {
                                       var5 = -50 % ((31 - param1) / 56);
                                       return false;
                                     }
-                                  } else {
-                                    this.m(108);
-                                    return true;
                                   }
                                 }
-                              } else {
-                                this.c(true);
-                                return true;
                               }
-                            } else {
-                              this.b(((vg) this).field_i.length(), -6331);
-                              return true;
                             }
-                          } else {
-                            this.b(0, -6331);
-                            return true;
                           }
                         } else {
                           if (((vg) this).field_K < ((vg) this).field_i.length()) {
                             L5: {
-                              stackOut_77_0 = this;
-                              stackIn_79_0 = stackOut_77_0;
-                              stackIn_78_0 = stackOut_77_0;
+                              stackOut_67_0 = this;
+                              stackIn_69_0 = stackOut_67_0;
+                              stackIn_68_0 = stackOut_67_0;
                               if (!fh.field_d[82]) {
-                                stackOut_79_0 = this;
-                                stackOut_79_1 = 1 + ((vg) this).field_K;
-                                stackIn_80_0 = stackOut_79_0;
-                                stackIn_80_1 = stackOut_79_1;
+                                stackOut_69_0 = this;
+                                stackOut_69_1 = 1 + ((vg) this).field_K;
+                                stackIn_70_0 = stackOut_69_0;
+                                stackIn_70_1 = stackOut_69_1;
                                 break L5;
                               } else {
-                                stackOut_78_0 = this;
-                                stackOut_78_1 = this.k(11365);
-                                stackIn_80_0 = stackOut_78_0;
-                                stackIn_80_1 = stackOut_78_1;
+                                stackOut_68_0 = this;
+                                stackOut_68_1 = this.k(11365);
+                                stackIn_70_0 = stackOut_68_0;
+                                stackIn_70_1 = stackOut_68_1;
                                 break L5;
                               }
                             }
-                            this.b(stackIn_80_1, -6331);
+                            this.b(stackIn_70_1, -6331);
                             return true;
                           } else {
                             var5 = -50 % ((31 - param1) / 56);
@@ -743,7 +747,7 @@ class vg extends pj {
                     }
                   }
                 } else {
-                  if (((vg) this).field_O == ((vg) this).field_K) {
+                  if ((((vg) this).field_O ^ -1) == (((vg) this).field_K ^ -1)) {
                     if (0 < ((vg) this).field_K) {
                       ((vg) this).field_O = ((vg) this).field_K + -1;
                       this.p(11002);
@@ -761,202 +765,232 @@ class vg extends pj {
               return false;
             } else {
               if (param0 <= 126) {
-                L6: {
-                  if (((vg) this).field_O == ((vg) this).field_K) {
-                    break L6;
+                if (((vg) this).field_O == ((vg) this).field_K) {
+                  if (-1 == ((vg) this).field_Q) {
+                    if (((vg) this).field_K >= ((vg) this).field_i.length()) {
+                      ((vg) this).field_i = ((vg) this).field_i + param0;
+                      int dupTemp$4 = ((vg) this).field_i.length();
+                      ((vg) this).field_K = dupTemp$4;
+                      ((vg) this).field_O = dupTemp$4;
+                      ((vg) this).j(111);
+                      return true;
+                    } else {
+                      ((vg) this).field_i = ((vg) this).field_i.substring(0, ((vg) this).field_K) + param0 + ((vg) this).field_i.substring(((vg) this).field_K, ((vg) this).field_i.length());
+                      ((vg) this).field_K = ((vg) this).field_K + 1;
+                      ((vg) this).field_O = ((vg) this).field_K;
+                      ((vg) this).j(111);
+                      return true;
+                    }
                   } else {
-                    this.p(11002);
-                    break L6;
-                  }
-                }
-                if (-1 == ((vg) this).field_Q) {
-                  if (((vg) this).field_K >= ((vg) this).field_i.length()) {
-                    ((vg) this).field_i = ((vg) this).field_i + param0;
-                    ((vg) this).field_K = ((vg) this).field_i.length();
-                    ((vg) this).field_O = ((vg) this).field_i.length();
-                    ((vg) this).j(111);
-                    return true;
-                  } else {
-                    ((vg) this).field_i = ((vg) this).field_i.substring(0, ((vg) this).field_K) + param0 + ((vg) this).field_i.substring(((vg) this).field_K, ((vg) this).field_i.length());
-                    ((vg) this).field_K = ((vg) this).field_K + 1;
-                    ((vg) this).field_O = ((vg) this).field_K;
-                    ((vg) this).j(111);
-                    return true;
-                  }
-                } else {
-                  if (((vg) this).field_i.length() >= ((vg) this).field_Q) {
-                    return true;
-                  } else {
-                    L7: {
+                    if (((vg) this).field_i.length() >= ((vg) this).field_Q) {
+                      return true;
+                    } else {
                       if (((vg) this).field_K >= ((vg) this).field_i.length()) {
                         ((vg) this).field_i = ((vg) this).field_i + param0;
-                        ((vg) this).field_K = ((vg) this).field_i.length();
-                        ((vg) this).field_O = ((vg) this).field_i.length();
+                        int dupTemp$5 = ((vg) this).field_i.length();
+                        ((vg) this).field_K = dupTemp$5;
+                        ((vg) this).field_O = dupTemp$5;
                         ((vg) this).j(111);
-                        break L7;
+                        return true;
                       } else {
                         ((vg) this).field_i = ((vg) this).field_i.substring(0, ((vg) this).field_K) + param0 + ((vg) this).field_i.substring(((vg) this).field_K, ((vg) this).field_i.length());
                         ((vg) this).field_K = ((vg) this).field_K + 1;
                         ((vg) this).field_O = ((vg) this).field_K;
                         ((vg) this).j(111);
-                        break L7;
-                      }
-                    }
-                    return true;
-                  }
-                }
-              } else {
-                if (85 != param2) {
-                  if (param2 != 101) {
-                    if (param2 != 13) {
-                      if (param2 == 96) {
-                        if (0 >= ((vg) this).field_K) {
-                          var5 = -50 % ((31 - param1) / 56);
-                          return false;
-                        } else {
-                          L8: {
-                            stackOut_51_0 = this;
-                            stackIn_53_0 = stackOut_51_0;
-                            stackIn_52_0 = stackOut_51_0;
-                            if (!fh.field_d[82]) {
-                              stackOut_53_0 = this;
-                              stackOut_53_1 = ((vg) this).field_K - 1;
-                              stackIn_54_0 = stackOut_53_0;
-                              stackIn_54_1 = stackOut_53_1;
-                              break L8;
-                            } else {
-                              stackOut_52_0 = this;
-                              stackOut_52_1 = this.n(117);
-                              stackIn_54_0 = stackOut_52_0;
-                              stackIn_54_1 = stackOut_52_1;
-                              break L8;
-                            }
-                          }
-                          this.b(stackIn_54_1, -6331);
-                          return true;
-                        }
-                      } else {
-                        if (-98 != (param2 ^ -1)) {
-                          if (param2 != -103) {
-                            if (103 != param2) {
-                              if (-85 != param2) {
-                                L9: {
-                                  if (!fh.field_d[82]) {
-                                    break L9;
-                                  } else {
-                                    if (-66 != (param2 ^ -1)) {
-                                      break L9;
-                                    } else {
-                                      this.m(108);
-                                      return true;
-                                    }
-                                  }
-                                }
-                                L10: {
-                                  if (!fh.field_d[82]) {
-                                    break L10;
-                                  } else {
-                                    if (param2 != 66) {
-                                      break L10;
-                                    } else {
-                                      this.o(-1);
-                                      return true;
-                                    }
-                                  }
-                                }
-                                if (fh.field_d[82]) {
-                                  if ((param2 ^ -1) != -68) {
-                                    var5 = -50 % ((31 - param1) / 56);
-                                    return false;
-                                  } else {
-                                    this.e((byte) -78);
-                                    return true;
-                                  }
-                                } else {
-                                  var5 = -50 % ((31 - param1) / 56);
-                                  return false;
-                                }
-                              } else {
-                                this.c(true);
-                                return true;
-                              }
-                            } else {
-                              this.b(((vg) this).field_i.length(), -6331);
-                              return true;
-                            }
-                          } else {
-                            this.b(0, -6331);
-                            return true;
-                          }
-                        } else {
-                          if (((vg) this).field_K < ((vg) this).field_i.length()) {
-                            L11: {
-                              stackOut_26_0 = this;
-                              stackIn_28_0 = stackOut_26_0;
-                              stackIn_27_0 = stackOut_26_0;
-                              if (!fh.field_d[82]) {
-                                stackOut_28_0 = this;
-                                stackOut_28_1 = 1 + ((vg) this).field_K;
-                                stackIn_29_0 = stackOut_28_0;
-                                stackIn_29_1 = stackOut_28_1;
-                                break L11;
-                              } else {
-                                stackOut_27_0 = this;
-                                stackOut_27_1 = this.k(11365);
-                                stackIn_29_0 = stackOut_27_0;
-                                stackIn_29_1 = stackOut_27_1;
-                                break L11;
-                              }
-                            }
-                            this.b(stackIn_29_1, -6331);
-                            return true;
-                          } else {
-                            var5 = -50 % ((31 - param1) / 56);
-                            return false;
-                          }
-                        }
-                      }
-                    } else {
-                      ((vg) this).l(-115);
-                      return true;
-                    }
-                  } else {
-                    if (((vg) this).field_K == ((vg) this).field_O) {
-                      if (((vg) this).field_K >= ((vg) this).field_i.length()) {
-                        var5 = -50 % ((31 - param1) / 56);
-                        return false;
-                      } else {
-                        ((vg) this).field_O = ((vg) this).field_K + 1;
-                        this.p(11002);
                         return true;
                       }
-                    } else {
-                      this.p(11002);
-                      return true;
                     }
                   }
                 } else {
-                  if (((vg) this).field_O == ((vg) this).field_K) {
-                    if (0 < ((vg) this).field_K) {
-                      ((vg) this).field_O = ((vg) this).field_K + -1;
-                      this.p(11002);
+                  this.p(11002);
+                  if (-1 == ((vg) this).field_Q) {
+                    if (((vg) this).field_K >= ((vg) this).field_i.length()) {
+                      ((vg) this).field_i = ((vg) this).field_i + param0;
+                      int dupTemp$6 = ((vg) this).field_i.length();
+                      ((vg) this).field_K = dupTemp$6;
+                      ((vg) this).field_O = dupTemp$6;
+                      ((vg) this).j(111);
                       return true;
                     } else {
-                      var5 = -50 % ((31 - param1) / 56);
-                      return false;
+                      ((vg) this).field_i = ((vg) this).field_i.substring(0, ((vg) this).field_K) + param0 + ((vg) this).field_i.substring(((vg) this).field_K, ((vg) this).field_i.length());
+                      ((vg) this).field_K = ((vg) this).field_K + 1;
+                      ((vg) this).field_O = ((vg) this).field_K;
+                      ((vg) this).j(111);
+                      return true;
                     }
                   } else {
-                    this.p(11002);
-                    return true;
+                    if (((vg) this).field_i.length() >= ((vg) this).field_Q) {
+                      return true;
+                    } else {
+                      L6: {
+                        if (((vg) this).field_K >= ((vg) this).field_i.length()) {
+                          ((vg) this).field_i = ((vg) this).field_i + param0;
+                          int dupTemp$7 = ((vg) this).field_i.length();
+                          ((vg) this).field_K = dupTemp$7;
+                          ((vg) this).field_O = dupTemp$7;
+                          ((vg) this).j(111);
+                          break L6;
+                        } else {
+                          ((vg) this).field_i = ((vg) this).field_i.substring(0, ((vg) this).field_K) + param0 + ((vg) this).field_i.substring(((vg) this).field_K, ((vg) this).field_i.length());
+                          ((vg) this).field_K = ((vg) this).field_K + 1;
+                          ((vg) this).field_O = ((vg) this).field_K;
+                          ((vg) this).j(111);
+                          break L6;
+                        }
+                      }
+                      return true;
+                    }
                   }
                 }
+              } else {
+                L7: {
+                  if (85 != param2) {
+                    if (param2 != 101) {
+                      if (param2 != 13) {
+                        if (param2 == 96) {
+                          if (0 >= ((vg) this).field_K) {
+                            break L7;
+                          } else {
+                            L8: {
+                              stackOut_44_0 = this;
+                              stackIn_46_0 = stackOut_44_0;
+                              stackIn_45_0 = stackOut_44_0;
+                              if (!fh.field_d[82]) {
+                                stackOut_46_0 = this;
+                                stackOut_46_1 = ((vg) this).field_K - 1;
+                                stackIn_47_0 = stackOut_46_0;
+                                stackIn_47_1 = stackOut_46_1;
+                                break L8;
+                              } else {
+                                stackOut_45_0 = this;
+                                stackOut_45_1 = this.n(117);
+                                stackIn_47_0 = stackOut_45_0;
+                                stackIn_47_1 = stackOut_45_1;
+                                break L8;
+                              }
+                            }
+                            this.b(stackIn_47_1, -6331);
+                            return true;
+                          }
+                        } else {
+                          if (-98 != (param2 ^ -1)) {
+                            if ((param2 ^ -1) == -103) {
+                              this.b(0, -6331);
+                              return true;
+                            } else {
+                              if (103 == param2) {
+                                this.b(((vg) this).field_i.length(), -6331);
+                                return true;
+                              } else {
+                                if (-85 == (param2 ^ -1)) {
+                                  this.c(true);
+                                  return true;
+                                } else {
+                                  L9: {
+                                    if (!fh.field_d[82]) {
+                                      break L9;
+                                    } else {
+                                      if (-66 == (param2 ^ -1)) {
+                                        this.m(108);
+                                        return true;
+                                      } else {
+                                        break L9;
+                                      }
+                                    }
+                                  }
+                                  L10: {
+                                    if (!fh.field_d[82]) {
+                                      break L10;
+                                    } else {
+                                      if (param2 != 66) {
+                                        break L10;
+                                      } else {
+                                        this.o(-1);
+                                        return true;
+                                      }
+                                    }
+                                  }
+                                  if (!fh.field_d[82]) {
+                                    break L7;
+                                  } else {
+                                    if ((param2 ^ -1) != -68) {
+                                      break L7;
+                                    } else {
+                                      this.e((byte) -78);
+                                      return true;
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          } else {
+                            if (((vg) this).field_K >= ((vg) this).field_i.length()) {
+                              break L7;
+                            } else {
+                              L11: {
+                                stackOut_23_0 = this;
+                                stackIn_25_0 = stackOut_23_0;
+                                stackIn_24_0 = stackOut_23_0;
+                                if (!fh.field_d[82]) {
+                                  stackOut_25_0 = this;
+                                  stackOut_25_1 = 1 + ((vg) this).field_K;
+                                  stackIn_26_0 = stackOut_25_0;
+                                  stackIn_26_1 = stackOut_25_1;
+                                  break L11;
+                                } else {
+                                  stackOut_24_0 = this;
+                                  stackOut_24_1 = this.k(11365);
+                                  stackIn_26_0 = stackOut_24_0;
+                                  stackIn_26_1 = stackOut_24_1;
+                                  break L11;
+                                }
+                              }
+                              this.b(stackIn_26_1, -6331);
+                              return true;
+                            }
+                          }
+                        }
+                      } else {
+                        ((vg) this).l(-115);
+                        return true;
+                      }
+                    } else {
+                      if (((vg) this).field_K == ((vg) this).field_O) {
+                        if (((vg) this).field_K < ((vg) this).field_i.length()) {
+                          ((vg) this).field_O = ((vg) this).field_K + 1;
+                          this.p(11002);
+                          return true;
+                        } else {
+                          var5 = -50 % ((31 - param1) / 56);
+                          return false;
+                        }
+                      } else {
+                        this.p(11002);
+                        return true;
+                      }
+                    }
+                  } else {
+                    if ((((vg) this).field_O ^ -1) == (((vg) this).field_K ^ -1)) {
+                      if (0 < ((vg) this).field_K) {
+                        ((vg) this).field_O = ((vg) this).field_K + -1;
+                        this.p(11002);
+                        return true;
+                      } else {
+                        break L7;
+                      }
+                    } else {
+                      this.p(11002);
+                      return true;
+                    }
+                  }
+                }
+                var5 = -50 % ((31 - param1) / 56);
+                return false;
               }
             }
           } else {
             return false;
           }
-        } else {
-          return false;
         }
     }
 
@@ -1226,17 +1260,23 @@ class vg extends pj {
             Exception var2_ref = null;
             Throwable decompiledCaughtException = null;
             try {
-              var2 = (String) java.awt.Toolkit.getDefaultToolkit().getSystemClipboard().getContents((Object) null).getTransferData(java.awt.datatransfer.DataFlavor.stringFlavor);
-              if (param0 == -78) {
-                this.p(11002);
-                this.a(-107, var2);
-              } else {
-                return;
+              L0: {
+                var2 = (String) java.awt.Toolkit.getDefaultToolkit().getSystemClipboard().getContents((Object) null).getTransferData(java.awt.datatransfer.DataFlavor.stringFlavor);
+                if (param0 == -78) {
+                  this.p(11002);
+                  this.a(-107, var2);
+                  break L0;
+                } else {
+                  return;
+                }
               }
-            } catch (java.lang.Exception decompiledCaughtParameter) {
-              decompiledCaughtException = decompiledCaughtParameter;
+            } catch (java.lang.Exception decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              L1: {
+                var2_ref = (Exception) (Object) decompiledCaughtException;
+                break L1;
+              }
             }
-            var2_ref = (Exception) (Object) decompiledCaughtException;
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {

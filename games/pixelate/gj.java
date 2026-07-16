@@ -19,20 +19,24 @@ final class gj extends kb {
         int stackOut_2_0 = 0;
         try {
           L0: {
-            if (param0) {
-              break L0;
-            } else {
-              int discarded$2 = ((gj) this).c(false);
-              break L0;
+            L1: {
+              if (param0) {
+                break L1;
+              } else {
+                int discarded$2 = ((gj) this).c(false);
+                break L1;
+              }
             }
+            stackOut_2_0 = Integer.parseInt(((gj) this).field_Q.field_q);
+            stackIn_3_0 = stackOut_2_0;
+            break L0;
           }
-          stackOut_2_0 = Integer.parseInt(((gj) this).field_Q.field_q);
-          stackIn_3_0 = stackOut_2_0;
-        } catch (java.lang.Exception decompiledCaughtParameter) {
-          decompiledCaughtException = decompiledCaughtParameter;
-          return stackIn_3_0;
+        } catch (java.lang.Exception decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2 = (NumberFormatException) (Object) decompiledCaughtException;
+          return -1;
         }
-        return 0;
+        return stackIn_3_0;
     }
 
     final static void a(String param0, java.applet.Applet param1, boolean param2) {
@@ -41,81 +45,41 @@ final class gj extends kb {
             String var3 = null;
             String var4 = null;
             String var5 = null;
-            int statePc = 0;
-            Throwable caughtException = null;
-            stateLoop: while (true) {
-                switch (statePc) {
-                    case 0: {
-                        bh.field_n = param0;
-                        statePc = 1;
-                        continue stateLoop;
-                    }
-                    case 1: {
-                        try {
-                            var3 = param1.getParameter("cookieprefix");
-                            var5 = var3;
-                            var5 = var3;
-                            var4 = param1.getParameter("cookiehost");
-                            var5 = var4;
-                            var5 = var4;
-                            var5 = var3 + "session=" + param0 + "; version=1; path=/; domain=" + var4;
-                            if (param0.length() != 0) {
-                                statePc = 3;
-                            } else {
-                                statePc = 2;
-                            }
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_1) {
-                            caughtException = stateCaught_1;
-                            statePc = 5;
-                            continue stateLoop;
-                        }
-                    }
-                    case 2: {
-                        try {
-                            var5 = var5 + "; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0";
-                            statePc = 3;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_2) {
-                            caughtException = stateCaught_2;
-                            statePc = 5;
-                            continue stateLoop;
-                        }
-                    }
-                    case 3: {
-                        try {
-                            cq.a(param1, (byte) -122, "document.cookie=\"" + var5 + "\"");
-                            statePc = 6;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_3) {
-                            caughtException = stateCaught_3;
-                            statePc = 5;
-                            continue stateLoop;
-                        }
-                    }
-                    case 5: {
-                        throwable = caughtException;
-                        statePc = 6;
-                        continue stateLoop;
-                    }
-                    case 6: {
-                        ib.a(param1, false);
-                        if (!param2) {
-                            statePc = 8;
-                        } else {
-                            statePc = 7;
-                        }
-                        continue stateLoop;
-                    }
-                    case 7: {
-                        return;
-                    }
-                    case 8: {
-                        field_V = false;
-                        return;
-                    }
-                    default: throw new IllegalStateException("invalid CFG state " + statePc);
+            Throwable decompiledCaughtException = null;
+            bh.field_n = param0;
+            try {
+              L0: {
+                L1: {
+                  var3 = param1.getParameter("cookieprefix");
+                  var5 = var3;
+                  var5 = var3;
+                  var4 = param1.getParameter("cookiehost");
+                  var5 = var4;
+                  var5 = var4;
+                  var5 = var3 + "session=" + param0 + "; version=1; path=/; domain=" + var4;
+                  if (param0.length() != 0) {
+                    break L1;
+                  } else {
+                    var5 = var5 + "; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0";
+                    break L1;
+                  }
                 }
+                cq.a(param1, (byte) -122, "document.cookie=\"" + var5 + "\"");
+                break L0;
+              }
+            } catch (java.lang.Throwable decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              L2: {
+                throwable = decompiledCaughtException;
+                break L2;
+              }
+            }
+            ib.a(param1, false);
+            if (!param2) {
+              field_V = false;
+              return;
+            } else {
+              return;
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -150,14 +114,18 @@ final class gj extends kb {
         Throwable decompiledCaughtException = null;
         int stackOut_0_0 = 0;
         try {
-          var2_int = 11 / ((param0 - 23) / 48);
-          stackOut_0_0 = Integer.parseInt(((gj) this).field_U.field_q);
-          stackIn_1_0 = stackOut_0_0;
-        } catch (java.lang.Exception decompiledCaughtParameter) {
-          decompiledCaughtException = decompiledCaughtParameter;
-          return stackIn_1_0;
+          L0: {
+            var2_int = 11 / ((param0 - 23) / 48);
+            stackOut_0_0 = Integer.parseInt(((gj) this).field_U.field_q);
+            stackIn_1_0 = stackOut_0_0;
+            break L0;
+          }
+        } catch (java.lang.Exception decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2 = (NumberFormatException) (Object) decompiledCaughtException;
+          return -1;
         }
-        return 0;
+        return stackIn_1_0;
     }
 
     final boolean m(int param0) {
@@ -226,16 +194,20 @@ final class gj extends kb {
         int stackOut_2_0 = 0;
         if (param0 == 25) {
           try {
-            stackOut_2_0 = Integer.parseInt(((gj) this).field_O.field_q) - 1;
-            stackIn_3_0 = stackOut_2_0;
-          } catch (java.lang.Exception decompiledCaughtParameter) {
-            decompiledCaughtException = decompiledCaughtParameter;
-            return stackIn_3_0;
+            L0: {
+              stackOut_2_0 = Integer.parseInt(((gj) this).field_O.field_q) - 1;
+              stackIn_3_0 = stackOut_2_0;
+              break L0;
+            }
+          } catch (java.lang.Exception decompiledCaughtParameter0) {
+            decompiledCaughtException = decompiledCaughtParameter0;
+            var2 = (NumberFormatException) (Object) decompiledCaughtException;
+            return -1;
           }
+          return stackIn_3_0;
         } else {
           return -5;
         }
-        return 0;
     }
 
     final void a(int param0, int param1, int param2, byte param3) {

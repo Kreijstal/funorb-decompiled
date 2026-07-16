@@ -41,8 +41,9 @@ final class pe {
                   }
                 } else {
                   if ((uf.field_e ^ -1) < -1) {
+                    int fieldTemp$19 = uf.field_e - 1;
                     uf.field_e = uf.field_e - 1;
-                    var2_ref_byte__ = ng.field_q[uf.field_e - 1];
+                    var2_ref_byte__ = ng.field_q[fieldTemp$19];
                     ng.field_q[uf.field_e] = null;
                     return var2_ref_byte__;
                   } else {
@@ -136,22 +137,25 @@ final class pe {
                       }
                       return new byte[param0];
                     } else {
+                      int fieldTemp$20 = uf.field_e - 1;
                       uf.field_e = uf.field_e - 1;
-                      var2_ref_byte__ = ng.field_q[uf.field_e - 1];
+                      var2_ref_byte__ = ng.field_q[fieldTemp$20];
                       ng.field_q[uf.field_e] = null;
                       return var2_ref_byte__;
                     }
                   }
                 } else {
+                  int fieldTemp$21 = ae.field_L - 1;
                   ae.field_L = ae.field_L - 1;
-                  var2_ref_byte__ = bg.field_j[ae.field_L - 1];
+                  var2_ref_byte__ = bg.field_j[fieldTemp$21];
                   bg.field_j[ae.field_L] = null;
                   return var2_ref_byte__;
                 }
               }
             } else {
+              int fieldTemp$22 = nn.field_cb - 1;
               nn.field_cb = nn.field_cb - 1;
-              var2_ref_byte__ = d.field_f[nn.field_cb - 1];
+              var2_ref_byte__ = d.field_f[fieldTemp$22];
               d.field_f[nn.field_cb] = null;
               return var2_ref_byte__;
             }
@@ -220,8 +224,9 @@ final class pe {
                   }
                   return new byte[param0];
                 } else {
+                  int fieldTemp$23 = uf.field_e - 1;
                   uf.field_e = uf.field_e - 1;
-                  var2_ref_byte__ = ng.field_q[uf.field_e - 1];
+                  var2_ref_byte__ = ng.field_q[fieldTemp$23];
                   ng.field_q[uf.field_e] = null;
                   return var2_ref_byte__;
                 }
@@ -233,8 +238,9 @@ final class pe {
                     break L5;
                   } else {
                     if ((uf.field_e ^ -1) < -1) {
+                      int fieldTemp$24 = uf.field_e - 1;
                       uf.field_e = uf.field_e - 1;
-                      var2_ref_byte__ = ng.field_q[uf.field_e - 1];
+                      var2_ref_byte__ = ng.field_q[fieldTemp$24];
                       ng.field_q[uf.field_e] = null;
                       return var2_ref_byte__;
                     } else {
@@ -275,8 +281,9 @@ final class pe {
                 }
                 return new byte[param0];
               } else {
+                int fieldTemp$25 = ae.field_L - 1;
                 ae.field_L = ae.field_L - 1;
-                var2_ref_byte__ = bg.field_j[ae.field_L - 1];
+                var2_ref_byte__ = bg.field_j[fieldTemp$25];
                 bg.field_j[ae.field_L] = null;
                 return var2_ref_byte__;
               }

@@ -28,7 +28,6 @@ final class kl extends gg {
         int var4 = 0;
         int var5 = 0;
         String var6 = null;
-        String var6_ref = null;
         int var7 = 0;
         int var8 = 0;
         qc var9 = null;
@@ -117,7 +116,7 @@ final class kl extends gg {
                   break L4;
                 } else {
                   L5: {
-                    if (pd.field_g.length < bb.field_k.length) {
+                    if ((pd.field_g.length ^ -1) > (bb.field_k.length ^ -1)) {
                       stackOut_17_0 = bb.field_k.length;
                       stackIn_18_0 = stackOut_17_0;
                       break L5;
@@ -156,7 +155,7 @@ final class kl extends gg {
                             break L8;
                           }
                         }
-                        var6_ref = stackIn_27_0;
+                        var6 = stackIn_27_0;
                         break L7;
                       } else {
                         break L7;
@@ -170,7 +169,7 @@ final class kl extends gg {
                       break L4;
                     } else {
                       L9: {
-                        if (fb.field_e.length <= var3 + (-7 - var7)) {
+                        if ((fb.field_e.length ^ -1) >= (var3 + (-7 - var7) ^ -1)) {
                           stackOut_32_0 = "";
                           stackIn_33_0 = stackOut_32_0;
                           break L9;
@@ -180,7 +179,7 @@ final class kl extends gg {
                           break L9;
                         }
                       }
-                      var6_ref = stackIn_33_0;
+                      var6 = stackIn_33_0;
                       break L4;
                     }
                   }
@@ -188,8 +187,8 @@ final class kl extends gg {
               }
             }
             L10: {
-              if (var4 == 1) {
-                var6_ref = Integer.toString(var2);
+              if ((var4 ^ -1) == 1) {
+                var6 = Integer.toString(var2);
                 break L10;
               } else {
                 break L10;
@@ -197,12 +196,12 @@ final class kl extends gg {
             }
             L11: {
               stackOut_37_0 = -112;
-              stackOut_37_1 = (String) var6_ref;
+              stackOut_37_1 = (String) var6;
               stackIn_39_0 = stackOut_37_0;
               stackIn_39_1 = stackOut_37_1;
               stackIn_38_0 = stackOut_37_0;
               stackIn_38_1 = stackOut_37_1;
-              if (-1 > var4) {
+              if (-1 < (var4 ^ -1)) {
                 stackOut_39_0 = stackIn_39_0;
                 stackOut_39_1 = (String) (Object) stackIn_39_1;
                 stackOut_39_2 = 0;
@@ -251,17 +250,19 @@ final class kl extends gg {
                 break L12;
               }
             }
-            if ((var4 ^ -1) > -1) {
-              pe.field_c.a(var6_ref, var8, var1 - -mc.field_a, var5, -1);
-              var1 = var1 + l.field_e;
-              var3++;
-              continue L2;
-            } else {
-              mj.field_E.a(var6_ref, var8, var1 - -fg.field_M, var5, -1);
-              var1 = var1 + (na.field_a + (nh.field_f + nh.field_h));
-              var3++;
-              continue L2;
+            L15: {
+              if ((var4 ^ -1) > -1) {
+                pe.field_c.a(var6, var8, var1 - -mc.field_a, var5, -1);
+                var1 = var1 + l.field_e;
+                break L15;
+              } else {
+                mj.field_E.a(var6, var8, var1 - -fg.field_M, var5, -1);
+                var1 = var1 + (na.field_a + (nh.field_f + nh.field_h));
+                break L15;
+              }
             }
+            var3++;
+            continue L2;
           }
         }
     }

@@ -78,8 +78,9 @@ final class kk {
                   if ((((kk) this).field_z ^ -1) >= -1) {
                     break L3;
                   } else {
+                    int fieldTemp$5 = ((kk) this).field_z;
                     ((kk) this).field_z = ((kk) this).field_z + 1;
-                    if ((((kk) this).field_z ^ -1) >= -31) {
+                    if ((fieldTemp$5 ^ -1) >= -31) {
                       break L3;
                     } else {
                       ((kk) this).field_z = 0;
@@ -89,8 +90,9 @@ final class kk {
                 }
                 L4: {
                   if (0 < ((kk) this).field_i) {
+                    int fieldTemp$6 = ((kk) this).field_i;
                     ((kk) this).field_i = ((kk) this).field_i + 1;
-                    if (((kk) this).field_n <= ((kk) this).field_i) {
+                    if (((kk) this).field_n <= fieldTemp$6) {
                       ((kk) this).field_i = 0;
                       break L4;
                     } else {
@@ -110,14 +112,15 @@ final class kk {
                       if (((kk) this).field_r == 0) {
                         L6: {
                           if (((kk) this).field_v == 2) {
-                            pp discarded$1 = mc.a(131, -125);
+                            pp discarded$7 = mc.a(131, -125);
                             break L6;
                           } else {
                             break L6;
                           }
                         }
+                        int fieldTemp$8 = ((kk) this).field_v;
                         ((kk) this).field_v = ((kk) this).field_v + 1;
-                        if (((kk) this).field_v >= ((kk) this).field_w) {
+                        if (fieldTemp$8 >= ((kk) this).field_w) {
                           ((kk) this).field_v = 0;
                           break L5;
                         } else {
@@ -135,8 +138,9 @@ final class kk {
                     break L7;
                   } else {
                     if (0 < ((kk) this).field_r) {
+                      int fieldTemp$9 = ((kk) this).field_r;
                       ((kk) this).field_r = ((kk) this).field_r + 1;
-                      if (-31 < ((kk) this).field_r) {
+                      if (-31 < fieldTemp$9) {
                         ((kk) this).field_r = 0;
                         break L7;
                       } else {

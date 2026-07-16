@@ -204,12 +204,14 @@ final class ko {
             param3 = lq.field_T[var5];
             var6 = var5 << -147296924;
             while (true) {
+                int incrementValue$0 = param3;
                 param3--;
-                if (param3 == 0) {
+                if (incrementValue$0 == 0) {
                     break;
                 }
+                int incrementValue$1 = var6;
                 var6++;
-                param1 = tl.field_I[var6];
+                param1 = tl.field_I[incrementValue$1];
                 param0[param2[param1]] = param0[param2[param1]] + 1;
                 tl.field_I[param0[param2[param1]]] = param1;
             }

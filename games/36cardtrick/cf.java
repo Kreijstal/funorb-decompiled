@@ -24,7 +24,7 @@ final class cf implements b {
 
     public static void a(byte param0) {
         field_a = null;
-        field_b = (byte[][]) null;
+        field_b = null;
         if (param0 <= 3) {
             cf.a((byte) -30);
         }
@@ -79,18 +79,18 @@ final class cf implements b {
     final static void a(Main param0, byte param1) {
         cj.field_l[5] = 373 - kb.field_b[5];
         fh.field_G[5] = new int[4];
-        ((Main) param0).field_E[5] = new re(param0, 5);
+        param0.field_E[5] = new re(param0, 5);
         if (param1 < 34) {
-            Main var3 = (Main) null;
+            Object var3 = null;
             cf.a((Main) null, (byte) 68);
         }
         cj.field_l[4] = 428;
         fh.field_G[4] = new int[1];
-        ((Main) param0).field_E[4] = new re(param0, 4);
+        param0.field_E[4] = new re(param0, 4);
         if (d.field_c > 0) {
             if (hl.a(jk.field_a, -1)) {
                 fh.field_G[1] = new int[6];
-                ((Main) param0).field_E[1] = new re(param0, 1);
+                param0.field_E[1] = new re(param0, 1);
             }
         }
     }

@@ -236,8 +236,9 @@ final class kj {
                     if (((kj) this).field_m <= var10) {
                       break L5;
                     } else {
-                      var8 = var8 + var17.a((byte) -111);
-                      ((kj) this).field_f[var10] = var8 + var17.a((byte) -111);
+                      int dupTemp$4 = var8 + var17.a((byte) -111);
+                      var8 = dupTemp$4;
+                      ((kj) this).field_f[var10] = dupTemp$4;
                       if (((kj) this).field_f[var10] > var9) {
                         var9 = ((kj) this).field_f[var10];
                         var10++;
@@ -254,8 +255,9 @@ final class kj {
                     if (((kj) this).field_m <= var10) {
                       break L5;
                     } else {
-                      var8 = var8 + var17.i(9997);
-                      ((kj) this).field_f[var10] = var8 + var17.i(9997);
+                      int dupTemp$5 = var8 + var17.i(9997);
+                      var8 = dupTemp$5;
+                      ((kj) this).field_f[var10] = dupTemp$5;
                       if (var9 < ((kj) this).field_f[var10]) {
                         var9 = ((kj) this).field_f[var10];
                         var10++;
@@ -362,9 +364,10 @@ final class kj {
                                         continue L18;
                                       }
                                     } else {
-                                      var8 = var8 + var17.i(9997);
-                                      ((kj) this).field_r[var11][var14] = var8 + var17.i(9997);
-                                      var15 = var8 + var17.i(9997);
+                                      int dupTemp$6 = var8 + var17.i(9997);
+                                      var8 = dupTemp$6;
+                                      ((kj) this).field_r[var11][var14] = dupTemp$6;
+                                      var15 = dupTemp$6;
                                       if (var13 < var15) {
                                         var13 = var15;
                                         var14++;
@@ -410,9 +413,10 @@ final class kj {
                                         continue L21;
                                       }
                                     } else {
-                                      var8 = var8 + var17.a((byte) -119);
-                                      ((kj) this).field_r[var11][var14] = var8 + var17.a((byte) -119);
-                                      var15 = var8 + var17.a((byte) -119);
+                                      int dupTemp$7 = var8 + var17.a((byte) -119);
+                                      var8 = dupTemp$7;
+                                      ((kj) this).field_r[var11][var14] = dupTemp$7;
+                                      var15 = dupTemp$7;
                                       if (var13 < var15) {
                                         var13 = var15;
                                         var14++;
@@ -542,7 +546,7 @@ final class kj {
           var12 = param1.field_F;
           var13 = -var12 + t.field_j;
           var14 = 0;
-          if (t.field_f <= param4) {
+          if ((t.field_f ^ -1) >= (param4 ^ -1)) {
             break L0;
           } else {
             var15 = -param4 + t.field_f;
@@ -554,7 +558,7 @@ final class kj {
           }
         }
         L1: {
-          if (param4 - -var11 <= t.field_a) {
+          if ((param4 - -var11 ^ -1) >= (t.field_a ^ -1)) {
             break L1;
           } else {
             var11 = var11 - (var11 + (param4 - t.field_a));
@@ -562,7 +566,7 @@ final class kj {
           }
         }
         L2: {
-          if (t.field_e > param2) {
+          if ((t.field_e ^ -1) < (param2 ^ -1)) {
             var15 = -param2 + t.field_e;
             var10 = var10 + var15;
             var13 = var13 + var15;
@@ -577,7 +581,7 @@ final class kj {
           }
         }
         L3: {
-          if (t.field_h < var12 + param2) {
+          if ((t.field_h ^ -1) > (var12 + param2 ^ -1)) {
             var15 = param2 + (var12 - t.field_h);
             var13 = var13 + var15;
             var14 = var14 + var15;
@@ -605,37 +609,39 @@ final class kj {
                     param4++;
                     continue L4;
                   } else {
-                    var16 = var15 >> 1753203496;
-                    var17 = -var16 + 256;
-                    var15 = var15 + var7;
-                    if (var16 > -1) {
-                      var9++;
-                      var10++;
-                      param2++;
-                      continue L5;
-                    } else {
-                      var10++;
-                      var18 = param1.field_G[var10];
-                      if (-1 != var18) {
-                        if ((var16 ^ -1) < -256) {
-                          t.field_k[var9] = var18;
-                          var9++;
-                          param2++;
-                          continue L5;
-                        } else {
-                          var19 = t.field_k[var9];
-                          var20 = 16711935 & (var19 & 16711935) * var17 - -((16711935 & var18) * var16) >> 815827592;
-                          t.field_k[var9] = var20 + (cm.a(var17 * cm.a(65280, var19) - -(var16 * cm.a(65280, var18)), 16711874) >> 446495528);
-                          var9++;
-                          param2++;
-                          continue L5;
-                        }
-                      } else {
+                    L6: {
+                      var16 = var15 >> 1753203496;
+                      var17 = -var16 + 256;
+                      var15 = var15 + var7;
+                      if ((var16 ^ -1) > -1) {
                         var9++;
-                        param2++;
-                        continue L5;
+                        var10++;
+                        break L6;
+                      } else {
+                        L7: {
+                          int incrementValue$1 = var10;
+                          var10++;
+                          var18 = param1.field_G[incrementValue$1];
+                          if (-1 == (var18 ^ -1)) {
+                            break L7;
+                          } else {
+                            if ((var16 ^ -1) < -256) {
+                              t.field_k[var9] = var18;
+                              break L7;
+                            } else {
+                              var19 = t.field_k[var9];
+                              var20 = 16711935 & (var19 & 16711935) * var17 - -((16711935 & var18) * var16) >> 815827592;
+                              t.field_k[var9] = var20 + (cm.a(var17 * cm.a(65280, var19) - -(var16 * cm.a(65280, var18)), 16711874) >> 446495528);
+                              break L7;
+                            }
+                          }
+                        }
+                        var9++;
+                        break L6;
                       }
                     }
+                    param2++;
+                    continue L5;
                   }
                 }
               }

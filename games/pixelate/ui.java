@@ -67,8 +67,9 @@ final class ui {
             if (var7 != 0) {
               if (var7 >= 128) {
                 if (160 <= var7) {
+                  int incrementValue$6 = var5;
                   var5++;
-                  var4[var5] = (char)var7;
+                  var4[incrementValue$6] = (char)var7;
                   var6++;
                   var6++;
                   var6++;
@@ -84,16 +85,18 @@ final class ui {
                     }
                   }
                   var7 = var8;
+                  int incrementValue$7 = var5;
                   var5++;
-                  var4[var5] = (char)var7;
+                  var4[incrementValue$7] = (char)var7;
                   var6++;
                   var6++;
                   var6++;
                   return new String(var13, 0, var5);
                 }
               } else {
+                int incrementValue$8 = var5;
                 var5++;
-                var4[var5] = (char)var7;
+                var4[incrementValue$8] = (char)var7;
                 var6++;
                 var6++;
                 var6++;
@@ -117,8 +120,9 @@ final class ui {
             if (var7 != 0) {
               if (var7 >= 128) {
                 if (160 <= var7) {
+                  int incrementValue$9 = var5;
                   var5++;
-                  var4[var5] = (char)var7;
+                  var4[incrementValue$9] = (char)var7;
                   var6++;
                   var6++;
                   var6++;
@@ -134,16 +138,18 @@ final class ui {
                     }
                   }
                   var7 = var8;
+                  int incrementValue$10 = var5;
                   var5++;
-                  var4[var5] = (char)var7;
+                  var4[incrementValue$10] = (char)var7;
                   var6++;
                   var6++;
                   var6++;
                   return new String(var13, 0, var5);
                 }
               } else {
+                int incrementValue$11 = var5;
                 var5++;
-                var4[var5] = (char)var7;
+                var4[incrementValue$11] = (char)var7;
                 var6++;
                 var6++;
                 var6++;
@@ -176,8 +182,9 @@ final class ui {
           uk.field_v.b(1276387944, param2);
           uk.field_v.a(tp.field_t, ag.field_m, 0);
           aa.field_f.g(18, 15514);
+          int fieldTemp$1 = aa.field_f.field_m + 1;
           aa.field_f.field_m = aa.field_f.field_m + 1;
-          var4 = aa.field_f.field_m + 1;
+          var4 = fieldTemp$1;
           aa.field_f.a(uk.field_v.field_m, 0, -3493, uk.field_v.field_k);
           aa.field_f.f(-var4 + aa.field_f.field_m, -1);
           return;

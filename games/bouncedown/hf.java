@@ -90,23 +90,23 @@ final class hf {
             IOException var1 = null;
             int var1_int = 0;
             wi var2 = null;
-            int stackIn_14_0 = 0;
-            int stackIn_27_0 = 0;
-            int stackIn_31_0 = 0;
-            int stackIn_34_0 = 0;
-            int stackIn_36_0 = 0;
+            int stackIn_13_0 = 0;
+            int stackIn_26_0 = 0;
+            int stackIn_30_0 = 0;
+            int stackIn_33_0 = 0;
+            int stackIn_35_0 = 0;
             Throwable decompiledCaughtException = null;
-            int stackOut_13_0 = 0;
-            int stackOut_30_0 = 0;
-            int stackOut_26_0 = 0;
-            int stackOut_35_0 = 0;
-            int stackOut_33_0 = 0;
+            int stackOut_12_0 = 0;
+            int stackOut_29_0 = 0;
+            int stackOut_25_0 = 0;
+            int stackOut_34_0 = 0;
+            int stackOut_32_0 = 0;
             if (4 <= tb.field_p.field_l) {
               if (-1 != tb.field_p.field_d) {
-                if (1 != (tb.field_p.field_d ^ -1)) {
-                  return 1;
-                } else {
+                if (1 == (tb.field_p.field_d ^ -1)) {
                   return 4;
+                } else {
+                  return 1;
                 }
               } else {
                 return 3;
@@ -114,98 +114,101 @@ final class hf {
             } else {
               try {
                 L0: {
-                  if (ih.field_X == -1) {
-                    md.field_q = vc.field_G.a(bd.field_l, a.field_a, 0);
-                    ih.field_X = ih.field_X + 1;
-                    break L0;
-                  } else {
-                    break L0;
-                  }
-                }
-                L1: {
-                  if (-2 != ih.field_X) {
-                    break L1;
-                  } else {
-                    if (md.field_q.field_f != 2) {
-                      if ((md.field_q.field_f ^ -1) != -2) {
-                        break L1;
-                      } else {
-                        ih.field_X = ih.field_X + 1;
-                        break L1;
-                      }
+                  L1: {
+                    if ((ih.field_X ^ -1) == -1) {
+                      md.field_q = vc.field_G.a(bd.field_l, a.field_a, 0);
+                      ih.field_X = ih.field_X + 1;
+                      break L1;
                     } else {
-                      stackOut_13_0 = qg.a(-23888, -1);
-                      stackIn_14_0 = stackOut_13_0;
-                      return stackIn_14_0;
+                      break L1;
                     }
                   }
-                }
-                L2: {
-                  if (param0) {
-                    break L2;
-                  } else {
-                    int discarded$1 = hf.a(true);
-                    break L2;
-                  }
-                }
-                L3: {
-                  if ((ih.field_X ^ -1) == -3) {
-                    mf.field_a = new pc((java.net.Socket) md.field_q.field_e, vc.field_G);
-                    var2 = new wi(13);
-                    fj.a(pe.field_c, 6, mf.field_e, var2, fi.field_c);
-                    var2.a(15, (byte) 98);
-                    var2.b(uj.field_s, (byte) 40);
-                    mf.field_a.a(13, var2.field_i, 0, 0);
-                    ih.field_X = ih.field_X + 1;
-                    kk.field_B = 30000L + fa.a(76);
-                    break L3;
-                  } else {
-                    break L3;
-                  }
-                }
-                L4: {
-                  if (-4 == ih.field_X) {
-                    if (-1 >= mf.field_a.d(0)) {
-                      if ((kk.field_B ^ -1L) <= (fa.a(125) ^ -1L)) {
-                        break L4;
-                      } else {
-                        stackOut_30_0 = qg.a(-23888, -2);
-                        stackIn_31_0 = stackOut_30_0;
-                        return stackIn_31_0;
-                      }
+                  L2: {
+                    if (-2 != (ih.field_X ^ -1)) {
+                      break L2;
                     } else {
-                      var1_int = mf.field_a.b(0);
-                      if (var1_int == 0) {
-                        ih.field_X = ih.field_X + 1;
-                        break L4;
+                      if (md.field_q.field_f != 2) {
+                        if ((md.field_q.field_f ^ -1) != -2) {
+                          break L2;
+                        } else {
+                          ih.field_X = ih.field_X + 1;
+                          break L2;
+                        }
                       } else {
-                        stackOut_26_0 = qg.a(-23888, var1_int);
-                        stackIn_27_0 = stackOut_26_0;
-                        return stackIn_27_0;
+                        stackOut_12_0 = qg.a(-23888, -1);
+                        stackIn_13_0 = stackOut_12_0;
+                        return stackIn_13_0;
                       }
                     }
-                  } else {
-                    break L4;
                   }
-                }
-                if ((ih.field_X ^ -1) != -5) {
-                  stackOut_35_0 = -1;
-                  stackIn_36_0 = stackOut_35_0;
-                } else {
-                  tb.field_p.a((byte) -114, (Object) (Object) mf.field_a, ke.field_p);
-                  ih.field_X = 0;
-                  md.field_q = null;
-                  mf.field_a = null;
-                  stackOut_33_0 = 0;
-                  stackIn_34_0 = stackOut_33_0;
-                  return stackIn_34_0;
+                  L3: {
+                    if (param0) {
+                      break L3;
+                    } else {
+                      int discarded$1 = hf.a(true);
+                      break L3;
+                    }
+                  }
+                  L4: {
+                    if ((ih.field_X ^ -1) == -3) {
+                      mf.field_a = new pc((java.net.Socket) md.field_q.field_e, vc.field_G);
+                      var2 = new wi(13);
+                      fj.a(pe.field_c, 6, mf.field_e, var2, fi.field_c);
+                      var2.a(15, (byte) 98);
+                      var2.b(uj.field_s, (byte) 40);
+                      mf.field_a.a(13, var2.field_i, 0, 0);
+                      ih.field_X = ih.field_X + 1;
+                      kk.field_B = 30000L + fa.a(76);
+                      break L4;
+                    } else {
+                      break L4;
+                    }
+                  }
+                  L5: {
+                    if (-4 == (ih.field_X ^ -1)) {
+                      if (-1 <= (mf.field_a.d(0) ^ -1)) {
+                        if ((kk.field_B ^ -1L) <= (fa.a(125) ^ -1L)) {
+                          break L5;
+                        } else {
+                          stackOut_29_0 = qg.a(-23888, -2);
+                          stackIn_30_0 = stackOut_29_0;
+                          return stackIn_30_0;
+                        }
+                      } else {
+                        var1_int = mf.field_a.b(0);
+                        if (var1_int == 0) {
+                          ih.field_X = ih.field_X + 1;
+                          break L5;
+                        } else {
+                          stackOut_25_0 = qg.a(-23888, var1_int);
+                          stackIn_26_0 = stackOut_25_0;
+                          return stackIn_26_0;
+                        }
+                      }
+                    } else {
+                      break L5;
+                    }
+                  }
+                  if ((ih.field_X ^ -1) != -5) {
+                    stackOut_34_0 = -1;
+                    stackIn_35_0 = stackOut_34_0;
+                    break L0;
+                  } else {
+                    tb.field_p.a((byte) -114, (Object) (Object) mf.field_a, ke.field_p);
+                    ih.field_X = 0;
+                    md.field_q = null;
+                    mf.field_a = null;
+                    stackOut_32_0 = 0;
+                    stackIn_33_0 = stackOut_32_0;
+                    return stackIn_33_0;
+                  }
                 }
               } catch (java.io.IOException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 var1 = (IOException) (Object) decompiledCaughtException;
                 return qg.a(-23888, -3);
               }
-              return stackIn_36_0;
+              return stackIn_35_0;
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;

@@ -23,7 +23,7 @@ final class s {
               if (param1 == 61) {
                 break L1;
               } else {
-                field_a = (String) null;
+                field_a = null;
                 break L1;
               }
             }
@@ -34,13 +34,13 @@ final class s {
               if (var8 != 60) {
                 break L2;
               } else {
-                var6 = ((di) param3).field_a[0] + (var5 >> -6068152) + param0.a(param4.substring(0, var7));
+                var6 = param3.field_a[0] + (var5 >> -6068152) + param0.a(param4.substring(0, var7));
                 break L2;
               }
             }
             L3: {
               if (-1 != var6) {
-                ((di) param3).field_a[var7] = var6;
+                param3.field_a[var7] = var6;
                 break L3;
               } else {
                 L4: {
@@ -51,7 +51,7 @@ final class s {
                     break L4;
                   }
                 }
-                ((di) param3).field_a[var7] = ((di) param3).field_a[0] + ((var5 >> -2142316216) - -param0.a(param4.substring(0, var7 + 1)) + -param0.a((char) var8));
+                param3.field_a[var7] = param3.field_a[0] + ((var5 >> -2142316216) - -param0.a(param4.substring(0, var7 + 1)) + -param0.a((char) var8));
                 break L3;
               }
             }

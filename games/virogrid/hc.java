@@ -24,32 +24,36 @@ final class hc {
         String stackOut_5_0 = null;
         try {
           L0: {
-            var3_int = param2.c(false);
-            if (var3_int > param1) {
-              var3_int = param1;
-              break L0;
-            } else {
-              break L0;
+            L1: {
+              var3_int = param2.c(false);
+              if (var3_int > param1) {
+                var3_int = param1;
+                break L1;
+              } else {
+                break L1;
+              }
             }
-          }
-          L1: {
-            if (param0 == 128) {
-              break L1;
-            } else {
-              field_b = null;
-              break L1;
+            L2: {
+              if (param0 == 128) {
+                break L2;
+              } else {
+                field_b = null;
+                break L2;
+              }
             }
+            var4 = new byte[var3_int];
+            param2.field_l = param2.field_l + ph.field_k.a(var4, param2.field_l, 0, var3_int, param2.field_g, true);
+            var5 = nf.a(var3_int, (byte) -128, 0, var4);
+            stackOut_5_0 = (String) var5;
+            stackIn_6_0 = stackOut_5_0;
+            break L0;
           }
-          var4 = new byte[var3_int];
-          param2.field_l = param2.field_l + ph.field_k.a(var4, param2.field_l, 0, var3_int, param2.field_g, true);
-          var5 = nf.a(var3_int, (byte) -128, 0, var4);
-          stackOut_5_0 = (String) var5;
-          stackIn_6_0 = stackOut_5_0;
-        } catch (java.lang.Exception decompiledCaughtParameter) {
-          decompiledCaughtException = decompiledCaughtParameter;
-          return stackIn_6_0;
+        } catch (java.lang.Exception decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3 = (Exception) (Object) decompiledCaughtException;
+          return "Cabbage";
         }
-        return null;
+        return stackIn_6_0;
     }
 
     final static boolean a(char param0, int param1) {

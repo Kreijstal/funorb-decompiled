@@ -11,56 +11,34 @@ final class fd extends si {
 
     final static int a(byte param0, int param1, int param2) {
         int var3 = 0;
-        int var4 = 0;
-        var4 = stellarshard.field_B;
-        if (param0 >= 75) {
-          var3 = 1;
-          L0: while (true) {
-            if (param1 >= -2) {
-              if (1 == param1) {
-                return var3 * param2;
-              } else {
-                return var3;
-              }
-            } else {
-              L1: {
-                if (-1 != (1 & param1)) {
-                  var3 = var3 * param2;
-                  break L1;
-                } else {
-                  break L1;
+        int var4 = stellarshard.field_B;
+        if (param0 < 75) {
+            field_mb = false;
+            var3 = 1;
+            while ((param1 ^ -1) < -2) {
+                if (!(-1 == (1 & param1 ^ -1))) {
+                    var3 = var3 * param2;
                 }
-              }
-              param1 = param1 >> 1;
-              param2 = param2 * param2;
-              continue L0;
+                param1 = param1 >> 1;
+                param2 = param2 * param2;
             }
-          }
-        } else {
-          field_mb = false;
-          var3 = 1;
-          L2: while (true) {
-            if (param1 >= -2) {
-              if (1 == param1) {
+            if (1 == param1) {
                 return var3 * param2;
-              } else {
-                return var3;
-              }
-            } else {
-              L3: {
-                if (-1 != (1 & param1)) {
-                  var3 = var3 * param2;
-                  break L3;
-                } else {
-                  break L3;
-                }
-              }
-              param1 = param1 >> 1;
-              param2 = param2 * param2;
-              continue L2;
             }
-          }
+            return var3;
         }
+        var3 = 1;
+        while ((param1 ^ -1) < -2) {
+            if (!(-1 == (1 & param1 ^ -1))) {
+                var3 = var3 * param2;
+            }
+            param1 = param1 >> 1;
+            param2 = param2 * param2;
+        }
+        if (1 == param1) {
+            return var3 * param2;
+        }
+        return var3;
     }
 
     fd() {

@@ -32,7 +32,7 @@ final class rc extends qb {
     final static void a(byte param0, int param1) {
         fd.a(ca.field_c[param1], jd.field_c[param1], false);
         if (param0 != 111) {
-            field_k = (kc[]) null;
+            field_k = null;
         }
     }
 
@@ -45,10 +45,10 @@ final class rc extends qb {
         CharSequence var4 = null;
         if (!param0) {
           rc.b((byte) -48);
-          var3 = (CharSequence) param1;
+          var3 = (CharSequence) (Object) param1;
           return aa.field_fb.equals((Object) (Object) ff.a((byte) 116, var3));
         } else {
-          var4 = (CharSequence) param1;
+          var4 = (CharSequence) (Object) param1;
           return aa.field_fb.equals((Object) (Object) ff.a((byte) 116, var4));
         }
     }

@@ -23,8 +23,9 @@ final class gf {
                 if (pg.field_a <= 0) {
                   break L0;
                 } else {
+                  int fieldTemp$13 = pg.field_a - 1;
                   pg.field_a = pg.field_a - 1;
-                  var2_ref_byte__ = jk.field_n[pg.field_a - 1];
+                  var2_ref_byte__ = jk.field_n[fieldTemp$13];
                   jk.field_n[pg.field_a] = null;
                   return var2_ref_byte__;
                 }
@@ -69,8 +70,9 @@ final class gf {
                   if (pg.field_a <= 0) {
                     break L3;
                   } else {
+                    int fieldTemp$14 = pg.field_a - 1;
                     pg.field_a = pg.field_a - 1;
-                    var2_ref_byte__ = jk.field_n[pg.field_a - 1];
+                    var2_ref_byte__ = jk.field_n[fieldTemp$14];
                     jk.field_n[pg.field_a] = null;
                     return var2_ref_byte__;
                   }
@@ -151,8 +153,9 @@ final class gf {
                       return new byte[param1];
                     }
                   } else {
+                    int fieldTemp$15 = pg.field_a - 1;
                     pg.field_a = pg.field_a - 1;
-                    var2_ref_byte__ = jk.field_n[pg.field_a - 1];
+                    var2_ref_byte__ = jk.field_n[fieldTemp$15];
                     jk.field_n[pg.field_a] = null;
                     return var2_ref_byte__;
                   }
@@ -195,8 +198,9 @@ final class gf {
                   if (pg.field_a <= 0) {
                     break L7;
                   } else {
+                    int fieldTemp$16 = pg.field_a - 1;
                     pg.field_a = pg.field_a - 1;
-                    var2_ref_byte__ = jk.field_n[pg.field_a - 1];
+                    var2_ref_byte__ = jk.field_n[fieldTemp$16];
                     jk.field_n[pg.field_a] = null;
                     return var2_ref_byte__;
                   }
@@ -237,8 +241,9 @@ final class gf {
               }
             }
           } else {
+            int fieldTemp$17 = th.field_n - 1;
             th.field_n = th.field_n - 1;
-            var2_ref_byte__ = rd.field_a[th.field_n - 1];
+            var2_ref_byte__ = rd.field_a[fieldTemp$17];
             rd.field_a[th.field_n] = null;
             return var2_ref_byte__;
           }

@@ -28,18 +28,20 @@ final class hk {
         var1 = java.awt.GraphicsEnvironment.getLocalGraphicsEnvironment();
         ((hk) this).field_b = var1.getDefaultScreenDevice();
         if (((hk) this).field_b.isFullScreenSupported()) {
+          return;
         } else {
           var2 = var1.getScreenDevices();
           var3 = var2;
           var4 = 0;
           L0: while (true) {
             if (var4 >= var3.length) {
-              throw new Exception();
+              throw hk.<RuntimeException>$cfr$sneakyThrow(new Exception());
             } else {
               var5 = var3[var4];
               if (var5 != null) {
                 if (var5.isFullScreenSupported()) {
                   ((hk) this).field_b = var5;
+                  return;
                 } else {
                   var4++;
                   continue L0;
@@ -145,5 +147,10 @@ final class hk {
             ((hk) this).field_a = null;
         }
         this.a((java.awt.Frame) null, -125);
+    }
+
+    @SuppressWarnings("unchecked")
+    private static <T extends Throwable> RuntimeException $cfr$sneakyThrow(Throwable throwable) throws T {
+        throw (T) throwable;
     }
 }

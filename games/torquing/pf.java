@@ -312,6 +312,7 @@ final class pf extends q implements lm {
         var6 = 1;
         L1: while (true) {
           if (var6 >= ((pf) this).field_n) {
+            return;
           } else {
             var7 = var6 * 6;
             var8 = (-1 + var6) % var4;

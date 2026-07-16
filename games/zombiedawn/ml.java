@@ -101,6 +101,7 @@ final class ml {
           if (var2 >= 10) {
             ((ml) this).field_a = param0.f(2);
             ((ml) this).field_b = param0.f(2);
+            return;
           } else {
             var3 = param0.d((byte) -119);
             if (var3 != 0) {

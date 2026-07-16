@@ -57,46 +57,31 @@ final class vm {
     }
 
     final static void b(int param0, byte param1) {
-        if (param1 <= -62) {
-          io.field_e = 3 & param0 >> -964132796;
-          if (io.field_e >= -3) {
-            L0: {
-              gh.field_v = (14 & param0) >> 923892994;
-              if (-3 > (gh.field_v ^ -1)) {
+        if (param1 > -62) {
+            return;
+        }
+        io.field_e = 3 & param0 >> -964132796;
+        if ((io.field_e ^ -1) < -3) {
+            io.field_e = 2;
+            gh.field_v = (14 & param0) >> 923892994;
+            if (!(-3 <= (gh.field_v ^ -1))) {
                 gh.field_v = 2;
-                break L0;
-              } else {
-                break L0;
-              }
-            }
-            ib.field_e = param0 & 3;
-            if (ib.field_e > 2) {
-              ib.field_e = 2;
-              return;
-            } else {
-              return;
-            }
-          } else {
-            L1: {
-              io.field_e = 2;
-              gh.field_v = (14 & param0) >> 923892994;
-              if (-3 < gh.field_v) {
-                gh.field_v = 2;
-                break L1;
-              } else {
-                break L1;
-              }
             }
             ib.field_e = param0 & 3;
             if (ib.field_e <= 2) {
-              return;
-            } else {
-              ib.field_e = 2;
-              return;
+                return;
             }
-          }
-        } else {
-          return;
+            ib.field_e = 2;
+            return;
+        }
+        gh.field_v = (14 & param0) >> 923892994;
+        if (!(-3 <= (gh.field_v ^ -1))) {
+            gh.field_v = 2;
+        }
+        ib.field_e = param0 & 3;
+        if (ib.field_e > 2) {
+            ib.field_e = 2;
+            return;
         }
     }
 

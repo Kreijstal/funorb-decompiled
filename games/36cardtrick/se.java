@@ -21,7 +21,7 @@ final class se extends hl {
         int var12 = 0;
         var12 = Main.field_T;
         if (param3 <= -14) {
-          if (this.a(param0, param1, param2, -39, param4, param5, param6)) {
+          if (super.a(param0, param1, param2, -39, param4, param5, param6)) {
             var8 = -((se) this).field_o + -param0 - ((se) this).field_E + param2;
             var9 = -((se) this).field_i - param1 + -((se) this).field_M + param6;
             if (((se) this).field_H * ((se) this).field_H > var9 * var9 + var8 * var8) {
@@ -106,28 +106,36 @@ final class se extends hl {
         L0: while (true) {
           if (var2 >= var3) {
             if (param0 < 55) {
-              field_K = (char[]) null;
+              field_K = null;
               return;
             } else {
               return;
             }
           } else {
+            int incrementValue$16 = var2;
             var2++;
-            var5[var2] = 0;
+            var5[incrementValue$16] = 0;
+            int incrementValue$17 = var2;
             var2++;
-            var5[var2] = 0;
+            var5[incrementValue$17] = 0;
+            int incrementValue$18 = var2;
             var2++;
-            var5[var2] = 0;
+            var5[incrementValue$18] = 0;
+            int incrementValue$19 = var2;
             var2++;
-            var5[var2] = 0;
+            var5[incrementValue$19] = 0;
+            int incrementValue$20 = var2;
             var2++;
-            var5[var2] = 0;
+            var5[incrementValue$20] = 0;
+            int incrementValue$21 = var2;
             var2++;
-            var5[var2] = 0;
+            var5[incrementValue$21] = 0;
+            int incrementValue$22 = var2;
             var2++;
-            var5[var2] = 0;
+            var5[incrementValue$22] = 0;
+            int incrementValue$23 = var2;
             var2++;
-            var5[var2] = 0;
+            var5[incrementValue$23] = 0;
             continue L0;
           }
         }

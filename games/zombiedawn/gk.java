@@ -71,10 +71,10 @@ final class gk extends fb {
         ((gk) this).field_D = false;
         ((gk) this).field_D = param3 ? true : false;
         int var5 = pb.a(so.field_a, 2, 1);
-        if (var5 == -2) {
+        if ((var5 ^ -1) == -2) {
             ((gk) this).field_E = true;
         } else {
-            if (-3 == var5) {
+            if (-3 == (var5 ^ -1)) {
                 ((gk) this).field_J = true;
             }
         }

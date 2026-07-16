@@ -73,13 +73,13 @@ final class pf extends qb {
         gh.a((byte) 59, true);
         cd.field_e = 0;
         if (param0 <= 126) {
-            field_g = (String) null;
+            field_g = null;
         }
     }
 
     final static nk a(int param0, String[] param1) {
         nk var2 = new nk(false);
-        var2.field_c = (String[]) param1;
+        var2.field_c = param1;
         if (param0 > -95) {
             field_h = -16;
         }

@@ -103,8 +103,9 @@ final class u extends fc {
     final boolean e(int param0) {
         int var3 = 0;
         int var4 = TrackController.field_F ? 1 : 0;
+        int fieldTemp$0 = ((u) this).field_n;
         ((u) this).field_n = ((u) this).field_n + 1;
-        int var2 = ((u) this).field_n;
+        int var2 = fieldTemp$0;
         for (var3 = param0; var3 < v.field_g.length; var3++) {
             var2 = var2 - v.field_g[var3];
             if (-1 < (var2 ^ -1)) {

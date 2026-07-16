@@ -53,7 +53,7 @@ final class si extends qm {
           var6.e(160, param2);
           var8 = param3;
           if (param4) {
-            // wide iinc 8 128
+            var8 += 128;
             break L0;
           } else {
             break L0;

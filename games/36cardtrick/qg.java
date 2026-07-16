@@ -16,7 +16,7 @@ abstract class qg extends lk implements u {
 
     void h(int param0) {
         if (param0 != -18584) {
-            lk var3 = (lk) null;
+            Object var3 = null;
             boolean discarded$0 = ((qg) this).a('>', (byte) 35, -64, (lk) null);
         }
         if (null != ((qg) this).field_y) {
@@ -32,7 +32,7 @@ abstract class qg extends lk implements u {
           if (param5 == -1) {
             break L0;
           } else {
-            ((qg) this).field_y = (lk) null;
+            ((qg) this).field_y = null;
             break L0;
           }
         }
@@ -84,7 +84,7 @@ abstract class qg extends lk implements u {
 
     lk a(boolean param0) {
         if (param0) {
-            return (lk) null;
+            return null;
         }
         lk var2 = ((qg) this).field_y;
         if (var2 == null) {
@@ -121,7 +121,7 @@ abstract class qg extends lk implements u {
           if (param0 > 71) {
             break L0;
           } else {
-            ((qg) this).field_y = (lk) null;
+            ((qg) this).field_y = null;
             break L0;
           }
         }
@@ -147,15 +147,26 @@ abstract class qg extends lk implements u {
     }
 
     final static void a(java.applet.Applet param0, int param1) {
-        if (param1 != 18478) {
-            return;
+        String var2 = null;
+        CharSequence var3 = null;
+        if (param1 == 18478) {
+          L0: {
+            var2 = param0.getParameter("username");
+            if (var2 == null) {
+              break L0;
+            } else {
+              var3 = (CharSequence) (Object) var2;
+              if (0L != fe.a(var3, param1 ^ 18519)) {
+                return;
+              } else {
+                break L0;
+              }
+            }
+          }
+          return;
+        } else {
+          return;
         }
-        String var2 = param0.getParameter("username");
-        if (var2 != null) {
-            CharSequence var3 = (CharSequence) var2;
-            // ifne L42
-        }
-        return;
     }
 
     final void c(byte param0) {
@@ -175,7 +186,7 @@ abstract class qg extends lk implements u {
           if (param3 < -14) {
             break L0;
           } else {
-            ((qg) this).field_y = (lk) null;
+            ((qg) this).field_y = null;
             break L0;
           }
         }
@@ -272,7 +283,7 @@ abstract class qg extends lk implements u {
 
     String b(byte param0) {
         String var3 = null;
-        String var2 = this.b(param0);
+        String var2 = super.b(param0);
         if (!(((qg) this).field_y == null)) {
             var3 = ((qg) this).field_y.b((byte) -79);
             if (!(var3 == null)) {
@@ -283,24 +294,24 @@ abstract class qg extends lk implements u {
     }
 
     final void a(int param0, int param1, int param2, int param3, boolean param4) {
-        this.a(param0, param1, param2, param3, param4);
+        super.a(param0, param1, param2, param3, param4);
         ((qg) this).h(-18584);
     }
 
     final boolean d(int param0) {
         if (param0 <= 44) {
-            ((qg) this).field_y = (lk) null;
+            ((qg) this).field_y = null;
         }
         return ((qg) this).a(false) != null ? true : false;
     }
 
     void a(int param0, int param1, lk param2, int param3) {
-        this.a(param0, param1, param2, param3 ^ 0);
+        super.a(param0, param1, param2, param3 ^ 0);
         if (((qg) this).field_y != null) {
             ((qg) this).field_y.a(((qg) this).field_i + param0, param1 + ((qg) this).field_o, param2, param3 + 0);
         }
         if (param3 != 3) {
-            field_z = (kc) null;
+            field_z = null;
         }
     }
 
@@ -325,13 +336,13 @@ abstract class qg extends lk implements u {
     public static void a(int param0) {
         field_z = null;
         if (param0 != 80) {
-            field_z = (kc) null;
+            field_z = null;
         }
     }
 
     void a(int param0, int param1, int param2, int param3) {
         if (param2 != -1) {
-            ((qg) this).field_y = (lk) null;
+            ((qg) this).field_y = null;
         }
         if (param3 == 0) {
             if (((qg) this).field_v != null) {

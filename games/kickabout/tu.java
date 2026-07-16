@@ -534,12 +534,22 @@ abstract class tu extends ma implements hc {
     public abstract void a(int param0);
 
     private final void s(int param0) {
-        int var3 = Kickabout.field_G;
-        while (dr.a(-125, uc.field_A)) {
-            // ifne L4
-            ((tu) this).j(95);
+        int var2 = 0;
+        int var3 = 0;
+        var3 = Kickabout.field_G;
+        L0: while (true) {
+          if (!dr.a(-125, uc.field_A)) {
+            var2 = 80 / ((param0 - -28) / 48);
+            return;
+          } else {
+            if (((tu) this).a(so.field_b, un.field_e, 1)) {
+              continue L0;
+            } else {
+              ((tu) this).j(95);
+              continue L0;
+            }
+          }
         }
-        int var2 = 80 / ((param0 - -28) / 48);
     }
 
     static {

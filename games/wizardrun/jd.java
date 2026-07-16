@@ -133,13 +133,15 @@ final class jd {
         var2 = 0;
         L0: while (true) {
           if (var2 < param0) {
-            var3 = new rk();
-            ((jd) this).field_d[var2] = new rk();
+            rk dupTemp$2 = new rk();
+            var3 = dupTemp$2;
+            ((jd) this).field_d[var2] = dupTemp$2;
             var3.field_i = var3;
             var3.field_l = var3;
             var2++;
             continue L0;
           } else {
+            return;
           }
         }
     }

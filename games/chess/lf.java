@@ -58,7 +58,8 @@ final class lf extends kn {
         int var18 = 0;
         int var19 = 0;
         int var20 = 0;
-        fn var21 = null;
+        Object var21 = null;
+        fn var21_ref = null;
         int var22 = 0;
         int var23 = 0;
         int var24 = 0;
@@ -238,7 +239,7 @@ final class lf extends kn {
                   break L8;
                 }
                 L10: {
-                  var21 = (fn) (Object) stackIn_39_0;
+                  var21_ref = stackIn_39_0;
                   var22 = qm.field_c[var15];
                   var23 = tc.field_w[var15];
                   var24 = qm.field_c[var16];
@@ -254,8 +255,8 @@ final class lf extends kn {
                       L11: {
                         var28 = var66[var18];
                         var29 = var67[var18];
-                        if (var21 != null) {
-                          stackOut_43_0 = var21.field_g;
+                        if (var21_ref != null) {
+                          stackOut_43_0 = var21_ref.field_g;
                           stackIn_44_0 = stackOut_43_0;
                           break L11;
                         } else {
@@ -282,8 +283,8 @@ final class lf extends kn {
                   var31 = var67[var18];
                   var32 = var67[var19];
                   var33 = var67[var20];
-                  if (var21 != null) {
-                    stackOut_47_0 = var21.field_g;
+                  if (var21_ref != null) {
+                    stackOut_47_0 = var21_ref.field_g;
                     stackIn_48_0 = stackOut_47_0;
                     break L12;
                   } else {
@@ -369,58 +370,71 @@ final class lf extends kn {
     }
 
     final void a(int param0, int param1, int param2, int param3) {
-        Object var6 = null;
-        km var7 = null;
-        if (param1 != 0) {
-          return;
-        } else {
-          if (null != ((lf) this).field_M) {
-            if (((lf) this).field_R != -1) {
-              if (-257 == ((lf) this).field_R) {
-                ((lf) this).field_M.a(param0 + ((lf) this).field_r, param1, -108, param3 - -((lf) this).field_u);
-                return;
-              } else {
-                L0: {
-                  var7 = new km(((lf) this).field_M.field_y, ((lf) this).field_M.field_C);
-                  tl.a((byte) -67, var7);
-                  ((lf) this).field_M.a(0, param1, -110, 0);
-                  fd.a(28773);
-                  var7.b(((lf) this).field_u + param3, param0 - -((lf) this).field_r, ((lf) this).field_R);
-                  if (param2 <= -80) {
-                    break L0;
-                  } else {
-                    var6 = null;
-                    lf.a(-25, (em) null, -102, -7, -85, 43, 21, 65);
-                    break L0;
-                  }
-                }
-                return;
-              }
-            } else {
-              return;
-            }
-          } else {
+        if (!(param1 == 0)) {
             return;
-          }
+        }
+        if (null == ((lf) this).field_M) {
+            return;
+        }
+        if ((((lf) this).field_R ^ -1) == -1) {
+            return;
+        }
+        if (-257 == (((lf) this).field_R ^ -1)) {
+            ((lf) this).field_M.a(param0 + ((lf) this).field_r, param1, -108, param3 - -((lf) this).field_u);
+            return;
+        }
+        km var7 = new km(((lf) this).field_M.field_y, ((lf) this).field_M.field_C);
+        tl.a((byte) -67, var7);
+        ((lf) this).field_M.a(0, param1, -110, 0);
+        fd.a(28773);
+        var7.b(((lf) this).field_u + param3, param0 - -((lf) this).field_r, ((lf) this).field_R);
+        if (param2 > -80) {
+            Object var6 = null;
+            lf.a(-25, (em) null, -102, -7, -85, 43, 21, 65);
         }
     }
 
     final static void a(int param0, boolean param1) {
-        if (param0 != -1) {
+        L0: {
+          if (param0 == -1) {
+            break L0;
+          } else {
             field_T = -61;
+            break L0;
+          }
         }
-        if (0 < an.field_e) {
-            if (!(!fm.field_V)) {
-                wb.g(0, 0, wb.field_h, uh.field_m.field_wb);
-                la.field_c.a(false, param1);
+        L1: {
+          if (0 >= an.field_e) {
+            break L1;
+          } else {
+            if (fm.field_V) {
+              wb.g(0, 0, wb.field_h, uh.field_m.field_wb);
+              la.field_c.a(false, param1);
+              break L1;
+            } else {
+              break L1;
             }
+          }
         }
-        if (0 >= aj.field_c) {
-            // if_icmpge L101
-        }
-        if (jh.field_a) {
+        L2: {
+          L3: {
+            if (0 < aj.field_c) {
+              break L3;
+            } else {
+              if ((ed.field_c ^ -1) >= -1) {
+                break L2;
+              } else {
+                break L3;
+              }
+            }
+          }
+          if (!jh.field_a) {
+            break L2;
+          } else {
             wb.g(0, 0, wb.field_h, uh.field_m.field_wb);
             ah.field_i.a(false, param1);
+            break L2;
+          }
         }
     }
 

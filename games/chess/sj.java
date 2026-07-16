@@ -24,29 +24,57 @@ final class sj implements jm {
     private int field_q;
 
     final static boolean a(byte param0, char param1) {
-        if (param1 >= 32) {
-            if (126 >= param1) {
-                return true;
+        L0: {
+          if (param1 < 32) {
+            break L0;
+          } else {
+            if (126 < param1) {
+              break L0;
+            } else {
+              return true;
             }
+          }
         }
-        if (160 <= param1) {
-            if (param1 <= 255) {
-                return true;
+        L1: {
+          if (160 > param1) {
+            break L1;
+          } else {
+            if (param1 > 255) {
+              break L1;
+            } else {
+              return true;
             }
+          }
         }
-        if (param1 != 8364) {
-            // if_icmpeq L70
-            // if_icmpeq L70
-            // if_icmpeq L70
-            // if_icmpeq L70
-        } else {
-            return true;
+        L2: {
+          if (param1 == 8364) {
+            break L2;
+          } else {
+            if (param1 == 338) {
+              break L2;
+            } else {
+              if (param1 == 8212) {
+                break L2;
+              } else {
+                if (param1 == 339) {
+                  break L2;
+                } else {
+                  if (param1 == 376) {
+                    break L2;
+                  } else {
+                    if (param0 <= -95) {
+                      return false;
+                    } else {
+                      field_p = null;
+                      return false;
+                    }
+                  }
+                }
+              }
+            }
+          }
         }
-        if (param0 > -95) {
-            field_p = null;
-            return false;
-        }
-        return false;
+        return true;
     }
 
     final static void a(int param0, int param1, ak param2) {

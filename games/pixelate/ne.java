@@ -10,21 +10,33 @@ final class ne extends ie {
     }
 
     final void a(int param0, int param1, ng param2, int param3, int param4, int param5) {
-        super.a(param0, param1, param2, param3, param4, param5);
-        bn var8 = qf.field_a;
-        bn var7 = var8;
-        if (var8 != null) {
-            if (!((ne) this).a(param3 ^ 96, param1, param4, param0, param5)) {
-            } else {
-                if (!(((ne) this).field_n instanceof s)) {
-                    // ifeq L127
-                    ((s) (Object) var8.field_n).a(param3 ^ -106, var8, (ne) this);
-                    qf.field_a = null;
+        bn var7 = null;
+        bn var8 = null;
+        L0: {
+          super.a(param0, param1, param2, param3, param4, param5);
+          var8 = qf.field_a;
+          var7 = var8;
+          if (var8 == null) {
+            break L0;
+          } else {
+            if (((ne) this).a(param3 ^ 96, param1, param4, param0, param5)) {
+              if (((ne) this).field_n instanceof s) {
+                ((s) (Object) ((ne) this).field_n).a(116, var8, (ne) this);
+                qf.field_a = null;
+                break L0;
+              } else {
+                if (!(var8.field_n instanceof s)) {
+                  break L0;
                 } else {
-                    ((s) (Object) ((ne) this).field_n).a(116, var8, (ne) this);
-                    qf.field_a = null;
+                  ((s) (Object) var8.field_n).a(param3 ^ -106, var8, (ne) this);
+                  qf.field_a = null;
+                  break L0;
                 }
+              }
+            } else {
+              break L0;
             }
+          }
         }
     }
 

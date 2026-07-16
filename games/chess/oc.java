@@ -34,7 +34,7 @@ final class oc extends vm {
         int var6_int = 0;
         StringBuilder var6 = null;
         int var7 = 0;
-        String var7_ref = null;
+        String var7_ref_String = null;
         int var8 = 0;
         String var9 = null;
         int var10 = 0;
@@ -111,8 +111,8 @@ final class oc extends vm {
                   }
                 }
               }
-              var7_ref = param0.substring(var6_int - -2, var5);
-              if (lg.a((byte) 72, (CharSequence) (Object) var7_ref)) {
+              var7_ref_String = param0.substring(var6_int - -2, var5);
+              if (lg.a((byte) 72, (CharSequence) (Object) var7_ref_String)) {
                 if (var5 >= var3) {
                   continue L0;
                 } else {
@@ -120,7 +120,7 @@ final class oc extends vm {
                     continue L0;
                   } else {
                     var5++;
-                    var8 = fn.a((CharSequence) (Object) var7_ref, 0);
+                    var8 = fn.a((CharSequence) (Object) var7_ref_String, 0);
                     var4 = var4 + (var6_int + -var5 + param1[var8].length());
                     continue L0;
                   }
@@ -228,7 +228,7 @@ final class oc extends vm {
 
     final mk a(byte param0, String param1) {
         int var3 = 0;
-        vb var3_ref = null;
+        vb var3_ref_vb = null;
         mk stackIn_4_0 = null;
         mk stackIn_9_0 = null;
         mk stackIn_15_0 = null;
@@ -239,9 +239,9 @@ final class oc extends vm {
         mk stackOut_3_0 = null;
         mk stackOut_2_0 = null;
         if (((oc) this).field_q instanceof ee) {
-          var3_ref = ((ee) (Object) ((oc) this).field_q).a(-89);
-          if (var3_ref != null) {
-            if (var3_ref.a(21314) == oa.field_a) {
+          var3_ref_vb = ((ee) (Object) ((oc) this).field_q).a(-89);
+          if (var3_ref_vb != null) {
+            if (var3_ref_vb.a(21314) == oa.field_a) {
               L0: {
                 var3 = 125 % ((param0 - -49) / 62);
                 if (!param1.equals((Object) (Object) ((oc) this).field_q.field_v)) {
@@ -254,7 +254,7 @@ final class oc extends vm {
                   break L0;
                 }
               }
-              return (mk) (Object) stackIn_15_0;
+              return stackIn_15_0;
             } else {
               return qk.field_b;
             }
@@ -271,7 +271,7 @@ final class oc extends vm {
                 break L1;
               }
             }
-            return (mk) (Object) stackIn_9_0;
+            return stackIn_9_0;
           }
         } else {
           L2: {
@@ -286,7 +286,7 @@ final class oc extends vm {
               break L2;
             }
           }
-          return (mk) (Object) stackIn_4_0;
+          return stackIn_4_0;
         }
     }
 

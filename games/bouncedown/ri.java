@@ -223,15 +223,14 @@ abstract class ri extends lc {
     boolean e(byte param0) {
         int var2 = 0;
         int var3 = 0;
-        int stackIn_12_0 = 0;
-        int stackIn_25_0 = 0;
+        int stackIn_14_0 = 0;
+        int stackIn_26_0 = 0;
         int stackOut_24_0 = 0;
-        int stackOut_23_0 = 0;
-        int stackOut_10_0 = 0;
-        int stackOut_11_0 = 0;
-        if (param0 != 21) {
+        int stackOut_25_0 = 0;
+        int stackOut_13_0 = 0;
+        int stackOut_12_0 = 0;
+        if (param0 == 21) {
           L0: {
-            ((ri) this).field_D = false;
             var2 = this.k(0);
             var3 = var2 - ((ri) this).field_A;
             if (var3 > 0) {
@@ -249,68 +248,69 @@ abstract class ri extends lc {
               break L1;
             }
           }
-          if (((ri) this).field_A == -1) {
-            if (-1 != var2) {
-              return false;
-            } else {
-              L2: {
-                if (((ri) this).field_D) {
-                  stackOut_24_0 = 0;
-                  stackIn_25_0 = stackOut_24_0;
-                  break L2;
+          L2: {
+            L3: {
+              if ((((ri) this).field_A ^ -1) != -1) {
+                break L3;
+              } else {
+                if (-1 != (var2 ^ -1)) {
+                  break L3;
                 } else {
-                  stackOut_23_0 = 1;
-                  stackIn_25_0 = stackOut_23_0;
-                  break L2;
+                  if (((ri) this).field_D) {
+                    break L3;
+                  } else {
+                    stackOut_24_0 = 1;
+                    stackIn_26_0 = stackOut_24_0;
+                    break L2;
+                  }
                 }
               }
-              return stackIn_25_0 != 0;
             }
-          } else {
-            return false;
+            stackOut_25_0 = 0;
+            stackIn_26_0 = stackOut_25_0;
+            break L2;
           }
+          return stackIn_26_0 != 0;
         } else {
-          L3: {
+          L4: {
+            ((ri) this).field_D = false;
             var2 = this.k(0);
             var3 = var2 - ((ri) this).field_A;
             if (var3 > 0) {
               ((ri) this).field_A = ((ri) this).field_A + (-1 + var3 + 8) / 8;
-              break L3;
-            } else {
-              break L3;
-            }
-          }
-          L4: {
-            if (0 > var3) {
-              ((ri) this).field_A = ((ri) this).field_A + (-15 + var3) / 16;
               break L4;
             } else {
               break L4;
             }
           }
           L5: {
-            L6: {
-              if (((ri) this).field_A != -1) {
-                break L6;
-              } else {
-                if (-1 != var2) {
+            if (0 > var3) {
+              ((ri) this).field_A = ((ri) this).field_A + (-15 + var3) / 16;
+              break L5;
+            } else {
+              break L5;
+            }
+          }
+          if ((((ri) this).field_A ^ -1) == -1) {
+            if (-1 == (var2 ^ -1)) {
+              L6: {
+                if (((ri) this).field_D) {
+                  stackOut_13_0 = 0;
+                  stackIn_14_0 = stackOut_13_0;
                   break L6;
                 } else {
-                  if (((ri) this).field_D) {
-                    break L6;
-                  } else {
-                    stackOut_10_0 = 1;
-                    stackIn_12_0 = stackOut_10_0;
-                    break L5;
-                  }
+                  stackOut_12_0 = 1;
+                  stackIn_14_0 = stackOut_12_0;
+                  break L6;
                 }
               }
+              return stackIn_14_0 != 0;
+            } else {
+              return false;
             }
-            stackOut_11_0 = 0;
-            stackIn_12_0 = stackOut_11_0;
-            break L5;
+          } else {
+            return false;
           }
-          return stackIn_12_0 != 0;
         }
     }
 

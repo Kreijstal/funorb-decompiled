@@ -11,22 +11,22 @@ final class fg extends cg {
 
     final String a(String param0, boolean param1) {
         ba var3 = null;
-        String var4 = null;
+        Object var4 = null;
         if (((fg) this).field_o instanceof of) {
-          var3 = ((of) ((fg) this).field_o).a(-53);
+          var3 = ((of) (Object) ((fg) this).field_o).a(-53);
           if (var3 != null) {
-            if (((ba) var3).a(true) == ii.field_e) {
+            if (var3.a(true) == ii.field_e) {
               if (param0.equals((Object) (Object) ((fg) this).field_o.field_r)) {
-                return ((ba) var3).b(26766);
+                return var3.b(26766);
               } else {
                 return r.field_r;
               }
             } else {
-              return ((ba) var3).b(26766);
+              return var3.b(26766);
             }
           } else {
             if (param1) {
-              var4 = (String) null;
+              var4 = null;
               sg discarded$16 = ((fg) this).a((String) null, -89);
               if (!param0.equals((Object) (Object) ((fg) this).field_o.field_r)) {
                 return r.field_r;
@@ -43,7 +43,7 @@ final class fg extends cg {
           }
         } else {
           if (param1) {
-            var4 = (String) null;
+            var4 = null;
             sg discarded$17 = ((fg) this).a((String) null, -89);
             if (!param0.equals((Object) (Object) ((fg) this).field_o.field_r)) {
               return r.field_r;
@@ -99,9 +99,9 @@ final class fg extends cg {
         sg stackOut_16_0 = null;
         if (param1 < -58) {
           if (((fg) this).field_o instanceof of) {
-            var5 = ((of) ((fg) this).field_o).a(116);
+            var5 = ((of) (Object) ((fg) this).field_o).a(116);
             if (var5 != null) {
-              if (((ba) var5).a(true) == ii.field_e) {
+              if (var5.a(true) == ii.field_e) {
                 L0: {
                   if (!param0.equals((Object) (Object) ((fg) this).field_o.field_r)) {
                     stackOut_33_0 = pe.field_b;
@@ -113,7 +113,7 @@ final class fg extends cg {
                     break L0;
                   }
                 }
-                return (sg) (Object) stackIn_34_0;
+                return stackIn_34_0;
               } else {
                 return pe.field_b;
               }
@@ -129,7 +129,7 @@ final class fg extends cg {
                   break L1;
                 }
               }
-              return (sg) (Object) stackIn_28_0;
+              return stackIn_28_0;
             }
           } else {
             L2: {
@@ -143,14 +143,14 @@ final class fg extends cg {
                 break L2;
               }
             }
-            return (sg) (Object) stackIn_23_0;
+            return stackIn_23_0;
           }
         } else {
           field_k = false;
           if (((fg) this).field_o instanceof of) {
-            var4 = ((of) ((fg) this).field_o).a(116);
+            var4 = ((of) (Object) ((fg) this).field_o).a(116);
             if (var4 != null) {
-              if (((ba) var4).a(true) == ii.field_e) {
+              if (var4.a(true) == ii.field_e) {
                 L3: {
                   if (!param0.equals((Object) (Object) ((fg) this).field_o.field_r)) {
                     stackOut_12_0 = pe.field_b;
@@ -162,7 +162,7 @@ final class fg extends cg {
                     break L3;
                   }
                 }
-                return (sg) (Object) stackIn_13_0;
+                return stackIn_13_0;
               } else {
                 return pe.field_b;
               }
@@ -178,7 +178,7 @@ final class fg extends cg {
                   break L4;
                 }
               }
-              return (sg) (Object) stackIn_7_0;
+              return stackIn_7_0;
             }
           } else {
             L5: {
@@ -192,7 +192,7 @@ final class fg extends cg {
                 break L5;
               }
             }
-            return (sg) (Object) stackIn_18_0;
+            return stackIn_18_0;
           }
         }
     }

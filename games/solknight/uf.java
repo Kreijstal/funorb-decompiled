@@ -12,8 +12,10 @@ class uf extends af {
     }
 
     public final void a(byte param0, int param1, boolean param2, int param3, rc param4) {
+        Object var7 = null;
         if (param0 < 113) {
           L0: {
+            var7 = null;
             ((uf) this).a((byte) 62, -71, true, -109, (rc) null);
             if (param2) {
               pl.a(true, param4.field_x, param4.field_t, param4.field_j + param1, param3 + param4.field_m);
@@ -148,139 +150,42 @@ class uf extends af {
         int var4 = 0;
         Object var5 = null;
         Throwable var6 = null;
-        int statePc = 0;
-        Throwable caughtException = null;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    var4 = -123 / ((90 - param1) / 33);
-                    if (null != ah.field_a) {
-                        statePc = 2;
-                    } else {
-                        statePc = 3;
-                    }
-                    continue stateLoop;
+        Throwable decompiledCaughtException = null;
+        L0: {
+          var4 = -123 / ((90 - param1) / 33);
+          if (null != ah.field_a) {
+            kd.a(param2, (byte) 101, param3, 1048576, param0);
+            break L0;
+          } else {
+            break L0;
+          }
+        }
+        if (null != ua.field_I) {
+          var5 = (Object) (Object) kj.field_P;
+          synchronized (var5) {
+            L1: {
+              ua.field_I.b(param2, -1, -129);
+              if (param3 == dj.field_j) {
+                return;
+              } else {
+                L2: {
+                  ua.field_I.a((byte) 97);
+                  kj.field_P.h();
+                  dj.field_j = param3;
+                  if (null == dj.field_j) {
+                    break L2;
+                  } else {
+                    ua.field_I.a(param0, dj.field_j, true);
+                    break L2;
+                  }
                 }
-                case 2: {
-                    kd.a(param2, (byte) 101, param3, 1048576, param0);
-                    statePc = 3;
-                    continue stateLoop;
-                }
-                case 3: {
-                    if (null != ua.field_I) {
-                        statePc = 5;
-                    } else {
-                        statePc = 4;
-                    }
-                    continue stateLoop;
-                }
-                case 4: {
-                    return;
-                }
-                case 5: {
-                    var5 = (Object) (Object) kj.field_P;
-                    // monitorenter kj.field_P
-                    statePc = 6;
-                    continue stateLoop;
-                }
-                case 6: {
-                    try {
-                        ua.field_I.b(param2, -1, -129);
-                        if (param3 == dj.field_j) {
-                            statePc = 8;
-                        } else {
-                            statePc = 7;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_6) {
-                        caughtException = stateCaught_6;
-                        statePc = 14;
-                        continue stateLoop;
-                    }
-                }
-                case 7: {
-                    try {
-                        statePc = 10;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_7) {
-                        caughtException = stateCaught_7;
-                        statePc = 14;
-                        continue stateLoop;
-                    }
-                }
-                case 8: {
-                    try {
-                        // monitorexit var5
-                        statePc = 9;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_8) {
-                        caughtException = stateCaught_8;
-                        statePc = 14;
-                        continue stateLoop;
-                    }
-                }
-                case 9: {
-                    return;
-                }
-                case 10: {
-                    try {
-                        ua.field_I.a((byte) 97);
-                        kj.field_P.h();
-                        dj.field_j = param3;
-                        if (null == dj.field_j) {
-                            statePc = 12;
-                        } else {
-                            statePc = 11;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_10) {
-                        caughtException = stateCaught_10;
-                        statePc = 14;
-                        continue stateLoop;
-                    }
-                }
-                case 11: {
-                    try {
-                        ua.field_I.a(param0, dj.field_j, true);
-                        statePc = 12;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_11) {
-                        caughtException = stateCaught_11;
-                        statePc = 14;
-                        continue stateLoop;
-                    }
-                }
-                case 12: {
-                    try {
-                        // monitorexit var5
-                        statePc = 13;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_12) {
-                        caughtException = stateCaught_12;
-                        statePc = 14;
-                        continue stateLoop;
-                    }
-                }
-                case 13: {
-                    return;
-                }
-                case 14: {
-                    try {
-                        var6 = caughtException;
-                        // monitorexit var5
-                        statePc = 15;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_14) {
-                        caughtException = stateCaught_14;
-                        statePc = 14;
-                        continue stateLoop;
-                    }
-                }
-                case 15: {
-                    throw (RuntimeException) (Object) var6;
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
+                break L1;
+              }
             }
+          }
+          return;
+        } else {
+          return;
         }
     }
 
@@ -298,130 +203,73 @@ class uf extends af {
         Exception exception = null;
         java.awt.Graphics var4 = null;
         Throwable decompiledCaughtException = null;
-        int statePc = 0;
-        Throwable caughtException = null;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    try {
-                        var4 = param3.getGraphics();
-                        hj.field_e.a(param2, 0, param1, var4);
-                        var4.dispose();
-                        statePc = 3;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_0) {
-                        caughtException = stateCaught_0;
-                        statePc = 2;
-                        continue stateLoop;
-                    }
-                }
-                case 2: {
-                    exception = (Exception) (Object) caughtException;
-                    param3.repaint();
-                    statePc = 3;
-                    continue stateLoop;
-                }
-                case 3: {
-                    if (param0 != 99) {
-                        statePc = 5;
-                    } else {
-                        statePc = 4;
-                    }
-                    continue stateLoop;
-                }
-                case 4: {
-                    return;
-                }
-                case 5: {
-                    field_r = null;
-                    return;
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
-            }
+        try {
+          L0: {
+            var4 = param3.getGraphics();
+            hj.field_e.a(param2, 0, param1, var4);
+            var4.dispose();
+            break L0;
+          }
+        } catch (java.lang.Exception decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L1: {
+            exception = (Exception) (Object) decompiledCaughtException;
+            param3.repaint();
+            break L1;
+          }
+        }
+        if (param0 != 99) {
+          field_r = null;
+          return;
+        } else {
+          return;
         }
     }
 
     final static void d(int param0) {
         try {
             Exception var1 = null;
-            int statePc = 0;
-            Throwable caughtException = null;
-            stateLoop: while (true) {
-                switch (statePc) {
-                    case 0: {
-                        if (null != pj.field_D) {
-                            statePc = 4;
-                        } else {
-                            statePc = 1;
-                        }
-                        continue stateLoop;
-                    }
-                    case 1: {
-                        if (param0 == 31911) {
-                            statePc = 3;
-                        } else {
-                            statePc = 2;
-                        }
-                        continue stateLoop;
-                    }
-                    case 2: {
-                        field_q = -95;
-                        statePc = 3;
-                        continue stateLoop;
-                    }
-                    case 3: {
-                        te.field_N.field_m = te.field_N.field_m + 24;
-                        return;
-                    }
-                    case 4: {
-                        try {
-                            pj.field_D.a(0L, (byte) 45);
-                            pj.field_D.a(te.field_N.field_l, -20291, 24, te.field_N.field_m);
-                            statePc = 5;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_4) {
-                            caughtException = stateCaught_4;
-                            statePc = 8;
-                            continue stateLoop;
-                        }
-                    }
-                    case 5: {
-                        if (param0 == 31911) {
-                            statePc = 7;
-                        } else {
-                            statePc = 6;
-                        }
-                        continue stateLoop;
-                    }
-                    case 6: {
-                        field_q = -95;
-                        statePc = 7;
-                        continue stateLoop;
-                    }
-                    case 7: {
-                        te.field_N.field_m = te.field_N.field_m + 24;
-                        return;
-                    }
-                    case 8: {
-                        var1 = (Exception) (Object) caughtException;
-                        if (param0 != 31911) {
-                            statePc = 10;
-                        } else {
-                            statePc = 9;
-                        }
-                        continue stateLoop;
-                    }
-                    case 9: {
-                        te.field_N.field_m = te.field_N.field_m + 24;
-                        return;
-                    }
-                    case 10: {
-                        field_q = -95;
-                        te.field_N.field_m = te.field_N.field_m + 24;
-                        return;
-                    }
-                    default: throw new IllegalStateException("invalid CFG state " + statePc);
+            Throwable decompiledCaughtException = null;
+            if (null != pj.field_D) {
+              try {
+                L0: {
+                  pj.field_D.a(0L, (byte) 45);
+                  pj.field_D.a(te.field_N.field_l, -20291, 24, te.field_N.field_m);
+                  break L0;
                 }
+              } catch (java.lang.Exception decompiledCaughtParameter0) {
+                decompiledCaughtException = decompiledCaughtParameter0;
+                var1 = (Exception) (Object) decompiledCaughtException;
+                if (param0 != 31911) {
+                  field_q = -95;
+                  te.field_N.field_m = te.field_N.field_m + 24;
+                  return;
+                } else {
+                  te.field_N.field_m = te.field_N.field_m + 24;
+                  return;
+                }
+              }
+              L1: {
+                if (param0 == 31911) {
+                  break L1;
+                } else {
+                  field_q = -95;
+                  break L1;
+                }
+              }
+              te.field_N.field_m = te.field_N.field_m + 24;
+              return;
+            } else {
+              L2: {
+                if (param0 == 31911) {
+                  break L2;
+                } else {
+                  field_q = -95;
+                  break L2;
+                }
+              }
+              te.field_N.field_m = te.field_N.field_m + 24;
+              return;
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;

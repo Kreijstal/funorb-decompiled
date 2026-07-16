@@ -72,8 +72,9 @@ final class we extends hi {
                         }
                       } else {
                         qd.field_W[var11] = qd.field_W[var8];
+                        int incrementValue$1 = var8;
                         var8++;
-                        qd.field_W[var8] = var12;
+                        qd.field_W[incrementValue$1] = var12;
                         if (var9 > var13) {
                           var9 = var13;
                           var11++;
@@ -309,13 +310,13 @@ final class we extends hi {
                 if (((we) this).field_l != param5) {
                   break L1;
                 } else {
-                  if (((we) this).field_f != param6) {
+                  if ((((we) this).field_f ^ -1) != (param6 ^ -1)) {
                     break L1;
                   } else {
-                    if (param7 != ((we) this).field_p) {
+                    if ((param7 ^ -1) != (((we) this).field_p ^ -1)) {
                       break L1;
                     } else {
-                      if (((we) this).field_h != param1) {
+                      if ((((we) this).field_h ^ -1) != (param1 ^ -1)) {
                         break L1;
                       } else {
                         if (param3 != ((we) this).field_i) {
@@ -351,10 +352,10 @@ final class we extends hi {
               var16 = new String[1 + param4.c(param2, param3)];
               var17 = var16;
               var10 = Math.max(1, param4.a(param2, new int[1], var17));
-              if (-4 != ((we) this).field_f) {
+              if (-4 != (((we) this).field_f ^ -1)) {
                 break L2;
               } else {
-                if (-2 != var10) {
+                if (-2 != (var10 ^ -1)) {
                   break L2;
                 } else {
                   ((we) this).field_f = 1;
@@ -438,8 +439,7 @@ final class we extends hi {
                   }
                 }
                 L7: {
-                  new bk(stackIn_36_2, stackIn_36_3, stackIn_36_4);
-                  var14 = stackIn_36_0;
+                  var14 = new bk(stackIn_36_2, stackIn_36_3, stackIn_36_4);
                   var14.field_j[0] = 0;
                   if (var13 != null) {
                     L8: {

@@ -1,6 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
+import javax.sound.sampled.AudioFormat;
+
 final class nf extends md {
     private javax.sound.sampled.SourceDataLine field_v;
     private byte[] field_w;
@@ -197,8 +199,7 @@ final class nf extends md {
           }
         }
         L3: {
-          new javax.sound.sampled.AudioFormat(stackIn_13_3, stackIn_13_4, stackIn_13_5, true, false);
-          ((nf) this).field_x = (javax.sound.sampled.AudioFormat) (Object) stackIn_13_1;
+          ((nf) this).field_x = new javax.sound.sampled.AudioFormat(stackIn_13_3, stackIn_13_4, stackIn_13_5, true, false);
           stackOut_13_0 = this;
           stackOut_13_1 = 256;
           stackIn_15_0 = stackOut_13_0;

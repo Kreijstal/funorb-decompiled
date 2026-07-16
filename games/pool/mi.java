@@ -101,6 +101,7 @@ final class mi {
           if (var2 >= 10) {
             ((mi) this).field_a = param0.d(-1034);
             ((mi) this).field_c = param0.d(-1034);
+            return;
           } else {
             var3 = param0.g(-64);
             if (var3 != 0) {

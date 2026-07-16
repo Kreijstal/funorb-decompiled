@@ -110,7 +110,7 @@ class ug extends ii {
               }
             }
             L5: {
-              if (param0.field_N == 0) {
+              if ((param0.field_N ^ -1) == -1) {
                 break L5;
               } else {
                 ((ug) this).field_N = param0.field_N;
@@ -166,7 +166,7 @@ class ug extends ii {
               }
             }
             L12: {
-              if (param0.field_Z == 2147483647) {
+              if ((param0.field_Z ^ -1) == 2147483647) {
                 break L12;
               } else {
                 ((ug) this).field_Z = param0.field_Z;
@@ -174,7 +174,7 @@ class ug extends ii {
               }
             }
             L13: {
-              if (2147483647 == param0.field_db) {
+              if (2147483647 == (param0.field_db ^ -1)) {
                 break L13;
               } else {
                 ((ug) this).field_db = param0.field_db;

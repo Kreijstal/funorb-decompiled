@@ -144,16 +144,19 @@ final class p implements eb {
             var8 = var9;
             var6 = var8;
             if (param3 > 100) {
+              int incrementValue$8 = var5;
               var5++;
-              var6[var5] = (char)58;
+              var6[incrementValue$8] = (char)58;
+              int incrementValue$9 = var5;
               var5++;
-              var6[var5] = (char)40;
+              var6[incrementValue$9] = (char)40;
               break L0;
             } else {
               L1: {
+                int incrementValue$10 = var5;
                 var5++;
                 stackOut_3_0 = (char[]) var6;
-                stackOut_3_1 = var5;
+                stackOut_3_1 = incrementValue$10;
                 stackIn_5_0 = stackOut_3_0;
                 stackIn_5_1 = stackOut_3_1;
                 stackIn_4_0 = stackOut_3_0;
@@ -178,9 +181,10 @@ final class p implements eb {
               }
               L2: {
                 stackIn_6_0[stackIn_6_1] = (char)stackIn_6_2;
+                int incrementValue$11 = var5;
                 var5++;
                 stackOut_6_0 = (char[]) var6;
-                stackOut_6_1 = var5;
+                stackOut_6_1 = incrementValue$11;
                 stackIn_8_0 = stackOut_6_0;
                 stackIn_8_1 = stackOut_6_1;
                 stackIn_7_0 = stackOut_6_0;
@@ -209,9 +213,10 @@ final class p implements eb {
           }
           L3: {
             var5 = var7.indexOf("mm");
+            int incrementValue$12 = var5;
             var5++;
             stackOut_11_0 = (char[]) var6;
-            stackOut_11_1 = var5;
+            stackOut_11_1 = incrementValue$12;
             stackIn_13_0 = stackOut_11_0;
             stackIn_13_1 = stackOut_11_1;
             stackIn_12_0 = stackOut_11_0;
@@ -236,9 +241,10 @@ final class p implements eb {
           }
           L4: {
             stackIn_14_0[stackIn_14_1] = (char)stackIn_14_2;
+            int incrementValue$13 = var5;
             var5++;
             stackOut_14_0 = (char[]) var6;
-            stackOut_14_1 = var5;
+            stackOut_14_1 = incrementValue$13;
             stackIn_16_0 = stackOut_14_0;
             stackIn_16_1 = stackOut_14_1;
             stackIn_15_0 = stackOut_14_0;
@@ -264,9 +270,10 @@ final class p implements eb {
           L5: {
             stackIn_17_0[stackIn_17_1] = (char)stackIn_17_2;
             var5 = var7.indexOf("ss");
+            int incrementValue$14 = var5;
             var5++;
             stackOut_17_0 = (char[]) var6;
-            stackOut_17_1 = var5;
+            stackOut_17_1 = incrementValue$14;
             stackIn_19_0 = stackOut_17_0;
             stackIn_19_1 = stackOut_17_1;
             stackIn_18_0 = stackOut_17_0;
@@ -291,9 +298,10 @@ final class p implements eb {
           }
           L6: {
             stackIn_20_0[stackIn_20_1] = (char)stackIn_20_2;
+            int incrementValue$15 = var5;
             var5++;
             stackOut_20_0 = (char[]) var6;
-            stackOut_20_1 = var5;
+            stackOut_20_1 = incrementValue$15;
             stackIn_22_0 = stackOut_20_0;
             stackIn_22_1 = stackOut_20_1;
             stackIn_21_0 = stackOut_20_0;
@@ -376,21 +384,21 @@ final class p implements eb {
 
     final static java.net.URL a(byte param0, java.net.URL param1, java.applet.Applet param2) {
         int var5 = 50 / ((param0 - 20) / 37);
-        String var3 = null;
-        String var4 = null;
+        Object var3 = null;
+        Object var4 = null;
         if (null != ar.field_g) {
             if (!ar.field_g.equals((Object) (Object) param2.getParameter("settings"))) {
-                var3 = ar.field_g;
+                var3 = (Object) (Object) ar.field_g;
                 var4 = var3;
                 var4 = var3;
             }
         }
         if (null != om.field_y) {
             if (!om.field_y.equals((Object) (Object) param2.getParameter("session"))) {
-                var4 = om.field_y;
+                var4 = (Object) (Object) om.field_y;
             }
         }
-        return pr.a(-1, param1, var3, (byte) 63, var4);
+        return pr.a(-1, param1, (String) var3, (byte) 63, (String) var4);
     }
 
     private final void a(int param0, String param1, int[] param2) {

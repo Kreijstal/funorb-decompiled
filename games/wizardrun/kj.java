@@ -18,79 +18,57 @@ final class kj {
 
     final static void a(int param0) {
         try {
-            java.lang.reflect.Method var1_ref = null;
+            java.lang.reflect.Method var1_ref_java_lang_reflect_Method = null;
             Exception var1_ref_Exception = null;
             int var1 = 0;
             Throwable var2 = null;
             Runtime var2_ref = null;
             Long var3 = null;
             Object var4 = null;
-            int statePc = 0;
-            Throwable caughtException = null;
-            stateLoop: while (true) {
-                switch (statePc) {
-                    case 0: {
-                        try {
-                            var1_ref = Runtime.class.getMethod("maxMemory", new Class[0]);
-                            if (var1_ref == null) {
-                                statePc = 6;
-                            } else {
-                                statePc = 1;
-                            }
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_0) {
-                            caughtException = stateCaught_0;
-                            statePc = 5;
-                            continue stateLoop;
-                        }
+            int decompiledRegionSelector0 = 0;
+            Throwable decompiledCaughtException = null;
+            try {
+              L0: {
+                L1: {
+                  var1_ref_java_lang_reflect_Method = Runtime.class.getMethod("maxMemory", new Class[0]);
+                  if (var1_ref_java_lang_reflect_Method == null) {
+                    break L1;
+                  } else {
+                    try {
+                      L2: {
+                        var2_ref = Runtime.getRuntime();
+                        var4 = null;
+                        var3 = (Long) var1_ref_java_lang_reflect_Method.invoke((Object) (Object) var2_ref, (Object[]) null);
+                        jd.field_b = (int)(var3.longValue() / 1048576L) + 1;
+                        decompiledRegionSelector0 = 0;
+                        break L2;
+                      }
+                    } catch (java.lang.Throwable decompiledCaughtParameter0) {
+                      decompiledCaughtException = decompiledCaughtParameter0;
+                      L3: {
+                        var2 = decompiledCaughtException;
+                        decompiledRegionSelector0 = 1;
+                        break L3;
+                      }
                     }
-                    case 1: {
-                        try {
-                            var2_ref = Runtime.getRuntime();
-                            var4 = null;
-                            var3 = (Long) var1_ref.invoke((Object) (Object) var2_ref, (Object[]) null);
-                            jd.field_b = (int)(var3.longValue() / 1048576L) + 1;
-                            statePc = 2;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_1) {
-                            caughtException = stateCaught_1;
-                            statePc = 3;
-                            continue stateLoop;
-                        }
+                    if (decompiledRegionSelector0 == 0) {
+                      var1 = -100 / ((param0 - -31) / 50);
+                      return;
+                    } else {
+                      break L1;
                     }
-                    case 2: {
-                        try {
-                            var1 = -100 / ((param0 - -31) / 50);
-                            return;
-                        } catch (Throwable stateCaught_2) {
-                            caughtException = stateCaught_2;
-                            statePc = 5;
-                            continue stateLoop;
-                        }
-                    }
-                    case 3: {
-                        try {
-                            var2 = caughtException;
-                            statePc = 6;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_3) {
-                            caughtException = stateCaught_3;
-                            statePc = 5;
-                            continue stateLoop;
-                        }
-                    }
-                    case 5: {
-                        var1_ref_Exception = (Exception) (Object) caughtException;
-                        statePc = 6;
-                        continue stateLoop;
-                    }
-                    case 6: {
-                        var1 = -100 / ((param0 - -31) / 50);
-                        return;
-                    }
-                    default: throw new IllegalStateException("invalid CFG state " + statePc);
+                  }
                 }
+                break L0;
+              }
+            } catch (java.lang.Exception decompiledCaughtParameter1) {
+              decompiledCaughtException = decompiledCaughtParameter1;
+              L4: {
+                var1_ref_Exception = (Exception) (Object) decompiledCaughtException;
+                break L4;
+              }
             }
+            var1 = -100 / ((param0 - -31) / 50);
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {

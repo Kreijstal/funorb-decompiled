@@ -258,7 +258,7 @@ final class j extends ne {
                       if (param7 != ((j) this).field_r) {
                         break L1;
                       } else {
-                        if (param5 != ((j) this).field_q) {
+                        if ((param5 ^ -1) != (((j) this).field_q ^ -1)) {
                           break L1;
                         } else {
                           if (((j) this).field_j == null) {
@@ -294,7 +294,7 @@ final class j extends ne {
               if (((j) this).field_i != 3) {
                 break L2;
               } else {
-                if (-2 != var10) {
+                if (-2 != (var10 ^ -1)) {
                   break L2;
                 } else {
                   ((j) this).field_i = 1;
@@ -303,7 +303,7 @@ final class j extends ne {
               }
             }
             L3: {
-              if (-1 == ((j) this).field_i) {
+              if (-1 == (((j) this).field_i ^ -1)) {
                 var11 = param3.field_H;
                 break L3;
               } else {
@@ -378,8 +378,7 @@ final class j extends ne {
                   }
                 }
                 L7: {
-                  new pi(stackIn_36_2, stackIn_36_3, stackIn_36_4);
-                  var14 = stackIn_36_0;
+                  var14 = new pi(stackIn_36_2, stackIn_36_3, stackIn_36_4);
                   var14.field_d[0] = 0;
                   if (var13 != null) {
                     L8: {

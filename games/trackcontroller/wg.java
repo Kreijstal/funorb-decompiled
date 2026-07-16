@@ -84,7 +84,7 @@ final class wg {
         int var3 = 0;
         byte[] var4 = null;
         byte[] var5 = null;
-        java.math.BigInteger var7_ref = null;
+        java.math.BigInteger var7_ref_java_math_BigInteger = null;
         int var7 = 0;
         int var8 = 0;
         be var10 = null;
@@ -130,8 +130,8 @@ final class wg {
                     break L2;
                   } else {
                     var12 = new java.math.BigInteger(var16);
-                    var7_ref = var12.modPow(((wg) this).field_d, ((wg) this).field_b);
-                    var5 = var7_ref.toByteArray();
+                    var7_ref_java_math_BigInteger = var12.modPow(((wg) this).field_d, ((wg) this).field_b);
+                    var5 = var7_ref_java_math_BigInteger.toByteArray();
                     break L1;
                   }
                 }
@@ -199,28 +199,45 @@ final class wg {
     }
 
     final gd a(int param0, int param1, hf param2, boolean param3, hf param4) {
-        if (null == ((wg) this).field_i) {
-            throw new RuntimeException();
-        }
-        if (param1 >= 0) {
-            // if_icmpge L32
+        int var6 = 0;
+        int var7 = 0;
+        gd var9 = null;
+        byte[] var11 = null;
+        if (null != ((wg) this).field_i) {
+          L0: {
+            if (param1 < 0) {
+              break L0;
+            } else {
+              if (param1 >= ((wg) this).field_g.length) {
+                break L0;
+              } else {
+                if (((wg) this).field_g[param1] == null) {
+                  L1: {
+                    ((wg) this).field_i.field_k = param1 * 72 + 6;
+                    var6 = ((wg) this).field_i.e((byte) 113);
+                    if (param0 >= 67) {
+                      break L1;
+                    } else {
+                      field_h = null;
+                      break L1;
+                    }
+                  }
+                  var7 = ((wg) this).field_i.e((byte) 113);
+                  var11 = new byte[64];
+                  ((wg) this).field_i.a(102, var11, 0, 64);
+                  var9 = new gd(param1, param4, param2, ((wg) this).field_a, ((wg) this).field_f, var6, var11, var7, param3);
+                  ((wg) this).field_g[param1] = var9;
+                  return var9;
+                } else {
+                  return ((wg) this).field_g[param1];
+                }
+              }
+            }
+          }
+          throw new RuntimeException();
         } else {
-            throw new RuntimeException();
+          throw new RuntimeException();
         }
-        if (((wg) this).field_g[param1] != null) {
-            return ((wg) this).field_g[param1];
-        }
-        ((wg) this).field_i.field_k = param1 * 72 + 6;
-        int var6 = ((wg) this).field_i.e((byte) 113);
-        if (param0 < 67) {
-            field_h = null;
-        }
-        int var7 = ((wg) this).field_i.e((byte) 113);
-        byte[] var11 = new byte[64];
-        ((wg) this).field_i.a(102, var11, 0, 64);
-        gd var9 = new gd(param1, param4, param2, ((wg) this).field_a, ((wg) this).field_f, var6, var11, var7, param3);
-        ((wg) this).field_g[param1] = var9;
-        return var9;
     }
 
     static {

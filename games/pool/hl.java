@@ -19,7 +19,7 @@ final class hl implements fp {
     static int field_n;
 
     final static eo a(String param0, int param1) {
-        String var2 = null;
+        Object var2 = null;
         eo var3 = null;
         String var4 = null;
         CharSequence var5 = null;
@@ -27,15 +27,15 @@ final class hl implements fp {
         if (null != gd.field_c) {
           L0: {
             var5 = (CharSequence) (Object) param0;
-            var2 = hq.a(param1 ^ 123, var5);
+            var2 = (Object) (Object) hq.a(param1 ^ 123, var5);
             if (var2 != null) {
               break L0;
             } else {
-              var2 = (String) (Object) var5;
+              var2 = (Object) (Object) var5;
               break L0;
             }
           }
-          var3 = (eo) (Object) gd.field_c.a((long)var2.hashCode(), false);
+          var3 = (eo) (Object) gd.field_c.a((long)((String) var2).hashCode(), false);
           L1: while (true) {
             if (var3 == null) {
               if (param1 == 1) {
@@ -55,7 +55,7 @@ final class hl implements fp {
                   break L2;
                 }
               }
-              if (!var4.equals((Object) (Object) var2)) {
+              if (!var4.equals(var2)) {
                 var3 = (eo) (Object) gd.field_c.a(param1 ^ -98);
                 continue L1;
               } else {

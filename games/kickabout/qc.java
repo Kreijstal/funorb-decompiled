@@ -193,7 +193,7 @@ abstract class qc extends cv {
                               if (var31 < 1024) {
                                 break L13;
                               } else {
-                                // wide iinc 31 -2048
+                                var31 -= 2048;
                                 break L13;
                               }
                             }
@@ -201,7 +201,7 @@ abstract class qc extends cv {
                               if (var32 < 1024) {
                                 break L14;
                               } else {
-                                // wide iinc 32 -2048
+                                var32 -= 2048;
                                 break L14;
                               }
                             }
@@ -209,7 +209,7 @@ abstract class qc extends cv {
                               if (var33 < 1024) {
                                 break L15;
                               } else {
-                                // wide iinc 33 -2048
+                                var33 -= 2048;
                                 break L15;
                               }
                             }
@@ -331,7 +331,6 @@ abstract class qc extends cv {
     abstract void a();
 
     final void a(ef param0, int param1, ef param2, int param3, int param4, int param5, boolean param6) {
-        db var10_ref = null;
         if (param1 == -1) {
             return;
         }
@@ -342,12 +341,12 @@ abstract class qc extends cv {
         je var9 = var8.field_e;
         Object var10 = null;
         if (param2 != null) {
-            var10_ref = param2.field_q[param3];
-            if (var10_ref.field_e != var9) {
-                var10_ref = null;
+            var10 = (Object) (Object) param2.field_q[param3];
+            if (((db) var10).field_e != var9) {
+                var10 = null;
             }
         }
-        this.a(var9, var8, var10_ref, param4, param5, (boolean[]) null, false, param6, 65535, (int[]) null);
+        this.a(var9, var8, (db) var10, param4, param5, (boolean[]) null, false, param6, 65535, (int[]) null);
         ((qc) this).a();
     }
 

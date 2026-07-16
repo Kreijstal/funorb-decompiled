@@ -192,30 +192,24 @@ final class me implements java.awt.event.MouseListener, java.awt.event.MouseMoti
     }
 
     final static boolean b(int param0) {
-        Object var2 = null;
-        if (param0 > 8) {
-          if (-11 <= j.field_l) {
-            if (dj.field_n < 13) {
-              return false;
-            } else {
-              return true;
+        if (param0 <= 8) {
+            Object var2 = null;
+            boolean discarded$3 = me.a((String) null, (String) null, true);
+            if (-11 < (j.field_l ^ -1)) {
+                return false;
             }
-          } else {
-            return false;
-          }
-        } else {
-          var2 = null;
-          boolean discarded$5 = me.a((String) null, (String) null, true);
-          if (-11 >= j.field_l) {
             if (dj.field_n < 13) {
-              return false;
-            } else {
-              return true;
+                return false;
             }
-          } else {
-            return false;
-          }
+            return true;
         }
+        if (-11 < (j.field_l ^ -1)) {
+            return false;
+        }
+        if (dj.field_n < 13) {
+            return false;
+        }
+        return true;
     }
 
     public final void focusGained(java.awt.event.FocusEvent param0) {

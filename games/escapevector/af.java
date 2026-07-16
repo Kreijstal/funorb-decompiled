@@ -51,94 +51,48 @@ final class af extends java.awt.Canvas implements java.awt.event.FocusListener {
         Exception var3 = null;
         int var3_int = 0;
         int var4 = 0;
-        int statePc = 0;
-        Throwable caughtException = null;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    var4 = EscapeVector.field_A;
-                    if (param1.field_k == null) {
-                        statePc = 2;
-                    } else {
-                        statePc = 3;
-                    }
-                    continue stateLoop;
-                }
-                case 2: {
-                    return;
-                }
-                case 3: {
-                    if (param0 == -61) {
-                        statePc = 5;
-                    } else {
-                        statePc = 4;
-                    }
-                    continue stateLoop;
-                }
-                case 4: {
-                    return;
-                }
-                case 5: {
-                    var3_int = 0;
-                    statePc = 6;
-                    continue stateLoop;
-                }
-                case 6: {
-                    if (50 <= var3_int) {
-                        statePc = 9;
-                    } else {
-                        statePc = 7;
-                    }
-                    continue stateLoop;
-                }
-                case 7: {
-                    if (null == param1.field_k.peekEvent()) {
-                        statePc = 9;
-                    } else {
-                        statePc = 8;
-                    }
-                    continue stateLoop;
-                }
-                case 8: {
+        Throwable decompiledCaughtException = null;
+        var4 = EscapeVector.field_A;
+        if (param1.field_k == null) {
+          return;
+        } else {
+          if (param0 == -61) {
+            var3_int = 0;
+            L0: while (true) {
+              L1: {
+                if (50 <= var3_int) {
+                  break L1;
+                } else {
+                  if (null == param1.field_k.peekEvent()) {
+                    break L1;
+                  } else {
                     en.a((byte) -15, 1L);
                     var3_int++;
-                    statePc = 6;
-                    continue stateLoop;
+                    continue L0;
+                  }
                 }
-                case 9: {
-                    try {
-                        if (param2 == null) {
-                            statePc = 13;
-                        } else {
-                            statePc = 10;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_9) {
-                        caughtException = stateCaught_9;
-                        statePc = 12;
-                        continue stateLoop;
-                    }
-                }
-                case 10: {
-                    try {
-                        param1.field_k.postEvent((java.awt.AWTEvent) (Object) new java.awt.event.ActionEvent(param2, 1001, "dummy"));
-                        return;
-                    } catch (Throwable stateCaught_10) {
-                        caughtException = stateCaught_10;
-                        statePc = 12;
-                        continue stateLoop;
-                    }
-                }
-                case 12: {
-                    var3 = (Exception) (Object) caughtException;
-                    statePc = 13;
-                    continue stateLoop;
-                }
-                case 13: {
+              }
+              try {
+                L2: {
+                  if (param2 == null) {
+                    break L2;
+                  } else {
+                    param1.field_k.postEvent((java.awt.AWTEvent) (Object) new java.awt.event.ActionEvent(param2, 1001, "dummy"));
                     return;
+                  }
                 }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
+              } catch (java.lang.Exception decompiledCaughtParameter0) {
+                decompiledCaughtException = decompiledCaughtParameter0;
+                L3: {
+                  var3 = (Exception) (Object) decompiledCaughtException;
+                  break L3;
+                }
+              }
+              return;
             }
+          } else {
+            return;
+          }
         }
     }
 

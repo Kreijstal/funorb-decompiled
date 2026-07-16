@@ -259,28 +259,34 @@ final class nc {
             pd stackOut_2_0 = null;
             try {
               L0: {
-                var4 = Class.forName("vf");
-                var5 = (pd) var4.newInstance();
-                if (param2 == -35) {
-                  break L0;
-                } else {
-                  field_b = null;
-                  break L0;
+                L1: {
+                  var4 = Class.forName("vf");
+                  var5 = (pd) var4.newInstance();
+                  if (param2 == -35) {
+                    break L1;
+                  } else {
+                    field_b = null;
+                    break L1;
+                  }
                 }
+                var5.a(param3, param2 ^ -9354, param1, param0);
+                stackOut_2_0 = (pd) var5;
+                stackIn_3_0 = stackOut_2_0;
+                break L0;
               }
-              var5.a(param3, param2 ^ -9354, param1, param0);
-              stackOut_2_0 = (pd) var5;
-              stackIn_3_0 = stackOut_2_0;
-            } catch (java.lang.Throwable decompiledCaughtParameter) {
-              decompiledCaughtException = decompiledCaughtParameter;
-              return stackIn_3_0;
+            } catch (java.lang.Throwable decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              var4_ref = decompiledCaughtException;
+              var5_ref = new oa();
+              ((pd) (Object) var5_ref).a(param3, 9387, param1, param0);
+              return (pd) (Object) var5_ref;
             }
+            return stackIn_3_0;
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
             throw new RuntimeException(decompiledCheckedException);
         }
-        return null;
     }
 
     final static void a(java.awt.Canvas param0, int param1, boolean param2) {

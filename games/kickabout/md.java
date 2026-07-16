@@ -287,8 +287,9 @@ final class md implements hc {
         if (!(-1 != (((md) this).field_f ^ -1))) {
             return;
         }
+        int fieldTemp$0 = ((md) this).field_f + 1;
         ((md) this).field_f = ((md) this).field_f + 1;
-        if ((((md) this).field_f + 1 ^ -1) <= -201) {
+        if ((fieldTemp$0 ^ -1) <= -201) {
             ((md) this).field_f = 0;
             return;
         }

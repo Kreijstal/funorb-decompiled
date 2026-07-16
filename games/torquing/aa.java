@@ -83,8 +83,9 @@ abstract class aa extends im {
         if (((aa) this).field_S != null) {
           if (((aa) this).field_S != gf.field_j) {
             if (ql.field_s == ((aa) this).field_S) {
+              int fieldTemp$2 = ((aa) this).field_P + 1;
               ((aa) this).field_P = ((aa) this).field_P + 1;
-              if (((aa) this).field_R == ((aa) this).field_P + 1) {
+              if (((aa) this).field_R == fieldTemp$2) {
                 ((aa) this).field_T.field_D = 256;
                 ((aa) this).field_S = null;
                 if (param0 != -7) {
@@ -111,8 +112,9 @@ abstract class aa extends im {
               }
             }
           } else {
+            int fieldTemp$3 = ((aa) this).field_P + 1;
             ((aa) this).field_P = ((aa) this).field_P + 1;
-            if (((aa) this).field_W == ((aa) this).field_P + 1) {
+            if (((aa) this).field_W == fieldTemp$3) {
               ((aa) this).field_S = gn.field_b;
               ((aa) this).b(((aa) this).field_V.field_o + (12 + ((aa) this).field_N), (byte) -15, ((aa) this).field_O, 12 - -((aa) this).field_V.field_p);
               ((aa) this).field_T.field_D = 0;
@@ -144,32 +146,26 @@ abstract class aa extends im {
     }
 
     boolean a(int param0, gm param1, char param2, int param3) {
-        int var5 = 0;
-        var5 = 55 % ((-33 - param3) / 57);
-        if (!super.a(param0, param1, param2, 36)) {
-          if (((aa) this).field_T != null) {
-            if (param0 != 98) {
-              if (-100 == param0) {
-                boolean discarded$12 = ((aa) this).field_T.a(param1, false);
-                return false;
-              } else {
-                return false;
-              }
-            } else {
-              boolean discarded$13 = ((aa) this).field_T.a(param1, false);
-              if (-100 != param0) {
-                return false;
-              } else {
-                boolean discarded$14 = ((aa) this).field_T.a(param1, false);
-                return false;
-              }
-            }
-          } else {
-            return false;
-          }
-        } else {
-          return true;
+        int var5 = 55 % ((-33 - param3) / 57);
+        if (super.a(param0, param1, param2, 36)) {
+            return true;
         }
+        if (((aa) this).field_T == null) {
+            return false;
+        }
+        if (param0 == 98) {
+            boolean discarded$7 = ((aa) this).field_T.a(param1, false);
+            if (-100 != (param0 ^ -1)) {
+                return false;
+            }
+            boolean discarded$8 = ((aa) this).field_T.a(param1, false);
+            return false;
+        }
+        if (-100 == (param0 ^ -1)) {
+            boolean discarded$9 = ((aa) this).field_T.a(param1, false);
+            return false;
+        }
+        return false;
     }
 
     final void j(int param0) {
