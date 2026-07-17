@@ -22,8 +22,27 @@ semantic meaning. This is expected and is not something the decompiler tries to
 
 This snapshot was generated with dekobloko-work's gated
 `--experimental-interclass-dce` mode. Before Java is emitted, the pipeline
-evaluates side-effect-free `int` and `long` literal arithmetic, conversions,
-comparisons, and JVM-masked shift counts. It also removes neutral operations
+uses CFG stack analysis to specialize any read-only integer-like parameter when
+every reachable direct call supplies the same constant. It repeats
+specialization, constant folding, branch DCE, and unreachable-code removal to a
+bounded fixed point, allowing a dead dummy call to expose constant arguments in
+its callees. Parameters written with either a store or `iinc` are excluded.
+As a separately gated closed-world cleanup, a contiguous trailing run of those
+specialized parameters is also removed from private or internal static method
+descriptors and from every proven direct call. Each game's
+`signature-map.json` is the dictionary from old signatures to new signatures;
+it records removed parameter indexes, types, constant values, and the analysis
+iteration that proved them. It also lists inherited call-site owner aliases,
+which are resolved against the complete gamepack hierarchy. This deliberately improves internal source APIs
+rather than preserving the original gamepack ABI.
+Virtual and interface method families are not compacted in this snapshot. An
+internal interface would need a family-wide proof that the parameter is dead in
+the interface declaration and every implementation, followed by a coordinated
+rewrite of every implementation and every `invokeinterface`/`invokevirtual`
+call. If one implementation uses it, or the family is reachable through a
+public, platform, or callback API, its signatures must remain unchanged.
+The local evaluator also folds side-effect-free `int` and `long` literal
+arithmetic, conversions, comparisons, and JVM-masked shift counts. It removes neutral operations
 such as `x + 0`, `x ^ 0`, and `x * 1`, combines adjacent additive constants,
 and deletes branches whose conditions become literal constants. In the emitted
 source, the bytecode idiom `x ^ -1` is written as the equivalent `~x`; when it
@@ -51,6 +70,311 @@ JVM instructions can produce them. This is a source-readability policy: it does
 not preserve a specific checked exception propagated by bytecode when no
 source-visible `throws` declaration supports it, and is gated so runtime A/B
 testing can disable it if that closed-world choice proves wrong.
+
+## Deobfuscation guide
+
+The pipeline works primarily on classfile instructions before Java is printed.
+The examples below use Krakatau-style `.j` notation; constant-pool spelling can
+vary, but the stack operations and descriptors are the same. “Implemented”
+means the transform was available to the pipeline that generated this
+repository. Stronger experimental transforms remain gated as noted.
+
+| Area | Snapshot status | Main safety condition |
+| --- | --- | --- |
+| Literal constant evaluation | Implemented | JVM integer/long semantics; do not remove observable exceptions |
+| Constant-branch and unreachable-code DCE | Implemented | CFG reachability and incoming-edge checks |
+| Interclass constant-argument specialization | Implemented, gated | Complete gamepack; every resolved direct caller agrees |
+| Private/internal-static signature compaction | Implemented, separately gated | Trailing dead parameters; all inherited owner aliases rewritten |
+| Virtual/interface family compaction | Not implemented | Would require one proof and rewrite across the whole family |
+| Checked-catch cleanup | Implemented, separately gated | Specific checked type is not declared throwable by the emitted try |
+| Control-flow and stack-shape normalization | Implemented | Stack effects, labels, exception ranges, and verifier guards agree |
+
+### Literal evaluation and branch DCE
+
+The local evaluator folds side-effect-free literal expressions using JVM
+overflow, signed division, and masked shift-distance rules. For example:
+
+```java
+if (((6 * 7) ^ 0) != 42) {
+    throw new IllegalStateException();
+}
+render();
+```
+
+has this representative `.j` shape:
+
+```text
+bipush 6
+bipush 7
+imul
+iconst_0
+ixor
+bipush 42
+if_icmpeq Lok
+new java/lang/IllegalStateException
+dup
+invokespecial Method java/lang/IllegalStateException <init> ()V
+athrow
+Lok:
+invokestatic Method Game render ()V
+return
+```
+
+After constant evaluation, the comparison is known true. The branch and its
+literal producers are simplified, then CFG reachability removes the trap:
+
+```java
+render();
+```
+
+```text
+invokestatic Method Game render ()V
+return
+```
+
+This is not textual replacement. A fold is rejected when another branch can
+enter the middle of the producer sequence, when the instruction is an
+exception-handler entry, or when evaluation can throw. Thus `1 / 0` remains an
+`idiv`, and floating-point reassociation is not attempted.
+
+Neutral integer operations are removed (`x + 0`, `x ^ 0`, `x * 1`), adjacent
+additive constants are combined with 32/64-bit wraparound, and JVM shift counts
+are normalized (`x << 35` is `x << 3` for an `int`). The idiom `x ^ -1` is
+printed as `~x`; comparisons are complemented and direction-flipped when
+necessary to preserve signed ordering.
+
+### Constant arguments across classes
+
+Dummy guard parameters are common in these gamepacks:
+
+```java
+private void c(ce value, int guard) {
+    if (guard != 18580) {
+        throw new IllegalStateException();
+    }
+    consume(value);
+}
+
+// Every reachable direct caller:
+this.c(value, 18580);
+```
+
+```text
+; callee a.c(Lce;I)V
+iload_2
+sipush 18580
+if_icmpeq Lok
+aconst_null
+athrow
+Lok:
+aload_0
+aload_1
+invokespecial Method a consume (Lce;)V
+return
+
+; caller
+aload_0
+aload_1
+sipush 18580
+invokespecial Method a c (Lce;I)V
+```
+
+CFG stack analysis associates argument stack values with descriptor
+parameters, including calls containing category-two `long`/`double` values. A
+parameter is specialized only when every reachable direct call to the resolved
+declaration supplies the same integer-like constant. A constant-pool reference
+whose owner is a subclass is resolved through the full hierarchy and counted
+against the inherited declaration; `Child.m(...)` is not ignored when `m` is
+declared on `Parent`.
+
+The body first becomes:
+
+```java
+private void c(ce value, int guard) {
+    consume(value);
+}
+```
+
+Specialization, branch folding, and unreachable removal repeat to a bounded
+fixed point. Deleting a dead caller in iteration one can reveal that all
+remaining calls to another method use the same value in iteration two.
+Parameters written by `istore` or `iinc` are never read-only facts.
+
+### Signature compaction and its dictionary
+
+The separately gated signature pass can remove a contiguous trailing run of
+specialized, unused integer-like parameters from a private or internal static
+method:
+
+```java
+// Before
+private void c(ce value, int guard) { consume(value); }
+
+// After
+private void c(ce value) { consume(value); }
+```
+
+Conceptually, bytecode rewriting first preserves argument evaluation:
+
+```text
+aload_0
+aload_1
+sipush 18580
+pop
+invokespecial Method a c (Lce;)V
+```
+
+The peephole pass can then remove a side-effect-free literal producer followed
+by `pop`. If an argument expression had side effects, its evaluation would
+remain and only its result would be discarded. A branch label on the old
+invocation moves to the first inserted `pop`, so an incoming edge still sees
+the same operand-stack consumption.
+
+Each `games/<game>/signature-map.json` preserves identity for mapping tools:
+
+```json
+{
+  "formatVersion": 1,
+  "signatures": {
+    "a.c(Lce;I)V": {
+      "newSignature": "a.c(Lce;)V",
+      "oldDescriptor": "(Lce;I)V",
+      "newDescriptor": "(Lce;)V",
+      "callSiteSignatures": ["a.c(Lce;I)V"],
+      "removedParameters": [
+        { "index": 1, "descriptor": "I", "value": 18580, "discoveredIteration": 2 }
+      ]
+    }
+  }
+}
+```
+
+Java overload identity ignores return type, unlike a JVM descriptor. The pass
+rejects a proposal that collides with another source method in the same class
+or an ancestor/descendant. It also records and rewrites inherited call-site
+owner aliases. Constructors, open APIs, virtual dispatch, and interface
+families are currently excluded.
+
+### Branch matching versus textual matching
+
+Cleanup rules match semantic bytecode/CFG shapes, not source text or fixed
+instruction offsets. A candidate normally has to satisfy all applicable
+conditions:
+
+- opcode and operand descriptors match the rule;
+- stack consumption/production is known at rewritten instructions;
+- no alternate edge enters a producer sequence;
+- labels and `tableswitch`/`lookupswitch` targets remain valid;
+- exception-handler entry stacks and protected ranges are preserved;
+- local writes, including parsed `iinc varnum`, invalidate read-only facts;
+- method references resolve to the same declaration through inheritance;
+- the emitted class passes orphan-local and ASM verifier guards.
+
+For example, these instructions look locally constant but cannot be folded
+because `Lrhs` has another incoming edge:
+
+```text
+iconst_1
+Lrhs:
+iconst_1
+if_icmpne Lbad
+goto Lrhs
+```
+
+A raw three-instruction matcher would delete a stack producer needed by the
+backedge. The implemented branch folder collects incoming CFG labels first and
+rejects the candidate.
+
+### Guarded pattern patching
+
+Some obfuscator shapes need a narrow structural patch before a general
+decompiler can print them cleanly. Implemented passes cover families including
+shared goto tails, duplicated loop suffixes, stack-carrying joins,
+boolean/null comparisons, and verifier-sensitive local splitting. A typical
+duplicated loop-tail shape is:
+
+```text
+ifeq Lother
+iinc 4 1
+goto Lhead
+Lother:
+; ...
+iinc 4 1
+goto Lhead
+```
+
+When the suffix instructions, local, increment direction, and destination
+match exactly, the duplicate can target one canonical tail. The Java then has
+a normal `continue` rather than a raw state-machine edge:
+
+```java
+if (condition) {
+    ++index;
+    continue;
+}
+// ...
+++index;
+```
+
+These patches include method/descriptor, CFG, dominance, exception-range,
+local-slot, and stack-shape guards as appropriate. Mutating passes save and
+reload the class. A pass that creates a new uninitialized local read or fails
+ASM verification is reverted for that class. A final failed class is never
+synced into this repository.
+
+### Control-flow reconstruction and fallbacks
+
+The owned decompiler reconstructs `if`/`else`, loops, `switch`, short-circuit
+booleans, `break`, and `continue` from CFG regions. Stack values crossing joins
+are materialized as typed Java locals when they cannot safely remain inline.
+The goal is compilable structured Java, not line-for-line bytecode.
+
+When a region cannot yet be structured, a state-machine fallback may be
+emitted. Fallback counts are recorded separately from verification and Java
+compilation. They are readability debt: complete source parity and successful
+`javac` are still required before sync, although a compile-clean game can
+contain a small number of fallback methods.
+
+### Checked catches and synthetic `if (false)` throws
+
+Java rejects a catch of a checked exception when the source-visible try body
+cannot throw it. A decompiler can use an unreachable anchor solely to make such
+source compile:
+
+```java
+try {
+    work();
+    if (false) throw (MyCheckedException) null;
+} catch (MyCheckedException ex) {
+    recover(ex);
+}
+```
+
+Under the checked-catch cleanup gate, declaration analysis removes both the
+specific catch and its anchor when no call in the emitted try declares that
+checked type. Broad `Throwable`, `Exception`, `RuntimeException`, and `Error`
+catches remain conservative because ordinary instructions can produce
+unchecked failures. Removing a genuinely unreachable throw has no runtime
+effect; removing its catch changes the source exception contract, so this
+policy remains independently gated.
+
+### Possible next deobfuscations
+
+The following extensions are useful but are not claimed by this snapshot:
+
+- **Internal interface-family compaction:** prove a parameter dead in the
+  declaration and every implementation, then rewrite the family and all
+  virtual/interface calls atomically.
+- **Semantic names and types:** infer names such as `render`, `packet`, or
+  `sprite` from behavior. Current short obfuscated identifiers are retained.
+- **Broader interprocedural propagation:** propagate finite enums, strings, or
+  immutable objects. Current cross-class facts are integer-like constants.
+- **More fallback elimination:** structure remaining irreducible/state-machine
+  CFGs after equivalence and verifier proofs are available.
+
+Every stronger transform needs the same escape hatch used here: a separate
+gate, deterministic diagnostics and mapping output, full-game bytecode
+verification, full source recompilation, and representative runtime A/B tests.
 
 ## Source repositories
 
